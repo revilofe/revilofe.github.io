@@ -1,0 +1,139 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+site_name: 'Eduardo Fdez.'
+site_url: 'http://127.0.0.1:8000/'
+repo_url: 'https://github.com/revilofe/revilofe.github.io'
+repo_name: 'GitHub'
+site_author: 'Eduardo Fdez'
+
+
+
+nav:
+  - 'Principal': 'index.md'
+  - 'Programación':
+    - 'section1/index.md'
+    - 'Unidad 1': 'section1/page-1.md'
+    - 'Unidad 2': 'section1/page-2.md'
+    - 'Unidad 3': 'section1/page-3.md'
+    - 'Unidad 4': 'section1/page-4.md'
+    - 'Unidad 5': 'section1/page-5.md'
+    - 'Unidad 6': 'section1/page-5.md'
+    - 'Unidad 7': 'section1/page-6.md'
+    - 'Unidad 8': 'section1/page-7.md'
+  - 'Incidentes':
+    - 'section2/index.md'
+    - 'Unidad 1': 'section2/page-1.md'
+    - 'Unidad 2': 'section2/page-2.md'
+    - 'Unidad 3': 'section2/page-3.md'
+    - 'Unidad 4': 'section2/page-4.md'
+    - 'Unidad 5': 'section2/page-5.md'
+    - 'Unidad 6': 'section2/page-6.md'
+    - 'Unidad 7': 'section2/page-7.md'
+    - 'Unidad 8': 'section2/page-8.md'
+  - 'Tags': 'tags.md'
+  - 'Acerca de': 'about.md'
+  - 'yo': 'about.md'
+
+
+#extra_css:
+#  - stylesheets/extra.css # The width of the content area is set so the length of each line doesn't exceed 80-100 characters, depending on the width of the characters. While this is a reasonable default, as longer lines tend to be harder to read, it may be desirable to increase the overall width of the content area, or even make it stretch to the entire available space.
+
+theme:
+  name: material
+  language: es
+  font:
+    text: Roboto
+  palette:
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      primary: white
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate
+      primary: black
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+  features:
+    - navigation.tabs # When tabs are enabled, top-level sections are rendered in a menu layer below the header for viewports above 1220px, but remain as-is on mobile.1 
+    - navigation.tabs.sticky # When sticky tabs are enabled, navigation tabs will lock below the header and always remain visible when scrolling down.
+    - navigation.instant # When instant loading is enabled, clicks on all internal links will be intercepted and dispatched via XHR without fully reloading the page
+    - navigation.tracking # When anchor tracking is enabled, the URL in the address bar is automatically updated with the active anchor as highlighted in the table of contents
+    - navigation.sections # When sections are enabled, top-level sections are rendered as groups in the sidebar for viewports above 1220px, bu
+    - navigation.expand # When expansion is enabled, the left sidebar will expand all collapsible subsections by default, so the user doesn't have to open subsections manually.
+    - navigation.indexes # When section index pages are enabled, documents can be directly attached to sections, which is particularly useful for providing overview pages. 
+    - navigation.top # A back-to-top button can be shown when the user, after scrolling down, starts to scroll up again
+    - content.tooltips #Tooltips
+    - search.suggest
+    - search.highlight
+    - search.share
+
+  icon:
+    tag:
+      etiqueta: octicons/tag-24
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      title: Contenidos
+  - tables
+  - meta
+  - abbr #Tooltips
+  - attr_list #Tooltips
+  - admonition
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html  
+  - pymdownx.snippets: #Tooltips https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-tooltips
+      auto_append: 
+        - includes/abbreviations.md
+
+# Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tilde
+  - pymdownx.tabbed:
+      alternate_style: true #The Tabbed extension allows the usage of content tabs, a simple way to group related content and code blocks under accessible tabs.
+  - pymdownx.tasklist:
+      custom_checkbox: true #The Tasklist extension allows for the usage of GitHub Flavored Markdown inspired task lists, following the same syntactical conventions.
+
+
+plugins:
+  - tags:
+      tags_file: 'tags.md'
+  - search:
+      lang: es
+#  - social:
+#      cards_color:
+#        fill: "#0FF1CE" 
+#        text: "#FFFFFF"
+#      cards: !ENV [MKDOCS_SOCIAL_CARDS, false]
+#      cards_dir: assets/images/social
+      
+extra:
+#  social:
+#    - type: 'github'
+#      link: 'https://github.com/revilofe'
+#    - type: 'twitter'
+#      link: 'https://twitter.com/revilofe'
+  version:
+    provider: mike
+  tags:
+    etiqueta: etiqueta
+    

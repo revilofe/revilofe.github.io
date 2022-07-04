@@ -37,7 +37,7 @@ jobs:
         run: mkdir slides && sudo chmod 777 slides
 
       - name: Create "/slides/pdf" directory
-        run: mkdir slides/pdf && sudo chmod 777 slides
+        run: mkdir slides/pdf && sudo chmod 777 slides/pdf
 
       - name: Build PDF from slides
         # Se puede modificar el argumento --size para personalizar el tamaño si la salida no se ajusta correctamente a lo deseado

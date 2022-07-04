@@ -1,5 +1,5 @@
 <!-- Con # se ponen los títulos -->
-# Slide Ayuda
+# Slide de Ayuda
 <!-- Así se pone una imagen -->
 ![Logo Alberties](assets/logo-alberties.png)
 

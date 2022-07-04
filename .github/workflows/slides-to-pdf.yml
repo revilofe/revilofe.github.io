@@ -45,6 +45,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: slides/pdf
-          destination_dir: slides/pdf
+          publish_dir: slides
+          destination_dir: slides
           keep_files: true

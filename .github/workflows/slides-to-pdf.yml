@@ -33,9 +33,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
 
-      - name: Create "/slides" directory
-        run: mkdir slides && sudo chmod 777 slides
-
       - name: Create "/slides/pdf" directory
         run: mkdir slides/pdf && sudo chmod 777 slides/pdf
 

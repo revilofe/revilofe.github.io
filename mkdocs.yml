@@ -32,8 +32,6 @@ nav:
     - 'Unidad 8': 'section2/page-8.md'
   - 'Tags': 'tags.md'
   - 'Acerca de': 'about.md'
-  - 'Ayuda':
-    - 'slides/ayuda.html'
   - 'yo': 'about.md'
 
 

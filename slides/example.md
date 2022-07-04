@@ -1,12 +1,12 @@
 <!-- Con # se ponen los títulos -->
-# Título Demo - Edu 3
+# Título Demo - Edu 4
 
 <!-- Así se pone una imagen -->
 ![Logo Alberties](assets/logo-alberties.png)
 
 ---
 
-## Segunda diapositiva  - Edu 3
+## Segunda diapositiva  - Edu 4
 Poniendo un salto de línea, una línea con '---' y otro salto de línea, se crea otra diapositiva
 
 ---

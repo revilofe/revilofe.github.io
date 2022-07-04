@@ -1,6 +1,6 @@
 <!-- Con # se ponen los títulos -->
-# Ejemplo Slides 1
-
+# Ejemplo Slides 1 - edu
+edu
 <!-- Así se pone una imagen -->
 ![Logo Alberties](assets/logo-alberties.png)
 

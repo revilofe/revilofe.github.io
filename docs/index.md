@@ -15,7 +15,7 @@ tags:
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-Prueba de deploy.
+Prueba de deploy. Slides [Ejemplo diapositivas](slides/slides1.html)
 
 ## Commands
 

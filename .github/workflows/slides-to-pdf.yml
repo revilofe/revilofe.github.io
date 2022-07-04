@@ -1,0 +1,49 @@
+name: slides-to-pdf
+on:
+  # Si quieres elegir cuándo lanzarlo, comenta las líneas push y siguientes y descomenta la línea a continuación:
+  # workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'slides/*'
+
+jobs:
+  list-files:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v2
+      - id: set-matrix
+        run: echo "::set-output name=matrix::$(ls slides/*.html | sed -e 's/slides\/\(.*\).html/\1/' | jq -R -s -c 'split("\n")[:-1]' )"
+  
+  generate_pdf:
+    needs: list-files
+    runs-on: ubuntu-latest
+    strategy:
+        max-parallel: 1
+        matrix:
+            # Si quieres pasar a PDF solamente unas diapositivas en concreto, comenta la siguiente línea
+            html: ${{ fromJson(needs.list-files.outputs.matrix) }}
+            # Y descomenta la siguiente, indicando el listado de nombres de los archivos .html que quieres convertir
+            # html: [slides1,slides2,slides3]
+
+    name: Generate PDF
+    steps:
+      - uses: actions/checkout@v2.3.4
+
+      - name: Create "/slides/pdf" directory
+        run: mkdir slides/pdf && sudo chmod 777 slides/pdf
+
+      - name: Build PDF from slides
+        # Se puede modificar el argumento --size para personalizar el tamaño si la salida no se ajusta correctamente a lo deseado
+        run: docker run --rm -t -v `pwd`:/slides -v ~:/home/user astefanutti/decktape --chrome-arg=--disable-web-security --size='2048x1536' slides/${{ matrix.html }}.html slides/pdf/${{ matrix.html }}.pdf
+
+      - name: Deploy to exports branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./slides/pdf
+          publish_branch: exports
+          keep_files: true

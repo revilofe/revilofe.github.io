@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 
-site_name: 'Eduardo Fdez.'
-site_url: 'http://127.0.0.1:8000/'
+site_name: 'R Z O'
+site_url: 'https://revilofe.github.io/'
 repo_url: 'https://github.com/revilofe/revilofe.github.io'
 repo_name: 'GitHub'
 site_author: 'Eduardo Fdez'
@@ -41,6 +41,8 @@ nav:
 theme:
   name: material
   language: es
+  logo: assets/favicon-96x96.png
+  favicon: assets/favicon-96x96.png
   font:
     text: Roboto
   palette:

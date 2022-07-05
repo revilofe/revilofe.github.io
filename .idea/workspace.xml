@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="Revert &quot;Deployed f651645 with MkDocs version: 1.3.0&quot;" />
+    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="Logo y FavIcon">
+      <change afterPath="$PROJECT_DIR$/docs/assets/black-tiles-designify.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/assets/concrete-floor-designify.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/assets/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/assets/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/assets/favicon-96x96.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/assets/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/assets/landscape-basic-grey-designify.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/assets/r z o 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/assets/r z o.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/assets/r_z_o_2-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/assets/spotlight-designify.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,17 +55,30 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="" />
-      <changelist id="" name="Revert &quot;Deployed f651645 with MkDocs version: 1.3.0&quot;" comment="" />
       <created>1656924522284</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656924522284</updated>
       <workItem from="1656924525468" duration="464000" />
       <workItem from="1656925031006" duration="2644000" />
+      <workItem from="1657015387648" duration="636000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Añadido revealjs&quot;&#10;&#10;This reverts commit 816d7e91">
       <created>1656924733819</created>
@@ -74,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656926235809</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Logo y FavIcon">
+      <created>1657016021426</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657016021426</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +142,7 @@
     <MESSAGE value="Revert &quot;Añadido revealjs&quot;&#10;&#10;This reverts commit 816d7e91" />
     <MESSAGE value="Revert &quot;Deployed f651645 with MkDocs version: 1.3.0&quot;&#10;&#10;This reverts commit c57880d5" />
     <MESSAGE value="Revert &quot;Deployed f651645 with MkDocs version: 1.3.0&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Deployed f651645 with MkDocs version: 1.3.0&quot;" />
+    <MESSAGE value="Logo y FavIcon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logo y FavIcon" />
   </component>
 </project>

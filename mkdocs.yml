@@ -41,7 +41,7 @@ nav:
 theme:
   name: material
   language: es
-  logo: assets/favicon-96x96.png
+  logo: assets/ms-icon-144x144.png
   favicon: assets/favicon-96x96.png
   font:
     text: Roboto

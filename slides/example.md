@@ -142,6 +142,7 @@ Guarda como PDF y... ¡Listo!
 ## a PDF... ¿automatizado?
 
 Echa un vistazo a la rama "slides" del repositorio... Exacto, hay un Github Actions para ello :-)
+Artista.
 
 ---
 

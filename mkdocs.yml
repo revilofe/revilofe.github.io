@@ -4,6 +4,7 @@ site_name: 'R Z O'
 site_url: 'https://revilofe.github.io/'
 repo_url: 'https://github.com/revilofe/revilofe.github.io'
 repo_name: 'GitHub'
+edit_uri: edit/main/docs/
 site_author: 'Eduardo Fdez'
 
 

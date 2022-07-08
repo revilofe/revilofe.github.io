@@ -23,7 +23,8 @@ nav:
     - 'Unidad 8': 'section1/page-7.md'
   - 'Incidentes':
     - 'section2/index.md'
-    - 'Unidad 1': 'section2/page-1.md'
+    - 'U1: Principios generales y planes de seguridad': 'section2/page-1.md'
+      - '1.1.-PrincipiosGenerales': 'section2/teoría/IS-U1.1.1.-PrincipiosGenerales.md'
     - 'Unidad 2': 'section2/page-2.md'
     - 'Unidad 3': 'section2/page-3.md'
     - 'Unidad 4': 'section2/page-4.md'

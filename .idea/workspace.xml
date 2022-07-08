@@ -1,16 +1,209 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="Cambio ejemplo en slides, para volver atras">
-      <change afterPath="$PROJECT_DIR$/docs/IS-U1.1.1.-PrincipiosGenerales.md" afterDir="false" />
+    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment=".gitignore">
+      <change afterPath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U011-Presentacion0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U011-Presentacion1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U011-Presentacion2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U011-Presentacion3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U011-Presentacion4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U011-Presentacion5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/slides/IS-U0.1.1.-Presentacion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/slides/IS-U0.1.1.-Presentacion.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/slides/assets/IS-U011-Presentacion0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/slides/assets/IS-U011-Presentacion1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/slides/assets/IS-U011-Presentacion2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/slides/assets/IS-U011-Presentacion3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/slides/assets/IS-U011-Presentacion4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/slides/assets/IS-U011-Presentacion5.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/section2/page-1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/section2/page-2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/section2/page-3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/section2/page-4.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/section2/page-5.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/section2/page-6.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/IS-U0.1.1.-Presentación.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U011-Presentación0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U011-Presentación1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U011-Presentación2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U011-Presentación3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U011-Presentación4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U011-Presentación5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales30.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U111-PrincipiosGenerales9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U121-PlanDirectorDeSeguridad9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U131-ProteccionDelPuestoDeTrabajo0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U131-ProteccionDelPuestoDeTrabajo1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U131-ProteccionDelPuestoDeTrabajo10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U131-ProteccionDelPuestoDeTrabajo11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U131-ProteccionDelPuestoDeTrabajo12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U131-ProteccionDelPuestoDeTrabajo13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U131-ProteccionDelPuestoDeTrabajo14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U131-ProteccionDelPuestoDeTrabajo15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U131-ProteccionDelPuestoDeTrabajo16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U131-ProteccionDelPuestoDeTrabajo2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U131-ProteccionDelPuestoDeTrabajo3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U131-ProteccionDelPuestoDeTrabajo4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U131-ProteccionDelPuestoDeTrabajo5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U131-ProteccionDelPuestoDeTrabajo6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U131-ProteccionDelPuestoDeTrabajo7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U131-ProteccionDelPuestoDeTrabajo8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U131-ProteccionDelPuestoDeTrabajo9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U211-TaxonomiaDeIncidentes0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U211-TaxonomiaDeIncidentes1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U211-TaxonomiaDeIncidentes2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U221-DeteccionDeIncidentes0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U221-DeteccionDeIncidentes1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U221-DeteccionDeIncidentes2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U221-DeteccionDeIncidentes3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U221-DeteccionDeIncidentes4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U221-DeteccionDeIncidentes5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U221-DeteccionDeIncidentes6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U221-DeteccionDeIncidentes7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U221-DeteccionDeIncidentes8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U221-DeteccionDeIncidentes9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U231-FuentesAbiertas0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U231-FuentesAbiertas1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U231-FuentesAbiertas10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U231-FuentesAbiertas11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U231-FuentesAbiertas2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U231-FuentesAbiertas3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U231-FuentesAbiertas4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U231-FuentesAbiertas5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U231-FuentesAbiertas6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U231-FuentesAbiertas7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U231-FuentesAbiertas8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U231-FuentesAbiertas9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U241-DocumentacionDeIncidentes9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U311-RecopilacionDeEvidencias0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U311-RecopilacionDeEvidencias1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U311-RecopilacionDeEvidencias2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U321-AnalisisDeEvidenciasEInvestigacionDeIncidentes0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U321-AnalisisDeEvidenciasEInvestigacionDeIncidentes1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U411-PlanesDeRespuesta9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U431-Ciberresiliencia0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U431-Ciberresiliencia1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U431-Ciberresiliencia2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U431-Ciberresiliencia3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U431-Ciberresiliencia4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U431-Ciberresiliencia5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/IS-U431-Ciberresiliencia6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/black-tiles-designify.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/concrete-floor-designify.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/favicon-16x16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/favicon-32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/favicon-96x96.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/landscape-basic-grey-designify.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/ms-icon-144x144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/r z o 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/r z o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/r_z_o_2-removebg-preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section2/u00/assets/spotlight-designify.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +259,21 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -77,7 +285,7 @@
       <workItem from="1656924525468" duration="464000" />
       <workItem from="1656925031006" duration="2644000" />
       <workItem from="1657015387648" duration="8410000" />
-      <workItem from="1657044318252" duration="3694000" />
+      <workItem from="1657044318252" duration="8563000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Añadido revealjs&quot;&#10;&#10;This reverts commit 816d7e91">
       <created>1656924733819</created>
@@ -170,7 +378,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657046160200</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="subida de contenido y estructura">
+      <created>1657276506358</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1657276506358</updated>
+    </task>
+    <task id="LOCAL-00015" summary=".gitignore">
+      <created>1657277100884</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1657277100884</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +435,8 @@
     <MESSAGE value="Configuración blog. Action: Install plugin&#10;      - run: pip3 install mkdocs-blogging-plugin" />
     <MESSAGE value="Cambio ejemplo en slides." />
     <MESSAGE value="Cambio ejemplo en slides, para volver atras" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambio ejemplo en slides, para volver atras" />
+    <MESSAGE value="subida de contenido y estructura" />
+    <MESSAGE value=".gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value=".gitignore" />
   </component>
 </project>

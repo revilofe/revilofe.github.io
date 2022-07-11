@@ -21,7 +21,12 @@
 ![](./assets/IS-U011-Presentacion0.png)
 
 
-## Nos conocemos. Profesor. Actualizar al 2023!!
+## Nos conocemos
+
+![](./assets/IS-U011-Presentacion0.png)
+
+
+## Profesor. Actualizar al 2023!!
 
 * Eduardo Fernández Oliver
   * _[efernandez@iesrafaelalberti\.es](mailto:efernandez@iesrafaelalberti.es)_

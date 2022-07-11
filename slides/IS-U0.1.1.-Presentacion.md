@@ -109,8 +109,9 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 |                                                        UD3                                                        | Investiga incidentes de ciberseguridad                   |    18    | RA3 |  c)..e)  | 2o  trimestre (72 horas) |
 |                                                        UD4                                                        | Implementa medidas de ciberseguridad en redes y sistemas |    42    | RA4 |  a)..f)  |                          |
 |                                                        UD5                                                        | Documenta y notifica incidentes de ciberseguridad        |    12    | RA5 |  a)..e)  |                          |
-| _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i-xNGtTAMcRiCgj/view?usp=sharing)_ |                                                          |          |    |          |                          |
 <!-- .element.table: style="font-size:50%;" -->
+
+_[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i-xNGtTAMcRiCgj/view?usp=sharing)_
 
 ---
 

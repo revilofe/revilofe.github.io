@@ -2,16 +2,26 @@
 
 # Incidentes de ciberseguridad
 
+
 ![Logo Alberti](assets/logo-iesra.png)
+
+
 ![Logo Alberties](assets/logo-alberties.png)
 
 ---
 
-## Indice
+# Indice
+
+![](./assets/IS-U011-Presentacion0.png)
 
 ---
 
-# Nos presentamos
+# Presentación
+
+![](./assets/IS-U011-Presentacion0.png)
+
+
+## Nos conocemos
 
 ![](./assets/IS-U011-Presentacion0.png)
 
@@ -48,6 +58,7 @@ La formación del módulo contribuye a alcanzar los objetivos generales a), b), 
 | RA 3 | Investiga           | incidentes de ciberseguridad                              | analizando los riesgos implicados y definiendo las posibles medidas a adoptar               |
 | RA 4 | Implementa          | medidas de ciberseguridad en redes y sistemas             | respondiendo a los incidentes detectados y aplicando las técnicas de protección adecuadas |
 | RA 5 | Detecta y documenta | incidentes de ciberseguridad                              | siguiendo procedimientos de actuación establecidos.                                        |
+<!-- .element.table: style="font-size:50%;" -->
 
 
 ## Competencias PPS
@@ -77,6 +88,7 @@ Horario (X horas semanales)
 | 11:30 - 12:30 |        |    |  |    |  |
 | 12:30 - 13:30 |        |    |  |    |  |
 | 13:30 - 14:30 |        |    |  |    |  |
+<!-- .element.table: style="font-size:50%;" -->
 
 
 ## Planificación. Actualizar al 2023!!
@@ -103,6 +115,7 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 |                                                        UD4                                                        | Implementa medidas de ciberseguridad en redes y sistemas |    42    | RA4 |  a)..f)  |                          |
 |                                                        UD5                                                        | Documenta y notifica incidentes de ciberseguridad        |    12    | RA5 |  a)..e)  |                          |
 | _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i-xNGtTAMcRiCgj/view?usp=sharing)_ |                                                          |          |    |          |                          |
+<!-- .element.table: style="font-size:50%;" -->
 
 ---
 

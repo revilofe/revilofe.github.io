@@ -8,6 +8,11 @@ tags:
 
 # https://squidfunk.github.io/mkdocs-material/
 # https://www.mkdocs.org/
+
+
+hide:
+  - footer
+
 ---
 
 

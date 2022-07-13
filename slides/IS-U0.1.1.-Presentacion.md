@@ -12,13 +12,9 @@
 
 # Indice
 
-![](./assets/IS-U011-Presentacion0.png)
-
 ---
 
 # Presentación
-
-![](./assets/IS-U011-Presentacion0.png)
 
 
 ## Nos conocemos. Profesor. Actualizar al 2023!!
@@ -34,8 +30,6 @@ Note: Recomendado, consultar la programación.
 ---
 
 # Objetivos fundamentales
-
-![](./assets/IS-U011-Presentacion0.png)
 
 
 ## Objetivos generales
@@ -66,8 +60,6 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 
 # Horarios y planificación
 
-![](./assets/IS-U011-Presentacion0.png)
-
 
 ## Horario. Actualizar al 2023!!
 
@@ -96,8 +88,6 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 
 # Contenidos
 
-![](./assets/IS-U011-Presentacion0.png)
-
 
 ## Contenido. Actualizar al 2023!!
 
@@ -116,8 +106,6 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 ---
 
 # Evaluación y recuperación
-
-![](./assets/IS-U011-Presentacion0.png)
 
 
 ## Evaluación. Actualizar al 2023!!
@@ -145,8 +133,6 @@ Consistirá en un conjunto de prácticas y/o pruebas sobre los contenidos a los 
 ---
 
 # Metodología y comunicación
-
-![](./assets/IS-U011-Presentacion0.png)
 
 
 ## Metodología

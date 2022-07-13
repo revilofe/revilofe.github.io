@@ -1,17 +1,26 @@
 ---
 title: "UD 1 - Planes de ciberseguridad"
-description: Introducción a la seguridad y planes.
-icon: material/security
-permalink: /incidentes/unidad1
+description: d Introducción a la seguridad y planes.
+summary: s Introducción a la seguridad y planes.
+authors:
+    - Eduardo Fdez
+date: 2022-07-03icon: material/security
+permalink: /incidentes/unidad2
 categories:
   - IC
 tags:
   - Incidentes
   - Ciberseguridad
+
 # Relacionado con la tabla de contenidos
 toc: true
 toc_label: "Contenido"
 toc_icon: "file-code"
+
+tags:
+
+#hide:
+#  - footer
 ---
 
 Cada unidad contendrá una serie de contenidos, resultados de aprendizaje (desglosados en criterios de evaluación), una práctica o prácticas para evaluar la adquisición de dichos criterios de evaluación y una prueba teórica para evaluar la asimilación de contenido.

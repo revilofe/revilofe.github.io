@@ -184,9 +184,6 @@ extra:
           note: >- 
             Gracias por tu feedback! #TODO: Ayudame a mejorarla usando este formulario. <a href="..." target=_blank>feedback form</a>.
 
-plugins:
-  - search
-
 
 
 

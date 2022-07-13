@@ -149,13 +149,13 @@ extra:
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/revilofe
-      name: Twitter
+      #name: Twitter
     - icon: fontawesome/solid/envelope
       link: mailto:<efernandez@iesrafaelalberti.es>
       name: e-mail
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/efoliver
-      name: LinkedIn
+      #name: LinkedIn
 #  social:
 #    - type: 'github'
 #      link: 'https://github.com/revilofe'
@@ -183,7 +183,7 @@ extra:
           data: 0
           note: >- 
             Gracias por tu feedback! #TODO: Ayudame a mejorarla usando este formulario. <a href="..." target=_blank>feedback form</a>.
-
+  generator: false
 
 
 copyright: 2021-2022 Eduardo Fernández <a href="https://twitter.com/revilofe" target=_blank>@revilofe</a> - Licencia CC BY-NC-SA

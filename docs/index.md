@@ -25,7 +25,7 @@ hide:
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-Prueba de deploy. Slides [Ejemplo diapositivas](slides/slides1.html)
+Prueba de deploy. Slides [Ejemplo diapositivas](IS-U0.1.1.-Presentacion.html)
 
 ## Commands
 

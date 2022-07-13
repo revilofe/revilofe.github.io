@@ -877,10 +877,236 @@
   </a>
 
 
+  
+
+
 
 <h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
 <hr />
-<p>{{ blog_content }}</p>
+<p>
+
+
+
+<style>
+    .md-typeset .blog-post:first-of-type h3 {
+        margin-top: 0;
+    }
+
+    .md-typeset .blog-post-title {
+        margin-bottom: 0;
+    }
+
+    .md-typeset .blog-post-extra {
+        color: var(--md-default-fg-color--light);
+    }
+
+    .md-typeset .blog-center {
+        text-align: center;
+    }
+
+    .md-typeset .blog-pagination {
+        display: inline-block;
+    }
+
+    .md-typeset .blog-pagination a {
+        color: var(--md-typeset-color);
+        float: left;
+        padding: .25em 1em;
+        text-decoration: none;
+        border-radius: 1em;
+        margin-left: .25em;
+        margin-right: .25em;
+        transition: all .15s ease-in-out;
+    }
+
+    .md-typeset .blog-pagination a.active {
+        background-color: var(--md-typeset-a-color);
+        color: white;
+        font-weight: bold;
+    }
+
+    .md-typeset .blog-pagination a:hover:not(.active) {
+        background-color: #dddddda1;
+    }
+
+    .md-typeset .blog-hidden {
+        display: none;
+    }
+</style>
+
+<style>
+    .blog-override-post {
+        padding: 30px 60px 30px 0;
+        margin-top: 10px;
+        border: 1px solid transparent;
+        cursor: default;
+    }
+
+    .blog-override-post .blog-post-title {
+        color: var(--md-typeset-a-color);
+        margin-top: 0;
+    }
+
+    .blog-post-description {
+        color: var(--md-typeset-color);
+    }
+
+    .blog-override-post:first-of-type {
+        margin-top: 0;
+    }
+
+    .blog-override-post:hover {
+        border: 1px solid #e8e8e877;
+        box-shadow: 3px 4px 10px #e8e8e8;
+    }
+
+    .blog-override-post,
+    .blog-override-post>* {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .blog-override-post:hover>* {
+        transform: translateX(30px);
+    }
+
+    .blog-post-description,
+    .blog-post-extra {
+        opacity: 0.8;
+    }
+
+    .blog-override-post:hover .blog-post-description,
+    .blog-override-post:hover .blog-post-extra {
+        opacity: 1;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .blog-override-post,
+        .blog-override-post>* {
+            transition: none;
+        }
+
+        .blog-override-post:hover>* {
+            transform: none;
+        }
+
+        .blog-override-post {
+            padding: 30px 0 30px 0;
+            border: none;
+            cursor: pointer;
+        }
+
+        .blog-override-post:hover {
+            border: none;
+            box-shadow: none;
+        }
+
+        .blog-post-description,
+        .blog-post-extra,
+        .blog-override-post:hover .blog-post-description,
+        .blog-override-post:hover .blog-post-extra {
+            opacity: 1;
+        }
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+    .md-typeset .blogging-tags-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 5px;
+    }
+
+    .md-typeset .blogging-tag {
+        color: var(--md-typeset-color);
+        background-color: var(--md-typeset-code-color);
+    }
+
+    .md-typeset .blogging-tag code {
+        border-radius: 5px;
+    }
+</style>
+
+    
+
+
+
+
+
+
+<div class="pages">
+    
+        
+        <div class="page" id="page1">
+
+            
+                
+                
+                
+                
+
+                
+                
+                    
+                
+
+                
+                
+                    
+                
+                
+                <a href="https://revilofe.github.io/blog/20220705-UnaPrueba/">
+    <div class="blog-override-post">
+        <h3 class="blog-post-title">Un ejemplo de post</h3>
+        
+            <div class="blogging-tags-grid">
+        
+        <code style="color: var(--md-typeset-color)">#Other</code>
+        
+        <code style="color: var(--md-typeset-color)">#etiqueta</code>
+        
+    </div>
+    
+            
+
+        
+        <p class="blog-post-description">Nullam urna elit, malesuada eget finibus ut, ac tortor.</p>
+        <div class="blog-post-extra">
+            Published at: 7/5/22, 5:11 PM
+        </div>
+    </div>
+</a>
+
+                
+            
+        </div>
+    
+</div>
+
+<div class="blog-center blog-hidden">
+    <div class="blog-pagination " id="blog-pagination">
+        
+            <a class="page-number" href="#blog-p1">1</a>
+        
+    </div>
+    
+        <div>Total <b>1</b> posts.</div>
+    
+</div></p>
 
               
             </article>
@@ -986,4 +1212,59 @@
       
     
   </body>
-</html>
+</html><script>var currentPage = 0
+const lastComponent = window.location.href.split("/").slice(-1).pop()
+
+if (lastComponent && lastComponent.slice(0, 7) == "#blog-p") {
+  const page = parseInt(lastComponent.slice(7))
+  if (page) {
+    currentPage = page - 1
+  }
+}
+
+function scrollToTop() {
+  setTimeout(function () {
+    window.scrollTo(0, 0);
+  }, 100);
+}
+
+var pagination = document.getElementById("blog-pagination");
+if (pagination) {
+  var links = pagination.getElementsByClassName("page-number");
+  if (links.length) {
+    for (var i = 0; i < links.length; i++) {
+      // Toggle pagination highlight
+      links[i].addEventListener("click", function () {
+        var current = pagination.getElementsByClassName("active");
+        if (current.length) {
+          current[0].className = current[0].className.replace(
+            " active", ""
+          );
+        }
+        this.className += " active";
+
+        // Togglg visibility of pages
+        const destPage = parseInt(this.textContent)
+        var pages = document.getElementsByClassName("page")
+        if (destPage && pages.length) {
+          for (var j = 0; j < pages.length; j++) {
+            const pageId = parseInt(pages[j].id.replace("page", ""))
+            if (pageId != destPage) {
+              // This is not the destination page
+              if (!pages[j].className.includes("blog-hidden")) {
+                pages[j].className += " blog-hidden"
+              }
+            } else {
+              // This is the destination page
+              pages[j].className = pages[j].className.replace(" blog-hidden", "")
+            }
+            scrollToTop();
+          }
+        }
+      });
+    }
+    links[currentPage].className += " active"
+    links[currentPage].click();
+  }
+}
+</script>

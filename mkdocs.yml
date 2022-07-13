@@ -146,6 +146,16 @@ plugins:
 #      cards_dir: assets/images/social
       
 extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/revilofe
+      name: Twitter
+    - icon: fontawesome/solid/envelope
+      link: mailto:<efernandez@iesrafaelalberti.es>
+      name: e-mail
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/efoliver
+      name: LinkedIn
 #  social:
 #    - type: 'github'
 #      link: 'https://github.com/revilofe'
@@ -157,16 +167,6 @@ extra:
     etiqueta: etiqueta
   search:
     language: "es"
-  social:
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/revilofe
-      name: Twitter
-    - icon: fontawesome/solid/envelope
-      link: mailto:<efernandez@iesrafaelalberti.es>
-      name: e-mail
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/efoliver
-      name: LinkedIn
   analytics: #https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics
     provider: google
     property: G-GT5TGHD4YQ
@@ -186,5 +186,4 @@ extra:
 
 
 
-
-copyright: 2021-2022 Eduardo Fernández @revilofe - Licencia CC BY-NC-SA
+copyright: 2021-2022 Eduardo Fernández <a href="https://twitter.com/revilofe" target=_blank>@revilofe</a> - Licencia CC BY-NC-SA

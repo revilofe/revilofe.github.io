@@ -1,11 +1,26 @@
 ---
-title: Acerca de de
-summary: A brief description del site.
+title: Acerca de
+description: Acerca de
+summary: Acerca de
 authors:
     - Eduardo Fdez
 date: 2022-07-03
-some_url: http://127.0.0.1:8000/acercade/
+icon: material/security
+permalink: /about
+categories:
+  - GENERAL
+#tags:
+
+# Relacionado con la tabla de contenidos
+toc: true
+toc_label: "Contenido"
+toc_icon: "file-code"
+
+hide:
+  - footer
 ---
+
+
 
 *Acerca de*
 

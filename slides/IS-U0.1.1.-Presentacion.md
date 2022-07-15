@@ -12,13 +12,9 @@
 
 # Indice
 
-![](./assets/IS-U011-Presentacion0.png)
-
 ---
 
 # Presentación
-
-![](./assets/IS-U011-Presentacion0.png)
 
 
 ## Nos conocemos. Profesor. Actualizar al 2023!!
@@ -34,8 +30,6 @@ Note: Recomendado, consultar la programación.
 ---
 
 # Objetivos fundamentales
-
-![](./assets/IS-U011-Presentacion0.png)
 
 
 ## Objetivos generales
@@ -66,8 +60,6 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 
 # Horarios y planificación
 
-![](./assets/IS-U011-Presentacion0.png)
-
 
 ## Horario. Actualizar al 2023!!
 
@@ -96,8 +88,6 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 
 # Contenidos
 
-![](./assets/IS-U011-Presentacion0.png)
-
 
 ## Contenido. Actualizar al 2023!!
 
@@ -117,16 +107,18 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 
 # Evaluación y recuperación
 
-![](./assets/IS-U011-Presentacion0.png)
 
-
-## Evaluación. Actualizar al 2023!!
+## Evaluación I. Actualizar al 2023!!
 
 * Se supera el módulo con una calificación mayor o igual a 5.
 * La nota se obtiene según la calificación de los resultados de aprendizaje (RA).
 * Un RA no superado, implica no superar el módulo.
 * Los RA se evalúan y califican en base a la evaluación y calificación de los criterios de evaluación (CE).
 * Los CE se evalúan y califican a través del trabajo en clases y la realización de trabajos y pruebas especificas.
+
+
+## Evaluación II. Actualizar al 2023!!
+
 * Hay 2 Evaluaciones Parciales
   * Finales ¿Febrero?
   * Finales ¿Mayo?
@@ -138,15 +130,12 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 
 ## Recuperación
 
-La recuperación de los RA pendientes durante el mes de junio
-
-Consistirá en un conjunto de prácticas y/o pruebas sobre los contenidos a los que están asociados los resultados de aprendizaje no superados.
+* La recuperación de los RA pendientes durante el mes de junio
+* Consistirá en un conjunto de prácticas y/o pruebas sobre los contenidos a los que están asociados los resultados de aprendizaje no superados.
 
 ---
 
 # Metodología y comunicación
-
-![](./assets/IS-U011-Presentacion0.png)
 
 
 ## Metodología

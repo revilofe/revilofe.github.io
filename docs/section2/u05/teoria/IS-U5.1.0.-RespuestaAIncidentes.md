@@ -6,11 +6,7 @@
 
 ## 1. Introducción
 
-El curso se trabaja sobre los problemas que debe de hacer frente un profesional que desarrolle su carrera en un equipo
-de CSIRT con objeto de dar respuesta a un incidente de seguridad (IR). Cuando se produce un incidente de seguridad desde
-el CIO de la organización hasta la persona que está recolectando las evidencias deben de estar coordinadas durante todo
-el proceso. Una respuesta ante un incidente hoy requiere que todos los recursos y empleados de la organización, medios
-de comunicaciones, marketing estén alineados. Durante el curso se verán y se darán respuesta a las siguientes premisas:
+El curso se trabaja sobre los problemas que debe de hacer frente un profesional que desarrolle su carrera en un equipo de CSIRT con objeto de dar respuesta a un incidente de seguridad (IR). Cuando se produce un incidente de seguridad desde el CIO de la organización hasta la persona que está recolectando las evidencias deben de estar coordinadas durante todo el proceso. Una respuesta ante un incidente hoy requiere que todos los recursos y empleados de la organización, medios de comunicaciones, marketing estén alineados. Durante el curso se verán y se darán respuesta a las siguientes premisas:
 
 - Entender que es un proceso IR
 - Como construir un equipo de respuesta de forma satisfactoria
@@ -22,10 +18,7 @@ de comunicaciones, marketing estén alineados. Durante el curso se verán y se d
 - Observar y analizar Malware
 - Escribir reportes
 
-Un cambio está sucediendo en toda la industria de la ciberseguridad tanto en la parte de pentesters como los
-especialistas en ciberseguridad. Desde el punto de vista de ciberseguridad la respuesta de incidentes se ha convertido
-en un componente importante de la tecnología de la información IT. Los ataques se han vuelto no solo más numerosos y
-diversos, sino que además son cada vez más peligrosos y dañinos aumentando su frecuencia de forma preocupante.
+Un cambio está sucediendo en toda la industria de la ciberseguridad tanto en la parte de pentesters como los especialistas en ciberseguridad. Desde el punto de vista de ciberseguridad la respuesta de incidentes se ha  convertido en un componente importante de la tecnología de la información IT. Los ataques se han vuelto no solo más numerosos y diversos, sino que además son cada vez más peligrosos y dañinos aumentando su frecuencia de forma preocupante.
 
 _Es importante entender que no todos los incidentes pueden ser prevenidos, pero disponer de la capacidad de detectar
 incidentes de forma rápida y minimizar la perdida y destrucción de los datos de una organización mitigando de esta
@@ -38,10 +31,12 @@ ciberseguridad dentro de las organizaciones. Además, los equipos de incidentes 
 constante de los procesos internos y externos de la organización. Del mismo es vital diseñar un plan de comunicación
 interno que agilice el proceso y la toma de decisiones ante un incidente. El centro de Recursos y seguridad de las
 computadoras CSRC del instituto de estándares y tecnologías NIST ha desarrollado una serie de guías sobre estos eventos.
+
+
 Un gran número de gobiernos, agencias, socios de otras organizaciones, contractos dan soporte a la guía 800-61r2 de
 NIST.
 
-## 2. ¿Qué es un incidenrte?
+## 2. ¿Qué es un incidente?
 
 Para entender que es un incidente, es necesario explicar que es un evento.
 
@@ -102,8 +97,7 @@ El impacto de estos incidentes podría ir desde tener que reconfigurar algunos d
 
 La respuesta de incidentes es la coordinación, estructuración y resolución de un incidente detectado. A modo resumido podríamos definirlo en los siguientes puntos de más abajo:
 
-- Confirmar dónde y cómo ha sucedido el incidente y si este
-  realmente ha sucedido o se trata de un falso positivo.
+- Confirmar dónde y cómo ha sucedido el incidente y si este realmente ha sucedido o se trata de un falso positivo.
 - Proveer de una rápida detección y sobre todo contención.
 - Determinar y documentar el alcance del incidente (si se han producido daños, de que tipo, si se han producido perdidas monetarias etc.)
 - Prevenir una respuesta sin sentido o que no esté bien documentada.
@@ -111,15 +105,13 @@ La respuesta de incidentes es la coordinación, estructuración y resolución de
 - Minimizar la perdida de negocio y las operaciones normales de una organización.
 - Restaurar las operaciones normales.
 - Minimizar los daños ocasiones sobre los componentes que fueron comprometidos.
-- Administrar la percepción del incidente públicamente en caso de ser necesario, para no impactar en la credibilidad y
-  confianza de nuestros clientes.
+- Administrar la percepción del incidente públicamente en caso de ser necesario, para no impactar en la credibilidad y confianza de nuestros clientes.
 - Tomar acciones criminales o acciones civiles contra los autores que provocaron el incidente.
 - Formar y realizar ejercicios de simulación con los equipos de respuesta de incidentes
 
 Por lo general la respuesta de incidentes consiste en investigar que ha ocurrido y evaluar los daños producidos. Un equipo de remediación elimina las amenazas de un atacante sobre el entorno y gestiona las comunicaciones a empleados de la compañía, socios, publicas etc.
 
-Todas las respuestas a un incidente se gestionan a través de una metodología que envuelve el tiempo de los ataques, los
-daños ocasionados, el grado de compromiso que ha sufrido la organización entre otros puntos.
+Todas las respuestas a un incidente se gestionan a través de una metodología que envuelve el tiempo de los ataques, los daños ocasionados, el grado de compromiso que ha sufrido la organización entre otros puntos.
 
 ### 3.2 ¿Objetivos de la respuesta de incidentes?
 
@@ -167,7 +159,7 @@ Este concepto se ha incluido a modo resumen porque es importante entender como u
 5. **Movimientos laterales**: El atacante salta y pivota en la red buscando sistemas mas críticos evadiendo de esta manera las medidas de seguridad de FW o redes en DMZ. Del mismo modo las técnicas más habituales es través de RDP, VNC, tareas
    programadas etc.
 6. **Mantener Persistencia**: El objetivo es instalar servicios ocultos en los sistemas para retomar las conexiones en caso de ser necesario. La persistencia se suele conseguir a través de VPN, puertas traseras o implementar malware en software legitimo.
-7. **Ataque exitoso: El atacante ha logrado su objetivo y ha robado los datos de la compañía, ha provocado perdidas internas de información o problemas internos. Incluso mantiene un acceso interno para volver a realizar ataques después de un tiempo.
+7. **Ataque exitoso**: El atacante ha logrado su objetivo y ha robado los datos de la compañía, ha provocado perdidas internas de información o problemas internos. Incluso mantiene un acceso interno para volver a realizar ataques después de un tiempo.
 
 ## 4. El proceso que envuelve la respuesta a incidentes
 

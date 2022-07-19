@@ -1,0 +1,1901 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Eduardo Fdez">
+      
+      
+        <link rel="canonical" href="https://revilofe.github.io/section2/u05/teoria/IS-U5.1.0.-RespuestaAIncidentes/">
+      
+      <link rel="icon" href="../../../../assets/favicon-96x96.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>IS U5.1.0. RespuestaAIncidentes - R Z O</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-GT5TGHD4YQ"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-GT5TGHD4YQ",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GT5TGHD4YQ"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#planes-de-respuesta" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        <aside class="md-banner md-banner--warning">
+          
+        </aside>
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../.." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
+      
+  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            R Z O
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              IS U5.1.0. RespuestaAIncidentes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/revilofe/revilofe.github.io" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../.." class="md-tabs__link">
+      Principal
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../section1/" class="md-tabs__link">
+        Programación
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link">
+        Incidentes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../blog/" class="md-tabs__link">
+      Blog
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../tags/" class="md-tabs__link">
+      Tags
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../about/" class="md-tabs__link">
+      Acerca de
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../about/" class="md-tabs__link">
+      yo
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
+      
+  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
+
+    </a>
+    R Z O
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/revilofe/revilofe.github.io" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Principal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../section1/">Programación</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Programación" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Programación
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/page-1/" class="md-nav__link">
+        Unidad 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/page-2.md" class="md-nav__link">
+        Unidad 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/page-3.md" class="md-nav__link">
+        Unidad 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/page-4.md" class="md-nav__link">
+        Unidad 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/page-5.md" class="md-nav__link">
+        Unidad 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/page-5.md" class="md-nav__link">
+        Unidad 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/page-6.md" class="md-nav__link">
+        Unidad 7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/page-7.md" class="md-nav__link">
+        Unidad 8
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../">Incidentes</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Incidentes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Incidentes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../u01/">U1: Principios generales y planes de seguridad</a>
+          
+            <label for="__nav_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="U1: Principios generales y planes de seguridad" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          U1: Principios generales y planes de seguridad
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
+        1.1.-PrincipiosGenerales
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../page-2.md" class="md-nav__link">
+        Unidad 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../page-3.md" class="md-nav__link">
+        Unidad 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../page-4.md" class="md-nav__link">
+        Unidad 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../page-5.md" class="md-nav__link">
+        Unidad 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../page-6.md" class="md-nav__link">
+        Unidad 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../page-7.md" class="md-nav__link">
+        Unidad 7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../page-8.md" class="md-nav__link">
+        Unidad 8
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/" class="md-nav__link">
+        Blog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tags/" class="md-nav__link">
+        Tags
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        Acerca de
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        yo
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    1. Introducción
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-que-es-un-incidenrte" class="md-nav__link">
+    2. ¿Qué es un incidenrte?
+  </a>
+  
+    <nav class="md-nav" aria-label="2. ¿Qué es un incidenrte?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-un-evento" class="md-nav__link">
+    ¿Qué es un evento?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-es-un-incidente" class="md-nav__link">
+    ¿Qué es un incidente?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-contexto-de-la-respuesta-a-un-incidente" class="md-nav__link">
+    3. Contexto de la respuesta a un incidente
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Contexto de la respuesta a un incidente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-que-es-la-respuesta-a-incidente" class="md-nav__link">
+    3.1 ¿Qué es la respuesta a incidente?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-objetivos-de-la-respuesta-de-incidentes" class="md-nav__link">
+    3.2 ¿Objetivos de la respuesta de incidentes?
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 ¿Objetivos de la respuesta de incidentes?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#investigacion" class="md-nav__link">
+    Investigación.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remediacion" class="md-nav__link">
+    Remediación.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-como-se-produce-un-incidente" class="md-nav__link">
+    3.2 ¿Cómo se produce un incidente?
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 ¿Cómo se produce un incidente?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-practico" class="md-nav__link">
+    CASO PRACTICO
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-concepto-del-ciclo-de-vida-de-un-ataque" class="md-nav__link">
+    3.3 Concepto del ciclo de vida de un ataque
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-el-proceso-que-envuelve-la-respuesta-a-incidentes" class="md-nav__link">
+    4. El proceso que envuelve la respuesta a incidentes
+  </a>
+  
+    <nav class="md-nav" aria-label="4. El proceso que envuelve la respuesta a incidentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-respuesta-inicial" class="md-nav__link">
+    4.1 Respuesta inicial
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-investigacion" class="md-nav__link">
+    4.2 Investigación
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Investigación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indicadores-de-compromiso" class="md-nav__link">
+    Indicadores de compromiso
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preservar-la-evidencia" class="md-nav__link">
+    Preservar la evidencia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analizar-los-datos" class="md-nav__link">
+    Analizar los datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remediar-el-problema" class="md-nav__link">
+    Remediar el problema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seguimiento-de-la-investigacion" class="md-nav__link">
+    Seguimiento de la investigación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reporting" class="md-nav__link">
+    Reporting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparando-la-gestion-de-los-incidentes" class="md-nav__link">
+    Preparando la gestion de los incidentes
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparando la gestion de los incidentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-areas-son-necesarias-cubrir" class="md-nav__link">
+    ¿Qué áreas son necesarias cubrir?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donde-estamos" class="md-nav__link">
+    ¿Dónde estamos?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activos-criticos" class="md-nav__link">
+    Activos críticos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/revilofe/revilofe.github.io/edit/main/docs/section2/u05/teoria/IS-U5.1.0.-RespuestaAIncidentes.md" title="Editar esta página" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  
+
+
+
+<!-- ![](assets/IS-U411-PlanesDeRespuesta0.png) -->
+
+<h1 id="planes-de-respuesta">Planes de respuesta<a class="headerlink" href="#planes-de-respuesta" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>RA4</p>
+</blockquote>
+<h2 id="1-introduccion">1. Introducción<a class="headerlink" href="#1-introduccion" title="Permanent link">&para;</a></h2>
+<p>El curso se trabaja sobre los problemas que debe de hacer frente un profesional que desarrolle su carrera en un equipo
+de CSIRT con objeto de dar respuesta a un incidente de seguridad (IR). Cuando se produce un incidente de seguridad desde
+el CIO de la organización hasta la persona que está recolectando las evidencias deben de estar coordinadas durante todo
+el proceso. Una respuesta ante un incidente hoy requiere que todos los recursos y empleados de la organización, medios
+de comunicaciones, marketing estén alineados. Durante el curso se verán y se darán respuesta a las siguientes premisas:</p>
+<ul>
+<li>Entender que es un proceso IR</li>
+<li>Como construir un equipo de respuesta de forma satisfactoria</li>
+<li>Que tipo de infraestructura necesita un equipo de respuesta de incidentes</li>
+<li>Casos prácticos de ataques en tiempo real bajo la plataforma de iHackLabs</li>
+<li>Liderar la investigación de los incidentes</li>
+<li>Recolectar y manejar las evidencias</li>
+<li>Analizar Evidencias en Windows y MAC</li>
+<li>Observar y analizar Malware</li>
+<li>Escribir reportes</li>
+</ul>
+<p>Un cambio está sucediendo en toda la industria de la ciberseguridad tanto en la parte de pentesters como los
+especialistas en ciberseguridad. Desde el punto de vista de ciberseguridad la respuesta de incidentes se ha convertido
+en un componente importante de la tecnología de la información IT. Los ataques se han vuelto no solo más numerosos y
+diversos, sino que además son cada vez más peligrosos y dañinos aumentando su frecuencia de forma preocupante.</p>
+<p><em>Es importante entender que no todos los incidentes pueden ser prevenidos, pero disponer de la capacidad de detectar
+incidentes de forma rápida y minimizar la perdida y destrucción de los datos de una organización mitigando de esta
+manera las debilidades que han sido explotadas son tareas que se desarrollan en un grupo CSIRT</em>.</p>
+<p>Podremos ver el correcto desarrollo de las pautas para dar una respuesta clara y adecuada a cada incidente de seguridad.</p>
+<p>Debido a que la respuesta de incidentes es un proceso complejo se requiere de practicar y simular incidentes de
+ciberseguridad dentro de las organizaciones. Además, los equipos de incidentes de repuesta requieren una vigilancia
+constante de los procesos internos y externos de la organización. Del mismo es vital diseñar un plan de comunicación
+interno que agilice el proceso y la toma de decisiones ante un incidente. El centro de Recursos y seguridad de las
+computadoras CSRC del instituto de estándares y tecnologías NIST ha desarrollado una serie de guías sobre estos eventos.
+Un gran número de gobiernos, agencias, socios de otras organizaciones, contractos dan soporte a la guía 800-61r2 de
+NIST.</p>
+<h2 id="2-que-es-un-incidenrte">2. ¿Qué es un incidenrte?<a class="headerlink" href="#2-que-es-un-incidenrte" title="Permanent link">&para;</a></h2>
+<p>Para entender que es un incidente, es necesario explicar que es un evento.</p>
+<h4 id="que-es-un-evento">¿Qué es un evento?<a class="headerlink" href="#que-es-un-evento" title="Permanent link">&para;</a></h4>
+<p>Cualquier ocurrencia detectada o informada que indique una posible violación o falla en un sistema. Un evento es una situación de interés en cuanto a la seguridad y podría señalar o indicar que algo de importancia está o puede suceder en el sistema.</p>
+<p>Ejemplos de eventos:</p>
+<ul>
+<li>Servicios mal configurados.</li>
+<li>Sistemas con claves conocidas.</li>
+<li>Conexiones no autorizadas a un sistema.</li>
+<li>Fallas en el funcionamiento de un servicio.</li>
+<li>Notificación de accesos no autorizados.</li>
+</ul>
+<h4 id="que-es-un-incidente">¿Qué es un incidente?<a class="headerlink" href="#que-es-un-incidente" title="Permanent link">&para;</a></h4>
+<p>Un incidente es un evento inesperado o no deseado que puede impactar o impacta a la red o los sistemas de una institución de forma que pueda comprometer la <strong>confidencialidad</strong> de la información, la <strong>estabilidad</strong> del servicio o la <strong>integridad</strong> de estos.</p>
+<p>Ejemplos de incidentes</p>
+<ul>
+<li>Amenazas a la seguridad física de seres humanos.</li>
+<li>Ataques a Sistemas de manejo de información o cualquier parte de la infraestructura de red del backbone del CEDIA.</li>
+<li>Ataques a cualquier gran equipo de servicio público, sea multiusuario o con propósito dedicado.</li>
+<li>Compromiso de información en cuentas restringidas confidenciales o instalaciones de software, en particular aquellas usadas para sistemas de administración que contengan información confidencial, o aquellos usuarios para administración del sistema.</li>
+<li>Ataques de negación de servicio sobre cualquiera de los 3 puntos anteriores.</li>
+<li>Ataques en gran escala de cualquier tipo.</li>
+<li>Amenazas, acoso y cualquier otra ofensa criminal en el que estén involucradas cuentas de usuario.</li>
+<li>Compromiso de cuentas de usuarios individuales en sistemas multiusuarios.</li>
+<li>Compromiso de sistemas de escritorio.</li>
+<li>Falsificación y suplantación y cualquier otra violación de reglas locales y regulaciones.</li>
+<li>Negación de servicio en cuentas de usuario individuales.</li>
+</ul>
+<p>Otra forma de ver que es un incidente se establece en base al alcance de lo que el personal de la organización es capaz de realizar y de las medidas que se toman para ello. Desde el punto de vista de definición se establece la premisa de que el personal entienden y saben cuáles son las responsabilidades de cada equipo. Para ello, la organización dispondrá de una política que defina cuáles son las responsabilidades de cada equipo, y si no existe, se debería de crear una a la mayor brevedad. Es importante entender que no existe una política universal, pero deberíamos de considerar los siguientes puntos cuando diseñemos una:</p>
+<ul>
+<li>Intento de causar daño.</li>
+<li>Fue realizado por una persona.</li>
+<li>Implica un recurso informático.</li>
+</ul>
+<p>Los dos primeros son consistentes con muchos tipos de incidentes que no tienen que ver con la tecnología, tales como asaltos, robos o incendios provocados, aunque si no hay intento de causar daño, también se consideran incidente. Por ejemplo, y algo más tecnológico, sería un análisis de vulnerabilidades que no tienen como intención hacer daño, sin embargo, aunque no intencionado, podría provocar un incidente en algún sistema.</p>
+<p>El tercer punto requiere de una persona evalué y excluya todos los eventos que son fallos aleatorios y que están fuera de nuestro control. Por ejemplo, un firewall se apague de forma inmediata por un fallo de corriente y deje sin servicio a varias aplicaciones críticas de la organización.</p>
+<p>Algunos de los incidentes que están relacionados con ordenadores o dispositivos tecnológicos serian los siguientes:</p>
+<ul>
+<li>Datos robados, incluyendo datos sensibles, email y documentos.</li>
+<li>Robo de fondos, incluyendo datos de acceso, tarjetas de crédito.</li>
+<li>Extorsión.</li>
+<li>Accesos no autorizados a ordenadores o servidores.</li>
+<li>Presencia de malware, incluyendo acceso remoto o spyware.</li>
+<li>Posesión ilegal o no autorizados de materiales.</li>
+</ul>
+<p>El impacto de estos incidentes podría ir desde tener que reconfigurar algunos dispositivos o reemplazarlos, hasta tener que gastar una gran cantidad de dinero en remediar el problema, hasta incluso que la empresa tenga que disolverse. Las decisiones que tome, antes, durante y después de que ocurra un incidente afectarán directamente el impacto global.</p>
+<h2 id="3-contexto-de-la-respuesta-a-un-incidente">3. Contexto de la respuesta a un incidente<a class="headerlink" href="#3-contexto-de-la-respuesta-a-un-incidente" title="Permanent link">&para;</a></h2>
+<h3 id="31-que-es-la-respuesta-a-incidente">3.1 ¿Qué es la respuesta a incidente?<a class="headerlink" href="#31-que-es-la-respuesta-a-incidente" title="Permanent link">&para;</a></h3>
+<p>La respuesta de incidentes es la coordinación, estructuración y resolución de un incidente detectado. A modo resumido podríamos definirlo en los siguientes puntos de más abajo:</p>
+<ul>
+<li>Confirmar dónde y cómo ha sucedido el incidente y si este
+  realmente ha sucedido o se trata de un falso positivo.</li>
+<li>Proveer de una rápida detección y sobre todo contención.</li>
+<li>Determinar y documentar el alcance del incidente (si se han producido daños, de que tipo, si se han producido perdidas monetarias etc.)</li>
+<li>Prevenir una respuesta sin sentido o que no esté bien documentada.</li>
+<li>Determinar y promover los hechos que se han producido y actuar en consecuencia con la información obtenida.</li>
+<li>Minimizar la perdida de negocio y las operaciones normales de una organización.</li>
+<li>Restaurar las operaciones normales.</li>
+<li>Minimizar los daños ocasiones sobre los componentes que fueron comprometidos.</li>
+<li>Administrar la percepción del incidente públicamente en caso de ser necesario, para no impactar en la credibilidad y
+  confianza de nuestros clientes.</li>
+<li>Tomar acciones criminales o acciones civiles contra los autores que provocaron el incidente.</li>
+<li>Formar y realizar ejercicios de simulación con los equipos de respuesta de incidentes</li>
+</ul>
+<p>Por lo general la respuesta de incidentes consiste en investigar que ha ocurrido y evaluar los daños producidos. Un equipo de remediación elimina las amenazas de un atacante sobre el entorno y gestiona las comunicaciones a empleados de la compañía, socios, publicas etc.</p>
+<p>Todas las respuestas a un incidente se gestionan a través de una metodología que envuelve el tiempo de los ataques, los
+daños ocasionados, el grado de compromiso que ha sufrido la organización entre otros puntos.</p>
+<h3 id="32-objetivos-de-la-respuesta-de-incidentes">3.2 ¿Objetivos de la respuesta de incidentes?<a class="headerlink" href="#32-objetivos-de-la-respuesta-de-incidentes" title="Permanent link">&para;</a></h3>
+<p>El primer objetivo de una respuesta ante un incidente es eliminar de forma efectiva la amenaza de la organización y del entorno, del mismo modo minimizar los daños y restaurar las operaciones lo más rápido posible. Este objetivo se realiza a través de las siguientes actividades:</p>
+<h4 id="investigacion">Investigación.<a class="headerlink" href="#investigacion" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Determinar el vector de ataque inicial.</li>
+<li>Determinar el malware y las herramientas a utilizar.</li>
+<li>Determinar qué sistemas fueron infectados y cómo.</li>
+<li>Determinar qué tipo de ataque sofisticado se ha sufrido y los daños producidos.</li>
+<li>Determinar si el incidente continúa abierto.</li>
+<li>Establecer un tiempo de inicio y final del incidente.</li>
+</ul>
+<h4 id="remediacion">Remediación.<a class="headerlink" href="#remediacion" title="Permanent link">&para;</a></h4>
+<p>Usando la información obtenida de la investigación, desarrollar e implementar un plan de remediación.</p>
+<h3 id="32-como-se-produce-un-incidente">3.2 ¿Cómo se produce un incidente?<a class="headerlink" href="#32-como-se-produce-un-incidente" title="Permanent link">&para;</a></h3>
+<p>Aunque trabajamos en ayudar a las organizaciones a través de pentest continuos en detectar las brechas de seguridad en sus infraestructuras este tipo de test tienen una carencia frente a un atacante real debido a que este último dispone de un tiempo infinito para buscar, localizar e incluso explotar una vulnerabilidad con éxito. Todos los sectores conectados a internet sufren hoy en día ataques constantes independientemente del sector que sean o se dediquen.</p>
+<p>Todos los criminales que se dedican a extorsionar o robar información a través de ataques cibernéticos se exponen poco o apenas asumen riesgos. Debemos recordar que se produzcan incidentes es algo inevitable, pero sin embargo podemos aplicar las lecciones aprendidas sobre los casos que se van produciendo para evitar que vuelvan a ocurrir o incluso actuar con mayor agilidad frente al incidente.</p>
+<h5 id="caso-practico">CASO PRACTICO<a class="headerlink" href="#caso-practico" title="Permanent link">&para;</a></h5>
+<p>De modo que sea más fácil de entender como se produce un incidente de seguridad analizaremos y comentaremos el siguiente caso práctico.</p>
+<blockquote>
+<p>Durante varios meses el atacante obtuvo información confidencial de diferentes recursos suplementando a los usuarios internos a través de sus propias cuentas de usuarios que habían sido comprometidas. El atacante rompió el cifrado del HASH LM de las cuentas del dominio debido a que la compañía no usaba una política fuerte de contraseñas, además de que los administradores del domino no habían deshabilitado un sistema de cifrado que se considera inseguro como LM.</p>
+<p>Al cabo del tiempo la compañía detecto un volcado de los datos en pastebin y del mismo modo una copia de la base de datos, momento en el que la empresa fue consciente del ataque. Según los análisis forenses el atacante estuvo dentro de la organización aproximadamente durante 4 semanas sin ser detectado y sin alertar que se producía un comportamiento anómalo en la red.</p>
+</blockquote>
+<h3 id="33-concepto-del-ciclo-de-vida-de-un-ataque">3.3 Concepto del ciclo de vida de un ataque<a class="headerlink" href="#33-concepto-del-ciclo-de-vida-de-un-ataque" title="Permanent link">&para;</a></h3>
+<p>El ciclo de vida de un ataque consiste en siete etapas. Aunque se menciona que sean siete pasos o etapas no siempre es así y en ocasiones dependiendo del ataque las etapas puedes variar, sin embargo, como proceso natural un incidente se adapta y debe de ser detectado en las etapas tempranas de un ataque.</p>
+<p>Este concepto se ha incluido a modo resumen porque es importante entender como un atacante realiza los ataques y porque diferentes fases o etapas podría pasar de modo que según el momento se detecte el incidente sepamos el grado o no de compromiso de la organización y del mismo modo su impacto. Está información es muy interesante cuando estas en la fase de remediación</p>
+<p><img alt="Ciclo de vida de un ataque" src="./assets/IS-U5.1.0.-RespuestaAIncidentes-1657542078139.png" /></p>
+<ol>
+<li><strong>Compromiso Inicial</strong>: Un atacante logra con éxito ejecutar código malicioso en uno o más sistemas de la organización. Lo habitual es que este primer paso se inicie debido a ingeniera social sobre algún usuario de la organización a través de phishing o que haya logrado de forma satisfactoria explotar alguna vulnerabilidad de un portal web. Del mismo modo es posible que el atacante haya logrado explotar con éxito una vulnerabilidad de software de terceros.</li>
+<li><strong>Posicionamiento</strong>: El atacante logra establecer conexión remota sobre el sistema comprometido, esta fase ocurre inmediatamente después de la fase de compromiso inicial. Lo habitual es que un atacante establezca una persistencia a través de una puerta trasera o ejecutando código binario en el sistema comprometido.</li>
+<li><strong>Escalar privilegios</strong>: El atacante obtiene la manera de elevar los privilegios en los sistemas y por lo tanto dispone de acceso a datos más sensibles. En este paso el atacante realiza diferentes técnicas con el objetivo de lograr acceder a todos los sistemas.</li>
+<li><strong>Reconocimiento interno</strong>: El atacante reconoce el entorno y analiza la configuración interna de la organización para entender mejor su funcionamiento y como lograr acceder a los datos sensibles de los mismos.</li>
+<li><strong>Movimientos laterales</strong>: El atacante salta y pivota en la red buscando sistemas mas críticos evadiendo de esta manera las medidas de seguridad de FW o redes en DMZ. Del mismo modo las técnicas más habituales es través de RDP, VNC, tareas
+   programadas etc.</li>
+<li><strong>Mantener Persistencia</strong>: El objetivo es instalar servicios ocultos en los sistemas para retomar las conexiones en caso de ser necesario. La persistencia se suele conseguir a través de VPN, puertas traseras o implementar malware en software legitimo.</li>
+<li>**Ataque exitoso: El atacante ha logrado su objetivo y ha robado los datos de la compañía, ha provocado perdidas internas de información o problemas internos. Incluso mantiene un acceso interno para volver a realizar ataques después de un tiempo.</li>
+</ol>
+<h2 id="4-el-proceso-que-envuelve-la-respuesta-a-incidentes">4. El proceso que envuelve la respuesta a incidentes<a class="headerlink" href="#4-el-proceso-que-envuelve-la-respuesta-a-incidentes" title="Permanent link">&para;</a></h2>
+<p>En un proceso IR intervienen varios factores. Las capacidades y recursos de las organizaciones se miden según el número de
+unidades que intervienen en el proceso. Durante un proceso de IR son muchas las compañías que ensamblan equipos compuestos por miembros específicos de la organización. Siempre se recomienda que sea un miembro quien dirija y coordine durante la respuesta de un incidente. El director habitualmente suele ser un CIO o CISO de la organización, esta persona sería el punto de conexión entre todas las investigaciones.</p>
+<p><img alt="Equipo de investigación" src="./assets/IS-U5.1.0.-RespuestaAIncidentes-1657877641968.png" /></p>
+<p>De cualquier modo, es bueno que los miembros que componen un equipo de incidentes durante su intervención dispongan de las siguientes características:</p>
+<ul>
+<li>Tener capacidad de análisis.</li>
+<li>Buena comunicación.</li>
+<li>Atención a los detalles.</li>
+<li>Ser estructurados y organizados.</li>
+<li>Demostrar liderazgo y gran resolución de problemas.</li>
+</ul>
+<h3 id="41-respuesta-inicial">4.1 Respuesta inicial<a class="headerlink" href="#41-respuesta-inicial" title="Permanent link">&para;</a></h3>
+<p>Los objetivos principales en este paso incluyen reunir al equipo de respuesta, revisar los datos basados en la red y otros datos fácilmente disponibles, determinar el tipo de incidente y evaluar el impacto potencial. El objetivo es reunir suficiente información inicial para permitir que el equipo determine la respuesta adecuada.</p>
+<p>Típicamente, este paso no implicará recopilar datos directamente del sistema afectado. Los datos examinados durante esta fase usualmente involucran el análisis de la red, el registro y otra evidencia histórica y contextual. Esta información le brindará el contexto necesario para ayudar a decidir la respuesta adecuada. Por ejemplo, si se encuentra un troyano bancario en la portátil del CEO, su respuesta probablemente será bastante diferente de si se encuentra en el sistema de una recepcionista. Además, se requiere una investigación completa, esta información será parte de las pistas iniciales.</p>
+<p>Algunas tareas comunes que puede realizar durante este paso son:</p>
+<ul>
+<li>Entrevistar a la persona que reportó el problema y recopilar y almacenar todos los posibles detalles que ellos puedan proveerte.</li>
+<li>Intervenir los equipos de IT, de modo que se revisen los detalles técnicos.</li>
+<li>Intervenir al personal de negocio y reportar el evento en su contexto y dependiendo de la gravedad.</li>
+<li>Revisar la red, logs, e identificar qué datos son necesarios para el soporte y la revisión posterior.</li>
+<li>Documentar todo el procedimiento y detalles recogidos de diferentes fuentes.</li>
+</ul>
+<h3 id="42-investigacion">4.2 Investigación<a class="headerlink" href="#42-investigacion" title="Permanent link">&para;</a></h3>
+<p>El objetivo de una investigación es determinar los hechos que describen qué sucedió, cómo sucedió, y en algunos casos, quién fue el responsable, aunque este punto puede ser difícil de conseguir. En este momento puede ser interesante plantearse contratar ayuda externa.</p>
+<p>Sin conocer los hechos de lo ocurrido tales como qué acceso obtuvo el atacante o lo que hizo, el equipo no está en una buena posición para pasar a la fase de remediación.</p>
+<h4 id="indicadores-de-compromiso">Indicadores de compromiso<a class="headerlink" href="#indicadores-de-compromiso" title="Permanent link">&para;</a></h4>
+<p>Una investigación sin pistas es un proceso perdido. Por lo tanto, la colección de pistas iniciales es un paso crítico en cualquier investigación. Un error de investigación común en muchas organizaciones es enfocarse solo en encontrar malware.</p>
+<p>Es poco probable que solo un atacante tenga como objetivo instalar malware, lo más probable es que el atacante tenga en mente robar información confidencial, correos o documentos internos o incluso alterar datos.</p>
+<p>Una vez que el atacante accede a la red y tiene credenciales válidas no es necesario que use malware para acceder a sistemas adicionales. Centrarse solo en el malware probablemente cause que se pierdan hallazgos críticos. Recuerde, el foco de cualquier investigación debe estar en las pistas.</p>
+<p><img alt="Investigación. Indicadores de compromiso" height="50%" src="./assets/IS-U5.1.0.-RespuestaAIncidentes-1657999856181.png" width="50%" /></p>
+<!-- {: style="height:50%;width:50%"} -->
+
+<p>La creación de <strong>indicadores de compromiso (IOCs)</strong> (pronunciado eye-oh-cee) es el proceso de documentar las características y detalles de un incidente de una manera estructurada. Esto incluye todo, desde ambas perspectivas tanto desde el punto de vista de servidor como de red: cosas que van más allá del simple malware. Piense en detalles tales eventos de inicio de sesión, mecanismos de persistencia detectados, nombres de dominio e incluso firmas de protocolo de red de malware.</p>
+<p>El objetivo de los indicadores de compromiso (IOCs) es ayudar a describir, comunicar y encontrar indicios relacionados con un incidente. Debido a que un COI es solo una definición, no proporciona el mecanismo real para encontrar coincidencias.</p>
+<p>El uso de indicadores de compromiso (IOC) para documentar incidentes es excelente, pero su poder real está en habilitar equipos de RI. El éxito de una investigación depende de su capacidad para buscar IOC en toda la empresa e informar sobre ellos de manera automática, a esto se le llama <strong>despliegue de IOC</strong>.</p>
+<p>Después de implementar los indicadores de compromiso IOC, comenzará a obtener lo que se conoce como <strong>detección</strong>. La detección se produce cuando una herramienta de indicadores de compromiso encuentra una coincidencia para una regla dada.</p>
+<p>Antes de actuar se debe de revisar la información para determinar si no se trata de un falso positivo.</p>
+<p>Una vez que se identifican los sistemas y tienen indicadores de compromiso activos, el próximo paso es recopilar datos adicionales para el análisis. El equipo RI creará un plan para recolectar y preservar las evidencias. El factor prioritario es preservar las evidencias y para ello se utilizan procesos que minimicen los cambios del sistema, minimizamos el tiempo de interacción con los equipos y sistemas, sin olvidar de crear la documentación necesaria. Puede recopilar evidencias del sistema en ejecución o decidir apagar el sistema y tomar las evidencias con el sistema apagado.</p>
+<p><strong>La respuesta en vivo</strong> es el proceso de recolección de evidencia más común. Una respuesta en vivo es el proceso de usar una herramienta automatizada para recopilar un conjunto estándar de datos sobre un sistema en ejecución. Los datos incluye tanto información volátil como no volátil que proporcionará rápidamente respuestas a preguntas de investigación. La información típica recopilada incluye elementos tales como una lista de procesos, conexiones de red activas, registros de eventos, una lista de objetos en un sistema de archivos y el contenido del registro. También podemos recoger el contenido de archivos específicos, como archivos de registro o malware sospechoso. Ya que el proceso estará automatizado y el tamaño de los datos no es demasiado grande, realizamos este tipo de paso en todos los sistemas de interés. Un análisis de respuesta en vivo usualmente será capaz de confirmar aún más un compromiso, proporcionar detalles adicionales sobre lo que atacante hizo en el sistema y revela pistas adicionales para investigar.</p>
+<h4 id="preservar-la-evidencia">Preservar la evidencia<a class="headerlink" href="#preservar-la-evidencia" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Recolección de memoria</strong>: La recolección de memoria es más útil en los casos en que se sospecha que el atacante está utilizando un mecanismo para ocultar sus actividades, tales como un rootkit, y no puede obtener una imagen de disco. La memoria también es útil para casos donde la actividad maliciosa solo reside en la memoria, o deja muy pocos rastros en el disco. En la mayoría de los sistemas a los que respondemos, la memoria no es recogida, sin embargo. Aunque algunos pueden encontrar esto sorprendente, hemos encontrado que analizar la memoria tiene beneficios limitados para una investigación que tienen que ser complementados con otros datos, ya que no proporciona datos suficientes para responder preguntas de alto nivel. Aunque es posible que puedas identificar que el malware se está ejecutando en un sistema, es probable que no pueda explicar cómo llegó allí, o qué ha estado haciendo el atacante en ese sistema.</li>
+<li><strong>Imagen de disco</strong>: Las imágenes de disco forense son duplicaciones completas de discos duros en un sistema. Durante una respuesta a un incidente, es común para nosotros recoger imágenes en un modo "en vivo", donde el sistema no se desconecta y nosotros creamos una imagen en medios externos. Debido a que las imágenes de disco son grandes y pueden tomar mucho tiempo para analizar, normalmente los recopilamos solo para situaciones donde cree que una imagen de disco es necesaria para proporcionar beneficios a la investigación. Las imágenes del disco forense son útiles en los casos en que un atacante realizó muchas acciones durante un largo tiempo, cuando hay preguntas sin respuesta que otras evidencias no concluyeron, o donde esperamos recuperar información que creemos que solo estará disponible desde una imagen de disco.</li>
+</ul>
+<h4 id="analizar-los-datos">Analizar los datos<a class="headerlink" href="#analizar-los-datos" title="Permanent link">&para;</a></h4>
+<p>El análisis de datos es el proceso de tomar la evidencia preservada en el paso anterior y realizar un examen que se centra en responder las preguntas de investigación. Los resultados del análisis normalmente se documentan en un informe formal.</p>
+<p>Este paso en el ciclo de vida de respuesta de incidente es donde solemos pasar la mayor parte de nuestro tiempo. La organización debe decidir qué análisis realizará usted mismo y qué porciones, o valorar subcontratar si no se posee los conocimientos para ello.</p>
+<p>Hay tres áreas principales dentro del análisis de datos:</p>
+<ol>
+<li><strong>Análisis de malware</strong>: Durante la mayoría de las investigaciones, encontramos archivos que son sospecha de malware. Lo habitual es que un equipo dedicado de analistas de malware examina estos archivos. Realicen informes que incluyen indicadores de compromiso y una descripción detallada de la funcionalidad. Aunque disponer de un equipo de malware especializado no se ajusta a la mayoría de los presupuestos, las organizaciones deberían considerar invertir en una capacidad básica para clasificar malware sospechoso.</li>
+<li><strong>Análisis de respuesta en vivo</strong>: El examen de los datos de respuesta en vivo es uno de los pasos de análisis más críticos durante una investigación. Si estás viendo en vivo datos de respuesta, normalmente es porque hay algún indicio de actividad sospechosa en un sistema, pero hay detalles limitados. Durante el análisis se debe de intentar encontrar el origen y explicar qué sucedió. Si se pierden detalles en esta etapa, podría ser que se pase por alto una parte de la actividad del atacante en el resultado final. Los resultados del análisis de respuesta en vivo deberían ayudar a comprender el impacto que tiene el incidente.</li>
+<li><strong>Examen forense</strong>: Capturar imágenes de disco durante una respuesta a incidentes es una tarea muy enfocada y sensible al
+   tiempo. Normalmente deseamos dar resultados un puñado de preguntas realistas que queremos responder, por lo tanto, se
+   debe de decidir sobre un enfoque que pueda descubrir información que responder y luego ejecutar. Si no obtenemos
+   respuestas, podemos usar un enfoque personal, pero eso depende de cuánto tiempo hay y qué esperamos obtener de ello</li>
+</ol>
+<h4 id="remediar-el-problema">Remediar el problema<a class="headerlink" href="#remediar-el-problema" title="Permanent link">&para;</a></h4>
+<p>Los planes de remediación variarán enormemente, dependiendo de las circunstancias del incidente y el potencial impacto. El plan deberá tener en cuenta diversos factores, tales como situaciónes legales, comerciales, políticas y técnicas. El plan también debería incluir un protocolo de comunicación que defina quién en la organización dirá qué, y cuándo.</p>
+<h4 id="seguimiento-de-la-investigacion">Seguimiento de la investigación<a class="headerlink" href="#seguimiento-de-la-investigacion" title="Permanent link">&para;</a></h4>
+<p>Debe estar definido y ser un procedimiento claro. Durante la fase de investigacion se debe tener mecanismos que permitan rastrear fácilmente la información crítica, asi como compartirla con otros equipos auxiliares y el resto de la organización, de modo claro y con liderazgo.</p>
+<p>Debe de haber un sistema que permita, a traves de un identificador, referirse a un incidente específico, del mismo modo debe permitir  documentar cualquier información y evidencia relacionada con un incidente especifico.</p>
+<ul>
+<li>Lista de evidencias recolectadas.</li>
+<li>Lista de sistemas afectados.</li>
+<li>Lista de todos los ficheros que son de interes.</li>
+<li>Lista de los datos que se han accedido o robado.</li>
+<li>Lista de la actividad del atacante.</li>
+<li>Lista de la red basada en indicadores de compromiso.</li>
+<li>Lista de host basados en indicadores de compromiso.</li>
+<li>Lista de cuentas comprometidas.</li>
+<li>Lista de tareas y quien las ha respondido durante el incidente.</li>
+</ul>
+<h4 id="reporting">Reporting<a class="headerlink" href="#reporting" title="Permanent link">&para;</a></h4>
+<p>Como consultores, nuestros informes son fundamentales para nuestros clientes. El desarrollo y la creación de un informe requiere de tiempo, no es algo trivial y es algo que debemos tener en cuenta durante todo el proceso de investigación, ya que durante esta fase se descubrirán muchos hechos que deberán quedar reflejados en el informe.</p>
+<p>Durante las investigaciones, los hallazgos se basan en numerosos hechos técnicos que, sin la documentación adecuada, puede ser difícil de comunicar. Por tanto, hay que considerar los informes como un entregable final que los equipos de respuesta de incidentes tienen que desarrollar. Los informes no solo proporcionan los resultados documentados consecuencia del esfuerzo realizado, sino que también ayudan a focalizar el proceso de investigacion y a realizar investigaciones de calidad. Los informes obligan a reducir la velocidad del proceso de investigacion, documentar los hallazgos en formato estructurado, verificando las evidencias y repasando en lo que sucedió.</p>
+<h4 id="preparando-la-gestion-de-los-incidentes">Preparando la gestion de los incidentes<a class="headerlink" href="#preparando-la-gestion-de-los-incidentes" title="Permanent link">&para;</a></h4>
+<p>Si la organización no dispone de la infraestructura necesaria para responder a los incidentes, la tasa de éxito es baja o nula. Por tanto, durante la fase de preparacion, la organización debera dotar de los recursos necesarios a los equipos de respuesta.</p>
+<p>Desde un punto de vista técnico debemos de abordar las siguientes preguntas.</p>
+<ul>
+<li>¿Que pasó exactamente? ¿Cuál es el daño y cómo entraron los atacantes?</li>
+<li>¿El incidente está en curso?</li>
+<li>¿Qué información fue robada o accedida?</li>
+<li>¿Qué recursos se vieron afectados por el incidente?</li>
+<li>¿Cuáles son las responsabilidades en cuanto a notificación y divulgación?</li>
+<li>¿Qué pasos se deben realizar para remediar la situación?</li>
+<li>¿Qué acciones se pueden tomar para proteger a la empresa de incidentes similares?</li>
+</ul>
+<p>Aunque en si responder a todas las preguntas parece un desafío, es posible siempre y cuando consigamos extraer todos los datos necesarios de los sistemas de información, de las comunicaciones etc. Para ello, como comentaremos, es importante que durante el proceso de preparacion, los equipos de respueta tenga definidos los procedimientos adecuados para realizar este trabajo, asi como los recursos neceasrios que para que proceso sea agil y eficiente.</p>
+<h5 id="que-areas-son-necesarias-cubrir">¿Qué áreas son necesarias cubrir?<a class="headerlink" href="#que-areas-son-necesarias-cubrir" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Entrenamiento</strong>: Esta área incluye temas tales como la identificación de riesgos, políticas para llevar acabo una respuesta de incidentes, definicion de cómo trabajar con servicios IT contratados, tipo de infraestructura, formación del usuario.</li>
+<li><strong>Entrenamiento especifico al equipo de IR</strong>: Esta área incluye procedimientos de comunicación y recursos tales como hardware, software, capacitación y documentación.</li>
+<li><strong>Preparación de la infraestructura</strong>: Esta área incluye la administración de activos, instrumentación, documentación, herramientas de investigación, segmentación y red servicios.</li>
+<li><strong>Plataformas de simulación</strong>: Es importante realizar ciber ejercicios que valúen a los equipos de respuestas a través de plataformas de simulación que ayudan a medir los tiempos de respuesta y cualificar el estado de madurez de los equipos.</li>
+</ul>
+<h5 id="donde-estamos">¿Dónde estamos?<a class="headerlink" href="#donde-estamos" title="Permanent link">&para;</a></h5>
+<p>Si deseamos enfrentarnos a un incidente con éxito y llevar acabo una respuesta eficiente, el primer paso que deberíamos cubrir es conocer dónde estamos y disponer de una foto del riesgo que supone para la organización. Para ello se deben de valorar los siguientes puntos que nombramos a continuación:</p>
+<ul>
+<li>¿Cuáles son los activos críticos?.</li>
+<li>¿Cuáles pueden ser las amenazas?.</li>
+<li>¿Grado de exposición existe?.</li>
+<li>Requisitos regulatorios que debemos de cumplir.</li>
+<li>¿Qué recursos necesitamos para estar preparados ante un incidente?.</li>
+</ul>
+<h5 id="activos-criticos">Activos críticos<a class="headerlink" href="#activos-criticos" title="Permanent link">&para;</a></h5>
+<p>Como activo críticos podríamos encuadrar las siguientes opciones:</p>
+<ul>
+<li>Mantener y proteger la reputación de la organización.</li>
+<li>Proteger la información secreta, tales como patentes, código fuente, propiedad intelectual etc.</li>
+<li>Proteger la información personal de la organización.</li>
+<li>Proteger los métodos de pago y como se procesan en la organización.</li>
+</ul>
+<p>Los activos críticos son los que generan mayor responsabilidad, pues son los que pueden dar luegar a las mayores pérdidas para la organización. Una de las principales causas de pérdidas de informacion y fallos de seguridad se produce a través de filtraciones. Considere que las filtraciones pueden venir desde personas, procesos mal definidos o tecnologías que han sido dañadas y como resultado contribuyen a la pérdida de información o de imagen corporativa.</p>
+<p>Algunos ejemplos habituales en las organizaciones que exponen sus sistemas a riesgos serian los siguientes puntos:</p>
+<ul>
+<li>Servidores web que no han sido actualizados con los parches de seguridad adecuados u otros sistemas orientados a Internet, empleados descontentos y empleados no entrenados o concienciados.</li>
+</ul>
+<p>Otro factor a tener en cuenta es la identificacion de quienes pueden exponer los sistemas de la organizacion:</p>
+<ul>
+<li>¿Cualquier persona conectado a Internet?</li>
+<li>¿Alguien con acceso físico a un edificio corporativo?</li>
+<li>¿Solamente individuos físicamente dentro de un área segura?</li>
+</ul>
+<p>Combinar estos factores nos permiten priorizar el riesgo. Por ejemplo, los activos más críticos que tienen exposiciones accesibles solo para personas de confianza y para personas dentro de un entorno físico controlado pueden presentar menos riesgos que los activos con exposiciones accesibles en Internet. La identificación del riesgo es crítica porque nos permite gestionar y medir el gasto de recursos necesario para eliminar/mitigar el riesto.</p>
+<p>Políticas</p>
+<p>Es importante desde un punto de vista lógico implementar una política que promueva que la investigación realizada durante la respuesta a los incidentes llegará a buen término. Una política adecuada, indicará cuál es el comportamiento esperado para cada usuario:</p>
+<ul>
+<li>La política de seguridad, que establece qué se espera en cuanto a la protección de los datos confidenciales y recursos dentro de la organización. Las subsecciones de esta política pueden abordar asuntos de seguridad física, electrónica y de datos.</li>
+<li>La política de acceso remoto, en la que se establece quién puede conectarse a la organización, a qué recursos y qué controles se colocan en las conexiones.</li>
+<li>La política de uso de internet, en la que se establece el uso apropiado de Internet, incluida la gestion de la privacidad y la notificación de la monitorizacion de la navegacion por parte de la organización.</li>
+</ul>
+<p>Las políticas de los equipos de IR deberían estar centradas y abordar lo que se espera sobre búsquedas y los recursos que son necesarios y propiedad de la empresa junto con la interceptación de tráfico de red. Si se cubren estos dos asuntos, el IR debería ser capaz de realizar la mayoría de las acciones de investigación.</p>
+<div class="highlight"><pre><span></span><code>Ejemplos de Políticas: SANS sans.org/security-resources/policies
+</code></pre></div>
+<p>Proveedores externos</p>
+<p>Es una práctica habitual en muchas organizaciones que algunos servicios de IT estén subcontratados. En este punto, si la investigación de un incidente requiere una tarea que debe de realizarse en un proveedor subcontratado, podemos encontrarnos con problemas a la hora de obtener la informacion que se requiere para la investigacion. Por lo general, existirán procedimientos para solicitar la informacion deseada, aunque pueden requerir aprobaciones previas u otra burocracia que ralentiza la ejecucion de la tarea.</p>
+<p>También puede tener un coste adicional, por ejemplo, a veces se cobra por sistema, para pequeños cambios de configuración, tales como basado en host, reglas de firewall. Toda organización deberá trabajar con sus proveedores para garantizar que estos acuerdos se han tenido en cuenta antes de la contratacion de los servicios, y por tanto, estos procedimientos se incluyen dentro de los acuerdos de nivel de servicio (SLA), por lo que se medirá la capacidad de respuesta a solicitudes. Sino se realizan estas gestiones previamente y no se tiene en cuenta antes de la firma del contrato, nos encontraremos con problemas que requerían de soluciones de emergencia, y que normalmente tendrán asociados costes adicionales.</p>
+<p>Problemas habituales en una organización</p>
+<ul>
+<li>Privacidad y Regularizaciones: Como investigadores debemos de ver la red de una organización como una gran fuente de datos esperando a ser analizada. Pero realizar este analisis no es tan fail, ya que hay que tener en cuenta que la red podría abarcar diferentes áreas geográficas y por lo tanto diferentes países, cada uno con sus propias leyes y regulaciones de privacidad. No tener esto en cuenta, podria llevanos a problemas si decidimos buscar indicadores de compromiso usando métodos que violan las leyes de privacidad y regulaciones locales. Por tanto, si debemos de investigar un incidente que involucra a varios países, debido a que la red es global, deberíamos realizar algunos ejercicios previos para cada país, informandonos de qué tipo de acciones se pueden realizar, y cuales no estarian permitidas.</li>
+<li>Coordinación de Equipos: Un reto importante que conlleva los incidentes que abarcan varios países en el mundo es la coordinación. Ya que tanto el personal como los recursos tecnológicos se distribuirán por distintas zonas geográficas, y mantenerse organizado requerirá una planificación cuidadosa y un esfuerzo constante para garantizar que todos están sincronizados. Debemos de tener en cuenta además que programar una reunión podría llevar días porque los participantes están en diferentes zonas horarias.</li>
+<li>Datos:Durante una investigación, se recopilan cantidades masivas de datos para su análisis. A menudo, se presenta en forma de conjuntos de datos singularmente grandes, como imágenes de disco duro. Cuando el núcleo del equipo es responsable de realizar la mayoría de las tareas de análisis, hay que encontrar una forma de transferir de manera eficiente esta información a los miembros del equipo de análisis forense.
+  Un factor muy importante a tener en cuenta es cuando se envía dicha información a otros países de modo que se debe de tener en cuenta la documentación necesaria en aduana o las posibles restricciones en los países de origen y de destino.</li>
+<li>Entrenamiento a los usuarios: Los usuarios o empleados juegan un papel fundamental en la seguridad de una organización, conocido como el eslabón más débil. Por lo tanto, la entrenamiento del usuario debe ser parte de preparación previa al incidente. Los usuarios deben saber qué tipos de acciones deben y no deben tomar sobre sus sistemas, desde una perspectiva de seguridad informática y de respuesta a incidentes.
+  Los usuarios deben de ser conscientes de los métodos más comunes que usan los atacantes para aprovecharse y comprometer la red. Por lo general, nos interesará que los usuarios notifiquen inmediatamente a un superior sobre un incidente de seguridad. Lo habitual es preparar ciber ejercicios que ayuden a concienciar y entrenar a los usuarios.
+  Un problema específico que debe abordar es el peligro inherente al software de servidor instalado por los usuarios, ya que pueden instalar sus propios servidores web o FTP sin autorización, poniendo en peligro la seguridad general de su organización. Por lo tanto es muy importante disponer de reglas y políticas que regulen qué pueden y qué no pueden hacer los usuarios respecto a los sistemas de la organización.</li>
+</ul>
+<p>Preparando el equipo de respuesta de incidentes</p>
+<p>En este apartado se trata de definir la misión, los sistemas de comunicación, los entregables y todos los recursos necesarios
+para que el equipo de respuesta de incidentes este preparado.</p>
+<p>Misión</p>
+<p>Definir los objetivos de un equipo de respuesta de incidentes, que consistirá en ayudar a mantener al equipo con el foco en la incidencia y del mismo modo establecerá las expectativas con el resto de su organización. Todas las acciones y tomas decisiones deben de estar respaldadas por la gerencia de lo contrario el equipo IR no será capaz de tomar decisiones y por lo tanto la organización sufrirá un impacto importante. La misión de un equipos es la siguiente:</p>
+<ul>
+<li>Responda a todos los incidentes de seguridad o incidentes sospechosos usando un proceso de investigación formal.</li>
+<li>Llevar a cabo una investigación imparcial completa.</li>
+<li>Confirmar rápidamente si una intrusión o incidente de seguridad realmente ocurrió.</li>
+<li>Evaluar el daño y el alcance de un incidente.</li>
+<li>Controlar y contener el incidente.</li>
+<li>Recolectar y documentar toda la evidencia relacionada con un incidente.</li>
+<li>Seleccionar el soporte adicional que ayude durante el incidente, cuando sea necesario.</li>
+<li>Proteger los derechos de privacidad establecidos por la ley y / o la política corporativa.</li>
+<li>Proporcionar un enlace a las autoridades legales y de aplicación de la ley apropiadas.</li>
+<li>Mantener la confidencialidad apropiada del incidente para proteger la organización de una exposición innecesaria.</li>
+<li>Proporcionar testimonio a expertos.</li>
+<li>Proporcionar a la administración recomendaciones que estén completamente respaldadas por hechos.</li>
+</ul>
+<p>Comunicación interna</p>
+<p>Durante un incidente, tendrá varios equipos trabajando simultáneamente: el equipo que actúa como núcleo de la investigación, equipos auxiliares, equipos legales y administradores de sistemas. Una buena comunicación es primordial y definir como un incidente comienza es primordial.
+Cosas a tener en cuenta en la comunicación Interna:</p>
+<ul>
+<li>Cifrado de Email: Se recomienda antes de que ocurra un incidente que todos los equipos dispongan de los certificados S/MIME para el equipo que actúa como núcleo, investigadores y equipos auxiliares.</li>
+<li>Etiquetado de los documentos: Es importante etiquetar los documentos con frases como confidencial, dirección, publico, es recomendable asesoría legal en este asunto.</li>
+<li>Revisar: que solo los integrantes de los equipos están revisando y monitorizando, el resto deben de ser desconectados de la investigación</li>
+<li>Identificador del incidente: Use nombres de casos o numeración para identificar el proyecto asociado al incidente.</li>
+</ul>
+<p>Cuanto menos personas conozcan el posible fallo en la seguridad mejor.</p>
+<p>Comunicación externa</p>
+<p>Si el impacto de una intrusión no requerirá notificación o consulta con entidades externas perfecto, sin embargo en caso de tener que hacerlo se debe de tener en cuenta, tanto al gobierno y legislación, sin mencionar el lenguaje de divulgación de incidente. Es muy probable que su organización necesitará determinar cómo se comunica con terceros.
+La planificación de una divulgación potencial es un proceso que debería involucrar a un abogado, oficinas de cumplimiento, así como ¿personal de nivel C?.
+No se puede proporcionar mucha orientación sobre este tema, excepto gestionarlo bien. Utilizar canales aprobados, como sus relaciones públicas (RP) u oficina legal. Una vez revelado que ocurre, puede perder el control de la investigación. Otras entidades pueden usar lso contratos para demandar y reclamar acciones o pasos de investigación que están destinados a proteger sus intereses sobre el intereses de su organización.</p>
+<p>Algunas preguntas a considerar al determinar el contenido y el tiempo de cualquier notificación son:</p>
+<ul>
+<li>¿Cuándo se tiene que comunicar un incidente? ¿Inmediatamente después de ser detectado? ¿Después de que el incidente ha sido confirmado?</li>
+<li>¿Cómo se notifica a un tercero? ¿Qué lenguaje usar para proteger la confidencialidad?</li>
+<li>Si el incidente justifica una divulgación pública, ¿quién es responsable de los contenidos? y ¿Cuáles son los tiempos de la comunicación? ¿Cómo se hará la divulgación?</li>
+<li>¿Qué sanciones o multas pueden aplicar a la organización después de la divulgación?</li>
+<li>¿Qué restricciones sufrirá la investigación después de la divulgación?</li>
+<li>¿Cómo afecta la divulgación?</li>
+</ul>
+<p>Entregables</p>
+<p>La parte más crítica de un entregable para los equipos IR son los informes detallados, los cuales pueden variar desde simples actualizaciones de estado de una página hasta informes detallados que contengan más de 30 páginas, como podría ser el ejemplo de un forense. Del mismo modo se deben definir claramente los tiempos e incluir los plazos de finalización de cada uno de los objetivos. A continuación se muestra un ejemplo de entregables.</p>
+<table>
+<thead>
+<tr>
+<th>Nombre</th>
+<th>Proposito</th>
+<th>Tiempo de entrega</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reporte de estado del caso</td>
+<td>Actualizar a las partes interesadas sobre el progreso de un caso individual.</td>
+<td>Recurrente: Diariamente.</td>
+</tr>
+<tr>
+<td>Informe de respuesta en vivo</td>
+<td>Documentar las evidencias desde el inicio incluso de un sistema aislado.</td>
+<td>Borrador: Un día de trabajo. Final: Dos días de trabajo.</td>
+</tr>
+<tr>
+<td>Informe Forense</td>
+<td>Documento que detallas las evidencias encontradas en el análisis forenses.</td>
+<td>Borrador: Cuatro días de trabajo. Final: Seis días de trabajo.</td>
+</tr>
+<tr>
+<td>Informe análisis de Malware</td>
+<td>Documento que detallas las evidencias encontradas en el análisis de malware.</td>
+<td>Borrador: Tres días de trabajo. Final: Cinco días de trabajo.</td>
+</tr>
+<tr>
+<td>Informe investigación de Intrusión</td>
+<td>Documento que detallas las evidencias encontradas en la investigación sobre la intrusión en el sistema.</td>
+<td>Borrador: Cinco días de trabajo. Final: Ocho días de trabajo.</td>
+</tr>
+</tbody>
+</table>
+<p>Equipo forense, recursos:</p>
+<p>El software que habitualmente se usa durante las investigaciones generalmente se categoriza en ocho categorías. El equipo de IR debe  inventariar lo que tiene, y analizar si necesita alguna herramienta adicional basada en algunos de los siguientes criterios.</p>
+<ul>
+<li>Boot Disk.</li>
+<li>Sistemas Operativos.</li>
+<li>Herramientas para hacer imágenes de Discos.</li>
+<li>Capturar memoria y análisis.</li>
+<li>Capturas en vivo y análisis.</li>
+<li>Indicadores de compromiso.</li>
+<li>Suites de Forense.</li>
+<li>Herramientas para el análisis de log.</li>
+</ul>
+<p>Recursos Públicos</p>
+<ul>
+<li><a href="https://github.com/shrekts/awesome-csirt">awesome-csirt</a></li>
+<li><a href="https://github.com/meirwah/awesome-incident-response">awesome-incident-response</a></li>
+</ul>
+<p>&lt;&lt;&lt; voy por aqui &gt;&gt;&gt;</p>
+<p>DOCUMENTACIÓN Y TRATAMIENTO</p>
+<p>La evidencia es la fuente de cualquier investigación y debe manejarse de manera apropiada. La atención al detalle y el
+estricto cumplimiento son obligatorios con respecto al manejo de las evidencias. Si se cuestiona la integridad de la
+evidencia, los hallazgos de una investigación pueden dejar de brindarle valor a su organización. Para evitar que esto suceda,
+le recomendamos que implemente políticas y procedimientos de gestión de pruebas adecuados. Por lo general, incluirán
+orientación sobre la recopilación de pruebas, la documentación, el almacenamiento y el envío.
+Como mínimo, debe crear procedimientos para hacer cumplir la integridad y prever autenticación y verificación. La
+integridad se logra a través de lo que llamamos control positivo. El control positivo significa que la evidencia siempre debe
+estar bajo la supervisión directa del personal autorizado o asegurada en un ambiente o contenedor controlado, como una
+caja fuerte.
+Al enviar evidencia, debe enviarse a través de un proveedor trazable y empaquetarse para que sea invulnerable y esté
+protegida contra los elementos. La autenticación se logra a través de la documentación, que incluye una etiqueta de
+evidencia y una cadena de custodia. Proporcionamos una etiqueta de evidencia de muestra en el Apéndice B.
+La validación se realiza a través de una suma de comprobación criptográfica, como MD5, que se calcula en el momento de
+la recopilación y se puede validar en cualquier momento. La validación demuestra que la evidencia no ha cambiado desde
+el momento de la recopilación. Puede leer más sobre las reglas de evidencia y las pautas de recopilación de evidencia del
+Departamento de Justicia de cada país.</p>
+<p>REPOSITORIO DE CONOCIMIENTO</p>
+<p>A medida que su equipo de IR realiza investigaciones e interactúa con otros departamentos de su organización, acumularán
+conocimientos que deberían documentarse en una ubicación central.
+Parte de la información solo puede estar relacionada con un solo incidente y se puede almacenar en el sistema de gestión
+de expedientes o expedientes que utiliza el equipo de IR.
+Otra información puede estar relacionada con la organización como un todo, y debe estar documentada en un repositorio
+de conocimientos que el equipo de IR mantiene.
+El repositorio de conocimiento debe estar lógicamente organizado y accesible para que el equipo pueda ubicar
+efectivamente la información relevante.
+Video – Construir tu WIKI</p>
+<p>PREPARANDO LA INFRAESTRUCTURA PARA RESPUESTA DE INCIDENTES</p>
+<p>Principalmente la infraestructura que necesita un equipo de incidentes suele esta compuesta por las siguientes áreas:</p>
+<ul>
+<li>Configuración del dispositivo</li>
+<li>Gestión de activos</li>
+<li>Realizando una encuesta / Inventario de dispositivos</li>
+<li>Instrumentación</li>
+<li>Pasos adicionales para mejorar la seguridad</li>
+<li>Configuración de la red</li>
+<li>Segmentación de red y control de acceso</li>
+<li>Documentación</li>
+<li>Instrumentación</li>
+<li>Servicios de red</li>
+</ul>
+<p>CONFIGURACIÓN DEL DISPOSITIVO</p>
+<p>Los dispositivos tales como servidores, pc de escritorio y portátiles, en su empresa albergan la mayoría de la evidencias
+relevantes para una investigación, y la manera en que estos sistemas están configurados pueden afectar drásticamente el
+resultado.
+Por lo tanto, la organización debe configurar todos los sistemas de una manera que facilite una investigación efectiva. Un
+enfoque común que muchas organizaciones toman es centrar su atención en los sistemas que ellos perciben como
+importantes. Sin embargo, ese enfoque supone que un atacante realizará acciones que pueden detectarse en el sistema
+crítico únicamente.
+En nuestra experiencia, es común para un atacante logre usar sistemas no relacionados como el core y por lo tanto cree
+cientos de evidencias en numerosos sistemas que nos son críticos. Un atacante también es probable que use credenciales
+validas para acceder a los sistemas críticos de forma coherente con la actividad normal. Si esas evidencias no se capturan
+ni conservan, muchas preguntas sobre el incidente no podrán ser respondidas
+Para ayudar a garantizar que cubra todos los aspecto tenga en cuenta los dos pasos siguientes:</p>
+<p>GESTIÓN DE ACTIVOS</p>
+<p>Cuando los profesionales de seguridad informática piensan en formas de preparar su entorno para un incidente, la
+administración de activos generalmente no es uno de ellos. La clave es entender cómo acceder a la información cuando la
+necesite. Debe evaluar la capacidad de su organización para proporcionar la siguiente información sobre un sistema:</p>
+<ul>
+<li>Aprovisionamiento de datos: Imagine una situación en la que encuentre evidencia de sospecha actividad que ocurrió
+  hace dos meses en un sistema específico. Usted busca el host nombre en su sistema de administración de activos y
+  descubre que es un servidor que fue reemplazado la semana pasada. En base a esa información, usted sabe que el
+  sistema actual no contendrá evidencia asociada con la actividad hace dos meses</li>
+<li>Propiedad: Muchas organizaciones subcontratan servicios. Si un sistema no es en realidad propiedad de su organización,
+  puede afectar la forma en que responde. El inventario debe indicar claramente a quién pertenece el hardware</li>
+<li>Unidad de negocio: Conocer que tipo de negocio existe dentro de su organización puede ayudar a los investigadores a
+  construir contexto y hacer una mejor investigación</li>
+<li>Ubicación física: Si necesita obtener una imagen de disco duro, o tomar otra acción que requiere acceso físico al sistema, necesitará saber dónde está localizado</li>
+<li>Información de contacto: Coordinar la respuesta y ganar acceso a ciertas áreas es primordial por lo tanto disponer de los contactos es importante</li>
+<li>Servicios y Roles: Todo investigador debe de conocer los roles y servicios de cada activo de la organización</li>
+<li>Configuración de la red: Conocer el estado de la red, el tipo de tipología y direccionamiento es importante</li>
+</ul>
+<p>ENCUESTA / INVENTARIO</p>
+<p>La construcción de un sistema estándar de una organización, los inventarios de software y otra documentación rara vez
+proporcionarán la imagen completa de la infraestructura de TI. Durante el curso de una investigación, encontramos que es
+común encontrar software, hardware o sistemas operativos que la organización no conocía previamente. Recomendamos
+realizar una encuesta práctica (automática o de otro tipo) para recopilar y verificar la siguiente información.
+Asegúrese de incluir el fabricante, el producto y la información de la versión para cada artículo en uso en su organización:</p>
+<ul>
+<li>Sistemas operativos (Windows, Mac OS X, Linux, HP-UX)</li>
+<li>Hardware ( portátiles, PC escritorio, servidores, dispositivos móviles)</li>
+<li>Tecnologías de red (conmutadores, puntos de acceso inalámbrico, firewalls, IDS, proxies)</li>
+<li>Diagrama de Red</li>
+<li>Software de seguridad (AV, HIPS, lista blanca)</li>
+<li>Software de gestión de TI (parche, configuración y gestión de activos, supervisión del rendimiento)</li>
+<li>Endpoints (procesamiento de texto, gráficos, ingeniería, Internet navegadores)</li>
+<li>Aplicaciones comerciales (mantenimiento de tiempo, gestión de documentos, pago tratamiento)</li>
+</ul>
+<p>INSTRUMENTACIÓN</p>
+<p>Aunque creamos que contamos con toda la información almacenada en nuestros sistemas es bueno considerar cómo
+mejorar la configuración del sistema para facilitar una investigación, piense en las dos fases iniciales: desarrollo y
+seguimientos. Por lo tanto es conveniente contestar a las siguientes preguntas.
+¿Qué se puede registrar, capturar o registrar de otro modo que pueda ayudar a determinar qué sucedió en un sistema
+afectado?
+Piense en los mecanismos de instrumentación que ya tiene instalados (medición de software, supervisión del rendimiento y
+firewalls basados en host o AV) y cómo podría mejorar su configuración.</p>
+<ul>
+<li>Eventos, errores en logs y logs de acceso</li>
+<li>Antivirus y sistemas de intrusión</li>
+<li>Herramientas de investigación</li>
+</ul>
+<p>Adicionalmente es conveniente mejorar la seguridad con algunas recomendaciones tales como:</p>
+<ul>
+<li>Establezca una solución de parcheo para ambos sistemas operativos y aplicaciones.</li>
+<li>Considere el uso de la autenticación de dos factores y aplique una buena contraseña complejidad.</li>
+<li>Eliminar el acceso administrativo local de los usuarios.</li>
+<li>Asegurar que los sistemas tengan firewall y soluciones AV implementadas y configuradas adecuadamente.</li>
+<li>Retirar los sistemas al final de la vida útil.</li>
+<li>Establecer un sistema de gestión de configuración.</li>
+<li>Considere la inclusión de listas blancas de aplicaciones.</li>
+<li>Cumple con DISA STIGs: iase.disa.</li>
+</ul>
+<p>CONFIGURACIÓN DE RED</p>
+<p>En la primera parte hemos cubierto la parte de dispositivos en cuanto a la preparación de la infraestructura para IR. Ahora cubriremos la parte de red, configuración de red de área.</p>
+<p>Existen numerosas guías y ubicaciones sobre el proceso de diseño de un entorno de red seguro. Por lo tanto vamos a
+comentar algunas prácticas comunes pueden mejorar enormemente la capacidad de un equipo de IR para realizar
+investigaciones. Podríamos centrarnos en cuatro puntos principalmente.</p>
+<ul>
+<li>
+<p>Segmentación de red y controles</p>
+</li>
+<li>
+<p>Filtadro por niveles</p>
+</li>
+<li>Web, chat y proxys de transferencia</li>
+<li>Doble factor de autenticación</li>
+<li>Control de acceso</li>
+<li>Limitar las conexiones de las estaciones</li>
+<li>Documentación</li>
+<li>
+<p>Instrumentación</p>
+</li>
+<li>
+<p>Firewall</p>
+</li>
+<li>Sistemas de intrusión</li>
+<li>Capturas completas de red</li>
+<li>Emisores de NetfLow</li>
+<li>Proxy servers</li>
+<li>
+<p>Servicios de red</p>
+</li>
+<li>
+<p>Implementación DNS blackhole</p>
+</li>
+</ul>
+<p>COMENZAR LA INVESTIGACIÓN</p>
+<p>Cuando se detecta un evento, hemos visto que muchas organizaciones tienden directamente a realizar una investigación. En
+algunos casos, los detalles del evento pueden justificar que se requiera de una investigación rápida. En la mayoría de los
+casos, sin embargo, creemos que un paso adicional es necesario para iniciar la investigación de forma correcta.
+Se han observado muchas investigaciones que comienzan antes de la confirmación de los hechos básicos. Al igual que con
+cualquier escenario de la vida real, a medida que recibe nueva información, debe siempre evaluarlo de una perspectiva
+lógica, sentido común y tu propia experiencia.
+Los sistemas de detección pueden tergiversar u omitir eventos o detalles de los mismos. Ningún sistema es completamente
+exacto. Debes actuar como guardián, deteniéndote entre eventos e investigaciones.
+Para hacer eso, se debe construir una imagen general del incidente y luego recolectar y verificar los hechos iniciales. Esto
+permitirá desarrollar el contexto adecuadamente. A continuación, se debe determinar lo que es apropiado, y posible, para el
+investigación.
+Finalmente, este proceso necesita moverse rápidamente, porque su la seguridad de la organización, los datos electrónicos y
+la reputación están en juego.</p>
+<p>RECOGIDA DE HECHOS INCIALES</p>
+<p>Los hechos iniciales sobre un evento son todo lo que una investigación necesita para empezar así que es una buena idea
+hacerlo bien.
+También es importante recopilar información adicional sobre esos hechos para que pueda establecer el contexto. Por
+ejemplo, una dirección IP es más útil si usted sabe a qué sistema pertenece y qué papel desempeña ese sistema.
+Sin ese contexto, es fácil saltar a las conclusiones que con casi toda seguridad sean erróneas. Es también compresible
+entender que algunos posean mas experiencia con esto, sin embargo otros pueden necesitar algunos consejos para
+mejorar sus habilidades.
+Para ayudar, vamos a tocar áreas que creemos que son beneficiosas para el aprendizaje. Las siguientes secciones cubren
+una cantidad de listas de verificación que han sido desarrolladas por profesionales, algunos consejos sobre casos y la
+importancia de desarrollar una línea de tiempo del ataque sufrido.</p>
+<p>CHECKLIST</p>
+<p>Cubrimos cinco listas de verificación en esta sección: el resumen del incidente, cómo fue el incidente detalles de sistema individual detectado, detalles de red y detalles del malware.</p>
+<p>Existen sin duda, otras áreas para las podríamos hacer listas de verificación, pero hemos encontrado que estas son las más comunes y útiles para una investigación de respuesta a incidentes. Además, estas listas de verificación no son definitivas y es posible que necesite agregar, eliminar o cambiar elementos más apropiadas para su organización.</p>
+<p>La primera lista de verificación que debe completar se utiliza para recopilar los datos vitales básicos de un incidente; se
+llama
+Video – Desarrollar una Lista de verificación del Incidente</p>
+<p>El propósito de esta lista de verificación es registrar información de alto nivel sobre el incidente. La información recopilada
+debería proporcionarle con un sentido general de lo que sucedió, y debería ayudar a identificar las áreas donde el protocolo
+de respuesta puede necesitar atención.
+Fecha y hora en que se informó el incidente: Registre la fecha y la hora en que sistema individual o automático inicialmente
+trajo el problema al equipo del IR atención.
+La fecha y hora en que se detectó el incidente: Normalmente, el momento en que ocurre un incidente informado es más
+reciente que el tiempo de detección real. Asegúrese de rastrear y registrar cuando el problema fue realmente detectado</p>
+<ul>
+<li>Información de contacto de la persona que documenta la información</li>
+<li>Información de contacto de la persona que reportó el incidente</li>
+<li>Información de contacto de la persona que detectó el incidente</li>
+<li>Si la organización fue notificado por una fuente externa, asegúrese de que se hayan registrado todos los detalles y seconserva la comunicación original y escrita</li>
+<li>La naturaleza del incidente</li>
+<li>Proporcionar una categorización del tipo de malware detectado, intento de spear phishing, inicios de sesión fallidos, acceso no autorizado,etc</li>
+<li>El tipo de recursos afectados. A veces, la detección o notificación da detalles sobre los datos o recursos que pueden haber sido afectados</li>
+<li>Cómo se detectó el incidente. Proporcione un breve resumen del método utilizado para la detección, como una alerta de antivirus, una alerta de IDS, o que un usuario informó comportamientos sospechosos</li>
+<li>
+<p>El identificador único y la ubicación de los equipos afectados por el incidente. Asegúrese de obtener un identificador único: la dirección IP puede no ser única, debido usemos sistemas como DHCP</p>
+</li>
+<li>
+<p>¿Quién accedió a los sistemas desde la detección?</p>
+</li>
+</ul>
+<p>Es importante registrar quién accedió al sistema desde la detección, en caso de que los investigadores necesiten información sobre que hicieron. A veces, el personal de TI u otros pueden tomar medidas que perciben como "útil", pero son difíciles de diferenciar de la actividad maliciosa.</p>
+<ul>
+<li>¿Quién conoce el incidente?</li>
+<li>Si el incidente está actualmente en curso.</li>
+<li>Si existe un requisito para mantener incidente abierto y de comunicar sobre ello
+  Una vez que haya completado la Lista de verificación del incidente, puede pasar a obtener más detalles sobre áreas
+  específicas. El orden de finalización de las siguientes listas de verificación debe basarse en las necesidades de la situación.
+  También puede solicitar ayuda y completar más de una a la vez.1</li>
+</ul>
+<p>RECOGER DATOS ADICIONALES</p>
+<p>Si los detalles de la detección parecen precisos y consistentes, el siguiente paso es pasar a recopilar información adicional
+sobre elementos específicos relacionados con la detección. En este caso se debe de bajar un nivel y recopilar detalles sobre
+los sistemas individuales, la o las redes, y archivos potencialmente maliciosos.
+Además, siéntase libre de profundizar en otros puntos de datos que hayan sido recolectados en la lista de verificación o
+checklist que vimos anteriormente.
+Detalles del sistema individual: Para cada sistema involucrado, considere recolectar la siguiente información. Debe evitar
+agrupar sistemas en un solo documento, porque es fácil pasar por alto los detalles si no se toma el tiempo necesario para
+preguntar preguntas sobre cada sistema individual.</p>
+<ul>
+<li>Localización física</li>
+<li>Etiqueta del servidor</li>
+<li>Sistema y modelo</li>
+<li>Sistema instalado</li>
+<li>Función del sistema</li>
+<li>Responsable o administrador del sistema</li>
+<li>Dirección IP</li>
+<li>Nombre y si pertenece aun dominio</li>
+<li>Si almacena información critica</li>
+<li>Si dispone de backups</li>
+<li>Si el sistema continua conectado a la red</li>
+<li>Lista de malware y recolección de datos de log</li>
+<li>Lista de todos los pasos que han sido tomados</li>
+<li>Si algún datos ha sido preservado, el proceso por el cual se almaceno</li>
+</ul>
+<p>Detalles de Red: Documentar los detalles sobre la red es tan importante, incluso en casos donde los detalles de la red inicialmente no parecen ser importantes. A lo mínimo, considere los siguientes puntos:</p>
+<ul>
+<li>Una lista de todas las direcciones IP maliciosas externas o nombres de dominio involucrados</li>
+<li>Si la supervisión de la red se está llevando a cabo</li>
+<li>Una lista de los pasos de remediación que se han tomado</li>
+<li>Si se conservan datos, qué proceso se está utilizando y dónde se encuentra almacenado</li>
+<li>Actualizaciones de diagramas y configuraciones de red</li>
+<li>Nombre y si pertenece aun dominio</li>
+<li>Si almacena información critica</li>
+<li>Si dispone de backups</li>
+<li>Si el sistema continua conectado a. la red</li>
+<li>Lista de malware y recolección de datos de log</li>
+<li>Lista de todos los pasos que han sido tomados</li>
+<li>Si algún datos ha sido preservado, el proceso por el cual se almaceno</li>
+</ul>
+<p>Detalles de Malware: Para cada archivo malicioso relacionado con el incidente, deberá documentar los siguientes elementos:</p>
+<ul>
+<li>Una lista de todas las direcciones IP maliciosas externas o nombres de dominio involucrados</li>
+<li>Si la supervisión de la red se está llevando a cabo</li>
+<li>Una lista de los pasos de remediación que se han tomado</li>
+<li>Si se conservan datos, qué proceso se está utilizando y dónde se encuentra almacenado</li>
+<li>Actualizaciones de diagramas y configuraciones de red</li>
+<li>La fecha y hora de la detección</li>
+<li>Cómo se detectó el malware</li>
+<li>La lista de sistemas donde se encontró el malware</li>
+<li>El nombre del archivo malicioso y en qué directorio estaba presente</li>
+<li>Qué determinó el mecanismo de detección, como el nombre y la familia del archivo malicioso</li>
+<li>Si el malware está activo durante el IR y si las conexiones de red continúan activas</li>
+<li>Si se conserva una copia del malware, ya sea manualmente o mediante un proceso de cuarentena</li>
+<li>El estado de cualquier análisis</li>
+<li>¿Ha sido analizado el malware en la red y el host indicadores de compromiso?
+  Si el malware fue enviado a terceros, ya sea a través de un sistema automatizado o por acción directa de un empleado</li>
+</ul>
+<p>LÍNEA DE TIEMPO</p>
+<p>En cada investigación que realizamos, es nuestro deber mantener una línea de tiempo de los eventos. Las líneas de tiempo
+nos mantienen organizados, brindan contexto, ayudan a identificar inconsistencias y brindan una imagen general de lo que
+sucedió. Es importante darse cuenta de que los eventos no serán necesariamente ingresados en orden cronológico. Lo que
+queremos decir es que ingresemos eventos a medida que los revisamos, no cuando ocurren (o ocurrieron).
+Comparar información nueva en una línea de tiempo puede ayudar a validar nuevos clientes potenciales. Por ejemplo, si
+descubre información que sugiere que el ataque inicial ocurrió seis meses antes de la fecha más antigua que registró
+actualmente, o bien tiene un gran avance en el caso o está buscando información no relacionada.
+Otro ejemplo podría ser con secuencias de eventos. Imagine un escenario en el que descubre que un atacante creó un
+archivo y luego lo transfirió fuera de la red. Después de poner la información en una línea de tiempo, observa que la marca
+de tiempo de que su servidor proxy el cual registra la transferencia se encuentra antes de la fecha de creación del archivo.
+Debido a que el archivo debe existir antes de la transferencia, algo está mal con los datos que está mirando o cómo lo está
+interpretando. La línea de tiempo del ataque se centra en actividades significativas de los atacantes. Registre detalles tales
+como cuándo un atacante accedió a un sistema, cuándo se crearon los archivos, cuándo se transfirieron los datos y cuándo
+se ejecutaron las herramientas. También es importante registrar la fuente de los datos en la línea de tiempo. Por ejemplo, si
+realiza una entrada que un atacante accedió a un sistema, incluya dónde encontró esa información. Finalmente, no olvide
+registrar el identificador del sistema en el que ocurrió el evento</p>
+<p>ALCANCE DEL INCIDENTE</p>
+<p>En esta sección, analizaremos algunos conceptos básicos que puede utilizar en las primeras etapas de su investigación que
+ayudaran a descubrir el alcance y decidir qué pasos dar a continuación. Cuando decimos "alcance", nos referimos a obtener
+una mejor idea de lo que hizo el atacante.</p>
+<ul>
+<li>Examinar datos iniciales</li>
+<li>Recolección y revisión preliminar de la evidencia</li>
+<li>Determinar las acciones en curso</li>
+</ul>
+<p>DATOS INICIALES</p>
+<p>Durante la fase inicial de detección debemos de tener inicios de que se ha producido un acceso no autorizado o bien se
+debe tener alguna información inicial sobre la detección. Por ejemplo, si el evento fue una inyección estructurada de
+lenguaje de consulta (SQL), debe tener una fecha, hora y las direcciones IP de origen y destino.
+También querrá hablar con el personal que administra el sistema de detección para ver si hay otros detalles disponibles. De
+modo que debe de preguntar i puede ver los detalles de la alerta, si puede observar que información adicional existe y si es
+útil para la investigación.
+Pregunte acerca de otros sistemas de detección y si han detectado algo o una actividad sospechosa; es posible que haya
+sistemas implementados que podrían proporcionar información adicional. Debe reunir hechos que proporcionen un mejor
+contexto del evento de detección. Como hemos visto anteriormente las respuestas a preguntas pueden tener un gran
+impacto en la forma en que decida continuar.
+Ahora que ha examinado los datos iniciales, analicemos cómo decidirá qué evidencia preliminar reunir y qué hará con ella.</p>
+<p>RECOLECCIÓN Y REVISIÓN PRELIMINAR</p>
+<p>En esta fase, se debe determinar qué fuentes preliminares pueden ser útiles para capturar evidencias y luego decidir cuales
+se usaran en la realidad. Finalmente, recopilaremos y revisaremos cada evidencia. Necesitaremos encontrar fuentes de
+evidencias que nos proporcionen rápidamente respuestas iniciales.
+Idealmente, debemos de identificar las fuentes de evidencia que provienen de varias categorías y requieren poco esfuerzo a
+la hora de analizarlas. Por ejemplo, si una pregunta de investigación es determinar si el malware se ejecutó en un sistema,
+podríamos considerar las siguientes fuentes de evidencia:</p>
+<ul>
+<li>Artefactos que el malware crea directamente en el sistema, como archivos o claves de registro</li>
+<li>Artefactos del sistema operativo, como el visor de eventos de Windows</li>
+<li>Artefactos de aplicaciones, como el historial del navegador de Internet</li>
+<li>Artefactos de red, como los registros de firewall</li>
+</ul>
+<p>Esas fuentes son lo que llamamos "fuentes de evidencia independientes". Por ejemplo, la existencia de registros de firewall
+que pueden mostrar las conexiones de red del malware no depende de la presencia de una clave de registro, y viceversa.
+De tal modo que podríamos llegar a conclusiones que son más confiables si usamos múltiples fuentes de evidencia
+independientes.
+Si usamos fuentes independientes, la probabilidad de que detecte la ejecución, si está sucedió, es mucho mayor. Hay una
+serie de razones que justifican lo explicado ya que será más difícil para un atacante eliminar o modificar la evidencia de
+todas las fuentes de evidencia independientes.
+También es menos probable que un proceso de rutina sobrescriba o descarte la evidencia en todas las fuentes. Y con
+múltiples fuentes independientes, puede verificar información cruzada, como la hora exacta en que ocurrió un evento, de tal
+manera que si los datos coinciden los hallazgos serán mas convincentes.
+Si las fuentes dependen unas de otras o caen dentro de una sola categoría, como la revisión de los eventos de Windows, la
+posibilidad de detección es menor.</p>
+<p>Video utilizar NetworkMiner
+Video utilizar NetWitness
+Video utilizar Wireshark</p>
+<p>DETERMINAR UNA ACCIÓN</p>
+<p>Una vez que que hemos reunido y hemos revisados las evidencias preliminares debemos de tomar decisiones son las actividades que debemos de crear, como repartirlas y como catalogarlas. Esas actividades normalmente incluyen preservar la evidencia, pero también podrían ser acciones de postura o contención. Al igual que con cualquier decisión, hay una serie de factores que podemos pensar que nos ayudaran en la toma de decisiones de modo que nos resulta más útil responder a las mismas a través de las siguientes preguntas.</p>
+<ul>
+<li>¿La acción ayudará a responder una pregunta de investigación?</li>
+<li>¿La acción responderá mis preguntas rápidamente?</li>
+<li>¿Estamos siguiendo la evidencia?</li>
+<li>¿Estamos poniendo demasiado esfuerzo en una sola teoría?</li>
+<li>¿Estamos usando múltiples fuentes independientes de evidencias?</li>
+<li>¿Entendemos el nivel de esfuerzo?</li>
+<li>¿Nos mantenemos sobre el objetivo?</li>
+<li>¿Estamos rastreando las evidencias más tempranas y recientes de compromiso?</li>
+<li>¿Hemos descubierto algo que requiere de una reparación inmediata?</li>
+</ul>
+<p>Video Cazando una Shell</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2021-2022 Eduardo Fernández <a href="https://twitter.com/revilofe" target=_blank>@revilofe</a> - Licencia CC BY-NC-SA
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/revilofe" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    <a href="mailto:<efernandez@iesrafaelalberti.es>" target="_blank" rel="noopener" title="e-mail" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M464 64c26.5 0 48 21.49 48 48 0 15.1-7.1 29.3-19.2 38.4L275.2 313.6a32.1 32.1 0 0 1-38.4 0L19.2 150.4C7.113 141.3 0 127.1 0 112c0-26.51 21.49-48 48-48h416zM217.6 339.2a63.9 63.9 0 0 0 76.8 0L512 176v208c0 35.3-28.7 64-64 64H64c-35.35 0-64-28.7-64-64V176l217.6 163.2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/efoliver" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

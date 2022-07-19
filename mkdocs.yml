@@ -87,12 +87,12 @@ markdown_extensions:
   - tables
   - meta
   - abbr #Tooltips
-  - attr_list #Tooltips
+  - attr_list #Tooltips & This configuration adds the ability to align images, add captions to images (rendering them as figures), and mark large images for lazy-loading.
+  - md_in_html # https://squidfunk.github.io/mkdocs-material/reference/images/
   - admonition
   - def_list
   - footnotes
   - meta
-  - md_in_html  
   - pymdownx.snippets: #Tooltips https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-tooltips
       auto_append: 
         - includes/abbreviations.md

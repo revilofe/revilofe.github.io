@@ -10,6 +10,10 @@ Poniendo un salto de línea, una línea con '---' y otro salto de línea, se cre
 
 ---
 
+## Despliegue
+Para desplegar hay que modificar las diapositivas.
+
+---
 ## Notas del presentador
 
 Escribiendo en una línea "Note: ", podemos escribir una nota para el presentador. Prueba a pulsar 'S' para pasar a ese modo y verlas.
@@ -96,7 +100,7 @@ Los predefinidos son: black, white, league, beige, sky, night, serif, simple, so
 
 ## Formato del texto
 
-Por supuesto, tenemos la **negrita**, *cursiva* y la ***negritacursiva***
+Por supuesto, tenemos la **negrita**, *cursiva* y la ***negritacursiva*** para los textos. 
 
 ---
 

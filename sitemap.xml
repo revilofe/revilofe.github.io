@@ -151,6 +151,26 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://revilofe.github.io/section3/</loc>
+         <lastmod>2022-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/page-1/</loc>
+         <lastmod>2022-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/page-n/</loc>
+         <lastmod>2022-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u01/</loc>
+         <lastmod>2022-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://revilofe.github.io/tags/</loc>
          <lastmod>2022-09-12</lastmod>
          <changefreq>daily</changefreq>

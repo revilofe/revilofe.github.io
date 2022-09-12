@@ -32,7 +32,6 @@ constante de los procesos internos y externos de la organización. Del mismo es 
 interno que agilice el proceso y la toma de decisiones ante un incidente. El centro de Recursos y seguridad de las
 computadoras CSRC del instituto de estándares y tecnologías NIST ha desarrollado una serie de guías sobre estos eventos.
 
-
 Un gran número de gobiernos, agencias, socios de otras organizaciones, contractos dan soporte a la guía 800-61r2 de
 NIST.
 
@@ -416,8 +415,6 @@ La parte más crítica de un entregable para los equipos IR son los informes det
 | Informe análisis de Malware         | Documento que detallas las evidencias encontradas en el análisis de malware.                             | Borrador: Tres días de trabajo. Final: Cinco días de trabajo.  |
 | Informe investigación de Intrusión | Documento que detallas las evidencias encontradas en la investigación sobre la intrusión en el sistema. | Borrador: Cinco días de trabajo. Final: Ocho días de trabajo.  |
 
-
-
 Equipo forense, recursos:
 
 El software que habitualmente se usa durante las investigaciones generalmente se categoriza en ocho categorías. El equipo de IR debe  inventariar lo que tiene, y analizar si necesita alguna herramienta adicional basada en algunos de los siguientes criterios.
@@ -431,19 +428,14 @@ El software que habitualmente se usa durante las investigaciones generalmente se
 * Suites de Forense.
 * Herramientas para el análisis de log.
 
-
 Recursos Públicos
 
 * [awesome-csirt](https://github.com/shrekts/awesome-csirt)
 * [awesome-incident-response](https://github.com/meirwah/awesome-incident-response)
 
-
 <<< voy por aqui >>>
 
-
-
 DOCUMENTACIÓN Y TRATAMIENTO
-
 
 La evidencia es la fuente de cualquier investigación y debe manejarse de manera apropiada. La atención al detalle y el
 estricto cumplimiento son obligatorios con respecto al manejo de las evidencias. Si se cuestiona la integridad de la
@@ -462,8 +454,6 @@ la recopilación y se puede validar en cualquier momento. La validación demuest
 el momento de la recopilación. Puede leer más sobre las reglas de evidencia y las pautas de recopilación de evidencia del
 Departamento de Justicia de cada país.
 
-
-
 REPOSITORIO DE CONOCIMIENTO
 
 A medida que su equipo de IR realiza investigaciones e interactúa con otros departamentos de su organización, acumularán
@@ -476,9 +466,7 @@ El repositorio de conocimiento debe estar lógicamente organizado y accesible pa
 efectivamente la información relevante.
 Video – Construir tu WIKI
 
-
 PREPARANDO LA INFRAESTRUCTURA PARA RESPUESTA DE INCIDENTES
-
 
 Principalmente la infraestructura que necesita un equipo de incidentes suele esta compuesta por las siguientes áreas:
 
@@ -493,9 +481,7 @@ Principalmente la infraestructura que necesita un equipo de incidentes suele est
 * Instrumentación
 * Servicios de red
 
-
 CONFIGURACIÓN DEL DISPOSITIVO
-
 
 Los dispositivos tales como servidores, pc de escritorio y portátiles, en su empresa albergan la mayoría de la evidencias
 relevantes para una investigación, y la manera en que estos sistemas están configurados pueden afectar drásticamente el
@@ -510,14 +496,7 @@ validas para acceder a los sistemas críticos de forma coherente con la activida
 ni conservan, muchas preguntas sobre el incidente no podrán ser respondidas
 Para ayudar a garantizar que cubra todos los aspecto tenga en cuenta los dos pasos siguientes:
 
-
 GESTIÓN DE ACTIVOS
-
-
-
-
-
-
 
 Cuando los profesionales de seguridad informática piensan en formas de preparar su entorno para un incidente, la
 administración de activos generalmente no es uno de ellos. La clave es entender cómo acceder a la información cuando la
@@ -536,9 +515,7 @@ necesite. Debe evaluar la capacidad de su organización para proporcionar la sig
 * Servicios y Roles: Todo investigador debe de conocer los roles y servicios de cada activo de la organización
 * Configuración de la red: Conocer el estado de la red, el tipo de tipología y direccionamiento es importante
 
-
 ENCUESTA / INVENTARIO
-
 
 La construcción de un sistema estándar de una organización, los inventarios de software y otra documentación rara vez
 proporcionarán la imagen completa de la infraestructura de TI. Durante el curso de una investigación, encontramos que es
@@ -555,9 +532,7 @@ Asegúrese de incluir el fabricante, el producto y la información de la versió
 * Endpoints (procesamiento de texto, gráficos, ingeniería, Internet navegadores)
 * Aplicaciones comerciales (mantenimiento de tiempo, gestión de documentos, pago tratamiento)
 
-
 INSTRUMENTACIÓN
-
 
 Aunque creamos que contamos con toda la información almacenada en nuestros sistemas es bueno considerar cómo
 mejorar la configuración del sistema para facilitar una investigación, piense en las dos fases iniciales: desarrollo y
@@ -581,10 +556,6 @@ Adicionalmente es conveniente mejorar la seguridad con algunas recomendaciones t
 * Establecer un sistema de gestión de configuración.
 * Considere la inclusión de listas blancas de aplicaciones.
 * Cumple con DISA STIGs: iase.disa.
-
-
-
-
 
 CONFIGURACIÓN DE RED
 
@@ -613,9 +584,7 @@ investigaciones. Podríamos centrarnos en cuatro puntos principalmente.
 
   * Implementación DNS blackhole
 
-
 COMENZAR LA INVESTIGACIÓN
-
 
 Cuando se detecta un evento, hemos visto que muchas organizaciones tienden directamente a realizar una investigación. En
 algunos casos, los detalles del evento pueden justificar que se requiera de una investigación rápida. En la mayoría de los
@@ -631,7 +600,6 @@ investigación.
 Finalmente, este proceso necesita moverse rápidamente, porque su la seguridad de la organización, los datos electrónicos y
 la reputación están en juego.
 
-
 RECOGIDA DE HECHOS INCIALES
 
 Los hechos iniciales sobre un evento son todo lo que una investigación necesita para empezar así que es una buena idea
@@ -645,13 +613,9 @@ Para ayudar, vamos a tocar áreas que creemos que son beneficiosas para el apren
 una cantidad de listas de verificación que han sido desarrolladas por profesionales, algunos consejos sobre casos y la
 importancia de desarrollar una línea de tiempo del ataque sufrido.
 
-
 CHECKLIST
 
-
 Cubrimos cinco listas de verificación en esta sección: el resumen del incidente, cómo fue el incidente detalles de sistema individual detectado, detalles de red y detalles del malware.
-
-
 
 Existen sin duda, otras áreas para las podríamos hacer listas de verificación, pero hemos encontrado que estas son las más comunes y útiles para una investigación de respuesta a incidentes. Además, estas listas de verificación no son definitivas y es posible que necesite agregar, eliminar o cambiar elementos más apropiadas para su organización.
 
@@ -676,9 +640,6 @@ reciente que el tiempo de detección real. Asegúrese de rastrear y registrar cu
 * El tipo de recursos afectados. A veces, la detección o notificación da detalles sobre los datos o recursos que pueden haber sido afectados
 * Cómo se detectó el incidente. Proporcione un breve resumen del método utilizado para la detección, como una alerta de antivirus, una alerta de IDS, o que un usuario informó comportamientos sospechosos
 * El identificador único y la ubicación de los equipos afectados por el incidente. Asegúrese de obtener un identificador único: la dirección IP puede no ser única, debido usemos sistemas como DHCP
-
-
-
 * ¿Quién accedió a los sistemas desde la detección?
 
 Es importante registrar quién accedió al sistema desde la detección, en caso de que los investigadores necesiten información sobre que hicieron. A veces, el personal de TI u otros pueden tomar medidas que perciben como "útil", pero son difíciles de diferenciar de la actividad maliciosa.
@@ -690,9 +651,7 @@ Es importante registrar quién accedió al sistema desde la detección, en caso 
   específicas. El orden de finalización de las siguientes listas de verificación debe basarse en las necesidades de la situación.
   También puede solicitar ayuda y completar más de una a la vez.1
 
-
 RECOGER DATOS ADICIONALES
-
 
 Si los detalles de la detección parecen precisos y consistentes, el siguiente paso es pasar a recopilar información adicional
 sobre elementos específicos relacionados con la detección. En este caso se debe de bajar un nivel y recopilar detalles sobre
@@ -718,8 +677,6 @@ preguntar preguntas sobre cada sistema individual.
 * Lista de todos los pasos que han sido tomados
 * Si algún datos ha sido preservado, el proceso por el cual se almaceno
 
-
-
 Detalles de Red: Documentar los detalles sobre la red es tan importante, incluso en casos donde los detalles de la red inicialmente no parecen ser importantes. A lo mínimo, considere los siguientes puntos:
 
 * Una lista de todas las direcciones IP maliciosas externas o nombres de dominio involucrados
@@ -734,8 +691,6 @@ Detalles de Red: Documentar los detalles sobre la red es tan importante, incluso
 * Lista de malware y recolección de datos de log
 * Lista de todos los pasos que han sido tomados
 * Si algún datos ha sido preservado, el proceso por el cual se almaceno
-
-
 
 Detalles de Malware: Para cada archivo malicioso relacionado con el incidente, deberá documentar los siguientes elementos:
 
@@ -755,9 +710,7 @@ Detalles de Malware: Para cada archivo malicioso relacionado con el incidente, d
 * ¿Ha sido analizado el malware en la red y el host indicadores de compromiso?
   Si el malware fue enviado a terceros, ya sea a través de un sistema automatizado o por acción directa de un empleado
 
-
 LÍNEA DE TIEMPO
-
 
 En cada investigación que realizamos, es nuestro deber mantener una línea de tiempo de los eventos. Las líneas de tiempo
 nos mantienen organizados, brindan contexto, ayudan a identificar inconsistencias y brindan una imagen general de lo que
@@ -776,7 +729,6 @@ se ejecutaron las herramientas. También es importante registrar la fuente de lo
 realiza una entrada que un atacante accedió a un sistema, incluya dónde encontró esa información. Finalmente, no olvide
 registrar el identificador del sistema en el que ocurrió el evento
 
-
 ALCANCE DEL INCIDENTE
 
 En esta sección, analizaremos algunos conceptos básicos que puede utilizar en las primeras etapas de su investigación que
@@ -788,7 +740,6 @@ una mejor idea de lo que hizo el atacante.
 * Determinar las acciones en curso
 
 DATOS INICIALES
-
 
 Durante la fase inicial de detección debemos de tener inicios de que se ha producido un acceso no autorizado o bien se
 debe tener alguna información inicial sobre la detección. Por ejemplo, si el evento fue una inyección estructurada de
@@ -802,10 +753,7 @@ contexto del evento de detección. Como hemos visto anteriormente las respuestas
 impacto en la forma en que decida continuar.
 Ahora que ha examinado los datos iniciales, analicemos cómo decidirá qué evidencia preliminar reunir y qué hará con ella.
 
-
-
 RECOLECCIÓN Y REVISIÓN PRELIMINAR
-
 
 En esta fase, se debe determinar qué fuentes preliminares pueden ser útiles para capturar evidencias y luego decidir cuales
 se usaran en la realidad. Finalmente, recopilaremos y revisaremos cada evidencia. Necesitaremos encontrar fuentes de
@@ -836,8 +784,6 @@ Video utilizar NetworkMiner
 Video utilizar NetWitness
 Video utilizar Wireshark
 
-
-
 DETERMINAR UNA ACCIÓN
 
 Una vez que que hemos reunido y hemos revisados las evidencias preliminares debemos de tomar decisiones son las actividades que debemos de crear, como repartirlas y como catalogarlas. Esas actividades normalmente incluyen preservar la evidencia, pero también podrían ser acciones de postura o contención. Al igual que con cualquier decisión, hay una serie de factores que podemos pensar que nos ayudaran en la toma de decisiones de modo que nos resulta más útil responder a las mismas a través de las siguientes preguntas.
@@ -851,7 +797,5 @@ Una vez que que hemos reunido y hemos revisados las evidencias preliminares debe
 * ¿Nos mantenemos sobre el objetivo?
 * ¿Estamos rastreando las evidencias más tempranas y recientes de compromiso?
 * ¿Hemos descubierto algo que requiere de una reparación inmediata?
-
-
 
 Video Cazando una Shell

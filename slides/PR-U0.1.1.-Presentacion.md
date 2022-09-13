@@ -2,7 +2,7 @@
 
 # Programación
 
-![Logo Alberti](assets/logo-iesra.png)
+![Logo Alberti](assets/logo-iesra.png) <!-- .element height="50%" width="50%" -->
 
 ---
 
@@ -75,7 +75,7 @@ Horario (8 horas semanales)
 # Contenidos
 
 
-## Contenido. Actualizar al 2023!!
+## Contenido.
 | Unidades didácticas | Descripción unidad                                | Sesiones | RA | Criterios |                |
 | :--------------------: | :--------------------------------------------------- | :--------: | :---: | :---------: | :--------------: |
 |         UD1         | Introducción a la programación                   |    16    | RA1 |  a)..i)  | 1er trimestre |
@@ -94,16 +94,19 @@ Horario (8 horas semanales)
 # Evaluación y recuperación
 
 
-## Evaluación I. Actualizar al 2023!!
+## Evaluación I
 * Se supera el módulo con una calificación mayor o igual a 5.
 * La nota se obtiene haciendo la media ponderada de los resultados de aprendizaje (RA).
 * Un RA no superado, implica no superar el módulo.
+
+
+## Evaluación II
 * Los calificación de los RA se obtienen de la media ponderada de la calificación de los criterios de evaluación (CE).
 * Los CE se evalúan y califican a través del trabajo en clases y la realización de prácticas y pruebas especificas.
 ![](./assets/IS-U011-Presentacion2.png)
 
 
-## Evaluación II. Actualizar al 2023!!
+## Evaluación III
 * Hay 3 Evaluaciones Parciales
   * Diciembre
   * Marzo
@@ -122,18 +125,17 @@ Horario (8 horas semanales)
 
 
 ## Metodología
-
 Por unidad:
 * Explicar contenidos relacionados con criterios de evaluación  asociados al RA con el que se está trabajando. 
 * Trabajar los contenidos en grupo e individualmente, guiados por diapositivas, materiales de la red y discusión en grupo.
 * Puesta en práctica con trabajos.
 
-## Comunicación
 
+## Comunicación
 * Comunicación **oficial, preferida y obligada**: Asistiendo al aula y hablando directamente con el profesor.
 * Otros medios secundarios **opcionales**: Correo electrónico y Moodle.
 
-![](./assets/IS-U011-Presentacion3.png)
+![](./assets/IS-U011-Presentacion3.png) <!-- .element height="25%" width="25%" -->
 
 ---
 
@@ -151,8 +153,8 @@ Por unidad:
 * Formación presencial, por tanto la comunicación presencial.
 * Como regla general:
   - Los ejercicios individuales se corregirán en clase delante del profesor.
-  - Los ejercicios en grupo se podrán presentar en grupo o un componente del grupo de forma aleatoria. El método será elegido por el profesor.
-  
+  - Los ejercicios en grupo se podrán presentar en grupo o un componente del grupo de forma aleatoria. El método será elegido por el profesor.    
+
 
 ## Aclaraciones II
 * Causas para no corregir una prueba (ejercicio, práctica, examen)

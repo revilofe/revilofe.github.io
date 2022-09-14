@@ -12,8 +12,8 @@
 
 # Presentación
 
-
 ## Nos conocemos.
+
 * Profesor: Eduardo Fernández Oliver
   * _[efernandez@iesrafaelalberti\.es](mailto:efernandez@iesrafaelalberti.es)_
   * _[https://www.linkedin.com/in/efoliver/](https://www.linkedin.com/in/efoliver/)_
@@ -23,14 +23,16 @@
 ---
 
 # Objetivos fundamentales
+
 Recomendado la consulta de la [programación](https://revilofe.github.io/) para seguir esta presentación.
 
-
 ## Objetivos generales
+
 La formación de este módulo contribuye a alcanzar los objetivos generales de este ciclo formativo que se relacionan a continuación: e), j), q), w).
 
-
 ## Objetivos RA
+
+
 |  RA  | LOGRO                | *OBJETO*                                                   | *ACCIONES EN EL CONTEXTO DE APRENDIZAJE*                                                                      |
 | :----: | :--------------------- | :----------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- |
 | RA 1 | **Conoce**           | **la estructura de un programa informático**              | **identificando y relacionando los elementos propios del lenguaje de programación utilizado**                |
@@ -42,72 +44,80 @@ La formación de este módulo contribuye a alcanzar los objetivos generales de e
 | RA 7 | **Desarrolla**       | **programas**                                              | **aplicando características avanzadas de los lenguajes orientados a objetos y del entorno de programación** |
 | RA 8 | **Utiliza**          | **bases de datos orientadas a objetos**                    | **analizando sus características y aplicando técnicas para mantener la persistencia de la información**    |
 | RA 9 | **Gestiona**         | **información almacenada en bases de datos relacionales** | **manteniendo la integridad y consistencia de los datos**                                                     |
+
 <!-- .element.table: style="font-size:50%;" -->
 
-
 ## Competencias PPS
+
 La formación del módulo contribuye a alcanzar las competencias profesionales, personales y sociales de este título que se relacionan a continuación: a), e), f), i), j, t), w).
 
 ---
 
 # Contenidos
 
-
 ## Contenido.
-| Unidades didácticas | Descripción unidad                                | Sesiones | RA | Criterios |                |
-| :--------------------: | :--------------------------------------------------- | :--------: | :---: | :---------: | :--------------: |
+
+
+| Unidades didácticas | Descripción unidad                                | Sesiones | RA | Criterios |              |
+| :--------------------: | :--------------------------------------------------- | :--------: | :---: | :---------: | :-------------: |
 |         UD1         | Introducción a la programación                   |    16    | RA1 |  a)..i)  | 1er trimestre |
-|         UD2         | Estructura de los programas                        |    16    | RA2 |  a)..h)  |                |
-|         UD3         | Introducción a la POO                             |    24    | RA3 |  a)..i)  |                |
-|         UD4         | Estructuras de datos predefinidas usando POO       |    24    | RA4 |  a)..i)  |                |
+|         UD2         | Estructura de los programas                        |    16    | RA2 |  a)..h)  |              |
+|         UD3         | Introducción a la POO                             |    24    | RA3 |  a)..i)  |              |
+|         UD4         | Estructuras de datos predefinidas usando POO       |    24    | RA4 |  a)..i)  |              |
 |         UD5         | Creación de estructuras de datos usando POO       |    22    | RA5 |  a)..k)  | 2o  trimestre |
-|         UD6         | reación de programas haciendo uso de POO avanzada |    30    | RA6 |  a)..i)  |                |
-|         UD7         | Operaciones de entrada y salida y IUG              |    26    | RA7 |  a)..h)  |                |
-|         UD8         | Persistencia y acceso a datos en BD OO             |    38    | RA8 |  a)..h)  |                |
+|         UD6         | reación de programas haciendo uso de POO avanzada |    30    | RA6 |  a)..i)  |              |
+|         UD7         | Operaciones de entrada y salida y IUG              |    26    | RA7 |  a)..h)  |              |
+|         UD8         | Persistencia y acceso a datos en BD OO             |    38    | RA8 |  a)..h)  |              |
 |         UD9         | Persistencia y acceso a datos en BD Relacionales   |    48    | RA9 |  a)..g)  | 3er trimestre |
+
 <!-- .element.table: style="font-size:50%;" -->
 
 ---
 
 # Horarios y planificación
 
+## Horario.
 
-## Horario. Actualizar al 2023!!
 Horario (8 horas semanales)
-|     HORA     | L | M | X | J | V |
-| :-------------: | :-: | :--: | :-: | :--: | :-: |
-| 08:00 - 09:00 | - | IS | - | IS | - |
-| 09:00 - 10:00 | - | IS | - | IS | - |
-| 10:00 - 11:00 | - | IS | - | IS | - |
-| 11:00 - 11:30 | R | R | R | R | R |
-| 11:30 - 12:30 | - | - | - | - | - |
-| 12:30 - 13:30 | - | - | - | - | - |
-| 13:30 - 14:30 | - | - | - | - | - |
+
+
+|     HORA     | L |  M  |  X  |  J  |  V  |
+| :-------------: | :-: | :---: | :---: | :---: | :---: |
+| 08:00 - 09:00 | - |  -  | PRO |  -  | PRO |
+| 09:00 - 10:00 | - |  -  | PRO |  -  | PRO |
+| 10:00 - 11:00 | - | PRO |  -  | PRO |  -  |
+| 11:00 - 11:30 | x |  x  |  x  |  x  |  x  |
+| 11:30 - 12:30 | - | PRO |  -  | PRO |  -  |
+| 12:30 - 13:30 | - |  -  |  -  |  -  |  -  |
+| 13:30 - 14:30 | - |  -  |  -  |  -  |  -  |
+
 <!-- .element.table: style="font-size:50%;" -->
 
+## Planificación.
 
-## Planificación. Actualizar al 2023!!
 ![](./assets/IS-U011-Presentacion1.png)
+
+Como toda planificación, puede sufrir cambios.
 
 ---
 
 # Evaluación y recuperación
 
-
 ## Evaluación I
+
 * Se supera el módulo con una calificación mayor o igual a 5.
 * La nota se obtiene haciendo la media ponderada de los resultados de aprendizaje (RA).
 * Un RA no superado, implica no superar el módulo.
 
-
 ## Evaluación II
+
 * Los calificación de los RA se obtienen de la media ponderada de la calificación de los criterios de evaluación (CE).
 * Los CE se evalúan y califican a través del trabajo en clases y la realización de prácticas y pruebas especificas.
 
 ![](./assets/IS-U011-Presentacion2.png)
 
-
 ## Evaluación III
+
 * Hay 3 Evaluaciones Parciales
   * Diciembre
   * Marzo
@@ -115,8 +125,8 @@ Horario (8 horas semanales)
 * 1 Evaluación Final
   * Junio
 
-
 ## Recuperación
+
 * La recuperación de los RA pendientes se realiza durante el mes de junio
 * Consistirá en un conjunto de prácticas y/o pruebas sobre los criterios de evaluación relacionados con el resultado de aprendizaje no superado.
 
@@ -124,15 +134,16 @@ Horario (8 horas semanales)
 
 # Metodología y comunicación
 
-
 ## Metodología
+
 Por unidad:
-* Explicar contenidos relacionados con criterios de evaluación  asociados al RA con el que se está trabajando. 
+
+* Explicar contenidos relacionados con criterios de evaluación  asociados al RA con el que se está trabajando.
 * Trabajar los contenidos en grupo e individualmente, guiados por diapositivas, materiales de la red y discusión en grupo.
 * Puesta en práctica con trabajos.
 
-
 ## Comunicación
+
 * Comunicación **oficial, preferida y obligada**: Asistiendo al aula y hablando directamente con el profesor.
 * Otros medios secundarios **opcionales**: Correo electrónico y Moodle.
 
@@ -142,44 +153,45 @@ Por unidad:
 
 # Recomendaciones y aclaraciones
 
-
 ## Recomendaciones
+
 * Recomendaciones al alumnado:
   * Leer y entender la programación del módulo.
   * Poner foto actualizada en moodle.
   * Añadir correo electrónico correcto en moodle.
 
-
 ## Aclaraciones I
+
 * Formación presencial, por tanto la comunicación presencial.
 * Como regla general:
   - Los ejercicios individuales se corregirán en clase delante del profesor.
-  - Los ejercicios en grupo se podrán presentar en grupo o un componente del grupo de forma aleatoria. El método será elegido por el profesor.    
-
+  - Los ejercicios en grupo se podrán presentar en grupo o un componente del grupo de forma aleatoria. El método será elegido por el profesor.
 
 ## Aclaraciones II
+
 * Causas para no corregir una prueba (ejercicio, práctica, examen)
   - No se cumple las condiciones de entrega.
   - Se ha detectado la posibilidad de copiado de todo o parte de la prueba. Esto incluye textos (total o parcial) de internet y/o sin hacer referencia a la fuente
   - Se entrega fuera de plazo (aunque sean unos segundos).
   - En caso de código, no compila.
 
-
 ## Aclaraciones III
+
 * Causas para no corregir una prueba (ejercicio, práctica, examen)
   - Si la entrega es el git, añadir en el README.md instrucciones para compilar y ejecutar el código, descripción de la aplicación, autoría y referencias.
 
-
 ## Aclaraciones IV
+
 * Es responsabilidad del alumnado la custodia y guarda de los trabajos, documentos, y cualquier otro material que realice durante las prácticas o en clase, por tanto, tendrán que asegurarse que quedan a salvo siempre que abandonen el aula, no siendo responsabilidad del profesorado la perdida de este material.
 
-
 ## Aclaraciones V
+
 * En cuando a las fechas de entrega de prácticas/trabajos/ejercicios, tendrán una fecha de entrega clara, **que no se podrá cambiar bajo ninguna circunstancia**. Quedando a elección del profesor posibles excepciones justificadas.
 
 ---
 
 # Dudas
+
 ![](./assets/IS-U011-Presentacion4.png)
 
 ---

@@ -95,8 +95,7 @@ Horario (8 horas semanales)
 
 ## Planificación.
 
-![](./assets/IS-U011-Presentacion1.png)
-
+![](assets/prog-planif.png)
 Como toda planificación, puede sufrir cambios.
 
 ---

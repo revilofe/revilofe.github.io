@@ -103,6 +103,7 @@ Horario (8 horas semanales)
 ## Evaluación II
 * Los calificación de los RA se obtienen de la media ponderada de la calificación de los criterios de evaluación (CE).
 * Los CE se evalúan y califican a través del trabajo en clases y la realización de prácticas y pruebas especificas.
+
 ![](./assets/IS-U011-Presentacion2.png)
 
 
@@ -139,7 +140,7 @@ Por unidad:
 
 ---
 
-# Recomendaciones, aclaraciones y dudas
+# Recomendaciones y aclaraciones
 
 
 ## Recomendaciones
@@ -162,23 +163,27 @@ Por unidad:
   - Se ha detectado la posibilidad de copiado de todo o parte de la prueba. Esto incluye textos (total o parcial) de internet y/o sin hacer referencia a la fuente
   - Se entrega fuera de plazo (aunque sean unos segundos).
   - En caso de código, no compila.
-  - Si la entrega es el git, añadir en el README.md instrucciones para compilar y ejecutar el código, descripción de la aplicación, autoría y referencias.
 
 
 ## Aclaraciones III
-Es responsabilidad del alumnado la custodia y guarda de los trabajos, documentos, y cualquier otro material que realice, durante las prácticas, por tanto tendrán que asegurarse que quedan a salvo siempre que abandonen el aula, no siendo responsabilidad del profesorado la perdida de este material.
+* Causas para no corregir una prueba (ejercicio, práctica, examen)
+  - Si la entrega es el git, añadir en el README.md instrucciones para compilar y ejecutar el código, descripción de la aplicación, autoría y referencias.
 
 
 ## Aclaraciones IV
-En cuando a las fechas de entrega de prácticas/trabajos/ejercicios, tendrán una fecha de entrega clara, **que no se podrá cambiar bajo ninguna circunstancia**. Quedando a elección del profesor posibles excepciones justificadas.
+* Es responsabilidad del alumnado la custodia y guarda de los trabajos, documentos, y cualquier otro material que realice durante las prácticas o en clase, por tanto, tendrán que asegurarse que quedan a salvo siempre que abandonen el aula, no siendo responsabilidad del profesorado la perdida de este material.
 
 
-## Dudas
+## Aclaraciones V
+* En cuando a las fechas de entrega de prácticas/trabajos/ejercicios, tendrán una fecha de entrega clara, **que no se podrá cambiar bajo ninguna circunstancia**. Quedando a elección del profesor posibles excepciones justificadas.
+
+---
+
+# Dudas
 ![](./assets/IS-U011-Presentacion4.png)
 
 ---
 
 # Fin!
-![](assets/IS-U011-Presentacion5.png)
-
+![](./assets/Fin.png)
 ¡¡Gracias!!

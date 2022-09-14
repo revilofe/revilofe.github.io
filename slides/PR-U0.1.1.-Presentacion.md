@@ -185,5 +185,5 @@ Por unidad:
 ---
 
 # Fin!
-![](./assets/Fin.png)
+![](./assets/Fin.png) <!-- .element height="50%" width="50%" -->
 ¡¡Gracias!!

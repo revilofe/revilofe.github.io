@@ -64,7 +64,7 @@ La formación del módulo contribuye a alcanzar las competencias profesionales, 
 |         UD6         | reación de programas haciendo uso de POO avanzada |    30    | RA6 |  a)..i)  |                |
 |         UD7         | Operaciones de entrada y salida y IUG              |    26    | RA7 |  a)..h)  |                |
 |         UD8         | Persistencia y acceso a datos en BD OO             |    38    | RA8 |  a)..h)  |                |
-|         UD9         | Persistencia y acceso a datos en BD Relacionales   |    48    | RA9 |  a)..g)  | 3er trimestre |
+|         UD9         | Persistencia y acceso a datos en BD Relacionales   |    48    | RA9 |  a)..g)  | 3er trimestre |
 <!-- .element.table: style="font-size:50%;" -->
 
 ---

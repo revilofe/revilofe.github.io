@@ -50,6 +50,25 @@ La formación del módulo contribuye a alcanzar las competencias profesionales, 
 
 ---
 
+# Contenidos
+
+
+## Contenido.
+| Unidades didácticas | Descripción unidad                                | Sesiones | RA | Criterios |                |
+| :--------------------: | :--------------------------------------------------- | :--------: | :---: | :---------: | :--------------: |
+|         UD1         | Introducción a la programación                   |    16    | RA1 |  a)..i)  | 1er trimestre |
+|         UD2         | Estructura de los programas                        |    16    | RA2 |  a)..h)  |                |
+|         UD3         | Introducción a la POO                             |    24    | RA3 |  a)..i)  |                |
+|         UD4         | Estructuras de datos predefinidas usando POO       |    24    | RA4 |  a)..i)  |                |
+|         UD5         | Creación de estructuras de datos usando POO       |    22    | RA5 |  a)..k)  | 2o  trimestre |
+|         UD6         | reación de programas haciendo uso de POO avanzada |    30    | RA6 |  a)..i)  |                |
+|         UD7         | Operaciones de entrada y salida y IUG              |    26    | RA7 |  a)..h)  |                |
+|         UD8         | Persistencia y acceso a datos en BD OO             |    38    | RA8 |  a)..h)  |                |
+|         UD9         | Persistencia y acceso a datos en BD Relacionales   |    48    | RA9 |  a)..g)  | 3er trimestre |
+<!-- .element.table: style="font-size:50%;" -->
+
+---
+
 # Horarios y planificación
 
 
@@ -69,25 +88,6 @@ Horario (8 horas semanales)
 
 ## Planificación. Actualizar al 2023!!
 ![](./assets/IS-U011-Presentacion1.png)
-
----
-
-# Contenidos
-
-
-## Contenido.
-| Unidades didácticas | Descripción unidad                                | Sesiones | RA | Criterios |                |
-| :--------------------: | :--------------------------------------------------- | :--------: | :---: | :---------: | :--------------: |
-|         UD1         | Introducción a la programación                   |    16    | RA1 |  a)..i)  | 1er trimestre |
-|         UD2         | Estructura de los programas                        |    16    | RA2 |  a)..h)  |                |
-|         UD3         | Introducción a la POO                             |    24    | RA3 |  a)..i)  |                |
-|         UD4         | Estructuras de datos predefinidas usando POO       |    24    | RA4 |  a)..i)  |                |
-|         UD5         | Creación de estructuras de datos usando POO       |    22    | RA5 |  a)..k)  | 2o  trimestre |
-|         UD6         | reación de programas haciendo uso de POO avanzada |    30    | RA6 |  a)..i)  |                |
-|         UD7         | Operaciones de entrada y salida y IUG              |    26    | RA7 |  a)..h)  |                |
-|         UD8         | Persistencia y acceso a datos en BD OO             |    38    | RA8 |  a)..h)  |                |
-|         UD9         | Persistencia y acceso a datos en BD Relacionales   |    48    | RA9 |  a)..g)  | 3er trimestre |
-<!-- .element.table: style="font-size:50%;" -->
 
 ---
 

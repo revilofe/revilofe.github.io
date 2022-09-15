@@ -120,6 +120,10 @@ Como toda planificación, puede sufrir cambios.
 * La recuperación de los RA pendientes se realiza durante el mes de junio
 * Consistirá en un conjunto de prácticas y/o pruebas sobre los criterios de evaluación relacionados con el resultado de aprendizaje no superado.
 
+
+## Resumen
+![](assets/pro-eva&rec.png)
+
 ---
 
 # Metodología y comunicación
@@ -190,3 +194,13 @@ Por unidad:
 ![](./assets/Fin.png) <!-- .element height="50%" width="50%" -->
 
 ¡¡Gracias!!
+
+---
+
+# Primeros pasos
+
+1. Identificar tu **email: correo electrónico**: xxx@g.educaand.es
+2. Acceder a moodle. Configurar tu usuario con email y foto.
+3. Rellenar los formularios que hay en la moodle. Sirven para entornos.
+4. Darte de alta en github.com con tu email, solicitan acceso PRO por ser estudiante.
+5. Darte de alta en jetbrains con tu email, solicitando acceso a las herramientas por ser estudiante.

@@ -11,7 +11,7 @@ Poniendo un salto de línea, una línea con '---' y otro salto de línea, se cre
 ---
 
 ## Despliegue
-Para desplegar hay que modificar las diapositivas.
+Para desplegar en el servidor hay que modificar las diapositivas.
 
 ---
 ## Notas del presentador

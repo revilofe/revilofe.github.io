@@ -23,7 +23,9 @@ nav:
     - 'Unidad 8': 'section1/page-7.md'
   - 'Entornos de desarrollo':
     - 'section3/index.md'
-    - 'Unidad 1': 'section3/page-1.md'
+    - 'U1: Introducción al desarrollo de software':
+        - 'section3/u01/index.md'
+        - '1.1.-Software y PC': 'section3/u01/teoria/EDES-U1.1.-Software-PC.md'
   - 'Incidentes de seguridad':
     - 'section2/index.md'
     - 'U1: Principios generales y planes de seguridad':

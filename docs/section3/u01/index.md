@@ -1,16 +1,17 @@
 ---
-title: "UD 1 - Planes de ciberseguridad"
-description: d Introducción a la seguridad y planes.
-summary: s Introducción a la seguridad y planes.
+title: "UD 1 - Introducción al desarrollo de software"
+description: Introducción al desarrollo de software
+summary: Introducción al desarrollo de software
 authors:
     - Eduardo Fdez
-date: 2022-07-03icon: material/security
-permalink: /incidentes/unidad2
+date: 2022-09-17
+icon: material/security
+permalink: /edes/unidad1
 categories:
-  - IC
+    - EDES
 tags:
-  - Incidentes
-  - Ciberseguridad
+    - EDES
+    - Software
 
 # Relacionado con la tabla de contenidos
 toc: true
@@ -21,61 +22,46 @@ toc_icon: "file-code"
 #  - footer
 ---
 
-Cada unidad contendrá una serie de contenidos, resultados de aprendizaje (desglosados en criterios de evaluación), una práctica o prácticas para evaluar la adquisición de dichos criterios de evaluación y una prueba teórica para evaluar la asimilación de contenido.
+Cada unidad contendrá una serie de contenidos, resultados de aprendizaje (desglosados en criterios de evaluación), una práctica o prácticas para evaluar la adquisición de dichos criterios de evaluación y una prueba específica para evaluar la asimilación de contenido.
 
 ## Normativa que respalda la unidad
 
-### Contenidos
-
-En esta sección se incluyen los contenidos mínimos a impartir en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
-
-Bloque 1 - Desarrollo de planes de prevención y concienciación en ciberseguridad:
-
-- Principios generales en materia de ciberseguridad.
-- Normativa de protección del puesto del trabajo.
-- Plan de formación y concienciación en materia de ciberseguridad.
-- Materiales de formación y concienciación.
-- Auditorías internas de cumplimiento en materia de prevención.
-
 ### Resultados de aprendizaje a trabajar
 
-En esta sección se relaciona la unidad con el resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
+En esta sección se relaciona la unidad con el resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf).
 
-RA 1. Desarrolla planes de prevención y concienciación en ciberseguridad, estableciendo normas y medidas de protección
+RA 1. Reconoce los elementos y herramientas que intervienen en el desarrollo de un programa informático, analizando sus características y las fases en las que actúan hasta llegar a su puesta en funcionamiento.
 
 #### Criterios de evaluación
 
 En esta sección se relaciona la unidad con los criterios de evaluación concretos, del resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
 
-- a) Se han definido los principios generales de la organización en materia de ciberseguridad, que deben ser conocidos y apoyados por la dirección de la misma.
-- b) Se ha establecido una normativa de protección del puesto de trabajo.
-- c) Se ha definido un plan de concienciación de ciberseguridad dirigido a los empleados.
-- d) Se ha desarrollado el material necesario para llevar a cabo las acciones de concienciación dirigidas a los empleados.
-- e) Se ha realizado una auditoría para verificar el cumplimiento del plan de prevención y concienciación de la organización
+* a) Se ha reconocido la relación de los programas con los componentes del sistema informático, memoria, procesador, periféricos, entre otros.
+* b) Se han clasificado los lenguajes de programación.
+* c) Se han diferenciado los conceptos de código fuente, objeto y ejecutable.
+* d) Se han reconocido las características de la generación de código intermedio para su ejecución en máquinas virtuales.
+* e) Se ha evaluado la funcionalidad ofrecida por las herramientas utilizadas en programación.
+* f) Se ha diferenciado el funcionamiento de los distintos tipos de traductores de lenguajes ante el código fuente de un programa.
+
+### Contenidos
+
+En esta sección se incluyen los contenidos mínimos a impartir en esta unidad, teniendo en cuenta [la normativa del curso](https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf).
+
+La unidad se encuentra dentro del Bloque 1 - Desarrollo de software:
+* U1: Introducción al desarrollo del software
+* U2: Elementos del desarrollo del software
+
+En la Unidad 1 - Introducción al desarrollo del software, aprenderemos a: 
+* La relación de los programas con los componentes del sistema informático.
+* Las diferencias entre código fuente, objeto y ejecutable.
+* Las fases de desarrollo de una aplicación informática.
+* Algunos lenguajes de programación.
+* Las funcionalidades ofrecidas por las herramientas para el desarrollo de software.
+* El funcionamiento de los traductores.
 
 ## Cómo impartir la unidad
 
 Esta es la sección más interesante, y se incluye cómo trabajar la unidad, haciendo referencia a herramientas, guías, materiales y recursos, de manera individual para cada criterio.
 
-- **Criterio de evaluación b**: se puede emplear las [guías de Incibe para pymes](https://www.incibe.es/protege-tu-empresa/herramientas/politicas) para trabajar la normativa de protección del puesto de trabajo.
-- **Criterio de evaluación c**: se puede emplear la [herramienta gophish](https://getgophish.com/) para trabajar la concienciación de phishing.
-- **Criterios de evaluación d**: se puede emplear el [material de incibe](https://www.incibe.es/protege-tu-empresa/kit-concienciacion) como inspiración para el trabajo con el alumnado.
-
-### Teoría
-
-Por hacer.
-
-### Ejercicios
-
-Por hacer.
-
-
-## Cómo evaluar la unidad
-
-### Práctica de la unidad
-
-En esta sección se incluye una propuesta de práctica o prácticas con los que evaluar la unidad.
-
-### Controles de ejemplo
-
-En esta sección se incluyen controles de ejemplo para evaluar la unidad.
+- **Criterio de evaluación a**:
+- **Criterio de evaluación b**: 

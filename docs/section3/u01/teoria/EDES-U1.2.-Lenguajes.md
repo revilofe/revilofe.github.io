@@ -83,27 +83,25 @@ Los lenguajes de programación están compuestos por un conjunto de elementos, p
 * **Datos**: Los datos es la información de entrada con la que trabajan los programas, estos pueden ser simples: numéricos, alfanuméricos o lógicos o estructurados: arrays, registros, ficheros (imágenes, vídeos, sonido).
 * **Constantes y variables**: Los datos son almacenados en variables y constantes, que son porciones de memoria que contienen un identificador (nombre de la variable) y un valor. El tamaño de esta porción de memoria dependerá del tipo de dato que almacene (datos simples o estructuras de datos).
 * **Expresiones y operadores**: Los operadores son elementos que realizan alguna acción y forman parte de las expresiones, encontramos:
-
-  * Aritméticos: +, -, *, /, (MOD) módulo, (DIV) división entera, ^ (potencia)
-  * Alfanuméricos: + (concatenación)
-  * Condicionales: =, <, >, <=, >=, !=
-  * Paréntesis: () se utilizan para anidar expresiones
-  * Lógicos: NOT (negación), AND (“y” lógico), OR (“o” lógico)
+    * Aritméticos: +, -, *, /, (MOD) módulo, (DIV) división entera, ^ (potencia)
+    * Alfanuméricos: + (concatenación)
+    * Condicionales: =, <, >, <=, >=, !=
+    * Paréntesis: () se utilizan para anidar expresiones
+    * Lógicos: NOT (negación), AND (“y” lógico), OR (“o” lógico)
 * **Instrucciones**: Una secuencia de instrucciones dan lugar al proceso del algoritmo. Estas instrucciones siguen estas estructuras:
-
-  * Simples
-    * Declarativas: Son las encargadas de declarar variables simples o complejas y  constantes y de reservar la memoria necesaria para almacenar los datos.
-    * Primitivas: Instrucciones encargadas de asignar valores a las variables o de leer e imprimir los datos.
-  * Estructura secuencial: Se ejecutan una instrucción tras otra, sin que haya opción a saltarse ninguna de ellas.
-  * Estructuras condicionales: Permiten la ejecución o no de un grupo de instrucciones dependiendo de si se cumple o no una determinada condición. Existen tres tipos: simple:  if; doble:  if else; multiple: switch.
+    * Simples
+        * Declarativas: Son las encargadas de declarar variables simples o complejas y  constantes y de reservar la memoria necesaria para almacenar los datos.
+        * Primitivas: Instrucciones encargadas de asignar valores a las variables o de leer e imprimir los datos.
+    * Estructura secuencial: Se ejecutan una instrucción tras otra, sin que haya opción a saltarse ninguna de ellas.
+    * Estructuras condicionales: Permiten la ejecución o no de un grupo de instrucciones dependiendo de si se cumple o no una determinada condición. Existen tres tipos: simple:  if; doble:  if else; multiple: switch.
     ![](assets/EDES-U1-EstCondicionales.png)
     ![](assets/EDES-U1-EstCondicionalesDoble.png)
     ![](assets/EDES-U1-EstCondicionalesMult.png)
-  * Estructura repetitiva: Permiten la ejecución repetida de un grupo de instrucciones un número determinado de veces o hasta que se cumpla una determinada condición. Existen tres tipos: Repetir mientras: While; Repetir hasta: do-while; Para: For.
+    * Estructura repetitiva: Permiten la ejecución repetida de un grupo de instrucciones un número determinado de veces o hasta que se cumpla una determinada condición. Existen tres tipos: Repetir mientras: While; Repetir hasta: do-while; Para: For.
     ![](assets/EDES-U1-EstRepWhile.png)
     ![](assets/EDES-U1-EstRepDoWhile.png)
     ![](assets/EDES-U1-EstRepFor.png)
-* Comentarios: Estas instrucciones se incluyen para hacer aclaraciones sobre el código para guiar al programador o para documentarlo. Al ser compilado estas líneas se omiten ya que no aportan ningún valor al código ejecutable.
+    * Comentarios: Estas instrucciones se incluyen para hacer aclaraciones sobre el código para guiar al programador o para documentarlo. Al ser compilado estas líneas se omiten ya que no aportan ningún valor al código ejecutable.
 
 ## Tendencia en lenguajes de programación
 [TIOBE Index](https://www.tiobe.com/tiobe-index) es un ranking de los lenguajes de programación más utilizados que se actualiza mensualmente. Para realizar este ranking, se consultan los 25 motores de búsqueda mejor clasificados por Alexa (software de Amazon utilizado para SEO: hacer análisis de datos en sitios web a gran escala), de entre los que destacan Google, Bing y Yahoo.

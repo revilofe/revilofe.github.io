@@ -1,29 +1,3 @@
----
-title: "UD 1 - Software y PC"
-description: Relación del software con los componentes de un pc
-summary: Relación del software con los componentes de un pc
-authors:
-    - Eduardo Fdez
-date: 2022-07-03
-icon: material/security
-permalink: /edes/unidad1/1
-categories:
-    - EDES
-tags:
-    - EDES
-- Software
-
-# Relacionado con la tabla de contenidos
-toc: true
-toc_label: "Contenido"
-toc_icon: "file-code"
-
-#hide:
-#  - footer
----
-
-
-
 ## ¿De que se compone cualquier dispositivo actual?
 Un pc, portatil o dispositivo móvil como móvil o tablet está compuesto principalmente por un hardware y un software.
 

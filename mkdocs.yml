@@ -26,6 +26,7 @@ nav:
     - 'U1: Introducción al desarrollo de software':
         - 'section3/u01/index.md'
         - '1.1.-Software y PC': 'section3/u01/teoria/EDES-U1.1.-Software-PC.md'
+        - '1.2.-Lenguajes de programación': 'section3/u01/teoria/EDES-U1.2.-Lenguajes.md'
   - 'Incidentes de seguridad':
     - 'section2/index.md'
     - 'U1: Principios generales y planes de seguridad':

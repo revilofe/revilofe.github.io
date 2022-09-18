@@ -59,9 +59,8 @@ El curso tiene un total de 24 semanas (720 horas). La relación propuesta entre 
 ## Materiales
 
 ### Fuentes
-
 - [Rafael del Rio](https://rafaeldelrio.github.io/): Utilizado para la estructura de la página de presentación del módulo.
-  
+- [José Antonio Muñoz Jiménez](https://github.com/jamj2000): Utilizado en parte del contenido del módulo.
 
 ### Bibliografía
 

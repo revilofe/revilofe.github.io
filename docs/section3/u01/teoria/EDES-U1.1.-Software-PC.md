@@ -1,17 +1,18 @@
 ---
-title: "UD 1 - Planes de ciberseguridad"
-description: d Introducción a la seguridad y planes.
-summary: s Introducción a la seguridad y planes.
+title: "UD 1 - 1.1 Relación entre software y hardware"
+description: Relación entre software y hardware
+summary: Relación entre software y hardware
 authors:
     - Eduardo Fdez
 date: 2022-09-18
 icon: material/security
-permalink: /incidentes/unidad2
+permalink: /edes/unidad1/1.1
 categories:
-    - IC
- tags:
-    - Incidentes
-    - Ciberseguridad
+    - EDES
+tags:
+    - EDES
+    - Software
+    - Hardware
     
 ---
 

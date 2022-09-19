@@ -31,12 +31,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://revilofe.github.io/section1/page-1/</loc>
+         <loc>https://revilofe.github.io/section1/u01/</loc>
          <lastmod>2022-09-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://revilofe.github.io/section1/page-n/</loc>
+         <loc>https://revilofe.github.io/section1/u01/practica/PROG-U1.-%20Practica%201/</loc>
+         <lastmod>2022-09-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico/</loc>
+         <lastmod>2022-09-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes/</loc>
          <lastmod>2022-09-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -152,16 +162,6 @@
     </url>
     <url>
          <loc>https://revilofe.github.io/section3/</loc>
-         <lastmod>2022-09-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://revilofe.github.io/section3/page-1/</loc>
-         <lastmod>2022-09-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://revilofe.github.io/section3/page-n/</loc>
          <lastmod>2022-09-19</lastmod>
          <changefreq>daily</changefreq>
     </url>

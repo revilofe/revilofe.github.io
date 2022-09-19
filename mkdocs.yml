@@ -13,14 +13,9 @@ nav:
   - 'Principal': 'index.md'
   - 'Programación':
     - 'section1/index.md'
-    - 'Unidad 1': 'section1/page-1.md'
-    - 'Unidad 2': 'section1/page-2.md'
-    - 'Unidad 3': 'section1/page-3.md'
-    - 'Unidad 4': 'section1/page-4.md'
-    - 'Unidad 5': 'section1/page-5.md'
-    - 'Unidad 6': 'section1/page-5.md'
-    - 'Unidad 7': 'section1/page-6.md'
-    - 'Unidad 8': 'section1/page-7.md'
+    - 'U1: Introducción al desarrollo de software':
+        - 'section1/u01/index.md'
+        - '1.1.-Un programa': 'section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico.md'
   - 'Entornos de desarrollo':
     - 'section3/index.md'
     - 'U1: Introducción al desarrollo de software':

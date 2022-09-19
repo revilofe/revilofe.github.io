@@ -99,6 +99,13 @@ Si no
         
 ``` 
 
+``` yaml
+theme:
+  features:
+    - content.code.annotate # (1)
+```
+1.  :man_raising_hand: I'm a code annotation! I can contain `code`, __formatted text__, images, ... basically anything that can be written in Markdown.
+
 Los **diagramas de flujo** son representaciones gráficas de la secuencia de operaciones que se realizan dentro de un algoritmo.
 Se representan mediante un conjunto de formas unidas por flechas. Para indicar el inicio del diagrama, se representa en un óvalo la palabra “inicio”. Una secuencia de operaciones se representan mediante una secuencia (lo más detallada posible) de rectángulos de arriba-abajo o derecha-izquierda. Un rombo representa una operación condicional con dos posibles caminos a seguir.
 

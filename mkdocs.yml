@@ -95,6 +95,10 @@ markdown_extensions:
   - def_list
   - footnotes
   - meta
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
   - pymdownx.snippets: #Tooltips https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-tooltips
       auto_append: 
         - includes/abbreviations.md

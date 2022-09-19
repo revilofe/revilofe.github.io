@@ -117,7 +117,7 @@ Como toda planificación, puede sufrir cambios.
 
 
 ## Recuperación
-* La recuperación de los RA pendientes se realiza durante el mes de junio
+* La recuperación de los RA pendientes se realiza durante el mes de junio.
 * Consistirá en un conjunto de prácticas y/o pruebas sobre los criterios de evaluación relacionados con el resultado de aprendizaje no superado.
 
 

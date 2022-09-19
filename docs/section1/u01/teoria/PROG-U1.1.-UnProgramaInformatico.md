@@ -73,6 +73,7 @@ Una vez se tenga el algoritmo, se podrá pasar a su codificación traduciendo el
 
 Las algoritmos son independientes del lenguaje en el que se implementan y del dispositivo en el que se ejecutan.
 Según Joyanes en su libro “Fundamentos de la programación”, las características que debe tener cualquier algoritmo son:
+
 * **Preciso**: se debe indicar el orden de realización de cada paso
 * **Definido**: si se sigue un algoritmo dos veces con las mismas entradas, se debe obtener el mismo resultado.
 * **Finito**: todo algoritmo debe terminar en algún momento.
@@ -82,6 +83,7 @@ Según Joyanes en su libro “Fundamentos de la programación”, las caracterí
 El **pseudocódigo** se puede considerar como un lenguaje intermedio entre el lenguaje humano y el lenguaje de programación y las palabras reservadas de este. También permite la representación de las estructuras de control y la asignación de manera muy fácil.
 
 Supongamos que queremos resolver un problema, sobre como realizar el mantenimiento de una lámpara.
+
 
 ``` title: programa Mantenimiento Lámpara 
 
@@ -95,18 +97,19 @@ Si no
     Si sigue sin funcionar entonces
         Comprar nueva lámpara.
         
-```
+``` 
+
 Los **diagramas de flujo** son representaciones gráficas de la secuencia de operaciones que se realizan dentro de un algoritmo.
 Se representan mediante un conjunto de formas unidas por flechas. Para indicar el inicio del diagrama, se representa en un óvalo la palabra “inicio”. Una secuencia de operaciones se representan mediante una secuencia (lo más detallada posible) de rectángulos de arriba-abajo o derecha-izquierda. Un rombo representa una operación condicional con dos posibles caminos a seguir.
 
 
 ![](assets/PROG-U1-DiagramaFlujo.png)
 
-## Lenguaje de programación
+## Lenguajes de programación
 - [TIOBE](https://www.tiobe.com/tiobe-index/)
 - [Encuesta stackoverflow](https://insights.stackoverflow.com/survey/2021#overview)
 - ¿Que lenguajes de programación conoces?
 - ¿Tienes alguna preferencia?
 - ¿Cuál crees que se adapta mejor a:
     * [multiplataforma](https://kotlinlang.org/docs/mpp-intro.html)?
-    * [desarrollo web](https://keepcoding.io/blog/lenguajes-desarrollo-web/)
+    * [desarrollo web](https://keepcoding.io/blog/lenguajes-desarrollo-web/)?

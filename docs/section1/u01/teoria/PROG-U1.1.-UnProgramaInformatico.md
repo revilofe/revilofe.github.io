@@ -16,7 +16,7 @@ tags:
 
 ## La programación
 * [Definición](https://es.wikipedia.org/wiki/Programaci%C3%B3n): Es el **proceso** por el cual se desarrolla un **programa**, haciendo uso de herramientas como un **lenguajes de programación** y de otra que sea capaz de “traducirlo” a lo que se conoce como lenguaje de máquina, que puede "comprender" el microprocesador.
-- **Ciclo de vida**: Entender el problema, recopilar requisitos, Planificar, Diseñar, Programar, Probar, Desplegar, Mantener.
+* **Ciclo de vida**: Entender el problema, recopilar requisitos, Planificar, Diseñar, Programar, Probar, Desplegar, Mantener.
 
 ![](assets/PROG-U1-CicloVida.png)
 
@@ -40,28 +40,26 @@ El *software* le da instrucciones al hardware de la forma como debe realizar una
 * Sistemas empresariales como un BPMS, ERP, CRM, entre otros.
 
 #### Tipos de software
-- **De sistema** (Sistema operativo, drivers -controladores-)
-- **De aplicación** (Suite ofimática, Navegador, Edición de imagen, ...)
-- **De desarrollo** (Editores, compiladores, interpretes, ...)
+* **De sistema** (Sistema operativo, drivers -controladores-)
+* **De aplicación** (Suite ofimática, Navegador, Edición de imagen, ...)
+* **De desarrollo** (Editores, compiladores, interpretes, ...)
 
 > Los drivers son los controladores de dispositivos.
 
 
 ## Relación Hardware-Software
-
 La relación entre el *software* y el *hardware* se pueden describir de la siguiente forma:
-    * **Disco duro**: almacena de forma permanente los archivos ejecutables y los archivos de datos. 
-    * **Memoria RAM**: almacena de forma temporal el código binario de los archivos ejecutables y los archivos de datos necesarios. 
-    * **CPU**: lee y ejecuta instrucciones almacenadas en memoria RAM, así como los datos necesarios. 
-    * **E/S**: recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guardan a disco, ... 
-
+* **Disco duro**: almacena de forma permanente los archivos ejecutables y los archivos de datos.  
+* **Memoria RAM**: almacena de forma temporal el código binario de los archivos ejecutables y los archivos de datos necesarios. 
+* **CPU**: lee y ejecuta instrucciones almacenadas en memoria RAM, así como los datos necesarios. 
+* **E/S**: recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guardan a disco. 
 
 El disco duro se considera un periférico de E/S (Entrada/Salida).
 
 La CPU se llama también UCP (en inglés), procesador o microprocesador.
 
 ## Algoritmos
-Como deciamos, la programación es el proceso que se utiliza para la creación de programas que se ejecutan en dispositivos con capacidad de cómputo. Estos programas son creados para satisfacer unas necesidades o resolver problemas.
+Como decíamos, la programación es el proceso que se utiliza para la creación de programas que se ejecutan en dispositivos con capacidad de cómputo. Estos programas son creados para satisfacer unas necesidades o resolver problemas.
 
 Para que este proceso sea exitoso, se ha de analizar el problema que se quiere satisfacer y describir cada paso que se va a realizar, es decir, se ha de diseñar el algoritmo (secuencia de pasos) que se va a seguir para llegar a la solución.
 

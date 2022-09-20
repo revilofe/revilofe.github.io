@@ -85,7 +85,7 @@ El **pseudocódigo** se puede considerar como un lenguaje intermedio entre el le
 Supongamos que queremos resolver un problema, sobre como realizar el mantenimiento de una lámpara.
 
 
-``` title: programa Mantenimiento Lámpara 
+```  
 
 Si la lampara funciona entonces
     fin.
@@ -104,6 +104,7 @@ theme:
   features:
     - content.code.annotate # (1)
 ```
+
 1.  :man_raising_hand: I'm a code annotation! I can contain `code`, __formatted text__, images, ... basically anything that can be written in Markdown.
 
 Los **diagramas de flujo** son representaciones gráficas de la secuencia de operaciones que se realizan dentro de un algoritmo.

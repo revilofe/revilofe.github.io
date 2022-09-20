@@ -48,11 +48,13 @@ El *software* le da instrucciones al hardware de la forma como debe realizar una
 
 
 ## Relación Hardware-Software
-La relación entre el *software* y el *hardware* se pueden describir de la siguiente forma: 
-- **Disco duro**: almacena de forma permanente los archivos ejecutables y los archivos de datos.
-- **Memoria RAM**: almacena de forma temporal el código binario de los archivos ejecutables y los archivos de datos necesarios.
-- **CPU**: lee y ejecuta instrucciones almacenadas en memoria RAM, así como los datos necesarios.
-- **E/S**: recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guardan a disco, ...
+
+La relación entre el *software* y el *hardware* se pueden describir de la siguiente forma:
+    * **Disco duro**: almacena de forma permanente los archivos ejecutables y los archivos de datos. 
+    * **Memoria RAM**: almacena de forma temporal el código binario de los archivos ejecutables y los archivos de datos necesarios. 
+    * **CPU**: lee y ejecuta instrucciones almacenadas en memoria RAM, así como los datos necesarios. 
+    * **E/S**: recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guardan a disco, ... 
+
 
 El disco duro se considera un periférico de E/S (Entrada/Salida).
 
@@ -72,10 +74,9 @@ Una vez se tenga el algoritmo, se podrá pasar a su codificación traduciendo el
 ### Características de los algoritmos
 
 Las algoritmos son independientes del lenguaje en el que se implementan y del dispositivo en el que se ejecutan.
-Según Joyanes en su libro “Fundamentos de la programación”, las características que debe tener cualquier algoritmo son:
-
-* **Preciso**: se debe indicar el orden de realización de cada paso
-* **Definido**: si se sigue un algoritmo dos veces con las mismas entradas, se debe obtener el mismo resultado.
+Según Joyanes en su libro “Fundamentos de la programación”, las características que debe tener cualquier algoritmo son: 
+* **Preciso**: se debe indicar el orden de realización de cada paso 
+* **Definido**: si se sigue un algoritmo dos veces con las mismas entradas, se debe obtener el mismo resultado. 
 * **Finito**: todo algoritmo debe terminar en algún momento.
 
 ### Ejemplo de algoritmo

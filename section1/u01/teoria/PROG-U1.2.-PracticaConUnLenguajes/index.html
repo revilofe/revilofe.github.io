@@ -472,6 +472,8 @@
         
           
         
+          
+        
       
       
         
@@ -863,6 +865,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practica/PROG-U1.-Practica002/" class="md-nav__link">
+        1.1.-Práctica
+      </a>
     </li>
   
 
@@ -1980,7 +1996,9 @@
 </code></pre></div>
 <h3 id="operadores-logicos-o-booleanos">Operadores lógicos o booleanos<a class="headerlink" href="#operadores-logicos-o-booleanos" title="Permanent link">&para;</a></h3>
 <p>A la hora de operar con valores booleanos, tenemos a nuestra disposición los operadores <code>and</code>, <code>or</code> y <code>not</code>.</p>
-<p>❗️ **IMPORTANTE: **Las operaciones <code>and</code>, <code>or</code> y <code>not</code> realmente no devuelven <code>True</code> o <code>False</code>, sino que devuelven uno de los operandos como veremos en el cuadro de abajo.</p>
+<blockquote>
+<p>️ **IMPORTANTE: **Las operaciones <code>and</code>, <code>or</code> y <code>not</code> realmente no devuelven <code>True</code> o <code>False</code>, sino que devuelven uno de los operandos como veremos en el cuadro de abajo.</p>
+</blockquote>
 <p>A continuación te muestro cómo funcionan los operadores booleanos (en orden de preferencia ascendente):</p>
 <table>
 <thead>
@@ -2009,22 +2027,23 @@
 </tbody>
 </table>
 <p>Ejemplos:</p>
-<p><strong>&gt;&gt;&gt;</strong> x = <strong>True</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> y = <strong>False</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x or y</p>
-<p><strong>True</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x and y</p>
-<p><strong>False</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> not x</p>
-<p><strong>False</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x = <strong>0</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> y = <strong>10</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x or y</p>
-<p><strong>10</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x and y</p>
-<p><strong>0</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> not x</p>
-<p><strong>True</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>&gt;&gt;&gt; x = True
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>&gt;&gt;&gt; y = False
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>&gt;&gt;&gt; x or y
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>True
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>&gt;&gt;&gt; x and y
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>False
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>&gt;&gt;&gt; not x
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>False
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>&gt;&gt;&gt; x = 0
+<a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a>&gt;&gt;&gt; y = 10
+<a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a>&gt;&gt;&gt; x or y
+<a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a>10
+<a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a>&gt;&gt;&gt; x and y
+<a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a>0
+<a id="__codelineno-30-15" name="__codelineno-30-15" href="#__codelineno-30-15"></a>&gt;&gt;&gt; not x
+<a id="__codelineno-30-16" name="__codelineno-30-16" href="#__codelineno-30-16"></a>True
+</code></pre></div>
 <h3 id="operadores-de-comparacion">Operadores de comparación<a class="headerlink" href="#operadores-de-comparacion" title="Permanent link">&para;</a></h3>
 <p>Los operadores de comparación se utilizan, como su nombre indica, para comparar dos o más valores. El resultado de estos operadores siempre es <code>True</code> o <code>False</code>.</p>
 <table>
@@ -2062,25 +2081,27 @@
 </tbody>
 </table>
 <p>Ejemplos:</p>
-<p><strong>&gt;&gt;&gt;</strong> x = <strong>9</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> y = <strong>1</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x <strong>&lt;</strong> y</p>
-<p><strong>False</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x <strong>&gt;</strong> y</p>
-<p><strong>True</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x == y</p>
-<p><strong>False</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>&gt;&gt;&gt; x = 9
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>&gt;&gt;&gt; y = 1
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>&gt;&gt;&gt; x &lt; y
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>False
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>&gt;&gt;&gt; x &gt; y
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>True
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>&gt;&gt;&gt; x == y
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>False
+</code></pre></div>
 <h4 id="consideraciones-sobre-los-operadores-de-comparacion">Consideraciones sobre los operadores de comparación<a class="headerlink" href="#consideraciones-sobre-los-operadores-de-comparacion" title="Permanent link">&para;</a></h4>
 <p>Los objetos de diferentes tipos, excepto los tipos numéricos, nunca se comparan igual. El operador <code>==</code> siempre está definido, pero para algunos tipos de objetos (por ejemplo, objetos de clase) es equivalente a <a href="https://j2logo.com/python/tutorial/operadores-en-python/#operadores-identidad">is</a>.</p>
 <p>Las instancias no idénticas de una clase normalmente se comparan como no iguales a menos que la clase defina el método <code>__eq__()</code>.</p>
 <p>Las instancias de una clase no se pueden ordenar con respecto a otras instancias de la misma clase u otros tipos de objeto, a menos que la clase defina los métodos <code>__lt__()</code>, <code>__gt__()</code>.</p>
 <p>Los operadores de comparación se pueden concatenar. Ejemplo:</p>
-<p><strong># Las comparaciones siguientes son idénticas</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x = <strong>9</strong></p>
-<p><strong>&gt;&gt;&gt;**1</strong>&lt;** x and x **&lt;**20</p>
-<p><strong>True</strong></p>
-<p><strong>&gt;&gt;&gt;**1</strong>&lt;** x **&lt;**20</p>
-<p><strong>True</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a># Las comparaciones siguientes son idénticas
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>&gt;&gt;&gt; x = 9
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>&gt;&gt;&gt; 1 &lt; x and x &lt; 20
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>True
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>&gt;&gt;&gt; 1 &lt; x &lt; 20
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>True
+</code></pre></div>
 <h3 id="operadores-aritmeticos-en-python">Operadores aritméticos en Python<a class="headerlink" href="#operadores-aritmeticos-en-python" title="Permanent link">&para;</a></h3>
 <p>En cuanto a los operadores aritméticos, estos permiten realizar las diferentes operaciones aritméticas del álgebra: suma, resta, producto, división, … Estos operadores Python son de los más utilizados. El listado completo es el siguiente:</p>
 <table>
@@ -2121,22 +2142,24 @@
 </tr>
 </tbody>
 </table>
-<p><strong>&gt;&gt;&gt;</strong> x = <strong>7</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> y = <strong>2</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x + y ** # Suma**</p>
-<p><strong>9</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x - y ** # Resta**</p>
-<p><strong>5</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x ***** y ** # Producto**</p>
-<p><strong>14</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x / y ** # División**</p>
-<p><strong>3.5</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x % y ** # Resto**</p>
-<p><strong>1</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x** // y  # Cociente**</p>
-<p><strong>3</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x ****** y ** # Potencia**</p>
-<p><strong>49</strong></p>
+<p>Ejemplos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>&gt;&gt;&gt; x = 7
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>&gt;&gt;&gt; y = 2
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>&gt;&gt;&gt; x + y  # Suma
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>9
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>&gt;&gt;&gt; x - y  # Resta
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>5
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>&gt;&gt;&gt; x * y  # Producto
+<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>14
+<a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>&gt;&gt;&gt; x / y  # División
+<a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>3.5
+<a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a>&gt;&gt;&gt; x % y  # Resto
+<a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a>1
+<a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a>&gt;&gt;&gt; x // y  # Cociente
+<a id="__codelineno-33-14" name="__codelineno-33-14" href="#__codelineno-33-14"></a>3
+<a id="__codelineno-33-15" name="__codelineno-33-15" href="#__codelineno-33-15"></a>&gt;&gt;&gt; x ** y  # Potencia
+<a id="__codelineno-33-16" name="__codelineno-33-16" href="#__codelineno-33-16"></a>49
+</code></pre></div>
 <h3 id="operadores-a-nivel-de-bits">Operadores a nivel de bits<a class="headerlink" href="#operadores-a-nivel-de-bits" title="Permanent link">&para;</a></h3>
 <p>Los operadores a nivel de bits actúan sobre los operandos como si fueran una cadena de dígitos binarios. Como su nombre indica, actúan sobre los operandos bit a bit. Son los siguientes:</p>
 <table>
@@ -2174,20 +2197,21 @@
 </tbody>
 </table>
 <p>Supongamos que tenemos el entero 2 (en bits es 00010) y el entero 7 (00111). El resultado de aplicar las operaciones anteriores es:</p>
-<p><strong>&gt;&gt;&gt;</strong> x = <strong>2</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> y = <strong>7</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x <strong>|</strong> y</p>
-<p><strong>7</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x ^ y</p>
-<p><strong>5</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x <strong>&amp;</strong> y</p>
-<p><strong>2</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x **&lt;&lt;**1</p>
-<p><strong>4</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x **&gt;&gt;**1</p>
-<p><strong>1</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> ~x</p>
-<p><strong>-3</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>&gt;&gt;&gt; x = 2
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>&gt;&gt;&gt; y = 7
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>&gt;&gt;&gt; x | y
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>7
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>&gt;&gt;&gt; x ^ y
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>5
+<a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>&gt;&gt;&gt; x &amp; y
+<a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a>2
+<a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a>&gt;&gt;&gt; x &lt;&lt; 1
+<a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a>4
+<a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a>&gt;&gt;&gt; x &gt;&gt; 1
+<a id="__codelineno-34-12" name="__codelineno-34-12" href="#__codelineno-34-12"></a>1
+<a id="__codelineno-34-13" name="__codelineno-34-13" href="#__codelineno-34-13"></a>&gt;&gt;&gt; ~x
+<a id="__codelineno-34-14" name="__codelineno-34-14" href="#__codelineno-34-14"></a>-3
+</code></pre></div>
 <h3 id="operadores-de-asignacion">Operadores de asignación<a class="headerlink" href="#operadores-de-asignacion" title="Permanent link">&para;</a></h3>
 <p>El operador de asignación se utiliza para asignar un valor a una variable. Como te he mencionado en otras secciones, este operador es el signo <code>=</code>.</p>
 <p>Además del operador de asignación, existen otros operadores de asignación compuestos que realizan una operación básica sobre la variable a la que se le asigna el valor.</p>
@@ -2286,13 +2310,14 @@
 </tbody>
 </table>
 <p>A continuación vemos unos ejemplos que son muy intuitivos:</p>
-<p><strong>&gt;&gt;&gt;</strong> lista = <strong>[**1</strong>, <strong>3</strong>, <strong>2</strong>, <strong>7</strong>, <strong>9</strong>, <strong>8</strong>, <strong>6</strong>]**</p>
-<p><strong>&gt;&gt;&gt;**4**in</strong> lista</p>
-<p><strong>False</strong></p>
-<p><strong>&gt;&gt;&gt;**3**in</strong> lista</p>
-<p><strong>True</strong></p>
-<p><strong>&gt;&gt;&gt;**4</strong> not <strong>in</strong> lista**</p>
-<p><strong>True</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>&gt;&gt;&gt; lista = [1, 3, 2, 7, 9, 8, 6]
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>&gt;&gt;&gt; 4 in lista
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>False
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>&gt;&gt;&gt; 3 in lista
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>True
+<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>&gt;&gt;&gt; 4 not in lista
+<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>True
+</code></pre></div>
 <h3 id="operadores-de-identidad">Operadores de identidad<a class="headerlink" href="#operadores-de-identidad" title="Permanent link">&para;</a></h3>
 <p>Por último, los operadores de identidad se utilizan para comprobar si dos variables son, o no, el mismo objeto.</p>
 <table>
@@ -2313,27 +2338,32 @@
 </tr>
 </tbody>
 </table>
-<p>❗️ <strong>Recuerda:</strong> Para conocer la identidad de un objeto se usa la función <code>id()</code>.</p>
-<p><strong>&gt;&gt;&gt;</strong> x = <strong>4</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> y = <strong>2</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> lista = <strong>[**1</strong>, <strong>5</strong>]**</p>
-<p><strong>&gt;&gt;&gt;</strong> x is lista</p>
-<p><strong>False</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x is y</p>
-<p><strong>False</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> x is <strong>4</strong></p>
-<p><strong>True</strong></p>
+<blockquote>
+<p>️ <strong>Recuerda:</strong> Para conocer la identidad de un objeto se usa la función <code>id()</code>.</p>
+</blockquote>
+<p>Ejemplos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>&gt;&gt;&gt; x = 4
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>&gt;&gt;&gt; y = 2
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>&gt;&gt;&gt; lista = [1, 5]
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>&gt;&gt;&gt; x is lista
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>False
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>&gt;&gt;&gt; x is y
+<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>False
+<a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>&gt;&gt;&gt; x is 4
+<a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>True
+</code></pre></div>
 <h3 id="prioridad-de-los-operadores-en-python">Prioridad de los operadores en Python<a class="headerlink" href="#prioridad-de-los-operadores-en-python" title="Permanent link">&para;</a></h3>
 <p>Como ya dijimos, al igual que ocurre en las matemáticas, los operadores en Python tienen un orden de prioridad. Este orden es el siguiente, de menos prioritario a más prioritario: asignación; operadores booleanos; operadores de comparación, identidad y pertenencia; a nivel de bits y finalmente los aritméticos (con el mismo orden de prioridad que en las matemáticas).</p>
 <p>Este orden de prioridad se puede alterar con el uso de los paréntesis <code>()</code>:</p>
-<p><strong>&gt;&gt;&gt;</strong> x = <strong>5</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> y = <strong>2</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> z = x + <strong>3***</strong> y ** # El producto tiene prioridad sobre la suma</p>
-<p><strong>&gt;&gt;&gt;</strong> z</p>
-<p><strong>11</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> z = <strong>(**x + **3</strong>)***** y ** # Los paréntesis tienen prioridad**</p>
-<p><strong>&gt;&gt;&gt;</strong> z</p>
-<p><strong>16</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>&gt;&gt;&gt; x = 5
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>&gt;&gt;&gt; y = 2
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>&gt;&gt;&gt; z = x + 3 * y  # El producto tiene prioridad sobre la suma
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>&gt;&gt;&gt; z
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>11
+<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>&gt;&gt;&gt; z = (x + 3) * y  # Los paréntesis tienen prioridad
+<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>&gt;&gt;&gt; z
+<a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a>16
+</code></pre></div>
 <h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://j2logo.com/">Pagina de Juan Jose Lozano Gomez sobre Python</a></li>
@@ -2426,13 +2456,13 @@
       
       
         
-        <a href="../../../../section3/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Entornos de desarrollo" rel="next">
+        <a href="../../practica/PROG-U1.-Practica002/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 1.1.-Práctica" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Siguiente
               </span>
-              Entornos de desarrollo
+              1.1.-Práctica
             </div>
           </div>
           <div class="md-footer__button md-icon">

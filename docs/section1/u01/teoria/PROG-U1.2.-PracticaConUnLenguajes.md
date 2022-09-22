@@ -501,7 +501,7 @@ Hola Pythonista
 
 A la hora de operar con valores booleanos, tenemos a nuestra disposición los operadores `and`, `or` y `not`.
 
-❗️ **IMPORTANTE: **Las operaciones `and`, `or` y `not` realmente no devuelven `True` o `False`, sino que devuelven uno de los operandos como veremos en el cuadro de abajo.
+>️ **IMPORTANTE: **Las operaciones `and`, `or` y `not` realmente no devuelven `True` o `False`, sino que devuelven uno de los operandos como veremos en el cuadro de abajo.
 
 A continuación te muestro cómo funcionan los operadores booleanos (en orden de preferencia ascendente):
 
@@ -514,37 +514,25 @@ A continuación te muestro cómo funcionan los operadores booleanos (en orden de
 
 Ejemplos:
 
-**>>>** x = **True**
+```
+>>> x = True
+>>> y = False
+>>> x or y
+True
+>>> x and y
+False
+>>> not x
+False
+>>> x = 0
+>>> y = 10
+>>> x or y
+10
+>>> x and y
+0
+>>> not x
+True
 
-**>>>** y = **False**
-
-**>>>** x or y
-
-**True**
-
-**>>>** x and y
-
-**False**
-
-**>>>** not x
-
-**False**
-
-**>>>** x = **0**
-
-**>>>** y = **10**
-
-**>>>** x or y
-
-**10**
-
-**>>>** x and y
-
-**0**
-
-**>>>** not x
-
-**True**
+```
 
 ### Operadores de comparación
 
@@ -562,21 +550,18 @@ Los operadores de comparación se utilizan, como su nombre indica, para comparar
 
 Ejemplos:
 
-**>>>** x = **9**
+```
 
-**>>>** y = **1**
+>>> x = 9
+>>> y = 1
+>>> x < y
+False
+>>> x > y
+True
+>>> x == y
+False
 
-**>>>** x **<** y
-
-**False**
-
-**>>>** x **>** y
-
-**True**
-
-**>>>** x == y
-
-**False**
+```
 
 #### Consideraciones sobre los operadores de comparación
 
@@ -588,17 +573,16 @@ Las instancias de una clase no se pueden ordenar con respecto a otras instancias
 
 Los operadores de comparación se pueden concatenar. Ejemplo:
 
-**# Las comparaciones siguientes son idénticas**
+```
 
-**>>>** x = **9**
+# Las comparaciones siguientes son idénticas
+>>> x = 9
+>>> 1 < x and x < 20
+True
+>>> 1 < x < 20
+True
 
-**>>>**1**<** x and x **<**20
-
-**True**
-
-**>>>**1**<** x **<**20
-
-**True**
+```
 
 ### Operadores aritméticos en Python
 
@@ -615,37 +599,29 @@ En cuanto a los operadores aritméticos, estos permiten realizar las diferentes 
 | //       | Obtiene el cociente entero de dividir el operando de la izquierda por el de la derecha.                                        |
 | **       | Potencia. El resultado es el operando de la izquierda elevado a la potencia del operando de la derecha.                        |
 
-**>>>** x = **7**
+Ejemplos:
 
-**>>>** y = **2**
+```
 
-**>>>** x + y ** # Suma**
+>>> x = 7
+>>> y = 2
+>>> x + y  # Suma
+9
+>>> x - y  # Resta
+5
+>>> x * y  # Producto
+14
+>>> x / y  # División
+3.5
+>>> x % y  # Resto
+1
+>>> x // y  # Cociente
+3
+>>> x ** y  # Potencia
+49
 
-**9**
+```
 
-**>>>** x - y ** # Resta**
-
-**5**
-
-**>>>** x ***** y ** # Producto**
-
-**14**
-
-**>>>** x / y ** # División**
-
-**3.5**
-
-**>>>** x % y ** # Resto**
-
-**1**
-
-**>>>** x** // y  # Cociente**
-
-**3**
-
-**>>>** x ****** y ** # Potencia**
-
-**49**
 
 ### Operadores a nivel de bits
 
@@ -663,33 +639,24 @@ Los operadores a nivel de bits actúan sobre los operandos como si fueran una ca
 
 Supongamos que tenemos el entero 2 (en bits es 00010) y el entero 7 (00111). El resultado de aplicar las operaciones anteriores es:
 
-**>>>** x = **2**
+```
+>>> x = 2
+>>> y = 7
+>>> x | y
+7
+>>> x ^ y
+5
+>>> x & y
+2
+>>> x << 1
+4
+>>> x >> 1
+1
+>>> ~x
+-3
 
-**>>>** y = **7**
+```
 
-**>>>** x **|** y
-
-**7**
-
-**>>>** x ^ y
-
-**5**
-
-**>>>** x **&** y
-
-**2**
-
-**>>>** x **<<**1
-
-**4**
-
-**>>>** x **>>**1
-
-**1**
-
-**>>>** ~x
-
-**-3**
 
 ### Operadores de asignación
 
@@ -731,19 +698,16 @@ Todavía no hemos visto estos tipos, pero son operadores muy utilizados.
 
 A continuación vemos unos ejemplos que son muy intuitivos:
 
-**>>>** lista = **[**1**, **3**, **2**, **7**, **9**, **8**, **6**]**
+```
+>>> lista = [1, 3, 2, 7, 9, 8, 6]
+>>> 4 in lista
+False
+>>> 3 in lista
+True
+>>> 4 not in lista
+True
 
-**>>>**4**in** lista
-
-**False**
-
-**>>>**3**in** lista
-
-**True**
-
-**>>>**4** not **in** lista**
-
-**True**
+```
 
 ### Operadores de identidad
 
@@ -755,25 +719,23 @@ Por último, los operadores de identidad se utilizan para comprobar si dos varia
 | is       | Devuelve True si ambos operandos hacen referencia al mismo objeto; False en caso contrario.    |
 | is not   | Devuelve True si ambos operandos no hacen referencia al mismo objeto; False en caso contrario. |
 
-❗️ **Recuerda:** Para conocer la identidad de un objeto se usa la función `id()`.
+>️ **Recuerda:** Para conocer la identidad de un objeto se usa la función `id()`.
 
-**>>>** x = **4**
+Ejemplos:
 
-**>>>** y = **2**
 
-**>>>** lista = **[**1**, **5**]**
+```
+>>> x = 4
+>>> y = 2
+>>> lista = [1, 5]
+>>> x is lista
+False
+>>> x is y
+False
+>>> x is 4
+True
 
-**>>>** x is lista
-
-**False**
-
-**>>>** x is y
-
-**False**
-
-**>>>** x is **4**
-
-**True**
+```
 
 ### Prioridad de los operadores en Python
 
@@ -781,21 +743,17 @@ Como ya dijimos, al igual que ocurre en las matemáticas, los operadores en Pyth
 
 Este orden de prioridad se puede alterar con el uso de los paréntesis `()`:
 
-**>>>** x = **5**
+```
+>>> x = 5
+>>> y = 2
+>>> z = x + 3 * y  # El producto tiene prioridad sobre la suma
+>>> z
+11
+>>> z = (x + 3) * y  # Los paréntesis tienen prioridad
+>>> z
+16
 
-**>>>** y = **2**
-
-**>>>** z = x + **3***** y ** # El producto tiene prioridad sobre la suma
-
-**>>>** z
-
-**11**
-
-**>>>** z = **(**x + **3**)***** y ** # Los paréntesis tienen prioridad**
-
-**>>>** z
-
-**16**
+```
 
 ## Fuente
 

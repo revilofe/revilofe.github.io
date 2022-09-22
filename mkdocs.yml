@@ -17,7 +17,7 @@ nav:
         - 'section1/u01/index.md'
         - '1.1.-Un programa': 'section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico.md'
         - '1.1.-Práctica': 'section1/u01/practica/PROG-U1.-Practica001.md'
-        - '1.2.-Practica con un lenguaje': 'section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes.md
+        - '1.2.-Practica con un lenguaje': 'section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes.md'
   - 'Entornos de desarrollo':
     - 'section3/index.md'
     - 'U1: Introducción al desarrollo de software':

@@ -105,7 +105,8 @@ En caso de duda, añade siempre paréntesis a tus expresiones para asegurarte de
 
 El operador `+` funciona con las cadenas, pero no realiza una suma en el sentido matemático. En vez de eso, realiza una  *concatenación* , que quiere decir que une ambas cadenas, enlazando el final de la primera con el principio de la segunda. Por ejemplo:
 
-```
+```py
+
 >>> primero = 10
 >>> segundo = 15
 >>> print(primero+segundo)
@@ -114,17 +115,20 @@ El operador `+` funciona con las cadenas, pero no realiza una suma en el sentido
 >>> segundo = '150'
 >>> print(primero + segundo)
 100150
+
 ```
 
 La salida de este programa es `100150`.
 
 El operador `*` también trabaja con cadenas multiplicando el contenido de una cadena por un entero. Por ejemplo:
 
-```
+```py
+
 >>> primero = 'Test '
 >>> second = 3
 >>> print(primero * second)
 Test Test Test
+
 ```
 
 ### Expresión
@@ -223,26 +227,31 @@ Una de las características más potentes de un lenguaje de programación es la 
 
 Una *sentencia de asignación* crea variables nuevas y las da valores:
 
-```
+```py
+
 >>> mensaje = 'Y ahora algo completamente diferente'
 >>> n = 17
 >>> pi = 3.1415926535897931
+
 ```
 
 Este ejemplo hace tres asignaciones. La primera asigna una cadena a una variable nueva llamada `mensaje`; la segunda asigna el entero `17` a `n`; la tercera asigna el valor (aproximado) de *π* a `pi`.
 
 Para mostrar el valor de una variable, se puede usar la sentencia print:
 
-```
+```py
+
 >>> print(n)
 17
 >>> print(pi)
 3.141592653589793
+
 ```
 
 El tipo de una variable es el tipo del valor al que se refiere.
 
-```
+```py
+
 >>> type(mensaje)
 <class 'str'>
 >>> type(n)
@@ -260,7 +269,7 @@ Esos valores pertenecen a *tipos* diferentes: `2` es un entero (int), y `'¡Hola
 
 La sentencia `print` también funciona con enteros. Vamos a usar el comando `python` para iniciar el intérprete.
 
-```
+```py
 
 $python
 >>>print(4)
@@ -270,7 +279,7 @@ $python
 
 Si no estás seguro de qué tipo de valor estás manejando, el intérprete te lo puede decir.
 
-```
+```py
 
 >>>type('¡Hola, mundo!')
 <class 'str'>
@@ -281,27 +290,33 @@ Si no estás seguro de qué tipo de valor estás manejando, el intérprete te lo
 
 No es sorprendente que las cadenas pertenezcan al tipo `str` y los enteros pertenezcan al tipo `int`. De manera menos obvia, los números con un punto decimal pertenecen a un tipo llamado `float`, porque estos números se representan en un formato llamado *punto flotante*.
 
-```
+```py
+
 >>>type(3.2)
 >>><class 'float'>
+
 ```
 
 ¿Qué ocurre con valores como `17` y `3.2`? Parecen números, pero van entre comillas como las cadenas.
 
-```
+```py
+
 >>>type('17')
 <class 'str'>
 >>>type('3.2')
 <class 'str'>
+
 ```
 
 Pues son cadenas.
 
 Cuando escribes un entero grande, puede que te sientas tentado a usar comas o puntos para separarlo en grupos de tres dígitos, como en `1,000,000`. Eso no es un entero válido en Python, pero en cambio sí que resulta válido algo como:
 
-```
+```py
+
 >>> print(1,000,000)
 1 0 0 # Imprime 3 numeros
+
 ```
 
 Bien, ha funcionado. ¡Pero eso no era lo que esperábamos!. Python interpreta `1,000,000` como una secuencia de enteros separados por comas, así que lo imprime con espacios en medio.
@@ -312,28 +327,33 @@ Bien, ha funcionado. ¡Pero eso no era lo que esperábamos!. Python interpreta `
 
 A veces necesitaremos que sea el usuario quien nos proporcione el valor para una variable, a través del teclado. Python proporciona una función interna llamada `input` que recibe la entrada desde el teclado. Cuando se llama a esa función, el programa se detiene y espera a que el usuario escriba algo. Cuando el usuario pulsa `Retorno` o `Intro`, el programa continúa y `input` devuelve como **una cadena** aquello que el usuario escribió.
 
-```
+```py
+
 >>>entrada = input()
 Cualquier cosa ridícula
 >>>print(entrada)
 Cualquier cosa ridícula
+
 ```
 
 Antes de recibir cualquier dato desde el usuario, es buena idea escribir un mensaje explicándole qué debe introducir. Se puede pasar una cadena a `input`, que será mostrada al usuario antes de que el programa se detenga para recibir su entrada:
 
-```
+```py
+
 >>>nombre = input('¿Cómo te llamas?\n')
 ¿Cómo te llamas?
 Chuck
 >>>print(nombre)
 Chuck
+
 ```
 
 La secuencia `\n` al final del mensaje representa un  *newline* , que es un carácter especial que provoca un salto de línea. Por eso la entrada del usuario aparece debajo de nuestro mensaje.
 
 Si esperas que el usuario escriba un entero, puedes intentar convertir el valor de retorno a `int` usando la función `int()`:
 
-```
+```py
+
 >>> prompt = '¿Cual es la velocidad de vuelo de una golondrina sin carga?\n'
 >>> velocidad = input(prompt)
 ¿Cual es la velocidad de vuelo de una golondrina sin carga?
@@ -342,16 +362,19 @@ Si esperas que el usuario escriba un entero, puedes intentar convertir el valor 
 17
 >>> int(velocidad) + 5
 22
+
 ```
 
 Pero si el usuario escribe algo que no sea una cadena de dígitos, obtendrás un error:
 
-```
+```py
+
 >>>velocidad = input(prompt)
 ¿Cual es la velocidad de vuelo de una golondrina sin carga?
 ¿Te refieres a una golondrina africana o a una europea?
 >>>int(velocidad)
 ValueError: invalid literal for int()
+
 ```
 
 Veremos cómo controlar este tipo de errores más adelante.
@@ -360,13 +383,14 @@ Veremos cómo controlar este tipo de errores más adelante.
 
 Como cualquier otro lenguaje de programación, Python permite escribir comentarios en el código. Para añadir un comentario a tu código simplemente comienza una línea con el carácter `#`:
 
-**# Esta línea es un comentario**
+```py
 
-**a = 5**
+# Esta línea es un comentario**
+a = 5
+# Resultado de multiplicar a por 2
+print(a * 2)
 
-**# Resultado de multiplicar a por 2**
-
-**print(a * 2)**
+```
 
 > Los comentarios son ignorados por el intérprete de Python. Solo tienen sentido para los programadores.
 
@@ -437,35 +461,43 @@ En este punto, el error de sintaxis que es más probable que cometas será inten
 
 Si pones un espacio en un nombre de variable, Python cree que se trata de dos operandos sin ningún operador:
 
-```
+```py
+
 >>> bad name = 5
 SyntaxError: invalid syntax
-```
 
 ```
+
+```py
+
 >>> month = 09
   File "<stdin>", line 1
     month = 09
              ^
 SyntaxError: invalid token
+
 ```
 
 Para la mayoría de errores de sintaxis, los mensajes de error no ayudan mucho. Los mensajes más comunes son `SyntaxError: invalid syntax` y `SyntaxError: invalid token`, ninguno de los cuales resulta muy informativo.
 
 El runtime error (error en tiempo de ejecución) que es más probable que obtengas es un “use before def” (uso antes de definir); que significa que estás intentando usar una variable antes de que le hayas asignado un valor. Eso puede ocurrir si escribes mal el nombre de la variable:
 
-```
+```py
+
 >>> principal = 327.68
 >>> interest = principle * rate
 NameError: name 'principle' is not defined
+
 ```
 
 Los nombres de las variables son sensibles a mayúsculas, así que `LaTeX` no es lo mismo que `latex`.
 
 En este punto, la causa más probable de un error semántico es el orden de las operaciones. Por ejemplo, para evaluar **$\frac{1}{2 \pi}$**, puedes sentirte tentado a escribir
 
-```
+```py
+
 >>> 1.0 / 2.0 * pi
+
 ```
 
 Pero la división se evalúa antes, ¡así que obtendrás  *π* **/2**, que no es lo mismo! No hay forma de que Python sepa qué es lo que querías escribir exactamente, así que en este caso no obtienes un mensaje de error; simplemente obtienes una respuesta incorrecta.
@@ -476,9 +508,11 @@ Ya hablamos sobre los operadores, los operadores son símbolos reservados por el
 
 El ejemplo más típico que siempre viene a la mente es el operador suma, `+`, que se utiliza para obtener la suma aritmética de dos valores:
 
-```
+```py
+
 >>>9 + 1 # 9 y 1 son los operandos
 10 # 10 es el resultado
+
 ```
 
 ### Operador de concatenación de cadenas de caracteres
@@ -514,7 +548,8 @@ A continuación te muestro cómo funcionan los operadores booleanos (en orden de
 
 Ejemplos:
 
-```
+```py
+
 >>> x = True
 >>> y = False
 >>> x or y
@@ -550,7 +585,7 @@ Los operadores de comparación se utilizan, como su nombre indica, para comparar
 
 Ejemplos:
 
-```
+```py
 
 >>> x = 9
 >>> y = 1
@@ -573,7 +608,7 @@ Las instancias de una clase no se pueden ordenar con respecto a otras instancias
 
 Los operadores de comparación se pueden concatenar. Ejemplo:
 
-```
+```py
 
 # Las comparaciones siguientes son idénticas
 >>> x = 9
@@ -601,7 +636,7 @@ En cuanto a los operadores aritméticos, estos permiten realizar las diferentes 
 
 Ejemplos:
 
-```
+```py
 
 >>> x = 7
 >>> y = 2
@@ -639,7 +674,8 @@ Los operadores a nivel de bits actúan sobre los operandos como si fueran una ca
 
 Supongamos que tenemos el entero 2 (en bits es 00010) y el entero 7 (00111). El resultado de aplicar las operaciones anteriores es:
 
-```
+```py
+
 >>> x = 2
 >>> y = 7
 >>> x | y
@@ -698,7 +734,8 @@ Todavía no hemos visto estos tipos, pero son operadores muy utilizados.
 
 A continuación vemos unos ejemplos que son muy intuitivos:
 
-```
+```py
+
 >>> lista = [1, 3, 2, 7, 9, 8, 6]
 >>> 4 in lista
 False
@@ -724,7 +761,8 @@ Por último, los operadores de identidad se utilizan para comprobar si dos varia
 Ejemplos:
 
 
-```
+```py
+
 >>> x = 4
 >>> y = 2
 >>> lista = [1, 5]
@@ -743,7 +781,8 @@ Como ya dijimos, al igual que ocurre en las matemáticas, los operadores en Pyth
 
 Este orden de prioridad se puede alterar con el uso de los paréntesis `()`:
 
-```
+```py
+
 >>> x = 5
 >>> y = 2
 >>> z = x + 3 * y  # El producto tiene prioridad sobre la suma

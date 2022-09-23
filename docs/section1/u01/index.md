@@ -51,19 +51,11 @@ En esta sección se incluyen los contenidos mínimos a impartir en esta unidad, 
 
 
 La unidad se encuentra dentro del Bloque 1: 
-- U1: Mi primer programa 
+* U1: Mi primer programa 
 
 
 En la Unidad 1 - Mi primer programa, aprenderemos a: 
-- Que es un programa y un algoritmo. 
-- Bloques principales de un programa. 
-- Elementos básicos de un lenguaje. 
-- Instalación de un IDE. 
-
-
-## Cómo impartir la unidad
-
-Esta es la sección más interesante, y se incluye cómo trabajar la unidad, haciendo referencia a herramientas, guías, materiales y recursos, de manera individual para cada criterio.
-
-- **Criterio de evaluación a**:
-- **Criterio de evaluación b**: 
+* Que es un programa y un algoritmo. 
+* Bloques principales de un programa. 
+* Elementos básicos de un lenguaje. 
+* Instalación de un IDE. 

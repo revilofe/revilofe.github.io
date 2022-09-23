@@ -43,7 +43,7 @@ En esta sección se relaciona la unidad con los criterios de evaluación concret
 * f) Se han creado y utilizado constantes y literales.
 * g) Se han clasificado, reconocido y utilizado en expresiones los operadores del lenguaje.
 * h) Se ha comprobado el funcionamiento de las conversiones de tipos explícitas e implícitas.
-* i) Se han introducido comentarios en el código.
+* i) Se han introducido comentarios en el código. 
 La unidad se encuentra dentro del Bloque 1
 * U1: Mi primer programa 
  

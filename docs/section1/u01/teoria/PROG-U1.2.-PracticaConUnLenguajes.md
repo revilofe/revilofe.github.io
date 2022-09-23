@@ -1,12 +1,12 @@
 ---
-title: "UD 1 - 1.1 Un programa informático"
-description: Un programa informático
-summary: Un programa informático
+title: "UD 1 - 1.2 Practica con un lenguaje"
+description: Practica con un lenguaje
+summary: Practica con un lenguaje
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: material/security
-permalink: /prog/unidad1/1.1
+icon: material/sofware
+permalink: /prog/unidad1/1.2
 categories:
     - PROG
 tags:

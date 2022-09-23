@@ -45,11 +45,14 @@ En esta sección se relaciona la unidad con los criterios de evaluación concret
 * h) Se ha comprobado el funcionamiento de las conversiones de tipos explícitas e implícitas.
 * i) Se han introducido comentarios en el código. 
 
+### Contenidos
+
+La unidad se encuentra dentro del Bloque1.
 
 * U1: Mi primer programa 
- 
-En la Unidad 1 - Mi primer programa, aprenderemos a
-* Que es un programa y un algoritmo. 
-* Bloques principales de un programa. 
-* Elementos básicos de un lenguaje. 
+
+En la Unidad 1 - Mi primer programa, veremos:
+* Que es un programa y un algoritmo.
+* Bloques principales de un programa.
+* Elementos básicos de un lenguaje.
 * Instalación de un IDE. 

@@ -45,6 +45,7 @@ En esta sección se relaciona la unidad con los criterios de evaluación concret
 * h) Se ha comprobado el funcionamiento de las conversiones de tipos explícitas e implícitas.
 * i) Se han introducido comentarios en el código. 
 
+hola
 
 * U1: Mi primer programa 
  

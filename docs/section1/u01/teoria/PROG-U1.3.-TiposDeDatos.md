@@ -12,9 +12,6 @@ categories:
 tags:
     - Software
 ---
-xvxv
-
-xv
 
 
 # Tipos de Datos Primitivos

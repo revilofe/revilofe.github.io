@@ -43,18 +43,16 @@ En esta sección se relaciona la unidad con los criterios de evaluación concret
 * f) Se han creado y utilizado constantes y literales.
 * g) Se han clasificado, reconocido y utilizado en expresiones los operadores del lenguaje.
 * h) Se ha comprobado el funcionamiento de las conversiones de tipos explícitas e implícitas.
-* i) Se han introducido comentarios en el código.
+* i) Se han introducido comentarios en el código. 
 
 ### Contenidos
 
-En esta sección se incluyen los contenidos mínimos a impartir en esta unidad, teniendo en cuenta [la normativa del curso](https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf). 
+En esta sección se incluyen los contenidos mínimos a impartir en esta unidad, teniendo en cuenta [la normativa del curso](https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf).
 
-
-La unidad se encuentra dentro del Bloque 1: 
+La unidad se encuentra dentro del Bloque 1
 * U1: Mi primer programa 
-
-
-En la Unidad 1 - Mi primer programa, aprenderemos a: 
+ 
+En la Unidad 1 - Mi primer programa, aprenderemos a
 * Que es un programa y un algoritmo. 
 * Bloques principales de un programa. 
 * Elementos básicos de un lenguaje. 

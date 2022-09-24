@@ -33,7 +33,7 @@ Tradicionalmente, los programas que se han venido usando en estas fases han sido
 
 Cuando programamos en lenguajes de alto nivel, y desde una perspectiva clásica, estamos generando mediante un programa de edición el **código fuente** del software final. Los editores suelen incorporar un coloreado de la sintaxis, indentación automática y otras funcionalidades que ayudan al programador.
 
-El código fuente se suele guardar en uno o varios archivos con una extensión concreta según el lenguaje utilizado y debe ser traducido a binario para que las instrucciones puedan ser entendidas y ejecutadas por la máquina. Para esto existe otro programa encargado de realizar la traducción llamado ***traductor**, y pueden ser de dos tipos: ensambladores y compiladores.
+El código fuente se suele guardar en uno o varios archivos con una extensión concreta según el lenguaje utilizado y debe ser traducido a binario para que las instrucciones puedan ser entendidas y ejecutadas por la máquina. Para esto existe otro programa encargado de realizar la traducción llamado **traductor**, y pueden ser de dos tipos: ensambladores y compiladores.
 
 Los **ensambladores** son los encargados de traducir los programas escritos en lenguaje ensamblador a lenguaje máquina.
 ![](assets/EDES-U1-Ensamblador.png)

@@ -14,8 +14,9 @@ tags:
     - Lenguajes
 ---
 
-## Lenguaje de programación
-Los lenguajes de programación, nos permiten comunicarnos con la máquina gracias a una estandarización que permite expresar instrucciones que el ordenador es capaz de ejecutar. Al igual que el lenguaje natural, los lenguajes de programación vienen definidos por:
+## Lenguaje de programación 
+Los lenguajes de programación nos permiten comunicarnos con la máquina gracias a una estandarización que permite expresar instrucciones que el ordenador es capaz de ejecutar. Al igual que el lenguaje natural, los lenguajes de programación vienen definidos por:
+
 * **Léxico**: determinan el conjunto de símbolos y caracteres que se pueden emplear. La conjunción de estos caracteres formarán identificadores, constantes, operadores, instrucciones, etc.
 * **Sintaxis**: conjunto de reglas que determinan las construcciones válidas que se pueden realizar con los elementos anteriores.
 * **Semántica**: define el significado de las construcciones anteriores.

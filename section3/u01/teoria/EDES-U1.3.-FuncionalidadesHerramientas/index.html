@@ -1307,14 +1307,22 @@
 <p>Durante las fases de desarrollo y pruebas se realizan los trabajos de desarrollo de software en base a los diseños realizados y posteriormente se testean con objeto de obtener un software de calidad.</p>
 <p>Tradicionalmente, los programas que se han venido usando en estas fases han sido editores, intérpretes y compiladores (codificación y generación de ejecutables) y los depuradores (pruebas), si bien posteriormente surgió el concepto de CASE (Computer Aided Software Engineering) que aglutina todas las etapas.</p>
 <p>Cuando programamos en lenguajes de alto nivel, y desde una perspectiva clásica, estamos generando mediante un programa de edición el <strong>código fuente</strong> del software final. Los editores suelen incorporar un coloreado de la sintaxis, indentación automática y otras funcionalidades que ayudan al programador.</p>
-<p>El código fuente se suele guardar en uno o varios archivos con una extensión concreta según el lenguaje utilizado y debe ser traducido a binario para que las instrucciones puedan ser entendidas y ejecutadas por la máquina. Para esto existe otro programa encargado de realizar la traducción llamado <strong>traductor</strong>, y pueden ser de dos tipos: ensambladores y compiladores.</p>
+<p>El código fuente se suele guardar en uno o varios archivos con una extensión concreta según el lenguaje utilizado y debe ser traducido a binario para que las instrucciones puedan ser entendidas y ejecutadas por la máquina. Para esto existe otro programa encargado de realizar la traducción llamado <strong>traductor</strong>, y pueden ser: ensambladores, compiladores e interpretes.</p>
+<ul>
+<li>
 <p>Los <strong>ensambladores</strong> son los encargados de traducir los programas escritos en lenguaje ensamblador a lenguaje máquina.
 <img alt="" src="../assets/EDES-U1-Ensamblador.png" /></p>
+</li>
+<li>
 <p>Los <strong>compiladores</strong> son programas que leen el código fuente y lo traducen o convierten a otro lenguaje. Estos programas te muestran los errores existentes en el <strong>código fuente</strong>, y una vez solucionados generan el <strong>código objeto</strong>.
 <img alt="" src="../assets/EDES-U1-Compilador.png" /></p>
-<p>Mediante el linkado, que puede ser dinámico (quedan enlazados los distintos ficheros binarios, pero en archivos diferentes) o estático (se añade todos los binarios a un único fichero) quedan enlazados los distintos códigos objetos y se genera un <em>ejecutable</em>.</p>
-<p>Otro sistema para la ejecución de nuestro código fuente es mediante el uso de <em>intérpretes</em>. Los intérpretes realizan la traducción y ejecución de forma simultánea, es decir, un intérprete lee el código fuente y lo va ejecutando al mismo tiempo sin generar código objeto.
+</li>
+<li>
+<p>Otro sistema para la ejecución de nuestro código fuente es mediante el uso de <strong>intérpretes</strong>. Los intérpretes realizan la traducción y ejecución de forma simultánea, es decir, un intérprete lee el código fuente y lo va ejecutando al mismo tiempo sin generar código objeto.
 <img alt="" src="../assets/EDES-U1-Interprete.png" /></p>
+</li>
+</ul>
+<p>Una vez tenemos el código objeto, mediante el linkado, que puede ser dinámico (quedan enlazados los distintos ficheros binarios, pero en archivos diferentes) o estático (se añade todos los binarios a un único fichero) quedan enlazados los distintos códigos objetos y se genera un <em>ejecutable</em>.</p>
 <p>Una vez tenemos el <em>ejecutable</em>, el software está listo para ser ejecutado y se entra el proceso de pruebas, detección y solución de errores, para el que podemos usar frameworks de testeo para diseñar e implementar pruebas que detecten los errores, programas de depuración para encontrar el origen de los errores, así como otros programas de monitorización y seguimiento que se encargan de monitorizar el funcionamiento de las aplicaciones para ver el comportamiento que tienen en cuanto a rendimiento. </p>
 <p>Si se identifican errores, para solucionarlos se tendrá que pasar por los pasos anteriores de generación de código fuente y compilación hasta generar de nuevo ejecutable.-</p>
 <p>A continuación se enumeran algunas herramientas que se pueden utilizar durante el proceso descrito anteriormente:</p>

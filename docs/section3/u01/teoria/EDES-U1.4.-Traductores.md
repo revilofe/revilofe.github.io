@@ -13,9 +13,6 @@ tags:
     - EDES
     - Tools
 ---
-dd
-
-dd
 
 ## Traductores de lenguajes de alto nivel
 

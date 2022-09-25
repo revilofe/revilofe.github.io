@@ -45,23 +45,16 @@ En esta sección se relaciona la unidad con los criterios de evaluación concret
 
 ### Contenidos
 
-En esta sección se incluyen los contenidos mínimos a impartir en esta unidad, teniendo en cuenta [la normativa del curso](https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf).
+En esta sección se incluyen los contenidos mínimos a impartir esta unidad teniendo en cuenta [la normativa del curso](https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf)
 
-La unidad se encuentra dentro del Bloque 1 - Desarrollo de software:
-* U1: Introducción al desarrollo del software
-* U2: Elementos del desarrollo del software
+La unidad se encuentra dentro del Bloque 1 - Desarrollo de software: 
+* U1: Introducción al desarrollo del software.
+* U2: Proceso de desarrollo del software.
 
-En la Unidad 1 - Introducción al desarrollo del software, aprenderemos a: 
+En la Unidad 1 - Introducción al desarrollo del software, veremos: 
 * La relación de los programas con los componentes del sistema informático.
 * Las diferencias entre código fuente, objeto y ejecutable.
 * Las fases de desarrollo de una aplicación informática.
 * Algunos lenguajes de programación.
 * Las funcionalidades ofrecidas por las herramientas para el desarrollo de software.
 * El funcionamiento de los traductores.
-
-## Cómo impartir la unidad
-
-Esta es la sección más interesante, y se incluye cómo trabajar la unidad, haciendo referencia a herramientas, guías, materiales y recursos, de manera individual para cada criterio.
-
-- **Criterio de evaluación a**:
-- **Criterio de evaluación b**: 

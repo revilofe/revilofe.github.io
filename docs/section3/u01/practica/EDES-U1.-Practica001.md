@@ -42,13 +42,13 @@ El trabajo tiene las siguientes condiciones de entrega:
 * Es un trabajo individual.
 * Se realiza en un documento de google drive.
 * El trabajo tiene que estar correctamente identificado:
-  * Fecha
-  * Tu nombre
-  * Identificacion del curso y grupo.
-  * Identificacion del modulo, unidad y ejercicio.
+    * Fecha
+    * Tu nombre
+    * Identificacion del curso y grupo.
+    * Identificacion del modulo, unidad y ejercicio.
 * El trabajo tendra por nombare `DAW1A_id_iniciales` donde:
-  * `id`: es el identificador de la actividad, por ejemplo 1_1
-  * `iniciales': son tus iniciales por ejemplo EFO las mias.
+    * `id`: es el identificador de la actividad, por ejemplo 1_1
+    * `iniciales': son tus iniciales por ejemplo EFO las mias.
 
 ### Apoyo
 

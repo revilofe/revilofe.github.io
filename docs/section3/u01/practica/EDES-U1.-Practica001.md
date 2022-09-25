@@ -16,24 +16,24 @@ tags:
 
 ### Descripción
 
-Haciendo uso de los distintos [Rankings de lenguajes de programación](https://www.digitallearning.es/blog/rankings-de-lenguajes-de-programacion/) y páginas de búsqueda de empleo como [infojobs](https://www.infojobs.net/), [tecnoempleo](https://www.tecnoempleo.com/), [linkedin](https://www.linkedin.com/) localiza los 5 lenguajes más usados y los 5 lenguajes con más ofertas de empleo respectivamente. Añade la información más relevante sobre estos lenguajes, minimo responde a las siguientes preguntas:
+Haciendo uso de los distintos [Rankings de lenguajes de programación](https://www.digitallearning.es/blog/rankings-de-lenguajes-de-programacion/) y páginas de búsqueda de empleo como [infojobs](https://www.infojobs.net/), [tecnoempleo](https://www.tecnoempleo.com/), [linkedin](https://www.linkedin.com/) localiza los 5 lenguajes más usados y los 5 lenguajes con más ofertas de empleo respectivamente. Añade la información más relevante sobre estos lenguajes, mínimo responde a las siguientes preguntas:
 
 1. ¿Qué paradigmas destacan en el lenguaje?
 2. ¿Cuál es la posición y evolución de este lenguaje durante los últimos 2 años?
 3. ¿Para que se usa mayoritariamente este lenguaje
 4. ¿Qué tipo de traductor es más habitual se usa para poder ejecutar los programas realizados en este lenguaje?
 5. ¿Existen otras opciones de traducción para este lenguaje?
-6. ¿Cuál es el traductor más usado para este lenguaje y que caracteristicas tiene?
+6. ¿Cuál es el traductor más usado para este lenguaje y que características tiene?
 
-Finaliza con una **conclusiones** que hayas sacado sobre el lenguaje mas usaso y traductores asociados.
+Finaliza con una **conclusiones** que hayas sacado sobre el lenguaje mas usados y traductores asociados.
 
 ### Evaluación
 
 
 | Criterio | Valor 1                                  | Valor 2                                        | Valor 3                                           |
 | ---------- | ------------------------------------------ | ------------------------------------------------ | --------------------------------------------------- |
-| RA1.b    | No identifica todos los lenguajes       | Identifica lenguajes con informacion completa. | Identifica lenguajes con informacion adicional.   |
-| RA1.f    | No identifica adecuadamente el traductor | Identifica una sola.                           | Identifica traductores con informacion adicional. |
+| RA1.b    | No identifica todos los lenguajes       | Identifica lenguajes con información completa. | Identifica lenguajes con información adicional.   |
+| RA1.f    | No identifica adecuadamente el traductor | Identifica una sola.                           | Identifica traductores con información adicional. |
 
 ### Condiciones de entrega
 
@@ -44,11 +44,11 @@ El trabajo tiene las siguientes condiciones de entrega:
 * El trabajo tiene que estar correctamente identificado:
     * Fecha
     * Tu nombre
-    * Identificacion del curso y grupo.
-    * Identificacion del modulo, unidad y ejercicio.
-* El trabajo tendra por nombare `DAW1A_id_iniciales` donde:
+    * Identificación del curso y grupo.
+    * Identificación del módulo, unidad y ejercicio.
+* El trabajo tendrá por nombre `DAW1A_id_iniciales` donde:
     * `id`: es el identificador de la actividad, por ejemplo 1_1
-    * `iniciales': son tus iniciales por ejemplo EFO las mias.
+    * `iniciales`: son tus iniciales por ejemplo `EFO` las mías.
 
 ### Apoyo
 

@@ -33,18 +33,20 @@ Tradicionalmente, los programas que se han venido usando en estas fases han sido
 
 Cuando programamos en lenguajes de alto nivel, y desde una perspectiva clásica, estamos generando mediante un programa de edición el **código fuente** del software final. Los editores suelen incorporar un coloreado de la sintaxis, indentación automática y otras funcionalidades que ayudan al programador.
 
-El código fuente se suele guardar en uno o varios archivos con una extensión concreta según el lenguaje utilizado y debe ser traducido a binario para que las instrucciones puedan ser entendidas y ejecutadas por la máquina. Para esto existe otro programa encargado de realizar la traducción llamado ***traductor**, y pueden ser de dos tipos: ensambladores y compiladores.
+El código fuente se suele guardar en uno o varios archivos con una extensión concreta según el lenguaje utilizado y debe ser traducido a binario para que las instrucciones puedan ser entendidas y ejecutadas por la máquina. Para esto existe otro programa encargado de realizar la traducción llamado **traductor**, y pueden ser: ensambladores, compiladores e interpretes.
 
-Los **ensambladores** son los encargados de traducir los programas escritos en lenguaje ensamblador a lenguaje máquina.
+* Los **ensambladores** son los encargados de traducir los programas escritos en lenguaje ensamblador a lenguaje máquina.
 ![](assets/EDES-U1-Ensamblador.png)
 
-Los **compiladores** son programas que leen el código fuente y lo traducen o convierten a otro lenguaje. Estos programas te muestran los errores existentes en el **código fuente**, y una vez solucionados generan el **código objeto**.
+* Los **compiladores** son programas que leen el código fuente y lo traducen o convierten a otro lenguaje. Estos programas te muestran los errores existentes en el **código fuente**, y una vez solucionados generan el **código objeto**.
 ![](assets/EDES-U1-Compilador.png)
 
-Mediante el linkado, que puede ser dinámico (quedan enlazados los distintos ficheros binarios, pero en archivos diferentes) o estático (se añade todos los binarios a un único fichero) quedan enlazados los distintos códigos objetos y se genera un *ejecutable*.
-
-Otro sistema para la ejecución de nuestro código fuente es mediante el uso de *intérpretes*. Los intérpretes realizan la traducción y ejecución de forma simultánea, es decir, un intérprete lee el código fuente y lo va ejecutando al mismo tiempo sin generar código objeto.
+* Otro sistema para la ejecución de nuestro código fuente es mediante el uso de **intérpretes**. Los intérpretes realizan la traducción y ejecución de forma simultánea, es decir, un intérprete lee el código fuente y lo va ejecutando al mismo tiempo sin generar código objeto.
 ![](assets/EDES-U1-Interprete.png)
+
+* Por último, existen otros traductores que producen un código intermedio entre el código fuente y el máquina. Son por tanto, una mezcla de interpretados y compilados. En el lenguaje Java y kotlin por ejemplo, se genera un recurso bytecode: código precompilado que necesita interpretarse por la JVM o máquina virtual de Java para ejecutarse.
+
+Una vez tenemos el código objeto, mediante el linkado, que puede ser dinámico (quedan enlazados los distintos ficheros binarios, pero en archivos diferentes) o estático (se añade todos los binarios a un único fichero) quedan enlazados los distintos códigos objetos y se genera un *ejecutable*.
 
 Una vez tenemos el *ejecutable*, el software está listo para ser ejecutado y se entra el proceso de pruebas, detección y solución de errores, para el que podemos usar frameworks de testeo para diseñar e implementar pruebas que detecten los errores, programas de depuración para encontrar el origen de los errores, así como otros programas de monitorización y seguimiento que se encargan de monitorizar el funcionamiento de las aplicaciones para ver el comportamiento que tienen en cuanto a rendimiento. 
 

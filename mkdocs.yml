@@ -29,6 +29,7 @@ nav:
         - '1.3.-Herramientas y funcionalidades': 'section3/u01/teoria/EDES-U1.3.-FuncionalidadesHerramientas.md'
         - '1.4.-Traductores': 'section3/u01/teoria/EDES-U1.4.-Traductores.md'
         - 'Práctica 1: Lenguajes de programación': 'section3/u01/practica/EDES-U1.-Practica001.md'
+        - 'Práctica 2: Herramientas para generar programa': 'section3/u01/practica/EDES-U1.-Practica002.md'
   - 'Incidentes de seguridad':
     - 'section2/index.md'
     - 'U1: Principios generales y planes de seguridad':

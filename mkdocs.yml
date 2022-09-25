@@ -27,7 +27,7 @@ nav:
         - '1.1.-Software y PC': 'section3/u01/teoria/EDES-U1.1.-Software-PC.md'
         - '1.2.-Lenguajes de programación': 'section3/u01/teoria/EDES-U1.2.-Lenguajes.md'
         - '1.3.-Herramientas y funcionalidades': 'section3/u01/teoria/EDES-U1.3.-FuncionalidadesHerramientas.md'
-        - '1.4.-Traductores': 'section3/u01/teoria/EDES-U1.4.-Traductores.md'
+        - '1.4.-Traductores': 'section3/u01/practica/EDES-U1.4.-Traductores.md'
         - 'Práctica 1: Lenguajes de programación': 'EDES-U1.-Practica001.md'
   - 'Incidentes de seguridad':
     - 'section2/index.md'

@@ -50,7 +50,8 @@ En esta sección se incluyen los contenidos mínimos a impartir esta unidad teni
 * U1: Introducción al desarrollo del software.
 * U2: Proceso de desarrollo del software.
 
-En la Unidad 1: Introducción al desarrollo del software, veremos: 
+En la unidad1, veremos
+
 * La relación de los programas con los componentes del sistema informático.
 * Las diferencias entre código fuente, objeto y ejecutable.
 * Las fases de desarrollo de una aplicación informática.

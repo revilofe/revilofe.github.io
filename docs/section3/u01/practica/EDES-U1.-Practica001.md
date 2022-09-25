@@ -46,7 +46,7 @@ El trabajo tiene las siguientes condiciones de entrega:
     * Tu nombre
     * Identificación del curso y grupo.
     * Identificación del módulo, unidad y ejercicio.
-* El trabajo tendrá por nombre `DAW1A_id_iniciales` donde:
+* Si no tiene nombre asignado, el trabajo tendrá por nombre `DAW1A_id_iniciales` donde:
     * `id`: es el identificador de la actividad, por ejemplo 1_1
     * `iniciales`: son tus iniciales por ejemplo `EFO` las mías.
 

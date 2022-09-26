@@ -46,7 +46,6 @@ nav:
   - 'Blog': 'blog.md'
   - 'Tags': 'tags.md'
   - 'Acerca de': 'about.md'
-  - 'yo': 'about.md'
 
 
 #extra_css:

@@ -14,11 +14,13 @@ tags:
   - Dinamica
   - Presentacion
 ---
-**Dinámica icebreakers**
+
+##Dinámica icebreakers
+
 ¿Cómo podemos lograr que un grupo se conozca mejor y favorecer un buen ambiente? ¿Cómo podemos experimentarlo mediante algunas técnicas de rompehielos? Los rompehielos (icebreakers) son técnicas muy utilizadas y que consisten básicamente en fomentar un buen ambiente de un grupo que comparte o va a compartir un espacio común. Los hay de muchos tipos y con cientos de variantes que pueden ser introducidas a su vez en diferentes contextos profesionales, educativos o lúdicos. En nuestro caso vamos a implementar una mezcla entre La entrevista y Los aviones de papel.
 
 
-***PASOS A SEGUIR:***
+###PASOS A SEGUIR:
 
 * **Entregar a cada participante un hoja de papel y un rotulador** .
 * Pedirles que debajo del papel **escriban sus nombres y varias cuestiones** con las instrucciones que se considere oportuno para el grupo o contexto donde se lleva a cabo.
@@ -35,7 +37,7 @@ tags:
 * El Facilitador (o personas aleatorias del grupo) iran leyendo y presentando los profiles, y entre todos se intentarán asignar a los participantes. Las personas que participaron en la entrevista deberán votar a otros candidatos.
 * Finalmente habrá otra ronda en la que se iran descubriendo finalmente la persona de la que se habla en el profile.
 
-***PREGUNTAS***
+###PREGUNTAS
 Es importante hacer hincapié y hacerles valorar que se puede ir desde preguntas más clásicas: ¿Qué has estudiado? ¿Cuánto tiempo llevas estudiando aquí? o ¿Cuál es tu experiencias profesional?. Otras tal vez más personales como: ¿Cuáles son tus aficiones? ¿Cuántos hijos tienes? ¿Cuál es tu plato favorito? ¿Dónde te gustan pasar las vacaciones?. Hasta otras más divertidas para pasar de un territorio más informativo y de conocimiento a un territorio más distendido. ¿Qué te llevarías a una isla desierta? Si te reencarnaras en un animal ¿Cuál te gustaría ser? Si pudieras ser un personaje de ficción ¿Quién te gustaría ser?.
 
 Una buena recomendación podría ser: 3 básicas y personales, 4 profesionales y 3 más divertidas.
@@ -45,7 +47,8 @@ Una buena recomendación podría ser: 3 básicas y personales, 4 profesionales y
   <figcaption>Ejemplo de preguntas.</figcaption>
 </figure>
 
-***TIEMPOS***
+###TIEMPOS
+
 * 5 minutos para poner el nombre, pensar las preguntas y escribirlas en el folio.
 * 3 minutos para hacer el avión.
 * 3 minutos para lanzar el avión varias veces y conformar las parejas.
@@ -55,13 +58,14 @@ Una buena recomendación podría ser: 3 básicas y personales, 4 profesionales y
 
 
 
-***MATERIAL***
+###MATERIAL
+
 * Una hoja de papel por persona.
 * Un rotulador por persona.
 
-***CONSEJOS Y ANOTACIONES***
-Este rompehielos  **no es ninguna competición** , nadie gana ni pierde. **La idea de esta actividad es conocerse mejor de forma divertida** y las instrucciones para las preguntas dependen de donde se quiera poner el foco de la actividad de cara a la actividad general que se va a llevar a cabo.
+###CONSEJOS Y ANOTACIONES
+Este rompehielos  **no es ninguna competición**, nadie gana ni pierde. **La idea de esta actividad es conocerse mejor de forma divertida** y las instrucciones para las preguntas dependen de donde se quiera poner el foco de la actividad de cara a la actividad general que se va a llevar a cabo.
 
 
-** FUENTES
+## FUENTES
 * https://www.aprendercolaborando.com/3-rompehielos-para-conocerse/

@@ -205,7 +205,7 @@ Los operadores lógicos a menudo proporcionan un modo de simplificar las sentenc
 ```
 if 0 < x:
     if x < 10:
-        print('x es un número positivo con un sólo dígito.')
+        print('x es un número positivo con un sólo dígito')
 ```
 
 La sentencia `print` se ejecuta solamente si se cumplen las dos condiciones anteriores, así que en realidad podemos conseguir el mismo efecto con el operador `and`:

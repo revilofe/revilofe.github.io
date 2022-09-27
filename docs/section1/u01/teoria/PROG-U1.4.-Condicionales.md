@@ -81,8 +81,8 @@ if x > 0 :
 La expresión booleana después de la sentencia `if` recibe el nombre de  *condición* . La sentencia `if` se finaliza con un carácter de dos-puntos (:) y la(s) línea(s) que van detrás de la sentencia if van indentadas[^1^](https://es.py4e.com/html3/03-conditional#fn1) (es decir, llevan una tabulación o varios espacios en blanco al principio).
 
 <figure markdown>
-![](assets/PROG-U1-iF.png)
-    <figcaption>Lógica del IF</figcaption>
+  ![](assets/PROG-U1-iF.png)
+  <figcaption>Lógica del IF</figcaption>
 </figure>
 
 Si la condición lógica es verdadera, la sentencia indentada será ejecutada. Si la condición es falsa, la sentencia indentada será omitida.
@@ -136,8 +136,8 @@ else :
 Si al dividir `x` por 2 obtenemos como resto 0, entonces sabemos que `x` es par, y el programa muestra un mensaje a tal efecto. Si esa condición es falsa, se ejecuta el segundo conjunto de sentencias.
 
 <figure markdown>
-    ![](assets/PROG-U1-IFELSE.png)
-    <figcaption>Lógica del IF-then-Else</figcaption>
+  ![](assets/PROG-U1-IFELSE.png)
+  <figcaption>Lógica del IF-then-Else</figcaption>
 </figure>
 
 Dado que la condición debe ser obligatoriamente verdadera o falsa, solamente una de las alternativas será ejecutada. Las alternativas reciben el nombre de  *ramas* , dado que se trata de ramificaciones en el flujo de la ejecución.
@@ -158,8 +158,8 @@ else:
 `elif` es una abreviatura para “else if”. En este caso también será ejecutada únicamente una de las ramas.
 
 <figure markdown>
-    ![](assets/PROG-U1-IFELSIF.png)
-    <figcaption>Lógica del IF-then-Elif</figcaption>
+  ![](assets/PROG-U1-IFELSIF.png)
+  <figcaption>Lógica del IF-then-Elif</figcaption>
 </figure>
 
 No hay un límite para el número de sentencias `elif`. Si hay una clausula `else`, debe ir al final, pero tampoco es obligatorio que ésta exista.
@@ -192,8 +192,8 @@ else:
 El condicional exterior contiene dos ramas. La primera rama ejecuta una sentencia simple. La segunda contiene otra sentencia `if`, que tiene a su vez sus propias dos ramas. Esas dos ramas son ambas sentencias simples, pero podrían haber sido sentencias condicionales también.
 
 <figure markdown>
-    ![](assets/PROG-U1-IFANIDADA.png)
-    <figcaption>Lógica del IF anidados</figcaption>
+  ![](assets/PROG-U1-IFANIDADA.png)
+  <figcaption>Lógica del IF anidados</figcaption>
 </figure>
 
 A pesar de que el indentado de las sentencias hace que la estructura esté clara, los *condicionales anidados* pueden volverse difíciles de leer rápidamente. En general, es buena idea evitarlos si se puede.

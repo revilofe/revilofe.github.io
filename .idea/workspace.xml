@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="EDES. 1.4 Condicionales, practica 3 e indice" />
+    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="EDES. 1.4 Condicionales, practica 3 e indice">
+      <change beforePath="$PROJECT_DIR$/docs/section1/u01/teoria/PROG-U1.4.-Condicionales.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/section1/u01/teoria/PROG-U1.4.-Condicionales.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="edu &lt;revilofe@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="PUSH_TAGS">
       <GitPushTagMode>
         <option name="argument" value="--tags" />
@@ -16,7 +23,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="gh-pages" />
+        <entry key="$PROJECT_DIR$" value="ff9c42636fa155cd15e9854cf3f239d3e31e6481" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -375,7 +382,35 @@
       <option name="project" value="LOCAL" />
       <updated>1663316331617</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="EDES. 1.4 Condicionales, practica 3 e indice">
+      <created>1664311387743</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1664311387743</updated>
+    </task>
+    <task id="LOCAL-00042" summary="EDES. 1.4 Condicionales, practica 3 e indice">
+      <created>1664311397991</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1664311397991</updated>
+    </task>
+    <task id="LOCAL-00043" summary="EDES. 1.4 Condicionales, practica 3 e indice">
+      <created>1664312047179</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1664312047179</updated>
+    </task>
+    <task id="LOCAL-00044" summary="EDES. 1.4 Condicionales, practica 3 e indice">
+      <created>1664312167963</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1664312167963</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,7 +427,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>

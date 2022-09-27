@@ -1389,7 +1389,7 @@
 <a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>IndentationError: unexpected indent
 </code></pre></div>
 <p>En este ejemplo, el problema es que la segunda línea está indentada por un espacio. Pero el mensaje de error apunta a <code>y</code>, lo cual resulta engañoso. En general, los mensajes de error indican dónde se ha descubierto el problema, pero el error real podría estar en el código previo, a veces en alguna línea anterior.</p>
-<p>Ocurre lo mismo con los errores en tiempo de ejecución (runtime errors). Supón que estás tratando de calcular una relación señal-ruido en decibelios. La fórmula es <em>S**N**R</em><sub><em>d**b</em></sub> = 10log <sub>10</sub> <strong>(***P* <sub><em>s**e**n**a**l</em></sub> **/***P* <sub><em>r**u**i**d**o</em></sub> **)</strong>. En Python, podrías escribir algo como esto:</p>
+<p>Ocurre lo mismo con los errores en tiempo de ejecución (runtime errors). Supón que estás tratando de calcular una relación señal-ruido en decibelios. La fórmula es SNR*<sub>db</sub>=10log <sub>10</sub> ( P<sub>senal</sub> / P <sub>ruido</sub> ). En Python, podrías escribir algo como esto:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>import math
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>int_senal = 9
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>int_ruido = 10

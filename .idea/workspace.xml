@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="Presentación de programación. Añadir formularios">
-      <change afterPath="$PROJECT_DIR$/docs/section3/u01/teoria/EDES-U1.1.-Software&amp;PC.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/section3/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/section3/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/section3/u01/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/section3/u01/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
-    </list>
+    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="EDES. 1.4 Condicionales, practica 3 e indice" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -409,11 +403,9 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Revert &quot;Deployed f651645 with MkDocs version: 1.3.0&quot;" />
     <MESSAGE value="Logo y FavIcon" />
     <MESSAGE value="Logo y FavIcon +" />
     <MESSAGE value="workspace.xml idea" />
@@ -438,7 +430,8 @@
     <MESSAGE value="Presentación de programación. Planificación" />
     <MESSAGE value="Presentación de programación. Corrección errores" />
     <MESSAGE value="Presentación de programación. Añadir formularios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Presentación de programación. Añadir formularios" />
+    <MESSAGE value="EDES. 1.4 Condicionales, practica 3 e indice" />
+    <option name="LAST_COMMIT_MESSAGE" value="EDES. 1.4 Condicionales, practica 3 e indice" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

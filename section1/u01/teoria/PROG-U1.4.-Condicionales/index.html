@@ -1244,7 +1244,8 @@
 <p>La expresión booleana después de la sentencia <code>if</code> recibe el nombre de  <em>condición</em> . La sentencia <code>if</code> se finaliza con un carácter de dos-puntos (:) y la(s) línea(s) que van detrás de la sentencia if van indentadas<a href="https://es.py4e.com/html3/03-conditional#fn1"><sup>1</sup></a> (es decir, llevan una tabulación o varios espacios en blanco al principio).</p>
 <figure>
 <p><img alt="" src="../assets/PROG-U1-iF.png" />
-    <figcaption>Lógica del IF</figcaption></p>
+  </p>
+<figcaption>Lógica del IF</figcaption>
 </figure>
 <p>Si la condición lógica es verdadera, la sentencia indentada será ejecutada. Si la condición es falsa, la sentencia indentada será omitida.</p>
 <p>La sentencia <code>if</code> tiene la misma estructura que la definición de funciones o los bucles <code>for</code><a href="https://es.py4e.com/html3/03-conditional#fn2"><sup>2</sup></a>. La sentencia consiste en una línea de encabezado que termina con el carácter dos-puntos (:) seguido por un bloque indentado. Las sentencias de este tipo reciben el nombre de  <em>sentencias compuestas</em> , porque se extienden a lo largo de varias líneas.</p>
@@ -1280,9 +1281,9 @@
 </code></pre></div>
 <p>Si al dividir <code>x</code> por 2 obtenemos como resto 0, entonces sabemos que <code>x</code> es par, y el programa muestra un mensaje a tal efecto. Si esa condición es falsa, se ejecuta el segundo conjunto de sentencias.</p>
 <figure>
-<div class="highlight"><pre><span></span><code>![](assets/PROG-U1-IFELSE.png)
-&lt;figcaption&gt;Lógica del IF-then-Else&lt;/figcaption&gt;
-</code></pre></div>
+<p><img alt="" src="../assets/PROG-U1-IFELSE.png" />
+  </p>
+<figcaption>Lógica del IF-then-Else</figcaption>
 </figure>
 <p>Dado que la condición debe ser obligatoriamente verdadera o falsa, solamente una de las alternativas será ejecutada. Las alternativas reciben el nombre de  <em>ramas</em> , dado que se trata de ramificaciones en el flujo de la ejecución.</p>
 <h3 id="condicionales-encadenados">Condicionales encadenados<a class="headerlink" href="#condicionales-encadenados" title="Permanent link">&para;</a></h3>
@@ -1296,9 +1297,9 @@
 </code></pre></div>
 <p><code>elif</code> es una abreviatura para “else if”. En este caso también será ejecutada únicamente una de las ramas.</p>
 <figure>
-<div class="highlight"><pre><span></span><code>![](assets/PROG-U1-IFELSIF.png)
-&lt;figcaption&gt;Lógica del IF-then-Elif&lt;/figcaption&gt;
-</code></pre></div>
+<p><img alt="" src="../assets/PROG-U1-IFELSIF.png" />
+  </p>
+<figcaption>Lógica del IF-then-Elif</figcaption>
 </figure>
 <p>No hay un límite para el número de sentencias <code>elif</code>. Si hay una clausula <code>else</code>, debe ir al final, pero tampoco es obligatorio que ésta exista.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>if choice == &#39;a&#39;:
@@ -1321,9 +1322,9 @@
 </code></pre></div>
 <p>El condicional exterior contiene dos ramas. La primera rama ejecuta una sentencia simple. La segunda contiene otra sentencia <code>if</code>, que tiene a su vez sus propias dos ramas. Esas dos ramas son ambas sentencias simples, pero podrían haber sido sentencias condicionales también.</p>
 <figure>
-<div class="highlight"><pre><span></span><code>![](assets/PROG-U1-IFANIDADA.png)
-&lt;figcaption&gt;Lógica del IF anidados&lt;/figcaption&gt;
-</code></pre></div>
+<p><img alt="" src="../assets/PROG-U1-IFANIDADA.png" />
+  </p>
+<figcaption>Lógica del IF anidados</figcaption>
 </figure>
 <p>A pesar de que el indentado de las sentencias hace que la estructura esté clara, los <em>condicionales anidados</em> pueden volverse difíciles de leer rápidamente. En general, es buena idea evitarlos si se puede.</p>
 <p>Los operadores lógicos a menudo proporcionan un modo de simplificar las sentencias condicionales anidadas. Por ejemplo, el código siguiente puede ser reescrito usando un único condicional:</p>

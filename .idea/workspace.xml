@@ -410,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664312167963</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="EDES. 1.4 Condicionales, practica 3 e indice">
+      <created>1664312348140</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1664312348140</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -162,6 +162,7 @@ else:
   <figcaption>Lógica del IF-then-Elif</figcaption>
 </figure>
 
+
 No hay un límite para el número de sentencias `elif`. Si hay una clausula `else`, debe ir al final, pero tampoco es obligatorio que ésta exista.
 
 ```
@@ -195,6 +196,7 @@ El condicional exterior contiene dos ramas. La primera rama ejecuta una sentenci
   ![](assets/PROG-U1-IFANIDADA.png)
   <figcaption>Lógica del IF anidados</figcaption>
 </figure>
+
 
 A pesar de que el indentado de las sentencias hace que la estructura esté clara, los *condicionales anidados* pueden volverse difíciles de leer rápidamente. En general, es buena idea evitarlos si se puede.
 

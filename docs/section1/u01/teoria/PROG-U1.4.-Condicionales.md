@@ -136,10 +136,9 @@ else :
 Si al dividir `x` por 2 obtenemos como resto 0, entonces sabemos que `x` es par, y el programa muestra un mensaje a tal efecto. Si esa condición es falsa, se ejecuta el segundo conjunto de sentencias.
 
 <figure markdown>
-![](assets/PROG-U1-IFELSE.png)
+    ![](assets/PROG-U1-IFELSE.png)
     <figcaption>Lógica del IF-then-Else</figcaption>
 </figure>
-
 
 Dado que la condición debe ser obligatoriamente verdadera o falsa, solamente una de las alternativas será ejecutada. Las alternativas reciben el nombre de  *ramas* , dado que se trata de ramificaciones en el flujo de la ejecución.
 
@@ -159,10 +158,9 @@ else:
 `elif` es una abreviatura para “else if”. En este caso también será ejecutada únicamente una de las ramas.
 
 <figure markdown>
-![](assets/PROG-U1-IFELSIF.png)
+    ![](assets/PROG-U1-IFELSIF.png)
     <figcaption>Lógica del IF-then-Elif</figcaption>
 </figure>
-
 
 No hay un límite para el número de sentencias `elif`. Si hay una clausula `else`, debe ir al final, pero tampoco es obligatorio que ésta exista.
 
@@ -197,7 +195,6 @@ El condicional exterior contiene dos ramas. La primera rama ejecuta una sentenci
     ![](assets/PROG-U1-IFANIDADA.png)
     <figcaption>Lógica del IF anidados</figcaption>
 </figure>
-
 
 A pesar de que el indentado de las sentencias hace que la estructura esté clara, los *condicionales anidados* pueden volverse difíciles de leer rápidamente. En general, es buena idea evitarlos si se puede.
 

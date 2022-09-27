@@ -285,7 +285,7 @@ IndentationError: unexpected indent
 
 En este ejemplo, el problema es que la segunda línea está indentada por un espacio. Pero el mensaje de error apunta a `y`, lo cual resulta engañoso. En general, los mensajes de error indican dónde se ha descubierto el problema, pero el error real podría estar en el código previo, a veces en alguna línea anterior.
 
-Ocurre lo mismo con los errores en tiempo de ejecución (runtime errors). Supón que estás tratando de calcular una relación señal-ruido en decibelios. La fórmula es *S**N**R*~*d**b*~ = 10log ~10~ **(***P* ~*s**e**n**a**l*~ **/***P* ~*r**u**i**d**o*~ **)**. En Python, podrías escribir algo como esto:
+Ocurre lo mismo con los errores en tiempo de ejecución (runtime errors). Supón que estás tratando de calcular una relación señal-ruido en decibelios. La fórmula es SNR*~db~=10log ~10~ ( P~senal~ / P ~ruido~ ). En Python, podrías escribir algo como esto:
 
 ```
 import math

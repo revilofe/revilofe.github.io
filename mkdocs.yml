@@ -20,6 +20,7 @@ nav:
         - '1.2.-Practica con un lenguaje': 'section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes.md'
         - '1.3.-Tipos de datos': 'section1/u01/teoria/PROG-U1.3.-TiposDeDatos.md'
         - 'Práctica 2: Primeros programas': 'section1/u01/practica/PROG-U1.-Practica002.md'
+        - '1.4.-Sentencia condicionales': 'section1/u01/teoria/PROG-U1.4.-Condicionales.md'
         - 'Práctica 3: Sentencias condicionales ': 'section1/u01/practica/PROG-U1.-Practica003.md'
   - 'Entornos de desarrollo':
     - 'section3/index.md'

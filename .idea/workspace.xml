@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="EDES. 1.4 Condicionales, practica 3 e indice">
-      <change beforePath="$PROJECT_DIR$/docs/section1/u01/teoria/PROG-U1.4.-Condicionales.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/section1/u01/teoria/PROG-U1.4.-Condicionales.md" afterDir="false" />
+    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="PROG. Reorganización U2.1">
+      <changelist_data name="Edu" email="revilofe@gmail.com" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section1/u01/index2.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/section1/u02/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section1/u01/practica/PROG-U1.-Practica003.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/section1/u02/practica/PROG-U2.-Practica001.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section1/u01/teoria/PROG-U1.4.-Condicionales.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/section1/u02/teoria/PROG-U2.1.-Condicionales.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section1/u01/teoria/assets/PROG-U1-IFANIDADA.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/section1/u02/teoria/assets/PROG-U2-IFANIDADA.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section1/u01/teoria/assets/PROG-U1-IFELSE.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/section1/u02/teoria/assets/PROG-U2-IFELSE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section1/u01/teoria/assets/PROG-U1-IFELSIF.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/section1/u02/teoria/assets/PROG-U2-IFELSIF.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section1/u01/teoria/assets/PROG-U1-iF.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/section1/u02/teoria/assets/PROG-U2-iF.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +21,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="edu &lt;revilofe@gmail.com&gt;" />
+        <option value="Edu &lt;revilofe@gmail.com&gt;" />
       </list>
     </option>
     <option name="PUSH_TAGS">
@@ -23,7 +32,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ff9c42636fa155cd15e9854cf3f239d3e31e6481" />
+        <entry key="$PROJECT_DIR$" value="gh-pages" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,7 +66,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="17" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/section3/u01/teoria" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/section1" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -69,6 +78,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/section1" />
       <recent name="$PROJECT_DIR$/docs/section3/u01/teoria" />
     </key>
   </component>
@@ -101,6 +111,8 @@
       <workItem from="1662967926722" duration="16456000" />
       <workItem from="1663174156991" duration="9223000" />
       <workItem from="1663414661604" duration="4425000" />
+      <workItem from="1664347319225" duration="124000" />
+      <workItem from="1664347445734" duration="650000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Añadido revealjs&quot;&#10;&#10;This reverts commit 816d7e91">
       <created>1656924733819</created>
@@ -382,42 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663316331617</updated>
     </task>
-    <task id="LOCAL-00041" summary="EDES. 1.4 Condicionales, practica 3 e indice">
-      <created>1664311387743</created>
+    <task id="LOCAL-00041" summary="PROG. Reorganización U2.1">
+      <created>1664348094317</created>
       <option name="number" value="00041" />
       <option name="presentableId" value="LOCAL-00041" />
       <option name="project" value="LOCAL" />
-      <updated>1664311387743</updated>
+      <updated>1664348094317</updated>
     </task>
-    <task id="LOCAL-00042" summary="EDES. 1.4 Condicionales, practica 3 e indice">
-      <created>1664311397991</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1664311397991</updated>
-    </task>
-    <task id="LOCAL-00043" summary="EDES. 1.4 Condicionales, practica 3 e indice">
-      <created>1664312047179</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1664312047179</updated>
-    </task>
-    <task id="LOCAL-00044" summary="EDES. 1.4 Condicionales, practica 3 e indice">
-      <created>1664312167963</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1664312167963</updated>
-    </task>
-    <task id="LOCAL-00045" summary="EDES. 1.4 Condicionales, practica 3 e indice">
-      <created>1664312348140</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1664312348140</updated>
-    </task>
-    <option name="localTasksCounter" value="46" />
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,6 +429,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -472,8 +457,8 @@
     <MESSAGE value="Presentación de programación. Planificación" />
     <MESSAGE value="Presentación de programación. Corrección errores" />
     <MESSAGE value="Presentación de programación. Añadir formularios" />
-    <MESSAGE value="EDES. 1.4 Condicionales, practica 3 e indice" />
-    <option name="LAST_COMMIT_MESSAGE" value="EDES. 1.4 Condicionales, practica 3 e indice" />
+    <MESSAGE value="PROG. Reorganización U2.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="PROG. Reorganización U2.1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

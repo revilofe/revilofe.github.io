@@ -1,5 +1,5 @@
 ---
-title: "UD 1 - P3: Condicionales"
+title: "UD 2 - P1: Condicionales"
 description: Condicionales
 summary: Condicionales
 description: Condicionales
@@ -7,14 +7,14 @@ authors:
     - Eduardo Fdez
 date: 2022-09-18
 icon: material/software
-permalink: /prog/unidad1/p1.3
+permalink: /prog/unidad2/p2.1
 categories:
     - PROG
 tags:
     - Software
 ---
 
-## P3 - Ejercicios
+## P2.1 - Ejercicios
 
 #### **Ejercicio 1**
 

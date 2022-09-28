@@ -1,12 +1,12 @@
 ---
-title: "UD 1 - 1.4 Condicionales"
+title: "UD 2 - 2.1 Condicionales"
 description: Condicionales
 summary: Condicionales
 authors:
     - Eduardo Fdez
 date: 2022-09-18
 icon: material/software
-permalink: /prog/unidad1/1.4
+permalink: /prog/unidad2/2.1
 categories:
     - PROG
 tags:
@@ -81,7 +81,7 @@ if x > 0 :
 La expresión booleana después de la sentencia `if` recibe el nombre de  *condición* . La sentencia `if` se finaliza con un carácter de dos-puntos (:) y la(s) línea(s) que van detrás de la sentencia if van indentadas[^1^](https://es.py4e.com/html3/03-conditional#fn1) (es decir, llevan una tabulación o varios espacios en blanco al principio).
 
 <figure markdown>
-  ![](assets/PROG-U1-iF.png)
+  ![](assets/PROG-U2-iF.png)
   <figcaption>Lógica del IF</figcaption>
 </figure>
 
@@ -136,7 +136,7 @@ else :
 Si al dividir `x` por 2 obtenemos como resto 0, entonces sabemos que `x` es par, y el programa muestra un mensaje a tal efecto. Si esa condición es falsa, se ejecuta el segundo conjunto de sentencias.
 
 <figure markdown>
-  ![](assets/PROG-U1-IFELSE.png)
+  ![](assets/PROG-U2-IFELSE.png)
   <figcaption>Lógica del IF-then-Else</figcaption>
 </figure>
 
@@ -158,7 +158,7 @@ else:
 `elif` es una abreviatura para “else if”. En este caso también será ejecutada únicamente una de las ramas.
 
 <figure markdown>
-  ![](assets/PROG-U1-IFELSIF.png)
+  ![](assets/PROG-U2-IFELSIF.png)
   <figcaption>Lógica del IF-then-Elif</figcaption>
 </figure>
 
@@ -193,7 +193,7 @@ else:
 El condicional exterior contiene dos ramas. La primera rama ejecuta una sentencia simple. La segunda contiene otra sentencia `if`, que tiene a su vez sus propias dos ramas. Esas dos ramas son ambas sentencias simples, pero podrían haber sido sentencias condicionales también.
 
 <figure markdown>
-  ![](assets/PROG-U1-IFANIDADA.png)
+  ![](assets/PROG-U2-IFANIDADA.png)
   <figcaption>Lógica del IF anidados</figcaption>
 </figure>
 

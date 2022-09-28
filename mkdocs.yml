@@ -24,6 +24,7 @@ nav:
         - 'section1/u02/index.md'
         - '2.1.-Condicionales': 'section1/u02/teoria/PROG-U2.1.-Condicionales.md'
         - '* Práctica 2.1: Sentencias condicionales ': 'section1/u02/practica/PROG-U2.-Practica001.md'
+        - '2.2.-Iterativas y saltos': 'section1/u02/teoria/PROG-U2.2.-Iterativas.md'
   - 'Entornos de desarrollo':
     - 'section3/index.md'
     - 'U1: Introducción al desarrollo de software':

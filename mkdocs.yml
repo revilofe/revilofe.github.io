@@ -15,15 +15,15 @@ nav:
     - 'section1/index.md'
       - 'U1: Introducción al desarrollo de software':
           - 'section1/u01/index.md'
-          - '1.1.-Un programa': 'section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico.md'
-          - 'Práctica 1.1: Instala python': 'section1/u01/practica/PROG-U1.-Practica001.md'
-          - '1.2.-Practica con un lenguaje': 'section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes.md'
-          - '1.3.-Tipos de datos': 'section1/u01/teoria/PROG-U1.3.-TiposDeDatos.md'
-          - 'Práctica 1.2: Primeros programas': 'section1/u01/practica/PROG-U1.-Practica002.md'
-    - 'U2: Sentencias condicionales y repetitivas':
-        - 'section1/u02/index.md'
-        - '2.1.-Condicionales': 'section1/u02/teoria/PROG-U2.1.-Condicionales.md'
-        - 'Práctica 2.1: Sentencias condicionales ': 'section1/u02/practica/PROG-U2.-Practica001.md'
+            - '1.1.-Un programa': 'section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico.md'
+            - 'Práctica 1.1: Instala python': 'section1/u01/practica/PROG-U1.-Practica001.md'
+            - '1.2.-Practica con un lenguaje': 'section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes.md'
+            - '1.3.-Tipos de datos': 'section1/u01/teoria/PROG-U1.3.-TiposDeDatos.md'
+            - 'Práctica 1.2: Primeros programas': 'section1/u01/practica/PROG-U1.-Practica002.md'
+      - 'U2: Sentencias condicionales y repetitivas':
+          - 'section1/u02/index.md'
+            - '2.1.-Condicionales': 'section1/u02/teoria/PROG-U2.1.-Condicionales.md'
+            - 'Práctica 2.1: Sentencias condicionales ': 'section1/u02/practica/PROG-U2.-Practica001.md'
   - 'Entornos de desarrollo':
     - 'section3/index.md'
     - 'U1: Introducción al desarrollo de software':

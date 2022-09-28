@@ -1,12 +1,12 @@
 ---
-title: "UD 1 - Mi primer programa"
-description: Mi primer programa
-summary: Mi primer programa
+title: "UD 2 - Sentencias condicionales y repetitivas"
+description: Sentencias condicionales y repetitivas
+summary: Sentencias condicionales y repetitivas
 authors:
     - Eduardo Fdez
 date: 2022-09-17
 icon: material/security
-permalink: /prog/unidad1
+permalink: /prog/unidad2
 categories:
     - PROG
 tags:
@@ -29,30 +29,33 @@ Cada unidad contendrá una serie de contenidos, resultados de aprendizaje (desgl
 
 En esta sección se relaciona la unidad con el resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf).
 
-RA 1. Conoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.
+RA 3. Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.
 
 #### Criterios de evaluación
 
 En esta sección se relaciona la unidad con los criterios de evaluación concretos, del resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
 
-* a) Se han identificado los bloques que componen la estructura de un programa informático.
-* b) Se han creado proyectos de desarrollo de aplicaciones.
-* c) Se han utilizado entornos integrados de desarrollo.
-* d) Se han identificado los distintos tipos de variables y la utilidad específica de cada uno.
-* e) Se ha modificado el código de un programa para crear y utilizar variables.
-* f) Se han creado y utilizado constantes y literales.
-* g) Se han clasificado, reconocido y utilizado en expresiones los operadores del lenguaje.
-* h) Se ha comprobado el funcionamiento de las conversiones de tipos explícitas e implícitas.
-* i) Se han introducido comentarios en el código. 
+* a) Se ha escrito y probado código que haga uso de estructuras de selección.
+* b) Se han utilizado estructuras de repetición.
+* c) Se han utilizado estructuras de repetición.
+* d) Se han reconocido las posibilidades de las sentencias de salto.
+* e) Se ha escrito código utilizando control de excepciones.
+* f) Se han creado programas ejecutables utilizando diferentes estructuras de control.
+* g) Se han probado y depurado los programas.
+* h) Se ha comentado y documentado el código. 
 
 ### Contenidos
 
-La unidad se encuentra dentro del Bloque1
+La unidad se encuentra dentro del Bloque 1
 
 * U1: Mi primer programa. 
+* U2: Sentencias condicionales y repetitivas.
 
-En la Unidad 1 - Mi primer programa, veremos:
-* Que es un programa y un algoritmo.
-* Bloques principales de un programa.
-* Elementos básicos de un lenguaje.
-* Instalación de un IDE.
+En la Unidad 2, veremos:
+
+* Estructuras de selección.
+* Estructuras de repetición.
+* Estructuras de salto.
+* Control de excepciones.
+* Depuración de programas, mediante el depurador como herramienta de control de errores.
+* Documentación de programas.

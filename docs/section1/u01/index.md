@@ -49,9 +49,10 @@ En esta sección se relaciona la unidad con los criterios de evaluación concret
 
 La unidad se encuentra dentro del Bloque1
 
-* U1: Mi primer programa. 
+* U1: Mi primer programa.
+* U2: Sentencias condicionales y repetitivas.
 
-En la Unidad 1 - Mi primer programa, veremos:
+En la Unidad 1, veremos:
 * Que es un programa y un algoritmo.
 * Bloques principales de un programa.
 * Elementos básicos de un lenguaje.

@@ -18,7 +18,7 @@ tags:
 
 Una *expresión booleana* es aquella que puede ser verdadera (`True`) o falsa (`False`). Los ejemplos siguientes usan el operador `==`, que compara dos operandos y devuelve `True` si son iguales y `False` en caso contrario:
 
-```
+```python
 >>> 5 == 5
 True
 >>> 5 == 6
@@ -27,7 +27,7 @@ False
 
 `True` y `False` son valores especiales que pertenecen al tipo `bool (booleano)`; no son cadenas:
 
-```
+```python
 >>> type(True)
 <class 'bool'>
 >>> type(False)
@@ -62,7 +62,7 @@ Finalmente, el operador `not` niega una expresión booleana, de modo que `not (x
 
 Estrictamente hablando, los operandos de los operadores lógicos deberían ser expresiones booleanas, pero Python no es muy estricto. Cualquier número distinto de cero se interpreta como “verdadero.”
 
-```
+```python
 >>> 17 and True
 True
 ```
@@ -73,7 +73,7 @@ Esta flexibilidad puede ser útil, pero existen ciertas sutilezas en ese tipo de
 
 Para poder escribir programas útiles, casi siempre vamos a necesitar la capacidad de comprobar condiciones y cambiar el comportamiento del programa de acuerdo a ellas. Las `sentencias condicionales` nos proporcionan esa capacidad. La forma más sencilla es la sentencia `if`:
 
-```
+```python
 if x > 0 :
     print('x es positivo')
 ```
@@ -91,7 +91,7 @@ La sentencia `if` tiene la misma estructura que la definición de funciones o lo
 
 No hay límite en el número de sentencias que pueden aparecer en el cuerpo, pero debe haber al menos una. Ocasionalmente, puede resultar útil tener un cuerpo sin sentencias (normalmente como emplazamiento reservado para código que no se ha escrito aún). En ese caso, se puede usar la sentencia `pass`, que no hace nada.
 
-```
+```python
 if x < 0 :
     pass          # ¡necesito gestionar los valores negativos!
 ```
@@ -109,7 +109,7 @@ Pequeño
 
 Al usar el intérprete de Python, debe dejar una línea en blanco al final de un bloque, de lo contrario Python devolverá un error:
 
-```
+```python
 >>> x = 3
 >>> if x < 10:
 ...    print('Pequeño')
@@ -126,7 +126,7 @@ No es necesaria una línea en blanco al final de un bloque de instrucciones al e
 
 La segunda forma de la sentencia `if` es la  *ejecución alternativa* , en la cual existen dos posibilidades y la condición determina cual de ellas será ejecutada. La sintaxis es similar a ésta:
 
-```
+```python
 if x%2 == 0 :
     print('x es par')
 else :
@@ -146,7 +146,7 @@ Dado que la condición debe ser obligatoriamente verdadera o falsa, solamente un
 
 Algunas veces hay más de dos posibilidades, de modo que necesitamos más de dos ramas. Una forma de expresar una operación como ésa es usar un  *condicional encadenado* :
 
-```
+```python
 if x < y:
     print('x es menor que y')
 elif x > y:
@@ -165,7 +165,7 @@ else:
 
 No hay un límite para el número de sentencias `elif`. Si hay una clausula `else`, debe ir al final, pero tampoco es obligatorio que ésta exista.
 
-```
+```python
 if choice == 'a':
     print('Respuesta incorrecta')
 elif choice == 'b':
@@ -180,7 +180,7 @@ Cada condición es comprobada en orden. Si la primera es falsa, se comprueba la 
 
 Un condicional puede también estar anidado dentro de otro. Podríamos haber escrito el ejemplo anterior de las tres ramas de este modo:
 
-```
+```python
 if x == y:
     print('x e y son iguales')
 else:
@@ -202,7 +202,7 @@ A pesar de que el indentado de las sentencias hace que la estructura esté clara
 
 Los operadores lógicos a menudo proporcionan un modo de simplificar las sentencias condicionales anidadas. Por ejemplo, el código siguiente puede ser reescrito usando un único condicional:
 
-```
+```python
 if 0 < x:
     if x < 10:
         print('x es un número positivo con un sólo dígito')
@@ -210,7 +210,7 @@ if 0 < x:
 
 La sentencia `print` se ejecuta solamente si se cumplen las dos condiciones anteriores, así que en realidad podemos conseguir el mismo efecto con el operador `and`:
 
-```
+```python
 if 0 < x and x < 10:
     print('x es un número positivo con un sólo dígito.')
 ```
@@ -223,7 +223,7 @@ Cuando Python detecta que no se gana nada evaluando el resto de una expresión l
 
 A pesar de que esto pueda parecer hilar demasiado fino, el funcionamiento en cortocircuito nos descubre una ingeniosa técnica conocida como  *patrón guardián* . Examina la siguiente secuencia de código en el intérprete de Python:
 
-```
+```python
 >>> x = 6
 >>> y = 2
 >>> x >= 2 and (x/y) > 2
@@ -245,7 +245,7 @@ La tercera operación ha fallado porque Python intentó evaluar `(x/y)` e `y` er
 
 Es posible construir las expresiones lógicas colocando estratégicamente una evaluación como *guardián* justo antes de la evaluación que podría causar un error, como se muestra a continuación:
 
-```
+```python
 >>> x = 1
 >>> y = 0
 >>> x >= 2 and y != 0 and (x/y) > 2
@@ -276,7 +276,7 @@ Los “traceback” que Python muestra cuando se produce un error contienen un m
 
 Los errores de sintaxis (syntax errors), normalmente son fáciles de localizar, pero a veces tienen trampa. Los errores debido a espacios en blanco pueden ser complicados, ya que los espacios y las tabulaciones son invisibles, y solemos ignorarlos.
 
-```
+```python
 >>> x = 5
 >>>  y = 6
   File "<stdin>", line 1
@@ -289,7 +289,7 @@ En este ejemplo, el problema es que la segunda línea está indentada por un esp
 
 Ocurre lo mismo con los errores en tiempo de ejecución (runtime errors). Supón que estás tratando de calcular una relación señal-ruido en decibelios. La fórmula es SNR*~db~=10log ~10~ ( P~senal~ / P ~ruido~ ). En Python, podrías escribir algo como esto:
 
-```
+```python
 import math
 int_senal = 9
 int_ruido = 10
@@ -302,7 +302,7 @@ print(decibelios)
 
 Pero cuando lo haces funcionar, obtienes un mensaje de error[^3^](https://es.py4e.com/html3/03-conditional#fn3):
 
-```
+```python
     Traceback (most recent call last):
       File "snr.py", line 5, in ?
         decibelios = 10 * math.log10(relacion)

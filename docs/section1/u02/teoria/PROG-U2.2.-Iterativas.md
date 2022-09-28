@@ -18,7 +18,7 @@ tags:
 
 Uno de los usos habituales de las sentencias de asignación consiste en realizar una actualización sobre una variable – en la cual el valor nuevo de esa variable depende del antiguo.
 
-```
+```python
 x = x + 1
 ```
 
@@ -26,14 +26,14 @@ Esto quiere decir “toma el valor actual de `x`, añádele 1, y luego actualiza
 
 Si intentas actualizar una variable que no existe, obtendrás un error, ya que Python evalúa el lado derecho antes de asignar el valor a `x`:
 
-```
+```python
 >>> x = x + 1
 NameError: name 'x' is not defined
 ```
 
 Antes de que puedas actualizar una variable, debes  *inicializarla*, normalmente mediante una simple asignación:
 
-```
+```python
 >>> x = 0
 >>> x = x + 1
 ```
@@ -46,7 +46,7 @@ Los PCs se suelen utilizar a menudo para automatizar tareas repetitivas. Repetir
 
 Una forma de iteración en Python es la sentencia `while`. He aquí un programa sencillo que cuenta hacia atrás desde cinco y luego dice “¡Despegue!”.
 
-```
+```python
 n = 5
 while n > 0:
     print(n)
@@ -66,7 +66,6 @@ Este tipo de flujo recibe el nombre de *bucle*, ya que el tercer paso enlaza de 
 
 El cuerpo del bucle debe cambiar el valor de una o más variables, de modo que la condición pueda en algún momento evaluarse como falsa y el bucle termine. La variable que cambia cada vez que el bucle se ejecuta y controla cuándo termina éste, recibe el nombre de *variable de iteración*. Si no hay variable de iteración, el bucle se repetirá para siempre, resultando así un *bucle infinito*.
 
-
 ### Bucles infinitos
 
 Una fuente de diversión sin fin para los programadores es la constatación de que las instrucciones del champú: “Enjabone, aclare, repita”, son un bucle infinito, ya que no hay una *variable de iteración* que diga cuántas veces debe ejecutarse el proceso.
@@ -79,7 +78,7 @@ A veces no se sabe si hay que terminar un bucle hasta que se ha recorrido la mit
 
 El bucle siguiente es, obviamente, un *bucle infinito*, porque la expresión lógica de la sentencia `while` es simplemente la constante lógica `True (verdadero)`;
 
-```
+```python
 n = 10
 while True:
     print(n, end=' ')
@@ -93,7 +92,7 @@ A pesar de que en este caso se trata de un bucle infinito inútil, se puede usar
 
 Por ejemplo, supón que quieres recoger entradas de texto del usuario hasta que éste escriba `fin`. Podrías escribir:
 
-```
+```python
 while True:
     linea = input('> ')
     if linea == 'fin':
@@ -108,7 +107,7 @@ La condición del bucle es `True`, lo cual es verdadero siempre, así que el buc
 
 Cada vez que se entre en el bucle, se pedirá una entrada al usuario. Si el usuario escribe `fin`, la sentencia `break` hará que se salga del bucle. En cualquier otro caso, el programa repetirá cualquier cosa que el usuario escriba y volverá al principio del bucle. Éste es un ejemplo de su funcionamiento:
 
-```
+```python
 > hola a todos
 hola a todos
 > he terminado
@@ -125,7 +124,7 @@ Algunas veces, estando dentro de un bucle se necesita terminar con la iteración
 
 A continuación se muestra un ejemplo de un bucle que repite lo que recibe como entrada hasta que el usuario escribe “fin”, pero trata las líneas que empiezan por el carácter almohadilla como líneas que no deben mostrarse en pantalla (algo parecido a lo que hace Python con los comentarios).
 
-```
+```python
 while True:
     linea = input('> ')
     if linea[0] == '#' :
@@ -140,7 +139,7 @@ print('¡Terminado!')
 
 He aquí una ejecución de ejemplo de ese nuevo programa con la sentencia `continue` añadida.
 
-```
+```python
 > hola a todos
 hola a todos
 > # no imprimas esto
@@ -154,14 +153,13 @@ Todas las líneas se imprimen en pantalla, excepto la que comienza con el símbo
 
 > ¿Cómo lo harías sin usar `while True:`, `break`, `continue`?
 
-
 ### Bucles definidos usando `for`
 
 A veces se desea repetir un bucle a través de un *conjunto* de cosas, como una lista de palabras, las líneas de un archivo, o una lista de números. Cuando se tiene una lista de cosas para recorrer, se puede construir un bucle *definido* usando una sentencia `for`. A la sentencia `while` se la llama un bucle  *indefinido*, porque simplemente se repite hasta que cierta condición se hace `Falsa`, mientras que el bucle `for` se repite a través de un conjunto conocido de elementos, de modo que ejecuta tantas iteraciones como elementos hay en el conjunto.
 
 La sintaxis de un bucle `for` es similar a la del bucle `while`, en ella hay una sentencia `for` y un cuerpo que se repite:
 
-```
+```python
 amigos = ['Joseph', 'Glenn', 'Sally']
 for amigo in amigos:
     print('Feliz año nuevo:', amigo)
@@ -170,7 +168,7 @@ print('¡Terminado!')
 
 En términos de Python, la variable `amigos` es una lista[^1^](https://es.py4e.com/html3/05-iterations#fn1) de tres cadenas y el bucle `for` se mueve recorriendo la lista y ejecuta su cuerpo una vez para cada una de las tres cadenas en la lista, produciendo esta salida:
 
-```
+```python
 Feliz año nuevo: Joseph
 Feliz año nuevo: Glenn
 Feliz año nuevo: Sally
@@ -181,12 +179,24 @@ La traducción de este bucle `for` al español no es tan directa como en el caso
 
 Revisando el bucle `for`, *for* e *in* son palabras reservadas de Python, mientras que `amigo` y `amigos` son variables.
 
-```
+```python
 for amigo in amigos:
     print('Feliz año nuevo::', amigo)
 ```
 
 En concreto, `amigo` es la *variable de iteración* para el bucle `for`. La variable `amigo` cambia para cada iteración del bucle y controla cuándo se termina el bucle `for`. La *variable de iteracion* se desplaza sucesivamente a través de las tres cadenas almacenadas en la variable `amigos`.
+
+Otra forma de usar los bucles `for` es haciendo uso de la instrucción `range`:
+
+* `range(fin)` : Genera una secuencia de números enteros desde 0 hasta `fin-1`.
+* `range(inicio, fin, salto)` : Genera una secuencia de números enteros desde `inicio` hasta `fin-1` con un incremento de `salto`.
+
+```python
+>>> for i in range(1, 10, 2):
+...     print(i, end=", ")
+...
+1, 3, 5, 7, 9, >>>
+```
 
 ### Diseños de bucles
 

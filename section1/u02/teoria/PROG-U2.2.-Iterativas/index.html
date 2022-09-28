@@ -1443,7 +1443,7 @@
 <p>Uno de los usos habituales de las sentencias de asignación consiste en realizar una actualización sobre una variable – en la cual el valor nuevo de esa variable depende del antiguo.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>x = x + 1
 </code></pre></div>
-<p>Esto quiere decir <em>toma el valor actual de <code>x</code>, añádele 1, y luego actualiza <code>x</code> con el nuevo valor</em>.</p>
+<p>Esto quiere decir “toma el valor actual de <code>x</code>, añádele 1, y luego actualiza <code>x</code> con el nuevo valor”.</p>
 <p>Si intentas actualizar una variable que no existe, obtendrás un error, ya que Python evalúa el lado derecho antes de asignar el valor a <code>x</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&gt;&gt;&gt; x = x + 1
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>NameError: name &#39;x&#39; is not defined
@@ -1535,7 +1535,7 @@
 <p>¿Cómo lo harías sin usar <code>while True:</code>, <code>break</code>, <code>continue</code>?</p>
 </blockquote>
 <h3 id="bucles-definidos-usando-for">Bucles definidos usando <code>for</code><a class="headerlink" href="#bucles-definidos-usando-for" title="Permanent link">&para;</a></h3>
-<p>A veces se desea repetir un bucle a través de un <em>conjunto</em> de cosas, como una lista de palabras, las líneas de un archivo, o una lista de números. Cuando se tiene una lista de cosas para recorrer, se puede construir un bucle <em>definido</em> usando una sentencia <code>for</code>. A la sentencia <code>while</code> se la llama un bucle  <em>indefinido</em> , porque simplemente se repite hasta que cierta condición se hace <code>Falsa</code>, mientras que el bucle <code>for</code> se repite a través de un conjunto conocido de elementos, de modo que ejecuta tantas iteraciones como elementos hay en el conjunto.</p>
+<p>A veces se desea repetir un bucle a través de un <em>conjunto</em> de cosas, como una lista de palabras, las líneas de un archivo, o una lista de números. Cuando se tiene una lista de cosas para recorrer, se puede construir un bucle <em>definido</em> usando una sentencia <code>for</code>. A la sentencia <code>while</code> se la llama un bucle  <em>indefinido</em>, porque simplemente se repite hasta que cierta condición se hace <code>Falsa</code>, mientras que el bucle <code>for</code> se repite a través de un conjunto conocido de elementos, de modo que ejecuta tantas iteraciones como elementos hay en el conjunto.</p>
 <p>La sintaxis de un bucle <code>for</code> es similar a la del bucle <code>while</code>, en ella hay una sentencia <code>for</code> y un cuerpo que se repite:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>amigos = [&#39;Joseph&#39;, &#39;Glenn&#39;, &#39;Sally&#39;]
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>for amigo in amigos:
@@ -1548,12 +1548,12 @@
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>Feliz año nuevo: Sally
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>¡Terminado!
 </code></pre></div>
-<p>La traducción de este bucle <code>for</code> al español no es tan directa como en el caso del <code>while</code>, pero si piensas en los amigos como un  <em>conjunto</em> , sería algo así como: “Ejecuta las sentencias en el cuerpo del bucle una vez <em>para (for)</em> cada amigo que esté <em>en (in)</em> el conjunto llamado amigos.”</p>
+<p>La traducción de este bucle <code>for</code> al español no es tan directa como en el caso del <code>while</code>, pero si piensas en los amigos como un <em>conjunto</em>, sería algo así como: “Ejecuta las sentencias en el cuerpo del bucle una vez <em>para (for)</em> cada amigo que esté <em>en (in)</em> el conjunto llamado amigos.”</p>
 <p>Revisando el bucle <code>for</code>, <em>for</em> e <em>in</em> son palabras reservadas de Python, mientras que <code>amigo</code> y <code>amigos</code> son variables.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>for amigo in amigos:
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    print(&#39;Feliz año nuevo::&#39;, amigo)
 </code></pre></div>
-<p>En concreto, <code>amigo</code> es la <em>variable de iteración</em> para el bucle for. La variable <code>amigo</code> cambia para cada iteración del bucle y controla cuándo se termina el bucle <code>for</code>. La <em>variable de iteracion</em> se desplaza sucesivamente a través de las tres cadenas almacenadas en la variable <code>amigos</code>.</p>
+<p>En concreto, <code>amigo</code> es la <em>variable de iteración</em> para el bucle <code>for</code>. La variable <code>amigo</code> cambia para cada iteración del bucle y controla cuándo se termina el bucle <code>for</code>. La <em>variable de iteracion</em> se desplaza sucesivamente a través de las tres cadenas almacenadas en la variable <code>amigos</code>.</p>
 <h3 id="disenos-de-bucles">Diseños de bucles<a class="headerlink" href="#disenos-de-bucles" title="Permanent link">&para;</a></h3>
 <p>A menudo se usa un bucle <code>for</code> o <code>while</code> para movernos a través de una lista de elementos o el contenido de un archivo y se busca algo, como el valor más grande o el más pequeño de los datos que estamos revisando.</p>
 <p>Los bucles generalmente se construyen así:</p>
@@ -1570,7 +1570,7 @@
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    contador = contador + 1
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>print(&#39;Num. elementos: &#39;, contador)
 </code></pre></div>
-<p>Ajustamos la variable <code>contador</code> a cero antes de que el bucle comience, después escribimos un bucle <code>for</code> para movernos a través de la lista de números. Nuestra variable de <em>iteración</em> se llama <code>valor</code>, y dado que no usamos <code>valor</code> dentro del bucle, lo único que hace es controlar el bucle y hacer que el cuerpo del mismo sea ejecutado una vez para cada uno de los valores de la lista.</p>
+<p>Ajustamos la variable <code>contador</code> a cero antes de que el bucle comience, después escribimos un bucle <code>for</code> para movernos a través de la lista de números. Nuestra <em>variable de iteración</em> se llama <code>valor</code>, y dado que no usamos <code>valor</code> dentro del bucle, lo único que hace es controlar el bucle y hacer que el cuerpo del mismo sea ejecutado una vez para cada uno de los valores de la lista.</p>
 <p>En el cuerpo del bucle, añadimos 1 al valor actual de <code>contador</code> para cada uno de los valores de la lista. Mientras el bucle se está ejecutando, el valor de <code>contador</code> es la cantidad de valores que se hayan visto “hasta ese momento”.</p>
 <p>Una vez el bucle se completa, el valor de <code>contador</code> es el número total de elementos. El número total “cae en nuestro poder” al final del bucle. Se construye el bucle de modo que obtengamos lo que queremos cuando éste termina.</p>
 <p>Otro bucle similar, que calcula el total de un conjunto de números, se muestra a continuación:</p>
@@ -1579,8 +1579,8 @@
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    total = total + valor
 <a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>print(&#39;Total: &#39;, total)
 </code></pre></div>
-<p>En este bucle, <em>sí</em> utilizamos la  <em>variable de iteración</em> . En vez de añadir simplemente uno a <code>contador</code> como en el bucle previo, ahora durante cada iteración del bucle añadimos el número actual (3, 41, 12, etc.) al total en ese momento. Si piensas en la variable <code>total</code>, ésta contiene la “suma parcial de valores hasta ese momento”. Así que antes de que el bucle comience, <code>total</code> es cero, porque aún no se ha examinado ningún valor. Durante el bucle, <code>total</code> es la suma parcial, y al final del bucle, <code>total</code> es la suma total definitiva de todos los valores de la lista.</p>
-<p>Cuando el bucle se ejecuta, <code>total</code> acumula la suma de los elementos; una variable que se usa de este modo recibe a veces el nombre de  <em>acumulador</em> .</p>
+<p>En este bucle, <em>sí</em> utilizamos la <em>variable de iteración</em>. En vez de añadir simplemente uno a <code>contador</code> como en el bucle previo, ahora durante cada iteración del bucle añadimos el número actual (3, 41, 12, etc.) al total en ese momento. Si piensas en la variable <code>total</code>, ésta contiene la “suma parcial de valores hasta ese momento”. Así que antes de que el bucle comience, <code>total</code> es cero, porque aún no se ha examinado ningún valor. Durante el bucle, <code>total</code> es la suma parcial, y al final del bucle, <code>total</code> es la suma total definitiva de todos los valores de la lista.</p>
+<p>Cuando el bucle se ejecuta, <code>total</code> acumula la suma de los elementos; una variable que se usa de este modo recibe a veces el nombre de <em>acumulador</em>.</p>
 <p>Ni el bucle que cuenta los elementos ni el que los suma resultan particularmente útiles en la práctica, dado que existen las funciones internas <code>len()</code> y <code>sum()</code> que cuentan el número de elementos de una lista y el total de elementos en la misma respectivamente.</p>
 <h4 id="bucles-de-maximos-y-minimos">Bucles de máximos y mínimos<a class="headerlink" href="#bucles-de-maximos-y-minimos" title="Permanent link">&para;</a></h4>
 <p>Para encontrar el valor mayor de una lista o secuencia, construimos el bucle siguiente:</p>
@@ -1626,7 +1626,7 @@
 </code></pre></div>
 <p>En esta versión de la función para calcular el mínimo, hemos eliminado las sentencias <code>print</code>, de modo que sea equivalente a la función <code>min</code>, que ya está incorporada dentro de Python.</p>
 <h3 id="depuracion">Depuración<a class="headerlink" href="#depuracion" title="Permanent link">&para;</a></h3>
-<p>A medida que vayas escribiendo programas más grandes, puede que notes que vas necesitando emplear cada vez más tiempo en depurarlos. Más código significa más oportunidades de cometer un error y más lugares donde los bugs pueden esconderse.</p>
+<p>A medida que vayas escribiendo programas más grandes, puede que notes que vas necesitando emplear cada vez más tiempo en depurarlos. Más código significa más oportunidades de cometer un error y más lugares donde los <strong>bugs</strong> pueden esconderse.</p>
 <p>Un método para acortar el tiempo de depuración es “depurar por bisección”. Por ejemplo, si hay 100 líneas en tu programa y las compruebas de una en una, te llevará 100 pasos.</p>
 <p>En lugar de eso, intenta partir el problema por la mitad. Busca en medio del programa, o cerca de ahí, un valor intermedio que puedas comprobar. Añade una sentencia <code>print</code> (o alguna otra cosa que tenga un efecto verificable), y haz funcionar el programa.</p>
 <p>Si en el punto medio la verificación es incorrecta, el problema debería estar en la primera mitad del programa. Si ésta es correcta, el problema estará en la segunda mitad.</p>

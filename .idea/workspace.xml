@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="EDES. 1.4 Condicionales, practica 3 e indice">
-      <change beforePath="$PROJECT_DIR$/docs/section1/u01/teoria/PROG-U1.4.-Condicionales.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/section1/u01/teoria/PROG-U1.4.-Condicionales.md" afterDir="false" />
-    </list>
+    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="indice" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="edu &lt;revilofe@gmail.com&gt;" />
-      </list>
-    </option>
     <option name="PUSH_TAGS">
       <GitPushTagMode>
         <option name="argument" value="--tags" />
@@ -23,7 +16,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ff9c42636fa155cd15e9854cf3f239d3e31e6481" />
+        <entry key="$PROJECT_DIR$" value="gh-pages" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -101,6 +94,7 @@
       <workItem from="1662967926722" duration="16456000" />
       <workItem from="1663174156991" duration="9223000" />
       <workItem from="1663414661604" duration="4425000" />
+      <workItem from="1664347319225" duration="124000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Añadido revealjs&quot;&#10;&#10;This reverts commit 816d7e91">
       <created>1656924733819</created>
@@ -382,42 +376,7 @@
       <option name="project" value="LOCAL" />
       <updated>1663316331617</updated>
     </task>
-    <task id="LOCAL-00041" summary="EDES. 1.4 Condicionales, practica 3 e indice">
-      <created>1664311387743</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1664311387743</updated>
-    </task>
-    <task id="LOCAL-00042" summary="EDES. 1.4 Condicionales, practica 3 e indice">
-      <created>1664311397991</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1664311397991</updated>
-    </task>
-    <task id="LOCAL-00043" summary="EDES. 1.4 Condicionales, practica 3 e indice">
-      <created>1664312047179</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1664312047179</updated>
-    </task>
-    <task id="LOCAL-00044" summary="EDES. 1.4 Condicionales, practica 3 e indice">
-      <created>1664312167963</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1664312167963</updated>
-    </task>
-    <task id="LOCAL-00045" summary="EDES. 1.4 Condicionales, practica 3 e indice">
-      <created>1664312348140</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1664312348140</updated>
-    </task>
-    <option name="localTasksCounter" value="46" />
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,9 +404,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Revert &quot;Deployed f651645 with MkDocs version: 1.3.0&quot;" />
     <MESSAGE value="Logo y FavIcon" />
     <MESSAGE value="Logo y FavIcon +" />
     <MESSAGE value="workspace.xml idea" />
@@ -472,8 +433,7 @@
     <MESSAGE value="Presentación de programación. Planificación" />
     <MESSAGE value="Presentación de programación. Corrección errores" />
     <MESSAGE value="Presentación de programación. Añadir formularios" />
-    <MESSAGE value="EDES. 1.4 Condicionales, practica 3 e indice" />
-    <option name="LAST_COMMIT_MESSAGE" value="EDES. 1.4 Condicionales, practica 3 e indice" />
+    <option name="LAST_COMMIT_MESSAGE" value="Presentación de programación. Añadir formularios" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

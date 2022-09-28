@@ -1401,16 +1401,16 @@
 <h2 id="sentencias-condicionales">Sentencias Condicionales<a class="headerlink" href="#sentencias-condicionales" title="Permanent link">&para;</a></h2>
 <h3 id="expresiones-booleanas">Expresiones booleanas<a class="headerlink" href="#expresiones-booleanas" title="Permanent link">&para;</a></h3>
 <p>Una <em>expresión booleana</em> es aquella que puede ser verdadera (<code>True</code>) o falsa (<code>False</code>). Los ejemplos siguientes usan el operador <code>==</code>, que compara dos operandos y devuelve <code>True</code> si son iguales y <code>False</code> en caso contrario:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&gt;&gt;&gt; 5 == 5
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>True
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&gt;&gt;&gt; 5 == 6
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>False
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">5</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kc">True</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">6</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kc">False</span>
 </code></pre></div>
 <p><code>True</code> y <code>False</code> son valores especiales que pertenecen al tipo <code>bool (booleano)</code>; no son cadenas:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&gt;&gt;&gt; type(True)
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&lt;class &#39;bool&#39;&gt;
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&gt;&gt;&gt; type(False)
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>&lt;class &#39;bool&#39;&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">bool</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">bool</span><span class="s1">&#39;&gt;</span>
 </code></pre></div>
 <p>El operador <code>==</code> es uno de los  <em>operadores de comparación</em> ; los demás son:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>x != y               # x es distinto de y
@@ -1429,14 +1429,14 @@
 <p><code>n%2 == 0 or n%3 == 0</code> es verdadero si <em>cualquiera</em> de las condiciones es verdadera, es decir, si el número es divisible por 2 <em>o</em> por 3.</p>
 <p>Finalmente, el operador <code>not</code> niega una expresión booleana, de modo que <code>not (x &gt; y)</code> es verdadero si <code>x &gt; y</code> es falso; es decir, si <code>x</code> es menor o igual que <code>y</code>.</p>
 <p>Estrictamente hablando, los operandos de los operadores lógicos deberían ser expresiones booleanas, pero Python no es muy estricto. Cualquier número distinto de cero se interpreta como “verdadero.”</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&gt;&gt;&gt; 17 and True
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>True
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">17</span> <span class="ow">and</span> <span class="kc">True</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kc">True</span>
 </code></pre></div>
 <p>Esta flexibilidad puede ser útil, pero existen ciertas sutilezas en ese tipo de uso que pueden resultar confusas. Es posible que prefieras evitar usarlo de este modo hasta que estés bien seguro de lo que estás haciendo.</p>
 <h3 id="ejecucion-condicional">Ejecución condicional<a class="headerlink" href="#ejecucion-condicional" title="Permanent link">&para;</a></h3>
 <p>Para poder escribir programas útiles, casi siempre vamos a necesitar la capacidad de comprobar condiciones y cambiar el comportamiento del programa de acuerdo a ellas. Las <code>sentencias condicionales</code> nos proporcionan esa capacidad. La forma más sencilla es la sentencia <code>if</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>if x &gt; 0 :
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    print(&#39;x es positivo&#39;)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x es positivo&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>La expresión booleana después de la sentencia <code>if</code> recibe el nombre de  <em>condición</em> . La sentencia <code>if</code> se finaliza con un carácter de dos-puntos (:) y la(s) línea(s) que van detrás de la sentencia if van indentadas<a href="https://es.py4e.com/html3/03-conditional#fn1"><sup>1</sup></a> (es decir, llevan una tabulación o varios espacios en blanco al principio).</p>
 <figure>
@@ -1447,8 +1447,8 @@
 <p>Si la condición lógica es verdadera, la sentencia indentada será ejecutada. Si la condición es falsa, la sentencia indentada será omitida.</p>
 <p>La sentencia <code>if</code> tiene la misma estructura que la definición de funciones o los bucles <code>for</code><a href="https://es.py4e.com/html3/03-conditional#fn2"><sup>2</sup></a>. La sentencia consiste en una línea de encabezado que termina con el carácter dos-puntos (:) seguido por un bloque indentado. Las sentencias de este tipo reciben el nombre de  <em>sentencias compuestas</em> , porque se extienden a lo largo de varias líneas.</p>
 <p>No hay límite en el número de sentencias que pueden aparecer en el cuerpo, pero debe haber al menos una. Ocasionalmente, puede resultar útil tener un cuerpo sin sentencias (normalmente como emplazamiento reservado para código que no se ha escrito aún). En ese caso, se puede usar la sentencia <code>pass</code>, que no hace nada.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>if x &lt; 0 :
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    pass          # ¡necesito gestionar los valores negativos!
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">:</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="k">pass</span>          <span class="c1"># ¡necesito gestionar los valores negativos!</span>
 </code></pre></div>
 <p>Si introduces una sentencia <code>if</code> en el intérprete de Python, el prompt cambiará su aspecto habitual por puntos suspensivos, para indicar que estás en medio de un bloque de sentencias, como se muestra a continuación:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>&gt;&gt;&gt; x = 3
@@ -1459,22 +1459,22 @@
 <a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>&gt;&gt;&gt;
 </code></pre></div>
 <p>Al usar el intérprete de Python, debe dejar una línea en blanco al final de un bloque, de lo contrario Python devolverá un error:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&gt;&gt;&gt; x = 3
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>&gt;&gt;&gt; if x &lt; 10:
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>...    print(&#39;Pequeño&#39;)
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>... print(&#39;Hecho&#39;)
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  File &quot;&lt;stdin&gt;&quot;, line 3
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    print(&#39;Hecho&#39;)
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>        ^
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>SyntaxError: invalid syntax
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="o">...</span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Pequeño&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="o">...</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hecho&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">3</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hecho&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>        <span class="o">^</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
 </code></pre></div>
 <p>No es necesaria una línea en blanco al final de un bloque de instrucciones al escribir y ejecutar un script, pero puede mejorar la legibilidad de su código.</p>
 <h3 id="ejecucion-alternativa">Ejecución alternativa<a class="headerlink" href="#ejecucion-alternativa" title="Permanent link">&para;</a></h3>
 <p>La segunda forma de la sentencia <code>if</code> es la  <em>ejecución alternativa</em> , en la cual existen dos posibilidades y la condición determina cual de ellas será ejecutada. La sintaxis es similar a ésta:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>if x%2 == 0 :
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    print(&#39;x es par&#39;)
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>else :
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    print(&#39;x es impar&#39;)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x es par&#39;</span><span class="p">)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">else</span> <span class="p">:</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x es impar&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>Si al dividir <code>x</code> por 2 obtenemos como resto 0, entonces sabemos que <code>x</code> es par, y el programa muestra un mensaje a tal efecto. Si esa condición es falsa, se ejecuta el segundo conjunto de sentencias.</p>
 <figure>
@@ -1485,12 +1485,12 @@
 <p>Dado que la condición debe ser obligatoriamente verdadera o falsa, solamente una de las alternativas será ejecutada. Las alternativas reciben el nombre de  <em>ramas</em> , dado que se trata de ramificaciones en el flujo de la ejecución.</p>
 <h3 id="condicionales-encadenados">Condicionales encadenados<a class="headerlink" href="#condicionales-encadenados" title="Permanent link">&para;</a></h3>
 <p>Algunas veces hay más de dos posibilidades, de modo que necesitamos más de dos ramas. Una forma de expresar una operación como ésa es usar un  <em>condicional encadenado</em> :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>if x &lt; y:
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    print(&#39;x es menor que y&#39;)
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>elif x &gt; y:
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    print(&#39;x es mayor que y&#39;)
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>else:
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    print(&#39;x e y son iguales&#39;)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x es menor que y&#39;</span><span class="p">)</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x es mayor que y&#39;</span><span class="p">)</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x e y son iguales&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p><code>elif</code> es una abreviatura para “else if”. En este caso también será ejecutada únicamente una de las ramas.</p>
 <figure>
@@ -1499,23 +1499,23 @@
 <figcaption>Lógica del IF-then-Elif</figcaption>
 </figure>
 <p>No hay un límite para el número de sentencias <code>elif</code>. Si hay una clausula <code>else</code>, debe ir al final, pero tampoco es obligatorio que ésta exista.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>if choice == &#39;a&#39;:
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    print(&#39;Respuesta incorrecta&#39;)
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>elif choice == &#39;b&#39;:
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    print(&#39;Respuesta correcta&#39;)
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>elif choice == &#39;c&#39;:
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    print(&#39;Casi, pero no es correcto&#39;)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Respuesta incorrecta&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Respuesta correcta&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Casi, pero no es correcto&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>Cada condición es comprobada en orden. Si la primera es falsa, se comprueba la siguiente y así con las demás. Si una de ellas es verdadera, se ejecuta la rama correspondiente, y la sentencia termina. Incluso si hay más de una condición que sea verdadera, sólo se ejecuta la primera que se encuentra.</p>
 <h3 id="condicionales-anidados">Condicionales anidados<a class="headerlink" href="#condicionales-anidados" title="Permanent link">&para;</a></h3>
 <p>Un condicional puede también estar anidado dentro de otro. Podríamos haber escrito el ejemplo anterior de las tres ramas de este modo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>if x == y:
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    print(&#39;x e y son iguales&#39;)
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>else:
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    if x &lt; y:
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>        print(&#39;x es menor que y&#39;)
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    else:
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>        print(&#39;x es mayor que y&#39;)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">:</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x e y son iguales&#39;</span><span class="p">)</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x es menor que y&#39;</span><span class="p">)</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x es mayor que y&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>El condicional exterior contiene dos ramas. La primera rama ejecuta una sentencia simple. La segunda contiene otra sentencia <code>if</code>, que tiene a su vez sus propias dos ramas. Esas dos ramas son ambas sentencias simples, pero podrían haber sido sentencias condicionales también.</p>
 <figure>
@@ -1525,49 +1525,49 @@
 </figure>
 <p>A pesar de que el indentado de las sentencias hace que la estructura esté clara, los <em>condicionales anidados</em> pueden volverse difíciles de leer rápidamente. En general, es buena idea evitarlos si se puede.</p>
 <p>Los operadores lógicos a menudo proporcionan un modo de simplificar las sentencias condicionales anidadas. Por ejemplo, el código siguiente puede ser reescrito usando un único condicional:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>if 0 &lt; x:
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    if x &lt; 10:
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>        print(&#39;x es un número positivo con un sólo dígito&#39;)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">:</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x es un número positivo con un sólo dígito&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>La sentencia <code>print</code> se ejecuta solamente si se cumplen las dos condiciones anteriores, así que en realidad podemos conseguir el mismo efecto con el operador <code>and</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>if 0 &lt; x and x &lt; 10:
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    print(&#39;x es un número positivo con un sólo dígito.&#39;)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x es un número positivo con un sólo dígito.&#39;</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="evaluacion-en-cortocircuito-de-expresiones-logicas">Evaluación en cortocircuito de expresiones lógicas<a class="headerlink" href="#evaluacion-en-cortocircuito-de-expresiones-logicas" title="Permanent link">&para;</a></h2>
 <p>Cuando Python está procesando una expresión lógica, como <code>x &gt;= 2 and (x/y) &gt; 2</code>, evalúa la expresión de izquierda a derecha. Debido a la definición de <code>and</code>, si <code>x</code> es menor de 2, la expresión <code>x &gt;= 2</code> resulta ser <code>falsa</code>, de modo que la expresión completa ya va a resultar <code>falsa</code>, independientemente de si <code>(x/y) &gt; 2</code> se evalúa como <code>verdadera</code> o <code>falsa</code>.</p>
 <p>Cuando Python detecta que no se gana nada evaluando el resto de una expresión lógica, detiene su evaluación y no realiza el cálculo del resto de la expresión. Cuando la evaluación de una expresión lógica se detiene debido a que ya se conoce el valor final, eso es conocido como <em>cortocircuitar</em> la evaluación.</p>
 <p>A pesar de que esto pueda parecer hilar demasiado fino, el funcionamiento en cortocircuito nos descubre una ingeniosa técnica conocida como  <em>patrón guardián</em> . Examina la siguiente secuencia de código en el intérprete de Python:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>&gt;&gt;&gt; x = 6
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>&gt;&gt;&gt; y = 2
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>&gt;&gt;&gt; x &gt;= 2 and (x/y) &gt; 2
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>True
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>&gt;&gt;&gt; x = 1
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>&gt;&gt;&gt; y = 0
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>&gt;&gt;&gt; x &gt;= 2 and (x/y) &gt; 2
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>False
-<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>&gt;&gt;&gt; x = 6
-<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>&gt;&gt;&gt; y = 0
-<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>&gt;&gt;&gt; x &gt;= 2 and (x/y) &gt; 2
-<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>Traceback (most recent call last):
-<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>ZeroDivisionError: division by zero
-<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>&gt;&gt;&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">6</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="kc">True</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="kc">False</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">6</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="ne">ZeroDivisionError</span><span class="p">:</span> <span class="n">division</span> <span class="n">by</span> <span class="n">zero</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="o">&gt;&gt;&gt;</span>
 </code></pre></div>
 <p>La tercera operación ha fallado porque Python intentó evaluar <code>(x/y)</code> e <code>y</code> era cero, lo cual provoca un runtime error (error en tiempo de ejecución). Pero el segundo ejemplo <em>no</em> falló, porque la primera parte de la expresión <code>x &gt;= 2</code> fue evaluada como <code>falsa</code>, así que <code>(x/y)</code> no llegó a ejecutarse debido a la regla del  <em>cortocircuito</em> , y no se produjo ningún error.</p>
 <p>Es posible construir las expresiones lógicas colocando estratégicamente una evaluación como <em>guardián</em> justo antes de la evaluación que podría causar un error, como se muestra a continuación:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>&gt;&gt;&gt; x = 1
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>&gt;&gt;&gt; y = 0
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>&gt;&gt;&gt; x &gt;= 2 and y != 0 and (x/y) &gt; 2
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>False
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>&gt;&gt;&gt; x = 6
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>&gt;&gt;&gt; y = 0
-<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>&gt;&gt;&gt; x &gt;= 2 and y != 0 and (x/y) &gt; 2
-<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>False
-<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>&gt;&gt;&gt; x &gt;= 2 and (x/y) &gt; 2 and y != 0
-<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>Traceback (most recent call last):
-<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>ZeroDivisionError: division by zero
-<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>&gt;&gt;&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="kc">False</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">6</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="kc">False</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">!=</span> <span class="mi">0</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="ne">ZeroDivisionError</span><span class="p">:</span> <span class="n">division</span> <span class="n">by</span> <span class="n">zero</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="o">&gt;&gt;&gt;</span>
 </code></pre></div>
 <p>En la primera expresión lógica, <code>x &gt;= 2</code> es <code>falsa</code>, así que la evaluación se detiene en el <code>and</code>. En la segunda expresión lógica, <code>x &gt;= 2</code> es <code>verdadera</code>, pero <code>y != 0</code> es <code>falsa</code>, de modo que nunca se alcanza <code>(x/y)</code>.</p>
 <p>En la tercera expresión lógica, el <code>y != 0</code> va <em>después</em> del cálculo de <code>(x/y)</code>, de modo que la expresión falla con un error.</p>
@@ -1579,29 +1579,29 @@
 <li>Dónde ha ocurrido.</li>
 </ul>
 <p>Los errores de sintaxis (syntax errors), normalmente son fáciles de localizar, pero a veces tienen trampa. Los errores debido a espacios en blanco pueden ser complicados, ya que los espacios y las tabulaciones son invisibles, y solemos ignorarlos.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>&gt;&gt;&gt; x = 5
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>&gt;&gt;&gt;  y = 6
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>  File &quot;&lt;stdin&gt;&quot;, line 1
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    y = 6
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    ^
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>IndentationError: unexpected indent
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="o">&gt;&gt;&gt;</span>  <span class="n">y</span> <span class="o">=</span> <span class="mi">6</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    <span class="n">y</span> <span class="o">=</span> <span class="mi">6</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    <span class="o">^</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="ne">IndentationError</span><span class="p">:</span> <span class="n">unexpected</span> <span class="n">indent</span>
 </code></pre></div>
 <p>En este ejemplo, el problema es que la segunda línea está indentada por un espacio. Pero el mensaje de error apunta a <code>y</code>, lo cual resulta engañoso. En general, los mensajes de error indican dónde se ha descubierto el problema, pero el error real podría estar en el código previo, a veces en alguna línea anterior.</p>
 <p>Ocurre lo mismo con los errores en tiempo de ejecución (runtime errors). Supón que estás tratando de calcular una relación señal-ruido en decibelios. La fórmula es SNR*<sub>db</sub>=10log <sub>10</sub> ( P<sub>senal</sub> / P <sub>ruido</sub> ). En Python, podrías escribir algo como esto:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>import math
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>int_senal = 9
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>int_ruido = 10
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>relacion = int_senal / int_ruido
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>decibelios = 10 * math.log10(relacion)
-<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>print(decibelios)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kn">import</span> <span class="nn">math</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">int_senal</span> <span class="o">=</span> <span class="mi">9</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="n">int_ruido</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="n">relacion</span> <span class="o">=</span> <span class="n">int_senal</span> <span class="o">/</span> <span class="n">int_ruido</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="n">decibelios</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">relacion</span><span class="p">)</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">decibelios</span><span class="p">)</span>
 <a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>
-<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a># Código: https://es.py4e.com/code3/snr.py
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="c1"># Código: https://es.py4e.com/code3/snr.py</span>
 </code></pre></div>
 <p>Pero cuando lo haces funcionar, obtienes un mensaje de error<a href="https://es.py4e.com/html3/03-conditional#fn3"><sup>3</sup></a>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>    Traceback (most recent call last):
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>      File &quot;snr.py&quot;, line 5, in ?
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>        decibelios = 10 * math.log10(relacion)
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    OverflowError: math range error
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>    <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>      <span class="n">File</span> <span class="s2">&quot;snr.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">5</span><span class="p">,</span> <span class="ow">in</span> <span class="err">?</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>        <span class="n">decibelios</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">relacion</span><span class="p">)</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    <span class="ne">OverflowError</span><span class="p">:</span> <span class="n">math</span> <span class="nb">range</span> <span class="n">error</span>
 </code></pre></div>
 <p>El mensaje de error apunta a la línea 5, pero no hay nada incorrecto en ese línea. Para encontrar el error real, puede resultar útil mostrar en pantalla el valor de <code>relacion</code>, que resulta ser 0. El problema está en la línea 4, ya que al dividir dos enteros se realiza una división entera. La solución es representar la intensidad de la señal y la intensidad del ruido con valores en punto flotante.</p>
 <p>En general, los mensajes de error te dicen dónde se ha descubierto el problema, pero a menudo no es ahí exactamente donde se ha producido.</p>

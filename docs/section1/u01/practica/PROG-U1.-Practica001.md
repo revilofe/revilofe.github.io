@@ -11,6 +11,7 @@ categories:
     - PROG
 tags:
     - Software
+    - Ejercicios
 ---
 
 ## Introducción al uso de Python en Windows para principiantes

@@ -11,6 +11,7 @@ categories:
     - PROG
 tags:
     - Software
+    - Ejercicios
 ---
 
 ## P1 - Ejercicios

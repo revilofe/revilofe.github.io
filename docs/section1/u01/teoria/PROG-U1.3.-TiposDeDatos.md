@@ -14,9 +14,9 @@ tags:
 ---
 
 
-# Tipos de Datos Primitivos
+## Tipos de Datos Primitivos
 
-## Tipos de datos primitivos simples
+### Tipos de datos primitivos simples
 
 * **Números** (numbers): Secuencia de dígitos (pueden incluir el - para negativos y el . para decimales) que representan números.
   **Ejemplo** . 0, -1, 3.1415.
@@ -25,7 +25,7 @@ tags:
 * **Booleanos** (boolean): Contiene únicamente dos elementos `True` y `False` que representan los valores lógicos verdadero y falso respectivamente.
 
 
-## Tipos de datos primitivos compuestos (contenedores)
+### Tipos de datos primitivos compuestos (contenedores)
 Profundizaremos más adelante en ellos.
 
 * **Listas** (lists): Colecciones de objetos que representan secuencias ordenadas de objetos de distintos tipos. Se representan con corchetes y los elementos se separan por comas.
@@ -35,7 +35,7 @@ Profundizaremos más adelante en ellos.
 * **Diccionarios** (dictionaries): Colecciones de objetos con una clave asociada. Se representan con llaves, los pares separados por comas y cada par contiene una clave y un objeto asociado separados por dos puntos.
   **Ejemplo** . {‘pi’:3.1416, ’e’:2.718}.
 
-## Clase de un dato (`type()`)
+### Clase de un dato (`type()`)
 
 La clase a la que pertenece un dato se obtiene con el comando `type()`
 
@@ -52,7 +52,7 @@ La clase a la que pertenece un dato se obtiene con el comando `type()`
 <class 'tuple'>
 ```
 
-## Números (clases `int` y `float`)
+### Números (clases `int` y `float`)
 
 Secuencia de dígitos (pueden incluir el - para negativos y el . para decimales) que representan números. Pueden ser enteros (`int`) o reales (`float`).
 
@@ -65,7 +65,7 @@ Secuencia de dígitos (pueden incluir el - para negativos y el . para decimales)
 <class 'float'>
 ```
 
-### Operadores aritméticos
+#### Operadores aritméticos
 
 * Operadores aritméticos: `+` (suma), `-` (resta), `*` (producto), `/` (cociente), `//` (cociente división entera), `%` (resto división entera), `**` (potencia).
 
@@ -95,7 +95,7 @@ Se puede saltar el orden de evaluación utilizando paréntesis `( )`.
 25
 ```
 
-### Operadores lógicos con números
+#### Operadores lógicos con números
 
 Devuelven un valor lógico o booleano.
 
@@ -110,7 +110,7 @@ False
 True
 ```
 
-## Cadenas (clase `str`)
+### Cadenas (clase `str`)
 
 Secuencia de caracteres alfanuméricos que representan texto. Se escriben entre comillas sencillas ’ o dobles “.
 
@@ -128,7 +128,7 @@ Secuencia de caracteres alfanuméricos que representan texto. Se escriben entre 
 '\t'
 ```
 
-### Acceso a los elementos de una cadena
+#### Acceso a los elementos de una cadena
 
 Cada carácter tiene asociado un índice que permite acceder a él.
 
@@ -159,7 +159,7 @@ Traceback (most recent call last):
 IndexError: string index out of range
 ```
 
-### Subcadenas
+#### Subcadenas
 
 * `c[i:j:k]` : Devuelve la subcadena de `c` desde el carácter con el índice `i` hasta el carácter anterior al índice `j`, tomando caracteres cada `k`.
 
@@ -178,7 +178,7 @@ IndexError: string index out of range
 'Pto'
 ```
 
-### Operaciones con cadenas
+#### Operaciones con cadenas
 
 * `c1 + c2` : Devuelve la cadena resultado de concatenar las cadenas `c1` y `c2`.
 * `c * n` : Devuelve la cadena resultado de concatenar `n` copias de la cadena `c`.
@@ -198,7 +198,7 @@ True
 True
 ```
 
-### Operaciones de comparación de cadenas
+#### Operaciones de comparación de cadenas
 
 * `c1 == c2` : Devuelve `True` si la cadena `c1` es igual que la cadena `c2` y `False` en caso contrario.
 * `c1 > c2` : Devuelve `True` si la cadena `c1` sucede a la cadena `c2` y `False` en caso contrario.
@@ -222,7 +222,7 @@ False
 True
 ```
 
-### Funciones de cadenas
+#### Funciones de cadenas
 
 * `len(c)` : Devuelve el número de caracteres de la cadena `c`.
 * `min(c)` : Devuelve el carácter menor de la cadena `c`.
@@ -247,7 +247,7 @@ True
 ['I', 'love', 'Python']
 ```
 
-### Cadenas formateadas (`format()`)
+#### Cadenas formateadas (`format()`)
 
 * `c.format(valores)`: Devuelve la cadena `c` tras sustituir los valores de la secuencia `valores` en los marcadores de posición de `c`. Los marcadores de posición se indican mediante llaves `{}` en la cadena `c`, y el reemplazo de los valores se puede realizar por posición, indicando en número de orden del valor dentro de las llaves, o por nombre, indicando el nombre del valor, siempre y cuando los valores se pasen con el formato `nombre = valor`.
 
@@ -277,20 +277,20 @@ Los marcadores de posición, a parte de indicar la posición de los valores de r
 'Pi vale   3.1416'
 ```
 
-## Datos lógicos o booleanos (clase `bool`)
+### Datos lógicos o booleanos (clase `bool`)
 
 Contiene únicamente dos elementos `True` y `False` que representan los valores lógicos verdadero y falso respectivamente.
 
 `False` tiene asociado el valor 0 y `True` tiene asociado el valor 1.
 
-### Operaciones con valores lógicos
+#### Operaciones con valores lógicos
 
 * Operadores lógicos: `==` (igual que), `>` (mayor), `<` (menor), `>=` (mayor o igual que), `<=` (menor o igual que), `!=` (distinto de).
 * `not b` (negación) : Devuelve `True` si el dato booleano `b` es `False` , y `False` en caso contrario.
 * `b1 and b2` : Devuelve `True` si los datos booleanos `b1` y `b2` son `True`, y `False` en caso contrario.
 * `b1 or b2` : Devuelve `True` si alguno de los datos booleanos `b1` o `b2` son `True`, y `False` en caso contrario.
 
-### Tabla de verdad
+#### Tabla de verdad
 
 
 | `x`     | `y`     | `not x` | `x and y` | `x or y` |
@@ -311,7 +311,7 @@ False
 True
 ```
 
-## Conversión de datos primitivos simples
+### Conversión de datos primitivos simples
 
 Las siguientes funciones convierten un dato de un tipo en otro, siempre y cuando la conversión sea posible.
 

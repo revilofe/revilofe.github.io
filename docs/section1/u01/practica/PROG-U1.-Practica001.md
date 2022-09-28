@@ -1,7 +1,7 @@
 ---
 title: "UD 1 - P1: Mi primer programa"
+summary: Mi primer programa
 description: Mi primer programa
-summary: description: Mi primer programa
 authors:
     - Eduardo Fdez
 date: 2022-09-18
@@ -14,7 +14,7 @@ tags:
     - Ejercicios
 ---
 
-## Introducción al uso de Python en Windows para principiantes
+## P1.1 - Introducción al uso de Python en Windows para principiantes
 
 A continuación, ofrecemos una guía paso a paso para aquellos usuarios principiantes interesados en aprender Python con Windows.
 

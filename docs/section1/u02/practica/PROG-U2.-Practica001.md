@@ -1,6 +1,5 @@
 ---
 title: "UD 2 - P1: Condicionales"
-description: Condicionales
 summary: Condicionales
 description: Condicionales
 authors:

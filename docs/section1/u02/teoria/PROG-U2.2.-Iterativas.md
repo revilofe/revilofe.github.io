@@ -319,6 +319,22 @@ Cada vez que realices una comprobación como esta, reduces a la mitad el número
 
 En la práctica no siempre está claro qué es “en medio del programa”, y no siempre es posible colocar ahí una verificación. No tiene sentido contar las líneas y encontrar el punto medio exacto. En lugar de eso, piensa en lugares del programa en los cuales pueda haber errores y en lugares donde resulte fácil colocar una comprobación. Luego elige un sitio donde estimes que las oportunidades de que el bug esté por delante y las de que esté por detrás de esa comprobación son más o menos las mismas.
 
+## Actividades
+
+**Actividad 1**: Escribe un programa que lea repetidamente números hasta que el usuario introduzca “fin”. Una vez se haya introducido “fin”, muestra por pantalla el total, la cantidad de números y la media de esos números. Si el usuario introduce cualquier otra cosa que no sea un número, (mas adelante veremos como detectar los fallos usando `try` y `except`)
+
+```
+Introduzca un número: 4
+Introduzca un número: 5
+Introduzca un número: dato erróneo
+Entrada inválida
+Introduzca un número: 7
+Introduzca un número: fin
+16 3 5.33333333333
+```
+
+**Actividad 2**: Escribe otro programa que pida una lista de números como la anterior y al final muestre por pantalla el máximo y mínimo de los números, en vez de la media.
+
 ## Fuente
 
 * [Aprende con Alf](https://aprendeconalf.es/)

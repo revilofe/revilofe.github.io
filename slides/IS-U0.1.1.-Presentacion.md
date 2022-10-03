@@ -69,9 +69,9 @@ Horario (X horas semanales)
 
 |     HORA     |   L   | M | X | J | V |
 | :-------------: | :------: | :--: | :-: | :--: | :-: |
-| 08:00 - 09:00 |        | IS |  | IS |  |
-| 09:00 - 10:00 |        | IS |  | IS |  |
-| 10:00 - 11:00 |        | IS |  | IS |  |
+| 08:00 - 09:00 |    IS    |  | IS |  |  |
+| 09:00 - 10:00 |    IS    |  | IS |  |  |
+| 10:00 - 11:00 |    IS    |  |  |  |  |
 | 11:00 - 11:30 | Recreo |    |  |    |  |
 | 11:30 - 12:30 |        |    |  |    |  |
 | 12:30 - 13:30 |        |    |  |    |  |
@@ -109,30 +109,37 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 # Evaluación y recuperación
 
 
-## Evaluación I. Actualizar al 2023!!
-
+## Evaluación I
 * Se supera el módulo con una calificación mayor o igual a 5.
-* La nota se obtiene según la calificación de los resultados de aprendizaje (RA).
+* La nota se obtiene haciendo la media ponderada de los resultados de aprendizaje (RA).
 * Un RA no superado, implica no superar el módulo.
-* Los RA se evalúan y califican en base a la evaluación y calificación de los criterios de evaluación (CE).
-* Los CE se evalúan y califican a través del trabajo en clases y la realización de trabajos y pruebas especificas.
 
 
-## Evaluación II. Actualizar al 2023!!
-
-* Hay 2 Evaluaciones Parciales
-  * Finales ¿Febrero?
-  * Finales ¿Mayo?
-* 1 Evaluación Final
-  * Finales Junio
+## Evaluación II
+* Los calificación de los RA se obtienen de la media ponderada de la calificación de los criterios de evaluación (CE).
+* Los CE se evalúan y califican a través del trabajo en clases y la realización de prácticas y pruebas especificas.
 
 ![](./assets/IS-U011-Presentacion2.png)
 
 
-## Recuperación
+## Evaluación III
+* Hay 3 Evaluaciones Parciales
+  * Diciembre
+  * Marzo
+  * Mayo
+* 1 Evaluación Final
+  * Junio
+![](./assets/IS-U011-Presentacion4.png)<!-- .element height="50%" width="50%" -->
 
-* La recuperación de los RA pendientes durante el mes de junio
-* Consistirá en un conjunto de prácticas y/o pruebas sobre los contenidos a los que están asociados los resultados de aprendizaje no superados.
+
+## Recuperación
+* La recuperación de los RA pendientes se realiza durante el mes de junio.
+* Consistirá en un conjunto de prácticas y/o pruebas sobre los criterios de evaluación relacionados con el resultado de aprendizaje no superado.
+
+
+## Resumen
+![](assets/pro-eva&rec.png)
+![](./assets/IS-U011-Presentacion4.png)<!-- .element height="50%" width="50%" -->
 
 ---
 
@@ -140,42 +147,77 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 
 
 ## Metodología
-
 Por unidad:
 
-* Explicar contenidos, resultados de aprendizaje y criterios de evaluación relacionados.
+* Explicar contenidos relacionados con criterios de evaluación  asociados al RA con el que se está trabajando.
 * Trabajar los contenidos en grupo e individualmente, guiados por diapositivas, materiales de la red y discusión en grupo.
 * Puesta en práctica con trabajos.
 
 
 ## Comunicación
-
 * Comunicación **oficial, preferida y obligada**: Asistiendo al aula y hablando directamente con el profesor.
-* Otros medios secundarios: Correo electrónico y Moodle
+* Otros medios secundarios **opcionales**: Correo electrónico y Moodle.
 
-![](./assets/IS-U011-Presentacion3.png)
+![](./assets/IS-U011-Presentacion3.png) <!-- .element height="25%" width="25%" -->
 
 ---
 
-# Recomendaciones y dudas
+# Recomendaciones y aclaraciones
 
 
 ## Recomendaciones
-
 * Recomendaciones al alumnado:
-  * Leer y entender la programación.
+  * Leer y entender la programación del módulo.
   * Poner foto actualizada en moodle.
-  * Añadir correo electrónico correcto.
+  * Añadir correo electrónico correcto en moodle.
 
 
-## Dudas
+## Aclaraciones I
+* Formación presencial, por tanto la comunicación presencial.
+* Como regla general:
+  - Los ejercicios individuales se corregirán en clase delante del profesor.
+  - Los ejercicios en grupo se podrán presentar en grupo o un componente del grupo de forma aleatoria. El método será elegido por el profesor.
 
+
+## Aclaraciones II
+* Causas para no corregir una prueba (ejercicio, práctica, examen)
+  - No se cumple las condiciones de entrega.
+  - Se ha detectado la posibilidad de copiado de todo o parte de la prueba. Esto incluye textos (total o parcial) de internet y/o sin hacer referencia a la fuente
+  - Se entrega fuera de plazo (aunque sean unos segundos).
+  - En caso de código, no compila.
+
+
+## Aclaraciones III
+* Causas para no corregir una prueba (ejercicio, práctica, examen)
+  - Si la entrega es el git, añadir en el README.md instrucciones para compilar y ejecutar el código, descripción de la aplicación, autoría y referencias.
+
+
+## Aclaraciones IV
+* Es responsabilidad del alumnado la custodia y guarda de los trabajos, documentos, y cualquier otro material que realice durante las prácticas o en clase, por tanto, tendrán que asegurarse que quedan a salvo siempre que abandonen el aula, no siendo responsabilidad del profesorado la perdida de este material.
+
+
+## Aclaraciones V
+* En cuando a las fechas de entrega de prácticas/trabajos/ejercicios, tendrán una fecha de entrega clara, **que no se podrá cambiar bajo ninguna circunstancia**. Quedando a elección del profesor posibles excepciones justificadas.
+
+---
+
+# Dudas
 ![](./assets/IS-U011-Presentacion4.png)
 
 ---
 
 # Fin!
 
-![](assets/IS-U011-Presentacion5.png)
+![](./assets/Fin.png) <!-- .element height="50%" width="50%" -->
 
 ¡¡Gracias!!
+
+---
+
+# Primeros pasos
+
+1. Identificar tu **email: correo electrónico**: xxx@g.educaand.es
+2. Acceder a moodle. Configurar tu usuario con email y foto.
+3. Rellenar los formularios que hay en la moodle. Sirven para entornos.
+4. Darte de alta en github.com con tu email, solicitan acceso PRO por ser estudiante.
+5. Darte de alta en jetbrains con tu email, solicitando acceso a las herramientas por ser estudiante.

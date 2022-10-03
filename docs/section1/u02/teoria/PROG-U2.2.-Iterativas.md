@@ -214,7 +214,7 @@ Usaremos ahora una lista de números para demostrar los conceptos y construcció
 
 Por ejemplo, para contar el número de elementos en una lista, podemos escribir el siguiente bucle `for`:
 
-```
+```Python
 contador = 0
 for valor in [3, 41, 12, 9, 74, 15]:
     contador = contador + 1
@@ -229,7 +229,7 @@ Una vez el bucle se completa, el valor de `contador` es el número total de elem
 
 Otro bucle similar, que calcula el total de un conjunto de números, se muestra a continuación:
 
-```
+```Python
 total = 0
 for valor in [3, 41, 12, 9, 74, 15]:
     total = total + valor
@@ -246,7 +246,7 @@ Ni el bucle que cuenta los elementos ni el que los suma resultan particularmente
 
 Para encontrar el valor mayor de una lista o secuencia, construimos el bucle siguiente:
 
-```
+```Python
 mayor = None
 print('Antes:', mayor)
 for valor in [3, 41, 12, 9, 74, 15]:
@@ -279,7 +279,7 @@ Al final del bucle, se habrán revisado todos los valores y la variable `mayor` 
 
 Para calcular el número más pequeño, el código es muy similar con un pequeño cambio:
 
-```
+```Python
 print('Antes:', menor)
 for valor in [3, 41, 12, 9, 74, 15]:
     if menor is None or valor < menor:
@@ -294,7 +294,7 @@ También como en el caso del número de elementos y de la suma, las funciones in
 
 Lo siguiente es una versión simple de la función interna de Python `min()`:
 
-```
+```Python
 def min(valores):
     menor = None
     for valor in valores:

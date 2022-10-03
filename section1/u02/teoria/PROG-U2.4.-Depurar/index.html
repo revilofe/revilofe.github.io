@@ -1203,8 +1203,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejemplo-de-uso-de-visual-studio-code" class="md-nav__link">
-    Ejemplo de uso de Visual Studio Code
+  <a href="#ejemplo-de-uso-de-visual-code" class="md-nav__link">
+    Ejemplo de uso de Visual Code
   </a>
   
 </li>
@@ -1270,61 +1270,76 @@
 <h3 id="que-es-hacer-debug-o-depurar">¿Qué es hacer debug o depurar?<a class="headerlink" href="#que-es-hacer-debug-o-depurar" title="Permanent link">&para;</a></h3>
 <p>En ocasiones, cuando realizamos un programa, el resultado obtenido no es el esperado, es decir, hemos cometido algún error de cálculo, el cual hace que el programa funcione pero no lo haga correctamente. En estas ocasiones es muy importante depurar el programa.</p>
 <p>En la depuración lo que hacemos es ejecutar el programa <strong>paso a paso</strong>, así podemos ver las instrucciones que se están ejecutando, además de poder ver los valores que van tomando las variables. Esto nos sirve de ayuda para ver las variables, los valores que van tomando, las instrucciones que se están ejecutando y así poder ver dónde hemos cometido un error.</p>
-<h3 id="ejemplo-de-uso-de-visual-studio-code">Ejemplo de uso de Visual Studio Code<a class="headerlink" href="#ejemplo-de-uso-de-visual-studio-code" title="Permanent link">&para;</a></h3>
-<p>En Visual Studio Code, el editor de texto que vamos a utilizar, para poder depurar un programa en Python se necesita instalar el plugin correspondiente.</p>
-<p>Una vez instalado este plugin, vamos a la opción <strong>Debug</strong>, que se encuentra en la columna izquierda de Visual Studio Code, así podemos empezar a depurar nuestro programa.</p>
+<p>Para depurar, podemos usar las herramientas que viene en los entornos de desarrollo integrados/editores, como Visual Code, o usar herramientas que vienen con el interprete de Python, como <a href="https://realpython.com/python-debugging-pdb/">Pdb</a></p>
+<p>A continuación veremos un ejemplo del uso de Visual Code </p>
+<h3 id="ejemplo-de-uso-de-visual-code">Ejemplo de uso de Visual Code<a class="headerlink" href="#ejemplo-de-uso-de-visual-code" title="Permanent link">&para;</a></h3>
+<p>En Visual Code, el editor de texto que vamos a utilizar, para poder depurar un programa en Python se necesita instalar el plugin correspondiente.</p>
+<p>Una vez instalado este plugin, vamos a la opción <strong>Debug</strong>, que se encuentra en la columna izquierda de Visual Code, así podemos empezar a depurar nuestro programa.</p>
 <p>Si el programa a depurar es muy grande, tal vez no nos interese realizar la traza desde el principio, por lo que podemos indicar en qué instrucción empezar la depuración. De esta forma creamos un <strong>breakpoint</strong> o un punto de ruptura, con el que conseguimos que cuando la ejecución llegue a esa instrucción, se pare y empiece a hacer la depuración.</p>
 <blockquote>
 <p>Un breakpoint (o punto de ruptura o punto de parada) es el mecanismo que nos va a permitir detener el flujo de ejecución de un programa en una instrucción en concreto.</p>
 </blockquote>
 <p>En este ejemplo vamos a depurar este programa:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    #!usr/bin/env python3
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    #Crea una función “CalcularMaxMin” que recibe una lista con valores numéricos u
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    #devuelve el valor máximo y el mínimo. Crea un programa que pida números por
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    #teclado y muestre el máximo y el mínimo, utilizando la función anterior.
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    #A continuación pide un número (entre 1 y 100) y el programa debe decir si está en la lista
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    import random
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    def CalcularMaxMin(lista):
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        return (max(lista),min(lista))
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="c1">#!usr/bin/env python3</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="c1">#Crea una función “CalcularMaxMin” que recibe una lista con valores numéricos u</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="c1">#devuelve el valor máximo y el mínimo. Crea un programa que pida números por</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="c1">#teclado y muestre el máximo y el mínimo, utilizando la función anterior.</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="c1">#A continuación pide un número (entre 1 y 100) y el programa debe decir si está en la lista</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="kn">import</span> <span class="nn">random</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="k">def</span> <span class="nf">CalcularMaxMin</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="k">return</span> <span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">lista</span><span class="p">),</span><span class="nb">min</span><span class="p">(</span><span class="n">lista</span><span class="p">))</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    numeros = []
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    #Inicializo la lista con valores aleatorios
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    for i in range(10):
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    numeros.append(random.randint(1,100))
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    vmax,vmin = CalcularMaxMin (numeros)
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    print(“El valor máximo es “,vmax)
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    print(“El valor mínimo es “,vmin)
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">numeros</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="c1">#Inicializo la lista con valores aleatorios</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mf">0..10</span><span class="p">):</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">numeros</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">))</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">vmax</span><span class="p">,</span><span class="n">vmin</span> <span class="o">=</span> <span class="n">CalcularMaxMin</span> <span class="p">(</span><span class="n">numeros</span><span class="p">)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="nb">print</span><span class="p">(</span><span class="err">“</span><span class="n">El</span> <span class="n">valor</span> <span class="n">máximo</span> <span class="n">es</span> <span class="err">“</span><span class="p">,</span><span class="n">vmax</span><span class="p">)</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="nb">print</span><span class="p">(</span><span class="err">“</span><span class="n">El</span> <span class="n">valor</span> <span class="n">mínimo</span> <span class="n">es</span> <span class="err">“</span><span class="p">,</span><span class="n">vmin</span><span class="p">)</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    numero = int(input(“Dime un número del 1 al 100:”))
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    while numero&lt;0 or numero&gt;100:
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    print(“El número debe estar entre 1 y 100”)
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    numero = int(input(“Dime un número del 1 al 100:”))
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="err">“</span><span class="n">Dime</span> <span class="n">un</span> <span class="n">número</span> <span class="k">del</span> <span class="mi">1</span> <span class="n">al</span> <span class="mi">100</span><span class="p">:</span><span class="err">”</span><span class="p">))</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="k">while</span> <span class="n">numero</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">numero</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="nb">print</span><span class="p">(</span><span class="err">“</span><span class="n">El</span> <span class="n">número</span> <span class="n">debe</span> <span class="n">estar</span> <span class="n">entre</span> <span class="mi">1</span> <span class="n">y</span> <span class="mi">100</span><span class="err">”</span><span class="p">)</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="err">“</span><span class="n">Dime</span> <span class="n">un</span> <span class="n">número</span> <span class="k">del</span> <span class="mi">1</span> <span class="n">al</span> <span class="mi">100</span><span class="p">:</span><span class="err">”</span><span class="p">))</span>
 <a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    if numero in numero:
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    print(“El número está en la lista”)
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    elsa:
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    print(“El número no está en la lista”)      
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="k">if</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">numero</span><span class="p">:</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="nb">print</span><span class="p">(</span><span class="err">“</span><span class="n">El</span> <span class="n">número</span> <span class="n">está</span> <span class="n">en</span> <span class="n">la</span> <span class="n">lista</span><span class="err">”</span><span class="p">)</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    <span class="n">elsa</span><span class="p">:</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    <span class="nb">print</span><span class="p">(</span><span class="err">“</span><span class="n">El</span> <span class="n">número</span> <span class="n">no</span> <span class="n">está</span> <span class="n">en</span> <span class="n">la</span> <span class="n">lista</span><span class="err">”</span><span class="p">)</span>      
 </code></pre></div>
-<p>Marcamos un breakpoint en la línea número 11 y pulsamos el botón Start debugging para comenzar la depuración.</p>
+<blockquote>
+<p>Nota: El programa no es correcto. Corrige los errores antes de hacerlo funcionar. Una vez funcione, tendrás que depurarlo para que funcione de acuerdo a lo que se pide.</p>
+</blockquote>
+<p>Marcamos un breakpoint en la línea número 11 y pulsamos el botón <strong>Start debugging</strong> para comenzar la depuración.</p>
+<p><img alt="" src="../assets/PROG-U2-BreakPoint.png" />  </p>
 <p>Podemos ver que el programa resalta en color la próxima instrucción que se va a ejecutar. Al mismo tiempo observamos que en la parte superior izquierda nos muestra los valores de las variables con las que estamos trabajando. (En el apartado <strong>Variables: locals y globals</strong>)</p>
+<p><img alt="" src="../assets/PROG-U2-Variables.png" /></p>
 <p>A continuación ejecutamos la siguiente instrucción, pulsando la opción <strong>Step Into</strong> o la tecla <strong>F11</strong>, observamos que se ha creado la variable <code>numeros</code> se ha creado y es una lista vacía.</p>
 <blockquote>
-<p>Step into: Ejecuta una sentencia y en el caso de ser la llamada a una función, entra dentro de esta. </p>
+<p>Step into: Ejecuta una sentencia y en el caso de ser la llamada a una función, entra dentro de esta para depurarla paso a paso. </p>
 </blockquote>
-<p>Seguimos ejecutando la depuración con la tecla <strong>F11</strong> y vemos que el programa entra en un bucle y se van añadiendo números aleatorios a la lista. En el apartado de <strong>Variables</strong> vemos que la variable <code>numeros</code> va cambiando, y también su longitud, lo que podemos ver en el apartado <strong>Watch</strong>, si añadimos una expresión, por ejemplo: <code>len(numeros)</code></p>
+<p><img alt="" src="../assets/PROG-U2-StepInto.png" />
+Seguimos ejecutando la depuración con la tecla <strong>F11</strong> y vemos que el programa entra en un bucle y se van añadiendo números aleatorios a la lista. En el apartado de <strong>Variables</strong> vemos que la variable <code>numeros</code> va cambiando, y también su longitud, lo que podemos también en el apartado <strong>Watch</strong>, si añadimos una expresión, por ejemplo: <code>len(numeros)</code> o solo <code>numeros</code></p>
+<p><img alt="" src="../assets/PROG-U2-Watch.png" /></p>
 <p>Como podemos comprobar es una forma muy sencilla de ver qué instrucciones se están ejecutando, además de poder ver en cualquier momento los valores de las variables.</p>
-<p>En cualquier momento podemos abrir una <strong>consola de depuración</strong>, pulsando el icono New Output in Debug Console, que aparece en la parte superior del menú. Esta consola se abre en la parte inferior de la pantalla, y en la que podemos ejecutar instrucciones Python en el entorno de nuestro programa, es decir, con el valor de las variables y tal como en ese momento está ejecutado.</p>
-<p>Por ejemplo, si en la consola de depuración escribimos la variable numeros, nos muestra el valor actual de la misma.</p>
-<p>También podemos hacer instrucciones más complicada, por ejemplo, podemos comprobar si el número 1 está en la variable números, escribiendo 1 in numeros.</p>
-<p>Si continuamos ejecutando el programa, la instrucción for va a tener diez iteraciones, y cuando termine pasamos a la ejecución de una función en la línea 15.</p>
-<p>Si estamos seguros que dicha función funciona correctamente y no necesitemos depurarla, podemos pulsar la opción Step Over o pulsar la tecla F10, y en ese caso se ejecuta la función pero no se va a depurar.</p>
-<p>Si realmente queremos ver cómo se ejecuta esa función, pulsamos F11 y la ejecución iría la función, calcularía el máximo y el mínimo de la lista y nos devolvería esos valores.</p>
+<p>En cualquier momento podemos ir a la <strong>consola de depuración</strong>, seleccionando en <strong>Debug Console</strong>. Esta consola se abre en la parte inferior de la pantalla, y en la que podemos ejecutar instrucciones Python en el entorno de nuestro programa, es decir, con el valor de las variables y tal como en ese momento está ejecutado. </p>
+<p><img alt="" src="../assets/PROG-U2-DebugConsole.png" /></p>
+<p>Por ejemplo podemos lanzar las ejecuciones de las sentencias <code>len(numeros)</code> o solo <code>numeros</code>.</p>
+<p>Si en la consola de depuración escribimos la variable numeros, nos muestra el valor actual de la misma.</p>
+<p>También podemos hacer instrucciones más complicada, por ejemplo, podemos comprobar si el número 1 está en la variable <code>numeros</code>, escribiendo <code>1 in numeros</code>.</p>
+<p>Si continuamos ejecutando el programa, la instrucción for va a tener diez iteraciones, y cuando termine pasamos a la ejecución de una función en la línea 8.</p>
+<p>Si estamos seguros que dicha función se ejecuta sin problemas y no necesitemos depurarla, podemos pulsar la opción <strong>Step Over</strong> o pulsar la tecla <strong>F10</strong>, y en ese caso se ejecuta la función pero sin entrar dentro de esta para depurar paso a paso.</p>
+<blockquote>
+<p>Step over: Ejecuta una sentencia y en el caso de ser la llamada a una función, no entra dentro de esta para depurarla.</p>
+</blockquote>
+<p>Si realmente queremos ver cómo se ejecuta esa función, pulsamos <strong>F11</strong> y la ejecución iría la función, calcularía el máximo y el mínimo de la lista y nos devolvería esos valores.</p>
+<p>Por último, en el apartado <strong>Calla Stack</strong> podremos ver la pila de llamadas que se ha hecho en nuestro programa, pudiendo hacer un seguimiento de qué función ha llamado a qué otra función.</p>
 <p>Esta práctica es muy recomendable para todo el que esté comenzando a programar, para localizar los posibles errores de programación que se hayan cometido, y además para aprender cómo se ejecutan las instrucciones dentro de nuestro programa.</p>
 <h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://aprendeconalf.es/">Aprende con Alf</a></li>
-<li><a href="https://es.py4e.com/">Python para todos</a></li>
+<li><a href="https://openwebinars.net/blog/como-hacer-debug-con-python/">Como depurar, Open Webinars</a></li>
+<li><a href="https://realpython.com/python-debugging-pdb/">Depurar con Pdb</a></li>
 </ul>
 
 

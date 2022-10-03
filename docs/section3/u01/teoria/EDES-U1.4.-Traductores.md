@@ -39,23 +39,29 @@ Los casos más comunes de este tipo los encontramos en tecnologías web, ya que 
 La compilación es un proceso complejo que se realiza en dos fases:
 
 * **Análisis**: Se comprueba la corrección del código fuente. Esta fase incluye:
-
-  * **Análisis léxico**: Se asimila cada elemento del código fuente a una serie de categorías denominadas tokens.
-  * **Análisis sintáctico**: Se crean representaciones abstractas de la estructura del código fuente. Estas representaciones suelen ser árboles de sintaxis abstracta (AST). Si recordamos el análisis sintáctico de la asignatura de lengua nos haremos una idea.
-  * **Análisis semántico**: Se revisan los árboles de sintaxis en busca de expresiones sin sentido, aunque correctas a nivel sintáctico.
+    - **Análisis léxico**: Se asimila cada elemento del código fuente a una serie de categorías denominadas tokens
+    - **Análisis sintáctico**: Se crean representaciones abstractas de la estructura del código fuente. Estas representaciones suelen ser árboles de sintaxis abstracta (AST). Si recordamos el análisis sintáctico de la asignatura de lengua nos haremos una idea.
+    - **Análisis semántico**: Se revisan los árboles de sintaxis en busca de expresiones sin sentido, aunque correctas a nivel sintáctico.
 * **Síntesis**: Se trata de generar el código ejecutable. Suele incluir:
+    - **Generación de código intermedio**: A partir de los AST revisados resultantes de la fase de análisis
+    - **Optimización de código**: Sin modificar el sentido del código, se modifica el código intermedio buscando optimizar su ejecución.
+    - **Generación de código objeto y enlazado**: Se genera el código máquina a partir del código intermedio y se añaden las librerías de códigos necesarias para crear un ejecutable.
 
-  * **Generación de código intermedio**: A partir de los AST revisados resultantes de la fase de análisis.
-  * **Optimización de código**: Sin modificar el sentido del código, se modifica el código intermedio buscando optimizar su ejecución.
-  * **Generación de código objeto y enlazado**: Se genera el código máquina a partir del código intermedio y se añaden las librerías de códigos necesarias para crear un ejecutable.
+<figure markdown>
+    ![](assets/EDES-U1-Procesocompilacion.png)
+    <figcaption>Proceso de compilación</figcaption>
+</figure>
 
-![](assets/EDES-U1-Procesocompilacion.png)
 
 #### Estructura de un Compilador
 
 En la actualidad los compiladores se estructuran en tres programas que se encargan de llevar a cabo una o varias fases del proceso de compilación: Analizador (Frontend), optimizador y generador (Backend).
 
-![](assets/EDES-U1-EstructuraCompilador.png)
+<figure markdown>
+    ![](assets/EDES-U1-EstructuraCompilador.png)
+    <figcaption>Estructura de un compilador</figcaption>
+</figure>
+
 
 El analizador es genérico para todas las plataformas de destino, mientras que el optimizador puede ser común a varios lenguajes y plataformas. El generador es propio de cada plataforma, ya que genera código máquina a partir de código intermedio.
 

@@ -33,7 +33,7 @@ tags:
 
 * Es importante que una vez realizados, **lancen los aviones todos a la vez**. Una vez caigan cada uno **recogerlos y volverlos a lanzar para que se mezclen por la sala**. Así durante un ratito. Aquí se genera un ambiente divertido. ¡Retornamos a la infancia!
 * Después de este periodo de tiempo, **pedimos que cada uno coja uno (que no sea el suyo)** y como escribieron el nombre deben **buscar al dueño de ese avión y hacerle las preguntas**.
-* Después de haber recogido las respuestas a las preguntas, **cada participante debe de anotar esta información en [Mural](https://app.mural.co/t/incidentes7894/m/incidentes7894/1664180837364/67149ed52c15c344fd1ad4db0e33ed91f0fbc9e1?sender=u2b8bed871fe2bdf5376d3015e), sin dejar datos que puedan identificar a la persona.
+* Después de haber recogido las respuestas a las preguntas, **cada participante debe de anotar esta información en [Mural](https://app.mural.co/invitation/mural/incidentes7894/1664180837364?sender=u2b8bed871fe2bdf5376d3015&key=e0f691d7-c10e-44cc-958d-dc2b70607b3e), sin dejar datos que puedan identificar a la persona.
   
 
 * El Facilitador (o personas aleatorias del grupo) iran leyendo y presentando los profiles, y entre todos se intentarán asignar a los participantes. Las personas que participaron en la entrevista deberán votar a otros candidatos.

@@ -13,9 +13,10 @@ tags:
     - Software
     - Ejercicios
 
-# https://aprendeconalf.es/docencia/python/ejercicios/bucles/
-# http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-buclewhile-python.html
+# https://diegoamorin.com/ordenamiento-burbuja-python/
+
 ---
+
 ## P2.4 - Ejercicio.
 
 ### El algoritmo burbuja

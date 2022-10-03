@@ -17,7 +17,7 @@
 # Presentación
 
 
-## Nos conocemos. Profesor. Actualizar al 2023!!
+## Nos conocemos. Profesor.
 
 * Eduardo Fernández Oliver
   * _[efernandez@iesrafaelalberti\.es](mailto:efernandez@iesrafaelalberti.es)_

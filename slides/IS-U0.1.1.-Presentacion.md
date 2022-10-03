@@ -64,7 +64,7 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 
 ## Horario. Actualizar al 2023!!
 
-Horario (X horas semanales)
+Horario (5 horas semanales)
 
 
 |     HORA     |   L   | M | X | J | V |
@@ -129,6 +129,7 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
   * Mayo
 * 1 Evaluación Final
   * Junio
+
 ![](./assets/IS-U011-Presentacion4.png)<!-- .element height="50%" width="50%" -->
 
 
@@ -139,7 +140,7 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 
 ## Resumen
 ![](assets/pro-eva&rec.png)
-![](./assets/IS-U011-Presentacion4.png)<!-- .element height="50%" width="50%" -->
+![](./assets/IS-U011-Presentacion4.png)<!-- .element height="75%" width="75%" -->
 
 ---
 
@@ -220,4 +221,3 @@ Por unidad:
 2. Acceder a moodle. Configurar tu usuario con email y foto.
 3. Rellenar los formularios que hay en la moodle. Sirven para entornos.
 4. Darte de alta en github.com con tu email, solicitan acceso PRO por ser estudiante.
-5. Darte de alta en jetbrains con tu email, solicitando acceso a las herramientas por ser estudiante.

@@ -1392,27 +1392,31 @@ Este tipo de compilación permite realizar optimizaciones complejas, por muy cos
 <h4 id="el-proceso-de-compilacion">El proceso de compilación<a class="headerlink" href="#el-proceso-de-compilacion" title="Permanent link">&para;</a></h4>
 <p>La compilación es un proceso complejo que se realiza en dos fases:</p>
 <ul>
-<li>
-<p><strong>Análisis</strong>: Se comprueba la corrección del código fuente. Esta fase incluye:</p>
-</li>
-<li>
-<p><strong>Análisis léxico</strong>: Se asimila cada elemento del código fuente a una serie de categorías denominadas tokens.</p>
-</li>
+<li><strong>Análisis</strong>: Se comprueba la corrección del código fuente. Esta fase incluye:<ul>
+<li><strong>Análisis léxico</strong>: Se asimila cada elemento del código fuente a una serie de categorías denominadas tokens</li>
 <li><strong>Análisis sintáctico</strong>: Se crean representaciones abstractas de la estructura del código fuente. Estas representaciones suelen ser árboles de sintaxis abstracta (AST). Si recordamos el análisis sintáctico de la asignatura de lengua nos haremos una idea.</li>
 <li><strong>Análisis semántico</strong>: Se revisan los árboles de sintaxis en busca de expresiones sin sentido, aunque correctas a nivel sintáctico.</li>
-<li>
-<p><strong>Síntesis</strong>: Se trata de generar el código ejecutable. Suele incluir:</p>
+</ul>
 </li>
-<li>
-<p><strong>Generación de código intermedio</strong>: A partir de los AST revisados resultantes de la fase de análisis.</p>
-</li>
+<li><strong>Síntesis</strong>: Se trata de generar el código ejecutable. Suele incluir:<ul>
+<li><strong>Generación de código intermedio</strong>: A partir de los AST revisados resultantes de la fase de análisis</li>
 <li><strong>Optimización de código</strong>: Sin modificar el sentido del código, se modifica el código intermedio buscando optimizar su ejecución.</li>
 <li><strong>Generación de código objeto y enlazado</strong>: Se genera el código máquina a partir del código intermedio y se añaden las librerías de códigos necesarias para crear un ejecutable.</li>
 </ul>
-<p><img alt="" src="../assets/EDES-U1-Procesocompilacion.png" /></p>
+</li>
+</ul>
+<figure>
+<div class="highlight"><pre><span></span><code>![](assets/EDES-U1-Procesocompilacion.png)
+&lt;figcaption&gt;Proceso de compilación&lt;/figcaption&gt;
+</code></pre></div>
+</figure>
 <h4 id="estructura-de-un-compilador">Estructura de un Compilador<a class="headerlink" href="#estructura-de-un-compilador" title="Permanent link">&para;</a></h4>
 <p>En la actualidad los compiladores se estructuran en tres programas que se encargan de llevar a cabo una o varias fases del proceso de compilación: Analizador (Frontend), optimizador y generador (Backend).</p>
-<p><img alt="" src="../assets/EDES-U1-EstructuraCompilador.png" /></p>
+<figure>
+<div class="highlight"><pre><span></span><code>![](assets/EDES-U1-EstructuraCompilador.png)
+&lt;figcaption&gt;Estructura de un compilador&lt;/figcaption&gt;
+</code></pre></div>
+</figure>
 <p>El analizador es genérico para todas las plataformas de destino, mientras que el optimizador puede ser común a varios lenguajes y plataformas. El generador es propio de cada plataforma, ya que genera código máquina a partir de código intermedio.</p>
 <h3 id="interpretacion-y-lenguajes-interpretados">Interpretación y lenguajes interpretados<a class="headerlink" href="#interpretacion-y-lenguajes-interpretados" title="Permanent link">&para;</a></h3>
 <p>La forma alternativa de ejecutar un programa a partir del código en un lenguaje de programación es no generar una traducción a código máquina, sino analizar el código y realizar los cómputos que éste indique, bien directamente o bien a partir algún tipo de representación intermedia que no constituya un programa en código máquina. En este caso se dice que el programa es interpretado.</p>

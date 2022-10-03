@@ -14,7 +14,6 @@ tags:
 ---
 ## Captura de excepciones
 
-
 ### Uso de try y except
 
 Hemos vistos varios casos de código en donde usábamos las funciones `input` e `int` para leer y analizar un número entero introducido por el usuario. También vimos lo poco seguro que podía llegar a resultar hacer algo así:
@@ -51,7 +50,6 @@ Introduzca la Temperatura Fahrenheit:72
 22.2222222222
 ```
 
-
 ```Python
 python fahren.py
 Introduzca la Temperatura Fahrenheit:fred
@@ -61,7 +59,7 @@ Traceback (most recent call last):
 ValueError: invalid literal for float(): fred
 ```
 
-Existen estructuras de ejecución condicional dentro de Python para manejar este tipo de errores esperados e inesperados, llamadas “try / except”. La idea de `try` y `except` es que si se sabe que cierta secuencia de instrucciones puede generar un problema, sea posible añadir ciertas sentencias para que sean ejecutadas en caso de error. Estas sentencias extras (el bloque except) serán ignoradas si no se produce ningún error.
+Existen estructuras de ejecución condicional dentro de Python para manejar este tipo de errores esperados e inesperados, llamadas `try / except`. La idea de `try` y `except` es que si se sabe que cierta secuencia de instrucciones puede generar un problema, sea posible añadir ciertas sentencias para que sean ejecutadas en caso de error. Estas sentencias extras (el bloque except) serán ignoradas si no se produce ningún error.
 
 Puedes pensar en la característica `try` y `except` de Python como una “póliza de seguros” en una secuencia de sentencias.
 
@@ -87,17 +85,66 @@ Introduzca la Temperatura Fahrenheit:72
 22.2222222222
 ```
 
-
 ```Python
 python fahren2.py
 Introduzca la Temperatura Fahrenheit:fred
 Por favor, introduzca un número
 ```
 
-Gestionar una excepción con una sentencia `try` recibe el nombre de *capturar* una excepción. En este ejemplo, la clausula `except` muestra un mensaje de error. En general, capturar una excepción te da la oportunidad de corregir el problema, volverlo a intentar o, al menos, terminar el programa con elegancia.
+Gestionar una excepción con una sentencia `try` recibe el nombre de *capturar* una excepción. En este ejemplo, la cláusula `except` muestra un mensaje de error. En general, capturar una excepción te da la oportunidad de corregir el problema, volverlo a intentar o, al menos, terminar el programa con elegancia.
 
+### Capturar excepciones concretas
+
+Es posible escribir programas que capturen y manejen determnadas excepciones. Durante el siguiente ejemplo, se le pide al usuario que ingrese un numero hasta que se haya ingresado un número entero válido, aunque el usuario podra interrumpir el programa (puede variar las formas entres sistemas operativos); En linux/windows se utiliza Control-C y esta interrupción generara la excepción.[`KeyboardInterrupt`](https://docs.python.org/3/library/exceptions.html#KeyboardInterrupt)
+
+```Python
+>>>x = None
+...while x == None:
+...     try:
+...         x = int(input("Please enter a number: "))
+...         break
+...     except ValueError:
+...         print("Oops!  That was no valid number.  Try again...")
+```
+## Lanzar excepciones
+
+La declaración [`raise`](https://docs.python.org/3/reference/simple_stmts.html#raise) permite al programador forzar que ocurra una excepción específica.
+
+Por ejemplo:
+
+```Python
+>>> raise NameError('HiThere')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: HiThere
+```
+El único argumento para`raise` indica la excepción que se va a generar. Debe ser una instancia de excepción o una clase de excepción (una clase que se deriva de [`Exception`](https://docs.python.org/3/library/exceptions.html#Exception). Si se pasa una clase de excepción, se instanciará implícitamente llamando a su constructor sin argumentos:
+
+```Python
+raise ValueError  # shorthand for 'raise ValueError()'
+```
+Si quieres saber si se generó una excepción pero no tienes la intención de manejarla, la siguiente forma de usar la declaración `raise`, te permitirá volver a generarla:
+
+```Python
+>>> try:
+...     raise NameError('HiThere')
+... except NameError:
+...     print('An exception flew by!')
+...     raise
+...
+An exception flew by!
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+NameError: HiThere
+```
+## Actividades
+
+**Actividad 1**: Reescribe el programa conversor de temperaturas para que lea repetidamente la temperatura hasta que sea correcta, debe detectar los fallos usando `try` y `except`.
+
+**Actividad 2**: Escribe un programa que lea repetidamente la temperadebe detectar los fallos usando `try` y `except`.
 
 ## Fuente
 
 * [Aprende con Alf](https://aprendeconalf.es/)
 * [Python para todos](https://es.py4e.com/)
+* [Documentación Python.org](https://docs.python.org/3/tutorial/errors.html)

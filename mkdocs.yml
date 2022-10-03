@@ -26,6 +26,11 @@ nav:
         - '* Práctica 2.1: Sentencias condicionales': 'section1/u02/practica/PROG-U2.-Practica001.md'
         - '2.2.-Iterativas y saltos': 'section1/u02/teoria/PROG-U2.2.-Iterativas.md'
         - '* Práctica 2.2: Sentencias iterativas y saltos': 'section1/u02/practica/PROG-U2.-Practica002.md'
+        - '2.3.-Captura de excepciones': 'section1/u02/teoria/PROG-U2.3.-Excepciones.md'
+        - '* Práctica 2.3: Capturas de excepciones': 'section1/u02/practica/PROG-U2.-Practica003.md'
+        - '2.4.-Depurar programas': 'section1/u02/teoria/PROG-U2.4.-Depurar.md'
+        - '* Práctica 2.4: Depurar programas': 'section1/u02/practica/PROG-U2.-Practica004.md'
+
   - 'Entornos de desarrollo':
     - 'section3/index.md'
     - 'U1: Introducción al desarrollo de software':

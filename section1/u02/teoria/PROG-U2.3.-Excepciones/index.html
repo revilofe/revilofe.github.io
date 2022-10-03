@@ -1202,8 +1202,29 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#capturar-excepciones-concretas" class="md-nav__link">
+    Capturar excepciones concretas
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lanzar-excepciones" class="md-nav__link">
+    Lanzar excepciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    Actividades
+  </a>
   
 </li>
       
@@ -1283,7 +1304,7 @@
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">fahr</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ent</span><span class="p">)</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="ne">ValueError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">literal</span> <span class="k">for</span> <span class="nb">float</span><span class="p">():</span> <span class="n">fred</span>
 </code></pre></div>
-<p>Existen estructuras de ejecución condicional dentro de Python para manejar este tipo de errores esperados e inesperados, llamadas “try / except”. La idea de <code>try</code> y <code>except</code> es que si se sabe que cierta secuencia de instrucciones puede generar un problema, sea posible añadir ciertas sentencias para que sean ejecutadas en caso de error. Estas sentencias extras (el bloque except) serán ignoradas si no se produce ningún error.</p>
+<p>Existen estructuras de ejecución condicional dentro de Python para manejar este tipo de errores esperados e inesperados, llamadas <code>try / except</code>. La idea de <code>try</code> y <code>except</code> es que si se sabe que cierta secuencia de instrucciones puede generar un problema, sea posible añadir ciertas sentencias para que sean ejecutadas en caso de error. Estas sentencias extras (el bloque except) serán ignoradas si no se produce ningún error.</p>
 <p>Puedes pensar en la característica <code>try</code> y <code>except</code> de Python como una “póliza de seguros” en una secuencia de sentencias.</p>
 <p>Se puede reescribir nuestro conversor de temperaturas de esta forma:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">ent</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Introduzca la Temperatura Fahrenheit:&#39;</span><span class="p">)</span>
@@ -1305,11 +1326,48 @@
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">Introduzca</span> <span class="n">la</span> <span class="n">Temperatura</span> <span class="n">Fahrenheit</span><span class="p">:</span><span class="n">fred</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">Por</span> <span class="n">favor</span><span class="p">,</span> <span class="n">introduzca</span> <span class="n">un</span> <span class="n">número</span>
 </code></pre></div>
-<p>Gestionar una excepción con una sentencia <code>try</code> recibe el nombre de <em>capturar</em> una excepción. En este ejemplo, la clausula <code>except</code> muestra un mensaje de error. En general, capturar una excepción te da la oportunidad de corregir el problema, volverlo a intentar o, al menos, terminar el programa con elegancia.</p>
+<p>Gestionar una excepción con una sentencia <code>try</code> recibe el nombre de <em>capturar</em> una excepción. En este ejemplo, la cláusula <code>except</code> muestra un mensaje de error. En general, capturar una excepción te da la oportunidad de corregir el problema, volverlo a intentar o, al menos, terminar el programa con elegancia.</p>
+<h3 id="capturar-excepciones-concretas">Capturar excepciones concretas<a class="headerlink" href="#capturar-excepciones-concretas" title="Permanent link">&para;</a></h3>
+<p>Es posible escribir programas que capturen y manejen determnadas excepciones. Durante el siguiente ejemplo, se le pide al usuario que ingrese un numero hasta que se haya ingresado un número entero válido, aunque el usuario podra interrumpir el programa (puede variar las formas entres sistemas operativos); En linux/windows se utiliza Control-C y esta interrupción generara la excepción.<a href="https://docs.python.org/3/library/exceptions.html#KeyboardInterrupt"><code>KeyboardInterrupt</code></a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">&gt;&gt;&gt;</span><span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="o">...</span><span class="k">while</span> <span class="n">x</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="o">...</span>     <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="o">...</span>         <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter a number: &quot;</span><span class="p">))</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="o">...</span>         <span class="k">break</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="o">...</span>     <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="o">...</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Oops!  That was no valid number.  Try again...&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="lanzar-excepciones">Lanzar excepciones<a class="headerlink" href="#lanzar-excepciones" title="Permanent link">&para;</a></h2>
+<p>La declaración <a href="https://docs.python.org/3/reference/simple_stmts.html#raise"><code>raise</code></a> permite al programador forzar que ocurra una excepción específica.</p>
+<p>Por ejemplo:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span><span class="s1">&#39;HiThere&#39;</span><span class="p">)</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="ne">NameError</span><span class="p">:</span> <span class="n">HiThere</span>
+</code></pre></div>
+El único argumento para<code>raise</code> indica la excepción que se va a generar. Debe ser una instancia de excepción o una clase de excepción (una clase que se deriva de <a href="https://docs.python.org/3/library/exceptions.html#Exception"><code>Exception</code></a>. Si se pasa una clase de excepción, se instanciará implícitamente llamando a su constructor sin argumentos:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">raise</span> <span class="ne">ValueError</span>  <span class="c1"># shorthand for &#39;raise ValueError()&#39;</span>
+</code></pre></div>
+Si quieres saber si se generó una excepción pero no tienes la intención de manejarla, la siguiente forma de usar la declaración <code>raise</code>, te permitirá volver a generarla:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="o">...</span>     <span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span><span class="s1">&#39;HiThere&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="o">...</span> <span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;An exception flew by!&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="o">...</span>     <span class="k">raise</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="o">...</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="n">An</span> <span class="n">exception</span> <span class="n">flew</span> <span class="n">by</span><span class="err">!</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="ne">NameError</span><span class="p">:</span> <span class="n">HiThere</span>
+</code></pre></div>
+<h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h2>
+<p><strong>Actividad 1</strong>: Reescribe el programa conversor de temperaturas para que lea repetidamente la temperatura hasta que sea correcta, debe detectar los fallos usando <code>try</code> y <code>except</code>.</p>
+<p><strong>Actividad 2</strong>: Escribe un programa que lea repetidamente la temperadebe detectar los fallos usando <code>try</code> y <code>except</code>.</p>
 <h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://aprendeconalf.es/">Aprende con Alf</a></li>
 <li><a href="https://es.py4e.com/">Python para todos</a></li>
+<li><a href="https://docs.python.org/3/tutorial/errors.html">Documentación Python.org</a></li>
 </ul>
 
 

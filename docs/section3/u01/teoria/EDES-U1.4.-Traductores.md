@@ -48,8 +48,8 @@ La compilación es un proceso complejo que se realiza en dos fases:
     - **Generación de código objeto y enlazado**: Se genera el código máquina a partir del código intermedio y se añaden las librerías de códigos necesarias para crear un ejecutable.
 
 <figure markdown>
-    ![](assets/EDES-U1-Procesocompilacion.png)
-    <figcaption>Proceso de compilación</figcaption>
+  ![](assets/EDES-U1-Procesocompilacion.png)
+  <figcaption>Proceso de compilación</figcaption>
 </figure>
 
 
@@ -58,8 +58,8 @@ La compilación es un proceso complejo que se realiza en dos fases:
 En la actualidad los compiladores se estructuran en tres programas que se encargan de llevar a cabo una o varias fases del proceso de compilación: Analizador (Frontend), optimizador y generador (Backend).
 
 <figure markdown>
-    ![](assets/EDES-U1-EstructuraCompilador.png)
-    <figcaption>Estructura de un compilador</figcaption>
+  ![](assets/EDES-U1-EstructuraCompilador.png)
+  <figcaption>Estructura de un compilador</figcaption>
 </figure>
 
 

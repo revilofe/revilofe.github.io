@@ -102,7 +102,6 @@ Es posible escribir programas que capturen y manejen determnadas excepciones. D
 ...while x == None:
 ...     try:
 ...         x = int(input("Please enter a number: "))
-...         break
 ...     except ValueError:
 ...         print("Oops!  That was no valid number.  Try again...")
 ```

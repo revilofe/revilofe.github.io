@@ -36,7 +36,7 @@ En este ejemplo vamos a depurar este programa:
 
 ```Python
 	#!usr/bin/env python3
-	#Crea una función “CalcularMaxMin” que recibe una lista con valores numéricos u
+	#Crea una función “CalcularMaxMin” que recibe una lista con valores numéricos y
 	#devuelve el valor máximo y el mínimo. Crea un programa que pida números por
 	#teclado y muestre el máximo y el mínimo, utilizando la función anterior.
 	#A continuación pide un número (entre 1 y 100) y el programa debe decir si está en la lista

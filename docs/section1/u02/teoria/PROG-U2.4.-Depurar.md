@@ -37,9 +37,9 @@ En este ejemplo vamos a depurar este programa:
 ```Python
 	#!usr/bin/env python3
 	#Crea una función “CalcularMaxMin” que recibe una lista con valores numéricos y
-	#devuelve el valor máximo y el mínimo. Crea un programa que pida números por
-	#teclado y muestre el máximo y el mínimo, utilizando la función anterior.
-	#A continuación pide un número (entre 1 y 100) y el programa debe decir si está en la lista
+	#devuelve el valor máximo y el mínimo. Crea un programa que complete una lista de numeros
+	#aleatorios (entre 1 y 100) y muestre el máximo y el mínimo, utilizando la función anterior.
+	#Por último, pide un número (entre 1 y 100) y el programa debe decir si está en la lista anterior.
 	import random
 	def CalcularMaxMin(lista):
 		return (max(lista),min(lista))

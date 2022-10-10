@@ -609,10 +609,10 @@ Junto con estas herramientas, hay algunos tutoriales, videos y artículos adicio
 
 A veces, la mejor forma de aprender es imitando a los demás. Aquí hay algunos excelentes ejemplos de proyectos que usan bien la documentación:
 
-* **Django: ** [Documentos](https://docs.djangoproject.com/en/2.0/) ( [Fuente](https://github.com/django/django/tree/master/docs) )
-* **Solicitudes: ** [Documentos](https://requests.readthedocs.io/en/master/) ( [Fuente](https://github.com/requests/requests/tree/master/docs) )
-* **Haga clic en: ** [Documentos](http://click.pocoo.org/dev/) ( [Fuente](https://github.com/pallets/click/tree/master/docs) )
-* **Pandas: ** [Documentos](http://pandas.pydata.org/pandas-docs/stable/) ( [Fuente](https://github.com/pandas-dev/pandas/tree/master/doc) )
+* **Django:** [Documentos](https://docs.djangoproject.com/en/2.0/) ( [Fuente](https://github.com/django/django/tree/master/docs) )
+* **Solicitudes:** [Documentos](https://requests.readthedocs.io/en/master/) ( [Fuente](https://github.com/requests/requests/tree/master/docs) )
+* **Haga clic en:** [Documentos](http://click.pocoo.org/dev/) ( [Fuente](https://github.com/pallets/click/tree/master/docs) )
+* **Pandas:** [Documentos](http://pandas.pydata.org/pandas-docs/stable/) ( [Fuente](https://github.com/pandas-dev/pandas/tree/master/doc) )
 
 ### ¿Dónde empiezo?
 

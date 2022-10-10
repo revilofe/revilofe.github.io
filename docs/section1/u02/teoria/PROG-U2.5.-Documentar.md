@@ -626,4 +626,7 @@ La documentación de proyectos tiene una progresión sencilla:
 
 Si no sabes por donde empezar con la documentación, identifica dónde se encuentra tu proyecto ahora en relación con la progresión anterior. ¿Tienes alguna documentación? Si no, entonces comience allí. Si tiene alguna documentación pero le faltan algunos de los archivos clave del proyecto, comience agregándolos.
 
-Al final, no te desanimes ni te sientas abrumado por la cantidad de trabajo que se requiere para documentar el código. Una vez que comienzas a documentar el código, será más fácil continuar. 
+Al final, no te desanimes ni te sientas abrumad@ por la cantidad de trabajo que se requiere para documentar el código. Una vez que comienzas a documentar el código, será más fácil continuar. 
+
+## Fuente
+* [Documentando código python](https://realpython.com/documenting-python-code/)

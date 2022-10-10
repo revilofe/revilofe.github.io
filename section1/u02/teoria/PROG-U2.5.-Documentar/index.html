@@ -239,13 +239,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../" class="md-tabs__link">
+      <a href="../../../" class="md-tabs__link md-tabs__link--active">
         Programación
       </a>
     </li>
@@ -390,12 +392,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -563,20 +567,26 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
       
       
       
         
           
             
+          
+        
+          
+        
           
         
           
@@ -723,6 +733,269 @@
     <li class="md-nav__item">
       <a href="../../practica/PROG-U2.-Practica004/" class="md-nav__link">
         * Práctica 2.4: Depurar programas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2.5.-Documentar el código
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        2.5.-Documentar el código
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documentar-el-codigo-en-python" class="md-nav__link">
+    Documentar el código en Python
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentar el código en Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que-es-tan-importante-documentar-su-codigo" class="md-nav__link">
+    Por qué es tan importante documentar su código
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comentar-vs-documentar-codigo" class="md-nav__link">
+    Comentar vs Documentar Código
+  </a>
+  
+    <nav class="md-nav" aria-label="Comentar vs Documentar Código">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptos-basicos-durante-los-comentarios-en-el-codigo" class="md-nav__link">
+    Conceptos básicos durante los comentarios en el código
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comentarios-a-traves-de-las-sugerencias-de-tipo-python-35" class="md-nav__link">
+    Comentarios a través de las sugerencias de tipo (Python 3.5+)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentar-su-base-de-codigo-de-python-usando-docstrings" class="md-nav__link">
+    Documentar su base de código de Python usando Docstrings
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentar su base de código de Python usando Docstrings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cadenas-de-documentacion-docstring" class="md-nav__link">
+    Cadenas de documentación docstring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-cadenas-de-documentos" class="md-nav__link">
+    Tipos de cadenas de documentos
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de cadenas de documentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docstrings-de-clase" class="md-nav__link">
+    Docstrings de clase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docstrings-de-paquetes-y-modulos" class="md-nav__link">
+    Docstrings de paquetes y módulos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docstrings-de-scripts" class="md-nav__link">
+    Docstrings de scripts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatos-de-docstrings" class="md-nav__link">
+    Formatos de docstrings
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatos de docstrings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-docstrings-de-google" class="md-nav__link">
+    Ejemplo de docstrings de Google
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-texto-reestructurado" class="md-nav__link">
+    Ejemplo de texto reestructurado
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-cadenas-de-documentacion-numpyscipy" class="md-nav__link">
+    Ejemplo de cadenas de documentación NumPy/SciPy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-epitexto" class="md-nav__link">
+    Ejemplo de epitexto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion-de-sus-proyectos-de-python" class="md-nav__link">
+    Documentación de sus proyectos de Python
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentación de sus proyectos de Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proyectos-privados" class="md-nav__link">
+    Proyectos Privados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyectos-compartidos" class="md-nav__link">
+    Proyectos Compartidos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyectos-publicos-y-de-codigo-abierto" class="md-nav__link">
+    Proyectos públicos y de código abierto
+  </a>
+  
+    <nav class="md-nav" aria-label="Proyectos públicos y de código abierto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#las-cuatro-secciones-principales-de-la-carpeta-docs" class="md-nav__link">
+    Las cuatro secciones principales de la carpeta docs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramientas-y-recursos-de-documentacion" class="md-nav__link">
+    Herramientas y recursos de documentación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donde-empiezo" class="md-nav__link">
+    ¿Dónde empiezo?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://classroom.github.com/a/1NxxJ6nu" class="md-nav__link">
+        * Práctica 2.5: Proyecto
       </a>
     </li>
   
@@ -1497,7 +1770,7 @@
   </a>
 
 
-  <h1>UD 2 - 2.5 Documentar el código</h1>
+  <h1>2.5.-Documentar el código</h1>
 
 <h2 id="documentar-el-codigo-en-python">Documentar el código en Python<a class="headerlink" href="#documentar-el-codigo-en-python" title="Permanent link">&para;</a></h2>
 <p>Intentaremos explicar como documentar el código de Python. Ya sea un script pequeño o un proyecto grande, ya sea un <a href="https://realpython.com/python-beginner-tips/">principiante</a> o un Pythonista experimentado.</p>
@@ -2137,6 +2410,42 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pie" >
+      
+        
+        <a href="../../practica/PROG-U2.-Practica004/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: * Práctica 2.4: Depurar programas" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              * Práctica 2.4: Depurar programas
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../../../section3/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Entornos de desarrollo" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              Entornos de desarrollo
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

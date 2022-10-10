@@ -1419,8 +1419,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#las-cuatro-secciones-principales-de-la-docscarpeta" class="md-nav__link">
-    Las cuatro secciones principales de la docscarpeta
+  <a href="#las-cuatro-secciones-principales-de-la-carpeta-docs" class="md-nav__link">
+    Las cuatro secciones principales de la carpeta docs
   </a>
   
 </li>
@@ -1628,7 +1628,7 @@
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">say_hello</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 <a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    <span class="n">A</span> <span class="n">simple</span> <span class="n">function</span> <span class="n">that</span> <span class="n">says</span> <span class="n">hello</span><span class="o">...</span> <span class="n">Richie</span> <span class="n">style</span>
 </code></pre></div>
-<p>Python tiene una característica más que simplifica la asignación de contenido a las Docstrings. En lugar de manipular directamente la propiedad <code>__doc__</code>, la ubicación estratégica del literal debajo del objeto establecerá automáticamente el valor de <code>__doc__</code>. Esto es lo que sucede con el mismo ejemplo que el anterior:</p>
+<p>Python tiene una característica más que simplifica la asignación de contenido a las docstrings. En lugar de manipular directamente la propiedad <code>__doc__</code>, la ubicación estratégica del literal debajo de la definicion del objeto establecerá automáticamente el valor de <code>__doc__</code>. Esto es lo que sucede con el mismo ejemplo que el anterior:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="sd">&quot;&quot;&quot;A simple function that says hello... Richie style&quot;&quot;&quot;</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, is it me you&#39;re looking for?&quot;</span><span class="p">)</span>
@@ -1639,7 +1639,7 @@
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="n">say_hello</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 <a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    <span class="n">A</span> <span class="n">simple</span> <span class="n">function</span> <span class="n">that</span> <span class="n">says</span> <span class="n">hello</span><span class="o">...</span> <span class="n">Richie</span> <span class="n">style</span>
 </code></pre></div>
-<p>Ya que conoces el trasfondo de las cadenas de documentación. Ahora es el momento de conocer los diferentes tipos de cadenas de documentación y qué información deben contener.</p>
+<p>Ya que conoces el trasfondo de las docstrings. Ahora es el momento de conocer los diferentes tipos de docstrings y qué información deben contener.</p>
 <h4 id="tipos-de-cadenas-de-documentos">Tipos de cadenas de documentos<a class="headerlink" href="#tipos-de-cadenas-de-documentos" title="Permanent link">&para;</a></h4>
 <p>Las convenciones de docstring se describen en <a href="https://www.python.org/dev/peps/pep-0257/">PEP 257</a>. Su propósito es proporcionar a sus usuarios una breve descripción general del objeto. Deben mantenerse lo suficientemente concisos para que sean fáciles de mantener, pero aún así ser lo suficientemente elaborados para que los nuevos usuarios entiendan su propósito y cómo usar el objeto documentado.</p>
 <p>En todos los casos, las cadenas de documentación deben usar el formato de cadena de triples comillas dobles <code>"""</code>, ya sea con Docstrings que tengan varias líneas o no. Como mínimo, una cadena de documentación debe ser un resumen rápido de lo que sea que estés describiendo y debe estar contenida en una sola línea:</p>
@@ -1846,7 +1846,7 @@
 <a id="__codelineno-19-63" name="__codelineno-19-63" href="#__codelineno-19-63"></a>    <span class="n">main</span><span class="p">()</span>
 </code></pre></div>
 <h4 id="formatos-de-docstrings">Formatos de docstrings<a class="headerlink" href="#formatos-de-docstrings" title="Permanent link">&para;</a></h4>
-<p>Es posible que haya notado en los ejemplos vistos hasta ahora de docstrings que existía un específico con elementos comunes: <code>Arguments</code>, <code>Returns</code>y <code>Attributes</code>. Hay formatos específicos de docstrings que se pueden usar para ayudar a los analizadores de docstrings y a los usuarios a tener un formato familiar y conocido. El formato utilizado para los docstrings sigue el estilo NumPy/SciPy. Algunos de los formatos más comunes son los siguientes:</p>
+<p>Es posible que haya notado en los ejemplos vistos hasta ahora de docstrings que existían elementos comunes: <code>Arguments</code>, <code>Returns</code>y <code>Attributes</code>. Hay formatos específicos de docstrings que se pueden usar para ayudar a los analizadores de docstrings y a los usuarios a tener un formato familiar y conocido. El formato utilizado para los docstrings sigue el estilo NumPy/SciPy. Algunos de los formatos más comunes son los siguientes:</p>
 <table>
 <thead>
 <tr>
@@ -1949,38 +1949,36 @@
 </code></pre></div>
 <p>Los proyectos se pueden subdividir generalmente en tres tipos principales: Privado, Compartido y Público/Código Abierto.</p>
 <h4 id="proyectos-privados">Proyectos Privados<a class="headerlink" href="#proyectos-privados" title="Permanent link">&para;</a></h4>
-<p>Los proyectos privados son proyectos destinados solo para uso personal y, por lo general, no se comparten con otros usuarios o desarrolladores. La documentación puede ser bastante ligera en este tipo de proyectos. Hay algunas piezas recomendadas para agregar según sea necesario:</p>
+<p>Los proyectos privados son proyectos destinados solo para uso personal y, por lo general, no se comparten con otros usuarios o desarrolladores. La documentación puede ser bastante ligera en este tipo de proyectos. La documentación recomendada para este tipo de proyectos, según sea necesario:</p>
 <ul>
-<li><strong>Léame:</strong> un breve resumen del proyecto y su propósito. Incluya cualquier requisito especial para la instalación u operación del proyecto.</li>
+<li><strong>Readme.md:</strong> un breve resumen del proyecto y su propósito. Incluya cualquier requisito especial para la instalación u operación del proyecto.</li>
 <li><strong><code>examples.py</code>:</strong> un archivo de secuencia de comandos de Python que brinda ejemplos simples de cómo usar el proyecto.</li>
 </ul>
-<p>Recuerda, aunque los proyectos privados están destinados a ti personalmente, también eres considerado un usuario. Piense en cualquier cosa que pueda resultarle confusa en el futuro y asegúrese de capturarla en comentarios, cadenas de documentación o el archivo Léame.</p>
-<p><a href="https://srv.realpython.net/click/11225539816/?c=48874902176&amp;p=58946116052&amp;r=96746"><img alt="" src="https://img.realpython.net/cae48de6b6f52aa978e17ea36747a9fc" /></a></p>
-<p><a href="https://realpython.com/account/join/">Quitar anuncios</a></p>
+<p>Recuerda, aunque los proyectos privados están destinados a ti, también eres considerado un usuario. Piense en cualquier cosa que pueda resultarle confusa en el futuro y asegúrese de capturarla en comentarios, docstring o el archivo Readme.md.</p>
 <h4 id="proyectos-compartidos">Proyectos Compartidos<a class="headerlink" href="#proyectos-compartidos" title="Permanent link">&para;</a></h4>
-<p>Los proyectos compartidos son proyectos en los que colaboras con algunas otras personas en el desarrollo y/o uso del proyecto. El "cliente" o usuario del proyecto sigue siendo usted mismo y los pocos que utilizan el proyecto también.</p>
-<p>La documentación debe ser un poco más rigurosa de lo que debe ser para un proyecto privado, principalmente para ayudar a incorporar nuevos miembros al proyecto o alertar a los contribuyentes/usuarios de nuevos cambios en el proyecto. Algunas de las partes recomendadas para agregar al proyecto son las siguientes:</p>
+<p>Los proyectos compartidos son proyectos en los que colaboras con otras personas en el desarrollo y/o uso del proyecto. El "cliente" o usuario del proyecto sigue siendo usted mismo y otros desarrolladores que utilizan el proyecto.</p>
+<p>La documentación debe ser un poco más rigurosa de lo que debe ser para un proyecto privado, principalmente para ayudar a incorporar nuevos miembros al proyecto o alertar a los contribuyentes/usuarios de nuevos cambios en el proyecto. La documentación recomendada para estos proyectos es la siguiente:</p>
 <ul>
-<li><strong>Léame:</strong> un breve resumen del proyecto y su propósito. Incluya cualquier requisito especial para instalar u operar el proyecto. Además, agregue cualquier cambio importante desde la versión anterior.</li>
+<li><strong>Readme.md:</strong> un breve resumen del proyecto y su propósito. Incluya cualquier requisito especial para instalar u operar el proyecto. Además, agregue cualquier cambio importante desde la versión anterior.</li>
 <li><strong><code>examples.py</code>:</strong> un archivo de secuencia de comandos de Python que brinda ejemplos simples de cómo usar los proyectos.</li>
 <li><strong>Cómo contribuir:</strong> esto debe incluir cómo los nuevos contribuyentes al proyecto pueden comenzar a contribuir.</li>
 </ul>
 <h4 id="proyectos-publicos-y-de-codigo-abierto">Proyectos públicos y de código abierto<a class="headerlink" href="#proyectos-publicos-y-de-codigo-abierto" title="Permanent link">&para;</a></h4>
-<p>Los proyectos públicos y de código abierto son proyectos que están destinados a compartirse con un gran grupo de usuarios y pueden involucrar a grandes equipos de desarrollo. Estos proyectos deben otorgar una prioridad tan alta a la documentación del proyecto como al desarrollo real del proyecto en sí. Algunas de las partes recomendadas para agregar al proyecto son las siguientes:</p>
+<p>Los proyectos públicos y de código abierto son proyectos que están destinados a compartirse con un gran grupo de usuarios y pueden involucrar a grandes equipos de desarrollo. Estos proyectos deben otorgar una prioridad tan alta a la documentación del proyecto como al desarrollo real del proyecto en sí. La documentación recomendada para estos proyectos es las siguiente:</p>
 <ul>
-<li><strong>Léame:</strong> un breve resumen del proyecto y su propósito. Incluya cualquier requisito especial para instalar u operar los proyectos. Además, agregue cualquier cambio importante desde la versión anterior. Finalmente, agregue enlaces a documentación adicional, informes de errores y cualquier otra información importante para el proyecto. Dan Bader ha elaborado <a href="https://dbader.org/blog/write-a-great-readme-for-your-github-project">un excelente tutorial</a> sobre todo lo que debe incluirse en su archivo Léame.</li>
+<li><strong>Readme.md:</strong> un breve resumen del proyecto y su propósito. Incluya cualquier requisito especial para instalar u operar los proyectos. Además, agregue cualquier cambio importante desde la versión anterior. Finalmente, agregue enlaces a documentación adicional, informes de errores y cualquier otra información importante para el proyecto. Dan Bader ha elaborado <a href="https://dbader.org/blog/write-a-great-readme-for-your-github-project">un excelente tutorial</a> sobre todo lo que debe incluirse en su archivo Léame.</li>
 <li><strong>Cómo contribuir:</strong> esto debe incluir cómo pueden ayudar los nuevos contribuyentes al proyecto. Esto incluye el desarrollo de nuevas funciones, la solución de problemas conocidos, la adición de documentación, la adición de nuevas pruebas o la notificación de problemas.</li>
-<li><strong>Código de conducta:</strong> define cómo deben tratarse los demás colaboradores al desarrollar o utilizar su software. Esto también establece lo que sucederá si este código se rompe. Si está utilizando Github, se puede generar una <a href="https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/">plantilla de Código de conducta con la redacción recomendada. </a>Especialmente para proyectos de código abierto, considere agregar esto.</li>
+<li><strong>Código de conducta:</strong> define cómo deben comportarse los demás colaboradores al desarrollar o utilizar su software. Esto también establece lo que sucederá si este código no es correcto. Si está utilizando Github, se puede generar una <a href="https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/">plantilla de Código de conducta con la redacción recomendada. </a>Especialmente para proyectos de código abierto, considere agregar esto.</li>
 <li><strong>Licencia:</strong> un archivo de texto sin formato que describe la licencia que utiliza su proyecto. Especialmente para proyectos de código abierto, considere agregar esto.</li>
 <li><strong>docs:</strong> una carpeta que contiene más documentación. La siguiente sección describe con más detalle qué debe incluirse y cómo organizar el contenido de esta carpeta.</li>
 </ul>
-<h5 id="las-cuatro-secciones-principales-de-la-docscarpeta">Las cuatro secciones principales de la <code>docs</code>carpeta<a class="headerlink" href="#las-cuatro-secciones-principales-de-la-docscarpeta" title="Permanent link">&para;</a></h5>
+<h5 id="las-cuatro-secciones-principales-de-la-carpeta-docs">Las cuatro secciones principales de la carpeta <code>docs</code><a class="headerlink" href="#las-cuatro-secciones-principales-de-la-carpeta-docs" title="Permanent link">&para;</a></h5>
 <p>Daniele Procida dio una maravillosa <a href="https://www.youtube.com/watch?v=azf6yzuJt54">charla sobre PyCon 2017</a> y una publicación de <a href="https://www.divio.com/en/blog/documentation/">blog posterior</a> sobre la documentación de proyectos de Python. Menciona que todos los proyectos deben tener las siguientes cuatro secciones principales para ayudarlo a enfocar su trabajo:</p>
 <ul>
-<li><strong>Tutoriales</strong> : Lecciones que llevan al lector de la mano a través de una serie de pasos para completar un proyecto (o ejercicio significativo). Orientado al aprendizaje del usuario.</li>
-<li><strong>Guías prácticas</strong> : guías que llevan al lector a través de los pasos necesarios para resolver un problema común (recetas orientadas a problemas).</li>
-<li><strong>Referencias</strong> : Explicaciones que aclaran e iluminan un tema en particular. Orientado a la comprensión.</li>
-<li><strong>Explicaciones</strong> : descripciones técnicas de la maquinaria y cómo operarla (clases clave, funciones, API, etc.). Artículo de Think Encyclopedia.</li>
+<li><strong>Tutoriales</strong>: Lecciones que llevan al lector de la mano a través de una serie de pasos para completar un proyecto (o ejercicio significativo). Orientado al aprendizaje del usuario.</li>
+<li><strong>Guías prácticas</strong>: guías que llevan al lector a través de los pasos necesarios para resolver un problema común (Recetas orientadas a resolver problemas).</li>
+<li><strong>Referencias</strong>: Explicaciones que aclaran e iluminan un tema en particular. Orientado a la comprensión.</li>
+<li><strong>Explicaciones</strong>: descripciones técnicas de la maquinaria y cómo operarla (clases clave, funciones, API, etc.). Artículo de Think Encyclopedia.</li>
 </ul>
 <p>La siguiente tabla muestra cómo todas estas secciones se relacionan entre sí, así como su propósito general:</p>
 <table>
@@ -2004,7 +2002,7 @@
 </tr>
 </tbody>
 </table>
-<p>Al final, desea asegurarse de que sus usuarios tengan acceso a las respuestas a cualquier pregunta que puedan tener. Al organizar su proyecto de esta manera, podrá responder esas preguntas fácilmente y en un formato que podrán navegar rápidamente.</p>
+<p>Al final, deseas asegurarte de que los usuarios tiene acceso a las respuestas a cualquier pregunta que puedan tener. Al organizar el proyecto de esta manera, podrás responder esas preguntas fácilmente y en un formato que podrán navegar rápidamente.</p>
 <h4 id="herramientas-y-recursos-de-documentacion">Herramientas y recursos de documentación<a class="headerlink" href="#herramientas-y-recursos-de-documentacion" title="Permanent link">&para;</a></h4>
 <p>Documentar su código, especialmente proyectos grandes, puede ser desalentador. Afortunadamente, existen algunas herramientas y referencias para comenzar:</p>
 <table>
@@ -2021,11 +2019,11 @@
 </tr>
 <tr>
 <td><a href="http://epydoc.sourceforge.net/">Epydoc</a></td>
-<td>Una herramienta para generar documentación de API para módulos de Python basada en sus cadenas de documentación</td>
+<td>Una herramienta para generar documentación de API para módulos de Python basada en sus docstrings</td>
 </tr>
 <tr>
 <td><a href="https://readthedocs.org/">Leer los documentos</a></td>
-<td>Creación, control de versiones y alojamiento automáticos de sus documentos para usted</td>
+<td>Creación, control de versiones y alojamiento automáticos de sus documentos.</td>
 </tr>
 <tr>
 <td><a href="https://www.doxygen.nl/manual/docblocks.html">doxígeno</a></td>
@@ -2033,11 +2031,15 @@
 </tr>
 <tr>
 <td><a href="https://www.mkdocs.org/">MkDocs</a></td>
-<td>Un generador de sitios estáticos para ayudar a construir la documentación del proyecto utilizando el lenguaje Markdown. Consulte<a href="https://realpython.com/python-project-documentation-with-mkdocs/">Cree su documentación de proyecto de Python con MkDocs</a> para obtener más información.</td>
+<td>Un generador de sitios estáticos para ayudar a construir la documentación del proyecto utilizando el lenguaje Markdown. Consulta <a href="https://realpython.com/python-project-documentation-with-mkdocs/">Crea tu documentación de proyecto de Python con MkDocs</a> para obtener más información.</td>
 </tr>
 <tr>
 <td><a href="https://pycco-docs.github.io/pycco/">pycco</a></td>
-<td>Un generador de documentación "rápido y sucio" que muestra el código y la documentación uno al lado del otro. Consulte<a href="https://realpython.com/generating-code-documentation-with-pycco/">nuestro tutorial sobre cómo usarlo para obtener más información</a> .</td>
+<td>Un generador de documentación "rápido y sucio" que muestra el código y la documentación uno al lado del otro. Consulta <a href="https://realpython.com/generating-code-documentation-with-pycco/">Tutorial sobre cómo usar pycco</a> .</td>
+</tr>
+<tr>
+<td><a href="https://docs.python.org/es/3/library/pydoc.html">pydoc</a></td>
+<td>El módulo pydoc genera automáticamente documentación a partir de módulos de Python. La documentación puede presentarse como páginas de texto en la consola, enviarse a un navegador web o guardarse en archivos <abbr title="Hyper Text Markup Language">HTML</abbr>. .</td>
 </tr>
 </tbody>
 </table>
@@ -2049,6 +2051,7 @@
 <li><a href="https://youtu.be/SUt3wT43AeM?t=6299">Titus Brown, Luiz Irber - Crear, construir, probar y documentar un proyecto de Python: un CÓMO práctico - PyCon 2016</a></li>
 <li><a href="http://docutils.sourceforge.net/rst.html">reStructuredText Documentación Oficial</a></li>
 <li><a href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">Manual de texto reestructurado de Sphinx</a></li>
+<li><a href="https://docs.python.org/es/3/library/pydoc.html">El generador de documentación y sistema de ayuda en línea pydoc</a></li>
 </ol>
 <p>A veces, la mejor forma de aprender es imitando a los demás. Aquí hay algunos excelentes ejemplos de proyectos que usan bien la documentación:</p>
 <ul>
@@ -2057,8 +2060,6 @@
 <li>**Haga clic en: ** <a href="http://click.pocoo.org/dev/">Documentos</a> ( <a href="https://github.com/pallets/click/tree/master/docs">Fuente</a> )</li>
 <li>**Pandas: ** <a href="http://pandas.pydata.org/pandas-docs/stable/">Documentos</a> ( <a href="https://github.com/pandas-dev/pandas/tree/master/doc">Fuente</a> )</li>
 </ul>
-<p><a href="https://srv.realpython.net/click/8941932849/?c=48874902176&amp;p=58946116052&amp;r=25963"><img alt="" src="https://img.realpython.net/8dd76836b26ce79fa0afa59df2458580" /></a></p>
-<p><a href="https://realpython.com/account/join/">Quitar anuncios</a></p>
 <h3 id="donde-empiezo">¿Dónde empiezo?<a class="headerlink" href="#donde-empiezo" title="Permanent link">&para;</a></h3>
 <p>La documentación de proyectos tiene una progresión sencilla:</p>
 <ol>
@@ -2068,8 +2069,8 @@
 <li>buena documentacion</li>
 <li>Gran documentación</li>
 </ol>
-<p>Si no sabe a dónde ir a continuación con su documentación, mire dónde se encuentra su proyecto ahora en relación con la progresión anterior. ¿Tienes alguna documentación? Si no, entonces comience allí. Si tiene alguna documentación pero le faltan algunos de los archivos clave del proyecto, comience agregándolos.</p>
-<p>Al final, no se desanime ni se sienta abrumado por la cantidad de trabajo que se requiere para documentar el código. Una vez que comience a documentar su código, será más fácil continuar. No dude en comentar si tiene preguntas o comuníquese con el equipo de Real Python en las redes sociales y lo ayudaremos.</p>
+<p>Si no sabes por donde empezar con la documentación, identifica dónde se encuentra tu proyecto ahora en relación con la progresión anterior. ¿Tienes alguna documentación? Si no, entonces comience allí. Si tiene alguna documentación pero le faltan algunos de los archivos clave del proyecto, comience agregándolos.</p>
+<p>Al final, no te desanimes ni te sientas abrumado por la cantidad de trabajo que se requiere para documentar el código. Una vez que comienzas a documentar el código, será más fácil continuar. </p>
 
 
   

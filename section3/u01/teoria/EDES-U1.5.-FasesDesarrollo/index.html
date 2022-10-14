@@ -1,0 +1,1822 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Traductores">
+      
+      
+        <meta name="author" content="Eduardo Fdez">
+      
+      
+        <link rel="canonical" href="https://revilofe.github.io/section3/u01/teoria/EDES-U1.5.-FasesDesarrollo/">
+      
+      <link rel="icon" href="../../../../assets/favicon-96x96.png">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+    
+    
+      
+        <title>UD 1 - 1.4 Traductores. - R Z O</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag-icon--etiqueta{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/><path fill-rule="evenodd" d="M2.5 1A1.5 1.5 0 0 0 1 2.5v8.44c0 .397.158.779.44 1.06l10.25 10.25a1.5 1.5 0 0 0 2.12 0l8.44-8.44a1.5 1.5 0 0 0 0-2.12L12 1.44A1.5 1.5 0 0 0 10.94 1H2.5zm0 1.5h8.44l10.25 10.25-8.44 8.44L2.5 10.94V2.5z"/></svg>');}</style>
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-GT5TGHD4YQ"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-GT5TGHD4YQ",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-GT5TGHD4YQ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fases-del-proceso-de-desarrollo-del-software" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../.." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
+      
+  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            R Z O
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD 1 - 1.4 Traductores.
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/revilofe/revilofe.github.io" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../.." class="md-tabs__link">
+      Principal
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../section1/" class="md-tabs__link">
+        Programación
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link">
+        Entornos de desarrollo
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../section2/" class="md-tabs__link">
+        Incidentes de seguridad
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../blog/" class="md-tabs__link">
+      Blog
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../tags/" class="md-tabs__link">
+      Tags
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../about/" class="md-tabs__link">
+      Acerca de
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
+      
+  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
+
+    </a>
+    R Z O
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/revilofe/revilofe.github.io" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Principal
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../section1/">Programación</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Programación" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Programación
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../section1/u01/">U1: Introducción al desarrollo de software</a>
+          
+            <label for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="U1: Introducción al desarrollo de software" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          U1: Introducción al desarrollo de software
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
+        1.1.-Un programa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica001/" class="md-nav__link">
+        * Práctica 1.1: Instala python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
+        1.2.-Practica con un lenguaje
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
+        1.3.-Tipos de datos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica002/" class="md-nav__link">
+        * Práctica 1.2: Primeros programas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../section1/u02/">U2: Sentencias condicionales y repetitivas</a>
+          
+            <label for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="U2: Sentencias condicionales y repetitivas" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          U2: Sentencias condicionales y repetitivas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
+        2.1.-Condicionales
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
+        * Práctica 2.1: Sentencias condicionales
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
+        2.2.-Iterativas y saltos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
+        * Práctica 2.2: Sentencias iterativas y saltos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
+        2.3.-Captura de excepciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
+        * Práctica 2.3: Capturas de excepciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
+        2.4.-Depurar programas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
+        * Práctica 2.4: Depurar programas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
+        2.5.-Documentar el código
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://classroom.github.com/a/1NxxJ6nu" class="md-nav__link">
+        * Práctica 2.5: Proyecto
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../">Entornos de desarrollo</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Entornos de desarrollo" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Entornos de desarrollo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">U1: Introducción al desarrollo de software</a>
+          
+            <label for="__nav_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="U1: Introducción al desarrollo de software" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          U1: Introducción al desarrollo de software
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EDES-U1.1.-Software-PC/" class="md-nav__link">
+        1.1.-Software y PC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EDES-U1.2.-Lenguajes/" class="md-nav__link">
+        1.2.-Lenguajes de programación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EDES-U1.3.-FuncionalidadesHerramientas/" class="md-nav__link">
+        1.3.-Herramientas y funcionalidades
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EDES-U1.4.-Traductores/" class="md-nav__link">
+        1.4.-Traductores
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practica/EDES-U1.-Practica001/" class="md-nav__link">
+        Práctica 1: Lenguajes de programación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practica/EDES-U1.-Practica002/" class="md-nav__link">
+        Práctica 2: Herramientas para generar programa
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../section2/">Incidentes de seguridad</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Incidentes de seguridad" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Incidentes de seguridad
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
+        U0: Nos conocemos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../section2/u01/">U1: Principios generales y planes de seguridad</a>
+          
+            <label for="__nav_4_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="U1: Principios generales y planes de seguridad" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          U1: Principios generales y planes de seguridad
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
+        1.1.-PrincipiosGenerales
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/page-2.md" class="md-nav__link">
+        Unidad 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/page-3.md" class="md-nav__link">
+        Unidad 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/page-4.md" class="md-nav__link">
+        Unidad 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/page-5.md" class="md-nav__link">
+        Unidad 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/page-6.md" class="md-nav__link">
+        Unidad 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/page-7.md" class="md-nav__link">
+        Unidad 7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/page-8.md" class="md-nav__link">
+        Unidad 8
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/" class="md-nav__link">
+        Blog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tags/" class="md-nav__link">
+        Tags
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        Acerca de
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fases-del-proceso-de-desarrollo-del-software" class="md-nav__link">
+    Fases del proceso de desarrollo del software
+  </a>
+  
+    <nav class="md-nav" aria-label="Fases del proceso de desarrollo del software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fases-del-desarrollo-del-software" class="md-nav__link">
+    Fases del desarrollo del Software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelos-de-desarrollo-de-software" class="md-nav__link">
+    Modelos de desarrollo de software
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scrum-que-es-y-como-funciona-este-marco-de-trabajo" class="md-nav__link">
+    Scrum: qué es y cómo funciona este marco de trabajo
+  </a>
+  
+    <nav class="md-nav" aria-label="Scrum: qué es y cómo funciona este marco de trabajo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cual-es-el-origen-de-scrum" class="md-nav__link">
+    ¿Cuál es el origen de Scrum?
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Cuál es el origen de Scrum?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#los-12-principios-del-manifiesto-agil" class="md-nav__link">
+    Los 12 principios del Manifiesto Ágil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#los-5-valores-scrum" class="md-nav__link">
+    Los 5 valores Scrum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-que-se-basa-el-marco-de-trabajo-scrum" class="md-nav__link">
+    ¿En qué se basa el marco de trabajo Scrum?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#los-roles-en-el-equipo-scrum" class="md-nav__link">
+    Los roles en el equipo Scrum
+  </a>
+  
+    <nav class="md-nav" aria-label="Los roles en el equipo Scrum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-owner" class="md-nav__link">
+    Product owner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scrum-master" class="md-nav__link">
+    Scrum Master
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equipo-de-desarrollo" class="md-nav__link">
+    Equipo de desarrollo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#los-eventos-del-equipo-scrum" class="md-nav__link">
+    Los eventos del equipo Scrum
+  </a>
+  
+    <nav class="md-nav" aria-label="Los eventos del equipo Scrum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sprint-planning" class="md-nav__link">
+    Sprint Planning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daily-meeting" class="md-nav__link">
+    Daily Meeting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-review" class="md-nav__link">
+    Sprint Review
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-retrospective" class="md-nav__link">
+    Sprint Retrospective
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grooming" class="md-nav__link">
+    Grooming
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#los-artefactos-scrum" class="md-nav__link">
+    Los artefactos Scrum
+  </a>
+  
+    <nav class="md-nav" aria-label="Los artefactos Scrum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-backlog" class="md-nav__link">
+    Product Backlog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-backlog" class="md-nav__link">
+    Sprint Backlog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incremento" class="md-nav__link">
+    Incremento
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-y-desventajas-del-marco-scrum" class="md-nav__link">
+    Ventajas y desventajas del marco Scrum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes" class="md-nav__link">
+    Fuentes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+  <nav class="md-tags" >
+    
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#edes" class="md-tag md-tag-icon">EDES</a>
+      
+    
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tools" class="md-tag md-tag-icon">Tools</a>
+      
+    
+  </nav>
+
+
+
+  <a href="https://github.com/revilofe/revilofe.github.io/edit/main/docs/section3/u01/teoria/EDES-U1.5.-FasesDesarrollo.md" title="Editar esta página" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>UD 1 - 1.4 Traductores.</h1>
+
+<h2 id="fases-del-proceso-de-desarrollo-del-software">Fases del proceso de desarrollo del software<a class="headerlink" href="#fases-del-proceso-de-desarrollo-del-software" title="Permanent link">&para;</a></h2>
+<p>Entendemos por el Proceso de Desarrollo de Software el conjunto de fases o pasos que ocurren desde que se concibe una idea hasta que ese software está implantado en un dispositivo y funcionando.</p>
+<p>Ingeniera del software: se define como la ciencia y el arte de especificar, diseñar y desarrollar programas, documentación y procedimientos operativos.</p>
+<p>El proceso de desarrollo, que en un principio puede parecer una tarea simple, consta de una serie de pasos de obligado cumplimiento, pues sólo así podremos garantizar que los programas creados son eficientes, fiables, seguros y responden a las necesidades de los usuarios finales (aquellos que van a utilizar el programa). Esta última parte, la de responder a las necesidades finales de los usuarios no es sencillo cumplir con ella, y da lugar a multiples problemas durante este proceso de desarrollo que impactan negativamente en el trabajo y provocan al fracaso o directamente cancelación de los proyectos .</p>
+<p>El desarrollo de software es un proceso que conlleva una serie de pasos. Genéricamente, estos pasos son los siguientes:</p>
+<h3 id="fases-del-desarrollo-del-software">Fases del desarrollo del Software<a class="headerlink" href="#fases-del-desarrollo-del-software" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Planificación</strong>: en esta fase se establecen los objetivos del proyecto, se define el alcance del mismo y se realiza un estudio de viabilidad y costes.</li>
+<li><strong>Análisis del problema</strong>: Consiste en ver y comprender <strong>qué</strong> tarea se quiere resolver. Es imprescindible partir de una especificación de requisitos lo más exacta y detallada posible. El proceso de comprensión y simplificación del mundo real se llama análisis del problema y lo que se obtiene tras el análisis es el modelo.</li>
+<li><strong>Diseño de una solución</strong>: Consiste en <strong>cómo</strong> se va a resolver el problema, suele consistir en dividir el problema principal en problemas más sencillos cuya combinación resuelve la tarea final.</li>
+<li><strong>Codificación</strong>: Una vez definidos los algoritmos, los traducimos al lenguaje de programación que tengamos que usar. Un lenguaje de programación es un conjunto de símbolos y reglas sintácticas especialmente diseñado para transmitir ordenes al ordenador (C, Java, Pascal…).</li>
+<li><strong>Pruebas</strong>: Servirán para identificar y corregir posibles errores, tendremos varios tipos de errores:</li>
+<li>Sintácticos: Producidos por un mal uso del lenguaje.</li>
+<li>Semánticos: Lo que está equivocado es la solución que yo he ideado. (Durante la ejecución p. ej: división entre 0, o de lógica p ej: mal diseño algoritmo.)</li>
+<li><strong>Despliegue</strong>: una vez que el programa está terminado, se debe implantar en el dispositivo o infraestructura del usuario final sobre la que se ejecutará.</li>
+<li><strong>Mantenimiento</strong>: Hay tres tipos:</li>
+<li>Correctivo: Sirve para corregir posibles errores o fallos del programa.</li>
+<li>Perfectivo: Se usa para perfeccionarlo.</li>
+<li>Adaptativo: Sirve para adaptarlo a nuevas situaciones.</li>
+</ul>
+<h3 id="modelos-de-desarrollo-de-software">Modelos de desarrollo de software<a class="headerlink" href="#modelos-de-desarrollo-de-software" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Modelo en cascada. Consiste en dividir el proceso de desarrollo en fases, cada una de las cuales se ejecuta una vez que la anterior ha finalizado. El modelo en cascada es un modelo secuencial, es decir, las fases se ejecutan una tras otra.</li>
+<li>Sin realimentación: es el modelo de vida clásico del software. Es prácticamente imposible que se pueda utilizar, ya que requiere conocer de antemano todos los requisitos del sistema. Sólo es aplicable a pequeños desarrollos, ya que las etapas pasan de una a otra sin retorno posible. (se presupone que no habrá errores ni variaciones del software).</li>
+<li>Con realimentación: es uno de los modelos más utilizados. Proviene del modelo anterior, pero se introduce una realimentación entre etapas, de forma que podamos volver atrás en cualquier momento para corregir, modificar o depurar algún aspecto. No obstante, si se prevén muchos cambios durante el desarrollo no es el modelo más idóneo. Es el modelo perfecto si el proyecto es rígido (pocos cambios, poco evolutivo) y los requisitos están claros.</li>
+<li>Modelo evolutivo. tiene en cuenta la naturaleza cambiante y evolutiva del software. La idea detrás de este modelo es el desarrollo y entrega de partes funcionales del sistema de forma temprana, exponerla a los comentarios del usuario, refinarla en N versiones hasta que se desarrolle el sistema adecuado. Una ventaja de este modelo es que se obtiene una rápida realimentación del usuario, ya que las fases de especificación, desarrollo y pruebas se ejecutan en cada iteración no necesariamente en cascada. Destacando los metodologías aǵiles, <strong>XP (eXtreme Programming)</strong> y frameworks como <strong>Scrum</strong> como su máximo exponente. Destacan en estos modelos el carácter iterativo e incremental del proceso seguido:</li>
+<li>En un desarrollo iterativo e incremental el proyecto se planifica en diversos bloques temporales (en el caso de Scrum de un mes natural o hasta de dos semanas, si así se necesita) llamados iteraciones. Las iteraciones se pueden entender como miniproyectos: en todas las iteraciones se repite un proceso de trabajo similar (de ahí el nombre “iterativo”) para proporcionar un resultado parcial, pero funcional, sobre producto final, de manera que el cliente pueda obtener los beneficios del proyecto de forma incremental. Para ello, cada requisito se debe completar en una única iteración: el equipo debe realizar todas las tareas necesarias para completarlo (incluyendo pruebas y documentación) y que esté preparado para ser entregado al cliente con el mínimo esfuerzo necesario. De esta manera no se deja para el final del proyecto ninguna actividad arriesgada relacionada con la entrega de requisitos.</li>
+<li>En cada iteración el equipo evoluciona el producto de dos formas:<ul>
+<li>hace una entrega incremental: a partir de los resultados completados en las iteraciones anteriores, añade nuevos objetivos/requisitos.</li>
+<li>hace una entrega iterativa:  partir de los resultados completados en las iteraciones anteriores, y basándose en la retroalimentación que le ha dado el usuario final sobre las funcionalidades ya entregadas, se revisan para mejorarlas y adaptarlas a las necesidades de estos.</li>
+</ul>
+</li>
+<li>Un aspecto fundamental para guiar el desarrollo iterativo e incremental es la priorización de los objetivos/requisitos en función del valor que aportan al cliente.</li>
+</ul>
+<h2 id="scrum-que-es-y-como-funciona-este-marco-de-trabajo">Scrum: qué es y cómo funciona este marco de trabajo<a class="headerlink" href="#scrum-que-es-y-como-funciona-este-marco-de-trabajo" title="Permanent link">&para;</a></h2>
+<p>A la hora de poner en marcha un proyecto, toda empresa debe asegurar que el equipo implicado conoce sus tareas y plazos de tiempo de entrega. Scrum es un marco de trabajo que nos ayuda a conseguirlo y que, además, permite agilizar la entrega de valor al cliente en iteraciones cortas de tiempo.</p>
+<p>Scrum es un framework que se utiliza dentro de <a href="https://www.wearemarketing.com/es/blog/equipos-virtuales-y-metodologia-agil-y-scrum-la-asociacion-del-futuro.html">equipos</a> que manejan proyectos de alta incertidumbre.  <strong>Se trata de un marco de trabajo por el cual las personas pueden abordar problemas complejos adaptativos</strong>, a la vez que entregar productos del máximo valor posible productiva y creativamente. Scrum es liviano y fácil de entender pero, a la vez, difícil de dominar del todo. <strong>Este framework favorece el time to market</strong> y la entrega rápida de MVP (mínimos productos viables).</p>
+<h3 id="cual-es-el-origen-de-scrum">¿Cuál es el origen de Scrum?<a class="headerlink" href="#cual-es-el-origen-de-scrum" title="Permanent link">&para;</a></h3>
+<p>En el año 2001, en Salt Lake City, un grupo de desarrolladores capitaneados por el ingeniero de software Kent Beck se reunieron para compartir sus frustraciones sobre las metodologías de entrega de software y los marcos de trabajo que existían hasta entonces (PMI, CMMI o SPICE). De este encuentro salió el <strong>Manifiesto Ágil</strong>, que resume sus intenciones en los siguientes 4 valores:</p>
+<ul>
+<li>Valorar a los <strong>individuos y su interacción</strong> por encima de los procesos y herramientas.</li>
+<li>Valorar el <strong>software que funciona</strong> por encima de la documentación exhaustiva.</li>
+<li>Valorar la <strong>colaboración con el cliente</strong> por encima de la negociación contractual</li>
+<li>Valorar la <strong>respuesta al cambio</strong> por encima del seguimiento de un plan.</li>
+</ul>
+<h4 id="los-12-principios-del-manifiesto-agil">Los 12 principios del Manifiesto Ágil<a class="headerlink" href="#los-12-principios-del-manifiesto-agil" title="Permanent link">&para;</a></h4>
+<p>Además de los 4 valores mencionados anteriormente, los firmantes del Manifiesto Ágil desglosaron 12 principios que se derivan de ellos y que son igualmente importantes. Son los siguientes:</p>
+<ol>
+<li>Nuestra mayor prioridad es satisfacer al cliente mediante la  <strong>entrega temprana y continua de software con valor</strong> .</li>
+<li><strong>Aceptamos que los requisitos cambien</strong> , incluso en etapas tardías del desarrollo. Los procesos ágiles aprovechan el cambio para proporcionar ventaja competitiva al cliente.</li>
+<li>Entregamos software funcional frecuentemente, entre dos semanas y dos meses, con <strong>preferencia al periodo de tiempo más corto posible</strong>.</li>
+<li>Los responsables de negocio y los desarrolladores trabajamos juntos de forma cotidiana durante todo el proyecto.</li>
+<li><strong>Los proyectos se desarrollan en torno a individuos motivados</strong>. Hay que darles el entorno y el apoyo que necesitan, y confiarles la ejecución del trabajo.</li>
+<li>El método más eficiente y efectivo de comunicar información al equipo de desarrollo y entre sus miembros es la <strong>conversación</strong> cara a cara.</li>
+<li>El <strong>software funcionando</strong> <strong>es la medida principal</strong> de progreso.</li>
+<li>Los <strong>procesos ágiles</strong> promueven el desarrollo sostenible. Los promotores, desarrolladores y usuarios debemos ser capaces de mantener un ritmo constante de forma indefinida.</li>
+<li>La <strong>atención continua a la excelencia técnica</strong> y al buen diseño mejora la agilidad.</li>
+<li>La <strong>simplicidad</strong>, o el arte de maximizar la cantidad de trabajo no realizado, es esencial.</li>
+<li>Las mejores arquitecturas, requisitos y diseños emergen de <strong>equipos auto-organizados.</strong></li>
+<li>A intervalos regulares <strong>el equipo reflexiona sobre cómo ser más efectivo</strong> para a continuación ajustar y perfeccionar su comportamiento en consecuencia.</li>
+</ol>
+<h4 id="los-5-valores-scrum">Los 5 valores Scrum<a class="headerlink" href="#los-5-valores-scrum" title="Permanent link">&para;</a></h4>
+<p>El <strong>Manifiesto Ágil y Scrum</strong> van de la mano para ofrecer una guía clara a los equipos de desarrollo a la hora de afrontar un nuevo proyecto. En este sentido, hay una serie de valores que se asocian al <strong>framework Scrum</strong> y que vale la pena tener en consideración:</p>
+<ul>
+<li><strong>Coraje</strong>. Tener la valentía para hacer lo correcto y resolver problemas complejos.</li>
+<li><strong>Foco</strong>. La organización del trabajo en sprints da certidumbre y permite centrar los esfuerzos en objetivos alcanzables.</li>
+<li><strong>Compromiso</strong>. Para que el framework Scrum funcione necesita el compromiso de todos los miembros involucrados.</li>
+<li><strong>Sinceridad</strong>. El equipo Scrum debe de ser transparente en cuanto al trabajo y los obstáculos que encuentra en el camino.</li>
+<li><strong>Respeto</strong>. Tratarse de forma adecuada entre compañeros y valorar las ideas y esfuerzos de cada uno es imprescindible.</li>
+</ul>
+<h3 id="en-que-se-basa-el-marco-de-trabajo-scrum">¿En qué se basa el marco de trabajo Scrum?<a class="headerlink" href="#en-que-se-basa-el-marco-de-trabajo-scrum" title="Permanent link">&para;</a></h3>
+<p>Al estar enmarcada dentro de las <a href="https://www.wearemarketing.com/es/blog/que-es-la-metodologia-agile-y-que-beneficios-tiene-para-tu-empresa.html">metodologías agile</a>, Scrum se basa en aspectos como:</p>
+<ul>
+<li>La <strong>flexibilidad</strong> en la adopción de cambios y nuevos requisitos durante un proyecto complejo.</li>
+<li>El <strong>factor humano</strong>.</li>
+<li>La <strong>colaboración</strong> e interacción con el cliente.</li>
+<li>El <strong>desarrollo iterativo</strong> como forma de asegurar buenos resultados.</li>
+</ul>
+<p>Los pilares o <strong>características del framework Scrum</strong> más importantes son tres:</p>
+<ol>
+<li><strong>Transparencia</strong>. Con el marco Scrum todos los implicados tienen conocimiento de qué ocurre en el proyecto y cómo ocurre. Esto hace que haya un entendimiento “común” del proyecto, una visión global.</li>
+<li><strong>Inspección</strong> . Los miembros del equipo Scrum frecuentemente inspeccionan el progreso para detectar posibles problemas. La inspección no es un examen diario, sino una forma de saber que el trabajo fluye y que el equipo funciona de manera auto-organizada.</li>
+<li><strong>Adaptación</strong> . Cuando hay algo que cambiar, el equipo se ajusta para conseguir el objetivo del sprint. Esta es la clave para conseguir el éxito en proyectos complejos, donde los requisitos son cambiantes o poco definidos y en donde la adaptación, la innovación, la complejidad y flexibilidad son fundamentales.</li>
+</ol>
+<h3 id="los-roles-en-el-equipo-scrum">Los roles en el equipo Scrum<a class="headerlink" href="#los-roles-en-el-equipo-scrum" title="Permanent link">&para;</a></h3>
+<p>Si seguimos los  <strong>valores y principios Scrum</strong> , el equipo tiene como foco entregar valor y ofrecer resultados de calidad que permitan cumplir los objetivos de negocio del cliente.</p>
+<p>Para ello, <strong>los equipos de Scrum son auto-organizados y multifuncionales</strong>. Es decir, cada uno es responsable de unas tareas determinadas y de terminarlas en los tiempos acordados. Esto garantiza la entrega de valor del equipo completo, sin necesidad de ayuda o la supervisión minuciosa de otros miembros de la organización.</p>
+<p>A continuación desglosamos los 3 roles más importantes en un equipo de trabajo Scrum.</p>
+<h4 id="product-owner">Product owner<a class="headerlink" href="#product-owner" title="Permanent link">&para;</a></h4>
+<p>Es el responsable de <strong>maximizar el valor del trabajo</strong> , que  viene de la mano de una buena gestión del  <strong>Product Backlog</strong>, el cual explicaremos más adelante.</p>
+<p>El Product Owner es el único perfil que habla constantemente con el cliente, lo que le obliga a tener muchos conocimientos sobre el negocio.</p>
+<p>Para finalizar, <strong>un equipo Scrum debe tener solo un Product Owner</strong> y este puede ser parte del equipo de desarrollo.</p>
+<h4 id="scrum-master">Scrum Master<a class="headerlink" href="#scrum-master" title="Permanent link">&para;</a></h4>
+<p>Es el <strong>responsable de que las técnicas Scrum sean comprendidas y aplicadas</strong> en la organización. Es el <strong>manager de Scrum</strong>, un líder que se encarga de eliminar impedimentos o inconvenientes que tenga el equipo dentro de un sprint (que ya revisaremos en detalle más adelante), aplicando las mejores <a href="https://www.wearemarketing.com/es/blog/las-mejores-practicas-para-fortalecer-tu-equipo-de-marketing-digital.html">técnicas para fortalecer el equipo de marketing digital</a>.</p>
+<p>Dentro de la organización, el Scrum Master tiene la labor de ayudar en la adopción del framework en todos los equipos.</p>
+<h4 id="equipo-de-desarrollo">Equipo de desarrollo<a class="headerlink" href="#equipo-de-desarrollo" title="Permanent link">&para;</a></h4>
+<p>Son los encargados de <strong>realizar las tareas priorizadas por el Product Owner</strong>. Es un equipo multifuncional y auto-organizado. Son los únicos que estiman las tareas del product backlog, sin dejarse influenciar por nadie.</p>
+<p>Los equipos de desarrollo no tienen sub-equipos o especialistas. La finalidad de esto es transmitir la responsabilidad compartida si no se llegan a realizar todas las tareas de un sprint.</p>
+<h3 id="los-eventos-del-equipo-scrum">Los eventos del equipo Scrum<a class="headerlink" href="#los-eventos-del-equipo-scrum" title="Permanent link">&para;</a></h3>
+<p><img alt="eventos del equipo Scrum" src="../assets/EDES-U1-ScrumTabla.png" /></p>
+<p>Este timebox refleja las diferentes ceremonias Scrum y su peso en horas según se avanza en semanas de trabajo. El desarrollo iterativo se realiza en un sprint que contiene los siguientes eventos Scrum: Sprint Planning, Daily Meeting, Sprint Review, Sprint Retrospective y Grooming.</p>
+<p>Antes de profundizar en los diferentes eventos, es importante definir qué es un sprint en Scrum. El sprint es el corazón de este marco de trabajo, el contenedor de los demás hitos del proceso. Todo lo que ocurre en una iteración para entregar valor está dentro de un sprint. La duración máxima es de un mes, el tiempo se determina en base al nivel de comunicación que el cliente quiere tener con el equipo. <strong>Los sprints largos pueden hacer que se pierda feedback valioso</strong> del cliente y poner en peligro el proyecto.</p>
+<h4 id="sprint-planning">Sprint Planning<a class="headerlink" href="#sprint-planning" title="Permanent link">&para;</a></h4>
+<p>En esta reunión todo el <strong>equipo Scrum define qué tareas se van a abordar y cuál será el objetivo del sprint</strong>. La primera reunión que se hace en el sprint puede llegar a tener una duración de 8 horas para sprints de un mes.</p>
+<p>El equipo se hace las siguientes preguntas:</p>
+<ul>
+<li>¿<strong>Qué se va a hacer en el sprint</strong>? En base a ello, se eligen tareas del Product Backlog. Este trabajo es responsabilidad del Producto Owner.</li>
+<li>¿<strong>Cómo lo vamos a hacer</strong>? El equipo de desarrollo define las tareas necesarias para completar cada ítem elegido del Product Backlog.</li>
+</ul>
+<p>La definición de qué se va a hacer implica que el equipo tenga un objetivo y se encuentre comprometido con la entrega de valor que se hará al cliente al final del sprint. A esto se le llama <strong>Sprint Goal</strong>.</p>
+<p>El resultado de esta reunión es el Sprint Goal y un <strong>Sprint Backlog</strong> (que revisaremos más adelante).</p>
+<h4 id="daily-meeting">Daily Meeting<a class="headerlink" href="#daily-meeting" title="Permanent link">&para;</a></h4>
+<p>Es una reunión diaria dentro del sprint que tiene como <strong>máximo 15 minutos de duración</strong>. En ella deben participar, sí o sí, el equipo de desarrollo y el Scrum Master. El Product Owner no tiene la necesidad de estar presente.</p>
+<p>En esta reunión diaria el equipo de desarrollo hace las siguientes <strong>3 preguntas</strong>:</p>
+<ul>
+<li>¿Qué hice ayer?</li>
+<li>¿Qué voy a hacer hoy?</li>
+<li>¿Tengo algún impedimento que necesito que me solucionen?</li>
+</ul>
+<p>Una <strong>Daily Scrum</strong> es el lugar más oportuno para poder <strong>inspeccionar el trabajo</strong> y poder adaptarse en caso de que haya cambio de tareas dentro de un sprint.</p>
+<h4 id="sprint-review">Sprint Review<a class="headerlink" href="#sprint-review" title="Permanent link">&para;</a></h4>
+<p>La review del valor que vamos a entregar al cliente se hace en esta reunión, al final de cada sprint. Su duración es de 4 horas para sprints de un mes y es la <strong>única reunión de Scrum a la que puede asistir el cliente</strong>.</p>
+<p>En esta reunión <strong>el Product Owner presenta lo desarrollado al cliente</strong> y el equipo de desarrollo muestra su funcionamiento. El cliente valida los cambios realizados y además brinda feedback sobre nuevas tareas que el Product Owner tendrá que agregar al Product Backlog.</p>
+<h4 id="sprint-retrospective">Sprint Retrospective<a class="headerlink" href="#sprint-retrospective" title="Permanent link">&para;</a></h4>
+<p>La retrospectiva es el último evento de Scrum, tiene una duración de 3 horas para sprints de un mes, y es la reunión del equipo en la que se hace una <strong>evaluación de cómo se ha implementado el framework Scrum</strong> en el último sprint.</p>
+<p>Es una gran <strong>oportunidad para el equipo Scrum</strong> de inspeccionarse a sí mismo, proponiendo mejoras para el siguiente sprint. El resultado es una lista de mejoras que debe aplicar el siguiente día, ya que al finalizar la retrospectiva, inmediatamente comienza un nuevo sprint, que incluye los mismos eventos mencionados anteriormente.</p>
+<h4 id="grooming">Grooming<a class="headerlink" href="#grooming" title="Permanent link">&para;</a></h4>
+<p>El <strong>Grooming en Scrum</strong> es el tiempo de revisión que se dedica dentro de los equipos durante los sprints para refinar los requerimientos. Es una reunión que <strong>no debe ocupar más del 10% del tiempo disponible del sprint</strong>. Las tareas de usuario se revisan con un par de sprints de ventaja para que cuando llegue el equipo ya esté todo listo para el desarrollo de la tarea.</p>
+<h3 id="los-artefactos-scrum">Los artefactos Scrum<a class="headerlink" href="#los-artefactos-scrum" title="Permanent link">&para;</a></h3>
+<p>Los <strong>eventos y artefactos de Scrum</strong> están definidos para maximizar la transparencia dentro del equipo; es decir, que todos tengan una misma visión de lo que está ocurriendo en el proyecto.</p>
+<p>Si te preguntas <strong>qué son los artefactos Scrum</strong>, a continuación explicamos los 3 clave: Product Backlog, Sprint Backlog e Incremento.</p>
+<h4 id="product-backlog">Product Backlog<a class="headerlink" href="#product-backlog" title="Permanent link">&para;</a></h4>
+<p>Básicamente, el Product Backlog es el <strong>listado de tareas que engloba todo un proyecto</strong>. Cualquier cosa que debamos hacer debe estar en el Product Backlog y con un tiempo estimado por el equipo de desarrollo.</p>
+<p>La responsabilidad exclusiva de ordenar el Product Backlog es del  <strong>Product Owner</strong>, que se encuentra en constante comunicación con el cliente para asegurarse de que las prioridades están bien establecidas.</p>
+<p>La ordenación también es 100% responsabilidad del Product Owner, por lo que las tareas que están más arriba deben de ser las de <strong>mayor prioridad</strong>. El equipo de desarrollo elige tareas del Product Backlog en el Sprint Planning para generar tanto el Sprint Backlog como el Sprint Goal.</p>
+<h4 id="sprint-backlog">Sprint Backlog<a class="headerlink" href="#sprint-backlog" title="Permanent link">&para;</a></h4>
+<p>Es el grupo de tareas del Product Backlog que el equipo de desarrollo elige en el Sprint Planning junto con el plan para poder desarrollarlas. Debe ser conocido por todo el equipo, para asegurarse de que el foco debe estar en este grupo de tareas.</p>
+<p><strong>El Sprint Planning no cambia durante el sprint</strong> , solo se permite cambiar el plan para poder desarrollarlas.</p>
+<h4 id="incremento">Incremento<a class="headerlink" href="#incremento" title="Permanent link">&para;</a></h4>
+<p>El <a href="https://blog.comparasoftware.com/incremento-de-producto-scrum/#:~:text=El%20incremento%20de%20Scrum%20es,dentro%20de%20un%20mismo%20Sprint.">Product Increment</a> o incremento de Scrum es el resultado de <strong>sumar todos los elementos del Product Backlog</strong> <strong>completados</strong> durante el sprint actual, añadiendo también el valor de todos los sprints anteriores. El incremento generado al final del sprint se presenta en el Sprint Review.</p>
+<p><img alt="" src="../assets/EDES-U1-Scrum.gif" /></p>
+<h3 id="ventajas-y-desventajas-del-marco-scrum">Ventajas y desventajas del marco Scrum<a class="headerlink" href="#ventajas-y-desventajas-del-marco-scrum" title="Permanent link">&para;</a></h3>
+<p>Una vez sabemos  <strong>cómo funciona Scrum</strong>, hablemos de sus ventajas y desventajas:</p>
+<p>Ventajas de la metodología Scrum</p>
+<ul>
+<li>Scrum es muy fácil de aprender: los roles, hitos y artefactos son claros y tienen un objetivo, por lo que es un método muy relacionado con nuestra manera diaria de trabajar.</li>
+<li>El cliente puede comenzar a usar el producto rápidamente.</li>
+<li>Se agiliza el proceso, ya que la entrega de valor es muy frecuente.</li>
+<li>Menor probabilidad de sorpresas o imprevistos, porque el cliente está viendo frecuentemente el proyecto.</li>
+</ul>
+<p>Desventajas de la metodología Scrum</p>
+<ul>
+<li>Aunque Scrum sea fácil de aprender, es muy difícil implementarlo. Esto supone una predisposición y un <strong>cambio de cultura de la organización</strong> que debe ir desde los altos mandos hasta los clientes.</li>
+<li><strong>La necesidad de tener equipos multidisciplinares</strong> puede ser un problema, ya que es difícil encontrar personas que sean capaces de hacer todo el trabajo de un equipo.</li>
+<li>El equipo puede <strong>tender a realizar el camino más corto</strong> para conseguir el objetivo de un sprint, el cual no siempre ofrece resultados de calidad.</li>
+</ul>
+<p>En resumen,  <strong>el marco de trabajo Scrum es especialmente útil cuando se trabaja en entornos de alta incertidumbre</strong>, en los que la probabilidad de que haya cambios durante el proyecto es alta. Si los requisitos no están claros, si el cliente tiene prisa en sacar un producto al mercado o necesita un MVP, Scrum es el framework perfecto. Este marco nos permite entregar un proyecto en varias partes funcionales e independientes entre sí, a un ritmo rápido y con capacidad de corregir errores en el momento.</p>
+<h2 id="fuentes">Fuentes<a class="headerlink" href="#fuentes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/joseluisgs/EntornosDesarrollo-01-2022-2023">GitHub de Jose Luis González Sánchez</a></li>
+<li>https://intelequia.com/blog/post/2083/ciclo-de-vida-del-software-todo-lo-que-necesitas-saber</li>
+<li>https://www.monografias.com/docs114/modelos-desarrollo/modelos-desarrollo</li>
+<li>https://proyectosagiles.org/desarrollo-iterativo-incremental/</li>
+<li><a href="https://www.wearemarketing.com/es/blog/metodologia-scrum-que-es-y-como-funciona.html">Scrum: qué es y cómo funciona este marco de trabajo</a></li>
+</ul>
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        ¿Te ha sido útíl la página?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Me ha sido de utilidad." data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="La página podría mejorar." data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+                Gracias por tu feedback!
+              
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+                Gracias por tu feedback! Ayudame a mejorarla usando este formulario. <a href="https://forms.gle/bBtzHfjb41unBb5o9" target=_blank>feedback form</a>.
+              
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2021-2022 Eduardo Fernández <a href="https://twitter.com/revilofe" target=_blank>@revilofe</a> - Licencia CC BY-NC-SA
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/revilofe" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    <a href="mailto:<efernandez@iesrafaelalberti.es>" target="_blank" rel="noopener" title="e-mail" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/efoliver" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.5bf1dace.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      
+    
+  </body>
+</html>

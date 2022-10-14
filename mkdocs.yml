@@ -30,6 +30,8 @@ nav:
         - '* Práctica 2.3: Capturas de excepciones': 'section1/u02/practica/PROG-U2.-Practica003.md'
         - '2.4.-Depurar programas': 'section1/u02/teoria/PROG-U2.4.-Depurar.md'
         - '* Práctica 2.4: Depurar programas': 'section1/u02/practica/PROG-U2.-Practica004.md'
+        - '2.5.-Documentar el código': 'section1/u02/teoria/PROG-U2.5.-Documentar.md'
+        - '* Práctica 2.5: Proyecto': 'https://classroom.github.com/a/1NxxJ6nu'
 
   - 'Entornos de desarrollo':
     - 'section3/index.md'
@@ -206,7 +208,7 @@ extra:
           name: La página podría mejorar.
           data: 0
           note: >- 
-            Gracias por tu feedback! #TODO: Ayudame a mejorarla usando este formulario. <a href="..." target=_blank>feedback form</a>.
+            Gracias por tu feedback! Ayudame a mejorarla usando este formulario. <a href="https://forms.gle/bBtzHfjb41unBb5o9" target=_blank>feedback form</a>.
   generator: false
 
 

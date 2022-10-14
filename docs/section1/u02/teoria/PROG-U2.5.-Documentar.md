@@ -194,14 +194,13 @@ say_hello(name)
     A simple function that says hello... Richie style
 ```
 
-Python tiene una característica más que simplifica la asignación de contenido a las Docstrings. En lugar de manipular directamente la propiedad `__doc__`, la ubicación estratégica del literal debajo del objeto establecerá automáticamente el valor de `__doc__`. Esto es lo que sucede con el mismo ejemplo que el anterior:
+Python tiene una característica más que simplifica la asignación de contenido a las docstrings. En lugar de manipular directamente la propiedad `__doc__`, la ubicación estratégica del literal debajo de la definicion del objeto establecerá automáticamente el valor de `__doc__`. Esto es lo que sucede con el mismo ejemplo que el anterior:
 
 ```Python
 def say_hello(name):
     """A simple function that says hello... Richie style"""
     print(f"Hello {name}, is it me you're looking for?")
 ```
-
 
 ```Python
 >>> help(say_hello)
@@ -211,7 +210,7 @@ say_hello(name)
     A simple function that says hello... Richie style
 ```
 
-Ya que conoces el trasfondo de las cadenas de documentación. Ahora es el momento de conocer los diferentes tipos de cadenas de documentación y qué información deben contener.
+Ya que conoces el trasfondo de las docstrings. Ahora es el momento de conocer los diferentes tipos de docstrings y qué información deben contener.
 
 #### Tipos de cadenas de documentos
 
@@ -442,11 +441,11 @@ if __name__ == "__main__":
 
 #### Formatos de docstrings
 
-Es posible que haya notado en los ejemplos vistos hasta ahora de docstrings que existía un específico con elementos comunes: `Arguments`, `Returns`y `Attributes`. Hay formatos específicos de docstrings que se pueden usar para ayudar a los analizadores de docstrings y a los usuarios a tener un formato familiar y conocido. El formato utilizado para los docstrings sigue el estilo NumPy/SciPy. Algunos de los formatos más comunes son los siguientes:
+Es posible que haya notado en los ejemplos vistos hasta ahora de docstrings que existían elementos comunes: `Arguments`, `Returns`y `Attributes`. Hay formatos específicos de docstrings que se pueden usar para ayudar a los analizadores de docstrings y a los usuarios a tener un formato familiar y conocido. El formato utilizado para los docstrings sigue el estilo NumPy/SciPy. Algunos de los formatos más comunes son los siguientes:
 
 
 | Tipo de formato                                                                                                  | Descripción                                                                                                 | Con el apoyo de Sphynx | especificación formal |
-|------------------------------------------------------------------------------------------------------------------| ------------------------------------------------------------------------------------------------------------ | ---------------------- | ---------------------- |
+| ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------ |
 | [docstrings de Google](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings) | Forma de documentación recomendada por Google                                                               | Sí                    | No                     |
 | [Texto reestructurado](http://docutils.sourceforge.net/rst.html)                                                 | Estándar de documentación oficial de Python; No es amigable para principiantes pero tiene muchas funciones | Sí                    | Sí                    |
 | [docstrings NumPy/SciPy](https://numpydoc.readthedocs.io/en/latest/format.html)                                  | La combinación de NumPy de reStructuredText y Google Docstrings                                             | Sí                    | Sí                    |
@@ -537,55 +536,51 @@ Los proyectos se pueden subdividir generalmente en tres tipos principales: Priva
 
 #### Proyectos Privados
 
-Los proyectos privados son proyectos destinados solo para uso personal y, por lo general, no se comparten con otros usuarios o desarrolladores. La documentación puede ser bastante ligera en este tipo de proyectos. Hay algunas piezas recomendadas para agregar según sea necesario:
+Los proyectos privados son proyectos destinados solo para uso personal y, por lo general, no se comparten con otros usuarios o desarrolladores. La documentación puede ser bastante ligera en este tipo de proyectos. La documentación recomendada para este tipo de proyectos, según sea necesario:
 
-* **Léame:** un breve resumen del proyecto y su propósito. Incluya cualquier requisito especial para la instalación u operación del proyecto.
+* **Readme.md:** un breve resumen del proyecto y su propósito. Incluya cualquier requisito especial para la instalación u operación del proyecto.
 * **`examples.py`:** un archivo de secuencia de comandos de Python que brinda ejemplos simples de cómo usar el proyecto.
 
-Recuerda, aunque los proyectos privados están destinados a ti personalmente, también eres considerado un usuario. Piense en cualquier cosa que pueda resultarle confusa en el futuro y asegúrese de capturarla en comentarios, cadenas de documentación o el archivo Léame.
-
-[![](https://img.realpython.net/cae48de6b6f52aa978e17ea36747a9fc)](https://srv.realpython.net/click/11225539816/?c=48874902176&p=58946116052&r=96746)
-
-[Quitar anuncios](https://realpython.com/account/join/)
+Recuerda, aunque los proyectos privados están destinados a ti, también eres considerado un usuario. Piense en cualquier cosa que pueda resultarle confusa en el futuro y asegúrese de capturarla en comentarios, docstring o el archivo Readme.md.
 
 #### Proyectos Compartidos
 
-Los proyectos compartidos son proyectos en los que colaboras con algunas otras personas en el desarrollo y/o uso del proyecto. El "cliente" o usuario del proyecto sigue siendo usted mismo y los pocos que utilizan el proyecto también.
+Los proyectos compartidos son proyectos en los que colaboras con otras personas en el desarrollo y/o uso del proyecto. El "cliente" o usuario del proyecto sigue siendo usted mismo y otros desarrolladores que utilizan el proyecto.
 
-La documentación debe ser un poco más rigurosa de lo que debe ser para un proyecto privado, principalmente para ayudar a incorporar nuevos miembros al proyecto o alertar a los contribuyentes/usuarios de nuevos cambios en el proyecto. Algunas de las partes recomendadas para agregar al proyecto son las siguientes:
+La documentación debe ser un poco más rigurosa de lo que debe ser para un proyecto privado, principalmente para ayudar a incorporar nuevos miembros al proyecto o alertar a los contribuyentes/usuarios de nuevos cambios en el proyecto. La documentación recomendada para estos proyectos es la siguiente:
 
-* **Léame:** un breve resumen del proyecto y su propósito. Incluya cualquier requisito especial para instalar u operar el proyecto. Además, agregue cualquier cambio importante desde la versión anterior.
+* **Readme.md:** un breve resumen del proyecto y su propósito. Incluya cualquier requisito especial para instalar u operar el proyecto. Además, agregue cualquier cambio importante desde la versión anterior.
 * **`examples.py`:** un archivo de secuencia de comandos de Python que brinda ejemplos simples de cómo usar los proyectos.
 * **Cómo contribuir:** esto debe incluir cómo los nuevos contribuyentes al proyecto pueden comenzar a contribuir.
 
 #### Proyectos públicos y de código abierto
 
-Los proyectos públicos y de código abierto son proyectos que están destinados a compartirse con un gran grupo de usuarios y pueden involucrar a grandes equipos de desarrollo. Estos proyectos deben otorgar una prioridad tan alta a la documentación del proyecto como al desarrollo real del proyecto en sí. Algunas de las partes recomendadas para agregar al proyecto son las siguientes:
+Los proyectos públicos y de código abierto son proyectos que están destinados a compartirse con un gran grupo de usuarios y pueden involucrar a grandes equipos de desarrollo. Estos proyectos deben otorgar una prioridad tan alta a la documentación del proyecto como al desarrollo real del proyecto en sí. La documentación recomendada para estos proyectos es las siguiente:
 
-* **Léame:** un breve resumen del proyecto y su propósito. Incluya cualquier requisito especial para instalar u operar los proyectos. Además, agregue cualquier cambio importante desde la versión anterior. Finalmente, agregue enlaces a documentación adicional, informes de errores y cualquier otra información importante para el proyecto. Dan Bader ha elaborado [un excelente tutorial](https://dbader.org/blog/write-a-great-readme-for-your-github-project) sobre todo lo que debe incluirse en su archivo Léame.
+* **Readme.md:** un breve resumen del proyecto y su propósito. Incluya cualquier requisito especial para instalar u operar los proyectos. Además, agregue cualquier cambio importante desde la versión anterior. Finalmente, agregue enlaces a documentación adicional, informes de errores y cualquier otra información importante para el proyecto. Dan Bader ha elaborado [un excelente tutorial](https://dbader.org/blog/write-a-great-readme-for-your-github-project) sobre todo lo que debe incluirse en su archivo Léame.
 * **Cómo contribuir:** esto debe incluir cómo pueden ayudar los nuevos contribuyentes al proyecto. Esto incluye el desarrollo de nuevas funciones, la solución de problemas conocidos, la adición de documentación, la adición de nuevas pruebas o la notificación de problemas.
-* **Código de conducta:** define cómo deben tratarse los demás colaboradores al desarrollar o utilizar su software. Esto también establece lo que sucederá si este código se rompe. Si está utilizando Github, se puede generar una [plantilla de Código de conducta con la redacción recomendada. ](https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/)Especialmente para proyectos de código abierto, considere agregar esto.
+* **Código de conducta:** define cómo deben comportarse los demás colaboradores al desarrollar o utilizar su software. Esto también establece lo que sucederá si este código no es correcto. Si está utilizando Github, se puede generar una [plantilla de Código de conducta con la redacción recomendada. ](https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/)Especialmente para proyectos de código abierto, considere agregar esto.
 * **Licencia:** un archivo de texto sin formato que describe la licencia que utiliza su proyecto. Especialmente para proyectos de código abierto, considere agregar esto.
 * **docs:** una carpeta que contiene más documentación. La siguiente sección describe con más detalle qué debe incluirse y cómo organizar el contenido de esta carpeta.
 
-##### Las cuatro secciones principales de la `docs`carpeta
+##### Las cuatro secciones principales de la carpeta `docs`
 
 Daniele Procida dio una maravillosa [charla sobre PyCon 2017](https://www.youtube.com/watch?v=azf6yzuJt54) y una publicación de [blog posterior](https://www.divio.com/en/blog/documentation/) sobre la documentación de proyectos de Python. Menciona que todos los proyectos deben tener las siguientes cuatro secciones principales para ayudarlo a enfocar su trabajo:
 
-* **Tutoriales** : Lecciones que llevan al lector de la mano a través de una serie de pasos para completar un proyecto (o ejercicio significativo). Orientado al aprendizaje del usuario.
-* **Guías prácticas** : guías que llevan al lector a través de los pasos necesarios para resolver un problema común (recetas orientadas a problemas).
-* **Referencias** : Explicaciones que aclaran e iluminan un tema en particular. Orientado a la comprensión.
-* **Explicaciones** : descripciones técnicas de la maquinaria y cómo operarla (clases clave, funciones, API, etc.). Artículo de Think Encyclopedia.
+* **Tutoriales**: Lecciones que llevan al lector de la mano a través de una serie de pasos para completar un proyecto (o ejercicio significativo). Orientado al aprendizaje del usuario.
+* **Guías prácticas**: guías que llevan al lector a través de los pasos necesarios para resolver un problema común (Recetas orientadas a resolver problemas).
+* **Referencias**: Explicaciones que aclaran e iluminan un tema en particular. Orientado a la comprensión.
+* **Explicaciones**: descripciones técnicas de la maquinaria y cómo operarla (clases clave, funciones, API, etc.). Artículo de Think Encyclopedia.
 
 La siguiente tabla muestra cómo todas estas secciones se relacionan entre sí, así como su propósito general:
 
 
 |                             | Más útil cuando estamos estudiando | Más útil cuando estamos programando |
-| --------------------------- | ------------------------------------ | ------------------------------------- |
+| ----------------------------- | -------------------------------------- | --------------------------------------- |
 | **Paso práctico**          | *Tutoriales*                         | *Guías prácticas*                   |
 | **Conocimientos teóricos** | *Explicación*                       | *Referencia*                          |
 
-Al final, desea asegurarse de que sus usuarios tengan acceso a las respuestas a cualquier pregunta que puedan tener. Al organizar su proyecto de esta manera, podrá responder esas preguntas fácilmente y en un formato que podrán navegar rápidamente.
+Al final, deseas asegurarte de que los usuarios tiene acceso a las respuestas a cualquier pregunta que puedan tener. Al organizar el proyecto de esta manera, podrás responder esas preguntas fácilmente y en un formato que podrán navegar rápidamente.
 
 #### Herramientas y recursos de documentación
 
@@ -593,13 +588,14 @@ Documentar su código, especialmente proyectos grandes, puede ser desalentador. 
 
 
 | Herramienta                                               | Descripción                                                                                                                                                                                                                                                                                  |
-| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Esfinge](http://www.sphinx-doc.org/en/stable/)           | Una colección de herramientas para autogenerar documentación en múltiples formatos                                                                                                                                                                                                         |
-| [Epydoc](http://epydoc.sourceforge.net/)                  | Una herramienta para generar documentación de API para módulos de Python basada en sus cadenas de documentación                                                                                                                                                                            |
-| [Leer los documentos](https://readthedocs.org/)           | Creación, control de versiones y alojamiento automáticos de sus documentos para usted                                                                                                                                                                                                       |
+| [Epydoc](http://epydoc.sourceforge.net/)                  | Una herramienta para generar documentación de API para módulos de Python basada en sus docstrings                                                                                                                                                                          |
+| [Leer los documentos](https://readthedocs.org/)           | Creación, control de versiones y alojamiento automáticos de sus documentos.                                                                                                                                                                                                    |
 | [doxígeno](https://www.doxygen.nl/manual/docblocks.html) | Una herramienta para generar documentación compatible con Python, así como con muchos otros lenguajes.                                                                                                                                                                                      |
-| [MkDocs](https://www.mkdocs.org/)                         | Un generador de sitios estáticos para ayudar a construir la documentación del proyecto utilizando el lenguaje Markdown. Consulte[Cree su documentación de proyecto de Python con MkDocs](https://realpython.com/python-project-documentation-with-mkdocs/) para obtener más información. |
-| [pycco](https://pycco-docs.github.io/pycco/)              | Un generador de documentación "rápido y sucio" que muestra el código y la documentación uno al lado del otro. Consulte[nuestro tutorial sobre cómo usarlo para obtener más información](https://realpython.com/generating-code-documentation-with-pycco/) .                            |
+| [MkDocs](https://www.mkdocs.org/)                         | Un generador de sitios estáticos para ayudar a construir la documentación del proyecto utilizando el lenguaje Markdown. Consulta [Crea tu documentación de proyecto de Python con MkDocs](https://realpython.com/python-project-documentation-with-mkdocs/) para obtener más información. |
+| [pycco](https://pycco-docs.github.io/pycco/)              | Un generador de documentación "rápido y sucio" que muestra el código y la documentación uno al lado del otro. Consulta [Tutorial sobre cómo usar pycco](https://realpython.com/generating-code-documentation-with-pycco/) .                            |
+| [pydoc](https://docs.python.org/es/3/library/pydoc.html)              | El módulo pydoc genera automáticamente documentación a partir de módulos de Python. La documentación puede presentarse como páginas de texto en la consola, enviarse a un navegador web o guardarse en archivos HTML. .                            |
 
 Junto con estas herramientas, hay algunos tutoriales, videos y artículos adicionales que pueden ser útiles cuando esté documentando su proyecto:
 
@@ -609,17 +605,14 @@ Junto con estas herramientas, hay algunos tutoriales, videos y artículos adicio
 4. [Titus Brown, Luiz Irber - Crear, construir, probar y documentar un proyecto de Python: un CÓMO práctico - PyCon 2016](https://youtu.be/SUt3wT43AeM?t=6299)
 5. [reStructuredText Documentación Oficial](http://docutils.sourceforge.net/rst.html)
 6. [Manual de texto reestructurado de Sphinx](http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)
+7. [El generador de documentación y sistema de ayuda en línea pydoc](https://docs.python.org/es/3/library/pydoc.html)
 
 A veces, la mejor forma de aprender es imitando a los demás. Aquí hay algunos excelentes ejemplos de proyectos que usan bien la documentación:
 
-* **Django: ** [Documentos](https://docs.djangoproject.com/en/2.0/) ( [Fuente](https://github.com/django/django/tree/master/docs) )
-* **Solicitudes: ** [Documentos](https://requests.readthedocs.io/en/master/) ( [Fuente](https://github.com/requests/requests/tree/master/docs) )
-* **Haga clic en: ** [Documentos](http://click.pocoo.org/dev/) ( [Fuente](https://github.com/pallets/click/tree/master/docs) )
-* **Pandas: ** [Documentos](http://pandas.pydata.org/pandas-docs/stable/) ( [Fuente](https://github.com/pandas-dev/pandas/tree/master/doc) )
-
-[![](https://img.realpython.net/8dd76836b26ce79fa0afa59df2458580)](https://srv.realpython.net/click/8941932849/?c=48874902176&p=58946116052&r=25963)
-
-[Quitar anuncios](https://realpython.com/account/join/)
+* **Django:** [Documentos](https://docs.djangoproject.com/en/2.0/) ( [Fuente](https://github.com/django/django/tree/master/docs) )
+* **Solicitudes:** [Documentos](https://requests.readthedocs.io/en/master/) ( [Fuente](https://github.com/requests/requests/tree/master/docs) )
+* **Haga clic en:** [Documentos](http://click.pocoo.org/dev/) ( [Fuente](https://github.com/pallets/click/tree/master/docs) )
+* **Pandas:** [Documentos](http://pandas.pydata.org/pandas-docs/stable/) ( [Fuente](https://github.com/pandas-dev/pandas/tree/master/doc) )
 
 ### ¿Dónde empiezo?
 
@@ -631,6 +624,9 @@ La documentación de proyectos tiene una progresión sencilla:
 4. buena documentacion
 5. Gran documentación
 
-Si no sabe a dónde ir a continuación con su documentación, mire dónde se encuentra su proyecto ahora en relación con la progresión anterior. ¿Tienes alguna documentación? Si no, entonces comience allí. Si tiene alguna documentación pero le faltan algunos de los archivos clave del proyecto, comience agregándolos.
+Si no sabes por donde empezar con la documentación, identifica dónde se encuentra tu proyecto ahora en relación con la progresión anterior. ¿Tienes alguna documentación? Si no, entonces comience allí. Si tiene alguna documentación pero le faltan algunos de los archivos clave del proyecto, comience agregándolos.
 
-Al final, no se desanime ni se sienta abrumado por la cantidad de trabajo que se requiere para documentar el código. Una vez que comience a documentar su código, será más fácil continuar. No dude en comentar si tiene preguntas o comuníquese con el equipo de Real Python en las redes sociales y lo ayudaremos.
+Al final, no te desanimes ni te sientas abrumad@ por la cantidad de trabajo que se requiere para documentar el código. Una vez que comienzas a documentar el código, será más fácil continuar. 
+
+## Fuente
+* [Documentando código python](https://realpython.com/documenting-python-code/)

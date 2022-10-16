@@ -32,7 +32,6 @@ nav:
         - '* Práctica 2.4: Depurar programas': 'section1/u02/practica/PROG-U2.-Practica004.md'
         - '2.5.-Documentar el código': 'section1/u02/teoria/PROG-U2.5.-Documentar.md'
         - '* Práctica 2.5: Proyecto': 'https://classroom.github.com/a/1NxxJ6nu'
-
   - 'Entornos de desarrollo':
     - 'section3/index.md'
     - 'U1: Introducción al desarrollo de software':
@@ -41,8 +40,10 @@ nav:
         - '1.2.-Lenguajes de programación': 'section3/u01/teoria/EDES-U1.2.-Lenguajes.md'
         - '1.3.-Herramientas y funcionalidades': 'section3/u01/teoria/EDES-U1.3.-FuncionalidadesHerramientas.md'
         - '1.4.-Traductores': 'section3/u01/teoria/EDES-U1.4.-Traductores.md'
+        - '1.5.-Proceso de desarrollo': 'section3/u01/teoria/EDES-U1.5.-FasesDesarrollo.md'
         - 'Práctica 1: Lenguajes de programación': 'section3/u01/practica/EDES-U1.-Practica001.md'
         - 'Práctica 2: Herramientas para generar programa': 'section3/u01/practica/EDES-U1.-Practica002.md'
+        - 'Práctica 3: Scrum': 'section3/u01/practica/EDES-U1.-Practica003.md'
   - 'Incidentes de seguridad':
     - 'section2/index.md'
     - 'U0: Nos conocemos': 'section2/u00/recursos/IS-U0.-DinamicaPresentacion.md'

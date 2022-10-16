@@ -42,6 +42,7 @@ En esta sección se relaciona la unidad con los criterios de evaluación concret
 * d) Se han reconocido las características de la generación de código intermedio para su ejecución en máquinas virtuales.
 * e) Se ha evaluado la funcionalidad ofrecida por las herramientas utilizadas en programación.
 * f) Se ha diferenciado el funcionamiento de los distintos tipos de traductores de lenguajes ante el código fuente de un programa.
+* g) Se han identificado las fases de desarrollo de una aplicación informática.
 
 ### Contenidos
 

@@ -287,7 +287,7 @@ Es posible modificar un elemento de una lista en Python con el operador de asign
 >>> ['a', 'e', 'i', 'o', 'u']
 ```
 
-##### Eliminar un elemento de una lista en Python
+#### Eliminar un elemento de una lista en Python
 
 En Python se puede eliminar un elemento de una lista de varias formas.
 

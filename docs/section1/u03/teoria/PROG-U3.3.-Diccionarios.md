@@ -82,7 +82,7 @@ Veamos un ejemplo con todo lo anterior. Vamos a crear el mismo diccionario de to
 {}
 ```
 
-## Cómo acceder a los elementos de un diccionario en Python
+### Cómo acceder a los elementos de un diccionario en Python
 
 Acceder a un elemento de un diccionario es una de las principales operaciones por las que existe este tipo de dato. El acceso a un valor se realiza mediante indexación de la clave. Para ello, simplemente encierra entre corchetes la clave del elemento `d[clave]`. En caso de que la clave no exista, se lanzará la excepción `KeyError`.
 
@@ -115,7 +115,7 @@ La clase `dict` también ofrece el método `get(clave[, valor por defecto])`. Es
 <class 'NoneType'>
 ```
 
-## for dict Python – Recorrer un diccionario
+### for dict Python – Recorrer un diccionario
 
 Hay varias formas de recorrer los elementos de un diccionario: recorrer solo las claves, solo los valores o recorrer a la vez las claves y los valores. Puedes ver aquí [cómo usar el bucle for para recorrer un diccionario](https://j2logo.com/bucle-for-en-python/#for-diccionarios).
 
@@ -153,7 +153,7 @@ tres
 ('tres', 3)
 ```
 
-## Añadir elementos a un diccionario en Python
+### Añadir elementos a un diccionario en Python
 
 Como hemos comentado, la clase `dict` es mutable, por lo que se pueden añadir, modificar y/o eliminar elementos después de haber creado un objeto de este tipo.
 
@@ -184,7 +184,7 @@ También existe el método `setdefault(clave[, valor])`. Este método devuelve e
 {'uno': 1, 'dos': 2, 'tres': 3, 'cuatro': None}
 ```
 
-## Modificar elementos de un diccionario
+### Modificar elementos de un diccionario
 
 En el apartado anterior hemos visto que para actualizar el valor asociado a una clave, simplemente se asigna un nuevo valor a dicha clave del diccionario.
 
@@ -197,7 +197,7 @@ En el apartado anterior hemos visto que para actualizar el valor asociado a una 
 {'uno': 1.0, 'dos': 2}
 ```
 
-## Eliminar un elemento de un diccionario en Python
+### Eliminar un elemento de un diccionario en Python
 
 En Python existen diversos modos de eliminar un elemento de un diccionario. Son los siguientes:
 
@@ -244,7 +244,7 @@ KeyError: 'seis'
 {}
 ```
 
-## Número de elementos (len) de un diccionario en Python
+### Número de elementos (len) de un diccionario en Python
 
 Al igual que sucede con otros tipos contenedores, se puede usar la función de Python `len()` para obtener el número de elementos de un diccionario.
 
@@ -254,7 +254,7 @@ Al igual que sucede con otros tipos contenedores, se puede usar la función de P
 3
 ```
 
-## Comprobar si un elemento está en un diccionario en Python
+### Comprobar si un elemento está en un diccionario en Python
 
 Al operar con diccionarios, se puede usar el operador de pertenencia `in` para comprobar si una clave está contenida, o no, en un diccionario. Esto resulta útil, por ejemplo, para asegurarnos de que una clave existe antes de intentar eliminarla.
 
@@ -273,7 +273,7 @@ True
 {'uno': 1, 'dos': 2, 'tres': 3}
 ```
 
-## Comparar si dos diccionarios son iguales
+### Comparar si dos diccionarios son iguales
 
 En Python se puede utilizar el operador de igualdad `==` para comparar si dos diccionarios son iguales.  **Dos diccionarios son iguales si contienen el mismo conjunto de pares *clave: valor*** , independientemente del orden que tengan.
 
@@ -293,7 +293,7 @@ File "<input>", line 1, in <module>
 TypeError: '>' not supported between instances of 'dict' and 'dict'
 ```
 
-## Diccionarios anidados en Python
+### Diccionarios anidados en Python
 
 Un diccionario puede contener un valor de cualquier tipo, entre ellos, otro diccionario. Este hecho se conoce como diccionarios anidados.
 
@@ -315,7 +315,7 @@ File "<input>", line 1, in <module>
 KeyError: 'd3'
 ```
 
-## Obtener una lista con las claves de un diccionario
+### Obtener una lista con las claves de un diccionario
 
 En ocasiones, es necesario tener almacenado en una lista las claves de un diccionario. Para ello, simplemente pasa el diccionario como argumento del constructor `list()`. Esto devolverá las claves del diccionario en una lista.
 
@@ -325,7 +325,7 @@ En ocasiones, es necesario tener almacenado en una lista las claves de un diccio
 ['uno', 'dos', 'tres']
 ```
 
-## Objetos vista de un diccionario
+### Objetos vista de un diccionario
 
 La clase *dict* implementa tres métodos muy particulares, dado que devuelven un tipo de dato, *iterable*, conocido como *objetos vista*. Estos objetos ofrecen una vista de las claves y valores contenidos en el diccionario y si el diccionario se modifica, dichos objetos se actualizan al instante.
 
@@ -362,7 +362,7 @@ dict_values([1, 2, 3])
 dict_items([('uno', 1), ('dos', 2), ('tres', 3)])
 ```
 
-## Listado de métodos de la clase dict
+### Listado de métodos de la clase dict
 
 Finalmente, enumeramos 0el listado de los principales métodos de la clase *dict*. Algunos de ellos ya los hemos visto durante la unidad:
 

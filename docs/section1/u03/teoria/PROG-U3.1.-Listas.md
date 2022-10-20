@@ -240,7 +240,6 @@ Para añadir un nuevo elemento a una lista se utiliza el método `append()` y pa
 >>> ['a', 'e', 'i', 'o', 'u']
 ```
 
-
 También es posible utilizar el operador de concatenación `+` para unir dos listas en una sola. El resultado es una nueva lista con los elementos de ambas:
 
 ```python
@@ -447,6 +446,147 @@ Existen dos formas de copiar listas:
 [1, 2, 3]
 ```
 
+## Depuración
+
+El uso descuidado de listas (y otros objetos mutables) puede llevar a largas horas de depuración. Aquí están algunos de los errores más comunes y las formas de evitarlos:
+
+1. No olvides que la mayoría de métodos de listas modifican el argumento y regresan `None`. Esto es lo opuesto a los métodos de cadenas, que regresan una nueva cadena y dejan la original sin modificar.
+   
+   Si estás acostumbrado a escribir código de cadenas como este:
+
+   ```Python
+   palabra = palabra.strip()
+   ```
+
+   Estás propenso a escribir código de listas como este:
+
+   ```Python
+   t = t.sort()           # ¡EQUIVOCADO!
+   ```
+
+   Debido a que `sort` regresa `None`, la siguiente operación que hagas con `t` es probable que falle.
+
+   Antes de usar métodos y operadores de listas, deberías leer la documentación cuidadosamente y después probarlos en modo interactivo. Los métodos y operadores que las listas comparten con otras secuencias (como cadenas) están documentados en:
+
+   [docs.python.org/library/stdtypes.html#common-sequence-operations](https://docs.python.org/library/stdtypes.html#common-sequence-operations)
+
+   Los métodos y operadores que solamente aplican a secuencias mutables están documentados en:
+
+   [docs.python.org/library/stdtypes.html#mutable-sequence-types](https://docs.python.org/library/stdtypes.html#mutable-sequence-types)
+2. Elige un estilo y apégate a él.
+   Parte del problema con listas es que hay demasiadas formas de hacer las cosas. Por ejemplo, para remover un elemento de una lista, puedes utilizar `pop`, `remove`, `del`, o incluso una asignación por rebanado.
+   Para agregar un elemento, puedes utilizar el método `append` o el operador `+`. Pero no olvides que esos también son correctos:
+
+   ```Python
+   t.append(x)
+   t = t + [x]
+   ```
+
+   Y esos son incorrectos:
+
+   ```Python
+   t.append([x])          # ¡EQUIVOCADO!
+   t = t.append(x)        # ¡EQUIVOCADO!
+   t + [x]                # ¡EQUIVOCADO!
+   t = t + x              # ¡EQUIVOCADO!
+   ```
+
+   Prueba cada uno de esos ejemplos en modo interactivo para asegurarte que entiendes lo que hacen. Nota que solamente la última provoca un error en tiempo de ejecución (runtime error); los otros tres son válidos, pero hacen la función equivocada.
+3. Hacer copias para evitar alias.
+   Si quieres utilizar un método como `sort` que modifica el argumento, pero necesitas mantener la lista original también, puedes hacer una copia.
+
+   ```Python
+   orig = t[:]
+   t.sort()
+   ```
+
+   En este ejemplo podrías también usar la función interna `sorted`, la cual regresa una lista nueva y ordenada, y deja la original sin modificar. ¡Pero en ese caso deberías evitar usar `sorted` como un nombre de variable!
+4. Listas, `split`, y archivos
+   Cuando leemos y analizamos archivos, hay muchas oportunidades de encontrar entradas que pueden hacer fallar a nuestro programa, así que es una buena idea revisar el patrón *guardián* cuando escribimos programas que leen a través de un archivo y buscan una “aguja en un pajar”.
+   Vamos a revisar nuestro programa que busca por el día de la semana en las líneas que contienen “from” en el archivo":
+
+   ```Python
+   From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
+   ```
+
+   Puesto que estamos dividiendo esta línea en palabras, podríamos apañarnos con el uso de `startswith` y simplemente buscar la primera palabra de la línea para determinar si estamos interesados en esa línea o no. Podemos saltarnos las líneas que no tienen “From” como  primer palabra, tal como sigue:
+
+   ```Python
+   manejador = open('mbox-short.txt')
+   for linea in manejador:
+       palabras = linea.split()
+       if palabras[0] != 'From' : continue # Hay otra forma, evita continue
+       print(palabras[2])
+   ```
+
+   Esto se ve mucho más simple y ni siquiera necesitamos hacer `rstrip` para borrar el salto de línea al final del archivo. Pero, ¿es mejor?
+
+   ```Python
+   python search8.py
+   Sat
+   Traceback (most recent call last):
+     File "search8.py", line 5, in <module>
+       if palabras[0] != 'From' : continue
+   IndexError: list index out of range
+   ```
+
+   De alguna manera funciona y vemos el día de la primera línea (Sat), pero luego el programa falla con un error. ¿Qué fue lo que falló? ¿Qué datos estropearon e hicieron fallar a nuestro elegante, inteligente, y muy Pythónico programa?
+
+   Puedes mirar el código por un largo tiempo y tratar de resolverlo o preguntar a alguien más, pero el método más rápido e inteligente es agregar una sentencia `print`. El mejor lugar para agregar la sentencia `print` es justo antes de la línea donde el programa falló, e imprimir los datos que parece que causan la falla.
+
+   Ahora bien, este método podría generar muchas líneas de salida, pero al menos tendrás inmediatamente alguna pista de cuál es el problema. Así que agregamos un print a la variable `palabras` justo antes de la línea cinco. Incluso podemos agregar un prefijo “Depuración:” a la línea de modo que mantenemos nuestra salida regular separada de la salida de mensajes de depuración.
+
+   ```Python
+   for linea in manejador:
+       palabras = line.split()
+       print('Depuración:', palabras)
+       if palabras[0] != 'From' : continue
+       print(palabras[2])
+   ```
+
+   Cuando ejecutamos el programa, se generan muchos mensajes de salida en la pantalla, pero al final, vemos nuestra salida de depuración y el mensaje de error, de modo que sabemos qué sucedió justo antes del error.
+
+   ```Pyton
+   Depuración: ['X-DSPAM-Confidence:', '0.8475']
+   Depuración: ['X-DSPAM-Probability:', '0.0000']
+   Depuración: []
+   Traceback (most recent call last):
+     File "search9.py", line 6, in <module>
+       if palabras[0] != 'From' : continue
+   IndexError: list index out of range
+   ```
+
+   Cada línea de depuración imprime la lista de palabras que obtuvimos cuando la función `split` dividió la línea en palabras. Cuando el programa falla, la lista de palabras está vacía `[]`. Si abrimos el archivo en un editor de texto y miramos el archivo, en ese punto se ve lo siguiente:
+
+   ```Pyton
+   X-DSPAM-Result: Innocent
+   X-DSPAM-Processed: Sat Jan  5 09:14:16 2008
+   X-DSPAM-Confidence: 0.8475
+   X-DSPAM-Probability: 0.0000
+
+   Details: http://source.sakaiproject.org/viewsvn/?view=rev&rev=39772
+   ```
+
+   ¡El error ocurre cuando nuestro programa encuentra una línea vacía! Por supuesto, hay “cero palabras” en una lista vacía. ¿Por qué no pensamos en eso cuando estábamos escribiendo el código? Cuando el código busca la primera palabra (`palabras[0]`) para revisar si coincide con “From”, obtenemos un error “index out of range” (índice fuera de rango).
+
+   Este es, por supuesto, el lugar perfecto para agregar algo de *código guardián* para evitar revisar si la primera palabra no existe. Hay muchas maneras de proteger este código; vamos a optar por revisar el número de palabras que tenemos antes de mirar la primera palabra:
+
+   ```Pyton
+   manejador = open('mbox-short.txt')
+   contador = 0
+   for linea in manejador:
+       palabras = linea.split()
+       # print 'Depuración:', palabras
+       if len(palabras) == 0 : continue
+       if palabras[0] != 'From' : continue
+       print(palabras[2])
+   ```
+
+   Posteriormente comentaremos la sentencia de depuración en vez de borrarla, en caso de que nuestra modificación falle y tengamos que depurar de nuevo. Luego, agregamos una sentencia guardián que revisa si tenemos cero palabras, y si así fuera, saltaremos a la siguiente línea en el archivo.
+
+   Podemos pensar en las dos sentencias `continue` (seguro que encuetnras otra forma que no sea con `continue`) que se usan para solo procesar las líneas que son “interesantes” en nuestro proceso. Una línea que no tenga palabras “no es interesante” para nosotros así que saltamos a la siguiente línea. Una línea que no tenga “From” como su primera palabra tampoco nos interesa así que la saltamos.
+
+   El programa modificado se ejecuta con éxito, así que quizás es correcto. Nuestra sentencia guardián se asegura de que `palabras[0]` nunca falle, pero quizá no sea suficiente. Cuando estamos programando, siempre debemos pensar, “¿qué podría salir mal?”
 
 ## Fuente
 

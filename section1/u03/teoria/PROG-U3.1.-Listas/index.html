@@ -1039,6 +1039,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#depuracion" class="md-nav__link">
+    Depuración
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fuente" class="md-nav__link">
     Fuente
   </a>
@@ -1814,6 +1821,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#depuracion" class="md-nav__link">
+    Depuración
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fuente" class="md-nav__link">
     Fuente
   </a>
@@ -2198,6 +2212,101 @@ Lista simplemente enlazada.</p>
 <a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
 <a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 </code></pre></div>
+<h2 id="depuracion">Depuración<a class="headerlink" href="#depuracion" title="Permanent link">&para;</a></h2>
+<p>El uso descuidado de listas (y otros objetos mutables) puede llevar a largas horas de depuración. Aquí están algunos de los errores más comunes y las formas de evitarlos:</p>
+<ol>
+<li>No olvides que la mayoría de métodos de listas modifican el argumento y regresan <code>None</code>. Esto es lo opuesto a los métodos de cadenas, que regresan una nueva cadena y dejan la original sin modificar.</li>
+</ol>
+<p>Si estás acostumbrado a escribir código de cadenas como este:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">palabra</span> <span class="o">=</span> <span class="n">palabra</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</code></pre></div>
+<p>Estás propenso a escribir código de listas como este:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>           <span class="c1"># ¡EQUIVOCADO!</span>
+</code></pre></div>
+<p>Debido a que <code>sort</code> regresa <code>None</code>, la siguiente operación que hagas con <code>t</code> es probable que falle.</p>
+<p>Antes de usar métodos y operadores de listas, deberías leer la documentación cuidadosamente y después probarlos en modo interactivo. Los métodos y operadores que las listas comparten con otras secuencias (como cadenas) están documentados en:</p>
+<p><a href="https://docs.python.org/library/stdtypes.html#common-sequence-operations">docs.python.org/library/stdtypes.html#common-sequence-operations</a></p>
+<p>Los métodos y operadores que solamente aplican a secuencias mutables están documentados en:</p>
+<p><a href="https://docs.python.org/library/stdtypes.html#mutable-sequence-types">docs.python.org/library/stdtypes.html#mutable-sequence-types</a>
+2. Elige un estilo y apégate a él.
+   Parte del problema con listas es que hay demasiadas formas de hacer las cosas. Por ejemplo, para remover un elemento de una lista, puedes utilizar <code>pop</code>, <code>remove</code>, <code>del</code>, o incluso una asignación por rebanado.
+   Para agregar un elemento, puedes utilizar el método <code>append</code> o el operador <code>+</code>. Pero no olvides que esos también son correctos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span>
+</code></pre></div>
+<p>Y esos son incorrectos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">x</span><span class="p">])</span>          <span class="c1"># ¡EQUIVOCADO!</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>        <span class="c1"># ¡EQUIVOCADO!</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="n">t</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span>                <span class="c1"># ¡EQUIVOCADO!</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="n">x</span>              <span class="c1"># ¡EQUIVOCADO!</span>
+</code></pre></div>
+<p>Prueba cada uno de esos ejemplos en modo interactivo para asegurarte que entiendes lo que hacen. Nota que solamente la última provoca un error en tiempo de ejecución (runtime error); los otros tres son válidos, pero hacen la función equivocada.
+3. Hacer copias para evitar alias.
+   Si quieres utilizar un método como <code>sort</code> que modifica el argumento, pero necesitas mantener la lista original también, puedes hacer una copia.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">orig</span> <span class="o">=</span> <span class="n">t</span><span class="p">[:]</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="n">t</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</code></pre></div>
+<p>En este ejemplo podrías también usar la función interna <code>sorted</code>, la cual regresa una lista nueva y ordenada, y deja la original sin modificar. ¡Pero en ese caso deberías evitar usar <code>sorted</code> como un nombre de variable!
+4. Listas, <code>split</code>, y archivos
+   Cuando leemos y analizamos archivos, hay muchas oportunidades de encontrar entradas que pueden hacer fallar a nuestro programa, así que es una buena idea revisar el patrón <em>guardián</em> cuando escribimos programas que leen a través de un archivo y buscan una “aguja en un pajar”.
+   Vamos a revisar nuestro programa que busca por el día de la semana en las líneas que contienen “from” en el archivo":</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">From</span> <span class="n">stephen</span><span class="o">.</span><span class="n">marquard</span><span class="nd">@uct</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">za</span> <span class="n">Sat</span> <span class="n">Jan</span>  <span class="mi">5</span> <span class="mi">09</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">16</span> <span class="mi">2008</span>
+</code></pre></div>
+<p>Puesto que estamos dividiendo esta línea en palabras, podríamos apañarnos con el uso de <code>startswith</code> y simplemente buscar la primera palabra de la línea para determinar si estamos interesados en esa línea o no. Podemos saltarnos las líneas que no tienen “From” como  primer palabra, tal como sigue:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">manejador</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;mbox-short.txt&#39;</span><span class="p">)</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="k">for</span> <span class="n">linea</span> <span class="ow">in</span> <span class="n">manejador</span><span class="p">:</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>    <span class="n">palabras</span> <span class="o">=</span> <span class="n">linea</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>    <span class="k">if</span> <span class="n">palabras</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;From&#39;</span> <span class="p">:</span> <span class="k">continue</span> <span class="c1"># Hay otra forma, evita continue</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">palabras</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</code></pre></div>
+<p>Esto se ve mucho más simple y ni siquiera necesitamos hacer <code>rstrip</code> para borrar el salto de línea al final del archivo. Pero, ¿es mejor?</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">python</span> <span class="n">search8</span><span class="o">.</span><span class="n">py</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="n">Sat</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>  <span class="n">File</span> <span class="s2">&quot;search8.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">5</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>    <span class="k">if</span> <span class="n">palabras</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;From&#39;</span> <span class="p">:</span> <span class="k">continue</span>
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="ne">IndexError</span><span class="p">:</span> <span class="nb">list</span> <span class="n">index</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span>
+</code></pre></div>
+<p>De alguna manera funciona y vemos el día de la primera línea (Sat), pero luego el programa falla con un error. ¿Qué fue lo que falló? ¿Qué datos estropearon e hicieron fallar a nuestro elegante, inteligente, y muy Pythónico programa?</p>
+<p>Puedes mirar el código por un largo tiempo y tratar de resolverlo o preguntar a alguien más, pero el método más rápido e inteligente es agregar una sentencia <code>print</code>. El mejor lugar para agregar la sentencia <code>print</code> es justo antes de la línea donde el programa falló, e imprimir los datos que parece que causan la falla.</p>
+<p>Ahora bien, este método podría generar muchas líneas de salida, pero al menos tendrás inmediatamente alguna pista de cuál es el problema. Así que agregamos un print a la variable <code>palabras</code> justo antes de la línea cinco. Incluso podemos agregar un prefijo “Depuración:” a la línea de modo que mantenemos nuestra salida regular separada de la salida de mensajes de depuración.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">for</span> <span class="n">linea</span> <span class="ow">in</span> <span class="n">manejador</span><span class="p">:</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>    <span class="n">palabras</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Depuración:&#39;</span><span class="p">,</span> <span class="n">palabras</span><span class="p">)</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>    <span class="k">if</span> <span class="n">palabras</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;From&#39;</span> <span class="p">:</span> <span class="k">continue</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">palabras</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</code></pre></div>
+<p>Cuando ejecutamos el programa, se generan muchos mensajes de salida en la pantalla, pero al final, vemos nuestra salida de depuración y el mensaje de error, de modo que sabemos qué sucedió justo antes del error.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>Depuración: [&#39;X-DSPAM-Confidence:&#39;, &#39;0.8475&#39;]
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>Depuración: [&#39;X-DSPAM-Probability:&#39;, &#39;0.0000&#39;]
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>Depuración: []
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>Traceback (most recent call last):
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>  File &quot;search9.py&quot;, line 6, in &lt;module&gt;
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>    if palabras[0] != &#39;From&#39; : continue
+<a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>IndexError: list index out of range
+</code></pre></div>
+<p>Cada línea de depuración imprime la lista de palabras que obtuvimos cuando la función <code>split</code> dividió la línea en palabras. Cuando el programa falla, la lista de palabras está vacía <code>[]</code>. Si abrimos el archivo en un editor de texto y miramos el archivo, en ese punto se ve lo siguiente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>X-DSPAM-Result: Innocent
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>X-DSPAM-Processed: Sat Jan  5 09:14:16 2008
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>X-DSPAM-Confidence: 0.8475
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>X-DSPAM-Probability: 0.0000
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>
+<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>Details: http://source.sakaiproject.org/viewsvn/?view=rev&amp;rev=39772
+</code></pre></div>
+<p>¡El error ocurre cuando nuestro programa encuentra una línea vacía! Por supuesto, hay “cero palabras” en una lista vacía. ¿Por qué no pensamos en eso cuando estábamos escribiendo el código? Cuando el código busca la primera palabra (<code>palabras[0]</code>) para revisar si coincide con “From”, obtenemos un error “index out of range” (índice fuera de rango).</p>
+<p>Este es, por supuesto, el lugar perfecto para agregar algo de <em>código guardián</em> para evitar revisar si la primera palabra no existe. Hay muchas maneras de proteger este código; vamos a optar por revisar el número de palabras que tenemos antes de mirar la primera palabra:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>manejador = open(&#39;mbox-short.txt&#39;)
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>contador = 0
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>for linea in manejador:
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>    palabras = linea.split()
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>    # print &#39;Depuración:&#39;, palabras
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>    if len(palabras) == 0 : continue
+<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>    if palabras[0] != &#39;From&#39; : continue
+<a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>    print(palabras[2])
+</code></pre></div>
+<p>Posteriormente comentaremos la sentencia de depuración en vez de borrarla, en caso de que nuestra modificación falle y tengamos que depurar de nuevo. Luego, agregamos una sentencia guardián que revisa si tenemos cero palabras, y si así fuera, saltaremos a la siguiente línea en el archivo.</p>
+<p>Podemos pensar en las dos sentencias <code>continue</code> (seguro que encuetnras otra forma que no sea con <code>continue</code>) que se usan para solo procesar las líneas que son “interesantes” en nuestro proceso. Una línea que no tenga palabras “no es interesante” para nosotros así que saltamos a la siguiente línea. Una línea que no tenga “From” como su primera palabra tampoco nos interesa así que la saltamos.</p>
+<p>El programa modificado se ejecuta con éxito, así que quizás es correcto. Nuestra sentencia guardián se asegura de que <code>palabras[0]</code> nunca falle, pero quizá no sea suficiente. Cuando estamos programando, siempre debemos pensar, “¿qué podría salir mal?”</p>
 <h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://blog.soyhenry.com/que-es-una-estructura-de-datos-en-programacion/">Estructuras de datos</a></li>

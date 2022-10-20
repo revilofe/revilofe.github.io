@@ -32,6 +32,10 @@ nav:
         - '* Práctica 2.4: Depurar programas': 'section1/u02/practica/PROG-U2.-Practica004.md'
         - '2.5.-Documentar el código': 'section1/u02/teoria/PROG-U2.5.-Documentar.md'
         - '* Práctica 2.5: Proyecto': 'https://classroom.github.com/a/1NxxJ6nu'
+    - 'U3: Estructuras de datos':
+        - 'section1/u03/index.md'
+        - '3.1.-Condicionales': 'section1/u02/teoria/PROG-U3.1.-Listas.md'
+        - '* Práctica 3.1: Sentencias condicionales': 'section1/u03/practica/PROG-U3.-Practica001.md'
   - 'Entornos de desarrollo':
     - 'section3/index.md'
     - 'U1: Introducción al desarrollo de software':

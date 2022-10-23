@@ -52,13 +52,12 @@ En esta sección se incluyen los contenidos mínimos a impartir esta unidad teni
 La unidad pertenece al bloque 1 Desarrollo de software
 
 * U1: Introducción al desarrollo del software.
-* U2: Proceso de desarrollo del software.
 
 En la unidad 1, veremos
 
 * La relación de los programas con los componentes del sistema informático.
 * Las diferencias entre código fuente, objeto y ejecutable.
-* Las fases de desarrollo de una aplicación informática.
 * Algunos lenguajes de programación.
 * Las funcionalidades ofrecidas por las herramientas para el desarrollo de software.
 * El funcionamiento de los traductores.
+* Las fases de desarrollo de una aplicación informática.

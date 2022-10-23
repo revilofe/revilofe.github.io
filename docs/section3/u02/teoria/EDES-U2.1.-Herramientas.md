@@ -52,7 +52,7 @@ Algunos IDE’s representativos podrían ser:
 
 ## Recursos
 
-* [Guías para la instalación de IDES:](./assets/IDE_Javier_Garcia.pdf)
+* [Guías para la instalación de IDES](./assets/IDE_Javier_Garcia.pdf)
 * [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=vscom_downloads)
 * [IntelliJ IDEA](https://www.jetbrains.com/idea/download)
 

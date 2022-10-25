@@ -40,7 +40,6 @@ En esta actividad nos centraremos en los dos últimos criterios de evaluación, 
 
 El trabajo tiene las siguientes condiciones de entrega:
 
-* Es un trabajo individual.
 * Se realiza en un documento de google drive.
 * El trabajo tiene que estar correctamente identificado:
     * Fecha
@@ -54,4 +53,3 @@ El trabajo tiene las siguientes condiciones de entrega:
 ### Apoyo
 
 * https://revilofe.github.io
-* https://www.digitallearning.es/blog/rankings-de-lenguajes-de-programacion/

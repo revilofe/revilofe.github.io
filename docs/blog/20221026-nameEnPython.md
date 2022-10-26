@@ -33,8 +33,6 @@ Echemos un vistazo a un ejemplo. Cree un módulo de Python llamado `file_one.py`
 print("File one __name__ is set to: {}" .format(__name__))
 ```
 
-file_one.py
-
 Al ejecutar este archivo, verás exactamente de lo que estábamos hablando. La variable `__name__` para este módulo se establece en `__main__`:
 
 ```
@@ -49,8 +47,6 @@ Ahora agregua otro archivo llamado `file_two.py` y pegua este código dentro:
 print("File two __name__ is set to: {}" .format(__name__))
 ```
 
-file_two.py
-
 Además, modifica el código en `file_one.py` de esta manera para que importemos el módulo `file_two`:
 
 ```python
@@ -59,8 +55,6 @@ import file_two
 
 print("File one __name__ is set to: {}" .format(__name__))
 ```
-
-file_one.py
 
 Ejecutando nuestro código `file_one` una vez más mostrará que la variable `__name__` en `file_one` no cambió, y aún permanece establecida en `__main__`. Pero ahora la variable `__name__` en `file_two` se establece como el nombre del módulo, por lo tanto `file_two`.
 
@@ -108,8 +102,6 @@ else:
    print("File one executed when imported")
 ```
 
-file_one.py
-
 `file_two`:
 
 ```python
@@ -122,8 +114,6 @@ if __name__ == "__main__":
 else:
    print("File two executed when imported")
 ```
-
-file_two.py
 
 Nuevamente, al ejecutar `file_one` , verás que el programa reconoció cuál de estos dos módulos es `__main__` y ejecutó el código de acuerdo con nuestras primeras declaraciones `if else`.
 
@@ -166,8 +156,6 @@ if __name__ == "__main__":
 else:
    print("File one executed when imported")
 ```
-
-file_one.py
 
 `file_two`:
 
@@ -248,8 +236,6 @@ else:
    print("File two executed when imported")
 ```
 
-file_two.py
-
 Y para importar las funciones específicas del módulo, usa el bloque `from` import en el archivo `file_one`:
 
 ```python
@@ -271,8 +257,6 @@ if __name__ == "__main__":
 else:
    print("File one executed when imported")
 ```
-
-file_one.py
 
 ## Conclusion
 

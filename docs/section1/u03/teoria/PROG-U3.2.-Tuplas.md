@@ -210,7 +210,7 @@ Para terminar, se muestran los métodos de la clase tuple en Python, que son los
 
 
 ## Fuente
-
+* [Pagina de Juan Jose Lozano Gomez sobre Python](https://j2logo.com/)
 * [Estructuras de datos](https://blog.soyhenry.com/que-es-una-estructura-de-datos-en-programacion/)
 * [Python para todos](https://es.py4e.com/)
 * [Aprende con Alf](ttps://aprendeconalf.es/docencia/python/manual/listas/)

@@ -1606,7 +1606,6 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File one __name__ is set to: </span><span class="si">{}</span><span class="s2">&quot;</span> <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="vm">__name__</span><span class="p">))</span>
 </code></pre></div>
-<p>file_one.py</p>
 <p>Al ejecutar este archivo, verás exactamente de lo que estábamos hablando. La variable <code>__name__</code> para este módulo se establece en <code>__main__</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>File one __name__ is set to: __main_
 </code></pre></div>
@@ -1615,14 +1614,12 @@
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File two __name__ is set to: </span><span class="si">{}</span><span class="s2">&quot;</span> <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="vm">__name__</span><span class="p">))</span>
 </code></pre></div>
-<p>file_two.py</p>
 <p>Además, modifica el código en <code>file_one.py</code> de esta manera para que importemos el módulo <code>file_two</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Python module to execute</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">import</span> <span class="nn">file_two</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File one __name__ is set to: </span><span class="si">{}</span><span class="s2">&quot;</span> <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="vm">__name__</span><span class="p">))</span>
 </code></pre></div>
-<p>file_one.py</p>
 <p>Ejecutando nuestro código <code>file_one</code> una vez más mostrará que la variable <code>__name__</code> en <code>file_one</code> no cambió, y aún permanece establecida en <code>__main__</code>. Pero ahora la variable <code>__name__</code> en <code>file_two</code> se establece como el nombre del módulo, por lo tanto <code>file_two</code>.</p>
 <p>El resultado debería verse así:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>File two __name__ is set to: file_two
@@ -1650,7 +1647,6 @@
 <a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="k">else</span><span class="p">:</span>
 <a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File one executed when imported&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>file_one.py</p>
 <p><code>file_two</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Python module to import</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
@@ -1661,7 +1657,6 @@
 <a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="k">else</span><span class="p">:</span>
 <a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File two executed when imported&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>file_two.py</p>
 <p>Nuevamente, al ejecutar <code>file_one</code> , verás que el programa reconoció cuál de estos dos módulos es <code>__main__</code> y ejecutó el código de acuerdo con nuestras primeras declaraciones <code>if else</code>.</p>
 <p>El resultado debería verse así:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>File two __name__ is set to: file_two
@@ -1692,7 +1687,6 @@
 <a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="k">else</span><span class="p">:</span>
 <a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File one executed when imported&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>file_one.py</p>
 <p><code>file_two</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Python module to import</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
@@ -1753,7 +1747,6 @@
 <a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="k">else</span><span class="p">:</span>
 <a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File two executed when imported&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>file_two.py</p>
 <p>Y para importar las funciones específicas del módulo, usa el bloque <code>from</code> import en el archivo <code>file_one</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Python module to execute</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kn">from</span> <span class="nn">file_two</span> <span class="kn">import</span> <span class="n">function_three</span>
@@ -1773,7 +1766,6 @@
 <a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="k">else</span><span class="p">:</span>
 <a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File one executed when imported&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>file_one.py</p>
 <h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
 <p>Hay un caso de uso realmente agradable para la variable <code>__name__</code>, ya sea que desees un archivo que se pueda ejecutar como el programa principal o sea importardo por otros módulos. Podemos usar un bloque <code>if __name__ == "__name__"</code> para permitir o evitar que se ejecuten partes del código cuando sean importados los módulos.</p>
 <p>Cuando el intérprete de Python lee un archivo, la variable <code>__name__</code> se establece como <code>__main__</code> si el módulo que se está ejecutando, o como el nombre del módulo si se importa. Al leer el archivo se ejecuta todo el código de nivel superior, pero no las funciones y clases (ya que solamente se importarán).</p>

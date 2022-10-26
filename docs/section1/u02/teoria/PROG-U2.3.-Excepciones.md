@@ -143,7 +143,7 @@ NameError: HiThere
 **Actividad 2**: Escribe un programa que lea repetidamente la temperadebe detectar los fallos usando `try` y `except`.
 
 ## Fuente
-
+* [Pagina de Juan Jose Lozano Gomez sobre Python](https://j2logo.com/)
 * [Aprende con Alf](https://aprendeconalf.es/)
 * [Python para todos](https://es.py4e.com/)
 * [Documentación Python.org](https://docs.python.org/3/tutorial/errors.html)

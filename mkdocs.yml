@@ -40,7 +40,7 @@ nav:
         - '3.3.-Est.Datos: Diccionarios': 'section1/u03/teoria/PROG-U3.3.-Diccionarios.md'
         - '* Práctica 3.2: Diccionarios': 'section1/u03/practica/PROG-U3.-Practica002.md'
         - '3.4.-Est.Datos: Conjuntos': 'section1/u03/teoria/PROG-U3.4.-Conjuntos.md'
-        - '* Práctica 3.2: Diccionarios': 'section1/u03/practica/PROG-U3.-Practica003.md'
+        - '* Práctica 3.2: Conjuntos': 'section1/u03/practica/PROG-U3.-Practica003.md'
 
   - 'Entornos de desarrollo':
     - 'section3/index.md'

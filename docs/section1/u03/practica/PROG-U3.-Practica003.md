@@ -75,9 +75,10 @@ for nombre in primaria & secundaria:
 print("NOMBRES DE PRIMARIA QUE NO SE REPITEN EN SECUNDARIA:")
 for nombre in primaria - secundaria:
    print(nombre)
+```
 -->
 
-### **Ejercicio 3**
+#### **Ejercicio 3**
 
 El conjunto potencia de un conjunto *S* es el conjunto de todos los subconjuntos de *S*.
 

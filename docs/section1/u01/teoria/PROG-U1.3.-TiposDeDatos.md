@@ -336,3 +336,4 @@ Las siguientes funciones convierten un dato de un tipo en otro, siempre y cuando
 ## Fuente
 
 * [Aprende con Alf](https://aprendeconalf.es/)
+* [Pagina de Juan Jose Lozano Gomez sobre Python](https://j2logo.com/)

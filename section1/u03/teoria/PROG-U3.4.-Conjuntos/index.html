@@ -239,13 +239,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../" class="md-tabs__link">
+      <a href="../../../" class="md-tabs__link md-tabs__link--active">
         Programación
       </a>
     </li>
@@ -390,12 +392,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -774,20 +778,26 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
       
       
       
         
           
             
+          
+        
+          
+        
           
         
           
@@ -885,6 +895,204 @@
   
     <li class="md-nav__item">
       <a href="../../practica/PROG-U3.-Practica002/" class="md-nav__link">
+        * Práctica 3.2: Diccionarios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          3.4.-Est.Datos: Conjuntos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        3.4.-Est.Datos: Conjuntos
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conjuntos" class="md-nav__link">
+    Conjuntos
+  </a>
+  
+    <nav class="md-nav" aria-label="Conjuntos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-el-tipo-set-en-python" class="md-nav__link">
+    Qué es el tipo set en Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-vs-frozenset" class="md-nav__link">
+    set vs frozenset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-acceder-a-los-elementos-de-un-conjunto-en-python" class="md-nav__link">
+    Cómo acceder a los elementos de un conjunto en Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-elementos-a-un-conjunto-set-en-python" class="md-nav__link">
+    Añadir elementos a un conjunto (set) en Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-un-elemento-de-un-conjunto-en-python" class="md-nav__link">
+    Eliminar un elemento de un conjunto en Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numero-de-elementos-len-de-un-conjunto" class="md-nav__link">
+    Número de elementos (len) de un conjunto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-saber-si-un-elemento-esta-en-un-conjunto" class="md-nav__link">
+    Cómo saber si un elemento está en un conjunto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operaciones-sobre-conjuntos-en-python-set-operations" class="md-nav__link">
+    Operaciones sobre conjuntos en Python (set operations)
+  </a>
+  
+    <nav class="md-nav" aria-label="Operaciones sobre conjuntos en Python (set operations)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#union-de-conjuntos-en-python" class="md-nav__link">
+    Unión de conjuntos en Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interseccion-de-conjuntos-en-python" class="md-nav__link">
+    Intersección de conjuntos en Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencia-de-conjuntos-en-python" class="md-nav__link">
+    Diferencia de conjuntos en Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencia-simetrica-de-conjuntos-en-python" class="md-nav__link">
+    Diferencia simétrica de conjuntos en Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inclusion-de-conjuntos-en-python" class="md-nav__link">
+    Inclusión de conjuntos en Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conjuntos-disjuntos-en-python" class="md-nav__link">
+    Conjuntos disjuntos en Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#igualdad-de-conjuntos-en-python" class="md-nav__link">
+    Igualdad de conjuntos en Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-de-la-clase-set-en-python" class="md-nav__link">
+    Métodos de la clase set en Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuente" class="md-nav__link">
+    Fuente
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practica/PROG-U3.-Practica003/" class="md-nav__link">
         * Práctica 3.2: Diccionarios
       </a>
     </li>
@@ -1534,15 +1742,15 @@
     Conjuntos
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Conjuntos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#que-es-el-tipo-set-en-python" class="md-nav__link">
     Qué es el tipo set en Python
   </a>
   
-    <nav class="md-nav" aria-label="Qué es el tipo set en Python">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#set-vs-frozenset" class="md-nav__link">
@@ -1551,47 +1759,42 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#como-acceder-a-los-elementos-de-un-conjunto-en-python" class="md-nav__link">
     Cómo acceder a los elementos de un conjunto en Python
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#anadir-elementos-a-un-conjunto-set-en-python" class="md-nav__link">
     Añadir elementos a un conjunto (set) en Python
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#eliminar-un-elemento-de-un-conjunto-en-python" class="md-nav__link">
     Eliminar un elemento de un conjunto en Python
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#numero-de-elementos-len-de-un-conjunto" class="md-nav__link">
     Número de elementos (len) de un conjunto
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#como-saber-si-un-elemento-esta-en-un-conjunto" class="md-nav__link">
     Cómo saber si un elemento está en un conjunto
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#operaciones-sobre-conjuntos-en-python-set-operations" class="md-nav__link">
     Operaciones sobre conjuntos en Python (set operations)
   </a>
@@ -1652,11 +1855,16 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#metodos-de-la-clase-set-en-python" class="md-nav__link">
     Métodos de la clase set en Python
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1702,189 +1910,211 @@
   </a>
 
 
-  <h1>UD 3 - 3.4 Conjuntos</h1>
+  <h1>3.4.-Est.Datos: Conjuntos</h1>
 
 <h2 id="conjuntos">Conjuntos<a class="headerlink" href="#conjuntos" title="Permanent link">&para;</a></h2>
-<p>d
-El tipo set en Python es la clase utilizada por el lenguaje para representar los conjuntos. Un conjunto es una colección desordenada de elementos únicos, es decir, que no se repiten.</p>
-<p>Este tutorial describe en detalle la clase set de Python, sus principales usos y operaciones. ¡No te lo pierdas!</p>
-<h2 id="que-es-el-tipo-set-en-python">Qué es el tipo set en Python<a class="headerlink" href="#que-es-el-tipo-set-en-python" title="Permanent link">&para;</a></h2>
-<p>Al comienzo del tutorial adelantaba que el tipo set en Python es utilizado para trabajar con conjuntos de elementos. La principal característica de este tipo de datos es que es una colección cuyos elementos no guardan ningún orden y que además son únicos.</p>
-<p>Estas características hacen que los principales usos de esta clase sean conocer si un elemento pertenece o no a una colección y eliminar duplicados de un tipo secuencial ( <em><a href="https://j2logo.com/python/tutorial/tipo-list-python/">list</a></em> , <em><a href="https://j2logo.com/python/tutorial/tipo-tuple-python/">tuple</a></em> o  <em><a href="https://j2logo.com/python/tutorial/tipo-str-python/">str</a></em> ).</p>
+<p>El tipo set en Python es la clase utilizada por el lenguaje para representar los conjuntos. Un conjunto es una colección desordenada de elementos únicos, es decir, que no se repiten.</p>
+<h3 id="que-es-el-tipo-set-en-python">Qué es el tipo set en Python<a class="headerlink" href="#que-es-el-tipo-set-en-python" title="Permanent link">&para;</a></h3>
+<p>La principal característica de este tipo de datos es que es una colección cuyos elementos <em>no guardan ningún orden</em> y que además <em>son únicos</em>.</p>
+<blockquote>
+<p>Estas características hacen que los principales usos de esta clase sean conocer si un elemento pertenece o no a una colección y eliminar duplicados de un tipo secuencial (list, tuple o str).</p>
+</blockquote>
 <p>Además, esta clase también implementa las típicas operaciones matemáticas sobre conjuntos:  <em>unión</em> ,  <em>intersección</em> ,  <em>diferencia</em> , …</p>
 <p>Para crear un conjunto, basta con encerrar una serie de elementos entre llaves <code>{}</code>, o bien usar el constructor de la clase <code>set()</code> y pasarle como argumento un objeto <em>iterable</em> (como una  <em>lista</em> , una  <em>tupla</em> , una <em>cadena</em> …).</p>
-<p><strong># Crea un conjunto con una serie de elementos entre llaves</strong></p>
-<p><strong># Los elementos repetidos se eliminan</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> c = <strong>{**1</strong>, <strong>3</strong>, <strong>2</strong>, <strong>9</strong>, <strong>3</strong>, <strong>1</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> c</p>
-<p><strong>{**1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>9</strong>}**</p>
-<p><strong># Crea un conjunto a partir de un string</strong></p>
-<p><strong># Los caracteres repetidos se eliminan</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> a = <strong>set</strong>(<strong>'Hola Pythonista'</strong>)</p>
-<p><strong>&gt;&gt;&gt;</strong> a</p>
-<p><strong>{</strong>'a'<strong>, **'H'</strong>, <strong>'h'</strong>, <strong>'y'</strong>, <strong>'n'</strong>, <strong>'s'</strong>, <strong>'P'</strong>, <strong>'t'</strong>, <strong>' '</strong>, <strong>'i'</strong>, <strong>'l'</strong>, <strong>'o'</strong>}**</p>
-<p><strong># Crea un conjunto a partir de una lista</strong></p>
-<p><strong># Los elementos repetidos de la lista se eliminan</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> unicos = <strong>set</strong>([<strong>3</strong>, <strong>5</strong>, <strong>6</strong>, <strong>1</strong>, <strong>5</strong>])</p>
-<p><strong>&gt;&gt;&gt;</strong> unicos</p>
-<p><strong>{**1</strong>, <strong>3</strong>, <strong>5</strong>, <strong>6</strong>}**</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Crea un conjunto con una serie de elementos entre llaves</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># Los elementos repetidos se eliminan</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Crea un conjunto a partir de un string</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Los caracteres repetidos se eliminan</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;Hola Pythonista&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">}</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># Crea un conjunto a partir de una lista</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># Los elementos repetidos de la lista se eliminan</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">unicos</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">unicos</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">}</span>
+</code></pre></div>
 <p>Para crear un conjunto vacío, simplemente llama al constructor <code>set()</code> sin parámetros.</p>
+<blockquote>
 <p>❗️  **IMPORTANTE: ** <code>{}</code> NO crea un conjunto vacío, sino un <em>diccionario</em> vacío. Usa <code>set()</code> si quieres crear un conjunto sin elementos.</p>
 <p>🎯 <strong>NOTA:</strong> Los elementos que se pueden añadir a un conjunto deben ser de tipo  <em>hashable</em> . Un objeto es <em>hashable</em> si tiene un valor de <em>hash</em> que no cambia durante todo su ciclo de vida. En principio, los objetos que son instancias de clases definidas por el usuario son  <em>hashables</em> . También lo son la mayoría de tipos inmutables definidos por Python.</p>
+</blockquote>
 <h3 id="set-vs-frozenset">set vs frozenset<a class="headerlink" href="#set-vs-frozenset" title="Permanent link">&para;</a></h3>
-<p>En realidad, en Python existen dos clases para representar conjuntos: <code>set</code> y <code>frozenset</code>. La principal diferencia es que <em>set</em> es mutable, por lo que después de ser creado, se pueden añadir y/o eliminar elementos del conjunto, como veremos en secciones posteriores. Por su parte, <em>frozenset</em> es inmutable y su contenido no puede ser modificado una vez que ha sido inicializado.</p>
-<p>Para crear un conjunto de tipo  <em>frozenset</em> , se usa el constructor de la clase <code>frozenset()</code>:</p>
-<p><strong>&gt;&gt;&gt;</strong> f = <strong>frozenset</strong>([<strong>3</strong>, <strong>5</strong>, <strong>6</strong>, <strong>1</strong>, <strong>5</strong>])</p>
-<p><strong>&gt;&gt;&gt;</strong> f</p>
-<p><strong>frozenset</strong>({<strong>1</strong>, <strong>3</strong>, <strong>5</strong>, <strong>6</strong>})</p>
+<p>En realidad, en Python existen dos clases para representar conjuntos: <code>set</code> y <code>frozenset</code>. La principal diferencia es que <code>set</code> es mutable, por lo que después de ser creado, se pueden añadir y/o eliminar elementos del conjunto, como veremos en secciones posteriores. Por su parte, <code>frozenset</code> es inmutable y su contenido no puede ser modificado una vez que ha sido inicializado.</p>
+<p>Para crear un conjunto de tipo <code>frozenset</code>, se usa el constructor de la clase <code>frozenset()</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">frozenset</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">})</span>
+</code></pre></div>
+<blockquote>
 <p>🎯 <strong>NOTA:</strong> El único modo en Python de tener un conjunto de conjuntos es utilizando objetos de tipo <em>frozenset</em> como elementos del propio conjunto.</p>
-<h2 id="como-acceder-a-los-elementos-de-un-conjunto-en-python">Cómo acceder a los elementos de un conjunto en Python<a class="headerlink" href="#como-acceder-a-los-elementos-de-un-conjunto-en-python" title="Permanent link">&para;</a></h2>
-<p>Dado que los conjuntos son colecciones desordenadas, en ellos no se guarda la posición en la que son insertados los elementos como ocurre en los tipos <a href="https://j2logo.com/python/tutorial/tipo-list-python/">list</a> o <a href="https://j2logo.com/python/tutorial/tipo-tuple-python/">tuple</a>. Es por ello que no se puede acceder a los elementos a través de un índice.</p>
+</blockquote>
+<h3 id="como-acceder-a-los-elementos-de-un-conjunto-en-python">Cómo acceder a los elementos de un conjunto en Python<a class="headerlink" href="#como-acceder-a-los-elementos-de-un-conjunto-en-python" title="Permanent link">&para;</a></h3>
+<p>Dado que los conjuntos son colecciones desordenadas, en ellos no se guarda la posición en la que son insertados los elementos como ocurre en los tipos <code>list</code> o <code>tuple</code>. Es por ello que no se puede acceder a los elementos a través de un índice.</p>
 <p>Sin embargo, sí se puede acceder y/o recorrer todos los elementos de un conjunto usando un bucle for:</p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto = <strong>{**1</strong>, <strong>3</strong>, <strong>2</strong>, <strong>9</strong>, <strong>3</strong>, <strong>1</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> <strong>for</strong> e <strong>in</strong> mi_conjunto:</p>
-<p><strong>...     **print</strong>(<strong>e</strong>)**</p>
-<p>**...     **</p>
-<p><strong>1</strong></p>
-<p><strong>2</strong></p>
-<p><strong>3</strong></p>
-<p><strong>9</strong></p>
-<h2 id="anadir-elementos-a-un-conjunto-set-en-python">Añadir elementos a un conjunto (set) en Python<a class="headerlink" href="#anadir-elementos-a-un-conjunto-set-en-python" title="Permanent link">&para;</a></h2>
-<p>Para añadir un elemento a un conjunto se utiliza el método <code>add()</code>. También existe el método <code>update()</code>, que puede tomar como argumento una  <em>lista</em> ,  <em>tupla</em> ,  <em>string</em> , <em>conjunto</em> o cualquier objeto de tipo  <em>iterable</em> .</p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto = <strong>{**1</strong>, <strong>3</strong>, <strong>2</strong>, <strong>9</strong>, <strong>3</strong>, <strong>1</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto</p>
-<p><strong>{**1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>9</strong>}**</p>
-<p><strong># Añade el elemento 7 al conjunto</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto.<strong>add</strong>(<strong>7</strong>)</p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto</p>
-<p><strong>{**1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>7</strong>, <strong>9</strong>}**</p>
-<p><strong># Añade los elementos 5, 3, 4 y 6 al conjunto</strong></p>
-<p><strong># Los elementos repetidos no se añaden al conjunto</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto.<strong>update</strong>([<strong>5</strong>, <strong>3</strong>, <strong>4</strong>, <strong>6</strong>])</p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto</p>
-<p><strong>{**1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>6</strong>, <strong>7</strong>, <strong>9</strong>}**</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">mi_conjunto</span><span class="p">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="o">...</span>     
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="mi">1</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="mi">2</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="mi">3</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="mi">9</span>
+</code></pre></div>
+<h3 id="anadir-elementos-a-un-conjunto-set-en-python">Añadir elementos a un conjunto (set) en Python<a class="headerlink" href="#anadir-elementos-a-un-conjunto-set-en-python" title="Permanent link">&para;</a></h3>
+<p>Para añadir un elemento a un conjunto se utiliza el método <code>add()</code>. También existe el método <code>update()</code>, que puede tomar como argumento una <em>lista</em>, <em>tupla</em>, <em>string</em>, <em>conjunto</em> o cualquier objeto de tipo <em>iterable</em>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Añade el elemento 7 al conjunto</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1"># Añade los elementos 5, 3, 4 y 6 al conjunto</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1"># Los elementos repetidos no se añaden al conjunto</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+</code></pre></div>
+<blockquote>
 <p>🎯 <strong>NOTA:</strong> <code>add()</code> y <code>update()</code> no añaden elementos que ya existen al conjunto.</p>
-<h2 id="eliminar-un-elemento-de-un-conjunto-en-python">Eliminar un elemento de un conjunto en Python<a class="headerlink" href="#eliminar-un-elemento-de-un-conjunto-en-python" title="Permanent link">&para;</a></h2>
-<p>La clase <em>set</em> ofrece cuatro métodos para eliminar elementos de un conjunto. Son: <code>discard()</code>, <code>remove()</code>, <code>pop()</code> y <code>clear()</code>. A continuación te explico qué hace cada uno de ellos.</p>
-<p><code>discard(elemento)</code> y <code>remove(elemento)</code> eliminan <code>elemento</code> del conjunto. La única diferencia es que si <code>elemento</code> no existe, <code>discard()</code> no hace nada mientras que <code>remove()</code> lanza la excepción <code>KeyError</code>.</p>
-<p><code>pop()</code> es un tanto peculiar. Este método devuelve un elemento aleatorio del conjunto y lo elimina del mismo. Si el conjunto está vacío, lanza la excepción <code>KeyError</code>.</p>
-<p>Finalmente, <code>clear()</code> elimina todos los elementos contenidos en el conjunto.</p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto = <strong>{**1</strong>, <strong>3</strong>, <strong>2</strong>, <strong>9</strong>, <strong>3</strong>, <strong>1</strong>, <strong>6</strong>, <strong>4</strong>, <strong>5</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto</p>
-<p><strong>{**1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>6</strong>, <strong>9</strong>}**</p>
-<p><strong># Elimina el elemento 1 con remove()</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto.<strong>remove</strong>(<strong>1</strong>)</p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto</p>
-<p><strong>{**2</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>6</strong>, <strong>9</strong>}**</p>
-<p><strong># Elimina el elemento 4 con discard()</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto.<strong>discard</strong>(<strong>4</strong>)</p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto</p>
-<p><strong>{**2</strong>, <strong>3</strong>, <strong>5</strong>, <strong>6</strong>, <strong>9</strong>}**</p>
-<p><strong># Trata de eliminar el elemento 7 (no existe) con remove()</strong></p>
-<p><strong># Lanza la excepción KeyError</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto.<strong>remove</strong>(<strong>7</strong>)</p>
-<p><strong>Traceback</strong> <strong>(**most recent call last</strong>)**:</p>
-<p>**  File <strong>"<input>"</strong>, line <strong>1</strong>, <strong>in</strong> <strong>&lt;**module</strong>&gt;</p>
-<p>**KeyError: **7</p>
-<p><strong># Trata de eliminar el elemento 7 (no existe) con discard()</strong></p>
-<p><strong># No hace nada</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto.<strong>discard</strong>(<strong>7</strong>)</p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto</p>
-<p><strong>{**2</strong>, <strong>3</strong>, <strong>5</strong>, <strong>6</strong>, <strong>9</strong>}**</p>
-<p><strong># Obtiene y elimina un elemento aleatorio con pop()</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto.<strong>pop</strong>()</p>
-<p><strong>2</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto</p>
-<p><strong>{**3</strong>, <strong>5</strong>, <strong>6</strong>, <strong>9</strong>}**</p>
-<p><strong># Elimina todos los elementos del conjunto</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto.<strong>clear</strong>()</p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto</p>
-<p><strong>set</strong>()</p>
-<h2 id="numero-de-elementos-len-de-un-conjunto">Número de elementos (len) de un conjunto<a class="headerlink" href="#numero-de-elementos-len-de-un-conjunto" title="Permanent link">&para;</a></h2>
+</blockquote>
+<h3 id="eliminar-un-elemento-de-un-conjunto-en-python">Eliminar un elemento de un conjunto en Python<a class="headerlink" href="#eliminar-un-elemento-de-un-conjunto-en-python" title="Permanent link">&para;</a></h3>
+<p>La clase <code>set</code> ofrece cuatro métodos para eliminar elementos de un conjunto. Son: <code>discard()</code>, <code>remove()</code>, <code>pop()</code> y <code>clear()</code>. A continuación se explica qué hace cada uno de ellos.</p>
+<ul>
+<li><code>discard(elemento)</code> y <code>remove(elemento)</code> eliminan <code>elemento</code> del conjunto. La única diferencia es que si <code>elemento</code> no existe, <code>discard()</code> no hace nada mientras que <code>remove()</code> lanza la excepción <code>KeyError</code>.</li>
+<li><code>pop()</code> es un tanto peculiar. Este método devuelve un elemento aleatorio del conjunto y lo elimina del mismo. Si el conjunto está vacío, lanza la excepción <code>KeyError</code>.</li>
+<li><code>clear()</code> elimina todos los elementos contenidos en el conjunto.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Elimina el elemento 1 con remove()</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># Elimina el elemento 4 con discard()</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="c1"># Trata de eliminar el elemento 7 (no existe) con remove()</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="c1"># Lanza la excepción KeyError</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;input&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="ne">KeyError</span><span class="p">:</span> <span class="mi">7</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="c1"># Trata de eliminar el elemento 7 (no existe) con discard()</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="c1"># No hace nada</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="c1"># Obtiene y elimina un elemento aleatorio con pop()</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="mi">2</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="c1"># Elimina todos los elementos del conjunto</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="nb">set</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="numero-de-elementos-len-de-un-conjunto">Número de elementos (len) de un conjunto<a class="headerlink" href="#numero-de-elementos-len-de-un-conjunto" title="Permanent link">&para;</a></h3>
 <p>Como con cualquier otra colección, puedes usar la función <code>len()</code> para obtener el número de elementos contenidos en un conjunto:</p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto = <strong>set</strong>([<strong>1</strong>, <strong>2</strong>, <strong>5</strong>, <strong>3</strong>, <strong>1</strong>, <strong>5</strong>])</p>
-<p><strong>&gt;&gt;&gt;</strong> <strong>len</strong>(<strong>mi_conjunto</strong>)</p>
-<p><strong>4</strong></p>
-<h2 id="como-saber-si-un-elemento-esta-en-un-conjunto">Cómo saber si un elemento está en un conjunto<a class="headerlink" href="#como-saber-si-un-elemento-esta-en-un-conjunto" title="Permanent link">&para;</a></h2>
-<p>Con los conjuntos también se puede usar el operador de pertenencia <code>in</code> para comprobar si un elemento está contenido, o no, en un conjunto:</p>
-<p><strong>&gt;&gt;&gt;</strong> mi_conjunto = <strong>set</strong>([<strong>1</strong>, <strong>2</strong>, <strong>5</strong>, <strong>3</strong>, <strong>1</strong>, <strong>5</strong>])</p>
-<p><strong>&gt;&gt;&gt;</strong> <strong>print</strong>(<strong>1</strong> <strong>in</strong> mi_conjunto**)**</p>
-<p><strong>True</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> <strong>print</strong>(<strong>6</strong> <strong>in</strong> mi_conjunto**)**</p>
-<p><strong>False</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> <strong>print</strong>(<strong>2</strong> not <strong>in</strong> mi_conjunto**)**</p>
-<p><strong>False</strong></p>
-<h2 id="operaciones-sobre-conjuntos-en-python-set-operations">Operaciones sobre conjuntos en Python (set operations)<a class="headerlink" href="#operaciones-sobre-conjuntos-en-python-set-operations" title="Permanent link">&para;</a></h2>
-<p>Tal y como te adelanté al comienzo de este tutorial, uno de los principales usos del tipo <code>set</code> es utilizarlo en operaciones del álgebra de conjuntos:  <em>unión</em> ,  <em>intersección</em> ,  <em>diferencia</em> ,  <em>diferencia simétrica</em> , …</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">mi_conjunto</span><span class="p">)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="mi">4</span>
+</code></pre></div>
+<h3 id="como-saber-si-un-elemento-esta-en-un-conjunto">Cómo saber si un elemento está en un conjunto<a class="headerlink" href="#como-saber-si-un-elemento-esta-en-un-conjunto" title="Permanent link">&para;</a></h3>
+<p>Con los conjuntos también se puede usar el operador de pertenencia <code>in</code> para comprobar si un elemento está contenido, o no, en un conjunto:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mi_conjunto</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="ow">in</span> <span class="n">mi_conjunto</span><span class="p">)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kc">True</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="mi">6</span> <span class="ow">in</span> <span class="n">mi_conjunto</span><span class="p">)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="kc">False</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mi_conjunto</span><span class="p">)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="kc">False</span>
+</code></pre></div></p>
+<h3 id="operaciones-sobre-conjuntos-en-python-set-operations">Operaciones sobre conjuntos en Python (set operations)<a class="headerlink" href="#operaciones-sobre-conjuntos-en-python-set-operations" title="Permanent link">&para;</a></h3>
+<p>Uno de los principales usos del tipo <code>set</code> es utilizarlo en operaciones del álgebra de conjuntos: <em>unión</em>, <em>intersección</em>, <em>diferencia</em>, <em>diferencia simétrica</em>, …</p>
 <p>A continuación veremos cómo llevar a cabo estas operaciones en Python.</p>
-<h3 id="union-de-conjuntos-en-python">Unión de conjuntos en Python<a class="headerlink" href="#union-de-conjuntos-en-python" title="Permanent link">&para;</a></h3>
+<h4 id="union-de-conjuntos-en-python">Unión de conjuntos en Python<a class="headerlink" href="#union-de-conjuntos-en-python" title="Permanent link">&para;</a></h4>
 <p>La unión de dos conjuntos A y B es el conjunto A ∪ B que contiene todos los elementos de A y de B.</p>
 <p>En Python se utiliza el operador <code>|</code> para realizar la unión de dos o más conjuntos.</p>
-<p><strong>&gt;&gt;&gt;</strong> a = <strong>{**1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> b = <strong>{**2</strong>, <strong>4</strong>, <strong>6</strong>, <strong>8</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> a <strong>|</strong> b</p>
-<p><strong>{**1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, <strong>6</strong>, <strong>8</strong>}**</p>
-<h3 id="interseccion-de-conjuntos-en-python">Intersección de conjuntos en Python<a class="headerlink" href="#interseccion-de-conjuntos-en-python" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">|</span> <span class="n">b</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+</code></pre></div>
+<h4 id="interseccion-de-conjuntos-en-python">Intersección de conjuntos en Python<a class="headerlink" href="#interseccion-de-conjuntos-en-python" title="Permanent link">&para;</a></h4>
 <p>La intersección de dos conjuntos A y B es el conjunto A ∩ B que contiene todos los elementos comunes de A y B.</p>
 <p>En Python se utiliza el operador <code>&amp;</code> para realizar la intersección de dos o más conjuntos.</p>
-<p><strong>&gt;&gt;&gt;</strong> a = <strong>{**1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> b = <strong>{**2</strong>, <strong>4</strong>, <strong>6</strong>, <strong>8</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> a <strong>&amp;</strong> b</p>
-<p><strong>{**2</strong>, <strong>4</strong>}**</p>
-<h3 id="diferencia-de-conjuntos-en-python">Diferencia de conjuntos en Python<a class="headerlink" href="#diferencia-de-conjuntos-en-python" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+</code></pre></div>
+<h4 id="diferencia-de-conjuntos-en-python">Diferencia de conjuntos en Python<a class="headerlink" href="#diferencia-de-conjuntos-en-python" title="Permanent link">&para;</a></h4>
 <p>La diferencia entre dos conjuntos A y B es el conjunto A  B que contiene todos los elementos de A que no pertenecen a B.</p>
 <p>En Python se utiliza el operador <code>-</code> para realizar la diferencia de dos o más conjuntos.</p>
-<p><strong>&gt;&gt;&gt;</strong> a = <strong>{**1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> b = <strong>{**2</strong>, <strong>4</strong>, <strong>6</strong>, <strong>8</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> a - b</p>
-<p><strong>{**1</strong>, <strong>3</strong>}**</p>
-<h3 id="diferencia-simetrica-de-conjuntos-en-python">Diferencia simétrica de conjuntos en Python<a class="headerlink" href="#diferencia-simetrica-de-conjuntos-en-python" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+</code></pre></div>
+<h4 id="diferencia-simetrica-de-conjuntos-en-python">Diferencia simétrica de conjuntos en Python<a class="headerlink" href="#diferencia-simetrica-de-conjuntos-en-python" title="Permanent link">&para;</a></h4>
 <p>La diferencia simétrica entre dos conjuntos A y B es el conjunto que contiene los elementos de A y B que no son comunes.</p>
 <p>En Python se utiliza el operador <code>^</code> para realizar la diferencia simétrica de dos o más conjuntos.</p>
-<p><strong>&gt;&gt;&gt;</strong> a = <strong>{**1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> b = <strong>{**2</strong>, <strong>4</strong>, <strong>6</strong>, <strong>8</strong>}**</p>
-<p><strong>a ^ b</strong></p>
-<p><strong>{**1</strong>, <strong>3</strong>, <strong>6</strong>, <strong>8</strong>}**</p>
-<h3 id="inclusion-de-conjuntos-en-python">Inclusión de conjuntos en Python<a class="headerlink" href="#inclusion-de-conjuntos-en-python" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">a</span> <span class="o">^</span> <span class="n">b</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+</code></pre></div>
+<h4 id="inclusion-de-conjuntos-en-python">Inclusión de conjuntos en Python<a class="headerlink" href="#inclusion-de-conjuntos-en-python" title="Permanent link">&para;</a></h4>
 <p>Dado un conjunto A, subcolección del conjunto B o igual a este, sus elementos son un subconjunto de B. Es decir, A es un subconjunto de B y B es un superconjunto de A.</p>
 <p>En Python se utiliza el operador <code>&lt;=</code> para comprobar si un conjunto A es subconjunto de B y el operador <code>&gt;=</code> para comprobar si un conjunto A es superconjunto de B.</p>
-<p><strong>&gt;&gt;&gt;</strong> a = <strong>{**1</strong>, <strong>2</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> b = <strong>{**1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> a <strong>&lt;</strong>= b</p>
-<p><strong>True</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> a <strong>&gt;</strong>= b</p>
-<p><strong>False</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> b <strong>&gt;</strong>= a</p>
-<p><strong>True</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> a = <strong>{**1</strong>, <strong>2</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> b = <strong>{**1</strong>, <strong>2</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> a <strong>&lt;</strong> b ** # Ojo al operador &lt; sin el =**</p>
-<p><strong>False</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> a <strong>&lt;</strong>= b</p>
-<p><strong>True</strong></p>
-<h3 id="conjuntos-disjuntos-en-python">Conjuntos disjuntos en Python<a class="headerlink" href="#conjuntos-disjuntos-en-python" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="n">b</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="kc">True</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="n">b</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="kc">False</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">&gt;=</span> <span class="n">a</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="kc">True</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span>  <span class="c1"># Ojo al operador &lt; sin el =</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="kc">False</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="n">b</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="kc">True</span>
+</code></pre></div>
+<h4 id="conjuntos-disjuntos-en-python">Conjuntos disjuntos en Python<a class="headerlink" href="#conjuntos-disjuntos-en-python" title="Permanent link">&para;</a></h4>
 <p>Dos conjuntos A y B son disjuntos si no tienen elementos en común, es decir, la intersección de A y B es el conjunto vacío.</p>
 <p>En Python se utiliza el método <code>isdisjoint()</code> de la clase <code>set</code> para comprobar si un conjunto es disjunto de otro.</p>
-<p><strong>&gt;&gt;&gt;</strong> a = <strong>{**1</strong>, <strong>2</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> b = <strong>{**1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> a.<strong>isdisjoint</strong>(<strong>b</strong>)</p>
-<p><strong>False</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> a = <strong>{**1</strong>, <strong>2</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> b = <strong>{**3</strong>, <strong>4</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> a.<strong>isdisjoint</strong>(<strong>b</strong>)</p>
-<p><strong>True</strong></p>
-<h3 id="igualdad-de-conjuntos-en-python">Igualdad de conjuntos en Python<a class="headerlink" href="#igualdad-de-conjuntos-en-python" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">isdisjoint</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="kc">False</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">isdisjoint</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="kc">True</span>
+</code></pre></div>
+<h4 id="igualdad-de-conjuntos-en-python">Igualdad de conjuntos en Python<a class="headerlink" href="#igualdad-de-conjuntos-en-python" title="Permanent link">&para;</a></h4>
 <p>En Python dos conjuntos son iguales si y solo si todos los elementos de un conjunto están contenidos en el otro. Esto quiere decir que cada uno es un subconjunto del otro.</p>
-<p><strong>&gt;&gt;&gt;</strong> a = <strong>{**1</strong>, <strong>2</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> b = <strong>{**1</strong>, <strong>2</strong>}**</p>
-<p><strong>&gt;&gt;&gt;</strong> <strong>id</strong>(<strong>a</strong>)</p>
-<p><strong>4475070656</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> <strong>id</strong>(<strong>b</strong>)</p>
-<p><strong>4475072096</strong></p>
-<p><strong>&gt;&gt;&gt;</strong> a == b</p>
-<p><strong>True</strong></p>
-<h2 id="metodos-de-la-clase-set-en-python">Métodos de la clase set en Python<a class="headerlink" href="#metodos-de-la-clase-set-en-python" title="Permanent link">&para;</a></h2>
-<p>Termino este tutorial listando los métodos principales de la clase <em>set</em> en Python:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="mi">4475070656</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="mi">4475072096</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="kc">True</span>
+</code></pre></div>
+<h3 id="metodos-de-la-clase-set-en-python">Métodos de la clase set en Python<a class="headerlink" href="#metodos-de-la-clase-set-en-python" title="Permanent link">&para;</a></h3>
+<p>Se finaliza, listando los métodos principales de la clase <code>set</code> en Python:</p>
 <table>
 <thead>
 <tr>
@@ -1963,14 +2193,16 @@ El tipo set en Python es la clase utilizada por el lenguaje para representar los
 </tr>
 </tbody>
 </table>
+<blockquote>
 <p>❗️ <strong>NOTA:</strong> Los operadores <code>|</code>, <code>&amp;</code>, … toman siempre como operandos objetos de tipo <code>set</code>. Sin embargo, sus respectivas versiones como métodos <code>union()</code>, <code>intersection()</code>, … toman como argumentos un <em>iterable</em> ( <em>lista</em> ,  <em>tupla</em> ,  <em>conjunto</em> , etc.).</p>
-<p>d</p>
+</blockquote>
 <h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://j2logo.com/">Página de Juan Jose Lozano Gomez sobre Python</a></li>
 <li><a href="https://blog.soyhenry.com/que-es-una-estructura-de-datos-en-programacion/">Estructuras de datos</a></li>
 <li><a href="https://es.py4e.com/">Python para todos</a></li>
 <li><a href="ttps://aprendeconalf.es">Aprende con Alf</a></li>
+<li><a href="https://geekflare.com/es/set-operations-in-python/">Operaciones con conjuntos</a></li>
 </ul>
 
 
@@ -2038,6 +2270,42 @@ El tipo set en Python es la clase utilizada por el lenguaje para representar los
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pie" >
+      
+        
+        <a href="../../practica/PROG-U3.-Practica002/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: * Práctica 3.2: Diccionarios" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              * Práctica 3.2: Diccionarios
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../practica/PROG-U3.-Practica003/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: * Práctica 3.2: Diccionarios" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              * Práctica 3.2: Diccionarios
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

@@ -39,6 +39,9 @@ nav:
         - '* Práctica 3.1: Listas y tuplas': 'section1/u03/practica/PROG-U3.-Practica001.md'
         - '3.3.-Est.Datos: Diccionarios': 'section1/u03/teoria/PROG-U3.3.-Diccionarios.md'
         - '* Práctica 3.2: Diccionarios': 'section1/u03/practica/PROG-U3.-Practica002.md'
+        - '3.4.-Est.Datos: Conjuntos': 'section1/u03/teoria/PROG-U3.4.-Conjuntos.md'
+        - '* Práctica 3.2: Diccionarios': 'section1/u03/practica/PROG-U3.-Practica003.md'
+
   - 'Entornos de desarrollo':
     - 'section3/index.md'
     - 'U1: Introducción al desarrollo de software':

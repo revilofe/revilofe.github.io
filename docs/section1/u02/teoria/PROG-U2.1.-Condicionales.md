@@ -314,6 +314,6 @@ El mensaje de error apunta a la línea 5, pero no hay nada incorrecto en ese lí
 En general, los mensajes de error te dicen dónde se ha descubierto el problema, pero a menudo no es ahí exactamente donde se ha producido.
 
 ## Fuente
-
+* [Pagina de Juan Jose Lozano Gomez sobre Python](https://j2logo.com/)
 * [Aprende con Alf](https://aprendeconalf.es/)
 * [Python para todos](https://es.py4e.com/)

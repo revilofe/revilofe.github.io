@@ -336,6 +336,6 @@ Introduzca un número: fin
 **Actividad 2**: Escribe otro programa que pida una lista de números como la anterior y al final muestre por pantalla el máximo y mínimo de los números, en vez de la media.
 
 ## Fuente
-
+* [Pagina de Juan Jose Lozano Gomez sobre Python](https://j2logo.com/)
 * [Aprende con Alf](https://aprendeconalf.es/)
 * [Python para todos](https://es.py4e.com/)

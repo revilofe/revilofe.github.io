@@ -930,12 +930,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          * Práctica 3.2: Diccionarios
+          * Práctica 3.2: Conjuntos
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        * Práctica 3.2: Diccionarios
+        * Práctica 3.2: Conjuntos
       </a>
       
         
@@ -971,6 +971,13 @@
           <li class="md-nav__item">
   <a href="#ejercicio-2" class="md-nav__link">
     Ejercicio 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-3" class="md-nav__link">
+    Ejercicio 3
   </a>
   
 </li>
@@ -1648,6 +1655,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ejercicio-3" class="md-nav__link">
+    Ejercicio 3
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1704,7 +1718,7 @@
   </a>
 
 
-  <h1>* Práctica 3.2: Diccionarios</h1>
+  <h1>* Práctica 3.2: Conjuntos</h1>
 
 <h2 id="p32-ejercicios-conjuntos">P3.2 - Ejercicios: Conjuntos<a class="headerlink" href="#p32-ejercicios-conjuntos" title="Permanent link">&para;</a></h2>
 <h4 id="ejercicio-1"><strong>Ejercicio 1</strong><a class="headerlink" href="#ejercicio-1" title="Permanent link">&para;</a></h4>
@@ -1758,24 +1772,18 @@
 <a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>print(&quot;NOMBRES DE PRIMARIA QUE NO SE REPITEN EN SECUNDARIA:&quot;)
 <a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>for nombre in primaria - secundaria:
 <a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>   print(nombre)
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>--&gt;
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>### **Ejercicio 3**
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>El conjunto potencia de un conjunto *S* es el conjunto de todos los subconjuntos de *S*.
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>Por ejemplo, el conjunto potencia de `{1,2,3}` es:
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>```Python
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>{∅,{1},{2},{3},{1,2},{1,3},{2,3},{1,2,3}}
 </code></pre></div>
+-->
 
-Escriba la función `conjunto_potencia(s)` que reciba como parámetro un conjunto cualquiera `s` y retorne su «lista potencia» (la lista de todos sus subconjuntos):
-
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&gt;&gt;&gt; conjunto_potencia({6, 1, 4})
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>[set(), set([6]), set([1]), set([4]), set([6, 1]), set([6, 4]), set([1, 4]), set([6, 1, 4])]
+<h4 id="ejercicio-3"><strong>Ejercicio 3</strong><a class="headerlink" href="#ejercicio-3" title="Permanent link">&para;</a></h4>
+<p>El conjunto potencia de un conjunto <em>S</em> es el conjunto de todos los subconjuntos de <em>S</em>.</p>
+<p>Por ejemplo, el conjunto potencia de <code>{1,2,3}</code> es:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span><span class="err">∅</span><span class="p">,{</span><span class="mi">1</span><span class="p">},{</span><span class="mi">2</span><span class="p">},{</span><span class="mi">3</span><span class="p">},{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">},{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">},{</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">},{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}}</span>
 </code></pre></div>
-
+<p>Escriba la función <code>conjunto_potencia(s)</code> que reciba como parámetro un conjunto cualquiera <code>s</code> y retorne su «lista potencia» (la lista de todos sus subconjuntos):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&gt;&gt;&gt; conjunto_potencia({6, 1, 4})
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>[set(), set([6]), set([1]), set([4]), set([6, 1]), set([6, 4]), set([1, 4]), set([6, 1, 4])]
+</code></pre></div>
 <!--
 http://progra.usm.cl/apunte/ejercicios/2/conjunto-potencia.html#conjunto-potencia
 -->

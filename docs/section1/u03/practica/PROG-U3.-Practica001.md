@@ -12,6 +12,8 @@ categories:
 tags:
     - Software
     - Ejercicios
+    - Listas
+    - Tuplas
 ---
 ## P3.1 - Ejercicios
 

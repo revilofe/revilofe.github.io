@@ -12,6 +12,7 @@ categories:
 tags:
     - Software
     - Ejercicios
+    - Diccionarios
 ---
 ## P3.2 - Ejercicios: Diccionarios
 

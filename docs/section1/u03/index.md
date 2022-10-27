@@ -56,3 +56,5 @@ En la Unidad 3, veremos:
 * Listas y tuplas
 * Diccionarios
 * Conjuntos
+* String
+* Expresiones regulares

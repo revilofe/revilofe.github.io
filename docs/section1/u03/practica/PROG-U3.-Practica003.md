@@ -14,7 +14,7 @@ tags:
     - Ejercicios
     - Conjuntos
 ---
-## P3.2 - Ejercicios: Conjuntos
+## P3.3 - Ejercicios: Conjuntos
 
 #### **Ejercicio 1**
 

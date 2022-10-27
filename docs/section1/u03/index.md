@@ -29,18 +29,30 @@ Cada unidad contendrá una serie de contenidos, resultados de aprendizaje (desgl
 
 En esta sección se relaciona la unidad con el resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf).
 
-RA 3. Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.
+RA 6. Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.
 
 #### Criterios de evaluación
 
 En esta sección se relaciona la unidad con los criterios de evaluación concretos, del resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
 
-* a) ...
+* a) Se han escrito programas que utilicen arrays
+* b) Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.
+* c) Se han utilizado listas para almacenar y procesar información.
+* d) Se han utilizado iteradores para recorrer los elementos de las listas.
+* e) Se han reconocido las características y ventajas de cada una de la colecciones de datos disponibles.
+* (NO) f) Se han creado clases y métodos genéricos.
+* g) Se han utilizado expresiones regulares en la búsqueda de patrones en cadenas de texto.
+* (NO) h) Se han identificado las clases relacionadas con el tratamiento de documentos XML.
+* (NO) i) Se han realizado programas que realicen manipulaciones sobre documentos XML.
 
 ### Contenidos
 
 La unidad se encuentra dentro del Bloque 2
 
-* U3: 
+* U3: Estructuras de datos. 
 
 En la Unidad 3, veremos:
+
+* Listas y tuplas
+* Diccionarios
+* Conjuntos

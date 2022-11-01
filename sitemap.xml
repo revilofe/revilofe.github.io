@@ -116,6 +116,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://revilofe.github.io/section1/u03/practica/PROG-U3.-Practica000/</loc>
+         <lastmod>2022-11-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://revilofe.github.io/section1/u03/practica/PROG-U3.-Practica001/</loc>
          <lastmod>2022-11-01</lastmod>
          <changefreq>daily</changefreq>
@@ -127,6 +132,11 @@
     </url>
     <url>
          <loc>https://revilofe.github.io/section1/u03/practica/PROG-U3.-Practica003/</loc>
+         <lastmod>2022-11-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section1/u03/teoria/PROG-U3.0.-Cadenas/</loc>
          <lastmod>2022-11-01</lastmod>
          <changefreq>daily</changefreq>
     </url>

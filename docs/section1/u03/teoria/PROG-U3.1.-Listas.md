@@ -18,7 +18,9 @@ tags:
 
 Las **estructuras de datos en programación** son un modo de representar información en una computadora, aunque además, cuentan con un comportamiento interno. ¿Qué significa? Que se rige por determinadas reglas/restricciones que han sido dadas por la forma en que está construida internamente.
 
-¿Por qué es importante conocerlas? Cuando inicias en el mundo de la programación y te metes de lleno en el mundo de [**JavaScript**](https://blog.soyhenry.com/que-es-javascript-y-para-que-sirve/), las **estructuras de datos** son fundamentales. Conocer sobre listas, árboles y grafos te permitirá organizar mejor la información y crear código más eficiente. Además, es clave para mejorar tus habilidades técnicas y enfrentarte con éxito a cada challenge en tus futuras entrevistas laborales.
+¿Por qué es importante conocerlas? Cuando inicias en el mundo de la programación y te metes de lleno en el mundo de Python, las **estructuras de datos** son fundamentales. Conocer sobre listas, árboles y grafos te permitirá organizar mejor la información y crear código más eficiente. Además, es clave para mejorar tus habilidades técnicas y enfrentarte con éxito a cada reto en tus futuras entrevistas laborales.
+
+En Python estas estructuras vienen definidas en la [biblioteca estándar de Python](https://docs.python.org/es/3/library/index.html)
 
 #### ¿Para qué sirven las estructuras de datos?
 

@@ -26,6 +26,8 @@ Las funciones en Python constituyen unidades lógicas de un programa y tienen un
 
 Python ya define de serie un conjunto de funciones que podemos utilizar directamente en nuestras aplicaciones. Algunas de ellas ya las has utilizado. Por ejemplo, la función `len()`, que obtiene el número de elementos de un objeto contenedor como una lista, una tupla, un diccionario o un conjunto. También hemos visto la función `print()`, que muestra por consola un texto.
 
+Puedes encontrar una lista de funciones predefinidas en Python [aquí](https://docs.python.org/es/3/library/functions.html)
+
 Sin embargo, tú como programador, puedes definir tus propias funciones para estructurar el código de manera que sea más legible y para reutilizar aquellas partes que se repiten a lo largo de una aplicación. Esto es una tarea fundamental a medida que va creciendo el número de líneas de un programa.
 
 La idea la puedes observar en la siguiente imagen:
@@ -246,6 +248,19 @@ y vale 20
 
 Para modificar dentro de una función una variable definida fuera de la misma, hay que usar la palabra reservada `global` para declarar la variable dentro de la función.
 
+```Python
+>>> y = 20
+>>> x = 3
+>>> def muestra_x():
+...     global x
+...     x += 1
+...     print(f'x vale {x}')
+...     print(f'y vale {y}')
+...     
+>>> muestra_x()
+x vale 4
+y vale 20
+```
 
 ## Fuente
 

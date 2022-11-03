@@ -84,3 +84,4 @@ Este tipo de compilación se denomina compilación dinámica, y permite analizar
 * [Interpretes de python](https://ciberninjas.com/interpretes-python/)
 * [Eligiendo un interprete en python](https://python-guide-es.readthedocs.io/es/latest/starting/which-python.html)
 * [JDKs de java. Otros interpretes para java](https://en.wikipedia.org/wiki/Java_Development_Kit)
+* [Que JDKs usar](https://whichjdk.com/)

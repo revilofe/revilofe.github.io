@@ -44,6 +44,9 @@ nav:
         - '3.4.-Est.Datos: Conjuntos': 'section1/u03/teoria/PROG-U3.4.-Conjuntos.md'
         - '* Práctica 3.3: Conjuntos': 'section1/u03/practica/PROG-U3.-Practica003.md'
         - '3.5.-Funciones': 'section1/u03/teoria/PROG-U3.5.-Funciones.md'
+    - 'U4: Kotlin':
+        - 'section1/u04/index.md'
+        - '4.1.-Kotlin': 'section1/u04/teoria/PROG-U4.1.-kotlin.md'
 
   - 'Entornos de desarrollo':
     - 'section3/index.md'

@@ -268,3 +268,4 @@ y vale 20
 * [Estructuras de datos](https://blog.soyhenry.com/que-es-una-estructura-de-datos-en-programacion/)
 * [Python para todos](https://es.py4e.com/)
 * [Aprende con Alf](ttps://aprendeconalf.es)
+* [Tipos mutables e inmutables](https://jarroba.com/mutables-e-inmutables/)

@@ -171,7 +171,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://revilofe.github.io/section1/u04/practica/PROG-U4.-Practica001/</loc>
+         <lastmod>2022-11-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://revilofe.github.io/section1/u04/teoria/PROG-U4.1.-kotlin/</loc>
+         <lastmod>2022-11-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section1/u04/teoria/PROG-U4.2.-kotlinColeciones/</loc>
+         <lastmod>2022-11-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section1/u04/teoria/PROG-U4.3.-kotlinPOO/</loc>
+         <lastmod>2022-11-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section1/u04/teoria/PROG-U4.4.-kotlinResumen/</loc>
          <lastmod>2022-11-14</lastmod>
          <changefreq>daily</changefreq>
     </url>

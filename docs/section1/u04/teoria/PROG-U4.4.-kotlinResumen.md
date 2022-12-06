@@ -1,12 +1,12 @@
 ---
-title: "UD 4 - 4.1 kotlin"
-description: kotlin
-summary: kotlin
+title: "UD 4 - 4.4 kotlin: Resumen"
+description: kotlin: Resumen
+summary: kotlin: Resumen
 authors:
     - Eduardo Fdez
 date: 2022-11-14
 icon: material/software
-permalink: /prog/unidad4/4.1
+permalink: /prog/unidad4/4.4
 categories:
     - PROG
     - kotlin
@@ -15,7 +15,6 @@ tags:
     - kotlin
 ---
 # Apuntes de [Kotlin]
-
 
 ## Summary
 
@@ -449,7 +448,6 @@ println(list) // [1, 2, 3, 4]
 ```
 
 ### Extension Functions
-
 
 |                               | Returns 'Receiver' | Returns 'Results of lambda' |
 | :------------------------------ | :------------------: | :---------------------------: |

@@ -1,12 +1,12 @@
 ---
-title: "UD 4 - 4.1 kotlin"
-description: kotlin
-summary: kotlin
+title: "UD 4 - 4.3 kotlin: POO"
+description: kotlin: POO
+summary: kotlin: POO
 authors:
     - Eduardo Fdez
 date: 2022-11-14
 icon: material/software
-permalink: /prog/unidad4/4.1
+permalink: /prog/unidad4/4.3
 categories:
     - PROG
     - kotlin

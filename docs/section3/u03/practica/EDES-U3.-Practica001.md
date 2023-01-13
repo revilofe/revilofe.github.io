@@ -138,10 +138,10 @@ $ git push origin main
 ### Entrega
 * Añade la URL del repositorio a la tarea. 
 * Recuerda que el repositorio tiene que ser publico.
-* El nombre del repositorio sera: ID_XXXX donde
-  * ID es el identificador de la tarea
-  * XXXX tus iniciales
-* Asegurate que funciona y:
+* El nombre del repositorio sera: ID_XXXX donde 
+  - ID es el identificador de la tarea
+  - XXXX tus iniciales
+* Asegurate que funciona y: 
   -	**20%:**  Existe el repositorio my_calculato
   -	**40%:**  El primer commit de la rama main es “x^3 button” y contiene lo pedido
   -	**40%:**  El segundo commit de la rama main es “x^4 button” y contiene lo pedido

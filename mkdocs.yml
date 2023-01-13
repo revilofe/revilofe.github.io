@@ -61,6 +61,9 @@ nav:
         - 'section3/u02/index.md'
         - '2.1.-Herramientas': 'section3/u02/teoria/EDES-U2.1.-Herramientas.md'
         - 'Práctica 2.1: Herramientas de desarrollo': 'section3/u02/practica/EDES-U2.-Practica001.md'
+    - 'U3: GIT':
+        - 'section3/u02/index.md'
+        - 'Práctica 3.1: Git/Github': 'section3/u03/practica/EDES-U3.-Practica001.md'
   - 'Incidentes de seguridad':
     - 'section2/index.md'
     - 'U0: Nos conocemos': 'section2/u00/recursos/IS-U0.-DinamicaPresentacion.md'

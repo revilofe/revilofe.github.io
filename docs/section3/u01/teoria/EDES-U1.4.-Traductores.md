@@ -79,3 +79,9 @@ Ejemplos de lenguajes típicamente interpretados son Python (con bytecode), Ruby
 
 Conocida por sus siglas inglesas JIT (Just-In-Time), es una técnica para mejorar el rendimiento de sistemas que compilan a bytecode consistente en traducir el bytecode a código máquina en tiempo de ejecución.
 Este tipo de compilación se denomina compilación dinámica, y permite analizar el código durante su ejecución y mejorar los resultados de un intérprete de bytecode convencional o hasta de una compilación anticipada tradicional (AOT).
+
+## Fuentes
+* [Interpretes de python](https://ciberninjas.com/interpretes-python/)
+* [Eligiendo un interprete en python](https://python-guide-es.readthedocs.io/es/latest/starting/which-python.html)
+* [JDKs de java. Otros interpretes para java](https://en.wikipedia.org/wiki/Java_Development_Kit)
+* [Que JDKs usar](https://whichjdk.com/)

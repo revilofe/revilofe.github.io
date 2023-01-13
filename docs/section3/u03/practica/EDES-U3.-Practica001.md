@@ -21,7 +21,7 @@ tags:
 
 ### Descripción de la práctica
 
-En esta práctica crearemos nuestro primer repositorio de Github. Para ello, primero habrá que crear una cuenta en [Github](https://github.com). Crearemos un repositorio de nombre **my_calculator** en dicha cuenta, en el que alojaremos un pequeño desarrollo de software consistente en una calculadora web. 
+En esta práctica crearemos nuestro primer repositorio de Github. Para ello, primero habrá que crear una cuenta en [Github](https://github.com). Crearemos un repositorio de nombre **ID_XXXX_my_calculator** (mas info abajo, leela antes de crear el respositorio) en dicha cuenta, en el que alojaremos un pequeño desarrollo de software consistente en una calculadora web. 
 
 Para comenzar este desarrollo, iniciamos un repositorio de git local. En la rama main se desarrollará en dos commits una calculadora con 2 botones. En el primer commit  se añade la calculadora con el botón x^3, además de un fichero README.md con un breve texto descriptivo. En el segundo se añade el botón x^4 a la calculadora. 
 
@@ -138,11 +138,11 @@ $ git push origin main
 ### Entrega
 * Añade la URL del repositorio a la tarea. 
 * Recuerda que el repositorio tiene que ser publico.
-* El nombre del repositorio sera: ID_XXXX donde 
+* El nombre del repositorio sera: ID_XXXX_my_calculator donde 
   - ID es el identificador de la tarea
   - XXXX tus iniciales
 * Asegurate que funciona y: 
-  -	**20%:**  Existe el repositorio my_calculato
+  -	**20%:**  Existe el repositorio ID_XXXX_my_calculator
   -	**40%:**  El primer commit de la rama main es “x^3 button” y contiene lo pedido
   -	**40%:**  El segundo commit de la rama main es “x^4 button” y contiene lo pedido
 

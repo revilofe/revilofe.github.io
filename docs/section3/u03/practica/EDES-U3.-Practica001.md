@@ -1,16 +1,18 @@
 ---
-title: "UD 2 - P1: Herramientas de desarrollo"
-description: Herramientas de desarrollo
-summary: Herramientas de desarrollo
+title: "UD 3 - P1: Git/Github"
+description: Git/Github
+summary: Git/Github
 authors:
     - Eduardo Fdez
 date: 2022-10-23
 icon: material/software
-permalink: /edes/unidad2/p3.1
+permalink: /edes/unidad3/p3.1
 categories:
     - EDES
 tags:
-    - Software
+    - Software 
+    - git 
+    - github
 ---
 ## Relación 3.1.1: Repositorios local y remoto, directorio de trabajo... 
 
@@ -91,7 +93,7 @@ $ git log --oneline # Ver la lista de commits
 Debe crear un segundo commit en la rama en la que está trabajando (main). 
 El commit debe añadir a la calculadora (fichero index.html) un segundo botón (elemento HTML `<button ..>`) que eleve un número a la cuarta potencia (x^4) invocando una función (power_4 ()) que calcula x^4 al hacer click en él.
 
-```
+```html
 <!DOCTYPE html>
 <html>
 	<head>

@@ -15,11 +15,12 @@ tags:
     - github
 ---
 
-## Relación 3.1.1: Historia del proyecto - Entrega P2P: Merge
+
+## Relación 3.1.2: Integración de ramas - Merge
 
 Versión: 30 de septiembre de 2022
 
-### Objetivos 
+### Objetivos
 
 * Practicar con repositorios locales y remotos
 * Crear ramas
@@ -236,17 +237,21 @@ Si accedemos al repositorio creado en Github podemos ver que están ambas ramas 
 
 
 ### Entrega
-* Añade la URL del repositorio a la tarea. 
+* Añade la URL del repositorio a la tarea.
 * Recuerda que el repositorio tiene que ser publico.
-* El nombre del repositorio sera: ID_XXXX_my_calculator donde 
-  - ID es el identificador de la tarea
-  - XXXX tus iniciales
+* El nombre del repositorio sera: ID_XXXX_my_calculator donde
+    - ID es el identificador de la tarea
+    - XXXX tus iniciales
 
-* Asegurate que funciona y:  
-  * **10%:**  Existe el repositorio my_calculator con el contenido pedido en la entrega anterior (hasta el paso 7)
-  * **40%:**  Existe la rama sine con el commit “sin(x) button” con el contenido y origen pedidos
-  * **50%:**  La integración de las ramas main y sine se ha realizado correctamente y la calculadora funciona bien
+* Asegurate que funciona y:
+    * **10%:**  Existe el repositorio my_calculator con el contenido pedido en la entrega anterior (hasta el paso 7)
+    * **40%:**  Existe la rama sine con el commit “sin(x) button” con el contenido y origen pedidos
+    * **50%:**  La integración de las ramas main y sine se ha realizado correctamente y la calculadora funciona bien
 
 ### Apoyo
 
 * https://revilofe.github.io
+
+### Fuente
+
+Juan Quemada, DIT - UPM

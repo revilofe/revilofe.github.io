@@ -89,7 +89,7 @@ Una vez añadido el código del nuevo nuevo botón a la calculadora, comprobar q
 $ git add index.html
 $ git commit -m "x^2 button"
 ```
-### Paso 3: Funcionalidad 1/x
+#### Paso 4: Funcionalidad 1/x
 
 Crear un commit en la rama "ops", que añada a la calculadora del fichero index.html el botón 1/x que divida 1 entre el número introducido.
 
@@ -134,7 +134,7 @@ $ git add index.html
 $ git commit -m "1/x button"
 ```
 
-#### Paso 4: Integrar la rama "ops" en "main"
+#### Paso 5: Integrar la rama "ops" en "main"
 
 Integrar la rama ops en la rama main con "git rebase" para crear una calculadora con cinco
 botones: x^2, x^3, x^4, sin(x) y 1/x.
@@ -171,7 +171,7 @@ Este proceso habrá que repetirlo dos veces: la primera vez para el botón x^4 y
 
 El resultado final de index.html tendrá los 5 botones: x^2, x^3, x^4, sin(x) y 1/x.
 
-#### Paso 5: Subir todas las ramas del repositorio local a un nuevo repositorio en GitHub.
+#### Paso 6: Subir todas las ramas del repositorio local a un nuevo repositorio en GitHub.
 
 Creamos un nuevo repositorio en Github llamado "my_calculator_2". Por último, subimos los cambios realizados en ambas ramas a Github.
 

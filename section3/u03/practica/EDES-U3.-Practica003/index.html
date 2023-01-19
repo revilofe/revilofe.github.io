@@ -1604,29 +1604,23 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
-  <a href="#paso-3-funcionalidad-1x" class="md-nav__link">
-    Paso 3: Funcionalidad 1/x
-  </a>
-  
-    <nav class="md-nav" aria-label="Paso 3: Funcionalidad 1/x">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#paso-4-integrar-la-rama-ops-en-main" class="md-nav__link">
-    Paso 4: Integrar la rama "ops" en "main"
+  <a href="#paso-4-funcionalidad-1x" class="md-nav__link">
+    Paso 4: Funcionalidad 1/x
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-5-subir-todas-las-ramas-del-repositorio-local-a-un-nuevo-repositorio-en-github" class="md-nav__link">
-    Paso 5: Subir todas las ramas del repositorio local a un nuevo repositorio en GitHub.
+  <a href="#paso-5-integrar-la-rama-ops-en-main" class="md-nav__link">
+    Paso 5: Integrar la rama "ops" en "main"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6-subir-todas-las-ramas-del-repositorio-local-a-un-nuevo-repositorio-en-github" class="md-nav__link">
+    Paso 6: Subir todas las ramas del repositorio local a un nuevo repositorio en GitHub.
   </a>
   
 </li>
@@ -2069,29 +2063,23 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
-  <a href="#paso-3-funcionalidad-1x" class="md-nav__link">
-    Paso 3: Funcionalidad 1/x
-  </a>
-  
-    <nav class="md-nav" aria-label="Paso 3: Funcionalidad 1/x">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#paso-4-integrar-la-rama-ops-en-main" class="md-nav__link">
-    Paso 4: Integrar la rama "ops" en "main"
+  <a href="#paso-4-funcionalidad-1x" class="md-nav__link">
+    Paso 4: Funcionalidad 1/x
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-5-subir-todas-las-ramas-del-repositorio-local-a-un-nuevo-repositorio-en-github" class="md-nav__link">
-    Paso 5: Subir todas las ramas del repositorio local a un nuevo repositorio en GitHub.
+  <a href="#paso-5-integrar-la-rama-ops-en-main" class="md-nav__link">
+    Paso 5: Integrar la rama "ops" en "main"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6-subir-todas-las-ramas-del-repositorio-local-a-un-nuevo-repositorio-en-github" class="md-nav__link">
+    Paso 6: Subir todas las ramas del repositorio local a un nuevo repositorio en GitHub.
   </a>
   
 </li>
@@ -2233,7 +2221,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ git add index.html
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$ git commit -m &quot;x^2 button&quot;
 </code></pre></div>
-<h3 id="paso-3-funcionalidad-1x">Paso 3: Funcionalidad 1/x<a class="headerlink" href="#paso-3-funcionalidad-1x" title="Permanent link">&para;</a></h3>
+<h4 id="paso-4-funcionalidad-1x">Paso 4: Funcionalidad 1/x<a class="headerlink" href="#paso-4-funcionalidad-1x" title="Permanent link">&para;</a></h4>
 <p>Crear un commit en la rama "ops", que añada a la calculadora del fichero index.html el botón 1/x que divida 1 entre el número introducido.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
@@ -2271,7 +2259,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ git add index.html
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$ git commit -m &quot;1/x button&quot;
 </code></pre></div>
-<h4 id="paso-4-integrar-la-rama-ops-en-main">Paso 4: Integrar la rama "ops" en "main"<a class="headerlink" href="#paso-4-integrar-la-rama-ops-en-main" title="Permanent link">&para;</a></h4>
+<h4 id="paso-5-integrar-la-rama-ops-en-main">Paso 5: Integrar la rama "ops" en "main"<a class="headerlink" href="#paso-5-integrar-la-rama-ops-en-main" title="Permanent link">&para;</a></h4>
 <p>Integrar la rama ops en la rama main con "git rebase" para crear una calculadora con cinco
 botones: x^2, x^3, x^4, sin(x) y 1/x.</p>
 <p>"git rebase …" realiza la integración ejecutando un bucle, donde cada iteración traslada un commit de la rama origen a su nueva base. El traslado implica integrar el código del commit con el de su nueva base. Si la integración tiene conflictos, git indica el error y finaliza.</p>
@@ -2292,7 +2280,7 @@ Debemos editar el fichero index.html para eliminar los conflictos.</p>
 <p>Una vez generado un commit, git pasa a intentar integrar el siguiente de la rama origen. Y así hasta el último de la rama origen. Es necesario guardar los cambios en el editor que sale al hacer el rebase para que se apliquen.</p>
 <p>Este proceso habrá que repetirlo dos veces: la primera vez para el botón x^4 y la segunda para el botón sin(x).</p>
 <p>El resultado final de index.html tendrá los 5 botones: x^2, x^3, x^4, sin(x) y 1/x.</p>
-<h4 id="paso-5-subir-todas-las-ramas-del-repositorio-local-a-un-nuevo-repositorio-en-github">Paso 5: Subir todas las ramas del repositorio local a un nuevo repositorio en GitHub.<a class="headerlink" href="#paso-5-subir-todas-las-ramas-del-repositorio-local-a-un-nuevo-repositorio-en-github" title="Permanent link">&para;</a></h4>
+<h4 id="paso-6-subir-todas-las-ramas-del-repositorio-local-a-un-nuevo-repositorio-en-github">Paso 6: Subir todas las ramas del repositorio local a un nuevo repositorio en GitHub.<a class="headerlink" href="#paso-6-subir-todas-las-ramas-del-repositorio-local-a-un-nuevo-repositorio-en-github" title="Permanent link">&para;</a></h4>
 <p>Creamos un nuevo repositorio en Github llamado "my_calculator_2". Por último, subimos los cambios realizados en ambas ramas a Github.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$ git remote set-url origin git@github.com:&lt;mi_usuario_de_github&gt;/my_calculator_2
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>$ git push --all

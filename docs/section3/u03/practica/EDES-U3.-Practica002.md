@@ -1,5 +1,5 @@
 ---
-title: "UD 3 - P2: Git/Github"
+title: "UD 3 - P2: Git/Github Merge"
 description: Git/Github
 summary: Git/Github
 authors:

@@ -1,5 +1,5 @@
 ---
-title: "UD 3 - P1: Git/Github"
+title: "UD 3 - P1: Git/Github básico"
 description: Git/Github
 summary: Git/Github
 authors:

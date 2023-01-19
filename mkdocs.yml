@@ -73,6 +73,7 @@ nav:
         - 'Práctica 3.2: Git/Github merge': 'section3/u03/practica/EDES-U3.-Practica002.md'
         - 'Práctica 3.3: Git/Github rebase I': 'section3/u03/practica/EDES-U3.-Practica003.md'
         - 'Práctica 3.4: Git/Github rebase II': 'section3/u03/practica/EDES-U3.-Practica004.md'
+        - 'Práctica 3.5: Git/Github Pull Request (PR)': 'section3/u03/practica/EDES-U3.-Practica005.md'
   - 'Incidentes de seguridad':
     - 'section2/index.md'
     - 'U0: Nos conocemos': 'section2/u00/recursos/IS-U0.-DinamicaPresentacion.md'

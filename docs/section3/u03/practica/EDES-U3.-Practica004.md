@@ -1,5 +1,5 @@
 ---
-title: "UD 3 - P4: Git/Github"
+title: "UD 3 - P4: Git/Github Rebase II"
 description: Git/Github
 summary: Git/Github
 authors:

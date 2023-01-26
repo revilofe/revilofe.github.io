@@ -92,25 +92,23 @@ sobre en qué consiste la misma.
 
 Y si bien cada lenguaje y framework tiene sus particularidades, esta técnica es agnóstica de la tecnología.
 
-## Diseño de casos de prueba
+#### Diseño de casos de prueba
 
-Este artículo presenta algunas guías para desarrollar los casos de prueba, asumiendo que ya conocés el concepto de
+Presentaremos algunas guías para desarrollar los casos de prueba, asumiendo que ya conocés el concepto de
 pruebas automatizadas y algún framework para implementarlas.
 
-### Descripción del dominio
+##### Descripción del dominio
 
 Todo el apunte estará elaborado en base al siguiente dominio:
 
-##### REQUERIMIENTO
+> REQUERIMIENTO: Una ferretería tiene en cuenta ciertos aspectos para decidir si le puede fiar a un cliente o no.
+>
+>* Al cliente particular le fia solo si no adeuda nada, es decir si su deuda es de $0.
+>* A las constructoras les fia dependiendo de cuántos albañiles trabajen en la obra:
+>  * si son 5 o más albañiles, le fía hasta $10.000,
+>  * de lo contrario sólo hasta $5.000.
 
-Una ferretería tiene en cuenta ciertos aspectos para decidir si le puede fiar a un cliente o no.
-
-* Al cliente particular le fia solo si no adeuda nada, es decir si su deuda es de $0.
-* A las constructoras les fia dependiendo de cuántos albañiles trabajen en la obra:
-  * si son 5 o más albañiles, le fía hasta $10.000,
-  * de lo contrario sólo hasta $5.000.
-
-### Definiendo los escenarios
+##### Definiendo los escenarios
 
 Para armar los escenarios de prueba, vamos a tomar prestado un concepto de la matemática
 llamado  **[clase de equivalencia](https://es.wikipedia.org/wiki/Clase_de_equivalencia)** . Clasificar a los distintos
@@ -147,7 +145,7 @@ Sin dudas podríamos haber elegido otros números, pero es importante que los te
 Por esta razón, vamos a preferir siempre utilizar valores que nos resulten fáciles de razonar para representar a cada
 escenario.
 
-### Escribiendo los tests
+#### Escribiendo los tests
 
 Necesitamos:
 
@@ -157,12 +155,9 @@ Necesitamos:
 
 A los que podemos configurar diferentes grados de deuda.
 
-##### ATENCIÓN
+> ATENCIÓN: Los ejemplos de código que vienen a continuación asumen que se utiliza Kotest (en el caso de Kotlin). La agrupación que proponemos no puede imitarse fácilmente en frameworks como JUnit.
 
-Los ejemplos de código que vienen a continuación asumen que se utiliza Kotest (en el caso de Kotlin). La agrupación que
-proponemos no puede imitarse fácilmente en frameworks como JUnit.
-
-#### ¿Cómo agrupar los escenarios?
+##### ¿Cómo agrupar los escenarios?
 
 En frameworks como [Jest](https://jestjs.io/) o [Kotest](https://kotest.io/) tenemos la posibilidad de jerarquizar
 nuestras pruebas, utilizando las funciones `describe` e `it` para crear estas agrupaciones.
@@ -194,7 +189,7 @@ o `Una constructora con 10 albañiles` están sujetos a que cualquier cambio del
 “pocos” albañiles necesite modificar el nombre del test. Además, un nombre así nos obliga a ir a revisar el código (o el
 requerimiento, si es que está escrito en algún lado) para comprender que se trata de dos escenarios diferentes.
 
-#### Expresividad: nombres acorde a lo que representan
+##### Expresividad: nombres acorde a lo que representan
 
 Al empezar a diseñar los casos de prueba es usual imaginar algún ejemplo más o menos realista,
 como `La Constructora Hurlingham tiene 5 albañiles y una deuda de 7000 pesos`.
@@ -233,7 +228,7 @@ Cuando ejecutamos el test tenemos muy poca información relevante:
 
 Al fallar, tenemos que bucear en el código y extraer este dato para determinar si el error está en el test o en el código de negocio.
 
-#### Otra oportunidad
+##### Otra oportunidad
 
 Vamos a mejorar la semántica del test, renombrando la constante `constructoraHurlingham` por un nombre más
 representativo de la clase de equivalencia que estamos modelando y cambiando el nombre del test:
@@ -258,11 +253,11 @@ Ahora al fallar el test sabemos más cosas:
 * qué es lo que estamos testeando, tratando de no entrar en detalles para no duplicar lo que dice el código,
 * qué se esperaba que pasara y no pasó, en un formato *más o menos* legible para un usuario: “Una ferretería puede fiarle a una constructora con muchos albañiles”.
 
-### Buenas prácticas
+#### Buenas prácticas
 
 Más allá de lo explicado hasta aquí, compartimos también algunas buenas prácticas que pueden ser útiles a la hora de armar nuestras pruebas.
 
-#### El patrón AAA: Arrange-Act-Assert
+##### El patrón AAA: Arrange-Act-Assert
 
 Una de las formas más comunes de estructurar las pruebas es utilizando el patrón AAA:  *Arrange*, *Act* y *Assert*.
 

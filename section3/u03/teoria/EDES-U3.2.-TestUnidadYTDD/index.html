@@ -1580,14 +1580,10 @@
     TDD
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="TDD">
+      <ul class="md-nav__list">
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#diseno-de-casos-de-prueba" class="md-nav__link">
     Diseño de casos de prueba
   </a>
@@ -1600,12 +1596,11 @@
     Descripción del dominio
   </a>
   
-    <nav class="md-nav" aria-label="Descripción del dominio">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#requerimiento" class="md-nav__link">
-    REQUERIMIENTO
+  <a href="#definiendo-los-escenarios" class="md-nav__link">
+    Definiendo los escenarios
   </a>
   
 </li>
@@ -1616,26 +1611,12 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#definiendo-los-escenarios" class="md-nav__link">
-    Definiendo los escenarios
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#escribiendo-los-tests" class="md-nav__link">
     Escribiendo los tests
   </a>
   
     <nav class="md-nav" aria-label="Escribiendo los tests">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#atencion" class="md-nav__link">
-    ATENCIÓN
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#como-agrupar-los-escenarios" class="md-nav__link">
@@ -1675,6 +1656,11 @@
   <a href="#el-patron-aaa-arrange-act-assert" class="md-nav__link">
     El patrón AAA: Arrange-Act-Assert
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2161,14 +2147,10 @@
     TDD
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="TDD">
+      <ul class="md-nav__list">
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#diseno-de-casos-de-prueba" class="md-nav__link">
     Diseño de casos de prueba
   </a>
@@ -2181,12 +2163,11 @@
     Descripción del dominio
   </a>
   
-    <nav class="md-nav" aria-label="Descripción del dominio">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#requerimiento" class="md-nav__link">
-    REQUERIMIENTO
+  <a href="#definiendo-los-escenarios" class="md-nav__link">
+    Definiendo los escenarios
   </a>
   
 </li>
@@ -2197,26 +2178,12 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#definiendo-los-escenarios" class="md-nav__link">
-    Definiendo los escenarios
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#escribiendo-los-tests" class="md-nav__link">
     Escribiendo los tests
   </a>
   
     <nav class="md-nav" aria-label="Escribiendo los tests">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#atencion" class="md-nav__link">
-    ATENCIÓN
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#como-agrupar-los-escenarios" class="md-nav__link">
@@ -2256,6 +2223,11 @@
   <a href="#el-patron-aaa-arrange-act-assert" class="md-nav__link">
     El patrón AAA: Arrange-Act-Assert
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2397,20 +2369,21 @@ e iremos mejorando conforme vayamos</p>
 <p>En lo que a prácticas se refiere, ver a alguien hacerlo puede resultar mucho más educativo que una explicación teórica
 sobre en qué consiste la misma.</p>
 <p>Y si bien cada lenguaje y framework tiene sus particularidades, esta técnica es agnóstica de la tecnología.</p>
-<h2 id="diseno-de-casos-de-prueba">Diseño de casos de prueba<a class="headerlink" href="#diseno-de-casos-de-prueba" title="Permanent link">&para;</a></h2>
-<p>Este artículo presenta algunas guías para desarrollar los casos de prueba, asumiendo que ya conocés el concepto de
+<h4 id="diseno-de-casos-de-prueba">Diseño de casos de prueba<a class="headerlink" href="#diseno-de-casos-de-prueba" title="Permanent link">&para;</a></h4>
+<p>Presentaremos algunas guías para desarrollar los casos de prueba, asumiendo que ya conocés el concepto de
 pruebas automatizadas y algún framework para implementarlas.</p>
-<h3 id="descripcion-del-dominio">Descripción del dominio<a class="headerlink" href="#descripcion-del-dominio" title="Permanent link">&para;</a></h3>
+<h5 id="descripcion-del-dominio">Descripción del dominio<a class="headerlink" href="#descripcion-del-dominio" title="Permanent link">&para;</a></h5>
 <p>Todo el apunte estará elaborado en base al siguiente dominio:</p>
-<h5 id="requerimiento">REQUERIMIENTO<a class="headerlink" href="#requerimiento" title="Permanent link">&para;</a></h5>
-<p>Una ferretería tiene en cuenta ciertos aspectos para decidir si le puede fiar a un cliente o no.</p>
+<blockquote>
+<p>REQUERIMIENTO: Una ferretería tiene en cuenta ciertos aspectos para decidir si le puede fiar a un cliente o no.</p>
 <ul>
 <li>Al cliente particular le fia solo si no adeuda nada, es decir si su deuda es de $0.</li>
 <li>A las constructoras les fia dependiendo de cuántos albañiles trabajen en la obra:</li>
 <li>si son 5 o más albañiles, le fía hasta $10.000,</li>
 <li>de lo contrario sólo hasta $5.000.</li>
 </ul>
-<h3 id="definiendo-los-escenarios">Definiendo los escenarios<a class="headerlink" href="#definiendo-los-escenarios" title="Permanent link">&para;</a></h3>
+</blockquote>
+<h5 id="definiendo-los-escenarios">Definiendo los escenarios<a class="headerlink" href="#definiendo-los-escenarios" title="Permanent link">&para;</a></h5>
 <p>Para armar los escenarios de prueba, vamos a tomar prestado un concepto de la matemática
 llamado  <strong><a href="https://es.wikipedia.org/wiki/Clase_de_equivalencia">clase de equivalencia</a></strong> . Clasificar a los distintos
 escenarios según las características que comparten nos va a permitir contemplar todas las opciones posibles sin tener
@@ -2443,7 +2416,7 @@ distingue entre <em>pocos</em> y  <em>muchos</em> , elegimos 4 para representar 
 <p>Sin dudas podríamos haber elegido otros números, pero es importante que los tests sean simples y fáciles de comprender.
 Por esta razón, vamos a preferir siempre utilizar valores que nos resulten fáciles de razonar para representar a cada
 escenario.</p>
-<h3 id="escribiendo-los-tests">Escribiendo los tests<a class="headerlink" href="#escribiendo-los-tests" title="Permanent link">&para;</a></h3>
+<h4 id="escribiendo-los-tests">Escribiendo los tests<a class="headerlink" href="#escribiendo-los-tests" title="Permanent link">&para;</a></h4>
 <p>Necesitamos:</p>
 <ul>
 <li>Un cliente particular.</li>
@@ -2451,10 +2424,10 @@ escenario.</p>
 <li>Otra empresa constructora con 4 albañiles.</li>
 </ul>
 <p>A los que podemos configurar diferentes grados de deuda.</p>
-<h5 id="atencion">ATENCIÓN<a class="headerlink" href="#atencion" title="Permanent link">&para;</a></h5>
-<p>Los ejemplos de código que vienen a continuación asumen que se utiliza Kotest (en el caso de Kotlin). La agrupación que
-proponemos no puede imitarse fácilmente en frameworks como JUnit.</p>
-<h4 id="como-agrupar-los-escenarios">¿Cómo agrupar los escenarios?<a class="headerlink" href="#como-agrupar-los-escenarios" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>ATENCIÓN: Los ejemplos de código que vienen a continuación asumen que se utiliza Kotest (en el caso de Kotlin). La agrupación que proponemos no puede imitarse fácilmente en frameworks como JUnit.</p>
+</blockquote>
+<h5 id="como-agrupar-los-escenarios">¿Cómo agrupar los escenarios?<a class="headerlink" href="#como-agrupar-los-escenarios" title="Permanent link">&para;</a></h5>
 <p>En frameworks como <a href="https://jestjs.io/">Jest</a> o <a href="https://kotest.io/">Kotest</a> tenemos la posibilidad de jerarquizar
 nuestras pruebas, utilizando las funciones <code>describe</code> e <code>it</code> para crear estas agrupaciones.</p>
 <p>Podríamos también tener todo junto, sin ningún tipo de agrupamiento. Pero esto no resulta ser una buena práctica,
@@ -2480,7 +2453,7 @@ porque:</p>
 o <code>Una constructora con 10 albañiles</code> están sujetos a que cualquier cambio del negocio respecto a lo que son “muchos” o
 “pocos” albañiles necesite modificar el nombre del test. Además, un nombre así nos obliga a ir a revisar el código (o el
 requerimiento, si es que está escrito en algún lado) para comprender que se trata de dos escenarios diferentes.</p>
-<h4 id="expresividad-nombres-acorde-a-lo-que-representan">Expresividad: nombres acorde a lo que representan<a class="headerlink" href="#expresividad-nombres-acorde-a-lo-que-representan" title="Permanent link">&para;</a></h4>
+<h5 id="expresividad-nombres-acorde-a-lo-que-representan">Expresividad: nombres acorde a lo que representan<a class="headerlink" href="#expresividad-nombres-acorde-a-lo-que-representan" title="Permanent link">&para;</a></h5>
 <p>Al empezar a diseñar los casos de prueba es usual imaginar algún ejemplo más o menos realista,
 como <code>La Constructora Hurlingham tiene 5 albañiles y una deuda de 7000 pesos</code>.</p>
 <p>Intentando traducir esto a código, tal vez nos saldría un tests como el siguiente:</p>
@@ -2509,7 +2482,7 @@ clase <code>EmpresaConstructora</code> tiene la definición de la deuda como un 
 <li>y tampoco está claro por qué no puede pedir fiado.</li>
 </ul>
 <p>Al fallar, tenemos que bucear en el código y extraer este dato para determinar si el error está en el test o en el código de negocio.</p>
-<h4 id="otra-oportunidad">Otra oportunidad<a class="headerlink" href="#otra-oportunidad" title="Permanent link">&para;</a></h4>
+<h5 id="otra-oportunidad">Otra oportunidad<a class="headerlink" href="#otra-oportunidad" title="Permanent link">&para;</a></h5>
 <p>Vamos a mejorar la semántica del test, renombrando la constante <code>constructoraHurlingham</code> por un nombre más
 representativo de la clase de equivalencia que estamos modelando y cambiando el nombre del test:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">FerreteriaTest</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">DescribeSpec</span><span class="p">({</span>
@@ -2529,9 +2502,9 @@ representativo de la clase de equivalencia que estamos modelando y cambiando el 
 <li>qué es lo que estamos testeando, tratando de no entrar en detalles para no duplicar lo que dice el código,</li>
 <li>qué se esperaba que pasara y no pasó, en un formato <em>más o menos</em> legible para un usuario: “Una ferretería puede fiarle a una constructora con muchos albañiles”.</li>
 </ul>
-<h3 id="buenas-practicas">Buenas prácticas<a class="headerlink" href="#buenas-practicas" title="Permanent link">&para;</a></h3>
+<h4 id="buenas-practicas">Buenas prácticas<a class="headerlink" href="#buenas-practicas" title="Permanent link">&para;</a></h4>
 <p>Más allá de lo explicado hasta aquí, compartimos también algunas buenas prácticas que pueden ser útiles a la hora de armar nuestras pruebas.</p>
-<h4 id="el-patron-aaa-arrange-act-assert">El patrón AAA: Arrange-Act-Assert<a class="headerlink" href="#el-patron-aaa-arrange-act-assert" title="Permanent link">&para;</a></h4>
+<h5 id="el-patron-aaa-arrange-act-assert">El patrón AAA: Arrange-Act-Assert<a class="headerlink" href="#el-patron-aaa-arrange-act-assert" title="Permanent link">&para;</a></h5>
 <p>Una de las formas más comunes de estructurar las pruebas es utilizando el patrón AAA:  <em>Arrange</em>, <em>Act</em> y <em>Assert</em>.</p>
 <p>No es necesario cumplirlo a rajatabla - y de hecho el ejemplo de este apunte no lo cumple 😅 -, pero tenerlo en mente puede ayudarnos a entender si nuestro test tiene todo lo que debería tener.</p>
 <p>Según este patrón, cada test se puede dividir en tres "momentos":</p>

@@ -1560,6 +1560,19 @@
     Test de unidad
   </a>
   
+    <nav class="md-nav" aria-label="Test de unidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motivos-para-realizar-un-test-unitario" class="md-nav__link">
+    Motivos para realizar un test unitario
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2128,6 +2141,19 @@
     Test de unidad
   </a>
   
+    <nav class="md-nav" aria-label="Test de unidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motivos-para-realizar-un-test-unitario" class="md-nav__link">
+    Motivos para realizar un test unitario
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2311,11 +2337,27 @@
 
 <h2 id="test-de-unidad-y-tdd">Test de unidad y TDD<a class="headerlink" href="#test-de-unidad-y-tdd" title="Permanent link">&para;</a></h2>
 <h3 id="test-de-unidad">Test de unidad<a class="headerlink" href="#test-de-unidad" title="Permanent link">&para;</a></h3>
+<p>Las <strong>pruebas unitarias</strong> o <strong>unit testing</strong> son una forma de comprobar que un fragmento de código funciona correctamente. Es un procedimiento más de los que se llevan a cabo dentro de una metodología ágil de trabajo.</p>
+<p>Si nunca te has atrevido con ellas o no sabes por dónde empezar, es el momento de descubrir cómo las pruebas unitarias pueden ayudarte a  <strong>mejorar el resultado final de tu aplicación</strong> .</p>
+<p>Las pruebas unitarias consisten en  <strong>aislar una parte del código y comprobar que funciona a la perfección</strong> . Son pequeños <em>tests</em> que validan el comportamiento de un objeto y la lógica.
+El <em>unit testing</em> suele realizarse durante la fase de desarrollo de aplicaciones de software o móviles. Normalmente las llevan a cabo los  <strong>desarrolladores</strong> , aunque en la práctica, también pueden realizarlas los  <strong>responsables de QA</strong> .
+Hay una especie de mito respecto a las pruebas unitarias. Algunos desarrolladores están convencidos de que son una pérdida de tiempo y las evitan buscando ahorrar tiempo.
+<strong>Nada más alejado de la realidad.</strong>
+Con ellas se <strong>detectan antes errores</strong> que, sin las pruebas unitarias, no se podrían detectar hasta fases más avanzadas como las pruebas de sistema, de integración e incluso en la beta.
+Realizar pruebas unitarias con regularidad supone, al final, un ahorro de tiempo y dinero.</p>
+<h4 id="motivos-para-realizar-un-test-unitario">Motivos para realizar un test unitario<a class="headerlink" href="#motivos-para-realizar-un-test-unitario" title="Permanent link">&para;</a></h4>
+<p>Si todavía no estás del todo seguro de por qué debes incorporar las <em>unit testing</em> a tu día a día como desarrollador, te damos algunos motivos:</p>
+<ul>
+<li>Las pruebas unitarias demuestran que la <strong>lógica del código</strong> está en buen estado y que funcionará en todos los casos.</li>
+<li>Aumentan la <strong>legibilidad del código</strong> y ayudan a los desarrolladores a entender el código base, lo que facilita hacer cambios más rápidamente.</li>
+<li>Los test unitarios bien realizados sirven como <strong>documentación</strong> del proyecto.</li>
+<li>Se realizan en  <strong>pocos milisegundos</strong> , por lo que podrás realizar cientos de ellas en muy poco tiempo.</li>
+<li>Las <em>unit testing</em> permiten al desarrollador <strong>refactorizar el código</strong> más adelante y tener la garantía de que el módulo sigue funcionando correctamente. Para ello se escriben casos de prueba para todas las funciones y métodos, para que cada vez que un cambio provoque un error, sea posible identificarlo y repararlo rápidamente.</li>
+<li>La <strong>calidad final del código</strong> mejorará ya que, al estar realizando pruebas de manera continua, al finalizar el código será limpio y de calidad.</li>
+<li>Como las pruebas unitarias dividen el código en pequeños fragmentos, es posible <strong>probar distintas partes del proyecto</strong> sin tener que esperar a que otras estén completadas.</li>
+</ul>
 <h3 id="tdd">TDD<a class="headerlink" href="#tdd" title="Permanent link">&para;</a></h3>
-<p>Probablemente, la técnica que hasta hoy conoces (y practicas) a la hora de programar consiste en escribir código y
-luego, con algo de suerte, probarlo para ver si efectivamente hace lo que tiene que hacer. Esta prueba puede ser
-manual (por ejemplo, mediante un REPL o sencillamente apretando botones) o automatizada (mediante pruebas unitarias,
-end-to-end, lo que sea).</p>
+<p>Probablemente, la técnica que hasta hoy conoces (y practicas) a la hora de programar consiste en escribir código y luego, con algo de suerte, probarlo para ver si efectivamente hace lo que tiene que hacer. Esta prueba puede ser manual (por ejemplo, mediante un REPL o sencillamente apretando botones) o automatizada (mediante pruebas unitarias, end-to-end, lo que sea).</p>
 <p>En este punto proponemos algo que puede resultar disruptivo y hasta molesto (al menos al principio): comenzar por las
 pruebas y luego escribir el código necesario para que ellas pasen. No ahondaremos aquí en las ventajas y desventajas de
 la práctica (hay mucho escrito en internet) pero sí diremos que TDD es una muy buena forma de encarar un problema que no
@@ -2336,9 +2378,11 @@ pensando en el uso que se le va a dar.</p>
 </blockquote>
 <p>Esto nos quiere ayudar a pensar en el uso, ya que si la prueba funciona, es porque ya existe.</p>
 <blockquote>
-<p>Si no puedes escribir una prueba para lo vas a implementar, entonces no deberías estar pensando en la implementación.
-- Dave Chaplin.</p>
+<p>Si no puedes escribir una prueba para lo vas a implementar, entonces no deberías estar pensando en la implementación.</p>
 </blockquote>
+<ul>
+<li>Dave Chaplin.</li>
+</ul>
 <p>Si no podemos escribir una prueba es porque no está claro lo que quieres hacer, quizás falte aclarar requisitos.</p>
 <p>La técnica tiene 3 pasos:</p>
 <ol>
@@ -2362,11 +2406,9 @@ pruebas automatizadas y algún framework para implementarlas.</p>
 <p>Una ferretería tiene en cuenta ciertos aspectos para decidir si le puede fiar a un cliente o no.</p>
 <ul>
 <li>Al cliente particular le fia solo si no adeuda nada, es decir si su deuda es de $0.</li>
-<li>A las constructoras les fia dependiendo de cuántos albañiles trabajen en la obra:<ul>
+<li>A las constructoras les fia dependiendo de cuántos albañiles trabajen en la obra:</li>
 <li>si son 5 o más albañiles, le fía hasta $10.000,</li>
 <li>de lo contrario sólo hasta $5.000.</li>
-</ul>
-</li>
 </ul>
 <h3 id="definiendo-los-escenarios">Definiendo los escenarios<a class="headerlink" href="#definiendo-los-escenarios" title="Permanent link">&para;</a></h3>
 <p>Para armar los escenarios de prueba, vamos a tomar prestado un concepto de la matemática
@@ -2386,21 +2428,15 @@ que escribir infinitas pruebas.</p>
 </ul>
 <p>Combinando eso con las posibles deudas, podríamos definir los siguientes escenarios:</p>
 <ul>
-<li>Dado un cliente particular:<ul>
+<li>Dado un cliente particular:</li>
 <li><strong>Si debe algo:</strong> no se le puede fiar.</li>
 <li><strong>Si no debe nada:</strong> se le puede fiar.</li>
-</ul>
-</li>
-<li>Dada una constructora con muchos (5) albañiles:<ul>
+<li>Dada una constructora con muchos (5) albañiles:</li>
 <li><strong>Si la obra debe más de $10.000:</strong> no se le puede fiar.</li>
 <li><strong>Si la obra debe menos de $10.000:</strong> se le puede fiar.</li>
-</ul>
-</li>
-<li>Dada una constructora con pocos (4) albañiles:<ul>
+<li>Dada una constructora con pocos (4) albañiles:</li>
 <li><strong>Si la obra debe más de $5.000:</strong> no se le puede fiar.</li>
 <li><strong>Si la obra debe menos de $5.000:</strong> se le puede fiar.</li>
-</ul>
-</li>
 </ul>
 <p>En el caso de la constructora, elegimos la cantidad de obreros en base al  <strong>valor límite</strong> : como 5 es el número que
 distingue entre <em>pocos</em> y  <em>muchos</em> , elegimos 4 para representar al caso <em>pocos</em> y 5 para el caso  <em>muchos</em> .</p>
@@ -2460,8 +2496,8 @@ como <code>La Constructora Hurlingham tiene 5 albañiles y una deuda de 7000 pes
 </code></pre></div>
 <p>Pero ¿qué pasa si hay un error en el código y el test falla? Supongamos esta implementación, donde la
 clase <code>EmpresaConstructora</code> tiene la definición de la deuda como un entero:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">EmpresaConstructora</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">cantidadAlbaniles</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="n">deuda</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Cliente</span><span class="p">(</span><span class="n">deuda</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">    </span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">        </span><span class="c1">// Debería ser &gt;= 5    </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">EmpresaConstructora</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">cantidadAlbaniles</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="n">deuda</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Cliente</span><span class="p">(</span><span class="n">deuda</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">        </span><span class="c1">// Debería ser &gt;= 5  </span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="kd">fun</span><span class="w"> </span><span class="nf">montoMaximoDeuda</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cantidadAlbaniles</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="m">10000</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="m">5000</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">puedePedirFiado</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">deuda</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">montoMaximoDeuda</span><span class="p">()</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
@@ -2508,11 +2544,11 @@ representativo de la clase de equivalencia que estamos modelando y cambiando el 
 <p>Veamos un ejemplo sencillo que puede desglosarse fácilmente en esos tres componentes:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">describe</span><span class="p">(</span><span class="s">&quot;Un ave&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nb">it</span><span class="p">(</span><span class="s">&quot;pierde energía al volar&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="c1">// ARRANGE: se crea el objeto    </span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="c1">// ARRANGE: se crea el objeto  </span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">pepita</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ave</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="c1">// ACT: se realizan las acciones    </span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="c1">// ACT: se realizan las acciones  </span>
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">pepita</span><span class="p">.</span><span class="na">volar</span><span class="p">()</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="c1">// ASSERT: se verifica el efecto    </span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="c1">// ASSERT: se verifica el efecto  </span>
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="n">pepita</span><span class="p">.</span><span class="na">energia</span><span class="p">.</span><span class="na">shouldBe</span><span class="p">(</span><span class="m">900</span><span class="p">)</span><span class="w">  </span>
 <a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="p">}</span>

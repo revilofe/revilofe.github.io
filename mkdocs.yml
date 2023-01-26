@@ -68,7 +68,10 @@ nav:
         - '2.1.-Herramientas': 'section3/u02/teoria/EDES-U2.1.-Herramientas.md'
         - 'Práctica 2.1: Herramientas de desarrollo': 'section3/u02/practica/EDES-U2.-Practica001.md'
     - 'U3: GIT':
-        - 'section3/u02/index.md'
+        - 'section3/u03/index.md'
+        - '3.1.-Software y PC': 'section3/u01/teoria/EDES-U3.1.-Git.md'
+        - '3.2.-Test unidad y TDD': 'section3/u03/teoria/EDES-U3.2.-TestUnidadYTDD.md'
+        - '3.3.-Kotest': 'section3/u03/teoria/EDES-U3.3.-Kotest.md'
         - 'Práctica 3.1: Git/Github básico': 'section3/u03/practica/EDES-U3.-Practica001.md'
         - 'Práctica 3.2: Git/Github merge': 'section3/u03/practica/EDES-U3.-Practica002.md'
         - 'Práctica 3.3: Git/Github rebase I': 'section3/u03/practica/EDES-U3.-Practica003.md'

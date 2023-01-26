@@ -14,17 +14,37 @@ tags:
 - Software
 - Hardware
 ---
-
 ## Test de unidad y TDD
 
 ### Test de unidad
 
+Las **pruebas unitarias** o **unit testing** son una forma de comprobar que un fragmento de código funciona correctamente. Es un procedimiento más de los que se llevan a cabo dentro de una metodología ágil de trabajo.
+
+Si nunca te has atrevido con ellas o no sabes por dónde empezar, es el momento de descubrir cómo las pruebas unitarias pueden ayudarte a  **mejorar el resultado final de tu aplicación** .
+
+Las pruebas unitarias consisten en  **aislar una parte del código y comprobar que funciona a la perfección** . Son pequeños *tests* que validan el comportamiento de un objeto y la lógica.
+El *unit testing* suele realizarse durante la fase de desarrollo de aplicaciones de software o móviles. Normalmente las llevan a cabo los  **desarrolladores** , aunque en la práctica, también pueden realizarlas los  **responsables de QA** .
+Hay una especie de mito respecto a las pruebas unitarias. Algunos desarrolladores están convencidos de que son una pérdida de tiempo y las evitan buscando ahorrar tiempo.
+**Nada más alejado de la realidad.**
+Con ellas se **detectan antes errores** que, sin las pruebas unitarias, no se podrían detectar hasta fases más avanzadas como las pruebas de sistema, de integración e incluso en la beta.
+Realizar pruebas unitarias con regularidad supone, al final, un ahorro de tiempo y dinero.
+
+
+#### Motivos para realizar un test unitario
+
+Si todavía no estás del todo seguro de por qué debes incorporar las *unit testing* a tu día a día como desarrollador, te damos algunos motivos:
+
+* Las pruebas unitarias demuestran que la **lógica del código** está en buen estado y que funcionará en todos los casos.
+* Aumentan la **legibilidad del código** y ayudan a los desarrolladores a entender el código base, lo que facilita hacer cambios más rápidamente.
+* Los test unitarios bien realizados sirven como **documentación** del proyecto.
+* Se realizan en  **pocos milisegundos** , por lo que podrás realizar cientos de ellas en muy poco tiempo.
+* Las *unit testing* permiten al desarrollador **refactorizar el código** más adelante y tener la garantía de que el módulo sigue funcionando correctamente. Para ello se escriben casos de prueba para todas las funciones y métodos, para que cada vez que un cambio provoque un error, sea posible identificarlo y repararlo rápidamente.
+* La **calidad final del código** mejorará ya que, al estar realizando pruebas de manera continua, al finalizar el código será limpio y de calidad.
+* Como las pruebas unitarias dividen el código en pequeños fragmentos, es posible **probar distintas partes del proyecto** sin tener que esperar a que otras estén completadas.
+
 ### TDD
 
-Probablemente, la técnica que hasta hoy conoces (y practicas) a la hora de programar consiste en escribir código y
-luego, con algo de suerte, probarlo para ver si efectivamente hace lo que tiene que hacer. Esta prueba puede ser
-manual (por ejemplo, mediante un REPL o sencillamente apretando botones) o automatizada (mediante pruebas unitarias,
-end-to-end, lo que sea).
+Probablemente, la técnica que hasta hoy conoces (y practicas) a la hora de programar consiste en escribir código y luego, con algo de suerte, probarlo para ver si efectivamente hace lo que tiene que hacer. Esta prueba puede ser manual (por ejemplo, mediante un REPL o sencillamente apretando botones) o automatizada (mediante pruebas unitarias, end-to-end, lo que sea).
 
 En este punto proponemos algo que puede resultar disruptivo y hasta molesto (al menos al principio): comenzar por las
 pruebas y luego escribir el código necesario para que ellas pasen. No ahondaremos aquí en las ventajas y desventajas de
@@ -51,6 +71,7 @@ La técnica se puede resumir en dos reglas de oro:
 Esto nos quiere ayudar a pensar en el uso, ya que si la prueba funciona, es porque ya existe.
 
 > Si no puedes escribir una prueba para lo vas a implementar, entonces no deberías estar pensando en la implementación.
+
 - Dave Chaplin.
 
 Si no podemos escribir una prueba es porque no está claro lo que quieres hacer, quizás falte aclarar requisitos.
@@ -86,8 +107,8 @@ Una ferretería tiene en cuenta ciertos aspectos para decidir si le puede fiar a
 
 * Al cliente particular le fia solo si no adeuda nada, es decir si su deuda es de $0.
 * A las constructoras les fia dependiendo de cuántos albañiles trabajen en la obra:
-    * si son 5 o más albañiles, le fía hasta $10.000,
-    * de lo contrario sólo hasta $5.000.
+  * si son 5 o más albañiles, le fía hasta $10.000,
+  * de lo contrario sólo hasta $5.000.
 
 ### Definiendo los escenarios
 
@@ -110,14 +131,14 @@ Para una  **empresa constructora** , tenemos más variantes:
 Combinando eso con las posibles deudas, podríamos definir los siguientes escenarios:
 
 * Dado un cliente particular:
-    * **Si debe algo:** no se le puede fiar.
-    * **Si no debe nada:** se le puede fiar.
+  * **Si debe algo:** no se le puede fiar.
+  * **Si no debe nada:** se le puede fiar.
 * Dada una constructora con muchos (5) albañiles:
-    * **Si la obra debe más de $10.000:** no se le puede fiar.
-    * **Si la obra debe menos de $10.000:** se le puede fiar.
+  * **Si la obra debe más de $10.000:** no se le puede fiar.
+  * **Si la obra debe menos de $10.000:** se le puede fiar.
 * Dada una constructora con pocos (4) albañiles:
-    * **Si la obra debe más de $5.000:** no se le puede fiar.
-    * **Si la obra debe menos de $5.000:** se le puede fiar.
+  * **Si la obra debe más de $5.000:** no se le puede fiar.
+  * **Si la obra debe menos de $5.000:** se le puede fiar.
 
 En el caso de la constructora, elegimos la cantidad de obreros en base al  **valor límite** : como 5 es el número que
 distingue entre *pocos* y  *muchos* , elegimos 4 para representar al caso *pocos* y 5 para el caso  *muchos* .
@@ -196,15 +217,14 @@ Pero ¿qué pasa si hay un error en el código y el test falla? Supongamos esta 
 clase `EmpresaConstructora` tiene la definición de la deuda como un entero:
 
 ```kotlin
-class EmpresaConstructora(val cantidadAlbaniles: Int, deuda: Int) : Cliente(deuda) {    
-        // Debería ser >= 5    
+class EmpresaConstructora(val cantidadAlbaniles: Int, deuda: Int) : Cliente(deuda) {  
+        // Debería ser >= 5  
         fun montoMaximoDeuda() = if (cantidadAlbaniles > 5) 10000 else 5000
         override fun puedePedirFiado() = deuda <= this.montoMaximoDeuda()
 }
 ```
 
 ![](assets/ErrorEnTest.png)
-
 
 Cuando ejecutamos el test tenemos muy poca información relevante:
 
@@ -217,7 +237,6 @@ Al fallar, tenemos que bucear en el código y extraer este dato para determinar 
 
 Vamos a mejorar la semántica del test, renombrando la constante `constructoraHurlingham` por un nombre más
 representativo de la clase de equivalencia que estamos modelando y cambiando el nombre del test:
-
 
 ```kotlin
 class FerreteriaTest : DescribeSpec({
@@ -261,11 +280,11 @@ Veamos un ejemplo sencillo que puede desglosarse fácilmente en esos tres compon
 ```kotlin
 describe("Un ave") { 
   it("pierde energía al volar") {
-    // ARRANGE: se crea el objeto    
+    // ARRANGE: se crea el objeto  
     val pepita = Ave(1000)
-    // ACT: se realizan las acciones    
+    // ACT: se realizan las acciones  
     pepita.volar()
-    // ASSERT: se verifica el efecto    
+    // ASSERT: se verifica el efecto  
     pepita.energia.shouldBe(900)  
   }
 }

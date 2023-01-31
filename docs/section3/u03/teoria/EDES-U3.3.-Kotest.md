@@ -1,12 +1,12 @@
 ---
-title: "UD 3 - 3.2 Test de unidad y TDD"
-description: Relación entre software y hardware
-summary: Relación entre software y hardware
+title: "UD 3 - 3.3 Kotest"
+description: Kotest
+summary: Kotest
 authors:
 - Eduardo Fdez
 date: 2022-09-18
 icon: material/security
-permalink: /edes/unidad1/1.1
+permalink: /edes/unidad3/3.3
 categories:
 - EDES
 tags:
@@ -67,7 +67,7 @@ class CardPaymentTests : BehaviorSpec({
 })
 ```
 
-### 3.2. debe especificar
+#### 3.2. Especificaciones mediante `should`
 
 Podemos crear pruebas usando la palabra clave `should` (Debería cumplirse) :
 
@@ -97,7 +97,7 @@ class PaymentTests : ShouldSpec({
 })
 ```
 
-### 3.3. Especificaciones de características
+#### 3.3. Especificaciones de características (`features`)
 
 A continuación, veamos cómo se pueden escribir pruebas basadas en [Cucumber](https://www.baeldung.com/cucumber-rest-api-testing), una herramienta de uso común para las pruebas de aceptación del usuario, basadas en las palabras clave  `feature` (funcionalidad) y `scenario` (escenario):
 
@@ -116,7 +116,7 @@ class HomePageTests : FeatureSpec({
 })
 ```
 
-### 3.4. Describir especificaciones
+#### 3.4. Especificaciones mediante mediante descripciones (`describe`)
 
 Usando `describe`, podemos escribir pruebas en un estilo muy popular entre los desarrolladores de Javascript y Ruby, de hecho será el que usaremos en nuestros ejemplos:
 
@@ -137,7 +137,7 @@ class PaymentTests : DescribeSpec({
 
 ### 4. Assertions
 
-Anteriormente hemos visto que Kotest tiene bibliotecas separadas destinadas a aserciones, las afirmaciones que tienen que cumplirse tras realizar el test. Estas bibliotecas nos brindan varias funciones de *comparación* para escribir afirmaciones fluidas en nuestras pruebas. Hay dos grandes categorías de bibliotecas de aserciones:
+Anteriormente hemos visto que Kotest tiene bibliotecas destinadas a aserciones, las afirmaciones que tienen que cumplirse tras realizar el test. Estas bibliotecas nos brindan varias funciones de *comparación* para escribir las afirmaciones que deben cumplirse en nuestras pruebas. Hay dos grandes categorías de bibliotecas de aserciones:
 
 * Core matchers
 * External matchers
@@ -173,7 +173,7 @@ result.shouldHaveFileSize(size)
 result.shouldBeBefore(otherDate)Copiar
 ```
 
-Además del módulo principal de aserciones, existen varios otros módulos que proporcionan comparadores para una amplia variedad de escenarios, por ejemplo, comparadores JSON, coincidencias JDBC, etc, y por supuesto tienen muchas mas opciones y deberíamos revisar la biblioteca buscando aquella que necesitamos para nuestro test.
+Además del módulo principal de aserciones, existen otros módulos que proporcionan comparadores para una amplia variedad de escenarios, por ejemplo, comparadores JSON, coincidencias JDBC, etc, y por supuesto tienen muchas más opciones que deberíamos revisar buscando aquellas que necesitamos para nuestro test.
 
 ### 5. Pruebas de excepciones
 
@@ -201,9 +201,9 @@ class TransactionStatementSpec : ShouldSpec({
 })
 ```
 
-## 7. Pruebas basadas en datos
+### 7. Pruebas basadas en datos
 
-Las pruebas basadas en datos en Kotest son similares a las [pruebas parametrizadas en Junit5](https://www.baeldung.com/parameterized-tests-junit-5) . Podemos proporcionar varias entradas a un solo caso de prueba para verificar diferentes ejemplos en lugar de escribir varias pruebas con solo datos de entrada diferentes. Podemos usar la función `useData` de la [biblioteca kotest-framework-datatest-jvm](https://search.maven.org/search?q=g:io.kotest%20AND%20a:kotest-framework-datatest-jvm) para proporcionar datos a las pruebas.
+Las pruebas basadas en datos en Kotest son similares a las [pruebas parametrizadas en Junit5](https://www.baeldung.com/parameterized-tests-junit-5). Podemos proporcionar varias entradas a un solo caso de prueba para verificar diferentes ejemplos en lugar de escribir varias pruebas con solo datos de entrada diferentes. Podemos usar la función `useData` de la [biblioteca kotest-framework-datatest-jvm](https://search.maven.org/search?q=g:io.kotest%20AND%20a:kotest-framework-datatest-jvm) para proporcionar datos a las pruebas.
 
 Veamos un ejemplo:
 
@@ -221,7 +221,7 @@ class IncomeTaxTests : FunSpec({
 })
 ```
 
-## 8. Pruebas no deterministas
+### 8. Pruebas no deterministas
 
 A veces, necesitamos probar funciones que no devuelven resultados sincrónicamente. Desafortunadamente, es complicado probar tales funciones, ya que tenemos que escribir código especial para esperar los resultados utilizando técnicas como funciones callback o dormir el hilo.
 
@@ -246,7 +246,7 @@ class TransactionTests : ShouldSpec({
 
 Aquí, nuestra prueba verificará el estado de la transacción `transactionRepo.getStatus` cada segundo, hasta llegar a 5 segundos.
 
-## 9. Mocking
+### 9. Mocking
 
 Podemos integrar cualquier biblioteca de simulación como [mockk](https://www.baeldung.com/kotlin/mockk) con Kotest, biblioteca que veremos mas adelante. Kotest no proporciona su propia biblioteca de simulación:
 
@@ -262,7 +262,7 @@ class ExchangeServiceTest : FunSpec({
 })
 ```
 
-## 10. Cobertura de pruebas
+### 10. Cobertura de pruebas
 
 Podemos integrar [Jacoco](https://www.baeldung.com/jacoco) con Kotest para medir la cobertura de la prueba. Para integrar, debemos asegurarnos de que los informes de cobertura de prueba se generen después de ejecutar las pruebas unitarias:
 
@@ -274,7 +274,7 @@ tasks.test {
 
 Podemos encontrar el informe HTML de cobertura de prueba dentro del *directorio `$buildDir/reports/jacoco/test`* .
 
-## 11. Agrupación de pruebas con etiquetas
+### 11. Agrupación de pruebas con etiquetas
 
 A veces, queremos ejecutar solo ciertas pruebas en un entorno específico. Por ejemplo, es posible que deseemos evitar ejecutar algunas pruebas lentas como parte de la verificación de una pull request git. Para hacer eso, primero debemos etiquetar nuestras pruebas:
 
@@ -285,15 +285,12 @@ class SlowTests : ShouldSpec({})
 
 ### 12. Conclusión
 
-Se han visto varias funcionalidades básicas proporcionadas por el marco Kotest. y los ejemplos de código se pueden encontrar [en GitHub](https://github.com/Baeldung/kotlin-tutorials/tree/master/kotlin-testing) .
+Se han visto varias funcionalidades básicas proporcionadas por el marco Kotest. y los ejemplos de código se pueden encontrar [en GitHub](https://github.com/Baeldung/kotlin-tutorials/tree/master/kotlin-testing).
 
 ## Recursos
 
-* [¿Qué es TDD?](https://www.digite.com/es/agile/desarrollo-dirigido-por-pruebas-tdd/)
 * [¿Cómo elaborar casos de prueba?](https://surprograma.github.io/libro-disenio-oop/docs/pruebas-automatizadas/elaborar-casos-prueba/)
 * [Test unitario avanzado](http://wiki.uqbar.org/wiki/articles/testeo-unitario-avanzado.html)
-* [Diseño de Software](https://surprograma.github.io/libro-disenio-oop/docs/intro/)
 
 ## Fuente
-
-* [TDD Veloz](https://www.youtube.com/watch?v=8MGtLPFtbQ8)
+* [Introduction to Kotest](https://www.baeldung.com/kotlin/kotest)

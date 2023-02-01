@@ -447,7 +447,7 @@ fun givenServiceMock_whenStubbingTwoScenarios_thenCorrectlyVerified() {
 Como podemos ver en el código anterior, agregamos la función `addHelloWorld()` dos veces, según nuestros requisitos.  Por lo tanto, `callOriginal()` nos permite decidir el comportamiento de los stubings de forma flexible.
 
 
-## 12. Conclusión
+### 12. Conclusión
 
 Se han visto algunas de las características más importantes de MockK. MockK es una poderosa biblioteca para el lenguaje Kotlin y proporciona muchas características útiles. Para más información sobre MockK, podemos consultar la  [documentación en la web de MockK](https://mockk.io/).
 

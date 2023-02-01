@@ -4,15 +4,15 @@ description: Mockk
 summary: Mockk
 authors:
 - Eduardo Fdez
-date: 2022-09-18
-icon: material/security
-permalink: /edes/unidad3/3.4
-categories:
-  - EDES
-tags:
-  - EDES
-  - Software
-  - Hardware
+  date: 2022-09-18
+  icon: material/security
+  permalink: /edes/unidad3/3.4
+  categories:
+    - EDES
+      tags:
+    - EDES
+    - Software
+    - Hardware
 ---
 ## MockK: una biblioteca burlona para Kotlin
 
@@ -26,11 +26,11 @@ En Kotlin, todas las clases y métodos son finales.  Si bien esto nos ayuda a es
 
 La mayoría de las bibliotecas que simulan objetos (mock) que se usan en JVM tienen problemas con las clases finales usadas para mocking or stubbing. Por supuesto, podemos agregar la palabra clave `open` a las clases y métodos que queremos "mockear" (simular). Pero cambiar el código solo para poder mockearla no parece el mejor enfoque.
 
-La biblioteca MockK ofrece compatibilidad con las características y construcciones del lenguaje Kotlin.  MockK construye proxies para clases mockeadas. Esto provoca cierta degradación del rendimiento, pero los beneficios generales que nos brinda MockK valen la pena.
+La biblioteca MockK ofrece compatibilidad con las características y construcciones del lenguaje Kotlin.  MockK construye proxies para las clases mockeadas. Esto provoca cierta degradación del rendimiento, pero los beneficios generales que nos brinda MockK valen la pena.
 
 ### 3. Instalación
 
-La configuración del proyecto consiste en añadir las dependencias de [mockk](https://search.maven.org/search?q=g:io.mockk%20a:mockk) dentro del fichero `build.gradle.kts`
+La configuración del proyecto consiste en añadir las dependencias de [mockk](https://search.maven.org/search?q=g:io.mockk%20a:mockk) al fichero `build.gradle.kts`
 
 
 ```kotlin
@@ -41,9 +41,12 @@ dependencies {
 }
 ```
 
+Ten en cuenta que estamos estableciendo la version `1.13.4`, en el [repositorio Maven ](https://mvnrepository.com/artifact/io.mockk/mockk) puedes consultar cuál es la última versión.
+
+
 ### 4. Ejemplo básico
 
-Vamos a crear un servicio que nos gustaría simular:
+Vamos a crear un servicio que podremos usar como ejemplo para "mockear" (simular) su funcionamiento:
 
 ```Kotlin
 class TestableService {
@@ -74,18 +77,16 @@ fun givenServiceMock_whenCallingMockedMethod_thenCorrectlyVerified() {
     assertEquals("Expected Output", result)
 }
 ```
+Revisando las partes mas importantes del código anterior:
+- Para definir el objeto mockeado, hemos usado el método `mockk<…>()`.
+- En el siguiente paso, definimos el comportamiento de nuestro objeto mockeado. Para este propósito, hemos creado un bloque `every` que describe qué respuesta debe devolverse `returns "Expected"` para qué llamada, es decir, la llamada a un método `service.getDataFromDb` y con un argumento concreto `("Expected Param")`
+- Finalmente, usamos el bloque de `verify` para verificar si el simulacro se invocó como esperábamos, indicando que al menos se ha tenido que invocar una vez el método `service.getDataFromDb("Expected Param")`.
 
-Para definir el objeto mockeado, hemos usado el método `mockk<…>()`.
+### 5. Ejemplo de uso de las anotaciones
 
-En el siguiente paso, definimos el comportamiento de nuestro objeto mockeado.  Para este propósito, hemos creado un bloque `every` que describe qué respuesta debe devolverse para qué llamada, es decir, la llamada a un método y con un argumento concreto.
+Es posible usar las anotaciones MockK `@MockK` para crear todo tipo de objetos mocks. Vamos a crear un servicio que requiera de dos instancias de nuestro `TestableService`:
 
-Finalmente, usamos el bloque de `verify` para verificar si el simulacro se invocó como esperábamos.
-
-## **5. Ejemplo de anotación**
-
-Es posible usar anotaciones MockK para crear todo tipo de simulacros.  Vamos a crear un servicio que requiera dos instancias de nuestro  *TestableService*  :
-
-```java
+```kotlin
 class InjectTestService {
     lateinit var service1: TestableService
     lateinit var service2: TestableService
@@ -93,14 +94,14 @@ class InjectTestService {
     fun invokeService1(): String {
         return service1.getDataFromDb("Test Param")
     }
-}Copiar
+}
 ```
 
-*InjectTestService*  contiene dos campos con el mismo tipo.  No será un problema para MockK.  MockK intenta hacer coincidir las propiedades por nombre, luego por clase o superclase.  Tampoco  **tiene problema con la inyección de objetos en campos privados**  .
+El servicio que hemos creado, `InjectTestService`, contiene dos variables de instancia del mismo tipo. Esto no será un problema para MockK, ya que MockK intenta hacer coincidir las propiedades por nombre y luego por clase o superclase. Además, tampoco **tiene problema con la inyección de objetos en campos privados**.
 
-Vamos a burlarnos de  *InjectTestService*  en una prueba usando anotaciones:
+Vamos a mockear el servicio `InjectTestService` en el siguiente test haciendo uso de las anotaciones:
 
-```java
+```kotlin
 class AnnotationMockKUnitTest {
 
     @MockK
@@ -117,18 +118,20 @@ class AnnotationMockKUnitTest {
 
     // Tests here
     ...
-}Copiar
+}
 ```
 
-En el ejemplo anterior, hemos usado la  anotación  *@InjectMockKs  **.  * Esto especifica un objeto donde se deben inyectar los simulacros definidos.  Por defecto, inyecta variables que aún no están asignadas.  Podemos usar  *@OverrideMockKs*  para anular campos que ya tienen un valor.
+Revisemos lo más importante del código anterior:
+- Con la anotación `@MoockK`, hemos definido (marcado para crear) los objetos mocks `service1` y `service2` que vamos a inyectar en el servicio `objectUnderTest`.
+- Hemos usado la anotación `@InjectMockKs` para especificar el objeto `objectUnderTest` donde se deben inyectar los objetos mocks definidos.  
+- Por defecto, los objetos mocks se inyectan en variables que aún no están asignadas. Aunque, podemos usar `@OverrideMockKs` para anular campos que ya tienen un valor.
+- Por último, MockK requiere que se llame a `MockKAnnotations.init(…)` en el objeto que declara variables con anotaciones. Para Junit5, se puede reemplazar con `@ExtendWith(MockKExtension::class)`.
 
-**MockK requiere que se llame a  *MockKAnnotations.init(…)*  en un objeto que declara una variable con anotaciones.  ** Para  [Junit5](https://www.baeldung.com/junit-5)  , se puede reemplazar con  *@ExtendWith(MockKExtension::class)*  .
+### 6. Spy
 
-## **6. Espía**
+`Spy` permite en un objeto mezclar el comportamiento de objetos reales y mockeados, es decir, mockear solo una parte particular de alguna clase. Por ejemplo, se puede usar para simular un método específico del servicio  `TestableService`, el resto del servicio funcionará como se definió. Si no se define un comportamiento nuevo, el objeto entero funcionara como se definió en su clases, pero podremos usar sobre él verificaciones haciendo uso de `verify`. Veamos el ejemplo:
 
-**Spy permite burlarse solo de una parte particular de alguna clase.  ** Por ejemplo, se puede usar para simular un método específico en  *TestableService:*
-
-```java
+```kotlin
 @Test
 fun givenServiceSpy_whenMockingOnlyOneMethod_thenOtherMethodsShouldBehaveAsOriginalObject() {
     // given
@@ -146,28 +149,32 @@ fun givenServiceSpy_whenMockingOnlyOneMethod_thenOtherMethodsShouldBehaveAsOrigi
  
     // then
     assertEquals("I don't want to!", secondResult)
-}Copiar
+}
 ```
 
-En el ejemplo, hemos usado el método  *spyk*  para crear un objeto espía.  También podríamos haber usado la anotación  *@SpyK*  para lograr lo mismo:
+Revisemos lo más importante del código anterior:
+- Hemos usado el método `spyk` para crear un objeto spyk (espía) de la clase `TestableService`.  
+- También hemos usado `every` para definir el comportamiento del método que nos interesa, en concreto `service.getDataFromDb(any())`, como vimos en ejemplos anteriores.
 
-```java
+También podemos haber usado la anotación `@SpyK` para lograr lo mismo que hicimos con la anotación `@MockK`. Veamos un ejemplo:
+
+```Kotlin
 class SpyKUnitTest {
 
     @SpyK
     lateinit var service: TestableService
 
     // Tests here
-}Copiar
+}
 ```
 
-## **7. Simulacro relajado**
+### 7. Mockeado relajado
 
-Un objeto simulado típico lanzará  *MockKException*  si intentamos llamar a un método donde no se ha especificado el valor de retorno.
+Un objeto mock típico lanzará la excepción `MockKException` si intentamos llamar a un método donde no se ha especificado el valor de retorno, es decir, en donde no hayamos definido un comportamiento simulado.
+ 
+Si no queremos describir el comportamiento de cada método, podemos usar un proceso de mockeado relajado. Este tipo de mockeado proporciona valores predeterminados para cada función. Por ejemplo, el tipo de retorno `String` devolverá un `String` vacío. He aquí un breve ejemplo:
 
-**Si no queremos describir el comportamiento de cada método, podemos usar un simulacro relajado.  ** Este tipo de simulacro proporciona valores predeterminados para cada función.  Por ejemplo, el tipo de retorno  *String*  devolverá un  *String*  vacío .  He aquí un breve ejemplo:
-
-```java
+```Kotlin
 @Test
 fun givenRelaxedMock_whenCallingNotMockedMethod_thenReturnDefaultValue() {
     // given
@@ -178,36 +185,36 @@ fun givenRelaxedMock_whenCallingNotMockedMethod_thenReturnDefaultValue() {
  
     // then
     assertEquals("", result)
-}Copiar
+}
 ```
 
-En el ejemplo, hemos usado el método  *mockk*  con el atributo  *relajado*  para crear un objeto simulado relajado.  También podríamos haber usado la anotación  *@RelaxedMockK*  :
+En el ejemplo, hemos usado el método `mockk` con el argumento `relaxed = True` para crear un objeto mockeado relajado. También podríamos haber usado la anotación `@RelaxedMockK`:
 
-```java
+```kotlin
 class RelaxedMockKUnitTest {
 
     @RelaxedMockK
     lateinit var service: TestableService
 
     // Tests here
-}Copiar
+}
 ```
 
-## **8. Simulacro de objeto**
+### 8. Mockeado de objetos
 
-Kotlin proporciona una manera fácil de declarar un singleton usando la palabra clave  *object*  :
+Kotlin proporciona una manera fácil de declarar un singleton usando la palabra clave `object`:
 
-```java
+```Kotlin
 object TestableService {
     fun getDataFromDb(testParameter: String): String {
         // query database and return matching value
     }
-}Copiar
+}
 ```
 
-Sin embargo, la mayoría de las bibliotecas de simulación tienen un problema con la simulación de instancias únicas de Kotlin.  Debido a esto, MockK proporciona el método  *mockkObject*  .  Vamos a ver:
+La mayoría de las bibliotecas para crear objetos mocks tienen un problema con el mockeado las instancias de objetos singleton de Kotlin. Para resolver esto, MockK proporciona el método `mockkObject`.  Un ejemplo de uso:
 
-```java
+```Kotlin
 @Test
 fun givenObject_whenMockingIt_thenMockedMethodShouldReturnProperValue(){
     // given
@@ -225,14 +232,14 @@ fun givenObject_whenMockingIt_thenMockedMethodShouldReturnProperValue(){
  
     // then return mocked response
     assertEquals("Mocked Output", secondResult)
-}Copiar
+}
 ```
 
-## **9. Burla jerárquica**
+### 9. Mockeado jerárquico
 
-Otra característica útil de MockK es la capacidad de simular objetos jerárquicos.  Primero, creemos una estructura de objeto jerárquica:
+Otra característica útil de MockK es la capacidad de mockear objetos jerárquicos. Parar entenderlo, primero, creemos una estructura de objeto jerárquica:
 
-```java
+```Kotlin
 class Foo {
     lateinit var name: String
     lateinit var bar: Bar
@@ -240,12 +247,12 @@ class Foo {
 
 class Bar {
     lateinit var nickname: String
-}Copiar
+}
 ```
 
-La clase  *Foo*  contiene un campo de tipo  *Bar.  * Ahora, podemos simular la estructura en un solo paso.  Vamos a burlarnos de los  campos de  *nombre*  y  *apodo :*
+La clase `Foo` contiene un campo de tipo `Bar`. Ahora, podemos mockear la estructura en un solo paso. Vamos a mockear los campos `name` y `bar`:
 
-```java
+```Kotlin
 @Test
 fun givenHierarchicalClass_whenMockingIt_thenReturnProperValue() {
     // given
@@ -263,14 +270,14 @@ fun givenHierarchicalClass_whenMockingIt_thenReturnProperValue() {
     // then
     assertEquals("Karol", name)
     assertEquals("Tomato", nickname)
-}Copiar
+}
 ```
 
-## **10. Captura de parámetros**
+### 10. Captura de argumentos
 
-Si necesitamos capturar los parámetros pasados a un método, podemos usar  *CapturingSlot*  o  *MutableList.  * Es útil cuando queremos tener alguna lógica personalizada en un bloque de  *respuesta*  o simplemente necesitamos verificar el valor de los argumentos pasados.  Aquí hay un ejemplo de  *CapturingSlot:*
+Si necesitamos capturar los valores de los parámetros pasados a un método, podemos usar `CapturingSlot` o `MutableList`. Es útil cuando queremos tener alguna lógica personalizada en un bloque `answers` o simplemente necesitamos verificar el valor de los parámetros pasados. Aquí hay un ejemplo de `CapturingSlot`:
 
-```java
+```Kotlin
 @Test
 fun givenMock_whenCapturingParamValue_thenProperValueShouldBeCaptured() {
     // given
@@ -286,9 +293,9 @@ fun givenMock_whenCapturingParamValue_thenProperValueShouldBeCaptured() {
 }Copiar
 ```
 
-*MutableList*  se puede usar para capturar y almacenar valores de argumentos específicos para todas las invocaciones de métodos:
+`MutableList` se puede usar para capturar y almacenar todos los valores tomados por el parámetro en las distintas invocaciones del método:
 
-```java
+```Kotlin
 @Test
 fun givenMock_whenCapturingParamsValues_thenProperValuesShouldBeCaptured() {
     // given
@@ -304,44 +311,48 @@ fun givenMock_whenCapturingParamsValues_thenProperValuesShouldBeCaptured() {
     assertEquals(2, list.size)
     assertEquals("Expected Param 1", list[0])
     assertEquals("Expected Param 2", list[1])
-}Copiar
+}
 ```
 
-## 11. Unidad  de retorno de funciones de creación de apéndices
+### 11. Funciones Stubbing que retornan Unit
+Un stub es, en el contexto del testeo del software, un trozo de código usado como sustituto de alguna otra funcionalidad. Un stub puede simular el comportamiento de código existente (tal como un procedimiento en una máquina remota) o ser el sustituto temporal para un código aún no desarrollado. Los stubs son, por tanto, muy útiles para porting, computación distribuida así como en el desarrollo y pruebas de software en general.
 
-**En Kotlin, si el tipo de devolución de una función es  [*Unit*](https://www.baeldung.com/kotlin/void-type#unit_in_kotlin)  , significa que la función no devuelve nada.  ** Es bastante similar al  método  *void de Java.*
+En Kotlin, si el tipo de retorno de una función es `Unit`, significa que la función no devuelve nada. Es bastante similar al método `void` de Java.
 
-Agreguemos una  función  *Unit a la clase  **TestableService*  :
+Para ejemplificarlo, agreguemos una función que retorna `Unit` a la clase `TestableService`:
 
 ```kotlin
 fun addHelloWorld(strList: MutableList<String>) {
     println("addHelloWorld() is called")
     strList += "Hello World!"
-}Copiar
+}
 ```
 
-Como muestra el código anterior, cuando se llama a la función  *addHelloWorld()*  , imprime una línea en la consola.  Luego, la  *cadena "Hello World"*  se agrega al objeto  *MutableList<String>*  dado .
+Como muestra el código anterior, cuando se llama a la función `addHelloWorld()`, imprime una línea en la consola.  Luego, el `String` `"Hello World"` se agrega al objeto `MutableList<String>` recibido por parámetro.
 
-En esta sección, veamos cómo convertir una función que devuelve  *Unit*  .  Por lo general, dependiendo de diferentes circunstancias, queremos controlar un stub de función de  *unidad*  de dos maneras:
+En esta sección, vamos a ver cómo hacer un [stub](https://es.wikipedia.org/wiki/Stub) de una función que devuelve `Unit`. Por lo general, dependiendo de diferentes circunstancias, queremos controlar un stub de una función que retorna `Unit` de dos maneras:
 
 * hacer que la llamada a la función no haga nada, o en otras palabras, omitir la ejecución de la función
 * llamando a la función real
 
-A continuación, tomaremos la función  *addHelloWorld()*  como ejemplo y abordaremos cómo lograrlos usando MockK.
+A continuación, usaremos la función `addHelloWorld()` como ejemplo y veremos cómo lograrlo usando MockK.
 
-### 11.1.  Hacer que la función no haga nada
+#### 11.1. Hacer que la función no haga nada
 
-Hay varias formas de omitir una función de  *Unidad*  usando MockK:
+Hay varias formas de omitir la ejecución de una función que retorna `Unit` usando MockK:
 
 ```kotlin
 every { addHelloWorld(any()) } returns Unit
 every { addHelloWorld(any()) } answers { Unit }
-every { addHelloWorld(any()) } just runsCopiar
+every { addHelloWorld(any()) } just runs
 ```
 
-Algunas de ellas no son nuevas para nosotros, como las  *devoluciones…*  y las  *respuestas {…}*  .  Sin embargo, el último, "  *cada {... } simplemente se ejecuta*  " es fácil de entender.
+Algunas de ellas no son nuevas para nosotros
+- `returns …` 
+- `answers {…}`, 
+- y el último, `every {... } just runs` es fácil de entender.
 
-Entonces, primero probemos si puede omitir la ejecución de la función original y luego entendamos cómo funciona "  *simplemente se ejecuta*  ":
+Entonces, primero probemos si se puede omitir la ejecución de la función original y luego entendamos cómo funciona `just runs`:
 
 ```kotlin
 @Test
@@ -356,35 +367,33 @@ fun givenServiceMock_whenCallingMethodReturnsUnit_thenCorrectlyVerified() {
                                                                          
     // then
     assertTrue(myList.isEmpty())
-}Copiar
+}
 ```
 
-Como muestra la prueba anterior, agregamos la función  *addHelloWorld()*  usando "  *simplemente se ejecuta*  ".  Y luego, llamamos a la función y le pasamos una  *MutableList*  vacía .
+Como muestra el código anterior, 
+- Agregamos la función `addHelloWorld()` usando `just runs`. 
+- Luego, llamamos a la función y le pasamos una `MutableList` vacía.
+- Por último, si omitimos la ejecución de la función con éxito, `“Hello World!”` no debe aparecer en la lista, pasada como parámetro, después de la invocación. 
+El test es ok tras de ejecutarlo.
 
-Si omitimos la ejecución de la función con éxito,  *"¡Hola mundo!"  * no debe agregarse a la lista dada después de la invocación.
-
-La prueba pasa si le damos una ejecución.
-
-Ahora entendamos cómo "  *simplemente  * *se ejecuta*  " omite la llamada de función real.  Primero, echemos un vistazo a la implementación de la función  *just()*  :
+Ahora entendamos cómo `just runs` omite la llamada de la función real. Primero, echemos un vistazo a la implementación de la función `just()`:
 
 ```kotlin
 infix fun MockKStubScope<Unit, Unit>.just(runs: Runs) = answers(ConstantAnswer(Unit))
-Copiar
 ```
 
-Como podemos ver,  **es una función  [*infija*](https://www.baeldung.com/kotlin/infix-functions)  .  Por lo tanto, podemos escribir    *just(runs)*  en una forma mejor legible:  *just runs*  .  ** Además,    *Runs es un  *[objeto](https://www.baeldung.com/kotlin/objects#objects-in-kotlin)  ficticio    , y    *Runs*  es simplemente un  [*alias tipográfico*](https://www.baeldung.com/kotlin/type-aliases)  de  *Runs*  :
+Como podemos ver, `just` es una función `infix` (infija). Por lo tanto, podemos escribir `just(runs)` como una forma mas fácil de leer:`just runs`. Además, `Runs` es un objeto dummy, y `runs` es simplemente un `typealias` de `Runs`:
 
 ```kotlin
 object Runs
 typealias runs = Runs
-Copiar
 ```
 
-Además, si agregamos una función  *Unit*  como  *ejecuta*  , llama a la función  *answers()*  y  *devuelve*  una respuesta constante:  *Unit.*
+Por último, si creamos un stub de una función que retorna `Unit` como  `just runs`, se llama a la función `answers()`  y retorna una constante: `Unit`.
 
-### 11.2.  Llamar a la función original
+#### 11.2. Llamar a la función original
 
-Ahora, veamos cómo convertir una función Unit para hacer que llame a la función real.  **Para llamar a la función original, podemos usar este enfoque:  *cada {... } responde { callOriginal() }*  .**
+Ahora, veamos cómo crear un stub de una función que retorna `Unit` para hacer que llame a la función real.  Para llamar a la función original, podemos usar este enfoque:  `every { … } answers { callOriginal() }`
 
 A continuación, veamos cómo se usa en una prueba real:
 
@@ -402,16 +411,16 @@ fun givenServiceMock_whenCallingOriginalMethod_thenCorrectlyVerified() {
     // then
     assertEquals(1, myList.size)
     assertEquals("Hello World!", myList.first())
-}Copiar
+}
 ```
 
-La prueba pasa cuando la ejecutamos.  Entonces,  *"¡Hola mundo!"  * se agrega a    *myList*  después de llamar a la función.  Sin embargo, podemos preguntar, si aplicamos stub a una función y le pedimos que llame a la implementación original, ¿por qué nos molestamos en stub?
+El test es ok tras de ejecutarlo. Entonces, `“Hello World!”`  se agrega a `myList` después de llamar a la función.  Sin embargo, podemos preguntarnos: si creamos un stub de una función y le pedimos que llame a la implementación original, ¿por qué nos molestamos en crear el stub?
 
 A continuación, veamos un ejemplo de cuándo es útil.
 
-### 11.3.  ¿Cuándo necesitamos  *callOriginal()*  ?
+#### 11.3. ¿Cuándo necesitamos `callOriginal()`?
 
-Digamos que en nuestra prueba, queremos llamar a la función  *addHelloWorld()*  con diferentes parámetros.  Si la lista que pasa a la función contiene la cadena  *"Kai"*  , queremos llamar a la función real.  De lo contrario, nos gustaría omitir la llamada a la función:
+Digamos que en nuestra prueba, queremos llamar a la función `addHelloWorld()` con diferentes parámetros. Si la lista que se le pasa a la función contiene la cadena `"Kai"`, queremos llamar a la función real.  De lo contrario, nos gustaría omitir la llamada a la función:
 
 ```kotlin
 @Test
@@ -431,32 +440,25 @@ fun givenServiceMock_whenStubbingTwoScenarios_thenCorrectlyVerified() {
     // then
     assertEquals(listOf("Kai", "Hello World!"), kaiList)
     assertTrue(emptyList.isEmpty())
-}Copiar
+}
 ```
 
-Como podemos ver, agregamos la función  *addHelloWorld()*  dos veces, según nuestros requisitos.  Por lo tanto,  *callOriginal()*  nos permite decidir el comportamiento de los stubings de forma flexible.
-
-<iframe id="google_ads_iframe_/15184186,7114245/baeldung_incontent_4_0" name="google_ads_iframe_/15184186,7114245/baeldung_incontent_4_0" title="contenido de anuncios de terceros" width="1086" height="280" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Anuncio" tabindex="0" data-google-container-id="9" data-load-complete="true"></iframe>
-
-[![estrella libre](https://a.pub.network/core/imgs/fslogo-green.svg)](https://freestar.com/?utm_campaign=branding&utm_medium=banner&utm_source=baeldung.com&utm_content=baeldung_incontent_4)
-
-## **12. Conclusión**
-
-En este artículo, hemos discutido las características más importantes de MockK.  MockK es una poderosa biblioteca para el lenguaje Kotlin y proporciona muchas características útiles.  Para más información sobre MockK, podemos consultar la  [documentación en la web de MockK](https://mockk.io/)  .
+Como podemos ver en el código anterior, agregamos la función `addHelloWorld()` dos veces, según nuestros requisitos.  Por lo tanto, `callOriginal()` nos permite decidir el comportamiento de los stubings de forma flexible.
 
 
+## 12. Conclusión
 
-12. Conclusión
+Se han visto algunas de las características más importantes de MockK. MockK es una poderosa biblioteca para el lenguaje Kotlin y proporciona muchas características útiles. Para más información sobre MockK, podemos consultar la  [documentación en la web de MockK](https://mockk.io/).
 
-Se han visto varias funcionalidades básicas proporcionadas por el marco Kotest. y los ejemplos de código se pueden encontrar [en GitHub](https://github.com/Baeldung/kotlin-tutorials/tree/master/kotlin-testing) .
 
 ## Recursos
-
+* [¿Que es un Stub?](https://es.wikipedia.org/wiki/Stub)
+* [Mock Object](https://en.wikipedia.org/wiki/Mock_object)
+* [Stub, Spy, Mock](https://gabimoreno.soy/que-diferencias-hay-entre-un-stub-un-spy-y-un-mock)
 * [¿Qué es TDD?](https://www.digite.com/es/agile/desarrollo-dirigido-por-pruebas-tdd/)
 * [¿Cómo elaborar casos de prueba?](https://surprograma.github.io/libro-disenio-oop/docs/pruebas-automatizadas/elaborar-casos-prueba/)
 * [Test unitario avanzado](http://wiki.uqbar.org/wiki/articles/testeo-unitario-avanzado.html)
 * [Diseño de Software](https://surprograma.github.io/libro-disenio-oop/docs/intro/)
 
 ## Fuente
-
-* [TDD Veloz](https://www.youtube.com/watch?v=8MGtLPFtbQ8)
+* [MockK: A Mocking Library for Kotlin](https://www.baeldung.com/kotlin/mockk)

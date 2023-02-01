@@ -3,17 +3,18 @@ title: "UD 3 - 3.4 Mockk"
 description: Mockk
 summary: Mockk
 authors:
-- Eduardo Fdez
-  date: 2022-09-18
-  icon: material/security
-  permalink: /edes/unidad3/3.4
-  categories:
-    - EDES
-      tags:
-    - EDES
-    - Software
-    - Hardware
+  - Eduardo Fdez
+date: 2023-01-30
+icon: material/security
+permalink: /edes/unidad3/3.4
+categories:
+  - EDES
+tags:
+  - EDES
+  - Software
+  - Mock
 ---
+
 ## MockK: una biblioteca burlona para Kotlin
 
 ### 1. Información general

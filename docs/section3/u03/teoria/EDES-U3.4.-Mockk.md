@@ -3,17 +3,18 @@ title: "UD 3 - 3.4 Mockk"
 description: Mockk
 summary: Mockk
 authors:
-- Eduardo Fdez
-  date: 2022-09-18
-  icon: material/security
-  permalink: /edes/unidad3/3.4
-  categories:
-    - EDES
-      tags:
-    - EDES
-    - Software
-    - Hardware
+  - Eduardo Fdez
+date: 2023-01-30
+icon: material/security
+permalink: /edes/unidad3/3.4
+categories:
+  - EDES
+tags:
+  - EDES
+  - Software
+  - Mock
 ---
+
 ## MockK: una biblioteca burlona para Kotlin
 
 ### 1. Información general
@@ -446,7 +447,7 @@ fun givenServiceMock_whenStubbingTwoScenarios_thenCorrectlyVerified() {
 Como podemos ver en el código anterior, agregamos la función `addHelloWorld()` dos veces, según nuestros requisitos.  Por lo tanto, `callOriginal()` nos permite decidir el comportamiento de los stubings de forma flexible.
 
 
-## 12. Conclusión
+### 12. Conclusión
 
 Se han visto algunas de las características más importantes de MockK. MockK es una poderosa biblioteca para el lenguaje Kotlin y proporciona muchas características útiles. Para más información sobre MockK, podemos consultar la  [documentación en la web de MockK](https://mockk.io/).
 

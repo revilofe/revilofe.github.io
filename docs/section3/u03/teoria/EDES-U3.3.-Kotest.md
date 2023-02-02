@@ -3,16 +3,16 @@ title: "UD 3 - 3.3 Kotest"
 description: Kotest
 summary: Kotest
 authors:
-- Eduardo Fdez
-date: 2022-09-18
+  - Eduardo Fdez
+date: 2023-01-15
 icon: material/security
 permalink: /edes/unidad3/3.3
 categories:
-- EDES
+  - EDES
 tags:
-- EDES
-- Software
-- Hardware
+  - EDES
+  - Software
+  - kotest
 ---
 
 ## Introducción a Kotest

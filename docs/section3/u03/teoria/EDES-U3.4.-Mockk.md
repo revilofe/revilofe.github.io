@@ -463,4 +463,4 @@ Se han visto algunas de las características más importantes de MockK. MockK es
 * 
 ## Fuente
 * [MockK: A Mocking Library for Kotlin](https://www.baeldung.com/kotlin/mockk)
-* [MockK Guidebook](https://notwoods.github.io/mockk-guidebook/docs/getting-started/)
+* [MockK Guidebook](https://notwoods.github.io/mockk-guidebook/)

@@ -460,6 +460,7 @@ Se han visto algunas de las características más importantes de MockK. MockK es
 * [¿Cómo elaborar casos de prueba?](https://surprograma.github.io/libro-disenio-oop/docs/pruebas-automatizadas/elaborar-casos-prueba/)
 * [Test unitario avanzado](http://wiki.uqbar.org/wiki/articles/testeo-unitario-avanzado.html)
 * [Diseño de Software](https://surprograma.github.io/libro-disenio-oop/docs/intro/)
-
+* 
 ## Fuente
 * [MockK: A Mocking Library for Kotlin](https://www.baeldung.com/kotlin/mockk)
+* [MockK Guidebook](https://notwoods.github.io/mockk-guidebook/)

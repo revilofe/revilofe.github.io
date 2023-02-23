@@ -14,7 +14,7 @@ tags:
 ---
 # Funciones de alcance (scope functions)
 
-Kotlin proporciona un conjunto de funciones que ayudan a aclarar un poco más el código y hacen la programación unpoco mas divertiadas. Estas funciones se llaman scope functions.
+Kotlin proporciona un conjunto de funciones que ayudan a aclarar un poco más el código y hacen la programación un poco mas divertida. Estas funciones se llaman scope functions.
 
 > **Scope functions:** el propósito de estas funciones es ejecutar un bloque de código dentro del contexto de un objeto.
 

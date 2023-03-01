@@ -1371,6 +1371,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#kotlin-command-line-arguments" class="md-nav__link">
+    Kotlin Command-Line Arguments
+  </a>
+  
+    <nav class="md-nav" aria-label="Kotlin Command-Line Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linea-de-comandos-en-main" class="md-nav__link">
+    Línea de comandos en Main
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fuente" class="md-nav__link">
     Fuente
   </a>
@@ -2327,6 +2347,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#kotlin-command-line-arguments" class="md-nav__link">
+    Kotlin Command-Line Arguments
+  </a>
+  
+    <nav class="md-nav" aria-label="Kotlin Command-Line Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linea-de-comandos-en-main" class="md-nav__link">
+    Línea de comandos en Main
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fuente" class="md-nav__link">
     Fuente
   </a>
@@ -2642,13 +2682,59 @@
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>10 | b...1 | 2.10% |         foo
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>20 |    b2 | 0.33% |         bar
 </code></pre></div>
+<h2 id="kotlin-command-line-arguments">Kotlin Command-Line Arguments<a class="headerlink" href="#kotlin-command-line-arguments" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/Kotlin/kotlinx-cli">kotlinx-cli</a> facilita el parseo y procesado de los argumentos que se le pasan al programa. Aunque podemos realizarlo nosotros mismos. </p>
+<h3 id="linea-de-comandos-en-main">Línea de comandos en <code>Main</code><a class="headerlink" href="#linea-de-comandos-en-main" title="Permanent link">&para;</a></h3>
+<p>Al invocar un programa desde la línea de comandos, puedes pasarle un número variable de argumentos. Por ej: <code>&gt; tar -vzf file.tar.gz</code></p>
+<p>Para capturar los argumentos de la línea de comandos, debes proporcionar un parámetro predefinido a <code>main()</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1">// MainArgs.kt</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="n">imprimir</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">}</span>
+</code></pre></div>
+<p>El parámetro se llama tradicionalmente <code>args</code> aunque puede llamarlo de cualquier manera, y el tipo de <code>args</code> solo puede ser <code>Array&lt;String&gt;</code> (Array of String).</p>
+<p>También se puede usar el compilador kotlinc para crear un programa que se ejecuta desde línea de comandos.</p>
+<p>Una vez que haya creado y guardado y compilado el código para un programa llamado <code>MainArgs.kt</code>, escriba lo siguiente en el símbolo del sistema:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>&gt;<span class="w"> </span>kotlinc<span class="w"> </span>MainArgsKt
+</code></pre></div>
+<p>Puedes proporcionar los argumentos de la línea de comandos después de la invocación del programa, así:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>&gt;<span class="w"> </span>kotlin<span class="w"> </span>MainArgsKt<span class="w"> </span>aaa<span class="w"> </span><span class="m">42</span><span class="w"> </span><span class="m">3</span>.14159.
+</code></pre></div>
+Y por salida estandar, saldrá lo siguiente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>aaa
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>42
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>3.14159
+</code></pre></div>
+<p>Si una vez leídos los parśmetros quieres convertir un parámetro <code>String</code> en un tipo específico, Kotlin proporciona funciones de conversión, como<code>toInt()</code> para convertir a <code>Int</code> y <code>toFloat()</code> para convertir a <code>Float</code>...</p>
+<p>El uso de estos métodos supone que los argumentos de la línea de comandos aparecen en un orden particular.</p>
+<p>Por ejemplo, en el siguiente código, el programa espera un <code>String</code>, seguido de algo convertible a <code>Int</code>, seguido de algo convertible a <code>Float</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1">// MainArgConversion.kt`</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="na">size</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">primero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="m">0</span><span class="o">]</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">segundo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="p">.</span><span class="na">toInt</span><span class="w"> </span><span class="p">()</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">tercero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="m">2</span><span class="o">]</span><span class="p">.</span><span class="na">toFloat</span><span class="w"> </span><span class="p">()</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;</span><span class="si">$</span><span class="n">primero</span><span class="s"> </span><span class="si">$</span><span class="n">segundo</span><span class="s"> </span><span class="si">$</span><span class="n">tercero</span><span class="s">&quot;</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="p">}</span>
+</code></pre></div>
+<p>La primera línea de <code>main()</code> cierra el programa si no hay suficientes argumentos.</p>
+<p>Si no proporciona algo convertible a <code>Int</code> y <code>Float</code> como segundo y tercer argumento de la línea de comandos, verá errores de tiempo de ejecución.</p>
+<p>Si compilas y ejecutas <code>MainArgConversion.kt</code> con los mismos argumentos de línea de comandos que usamos antes, verás la siguiente salida:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>aaa 42 3.14159
+</code></pre></div>
 <h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://hackaprende.com/2020/11/25/formatos-de-string-en-kotlin/">Formatos de String en Kotlin</a></li>
-<li><a href="https://stonesoupprogramming.com/2017/11/17/kotlin-string-formatting/">Kotlin String Formatting</a></li>
-<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/format.html">Format</a></li>
-<li><a href="https://www.techiedelight.com/add-padding-to-a-string-in-kotlin/">Add padding to a string in Kotlin</a></li>
-<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/pad-start.html">padStart</a></li>
+<li><a href="https://hackaprende.com/2020/11/25/formatos-de-string-en-kotlin/">Formatos de String en Kotlin</a>   </li>
+<li><a href="https://stonesoupprogramming.com/2017/11/17/kotlin-string-formatting/">Kotlin String Formatting</a>   </li>
+<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/format.html">Format</a>   </li>
+<li><a href="https://www.techiedelight.com/add-padding-to-a-string-in-kotlin/">Add padding to a string in Kotlin</a>   </li>
+<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/pad-start.html">padStart</a>   </li>
+<li><a href="https://kotlindoc.blogspot.com/2019/04/io-entrada-y-salida-de-datos-en-consola.html">IO Entra y salida de datos en consola</a>   </li>
+<li><a href="https://www.demo2s.com/kotlin/kotlin-command-line-arguments.html">Kotlin command line arguments</a>   </li>
 </ul>
 
 

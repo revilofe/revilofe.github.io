@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Cadenas">
+        <meta name="description" content="Lectura y escritura de archivos">
       
       
         <meta name="author" content="Eduardo Fdez">
@@ -25,7 +25,7 @@
     
     
       
-        <title>UD 3 - 3.0 Cadenas - R Z O</title>
+        <title>UD 7 - 7.4 Lectura y escritura de archivos - R Z O</title>
       
     
     
@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cadenas" class="md-skip">
+        <a href="#lectura-y-escritura-de-archivos" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UD 3 - 3.0 Cadenas
+              UD 7 - 7.4 Lectura y escritura de archivos
             
           </span>
         </div>
@@ -1351,86 +1351,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cadenas" class="md-nav__link">
-    Cadenas
+  <a href="#lectura-y-escritura-de-archivos" class="md-nav__link">
+    Lectura y escritura de archivos
   </a>
   
-    <nav class="md-nav" aria-label="Cadenas">
+    <nav class="md-nav" aria-label="Lectura y escritura de archivos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#una-cadena-es-una-secuencia" class="md-nav__link">
-    Una cadena es una secuencia
+  <a href="#archivos-orientados-a-caracter" class="md-nav__link">
+    archivos orientados a carácter
+  </a>
+  
+    <nav class="md-nav" aria-label="archivos orientados a carácter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lectura-de-archivo" class="md-nav__link">
+    Lectura de archivo
+  </a>
+  
+    <nav class="md-nav" aria-label="Lectura de archivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usar-javaiofilebufferedreader-de-java" class="md-nav__link">
+    Usar java.io.File.bufferedReader() de Java
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#obtener-el-tamano-de-una-cadena-usando-len" class="md-nav__link">
-    Obtener el tamaño de una cadena usando len
+  <a href="#usar-javaiofileforeachline-de-kotlin" class="md-nav__link">
+    Usar java.io.File.forEachLine() de Kotlin
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#iteradores-recorriendo-una-cadena-mediante-un-bucle" class="md-nav__link">
-    Iteradores: Recorriendo una cadena mediante un bucle
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rebanado-slicing-de-una-cadena" class="md-nav__link">
-    Rebanado (slicing) de una cadena
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#los-cadenas-son-inmutables" class="md-nav__link">
-    Los cadenas son inmutables
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#iterando-y-contando" class="md-nav__link">
-    Iterando y contando
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#el-operador-in" class="md-nav__link">
-    El operador in
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comparacion-de-cadenas" class="md-nav__link">
-    Comparación de cadenas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#metodos-de-cadenas" class="md-nav__link">
-    Métodos de cadenas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#analizando-cadenas" class="md-nav__link">
-    Analizando cadenas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#el-operador-de-formato" class="md-nav__link">
-    El operador de formato
+  <a href="#oros-metodos-de-lectura" class="md-nav__link">
+    Oros métodos de lectura
   </a>
   
 </li>
@@ -1439,151 +1399,63 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#depuracion" class="md-nav__link">
-    Depuración
+        
+          <li class="md-nav__item">
+  <a href="#escritura-en-archivo" class="md-nav__link">
+    Escritura en archivo
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#metodos-string" class="md-nav__link">
-    Métodos String
-  </a>
-  
-    <nav class="md-nav" aria-label="Métodos String">
+    <nav class="md-nav" aria-label="Escritura en archivo">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#stringcapitalize" class="md-nav__link">
-    string.capitalize()
+  <a href="#usar-javaiofilebufferedwriter" class="md-nav__link">
+    Usar java.io.File.bufferedWriter
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stringendswithsufijo" class="md-nav__link">
-    string.endswith(sufijo)
+  <a href="#usar-javaiofilewritetext" class="md-nav__link">
+    Usar java.io.File.writeText()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stringexpandtabstamano_de_tab8" class="md-nav__link">
-    string.expandtabs(tamaño_de_tab=8)
+  <a href="#usar-javaiofileprintwriter" class="md-nav__link">
+    Usar java.io.File.printWriter
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stringfindsub" class="md-nav__link">
-    string.find(sub)
+  <a href="#usar-javaioprintwriter" class="md-nav__link">
+    Usar java.io.PrintWriter
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stringformat" class="md-nav__link">
-    string.format()
+  <a href="#oros-metodos-de-escritura" class="md-nav__link">
+    Oros métodos de escritura
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#stringindexsub" class="md-nav__link">
-    string.index(sub)
-  </a>
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stringisalpha" class="md-nav__link">
-    string.isalpha()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringisdigit" class="md-nav__link">
-    string.isdigit()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringisspace" class="md-nav__link">
-    string.isspace()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringlower" class="md-nav__link">
-    string.lower()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringupper" class="md-nav__link">
-    string.upper()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringlstripchars" class="md-nav__link">
-    string.lstrip(chars)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringreplacestring_viejo-string_nuevo" class="md-nav__link">
-    string.replace(string_viejo, string_nuevo)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringpartitionchar" class="md-nav__link">
-    string.partition(char)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringtitle" class="md-nav__link">
-    string.title()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringswapcase" class="md-nav__link">
-    string.swapcase()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strigstartswithprefijo" class="md-nav__link">
-    strig.startswith(prefijo)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringsplitsep" class="md-nav__link">
-    string.split(sep)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringzfillancho" class="md-nav__link">
-    string.zfill(ancho)
+  <a href="#archivos-binarios" class="md-nav__link">
+    Archivos binarios.
   </a>
   
 </li>
@@ -2474,86 +2346,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cadenas" class="md-nav__link">
-    Cadenas
+  <a href="#lectura-y-escritura-de-archivos" class="md-nav__link">
+    Lectura y escritura de archivos
   </a>
   
-    <nav class="md-nav" aria-label="Cadenas">
+    <nav class="md-nav" aria-label="Lectura y escritura de archivos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#una-cadena-es-una-secuencia" class="md-nav__link">
-    Una cadena es una secuencia
+  <a href="#archivos-orientados-a-caracter" class="md-nav__link">
+    archivos orientados a carácter
+  </a>
+  
+    <nav class="md-nav" aria-label="archivos orientados a carácter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lectura-de-archivo" class="md-nav__link">
+    Lectura de archivo
+  </a>
+  
+    <nav class="md-nav" aria-label="Lectura de archivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usar-javaiofilebufferedreader-de-java" class="md-nav__link">
+    Usar java.io.File.bufferedReader() de Java
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#obtener-el-tamano-de-una-cadena-usando-len" class="md-nav__link">
-    Obtener el tamaño de una cadena usando len
+  <a href="#usar-javaiofileforeachline-de-kotlin" class="md-nav__link">
+    Usar java.io.File.forEachLine() de Kotlin
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#iteradores-recorriendo-una-cadena-mediante-un-bucle" class="md-nav__link">
-    Iteradores: Recorriendo una cadena mediante un bucle
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rebanado-slicing-de-una-cadena" class="md-nav__link">
-    Rebanado (slicing) de una cadena
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#los-cadenas-son-inmutables" class="md-nav__link">
-    Los cadenas son inmutables
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#iterando-y-contando" class="md-nav__link">
-    Iterando y contando
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#el-operador-in" class="md-nav__link">
-    El operador in
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comparacion-de-cadenas" class="md-nav__link">
-    Comparación de cadenas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#metodos-de-cadenas" class="md-nav__link">
-    Métodos de cadenas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#analizando-cadenas" class="md-nav__link">
-    Analizando cadenas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#el-operador-de-formato" class="md-nav__link">
-    El operador de formato
+  <a href="#oros-metodos-de-lectura" class="md-nav__link">
+    Oros métodos de lectura
   </a>
   
 </li>
@@ -2562,151 +2394,63 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#depuracion" class="md-nav__link">
-    Depuración
+        
+          <li class="md-nav__item">
+  <a href="#escritura-en-archivo" class="md-nav__link">
+    Escritura en archivo
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#metodos-string" class="md-nav__link">
-    Métodos String
-  </a>
-  
-    <nav class="md-nav" aria-label="Métodos String">
+    <nav class="md-nav" aria-label="Escritura en archivo">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#stringcapitalize" class="md-nav__link">
-    string.capitalize()
+  <a href="#usar-javaiofilebufferedwriter" class="md-nav__link">
+    Usar java.io.File.bufferedWriter
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stringendswithsufijo" class="md-nav__link">
-    string.endswith(sufijo)
+  <a href="#usar-javaiofilewritetext" class="md-nav__link">
+    Usar java.io.File.writeText()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stringexpandtabstamano_de_tab8" class="md-nav__link">
-    string.expandtabs(tamaño_de_tab=8)
+  <a href="#usar-javaiofileprintwriter" class="md-nav__link">
+    Usar java.io.File.printWriter
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stringfindsub" class="md-nav__link">
-    string.find(sub)
+  <a href="#usar-javaioprintwriter" class="md-nav__link">
+    Usar java.io.PrintWriter
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stringformat" class="md-nav__link">
-    string.format()
+  <a href="#oros-metodos-de-escritura" class="md-nav__link">
+    Oros métodos de escritura
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#stringindexsub" class="md-nav__link">
-    string.index(sub)
-  </a>
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stringisalpha" class="md-nav__link">
-    string.isalpha()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringisdigit" class="md-nav__link">
-    string.isdigit()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringisspace" class="md-nav__link">
-    string.isspace()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringlower" class="md-nav__link">
-    string.lower()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringupper" class="md-nav__link">
-    string.upper()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringlstripchars" class="md-nav__link">
-    string.lstrip(chars)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringreplacestring_viejo-string_nuevo" class="md-nav__link">
-    string.replace(string_viejo, string_nuevo)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringpartitionchar" class="md-nav__link">
-    string.partition(char)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringtitle" class="md-nav__link">
-    string.title()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringswapcase" class="md-nav__link">
-    string.swapcase()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#strigstartswithprefijo" class="md-nav__link">
-    strig.startswith(prefijo)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringsplitsep" class="md-nav__link">
-    string.split(sep)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringzfillancho" class="md-nav__link">
-    string.zfill(ancho)
+  <a href="#archivos-binarios" class="md-nav__link">
+    Archivos binarios.
   </a>
   
 </li>
@@ -2753,7 +2497,7 @@
         
       
       
-        <a href="../../../../tags/#cadenas" class="md-tag md-tag-icon">Cadenas</a>
+        <a href="../../../../tags/#file" class="md-tag md-tag-icon">File</a>
       
     
   </nav>
@@ -2766,454 +2510,514 @@
 
   <h1>7.4.-Lectura/Escritura Archivos</h1>
 
-<h2 id="cadenas">Cadenas<a class="headerlink" href="#cadenas" title="Permanent link">&para;</a></h2>
-<p>Una cadena es una <em>secuencia</em> de caracteres.</p>
-<h3 id="una-cadena-es-una-secuencia">Una cadena es una secuencia<a class="headerlink" href="#una-cadena-es-una-secuencia" title="Permanent link">&para;</a></h3>
-<p>Puedes acceder a los caracteres de uno en uno con el operador corchete:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">fruta</span> <span class="o">=</span> <span class="s1">&#39;banana&#39;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">letra</span> <span class="o">=</span> <span class="n">fruta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</code></pre></div>
-<p>La segunda sentencia extrae el carácter en la posición del índice 1 de la variable <code>fruta</code> y la asigna a la variable <code>letra</code>.</p>
-<p>La expresión en los corchetes es llamada <em>índice</em>. El índice indica qué carácter de la secuencia quieres (de ahí el nombre).</p>
-<p>Pero podrías no obtener lo que esperas:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">letra</span><span class="p">)</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">a</span>
-</code></pre></div>
-<p>Para la mayoría de las personas, la primer letra de “banana” es “b”, no “a”. Pero en Python, el índice es un desfase desde el inicio de la cadena, y el desfase de la primera letra es cero.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">letra</span> <span class="o">=</span> <span class="n">fruta</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">letra</span><span class="p">)</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">b</span>
-</code></pre></div>
-<p>Así que “b” es la letra 0 (“cero”) de “banana”, “a” es la letra con índice 1, y “n” es la que tiene índice 2, etc.</p>
-<p><img alt="" src="assets/PROG-U3.0.-Cadena.png" /></p>
-<p>Indices de Cadenas</p>
-<p>Puedes usar cualquier expresión, incluyendo variables y operadores, como un índice, pero el valor del índice tiene que ser un entero. De otro modo obtendrás:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">letra</span> <span class="o">=</span> <span class="n">fruta</span><span class="p">[</span><span class="mf">1.5</span><span class="p">]</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="ne">TypeError</span><span class="p">:</span> <span class="n">string</span> <span class="n">indices</span> <span class="n">must</span> <span class="n">be</span> <span class="n">integers</span>
-</code></pre></div>
-<h3 id="obtener-el-tamano-de-una-cadena-usando-len">Obtener el tamaño de una cadena usando <code>len</code><a class="headerlink" href="#obtener-el-tamano-de-una-cadena-usando-len" title="Permanent link">&para;</a></h3>
-<p><code>len</code> es una función nativa que devuelve el número de caracteres en una cadena:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">fruta</span> <span class="o">=</span> <span class="s1">&#39;banana&#39;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">fruta</span><span class="p">)</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="mi">6</span>
-</code></pre></div>
-<p>Para obtener la última letra de una cadena, podrías estar tentado a probar algo como esto:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">tamaño</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">fruta</span><span class="p">)</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">ultima</span> <span class="o">=</span> <span class="n">fruta</span><span class="p">[</span><span class="n">tamaño</span><span class="p">]</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="ne">IndexError</span><span class="p">:</span> <span class="n">string</span> <span class="n">index</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span>
-</code></pre></div>
-<p>La razón de que haya un <code>IndexError</code> es que ahí no hay ninguna letra en “banana” con el índice 6. Puesto que empezamos a contar desde cero, las seis letras están enumeradas desde 0 hasta 5. Para obtener el último carácter, tienes que restar 1 a <code>length</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">ultima</span> <span class="o">=</span> <span class="n">fruta</span><span class="p">[</span><span class="n">tamaño</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">ultima</span><span class="p">)</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">a</span>
-</code></pre></div>
-<p>Alternativamente, puedes usar índices negativos, los cuales cuentan hacia atrás desde el final de la cadena. La expresión <code>fruta[-1]</code> devuelve la última letra, <code>fruta[-2]</code> la penúltima letra, y así sucesivamente.</p>
+<h2 id="lectura-y-escritura-de-archivos">Lectura y escritura de archivos<a class="headerlink" href="#lectura-y-escritura-de-archivos" title="Permanent link">&para;</a></h2>
+<p>Normalmente las aplicaciones que utilizan archivos no están centradas en la gestión del sistema de archivos del ordenador. El objetivo principal de usar archivos es <strong>poder almacenar datos de modo que entre diferentes ejecuciones del programa</strong>, incluso en diferentes equipos, sea posible recuperar los datos almacenados. El caso más típico es un editor de documentos, que mientras se ejecuta se encarga de gestionar los datos relativos al texto que está escribiendo, pero en cualquier momento puede guardarlo en un archivo para poder recuperar este texto cuando se desee, y añadir otros nuevos si fuera necesario. El archivo con los datos del documento lo puede abrir tanto en el editor de su ordenador como en el de otro compañero.</p>
+<p>Para saber cómo tratar los datos de un archivo en un programa, hay que <strong>tener muy claro cómo se estructuran</strong>. Dentro de un archivo se pueden almacenar todo tipo de valores de cualquier tipo de datos. La parte más importante es que estos valores <strong>se almacenan en forma de secuencia</strong>, uno tras otro. Por lo tanto, como pronto veréis, la forma más habitual de tratar archivos es <strong>secuencialmente</strong>, de forma parecida a como se hace para leer los datos desde teclado, mostrarlas por pantalla o recorrer las posiciones de un array.</p>
 <blockquote>
-<p><strong>IMPORTANTE</strong>: En las secuencias, el índice empieza en la posición <code>0</code> y termina en la posición <code>len() - 1</code></p>
+<p><img alt="" src="../assets/book.png" />
+Se denomina <strong>acceso secuencial</strong> al procesamiento de un conjunto de elementos de manera que sólo es posible acceder a ellos de acuerdo a su orden de aparición. Para procesar un elemento es necesario procesar primero todos los elementos anteriores.</p>
 </blockquote>
-<h3 id="iteradores-recorriendo-una-cadena-mediante-un-bucle">Iteradores: Recorriendo una cadena mediante un bucle<a class="headerlink" href="#iteradores-recorriendo-una-cadena-mediante-un-bucle" title="Permanent link">&para;</a></h3>
-<p>Muchos de los cálculos requieren procesar una cadena carácter por carácter. Frecuentemente empiezan desde el inicio, seleccionando cada carácter presente, haciendo algo con él, y continuando hasta el final. Este patrón de procesamiento es llamado un <em>iterador</em>. Una manera de escribir un iterador es con un bucle <code>while</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">indice</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">while</span> <span class="n">indice</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">fruta</span><span class="p">):</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="n">letra</span> <span class="o">=</span> <span class="n">fruta</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">letra</span><span class="p">)</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="n">indice</span> <span class="o">=</span> <span class="n">indice</span> <span class="o">+</span> <span class="mi">1</span>
+<p>Kotlin, junto con otros lenguajes de programación, diferencia entre dos tipos de archivos según cómo se representan los valores almacenados en un archivo.</p>
+<blockquote>
+<p><img alt="" src="../assets/book.png" />
+En los <strong>archivos orientados a carácter</strong>, los datos se representan como una secuencia de cadenas de texto, donde cada valor se  diferencia del otro usando un delimitador. En cambio, en los <strong>archivos orientados a byte</strong>, los datos se representan directamente de acuerdo a su formato en binario, sin ninguna separación. Estos últimos archivos son no son legibles a simple vista, y son interpretados por programas que entienden su formato. Por ejemplo, pdf, doc, xls.</p>
+</blockquote>
+<p>Nos centraremos principalmente en el procesamiento de archivos orientados a carácter.</p>
+<h3 id="archivos-orientados-a-caracter">archivos orientados a carácter<a class="headerlink" href="#archivos-orientados-a-caracter" title="Permanent link">&para;</a></h3>
+<p>Un archivo orientado a carácter no es más que un <strong>documento de texto</strong>, como el que podría generar con cualquier editor de texto simple. Los valores están almacenados según su representación en cadena de texto, exactamente en el mismo formato que ha usado hasta ahora para entrar datos desde el teclado. Del mismo modo, los diferentes valores se distinguen al estar separados entre ellos con un delimitador, que por defecto es cualquier conjunto de espacios en blanco o salto de línea. Aunque estos valores se puedan distribuir en líneas de texto diferentes, conceptualmente, se puede considerar que están organizados uno tras otro, secuencialmente, como las palabras en la página de un libro.</p>
+<p>El siguiente podría ser el contenido de un archivo orientado a carácter donde hay diez valores de tipo <code>float</code>, 7 en la primera línea y 3 en la segunda:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1,5 0,75 −2,35 18,0 9,4 3,1416 −15,785
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>−200,4 2,56 9,3785
 </code></pre></div>
-<p>Este bucle recorre la cadena e imprime cada letra en una línea cada una. La condición del bucle es <code>indice &lt; len(fruta)</code>, así que cuando <code>indice</code> es igual al tamaño de la cadena, la condición es falsa, y el código del bucle no se ejecuta. El último carácter accedido es el que tiene el índice <code>len(fruta)-1</code>, el cual es el último carácter en la cadena.</p>
-<p>Otra forma de escribir un iterador es con un bucle <code>for</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">for</span> <span class="n">caracter</span> <span class="ow">in</span> <span class="n">fruta</span><span class="p">:</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">caracter</span><span class="p">)</span>
+<p>Y este el de un archivo con 3 valores de tipo <code>String</code>: <code>"Había"</code>, <code>"una"</code> y <code>"vez..."</code> en una línea.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Había una vez...
 </code></pre></div>
-<p>Cada vez que iteramos el bucle, el siguiente carácter en la cadena es asignado a la variable <code>caracter</code>. El ciclo continúa hasta que no quedan caracteres.</p>
-<h3 id="rebanado-slicing-de-una-cadena">Rebanado (slicing) de una cadena<a class="headerlink" href="#rebanado-slicing-de-una-cadena" title="Permanent link">&para;</a></h3>
-<p>Un segmento de una cadena es llamado <em>rebanado</em>. Seleccionar un rebanado es similar a seleccionar un carácter:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Monty Python&#39;</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">Monty</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">12</span><span class="p">])</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">Python</span>
+<p>En un archivo orientado a carácter <strong>es posible almacenar cualquier combinación de datos de cualquier tipo</strong> (<code>int</code> , <code>double</code>, <code>boolean</code>, <code>String</code>, etc.).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>7 10 20,51 6,99
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Había una vez...
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>true false 2020 0,1234
 </code></pre></div>
-<p>El operador <code>[n:m]</code> retorna la parte de la cadena desde el “n-ésimo” carácter hasta el “m-ésimo” carácter, <strong>incluyendo el primero pero excluyendo el último</strong>.</p>
-<p>Si omites el primer índice (antes de los dos puntos), el rebanado comienza desde el inicio de la cadena. Si omites el segundo índice, el rebanado va hasta el final de la cadena:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">fruta</span> <span class="o">=</span> <span class="s1">&#39;banana&#39;</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">fruta</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="s1">&#39;ban&#39;</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">fruta</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="s1">&#39;ana&#39;</span>
+<p>La principal ventaja de un archivo de este tipo es que resulta muy sencillo inspeccionar su contenido y generarlos de acuerdo a nuestras necesidades.</p>
+<p>Para el caso de los archivos orientados a carácter, hay que usar dos clases diferentes según si lo que se quiere es leer o escribir datos en un archivo. Normalmente esto no es muy problemático, ya que <strong>en un bloque de código dado solo se llevarán a cabo operaciones de lectura o de escritura sobre un mismo archivo, pero no los dos tipos de operaciones a la vez</strong>.</p>
+<p>Una diferencia importante a la hora de tratar con archivos respecto a leer datos del teclado es que las operaciones de lectura no son producto de una interacción directa con el usuario, que es quien escribe los datos. Solo se puede trabajar con los datos que hay en el archivo y nada más. Esto tiene dos efectos sobre el proceso de lectura:</p>
+<ol>
+<li>Por un lado, recuerda que <strong>cuando se lleva a cabo el proceso de lectura de una secuencia de valores, siempre hay que tener cuidado de usar el método adecuado al tipo de valor que se espera que venga a continuación</strong> . Qué tipo de valor se espera es algo que habréis decidido vosotros a la hora de hacer el programa que escribió ese archivo, por lo que es vuestra responsabilidad saber qué hay que leer en cada momento. De todos modos nada garantiza que no se haya cometido algún error o que el archivo haya sido manipulado por otro programa o usuario. Como operamos con archivos y no por el teclado, no existe la opción de pedir al usuario que vuelva a escribir el dato. Por lo tanto, el programa debería decir que se ha producido un error ya que el archivo no tiene el formato correcto y finalizar el proceso de lectura.</li>
+<li>Por otra parte, <strong>también es necesario controlar que nunca se lean más valores de los que hay disponibles para leer</strong>. En el caso de la entrada de datos por el teclado el programa simplemente se bloqueaba y espera a que el usuario escribiera nuevos valores. Pero con archivos esto no sucede. Intentar leer un nuevo valor cuando el apuntador ya ha superado el último disponible se considera erróneo y lanzará una excepción. Para evitarlo, habrá que utilizar algún procedimiento que nos permita saber si se ha llegado al final de archivo en vez de suponer que siguen existiendo datos que leer.</li>
+</ol>
+<h4 id="lectura-de-archivo">Lectura de archivo<a class="headerlink" href="#lectura-de-archivo" title="Permanent link">&para;</a></h4>
+<p>En Kotlin demos leer el contenido de un archivo utilizando los métodos estándar de la clase <code>java.io.File</code> o los métodos que proporciona Kotlin como una extensión de <code>java.io.File</code>.</p>
+<p>Examinaremos programas de ejemplo para los métodos de extensión, proporcionados por Kotlin a la clase <code>java.io.File</code> de Java, para leer el contenido de un archivo.</p>
+<h5 id="usar-javaiofilebufferedreader-de-java">Usar <code>java.io.File.bufferedReader()</code> de Java<a class="headerlink" href="#usar-javaiofilebufferedreader-de-java" title="Permanent link">&para;</a></h5>
+<p><a href="https://dcodingames.com/como-usar-la-clase-bufferedreader/"><code>BufferedReader</code></a> lee texto desde un flujo de entrada de caracteres, almacenando los caracteres para proporcionar una lectura eficiente de caracteres, arreglos y líneas.</p>
+<p>Se puede configurar específicamente el tamaño del buffer, o usar el que se otorga por default, el cual es suficientemente grande para la mayoría de los casos.</p>
+<p>Dado que esta clase extiende de <code>Reader</code>, cada petición de lectura causa una petición de lectura del flujo de entrada, por lo que es aconsejable envolverla con la clase <code>InputStreamReader</code> o <code>FileReader</code>, según el propósito de la lectura.</p>
+<p>A continuación podemos ver cómo leer el contenido de un archivo en <code>BufferedReader</code>, El proceso es el siguiente:</p>
+<ol>
+<li>Prepare el objeto <code>File</code> con la ubicación del archivo pasado como argumento al constructor de la clase de <code>File</code>.</li>
+<li><code>File.bufferedReader</code> devuelve un nuevo <code>BufferedReader</code> para leer el contenido del archivo.</li>
+<li>Utilice <code>BufferedReader.readLines()</code> para leer el contenido del archivo.</li>
+</ol>
+<p>Un ejemplo</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;input&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;contents.txt&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">bufferedReader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="p">.</span><span class="na">bufferedReader</span><span class="p">()</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">text</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bufferedReader</span><span class="p">.</span><span class="na">readLines</span><span class="p">()</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">line</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">}</span>
 </code></pre></div>
-<p>Si el primer índice es mayor que o igual que el segundo, el resultado es una <em>cadena vacía</em>, representado por dos comillas:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">fruta</span> <span class="o">=</span> <span class="s1">&#39;banana&#39;</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">fruta</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="s1">&#39;&#39;</span>
+<p>El contenido del archivo se imprime en la consola.</p>
+<h5 id="usar-javaiofileforeachline-de-kotlin">Usar <code>java.io.File.forEachLine()</code> de Kotlin<a class="headerlink" href="#usar-javaiofileforeachline-de-kotlin" title="Permanent link">&para;</a></h5>
+<p>Lee un archivo línea por línea en Kotlin. El proceso es el siguiente:</p>
+<ol>
+<li>Prepare el objeto <code>File</code> con la ubicación pasada como argumento al constructor de la clase de <code>File</code>.</li>
+<li>Use la función <code>File.forEachLine</code> y lea cada línea del archivo.</li>
+</ol>
+<p>Un ejemplo</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;input&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;contents.txt&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">file</span><span class="p">.</span><span class="na">forEachLine</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">println</span><span class="p">(</span><span class="nb">it</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">}</span>
 </code></pre></div>
-<p>Una cadena vacía no contiene caracteres y tiene un tamaño de 0, pero fuera de esto es lo mismo que cualquier otra cadena.</p>
-<h3 id="los-cadenas-son-inmutables">Los cadenas son inmutables<a class="headerlink" href="#los-cadenas-son-inmutables" title="Permanent link">&para;</a></h3>
-<p>Puede ser tentador utilizar el operador [] en el lado izquierdo de una asignación, con la intención de cambiar un carácter en una cadena. Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">saludo</span> <span class="o">=</span> <span class="s1">&#39;Hola, mundo!&#39;</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">saludo</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;J&#39;</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">item</span> <span class="n">assignment</span>
-</code></pre></div>
-<p>El “objeto” en este caso es la cadena y el “ítem” es el carácter que tratamos de asignar. Por ahora, un <em>objeto</em> es la misma cosa que un valor, pero vamos a redefinir esa definición después. Un <em>ítem</em> es uno de los valores en una secuencia.</p>
-<p>La razón por la cual ocurre el error es que las cadenas son <em>inmutables</em>, lo cual significa que no puedes modificar una cadena existente. Lo mejor que puedes hacer es crear una nueva cadena que sea una variación de la original:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">saludo</span> <span class="o">=</span> <span class="s1">&#39;Hola, mundo!&#39;</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">nuevo_saludo</span> <span class="o">=</span> <span class="s1">&#39;J&#39;</span> <span class="o">+</span> <span class="n">saludo</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">nuevo_saludo</span><span class="p">)</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">Jola</span><span class="p">,</span> <span class="n">mundo</span><span class="err">!</span>
-</code></pre></div>
-<p>Este ejemplo concatena una nueva letra a una parte de <code>saludo</code>. Esto no tiene efecto sobre la cadena original.</p>
-<h3 id="iterando-y-contando">Iterando y contando<a class="headerlink" href="#iterando-y-contando" title="Permanent link">&para;</a></h3>
-<p>El siguiente programa cuenta el número de veces que la letra “a” aparece en una cadena:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">palabra</span> <span class="o">=</span> <span class="s1">&#39;banana&#39;</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">contador</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">for</span> <span class="n">letra</span> <span class="ow">in</span> <span class="n">palabra</span><span class="p">:</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="k">if</span> <span class="n">letra</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>        <span class="n">contador</span> <span class="o">=</span> <span class="n">contador</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">contador</span><span class="p">)</span>
-</code></pre></div>
-<p>Este programa demuestra otro patrón de computación llamado <em>contador</em>. La variable <code>contador</code> es inicializada a 0 y después se incrementa cada vez que una “a” es encontrada. Cuando el bucle termina, <code>contador</code> contiene el resultado: el número total de a’s.</p>
-<h3 id="el-operador-in">El operador <code>in</code><a class="headerlink" href="#el-operador-in" title="Permanent link">&para;</a></h3>
-<p>La palabra <code>in</code> es un operador booleano que toma dos cadenas y regresa <code>True</code> si la primera cadena aparece como una subcadena de la segunda:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="s1">&#39;banana&#39;</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kc">True</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;semilla&#39;</span> <span class="ow">in</span> <span class="s1">&#39;banana&#39;</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="kc">False</span>
-</code></pre></div>
-<h3 id="comparacion-de-cadenas">Comparación de cadenas<a class="headerlink" href="#comparacion-de-cadenas" title="Permanent link">&para;</a></h3>
-<p>Los operadores de comparación funcionan en cadenas. Para ver si dos cadenas son iguales:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">if</span> <span class="n">palabra</span> <span class="o">==</span> <span class="s1">&#39;banana&#39;</span><span class="p">:</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Muy bien, bananas.&#39;</span><span class="p">)</span>
-</code></pre></div>
-<p>Otras operaciones de comparación son útiles para poner palabras en orden alfabético:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">if</span> <span class="n">palabra</span> <span class="o">&lt;</span> <span class="s1">&#39;banana&#39;</span><span class="p">:</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tu palabra, &#39;</span> <span class="o">+</span> <span class="n">palabra</span> <span class="o">+</span> <span class="s1">&#39;, está antes de banana.&#39;</span><span class="p">)</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="k">elif</span> <span class="n">palabra</span> <span class="o">&gt;</span> <span class="s1">&#39;banana&#39;</span><span class="p">:</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tu palabra, &#39;</span> <span class="o">+</span> <span class="n">palabra</span> <span class="o">+</span> <span class="s1">&#39;, está después de banana.&#39;</span><span class="p">)</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Muy bien, bananas.&#39;</span><span class="p">)</span>
-</code></pre></div>
-<p>Python no maneja letras mayúsculas y minúsculas de la misma forma que la gente lo hace. Todas <strong>las letras mayúsculas van antes que todas las letras minúsculas</strong>, por ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">Tu</span> <span class="n">palabra</span><span class="p">,</span> <span class="n">Piña</span><span class="p">,</span> <span class="n">está</span> <span class="n">antes</span> <span class="n">que</span> <span class="n">banana</span><span class="o">.</span>
-</code></pre></div>
-<p>Una forma común de manejar este problema es convertir cadenas a un formato estándar, como todas a minúsculas, antes de llevar a cabo la comparación. Ten en cuenta eso en caso de que tengas que defenderte contra un hombre armado con una Piña.</p>
-<h3 id="metodos-de-cadenas">Métodos de cadenas<a class="headerlink" href="#metodos-de-cadenas" title="Permanent link">&para;</a></h3>
-<p>Los cadenas son un ejemplo de <em>objetos</em> en Python. Un objeto contiene tanto datos (el valor de la cadena misma) como <em>métodos</em>, los cuales son efectivamente funciones que están implementadas dentro del objeto y que están disponibles para cualquier <em>instancia</em> del objeto.</p>
-<p>Python tiene una función llamada <code>dir</code> la cual lista los métodos disponibles para un objeto. La función <code>type</code> muestra el tipo de un objeto y la función <code>dir</code> muestra los métodos disponibles.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">cosa</span> <span class="o">=</span> <span class="s1">&#39;Hola mundo&#39;</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">cosa</span><span class="p">)</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span><span class="n">cosa</span><span class="p">)</span>
-<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="p">[</span><span class="s1">&#39;capitalize&#39;</span><span class="p">,</span> <span class="s1">&#39;casefold&#39;</span><span class="p">,</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="s1">&#39;encode&#39;</span><span class="p">,</span>
-<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="s1">&#39;endswith&#39;</span><span class="p">,</span> <span class="s1">&#39;expandtabs&#39;</span><span class="p">,</span> <span class="s1">&#39;find&#39;</span><span class="p">,</span> <span class="s1">&#39;format&#39;</span><span class="p">,</span> <span class="s1">&#39;format_map&#39;</span><span class="p">,</span>
-<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="s1">&#39;isalnum&#39;</span><span class="p">,</span> <span class="s1">&#39;isalpha&#39;</span><span class="p">,</span> <span class="s1">&#39;isdecimal&#39;</span><span class="p">,</span> <span class="s1">&#39;isdigit&#39;</span><span class="p">,</span>
-<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="s1">&#39;isidentifier&#39;</span><span class="p">,</span> <span class="s1">&#39;islower&#39;</span><span class="p">,</span> <span class="s1">&#39;isnumeric&#39;</span><span class="p">,</span> <span class="s1">&#39;isprintable&#39;</span><span class="p">,</span>
-<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="s1">&#39;isspace&#39;</span><span class="p">,</span> <span class="s1">&#39;istitle&#39;</span><span class="p">,</span> <span class="s1">&#39;isupper&#39;</span><span class="p">,</span> <span class="s1">&#39;join&#39;</span><span class="p">,</span> <span class="s1">&#39;ljust&#39;</span><span class="p">,</span> <span class="s1">&#39;lower&#39;</span><span class="p">,</span>
-<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="s1">&#39;lstrip&#39;</span><span class="p">,</span> <span class="s1">&#39;maketrans&#39;</span><span class="p">,</span> <span class="s1">&#39;partition&#39;</span><span class="p">,</span> <span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="s1">&#39;rfind&#39;</span><span class="p">,</span>
-<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="s1">&#39;rindex&#39;</span><span class="p">,</span> <span class="s1">&#39;rjust&#39;</span><span class="p">,</span> <span class="s1">&#39;rpartition&#39;</span><span class="p">,</span> <span class="s1">&#39;rsplit&#39;</span><span class="p">,</span> <span class="s1">&#39;rstrip&#39;</span><span class="p">,</span>
-<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="s1">&#39;split&#39;</span><span class="p">,</span> <span class="s1">&#39;splitlines&#39;</span><span class="p">,</span> <span class="s1">&#39;startswith&#39;</span><span class="p">,</span> <span class="s1">&#39;strip&#39;</span><span class="p">,</span> <span class="s1">&#39;swapcase&#39;</span><span class="p">,</span>
-<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;translate&#39;</span><span class="p">,</span> <span class="s1">&#39;upper&#39;</span><span class="p">,</span> <span class="s1">&#39;zfill&#39;</span><span class="p">]</span>
-<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">capitalize</span><span class="p">)</span>
-<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="n">Help</span> <span class="n">on</span> <span class="n">method_descriptor</span><span class="p">:</span>
-<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>
-<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a><span class="n">capitalize</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>    <span class="n">S</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
-<a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>
-<a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>    <span class="n">Return</span> <span class="n">a</span> <span class="n">capitalized</span> <span class="n">version</span> <span class="n">of</span> <span class="n">S</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span> <span class="n">make</span> <span class="n">the</span> <span class="n">first</span> <span class="n">character</span> <span class="n">have</span> <span class="n">upper</span> <span class="n">case</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">rest</span> <span class="n">lower</span> <span class="n">case</span><span class="o">.</span>
-<a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a><span class="o">&gt;&gt;&gt;</span>
-</code></pre></div>
-<p>Llamar a un <em>método</em> es similar a llamar una función (esta toma argumentos y devuelve un valor) pero la sintaxis es diferente. Llamamos a un método uniendo el nombre del método al de la variable, usando un punto como delimitador.
-Aunque la función <code>dir</code> lista los métodos y puedes usar la función <code>help</code> para obtener una breve documentación de un método, una mejor fuente de documentación para los métodos de cadenas se puede encontrar en <a href="https://docs.python.org/library/stdtypes.html#string-methods">Métodos en inglés</a> y
-<a href="https://docs.python.org/es/3/library/stdtypes.html#string-methods">Métodos en castellano</a></p>
-<p>Por ejemplo, el método <code>upper</code> toma una cadena y devuelve una nueva cadena con todas las letras en mayúscula:</p>
-<p>En vez de la sintaxis de función <code>upper(palabra)</code>, éste utiliza la sintaxis de método <code>palabra.upper()</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">palabra</span> <span class="o">=</span> <span class="s1">&#39;banana&#39;</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">nueva_palabra</span> <span class="o">=</span> <span class="n">palabra</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">nueva_palabra</span><span class="p">)</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="n">BANANA</span>
-</code></pre></div>
-<p>Esta forma de notación con punto especifica el nombre del método, <code>upper</code>, y el nombre de la cadena al que se le aplicará el método, <code>palabra</code>. Los paréntesis vacíos indican que el método no toma argumentos.</p>
-<p>Una llamada a un método es conocida como una <em>invocación</em>; en este caso, diríamos que estamos invocando <code>upper</code> en <code>palabra</code>.</p>
-<p>Por ejemplo, existe un método de cadena llamado <code>find</code> que busca la posición de una cadena dentro de otra:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">palabra</span> <span class="o">=</span> <span class="s1">&#39;banana&#39;</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">indice</span> <span class="o">=</span> <span class="n">palabra</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">indice</span><span class="p">)</span>
-<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="mi">1</span>
-</code></pre></div>
-<p>En este ejemplo, invocamos <code>find</code> en <code>palabra</code> y pasamos la letra que estamos buscando como un parámetro.</p>
-<p>El método <code>find</code> puede encontrar subcadenas así como caracteres:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">palabra</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;na&#39;</span><span class="p">)</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="mi">2</span>
-</code></pre></div>
-<p>También puede tomar como un segundo argumento el índice desde donde debe empezar:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">palabra</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;na&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="mi">4</span>
-</code></pre></div>
-<p>Una tarea común es eliminar los espacios en blanco (espacios, tabs, o nuevas líneas) en el inicio y el final de una cadena usando el método <code>strip</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">linea</span> <span class="o">=</span> <span class="s1">&#39;  Aquí vamos  &#39;</span>
-<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">linea</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="s1">&#39;Aquí vamos&#39;</span>
-</code></pre></div>
-<p>Algunos métodos como <code>startswith</code> devuelven valores booleanos.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">linea</span> <span class="o">=</span> <span class="s1">&#39;Que tengas un buen día&#39;</span>
-<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">linea</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;Que&#39;</span><span class="p">)</span>
-<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="kc">True</span>
-<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">linea</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">)</span>
-<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="kc">False</span>
-</code></pre></div>
-<p>Puedes notar que <code>startswith</code> requiere que el formato (mayúsculas y minúsculas) coincida, de modo que a veces tendremos que tomar la línea y cambiarla completamente a minúsculas antes de hacer la verificación, utilizando el método <code>lower</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">linea</span> <span class="o">=</span> <span class="s1">&#39;Que tengas un buen día&#39;</span>
-<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">linea</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">)</span>
-<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="kc">False</span>
-<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">linea</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="s1">&#39;que tengas un buen día&#39;</span>
-<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">linea</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">)</span>
-<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="kc">True</span>
-</code></pre></div>
-<p>En el último ejemplo, el método <code>lower</code> es llamado y después usamos <code>startswith</code> para ver si la cadena resultante en minúsculas comienza con la letra “q”. Siempre y cuando seamos cuidadosos con el orden, podemos hacer múltiples llamadas a métodos en una sola expresión.</p>
-<h3 id="analizando-cadenas">Analizando cadenas<a class="headerlink" href="#analizando-cadenas" title="Permanent link">&para;</a></h3>
-<p>Frecuentemente, queremos examinar una cadena para encontrar una subcadena. Por ejemplo, si se nos presentaran una seria de líneas con el siguiente formato:</p>
-<p><code>From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008</code></p>
-<p>y quisiéramos obtener únicamente la segunda parte de la dirección de correo (esto es, <code>uct.ac.za</code>) de cada línea, podemos hacer esto utilizando el método <code>find</code> y una parte de la cadena.</p>
-<p>Primero tenemos que encontrar la posición de la arroba en la cadena. Después, tenemos que encontrar la posición del primer espacio <em>después</em> de la arroba. Y después partiremos la cadena para extraer la porción de la cadena que estamos buscando.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">dato</span> <span class="o">=</span> <span class="s1">&#39;From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008&#39;</span>
-<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">arrobapos</span> <span class="o">=</span> <span class="n">dato</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">)</span>
-<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">arrobapos</span><span class="p">)</span>
-<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="mi">21</span>
-<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">espos</span> <span class="o">=</span> <span class="n">dato</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">arrobapos</span><span class="p">)</span>
-<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">espos</span><span class="p">)</span>
-<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="mi">31</span>
-<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">direccion</span> <span class="o">=</span> <span class="n">dato</span><span class="p">[</span><span class="n">arrobapos</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">espos</span><span class="p">]</span>
-<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">direccion</span><span class="p">)</span>
-<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a><span class="n">uct</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">za</span>
-<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a><span class="o">&gt;&gt;&gt;</span>
-</code></pre></div>
-<p>Utilizamos una versión del método <code>find</code> que nos permite especificar la posición en la cadena desde donde queremos que <code>find</code> comience a buscar. Cuando recortamos una parte de una cadena, extraemos los caracteres desde “uno después de la arroba hasta,  <em>pero no incluyendo</em> , el carácter de espacio”.</p>
-<p>La documentación del método <code>find</code> está disponible en</p>
-<p><a href="https://docs.python.org/es/3/library/stdtypes.html#string-methods">Métodos en castellano</a>.</p>
-<h3 id="el-operador-de-formato">El operador de formato<a class="headerlink" href="#el-operador-de-formato" title="Permanent link">&para;</a></h3>
-<p>El <em>operador de formato</em> <code>%</code> nos permite construir cadenas, reemplazando partes de las cadenas con datos almacenados en variables. Cuando lo aplicamos a enteros, <code>%</code> es el operador módulo. Pero cuando es aplicado a una cadena, <code>%</code> es el operador de formato.</p>
-<p>El primer operando es la <em>cadena a formatear</em>, la cual contiene una o más <em>secuencias de formato</em> que especifican cómo el segundo operando es formateado. El resultado es una cadena.</p>
-<p>Por ejemplo, la secuencia de formato <code>%d</code> significa que el segundo operando debería ser formateado como un entero (“d” significa “decimal”):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">camellos</span> <span class="o">=</span> <span class="mi">42</span>
-<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">camellos</span>
-<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="s1">&#39;42&#39;</span>
-</code></pre></div>
-<p>El resultado es la cadena ‘42’, el cual no debe ser confundido con el valor entero 42.</p>
-<p>Una secuencia de formato puede aparecer en cualquier lugar en la cadena, así que puedes meter un valor en una frase:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">camellos</span> <span class="o">=</span> <span class="mi">42</span>
-<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Yo he visto </span><span class="si">%d</span><span class="s1"> camellos.&#39;</span> <span class="o">%</span> <span class="n">camellos</span>
-<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="s1">&#39;Yo he visto 42 camellos.&#39;</span>
-</code></pre></div>
-<p>Si hay más de una secuencia de formato en la cadena, el segundo argumento tiene que ser una tupla. Cada secuencia de formato es relacionada con un elemento de la tupla, en orden.</p>
-<p>El siguiente ejemplo usa <code>%d</code> para formatear un entero, <code>%g</code> para formatear un número de punto flotante (no preguntes por qué), y <code>%s</code> para formatear una cadena:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;En </span><span class="si">%d</span><span class="s1"> años yo he visto </span><span class="si">%g</span><span class="s1"> </span><span class="si">%s</span><span class="s1">.&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s1">&#39;camellos&#39;</span><span class="p">)</span>
-<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="s1">&#39;En 3 años yo he visto 0.1 camellos.&#39;</span>
-</code></pre></div>
-<p>El número de elementos en la tupla debe coincidir con el número de secuencias de formato en la cadena. El tipo de los elementos también debe coincidir con la secuencia de formato:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> </span><span class="si">%d</span><span class="s1"> </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="ne">TypeError</span><span class="p">:</span> <span class="ow">not</span> <span class="n">enough</span> <span class="n">arguments</span> <span class="k">for</span> <span class="nb">format</span> <span class="n">string</span>
-<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="s1">&#39;dolares&#39;</span>
-<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="ne">TypeError</span><span class="p">:</span> <span class="o">%</span><span class="n">d</span> <span class="nb">format</span><span class="p">:</span> <span class="n">a</span> <span class="n">number</span> <span class="ow">is</span> <span class="n">required</span><span class="p">,</span> <span class="ow">not</span> <span class="nb">str</span>
-</code></pre></div>
-<p>En el primer ejemplo, no hay suficientes elementos; en el segundo, el elemento es de un tipo incorrecto.</p>
-<p>El operador de formato es poderoso, pero puede ser difícil de usar. Puedes leer más al respecto en</p>
-<p><a href="https://docs.python.org/library/stdtypes.html#printf-style-string-formatting">https://docs.python.org/library/stdtypes.html#printf-style-string-formatting</a>.</p>
-<h2 id="depuracion">Depuración<a class="headerlink" href="#depuracion" title="Permanent link">&para;</a></h2>
-<p>Una habilidad que debes desarrollar cuando programas es siempre preguntarte a ti mismo, “¿Qué podría fallar aquí?” o alternativamente, “¿Qué cosa ilógica podría hacer un usuario para hacer fallar nuestro (aparentemente) perfecto programa?”</p>
-<p>Por ejemplo, observa el programa que utilizamos para demostrar el bucle <code>while</code> en el apartado de iteraciones:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">linea</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;&gt; &#39;</span><span class="p">)</span>
-<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="k">while</span> <span class="n">linea</span> <span class="o">!=</span> <span class="s1">&#39;fin&#39;</span><span class="p">:</span>
-<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>    <span class="k">if</span> <span class="n">linea</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;#&#39;</span> <span class="p">:</span>
-<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">linea</span><span class="p">)</span>
-<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>    <span class="n">linea</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;&gt; &#39;</span><span class="p">)</span>
-<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;¡Terminado!&#39;</span><span class="p">)</span>
-<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>
-<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a><span class="c1"># Código: https://es.py4e.com/code3/copytildone2.py</span>
-</code></pre></div>
-<p>Mira lo que pasa cuando el usuario introduce una línea vacía como entrada:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="o">&gt;</span> <span class="n">hola</span> <span class="n">a</span> <span class="n">todos</span>
-<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="n">hola</span> <span class="n">a</span> <span class="n">todos</span>
-<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="o">&gt;</span> <span class="c1"># no imprimas esto</span>
-<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="o">&gt;</span> <span class="err">¡</span><span class="n">imprime</span> <span class="n">esto</span><span class="err">!</span>
-<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="err">¡</span><span class="n">imprime</span> <span class="n">esto</span><span class="err">!</span>
-<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="o">&gt;</span>
-<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>  <span class="n">File</span> <span class="s2">&quot;copytildone.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">3</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>    <span class="k">if</span> <span class="n">linea</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;#&#39;</span> <span class="p">:</span>
-<a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a><span class="ne">IndexError</span><span class="p">:</span> <span class="n">string</span> <span class="n">index</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span>
-</code></pre></div>
-<p>El código funciona bien hasta que se presenta una línea vacía. En ese momento no hay un carácter cero, por lo que obtenemos una traza de error (traceback). Existen dos soluciones a esto para convertir la línea tres en “segura”, incluso si la línea está vacía.</p>
-<p>Una posibilidad es simplemente usar el método <code>startswith</code> que devuelve <code>False</code> si la cadena está vacía.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">if</span> <span class="n">linea</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">):</span>
-</code></pre></div>
-<p>Otra forma segura es escribir una sentencia <code>if</code> utilizando el patrón <em>guardián</em> y asegurarse que la segunda expresión lógica es evaluada sólo cuando hay al menos un carácter en la cadena:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">linea</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">linea</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;#&#39;</span><span class="p">:</span>
-</code></pre></div>
-<h2 id="metodos-string">Métodos String<a class="headerlink" href="#metodos-string" title="Permanent link">&para;</a></h2>
-<p>Algunos métodos de la clase String son: </p>
-<h4 id="stringcapitalize">string.capitalize()<a class="headerlink" href="#stringcapitalize" title="Permanent link">&para;</a></h4>
-<p>El método capitalize() devuelve una copia de la cadena con su primera letra en mayúscula.
-Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;mi diario python&quot;</span>
-<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
-<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="s1">&#39;Mi diario python&#39;</span>
-</code></pre></div>
-<h4 id="stringendswithsufijo">string.endswith(sufijo)<a class="headerlink" href="#stringendswithsufijo" title="Permanent link">&para;</a></h4>
-<p>El método endswith() devuelve True si la cadena termina con el sufijo especificado.
-Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;mi diario python&quot;</span>
-<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">)</span>
-<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="kc">True</span>
-<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;thon&quot;</span><span class="p">)</span>
-<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a><span class="kc">True</span>
-<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;py&quot;</span><span class="p">)</span>
-<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a><span class="kc">False</span>
-</code></pre></div>
-<h4 id="stringexpandtabstamano_de_tab8">string.expandtabs(tamaño_de_tab=8)<a class="headerlink" href="#stringexpandtabstamano_de_tab8" title="Permanent link">&para;</a></h4>
-<p>El método expandtabs devuelva una copia de la cadena en la que todos los caracteres de las pestañas se reemplazan por uno o más espacios, según la columna actual y el tamaño de la pestaña. Para expandir la cadena, la columna actual se establece en cero y la cadena se examina carácter por carácter. Si el carácter es una pestaña ( <code>t</code>), se insertan uno o más caracteres de espacio en el resultado hasta que la columna actual sea igual a la siguiente posición de la pestaña.
-Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;mitdiariotpython&quot;</span>
-<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span><span class="o">.</span><span class="n">expandtabs</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="s1">&#39;mi  diario  python&#39;</span>
-</code></pre></div>
-<h4 id="stringfindsub">string.find(sub)<a class="headerlink" href="#stringfindsub" title="Permanent link">&para;</a></h4>
-<p>Devuelve el índice más bajo de la cadena en la subcadena <em>sub</em> se encuentra dentro de la rebanada <code>s[start:end]</code>. Devuelve -1 si no se encuentra el sub.
-Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;mi diario python&quot;</span>
-<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;mi&quot;</span><span class="p">)</span>
-<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="mi">0</span>
-<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;m&quot;</span><span class="p">)</span>
-<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="mi">0</span>
-<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">)</span>
-<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a><span class="mi">1</span>
-<a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">)</span>
-<a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a><span class="mi">10</span>
-<a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;py&quot;</span><span class="p">)</span>
-<a id="__codelineno-39-11" name="__codelineno-39-11" href="#__codelineno-39-11"></a><span class="mi">10</span>
-<a id="__codelineno-39-12" name="__codelineno-39-12" href="#__codelineno-39-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;p y&quot;</span><span class="p">)</span>
-<a id="__codelineno-39-13" name="__codelineno-39-13" href="#__codelineno-39-13"></a><span class="o">-</span><span class="mi">1</span>
-</code></pre></div>
-<h4 id="stringformat">string.format()<a class="headerlink" href="#stringformat" title="Permanent link">&para;</a></h4>
-<p>Nos permite realizar una operación de formato de cadena. La cadena en la que se llama a este método puede contener texto literal o campos de reemplazo delimitados por llaves <code>{}</code>. Cada campo de reemplazo contiene el índice numérico de un argumento posicional o el nombre de un argumento de palabra clave. Devuelve una copia de la cadena donde cada campo de reemplazo se reemplaza con el valor de la cadena del argumento correspondiente.
-Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;La suma de 1 + 2 es </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
-<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="s1">&#39;La suma de 1 + 2 es 3&#39;</span>
-</code></pre></div>
-<h4 id="stringindexsub">string.index(sub)<a class="headerlink" href="#stringindexsub" title="Permanent link">&para;</a></h4>
-<p>El método index es muy similar al método find. Con la diferencia de que cuando no se encuentra la subcadena, index lanza un ValueError.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;mi diario python&quot;</span>
-<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;mi&quot;</span><span class="p">)</span>
-<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="mi">0</span>
-<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;PYTHON&quot;</span><span class="p">)</span>
-<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-<a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a><span class="ne">ValueError</span><span class="p">:</span> <span class="n">substring</span> <span class="ow">not</span> <span class="n">found</span>
-<a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a><span class="o">&gt;&gt;&gt;</span>
-</code></pre></div>
-<h4 id="stringisalpha">string.isalpha()<a class="headerlink" href="#stringisalpha" title="Permanent link">&para;</a></h4>
-<p>Devuelve verdadero si todos los caracteres de la cadena son alfanuméricos y hay al menos un carácter, de lo contrario es falso.
-Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;mi diario python&quot;</span>
-<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>
-<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="kc">False</span>
-<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;midiariopython&quot;</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>
-<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a><span class="kc">True</span>
+<p>El contenido del archivo se imprime en la consola.</p>
+<!--
+> ![](./../../resources/img/un7/lu37016xc6sgf_tmp_e5d45b04953e17dd.png)
+>
+> ...Para tratar de manera sencilla archivos orientados a carácter, Java
+> proporciona las clases `Scanner` (para lectura) del `package
+> java.util`, y `FileWriter` (para escritura) del `package java.io`
+
+## 3.2. Lectura de archivo (clase Scanner)
+
+**La clase que permite llevar a cabo la lectura de datos desde un archivo orientado a carácter es exactamente la misma
+que permite leer datos desde el teclado: Scanner** . Al fin y al cabo, los valores almacenados en los archivos de este
+tipo se encuentran exactamente en el mismo formato que ha usado hasta ahora para entrar información en sus programas:
+una secuencia de cadenas de texto. La única diferencia es que estos valores no se piden al usuario durante la ejecución,
+sino que se encuentran almacenados en un archivo.
+
+Para procesar datos desde un archivo, **el constructor de la clase Scanner permite como argumento un objeto de tipo
+File** que contenga la ruta a un archivo.
+
+Por ejemplo, para crear un objeto de tipo Scanner de modo que permita leer datos desde el archivo ubicado en la ruta
+"C:\Programas\Unidad11\Documento.txt", habría que hacer:
+
+importjava.io.File;
+
+importjava.util.Scanner;
+
+...
+
+Filef = new File("C:\Programas\Unidad11\Documento.txt");
+
+ScannerlectorArchivo = new Scanner(f);
+
+...
+
+Una vez instanciado el objeto Scanner **podemos utilizar sus métodos exactamente igual que si leyéramos de teclado** :
+hasNext(), next(), nextLine(), nextInt(), nextDouble(), nextBoolean(), etc. La única diferencia es que el objeto Scanner
+leerá secuencialmente el contenido del archivo.
+
+Es importante entender que en el caso de un archivo, **el objeto Scanner gestiona internamente un apuntador que indica
+sobre qué valor actuarán las operaciones de lectura** . Inicialmente el apuntador se encuentra en el primer valor dentro
+del archivo. **Cada vez que se hace una lectura el apuntador avanza automáticamente hasta el siguiente valor dentro del
+archivo y no hay ninguna manera de hacerlo retroceder** . A medida que invocamos métodos de lectura el apuntador sigue
+avanzando hasta que hayamos leído tantos datos como queramos, o hasta que no podamos seguir leyendo porque hemos llegado
+al final del archivo.
+
+A continuación se muestra un pequeño esquema de este proceso, recalcando cómo avanza el apuntador a la hora de realizar
+operaciones de lectura sobre un archivo que contiene valores de tipo entero.
+
+![](file:///tmp/lu37016xc6sfk.tmp/lu37016xc6sgf_tmp_43d276c79f83a115.png)
+
+**Es importante recordar la diferencia entre el método next() y nextLine()** , ya que ambos evalúan una cadena de texto.
+El método
+**next() sólo lee una palabra individual** (conjuntos de caracteres, incluidos dígitos, que no están separados por
+espacios o saltos de línea, como por ejemplo "casa", "hola", "2", "3,14", "1024", etc.). En cambio, **nextLine() lee
+todo el texto que encuentre (espacios incluidos) hasta el siguiente salto de línea** . En tal caso el apuntador se
+posiciona al inicio de la siguiente línea.
+
+**Una vez se ha finalizado la lectura del archivo** , ya sean todas o solo una parte, **es imprescindible ejecutar un
+método especial llamado close()** . Este método indica al sistema operativo que el archivo ya no está siendo utilizado
+por el programa. Esto es muy importante ya que mientras un archivo se considera en uso, su acceso puede verse limitado.
+Si no se utiliza close() el sistema operativo puede tardar un tiempo en darse cuenta de que el archivo ya no está en
+uso.
+
+| ...**Siempre hay que cerrar los archivos con close()**cuando se ha terminado de leer o escribir en
+ellos.![](file:///tmp/lu37016xc6sfk.tmp/lu37016xc6sgf_tmp_4f43f86e4682ec35.png)
+| |
+
+|
+
+Es importante saber que al instanciar el objeto Scanner **se lanzará una excepción de tipo java.io.FileNotFoundException
+si el archivo no existe** . Siempre habrá que manejar dicha excepción mediante un try-catch. Scanner también **puede
+lanzar otras excepciones** , por ejemplo si se intenta leer el tipo de dato incorrecto (llamamos a nextInt() cuando no
+hay un entero, como sucede en la entrada por teclado,) o si hemos llegado al final del archivo e intentamos seguir
+leyendo (podemos comprobarlo mediante el método hasNext() de Scanner, que devuelve true si aún hay algún elemento que
+leer).
+
+El programa siguiente muestra un ejemplo de cómo leer diez valores enteros de un archivo llamado "Enteros.txt" ubicado
+en la carpeta de trabajo (debería ser la carpeta del proyecto Netbeans). Para probarlo, crea el archivo e introduce
+exactamente 10 valores enteros separados por espacios en blanco o saltos de línea.
+
+importjava.io.File;
+
+importjava.util.Scanner;
+
+publicclass Pruebasarchivos {
+
+publicstatic final int NUM_VALORES = 10;
+
+publicstatic void main(String[] args) {
+
+try{
+
+//Intentamos abrir el archivo
+
+Filef = new File("Enteros.txt");
+
+Scannerlector = new Scanner(f);
+
+//Si llega aquí es que ha abierto el archivo :)
+
+for(int i = 0; i < NUM_VALORES; i++) {
+
+intvalor = lector.nextInt();
+
+System.out.println("Elvalor leído es: " + valor); }
+
+//¡Hay que cerrar el archivo!
+
+lector.close(); }catch (Exception e) {
+
+//En caso de excepción mostramos el error
+
+System.out.println("Error:" + e);
+
+e.printStackTrace(); } }
+
+}
+-->
+
+<h5 id="oros-metodos-de-lectura">Oros métodos de lectura<a class="headerlink" href="#oros-metodos-de-lectura" title="Permanent link">&para;</a></h5>
+<p>Existen otras formas de leer archivos:</p>
+<ul>
+<li><code>File.inputStream().readBytes()</code>: Lee el contenido del archivo en InputStream</li>
+<li><code>File.readBytes()</code>: devuelve todo el contenido del archivo como ByteArray</li>
+<li><code>File.readLines()</code>: devuelve todo el contenido del archivo como una lista de líneas</li>
+<li><code>File.readText()</code>: devuelve todo el contenido del archivo como una sola cadena</li>
+<li><code>java.util.Scanner</code>: permite leer indicando el tipo de dato a leer.</li>
+</ul>
+<h4 id="escritura-en-archivo">Escritura en archivo<a class="headerlink" href="#escritura-en-archivo" title="Permanent link">&para;</a></h4>
+<p>Con en el lenguaje de programación Kotlin tambien se puede escribir en un archivo. Por lo general, en los archivos orientados a caracteres se escriben cadenas de texto.</p>
+<p>Igual que para la lectura, haciendo uso de Kotlin podremos escribir en un archivo usando las funciones de extensión proporcionadas por Kotlin o también puede usar el código Java existente que escribe contenido en un archivo.</p>
+<p>A continuación veremos ejemplos de cómo usar clases de Java como <code>PrintWriter</code> para escribir en un archivo y más ejemplos usando funciones de extensión de Kotlin.</p>
+<h5 id="usar-javaiofilebufferedwriter">Usar <code>java.io.File.bufferedWriter</code><a class="headerlink" href="#usar-javaiofilebufferedwriter" title="Permanent link">&para;</a></h5>
+<p>Podemos usar la función de extensión <code>java.io.File.bufferedWriter()</code> para obtener el objeto de escritura y luego usar la función <code>write()</code> en el objeto de escritura para escribir contenido en el archivo.</p>
+<ol>
+<li>Tenga su contenido como una cadena.</li>
+<li>Pase el nombre del archivo al constructor de archivos (<code>File</code>).</li>
+<li>Luego llame al método <code>bufferedWriter()</code> de la clase <code>File</code>.</li>
+<li>Haciendo uso de la función <code>use()</code> (Veremos que ventajas nos proporciona hacer uso de ella), llama al método <code>writer(content)</code> del bufer escritor devuelto por <code>bufferedWriter()</code>, y que se encarga de escribir el contenido en el archivo.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="cm">/**</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="cm"> * Example to use File.bufferedWriter() in Kotlin to write content to a text file</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="cm"> */</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="c1">// content to be written to file</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World. Welcome to Kotlin!!&quot;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="c1">// write content to file</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;file.txt&quot;</span><span class="p">).</span><span class="na">bufferedWriter</span><span class="p">().</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">        </span><span class="k">out</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>Si te preguntas ¿por que “mi diario python” a lanzado False?. Es porque los espacios no son un carácter alfanumérico.</p>
+<p><img alt="" src="../assets/rayo.png" />
+Aplicamos la función <code>use()</code> para <strong>garantizar que todos los recursos se liberen correctamente cuando hayamos terminado</strong></p>
 </blockquote>
-<h4 id="stringisdigit">string.isdigit()<a class="headerlink" href="#stringisdigit" title="Permanent link">&para;</a></h4>
-<p>El método isdigit() devuelve True si todos los caracteres de la cadena son dígitos.
-Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;mi diario python&quot;</span>
-<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">digitos</span> <span class="o">=</span> <span class="s2">&quot;12345&quot;</span>
-<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>
-<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="kc">False</span>
-<a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">digitos</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>
-<a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a><span class="kc">True</span>
+<h5 id="usar-javaiofilewritetext">Usar <code>java.io.File.writeText()</code><a class="headerlink" href="#usar-javaiofilewritetext" title="Permanent link">&para;</a></h5>
+<p>Si está escribiendo exclusivamente texto en un archivo, puede usar la función de extensión <code>java.io.File.writeText()</code>.</p>
+<p>En el siguiente ejemplo, hemos usado esta función de extensión de kotlin para escribir texto en un archivo.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="cm">/**</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="cm"> * Example to use File.writeText in Kotlin to write text to a file</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="cm"> */</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="c1">// content to be written to file</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World. Welcome to Kotlin!!&quot;</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="c1">// write content to file</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;file.txt&quot;</span><span class="p">).</span><span class="na">writeText</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="stringisspace">string.isspace()<a class="headerlink" href="#stringisspace" title="Permanent link">&para;</a></h4>
-<p>El método isspace() devuelve True si solo hay caracteres de espacio en blanco.
-Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span>
-<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="kc">True</span>
-<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;  a&quot;</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span>
-<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="kc">False</span>
+<h5 id="usar-javaiofileprintwriter">Usar <code>java.io.File.printWriter</code><a class="headerlink" href="#usar-javaiofileprintwriter" title="Permanent link">&para;</a></h5>
+<p>En este ejemplo, usaremos la función de extensión de Kotlin <code>printWriter()</code> para la clase <code>java.io.File</code>. El siguiente es el proceso para escribir en el archivo.</p>
+<ol>
+<li>Tenga su contenido como una cadena.</li>
+<li>Pase el nombre del archivo al constructor de archivos (<code>File</code>).</li>
+<li>Luego llame al método <code>printWriter()</code> de la clase <code>File</code>.</li>
+<li>Haciendo uso de la función <code>use()</code>(Veremos que ventajas nos proporciona hacer uso de ella), llama al método <code>println(content)</code> del escritor devuelto por <code>printWriter()</code>, y que se encarga de escribir el contenido en el archivo.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="cm">/**</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="cm"> * Example to use File.printWriter in Kotlin to write content to a text file</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="cm"> */</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="c1">// content to be written to file</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World. Welcome to Kotlin!!&quot;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="c1">// write content to file</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;file.txt&quot;</span><span class="p">).</span><span class="na">printWriter</span><span class="p">().</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">        </span><span class="k">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="stringlower">string.lower()<a class="headerlink" href="#stringlower" title="Permanent link">&para;</a></h4>
-<p>El método lower devuelve una copia de la cadena con todos sus caracteres en minúsculas.
-Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hola Mundo&quot;</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="s1">&#39;hola mundo&#39;</span>
-<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;PYTHON&quot;</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="s1">&#39;python&#39;</span>
+<h5 id="usar-javaioprintwriter">Usar <code>java.io.PrintWriter</code><a class="headerlink" href="#usar-javaioprintwriter" title="Permanent link">&para;</a></h5>
+<p>En este ejemplo, tomamos una cadena y la escribimos en un archivo usando la clase <code>java.io.PrintWriter</code>. Para ello se siguen los siguientes pasos.</p>
+<ol>
+<li>Tenga sus datos listos como una cadena en una variable.</li>
+<li>Inicialice un objeto escritor de la clase <code>PrintWriter</code>.</li>
+<li>Agregue la cadena al archivo usando la función <code>PrintWriter.append()</code>.</li>
+<li>Cerrar el escritor.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.PrintWriter</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="cm">/**</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="cm"> * Example to use standard Java method in Kotlin to write content to a text file</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="cm"> */</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="c1">// content to be written to file</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World. Welcome to Kotlin!!&quot;</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="c1">// using java class java.io.PrintWriter</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">writer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PrintWriter</span><span class="p">(</span><span class="s">&quot;file.txt&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="n">writer</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">    </span><span class="n">writer</span><span class="p">.</span><span class="na">close</span><span class="p">()</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="stringupper">string.upper()<a class="headerlink" href="#stringupper" title="Permanent link">&para;</a></h4>
-<p>El método upper() devuelve la una copia de la cadena con todos su caracteres en mayúsculas.
-Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;mi diario python&quot;</span>
-<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texto</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="s1">&#39;MI DIARIO PYTHON&#39;</span>
+<p>En los ejemplso, se creará un nuevo archivo con el nombre <code>file.txt</code>, como se especifica para el argumento de <code>PrintWriter()</code>, con el contenido. Si el archivo ya está presente, primero se borra el contenido del archivo y luego se escribe el nuevo contenido en el archivo.</p>
+<h5 id="oros-metodos-de-escritura">Oros métodos de escritura<a class="headerlink" href="#oros-metodos-de-escritura" title="Permanent link">&para;</a></h5>
+<p>Existen otras formas de leer archivos:</p>
+<ul>
+<li><code>java.io.FileWriter</code>: Escribe en un archivo haciendo uso del método <code>writer()</code>.</li>
+</ul>
+<!--
+Existen muchas formas de acceder a un archivo para escribir en él. Una de las formas más fáciles, es el uso de la clase  `FileWriter`.
+
+### 4.1.2.1. Usar `FileWriter`
+
+Esta clase tiene dos constructores que
+merece la pena conocer:
+
+* public FileWriter(File file)
+* public FileWriter(File file, boolean append)
+
+El primer constructor es muy parecido al del Scanner. Solo hay que pasarle un objeto `File` con la ruta al archivo. Al
+tratarse de escritura la ruta puede indicar un archivo que puede existir o no dentro del sistema. **Si el archivo no
+existe, se creará uno nuevo** . Pero
+**si el archivo ya existe, su contenido se borra por completo, con tamaño igual a 0** . Esto puede ser peligroso ya que
+si no se maneja correctamente puede producir la pérdida de datos valiosos. Hay que estar completamente seguro de que se
+quiere sobreescribir el archivo. importjava.io.File; importjava.io.FileWriter; ... Filef = new File("C:
+\Programas\Unidad11\Documento.txt"); FileWriterwriter= newFileWriter(f); El segundo constructor tiene otro **parámetro
+de tipo booleano llamado “append”** **(añadir) que nos permite indicar si queremos escribir al final del archivo o no**
+. Es decir, si le pasamos “false” hará lo mismo que el contructor anterior (si el archivo ya existe, lo sobreescribirá),
+pero si le pasamos “true” abrirá el archivo para escritura en **modo “append”** , es decir, **escribiremos al final del
+archivo sin borrar los datos ya existentes** . importjava.io.File; importjava.io.FileWriter; ... Filef = new File("C:
+\Programas\Unidad11\Documento.txt"); FileWriterwriter= newFileWriter(f, true); La escritura secuencial de datos en un
+archivo orientado a carácter es muy sencilla. Solo es necesario utilizar el siguiente método
+**void write(String str)** que escribirá la cadena str en el archivo. Si se desea agregar un **final de línea** se puede
+agregar **" \n"** . | ...**Tanto el constructor de FileWriter como el método write() pueden lanzar una excepción
+IOException**si se produce algún error
+inesperado.![](file:///tmp/lu37016xc6sfk.tmp/lu37016xc6sgf_tmp_4f43f86e4682ec35.png)
+| |
+
+---
+
+|
+
+Es importante tener en cuenta que **para que el método write() escriba texto correctamente es imprescindible pasarle
+como argumento un String**
+. Está permitido utilizar datos o variables distintas a String, pero se escribirá directamente su valor en bytes, no
+como texto. Veamos dos ejemplos ilustrativos.
+
+writer.write("8"); // Escribe el carácter 8
+
+writer.write(8); // Escribe 8 como byte, es un carácter no imprimible
+
+writer.write("65");// Escribe dos carácteres, el 6 y el 5
+
+writer.write(65); // Escribe 65 como byte, es el carácter A
+
+Por lo tanto cuando queremos escribir el valor de variables que no sean String será necesario pasárselas a write() como
+String. Esto es muy sencillo, solo hay que concatenar un String vacío con la variable (Java siempre convierte a String
+la concatenación de cadenas de texto con cualquier otro elemento): ""+ variable
+
+intedad = 35;
+
+writer.write(""+ edad); // escribe el texto "35"
+
+La escritura de datos en archivo tiene la particularidad de que una vez se ha escrito un dato ya no hay marcha atrás. No
+es posible escribir información antes o en medio de valores que ya están escritos.
+
+Como en el caso de la lectura, la clase FileWriter también gestiona un apuntador que le permite saber a partir de qué
+posición del texto debe ir escribiendo. Cada vez que se invoca uno de sus métodos de escritura, el apuntador avanza
+automáticamente y no es posible hacerlo retroceder. A efectos prácticos este apuntador siempre está al final del
+archivo, de modo que a medida que se van escribiendo datos el archivo va incrementando su tamaño.
+
+A continuación se muestra un esquema del funcionamiento de la escritura en archivo.
+
+![](file:///tmp/lu37016xc6sfk.tmp/lu37016xc6sgf_tmp_78a0f492846799d6.png)
+
+La escritura no genera automáticamente un delimitador entre valores. Los espacios en blanco o saltos de línea que se
+deseen incorporar deben escribirse esplícitamente. De lo contrario los valores quedarán pegados y en una posterior
+lectura se interpretarán como un único valor. Por ejemplo, si se escribe el valor 2 y luego el 4, sin espacio, en el
+archivo se habrá escrito el valor 24. Si se leyera mediante un nextInt()
+nos devolvería un único valor, no dos.
+
+**Al escribir en archivos el cierre con close() es todavía más importante** que en la lectura. Esto se debe a que los
+sistemas operativos a menudo actualizan los datos de forma diferida. Es decir, el hecho de ejecutar una instrucción de
+escritura no significa que inmediatamente se escriba en el archivo. Puede pasar un intervalo de tiempo variable. Solo al
+ejecutar el método close() se fuerza al sistema operativo a escribir los datos pendientes (si los hubiera).
+
+| ...Al terminar la escritura también**es imprescindible invocar el método close()**para cerrarlo y asegurar la correcta
+escritura de datos.![](file:///tmp/lu37016xc6sfk.tmp/lu37016xc6sgf_tmp_4f43f86e4682ec35.png)
+| |
+
+|
+
+El código siguiente sirve como ejemplo de un programa que escribe un archivo llamado "Enteros.txt" dentro de la carpeta
+de trabajo. Se escriben 20 valores enteros, empezando por el 1 y cada vez el doble del anterior. Pruébalo para ver su
+funcionamiento. Ten en cuenta que si ya existía un archivo con ese nombre, quedará totalmente sobrescrito. Después,
+puedes intentar leerlo con el programa del ejemplo anterior para leer 10 valores enteros y mostrarlos por pantalla.
+
+publicstatic void main(String[] args) {
+
+try{
+
+Filef = new File("Enteros.txt");
+
+FileWriterfw = new FileWriter(f);
+
+intvalor = 1;
+
+for(int i = 1; i <= 20; i++) {
+
+fw.write(""+ valor); // escribimos valor
+
+fw.write(""); // escribimos espacio en blanco
+
+valor= valor * 2; // calculamos próximo valor }
+
+fw.write("\n");// escribimos nueva línea
+
+fw.close();// cerramos el FileWriter
+
+System.out.println("archivoescrito correctamente"); }catch (IOException e) {
+
+System.out.println("Error:" + e); }
+
+}
+
+Prueba a ejecutar el código varias veces. Verás que el archivo se sobrescribe y siempre queda igual. Luego, modifica la
+instanciación del FileWriter agregando el segundo argumento (“append”) a true:
+FileWriterfw = new FileWriter(f, true); Pruébalo y verás que ya no se sobreescribe el archivo, sino que se añaden los 20
+números al final. -->
+
+<h3 id="archivos-binarios">Archivos binarios.<a class="headerlink" href="#archivos-binarios" title="Permanent link">&para;</a></h3>
+<p>Los Data Stream (Flujos de datos) se utilizan para escribir datos binarios. <code>DataOutputStream</code> escribe datos binarios de tipos primitivos(<code>Int</code>, <code>Long</code>, <code>String</code>) mientras que <code>DataInputStream</code> lee datos del flujo binario y los convierte en tipos primitivos.</p>
+<p>A continuación veremos un programa de ejemplo que escribe datos en un archivo y luego los vuelve a leer a memoria para finalmente imprimirlos por salida estándar.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.DataInputStream</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.DataOutputStream</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.FileInputStream</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.FileOutputStream</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">){</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">burgers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;data.burgers&quot;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="c1">//Open the file in binary mode</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="n">DataOutputStream</span><span class="p">(</span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">burgers</span><span class="p">)).</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">dos</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">        </span><span class="n">with</span><span class="p">(</span><span class="n">dos</span><span class="p">){</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">            </span><span class="c1">//Notice we have to write our data types</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">            </span><span class="n">writeInt</span><span class="p">(</span><span class="s">&quot;Bob is Great\n&quot;</span><span class="p">.</span><span class="na">length</span><span class="p">)</span><span class="w"> </span><span class="c1">//Record length of the array</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">            </span><span class="n">writeChars</span><span class="p">(</span><span class="s">&quot;Bob is Great\n&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">//Write the array</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">            </span><span class="n">writeBoolean</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="c1">//Write a boolean</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">            </span><span class="n">writeInt</span><span class="p">(</span><span class="s">&quot;How many burgers can Bob cook?\n&quot;</span><span class="p">.</span><span class="na">length</span><span class="p">)</span><span class="w"> </span><span class="c1">//Record length of array</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">            </span><span class="n">writeBytes</span><span class="p">(</span><span class="s">&quot;How many burgers can Bob cook?\n&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">//Write the array</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">            </span><span class="n">writeInt</span><span class="p">(</span><span class="kt">Int</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="p">)</span><span class="w"> </span><span class="c1">//Write an int</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0.</span><span class="p">.</span><span class="m">5</span><span class="p">){</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="w">                </span><span class="n">writeByte</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="c1">//Write a byte</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">                </span><span class="n">writeDouble</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="na">toDouble</span><span class="p">())</span><span class="w"> </span><span class="c1">//Write a double</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="w">                </span><span class="n">writeFloat</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="na">toFloat</span><span class="p">())</span><span class="w"> </span><span class="c1">//Write a float</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="w">                </span><span class="n">writeInt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="c1">//Write an int</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="w">                </span><span class="n">writeLong</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="na">toLong</span><span class="p">())</span><span class="w"> </span><span class="c1">//Write a long</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>
+<a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a><span class="w">    </span><span class="c1">//Open a binary file in read mode. It has to be read in the same order</span>
+<a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a><span class="w">    </span><span class="c1">//in which it was written</span>
+<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a><span class="w">    </span><span class="n">DataInputStream</span><span class="p">(</span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">burgers</span><span class="p">)).</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="n">dis</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a><span class="w">        </span><span class="n">with</span><span class="w"> </span><span class="p">(</span><span class="n">dis</span><span class="p">){</span>
+<a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a><span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">bobSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readInt</span><span class="p">()</span><span class="w"> </span><span class="c1">//Read back the size of the array</span>
+<a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">bobSize</span><span class="p">){</span>
+<a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a><span class="w">                </span><span class="n">print</span><span class="p">(</span><span class="n">readChar</span><span class="p">())</span><span class="w"> </span><span class="c1">//Print the array one character at a time</span>
+<a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="n">readBoolean</span><span class="p">())</span><span class="w"> </span><span class="c1">//Read a boolean</span>
+<a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a>
+<a id="__codelineno-9-41" name="__codelineno-9-41" href="#__codelineno-9-41"></a><span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">burgerSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readInt</span><span class="p">()</span><span class="w"> </span><span class="c1">//Length of the next array</span>
+<a id="__codelineno-9-42" name="__codelineno-9-42" href="#__codelineno-9-42"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">burgerSize</span><span class="p">){</span>
+<a id="__codelineno-9-43" name="__codelineno-9-43" href="#__codelineno-9-43"></a><span class="w">                </span><span class="n">print</span><span class="p">(</span><span class="n">readByte</span><span class="p">().</span><span class="na">toChar</span><span class="p">())</span><span class="w"> </span><span class="c1">//Print array one character at a time</span>
+<a id="__codelineno-9-44" name="__codelineno-9-44" href="#__codelineno-9-44"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-9-45" name="__codelineno-9-45" href="#__codelineno-9-45"></a><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="n">readInt</span><span class="p">())</span><span class="w"> </span><span class="c1">//Read an int</span>
+<a id="__codelineno-9-46" name="__codelineno-9-46" href="#__codelineno-9-46"></a>
+<a id="__codelineno-9-47" name="__codelineno-9-47" href="#__codelineno-9-47"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0.</span><span class="p">.</span><span class="m">5</span><span class="p">){</span>
+<a id="__codelineno-9-48" name="__codelineno-9-48" href="#__codelineno-9-48"></a><span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="n">readByte</span><span class="p">())</span><span class="w"> </span><span class="c1">//Read a byte</span>
+<a id="__codelineno-9-49" name="__codelineno-9-49" href="#__codelineno-9-49"></a><span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="n">readDouble</span><span class="p">())</span><span class="w"> </span><span class="c1">//Read a double</span>
+<a id="__codelineno-9-50" name="__codelineno-9-50" href="#__codelineno-9-50"></a><span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="n">readFloat</span><span class="p">())</span><span class="w"> </span><span class="c1">//Read a float</span>
+<a id="__codelineno-9-51" name="__codelineno-9-51" href="#__codelineno-9-51"></a><span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="n">readInt</span><span class="p">())</span><span class="w"> </span><span class="c1">//Read an int</span>
+<a id="__codelineno-9-52" name="__codelineno-9-52" href="#__codelineno-9-52"></a><span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="n">readLong</span><span class="p">())</span><span class="w"> </span><span class="c1">//Read a long</span>
+<a id="__codelineno-9-53" name="__codelineno-9-53" href="#__codelineno-9-53"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-9-54" name="__codelineno-9-54" href="#__codelineno-9-54"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-9-55" name="__codelineno-9-55" href="#__codelineno-9-55"></a>
+<a id="__codelineno-9-56" name="__codelineno-9-56" href="#__codelineno-9-56"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-57" name="__codelineno-9-57" href="#__codelineno-9-57"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="stringlstripchars">string.lstrip(chars)<a class="headerlink" href="#stringlstripchars" title="Permanent link">&para;</a></h4>
-<p>El método lstrip devuelve una copia de la cadena con los caracteres iniciales eliminados. El argumento <em>chars</em> es una cadena que especifica el conjunto de caracteres que se eliminarán.
-Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">web</span> <span class="o">=</span> <span class="s2">&quot;www.pythondiario.com&quot;</span>
-<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">web</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">&quot;w.&quot;</span><span class="p">)</span>
-<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a><span class="s1">&#39;pythondiario.com&#39;</span>
-<a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a><span class="o">&gt;&gt;&gt;</span>
-</code></pre></div>
-<h4 id="stringreplacestring_viejo-string_nuevo">string.replace(string_viejo, string_nuevo)<a class="headerlink" href="#stringreplacestring_viejo-string_nuevo" title="Permanent link">&para;</a></h4>
-<p>El método replace() devuelve una copia de la cadena con la subcadena vieja remplazada por una nueva. Veamos un ejemplo para entenderlo mejor:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">cadena</span> <span class="o">=</span> <span class="s2">&quot;Hola Mundo&quot;</span>
-<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">cadena</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Mundo&quot;</span><span class="p">,</span> <span class="s2">&quot;Internet&quot;</span><span class="p">)</span>
-<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="s1">&#39;Hola Internet&#39;</span>
-</code></pre></div>
-<h4 id="stringpartitionchar">string.partition(char)<a class="headerlink" href="#stringpartitionchar" title="Permanent link">&para;</a></h4>
-<p>El método partition() divide la cadena en la primera aparición de char y devuelve una tupla que contiene la parte anterior a char, el mismo char, y la parte posterior de char. Suena un poco confuso, veamos un ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">cadena</span> <span class="o">=</span> <span class="s2">&quot;Hola Mundo&quot;</span>
-<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">cadena</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s2">&quot;la&quot;</span><span class="p">)</span>
-<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="p">(</span><span class="s1">&#39;Ho&#39;</span><span class="p">,</span> <span class="s1">&#39;la&#39;</span><span class="p">,</span> <span class="s1">&#39; Internet&#39;</span><span class="p">)</span>
-</code></pre></div>
-<h4 id="stringtitle">string.title()<a class="headerlink" href="#stringtitle" title="Permanent link">&para;</a></h4>
-<p>El método title() devuelve una copia de la cadena donde las palabras comienzan con una letra mayúscula. Veamos un ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">cadena</span> <span class="o">=</span> <span class="s2">&quot;mi diario python&quot;</span>
-<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">cadena</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
-<a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="s1">&#39;Mi Diario Python&#39;</span>
-</code></pre></div>
-<h4 id="stringswapcase">string.swapcase()<a class="headerlink" href="#stringswapcase" title="Permanent link">&para;</a></h4>
-<p>El método swapcase() devuelve una copia de la cadena con los caracteres en mayúsculas convertidos en minúsculas y viceversa.</p>
-<p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">cadena</span> <span class="o">=</span> <span class="s2">&quot;Mi Diario Python&quot;</span>
-<a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">cadena</span><span class="o">.</span><span class="n">swapcase</span><span class="p">()</span>
-<a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a><span class="s1">&#39;mI dIARIO pYTHON&#39;</span>
-</code></pre></div>
-<h4 id="strigstartswithprefijo">strig.startswith(prefijo)<a class="headerlink" href="#strigstartswithprefijo" title="Permanent link">&para;</a></h4>
-<p>El método startswith() devuelve True si la cadena comienza con el prefijo, de lo contrario devuelve False.
-Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">cadena</span> <span class="o">=</span> <span class="s2">&quot;Mi Diario Python&quot;</span>
-<a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">cadena</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;Mi&quot;</span><span class="p">)</span>
-<a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a><span class="kc">True</span><span class="s1">&#39;</span>
-</code></pre></div>
-<h4 id="stringsplitsep">string.split(sep)<a class="headerlink" href="#stringsplitsep" title="Permanent link">&para;</a></h4>
-<p>El método split() devuelve una lista de las palabras en la cadena, utilizando a sep como la cadena delimitadora.
-Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">cadena</span> <span class="o">=</span> <span class="s2">&quot;Luis,Jose,Maria,Sofia,Miguel&quot;</span>
-<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">cadena</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
-<a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a><span class="p">[</span><span class="s1">&#39;Luis&#39;</span><span class="p">,</span> <span class="s1">&#39;Jose&#39;</span><span class="p">,</span> <span class="s1">&#39;Maria&#39;</span><span class="p">,</span> <span class="s1">&#39;Sofia&#39;</span><span class="p">,</span> <span class="s1">&#39;Miguel&#39;</span><span class="p">]</span>
-</code></pre></div>
-<h4 id="stringzfillancho">string.zfill(ancho)<a class="headerlink" href="#stringzfillancho" title="Permanent link">&para;</a></h4>
-<p>El método zfill() devuelve una copia de la cadena que se rellena con 0 dígitos ASCII para hacer una cadena de <em>ancho</em> de longitud .
-Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;356&quot;</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
-<a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="s1">&#39;000356&#39;</span>
-</code></pre></div>
+<p>El programa crea un objeto <code>FileOutputStream</code>, para ello pasa el nombre del archivo a su constructor. Luego, el objeto <code>FileOutputStream</code> se pasa como parámetro al constructor de <code>DataOutputStream</code>. </p>
+<p>Hacemos uso de la función <code>use()</code> para <strong>garantizar que todos los recursos se liberen correctamente cuando hayamos terminado</strong>. El archivo ahora está abierto para escritura en modo binario.</p>
+<p>Cuando deseamos usar el mismo objeto repetidamente, podemos pasarlo a la función <code>with()</code>. En nuestro caso, tenemos la intención de seguir usando nuestro objeto <code>DataOutputStream</code>, por lo que en la línea 11, lo pasamos a la función <code>with()</code>. Dentro de la función <code>with()</code>, todas las llamadas a métodos apuntarán al objeto <code>dos</code> ya que se proporcionó a <code>with()</code> como parámetro.</p>
+<blockquote>
+<p><img alt="" src="../assets/rayo.png" />
+Cuando deseamos usar un mismo objeto repetidamente, podemos pasarlo a la función <code>with()</code>. Cuando un objeto es pasado a la función <code>with()</code>, dentro de esta, <strong>todas las llamadas a métodos apuntarán al objeto que se le ha pasado por parámetro</strong>.</p>
+</blockquote>
+<p>Siguiendo con el ejemplo, dado que tenemos la intención de escribir un <code>String</code> en el archivo, necesitamos registrar la longitud de la cadena, ya que de otra forma no sabriamos cuantos bytes se han escrito. Hacemos esto usando la función <code>writeInt</code> y pasándole la longitud de nuestra cadena. Luego podemos usar <code>writeChars()</code> para escribir un string, puesto que el argumento <code>String</code> se convierte en una matriz de caracteres. Finalmente, llamamos a <code>writeBoolean()</code> para escribir valores <code>true</code>/<code>false</code> en el archivo.</p>
+<p>La siguiente sección es una repetición de la primera. Tenemos la intención de escribir otro <code>String</code> en el archivo, pero al hacerlo, necesitamos registrar la longitud en el archivo. Una vez más, recurrimos a <code>writeInt()</code> para registrar un valor <code>int</code>. En la siguiente línea, usamos <code>writeBytes()</code> en lugar de <code>writeChars()</code> para demostrar cómo podemos escribir una matriz de bytes en lugar de una cadena. La clase <code>DataOutputStream</code> se ocupa de los detalles de convertir un <code>String</code> en una matriz de bytes. Finalmente, escribimos otro valor int en la secuencia.</p>
+<p>A continuación, se ejecuta un ciclo <code>for</code> en la línea 21. Dentro del ciclo <code>for</code>, demostramos como escribir diferentes tipos primitivos en el archivo. Podemos usar <code>writeByte()</code> para un <code>byte</code>, <code>writeDouble()</code> para un <code>double</code>, y así sucesivamente para cada tipo primitivo. <strong>La clase <code>DataOutputStream</code> conoce el tamaño de cada tipo primitivo y escribe el número correcto de bytes para cada primitivo</strong>.</p>
+<p>Cuando terminamos de escribir el objeto, lo abrimos nuevamente para leerlo. La línea 33 crea un objeto <code>FileInputStream</code> que acepta la ruta al archivo en su constructor. El objeto <code>FileInputStream</code> está encadenado a <code>DataInputStream</code> pasándolo al constructor de <code>DataInputStream</code>. Aplicamos la función <code>use()</code> para garantizar que todos los recursos estén correctamente cerrados.</p>
+<p>La lectura del archivo requiere que el archivo se lea en el mismo orden en que se escribe. Nuestra primera orden por tanto, debería ser tomar el tamaño de la matriz de caracteres que escribimos en el archivo anteriormente. Usamos <code>readInt()</code> en la línea 35 seguido de un ciclo <code>for</code> que termina en el tamaño de la matriz en la línea 36. Cada iteración del ciclo <code>for</code> llama a <code>readChar()</code> y la cadena se imprime en la consola. Cuando terminamos, leemos un booleano en la línea 39.</p>
+<p>Nuestra siguiente matriz fue una matriz de bytes. Una vez más, necesitamos su tamaño final, por lo que llamamos a <code>readInt()</code> en la línea 41. Las líneas 42-44 recorren la matriz y llaman a <code>readByte()</code> hasta que finaliza el bucle. Cada <code>byte</code> se convierte en un objeto de carácter mediante <code>toChar()</code>. En la línea 45, leemos un <code>int</code> usando <code>readInt()</code>.</p>
+<p>La parte final del programa repite el ciclo for encontrado anteriormente. En este caso, se hace uso de un bucle <code>for</code> que termina después de cinco iteraciones (línea 47). Dentro de este, se llama a los métodos <code>readByte()</code>, <code>readDouble()</code>, <code>readFloat()</code>, y así sucesivamente. Después de cada llamada se imprime el valor recuperado en la consola.</p>
 <h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://j2logo.com/">Página de Juan Jose Lozano Gomez sobre Python</a></li>
-<li><a href="https://es.py4e.com/">Python para todos</a></li>
-<li><a href="https://pythondiario.com/2019/02/metodos-string-en-python-con-ejemplos.html">Ejemplos con métodos de String</a></li>
-<li><a href="https://blog.soyhenry.com/que-es-una-estructura-de-datos-en-programacion/">Estructuras de datos</a></li>
-<li><a href="ttps://aprendeconalf.es">Aprende con Alf</a></li>
+<li>Apuntes de programación de Joan Arnedo Moreno (Institut Obert de Catalunya, IOC)</li>
+<li>Apuntes de programación de Natividad Prieto, Francisco Marqués y Javier Piris (E.T.S. de Informática, Universidad
+  Politécnica de Valencia).</li>
+<li><a href="sitiolibre.com">Apuntes de programación de Jose Luis Comesaña</a>.</li>
+<li><a href="https://www.tutorialkart.com/kotlin/kotlin-create-file/">Create File</a></li>
+<li><a href="https://stonesoupprogramming.com/2017/11/24/kotlin-data-streams">Kotlinn data streams</a></li>
+<li><a href="https://www.baeldung.com/kotlin/read-file">Read File</a></li>
+<li><a href="https://www.baeldung.com/kotlin/inputstream-to-string">Inputstream to String</a></li>
 </ul>
 
 

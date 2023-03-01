@@ -23,7 +23,7 @@ import java.io.File
 
 Esta clase permite manipular cualquier aspecto vinculado al sistema de ficheros. Su nombre ("archivo", en inglés) es un poco engañoso, ya que no se refiere exactamente a un archivo.
 
->![](assets/rayo.png) 2.2. 
+>![](assets/rayo.png) 
 > **La clase `File` representa una ruta dentro del sistema de archivos**
 
 Sirve para realizar operaciones tanto sobre rutas al sistema de archivos que ya existan como no existentes. Además, se puede usar tanto para manipular archivos como directorios.

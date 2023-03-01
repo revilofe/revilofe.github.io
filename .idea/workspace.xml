@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="EDES. 1.4 Condicionales, practica 3 e indice">
-      <change beforePath="$PROJECT_DIR$/docs/section1/u01/teoria/PROG-U1.4.-Condicionales.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/section1/u01/teoria/PROG-U1.4.-Condicionales.md" afterDir="false" />
+    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="unidad 7">
+      <change afterPath="$PROJECT_DIR$/docs/section1/u05/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section1/u05/practica/PROG-U5.-Practica001.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section1/u05/teoria/PROG-U5.1.-xxxx.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section1/u06/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section1/u06/practica/PROG-U6.-Practica001.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section1/u06/teoria/PROG-U6.1.-xxxx.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section1/u07/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section1/u07/practica/PROG-U7.-Practica001.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section1/u07/teoria/PROG-U7.1.-SistemaArchivos.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section1/u07/teoria/PROG-U7.2.-ConsolaTeclado.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section1/u07/teoria/PROG-U7.3.-File.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section1/u07/teoria/PROG-U7.4.-LecturaEscritura.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section1/u07/teoria/PROG-U7.5.-GUI.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section1/u07/teoria/assets/PROG-U7.1.-Flujos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section1/u07/teoria/assets/PROG-U7.1.-FlujosEstandar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section1/u07/teoria/assets/PROG-U7.1.-Programa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section1/u07/teoria/assets/book.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/section1/u07/teoria/assets/rayo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +31,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Edu &lt;revilofe@gmail.com&gt;" />
+        <option value="Eduardo Fernández Oliver &lt;revilofe@gmail.com&gt;" />
         <option value="edu &lt;revilofe@gmail.com&gt;" />
       </list>
     </option>
@@ -23,7 +44,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ff9c42636fa155cd15e9854cf3f239d3e31e6481" />
+        <entry key="$PROJECT_DIR$" value="EDES.u3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,6 +58,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2BTKEI9AZUZ3sJYXM2p3frg4RwA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -47,29 +71,28 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="TODO_SCOPE" value="All Places" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="jdk.selected.JAVA_MODULE" value="17" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/section3/u01/teoria" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/edu/IdeaProjects/revilofe.github.io/docs/section1",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
   <component name="ReaderModeSettings">
     <option name="showLigatures" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/docs/section3/u01/teoria" />
+      <recent name="$PROJECT_DIR$/docs/section1" />
+      <recent name="$PROJECT_DIR$/docs/section1/u07/teoria" />
+      <recent name="$PROJECT_DIR$/docs/section1/u07" />
+      <recent name="$PROJECT_DIR$/docs/section2/u07" />
+      <recent name="$PROJECT_DIR$/docs/blog" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/section1" />
+      <recent name="$PROJECT_DIR$/docs/blog/20230213-scopeFunctions" />
     </key>
   </component>
   <component name="RunManager">
@@ -80,6 +103,19 @@
         </value>
       </option>
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="revilofe.github.io" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="revilofe.github.io" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -101,146 +137,35 @@
       <workItem from="1662967926722" duration="16456000" />
       <workItem from="1663174156991" duration="9223000" />
       <workItem from="1663414661604" duration="4425000" />
-    </task>
-    <task id="LOCAL-00001" summary="Revert &quot;Añadido revealjs&quot;&#10;&#10;This reverts commit 816d7e91">
-      <created>1656924733819</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1656924733819</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Revert &quot;Deployed f651645 with MkDocs version: 1.3.0&quot;&#10;&#10;This reverts commit c57880d5">
-      <created>1656925880954</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1656925880954</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Revert &quot;Deployed f651645 with MkDocs version: 1.3.0&quot;">
-      <created>1656926235809</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1656926235809</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Logo y FavIcon">
-      <created>1657016021426</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1657016021426</updated>
-    </task>
-    <task id="LOCAL-00005" summary="workspace.xml idea">
-      <created>1657016049825</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1657016049825</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Logo y FavIcon +">
-      <created>1657016311198</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1657016311198</updated>
-    </task>
-    <task id="LOCAL-00007" summary="workspace.xml idea">
-      <created>1657016478976</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1657016478976</updated>
-    </task>
-    <task id="LOCAL-00008" summary="cambiar edit_uri para poder editar la pagina.">
-      <created>1657017204788</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1657017204788</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Configuración blog">
-      <created>1657041106839</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1657041106839</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Configuración blog. Action: Install plugin&#10;      - run: pip3 install mkdocs-blogging-plugin">
-      <created>1657041291085</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1657041291085</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Cambio ejemplo en slides.">
-      <created>1657041567766</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1657041567766</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Cambio ejemplo en slides, para volver atras">
-      <created>1657044659747</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1657044659747</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Cambio ejemplo en slides, para volver atras">
-      <created>1657046160200</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1657046160200</updated>
-    </task>
-    <task id="LOCAL-00014" summary="subida de contenido y estructura">
-      <created>1657276506358</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1657276506358</updated>
-    </task>
-    <task id="LOCAL-00015" summary=".gitignore">
-      <created>1657277100884</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1657277100884</updated>
-    </task>
-    <task id="LOCAL-00016" summary="IS-U0.1.1.-Presentacion.md Slide presentación">
-      <created>1657281074869</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1657281074869</updated>
-    </task>
-    <task id="LOCAL-00017" summary="abbreviations.md">
-      <created>1657870485414</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1657870485414</updated>
-    </task>
-    <task id="LOCAL-00018" summary="abbreviations.md">
-      <created>1657870775560</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1657870775560</updated>
-    </task>
-    <task id="LOCAL-00019" summary="IS-U5.1.0.RespuestaAIncidentes.md">
-      <created>1658235324934</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1658235324935</updated>
-    </task>
-    <task id="LOCAL-00020" summary="IS-U5.1.0.RespuestaAIncidentes.md">
-      <created>1658235352289</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1658235352289</updated>
+      <workItem from="1664435918233" duration="3412000" />
+      <workItem from="1664532350736" duration="936000" />
+      <workItem from="1664777284441" duration="2137000" />
+      <workItem from="1664869742077" duration="1500000" />
+      <workItem from="1665133129932" duration="9093000" />
+      <workItem from="1665732635906" duration="8603000" />
+      <workItem from="1666074719528" duration="175000" />
+      <workItem from="1666251066427" duration="673000" />
+      <workItem from="1666251767476" duration="1207000" />
+      <workItem from="1666332778053" duration="602000" />
+      <workItem from="1666778517269" duration="6636000" />
+      <workItem from="1667321300680" duration="125000" />
+      <workItem from="1667389627785" duration="647000" />
+      <workItem from="1667558161312" duration="1221000" />
+      <workItem from="1668582568653" duration="1129000" />
+      <workItem from="1669979040760" duration="632000" />
+      <workItem from="1671001679106" duration="664000" />
+      <workItem from="1673601286754" duration="3511000" />
+      <workItem from="1674546116640" duration="200000" />
+      <workItem from="1674546343521" duration="300000" />
+      <workItem from="1674546675919" duration="17371000" />
+      <workItem from="1675150856291" duration="5013000" />
+      <workItem from="1675235511091" duration="462000" />
+      <workItem from="1675329840949" duration="661000" />
+      <workItem from="1675417304366" duration="592000" />
+      <workItem from="1676302179238" duration="8179000" />
+      <workItem from="1676367028784" duration="637000" />
+      <workItem from="1677140006146" duration="4370000" />
+      <workItem from="1677222572079" duration="8953000" />
     </task>
     <task id="LOCAL-00021" summary="abbreviations.md">
       <created>1658235372027</created>
@@ -417,7 +342,175 @@
       <option name="project" value="LOCAL" />
       <updated>1664312348140</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="EDES. 2.4 Iterativas, practica 2.2 e indice">
+      <created>1664437271008</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1664437271008</updated>
+    </task>
+    <task id="LOCAL-00047" summary="EDES. 2.4 Iterativas, practica 2.2 e indice. Actividades">
+      <created>1664439903461</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1664439903461</updated>
+    </task>
+    <task id="LOCAL-00048" summary="IS. Presentación">
+      <created>1664777412006</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1664777412007</updated>
+    </task>
+    <task id="LOCAL-00049" summary="IS. Presentación">
+      <created>1664778117315</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1664778117315</updated>
+    </task>
+    <task id="LOCAL-00050" summary="IS. Presentación">
+      <created>1664778712336</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1664778712337</updated>
+    </task>
+    <task id="LOCAL-00051" summary="PROG. 2.5 Documentar en python">
+      <created>1665145040184</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1665145040185</updated>
+    </task>
+    <task id="LOCAL-00052" summary="EDES. Unidad 1, 1.5 ProcesoDesarrolloSoftware">
+      <created>1665762623508</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1665762623509</updated>
+    </task>
+    <task id="LOCAL-00053" summary="PROG. Unidad 3, 3.1 Listas">
+      <created>1666252861848</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1666252861849</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Indice mkdocs.yml">
+      <created>1666778632435</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1666778632436</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Blog: Porque en Python empiezan los programas con if __name__ == __main__">
+      <created>1666795995995</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1666795995995</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Blog: eliminado ejemplo">
+      <created>1666796072730</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1666796072730</updated>
+    </task>
+    <task id="LOCAL-00057" summary="PROG. Unidad 3, 3.4 Conjuntos">
+      <created>1666796149779</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1666796149779</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Blog: Porque en Python empiezan los programas con if __name__ == __main__">
+      <created>1666796438350</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1666796438350</updated>
+    </task>
+    <task id="LOCAL-00059" summary="PROG. Unidad 3, 3.5 Funciones">
+      <created>1667321346183</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1667321346184</updated>
+    </task>
+    <task id="LOCAL-00060" summary="EDES. Unidad 3, 3.1 Git Practica">
+      <created>1673602181637</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1673602181638</updated>
+    </task>
+    <task id="LOCAL-00061" summary="EDES. Unidad 3, 3.1 Git Practica">
+      <created>1673602516895</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1673602516895</updated>
+    </task>
+    <task id="LOCAL-00062" summary="EDES. Unidad 3, 3.1 Git Practica">
+      <created>1673603044755</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1673603044755</updated>
+    </task>
+    <task id="LOCAL-00063" summary="EDES. Unidad 3, 3.1 Git Práctica">
+      <created>1673606703429</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1673606703429</updated>
+    </task>
+    <task id="LOCAL-00064" summary="EDES. Unidad 3, 3.2 TDD y test de unidad">
+      <created>1674724332117</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1674724332119</updated>
+    </task>
+    <task id="LOCAL-00065" summary="EDES. Unidad 3, 3.2 TDD y test de unidad">
+      <created>1674725146864</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1674725146864</updated>
+    </task>
+    <task id="LOCAL-00066" summary="EDES. Unidad 3, 3.2 TDD y test de unidad">
+      <created>1674725662478</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1674725662478</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Arreglar cabeceras 3.3 y 3.4">
+      <created>1675235968835</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1675235968836</updated>
+    </task>
+    <task id="LOCAL-00068" summary="scope functions">
+      <created>1676328692877</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1676328692878</updated>
+    </task>
+    <task id="LOCAL-00069" summary="scope functions">
+      <created>1677142366233</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1677142366234</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,23 +541,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Logo y FavIcon" />
-    <MESSAGE value="Logo y FavIcon +" />
-    <MESSAGE value="workspace.xml idea" />
-    <MESSAGE value="cambiar edit_uri para poder editar la pagina." />
-    <MESSAGE value="Configuración blog" />
-    <MESSAGE value="Configuración blog. Action: Install plugin&#10;      - run: pip3 install mkdocs-blogging-plugin" />
-    <MESSAGE value="Cambio ejemplo en slides." />
-    <MESSAGE value="Cambio ejemplo en slides, para volver atras" />
-    <MESSAGE value="subida de contenido y estructura" />
-    <MESSAGE value=".gitignore" />
-    <MESSAGE value="IS-U0.1.1.-Presentacion.md Slide presentación" />
-    <MESSAGE value="IS-U5.1.0.RespuestaAIncidentes.md" />
-    <MESSAGE value="abbreviations.md" />
-    <MESSAGE value="mkdocs.yml" />
-    <MESSAGE value="IS-U5.1.0.-RespuestaAIncidentes.md" />
-    <MESSAGE value="Añadir entornos al indice" />
-    <MESSAGE value="Incidentes de seguridad U5" />
     <MESSAGE value="slides1.md" />
     <MESSAGE value="slides de IS presentación." />
     <MESSAGE value="Presentación de programación." />
@@ -473,7 +549,24 @@
     <MESSAGE value="Presentación de programación. Corrección errores" />
     <MESSAGE value="Presentación de programación. Añadir formularios" />
     <MESSAGE value="EDES. 1.4 Condicionales, practica 3 e indice" />
-    <option name="LAST_COMMIT_MESSAGE" value="EDES. 1.4 Condicionales, practica 3 e indice" />
+    <MESSAGE value="PROG. Unidad 2, 2.2 Iterativas y saltos. Practicas 2.2" />
+    <MESSAGE value="EDES. 2.4 Iterativas, practica 2.2 e indice. Actividades" />
+    <MESSAGE value="IS. Presentación" />
+    <MESSAGE value="PROG. Unidad 2, 2.5 Documentar en python" />
+    <MESSAGE value="EDES. Unidad 1, 1.5 ProcesoDesarrolloSoftware" />
+    <MESSAGE value="PROG. Unidad 3, 3.1 Listas" />
+    <MESSAGE value="Indice mkdocs.yml" />
+    <MESSAGE value="Blog: eliminado ejemplo" />
+    <MESSAGE value="PROG. Unidad 3, 3.4 Conjuntos" />
+    <MESSAGE value="Blog: Porque en Python empiezan los programas con if __name__ == __main__" />
+    <MESSAGE value="PROG. Unidad 3, 3.5 Funciones" />
+    <MESSAGE value="EDES. Unidad 3, 3.1 Git Practica" />
+    <MESSAGE value="EDES. Unidad 3, 3.1 Git Práctica" />
+    <MESSAGE value="EDES. Unidad 3, 3.2 TDD y test de unidad" />
+    <MESSAGE value="Arreglar cabeceras 3.3 y 3.4" />
+    <MESSAGE value="scope functions" />
+    <MESSAGE value="unidad 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="unidad 7" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

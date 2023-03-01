@@ -47,10 +47,20 @@ nav:
     - 'U4: Kotlin':
         - 'section1/u04/index.md'
         - '4.1.-Kotlin': 'section1/u04/teoria/PROG-U4.1.-kotlin.md'
-        - '4.1.-Kotlin: Colecciones': 'section1/u04/teoria/PROG-U4.2.-kotlinColeciones.md'
-        - '4.1.-Kotlin: POO': 'section1/u04/teoria/PROG-U4.3.-kotlinPOO.md'
-        - '4.1.-Kotlin: Resumen': 'section1/u04/teoria/PROG-U4.4.-kotlinResumen.md'
-
+        - '4.2.-Kotlin: Colecciones': 'section1/u04/teoria/PROG-U4.2.-kotlinColeciones.md'
+        - '4.3.-Kotlin: POO': 'section1/u04/teoria/PROG-U4.3.-kotlinPOO.md'
+        - '4.4.-Kotlin: Resumen': 'section1/u04/teoria/PROG-U4.4.-kotlinResumen.md'
+    - 'U5: Kotlin':
+#        - 'section1/u05/index.md'
+    - 'U6: Kotlin':
+#        - 'section1/u06/index.md'
+    - 'U7: Kotlin':
+        - 'section1/u07/index.md'
+        - '7.1.-Sistema archivos:E/S': 'section1/u07/teoria/PROG-U7.1.-SistemaArchivos.md'
+        - '7.2.-Entrada/Salida estandar': 'section1/u07/teoria/PROG-U7.2.-ConsolaTeclado.md'
+        - '7.3.-Gestión Archivos': 'section1/u07/teoria/PROG-U7.3.-File.md'
+        - '7.4.-Lectura/Escritura Archivos': 'section1/u07/teoria/PROG-U7.4.-LecturaEscritura.md'
+        - '7.5.-GUI': 'section1/u07/teoria/PROG-U7.5.-GUI.md'
   - 'Entornos de desarrollo':
     - 'section3/index.md'
     - 'U1: Introducción al desarrollo de software':

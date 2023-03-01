@@ -306,11 +306,85 @@ A  |     B |     C | Long_Header
 20 |    b2 | 0.33% |         bar
 ```
 
+## Kotlin Command-Line Arguments
+
+[kotlinx-cli](https://github.com/Kotlin/kotlinx-cli) facilita el parseo y procesado de los argumentos que se le pasan al programa. Aunque podemos realizarlo nosotros mismos. 
+
+### Línea de comandos en `Main`
+
+Al invocar un programa desde la línea de comandos, puedes pasarle un número variable de argumentos. Por ej: `> tar -vzf file.tar.gz`
+
+Para capturar los argumentos de la línea de comandos, debes proporcionar un parámetro predefinido a `main()`:
+
+```kotlin
+// MainArgs.kt
+
+fun main (args: Array < String >) {
+   for (a in args) {
+    imprimir (a)
+  }
+}
+```
+
+El parámetro se llama tradicionalmente `args` aunque puede llamarlo de cualquier manera, y el tipo de `args` solo puede ser `Array<String>` (Array of String).
+
+También se puede usar el compilador kotlinc para crear un programa que se ejecuta desde línea de comandos.
+
+Una vez que haya creado y guardado y compilado el código para un programa llamado `MainArgs.kt`, escriba lo siguiente en el símbolo del sistema:
+
+
+```Bash
+> kotlinc MainArgsKt
+```
+
+Puedes proporcionar los argumentos de la línea de comandos después de la invocación del programa, así:
+
+```Bash
+> kotlin MainArgsKt aaa 42 3.14159.
+```
+Y por salida estandar, saldrá lo siguiente:
+
+```
+aaa
+42
+3.14159
+```
+
+Si una vez leídos los parśmetros quieres convertir un parámetro `String` en un tipo específico, Kotlin proporciona funciones de conversión, como`toInt()` para convertir a `Int` y `toFloat()` para convertir a `Float`...
+
+El uso de estos métodos supone que los argumentos de la línea de comandos aparecen en un orden particular.
+
+Por ejemplo, en el siguiente código, el programa espera un `String`, seguido de algo convertible a `Int`, seguido de algo convertible a `Float`:
+
+
+```kotlin
+// MainArgConversion.kt`
+
+fun main (args: Array < String >) {
+   if (args.size < 3) return 
+    val primero = args[0]
+    val segundo = args[1].toInt ()
+    val tercero = args[2].toFloat ()
+    println( "$primero $segundo $tercero" )
+}
+```
+
+La primera línea de `main()` cierra el programa si no hay suficientes argumentos.
+
+Si no proporciona algo convertible a `Int` y `Float` como segundo y tercer argumento de la línea de comandos, verá errores de tiempo de ejecución.
+
+Si compilas y ejecutas `MainArgConversion.kt` con los mismos argumentos de línea de comandos que usamos antes, verás la siguiente salida:
+
+```
+aaa 42 3.14159
+```
 
 ## Fuente
 
-* [Formatos de String en Kotlin](https://hackaprende.com/2020/11/25/formatos-de-string-en-kotlin/)
-* [Kotlin String Formatting](https://stonesoupprogramming.com/2017/11/17/kotlin-string-formatting/)
-* [Format](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/format.html)
-* [Add padding to a string in Kotlin](https://www.techiedelight.com/add-padding-to-a-string-in-kotlin/)
-* [padStart](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/pad-start.html)
+- [Formatos de String en Kotlin](https://hackaprende.com/2020/11/25/formatos-de-string-en-kotlin/)   
+- [Kotlin String Formatting](https://stonesoupprogramming.com/2017/11/17/kotlin-string-formatting/)   
+- [Format](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/format.html)   
+- [Add padding to a string in Kotlin](https://www.techiedelight.com/add-padding-to-a-string-in-kotlin/)   
+- [padStart](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/pad-start.html)   
+- [IO Entra y salida de datos en consola](https://kotlindoc.blogspot.com/2019/04/io-entrada-y-salida-de-datos-en-consola.html)   
+- [Kotlin command line arguments](https://www.demo2s.com/kotlin/kotlin-command-line-arguments.html)   

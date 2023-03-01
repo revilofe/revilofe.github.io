@@ -1,700 +1,595 @@
 ---
-title: "UD 3 - 3.0 Cadenas"
-description: Cadenas
-summary: Cadenas
+title: "UD 7 - 7.4 Lectura y escritura de archivos"
+description: Lectura y escritura de archivos
+summary: Lectura y escritura de archivos
 authors:
-    - Eduardo Fdez
-date: 2022-09-18
+   - Eduardo Fdez
+date: 2023-03-01
 icon: material/software
-permalink: /prog/unidad3/3.0
+permalink: /prog/unidad7/7.4
 categories:
-    - PROG
+   - PROG
 tags:
-    - Software
-    - Cadenas
+   - Software
+   - File
 ---
-## Cadenas
 
-Una cadena es una *secuencia* de caracteres.
 
-### Una cadena es una secuencia
+## Lectura y escritura de archivos   
+Normalmente las aplicaciones que utilizan archivos no están centradas en la gestión del sistema de archivos del ordenador. El objetivo principal de usar archivos es **poder almacenar datos de modo que entre diferentes ejecuciones del programa**, incluso en diferentes equipos, sea posible recuperar los datos almacenados. El caso más típico es un editor de documentos, que mientras se ejecuta se encarga de gestionar los datos relativos al texto que está escribiendo, pero en cualquier momento puede guardarlo en un archivo para poder recuperar este texto cuando se desee, y añadir otros nuevos si fuera necesario. El archivo con los datos del documento lo puede abrir tanto en el editor de su ordenador como en el de otro compañero.
 
-Puedes acceder a los caracteres de uno en uno con el operador corchete:
+Para saber cómo tratar los datos de un archivo en un programa, hay que **tener muy claro cómo se estructuran**. Dentro de un archivo se pueden almacenar todo tipo de valores de cualquier tipo de datos. La parte más importante es que estos valores **se almacenan en forma de secuencia**, uno tras otro. Por lo tanto, como pronto veréis, la forma más habitual de tratar archivos es **secuencialmente**, de forma parecida a como se hace para leer los datos desde teclado, mostrarlas por pantalla o recorrer las posiciones de un array.
 
-```Python
->>> fruta = 'banana'
->>> letra = fruta[1]
+> ![](./assets/book.png)
+> Se denomina **acceso secuencial** al procesamiento de un conjunto de elementos de manera que sólo es posible acceder a ellos de acuerdo a su orden de aparición. Para procesar un elemento es necesario procesar primero todos los elementos anteriores.
+
+Kotlin, junto con otros lenguajes de programación, diferencia entre dos tipos de archivos según cómo se representan los valores almacenados en un archivo.
+
+> ![](./assets/book.png)
+> En los **archivos orientados a carácter**, los datos se representan como una secuencia de cadenas de texto, donde cada valor se  diferencia del otro usando un delimitador. En cambio, en los **archivos orientados a byte**, los datos se representan directamente de acuerdo a su formato en binario, sin ninguna separación. Estos últimos archivos son no son legibles a simple vista, y son interpretados por programas que entienden su formato. Por ejemplo, pdf, doc, xls.
+
+Nos centraremos principalmente en el procesamiento de archivos orientados a carácter.
+
+### archivos orientados a carácter
+
+Un archivo orientado a carácter no es más que un **documento de texto**, como el que podría generar con cualquier editor de texto simple. Los valores están almacenados según su representación en cadena de texto, exactamente en el mismo formato que ha usado hasta ahora para entrar datos desde el teclado. Del mismo modo, los diferentes valores se distinguen al estar separados entre ellos con un delimitador, que por defecto es cualquier conjunto de espacios en blanco o salto de línea. Aunque estos valores se puedan distribuir en líneas de texto diferentes, conceptualmente, se puede considerar que están organizados uno tras otro, secuencialmente, como las palabras en la página de un libro.
+
+El siguiente podría ser el contenido de un archivo orientado a carácter donde hay diez valores de tipo `float`, 7 en la primera línea y 3 en la segunda:
+
+```
+1,5 0,75 −2,35 18,0 9,4 3,1416 −15,785
+−200,4 2,56 9,3785
 ```
 
-La segunda sentencia extrae el carácter en la posición del índice 1 de la variable `fruta` y la asigna a la variable `letra`.
+Y este el de un archivo con 3 valores de tipo `String`: `"Había"`, `"una"` y `"vez..."` en una línea.
 
-La expresión en los corchetes es llamada *índice*. El índice indica qué carácter de la secuencia quieres (de ahí el nombre).
-
-Pero podrías no obtener lo que esperas:
-
-```Python
->>> print(letra)
-a
+```
+Había una vez...
 ```
 
-Para la mayoría de las personas, la primer letra de “banana” es “b”, no “a”. Pero en Python, el índice es un desfase desde el inicio de la cadena, y el desfase de la primera letra es cero.
+En un archivo orientado a carácter **es posible almacenar cualquier combinación de datos de cualquier tipo** (`int` , `double`, `boolean`, `String`, etc.).
 
-```Python
->>> letra = fruta[0]
->>> print(letra)
-b
+```
+7 10 20,51 6,99
+Había una vez...
+true false 2020 0,1234
 ```
 
-Así que “b” es la letra 0 (“cero”) de “banana”, “a” es la letra con índice 1, y “n” es la que tiene índice 2, etc.
+La principal ventaja de un archivo de este tipo es que resulta muy sencillo inspeccionar su contenido y generarlos de acuerdo a nuestras necesidades.
 
-![](assets/PROG-U3.0.-Cadena.png)
+Para el caso de los archivos orientados a carácter, hay que usar dos clases diferentes según si lo que se quiere es leer o escribir datos en un archivo. Normalmente esto no es muy problemático, ya que **en un bloque de código dado solo se llevarán a cabo operaciones de lectura o de escritura sobre un mismo archivo, pero no los dos tipos de operaciones a la vez**.
 
-Indices de Cadenas
+Una diferencia importante a la hora de tratar con archivos respecto a leer datos del teclado es que las operaciones de lectura no son producto de una interacción directa con el usuario, que es quien escribe los datos. Solo se puede trabajar con los datos que hay en el archivo y nada más. Esto tiene dos efectos sobre el proceso de lectura:
 
-Puedes usar cualquier expresión, incluyendo variables y operadores, como un índice, pero el valor del índice tiene que ser un entero. De otro modo obtendrás:
+1. Por un lado, recuerda que **cuando se lleva a cabo el proceso de lectura de una secuencia de valores, siempre hay que tener cuidado de usar el método adecuado al tipo de valor que se espera que venga a continuación** . Qué tipo de valor se espera es algo que habréis decidido vosotros a la hora de hacer el programa que escribió ese archivo, por lo que es vuestra responsabilidad saber qué hay que leer en cada momento. De todos modos nada garantiza que no se haya cometido algún error o que el archivo haya sido manipulado por otro programa o usuario. Como operamos con archivos y no por el teclado, no existe la opción de pedir al usuario que vuelva a escribir el dato. Por lo tanto, el programa debería decir que se ha producido un error ya que el archivo no tiene el formato correcto y finalizar el proceso de lectura.
+2. Por otra parte, **también es necesario controlar que nunca se lean más valores de los que hay disponibles para leer**. En el caso de la entrada de datos por el teclado el programa simplemente se bloqueaba y espera a que el usuario escribiera nuevos valores. Pero con archivos esto no sucede. Intentar leer un nuevo valor cuando el apuntador ya ha superado el último disponible se considera erróneo y lanzará una excepción. Para evitarlo, habrá que utilizar algún procedimiento que nos permita saber si se ha llegado al final de archivo en vez de suponer que siguen existiendo datos que leer.
 
-```Python
->>> letra = fruta[1.5]
-TypeError: string indices must be integers
+#### Lectura de archivo
+
+En Kotlin demos leer el contenido de un archivo utilizando los métodos estándar de la clase `java.io.File` o los métodos que proporciona Kotlin como una extensión de `java.io.File`.
+
+Examinaremos programas de ejemplo para los métodos de extensión, proporcionados por Kotlin a la clase `java.io.File` de Java, para leer el contenido de un archivo.
+
+##### Usar `java.io.File.bufferedReader()` de Java
+
+[`BufferedReader`](https://dcodingames.com/como-usar-la-clase-bufferedreader/) lee texto desde un flujo de entrada de caracteres, almacenando los caracteres para proporcionar una lectura eficiente de caracteres, arreglos y líneas.
+
+Se puede configurar específicamente el tamaño del buffer, o usar el que se otorga por default, el cual es suficientemente grande para la mayoría de los casos.
+
+Dado que esta clase extiende de `Reader`, cada petición de lectura causa una petición de lectura del flujo de entrada, por lo que es aconsejable envolverla con la clase `InputStreamReader` o `FileReader`, según el propósito de la lectura.
+
+A continuación podemos ver cómo leer el contenido de un archivo en `BufferedReader`, El proceso es el siguiente:
+
+1. Prepare el objeto `File` con la ubicación del archivo pasado como argumento al constructor de la clase de `File`.
+2. `File.bufferedReader` devuelve un nuevo `BufferedReader` para leer el contenido del archivo.
+3. Utilice `BufferedReader.readLines()` para leer el contenido del archivo.
+
+Un ejemplo
+
+```kotlin
+
+import java.io.File
+
+fun main(args: Array<String>) {
+    val file = File("input" + File.separator + "contents.txt")
+    val bufferedReader = file.bufferedReader()
+    val text: List<String> = bufferedReader.readLines()
+    for (line in text) {
+        println(line)
+    }
+}
+
 ```
 
-### Obtener el tamaño de una cadena usando `len`
+El contenido del archivo se imprime en la consola.
 
-`len` es una función nativa que devuelve el número de caracteres en una cadena:
+##### Usar `java.io.File.forEachLine()` de Kotlin
 
-```Python
->>> fruta = 'banana'
->>> len(fruta)
-6
+Lee un archivo línea por línea en Kotlin. El proceso es el siguiente:
+
+1. Prepare el objeto `File` con la ubicación pasada como argumento al constructor de la clase de `File`.
+2. Use la función `File.forEachLine` y lea cada línea del archivo.
+
+Un ejemplo
+
+```kotlin
+
+import java.io.File
+
+fun main(args: Array<String>) {
+    val file = File("input" + File.separator + "contents.txt")
+    file.forEachLine { println(it) }
+}
 ```
 
-Para obtener la última letra de una cadena, podrías estar tentado a probar algo como esto:
+El contenido del archivo se imprime en la consola.
 
-```Python
->>> tamaño = len(fruta)
->>> ultima = fruta[tamaño]
-IndexError: string index out of range
-```
-
-La razón de que haya un `IndexError` es que ahí no hay ninguna letra en “banana” con el índice 6. Puesto que empezamos a contar desde cero, las seis letras están enumeradas desde 0 hasta 5. Para obtener el último carácter, tienes que restar 1 a `length`:
-
-```Python
->>> ultima = fruta[tamaño-1]
->>> print(ultima)
-a
-```
-
-Alternativamente, puedes usar índices negativos, los cuales cuentan hacia atrás desde el final de la cadena. La expresión `fruta[-1]` devuelve la última letra, `fruta[-2]` la penúltima letra, y así sucesivamente.
-
-> **IMPORTANTE**: En las secuencias, el índice empieza en la posición `0` y termina en la posición `len() - 1`
-
-### Iteradores: Recorriendo una cadena mediante un bucle
-
-Muchos de los cálculos requieren procesar una cadena carácter por carácter. Frecuentemente empiezan desde el inicio, seleccionando cada carácter presente, haciendo algo con él, y continuando hasta el final. Este patrón de procesamiento es llamado un *iterador*. Una manera de escribir un iterador es con un bucle `while`:
-
-```Python
-indice = 0
-while indice < len(fruta):
-    letra = fruta[indice]
-    print(letra)
-    indice = indice + 1
-```
-
-Este bucle recorre la cadena e imprime cada letra en una línea cada una. La condición del bucle es `indice < len(fruta)`, así que cuando `indice` es igual al tamaño de la cadena, la condición es falsa, y el código del bucle no se ejecuta. El último carácter accedido es el que tiene el índice `len(fruta)-1`, el cual es el último carácter en la cadena.
-
-Otra forma de escribir un iterador es con un bucle `for`:
-
-```Python
-for caracter in fruta:
-    print(caracter)
-```
-
-Cada vez que iteramos el bucle, el siguiente carácter en la cadena es asignado a la variable `caracter`. El ciclo continúa hasta que no quedan caracteres.
-
-### Rebanado (slicing) de una cadena
-
-Un segmento de una cadena es llamado *rebanado*. Seleccionar un rebanado es similar a seleccionar un carácter:
-
-```Python
->>> s = 'Monty Python'
->>> print(s[0:5])
-Monty
->>> print(s[6:12])
-Python
-```
-
-El operador `[n:m]` retorna la parte de la cadena desde el “n-ésimo” carácter hasta el “m-ésimo” carácter, **incluyendo el primero pero excluyendo el último**.
-
-Si omites el primer índice (antes de los dos puntos), el rebanado comienza desde el inicio de la cadena. Si omites el segundo índice, el rebanado va hasta el final de la cadena:
-
-```Python
->>> fruta = 'banana'
->>> fruta[:3]
-'ban'
->>> fruta[3:]
-'ana'
-```
-
-Si el primer índice es mayor que o igual que el segundo, el resultado es una *cadena vacía*, representado por dos comillas:
-
-```Python
->>> fruta = 'banana'
->>> fruta[3:3]
-''
-```
-
-Una cadena vacía no contiene caracteres y tiene un tamaño de 0, pero fuera de esto es lo mismo que cualquier otra cadena.
-
-### Los cadenas son inmutables
-
-Puede ser tentador utilizar el operador [] en el lado izquierdo de una asignación, con la intención de cambiar un carácter en una cadena. Por ejemplo:
-
-```Python
->>> saludo = 'Hola, mundo!'
->>> saludo[0] = 'J'
-TypeError: 'str' object does not support item assignment
-```
-
-El “objeto” en este caso es la cadena y el “ítem” es el carácter que tratamos de asignar. Por ahora, un *objeto* es la misma cosa que un valor, pero vamos a redefinir esa definición después. Un *ítem* es uno de los valores en una secuencia.
-
-La razón por la cual ocurre el error es que las cadenas son *inmutables*, lo cual significa que no puedes modificar una cadena existente. Lo mejor que puedes hacer es crear una nueva cadena que sea una variación de la original:
-
-```Python
->>> saludo = 'Hola, mundo!'
->>> nuevo_saludo = 'J' + saludo[1:]
->>> print(nuevo_saludo)
-Jola, mundo!
-```
-
-Este ejemplo concatena una nueva letra a una parte de `saludo`. Esto no tiene efecto sobre la cadena original.
-
-### Iterando y contando
-
-El siguiente programa cuenta el número de veces que la letra “a” aparece en una cadena:
-
-```Python
-palabra = 'banana'
-contador = 0
-for letra in palabra:
-    if letra == 'a':
-        contador = contador + 1
-print(contador)
-```
-
-Este programa demuestra otro patrón de computación llamado *contador*. La variable `contador` es inicializada a 0 y después se incrementa cada vez que una “a” es encontrada. Cuando el bucle termina, `contador` contiene el resultado: el número total de a’s.
-
-### El operador `in`
-
-La palabra `in` es un operador booleano que toma dos cadenas y regresa `True` si la primera cadena aparece como una subcadena de la segunda:
-
-```Python
->>> 'a' in 'banana'
-True
->>> 'semilla' in 'banana'
-False
-```
-
-### Comparación de cadenas
-
-Los operadores de comparación funcionan en cadenas. Para ver si dos cadenas son iguales:
-
-```Python
-if palabra == 'banana':
-    print('Muy bien, bananas.')
-```
-
-Otras operaciones de comparación son útiles para poner palabras en orden alfabético:
-
-```Python
-if palabra < 'banana':
-    print('Tu palabra, ' + palabra + ', está antes de banana.')
-elif palabra > 'banana':
-    print('Tu palabra, ' + palabra + ', está después de banana.')
-else:
-    print('Muy bien, bananas.')
-```
-
-Python no maneja letras mayúsculas y minúsculas de la misma forma que la gente lo hace. Todas **las letras mayúsculas van antes que todas las letras minúsculas**, por ejemplo:
-
-```Python
-Tu palabra, Piña, está antes que banana.
-```
-
-Una forma común de manejar este problema es convertir cadenas a un formato estándar, como todas a minúsculas, antes de llevar a cabo la comparación. Ten en cuenta eso en caso de que tengas que defenderte contra un hombre armado con una Piña.
-
-### Métodos de cadenas
-
-Los cadenas son un ejemplo de *objetos* en Python. Un objeto contiene tanto datos (el valor de la cadena misma) como *métodos*, los cuales son efectivamente funciones que están implementadas dentro del objeto y que están disponibles para cualquier *instancia* del objeto.
-
-Python tiene una función llamada `dir` la cual lista los métodos disponibles para un objeto. La función `type` muestra el tipo de un objeto y la función `dir` muestra los métodos disponibles.
-
-```Python
->>> cosa = 'Hola mundo'
->>> type(cosa)
-<class 'str'>
->>> dir(cosa)
-['capitalize', 'casefold', 'center', 'count', 'encode',
-'endswith', 'expandtabs', 'find', 'format', 'format_map',
-'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit',
-'isidentifier', 'islower', 'isnumeric', 'isprintable',
-'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower',
-'lstrip', 'maketrans', 'partition', 'replace', 'rfind',
-'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip',
-'split', 'splitlines', 'startswith', 'strip', 'swapcase',
-'title', 'translate', 'upper', 'zfill']
->>> help(str.capitalize)
-Help on method_descriptor:
-
-capitalize(...)
-    S.capitalize() -> str
-
-    Return a capitalized version of S, i.e. make the first character have upper case and the rest lower case.
->>>
-```
-
-Llamar a un *método* es similar a llamar una función (esta toma argumentos y devuelve un valor) pero la sintaxis es diferente. Llamamos a un método uniendo el nombre del método al de la variable, usando un punto como delimitador.
-Aunque la función `dir` lista los métodos y puedes usar la función `help` para obtener una breve documentación de un método, una mejor fuente de documentación para los métodos de cadenas se puede encontrar en [Métodos en inglés](https://docs.python.org/library/stdtypes.html#string-methods) y
-[Métodos en castellano](https://docs.python.org/es/3/library/stdtypes.html#string-methods)
-
-Por ejemplo, el método `upper` toma una cadena y devuelve una nueva cadena con todas las letras en mayúscula:
-
-En vez de la sintaxis de función `upper(palabra)`, éste utiliza la sintaxis de método `palabra.upper()`.
-
-```Python
->>> palabra = 'banana'
->>> nueva_palabra = palabra.upper()
->>> print(nueva_palabra)
-BANANA
-```
-
-Esta forma de notación con punto especifica el nombre del método, `upper`, y el nombre de la cadena al que se le aplicará el método, `palabra`. Los paréntesis vacíos indican que el método no toma argumentos.
-
-Una llamada a un método es conocida como una *invocación*; en este caso, diríamos que estamos invocando `upper` en `palabra`.
-
-Por ejemplo, existe un método de cadena llamado `find` que busca la posición de una cadena dentro de otra:
-
-```Python
->>> palabra = 'banana'
->>> indice = palabra.find('a')
->>> print(indice)
-1
-```
-
-En este ejemplo, invocamos `find` en `palabra` y pasamos la letra que estamos buscando como un parámetro.
-
-El método `find` puede encontrar subcadenas así como caracteres:
-
-```Python
->>> palabra.find('na')
-2
-```
-
-También puede tomar como un segundo argumento el índice desde donde debe empezar:
-
-```Python
->>> palabra.find('na', 3)
-4
-```
-
-Una tarea común es eliminar los espacios en blanco (espacios, tabs, o nuevas líneas) en el inicio y el final de una cadena usando el método `strip`:
-
-```Python
->>> linea = '  Aquí vamos  '
->>> linea.strip()
-'Aquí vamos'
-```
-
-Algunos métodos como `startswith` devuelven valores booleanos.
-
-```Python
->>> linea = 'Que tengas un buen día'
->>> linea.startswith('Que')
-True
->>> linea.startswith('q')
-False
-```
-
-Puedes notar que `startswith` requiere que el formato (mayúsculas y minúsculas) coincida, de modo que a veces tendremos que tomar la línea y cambiarla completamente a minúsculas antes de hacer la verificación, utilizando el método `lower`.
-
-```Python
->>> linea = 'Que tengas un buen día'
->>> linea.startswith('q')
-False
->>> linea.lower()
-'que tengas un buen día'
->>> linea.lower().startswith('q')
-True
-```
-
-En el último ejemplo, el método `lower` es llamado y después usamos `startswith` para ver si la cadena resultante en minúsculas comienza con la letra “q”. Siempre y cuando seamos cuidadosos con el orden, podemos hacer múltiples llamadas a métodos en una sola expresión.
-
-### Analizando cadenas
-
-Frecuentemente, queremos examinar una cadena para encontrar una subcadena. Por ejemplo, si se nos presentaran una seria de líneas con el siguiente formato:
-
-`From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008`
-
-y quisiéramos obtener únicamente la segunda parte de la dirección de correo (esto es, `uct.ac.za`) de cada línea, podemos hacer esto utilizando el método `find` y una parte de la cadena.
-
-Primero tenemos que encontrar la posición de la arroba en la cadena. Después, tenemos que encontrar la posición del primer espacio *después* de la arroba. Y después partiremos la cadena para extraer la porción de la cadena que estamos buscando.
-
-```Python
->>> dato = 'From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008'
->>> arrobapos = dato.find('@')
->>> print(arrobapos)
-21
->>> espos = dato.find(' ',arrobapos)
->>> print(espos)
-31
->>> direccion = dato[arrobapos+1:espos]
->>> print(direccion)
-uct.ac.za
->>>
-```
-
-Utilizamos una versión del método `find` que nos permite especificar la posición en la cadena desde donde queremos que `find` comience a buscar. Cuando recortamos una parte de una cadena, extraemos los caracteres desde “uno después de la arroba hasta,  *pero no incluyendo* , el carácter de espacio”.
-
-La documentación del método `find` está disponible en
-
-[Métodos en castellano](https://docs.python.org/es/3/library/stdtypes.html#string-methods).
-
-### El operador de formato
-
-El *operador de formato* `%` nos permite construir cadenas, reemplazando partes de las cadenas con datos almacenados en variables. Cuando lo aplicamos a enteros, `%` es el operador módulo. Pero cuando es aplicado a una cadena, `%` es el operador de formato.
-
-El primer operando es la *cadena a formatear*, la cual contiene una o más *secuencias de formato* que especifican cómo el segundo operando es formateado. El resultado es una cadena.
-
-Por ejemplo, la secuencia de formato `%d` significa que el segundo operando debería ser formateado como un entero (“d” significa “decimal”):
-
-```Python
->>> camellos = 42
->>> '%d' % camellos
-'42'
-```
-
-El resultado es la cadena ‘42’, el cual no debe ser confundido con el valor entero 42.
-
-Una secuencia de formato puede aparecer en cualquier lugar en la cadena, así que puedes meter un valor en una frase:
-
-```Python
->>> camellos = 42
->>> 'Yo he visto %d camellos.' % camellos
-'Yo he visto 42 camellos.'
-```
-
-Si hay más de una secuencia de formato en la cadena, el segundo argumento tiene que ser una tupla. Cada secuencia de formato es relacionada con un elemento de la tupla, en orden.
-
-El siguiente ejemplo usa `%d` para formatear un entero, `%g` para formatear un número de punto flotante (no preguntes por qué), y `%s` para formatear una cadena:
-
-```Python
->>> 'En %d años yo he visto %g %s.' % (3, 0.1, 'camellos')
-'En 3 años yo he visto 0.1 camellos.'
-```
-
-El número de elementos en la tupla debe coincidir con el número de secuencias de formato en la cadena. El tipo de los elementos también debe coincidir con la secuencia de formato:
-
-```Python
->>> '%d %d %d' % (1, 2)
-TypeError: not enough arguments for format string
->>> '%d' % 'dolares'
-TypeError: %d format: a number is required, not str
-```
-
-En el primer ejemplo, no hay suficientes elementos; en el segundo, el elemento es de un tipo incorrecto.
-
-El operador de formato es poderoso, pero puede ser difícil de usar. Puedes leer más al respecto en
-
-[https://docs.python.org/library/stdtypes.html#printf-style-string-formatting](https://docs.python.org/library/stdtypes.html#printf-style-string-formatting).
-
-## Depuración
-
-Una habilidad que debes desarrollar cuando programas es siempre preguntarte a ti mismo, “¿Qué podría fallar aquí?” o alternativamente, “¿Qué cosa ilógica podría hacer un usuario para hacer fallar nuestro (aparentemente) perfecto programa?”
-
-Por ejemplo, observa el programa que utilizamos para demostrar el bucle `while` en el apartado de iteraciones:
-
-```Python
-linea = input('> ')
-while linea != 'fin':
-    if linea[0] != '#' :
-        print(linea)
-    linea = input('> ')
-print('¡Terminado!')
-
-# Código: https://es.py4e.com/code3/copytildone2.py
-```
-
-Mira lo que pasa cuando el usuario introduce una línea vacía como entrada:
-
-```Python
-> hola a todos
-hola a todos
-> # no imprimas esto
-> ¡imprime esto!
-¡imprime esto!
+<!--
+> ![](./../../resources/img/un7/lu37016xc6sgf_tmp_e5d45b04953e17dd.png)
 >
-Traceback (most recent call last):
-  File "copytildone.py", line 3, in <module>
-    if linea[0] != '#' :
-IndexError: string index out of range
+> ...Para tratar de manera sencilla archivos orientados a carácter, Java
+> proporciona las clases `Scanner` (para lectura) del `package
+> java.util`, y `FileWriter` (para escritura) del `package java.io`
+
+## 3.2. Lectura de archivo (clase Scanner)
+
+**La clase que permite llevar a cabo la lectura de datos desde un archivo orientado a carácter es exactamente la misma
+que permite leer datos desde el teclado: Scanner** . Al fin y al cabo, los valores almacenados en los archivos de este
+tipo se encuentran exactamente en el mismo formato que ha usado hasta ahora para entrar información en sus programas:
+una secuencia de cadenas de texto. La única diferencia es que estos valores no se piden al usuario durante la ejecución,
+sino que se encuentran almacenados en un archivo.
+
+Para procesar datos desde un archivo, **el constructor de la clase Scanner permite como argumento un objeto de tipo
+File** que contenga la ruta a un archivo.
+
+Por ejemplo, para crear un objeto de tipo Scanner de modo que permita leer datos desde el archivo ubicado en la ruta
+"C:\Programas\Unidad11\Documento.txt", habría que hacer:
+
+importjava.io.File;
+
+importjava.util.Scanner;
+
+...
+
+Filef = new File("C:\Programas\Unidad11\Documento.txt");
+
+ScannerlectorArchivo = new Scanner(f);
+
+...
+
+Una vez instanciado el objeto Scanner **podemos utilizar sus métodos exactamente igual que si leyéramos de teclado** :
+hasNext(), next(), nextLine(), nextInt(), nextDouble(), nextBoolean(), etc. La única diferencia es que el objeto Scanner
+leerá secuencialmente el contenido del archivo.
+
+Es importante entender que en el caso de un archivo, **el objeto Scanner gestiona internamente un apuntador que indica
+sobre qué valor actuarán las operaciones de lectura** . Inicialmente el apuntador se encuentra en el primer valor dentro
+del archivo. **Cada vez que se hace una lectura el apuntador avanza automáticamente hasta el siguiente valor dentro del
+archivo y no hay ninguna manera de hacerlo retroceder** . A medida que invocamos métodos de lectura el apuntador sigue
+avanzando hasta que hayamos leído tantos datos como queramos, o hasta que no podamos seguir leyendo porque hemos llegado
+al final del archivo.
+
+A continuación se muestra un pequeño esquema de este proceso, recalcando cómo avanza el apuntador a la hora de realizar
+operaciones de lectura sobre un archivo que contiene valores de tipo entero.
+
+![](file:///tmp/lu37016xc6sfk.tmp/lu37016xc6sgf_tmp_43d276c79f83a115.png)
+
+**Es importante recordar la diferencia entre el método next() y nextLine()** , ya que ambos evalúan una cadena de texto.
+El método
+**next() sólo lee una palabra individual** (conjuntos de caracteres, incluidos dígitos, que no están separados por
+espacios o saltos de línea, como por ejemplo "casa", "hola", "2", "3,14", "1024", etc.). En cambio, **nextLine() lee
+todo el texto que encuentre (espacios incluidos) hasta el siguiente salto de línea** . En tal caso el apuntador se
+posiciona al inicio de la siguiente línea.
+
+**Una vez se ha finalizado la lectura del archivo** , ya sean todas o solo una parte, **es imprescindible ejecutar un
+método especial llamado close()** . Este método indica al sistema operativo que el archivo ya no está siendo utilizado
+por el programa. Esto es muy importante ya que mientras un archivo se considera en uso, su acceso puede verse limitado.
+Si no se utiliza close() el sistema operativo puede tardar un tiempo en darse cuenta de que el archivo ya no está en
+uso.
+
+| ...**Siempre hay que cerrar los archivos con close()**cuando se ha terminado de leer o escribir en
+ellos.![](file:///tmp/lu37016xc6sfk.tmp/lu37016xc6sgf_tmp_4f43f86e4682ec35.png)
+| |
+
+|
+
+Es importante saber que al instanciar el objeto Scanner **se lanzará una excepción de tipo java.io.FileNotFoundException
+si el archivo no existe** . Siempre habrá que manejar dicha excepción mediante un try-catch. Scanner también **puede
+lanzar otras excepciones** , por ejemplo si se intenta leer el tipo de dato incorrecto (llamamos a nextInt() cuando no
+hay un entero, como sucede en la entrada por teclado,) o si hemos llegado al final del archivo e intentamos seguir
+leyendo (podemos comprobarlo mediante el método hasNext() de Scanner, que devuelve true si aún hay algún elemento que
+leer).
+
+El programa siguiente muestra un ejemplo de cómo leer diez valores enteros de un archivo llamado "Enteros.txt" ubicado
+en la carpeta de trabajo (debería ser la carpeta del proyecto Netbeans). Para probarlo, crea el archivo e introduce
+exactamente 10 valores enteros separados por espacios en blanco o saltos de línea.
+
+importjava.io.File;
+
+importjava.util.Scanner;
+
+publicclass Pruebasarchivos {
+
+publicstatic final int NUM_VALORES = 10;
+
+publicstatic void main(String[] args) {
+
+try{
+
+//Intentamos abrir el archivo
+
+Filef = new File("Enteros.txt");
+
+Scannerlector = new Scanner(f);
+
+//Si llega aquí es que ha abierto el archivo :)
+
+for(int i = 0; i < NUM_VALORES; i++) {
+
+intvalor = lector.nextInt();
+
+System.out.println("Elvalor leído es: " + valor); }
+
+//¡Hay que cerrar el archivo!
+
+lector.close(); }catch (Exception e) {
+
+//En caso de excepción mostramos el error
+
+System.out.println("Error:" + e);
+
+e.printStackTrace(); } }
+
+}
+-->
+
+##### Oros métodos de lectura
+
+Existen otras formas de leer archivos:
+
+- `File.inputStream().readBytes()`: Lee el contenido del archivo en InputStream
+- `File.readBytes()`: devuelve todo el contenido del archivo como ByteArray
+- `File.readLines()`: devuelve todo el contenido del archivo como una lista de líneas
+- `File.readText()`: devuelve todo el contenido del archivo como una sola cadena
+- `java.util.Scanner`: permite leer indicando el tipo de dato a leer.
+
+#### Escritura en archivo
+
+Con en el lenguaje de programación Kotlin tambien se puede escribir en un archivo. Por lo general, en los archivos orientados a caracteres se escriben cadenas de texto.
+
+Igual que para la lectura, haciendo uso de Kotlin podremos escribir en un archivo usando las funciones de extensión proporcionadas por Kotlin o también puede usar el código Java existente que escribe contenido en un archivo.
+
+A continuación veremos ejemplos de cómo usar clases de Java como `PrintWriter` para escribir en un archivo y más ejemplos usando funciones de extensión de Kotlin.
+
+##### Usar `java.io.File.bufferedWriter`
+
+Podemos usar la función de extensión `java.io.File.bufferedWriter()` para obtener el objeto de escritura y luego usar la función `write()` en el objeto de escritura para escribir contenido en el archivo.
+
+1. Tenga su contenido como una cadena.
+2. Pase el nombre del archivo al constructor de archivos (`File`).
+3. Luego llame al método `bufferedWriter()` de la clase `File`.
+4. Haciendo uso de la función `use()` (Veremos que ventajas nos proporciona hacer uso de ella), llama al método `writer(content)` del bufer escritor devuelto por `bufferedWriter()`, y que se encarga de escribir el contenido en el archivo.
+
+```kotlin
+import java.io.File
+ 
+/**
+ * Example to use File.bufferedWriter() in Kotlin to write content to a text file
+ */
+fun main(args: Array<String>) {
+    // content to be written to file
+    var content = "Hello World. Welcome to Kotlin!!"
+ 
+    // write content to file
+    File("file.txt").bufferedWriter().use { out ->
+        out.write(content)
+    }
+}
+```
+> ![](./assets/rayo.png)
+> Aplicamos la función `use()` para **garantizar que todos los recursos se liberen correctamente cuando hayamos terminado**
+
+##### Usar `java.io.File.writeText()`
+
+Si está escribiendo exclusivamente texto en un archivo, puede usar la función de extensión `java.io.File.writeText()`.
+
+En el siguiente ejemplo, hemos usado esta función de extensión de kotlin para escribir texto en un archivo.
+
+```kotlin
+import java.io.File
+ 
+/**
+ * Example to use File.writeText in Kotlin to write text to a file
+ */
+fun main(args: Array<String>) {
+    // content to be written to file
+    var content = "Hello World. Welcome to Kotlin!!"
+ 
+    // write content to file
+    File("file.txt").writeText(content)
+}
 ```
 
-El código funciona bien hasta que se presenta una línea vacía. En ese momento no hay un carácter cero, por lo que obtenemos una traza de error (traceback). Existen dos soluciones a esto para convertir la línea tres en “segura”, incluso si la línea está vacía.
+##### Usar `java.io.File.printWriter`
 
-Una posibilidad es simplemente usar el método `startswith` que devuelve `False` si la cadena está vacía.
+En este ejemplo, usaremos la función de extensión de Kotlin `printWriter()` para la clase `java.io.File`. El siguiente es el proceso para escribir en el archivo.
 
-```Python
-if linea.startswith('#'):
-```
+1. Tenga su contenido como una cadena.
+2. Pase el nombre del archivo al constructor de archivos (`File`).
+3. Luego llame al método `printWriter()` de la clase `File`.
+4. Haciendo uso de la función `use()`(Veremos que ventajas nos proporciona hacer uso de ella), llama al método `println(content)` del escritor devuelto por `printWriter()`, y que se encarga de escribir el contenido en el archivo.
 
-Otra forma segura es escribir una sentencia `if` utilizando el patrón *guardián* y asegurarse que la segunda expresión lógica es evaluada sólo cuando hay al menos un carácter en la cadena:
-
-```Python
-if len(linea) > 0 and linea[0] != '#':
-```
-
-## Métodos String
-Algunos métodos de la clase String son: 
-
-#### string.capitalize()
-
-El método capitalize() devuelve una copia de la cadena con su primera letra en mayúscula.
-Ejemplo:
-
-```python
-
->>> texto = "mi diario python"
->>> texto.capitalize()
-'Mi diario python'
-```
-
-#### string.endswith(sufijo)
-
-El método endswith() devuelve True si la cadena termina con el sufijo especificado.
-Ejemplo:
-
-```python
->>> texto = "mi diario python"
->>> texto.endswith("python")
-True
->>> texto.endswith("thon")
-True
->>> texto.endswith("py")
-False
-```
-
-#### string.expandtabs(tamaño_de_tab=8)
-
-El método expandtabs devuelva una copia de la cadena en la que todos los caracteres de las pestañas se reemplazan por uno o más espacios, según la columna actual y el tamaño de la pestaña. Para expandir la cadena, la columna actual se establece en cero y la cadena se examina carácter por carácter. Si el carácter es una pestaña ( `t`), se insertan uno o más caracteres de espacio en el resultado hasta que la columna actual sea igual a la siguiente posición de la pestaña.
-Ejemplo:
-
-```python
->>> texto = "mitdiariotpython"
->>> texto.expandtabs(4)
-'mi  diario  python'
-```
-
-#### string.find(sub)
-
-Devuelve el índice más bajo de la cadena en la subcadena *sub* se encuentra dentro de la rebanada `s[start:end]`. Devuelve -1 si no se encuentra el sub.
-Ejemplo:
-
-```python
->>> texto = "mi diario python"
->>> texto.find("mi")
-0
->>> texto.find("m")
-0
->>> texto.find("i")
-1
->>> texto.find("python")
-10
->>> texto.find("py")
-10
->>> texto.find("p y")
--1
-```
-
-#### string.format()
-
-Nos permite realizar una operación de formato de cadena. La cadena en la que se llama a este método puede contener texto literal o campos de reemplazo delimitados por llaves `{}`. Cada campo de reemplazo contiene el índice numérico de un argumento posicional o el nombre de un argumento de palabra clave. Devuelve una copia de la cadena donde cada campo de reemplazo se reemplaza con el valor de la cadena del argumento correspondiente.
-Ejemplo:
-
-```python
->>> "La suma de 1 + 2 es {0}".format(1+2)
-'La suma de 1 + 2 es 3'
-```
-
-#### string.index(sub)
-
-El método index es muy similar al método find. Con la diferencia de que cuando no se encuentra la subcadena, index lanza un ValueError.
-
-```python
->>> texto = "mi diario python"
->>> texto.index("mi")
-0
->>> texto.index("PYTHON")
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-ValueError: substring not found
->>>
-```
-
-#### string.isalpha()
-
-Devuelve verdadero si todos los caracteres de la cadena son alfanuméricos y hay al menos un carácter, de lo contrario es falso.
-Ejemplo:
-
-```python
->>> texto = "mi diario python"
->>> texto.isalpha()
-False
->>> "midiariopython".isalpha()
-True
-```
-
-> Si te preguntas ¿por que “mi diario python” a lanzado False?. Es porque los espacios no son un carácter alfanumérico.
-
-#### string.isdigit()
-
-El método isdigit() devuelve True si todos los caracteres de la cadena son dígitos.
-Ejemplo:
-
-```python
->>> texto = "mi diario python"
->>> digitos = "12345"
->>> texto.isdigit()
-False
->>> digitos.isdigit()
-True
-```
-
-#### string.isspace()
-
-El método isspace() devuelve True si solo hay caracteres de espacio en blanco.
-Ejemplo:
-
-```python
->>> " ".isspace()
-True
->>> "  a".isspace()
-False
-```
-
-#### string.lower()
-
-El método lower devuelve una copia de la cadena con todos sus caracteres en minúsculas.
-Ejemplo:
-
-```python
->>> "Hola Mundo".lower()
-'hola mundo'
->>> "PYTHON".lower()
-'python'
-```
-
-#### string.upper()
-
-El método upper() devuelve la una copia de la cadena con todos su caracteres en mayúsculas.
-Ejemplo:
-
-```python
->>> texto = "mi diario python"
->>> texto.upper()
-'MI DIARIO PYTHON'
-```
-
-#### string.lstrip(chars)
-
-El método lstrip devuelve una copia de la cadena con los caracteres iniciales eliminados. El argumento *chars* es una cadena que especifica el conjunto de caracteres que se eliminarán.
-Ejemplo:
-
-```python
->>> web = "www.pythondiario.com"
->>> web.lstrip("w.")
-'pythondiario.com'
->>>
+```kotlin
+import java.io.File
+ 
+/**
+ * Example to use File.printWriter in Kotlin to write content to a text file
+ */
+fun main(args: Array<String>) {
+    // content to be written to file
+    var content = "Hello World. Welcome to Kotlin!!"
+ 
+    // write content to file
+    File("file.txt").printWriter().use { out ->
+        out.println(content)
+    }
+}
 ```
 
 
-#### string.replace(string_viejo, string_nuevo)
+##### Usar `java.io.PrintWriter`
 
-El método replace() devuelve una copia de la cadena con la subcadena vieja remplazada por una nueva. Veamos un ejemplo para entenderlo mejor:
+En este ejemplo, tomamos una cadena y la escribimos en un archivo usando la clase `java.io.PrintWriter`. Para ello se siguen los siguientes pasos.
 
-```python
->>> cadena = "Hola Mundo"
->>> cadena.replace("Mundo", "Internet")
-'Hola Internet'
+1. Tenga sus datos listos como una cadena en una variable.
+2. Inicialice un objeto escritor de la clase `PrintWriter`.
+3. Agregue la cadena al archivo usando la función `PrintWriter.append()`.
+4. Cerrar el escritor.
+
+```kotlin
+import java.io.PrintWriter
+
+/**
+ * Example to use standard Java method in Kotlin to write content to a text file
+ */
+fun main(args: Array<String>) {
+    // content to be written to file
+    var content = "Hello World. Welcome to Kotlin!!"
+
+    // using java class java.io.PrintWriter
+    val writer = PrintWriter("file.txt")
+    writer.append(content)
+    writer.close()
+}
 ```
 
-#### string.partition(char)
+En los ejemplso, se creará un nuevo archivo con el nombre `file.txt`, como se especifica para el argumento de `PrintWriter()`, con el contenido. Si el archivo ya está presente, primero se borra el contenido del archivo y luego se escribe el nuevo contenido en el archivo.
 
-El método partition() divide la cadena en la primera aparición de char y devuelve una tupla que contiene la parte anterior a char, el mismo char, y la parte posterior de char. Suena un poco confuso, veamos un ejemplo:
+##### Oros métodos de escritura
 
-```python
->>> cadena = "Hola Mundo"
->>> cadena.partition("la")
-('Ho', 'la', ' Internet')
+Existen otras formas de leer archivos:
+
+- `java.io.FileWriter`: Escribe en un archivo haciendo uso del método `writer()`.
+
+<!--
+Existen muchas formas de acceder a un archivo para escribir en él. Una de las formas más fáciles, es el uso de la clase  `FileWriter`.
+
+### 4.1.2.1. Usar `FileWriter`
+
+Esta clase tiene dos constructores que
+merece la pena conocer:
+
+* public FileWriter(File file)
+* public FileWriter(File file, boolean append)
+
+El primer constructor es muy parecido al del Scanner. Solo hay que pasarle un objeto `File` con la ruta al archivo. Al
+tratarse de escritura la ruta puede indicar un archivo que puede existir o no dentro del sistema. **Si el archivo no
+existe, se creará uno nuevo** . Pero
+**si el archivo ya existe, su contenido se borra por completo, con tamaño igual a 0** . Esto puede ser peligroso ya que
+si no se maneja correctamente puede producir la pérdida de datos valiosos. Hay que estar completamente seguro de que se
+quiere sobreescribir el archivo. importjava.io.File; importjava.io.FileWriter; ... Filef = new File("C:
+\Programas\Unidad11\Documento.txt"); FileWriterwriter= newFileWriter(f); El segundo constructor tiene otro **parámetro
+de tipo booleano llamado “append”** **(añadir) que nos permite indicar si queremos escribir al final del archivo o no**
+. Es decir, si le pasamos “false” hará lo mismo que el contructor anterior (si el archivo ya existe, lo sobreescribirá),
+pero si le pasamos “true” abrirá el archivo para escritura en **modo “append”** , es decir, **escribiremos al final del
+archivo sin borrar los datos ya existentes** . importjava.io.File; importjava.io.FileWriter; ... Filef = new File("C:
+\Programas\Unidad11\Documento.txt"); FileWriterwriter= newFileWriter(f, true); La escritura secuencial de datos en un
+archivo orientado a carácter es muy sencilla. Solo es necesario utilizar el siguiente método
+**void write(String str)** que escribirá la cadena str en el archivo. Si se desea agregar un **final de línea** se puede
+agregar **" \n"** . | ...**Tanto el constructor de FileWriter como el método write() pueden lanzar una excepción
+IOException**si se produce algún error
+inesperado.![](file:///tmp/lu37016xc6sfk.tmp/lu37016xc6sgf_tmp_4f43f86e4682ec35.png)
+| |
+
+---
+
+|
+
+Es importante tener en cuenta que **para que el método write() escriba texto correctamente es imprescindible pasarle
+como argumento un String**
+. Está permitido utilizar datos o variables distintas a String, pero se escribirá directamente su valor en bytes, no
+como texto. Veamos dos ejemplos ilustrativos.
+
+writer.write("8"); // Escribe el carácter 8
+
+writer.write(8); // Escribe 8 como byte, es un carácter no imprimible
+
+writer.write("65");// Escribe dos carácteres, el 6 y el 5
+
+writer.write(65); // Escribe 65 como byte, es el carácter A
+
+Por lo tanto cuando queremos escribir el valor de variables que no sean String será necesario pasárselas a write() como
+String. Esto es muy sencillo, solo hay que concatenar un String vacío con la variable (Java siempre convierte a String
+la concatenación de cadenas de texto con cualquier otro elemento): ""+ variable
+
+intedad = 35;
+
+writer.write(""+ edad); // escribe el texto "35"
+
+La escritura de datos en archivo tiene la particularidad de que una vez se ha escrito un dato ya no hay marcha atrás. No
+es posible escribir información antes o en medio de valores que ya están escritos.
+
+Como en el caso de la lectura, la clase FileWriter también gestiona un apuntador que le permite saber a partir de qué
+posición del texto debe ir escribiendo. Cada vez que se invoca uno de sus métodos de escritura, el apuntador avanza
+automáticamente y no es posible hacerlo retroceder. A efectos prácticos este apuntador siempre está al final del
+archivo, de modo que a medida que se van escribiendo datos el archivo va incrementando su tamaño.
+
+A continuación se muestra un esquema del funcionamiento de la escritura en archivo.
+
+![](file:///tmp/lu37016xc6sfk.tmp/lu37016xc6sgf_tmp_78a0f492846799d6.png)
+
+La escritura no genera automáticamente un delimitador entre valores. Los espacios en blanco o saltos de línea que se
+deseen incorporar deben escribirse esplícitamente. De lo contrario los valores quedarán pegados y en una posterior
+lectura se interpretarán como un único valor. Por ejemplo, si se escribe el valor 2 y luego el 4, sin espacio, en el
+archivo se habrá escrito el valor 24. Si se leyera mediante un nextInt()
+nos devolvería un único valor, no dos.
+
+**Al escribir en archivos el cierre con close() es todavía más importante** que en la lectura. Esto se debe a que los
+sistemas operativos a menudo actualizan los datos de forma diferida. Es decir, el hecho de ejecutar una instrucción de
+escritura no significa que inmediatamente se escriba en el archivo. Puede pasar un intervalo de tiempo variable. Solo al
+ejecutar el método close() se fuerza al sistema operativo a escribir los datos pendientes (si los hubiera).
+
+| ...Al terminar la escritura también**es imprescindible invocar el método close()**para cerrarlo y asegurar la correcta
+escritura de datos.![](file:///tmp/lu37016xc6sfk.tmp/lu37016xc6sgf_tmp_4f43f86e4682ec35.png)
+| |
+
+|
+
+El código siguiente sirve como ejemplo de un programa que escribe un archivo llamado "Enteros.txt" dentro de la carpeta
+de trabajo. Se escriben 20 valores enteros, empezando por el 1 y cada vez el doble del anterior. Pruébalo para ver su
+funcionamiento. Ten en cuenta que si ya existía un archivo con ese nombre, quedará totalmente sobrescrito. Después,
+puedes intentar leerlo con el programa del ejemplo anterior para leer 10 valores enteros y mostrarlos por pantalla.
+
+publicstatic void main(String[] args) {
+
+try{
+
+Filef = new File("Enteros.txt");
+
+FileWriterfw = new FileWriter(f);
+
+intvalor = 1;
+
+for(int i = 1; i <= 20; i++) {
+
+fw.write(""+ valor); // escribimos valor
+
+fw.write(""); // escribimos espacio en blanco
+
+valor= valor * 2; // calculamos próximo valor }
+
+fw.write("\n");// escribimos nueva línea
+
+fw.close();// cerramos el FileWriter
+
+System.out.println("archivoescrito correctamente"); }catch (IOException e) {
+
+System.out.println("Error:" + e); }
+
+}
+
+Prueba a ejecutar el código varias veces. Verás que el archivo se sobrescribe y siempre queda igual. Luego, modifica la
+instanciación del FileWriter agregando el segundo argumento (“append”) a true:
+FileWriterfw = new FileWriter(f, true); Pruébalo y verás que ya no se sobreescribe el archivo, sino que se añaden los 20
+números al final. -->
+
+### Archivos binarios.
+
+Los Data Stream (Flujos de datos) se utilizan para escribir datos binarios. `DataOutputStream` escribe datos binarios de tipos primitivos(`Int`, `Long`, `String`) mientras que `DataInputStream` lee datos del flujo binario y los convierte en tipos primitivos.
+
+A continuación veremos un programa de ejemplo que escribe datos en un archivo y luego los vuelve a leer a memoria para finalmente imprimirlos por salida estándar.
+
+```kotlin
+import java.io.DataInputStream
+import java.io.DataOutputStream
+import java.io.FileInputStream
+import java.io.FileOutputStream
+ 
+fun main(args : Array<String>){
+    val burgers = "data.burgers"
+ 
+    //Open the file in binary mode
+    DataOutputStream(FileOutputStream(burgers)).use { dos ->
+        with(dos){
+            //Notice we have to write our data types
+            writeInt("Bob is Great\n".length) //Record length of the array
+            writeChars("Bob is Great\n") //Write the array
+            writeBoolean(true) //Write a boolean
+ 
+            writeInt("How many burgers can Bob cook?\n".length) //Record length of array
+            writeBytes("How many burgers can Bob cook?\n") //Write the array
+            writeInt(Int.MAX_VALUE) //Write an int
+ 
+            for (i in 0..5){
+                writeByte(i) //Write a byte
+                writeDouble(i.toDouble()) //Write a double
+                writeFloat(i.toFloat()) //Write a float
+                writeInt(i) //Write an int
+                writeLong(i.toLong()) //Write a long
+            }
+        }
+    }
+ 
+    //Open a binary file in read mode. It has to be read in the same order
+    //in which it was written
+    DataInputStream(FileInputStream(burgers)).use {dis ->
+        with (dis){
+            val bobSize = readInt() //Read back the size of the array
+            for (i in 0 until bobSize){
+                print(readChar()) //Print the array one character at a time
+            }
+            println(readBoolean()) //Read a boolean
+ 
+            val burgerSize = readInt() //Length of the next array
+            for (i in 0 until burgerSize){
+                print(readByte().toChar()) //Print array one character at a time
+            }
+            println(readInt()) //Read an int
+ 
+            for (i in 0..5){
+                println(readByte()) //Read a byte
+                println(readDouble()) //Read a double
+                println(readFloat()) //Read a float
+                println(readInt()) //Read an int
+                println(readLong()) //Read a long
+            }
+        }
+ 
+    }
+}
 ```
 
-#### string.title()
+El programa crea un objeto `FileOutputStream`, para ello pasa el nombre del archivo a su constructor. Luego, el objeto `FileOutputStream` se pasa como parámetro al constructor de `DataOutputStream`. 
 
-El método title() devuelve una copia de la cadena donde las palabras comienzan con una letra mayúscula. Veamos un ejemplo:
+Hacemos uso de la función `use()` para **garantizar que todos los recursos se liberen correctamente cuando hayamos terminado**. El archivo ahora está abierto para escritura en modo binario.
 
-```python
->>> cadena = "mi diario python"
->>> cadena.title()
-'Mi Diario Python'
-```
+Cuando deseamos usar el mismo objeto repetidamente, podemos pasarlo a la función `with()`. En nuestro caso, tenemos la intención de seguir usando nuestro objeto `DataOutputStream`, por lo que en la línea 11, lo pasamos a la función `with()`. Dentro de la función `with()`, todas las llamadas a métodos apuntarán al objeto `dos` ya que se proporcionó a `with()` como parámetro.
 
-#### string.swapcase()
+> ![](./assets/rayo.png)
+> Cuando deseamos usar un mismo objeto repetidamente, podemos pasarlo a la función `with()`. Cuando un objeto es pasado a la función `with()`, dentro de esta, **todas las llamadas a métodos apuntarán al objeto que se le ha pasado por parámetro**.
 
-El método swapcase() devuelve una copia de la cadena con los caracteres en mayúsculas convertidos en minúsculas y viceversa.
+Siguiendo con el ejemplo, dado que tenemos la intención de escribir un `String` en el archivo, necesitamos registrar la longitud de la cadena, ya que de otra forma no sabriamos cuantos bytes se han escrito. Hacemos esto usando la función `writeInt` y pasándole la longitud de nuestra cadena. Luego podemos usar `writeChars()` para escribir un string, puesto que el argumento `String` se convierte en una matriz de caracteres. Finalmente, llamamos a `writeBoolean()` para escribir valores `true`/`false` en el archivo.
 
-Ejemplo:
+La siguiente sección es una repetición de la primera. Tenemos la intención de escribir otro `String` en el archivo, pero al hacerlo, necesitamos registrar la longitud en el archivo. Una vez más, recurrimos a `writeInt()` para registrar un valor `int`. En la siguiente línea, usamos `writeBytes()` en lugar de `writeChars()` para demostrar cómo podemos escribir una matriz de bytes en lugar de una cadena. La clase `DataOutputStream` se ocupa de los detalles de convertir un `String` en una matriz de bytes. Finalmente, escribimos otro valor int en la secuencia.
 
-```python
->>> cadena = "Mi Diario Python"
->>> cadena.swapcase()
-'mI dIARIO pYTHON'
-```
+A continuación, se ejecuta un ciclo `for` en la línea 21. Dentro del ciclo `for`, demostramos como escribir diferentes tipos primitivos en el archivo. Podemos usar `writeByte()` para un `byte`, `writeDouble()` para un `double`, y así sucesivamente para cada tipo primitivo. **La clase `DataOutputStream` conoce el tamaño de cada tipo primitivo y escribe el número correcto de bytes para cada primitivo**.
 
-#### strig.startswith(prefijo)
+Cuando terminamos de escribir el objeto, lo abrimos nuevamente para leerlo. La línea 33 crea un objeto `FileInputStream` que acepta la ruta al archivo en su constructor. El objeto `FileInputStream` está encadenado a `DataInputStream` pasándolo al constructor de `DataInputStream`. Aplicamos la función `use()` para garantizar que todos los recursos estén correctamente cerrados.
 
-El método startswith() devuelve True si la cadena comienza con el prefijo, de lo contrario devuelve False.
-Ejemplo:
+La lectura del archivo requiere que el archivo se lea en el mismo orden en que se escribe. Nuestra primera orden por tanto, debería ser tomar el tamaño de la matriz de caracteres que escribimos en el archivo anteriormente. Usamos `readInt()` en la línea 35 seguido de un ciclo `for` que termina en el tamaño de la matriz en la línea 36. Cada iteración del ciclo `for` llama a `readChar()` y la cadena se imprime en la consola. Cuando terminamos, leemos un booleano en la línea 39.
 
-```python
->>> cadena = "Mi Diario Python"
->>> cadena.startswith("Mi")
-True'
-```
+Nuestra siguiente matriz fue una matriz de bytes. Una vez más, necesitamos su tamaño final, por lo que llamamos a `readInt()` en la línea 41. Las líneas 42-44 recorren la matriz y llaman a `readByte()` hasta que finaliza el bucle. Cada `byte` se convierte en un objeto de carácter mediante `toChar()`. En la línea 45, leemos un `int` usando `readInt()`.
 
-#### string.split(sep)
-
-El método split() devuelve una lista de las palabras en la cadena, utilizando a sep como la cadena delimitadora.
-Ejemplo:
-
-```python
->>> cadena = "Luis,Jose,Maria,Sofia,Miguel"
->>> cadena.split(",")
-['Luis', 'Jose', 'Maria', 'Sofia', 'Miguel']
-```
-
-#### string.zfill(ancho)
-
-El método zfill() devuelve una copia de la cadena que se rellena con 0 dígitos ASCII para hacer una cadena de *ancho* de longitud .
-Ejemplo:
-
-```python
->>> "356".zfill(6)
-'000356'
-```
+La parte final del programa repite el ciclo for encontrado anteriormente. En este caso, se hace uso de un bucle `for` que termina después de cinco iteraciones (línea 47). Dentro de este, se llama a los métodos `readByte()`, `readDouble()`, `readFloat()`, y así sucesivamente. Después de cada llamada se imprime el valor recuperado en la consola.
 
 
 ## Fuente
 
-* [Página de Juan Jose Lozano Gomez sobre Python](https://j2logo.com/)
-* [Python para todos](https://es.py4e.com/)
-* [Ejemplos con métodos de String](https://pythondiario.com/2019/02/metodos-string-en-python-con-ejemplos.html)
-* [Estructuras de datos](https://blog.soyhenry.com/que-es-una-estructura-de-datos-en-programacion/)
-* [Aprende con Alf](ttps://aprendeconalf.es)
+- Apuntes de programación de Joan Arnedo Moreno (Institut Obert de Catalunya, IOC)
+- Apuntes de programación de Natividad Prieto, Francisco Marqués y Javier Piris (E.T.S. de Informática, Universidad
+  Politécnica de Valencia).
+- [Apuntes de programación de Jose Luis Comesaña](sitiolibre.com).
+- [Create File](https://www.tutorialkart.com/kotlin/kotlin-create-file/)
+- [Kotlinn data streams](https://stonesoupprogramming.com/2017/11/24/kotlin-data-streams)
+- [Read File](https://www.baeldung.com/kotlin/read-file)
+- [Inputstream to String](https://www.baeldung.com/kotlin/inputstream-to-string)
+

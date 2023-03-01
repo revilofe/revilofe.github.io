@@ -1372,8 +1372,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#propiedades-de-ficheros" class="md-nav__link">
-    Propiedades de ficheros
+  <a href="#propiedades-de-archivos" class="md-nav__link">
+    Propiedades de archivos
   </a>
   
 </li>
@@ -2368,8 +2368,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#propiedades-de-ficheros" class="md-nav__link">
-    Propiedades de ficheros
+  <a href="#propiedades-de-archivos" class="md-nav__link">
+    Propiedades de archivos
   </a>
   
 </li>
@@ -2478,7 +2478,7 @@ tags:</li>
 <p>La pieza más básica para poder operar con archivos, independientemente de su tipo, en un programa Java es la <strong>clase <code>File</code></strong> . Esta clase pertenece al <em><code>package java.io</code></em> de Java. Por lo tanto será necesario importarla antes de poder usarla.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
 </code></pre></div>
-<p>Esta clase permite manipular cualquier aspecto vinculado al sistema de ficheros. Su nombre ("archivo", en inglés) es un poco engañoso, ya que no se refiere exactamente a un archivo.</p>
+<p>Esta clase permite manipular cualquier aspecto vinculado al sistema de archivos. Su nombre ("archivo", en inglés) es un poco engañoso, ya que no se refiere exactamente a un archivo.</p>
 <blockquote>
 <p><img alt="" src="../assets/rayo.png" /> 
 <strong>La clase <code>File</code> representa una ruta dentro del sistema de archivos</strong></p>
@@ -2490,14 +2490,14 @@ operaciones.</p>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="n">ruta</span><span class="p">)</span>
 </code></pre></div>
 <p>Una ruta, path en inglés, es la forma general de un <strong>nombre de archivo o carpeta</strong> , por lo que identifica únicamente su localización en el sistema de archivos.</p>
-<p>Cada uno de <strong>los elementos de la ruta pueden existir realmente o no, pero esto no impide en modo poder inicializar File</strong>. En realidad, su comportamiento es como una declaración de intenciones sobre qué ruta del sistema de archivos se quiere interactuar. No es hasta que se llaman los diferentes métodos definidos en File, o hasta que se escriben o se leen datos, que realmente se accede al sistema de ficheros y se procesa la información.</p>
+<p>Cada uno de <strong>los elementos de la ruta pueden existir realmente o no, pero esto no impide en modo poder inicializar File</strong>. En realidad, su comportamiento es como una declaración de intenciones sobre qué ruta del sistema de archivos se quiere interactuar. No es hasta que se llaman los diferentes métodos definidos en File, o hasta que se escriben o se leen datos, que realmente se accede al sistema de archivos y se procesa la información.</p>
 <p>Un aspecto importante a tener presente al inicializar <code>File</code> es tener siempre presente que el formato de la cadena de texto que conforma la ruta puede ser diferente según el sistema operativo sobre el que se ejecuta la aplicación. Por ejemplo, el sistema operativo Windows inicia las rutas por un nombre de unidad (C :, D :, etc.), mientras que los sistemas operativos basados en Unix comienzan directamente con una barra ("/"). Además, los diferentes sistemas operativos usan diferentes separadores dentro de las rutas. Por ejemplo, los sistemas Unix usan la barra ("/") mientras que el Windows la inversa ("\").</p>
 <ul>
 <li>Ejemplo de ruta Unix: <code>/usr/bin</code></li>
 <li>Ejemplo de ruta Windows: <code>C:\Windows\System32</code></li>
 </ul>
 <p>De todos modos Java y Kotlin nos permite utilizar la barra de Unix ("/") para representar rutas en sistemas Windows. Por lo tanto, es posible utilizar siempre este tipo de barra independientemente del sistema, por simplicidad.</p>
-<p>Es importante entender que <strong>un objeto representa una única ruta</strong> del sistema de ficheros. Para operar con diferentes rutas habrá que crear y manipular varios objetos. Por ejemplo, en el siguiente código se instancian tres objetos <code>File</code> diferentes.</p>
+<p>Es importante entender que <strong>un objeto representa una única ruta</strong> del sistema de archivos. Para operar con diferentes rutas habrá que crear y manipular varios objetos. Por ejemplo, en el siguiente código se instancian tres objetos <code>File</code> diferentes.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">carpetaFotos</span><span class="p">:</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;C:/Fotos&quot;</span><span class="p">)</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">var</span><span class="w"> </span><span class="nv">unaFoto</span><span class="p">:</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;C:/Fotos/Foto1.png&quot;</span><span class="p">)</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">var</span><span class="w"> </span><span class="nv">otraFoto</span><span class="p">:</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;C:/Fotos/Foto2.png&quot;</span><span class="p">)</span>
@@ -2507,7 +2507,7 @@ operaciones.</p>
 <blockquote>
 <p><img alt="" src="../assets/book.png" />
 Una <strong>ruta absoluta</strong> es aquella que <strong>se refiere a un elemento a
-partir del raíz</strong> del sistema de ficheros.</p>
+partir del raíz</strong> del sistema de archivos.</p>
 <p>Por ejemplo <code>C:/Fotos/Foto1.png</code></p>
 </blockquote>
 <p>Las rutas absolutas se distinguen fácilmente, ya que el texto que las representa comienza de una manera muy característica dependiendo del sistema operativo del ordenador. En el caso de los sistemas operativos Windows a su inicio siempre se pone el nombre de la unidad ( "C:", "D:", etc.), mientras que en el caso de los sistemas operativos Unix, estas comienzan siempre por una barra ("/").</p>
@@ -2517,14 +2517,14 @@ partir del raíz</strong> del sistema de ficheros.</p>
 <li><code>M:\Documentos\Unitat11\apartado1</code> (ruta a una carpeta)</li>
 <li><code>N:\Documentos\Unitat11\apartado1\Actividades.txt</code> (ruta a un archivo)</li>
 </ul>
-<p>En cambio, en el caso de una jerarquía de ficheros bajo un sistema operativo Unix, un conjunto de rutas podrían estar representadas de la siguiente forma:</p>
+<p>En cambio, en el caso de una jerarquía de archivos bajo un sistema operativo Unix, un conjunto de rutas podrían estar representadas de la siguiente forma:</p>
 <ul>
 <li><code>/Fotos/Viajes</code> (ruta a una carpeta)</li>
 <li><code>/Documentos/Unidad11/apartado1</code> (ruta a una carpeta)</li>
 <li><code>/Documentos/Unidad11/Apartado1/Actividades.txt</code> (ruta a un archivo)</li>
 </ul>
 <p>Al instanciar objetos de tipo <code>File</code> usando una ruta absoluta siempre hay que usar la representación correcta según el sistema en que se ejecuta el programa.</p>
-<p>Si bien el <strong>uso de rutas absolutas resulta útil para indicar con toda claridad qué elemento dentro del sistema de archivos se está manipulando, hay casos que su uso conlleva ciertas complicaciones</strong>. Suponga que ha hecho un programa en el que se llevan a cabo operaciones sobre el sistema de archivos. Una vez funciona, le deja el proyecto Kotlin a un amigo que lo copia en su ordenador dentro de una carpeta cualquiera y la abre con su entorno de trabajo. Para que el programa le funcione perfectamente antes será necesario que en su ordenador haya exactamente las mismas carpetas que usa en su máquina, tal como están escritas en el código fuente de su programa. De lo contrario, no funcionará, ya que las carpetas y ficheros esperados no existirán, y por tanto, no se encontrarán. Usar rutas absolutas hace que un programa siempre tenga que trabajar con una estructura del sistema de archivos exactamente igual donde quiera que se ejecute, lo cual no es muy cómodo.</p>
+<p>Si bien el <strong>uso de rutas absolutas resulta útil para indicar con toda claridad qué elemento dentro del sistema de archivos se está manipulando, hay casos que su uso conlleva ciertas complicaciones</strong>. Suponga que ha hecho un programa en el que se llevan a cabo operaciones sobre el sistema de archivos. Una vez funciona, le deja el proyecto Kotlin a un amigo que lo copia en su ordenador dentro de una carpeta cualquiera y la abre con su entorno de trabajo. Para que el programa le funcione perfectamente antes será necesario que en su ordenador haya exactamente las mismas carpetas que usa en su máquina, tal como están escritas en el código fuente de su programa. De lo contrario, no funcionará, ya que las carpetas y archivos esperados no existirán, y por tanto, no se encontrarán. Usar rutas absolutas hace que un programa siempre tenga que trabajar con una estructura del sistema de archivos exactamente igual donde quiera que se ejecute, lo cual no es muy cómodo.</p>
 <p>Para resolver este problema, a la hora de inicializar una variable de tipo <code>File</code>, también se puede hacer referencia a una ruta relativa.</p>
 <blockquote>
 <p><img alt="" src="../assets/book.png" />
@@ -2532,7 +2532,7 @@ Una <strong>ruta relativa</strong> es aquella que <strong>no incluye el raíz</s
 el programa.</p>
 </blockquote>
 <p><strong>Cuando un programa se ejecuta</strong> por defecto <strong>se le asigna una carpeta de trabajo</strong>. Esta carpeta <strong>suele ser la carpeta desde donde se lanza el programa</strong>. En el caso de un programa en Kotlin ejecutado a través de un IDE (como IntelliJ IDEA), la carpeta de trabajo suele ser la misma carpeta donde se ha elegido guardar los archivos del proyecto.</p>
-<p>El formato de una ruta relativa es similar a una ruta absoluta, pero nunca se indica la raíz del sistema de ficheros.
+<p>El formato de una ruta relativa es similar a una ruta absoluta, pero nunca se indica la raíz del sistema de archivos.
 Directamente se empieza por el primer elemento escogido dentro de la ruta. Por ejemplo:</p>
 <ul>
 <li>Viajes</li>
@@ -2567,7 +2567,7 @@ Directamente se empieza por el primer elemento escogido dentro de la ruta. Por e
 <p>Este mecanismo permite facilitar la portabilidad del software entre distintos ordenadores y sistemas operativos, ya que solo es necesario que los archivos y carpetas permanezcan en la misma ruta relativa al directorio de trabajo. Veámoslo con un ejemplo:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;Activdades.txt&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>Dada esta ruta relativa, basta garantizar que el fichero <code>Activdades.txt</code> esté siempre en el mismo directorio de trabajo de la aplicación, cualquiera que sea éste e independientemente del sistema operativo utilizado (en un ordenador puede ser <code>C:\Programas</code> y en otro <code>/Kotlin</code>). En cualquiera de todos estos casos, la ruta siempre será correcta. De hecho, aún más. Nótese como <strong>las rutas relativas a Kotlin permiten crear código independiente del sistema operativo</strong>, ya que no es necesario especificar un formato de raíz ligada a un sistema de archivos concreto ( "C:", "D:", "/", etc.).</p>
+<p>Dada esta ruta relativa, basta garantizar que el archivo <code>Activdades.txt</code> esté siempre en el mismo directorio de trabajo de la aplicación, cualquiera que sea éste e independientemente del sistema operativo utilizado (en un ordenador puede ser <code>C:\Programas</code> y en otro <code>/Kotlin</code>). En cualquiera de todos estos casos, la ruta siempre será correcta. De hecho, aún más. Nótese como <strong>las rutas relativas a Kotlin permiten crear código independiente del sistema operativo</strong>, ya que no es necesario especificar un formato de raíz ligada a un sistema de archivos concreto ( "C:", "D:", "/", etc.).</p>
 <h3 id="metodos-de-la-clase-file">Métodos de la clase File<a class="headerlink" href="#metodos-de-la-clase-file" title="Permanent link">&para;</a></h3>
 <p><code>File</code> ofrece varios métodos para poder manipular el sistema de archivos u obtener información a partir de su ruta.
 Algunos de los más significativos para entender las funcionalidades se muestran a continuación, ordenados por tipo de operación.</p>
@@ -2583,7 +2583,7 @@ Algunos de los más significativos para entender las funcionalidades se muestran
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.jvm.JvmStatic</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kd">object</span><span class="w"> </span><span class="nc">PruebasFicheros</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kd">object</span><span class="w"> </span><span class="nc">Pruebasarchivos</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="nd">@JvmStatic</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="c1">// Dos rutas absolutas</span>
@@ -2619,18 +2619,18 @@ Algunos de los más significativos para entender las funcionalidades se muestran
 <a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
 <a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>getParent()     :   null
 <a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>getName()       :   trabajos
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>getAbsolutePath():  /home/lionel/NetBeans/Ficheros/trabajos
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>getAbsolutePath():  /home/lionel/NetBeans/archivos/trabajos
 <a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
 <a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>getParent()     :   trabajos
 <a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>getName()       :   documento.txt
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>getAbsolutePath():  /home/lionel/NetBeans/Ficheros/trabajos/documento.txt
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>getAbsolutePath():  /home/lionel/NetBeans/archivos/trabajos/documento.txt
 </code></pre></div>
 <h4 id="comprobaciones-de-estado">Comprobaciones de estado<a class="headerlink" href="#comprobaciones-de-estado" title="Permanent link">&para;</a></h4>
-<p>Dada la ruta empleada para inicializar una variable de tipo File, esta puede que realmente exista dentro del sistema de ficheros o no, ya sea en forma de archivo o carpeta. La clase <code>File</code> ofrece un conjunto de métodos que permiten hacer comprobaciones sobre su estado y saber si es así.</p>
+<p>Dada la ruta empleada para inicializar una variable de tipo File, esta puede que realmente exista dentro del sistema de archivos o no, ya sea en forma de archivo o carpeta. La clase <code>File</code> ofrece un conjunto de métodos que permiten hacer comprobaciones sobre su estado y saber si es así.</p>
 <ul>
-<li><code>fun exists(): Boolean</code> comprueba si la ruta existe dentro del sistema de ficheros. Devolverá <code>true</code> si existe   y <code>false</code> en caso contrario. Normalmente los archivos incorporan en su nombre una extensión (.txt, .jpg, .mp4, etc.).
+<li><code>fun exists(): Boolean</code> comprueba si la ruta existe dentro del sistema de archivos. Devolverá <code>true</code> si existe   y <code>false</code> en caso contrario. Normalmente los archivos incorporan en su nombre una extensión (.txt, .jpg, .mp4, etc.).
   Aún así, hay que tener en cuenta que la extensión no es un elemento obligatorio en el nombre de un archivo, sólo se usa como mecanismo para que tanto el usuario como algunos programas puedan discriminar más fácilmente el tipo de archivos. Por lo tanto, solo con el texto de una ruta no se puede estar 100% seguro de si esta se refiere a un archivo   o una carpeta. Para poder estar realmente seguros se pueden usar los métodos siguientes:</li>
-<li><code>fun isFile(): Boolean</code> comprueba el sistema de ficheros en busca de la ruta y devuelve true si existe y es un fichero. Devolverá <code>false</code> si no existe, o si existe pero no es un fichero.</li>
+<li><code>fun isFile(): Boolean</code> comprueba el sistema de archivos en busca de la ruta y devuelve true si existe y es un archivo. Devolverá <code>false</code> si no existe, o si existe pero no es un archivo.</li>
 <li><code>fun isDirectory():Boolean</code> funciona como el anterior pero comprueba si es una carpeta.</li>
 </ul>
 <p>Por ejemplo, el siguiente código hace una serie de comprobaciones sobre un conjunto de rutas. Para poder probarlo puedes crear la carpeta <code>Temp</code> en la raíz <code>C:</code> (si estas en Windows). Dentro, un archivo llamado <code>Document.txt</code> (puede estar vacío) y una carpeta llamada <code>Fotos</code>. Después de probar el programa puedes eliminar algún elemento y volver a probar para ver la diferencia.</p>
@@ -2655,8 +2655,8 @@ Algunos de los más significativos para entender las funcionalidades se muestran
 <a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="propiedades-de-ficheros">Propiedades de ficheros<a class="headerlink" href="#propiedades-de-ficheros" title="Permanent link">&para;</a></h4>
-<p>El sistema de ficheros de un sistema operativo almacena diversidad de información sobre los archivos y carpetas que puede resultar útil conocer: sus atributos de acceso, su tamaño, la fecha de modificación, etc. En general, todos los datos mostrados en acceder a las propiedades del archivo. Esta información también puede ser consultada usando los métodos adecuados. Entre los más populares hay los siguientes:</p>
+<h4 id="propiedades-de-archivos">Propiedades de archivos<a class="headerlink" href="#propiedades-de-archivos" title="Permanent link">&para;</a></h4>
+<p>El sistema de archivos de un sistema operativo almacena diversidad de información sobre los archivos y carpetas que puede resultar útil conocer: sus atributos de acceso, su tamaño, la fecha de modificación, etc. En general, todos los datos mostrados en acceder a las propiedades del archivo. Esta información también puede ser consultada usando los métodos adecuados. Entre los más populares hay los siguientes:</p>
 <ul>
 <li><code>fun length(): Long</code> devuelve el tamaño de un archivo en bytes. Este método solo puede ser llamado sobre una ruta que represente un archivo, de lo contrario no se puede garantizar que el resultado sea válido.</li>
 <li><code>fun lastModified(): Long</code> devuelve la última fecha de edición del elemento representado por esta ruta. El resultado se codifica en un único número entero cuyo valor es el número de milisegundos que han pasado desde el 1 de junio de 1970.</li>
@@ -2692,7 +2692,7 @@ Algunos de los más significativos para entender las funcionalidades se muestran
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>Tamañodel archivo: 7
 </code></pre></div>
 <h4 id="gestion-de-los-archivos">Gestión de los archivos<a class="headerlink" href="#gestion-de-los-archivos" title="Permanent link">&para;</a></h4>
-<p>El conjunto de operaciones más habituales al acceder a un sistema de ficheros de un ordenador son las vinculadas a su gestión directa: renombrar archivos, borrarlos, copiarlos o moverlos. Dado el nombre de una ruta, Java y kotlin también permite realizar estas acciones.</p>
+<p>El conjunto de operaciones más habituales al acceder a un sistema de archivos de un ordenador son las vinculadas a su gestión directa: renombrar archivos, borrarlos, copiarlos o moverlos. Dado el nombre de una ruta, Java y kotlin también permite realizar estas acciones.</p>
 <ul>
 <li><code>fun mkdir(): Boolean</code> permite crear la carpeta indicada en la ruta. La ruta debe indicar el nombre de una carpeta que no existe en el momento de invocar el método. Por ejemplo, dado un objeto <code>File</code>  instanciado con la ruta <code>C: /Fotos/Albania</code> que no existe, el método <code>mkdir()</code> creará la carpeta <code>Albania</code> dentro de <code>C:/Fotos</code>. Devuelve <code>true</code> si se ha creado correctamente, en caso contrario devuelve <code>false</code> (por ejemplo si la ruta es incorrecta, la carpeta ya existe o el usuario no tiene permisos de escritura).</li>
 <li><code>fun delete(): Boolean</code> borra el archivo o carpeta indicada en la ruta. La ruta debe indicar el nombre de un archivo o carpeta que sí existe en el momento de invocar el método. Se podrá borrar una carpeta solo si está vacía (no contiene ni carpetas ni archivos). Devuelve <code>true</code> o <code>false</code> según si la operación se ha podido llevar a cabo.</li>
@@ -2701,7 +2701,7 @@ Algunos de los más significativos para entender las funcionalidades se muestran
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.jvm.JvmStatic</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="kd">object</span><span class="w"> </span><span class="nc">PruebasGestionFicheros</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="kd">object</span><span class="w"> </span><span class="nc">PruebasGestionarchivos</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="nd">@JvmStatic</span>
 <a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">fotos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;C:/Temp/Fotos&quot;</span><span class="p">)</span>
@@ -2727,7 +2727,7 @@ Algunos de los más significativos para entender las funcionalidades se muestran
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.jvm.JvmStatic</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="kd">object</span><span class="w"> </span><span class="nc">PruebasGestionFicheros2</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="kd">object</span><span class="w"> </span><span class="nc">PruebasGestionarchivos2</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="nd">@JvmStatic</span>
 <a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">origenDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;C:/Temp/Fotos&quot;</span><span class="p">)</span>
@@ -2753,7 +2753,7 @@ Algunos de los más significativos para entender las funcionalidades se muestran
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.jvm.JvmStatic</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="kd">object</span><span class="w"> </span><span class="nc">PruebasGestionFicheros3</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="kd">object</span><span class="w"> </span><span class="nc">PruebasGestionarchivos3</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="nd">@JvmStatic</span>
 <a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;C:/Temp&quot;</span><span class="p">)</span>

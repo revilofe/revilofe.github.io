@@ -21,7 +21,7 @@ La pieza más básica para poder operar con archivos, independientemente de su t
 import java.io.File
 ```
 
-Esta clase permite manipular cualquier aspecto vinculado al sistema de ficheros. Su nombre ("archivo", en inglés) es un poco engañoso, ya que no se refiere exactamente a un archivo.
+Esta clase permite manipular cualquier aspecto vinculado al sistema de archivos. Su nombre ("archivo", en inglés) es un poco engañoso, ya que no se refiere exactamente a un archivo.
 
 >![](assets/rayo.png) 
 > **La clase `File` representa una ruta dentro del sistema de archivos**
@@ -38,7 +38,7 @@ val f = File(ruta)
 
 Una ruta, path en inglés, es la forma general de un **nombre de archivo o carpeta** , por lo que identifica únicamente su localización en el sistema de archivos.
 
-Cada uno de **los elementos de la ruta pueden existir realmente o no, pero esto no impide en modo poder inicializar File**. En realidad, su comportamiento es como una declaración de intenciones sobre qué ruta del sistema de archivos se quiere interactuar. No es hasta que se llaman los diferentes métodos definidos en File, o hasta que se escriben o se leen datos, que realmente se accede al sistema de ficheros y se procesa la información.
+Cada uno de **los elementos de la ruta pueden existir realmente o no, pero esto no impide en modo poder inicializar File**. En realidad, su comportamiento es como una declaración de intenciones sobre qué ruta del sistema de archivos se quiere interactuar. No es hasta que se llaman los diferentes métodos definidos en File, o hasta que se escriben o se leen datos, que realmente se accede al sistema de archivos y se procesa la información.
 
 Un aspecto importante a tener presente al inicializar `File` es tener siempre presente que el formato de la cadena de texto que conforma la ruta puede ser diferente según el sistema operativo sobre el que se ejecuta la aplicación. Por ejemplo, el sistema operativo Windows inicia las rutas por un nombre de unidad (C :, D :, etc.), mientras que los sistemas operativos basados en Unix comienzan directamente con una barra ("/"). Además, los diferentes sistemas operativos usan diferentes separadores dentro de las rutas. Por ejemplo, los sistemas Unix usan la barra ("/") mientras que el Windows la inversa ("\\").
 
@@ -47,7 +47,7 @@ Un aspecto importante a tener presente al inicializar `File` es tener siempre pr
 
 De todos modos Java y Kotlin nos permite utilizar la barra de Unix ("/") para representar rutas en sistemas Windows. Por lo tanto, es posible utilizar siempre este tipo de barra independientemente del sistema, por simplicidad.
 
-Es importante entender que **un objeto representa una única ruta** del sistema de ficheros. Para operar con diferentes rutas habrá que crear y manipular varios objetos. Por ejemplo, en el siguiente código se instancian tres objetos `File` diferentes.
+Es importante entender que **un objeto representa una única ruta** del sistema de archivos. Para operar con diferentes rutas habrá que crear y manipular varios objetos. Por ejemplo, en el siguiente código se instancian tres objetos `File` diferentes.
 
 ```kotlin
 var carpetaFotos: File = File("C:/Fotos")
@@ -61,7 +61,7 @@ En los ejemplos empleados hasta el momento para crear objetos de la clase `File`
 
 > ![](assets/book.png)
 > Una **ruta absoluta** es aquella que **se refiere a un elemento a
-> partir del raíz** del sistema de ficheros.
+> partir del raíz** del sistema de archivos.
 >
 > Por ejemplo `C:/Fotos/Foto1.png`
 
@@ -73,7 +73,7 @@ Por ejemplo, las cadenas de texto siguientes representan rutas absolutas en un s
 * `M:\Documentos\Unitat11\apartado1` (ruta a una carpeta)
 * `N:\Documentos\Unitat11\apartado1\Actividades.txt` (ruta a un archivo)
 
-En cambio, en el caso de una jerarquía de ficheros bajo un sistema operativo Unix, un conjunto de rutas podrían estar representadas de la siguiente forma:
+En cambio, en el caso de una jerarquía de archivos bajo un sistema operativo Unix, un conjunto de rutas podrían estar representadas de la siguiente forma:
 
 * `/Fotos/Viajes` (ruta a una carpeta)
 * `/Documentos/Unidad11/apartado1` (ruta a una carpeta)
@@ -81,7 +81,7 @@ En cambio, en el caso de una jerarquía de ficheros bajo un sistema operativo Un
 
 Al instanciar objetos de tipo `File` usando una ruta absoluta siempre hay que usar la representación correcta según el sistema en que se ejecuta el programa.
 
-Si bien el **uso de rutas absolutas resulta útil para indicar con toda claridad qué elemento dentro del sistema de archivos se está manipulando, hay casos que su uso conlleva ciertas complicaciones**. Suponga que ha hecho un programa en el que se llevan a cabo operaciones sobre el sistema de archivos. Una vez funciona, le deja el proyecto Kotlin a un amigo que lo copia en su ordenador dentro de una carpeta cualquiera y la abre con su entorno de trabajo. Para que el programa le funcione perfectamente antes será necesario que en su ordenador haya exactamente las mismas carpetas que usa en su máquina, tal como están escritas en el código fuente de su programa. De lo contrario, no funcionará, ya que las carpetas y ficheros esperados no existirán, y por tanto, no se encontrarán. Usar rutas absolutas hace que un programa siempre tenga que trabajar con una estructura del sistema de archivos exactamente igual donde quiera que se ejecute, lo cual no es muy cómodo.
+Si bien el **uso de rutas absolutas resulta útil para indicar con toda claridad qué elemento dentro del sistema de archivos se está manipulando, hay casos que su uso conlleva ciertas complicaciones**. Suponga que ha hecho un programa en el que se llevan a cabo operaciones sobre el sistema de archivos. Una vez funciona, le deja el proyecto Kotlin a un amigo que lo copia en su ordenador dentro de una carpeta cualquiera y la abre con su entorno de trabajo. Para que el programa le funcione perfectamente antes será necesario que en su ordenador haya exactamente las mismas carpetas que usa en su máquina, tal como están escritas en el código fuente de su programa. De lo contrario, no funcionará, ya que las carpetas y archivos esperados no existirán, y por tanto, no se encontrarán. Usar rutas absolutas hace que un programa siempre tenga que trabajar con una estructura del sistema de archivos exactamente igual donde quiera que se ejecute, lo cual no es muy cómodo.
 
 Para resolver este problema, a la hora de inicializar una variable de tipo `File`, también se puede hacer referencia a una ruta relativa.
 
@@ -91,7 +91,7 @@ Para resolver este problema, a la hora de inicializar una variable de tipo `File
 
 **Cuando un programa se ejecuta** por defecto **se le asigna una carpeta de trabajo**. Esta carpeta **suele ser la carpeta desde donde se lanza el programa**. En el caso de un programa en Kotlin ejecutado a través de un IDE (como IntelliJ IDEA), la carpeta de trabajo suele ser la misma carpeta donde se ha elegido guardar los archivos del proyecto.
 
-El formato de una ruta relativa es similar a una ruta absoluta, pero nunca se indica la raíz del sistema de ficheros.
+El formato de una ruta relativa es similar a una ruta absoluta, pero nunca se indica la raíz del sistema de archivos.
 Directamente se empieza por el primer elemento escogido dentro de la ruta. Por ejemplo:
 
 * Viajes
@@ -117,7 +117,7 @@ Este mecanismo permite facilitar la portabilidad del software entre distintos or
 val f = File("Activdades.txt")
 ```
 
-Dada esta ruta relativa, basta garantizar que el fichero `Activdades.txt` esté siempre en el mismo directorio de trabajo de la aplicación, cualquiera que sea éste e independientemente del sistema operativo utilizado (en un ordenador puede ser `C:\Programas` y en otro `/Kotlin`). En cualquiera de todos estos casos, la ruta siempre será correcta. De hecho, aún más. Nótese como **las rutas relativas a Kotlin permiten crear código independiente del sistema operativo**, ya que no es necesario especificar un formato de raíz ligada a un sistema de archivos concreto ( "C:", "D:", "/", etc.).
+Dada esta ruta relativa, basta garantizar que el archivo `Activdades.txt` esté siempre en el mismo directorio de trabajo de la aplicación, cualquiera que sea éste e independientemente del sistema operativo utilizado (en un ordenador puede ser `C:\Programas` y en otro `/Kotlin`). En cualquiera de todos estos casos, la ruta siempre será correcta. De hecho, aún más. Nótese como **las rutas relativas a Kotlin permiten crear código independiente del sistema operativo**, ya que no es necesario especificar un formato de raíz ligada a un sistema de archivos concreto ( "C:", "D:", "/", etc.).
 
 ### Métodos de la clase File
 
@@ -139,7 +139,7 @@ Veamos un ejemplo de cómo funcionan estos tres métodos. Obsérvese que las rut
 import kotlin.jvm.JvmStatic
 import java.io.File
 
-object PruebasFicheros {
+object Pruebasarchivos {
     @JvmStatic
     fun main(args: Array<String>) {
         // Dos rutas absolutas
@@ -178,20 +178,20 @@ getAbsolutePath():  /home/lionel/fotos/albania1.jpg
 
 getParent()     :   null
 getName()       :   trabajos
-getAbsolutePath():  /home/lionel/NetBeans/Ficheros/trabajos
+getAbsolutePath():  /home/lionel/NetBeans/archivos/trabajos
 
 getParent()     :   trabajos
 getName()       :   documento.txt
-getAbsolutePath():  /home/lionel/NetBeans/Ficheros/trabajos/documento.txt
+getAbsolutePath():  /home/lionel/NetBeans/archivos/trabajos/documento.txt
 ```
 
 #### Comprobaciones de estado
 
-Dada la ruta empleada para inicializar una variable de tipo File, esta puede que realmente exista dentro del sistema de ficheros o no, ya sea en forma de archivo o carpeta. La clase `File` ofrece un conjunto de métodos que permiten hacer comprobaciones sobre su estado y saber si es así.
+Dada la ruta empleada para inicializar una variable de tipo File, esta puede que realmente exista dentro del sistema de archivos o no, ya sea en forma de archivo o carpeta. La clase `File` ofrece un conjunto de métodos que permiten hacer comprobaciones sobre su estado y saber si es así.
 
-* `fun exists(): Boolean` comprueba si la ruta existe dentro del sistema de ficheros. Devolverá `true` si existe   y `false` en caso contrario. Normalmente los archivos incorporan en su nombre una extensión (.txt, .jpg, .mp4, etc.).
+* `fun exists(): Boolean` comprueba si la ruta existe dentro del sistema de archivos. Devolverá `true` si existe   y `false` en caso contrario. Normalmente los archivos incorporan en su nombre una extensión (.txt, .jpg, .mp4, etc.).
   Aún así, hay que tener en cuenta que la extensión no es un elemento obligatorio en el nombre de un archivo, sólo se usa como mecanismo para que tanto el usuario como algunos programas puedan discriminar más fácilmente el tipo de archivos. Por lo tanto, solo con el texto de una ruta no se puede estar 100% seguro de si esta se refiere a un archivo   o una carpeta. Para poder estar realmente seguros se pueden usar los métodos siguientes:
-* `fun isFile(): Boolean` comprueba el sistema de ficheros en busca de la ruta y devuelve true si existe y es un fichero. Devolverá `false` si no existe, o si existe pero no es un fichero.
+* `fun isFile(): Boolean` comprueba el sistema de archivos en busca de la ruta y devuelve true si existe y es un archivo. Devolverá `false` si no existe, o si existe pero no es un archivo.
 * `fun isDirectory():Boolean` funciona como el anterior pero comprueba si es una carpeta.
 
 Por ejemplo, el siguiente código hace una serie de comprobaciones sobre un conjunto de rutas. Para poder probarlo puedes crear la carpeta `Temp` en la raíz `C:` (si estas en Windows). Dentro, un archivo llamado `Document.txt` (puede estar vacío) y una carpeta llamada `Fotos`. Después de probar el programa puedes eliminar algún elemento y volver a probar para ver la diferencia.
@@ -219,9 +219,9 @@ object PruebaExiste {
 }
 ```
 
-#### Propiedades de ficheros
+#### Propiedades de archivos
 
-El sistema de ficheros de un sistema operativo almacena diversidad de información sobre los archivos y carpetas que puede resultar útil conocer: sus atributos de acceso, su tamaño, la fecha de modificación, etc. En general, todos los datos mostrados en acceder a las propiedades del archivo. Esta información también puede ser consultada usando los métodos adecuados. Entre los más populares hay los siguientes:
+El sistema de archivos de un sistema operativo almacena diversidad de información sobre los archivos y carpetas que puede resultar útil conocer: sus atributos de acceso, su tamaño, la fecha de modificación, etc. En general, todos los datos mostrados en acceder a las propiedades del archivo. Esta información también puede ser consultada usando los métodos adecuados. Entre los más populares hay los siguientes:
 
 * `fun length(): Long` devuelve el tamaño de un archivo en bytes. Este método solo puede ser llamado sobre una ruta que represente un archivo, de lo contrario no se puede garantizar que el resultado sea válido.
 * `fun lastModified(): Long` devuelve la última fecha de edición del elemento representado por esta ruta. El resultado se codifica en un único número entero cuyo valor es el número de milisegundos que han pasado desde el 1 de junio de 1970.
@@ -267,7 +267,7 @@ Tamañodel archivo: 7
 
 #### Gestión de los archivos
 
-El conjunto de operaciones más habituales al acceder a un sistema de ficheros de un ordenador son las vinculadas a su gestión directa: renombrar archivos, borrarlos, copiarlos o moverlos. Dado el nombre de una ruta, Java y kotlin también permite realizar estas acciones.
+El conjunto de operaciones más habituales al acceder a un sistema de archivos de un ordenador son las vinculadas a su gestión directa: renombrar archivos, borrarlos, copiarlos o moverlos. Dado el nombre de una ruta, Java y kotlin también permite realizar estas acciones.
 
 * `fun mkdir(): Boolean` permite crear la carpeta indicada en la ruta. La ruta debe indicar el nombre de una carpeta que no existe en el momento de invocar el método. Por ejemplo, dado un objeto `File`  instanciado con la ruta `C: /Fotos/Albania` que no existe, el método `mkdir()` creará la carpeta `Albania` dentro de `C:/Fotos`. Devuelve `true` si se ha creado correctamente, en caso contrario devuelve `false` (por ejemplo si la ruta es incorrecta, la carpeta ya existe o el usuario no tiene permisos de escritura).
 * `fun delete(): Boolean` borra el archivo o carpeta indicada en la ruta. La ruta debe indicar el nombre de un archivo o carpeta que sí existe en el momento de invocar el método. Se podrá borrar una carpeta solo si está vacía (no contiene ni carpetas ni archivos). Devuelve `true` o `false` según si la operación se ha podido llevar a cabo.
@@ -278,7 +278,7 @@ Para probar el ejemplo que se muestra a continuación de manera que se pueda ver
 import java.io.File
 import kotlin.jvm.JvmStatic
 
-object PruebasGestionFicheros {
+object PruebasGestionarchivos {
     @JvmStatic
     fun main(args: Array<String>) {
         val fotos = File("C:/Temp/Fotos")
@@ -308,7 +308,7 @@ Dentro de la carpeta`Fotos` crea dos documentos llamados `Documento.txt` y `Foto
 import java.io.File
 import kotlin.jvm.JvmStatic
 
-object PruebasGestionFicheros2 {
+object PruebasGestionarchivos2 {
     @JvmStatic
     fun main(args: Array<String>) {
         val origenDir = File("C:/Temp/Fotos")
@@ -341,7 +341,7 @@ Veamos un ejemplo. Antes de ejecutarlo, crea una carpeta `Temp` en la raíz de l
 import java.io.File
 import kotlin.jvm.JvmStatic
 
-object PruebasGestionFicheros3 {
+object PruebasGestionarchivos3 {
     @JvmStatic
     fun main(args: Array<String>) {
         val dir = File("C:/Temp")

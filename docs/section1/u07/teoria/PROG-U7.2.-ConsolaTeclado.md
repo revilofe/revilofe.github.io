@@ -273,9 +273,9 @@ println(str5)
 ## Biblioteca KFormat
 
 Existen bibliotecas que intentan solucionar alguna necesidad que han encontrado en sus desarrollos. Algunas de ellas para trabajar con la consola:   
-* [KFormat](https://github.com/marcelmay/kformat)
-* [clikt](https://ajalt.github.io/clikt/)
-* [kotlinx-cli](https://github.com/Kotlin/kotlinx-cli)
+- [KFormat](https://github.com/marcelmay/kformat)   
+- [clikt](https://ajalt.github.io/clikt/)   
+- [kotlinx-cli](https://github.com/Kotlin/kotlinx-cli)   
 
 [KFormat](https://github.com/marcelmay/kformat) es una pequeña biblioteca de Kotlin para la salida de texto con formato, como por ejemplo la impresión de valores en una tabla estructurada. Los casos de uso típicos incluyen el desarrollo de herramientas CLI. (Command Line Interface)
 

@@ -14,11 +14,12 @@ tags:
     - GIT
     - GitHub
 ---
-## Herramientas de desarrollo
-
+## Git & GitHub
 
 ## Recursos
 
+* [Git la guía sencilla](http://rogerdudler.github.io/git-guide/index.es.html)
+* [Git en entornos distribuidos](https://git-scm.com/book/es/v2/Git-en-entornos-distribuidos-Flujos-de-trabajo-distribuidos)
 
-## Fuente
 
+# Fuente

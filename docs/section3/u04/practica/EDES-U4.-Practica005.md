@@ -1,12 +1,12 @@
 ---
-title: "UD 3 - P5: Git/Github Pull Request"
+title: "UD 4 - P5: Git/Github Pull Request"
 description: Git/Github
 summary: Git/Github
 authors:
     - Eduardo Fdez
 date: 2022-10-23
 icon: material/software
-permalink: /edes/unidad3/p3.5
+permalink: /edes/unidad4/p4.5
 categories:
     - EDES
 tags:
@@ -15,7 +15,7 @@ tags:
     - github
 ---
 
-## Relación 3.1.5: Contribuir a repositorios de terceros con pull-request, integración automática, y comandos Git: branch, clone, fetch, merge, pull y push: Pull Request
+## Relación 4.1.5: Contribuir a repositorios de terceros con pull-request, integración automática, y comandos Git: branch, clone, fetch, merge, pull y push: Pull Request
 
 ### Objetivos
 * Usar dos repositorios remotos, uno como respaldo del repositorio de trabajo local y otro como repositorio central donde las contribuciones se envían con pull-request.

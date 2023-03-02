@@ -1,12 +1,12 @@
 ---
-title: "UD 3 - P4: Git/Github Rebase II"
+title: "UD 4 - P4: Git/Github Rebase II"
 description: Git/Github
 summary: Git/Github
 authors:
     - Eduardo Fdez
 date: 2022-10-23
 icon: material/software
-permalink: /edes/unidad3/p3.4
+permalink: /edes/unidad4/p4.4
 categories:
     - EDES
 tags:
@@ -15,7 +15,7 @@ tags:
     - github
 ---
 
-## Relación 3.1.4: Integración de ramas - Rebase II
+## Relación 4.1.4: Integración de ramas - Rebase II
 
 ### Objetivos
 * Ver nuevos usos de GitHub y de "git rebase"

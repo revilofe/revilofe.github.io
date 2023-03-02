@@ -1,12 +1,12 @@
 ---
-title: "UD 3 - P2: Git/Github Merge"
+title: "UD 4 - P2: Git/Github Merge"
 description: Git/Github
 summary: Git/Github
 authors:
     - Eduardo Fdez
 date: 2022-10-23
 icon: material/software
-permalink: /edes/unidad3/p3.2
+permalink: /edes/unidad4/p4.2
 categories:
     - EDES
 tags:
@@ -16,7 +16,7 @@ tags:
 ---
 
 
-## Relación 3.1.2: Integración de ramas - Merge
+## Relación 4.1.2: Integración de ramas - Merge
 
 Versión: 30 de septiembre de 2022
 

@@ -1,12 +1,12 @@
 ---
-title: "UD 3 - P3: Git/Github Rebase I"
+title: "UD 4 - P3: Git/Github Rebase I"
 description: Git/Github
 summary: Git/Github
 authors:
     - Eduardo Fdez
 date: 2022-10-23
 icon: material/software
-permalink: /edes/unidad3/p3.3
+permalink: /edes/unidad4/p4.3
 categories:
     - EDES
 tags:
@@ -15,7 +15,7 @@ tags:
     - github
 ---
 
-## Relación 3.1.3: Integración de ramas - Rebase I
+## Relación 4.1.3: Integración de ramas - Rebase I
 
 ### Objetivos
 * Continuar practicando con repositorios locales y remotos, commits y ramas, pero integrando con rebase.

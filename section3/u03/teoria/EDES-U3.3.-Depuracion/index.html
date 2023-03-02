@@ -6,26 +6,26 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Kotest">
+        <meta name="description" content="Depuración">
       
       
         <meta name="author" content="Eduardo Fdez">
       
       
-        <link rel="canonical" href="https://revilofe.github.io/section3/u03/teoria/EDES-U3.3.-Kotest/">
+        <link rel="canonical" href="https://revilofe.github.io/section3/u03/teoria/EDES-U3.3.-Depuracion/">
       
       
-        <link rel="prev" href="../EDES-U3.2.-TestUnidadYTDD/">
+        <link rel="prev" href="../EDES-U3.2.2.-Mockk/">
       
       
-        <link rel="next" href="../EDES-U3.4.-Mockk/">
+        <link rel="next" href="../../../u04/">
       
       <link rel="icon" href="../../../../assets/favicon-96x96.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.0">
     
     
       
-        <title>UD 3 - 3.3 Kotest - R Z O</title>
+        <title>UD 3 - 3.3 Depuración - R Z O</title>
       
     
     
@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccion-a-kotest" class="md-skip">
+        <a href="#pruebas" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UD 3 - 3.3 Kotest
+              UD 3 - 3.3 Depuración
             
           </span>
         </div>
@@ -1383,6 +1383,8 @@
         
           
         
+          
+        
       
       
         
@@ -1702,20 +1704,12 @@
         
           
         
-          
-        
-          
-        
-          
-        
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../">U3: GIT</a>
+          <a href="../../">U3: Pruebas y Depuración</a>
           
             <label for="__nav_3_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1726,7 +1720,7 @@
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3_4">
           <span class="md-nav__icon md-icon"></span>
-          U3: GIT
+          U3: Pruebas y Depuración
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1738,8 +1732,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u01/teoria/EDES-U3.1.-Git_Github.md" class="md-nav__link">
-        3.1.-Software y PC
+      <a href="../EDES-U3.1.-Pruebas/" class="md-nav__link">
+        3.1.-Pruebas
       </a>
     </li>
   
@@ -1764,6 +1758,34 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../EDES-U3.2.1.-Kotest/" class="md-nav__link">
+          3.2.1.-Kotest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EDES-U3.2.2.-Mockk/" class="md-nav__link">
+          3.2.2.-MockK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -1774,12 +1796,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          3.3.-Kotest
+          3.3.-Depuración
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        3.3.-Kotest
+        3.3.-Depuración
       </a>
       
         
@@ -1798,133 +1820,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion-a-kotest" class="md-nav__link">
-    Introducción a Kotest
+  <a href="#pruebas" class="md-nav__link">
+    Pruebas
   </a>
-  
-    <nav class="md-nav" aria-label="Introducción a Kotest">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-informacion-general" class="md-nav__link">
-    1. Información general
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-pruebas-en-jvm" class="md-nav__link">
-    2. Pruebas en JVM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-estilos-de-prueba" class="md-nav__link">
-    3. Estilos de prueba
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Estilos de prueba">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-especificaciones-de-comportamiento" class="md-nav__link">
-    3.1. Especificaciones de comportamiento
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-especificaciones-mediante-should" class="md-nav__link">
-    3.2. Especificaciones mediante should
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-especificaciones-de-caracteristicas-features" class="md-nav__link">
-    3.3. Especificaciones de características (features)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34-especificaciones-mediante-mediante-descripciones-describe" class="md-nav__link">
-    3.4. Especificaciones mediante mediante descripciones (describe)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-assertions" class="md-nav__link">
-    4. Assertions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-pruebas-de-excepciones" class="md-nav__link">
-    5. Pruebas de excepciones
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-ganchos-de-ciclo-de-vida" class="md-nav__link">
-    6. Ganchos de ciclo de vida
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-pruebas-basadas-en-datos" class="md-nav__link">
-    7. Pruebas basadas en datos
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-pruebas-no-deterministas" class="md-nav__link">
-    8. Pruebas no deterministas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#9-mocking" class="md-nav__link">
-    9. Mocking
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-cobertura-de-pruebas" class="md-nav__link">
-    10. Cobertura de pruebas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#11-agrupacion-de-pruebas-con-etiquetas" class="md-nav__link">
-    11. Agrupación de pruebas con etiquetas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-conclusion" class="md-nav__link">
-    12. Conclusión
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1951,14 +1849,84 @@
 
             
           
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../u04/">U4: SCV, refactorización y documentación</a>
+          
+            <label for="__nav_3_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          U4: SCV, refactorización y documentación
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
             
               
   
   
   
     <li class="md-nav__item">
-      <a href="../EDES-U3.4.-Mockk/" class="md-nav__link">
-        3.4.-MockK
+      <a href="../../../u04/teoria/EDES-U4.1.-Git_Github/" class="md-nav__link">
+        4.1.-Sistemas de control de versiones
       </a>
     </li>
   
@@ -1971,8 +1939,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../practica/EDES-U3.-Practica001/" class="md-nav__link">
-        Práctica 3.1: Git/Github básico
+      <a href="../../../u04/teoria/EDES-U4.2.-Refactorizacion/" class="md-nav__link">
+        4.2.-Refactorización
       </a>
     </li>
   
@@ -1985,8 +1953,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../practica/EDES-U3.-Practica002/" class="md-nav__link">
-        Práctica 3.2: Git/Github merge
+      <a href="../../../u04/teoria/EDES-U4.3.-AnalizadorCodigo/" class="md-nav__link">
+        4.3.-Analizador de código
       </a>
     </li>
   
@@ -1999,8 +1967,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../practica/EDES-U3.-Practica003/" class="md-nav__link">
-        Práctica 3.3: Git/Github rebase I
+      <a href="../../../u04/teoria/EDES-U4.4.-Documentacion/" class="md-nav__link">
+        4.3.-Documentació
       </a>
     </li>
   
@@ -2013,8 +1981,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../practica/EDES-U3.-Practica004/" class="md-nav__link">
-        Práctica 3.4: Git/Github rebase II
+      <a href="../../../u04/practica/EDES-U4.-Practica001/" class="md-nav__link">
+        Práctica 4.1: Git/Github básico
       </a>
     </li>
   
@@ -2027,8 +1995,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../../practica/EDES-U3.-Practica005/" class="md-nav__link">
-        Práctica 3.5: Git/Github Pull Request (PR)
+      <a href="../../../u04/practica/EDES-U4.-Practica002/" class="md-nav__link">
+        Práctica 4.2: Git/Github merge
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u04/practica/EDES-U4.-Practica003/" class="md-nav__link">
+        Práctica 4.3: Git/Github rebase I
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u04/practica/EDES-U4.-Practica004/" class="md-nav__link">
+        Práctica 4.4: Git/Github rebase II
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u04/practica/EDES-U4.-Practica005/" class="md-nav__link">
+        Práctica 4.5: Git/Github Pull Request (PR)
       </a>
     </li>
   
@@ -2369,133 +2379,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion-a-kotest" class="md-nav__link">
-    Introducción a Kotest
+  <a href="#pruebas" class="md-nav__link">
+    Pruebas
   </a>
-  
-    <nav class="md-nav" aria-label="Introducción a Kotest">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-informacion-general" class="md-nav__link">
-    1. Información general
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-pruebas-en-jvm" class="md-nav__link">
-    2. Pruebas en JVM
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-estilos-de-prueba" class="md-nav__link">
-    3. Estilos de prueba
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Estilos de prueba">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-especificaciones-de-comportamiento" class="md-nav__link">
-    3.1. Especificaciones de comportamiento
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-especificaciones-mediante-should" class="md-nav__link">
-    3.2. Especificaciones mediante should
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-especificaciones-de-caracteristicas-features" class="md-nav__link">
-    3.3. Especificaciones de características (features)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34-especificaciones-mediante-mediante-descripciones-describe" class="md-nav__link">
-    3.4. Especificaciones mediante mediante descripciones (describe)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-assertions" class="md-nav__link">
-    4. Assertions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-pruebas-de-excepciones" class="md-nav__link">
-    5. Pruebas de excepciones
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-ganchos-de-ciclo-de-vida" class="md-nav__link">
-    6. Ganchos de ciclo de vida
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-pruebas-basadas-en-datos" class="md-nav__link">
-    7. Pruebas basadas en datos
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-pruebas-no-deterministas" class="md-nav__link">
-    8. Pruebas no deterministas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#9-mocking" class="md-nav__link">
-    9. Mocking
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-cobertura-de-pruebas" class="md-nav__link">
-    10. Cobertura de pruebas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#11-agrupacion-de-pruebas-con-etiquetas" class="md-nav__link">
-    11. Agrupación de pruebas con etiquetas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-conclusion" class="md-nav__link">
-    12. Conclusión
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2551,7 +2437,7 @@
         
       
       
-        <a href="../../../../tags/#kotest" class="md-tag md-tag-icon">kotest</a>
+        <a href="../../../../tags/#debug" class="md-tag md-tag-icon">Debug</a>
       
     
   </nav>
@@ -2562,211 +2448,9 @@
   
 
 
-  <h1>3.3.-Kotest</h1>
+  <h1>3.3.-Depuración</h1>
 
-<h2 id="introduccion-a-kotest">Introducción a Kotest<a class="headerlink" href="#introduccion-a-kotest" title="Permanent link">&para;</a></h2>
-<h3 id="1-informacion-general">1. Información general<a class="headerlink" href="#1-informacion-general" title="Permanent link">&para;</a></h3>
-<p><a href="https://kotest.io/">Kotest</a> es un framework de pruebas multiplataforma escrito en Kotlin. Consta de 3 subproyectos principales:</p>
-<ul>
-<li>Framework para pruebas</li>
-<li>Biblioteca de aserciones</li>
-<li>Pruebas de propiedad</li>
-</ul>
-<p>Podemos usar cada proyecto independientemente, integrándolos con otros framework de prueba. Por ejemplo, es posible usar las aserciones de Kotest en lugar de otros frameworks de <a href="https://www.baeldung.com/introduction-to-assertj">asserciones</a>.</p>
-<p>Podemos ejecutar pruebas Kotest en JVM, Javascript o Native. Esto nos permite utilizar la misma biblioteca de pruebas para el desarrollo web, móvil y back-end. Nos centraremos en la plataforma JVM .</p>
-<h3 id="2-pruebas-en-jvm">2. Pruebas en JVM<a class="headerlink" href="#2-pruebas-en-jvm" title="Permanent link">&para;</a></h3>
-<p>Kotest utiliza la plataforma JUnit en la JVM. Entonces, en un proyecto <a href="https://search.maven.org/artifact/io.kotest/kotest-runner-junit5-jvm">Maven</a> , podemos activarlo usando las siguientes sentencias dentro del fichero <code>build.gradle.kts</code></p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">testImplementation</span><span class="p">(</span><span class="n">kotlin</span><span class="p">(</span><span class="s">&quot;test&quot;</span><span class="p">))</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">testImplementation</span><span class="p">(</span><span class="s">&quot;io.kotest:kotest-runner-junit5-jvm:5.5.4&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">testImplementation</span><span class="p">(</span><span class="s">&quot;io.kotest:kotest-runner-junit5:5.5.4&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">testImplementation</span><span class="p">(</span><span class="s">&quot;io.kotest:kotest-assertions-core:5.5.4&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">testImplementation</span><span class="p">(</span><span class="s">&quot;io.kotest:kotest-property:5.5.4&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
-</code></pre></div>
-ten en cuenta que estamos estableciendo la version <code>5.5.4</code>, <a href="https://search.maven.org/artifact/io.kotest/kotest-runner-junit5-jvm">aqui</a> puedes consultar cual es la última versión.</p>
-<h3 id="3-estilos-de-prueba">3. Estilos de prueba<a class="headerlink" href="#3-estilos-de-prueba" title="Permanent link">&para;</a></h3>
-<p>Kotest proporciona muchos estilos de prueba diferentes. Veamos ejemplos de algunos los estilos más usados.</p>
-<h4 id="31-especificaciones-de-comportamiento">3.1. Especificaciones de comportamiento<a class="headerlink" href="#31-especificaciones-de-comportamiento" title="Permanent link">&para;</a></h4>
-<p>Podemos escribir pruebas similares a <a href="https://es.wikipedia.org/wiki/Desarrollo_guiado_por_comportamiento">BDD</a>, en este estilo se usan las palabras clave <code>given</code> (Bajo unas condiciones) , <code>when</code> (cuando se cumpla tal cosa) y <code>then</code> (entonces sucederá):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>// En una situación en el que tengo suficiente balance,
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>// cuando se realice un pago
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>// el pago se debe realizar sin problemas. 
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>class CardPaymentTests : BehaviorSpec({
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    given(&quot;I have sufficient balance&quot;) {
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        `when`(&quot;I make a card payment&quot;) {
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>            then(&quot;The card payment should be successful&quot;) {
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>                // test code
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            }
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        }
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    }
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>})
-</code></pre></div>
-<h4 id="32-especificaciones-mediante-should">3.2. Especificaciones mediante <code>should</code><a class="headerlink" href="#32-especificaciones-mediante-should" title="Permanent link">&para;</a></h4>
-<p>Podemos crear pruebas usando la palabra clave <code>should</code> (Debería cumplirse) :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// Debería convertir el dinero de entrada a la moneda destino.</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">class</span><span class="w"> </span><span class="nc">MoneyTests</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ShouldSpec</span><span class="p">({</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">should</span><span class="p">(</span><span class="s">&quot;Convert input money to the target currency&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="c1">// test code</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">})</span>
-</code></pre></div>
-<p>Podemos agrupar pruebas relacionadas en un bloque de <code>context</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">PaymentTests</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ShouldSpec</span><span class="p">({</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">context</span><span class="p">(</span><span class="s">&quot;CardPayments&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="n">should</span><span class="p">(</span><span class="s">&quot;Make a card payment&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">            </span><span class="c1">// test code</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="n">context</span><span class="p">(</span><span class="s">&quot;BankTransfers&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="n">should</span><span class="p">(</span><span class="s">&quot;Make an external bank transfer&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">            </span><span class="c1">// test code</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="p">})</span>
-</code></pre></div>
-<h4 id="33-especificaciones-de-caracteristicas-features">3.3. Especificaciones de características (<code>features</code>)<a class="headerlink" href="#33-especificaciones-de-caracteristicas-features" title="Permanent link">&para;</a></h4>
-<p>A continuación, veamos cómo se pueden escribir pruebas basadas en <a href="https://www.baeldung.com/cucumber-rest-api-testing">Cucumber</a>, una herramienta de uso común para las pruebas de aceptación del usuario, basadas en las palabras clave  <code>feature</code> (funcionalidad) y <code>scenario</code> (escenario):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">HomePageTests</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">FeatureSpec</span><span class="p">({</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">feature</span><span class="p">(</span><span class="s">&quot;signup&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="n">scenario</span><span class="p">(</span><span class="s">&quot;should allow user to signup with email&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">            </span><span class="c1">// test code</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="n">feature</span><span class="p">(</span><span class="s">&quot;signin&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">        </span><span class="n">scenario</span><span class="p">(</span><span class="s">&quot;should allow user with valid credentials to login&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">            </span><span class="c1">// test code</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">})</span>
-</code></pre></div>
-<h4 id="34-especificaciones-mediante-mediante-descripciones-describe">3.4. Especificaciones mediante mediante descripciones (<code>describe</code>)<a class="headerlink" href="#34-especificaciones-mediante-mediante-descripciones-describe" title="Permanent link">&para;</a></h4>
-<p>Usando <code>describe</code>, podemos escribir pruebas en un estilo muy popular entre los desarrolladores de Javascript y Ruby, de hecho será el que usaremos en nuestros ejemplos:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">PaymentTests</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">DescribeSpec</span><span class="p">({</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">describe</span><span class="p">(</span><span class="s">&quot;CardPayments&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="nb">it</span><span class="p">(</span><span class="s">&quot;Should make a card payment&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">            </span><span class="c1">// test code</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="n">describe</span><span class="p">(</span><span class="s">&quot;BankTransfers&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="nb">it</span><span class="p">(</span><span class="s">&quot;Should make an external bank transfer&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">            </span><span class="c1">// test code</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="p">})</span>
-</code></pre></div>
-<h3 id="4-assertions">4. Assertions<a class="headerlink" href="#4-assertions" title="Permanent link">&para;</a></h3>
-<p>Anteriormente hemos visto que Kotest tiene bibliotecas destinadas a aserciones, las afirmaciones que tienen que cumplirse tras realizar el test. Estas bibliotecas nos brindan varias funciones de <em>comparación</em> para escribir las afirmaciones que deben cumplirse en nuestras pruebas. Hay dos grandes categorías de bibliotecas de aserciones:</p>
-<ul>
-<li>Core matchers</li>
-<li>External matchers</li>
-</ul>
-<p>Veamos algunos ejemplos de comparadores que permite la <em><a href="https://search.maven.org/search?q=g:io.kotest%20AND%20a:kotest-assertions-core">biblioteca kotest-assertions-core</a></em>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// verify actual object is equal to expected object</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">result</span><span class="p">.</span><span class="na">shouldBe</span><span class="p">(</span><span class="n">expected</span><span class="p">)</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1">// verify actual expression is true</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">result</span><span class="p">.</span><span class="na">shouldBeTrue</span><span class="p">()</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1">// verify actual object is of given type</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">result</span><span class="p">.</span><span class="na">shouldBeTypeOf</span><span class="o">&lt;</span><span class="kt">Double</span><span class="o">&gt;</span><span class="p">()</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="c1">// verify actual map contains the given key</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="n">result</span><span class="p">.</span><span class="na">shouldContainKey</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="c1">// verify actual map contains the given values</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="n">result</span><span class="p">.</span><span class="na">shouldContainValues</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="c1">// verify actual string contains the given substring</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="n">result</span><span class="p">.</span><span class="na">shouldContain</span><span class="p">(</span><span class="s">&quot;substring&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>
-<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="c1">// verify actual string is equal to the given string ignoring case</span>
-<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="n">result</span><span class="p">.</span><span class="na">shouldBeEqualIgnoringCase</span><span class="p">(</span><span class="n">otherString</span><span class="p">)</span>
-<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>
-<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="c1">// verify actual file should have the given size</span>
-<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="n">result</span><span class="p">.</span><span class="na">shouldHaveFileSize</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
-<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>
-<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="c1">// verify actual date is after the given date</span>
-<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="n">result</span><span class="p">.</span><span class="na">shouldBeBefore</span><span class="p">(</span><span class="n">otherDate</span><span class="p">)</span><span class="n">Copiar</span>
-</code></pre></div>
-<p>Además del módulo principal de aserciones, existen otros módulos que proporcionan comparadores para una amplia variedad de escenarios, por ejemplo, comparadores JSON, coincidencias JDBC, etc, y por supuesto tienen muchas más opciones que deberíamos revisar buscando aquellas que necesitamos para nuestro test.</p>
-<h3 id="5-pruebas-de-excepciones">5. Pruebas de excepciones<a class="headerlink" href="#5-pruebas-de-excepciones" title="Permanent link">&para;</a></h3>
-<p>Por otro lado, probar excepciones con Kotest es muy sencillo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">exception</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shouldThrow</span><span class="o">&lt;</span><span class="n">ValidationException</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">   </span><span class="c1">// test code</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">}</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">exception</span><span class="p">.</span><span class="na">message</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">startWith</span><span class="p">(</span><span class="s">&quot;Invalid input&quot;</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="6-ganchos-de-ciclo-de-vida">6. Ganchos de ciclo de vida<a class="headerlink" href="#6-ganchos-de-ciclo-de-vida" title="Permanent link">&para;</a></h3>
-<p>Podemos usar ganchos de ciclo de vida para configurar o desmontar el escenario necesario de objetos antes o después de las pruebas. Estos ganchos son muy similares a los métodos de instalación y desmontaje del framework Junit. Veamos un ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">TransactionStatementSpec</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ShouldSpec</span><span class="p">({</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="n">beforeTest</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">      </span><span class="c1">// add transactions. Se ejecutará antes del test</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="n">afterTest</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="n">test</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">      </span><span class="c1">// delete transactions. Se ejecutará después del test</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="p">})</span>
-</code></pre></div>
-<h3 id="7-pruebas-basadas-en-datos">7. Pruebas basadas en datos<a class="headerlink" href="#7-pruebas-basadas-en-datos" title="Permanent link">&para;</a></h3>
-<p>Las pruebas basadas en datos en Kotest son similares a las <a href="https://www.baeldung.com/parameterized-tests-junit-5">pruebas parametrizadas en Junit5</a>. Podemos proporcionar varias entradas a un solo caso de prueba para verificar diferentes ejemplos en lugar de escribir varias pruebas con solo datos de entrada diferentes. Podemos usar la función <code>useData</code> de la <a href="https://search.maven.org/search?q=g:io.kotest%20AND%20a:kotest-framework-datatest-jvm">biblioteca kotest-framework-datatest-jvm</a> para proporcionar datos a las pruebas.</p>
-<p>Veamos un ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">TaxTestData</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">income</span><span class="p">:</span><span class="w"> </span><span class="kt">Long</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">taxClass</span><span class="p">:</span><span class="w"> </span><span class="n">TaxClass</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">expectedTaxAmount</span><span class="p">:</span><span class="w"> </span><span class="kt">Long</span><span class="p">)</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kd">class</span><span class="w"> </span><span class="nc">IncomeTaxTests</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">FunSpec</span><span class="p">({</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="n">withData</span><span class="p">(</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">      </span><span class="n">TaxTestData</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span><span class="w"> </span><span class="n">ONE</span><span class="p">,</span><span class="w"> </span><span class="m">300</span><span class="p">),</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">      </span><span class="n">TaxTestData</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span><span class="w"> </span><span class="n">TWO</span><span class="p">,</span><span class="w"> </span><span class="m">350</span><span class="p">),</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">      </span><span class="n">TaxTestData</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span><span class="w"> </span><span class="n">THREE</span><span class="p">,</span><span class="w"> </span><span class="m">200</span><span class="p">)</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="n">income</span><span class="p">,</span><span class="w"> </span><span class="n">taxClass</span><span class="p">,</span><span class="w"> </span><span class="n">expectedTaxAmount</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">        </span><span class="n">calculateTax</span><span class="p">(</span><span class="n">income</span><span class="p">,</span><span class="w"> </span><span class="n">taxClass</span><span class="p">)</span><span class="w"> </span><span class="n">shouldBe</span><span class="w"> </span><span class="n">expectedTaxAmount</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="p">})</span>
-</code></pre></div>
-<h3 id="8-pruebas-no-deterministas">8. Pruebas no deterministas<a class="headerlink" href="#8-pruebas-no-deterministas" title="Permanent link">&para;</a></h3>
-<p>A veces, necesitamos probar funciones que no devuelven resultados sincrónicamente. Desafortunadamente, es complicado probar tales funciones, ya que tenemos que escribir código especial para esperar los resultados utilizando técnicas como funciones callback o dormir el hilo.</p>
-<p>Kotest proporciona algunas funciones útiles que podemos usar para escribir este tipo de pruebas no deterministas de forma declarativa.</p>
-<p>Veamos un ejemplo de la función <code>eventually</code> :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">TransactionTests</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ShouldSpec</span><span class="p">({</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">transactionRepo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TransactionRepo</span><span class="p">()</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="n">should</span><span class="p">(</span><span class="s">&quot;Should make transaction complete&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">        </span><span class="n">eventually</span><span class="p">({</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">            </span><span class="n">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5000</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">            </span><span class="n">interval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FixedInterval</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">        </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">            </span><span class="n">transactionRepo</span><span class="p">.</span><span class="na">getStatus</span><span class="p">(</span><span class="m">120</span><span class="p">)</span><span class="w"> </span><span class="n">shouldBe</span><span class="w"> </span><span class="s">&quot;COMPLETE&quot;</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="p">})</span>
-</code></pre></div>
-<p>Aquí, nuestra prueba verificará el estado de la transacción <code>transactionRepo.getStatus</code> cada segundo, hasta llegar a 5 segundos.</p>
-<h3 id="9-mocking">9. Mocking<a class="headerlink" href="#9-mocking" title="Permanent link">&para;</a></h3>
-<p>Podemos integrar cualquier biblioteca de simulación como <a href="https://www.baeldung.com/kotlin/mockk">mockk</a> con Kotest, biblioteca que veremos mas adelante. Kotest no proporciona su propia biblioteca de simulación:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">ExchangeServiceTest</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">FunSpec</span><span class="p">({</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">exchangeRateProvider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mockk</span><span class="o">&lt;</span><span class="n">ExchangeRateProvider</span><span class="o">&gt;</span><span class="p">()</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ExchangeService</span><span class="p">(</span><span class="n">exchangeRateProvider</span><span class="p">)</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="n">test</span><span class="p">(</span><span class="s">&quot;Exchanges money using rate from exchange rate service&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">        </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">exchangeRateProvider</span><span class="p">.</span><span class="na">rate</span><span class="p">(</span><span class="s">&quot;USDEUR&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="m">0.9</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">        </span><span class="n">service</span><span class="p">.</span><span class="na">exchange</span><span class="p">(</span><span class="n">Money</span><span class="p">(</span><span class="m">1200</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;USD&quot;</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;EUR&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">shouldBe</span><span class="w"> </span><span class="m">1080</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="p">})</span>
-</code></pre></div>
-<h3 id="10-cobertura-de-pruebas">10. Cobertura de pruebas<a class="headerlink" href="#10-cobertura-de-pruebas" title="Permanent link">&para;</a></h3>
-<p>Podemos integrar <a href="https://www.baeldung.com/jacoco">Jacoco</a> con Kotest para medir la cobertura de la prueba. Para integrar, debemos asegurarnos de que los informes de cobertura de prueba se generen después de ejecutar las pruebas unitarias:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">tasks</span><span class="p">.</span><span class="na">test</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">finalizedBy</span><span class="p">(</span><span class="n">tasks</span><span class="p">.</span><span class="na">jacocoTestReport</span><span class="p">)</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">}</span>
-</code></pre></div>
-<p>Podemos encontrar el informe <abbr title="Hyper Text Markup Language">HTML</abbr> de cobertura de prueba dentro del <em>directorio <code>$buildDir/reports/jacoco/test</code></em> .</p>
-<h3 id="11-agrupacion-de-pruebas-con-etiquetas">11. Agrupación de pruebas con etiquetas<a class="headerlink" href="#11-agrupacion-de-pruebas-con-etiquetas" title="Permanent link">&para;</a></h3>
-<p>A veces, queremos ejecutar solo ciertas pruebas en un entorno específico. Por ejemplo, es posible que deseemos evitar ejecutar algunas pruebas lentas como parte de la verificación de una pull request git. Para hacer eso, primero debemos etiquetar nuestras pruebas:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nd">@Tags</span><span class="p">(</span><span class="n">NamedTag</span><span class="p">(</span><span class="s">&quot;SlowTest&quot;</span><span class="p">))</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kd">class</span><span class="w"> </span><span class="nc">SlowTests</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ShouldSpec</span><span class="p">({})</span>
-</code></pre></div>
-<h3 id="12-conclusion">12. Conclusión<a class="headerlink" href="#12-conclusion" title="Permanent link">&para;</a></h3>
-<p>Se han visto varias funcionalidades básicas proporcionadas por el marco Kotest. y los ejemplos de código se pueden encontrar <a href="https://github.com/Baeldung/kotlin-tutorials/tree/master/kotlin-testing">en GitHub</a>.</p>
+<h2 id="pruebas">Pruebas<a class="headerlink" href="#pruebas" title="Permanent link">&para;</a></h2>
 <h2 id="recursos">Recursos<a class="headerlink" href="#recursos" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://surprograma.github.io/libro-disenio-oop/docs/pruebas-automatizadas/elaborar-casos-prueba/">¿Cómo elaborar casos de prueba?</a></li>

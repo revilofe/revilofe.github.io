@@ -456,27 +456,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://revilofe.github.io/section3/u03/practica/EDES-U3.-Practica002/</loc>
-         <lastmod>2023-03-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://revilofe.github.io/section3/u03/practica/EDES-U3.-Practica003/</loc>
-         <lastmod>2023-03-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://revilofe.github.io/section3/u03/practica/EDES-U3.-Practica004/</loc>
-         <lastmod>2023-03-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://revilofe.github.io/section3/u03/practica/EDES-U3.-Practica005/</loc>
-         <lastmod>2023-03-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://revilofe.github.io/section3/u03/teoria/EDES-U3.1.-Git_Github/</loc>
+         <loc>https://revilofe.github.io/section3/u03/teoria/EDES-U3.1.-Pruebas/</loc>
          <lastmod>2023-03-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -486,12 +466,67 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://revilofe.github.io/section3/u03/teoria/EDES-U3.3.-Kotest/</loc>
+         <loc>https://revilofe.github.io/section3/u03/teoria/EDES-U3.2.1.-Kotest/</loc>
          <lastmod>2023-03-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://revilofe.github.io/section3/u03/teoria/EDES-U3.4.-Mockk/</loc>
+         <loc>https://revilofe.github.io/section3/u03/teoria/EDES-U3.2.2.-Mockk/</loc>
+         <lastmod>2023-03-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u03/teoria/EDES-U3.3.-Depuracion/</loc>
+         <lastmod>2023-03-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u04/</loc>
+         <lastmod>2023-03-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u04/practica/EDES-U4.-Practica001/</loc>
+         <lastmod>2023-03-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u04/practica/EDES-U4.-Practica002/</loc>
+         <lastmod>2023-03-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u04/practica/EDES-U4.-Practica003/</loc>
+         <lastmod>2023-03-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u04/practica/EDES-U4.-Practica004/</loc>
+         <lastmod>2023-03-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u04/practica/EDES-U4.-Practica005/</loc>
+         <lastmod>2023-03-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u04/teoria/EDES-U4.1.-Git_Github/</loc>
+         <lastmod>2023-03-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u04/teoria/EDES-U4.2.-Refactorizacion/</loc>
+         <lastmod>2023-03-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u04/teoria/EDES-U4.3.-AnalizadorCodigo/</loc>
+         <lastmod>2023-03-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u04/teoria/EDES-U4.4.-Documentacion/</loc>
          <lastmod>2023-03-02</lastmod>
          <changefreq>daily</changefreq>
     </url>

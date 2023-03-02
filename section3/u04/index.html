@@ -6,33 +6,33 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Git/Github">
+        <meta name="description" content="Entornos de desarrollo integrado">
       
       
         <meta name="author" content="Eduardo Fdez">
       
       
-        <link rel="canonical" href="https://revilofe.github.io/section3/u03/practica/EDES-U3.-Practica003/">
+        <link rel="canonical" href="https://revilofe.github.io/section3/u04/">
       
       
-        <link rel="prev" href="../EDES-U3.-Practica002/">
+        <link rel="prev" href="../u03/teoria/EDES-U3.3.-Depuracion/">
       
       
-        <link rel="next" href="../EDES-U3.-Practica004/">
+        <link rel="next" href="teoria/EDES-U4.1.-Git_Github/">
       
-      <link rel="icon" href="../../../../assets/favicon-96x96.png">
+      <link rel="icon" href="../../assets/favicon-96x96.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.0">
     
     
       
-        <title>UD 3 - P3: Git/Github Rebase I - R Z O</title>
+        <title>UD 3 - Herramientas Git/Github - R Z O</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.402914a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.402914a4.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -59,7 +59,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#relacion-313-integracion-de-ramas-rebase-i" class="md-skip">
+        <a href="#normativa-que-respalda-la-unidad" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -120,9 +120,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="../../../.." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
+    <a href="../.." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
       
-  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
+  <img src="../../assets/ms-icon-144x144.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UD 3 - P3: Git/Github Rebase I
+              UD 3 - Herramientas Git/Github
             
           </span>
         </div>
@@ -233,7 +233,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../.." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       Principal
     </a>
   </li>
@@ -248,7 +248,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../section1/" class="md-tabs__link">
+      <a href="../../section1/" class="md-tabs__link">
         Programación
       </a>
     </li>
@@ -266,7 +266,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         Entornos de desarrollo
       </a>
     </li>
@@ -282,7 +282,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../section2/" class="md-tabs__link">
+      <a href="../../section2/" class="md-tabs__link">
         Incidentes de seguridad
       </a>
     </li>
@@ -295,7 +295,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../../blog/" class="md-tabs__link">
+    <a href="../../blog/" class="md-tabs__link">
       Blog
     </a>
   </li>
@@ -307,7 +307,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../../tags/" class="md-tabs__link">
+    <a href="../../tags/" class="md-tabs__link">
       Tags
     </a>
   </li>
@@ -319,7 +319,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../../about/" class="md-tabs__link">
+    <a href="../../about/" class="md-tabs__link">
       Acerca de
     </a>
   </li>
@@ -352,9 +352,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
+    <a href="../.." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
       
-  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
+  <img src="../../assets/ms-icon-144x144.png" alt="logo">
 
     </a>
     R Z O
@@ -382,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Principal
       </a>
     </li>
@@ -431,7 +431,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../section1/">Programación</a>
+          <a href="../../section1/">Programación</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -486,7 +486,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../section1/u01/">U1: Introducción al desarrollo de software</a>
+          <a href="../../section1/u01/">U1: Introducción al desarrollo de software</a>
           
             <label for="__nav_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -509,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
+      <a href="../../section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
         1.1.-Un programa
       </a>
     </li>
@@ -523,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u01/practica/PROG-U1.-Practica001/" class="md-nav__link">
+      <a href="../../section1/u01/practica/PROG-U1.-Practica001/" class="md-nav__link">
         * Práctica 1.1: Instala python
       </a>
     </li>
@@ -537,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
+      <a href="../../section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
         1.2.-Practica con un lenguaje
       </a>
     </li>
@@ -551,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u01/teoria/PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
+      <a href="../../section1/u01/teoria/PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
         1.3.-Tipos de datos
       </a>
     </li>
@@ -565,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u01/practica/PROG-U1.-Practica002/" class="md-nav__link">
+      <a href="../../section1/u01/practica/PROG-U1.-Practica002/" class="md-nav__link">
         * Práctica 1.2: Primeros programas
       </a>
     </li>
@@ -628,7 +628,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../section1/u02/">U2: Sentencias condicionales y repetitivas</a>
+          <a href="../../section1/u02/">U2: Sentencias condicionales y repetitivas</a>
           
             <label for="__nav_2_3">
               <span class="md-nav__icon md-icon"></span>
@@ -651,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
+      <a href="../../section1/u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
         2.1.-Condicionales
       </a>
     </li>
@@ -665,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
+      <a href="../../section1/u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
         * Práctica 2.1: Sentencias condicionales
       </a>
     </li>
@@ -679,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
+      <a href="../../section1/u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
         2.2.-Iterativas y saltos
       </a>
     </li>
@@ -693,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
+      <a href="../../section1/u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
         * Práctica 2.2: Sentencias iterativas y saltos
       </a>
     </li>
@@ -707,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
+      <a href="../../section1/u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
         2.3.-Captura de excepciones
       </a>
     </li>
@@ -721,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
+      <a href="../../section1/u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
         * Práctica 2.3: Capturas de excepciones
       </a>
     </li>
@@ -735,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
+      <a href="../../section1/u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
         2.4.-Depurar programas
       </a>
     </li>
@@ -749,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
+      <a href="../../section1/u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
         * Práctica 2.4: Depurar programas
       </a>
     </li>
@@ -763,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
+      <a href="../../section1/u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
         2.5.-Documentar el código
       </a>
     </li>
@@ -840,7 +840,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../section1/u03/">U3: Estructuras de datos</a>
+          <a href="../../section1/u03/">U3: Estructuras de datos</a>
           
             <label for="__nav_2_4">
               <span class="md-nav__icon md-icon"></span>
@@ -863,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u03/teoria/PROG-U3.0.-Cadenas/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.0.-Cadenas/" class="md-nav__link">
         3.0.-Est.Datos: Cadenas
       </a>
     </li>
@@ -877,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u03/practica/PROG-U3.-Practica000/" class="md-nav__link">
+      <a href="../../section1/u03/practica/PROG-U3.-Practica000/" class="md-nav__link">
         * Práctica 3.0: Cadenas
       </a>
     </li>
@@ -891,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u03/teoria/PROG-U3.1.-Listas/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.1.-Listas/" class="md-nav__link">
         3.1.-Est.Datos: Listas
       </a>
     </li>
@@ -905,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u03/teoria/PROG-U3.2.-Tuplas/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.2.-Tuplas/" class="md-nav__link">
         3.2.-Est.Datos: Tuplas
       </a>
     </li>
@@ -919,7 +919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u03/practica/PROG-U3.-Practica001/" class="md-nav__link">
+      <a href="../../section1/u03/practica/PROG-U3.-Practica001/" class="md-nav__link">
         * Práctica 3.1: Listas y tuplas
       </a>
     </li>
@@ -933,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u03/teoria/PROG-U3.3.-Diccionarios/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.3.-Diccionarios/" class="md-nav__link">
         3.3.-Est.Datos: Diccionarios
       </a>
     </li>
@@ -947,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u03/practica/PROG-U3.-Practica002/" class="md-nav__link">
+      <a href="../../section1/u03/practica/PROG-U3.-Practica002/" class="md-nav__link">
         * Práctica 3.2: Diccionarios
       </a>
     </li>
@@ -961,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u03/teoria/PROG-U3.4.-Conjuntos/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.4.-Conjuntos/" class="md-nav__link">
         3.4.-Est.Datos: Conjuntos
       </a>
     </li>
@@ -975,7 +975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u03/practica/PROG-U3.-Practica003/" class="md-nav__link">
+      <a href="../../section1/u03/practica/PROG-U3.-Practica003/" class="md-nav__link">
         * Práctica 3.3: Conjuntos
       </a>
     </li>
@@ -989,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u03/teoria/PROG-U3.5.-Funciones/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.5.-Funciones/" class="md-nav__link">
         3.5.-Funciones
       </a>
     </li>
@@ -1040,7 +1040,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../section1/u04/">U4: Kotlin: POO y estructuras de datos</a>
+          <a href="../../section1/u04/">U4: Kotlin: POO y estructuras de datos</a>
           
             <label for="__nav_2_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1063,7 +1063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u04/teoria/PROG-U4.1.-kotlin/" class="md-nav__link">
+      <a href="../../section1/u04/teoria/PROG-U4.1.-kotlin/" class="md-nav__link">
         4.1.-Kotlin
       </a>
     </li>
@@ -1077,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u04/teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
+      <a href="../../section1/u04/teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
         4.2.-Kotlin: Colecciones
       </a>
     </li>
@@ -1091,7 +1091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u04/teoria/PROG-U4.3.-kotlinPOO/" class="md-nav__link">
+      <a href="../../section1/u04/teoria/PROG-U4.3.-kotlinPOO/" class="md-nav__link">
         4.3.-Kotlin: POO
       </a>
     </li>
@@ -1105,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u04/teoria/PROG-U4.4.-kotlinResumen/" class="md-nav__link">
+      <a href="../../section1/u04/teoria/PROG-U4.4.-kotlinResumen/" class="md-nav__link">
         4.4.-Kotlin: Resumen
       </a>
     </li>
@@ -1148,7 +1148,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../section1/u05/">U5: Kotlin: PPO y creación de e.d.</a>
+          <a href="../../section1/u05/">U5: Kotlin: PPO y creación de e.d.</a>
           
         </div>
       
@@ -1196,7 +1196,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../section1/u06/">U6: Kotlin: Creación de programas con POO</a>
+          <a href="../../section1/u06/">U6: Kotlin: Creación de programas con POO</a>
           
         </div>
       
@@ -1254,7 +1254,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../section1/u07/">U7: Kotlin: Entrada/Salida y GUI</a>
+          <a href="../../section1/u07/">U7: Kotlin: Entrada/Salida y GUI</a>
           
             <label for="__nav_2_8">
               <span class="md-nav__icon md-icon"></span>
@@ -1277,7 +1277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
+      <a href="../../section1/u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
         7.1.-Sistema archivos:E/S
       </a>
     </li>
@@ -1291,7 +1291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
+      <a href="../../section1/u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
         7.2.-Entrada/Salida estandar
       </a>
     </li>
@@ -1305,7 +1305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
+      <a href="../../section1/u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
         7.3.-Gestión Archivos
       </a>
     </li>
@@ -1319,7 +1319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
+      <a href="../../section1/u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
         7.4.-Lectura/Escritura Archivos
       </a>
     </li>
@@ -1333,7 +1333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section1/u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
+      <a href="../../section1/u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
         7.5.-GUI
       </a>
     </li>
@@ -1383,12 +1383,14 @@
         
           
         
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../">Entornos de desarrollo</a>
+          <a href="../">Entornos de desarrollo</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1449,7 +1451,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../u01/">U1: Introducción al desarrollo de software</a>
+          <a href="../u01/">U1: Introducción al desarrollo de software</a>
           
             <label for="__nav_3_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1472,7 +1474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u01/teoria/EDES-U1.1.-Software-PC/" class="md-nav__link">
+      <a href="../u01/teoria/EDES-U1.1.-Software-PC/" class="md-nav__link">
         1.1.-Software y PC
       </a>
     </li>
@@ -1486,7 +1488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u01/teoria/EDES-U1.2.-Lenguajes/" class="md-nav__link">
+      <a href="../u01/teoria/EDES-U1.2.-Lenguajes/" class="md-nav__link">
         1.2.-Lenguajes de programación
       </a>
     </li>
@@ -1500,7 +1502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u01/teoria/EDES-U1.3.-FuncionalidadesHerramientas/" class="md-nav__link">
+      <a href="../u01/teoria/EDES-U1.3.-FuncionalidadesHerramientas/" class="md-nav__link">
         1.3.-Herramientas y funcionalidades
       </a>
     </li>
@@ -1514,7 +1516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u01/teoria/EDES-U1.4.-Traductores/" class="md-nav__link">
+      <a href="../u01/teoria/EDES-U1.4.-Traductores/" class="md-nav__link">
         1.4.-Traductores
       </a>
     </li>
@@ -1528,7 +1530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u01/teoria/EDES-U1.5.-FasesDesarrollo/" class="md-nav__link">
+      <a href="../u01/teoria/EDES-U1.5.-FasesDesarrollo/" class="md-nav__link">
         1.5.-Proceso de desarrollo
       </a>
     </li>
@@ -1542,7 +1544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u01/practica/EDES-U1.-Practica001/" class="md-nav__link">
+      <a href="../u01/practica/EDES-U1.-Practica001/" class="md-nav__link">
         Práctica 1.1: Lenguajes de programación
       </a>
     </li>
@@ -1556,7 +1558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u01/practica/EDES-U1.-Practica002/" class="md-nav__link">
+      <a href="../u01/practica/EDES-U1.-Practica002/" class="md-nav__link">
         Práctica 1.2: Herramientas para generar programa
       </a>
     </li>
@@ -1570,7 +1572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u01/practica/EDES-U1.-Practica003/" class="md-nav__link">
+      <a href="../u01/practica/EDES-U1.-Practica003/" class="md-nav__link">
         Práctica 1.3: Scrum
       </a>
     </li>
@@ -1617,7 +1619,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../u02/">U2: Herramientas de desarrollo</a>
+          <a href="../u02/">U2: Herramientas de desarrollo</a>
           
             <label for="__nav_3_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1640,7 +1642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u02/teoria/EDES-U2.1.-Herramientas/" class="md-nav__link">
+      <a href="../u02/teoria/EDES-U2.1.-Herramientas/" class="md-nav__link">
         2.1.-Herramientas
       </a>
     </li>
@@ -1654,8 +1656,140 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u02/practica/EDES-U2.-Practica001/" class="md-nav__link">
+      <a href="../u02/practica/EDES-U2.-Practica001/" class="md-nav__link">
         Práctica 2.1: Herramientas de desarrollo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../u03/">U3: Pruebas y Depuración</a>
+          
+            <label for="__nav_3_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          U3: Pruebas y Depuración
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u03/teoria/EDES-U3.1.-Pruebas/" class="md-nav__link">
+        3.1.-Pruebas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u03/teoria/EDES-U3.2.-TestUnidadYTDD/" class="md-nav__link">
+        3.2.-Test unidad y TDD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u03/teoria/EDES-U3.2.1.-Kotest/" class="md-nav__link">
+          3.2.1.-Kotest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u03/teoria/EDES-U3.2.2.-Mockk/" class="md-nav__link">
+          3.2.2.-MockK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u03/teoria/EDES-U3.3.-Depuracion/" class="md-nav__link">
+        3.3.-Depuración
       </a>
     </li>
   
@@ -1684,7 +1818,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
       
       
         
@@ -1714,19 +1848,19 @@
       
         
         
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../">U3: GIT</a>
+        <div class="md-nav__link md-nav__link--index md-nav__link--active">
+          <a href="./">U4: SCV, refactorización y documentación</a>
           
-            <label for="__nav_3_4">
+            <label for="__nav_3_5">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_3_4">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_5">
           <span class="md-nav__icon md-icon"></span>
-          U3: GIT
+          U4: SCV, refactorización y documentación
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1738,8 +1872,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../u01/teoria/EDES-U3.1.-Git_Github.md" class="md-nav__link">
-        3.1.-Software y PC
+      <a href="teoria/EDES-U4.1.-Git_Github/" class="md-nav__link">
+        4.1.-Sistemas de control de versiones
       </a>
     </li>
   
@@ -1752,8 +1886,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teoria/EDES-U3.2.-TestUnidadYTDD/" class="md-nav__link">
-        3.2.-Test unidad y TDD
+      <a href="teoria/EDES-U4.2.-Refactorizacion/" class="md-nav__link">
+        4.2.-Refactorización
       </a>
     </li>
   
@@ -1766,8 +1900,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teoria/EDES-U3.3.-Kotest/" class="md-nav__link">
-        3.3.-Kotest
+      <a href="teoria/EDES-U4.3.-AnalizadorCodigo/" class="md-nav__link">
+        4.3.-Analizador de código
       </a>
     </li>
   
@@ -1780,8 +1914,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teoria/EDES-U3.4.-Mockk/" class="md-nav__link">
-        3.4.-MockK
+      <a href="teoria/EDES-U4.4.-Documentacion/" class="md-nav__link">
+        4.3.-Documentació
       </a>
     </li>
   
@@ -1794,8 +1928,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../EDES-U3.-Practica001/" class="md-nav__link">
-        Práctica 3.1: Git/Github básico
+      <a href="practica/EDES-U4.-Practica001/" class="md-nav__link">
+        Práctica 4.1: Git/Github básico
       </a>
     </li>
   
@@ -1808,171 +1942,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../EDES-U3.-Practica002/" class="md-nav__link">
-        Práctica 3.2: Git/Github merge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Práctica 3.3: Git/Github rebase I
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Práctica 3.3: Git/Github rebase I
-      </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#relacion-313-integracion-de-ramas-rebase-i" class="md-nav__link">
-    Relación 3.1.3: Integración de ramas - Rebase I
-  </a>
-  
-    <nav class="md-nav" aria-label="Relación 3.1.3: Integración de ramas - Rebase I">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#objetivos" class="md-nav__link">
-    Objetivos
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#descripcion-de-la-practica" class="md-nav__link">
-    Descripción de la práctica
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tareas-a-realizar" class="md-nav__link">
-    Tareas a realizar
-  </a>
-  
-    <nav class="md-nav" aria-label="Tareas a realizar">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#paso-1-clonar-el-repositorio-my-calculator" class="md-nav__link">
-    Paso 1: Clonar el repositorio "my calculator"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#paso-2-nueva-rama" class="md-nav__link">
-    Paso 2: Nueva rama
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#paso-3-funcionalidad-x2" class="md-nav__link">
-    Paso 3: Funcionalidad x^2
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#paso-4-funcionalidad-1x" class="md-nav__link">
-    Paso 4: Funcionalidad 1/x
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#paso-5-integrar-la-rama-ops-en-main" class="md-nav__link">
-    Paso 5: Integrar la rama "ops" en "main"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#paso-6-subir-todas-las-ramas-del-repositorio-local-a-un-nuevo-repositorio-en-github" class="md-nav__link">
-    Paso 6: Subir todas las ramas del repositorio local a un nuevo repositorio en GitHub.
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#entrega" class="md-nav__link">
-    Entrega
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#apoyo" class="md-nav__link">
-    Apoyo
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
-    Fuente
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../EDES-U3.-Practica004/" class="md-nav__link">
-        Práctica 3.4: Git/Github rebase II
+      <a href="practica/EDES-U4.-Practica002/" class="md-nav__link">
+        Práctica 4.2: Git/Github merge
       </a>
     </li>
   
@@ -1985,8 +1956,36 @@
   
   
     <li class="md-nav__item">
-      <a href="../EDES-U3.-Practica005/" class="md-nav__link">
-        Práctica 3.5: Git/Github Pull Request (PR)
+      <a href="practica/EDES-U4.-Practica003/" class="md-nav__link">
+        Práctica 4.3: Git/Github rebase I
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="practica/EDES-U4.-Practica004/" class="md-nav__link">
+        Práctica 4.4: Git/Github rebase II
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="practica/EDES-U4.-Practica005/" class="md-nav__link">
+        Práctica 4.5: Git/Github Pull Request (PR)
       </a>
     </li>
   
@@ -2052,7 +2051,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../section2/">Incidentes de seguridad</a>
+          <a href="../../section2/">Incidentes de seguridad</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -2075,7 +2074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section2/u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
+      <a href="../../section2/u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
         U0: Nos conocemos
       </a>
     </li>
@@ -2113,7 +2112,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../section2/u01/">U1: Principios generales y planes de seguridad</a>
+          <a href="../../section2/u01/">U1: Principios generales y planes de seguridad</a>
           
             <label for="__nav_4_3">
               <span class="md-nav__icon md-icon"></span>
@@ -2136,7 +2135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
+      <a href="../../section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
         1.1.-PrincipiosGenerales
       </a>
     </li>
@@ -2157,7 +2156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section2/page-2.md" class="md-nav__link">
+      <a href="../../section2/page-2.md" class="md-nav__link">
         Unidad 2
       </a>
     </li>
@@ -2171,7 +2170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section2/page-3.md" class="md-nav__link">
+      <a href="../../section2/page-3.md" class="md-nav__link">
         Unidad 3
       </a>
     </li>
@@ -2185,7 +2184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section2/page-4.md" class="md-nav__link">
+      <a href="../../section2/page-4.md" class="md-nav__link">
         Unidad 4
       </a>
     </li>
@@ -2199,7 +2198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section2/page-5.md" class="md-nav__link">
+      <a href="../../section2/page-5.md" class="md-nav__link">
         Unidad 5
       </a>
     </li>
@@ -2213,7 +2212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section2/page-6.md" class="md-nav__link">
+      <a href="../../section2/page-6.md" class="md-nav__link">
         Unidad 6
       </a>
     </li>
@@ -2227,7 +2226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section2/page-7.md" class="md-nav__link">
+      <a href="../../section2/page-7.md" class="md-nav__link">
         Unidad 7
       </a>
     </li>
@@ -2241,7 +2240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section2/page-8.md" class="md-nav__link">
+      <a href="../../section2/page-8.md" class="md-nav__link">
         Unidad 8
       </a>
     </li>
@@ -2263,7 +2262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/" class="md-nav__link">
+      <a href="../../blog/" class="md-nav__link">
         Blog
       </a>
     </li>
@@ -2278,7 +2277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tags/" class="md-nav__link">
+      <a href="../../tags/" class="md-nav__link">
         Tags
       </a>
     </li>
@@ -2293,7 +2292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         Acerca de
       </a>
     </li>
@@ -2327,73 +2326,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#relacion-313-integracion-de-ramas-rebase-i" class="md-nav__link">
-    Relación 3.1.3: Integración de ramas - Rebase I
+  <a href="#normativa-que-respalda-la-unidad" class="md-nav__link">
+    Normativa que respalda la unidad
   </a>
   
-    <nav class="md-nav" aria-label="Relación 3.1.3: Integración de ramas - Rebase I">
+    <nav class="md-nav" aria-label="Normativa que respalda la unidad">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#objetivos" class="md-nav__link">
-    Objetivos
+  <a href="#resultados-de-aprendizaje-a-trabajar" class="md-nav__link">
+    Resultados de aprendizaje a trabajar
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#descripcion-de-la-practica" class="md-nav__link">
-    Descripción de la práctica
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tareas-a-realizar" class="md-nav__link">
-    Tareas a realizar
-  </a>
-  
-    <nav class="md-nav" aria-label="Tareas a realizar">
+    <nav class="md-nav" aria-label="Resultados de aprendizaje a trabajar">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#paso-1-clonar-el-repositorio-my-calculator" class="md-nav__link">
-    Paso 1: Clonar el repositorio "my calculator"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#paso-2-nueva-rama" class="md-nav__link">
-    Paso 2: Nueva rama
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#paso-3-funcionalidad-x2" class="md-nav__link">
-    Paso 3: Funcionalidad x^2
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#paso-4-funcionalidad-1x" class="md-nav__link">
-    Paso 4: Funcionalidad 1/x
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#paso-5-integrar-la-rama-ops-en-main" class="md-nav__link">
-    Paso 5: Integrar la rama "ops" en "main"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#paso-6-subir-todas-las-ramas-del-repositorio-local-a-un-nuevo-repositorio-en-github" class="md-nav__link">
-    Paso 6: Subir todas las ramas del repositorio local a un nuevo repositorio en GitHub.
+  <a href="#criterios-de-evaluacion" class="md-nav__link">
+    Criterios de evaluación
   </a>
   
 </li>
@@ -2404,22 +2354,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#entrega" class="md-nav__link">
-    Entrega
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#apoyo" class="md-nav__link">
-    Apoyo
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
-    Fuente
+  <a href="#contenidos" class="md-nav__link">
+    Contenidos
   </a>
   
 </li>
@@ -2451,7 +2387,7 @@
         
       
       
-        <a href="../../../../tags/#software" class="md-tag md-tag-icon">Software</a>
+        <a href="../../tags/#edes" class="md-tag md-tag-icon">EDES</a>
       
     
       
@@ -2459,7 +2395,7 @@
         
       
       
-        <a href="../../../../tags/#git" class="md-tag md-tag-icon">git</a>
+        <a href="../../tags/#tools" class="md-tag md-tag-icon">Tools</a>
       
     
       
@@ -2467,7 +2403,7 @@
         
       
       
-        <a href="../../../../tags/#github" class="md-tag md-tag-icon">github</a>
+        <a href="../../tags/#case" class="md-tag md-tag-icon">CASE</a>
       
     
   </nav>
@@ -2478,154 +2414,36 @@
   
 
 
-  <h1>Práctica 3.3: Git/Github rebase I</h1>
+  <h1>UD 3 - Herramientas Git/Github</h1>
 
-<h2 id="relacion-313-integracion-de-ramas-rebase-i">Relación 3.1.3: Integración de ramas - Rebase I<a class="headerlink" href="#relacion-313-integracion-de-ramas-rebase-i" title="Permanent link">&para;</a></h2>
-<h3 id="objetivos">Objetivos<a class="headerlink" href="#objetivos" title="Permanent link">&para;</a></h3>
+<p>Cada unidad contendrá una serie de contenidos, resultados de aprendizaje (desglosados en criterios de evaluación), una práctica o prácticas para evaluar la adquisición de dichos criterios de evaluación y una prueba específica para evaluar la asimilación de contenido.</p>
+<h2 id="normativa-que-respalda-la-unidad">Normativa que respalda la unidad<a class="headerlink" href="#normativa-que-respalda-la-unidad" title="Permanent link">&para;</a></h2>
+<h3 id="resultados-de-aprendizaje-a-trabajar">Resultados de aprendizaje a trabajar<a class="headerlink" href="#resultados-de-aprendizaje-a-trabajar" title="Permanent link">&para;</a></h3>
+<p>En esta sección se relaciona la unidad con el resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta <a href="https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf">la normativa del curso</a>.</p>
+<p>RA 2. Evalúa entornos integrados de desarrollo analizando sus características para editar código fuente y generar ejecutables.</p>
+<h4 id="criterios-de-evaluacion">Criterios de evaluación<a class="headerlink" href="#criterios-de-evaluacion" title="Permanent link">&para;</a></h4>
+<p>En esta sección se relaciona la unidad con los criterios de evaluación concretos, del resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963">la normativa del curso</a>.</p>
 <ul>
-<li>Continuar practicando con repositorios locales y remotos, commits y ramas, pero integrando con rebase.</li>
+<li>a) Se han instalado entornos de desarrollo, propietarios y libres.</li>
+<li>b) Se han añadido y eliminado módulos en el entorno de desarrollo.</li>
+<li>c) Se ha personalizado y automatizado el entorno de desarrollo.</li>
+<li>d) Se ha configurado el sistema de actualización del entorno de desarrollo.</li>
+<li>e) Se han generado ejecutables a partir de código fuente de diferentes lenguajes en un mismo entorno de desarrollo.</li>
+<li>f) Se han generado ejecutables a partir de un mismo código fuente con varios entornos de desarrollo.</li>
+<li>g) Se han identificado las características comunes y específicas de diversos entornos de desarrollo.</li>
+<li>h) Se han identificado las funciones más usuales de las herramientas CASE para el desarrollo, prueba y documentación de código.</li>
 </ul>
-<h3 id="descripcion-de-la-practica">Descripción de la práctica<a class="headerlink" href="#descripcion-de-la-practica" title="Permanent link">&para;</a></h3>
-<p>Reutilizar la cuenta y el repositorio my_calculator en GitHub tal y como quedó en la entrega anterior. Crear una nueva rama que parta del primer commit de main "x^3 button" con el nombre "ops". Crear dos commits en la nueva rama "ops", el primero añade el botón x^2 y el segundo con el botón 1/x. Integrar la nueva rama ops en la rama main utilizando "git rebase ...".</p>
-<p>Para terminar se deben subir los nuevos commits integrados en la rama "main" a un nuevo repositorio en su cuenta de GitHub, denominado "my_calculator_2".</p>
-<p>El grafo de commits es más fácil de seguir cuando se integra con rebase, ya que todos los commits de la rama lateral pasan a main y todo queda en main. En cambio se pierde algo de la historia del proyecto, porque desaparecen las ramas laterales donde se suelen desarrollar las nuevas funcionalidades. Rebase tiene además la opción interactiva que permite rehacer la rama que se integra y sus commits. Por esta razón hay personas que prefieren el rebase frente al merge para integrar desarrollos.</p>
-<p>¡Cuidado! Las ramas que se hayan compartido con terceros no deben modificarse con rebase, porque si un tercero ha descargado la rama, deberá repetir el rebase en su repositorio local.</p>
-<h3 id="tareas-a-realizar">Tareas a realizar<a class="headerlink" href="#tareas-a-realizar" title="Permanent link">&para;</a></h3>
-<h4 id="paso-1-clonar-el-repositorio-my-calculator">Paso 1: Clonar el repositorio "my calculator"<a class="headerlink" href="#paso-1-clonar-el-repositorio-my-calculator" title="Permanent link">&para;</a></h4>
-<p>El primer paso será clonar en un repositorio local el repositorio "my_calculator" de GitHub en un directorio "my_calculator_2". Se debe haber terminado el desarrollo de la práctica anterior previamente a la realización de esta entrega.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ git clone git@github.com:&lt;mi_usuario_de_github&gt;/my_calculator   my_calculator_2 
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$ cd my_calculator_2
-</code></pre></div>
-<h4 id="paso-2-nueva-rama">Paso 2: Nueva rama<a class="headerlink" href="#paso-2-nueva-rama" title="Permanent link">&para;</a></h4>
-<p>El siguiente paso será crear una rama de nombre "ops" que comience después del primer commit (con mensaje "x^3 button") de la rama "main" y restaurarla en el directorio de trabajo, para poder trabajar sobre ella. Es necesario consultar el id del commit "x^3 button" para poder crear la rama a partir del mismo</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ git log --oneline # Lista los commits existentes incluyendo su id
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$ git checkout -b ops &lt;id_de_commit&gt; # Crea una nueva rama llamada &quot;ops&quot; a partir del commit indicado
-</code></pre></div>
-<h4 id="paso-3-funcionalidad-x2">Paso 3: Funcionalidad x^2<a class="headerlink" href="#paso-3-funcionalidad-x2" title="Permanent link">&para;</a></h4>
-<p>Crear un commit en la rama "ops", que añada a la calculadora del fichero index.html el botón x^2 que eleve un número al cuadrado.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Calculator<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Calculadora de ……su nombre y apellidos……<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        Number:
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;n1&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>            <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;square()&quot;</span><span class="p">&gt;</span> x^2 <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>            <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;cube()&quot;</span><span class="p">&gt;</span> x^3 <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">            </span><span class="kd">function</span><span class="w"> </span><span class="nx">cube</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">                </span><span class="kd">var</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;n1&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">                </span><span class="nx">num</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="nx">num</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">            </span><span class="kd">function</span><span class="w"> </span><span class="nx">square</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">                </span><span class="kd">var</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;n1&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">                </span><span class="nx">num</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="nx">num</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">        </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div>
-<p>Una vez añadido el código del nuevo nuevo botón a la calculadora, comprobar que funciona correctamente, registrar los cambios en el índice y crear el nuevo commit.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ git add index.html
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$ git commit -m &quot;x^2 button&quot;
-</code></pre></div>
-<h4 id="paso-4-funcionalidad-1x">Paso 4: Funcionalidad 1/x<a class="headerlink" href="#paso-4-funcionalidad-1x" title="Permanent link">&para;</a></h4>
-<p>Crear un commit en la rama "ops", que añada a la calculadora del fichero index.html el botón 1/x que divida 1 entre el número introducido.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Calculator<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Calculadora de ……su nombre y apellidos……<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        Number:
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;n1&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>            <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;inverse()&quot;</span><span class="p">&gt;</span> 1/x <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>            <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;square()&quot;</span><span class="p">&gt;</span> x^2 <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>            <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;cube()&quot;</span><span class="p">&gt;</span> x^3 <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">            </span><span class="kd">function</span><span class="w"> </span><span class="nx">cube</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">                </span><span class="kd">var</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;n1&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">                </span><span class="nx">num</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="nx">num</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">            </span><span class="kd">function</span><span class="w"> </span><span class="nx">square</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">                </span><span class="kd">var</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;n1&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">                </span><span class="nx">num</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="nx">num</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">            </span><span class="kd">function</span><span class="w"> </span><span class="nx">inverse</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">                </span><span class="kd">var</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;n1&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">                </span><span class="nx">num</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="o">/</span><span class="nx">num</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
-<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">        </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div>
-<p>Una vez añadido el código del nuevo nuevo botón a la calculadora, comprobar que funciona correctamente, registrar los cambios en el índice y crear el nuevo commit.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ git add index.html
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$ git commit -m &quot;1/x button&quot;
-</code></pre></div>
-<h4 id="paso-5-integrar-la-rama-ops-en-main">Paso 5: Integrar la rama "ops" en "main"<a class="headerlink" href="#paso-5-integrar-la-rama-ops-en-main" title="Permanent link">&para;</a></h4>
-<p>Integrar la rama ops en la rama main con "git rebase" para crear una calculadora con cinco
-botones: x^2, x^3, x^4, sin(x) y 1/x.</p>
-<p>"git rebase …" realiza la integración ejecutando un bucle, donde cada iteración traslada un commit de la rama origen a su nueva base. El traslado implica integrar el código del commit con el de su nueva base. Si la integración tiene conflictos, git indica el error y finaliza.</p>
-<p>"git status" muestra los ficheros con conflictos. Los conflictos deben resolverse entonces con el editor.</p>
-<p>Primero comprobamos el id del commit que queremos integrar en main (el de "1/x button")
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git log --oneline
-</code></pre></div></p>
-<p>Nos cambiamos a la rama "main" y ejecutamos</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$ git checkout main
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>$ git rebase &lt;id del commit&gt;
-</code></pre></div>
-<p>Como hemos modificado el mismo fichero y las mismas líneas que en los commits posteriores de la rama "main" surgirán conflictos.
-Debemos editar el fichero index.html para eliminar los conflictos.</p>
-<p>Una vez resueltos, se debe comprobar primero que la integración funciona correctamente. Después se debe continuar la integración (rebase) añadiendo los cambios al índice y continuando el rebase:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$ git add index.html
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>$ git rebase --continue
-</code></pre></div>
-<p>Una vez generado un commit, git pasa a intentar integrar el siguiente de la rama origen. Y así hasta el último de la rama origen. Es necesario guardar los cambios en el editor que sale al hacer el rebase para que se apliquen.</p>
-<p>Este proceso habrá que repetirlo dos veces: la primera vez para el botón x^4 y la segunda para el botón sin(x).</p>
-<p>El resultado final de index.html tendrá los 5 botones: x^2, x^3, x^4, sin(x) y 1/x.</p>
-<h4 id="paso-6-subir-todas-las-ramas-del-repositorio-local-a-un-nuevo-repositorio-en-github">Paso 6: Subir todas las ramas del repositorio local a un nuevo repositorio en GitHub.<a class="headerlink" href="#paso-6-subir-todas-las-ramas-del-repositorio-local-a-un-nuevo-repositorio-en-github" title="Permanent link">&para;</a></h4>
-<p>Creamos un nuevo repositorio en Github llamado "my_calculator_2". Por último, subimos los cambios realizados en ambas ramas a Github.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$ git remote set-url origin git@github.com:&lt;mi_usuario_de_github&gt;/my_calculator_2
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>$ git push --all
-</code></pre></div>
-<p>La opción --force o -f permite subir un repositorio incompatible, pero ¡Cuidado borra el existente! Se debe utilizar solo en casos en que no hay otra solución.</p>
-<h3 id="entrega">Entrega<a class="headerlink" href="#entrega" title="Permanent link">&para;</a></h3>
+<h3 id="contenidos">Contenidos<a class="headerlink" href="#contenidos" title="Permanent link">&para;</a></h3>
+<p>En esta sección se incluyen los contenidos mínimos a impartir esta unidad teniendo en cuenta <a href="https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf">la normativa del curso</a></p>
+<p>La unidad pertenece al bloque 2 Herramientas de desarrollo.</p>
 <ul>
-<li>Añade la URL de los repositorios a la tarea.</li>
-<li>Recuerda que el repositorio tiene que ser publico.</li>
-<li>
-<p>El nombre del repositorio sera: ID_XXXX_my_calculator y ID_XXXX_my_calculator_2 donde</p>
+<li>UD2: Entornos de desarrollo integrado</li>
+</ul>
+<p>En la unidad 2, veremos:</p>
 <ul>
-<li>ID es el identificador de la tarea</li>
-<li>XXXX tus iniciales</li>
+<li>Entornos de desarrollo integrado. Funcionalidades.</li>
+<li>Herramientas CASE.</li>
 </ul>
-</li>
-<li>
-<p>Asegurate que funciona y:</p>
-<ul>
-<li><strong>10%:</strong>  Existe el repositorio my_calculator2</li>
-<li><strong>30%:</strong>  Los tres primeros commits de main son los originales: "x^3 button", "x^4 button" y "sin(x) button"</li>
-<li><strong>30%:</strong>  El cuarto commit de la rama main es "x^2 button" y contiene lo pedido</li>
-<li><strong>30%:</strong>  El quinto commit de la rama main es "1/x button" y contiene lo pedido</li>
-</ul>
-</li>
-</ul>
-<h3 id="apoyo">Apoyo<a class="headerlink" href="#apoyo" title="Permanent link">&para;</a></h3>
-<ul>
-<li>https://revilofe.github.io</li>
-</ul>
-<h3 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h3>
-<p>Juan Quemada, DIT - UPM</p>
 
 
   
@@ -2743,10 +2561,10 @@ Debemos editar el fichero index.html para eliminar los conflictos.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.ce72ebac.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ce72ebac.min.js"></script>
       
     
   </body>

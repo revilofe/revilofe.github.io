@@ -1,18 +1,21 @@
 ---
+
 title: "UD 7 - 7.3 Manejo de archivos: File"
-description: Manejo de archivos: File
-summary: Manejo de archivos: File
+description: Manejo de archivos
+summary: Manejo de archivos
 authors:
-- Eduardo Fdez
+  - Eduardo Fdez
 date: 2022-02-24
 icon: material/software
 permalink: /prog/unidad7/7.3
 categories:
-- PROG
+  - PROG
 tags:
-- Software
-- File
+  - Software
+  - File
+
 ---
+
 ## La clase `File`
 
 La pieza más básica para poder operar con archivos, independientemente de su tipo, en un programa Java es la **clase `File`** . Esta clase pertenece al *`package java.io`* de Java. Por lo tanto será necesario importarla antes de poder usarla.

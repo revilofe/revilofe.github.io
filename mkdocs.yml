@@ -44,13 +44,23 @@ nav:
         - '3.4.-Est.Datos: Conjuntos': 'section1/u03/teoria/PROG-U3.4.-Conjuntos.md'
         - '* Práctica 3.3: Conjuntos': 'section1/u03/practica/PROG-U3.-Practica003.md'
         - '3.5.-Funciones': 'section1/u03/teoria/PROG-U3.5.-Funciones.md'
-    - 'U4: Kotlin':
+    - 'U4: Kotlin: POO y estructuras de datos':
         - 'section1/u04/index.md'
         - '4.1.-Kotlin': 'section1/u04/teoria/PROG-U4.1.-kotlin.md'
-        - '4.1.-Kotlin: Colecciones': 'section1/u04/teoria/PROG-U4.2.-kotlinColeciones.md'
-        - '4.1.-Kotlin: POO': 'section1/u04/teoria/PROG-U4.3.-kotlinPOO.md'
-        - '4.1.-Kotlin: Resumen': 'section1/u04/teoria/PROG-U4.4.-kotlinResumen.md'
-
+        - '4.2.-Kotlin: Colecciones': 'section1/u04/teoria/PROG-U4.2.-kotlinColeciones.md'
+        - '4.3.-Kotlin: POO': 'section1/u04/teoria/PROG-U4.3.-kotlinPOO.md'
+        - '4.4.-Kotlin: Resumen': 'section1/u04/teoria/PROG-U4.4.-kotlinResumen.md'
+    - 'U5: Kotlin: PPO y creación de e.d.':
+        - 'section1/u05/index.md'
+    - 'U6: Kotlin: Creación de programas con POO':
+        - 'section1/u06/index.md'
+    - 'U7: Kotlin: Entrada/Salida y GUI':
+        - 'section1/u07/index.md'
+        - '7.1.-Sistema archivos:E/S': 'section1/u07/teoria/PROG-U7.1.-SistemaArchivos.md'
+        - '7.2.-Entrada/Salida estandar': 'section1/u07/teoria/PROG-U7.2.-ConsolaTeclado.md'
+        - '7.3.-Gestión Archivos': 'section1/u07/teoria/PROG-U7.3.-File.md'
+        - '7.4.-Lectura/Escritura Archivos': 'section1/u07/teoria/PROG-U7.4.-LecturaEscritura.md'
+        - '7.5.-GUI': 'section1/u07/teoria/PROG-U7.5.-GUI.md'
   - 'Entornos de desarrollo':
     - 'section3/index.md'
     - 'U1: Introducción al desarrollo de software':

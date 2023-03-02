@@ -50,7 +50,8 @@ La unidad se encuentra dentro del Bloque X
 
 * U7: Entrada/Salida 
 
-En la Unidad 7, veremos:
+En la Unidad 7, veremos:   
+
 1. Fundamentos de sistema de archivos.   
     1.1. Archivos (Texto, Binarios)   
     1.2. Directorios.   

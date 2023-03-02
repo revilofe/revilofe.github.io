@@ -17,6 +17,8 @@ tags:
 
 ## Pruebas
 
+<iframe src="https://pl.kotl.in/noo9uD9ra?from=7&to=22&theme=darcula&readOnly=true"></iframe>
+
 ## Recursos
 * [¿Cómo elaborar casos de prueba?](https://surprograma.github.io/libro-disenio-oop/docs/pruebas-automatizadas/elaborar-casos-prueba/)
 * [Test unitario avanzado](http://wiki.uqbar.org/wiki/articles/testeo-unitario-avanzado.html)

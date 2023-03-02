@@ -17,7 +17,7 @@ tags:
 
 ## Pruebas
 
-<iframe src="https://pl.kotl.in/noo9uD9ra?from=7&to=22" width="800" height="800" frameBorder="0"></iframe>
+<iframe src="https://pl.kotl.in/noo9uD9ra?from=7&to=22" width="800" height="500" frameBorder="0"></iframe>
 
 ## Recursos
 * [¿Cómo elaborar casos de prueba?](https://surprograma.github.io/libro-disenio-oop/docs/pruebas-automatizadas/elaborar-casos-prueba/)

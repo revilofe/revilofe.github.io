@@ -585,8 +585,7 @@ La parte final del programa repite el ciclo for encontrado anteriormente. En est
 ## Fuente
 
 - Apuntes de programación de Joan Arnedo Moreno (Institut Obert de Catalunya, IOC)
-- Apuntes de programación de Natividad Prieto, Francisco Marqués y Javier Piris (E.T.S. de Informática, Universidad
-  Politécnica de Valencia).
+- Apuntes de programación de Natividad Prieto, Francisco Marqués y Javier Piris (E.T.S. de Informática, Universidad Politécnica de Valencia).
 - [Apuntes de programación de Jose Luis Comesaña](sitiolibre.com).
 - [Create File](https://www.tutorialkart.com/kotlin/kotlin-create-file/)
 - [Kotlinn data streams](https://stonesoupprogramming.com/2017/11/24/kotlin-data-streams)

@@ -27,7 +27,7 @@ El análisis estático de código es una de las técnicas que los desarrolladore
 
 Los desarrolladores también pueden revisar el código manualmente, pero esto puede dar lugar a que se produzcan fallos debido a un error humano. Y los errores de software acaban costando una cantidad significativa de tiempo y dinero, por lo que es imperativo producir códigos sin errores. Además, cada vez más empresas de desarrollo se suben al carro del análisis estático de código. Así, el análisis estático de código se considera ahora un aspecto clave a la hora de [escribir código para aplicaciones Android](https://mutualmobile.com/es/resources/top-10-best-practices-for-empathetic-coding).
 
-### Ventajas de utilizar el análisis estático de código en las aplicaciones Android
+### Ventajas de utilizar el análisis estático de código
 
 * Más rápido, preciso y eficiente en comparación con la revisión manual del código.
 * Ayuda a identificar posibles bugs, vulnerabilidades y errores que las pruebas unitarias o manuales podrían haber pasado por alto.
@@ -58,13 +58,13 @@ Checkstyle analiza el código fuente del proyecto en busca de errores y fallos, 
 
 Android Lint viene empaquetado por defecto con Android Studio. Esta herramienta comprueba los archivos fuente del proyecto para identificar posibles errores y optimizar la usabilidad, la corrección, la seguridad, la accesibilidad y la internacionalización.
 
-## Linting en el análisis estático de código
+### Linting en el análisis estático de código
 
 Te preguntarás, ¿qué demonios es el linting? Bueno, en pocas palabras, linting es el proceso de analizar el código en busca de errores potenciales. Veamos cómo puedes usar linting para diagnosticar errores. Los desarrolladores utilizan varias guías de estilo, como [Java Code Style](https://source.android.com/setup/contribute/code-style) y [Kotlin Style Guide](https://developer.android.com/kotlin/style-guide).
 
 En este caso, vamos a utilizar Ktlint o Detekt, un linter que es sinónimo de la plataforma Kotlin, ya que este formato ofrece simplicidad, extensibilidad y una comunidad de desarrolladores activa.
 
-### Ktlint
+#### Uso de Ktlint
 
 * Añade al fichero `build.gradle` de tu proyecto la configuración de ktling:
 
@@ -94,7 +94,7 @@ ktlint {
 También existe un plugin no oficial que puedes instalar.
 En `File -> Settings -> Tools -> ktlint` podrás ver y trabajar en la configuración
 
-### Detekt
+#### Uso de Detekt
 Instala el plugin [Detekt](https://github.com/detekt/detekt).
 En `File -> Settings -> Tools -> Detekt` podrás ver y trabajar en la configuración
 

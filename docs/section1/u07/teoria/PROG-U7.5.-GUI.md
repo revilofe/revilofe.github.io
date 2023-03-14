@@ -14,26 +14,24 @@ tags:
     - gui
     - compose
 ---
-## Interfaces de usuario: Compose
-
-### Interface gráfica de usuaro vs CLI
+## Interface gráfica de usuario vs CLI
 
 La Interfaz gráfica de usuario o GUI (Graphic User Interface) es el entorno visual de imágenes y objetos mediante el cual una máquina y un usuario interactúan. A mediados de los setentas las GUI comenzaron a sustituir a las interfaces de línea de comando (CLI), y esto permitió que la interacción con las computadoras fuera más sencilla e intuitiva.
 
 
-#### ¿Para qué sirven las Interfaces gráficas de usuario?
+### ¿Para qué sirven las Interfaces gráficas de usuario?
 
 Su función principal es simplificar la comunicación entre una máquina o un sistema operativo y un usuario. Antes de que se desarrollaran y popularizaron las GUI, solo las personas con conocimientos profundos de informática podían usar un computador, pero las interfaces gráficas sustituyeron la complejidad de los comandos por acciones predeterminadas simbolizadas por elementos visuales muy sencillos de comprender.
 A mediados de los ochentas, Mac se convirtió en el referente de las interfaces gráficas amigables desarrollando equipos con funciones muy complejas pero “tan fáciles de usar como una tostadora”, y por esas mismas fechas Microsoft lanzó  Windows 1.0, un sistema operativo que se caracterizaba por tener una interfaz gráfica similar, lo que le valió una demanda millonaria de parte de Apple.
 Una buena GUI no solo es importante para los programas, sistemas operativos y aplicaciones. Se estima que el 68% de los visitantes que abandonan un sitio web lo hacen debido a que la experiencia de usuario, incluyendo la Interfaz, no está optimizada para sus necesidades y expectativas.
 
-#### ¿Cuáles son los elementos de la Interfaz gráfica de usuario?
+### ¿Cuáles son los elementos de la Interfaz gráfica de usuario?
 
 Las interfaces gráficas de usuario integraron en sus inicios una novedad que hoy en día es de uso corriente: el mouse o ratón, que fungía como puntero para señalar y seleccionar los diferentes elementos de la GUI, que tradicionalmente se categorizaron como ventanas, iconos o carpetas.
 Hoy en día los elementos visuales (widgets) de una interfaz son muy similares en esencia, sólo que cada día los diseñadores tratan de hacerlos más amigables e intuitivos. Además, los dispositivos móviles no requieren de ratón o puntero pues cuentan con pantallas táctiles.
 ![](assets/PRO-GUI.png)
 
-#### ¿Cómo crear una buena Interfaz gráfica de usuario?
+### ¿Cómo crear una buena Interfaz gráfica de usuario?
 
 Una buena GUI se caracteriza por:
 
@@ -46,7 +44,7 @@ Una buena GUI se caracteriza por:
 * La interfaz expresa claramente el estado del sistema o las operaciones, y brinda elementos de ayuda.
 * La navegabilidad y la usabilidad son óptimas.
 
-#### Características generales de la GUI:
+### Características generales de la GUI:
 
 * Facilidad
 * Diseño ergonómico mediante el uso de menús, barras de acciones o íconos
@@ -64,30 +62,35 @@ Para la realización de un buen desarrollo GUI, se debe tener en cuenta:
 * Funcionalidad:  Debe reducir los pasos para la realización de una acción
 * Sistema de búsqueda: Debe contar con diferentes maneras de realizar la búsqueda
 
-#### ¿Quiénes son responsables de la Interfaz gráfica de usuario?
+### ¿Quiénes son responsables de la Interfaz gráfica de usuario?
 
 Detrás de cualquier Interfaz gráfica de usuario existe un programa, sistema operativo o aplicación. Por eso, la GUI suele ser un trabajo en conjunto entre desarrolladores y diseñadores que buscan la mejor manera de que el usuario pueda interactuar con el programa mediante elementos visuales fáciles de comprender.
 
-#### Entornos gráficos 
-##### Aplicaciones multiplataforma
+### Entornos gráficos 
+
+#### Aplicaciones multiplataforma
 Las aplicaciones multiplataforma son aquellas destinadas a dispositivos móviles,  aplicaciones de escritorio u otro tipos de sistemas embebidos.
 Para programar los entornos gráficos de estas aplicaciones es necesario un Software Development Kit o SDK, que es un conjunto de herramientas que, entre otras cosas, hacen posible la creación de los elementos necesarios para una interfaz. Estos SDK pueden ser:
 - Oficiales: los proporcionan los fabricantes, como por ejemplo iOS SDK de Apple
 - Alternativos: desarrollados por terceros, como GTK+ o Qt
 - Multiplataforma: también desarrollado por terceros, algunos disponen de bindings para que se usen en varios sistemas como GTK+ o Qt o nativos al lenguajes como Swing de Java
 En los siguientes apartados destacaremos algunos de los lenguajes y librerías que se utilizan actualmente en estas plataformas.
-###### Aplicaciones móviles
+
+##### Aplicaciones móviles
 Android tiene como lenguaje oficial para crear sus aplicaciones Java (JVM), lo que hace que este sea uno de los lenguajes más utilizados para el desarrollo en este sistema. Aunque Kotlin, creado por JetBrains es 100% compatible con la JVM y todas las librerías, ha sido nombrado por google lenguaje cooficial aportando además simplicidad en el código.
 Por otro lado, las aplicaciones desarrolladas para iOS pueden utilizar Objetive-C o Swift, una alternativa al primero creado por Apple, con mejor rendimiento y totalmente compatible con todos los dispositivos de Apple.
-###### Aplicaciones de escritorio y sistemas embebidos
+
+##### Aplicaciones de escritorio y sistemas embebidos
 Este tipo de aplicaciones se suelen desarrollar con Java o C++ generalmente.
 Java junto con la librería gráfica Swing que ya viene incluida en su JDK, forman un combo con el que podemos desarrollar este tipo de aplicaciones.
 C++ junto con Qt también son utilizados de forma nativa para crear interfaces gráficas en varias plataformas, además destacar que es utilizado por el entorno de escritorio GNU/Linux: KDE.
 Python es un lenguaje emergente que se está imponiendo en muchos ámbitos de la programación, entre ellos las aplicaciones de escritorio y sistemas embebidos. Este lenguaje dispone de una comunidad muy grande y activa que desarrolla binding para poder utilizar las librerías gráficas como GTK, Qt y Swing.
-###### Videojuegos   
+
+##### Videojuegos   
 Los videojuegos son un tipo de aplicación muy demandada en la actualidad, con suficiente entidad como para distinguirlos de los tipos de aplicaciones anteriores.
 Uno de los lenguajes más utilizados en este sector es C# junto con la herramienta Unity, que proporciona un editor, un motor para la física 2D y la física 3D, renderizado, animación, audio, etc. Esta potente herramienta no solo se utiliza para el desarrollo de videojuegos, sino para crear experiencias en realidad virtual y cortos animados. Unity además permite la exportación del trabajo a multitud de plataformas, como móviles, videoconsolas, ordenadores, etc.
 Otro de los lenguajes más utilizados para este propósito es Java junto con frameworks como LibGDX o JMonkeyEngine y Python con el framework Pygame.
+
 ##### Aplicaciones web   
 Aunque en el mundo web los primeros navegadores eran en modo texto y aún siguen existiendo (como Lynx), la web en sí es gráfica. Se suele emplear el término front-end para la parte del cliente, es decir, el entorno gráfico de una aplicación web y back-end para la parte del servidor con la que se gestionan todos los datos. Centrándonos en el front-end, podremos distinguir tres pilares básicos que pasamos a definir a continuación:   
 ###### Contenido: HTML   
@@ -108,7 +111,7 @@ JavaScript es un lenguaje de alto nivel que aporta lógica y dinamismo a la part
 La librería jQuery es ámpliamente utilizada en el mundo web ya que a través de ella se simplifica mucho el código nativo que escribimos con JavaScript, por lo que escribiendo el mismo código en jQuery conseguimos el mismo resultado.
 Por otro lado, encontramos la librería React, creada por Facebook, que se centra en la creación de interfaces de usuario interactivas de forma sencilla.
 
-### Compose: Introducción
+## Compose: Introducción
 
 Jetpack Compose es la nueva forma de programar interfaces de usuario propuesta por Google en 2019.
 

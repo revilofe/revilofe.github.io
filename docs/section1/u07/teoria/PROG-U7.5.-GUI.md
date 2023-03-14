@@ -14,9 +14,101 @@ tags:
     - gui
     - compose
 ---
-## Compose
+## Interfaces de usuario: Compose
 
-### Introducción
+### Interface gráfica de usuaro vs CLI
+
+La Interfaz gráfica de usuario o GUI (Graphic User Interface) es el entorno visual de imágenes y objetos mediante el cual una máquina y un usuario interactúan. A mediados de los setentas las GUI comenzaron a sustituir a las interfaces de línea de comando (CLI), y esto permitió que la interacción con las computadoras fuera más sencilla e intuitiva.
+
+
+#### ¿Para qué sirven las Interfaces gráficas de usuario?
+
+Su función principal es simplificar la comunicación entre una máquina o un sistema operativo y un usuario. Antes de que se desarrollaran y popularizaron las GUI, solo las personas con conocimientos profundos de informática podían usar un computador, pero las interfaces gráficas sustituyeron la complejidad de los comandos por acciones predeterminadas simbolizadas por elementos visuales muy sencillos de comprender.
+A mediados de los ochentas, Mac se convirtió en el referente de las interfaces gráficas amigables desarrollando equipos con funciones muy complejas pero “tan fáciles de usar como una tostadora”, y por esas mismas fechas Microsoft lanzó  Windows 1.0, un sistema operativo que se caracterizaba por tener una interfaz gráfica similar, lo que le valió una demanda millonaria de parte de Apple.
+Una buena GUI no solo es importante para los programas, sistemas operativos y aplicaciones. Se estima que el 68% de los visitantes que abandonan un sitio web lo hacen debido a que la experiencia de usuario, incluyendo la Interfaz, no está optimizada para sus necesidades y expectativas.
+
+#### ¿Cuáles son los elementos de la Interfaz gráfica de usuario?
+
+Las interfaces gráficas de usuario integraron en sus inicios una novedad que hoy en día es de uso corriente: el mouse o ratón, que fungía como puntero para señalar y seleccionar los diferentes elementos de la GUI, que tradicionalmente se categorizaron como ventanas, iconos o carpetas.
+Hoy en día los elementos visuales (widgets) de una interfaz son muy similares en esencia, sólo que cada día los diseñadores tratan de hacerlos más amigables e intuitivos. Además, los dispositivos móviles no requieren de ratón o puntero pues cuentan con pantallas táctiles.
+![](assets/PRO-GUI.png)
+
+#### ¿Cómo crear una buena Interfaz gráfica de usuario?
+
+Una buena GUI se caracteriza por:
+
+* Ser sencilla de comprender y usar
+* La curva de aprendizaje es acelerada y es fácil recordar su funcionamiento
+* Los elementos principales son muy identificables
+* Facilitar y predecir las acciones más comunes del usuario
+* La información está adecuadamente ordenada mediante menús, iconos, barras, etc.
+* Las operaciones son rápidas, intuitivas y reversibles
+* La interfaz expresa claramente el estado del sistema o las operaciones, y brinda elementos de ayuda.
+* La navegabilidad y la usabilidad son óptimas.
+
+#### Características generales de la GUI:
+
+* Facilidad
+* Diseño ergonómico mediante el uso de menús, barras de acciones o íconos
+* Operaciones rápidas, reversibles; que sea de cambios inmediatos
+* Contiene herramientas de ayuda que orientan al usuario.
+
+Para la realización de un buen desarrollo GUI, se debe tener en cuenta:
+
+* Consistencia:  Todos los elementos de la GUI se deben regir por las mismas normas
+* Palabras y legibilidad:  Uso de colores y fuentes adecuadas, uso correcto de mayúsculas y minúsculas
+* Color: Tener en cuenta el significado de los colores, que éstos permitan la legibilidad y que den una buena apariencia en la pantalla
+* Accesibilidad:  Debe ser accesible en lo posible a todos teniendo en cuenta discapacidades
+* Necesidades de los usuarios:  Los usuarios deben encontrar lo que buscan
+* Contenidos:  Deben ser fiables
+* Funcionalidad:  Debe reducir los pasos para la realización de una acción
+* Sistema de búsqueda: Debe contar con diferentes maneras de realizar la búsqueda
+
+#### ¿Quiénes son responsables de la Interfaz gráfica de usuario?
+
+Detrás de cualquier Interfaz gráfica de usuario existe un programa, sistema operativo o aplicación. Por eso, la GUI suele ser un trabajo en conjunto entre desarrolladores y diseñadores que buscan la mejor manera de que el usuario pueda interactuar con el programa mediante elementos visuales fáciles de comprender.
+
+#### Entornos gráficos 
+##### Aplicaciones multiplataforma
+Las aplicaciones multiplataforma son aquellas destinadas a dispositivos móviles,  aplicaciones de escritorio u otro tipos de sistemas embebidos.
+Para programar los entornos gráficos de estas aplicaciones es necesario un Software Development Kit o SDK, que es un conjunto de herramientas que, entre otras cosas, hacen posible la creación de los elementos necesarios para una interfaz. Estos SDK pueden ser:
+- Oficiales: los proporcionan los fabricantes, como por ejemplo iOS SDK de Apple
+- Alternativos: desarrollados por terceros, como GTK+ o Qt
+- Multiplataforma: también desarrollado por terceros, algunos disponen de bindings para que se usen en varios sistemas como GTK+ o Qt o nativos al lenguajes como Swing de Java
+En los siguientes apartados destacaremos algunos de los lenguajes y librerías que se utilizan actualmente en estas plataformas.
+###### Aplicaciones móviles
+Android tiene como lenguaje oficial para crear sus aplicaciones Java (JVM), lo que hace que este sea uno de los lenguajes más utilizados para el desarrollo en este sistema. Aunque Kotlin, creado por JetBrains es 100% compatible con la JVM y todas las librerías, ha sido nombrado por google lenguaje cooficial aportando además simplicidad en el código.
+Por otro lado, las aplicaciones desarrolladas para iOS pueden utilizar Objetive-C o Swift, una alternativa al primero creado por Apple, con mejor rendimiento y totalmente compatible con todos los dispositivos de Apple.
+###### Aplicaciones de escritorio y sistemas embebidos
+Este tipo de aplicaciones se suelen desarrollar con Java o C++ generalmente.
+Java junto con la librería gráfica Swing que ya viene incluida en su JDK, forman un combo con el que podemos desarrollar este tipo de aplicaciones.
+C++ junto con Qt también son utilizados de forma nativa para crear interfaces gráficas en varias plataformas, además destacar que es utilizado por el entorno de escritorio GNU/Linux: KDE.
+Python es un lenguaje emergente que se está imponiendo en muchos ámbitos de la programación, entre ellos las aplicaciones de escritorio y sistemas embebidos. Este lenguaje dispone de una comunidad muy grande y activa que desarrolla binding para poder utilizar las librerías gráficas como GTK, Qt y Swing.
+###### Videojuegos   
+Los videojuegos son un tipo de aplicación muy demandada en la actualidad, con suficiente entidad como para distinguirlos de los tipos de aplicaciones anteriores.
+Uno de los lenguajes más utilizados en este sector es C# junto con la herramienta Unity, que proporciona un editor, un motor para la física 2D y la física 3D, renderizado, animación, audio, etc. Esta potente herramienta no solo se utiliza para el desarrollo de videojuegos, sino para crear experiencias en realidad virtual y cortos animados. Unity además permite la exportación del trabajo a multitud de plataformas, como móviles, videoconsolas, ordenadores, etc.
+Otro de los lenguajes más utilizados para este propósito es Java junto con frameworks como LibGDX o JMonkeyEngine y Python con el framework Pygame.
+##### Aplicaciones web   
+Aunque en el mundo web los primeros navegadores eran en modo texto y aún siguen existiendo (como Lynx), la web en sí es gráfica. Se suele emplear el término front-end para la parte del cliente, es decir, el entorno gráfico de una aplicación web y back-end para la parte del servidor con la que se gestionan todos los datos. Centrándonos en el front-end, podremos distinguir tres pilares básicos que pasamos a definir a continuación:   
+###### Contenido: HTML   
+HTML (Hypertext Markup Languaje) es un lenguaje de marcado o etiquetado, el cual sirve para definir estructuras y contenido en la web. La diferencia con un lenguaje de programación es que no dispone de las variables ni estructuras que afectan al comportamiento como condicionales, bucles etc.
+Al igual que otros lenguajes, HTML también ha evolucionado con el paso del tiempo, siendo la versión actual HTML5, que incorpora algunos elementos respecto a su versión anterior que hace que las aplicaciones web sean más diversas y funcionales, añadiendo también semántica a algunos de sus elementos.
+Por ejemplo, en HTML5 algunas de las estructuras para definir los elementos gráficos del entorno son:
+Radio button: `<input type=”radio”>`
+Listas desplegables: `<select><option>...</option>...</select>`
+Botón: `<button></button>`   
+###### Estilos: CSS   
+CSS (Cascading Style Sheets) es un lenguaje de diseño gráfico que permite personalizar la presentación de un documento escrito en un lenguaje de marcado, como HTML, al cual está muy ligado.
+Estos dos lenguajes se almacenan en ficheros alojados en un servidor. Cuando algún cliente como un navegador hace una consulta a una página web, el servidor devuelve estos ficheros y es el navegador, cuando los recibe, el que se encarga de interpretar el contenido de ambos lenguajes para mostrar la página tal y como la vemos.
+
+La versión actual es CSS3, la cual destaca respecto de su versión anterior en incorporar algunos estilos muy demandados por la comunidad como el redondeo de esquinas en los elementos, gradiente, transiciones, animaciones y las Media-Queries, muy populares actualmente para satisfacer la cantidad de tamaños y resoluciones de pantallas en las que una aplicación web puede cargarse (móviles, tablets, pcs, etc) y conseguir un diseño responsivo.
+Por último, destacamos Bootstrap, un framework front-end para CSS utilizado en las empresas que se dedican al desarrollo web con el que poder construir interfaces responsivas.   
+###### Lógica: JavaScript   
+JavaScript es un lenguaje de alto nivel que aporta lógica y dinamismo a la parte front-end de las aplicaciones web, por ejemplo, las acciones que se desencadenan en la aplicación cuando un usuario utiliza un buscador, un formulario, un calendario, etc. Además, juega un papel muy importante a la hora de validar datos antes de enviarlos al servidor, evitando la carga excesiva de este.
+La librería jQuery es ámpliamente utilizada en el mundo web ya que a través de ella se simplifica mucho el código nativo que escribimos con JavaScript, por lo que escribiendo el mismo código en jQuery conseguimos el mismo resultado.
+Por otro lado, encontramos la librería React, creada por Facebook, que se centra en la creación de interfaces de usuario interactivas de forma sencilla.
+
+### Compose: Introducción
 
 Jetpack Compose es la nueva forma de programar interfaces de usuario propuesta por Google en 2019.
 
@@ -24,10 +116,10 @@ Google liberó su versión Beta en Febrero de 2021. Podemos empezar ya a incluir
 
 Esta tecnología sigue la misma dirección que *Swift UI* o *Flutter* usando un paradigma declarativo. Esto es un buen síntoma, ya que diferentes plataformas siguen una misma dirección.
 
-Jetpack Compose se convertirá en el nuevo estándar de desarrollo de interfaces de usuario en Android. Jetbrains ha trabajado para traer este mismo estándar:  
+Jetpack Compose se convertirá en el nuevo estándar de desarrollo de interfaces de usuario en Android. Jetbrains ha trabajado para traer este mismo estándar:
+
 - Al Escritorio con [Compose for Desktop](https://www.jetbrains.com/es-es/lp/compose-desktop/), con [ejemplos de código en github](https://github.com/JetBrains/compose-multiplatform#compose-for-desktop).
 - A la web, con [Compose for Web](https://compose-web.ui.pages.jetbrains.team/), con [ejemplos de código en github](https://github.com/JetBrains/compose-multiplatform#compose-for-web-html).
-
 
 Las ventajas principales de Jetpack Compose son:
 
@@ -66,9 +158,10 @@ Con Jetpack Compose tenemos que cambiar nuestra mentalidad para empezar a utiliz
 La composición consiste en la reconstrucción de los componentes que forma la interface de usuario hasta reconstruir la interface completa. En Compose, las funciones que se encargan de esta reconstrucción se anotan con `@Composable`, es decir, todas las funciones que admiten composición deben ser anotadas con `@Composable`.
 
 Las funciones *[@Composable](https://github.com/Composable "@Composable")*:
+
 - Son funciones que reciben datos y emiten elementos de UI
 - Pueden usar sentencias `for`, `if`, etc. para genera la potencia del lenguaje.
-- Pueden aceptar parámetros. La lógica de la aplicación describe la UI.   
+- Pueden aceptar parámetros. La lógica de la aplicación describe la UI.
 - **No están ligadas** a ninguna clase, pueden ser definidas en cualquier sitio.
 - **Deben empezar por letra mayúscula**, ya que estas funciones actúan como [widgets](https://en.wikipedia.org/wiki/Graphical_widget).
 
@@ -76,7 +169,7 @@ Por ejemplo, `Text()` es también una función que admite composición y que se 
 
 ### Modo Preview
 
-En Android existe una vista previa para los ficheros XML de Android que representan la interface gráfica. En compose también existe un modo preview para el código que construimos [`@Preview`](https://github.com/Preview "@Preview"). El funcionamiento del modo preview puede varias entre Jetpack Compose y Compose Desktop. 
+En Android existe una vista previa para los ficheros XML de Android que representan la interface gráfica. En compose también existe un modo preview para el código que construimos [`@Preview`](https://github.com/Preview "@Preview"). El funcionamiento del modo preview puede varias entre Jetpack Compose y Compose Desktop.
 
 IntelliJ IDEA facilitará el preview de las vistas marcadas con esta anotación. Tenemos tres tipos de modo de maquetación: *Code*, *Split* (vista recomendada) y *Design*. *Split* y *Design* incorporan un modo interactivo (Interactive) que permite al desarrollador interactuar con la interfaz al igual que si estuviese interactuando con la aplicación.
 
@@ -122,9 +215,11 @@ fun Greeting(name: String) {
     Text(text = "Hello $name!")  
 }
 ```
-Repecto al código anterior, podemos decir: 
-- `Text()` es una función propia del SDK de Android que admite composición.   
-- `Text()` admite por parámetro argumentos como  `text`, `modifier`, `color`, `fontSize` , etc.   
+
+Repecto al código anterior, podemos decir:
+
+- `Text()` es una función propia del SDK de Android que admite composición.
+- `Text()` admite por parámetro argumentos como  `text`, `modifier`, `color`, `fontSize` , etc.
 - Dichos parámetros pueden ser requeridos (como en el caso de  `text`) o no requeridos con valores por defecto (`color`, `modifier`). Consulta los parámetros de la función `Text()`.
 
 Siempre que cambiemos valores de la interfaz, recuerda usar la opción *Build Refresh* para actualizar los valores en la Preview.
@@ -141,6 +236,7 @@ class MainActivity : ComponentActivity() {
     }  
 }
 ```
+
 > En Compose Desktop, el contenido tendrá que ir dentro de la función `application`, punto de entrada para la aplicación, y que a la vez recibe un componente `@Composable`, normalmente un componente `Window`. Como puedes apreciar no hay rastros de `Activity`, ni de `setContent`.
 
 Un Ejemplo de lo anterior:
@@ -867,8 +963,8 @@ El patrón **State Hosting** ofrece las siguientes ventajas:
 * Manejar los estados de forma única y centralizada.
 * Solo las funciones que manejan estados pueden modificarlos.
 * Funciones composable hijas no tienen que preocuparse por manejar estados, solo:
-    * pintar información: Los datos tiene un flujo top-down
-    * elevar eventos: Los eventos tiene un flujo bottom-up.
+  * pintar información: Los datos tiene un flujo top-down
+  * elevar eventos: Los eventos tiene un flujo bottom-up.
 
 ![Ilustración del flujo de datos en una IU de Compose, desde los objetos de nivel superior hasta sus elementos secundarios.](https://developer.android.com/images/jetpack/compose/mmodel-flow-data.png?hl=es-419)
 
@@ -1489,4 +1585,3 @@ Un punto muy importante de esta función es la comprobación sobre si el sistema
 - https://plugins.jetbrains.com/plugin/10942-kotlin-fill-class - Plugin para rellenar los  argumentos de clases, muy util en Jetpack Compose
 
 ## Fuente
-

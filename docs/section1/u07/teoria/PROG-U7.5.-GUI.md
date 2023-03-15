@@ -871,7 +871,7 @@ En Jetpack Compose `State` es un componente más del propio componente composabl
 
 El flujo de UI en Jetpack Compose puede pensarse como un bucle en el que se dispara un evento que actualiza un `State`, por ejemplo, un click a un botón que desencadena la actualización de una lista. Este nuevo valor de `State` pasa por todo el árbol de la UI de elementos composables vinculados a ese `State`, es decir, que deben tener en cuenta los posibles valores de dicho `State` y actualizar la UI.
 
-.![image.png](assetsmage.png)
+.![image.png](assets/image.png)
 
 Este flujo de **`Event` - `State`** es unidireccional lo que proporciona ciertas ventajas como:
 

@@ -154,8 +154,6 @@ Add Eva tf
 Dejamos el segundo mensaje añadiendo la palabra "integrated" al final (para indicar que se han integrado los dos commits) y cerramos la edición para que el rebase continúe. El script indica que queremos editar el commit 4 por lo que Git devuelve control a la shell (sin finalizar el rebase) dando el siguiente mensaje
 
 ```
-...
-
 [detached HEAD 4716ce5] Add Eva tf    integrated
  Date: Fri Jan 11 18:58:54 2019 +0100
  1 file changed, 1 insertion(+)
@@ -180,11 +178,10 @@ $ git commit --amend
 Antes de cerrar el nuevo commit 4, Git nos abre el editor con el mensaje asociado al commit para que lo podamos modificar, le añadimos la palabra  "fixed" al final (para indicar que hemos corregido el commit) y cerramos la edición para que el amend finalice
 
 ```
-...
 [detached HEAD 2eb1703] Add Mary tf   fixed
  Date: Fri Jan 11 19:01:44 2019 +0100
  1 file changed, 1 insertion(+)
-````
+```
 
 Y con el commit 4 corregido con el amend, continuamos el rebase para que finalice
 
@@ -230,7 +227,7 @@ Si hubiésemos querido subir la nueva rama master del repositorio local a la ram
 ### Entrega
 * Añade la URL de los repositorios a la tarea.
 * Recuerda que el repositorio tiene que ser publico.
-* El nombre del repositorio sera: ID_XXXX_my_calculator y ID_XXXX_my_calculator_2 donde
+* El nombre del repositorio sera: ID_XXXX_tf_agenda
     - ID es el identificador de la tarea
     - XXXX tus iniciales
 

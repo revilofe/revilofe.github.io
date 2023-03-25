@@ -21,7 +21,7 @@
         <link rel="next" href="../EDES-U4.-Practica005/">
       
       <link rel="icon" href="../../../../assets/favicon-96x96.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.4">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.c4a75a56.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.240905d7.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -2052,6 +2052,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#paso-4-subir-los-cambios-a-una-nueva-rama" class="md-nav__link">
+    Paso 4: Subir los cambios a una nueva rama
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2490,6 +2497,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#paso-4-subir-los-cambios-a-una-nueva-rama" class="md-nav__link">
+    Paso 4: Subir los cambios a una nueva rama
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2672,59 +2686,49 @@ El script está en las 3 primeras líneas, que siguiendo las instrucciones (come
 <a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>#
 </code></pre></div>
 <p>Dejamos el segundo mensaje añadiendo la palabra "integrated" al final (para indicar que se han integrado los dos commits) y cerramos la edición para que el rebase continúe. El script indica que queremos editar el commit 4 por lo que Git devuelve control a la shell (sin finalizar el rebase) dando el siguiente mensaje</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>...
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>[detached HEAD 4716ce5] Add Eva tf    integrated
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a> Date: Fri Jan 11 18:58:54 2019 +0100
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a> 1 file changed, 1 insertion(+)
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>Stopped at 9eaa1031b1c5eb7d52a19970a3a0967193d0b5a3... Add Mary tf
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>You can amend the commit now, with
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>[detached HEAD 4716ce5] Add Eva tf    integrated
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a> Date: Fri Jan 11 18:58:54 2019 +0100
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a> 1 file changed, 1 insertion(+)
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>Stopped at 9eaa1031b1c5eb7d52a19970a3a0967193d0b5a3... Add Mary tf
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>You can amend the commit now, with
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    git commit --amend 
 <a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    git commit --amend 
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>Once you are satisfied with your changes, run
 <a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>Once you are satisfied with your changes, run
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
-<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>    git rebase --continue
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    git rebase --continue
 </code></pre></div>
 <p>Git nos deja en el commit 4 de la rama master original, indicándonos que debemos modificar el código de dicho commit con un "amend" y continuar el rebase. La opción --amend rehace el commit anterior, en vez de crear uno nuevo. Editamos el fichero tf_agenda.txt para cambiar el teléfono de Mary por 918-555-555 y una vez modificado hacemos amend al commit 4 con:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$ git add tf_agenda.txt
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>$ git commit --amend
 </code></pre></div>
 <p>Antes de cerrar el nuevo commit 4, Git nos abre el editor con el mensaje asociado al commit para que lo podamos modificar, le añadimos la palabra  "fixed" al final (para indicar que hemos corregido el commit) y cerramos la edición para que el amend finalice</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>...
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>[detached HEAD 2eb1703] Add Mary tf   fixed
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a> Date: Fri Jan 11 19:01:44 2019 +0100
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a> 1 file changed, 1 insertion(+)
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>````
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>Y con el commit 4 corregido con el amend, continuamos el rebase para que finalice
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>[detached HEAD 2eb1703] Add Mary tf   fixed
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a> Date: Fri Jan 11 19:01:44 2019 +0100
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a> 1 file changed, 1 insertion(+)
 </code></pre></div>
-$  git rebase --continue
-   Successfully rebased and updated refs/heads/master.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>**Estado final de la rama master:**
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>Después del rebase, tanto el contenido de la agenda en tf_agenda.txt, como los commits de la rama master han quedado tal y como se pedía: commits 2 y 3 integrados y commit 4 corregido
+<p>Y con el commit 4 corregido con el amend, continuamos el rebase para que finalice</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>$  git rebase --continue
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>   Successfully rebased and updated refs/heads/master.
 </code></pre></div>
-$ cat tf_agenda.txt 
-  John: 913-677-899;
-  Eva:  915-768-455;
-  Mary: 918-555-555;
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>
+<p><strong>Estado final de la rama master:</strong></p>
+<p>Después del rebase, tanto el contenido de la agenda en tf_agenda.txt, como los commits de la rama master han quedado tal y como se pedía: commits 2 y 3 integrados y commit 4 corregido</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>$ cat tf_agenda.txt 
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>  John: 913-677-899;
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>  Eva:  915-768-455;
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>  Mary: 918-555-555;
 </code></pre></div>
-$ git log --online
-  2eb1703 Add Mary tf fixed
-  4716ce5 Add Eva tf integrated
-  f6e660e Add John tf
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Si alguna vez se equivoca uno al rehacer una rama, se puede utilizar el reflog para arreglarlo: [https://git-scm.com/docs/git-reflog](https://git-scm.com/docs/git-reflog).
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>#### Paso 4: Subir los cambios a una nueva rama
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>Para finalizar, vamos a subir la rama &quot;master&quot; local (regenerada) a la rama &quot;corrected_tf_agenda&quot; del repositorio origin, la cual se creará porque no existe. El repositorio &quot;origin&quot; en Github tendrá ahora tanto la rama master, como la nueva &quot;corrected_tf_agenda&quot;.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$ git log --online
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  2eb1703 Add Mary tf fixed
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>  4716ce5 Add Eva tf integrated
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>  f6e660e Add John tf
 </code></pre></div>
-$ git checkout -b corrected_tf_agenda
-$ git push origin corrected_tf_agenda
-```</p>
+<p>Si alguna vez se equivoca uno al rehacer una rama, se puede utilizar el reflog para arreglarlo: <a href="https://git-scm.com/docs/git-reflog">https://git-scm.com/docs/git-reflog</a>.</p>
+<h4 id="paso-4-subir-los-cambios-a-una-nueva-rama">Paso 4: Subir los cambios a una nueva rama<a class="headerlink" href="#paso-4-subir-los-cambios-a-una-nueva-rama" title="Permanent link">&para;</a></h4>
+<p>Para finalizar, vamos a subir la rama "master" local (regenerada) a la rama "corrected_tf_agenda" del repositorio origin, la cual se creará porque no existe. El repositorio "origin" en Github tendrá ahora tanto la rama master, como la nueva "corrected_tf_agenda".</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$ git checkout -b corrected_tf_agenda
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>$ git push origin corrected_tf_agenda
+</code></pre></div>
 <p>Si hubiésemos querido subir la nueva rama master del repositorio local a la rama master del repositorio origin (repositorio origen de la clonación) deberíamos usar el comando "git push --force …” porque los commits son incompatibles. Utilizando la opción --force o -f se sobre-escriben los commits antiguos.</p>
 <p><strong>¡Atencion!</strong> los commits antiguos se pierden al sobre-escribirlos y no podrán ser recuperados en ese repositorio. En un desarrollo real no se deben compartir repositorios, ni ramas que vayan a ser sobre-escritas posteriormente. Los commits añadidos por terceros a las copias del repositorio no sobreescrito serán incompatibles con los commits nuevos creados sobre las antiguas ramas.</p>
 <h3 id="entrega">Entrega<a class="headerlink" href="#entrega" title="Permanent link">&para;</a></h3>
@@ -2732,7 +2736,7 @@ $ git push origin corrected_tf_agenda
 <li>Añade la URL de los repositorios a la tarea.</li>
 <li>Recuerda que el repositorio tiene que ser publico.</li>
 <li>
-<p>El nombre del repositorio sera: ID_XXXX_my_calculator y ID_XXXX_my_calculator_2 donde</p>
+<p>El nombre del repositorio sera: ID_XXXX_tf_agenda</p>
 <ul>
 <li>ID es el identificador de la tarea</li>
 <li>XXXX tus iniciales</li>
@@ -2872,7 +2876,7 @@ $ git push origin corrected_tf_agenda
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.19047be9.min.js"></script>
       
     
   </body>

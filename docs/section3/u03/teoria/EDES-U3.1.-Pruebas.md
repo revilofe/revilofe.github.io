@@ -17,7 +17,7 @@ tags:
 
 ---
 
-## Pruebas
+## Pruebas (En construcción)
 
 Se pretente estudiar algunas técnicas de verificación y pruebas de programas, se comenzará por los principios básicos, ciclo de vida y niveles y tipos de pruebas, posteriormente profundizaremos en algunas técnicas de prueba más usadas para posteriormente mencionar algunas de las herramientas usadas para las pruebas.
 
@@ -281,10 +281,9 @@ Las estrategias comunes para realizar pruebas de sistema son:
 1. Pruebas de casos de uso: se prueban los casos de uso definidos y se verifica que el sistema funcione según lo previsto en cada caso.
 2. Pruebas de escenarios: se prueban los diferentes escenarios de uso del sistema, incluyendo los casos de uso complejos y poco comunes.
 3. Pruebas de extremo a extremo: se prueban las funcionalidades del sistema desde el inicio hasta el final, incluyendo todas las interacciones entre los diferentes módulos y componentes del sistema.
-4. Pruebas de volumen: se prueban los límites de capacidad del sistema, como el número máximo de usuarios simultáneos o la cantidad máxima de datos que puede manejar.
-5. Pruebas de seguridad: se realizan diferentes tipos de pruebas de seguridad, como pruebas de penetración, pruebas de vulnerabilidad, etc., para evaluar la seguridad del sistema.
-6. Pruebas de compatibilidad: se realizan pruebas en diferentes entornos de hardware y software para verificar la compatibilidad del sistema.
-7. Pruebas de estrés: se prueban las capacidades del sistema en situaciones de alta carga o bajo condiciones extremas para verificar su capacidad para manejar tales situaciones.
+4. Pruebas de seguridad: se realizan diferentes tipos de pruebas de seguridad, como pruebas de penetración, pruebas de vulnerabilidad, etc., para evaluar la seguridad del sistema.
+5. Pruebas de compatibilidad: se realizan pruebas en diferentes entornos de hardware y software para verificar la compatibilidad del sistema.
+6. Pruebas de estrés: se prueban las capacidades del sistema en situaciones de alta carga o bajo condiciones extremas para verificar su capacidad para manejar tales situaciones.
 
 En resumen, las pruebas de sistema son críticas para garantizar que el sistema cumpla con los requisitos y especificaciones definidos antes de que sea entregado al cliente. Para ello, se deben definir diferentes tipos de pruebas y estrategias apropiadas para realizarlas de manera efectiva.
 

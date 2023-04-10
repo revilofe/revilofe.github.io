@@ -18,7 +18,6 @@ tags:
 
 La Interfaz gráfica de usuario o GUI (Graphic User Interface) es el entorno visual de imágenes y objetos mediante el cual una máquina y un usuario interactúan. A mediados de los setentas las GUI comenzaron a sustituir a las interfaces de línea de comando (CLI), y esto permitió que la interacción con las computadoras fuera más sencilla e intuitiva.
 
-
 ### ¿Para qué sirven las Interfaces gráficas de usuario?
 
 Su función principal es simplificar la comunicación entre una máquina o un sistema operativo y un usuario. Antes de que se desarrollaran y popularizaron las GUI, solo las personas con conocimientos profundos de informática podían usar un computador, pero las interfaces gráficas sustituyeron la complejidad de los comandos por acciones predeterminadas simbolizadas por elementos visuales muy sencillos de comprender.
@@ -66,24 +65,28 @@ Para la realización de un buen desarrollo GUI, se debe tener en cuenta:
 
 Detrás de cualquier Interfaz gráfica de usuario existe un programa, sistema operativo o aplicación. Por eso, la GUI suele ser un trabajo en conjunto entre desarrolladores y diseñadores que buscan la mejor manera de que el usuario pueda interactuar con el programa mediante elementos visuales fáciles de comprender.
 
-### Entornos gráficos 
+### Entornos gráficos
 
 #### Aplicaciones multiplataforma
+
 Las aplicaciones multiplataforma son aquellas destinadas a dispositivos móviles,  aplicaciones de escritorio u otro tipos de sistemas embebidos.
 
-Para programar los entornos gráficos de estas aplicaciones es necesario un Software Development Kit o SDK, que es un conjunto de herramientas que, entre otras cosas, hacen posible la creación de los elementos necesarios para una interfaz. Estos SDK pueden ser:   
-* Oficiales: los proporcionan los fabricantes, como por ejemplo iOS SDK de Apple.   
-* Alternativos: desarrollados por terceros, como GTK+ o Qt.    
-* Multiplataforma: también desarrollado por terceros, algunos disponen de bindings para que se usen en varios sistemas como GTK+ o Qt o nativos al lenguajes como Swing de Java.   
+Para programar los entornos gráficos de estas aplicaciones es necesario un Software Development Kit o SDK, que es un conjunto de herramientas que, entre otras cosas, hacen posible la creación de los elementos necesarios para una interfaz. Estos SDK pueden ser:
+
+* Oficiales: los proporcionan los fabricantes, como por ejemplo iOS SDK de Apple.
+* Alternativos: desarrollados por terceros, como GTK+ o Qt.
+* Multiplataforma: también desarrollado por terceros, algunos disponen de bindings para que se usen en varios sistemas como GTK+ o Qt o nativos al lenguajes como Swing de Java.
 
 En los siguientes apartados destacaremos algunos de los lenguajes y librerías que se utilizan actualmente en estas plataformas.
 
 ##### Aplicaciones móviles
+
 Android tiene como lenguaje oficial para crear sus aplicaciones Java (JVM), lo que hace que este sea uno de los lenguajes más utilizados para el desarrollo en este sistema. Aunque Kotlin, creado por JetBrains es 100% compatible con la JVM y todas las librerías, ha sido nombrado por google lenguaje cooficial aportando además simplicidad en el código.
 
 Por otro lado, las aplicaciones desarrolladas para iOS pueden utilizar Objetive-C o Swift, una alternativa al primero creado por Apple, con mejor rendimiento y totalmente compatible con todos los dispositivos de Apple.
 
 ##### Aplicaciones de escritorio y sistemas embebidos
+
 Este tipo de aplicaciones se suelen desarrollar con Java o C++ generalmente.
 
 Java junto con la librería gráfica Swing que ya viene incluida en su JDK, forman un combo con el que podemos desarrollar este tipo de aplicaciones.
@@ -92,36 +95,42 @@ C++ junto con Qt también son utilizados de forma nativa para crear interfaces g
 
 Python es un lenguaje emergente que se está imponiendo en muchos ámbitos de la programación, entre ellos las aplicaciones de escritorio y sistemas embebidos. Este lenguaje dispone de una comunidad muy grande y activa que desarrolla binding para poder utilizar las librerías gráficas como GTK, Qt y Swing.
 
-#### Videojuegos   
+#### Videojuegos
+
 Los videojuegos son un tipo de aplicación muy demandada en la actualidad, con suficiente entidad como para distinguirlos de los tipos de aplicaciones anteriores.
 
 Uno de los lenguajes más utilizados en este sector es C# junto con la herramienta Unity, que proporciona un editor, un motor para la física 2D y la física 3D, renderizado, animación, audio, etc. Esta potente herramienta no solo se utiliza para el desarrollo de videojuegos, sino para crear experiencias en realidad virtual y cortos animados. Unity además permite la exportación del trabajo a multitud de plataformas, como móviles, videoconsolas, ordenadores, etc.
 
 Otro de los lenguajes más utilizados para este propósito es Java junto con frameworks como LibGDX o JMonkeyEngine y Python con el framework Pygame.
 
-#### Aplicaciones web   
-Aunque en el mundo web los primeros navegadores eran en modo texto y aún siguen existiendo (como Lynx), la web en sí es gráfica. Se suele emplear el término front-end para la parte del cliente, es decir, el entorno gráfico de una aplicación web y back-end para la parte del servidor con la que se gestionan todos los datos. Centrándonos en el front-end, podremos distinguir tres pilares básicos que pasamos a definir a continuación:   
+#### Aplicaciones web
 
-##### Contenido: HTML   
+Aunque en el mundo web los primeros navegadores eran en modo texto y aún siguen existiendo (como Lynx), la web en sí es gráfica. Se suele emplear el término front-end para la parte del cliente, es decir, el entorno gráfico de una aplicación web y back-end para la parte del servidor con la que se gestionan todos los datos. Centrándonos en el front-end, podremos distinguir tres pilares básicos que pasamos a definir a continuación:
+
+##### Contenido: HTML
+
 HTML (Hypertext Markup Languaje) es un lenguaje de marcado o etiquetado, el cual sirve para definir estructuras y contenido en la web. La diferencia con un lenguaje de programación es que no dispone de las variables ni estructuras que afectan al comportamiento como condicionales, bucles etc.
 
 Al igual que otros lenguajes, HTML también ha evolucionado con el paso del tiempo, siendo la versión actual HTML5, que incorpora algunos elementos respecto a su versión anterior que hace que las aplicaciones web sean más diversas y funcionales, añadiendo también semántica a algunos de sus elementos.
 
-Por ejemplo, en HTML5 algunas de las estructuras para definir los elementos gráficos del entorno son:   
-* Radio button: `<input type=”radio”>`   
-* Listas desplegables: `<select><option>...</option>...</select>`   
-* Botón: `<button></button>`    
+Por ejemplo, en HTML5 algunas de las estructuras para definir los elementos gráficos del entorno son:
 
-##### Estilos: CSS   
+* Radio button: `<input type=”radio”>`
+* Listas desplegables: `<select><option>...</option>...</select>`
+* Botón: `<button></button>`
+
+##### Estilos: CSS
+
 CSS (Cascading Style Sheets) es un lenguaje de diseño gráfico que permite personalizar la presentación de un documento escrito en un lenguaje de marcado, como HTML, al cual está muy ligado.
 
 Estos dos lenguajes se almacenan en ficheros alojados en un servidor. Cuando algún cliente como un navegador hace una consulta a una página web, el servidor devuelve estos ficheros y es el navegador, cuando los recibe, el que se encarga de interpretar el contenido de ambos lenguajes para mostrar la página tal y como la vemos.
 
 La versión actual es CSS3, la cual destaca respecto de su versión anterior en incorporar algunos estilos muy demandados por la comunidad como el redondeo de esquinas en los elementos, gradiente, transiciones, animaciones y las Media-Queries, muy populares actualmente para satisfacer la cantidad de tamaños y resoluciones de pantallas en las que una aplicación web puede cargarse (móviles, tablets, pcs, etc) y conseguir un diseño responsivo.
 
-Por último, destacamos Bootstrap, un framework front-end para CSS utilizado en las empresas que se dedican al desarrollo web con el que poder construir interfaces responsivas.   
+Por último, destacamos Bootstrap, un framework front-end para CSS utilizado en las empresas que se dedican al desarrollo web con el que poder construir interfaces responsivas.
 
-##### Lógica: JavaScript   
+##### Lógica: JavaScript
+
 JavaScript es un lenguaje de alto nivel que aporta lógica y dinamismo a la parte front-end de las aplicaciones web, por ejemplo, las acciones que se desencadenan en la aplicación cuando un usuario utiliza un buscador, un formulario, un calendario, etc. Además, juega un papel muy importante a la hora de validar datos antes de enviarlos al servidor, evitando la carga excesiva de este.
 
 La librería jQuery es ámpliamente utilizada en el mundo web ya que a través de ella se simplifica mucho el código nativo que escribimos con JavaScript, por lo que escribiendo el mismo código en jQuery conseguimos el mismo resultado.
@@ -1114,7 +1123,7 @@ fun MainScreen() {
 * `newStudentState: MutableState` el valor de `TextField` es un `State` y todas las variaciones que se produzcan sobre él dispararán la recomposición.
 * Vemos como en las lambdas `onButtonClick` y `onStudentNameChange` se inserta un valor en la lista de estudiantes y se modifica el valor del componente `TextField` respectivamente.
 
-# `ViewModel` y `LiveData`
+# `ViewModel` y `LiveData` (DAM)
 
 ## Introducción a `ViewModel` y `LiveData`
 
@@ -1135,7 +1144,7 @@ El siguiente objetivo es evitar que nuestras vistas (`Fragments` y `Activities`)
 * En resumen, la vista podrá recibir actualizaciones del estado de UI desde el `ViewModel`.
 * En esta arquitectura, la vista no pregunta por el estado de la UI al `ViewModel` continuamente. Tiene la posibilidad de subscribirse al componente `LiveData` dentro de `ViewModel`
 
-![image.png](assets646405734783-image.png)
+![image.png](assets/1646405734783-image.png)
 
 ### `LiveData`
 
@@ -1145,7 +1154,7 @@ El siguiente objetivo es evitar que nuestras vistas (`Fragments` y `Activities`)
 * Si se produce un evento y el `State` relacionado con el componente `LiveData` cambia, los `Fragments` y `Activities` suscritos a él serán notificados al mismo tiempo.
 * `LiveData` está pendiente del ciclo de vida de `Fragments` y `Activities`. Si estos van a un estado `onDestroy` el componente `LiveData` cierra y destruye la conexión con ellos automáticamente.
 
-![image.png](assets646405775503-image.png)
+![image.png](assets/1646405775503-image.png)
 
 ## `State` en `ViewModel`
 
@@ -1592,7 +1601,7 @@ fun AppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() 
 
 Un punto muy importante de esta función es la comprobación sobre si el sistema está en modo oscuro mediante la utilidad  **isSystemInDarkTheme** . Con el uso de esta función, pueden aplicarse paletas de colores distintas si el modo oscuro está activo o no.
 
-# Bibliografía
+# Fuente y Bibliografía
 
 - https://github.com/JetBrains/compose-jb/tree/master/tutorials - Tutorial sobre los principales componentes de **Jetpack Compose Desktop**
 - https://www.tutorialesprogramacionya.com/composeya/ - Conceptos de compose
@@ -1603,5 +1612,3 @@ Un punto muy importante de esta función es la comprobación sobre si el sistema
 - https://medium.com/@facundomr/jetpack-compose-ii-funciones-composable-8d4d1d40ed44 - Funciones @Composables
 - https://medium.com/@facundomr/jetpack-compose-iii-flujo-de-datos-y-eventos-e62d5f8bce6f - Arquitectura de la IU, flujo de informacion y eventos.
 - https://plugins.jetbrains.com/plugin/10942-kotlin-fill-class - Plugin para rellenar los  argumentos de clases, muy util en Jetpack Compose
-
-## Fuente

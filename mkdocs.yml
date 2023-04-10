@@ -61,6 +61,12 @@ nav:
         - '7.3.-Gestión Archivos': 'section1/u07/teoria/PROG-U7.3.-File.md'
         - '7.4.-Lectura/Escritura Archivos': 'section1/u07/teoria/PROG-U7.4.-LecturaEscritura.md'
         - '7.5.-GUI': 'section1/u07/teoria/PROG-U7.5.-GUI.md'
+    - 'U9: Acceso a base de datos relacionales':
+        - 'section1/u09/index.md'
+        - '9.1.-Acceso a BBDD': 'section1/u09/teoria/PROG-U9.1.-AccesoBBDD.md'
+        - '9.2.-JDBC': 'section1/u09/teoria/PROG-U9.2.-JDBC-1.md'
+        - '9.3.-Prepared statement': 'section1/u09/teoria/PROG-U9.3.-JDBC-2.md'
+        - '9.4.-DAO': 'section1/u09/teoria/PROG-U9.4.-DAO.md'
   - 'Entornos de desarrollo':
     - 'section3/index.md'
     - 'U1: Introducción al desarrollo de software':

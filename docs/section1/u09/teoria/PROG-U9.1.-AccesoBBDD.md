@@ -15,15 +15,13 @@ tags:
     - DAO
 ---
 
-## Introducción
-
-### Qué es una base de datos y su importancia en el desarrollo de software.
+## Qué es una base de datos y su importancia en el desarrollo de software.
 
 Una base de datos es un conjunto organizado de información que se almacena y se gestiona en un sistema informático. Está diseñada para almacenar, recuperar y gestionar grandes cantidades de datos de manera eficiente y confiable. Las bases de datos se utilizan en una amplia variedad de aplicaciones informáticas, desde simples aplicaciones de escritorio hasta sistemas empresariales complejos.  Además, las bases de datos permiten que varios usuarios accedan a los mismos datos al mismo tiempo, lo que es especialmente importante en entornos empresariales donde muchos usuarios necesitan acceder a la misma información.
 
 La importancia de las bases de datos en el desarrollo de software radica en que permiten a los desarrolladores crear aplicaciones que pueden manejar grandes cantidades de información de manera eficiente y escalable. Las bases de datos también permiten a los desarrolladores implementar una lógica de negocio más sofisticada, lo que les permite crear aplicaciones más robustas y flexibles.
 
-### El lenguaje de programación Kotlin y su uso en la programación de aplicaciones que acceden a bases de datos.
+## El lenguaje de programación Kotlin y su uso en la programación de aplicaciones que acceden a bases de datos.
 
 En la programación de aplicaciones que acceden a bases de datos, Kotlin al igual que Java, es un lenguaje de programación muy útil, ya que tiene soporte integrado para la conexión y el acceso a bases de datos a través del API JDBC (Java Database Connectivity). Además, Kotlin tiene una sintaxis concisa y expresiva, lo que facilita la creación de código que interactúa con las bases de datos.
 
@@ -99,22 +97,20 @@ Desventajas:
 - La configuración inicial puede ser más compleja que con JDBC.
 
 ## Programar conexiones con bases de datos
-El establecimiento de conexiones con bases de datos es la primera tarea en el desarrollo de aplicaciones con acceso a datos. Para que una aplicación pueda interactuar con una base de datos, primero debe establecer una conexión con ella. Esta operación es una de las mas costosas, y por eso existen varias implementaciones de los llamados pools de conexiones (por ejemplo [HikariCP](https://github.com/brettwooldridge/HikariCP)) que nos permiten optimizar esta tarea.
+El establecimiento de conexiones con bases de datos es la primera tarea en el desarrollo de aplicaciones con acceso a datos. Para que una aplicación pueda interactuar con una base de datos, primero debe establecer una conexión con ella. Esta operación es una de las más costosas, y por eso existen varias implementaciones de los llamados pools de conexiones (por ejemplo [HikariCP](https://github.com/brettwooldridge/HikariCP)) que nos permiten optimizar esta tarea.
 
-En este proceso de conexión, se establecen los detalles de cómo la aplicación accederá a la base de datos, incluyendo:   
-- la dirección de la base de datos, 
-- las credenciales de inicio de sesión 
-- otras opciones de configuración.
-
-En esta sección, se explicará cómo programar una conexión con una base de datos utilizando Kotlin y JDBC. También se demostrará cómo configurar la conexión y manejar errores de conexión para asegurar una experiencia de usuario fluida.
+En esta sección, se explicará cómo programar una conexión con una base de datos utilizando Kotlin y JDBC. También se demostrará cómo configurar la conexión.
 
 ### Establecer y configurar una conexión
 
 Para establecer una conexión con una base de datos utilizando Kotlin y JDBC, se requiere importar la librería JDBC en el proyecto. Luego, se debe cargar el driver JDBC específico para el gestor de base de datos que se va a utilizar, mediante la función `Class.forName("nombre_del_controlador")`. A continuación, se crea una instancia de la clase `Connection` que representa la conexión con la base de datos, mediante la función `DriverManager.getConnection(url, usuario, contraseña)`.
+
 Para configurar la conexión, se deben proporcionar tres parámetros:
 1. la URL de la base de datos, que incluye el nombre del servidor, el puerto y el nombre de la base de datos;
 2. el nombre de usuario para acceder a la base de datos;
 3. la contraseña correspondiente.
+4. otras opciones de configuración.
+
 
 La URL puede variar dependiendo del gestor de base de datos que se esté utilizando y del tipo de conexión (por ejemplo, si se usa SSL o no).
 
@@ -140,85 +136,20 @@ fun main() {
     }
 }
 ```
-### Manejar errores de conexión
 
-Al manejar errores de conexión, es importante tener en cuenta que pueden ocurrir diversas excepciones que indiquen distintos tipos de errores, como falta de conexión con el servidor, credenciales incorrectas, etc. Por lo tanto, se debe utilizar una estructura `try-catch` para manejar estas excepciones. En el ejemplo de código anterior, se utilizan dos bloques catch para manejar las excepciones `SQLException` y `ClassNotFoundException`, que pueden ocurrir al intentar establecer la conexión o cargar el driver JDBC correspondiente. Además, se imprime un mensaje de error para cada una de estas excepciones. En la práctica, es importante identificar las excepciones que pueden ocurrir específicamente para el gestor de base de datos que se esté utilizando, y manejarlas adecuadamente.
+## Almacenar información
+La inserción de registros en una base de datos, cuando estamos programando en un lenguaje orientado a objetos, suele coincidir con la inserción de la información de un objeto en una tabla. 
 
+El proceso mediante el cual se inserta la información de un objeto que represente un registro en la tabla y utilizar el método de inserción de JDBC para agregarlo a la tabla, se puede ver en los siguientes pasos:
 
-Para manejar errores de conexión de una manera más efectiva, podemos utilizar un bloque `try-catch-finally` para asegurarnos de que la conexión se cierre correctamente, incluso si se produce un error al establecer la conexión. Además, podemos lanzar una excepción personalizada en caso de que se produzca un error para informar al usuario del problema. Aquí te presento una ṕosible función para obtener una conexión `getConnection` que utiliza este enfoque:
+1. Crear una clase que represente la tabla y sus columnas.
+2. Crear una instancia de la clase y establecer los valores de las propiedades.
+3. Crear una conexión con la base de datos.
+4. Crear una sentencia `SQL INSERT` que especifique la tabla y los valores a insertar.
+5. Crear el objeto `PreparedStatement` para insertar la instancia en la tabla.
+4. Ejecutar la sentencia SQL utilizando un objeto `PreparedStatement`.
 
-```kotlin
-import java.sql.Connection
-import java.sql.DriverManager
-import java.sql.SQLException
-
-// Datos de conexión a la base de datos
-val url = "jdbc:mysql://localhost:3306/nombre_de_la_base_de_datos"
-val user = "usuario"
-val password = "contraseña"
-
-// Función para establecer la conexión
-fun getConnection(): Connection {
-    var connection: Connection? = null
-    try {
-        connection = DriverManager.getConnection(url, user, password)
-    } catch (e: SQLException) {
-        throw SQLException("Error al establecer la conexión con la base de datos: ${e.message}")
-    } finally {
-        if (connection != null) {
-            try {
-                connection.close()
-            } catch (e: SQLException) {
-                throw SQLException("Error al cerrar la conexión con la base de datos: ${e.message}")
-            }
-        }
-    }
-    return connection
-}
-```
-
-En este ejemplo, utilizamos un bloque `try-catch` para capturar la excepción `SQLException` si se produce un error al establecer la conexión. Si se produce un error, lanzamos una excepción personalizada con un mensaje de error descriptivo para informar al usuario del problema.
-
-En el bloque `finally`, cerramos la conexión utilizando el método `close` y también capturamos la excepción `SQLException` en caso de que se produzca un error al cerrar la conexión.
-
-Con este código, hemos mejorado el manejo de errores de conexión en nuestro programa, lo que nos permite informar al usuario de los problemas que puedan surgir al interactuar con la base de datos.
-
-## Escribir código para almacenar información en bases de datos
-
-Al desarrollar aplicaciones que requieren almacenamiento de datos, es fundamental comprender cómo interactuar con bases de datos para almacenar información de manera efectiva y segura. En este sentido, una de las tareas más importantes es el proceso de escritura de datos en la base de datos.
-
-En este punto, nos centraremos en cómo escribir código para almacenar información en bases de datos utilizando Kotlin y JDBC. Para ello, exploraremos cómo insertar registros en tablas de bases de datos utilizando objetos Java Database Connectivity (JDBC), la cual es una API estándar de Java que proporciona una interfaz para acceder a una variedad de bases de datos relacionales. También veremos cómo manejar errores de inserción y cómo validar los datos antes de guardarlos en la base de datos.
-
-### Explicar cómo insertar registros en una tabla de la base de datos utilizando Kotlin y JDBC
-
-Para insertar registros en una tabla de la base de datos utilizando Kotlin y JDBC, se debe seguir los siguientes pasos:
-
-Crear una conexión con la base de datos.
-Crear una sentencia SQL INSERT que especifique la tabla y los valores a insertar.
-Ejecutar la sentencia SQL utilizando un objeto PreparedStatement.
-A continuación se muestra un ejemplo de cómo insertar un registro en una tabla utilizando Kotlin y JDBC:
-
-```Kotlin
-val conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabase", "username", "password")
-val stmt = conn.prepareStatement("INSERT INTO mytable (column1, column2, column3) VALUES (?, ?, ?)")
-stmt.setString(1, "value1")
-stmt.setInt(2, 2)
-stmt.setDouble(3, 3.14)
-stmt.executeUpdate()
-```
-
-En este ejemplo, se crea una conexión con la base de datos utilizando el método `DriverManager.getConnection`. Luego, se crea una sentencia `SQL INSERT` utilizando un objeto `PreparedStatement`. Se utilizan los métodos `setString`, `setInt` y `setDouble` para especificar los valores a insertar en las columnas de la tabla. Finalmente, se ejecuta la sentencia utilizando el método `executeUpdate`.
-
-
-### Utilizar JDBC para inserción en tablas
-
-Para crear un objeto que represente un registro en la tabla y utilizar el método de inserción de JDBC para agregarlo a la tabla, se puede seguir los siguientes pasos:
-
-- Crear una clase que represente la tabla y sus columnas.
-- Crear una instancia de la clase y establecer los valores de las propiedades.
-- Utilizar un objeto PreparedStatement para insertar la instancia en la tabla.
-
-A continuación se muestra un ejemplo de cómo insertar un registro en una tabla `mytable``utilizando un objeto instanciado de la clase `MyTable` que representa la tabla:
+A continuación se muestra un ejemplo de cómo insertar un registro en una tabla `mytable` utilizando un objeto instanciado de la clase `MyTable` que representa la tabla:
 
 ```Kotlin
 
@@ -237,64 +168,21 @@ stmt.executeUpdate()
 
 ```
 
-En este ejemplo, se crea una clase `MyTable` que representa la tabla y sus columnas. Se crea una instancia de la clase y se establecen los valores de las propiedades. Luego, se utiliza un objeto `PreparedStatement` para insertar la instancia en la tabla utilizando los métodos `setString`, `setInt` y `setDouble`.
+En este ejemplo, se crea una conexión con la base de datos utilizando el método `DriverManager.getConnection`. Luego, se crea una sentencia `SQL INSERT` utilizando un objeto `PreparedStatement`. Se crea una clase `MyTable` que representa la tabla y sus columnas, se crea una instancia de la clase . Se utiliza un objeto `PreparedStatement` para especificar los valores a insertar en las columnas de la tabla usando los métodos `setString`, `setInt` y `setDouble`. Finalmente, se ejecuta la sentencia utilizando el método `executeUpdate`.
 
-### Manejo de errores en la inserción
-
-Es importante manejar los errores de inserción de datos en una base de datos para garantizar la integridad de la información. Para manejar estos errores en Kotlin y JDBC, podemos utilizar bloques `try-catch`.
-
-Cuando intentamos insertar un registro en una tabla y se produce un error, JDBC lanzará una excepción `SQLException`. Podemos capturar esta excepción con un bloque `try-catch` y tomar las medidas adecuadas según el tipo de error.
-
-Por ejemplo, si estamos insertando un registro en una tabla que tiene una restricción de clave primaria y el registro que estamos intentando insertar ya existe en la tabla, JDBC lanzará una `SQLException` indicando que se viola la restricción de clave primaria. En este caso, podemos capturar la excepción y mostrar un mensaje al usuario informándole del error y pidiéndole que modifique los datos del registro.
-
-Un ejemplo de manejo de errores de inserción en Kotlin y JDBC podría ser el siguiente:
-
-```kotlin
-
-try {
-    val statement = connection.createStatement()
-    val query = "INSERT INTO customers (name, email) VALUES ('John Doe', 'johndoe@email.com')"
-    statement.executeUpdate(query)
-} catch (e: SQLException) {
-    when (e.errorCode) {
-        1062 -> {
-            // Violation of unique key constraint
-            println("Error: The email address is already registered.")
-        }
-        else -> {
-            // Other SQL exceptions
-            println("Error: ${e.message}")
-        }
-    }
-}
-```
-
-En este ejemplo, estamos insertando un registro en la tabla `customers` con los valores `John Doe` y `johndoe@email.com`. Si se produce un error durante la inserción, capturamos la excepción `SQLException` y comprobamos el código de error devuelto por la base de datos.
-
-Si el código de error es `1062`, significa que se ha violado una restricción de clave única, en este caso, la restricción de correo electrónico único. Mostramos un mensaje de error indicando que el correo electrónico ya está registrado. Estos códigos de error son especificos de cada DBMS, por tanto hay que consultar la documetnación del motor de base de datos para identificar los posibles códigos de error.
-
-Si se produce cualquier otro tipo de excepción, mostramos un mensaje genérico con el mensaje de error devuelto por la base de datos.
-
-En resumen, es importante manejar adecuadamente los errores de inserción de datos en una base de datos para garantizar la integridad de la información. Podemos utilizar bloques try-catch en Kotlin y JDBC para capturar y manejar estas excepciones de forma adecuada.
-
-# Crear programas para recuperar y mostrar información almacenada en bases de datos.
+## Recuperar y mostrar información.   
 En el desarrollo de aplicaciones, es común necesitar recuperar y mostrar información almacenada en una base de datos. Para ello, se requiere conocer las técnicas y herramientas necesarias para conectarse a la base de datos, ejecutar consultas SQL y mapear los resultados a objetos en el lenguaje de programación utilizado.
 
-En este punto, nos enfocaremos en cómo crear programas en Kotlin para recuperar información almacenada en bases de datos relacionales utilizando JDBC. Explicaremos cómo ejecutar consultas SQL y mapear los resultados a objetos Kotlin para que puedan ser mostrados al usuario. Además, también hablaremos sobre cómo manejar errores y excepciones que puedan surgir durante el proceso.
+En este punto, nos enfocaremos en cómo crear programas en Kotlin, aspecto que no difiere de como se hace en java, para recuperar información almacenada en bases de datos relacionales utilizando JDBC. Explicaremos cómo ejecutar consultas SQL y mapear los resultados a objetos Kotlin para que puedan ser mostrados al usuario. Además, también hablaremos sobre cómo manejar errores y excepciones que puedan surgir durante el proceso.
 
-¡Comencemos!
-
-### Recuperar registros de una tabla de la base de datos utilizando Kotlin y JDBC.
-
-Para recuperar registros de una tabla de la base de datos utilizando Kotlin y JDBC, necesitamos ejecutar una consulta SQL que seleccione los registros que deseamos recuperar. Esta consulta se puede ejecutar mediante un objeto Statement de JDBC, que se crea a partir de la conexión a la base de datos:
+### Recuperar registros de la base de datos.   
+Para recuperar registros de una tabla de la base de datos utilizando Kotlin y JDBC, necesitamos ejecutar una consulta SQL que seleccione los registros que deseamos recuperar. Esta consulta se puede ejecutar mediante un objeto `Statement` de JDBC, que se crea a partir de la conexión a la base de datos:
 
 ```kotlin
 val statement = connection.createStatement()
-val query = "SELECT * FROM mi_tabla"
+val query = "SELECT id, nombre, email FROM usuario"
 val resultSet = statement.executeQuery(query)
 ```
-
-### Utilizar una consulta SQL para recuperar registros y cómo mapear los resultados a objetos en Kotlin.
 
 Una vez que tenemos los resultados de la consulta en un objeto `ResultSet`, podemos mapearlos a objetos en Kotlin. Para hacer esto, necesitamos iterar sobre los resultados y crear un objeto para cada registro. Por ejemplo, si tenemos una tabla usuarios con columnas `id`, `nombre` y `email`, podemos crear una clase `Usuario` en Kotlin y mapear cada registro de la siguiente manera:
 
@@ -311,45 +199,29 @@ while (resultSet.next()) {
 
 ```
 
-### Mostrar los resultados al usuario.
-
-
+### Mostrar los resultados al usuario.   
 A la hora de trabajar con la información y mostrarla al usuario final, es importante tener en cuenta la sensibilidad de la información almacenada en la base de datos y asegurarnos de cumplir con las normas de privacidad y seguridad de la información.
 
 Para mostrar los resultados al usuario, podemos imprimirlos en la consola, mostrarlos en una interfaz de usuario o hacer cualquier otra cosa que queramos con ellos, dependiendo del tipo de aplicación que estemos desarrollando y de las necesidades del usuario. Algunas opciones comunes incluyen:
 
-Mostrar los resultados en una tabla: podemos crear una tabla en la interfaz de usuario de nuestra aplicación y agregar cada registro como una fila en la tabla. Esto permite al usuario ver todos los datos de una manera clara y ordenada.
+- Mostrar los resultados en una tabla: podemos crear una tabla en la interfaz de usuario de nuestra aplicación y agregar cada registro como una fila en la tabla. Esto permite al usuario ver todos los datos de una manera clara y ordenada.
+- Mostrar los resultados en una lista: si la cantidad de registros es pequeña, podemos mostrarlos en una lista simple. Esto es especialmente útil si solo necesitamos mostrar algunos datos de cada registro, como el nombre y la fecha.
+- Mostrar los resultados en un gráfico: si los datos son numéricos, podemos mostrarlos en un gráfico para que el usuario pueda ver visualmente las tendencias y las comparaciones entre los registros.
 
-Mostrar los resultados en una lista: si la cantidad de registros es pequeña, podemos mostrarlos en una lista simple. Esto es especialmente útil si solo necesitamos mostrar algunos datos de cada registro, como el nombre y la fecha.
-
-Mostrar los resultados en un gráfico: si los datos son numéricos, podemos mostrarlos en un gráfico para que el usuario pueda ver visualmente las tendencias y las comparaciones entre los registros.
-
-Por ejemplo, podemos imprimir los nombres de los usuarios de la siguiente manera.
-
-```kotlin
-for (usuario in usuarios) {
-    println(usuario.nombre)
-}
-```
-
-En resumen, debemos elegir la forma de mostrar los resultados que mejor se adapte a las necesidades de nuestros usuarios y al tipo de aplicación que estamos desarrollando. Es importante que la presentación de los datos sea clara y fácil de entender para que los usuarios puedan interactuar con ellos de manera efectiva.
-
-
-## Efectuar borrados y modificaciones sobre la información almacenada.
-
+## Borrar y modificar la información almacenada.   
 En el desarrollo de aplicaciones, es muy común la necesidad de modificar o eliminar información almacenada en una base de datos. Para ello, es necesario contar con los conocimientos y herramientas adecuadas para realizar estas operaciones de manera segura y eficiente.
 
 En este sentido, el lenguaje de programación Kotlin y la API JDBC ofrecen una serie de funcionalidades para llevar a cabo operaciones de modificación y eliminación en bases de datos relacionales. Es importante conocer cómo funcionan estos métodos para poder implementarlos correctamente en nuestras aplicaciones y evitar errores o problemas de seguridad en el manejo de la información almacenada.
 
-En este apartado se abordarán los aspectos fundamentales de la realización de modificaciones y eliminaciones en una base de datos, desde la ejecución de consultas SQL hasta la gestión de errores en caso de que surjan problemas durante la operación.
+En este apartado se abordarán los aspectos fundamentales de la realización de modificaciones y eliminaciones en una base de datos.
 
-### Eliminar registros de una tabla de la base de datos utilizando Kotlin y JDBC.
-Para eliminar registros de una tabla en una base de datos utilizando Kotlin y JDBC, es necesario construir y ejecutar una consulta SQL de eliminación. Por ejemplo, si queremos eliminar un registro de la tabla `usuarios` que tenga un cierto identificador único, la consulta SQL podría ser algo como:
+### Eliminar registros.
+Para eliminar registros de una tabla en una base de datos utilizando Kotlin y JDBC, es necesario construir y ejecutar una consulta SQL de eliminación. Por ejemplo, si queremos eliminar un registro de la tabla `usuarios` que tenga un cierto identificador único. Hay que tener cuidado con la cláusula `WHERE`, ya que podemos tener un problema si no se establece adecuadamente. La consulta SQL podría ser algo como:
 
 ```Kotlin
 DELETE FROM usuarios WHERE id = ?
 ```
-Luego, en Kotlin, podemos crear una conexión a la base de datos y ejecutar la consulta utilizando la interfaz ```PreparedStatement``` de JDBC, como se explicó en puntos anteriores. La diferencia aquí es que en lugar de utilizar un método `executeQuery()`, utilizaremos el método `executeUpdate()` que indica que estamos realizando una operación de actualización. Además, deberemos proporcionar el valor del identificador único como parámetro en el objeto `PreparedStatement`.
+Luego, en Kotlin, podemos crear una conexión a la base de datos y ejecutar la consulta utilizando la interfaz `PreparedStatement` de JDBC, como se explicó en puntos anteriores. La diferencia aquí es que en lugar de utilizar un método `executeQuery()`, utilizaremos el método `executeUpdate()` que indica que estamos realizando una operación de actualización. Además, deberemos proporcionar el valor del identificador único como parámetro en el objeto `PreparedStatement`.
 
 ```Kotlin
 val id = 1
@@ -358,57 +230,12 @@ val preparedStatement = connection.prepareStatement(query)
 preparedStatement.setInt(1, id)
 val rowsDeleted = preparedStatement.executeUpdate()
 ```
+Estas operaciones tienen la clave en la sintaxis correcta de la consulta SQL y en la configuración correcta de los parámetros en el objeto `PreparedStatement`. Una vez que se tiene la conexión a la base de datos, se puede crear un objeto `PreparedStatement` con la consulta SQL y los parámetros correspondientes. Luego, se utiliza el método `executeUpdate()` para ejecutar la consulta y eliminar los registros. 
 
-El método `executeUpdate()` devuelve la cantidad de filas afectadas por la consulta, que en este caso debería ser `1` si se encontró y eliminó el registro correspondiente.
+Por último, siempre será importante comprobar el resultado de la ejecución del método`executeUpdate()` y hacer el tratamiento que se estime oporturno en función del resultado obtenido. Por ejemplo, en este caso, el método `executeUpdate()` devuelve la cantidad de filas afectadas por la sentencia ejecutada, que en este caso debería ser `1` si se encontró y eliminó el registro correspondiente.
 
-### Utilizar una consulta SQL para eliminar registros.
-
-Para demostrar cómo utilizar una consulta SQL para eliminar registros, el ejemplo anterior ya proporciona la solución. La clave está en la sintaxis correcta de la consulta SQL y en la configuración correcta de los parámetros en el objeto `PreparedStatement`. Una vez que se tiene la conexión a la base de datos, se puede crear un objeto `PreparedStatement` con la consulta SQL y los parámetros correspondientes. Luego, se utiliza el método `executeUpdate()` para ejecutar la consulta y eliminar los registros. No hay que olvidar comprobar el valor devuelto por el método `executeUpdate()`, como veremos ahora.
-
-### Describir cómo manejar errores de eliminación.
-Para manejar errores de eliminación, podemos utilizar las mismas técnicas que se describieron para manejar errores de inserción. Es importante tener en cuenta que si se intenta eliminar un registro que no existe, la consulta SQL no afectará ninguna fila y el método `executeUpdate()` devolverá `0`. Por lo tanto, es una buena práctica verificar el valor devuelto por este método y manejar el caso en el que se intenta eliminar un registro que no existe.
-
-Un ejemplo completo podría ser:
-```kotlin
-//Eliminar un registro de la tabla
-try {
-    // Crear la conexión
-    val connection = DriverManager.getConnection(url, user, password)
-
-    // Crear la sentencia SQL para eliminar el registro
-    val sql = "DELETE FROM usuarios WHERE id = ?"
-
-    // Crear el objeto PreparedStatement y establecer el valor del parámetro
-    val statement = connection.prepareStatement(sql)
-    statement.setInt(1, 1)
-
-    // Ejecutar la sentencia y obtener el número de registros eliminados
-    val rowsDeleted = statement.executeUpdate()
-
-    // Comprobar si se ha eliminado el registro correctamente
-    if (rowsDeleted > 0) {
-        println("El usuario ha sido eliminado correctamente.")
-    } else {
-        println("No se ha eliminado ningún usuario.")
-    }
-
-    // Cerrar la conexión
-    statement.close()
-    connection.close()
-
-} catch (e: SQLException) {
-    println("Se ha producido un error al intentar eliminar el usuario.")
-    println("Mensaje de error: ${e.message}")
-}
-
-```
-
-En este ejemplo, se utiliza un bloque `try-catch` para manejar cualquier excepción de SQL que pueda ocurrir al intentar eliminar un registro de la tabla usuarios. Dentro del bloque `try`, se establece la conexión con la base de datos, se crea una sentencia SQL para eliminar el registro con `id` `1` y se crea un objeto `PreparedStatement` para ejecutar la sentencia. A continuación, se utiliza la función `executeUpdate()` para eliminar el registro y se obtiene el número de registros eliminados. Si se ha eliminado el registro correctamente, se muestra un mensaje indicando que el registro ha sido eliminado. De lo contrario, se muestra un mensaje indicando que no se ha eliminado ningún registro. Finalmente, se cierra la conexión y se maneja cualquier excepción de SQL que pueda ocurrir en el bloque `catch`.
-
-
-### Actualizar registros de una tabla de la base de datos utilizando Kotlin y JDBC.
-
-Para actualizar registros en una tabla de la base de datos utilizando Kotlin y JDBC, primero es necesario establecer una conexión a la base de datos y crear una declaración SQL que actualice los campos necesarios. La declaración SQL debe incluir la cláusula "WHERE" para identificar los registros que se deben actualizar.
+### Actualizar registros.
+Para actualizar registros en una tabla de la base de datos utilizando Kotlin y JDBC, primero es necesario establecer una conexión a la base de datos y crear una declaración SQL que actualice los campos necesarios. La declaración SQL debe incluir la cláusula `WHERE` para identificar los registros que se deben actualizar.
 
 Por ejemplo, si tenemos una tabla llamada `usuarios` con los campos `nombre`, `apellido` y `email`, y queremos actualizar el email de un usuario en particular, podemos crear una declaración SQL como la siguiente:
 
@@ -424,9 +251,9 @@ val statement = connection.createStatement()
 val updateCount = statement.executeUpdate(sql)
 ```
 
-### Demostrar cómo utilizar una consulta SQL para actualizar registros.
+Como comentamos anteriormente, el método `executeUpdate()` devuelve la cantidad de filas afectadas por la sentencia ejecutada, que en este caso debería ser `1` si se encontró y actualizó el registro correspondiente. Siempre será importante comprobar el resultado de la ejecución del método`executeUpdate()` y hacer el tratamiento que se estime oporturno en función del resultado obtenido.
 
-Para demostrar cómo utilizar una consulta SQL para actualizar registros, podemos utilizar un ejemplo similar al anterior. Supongamos que queremos actualizar un registro en la tabla `users` de la base de datos utilizando Kotlin y JDBC:
+Para realizar un ejemplo más completo de cómo utilizar una consulta SQL para actualizar registros. Supongamos que queremos actualizar un registro en la tabla `users`:
 
 ```kotlin
 // Establecer una conexión con la base de datos
@@ -457,35 +284,17 @@ if (rowsUpdated > 0) {
 }
 
 // Cerrar la conexión a la base de datos
+statement.close()
 connection.close()
 ```
 
-En este ejemplo, primero se establece una conexión con la base de datos utilizando los detalles de conexión adecuados. Luego, se crea una consulta SQL para actualizar el nombre del usuario con `id = 1` en la tabla `users`. Se crea un objeto que representa el valor actualizado para el nombre y se utiliza el método `prepareStatement` de la conexión para crear un objeto `PreparedStatement`. Luego, se establecen los valores de los parámetros de la consulta utilizando los métodos set correspondientes de la clase `PreparedStatement` y se ejecuta la consulta utilizando el método `executeUpdate` de la clase `PreparedStatement`. Se verifica si se ha actualizado algún registro y se cierra la conexión a la base de datos.
+En este ejemplo, primero se establece una conexión con la base de datos utilizando los detalles de conexión adecuados. Luego, se crea una consulta SQL para actualizar el nombre del usuario con `id = 1` en la tabla `users`. Sobre el objeto conexión se utiliza el método `prepareStatement` para crear un objeto `PreparedStatement`. Luego, se establecen los valores de los parámetros de la consulta utilizando los métodos set correspondientes de la clase `PreparedStatement` y se ejecuta la consulta utilizando el método `executeUpdate` de la clase `PreparedStatement`. Se verifica si se ha actualizado algún registro y se la sentencia y la conexión a la base de datos.
 
+## Consulta de información almacenada.
 
+Al desarrollar una aplicación que requiere acceder y manipular datos almacenados en una base de datos, es común que necesitemos realizar consultas más complejas para obtener la información requerida. Las consultas pueden involucrar operadores lógicos para filtrar resultados y funciones de agregación para realizar cálculos en los datos. Es importante que los programadores tengan conocimientos sólidos en la creación y ejecución de consultas SQL utilizando JDBC en Kotlin para obtener resultados precisos y eficientes. En esta sección, se explicará cómo crear consultas más complejas utilizando Kotlin y JDBC y se demostrará cómo utilizar operadores lógicos y funciones de agregación en las consultas SQL.
 
-### Manejar errores de actualización.
-
-Al igual que en el caso de la eliminación de registros, es importante manejar correctamente los errores que puedan surgir al actualizar registros en una base de datos. Algunos de los errores más comunes son la falta de permisos para realizar la actualización, el incumplimiento de restricciones de integridad referencial o de validación, o la falta de conexión a la base de datos.
-
-Para manejar estos errores, se puede utilizar un bloque `try-catch` que capture las excepciones de tipo `SQLException` que puedan surgir al ejecutar la actualización.
-
-```kotlin
-try {
-    val statement = connection.createStatement()
-    val updateCount = statement.executeUpdate(sql)
-} catch (e: SQLException) {
-    // Manejar la excepción de forma adecuada
-}
-```
-Dentro del bloque `catch`, se puede proporcionar información sobre el error al usuario o registrar el error en un archivo de registro para su posterior análisis. Es importante asegurarse de que el usuario sea informado adecuadamente sobre los errores que puedan ocurrir durante la actualización de registros.
-
-
-## Crear aplicaciones que ejecuten consultas sobre bases de datos
-
-Al desarrollar una aplicación que requiere acceder y manipular datos almacenados en una base de datos, es común que necesitemos realizar consultas más complejas para obtener la información requerida. Las consultas pueden involucrar operadores lógicos para filtrar resultados y funciones de agregación para realizar cálculos en los datos. Es importante que los programadores tengan conocimientos sólidos en la creación y ejecución de consultas SQL utilizando JDBC en Kotlin para obtener resultados precisos y eficientes. Además, es fundamental saber cómo manejar errores durante la ejecución de las consultas para evitar errores en tiempo de ejecución o vulnerabilidades en la seguridad de la aplicación. En esta sección, se explicará cómo crear consultas más complejas utilizando Kotlin y JDBC, se demostrará cómo utilizar operadores lógicos y funciones de agregación en las consultas SQL, y se describirá cómo manejar errores en las consultas.
-
-### Crear consultas más complejas utilizando Kotlin y JDBC.
+### Consultas complejas.
 Para crear consultas más complejas utilizando Kotlin y JDBC, se pueden concatenar distintas cláusulas de SQL en una sola sentencia. Por ejemplo, para realizar una consulta que seleccione registros de una tabla que cumplan ciertas condiciones y los ordene por un campo en particular, se puede utilizar la siguiente sintaxis:
 
 ```kotlin
@@ -496,44 +305,18 @@ val resultSet = statement.executeQuery(query)
 En este ejemplo, `tabla` es el nombre de la tabla que se desea consultar, `condicion` es una expresión que define las condiciones que deben cumplir los registros seleccionados, y `campo` es el nombre del campo por el cual se deben ordenar los resultados. La consulta se ejecuta mediante el método `executeQuery()` del objeto `Statement`.
 
 
-### Utilizar operadores lógicos y funciones de agregación en las consultas SQL.
+### Utilizar operadores lógicos y funciones de agregación en las consultas.
 
 Para utilizar operadores lógicos y funciones de agregación en las consultas SQL, se puede utilizar la sintaxis estándar de SQL en la cadena de consulta. Por ejemplo, para realizar una consulta que seleccione registros de una tabla que cumplan ciertas condiciones y calcule la suma de los valores de un campo en particular, se puede utilizar la siguiente sintaxis:
 
-```kotlin
-val query = "SELECT SUM(campo) FROM tabla WHERE condicion"
-val statement = connection.createStatement()
-val resultSet = statement.executeQuery(query)
-```
+Supongamos que tenemos una tabla llamada "ventas" que contiene información sobre las ventas realizadas en una tienda, con las siguientes columnas:
 
-En este ejemplo, `SUM` es una función de agregación que se utiliza para calcular la suma de los valores de un `campo` en particular, y `condicion` es una expresión que define las condiciones que deben cumplir los registros seleccionados. La consulta se ejecuta mediante el método `executeQuery()` del objeto `Statement`.
+- `id`: identificador único de la venta.
+- `fecha`: fecha en que se realizó la venta.
+- `monto`: monto total de la venta.
+- `tipo`: tipo de venta, puede ser "efectivo" o "tarjeta".
+- `sucursal`: sucursal en la que se realizó la venta.
 
-
-### Manejar errores en las consultas
-Para manejar errores en las consultas, se pueden utilizar estructuras de control de flujo como `try-catch`. Por ejemplo, si se produce un error al ejecutar una consulta, se puede capturar la excepción correspondiente y tomar medidas para manejarla adecuadamente. Por ejemplo:
-
-```kotlin
-try {
-    val query = "SELECT * FROM tabla WHERE condicion"
-    val statement = connection.createStatement()
-    val resultSet = statement.executeQuery(query)
-    // procesar resultados
-} catch (e: SQLException) {
-    // manejar el error
-    println("Error al ejecutar la consulta: ${e.message}")
-}
-```
-En este ejemplo, se utiliza un bloque `try-catch` para capturar excepciones del tipo `SQLException`, que se producen cuando hay un error al ejecutar una consulta. Si se produce un error, se muestra un mensaje de error en la consola.
-
-### Un ejemplo más completo
-
-En este ejemplo vamos a mostrar cómo utilizar operadores lógicos y funciones de agregación en una consulta SQL utilizando Kotlin y JDBC. En este ejemplo, supongamos que tenemos una tabla llamada "ventas" que contiene información sobre las ventas realizadas en una tienda, con las siguientes columnas:
-
-id: identificador único de la venta.
-fecha: fecha en que se realizó la venta.
-monto: monto total de la venta.
-tipo: tipo de venta, puede ser "efectivo" o "tarjeta".
-sucursal: sucursal en la que se realizó la venta.
 Supongamos que queremos obtener el monto total de las ventas realizadas en la sucursal "A" durante el mes de enero, y que fueron pagadas con tarjeta de crédito. Para hacer esto, podemos utilizar una consulta SQL con operadores lógicos y funciones de agregación, de la siguiente manera:
 
 ```kotlin
@@ -559,11 +342,16 @@ En este ejemplo, la consulta SQL utiliza el operador lógico `AND` para combinar
 
 Si la consulta se ejecuta correctamente, el resultado se muestra por consola. Si ocurre un error, se muestra un mensaje de error.
 
+## Crear aplicaciones para posibilitar la gestión de información
+Al desarrollar aplicaciones que requieren almacenamiento de datos, es fundamental comprender cómo interactuar con bases de datos para almacenar información de manera efectiva y segura.
 
-## Crear aplicaciones para posibilitar la gestión de información presente en bases de datos relacionales
+Un ejemplo de aplicación que permite la gestión de información en una base de datos podría ser un sistema de gestión de inventario para una tienda. La interfaz de usuario podría permitir al usuario agregar nuevos productos al inventario, actualizar la información de los productos existentes, eliminar productos, y realizar consultas para buscar productos por nombre, categoría, precio, etc.
 
+Para implementar estas funcionalidades, se podría utilizar JDBC para establecer la conexión con la base de datos y ejecutar consultas SQL para agregar, actualizar o eliminar registros. Además, se podría utilizar una librería de UI como JavaFX para diseñar la interfaz de usuario y permitir al usuario interactuar con la base de datos de manera sencilla y visual.
 
-### Diseñar una interfaz de usuario para permitir la gestión de información en una base de datos.
+Para manejar errores en la aplicación, se podría implementar validaciones en la interfaz de usuario para asegurarse de que los datos ingresados por el usuario son correctos y cumplen con las restricciones de la base de datos. Además, se podrían implementar mecanismos de manejo de excepciones en el código para manejar errores que puedan surgir durante la ejecución de consultas o actualizaciones en la base de datos.
+
+### Gestión de información.
 
 Para crear aplicaciones que permitan la gestión de información en una base de datos, es necesario diseñar una interfaz de usuario que permita al usuario interactuar con la base de datos de manera intuitiva y eficiente. La interfaz debe permitir realizar operaciones básicas como crear, leer, actualizar y eliminar registros.
 
@@ -573,7 +361,7 @@ CRUD es un acrónimo que se utiliza para describir las cuatro operaciones básic
 
 Por lo tanto, al crear una aplicación para la gestión de la información presente en bases de datos relacionales, es común que se implementen estas cuatro operaciones CRUD para permitir al usuario realizar acciones como crear nuevos registros, leer la información almacenada, actualizar registros existentes o eliminar datos no deseados. A través de una interfaz de usuario adecuada, estas operaciones se pueden realizar de manera sencilla y eficiente, lo que mejora la experiencia del usuario y facilita la gestión de la información en la base de datos.
 
-### Como crear un CRUD para gestionqr la información
+### Un CRUD para gestionar la información
 
 Las operaciones del CRUD son fundamentales en la mayoría de las aplicaciones de gestión de bases de datos, ya que permiten al usuario interactuar con los datos de una manera intuitiva y eficiente. Un ejemplo de un CRUD para gestionar el acceso a una tabla `users`
 
@@ -750,17 +538,137 @@ La función `deleteRecord()` se utiliza para eliminar un registro existente en l
 deleteRecord(1)
 ```
 
-### Describir cómo manejar errores en la aplicación.
+### Manejar los errores.
 
-Para manejar errores en la aplicación, es importante validar los datos ingresados por el usuario y verificar que cumplan con los requisitos de la base de datos, como el tipo de datos y las restricciones de integridad. Además, se deben manejar adecuadamente los errores que puedan surgir durante la ejecución de consultas o actualizaciones en la base de datos.
+> You should explicitly close `Statements`, `ResultSets`, and `Connections` when you no longer need them,
 
-Un ejemplo de aplicación que permite la gestión de información en una base de datos podría ser un sistema de gestión de inventario para una tienda. La interfaz de usuario podría permitir al usuario agregar nuevos productos al inventario, actualizar la información de los productos existentes, eliminar productos, y realizar consultas para buscar productos por nombre, categoría, precio, etc.
+Al trabajar con JDBC es importante tener en cuenta que pueden ocurrir diversas excepciones durante todo el proceso de establecimiento de conexión, ejecución de sentencia, recuperación de resultados, etc, y que indicarán distintos tipos de errores, como falta de conexión con el servidor, credenciales incorrectas, error de tipos, errores propios de base de datos por inconsistencias, etc. Por lo tanto, se debe utilizar una estructura `try-catch` para manejar estas excepciones. En los ejemplos anteriores se han podido ver como se han utilizado estos bloques try-catch para encerrar las operaciones relacionadas con JDBC. Por ejemplo,
+> 
+#### Manejar errores de conexión
 
-Para implementar estas funcionalidades, se podría utilizar JDBC para establecer la conexión con la base de datos y ejecutar consultas SQL para agregar, actualizar o eliminar registros. Además, se podría utilizar una librería de UI como JavaFX para diseñar la interfaz de usuario y permitir al usuario interactuar con la base de datos de manera sencilla y visual.
+Para manajar los posibles errores que se puedan producir al realizar la conexión tendremos que manejar las excepciones `SQLException` y `ClassNotFoundException`, que pueden ocurrir al intentar establecer la conexión o cargar el driver JDBC correspondiente. Además, se imprime un mensaje de error para cada una de estas excepciones. En la práctica, es importante identificar las excepciones que pueden ocurrir específicamente para el gestor de base de datos que se esté utilizando, y manejarlas adecuadamente.
 
-Para manejar errores en la aplicación, se podría implementar validaciones en la interfaz de usuario para asegurarse de que los datos ingresados por el usuario son correctos y cumplen con las restricciones de la base de datos. Además, se podrían implementar mecanismos de manejo de excepciones en el código para manejar errores que puedan surgir durante la ejecución de consultas o actualizaciones en la base de datos.
+Para manejar errores de conexión de una manera más efectiva, podemos utilizar un bloque `try-catch-finally` para asegurarnos de `Statements`, `ResultSets`, y `Connections` se cierre correctamente, incluso si se produce un error al establecer la conexión. Además, podemos lanzar una excepción personalizada en caso de que se produzca un error para informar al usuario del problema. Aquí te presento una ṕosible función para obtener una conexión `getConnection` que utiliza este enfoque:
 
-### Gestionar información aplicando patrón DAO
+```kotlin
+import java.sql.Connection
+import java.sql.DriverManager
+import java.sql.SQLException
+
+// Datos de conexión a la base de datos
+val url = "jdbc:mysql://localhost:3306/nombre_de_la_base_de_datos"
+val user = "usuario"
+val password = "contraseña"
+
+// Función para establecer la conexión
+fun getConnection(): Connection {
+    var connection: Connection? = null
+    try {
+        connection = DriverManager.getConnection(url, user, password)
+    } catch (e: SQLException) {
+        throw SQLException("Error al establecer la conexión con la base de datos: ${e.message}")
+    } finally {
+        if (connection != null) {
+            try {
+                connection.close()
+            } catch (e: SQLException) {
+                throw SQLException("Error al cerrar la conexión con la base de datos: ${e.message}")
+            }
+        }
+    }
+    return connection
+}
+```
+
+En este ejemplo, utilizamos un bloque `try-catch` para capturar la excepción `SQLException` si se produce un error al establecer la conexión. Si se produce un error, lanzamos una excepción personalizada con un mensaje de error descriptivo para informar al usuario del problema.
+
+En el bloque `finally`, cerramos la conexión utilizando el método `close` y también capturamos la excepción `SQLException` en caso de que se produzca un error al cerrar la conexión.
+
+Con este código, hemos mejorado el manejo de errores de conexión en nuestro programa, lo que nos permite informar al usuario de los problemas que puedan surgir al interactuar con la base de datos.
+
+#### Manejo de errores en la inserción
+
+Es importante manejar los errores de inserción de datos en una base de datos para garantizar la integridad de la información. Para manejar estos errores en Kotlin y JDBC, podemos utilizar bloques `try-catch`.
+
+Por ejemplo, si estamos insertando un registro en una tabla que tiene una restricción de clave primaria y el registro que estamos intentando insertar ya existe en la tabla, JDBC lanzará una `SQLException` indicando que se viola la restricción de clave primaria. En este caso, podemos capturar la excepción y mostrar un mensaje al usuario informándole del error y pidiéndole que modifique los datos del registro.
+
+Un ejemplo de manejo de errores de inserción en Kotlin y JDBC podría ser el siguiente:
+
+```kotlin
+
+try {
+    val statement = connection.createStatement()
+    val query = "INSERT INTO customers (name, email) VALUES ('John Doe', 'johndoe@email.com')"
+    statement.executeUpdate(query)
+} catch (e: SQLException) {
+    when (e.errorCode) {
+        1062 -> {
+            // Violation of unique key constraint
+            println("Error: The email address is already registered.")
+        }
+        else -> {
+            // Other SQL exceptions
+            println("Error: ${e.message}")
+        }
+    }
+}
+```
+
+En este ejemplo, estamos insertando un registro en la tabla `customers` con los valores `John Doe` y `johndoe@email.com`. Si se produce un error durante la inserción, capturamos la excepción `SQLException` y comprobamos el código de error devuelto por la base de datos.
+
+Si el código de error es `1062`, significa que se ha violado una restricción de clave única, en este caso, la restricción de correo electrónico único. Mostramos un mensaje de error indicando que el correo electrónico ya está registrado. Estos códigos de error son especificos de cada DBMS, por tanto hay que consultar la documetnación del motor de base de datos para identificar los posibles códigos de error.
+
+Si se produce cualquier otro tipo de excepción, mostramos un mensaje genérico con el mensaje de error devuelto por la base de datos.
+
+#### Describir cómo manejar errores de eliminación.
+Para manejar errores de eliminación, podemos utilizar las mismas técnicas que se describieron para manejar errores de inserción. Es importante tener en cuenta que si se intenta eliminar un registro que no existe, la consulta SQL no afectará ninguna fila y el método `executeUpdate()` devolverá `0`. Por lo tanto, es una buena práctica verificar el valor devuelto por este método y manejar el caso en el que se intenta eliminar un registro que no existe.
+
+Un ejemplo completo podría ser:
+```kotlin
+//Eliminar un registro de la tabla
+try {
+    // Crear la conexión
+    val connection = DriverManager.getConnection(url, user, password)
+
+    // Crear la sentencia SQL para eliminar el registro
+    val sql = "DELETE FROM usuarios WHERE id = ?"
+
+    // Crear el objeto PreparedStatement y establecer el valor del parámetro
+    val statement = connection.prepareStatement(sql)
+    statement.setInt(1, 1)
+
+    // Ejecutar la sentencia y obtener el número de registros eliminados
+    val rowsDeleted = statement.executeUpdate()
+
+    // Comprobar si se ha eliminado el registro correctamente
+    if (rowsDeleted > 0) {
+        println("El usuario ha sido eliminado correctamente.")
+    } else {
+        println("No se ha eliminado ningún usuario.")
+    }
+
+    // Cerrar la conexión
+    statement.close()
+    connection.close()
+
+} catch (e: SQLException) {
+    println("Se ha producido un error al intentar eliminar el usuario.")
+    println("Mensaje de error: ${e.message}")
+}
+
+```
+
+En este ejemplo, se utiliza un bloque `try-catch` para manejar cualquier excepción de SQL que pueda ocurrir al intentar eliminar un registro de la tabla usuarios. Dentro del bloque `try`, se establece la conexión con la base de datos, se crea una sentencia SQL para eliminar el registro con `id` `1` y se crea un objeto `PreparedStatement` para ejecutar la sentencia. A continuación, se utiliza la función `executeUpdate()` para eliminar el registro y se obtiene el número de registros eliminados. Si se ha eliminado el registro correctamente, se muestra un mensaje indicando que el registro ha sido eliminado. De lo contrario, se muestra un mensaje indicando que no se ha eliminado ningún registro. Finalmente, se cierra la conexión y se maneja cualquier excepción de SQL que pueda ocurrir en el bloque `catch`.
+
+
+#### Manejar errores de actualización.
+
+Al igual que en el caso de la eliminación de registros, es importante manejar correctamente los errores que puedan surgir al actualizar registros en una base de datos. Algunos de los errores más comunes son la falta de permisos para realizar la actualización, el incumplimiento de restricciones de integridad referencial o de validación, o la falta de conexión a la base de datos.
+
+
+Dentro del bloque `catch`, se puede proporcionar información sobre el error al usuario o registrar el error en un archivo de registro para su posterior análisis. Es importante asegurarse de que el usuario sea informado adecuadamente sobre los errores que puedan ocurrir durante la actualización de registros.
+
+### Un CRUD aplicando el patrón DAO
 A continuación veremos un ejemplo en Kotlin de una implementación básica de un sistema CRUD (Create, Read, Update, Delete) usando un patrón DAO (Data Access Object) y servicios. Este código implementa una arquitectura básica de DAO y servicios para interactuar con una base de datos H2 y realizar operaciones CRUD en una tabla de usuarios. Se puede resumir en el siguiente extracto:
 
 La clase `UserEntity` define el modelo de datos para el usuario con tres atributos: `id` (de tipo `UUID`), `name` y `email`.
@@ -975,12 +883,12 @@ fun main() {
 
 ```
 
-## Resumiendo:
+## Resumiendo
 - Las bases de datos son una herramienta crucial para el desarrollo de software, ya que permiten a los desarrolladores almacenar y gestionar grandes cantidades de información de manera eficiente y confiable. La capacidad de almacenar y acceder a información de manera eficiente es una necesidad en cualquier aplicación de software moderna, y las bases de datos son la solución más común y eficaz para esta necesidad.
 - Kotlin es un lenguaje de programación moderno y seguro que se utiliza cada vez más en el desarrollo de aplicaciones informáticas. En la programación de aplicaciones que acceden a bases de datos, Kotlin es una opción popular y efectiva debido a su soporte integrado para el acceso a bases de datos y su sintaxis concisa y expresiva. El uso de Kotlin en la programación de aplicaciones que acceden a bases de datos permite a los desarrolladores crear aplicaciones más seguras, confiables y escalables.
 - Un sistema gestor de bases de datos relacional es un software utilizado para almacenar, organizar y manipular datos en una base de datos relacional. Los sistemas gestores de bases de datos relacionales tienen características como una estructura basada en tablas, relaciones entre tablas, consultas complejas, integridad de los datos y escalabilidad. Los métodos de acceso a sistemas gestores de bases de datos relacionales incluyen la API JDBC y el ORM.
 - Los métodos de acceso a bases de datos incluyen JDBC, ORM, JPA y Spring Data. JDBC proporciona una interfaz común para acceder a bases de datos relacionales desde aplicaciones Java. El ORM y JPA proporcionan una interfaz orientada a objetos para acceder a los datos de la base de datos. Spring Data proporciona una abstracción de acceso a datos para aplicaciones Java. Los diferentes métodos de acceso a bases de datos tienen sus propias ventajas y desventajas. Es importante elegir el método adecuado según las necesidades de la aplicación. Si se requiere un control más granular sobre las consultas y las transacciones, JDBC puede ser la mejor opción. Si se busca una abstracción de acceso a datos orientada a objetos, ORM, JPA o Spring Data pueden ser la mejor opción.
-
-
+- Debemos elegir la forma de mostrar los resultados que mejor se adapte a las necesidades de nuestros usuarios y al tipo de aplicación que estamos desarrollando. Es importante que la presentación de los datos sea clara y fácil de entender para que los usuarios puedan interactuar con ellos de manera efectiva.
+- Es importante manejar adecuadamente los errores que se producen durante la interación de base de datos, por ejemplo al conectarnos, al inserción de datos, etc. Podemos utilizar bloques try-catch en Kotlin y JDBC para capturar y manejar estas excepciones de forma adecuada.
 
 ## Fuente y bibliografía

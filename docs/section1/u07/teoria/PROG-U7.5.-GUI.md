@@ -14,8 +14,9 @@ tags:
     - gui
     - compose
 ---
-## Interface gráfica de usuario vs CLI
 
+
+## Interface gráfica de usuario vs CLI
 La Interfaz gráfica de usuario o GUI (Graphic User Interface) es el entorno visual de imágenes y objetos mediante el cual una máquina y un usuario interactúan. A mediados de los setentas las GUI comenzaron a sustituir a las interfaces de línea de comando (CLI), y esto permitió que la interacción con las computadoras fuera más sencilla e intuitiva.
 
 ### ¿Para qué sirven las Interfaces gráficas de usuario?
@@ -485,9 +486,9 @@ fun GreetingText(name: String) {
 }
 ```
 
-# Customizar un componente
+## Customizar un componente
 
-## TextStyle
+### TextStyle
 
 La clase `TextStyle` permite customizar aspectos de un componente Composable:
 
@@ -533,9 +534,9 @@ fun GreetingText(name: String) {
 
 `FontWeight` y `MatherialTheme` son una clase companion object de Kotlin, en las que todos sus componentes son estáticos y accesible desde los componentes.
 
-# Contenedores
+## Contenedores
 
-## Layouts: El componente `Surface`
+### Layouts: El componente `Surface`
 
 El componente `Surface()` es un componente `@Componsable` que representa un bloque de UI que podemos añadir a nuestra interfaz y que puede tener color, modificadores, etc. y contener otros componentes, en concreto uno, a través de una lamda.
 Si no le aplicamos modificadores no tendrá dimensiones y no podrá verse en la pantalla, por tanto aplicamos `fillMaxWidth()`.
@@ -600,7 +601,7 @@ Anidando componentes de esta forma se puede establecer un background para el com
 
 Recordamos que el componente `Surface()` acepta **un solo** componente hijo. Más adelante veremos cómo añadir varios componentes dentro de un componente padre.
 
-## Otros contenedores
+### Otros contenedores
 
 Para situaciones en las que se tengan más de un componente hijo, Jetpack Compose ofrece los componentes: **Row**, **Column** y **Box** :
 
@@ -608,7 +609,7 @@ Para situaciones en las que se tengan más de un componente hijo, Jetpack Compos
 * **Column**: Componente que puede albergar contenido de forma vertical.
 * **Box**: Componente que permite tener componentes encima o debajo de otros componentes de forma sencilla.
 
-### Row
+#### Row
 
 Al igual que  **Button**, **Row** contiene un **RowScope** que nos indica que podemos añadir componentes que admiten composición en su interior. Como indicamos anteriormente, dichos componentes se alinearán de forma horizontal.
 
@@ -635,7 +636,7 @@ fun MainScreen() {
 
 Si vemos los argumentos que acepta el componente **Row** podemos observar dos muy interesantes: **verticalAlignment** y **horizontalArrangement** .
 
-#### verticalAlignment
+##### verticalAlignment
 
 Mediante este argumento podemos indicar cómo queremos posicionar los hijos de nuestro componente **Row** con respecto a la línea vertical. Este argumento solo acepta parámetros del tipo **Alignment.Vertical** (valores como: **Top**, **CenterVertically** y **Bottom** ).
 
@@ -662,7 +663,7 @@ fun MainScreen() {
 }
 ```
 
-#### `horizontalArrangement`
+##### `horizontalArrangement`
 
 Este argumento nos permite indicar cómo disponer los elementos hijos en la línea horizontal. Acepta valores de la clase `Arrangement.Horizontal` (valores como: `Start`, `End` o `Center`).
 
@@ -692,7 +693,7 @@ fun MainScreen() {
 }
 ```
 
-### `Column`
+#### `Column`
 
 Como indicamos anteriormente, el componente `Column` alberga hijos de forma vertical.
 
@@ -721,7 +722,7 @@ fun MainScreen() {
 
 De forma similar al componente `Row`, `Column` acepta los siguientes argumentos: `horizontalAlignment` y `verticalArrangement`.
 
-#### `horizontalAlignment`
+##### `horizontalAlignment`
 
 Mediante este argumento podemos indicar cómo queremos posicionar los hijos de nuestro componente `Column` con respecto a la línea horizontal. Este argumento solo acepta parámetros del tipo `Alignment.Horizontal` (valores como: `Start`, `CenterHorizontally` y `End`).
 
@@ -750,7 +751,7 @@ fun MainScreen() {
 }
 ```
 
-#### `verticalArrangement`
+##### `verticalArrangement`
 
 Este argumento permite indicar cómo disponer los elementos hijos en la línea vertical. Acepta valores de la clase `Arrangement.Vertical` (valores como: `Top`, `Bottom`o`Center`).
 
@@ -780,7 +781,7 @@ fun MainScreen() {
 }
 ```
 
-# Reusar componentes
+## Reusar componentes
 
 Tomando como ejemplo uno de los códigos vistos anteriormente, podemos observar que los hijos de `Column` son dos cuadrados representados con un componte `Surface` que son iguales y estamos añadiendo código repetitivo.
 
@@ -862,21 +863,21 @@ fun MainScreen() {
  }
 ```
 
-# Cómo funciona State
+## Cómo funciona State
 
-## Recomposición
+### Recomposición
 
 La recomposición es el proceso que se encarga de actualizar la pantalla, en concreto, los componentes que admiten composición.
 
 Para lanzar la recomposición es indispensable tener una implementación de `State`  para cada componente composable, al menos para los que tienen un estado que cambia o puede cambiar a lo largo del tiempo.
 
-## State
+### State
 
 El `State` de una aplicación se puede definir como **cualquier valor o dato que puede cambiar a lo largo del tiempo**, ya sea por un evento click en una lista, una entrada de datos en un formulario de texto, etc.
 
 En Jetpack Compose `State` es un componente más del propio componente composable.
 
-## Flujo de datos unidireccional
+### Flujo de datos unidireccional
 
 El flujo de UI en Jetpack Compose puede pensarse como un bucle en el que se dispara un evento que actualiza un `State`, por ejemplo, un click a un botón que desencadena la actualización de una lista. Este nuevo valor de `State` pasa por todo el árbol de la UI de elementos composables vinculados a ese `State`, es decir, que deben tener en cuenta los posibles valores de dicho `State` y actualizar la UI.
 
@@ -887,7 +888,7 @@ Este flujo de **`Event` - `State`** es unidireccional lo que proporciona ciertas
 * **Mayor testeabilidad** : `State` está desacoplado de la UI, es muy fácil hacer tests de ambas partes de forma aislada.
 * **Mayor consistencia en la UI** : Este flujo obliga a que todos los `State` sean reflejados en la UI de forma continua eliminando las posibles inconsistencias entre los componentes visuales y los estados.
 
-## Controlar State en una lista
+### Controlar State en una lista
 
 Partimos de un componente `MainScreen` que contiene una lista `StudentList` de componentes `StudentText` y un `Button` que añade nuevos elementos a la lista de estudiantes.
 
@@ -978,7 +979,7 @@ fun StudentList() {
 
 Si activamos ahora el modo interactivo y pulsamos el botón añadir vemos cómo el nuevo elemento se añade de forma satisfactoria al final de la lista.
 
-# El patrón State Hoisting
+## El patrón State Hoisting
 
 El patrón **State Hosting** consiste en mover los estados al componente padre de tal forma que los hijos nunca tengan que manejarlos.
 
@@ -1044,7 +1045,7 @@ fun MainScreen() {
 
 Como podemos observar en el código, el componente `StudentList` ya no sabe nada sobre estados. Le hemos aplicado las dos premisas del patrón **State Hoisting** la parametrización de la lista de estudiantes y la función para elevar los eventos de click del botón añadir. Ahora es el componente `MainScreen` el encargado de manejar estados y de modificarlos.
 
-# El componente `TextField` con State
+## El componente `TextField` con State
 
 El componente `TextField` es el equivalente al componente `EditText` de Android tradicional.
 
@@ -1123,9 +1124,9 @@ fun MainScreen() {
 * `newStudentState: MutableState` el valor de `TextField` es un `State` y todas las variaciones que se produzcan sobre él dispararán la recomposición.
 * Vemos como en las lambdas `onButtonClick` y `onStudentNameChange` se inserta un valor en la lista de estudiantes y se modifica el valor del componente `TextField` respectivamente.
 
-# `ViewModel` y `LiveData` (DAM)
+## `ViewModel` y `LiveData` (DAM)
 
-## Introducción a `ViewModel` y `LiveData`
+### Introducción a `ViewModel` y `LiveData`
 
 En lecciones anteriores vimos el patrón **State Hoisting** y cómo elevar los estados lo más arriba posible dentro de la jerarquía de componentes composables.
 
@@ -1242,9 +1243,9 @@ implementation "androidx.compose.runtime:runtime-livedata:$compose_version"
 
 Los eventos de `TextField` recogidos en la lambda son enviados ahora a nuestro `MainViewModel` y a su vez notificados a `LiveData` a través del método `onTextChange`.
 
-# Listas y Theming
+## Listas y Theming
 
-## Listas con Lazy Composable
+### Listas con Lazy Composable
 
 En lecciones anteriores vimos cómo implementar listas de elementos a través de los componentes **Column** y  **Row** .
 
@@ -1601,7 +1602,7 @@ fun AppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() 
 
 Un punto muy importante de esta función es la comprobación sobre si el sistema está en modo oscuro mediante la utilidad  **isSystemInDarkTheme** . Con el uso de esta función, pueden aplicarse paletas de colores distintas si el modo oscuro está activo o no.
 
-# Fuente y Bibliografía
+## Fuente y Bibliografía
 
 - https://github.com/JetBrains/compose-jb/tree/master/tutorials - Tutorial sobre los principales componentes de **Jetpack Compose Desktop**
 - https://www.tutorialesprogramacionya.com/composeya/ - Conceptos de compose

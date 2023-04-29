@@ -74,8 +74,8 @@ El pool de conexiones es una técnica utilizada para mejorar el rendimiento de l
 
 [SqlDeLight](https://cashapp.github.io/sqldelight/2.0.0-alpha05/) es una librería que nos permite generar código Kotlin para realizar [operaciones CRUD sobre una base de datos](https://cashapp.github.io/sqldelight/2.0.0-alpha05/jvm_sqlite/).
 
-[Libreria SQLDeLight](https://github.com/joseluisgs/Programacion-08-2022-2023#sqldelight)
-
+- [Librería SQLDeLight](https://github.com/joseluisgs/Programacion-08-2022-2023#sqldelight)
+- [SQLDelight on the Server](https://ryanharter.com/blog/2020/08/sqldelight-on-the-server/)
 
 ## Fuente y bibliografía
 

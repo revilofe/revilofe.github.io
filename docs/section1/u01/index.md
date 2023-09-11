@@ -52,9 +52,8 @@ La unidad se encuentra dentro del Bloque1
 * U1: Mi primer programa.
 * U2: Sentencias condicionales y repetitivas.
 
-En la Unidad 1, veremos:  
-
-* Que es un programa y un algoritmo.  
-* Bloques principales de un programa.  
-* Elementos básicos de un lenguaje.  
+Durante la Unidad 1, veremos:  
+* Que es un programa y un algoritmo.
+* Bloques principales de un programa.
+* Elementos básicos de un lenguaje.
 * Instalación de un IDE.  

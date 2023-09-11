@@ -1,7 +1,7 @@
 ---
 title: "Incidentes de ciberseguridad"
 description: Presentación del módulo de incidentes de seguridad. 
-icon: material/security
+icon: 
 permalink: /incidentes/presentacion
 categories:
   - IC

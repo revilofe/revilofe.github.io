@@ -5,7 +5,7 @@ summary: Acerca de
 authors:
     - Eduardo Fdez
 date: 2022-07-03
-icon: material/security
+icon: 
 permalink: /about
 categories:
   - GENERAL

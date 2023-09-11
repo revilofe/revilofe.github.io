@@ -5,7 +5,7 @@ summary: Introducción al desarrollo de software
 authors:
     - Eduardo Fdez
 date: 2022-09-17
-icon: material/security
+icon: 
 permalink: /edes/unidad1
 categories:
     - EDES

@@ -5,7 +5,7 @@ description: Usando Python
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: material/software
+icon: 
 permalink: /prog/unidad1/p1.2
 categories:
     - PROG

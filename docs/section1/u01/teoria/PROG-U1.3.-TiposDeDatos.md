@@ -5,7 +5,7 @@ summary: Tipos de datos
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: material/software
+icon: 
 permalink: /prog/unidad1/1.1
 categories:
     - PROG

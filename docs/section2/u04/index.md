@@ -1,7 +1,7 @@
 ---
 title: "UD 4 - Investigación de incidentes de ciberseguridad"
 description: Describe incidentes
-icon: material/security
+icon: 
 permalink: /incidentes/unidad4
 categories:
   - IC

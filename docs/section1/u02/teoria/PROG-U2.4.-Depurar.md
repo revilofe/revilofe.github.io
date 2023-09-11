@@ -5,7 +5,7 @@ summary: Depurar un programa
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: material/software
+icon: 
 permalink: /prog/unidad2/2.4
 categories:
     - PROG

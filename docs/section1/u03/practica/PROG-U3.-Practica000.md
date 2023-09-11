@@ -5,7 +5,7 @@ description: Cadenas
 authors:
     - Eduardo Fdez
 date: 2022-10-01
-icon: material/software
+icon: 
 permalink: /prog/unidad3/p3.0
 categories:
     - PROG

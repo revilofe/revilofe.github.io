@@ -1,7 +1,7 @@
 ---
 title: "UD 3 - Detección de incidentes"
 description: Detección de incidentes. SOC, CERT, CSIRT.
-icon: material/security
+icon: 
 permalink: /incidentes/unidad3
 categories:
   - IC

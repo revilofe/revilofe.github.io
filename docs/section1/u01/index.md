@@ -5,7 +5,7 @@ summary: Mi primer programa
 authors:
     - Eduardo Fdez
 date: 2022-09-17
-icon: material/security
+icon: 
 permalink: /prog/unidad1
 categories:
     - PROG

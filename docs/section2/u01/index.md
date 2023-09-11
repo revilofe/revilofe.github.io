@@ -4,7 +4,8 @@ description: d Introducción a la seguridad y planes.
 summary: s Introducción a la seguridad y planes.
 authors:
     - Eduardo Fdez
-date: 2022-07-03icon: material/security
+date: 2022-07-03  
+icon: 
 permalink: /incidentes/unidad2
 categories:
   - IC

@@ -5,7 +5,7 @@ summary: Iterativas y salto
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: material/software
+icon: 
 permalink: /prog/unidad2/2.2
 categories:
     - PROG

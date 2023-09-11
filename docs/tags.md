@@ -5,7 +5,7 @@ summary: Etiquetas
 authors:
     - Eduardo Fdez
 date: 2022-07-03
-icon: material/security
+icon: 
 permalink: /blog
 categories:
   - GENERAL

@@ -5,7 +5,7 @@ summary: Interfaces texto y gráfica. Entrada/Salida
 authors:
     - Eduardo Fdez
 date: 2023-02-23
-icon: material/develop
+icon: 
 permalink: /prog/unidad7
 categories:
     - PROG

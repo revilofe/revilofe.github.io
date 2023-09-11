@@ -5,7 +5,7 @@ summary: Listas
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: material/software
+icon: 
 permalink: /prog/unidad3/3.1
 categories:
     - PROG

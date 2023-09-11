@@ -5,7 +5,7 @@ summary: Conjuntos
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: material/software
+icon: 
 permalink: /prog/unidad3/3.4
 categories:
     - PROG

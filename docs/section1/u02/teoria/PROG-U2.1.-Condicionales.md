@@ -5,7 +5,7 @@ summary: Condicionales
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: material/software
+icon: 
 permalink: /prog/unidad2/2.1
 categories:
     - PROG

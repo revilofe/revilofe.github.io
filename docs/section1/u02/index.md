@@ -5,7 +5,7 @@ summary: Sentencias condicionales y repetitivas
 authors:
     - Eduardo Fdez
 date: 2022-09-17
-icon: material/security
+icon: 
 permalink: /prog/unidad2
 categories:
     - PROG

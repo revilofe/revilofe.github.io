@@ -1,7 +1,7 @@
 ---
 title: "UD 2 - Detección de de incidentes de ciberseguridad"
 description: Detección de incidentes de seguridad. 
-icon: material/security
+icon: 
 permalink: /incidentes/unidad2
 categories:
   - IC

@@ -1,7 +1,7 @@
 ---
 title: "UD 5 - Implemetación de medidas"
 description: Implementación de planes de respuestas
-icon: material/security
+icon: 
 permalink: /incidentes/unidad5
 categories:
   - IC

@@ -5,7 +5,7 @@ summary: Acceso a base de datos relacionales
 authors:
     - Eduardo Fdez
 date: 2023-04-11
-icon: material/develop
+icon: 
 permalink: /prog/unidad9
 categories:
     - PROG

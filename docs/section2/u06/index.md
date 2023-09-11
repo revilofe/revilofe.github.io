@@ -1,7 +1,7 @@
 ---
 title: "UD 6 - Documentación y notificación de incidentes"
 description: Notificación de incidentes
-icon: material/security
+icon: 
 permalink: /incidentes/unidad6
 categories:
   - IC

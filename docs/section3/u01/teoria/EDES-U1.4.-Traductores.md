@@ -5,7 +5,7 @@ summary: Traductores
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: material/security
+icon:   
 permalink: /edes/unidad1/1.2
 categories:
     - EDES

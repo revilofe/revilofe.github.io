@@ -5,7 +5,7 @@ summary: Mockk
 authors:
   - Eduardo Fdez
 date: 2023-01-30
-icon: material/security
+icon:   
 permalink: /edes/unidad3/3.4
 categories:
   - EDES

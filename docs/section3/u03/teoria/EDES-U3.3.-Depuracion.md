@@ -5,7 +5,7 @@ summary: Depuración
 authors:
   - Eduardo Fdez
 date: 2023-01-15
-icon: material/test
+icon:   
 permalink: /edes/unidad3/3.3
 categories:
   - EDES

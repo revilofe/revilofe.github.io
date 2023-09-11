@@ -5,7 +5,7 @@ summary: Documentación y comentarios
 authors:
     - Eduardo Fdez
 date: 2023-01-20
-icon: material/security
+icon:   
 permalink: /edes/unidad4/4.4
 categories:
     - EDES

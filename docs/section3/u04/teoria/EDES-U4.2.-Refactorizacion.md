@@ -5,7 +5,7 @@ summary: Sistemas de control de versiones
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: material/security
+icon:   
 permalink: /edes/unidad4/4.1
 categories:
     - EDES

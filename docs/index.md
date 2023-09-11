@@ -5,7 +5,7 @@ summary: Apuntes de modulos de ciclos que imparto y otras cosas...
 authors:
     - Eduardo Fdez
 date: 2022-07-13
-icon: material/security
+icon:   
 permalink: /
 categories:
   - GENERAL

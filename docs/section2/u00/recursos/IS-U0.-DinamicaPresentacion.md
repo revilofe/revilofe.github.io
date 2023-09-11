@@ -5,7 +5,7 @@ summary: Dinámica de presentación
 authors:
 - Eduardo Fdez
 date: 2022-09-18
-icon: material/security
+icon:   
 permalink: /edes/unidad0/0.1
 categories:
   - IS

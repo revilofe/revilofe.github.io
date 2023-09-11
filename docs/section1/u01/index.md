@@ -46,14 +46,18 @@ En esta sección se relaciona la unidad con los criterios de evaluación concret
 * i) Se han introducido comentarios en el código. 
 
 ### Contenidos
-
-La unidad se encuentra dentro del Bloque1
-
-* U1: Mi primer programa.
-* U2: Sentencias condicionales y repetitivas.
-
+  
+La unidad se encuentra dentro del Bloque1  
+  
+* U1: Mi primer programa.  
+* U2: Sentencias condicionales y repetitivas.    
+  
+  
 Durante la Unidad 1, veremos:  
-* Que es un programa y un algoritmo.
-* Bloques principales de un programa.
-* Elementos básicos de un lenguaje.
+  
+* Que es un programa y un algoritmo.  
+* Bloques principales de un programa.  
+* Elementos básicos de un lenguaje.  
 * Instalación de un IDE.  
+
+

@@ -53,11 +53,11 @@ La unidad pertenece al bloque 1 Desarrollo de software
 
 * U1: Introducción al desarrollo del software.
 
-En la unidad 1, veremos
+Durante la unidad 1, veremos:  
 
-* La relación de los programas con los componentes del sistema informático.
-* Las diferencias entre código fuente, objeto y ejecutable.
-* Algunos lenguajes de programación.
-* Las funcionalidades ofrecidas por las herramientas para el desarrollo de software.
-* El funcionamiento de los traductores.
-* Las fases de desarrollo de una aplicación informática.
+* La relación de los programas con los componentes del sistema informático.  
+* Las diferencias entre código fuente, objeto y ejecutable.  
+* Algunos lenguajes de programación.  
+* Las funcionalidades ofrecidas por las herramientas para el desarrollo de software.  
+* El funcionamiento de los traductores.  
+* Las fases de desarrollo de una aplicación informática.  

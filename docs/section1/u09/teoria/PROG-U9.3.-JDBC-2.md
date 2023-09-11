@@ -5,7 +5,7 @@ summary: JDBC Prepared Statement
 authors:
   - Eduardo Fdez
 date: 2022-04-11
-icon: material/software
+icon:   
 permalink: /prog/unidad9/9.3
 categories:
   - PROG

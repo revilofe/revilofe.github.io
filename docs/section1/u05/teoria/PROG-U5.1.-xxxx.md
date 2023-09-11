@@ -5,7 +5,7 @@ summary: kotlin
 authors:
     - Eduardo Fdez
 date: 2022-11-14
-icon: material/software
+icon:   
 permalink: /prog/unidad4/4.1
 categories:
     - PROG

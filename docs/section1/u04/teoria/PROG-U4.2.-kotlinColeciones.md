@@ -5,7 +5,7 @@ summary: kotlin: Colecciones
 authors:
     - Eduardo Fdez
 date: 2022-11-14
-icon: material/software
+icon: 
 permalink: /prog/unidad4/4.2
 categories:
     - PROG

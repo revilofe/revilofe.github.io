@@ -5,7 +5,7 @@ summary: Git/Github
 authors:
     - Eduardo Fdez
 date: 2022-10-23
-icon: material/software
+icon:   
 permalink: /edes/unidad4/p4.4
 categories:
     - EDES

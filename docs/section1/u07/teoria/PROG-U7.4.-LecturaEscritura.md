@@ -5,7 +5,7 @@ summary: Lectura y escritura de archivos
 authors:
    - Eduardo Fdez
 date: 2023-03-01
-icon: material/software
+icon:   
 permalink: /prog/unidad7/7.4
 categories:
    - PROG

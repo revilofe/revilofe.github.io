@@ -5,7 +5,7 @@ summary: description: Lenguajes de programación
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: material/software
+icon:   
 permalink: /edes/unidad1/p1.1
 categories:
     - EDES

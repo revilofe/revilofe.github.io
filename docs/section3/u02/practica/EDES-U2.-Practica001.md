@@ -5,7 +5,7 @@ summary: Herramientas de desarrollo
 authors:
     - Eduardo Fdez
 date: 2022-10-23
-icon: material/software
+icon:   
 permalink: /edes/unidad2/p2.1
 categories:
     - EDES

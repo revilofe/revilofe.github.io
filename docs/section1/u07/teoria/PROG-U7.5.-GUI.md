@@ -5,7 +5,7 @@ summary: Interfaces de usuario: Compose
 authors:
     - Eduardo Fdez
 date: 2023-03-13
-icon: material/software
+icon:   
 permalink: /prog/unidad7/7.5
 categories:
     - PROG

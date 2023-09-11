@@ -5,7 +5,7 @@ summary: Consola y teclado
 authors:
     - Eduardo Fdez
 date: 2022-02-24
-icon: material/software
+icon:   
 permalink: /prog/unidad7/7.2
 categories:
     - PROG

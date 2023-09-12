@@ -2,6 +2,7 @@
 
 # Programación
 ![Logo Alberti](assets/logo-iesra.png) <!-- .element height="50%" width="50%" -->
+2023/2024
 
 ---
 
@@ -68,14 +69,22 @@ La formación del módulo contribuye a alcanzar las competencias profesionales, 
 
 ---
 
-# Horarios y planificación
+# Planificación y Horario.
+
+
+## Planificación.
+![](assets/prog-planif.png)
+Como toda planificación, puede sufrir cambios.
+
+---
 
 
 ## Horario.
-Horario (8 horas semanales)
-|     HORA     | L |  M  |  X  |  J  |  V  |
+Horario (8 horas semanales)  
+
+|     HORA     | L |  M  |  X  |  J  |  V  | 
 | :-------------: | :-: | :---: | :---: | :---: | :---: |
-| 08:00 - 09:00 | - |  -  | PRO |  -  | PRO |
+| 08:00 - 09:00 | - |  -  | PRO |  -  | PRO | 
 | 09:00 - 10:00 | - |  -  | PRO |  -  | PRO |
 | 10:00 - 11:00 | - | PRO |  -  | PRO |  -  |
 | 11:00 - 11:30 | x |  x  |  x  |  x  |  x  |
@@ -84,12 +93,6 @@ Horario (8 horas semanales)
 | 13:30 - 14:30 | - |  -  |  -  |  -  |  -  |
 <!-- .element.table: style="font-size:50%;" -->
 
-
-## Planificación.
-![](assets/prog-planif.png)
-Como toda planificación, puede sufrir cambios.
-
----
 
 # Evaluación y recuperación
 
@@ -141,7 +144,7 @@ Por unidad:
 * Comunicación **oficial, preferida y obligada**: Asistiendo al aula y hablando directamente con el profesor.
 * Otros medios secundarios **opcionales**: Correo electrónico y Moodle.
 
-![](./assets/IS-U011-Presentacion3.png) <!-- .element height="25%" width="25%" -->
+**ATENCIÓN!!!:** ***TEN EN CUENTA QUE ESTAS EN UNA FORMACIÓN PRESENCIAL.***
 
 ---
 

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Crear un repositorio con Git y enlazarlo a GitHub">
+        <meta name="description" content="Crear y manejar un proyecto de Git">
       
       
         <meta name="author" content="Eduardo Fdez">
@@ -22,7 +22,7 @@
     
     
       
-        <title>UD 1 - P3: Control de versiones con Git y GitHub - Parte 1 - R Z O</title>
+        <title>UD 1 - P3: Uso básico de Git - R Z O</title>
       
     
     
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#p13-introduccion-y-comandos-basicos-para-trabajar-con-el-control-de-versiones-git-y-github-parte-1" class="md-skip">
+        <a href="#p13-introduccion-y-comandos-basicos-para-trabajar-con-el-control-de-versiones-git" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -137,7 +137,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UD 1 - P3: Control de versiones con Git y GitHub - Parte 1
+              UD 1 - P3: Uso básico de Git
             
           </span>
         </div>
@@ -3103,11 +3103,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#p13-introduccion-y-comandos-basicos-para-trabajar-con-el-control-de-versiones-git-y-github-parte-1" class="md-nav__link">
-    P1.3 - Introducción y comandos básicos para trabajar con el control de versiones Git y GitHub - Parte 1
+  <a href="#p13-introduccion-y-comandos-basicos-para-trabajar-con-el-control-de-versiones-git" class="md-nav__link">
+    P1.3 - Introducción y comandos básicos para trabajar con el control de versiones Git
   </a>
   
-    <nav class="md-nav" aria-label="P1.3 - Introducción y comandos básicos para trabajar con el control de versiones Git y GitHub - Parte 1">
+    <nav class="md-nav" aria-label="P1.3 - Introducción y comandos básicos para trabajar con el control de versiones Git">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3177,10 +3177,10 @@
   
 
 
-  <h1>UD 1 - P3: Control de versiones con Git y GitHub - Parte 1</h1>
+  <h1>UD 1 - P3: Uso básico de Git</h1>
 
-<h2 id="p13-introduccion-y-comandos-basicos-para-trabajar-con-el-control-de-versiones-git-y-github-parte-1">P1.3 - Introducción y comandos básicos para trabajar con el control de versiones Git y GitHub - Parte 1<a class="headerlink" href="#p13-introduccion-y-comandos-basicos-para-trabajar-con-el-control-de-versiones-git-y-github-parte-1" title="Permanent link">&para;</a></h2>
-<p>A continuación, ofrecemos una guía paso a paso para aquellos usuarios principiantes interesados en trabajar con un repositorio de Git en local enlazado a GitHub.</p>
+<h2 id="p13-introduccion-y-comandos-basicos-para-trabajar-con-el-control-de-versiones-git">P1.3 - Introducción y comandos básicos para trabajar con el control de versiones Git<a class="headerlink" href="#p13-introduccion-y-comandos-basicos-para-trabajar-con-el-control-de-versiones-git" title="Permanent link">&para;</a></h2>
+<p>A continuación, ofrecemos una guía paso a paso para aquellos usuarios principiantes interesados en trabajar con un repositorio de Git en local.</p>
 <p>El sistema de control de versiones Git es una herramienta fundamental para muchos desarrolladores, especialmente cuando colaboran en un proyecto. Git ayuda a mantener una visión de conjunto, a preservar las versiones antiguas y a integrar los cambios de manera coherente. Para ello, Git agrupa una serie de programas de línea de comandos y crea un efectivo entorno de trabajo.</p>
 <p>Es la mejor forma de trabajar para un desarrollador. De esta manera vais a tener siempre vuestro código a salvo en la nube. Podéis clonar el proyecto y trabajar en cualquier ordenador.</p>
 <h3 id="instalar-git">Instalar Git<a class="headerlink" href="#instalar-git" title="Permanent link">&para;</a></h3>
@@ -3191,7 +3191,7 @@
 <ol>
 <li>
 <p>Primero tenemos que definir nuestra identidad, para ello en la línea de comandos escribiremos las siguientes instrucciones utilizando nuestro usuario iPasen y correo de g.educaand.es:</p>
-<p><code>git config --global user.name "dcansib483"</code> 
+<p><code>git config --global user.name "dcansib483"</code><br />
 <code>git config --global user.email "dcansib483@g.educaand.es"</code></p>
 </li>
 <li>
@@ -3203,10 +3203,10 @@
 <ul>
 <li><code>clear</code>: limpia la pantalla de la consola.</li>
 <li><code>pwd</code>: muestra el directorio actual.</li>
-<li><code>ls</code>: lista los ficheros y directorios <strong>(parámetros <code>-l</code>: muestra la lista detallada y <code>-a</code>: muestra archivos ocultos)</strong>.</li>
-<li><code>cd</code>: para movernos entre directorios <strong>(por ejemplo <code>cd nombreDir</code>. Con <code>cd ..</code> voy al directorio anterior al actual)</strong>.</li>
-<li><code>mkdir</code>: para crear un directorio <strong>(por ejemplo <code>mkdir nombreDir</code>)</strong>.</li>
-<li><code>rmdir</code>: para borrar un directorio <strong>(por ejemplo <code>rmdir nombreDir</code>)</strong>.</li>
+<li><code>ls</code>: lista los ficheros y directorios <em>(parámetros <code>-l</code>: muestra la lista detallada y <code>-a</code>: muestra archivos ocultos)</em>.</li>
+<li><code>cd</code>: para movernos entre directorios <em>(por ejemplo <code>cd nombreDir</code>. Con <code>cd ..</code> voy al directorio anterior al actual)</em>.</li>
+<li><code>mkdir</code>: para crear un directorio <em>(por ejemplo <code>mkdir nombreDir</code>)</em>.</li>
+<li><code>rmdir</code>: para borrar un directorio <em>(por ejemplo <code>rmdir nombreDir</code>)</em>.</li>
 <li>Podemos pulsar las flechas arriba y abajo para movernos por los comandos ejecutados previamente.</li>
 <li>Podemos autocompletar el nombre de los directorios o ficheros.</li>
 </ul>
@@ -3216,43 +3216,46 @@
 </li>
 <li>
 <p>Accedemos a la carpeta Documents y creamos el directorio ProgPython:</p>
-<p><code>cd Documents</code>
+<p><code>cd Documents</code><br />
 <code>mkdir ProgPython</code></p>
 </li>
 <li>
 <p>En esta carpeta vamos a crear nuestro proyecto de Git. Inicializamos Git en este directorio para indicarle que esta carpeta es nuestra área de trabajo:</p>
-<p><code>cd ProgPython</code>
+<p><code>cd ProgPython</code><br />
 <code>git init</code></p>
 </li>
 </ol>
 <h2 id="como-vamos-a-trabajar-con-git-proyecto">¿Cómo vamos a trabajar con Git (Proyecto)?<a class="headerlink" href="#como-vamos-a-trabajar-con-git-proyecto" title="Permanent link">&para;</a></h2>
 <p>De manera muy básica, en un proyecto de Git vamos a trabajar con 3 secciones o áreas principales:</p>
-<div class="highlight"><pre><span></span><code>* Área de trabajo (creamos carpetas y ficheros, modificamos el contenido de los ficheros y ejecutamos el comando `add` para agregarlos al área de preparación del proyecto)
-* Área de preparación o Staging Area
-* Repositorio (commit)
-</code></pre></div>
+<ul>
+<li>Área de trabajo <em>(creamos carpetas y ficheros, modificamos el contenido de los ficheros y ejecutamos el comando <code>add</code> para agregarlos al área de preparación del proyecto)</em></li>
+<li>Área de preparación <em>(staging area)</em></li>
+<li>Repositorio <em>(commit)</em></li>
+</ul>
 <p><img alt="Secciones principales de un proyecto de Git" src="https://git-scm.com/book/en/v2/images/areas.png" /></p>
 <ol>
 <li>
-<p>Nos creamos un primer programa en Python y lo ejecutamos <strong>(todo desde la línea de comandos por ahora)</strong>:</p>
+<p>Nos creamos un primer programa en Python y lo ejecutamos <em>(todo desde la línea de comandos por ahora)</em>:</p>
 <p>touch holamundo.py</p>
 </li>
 <li>
 <p>Podemos crearnos el programa y editarlo de manera gráfica en el Explorador de Windows, pero esta vez vamos a usar un editor de consola para escribir el contenido de nuestro programa. Después mostraremos su contenido en la terminal con el comando cat y mediante el intérprete de Python lo ejecutaremos:</p>
 <p>nano holamundo.py</p>
-<p>Dentro del fichero escribimos <code>print("Hola mundo DAM-DAW!")</code>
-Guardamos y salimos <strong>(leer las opciones en la barra inferior)</strong>
-Para comprobar el contenido del fichero utilizamos el comando siguiente:</p>
+<ul>
+<li>Dentro del fichero escribimos <code>print("Hola mundo DAM-DAW!")</code>  </li>
+<li>Guardamos y salimos <em>(leer las opciones en la barra inferior)</em>  </li>
+<li>Para comprobar el contenido del fichero utilizamos el comando siguiente:  </li>
+</ul>
 <p><code>cat holamundo.py</code></p>
-<p>Vamos a ejecutar el programa realizado en Python:</p>
-</li>
-</ol>
+<ul>
+<li>Vamos a ejecutar el programa realizado en Python:</li>
+</ul>
 <p><code>python holamundo.py</code></p>
-<ol>
+</li>
 <li>
 <p>Ahora vamos a mirar el estado de nuestra área de trabajo... a ver que nos dice Git:</p>
 <p><code>git status</code></p>
-<p>¿Qué va a pasar si vamos al directorio justo anterior y volvemos a ejecutar el mismo comando?</p>
+<p><strong><em>¿Qué va a pasar si vamos al directorio justo anterior y volvemos a ejecutar el mismo comando?</em></strong></p>
 </li>
 <li>
 <p>Volvemos a la carpeta de nuestro proyecto de Git... y volvemos ver el estado de nuestro proyecto... vemos que nos está inicando que existe un fichero nuevo sin añadir a nuestra área de preparación. La añadimos:</p>
@@ -3266,11 +3269,11 @@ Para comprobar el contenido del fichero utilizamos el comando siguiente:</p>
 <li>
 <p>Vamos a crear otro programa, pero esta vez desde Pycharm...</p>
 <p>Primero creamos un directorio que se llame ejercicios1 y después un fichero que se llame prueba1.py que contenga el siguiente código:</p>
-<p>edad = int(input("Introduzca su edad: "))
-if edad &gt;= 18:
-    print("Toma una cerveza!")
-else:
-    print(f"Toma un zumo de piña, con {edad} años eres menor.")</p>
+<p>edad = int(input("Introduzca su edad: "))<br />
+if edad &gt;= 18:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Toma una cerveza!")<br />
+else:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"Toma un zumo de piña, con {edad} años eres menor.")  </p>
 <p>Esta vez lo vamos a abrir con PyCharm, diciéndole que nos cree un proyecto en la carpeta ProgPython... podemos crear el directorio y el programa vacío con los comandos de consola <strong>(<code>mkdir</code> y <code>touch</code>)</strong> y después abrir el fichero con PyCharm <strong>(botón derecho desde el Explorador de archivos de Windows)</strong></p>
 <p>A continuación, lo vamos a ejecutar dentro de PyCharm para ver cómo funciona el programa...</p>
 </li>
@@ -3278,9 +3281,9 @@ else:
 <p>Esto nos ha generado en la carpeta del proyecto dos directorios: ejercicios1 y .idea <strong>(propio de la gestión del IDE Pycharm)</strong>. Si comprobamos el estado del proyecto <strong>(<code>git status</code>)</strong> nos muestra el directorio .idea para que lo añadamos también. Si no queremos subir a nuestro repositorio esta carpeta, podemos indicarle a Git que la ignore. Para ello, vamos a crearnos, en la carpeta del proyecto de Git, el fichero <code>.gitignore</code> que contendrá los archivos y carpetas que deseamos que Git ignore al comprobar el estado de los archivos del proyecto. En nuestro caso, solo tendrá una línea <strong>(podemos hacerlo con el editor <code>nano</code>)</strong>:</p>
 <p>.idea</p>
 <p>A continuación debemos añadir al repositorio el fichero .gitignore y la carpeta ejercicios1:</p>
-<p><code>git add .gitignore</code>
-<code>git add ejercicios</code>
-<code>git commit -m "Primera versión de la carpeta ejercicios1"</code></p>
+<p><code>git add .gitignore</code><br />
+<code>git add ejercicios</code><br />
+<code>git commit -m "Primera versión de la carpeta ejercicios1"</code>  </p>
 </li>
 <li>
 <p>Ahora mismo tenemos todo actualizado en nuestro repositorio... para ver todos los commits que hemos realizado <strong>(observad el código HASH que tiene cada commit)</strong>:</p>
@@ -3288,31 +3291,31 @@ else:
 </li>
 <li>
 <p>Podemos hacer ahora una modificación al programa prueba1.py</p>
-<p>edad = input("Introduzca su edad: ")
-if edad &gt;= 18:
-    print("Toma una cerveza!")
-else:
-    print(f"Toma un zumo de piña, con {edad} años eres menor.")</p>
+<p>edad = input("Introduzca su edad: ")<br />
+if edad &gt;= 18:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Toma una cerveza!")<br />
+else:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"Toma un zumo de piña, con {edad} años eres menor.")  </p>
 <p>Si volvemos a comprobar el estado del proyeto de Git nos dirá que hay un fichero modificado... vamos a añadirlo y hacer commit.</p>
-<p><code>git add ejercicios1</code>
-<code>git commit -m "Segunda versión con un error"</code>
-<code>git log</code></p>
-<p>Si ejecutamos el programa desde el IDE PyCharm observamos que nos da un gran error... nos hemos equivocado y está en el repositorio final :-(
-<strong>¿Qué hacemos ahora?</strong></p>
+<p><code>git add ejercicios1</code><br />
+<code>git commit -m "Segunda versión con un error"</code><br />
+<code>git log</code>  </p>
+<p>Si ejecutamos el programa desde el IDE PyCharm observamos que nos da un gran error... nos hemos equivocado y está en el repositorio final :-(</p>
+<p><strong><em>¿Qué hacemos ahora?</em></strong></p>
 </li>
 <li>
 <p>No pasa nada, para eso tenemos un control de versiones... primero hacemos git log, copiamos el número que está a la derecha del commit de la versión a la que queremos volver y lo pegamos detrás del siguiente comando:</p>
-<p><code>git log</code>
-<code>git checkout 8d0bd05d48f696b544e0eca0dce995d15f220e13</code></p>
+<p><code>git log</code><br />
+<code>git checkout 8d0bd05d48f696b544e0eca0dce995d15f220e13</code>  </p>
 </li>
 <li>
-<p>Si volvemos a PyCharm, observamos que volvemos a tener la primera versión de nuestro programa que funciona perfectamente. Observad también con el comando <code>git log</code> que ya no aparece la segunda versión, pues el comando <code>git checkout</code> la ha eliminado del control de versiones para ir a una versión anterior <strong>(esto no se puede deshacer)</strong>.</p>
+<p>Si volvemos a PyCharm, observamos que volvemos a tener la primera versión de nuestro programa que funciona perfectamente. Observad también con el comando <code>git log</code> que ya no aparece la segunda versión, pues el comando <code>git checkout</code> la ha eliminado del control de versiones para ir a una versión anterior <em>(esto no se puede deshacer)</em>.</p>
 </li>
 <li>
 <p>Otros comandos que nos pueden ayudar:</p>
 <ul>
-<li>Para añadir TODOS los ficheros de un directorio =&gt; <code>git add .</code></li>
-<li>Para añadir TODOS los cambios pendientes de una sola vez: =&gt; <code>git add -A</code> </li>
+<li>Para añadir TODOS los ficheros de un directorio =&gt; <code>git add .</code>  </li>
+<li>Para añadir TODOS los cambios pendientes de una sola vez: =&gt; <code>git add -A</code>     </li>
 <li>Para deshacer un <code>git add</code> antes de hacer un <code>git commit</code> =&gt; <code>git reset nombreArchivo</code> o <code>git reset</code> para deshacer todos los cambios. También podemos usar <code>git checkout .</code>.</li>
 </ul>
 </li>

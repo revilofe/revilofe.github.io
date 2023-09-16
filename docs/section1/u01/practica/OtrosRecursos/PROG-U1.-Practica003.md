@@ -14,7 +14,7 @@ tags:
     - Ejercicios
 ---
 
-## P1.3 - Introducción y comandos básicos para trabajar con el control de versiones Git y GitHub
+## P1.3 - Introducción y comandos básicos para trabajar con el control de versiones Git y GitHub - Parte 1
 
 A continuación, ofrecemos una guía paso a paso para aquellos usuarios principiantes interesados en trabajar con un repositorio de Git en local enlazado a GitHub.
 

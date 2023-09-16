@@ -25,6 +25,8 @@ Cada unidad contendrá una serie de contenidos, resultados de aprendizaje (desgl
 
 ## Normativa que respalda la unidad
 
+pendiente
+
 ### Resultados de aprendizaje a trabajar
 
 En esta sección se relaciona la unidad con el resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf).

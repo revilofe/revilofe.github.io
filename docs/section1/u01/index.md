@@ -25,7 +25,7 @@ Cada unidad contendrá una serie de contenidos, resultados de aprendizaje (desgl
 
 ## Normativa que respalda la unidad
 
-pendiente
+[la normativa del curso](https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf).
 
 ### Resultados de aprendizaje a trabajar
 
@@ -60,6 +60,6 @@ Durante la Unidad 1, veremos:
 * Que es un programa y un algoritmo.  
 * Bloques principales de un programa.  
 * Elementos básicos de un lenguaje.  
-* Instalación de un IDE.  
+* Instalación y uso básico de un IDE.  
 
 

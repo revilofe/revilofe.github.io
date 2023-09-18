@@ -48,7 +48,7 @@ El *software* le da instrucciones al hardware de la forma como debe realizar una
 - **De aplicación** (Suite ofimática, Navegador, Edición de imagen, ...)
 - **De desarrollo** (Editores, compiladores, interpretes, ...)
 
->> Los drivers son los controladores de dispositivos.
+> Los drivers son los controladores de dispositivos.
 
 
 ## Relación Hardware-Software  
@@ -60,5 +60,5 @@ La relación entre el *software* y el *hardware* se pueden describir de la sigui
 - **CPU**: lee y ejecuta instrucciones almacenadas en memoria RAM, así como los datos necesarios.  
 - **E/S**: recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guardan a disco, ...  
 
->> El disco duro se considera un periférico de E/S (Entrada/Salida).  
->> La CPU se llama también UCP (en inglés), procesador o microprocesador.  
+> El disco duro se considera un periférico de E/S (Entrada/Salida).  
+> La CPU se llama también UCP (en inglés), procesador o microprocesador.  

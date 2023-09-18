@@ -79,7 +79,7 @@ Como toda planificación, puede sufrir cambios.
 ---
 
 
-## Horario.
+## Horario
 Horario (8 horas semanales)  
 
 |     HORA     | L |  M  |  X  |  J  |  V  | 

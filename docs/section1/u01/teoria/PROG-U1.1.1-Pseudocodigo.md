@@ -191,22 +191,22 @@ Iteración con salida al principio (Mientras): primero se evalúa la condición 
 
 > ![](assets/book.png)
 > En algunos lenguajes suele existir otra estructura similar que podrías asemejarse a `Hacer ... Hasta (condición)` en donde primero se ejecutan las instrucciones y antes de proseguir se evalúa la condición, por tanto, siempre se ejecutará el bloque de instrucciones una vez.
-
+    
 Ejemplos:
-
+    
 ```
 Mientras (condición) hacer
     Instrucción1
     …
     InstrucciónN
 ```
-
+    
 ```
 Mientras (cont > 0) hacer
     Escribe cont
     cont = cont - 1
 ```
-
+    
 > ![](assets/rayo.png)
 > Actividad: ¿Cuál es el resultado del algoritmo anterior?
 
@@ -215,14 +215,14 @@ Mientras (cont > 0) hacer
 Ejecutará el bloque de instrucciones un número determinado de veces. Hace uso de una variable que irá incrementando su valor de uno en uno en función de un rango de valores.
 
 Ejemplos:
-
+    
 ```
 Para i en (1…N) hacer
     Instrucción1
     …
     InstrucciónN
 ```
-
+    
 ```
 Inicio
     suma = 0 
@@ -235,8 +235,12 @@ Fin
 > ![](assets/rayo.png)
 > Actividad: ¿Cuál es el resultado del algoritmo anterior?
    
+    
+
 > ![](assets/rayo.png)
 > Actividad: Realiza un algoritmo que lea dos números y muestre cuál es el mayor.
+    
+    
 
 ```
 Inicio
@@ -250,8 +254,13 @@ Lee num2
 
 Fin
 ```
+    
+    
+
 > ![](assets/rayo.png)
 > Actividad: Muestra la relación entre dos numeros que introduce el usuario.
+    
+    
 ```
 Inicio
     Lee num1
@@ -268,8 +277,12 @@ Inicio
 Fin
 ```
    
+    
+
 > ![](assets/rayo.png)
 > Actividad: Lee un número, si es mayor que 0 muestra la serie decrementando su valor hasta 0. Por ej:  7 `=> 7 6 5 4 3 2 1 0`
+    
+    
 ```
 Inicio
     Lee num
@@ -281,10 +294,13 @@ Inicio
             num = num - 1
 Fin
 ```
+    
+    
 
 > ![](assets/rayo.png)
 > Actividad: Lee un número, si es mayor que 0 muestra la serie decrementando su valor hasta 0. Por ej: 7 `=> 7, 6, 5, 4, 3, 2, 1, 0`
-
+    
+    
 ```
 Inicio
     Lee num
@@ -298,10 +314,13 @@ Inicio
             num = num - 1
 Fin
 ```
+    
+    
 
 > ![](assets/rayo.png)
 > Actividad: Lee un número, si es mayor que 0 muestra la serie decrementando su valor hasta 0. Por ej: 7 `=> 7, 6, 5, 4, 3, 2, 1, 0`
-
+    
+    
 ```
 Inicio
 Lee a
@@ -313,8 +332,8 @@ Lee a
         Escribe a + “ ”
 Fin
 ```
-
-
+    
+    
 
 > ![](assets/rayo.png)
 > Ejercicio 1: Lee un número hasta que el número esté en el rango 1-10
@@ -324,8 +343,8 @@ Fin
 > Inténtalo otra vez! (1-10): 5
 > Correcto!
 > ```
-
-
+    
+    
 
 > ![](assets/rayo.png)
 > Ejercicio 2: Lee dos números y crea la serie que los une de 1 en 1...
@@ -338,8 +357,8 @@ Fin
 > Introduce otro: 3
 > 3-4-5-6-7-8-9-10-11-12
 > ```
-
-
+    
+    
 
 > ![](assets/rayo.png)
 > Ejercicio 3: Lee 3 números y dame los números ordenados de menor a mayor.

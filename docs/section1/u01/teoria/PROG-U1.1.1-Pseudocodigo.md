@@ -212,12 +212,18 @@ Mientras (cont > 0) hacer
 
 ##### Estructura iterativa `Para`.
 
-Ejecutará el bloque de instrucciones un número determinado de veces. Hace uso de una variable que irá incrementando su valor de uno en uno en función de un rango de valores.
+Ejecutará el bloque de instrucciones un número determinado de veces. Hace uso de una variable que irá incrementando o decrementando su valor de uno en uno en función de un rango de valores.
 
 Ejemplos:
     
 ```
 Para i en (1…N) hacer
+    Instrucción1
+    …
+    InstrucciónN
+```
+```
+Para i en (N…0) hacer
     Instrucción1
     …
     InstrucciónN
@@ -280,7 +286,7 @@ Fin
     
 
 > ![](assets/rayo.png)
-> Actividad: Lee un número, si es mayor que 0 muestra la serie decrementando su valor hasta 0. Por ej:  7 `=> 7 6 5 4 3 2 1 0`
+> Actividad: Lee un número, si es mayor que 0 muestra la serie decrementando su valor hasta 0. Por ej:  `7 => 7 6 5 4 3 2 1 0`
     
     
 ```
@@ -289,16 +295,26 @@ Inicio
 
     Si (num > 0) entonces
         Escribe num + “ => ”
-        Mientras (num > 0) hacer
+        Mientras (num >= 0) hacer
             Escribe num + “ ”
             num = num - 1
+Fin
+```
+```
+Inicio
+    Lee num
+
+    Si (num > 0) entonces
+        Escribe num + “ => ”
+        Para i en (num...0) hacer
+            Escribe i + “ ”
 Fin
 ```
     
     
 
 > ![](assets/rayo.png)
-> Actividad: Lee un número, si es mayor que 0 muestra la serie decrementando su valor hasta 0. Por ej: 7 `=> 7, 6, 5, 4, 3, 2, 1, 0`
+> Actividad: Lee un número, si es mayor que 0 muestra la serie decrementando su valor hasta 0. Por ej: `7 => 7, 6, 5, 4, 3, 2, 1, 0`
     
     
 ```
@@ -308,9 +324,10 @@ Inicio
     Si (num > 0) entonces
         Escribe num + “ => ”
         
-        Mientras (num > 0) hacer
+        Mientras (num >= 0) hacer
+            Escriber num
             Si (num != 0) entonces
-                Escribe num + “, ”
+                Escribe “, ”
             num = num - 1
 Fin
 ```
@@ -318,18 +335,20 @@ Fin
     
 
 > ![](assets/rayo.png)
-> Actividad: Lee un número, si es mayor que 0 muestra la serie decrementando su valor hasta 0. Por ej: 7 `=> 7, 6, 5, 4, 3, 2, 1, 0`
+> Actividad: Lee un número, si es mayor que 0 muestra la serie decrementando su valor hasta 0 *(usa el bucle Para)*. Por ej: `7 => 7, 6, 5, 4, 3, 2, 1, 0`
     
     
 ```
 Inicio
-Lee a
+    Lee num
 
-    Escribe a + “ => ”
+    Si (num > 0) entonces
+        Escribe num + “ => ”
 
-    Para i en (1…5) hacer
-        a = a + i
-        Escribe a + “ ”
+        Para i en (num...0) hacer
+            Escribe i
+	    Si (i != 0) entonces
+                Escribe “, ”
 Fin
 ```
     

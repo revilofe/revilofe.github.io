@@ -3656,19 +3656,24 @@ En algunos lenguajes suele existir otra estructura similar que podrías asemejar
 Actividad: ¿Cuál es el resultado del algoritmo anterior?</p>
 </blockquote>
 <h5 id="estructura-iterativa-para">Estructura iterativa <code>Para</code>.<a class="headerlink" href="#estructura-iterativa-para" title="Permanent link">&para;</a></h5>
-<p>Ejecutará el bloque de instrucciones un número determinado de veces. Hace uso de una variable que irá incrementando su valor de uno en uno en función de un rango de valores.</p>
+<p>Ejecutará el bloque de instrucciones un número determinado de veces. Hace uso de una variable que irá incrementando o decrementando su valor de uno en uno en función de un rango de valores.</p>
 <p>Ejemplos:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Para i en (1…N) hacer
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Para i en (1…N) hacer
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    Instrucción1
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    …
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    InstrucciónN
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Inicio
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    suma = 0 
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    Para i en (1…10) hacer
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>        suma = suma + 1
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    Escribe “La suma de los primeros 10 números enteros es ” + suma
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Para i en (N…0) hacer
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    Instrucción1
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    …
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    InstrucciónN
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Inicio
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    suma = 0 
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    Para i en (1…10) hacer
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>        suma = suma + 1
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    Escribe “La suma de los primeros 10 números enteros es ” + suma
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>Fin
 </code></pre></div>
 <blockquote>
 <p><img alt="" src="../assets/rayo.png" />
@@ -3676,104 +3681,116 @@ Actividad: ¿Cuál es el resultado del algoritmo anterior?</p>
 <p><img alt="" src="../assets/rayo.png" />
 Actividad: Realiza un algoritmo que lea dos números y muestre cuál es el mayor.</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Inicio
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Lee num1
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Lee num2
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    Si (num1 &gt; num2) Entonces
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>        Escribe num1 + “ es mayor que ” + num2
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    Sino
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>        Escribe num2 + “ es mayor que ” + num1
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Inicio
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Lee num1
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>Lee num2
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    Si (num1 &gt; num2) Entonces
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        Escribe num1 + “ es mayor que ” + num2
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    Sino
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>        Escribe num2 + “ es mayor que ” + num1
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>Fin
 </code></pre></div>
 <blockquote>
 <p><img alt="" src="../assets/rayo.png" />
 Actividad: Muestra la relación entre dos numeros que introduce el usuario.</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Inicio
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    Lee num1
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    Lee num2
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    Si (num1 == num2) entonces
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        Escribe num1 + “ es igual que ” + num2
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    Sino    
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>        Si (num1 &gt; num2) entonces
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>            Escribe num1 + “ es mayor que ” + num2
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>        Sino
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>            Escribe num2 + “ es mayor que ” + num1
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
-<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>Fin
-</code></pre></div>
-<blockquote>
-<p><img alt="" src="../assets/rayo.png" />
-Actividad: Lee un número, si es mayor que 0 muestra la serie decrementando su valor hasta 0. Por ej:  7 <code>=&gt; 7 6 5 4 3 2 1 0</code></p>
-</blockquote>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Inicio
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    Lee num
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    Si (num &gt; 0) entonces
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>        Escribe num + “ =&gt; ”
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>        Mientras (num &gt; 0) hacer
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>            Escribe num + “ ”
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>            num = num - 1
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>Fin
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    Lee num1
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    Lee num2
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    Si (num1 == num2) entonces
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>        Escribe num1 + “ es igual que ” + num2
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>    Sino    
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>        Si (num1 &gt; num2) entonces
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>            Escribe num1 + “ es mayor que ” + num2
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>        Sino
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>            Escribe num2 + “ es mayor que ” + num1
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>Fin
 </code></pre></div>
 <blockquote>
 <p><img alt="" src="../assets/rayo.png" />
-Actividad: Lee un número, si es mayor que 0 muestra la serie decrementando su valor hasta 0. Por ej: 7 <code>=&gt; 7, 6, 5, 4, 3, 2, 1, 0</code></p>
+Actividad: Lee un número, si es mayor que 0 muestra la serie decrementando su valor hasta 0. Por ej:  <code>7 =&gt; 7 6 5 4 3 2 1 0</code></p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Inicio
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Inicio
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    Lee num
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    Si (num &gt; 0) entonces
 <a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>        Escribe num + “ =&gt; ”
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>        Mientras (num &gt; 0) hacer
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>            Si (num != 0) entonces
-<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>                Escribe num + “, ”
-<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>            num = num - 1
-<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>Fin
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>        Mientras (num &gt;= 0) hacer
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>            Escribe num + “ ”
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>            num = num - 1
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>Fin
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Inicio
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    Lee num
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    Si (num &gt; 0) entonces
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>        Escribe num + “ =&gt; ”
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>        Para i en (num...0) hacer
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>            Escribe i + “ ”
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>Fin
+</code></pre></div></p>
+<blockquote>
+<p><img alt="" src="../assets/rayo.png" />
+Actividad: Lee un número, si es mayor que 0 muestra la serie decrementando su valor hasta 0. Por ej: <code>7 =&gt; 7, 6, 5, 4, 3, 2, 1, 0</code></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Inicio
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    Lee num
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    Si (num &gt; 0) entonces
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>        Escribe num + “ =&gt; ”
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>        Mientras (num &gt;= 0) hacer
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>            Escriber num
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>            Si (num != 0) entonces
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>                Escribe “, ”
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>            num = num - 1
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>Fin
 </code></pre></div>
 <blockquote>
 <p><img alt="" src="../assets/rayo.png" />
-Actividad: Lee un número, si es mayor que 0 muestra la serie decrementando su valor hasta 0. Por ej: 7 <code>=&gt; 7, 6, 5, 4, 3, 2, 1, 0</code></p>
+Actividad: Lee un número, si es mayor que 0 muestra la serie decrementando su valor hasta 0 <em>(usa el bucle Para)</em>. Por ej: <code>7 =&gt; 7, 6, 5, 4, 3, 2, 1, 0</code></p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Inicio
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>Lee a
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    Escribe a + “ =&gt; ”
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    Para i en (1…5) hacer
-<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>        a = a + i
-<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>        Escribe a + “ ”
-<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Inicio
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    Lee num
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    Si (num &gt; 0) entonces
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>        Escribe num + “ =&gt; ”
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>        Para i en (num...0) hacer
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>            Escribe i
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>        Si (i != 0) entonces
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>                Escribe “, ”
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>Fin
 </code></pre></div>
 <blockquote>
 <p><img alt="" src="../assets/rayo.png" />
 Ejercicio 1: Lee un número hasta que el número esté en el rango 1-10
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Introduce un número: 15
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>Inténtalo otra vez! (1-10): 0
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>Inténtalo otra vez! (1-10): 5
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>Correcto!
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Introduce un número: 15
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>Inténtalo otra vez! (1-10): 0
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>Inténtalo otra vez! (1-10): 5
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>Correcto!
 </code></pre></div></p>
 <p><img alt="" src="../assets/rayo.png" />
 Ejercicio 2: Lee dos números y crea la serie que los une de 1 en 1...
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Introduce un número: 4
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>Introduce otro: 8
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>4-5-6-7-8
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>Introduce un número: 12
-<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>Introduce otro: 3
-<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>3-4-5-6-7-8-9-10-11-12
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Introduce un número: 4
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>Introduce otro: 8
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>4-5-6-7-8
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>Introduce un número: 12
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>Introduce otro: 3
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>3-4-5-6-7-8-9-10-11-12
 </code></pre></div></p>
 <p><img alt="" src="../assets/rayo.png" />
 Ejercicio 3: Lee 3 números y dame los números ordenados de menor a mayor.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Dame 3 números:
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>14
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>7
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>10
-<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>Tus números son 7 10 14
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Dame 3 números:
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>14
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>7
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>10
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>Tus números son 7 10 14
 </code></pre></div></p>
 </blockquote>
 

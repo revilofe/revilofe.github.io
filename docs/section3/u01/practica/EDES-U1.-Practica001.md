@@ -21,7 +21,7 @@ Haciendo uso de los distintos [Rankings de lenguajes de programación](https://w
 1. ¿Qué paradigmas destacan en el lenguaje?
 2. ¿Cuál es la posición y evolución de este lenguaje durante los últimos 2 años?
 3. ¿Para que se usa mayoritariamente este lenguaje
-4. ¿Qué tipo de traductor es más habitual se usa para poder ejecutar los programas realizados en este lenguaje?
+4. ¿Qué tipo de traductor se usa para poder ejecutar los programas realizados en este lenguaje?
 5. ¿Existen otras opciones de traducción para este lenguaje?
 6. ¿Cuál es el traductor más usado para este lenguaje y que características tiene?
 

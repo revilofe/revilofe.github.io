@@ -780,11 +780,38 @@
     P1.4 - Gestión de ramas con Git y enlazar a GitHub
   </a>
   
+    <nav class="md-nav" aria-label="P1.4 - Gestión de ramas con Git y enlazar a GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trabajar-con-ramas" class="md-nav__link">
+    Trabajar con ramas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trabajar-con-stash" class="md-nav__link">
+    Trabajar con stash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-del-proyecto-enlazado-con-github" class="md-nav__link">
+    Gestión del proyecto enlazado con Github
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#gestion-del-proyecto-enlazado-con-github" class="md-nav__link">
-    Gestión del proyecto enlazado con Github
+  <a href="#otros-enlaces" class="md-nav__link">
+    Otros enlaces
   </a>
   
 </li>
@@ -3283,11 +3310,38 @@
     P1.4 - Gestión de ramas con Git y enlazar a GitHub
   </a>
   
+    <nav class="md-nav" aria-label="P1.4 - Gestión de ramas con Git y enlazar a GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trabajar-con-ramas" class="md-nav__link">
+    Trabajar con ramas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trabajar-con-stash" class="md-nav__link">
+    Trabajar con stash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-del-proyecto-enlazado-con-github" class="md-nav__link">
+    Gestión del proyecto enlazado con Github
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#gestion-del-proyecto-enlazado-con-github" class="md-nav__link">
-    Gestión del proyecto enlazado con Github
+  <a href="#otros-enlaces" class="md-nav__link">
+    Otros enlaces
   </a>
   
 </li>
@@ -3336,117 +3390,155 @@
   <h1>* Práctica 1.2: GitHub Básico</h1>
 
 <h2 id="p14-gestion-de-ramas-con-git-y-enlazar-a-github">P1.4 - Gestión de ramas con Git y enlazar a GitHub<a class="headerlink" href="#p14-gestion-de-ramas-con-git-y-enlazar-a-github" title="Permanent link">&para;</a></h2>
-<p><a href="https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%C2%BFQu%C3%A9-es-una-rama%3F">¿Qué es una rama?</a></p>
+<h3 id="trabajar-con-ramas">Trabajar con ramas<a class="headerlink" href="#trabajar-con-ramas" title="Permanent link">&para;</a></h3>
+<p>Antes de nada, veamos <a href="https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%C2%BFQu%C3%A9-es-una-rama%3F">qué es una rama</a> y los <a href="https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Procedimientos-B%C3%A1sicos-para-Ramificar-y-Fusionar">procedimientos básicos para ramificar y fusionar</a></p>
 <p><img alt="Ramas de un proyecto" src="https://git-scm.com/book/en/v2/images/basic-branching-6.png" /></p>
-<p><a href="https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Procedimientos-B%C3%A1sicos-para-Ramificar-y-Fusionar">Procedimientos básicos para ramificar y fusionar</a></p>
 <p>Vamos a comenzar la práctica donde lo dejamos en la práctica anterior, P3.</p>
 <ol>
 <li>
-<p>Abrimos Git Bash y nos movemos a la carpeta de nuestro proyecto. Ahora vamos a ejecutar un comando para crear una <strong><em>rama nueva</em></strong> y también nos va a situar en ella:</p>
-<p><code>git checkout -b desEjercicios1</code></p>
-<p>Ahora estamos en otra rama de desarrollo, no en <strong>main</strong> <em>(la rama principal)</em>. En esta nueva rama vamos a tener todos los ficheros de la rama main tal y cómo están en este mismo momento <em>(cómo si hubiéramos sacado una foto exacta)</em>.</p>
+<p>Abrimos Git Bash o una terminal y nos movemos a la carpeta de nuestro proyecto. Ahora vamos a ejecutar un comando para crear una <strong><em>rama nueva</em></strong> y también nos va a situar en ella:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&gt; git checkout -b desEjercicios1`
+</code></pre></div>
+<p>Ya estamos en otra rama de desarrollo, no en <strong>main</strong> <em>(la rama principal)</em>. En esta nueva rama vamos a tener todos los ficheros de la rama main tal y cómo están en este mismo momento <em>(cómo si hubiéramos sacado una foto exacta)</em>.</p>
 </li>
 <li>
-<p>A continuación, creamos un directorio con el nombre ejercicios1, y dentro de esta nueva carpeta, creamos un programa que se llame <em>prueba2.py</em> que solicite dos números, los sume y muestre el resultado:</p>
-<p>num1 = int(input("Dame un número: "))<br />
-num2 = int(input("Dame otro: "))<br />
-print("La suma " + str(num1) + " + " + str(num2) + " es igual a " + str(num1 + num2))<br />
-print(f"{num1} + {num2} = {num1+num2}")  </p>
+<p>A continuación, creamos un directorio con el nombre <code>ejercicios1</code>, y dentro de esta nueva carpeta, creamos un programa que se llame <code>prueba2.py</code> que solicite dos números, los sume y muestre el resultado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>num1 = int(input(&quot;Dame un número: &quot;))  
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>num2 = int(input(&quot;Dame otro: &quot;))  
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>print(&quot;La suma &quot; + str(num1) + &quot; + &quot; + str(num2) + &quot; es igual a &quot; + str(num1 + num2))  
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>print(f&quot;{num1} + {num2} = {num1+num2}&quot;)  
+</code></pre></div>
 </li>
 <li>
 <p>Añadimos el fichero al área de preparación:</p>
-<p><code>git add .</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&gt; git add .
+</code></pre></div>
 </li>
 <li>
-<p>Observad que PyCharm tiene integrado Git y podéis hacerlo también desde el mismo IDE, ya que ha detectado que el proyecto está gestionado por Git <em>(haciendo clic con el botón derecho del ratón encima del fichero aparecen las opciones de Git)</em></p>
+<p>Observad que los IDEs, tienen integrado Git y podéis hacerlo también desde el mismo IDE, ya que ha detectado que el proyecto está gestionado por Git <em>(En PyCharm, haciendo clic con el botón derecho del ratón encima del fichero aparecen las opciones de Git)</em></p>
 </li>
 <li>
 <p>Después hacemos Commit para pasarlo al repositorio:</p>
-<p><code>git commit -m "Creado el programa prueba2"</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&gt; git commit -m &quot;Creado el programa prueba2&quot;
+</code></pre></div>
 </li>
 <li>
-<p>Si nos cambiamos de nuevo a la rama main, podemos observar cómo desaparece el fichero <em>prueba2.py</em>:</p>
-<p><code>git checkout main</code><br />
-<code>ls -l</code><br />
-<code>ls ejercicios1</code><br />
-<code>git status</code>  </p>
+<p>Si nos cambiamos de nuevo a la rama <code>main</code>, podemos observar cómo desaparece el fichero <code>prueba2.py</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&gt; git checkout main
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>&gt; ls -l
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>&gt; ls ejercicios1
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>&gt; git status
+</code></pre></div>
 </li>
 <li>
-<p>Si cambiamos a la rama desEjercicios1 volverá a aparecer <em>prueba2.py</em>:</p>
-<p><code>git checkout desEjercicios1</code><br />
-<code>ls ejercicios1</code><br />
-<code>git status</code>  </p>
+<p>Si cambiamos a la rama <code>desEjercicios1</code> volverá a aparecer <code>prueba2.py</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&gt; git checkout desEjercicios1
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>&gt; ls ejercicios1
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>&gt; git status
+</code></pre></div>
 </li>
 <li>
-<p>Si ya hemos acabado el trabajo en nuestra rama y queremos actualizar todas las modificaciones a la rama principal, debemos <strong><em>FUSIONAR</em></strong> los cambios de la rama <em>desEjercicios1</em> con la rama <em>main</em>:</p>
-<p><code>git checkout master</code><br />
-<code>git merge desEjercicios1</code></p>
+<p>Si ya hemos acabado el trabajo en nuestra rama y queremos actualizar todas las modificaciones a la rama principal, debemos <strong><em>FUSIONAR</em></strong> los cambios de la rama <code>desEjercicios1</code> con la rama <code>main</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>&gt; git checkout master
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>&gt; git merge desEjercicios1
+</code></pre></div>
 </li>
 <li>
-<p>Si hay conflictos y falla hacemos lo siguiente para arreglarlo y forzar la fusión manteniendo los cambios realizados en desEjercicios1 <em>(en un IDE es más sencillo)</em>:</p>
-<p><code>git merge --abort</code><br />
-<code>git rebase desEjercicios1</code><br />
-<code>git rebase --skip</code>  </p>
+<p>Si hay conflictos y falla,  hacemos lo siguiente para arreglarlo:</p>
+<p>La forma más directa de resolver un conflicto de fusión es editar el archivo conflictivo. Abre el archivo que tiene el conflicto en el editor o el IDE. Vamos a eliminar todas las líneas divisorias de conflictos, como estas:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; main
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>=======
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>&gt;&gt;&gt;&gt;&gt;&gt;&gt; desEjercicios1
+</code></pre></div>
+y arreglar el archivo hasta que quede como se desea. Cuando hayas editado el archivo, utiliza <code>git add archivoEditado.txt</code> para preparar el nuevo contenido fusionado. Para finalizar la fusión, crea una nueva confirmación ejecutando lo siguiente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>&gt; git commit -m &quot;merged and resolved the conflict in archivoEditado.txt&quot;
+</code></pre></div>
+<p>Git verá que se ha resuelto el conflicto y crea una nueva confirmación de fusión para finalizar la fusión.</p>
 </li>
 <li>
 <p>Para ver las ramas que tengo:</p>
-<p><code>git branch</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>&gt; git branch
+</code></pre></div>
 </li>
 <li>
-<p>Si estando en la rama main creo un fichero nuevo o una modificación, pero me olvido de añadirlo con <code>add</code> y hacer <code>commit</code>, y cambio de rama... pues me estoy llevando todo los cambios a la rama a la que nos hemos cambiado por no haber hecho <code>commit</code>.</p>
-</li>
-<li>
-<p>Si no quiero hacer Commit en ese momento porque mis cambios aún no son definitivos, podemos dejarlo en un área temporal...</p>
-<p><code>git stash</code></p>
-</li>
-<li>
-<p>Me cambio de rama ya sin problemas y al volver de nuevo a mi rama para seguir trabajando en los cambios revierto el stash:</p>
-<p><code>git stash pop</code></p>
-</li>
-<li>
-<p>También puedo hacer los <code>stash</code> que queramos con:</p>
-<p><code>git stash save "Primer stash"</code></p>
-</li>
-<li>
-<p>Para ver los stash que tengo:</p>
-<p><code>git stash list</code></p>
-</li>
-<li>
-<p>Para recuperar uno en concreto de la lista:</p>
-<p><code>git stash pop stash@{2}</code></p>
+<p>Si estando en la rama <code>main</code> creo un fichero nuevo o una modificación, pero me olvido de añadirlo con <code>add</code> y hacer <code>commit</code>, y cambio de rama... pues me estoy llevando todo los cambios a la rama a la que nos hemos cambiado por no haber hecho <code>commit</code>.</p>
 </li>
 <li>
 <p>Para eliminar una rama:</p>
-<p><code>git branch -d nombreRama</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>&gt; git branch -d nombreRama
+</code></pre></div>
 </li>
 </ol>
-<h2 id="gestion-del-proyecto-enlazado-con-github">Gestión del proyecto enlazado con Github<a class="headerlink" href="#gestion-del-proyecto-enlazado-con-github" title="Permanent link">&para;</a></h2>
+<h3 id="trabajar-con-stash">Trabajar con <code>stash</code><a class="headerlink" href="#trabajar-con-stash" title="Permanent link">&para;</a></h3>
+<p>Se trata de un comando que “congela” el estado en el que se encuentra el proyecto en un momento determinado, con todos los cambios que tenemos a "sin comitear", y lo guarda en una pila provisional brindando la posibilidad de poder recuperarlo más adelante.</p>
 <ol>
 <li>
-<p>Lo primero que debemos hacer es ir a la página web de <a href="https://github.com/">GitHub</a> y registrarnos con nuestro correo corporativo de <code>@g.educaand.es</code></p>
+<p>Por ejemplo, si tengo cambios y no quiero hacer Commit en ese momento porque mis cambios aún no son definitivos, podemos dejarlo en un área temporal:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>&gt; git stash
+</code></pre></div>
+</li>
+<li>
+<p>A partir de ese momento podré cambiar de rama ya sin problemas y al volver de nuevo a mi rama para seguir trabajando en los cambios revierto el stash:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>&gt; git stash pop
+</code></pre></div>
+</li>
+<li>
+<p>También puedo hacer los <code>stash</code> que queramos con:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&gt; git stash save &quot;Primer stash&quot;
+</code></pre></div>
+</li>
+<li>
+<p>Para ver los stash que tengo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>&gt; git stash list
+</code></pre></div>
+</li>
+<li>
+<p>Para recuperar uno en concreto de la lista:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>&gt; git stash pop stash@{2}
+</code></pre></div>
+</li>
+</ol>
+<h3 id="gestion-del-proyecto-enlazado-con-github">Gestión del proyecto enlazado con Github<a class="headerlink" href="#gestion-del-proyecto-enlazado-con-github" title="Permanent link">&para;</a></h3>
+<p>GitHub es una plataforma de desarrollo colaborativo que utiliza el sistema de control de versiones Git. Git gestiona repositorios locales en tu ordenador, permitiendo el seguimiento de cambios en tu código. GitHub extiende esta funcionalidad al proporcionar repositorios remotos alojados en la nube, lo que facilita la colaboración entre equipos dispersos geográficamente. Permite a los desarrolladores subir sus cambios a un repositorio en línea y fusionarlos con el trabajo de otros. Además, GitHub ofrece herramientas como seguimiento de problemas, ramificaciones y solicitudes de extracción para facilitar la colaboración y la gestión de proyectos.</p>
+<ol>
+<li>
+<p>Lo primero que debemos hacer es ir a la página web de <a href="https://github.com/">GitHub</a> y registrarnos con nuestro correo corporativo de <code>xxxxxxx@g.educaand.es</code></p>
 <p><a href="https://git-scm.com/book/es/v2/GitHub-Creaci%C3%B3n-y-configuraci%C3%B3n-de-la-cuenta">GitHub - Creación y configuración de la cuenta</a></p>
 </li>
 <li>
 <p>Después crearemos un repositorio en GitHub (para más información podéis acceder a la documentación de GitHub, <a href="https://docs.github.com/es/get-started/quickstart/create-a-repo">Creación de un repositorio</a>). El nombre del repositorio puede ser el siguiente, dependiendo del curso dónde estés:</p>
-</li>
-<li>
-<p>DAM1_ProgPhyton</p>
-</li>
+<ul>
+<li>DAM1_ProgPhyton</li>
 <li>DAW1A_ProgPython</li>
-<li>
-<p>DAW1B_ProgPython</p>
+<li>DAW1B_ProgPython</li>
+</ul>
 </li>
 <li>
-<p>Ahora ya tenemos nuestro proyecto gestionado por Git en local y un repositorio en la nube. Para enlazarlos y así estar tranquilos que nuestros ficheros nunca se van a perder seguiremos las instrucciones que nos proporciona GitHub al crearnos el nuevo repositorio para conectarlo con mi repo local... por ejemplo, si lo hubiéramos llamado PruebasProgPython y mi usuario de GitHub fuera dcansib438, nos generaría un comando similar al siguiente <em>(lo copiamos y pegamos en Git Bash)</em>:</p>
-<p><code>git remote add origin https://github.com/dcansib438/PruebasProgPhyton.git</code></p>
+<p>Ahora ya tenemos nuestro proyecto gestionado por Git en local y un repositorio en la nube. Para enlazarlos y así estar tranquilos que nuestros ficheros nunca se van a perder seguiremos las instrucciones que nos proporciona GitHub al crearnos el nuevo repositorio para conectarlo con mi repo local... por ejemplo, si lo hubiéramos llamado <code>PruebasProgPython</code> y mi usuario de GitHub fuera <code>dcansib438</code>, nos generaría un comando similar al siguiente <em>(lo copiamos y pegamos en Git Bash o la terminal)</em>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>&gt; git remote add origin https://github.com/dcansib438/PruebasProgPhyton.git
+</code></pre></div>
+</li>
+<li>
+<p>Para subir cambios a Github:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>&gt; git push origin main
+</code></pre></div>
+</li>
+<li>
+<p>Para descargar los cambios que se hayan realizado en Github, realizados desde otro ordenador u otro desarrollador distinto:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>&gt; git pull origin main
+</code></pre></div>
 </li>
 </ol>
-<p>Para subir cambios a Github:</p>
-<div class="highlight"><pre><span></span><code>`git push origin main`
-</code></pre></div>
-<p>Para descargar los cambios que se hayan realizado en Github, realizados desde otro ordenador u otro desarrollador distinto:</p>
-<div class="highlight"><pre><span></span><code>`git pull origin main`
-</code></pre></div>
+<h2 id="otros-enlaces">Otros enlaces<a class="headerlink" href="#otros-enlaces" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/">GitHub</a></li>
+<li><a href="https://docs.github.com/es/get-started/quickstart/create-a-repo">Creación de un repositorio en github</a>)</li>
+<li><a href="https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-es.md">Chuleta de comandos git</a></li>
+<li><a href="https://ndpsoftware.com/git-cheatsheet.html#loc=index">Ayuda visual</a></li>
+<li><a href="https://training.github.com/downloads/es_ES/github-git-cheat-sheet/">Guia rápida</a></li>
+<li><a href="https://git-scm.com/docs">Documentación de referencia de git</a></li>
+<li><a href="https://git-scm.com/book/es/v2">Libro de Git</a></li>
+</ul>
 
 
   

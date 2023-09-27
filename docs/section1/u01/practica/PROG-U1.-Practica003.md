@@ -157,6 +157,7 @@ Si volvemos a ejecutar el estado del proyecto de Git veremos que no tenemos ning
 
 Primero creamos un directorio que se llame `ejercicios1` y después un fichero que se llame `prueba1.py` que contenga el siguiente código:
 
+
 ```
 
 edad = int(input("Introduzca su edad: "))  
@@ -178,6 +179,7 @@ A continuación, lo vamos a ejecutar dentro de el IDE para ver cómo funciona el
 > nano .gitignore
 
 ```
+
 Al que añadiremos la linea siguiente:
 
 ```

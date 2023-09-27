@@ -177,13 +177,14 @@ Se trata de un comando que “congela” el estado en el que se encuentra el pro
 	
 	> git stash pop stash@{2}
 	
-	```
-		
-
-### Gestión del proyecto enlazado con Github
-
+	```		
+   
+    
+    
+### Gestión del proyecto enlazado con Github    
+    
 GitHub es una plataforma de desarrollo colaborativo que utiliza el sistema de control de versiones Git. Git gestiona repositorios locales en tu ordenador, permitiendo el seguimiento de cambios en tu código. GitHub extiende esta funcionalidad al proporcionar repositorios remotos alojados en la nube, lo que facilita la colaboración entre equipos dispersos geográficamente. Permite a los desarrolladores subir sus cambios a un repositorio en línea y fusionarlos con el trabajo de otros. Además, GitHub ofrece herramientas como seguimiento de problemas, ramificaciones y solicitudes de extracción para facilitar la colaboración y la gestión de proyectos.
-
+   
 1. Lo primero que debemos hacer es ir a la página web de [GitHub](https://github.com/) y registrarnos con nuestro correo corporativo de `xxxxxxx@g.educaand.es`
 
     [GitHub - Creación y configuración de la cuenta](https://git-scm.com/book/es/v2/GitHub-Creaci%C3%B3n-y-configuraci%C3%B3n-de-la-cuenta)

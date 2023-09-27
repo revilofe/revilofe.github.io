@@ -75,18 +75,22 @@ En windows, Git Bash es la herramienta de línea de comandos que permite a los u
 
 ```
 
-### ¿Cómo vamos a trabajar con Git (Proyecto)?
 
-De manera muy básica, en un proyecto de Git vamos a trabajar con 3 secciones o áreas principales:
+### ¿Cómo vamos a trabajar con Git (Proyecto)?   
+  
+
+De manera muy básica, en un proyecto de Git vamos a trabajar con 3 secciones o áreas principales:   
     
 - Área de trabajo *(creamos carpetas y ficheros, modificamos el contenido de los ficheros y ejecutamos el comando `add` para agregarlos al área de preparación del proyecto)*
 - Área de preparación *(staging area)*
 - Repositorio *(commit)*
+   
 
 ![Secciones principales de un proyecto de Git](https://git-scm.com/book/en/v2/images/areas.png)
+  
 
 1. Nos creamos un primer programa en Python y lo ejecutamos *(todo desde la línea de comandos por ahora)*:
-  
+
 ```
 
 > touch holamundo.py
@@ -94,7 +98,8 @@ De manera muy básica, en un proyecto de Git vamos a trabajar con 3 secciones o 
 ```
 
 2. Podemos crearnos el programa y editarlo de manera gráfica en el Explorador de Windows, pero esta vez vamos a usar un editor de consola para escribir el contenido de nuestro programa. Después mostraremos su contenido en la terminal con el comando cat y mediante el intérprete de Python lo ejecutaremos:
-   
+
+ 
 ```
 
 > nano holamundo.py

@@ -94,9 +94,9 @@ Ejemplos de operadores comunes son los operadores aritméticos `+` (suma), `-` (
 
 Cuando en una expresión aparece más de un operador, el orden de evaluación depende de las  *reglas de precedencia* . Para los operadores matemáticos, Python sigue las convenciones matemáticas. El acrónimo *PEMDSR* resulta útil para recordar esas reglas:
 
-* Los *P*aréntesis tienen el nivel superior de precedencia, y pueden usarse para forzar a que una expresión sea evaluada en el orden que se quiera. Dado que las expresiones entre paréntesis son evaluadas primero, `2 * (3-1)` es 4, y `(1+1)**(5-2)` es 8. Se pueden usar también paréntesis para hacer una expresión más sencilla de leer, incluso si el resultado de la misma no varía por ello, como en `(minuto * 100) / 60`.
-* La *E*xponenciación (elevar un número a una potencia) tiene el siguiente nivel más alto de precedencia, de modo que `2**1+1` es 3, no 4, y `3*1**3` es 3, no 27.
-* La *M*ultiplicación y la *D*ivisión tienen la misma precedencia, que es superior a la de la *S*uma y la *R*esta, que también tienen entre si el mismo nivel de precedencia. Así que `2*3-1` es 5, no 4, y `6+4/2` es 8, no 5.
+* Los Paréntesis tienen el nivel superior de precedencia, y pueden usarse para forzar a que una expresión sea evaluada en el orden que se quiera. Dado que las expresiones entre paréntesis son evaluadas primero, `2 * (3-1)` es 4, y `(1+1)**(5-2)` es 8. Se pueden usar también paréntesis para hacer una expresión más sencilla de leer, incluso si el resultado de la misma no varía por ello, como en `(minuto * 100) / 60`.
+* La Exponenciación (elevar un número a una potencia) tiene el siguiente nivel más alto de precedencia, de modo que `2**1+1` es 3, no 4, y `3*1**3` es 3, no 27.
+* La Multiplicación y la División tienen la misma precedencia, que es superior a la de la *S*uma y la *R*esta, que también tienen entre si el mismo nivel de precedencia. Así que `2*3-1` es 5, no 4, y `6+4/2` es 8, no 5.
 * Los operadores con igual precedencia son evaluados de izquierda a derecha. Así que la expresión `5-3-1` es 1 y no 3, ya que `5-3` se evalúa antes, y después se resta `1` de `2`.
 
 En caso de duda, añade siempre paréntesis a tus expresiones para asegurarte de que las operaciones se realizan en el orden que tú quieres.
@@ -208,12 +208,12 @@ Veamos todo esto con un ejemplo:
 
 ```py
 
-  def suma_numeros(numeros):   # Bloque 1
-    suma = 0                   # Bloque 2
-    for n in numeros:          # Bloque 2
-      suma += n                # Bloque 3
-      print(suma)              # Bloque 3
-    return suma                # Bloque 2
+def suma_numeros(numeros):   # Bloque 1
+suma = 0                   # Bloque 2
+for n in numeros:          # Bloque 2
+  suma += n                # Bloque 3
+  print(suma)              # Bloque 3
+return suma                # Bloque 2
 
 ```
 
@@ -535,7 +535,7 @@ Hola Pythonista
 
 A la hora de operar con valores booleanos, tenemos a nuestra disposición los operadores `and`, `or` y `not`.
 
->️ **IMPORTANTE: **Las operaciones `and`, `or` y `not` realmente no devuelven `True` o `False`, sino que devuelven uno de los operandos como veremos en el cuadro de abajo.
+>️ **IMPORTANTE:** Las operaciones `and`, `or` y `not` realmente no devuelven `True` o `False`, sino que devuelven uno de los operandos como veremos en el cuadro de abajo.
 
 A continuación te muestro cómo funcionan los operadores booleanos (en orden de preferencia ascendente):
 

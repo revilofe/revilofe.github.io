@@ -247,4 +247,4 @@ Si ejecutamos el programa desde el IDE PyCharm observamos que nos da un gran err
 * [Ayuda visual](https://ndpsoftware.com/git-cheatsheet.html#loc=index)
 * [Guia rápida](https://training.github.com/downloads/es_ES/github-git-cheat-sheet/)
 * [Documentación de referencia de git](https://git-scm.com/docs)
-* [Libro de Git] (https://git-scm.com/book/es/v2)
+* [Libro de Git](https://git-scm.com/book/es/v2)

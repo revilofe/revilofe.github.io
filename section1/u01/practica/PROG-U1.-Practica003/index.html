@@ -3399,12 +3399,12 @@
 <p>En windows, Git Bash es la herramienta de línea de comandos que permite a los usuarios de Windows utilizar las funciones de Git. Git Bash es Git en una “Bourne Again Shell”. La aplicación contiene numerosas utilidades de Unix. Git Bash os permitirá usar herramientas MinGW/Linux Bash con Git en la línea de comandos. Todas esas cosas bonitas que se hacen en Linux también las podemos hacer en Windows a través de Git Bash.</p>
 <h3 id="configurar-git-y-crear-nuestro-primer-proyecto">Configurar Git y crear nuestro primer proyecto<a class="headerlink" href="#configurar-git-y-crear-nuestro-primer-proyecto" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Primero tenemos que definir nuestra identidad, para ello en la línea de comandos escribiremos las siguientes instrucciones utilizando nuestro usuario iPasen y <code>xxxxx@g.educaand.es</code>. Mas adelante podremos utilizar el correo <code>xxxxx@iesrafaelalberti.es</code>:</li>
-</ol>
+<li>
+<p>Primero tenemos que definir nuestra identidad, para ello en la línea de comandos escribiremos las siguientes instrucciones utilizando nuestro usuario iPasen y <code>xxxxx@g.educaand.es</code>. Mas adelante podremos utilizar el correo <code>xxxxx@iesrafaelalberti.es</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&gt; git config --global user.name &quot;dcansib483&quot;
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&gt; git config --global user.email &quot;dcansib483@g.educaand.es&quot;
 </code></pre></div>
-<ol>
+</li>
 <li>
 <p>Algunos comandos básicos para navegar y trabajar con ficheros y carpetas:</p>
 <ul>
@@ -3425,14 +3425,12 @@
 </li>
 <li>
 <p>Accedemos a la carpeta <code>Documents</code> y creamos el directorio <code>ProgPython</code>:</p>
-</li>
-</ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&gt; cd Documents
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&gt; mkdir ProgPython
 </code></pre></div>
-<ol>
-<li>En esta carpeta vamos a crear nuestro proyecto de Git. Inicializamos Git en este directorio para indicarle que esta carpeta es nuestra área de trabajo:</li>
-</ol>
+</li>
+<li>
+<p>En esta carpeta vamos a crear nuestro proyecto de Git. Inicializamos Git en este directorio para indicarle que esta carpeta es nuestra área de trabajo:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&gt; cd ProgPython  
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&gt; git init
 </code></pre></div>
@@ -3444,14 +3442,14 @@
 <li>Repositorio <em>(commit)</em></li>
 </ul>
 <p><img alt="Secciones principales de un proyecto de Git" src="https://git-scm.com/book/en/v2/images/areas.png" /></p>
-<ol>
-<li>Nos creamos un primer programa en Python y lo ejecutamos <em>(todo desde la línea de comandos por ahora)</em>:</li>
-</ol>
+</li>
+<li>
+<p>Nos creamos un primer programa en Python y lo ejecutamos <em>(todo desde la línea de comandos por ahora)</em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&gt; touch holamundo.py
 </code></pre></div>
-<ol>
-<li>Podemos crearnos el programa y editarlo de manera gráfica en el Explorador de Windows, pero esta vez vamos a usar un editor de consola para escribir el contenido de nuestro programa. Después mostraremos su contenido en la terminal con el comando cat y mediante el intérprete de Python lo ejecutaremos:</li>
-</ol>
+</li>
+<li>
+<p>Podemos crearnos el programa y editarlo de manera gráfica en el Explorador de Windows, pero esta vez vamos a usar un editor de consola para escribir el contenido de nuestro programa. Después mostraremos su contenido en la terminal con el comando cat y mediante el intérprete de Python lo ejecutaremos:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&gt; nano holamundo.py
 </code></pre></div>
 <ul>
@@ -3466,26 +3464,26 @@
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>&gt; python holamundo.py
 </code></pre></div>
-<ol>
-<li>Ahora vamos a mirar el estado de nuestra área de trabajo... a ver que nos dice Git:</li>
-</ol>
+</li>
+<li>
+<p>Ahora vamos a mirar el estado de nuestra área de trabajo... a ver que nos dice Git:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&gt; git status
 </code></pre></div>
 <p><strong><em>¿Qué va a pasar si vamos al directorio justo anterior y volvemos a ejecutar el mismo comando?</em></strong></p>
-<ol>
-<li>Volvemos a la carpeta de nuestro proyecto de Git... y volvemos ver el estado de nuestro proyecto... vemos que nos está indicando que existe un fichero nuevo sin añadir a nuestra área de preparación. La añadimos:</li>
-</ol>
+</li>
+<li>
+<p>Volvemos a la carpeta de nuestro proyecto de Git... y volvemos ver el estado de nuestro proyecto... vemos que nos está indicando que existe un fichero nuevo sin añadir a nuestra área de preparación. La añadimos:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>&gt; git add holamundo.py
 </code></pre></div>
-<ol>
-<li>Cómo es un programa muy pequeño y ya lo hemos terminado, vamos a confirmar que es un buen punto de partida para hacer un commit, es decir, lo pasamos a nuestro repositorio o área de producción:</li>
-</ol>
+</li>
+<li>
+<p>Cómo es un programa muy pequeño y ya lo hemos terminado, vamos a confirmar que es un buen punto de partida para hacer un commit, es decir, lo pasamos a nuestro repositorio o área de producción:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>&gt; git commit -m &quot;Primera versión de hola mundo&quot;
 </code></pre></div>
 <p>Si volvemos a ejecutar el estado del proyecto de Git veremos que no tenemos ningún cambio pendiente... está todo en el repositorio.</p>
-<ol>
-<li>Vamos a crear otro programa, pero esta vez desde un IDE (Entorno de desarrollo integrado: Pycharm o Visual Code)</li>
-</ol>
+</li>
+<li>
+<p>Vamos a crear otro programa, pero esta vez desde un IDE (Entorno de desarrollo integrado: Pycharm o Visual Code)</p>
 <p>Primero creamos un directorio que se llame <code>ejercicios1</code> y después un fichero que se llame <code>prueba1.py</code> que contenga el siguiente código:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>edad = int(input(&quot;Introduzca su edad: &quot;))  
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>if edad &gt;= 18:  
@@ -3495,9 +3493,9 @@
 </code></pre></div>
 <p>Esta vez lo vamos a abrir con el IDE, diciéndole que nos cree un proyecto en la carpeta <code>ProgPython</code>... podemos crear el directorio y el programa vacío con los comandos de consola <strong>(<code>mkdir</code> y <code>touch</code>)</strong> y después abrir el fichero con el IDE <strong>(En windows: botón derecho desde el Explorador de archivos)</strong></p>
 <p>A continuación, lo vamos a ejecutar dentro de el IDE para ver cómo funciona el programa...</p>
-<ol>
-<li>Esto nos ha generado en la carpeta del proyecto el directorio: <code>ejercicios1</code> y puede ser que otros directorios propios del IDE, como por ejemplo <code>.idea</code> <strong>(usado por el IDE Pycharm para la gestión del proyecto )</strong>. Si comprobamos el estado del proyecto <strong>(<code>git status</code>)</strong> nos muestra el directorio <code>.idea</code> para que lo añadamos también. Si no queremos subir a nuestro repositorio esta carpeta, podemos indicarle a Git que la ignore. Para ello, vamos a crearnos, en la carpeta del proyecto de Git, el fichero <code>.gitignore</code> que contendrá los archivos y carpetas que deseamos que Git ignore al comprobar el estado de los archivos del proyecto. En nuestro caso, solo tendrá una línea <strong>(podemos hacerlo con el editor <code>nano</code>)</strong>:</li>
-</ol>
+</li>
+<li>
+<p>Esto nos ha generado en la carpeta del proyecto el directorio: <code>ejercicios1</code> y puede ser que otros directorios propios del IDE, como por ejemplo <code>.idea</code> <strong>(usado por el IDE Pycharm para la gestión del proyecto )</strong>. Si comprobamos el estado del proyecto <strong>(<code>git status</code>)</strong> nos muestra el directorio <code>.idea</code> para que lo añadamos también. Si no queremos subir a nuestro repositorio esta carpeta, podemos indicarle a Git que la ignore. Para ello, vamos a crearnos, en la carpeta del proyecto de Git, el fichero <code>.gitignore</code> que contendrá los archivos y carpetas que deseamos que Git ignore al comprobar el estado de los archivos del proyecto. En nuestro caso, solo tendrá una línea <strong>(podemos hacerlo con el editor <code>nano</code>)</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>&gt; nano .gitignore
 </code></pre></div>
 <p>Al que añadiremos la linea siguiente:</p>
@@ -3508,14 +3506,14 @@
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>&gt; git add ejercicios
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>&gt; git commit -m &quot;Primera versión de la carpeta ejercicios1&quot;
 </code></pre></div>
-<ol>
-<li>Ahora mismo tenemos todo actualizado en nuestro repositorio... para ver todos los commits que hemos realizado <strong>(observad el código HASH que tiene cada commit)</strong>:</li>
-</ol>
+</li>
+<li>
+<p>Ahora mismo tenemos todo actualizado en nuestro repositorio... para ver todos los commits que hemos realizado <strong>(observad el código HASH que tiene cada commit)</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>&gt; `git log`
 </code></pre></div>
-<ol>
-<li>Podemos hacer ahora una modificación al programa <code>prueba1.py</code></li>
-</ol>
+</li>
+<li>
+<p>Podemos hacer ahora una modificación al programa <code>prueba1.py</code></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>edad = input(&quot;Introduzca su edad: &quot;)  
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>if edad &gt;= 18:  
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    print(&quot;Toma una cerveza!&quot;)  
@@ -3529,24 +3527,24 @@
 </code></pre></div>
 <p>Si ejecutamos el programa desde el IDE PyCharm observamos que nos da un gran error... nos hemos equivocado y está en el repositorio final :-(</p>
 <p><strong><em>¿Qué hacemos ahora?</em></strong></p>
-<ol>
-<li>No pasa nada, para eso tenemos un control de versiones... primero hacemos <code>git log</code>, copiamos el número que está a la derecha del commit de la versión a la que queremos volver y lo pegamos detrás del siguiente comando:</li>
-</ol>
+</li>
+<li>
+<p>No pasa nada, para eso tenemos un control de versiones... primero hacemos <code>git log</code>, copiamos el número que está a la derecha del commit de la versión a la que queremos volver y lo pegamos detrás del siguiente comando:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>&gt; git log
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>&gt; git checkout 8d0bd05d48f696b544e0eca0dce995d15f220e13
 </code></pre></div>
-<ol>
+</li>
 <li>
 <p>Si volvemos al IDE, observamos que volvemos a tener la primera versión de nuestro programa que funciona perfectamente. Observad también con el comando <code>git log</code> que ya no aparece la segunda versión, pues el comando <code>git checkout</code> la ha eliminado del control de versiones para ir a una versión anterior <em>(esto no se puede deshacer)</em>.</p>
 </li>
 <li>
 <p>Otros comandos que nos pueden ayudar:</p>
-</li>
-<li>
-<p>Para añadir TODOS los ficheros de un directorio =&gt; <code>git add .</code>  </p>
-</li>
+<ul>
+<li>Para añadir TODOS los ficheros de un directorio =&gt; <code>git add .</code>  </li>
 <li>Para añadir TODOS los cambios pendientes de una sola vez: =&gt; <code>git add -A</code>     </li>
 <li>Para deshacer un <code>git add</code> antes de hacer un <code>git commit</code> =&gt; <code>git reset nombreArchivo</code> o <code>git reset</code> para deshacer todos los cambios. También podemos usar <code>git checkout .</code>.</li>
+</ul>
+</li>
 </ol>
 <h2 id="otros-enlaces">Otros enlaces<a class="headerlink" href="#otros-enlaces" title="Permanent link">&para;</a></h2>
 <ul>

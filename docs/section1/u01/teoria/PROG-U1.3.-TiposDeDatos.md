@@ -338,3 +338,4 @@ Las siguientes funciones convierten un dato de un tipo en otro, siempre y cuando
 * [Aprende con Alf](https://aprendeconalf.es/)
 * [Pagina de Juan Jose Lozano Gomez sobre Python](https://j2logo.com/)
 * [Documentación de Python](https://docs.python.org/es/3/library/index.html)
+* [Tipos de datos](https://entrenamiento-python-basico.readthedocs.io/es/3.7/leccion3/tipo_numericos.html))

@@ -6,30 +6,32 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Mis primeras pruebas unitarias">
-      
       
         <meta name="author" content="Eduardo Fdez">
       
       
-        <link rel="canonical" href="https://revilofe.github.io/section1/u01/practica/OtrosRecursos/PROG-U1.-Pr%C3%A1ctica006/">
+        <link rel="canonical" href="https://revilofe.github.io/section1/u01/teoria/PROG-U1.4.-Pytest/">
       
       
+        <link rel="prev" href="../../practica/PROG-U1.-Practica004/">
       
       
-      <link rel="icon" href="../../../../../assets/favicon-96x96.png">
+        <link rel="next" href="../../practica/PROG-U1.-Practica005/">
+      
+      
+      <link rel="icon" href="../../../../assets/favicon-96x96.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
     
     
       
-        <title>UD 1 - P6: PU con Pytest - R Z O</title>
+        <title>1.4.-Pruebas con pytest - R Z O</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.d451bc0e.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.d451bc0e.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.a5377069.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a5377069.min.css">
       
       
 
@@ -59,7 +61,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -98,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#p16-mis-primeras-pruebas-unitarias" class="md-skip">
+        <a href="#pruebas-con-pytest" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -118,9 +120,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="../../../../.." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
+    <a href="../../../.." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
       
-  <img src="../../../../../assets/ms-icon-144x144.png" alt="logo">
+  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -137,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UD 1 - P6: PU con Pytest
+              1.4.-Pruebas con pytest
             
           </span>
         </div>
@@ -242,7 +244,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
     
@@ -257,11 +259,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
           
   
     
@@ -281,7 +285,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../section3/" class="md-tabs__link">
+        <a href="../../../../section3/" class="md-tabs__link">
           
   
     
@@ -301,7 +305,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../section2/" class="md-tabs__link">
+        <a href="../../../../section2/" class="md-tabs__link">
           
   
     
@@ -319,7 +323,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../blog/" class="md-tabs__link">
+      <a href="../../../../blog/" class="md-tabs__link">
         
   
     
@@ -336,7 +340,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../tags/" class="md-tabs__link">
+      <a href="../../../../tags/" class="md-tabs__link">
         
   
     
@@ -353,7 +357,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../about/" class="md-tabs__link">
+      <a href="../../../../about/" class="md-tabs__link">
         
   
     
@@ -393,9 +397,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
+    <a href="../../../.." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
       
-  <img src="../../../../../assets/ms-icon-144x144.png" alt="logo">
+  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
 
     </a>
     R Z O
@@ -421,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -438,6 +442,8 @@
       
   
   
+    
+  
   
     
     
@@ -469,19 +475,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -498,7 +502,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Programación
@@ -511,6 +515,8 @@
                 
   
   
+    
+  
   
     
     
@@ -535,6 +541,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -542,19 +554,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -571,7 +581,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             U1: Introducción al desarrollo de software
@@ -586,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../teoria/PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
+      <a href="../PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -606,7 +616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../teoria/PROG-U1.1.1-Pseudocodigo/" class="md-nav__link">
+      <a href="../PROG-U1.1.1-Pseudocodigo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -626,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PROG-U1.-Practica001/" class="md-nav__link">
+      <a href="../../practica/PROG-U1.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../teoria/PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
+      <a href="../PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -666,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../teoria/PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
+      <a href="../PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -686,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PROG-U1.-Practica002/" class="md-nav__link">
+      <a href="../../practica/PROG-U1.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -706,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PROG-U1.-Practica003/" class="md-nav__link">
+      <a href="../../practica/PROG-U1.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -726,11 +736,141 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PROG-U1.-Practica004/" class="md-nav__link">
+      <a href="../../practica/PROG-U1.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    * Práctica 1.2: GitHub Básico
+    * Práctica 1.4: GitHub Básico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1.4.-Pruebas con pytest
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1.4.-Pruebas con pytest
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacionactualizacion-de-pip" class="md-nav__link">
+    Instalación/Actualización de pip
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-un-entorno-virtual" class="md-nav__link">
+    Crear un entorno virtual
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pruebas-con-pytest_1" class="md-nav__link">
+    Pruebas con pytest
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes" class="md-nav__link">
+    Fuentes:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practica/PROG-U1.-Practica005/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.5: Creación de entorno
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practica/PROG-U1.-Practica006.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.6: Uso de pytest
   </span>
   
 
@@ -799,7 +939,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u02/" class="md-nav__link ">
+            <a href="../../../u02/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -831,7 +971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
+      <a href="../../../u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
+      <a href="../../../u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,7 +1011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
+      <a href="../../../u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -891,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
+      <a href="../../../u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -911,7 +1051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
+      <a href="../../../u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -931,7 +1071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
+      <a href="../../../u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -951,7 +1091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
+      <a href="../../../u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +1111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
+      <a href="../../../u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -991,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
+      <a href="../../../u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1084,7 +1224,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u03/" class="md-nav__link ">
+            <a href="../../../u03/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1116,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/PROG-U3.0.-Cadenas/" class="md-nav__link">
+      <a href="../../../u03/teoria/PROG-U3.0.-Cadenas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1136,7 +1276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/practica/PROG-U3.-Practica000/" class="md-nav__link">
+      <a href="../../../u03/practica/PROG-U3.-Practica000/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1156,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/PROG-U3.1.-Listas/" class="md-nav__link">
+      <a href="../../../u03/teoria/PROG-U3.1.-Listas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1176,7 +1316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/PROG-U3.2.-Tuplas/" class="md-nav__link">
+      <a href="../../../u03/teoria/PROG-U3.2.-Tuplas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1196,7 +1336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/practica/PROG-U3.-Practica001/" class="md-nav__link">
+      <a href="../../../u03/practica/PROG-U3.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1216,7 +1356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/PROG-U3.3.-Diccionarios/" class="md-nav__link">
+      <a href="../../../u03/teoria/PROG-U3.3.-Diccionarios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1236,7 +1376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/practica/PROG-U3.-Practica002/" class="md-nav__link">
+      <a href="../../../u03/practica/PROG-U3.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1256,7 +1396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/PROG-U3.4.-Conjuntos/" class="md-nav__link">
+      <a href="../../../u03/teoria/PROG-U3.4.-Conjuntos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1276,7 +1416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/practica/PROG-U3.-Practica003/" class="md-nav__link">
+      <a href="../../../u03/practica/PROG-U3.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1296,7 +1436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/PROG-U3.5.-Funciones/" class="md-nav__link">
+      <a href="../../../u03/teoria/PROG-U3.5.-Funciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1357,7 +1497,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u04/" class="md-nav__link ">
+            <a href="../../../u04/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1389,7 +1529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u04/teoria/PROG-U4.1.-kotlin/" class="md-nav__link">
+      <a href="../../../u04/teoria/PROG-U4.1.-kotlin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1409,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u04/teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
+      <a href="../../../u04/teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1429,7 +1569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u04/teoria/PROG-U4.3.-kotlinPOO/" class="md-nav__link">
+      <a href="../../../u04/teoria/PROG-U4.3.-kotlinPOO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1449,7 +1589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u04/teoria/PROG-U4.4.-kotlinResumen/" class="md-nav__link">
+      <a href="../../../u04/teoria/PROG-U4.4.-kotlinResumen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1502,7 +1642,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u05/" class="md-nav__link ">
+            <a href="../../../u05/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1562,7 +1702,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u06/" class="md-nav__link ">
+            <a href="../../../u06/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1632,7 +1772,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u07/" class="md-nav__link ">
+            <a href="../../../u07/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1664,7 +1804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
+      <a href="../../../u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1684,7 +1824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
+      <a href="../../../u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1704,7 +1844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
+      <a href="../../../u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1724,7 +1864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
+      <a href="../../../u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1744,7 +1884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
+      <a href="../../../u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1807,7 +1947,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u09/" class="md-nav__link ">
+            <a href="../../../u09/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1839,7 +1979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u09/teoria/PROG-U9.1.-AccesoBBDD/" class="md-nav__link">
+      <a href="../../../u09/teoria/PROG-U9.1.-AccesoBBDD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1859,7 +1999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u09/teoria/PROG-U9.2.-JDBC-1/" class="md-nav__link">
+      <a href="../../../u09/teoria/PROG-U9.2.-JDBC-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1879,7 +2019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u09/teoria/PROG-U9.3.-JDBC-2/" class="md-nav__link">
+      <a href="../../../u09/teoria/PROG-U9.3.-JDBC-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1899,7 +2039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u09/teoria/PROG-U9.4.-DAO/" class="md-nav__link">
+      <a href="../../../u09/teoria/PROG-U9.4.-DAO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1919,7 +2059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u09/teoria/PROG-U9.5.-OtrosAspectos/" class="md-nav__link">
+      <a href="../../../u09/teoria/PROG-U9.5.-OtrosAspectos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1987,7 +2127,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section3/" class="md-nav__link ">
+            <a href="../../../../section3/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2060,7 +2200,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section3/u01/" class="md-nav__link ">
+            <a href="../../../../section3/u01/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2092,7 +2232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.1.-Software-PC/" class="md-nav__link">
+      <a href="../../../../section3/u01/teoria/EDES-U1.1.-Software-PC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2112,7 +2252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.2.-Lenguajes/" class="md-nav__link">
+      <a href="../../../../section3/u01/teoria/EDES-U1.2.-Lenguajes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2132,7 +2272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.3.-FuncionalidadesHerramientas/" class="md-nav__link">
+      <a href="../../../../section3/u01/teoria/EDES-U1.3.-FuncionalidadesHerramientas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2152,7 +2292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.4.-Traductores/" class="md-nav__link">
+      <a href="../../../../section3/u01/teoria/EDES-U1.4.-Traductores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2172,7 +2312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.5.-FasesDesarrollo/" class="md-nav__link">
+      <a href="../../../../section3/u01/teoria/EDES-U1.5.-FasesDesarrollo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2192,7 +2332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/practica/EDES-U1.-Practica001/" class="md-nav__link">
+      <a href="../../../../section3/u01/practica/EDES-U1.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2212,7 +2352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/practica/EDES-U1.-Practica002/" class="md-nav__link">
+      <a href="../../../../section3/u01/practica/EDES-U1.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2232,7 +2372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/practica/EDES-U1.-Practica003/" class="md-nav__link">
+      <a href="../../../../section3/u01/practica/EDES-U1.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2289,7 +2429,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section3/u02/" class="md-nav__link ">
+            <a href="../../../../section3/u02/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2321,7 +2461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u02/teoria/EDES-U2.1.-Herramientas/" class="md-nav__link">
+      <a href="../../../../section3/u02/teoria/EDES-U2.1.-Herramientas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2341,7 +2481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u02/practica/EDES-U2.-Practica001/" class="md-nav__link">
+      <a href="../../../../section3/u02/practica/EDES-U2.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2404,7 +2544,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section3/u03/" class="md-nav__link ">
+            <a href="../../../../section3/u03/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2436,7 +2576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u03/teoria/EDES-U3.1.-Pruebas/" class="md-nav__link">
+      <a href="../../../../section3/u03/teoria/EDES-U3.1.-Pruebas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2456,7 +2596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u03/teoria/EDES-U3.2.-TestUnidadYTDD/" class="md-nav__link">
+      <a href="../../../../section3/u03/teoria/EDES-U3.2.-TestUnidadYTDD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2476,7 +2616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u03/teoria/EDES-U3.2.1.-Kotest/" class="md-nav__link">
+      <a href="../../../../section3/u03/teoria/EDES-U3.2.1.-Kotest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2496,7 +2636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u03/teoria/EDES-U3.2.2.-Mockk/" class="md-nav__link">
+      <a href="../../../../section3/u03/teoria/EDES-U3.2.2.-Mockk/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2516,7 +2656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u03/teoria/EDES-U3.3.-Depuracion/" class="md-nav__link">
+      <a href="../../../../section3/u03/teoria/EDES-U3.3.-Depuracion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2587,7 +2727,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section3/u04/" class="md-nav__link ">
+            <a href="../../../../section3/u04/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2619,7 +2759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u04/teoria/EDES-U4.1.-Git_Github/" class="md-nav__link">
+      <a href="../../../../section3/u04/teoria/EDES-U4.1.-Git_Github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2639,7 +2779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u04/teoria/EDES-U4.2.-Refactorizacion/" class="md-nav__link">
+      <a href="../../../../section3/u04/teoria/EDES-U4.2.-Refactorizacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2659,7 +2799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u04/teoria/EDES-U4.3.-AnalizadorCodigo/" class="md-nav__link">
+      <a href="../../../../section3/u04/teoria/EDES-U4.3.-AnalizadorCodigo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2679,7 +2819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u04/teoria/EDES-U4.4.-Documentacion/" class="md-nav__link">
+      <a href="../../../../section3/u04/teoria/EDES-U4.4.-Documentacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2699,7 +2839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u04/practica/EDES-U4.-Practica001/" class="md-nav__link">
+      <a href="../../../../section3/u04/practica/EDES-U4.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2719,7 +2859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u04/practica/EDES-U4.-Practica002/" class="md-nav__link">
+      <a href="../../../../section3/u04/practica/EDES-U4.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2739,7 +2879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u04/practica/EDES-U4.-Practica003/" class="md-nav__link">
+      <a href="../../../../section3/u04/practica/EDES-U4.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2759,7 +2899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u04/practica/EDES-U4.-Practica004/" class="md-nav__link">
+      <a href="../../../../section3/u04/practica/EDES-U4.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2779,7 +2919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u04/practica/EDES-U4.-Practica005/" class="md-nav__link">
+      <a href="../../../../section3/u04/practica/EDES-U4.-Practica005/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2857,7 +2997,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section2/" class="md-nav__link ">
+            <a href="../../../../section2/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2889,7 +3029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
+      <a href="../../../../section2/u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2936,7 +3076,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section2/u01/" class="md-nav__link ">
+            <a href="../../../../section2/u01/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2968,7 +3108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
+      <a href="../../../../section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2996,7 +3136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/page-2.md" class="md-nav__link">
+      <a href="../../../../section2/page-2.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3016,7 +3156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/page-3.md" class="md-nav__link">
+      <a href="../../../../section2/page-3.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3036,7 +3176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/page-4.md" class="md-nav__link">
+      <a href="../../../../section2/page-4.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3056,7 +3196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/page-5.md" class="md-nav__link">
+      <a href="../../../../section2/page-5.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3076,7 +3216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/page-6.md" class="md-nav__link">
+      <a href="../../../../section2/page-6.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3096,7 +3236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/page-7.md" class="md-nav__link">
+      <a href="../../../../section2/page-7.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3116,7 +3256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/page-8.md" class="md-nav__link">
+      <a href="../../../../section2/page-8.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3143,7 +3283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/" class="md-nav__link">
+      <a href="../../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3162,7 +3302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tags/" class="md-nav__link">
+      <a href="../../../../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3181,7 +3321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../about/" class="md-nav__link">
+      <a href="../../../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3213,6 +3353,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -3221,64 +3363,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#p16-mis-primeras-pruebas-unitarias" class="md-nav__link">
-    P1.6 - Mis primeras pruebas unitarias
-  </a>
-  
-    <nav class="md-nav" aria-label="P1.6 - Mis primeras pruebas unitarias">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
-    Introducción
+  <a href="#instalacionactualizacion-de-pip" class="md-nav__link">
+    Instalación/Actualización de pip
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#funciones" class="md-nav__link">
-    Funciones
+      
+        <li class="md-nav__item">
+  <a href="#crear-un-entorno-virtual" class="md-nav__link">
+    Crear un entorno virtual
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#pruebas-unitarias" class="md-nav__link">
-    Pruebas unitarias
+      
+        <li class="md-nav__item">
+  <a href="#pruebas-con-pytest_1" class="md-nav__link">
+    Pruebas con pytest
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#pytest" class="md-nav__link">
-    Pytest
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assert" class="md-nav__link">
-    Assert
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creando-el-primer-test" class="md-nav__link">
-    Creando el primer test
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#fuentes" class="md-nav__link">
     Fuentes:
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3295,221 +3403,127 @@
               <article class="md-content__inner md-typeset">
                 
                   
-  
-<nav class="md-tags" >
-  
-    
-    
-      
-      
-    
-    
-      <a href="../../../../../tags/#software" class="md-tag md-tag-icon">Software</a>
-    
-  
-    
-    
-      
-      
-    
-    
-      <a href="../../../../../tags/#ejercicios" class="md-tag md-tag-icon">Ejercicios</a>
-    
-  
-</nav>
-
 
   
   
 
 
-  <h1>UD 1 - P6: PU con Pytest</h1>
-
-<h2 id="p16-mis-primeras-pruebas-unitarias">P1.6 - Mis primeras pruebas unitarias<a class="headerlink" href="#p16-mis-primeras-pruebas-unitarias" title="Permanent link">&para;</a></h2>
-<h3 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h3>
-<p>Para realizar pruebas unitarias de forma básica debemos conocer qué es y para qué se usan las funciones en los lenguajes de programación.</p>
-<h3 id="funciones">Funciones<a class="headerlink" href="#funciones" title="Permanent link">&para;</a></h3>
-<p>Una función te permite definir un bloque de código reutilizable que se puede ejecutar muchas veces dentro de tu programa.</p>
-<p>Las funciones en Python son componentes importantes en la programación que cuentan con una estructura que consta de dos principios.</p>
-<div class="highlight"><pre><span></span><code>- Principio de reutilización: puedes reutilizar una función varias veces y en distintos programas.
-- Principio de modularización: te permite segmentar programas complejos con módulos más simples para depurar y programar con mayor facilidad.
+<h1 id="pruebas-con-pytest">Pruebas con Pytest<a class="headerlink" href="#pruebas-con-pytest" title="Permanent link">&para;</a></h1>
+<h2 id="instalacionactualizacion-de-pip">Instalación/Actualización de pip<a class="headerlink" href="#instalacionactualizacion-de-pip" title="Permanent link">&para;</a></h2>
+<p>Antes de realizar, nada, vamos a actualizar la herramienta que nos va a permitir instalar los comandos que necesitamos. Como no viene por defecto, hay que instalarlo. Antes de instalarlo, actualizamos pip.</p>
+<blockquote>
+<p><strong>pip</strong> es un <a href="https://es.wikipedia.org/wiki/Sistema_de_gesti%C3%B3n_de_paquetes">sistema de gestión de paquetes</a> utilizado para instalar y administrar paquetes de software escritos en <a href="https://es.wikipedia.org/wiki/Python">Python</a>. Muchos paquetes pueden ser encontrados en el <a href="https://es.wikipedia.org/wiki/Python_Package_Index">Python Package Index</a> (<a href="https://es.wikipedia.org/wiki/PyPI">PyPI</a>). Python 2.7.9 y posteriores (en la serie Python2), Python 3.4 y posteriores incluyen pip (pip3 para Python3) por defecto.
+</p>
+</blockquote>
+<p>El comando para actualizar <code>pip</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
 </code></pre></div>
-<p>En Python, una definición de función tiene las siguientes características:</p>
-<div class="highlight"><pre><span></span><code>1. La palabra clave def
-2. Un nombre de función
-3. Paréntesis ’()’, y dentro de los paréntesis los parámetros de entrada (opcionales).
-4. Dos puntos ’:’
-5. Algún bloque de código para ejecutar
-6. Una sentencia de retorno (opcional)
+<h2 id="crear-un-entorno-virtual">Crear un entorno virtual<a class="headerlink" href="#crear-un-entorno-virtual" title="Permanent link">&para;</a></h2>
+<p>Las aplicaciones en Python usualmente hacen uso de paquetes y módulos que no forman parte de la librería estándar. Las aplicaciones a veces necesitan una versión específica de una librería, debido a que dicha aplicación requiere que un bug particular haya sido solucionado o bien la aplicación ha sido escrita usando una versión obsoleta de la interfaz de la librería.</p>
+<p>Esto significa que tal vez no sea posible para una instalación de Python cumplir los requerimientos de todas las aplicaciones. Si la aplicación A necesita la versión 1.0 de un módulo particular y la aplicación B necesita la versión 2.0, entonces los requerimientos entran en conflicto e instalar la versión 1.0 o 2.0 dejará una de las aplicaciones sin funcionar.</p>
+<p>La solución a este problema es crear un entorno virtual, un directorio que contiene una instalación de Python de una versión en particular, además de unos cuantos paquetes adicionales.</p>
+<blockquote>
+<p><strong>Virtualenv</strong> es una herramienta usada para crear un entorno Python aislado. Este entorno tiene sus propios directorios de instalación que no comparten bibliotecas con otros entornos virtualenv o las bibliotecas instaladas globalmente en el servidor.
+Virtualenv es la manera más fácil recomendada para configurar un ambiente personalizado Python.
+</p>
+</blockquote>
+<p>A contiuación instalamos el modulo <strong>virtualenv</strong>, haciendo uso de pip.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>virtualenv
 </code></pre></div>
-<p>Un ejemplo, que además vamos a usar en nuestra práctica es el siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  def suma(num1, num2):
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    return num1 + num2
+<p>Una vez instalado el modulo, podemos usarlo para crear un entorno llamado <strong>prog1</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>virtualenv<span class="w"> </span>prog1
 </code></pre></div>
-<p>En el código podemos llamarla las veces que nosotros necesitemos:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>  print(suma(3, 2))
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  print(&quot;La suma de&quot;, 3, &quot;+&quot;, 2, &quot;es&quot;, suma(3, 2))
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  tot = 100 + suma(25, 40)
+<p>La creación del entorno, creará una carpeta con el mismo nombre: <code>./prog1</code></p>
+<p>Una vez creado, pasamos a activar el entorno recien creado: prog1</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>prog1
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>.<span class="w"> </span>./bin/activate
 </code></pre></div>
-<h3 id="pruebas-unitarias">Pruebas unitarias<a class="headerlink" href="#pruebas-unitarias" title="Permanent link">&para;</a></h3>
-<p>Las pruebas automáticas son consideradas una herramienta y una metodología indispensable para producir software de calidad.</p>
-<p>Un conjunto de pruebas, es código que realiza pruebas a nuestro código. Las pruebas unitarias nos permiten verificar que nuestro código funciona como se espera.</p>
-<p>Las pruebas unitarias son un conjunto de casos de prueba diseñados para verificar que cada “unidad” o componente de nuestro código funciona como se espera.</p>
-<p>Cada prueba unitaria se ejecuta en un entorno aislado, lo que significa que no afecta a otras partes del código y viceversa.</p>
-<p>Además de ejecutarse en la máquina del desarrollador, en entornos de trabajo profesional, estas se ejecutan en forma continua, por ejemplo cada hora o cada commit del código. Esta ejecución continua se realiza mediante sistemas automatizados como Jenkins. Debido a esto, agregar una pieza de código de pruebas implica que esta se probará una y otra vez cada que una funcionalidad sea agregada o un error sea corregido.</p>
-<h3 id="pytest">Pytest<a class="headerlink" href="#pytest" title="Permanent link">&para;</a></h3>
-<p>Pytest es un framework con muchas funcionalidades, desde pruebas pequeñas hasta pruebas de gran escala como pruebas funcionales de aplicaciones y librerías. Ofrece la recolección automática de los tests, aserciones simples, soporte para fixtures, debugeo y mucho más…</p>
-<h3 id="assert">Assert<a class="headerlink" href="#assert" title="Permanent link">&para;</a></h3>
-<p>La palabra assert en Python se refiere a un enunciado que verifica ciertas suposiciones sobre nuestro código. Si la suposición no es cierta, la afirmación falla y se genera una excepción.</p>
-<p>Por ejemplo, si suponemos que una variable es mayor que cero, podemos usar assert para verificar esa suposición:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>  def funcion_ejemplo(x):
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    assert x &gt; 0, &quot;x no es mayor que cero&quot;
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    return x * 2
+<p>Elminando la carpeta eliminaremos el entorno.</p>
+<p>Una vez tenemos activo el entorno, podemos listar los módulos que tenemos disponibles en el entorno que hemos creado y activado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pip<span class="w"> </span>list
 </code></pre></div>
-<p>En este ejemplo, si x es igual a cero o menor que cero, se generará una excepción AssertionError con el mensaje “x no es mayor que cero”.</p>
-<h3 id="creando-el-primer-test">Creando el primer test<a class="headerlink" href="#creando-el-primer-test" title="Permanent link">&para;</a></h3>
+<p>Adicionalmente, si en un momento determinado necesitamos recoger los modulos instalados, podemos captura los requerimientos a un archivo.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>“requirements.txt”
+</code></pre></div>
+<p>Y posteriormente, reinstalar esos mismos modulos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>“requirements.txt”
+</code></pre></div>
+<p>La estructura creada en el nuevo entorno, tiene por defecto los directorios <code>bin</code> (ejecutables) y <code>lib</code> (paquetes instalados).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>/prog1
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">|</span>_/bin
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">|</span>_/lib
+</code></pre></div>
+<p>Crearemos los directorios <strong>src</strong> para almacenar el codigo fuente y <strong>test</strong> para almacenar los tests. Ademas, crearemos un archivo <strong><code>__init__.py</code></strong> vacío en cada uno de estos dos directorios.</p>
+<blockquote>
+<p>El archivo <strong><strong>init</strong>.py</strong> es utilizado para inicializar paquetes de Python, es decir, le indica al intérprete de Python que el directorio package contiene un módulo, y que debe tratarlo como tal (es decir, hacer que sea posible importar los archivos como parte del módulo).
+En general no es necesario poner nada en el archivo <code>__init__.py</code>, pero es muy común usarlo para realizar configuraciones e importar cualquier objeto necesario de nuestra librería.
+</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>/prog1
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">|</span>_/bin
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">|</span>_/lib
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">|</span>_/src
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="p">|</span>_/__ini__.py
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">|</span>_/test
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="p">|</span>_/__ini__.py
+</code></pre></div>
+<h2 id="pruebas-con-pytest_1">Pruebas con pytest<a class="headerlink" href="#pruebas-con-pytest_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Pytest</strong> es un marco de pruebas en Python que se utiliza para escribir y ejecutar pruebas de manera sencilla y eficiente. Proporciona una forma fácil de definir casos de prueba y realizar aserciones sobre el comportamiento esperado de las funciones o módulos que se están probando.
+</p>
+</blockquote>
+<p>Para realizar un test sencillo con pytest, sigue los siguientes pasos:</p>
 <ol>
 <li>
-<p>Para empezar, vamos a partir de la práctica 5, donde creamos un entorno virtual e instalamos pytest. Vamos a seguir los siguientes pasos para realizar nuestro primer test y ejecutarlo desde el terminal.</p>
+<p>Asegúrate de tener pytest instalado en tu entorno virtual. Puedes instalarlo utilizando el siguiente comando.
+   Despues de instalar pytest, si listamos de nuevo los módulos del entorno, veremos que los modulos instalados se habŕan incrementado.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pytest
+</code></pre></div>
 </li>
 <li>
-<p>Abrir en Visual Studio Code nuestra carpeta de trabajo, activar el entorno virtual y comprobar que está instalado correctamente pytest.</p>
+<p>Suponiendo que tienes una función llamada suma en el archivo <code>main.py</code> en el directorio src de tu proyecto. Aquí tienes un ejemplo de una función <code>suma</code> en Python, que toma dos argumentos <code>a</code> y <code>b</code> y devuelve la suma de los dos números.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</code></pre></div>
 </li>
 <li>
-<p>Crear una carpeta que se llame Pruebas. En ella crearemos un nuevo fichero prueba1.py con el siguiente contenido:</p>
+<p>Crea un archivo de prueba en el directorio "test" de tu proyecto. Por ejemplo, podrías llamarlo <code>test_suma.py</code>.</p>
+</li>
+<li>
+<p>En este archivo de prueba, importa pytest y la función que deseas probar desde tu código fuente. Por ejemplo, podrías importar la función <code>suma</code> desde el módulo <code>main</code> en el directorio <code>src</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kn">from</span> <span class="nn">src.main</span> <span class="kn">import</span> <span class="n">suma</span>
+</code></pre></div>
+</li>
+<li>
+<p>Define una función de prueba utilizando el decorador <code>@pytest.mark.parametrize</code>. Esta función de prueba <code>test_suma_params</code> debe tomar los parámetros de entrada que deseas probar y el resultado esperado. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="s2">&quot;input_x, input_y, expected&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    <span class="p">[</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>        <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>        <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    <span class="p">]</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="p">)</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="k">def</span> <span class="nf">test_suma_params</span><span class="p">(</span><span class="n">input_x</span><span class="p">,</span> <span class="n">input_y</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>    <span class="k">assert</span> <span class="n">suma</span><span class="p">(</span><span class="n">input_x</span><span class="p">,</span> <span class="n">input_y</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected</span>
+</code></pre></div>
+<p>En este ejemplo, estamos probando la función "suma" con diferentes valores de entrada y comprobando si el resultado es igual al valor esperado.</p>
+</li>
+<li>
+<p>Desde el directorio base de tu proyecto, ejecuta los tests utilizando el siguiente comando en la terminal:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>pytest<span class="w"> </span>./test
+</code></pre></div>
+<p>Esto ejecutará todos los archivos de prueba con el prefijo "test_" en el nombre y mostrará los resultados de las pruebas.</p>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>  def suma(num1, num2):
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    return num1 + num2
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  print(suma(3, 2))
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  print(&quot;La suma de&quot;, 3, &quot;+&quot;, 2, &quot;es&quot;, suma(3, 2))
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  print(&quot;La suma de &quot; + str(3) + &quot; + &quot; + str(2) + &quot; es &quot; + str(suma(3, 2)))
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  res = &quot;La suma de &quot;
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  res += str(3)
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  res += &quot; + &quot; + str(2)
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  res += &quot; es &quot; + str(suma(3, 2))
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  print(res)
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>  print(f&quot;La suma de {3} + {2} es {suma(3, 2)}&quot;)
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>  # Si os fijáis en el código, no es más que una función que voy a llamar en mi código principal en varias ocasiones.
-</code></pre></div>
-<ol>
-<li>A continuación, nos creamos otro fichero con el nombre test_prueba1.py (Pytest va a reconocer por defecto todos los programas que comiencen por test_ cómo pruebas unitarias que debe realizar). El contenido será el siguiente:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>  from prueba1 import suma
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  def test_suma():
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    assert suma(1, 1) == 2
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    assert suma(0, 0) == 0
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    assert suma(100, -100) == 0
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>  &quot;&quot;&quot;
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  - Para empezar, siempre debemos importar la función que deseamos probar del módulo dónde está definida.
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  - Todas las pruebas serán también una función con el nombre test_nombreFunciónAProbar.
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>  - Si realizamos varias funciones para probar una misma función es recomendable añadir un texto explicativo de la prueba.
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>  - assert verifica que la expresión de la derecha es verdadera (true), sino generará una excepción.
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>  - Pytest recogerá la excepción si se produce y la gestionará para mostrarnos los resultados.
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>  &quot;&quot;&quot;
-</code></pre></div>
-<ol>
-<li>Vamos a ejecutar las pruebas unitarias desde la terminal:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>  pytest
-</code></pre></div>
+<h2 id="fuentes">Fuentes:<a class="headerlink" href="#fuentes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Nos muestra si las pruebas pasaron o no. Si queremos una información un poco más detallada usamos el parámetro -v:</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>  pytest -v
-</code></pre></div>
-<ol>
-<li>Se pueden usar las marcas para realizar múltiples pruebas sobre un determinado método <em>(marca parametrize)</em>. En el mismo fichero test_prueba1.py añadimos otra función:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>  @pytest.mark.parametrize(
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    &quot;input_n1, input_n2, expected&quot;,
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    [
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>      (1, 1, 2),
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>      (0, 0, 0),
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>      (100, -100, 0),
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>      (-15, -1, -16),
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>      (-3, 8, 5),
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>      (9, suma(-1, -2), 6)
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    ]
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>  )
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>  def test_suma_params(input_n1, input_n2, expected):
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    assert suma(input_n1, input_n2) == expected
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>  # Necesitamos importar las librerías de pytest en nuestro fichero de pruebas (import pytest).
-</code></pre></div>
-<ol>
-<li>Al volver a realizar el test obtendremos un resultado por cada tupla de parámetros probados:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>  pytest -v
-</code></pre></div>
-<ol>
-<li>
-<p><strong>Obliguemos a que se produzca un error</strong>, por ejemplo modificando uno de los parámetros expected (0, 0, 1) y observemos lo que nos muestra pytest.</p>
-</li>
-<li>
-<p>Lo habitual es crear un directorio llamado tests que contenga los ficheros de pruebas. Si hacéis esto, incluid en todos las carpetas del proyecto el fichero <code>__init__.py</code> vacío <em>(ya lo veremos más adelante)</em>. Si no hacéis esto, es probable que no funcione correctamente pytest, ya que no encontrará las funciones que debe importar para probar.</p>
-</li>
-</ol>
-<p>```
-  Nuestro código cambiaría y la importación se haría dando la ruta relativa donde se encuentra nuestro módulo a probar.</p>
-<p>Por ejemplo, si tenemos la siguiente estructura de nuestra carpeta o proyecto DAM1-ProgPython:</p>
-<div class="highlight"><pre><span></span><code>DAM1-ProgPython
- |
- --Pruebas
- |   __init__.py
- |   prueba1.py
- --tests
- |   __init__.py
- |   test_prueba1.py
-</code></pre></div>
-<p>```</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>  # Nuestro código para importar la función suma pasaría a escribirse de la siguiente manera:
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  from Pruebas.prueba1 import suma
-</code></pre></div>
-<ol>
-<li>
-<p>Pruébalo y vuelve a ejecutar las pruebas.</p>
-</li>
-<li>
-<p>Desarrolla una función en prueba1.py que reciba dos números y retorne el mayor número de los dos o 0 si son iguales. Realiza las pruebas unitarias y ejecútalas con pytest.</p>
-</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>  Entrega lo siguiente:
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    - Los ficheros prueba1.py y test_prueba1.py
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    - Un pantallazo donde se muestre la vista del Explorador (View -&gt; Explorer) con las carpetas y ficheros del proyecto.
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    - Un pantallazo del terminal con las pruebas unitarias detalladas realizadas con éxito.
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    - Fuerza un error en tu código, no en los tests, y muestra un pantallazo de tus pruebas unitarias realizadas de nuevo.
-</code></pre></div>
-<ol>
-<li>
-<p>Ahora vamos a configurar y realizar las pruebas unitarias desde el IDE, sin necesidad de usar los comandos. Para ello, sigue los 6 pasos de la siguiente documentación para configurar y ejecutar las pruebas unitarias:</p>
-</li>
-<li>
-<p><a href="https://pytest-with-eric.com/introduction/how-to-run-pytest-in-vscode/">How to run pytest in VSCode</a></p>
-</li>
-<li>
-<p>Desarrolla una función en prueba1.py que reciba un número y retorne el factorial del mismo. Debe cumplir que el número de entrada debe ser igual o superior a 0 y menor o igual a 10 (si no es correcto, retornará -1). El factorial de 0 es 1. El factorial de un número entero se define como el producto de todos los números enteros positivos desde el 1 hasta n. Por ejemplo, el factorial de 3 es 6 (3! = 3 x 2 x 1 = 6). Crea también las pruebas unitarias.</p>
-</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>  Entrega lo siguiente:
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    - Los ficheros prueba1.py y test_prueba1.py
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    - Un pantallazo de la vista de Testing.
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    - Fuerza un error en tu código, no en los tests, y muestra un pantallazo de tus pruebas unitarias realizadas de nuevo en la vista de Testing de Visual Studio Code.
-</code></pre></div>
-<h3 id="fuentes">Fuentes:<a class="headerlink" href="#fuentes" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://www.freecodecamp.org/espanol/news/guia-de-funciones-de-python-con-ejemplos/">Guía de funciones de Python con ejemplos</a></li>
-<li><a href="https://keepcoding.io/blog/que-son-las-funciones-en-python/">Qué son las funciones en Python</a></li>
-<li><a href="https://docs.pytest.org/en/7.1.x/contents.html">Full pytest documentation</a></li>
-<li><a href="https://apuntes.de/python/uso-de-assert-y-pruebas-unitarias-en-python-asegura-la-calidad-de-tu-codigo/">Asegura la calidad de tu código</a></li>
-<li><a href="https://old.tacosdedatos.com/pruebas-unitarias-pytest">Pruebas unitarias con pytest</a></li>
-<li><a href="https://www.clubdetecnologia.net/cursos/pruebas-con-python/introduccion-a-pytest/">Introducción a pytest</a></li>
-<li><a href="https://docs.python.org/3/reference/import.html">The Import System</a></li>
+<li><a href="https://docs.python.org/es/3/tutorial/venv.html">Entornos virutales y paquetes.</a></li>
+<li><a href="https://www.notion.so/Qu-es-el-Cyber-Kill-Chain-1-600ccf7d6ee24cb2ae8601e10b6e9348?pvs=21">Instalar y usar virtualenv con Python 3</a></li>
+<li><a href="https://docs.python.org/es/3/tutorial/modules.html">Módulos en python</a></li>
+<li><a href="https://misovirtual.virtual.uniandes.edu.co/codelabs/tutorial-PyTest/index.html#0">Tutorial de pytest</a></li>
 </ul>
 
 
@@ -3629,10 +3643,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../../assets/javascripts/workers/search.a264c092.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.a264c092.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.726fbb30.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.726fbb30.min.js"></script>
       
     
   </body>

@@ -31,7 +31,7 @@ Las funciones en Python son componentes importantes en la programación que cuen
 	
 En Python, una definición de función tiene las siguientes características:
 
-	1. La palabra clave def
+	1. La palabra clave def.
 	2. Un nombre de función
 	3. Paréntesis ’()’, y dentro de los paréntesis los parámetros de entrada (opcionales).
 	4. Dos puntos ’:’

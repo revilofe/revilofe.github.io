@@ -892,6 +892,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#crea-tu-el-test" class="md-nav__link">
+    Crea tu el test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configura-las-pruebas-en-el-ide" class="md-nav__link">
+    Configura las pruebas en el IDE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crea-tu-el-test-usando-el-ide" class="md-nav__link">
+    Crea tu el test usando el IDE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#fuentes" class="md-nav__link">
     Fuentes:
   </a>
@@ -3443,6 +3464,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#crea-tu-el-test" class="md-nav__link">
+    Crea tu el test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configura-las-pruebas-en-el-ide" class="md-nav__link">
+    Configura las pruebas en el IDE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crea-tu-el-test-usando-el-ide" class="md-nav__link">
+    Crea tu el test usando el IDE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#fuentes" class="md-nav__link">
     Fuentes:
   </a>
@@ -3503,17 +3545,19 @@
 <h3 id="funciones">Funciones<a class="headerlink" href="#funciones" title="Permanent link">&para;</a></h3>
 <p>Una función te permite definir un bloque de código reutilizable que se puede ejecutar muchas veces dentro de tu programa.</p>
 <p>Las funciones en Python son componentes importantes en la programación que cuentan con una estructura que consta de dos principios.</p>
-<div class="highlight"><pre><span></span><code>- Principio de reutilización: puedes reutilizar una función varias veces y en distintos programas.
-- Principio de modularización: te permite segmentar programas complejos con módulos más simples para depurar y programar con mayor facilidad.
-</code></pre></div>
+<ul>
+<li>Principio de reutilización: puedes reutilizar una función varias veces y en distintos programas.</li>
+<li>Principio de modularización: te permite segmentar programas complejos con módulos más simples para depurar y programar con mayor facilidad.</li>
+</ul>
 <p>En Python, una definición de función tiene las siguientes características:</p>
-<div class="highlight"><pre><span></span><code>1. La palabra clave def.
-2. Un nombre de función
-3. Paréntesis ’()’, y dentro de los paréntesis los parámetros de entrada (opcionales).
-4. Dos puntos ’:’
-5. Algún bloque de código para ejecutar
-6. Una sentencia de retorno (opcional)
-</code></pre></div>
+<ol>
+<li>La palabra clave def.</li>
+<li>Un nombre de función</li>
+<li>Paréntesis ’()’, y dentro de los paréntesis los parámetros de entrada (opcionales).</li>
+<li>Dos puntos ’:’</li>
+<li>Algún bloque de código para ejecutar</li>
+<li>Una sentencia de retorno (opcional)</li>
+</ol>
 <p>Un ejemplo, que además vamos a usar en nuestra práctica es el siguiente:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  def suma(num1, num2):
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    return num1 + num2
@@ -3549,8 +3593,6 @@
 </li>
 <li>
 <p>Crear una carpeta que se llame Pruebas. En ella crearemos un nuevo fichero prueba1.py con el siguiente contenido:</p>
-</li>
-</ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>  def suma(num1, num2):
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    return num1 + num2
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
@@ -3563,41 +3605,39 @@
 <a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  res += &quot; es &quot; + str(suma(3, 2))
 <a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  print(res)
 <a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>  print(f&quot;La suma de {3} + {2} es {suma(3, 2)}&quot;)
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>  # Si os fijáis en el código, no es más que una función que voy a llamar en mi código principal en varias ocasiones.
 </code></pre></div>
-<ol>
-<li>A continuación, nos creamos otro fichero con el nombre test_prueba1.py (Pytest va a reconocer por defecto todos los programas que comiencen por test_ cómo pruebas unitarias que debe realizar). El contenido será el siguiente:</li>
-</ol>
+<p>Si os fijáis en el código, no es más que una función que voy a llamar en mi código principal en varias ocasiones.</p>
+</li>
+<li>
+<p>A continuación, nos creamos otro fichero con el nombre test_prueba1.py (Pytest va a reconocer por defecto todos los programas que comiencen por test_ cómo pruebas unitarias que debe realizar). El contenido será el siguiente:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>  from prueba1 import suma
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  def test_suma():
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    assert suma(1, 1) == 2
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    assert suma(0, 0) == 0
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    assert suma(100, -100) == 0
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>  &quot;&quot;&quot;
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  - Para empezar, siempre debemos importar la función que deseamos probar del módulo dónde está definida.
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  - Todas las pruebas serán también una función con el nombre test_nombreFunciónAProbar.
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>  - Si realizamos varias funciones para probar una misma función es recomendable añadir un texto explicativo de la prueba.
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>  - assert verifica que la expresión de la derecha es verdadera (true), sino generará una excepción.
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>  - Pytest recogerá la excepción si se produce y la gestionará para mostrarnos los resultados.
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>  &quot;&quot;&quot;
 </code></pre></div>
-<ol>
-<li>Vamos a ejecutar las pruebas unitarias desde la terminal:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>  pytest
+</li>
+<li>
+<p>Para empezar, siempre debemos importar la función que deseamos probar del módulo dónde está definida.</p>
+</li>
+<li>Todas las pruebas serán también una función con el nombre test_nombreFunciónAProbar.</li>
+<li>Si realizamos varias funciones para probar una misma función es recomendable añadir un texto explicativo de la prueba.</li>
+<li>assert verifica que la expresión de la derecha es verdadera (true), sino generará una excepción.</li>
+<li>
+<p>Pytest recogerá la excepción si se produce y la gestionará para mostrarnos los resultados.</p>
+</li>
+<li>
+<p>Vamos a ejecutar las pruebas unitarias desde la terminal:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>  &gt; pytest
 </code></pre></div>
-<ul>
-<li>Nos muestra si las pruebas pasaron o no. Si queremos una información un poco más detallada usamos el parámetro -v:</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>  pytest -v
+<p>El comando <code>pytest</code> nos muestra si las pruebas pasaron o no. Si queremos una información un poco más detallada usamos el parámetro <code>-v</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>  &gt; pytest -v
 </code></pre></div>
-<ol>
-<li>Se pueden usar las marcas para realizar múltiples pruebas sobre un determinado método <em>(marca parametrize)</em>. En el mismo fichero test_prueba1.py añadimos otra función:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>  @pytest.mark.parametrize(
+</li>
+<li>
+<p>Se pueden usar las marcas para realizar múltiples pruebas sobre un determinado método <em>(marca parametrize)</em>. En el mismo fichero test_prueba1.py añadimos otra función:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>  @pytest.mark.parametrize(
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    &quot;input_n1, input_n2, expected&quot;,
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    [
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>      (1, 1, 2),
@@ -3610,69 +3650,57 @@
 <a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>  )
 <a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>  def test_suma_params(input_n1, input_n2, expected):
 <a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    assert suma(input_n1, input_n2) == expected
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>  # Necesitamos importar las librerías de pytest en nuestro fichero de pruebas (import pytest).
 </code></pre></div>
-<ol>
-<li>Al volver a realizar el test obtendremos un resultado por cada tupla de parámetros probados:</li>
-</ol>
+Necesitamos importar las librerías de pytest en nuestro fichero de pruebas con <code>import pytest</code>.</p>
+</li>
+<li>
+<p>Al volver a realizar el test obtendremos un resultado por cada tupla de parámetros probados:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>  pytest -v
 </code></pre></div>
-<ol>
+</li>
 <li>
-<p><strong>Obliguemos a que se produzca un error</strong>, por ejemplo modificando uno de los parámetros expected (0, 0, 1) y observemos lo que nos muestra pytest.</p>
+<p><strong>Obliguemos a que se produzca un error</strong>, por ejemplo modificando uno de los parámetros expected <code>(0, 0, 1)</code> y observemos lo que nos muestra pytest.</p>
 </li>
 <li>
 <p>Lo habitual es crear un directorio llamado tests que contenga los ficheros de pruebas. Si hacéis esto, incluid en todos las carpetas del proyecto el fichero <code>__init__.py</code> vacío <em>(ya lo veremos más adelante)</em>. Si no hacéis esto, es probable que no funcione correctamente pytest, ya que no encontrará las funciones que debe importar para probar.</p>
+<p>Nuestro código cambiaría y la importación se haría dando la ruta relativa donde se encuentra nuestro módulo a probar.</p>
+<p>Por ejemplo, si tenemos la siguiente estructura de nuestra carpeta o proyecto <code>DAM1-ProgPython</code>:</p>
+<p><code>DAM1-ProgPython
+     |
+     --Pruebas
+     |   __init__.py
+     |   prueba1.py
+     --tests
+     |   __init__.py
+     |   test_prueba1.py</code>  </p>
+<p>Nuestro código para importar la función suma pasaría a escribirse de la siguiente manera:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>from Pruebas.prueba1 import suma
+</code></pre></div>
 </li>
-</ol>
-<p>```
-  Nuestro código cambiaría y la importación se haría dando la ruta relativa donde se encuentra nuestro módulo a probar.</p>
-<p>Por ejemplo, si tenemos la siguiente estructura de nuestra carpeta o proyecto DAM1-ProgPython:</p>
-<div class="highlight"><pre><span></span><code>DAM1-ProgPython
- |
- --Pruebas
- |   __init__.py
- |   prueba1.py
- --tests
- |   __init__.py
- |   test_prueba1.py
-</code></pre></div>
-<p>```</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>  # Nuestro código para importar la función suma pasaría a escribirse de la siguiente manera:
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  from Pruebas.prueba1 import suma
-</code></pre></div>
-<ol>
 <li>
 <p>Pruébalo y vuelve a ejecutar las pruebas.</p>
 </li>
-<li>
-<p>Desarrolla una función en prueba1.py que reciba dos números y retorne el mayor número de los dos o 0 si son iguales. Realiza las pruebas unitarias y ejecútalas con pytest.</p>
-</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>  Entrega lo siguiente:
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    - Los ficheros prueba1.py y test_prueba1.py
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    - Un pantallazo donde se muestre la vista del Explorador (View -&gt; Explorer) con las carpetas y ficheros del proyecto.
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    - Un pantallazo del terminal con las pruebas unitarias detalladas realizadas con éxito.
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    - Fuerza un error en tu código, no en los tests, y muestra un pantallazo de tus pruebas unitarias realizadas de nuevo.
-</code></pre></div>
-<ol>
-<li>
-<p>Ahora vamos a configurar y realizar las pruebas unitarias desde el IDE, sin necesidad de usar los comandos. Para ello, sigue los 6 pasos de la siguiente documentación para configurar y ejecutar las pruebas unitarias:</p>
-</li>
-<li>
-<p><a href="https://pytest-with-eric.com/introduction/how-to-run-pytest-in-vscode/">How to run pytest in VSCode</a></p>
-</li>
-<li>
-<p>Desarrolla una función en prueba1.py que reciba un número y retorne el factorial del mismo. Debe cumplir que el número de entrada debe ser igual o superior a 0 y menor o igual a 10 (si no es correcto, retornará -1). El factorial de 0 es 1. El factorial de un número entero se define como el producto de todos los números enteros positivos desde el 1 hasta n. Por ejemplo, el factorial de 3 es 6 (3! = 3 x 2 x 1 = 6). Crea también las pruebas unitarias.</p>
-</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>  Entrega lo siguiente:
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    - Los ficheros prueba1.py y test_prueba1.py
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    - Un pantallazo de la vista de Testing.
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    - Fuerza un error en tu código, no en los tests, y muestra un pantallazo de tus pruebas unitarias realizadas de nuevo en la vista de Testing de Visual Studio Code.
-</code></pre></div>
+<h3 id="crea-tu-el-test">Crea tu el test<a class="headerlink" href="#crea-tu-el-test" title="Permanent link">&para;</a></h3>
+<p>Desarrolla una función en <code>prueba1.py</code> que reciba dos números y retorne el mayor número de los dos o 0 si son iguales. Realiza las pruebas unitarias y ejecútalas con pytest.</p>
+<p>Entrega lo siguiente: <br />
+* Los ficheros <code>prueba1.py</code> y <code>test_prueba1.py</code>    <br />
+* Un pantallazo donde se muestre la vista del Explorador (View -&gt; Explorer) con las carpetas y ficheros del proyecto. <br />
+* Un pantallazo del terminal con las pruebas unitarias detalladas realizadas con éxito. <br />
+* Fuerza un error en tu código, no en los tests, y muestra un pantallazo de tus pruebas unitarias realizadas de nuevo.</p>
+<h3 id="configura-las-pruebas-en-el-ide">Configura las pruebas en el IDE<a class="headerlink" href="#configura-las-pruebas-en-el-ide" title="Permanent link">&para;</a></h3>
+<p>Ahora vamos a configurar y realizar las pruebas unitarias desde el IDE, sin necesidad de usar los comandos. Para ello, sigue los 6 pasos de la siguiente documentación para configurar y ejecutar las pruebas unitarias:  </p>
+<p><a href="https://pytest-with-eric.com/introduction/how-to-run-pytest-in-vscode/">How to run pytest in VSCode</a>  </p>
+<h3 id="crea-tu-el-test-usando-el-ide">Crea tu el test usando el IDE<a class="headerlink" href="#crea-tu-el-test-usando-el-ide" title="Permanent link">&para;</a></h3>
+<p>Desarrolla una función en <code>prueba1.py</code> que reciba un número y retorne el factorial del mismo. Crea también las pruebas unitarias.</p>
+<p>Debe cumplir que el número de entrada debe ser igual o superior a 0 y menor o igual a 10 (si no es correcto, retornará -1).</p>
+<blockquote>
+<p>El factorial de 0 es 1. El factorial de un número entero se define como el producto de todos los números enteros positivos desde el 1 hasta n. Por ejemplo, el factorial de 3 es 6 (3! = 3 x 2 x 1 = 6).</p>
+</blockquote>
+<p>Entrega lo siguiente: <br />
+* Los ficheros prueba1.py y test_prueba1.py <br />
+* Un pantallazo de la vista de Testing.<br />
+* Fuerza un error en tu código, no en los tests, y muestra un pantallazo de tus pruebas unitarias realizadas de nuevo en la vista de Testing de Visual Studio Code.</p>
 <h3 id="fuentes">Fuentes:<a class="headerlink" href="#fuentes" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://www.freecodecamp.org/espanol/news/guia-de-funciones-de-python-con-ejemplos/">Guía de funciones de Python con ejemplos</a></li>

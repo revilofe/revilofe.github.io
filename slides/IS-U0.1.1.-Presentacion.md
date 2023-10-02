@@ -35,7 +35,7 @@ Note: Recomendado, consultar la programación.
 
 ## Objetivos generales
 
-La formación del módulo contribuye a alcanzar los objetivos generales a), b), c), d), q), r), s), t), u) y v) del curso de especialización
+La formación del módulo contribuye a alcanzar los objetivos generales a), b), c), d), q), r), s), t), u) y v) del curso de especialización.
 
 
 ## Objetivos RA

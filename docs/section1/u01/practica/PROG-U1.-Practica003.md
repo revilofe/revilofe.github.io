@@ -24,7 +24,7 @@ Es la mejor forma de trabajar para un desarrollador. De esta manera vais a tener
 
 ### Instalar Git
 
-La forma más oficial está disponible para ser descargada en el sitio web de Git. Solo tienes que visitar [Download] (http://git-scm.com/download/), seleccionar tu sistema operativo y la descarga empezará automáticamente.
+La forma más oficial está disponible para ser descargada en el sitio web de Git. Solo tienes que visitar [Download](http://git-scm.com/download/), seleccionar tu sistema operativo y la descarga empezará automáticamente.
 
 Una vez que hayamos instalado Git en nuestro ordenador, abriremos la aplicación "Git Bash", o desde linux, podremos abrir una terminal y ejecutar el comando `git` para interactur con git.
 
@@ -197,7 +197,7 @@ En windows, Git Bash es la herramienta de línea de comandos que permite a los u
 
 	```
 	
-	> `git log`
+	> git log
 	
 	```
 
@@ -242,8 +242,9 @@ En windows, Git Bash es la herramienta de línea de comandos que permite a los u
 17. Otros comandos que nos pueden ayudar:
 
 	* Para añadir TODOS los ficheros de un directorio => `git add .`  
-	* Para añadir TODOS los cambios pendientes de una sola vez: => `git add -A`  	
+	* Para añadir TODOS los cambios pendientes de una sola vez => `git add -A`  	
 	* Para deshacer un `git add` antes de hacer un `git commit` => `git reset nombreArchivo` o `git reset` para deshacer todos los cambios. También podemos usar `git checkout .`.
+	* Para cambiar el nombre de la rama master por main, es decir, renombrar la rama => `git branch -m main`
 
 
 ## Otros enlaces

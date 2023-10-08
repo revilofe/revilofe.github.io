@@ -31,7 +31,7 @@ Vamos a comenzar la práctica donde lo dejamos en la práctica anterior, P3.
    
 	```
 	
-	> git checkout -b desEjercicios1`
+	> git checkout -b desEjercicios1
 	
 	```
  
@@ -70,7 +70,7 @@ Vamos a comenzar la práctica donde lo dejamos en la práctica anterior, P3.
 
 	```
  
-	> git checkout main
+	> git checkout master
 	> ls -l
 	> ls ejercicios1
 	> git status
@@ -100,7 +100,7 @@ Vamos a comenzar la práctica donde lo dejamos en la práctica anterior, P3.
 	
 	La forma más directa de resolver un conflicto de fusión es editar el archivo conflictivo. Abre el archivo que tiene el conflicto en el editor o el IDE. Vamos a eliminar todas las líneas divisorias de conflictos, como estas:
 	```
-	<<<<<<< main
+	<<<<<<< master
 	=======
 	>>>>>>> desEjercicios1
 	```
@@ -211,7 +211,7 @@ GitHub es una plataforma de desarrollo colaborativo que utiliza el sistema de co
 
 	```
  
-	> git push origin main
+	> git push origin master
  
 	```
 
@@ -219,7 +219,7 @@ GitHub es una plataforma de desarrollo colaborativo que utiliza el sistema de co
 
 	```
 	
-	> git pull origin main
+	> git pull origin master
 	
 	```
 

@@ -33,16 +33,15 @@ RA 3. Escribe y depura código, analizando y utilizando las estructuras de contr
 
 #### Criterios de evaluación
 
-En esta sección se relaciona la unidad con los criterios de evaluación concretos, del resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
+En esta sección se relaciona la unidad con los criterios de evaluación concretos, del resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2010-8067).
 
 * a) Se ha escrito y probado código que haga uso de estructuras de selección.
 * b) Se han utilizado estructuras de repetición.
-* c) Se han utilizado estructuras de repetición.
-* d) Se han reconocido las posibilidades de las sentencias de salto.
-* e) Se ha escrito código utilizando control de excepciones.
-* f) Se han creado programas ejecutables utilizando diferentes estructuras de control.
-* g) Se han probado y depurado los programas.
-* h) Se ha comentado y documentado el código. 
+* c) Se han reconocido las posibilidades de las sentencias de salto.
+* d) Se ha escrito código utilizando control de excepciones.
+* e) Se han creado programas ejecutables utilizando diferentes estructuras de control.
+* f) Se han probado y depurado los programas.
+* g) Se ha comentado y documentado el código. 
 
 ### Contenidos
 

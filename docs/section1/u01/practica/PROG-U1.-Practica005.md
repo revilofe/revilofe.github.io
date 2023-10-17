@@ -86,7 +86,7 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
 
 	```
  
-	python -m pip install --upgrade pip
+	python.exe -m pip install --upgrade pip
  
 	```
 

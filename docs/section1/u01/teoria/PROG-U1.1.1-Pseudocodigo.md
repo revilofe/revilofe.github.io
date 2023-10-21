@@ -37,7 +37,7 @@ A la hora de realizar programas en pseudocódigo, podemos utilizar los siguiente
 * Según (valor) entonces ... opcion1: ... opcion2: ...
 * Mientras (condición) hacer ....
 * Para X en (1...N) hacer ....
-* Operadores matemáticos básicos: +, -, *, / y % (módulo).
+* Operadores matemáticos básicos: +, -, *, /, // y % (módulo).
 * Operadores relacionales: == (igual), >, <, >=, <= y != (distinto).
 * Operadores lógicos: and, or y not (negación).
 * La asignación de valores a una variable la realizaremos con el símbolo =
@@ -59,7 +59,7 @@ Fin
 ### Variables
 
 * Una variable va a ser básicamente un contenedor de información al que le vamos a asignar un nombre en minúsculas.
-* Podrá contener los siguientes tipos de datos: Cadena de caracteres (se representa con comillas dobles `"Una cadena"`), números (enteros `5`y decimales `5,4`) y valores lógicos (`verdadero`/`falso`).
+* Podrá contener los siguientes tipos de datos: Cadena de caracteres (se representa con comillas dobles `"Una cadena"`), números (enteros `5`y decimales `5.4`) y valores lógicos (`verdadero`/`falso`).
 * Su valor podrá ser modificado a lo largo del algoritmo.
 * El tipo de datos que contiene no vamos a especificarlo explícitamente simplemente al asignar un valor, estaremos definiendo de forma implícita su tipo de datos.
 * Podemos concatenar el valor de una variable a una cadena de caracteres con el símbolo `+`.

@@ -14,9 +14,27 @@ tags:
 ---
 ## Captura de excepciones
 
+Las excepciones y los errores son dos conceptos fundamentales en programación, pero tienen significados distintos.
+
+### Diferencia entre errores y excepciones 
+La principal diferencia entre errores y excepciones radica en su naturaleza y cómo afectan el flujo de ejecución del programa. Los errores indican problemas en el código que **deben ser corregidos**, mientras que las excepciones son **situaciones inesperadas** que pueden ser manejadas para asegurar que el programa siga funcionando sin interrupciones.
+
+#### Errores
+
+Los errores, también conocidos como bugs, son problemas en el código que impiden que el programa funcione correctamente.
+Pueden ser de diferentes tipos, como errores de sintaxis, errores lógicos (cuando el programa produce resultados incorrectos debido a un error en el algoritmo), o errores de tiempo de ejecución (que ocurren mientras el programa se está ejecutando).
+Los errores pueden ser causados por una variedad de razones, incluyendo lógica incorrecta, mal uso de funciones o librerías, o incluso problemas con la configuración del entorno de desarrollo.
+
+#### Excepciones:
+
+Las excepciones son eventos anómalos o inusuales que ocurren durante la ejecución de un programa y que afectan el flujo normal del mismo.
+A diferencia de los errores, las excepciones no siempre indican un fallo en el código. Por ejemplo, si un programa intenta abrir un archivo que no existe, esto generará una excepción (FileNotFoundError). Sin embargo, esto no es un error en el código en sí, sino una situación inesperada que el programa debe saber cómo manejar.
+Las excepciones en Python están diseñadas para gestionar este tipo de situaciones y permitir que el programa continúe su ejecución en lugar de detenerse abruptamente.
+
+
 ### Uso de try y except
 
-Hemos vistos varios casos de código en donde usábamos las funciones `input` e `int` para leer y analizar un número entero introducido por el usuario. También vimos lo poco seguro que podía llegar a resultar hacer algo así:
+Hemos visto varios casos de código en donde usábamos las funciones `input` e `int` para leer y analizar un número entero introducido por el usuario. También vimos lo poco seguro que podía llegar a resultar hacer algo así:
 
 ```Python
 >>> velocidad = input(prompt)
@@ -27,9 +45,9 @@ ValueError: invalid literal for int() with base 10:
 >>>
 ```
 
-Cuando estamos trabajando con el intérprete de Python, tras el error simplemente nos aparece de nuevo el prompt, así que pensamos “¡epa, me he equivocado!”, y continuamos con la siguiente sentencia.
+Cuando estamos trabajando con el intérprete de Python, tras esta error/excepción simplemente nos aparece de nuevo el prompt, así que pensamos “¡epa, me he equivocado!”, y continuamos con la siguiente sentencia.
 
-Sin embargo, si se escribe ese código en un script de Python y se produce el error, el script se detendrá inmediatamente, y mostrará un “traceback”. No ejecutará la siguiente sentencia.
+Sin embargo, si se escribe ese código en un script de Python y se produce el error/excepción, el script se detendrá inmediatamente, y mostrará un “traceback”. No ejecutará la siguiente sentencia.
 
 He aquí un programa de ejemplo para convertir una temperatura desde grados Fahrenheit a grados Celsius:
 
@@ -59,7 +77,7 @@ Traceback (most recent call last):
 ValueError: invalid literal for float(): fred
 ```
 
-Existen estructuras de ejecución condicional dentro de Python para manejar este tipo de errores esperados e inesperados, llamadas `try / except`. La idea de `try` y `except` es que si se sabe que cierta secuencia de instrucciones puede generar un problema, sea posible añadir ciertas sentencias para que sean ejecutadas en caso de error. Estas sentencias extras (el bloque except) serán ignoradas si no se produce ningún error.
+Existen estructuras de ejecución condicional dentro de Python para manejar este tipo de errores/excepciones esperados e inesperados, llamadas `try / except`. La idea de `try` y `except` es que si se sabe que cierta secuencia de instrucciones puede generar un problema, sea posible añadir ciertas sentencias para que sean ejecutadas en caso de error. Estas sentencias extras (el bloque except) serán ignoradas si no se produce ningún error.
 
 Puedes pensar en la característica `try` y `except` de Python como una “póliza de seguros” en una secuencia de sentencias.
 
@@ -91,11 +109,11 @@ Introduzca la Temperatura Fahrenheit:fred
 Por favor, introduzca un número
 ```
 
-Gestionar una excepción con una sentencia `try` recibe el nombre de *capturar* una excepción. En este ejemplo, la cláusula `except` muestra un mensaje de error. En general, capturar una excepción te da la oportunidad de corregir el problema, volverlo a intentar o, al menos, terminar el programa con elegancia.
+Gestionar una excepción con una sentencia `try` recibe el nombre de *capturar una excepción*. En este ejemplo, la cláusula `except` muestra un mensaje de error. En general, capturar una excepción te da la oportunidad de corregir el problema, volverlo a intentar o, al menos, terminar el programa con elegancia. 
 
 ### Capturar excepciones concretas
 
-Es posible escribir programas que capturen y manejen determnadas excepciones. Durante el siguiente ejemplo, se le pide al usuario que ingrese un numero hasta que se haya ingresado un número entero válido, aunque el usuario podra interrumpir el programa (puede variar las formas entres sistemas operativos); En linux/windows se utiliza Control-C y esta interrupción generara la excepción.[`KeyboardInterrupt`](https://docs.python.org/3/library/exceptions.html#KeyboardInterrupt)
+Es posible escribir programas que capturen y manejen determnadas excepciones.Durante el siguiente ejemplo, se le pide al usuario que ingrese un numero hasta que se haya ingresado un número entero válido, aunque el usuario podrá interrumpir el programa (puede variar las formas entres sistemas operativos);En linux/windows se utiliza Control-C y esta interrupción generara la excepción.[`KeyboardInterrupt`](https://docs.python.org/3/library/exceptions.html#KeyboardInterrupt)
 
 ```Python
 >>>x = None
@@ -105,6 +123,9 @@ Es posible escribir programas que capturen y manejen determnadas excepciones. D
 ...     except ValueError:
 ...         print("Oops!  That was no valid number.  Try again...")
 ```
+
+Ten en cuenta que se a la cláusula except le puedes indicar que gestione varias excepciones, añadiendo el nombre de la excepción a continuación de la otra. Además, se pueden añadir varias cláusulas `except` cada diferenciar los bloques que gestionan la excepción en función de la excepción que se ha producido.
+
 ## Lanzar excepciones
 
 La declaración [`raise`](https://docs.python.org/3/reference/simple_stmts.html#raise) permite al programador forzar que ocurra una excepción específica.
@@ -117,14 +138,14 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: HiThere
 ```
-El único argumento para`raise` indica la excepción que se va a generar. Debe ser una instancia de excepción o una clase de excepción (una clase que se deriva de [`Exception`](https://docs.python.org/3/library/exceptions.html#Exception). Si se pasa una clase de excepción, se instanciará implícitamente llamando a su constructor sin argumentos:
+El único argumento para `raise` indica la excepción que se va a generar. Debe ser una instancia de excepción o una clase de excepción (una clase que se deriva de [`Exception`](https://docs.python.org/3/library/exceptions.html#Exception). Si se pasa una clase de excepción, se instanciará implícitamente llamando a su constructor sin argumentos:
 
 ```Python
 raise ValueError  # shorthand for 'raise ValueError()'
 ```
-Si quieres saber si se generó una excepción pero no tienes la intención de manejarla, la siguiente forma de usar la declaración `raise`, te permitirá volver a generarla:
+Si quieres saber si se generó una excepción pero no tienes la intención de manejarla, la siguiente forma de usar la declaración `raise`, te permitirá volver a generarla:  
 
-```Python
+```Python  
 >>> try:
 ...     raise NameError('HiThere')
 ... except NameError:
@@ -135,12 +156,13 @@ An exception flew by!
 Traceback (most recent call last):
   File "<stdin>", line 2, in <module>
 NameError: HiThere
-```
-## Actividades
+```  
 
-**Actividad 1**: Escribe un programa que capture la excepción división entre cero. Tendrá que mostar el mensaje del error capturado. 
+## Actividades  
 
-**Actividad 2**: Reescribe el programa conversor de temperaturas para que lea repetidamente la temperatura hasta que sea correcta, debe detectar los fallos usando `try` y `except`.
+**Actividad 1**: Escribe un programa que capture la excepción división entre cero. Tendrá que mostar el mensaje del error capturado.   
+
+**Actividad 2**: Reescribe el programa conversor de temperaturas para que lea repetidamente la temperatura hasta que sea correcta, debe detectar los fallos usando `try` y `except`.  
 
 
 ## Fuente

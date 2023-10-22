@@ -16,7 +16,7 @@ tags:
 ---
 ## P3.2 - Ejercicios: Diccionarios
 
-#### **Ejercicio 1**
+#### **Ejercicio 3.2.1**
 
 Escribir un programa que guarde en una variable el diccionario `{'Euro':'€', 'Dollar':'$', 'Yen':'¥'}`, pregunte al usuario por una divisa y muestre su símbolo o un mensaje de aviso si la divisa no está en el diccionario.
 
@@ -24,7 +24,7 @@ Escribir un programa que guarde en una variable el diccionario `{'Euro':'€', '
 [Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/diccionarios/ejercicio1.ipynb)
 -->
 
-#### **Ejercicio 2**
+#### **Ejercicio 3.2.2**
 
 Escribir un programa que pregunte al usuario su nombre, edad, dirección y teléfono y lo guarde en un diccionario. Después debe mostrar por pantalla el mensaje `<nombre> tiene <edad> años, vive en <dirección> y su número de teléfono es <teléfono>`.
 
@@ -32,7 +32,7 @@ Escribir un programa que pregunte al usuario su nombre, edad, dirección y telé
 [Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/diccionarios/ejercicio2.ipynb)
 -->
 
-#### **Ejercicio 3**
+#### **Ejercicio 3.2.3**
 
 Escribir un programa que guarde en un diccionario los precios de las frutas de la tabla, pregunte al usuario por una fruta, un número de kilos y muestre por pantalla el precio de ese número de kilos de fruta. Si la fruta no está en el diccionario debe mostrar un mensaje informando de ello.
 
@@ -48,7 +48,7 @@ Escribir un programa que guarde en un diccionario los precios de las frutas de l
 [Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/diccionarios/ejercicio3.ipynb)
 -->
 
-#### **Ejercicio 4**
+#### **Ejercicio 3.2.4**
 
 Escribir un programa que pregunte una fecha en formato `dd/mm/aaaa` y muestre por pantalla la misma fecha en formato `dd de <mes> de aaaa` donde `<mes>` es el nombre del mes.
 
@@ -56,7 +56,7 @@ Escribir un programa que pregunte una fecha en formato `dd/mm/aaaa` y muestre po
 [Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/diccionarios/ejercicio4.ipynb)
 -->
 
-#### **Ejercicio 5**
+#### **Ejercicio 3.2.5**
 
 Escribir un programa que almacene el diccionario con los créditos de las asignaturas de un curso `{'Matemáticas': 6, 'Física': 4, 'Química': 5}` y después muestre por pantalla los créditos de cada asignatura en el formato `<asignatura> tiene <créditos> créditos`, donde `<asignatura>` es cada una de las asignaturas del curso, y `<créditos>` son sus créditos. Al final debe mostrar también el número total de créditos del curso.
 
@@ -64,7 +64,7 @@ Escribir un programa que almacene el diccionario con los créditos de las asigna
 [Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/diccionarios/ejercicio5.ipynb)
 -->
 
-#### **Ejercicio 6**
+#### **Ejercicio 3.2.6**
 
 Escribir un programa que cree un diccionario vacío y lo vaya llenado con información sobre una persona (por ejemplo nombre, edad, sexo, teléfono, correo electrónico, etc.) que se le pida al usuario. Cada vez que se añada un nuevo dato debe imprimirse el contenido del diccionario.
 
@@ -72,7 +72,7 @@ Escribir un programa que cree un diccionario vacío y lo vaya llenado con inform
 [Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/diccionarios/ejercicio6.ipynb)
 -->
 
-#### **Ejercicio 7**
+#### **Ejercicio 3.2.7**
 
 Escribir un programa que cree un diccionario simulando una cesta de la compra. El programa debe preguntar el artículo y su precio y añadir el par al diccionario, hasta que el usuario decida terminar. Después se debe mostrar por pantalla la lista de la compra y el coste total, con el siguiente formato
 
@@ -89,7 +89,7 @@ Escribir un programa que cree un diccionario simulando una cesta de la compra. E
 [Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/diccionarios/ejercicio7.ipynb)
 -->
 
-#### **Ejercicio 8**
+#### **Ejercicio 3.2.8**
 
 Escribir un programa que cree un diccionario de traducción español-inglés. El usuario introducirá las palabras en español e inglés separadas por dos puntos, y cada par `<palabra>:<traducción>` separados por comas. El programa debe crear un diccionario con las palabras y sus traducciones. Después pedirá una frase en español y utilizará el diccionario para traducirla palabra a palabra. Si una palabra no está en el diccionario debe dejarla sin traducir.
 
@@ -97,7 +97,7 @@ Escribir un programa que cree un diccionario de traducción español-inglés. El
 [Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/diccionarios/ejercicio8.ipynb)
 -->
 
-#### **Ejercicio 9**
+#### **Ejercicio 3.2.9**
 
 Escribir un programa que gestione las facturas pendientes de cobro de una empresa. Las facturas se almacenarán en un diccionario donde la clave de cada factura será el número de factura y el valor el coste de la factura. El programa debe preguntar al usuario si quiere añadir una nueva factura, pagar una existente o terminar. Si desea añadir una nueva factura se preguntará por el número de factura y su coste y se añadirá al diccionario. Si se desea pagar una factura se preguntará por el número de factura y se eliminará del diccionario. Después de cada operación el programa debe mostrar por pantalla la cantidad cobrada hasta el momento y la cantidad pendiente de cobro.
 
@@ -105,7 +105,7 @@ Escribir un programa que gestione las facturas pendientes de cobro de una empres
 [Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/diccionarios/ejercicio9.ipynb)
 -->
 
-#### **Ejercicio 10**
+#### **Ejercicio 3.2.10**
 
 Escribir un programa que permita gestionar la base de datos de clientes de una empresa. Los clientes se guardarán en un diccionario en el que la clave de cada cliente será su NIF, y el valor será otro diccionario con los datos del cliente (nombre, dirección, teléfono, correo, preferente), donde preferente tendrá el valor `True` si se trata de un cliente preferente. El programa debe preguntar al usuario por una opción del siguiente menú: (1) Añadir cliente, (2) Eliminar cliente, (3) Mostrar cliente, (4) Listar todos los clientes, (5) Listar clientes preferentes, (6) Terminar. En función de la opción elegida el programa tendrá que hacer lo siguiente:
 
@@ -120,7 +120,7 @@ Escribir un programa que permita gestionar la base de datos de clientes de una e
 [Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/diccionarios/ejercicio10.ipynb)
 -->
 
-#### **Ejercicio 11**
+#### **Ejercicio 3.2.11**
 
 El directorio de los clientes de una empresa está organizado en una cadena de texto como la de más abajo, donde cada línea contiene la información del nombre, email, teléfono, nif, y el descuento que se le aplica. Las líneas se separan con el carácter de cambio de línea `\n` y la primera línea contiene los nombres de los campos con la información contenida en el directorio.
 

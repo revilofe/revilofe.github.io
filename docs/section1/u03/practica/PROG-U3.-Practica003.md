@@ -16,7 +16,7 @@ tags:
 ---
 ## P3.3 - Ejercicios: Conjuntos
 
-#### **Ejercicio 1**
+#### **Ejercicio 3.3.1**
 
 Suponer una lista con datos de las compras hechas por clientes de una empresa a lo largo de un mes, la cual contiene tuplas con información de cada venta: (cliente, día del mes, monto, domicilio del cliente). Ejemplo:
 
@@ -38,7 +38,7 @@ def direcciones(ventas):
 ```
 -->
 
-#### **Ejercicio 2**
+#### **Ejercicio 3.3.2**
 
 Solicitar al usuario que introduzca los nombres de pila de los alumnos de primaria de una escuela, finalizando cuando se introduzca “x”. A continuación, solicitar que introduzca los nombres de los alumnos de secundaria, finalizando al introducir “x”.
 
@@ -78,7 +78,7 @@ for nombre in primaria - secundaria:
 ```
 -->
 
-#### **Ejercicio 3**
+#### **Ejercicio 3.3.3**
 
 El conjunto potencia de un conjunto *S* es el conjunto de todos los subconjuntos de *S*.
 

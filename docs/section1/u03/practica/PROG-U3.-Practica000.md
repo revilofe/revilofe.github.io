@@ -16,14 +16,14 @@ tags:
 ---
 ## P3.0 - Ejercicios
 
-#### **Ejercicio 1**
+#### **Ejercicio 3.0.1**
 
 Escribe un bucle `while` que comience con el último carácter en la cadena y haga un recorrido hacia atrás hasta el primer carácter en la cadena, imprimiendo cada letra en una línea independiente.
 
 <!--
 -->
 
-#### **Ejercicio 2**
+#### **Ejercicio 3.0.2**
 
 Dado que `fruta` es una variable de tipo cadena, ¿qué significa `fruta[:]`?
 
@@ -31,7 +31,7 @@ Dado que `fruta` es una variable de tipo cadena, ¿qué significa `fruta[:]`?
 
 -->
 
-#### **Ejercicio 3**
+#### **Ejercicio 3.0.3**
 
 Tienes este código:
 ```Python
@@ -48,7 +48,7 @@ Encapsúlalo en una función llamada `cuenta`, y hazla genérica de tal modo que
 
 -->
 
-#### **Ejercicio 4**
+#### **Ejercicio 3.0.4**
 
 Hay un método de cadenas llamado `count` que es similar a `find`. Lee la documentación de este método en:
 * [Métodos en ingles](https://docs.python.org/library/stdtypes.html#string-methods)

@@ -193,3 +193,4 @@ Este es un ejemplo simple, pero pytest es una herramienta muy versátil que pued
 * [Aprende con Alf](https://aprendeconalf.es/)
 * [Python para todos](https://es.py4e.com/)
 * [Documentación Python.org](https://docs.python.org/3/tutorial/errors.html)
+* [Testear Excepciones](https://www.educative.io/answers/how-to-check-if-an-exception-gets-raised-in-pytest)

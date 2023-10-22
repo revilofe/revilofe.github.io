@@ -138,9 +138,10 @@ NameError: HiThere
 ```
 ## Actividades
 
-**Actividad 1**: Reescribe el programa conversor de temperaturas para que lea repetidamente la temperatura hasta que sea correcta, debe detectar los fallos usando `try` y `except`.
+**Actividad 1**: Escribe un programa que capture la excepción división entre cero. Tendrá que mostar el mensaje del error capturado. 
 
-**Actividad 2**: Escribe un programa que lea repetidamente la temperadebe detectar los fallos usando `try` y `except`.
+**Actividad 2**: Reescribe el programa conversor de temperaturas para que lea repetidamente la temperatura hasta que sea correcta, debe detectar los fallos usando `try` y `except`.
+
 
 ## Fuente
 * [Pagina de Juan Jose Lozano Gomez sobre Python](https://j2logo.com/)

@@ -1,0 +1,43 @@
+Dinámica de una duración de 1h-1,5h aprox, aunque depende del nivel de los alumnos y la dificultad de la pirámide...
+
+La idea es hacer grupos de 3-4 alumnos que tengan 3 roles: jefe de proyecto, analista (1 o 2) y programador.
+Todos se van fuera del aula y me quedo solo con los jefes de proyecto, a los que le explico el problema que tienen que resolver.
+Si existe algún alumno con bastante más nivel que el resto y puede destrozarnos la actividad, porque la va a resolver él solo muy rápido (cómo es mi caso en DAW1B) le damos el rol de asesor externo.
+Entran el resto de alumnos, en grupo deben intentar resolver el problema, pero SOLO el programador puede codificar (1 ordenador encendido por grupo).
+El asesor externo entrará 5 min. más tarde que el resto de los alumnos y ayudará en turnos de 1 minuto a cada grupo, pasando por todos los grupos (yo lo hice este viernes y me harté de reír, me puse hasta el cronómetro para cambiarlo de grupo... a parte de que trabajaron mucho).
+A la mitad de la dinámica, llamo a los jefes de proyecto y les explico que en la última reunión con el cliente se ha cambiado el resultado de la pirámide y les cambio un poco la salida de la función que están programando.
+Si observamos que los grupos van muy rápido y queremos que se esfuercen aún un poco más, forzamos una segunda modificación.
+Petición 1 (primera reunión con los jp):
+Una función que reciba un número entre -100 y 100 y retorne una cadena de caracteres de la siguiente manera:
+Si introducen el 0 retornará la cadena "0 => 0".
+Si introducen cualquier otro número, siempre se tomará en positivo y retornará una cadena de caracteres cómo la siguiente. Por ejemplo, si introducen el 5:
+5 => 5 + 4 + 3 + 2 + 1 + 0 = 15
+4 => 4 + 3 + 2 + 1 + 0 = 10
+3 => 3 + 2 + 1 + 0 = 6
+2 => 2 + 1 + 0 = 3
+1 => 1 + 0 = 1
+0 => 0
+
+Petición 2 (segunda reunión con los jp):
+Se modifica la salida cuando introducen el numero 0. Por ejemplo, si introducen 0, y el 5 de nuevo:
+5 => 0 + 1 + 2 + 3 + 4 + 5 = 15
+4 => 0 + 1 + 2 + 3 + 4 = 10
+3 => 0 + 1 + 2 + 3 = 6
+2 => 0 + 1 + 2 = 3
+1 => 0 + 1 = 1
+0 => 0
+
+Petición 3 (dependiendo de si la están resolviendo muy pronto):
+Se modifica la salida cuando introducen el numero 0. Por ejemplo, si introducen 0, y el 5 de nuevo:
+5 => 0 + 1 + 2 + 3 + 4 + 5 = 15
+4 => 0 + 1 + 2 + 3 + 4 = 10
+3 => 0 + 1 + 2 + 3 = 6
+2 => 0 + 1 + 2 = 3
+1 => 0 + 1 = 1
+0 => 0
+1 => 1 + 0 = 1
+2 => 2 + 1 + 0 = 3
+3 => 3 + 2 + 1 + 0 = 6
+4 => 4 + 3 + 2 + 1 + 0 = 10
+5 => 5 + 4 + 3 + 2 + 1 + 0 = 15
+

@@ -1075,29 +1075,36 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#lanzar-excepciones" class="md-nav__link">
     Lanzar excepciones
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#testear" class="md-nav__link">
+    Testear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#actividades" class="md-nav__link">
     Actividades
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#fuente" class="md-nav__link">
     Fuente
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3454,29 +3461,36 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#lanzar-excepciones" class="md-nav__link">
     Lanzar excepciones
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#testear" class="md-nav__link">
+    Testear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#actividades" class="md-nav__link">
     Actividades
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#fuente" class="md-nav__link">
     Fuente
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3579,7 +3593,7 @@ Las excepciones en Python están diseñadas para gestionar este tipo de situacio
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">Introduzca</span> <span class="n">la</span> <span class="n">Temperatura</span> <span class="n">Fahrenheit</span><span class="p">:</span><span class="n">fred</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">Por</span> <span class="n">favor</span><span class="p">,</span> <span class="n">introduzca</span> <span class="n">un</span> <span class="n">número</span>
 </code></pre></div>
-<p>Gestionar una excepción con una sentencia <code>try</code> recibe el nombre de <em>capturar una excepción</em>. En este ejemplo, la cláusula <code>except</code> muestra un mensaje de error. En general, capturar una excepción te da la oportunidad de corregir el problema, volverlo a intentar o, al menos, terminar el programa con elegancia. </p>
+<p>Gestionar una excepción con una sentencia <code>try</code> recibe el nombre de <em>capturar una excepción</em>. En este ejemplo, la cláusula <code>except</code> muestra un mensaje de error. En general, capturar una excepción te da la oportunidad de corregir el problema, volverlo a intentar o, al menos, terminar el programa con elegancia.</p>
 <h3 id="capturar-excepciones-concretas">Capturar excepciones concretas<a class="headerlink" href="#capturar-excepciones-concretas" title="Permanent link">&para;</a></h3>
 <p>Es posible escribir programas que capturen y manejen determnadas excepciones.Durante el siguiente ejemplo, se le pide al usuario que ingrese un numero hasta que se haya ingresado un número entero válido, aunque el usuario podrá interrumpir el programa (puede variar las formas entres sistemas operativos);En linux/windows se utiliza Control-C y esta interrupción generara la excepción.<a href="https://docs.python.org/3/library/exceptions.html#KeyboardInterrupt"><code>KeyboardInterrupt</code></a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">&gt;&gt;&gt;</span><span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
@@ -3590,18 +3604,18 @@ Las excepciones en Python están diseñadas para gestionar este tipo de situacio
 <a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="o">...</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Oops!  That was no valid number.  Try again...&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Ten en cuenta que se a la cláusula except le puedes indicar que gestione varias excepciones, añadiendo el nombre de la excepción a continuación de la otra. Además, se pueden añadir varias cláusulas <code>except</code> cada diferenciar los bloques que gestionan la excepción en función de la excepción que se ha producido.</p>
-<h2 id="lanzar-excepciones">Lanzar excepciones<a class="headerlink" href="#lanzar-excepciones" title="Permanent link">&para;</a></h2>
+<h3 id="lanzar-excepciones">Lanzar excepciones<a class="headerlink" href="#lanzar-excepciones" title="Permanent link">&para;</a></h3>
 <p>La declaración <a href="https://docs.python.org/3/reference/simple_stmts.html#raise"><code>raise</code></a> permite al programador forzar que ocurra una excepción específica.</p>
 <p>Por ejemplo:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span><span class="s1">&#39;HiThere&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span><span class="s1">&#39;HiThere&#39;</span><span class="p">)</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="ne">NameError</span><span class="p">:</span> <span class="n">HiThere</span>
 </code></pre></div>
-El único argumento para <code>raise</code> indica la excepción que se va a generar. Debe ser una instancia de excepción o una clase de excepción (una clase que se deriva de <a href="https://docs.python.org/3/library/exceptions.html#Exception"><code>Exception</code></a>. Si se pasa una clase de excepción, se instanciará implícitamente llamando a su constructor sin argumentos:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">raise</span> <span class="ne">ValueError</span>  <span class="c1"># shorthand for &#39;raise ValueError()&#39;</span>
+<p>El único argumento para <code>raise</code> indica la excepción que se va a generar. Debe ser una instancia de excepción o una clase de excepción (una clase que se deriva de <a href="https://docs.python.org/3/library/exceptions.html#Exception"><code>Exception</code></a>. Si se pasa una clase de excepción, se instanciará implícitamente llamando a su constructor sin argumentos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">raise</span> <span class="ne">ValueError</span>  <span class="c1"># shorthand for &#39;raise ValueError()&#39;</span>
 </code></pre></div>
-Si quieres saber si se generó una excepción pero no tienes la intención de manejarla, la siguiente forma de usar la declaración <code>raise</code>, te permitirá volver a generarla:  </p>
+<p>Si quieres saber si se generó una excepción pero no tienes la intención de manejarla, la siguiente forma de usar la declaración <code>raise</code>, te permitirá volver a generarla:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">try</span><span class="p">:</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="o">...</span>     <span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span><span class="s1">&#39;HiThere&#39;</span><span class="p">)</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="o">...</span> <span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
@@ -3613,10 +3627,24 @@ Si quieres saber si se generó una excepción pero no tienes la intención de ma
 <a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="ne">NameError</span><span class="p">:</span> <span class="n">HiThere</span>
 </code></pre></div>
-<h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h2>
-<p><strong>Actividad 1</strong>: Escribe un programa que capture la excepción división entre cero. Tendrá que mostar el mensaje del error capturado.   </p>
-<p><strong>Actividad 2</strong>: Reescribe el programa conversor de temperaturas para que lea repetidamente la temperatura hasta que sea correcta, debe detectar los fallos usando <code>try</code> y <code>except</code>.  </p>
-<h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
+<h3 id="testear">Testear<a class="headerlink" href="#testear" title="Permanent link">&para;</a></h3>
+<p>También podemos testear que se lanza una determinada excepción cuando esperamos que se lance. Supongamos que tienes una función llamada dividir en un archivo <code>calculadora.py</code> que debería lanzar una excepción <code>ZeroDivisionError</code> cuando se intenta dividir por cero. Aquí está cómo escribirías la prueba:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Archivo: test_calculadora.py</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kn">from</span> <span class="nn">calculadora</span> <span class="kn">import</span> <span class="n">dividir</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="k">def</span> <span class="nf">test_dividir_por_cero_deberia_lanzar_excepcion</span><span class="p">():</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ZeroDivisionError</span><span class="p">):</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="n">dividir</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+<p>la sentencia <code>with pytest.raises(ExcepcionEsperada)</code> es la sintaxis que se utiliza para probar si una excepción es lanzada durante la ejecución del código.</p>
+<p>En este ejemplo, estamos usando <code>pytest.raises(ZeroDivisionError)</code> para verificar que cuando llamamos a <code>dividir(10, 0)</code>, se lanza una excepción <code>ZeroDivisionError</code>.</p>
+<p>En este caso, si la función <code>dividir</code> está correctamente implementada y lanza una excepción <code>ZeroDivisionError</code> cuando se divide por cero, la prueba pasará con éxito. Si no, la prueba fallará y te proporcionará información sobre el fallo.</p>
+<p>Este es un ejemplo simple, pero pytest es una herramienta muy versátil que puede manejar una amplia gama de situaciones de prueba. Puedes escribir pruebas para casos normales, casos de borde, y muchas otras situaciones que desees probar en tu código.</p>
+<h3 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h3>
+<p><strong>Actividad 1</strong>: Escribe un programa que capture la excepción división entre cero. Tendrá que mostar el mensaje del error capturado.</p>
+<p><strong>Actividad 2</strong>: Reescribe el programa conversor de temperaturas para que lea repetidamente la temperatura hasta que sea correcta, debe detectar los fallos usando <code>try</code> y <code>except</code>.</p>
+<h3 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://j2logo.com/">Pagina de Juan Jose Lozano Gomez sobre Python</a></li>
 <li><a href="https://aprendeconalf.es/">Aprende con Alf</a></li>

@@ -181,6 +181,47 @@ En este caso, si la función `dividir` está correctamente implementada y lanza 
 
 Este es un ejemplo simple, pero pytest es una herramienta muy versátil que puede manejar una amplia gama de situaciones de prueba. Puedes escribir pruebas para casos normales, casos de borde, y muchas otras situaciones que desees probar en tu código.
 
+
+### Ejemplo completo
+
+```Python
+
+import pytest
+
+def fahr2cel(fahr:float) -> float:
+    ''' Convertir grados Fahrenheit a grados Celsius'''
+    if fahr < -459.67:
+        raise ValueError('Temperatura Fahrenheit incorrecta: ' + str(fahr))
+    
+    cel = (fahr - 32.0) * 5.0 / 9.0
+    return cel
+
+if __name__ == '__main__':
+    numeroCorrecto = False
+    fahr = None
+    while not numeroCorrecto:
+        try:
+            ent = input('Introduzca la Temperatura Fahrenheit:')
+            fahr = float(ent)
+            cel = fahr2cel(fahr)
+            numeroCorrecto = True
+        except ValueError:   # Si no se puede convertir a float
+            if fahr == None:
+                print('Por favor introduzca un número.')
+            else:
+                print('La temperatura Fahrenheit es incorrecta: ' + str(fahr))
+
+    print(cel)
+
+
+
+def test_fahr2cel():
+    with pytest.raises(ValueError):
+        fahr2cel(-300)
+
+```
+
+
 ### Actividades
 
 **Actividad 1**: Escribe un programa que capture la excepción división entre cero. Tendrá que mostar el mensaje del error capturado.

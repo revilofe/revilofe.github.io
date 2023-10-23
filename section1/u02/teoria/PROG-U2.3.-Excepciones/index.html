@@ -1090,6 +1090,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ejemplo-completo" class="md-nav__link">
+    Ejemplo completo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#actividades" class="md-nav__link">
     Actividades
   </a>
@@ -3476,6 +3483,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ejemplo-completo" class="md-nav__link">
+    Ejemplo completo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#actividades" class="md-nav__link">
     Actividades
   </a>
@@ -3641,6 +3655,40 @@ Las excepciones en Python están diseñadas para gestionar este tipo de situacio
 <p>En este ejemplo, estamos usando <code>pytest.raises(ZeroDivisionError)</code> para verificar que cuando llamamos a <code>dividir(10, 0)</code>, se lanza una excepción <code>ZeroDivisionError</code>.</p>
 <p>En este caso, si la función <code>dividir</code> está correctamente implementada y lanza una excepción <code>ZeroDivisionError</code> cuando se divide por cero, la prueba pasará con éxito. Si no, la prueba fallará y te proporcionará información sobre el fallo.</p>
 <p>Este es un ejemplo simple, pero pytest es una herramienta muy versátil que puede manejar una amplia gama de situaciones de prueba. Puedes escribir pruebas para casos normales, casos de borde, y muchas otras situaciones que desees probar en tu código.</p>
+<h3 id="ejemplo-completo">Ejemplo completo<a class="headerlink" href="#ejemplo-completo" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">def</span> <span class="nf">fahr2cel</span><span class="p">(</span><span class="n">fahr</span><span class="p">:</span><span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="sd">&#39;&#39;&#39; Convertir grados Fahrenheit a grados Celsius&#39;&#39;&#39;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    <span class="k">if</span> <span class="n">fahr</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">459.67</span><span class="p">:</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Temperatura Fahrenheit incorrecta: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">fahr</span><span class="p">))</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    <span class="n">cel</span> <span class="o">=</span> <span class="p">(</span><span class="n">fahr</span> <span class="o">-</span> <span class="mf">32.0</span><span class="p">)</span> <span class="o">*</span> <span class="mf">5.0</span> <span class="o">/</span> <span class="mf">9.0</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    <span class="k">return</span> <span class="n">cel</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>    <span class="n">numeroCorrecto</span> <span class="o">=</span> <span class="kc">False</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>    <span class="n">fahr</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>    <span class="k">while</span> <span class="ow">not</span> <span class="n">numeroCorrecto</span><span class="p">:</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>        <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>            <span class="n">ent</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Introduzca la Temperatura Fahrenheit:&#39;</span><span class="p">)</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>            <span class="n">fahr</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ent</span><span class="p">)</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>            <span class="n">cel</span> <span class="o">=</span> <span class="n">fahr2cel</span><span class="p">(</span><span class="n">fahr</span><span class="p">)</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>            <span class="n">numeroCorrecto</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>   <span class="c1"># Si no se puede convertir a float</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>            <span class="k">if</span> <span class="n">fahr</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Por favor introduzca un número.&#39;</span><span class="p">)</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>            <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;La temperatura Fahrenheit es incorrecta: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">fahr</span><span class="p">))</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a>
+<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">cel</span><span class="p">)</span>
+<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a>
+<a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a>
+<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a>
+<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="k">def</span> <span class="nf">test_fahr2cel</span><span class="p">():</span>
+<a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a>    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+<a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a>        <span class="n">fahr2cel</span><span class="p">(</span><span class="o">-</span><span class="mi">300</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h3>
 <p><strong>Actividad 1</strong>: Escribe un programa que capture la excepción división entre cero. Tendrá que mostar el mensaje del error capturado.</p>
 <p><strong>Actividad 2</strong>: Reescribe el programa conversor de temperaturas para que lea repetidamente la temperatura hasta que sea correcta, debe detectar los fallos usando <code>try</code> y <code>except</code>.</p>

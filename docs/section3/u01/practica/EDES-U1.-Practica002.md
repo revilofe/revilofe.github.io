@@ -16,19 +16,21 @@ tags:
 
 ### Descripción
 
-Para dos de los siguientes lenguajes:   
+Para dos de los siguientes lenguajes de programación:   
    
-a. Grupo 1 (exceptuando Java, kotlin): Elige uno de los nombrados en el ejercicio 1.1 (Excepto Python)   
+a. Grupo 1: Elige uno de los nombrados en el ejercicio 1.1 (Excepto Python, Java, kotlin)
 b. Grupo 2: Elige uno entre Java ,Kotlin, .Net.  
 
-Escribe un programa básico, que pregunte el nombre del usuario y muestre un mensaje "Hola `usuario`. Este programa esta hecho en `lenguaje`".  
+Escribe un programa básico, que pregunte el nombre del usuario y muestre un mensaje "Hola `usuario`. Este programa esta hecho en el lenguaje de programación: `lenguaje`".  
 
 Responde a las siguientes preguntas:   
 
-1. ¿Para el lenguaje del grupo 1: Qué herramientas has utilizado durante todo el proceso de creación y hasta la ejecución del programa (Sistema Operativo, Editor, compilador/intérprete, enlazador, para ejecutarlo)?   
-2. Diferencia entre el código fuente, código objeto y el ejecutable que has generado. Describe el proceso y el nombre que han tomado los distintos archivos.   
-3. En lo que respecta al dispositivo en el que se ejecuta el programa, ¿Qué componentes del dispositivo se han visto involucrados y cómo, en el proceso de ejecución del ejecutable?   
-4. Finaliza con una **conclusion** sobre las diferencias que has encontrado entre los lenguajes del grupo 1 y grupo 2. (Pista: Virtual Machine)   
+1. ¿Qué herramientas has utilizado durante todo el proceso de creación y hasta la ejecución del programa (Sistema Operativo, Editor, compilador/intérprete, enlazador, para ejecutarlo)?   
+    a. Para el lenguaje del (a) grupo 1 y (b) grupo 2.   
+2. Diferencia entre el código fuente, código objeto y el ejecutable que has generado. Describe el proceso y el nombre que han tomado los distintos archivos, si existen en ese lenguaje.   
+    a. Para el lenguaje del (a) grupo 1 y (b) grupo 2.   
+4. En lo que respecta al dispositivo en el que se ejecuta el programa, ¿Qué componentes del dispositivo se han visto involucrados y cómo, en el proceso de ejecución del ejecutable?    
+5. Finaliza con una **conclusion** sobre las diferencias que has encontrado entre los lenguajes del grupo 1 y grupo 2. (Pista: Virtual Machine)   
 
 #### Incluir en la entrega   
 

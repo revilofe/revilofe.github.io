@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="EDES 3.1 Pruebas" />
+    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="EDES 3.1 Pruebas">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section1/u02/practica/otrosRecursos/soluciones/Practica002/src/dosdosdieciseis.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/section1/u02/practica/otrosRecursos/soluciones/Practica002/src/dosdosdieciseis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/section1/u02/practica/otrosRecursos/soluciones/Practica002/src/dosdosquince.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/section1/u02/practica/otrosRecursos/soluciones/Practica002/src/dosdosquince.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,6 +64,9 @@
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2BTKEI9AZUZ3sJYXM2p3frg4RwA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -71,19 +78,23 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/edu/IdeaProjects/revilofe.github.io/docs/section1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/edu/IdeaProjects/revilofe.github.io/docs/section1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReaderModeSettings">
     <option name="showLigatures" value="true" />
   </component>
@@ -115,13 +126,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="revilofe.github.io" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="revilofe.github.io" />
       <method v="2">
@@ -135,6 +139,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="revilofe.github.io" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dosdosquince" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="revilofe.github.io" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/docs/section1/u02/practica/otrosRecursos/soluciones/Practica002/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/docs/section1/u02/practica/otrosRecursos/soluciones/Practica002/src/dosdosquince.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.dosdosquince" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -214,6 +252,9 @@
       <workItem from="1681147487825" duration="1736000" />
       <workItem from="1681149454994" duration="1256000" />
       <workItem from="1681152537883" duration="1885000" />
+      <workItem from="1698214892995" duration="166000" />
+      <workItem from="1698215068868" duration="425000" />
+      <workItem from="1698215508686" duration="773000" />
     </task>
     <task id="LOCAL-00042" summary="EDES. 1.4 Condicionales, practica 3 e indice">
       <created>1664311397991</created>
@@ -565,6 +606,12 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="0bdaf7fa-d00c-441e-bb49-fdf534a68b0c" value="TOOL_WINDOW" />
+        <entry key="490fd248-7d74-4d4b-b05d-e5b9e12731f9" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="0bdaf7fa-d00c-441e-bb49-fdf534a68b0c">
@@ -596,15 +643,8 @@
         </entry>
       </map>
     </option>
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="0bdaf7fa-d00c-441e-bb49-fdf534a68b0c" value="TOOL_WINDOW" />
-        <entry key="490fd248-7d74-4d4b-b05d-e5b9e12731f9" value="TOOL_WINDOW" />
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="IS. Presentación" />
     <MESSAGE value="PROG. Unidad 2, 2.5 Documentar en python" />
@@ -636,5 +676,8 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/revilofe_github_io$dosdosquince.coverage" NAME="dosdosquince Coverage Results" MODIFIED="1698215860551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/section1/u02/practica/otrosRecursos/soluciones/Practica002/src" />
   </component>
 </project>

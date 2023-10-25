@@ -1,5 +1,5 @@
-''' **Ejercicio 2.2.14**
-Leer números enteros de teclado, hasta que el usuario ingrese el 0. Finalmente, mostrar la sumatoria de todos los números ingresados.
+''' **Ejercicio 2.2.15**
+Leer números enteros de teclado, hasta que el usuario ingrese el 0. Finalmente, mostrar la sumatoria de todos los números positivos ingresados.
 
 # 
 
@@ -8,7 +8,7 @@ numero = int(input("Ingrese un número entero: "))
 
 while numero != 0:
     sumatoria += numero
-    numero = int(input("Ingrese otro número entero (o 0 para salir): "))
+    ynumero = int(input("Ingrese otro número entero (o 0 para salir): "))
 
 print("La sumatoria de los números ingresados es:", sumatoria)
 
@@ -25,12 +25,13 @@ def leerNumerosHastaLeerCero() -> list:
         numero = int(input("Ingrese otro número entero (o 0 para salir): "))
     return numeros
 
-def sumatoria(numeros: list) -> int:
+def sumatoriaDePositivos(numeros: list) -> int:
     ''' Devuelve la sumatoria de todos los números de la lista.
     '''
     suma = 0
     for numero in numeros:
-        suma += numero
+        if numero > 0:
+            suma += numero
     return suma
 
 def construyeMensaje(total: int ) -> str:
@@ -44,7 +45,7 @@ if __name__ == "__main__":
     numeros = leerNumerosHastaLeerCero()
 
     # Proceso
-    total = sumatoria(numeros)
+    total = sumatoriaDePositivos(numeros)
     mensaje = construyeMensaje(total)
 
     # Salida

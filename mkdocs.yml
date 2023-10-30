@@ -37,7 +37,8 @@ nav:
         - '2.4.-Depurar programas': 'section1/u02/teoria/PROG-U2.4.-Depurar.md'
         - '* Práctica 2.4: Depurar programas': 'section1/u02/practica/PROG-U2.-Practica004.md'
         - '2.5.-Documentar el código': 'section1/u02/teoria/PROG-U2.5.-Documentar.md'
-        - '* Práctica 2.5: Proyecto': 'https://classroom.github.com/a/1NxxJ6nu'
+        - '2.5.1-¿Deberías documentar tu código?': 'section1/u02/teoria/PROG-U2.5.1.-DeberiasDocumentar.md'
+      #        - '* Práctica 2.5: Proyecto': 'https://classroom.github.com/a/1NxxJ6nu'
     - 'U3: Estructuras de datos':
         - 'section1/u03/index.md'
         - '3.0.-Est.Datos: Cadenas': 'section1/u03/teoria/PROG-U3.0.-Cadenas.md'

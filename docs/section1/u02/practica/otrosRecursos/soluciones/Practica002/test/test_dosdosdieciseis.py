@@ -1,5 +1,5 @@
 import pytest
-from src.dosdoscatorce import leerNumerosHastaLeerCero, sumatoria, construyeMensaje
+from src.dosdosdieciseis import leerNumerosHastaLeerCero, maximo, construyeMensaje
 
 def test_leerNumeros(monkeypatch):
     # Test case 1: Empty input
@@ -10,28 +10,30 @@ def test_leerNumeros(monkeypatch):
     assert leerNumerosHastaLeerCero() == []
 
     # Test case 2: one inputs
-    input_values = ['5', '0']
+    input_values = ['5', "-3", '0']
     def mock_input(s):
         return input_values.pop(0)
     monkeypatch.setattr('builtins.input', mock_input)
-    assert leerNumerosHastaLeerCero() == [5]
+    assert leerNumerosHastaLeerCero() == [5, -3]
 
     # Test case 3: Multiple inputs
-    input_values = ['3', '2', '1', '0']
+    input_values = ['3', '2', '1', '-4', '0']
     def mock_input(s):
         return input_values.pop(0)
     monkeypatch.setattr('builtins.input', mock_input)
-    assert leerNumerosHastaLeerCero() == [3, 2, 1]
+    assert leerNumerosHastaLeerCero() == [3, 2, 1, -4]
 
-def test_sumatoria():
+def test_maximoConListaVacia():
     # Test case 1: Empty list
-    assert sumatoria([]) == 0
+    with pytest.raises(ValueError): 
+        maximo([])
 
+def test_maximo():
     # Test case 2: Single element list
-    assert sumatoria([5]) == 5
+    assert maximo([5, -3]) == 5
 
     # Test case 3: Multiple element list
-    assert sumatoria([3, 2, 1]) == 6
+    assert maximo([3, -3, 2, 1, -6]) == 3
 
 def test_construyeMensaje():
     # Test case 1: Zero total

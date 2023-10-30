@@ -1,10 +1,10 @@
 ---
-title: "UD 2 - 2.5 Documentar el código"
-description: Documentar el código
-summary: Documentar el código
+title: "UD 2 - 2.5.1 Deberías documentar tu código"
+description: Deberías documentar tu código
+summary: Deberías documentar tu código
 authors:
   - Eduardo Fdez
-date: 2023-10-30
+date: 2023-10-30 
 icon:
 permalink: /prog/unidad2/2.5.1
 categories:

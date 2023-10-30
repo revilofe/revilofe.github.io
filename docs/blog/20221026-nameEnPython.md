@@ -1,16 +1,13 @@
 ---
 title: Porque en Python empiezan los programas con if __name__ == __main__
-
 description: te has encontrado if __name__ == __main__ en los programas de python. Entra y descubre que significa.
-
 authors:
     - Eduardo Fdez.
-
 date: 2022-10-26
-
 tags:
-  - python
----
+    - python
+---    
+
 Cuando un intérprete de Python lee un archivo de Python, primero establece algunas variables especiales. Luego ejecuta el código desde el archivo.
 
 Una de esas variables se llama `__name__` .

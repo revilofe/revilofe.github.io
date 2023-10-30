@@ -38,7 +38,8 @@ Por otra parte, con el tiempo te encontrarás en la siguiente situación, quiere
 
 Después de buscar, te das cuenta de que falta algo de documentación o, lo que es peor, no hay nada de documentación. Esta situación, posiblemente te lleve a no usar la biblioteca, sin importar el trabajo que te podía haber quitado. Daniele Procida resumió mejor esta situación:
 
-> “It doesn’t matter how good your software is, because **if the documentation is not good enough, people will not use it ** “
+> “It doesn’t matter how good your software is, because **if the documentation is not good enough, people will not use
+it** “
 >
 > —Daniel *[Procida](https://www.divio.com/en/blog/documentation/)*
 
@@ -81,23 +82,26 @@ Los comentarios pueden tener [múltiples propósitos, que incluyen](https://en.w
   # First step
   # Second step
   # Third step
-  ```
+  ```   
+
 * **Descripción del código:** los comentarios se pueden usar para explicar la intención de secciones específicas del código:
 
   ```Python
   # Attempt a connection based on previous settings. If unsuccessful,
   # prompt user for new settings.
-  ```
+  ```   
+
 * **Descripción algorítmica:** cuando se usan algoritmos, especialmente los complicados, puede ser útil explicar cómo funciona el algoritmo o cómo se implementa dentro de su código. También puede ser apropiado describir por qué se seleccionó un algoritmo específico sobre otro.
 
   ```Python
   # Using quick sort for performance gains
-  ```
+  ```   
+
 * **Etiquetado:** para etiquetar secciones específicas de código donde se encuentran problemas conocidos o áreas de mejora. Algunos ejemplos son: `BUG`, `FIXME`y `TODO`.
 
   ```Python
   # TODO: Add condition for when val is None
-  ```
+  ```   
 
 Los comentarios a su código deben ser breves y clarificadores. Evite el uso de comentarios largos cuando sea posible. Además, debe utilizar las siguientes cuatro reglas esenciales [sugeridas por Jeff Atwood](https://blog.codinghorror.com/when-good-comments-go-bad/) :
 

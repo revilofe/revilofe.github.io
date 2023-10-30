@@ -219,7 +219,7 @@ plugins:
   - search:
       lang: es
   - blogging: # https://liang2kl.codes/mkdocs-blogging-plugin/
-#      locale: es-ES
+      locale: es-ES
       # {{ blog_content }}
       dirs: # The directories to be included, dentro de docs
         - blog

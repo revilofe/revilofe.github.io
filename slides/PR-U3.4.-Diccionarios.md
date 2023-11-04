@@ -235,8 +235,11 @@ A veces, es necesario tener almacenado en una lista las claves de un diccionario
 
 ## Objetos Vista de un Diccionario
 
-La clase dict implementa tres métodos muy particulares, dado que devuelven un tipo de dato, iterable, conocido como objetos vista.
+La clase dict implementa tres métodos muy particulares, dado que devuelven un tipo de dato, iterable, conocido como objetos vista. Estos objetos ofrecen una vista de las claves y valores contenidos en el diccionario y si el diccionario se modifica, dichos objetos se actualizan al instante.
 
+keys(): Devuelve una vista de las claves del diccionario.
+values(): Devuelve una vista de los valores del diccionario.
+items(): Devuelve una vista de pares (clave, valor) del diccionario.
 * `keys()`: Devuelve una vista de las claves del diccionario.
 * `values()`: Devuelve una vista de los valores del diccionario.
 * `items()`: Devuelve una vista de pares (clave, valor) del diccionario.

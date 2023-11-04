@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="Quito el punto 2.5.1 para ver si deja de dar un error.">
+    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="cambio en la resolucion de diccionarios">
+      <change afterPath="$PROJECT_DIR$/slides/PR-U3.4.-Conjuntos.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +52,7 @@
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="84e5051a-e122-4ad0-aad6-9e5365eb4572" />
+        <option name="accountId" value="c97626a4-dfa3-4e07-bb13-123a342235ea" />
         <option name="url" value="https://github.com/revilofe/revilofe.github.io.git" />
       </UrlAndAccount>
     </option>
@@ -62,6 +63,9 @@
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2BTKEI9AZUZ3sJYXM2p3frg4RwA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -75,8 +79,11 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/edu/IdeaProjects/revilofe.github.io/docs/section1&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/edu/IdeaProjects/revilofe.github.io/slides&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -91,19 +98,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/slides" />
       <recent name="$PROJECT_DIR$/docs/section3/u03/teoria" />
       <recent name="$PROJECT_DIR$/docs/section3/u04/teoria" />
       <recent name="$PROJECT_DIR$/docs/section3" />
       <recent name="$PROJECT_DIR$/docs/section3/u03/practica" />
-      <recent name="$PROJECT_DIR$/docs/section1/u04/teoria" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/docs/section1/u03/practica" />
-      <recent name="$PROJECT_DIR$/docs/section1" />
-      <recent name="$PROJECT_DIR$/docs/section1/u07/teoria" />
-      <recent name="$PROJECT_DIR$/docs/section1/u07" />
-      <recent name="$PROJECT_DIR$/docs/section2/u07" />
-      <recent name="$PROJECT_DIR$/docs/blog" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/docs/section1" />
@@ -216,6 +215,11 @@
       <workItem from="1681147487825" duration="1736000" />
       <workItem from="1681149454994" duration="1256000" />
       <workItem from="1681152537883" duration="1885000" />
+      <workItem from="1699092404401" duration="29000" />
+      <workItem from="1699092447419" duration="1666000" />
+      <workItem from="1699094785776" duration="3436000" />
+      <workItem from="1699098678574" duration="10526000" />
+      <workItem from="1699109555124" duration="420000" />
     </task>
     <task id="LOCAL-00044" summary="EDES. 1.4 Condicionales, practica 3 e indice">
       <created>1664312167963</created>
@@ -560,13 +564,19 @@
       <option name="project" value="LOCAL" />
       <updated>1698694570103</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="0bdaf7fa-d00c-441e-bb49-fdf534a68b0c" value="TOOL_WINDOW" />
+        <entry key="490fd248-7d74-4d4b-b05d-e5b9e12731f9" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="0bdaf7fa-d00c-441e-bb49-fdf534a68b0c">
@@ -598,24 +608,10 @@
         </entry>
       </map>
     </option>
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="0bdaf7fa-d00c-441e-bb49-fdf534a68b0c" value="TOOL_WINDOW" />
-        <entry key="490fd248-7d74-4d4b-b05d-e5b9e12731f9" value="TOOL_WINDOW" />
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="EDES. Unidad 1, 1.5 ProcesoDesarrolloSoftware" />
-    <MESSAGE value="PROG. Unidad 3, 3.1 Listas" />
-    <MESSAGE value="Indice mkdocs.yml" />
-    <MESSAGE value="Blog: eliminado ejemplo" />
-    <MESSAGE value="PROG. Unidad 3, 3.4 Conjuntos" />
-    <MESSAGE value="Blog: Porque en Python empiezan los programas con if __name__ == __main__" />
-    <MESSAGE value="PROG. Unidad 3, 3.5 Funciones" />
-    <MESSAGE value="EDES. Unidad 3, 3.1 Git Practica" />
     <MESSAGE value="EDES. Unidad 3, 3.1 Git Práctica" />
     <MESSAGE value="EDES. Unidad 3, 3.2 TDD y test de unidad" />
     <MESSAGE value="Arreglar cabeceras 3.3 y 3.4" />
@@ -633,7 +629,15 @@
     <MESSAGE value="EDES 3.1 Pruebas" />
     <MESSAGE value="Documentar codigo" />
     <MESSAGE value="Quito el punto 2.5.1 para ver si deja de dar un error." />
-    <option name="LAST_COMMIT_MESSAGE" value="Quito el punto 2.5.1 para ver si deja de dar un error." />
+    <MESSAGE value="Update EDES-U2.-Practica001.md" />
+    <MESSAGE value="Presentación de diccionarios." />
+    <MESSAGE value="Presentaciones. Horarios." />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
+    <MESSAGE value="Presentation de diccionarios" />
+    <MESSAGE value="Cambio en el css" />
+    <MESSAGE value="cambio en la presentación diccionarios" />
+    <MESSAGE value="cambio en la resolucion de diccionarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambio en la resolucion de diccionarios" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

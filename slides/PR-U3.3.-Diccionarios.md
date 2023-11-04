@@ -22,18 +22,15 @@
 
 Note: Un objeto es hashable si tiene un valor de hash que no cambia durante todo su ciclo de vida.
 
-
 ### Nota sobre Hashable
 
 * En principio, los objetos que son instancias de clases definidas por el usuario son hashables.
 * También lo son la mayoría de tipos inmutables definidos por Python (`int`, `float` o `str`).
 
-
 ### Pares: Clave - Valor
 
 * Piensa siempre en un diccionario como un contenedor de pares clave: valor, en el que la clave puede ser de cualquier tipo hashable y es única en el diccionario que la contiene.
 * Generalmente, se suelen usar como claves los tipos int y str aunque, como se ha comentado, cualquier tipo hashable puede ser una clave.
-
 
 ### Operaciones Principales
 
@@ -42,13 +39,11 @@ Note: Un objeto es hashable si tiene un valor de hash que no cambia durante todo
   * recuperar un valor a partir de una clave.
 * El acceso a un elemento a partir de una clave es una operación realmente rápida, eficaz y que consume pocos recursos si lo comparamos con cómo lo haríamos con otros tipos de datos.
 
-
 ### Características Adicionales
 
 * Es un tipo mutable, es decir, su contenido se puede modificar después de haber sido creado.
 * Es un tipo ordenado. Preserva el orden en que se insertan los pares clave: valor.
 * Es un tipo eficiente. El acceso a un elemento a partir de una clave es muy rápido.
-
 
 ### Características Adicionales
 
@@ -68,7 +63,6 @@ Note: Un objeto es hashable si tiene un valor de hash que no cambia durante todo
 d = {1: 'hola', 89: 'Pythonista', 'a': 'b', 'c': 27}
 ```
 
-
 ### Cómo crear un diccionario
 
 * Para crear un diccionario vacío, simplemente asigna a una variable el valor {}.
@@ -76,7 +70,6 @@ d = {1: 'hola', 89: 'Pythonista', 'a': 'b', 'c': 27}
   * Sin parámetros (esto creará un diccionario vacío).
   * Con pares clave: valor encerrados entre llaves.
   * Con argumentos con nombre. El nombre del argumento será la clave en el diccionario.
-
 
 ### Cómo crear un diccionario
 
@@ -98,7 +91,6 @@ d = {1: 'hola', 89: 'Pythonista', 'a': 'b', 'c': 27}
 d = {'uno': 1, 'dos': 2, 'tres': 3}
 print(d['dos']) # Output: 2
 ```
-
 
 ### El método get()
 
@@ -142,7 +134,6 @@ d = {'uno': 1, 'dos': 2}
 d['tres'] = 3
 ```
 
-
 ### Añadir elementos mediante el método setdefault()
 
 * También existe el método `setdefault(clave[, valor])`.
@@ -175,7 +166,6 @@ d['uno'] = 1.0
   * `popitem()`: Elimina el último par clave: valor del diccionario y lo devuelve.
   * `del d[clave]`: Elimina el par clave: valor.
   * `clear()`: Borra todos los pares clave: valor del diccionario.
-
 
 ### Eliminar un elemento de un diccionario en Python
 
@@ -222,7 +212,6 @@ d = {'uno': 1, 'dos': 2, 'tres': 3}
 * En Python se puede utilizar el operador de igualdad `==` para comparar si dos diccionarios son iguales.
 * Dos diccionarios son iguales si contienen el mismo conjunto de pares clave: valor, independientemente del orden que tengan.
 
-
 ### Comparar si dos diccionarios son iguales
 
 *Si se comparan dos diccionarios
@@ -230,7 +219,6 @@ d = {'uno': 1, 'dos': 2, 'tres': 3}
 * vacíos, el resultado es `True`.
 * que contienen los mismos pares clave: valor, pero en distinto orden, el resultado es `True`.
 * que contienen los mismos pares clave: valor, pero con distinto número de elementos, el resultado es `False`.
-
 
 ### Comparar si dos diccionarios son iguales
 
@@ -279,7 +267,6 @@ d['d2']['k1']  # Devuelve 3
   * `values()`: Devuelve una vista de los valores del diccionario.
   * `items()`: Devuelve una vista de pares (clave, valor) del diccionario.
 
-
 ### Objetos Vista de un Diccionario
 
 * Los objeto vista `dict_values` o `dict_keys`, son objetos que permiten iterar a través de las claves y valores contenidos en el diccionario
@@ -295,7 +282,6 @@ d['d2']['k1']  # Devuelve 3
 * `get(clave[, valor])`: Devuelve el valor de la clave, o el valor por defecto si no existe.
 * `items()`: Devuelve una vista de los pares clave-valor del diccionario.
 * `keys()`: Devuelve una vista de las claves del diccionario.
-
 
 ### Listado de Métodos de la Clase dict
 
@@ -320,6 +306,40 @@ Note: El tiempo que inviertas haciendo una buena estructura puede reducir el tie
 
 ---
 
+## Resumen: Diccionarios en Python
+
+
+### Diccionarios
+
+* Los diccionarios en Python son estructuras de datos que asocian claves con valores.
+* Las claves deben ser inmutables y hashables.
+* Las principales operaciones incluyen almacenar y recuperar valores por clave.
+
+Note: Los diccionarios son esenciales y eficientes en Python.
+
+
+### Creación y Manipulación
+
+* Crear un diccionario: `{}` o `dict()`.
+* Acceder a elementos: `d[clave]` o `d.get(clave, valor_por_defecto)`.
+* Recorrer un diccionario con `for` y `keys()`, `values()`, `items()`.
+* Añadir, modificar y eliminar elementos en un diccionario.
+
+Note: Diccionarios son mutables y versátiles.
+
+
+### Conclusiones
+
+* Los diccionarios son ideales para mapear claves a valores en Python.
+* Permite un acceso rápido a los elementos.
+* Se pueden crear de varias formas y manipular eficientemente.
+* Utiliza objetos vista para claves, valores y pares clave-valor.
+
+Note: Los diccionarios son una herramienta poderosa en Python. ¡Explóralos y úsalos en tus proyectos!
+
+---
+
 ## ¡Gracias por su atención!
 
 Note: ¿Alguna pregunta sobre diccionarios en Python?
+g

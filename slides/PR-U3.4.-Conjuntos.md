@@ -48,7 +48,25 @@ Note: Usa {} para crear un conjunto y set() para un conjunto vacío.
 
 ### Conjuntos vs Frozensets
 
-* set: Mutable, se pueden modificar.
+* set: Mutable, seResumen: Diccionarios en Python
+Los diccionarios en Python son estructuras de datos que asocian claves con valores.
+Las claves deben ser inmutables y hashables.
+Las principales operaciones incluyen almacenar y recuperar valores por clave.
+Note: Los diccionarios son esenciales y eficientes en Python.
+
+Resumen: Creación y Manipulación
+Crear un diccionario: {} o dict().
+Acceder a elementos: d[clave] o d.get(clave, valor_por_defecto).
+Recorrer un diccionario con for y keys(), values(), items().
+Añadir, modificar y eliminar elementos en un diccionario.
+Note: Diccionarios son mutables y versátiles.
+
+Resumen: Conclusiones
+Los diccionarios son ideales para mapear claves a valores en Python.
+Permite un acceso rápido a los elementos.
+Se pueden crear de varias formas y manipular eficientemente.
+Utiliza objetos vista para claves, valores y pares clave-valor.
+Note: Los diccionarios son una herramienta poderosa en Python. ¡Explóralos y úsalos en tus proyectos! pueden modificar.
 * frozenset: Inmutable, no se puede modificar.
 
 <pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">f = frozenset([3, 5, 6, 1, 5])  # frozenset({1, 3, 5, 6})
@@ -219,6 +237,9 @@ Note: Dos conjuntos son iguales si tienen los mismos elementos.
 
 ---
 
+## Métodos de la clase set
+
+
 ### Métodos de la clase set en Python
 
 * `add(e)`: Añade un elemento al conjunto.
@@ -229,7 +250,6 @@ Note: Dos conjuntos son iguales si tienen los mismos elementos.
 
 Note: Estos son algunos de los métodos disponibles para conjuntos en Python.
 
----
 
 ### Más métodos de la clase set
 
@@ -240,7 +260,6 @@ Note: Estos son algunos de los métodos disponibles para conjuntos en Python.
 
 Note: Hay más métodos disponibles para conjuntos en Python.
 
----
 
 ### Métodos de actualización de conjuntos
 
@@ -305,6 +324,6 @@ Note: Tanto operadores como métodos son útiles para manipular conjuntos en Pyt
 
 ---
 
-### ¡Gracias por su atención!
+## ¡Gracias por su atención!
 
 Note: ¿Alguna pregunta sobre conjuntos en Python?

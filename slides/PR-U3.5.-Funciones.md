@@ -35,9 +35,9 @@ Note: Las funciones predefinidas en Python facilitan el trabajo, pero puedes def
 * Cabecera termina con dos puntos.
 * Cuerpo de la función con sangrado mayor.
 * Opcional: instrucción `return` para devolver un resultado.
-* docstring se utliza para documentar la función.
+* docstring se utiliza para documentar la función.
 
-  Note: El primer string de una función se llama docstring y se usa para documentar la función.
+Note: El primer string de una función se llama docstring y se usa para documentar la función.
 
 ---
 
@@ -122,8 +122,6 @@ Note: `return` permite devolver múltiples valores en una función.
 
 * Se pueden devolver diferentes resultados en una lista.
 
-Ejemplo:
-
 <pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def tabla_del(numero):
     resultados = []
     for i in range(11):
@@ -142,8 +140,6 @@ Note: `return` puede utilizarse para devolver listas de resultados.
 * A diferencia de otros lenguajes, Python no tiene procedimientos.
 * Si no hay `return`, se devuelve automáticamente `None`.
 
-Ejemplo:
-
 <pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def saludo(nombre):
     print(f'Hola {nombre}')
 
@@ -152,8 +148,9 @@ print(saludo('j2logo'))  # Hola j2logo \n None
 
 Note: Python siempre devuelve un valor, incluso si no hay `return`. Por defecto, `None`
 
---
-### Variables y ámbito
+---
+
+## Variables y ámbito
 
 
 ### Ámbito y ciclo de vida de las variables
@@ -205,8 +202,6 @@ Note: Para modificar una variable global dentro de una función, se usa la palab
 * Funciones anónimas y pequeñas.
 * No requieren definición con `def`.
 * Sintaxis: `lambda argumentos: expresion`.
-
-Ejemplo:
 
 <pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">doble = lambda x: x * 2
 </code></div></div></pre>

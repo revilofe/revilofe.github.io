@@ -23,7 +23,7 @@ Note: Los conjuntos en Python son colecciones desordenadas de elementos únicos.
 
 ---
 
-# Qué es el tipo set en Python
+### Qué es el tipo set en Python
 
 * Colección sin orden y elementos únicos.
 * Usos principales: verificar pertenencia y eliminar duplicados.
@@ -133,6 +133,7 @@ Note: Utiliza `in` para verificar si un elemento está en un conjunto.
 
 ## Operaciones sobre conjuntos
 
+
 ### Unión de conjuntos
 
 * `A ∪ B`: contiene todos los elementos de A y de B.
@@ -143,6 +144,7 @@ a | b  # {1, 2, 3, 4, 6, 8}
 </code></div></div></pre>
 
 Note: Usa el operador `|` para la unión de conjuntos.
+
 
 ### Intersección de conjuntos
 
@@ -155,6 +157,7 @@ a & b  # {2, 4}
 
 Note: Usa el operador `&` para la intersección de conjuntos.
 
+
 ### Diferencia de conjuntos
 
 * `A - B`: contiene elementos de A que no están en B.
@@ -165,6 +168,7 @@ a - b  # {1, 3}
 </code></div></div></pre>
 
 Note: Usa el operador `-` para la diferencia de conjuntos.
+
 
 ### Diferencia simétrica de conjuntos
 
@@ -177,6 +181,7 @@ a ^ b  # {1, 3, 6, 8}
 
 Note: Usa el operador `^` para la diferencia simétrica de conjuntos.
 
+
 ### Inclusión de conjuntos
 
 * `A ⊆ B`: A es subconjunto de B.
@@ -188,6 +193,7 @@ a <= b  # True
 
 Note: Usa `<=` para comprobar si A es subconjunto de B.
 
+
 ### Conjuntos disjuntos
 
 * A y B no tienen elementos en común.
@@ -198,6 +204,7 @@ a.isdisjoint(b)  # True
 </code></div></div></pre>
 
 Note: Usa `isdisjoint()` para comprobar si dos conjuntos son disjuntos.
+
 
 ### Igualdad de conjuntos
 
@@ -246,8 +253,6 @@ Note: Estos métodos actualizan el conjunto con el resultado de la operación.
 
 ---
 
-
-
 ## Resumen: Conjuntos en Python
 
 
@@ -258,7 +263,7 @@ Note: Estos métodos actualizan el conjunto con el resultado de la operación.
 Note: Los conjuntos son una herramienta poderosa en Python para manipular colecciones de datos.
 
 
-# Crear un conjunto
+### Crear un conjunto
 
 * `{elemento1, elemento2, ...}` o `set(iterable)`.
 * Elementos repetidos son eliminados.
@@ -270,7 +275,7 @@ a = set('Hola Pythonista')  # {'a', 'H', 'h', 'y', 'n', 's', 'P', 't', ' ', 'i',
 Note: Puedes crear conjuntos usando llaves o el constructor `set()`.
 
 
-# Operaciones con conjuntos
+### Operaciones con conjuntos
 
 * Operadores como `|`, `&`, `-`, `^` para operaciones de conjuntos.
 * Unión, intersección, diferencia, diferencia simétrica.
@@ -279,7 +284,7 @@ Note: Puedes crear conjuntos usando llaves o el constructor `set()`.
 Note: Los conjuntos permiten realizar operaciones al estilo del álgebra de conjuntos.
 
 
-# Operaciones con conjuntos
+### Operaciones con conjuntos
 
 <pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">a = {1, 2, 3, 4}
 b = {2, 4, 6, 8}
@@ -290,8 +295,7 @@ a ^ b  # Diferencia simétrica
 </code></div></div></pre>
 
 
-
-# Métodos importantes
+### Métodos importantes
 
 * `add()`, `remove()`, `clear()`.
 * `update()`, `discard()`, `pop()`.

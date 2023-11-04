@@ -14,32 +14,29 @@
 
 La clase dict de Python es un tipo mapa que asocia claves a valores. A diferencia de los tipos secuenciales list, tuple, range o str, que son indexados por un índice numérico, los diccionarios son indexados por claves. Estas claves siempre deben ser de un tipo inmutable, concretamente un tipo hashable.
 
-🎯 NOTA: Un objeto es hashable si tiene un valor de hash que no cambia durante todo su ciclo de vida. En principio, los objetos que son instancias de clases definidas por el usuario son hashables. También lo son la mayoría de tipos inmutables definidos por Python (int, float o str).
+Note: Un objeto es hashable si tiene un valor de hash que no cambia durante todo su ciclo de vida.
 
----
-# Diccionarios en Python   
-## Claves y Valores
 
+## Nota sobre Hashable
+En principio, los objetos que son instancias de clases definidas por el usuario son hashables. También lo son la mayoría de tipos inmutables definidos por Python (int, float o str).
+
+
+## Pares: Clave - Valor
 Piensa siempre en un diccionario como un contenedor de pares clave: valor, en el que la clave puede ser de cualquier tipo hashable y es única en el diccionario que la contiene. Generalmente, se suelen usar como claves los tipos int y str aunque, como se ha comentado, cualquier tipo hashable puede ser una clave.
 
----
 
-# Diccionarios en Python   
 ## Operaciones Principales
-
 Las principales operaciones que se suelen realizar con diccionarios son almacenar un valor asociado a una clave y recuperar un valor a partir de una clave. Esta es la esencia de los diccionarios y es aquí donde son realmente importantes. En un diccionario, el acceso a un elemento a partir de una clave es una operación realmente rápida, eficaz y que consume pocos recursos si lo comparamos con cómo lo haríamos con otros tipos de datos.
 
----
 
-# Diccionarios en Python   
 ## Características Adicionales
-
 * Es un tipo mutable, es decir, su contenido se puede modificar después de haber sido creado.
 * Es un tipo ordenado. Preserva el orden en que se insertan los pares clave: valor.
+* Es un tipo eficiente. El acceso a un elemento a partir de una clave es muy rápido.
 
 ---
 
-# Diccionarios en Python   
+# Diccionarios en Python
 ## Cómo crear un diccionario
 
 En Python hay varias formas de crear un diccionario. Las veremos todas a continuación.
@@ -52,7 +49,8 @@ d = {1: 'hola', 89: 'Pythonista', 'a': 'b', 'c': 27}
 
 ---
 
-# Diccionarios en Python    
+# Diccionarios en Python
+
 ## Cómo crear un diccionario (cont.)
 
 Para crear un diccionario vacío, simplemente asigna a una variable el valor {}.
@@ -76,9 +74,7 @@ d = {'uno': 1, 'dos': 2, 'tres': 3}
 print(d['dos']) # Output: 2
 ```
 
----
 
-# Diccionarios en Python
 ## El método get()
 
 La clase dict también ofrece el método `get(clave [, valor por defecto])`. Este método devuelve el valor correspondiente a la clave clave. En caso de que la clave no exista no lanza ningún error, sino que devuelve el segundo argumento valor por defecto. Si no se proporciona este argumento, se devuelve el valor None.
@@ -91,7 +87,7 @@ print(d.get('uno')) # Output: 1
 ---
 
 # Diccionarios en Python
-## For dict Python – Recorrer un diccionario
+## Cómo recorrer un diccionario - For dict Python 
 
 Hay varias formas de recorrer los elementos de un diccionario: recorrer solo las claves, solo los valores o recorrer a la vez las claves y los valores. Puedes ver aquí cómo usar el bucle for para recorrer un diccionario.
 
@@ -115,9 +111,7 @@ d = {'uno': 1, 'dos': 2}
 d['tres'] = 3
 ```
 
----
 
-# Diccionarios en Python
 ## Añadir elementos mediante el método setdefault()
 
 También existe el método `setdefault(clave[, valor])`. Este método devuelve el valor de la clave si ya existe y, en caso contrario, le asigna el valor que se pasa como segundo argumento. Si no se especifica este segundo argumento, por defecto es None.
@@ -190,6 +184,7 @@ d = {'uno': 1, 'dos': 2, 'tres': 3}
 ---
 
 # Diccionarios en Python
+
 ## Comparar si dos diccionarios son iguales
 
 En Python se puede utilizar el operador de igualdad `==` para comparar si dos diccionarios son iguales. Dos diccionarios son iguales si contienen el mismo conjunto de pares clave: valor, independientemente del orden que tengan.
@@ -207,6 +202,7 @@ d1 == {'uno': 1} # Devuelve False
 ---
 
 # Diccionarios en Python
+
 ## Diccionarios Anidados
 
 Un diccionario puede contener un valor de cualquier tipo, entre ellos, otro diccionario. Esto se conoce como diccionarios anidados.
@@ -222,6 +218,7 @@ d['d2']['k1']  # Devuelve 3
 ---
 
 # Diccionarios en Python
+
 ## Obtener una Lista de Claves
 
 A veces, es necesario tener almacenado en una lista las claves de un diccionario. Para ello, simplemente pasa el diccionario como argumento del constructor `list()`.
@@ -235,6 +232,7 @@ A veces, es necesario tener almacenado en una lista las claves de un diccionario
 ---
 
 # Diccionarios en Python
+
 ## Objetos Vista de un Diccionario
 
 La clase dict implementa tres métodos muy particulares, dado que devuelven un tipo de dato, iterable, conocido como objetos vista.
@@ -246,6 +244,7 @@ La clase dict implementa tres métodos muy particulares, dado que devuelven un t
 ---
 
 # Diccionarios en Python
+
 ## Listado de Métodos de la Clase dict
 
 * `clear()`: Elimina todos los elementos del diccionario.
@@ -262,9 +261,14 @@ La clase dict implementa tres métodos muy particulares, dado que devuelven un t
 ---
 
 # Diccionarios en Python
+
 ## Depuración
+
+Conforme trabajes con conjuntos de datos más grandes puede ser complicado depurar imprimiendo y revisando los datos a mano. Aquí hay algunas sugerencias para depurar grandes conjuntos de datos:
 
 * Reducir la entrada
 * Revisar extractos y tipos
-* Escribe auto-verificaciones
+* Escribir auto-verificaciones
 * Imprimir una salida ordenada
+
+Note: El tiempo que inviertas haciendo una buena estructura puede reducir el tiempo que inviertas en depurar.

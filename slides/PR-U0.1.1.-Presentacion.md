@@ -23,7 +23,7 @@
 ---
 
 # Objetivos fundamentales
-Recomendado la consulta de la [programación](https://revilofe.github.io/) para seguir esta presentación.
+RecomendadPR-U0.1.1.-Presentacion.htmlo la consulta de la [programación](https://revilofe.github.io/) para seguir esta presentación.
 
 
 ## Objetivos generales
@@ -79,7 +79,7 @@ Como toda planificación, puede sufrir cambios.
 ---
 
 
-## Horario
+## Horario. Actualizar al 2023/2024!!
 Horario (8 horas semanales)  
 
 |     HORA     | L |  M  |  X  |  J  |  V  | 

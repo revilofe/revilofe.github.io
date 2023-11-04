@@ -29,13 +29,23 @@ Note: Un objeto es hashable si tiene un valor de hash que no cambia durante todo
 
 
 ## Operaciones Principales
-*Las principales operaciones que se suelen realizar con diccionarios son almacenar un valor asociado a una clave y recuperar un valor a partir de una clave. Esta es la esencia de los diccionarios y es aquí donde son realmente importantes. En un diccionario, el acceso a un elemento a partir de una clave es una operación realmente rápida, eficaz y que consume pocos recursos si lo comparamos con cómo lo haríamos con otros tipos de datos.
+* Las principales operaciones que se suelen realizar con diccionarios son 
+  * almacenar un valor asociado a una clave 
+  * recuperar un valor a partir de una clave. 
+* El acceso a un elemento a partir de una clave es una operación realmente rápida, eficaz y que consume pocos recursos si lo comparamos con cómo lo haríamos con otros tipos de datos.
 
 
 ## Características Adicionales
 * Es un tipo mutable, es decir, su contenido se puede modificar después de haber sido creado.
 * Es un tipo ordenado. Preserva el orden en que se insertan los pares clave: valor.
 * Es un tipo eficiente. El acceso a un elemento a partir de una clave es muy rápido.
+
+
+## Características Adicionales
+* Los diccionarios son tipos heterogéneos, es decir, pueden contener elementos de distinto tipo.
+* Los diccionarios son tipos de datos flexibles, es decir, no es necesario que todos los elementos sean del mismo tipo.
+* Los diccionarios son tipos de datos de alto nivel, es decir, permiten almacenar cualquier tipo de objeto.
+* Los diccionarios son tipos de datos seguros, es decir, no se puede acceder a un elemento a partir de una clave que no existe.
 
 ---
 
@@ -44,18 +54,24 @@ Note: Un objeto es hashable si tiene un valor de hash que no cambia durante todo
 * En Python hay varias formas de crear un diccionario.
 * La más simple es encerrar una secuencia de pares clave: valor separados por comas entre llaves:
 
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">
+```python
 d = {1: 'hola', 89: 'Pythonista', 'a': 'b', 'c': 27}
-</code></div></div></pre>
+```
 
 
-## Cómo crear un diccionario (cont.)
+## Cómo crear un diccionario
 * Para crear un diccionario vacío, simplemente asigna a una variable el valor {}.
 * También se puede usar el constructor de la clase dict() de varias maneras:
   * Sin parámetros (esto creará un diccionario vacío).
   * Con pares clave: valor encerrados entre llaves.
   * Con argumentos con nombre. El nombre del argumento será la clave en el diccionario.
-  * Pasando un iterable. En este caso, cada elemento del iterable debe ser también un iterable con solo dos elementos. El primero se toma como clave del diccionario y el segundo como valor. Si la clave aparece varias veces, el valor que prevalece es el último.
+
+
+## Cómo crear un diccionario
+* También se puede usar el constructor de la clase dict() de varias maneras:
+  * Pasando un iterable. En este caso, cada elemento del iterable debe ser también un iterable con solo dos elementos.
+    * El primero se toma como clave del diccionario y el segundo como valor.
+    * Si la clave aparece varias veces, el valor que prevalece es el último.
 
 ---
 

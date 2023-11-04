@@ -62,7 +62,7 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 # Horarios y planificación
 
 
-## Horario. Actualizar al 2023!!
+## Horario. Actualizar al 2023/2024!!
 
 Horario (5 horas semanales)
 

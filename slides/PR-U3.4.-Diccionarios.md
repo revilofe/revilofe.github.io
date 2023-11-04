@@ -77,7 +77,10 @@ d = {1: 'hola', 89: 'Pythonista', 'a': 'b', 'c': 27}
 
 ## Cómo acceder a los elementos de un diccionario en Python
 
-Acceder a un elemento de un diccionario es una de las principales operaciones por las que existe este tipo de dato. El acceso a un valor se realiza mediante indexación de la clave. Para ello, simplemente encierra entre corchetes la clave del elemento `d[clave]`. En caso de que la clave no exista, se lanzará la excepción KeyError.
+* Es una de las principales operaciones por las que existe este tipo de dato. 
+* El acceso a un valor se realiza mediante indexación de la clave. 
+* Para ello, simplemente encierra entre corchetes la clave del elemento `d[clave]`. 
+* En caso de que la clave no exista, se lanzará la excepción `KeyError`.
 
 ```python
 d = {'uno': 1, 'dos': 2, 'tres': 3}

@@ -67,6 +67,7 @@ Note: Los hash son muy utilizandos en ciberseguridad.
 ```python
 d = {1: 'hola', 89: 'Pythonista', 'a': 'b', 'c': 27}
 ```
+Note: Ojo con las comas. Si se pone una coma al final, se crea una tupla con un solo elemento.
 
 
 ### Cómo crear un diccionario

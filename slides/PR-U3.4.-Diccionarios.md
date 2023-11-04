@@ -90,7 +90,10 @@ print(d['dos']) # Output: 2
 
 ## El método get()
 
-* La clase dict también ofrece el método `get(clave [, valor por defecto])`. Este método devuelve el valor correspondiente a la clave clave. En caso de que la clave no exista no lanza ningún error, sino que devuelve el segundo argumento valor por defecto. Si no se proporciona este argumento, se devuelve el valor None.
+* La clase dict también ofrece el método `get(clave [, valor por defecto])`. 
+* Este método devuelve el valor correspondiente a la clave clave. 
+* En caso de que la clave no exista no lanza ningún error, sino que devuelve el segundo argumento valor por defecto. 
+* Si no se proporciona este argumento, se devuelve el valor `None`.
 
 ```python
 d = {'uno': 1, 'dos': 2, 'tres': 3}
@@ -101,7 +104,11 @@ print(d.get('uno')) # Output: 1
 
 ## Cómo recorrer un diccionario - For dict Python 
 
-* Hay varias formas de recorrer los elementos de un diccionario: recorrer solo las claves, solo los valores o recorrer a la vez las claves y los valores. Puedes ver aquí cómo usar el bucle for para recorrer un diccionario.
+* Hay varias formas de recorrer los elementos de un diccionario: 
+  * recorrer solo las claves, 
+  * solo los valores 
+  * recorrer a la vez las claves y los valores. 
+* Puedes ver aquí cómo usar el bucle for para recorrer un diccionario.
 
 ```python
 d = {'uno': 1, 'dos': 2, 'tres': 3}
@@ -114,7 +121,9 @@ for e in d:
 ## Añadir elementos a un diccionario en Python
 
 * La clase dict es mutable, por lo que se pueden añadir, modificar y/o eliminar elementos después de haber creado un objeto de este tipo.
-* Para añadir un nuevo elemento a un diccionario existente, se usa el operador de asignación `=`. A la izquierda del operador aparece el objeto diccionario con la nueva clave entre corchetes [] y a la derecha el valor que se asocia a dicha clave.
+* Para añadir un nuevo elemento a un diccionario existente, se usa el operador de asignación `=`. 
+  * A la izquierda del operador aparece el objeto diccionario con la nueva clave entre corchetes [] 
+  * A la derecha el valor que se asocia a dicha clave.
 
 ```python
 d = {'uno': 1, 'dos': 2}
@@ -124,7 +133,10 @@ d['tres'] = 3
 
 ## Añadir elementos mediante el método setdefault()
 
-* También existe el método `setdefault(clave[, valor])`. Este método devuelve el valor de la clave si ya existe y, en caso contrario, le asigna el valor que se pasa como segundo argumento. Si no se especifica este segundo argumento, por defecto es None.
+* También existe el método `setdefault(clave[, valor])`. 
+* Este método devuelve el valor de la clave si ya existe.
+* En caso contrario, le asigna el valor que se pasa como segundo argumento. 
+  * Si no se especifica este segundo argumento, por defecto es `None`.
 
 ```python
 d = {'uno': 1, 'dos': 2}
@@ -135,7 +147,7 @@ print(d.setdefault('uno', 1.0)) # Output: 1
 
 ## Modificar elementos de un diccionario
 
-* En el apartado anterior hemos visto que para actualizar el valor asociado a una clave, simplemente se asigna un nuevo valor a dicha clave del diccionario.
+* Para actualizar el valor asociado a una clave, simplemente se asigna un nuevo valor a dicha clave del diccionario.
 
 ```python
 d = {'uno': 1, 'dos': 2}
@@ -151,6 +163,9 @@ d['uno'] = 1.0
   * `popitem()`: Elimina el último par clave: valor del diccionario y lo devuelve.
   * `del d[clave]`: Elimina el par clave: valor.
   * `clear()`: Borra todos los pares clave: valor del diccionario.
+
+
+## Eliminar un elemento de un diccionario en Python
 
 ```python
 d = {'uno': 1, 'dos': 2, 'tres': 3, 'cuatro': 4, 'cinco': 5}
@@ -195,9 +210,9 @@ d = {'uno': 1, 'dos': 2, 'tres': 3}
 * En Python se puede utilizar el operador de igualdad `==` para comparar si dos diccionarios son iguales. 
 * Dos diccionarios son iguales si contienen el mismo conjunto de pares clave: valor, independientemente del orden que tengan.
 * Si se comparan dos diccionarios 
-  * vacíos, el resultado es True.
-  * que contienen los mismos pares clave: valor, pero en distinto orden, el resultado es True.
-  * que contienen los mismos pares clave: valor, pero con distinto número de elementos, el resultado es False.
+  * vacíos, el resultado es `True`.
+  * que contienen los mismos pares clave: valor, pero en distinto orden, el resultado es `True`.
+  * que contienen los mismos pares clave: valor, pero con distinto número de elementos, el resultado es `False`.
 
 ```python
 
@@ -257,6 +272,10 @@ d['d2']['k1']  # Devuelve 3
 * `get(clave[, valor])`: Devuelve el valor de la clave, o el valor por defecto si no existe.
 * `items()`: Devuelve una vista de los pares clave-valor del diccionario.
 * `keys()`: Devuelve una vista de las claves del diccionario.
+
+
+## Listado de Métodos de la Clase dict
+
 * `pop(clave[, valor])`: Devuelve el valor del elemento y lo elimina del diccionario.
 * `popitem()`: Devuelve un par (clave, valor) aleatorio del diccionario.
 * `setdefault(clave[, valor])`: Si la clave está en el diccionario, devuelve su valor. Si no, la inserta y devuelve el valor (o None por defecto).
@@ -267,11 +286,11 @@ d['d2']['k1']  # Devuelve 3
 
 ## Depuración
 
-Conforme trabajes con conjuntos de datos más grandes puede ser complicado depurar imprimiendo y revisando los datos a mano. Aquí hay algunas sugerencias para depurar grandes conjuntos de datos:
-
-* Reducir la entrada
-* Revisar extractos y tipos
-* Escribir auto-verificaciones
-* Imprimir una salida ordenada
+* Conforme trabajes con conjuntos de datos más grandes puede ser complicado depurar imprimiendo y revisando los datos a mano. 
+* Aquí hay algunas sugerencias para depurar grandes conjuntos de datos:
+  * Reducir la entrada
+  * Revisar extractos y tipos
+  * Escribir auto-verificaciones
+  * Imprimir una salida ordenada
 
 Note: El tiempo que inviertas haciendo una buena estructura puede reducir el tiempo que inviertas en depurar.

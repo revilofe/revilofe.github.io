@@ -212,10 +212,17 @@ d = {'uno': 1, 'dos': 2, 'tres': 3}
 
 * En Python se puede utilizar el operador de igualdad `==` para comparar si dos diccionarios son iguales. 
 * Dos diccionarios son iguales si contienen el mismo conjunto de pares clave: valor, independientemente del orden que tengan.
-* Si se comparan dos diccionarios 
+
+
+###  Comparar si dos diccionarios son iguales
+
+*Si se comparan dos diccionarios 
   * vacíos, el resultado es `True`.
   * que contienen los mismos pares clave: valor, pero en distinto orden, el resultado es `True`.
   * que contienen los mismos pares clave: valor, pero con distinto número de elementos, el resultado es `False`.
+
+
+###  Comparar si dos diccionarios son iguales
 
 ```python
 
@@ -261,10 +268,13 @@ d['d2']['k1']  # Devuelve 3
   * `keys()`: Devuelve una vista de las claves del diccionario.
   * `values()`: Devuelve una vista de los valores del diccionario.
   * `items()`: Devuelve una vista de pares (clave, valor) del diccionario.
+
+
+###  Objetos Vista de un Diccionario
+
 * Los objeto vista `dict_values` o `dict_keys`, son objetos que permiten iterar a través de las claves y valores contenidos en el diccionario 
 * Si el diccionario se modifica, dichos objetos se actualizan al instante. 
 * Se puede pasar como argumento del constructor `list()`
-
 
 ---
 

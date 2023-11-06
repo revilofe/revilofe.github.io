@@ -407,4 +407,6 @@ De nuevo, el tiempo que inviertas haciendo una buena estructura puede reducir el
 * [Estructuras de datos](https://blog.soyhenry.com/que-es-una-estructura-de-datos-en-programacion/)
 * [Python para todos](https://es.py4e.com/)
 * [Dicionarios y Hash](https://jarroba.com/resumibles-hashables-en-python/)
-* [Aprende con Alf](ttps://aprendeconalf.es/)
+* [Aprende con Alf](https://aprendeconalf.es/)
+
+  

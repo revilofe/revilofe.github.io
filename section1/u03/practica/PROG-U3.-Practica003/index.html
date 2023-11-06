@@ -1420,6 +1420,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ejercicio-334" class="md-nav__link">
+    Ejercicio 3.3.4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-335" class="md-nav__link">
+    Ejercicio 3.3.5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-336" class="md-nav__link">
+    Ejercicio 3.3.6
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3393,6 +3414,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ejercicio-334" class="md-nav__link">
+    Ejercicio 3.3.4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-335" class="md-nav__link">
+    Ejercicio 3.3.5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-336" class="md-nav__link">
+    Ejercicio 3.3.6
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3457,13 +3499,13 @@
 </code></pre></div>
 <p>Escribir una función que reciba como parámetro una lista con el formato mencionado anteriormente y retorne los domicilios de cada cliente al cual se le debe enviar una factura de compra. Notar que cada cliente puede haber hecho más de una compra en el mes, por lo que la función debe retornar una estructura que contenga cada domicilio una sola vez.</p>
 <!--
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># https://github.com/programacion-desde-cero/
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># https://github.com/programacion-desde-cero/</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>def direcciones(ventas):
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   domicilios=set()
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>   for venta in ventas:
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>       domicilios.add(venta[3])
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>   return domicilios
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">def</span> <span class="nf">direcciones</span><span class="p">(</span><span class="n">ventas</span><span class="p">):</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   <span class="n">domicilios</span><span class="o">=</span><span class="nb">set</span><span class="p">()</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>   <span class="k">for</span> <span class="n">venta</span> <span class="ow">in</span> <span class="n">ventas</span><span class="p">:</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>       <span class="n">domicilios</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">venta</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>   <span class="k">return</span> <span class="n">domicilios</span>
 </code></pre></div>
 -->
 
@@ -3476,32 +3518,32 @@
 <li>Mostrar si todos los nombres de primaria están incluidos en secundaria.</li>
 </ul>
 <!--
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># https://github.com/programacion-desde-cero/
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>def cargarNombres(alumnos):
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>   nombre=input(&quot;Nombre: &quot;)
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>   while nombre!=&quot;x&quot;:
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>       alumnos.add(nombre)
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>       nombre=input(&quot;Nombre: &quot;)
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>   return alumnos
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># https://github.com/programacion-desde-cero/</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">def</span> <span class="nf">cargarNombres</span><span class="p">(</span><span class="n">alumnos</span><span class="p">):</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>   <span class="n">nombre</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Nombre: &quot;</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>   <span class="k">while</span> <span class="n">nombre</span><span class="o">!=</span><span class="s2">&quot;x&quot;</span><span class="p">:</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>       <span class="n">alumnos</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>       <span class="n">nombre</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Nombre: &quot;</span><span class="p">)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>   <span class="k">return</span> <span class="n">alumnos</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>primaria=set()
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>secundaria=set()
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>print(&quot;ALUMNOS DE PRIMARIA&quot;)
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>primaria=cargarNombres(primaria)
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>print(&quot;ALUMNOS DE SECUNDARIA&quot;)
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>secundaria=cargarNombres(secundaria)
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">primaria</span><span class="o">=</span><span class="nb">set</span><span class="p">()</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">secundaria</span><span class="o">=</span><span class="nb">set</span><span class="p">()</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ALUMNOS DE PRIMARIA&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">primaria</span><span class="o">=</span><span class="n">cargarNombres</span><span class="p">(</span><span class="n">primaria</span><span class="p">)</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ALUMNOS DE SECUNDARIA&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="n">secundaria</span><span class="o">=</span><span class="n">cargarNombres</span><span class="p">(</span><span class="n">secundaria</span><span class="p">)</span>
 <a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>print(&quot;NOMBRES DE TODOS LOS ALUMNOS:&quot;)
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>for nombre in primaria | secundaria:
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>   print(nombre)
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NOMBRES DE TODOS LOS ALUMNOS:&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="k">for</span> <span class="n">nombre</span> <span class="ow">in</span> <span class="n">primaria</span> <span class="o">|</span> <span class="n">secundaria</span><span class="p">:</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>   <span class="nb">print</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
 <a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>print(&quot;NOMBRES COMUNES:&quot;)
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>for nombre in primaria &amp; secundaria:
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>   print(nombre)
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NOMBRES COMUNES:&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="k">for</span> <span class="n">nombre</span> <span class="ow">in</span> <span class="n">primaria</span> <span class="o">&amp;</span> <span class="n">secundaria</span><span class="p">:</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>   <span class="nb">print</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
 <a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>print(&quot;NOMBRES DE PRIMARIA QUE NO SE REPITEN EN SECUNDARIA:&quot;)
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>for nombre in primaria - secundaria:
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>   print(nombre)
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NOMBRES DE PRIMARIA QUE NO SE REPITEN EN SECUNDARIA:&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="k">for</span> <span class="n">nombre</span> <span class="ow">in</span> <span class="n">primaria</span> <span class="o">-</span> <span class="n">secundaria</span><span class="p">:</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>   <span class="nb">print</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
 </code></pre></div>
 -->
 
@@ -3511,12 +3553,43 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span><span class="err">∅</span><span class="p">,{</span><span class="mi">1</span><span class="p">},{</span><span class="mi">2</span><span class="p">},{</span><span class="mi">3</span><span class="p">},{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">},{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">},{</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">},{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}}</span>
 </code></pre></div>
 <p>Escriba la función <code>conjunto_potencia(s)</code> que reciba como parámetro un conjunto cualquiera <code>s</code> y retorne su «lista potencia» (la lista de todos sus subconjuntos):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&gt;&gt;&gt; conjunto_potencia({6, 1, 4})
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>[set(), set([6]), set([1]), set([4]), set([6, 1]), set([6, 4]), set([1, 4]), set([6, 1, 4])]
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">conjunto_potencia</span><span class="p">({</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">})</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">[</span><span class="nb">set</span><span class="p">(),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">6</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">4</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">])]</span>
 </code></pre></div>
 <!--
 http://progra.usm.cl/apunte/ejercicios/2/conjunto-potencia.html#conjunto-potencia
 -->
+
+<h4 id="ejercicio-334"><strong>Ejercicio 3.3.4</strong><a class="headerlink" href="#ejercicio-334" title="Permanent link">&para;</a></h4>
+<p>Dadas las siguientes listas:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">frutas1</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span> <span class="s2">&quot;pera&quot;</span><span class="p">,</span> <span class="s2">&quot;naranja&quot;</span><span class="p">,</span> <span class="s2">&quot;plátano&quot;</span><span class="p">,</span> <span class="s2">&quot;uva&quot;</span><span class="p">]</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">frutas2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span> <span class="s2">&quot;pera&quot;</span><span class="p">,</span> <span class="s2">&quot;durazno&quot;</span><span class="p">,</span> <span class="s2">&quot;sandía&quot;</span><span class="p">,</span> <span class="s2">&quot;uva&quot;</span><span class="p">]</span>
+</code></pre></div>
+<ol>
+<li>Crea conjuntos a partir de estas listas y nómbralos <code>set_frutas1</code> y <code>set_frutas2</code>.</li>
+<li>Encuentra las frutas que están en ambas listas y guárdalas en un nuevo conjunto llamado <code>frutas_comunes</code>.</li>
+<li>Encuentra las frutas que están en <code>frutas1</code> pero no en <code>frutas2</code> y guárdalas en un conjunto llamado <code>frutas_solo_en_frutas1</code>.</li>
+<li>Encuentra las frutas que están en <code>frutas2</code> pero no en <code>frutas1</code> y guárdalas en un conjunto llamado <code>frutas_solo_en_frutas2</code>.</li>
+</ol>
+<h4 id="ejercicio-335"><strong>Ejercicio 3.3.5</strong><a class="headerlink" href="#ejercicio-335" title="Permanent link">&para;</a></h4>
+<p>Dado el conjunto de números enteros:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">numeros</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>Crea un conjunto <code>pares</code> que contenga los números pares del conjunto <code>numeros</code>.</li>
+<li>Crea un conjunto <code>multiplos_de_tres</code> que contenga los números que son múltiplos de tres del conjunto <code>numeros</code>.</li>
+<li>Encuentra la intersección entre los conjuntos <code>pares</code> y <code>multiplos_de_tres</code> y guárdala en un conjunto llamado <code>pares_y_multiplos_de_tres</code>.</li>
+</ol>
+<h4 id="ejercicio-336"><strong>Ejercicio 3.3.6</strong><a class="headerlink" href="#ejercicio-336" title="Permanent link">&para;</a></h4>
+<p>Dado el conjunto de letras:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">vocales</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>Crea un conjunto <code>consonantes</code> que contenga las letras del alfabeto que no son vocales.</li>
+<li>Crea un conjunto <code>letras_comunes</code> que contenga las letras que están tanto en el conjunto <code>vocales</code> como en el conjunto <code>consonantes</code>.</li>
+</ol>
+<p>Estos ejercicios te ayudarán a practicar y comprender mejor cómo trabajar con conjuntos en Python. ¡Espero que te sean útiles! 
+Si tienes alguna pregunta o necesitas más ejercicios, no dudes en decírmelo.</p>
 
 
   

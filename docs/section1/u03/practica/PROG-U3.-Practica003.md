@@ -27,7 +27,7 @@ Suponer una lista con datos de las compras hechas por clientes de una empresa a 
 Escribir una función que reciba como parámetro una lista con el formato mencionado anteriormente y retorne los domicilios de cada cliente al cual se le debe enviar una factura de compra. Notar que cada cliente puede haber hecho más de una compra en el mes, por lo que la función debe retornar una estructura que contenga cada domicilio una sola vez.
 
 <!--
-```
+```python
 # https://github.com/programacion-desde-cero/
 
 def direcciones(ventas):
@@ -48,7 +48,8 @@ Solicitar al usuario que introduzca los nombres de pila de los alumnos de primar
 - Mostrar si todos los nombres de primaria están incluidos en secundaria.
 
 <!--
-```
+```python
+
 # https://github.com/programacion-desde-cero/
 def cargarNombres(alumnos):
    nombre=input("Nombre: ")
@@ -90,7 +91,7 @@ Por ejemplo, el conjunto potencia de `{1,2,3}` es:
 
 Escriba la función `conjunto_potencia(s)` que reciba como parámetro un conjunto cualquiera `s` y retorne su «lista potencia» (la lista de todos sus subconjuntos):
 
-```
+```python
 >>> conjunto_potencia({6, 1, 4})
 [set(), set([6]), set([1]), set([4]), set([6, 1]), set([6, 4]), set([1, 4]), set([6, 1, 4])]
 ```
@@ -98,3 +99,45 @@ Escriba la función `conjunto_potencia(s)` que reciba como parámetro un conjunt
 <!--
 http://progra.usm.cl/apunte/ejercicios/2/conjunto-potencia.html#conjunto-potencia
 -->
+
+#### **Ejercicio 3.3.4**
+
+Dadas las siguientes listas:
+
+```python
+frutas1 = ["manzana", "pera", "naranja", "plátano", "uva"]
+frutas2 = ["manzana", "pera", "durazno", "sandía", "uva"]
+```
+
+1. Crea conjuntos a partir de estas listas y nómbralos `set_frutas1` y `set_frutas2`.
+2. Encuentra las frutas que están en ambas listas y guárdalas en un nuevo conjunto llamado `frutas_comunes`.
+3. Encuentra las frutas que están en `frutas1` pero no en `frutas2` y guárdalas en un conjunto llamado `frutas_solo_en_frutas1`.
+4. Encuentra las frutas que están en `frutas2` pero no en `frutas1` y guárdalas en un conjunto llamado `frutas_solo_en_frutas2`.
+
+#### **Ejercicio 3.3.5**
+
+Dado el conjunto de números enteros:
+
+```python
+numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+```
+
+1. Crea un conjunto `pares` que contenga los números pares del conjunto `numeros`.
+2. Crea un conjunto `multiplos_de_tres` que contenga los números que son múltiplos de tres del conjunto `numeros`.
+3. Encuentra la intersección entre los conjuntos `pares` y `multiplos_de_tres` y guárdala en un conjunto llamado `pares_y_multiplos_de_tres`.
+
+#### **Ejercicio 3.3.6**
+
+Dado el conjunto de letras:
+
+```python
+vocales = {'a', 'e', 'i', 'o', 'u'}
+```
+
+1. Crea un conjunto `consonantes` que contenga las letras del alfabeto que no son vocales.
+2. Crea un conjunto `letras_comunes` que contenga las letras que están tanto en el conjunto `vocales` como en el conjunto `consonantes`.
+
+
+
+Estos ejercicios te ayudarán a practicar y comprender mejor cómo trabajar con conjuntos en Python. ¡Espero que te sean útiles! 
+Si tienes alguna pregunta o necesitas más ejercicios, no dudes en decírmelo.

@@ -1,11 +1,20 @@
 """
 Ejercicio: El Juego de la Búsqueda del Tesoro en la Isla
+
 Descripción del Problema:
+
 Los estudiantes están atrapados en una isla desierta y deben encontrar un tesoro escondido para escapar.
 La isla está representada como una cuadrícula donde cada celda puede contener una pista que indica
-la dirección general del tesoro o una trampa con información falsa.
+la dirección general del tesoro, nada o una trampa que le impide el paso.
 Los estudiantes deben usar su conocimiento de estructuras de datos y control de flujo para interpretar
 las pistas, evitar las trampas y encontrar el tesoro.
+
+
+--
+PENDIENTE DE TERMINAR!!!!!!!!
+
+La idea es añadir errores para que corrijan el codigo los estudiantes.
+Solicitarles que modifiquen el codigo para que almacenen las posiciones por las que va pasando el jugador, y se pinte en el mapa.
 
 """
 

@@ -28,7 +28,8 @@ Note: Los conjuntos en Python son colecciones desordenadas de elementos únicos.
 * Colección sin orden y elementos únicos.
 * Usos principales: verificar pertenencia y eliminar duplicados.
 
-Note: Los conjuntos son útiles para verificar si un elemento pertenece a una colección y para eliminar duplicados de secuencias.
+Note: Los conjuntos son útiles para verificar si un elemento pertenece a una colección y para eliminar duplicados de
+secuencias. Una lista, al pasarla a conjunto se eliminan los duplicados.
 
 ---
 

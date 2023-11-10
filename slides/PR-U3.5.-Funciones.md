@@ -37,7 +37,8 @@ Note: Las funciones predefinidas en Python facilitan el trabajo, pero puedes def
 * Opcional: instrucción `return` para devolver un resultado.
 * docstring se utiliza para documentar la función.
 
-Note: El primer string de una función se llama docstring y se usa para documentar la función.
+Note: El primer string de una función se llama docstring y se usa para documentar la función. Documenta siempre las
+funciones.
 
 ---
 

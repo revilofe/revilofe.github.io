@@ -63,18 +63,92 @@ FILAS = 0
 COLUMNAS = 1
 
 
-
 def inicializar_juego() -> tuple:
     """
     Inicializa el juego, mostrando el mapa y la posición del jugador.
     :return: El mapa y la posición del jugador.
     """
-    posicion_jugador = (DIMENSIONES // 2, DIMENSIONES // 2)
-    mapa = generar_mapa()
+    posicion_jugador = posicion_inicial_del_jugador()
+    # mapa = generar_mapa()
+    mapa = generar_mapa_con_solucion()
     while mapa[posicion_jugador[FILAS]][posicion_jugador[COLUMNAS]] == CELDA_TESORO:
         mapa = generar_mapa()
 
     return mapa, posicion_jugador
+
+
+def posicion_inicial_del_jugador() -> tuple:
+    """ Devuelve la posición inicial del jugador. Actualmente es la posición central del mapa.
+    :return: La posición inicial del jugador.
+    """
+    return DIMENSIONES // 2, DIMENSIONES // 2
+
+
+def generar_mapa_con_solucion():
+    """Genera un mapa de la isla con pistas y trampas correctamente colocadas. Crea un camino desde la posición
+    del jugador al tesoro antes de llenar el resto del mapa con pistas y trampas. Al hacerlo, se asegura de que siempre
+    haya un camino viable hasta el tesoro. El camino se agrega a un conjunto para evitar que se coloquen trampas en él
+    y para que al final se asegure de que todas las posiciones del camino tienen una pista que apunta en la
+    dirección correcta (excepto la posición inicial del jugador, que debe permanecer como está)
+    
+    Con el siguiente contenido:
+    - "X" indica el tesoro, y es única en el mapa.
+    - "!" indica una trampa, y puede haber varias.
+    - ^: indica que el tesoro esta una o mas filas arriba.
+    - <: indica que el tesoro esta una o mas columnas a la izquierda.
+    - >: indica que el tesoro esta una o mas columnas a la izquierda.
+    - v: indica que el tesoro esta una o mas filas abajo.
+
+    """
+
+    mapa = [[CELDA_VACIA for _ in range(DIMENSIONES)] for _ in range(DIMENSIONES)]
+    tesoro_x, tesoro_y = random.randint(0, DIMENSIONES - 1), random.randint(0, DIMENSIONES - 1)
+    mapa[tesoro_x][tesoro_y] = CELDA_TESORO  # Colocar el tesoro
+
+    # Crear un camino garantizado al tesoro
+    camino = crear_camino((tesoro_x, tesoro_y), posicion_inicial_del_jugador())
+
+    # Rellenar el mapa con pistas y trampas, solo si la celda no está en el camino y no es el tesoro
+    for i in range(DIMENSIONES):
+        for j in range(DIMENSIONES):
+            if (i, j) not in camino and (i, j) != (tesoro_x, tesoro_y):
+                # Decidir aleatoriamente si colocar una pista, una trampa o vacia.
+                opciones = [genera_pista((tesoro_x, tesoro_y), (i, j))]
+                opciones += [CELDA_TRAMPA]
+                opciones += [CELDA_VACIA]
+                mapa[i][j] = random.choice(opciones)
+
+    # Asegurarse de que las celdas del camino tengan pistas correctas
+    for pos_x, pos_y in camino:
+        # Evitar sobreescribir la posición inicial del jugador y la del tesoro
+        if (pos_x, pos_y) != posicion_inicial_del_jugador() and (pos_x, pos_y) != (tesoro_x, tesoro_y):
+            mapa[pos_x][pos_y] = genera_pista((tesoro_x, tesoro_y), (pos_x, pos_y))
+
+    return mapa
+
+
+def crear_camino(posicion_tesoro: tuple, posicion_jugador: tuple) -> set:
+    """ Crea un camino desde la posición del jugador al tesoro.
+    :param posicion_tesoro: La posición del tesoro.
+    :param posicion_jugador: La posición del jugador.
+    :return: El camino desde la posición del jugador al tesoro.
+    """
+    camino = set()
+    jugador_x, jugador_y = posicion_jugador[FILAS], posicion_jugador[COLUMNAS]
+    tesoro_x, tesoro_y = posicion_tesoro[FILAS], posicion_tesoro[COLUMNAS]
+    # Agregar la posición inicial del jugador al camino para garantizar que el tesoro sea alcanzable
+    camino.add((jugador_x, jugador_y))
+    while (jugador_x, jugador_y) != (tesoro_x, tesoro_y):
+        if jugador_x < tesoro_x:
+            jugador_x += 1
+        elif jugador_x > tesoro_x:
+            jugador_x -= 1
+        elif jugador_y < tesoro_y:
+            jugador_y += 1
+        elif jugador_y > tesoro_y:
+            jugador_y -= 1
+        camino.add((jugador_x, jugador_y))
+    return camino
 
 
 def generar_mapa() -> list:
@@ -107,6 +181,7 @@ def generar_mapa() -> list:
 
     return mapa
 
+
 def genera_pista(posicion_tesoro: tuple, posicion: tuple):
     """
     Genera una pista para el mapa, en función de donde se encuentre el tesoro.
@@ -121,7 +196,6 @@ def genera_pista(posicion_tesoro: tuple, posicion: tuple):
         return genera_pista_filas(posicion_tesoro, posicion) or genera_pista_columnas(posicion_tesoro, posicion)
     else:
         return genera_pista_columnas(posicion_tesoro, posicion) or genera_pista_filas(posicion_tesoro, posicion)
-
 
 
 def genera_pista_filas(posicion_tesoro: tuple, posicion: tuple):
@@ -255,8 +329,8 @@ def jugar():
 
     # Iniciar el mapa y al jugador en el centro del mapa
     mapa, posicion_jugador = inicializar_juego()
-
     muestra_estado_mapa(mapa, posicion_jugador)
+
     movimiento = pedir_movimiento(mapa)
     resultado_movimiento = None
     # Loop principal del juego. El juego termina cuando el jugador realizar movimiento SALIR.

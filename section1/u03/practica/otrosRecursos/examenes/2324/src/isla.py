@@ -32,9 +32,9 @@ import random
 DIMENSIONES = 5
 
 # Constantes para el mapa
-TESORO = "X"
-TRAMPA = "!"
-VACIA = " "
+CELDA_TESORO = "X"
+CELDA_TRAMPA = "!"
+CELDA_VACIA = " "
 
 # Constantes para las pistas de los movimientos
 ARRIBA = "^"
@@ -90,7 +90,9 @@ def genera_pista_columnas(posicion_tesoro, posicion):
 def genera_pista(posicion_tesoro, posicion):
     """
     Genera una pista para el mapa, en función de donde se encuentre el tesoro.
-    Decidirá si la pista es sobre la fila o la columna basada en la aleatoriedad.
+    Decidirá si la pista es sobre la fila o la columna basada en la aleatoriedad. Ademas tiene en cuenta que
+    si está en la misma fila que el tesoro, generará la pista para las columnas. Y si está en la misma columna
+    generará la pista para la fila.
     :param posicion_tesoro: La posición del tesoro.
     :param posicion: La posición para la que se genera la pista.
     :return: La pista generada.
@@ -116,16 +118,19 @@ def generar_mapa() -> list:
     :return: El mapa generado.
     """
 
-    mapa = [[VACIA for _ in range(DIMENSIONES)] for _ in range(DIMENSIONES)]
+    mapa = [[CELDA_VACIA for _ in range(DIMENSIONES)] for _ in range(DIMENSIONES)]
     tesoro_x, tesoro_y = random.randint(0, DIMENSIONES - 1), random.randint(0, DIMENSIONES - 1)
-    mapa[tesoro_x][tesoro_y] = TESORO
+    mapa[tesoro_x][tesoro_y] = CELDA_TESORO
 
     # Colocar pistas y trampas
     for i in range(DIMENSIONES):
         for j in range(DIMENSIONES):
-            if mapa[i][j] != TESORO:
-                # Decidir aleatoriamente si colocar una pista o una trampa
-                mapa[i][j] = random.choice([genera_pista((tesoro_x, tesoro_y), (i, j))] + [TRAMPA, " "])
+            if mapa[i][j] != CELDA_TESORO:
+                # Decidir aleatoriamente si colocar una pista, una trampa o vacia.
+                opciones = [genera_pista((tesoro_x, tesoro_y), (i, j))]
+                opciones += [CELDA_TRAMPA]
+                opciones += [CELDA_VACIA]
+                mapa[i][j] = random.choice(opciones)
 
     return mapa
 
@@ -158,11 +163,11 @@ def procesar_movimiento(posicion, mapa) -> int:
     resultado = VACIA_ENCONTRADA
     if not (0 <= posicion[FILAS] < DIMENSIONES and 0 <= posicion[COLUMNAS] < DIMENSIONES):
         resultado = MOVIMIENTO_INVALIDO  # Código de error para movimiento fuera de rango
-    elif mapa[posicion[FILAS]][posicion[COLUMNAS]] == TESORO:
+    elif mapa[posicion[FILAS]][posicion[COLUMNAS]] == CELDA_TESORO:
         resultado = TESORO_ENCONTRADO  # Código para tesoro encontrado
-    elif mapa[posicion[FILAS]][posicion[COLUMNAS]] == TRAMPA:
+    elif mapa[posicion[FILAS]][posicion[COLUMNAS]] == CELDA_TRAMPA:
         resultado = TRAMPA_ENCONTRADA  # Código para trampa encontrada
-    elif mapa[posicion[FILAS]][posicion[COLUMNAS]] != VACIA:
+    elif mapa[posicion[FILAS]][posicion[COLUMNAS]] != CELDA_VACIA:
         resultado = PISTA_ENCONTRADA  # Código para pista encontrada
 
     return resultado
@@ -170,7 +175,7 @@ def procesar_movimiento(posicion, mapa) -> int:
 def imprimir_mapa_oculto(mapa):
     """Imprime el mapa sin revelar el tesoro ni las trampas."""
     for fila in mapa:
-        print(" ".join([DESCONOCIDO if celda != VACIA else VACIA for celda in fila]))
+        print(" ".join([DESCONOCIDO if celda != CELDA_VACIA else CELDA_VACIA for celda in fila]))
 
 
 def imprimir_mapa(mapa):

@@ -38,7 +38,7 @@ VACIA = " "
 
 # Constantes para las pistas de los movimientos
 ARRIBA = "^"
-ABAJO = "V"
+ABAJO = "v"
 DERECHA = ">"
 IZQUIERDA = "<"
 
@@ -60,28 +60,48 @@ FILAS = 0
 COLUMNAS = 1
 
 
-def genera_pista(posicion_tesoro: tuple, posicion: tuple) -> str:
-    """
-    Genera una pista para el mapa, en función de donde se encuentre el tesoro y la posición de la celda para la que se genera la pista.
-    :param posicion_tesoro: La posición del tesoro
-    :param posicion: La posición de la celda para la que se genera la pista
-    :return: La pista generada
+def genera_pista_filas(posicion_tesoro, posicion):
+    """Genera una pista basada en la comparación de filas.
+    :param posicion_tesoro: La posición del tesoro.
+    :param posicion: La posición para la que se genera la pista.
+    :return: La pista generada.
 
     """
-    # A veces se generará una pisa sobre la filas (movimienot arriba, abajo) , y otras veces sobre las columnas (movimiento izquierda, derecha)
-    # FILAS
-    if posicion_tesoro[COLUMNAS] == posicion[COLUMNAS] or (
-            posicion_tesoro[FILAS] != posicion[FILAS] and random.choice([FILAS, COLUMNAS]) == FILAS):
-        pista = ABAJO
-        if posicion_tesoro[FILAS] < posicion[FILAS]:
-            pista = ARRIBA
-    # COLUMNAS
+    if posicion_tesoro[FILAS] < posicion[FILAS]:
+        return ARRIBA
+    elif posicion_tesoro[FILAS] > posicion[FILAS]:
+        return ABAJO
+    return ""
+
+
+def genera_pista_columnas(posicion_tesoro, posicion):
+    """Genera una pista basada en la comparación de columnas.
+    :param posicion_tesoro: La posición del tesoro.
+    :param posicion: La posición para la que se genera la pista.
+    :return: La pista generada.
+    """
+    if posicion_tesoro[COLUMNAS] < posicion[COLUMNAS]:
+        return IZQUIERDA
+    elif posicion_tesoro[COLUMNAS] > posicion[COLUMNAS]:
+        return DERECHA
+    return ""
+
+
+def genera_pista(posicion_tesoro, posicion):
+    """
+    Genera una pista para el mapa, en función de donde se encuentre el tesoro.
+    Decidirá si la pista es sobre la fila o la columna basada en la aleatoriedad.
+    :param posicion_tesoro: La posición del tesoro.
+    :param posicion: La posición para la que se genera la pista.
+    :return: La pista generada.
+    """
+    if random.choice([FILAS, COLUMNAS]) == FILAS:
+        return genera_pista_filas(posicion_tesoro, posicion) or genera_pista_columnas(posicion_tesoro, posicion)
     else:
-        pista = DERECHA
-        if posicion_tesoro[COLUMNAS] < posicion[COLUMNAS]:
-            pista = IZQUIERDA
-    return pista
+        return genera_pista_columnas(posicion_tesoro, posicion) or genera_pista_filas(posicion_tesoro, posicion)
 
+
+# Tu código sigue aquí...
 
 def generar_mapa() -> list:
     """Genera un mapa de la isla con pistas y trampas correctamente colocadas. Con el siguiente contenido:
@@ -110,6 +130,23 @@ def generar_mapa() -> list:
     return mapa
 
 
+def pedir_movimiento(mapa):
+    """
+    Pide al jugador su próximo movimiento y devuelve las coordenadas de desplazamiento.
+    return: el movimiento del jugador
+    """
+
+    entrada = input("Ingresa tu movimiento (formato: 'u:arriba', 'd:abajo', 'l:izquierda', 'r:derecha', q:salir): ")
+    entradaCorrecta = False
+    while not entradaCorrecta:
+        if entrada in MOVIMIENTOS or entrada == "q":
+            return entrada
+        elif entrada == "s":
+            imprimir_mapa(mapa)
+        entrada = input(
+            "Ingresa tu movimiento (formato: 'u:arriba', 'd:abajo', 'l:izquierda', 'r:derecha', q:salir): ")
+
+
 def procesar_movimiento(posicion, mapa) -> int:
     """Procesa el movimiento del jugador y devuelve el código de resultado.
     :param posicion: La posición a la que se mueve el jugador.
@@ -124,9 +161,9 @@ def procesar_movimiento(posicion, mapa) -> int:
     elif mapa[posicion[FILAS]][posicion[COLUMNAS]] == TESORO:
         resultado = TESORO_ENCONTRADO  # Código para tesoro encontrado
     elif mapa[posicion[FILAS]][posicion[COLUMNAS]] == TRAMPA:
-        resultado = 3  # Código para trampa encontrada
+        resultado = TRAMPA_ENCONTRADA  # Código para trampa encontrada
     elif mapa[posicion[FILAS]][posicion[COLUMNAS]] != VACIA:
-        resultado = 4  # Código para pista encontrada
+        resultado = PISTA_ENCONTRADA  # Código para pista encontrada
 
     return resultado
 
@@ -144,22 +181,6 @@ def imprimir_mapa(mapa):
     for fila in mapa:
         print(fila)
 
-
-def pedir_movimiento(mapa):
-    """
-    Pide al jugador su próximo movimiento y devuelve las coordenadas de desplazamiento.
-    return: el movimiento del jugador
-    """
-
-    entrada = input("Ingresa tu movimiento (formato: 'u:arriba', 'd:abajo', 'l:izquierda', 'r:derecha', q:salir): ")
-    entradaCorrecta = False
-    while not entradaCorrecta:
-        if entrada in MOVIMIENTOS or entrada == "q":
-            return entrada
-        elif entrada == "s":
-            imprimir_mapa(mapa)
-        entrada = input(
-                "Ingresa tu movimiento (formato: 'u:arriba', 'd:abajo', 'l:izquierda', 'r:derecha', q:salir): ")
 
 
 
@@ -229,8 +250,6 @@ def jugar():
 
             # Pedir el siguiente movimiento
             movimiento = pedir_movimiento(mapa)
-
-
 
 
 if __name__ == "__main__":

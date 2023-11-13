@@ -1,4 +1,8 @@
 """
+
+Una idea puede ser darles el ejercicio, y que ellos le echen un vistazo, y el día del examen que corrijan errores,
+o mejoren el programa.
+
 Ejercicio: El Juego de la Búsqueda del Tesoro en la Isla
 
 Descripción del Problema:
@@ -22,8 +26,8 @@ posicion (2,2)
 columnas  0    1    2    3    4
 filas
 0       ["X", " ", "!", " ", "<"]
-1       ["!", "^", " ", "<", "!"]
-2       ["^", "^", "!", "<", " "]
+1       ["!", "^", "!", "<", "!"]
+2       [" ", "^", " ", "<", " "]
 3       [" ", "<", " ", "!", "^"]
 4       ["!", "<", "!", " ", "^"]
 

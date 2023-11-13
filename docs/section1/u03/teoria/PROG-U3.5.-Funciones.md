@@ -33,7 +33,6 @@ Sin embargo, tú como programador, puedes definir tus propias funciones para est
 La idea la puedes observar en la siguiente imagen:
 ![](assets/PROG-U3.5.-Funciones.png)
 
-
 En principio, un programa es una secuencia ordenada de instrucciones que se ejecutan una a continuación de la otra. Sin embargo, cuando se utilizan funciones, puedes agrupar parte de esas instrucciones como una unidad más pequeña que ejecuta dichas instrucciones y suele devolver un resultado.
 
 En el siguiente apartado te muestro cómo definir una función en Python.
@@ -44,11 +43,11 @@ La siguiente imagen muestra el esquema de una función en Python:
 
 ![](assets/PROG-U3.5.-DefFunciones.png)
 
-
 Para definir una función en Python:
-* Se utiliza la palabra reservada `def`. 
-* A continuación viene el nombre o identificador de la función que es el que se utiliza para invocarla. 
-* Después del nombre hay que incluir los paréntesis y una lista opcional de parámetros. 
+
+* Se utiliza la palabra reservada `def`.
+* A continuación viene el nombre o identificador de la función que es el que se utiliza para invocarla.
+* Después del nombre hay que incluir los paréntesis y una lista opcional de parámetros.
 * Por último, la cabecera o definición de la función termina con dos puntos.
 
 Tras los dos puntos se incluye el cuerpo de la función (con un sangrado mayor, generalmente cuatro espacios) que no es más que el conjunto de instrucciones que se encapsulan en dicha función y que le dan significado.
@@ -66,7 +65,9 @@ Veámoslo con un ejemplo. Vamos a crear una función que muestra por pantalla el
 ```Python
 def multiplica_por_5(numero):
     print(f'{numero} * 5 = {numero * 5}')
-print('Comienzo del programa')    
+
+
+print('Comienzo del programa')
 multiplica_por_5(7)
 print('Siguiente')
 multiplica_por_5(113)
@@ -98,6 +99,7 @@ La sentencia `return` es opcional, puede devolver, o no, un valor y es posible q
 A continuación hay varios ejemplos:
 
 #### return que no devuelve ningún valor
+
 La siguiente función muestra por pantalla el cuadrado de un número solo si este es par:
 
 ```Python
@@ -106,13 +108,14 @@ La siguiente función muestra por pantalla el cuadrado de un número solo si est
 ...         return
 ...     else:
 ...         print(numero ** 2)
-...     
+...
 >>> cuadrado_de_par(8)
 64
 >>> cuadrado_de_par(3)
 ```
 
 #### Varios return en una misma función
+
 La función es_par() devuelve True si un número es par y False en caso contrario:
 
 ```Python
@@ -121,7 +124,7 @@ La función es_par() devuelve True si un número es par y False en caso contrari
 ...         return True
 ...     else:
 ...         return False
-...     
+...
 >>> es_par(2)
 True
 >>> es_par(5)
@@ -166,12 +169,11 @@ Python, a diferencia de otros lenguajes de programación, no tiene procedimiento
 ```Python
 >>> def saludo(nombre):
 ...     print(f'Hola {nombre}')
-...     
+...
 >>> print(saludo('j2logo'))
 Hola j2logo
 None
 ```
-
 
 Como puedes ver en el ejemplo anterior, el `print` que envuelve a la función `saludo()` muestra `None`.
 
@@ -186,12 +188,113 @@ Antes de contestar a estas dos preguntas, tenemos que conocer los conceptos de p
 
 Muchos lenguajes de programación usan a la vez paso por valor y por referencia en función del tipo de la variable. Por ejemplo, paso por valor para los tipos simples: entero, float, … y paso por referencia para los objetos.
 
-Sin embargo, en Python todo es un objeto. Entonces, ¿cómo se pasan los argumentos en Python, por valor o por referencia? Lo que ocurre en Python realmente es que se pasa por valor la referencia del objeto ¿Qué implicaciones tiene esto? Básicamente que si el tipo que se pasa como argumento es inmutable, cualquier modificación en el valor del parámetro no afectará a la variable externa pero, si es mutable (como una lista o diccionario), sí se verá afectado por las modificaciones. **Así que, ¡¡¡cuidado!!!** 
+Sin embargo, en Python todo es un objeto. Entonces, ¿cómo se pasan los argumentos en Python, por valor o por referencia?
+Lo que ocurre en Python realmente es que se pasa por valor la referencia del objeto ¿Qué implicaciones tiene esto?
+Básicamente que si el tipo que se pasa como argumento es inmutable, cualquier modificación en el valor del parámetro no
+afectará a la variable externa pero, si es mutable (como una lista o diccionario), sí se verá afectado por las
+modificaciones. **Así que, ¡¡¡cuidado!!!**
 
 Una vez aclarado este tema, a continuación encontrarás unos tutoriales muy, muy interesantes para que sigas profundizando sobre los tipos de parámetros en Python:
 
 * [Tipos de parámetros](https://j2logo.com/tipo-parametros-funcion-python/)
 * [*args y **kwargs. Número de parámetros indefinido](https://j2logo.com/args-y-kwargs-en-python/)
+
+Aquí tienes un resumen :
+
+#### *args y **kwargs en Python
+
+##### Significado de *args y **kwargs en Python
+
+En Python, `*args` y `**kwargs` permiten que una función acepte un número variable de argumentos, lo que proporciona
+flexibilidad en la cantidad y tipo de argumentos que se pueden pasar.
+
+##### Uso de *args
+
+`*args` permite pasar una lista de argumentos de longitud variable sin palabras clave. Por ejemplo:
+
+```python
+def sumar(*args):
+    return sum(args)  # sum es una función incorporada de Python
+
+
+print(sumar(3, 5, 10, 15))  # Imprime 33
+```
+
+##### Uso de **kwargs
+
+`**kwargs` permite pasar un diccionario de longitud variable de argumentos con palabras clave. Por ejemplo:
+
+```python
+def describir_persona(**kwargs):
+    for clave, valor in kwargs.items():
+        print(f"{clave}: {valor}")
+
+
+describir_persona(nombre="John", edad=25, ciudad="Nueva York")  
+```
+
+#### Ejemplos de Funciones con *args y **kwargs
+
+##### Ejemplo de *args para sumar números
+
+```python
+def sum(*args):
+    value = 0
+    for n in args:
+        value += n
+    return value
+```
+
+##### Ejemplo de **kwargs para filtrar datos
+
+```python
+def filtrar(**kwargs):
+    condiciones = " AND ".join([f"{k}='{v}'" for k, v in kwargs.items()])
+    return f"SELECT * FROM clientes WHERE {condiciones};"
+```
+
+##### El Orden Importa
+
+Cuando se usan juntos, `*args` y `**kwargs` deben usarse en ese orden específico en la definición de la función.
+
+```python
+def ejemplo(arg1, arg2, *args, **kwargs):
+    pass
+```
+
+#### *args y **kwargs como Argumentos
+
+También puedes desempaquetar argumentos en la llamada a una función:
+
+##### Usando *args para Desempaquetar una Lista o Tupla
+
+```python
+def resultado(x, y, op):
+    if op == '+':
+        return x + y
+    elif op == '-':
+        return x - y
+
+
+a = (1, 2, '+')
+print(resultado(*a))  # Imprime 3
+```
+
+##### Usando **kwargs para Desempaquetar un Diccionario
+
+```python
+a = {"op": "+", "x": 2, "y": 5}
+print(resultado(**a))  # Imprime 7
+```
+
+#### Conclusión
+
+- Usa `*args` cuando quieras pasar un número indefinido de argumentos no clave a una función.
+- Usa `**kwargs` cuando quieras pasar un número indefinido de argumentos clave a una función.
+- `*args` recoge los argumentos adicionales en una tupla.
+- `**kwargs` recoge los argumentos clave adicionales en un diccionario.
+- Asegúrate de que `*args` y `**kwargs` se usan al final y en ese orden cuando se combinan en la definición de la
+  función.
 
 ### Ámbito y ciclo de vida de las variables
 
@@ -205,7 +308,7 @@ El *ciclo de vida* de una variable determina el tiempo en que una variable perma
 >>> def saludo(nombre):
 ...     x = 10
 ...     print(f'Hola {nombre}')
-...     
+...
 >>> saludo('Alumno')
 Hola Alumno
 >>> print(x)
@@ -222,7 +325,7 @@ El siguiente ejemplo es diferente:
 >>> def muestra_x():
 ...     x = 10
 ...     print(f'x vale {x}')
-...     
+...
 >>> x = 20
 >>> muestra_x()
 x vale 10
@@ -240,7 +343,7 @@ Las variables definidas fuera de una función tienen un ámbito conocido como *g
 ...     x = 10
 ...     print(f'x vale {x}')
 ...     print(f'y vale {y}')
-...     
+...
 >>> muestra_x()
 x vale 10
 y vale 20
@@ -256,7 +359,7 @@ Para modificar dentro de una función una variable definida fuera de la misma, h
 ...     x += 1
 ...     print(f'x vale {x}')
 ...     print(f'y vale {y}')
-...     
+...
 >>> muestra_x()
 x vale 4
 y vale 20

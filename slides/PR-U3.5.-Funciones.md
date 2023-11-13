@@ -59,7 +59,6 @@ Note: El flujo de ejecución se desplaza a la función cuando es llamada.
 
 ## Parámetros y argumentos
 
-
 ### Diferencia entre parámetro y argumento
 
 * Parámetro: definido en la función.
@@ -73,7 +72,6 @@ multiplica_por_5(7)  # '7' es un argumento
 
 Note: Es importante distinguir entre ambos conceptos.
 
-
 ### Parámetros
 
 * Paso por valor: copia el valor de las variables.
@@ -83,8 +81,95 @@ Note: En Python, se pasa por valor la referencia del objeto.
 
 ---
 
-## Retorno de valores
+## \*args y \*\*kwargs en Python
 
+### Significado de \*args y \*\*kwargs en Python
+
+* Permiten funciones con un número variable de argumentos.
+* Proporcionan flexibilidad en la cantidad y tipo de argumentos.
+
+Note: `*args` y `**kwargs` permiten flexibilidad en las funciones.
+
+### Uso de \*args
+
+* `*args` permite argumentos sin palabras clave.
+
+<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def sumar(*args):
+    return sum(args)  # sum es una función incorporada de Python
+
+print(sumar(3, 5, 10, 15))  # Imprime 33
+</code></div></div></pre>
+
+Note: `*args` permite pasar una lista variable de argumentos.
+
+### Uso de \*\*kwargs
+
+* `**kwargs` permite argumentos con palabras clave.
+
+<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def describir_persona(**kwargs):
+    for clave, valor in kwargs.items():
+        print(f"{clave}: {valor}")
+
+describir_persona(nombre="John", edad=25, ciudad="Nueva York")
+</code></div></div></pre>
+
+Note: `**kwargs` permite pasar un diccionario variable de argumentos con palabras clave.
+
+### Ejemplo de \*args para sumar números
+
+<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def sum(*args):
+    value = 0
+    for n in args:
+        value += n
+    return value
+</code></div></div></pre>
+
+Note: Ejemplos de funciones que utilizan `*args`.
+
+### Ejemplo de \*\*kwargs para filtrar datos
+
+<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def filtrar(**kwargs):
+    condiciones = " AND ".join([f"{k}='{v}'" for k, v in kwargs.items()])
+    return f"SELECT * FROM clientes WHERE {condiciones};"
+</code></div></div></pre>
+
+Note: Ejemplos de funciones que utilizan `**kwargs`.
+
+### El Orden Importa
+
+* En la definición de la función, usa `*args` y luego `**kwargs`.
+
+<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def ejemplo(arg1, arg2, *args, **kwargs):
+    pass
+</code></div></div></pre>
+
+Note: En la definición de la función, el orden es importante.
+
+#### Usando \*args para Desempaquetar una Lista o Tupla
+
+<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def resultado(x, y, op):
+    if op == '+':
+        return x + y
+    elif op == '-':
+        return x - y
+
+a = (1, 2, '+')
+print(resultado(*a))  # Imprime 3
+</code></div></div></pre>
+
+Note: Puedes desempaquetar argumentos usando `*args` y `**kwargs`.
+
+#### Usando \*\*kwargs para Desempaquetar un Diccionario
+
+<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">a = {"op": "+", "x": 2, "y": 5}
+print(resultado(**a))  # Imprime 7
+</code></div></div></pre>
+
+Note: Puedes desempaquetar argumentos usando `*args` y `**kwargs`.
+
+---
+
+## Retorno de valores
 
 ### Sentencia return
 
@@ -102,7 +187,6 @@ cuadrado_de_par(8)
 
 Note: `return` puede usarse para finalizar una función y/o devolver un valor. Ten en cuenta que los ejemplos no muestras buenas prácticas de uso, sino que son para ilustrar el concepto.
 
-
 ### Devolver más de un valor
 
 * En Python, se puede devolver más de un valor con `return`.
@@ -117,7 +201,6 @@ cubo  # 64
 </code></div></div></pre>
 
 Note: `return` permite devolver múltiples valores en una función.
-
 
 ### Devolver resultados en una lista
 
@@ -134,7 +217,6 @@ res  # [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30]
 </code></div></div></pre>
 
 Note: `return` puede utilizarse para devolver listas de resultados.
-
 
 ### Python siempre devuelve un valor
 
@@ -153,7 +235,6 @@ Note: Python siempre devuelve un valor, incluso si no hay `return`. Por defecto,
 
 ## Variables y ámbito
 
-
 ### Ámbito y ciclo de vida de las variables
 
 * Local: dentro de una función, no accesible fuera.
@@ -171,14 +252,12 @@ print(x)  # 20
 
 Note: Las variables tienen ámbitos locales o globales y ciclos de vida definidos.
 
-
 ### Ámbito y ciclo de vida de las variables
 
 * Ámbito local: dentro de una función.
 * Variables desaparecen al finalizar la función.
 
 Note: Las variables definidas dentro de una función tienen un ámbito local y desaparecen al finalizar la función.
-
 
 ### Variables globales
 
@@ -211,12 +290,20 @@ Note: Las funciones lambda son útiles para casos simples y breves.
 
 ---
 
-### Resumen
+### Resumen I
 
 * Funciones en Python son unidades lógicas de código.
 * Dividen y organizan el código, facilitando la reutilización.
 * Se definen con `def`, seguido del nombre y parámetros (opcional).
 * Se invocan escribiendo el nombre y pasando argumentos.
+* \*args para argumentos no clave.
+* \*args recoge en una tupla.
+
+### Resumen II
+
+* \*\*kwargs para argumentos clave.
+* \*\*kwargs recoge en un diccionario.
+* Orden en la definición: \*args primero, luego \*\*kwargs.
 * `return` opcional para devolver resultados.
 * Ámbito de las variables: local y global.
 * Las funciones lamda son utiles para casos simples y breves.

@@ -233,9 +233,9 @@ def describir_persona(**kwargs):
 describir_persona(nombre="John", edad=25, ciudad="Nueva York")  
 ```
 
-#### Ejemplos de Funciones con *args y **kwargs
+##### Ejemplos de Funciones con *args y **kwargs
 
-##### Ejemplo de *args para sumar números
+###### Ejemplo de *args para sumar números
 
 ```python
 def sum(*args):
@@ -245,7 +245,7 @@ def sum(*args):
     return value
 ```
 
-##### Ejemplo de **kwargs para filtrar datos
+###### Ejemplo de **kwargs para filtrar datos
 
 ```python
 def filtrar(**kwargs):
@@ -262,11 +262,11 @@ def ejemplo(arg1, arg2, *args, **kwargs):
     pass
 ```
 
-#### *args y **kwargs como Argumentos
+##### *args y **kwargs como Argumentos
 
 También puedes desempaquetar argumentos en la llamada a una función:
 
-##### Usando *args para Desempaquetar una Lista o Tupla
+###### Usando *args para Desempaquetar una Lista o Tupla
 
 ```python
 def resultado(x, y, op):
@@ -280,14 +280,14 @@ a = (1, 2, '+')
 print(resultado(*a))  # Imprime 3
 ```
 
-##### Usando **kwargs para Desempaquetar un Diccionario
+###### Usando **kwargs para Desempaquetar un Diccionario
 
 ```python
 a = {"op": "+", "x": 2, "y": 5}
 print(resultado(**a))  # Imprime 7
 ```
 
-#### Conclusión
+##### Conclusión
 
 - Usa `*args` cuando quieras pasar un número indefinido de argumentos no clave a una función.
 - Usa `**kwargs` cuando quieras pasar un número indefinido de argumentos clave a una función.
@@ -295,6 +295,38 @@ print(resultado(**a))  # Imprime 7
 - `**kwargs` recoge los argumentos clave adicionales en un diccionario.
 - Asegúrate de que `*args` y `**kwargs` se usan al final y en ese orden cuando se combinan en la definición de la
   función.
+
+#### Parametros opcionales
+
+En Python, es posible definir parámetros opcionales en una función, los cuales tienen valores predeterminados y toman
+esos valores si no se les pasa ningún valor específico al invocar la función. Esto permite que una función sea más
+flexible en su uso.
+
+Ejemplo de una función con parámetros opcionales:
+
+<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def saludo(nombre, mensaje="encantado de saludarte"):
+    print("Hola {}, {}".format(nombre, mensaje))
+</code></div></div></pre>
+
+En este ejemplo, el parámetro `nombre` es obligatorio, mientras que el parámetro `mensaje` es opcional y tiene un valor
+predeterminado de "encantado de saludarte". Si no se proporciona un valor para `mensaje`, se utilizará el valor por
+defecto.
+
+También es importante tener en cuenta que una vez que se define un parámetro opcional, todos los parámetros a su derecha
+también deben ser opcionales. Esto significa que los parámetros obligatorios no pueden seguir a los parámetros
+opcionales en la definición de la función.
+
+Por ejemplo, la siguiente definición de función sería incorrecta:
+
+<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def saludo(mensaje="encantado de saludarte", nombre):
+    # Código de la función
+</code></div></div></pre>
+
+Este código generaría un error de sintaxis porque un parámetro obligatorio (`nombre`) sigue a un parámetro
+opcional (`mensaje`) en la definición de la función, lo cual no está permitido en Python.
+
+Por tanto, los parámetros opcionales son útiles para proporcionar valores predeterminados en una función y permiten que
+esta sea más versátil al manejar diferentes situaciones de llamada.
 
 ### Ámbito y ciclo de vida de las variables
 

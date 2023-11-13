@@ -59,6 +59,7 @@ Note: El flujo de ejecución se desplaza a la función cuando es llamada.
 
 ## Parámetros y argumentos
 
+
 ### Diferencia entre parámetro y argumento
 
 * Parámetro: definido en la función.
@@ -72,6 +73,7 @@ multiplica_por_5(7)  # '7' es un argumento
 
 Note: Es importante distinguir entre ambos conceptos.
 
+
 ### Parámetros
 
 * Paso por valor: copia el valor de las variables.
@@ -82,6 +84,7 @@ Note: En Python, se pasa por valor la referencia del objeto.
 ---
 
 ## \*args y \*\*kwargs en Python
+
 
 ### Significado de \*args y \*\*kwargs en Python
 
@@ -145,7 +148,7 @@ Note: Ejemplos de funciones que utilizan `**kwargs`.
 
 Note: En la definición de la función, el orden es importante.
 
-#### Usando \*args para Desempaquetar una Lista o Tupla
+### Usando \*args para Desempaquetar una Lista o Tupla
 
 <pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def resultado(x, y, op):
     if op == '+':
@@ -159,13 +162,72 @@ print(resultado(*a))  # Imprime 3
 
 Note: Puedes desempaquetar argumentos usando `*args` y `**kwargs`.
 
-#### Usando \*\*kwargs para Desempaquetar un Diccionario
+### Usando \*\*kwargs para Desempaquetar un Diccionario
 
 <pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">a = {"op": "+", "x": 2, "y": 5}
 print(resultado(**a))  # Imprime 7
 </code></div></div></pre>
 
 Note: Puedes desempaquetar argumentos usando `*args` y `**kwargs`.
+
+---
+
+## Parámetros Opcionales en Funciones Python
+
+### ¿Qué son los parámetros opcionales?
+
+* Los parámetros opcionales en una función tienen valores predeterminados.
+* Toman esos valores si no se proporciona un valor específico al invocar la función.
+
+Note: Los parámetros opcionales hacen que las funciones sean más flexibles en su uso.
+
+### Ejemplo de Función con Parámetro Opcional
+
+<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def saludo(nombre, mensaje="encantado de saludarte"):
+    print("Hola {}, {}".format(nombre, mensaje))
+</code></div></div></pre>
+
+* El parámetro `nombre` es obligatorio.
+* El parámetro `mensaje` es opcional y tiene un valor predeterminado.
+
+Note: El parámetro opcional `mensaje` toma el valor predeterminado si no se proporciona uno específico.
+
+### Uso de la Función con Parámetro Opcional
+
+<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">saludo("Juan")
+# Salida: Hola Juan, encantado de saludarte
+
+saludo("Ana", "bienvenida")
+# Salida: Hola Ana, bienvenida
+</code></div></div></pre>
+
+* En la primera llamada, se usa el valor predeterminado para `mensaje`.
+* En la segunda llamada, se proporciona un valor específico para `mensaje`.
+
+Note: Los parámetros opcionales permiten adaptar la función según la necesidad.
+
+### Restricciones en la Definición de Parámetros Opcionales
+
+* Una vez definido un parámetro opcional, todos los parámetros a su derecha también deben ser opcionales.
+
+<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"># Incorrecto
+def ejemplo(param1, param2="opcional", param3):
+    # Código de la función
+
+# Correcto
+def ejemplo(param1, param2="opcional", param3="otro opcional"):
+    # Código de la función
+</code></div></div></pre>
+
+Note: Los parámetros obligatorios no pueden seguir a los parámetros opcionales en la definición de la función.
+
+### Beneficios de Parámetros Opcionales
+
+* Flexibilidad: Permite a los usuarios de la función adaptarla según sus necesidades.
+* Valores Predeterminados: Proporciona valores por defecto para evitar errores en llamadas incompletas.
+* Facilita el Uso: Simplifica el uso de funciones al reducir la necesidad de proporcionar todos los argumentos.
+
+Note: Los parámetros opcionales hacen que las funciones sean más versátiles y fáciles de usar.
 
 ---
 

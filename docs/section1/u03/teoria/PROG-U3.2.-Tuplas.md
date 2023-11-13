@@ -1,7 +1,7 @@
 ---
-title: "UD 3 - 3.1 Tuplas"
+title: "UD 3 - 3.2 Tuplas"
 description: Tuplas
-summary: Tuplas
+summary: Como trabajar con tuplas en Python.
 authors:
     - Eduardo Fdez
 date: 2022-09-18
@@ -11,8 +11,12 @@ categories:
     - PROG
 tags:
     - Software
+    - tuplas
 ---
 ## Tuplas
+Las tublas son unos iterables que se utilizan para almacenar objetos de cualquier tipo. Se pueden considerar como listas inmutables. Se definen entre paréntesis y los elementos se separan por comas.
+
+```Python
 
 ### Diferencia entre tuplas y listas.
 

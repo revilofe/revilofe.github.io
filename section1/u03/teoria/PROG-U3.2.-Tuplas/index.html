@@ -26,7 +26,7 @@
     
     
       
-        <title>UD 3 - 3.1 Tuplas - R Z O</title>
+        <title>UD 3 - 3.2 Tuplas - R Z O</title>
       
     
     
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UD 3 - 3.1 Tuplas
+              UD 3 - 3.2 Tuplas
             
           </span>
         </div>
@@ -1298,20 +1298,6 @@
   
     <nav class="md-nav" aria-label="Tuplas">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#diferencia-entre-tuplas-y-listas" class="md-nav__link">
-    Diferencia entre tuplas y listas.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#que-es-una-tupla" class="md-nav__link">
-    Qué es una tupla
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#como-acceder-a-los-elementos-de-una-tupla-en-python" class="md-nav__link">
@@ -3442,20 +3428,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#diferencia-entre-tuplas-y-listas" class="md-nav__link">
-    Diferencia entre tuplas y listas.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#que-es-una-tupla" class="md-nav__link">
-    Qué es una tupla
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#como-acceder-a-los-elementos-de-una-tupla-en-python" class="md-nav__link">
     Cómo acceder a los elementos de una tupla en Python
   </a>
@@ -3561,6 +3533,15 @@
       <a href="../../../../tags/#software" class="md-tag md-tag-icon">Software</a>
     
   
+    
+    
+      
+      
+    
+    
+      <a href="../../../../tags/#tuplas" class="md-tag md-tag-icon">tuplas</a>
+    
+  
 </nav>
 
 
@@ -3571,16 +3552,27 @@
   <h1>3.2.-Est.Datos: Tuplas</h1>
 
 <h2 id="tuplas">Tuplas<a class="headerlink" href="#tuplas" title="Permanent link">&para;</a></h2>
-<h3 id="diferencia-entre-tuplas-y-listas">Diferencia entre tuplas y listas.<a class="headerlink" href="#diferencia-entre-tuplas-y-listas" title="Permanent link">&para;</a></h3>
-<p>Una lista no es lo mismo que una tupla. Ambas son un conjunto ordenado de valores, en donde este último puede ser cualquier objeto: un número, una cadena, una función, una clase, una instancia, etc. La diferencia es que las listas presentan una serie de funciones adicionales que permiten un amplio manejo de los valores que contienen. Basándonos en esta definición, puede decirse que las listas son dinámicas, mientras que las tuplas son estáticas.</p>
-<p>La principal diferencia entre las listas y las tuplas de Python, y el motivo por el que muchos usuarios solamente utilizar listas, es que <strong>las listas son mutables</strong> mientras que <strong>las tuplas son inmutables</strong>. ¿Pero qué significa ser mutable o no? Básicamente un objeto mutable se puede modificar una vez creado mientras que uno que no lo es no. Así el contenido de las listas se puede modificar durante la ejecución del programa mientras para las tuplas no es posible alterar su contenido. Las tuplas se podrán usar como las listas teniendo en cuenta su inmutabilidad.</p>
-<p>El hecho de ser mutable tiene además otras consecuencias. Para ser mutables las listas se almacena en dos bloques de memoria, mientras que las tuplas solo necesitan uno. Lo que provoca que las tuplas ocupen menos memoria que las listas. Además, por el hecho de no ser mutables, es más rápido manejar tuplas que listas. Debido a esto, hay que tener en cuenta lo anterior para elegir en nuestros algoritmos el tipo que mejor se adapte. En el caso de que no sea necesario modificar el contenido de los datos la mejor opción es la tupla, ya que es ocupa menos memoria y es más rápida. En el resto de los casos la mejor opción será utilizar listas.</p>
-<h3 id="que-es-una-tupla">Qué es una tupla<a class="headerlink" href="#que-es-una-tupla" title="Permanent link">&para;</a></h3>
-<p>La clase tuple en Python es un tipo <strong>contenedor</strong>, compuesto, que <strong>en un principio se pensó para almacenar grupos de elementos heterogéneos</strong>, aunque también puede contener elementos homogéneos.</p>
-<p>Junto a las clases <em>list</em> y  <em>range</em> , <strong>es uno de los tipos de secuencia en Python</strong>, con la particularidad de que son  <em>inmutables</em> . Esto último quiere decir que su contenido <strong>NO</strong> se puede modificar después de haber sido creada.</p>
-<p>En general, para crear una tupla en Python simplemente hay que definir una secuencia de elementos separados por comas.</p>
-<p>Por ejemplo, para crear una tupla con los números del 1 al 5 se haría del siguiente modo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">numeros</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span>
+<p>Las tublas son unos iterables que se utilizan para almacenar objetos de cualquier tipo. Se pueden considerar como listas inmutables. Se definen entre paréntesis y los elementos se separan por comas.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">### Diferencia entre tuplas y listas.</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">Una</span> <span class="n">lista</span> <span class="n">no</span> <span class="n">es</span> <span class="n">lo</span> <span class="n">mismo</span> <span class="n">que</span> <span class="n">una</span> <span class="n">tupla</span><span class="o">.</span> <span class="n">Ambas</span> <span class="n">son</span> <span class="n">un</span> <span class="n">conjunto</span> <span class="n">ordenado</span> <span class="n">de</span> <span class="n">valores</span><span class="p">,</span> <span class="n">en</span> <span class="n">donde</span> <span class="n">este</span> <span class="n">último</span> <span class="n">puede</span> <span class="n">ser</span> <span class="n">cualquier</span> <span class="n">objeto</span><span class="p">:</span> <span class="n">un</span> <span class="n">número</span><span class="p">,</span> <span class="n">una</span> <span class="n">cadena</span><span class="p">,</span> <span class="n">una</span> <span class="n">función</span><span class="p">,</span> <span class="n">una</span> <span class="n">clase</span><span class="p">,</span> <span class="n">una</span> <span class="n">instancia</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span> <span class="n">La</span> <span class="n">diferencia</span> <span class="n">es</span> <span class="n">que</span> <span class="n">las</span> <span class="n">listas</span> <span class="n">presentan</span> <span class="n">una</span> <span class="n">serie</span> <span class="n">de</span> <span class="n">funciones</span> <span class="n">adicionales</span> <span class="n">que</span> <span class="n">permiten</span> <span class="n">un</span> <span class="n">amplio</span> <span class="n">manejo</span> <span class="n">de</span> <span class="n">los</span> <span class="n">valores</span> <span class="n">que</span> <span class="n">contienen</span><span class="o">.</span> <span class="n">Basándonos</span> <span class="n">en</span> <span class="n">esta</span> <span class="n">definición</span><span class="p">,</span> <span class="n">puede</span> <span class="n">decirse</span> <span class="n">que</span> <span class="n">las</span> <span class="n">listas</span> <span class="n">son</span> <span class="n">dinámicas</span><span class="p">,</span> <span class="n">mientras</span> <span class="n">que</span> <span class="n">las</span> <span class="n">tuplas</span> <span class="n">son</span> <span class="n">estáticas</span><span class="o">.</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">La</span> <span class="n">principal</span> <span class="n">diferencia</span> <span class="n">entre</span> <span class="n">las</span> <span class="n">listas</span> <span class="n">y</span> <span class="n">las</span> <span class="n">tuplas</span> <span class="n">de</span> <span class="n">Python</span><span class="p">,</span> <span class="n">y</span> <span class="n">el</span> <span class="n">motivo</span> <span class="n">por</span> <span class="n">el</span> <span class="n">que</span> <span class="n">muchos</span> <span class="n">usuarios</span> <span class="n">solamente</span> <span class="n">utilizar</span> <span class="n">listas</span><span class="p">,</span> <span class="n">es</span> <span class="n">que</span> <span class="o">**</span><span class="n">las</span> <span class="n">listas</span> <span class="n">son</span> <span class="n">mutables</span><span class="o">**</span> <span class="n">mientras</span> <span class="n">que</span> <span class="o">**</span><span class="n">las</span> <span class="n">tuplas</span> <span class="n">son</span> <span class="n">inmutables</span><span class="o">**.</span> <span class="err">¿</span><span class="n">Pero</span> <span class="n">qué</span> <span class="n">significa</span> <span class="n">ser</span> <span class="n">mutable</span> <span class="n">o</span> <span class="n">no</span><span class="err">?</span> <span class="n">Básicamente</span> <span class="n">un</span> <span class="n">objeto</span> <span class="n">mutable</span> <span class="n">se</span> <span class="n">puede</span> <span class="n">modificar</span> <span class="n">una</span> <span class="n">vez</span> <span class="n">creado</span> <span class="n">mientras</span> <span class="n">que</span> <span class="n">uno</span> <span class="n">que</span> <span class="n">no</span> <span class="n">lo</span> <span class="n">es</span> <span class="n">no</span><span class="o">.</span> <span class="n">Así</span> <span class="n">el</span> <span class="n">contenido</span> <span class="n">de</span> <span class="n">las</span> <span class="n">listas</span> <span class="n">se</span> <span class="n">puede</span> <span class="n">modificar</span> <span class="n">durante</span> <span class="n">la</span> <span class="n">ejecución</span> <span class="k">del</span> <span class="n">programa</span> <span class="n">mientras</span> <span class="n">para</span> <span class="n">las</span> <span class="n">tuplas</span> <span class="n">no</span> <span class="n">es</span> <span class="n">posible</span> <span class="n">alterar</span> <span class="n">su</span> <span class="n">contenido</span><span class="o">.</span> <span class="n">Las</span> <span class="n">tuplas</span> <span class="n">se</span> <span class="n">podrán</span> <span class="n">usar</span> <span class="n">como</span> <span class="n">las</span> <span class="n">listas</span> <span class="n">teniendo</span> <span class="n">en</span> <span class="n">cuenta</span> <span class="n">su</span> <span class="n">inmutabilidad</span><span class="o">.</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">El</span> <span class="n">hecho</span> <span class="n">de</span> <span class="n">ser</span> <span class="n">mutable</span> <span class="n">tiene</span> <span class="n">además</span> <span class="n">otras</span> <span class="n">consecuencias</span><span class="o">.</span> <span class="n">Para</span> <span class="n">ser</span> <span class="n">mutables</span> <span class="n">las</span> <span class="n">listas</span> <span class="n">se</span> <span class="n">almacena</span> <span class="n">en</span> <span class="n">dos</span> <span class="n">bloques</span> <span class="n">de</span> <span class="n">memoria</span><span class="p">,</span> <span class="n">mientras</span> <span class="n">que</span> <span class="n">las</span> <span class="n">tuplas</span> <span class="n">solo</span> <span class="n">necesitan</span> <span class="n">uno</span><span class="o">.</span> <span class="n">Lo</span> <span class="n">que</span> <span class="n">provoca</span> <span class="n">que</span> <span class="n">las</span> <span class="n">tuplas</span> <span class="n">ocupen</span> <span class="n">menos</span> <span class="n">memoria</span> <span class="n">que</span> <span class="n">las</span> <span class="n">listas</span><span class="o">.</span> <span class="n">Además</span><span class="p">,</span> <span class="n">por</span> <span class="n">el</span> <span class="n">hecho</span> <span class="n">de</span> <span class="n">no</span> <span class="n">ser</span> <span class="n">mutables</span><span class="p">,</span> <span class="n">es</span> <span class="n">más</span> <span class="n">rápido</span> <span class="n">manejar</span> <span class="n">tuplas</span> <span class="n">que</span> <span class="n">listas</span><span class="o">.</span> <span class="n">Debido</span> <span class="n">a</span> <span class="n">esto</span><span class="p">,</span> <span class="n">hay</span> <span class="n">que</span> <span class="n">tener</span> <span class="n">en</span> <span class="n">cuenta</span> <span class="n">lo</span> <span class="n">anterior</span> <span class="n">para</span> <span class="n">elegir</span> <span class="n">en</span> <span class="n">nuestros</span> <span class="n">algoritmos</span> <span class="n">el</span> <span class="n">tipo</span> <span class="n">que</span> <span class="n">mejor</span> <span class="n">se</span> <span class="n">adapte</span><span class="o">.</span> <span class="n">En</span> <span class="n">el</span> <span class="n">caso</span> <span class="n">de</span> <span class="n">que</span> <span class="n">no</span> <span class="n">sea</span> <span class="n">necesario</span> <span class="n">modificar</span> <span class="n">el</span> <span class="n">contenido</span> <span class="n">de</span> <span class="n">los</span> <span class="n">datos</span> <span class="n">la</span> <span class="n">mejor</span> <span class="n">opción</span> <span class="n">es</span> <span class="n">la</span> <span class="n">tupla</span><span class="p">,</span> <span class="n">ya</span> <span class="n">que</span> <span class="n">es</span> <span class="n">ocupa</span> <span class="n">menos</span> <span class="n">memoria</span> <span class="n">y</span> <span class="n">es</span> <span class="n">más</span> <span class="n">rápida</span><span class="o">.</span> <span class="n">En</span> <span class="n">el</span> <span class="n">resto</span> <span class="n">de</span> <span class="n">los</span> <span class="n">casos</span> <span class="n">la</span> <span class="n">mejor</span> <span class="n">opción</span> <span class="n">será</span> <span class="n">utilizar</span> <span class="n">listas</span><span class="o">.</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1">### Qué es una tupla</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">La</span> <span class="n">clase</span> <span class="nb">tuple</span> <span class="n">en</span> <span class="n">Python</span> <span class="n">es</span> <span class="n">un</span> <span class="n">tipo</span> <span class="o">**</span><span class="n">contenedor</span><span class="o">**</span><span class="p">,</span> <span class="n">compuesto</span><span class="p">,</span> <span class="n">que</span> <span class="o">**</span><span class="n">en</span> <span class="n">un</span> <span class="n">principio</span> <span class="n">se</span> <span class="n">pensó</span> <span class="n">para</span> <span class="n">almacenar</span> <span class="n">grupos</span> <span class="n">de</span> <span class="n">elementos</span> <span class="n">heterogéneos</span><span class="o">**</span><span class="p">,</span> <span class="n">aunque</span> <span class="n">también</span> <span class="n">puede</span> <span class="n">contener</span> <span class="n">elementos</span> <span class="n">homogéneos</span><span class="o">.</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">Junto</span> <span class="n">a</span> <span class="n">las</span> <span class="n">clases</span> <span class="o">*</span><span class="nb">list</span><span class="o">*</span> <span class="n">y</span>  <span class="o">*</span><span class="nb">range</span><span class="o">*</span> <span class="p">,</span> <span class="o">**</span><span class="n">es</span> <span class="n">uno</span> <span class="n">de</span> <span class="n">los</span> <span class="n">tipos</span> <span class="n">de</span> <span class="n">secuencia</span> <span class="n">en</span> <span class="n">Python</span><span class="o">**</span><span class="p">,</span> <span class="n">con</span> <span class="n">la</span> <span class="n">particularidad</span> <span class="n">de</span> <span class="n">que</span> <span class="n">son</span>  <span class="o">*</span><span class="n">inmutables</span><span class="o">*</span> <span class="o">.</span> <span class="n">Esto</span> <span class="n">último</span> <span class="n">quiere</span> <span class="n">decir</span> <span class="n">que</span> <span class="n">su</span> <span class="n">contenido</span> <span class="o">**</span><span class="n">NO</span><span class="o">**</span> <span class="n">se</span> <span class="n">puede</span> <span class="n">modificar</span> <span class="n">después</span> <span class="n">de</span> <span class="n">haber</span> <span class="n">sido</span> <span class="n">creada</span><span class="o">.</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">En</span> <span class="n">general</span><span class="p">,</span> <span class="n">para</span> <span class="n">crear</span> <span class="n">una</span> <span class="n">tupla</span> <span class="n">en</span> <span class="n">Python</span> <span class="n">simplemente</span> <span class="n">hay</span> <span class="n">que</span> <span class="n">definir</span> <span class="n">una</span> <span class="n">secuencia</span> <span class="n">de</span> <span class="n">elementos</span> <span class="n">separados</span> <span class="n">por</span> <span class="n">comas</span><span class="o">.</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">Por</span> <span class="n">ejemplo</span><span class="p">,</span> <span class="n">para</span> <span class="n">crear</span> <span class="n">una</span> <span class="n">tupla</span> <span class="n">con</span> <span class="n">los</span> <span class="n">números</span> <span class="k">del</span> <span class="mi">1</span> <span class="n">al</span> <span class="mi">5</span> <span class="n">se</span> <span class="n">haría</span> <span class="k">del</span> <span class="n">siguiente</span> <span class="n">modo</span><span class="p">:</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="err">```</span><span class="n">Python</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">numeros</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span>
 </code></pre></div>
 <p>La clase <code>tuple</code> también puede almacenar elementos de distinto tipo:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">elementos</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mf">7.2</span><span class="p">,</span> <span class="s1">&#39;hola&#39;</span>

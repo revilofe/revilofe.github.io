@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="cambio en la resolucion de diccionarios">
-      <change afterPath="$PROJECT_DIR$/slides/PR-U3.4.-Conjuntos.md" afterDir="false" />
+    <list default="true" id="8edf1a28-fea6-47b5-81e9-2d869cb0dbc1" name="Default Changelist" comment="examen u1,u2,u3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +82,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/edu/IdeaProjects/revilofe.github.io/slides&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/usuario/Documentos/workspace/revilofe.github.io/docs/section1/u03/practica/otrosRecursos/soluciones/PROG-U3.4.-Conjuntos/src&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -98,11 +97,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/section1/u03/practica/otrosRecursos/soluciones/PROG-U3.4.-Conjuntos/src" />
+      <recent name="$PROJECT_DIR$/docs/section1/u03/practica/otrosRecursos/soluciones/PROG-U3.4.-Conjuntos" />
       <recent name="$PROJECT_DIR$/slides" />
       <recent name="$PROJECT_DIR$/docs/section3/u03/teoria" />
       <recent name="$PROJECT_DIR$/docs/section3/u04/teoria" />
-      <recent name="$PROJECT_DIR$/docs/section3" />
-      <recent name="$PROJECT_DIR$/docs/section3/u03/practica" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/docs/section1" />
@@ -116,13 +115,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="revilofe.github.io" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="revilofe.github.io" />
       <method v="2">
@@ -136,6 +128,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="revilofe.github.io" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="isla" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="revilofe.github.io" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/docs/section1/u03/practica/otrosRecursos/examenes/2324/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/docs/section1/u03/practica/otrosRecursos/examenes/2324/src/isla.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.isla" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -220,6 +246,13 @@
       <workItem from="1699094785776" duration="3436000" />
       <workItem from="1699098678574" duration="10526000" />
       <workItem from="1699109555124" duration="420000" />
+      <workItem from="1699285771263" duration="1387000" />
+      <workItem from="1699547607874" duration="268000" />
+      <workItem from="1699547903125" duration="10146000" />
+      <workItem from="1699639940295" duration="45000" />
+      <workItem from="1699640001298" duration="3526000" />
+      <workItem from="1699888720116" duration="6949000" />
+      <workItem from="1699907497175" duration="1417000" />
     </task>
     <task id="LOCAL-00044" summary="EDES. 1.4 Condicionales, practica 3 e indice">
       <created>1664312167963</created>
@@ -564,7 +597,7 @@
       <option name="project" value="LOCAL" />
       <updated>1698694570103</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,13 +643,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="EDES. Unidad 3, 3.1 Git Práctica" />
-    <MESSAGE value="EDES. Unidad 3, 3.2 TDD y test de unidad" />
-    <MESSAGE value="Arreglar cabeceras 3.3 y 3.4" />
-    <MESSAGE value="scope functions" />
-    <MESSAGE value="unidad 7" />
     <MESSAGE value="EDES u3" />
     <MESSAGE value="EDES u4" />
     <MESSAGE value="EDES Prueba" />
@@ -637,10 +664,18 @@
     <MESSAGE value="Cambio en el css" />
     <MESSAGE value="cambio en la presentación diccionarios" />
     <MESSAGE value="cambio en la resolucion de diccionarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambio en la resolucion de diccionarios" />
+    <MESSAGE value="Ejercicios de conjuntos y soluciones." />
+    <MESSAGE value="Refactoring examen u1, u2, u3" />
+    <MESSAGE value="Mejora examen u1, u2, u3. Genera mapas con solución." />
+    <MESSAGE value="slides funciones" />
+    <MESSAGE value="examen u1,u2,u3" />
+    <option name="LAST_COMMIT_MESSAGE" value="examen u1,u2,u3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/revilofe_github_io$isla.coverage" NAME="isla Coverage Results" MODIFIED="1699641505755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/section1/u03/practica/otrosRecursos/examenes/2324/src" />
   </component>
 </project>

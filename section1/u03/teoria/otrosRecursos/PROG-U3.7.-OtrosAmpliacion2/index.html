@@ -3386,9 +3386,12 @@
 
 <h2 id="variables-globales">Variables globales<a class="headerlink" href="#variables-globales" title="Permanent link">&para;</a></h2>
 <p>Las variables declaradas fuera de las funciones son de ámbito global.</p>
-<p>No es una buena práctica abusar de este uso, más bien solo para variables definidas cómo constantes. 
-El resto de variables podemos seguir utilizándolas de manera local, dentro de las funciones y utilizando los pasos de parámetros a las distintas funciones y el retorno de valores cuando sea necesario para actualizarlas.</p>
-<p>Las colecciones pasan su id o referencia, esto quier decir, que si modificamos algo en ellas dentro de una función, se modificará también en la colección original... a diferencia de los tipos de variables primitivos (int, float, str, bool... que son inmutables y debemos reasignar su valor)</p>
+<p>No es una buena práctica abusar de este uso, más bien solo para variables definidas cómo constantes.
+El resto de variables podemos seguir utilizándolas de manera local, dentro de las funciones y utilizando los pasos de
+parámetros a las distintas funciones y el retorno de valores cuando sea necesario para actualizarlas.</p>
+<p>Las colecciones pasan su id o referencia, esto quiere decir, que si modificamos algo en ellas dentro de una función, se
+modificará también en la colección original... a diferencia de los tipos de variables primitivos (<code>int</code>, <code>float</code>, <code>str</code>,
+<code>bool</code>... que son inmutables y debemos reasignar su valor)</p>
 <h2 id="metodo-join">Método join<a class="headerlink" href="#metodo-join" title="Permanent link">&para;</a></h2>
 <p>La sintaxis del método <code>join()</code> es:</p>
 <p><code>&lt;sep&gt;.join(&lt;iterable&gt;)</code></p>
@@ -3410,153 +3413,168 @@ El resto de variables podemos seguir utilizándolas de manera local, dentro de l
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Programación - Entornos de Desarrollo - Sistemas Informáticos - FOL - Lenguajes de Marcas - Bases de Datos
 </code></pre></div>
 <h2 id="bucle-for-para-generar-iterables">Bucle for para generar iterables<a class="headerlink" href="#bucle-for-para-generar-iterables" title="Permanent link">&para;</a></h2>
-<p><code>Instrucción for _ in range()</code></p>
-<p><code>Instrucción for i in range()</code></p>
-<p>La variable definida en <code>for</code> con nombre <code>_</code> indica que no vamos a usar dicha variable, sino que solo necesitamos ejecutar una instrucción un número determinado de veces.</p>
-<p>Un ejemplo sencillo sería crear una lista de 10 elementos con todos los valores asignados a la cadena de caracteres vacía:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Instrucción for _ in range()
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Instrucción for i in range()
+</code></pre></div>
+<p>La variable definida en <code>for</code> con nombre <code>_</code> indica que no vamos a usar dicha variable, sino que solo
+necesitamos ejecutar una instrucción un número determinado de veces.</p>
+<p>Un ejemplo sencillo sería crear una lista de 10 elementos con todos los valores asignados a la cadena de caracteres
+vacía:</p>
 <p><code>lista_valores = list('' for _ in range(10))</code></p>
-<p>Para crear listas o tuplas con elementos iterables necesitamos ejecutar el constructor <code>list()</code> o <code>tuple()</code>.</p>
-<p>Un ejemplo un poco más complejo, ejecutando una función para crear un iterable y construir una tupla, sería el siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>def pedir_asignatura(indice: int) -&gt; str:
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    asignatura = None
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    while asignatura == None:
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        try:
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>            asignatura = input(f&quot;{indice}. &quot;).strip()
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>            if len(asignatura) &lt;= 0:
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>                asignatura = None
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>                raise ValueError(&quot;No es posible introducir una asignatura vacía.&quot;)
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        except ValueError as e:
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>            print(f&quot;**Error** {e}&quot;)
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    return asignatura
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>def crear_asignaturas(num_asignaturas = 6) -&gt; tuple:
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    print(&quot;Introduzca las asignaturas de 1º de DAM: &quot;)
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    asignaturas = tuple(pedir_asignatura(i + 1) for i in range(num_asignaturas))
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    return asignaturas
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>def main():
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    asignaturas_1DAM = crear_asignaturas()
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    print(asignaturas_1DAM)
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>if __name__ == &quot;__main__&quot;:
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>    main()
+<p>Para crear listas o tuplas con elementos iterables necesitamos ejecutar el constructor <code>list()</code> o <code>[]</code> para listas o <code>tuple()</code> o <code>()</code> para tuplas.</p>
+<p>Un ejemplo un poco más complejo, ejecutando una función para crear un iterable y construir una tupla, sería el
+siguiente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>def pedir_asignatura(indice: int) -&gt; str:
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    asignatura = None
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    while asignatura == None:
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        try:
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>            asignatura = input(f&quot;{indice}. &quot;).strip()
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>            if len(asignatura) &lt;= 0:
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>                asignatura = None
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>                raise ValueError(&quot;No es posible introducir una asignatura vacía.&quot;)
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        except ValueError as e:
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>            print(f&quot;**Error** {e}&quot;)
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    return asignatura
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>def crear_asignaturas(num_asignaturas = 6) -&gt; tuple:
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    print(&quot;Introduzca las asignaturas de 1º de DAM: &quot;)
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    asignaturas = tuple(pedir_asignatura(i + 1) for i in range(num_asignaturas))
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    return asignaturas
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>def main():
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>    asignaturas_1DAM = crear_asignaturas()
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    print(asignaturas_1DAM)
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>if __name__ == &quot;__main__&quot;:
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>    main()
 </code></pre></div>
 <p>Otro ejemplo sería la creación de una matriz. Las matrices son estructuras de más de una dimensión.</p>
-<p>Si necesitamos almacenar un tablero de ajedrez y en sus posiciones inicialmente quiero almacenar el valor 0, podemos crear una tupla con listas anidadas en su interior.</p>
-<p>El cerebro humano percibe seta matriz cómo una estructura de filas y columnas:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Tablero: 8x8
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Columnas 0  1  2  3  4  5  6  7
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Filas
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>0       [0, 0, 0, 0, 0, 0, 0, 0]
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>1       [0, 0, 0, 0, 0, 0, 0, 0]
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2       [0, 0, 0, 0, 0, 0, 0, 0]
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>3       [0, 0, 0, 0, 0, 0, 0, 0]
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>4       [0, 0, 0, 0, 0, 0, 0, 0]
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>5       [0, 0, 0, 0, 0, 0, 0, 0]
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>6       [0, 0, 0, 0, 0, 0, 0, 0]
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>7       [0, 0, 0, 0, 0, 0, 0, 0]
+<p>Si necesitamos almacenar un tablero de ajedrez y en sus posiciones inicialmente quiero almacenar el valor 0, podemos
+crear una tupla con listas anidadas en su interior.</p>
+<p>El cerebro humano percibe esta matriz cómo una estructura de filas y columnas:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Tablero: 8x8
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Columnas 0  1  2  3  4  5  6  7
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Filas
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>0       [0, 0, 0, 0, 0, 0, 0, 0]
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>1       [0, 0, 0, 0, 0, 0, 0, 0]
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2       [0, 0, 0, 0, 0, 0, 0, 0]
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>3       [0, 0, 0, 0, 0, 0, 0, 0]
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>4       [0, 0, 0, 0, 0, 0, 0, 0]
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>5       [0, 0, 0, 0, 0, 0, 0, 0]
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>6       [0, 0, 0, 0, 0, 0, 0, 0]
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>7       [0, 0, 0, 0, 0, 0, 0, 0]
 </code></pre></div>
 <p>Podemos crearla manualmente introduciendo una a una todas las listas de la tupla:</p>
 <p><code>tablero = ([0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], ...)</code></p>
 <p>O utilizar un for para generar un iterable:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>#Constante que define el valor de las celdas de la matriz inicialmente
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>     VALORINI = 0
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>def crear_fila() -&gt; list:
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    return list(VALORINI for _ in range (8))
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>def crear_tablero() -&gt; list:
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    return list(crear_fila() for _ in range (8))
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>def mostrar_matriz(tablero: list):
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    res = &quot;&quot;
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    for fila in tablero:
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        for celda in fila:
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>            res += str(celda) + &quot; &quot;
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    res += &quot;\n&quot;
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>print(res)
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>def main():
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>    tablero = crear_tablero()
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    mostrar_matriz(tablero)
-<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
-<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>
-<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>if __name__ == &quot;__main__&quot;:
-<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>    main()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>#Constante que define el valor de las celdas de la matriz inicialmente
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>VALORINI = 0
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>def crear_fila() -&gt; list:
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    return list(VALORINI for _ in range (8))
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>def crear_tablero() -&gt; list:
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    return list(crear_fila() for _ in range (8))
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>def mostrar_matriz(tablero: list) :
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>    res = &quot;&quot;
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>    for fila in tablero:
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>        for celda in fila:
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>            res += str(celda) + &quot; &quot;
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>        res += &quot;\n&quot;
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    print(res)
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>def main():
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>    tablero = crear_tablero()
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>    mostrar_matriz(tablero)
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>if __name__ == &quot;__main__&quot;:
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>    main()
 </code></pre></div>
 <p>El resultado del programa será el siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>0 0 0 0 0 0 0 0
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>0 0 0 0 0 0 0 0
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>0 0 0 0 0 0 0 0
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>0 0 0 0 0 0 0 0  
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>0 0 0 0 0 0 0 0
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>0 0 0 0 0 0 0 0
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>0 0 0 0 0 0 0 0
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>0 0 0 0 0 0 0 0  
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>0 0 0 0 0 0 0 0
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>0 0 0 0 0 0 0 0
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>0 0 0 0 0 0 0 0
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>0 0 0 0 0 0 0 0 
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>0 0 0 0 0 0 0 0
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>0 0 0 0 0 0 0 0
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>0 0 0 0 0 0 0 0
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>0 0 0 0 0 0 0 0 
 </code></pre></div>
 <h2 id="uso-de-operadores-logicos-para-retornar-valores-de-distintas-funciones">Uso de operadores lógicos para retornar valores de distintas funciones<a class="headerlink" href="#uso-de-operadores-logicos-para-retornar-valores-de-distintas-funciones" title="Permanent link">&para;</a></h2>
-<p>Cómo ya sabemos, si evaluamos en Python el contenido de una variable de tipo str de manera lógica, si se trata de una cadena vacía lo tomará como False y si tiene algún contenido será True.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>def mostrar_contenido(cadena: str):
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    if cadena: #es lo mismo que si escribimos if cadena == True
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>        print(cadena)
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    else:
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>       print(&quot;La variable a es una cadena vacía&quot;)
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>def main():
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    mostrar_contenido(&#39;&#39;)
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    mostrar_contenido(&#39;hola&#39;)
+<p>Cómo ya sabemos, si evaluamos en Python el contenido de una variable de tipo <code>str</code> de manera lógica, si se trata de una
+cadena vacía lo tomará como <code>False</code> y si tiene algún contenido será <code>True</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>def mostrar_contenido(cadena: str):
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    if cadena: #es lo mismo que si escribimos if cadena == &quot;&quot;
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>        print(cadena)
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    else:
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        print(&quot;La variable a es una cadena vacía&quot;)
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>def main():
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    mostrar_contenido(&#39;&#39;)
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    mostrar_contenido(&#39;hola&#39;)
 </code></pre></div>
 <p>El resultado sería el siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>La variable a es una cadena vacía
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>hola
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>La variable a es una cadena vacía
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>hola
 </code></pre></div>
-<p>Lo mismo ocurre con el tipo de dato int o float... si es 0 Python lo considera False y cualquier número distinto a 0 es considerado True.</p>
-<p>De esta manera, os podéis encontrar programas que utilicen operadores lógicos para retornar valores de más de una función.</p>
+<p>Lo mismo ocurre con el tipo de dato <code>int</code> o <code>float</code>... si es <code>0</code> Python lo considera <code>False</code> y cualquier número distinto a <code>0</code> es
+considerado <code>True</code>.</p>
+<p>De esta manera, os podéis encontrar programas que utilicen operadores lógicos para retornar valores de más de una
+función.</p>
 <p>Un ejemplo simple sería el siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>def bebida_alcoholica(edad: int) -&gt; str:
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    if edad &gt;= 18:
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>        return &quot;Cubata&quot;
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    return &quot;&quot;
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>def bebida_sin_alcohol(edad: int) -&gt; str:
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    if edad &gt;= 12:
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>        return &quot;Zumo&quot;
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    return &quot;Agua&quot;
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>def dar_bebida(cliente: tuple) -&gt; str:
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    return bebida_alcoholica(cliente[1]) or bebida_sin_alcohol(cliente[1])
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>def main():
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>    clientes = [(&quot;Antonio&quot;, 17), (&quot;Ana&quot;, 21), (&quot;Marta&quot;, 8)]
-<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>    for cliente in clientes:
-<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>        print(cliente[0] + &quot; toma &quot; + dar_bebida(cliente))
-<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>
-<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>
-<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>if __name__ == &quot;__main__&quot;:
-<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>    main()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>EDAD = 1
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>def bebida_alcoholica(edad: int) -&gt; str:
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    if edad &gt;= 18:
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>        return &quot;Cubata&quot;
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    return &quot;&quot;
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>def bebida_sin_alcohol(edad: int) -&gt; str:
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    if edad &gt;= 12:
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>        return &quot;Zumo&quot;
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    return &quot;Agua&quot;
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>def dar_bebida(cliente: tuple) -&gt; str:
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>    return bebida_alcoholica(cliente[EDAD]) or bebida_sin_alcohol(cliente[EDAD]) ## &quot;&quot; evaluado como False, entonces se ejecuta la función de la derecha
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>def main():
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>    clientes = [(&quot;Antonio&quot;, 17), (&quot;Ana&quot;, 21), (&quot;Marta&quot;, 8)]
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>    for cliente in clientes:
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>        print(cliente[0] + &quot; toma &quot; + dar_bebida(cliente))
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>if __name__ == &quot;__main__&quot;:
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>    main()
 </code></pre></div>
-<p>La función <code>dar_bebida()</code> contiene únicamente la instrucción <code>return</code> que evalúa dos expresiones con un operador lógico <code>or</code>. Las expresiones son funciones que a su vez retornan un valor <code>str</code>.
-Si ejecutamos el programa, la función <code>dar_bebida()</code> con la primera tupla <code>("Antonio", 17)</code> realiza lo siguiente:
-   1. Se ejecuta la función que está a la izquierda del operador <code>or</code>.
-   2. El resultado de la función <code>bebida_alcoholica()</code> es una cadena de caracteres vacía.
-   3. Entonces, el intérprete de Python toma esa cadena como <code>False</code>, y pasa a ejecutar la expresión de la derecha del operador <code>or</code>.
-   4. La función <code>bebida_sin_alcohol()</code> para la edad 17 retorna una cadena de caracteres no vacía.
-   5. En este caso, Python entiende que el retorno de la función <code>dar_bebida()</code> debe ser la cadena de caracteres que se evalúa como <code>True</code>.</p>
+<p>La función <code>dar_bebida()</code> contiene únicamente la instrucción <code>return</code> que evalúa dos expresiones con un operador
+lógico <code>or</code>. Las expresiones son funciones que a su vez retornan un valor <code>str</code>.
+Si ejecutamos el programa, la función <code>dar_bebida()</code> con la primera tupla <code>("Antonio", 17)</code> realiza lo
+siguiente:</p>
+<ol>
+<li>Se ejecuta la función que está a la izquierda del operador <code>or</code>.</li>
+<li>Si el resultado de la función <code>bebida_alcoholica()</code> es una cadena de caracteres vacía.</li>
+<li>Entonces, el intérprete de Python toma esa cadena como <code>False</code>, y pasa a ejecutar la expresión de la derecha del
+   operador <code>or</code>.</li>
+<li>La función <code>bebida_sin_alcohol()</code> para la edad <code>17</code> retorna un <code>str</code> no vacía.</li>
+<li>En este caso, Python entiende que el retorno de la función <code>dar_bebida()</code> debe ser la cadena de caracteres que se
+   evalúa como <code>True</code>.</li>
+</ol>
 <p>El resultado del programa será el siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Antonio toma Zumo
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Ana toma Cubata
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Marta toma Agua
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Antonio toma Zumo
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Ana toma Cubata
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Marta toma Agua
 </code></pre></div>
 
 

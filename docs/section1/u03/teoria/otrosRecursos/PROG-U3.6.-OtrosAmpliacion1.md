@@ -225,7 +225,7 @@ def lista(n = 2):
     lst = list()
     for k in range(n):
         lst.append(randint(0,99))
-return lst
+    return lst
 
 def main():
     LA = [lista(), lista()]
@@ -233,14 +233,14 @@ def main():
     B = copy(LA)
     C = deepcopy(LA)
     
-    print "LA id =", id(LA), "->", LA
-    print "A id =", id(A), "->", A
-    print "B id =", id(B), "->", B
-    print "C id =", id(C), "->", C
-    print "LA[0] id =", id(LA[0]), "->", LA[0]
-    print "A[0] id =", id(A[0]), "->", A[0]
-    print "B[0] id =", id(B[0]), "->", B[0]
-    print "C[0] id =", id(C[0]), "->", C[0]
+    print("LA id =", id(LA), "->", LA)
+    print("A id =", id(A), "->", A)
+    print("B id =", id(B), "->", B)
+    print("C id =", id(C), "->", C)
+    print("LA[0] id =", id(LA[0]), "->", LA[0])
+    print("A[0] id =", id(A[0]), "->", A[0])
+    print("B[0] id =", id(B[0]), "->", B[0])
+    print("C[0] id =", id(C[0]), "->", C[0])
 
 if __name__ == "__main__":
     main()

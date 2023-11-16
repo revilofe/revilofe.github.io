@@ -1,5 +1,5 @@
-
 import os
+
 
 #Símbolos que se mostrarán en el tablero
 FICHAS = (' ', 'X', 'O')
@@ -25,7 +25,7 @@ def mostrar_fila(fila: list):
     """
     contenido_fila = "| "
     for celda in fila:
-        contenido_fila += str(FICHAS[celda]) + " | "
+        contenido_fila += FICHAS[celda] + " | "
     print(contenido_fila)
 
 
@@ -93,6 +93,8 @@ def pedir_posicion(fila_col, msj = "") -> int:
     while pos == None:
         try:
             pos = int(input(f'Elige la {fila_col} (1, 2, 3): ')) - 1
+            if not 0 <= pos <= 2:
+                raise ValueError
         except ValueError:
             pos = None
             print(f"**Error** {fila_col} no válida")

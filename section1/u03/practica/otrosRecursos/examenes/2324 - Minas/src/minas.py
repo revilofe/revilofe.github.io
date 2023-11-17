@@ -23,7 +23,7 @@ NUMERO_MINAS = 10
 VACIO = " "
 MINA = "*"
 BANDERA = "F"
-
+VALOR_CELDA_DEFECTO = "."
 
 def generar_tablero() -> list:
     """
@@ -191,7 +191,7 @@ def marcar_celda(tablero, celdas_marcadas, fila, columna):
     """
     Esta función marca la celda seleccionada con una bandera.
     :param tablero: tablero de juego
-    :param celdas_reveladas: conjunto de celdas que ya han sido mostradas al jugador
+    :param celdas_marcadas: conjunto de celdas que han sido marcadas con una bandera
     :param fila: fila de la celda seleccionada
     :param columna: columna de la celda seleccionada
 

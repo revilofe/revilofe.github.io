@@ -138,7 +138,7 @@ def pedir_accion():
     return accion, fila, columna
 
 
-def revelar_celda(tablero, celdas_reveladas: , celdas_marcadas, fila, columna) -> bool:
+def revelar_celda(tablero, celdas_reveladas, celdas_marcadas, fila, columna) -> bool:
     """
     Esta función revela la celda seleccionada.
     Si la celda contiene una mina, devuelve False.

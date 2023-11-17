@@ -16,12 +16,11 @@
 - **Matriz Bidimensional**: Representación del tablero.
 - **Listas**: Para almacenar las coordenadas de las minas, números y celdas vacías.
 - **Conjuntos**: Para llevar un registro de las celdas ya reveladas o marcadas.
-- **Diccionarios**: Para mapear cada celda a su estado (mina, número o vacía).
 
 #### Tareas para los Estudiantes:
 
 1. **Inicialización del Tablero**: Crear una función para inicializar el tablero colocando aleatoriamente las minas y calculando los números para las celdas adyacentes a las minas.
-2. **Revelar Celda**: Implementar una función que revele el contenido de una celda seleccionada por el usuario. Si la celda es una mina, el juego termina. Si es un número, se muestra. Si es vacía, se revelan las celdas adyacentes.
+2. **Revelar Celda**: Implementar una función que revele el contenido de una celda seleccionada por el usuario. Si la celda es una mina, el juego termina. Si es un número, se muestra. Si es vacía, se revelan las celdas adyacentes. Permite revelar celdas marcadas.
 3. **Marcar Celdas**: Permitir a los usuarios marcar celdas que creen que contienen minas.
 4. **Verificación de Victoria**: Verificar si el jugador ha despejado todas las celdas sin minas.
 5. **Interfaz de Usuario**: Crear una interfaz simple en la consola para que el jugador pueda interactuar con el juego (por ejemplo, elegir una celda para revelar o marcar).

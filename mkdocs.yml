@@ -52,7 +52,7 @@ nav:
         - '* Práctica 3.3: Conjuntos': 'section1/u03/practica/PROG-U3.-Practica003.md'
         - '3.5.-Funciones': 'section1/u03/teoria/PROG-U3.5.-Funciones.md'
         - '3.6.-Ampliación I': 'section1/u03/teoria/PROG-U3.6.-OtrosAmpliacion1.md'
-        - '3.7.-Ampliación II': 'section1/u03/teoria/PROG-U3.6.-OtrosAmpliacion2.md'
+        - '3.7.-Ampliación II': 'section1/u03/teoria/PROG-U3.7.-OtrosAmpliacion2.md'
     - 'U4: Kotlin: POO y estructuras de datos':
         - 'section1/u04/index.md'
         - '4.1.-Kotlin: Básico': 'section1/u04/teoria/PROG-U4.1.-kotlin.md'

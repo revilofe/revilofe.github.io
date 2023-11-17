@@ -10,8 +10,6 @@ Este ejercicio es una excelente manera de evaluar y mejorar las habilidades de p
 
 import random
 
-VALOR_CELDA_DEFECTO = "·"
-
 # Acciones del jugador
 MARCAR = "M"
 REVELAR = "R"
@@ -95,7 +93,6 @@ def imprimir_tablero(tablero):
                 celda = VALOR_CELDA_DEFECTO
             print(celda, end=" ")
         print()
-
 
 def imprimir_tablero_oculto(tablero, celdas_reveladas, celdas_maracadas):
     """
@@ -250,5 +247,11 @@ def jugar():
             marcar_celda(tablero, celdas_marcadas, fila, columna)
 
 
+
+
+
 if __name__ == "__main__":
+    """
+    Esta sección del código se ejecuta solo si ejecutamos este archivo directamente.
+    """
     jugar()

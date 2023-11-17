@@ -49,6 +49,14 @@ def calcular_numeros(tablero):
                 tablero[fila][columna] = str(numero_minas)
 
 def contar_minas_adyacentes(tablero, fila, columna):
+    """
+    Esta función cuenta el número de minas adyacentes a la celda seleccionada.
+    :param tablero: tablero de juego
+    :param fila: fila de la celda seleccionada
+    :param columna: columna de la celda seleccionada
+    :return: número de minas adyacentes a la celda seleccionada
+
+    """
     minas = 0
     for i in range(-1, 2):
         for j in range(-1, 2):
@@ -200,6 +208,10 @@ def verificar_victoria(tablero, celdas_reveladas)-> bool:
     return victoria
 
 def jugar():
+    """
+    Esta función ejecuta el juego.
+
+    """
     tablero = generar_tablero()
     celdas_reveladas = set()
     celdas_marcadas = set()
@@ -226,5 +238,11 @@ def jugar():
             marcar_celda(tablero, celdas_marcadas, fila, columna)
 
 
+
+
+
 if __name__ == "__main__":
+    """
+    Esta sección del código se ejecuta solo si ejecutamos este archivo directamente.
+    """
     jugar()

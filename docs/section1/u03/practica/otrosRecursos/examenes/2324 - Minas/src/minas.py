@@ -96,11 +96,10 @@ def imprimir_tablero(tablero):
 
 def imprimir_tablero_oculto(tablero, celdas_reveladas, celdas_maracadas):
     """
-    Esta función toma el tablero y el conjunto celdas_reveladas como argumentos.
-    Imprime cada celda del tablero: si la celda ha sido revelada o marcada con una bandera,
-    muestra su contenido actual (número, vacío o bandera); si no, muestra la celda como vacía.
+    Imprime cada celda del tablero: si la celda ha sido revelada o marcada con una bandera, muestra su contenido actual (número, vacio_revelado o bandera); si no, muestra la celda como vacía.
     :param tablero: tablero de juego
     :param celdas_reveladas: conjunto de celdas que ya han sido mostradas al jugador
+    :param celdas_maracadas: conjunto de celdas que han sido marcadas con una bandera
     """
     print("  " + " ".join(str(i + 1) for i in range(COLUMNAS)))
     for i, fila in enumerate(tablero):
@@ -139,7 +138,7 @@ def pedir_accion():
     return accion, fila, columna
 
 
-def revelar_celda(tablero, celdas_reveladas, celdas_marcadas, fila, columna):
+def revelar_celda(tablero, celdas_reveladas: , celdas_marcadas, fila, columna) -> bool:
     """
     Esta función revela la celda seleccionada.
     Si la celda contiene una mina, devuelve False.

@@ -49,7 +49,7 @@ def eliminar_contacto(contactos: list, email: str):
             print("Se eliminó 1 contacto")
         else:
             print("No se encontró el contacto para eliminar")
-    except ValueError as e:
+    except Exception as e:
         print(f"**Error** {e}")
         print("No se eliminó ningún contacto")
 

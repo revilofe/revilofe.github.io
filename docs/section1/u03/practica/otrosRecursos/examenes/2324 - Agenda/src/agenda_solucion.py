@@ -1,15 +1,14 @@
-"""
-Propuesta de examen
-"""
-
+import copy
 import os
 import pathlib
 from os import path
 
 
+#Constantes globales
 RUTA = pathlib.Path(__file__).parent.absolute() 
 NOMBRE_FICHERO = 'contactos.csv'
 RUTA_FICHERO = path.join(RUTA, NOMBRE_FICHERO)
+OPCIONES_MENU = {1, 2, 3, 4, 5, 6}
 
 
 def borrar_consola():
@@ -43,51 +42,60 @@ def cargar_contactos(contactos: list):
 
 
 def pedir_info(dato, msj) -> str:
-    res = input(msj).strip()
+    res = input(msj).strip().title()
     if res == "":
         raise ValueError(f"el {dato} no puede ser una cadena vacía")
     return res
 
 
-def pedir_email() -> str:
-    res = input("Introduzca su email: ").strip()
-    if res == "":
+def pedir_email(contactos: list, comprobar_si_existe = True) -> str:
+    email = input("Introduzca su email: ").strip()
+    if email == "":
         raise ValueError("el email no puede ser una cadena vacía")
-    if res.count("@") == 0:
+    if email.count("@") == 0:
         raise ValueError("el email no es un correo válido")
-    return res
+    if comprobar_si_existe and buscar_contacto(contactos, email) != None:
+        raise ValueError("el email ya existe en la agenda")
+    return email
 
+
+def comprobar_telefono(telefono: str) -> bool:
+    if telefono[:3] == '+34':
+        telefono = telefono[3:]  
+    return (telefono.isdecimal() and len(telefono) == 9)
+    
 
 def pedir_telefonos() -> list:
     telefonos = []
-    print("Introduzca los teléfonos:")
+    print("Introduzca los teléfonos (<ENTER> sin información para finalizar):")
 
     indice = 1
-    while indice == 1 or res != "":
-        res = input(f"{indice}. ").strip()
+    while indice == 1 or telefono != "":
+        telefono = input(f"Teléfono {indice} => ").replace(" ", "")
         
-        if res != "" and (not res.isnumeric() or len(res) != 9):
+        if telefono != "" and not comprobar_telefono(telefono):
             raise ValueError(f"**Error** el teléfono no es válido, debe tener 9 posiciones numéricas")
         
-        if res != "":
-            telefonos.append(res)
+        if telefono != "":
+            telefonos.append(telefono)
+
         indice += 1
 
     return telefonos
 
 
-def crear_contacto() -> dict:
+def crear_contacto(contactos: list) -> dict:
     contacto = dict()
     contacto['nombre'] = pedir_info("nombre", "Introduzca su nombre: ")
     contacto['apellido'] = pedir_info("apellido", "Introduzca su apellido: ")
-    contacto['email'] = pedir_email()
+    contacto['email'] = pedir_email(contactos)
     contacto['telefonos'] = pedir_telefonos()
     return contacto
 
 
 def agregar_contacto(contactos: list):
     try:
-        contactos.append(crear_contacto())
+        contactos.append(crear_contacto(contactos))
         print("Se insertó 1 contacto nuevo")
     except ValueError as e:
         print(f"**Error** {e}")
@@ -98,7 +106,7 @@ def buscar_contacto(contactos: list, email: str) -> int:
     for i in range(len(contactos)):
         if str(contactos[i]['email']).lower() == email.lower():
             return i
-        
+
     return None
 
 
@@ -119,17 +127,89 @@ def mostrar_telefonos_contacto(telefonos: list):
     if len(telefonos) == 0:
         print(f"Teléfonos: ninguno")
     else:
-        print(f"Teléfonos: " + " / ".join(telefonos))
+        print(f"Teléfonos: " + " / ".join(telefonos).replace("+34", "+34-"))
+
+
+def ordenar_contactos(contactos: list):
+    for i in range(len(contactos) - 1):
+        for j in range(i + 1, len(contactos)):
+            if contactos[i]['nombre'].lower() > contactos[j]['nombre'].lower():
+                contacto_temp = contactos[i]
+                contactos[i] = contactos[j]
+                contactos[j] = contacto_temp
 
 
 def mostrar_contactos(contactos: list):
     print(f"AGENDA ({len(contactos)})")
     print("------")
 
-    for contacto in contactos:
+    #Para no modificar la agenda original, podemos hacer una copia profunda...
+    #contactos_list = copy.deepcopy(contactos)
+    #O la volvemos a crear partiendo de los elementos de la anterior...
+    contactos_list = list(contactos)
+    ordenar_contactos(contactos_list)
+
+    for contacto in contactos_list:
         print(f"Nombre: {contacto['nombre']} {contacto['apellido']} ({contacto['email']})")
         mostrar_telefonos_contacto(contacto['telefonos'])
         print("......")
+
+
+def modificar_contacto(contactos: list):
+    print("")
+    
+
+def pedir_opcion() -> int:
+    try:
+        opcion = int(input(">> Seleccione una opción (1-6): "))
+        if opcion not in OPCIONES_MENU:
+            raise ValueError
+    except ValueError:
+        opcion = -1
+        print("*Error* opción no válida")
+        pulse_tecla_para_continuar()
+    
+    return opcion
+
+
+def mostrar_menu():
+    borrar_consola()
+
+    print("AGENDA")
+    print("------")
+    print("1. Nuevo contacto")
+    print("2. Modificar contacto")
+    print("3. Eliminar contacto")
+    print("4. Vaciar agenda")
+    print("5. Cargar agenda inicial")
+    print("6. Salir\n")
+
+
+def agenda(contactos: list):
+    opcion = 0
+    while opcion != 6:
+        mostrar_menu()
+        opcion = pedir_opcion()
+
+        if opcion in OPCIONES_MENU ^ {6}:
+            if opcion == 1:
+                agregar_contacto(contactos)
+            elif opcion == 2:
+                modificar_contacto(contactos)
+            elif opcion == 3:
+                try:
+                    email = pedir_email(contactos, False)
+                except ValueError as e:
+                    print(f"*Error* {e}")
+                else:
+                    eliminar_contacto(contactos, email)
+            elif opcion == 4:
+                contactos.clear()
+            elif opcion == 5:
+                cargar_contactos(contactos)
+
+        if opcion != 6:
+            pulse_tecla_para_continuar()
 
 
 def pulse_tecla_para_continuar():
@@ -140,38 +220,20 @@ def pulse_tecla_para_continuar():
 def main():
     borrar_consola()
 
-    #asignar una estructura de datos vacía para trabajar con la agenda
     contactos = []
 
-    #modificar la función cargar_contactos para que almacene todos los contactos del fichero en una lista con un diccionario por contacto (claves: nombre, apellido, email y telefonos)
     cargar_contactos(contactos)
 
-    #crear función para añadir un contacto y llamarla
-    #el nombre y apellido no pueden ser una cadena vacía o solo espacios
-    #el email no puede ser una cadena vacía y debe contener el carácter @
-    #pedir teléfonos hasta que el usuario introduzca la cadena vacía
-    #un teléfono debe estar compuestos por 9 números
     agregar_contacto(contactos)
 
     pulse_tecla_para_continuar()
     borrar_consola()
 
-    #crear función buscar_contacto para que la función eliminar_contacto sea correcta y llamarla eliminando al contacto con el email rciruelo@gmail.com
     eliminar_contacto(contactos, "rciruelo@gmail.com")
 
     pulse_tecla_para_continuar()
     borrar_consola()
 
-    #crear función mostrar_contactos para que muestre la agenda resultante con el formato:
-    #
-    # AGENDA (6)
-    # ------
-    # Nombre: Laura Iglesias (liglesias@gmail.com)
-    # Teléfonos: 666777333 / 666888555 / 607889988
-    # ......
-    # Nombre: Antonio Amargo (aamargo@gmail.com)
-    # Teléfonos: niguno
-    # ......
     mostrar_contactos(contactos)
 
 

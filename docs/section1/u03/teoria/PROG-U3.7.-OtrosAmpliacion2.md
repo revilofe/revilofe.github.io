@@ -182,6 +182,22 @@ El resultado del programa será el siguiente:
 0 0 0 0 0 0 0 0	
 ```
 
+**También podemos utilizar condiciones en los propios bucles**. 
+
+En el ejemplo siguiente buscamos extraer de un conjunto los nombres que empiezan por la letra 'A':
+   
+   ```
+   nombres = ('Ana', 'Patri', 'David', 'Alba', 'Dario', 'Antonio', 'Ricardo', 'Vícky')
+   nombres_que_empiezan_por_A = {nombre for nombre in nombres if nombre[:1].upper() == 'A'}
+   print(nombres_que_empiezan_por_A)
+   ```
+
+El resultado del programa será el siguiente:
+
+   ```
+   {'Alba', 'Ana', 'Antonio'}
+   ```
+
 ## Uso de operadores lógicos para retornar valores de distintas funciones
 
 Cómo ya sabemos, si evaluamos en Python el contenido de una variable de tipo `str` de manera lógica, si se trata de una

@@ -1,5 +1,6 @@
-import os
 
+import os
+from msvcrt import getch
 
 #Símbolos que se mostrarán en el tablero
 FICHAS = (' ', 'X', 'O')
@@ -38,7 +39,7 @@ def mostrar_fila(fila: list):
     """
     contenido_fila = "| "
     for celda in fila:
-        contenido_fila += FICHAS[celda] + " | "
+        contenido_fila += str(FICHAS[celda]) + " | "
     print(contenido_fila)
 
 
@@ -131,14 +132,14 @@ def comprobar_casilla(tablero: tuple,
     #ronda <= 3 solo colocar ficha => comprobar si podemos colocar la ficha del jugador en la posición fila y columna siempre que sea una casilla vacía.
     #ronda > 3 mover ficha => 
     #   si solo ha seleccionado la posición de la ficha que va a mover => comprobar si en dicha posición existe una ficha del jugador
-    #   si seleccionó también la posición dónde mover => comprobar si la nueva posición es accesible desde su posición anterior.
+    #   si seleccionó también la posición dónde mover => comprobar si la nueva posición es accesible desde su posición anterior y que la posición destino esté vacía.
     if ronda <= 3:
         return tablero[pos_ficha['fila']][pos_ficha['columna']] == 0
     else:
         if pos_ficha['fila'] == pos_ficha['columna'] == None:
             return tablero[pos_ficha_a_mover['fila']][pos_ficha_a_mover['columna']] == jugador
         else:
-            return (pos_ficha['fila'], pos_ficha['columna']) in POSICIONES_PERMITIDAS[pos_ficha_a_mover['fila']][pos_ficha_a_mover['columna']]
+            return (pos_ficha['fila'], pos_ficha['columna']) in POSICIONES_PERMITIDAS[pos_ficha_a_mover['fila']][pos_ficha_a_mover['columna']] and tablero[pos_ficha['fila']][pos_ficha['columna']] == 0
 
 
 def colocar_ficha(tablero: tuple, jugador: int, ronda: int):
@@ -200,7 +201,7 @@ def jugar(tablero: tuple):
             ronda += 1
 
         print(f"\nRONDA {ronda}")
-        print("-" * len(f"RONDA {ronda}") + "\n")
+        print("-" * len(f"RONDA {ronda}"))
 
         colocar_ficha(tablero, turno, ronda)
         mostrar_tablero(tablero)

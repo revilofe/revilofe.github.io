@@ -1,7 +1,7 @@
 <!-- Con # se ponen los títulos -->
 
-## U3.5
-## Funciones
+## U4.1
+## Kotlin Básico    
 
 ---
 
@@ -18,8 +18,7 @@
 
 ### Kotlin
 
-*
-* CaracKotlin: un lenguaje de programación moderno y versátil.
+* Kotlin: un lenguaje de programación moderno y versátil.
 * Desarrollado por JetBrains, lanzado en 2011.
 * Interoperable con Java, popular en desarrollo Android.
 

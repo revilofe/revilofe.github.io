@@ -5,8 +5,8 @@ from msvcrt import getch
 #Símbolos que se mostrarán en el tablero
 FICHAS = (' ', 'X', 'O')
 
-#Matriz 3x3 con los conjuntos de posiciones permitidas desde cada par fila, columna del tablero:
-#Una tupla que contendrá 3 tuplas (filas), cada una tendrá 3 conjuntos (columnas), 
+#TODO: Matriz 3x3 con los conjuntos de posiciones permitidas desde cada par fila, columna del tablero:
+# Una tupla que contendrá 3 tuplas (filas), cada una tendrá 3 conjuntos (columnas), 
 # donde cada elemento de un conjunto es una posición accesible en forma de tupla (fila, columna)
 POSICIONES_PERMITIDAS = ???
 
@@ -71,12 +71,12 @@ def verificar_ganador(tablero) -> tuple:
         - el número del jugador si alguno ganó o None si no ganó aún nadie
         - un valor lógico indicando si el juego ha terminado
     """
-    # Verificar filas y columnas
+    # TODO: Verificar filas y columnas
     # Si el contenido de las celdas de una fila o columna es igual y distinto de cero
     # retornar una de las celdas (jugador) y True
     ???
 
-    # Verificar diagonales
+    # TODO: Verificar diagonales
     # Igual en las diagonales...
     ???
 
@@ -118,8 +118,9 @@ def comprobar_casilla(tablero: tuple,
     :param pos_ficha_a_mover: diccionario con la posición de la fila y columna desde dónde desea mover la ficha
     :return: True si la posición es correcta / False si no lo es.
     """
-    #ronda <= 3: solo colocar ficha => comprobar si podemos colocar la ficha del jugador en la posición fila y columna siempre que sea una casilla vacía.
-    #ronda > 3: mover ficha => 
+    # TODO:
+    # ronda <= 3: solo colocar ficha => comprobar si podemos colocar la ficha del jugador en la posición fila y columna siempre que sea una casilla vacía.
+    # ronda > 3: mover ficha => 
     #   si solo ha seleccionado la posición de la ficha que va a mover => comprobar si en dicha posición existe una ficha del jugador
     #   si seleccionó también la posición dónde mover => comprobar si la nueva posición es accesible desde su posición anterior y que la posición destino esté vacía.
     ???
@@ -136,7 +137,7 @@ def colocar_ficha(tablero: tuple, jugador: int, ronda: int):
     pos_correcta = False
 
     while not pos_correcta:
-        #Si ronda es mayor que 3, debe pedir la fila y columna de la ficha a mover y comprobar que la casilla es del jugador con el turno...
+        #TODO: Si ronda es mayor que 3, debe pedir la fila y columna de la ficha a mover y comprobar que la casilla es del jugador con el turno...
         if ronda > 3:
             ???
 
@@ -146,10 +147,10 @@ def colocar_ficha(tablero: tuple, jugador: int, ronda: int):
             pos_correcta = comprobar_casilla(tablero, jugador, ronda, pos_ficha, pos_ficha_a_mover)
 
         if pos_correcta:
-            #Si la ronda es mayor que 3, poner la celda de la ficha que se ha movido vacía
+            # TODO: Si la ronda es mayor que 3, poner la celda de la ficha que se ha movido vacía
             ???
 
-            #Establecer la posición del tablero según pos_ficha al jugador que tiene el turno
+            #TODO: Establecer la posición del tablero según pos_ficha al jugador que tiene el turno
             ???
         else:
             pos_ficha['fila'] = pos_ficha['columna'] = None
@@ -173,6 +174,8 @@ def jugar(tablero: tuple):
     """ Pedir a cada jugador la posición de una ficha hasta que uno de ellos gane.
     :param tablero: matriz de 3x3 con la información del tablero.
     """
+    # TODO: Aquí también hay algún problema que debes arreglar...
+
     turno = 0
     ronda = 0
     hay_ganador = False
@@ -190,7 +193,7 @@ def jugar(tablero: tuple):
         colocar_ficha(tablero, turno, ronda)
         mostrar_tablero(tablero)
 
-        ganador, hay_ganador = verificar_ganador(tablero)
+        verificar_ganador(tablero)
         if hay_ganador:
             print(f"\n¡El jugador {ganador} ha ganado!\n")
 

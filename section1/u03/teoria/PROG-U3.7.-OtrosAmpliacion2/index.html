@@ -3642,53 +3642,62 @@ crear una tupla con listas anidadas en su interior.</p>
 <a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>0 0 0 0 0 0 0 0
 <a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>0 0 0 0 0 0 0 0 
 </code></pre></div>
+<p><strong>También podemos utilizar condiciones en los propios bucles</strong>. </p>
+<p>En el ejemplo siguiente buscamos extraer de un conjunto los nombres que empiezan por la letra 'A':</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>nombres = (&#39;Ana&#39;, &#39;Patri&#39;, &#39;David&#39;, &#39;Alba&#39;, &#39;Dario&#39;, &#39;Antonio&#39;, &#39;Ricardo&#39;, &#39;Vícky&#39;)
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>nombres_que_empiezan_por_A = {nombre for nombre in nombres if nombre[:1].upper() == &#39;A&#39;}
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>print(nombres_que_empiezan_por_A)
+</code></pre></div>
+<p>El resultado del programa será el siguiente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>{&#39;Alba&#39;, &#39;Ana&#39;, &#39;Antonio&#39;}
+</code></pre></div>
 <h2 id="uso-de-operadores-logicos-para-retornar-valores-de-distintas-funciones">Uso de operadores lógicos para retornar valores de distintas funciones<a class="headerlink" href="#uso-de-operadores-logicos-para-retornar-valores-de-distintas-funciones" title="Permanent link">&para;</a></h2>
 <p>Cómo ya sabemos, si evaluamos en Python el contenido de una variable de tipo <code>str</code> de manera lógica, si se trata de una
 cadena vacía lo tomará como <code>False</code> y si tiene algún contenido será <code>True</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>def mostrar_contenido(cadena: str):
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    if cadena: #es lo mismo que si escribimos if cadena == &quot;&quot;
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>        print(cadena)
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    else:
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        print(&quot;La variable a es una cadena vacía&quot;)
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>def main():
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    mostrar_contenido(&#39;&#39;)
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    mostrar_contenido(&#39;hola&#39;)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>def mostrar_contenido(cadena: str):
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    if cadena: #es lo mismo que si escribimos if cadena == &quot;&quot;
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>        print(cadena)
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    else:
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>        print(&quot;La variable a es una cadena vacía&quot;)
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>def main():
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    mostrar_contenido(&#39;&#39;)
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    mostrar_contenido(&#39;hola&#39;)
 </code></pre></div>
 <p>El resultado sería el siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>La variable a es una cadena vacía
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>hola
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>La variable a es una cadena vacía
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>hola
 </code></pre></div>
 <p>Lo mismo ocurre con el tipo de dato <code>int</code> o <code>float</code>... si es <code>0</code> Python lo considera <code>False</code> y cualquier número distinto a <code>0</code> es
 considerado <code>True</code>.</p>
 <p>De esta manera, os podéis encontrar programas que utilicen operadores lógicos para retornar valores de más de una
 función.</p>
 <p>Un ejemplo simple sería el siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>EDAD = 1
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>def bebida_alcoholica(edad: int) -&gt; str:
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    if edad &gt;= 18:
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>        return &quot;Cubata&quot;
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    return &quot;&quot;
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>def bebida_sin_alcohol(edad: int) -&gt; str:
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    if edad &gt;= 12:
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>        return &quot;Zumo&quot;
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    return &quot;Agua&quot;
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>def dar_bebida(cliente: tuple) -&gt; str:
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>    return bebida_alcoholica(cliente[EDAD]) or bebida_sin_alcohol(cliente[EDAD]) ## &quot;&quot; evaluado como False, entonces se ejecuta la función de la derecha
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>def main():
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>    clientes = [(&quot;Antonio&quot;, 17), (&quot;Ana&quot;, 21), (&quot;Marta&quot;, 8)]
-<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>    for cliente in clientes:
-<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>        print(cliente[0] + &quot; toma &quot; + dar_bebida(cliente))
-<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>
-<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>
-<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>if __name__ == &quot;__main__&quot;:
-<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>    main()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>EDAD = 1
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>def bebida_alcoholica(edad: int) -&gt; str:
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    if edad &gt;= 18:
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>        return &quot;Cubata&quot;
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    return &quot;&quot;
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>def bebida_sin_alcohol(edad: int) -&gt; str:
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    if edad &gt;= 12:
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>        return &quot;Zumo&quot;
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>    return &quot;Agua&quot;
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>def dar_bebida(cliente: tuple) -&gt; str:
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>    return bebida_alcoholica(cliente[EDAD]) or bebida_sin_alcohol(cliente[EDAD]) ## &quot;&quot; evaluado como False, entonces se ejecuta la función de la derecha
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>def main():
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>    clientes = [(&quot;Antonio&quot;, 17), (&quot;Ana&quot;, 21), (&quot;Marta&quot;, 8)]
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>    for cliente in clientes:
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>        print(cliente[0] + &quot; toma &quot; + dar_bebida(cliente))
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>if __name__ == &quot;__main__&quot;:
+<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a>    main()
 </code></pre></div>
 <p>La función <code>dar_bebida()</code> contiene únicamente la instrucción <code>return</code> que evalúa dos expresiones con un operador
 lógico <code>or</code>. Las expresiones son funciones que a su vez retornan un valor <code>str</code>.
@@ -3704,9 +3713,9 @@ siguiente:</p>
    evalúa como <code>True</code>.</li>
 </ol>
 <p>El resultado del programa será el siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Antonio toma Zumo
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Ana toma Cubata
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Marta toma Agua
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Antonio toma Zumo
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Ana toma Cubata
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>Marta toma Agua
 </code></pre></div>
 
 

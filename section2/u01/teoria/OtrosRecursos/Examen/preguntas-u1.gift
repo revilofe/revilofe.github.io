@@ -1,0 +1,499 @@
+::¿Qué es el riesgo en la ciberseguridad?::¿Qué es el riesgo en la ciberseguridad? {
+=La probabilidad de que una amenaza se materialice aprovechando una vulnerabilidad y cause un impacto # Correcto, es la definición de riesgo en ciberseguridad.
+~%-33.3333%La certeza de un ataque exitoso sin importar las vulnerabilidades #Incorrecto, el riesgo implica probabilidad, no certeza.
+~%-33.3333%Un método para cifrar información #Incorrecto, el riesgo no es un método de cifrado, sino una evaluación de la seguridad.
+~%-33.3333%Una herramienta de software para la detección de intrusos #Incorrecto, el riesgo se refiere a la evaluación de la posibilidad de amenazas, no a una herramienta específica.
+}
+
+::¿Cuál es el primer paso en el análisis de riesgos?::¿Cuál es el primer paso en el análisis de riesgos? {
+=Definir el alcance del análisis # Correcto, definir el alcance es el primer paso en el análisis de riesgos.
+~%-33.3333%Identificar todas las amenazas posibles #Incorrecto, la identificación de amenazas viene después de definir el alcance.
+~%-33.3333%Calcular la probabilidad de incidentes #Incorrecto, calcular la probabilidad es parte de la evaluación, no el primer paso.
+~%-33.3333%Aplicar medidas de seguridad #Incorrecto, aplicar medidas es una respuesta al análisis, no el primer paso.
+}
+
+::¿Qué principio de la ciberseguridad se enfoca en prevenir el acceso no autorizado a la información?::¿Qué principio de la ciberseguridad se enfoca en prevenir el acceso no autorizado a la información? {
+=Confidencialidad # Correcto, la confidencialidad se enfoca en prevenir el acceso no autorizado.
+~%-33.3333%Integridad #Incorrecto, la integridad se refiere a la precisión y completitud de la información.
+~%-33.3333%Disponibilidad #Incorrecto, la disponibilidad asegura que la información esté accesible cuando se necesite.
+~%-33.3333%Autenticación #Incorrecto, aunque la autenticación es importante, no es uno de los tres principios fundamentales mencionados.
+}
+
+::¿Qué se debe definir para diferenciar entre riesgos asumibles y no asumibles?::¿Qué se debe definir para diferenciar entre riesgos asumibles y no asumibles? {
+=Un umbral de riesgo # Correcto, se define un umbral para diferenciar los riesgos que se pueden aceptar de los que no.
+~%-33.3333%Un plan de contingencia #Incorrecto, un plan de contingencia se crea para responder a los riesgos, no para definirlos.
+~%-33.3333%La probabilidad de ataque #Incorrecto, la probabilidad de ataque ayuda a calcular el riesgo, pero no a diferenciar entre asumibles y no asumibles.
+~%-33.3333%El costo de las medidas de seguridad #Incorrecto, el costo de las medidas de seguridad es un factor en la gestión de riesgos, pero no define la asumibilidad del riesgo.
+}
+
+::¿Qué afirmación describe mejor la relación entre activo, vulnerabilidad, amenaza y riesgo?::¿Qué afirmación describe mejor la relación entre activo, vulnerabilidad, amenaza y riesgo? {
+=Un activo es algo de valor que puede ser afectado por una vulnerabilidad, que a su vez puede ser explotada por una amenaza, resultando en un riesgo # Correcto, esta afirmación describe la relación entre los términos.
+~%-33.3333%Una amenaza es un activo que crea una vulnerabilidad y un riesgo #Incorrecto, una amenaza no es un activo sino un potencial peligro para un activo.
+~%-33.3333%El riesgo es una vulnerabilidad que afecta a una amenaza #Incorrecto, el riesgo es el potencial de que una amenaza afecte a un activo, no al revés.
+~%-33.3333%Una vulnerabilidad es un riesgo que se convierte en una amenaza para un activo #Incorrecto, la vulnerabilidad es una debilidad, no un riesgo en sí mismo.
+}
+
+::¿Cuál es el propósito de un Plan Director de Seguridad (PDS)?::¿Cuál es el propósito de un Plan Director de Seguridad (PDS)? {
+=Establecer un conjunto estructurado de proyectos e iniciativas para proteger los sistemas de información y la información valiosa # Correcto, el PDS tiene como objetivo la protección estructurada de la información y los sistemas.
+~%-33.3333%Servir como un manual de usuario para nuevas tecnologías de seguridad #Incorrecto, el PDS es estratégico, no un manual de usuario.
+~%-33.3333%Documentar las políticas de uso aceptable para los empleados #Incorrecto, aunque puede incluirlo, no es el propósito principal del PDS.
+~%-33.3333%Actuar como un protocolo de respuesta ante incidentes de seguridad #Incorrecto, el PDS incluye pero no se limita a la respuesta ante incidentes.
+}
+
+::¿Qué debe considerarse en la estrategia de la empresa al definir acciones en un PDS?::¿Qué debe considerarse en la estrategia de la empresa al definir acciones en un PDS? {
+=La alineación con los objetivos y necesidades del negocio # Correcto, las acciones del PDS deben estar alineadas con la estrategia de la empresa.
+~%-33.3333%La selección de software antivirus #Incorrecto, la selección de software es táctica, no estratégica.
+~%-33.3333%La frecuencia de las copias de seguridad #Incorrecto, aunque importante, es una operación, no una estrategia.
+~%-33.3333%El número de personal en el departamento de TI #Incorrecto, el número de personal es un recurso, no una estrategia.
+}
+
+::¿Qué indica la necesidad de implementar un Plan Director de Seguridad?::¿Qué indica la necesidad de implementar un Plan Director de Seguridad? {
+=El valor de las herramientas tecnológicas y la información para la organización # Correcto, la importancia de estos activos indica la necesidad de un PDS.
+~%-33.3333%La existencia de un departamento de TI #Incorrecto, la existencia de un departamento de TI no determina por sí sola la necesidad de un PDS.
+~%-33.3333%La cantidad de empleados en la empresa #Incorrecto, el tamaño de la empresa no es un indicador directo para la implementación de un PDS.
+~%-33.3333%El presupuesto anual de la empresa #Incorrecto, aunque el presupuesto es importante, la necesidad de un PDS se basa en el valor de la información y las tecnologías.
+}
+
+::¿Qué se debe hacer después de clasificar y priorizar los proyectos e iniciativas en un PDS?::¿Qué se debe hacer después de clasificar y priorizar los proyectos e iniciativas en un PDS? {
+=Obtener la aprobación por parte de la dirección y proceder con la puesta en marcha # Correcto, se requiere la aprobación de la dirección antes de la implementación.
+~%-33.3333%Revisar la política de privacidad de la empresa #Incorrecto, esto puede ser parte del PDS pero no es el paso inmediato después de la priorización.
+~%-33.3333%Contratar a un equipo de respuesta ante incidentes #Incorrecto, aunque puede ser necesario, no es el paso siguiente a la priorización.
+~%-33.3333%Realizar un test de penetración en los sistemas #Incorrecto, los tests de penetración son parte de la evaluación de seguridad, no un paso posterior a la priorización en el PDS.
+}
+
+
+::¿Cómo afecta un ataque de phishing al principio de confidencialidad en la ciberseguridad?::¿Cómo afecta un ataque de phishing al principio de confidencialidad en la ciberseguridad? {
+=Al obtener acceso no autorizado a información confidencial # Correcto, el phishing busca engañar a los usuarios para revelar información confidencial.
+~%-33.3333%Al interrumpir la disponibilidad de los servicios # Incorrecto, esto se relaciona más con ataques de denegación de servicio.
+~%-33.3333%Al alterar la integridad de los datos # Incorrecto, aunque es posible, no es el objetivo principal del phishing.
+~%-33.3333%Al mejorar las medidas de seguridad # Incorrecto, el phishing no mejora la seguridad, la compromete.
+}
+
+
+::¿Qué principio de la ciberseguridad se ve principalmente afectado por un ataque de ransomware?::¿Qué principio de la ciberseguridad se ve principalmente afectado por un ataque de ransomware? {
+=Disponibilidad # Correcto, el ransomware cifra los datos y los hace inaccesibles.
+~%-33.3333%Confidencialidad # Incorrecto, aunque puede verse afectada, no es el principal objetivo del ransomware.
+~%-33.3333%Integridad # Incorrecto, el ransomware no suele alterar la integridad de los datos, o por lo menos no es lo que mas preocupa.
+~%-33.3333%Autenticación # Incorrecto, el ransomware no se enfoca en la autenticación.
+}
+
+::¿Cómo puede un software malicioso (malware) afectar el principio de integridad en la ciberseguridad?::¿Cómo puede un software malicioso (malware) afectar el principio de integridad en la ciberseguridad? {
+=Alterando o corrompiendo los datos # Correcto, el malware puede modificar o dañar los datos.
+~%-33.3333%Robando información confidencial # Incorrecto, esto afecta la confidencialidad más que la integridad.
+~%-33.3333%Bloqueando el acceso a los datos # Incorrecto, esto afecta la disponibilidad.
+~%-33.3333%Fortaleciendo los firewalls # Incorrecto, el malware no fortalece, sino que compromete la seguridad.
+}
+
+::¿Qué aspecto de la ciberseguridad es el más afectado por un ataque de denegación de servicio distribuido (DDoS)?::¿Qué aspecto de la ciberseguridad es el más afectado por un ataque de denegación de servicio distribuido (DDoS)? {
+=Disponibilidad # Correcto, los ataques DDoS buscan hacer inaccesibles los recursos o servicios.
+~%-33.3333%Confidencialidad # Incorrecto, los ataques DDoS no suelen buscar acceder a datos confidenciales.
+~%-33.3333%Integridad # Incorrecto, los ataques DDoS no alteran los datos.
+~%-33.3333%Cifrado de datos # Incorrecto, los ataques DDoS no se enfocan en el cifrado de datos.
+}
+
+
+::Un empleado recibe un correo electrónico solicitando información confidencial de la empresa. ¿Qué principio de ciberseguridad está en riesgo si el empleado responde con la información solicitada?::Un empleado recibe un correo electrónico solicitando información confidencial de la empresa. ¿Qué principio de ciberseguridad está en riesgo si el empleado responde con la información solicitada? {
+=Confidencialidad # Correcto, compartir información confidencial compromete la confidencialidad.
+~%-33.3333%Integridad # Incorrecto, aunque importante, no es el principio directamente afectado en este caso.
+~%-33.3333%Disponibilidad # Incorrecto, la disponibilidad no se ve afectada por compartir información.
+~%-33.3333%Autenticación # Incorrecto, aunque la autenticación es crucial, no es el enfoque principal de esta situación.
+}
+
+
+::Si un atacante logra alterar los registros financieros de una empresa, ¿qué principio de ciberseguridad se ve más comprometido?::Si un atacante logra alterar los registros financieros de una empresa, ¿qué principio de ciberseguridad se ve más comprometido? {
+=Integridad # Correcto, la integridad de los datos se ve comprometida cuando se alteran sin autorización.
+~%-33.3333%Confidencialidad # Incorrecto, aunque importante, no es el principio principal afectado aquí.
+~%-33.3333%Disponibilidad # Incorrecto, la disponibilidad se refiere al acceso a los datos, no a su alteración.
+~%-33.3333%Resiliencia # Incorrecto, la resiliencia es importante, pero no es el enfoque de esta pregunta.
+}
+
+
+::¿Qué principio de ciberseguridad se ve principalmente afectado durante un ataque de denegación de servicio distribuido (DDoS)::¿Qué principio de ciberseguridad se ve principalmente afectado durante un ataque de denegación de servicio distribuido (DDoS)? {
+=Disponibilidad # Correcto, los ataques DDoS buscan hacer inaccesibles los servicios o recursos.
+~%-33.3333%Confidencialidad # Incorrecto, los ataques DDoS generalmente no buscan acceder a información confidencial.
+~%-33.3333%Integridad # Incorrecto, los ataques DDoS no suelen alterar la integridad de los datos.
+~%-33.3333%Autenticación # Incorrecto, aunque importante, no es el enfoque principal de un ataque DDoS.
+}
+
+::Una empresa decide no implementar medidas adicionales de seguridad para un riesgo de baja probabilidad y bajo impacto. ¿Qué aspecto de la gestión de riesgos está aplicando?::Una empresa decide no implementar medidas adicionales de seguridad para un riesgo de baja probabilidad y bajo impacto. ¿Qué aspecto de la gestión de riesgos está aplicando? {
+=Tolerancia al riesgo # Correcto, la empresa está demostrando su tolerancia al riesgo al aceptar este riesgo específico.
+~%-33.3333%Evitación del riesgo # Incorrecto, evitar el riesgo implicaría tomar medidas para eliminarlo.
+~%-33.3333%Transferencia del riesgo # Incorrecto, transferir el riesgo implicaría pasar su gestión a otra entidad.
+~%-33.3333%Mitigación del riesgo # Incorrecto, la mitigación implicaría reducir el impacto o la probabilidad del riesgo.
+}
+
+::Un atacante obtiene acceso a un sistema utilizando credenciales robadas. ¿Qué aspecto de la ciberseguridad ha fallado principalmente en este escenario?::Un atacante obtiene acceso a un sistema utilizando credenciales robadas. ¿Qué aspecto de la ciberseguridad ha fallado principalmente en este escenario? {
+=Autenticación # Correcto, el fallo en la autenticación permitió el acceso no autorizado.
+~%-33.3333%Confidencialidad # Incorrecto, aunque la confidencialidad puede verse afectada, el fallo principal es en la autenticación.
+~%-33.3333%Integridad # Incorrecto, la integridad de los datos no es el principal problema en este caso.
+~%-33.3333%Cifrado # Incorrecto, aunque el cifrado es importante, no es el enfoque principal de esta situación.
+}
+
+::¿Qué herramienta estratégica debería utilizar una organización para establecer la dirección y los planes en materia de seguridad de la información?::¿Qué herramienta estratégica debería utilizar una organización para establecer la dirección y los planes en materia de seguridad de la información? {
+=Plan Director de Seguridad # Correcto, es una herramienta estratégica para establecer la dirección en seguridad de la información.
+~%-33.3333%Política de Contraseñas # Incorrecto, aunque importante, no es una herramienta estratégica a nivel organizacional.
+~%-33.3333%Software Antivirus # Incorrecto, es una medida de seguridad operativa, no una herramienta estratégica.
+~%-33.3333%Auditoría de Seguridad # Incorrecto, aunque las auditorías son importantes, no establecen la dirección estratégica.
+}
+
+::En caso de un incidente de seguridad, ¿qué proceso es crucial para minimizar el daño y restaurar rápidamente las operaciones normales?::En caso de un incidente de seguridad, ¿qué proceso es crucial para minimizar el daño y restaurar rápidamente las operaciones normales? {
+=Gestión de Incidentes # Correcto, es esencial para responder eficazmente a los incidentes de seguridad.
+~%-33.3333%Análisis de Riesgos # Incorrecto, aunque importante, no es el proceso inmediato en respuesta a un incidente.
+~%-33.3333%Desarrollo de Software # Incorrecto, no está directamente relacionado con la respuesta a incidentes de seguridad.
+~%-33.3333%Formación de los empleados # Incorrecto, aunque es importante, la formación debe ser preventiva.
+}
+
+# Protección del puesto de trabajo
+
+::¿Cuál es una medida básica de protección del puesto de trabajo?::¿Cuál es una medida básica de protección del puesto de trabajo? {
+=Instalar herramientas de seguridad elementales. # Correcto, es una medida básica de protección.
+~%-33.3333%Permitir la configuración libre de equipos por los empleados. # Incorrecto, esto no se recomienda para la protección básica.
+~%-33.3333%Utilizar exclusivamente software personalizado. # Incorrecto, esto no es una medida básica.
+~%-33.3333%Prohibir completamente el uso de dispositivos móviles. # Incorrecto, esto no es una medida básica.
+}
+
+::¿Cuál es una práctica recomendada para el uso de contraseñas?::¿Cuál es una práctica recomendada para el uso de contraseñas?{
+=Deben ser robustas, combinando números, mayúsculas, minúsculas y caracteres especiales. # Correcto, aumenta la seguridad de la contraseña.
+~%-33.3333%Deben ser simples y fáciles de recordar, como fechas de nacimiento. # Incorrecto, las contraseñas simples son menos seguras.
+~%-33.3333%Deben compartirse regularmente con supervisores para verificación. # Incorrecto, las contraseñas no deben compartirse.
+~%-33.3333%Deben ser iguales para todos los sistemas para facilitar el acceso. # Incorrecto, esto compromete la seguridad.
+}
+
+::¿Qué acción NO es recomendada en la protección de los puestos de trabajo?::¿Qué acción NO es recomendada en la protección de los puestos de trabajo? {
+=Permitir a los empleados instalar cualquier software sin restricciones. # Correcto, esto podría comprometer la seguridad.
+~%-33.3333%Actualizar regularmente el antivirus y otras herramientas de seguridad. # Incorrecto, esto es una práctica recomendada.
+~%-33.3333%Realizar copias de seguridad periódicas de la información importante. # Incorrecto, es una práctica recomendada.
+~%-33.3333%Limitar el acceso a la información confidencial solo al personal autorizado. # Incorrecto, esto es necesario para la seguridad.
+}
+
+::¿Qué se debe hacer con la documentación impresa obsoleta en un puesto de trabajo?::¿Qué se debe hacer con la documentación impresa obsoleta en un puesto de trabajo? {
+=Debe ser destruida de manera segura. # Correcto, evita el acceso no autorizado a la información.
+~%-33.3333%Debe almacenarse en el archivo general de la empresa. # Incorrecto, no se debe almacenar información obsoleta.
+~%-33.3333%Debe ser digitalizada y luego descartada sin precauciones. # Incorrecto, la digitalización no elimina la necesidad de destrucción segura.
+~%-33.3333%Debe ser reutilizada para notas personales. # Incorrecto, esto podría comprometer la confidencialidad.
+}
+
+
+::¿Cuál de las siguientes NO es una medida de seguridad recomendada para los puestos de trabajo?::¿Cuál de las siguientes NO es una medida de seguridad recomendada para los puestos de trabajo? {
+=Ignorar las actualizaciones de seguridad para evitar interrupciones en el trabajo. # Correcto, ignorarlas puede comprometer la seguridad.
+~%-33.3333%Realizar auditorías periódicas de seguridad. # Incorrecto, es una medida recomendada.
+~%-33.3333%Implementar políticas de acceso restringido a información sensible. # Incorrecto, es una medida de seguridad estándar.
+~%-33.3333%Promover la concienciación sobre seguridad entre los empleados. # Incorrecto, la concienciación es fundamental para la seguridad.
+}
+
+::¿Qué es una normativa de protección del puesto de trabajo?::::¿Qué es una normativa de protección del puesto de trabajo? {
+=Un conjunto de medidas y políticas para asegurar la seguridad de la información en el trabajo. # Correcto, define cómo proteger la información.
+~%-33.3333%Una lista de software permitido y prohibido en la empresa. # Incorrecto, es más que una simple lista de software.
+~%-33.3333%Un manual de procedimientos para la limpieza y mantenimiento de equipos. # Incorrecto, se enfoca en seguridad, no en mantenimiento.
+~%-33.3333%Un conjunto de recomendaciones para la ergonomía en el trabajo. # Incorrecto, se centra en la seguridad de la información.
+}
+
+
+
+# Supuestos
+
+::En el contexto de la política de mesas limpias, ¿qué debe hacer un empleado al finalizar su jornada laboral?::En el contexto de la política de mesas limpias, ¿qué debe hacer un empleado al finalizar su jornada laboral? {
+=Guardar la documentación y los dispositivos extraíbles que no estén siendo usados. # Correcto, es parte de mantener la seguridad y confidencialidad.
+~%-33.3333%Dejar los documentos sobre la mesa para continuar al día siguiente. # Incorrecto, esto podría comprometer la seguridad de la información.
+~%-33.3333%Archivar solo documentos clasificados como confidenciales. # Incorrecto, se debe guardar toda documentación.
+~%-33.3333%Enviar por correo electrónico a sí mismo los documentos importantes. # Incorrecto, esto no es una práctica segura de manejo de documentos.
+}
+
+::Si un empleado sospecha de accesos no autorizados a su sistema informático, ¿cuál es la acción correcta a seguir?::Si un empleado sospecha de accesos no autorizados a su sistema informático, ¿cuál es la acción correcta a seguir? {
+=Reportarlo inmediatamente a su supervisor o al departamento de seguridad. # Correcto, la pronta notificación es crucial.
+~%-33.3333%Intentar identificar y solucionar el problema por sí mismo. # Incorrecto, puede agravar el problema.
+~%-33.3333%Apagar su computadora y desconectarla de la red. # Incorrecto, esto podría dificultar la investigación.
+~%-33.3333%Cambiar su contraseña y continuar trabajando. # Incorrecto, es necesario reportarlo a las autoridades pertinentes.
+}
+
+::¿Qué acción no es adecuada respecto al uso de dispositivos de almacenamiento en el trabajo?::¿Qué acción no es adecuada respecto al uso de dispositivos de almacenamiento en el trabajo? {
+=Utilizar dispositivos de almacenamiento personales sin autorización. # Correcto, puede comprometer la seguridad de la red.
+~%-33.3333%Seguir la normativa de la empresa sobre almacenamiento local y en la nube. # Incorrecto, seguir la normativa es una práctica recomendada.
+~%-33.3333%Utilizar solo dispositivos autorizados por la empresa. # Incorrecto, esto es una práctica de seguridad recomendada.
+~%-33.3333%Asegurarse de que la información crítica se almacene de manera segura. # Incorrecto, esto es crucial para la protección de datos.
+}
+
+
+
+
+
+
+
+::Si un empleado encuentra un dispositivo USB desconocido en su lugar de trabajo, ¿cuál es la acción más segura a seguir?:: {
+=Reportarlo al departamento de seguridad sin conectarlo a ningún equipo. # Correcto, evitar el uso de dispositivos desconocidos previene riesgos de seguridad.
+~%-33.3333%Conectarlo a su computadora para revisar el contenido. # Incorrecto, esto puede exponer el sistema a malware o brechas de seguridad.
+~%-33.3333%Dejarlo en un lugar común para que el propietario lo reclame. # Incorrecto, esto no aborda el riesgo potencial del dispositivo.
+~%-33.3333%Formatearlo antes de usarlo para eliminar posibles virus. # Incorrecto, formatear un dispositivo desconocido no garantiza seguridad.
+}
+
+::¿Qué debe hacer un empleado si recibe un correo electrónico sospechoso que pide información confidencial?:: {
+=Reportarlo al departamento de IT o seguridad informática. # Correcto, reportar correos sospechosos es una medida de seguridad clave.
+~%-33.3333%Responder solicitando más detalles para verificar su autenticidad. # Incorrecto, no se debe interactuar con correos sospechosos.
+~%-33.3333%Abrir cualquier adjunto para determinar la relevancia del correo. # Incorrecto, abrir adjuntos de correos sospechosos es peligroso.
+~%-33.3333%Ignorarlo y continuar trabajando normalmente. # Incorrecto, ignorar un posible intento de phishing puede resultar en riesgos de seguridad.
+}
+
+::Cuando un empleado deja su puesto de trabajo temporalmente, ¿qué debe hacer con su computadora?:: {
+=Bloquear la sesión para prevenir accesos no autorizados. # Correcto, bloquear la computadora ayuda a proteger la información.
+~%-33.3333%Apagar la computadora para ahorrar energía. # Incorrecto, apagar la computadora no es práctico para ausencias cortas.
+~%-33.3333%Dejarla abierta para facilitar el regreso al trabajo. # Incorrecto, dejar la computadora abierta puede comprometer la seguridad.
+~%-33.3333%Permitir que un compañero la use en su ausencia. # Incorrecto, compartir una sesión activa puede ser un riesgo de seguridad.
+}
+
+::¿Qué debe hacer un empleado si necesita instalar un nuevo software en su equipo de trabajo?:: {
+=Pedir autorización al departamento de IT o a su supervisor. # Correcto, seguir el proceso formal es la práctica segura.
+~%-33.3333%Instalarlo por su cuenta si cree que es seguro. # Incorrecto, la instalación personal puede violar las políticas de seguridad.
+~%-33.3333%Pedir a un compañero que lo instale para evitar la burocracia. # Incorrecto, esto evita los controles de seguridad establecidos.
+~%-33.3333%Descargarlo de internet para ahorrar tiempo. # Incorrecto, la descarga no autorizada puede introducir riesgos de seguridad.
+}
+
+::¿Qué debe hacer un empleado si encuentra un portátil desatendido en un área común de la oficina?:: {
+=Reportarlo al departamento de seguridad o a su supervisor. # Correcto, reportar dispositivos desatendidos ayuda a prevenir riesgos.
+~%-33.3333%Usarlo para revisar correos o navegar en internet. # Incorrecto, usar dispositivos desatendidos puede ser un riesgo de seguridad.
+~%-33.3333%Dejarlo allí asumiendo que el propietario regresará. # Incorrecto, dejar un dispositivo desatendido no aborda el riesgo potencial.
+~%-33.3333%Moverlo a un lugar más seguro sin informar a nadie. # Incorrecto, mover un dispositivo sin reportarlo puede crear confusión o riesgos.
+}
+
+::Cuando se recibe una llamada solicitando información confidencial sobre la empresa, ¿cuál es la acción correcta?:: {
+=Verificar la identidad del llamante y reportar la llamada si es sospechosa. # Correcto, verificar y reportar protege la información de la empresa.
+~%-33.3333%Proporcionar la información si el llamante parece legítimo. # Incorrecto, nunca se debe proporcionar información sin verificación adecuada.
+~%-33.3333%Ignorar la llamada y no hacer nada al respecto. # Incorrecto, ignorar puede resultar en riesgos no identificados.
+~%-33.3333%Transferir la llamada a un compañero de trabajo. # Incorrecto, transferir llamadas sospechosas sin verificación puede ser inseguro.
+}
+
+
+# Teoria
+
+::¿Cuál es el primer paso al desarrollar una Política de Seguridad de la Información?:: {
+=Identificar la misión y los objetivos del organismo. # Correcto, establecer la misión y objetivos es fundamental para orientar la política.
+~%-33.3333%Seleccionar herramientas tecnológicas de seguridad. # Incorrecto, la selección de herramientas es posterior a la definición de la misión.
+~%-33.3333%Implementar medidas de seguridad física. # Incorrecto, las medidas de seguridad física son parte de, pero no el comienzo de, la política de seguridad.
+~%-33.3333%Capacitar a los empleados en seguridad de la información. # Incorrecto, la capacitación es importante pero sigue a la creación de la política.
+}
+
+::¿Qué elemento NO es típicamente incluido en una Política de Seguridad de la Información?:: {
+=Detalles específicos de implementación técnica. # Correcto, los detalles técnicos son generalmente tratados en documentos separados.
+~%-33.3333%El marco normativo aplicable. # Incorrecto, el marco normativo es un componente esencial de la política.
+~%-33.3333%La estructura organizativa para la seguridad. # Incorrecto, la estructura organizativa es un aspecto clave de la política.
+~%-33.3333%Los objetivos de seguridad de la organización. # Incorrecto, los objetivos de seguridad son fundamentales en la política.
+}
+
+::En la Política de Seguridad de la Información, ¿qué papel juegan las revisiones periódicas?:: {
+=Asegurar que la política se mantenga relevante y actualizada. # Correcto, las revisiones periódicas mantienen la política adecuada a los cambios.
+~%-33.3333%Realizar cambios radicales en la política cada vez. # Incorrecto, las revisiones suelen ser para ajustes y no para cambios radicales.
+~%-33.3333%Reducir la frecuencia de las actualizaciones de seguridad. # Incorrecto, las revisiones no están destinadas a reducir la frecuencia de actualizaciones.
+~%-33.3333%Eliminar la necesidad de entrenamiento en seguridad. # Incorrecto, las revisiones no eliminan la necesidad de capacitación.
+}
+
+::¿Qué aspecto NO se incluye típicamente en la Política de Seguridad de la Información?:: {
+=Instrucciones detalladas para cada tipo de software de seguridad. # Correcto, las instrucciones detalladas no suelen estar en la política general.
+~%-33.3333%El alcance de la política dentro de la organización. # Incorrecto, el alcance es un elemento crucial de la política.
+~%-33.3333%Identificación de los roles y responsabilidades en seguridad. # Incorrecto, los roles y responsabilidades son parte esencial de la política.
+~%-33.3333%Orientación sobre la gestión de riesgos de seguridad. # Incorrecto, la gestión de riesgos es un componente importante de la política.
+}
+
+::¿Cuál es el objetivo principal de la concienciación y formación en seguridad TIC?:: {
+=Crear conciencia sobre los riesgos y asegurar que todos los miembros entiendan su papel en la seguridad. # Correcto, la concienciación y formación buscan aumentar la comprensión y la responsabilidad en seguridad.
+~%-33.3333%Garantizar que solo el personal de IT maneje cuestiones de seguridad. # Incorrecto, la concienciación y formación deben ser para todos los miembros de la organización.
+~%-33.3333%Evitar la necesidad de políticas de seguridad escritas. # Incorrecto, la formación y concienciación complementan, no reemplazan, las políticas escritas.
+~%-33.3333%Focalizar únicamente en la seguridad física de las instalaciones. # Incorrecto, la formación abarca más que solo la seguridad física.
+}
+
+::¿Qué se entiende por "seguridad como un proceso integral" en la Política de Seguridad de la Información?:: {
+=La seguridad debe ser considerada en todos los aspectos y actividades de la organización. # Correcto, la seguridad es un enfoque holístico e integral.
+~%-33.3333%Concentrarse exclusivamente en la seguridad de la información digital. # Incorrecto, un enfoque integral incluye más que solo la información digital.
+~%-33.3333%La seguridad es una tarea exclusiva del equipo de seguridad. # Incorrecto, la seguridad como proceso integral implica a toda la organización.
+~%-33.3333%Limitar la seguridad a auditorías anuales. # Incorrecto, un enfoque integral requiere más que auditorías anuales.
+}
+
+::En el contexto de una Política de Seguridad de la Información, ¿qué se debe hacer ante un incidente de seguridad TIC?:: {
+=Responder de acuerdo a los procedimientos establecidos y analizar el incidente para prevenir futuros eventos similares. # Correcto, la respuesta y el análisis son claves para la gestión de incidentes.
+~%-33.3333%Dejar que el departamento de IT gestione el incidente sin informar a otros. # Incorrecto, la gestión de incidentes debe involucrar a los niveles pertinentes de la organización.
+~%-33.3333%Considerar el incidente como un caso aislado y no tomar medidas adicionales. # Incorrecto, cada incidente debe ser analizado para mejorar la seguridad futura.
+~%-33.3333%Detener todas las operaciones de la organización hasta resolver el incidente. # Incorrecto, no es práctico ni recomendable detener todas las operaciones.
+}
+
+
+# PDS
+
+::¿Cuál es el primer paso en la implantación de un Plan Director de Seguridad?::¿Cuál es el primer paso en la implantación de un Plan Director de Seguridad? {
+=Realizar un análisis de la situación actual de la organización. # Correcto, es esencial conocer el estado actual para planificar adecuadamente.
+~%-33.3333%Desarrollar políticas de seguridad detalladas. # Incorrecto, las políticas se desarrollan después del análisis inicial.
+~%-33.3333%Seleccionar herramientas de seguridad específicas. # Incorrecto, la selección de herramientas viene más tarde en el proceso.
+~%-33.3333%Capacitar a los empleados en seguridad de la información. # Incorrecto, aunque importante, no es el primer paso.
+}
+
+::¿Qué objetivo tiene la fase de conocer la estrategia de la organización en un Plan Director de Seguridad?::¿Qué objetivo tiene la fase de conocer la estrategia de la organización en un Plan Director de Seguridad? {
+=Asegurarse de que el plan se alinea con los objetivos y estrategia generales de la empresa. # Correcto, alinear el plan con la estrategia empresarial es fundamental.
+~%-33.3333%Establecer un presupuesto para la implementación del plan. # Incorrecto, esto es parte del proceso pero no el objetivo principal de esta fase.
+~%-33.3333%Identificar los activos de información más críticos de la empresa. # Incorrecto, aunque importante, no es el objetivo principal de esta fase.
+~%-33.3333%Crear una lista de todos los riesgos de seguridad posibles. # Incorrecto, identificar riesgos es importante pero no es el objetivo principal de esta fase.
+}
+
+::En el Plan Director de Seguridad, ¿cuál es el propósito de clasificar y priorizar los proyectos?::En el Plan Director de Seguridad, ¿cuál es el propósito de clasificar y priorizar los proyectos? {
+=Organizar los proyectos según su importancia y urgencia para una implementación efectiva. # Correcto, clasificar y priorizar ayuda a gestionar los recursos de manera eficiente.
+~%-33.3333%Determinar qué proyectos pueden ser omitidos debido a restricciones presupuestarias. # Incorrecto, aunque el presupuesto es una consideración, no es el propósito principal.
+~%-33.3333%Asignar equipos específicos a cada proyecto de seguridad. # Incorrecto, la asignación de equipos es importante pero no es el objetivo principal de esta fase.
+~%-33.3333%Evaluar la efectividad de las medidas de seguridad existentes. # Incorrecto, esto es parte del análisis inicial, no de la clasificación y priorización de proyectos.
+}
+
+::¿Qué se debe hacer una vez aprobado el Plan Director de Seguridad?::¿Qué se debe hacer una vez aprobado el Plan Director de Seguridad? {
+=Iniciar la implementación del plan, asignando recursos y responsabilidades. # Correcto, la implementación comienza después de la aprobación.
+~%-33.3333%Realizar una nueva evaluación de riesgos. # Incorrecto, aunque los riesgos se reevalúan, no es el paso inmediato después de la aprobación.
+~%-33.3333%Desarrollar una nueva estrategia empresarial basada en el plan. # Incorrecto, el plan debe apoyar la estrategia empresarial existente, no al revés.
+~%-33.3333%Suspender todas las actividades de seguridad actuales. # Incorrecto, las actividades actuales continúan hasta que se implementen nuevas medidas.
+}
+
+::¿Cuál es el enfoque principal del análisis técnico de seguridad en el Plan Director de Seguridad?::¿Cuál es el enfoque principal del análisis técnico de seguridad en el Plan Director de Seguridad? {
+=Evaluar la implementación y madurez de los controles de seguridad relacionados con los sistemas de información. # Correcto, el análisis técnico se centra en evaluar la seguridad de los sistemas de información.
+~%-33.3333%Identificar todas las vulnerabilidades de software y hardware. # Incorrecto, aunque es parte del análisis, no es el enfoque principal.
+~%-33.3333%Capacitar al personal técnico en nuevas tecnologías de seguridad. # Incorrecto, la capacitación es importante pero no es el enfoque principal del análisis técnico.
+~%-33.3333%Crear un nuevo marco de políticas de seguridad. # Incorrecto, el análisis técnico evalúa el marco existente, no crea uno nuevo.
+}
+
+::¿Qué se debe considerar al definir las iniciativas dentro de un Plan Director de Seguridad?::¿Qué se debe considerar al definir las iniciativas dentro de un Plan Director de Seguridad? {
+=Las iniciativas deben alinearse con los resultados del análisis de riesgos y cumplimiento normativo. # Correcto, las iniciativas deben basarse en el análisis realizado.
+~%-33.3333%Priorizar iniciativas basadas únicamente en la tecnología más avanzada. # Incorrecto, la tecnología es importante, pero no es el único factor a considerar.
+~%-33.3333%Centrarse solo en iniciativas de bajo costo para mantener el presupuesto. # Incorrecto, el costo es una consideración, pero no la única.
+~%-33.3333%Iniciar todas las iniciativas simultáneamente para acelerar la implementación. # Incorrecto, la implementación debe ser estratégica y escalonada.
+}
+
+::¿Cuál es el propósito de realizar un análisis de riesgos en el Plan Director de Seguridad?::¿Cuál es el propósito de realizar un análisis de riesgos en el Plan Director de Seguridad? {
+=Identificar y evaluar las amenazas y vulnerabilidades para establecer controles adecuados. # Correcto, el análisis de riesgos es clave para entender y mitigar los riesgos.
+~%-33.3333%Cumplir con las regulaciones internacionales de seguridad de la información. # Incorrecto, aunque importante, no es el propósito principal del análisis de riesgos.
+~%-33.3333%Garantizar que todos los sistemas informáticos estén actualizados. # Incorrecto, mantener sistemas actualizados es importante pero no es el objetivo principal del análisis de riesgos.
+~%-33.3333%Desarrollar un plan de respuesta a incidentes para todos los escenarios posibles. # Incorrecto, aunque es un resultado deseable, no es el objetivo principal del análisis de riesgos.
+}
+
+::¿Cuál es el rol de la Dirección en la aprobación del Plan Director de Seguridad?::¿Cuál es el rol de la Dirección en la aprobación del Plan Director de Seguridad? {
+=Revisar y aprobar formalmente el plan para garantizar su alineación con la estrategia empresarial. # Correcto, la Dirección debe aprobar el plan para asegurar su alineación.
+~%-33.3333%Desarrollar personalmente el plan y sus detalles técnicos. # Incorrecto, la Dirección no desarrolla el plan, pero debe aprobarlo.
+~%-33.3333%Implementar personalmente todas las iniciativas de seguridad. # Incorrecto, la implementación no es responsabilidad directa de la Dirección.
+~%-33.3333%Realizar auditorías de seguridad periódicas. # Incorrecto, la Dirección no realiza auditorías, pero debe asegurarse de que se realicen.
+}
+
+::En un Plan Director de Seguridad, ¿cuál es el enfoque correcto para tratar los riesgos identificados?::En un Plan Director de Seguridad, ¿cuál es el enfoque correcto para tratar los riesgos identificados? {
+=Definir y aplicar controles para mitigar riesgos inaceptables según la estrategia corporativa. # Correcto, mitigar los riesgos inaceptables es clave en el tratamiento de riesgos.
+~%-33.3333%Ignorar los riesgos menores y concentrarse solo en riesgos críticos. # Incorrecto, todos los riesgos deben ser evaluados y tratados adecuadamente.
+~%-33.3333%Delegar la gestión de todos los riesgos al departamento de IT. # Incorrecto, la gestión de riesgos es un esfuerzo colaborativo en toda la organización.
+~%-33.3333%Evitar cualquier tipo de riesgo, independientemente de su impacto o probabilidad. # Incorrecto, evitar todos los riesgos no es práctico ni siempre posible.
+}
+
+::¿Qué papel juega la revisión periódica en el Plan Director de Seguridad?::¿Qué papel juega la revisión periódica en el Plan Director de Seguridad? {
+=Asegurar que el plan se mantenga relevante y actualizado frente a cambios en el entorno y en la organización. # Correcto, las revisiones periódicas mantienen el plan actualizado.
+~%-33.3333%Rediseñar completamente el plan en cada revisión. # Incorrecto, las revisiones son para actualizar el plan, no para rediseñarlo completamente.
+~%-33.3333%Focalizar exclusivamente en los aspectos financieros del plan. # Incorrecto, aunque los aspectos financieros son importantes, no son el único enfoque de la revisión.
+~%-33.3333%Limitar la revisión a las políticas de seguridad tecnológica solamente. # Incorrecto, la revisión debe abarcar todos los aspectos del plan.
+}
+
+#Riesgos
+
+
+::Una empresa identifica que la probabilidad de una brecha de datos debido a phishing es alta. ¿Cuál es la estrategia más adecuada para abordar este riesgo?::Una empresa identifica que la probabilidad de una brecha de datos debido a phishing es alta. ¿Cuál es la estrategia más adecuada para abordar este riesgo? {
+=Implementar formación en concienciación sobre phishing para todos los empleados. # Correcto, la formación reduce la vulnerabilidad al phishing.
+~%-33.3333%Ignorar el riesgo, asumiendo que los empleados sabrán cómo actuar. # Incorrecto, ignorar un riesgo de alta probabilidad no es adecuado.
+~%-33.3333%Eliminar completamente el uso del correo electrónico. # Incorrecto, eliminar el correo electrónico no es una solución práctica.
+~%-33.3333%Aumentar el presupuesto de IT sin acciones específicas. # Incorrecto, aumentar el presupuesto sin un plan claro no aborda específicamente el riesgo.
+}
+
+::Si una evaluación de riesgos indica que el impacto de un ataque DDoS en los servidores es crítico, ¿qué medida debería priorizarse?::Si una evaluación de riesgos indica que el impacto de un ataque DDoS en los servidores es crítico, ¿qué medida debería priorizarse? {
+=Implementar soluciones de mitigación de DDoS, como balanceo de carga y protección de red. # Correcto, estas medidas ayudan a mitigar el impacto de un ataque DDoS.
+~%-33.3333%Disminuir la inversión en seguridad cibernética. # Incorrecto, disminuir la inversión no aborda el riesgo crítico identificado.
+~%-33.3333%Centrarse únicamente en la seguridad física de los servidores. # Incorrecto, aunque importante, no aborda directamente el riesgo de DDoS.
+~%-33.3333%Capacitar a los empleados en el uso básico de computadoras. # Incorrecto, esta formación no está relacionada con la mitigación de ataques DDoS.
+}
+
+::En un escenario donde el riesgo de pérdida de datos debido a fallos del hardware es alto, ¿qué acción de mitigación es más efectiva?::En un escenario donde el riesgo de pérdida de datos debido a fallos del hardware es alto, ¿qué acción de mitigación es más efectiva? {
+=Implementar un plan robusto de copias de seguridad y recuperación de desastres. # Correcto, esto minimiza el impacto de posibles fallos de hardware.
+~%-33.3333%Reducir la cantidad de hardware utilizado en la empresa. # Incorrecto, esto no necesariamente reduce el riesgo de pérdida de datos.
+~%-33.3333%Prohibir a los empleados el uso de dispositivos móviles. # Incorrecto, esto no aborda el riesgo de fallo del hardware central.
+~%-33.3333%Realizar auditorías financieras más frecuentes. # Incorrecto, las auditorías financieras no mitigan el riesgo de pérdida de datos por fallo de hardware.
+}
+
+::Ante un alto riesgo de ataques de malware, ¿qué acción debería ser prioritaria en una empresa?::Ante un alto riesgo de ataques de malware, ¿qué acción debería ser prioritaria en una empresa? {
+=Instalar y actualizar regularmente soluciones antivirus y antimalware en todos los sistemas. # Correcto, es una medida efectiva contra el malware.
+~%-33.3333%Reducir el uso de internet en la empresa al mínimo. # Incorrecto, no es práctico ni aborda completamente el riesgo.
+~%-33.3333%Centrarse solo en la capacitación sobre privacidad de datos. # Incorrecto, aunque la capacitación es importante, no es suficiente por sí sola.
+~%-33.3333%Dejar de usar software que no sea desarrollado internamente. # Incorrecto, esta medida no garantiza protección contra malware.
+}
+
+::Si el análisis de riesgo revela una alta probabilidad de pérdida de datos por errores humanos, ¿qué estrategia sería más efectiva para mitigar este riesgo?::Si el análisis de riesgo revela una alta probabilidad de pérdida de datos por errores humanos, ¿qué estrategia sería más efectiva para mitigar este riesgo? {
+=Implementar una formación exhaustiva para los empleados en el manejo de datos y uso de sistemas. # Correcto, la formación puede reducir significativamente los errores humanos.
+~%-33.3333%Despedir a los empleados que cometan errores. # Incorrecto, no es una solución sostenible ni efectiva a largo plazo.
+~%-33.3333%Limitar el acceso de los empleados a los datos al mínimo absoluto. # Incorrecto, aunque reduce el riesgo, puede no ser práctico para las operaciones del negocio.
+~%-33.3333%Invertir exclusivamente en tecnología avanzada, ignorando la capacitación. # Incorrecto, la tecnología por sí sola no aborda el riesgo de errores humanos.
+}
+
+::Si un análisis de riesgos revela vulnerabilidades en el software utilizado por la empresa, ¿cuál sería el enfoque más efectivo para reducir el riesgo?::Si un análisis de riesgos revela vulnerabilidades en el software utilizado por la empresa, ¿cuál sería el enfoque más efectivo para reducir el riesgo? {
+=Actualizar y parchear regularmente todos los sistemas de software. # Correcto, mantener el software actualizado es crucial para la seguridad.
+~%-33.3333%Desconectar todos los sistemas vulnerables de la red. # Incorrecto, aunque reduce el riesgo, no es una solución práctica a largo plazo.
+~%-33.3333%Implementar un sistema de respaldo completo diario. # Incorrecto, los respaldos son importantes, pero no abordan directamente las vulnerabilidades del software.
+~%-33.3333%Capacitar a los empleados en programación. # Incorrecto, aunque la formación es valiosa, no aborda directamente el riesgo identificado.
+}
+
+# Riesgos
+
+::En una empresa que implementa un nuevo sistema de información, ¿cuál sería una medida efectiva de prevención contra riesgos de seguridad según los principios generales de ciberseguridad?::En una empresa que implementa un nuevo sistema de información, ¿cuál sería una medida efectiva de prevención contra riesgos de seguridad según los principios generales de ciberseguridad? {
+=Realizar una evaluación de riesgos y formar al personal en seguridad de la información antes de la implementación. # Correcto, evaluar riesgos y capacitar al personal son pasos clave.
+~%-33.3333%Limitar el acceso al nuevo sistema solo a la alta dirección. # Incorrecto, esto no aborda de manera efectiva los riesgos generales.
+~%-33.3333%Evitar actualizaciones de seguridad para mantener la estabilidad del sistema. # Incorrecto, las actualizaciones son esenciales para la seguridad.
+~%-33.3333%Implementar el sistema sin análisis previo para acelerar el proceso. # Incorrecto, un análisis previo es crucial para identificar y mitigar riesgos.
+}
+
+::Si una organización identifica un riesgo creciente de ataques cibernéticos, ¿qué estrategia del Plan Director de Seguridad debería priorizar?::Si una organización identifica un riesgo creciente de ataques cibernéticos, ¿qué estrategia del Plan Director de Seguridad debería priorizar? {
+=Fortalecer las defensas perimetrales, como firewalls y sistemas de detección de intrusiones, y aumentar la concienciación en ciberseguridad entre los empleados. # Correcto, fortalecer las defensas y la concienciación son pasos clave.
+~%-33.3333%Reducir la inversión en tecnología de seguridad para ahorrar costos. # Incorrecto, reducir la inversión en seguridad aumentaría la vulnerabilidad.
+~%-33.3333%Prohibir todo el acceso remoto para evitar posibles brechas. # Incorrecto, esto podría no ser práctico y no aborda todas las formas de ataque.
+~%-33.3333%Centrarse únicamente en la seguridad física de las instalaciones. # Incorrecto, la seguridad cibernética requiere más que medidas de seguridad física.
+}
+
+::Tras identificar un riesgo de accesos no autorizados a la red, ¿qué medida del Plan Director de Seguridad debería implementar una empresa?:: {
+=Reforzar la autenticación y control de acceso, y realizar sesiones de formación sobre la importancia de mantener las credenciales seguras. # Correcto, fortalecer el acceso y educar al personal son acciones críticas.
+~%-33.3333%Desconectar la red de internet para prevenir accesos externos. # Incorrecto, esto no es práctico y afecta la operatividad.
+~%-33.3333%Confiar en los empleados para que informen de cualquier actividad sospechosa sin medidas adicionales. # Incorrecto, se requieren medidas proactivas más allá de la vigilancia del personal.
+~%-33.3333%Centrarse exclusivamente en la instalación de cámaras de seguridad. # Incorrecto, las cámaras no abordan los accesos no autorizados a la red.
+}
+
+# Teoria mezclada
+
+::En la fase de análisis de activos e identificación de riesgos de un Plan Director de Seguridad, ¿cuál sería un enfoque efectivo para determinar la criticidad de un activo de información?:: {
+=Evaluar el impacto en la organización si el activo se ve comprometido. # Correcto, el impacto es clave para determinar la criticidad.
+~%-33.3333%Contar el número de usuarios que acceden al activo. # Incorrecto, el número de usuarios no determina directamente la criticidad.
+~%-33.3333%Medir el tiempo de inactividad del sistema durante el mantenimiento. # Incorrecto, aunque relevante, no determina la criticidad del activo.
+~%-33.3333%Calcular el costo de reemplazo del hardware que almacena el activo. # Incorrecto, el costo de reemplazo no es el único factor en la criticidad.
+}
+
+::¿Qué elemento es esencial al construir un Plan Director de Seguridad para garantizar su eficacia?:: {
+=Asegurar que el plan esté alineado con los objetivos estratégicos de la organización. # Correcto, la alineación estratégica es crucial.
+~%-33.3333%Focalizar exclusivamente en las soluciones tecnológicas avanzadas. # Incorrecto, la tecnología es solo una parte del plan.
+~%-33.3333%Implementar únicamente medidas de seguridad física. # Incorrecto, las medidas deben ser integrales, incluyendo aspectos digitales.
+~%-33.3333%Limitar la participación en el desarrollo del plan solo al equipo de IT. # Incorrecto, la participación debe ser multidisciplinaria.
+}
+
+::Dentro de un plan de concienciación en ciberseguridad, ¿cuál es un enfoque efectivo para mejorar la retención de conocimientos en los empleados?:: {
+=Combinar sesiones de formación con evaluaciones y ejercicios prácticos. # Correcto, esto fomenta una mejor comprensión y retención.
+~%-33.3333%Realizar una única sesión intensiva de formación al año. # Incorrecto, la formación debe ser continua y adaptativa.
+~%-33.3333%Concentrarse solo en la formación de la alta dirección. # Incorrecto, todos los niveles de la organización deben ser formados.
+~%-33.3333%Utilizar únicamente materiales en línea autoguiados. # Incorrecto, aunque útiles, la formación debe ser variada.
+}
+
+::¿Cuál es un ejemplo de política del puesto de usuario necesaria para la protección de datos?:: {
+=Requerir la autenticación de dos factores para acceder a sistemas críticos. # Correcto, aumenta la seguridad en el acceso a información sensible.
+~%-33.3333%Permitir el uso de dispositivos personales sin restricciones para el trabajo. # Incorrecto, esto podría aumentar el riesgo de seguridad.
+~%-33.3333%Prohibir por completo el uso de correo electrónico para comunicaciones internas. # Incorrecto, no es práctico ni efectivo.
+~%-33.3333%Evitar cualquier tipo de actualización de seguridad en los equipos. # Incorrecto, las actualizaciones son fundamentales para mantener la seguridad.
+}
+
+::En el contexto de un Plan Director de Seguridad, ¿cómo se debería abordar la gestión de incidentes de ciberseguridad?:: {
+=Establecer un proceso claro de respuesta a incidentes, incluyendo notificación, análisis y medidas correctivas. # Correcto, un proceso de gestión de incidentes eficaz es esencial.
+~%-33.3333%Ignorar los pequeños incidentes para concentrarse solo en amenazas mayores. # Incorrecto, todos los incidentes deben ser atendidos adecuadamente.
+~%-33.3333%Dejar la gestión de incidentes exclusivamente en manos del equipo de IT. # Incorrecto, la gestión de incidentes debe involucrar a varios departamentos.
+~%-33.3333%Centrarse solo en la recuperación de datos sin analizar la causa del incidente. # Incorrecto, es importante entender y abordar la causa raíz.
+}
+
+::¿Qué rol juega el análisis de riesgos en la determinación de las políticas de seguridad del puesto de usuario?:: {
+=Identificar y evaluar las amenazas potenciales a los usuarios para desarrollar políticas que mitiguen estos riesgos. # Correcto, el análisis de riesgos informa la creación de políticas efectivas para la seguridad del puesto de usuario.
+~%-33.3333%Dictar todas las operaciones del día a día de los usuarios sin flexibilidad. # Incorrecto, el análisis de riesgos guía las políticas, pero debe permitir cierta flexibilidad operativa.
+~%-33.3333%Evitar la implementación de cualquier política de seguridad, confiando en la discreción del usuario. # Incorrecto, el análisis de riesgos justifica la necesidad de políticas de seguridad.
+~%-33.3333%Limitar la interacción del usuario con todos los sistemas para reducir riesgos. # Incorrecto, las políticas deben equilibrar seguridad con funcionalidad.
+}

@@ -456,44 +456,94 @@
 
 # Teoria mezclada
 
-::En la fase de análisis de activos e identificación de riesgos de un Plan Director de Seguridad, ¿cuál sería un enfoque efectivo para determinar la criticidad de un activo de información?:: {
+::En la fase de análisis de activos e identificación de riesgos de un Plan Director de Seguridad, ¿cuál sería un enfoque efectivo para determinar la criticidad de un activo de información?::En la fase de análisis de activos e identificación de riesgos de un Plan Director de Seguridad, ¿cuál sería un enfoque efectivo para determinar la criticidad de un activo de información? {
 =Evaluar el impacto en la organización si el activo se ve comprometido. # Correcto, el impacto es clave para determinar la criticidad.
 ~%-33.3333%Contar el número de usuarios que acceden al activo. # Incorrecto, el número de usuarios no determina directamente la criticidad.
 ~%-33.3333%Medir el tiempo de inactividad del sistema durante el mantenimiento. # Incorrecto, aunque relevante, no determina la criticidad del activo.
 ~%-33.3333%Calcular el costo de reemplazo del hardware que almacena el activo. # Incorrecto, el costo de reemplazo no es el único factor en la criticidad.
 }
 
-::¿Qué elemento es esencial al construir un Plan Director de Seguridad para garantizar su eficacia?:: {
+::¿Qué elemento es esencial al construir un Plan Director de Seguridad para garantizar su eficacia?::¿Qué elemento es esencial al construir un Plan Director de Seguridad para garantizar su eficacia? {
 =Asegurar que el plan esté alineado con los objetivos estratégicos de la organización. # Correcto, la alineación estratégica es crucial.
 ~%-33.3333%Focalizar exclusivamente en las soluciones tecnológicas avanzadas. # Incorrecto, la tecnología es solo una parte del plan.
 ~%-33.3333%Implementar únicamente medidas de seguridad física. # Incorrecto, las medidas deben ser integrales, incluyendo aspectos digitales.
 ~%-33.3333%Limitar la participación en el desarrollo del plan solo al equipo de IT. # Incorrecto, la participación debe ser multidisciplinaria.
 }
 
-::Dentro de un plan de concienciación en ciberseguridad, ¿cuál es un enfoque efectivo para mejorar la retención de conocimientos en los empleados?:: {
+::Dentro de un plan de concienciación en ciberseguridad, ¿cuál es un enfoque efectivo para mejorar la retención de conocimientos en los empleados?::Dentro de un plan de concienciación en ciberseguridad, ¿cuál es un enfoque efectivo para mejorar la retención de conocimientos en los empleados? {
 =Combinar sesiones de formación con evaluaciones y ejercicios prácticos. # Correcto, esto fomenta una mejor comprensión y retención.
 ~%-33.3333%Realizar una única sesión intensiva de formación al año. # Incorrecto, la formación debe ser continua y adaptativa.
 ~%-33.3333%Concentrarse solo en la formación de la alta dirección. # Incorrecto, todos los niveles de la organización deben ser formados.
 ~%-33.3333%Utilizar únicamente materiales en línea autoguiados. # Incorrecto, aunque útiles, la formación debe ser variada.
 }
 
-::¿Cuál es un ejemplo de política del puesto de usuario necesaria para la protección de datos?:: {
+::¿Cuál es un ejemplo de política del puesto de usuario necesaria para la protección de datos?::¿Cuál es un ejemplo de política del puesto de usuario necesaria para la protección de datos? {
 =Requerir la autenticación de dos factores para acceder a sistemas críticos. # Correcto, aumenta la seguridad en el acceso a información sensible.
 ~%-33.3333%Permitir el uso de dispositivos personales sin restricciones para el trabajo. # Incorrecto, esto podría aumentar el riesgo de seguridad.
 ~%-33.3333%Prohibir por completo el uso de correo electrónico para comunicaciones internas. # Incorrecto, no es práctico ni efectivo.
 ~%-33.3333%Evitar cualquier tipo de actualización de seguridad en los equipos. # Incorrecto, las actualizaciones son fundamentales para mantener la seguridad.
 }
 
-::En el contexto de un Plan Director de Seguridad, ¿cómo se debería abordar la gestión de incidentes de ciberseguridad?:: {
+::En el contexto de un Plan Director de Seguridad, ¿cómo se debería abordar la gestión de incidentes de ciberseguridad?::En el contexto de un Plan Director de Seguridad, ¿cómo se debería abordar la gestión de incidentes de ciberseguridad? {
 =Establecer un proceso claro de respuesta a incidentes, incluyendo notificación, análisis y medidas correctivas. # Correcto, un proceso de gestión de incidentes eficaz es esencial.
 ~%-33.3333%Ignorar los pequeños incidentes para concentrarse solo en amenazas mayores. # Incorrecto, todos los incidentes deben ser atendidos adecuadamente.
 ~%-33.3333%Dejar la gestión de incidentes exclusivamente en manos del equipo de IT. # Incorrecto, la gestión de incidentes debe involucrar a varios departamentos.
 ~%-33.3333%Centrarse solo en la recuperación de datos sin analizar la causa del incidente. # Incorrecto, es importante entender y abordar la causa raíz.
 }
 
-::¿Qué rol juega el análisis de riesgos en la determinación de las políticas de seguridad del puesto de usuario?:: {
+::¿Qué rol juega el análisis de riesgos en la determinación de las políticas de seguridad del puesto de usuario?::¿Qué rol juega el análisis de riesgos en la determinación de las políticas de seguridad del puesto de usuario? {
 =Identificar y evaluar las amenazas potenciales a los usuarios para desarrollar políticas que mitiguen estos riesgos. # Correcto, el análisis de riesgos informa la creación de políticas efectivas para la seguridad del puesto de usuario.
 ~%-33.3333%Dictar todas las operaciones del día a día de los usuarios sin flexibilidad. # Incorrecto, el análisis de riesgos guía las políticas, pero debe permitir cierta flexibilidad operativa.
 ~%-33.3333%Evitar la implementación de cualquier política de seguridad, confiando en la discreción del usuario. # Incorrecto, el análisis de riesgos justifica la necesidad de políticas de seguridad.
 ~%-33.3333%Limitar la interacción del usuario con todos los sistemas para reducir riesgos. # Incorrecto, las políticas deben equilibrar seguridad con funcionalidad.
+}
+
+::¿Cómo contribuye la identificación y clasificación de activos al proceso de gestión de riesgos en un Plan Director de Seguridad?::¿Cómo contribuye la identificación y clasificación de activos al proceso de gestión de riesgos en un Plan Director de Seguridad? {
+=Facilita la comprensión de qué activos son críticos y requieren mayor protección, permitiendo priorizar esfuerzos de mitigación. # Correcto, la identificación y clasificación de activos es fundamental para una gestión de riesgos efectiva.
+~%-33.3333%Permite asignar un presupuesto fijo para cada activo sin considerar su importancia. # Incorrecto, la clasificación de activos se basa en su criticidad, no en un presupuesto fijo.
+~%-33.3333%Solo se centra en los activos digitales, ignorando los físicos y humanos. # Incorrecto, todos los tipos de activos deben ser considerados en la gestión de riesgos.
+~%-33.3333%Evita la necesidad de realizar análisis de riesgos regulares. # Incorrecto, la identificación de activos es un paso en el análisis de riesgos, no un sustituto.
+}
+
+::¿Cuál es un paso crucial en la fase inicial de desarrollo de un Plan Director de Seguridad?::¿Cuál es un paso crucial en la fase inicial de desarrollo de un Plan Director de Seguridad? {
+=Realizar un análisis exhaustivo de la situación actual de seguridad de la organización para identificar áreas de mejora. # Correcto, esta es una etapa fundamental en el desarrollo del plan.
+~%-33.3333%Enfocarse exclusivamente en la implementación de nuevas tecnologías de seguridad. # Incorrecto, el enfoque inicial debe ser más amplio que solo la tecnología.
+~%-33.3333%Contratar a un equipo externo para gestionar toda la seguridad. # Incorrecto, aunque la ayuda externa puede ser valiosa, no sustituye la necesidad de un plan interno.
+~%-33.3333%Limitar el plan solo a las áreas de alto riesgo, ignorando otras. # Incorrecto, un plan director debe abarcar todos los aspectos de la seguridad.
+}
+
+::En un programa de concienciación en ciberseguridad, ¿cuál es un método efectivo para asegurar el compromiso y la comprensión de todos los empleados?::En un programa de concienciación en ciberseguridad, ¿cuál es un método efectivo para asegurar el compromiso y la comprensión de todos los empleados? {
+=Incorporar una variedad de métodos de formación, como sesiones interactivas, simulacros y materiales en línea, adaptados a diferentes roles. # Correcto, la variedad y adaptación aumentan la efectividad.
+~%-33.3333%Centrarse únicamente en la formación de nuevos empleados. # Incorrecto, la formación debe ser continua y para todos los empleados.
+~%-33.3333%Realizar la formación solo cuando ocurre un incidente de seguridad. # Incorrecto, la formación debe ser proactiva, no solo reactiva.
+~%-33.3333%Dejar que los empleados busquen su propia formación sin orientación. # Incorrecto, la organización debe proporcionar y guiar la formación.
+}
+
+::En la gestión de vulnerabilidades dentro de un Plan Director de Seguridad, ¿cómo se deben priorizar las acciones de remediación?::En la gestión de vulnerabilidades dentro de un Plan Director de Seguridad, ¿cómo se deben priorizar las acciones de remediación? {
+=Basándose en la evaluación del impacto y la probabilidad de explotación de cada vulnerabilidad, priorizando aquellas que representan mayores riesgos. # Correcto, la priorización se basa en el impacto y la probabilidad.
+~%-33.3333%Dirigiendo todos los recursos solo a vulnerabilidades recién descubiertas. # Incorrecto, no todas las nuevas vulnerabilidades son igualmente críticas.
+~%-33.3333%Enfocándose solo en las vulnerabilidades que afectan a la alta dirección. # Incorrecto, todas las vulnerabilidades relevantes deben ser consideradas.
+~%-33.3333%Priorizando vulnerabilidades basadas únicamente en recomendaciones externas. # Incorrecto, las recomendaciones son útiles, pero deben adaptarse al contexto de la organización.
+}
+
+
+::¿Cómo beneficia el uso de un modelo de madurez de seguridad en la identificación y priorización de inversiones en ciberseguridad?::¿Cómo beneficia el uso de un modelo de madurez de seguridad en la identificación y priorización de inversiones en ciberseguridad? {
+=Permite a la organización identificar los niveles de madurez actuales de sus controles de seguridad y priorizar las inversiones en áreas que requieren mayor desarrollo. # Correcto, el modelo de madurez ayuda a dirigir las inversiones de manera estratégica.
+~%-33.3333%Garantiza que solo se invierta en la tecnología de seguridad más avanzada. # Incorrecto, el enfoque no se limita a la tecnología, sino a la madurez general de los controles.
+~%-33.3333%Evita toda inversión en ciberseguridad hasta alcanzar un nivel de madurez específico. # Incorrecto, el modelo de madurez se usa para guiar, no para detener las inversiones.
+~%-33.3333%Recomienda invertir uniformemente en todos los aspectos de seguridad, independientemente de su nivel de madurez actual. # Incorrecto, la idea es priorizar inversiones basadas en la necesidad y el nivel de madurez.
+}
+
+::¿Qué indicaría un nivel alto de madurez en los controles de seguridad de una organización según un modelo de madurez de seguridad?::¿Qué indicaría un nivel alto de madurez en los controles de seguridad de una organización según un modelo de madurez de seguridad? {
+=Los controles de seguridad están completamente integrados en las operaciones y la cultura de la organización, con procesos de revisión y mejora continua. # Correcto, un alto nivel de madurez refleja una integración y mejora continua de los controles de seguridad.
+~%-33.3333%La organización ha implementado las últimas tecnologías de seguridad, independientemente de su integración en los procesos de negocio. # Incorrecto, el alto nivel de madurez no solo se basa en la tecnología, sino en la integración y eficacia.
+~%-33.3333%Los controles de seguridad son gestionados exclusivamente por el departamento de IT. # Incorrecto, un alto nivel de madurez implica una gestión y comprensión de la seguridad en toda la organización.
+~%-33.3333%La organización no ha experimentado incidentes de seguridad en un año. # Incorrecto, la ausencia de incidentes no es necesariamente indicativa de un alto nivel de madurez en seguridad.
+}
+
+::En el contexto de un modelo de madurez de seguridad, ¿cómo debería una organización abordar las brechas identificadas en su evaluación de madurez?::En el contexto de un modelo de madurez de seguridad, ¿cómo debería una organización abordar las brechas identificadas en su evaluación de madurez? {
+=Desarrollar un plan de acción para abordar estas brechas, priorizando áreas críticas y asignando los recursos necesarios para mejorar la madurez de los controles de seguridad. # Correcto, el enfoque es sistemático y orientado a la mejora continua.
+~%-33.3333%Ignorar las brechas menores y concentrarse solo en grandes deficiencias. # Incorrecto, todas las brechas deben ser abordadas para mejorar la madurez de la seguridad.
+~%-33.3333%Delegar la responsabilidad de cerrar las brechas únicamente al personal de seguridad de IT. # Incorrecto, cerrar brechas en la madurez de seguridad es una responsabilidad organizacional.
+~%-33.3333%Esperar una auditoría externa para tomar medidas correctivas. # Incorrecto, la organización debe ser proactiva en abordar las brechas, no esperar a auditorías externas.
 }

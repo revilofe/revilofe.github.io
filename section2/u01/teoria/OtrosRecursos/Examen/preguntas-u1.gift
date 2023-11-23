@@ -447,7 +447,7 @@
 ~%-33.3333%Centrarse únicamente en la seguridad física de las instalaciones. # Incorrecto, la seguridad cibernética requiere más que medidas de seguridad física.
 }
 
-::Tras identificar un riesgo de accesos no autorizados a la red, ¿qué medida del Plan Director de Seguridad debería implementar una empresa?:: {
+::Tras identificar un riesgo de accesos no autorizados a la red, ¿qué medida del Plan Director de Seguridad debería implementar una empresa?::Tras identificar un riesgo de accesos no autorizados a la red, ¿qué medida del Plan Director de Seguridad debería implementar una empresa? {
 =Reforzar la autenticación y control de acceso, y realizar sesiones de formación sobre la importancia de mantener las credenciales seguras. # Correcto, fortalecer el acceso y educar al personal son acciones críticas.
 ~%-33.3333%Desconectar la red de internet para prevenir accesos externos. # Incorrecto, esto no es práctico y afecta la operatividad.
 ~%-33.3333%Confiar en los empleados para que informen de cualquier actividad sospechosa sin medidas adicionales. # Incorrecto, se requieren medidas proactivas más allá de la vigilancia del personal.
@@ -497,6 +497,58 @@
 ~%-33.3333%Evitar la implementación de cualquier política de seguridad, confiando en la discreción del usuario. # Incorrecto, el análisis de riesgos justifica la necesidad de políticas de seguridad.
 ~%-33.3333%Limitar la interacción del usuario con todos los sistemas para reducir riesgos. # Incorrecto, las políticas deben equilibrar seguridad con funcionalidad.
 }
+
+
+::¿Qué diferencia principal existe entre una amenaza y una vulnerabilidad en el contexto de la seguridad de la información?::¿Qué diferencia principal existe entre una amenaza y una vulnerabilidad en el contexto de la seguridad de la información? {
+=Una amenaza es cualquier potencial de daño a los activos, mientras que una vulnerabilidad es una debilidad que podría ser explotada por una amenaza. # Correcto, es fundamental distinguir entre el potencial de daño (amenaza) y las debilidades (vulnerabilidad).
+~%-33.3333%Una amenaza es un software malicioso, mientras que una vulnerabilidad es un error humano. # Incorrecto, tanto las amenazas como las vulnerabilidades pueden tener diversas formas.
+~%-33.3333%Una vulnerabilidad es siempre externa, mientras que una amenaza es siempre interna. # Incorrecto, tanto las vulnerabilidades como las amenazas pueden ser internas o externas.
+~%-33.3333%No hay diferencia; amenazas y vulnerabilidades son términos intercambiables. # Incorrecto, son conceptos relacionados pero distintos.
+}
+
+::En la gestión de riesgos, ¿cómo se relaciona un activo con el concepto de riesgo?::En la gestión de riesgos, ¿cómo se relaciona un activo con el concepto de riesgo? {
+=El riesgo se refiere a la posibilidad de que un activo sufra daño o pérdida debido a una amenaza que explote una vulnerabilidad. # Correcto, el riesgo está directamente relacionado con los activos y su potencial compromiso.
+~%-33.3333%Los activos son irrelevantes en la evaluación de riesgos. # Incorrecto, los activos son fundamentales en la evaluación de riesgos.
+~%-33.3333%Un activo solo se considera en la gestión de riesgos si tiene valor financiero. # Incorrecto, todos los activos, independientemente de su naturaleza, son relevantes en la gestión de riesgos.
+~%-33.3333%El riesgo se mide únicamente por la cantidad de activos en una organización. # Incorrecto, la cantidad de activos es solo una parte de la evaluación de riesgos.
+}
+
+::¿Cómo se puede mitigar eficazmente el riesgo asociado a un activo en una organización?::¿Cómo se puede mitigar eficazmente el riesgo asociado a un activo en una organización? {
+=Identificando y evaluando las vulnerabilidades y amenazas asociadas al activo, y aplicando controles adecuados para reducir el riesgo. # Correcto, la mitigación efectiva del riesgo implica una evaluación integral y la aplicación de controles.
+~%-33.3333%Ignorando las vulnerabilidades menores y enfocándose solo en amenazas externas. # Incorrecto, todas las vulnerabilidades y amenazas deben ser consideradas.
+~%-33.3333%Centrando todos los recursos en asegurar un solo activo crítico. # Incorrecto, se deben equilibrar los recursos para proteger todos los activos relevantes.
+~%-33.3333%Tratando las amenazas y vulnerabilidades como riesgos independientes y no relacionados. # Incorrecto, las amenazas y vulnerabilidades deben evaluarse en el contexto del riesgo que representan para los activos.
+}
+
+::¿Qué representa una vulnerabilidad en el contexto de un activo específico de una organización?::¿Qué representa una vulnerabilidad en el contexto de un activo específico de una organización? {
+=Una debilidad o deficiencia en el activo o en los controles asociados que podría ser explotada por una amenaza. # Correcto, una vulnerabilidad es una debilidad inherente al activo o a sus controles.
+~%-33.3333%Una medida de seguridad que protege al activo. # Incorrecto, es lo contrario; una vulnerabilidad es una debilidad, no una medida de protección.
+~%-33.3333%El costo financiero para reemplazar el activo. # Incorrecto, esto se relaciona con el valor del activo, no con su vulnerabilidad.
+~%-33.3333%La probabilidad de que el activo sea atacado. # Incorrecto, esto se relaciona más con la amenaza que con la vulnerabilidad del activo.
+}
+
+::¿Cómo se relaciona una amenaza con el concepto de riesgo en la seguridad de la información?::¿Cómo se relaciona una amenaza con el concepto de riesgo en la seguridad de la información? {
+=Una amenaza contribuye al nivel de riesgo evaluando la posibilidad de que un activo sea comprometido debido a la explotación de una vulnerabilidad. # Correcto, las amenazas son factores externos o internos que aumentan el riesgo.
+~%-33.3333%Una amenaza es una medida implementada para reducir el riesgo. # Incorrecto, las amenazas aumentan el riesgo, no lo reducen.
+~%-33.3333%Una amenaza y un riesgo son lo mismo y pueden usarse indistintamente. # Incorrecto, son conceptos relacionados pero distintos.
+~%-33.3333%Las amenazas solo se consideran en el riesgo si son de origen tecnológico. # Incorrecto, las amenazas pueden ser de diversas naturalezas y todas son relevantes en la evaluación del riesgo.
+}
+
+::¿Cómo afecta una vulnerabilidad no mitigada a la seguridad de un activo en la organización?::¿Cómo afecta una vulnerabilidad no mitigada a la seguridad de un activo en la organización? {
+=Incrementa la probabilidad de que el activo sea comprometido, ya que la vulnerabilidad puede ser explotada. # Correcto, una vulnerabilidad no mitigada aumenta el riesgo de compromiso.
+~%-33.3333%Mejora la seguridad del activo al exponerlo a más pruebas. # Incorrecto, aumenta el riesgo, no mejora la seguridad.
+~%-33.3333%No tiene ningún impacto en la seguridad del activo. # Incorrecto, tiene un impacto directo en la seguridad.
+~%-33.3333%Solo afecta los activos durante auditorías de seguridad. # Incorrecto, afecta los activos continuamente, no solo durante auditorías.
+}
+
+::¿Qué rol juegan los controles de seguridad en la relación entre riesgos y activos en una organización?::¿Qué rol juegan los controles de seguridad en la relación entre riesgos y activos en una organización? {
+=Los controles de seguridad buscan reducir los riesgos asociados a los activos, protegiéndolos de posibles amenazas y explotación de vulnerabilidades. # Correcto, los controles de seguridad son esenciales para minimizar los riesgos.
+~%-33.3333%Los controles de seguridad son efectivos solo para activos de alto valor. # Incorrecto, son necesarios para proteger todos los activos relevantes.
+~%-33.3333%La implementación de controles de seguridad puede ser omitida en activos no digitales. # Incorrecto, los controles son importantes para todos los tipos de activos.
+~%-33.3333%Los controles de seguridad deben ser estáticos y no adaptarse a cambios en los riesgos. # Incorrecto, los controles deben adaptarse a los cambios en el entorno de riesgo.
+}
+
+
 
 ::¿Cómo contribuye la identificación y clasificación de activos al proceso de gestión de riesgos en un Plan Director de Seguridad?::¿Cómo contribuye la identificación y clasificación de activos al proceso de gestión de riesgos en un Plan Director de Seguridad? {
 =Facilita la comprensión de qué activos son críticos y requieren mayor protección, permitiendo priorizar esfuerzos de mitigación. # Correcto, la identificación y clasificación de activos es fundamental para una gestión de riesgos efectiva.

@@ -68,7 +68,8 @@ Tu posición es (3, 3)  #aunque internamente esté en la posición (2, 2)
 
 * 3: Evitar que en la posición inicial del jugador en el mapa se genere una pista o una trampa.
 
-* 4: Limpiar la consola cada vez que realices un movimiento y dejar el mensaje de la pista o trampa en la zona superior de la consola, justo arriba del mapa. Pero cuando se encuentra el tesoro no debe borrar la consola y el mensaje aparecerá abajo y finalizará el juego.
+* 4: Limpiar la consola cada vez que realices un movimiento y dejar el mensaje de la pista o trampa en la zona superior de la consola, justo arriba del mapa.
+    Cuando se encuentra el tesoro no debe borrar la consola, el mensaje de la posición en la que se encuentra el tesoro aparecerá abajo y finalizará el juego.
 
 * 5 (DIFÍCIL): Mostrar un símbolo para el jugador. Para ello, una solución es cambiar el código de la función imprimir_mapa_oculto()
 """

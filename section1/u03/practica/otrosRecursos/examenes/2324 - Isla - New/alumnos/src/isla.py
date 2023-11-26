@@ -46,7 +46,7 @@ CORRECCIÓN DE ERRORES O PROBLEMAS:
 
 * 4: Las funciones pedir_movimiento() y obtener_nueva_posicion() tienen algo raro, ya que aparentemente parece que son correctas, pero dan problemas... igual depurando puedes aclararte y corregirlo.
 
-* 5: Corrige otros errores sintácticos que está indicando Visual Studio Code para evitar problemas y pasar a las mejoras.
+* 5: Corrige otros errores sintácticos que te indique el IDE para evitar problemas y pasar a las mejoras.
 
 MEJORAS:
 

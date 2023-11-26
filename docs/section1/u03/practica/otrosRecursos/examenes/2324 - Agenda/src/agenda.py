@@ -1,16 +1,30 @@
 """
-27/11/2023
+Agenda
+------
 
-Práctica del examen para realizar en casa
------------------------------------------
+Práctica para realizar esta semana.
 
-* El programa debe estar correctamente documentado.
+La fecha de entrega es el próximo viernes, 1 de diciembre.
 
-* Debes intentar ajustarte lo máximo que puedas a lo que se pide en los comentarios TODO.
+   
+   * RA1: Conoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.
+      - CE: a), b), c), d), e), f), g), h) e i).
+   * RA3: Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.
+      - CE: a), b), c), d), e), f) y g).
+   * RA6: Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.
+      - CE: a), b), c), d) y e).
+      
+1. El programa debe estar correctamente documentado (Docstrings y comentarios).
 
-* Tienes libertad para desarrollar los métodos o funciones que consideres, pero estás obligado a usar como mínimo todos los que se solicitan en los comentarios TODO.
+2. Observad que las funciones existentes en el código del programa no están completamente bien documentadas.
 
-* Además, tu programa deberá pasar correctamente las pruebas unitarias que se adjuntan en el fichero test_agenda.py, por lo que estás obligado a desarrollar los métodos que se importan y prueban en la misma: pedir_email(), validar_email() y validar_telefono()
+3. Debes intentar ajustarte lo máximo posible a lo que se pide en los comentarios TODO que observarás en el programa agenda.py.
+
+4. Tienes libertad para desarrollar los métodos o funciones que consideres, pero estás obligado a usar como mínimo todos los que se solicitan en los comentarios TODO.
+
+5. Además, tu programa deberá pasar correctamente las pruebas unitarias que se adjuntan en el fichero test_agenda.py de la carpeta test.
+
+6. Debido al punto anterior, estás obligado a desarrollar los métodos que se importan y prueban en los tests unitarios: pedir_email(), validar_email() y validar_telefono()
 
 """
 
@@ -55,7 +69,7 @@ def eliminar_contacto(contactos: list, email: str):
     ...
     """
     try:
-        #TODO: Crear función buscar_contacto para recuperar la posición de un contacto con un email determinado
+        #TODO: Crear función buscar_contacto para recuperar la posición de un contacto con un email determinado...
 
         if pos != None:
             del contactos[pos]
@@ -81,7 +95,6 @@ def agenda(contactos: list):
         if opcion in ?:
 
 
-
 def pulse_tecla_para_continuar():
     """ Muestra un mensaje y realiza una pausa hasta que se pulse una tecla
     """
@@ -94,7 +107,7 @@ def main():
     """
     borrar_consola()
 
-    #TODO: Asignar una estructura de datos vacía para trabajar con la agenda
+    #TODO: Asignar una estructura de datos vacía para trabajar con la agenda...
     contactos = ?
 
     #TODO: Modificar la función cargar_contactos para que almacene todos los contactos del fichero en una lista con un diccionario por contacto (claves: nombre, apellido, email y telefonos)

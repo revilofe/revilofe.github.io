@@ -172,7 +172,7 @@ def main():
     #
     # >> Seleccione una opción: 
     #
-    #TODO: Para la opción 3, modificar un contacto, deberás desarrollar las funciones necesarias para actualizar la información de un contacto.
+    #TODO: Para la opción 2, modificar un contacto, deberás desarrollar las funciones necesarias para actualizar la información de un contacto.
     #TODO: También deberás desarrollar la opción 6 que deberá preguntar por el criterio de búsqueda (nombre, apellido, email o telefono) y el valor a buscar para mostrar los contactos que encuentre en la agenda.
     agenda(?)
 

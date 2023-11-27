@@ -161,9 +161,9 @@ El uso de cualquier recurso prohibido supondrá la calificación de 0 en la acti
 
 Práctica para realizar en casa (30%) que se entregará esta semana. Esta práctica se evaluará con una calificación de 0 a 10 puntos.
 
-La prueba especifica (60%) consistirá en dos pruebas: la práctica, dónde tenéis que analizar y actualizar un programa en Python para que cumpla con los requisitos especificados en el enunciado, y la teórica, que consiste en un cuestionario de preguntas sobre los contenidos de las unidades 1, 2 y 3.
-- La parte práctica, este ejercicio, se evaluará con una calificación de 0 a 10 puntos. (80%)
-- La parte teórica, que se realizará otro dia, y se evaluará con una calificación de 0 a 10 puntos. (20%)
+La prueba específica (60%) consistirá en dos pruebas: la práctica, dónde tenéis que analizar y actualizar un programa en Python para que cumpla con los requisitos especificados en el enunciado, y la teórica, que consiste en un cuestionario de preguntas sobre los contenidos de las unidades 1, 2 y 3.
+- La parte práctica se evaluará con una calificación de 0 a 10 puntos. (80%)
+- La parte teórica se evaluará con una calificación de 0 a 10 puntos. (20%)
 
 El 10% restante corresponde al examen práctico ya realizado al finalizar la unidad 1. Esta práctica se evaluará con una calificación de 0 a 10 puntos.
 

@@ -3437,6 +3437,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Descripción:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comentarios-todo-que-debes-resolver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comentarios TODO que debes resolver:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3565,71 +3580,60 @@
 <hr />
 <h2 id="descripcion">Descripción:<a class="headerlink" href="#descripcion" title="Permanent link">&para;</a></h2>
 <ol>
-<li>
-<p>El programa debe estar correctamente documentado (Docstrings y comentarios). <a href="https://revilofe.github.io/section1/u02/teoria/PROG-U2.5.-Documentar/">UD 2 - 2.5 Documentar el código</a></p>
-</li>
-<li>
-<p>Observad que las funciones existentes en el código del programa no están completamente bien documentadas.</p>
-</li>
-<li>
-<p>Debes intentar ajustarte lo máximo posible a lo que se pide en los comentarios <code>TODO</code> que observarás en el programa <code>agenda.py</code>.</p>
-</li>
-<li>
-<p>Tienes libertad para desarrollar los métodos o funciones que consideres, pero estás obligado a usar como mínimo todos los que se solicitan en los comentarios TODO.</p>
-</li>
-<li>
-<p>Además, tu programa deberá pasar correctamente las <code>pruebas unitarias</code> que se adjuntan en el fichero <code>test_agenda.py</code> de la carpeta <code>test</code>.</p>
-</li>
-<li>
-<p>Debido al punto anterior, estás obligado a desarrollar los métodos que se importan y prueban en los tests unitarios: <code>pedir_email()</code>, <code>validar_email()</code> y <code>validar_telefono()</code></p>
-</li>
+<li>El programa debe estar correctamente documentado (Docstrings y comentarios). <a href="https://revilofe.github.io/section1/u02/teoria/PROG-U2.5.-Documentar/">UD 2 - 2.5 Documentar el código</a></li>
+<li>Observad que las funciones existentes en el código del programa no están completamente bien documentadas.</li>
+<li>Debes intentar ajustarte lo máximo posible a lo que se pide en los comentarios <code>TODO</code> que observarás en el programa <code>agenda.py</code>.</li>
+<li>Tienes libertad para desarrollar los métodos o funciones que consideres, pero estás obligado a usar como mínimo todos los que se solicitan en los comentarios TODO.</li>
+<li>Además, tu programa deberá pasar correctamente las <code>pruebas unitarias</code> que se adjuntan en el fichero <code>test_agenda.py</code> de la carpeta <code>test</code>.</li>
+<li>Debido al punto anterior, estás obligado a desarrollar los métodos que se importan y prueban en los tests unitarios: <code>pedir_email()</code>, <code>validar_email()</code> y <code>validar_telefono()</code></li>
+<li>En algunos casos, el codigo no diferencia adecuadamente la instrucciones que procesan informacion, de las que interactuan con el usuario a traves de consola. Siguiendo las buenas practicas vistas durante el curso, soluciona estos problemas alla donde te los encuenteres.</li>
 </ol>
-<p>### Comentarios TODO que debes resolver:</p>
+<h3 id="comentarios-todo-que-debes-resolver">Comentarios TODO que debes resolver:<a class="headerlink" href="#comentarios-todo-que-debes-resolver" title="Permanent link">&para;</a></h3>
 <ul>
-<li>
-<p>Línea 42
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#TODO: Crear un conjunto con las posibles opciones del menú de la agenda
+<li>Línea 42</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#TODO: Crear un conjunto con las posibles opciones del menú de la agenda
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>OPCIONES_MENU = ?
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>#TODO: Utiliza este conjunto en las funciones agenda() y pedir_opcion()
-</code></pre></div></p>
-</li>
-<li>
-<p>Línea 60
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>#TODO: Crear un bucle para mostrar el menú y ejecutar las funciones necesarias según la opción seleccionada...
-</code></pre></div></p>
-</li>
-<li>
-<p>Línea 72
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>#TODO: Crear función buscar_contacto para recuperar la posición de un contacto con un email determinado...
-</code></pre></div></p>
-</li>
-<li>
-<p>Línea 88
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>#TODO: Crear un bucle para mostrar el menú y ejecutar las funciones necesarias según la opción seleccionada...
-</code></pre></div></p>
-</li>
-<li>
-<p>Línea 94
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>#TODO: Se valorará que utilices la diferencia simétrica de conjuntos para comprobar que la opción es un número entero del 1 al 6
+</code></pre></div>
+<ul>
+<li>Línea 60</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>#TODO: Crear un bucle para mostrar el menú y ejecutar las funciones necesarias según la opción seleccionada...
+</code></pre></div>
+<ul>
+<li>Línea 72</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>#TODO: Crear función buscar_contacto para recuperar la posición de un contacto con un email determinado...
+</code></pre></div>
+<ul>
+<li>Línea 88</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>#TODO: Crear un bucle para mostrar el menú y ejecutar las funciones necesarias según la opción seleccionada...
+</code></pre></div>
+<ul>
+<li>Línea 94</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>#TODO: Se valorará que utilices la diferencia simétrica de conjuntos para comprobar que la opción es un número entero del 1 al 6
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>     if opcion in ?:
-</code></pre></div></p>
-</li>
-<li>
-<p>Línea 110
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>#TODO: Asignar una estructura de datos vacía para trabajar con la agenda...
+</code></pre></div>
+<ul>
+<li>Línea 110</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>#TODO: Asignar una estructura de datos vacía para trabajar con la agenda...
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>contactos = ?
-</code></pre></div></p>
-</li>
-<li>
-<p>Línea 113
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>#TODO: Modificar la función cargar_contactos para que almacene todos los contactos del fichero en una lista con un diccionario por contacto (claves: nombre, apellido, email y telefonos)
+</code></pre></div>
+<ul>
+<li>Línea 113</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>#TODO: Modificar la función cargar_contactos para que almacene todos los contactos del fichero en una lista con un diccionario por contacto (claves: nombre, apellido, email y telefonos)
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>#TODO: Realizar una llamada a la función cargar_contacto con todo lo necesario para que funcione correctamente.
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>cargar_contactos(?)
-</code></pre></div></p>
-</li>
-<li>
-<p>Línea 117
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>#TODO: Crear función para agregar un contacto. Debes tener en cuenta lo siguiente:
+</code></pre></div>
+<ul>
+<li>Línea 117</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>#TODO: Crear función para agregar un contacto. Debes tener en cuenta lo siguiente:
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a># - El nombre y apellido no pueden ser una cadena vacía o solo espacios y se guardarán con la primera letra mayúscula y el resto minúsculas (ojo a los nombre compuestos)
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a># - El email debe ser único en la lista de contactos, no puede ser una cadena vacía y debe contener el carácter @.
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a># - El email se guardará tal cuál el usuario lo introduzca, con las mayúsculas y minúsculas que escriba. 
@@ -3641,17 +3645,17 @@
 <a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a># - Por ejemplo, será posible introducir el número +34 600 100 100, pero guardará +34600100100 y cuando se muestren los contactos, el telófono se mostrará como +34-600100100. 
 <a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>#TODO: Realizar una llamada a la función agregar_contacto con todo lo necesario para que funcione correctamente.
 <a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>agregar_contacto(?)
-</code></pre></div></p>
-</li>
-<li>
-<p>Línea 133
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>#TODO: Realizar una llamada a la función eliminar_contacto con todo lo necesario para que funcione correctamente, eliminando el contacto con el email rciruelo@gmail.com
+</code></pre></div>
+<ul>
+<li>Línea 133</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>#TODO: Realizar una llamada a la función eliminar_contacto con todo lo necesario para que funcione correctamente, eliminando el contacto con el email rciruelo@gmail.com
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>eliminar_contacto(?)
-</code></pre></div></p>
-</li>
-<li>
-<p>Línea 139
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>#TODO: Crear función mostrar_contactos para que muestre todos los contactos de la agenda con el siguiente formato:
+</code></pre></div>
+<ul>
+<li>Línea 139</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>#TODO: Crear función mostrar_contactos para que muestre todos los contactos de la agenda con el siguiente formato:
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a># ** IMPORTANTE: debe mostrarlos ordenados según el nombre, pero no modificar la lista de contactos de la agenda original **
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>#
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a># AGENDA (6)
@@ -3669,11 +3673,11 @@
 <a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>#
 <a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>#TODO: Realizar una llamada a la función mostrar_contactos con todo lo necesario para que funcione correctamente.
 <a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>mostrar_contactos(?)
-</code></pre></div></p>
-</li>
-<li>
-<p>Línea 161
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>#TODO: Crear un menú para gestionar la agenda con las funciones previamente desarrolladas y las nuevas que necesitéis:
+</code></pre></div>
+<ul>
+<li>Línea 161</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>#TODO: Crear un menú para gestionar la agenda con las funciones previamente desarrolladas y las nuevas que necesitéis:
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a># AGENDA
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a># ------
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a># 1. Nuevo contacto
@@ -3690,9 +3694,7 @@
 <a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>#TODO: Para la opción 3, modificar un contacto, deberás desarrollar las funciones necesarias para actualizar la información de un contacto.
 <a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>#TODO: También deberás desarrollar la opción 6 que deberá preguntar por el criterio de búsqueda (nombre, apellido, email o telefono) y el valor a buscar para mostrar los contactos que encuentre en la agenda.
 <a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>agenda(?)
-</code></pre></div></p>
-</li>
-</ul>
+</code></pre></div>
 <h2 id="objetivo">Objetivo:<a class="headerlink" href="#objetivo" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Aplicar conocimientos de estructuras de datos y control de flujo en un contexto práctico.</li>
@@ -3705,9 +3707,11 @@
 <li>Implementar las mejoras requeridas para el programa.</li>
 <li>Realizar los test unitarios de nuevas funciones que implementéis en el código y sean susceptibles de realizarse cómo hemos visto en clase.</li>
 </ol>
-<p>Aclaración: 
-- El programa entregado debe funcionar correctamente y cumplir los test unitarios.
-- No se puede modificar el código de las funciones proporcionadas para que hagan algo distinto, pero si se puede añadir código en las funciones proporcionadas siempre que el funcionamiento sea el mismo.</p>
+<p>Aclaración:</p>
+<ul>
+<li>El programa entregado debe funcionar correctamente y cumplir los test unitarios.</li>
+<li>No se puede modificar el código de las funciones proporcionadas para que hagan algo distinto, pero si se puede añadir código en las funciones proporcionadas siempre que el funcionamiento sea el mismo.</li>
+</ul>
 <h2 id="recursos">Recursos<a class="headerlink" href="#recursos" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Apuntes dados en clase.</li>
@@ -3721,9 +3725,11 @@
 <p>El uso de cualquier recurso prohibido supondrá la calificación de 0 en la actividad.</p>
 <h2 id="evaluacion-y-calificacion">Evaluación y calificación<a class="headerlink" href="#evaluacion-y-calificacion" title="Permanent link">&para;</a></h2>
 <p>Práctica para realizar en casa (30%) que se entregará esta semana. Esta práctica se evaluará con una calificación de 0 a 10 puntos.</p>
-<p>La prueba específica (60%) consistirá en dos pruebas: la práctica, dónde tenéis que analizar y actualizar un programa en Python para que cumpla con los requisitos especificados en el enunciado, y la teórica, que consiste en un cuestionario de preguntas sobre los contenidos de las unidades 1, 2 y 3.
-- La parte práctica se evaluará con una calificación de 0 a 10 puntos. (80%)
-- La parte teórica se evaluará con una calificación de 0 a 10 puntos. (20%)</p>
+<p>La prueba específica (60%) consistirá en dos pruebas: la práctica, dónde tenéis que analizar y actualizar un programa en Python para que cumpla con los requisitos especificados en el enunciado, y la teórica, que consiste en un cuestionario de preguntas sobre los contenidos de las unidades 1, 2 y 3.</p>
+<ul>
+<li>La parte práctica se evaluará con una calificación de 0 a 10 puntos. (80%)</li>
+<li>La parte teórica se evaluará con una calificación de 0 a 10 puntos. (20%)</li>
+</ul>
 <p>El 10% restante corresponde al examen práctico ya realizado al finalizar la unidad 1. Esta práctica se evaluará con una calificación de 0 a 10 puntos.</p>
 <h3 id="ra-y-ce-evaluados">RA y CE evaluados:<a class="headerlink" href="#ra-y-ce-evaluados" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3737,8 +3743,8 @@
 <ul>
 <li>El programa funciona adecuadamente.</li>
 <li>Las mejoras solicitadas se han implementado adecuadamente</li>
-<li>Trabajo con Variables, Constantes y Tipos de Datos y sus operadores. </li>
-<li>Comentarios y Documentación en el Código </li>
+<li>Trabajo con Variables, Constantes y Tipos de Datos y sus operadores.</li>
+<li>Comentarios y Documentación en el Código</li>
 <li>Herramientas de Desarrollo y Entornos Integrados</li>
 <li>Identificación y uso de las Estructuras de Control y Flujo del Programa</li>
 <li>Manejo de Errores y Excepciones</li>

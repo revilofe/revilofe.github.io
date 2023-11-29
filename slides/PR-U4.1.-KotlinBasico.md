@@ -40,7 +40,7 @@ Note: Resalta las características clave de Kotlin, como la sintaxis concisa, la
 * Compilador de Kotlin disponible para línea de comandos.
 * Kotlin Playground: para experimentar en línea.
 
-Note: Ofrece opciones para configurar el entorno de desarrollo para Kotlin, incluyendo IDEs y herramientas en línea.
+Note: Ofrece opciones para configurar el entorno de desarrollo para Kotlin, incluyendo IDE's y herramientas en línea.
 
 
 ### Estructura Básica de un Programa en Kotlin

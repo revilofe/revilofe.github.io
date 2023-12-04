@@ -36,7 +36,7 @@ Note: Resalta las características clave de Kotlin, como la sintaxis concisa, la
 
 ### Configuración del Entorno de Kotlin
 
-* Kotlin puede ser usado con IntelliJ IDEA, Android Studio, o cualquier editor de texto.
+* Kotlin puede ser usado con IntelliJ IDEA, Android Studio, o cualquier otro editor de texto.
 * Compilador de Kotlin disponible para línea de comandos.
 * Kotlin Playground: para experimentar en línea.
 

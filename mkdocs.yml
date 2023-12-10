@@ -118,7 +118,9 @@ nav:
     - 'U1: Principios generales y planes de seguridad':
       - 'section2/u01/index.md'
       - '1.1.-PrincipiosGenerales': 'section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales.md'
-    - 'Unidad 2': 'section2/page-2.md'
+    - 'U2: Sentencias condicionales y repetitivas':
+      - 'section2/u02/index.md'
+      - '2.1.-Condicionales': 'section2/u02/teoria/IS-U2.1.1.-TaxonomiaDeIncidentes.md'
     - 'Unidad 3': 'section2/page-3.md'
     - 'Unidad 4': 'section2/page-4.md'
     - 'Unidad 5': 'section2/page-5.md'

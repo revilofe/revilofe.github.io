@@ -25,7 +25,8 @@ En esta sección se incluyen los contenidos mínimos a impartir en esta unidad, 
 
 Bloque 2 - Auditoría de incidentes de ciberseguridad:
 
-- Taxonomía de incidentes de ciberseguridad.
+- Taxonomía, documentación y valoración de incidentes de ciberseguridad.
+- Controles, herramientas y mecanismos de detección e identificación y alerta de incidentes.
 - Controles, herramientas y mecanismos de detección e identificación de incidentes de seguridad física.
 - Controles, herramientas y mecanismos de monitorización, identificación, detección y alerta de incidentes a través de la investigación en fuentes abiertas (OSINT).
 
@@ -40,8 +41,10 @@ RA 2. Analiza incidentes de ciberseguridad utilizando herramientas, mecanismos d
 En esta sección se relaciona la unidad con los criterios de evaluación concretos, del resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
 
 - a) Se ha clasificado y definido la taxonomía de incidentes de ciberseguridad que pueden afectar a la organización.
+- b) Se han establecido controles, herramientas y mecanismos de monitorización, identificación, detección y alerta de incidentes.
 - c) Se han establecido controles y mecanismos de detección e identificación de incidentes de seguridad física.
 - d) Se han establecido controles, herramientas y mecanismos de monitorización, identificación, detección y alerta de incidentes a través de la investigación en fuentes abiertas (OSINT: Open Source Intelligence).
+- e) Se ha realizado una clasificación, valoración, documentación y seguimiento de los incidentes detectados dentro de la organización.
 
 ## Cómo impartir la unidad
 
@@ -52,18 +55,25 @@ Esta es la sección más interesante, y se incluye cómo trabajar la unidad, hac
 
 ### Teoría
 
-Por hacer.
+En moodle.
 
 ### Ejercicios
 
-Por hacer.
+En moodle.
 
 ## Cómo evaluar la unidad
+
+Presentación de trabajos + examen teórico.
 
 ### Práctica de la unidad
 
 En esta sección se incluye una propuesta de práctica o prácticas con los que evaluar la unidad.
+- Clasificación, valoración y documentación de un incidente.
+- Uso de herramientas OSINT para obtener información de una persona o entidad.
+- Puesta en funcionamiento de herramientas de monitorización (SIEM)
+
 
 ### Controles de ejemplo
 
 En esta sección se incluyen controles de ejemplo para evaluar la unidad.
+Tipos test principal, aunque con posibilidad de supuesto prácticos y desarrollo de contenidos.

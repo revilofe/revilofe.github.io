@@ -143,8 +143,6 @@
 ~%-33.3333%Formación de los empleados # Incorrecto, aunque es importante, la formación debe ser preventiva.
 }
 
-# Protección del puesto de trabajo
-
 ::¿Cuál es una medida básica de protección del puesto de trabajo?::¿Cuál es una medida básica de protección del puesto de trabajo? {
 =Instalar herramientas de seguridad elementales. # Correcto, es una medida básica de protección.
 ~%-33.3333%Permitir la configuración libre de equipos por los empleados. # Incorrecto, esto no se recomienda para la protección básica.
@@ -189,9 +187,6 @@
 }
 
 
-
-# Supuestos
-
 ::En el contexto de la política de mesas limpias, ¿qué debe hacer un empleado al finalizar su jornada laboral?::En el contexto de la política de mesas limpias, ¿qué debe hacer un empleado al finalizar su jornada laboral? {
 =Guardar la documentación y los dispositivos extraíbles que no estén siendo usados. # Correcto, es parte de mantener la seguridad y confidencialidad.
 ~%-33.3333%Dejar los documentos sobre la mesa para continuar al día siguiente. # Incorrecto, esto podría comprometer la seguridad de la información.
@@ -214,47 +209,42 @@
 }
 
 
-
-
-
-
-
-::Si un empleado encuentra un dispositivo USB desconocido en su lugar de trabajo, ¿cuál es la acción más segura a seguir?:: {
+::Si un empleado encuentra un dispositivo USB desconocido en su lugar de trabajo, ¿cuál es la acción más segura a seguir?::Si un empleado encuentra un dispositivo USB desconocido en su lugar de trabajo, ¿cuál es la acción más segura a seguir? {
 =Reportarlo al departamento de seguridad sin conectarlo a ningún equipo. # Correcto, evitar el uso de dispositivos desconocidos previene riesgos de seguridad.
 ~%-33.3333%Conectarlo a su computadora para revisar el contenido. # Incorrecto, esto puede exponer el sistema a malware o brechas de seguridad.
 ~%-33.3333%Dejarlo en un lugar común para que el propietario lo reclame. # Incorrecto, esto no aborda el riesgo potencial del dispositivo.
 ~%-33.3333%Formatearlo antes de usarlo para eliminar posibles virus. # Incorrecto, formatear un dispositivo desconocido no garantiza seguridad.
 }
 
-::¿Qué debe hacer un empleado si recibe un correo electrónico sospechoso que pide información confidencial?:: {
+::¿Qué debe hacer un empleado si recibe un correo electrónico sospechoso que pide información confidencial?::¿Qué debe hacer un empleado si recibe un correo electrónico sospechoso que pide información confidencial? {
 =Reportarlo al departamento de IT o seguridad informática. # Correcto, reportar correos sospechosos es una medida de seguridad clave.
 ~%-33.3333%Responder solicitando más detalles para verificar su autenticidad. # Incorrecto, no se debe interactuar con correos sospechosos.
 ~%-33.3333%Abrir cualquier adjunto para determinar la relevancia del correo. # Incorrecto, abrir adjuntos de correos sospechosos es peligroso.
 ~%-33.3333%Ignorarlo y continuar trabajando normalmente. # Incorrecto, ignorar un posible intento de phishing puede resultar en riesgos de seguridad.
 }
 
-::Cuando un empleado deja su puesto de trabajo temporalmente, ¿qué debe hacer con su computadora?:: {
+::Cuando un empleado deja su puesto de trabajo temporalmente, ¿qué debe hacer con su computadora?::Cuando un empleado deja su puesto de trabajo temporalmente, ¿qué debe hacer con su computadora? {
 =Bloquear la sesión para prevenir accesos no autorizados. # Correcto, bloquear la computadora ayuda a proteger la información.
 ~%-33.3333%Apagar la computadora para ahorrar energía. # Incorrecto, apagar la computadora no es práctico para ausencias cortas.
 ~%-33.3333%Dejarla abierta para facilitar el regreso al trabajo. # Incorrecto, dejar la computadora abierta puede comprometer la seguridad.
 ~%-33.3333%Permitir que un compañero la use en su ausencia. # Incorrecto, compartir una sesión activa puede ser un riesgo de seguridad.
 }
 
-::¿Qué debe hacer un empleado si necesita instalar un nuevo software en su equipo de trabajo?:: {
+::¿Qué debe hacer un empleado si necesita instalar un nuevo software en su equipo de trabajo?::¿Qué debe hacer un empleado si necesita instalar un nuevo software en su equipo de trabajo? {
 =Pedir autorización al departamento de IT o a su supervisor. # Correcto, seguir el proceso formal es la práctica segura.
 ~%-33.3333%Instalarlo por su cuenta si cree que es seguro. # Incorrecto, la instalación personal puede violar las políticas de seguridad.
 ~%-33.3333%Pedir a un compañero que lo instale para evitar la burocracia. # Incorrecto, esto evita los controles de seguridad establecidos.
 ~%-33.3333%Descargarlo de internet para ahorrar tiempo. # Incorrecto, la descarga no autorizada puede introducir riesgos de seguridad.
 }
 
-::¿Qué debe hacer un empleado si encuentra un portátil desatendido en un área común de la oficina?:: {
+::¿Qué debe hacer un empleado si encuentra un portátil desatendido en un área común de la oficina?::¿Qué debe hacer un empleado si encuentra un portátil desatendido en un área común de la oficina? {
 =Reportarlo al departamento de seguridad o a su supervisor. # Correcto, reportar dispositivos desatendidos ayuda a prevenir riesgos.
 ~%-33.3333%Usarlo para revisar correos o navegar en internet. # Incorrecto, usar dispositivos desatendidos puede ser un riesgo de seguridad.
 ~%-33.3333%Dejarlo allí asumiendo que el propietario regresará. # Incorrecto, dejar un dispositivo desatendido no aborda el riesgo potencial.
 ~%-33.3333%Moverlo a un lugar más seguro sin informar a nadie. # Incorrecto, mover un dispositivo sin reportarlo puede crear confusión o riesgos.
 }
 
-::Cuando se recibe una llamada solicitando información confidencial sobre la empresa, ¿cuál es la acción correcta?:: {
+::Cuando se recibe una llamada solicitando información confidencial sobre la empresa, ¿cuál es la acción correcta?::Cuando se recibe una llamada solicitando información confidencial sobre la empresa, ¿cuál es la acción correcta? {
 =Verificar la identidad del llamante y reportar la llamada si es sospechosa. # Correcto, verificar y reportar protege la información de la empresa.
 ~%-33.3333%Proporcionar la información si el llamante parece legítimo. # Incorrecto, nunca se debe proporcionar información sin verificación adecuada.
 ~%-33.3333%Ignorar la llamada y no hacer nada al respecto. # Incorrecto, ignorar puede resultar en riesgos no identificados.
@@ -262,59 +252,56 @@
 }
 
 
-# Teoria
 
-::¿Cuál es el primer paso al desarrollar una Política de Seguridad de la Información?:: {
+::¿Cuál es el primer paso al desarrollar una Política de Seguridad de la Información?::¿Cuál es el primer paso al desarrollar una Política de Seguridad de la Información? {
 =Identificar la misión y los objetivos del organismo. # Correcto, establecer la misión y objetivos es fundamental para orientar la política.
 ~%-33.3333%Seleccionar herramientas tecnológicas de seguridad. # Incorrecto, la selección de herramientas es posterior a la definición de la misión.
 ~%-33.3333%Implementar medidas de seguridad física. # Incorrecto, las medidas de seguridad física son parte de, pero no el comienzo de, la política de seguridad.
 ~%-33.3333%Capacitar a los empleados en seguridad de la información. # Incorrecto, la capacitación es importante pero sigue a la creación de la política.
 }
 
-::¿Qué elemento NO es típicamente incluido en una Política de Seguridad de la Información?:: {
+::¿Qué elemento NO es típicamente incluido en una Política de Seguridad de la Información?::¿Qué elemento NO es típicamente incluido en una Política de Seguridad de la Información? {
 =Detalles específicos de implementación técnica. # Correcto, los detalles técnicos son generalmente tratados en documentos separados.
 ~%-33.3333%El marco normativo aplicable. # Incorrecto, el marco normativo es un componente esencial de la política.
 ~%-33.3333%La estructura organizativa para la seguridad. # Incorrecto, la estructura organizativa es un aspecto clave de la política.
 ~%-33.3333%Los objetivos de seguridad de la organización. # Incorrecto, los objetivos de seguridad son fundamentales en la política.
 }
 
-::En la Política de Seguridad de la Información, ¿qué papel juegan las revisiones periódicas?:: {
+::En la Política de Seguridad de la Información, ¿qué papel juegan las revisiones periódicas?::En la Política de Seguridad de la Información, ¿qué papel juegan las revisiones periódicas? {
 =Asegurar que la política se mantenga relevante y actualizada. # Correcto, las revisiones periódicas mantienen la política adecuada a los cambios.
 ~%-33.3333%Realizar cambios radicales en la política cada vez. # Incorrecto, las revisiones suelen ser para ajustes y no para cambios radicales.
 ~%-33.3333%Reducir la frecuencia de las actualizaciones de seguridad. # Incorrecto, las revisiones no están destinadas a reducir la frecuencia de actualizaciones.
 ~%-33.3333%Eliminar la necesidad de entrenamiento en seguridad. # Incorrecto, las revisiones no eliminan la necesidad de capacitación.
 }
 
-::¿Qué aspecto NO se incluye típicamente en la Política de Seguridad de la Información?:: {
+::¿Qué aspecto NO se incluye típicamente en la Política de Seguridad de la Información?::¿Qué aspecto NO se incluye típicamente en la Política de Seguridad de la Información? {
 =Instrucciones detalladas para cada tipo de software de seguridad. # Correcto, las instrucciones detalladas no suelen estar en la política general.
 ~%-33.3333%El alcance de la política dentro de la organización. # Incorrecto, el alcance es un elemento crucial de la política.
 ~%-33.3333%Identificación de los roles y responsabilidades en seguridad. # Incorrecto, los roles y responsabilidades son parte esencial de la política.
 ~%-33.3333%Orientación sobre la gestión de riesgos de seguridad. # Incorrecto, la gestión de riesgos es un componente importante de la política.
 }
 
-::¿Cuál es el objetivo principal de la concienciación y formación en seguridad TIC?:: {
+::¿Cuál es el objetivo principal de la concienciación y formación en seguridad TIC?::¿Cuál es el objetivo principal de la concienciación y formación en seguridad TIC? {
 =Crear conciencia sobre los riesgos y asegurar que todos los miembros entiendan su papel en la seguridad. # Correcto, la concienciación y formación buscan aumentar la comprensión y la responsabilidad en seguridad.
 ~%-33.3333%Garantizar que solo el personal de IT maneje cuestiones de seguridad. # Incorrecto, la concienciación y formación deben ser para todos los miembros de la organización.
 ~%-33.3333%Evitar la necesidad de políticas de seguridad escritas. # Incorrecto, la formación y concienciación complementan, no reemplazan, las políticas escritas.
 ~%-33.3333%Focalizar únicamente en la seguridad física de las instalaciones. # Incorrecto, la formación abarca más que solo la seguridad física.
 }
 
-::¿Qué se entiende por "seguridad como un proceso integral" en la Política de Seguridad de la Información?:: {
+::¿Qué se entiende por "seguridad como un proceso integral" en la Política de Seguridad de la Información?::¿Qué se entiende por "seguridad como un proceso integral" en la Política de Seguridad de la Información? {
 =La seguridad debe ser considerada en todos los aspectos y actividades de la organización. # Correcto, la seguridad es un enfoque holístico e integral.
 ~%-33.3333%Concentrarse exclusivamente en la seguridad de la información digital. # Incorrecto, un enfoque integral incluye más que solo la información digital.
 ~%-33.3333%La seguridad es una tarea exclusiva del equipo de seguridad. # Incorrecto, la seguridad como proceso integral implica a toda la organización.
 ~%-33.3333%Limitar la seguridad a auditorías anuales. # Incorrecto, un enfoque integral requiere más que auditorías anuales.
 }
 
-::En el contexto de una Política de Seguridad de la Información, ¿qué se debe hacer ante un incidente de seguridad TIC?:: {
+::En el contexto de una Política de Seguridad de la Información, ¿qué se debe hacer ante un incidente de seguridad TIC?::En el contexto de una Política de Seguridad de la Información, ¿qué se debe hacer ante un incidente de seguridad TIC? {
 =Responder de acuerdo a los procedimientos establecidos y analizar el incidente para prevenir futuros eventos similares. # Correcto, la respuesta y el análisis son claves para la gestión de incidentes.
 ~%-33.3333%Dejar que el departamento de IT gestione el incidente sin informar a otros. # Incorrecto, la gestión de incidentes debe involucrar a los niveles pertinentes de la organización.
 ~%-33.3333%Considerar el incidente como un caso aislado y no tomar medidas adicionales. # Incorrecto, cada incidente debe ser analizado para mejorar la seguridad futura.
 ~%-33.3333%Detener todas las operaciones de la organización hasta resolver el incidente. # Incorrecto, no es práctico ni recomendable detener todas las operaciones.
 }
 
-
-# PDS
 
 ::¿Cuál es el primer paso en la implantación de un Plan Director de Seguridad?::¿Cuál es el primer paso en la implantación de un Plan Director de Seguridad? {
 =Realizar un análisis de la situación actual de la organización. # Correcto, es esencial conocer el estado actual para planificar adecuadamente.
@@ -386,7 +373,6 @@
 ~%-33.3333%Limitar la revisión a las políticas de seguridad tecnológica solamente. # Incorrecto, la revisión debe abarcar todos los aspectos del plan.
 }
 
-#Riesgos
 
 
 ::Una empresa identifica que la probabilidad de una brecha de datos debido a phishing es alta. ¿Cuál es la estrategia más adecuada para abordar este riesgo?::Una empresa identifica que la probabilidad de una brecha de datos debido a phishing es alta. ¿Cuál es la estrategia más adecuada para abordar este riesgo? {
@@ -431,7 +417,6 @@
 ~%-33.3333%Capacitar a los empleados en programación. # Incorrecto, aunque la formación es valiosa, no aborda directamente el riesgo identificado.
 }
 
-# Riesgos
 
 ::En una empresa que implementa un nuevo sistema de información, ¿cuál sería una medida efectiva de prevención contra riesgos de seguridad según los principios generales de ciberseguridad?::En una empresa que implementa un nuevo sistema de información, ¿cuál sería una medida efectiva de prevención contra riesgos de seguridad según los principios generales de ciberseguridad? {
 =Realizar una evaluación de riesgos y formar al personal en seguridad de la información antes de la implementación. # Correcto, evaluar riesgos y capacitar al personal son pasos clave.
@@ -454,7 +439,6 @@
 ~%-33.3333%Centrarse exclusivamente en la instalación de cámaras de seguridad. # Incorrecto, las cámaras no abordan los accesos no autorizados a la red.
 }
 
-# Teoria mezclada
 
 ::En la fase de análisis de activos e identificación de riesgos de un Plan Director de Seguridad, ¿cuál sería un enfoque efectivo para determinar la criticidad de un activo de información?::En la fase de análisis de activos e identificación de riesgos de un Plan Director de Seguridad, ¿cuál sería un enfoque efectivo para determinar la criticidad de un activo de información? {
 =Evaluar el impacto en la organización si el activo se ve comprometido. # Correcto, el impacto es clave para determinar la criticidad.

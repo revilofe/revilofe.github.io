@@ -38,7 +38,7 @@ La gestión de incidentes de ciberseguridad es un proceso continuo que implica a
 
 **Definición:** Clasificación u ordenación en grupos de cosas que tienen unas características comunes.
 
-![](assets/IS-U211-TaxonomiaDeIncidentes1.png){: .center}
+![](assets/IS-U211-TaxonomiaDeIncidentes1.png){:.center}
 
 #### 2.1 ¿Qué es una Taxonomía en este contexto?
 

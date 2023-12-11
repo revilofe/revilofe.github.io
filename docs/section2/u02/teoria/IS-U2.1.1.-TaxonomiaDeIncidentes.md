@@ -92,25 +92,28 @@ La taxonomía definida en la **Guía Nacional de Notificación y Gestión de Cib
 
 Se muestra en un primer nivel la clasificación del incidente y, en un segundo nivel los tipos de incidentes dentro de esa clasificación.
 
-##### Contenido abusivo: 
+##### Contenido abusivo:  
 Incidentes que muestren signos evidentes de spam, contengan comentarios ofensivos o inciten a la pederastia, violencia y/o delitos sexuales.   
-  * **SPAM:** correo electrónico masivo no solicitado. El receptor del contenido no ha otorgado autorización válida para recibir un mensaje colectivo.
-  * **Delito de odio:** contenido difamatorio o discriminatorio. Ejemplos: ciberacoso, racismo, amenazas a una persona o dirigidas contra colectivos.
+  
+  * **SPAM:** correo electrónico masivo no solicitado. El receptor del contenido no ha otorgado autorización válida para recibir un mensaje colectivo.  
+  * **Delito de odio:** contenido difamatorio o discriminatorio. Ejemplos: ciberacoso, racismo, amenazas a una persona o dirigidas contra colectivos.  
   * **Pornografía infantil, contenido sexual o violento inadecuado:** material que represente de manera visual contenido relacionado con pornografía infantil, apología de la violencia, etc.   
-
-##### Contenido dañino: 
+  
+##### Contenido dañino:  
 Problemas relacionados con virus, troyanos, gusanos, spyware, bots e inyección de código   
-  * **Sistema infectado:** sistema infectado con malware. Ejemplo: sistema, computadora o teléfono móvil infectado con un rootkit.
-  * **Servidor C&C (Mando y Control):** conexión con servidor de Mando y Control (C&C) mediante malware o sistemas infectados.
-  * **Distribución de malware:** recurso usado para distribución de malware. Ejemplo: recurso de una organización empleado para distribuir malware.
-  * **Configuración de malware:** recurso que aloje ficheros de configuración de malware. Ejemplo: ataque de webinjects para troyano.
-  * **Malware dominio DGA:** nombre de dominio generado mediante DGA (Algoritmo de Generación de Dominio), empleado por malware para contactar con un servidor de Mando y Control (C&C).
+  
+  * **Sistema infectado:** sistema infectado con malware. Ejemplo: sistema, computadora o teléfono móvil infectado con un rootkit.  
+  * **Servidor C&C (Mando y Control):** conexión con servidor de Mando y Control (C&C) mediante malware o sistemas infectados.  
+  * **Distribución de malware:** recurso usado para distribución de malware. Ejemplo: recurso de una organización empleado para distribuir malware.  
+  * **Configuración de malware:** recurso que aloje ficheros de configuración de malware. Ejemplo: ataque de webinjects para troyano.  
+  * **Malware dominio DGA:** nombre de dominio generado mediante DGA (Algoritmo de Generación de Dominio), empleado por malware para contactar con un servidor de Mando y Control (C&C).  
 
-##### Obtención de información:
-Los escaneos como reporte más común. También se consideran dentro de esta clasificación aquellos relacionados con los usos de sniffers, ingeniería social o ataques de fuerza bruta.    
-  * **Escaneo de redes (scanning):** envío de peticiones a un sistema para descubrir posibles debilidades. Se incluyen también procesos de comprobación o testeo para recopilar información de alojamientos, servicios y cuentas. Ejemplos: peticiones DNS, ICMP, SMTP, escaneo de puertos.
-  * **Análisis de paquetes (sniffing):** observación y grabación del tráfico de redes.
-  * **Ingeniería social:** recopilación de información personal sin el uso de la tecnología. Ejemplos: mentiras, trucos, sobornos, amenazas.
+##### Obtención de información:  
+Los escaneos como reporte más común. También se consideran dentro de esta clasificación aquellos relacionados con los usos de sniffers, ingeniería social o ataques de fuerza bruta.  
+  
+  * **Escaneo de redes (scanning):** envío de peticiones a un sistema para descubrir posibles debilidades. Se incluyen también procesos de comprobación o testeo para recopilar información de alojamientos, servicios y cuentas. Ejemplos: peticiones DNS, ICMP, SMTP, escaneo de puertos.  
+  * **Análisis de paquetes (sniffing):** observación y grabación del tráfico de redes.  
+  * **Ingeniería social:** recopilación de información personal sin el uso de la tecnología. Ejemplos: mentiras, trucos, sobornos, amenazas.  
 
 ##### Intento de intrusión:  
   * **Explotación de vulnerabilidades conocidas:** intento de compromiso de un sistema o de interrupción de un servicio mediante la explotación de vulnerabilidades con un identificador estandarizado (véase CVE). Ejemplos: desbordamiento de buffer, puertas traseras, cross site scripting (XSS).
@@ -118,31 +121,35 @@ Los escaneos como reporte más común. También se consideran dentro de esta cla
   * **Ataque desconocido:** ataque empleando exploit desconocido.
 
 ##### Intrusión: 
-Incidentes en los que se manifieste el claro acceso a cuentas privilegiadas, no privilegiadas, compromiso de aplicaciones y ataques de 0-day.
-  * **Compromiso de cuenta con privilegios:** compromiso de un sistema en el que el atacante ha adquirido privilegios.
-  * **Compromiso de cuenta sin privilegios:** compromiso de un sistema empleando cuentas sin privilegios.
-  * **Compromiso de aplicaciones:** compromiso de una aplicación mediante la explotación de vulnerabilidades de software.  Ejemplo: inyección SQL.
-  * **Robo:** intrusión física. Ejemplo: acceso no autorizado a Centro de Proceso de Datos y sustracción de equipo.
-
+Incidentes en los que se manifieste el claro acceso a cuentas privilegiadas, no privilegiadas, compromiso de aplicaciones y ataques de 0-day.  
+  
+  * **Compromiso de cuenta con privilegios:** compromiso de un sistema en el que el atacante ha adquirido privilegios.  
+  * **Compromiso de cuenta sin privilegios:** compromiso de un sistema empleando cuentas sin privilegios.  
+  * **Compromiso de aplicaciones:** compromiso de una aplicación mediante la explotación de vulnerabilidades de software.  Ejemplo: inyección SQL.  
+  * **Robo:** intrusión física. Ejemplo: acceso no autorizado a Centro de Proceso de Datos y sustracción de equipo.  
+  
 ##### Disponibilidad: 
-Ataques de denegación de servicio, tales como DoS, DDoS y sabotajes.
-  * **DoS (Denegación de Servicio):** ataque de Denegación de Servicio. Ejemplo: envío de peticiones a una aplicación web que provoca la interrupción o ralentización en la prestación del servicio.
-  * **DDoS (Denegación Distribuida de Servicio):** ataque de Denegación Distribuida de Servicio. Ejemplos: inundación de paquetes SYN, ataques de reflexión y amplificación utilizando servicios basados en UDP.
-  * **Sabotaje:** sabotaje físico. Ejemplos: cortes de cableados de equipos o incendios provocados.
-  * **Interrupciones:** interrupciones por causas externas. Ejemplo: desastre natural.
+Ataques de denegación de servicio, tales como DoS, DDoS y sabotajes.  
+  
+  * **DoS (Denegación de Servicio):** ataque de Denegación de Servicio. Ejemplo: envío de peticiones a una aplicación web que provoca la interrupción o ralentización en la prestación del servicio.  
+  * **DDoS (Denegación Distribuida de Servicio):** ataque de Denegación Distribuida de Servicio. Ejemplos: inundación de paquetes SYN, ataques de reflexión y amplificación utilizando servicios basados en UDP.  
+  * **Sabotaje:** sabotaje físico. Ejemplos: cortes de cableados de equipos o incendios provocados.  
+  * **Interrupciones:** interrupciones por causas externas. Ejemplo: desastre natural.  
 
-##### Compromiso de la información:
-Problemas relacionados con el acceso a información y/o modificación no autorizada.
-  * **Acceso no autorizado a información:** acceso no autorizado a información. Ejemplos: robo de credenciales de acceso mediante interceptación de tráfico o mediante el acceso a documentos físicos.
-  * **Modificación no autorizada de información:** modificación no autorizada de información. Ejemplos: modificación por un atacante empleando credenciales sustraídas de un sistema o aplicación o encriptado de datos mediante ransomware.
-  * **Pérdida de datos:** pérdida de información. Ejemplos: pérdida por fallo de disco duro o robo físico.
+##### Compromiso de la información:  
+Problemas relacionados con el acceso a información y/o modificación no autorizada.  
+  
+  * **Acceso no autorizado a información:** acceso no autorizado a información. Ejemplos: robo de credenciales de acceso mediante interceptación de tráfico o mediante el acceso a documentos físicos.  
+  * **Modificación no autorizada de información:** modificación no autorizada de información. Ejemplos: modificación por un atacante empleando credenciales sustraídas de un sistema o aplicación o encriptado de datos mediante ransomware.  
+  * **Pérdida de datos:** pérdida de información. Ejemplos: pérdida por fallo de disco duro o robo físico.   
 
-##### Fraude: 
-Reportes que tengan nexo con el uso no autorizado, derechos de autor, suplantación de identidad, phishing y robo de credenciales.
-  * **Uso no autorizado de recursos:** uso de recursos para propósitos inadecuados, incluyendo acciones con ánimo de lucro. Ejemplo: uso de correo electrónico para participar en estafas piramidales.
-  * **Derechos de autor:** ofrecimiento o instalación de software carente de licencia u otro material protegido por derechos de autor. Ejemplos: Warez.
-  * **Suplantación:** tipo de ataque en el que una entidad suplanta a otra para obtener beneficios ilegítimos.
-  * **Phishing:** suplantación de otra entidad con la finalidad de convencer al usuario para que revele sus credenciales privadas.
+##### Fraude:  
+Reportes que tengan nexo con el uso no autorizado, derechos de autor, suplantación de identidad, phishing y robo de credenciales.  
+  
+  * **Uso no autorizado de recursos:** uso de recursos para propósitos inadecuados, incluyendo acciones con ánimo de lucro. Ejemplo: uso de correo electrónico para participar en estafas piramidales.  
+  * **Derechos de autor:** ofrecimiento o instalación de software carente de licencia u otro material protegido por derechos de autor. Ejemplos: Warez.  
+  * **Suplantación:** tipo de ataque en el que una entidad suplanta a otra para obtener beneficios ilegítimos.  
+  * **Phishing:** suplantación de otra entidad con la finalidad de convencer al usuario para que revele sus credenciales privadas.  
 
 ##### Vulnerable:
   * **Criptografía débil:** servicios accesibles públicamente que pueden presentar criptografía débil. Ejemplo: servidores web susceptibles de ataques POODLE/FREAK.
@@ -151,12 +158,14 @@ Reportes que tengan nexo con el uso no autorizado, derechos de autor, suplantaci
   * **Revelación de información:** acceso público a servicios en los que potencialmente pueda revelarse información sensible. Ejemplos: SNMP o Redis.
   * **Sistema vulnerable:** sistema vulnerable. Ejemplos: mala configuración de proxy en cliente (WPAD), versiones desfasadas de sistema.
 
-##### Otros:
-Aquellos incidentes que realicen consultas técnicas, mensajes informativos y peticiones judiciales. Reportes recibidos en el servicio gestionado por el CERT, pero que no se debe tomar acciones puesto que no pertenece a su ámbito de actuación. También se incluirán en esta clasificación aquellas quejas sobre las que no se reporten evidencias o éstas no sean contrastadas.
-  * **Otros:** todo aquel incidente que no tenga cabida en ninguna categoría anterior.
-  * **APT:** ataques dirigidos contra organizaciones concretas, sustentados en mecanismos muy sofisticados de ocultación, anonimato y persistencia. Esta amenaza habitualmente emplea técnicas de ingeniería social para conseguir sus objetivos junto con el uso de procedimientos de ataque conocidos o genuinos.
-  * **Ciberterrorismo:** uso de redes o sistemas de información con fines de carácter terrorista.
-  * **Daños informáticos PIC:** borrado, dañado, alteración, supresión o inaccesibilidad de datos, programas informáticos o documentos electrónicos de una infraestructura crítica. Conductas graves relacionadas con los términos anteriores que afecten a la prestación de un servicio esencial.
+##### Otros:  
+Aquellos incidentes que realicen consultas técnicas, mensajes informativos y peticiones judiciales. Reportes recibidos en el servicio gestionado por el CERT, pero que no se debe tomar acciones puesto que no pertenece a su ámbito de actuación. También se incluirán en esta clasificación aquellas quejas sobre las que no se reporten evidencias o éstas no sean contrastadas.  
+  
+  * **Otros:** todo aquel incidente que no tenga cabida en ninguna categoría anterior.  
+  * **APT:** ataques dirigidos contra organizaciones concretas, sustentados en mecanismos muy sofisticados de ocultación, anonimato y persistencia. Esta amenaza habitualmente emplea técnicas de ingeniería social para conseguir sus objetivos junto con el uso de procedimientos de ataque conocidos o genuinos.  
+  * **Ciberterrorismo:** uso de redes o sistemas de información con fines de carácter terrorista.  
+  * **Daños informáticos PIC:** borrado, dañado, alteración, supresión o inaccesibilidad de datos, programas informáticos o documentos electrónicos de una infraestructura crítica. Conductas graves relacionadas con los términos anteriores que afecten a la prestación de un servicio esencial.  
+  
 
 #### 3.2 Peligrosidad e impacto
 
@@ -219,26 +228,35 @@ Tarea: Clasificar cada incidente según los criterios de taxonomía.
 
 **Solución Sugerida: ¿En que grupo/tipo cae?**
 
-**Incidente 1:** Malware
-  - **Clasificación:** Contenido malicioso
-  - **Prioridad:** Alta
-  - **Justificación:** Afecta sistemas críticos y requiere atención inmediata
-**Incidente 2:** Phishing
-  - **Clasificación:** Fraude
-  - **Prioridad:** Normal
-  - **Justificación:** Riesgo de compromiso de información, pero sin acceso directo a sistemas
-**Incidente 3:** Intrusión y violación de datos
-  - **Clasificación:** Acceso/Intrusión
-  - **Prioridad:** Alta
-  - **Justificación:** Compromiso de datos sensibles y potencial impacto legal
-**Incidente 4:** Ataque DDoS
-  - **Clasificación:** Disponibilidad
-  - **Prioridad:** Emergencia
-  - **Justificación:** Interrupción de servicios críticos y necesidad de respuesta inmediata
-**Incidente 5:** Fuga de información por empleado
-  - **Clasificación:** Seguridad/Confidencialidad de la información
-  - **Prioridad:** Normal
-  - **Justificación:** Compromiso interno, riesgo de pérdida de confidencialidad
+**Incidente 1:** Malware  
+  
+  - **Clasificación:** Contenido malicioso  
+  - **Prioridad:** Alta  
+  - **Justificación:** Afecta sistemas críticos y requiere atención inmediata  
+
+**Incidente 2:** Phishing  
+  
+  - **Clasificación:** Fraude  
+  - **Prioridad:** Normal  
+  - **Justificación:** Riesgo de compromiso de información, pero sin acceso directo a sistemas  
+
+**Incidente 3:** Intrusión y violación de datos  
+  
+  - **Clasificación:** Acceso/Intrusión  
+  - **Prioridad:** Alta  
+  - **Justificación:** Compromiso de datos sensibles y potencial impacto legal  
+  
+**Incidente 4:** Ataque DDoS  
+  
+  - **Clasificación:** Disponibilidad  
+  - **Prioridad:** Emergencia  
+  - **Justificación:** Interrupción de servicios críticos y necesidad de respuesta inmediata  
+
+**Incidente 5:** Fuga de información por empleado  
+  
+  - **Clasificación:** Seguridad/Confidencialidad de la información  
+  - **Prioridad:** Normal  
+  - **Justificación:** Compromiso interno, riesgo de pérdida de confidencialidad  
 
 #### 4.2 actividad
 

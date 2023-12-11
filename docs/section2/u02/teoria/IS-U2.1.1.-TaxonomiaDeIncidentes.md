@@ -1,4 +1,4 @@
-![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702312345367.png)
+![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702312345367.png){: .center}
 
 # Taxonomía de incidentes de ciberseguridad
 
@@ -22,7 +22,7 @@ Por tanto, disponer de una taxonomía común de incidentes de ciberseguridad es 
 
 #### 1.2 Incidente de seguridad
 
-![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702240345923.png)
+![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702240345923.png){: .center}
 
 Un incidente de ciberseguridad se refiere a cualquier evento no planificado o no deseado que pueda comprometer la seguridad de la información y afectar la integridad, confidencialidad o disponibilidad de los datos. Estos incidentes pueden tomar muchas formas, desde ataques de malware hasta brechas de seguridad y accesos no autorizados.
 
@@ -177,7 +177,7 @@ El establecimiento de ciertos criterios permitirá asignar el **grado de peligro
 
 El indicador de peligrosidad determina la potencial amenaza que supondría la materialización de un incidente en los sistemas de información o comunicación del ente afectado, así como para los servicios prestados o la continuidad de negocio en caso de haberla. Este indicador se fundamenta en las características intrínsecas a la tipología de amenaza y su comportamiento.
 
-![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702240026150.png)
+![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702240026150.png){: .center}
 
 En la GUÍA NACIONAL DE NOTIFICACIÓN Y GESTIÓN DE CIBERINCIDENTES, podrás ver una relación entre el tipo de incidente y el nivel de peligrosidad.
 
@@ -189,7 +189,7 @@ El indicador de impacto de un ciberincidente se determinará evaluando las conse
 
 Por ejemplo, en lo que se refiere al Impacto Operativo y Financiero, un ataque de ransomware puede causar la pérdida de acceso a datos críticos, lo que resulta en paralización operativa y pérdidas económicas significativas.
 
-![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702240157348.png)
+![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702240157348.png){: .center}
 
 En la GUÍA NACIONAL DE NOTIFICACIÓN Y GESTIÓN DE CIBERINCIDENTES, podrás ver una relación entre los parámetros tenidos en cuenta y el nivel de impacto.
 

@@ -216,6 +216,7 @@ plugins:
       tags_file: 'tags.md'
   - search:
       lang: es
+  - glightbox # https://squidfunk.github.io/mkdocs-material/reference/images/
   - blogging: # https://liang2kl.codes/mkdocs-blogging-plugin/
       locale: es
       # {{ blog_content }}

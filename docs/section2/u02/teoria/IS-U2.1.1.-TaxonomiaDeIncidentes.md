@@ -2,7 +2,7 @@
 
 # Taxonomía de incidentes de ciberseguridad
 
-**RA1**
+**RA2**
 
 > a) Se ha clasificado y definido la taxonomía de incidentes de ciberseguridad que pueden afectar a la organización.
 

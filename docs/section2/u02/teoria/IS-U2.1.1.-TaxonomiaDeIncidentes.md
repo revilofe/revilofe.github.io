@@ -1,6 +1,5 @@
-![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702312345367.png){: .center}
-
 # Taxonomía de incidentes de ciberseguridad
+![Taxonomía](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702481926843.png){: .center}
 
 **RA2**
 

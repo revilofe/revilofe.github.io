@@ -202,7 +202,7 @@ val direct = 25.toLong()
 
 Los caracteres no son números en Kotlin, a diferencia de Java. En Kotlin los caracteres se representan con el tipo `Char`:
 
-Los literales de carácter se escriben con comillas simples como por ejemplo `'a'`. Los caracteres especiales se escapan con la barra invertida `'\'`. Están soportadas las siguientes secuencias de escape: `\t`, `\b`, `\n`, `\r`, `\'`, `\"`, `\\`, `\$`.
+Los literales de carácter se escriben con comillas simples como por ejemplo `'a'`. Los caracteres especiales se escapan con la barra invertida `'\'`. Están soportadas las siguientes secuencias de escape: `\t`, `\b`, `\n`, `\r`, `\'`, `\"`, `\\`, `\$`.   
 ![](assets/PROG-U4.1.-CarateresEspeciales.png)
 
 Podemos convertir de forma explícitia un carácter en un número de tipo `Int`:
@@ -213,6 +213,29 @@ fun decimalDigitValue(c: Char): Int {
         throw IllegalArgumentException("Out of range")
     return c.toInt() - '0'.toInt() // Explicit conversions to numbers
 }
+```
+
+#### Booleanos
+
+El tipo `Boolean` representa objetos booleanos que pueden tener dos valores:`true` y `false`.
+
+`Boolean` tiene un tipo nulable `Boolean?` que también acepta valores `null`.
+
+Las operaciones que pueden ser con booleanos son:
+
+* `||` – disyunción (lógica *O*)
+* `&&` – conjunción (lógica *Y*)
+* `!` – negación (lógica *NO*)
+
+`||` y `&&` trabajan con evaluación perezosa,es decir, no evalúa todos los operandos al lado de las operaciones. Evaluan el primero, y el segundo solo si es necesario.
+
+```kotlin
+val myTrue: Booleano =  verdadero
+val myFalse: Booleano =  falso
+val boolNull: Booleano?  = nulo
+println(myTrue || myFalse)
+println(myTrue && myFalse)
+println(!myTrue)
 ```
 
 #### Strings
@@ -419,7 +442,7 @@ Multi-line comments look like this.
 
 ### Control de flujo y bucles
 
-<https://kotlinlang.org/docs/control-flow.html#control-flow-if-when-for-while>
+[https://kotlinlang.org/docs/control-flow.html#control-flow-if-when-for-while](https://kotlinlang.org/docs/control-flow.html#control-flow-if-when-for-while)
 
 Kotlin tiene 4 construcciones de control de flujo: `if`, `when`, `for` y `while`.  `if` y `when` son expresiones, por lo que devuelven un valor; `for` y `when` son declaraciones, por lo que no devuelven un valor. `if` y `when` también se pueden utilizar como sentencias, es decir, se pueden utilizar de forma autónoma y sin devolver un valor.
 
@@ -549,7 +572,8 @@ when (x) {
 ```
 
 ## Funciones
-<https://kotlinlang.org/docs/functions.html>
+
+[https://kotlinlang.org/docs/functions.html](https://kotlinlang.org/docs/functions.html)
 
 Las funciones se declaran usando la palabra clave `'fun'`. Los nombres de las funciones empiezan con minúscula. Los parámetros de la función se especifican entre paréntesis después del nombre de la función y tienen la forma `'name: type'`. El **tipo de cada parámetro debe especificarse explícitamente** y no puede omitirse.
 
@@ -975,7 +999,6 @@ El compilador de Kotlin crea una clase anónima en versiones anteriores de Java 
 Para evitar esta sobrecarga tenemos el modificador `'inline'` para las funciones. Una _'High-Order function'_ con el modificador `'inline'` se integrará durante la compilación del código. En otras palabras, el compilador copiará la 'lambda' (o función literal) y también el cuerpo de la función de orden superior y los pegará en el sitio de la llamada.
 
 Con este mecanismo, nuestro código se ha optimizado significativamente, no más creación de clases anónimas o asignaciones de memoria extra. Por otro lado el uso de `'inline'` hace que el compilador genere ficheros bytecode más grandes. Por esta razón, se recomienda encarecidamente que solo se incluyan funciones de orden superior más pequeñas que acepten lambda como parámetros.
-
 
 ---
 

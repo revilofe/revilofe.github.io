@@ -18,7 +18,7 @@ tags:
 
 Para dos de los siguientes lenguajes de programación:   
    
-a. Grupo 1: Elige uno de los nombrados en el ejercicio 1.1 (Excepto Python, Java, kotlin)    
+a. Grupo 1: Elige uno de los nombrados en el ejercicio 1.1 (Excepto Java ,Kotlin, .Net)    
 b. Grupo 2: Elige uno entre Java ,Kotlin, .Net.  
 
 Escribe un programa básico, que pregunte el nombre del usuario y muestre un mensaje "Hola `usuario`. Este programa esta hecho en el lenguaje de programación: `lenguaje`".  

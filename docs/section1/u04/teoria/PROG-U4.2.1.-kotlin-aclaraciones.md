@@ -195,59 +195,60 @@ Aprender a controlar los nulos en Kotlin te ayuda a escribir código más seguro
 ### 1.6. Diferencia entre Listas y Arrays
  Las listas y los arrays son dos estructuras de datos comunes en Kotlin. Aunque son similares, tienen algunas diferencias importantes que es importante conocer. Veamos cuáles son:
  - **Listas**: Una lista es una colección ordenada de elementos. Puedes agregar o quitar elementos de una lista después de su creación. En Kotlin, las listas son inmutables por defecto, lo que significa que no puedes modificarlas después de su creación. Para crear una lista mutable, debes usar `mutableListOf` en lugar de `listOf`. Por ejemplo:
+
     ```kotlin
     val lista = listOf("A", "B", "C")  // Lista inmutable
     val listaMutable = mutableListOf("A", "B", "C")  // Lista mutable
     ```
 - **Arrays**: Un array es una estructura de datos que contiene una colección de elementos del mismo tipo. Los arrays son representados por la clase `Array` y son mutables por defecto, lo que significa que puedes modificarlos después de su creación. Para crear un array inmutable, debes usar `arrayOf` en lugar de `arrayOf`. Por ejemplo:
 
-        ```kotlin
-        val array = arrayOf("A", "B", "C")  // Array mutable
-        val arrayInmutable = arrayOf("A", "B", "C")  // Array inmutable
-        ```
+    ```kotlin
+    val array = arrayOf("A", "B", "C")  // Array mutable
+    val arrayInmutable = arrayOf("A", "B", "C")  // Array inmutable      
+    ```
 
   En Kotlin el uso de arrays es muy similar al de las listas.  Puedes acceder a los elementos de un array usando el operador de indexación (`[]`). Por ejemplo:
 
-        ```kotlin
-        val array = arrayOf("A", "B", "C")
-        println(array[0])  // Imprime "A"
-        ```
+    ```kotlin
+    val array = arrayOf("A", "B", "C")
+    println(array[0])  // Imprime "A"
+    ```
 
   También puedes modificar los elementos de un array usando el operador de indexación. Por ejemplo:
 
-        ```kotlin
-        val array = arrayOf("A", "B", "C")
-        array[0] = "D"
-        println(array[0])  // Imprime "D"
-        ```
+    ```kotlin
+    val array = arrayOf("A", "B", "C")
+    array[0] = "D"
+    println(array[0])  // Imprime "D"
+    ```
   Los arrays también tienen un método `size` que devuelve el número de elementos en el array. Por ejemplo:
 
-        ```kotlin
-        val array = arrayOf("A", "B", "C")
-        println(array.size)  // Imprime 3
-        ```
+    ```kotlin
+    val array = arrayOf("A", "B", "C")
+    println(array.size)  // Imprime 3
+    ```
 
   Los arrays también tienen un método `get` que devuelve el elemento en el índice especificado. Por ejemplo:
 
-        ```kotlin
-        val array = arrayOf("A", "B", "C")
-        println(array.get(0))  // Imprime "A"
-        ```
+    ```kotlin
+    val array = arrayOf("A", "B", "C")
+    println(array.get(0))  // Imprime "A"
+    ```
 
   Los arrays también tienen un método `set` que establece el elemento en el índice especificado. Por ejemplo:
 
-        ```kotlin
-        val array = arrayOf("A", "B", "C")
-        array.set(0, "D")
-        println(array.get(0))  // Imprime "D"
-        ```
+    ```kotlin
+    val array = arrayOf("A", "B", "C")
+    array.set(0, "D")
+    println(array.get(0))  // Imprime "D"
+    ```
 
   Los arrays también tienen un método `contains` que devuelve `true` si el array contiene el elemento especificado. Por ejemplo:
 
-        ```kotlin
-        val array = arrayOf("A", "B", "C")
-        println(array.contains("A"))  //
-
+   ```kotlin
+    val array = arrayOf("A", "B", "C")
+    println(array.contains("A"))  //
+    ```
 
 Por tanto, la principal diferencia entre un Array y una List en Kotlin radica en su tamaño y mutabilidad:
 

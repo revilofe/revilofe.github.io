@@ -154,31 +154,36 @@ Controlar los nulos es una parte crucial en Kotlin, y es uno de los aspectos don
        ```kotin
        var nombre: String = "Cirolele"  // No puede ser nula
        var apellido: String? = null     // Puede ser nula
-       ```
+       ```   
+     
 2. **Chequeo de Nulos**:
    - Antes de usar una variable nulable, debes verificar si es nula.
      ```kotin
      if (apellido != null) {
          println(apellido.length)
      }
-     ```
+     ```   
+     
 3. **Operador de Llamada Segura (`?.`)**:
    - Permite acceder de forma segura a las propiedades y métodos de una referencia nulable. Si la referencia es nula, no se ejecuta el método o propiedad y devuelve nulo.
      ```kotin
      println(apellido?.length)  // Imprime el largo si no es nulo, sino imprime null
-     ```
+     ```    
+     
 4. **Operador Elvis (`?:`)**:
    - Este operador se utiliza para proporcionar un valor por defecto en caso de que la expresión a su izquierda sea nula. Es como decir "usa esto, pero si es nulo, entonces usa aquello".
      ```kotin
      val longitud = apellido?.length ?: 0  // Si apellido es nulo, usa 0
      ```
-   - El operador Elvis es extremadamente útil para evitar el anidamiento excesivo de declaraciones `if` y proporcionar valores predeterminados de manera concisa.
+   - El operador Elvis es extremadamente útil para evitar el anidamiento excesivo de declaraciones `if` y proporcionar valores predeterminados de manera concisa.   
+   
 5. **Operador de Aserto No Nulo (`!!`)**:   
    - Convierte cualquier valor a un tipo no nulable, lanzando una excepción `NullPointerException` si el valor es nulo.   
    - Debe usarse con cuidado, ya que va en contra de la seguridad de nulos que Kotlin intenta proporcionar.
      ```kotin
      val nombreNoNulo: String = nombre!!  // Lanza NullPointerException si nombre es nulo
-     ```
+     ```   
+
 6. **let con Nulos**:
    - El método `let` puede ser útil para trabajar con valores nulables. Si el objeto es nulo, el bloque no se ejecuta.
      ```kotin

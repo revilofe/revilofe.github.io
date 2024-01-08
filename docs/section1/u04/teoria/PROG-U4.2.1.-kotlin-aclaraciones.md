@@ -254,23 +254,27 @@ Aprender a controlar los nulos en Kotlin te ayuda a escribir código más seguro
 
 Por tanto, la principal diferencia entre un Array y una List en Kotlin radica en su tamaño y mutabilidad:
 
-- Tamaño:
+- **Tamaño**:   
+
   * Array: El tamaño de un Array es fijo una vez que se ha inicializado. No puedes agregar o eliminar elementos.
   * List: Las listas pueden ser fijas (inmutables) o variables (mutables). Una List inmutable (listOf) no permite modificar su tamaño ni sus elementos, mientras que una MutableList (mutableListOf) permite tanto cambiar elementos existentes como agregar o quitar elementos, modificando así su tamaño.
 
-- Mutabilidad:
+- **Mutabilidad**:   
+
   * Array: Puede modificar los elementos existentes (es mutable en sus elementos), pero no su tamaño.
   * List: Dependiendo de si es una List o MutableList, puede ser inmutable (no permite modificaciones en sus elementos ni en tamaño) o mutable (permite todo tipo de modificaciones).
 
-- Uso:
+- **Uso**:  
+
   * Array: Más adecuado para tamaños fijos y operaciones de bajo nivel, donde el tamaño es conocido y no cambiará.
   * List: Preferible para colecciones cuyo tamaño puede cambiar, o cuando se necesita una colección inmutable.
   
-- Tipos de Datos:
+- **Tipos de Datos**:   
+
   * Array: Puede almacenar tipos primitivos de manera más eficiente (como IntArray, ByteArray).
   * List: Trabaja con objetos, incluso para tipos primitivos (como List<Int>).
 
-Resumiendo,  si necesitas una colección de tamaño fijo o eficiencia para tipos primitivos, un Array puede ser la mejor elección. Si requieres flexibilidad en el tamaño o quieres trabajar con colecciones inmutables, entonces una List sería más adecuada.
+Resumiendo, si necesitas una colección de tamaño fijo o eficiencia para tipos primitivos, un Array puede ser la mejor elección. Si requieres flexibilidad en el tamaño o quieres trabajar con colecciones inmutables, entonces una List sería más adecuada.
 
 
 ### 1.7. Como crear listas

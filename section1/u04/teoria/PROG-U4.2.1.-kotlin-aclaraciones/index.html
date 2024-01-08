@@ -3750,13 +3750,20 @@
 <h3 id="14-que-es-it-en-kotlin">1.4. ¿Qué es <code>it</code> en kotlin?<a class="headerlink" href="#14-que-es-it-en-kotlin" title="Permanent link">&para;</a></h3>
 <p>En Kotlin, <code>it</code> es un nombre implícito que se usa para referirse al parámetro único de una lambda cuando dicho parámetro no se declara de manera explícita. Es una forma conveniente y concisa de trabajar con lambdas que solo requieren un parámetro. Aquí te explico un poco más:</p>
 <ol>
-<li><strong>Uso en Lambdas</strong>: Cuando tienes una lambda que acepta un solo parámetro, puedes usar <code>it</code> para referirte a ese parámetro sin necesidad de declararlo. Por ejemplo:</li>
+<li><strong>Uso en Lambdas</strong>: Cuando tienes una lambda que acepta un solo parámetro, puedes usar <code>it</code> para referirte a ese parámetro sin necesidad de declararlo. Por ejemplo:
+    <code>kotlin
+   val lista = listOf(1, 2, 3)
+   val cuadrados = lista.map { it * it }</code></li>
 </ol>
-<p>val lista = listOf(1, 2, 3)
-   val cuadrados = lista.map { it * it }</p>
-<p>En este caso, la lambda pasada a <code>map</code> tiene un parámetro (cada elemento de la lista), y usamos <code>it</code> para referirnos a ese parámetro. Es equivalente a escribir <code>{ numero -&gt; numero * numero }</code>, pero más conciso.
-2. <strong>Cuándo se Utiliza</strong>: <code>it</code> se utiliza automáticamente solo cuando la lambda tiene un solo parámetro. Si la lambda tiene más de un parámetro o si quieres nombrar explícitamente el parámetro por claridad, entonces no se puede usar <code>it</code>.
-3. <strong>Legibilidad</strong>: Aunque <code>it</code> es útil para mantener el código conciso, en algunos casos puede ser menos legible, especialmente si el cuerpo de la lambda es largo o complejo. En tales situaciones, puede ser mejor dar un nombre explícito al parámetro para hacer el código más fácil de entender.</p>
+<p>En este caso, la lambda pasada a <code>map</code> tiene un parámetro (cada elemento de la lista), y usamos <code>it</code> para referirnos a ese parámetro. Es equivalente a escribir <code>{ numero -&gt; numero * numero }</code>, pero más conciso.   </p>
+<ol>
+<li>
+<p><strong>Cuándo se Utiliza</strong>: <code>it</code> se utiliza automáticamente solo cuando la lambda tiene un solo parámetro. Si la lambda tiene más de un parámetro o si quieres nombrar explícitamente el parámetro por claridad, entonces no se puede usar <code>it</code>.   </p>
+</li>
+<li>
+<p><strong>Legibilidad</strong>: Aunque <code>it</code> es útil para mantener el código conciso, en algunos casos puede ser menos legible, especialmente si el cuerpo de la lambda es largo o complejo. En tales situaciones, puede ser mejor dar un nombre explícito al parámetro para hacer el código más fácil de entender.   </p>
+</li>
+</ol>
 <p>Para darle un nombre a <code>it</code> en una lambda en Kotlin, simplemente defines explícitamente el parámetro de la lambda. Esto se hace colocando el nombre del parámetro seguido de una flecha (<code>-&gt;</code>) al principio de la lambda. Aquí te muestro cómo hacerlo con un ejemplo:Supongamos que tienes una lista y quieres aplicar una operación a cada elemento. Usando <code>it</code>, lo harías así:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">cuadrados</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numeros</span><span class="p">.</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">it</span><span class="w"> </span><span class="p">}</span>

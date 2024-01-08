@@ -2,10 +2,25 @@
 
 **Documentación de incidentes**
 
-#### RA2
-e) Se ha realizado una clasificación, valoración, documentación y seguimiento de los incidentes detectados dentro de la organización.
+**RA2**
 
-#### ÍNDICE
+> e) Se ha realizado una clasificación, valoración, documentación y seguimiento de los incidentes detectados dentro de la organización.
+
+### 1. Introduccón
+El criterio de evaluación e) del Resultado de Aprendizaje 2 se centra en la capacidad para clasificar, valorar, documentar y hacer seguimiento de incidentes de ciberseguridad, asegurando una respuesta eficaz y una mejora continua en las prácticas de seguridad de la organización.
+
+Es fundamental considerar ciertos aspectos clave:
+
+* Clasificación de Incidentes: Los incidentes de ciberseguridad deben ser clasificados según su tipo, basandonos en una taxonomía pre establecida y que ha hemos visto. Esta taxonomía incluye categorías como malware, phishing, ataques de denegación de servicio, entre otros. La clasificación ayuda a priorizar los esfuerzos de respuesta y a aplicar los protocolos de manejo adecuados.  
+
+* Valoración de Incidentes: La valoración implica determinar el impacto potencial de un incidente de ciberseguridad en la organización, asi como la peligrosidad de este. Esto incluye consideraciones sobre la sensibilidad de los datos afectados, el potencial de daño a la reputación de la empresa, y las posibles pérdidas económicas.  
+
+* Documentación de Incidentes: La documentación es crucial para registrar detalladamente cada incidente, incluyendo cómo fue detectado, cuáles fueron las acciones inmediatas tomadas, y cualquier otra información relevante. Esta documentación debe ser precisa y debe almacenarse de forma segura para futuras consultas.  
+
+* Seguimiento de Incidentes: Durante el proceso de resolución, como una vez resuelto un incidente, es importante realizar un seguimiento del incidente, para tener información sobre el estado de este, asi como para asegurar que las medidas tomadas fueron efectivas y prevenir incidentes similares en el futuro. Esto puede incluir la revisión y actualización de los planes de respuesta, políticas de seguridad, así como la realización de capacitaciones adicionales para el personal.
+
+
+NDICE
 
 Gestión de incidentes
 

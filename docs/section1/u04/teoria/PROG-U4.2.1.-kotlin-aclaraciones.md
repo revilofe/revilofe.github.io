@@ -192,12 +192,125 @@ Controlar los nulos es una parte crucial en Kotlin, y es uno de los aspectos don
 
 Aprender a controlar los nulos en Kotlin te ayuda a escribir código más seguro y menos propenso a errores en tiempo de ejecución. Recuerda, Kotlin está diseñado para minimizar la posibilidad de `NullPointerException`, y aprovechar estas características te permite escribir un código más robusto y limpio.
 
-### 2.6 Listas de listas
+### 2.6. Diferencia entre Listas y Arrays
+ Las listas y los arrays son dos estructuras de datos comunes en Kotlin. Aunque son similares, tienen algunas diferencias importantes que es importante conocer. Veamos cuáles son:
+ - **Listas**: Una lista es una colección ordenada de elementos. Puedes agregar o quitar elementos de una lista después de su creación. En Kotlin, las listas son inmutables por defecto, lo que significa que no puedes modificarlas después de su creación. Para crear una lista mutable, debes usar `mutableListOf` en lugar de `listOf`. Por ejemplo:
+    ```kotlin
+    val lista = listOf("A", "B", "C")  // Lista inmutable
+    val listaMutable = mutableListOf("A", "B", "C")  // Lista mutable
+    ```
+- **Arrays**: Un array es una estructura de datos que contiene una colección de elementos del mismo tipo. Los arrays son representados por la clase `Array` y son mutables por defecto, lo que significa que puedes modificarlos después de su creación. Para crear un array inmutable, debes usar `arrayOf` en lugar de `arrayOf`. Por ejemplo:
 
+        ```kotlin
+        val array = arrayOf("A", "B", "C")  // Array mutable
+        val arrayInmutable = arrayOf("A", "B", "C")  // Array inmutable
+        ```
+
+  En Kotlin el uso de arrays es muy similar al de las listas.  Puedes acceder a los elementos de un array usando el operador de indexación (`[]`). Por ejemplo:
+
+        ```kotlin
+        val array = arrayOf("A", "B", "C")
+        println(array[0])  // Imprime "A"
+        ```
+
+  También puedes modificar los elementos de un array usando el operador de indexación. Por ejemplo:
+
+        ```kotlin
+        val array = arrayOf("A", "B", "C")
+        array[0] = "D"
+        println(array[0])  // Imprime "D"
+        ```
+  Los arrays también tienen un método `size` que devuelve el número de elementos en el array. Por ejemplo:
+
+        ```kotlin
+        val array = arrayOf("A", "B", "C")
+        println(array.size)  // Imprime 3
+        ```
+
+  Los arrays también tienen un método `get` que devuelve el elemento en el índice especificado. Por ejemplo:
+
+        ```kotlin
+        val array = arrayOf("A", "B", "C")
+        println(array.get(0))  // Imprime "A"
+        ```
+
+  Los arrays también tienen un método `set` que establece el elemento en el índice especificado. Por ejemplo:
+
+        ```kotlin
+        val array = arrayOf("A", "B", "C")
+        array.set(0, "D")
+        println(array.get(0))  // Imprime "D"
+        ```
+
+  Los arrays también tienen un método `contains` que devuelve `true` si el array contiene el elemento especificado. Por ejemplo:
+
+        ```kotlin
+        val array = arrayOf("A", "B", "C")
+        println(array.contains("A"))  //
+
+
+Por tanto, la principal diferencia entre un Array y una List en Kotlin radica en su tamaño y mutabilidad:
+
+- Tamaño:
+  * Array: El tamaño de un Array es fijo una vez que se ha inicializado. No puedes agregar o eliminar elementos.
+  * List: Las listas pueden ser fijas (inmutables) o variables (mutables). Una List inmutable (listOf) no permite modificar su tamaño ni sus elementos, mientras que una MutableList (mutableListOf) permite tanto cambiar elementos existentes como agregar o quitar elementos, modificando así su tamaño.
+
+- Mutabilidad:
+  * Array: Puede modificar los elementos existentes (es mutable en sus elementos), pero no su tamaño.
+  * List: Dependiendo de si es una List o MutableList, puede ser inmutable (no permite modificaciones en sus elementos ni en tamaño) o mutable (permite todo tipo de modificaciones).
+
+- Uso:
+  * Array: Más adecuado para tamaños fijos y operaciones de bajo nivel, donde el tamaño es conocido y no cambiará.
+  * List: Preferible para colecciones cuyo tamaño puede cambiar, o cuando se necesita una colección inmutable.
+  
+- Tipos de Datos:
+  * Array: Puede almacenar tipos primitivos de manera más eficiente (como IntArray, ByteArray).
+  * List: Trabaja con objetos, incluso para tipos primitivos (como List<Int>).
+
+Resumiendo,  si necesitas una colección de tamaño fijo o eficiencia para tipos primitivos, un Array puede ser la mejor elección. Si requieres flexibilidad en el tamaño o quieres trabajar con colecciones inmutables, entonces una List sería más adecuada.
+
+
+### 2.7. Como crear listas
+
+En Kotlin, hay varias formas de crear listas. Cada una tiene sus propias características y usos, y es importante conocerlas para poder elegir la más adecuada para cada situación. Veamos cómo crear listas en Kotlin:
+1. **Listas Inmutables Vacías**: Para crear una lista inmutable y vacía, usas `emptyList`. Por ejemplo:
+
+   <pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>kotlin</span><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-kotlin">val emptyList = emptyList<String>() // Una lista vacía de Strings
+   </code></div></div></pre>
+2. **Listas Inmutables**: Usas `listOf` para crear listas inmutables. Si tienes `val readOnlyList = listOf("John", "Doe")`, no puedes agregar o quitar elementos de `readOnlyList`. `listOfNotNull` se usa para excluir nulos, como en `val filteredList = listOfNotNull("A", "B", null)`, resultando en una lista con "A" y "B" solamente.
+3. **Listas Mutables**: Con `mutableListOf`, creas listas a las que puedes agregar o quitar elementos después. Por ejemplo:
+
+   <pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>kotlin</span><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-kotlin">var mutableList = mutableListOf("Sydney", "Tokyo")
+   mutableList.add("New York") // Ahora mutableList contiene Sydney, Tokyo y New York
+   </code></div></div></pre>
+
+   `arrayListOf` es similar, pero específicamente crea un `ArrayList`.
+4. **Conversión a Listas**: Puedes convertir otras estructuras como `Map` a `List` con `toList`. Por ejemplo, al convertir un `Map` de direcciones:
+
+   <pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>kotlin</span><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-kotlin">val userAddressMap = mapOf("A" to "India", "B" to "Australia")
+   val addressList = userAddressMap.toList() // Convierte el Map a una List de Pares
+   </code></div></div></pre>
+5. **Constructores de Listas**: `List(size) { lambda }` crea una lista inmutable con un tamaño definido y elementos inicializados por la lambda. `MutableList` es similar pero mutable. Por ejemplo:
+
+   <pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>kotlin</span><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-kotlin">val myList = List(3) { it * 2 } // Crea una lista [0, 2, 4]
+   </code></div></div></pre>
+
+   `buildList` permite construir una lista inmutable con un bloque mutable. Ejemplo:
+
+   <pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>kotlin</span><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-kotlin">val builtList = buildList {
+       add("One")
+       add("Two")
+   } // Crea una lista ["One", "Two"]
+   </code></div></div></pre>
+
+Cada uno de estos métodos tiene usos específicos, dependiendo de si necesitas modificar la lista después de su creación o si necesitas inicializarla de una manera particular.
+
+### 2.7 Listas de listas
 
 Crear matrices o listas bidimensionales en Kotlin es bastante sencillo. Una lista bidimensional es básicamente una lista de listas. Aquí te muestro cómo puedes hacerlo:
 
 1. **Creación de una Lista Bidimensional Manualmente**: Puedes crear una lista bidimensional manualmente definiendo una lista de listas. Por ejemplo, para crear una matriz 2x3:
+
    ```kotin
    val matriz = listOf(
        listOf(1, 2, 3),
@@ -215,15 +328,15 @@ Crear matrices o listas bidimensionales en Kotlin es bastante sencillo. Una list
    ```
 3. **Acceso y Modificación de Elementos**: Puedes acceder o modificar los elementos de la matriz usando índices. Por ejemplo, para cambiar un elemento:
 
-    ```kotin
-    matrizDinamica[0][1] = 10  // Cambia el segundo elemento de la primera fila a 10
-    ```
+   ```kotin
+   matrizDinamica[0][1] = 10  // Cambia el segundo elemento de la primera fila a 10
+   ```
+
    Y para leer un elemento:
 
-    ```kotin
-    val elemento = matrizDinamica[0][1]  // Lee el segundo elemento de la primera fila
-    ```
-
+   ```kotin
+   val elemento = matrizDinamica[0][1]  // Lee el segundo elemento de la primera fila
+   ```
 4. **Iteración sobre Elementos**: Puedes iterar sobre los elementos de la matriz utilizando bucles anidados:
 
    ```kotin
@@ -235,7 +348,6 @@ Crear matrices o listas bidimensionales en Kotlin es bastante sencillo. Una list
    ```
 
 Estas son las formas básicas de trabajar con matrices o listas bidimensionales en Kotlin. Puedes adaptar estos ejemplos según tus necesidades específicas, como cambiar el tipo de datos almacenados o modificar la forma de inicialización.
-
 
 ## 3. Reference
 

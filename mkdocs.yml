@@ -57,6 +57,7 @@ nav:
         - 'section1/u04/index.md'
         - '4.1.-Kotlin: Básico': 'section1/u04/teoria/PROG-U4.1.-kotlin.md'
         - '4.2.-Kotlin: Colecciones': 'section1/u04/teoria/PROG-U4.2.-kotlinColeciones.md'
+        - '4.2.1.- Aclaraciones': 'section1/u04/teoria/PROG-U4.2.1.-kotlin-aclaraciones.md'
         - '4.3.-Kotlin: POO': 'section1/u04/teoria/PROG-U4.3.-kotlinPOO.md'
         - '4.4.-Kotlin: Resumen': 'section1/u04/teoria/PROG-U4.4.-kotlinResumen.md'
     - 'U5: Kotlin: PPO y creación de e.d.':

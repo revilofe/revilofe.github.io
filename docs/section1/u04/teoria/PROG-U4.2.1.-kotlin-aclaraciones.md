@@ -90,22 +90,22 @@ En Kotlin, un "receiver" se refiere a un tipo especial de parámetro que está d
 
 1. **Funciones de Extensión**: Cuando defines una función de extensión para una clase, el "receiver" es la instancia de esa clase sobre la cual se invoca la función. Por ejemplo:
 
-```kotlin
-fun String.exclamar() = this + "!"
-```
-
-Aquí, `String` es el receiver. Dentro de exclamar, puedes usar this para referirte a la instancia específica de String sobre la que se llama a la función. Si haces `val saludo = "Hola".exclamar()`, `this` dentro de exclamar será `"Hola"`.
+    ```kotlin
+    fun String.exclamar() = this + "!"
+    ```
+    
+    Aquí, `String` es el receiver. Dentro de exclamar, puedes usar this para referirte a la instancia específica de String sobre la que se llama a la función. Si haces `val saludo = "Hola".exclamar()`, `this` dentro de exclamar será `"Hola"`.   
 
 2. **Lambdas con Receptor**: Son similares a las funciones de extensión, pero en forma de lambda. Dentro de estas lambdas, tienes acceso directo a los métodos y propiedades del receiver. Un ejemplo común es con las builders en Kotlin, como en apply:
 
-```kotlin
-val lista = ArrayList<String>().apply {
-    add("Uno")
-    add("Dos")
-}
-```
+    ```kotlin
+    val lista = ArrayList<String>().apply {
+        add("Uno")
+        add("Dos")
+    }
+    ```
 
-En este caso, `ArrayList<String>()` es el receiver para la lambda pasada a `apply`. Dentro de la lambda, puedes llamar directamente a métodos como `add` sin necesidad de especificar el objeto (no necesitas decir `this.add("Uno")`, simplemente `add("Uno")` funciona).
+    En este caso, `ArrayList<String>()` es el receiver para la lambda pasada a `apply`. Dentro de la lambda, puedes llamar directamente a métodos como `add` sin necesidad de especificar el objeto (no necesitas decir `this.add("Uno")`, simplemente `add("Uno")` funciona).
 
 Por tanto, el receiver en Kotlin proporciona un contexto adicional dentro de una función de extensión o una lambda, permitiéndote acceder y modificar las propiedades y métodos del objeto sobre el cual se invoca la función o lambda. Esto hace que el código sea más conciso y legible, y es una parte fundamental de cómo Kotlin maneja muchas de sus características más elegantes y potentes.
 
@@ -149,59 +149,59 @@ Por tanto, `it` es una herramienta útil en Kotlin que ayuda a mantener las lamb
 Controlar los nulos es una parte crucial en Kotlin, y es uno de los aspectos donde este lenguaje realmente brilla, gracias a su sistema de tipos que distingue entre referencias que pueden ser nulas (`nullable`) y las que no pueden serlo (`non-nullable`). Veamos cómo puedes manejar los nulos y usar el operador Elvis en Kotlin:
 
 1. **Tipos Nulables y No Nulables**:
-   - En Kotlin, una variable no puede ser nula a menos que se declare explícitamente como nulable. Se agrega un signo de interrogación (`?`) al tipo para indicar que puede ser nula.
+    En Kotlin, una variable no puede ser nula a menos que se declare explícitamente como nulable. Se agrega un signo de interrogación (`?`) al tipo para indicar que puede ser nula.
 
-       ```kotin
-       var nombre: String = "Cirolele"  // No puede ser nula
-       var apellido: String? = null     // Puede ser nula
-       ```   
+    ```kotin
+    var nombre: String = "Cirolele"  // No puede ser nula
+    var apellido: String? = null     // Puede ser nula
+    ```   
      
 2. **Chequeo de Nulos**:
-   - Antes de usar una variable nulable, debes verificar si es nula.
-     ```kotin
-     if (apellido != null) {
-         println(apellido.length)
-     }
-     ```   
+    Antes de usar una variable nulable, debes verificar si es nula.
+    ```kotin
+    if (apellido != null) {
+        println(apellido.length)
+    }
+    ```   
      
 3. **Operador de Llamada Segura (`?.`)**:
-   - Permite acceder de forma segura a las propiedades y métodos de una referencia nulable. Si la referencia es nula, no se ejecuta el método o propiedad y devuelve nulo.
-     ```kotin
-     println(apellido?.length)  // Imprime el largo si no es nulo, sino imprime null
-     ```    
-     
+   Permite acceder de forma segura a las propiedades y métodos de una referencia nulable. Si la referencia es nula, no se ejecuta el método o propiedad y devuelve nulo.
+    ```kotin
+    println(apellido?.length)  // Imprime el largo si no es nulo, sino imprime null
+    ```    
+  
 4. **Operador Elvis (`?:`)**:
-   - Este operador se utiliza para proporcionar un valor por defecto en caso de que la expresión a su izquierda sea nula. Es como decir "usa esto, pero si es nulo, entonces usa aquello".
-     ```kotin
-     val longitud = apellido?.length ?: 0  // Si apellido es nulo, usa 0
-     ```
-   - El operador Elvis es extremadamente útil para evitar el anidamiento excesivo de declaraciones `if` y proporcionar valores predeterminados de manera concisa.   
+   Este operador se utiliza para proporcionar un valor por defecto en caso de que la expresión a su izquierda sea nula. Es como decir "usa esto, pero si es nulo, entonces usa aquello".
+    ```kotin
+    val longitud = apellido?.length ?: 0  // Si apellido es nulo, usa 0
+    ```
+    El operador Elvis es extremadamente útil para evitar el anidamiento excesivo de declaraciones `if` y proporcionar valores predeterminados de manera concisa.   
    
 5. **Operador de Aserto No Nulo (`!!`)**:   
-   - Convierte cualquier valor a un tipo no nulable, lanzando una excepción `NullPointerException` si el valor es nulo.   
-   - Debe usarse con cuidado, ya que va en contra de la seguridad de nulos que Kotlin intenta proporcionar.
-     ```kotin
-     val nombreNoNulo: String = nombre!!  // Lanza NullPointerException si nombre es nulo
-     ```   
+   Convierte cualquier valor a un tipo no nulable, lanzando una excepción `NullPointerException` si el valor es nulo.   
+   Debe usarse con cuidado, ya que va en contra de la seguridad de nulos que Kotlin intenta proporcionar.
+   ```kotin
+   val nombreNoNulo: String = nombre!!  // Lanza NullPointerException si nombre es nulo
+   ```   
 
 6. **let con Nulos**:
-   - El método `let` puede ser útil para trabajar con valores nulables. Si el objeto es nulo, el bloque no se ejecuta.
-     ```kotin
-     apellido?.let {
-         println("El apellido tiene ${it.length} caracteres")
-     }
-     ```
+   El método `let` puede ser útil para trabajar con valores nulables. Si el objeto es nulo, el bloque no se ejecuta.
+    ```kotin
+    apellido?.let {
+        println("El apellido tiene ${it.length} caracteres")
+    }
+    ```
 
 Aprender a controlar los nulos en Kotlin te ayuda a escribir código más seguro y menos propenso a errores en tiempo de ejecución. Recuerda, Kotlin está diseñado para minimizar la posibilidad de `NullPointerException`, y aprovechar estas características te permite escribir un código más robusto y limpio.
 
 ### 1.6. Diferencia entre Listas y Arrays
  Las listas y los arrays son dos estructuras de datos comunes en Kotlin. Aunque son similares, tienen algunas diferencias importantes que es importante conocer. Veamos cuáles son:
- - **Listas**: Una lista es una colección ordenada de elementos. Puedes agregar o quitar elementos de una lista después de su creación. En Kotlin, las listas son inmutables por defecto, lo que significa que no puedes modificarlas después de su creación. Para crear una lista mutable, debes usar `mutableListOf` en lugar de `listOf`. Por ejemplo:
+- **Listas**: Una lista es una colección ordenada de elementos. Puedes agregar o quitar elementos de una lista después de su creación. En Kotlin, las listas son inmutables por defecto, lo que significa que no puedes modificarlas después de su creación. Para crear una lista mutable, debes usar `mutableListOf` en lugar de `listOf`. Por ejemplo:
 
-    ```kotlin
-    val lista = listOf("A", "B", "C")  // Lista inmutable
-    val listaMutable = mutableListOf("A", "B", "C")  // Lista mutable
-    ```
+   ```kotlin
+   val lista = listOf("A", "B", "C")  // Lista inmutable
+   val listaMutable = mutableListOf("A", "B", "C")  // Lista mutable
+   ```
 - **Arrays**: Un array es una estructura de datos que contiene una colección de elementos del mismo tipo. Los arrays son representados por la clase `Array` y son mutables por defecto, lo que significa que puedes modificarlos después de su creación. Para crear un array inmutable, debes usar `arrayOf` en lugar de `arrayOf`. Por ejemplo:
 
     ```kotlin

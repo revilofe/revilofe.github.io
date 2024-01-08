@@ -146,44 +146,38 @@ Por tanto, `it` es una herramienta útil en Kotlin que ayuda a mantener las lamb
 Controlar los nulos es una parte crucial en Kotlin, y es uno de los aspectos donde este lenguaje realmente brilla, gracias a su sistema de tipos que distingue entre referencias que pueden ser nulas (`nullable`) y las que no pueden serlo (`non-nullable`). Veamos cómo puedes manejar los nulos y usar el operador Elvis en Kotlin:
 
 1. **Tipos Nulables y No Nulables**:
+   - En Kotlin, una variable no puede ser nula a menos que se declare explícitamente como nulable. Se agrega un signo de interrogación (`?`) al tipo para indicar que puede ser nula.
 
-   * En Kotlin, una variable no puede ser nula a menos que se declare explícitamente como nulable. Se agrega un signo de interrogación (`?`) al tipo para indicar que puede ser nula.
-
-     ```kotin
-     var nombre: String = "Cirolele"  // No puede ser nula
-     var apellido: String? = null     // Puede ser nula
-     ```
+       ```kotin
+       var nombre: String = "Cirolele"  // No puede ser nula
+       var apellido: String? = null     // Puede ser nula
+       ```
 2. **Chequeo de Nulos**:
-
-   * Antes de usar una variable nulable, debes verificar si es nula.
+   - Antes de usar una variable nulable, debes verificar si es nula.
      ```kotin
      if (apellido != null) {
          println(apellido.length)
      }
      ```
 3. **Operador de Llamada Segura (`?.`)**:
-
-   * Permite acceder de forma segura a las propiedades y métodos de una referencia nulable. Si la referencia es nula, no se ejecuta el método o propiedad y devuelve nulo.
+   - Permite acceder de forma segura a las propiedades y métodos de una referencia nulable. Si la referencia es nula, no se ejecuta el método o propiedad y devuelve nulo.
      ```kotin
      println(apellido?.length)  // Imprime el largo si no es nulo, sino imprime null
      ```
 4. **Operador Elvis (`?:`)**:
-
-   * Este operador se utiliza para proporcionar un valor por defecto en caso de que la expresión a su izquierda sea nula. Es como decir "usa esto, pero si es nulo, entonces usa aquello".
+   - Este operador se utiliza para proporcionar un valor por defecto en caso de que la expresión a su izquierda sea nula. Es como decir "usa esto, pero si es nulo, entonces usa aquello".
      ```kotin
      val longitud = apellido?.length ?: 0  // Si apellido es nulo, usa 0
      ```
-   * El operador Elvis es extremadamente útil para evitar el anidamiento excesivo de declaraciones `if` y proporcionar valores predeterminados de manera concisa.
-5. **Operador de Aserto No Nulo (`!!`)**:
-
-   * Convierte cualquier valor a un tipo no nulable, lanzando una excepción `NullPointerException` si el valor es nulo.
-   * Debe usarse con cuidado, ya que va en contra de la seguridad de nulos que Kotlin intenta proporcionar.
+   - El operador Elvis es extremadamente útil para evitar el anidamiento excesivo de declaraciones `if` y proporcionar valores predeterminados de manera concisa.
+5. **Operador de Aserto No Nulo (`!!`)**:   
+   - Convierte cualquier valor a un tipo no nulable, lanzando una excepción `NullPointerException` si el valor es nulo.   
+   - Debe usarse con cuidado, ya que va en contra de la seguridad de nulos que Kotlin intenta proporcionar.
      ```kotin
      val nombreNoNulo: String = nombre!!  // Lanza NullPointerException si nombre es nulo
      ```
 6. **let con Nulos**:
-
-   * El método `let` puede ser útil para trabajar con valores nulables. Si el objeto es nulo, el bloque no se ejecuta.
+   - El método `let` puede ser útil para trabajar con valores nulables. Si el objeto es nulo, el bloque no se ejecuta.
      ```kotin
      apellido?.let {
          println("El apellido tiene ${it.length} caracteres")

@@ -14,13 +14,13 @@ tags:
     - Software
     - kotlin
 ---
-# 1. Aclaraciones sobre [Kotlin]
+# Aclaraciones sobre [Kotlin]
 
 En este punto vamos a ver algunas aclaraciones sobre el lenguaje de programación [Kotlin]. Se basa en las principales dudas que nos pueden surgir al empezar a programar en este lenguaje y que han sido extraídas de las preguntas que el alumnado ha realizado durante los distintos cursos.
 
-## 2. Aclaraciones sobre el lenguaje
+## 1. Aclaraciones sobre el lenguaje
 
-### 2.1. Funciones lambda
+### 1.1. Funciones lambda
 
 Imagina que tienes una lista de números y quieres quedarte solo con los que son pares. En Kotlin, puedes hacer esto fácilmente con `filter`.
 
@@ -70,7 +70,7 @@ fun <T> List<T>.filter(predicate: (T) -> Boolean): List<T> {
 
 Espero que esto te ayude a entender mejor cómo funciona `filter` y en general cualquier función o método que utiliza lambdas entre sus parámetros.
 
-### 2.2. Notación de llamado las funciones cuando se utilizan lambdas
+### 1.2. Notación para llamar a las funciones cuando se utilizan lambdas
 
 En Kotlin, cuando llamas a una función que toma una lambda como parámetro, puedes usar dos formas: con o sin paréntesis. La que ya mostré es la forma sin paréntesis, pero si prefieres usar paréntesis, puedes hacerlo también. Aquí te muestro cómo sería:
 
@@ -84,7 +84,7 @@ En esta versión, simplemente colocas la lambda entre paréntesis después de `f
 
 En Kotlin, cuando una función tiene una lambda como último parámetro, puedes optar por usar la "sintaxis de lambda fuera de los paréntesis", que es lo que hicimos en los ejemplos de más arriba. Pero si te sientes más cómodo con los paréntesis, ¡adelante!
 
-### 2.3. ¿Qué es un receiver en kotlin?
+### 1.3. ¿Qué es un receiver en kotlin?
 
 En Kotlin, un "receiver" se refiere a un tipo especial de parámetro que está disponible dentro del cuerpo de una función de extensión o una lambda con receptor. Es una forma poderosa y flexible de añadir funcionalidades a clases existentes o de crear DSLs (Domain-Specific Languages). Veamos cada caso:
 
@@ -109,7 +109,7 @@ En este caso, `ArrayList<String>()` es el receiver para la lambda pasada a `appl
 
 Por tanto, el receiver en Kotlin proporciona un contexto adicional dentro de una función de extensión o una lambda, permitiéndote acceder y modificar las propiedades y métodos del objeto sobre el cual se invoca la función o lambda. Esto hace que el código sea más conciso y legible, y es una parte fundamental de cómo Kotlin maneja muchas de sus características más elegantes y potentes.
 
-### 2.4. ¿Qué es `it` en kotlin?
+### 1.4. ¿Qué es `it` en kotlin?
 
 En Kotlin, `it` es un nombre implícito que se usa para referirse al parámetro único de una lambda cuando dicho parámetro no se declara de manera explícita. Es una forma conveniente y concisa de trabajar con lambdas que solo requieren un parámetro. Aquí te explico un poco más:
 
@@ -141,7 +141,7 @@ Nombrar los parámetros de las lambdas es una buena práctica cuando el contexto
 
 Por tanto, `it` es una herramienta útil en Kotlin que ayuda a mantener las lambdas simples y concisas cuando solo tienen un parámetro. Es parte de lo que hace a Kotlin un lenguaje expresivo y agradable de usar.
 
-### 2.5. Manejo de nulos y operador Elvis.
+### 1.5. Manejo de nulos y operador Elvis.
 
 Controlar los nulos es una parte crucial en Kotlin, y es uno de los aspectos donde este lenguaje realmente brilla, gracias a su sistema de tipos que distingue entre referencias que pueden ser nulas (`nullable`) y las que no pueden serlo (`non-nullable`). Veamos cómo puedes manejar los nulos y usar el operador Elvis en Kotlin:
 
@@ -192,7 +192,7 @@ Controlar los nulos es una parte crucial en Kotlin, y es uno de los aspectos don
 
 Aprender a controlar los nulos en Kotlin te ayuda a escribir código más seguro y menos propenso a errores en tiempo de ejecución. Recuerda, Kotlin está diseñado para minimizar la posibilidad de `NullPointerException`, y aprovechar estas características te permite escribir un código más robusto y limpio.
 
-### 2.6. Diferencia entre Listas y Arrays
+### 1.6. Diferencia entre Listas y Arrays
  Las listas y los arrays son dos estructuras de datos comunes en Kotlin. Aunque son similares, tienen algunas diferencias importantes que es importante conocer. Veamos cuáles son:
  - **Listas**: Una lista es una colección ordenada de elementos. Puedes agregar o quitar elementos de una lista después de su creación. En Kotlin, las listas son inmutables por defecto, lo que significa que no puedes modificarlas después de su creación. Para crear una lista mutable, debes usar `mutableListOf` en lugar de `listOf`. Por ejemplo:
     ```kotlin
@@ -270,38 +270,42 @@ Por tanto, la principal diferencia entre un Array y una List en Kotlin radica en
 Resumiendo,  si necesitas una colección de tamaño fijo o eficiencia para tipos primitivos, un Array puede ser la mejor elección. Si requieres flexibilidad en el tamaño o quieres trabajar con colecciones inmutables, entonces una List sería más adecuada.
 
 
-### 2.7. Como crear listas
+### 1.7. Como crear listas
 
 En Kotlin, hay varias formas de crear listas. Cada una tiene sus propias características y usos, y es importante conocerlas para poder elegir la más adecuada para cada situación. Veamos cómo crear listas en Kotlin:
 1. **Listas Inmutables Vacías**: Para crear una lista inmutable y vacía, usas `emptyList`. Por ejemplo:
-
-   <pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>kotlin</span><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-kotlin">val emptyList = emptyList<String>() // Una lista vacía de Strings
-   </code></div></div></pre>
+    ```kotlin
+    val emptyList = emptyList<String>() // Una lista vacía de Strings
+   ```
 2. **Listas Inmutables**: Usas `listOf` para crear listas inmutables. Si tienes `val readOnlyList = listOf("John", "Doe")`, no puedes agregar o quitar elementos de `readOnlyList`. `listOfNotNull` se usa para excluir nulos, como en `val filteredList = listOfNotNull("A", "B", null)`, resultando en una lista con "A" y "B" solamente.
 3. **Listas Mutables**: Con `mutableListOf`, creas listas a las que puedes agregar o quitar elementos después. Por ejemplo:
 
-   <pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>kotlin</span><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-kotlin">var mutableList = mutableListOf("Sydney", "Tokyo")
+   ```kotlin
+   var mutableList = mutableListOf("Sydney", "Tokyo")
    mutableList.add("New York") // Ahora mutableList contiene Sydney, Tokyo y New York
-   </code></div></div></pre>
+   ```
 
    `arrayListOf` es similar, pero específicamente crea un `ArrayList`.
 4. **Conversión a Listas**: Puedes convertir otras estructuras como `Map` a `List` con `toList`. Por ejemplo, al convertir un `Map` de direcciones:
 
-   <pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>kotlin</span><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-kotlin">val userAddressMap = mapOf("A" to "India", "B" to "Australia")
+   ```kotlin
+   val userAddressMap = mapOf("A" to "India", "B" to "Australia")
    val addressList = userAddressMap.toList() // Convierte el Map a una List de Pares
-   </code></div></div></pre>
+   ```
 5. **Constructores de Listas**: `List(size) { lambda }` crea una lista inmutable con un tamaño definido y elementos inicializados por la lambda. `MutableList` es similar pero mutable. Por ejemplo:
 
-   <pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>kotlin</span><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-kotlin">val myList = List(3) { it * 2 } // Crea una lista [0, 2, 4]
-   </code></div></div></pre>
+   ```kotlin
+   val myList = List(3) { it * 2 } // Crea una lista [0, 2, 4]
+   ```
 
    `buildList` permite construir una lista inmutable con un bloque mutable. Ejemplo:
 
-   <pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>kotlin</span><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-kotlin">val builtList = buildList {
+   ```kotlin
+   val builtList = buildList {
        add("One")
        add("Two")
    } // Crea una lista ["One", "Two"]
-   </code></div></div></pre>
+   ```
 
 Cada uno de estos métodos tiene usos específicos, dependiendo de si necesitas modificar la lista después de su creación o si necesitas inicializarla de una manera particular.
 

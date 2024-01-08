@@ -3874,32 +3874,42 @@ println(array.get(0))  // Imprime &quot;D&quot;
     println(array.contains("A"))  //</code></p>
 <p>Por tanto, la principal diferencia entre un Array y una List en Kotlin radica en su tamaño y mutabilidad:</p>
 <ul>
-<li>Tamaño:</li>
-<li>Array: El tamaño de un Array es fijo una vez que se ha inicializado. No puedes agregar o eliminar elementos.</li>
+<li>
+<p><strong>Tamaño</strong>:   </p>
+</li>
+<li>
+<p>Array: El tamaño de un Array es fijo una vez que se ha inicializado. No puedes agregar o eliminar elementos.</p>
+</li>
 <li>
 <p>List: Las listas pueden ser fijas (inmutables) o variables (mutables). Una List inmutable (listOf) no permite modificar su tamaño ni sus elementos, mientras que una MutableList (mutableListOf) permite tanto cambiar elementos existentes como agregar o quitar elementos, modificando así su tamaño.</p>
 </li>
 <li>
-<p>Mutabilidad:</p>
+<p><strong>Mutabilidad</strong>:   </p>
 </li>
-<li>Array: Puede modificar los elementos existentes (es mutable en sus elementos), pero no su tamaño.</li>
+<li>
+<p>Array: Puede modificar los elementos existentes (es mutable en sus elementos), pero no su tamaño.</p>
+</li>
 <li>
 <p>List: Dependiendo de si es una List o MutableList, puede ser inmutable (no permite modificaciones en sus elementos ni en tamaño) o mutable (permite todo tipo de modificaciones).</p>
 </li>
 <li>
-<p>Uso:</p>
+<p><strong>Uso</strong>:  </p>
 </li>
-<li>Array: Más adecuado para tamaños fijos y operaciones de bajo nivel, donde el tamaño es conocido y no cambiará.</li>
+<li>
+<p>Array: Más adecuado para tamaños fijos y operaciones de bajo nivel, donde el tamaño es conocido y no cambiará.</p>
+</li>
 <li>
 <p>List: Preferible para colecciones cuyo tamaño puede cambiar, o cuando se necesita una colección inmutable.</p>
 </li>
 <li>
-<p>Tipos de Datos:</p>
+<p><strong>Tipos de Datos</strong>:   </p>
 </li>
-<li>Array: Puede almacenar tipos primitivos de manera más eficiente (como IntArray, ByteArray).</li>
+<li>
+<p>Array: Puede almacenar tipos primitivos de manera más eficiente (como IntArray, ByteArray).</p>
+</li>
 <li>List: Trabaja con objetos, incluso para tipos primitivos (como List<Int>).</li>
 </ul>
-<p>Resumiendo,  si necesitas una colección de tamaño fijo o eficiencia para tipos primitivos, un Array puede ser la mejor elección. Si requieres flexibilidad en el tamaño o quieres trabajar con colecciones inmutables, entonces una List sería más adecuada.</p>
+<p>Resumiendo, si necesitas una colección de tamaño fijo o eficiencia para tipos primitivos, un Array puede ser la mejor elección. Si requieres flexibilidad en el tamaño o quieres trabajar con colecciones inmutables, entonces una List sería más adecuada.</p>
 <h3 id="17-como-crear-listas">1.7. Como crear listas<a class="headerlink" href="#17-como-crear-listas" title="Permanent link">&para;</a></h3>
 <p>En Kotlin, hay varias formas de crear listas. Cada una tiene sus propias características y usos, y es importante conocerlas para poder elegir la más adecuada para cada situación. Veamos cómo crear listas en Kotlin:
 1. <strong>Listas Inmutables Vacías</strong>: Para crear una lista inmutable y vacía, usas <code>emptyList</code>. Por ejemplo:

@@ -3732,20 +3732,22 @@
 <h3 id="13-que-es-un-receiver-en-kotlin">1.3. ¿Qué es un receiver en kotlin?<a class="headerlink" href="#13-que-es-un-receiver-en-kotlin" title="Permanent link">&para;</a></h3>
 <p>En Kotlin, un "receiver" se refiere a un tipo especial de parámetro que está disponible dentro del cuerpo de una función de extensión o una lambda con receptor. Es una forma poderosa y flexible de añadir funcionalidades a clases existentes o de crear DSLs (Domain-Specific Languages). Veamos cada caso:</p>
 <ol>
-<li><strong>Funciones de Extensión</strong>: Cuando defines una función de extensión para una clase, el "receiver" es la instancia de esa clase sobre la cual se invoca la función. Por ejemplo:</li>
-</ol>
+<li>
+<p><strong>Funciones de Extensión</strong>: Cuando defines una función de extensión para una clase, el "receiver" es la instancia de esa clase sobre la cual se invoca la función. Por ejemplo:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">fun</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="nf">exclamar</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;!&quot;</span>
 </code></pre></div>
-<p>Aquí, <code>String</code> es el receiver. Dentro de exclamar, puedes usar this para referirte a la instancia específica de String sobre la que se llama a la función. Si haces <code>val saludo = "Hola".exclamar()</code>, <code>this</code> dentro de exclamar será <code>"Hola"</code>.</p>
-<ol>
-<li><strong>Lambdas con Receptor</strong>: Son similares a las funciones de extensión, pero en forma de lambda. Dentro de estas lambdas, tienes acceso directo a los métodos y propiedades del receiver. Un ejemplo común es con las builders en Kotlin, como en apply:</li>
-</ol>
+<p>Aquí, <code>String</code> es el receiver. Dentro de exclamar, puedes usar this para referirte a la instancia específica de String sobre la que se llama a la función. Si haces <code>val saludo = "Hola".exclamar()</code>, <code>this</code> dentro de exclamar será <code>"Hola"</code>.   </p>
+</li>
+<li>
+<p><strong>Lambdas con Receptor</strong>: Son similares a las funciones de extensión, pero en forma de lambda. Dentro de estas lambdas, tienes acceso directo a los métodos y propiedades del receiver. Un ejemplo común es con las builders en Kotlin, como en apply:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">().</span><span class="na">apply</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">add</span><span class="p">(</span><span class="s">&quot;Uno&quot;</span><span class="p">)</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">add</span><span class="p">(</span><span class="s">&quot;Dos&quot;</span><span class="p">)</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">}</span>
 </code></pre></div>
 <p>En este caso, <code>ArrayList&lt;String&gt;()</code> es el receiver para la lambda pasada a <code>apply</code>. Dentro de la lambda, puedes llamar directamente a métodos como <code>add</code> sin necesidad de especificar el objeto (no necesitas decir <code>this.add("Uno")</code>, simplemente <code>add("Uno")</code> funciona).</p>
+</li>
+</ol>
 <p>Por tanto, el receiver en Kotlin proporciona un contexto adicional dentro de una función de extensión o una lambda, permitiéndote acceder y modificar las propiedades y métodos del objeto sobre el cual se invoca la función o lambda. Esto hace que el código sea más conciso y legible, y es una parte fundamental de cómo Kotlin maneja muchas de sus características más elegantes y potentes.</p>
 <h3 id="14-que-es-it-en-kotlin">1.4. ¿Qué es <code>it</code> en kotlin?<a class="headerlink" href="#14-que-es-it-en-kotlin" title="Permanent link">&para;</a></h3>
 <p>En Kotlin, <code>it</code> es un nombre implícito que se usa para referirse al parámetro único de una lambda cuando dicho parámetro no se declara de manera explícita. Es una forma conveniente y concisa de trabajar con lambdas que solo requieren un parámetro. Aquí te explico un poco más:</p>
@@ -3777,75 +3779,63 @@
 <h3 id="15-manejo-de-nulos-y-operador-elvis">1.5. Manejo de nulos y operador Elvis.<a class="headerlink" href="#15-manejo-de-nulos-y-operador-elvis" title="Permanent link">&para;</a></h3>
 <p>Controlar los nulos es una parte crucial en Kotlin, y es uno de los aspectos donde este lenguaje realmente brilla, gracias a su sistema de tipos que distingue entre referencias que pueden ser nulas (<code>nullable</code>) y las que no pueden serlo (<code>non-nullable</code>). Veamos cómo puedes manejar los nulos y usar el operador Elvis en Kotlin:</p>
 <ol>
-<li><strong>Tipos Nulables y No Nulables</strong>:</li>
 <li>
-<p>En Kotlin, una variable no puede ser nula a menos que se declare explícitamente como nulable. Se agrega un signo de interrogación (<code>?</code>) al tipo para indicar que puede ser nula.</p>
+<p><strong>Tipos Nulables y No Nulables</strong>:
+    En Kotlin, una variable no puede ser nula a menos que se declare explícitamente como nulable. Se agrega un signo de interrogación (<code>?</code>) al tipo para indicar que puede ser nula.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>var nombre: String = &quot;Cirolele&quot;  // No puede ser nula
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>var apellido: String? = null     // Puede ser nula
 </code></pre></div>
 </li>
 <li>
-<p><strong>Chequeo de Nulos</strong>:</p>
-</li>
-<li>
-<p>Antes de usar una variable nulable, debes verificar si es nula.
-     <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>if (apellido != null) {
+<p><strong>Chequeo de Nulos</strong>:
+    Antes de usar una variable nulable, debes verificar si es nula.
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>if (apellido != null) {
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    println(apellido.length)
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>}
 </code></pre></div></p>
 </li>
 <li>
-<p><strong>Operador de Llamada Segura (<code>?.</code>)</strong>:</p>
-</li>
-<li>
-<p>Permite acceder de forma segura a las propiedades y métodos de una referencia nulable. Si la referencia es nula, no se ejecuta el método o propiedad y devuelve nulo.
-     <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>println(apellido?.length)  // Imprime el largo si no es nulo, sino imprime null
+<p><strong>Operador de Llamada Segura (<code>?.</code>)</strong>:
+   Permite acceder de forma segura a las propiedades y métodos de una referencia nulable. Si la referencia es nula, no se ejecuta el método o propiedad y devuelve nulo.
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>println(apellido?.length)  // Imprime el largo si no es nulo, sino imprime null
 </code></pre></div></p>
 </li>
 <li>
-<p><strong>Operador Elvis (<code>?:</code>)</strong>:</p>
-</li>
-<li>Este operador se utiliza para proporcionar un valor por defecto en caso de que la expresión a su izquierda sea nula. Es como decir "usa esto, pero si es nulo, entonces usa aquello".
-     <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>val longitud = apellido?.length ?: 0  // Si apellido es nulo, usa 0
-</code></pre></div></li>
-<li>
-<p>El operador Elvis es extremadamente útil para evitar el anidamiento excesivo de declaraciones <code>if</code> y proporcionar valores predeterminados de manera concisa.   </p>
+<p><strong>Operador Elvis (<code>?:</code>)</strong>:
+   Este operador se utiliza para proporcionar un valor por defecto en caso de que la expresión a su izquierda sea nula. Es como decir "usa esto, pero si es nulo, entonces usa aquello".
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>val longitud = apellido?.length ?: 0  // Si apellido es nulo, usa 0
+</code></pre></div>
+    El operador Elvis es extremadamente útil para evitar el anidamiento excesivo de declaraciones <code>if</code> y proporcionar valores predeterminados de manera concisa.   </p>
 </li>
 <li>
-<p><strong>Operador de Aserto No Nulo (<code>!!</code>)</strong>:   </p>
-</li>
-<li>Convierte cualquier valor a un tipo no nulable, lanzando una excepción <code>NullPointerException</code> si el valor es nulo.   </li>
-<li>
-<p>Debe usarse con cuidado, ya que va en contra de la seguridad de nulos que Kotlin intenta proporcionar.
-     <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>val nombreNoNulo: String = nombre!!  // Lanza NullPointerException si nombre es nulo
+<p><strong>Operador de Aserto No Nulo (<code>!!</code>)</strong>: <br />
+   Convierte cualquier valor a un tipo no nulable, lanzando una excepción <code>NullPointerException</code> si el valor es nulo. <br />
+   Debe usarse con cuidado, ya que va en contra de la seguridad de nulos que Kotlin intenta proporcionar.
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>val nombreNoNulo: String = nombre!!  // Lanza NullPointerException si nombre es nulo
 </code></pre></div></p>
 </li>
 <li>
-<p><strong>let con Nulos</strong>:</p>
-</li>
-<li>El método <code>let</code> puede ser útil para trabajar con valores nulables. Si el objeto es nulo, el bloque no se ejecuta.
-     <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>apellido?.let {
+<p><strong>let con Nulos</strong>:
+   El método <code>let</code> puede ser útil para trabajar con valores nulables. Si el objeto es nulo, el bloque no se ejecuta.
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>apellido?.let {
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    println(&quot;El apellido tiene ${it.length} caracteres&quot;)
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>}
-</code></pre></div></li>
+</code></pre></div></p>
+</li>
 </ol>
 <p>Aprender a controlar los nulos en Kotlin te ayuda a escribir código más seguro y menos propenso a errores en tiempo de ejecución. Recuerda, Kotlin está diseñado para minimizar la posibilidad de <code>NullPointerException</code>, y aprovechar estas características te permite escribir un código más robusto y limpio.</p>
 <h3 id="16-diferencia-entre-listas-y-arrays">1.6. Diferencia entre Listas y Arrays<a class="headerlink" href="#16-diferencia-entre-listas-y-arrays" title="Permanent link">&para;</a></h3>
 <p>Las listas y los arrays son dos estructuras de datos comunes en Kotlin. Aunque son similares, tienen algunas diferencias importantes que es importante conocer. Veamos cuáles son:
- - <strong>Listas</strong>: Una lista es una colección ordenada de elementos. Puedes agregar o quitar elementos de una lista después de su creación. En Kotlin, las listas son inmutables por defecto, lo que significa que no puedes modificarlas después de su creación. Para crear una lista mutable, debes usar <code>mutableListOf</code> en lugar de <code>listOf</code>. Por ejemplo:</p>
+- <strong>Listas</strong>: Una lista es una colección ordenada de elementos. Puedes agregar o quitar elementos de una lista después de su creación. En Kotlin, las listas son inmutables por defecto, lo que significa que no puedes modificarlas después de su creación. Para crear una lista mutable, debes usar <code>mutableListOf</code> en lugar de <code>listOf</code>. Por ejemplo:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">// Lista inmutable</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">listaMutable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">// Lista mutable</span>
+</code></pre></div>
+- <strong>Arrays</strong>: Un array es una estructura de datos que contiene una colección de elementos del mismo tipo. Los arrays son representados por la clase <code>Array</code> y son mutables por defecto, lo que significa que puedes modificarlos después de su creación. Para crear un array inmutable, debes usar <code>arrayOf</code> en lugar de <code>arrayOf</code>. Por ejemplo:</p>
 <div class="highlight"><pre><span></span><code>```kotlin
-val lista = listOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)  // Lista inmutable
-val listaMutable = mutableListOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)  // Lista mutable
+val array = arrayOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)  // Array mutable
+val arrayInmutable = arrayOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)  // Array inmutable      
 ```
 </code></pre></div>
-<ul>
-<li>
-<p><strong>Arrays</strong>: Un array es una estructura de datos que contiene una colección de elementos del mismo tipo. Los arrays son representados por la clase <code>Array</code> y son mutables por defecto, lo que significa que puedes modificarlos después de su creación. Para crear un array inmutable, debes usar <code>arrayOf</code> en lugar de <code>arrayOf</code>. Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arrayOf</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">// Array mutable</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">arrayInmutable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arrayOf</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">// Array inmutable      </span>
-</code></pre></div>
-</li>
-</ul>
 <p>En Kotlin el uso de arrays es muy similar al de las listas.  Puedes acceder a los elementos de un array usando el operador de indexación (<code>[]</code>). Por ejemplo:</p>
 <div class="highlight"><pre><span></span><code>```kotlin
 val array = arrayOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)

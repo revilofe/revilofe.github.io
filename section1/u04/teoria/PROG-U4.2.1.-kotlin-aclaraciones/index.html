@@ -3827,53 +3827,56 @@
 <p>Aprender a controlar los nulos en Kotlin te ayuda a escribir código más seguro y menos propenso a errores en tiempo de ejecución. Recuerda, Kotlin está diseñado para minimizar la posibilidad de <code>NullPointerException</code>, y aprovechar estas características te permite escribir un código más robusto y limpio.</p>
 <h3 id="16-diferencia-entre-listas-y-arrays">1.6. Diferencia entre Listas y Arrays<a class="headerlink" href="#16-diferencia-entre-listas-y-arrays" title="Permanent link">&para;</a></h3>
 <p>Las listas y los arrays son dos estructuras de datos comunes en Kotlin. Aunque son similares, tienen algunas diferencias importantes que es importante conocer. Veamos cuáles son:
- - <strong>Listas</strong>: Una lista es una colección ordenada de elementos. Puedes agregar o quitar elementos de una lista después de su creación. En Kotlin, las listas son inmutables por defecto, lo que significa que no puedes modificarlas después de su creación. Para crear una lista mutable, debes usar <code>mutableListOf</code> en lugar de <code>listOf</code>. Por ejemplo:
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">// Lista inmutable</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">listaMutable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">// Lista mutable</span>
+ - <strong>Listas</strong>: Una lista es una colección ordenada de elementos. Puedes agregar o quitar elementos de una lista después de su creación. En Kotlin, las listas son inmutables por defecto, lo que significa que no puedes modificarlas después de su creación. Para crear una lista mutable, debes usar <code>mutableListOf</code> en lugar de <code>listOf</code>. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>```kotlin
+val lista = listOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)  // Lista inmutable
+val listaMutable = mutableListOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)  // Lista mutable
+```
 </code></pre></div>
-- <strong>Arrays</strong>: Un array es una estructura de datos que contiene una colección de elementos del mismo tipo. Los arrays son representados por la clase <code>Array</code> y son mutables por defecto, lo que significa que puedes modificarlos después de su creación. Para crear un array inmutable, debes usar <code>arrayOf</code> en lugar de <code>arrayOf</code>. Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code>    ```kotlin
-    val array = arrayOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)  // Array mutable
-    val arrayInmutable = arrayOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)  // Array inmutable
-    ```
+<ul>
+<li>
+<p><strong>Arrays</strong>: Un array es una estructura de datos que contiene una colección de elementos del mismo tipo. Los arrays son representados por la clase <code>Array</code> y son mutables por defecto, lo que significa que puedes modificarlos después de su creación. Para crear un array inmutable, debes usar <code>arrayOf</code> en lugar de <code>arrayOf</code>. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arrayOf</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">// Array mutable</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">arrayInmutable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arrayOf</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">// Array inmutable      </span>
 </code></pre></div>
+</li>
+</ul>
 <p>En Kotlin el uso de arrays es muy similar al de las listas.  Puedes acceder a los elementos de un array usando el operador de indexación (<code>[]</code>). Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code>    ```kotlin
-    val array = arrayOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)
-    println(array[0])  // Imprime &quot;A&quot;
-    ```
+<div class="highlight"><pre><span></span><code>```kotlin
+val array = arrayOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)
+println(array[0])  // Imprime &quot;A&quot;
+```
 </code></pre></div>
 <p>También puedes modificar los elementos de un array usando el operador de indexación. Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code>    ```kotlin
-    val array = arrayOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)
-    array[0] = &quot;D&quot;
-    println(array[0])  // Imprime &quot;D&quot;
-    ```
+<div class="highlight"><pre><span></span><code>```kotlin
+val array = arrayOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)
+array[0] = &quot;D&quot;
+println(array[0])  // Imprime &quot;D&quot;
+```
 </code></pre></div>
 <p>Los arrays también tienen un método <code>size</code> que devuelve el número de elementos en el array. Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code>    ```kotlin
-    val array = arrayOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)
-    println(array.size)  // Imprime 3
-    ```
+<div class="highlight"><pre><span></span><code>```kotlin
+val array = arrayOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)
+println(array.size)  // Imprime 3
+```
 </code></pre></div>
 <p>Los arrays también tienen un método <code>get</code> que devuelve el elemento en el índice especificado. Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code>    ```kotlin
-    val array = arrayOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)
-    println(array.get(0))  // Imprime &quot;A&quot;
-    ```
+<div class="highlight"><pre><span></span><code>```kotlin
+val array = arrayOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)
+println(array.get(0))  // Imprime &quot;A&quot;
+```
 </code></pre></div>
 <p>Los arrays también tienen un método <code>set</code> que establece el elemento en el índice especificado. Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code>    ```kotlin
-    val array = arrayOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)
-    array.set(0, &quot;D&quot;)
-    println(array.get(0))  // Imprime &quot;D&quot;
-    ```
+<div class="highlight"><pre><span></span><code>```kotlin
+val array = arrayOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)
+array.set(0, &quot;D&quot;)
+println(array.get(0))  // Imprime &quot;D&quot;
+```
 </code></pre></div>
 <p>Los arrays también tienen un método <code>contains</code> que devuelve <code>true</code> si el array contiene el elemento especificado. Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code>    ```kotlin
-    val array = arrayOf(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)
-    println(array.contains(&quot;A&quot;))  //
-</code></pre></div>
+<p><code>kotlin
+    val array = arrayOf("A", "B", "C")
+    println(array.contains("A"))  //</code></p>
 <p>Por tanto, la principal diferencia entre un Array y una List en Kotlin radica en su tamaño y mutabilidad:</p>
 <ul>
 <li>Tamaño:</li>

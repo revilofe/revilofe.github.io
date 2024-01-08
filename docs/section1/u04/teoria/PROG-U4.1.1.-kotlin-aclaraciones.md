@@ -1,12 +1,12 @@
 ---
-title: "UD 4 - 4.1 kotlin"
+title: "UD 4 - 4.1.1 Aclaraciones kotlin "
 description: kotlin
 summary: kotlin
 authors:
     - Eduardo Fdez
-date: 2022-11-14
+date: 2024-01-08
 icon: 
-permalink: /prog/unidad4/4.1
+permalink: /prog/unidad4/4.1.1
 categories:
     - PROG
     - kotlin
@@ -14,13 +14,13 @@ tags:
     - Software
     - kotlin
 ---
-# Aclaraciones sobre [Kotlin]
+# 1. Aclaraciones sobre [Kotlin]
 
 En este punto vamos a ver algunas aclaraciones sobre el lenguaje de programación [Kotlin]. Se basa en las principales dudas que nos pueden surgir al empezar a programar en este lenguaje y que han sido extraídas de las preguntas que el alumnado ha realizado durante los distintos cursos.
 
-## Aclaraciones sobre el lenguaje
+## 2. Aclaraciones sobre el lenguaje
 
-### Funciones lambda
+### 2.1. Funciones lambda
 
 Imagina que tienes una lista de números y quieres quedarte solo con los que son pares. En Kotlin, puedes hacer esto fácilmente con `filter`.
 
@@ -70,7 +70,7 @@ fun <T> List<T>.filter(predicate: (T) -> Boolean): List<T> {
 
 Espero que esto te ayude a entender mejor cómo funciona `filter` y en general cualquier función o método que utiliza lambdas entre sus parámetros.
 
-### Notación de llamado las funciones cuando se utilizan lambdas
+### 2.2. Notación de llamado las funciones cuando se utilizan lambdas
 
 En Kotlin, cuando llamas a una función que toma una lambda como parámetro, puedes usar dos formas: con o sin paréntesis. La que ya mostré es la forma sin paréntesis, pero si prefieres usar paréntesis, puedes hacerlo también. Aquí te muestro cómo sería:
 
@@ -84,7 +84,7 @@ En esta versión, simplemente colocas la lambda entre paréntesis después de `f
 
 En Kotlin, cuando una función tiene una lambda como último parámetro, puedes optar por usar la "sintaxis de lambda fuera de los paréntesis", que es lo que hicimos en los ejemplos de más arriba. Pero si te sientes más cómodo con los paréntesis, ¡adelante!
 
-### ¿Qué es un receiver en kotlin?
+### 2.3. ¿Qué es un receiver en kotlin?
 
 En Kotlin, un "receiver" se refiere a un tipo especial de parámetro que está disponible dentro del cuerpo de una función de extensión o una lambda con receptor. Es una forma poderosa y flexible de añadir funcionalidades a clases existentes o de crear DSLs (Domain-Specific Languages). Veamos cada caso:
 
@@ -109,7 +109,7 @@ En este caso, `ArrayList<String>()` es el receiver para la lambda pasada a `appl
 
 Por tanto, el receiver en Kotlin proporciona un contexto adicional dentro de una función de extensión o una lambda, permitiéndote acceder y modificar las propiedades y métodos del objeto sobre el cual se invoca la función o lambda. Esto hace que el código sea más conciso y legible, y es una parte fundamental de cómo Kotlin maneja muchas de sus características más elegantes y potentes.
 
-### ¿Qué es `it` en kotlin?
+### 2.4. ¿Qué es `it` en kotlin?
 
 En Kotlin, `it` es un nombre implícito que se usa para referirse al parámetro único de una lambda cuando dicho parámetro no se declara de manera explícita. Es una forma conveniente y concisa de trabajar con lambdas que solo requieren un parámetro. Aquí te explico un poco más:
 
@@ -120,9 +120,10 @@ En Kotlin, `it` es un nombre implícito que se usa para referirse al parámetro 
 
    En este caso, la lambda pasada a `map` tiene un parámetro (cada elemento de la lista), y usamos `it` para referirnos a ese parámetro. Es equivalente a escribir `{ numero -> numero * numero }`, pero más conciso.
 2. **Cuándo se Utiliza**: `it` se utiliza automáticamente solo cuando la lambda tiene un solo parámetro. Si la lambda tiene más de un parámetro o si quieres nombrar explícitamente el parámetro por claridad, entonces no se puede usar `it`.
-3. **Legibilidad**: Aunque `it` es útil para mantener el código conciso, en algunos casos puede ser menos legible, especialmente si el cuerpo de la lambda es largo o complejo. En tales situaciones, puede ser mejor dar un nombre explícito al parámetro para hacer el código más fácil de entender. 
+3. **Legibilidad**: Aunque `it` es útil para mantener el código conciso, en algunos casos puede ser menos legible, especialmente si el cuerpo de la lambda es largo o complejo. En tales situaciones, puede ser mejor dar un nombre explícito al parámetro para hacer el código más fácil de entender.
 
 Para darle un nombre a `it` en una lambda en Kotlin, simplemente defines explícitamente el parámetro de la lambda. Esto se hace colocando el nombre del parámetro seguido de una flecha (`->`) al principio de la lambda. Aquí te muestro cómo hacerlo con un ejemplo:Supongamos que tienes una lista y quieres aplicar una operación a cada elemento. Usando `it`, lo harías así:
+
 ```kotlin
 val numeros = listOf(1, 2, 3)
 val cuadrados = numeros.map { it * it }
@@ -140,7 +141,103 @@ Nombrar los parámetros de las lambdas es una buena práctica cuando el contexto
 
 Por tanto, `it` es una herramienta útil en Kotlin que ayuda a mantener las lambdas simples y concisas cuando solo tienen un parámetro. Es parte de lo que hace a Kotlin un lenguaje expresivo y agradable de usar.
 
-## Reference
+### 2.5. Manejo de nulos y operador Elvis.
+
+Controlar los nulos es una parte crucial en Kotlin, y es uno de los aspectos donde este lenguaje realmente brilla, gracias a su sistema de tipos que distingue entre referencias que pueden ser nulas (`nullable`) y las que no pueden serlo (`non-nullable`). Veamos cómo puedes manejar los nulos y usar el operador Elvis en Kotlin:
+
+1. **Tipos Nulables y No Nulables**:
+
+   * En Kotlin, una variable no puede ser nula a menos que se declare explícitamente como nulable. Se agrega un signo de interrogación (`?`) al tipo para indicar que puede ser nula.
+
+     ```kotin
+     var nombre: String = "Cirolele"  // No puede ser nula
+     var apellido: String? = null     // Puede ser nula
+     ```
+2. **Chequeo de Nulos**:
+
+   * Antes de usar una variable nulable, debes verificar si es nula.
+     ```kotin
+     if (apellido != null) {
+         println(apellido.length)
+     }
+     ```
+3. **Operador de Llamada Segura (`?.`)**:
+
+   * Permite acceder de forma segura a las propiedades y métodos de una referencia nulable. Si la referencia es nula, no se ejecuta el método o propiedad y devuelve nulo.
+     ```kotin
+     println(apellido?.length)  // Imprime el largo si no es nulo, sino imprime null
+     ```
+4. **Operador Elvis (`?:`)**:
+
+   * Este operador se utiliza para proporcionar un valor por defecto en caso de que la expresión a su izquierda sea nula. Es como decir "usa esto, pero si es nulo, entonces usa aquello".
+     ```kotin
+     val longitud = apellido?.length ?: 0  // Si apellido es nulo, usa 0
+     ```
+   * El operador Elvis es extremadamente útil para evitar el anidamiento excesivo de declaraciones `if` y proporcionar valores predeterminados de manera concisa.
+5. **Operador de Aserto No Nulo (`!!`)**:
+
+   * Convierte cualquier valor a un tipo no nulable, lanzando una excepción `NullPointerException` si el valor es nulo.
+   * Debe usarse con cuidado, ya que va en contra de la seguridad de nulos que Kotlin intenta proporcionar.
+     ```kotin
+     val nombreNoNulo: String = nombre!!  // Lanza NullPointerException si nombre es nulo
+     ```
+6. **let con Nulos**:
+
+   * El método `let` puede ser útil para trabajar con valores nulables. Si el objeto es nulo, el bloque no se ejecuta.
+     ```kotin
+     apellido?.let {
+         println("El apellido tiene ${it.length} caracteres")
+     }
+     ```
+
+Aprender a controlar los nulos en Kotlin te ayuda a escribir código más seguro y menos propenso a errores en tiempo de ejecución. Recuerda, Kotlin está diseñado para minimizar la posibilidad de `NullPointerException`, y aprovechar estas características te permite escribir un código más robusto y limpio.
+
+### 2.6 Listas de listas
+
+
+Crear matrices o listas bidimensionales en Kotlin es bastante sencillo. Una lista bidimensional es básicamente una lista de listas. Aquí te muestro cómo puedes hacerlo:
+
+1. **Creación de una Lista Bidimensional Manualmente**: Puedes crear una lista bidimensional manualmente definiendo una lista de listas. Por ejemplo, para crear una matriz 2x3:
+   ```kotin
+   val matriz = listOf(
+       listOf(1, 2, 3),
+       listOf(4, 5, 6)
+   )
+   // Aquí matriz es una lista de dos listas, cada una con tres elementos.
+   ```
+2. **Creación Dinámica**: Si quieres crear una matriz con tamaños dinámicos, puedes usar bucles para inicializarla. Por ejemplo, crear una matriz de 3x3:
+
+   ```kotin
+   val filas = 3
+   val columnas = 3
+   val matrizDinamica = List(filas) { MutableList(columnas) { 0 } }
+   // Crea una matriz 3x3 con todos los elementos inicializados a 0.
+   ```
+3. **Acceso y Modificación de Elementos**: Puedes acceder o modificar los elementos de la matriz usando índices. Por ejemplo, para cambiar un elemento:
+
+    ```kotin
+    matrizDinamica[0][1] = 10  // Cambia el segundo elemento de la primera fila a 10
+    ```
+   Y para leer un elemento:
+
+    ```kotin
+    val elemento = matrizDinamica[0][1]  // Lee el segundo elemento de la primera fila
+    ```
+
+4. **Iteración sobre Elementos**: Puedes iterar sobre los elementos de la matriz utilizando bucles anidados:
+
+   ```kotin
+   for (fila in matrizDinamica) {
+       for (elemento in fila) {
+           println(elemento)
+       }
+   }
+   ```
+
+Estas son las formas básicas de trabajar con matrices o listas bidimensionales en Kotlin. Puedes adaptar estos ejemplos según tus necesidades específicas, como cambiar el tipo de datos almacenados o modificar la forma de inicialización.
+
+
+## 3. Reference
 
 * [https://kotlinlang.org/docs/reference/](https://kotlinlang.org/docs/reference/)
 * [https://code.tutsplus.com/series/kotlin-from-scratch--cms-1209](https://code.tutsplus.com/series/kotlin-from-scratch--cms-1209)
@@ -152,12 +249,7 @@ Por tanto, `it` es una herramienta útil en Kotlin que ayuda a mantener las lamb
 * [https://superkotlin.com/kotlin-mega-tutorial/](https://superkotlin.com/kotlin-mega-tutorial/)
 * [https://revilofe.github.io/IESRA-DAM-Prog/#/](https://revilofe.github.io/IESRA-DAM-Prog/#/)
 
-## Fuente
+## 4. Fuente
 
 * [Apuntes de kotlin](https://github.com/alxgcrz/_kotlin_)
 * [Kotlinlang](https://kotlinlang.org)
-
-## License
-
-[![Licencia de Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)](http://creativecommons.org/licenses/by-sa/4.0/)
-Esta obra está bajo una [licencia de Creative Commons Reconocimiento-Compartir Igual 4.0 Internacional](http://creativecommons.org/licenses/by-sa/4.0/).

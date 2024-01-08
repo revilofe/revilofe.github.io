@@ -114,13 +114,16 @@ Por tanto, el receiver en Kotlin proporciona un contexto adicional dentro de una
 En Kotlin, `it` es un nombre implícito que se usa para referirse al parámetro único de una lambda cuando dicho parámetro no se declara de manera explícita. Es una forma conveniente y concisa de trabajar con lambdas que solo requieren un parámetro. Aquí te explico un poco más:
 
 1. **Uso en Lambdas**: Cuando tienes una lambda que acepta un solo parámetro, puedes usar `it` para referirte a ese parámetro sin necesidad de declararlo. Por ejemplo:
-
+    ```kotlin
    val lista = listOf(1, 2, 3)
    val cuadrados = lista.map { it * it }
+    ```
+   
+   En este caso, la lambda pasada a `map` tiene un parámetro (cada elemento de la lista), y usamos `it` para referirnos a ese parámetro. Es equivalente a escribir `{ numero -> numero * numero }`, pero más conciso.   
 
-   En este caso, la lambda pasada a `map` tiene un parámetro (cada elemento de la lista), y usamos `it` para referirnos a ese parámetro. Es equivalente a escribir `{ numero -> numero * numero }`, pero más conciso.
-2. **Cuándo se Utiliza**: `it` se utiliza automáticamente solo cuando la lambda tiene un solo parámetro. Si la lambda tiene más de un parámetro o si quieres nombrar explícitamente el parámetro por claridad, entonces no se puede usar `it`.
-3. **Legibilidad**: Aunque `it` es útil para mantener el código conciso, en algunos casos puede ser menos legible, especialmente si el cuerpo de la lambda es largo o complejo. En tales situaciones, puede ser mejor dar un nombre explícito al parámetro para hacer el código más fácil de entender.
+2. **Cuándo se Utiliza**: `it` se utiliza automáticamente solo cuando la lambda tiene un solo parámetro. Si la lambda tiene más de un parámetro o si quieres nombrar explícitamente el parámetro por claridad, entonces no se puede usar `it`.   
+
+3. **Legibilidad**: Aunque `it` es útil para mantener el código conciso, en algunos casos puede ser menos legible, especialmente si el cuerpo de la lambda es largo o complejo. En tales situaciones, puede ser mejor dar un nombre explícito al parámetro para hacer el código más fácil de entender.   
 
 Para darle un nombre a `it` en una lambda en Kotlin, simplemente defines explícitamente el parámetro de la lambda. Esto se hace colocando el nombre del parámetro seguido de una flecha (`->`) al principio de la lambda. Aquí te muestro cómo hacerlo con un ejemplo:Supongamos que tienes una lista y quieres aplicar una operación a cada elemento. Usando `it`, lo harías así:
 

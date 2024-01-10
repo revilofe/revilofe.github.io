@@ -1,7 +1,7 @@
 # 10 Casos de Uso para un SOC Moderno 🛡️
 
 
-En un mundo digital cada vez más complejo y peligroso, la seguridad cibernética se ha convertido en un pilar fundamental para la supervivencia de las organizaciones. Los Centros de Operaciones de Seguridad (SOC) modernos se erigen como la última línea de defensa contra las amenazas cibernéticas en constante evolución. Pero,** **
+En un mundo digital cada vez más complejo y peligroso, la seguridad cibernética se ha convertido en un pilar fundamental para la supervivencia de las organizaciones. Los Centros de Operaciones de Seguridad (SOC) modernos se erigen como la última línea de defensa contra las amenazas cibernéticas en constante evolución. Pero,
 
 > ***¿cómo pueden garantizar la detección y respuesta efectivas en un panorama en constante cambio?***
 

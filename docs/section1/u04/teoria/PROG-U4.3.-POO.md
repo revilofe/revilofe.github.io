@@ -32,8 +32,8 @@ Está basada en varias técnicas como: abstracción, polimorfismo, encapsulamien
        abstract fun frenar()
    }
    ```
-
-   Aquí, `Vehiculo` es una clase abstracta que define la abstracción de un vehículo con características comunes como marca y modelo, y acciones como acelerar y frenar.
+   Aquí, `Vehiculo` es una clase abstracta que define la abstracción de un vehículo con características comunes como marca y modelo, y acciones como acelerar y frenar.   
+   
 2. **Polimorfismo**: El polimorfismo permite que objetos de diferentes clases sean tratados como objetos de una clase común. Esto se logra a través de la herencia y la implementación de interfaces.
    Ejemplo en Kotlin:
 
@@ -48,9 +48,9 @@ Está basada en varias técnicas como: abstracción, polimorfismo, encapsulamien
        }
    }
    ```
+   `Coche` es una clase que hereda de `Vehiculo` y proporciona su propia implementación de los métodos acelerar y frenar.   
 
-   `Coche` es una clase que hereda de `Vehiculo` y proporciona su propia implementación de los métodos acelerar y frenar.
-3. **Encapsulamiento**: El encapsulamiento implica restringir el acceso directo a algunos componentes de un objeto y proteger la integridad del objeto exponiendo solo lo que es necesario.
+3. **Encapsulamiento**: El encapsulamiento implica restringir el acceso directo a algunos componentes de un objeto y proteger la integridad del objeto exponiendo solo lo que es necesario. 
    Ejemplo en Kotlin:
 
    ```kotlin
@@ -66,8 +66,8 @@ Está basada en varias técnicas como: abstracción, polimorfismo, encapsulamien
        }
    }
    ```
+   Aquí, el saldo de `CuentaBancaria` está encapsulado. Se manipula únicamente a través de métodos como `depositar`.   
 
-   Aquí, el saldo de `CuentaBancaria` está encapsulado. Se manipula únicamente a través de métodos como `depositar`.
 4. **Herencia**: La herencia es un mecanismo mediante el cual una nueva clase adquiere las propiedades y comportamientos de otra clase. Esto ayuda en la reutilización de código.
    Ejemplo en Kotlin:
 
@@ -84,8 +84,8 @@ Está basada en varias técnicas como: abstracción, polimorfismo, encapsulamien
        }
    }
    ```
+   `Perro` hereda de `Animal` y sobrescribe el método `sonido`.   
 
-   `Perro` hereda de `Animal` y sobrescribe el método `sonido`.
 5. **Cohesión/Acoplamiento**: La cohesión se refiere a qué tan estrechamente relacionadas están las tareas realizadas por una clase. El acoplamiento se refiere a cómo de interdependientes son las clases entre sí. La alta cohesión y el bajo acoplamiento son ideales en POO para facilitar la mantenibilidad y la escalabilidad.
 
    * **Alta cohesión**: Una clase `Calculadora` que realiza operaciones matemáticas.
@@ -99,8 +99,8 @@ En la programación orientada a objetos (POO), los conceptos fundamentales son l
 
 ### 2.1 Conceptos
 
-Las **clases** son una plantilla para la creación de objetos de datos según un modelo predefinido.
-Los **objetos** son una instancia de la clase, es decir una concreción. Es un ejemplo de esa clase.
+- Las **clases** son una plantilla para la creación de objetos de datos según un modelo predefinido.   
+- Los **objetos** son una instancia de la clase, es decir una concreción. Es un ejemplo de esa clase.   
 
 Ej:
 
@@ -134,8 +134,7 @@ Todos los constructores son públicos por defecto, lo que significa que son visi
 
   ```kotlin 
   class Persona(val nombre: String, val edad: Int)
-  ```
-
+  ```  
   Aquí, `Persona` tiene un constructor primario con dos parámetros: `nombre` y `edad`. Si no hay anotaciones ni modificadores de visibilidad, la palabra clave `constructor` es opcional y se puede omitir.   
 
 * **Constructor Secundario**: Se declara dentro del cuerpo de la clase y se utiliza para proporcionar funcionalidades adicionales o para permitir diferentes formas de instanciar un objeto.
@@ -149,8 +148,7 @@ Todos los constructores son públicos por defecto, lo que significa que son visi
       }
   }
   ```
-
-En el ejemplo anterior,  `Persona` tiene un constructor primario que solo toma un `nombre`, y un constructor secundario que toma tanto un `nombre` como una `edad`. Presta atención a como el constructor secundario delega en el constructor primario usando la palabra clave `this`.
+  En el ejemplo anterior,  `Persona` tiene un constructor primario que solo toma un `nombre`, y un constructor secundario que toma tanto un `nombre` como una `edad`. Presta atención a como el constructor secundario delega en el constructor primario usando la palabra clave `this`.
 
 
 Por otra parte, las propiedades o variables de instancia pueden definirse en el constructor principal o en el cuerpo de la clase:
@@ -168,7 +166,6 @@ Por otra parte, las propiedades o variables de instancia pueden definirse en el 
 * **Definición Personalizada en el Cuerpo de la Clase**: Puedes personalizar cómo se accede y modifica una propiedad mediante la definición explícita de los métodos getter y setter.
 
   Ejemplo:
-
   ```kotlin
   class Persona(nombreInicial: String, edadInicial: Int) {
     var nombre: String = nombreInicial
@@ -181,8 +178,7 @@ Por otra parte, las propiedades o variables de instancia pueden definirse en el 
         private set // Solo getter público, setter privado
   }
   ```
-
-Aquí, `nombre` tiene un getter personalizado que devuelve el nombre en mayúsculas y un setter que capitaliza el valor asignado. `edad` tiene un setter privado, lo que significa que solo puede modificarse dentro de la clase `Persona`.
+  Aquí, `nombre` tiene un getter personalizado que devuelve el nombre en mayúsculas y un setter que capitaliza el valor asignado. `edad` tiene un setter privado, lo que significa que solo puede modificarse dentro de la clase `Persona`.
 
 #### 2.2.2 Bloques de inicialización
 
@@ -203,7 +199,7 @@ Los bloques de inicialización complementan los constructores primarios. Se util
   }
   ```
 
-Una buena practica es conocer el orden de ejecucion de cada bloque.
+Una buena práctica es conocer el orden de ejecución de cada bloque.
 
 ```kotlin
 class InitOrderDemo(name: String) {
@@ -232,6 +228,8 @@ Mientras que un atributo es simplemente una variable dentro de una clase, una pr
       private var marca: String = "Toyota" // Atributo, con acceso tanto en lectura como en escritura privada.
   }
   ```
+  Aquí, `marca` es un atributo de la clase `Coche`. Es privado, lo que significa que solo puede accederse dentro de la clase `Coche`.
+
 * **Propiedades**: En Kotlin, una propiedad combina un atributo con sus métodos getter y setter. Estos métodos controlan el acceso y la actualización del atributo. Por ejemplo:
 
   ```kotlin
@@ -243,17 +241,16 @@ Mientras que un atributo es simplemente una variable dentro de una clase, una pr
           get() = "Coche de marca $marca" // Getter personalizado, muestra una cadena con la marca.
   }
   ```
-
   Aquí, `marca` es una propiedad. Tiene un setter privado, lo que significa que no puedes cambiar `marca` desde fuera de la clase `Coche`. `info` es una propiedad de solo lectura con un getter personalizado que devuelve una cadena que incluye el valor de `marca`.
 
 ### 2.4 Ejemplos de clases y objetos personalizados
 
 Vamos a crear ejemplos para las clases `Persona`, `Animal`, y `Coche`, así como para sus objetos o instancias específicas. Cada clase incluirá atributos (o campos) y métodos, y mostraré cómo se crean y utilizan las instancias de estas clases.
 
-1. **Clase `Persona`**:
+1. **Clase `Persona`**:   
 
-   * Atributos: nombre, edad
-   * Métodos: presentarse
+   - Atributos: nombre, edad
+   - Métodos: presentarse
 
    ```kotlin
 
@@ -284,11 +281,12 @@ Vamos a crear ejemplos para las clases `Persona`, `Animal`, y `Coche`, así como
    // Uso de la clase para crear una instancia
    val juan = Persona("Juan", 30)
    juan.presentarse() // "Hola, mi nombre es Juan y tengo 30 años."
-   ```
+   ```   
+   
 2. **Clase `Animal`**:
-
-   * Atributos: especie, nombre
-   * Métodos: emitirSonido
+   
+   - Atributos: especie, nombre
+   - Métodos: emitirSonido
 
    ```kotlin
    //Definiendo la clase
@@ -301,11 +299,12 @@ Vamos a crear ejemplos para las clases `Persona`, `Animal`, y `Coche`, así como
    // Uso de la clase para crear una instancia
    val perro = Animal("perro", "Firulais")
    perro.emitirSonido() // Soy un perro y me llamo Firulais. ¡Hago un sonido característico!
-   ```
+   ```   
+
 3. **Clase `Coche`**:
 
-   * Atributos: marca, modelo
-   * Métodos: describir
+   - Atributos: marca, modelo
+   - Métodos: describir
 
    ```kotlin
    //Definiendo la clase
@@ -414,9 +413,9 @@ println("Longitud del saludo: $longitud") // Mostrando la longitud de la cadena
 
 En este ejemplo:
 
-* `saludo` es un objeto de la clase `String`.
-* Utilizamos la propiedad `length` de la clase `String` para obtener la longitud de la cadena de texto.
-* Imprimimos la longitud del objeto `saludo`.
+- `saludo` es un objeto de la clase `String`.
+- Utilizamos la propiedad `length` de la clase `String` para obtener la longitud de la cadena de texto.
+- Imprimimos la longitud del objeto `saludo`.
 
 Este ejemplo demuestra cómo se define un objeto `String` en Kotlin y cómo se puede interactuar con él utilizando las propiedades y métodos definidos en la clase `String`. La clase proporciona la estructura y los métodos para manipular cadenas de texto, mientras que el objeto `saludo` es una instancia específica con su propio valor (`"Hola Mundo"`).
 

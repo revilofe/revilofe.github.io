@@ -1,16 +1,17 @@
 ---
-title: "UD 3 - Estructuras de datos"
-description: Estructuras de dato
-summary: SEstructuras de dato
+title: "UD 4 - Programación orientada a objetos"
+description: Programación orientada a objetos
+summary: Programación orientada a objetos
 authors:
     - Eduardo Fdez
-date: 2022-09-17
+date: 2024-01-10
 icon: 
-permalink: /prog/unidad2
+permalink: /prog/unidad4
 categories:
     - PROG
 tags:
     - Software
+    - POO
 
 # Relacionado con la tabla de contenidos
 toc: true
@@ -29,32 +30,35 @@ Cada unidad contendrá una serie de contenidos, resultados de aprendizaje (desgl
 
 En esta sección se relaciona la unidad con el resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf).
 
-RA 6. Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.
+> RA 6. Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.
 
 #### Criterios de evaluación
 
 En esta sección se relaciona la unidad con los criterios de evaluación concretos, del resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
 
-* a) Se han escrito programas que utilicen arrays
-* b) Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.
-* c) Se han utilizado listas para almacenar y procesar información.
-* d) Se han utilizado iteradores para recorrer los elementos de las listas.
-* e) Se han reconocido las características y ventajas de cada una de la colecciones de datos disponibles.
-* (NO) f) Se han creado clases y métodos genéricos.
-* g) Se han utilizado expresiones regulares en la búsqueda de patrones en cadenas de texto.
-* (NO) h) Se han identificado las clases relacionadas con el tratamiento de documentos XML.
-* (NO) i) Se han realizado programas que realicen manipulaciones sobre documentos XML.
+
+* a) Se han identificado los fundamentos de la programación orientada a objetos.
+* b) Se han escrito programas simples.
+* c) Se han instanciado objetos a partir de clases predefinidas.
+* d) Se han utilizado métodos y propiedades de los objetos.
+* e) Se han escrito llamadas a métodos estáticos.
+* f) Se han utilizado parámetros en la llamada a métodos.
+* g) Se han incorporado y utilizado librerías de objetos.
+* h) Se han utilizado constructores.
+* i) Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples
 
 ### Contenidos
 
-La unidad se encuentra dentro del Bloque 2
+La unidad se encuentra dentro del Bloque 3 de Programación orientada a objetos.
 
-* U3: Estructuras de datos. 
+* U4: Programación orientada a objetos. 
 
-En la Unidad 3, veremos:
+En la Unidad 3, veremos:   
+- Características de POO. 
+- Componentes de clases y objetos.   
+- Constructores e instanciación de objetos.   
+- Utilización de métodos y propiedades.   
+- Utilización de métodos estáticos.   
+- Librerías de objetos.   
+- Entornos de desarrollo para programación orientada a objetos.    
 
-* Listas y tuplas
-* Diccionarios
-* Conjuntos
-* String
-* Expresiones regulares

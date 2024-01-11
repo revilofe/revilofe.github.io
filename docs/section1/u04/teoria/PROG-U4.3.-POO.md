@@ -129,75 +129,83 @@ Un **constructor** es un método especial que se utiliza para inicializar los ob
 En Kotlin, una clase puede tener tanto un constructor primario como uno o más constructores secundarios. Si la clase tiene un constructor primario, el secundario debe delegar en el constructor primario, ya sea directamente o indirectamente usando la palabra clave `this`. 
 Todos los constructores son públicos por defecto, lo que significa que son visibles donde sea visible la clase.
 
+##### 2.2.1.1 Constructor Primario
+Se declara en el encabezado de la clase y es el más comúnmente utilizado. Por ejemplo:
 
-* **Constructor Primario**: Se declara en el encabezado de la clase y es el más comúnmente utilizado. Por ejemplo:
+```kotlin 
+class Persona(val nombre: String, val edad: Int)
+```  
+Aquí, `Persona` tiene un constructor primario con dos parámetros: `nombre` y `edad`. Si no hay anotaciones ni modificadores de visibilidad, la palabra clave `constructor` es opcional y se puede omitir.   
 
-  ```kotlin 
-  class Persona(val nombre: String, val edad: Int)
-  ```  
-  Aquí, `Persona` tiene un constructor primario con dos parámetros: `nombre` y `edad`. Si no hay anotaciones ni modificadores de visibilidad, la palabra clave `constructor` es opcional y se puede omitir.   
+##### 2.2.1.2 Constructor Secundario
+Se declara dentro del cuerpo de la clase y se utiliza para proporcionar funcionalidades adicionales o para permitir diferentes formas de instanciar un objeto.
+```kotlin
+class Persona(val nombre: String) {
+  var edad: Int = 0
 
-* **Constructor Secundario**: Se declara dentro del cuerpo de la clase y se utiliza para proporcionar funcionalidades adicionales o para permitir diferentes formas de instanciar un objeto.
-
-  ```kotlin
-  class Persona(val nombre: String) {
-      var edad: Int = 0
-
-      constructor(nombre: String, edad: Int) : this(nombre) {
-          this.edad = edad
-      }
+  constructor(nombre: String, edad: Int) : this(nombre) {
+      this.edad = edad
   }
+}
+```
+En el ejemplo anterior,  `Persona` tiene un constructor primario que solo toma un `nombre`, y un constructor secundario que toma tanto un `nombre` como una `edad`. Presta atención a como el constructor secundario delega en el constructor primario usando la palabra clave `this`.
+
+##### 2.2.1.3 Constructor vacío
+Si no se proporciona ningún constructor, Kotlin crea un constructor vacío por defecto. Por ejemplo:
+  ```kotlin
+    class Persona
   ```
-  En el ejemplo anterior,  `Persona` tiene un constructor primario que solo toma un `nombre`, y un constructor secundario que toma tanto un `nombre` como una `edad`. Presta atención a como el constructor secundario delega en el constructor primario usando la palabra clave `this`.
 
+#### 2.2.2 Definición de las variables de instancia en el constructor
+Por otra parte, las propiedades o variables de instancia pueden definirse en el constructor principal o en el cuerpo de la clase. En el ejemplo anterior, `nombre` es una propiedad definida en el constructor principal, mientras que `edad` es una propiedad definida en el cuerpo de la clase.
 
-Por otra parte, las propiedades o variables de instancia pueden definirse en el constructor principal o en el cuerpo de la clase:
-
-* **Definición en el Constructor**: Al usar `val` o `var` en el constructor principal, Kotlin genera automáticamente métodos getter y setter.
+##### 2.2.2.1 Definición en el Constructor
+Al usar `val` o `var` en el constructor principal, Kotlin genera automáticamente métodos getter y setter.
 
   * `val`: Solo se crea un método getter, ya que `val` define una propiedad de solo lectura.   
   * `var`: Se crean tanto getter como setter, permitiendo lectura y escritura.   
 
-  Ejemplo:
-  ```kotlin
-  class Persona(val nombre: String, var edad: Int)
-  ```
-  
-* **Definición Personalizada en el Cuerpo de la Clase**: Puedes personalizar cómo se accede y modifica una propiedad mediante la definición explícita de los métodos getter y setter.
+Ejemplo:
+```kotlin
+class Persona(val nombre: String, var edad: Int)
+```
 
-  Ejemplo:
-  ```kotlin
-  class Persona(nombreInicial: String, edadInicial: Int) {
-    var nombre: String = nombreInicial
-        get() = field.toUpperCase() // Personaliza el getter
-        set(value) {
-            field = value.capitalize()
-        }
+##### 2.2.2.2 Definición Personalizada en el Cuerpo de la Clase
+Puedes personalizar cómo se accede y modifica una propiedad mediante la definición explícita de los métodos getter y setter.
 
-    var edad: Int = edadInicial
-        private set // Solo getter público, setter privado
-  }
-  ```
-  Aquí, `nombre` tiene un getter personalizado que devuelve el nombre en mayúsculas y un setter que capitaliza el valor asignado. `edad` tiene un setter privado, lo que significa que solo puede modificarse dentro de la clase `Persona`.
+Ejemplo:
+```kotlin
+class Persona(nombreInicial: String, edadInicial: Int) {
+var nombre: String = nombreInicial
+    get() = field.toUpperCase() // Personaliza el getter
+    set(value) {
+        field = value.capitalize()
+    }
 
-#### 2.2.2 Bloques de inicialización
+var edad: Int = edadInicial
+    private set // Solo getter público, setter privado
+}
+```
+Aquí, `nombre` tiene un getter personalizado que devuelve el nombre en mayúsculas y un setter que capitaliza el valor asignado. `edad` tiene un setter privado, lo que significa que solo puede modificarse dentro de la clase `Persona`.
+
+#### 2.2.3 Bloques de inicialización
 
 Los bloques de inicialización complementan los constructores primarios. Se utilizan para ejecutar código de inicialización que se requiere para todas las instancias de la clase, independientemente del constructor utilizado.
 
-* **Bloques de Inicialización `init`**: Se utilizan junto con el constructor primario. El código en estos bloques se ejecuta cada vez que se crea una instancia de la clase, y puede haber más de uno.
+Los **Bloques de Inicialización `init`** se utilizan junto con el constructor primario. El código en estos bloques se ejecuta cada vez que se crea una instancia de la clase, y puede haber más de uno.
 
-  Dentro de los bloques `init` puedes usar la palabra `required` para validar las propiedades o parámetros. También puedes usar los parámetros del constructor primario en los bloques `init` y en los inicializadores de las propiedades en el cuerpo de la clase:
+Dentro de los bloques `init` puedes usar la palabra `required` para validar las propiedades o parámetros. También puedes usar los parámetros del constructor primario en los bloques `init` y en los inicializadores de las propiedades en el cuerpo de la clase:
 
-  ```kotlin
-  class Persona(val nombre: String, val edad: Int) {
-      val nombreEnMayusculas = nombre.toUpperCase()
-      init {
-          require(nombre.trim().length > 0) { "Argumento nombre inválido." }
-          require(edad >= 0 && edad < 150) { "Argumento edad inválido." }
-          println("Se ha creado una nueva Persona llamada $nombre")
-      }
+```kotlin
+class Persona(val nombre: String, val edad: Int) {
+  val nombreEnMayusculas = nombre.toUpperCase()
+  init {
+      require(nombre.trim().length > 0) { "Argumento nombre inválido." }
+      require(edad >= 0 && edad < 150) { "Argumento edad inválido." }
+      println("Se ha creado una nueva Persona llamada $nombre")
   }
-  ```
+}
+```
 
 Una buena práctica es conocer el orden de ejecución de cada bloque.
 
@@ -215,7 +223,6 @@ class InitOrderDemo(name: String) {
 }
 ```
 
-kotlin
 
 ### 2.3 Atributos vs propiedades
 

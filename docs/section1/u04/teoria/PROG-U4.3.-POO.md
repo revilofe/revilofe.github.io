@@ -255,42 +255,44 @@ Mientras que un atributo es simplemente una variable dentro de una clase, una pr
 Vamos a crear ejemplos para las clases `Persona`, `Animal`, y `Coche`, así como para sus objetos o instancias específicas. Cada clase incluirá atributos (o campos) y métodos, y mostraré cómo se crean y utilizan las instancias de estas clases.
 
 1. **Clase `Persona`**:   
+   
 
    - Atributos: nombre, edad
    - Métodos: presentarse
 
-   ```kotlin
+     ```kotlin
 
-   class Persona(private val nombre: String, private val edad: Int) {
-       fun presentarse() {
-           println("Hola, mi nombre es $nombre y tengo $edad años.")
-       }
-   }
+     class Persona(private val nombre: String, private val edad: Int) {
+         fun presentarse() {
+             println("Hola, mi nombre es $nombre y tengo $edad años.")
+         }
+     }
 
-   // Creando una instancia
-   val juan = Persona("Juan", 30)
-   juan.presentarse() // "Hola, mi nombre es Juan y tengo 30 años."
-   ```
+     // Creando una instancia
+     val juan = Persona("Juan", 30)
+     juan.presentarse() // "Hola, mi nombre es Juan y tengo 30 años."
+     ```
 
-   ten en cuenta que es lo mismo que lo siguiente:
+     ten en cuenta que es lo mismo que lo siguiente:
 
-   ```kotlin
-   //Definiendo la clase
-   class Persona(nombreInicial: String, edadInicial: Int) {
-   private var nombre: String = nombreInicial
-   private var edad: Int = edadInicial
+     ```kotlin
+     //Definiendo la clase
+     class Persona(nombreInicial: String, edadInicial: Int) {
+     private var nombre: String = nombreInicial
+     private var edad: Int = edadInicial
 
-       fun presentarse() {
-           println("Hola, mi nombre es $nombre y tengo $edad años.")
-       }
-   }
+         fun presentarse() {
+             println("Hola, mi nombre es $nombre y tengo $edad años.")
+         }
+     }
 
-   // Uso de la clase para crear una instancia
-   val juan = Persona("Juan", 30)
-   juan.presentarse() // "Hola, mi nombre es Juan y tengo 30 años."
-   ```   
+     // Uso de la clase para crear una instancia
+     val juan = Persona("Juan", 30)
+     juan.presentarse() // "Hola, mi nombre es Juan y tengo 30 años."
+     ```   
    
 2. **Clase `Animal`**:
+   
    
    - Atributos: especie, nombre
    - Métodos: emitirSonido
@@ -309,9 +311,11 @@ Vamos a crear ejemplos para las clases `Persona`, `Animal`, y `Coche`, así como
    ```   
 
 3. **Clase `Coche`**:
-
+   
+   
    - Atributos: marca, modelo
    - Métodos: describir
+
 
    ```kotlin
    //Definiendo la clase

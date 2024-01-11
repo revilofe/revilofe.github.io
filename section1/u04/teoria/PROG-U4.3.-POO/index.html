@@ -3907,15 +3907,17 @@
 <li><strong>Abstracción</strong>: La abstracción implica enfocarse en las características esenciales de un objeto, ignorando las menos importantes o accidentales. En POO, esto se traduce en la creación de clases que representan entidades abstractas con atributos y métodos relevantes.
    Ejemplo en Kotlin:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Vehiculo</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">marca</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">modelo</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Vehiculo</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">marca</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">modelo</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">acelerar</span><span class="p">()</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">frenar</span><span class="p">()</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
 </code></pre></div>
-<p>Aquí, <code>Vehiculo</code> es una clase abstracta que define la abstracción de un vehículo con características comunes como marca y modelo, y acciones como acelerar y frenar.
-2. <strong>Polimorfismo</strong>: El polimorfismo permite que objetos de diferentes clases sean tratados como objetos de una clase común. Esto se logra a través de la herencia y la implementación de interfaces.
-   Ejemplo en Kotlin:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Coche</span><span class="p">(</span><span class="n">marca</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">modelo</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Vehiculo</span><span class="p">(</span><span class="n">marca</span><span class="p">,</span><span class="w"> </span><span class="n">modelo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+   Aquí, <code>Vehiculo</code> es una clase abstracta que define la abstracción de un vehículo con características comunes como marca y modelo, y acciones como acelerar y frenar.   </p>
+<ol>
+<li><strong>Polimorfismo</strong>: El polimorfismo permite que objetos de diferentes clases sean tratados como objetos de una clase común. Esto se logra a través de la herencia y la implementación de interfaces.
+   Ejemplo en Kotlin:</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Coche</span><span class="p">(</span><span class="n">marca</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">modelo</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Vehiculo</span><span class="p">(</span><span class="n">marca</span><span class="p">,</span><span class="w"> </span><span class="n">modelo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">acelerar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Coche acelerando&quot;</span><span class="p">)</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">}</span>
@@ -3925,10 +3927,12 @@
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
 </code></pre></div>
-<p><code>Coche</code> es una clase que hereda de <code>Vehiculo</code> y proporciona su propia implementación de los métodos acelerar y frenar.
-3. <strong>Encapsulamiento</strong>: El encapsulamiento implica restringir el acceso directo a algunos componentes de un objeto y proteger la integridad del objeto exponiendo solo lo que es necesario.
-   Ejemplo en Kotlin:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">CuentaBancaria</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">saldo</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+   <code>Coche</code> es una clase que hereda de <code>Vehiculo</code> y proporciona su propia implementación de los métodos acelerar y frenar.   </p>
+<ol>
+<li><strong>Encapsulamiento</strong>: El encapsulamiento implica restringir el acceso directo a algunos componentes de un objeto y proteger la integridad del objeto exponiendo solo lo que es necesario. 
+   Ejemplo en Kotlin:</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">CuentaBancaria</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">saldo</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">depositar</span><span class="p">(</span><span class="n">monto</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">monto</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">            </span><span class="n">saldo</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">monto</span>
@@ -3940,10 +3944,12 @@
 <a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">}</span>
 </code></pre></div>
-<p>Aquí, el saldo de <code>CuentaBancaria</code> está encapsulado. Se manipula únicamente a través de métodos como <code>depositar</code>.
-4. <strong>Herencia</strong>: La herencia es un mecanismo mediante el cual una nueva clase adquiere las propiedades y comportamientos de otra clase. Esto ayuda en la reutilización de código.
-   Ejemplo en Kotlin:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">open</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Animal</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+   Aquí, el saldo de <code>CuentaBancaria</code> está encapsulado. Se manipula únicamente a través de métodos como <code>depositar</code>.   </p>
+<ol>
+<li><strong>Herencia</strong>: La herencia es un mecanismo mediante el cual una nueva clase adquiere las propiedades y comportamientos de otra clase. Esto ayuda en la reutilización de código.
+   Ejemplo en Kotlin:</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">open</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Animal</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kd">open</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">sonido</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;El animal hace un sonido&quot;</span><span class="p">)</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="p">}</span>
@@ -3955,18 +3961,24 @@
 <a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">}</span>
 </code></pre></div>
-<p><code>Perro</code> hereda de <code>Animal</code> y sobrescribe el método <code>sonido</code>.
-5. <strong>Cohesión/Acoplamiento</strong>: La cohesión se refiere a qué tan estrechamente relacionadas están las tareas realizadas por una clase. El acoplamiento se refiere a cómo de interdependientes son las clases entre sí. La alta cohesión y el bajo acoplamiento son ideales en POO para facilitar la mantenibilidad y la escalabilidad.</p>
-<ul>
-<li><strong>Alta cohesión</strong>: Una clase <code>Calculadora</code> que realiza operaciones matemáticas.</li>
+   <code>Perro</code> hereda de <code>Animal</code> y sobrescribe el método <code>sonido</code>.   </p>
+<ol>
+<li>
+<p><strong>Cohesión/Acoplamiento</strong>: La cohesión se refiere a qué tan estrechamente relacionadas están las tareas realizadas por una clase. El acoplamiento se refiere a cómo de interdependientes son las clases entre sí. La alta cohesión y el bajo acoplamiento son ideales en POO para facilitar la mantenibilidad y la escalabilidad.</p>
+</li>
+<li>
+<p><strong>Alta cohesión</strong>: Una clase <code>Calculadora</code> que realiza operaciones matemáticas.</p>
+</li>
 <li><strong>Bajo acoplamiento</strong>: <code>Calculadora</code> utiliza una interfaz <code>OperacionesMatematicas</code> para interactuar con otras clases, lo que reduce su dependencia directa.</li>
-</ul>
+</ol>
 <p>Estos conceptos son fundamentales en POO y ayudan a crear software bien estructurado, mantenible y escalable.</p>
 <h2 id="2-clases-y-objetosinstancias">2. Clases y objetos/instancias<a class="headerlink" href="#2-clases-y-objetosinstancias" title="Permanent link">&para;</a></h2>
 <p>En la programación orientada a objetos (POO), los conceptos fundamentales son las clases y los objetos. Estos conceptos son esenciales para entender cómo la POO modela el mundo real y soluciona problemas de forma eficiente y organizada.</p>
 <h3 id="21-conceptos">2.1 Conceptos<a class="headerlink" href="#21-conceptos" title="Permanent link">&para;</a></h3>
-<p>Las <strong>clases</strong> son una plantilla para la creación de objetos de datos según un modelo predefinido.
-Los <strong>objetos</strong> son una instancia de la clase, es decir una concreción. Es un ejemplo de esa clase.</p>
+<ul>
+<li>Las <strong>clases</strong> son una plantilla para la creación de objetos de datos según un modelo predefinido.   </li>
+<li>Los <strong>objetos</strong> son una instancia de la clase, es decir una concreción. Es un ejemplo de esa clase.   </li>
+</ul>
 <p>Ej:</p>
 <ul>
 <li>Clases: Persona, Animal, Coche</li>
@@ -3993,13 +4005,13 @@ Todos los constructores son públicos por defecto, lo que significa que son visi
 <ul>
 <li><strong>Constructor Primario</strong>: Se declara en el encabezado de la clase y es el más comúnmente utilizado. Por ejemplo:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Persona</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Persona</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span>
 </code></pre></div>
-<p>Aquí, <code>Persona</code> tiene un constructor primario con dos parámetros: <code>nombre</code> y <code>edad</code>. Si no hay anotaciones ni modificadores de visibilidad, la palabra clave <code>constructor</code> es opcional y se puede omitir.   </p>
+  Aquí, <code>Persona</code> tiene un constructor primario con dos parámetros: <code>nombre</code> y <code>edad</code>. Si no hay anotaciones ni modificadores de visibilidad, la palabra clave <code>constructor</code> es opcional y se puede omitir.   </p>
 <ul>
 <li><strong>Constructor Secundario</strong>: Se declara dentro del cuerpo de la clase y se utiliza para proporcionar funcionalidades adicionales o para permitir diferentes formas de instanciar un objeto.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Persona</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Persona</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="k">constructor</span><span class="p">(</span><span class="n">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">this</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -4007,7 +4019,7 @@ Todos los constructores son públicos por defecto, lo que significa que son visi
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">}</span>
 </code></pre></div>
-<p>En el ejemplo anterior,  <code>Persona</code> tiene un constructor primario que solo toma un <code>nombre</code>, y un constructor secundario que toma tanto un <code>nombre</code> como una <code>edad</code>. Presta atención a como el constructor secundario delega en el constructor primario usando la palabra clave <code>this</code>.</p>
+  En el ejemplo anterior,  <code>Persona</code> tiene un constructor primario que solo toma un <code>nombre</code>, y un constructor secundario que toma tanto un <code>nombre</code> como una <code>edad</code>. Presta atención a como el constructor secundario delega en el constructor primario usando la palabra clave <code>this</code>.</p>
 <p>Por otra parte, las propiedades o variables de instancia pueden definirse en el constructor principal o en el cuerpo de la clase:</p>
 <ul>
 <li>
@@ -4024,8 +4036,8 @@ Todos los constructores son públicos por defecto, lo que significa que son visi
 <ul>
 <li><strong>Definición Personalizada en el Cuerpo de la Clase</strong>: Puedes personalizar cómo se accede y modifica una propiedad mediante la definición explícita de los métodos getter y setter.</li>
 </ul>
-<p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Persona</span><span class="p">(</span><span class="n">nombreInicial</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">edadInicial</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<p>Ejemplo:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Persona</span><span class="p">(</span><span class="n">nombreInicial</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">edadInicial</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombreInicial</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">      </span><span class="k">get</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">field</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">()</span><span class="w"> </span><span class="c1">// Personaliza el getter</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">      </span><span class="k">set</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -4036,7 +4048,7 @@ Todos los constructores son públicos por defecto, lo que significa que son visi
 <a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">      </span><span class="n">private</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="c1">// Solo getter público, setter privado</span>
 <a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="p">}</span>
 </code></pre></div>
-<p>Aquí, <code>nombre</code> tiene un getter personalizado que devuelve el nombre en mayúsculas y un setter que capitaliza el valor asignado. <code>edad</code> tiene un setter privado, lo que significa que solo puede modificarse dentro de la clase <code>Persona</code>.</p>
+  Aquí, <code>nombre</code> tiene un getter personalizado que devuelve el nombre en mayúsculas y un setter que capitaliza el valor asignado. <code>edad</code> tiene un setter privado, lo que significa que solo puede modificarse dentro de la clase <code>Persona</code>.</p>
 <h4 id="222-bloques-de-inicializacion">2.2.2 Bloques de inicialización<a class="headerlink" href="#222-bloques-de-inicializacion" title="Permanent link">&para;</a></h4>
 <p>Los bloques de inicialización complementan los constructores primarios. Se utilizan para ejecutar código de inicialización que se requiere para todas las instancias de la clase, independientemente del constructor utilizado.</p>
 <ul>
@@ -4052,7 +4064,7 @@ Todos los constructores son públicos por defecto, lo que significa que son visi
 <a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="p">}</span>
 </code></pre></div>
-<p>Una buena practica es conocer el orden de ejecucion de cada bloque.</p>
+<p>Una buena práctica es conocer el orden de ejecución de cada bloque.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">InitOrderDemo</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">firstProperty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;First property: </span><span class="si">$</span><span class="n">name</span><span class="s">&quot;</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="k">init</span><span class="w"> </span><span class="p">{</span><span class="w">   </span>
@@ -4075,8 +4087,11 @@ Todos los constructores son públicos por defecto, lo que significa que son visi
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">marca</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Toyota&quot;</span><span class="w"> </span><span class="c1">// Atributo, con acceso tanto en lectura como en escritura privada.</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">}</span>
 </code></pre></div>
-* <strong>Propiedades</strong>: En Kotlin, una propiedad combina un atributo con sus métodos getter y setter. Estos métodos controlan el acceso y la actualización del atributo. Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Coche</span><span class="w"> </span><span class="p">{</span>
+  Aquí, <code>marca</code> es un atributo de la clase <code>Coche</code>. Es privado, lo que significa que solo puede accederse dentro de la clase <code>Coche</code>.</p>
+<ul>
+<li><strong>Propiedades</strong>: En Kotlin, una propiedad combina un atributo con sus métodos getter y setter. Estos métodos controlan el acceso y la actualización del atributo. Por ejemplo:</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Coche</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">marca</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Toyota&quot;</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">        </span><span class="n">private</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="c1">// Solo se puede consultar. El setter es privado</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
@@ -4084,12 +4099,12 @@ Todos los constructores son públicos por defecto, lo que significa que son visi
 <a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">        </span><span class="k">get</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Coche de marca </span><span class="si">$</span><span class="n">marca</span><span class="s">&quot;</span><span class="w"> </span><span class="c1">// Getter personalizado, muestra una cadena con la marca.</span>
 <a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="p">}</span>
 </code></pre></div>
-<p>Aquí, <code>marca</code> es una propiedad. Tiene un setter privado, lo que significa que no puedes cambiar <code>marca</code> desde fuera de la clase <code>Coche</code>. <code>info</code> es una propiedad de solo lectura con un getter personalizado que devuelve una cadena que incluye el valor de <code>marca</code>.</p>
+  Aquí, <code>marca</code> es una propiedad. Tiene un setter privado, lo que significa que no puedes cambiar <code>marca</code> desde fuera de la clase <code>Coche</code>. <code>info</code> es una propiedad de solo lectura con un getter personalizado que devuelve una cadena que incluye el valor de <code>marca</code>.</p>
 <h3 id="24-ejemplos-de-clases-y-objetos-personalizados">2.4 Ejemplos de clases y objetos personalizados<a class="headerlink" href="#24-ejemplos-de-clases-y-objetos-personalizados" title="Permanent link">&para;</a></h3>
 <p>Vamos a crear ejemplos para las clases <code>Persona</code>, <code>Animal</code>, y <code>Coche</code>, así como para sus objetos o instancias específicas. Cada clase incluirá atributos (o campos) y métodos, y mostraré cómo se crean y utilizan las instancias de estas clases.</p>
 <ol>
 <li>
-<p><strong>Clase <code>Persona</code></strong>:</p>
+<p><strong>Clase <code>Persona</code></strong>:   </p>
 </li>
 <li>
 <p>Atributos: nombre, edad</p>
@@ -4107,7 +4122,7 @@ Todos los constructores son públicos por defecto, lo que significa que son visi
 <a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="n">juan</span><span class="p">.</span><span class="na">presentarse</span><span class="p">()</span><span class="w"> </span><span class="c1">// &quot;Hola, mi nombre es Juan y tengo 30 años.&quot;</span>
 </code></pre></div>
 <p>ten en cuenta que es lo mismo que lo siguiente:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">//Definiendo la clase</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">//Definiendo la clase</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Persona</span><span class="p">(</span><span class="n">nombreInicial</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">edadInicial</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="kd">private</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombreInicial</span>
 <a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="kd">private</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edadInicial</span>
@@ -4121,12 +4136,16 @@ Todos los constructores son públicos por defecto, lo que significa que son visi
 <a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="kd">val</span><span class="w"> </span><span class="nv">juan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Juan&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
 <a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="n">juan</span><span class="p">.</span><span class="na">presentarse</span><span class="p">()</span><span class="w"> </span><span class="c1">// &quot;Hola, mi nombre es Juan y tengo 30 años.&quot;</span>
 </code></pre></div>
-2. <strong>Clase <code>Animal</code></strong>:</p>
-<ul>
-<li>Atributos: especie, nombre</li>
+<ol>
+<li>
+<p><strong>Clase <code>Animal</code></strong>:</p>
+</li>
+<li>
+<p>Atributos: especie, nombre</p>
+</li>
 <li>Métodos: emitirSonido</li>
-</ul>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1">//Definiendo la clase</span>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1">//Definiendo la clase</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Animal</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">especie</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">emitirSonido</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Soy un </span><span class="si">$</span><span class="n">especie</span><span class="s"> y me llamo </span><span class="si">$</span><span class="n">nombre</span><span class="s">. ¡Hago un sonido característico!&quot;</span><span class="p">)</span>
@@ -4137,11 +4156,15 @@ Todos los constructores son públicos por defecto, lo que significa que son visi
 <a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="kd">val</span><span class="w"> </span><span class="nv">perro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Animal</span><span class="p">(</span><span class="s">&quot;perro&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Firulais&quot;</span><span class="p">)</span>
 <a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="n">perro</span><span class="p">.</span><span class="na">emitirSonido</span><span class="p">()</span><span class="w"> </span><span class="c1">// Soy un perro y me llamo Firulais. ¡Hago un sonido característico!</span>
 </code></pre></div>
-3. <strong>Clase <code>Coche</code></strong>:</p>
-<ul>
-<li>Atributos: marca, modelo</li>
+<ol>
+<li>
+<p><strong>Clase <code>Coche</code></strong>:</p>
+</li>
+<li>
+<p>Atributos: marca, modelo</p>
+</li>
 <li>Métodos: describir</li>
-</ul>
+</ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1">//Definiendo la clase</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Coche</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">marca</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">modelo</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">describir</span><span class="p">(</span><span class="n">prefijo</span><span class="p">:</span><span class="kt">String</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>

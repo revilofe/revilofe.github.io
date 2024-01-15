@@ -16,7 +16,7 @@ tags:
 
 ### Descripción
 
-Suponiendo que realizas el juego del ahorcado y que trabajas en un equipo scrum, 
+Suponiendo que trabajas en un equipo siguiendo el marco de trabajo scrum, en el que se quiere construir un juego simulando un bingo:  
 
 - Construye un product backlog muy básico que resuman todas las funcionalidades necesarias para crear el juego. 
   
@@ -28,6 +28,8 @@ Suponiendo que realizas el juego del ahorcado y que trabajas en un equipo scrum,
 ![](assets/EDES-U1.-p3-TareasSprint.png)
 
 [Fuente PMOInformatica.com](http://www.pmoinformatica.com/2016/11/plantillas-scrum-sprint-backlog.html)
+
+Ten en cuenta que debeis simular los diferentes roles que participan en el framework scrum.  
 
 #### Incluir en la entrega
 

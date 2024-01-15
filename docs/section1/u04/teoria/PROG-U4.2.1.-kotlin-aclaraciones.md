@@ -321,7 +321,7 @@ En Kotlin, hay varias formas de crear listas. Cada una tiene sus propias caracte
 
 Cada uno de estos métodos tiene usos específicos, dependiendo de si necesitas modificar la lista después de su creación o si necesitas inicializarla de una manera particular.
 
-### 2.7 Listas de listas
+### 1.8 Listas de listas
 
 Crear matrices o listas bidimensionales en Kotlin es bastante sencillo. Una lista bidimensional es básicamente una lista de listas. Aquí te muestro cómo puedes hacerlo:
 

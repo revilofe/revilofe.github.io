@@ -4003,21 +4003,33 @@ println(array.get(0))  // Imprime &quot;D&quot;
 </ul>
 <p>Resumiendo, si necesitas una colección de tamaño fijo o eficiencia para tipos primitivos, un Array puede ser la mejor elección. Si requieres flexibilidad en el tamaño o quieres trabajar con colecciones inmutables, entonces una List sería más adecuada.</p>
 <h3 id="17-como-crear-listas">1.7. Como crear listas<a class="headerlink" href="#17-como-crear-listas" title="Permanent link">&para;</a></h3>
-<p>En Kotlin, hay varias formas de crear listas. Cada una tiene sus propias características y usos, y es importante conocerlas para poder elegir la más adecuada para cada situación. Veamos cómo crear listas en Kotlin:
-1. <strong>Listas Inmutables Vacías</strong>: Para crear una lista inmutable y vacía, usas <code>emptyList</code>. Por ejemplo:
+<p>En Kotlin, hay varias formas de crear listas. Cada una tiene sus propias características y usos, y es importante conocerlas para poder elegir la más adecuada para cada situación. Veamos cómo crear listas en Kotlin:</p>
+<ol>
+<li>
+<p><strong>Listas Inmutables Vacías</strong>: Para crear una lista inmutable y vacía, usas <code>emptyList</code>. Por ejemplo:
     <code>kotlin
-    val emptyList = emptyList&lt;String&gt;() // Una lista vacía de Strings</code>
-2. <strong>Listas Inmutables</strong>: Usas <code>listOf</code> para crear listas inmutables. Si tienes <code>val readOnlyList = listOf("John", "Doe")</code>, no puedes agregar o quitar elementos de <code>readOnlyList</code>. <code>listOfNotNull</code> se usa para excluir nulos, como en <code>val filteredList = listOfNotNull("A", "B", null)</code>, resultando en una lista con "A" y "B" solamente.
-3. <strong>Listas Mutables</strong>: Con <code>mutableListOf</code>, creas listas a las que puedes agregar o quitar elementos después. Por ejemplo:</p>
+    val emptyList = emptyList&lt;String&gt;() // Una lista vacía de Strings</code></p>
+</li>
+<li>
+<p><strong>Listas Inmutables</strong>: Usas <code>listOf</code> para crear listas inmutables. Si tienes <code>val readOnlyList = listOf("John", "Doe")</code>, no puedes agregar o quitar elementos de <code>readOnlyList</code>. <code>listOfNotNull</code> se usa para excluir nulos, como en <code>val filteredList = listOfNotNull("A", "B", null)</code>, resultando en una lista con "A" y "B" solamente.</p>
+</li>
+<li>
+<p><strong>Listas Mutables</strong>: Con <code>mutableListOf</code>, creas listas a las que puedes agregar o quitar elementos después. Por ejemplo:</p>
+</li>
+</ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">mutableList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="p">(</span><span class="s">&quot;Sydney&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tokyo&quot;</span><span class="p">)</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">mutableList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;New York&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Ahora mutableList contiene Sydney, Tokyo y New York</span>
 </code></pre></div>
-<p><code>arrayListOf</code> es similar, pero específicamente crea un <code>ArrayList</code>.
-4. <strong>Conversión a Listas</strong>: Puedes convertir otras estructuras como <code>Map</code> a <code>List</code> con <code>toList</code>. Por ejemplo, al convertir un <code>Map</code> de direcciones:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">userAddressMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mapOf</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="s">&quot;India&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="s">&quot;Australia&quot;</span><span class="p">)</span>
+<p><code>arrayListOf</code> es similar, pero específicamente crea un <code>ArrayList</code>.</p>
+<ol>
+<li><strong>Conversión a Listas</strong>: Puedes convertir otras estructuras como <code>Map</code> a <code>List</code> con <code>toList</code>. Por ejemplo, al convertir un <code>Map</code> de direcciones:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">userAddressMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mapOf</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="s">&quot;India&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="s">&quot;Australia&quot;</span><span class="p">)</span>
 <a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">addressList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userAddressMap</span><span class="p">.</span><span class="na">toList</span><span class="p">()</span><span class="w"> </span><span class="c1">// Convierte el Map a una List de Pares</span>
 </code></pre></div>
-5. <strong>Constructores de Listas</strong>: <code>List(size) { lambda }</code> crea una lista inmutable con un tamaño definido y elementos inicializados por la lambda. <code>MutableList</code> es similar pero mutable. Por ejemplo:</p>
+<ol>
+<li><strong>Constructores de Listas</strong>: <code>List(size) { lambda }</code> crea una lista inmutable con un tamaño definido y elementos inicializados por la lambda. <code>MutableList</code> es similar pero mutable. Por ejemplo:</li>
+</ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">myList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// Crea una lista [0, 2, 4]</span>
 </code></pre></div>
 <p><code>buildList</code> permite construir una lista inmutable con un bloque mutable. Ejemplo:</p>
@@ -4032,25 +4044,31 @@ println(array.get(0))  // Imprime &quot;D&quot;
 <ol>
 <li><strong>Creación de una Lista Bidimensional Manualmente</strong>: Puedes crear una lista bidimensional manualmente definiendo una lista de listas. Por ejemplo, para crear una matriz 2x3:</li>
 </ol>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>val matriz = listOf(
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>val matriz = listOf(
 <a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    listOf(1, 2, 3),
 <a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>    listOf(4, 5, 6)
 <a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>)
 <a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>// Aquí matriz es una lista de dos listas, cada una con tres elementos.
 </code></pre></div>
-2. <strong>Creación Dinámica</strong>: Si quieres crear una matriz con tamaños dinámicos, puedes usar bucles para inicializarla. Por ejemplo, crear una matriz de 3x3:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>val filas = 3
+<ol>
+<li><strong>Creación Dinámica</strong>: Si quieres crear una matriz con tamaños dinámicos, puedes usar bucles para inicializarla. Por ejemplo, crear una matriz de 3x3:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>val filas = 3
 <a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>val columnas = 3
 <a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>val matrizDinamica = List(filas) { MutableList(columnas) { 0 } }
 <a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>// Crea una matriz 3x3 con todos los elementos inicializados a 0.
 </code></pre></div>
-3. <strong>Acceso y Modificación de Elementos</strong>: Puedes acceder o modificar los elementos de la matriz usando índices. Por ejemplo, para cambiar un elemento:</p>
+<ol>
+<li><strong>Acceso y Modificación de Elementos</strong>: Puedes acceder o modificar los elementos de la matriz usando índices. Por ejemplo, para cambiar un elemento:</li>
+</ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>matrizDinamica[0][1] = 10  // Cambia el segundo elemento de la primera fila a 10
 </code></pre></div>
 <p>Y para leer un elemento:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>val elemento = matrizDinamica[0][1]  // Lee el segundo elemento de la primera fila
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>val elemento = matrizDinamica[0][1]  // Lee el segundo elemento de la primera fila
 </code></pre></div>
-4. <strong>Iteración sobre Elementos</strong>: Puedes iterar sobre los elementos de la matriz utilizando bucles anidados:</p>
+<ol>
+<li><strong>Iteración sobre Elementos</strong>: Puedes iterar sobre los elementos de la matriz utilizando bucles anidados:</li>
+</ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>for (fila in matrizDinamica) {
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>    for (elemento in fila) {
 <a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>        println(elemento)

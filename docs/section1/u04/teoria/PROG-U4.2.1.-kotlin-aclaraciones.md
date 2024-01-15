@@ -280,12 +280,15 @@ Resumiendo, si necesitas una colección de tamaño fijo o eficiencia para tipos 
 ### 1.7. Como crear listas
 
 En Kotlin, hay varias formas de crear listas. Cada una tiene sus propias características y usos, y es importante conocerlas para poder elegir la más adecuada para cada situación. Veamos cómo crear listas en Kotlin:
+
 1. **Listas Inmutables Vacías**: Para crear una lista inmutable y vacía, usas `emptyList`. Por ejemplo:
     ```kotlin
     val emptyList = emptyList<String>() // Una lista vacía de Strings
    ```
+    
 2. **Listas Inmutables**: Usas `listOf` para crear listas inmutables. Si tienes `val readOnlyList = listOf("John", "Doe")`, no puedes agregar o quitar elementos de `readOnlyList`. `listOfNotNull` se usa para excluir nulos, como en `val filteredList = listOfNotNull("A", "B", null)`, resultando en una lista con "A" y "B" solamente.
-3. **Listas Mutables**: Con `mutableListOf`, creas listas a las que puedes agregar o quitar elementos después. Por ejemplo:
+
+4. **Listas Mutables**: Con `mutableListOf`, creas listas a las que puedes agregar o quitar elementos después. Por ejemplo:
 
    ```kotlin
    var mutableList = mutableListOf("Sydney", "Tokyo")
@@ -293,13 +296,15 @@ En Kotlin, hay varias formas de crear listas. Cada una tiene sus propias caracte
    ```
 
    `arrayListOf` es similar, pero específicamente crea un `ArrayList`.
-4. **Conversión a Listas**: Puedes convertir otras estructuras como `Map` a `List` con `toList`. Por ejemplo, al convertir un `Map` de direcciones:
+   
+6. **Conversión a Listas**: Puedes convertir otras estructuras como `Map` a `List` con `toList`. Por ejemplo, al convertir un `Map` de direcciones:
 
    ```kotlin
    val userAddressMap = mapOf("A" to "India", "B" to "Australia")
    val addressList = userAddressMap.toList() // Convierte el Map a una List de Pares
    ```
-5. **Constructores de Listas**: `List(size) { lambda }` crea una lista inmutable con un tamaño definido y elementos inicializados por la lambda. `MutableList` es similar pero mutable. Por ejemplo:
+   
+7. **Constructores de Listas**: `List(size) { lambda }` crea una lista inmutable con un tamaño definido y elementos inicializados por la lambda. `MutableList` es similar pero mutable. Por ejemplo:
 
    ```kotlin
    val myList = List(3) { it * 2 } // Crea una lista [0, 2, 4]
@@ -329,6 +334,7 @@ Crear matrices o listas bidimensionales en Kotlin es bastante sencillo. Una list
    )
    // Aquí matriz es una lista de dos listas, cada una con tres elementos.
    ```
+   
 2. **Creación Dinámica**: Si quieres crear una matriz con tamaños dinámicos, puedes usar bucles para inicializarla. Por ejemplo, crear una matriz de 3x3:
 
    ```kotin
@@ -337,6 +343,7 @@ Crear matrices o listas bidimensionales en Kotlin es bastante sencillo. Una list
    val matrizDinamica = List(filas) { MutableList(columnas) { 0 } }
    // Crea una matriz 3x3 con todos los elementos inicializados a 0.
    ```
+   
 3. **Acceso y Modificación de Elementos**: Puedes acceder o modificar los elementos de la matriz usando índices. Por ejemplo, para cambiar un elemento:
 
    ```kotin
@@ -348,6 +355,7 @@ Crear matrices o listas bidimensionales en Kotlin es bastante sencillo. Una list
    ```kotin
    val elemento = matrizDinamica[0][1]  // Lee el segundo elemento de la primera fila
    ```
+   
 4. **Iteración sobre Elementos**: Puedes iterar sobre los elementos de la matriz utilizando bucles anidados:
 
    ```kotin

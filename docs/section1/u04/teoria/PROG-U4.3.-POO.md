@@ -32,9 +32,11 @@ Está basada en varias técnicas como: abstracción, polimorfismo, encapsulamien
        abstract fun frenar()
    }
    ```
-   Aquí, `Vehiculo` es una clase abstracta que define la abstracción de un vehículo con características comunes como marca y modelo, y acciones como acelerar y frenar.   
+   Aquí, `Vehiculo` es una clase abstracta que define la abstracción de un vehículo con características comunes como marca y modelo, y acciones como acelerar y frenar.
+
+   Las clases abstractas no pueden ser instanciadas directamente; ***se utilizan como base para otras clases***.
    
-2. **Polimorfismo**: El polimorfismo permite que objetos de diferentes clases sean tratados como objetos de una clase común. Esto se logra a través de la herencia y la implementación de interfaces.
+3. **Polimorfismo**: El polimorfismo permite que objetos de diferentes clases sean tratados como objetos de una clase común. Esto se logra a través de la herencia y la implementación de interfaces.
    Ejemplo en Kotlin:
 
    ```kotlin
@@ -50,7 +52,7 @@ Está basada en varias técnicas como: abstracción, polimorfismo, encapsulamien
    ```
    `Coche` es una clase que hereda de `Vehiculo` y proporciona su propia implementación de los métodos acelerar y frenar.   
 
-3. **Encapsulamiento**: El encapsulamiento implica restringir el acceso directo a algunos componentes de un objeto y proteger la integridad del objeto exponiendo solo lo que es necesario. 
+4. **Encapsulamiento**: El encapsulamiento implica restringir el acceso directo a algunos componentes de un objeto y proteger la integridad del objeto exponiendo solo lo que es necesario. 
    Ejemplo en Kotlin:
 
    ```kotlin
@@ -68,7 +70,7 @@ Está basada en varias técnicas como: abstracción, polimorfismo, encapsulamien
    ```
    Aquí, el saldo de `CuentaBancaria` está encapsulado. Se manipula únicamente a través de métodos como `depositar`.   
 
-4. **Herencia**: La herencia es un mecanismo mediante el cual una nueva clase adquiere las propiedades y comportamientos de otra clase. Esto ayuda en la reutilización de código.
+5. **Herencia**: La herencia es un mecanismo mediante el cual una nueva clase adquiere las propiedades y comportamientos de otra clase. Esto ayuda en la reutilización de código.
    Ejemplo en Kotlin:
 
    ```kotlin
@@ -86,7 +88,7 @@ Está basada en varias técnicas como: abstracción, polimorfismo, encapsulamien
    ```
    `Perro` hereda de `Animal` y sobrescribe el método `sonido`.   
 
-5. **Cohesión/Acoplamiento**: La cohesión se refiere a qué tan estrechamente relacionadas están las tareas realizadas por una clase. El acoplamiento se refiere a cómo de interdependientes son las clases entre sí. La alta cohesión y el bajo acoplamiento son ideales en POO para facilitar la mantenibilidad y la escalabilidad.
+6. **Cohesión/Acoplamiento**: La cohesión se refiere a qué tan estrechamente relacionadas están las tareas realizadas por una clase. El acoplamiento se refiere a cómo de interdependientes son las clases entre sí. La alta cohesión y el bajo acoplamiento son ideales en POO para facilitar la mantenibilidad y la escalabilidad.
 
    * **Alta cohesión**: Una clase `Calculadora` que realiza operaciones matemáticas.
    * **Bajo acoplamiento**: `Calculadora` utiliza una interfaz `OperacionesMatematicas` para interactuar con otras clases, lo que reduce su dependencia directa.

@@ -1,87 +1,123 @@
 ---
-title: "UD 4 - POO1: Ejercicios básicos de POO"
-summary: POO
-description: POO
+title: "UD 4 - POO3: Ejercicios básicos de POO II"
+summary: Ejercicios básicos de POO II
+description: Ejercicios básicos de POO II
 authors:
     - Diego Cano
 date: 2024-01-16
 icon: 
-permalink: /prog/unidad4/p4.1
+permalink: /prog/unidad4/p4.2
 categories:
     - PROG
 tags:
     - Software
     - Ejercicios
     - POO
+    - Kotlin
 ---
-## P4.1 - Ejercicios básicos de POO 1 al 5
+## P4.2 - Ejercicios básicos de POO 6 al 10
 
-### **Ejercicio 1**
+### **Ejercicio 6** 
 
-   1. Crear una clase `Persona` que tenga `nombre`, `peso` *(en kg con decimales)*, `altura` *(en metros con decimales)* y su `imc`.
-   
-   2. Crear un ***constructor primario*** con todos los atributos, excepto nombre e imc. Este último atributo de la clase se calculará en un bloque `init` que situarás a continuación de la declaración del atributo.
-   
-   3. Crear un ***constructor secundario*** que también incluya el nombre de la persona cómo parámetro.
-   
-   4. En el main() crear 3 personas diferentes, utilizando el constructor primario y secundario, y realizar lo siguiente:
-   
-      * La persona1 debe modificar su nombre y para ello debes solicitarlo al usuario por consola.
-      * Mostrar el nombre, peso y altura de la persona 2.
-      * Actualizar imc de la persona3 haciendo el cálculo con su peso y altura.
+   1. Realizar el ejercicio 1 de Conjuntos de los "Ejercicios básicos con Kotlin" (Ejercicio 3.3.1) orientado a objetos.
 
-### **Ejercicio 2**
+   2. Te proporciono algunas pistas de una posible solución:
 
-   1. Actualizar el ejercicio 1 para añadir a la clase el siguiente comportamiento:
+      ```
+      /**
+      * Clase Compra
+      * @param cliente cliente que realizo la compra
+      * @param dia dia de la compra
+      * @param monto monto de la compra
+      * @constructor Crea una compra con cliente, dia y monto
+      */
+      ```
+      ```
+      /**
+       * Clase Cliente
+       * @param nombre nombre del cliente
+       * @param domicilio domicilio del cliente
+       * @constructor Crea un cliente con nombre y domicilio
+       */
+       ```
+      ```      
+      /**
+       * Clase Domicilio
+       * @param calle calle del domicilio
+       * @param numero numero del domicilio
+       * @constructor Crea un domicilio con calle y numero
+       */
+      ```
+      
+   3. La clase Domicilio tendrá un método llamado dirCompleta()que retornará el domicilio completo con la calle y el número.
 
-      * Debe saludar con su nombre... `saludar()`
-      * Debe retornar su imc... `obtenerImc()`
-      * Debe implementar también un método que muestre una descripción completa de la persona... `mostrarDesc()`. Por ejemplo, este método mostrará por pantalla algo así:
+   4. Las clases Compra, Cliente y Domicilio se establecerán como data class, es decir, delante de class incluirán el modificador data en la declaración de dichas clases.
 
-         ```
-         "Julia con una altura de 1.72m y un peso 64.7kg tiene un IMC de 21,87 (peso saludable)". 
-         ```
-      * Sería conveniente añadir también un método `obtenerImcDesc()` para usar en mostrarDesc(), que implemente el retorno de la descripción del rango de tipo de imc al que equivale su cálculo.
+   5. Para entender mejor que es una data class, visualizar el siguiente enlace: [Data classes](https://revilofe.github.io/section1/u04/teoria/PROG-U4.3.-kotlinPOO/#data-classes)
 
-      ***Nota***: 
-         * Si el IMC es menos de 18.5, se encuentra dentro del rango de "peso insuficiente". 
-         * Si el IMC está entre 18.5 y 24.9, se encuentra dentro del rango de "peso saludable". 
-         * Si el IMC está entre 25.0 y 29.9, se encuentra dentro del rango de "sobrepeso". 
-         * Si el IMC es 30.0 o superior, se encuentra dentro del rango de "obesidad".
+      ```
+      /**
+       * Clase RepositorioCompras
+       * @constructor Crea un repositorio de compras
+       */
+      ```
 
-   2. Crear en el `main()` una estructura de datos con 4 o 5 personas más, recorrer la estructura y por cada persona debe saludar y mostrar su descripción completa.
+   6. La clase `RepositorioCompras` tendrá un método para agregar una compra al repositorio y un método domicilios para retornar los domicilios de cada cliente al cual se le debe enviar una factura de compra.
+      Esta función retorna una estructura que contenga cada domicilio una sola vez.
 
-   3. Finalmente, revisa el IDE e intenta actualizar el modificador de visibilidad de los métodos de tu clase cómo os estará indicando... 
-   veréis que los métodos que realmente no van a ser llamados desde fuera de la clase te recomienda que sean privados a la misma. 
-   De esta manera estamos `encapsulando` estos métodos para que se puedan utilizar zolo desde dentro de la clase y no sean públicos.
+### **Ejercicio 7**
 
-### **Ejercicio 3**
+   1. Se quiere crear una clase `Cuenta` la cual se caracteriza por tener asociado un número de cuenta y un saldo disponible. 
 
-   1. Crear una clase `Rectángulo`, con atributos `base` y `altura`. La clase debe disponer del constructor y los métodos para calcular el `área` y el `perímetro`. 
+   2. Además, se puede consultar el saldo disponible, recibir abonos y realizar pagos.
 
-   2. Opcionalmente se puede crear el método `toString()` para mostrar información sobre el rectángulo.
+   3. Crear también una clase Persona, que se caracteriza por un DNI y una lista de cuentas bancarias.
 
-   3. En el programa principal, crear varios rectángulos y mostrar por pantalla sus áreas y perímetros.
+   4. La `Persona` puede tener asociada hasta 3 cuentas bancarias, y debe tener un método que permita añadir cuentas *(hasta 3 el máximo permitido)*. 
 
-### **Ejercicio 4**
+   5. También debe contener un método que devuelva si la persona es morosa *(si tienen alguna cuenta con saldo negativo)*.
 
-   1. Crear una clase `Coche`, a través de la cual se pueda conocer el `color` del coche, la `marca`, el `modelo`, el `número de caballos`, el `número de puertas` y la `matrícula`. 
-   Crear el constructor del coche, así como los métodos estándar: `getters`, `setters` y `toString()`.
+   6. En el programa principal, instanciar un objeto Persona con un DNI cualquiera, así como dos objetos cuenta, una sin saldo inicial y otra con 700 euros.
+      La persona recibe la nómina mensual, por lo que ingresa 1100 euros en la primera cuenta, pero tiene que pagar el alquiler de 750 euros con la segunda.
+      Imprimir por pantalla si la persona es morosa.
 
-   2. Para realizar getters y setters, añade el modificador private a los atributos de la clase y genera los métodos `getColor()`, `setColor()`, ..., así para todos los atributos.
+   8. Posteriormente hacer una transferencia de una cuenta a otra *(de forma que todos los saldos sean positivos)* y mostrar por pantalla el estado de la persona.
 
-   3. En el programa principal, instancia varios coches, muestra su información, cambia el color a algunos de ellos y vuelve a mostrarlos por pantalla.
+### **Ejercicio 8**
 
-   4. Realiza también una modificación al método `setNumCaballos()` para que no permita actualizar el atributo `numCaballos` con un valor interior a 70, ni superior a 700.
+   1. Queremos mantener una colección de los libros que hemos ido leyendo, poniéndoles una calificación según nos haya gustado más o menos al leerlo.
 
-   5. Realiza otra modificación al método `setNumPuertas()` para que no se pueda actualizar con un valor inferior a 3, ni superior a 5... pero esta vez utiliza `require`.
+   2. Para ello, crear la clase `Libro`, cuyos atributos son el `título`, el `autor`, el `número de páginas` y la `calificación` que le damos entre 0 y 10.
 
-   6. Para probar las modificaciones a los métodos anteriores, solicita al usuario el número de caballos para un coche y haz lo mismo para el número de puertas.
+   3. Posteriormente, crear una clase `ConjuntoLibros`, que almacena un conjunto de libros *(con un vector de un tamaño fijo)*.
+      Se pueden añadir libros que no existan *(siempre que haya espacio)*, eliminar libros por título o autor, mostrar por pantalla los libros con la mayor y menor calificación y,
+      por último, mostrar un contenido de todo el conjunto.
 
-### **Ejercicio 5**
+   4. En el programa principal realizar las siguientes operaciones: crear dos libros, añadirlos al conjunto, eliminarlos por los dos criterios *(título y autor)* hasta que el conjunto
+      esté vacío, volver a añadir un libro y mostrar el contenido final.
 
-   1. Crear una clase `Tiempo`, con atributos `hora`, `minuto` y `segundo`, que pueda ser construida indicando los tres atributos, sólo hora y minuto o sólo la hora *(si no se indica, el valor de minuto o segundo será 0)*. 
+### **Ejercicio 9**
 
-   2. Crear el método `toString()` para mostrar el tiempo en formato: ***XXh XXm XXs***.
+   1. Realizar un programa para gestionar una Lista de tareas con POO.
 
-   3. En el programa principal, debe solicitar por teclado hora, minuto y segundo de forma que se puedan omitir los segundos o los minutos *(y segundos, claro)* e instancie la clase `Tiempo` mostrando su valor.
+   2. El programa debe mostrar un menú en el que se pueda agregar (por defecto una nueva tarea tendrá el estado pendiente), eliminar y cambiar el estado de una tarea. También será posible mostrar la lista de tareas (todas las tareas), mostrar la lista de tareas pendientes y la lista de tareas ya realizadas.
+
+   3. Una tarea debe tener una descripción y un estado que indique si está pendiente o ya fue realizada (en este caso, deberá mostrar la fecha, con formato DD-MM-AAAA HH:MM:SS, en la que se marcó cómo realizada)
+
+   4. Os muestro un ejemplo de cómo generar una fecha:
+
+      ```
+      import java.time.LocalDateTime
+      import java.time.format.DateTimeFormatter
+      fun main() {
+          val fechaHoraActual: LocalDateTime = LocalDateTime.now()
+          // Formatear la fecha y hora para imprimir
+          val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss")
+          val fechaFormateada: String = fechaHoraActual.format(formatter)
+          println("Fecha y Hora Actual: $fechaFormateada")
+      }
+      ```
+
+### **Ejercicio 10**
+
+   1. Realizar el juego del 3 en raya con POO.

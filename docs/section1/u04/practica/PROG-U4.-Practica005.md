@@ -1,12 +1,12 @@
 ---
-title: "UD 4 - POO3: Ejercicios básicos de POO"
-summary: POO
-description: POO
+title: "UD 4 - POO4: Ejercicios básicos de POO IV"
+summary: Ejercicios básicos de POO IV
+description: Ejercicios básicos de POO IV
 authors:
     - Diego Cano
 date: 2024-01-16
 icon: 
-permalink: /prog/unidad4/p4.3
+permalink: /prog/unidad4/p4.4
 categories:
     - PROG
 tags:
@@ -14,37 +14,29 @@ tags:
     - Ejercicios
     - POO
 ---
-## P4.3 - Robots
+## P4.4 - Robots *(con RETO incluido)*
 
-### **PARTE 1**
+### **PARTE 2**
 
-   1. Crear una versión del programa realizado en la tarea ¿Dónde está R2D2?, pero ORIENTADO A OBJETOS.
-      
-   3. La clase Robot debe tener 4 propiedades: nombre, posX, posY y dir. También tendrá un comportamiento por medio de 3 métodos: mover(), mostrarPosicion() y obtenerDireccion().
-      
-   5. El método mover() debe recibir un array de elementos enteros y no retornará nada, ya que los cambios quedarán almacenados en las propiedades del mismo.
-      
-   7. El método obtenerDireccion() no recibe parámetros y retorna una cadena de caracteres con la dirección PositiveX, NegativeX, PositiveY o NegativeY.
-      
-   9. El método mostrarPosicion() debe mostrar por consola la posición y dirección. Ejemplo: "R2D2 está en (10, -5) PositiveX".
-       
-   11. Un objeto de la clase Robot debe inicializarse siempre en la posición (0, 0) y la dirección eje Y positivo (hacia arriba) cuando se instancia.
-       
-   13. En este programa, vamos a realizar los mismos movimientos, pero el robot comenzará cada movimiento en la posición final después de realizar el movimiento anterior.
-       
-   15. En el main debes crear un objeto de Robot (o una variable de tipo Robot) con el nombre "R2D2". El nombre de la variable que utilices para crearlo puede ser robot1.
-       
-   17. Cread los movimientos en un array de arrays y recorrerlos para realizar en cada iteración los movimientos del robot y mostrar la posición del mismo al finalizar cada uno. En cada iteración del bucle llamaremos a los métodos mover() y mostrarPosicion().
+   1. Crear varios robots en una estructura de datos.
 
-   18. Un ejemplo de una estructura que podéis utilizar para los movimientos sería la siguiente:
+   2. Los robots serán R2D2, C3PO, DAW1B y DAM1.
 
-      ```
-      [
-          [1, -5, 0, -9],
-          [3, 3, 5, 6, 1, 0, 0, -7],
-          [2, 1, 0, -1, 1, 1, -4],
-          [],
-          [3, 5]
-      ]
-      ```
-      
+   3. ***RETO***: En la clase Robot debéis realizar una modificación para que el método mover() reciba una función tipo que modifique la dirección del mismo según la info siguiente:
+
+      * R2D2 se sigue igual, comienza en (0, 0) PositiveY cuando se instancia el objeto y realiza un giro de -90º al detenerse en cada movimiento.
+
+      * C3PO comienza en una posición aleatoria entre -5 y 5 para x y en el eje y en 0. La dirección será PositiveX.
+        Al detenerse, si está en x positiva gira 180º y si está en x negativa gira 90º.
+
+      * DAW1B comienza en la posición x = 0, pero y es aleatoria entre -10 y 10. Su dirección inicial será aleatoria.
+        La dirección que toma al detenerse será -90º si la y es positiva y 270º si la y es negativa.
+
+      * DAM1 comienza en en una posición aleatoria entre -5 y 5 en cada eje. La dirección inicial es aleatoria.
+        Debe tomar una también una dirección totalmente aleatoria al detenerse entre cada movimiento, siempre que no sea la misma en la que estaba.
+
+   4. Si no sois capaces de realizar estos cambios en el método `mover()` pasándole una `función como parámetro`, intentad realizadlo de otra forma *(con sentido)*,
+      pero que cada robot tenga el comportamiento que se indica al moverse con la dirección.
+
+   5. El programa debe pedirme un número de movimientos por consola y ejecutar esos movimientos con todos los robots, indicando su posición y dirección final.
+      Los movimientos deben ser números enteros comprendidos entre -20 y 20.

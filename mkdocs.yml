@@ -58,7 +58,7 @@ nav:
         - '4.1.-Kotlin: Básico': 'section1/u04/teoria/PROG-U4.1.-kotlin.md'
         - '* Práctica 4.1: Kotlin Básico': 'section1/u04/practica/PROG-U4.-Practica001.md'
         - '4.2.-Kotlin: Colecciones': 'section1/u04/teoria/PROG-U4.2.-kotlinColeciones.md'
-        - '4.2.1.- Aclaraciones': 'section1/u04/teoria/PROG-U4.2.1.-kotlin-aclaraciones.md'
+        - '4.2.1.-Aclaraciones': 'section1/u04/teoria/PROG-U4.2.1.-kotlin-aclaraciones.md'
         - '4.3.1-Programación orientada a objetos': 'section1/u04/teoria/PROG-U4.3.-POO.md'
         - '4.3.2-Kotlin: POO': 'section1/u04/teoria/PROG-U4.3.-kotlinPOO.md'
         - '4.4.-Kotlin: Resumen': 'section1/u04/teoria/PROG-U4.4.-kotlinResumen.md'

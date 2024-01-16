@@ -14,7 +14,7 @@ tags:
     - Ejercicios
     - POO
 ---
-## P4.1 - Ejercicios básicos de POO 6 al 10
+## P4.2 - Ejercicios básicos de POO 6 al 10
 
 ### **Ejercicio 6**
 

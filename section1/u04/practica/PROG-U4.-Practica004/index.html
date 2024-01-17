@@ -3791,13 +3791,13 @@ Las salidas son estas:
 <p>El método <code>mover()</code> debe recibir un array de elementos enteros y no retornará nada, ya que los cambios quedarán almacenados en las propiedades del mismo.</p>
 </li>
 <li>
-<p>El método <code>obtenerDireccion()</code> no recibe parámetros y retorna una cadena de caracteres con la dirección <code>PositiveX</code>, <code>NegativeX</code>, <code>PositiveY</code> o <code>NegativeY</code>. (Posible mejora con <code>class enum</code> https://kotlinlang.org/docs/enum-classes.html)</p>
+<p>El método <code>obtenerDireccion()</code> no recibe parámetros y retorna una cadena de caracteres con la dirección <code>PositiveX</code>, <code>NegativeX</code>, <code>PositiveY</code> o <code>NegativeY</code>. <strong><em>(Posible mejora con <code>class enum</code> https://kotlinlang.org/docs/enum-classes.html)</em></strong></p>
 </li>
 <li>
 <p>El método <code>mostrarPosicion()</code> debe mostrar por consola la posición y dirección. Ejemplo: <code>R2D2 está en (10, -5) PositiveX</code>.</p>
 </li>
 <li>
-<p>Un objeto de la clase Robot debe inicializarse siempre en la posición <code>(0, 0)</code> y la dirección eje Y positivo (hacia arriba) cuando se instancia.</p>
+<p>Un objeto de la clase Robot debe inicializarse siempre en la posición <code>(0, 0)</code> y la dirección eje Y positivo (hacia arriba) cuando se instancia. En esta versión ya no va a moverse siempre desde la posición (0,0), sino que lo hará desde la última posición y dirección dónde se quedó al realizar su último movimiento.</p>
 </li>
 <li>
 <p>En este programa, vamos a realizar los mismos movimientos, pero el robot comenzará cada movimiento en la posición final después de realizar el movimiento anterior.</p>
@@ -3806,20 +3806,23 @@ Las salidas son estas:
 <p>En el main debes crear un objeto de Robot (o una variable de tipo Robot) con el nombre <code>R2D2</code>. El nombre de la variable que utilices para crearlo puede ser <code>robot1</code>.</p>
 </li>
 <li>
-<p>Cread los movimientos en un array de arrays y recorrerlos para realizar en cada iteración los movimientos del robot y mostrar la posición del mismo al finalizar cada uno. En cada iteración del bucle llamaremos a los métodos <code>mover()</code> y <code>mostrarPosicion()</code>.</p>
+<p>La clase Robot debe obligar a introducir un nombre que no esté vacío.</p>
 </li>
 <li>
-<p>Un ejemplo de una estructura que podéis utilizar para los movimientos sería la siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    [1, -5, 0, -9],
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    [3, 3, 5, 6, 1, 0, 0, -7],
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    [2, 1, 0, -1, 1, 1, -4],
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    [],
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    [3, 5]
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>]
-</code></pre></div>
+<p>Cread los movimientos en un array de arrays y recorrerlos para realizar en cada iteración los movimientos del robot y mostrar la posición del mismo al finalizar cada uno. En cada iteración del bucle llamaremos a los métodos <code>mover()</code> y <code>mostrarPosicion()</code>.</p>
 </li>
 </ol>
+<p>Un ejemplo de una estructura que podéis utilizar para los movimientos sería la siguiente:</p>
+<div class="highlight"><pre><span></span><code>  ```
+  [
+      [1, -5, 0, -9],
+      [3, 3, 5, 6, 1, 0, 0, -7],
+      [2, 1, 0, -1, 1, 1, -4],
+      [],
+      [3, 5]
+  ]
+  ```
+</code></pre></div>
 
 
 

@@ -15,9 +15,9 @@ tags:
     - POO
     - Kotlin
 ---
-## P4.2 - Ejercicios básicos de POO 6 al 10
+## P4.3 - Ejercicios básicos de POO 6 al 10
 
-### **Ejercicio 6** 
+### **Ejercicio 4.6** 
 
    1. Realizar el ejercicio 1 de Conjuntos de los "Ejercicios básicos con Kotlin" (Ejercicio 3.3.1) orientado a objetos.
 
@@ -65,7 +65,7 @@ tags:
    6. La clase `RepositorioCompras` tendrá un método para agregar una compra al repositorio y un método domicilios para retornar los domicilios de cada cliente al cual se le debe enviar una factura de compra.
       Esta función retorna una estructura que contenga cada domicilio una sola vez.
 
-### **Ejercicio 7**
+### **Ejercicio 4.7**
 
    1. Se quiere crear una clase `Cuenta` la cual se caracteriza por tener asociado un número de cuenta y un saldo disponible. 
 
@@ -83,7 +83,7 @@ tags:
 
    8. Posteriormente hacer una transferencia de una cuenta a otra *(de forma que todos los saldos sean positivos)* y mostrar por pantalla el estado de la persona.
 
-### **Ejercicio 8**
+### **Ejercicio 4.8**
 
    1. Queremos mantener una colección de los libros que hemos ido leyendo, poniéndoles una calificación según nos haya gustado más o menos al leerlo.
 
@@ -96,7 +96,7 @@ tags:
    4. En el programa principal realizar las siguientes operaciones: crear dos libros, añadirlos al conjunto, eliminarlos por los dos criterios *(título y autor)* hasta que el conjunto
       esté vacío, volver a añadir un libro y mostrar el contenido final.
 
-### **Ejercicio 9**
+### **Ejercicio 4.9**
 
    1. Realizar un programa para gestionar una Lista de tareas con POO.
 
@@ -118,6 +118,6 @@ tags:
       }
       ```
 
-### **Ejercicio 10**
+### **Ejercicio 4.10**
 
    1. Realizar el juego del 3 en raya con POO.

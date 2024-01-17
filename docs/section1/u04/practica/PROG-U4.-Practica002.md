@@ -15,9 +15,9 @@ tags:
     - POO
     - Kotlin
 ---
-## P4.1 - Ejercicios básicos de POO 1 al 5
+## P4.2 - Ejercicios básicos de POO 1 al 5
 
-### **Ejercicio 1**
+### **Ejercicio 4.1**
 
    1. Crear una clase `Persona` que tenga `nombre`, `peso` *(en kg con decimales)*, `altura` *(en metros con decimales)* y su `imc`.
    
@@ -31,7 +31,7 @@ tags:
       * Mostrar el nombre, peso y altura de la persona 2.
       * Actualizar imc de la persona3 haciendo el cálculo con su peso y altura.
 
-### **Ejercicio 2**
+### **Ejercicio 4.2**
 
    1. Actualizar el ejercicio 1 para añadir a la clase el siguiente comportamiento:
 
@@ -56,7 +56,7 @@ tags:
    veréis que los métodos que realmente no van a ser llamados desde fuera de la clase te recomienda que sean privados a la misma. 
    De esta manera estamos `encapsulando` estos métodos para que se puedan utilizar zolo desde dentro de la clase y no sean públicos.
 
-### **Ejercicio 3**
+### **Ejercicio 4.3**
 
    1. Crear una clase `Rectángulo`, con atributos `base` y `altura`. La clase debe disponer del constructor y los métodos para calcular el `área` y el `perímetro`. 
 
@@ -64,7 +64,7 @@ tags:
 
    3. En el programa principal, crear varios rectángulos y mostrar por pantalla sus áreas y perímetros.
 
-### **Ejercicio 4**
+### **Ejercicio 4.4**
 
    1. Crear una clase `Coche`, a través de la cual se pueda conocer el `color` del coche, la `marca`, el `modelo`, el `número de caballos`, el `número de puertas` y la `matrícula`. 
    Crear el constructor del coche, así como los métodos estándar: `getters`, `setters` y `toString()`.
@@ -79,7 +79,7 @@ tags:
 
    6. Para probar las modificaciones a los métodos anteriores, solicita al usuario el número de caballos para un coche y haz lo mismo para el número de puertas.
 
-### **Ejercicio 5**
+### **Ejercicio 4.5**
 
    1. Crear una clase `Tiempo`, con atributos `hora`, `minuto` y `segundo`, que pueda ser construida indicando los tres atributos, sólo hora y minuto o sólo la hora *(si no se indica, el valor de minuto o segundo será 0)*. 
 

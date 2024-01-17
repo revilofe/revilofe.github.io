@@ -26,7 +26,7 @@
     
     
       
-        <title>UD 4 - POO4: Ejercicios básicos de POO IV - R Z O</title>
+        <title>UD 4 - POO5: Ejercicios básicos de POO IV - R Z O</title>
       
     
     
@@ -99,7 +99,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#p44-robots-con-reto-incluido" class="md-skip">
+        <a href="#p45-robots-con-reto-incluido" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UD 4 - POO4: Ejercicios básicos de POO IV
+              UD 4 - POO5: Ejercicios básicos de POO IV
             
           </span>
         </div>
@@ -1813,13 +1813,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#p44-robots-con-reto-incluido" class="md-nav__link">
+  <a href="#p45-robots-con-reto-incluido" class="md-nav__link">
     <span class="md-ellipsis">
-      P4.4 - Robots (con RETO incluido)
+      P4.5 - Robots (con RETO incluido)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="P4.4 - Robots (con RETO incluido)">
+    <nav class="md-nav" aria-label="P4.5 - Robots (con RETO incluido)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3659,13 +3659,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#p44-robots-con-reto-incluido" class="md-nav__link">
+  <a href="#p45-robots-con-reto-incluido" class="md-nav__link">
     <span class="md-ellipsis">
-      P4.4 - Robots (con RETO incluido)
+      P4.5 - Robots (con RETO incluido)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="P4.4 - Robots (con RETO incluido)">
+    <nav class="md-nav" aria-label="P4.5 - Robots (con RETO incluido)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3734,42 +3734,41 @@
 
   <h1>* Práctica 4.5: Kotlin POO IV</h1>
 
-<h2 id="p44-robots-con-reto-incluido">P4.4 - Robots <em>(con RETO incluido)</em><a class="headerlink" href="#p44-robots-con-reto-incluido" title="Permanent link">&para;</a></h2>
+<h2 id="p45-robots-con-reto-incluido">P4.5 - Robots <em>(con RETO incluido)</em><a class="headerlink" href="#p45-robots-con-reto-incluido" title="Permanent link">&para;</a></h2>
 <h3 id="parte-2"><strong>PARTE 2</strong><a class="headerlink" href="#parte-2" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>Crear varios robots en una estructura de datos.</p>
 </li>
 <li>
-<p>Los robots serán R2D2, C3PO, DAW1B y DAM1.</p>
+<p>Los robots serán <code>R2D2</code>, <code>DAW1A</code>, <code>DAW1B</code> y <code>DAM1</code>.</p>
 </li>
 <li>
-<p><strong><em>RETO</em></strong>: En la clase Robot debéis realizar una modificación para que el método mover() reciba una función tipo que modifique la dirección del mismo según la info siguiente:</p>
+<p><strong><em>RETO</em></strong>: En la clase Robot debéis realizar una modificación para que el método <code>mover()</code> reciba una función tipo que modifique la dirección del mismo según la info siguiente:</p>
 <ul>
 <li>
-<p>R2D2 se sigue igual, comienza en (0, 0) PositiveY cuando se instancia el objeto y realiza un giro de -90º al detenerse en cada movimiento.</p>
+<p><code>R2D2</code> sigue igual, comienza en <code>(0, 0)</code> y <code>PositiveY</code> cuando se instancia el objeto y realiza un giro de <code>-90º</code> al detenerse en cada movimiento.</p>
 </li>
 <li>
-<p>C3PO comienza en una posición aleatoria entre -5 y 5 para x y en el eje y en 0. La dirección será PositiveX.
-    Al detenerse, si está en x positiva gira 180º y si está en x negativa gira 90º.</p>
+<p><code>DAW1A</code> comienza en una posición aleatoria entre <code>-5</code> y <code>5</code> para <code>x</code> y en el eje <code>y</code> en <code>0</code>. La dirección será <code>PositiveX</code>.
+    Al detenerse, si está en <code>x positiva</code> gira <code>180º</code> y si está en <code>x negativa</code> gira <code>90º</code>.</p>
 </li>
 <li>
-<p>DAW1B comienza en la posición x = 0, pero y es aleatoria entre -10 y 10. Su dirección inicial será aleatoria.
-    La dirección que toma al detenerse será -90º si la y es positiva y 270º si la y es negativa.</p>
+<p><code>DAW1B</code> comienza en la posición <code>x = 0</code>, pero y es aleatoria entre <code>-10</code> y <code>10</code>. Su dirección inicial será aleatoria.
+    La dirección que toma al detenerse será <code>-90º</code> si la <code>y</code> es positiva y <code>270º</code> si la <code>y</code> es negativa.</p>
 </li>
 <li>
-<p>DAM1 comienza en en una posición aleatoria entre -5 y 5 en cada eje. La dirección inicial es aleatoria.
+<p><code>DAM1</code> comienza en en una posición aleatoria entre <code>-5</code> y <code>5</code> en cada eje. La dirección inicial es aleatoria.
     Debe tomar una también una dirección totalmente aleatoria al detenerse entre cada movimiento, siempre que no sea la misma en la que estaba.</p>
 </li>
 </ul>
 </li>
 <li>
-<p>Si no sois capaces de realizar estos cambios en el método <code>mover()</code> pasándole una <code>función como parámetro</code>, intentad realizadlo de otra forma <em>(con sentido)</em>,
-      pero que cada robot tenga el comportamiento que se indica al moverse con la dirección.</p>
+<p>Si no sois capaces de realizar estos cambios en el método <code>mover()</code> pasándole una <code>función como parámetro</code>, intentad realizadlo de otra forma <em>(con sentido)</em>, pero que cada robot tenga el comportamiento que se indica al moverse con la dirección.</p>
 </li>
 <li>
 <p>El programa debe pedirme un número de movimientos por consola y ejecutar esos movimientos con todos los robots, indicando su posición y dirección final.
-      Los movimientos deben ser números enteros comprendidos entre -20 y 20.</p>
+      Los movimientos deben ser números enteros comprendidos entre <code>-20</code> y <code>20</code>.</p>
 </li>
 </ol>
 

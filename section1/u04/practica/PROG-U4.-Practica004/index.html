@@ -99,7 +99,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#p43-robots" class="md-skip">
+        <a href="#p44-robots" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1792,14 +1792,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#p43-robots" class="md-nav__link">
+  <a href="#p44-robots" class="md-nav__link">
     <span class="md-ellipsis">
-      P4.3 - Robots
+      P4.4 - Robots
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="P4.3 - Robots">
+    <nav class="md-nav" aria-label="P4.4 - Robots">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-donde-esta-r2d2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción ¿Dónde está R2D2?
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#parte-1" class="md-nav__link">
@@ -3659,14 +3668,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#p43-robots" class="md-nav__link">
+  <a href="#p44-robots" class="md-nav__link">
     <span class="md-ellipsis">
-      P4.3 - Robots
+      P4.4 - Robots
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="P4.3 - Robots">
+    <nav class="md-nav" aria-label="P4.4 - Robots">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-donde-esta-r2d2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción ¿Dónde está R2D2?
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#parte-1" class="md-nav__link">
@@ -3734,45 +3752,71 @@
 
   <h1>* Práctica 4.4: Kotlin POO III</h1>
 
-<h2 id="p43-robots">P4.3 - Robots<a class="headerlink" href="#p43-robots" title="Permanent link">&para;</a></h2>
+<h2 id="p44-robots">P4.4 - Robots<a class="headerlink" href="#p44-robots" title="Permanent link">&para;</a></h2>
+<h3 id="descripcion-donde-esta-r2d2">Descripción ¿Dónde está R2D2?<a class="headerlink" href="#descripcion-donde-esta-r2d2" title="Permanent link">&para;</a></h3>
+<p>Calcula dónde estará un robot (sus coordenadas finales) que se encuentra en una cuadrícula representada por los ejes "x" e "y".</p>
+<ul>
+<li>El robot comienza en la coordenada (0, 0).  </li>
+<li>Para indicarle que se mueva, le enviamos un array formado por enteros (positivos o negativos) que indican la secuencia de pasos a dar.
+Por ejemplo: <code>[10, 5, -2]</code> indica que primero se mueve <code>10</code> pasos, se detiene, luego <code>5</code>, se detiene, y finalmente <code>2</code>. El resultado en este caso sería <code>(x: -5, y: 12)</code>   </li>
+<li>Si el número de pasos es negativo, se desplazaría en sentido contrario al que está mirando.   </li>
+<li>Los primeros pasos los hace en el eje "y". Interpretamos que está mirando hacia la parte positiva del eje "y".   </li>
+<li>El robot tiene un fallo en su programación: cada vez que finaliza una secuencia de pasos gira 90 grados en el sentido contrario a las agujas del reloj.</li>
+</ul>
+<p>No te olvides lo aprendido en las primeras unidades.
+Estructura condicionales, repetitivas, comentarios, etc.</p>
+<p>Tras los siguientes movimientos:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[10, 5, -2]
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>[0, 0, 0]
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>[]
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>[-10, -5, 2]
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>[-10, -5, 2, 4, -8]
+</code></pre></div>
+Las salidas son estas:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>x: -5, y: 12, direction: POSITIVEX
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>x: 0, y: 0, direction: POSITIVEX
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>x: 0, y: 0, direction: POSITIVEY
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>x: 5, y: -12, direction: POSITIVEX
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>x: 9, y: -20, direction: NEGATIVEX
+</code></pre></div></p>
 <h3 id="parte-1"><strong>PARTE 1</strong><a class="headerlink" href="#parte-1" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>Crear una versión del programa realizado en la tarea ¿Dónde está R2D2?, pero ORIENTADO A OBJETOS.</p>
+<p>Crear una versión del programa ¿Dónde está R2D2?, pero ORIENTADO A OBJETOS.</p>
 </li>
 <li>
-<p>La clase Robot debe tener 4 propiedades: nombre, posX, posY y dir. También tendrá un comportamiento por medio de 3 métodos: mover(), mostrarPosicion() y obtenerDireccion().</p>
+<p>La clase Robot debe tener 4 propiedades: <code>nombre</code>, <code>posX</code>, <code>posY</code> y <code>direccion</code>. También tendrá un comportamiento por medio de 3 métodos: <code>mover()</code>, <code>mostrarPosicion()</code> y <code>obtenerDireccion()</code>.</p>
 </li>
 <li>
-<p>El método mover() debe recibir un array de elementos enteros y no retornará nada, ya que los cambios quedarán almacenados en las propiedades del mismo.</p>
+<p>El método <code>mover()</code> debe recibir un array de elementos enteros y no retornará nada, ya que los cambios quedarán almacenados en las propiedades del mismo.</p>
 </li>
 <li>
-<p>El método obtenerDireccion() no recibe parámetros y retorna una cadena de caracteres con la dirección PositiveX, NegativeX, PositiveY o NegativeY.</p>
+<p>El método <code>obtenerDireccion()</code> no recibe parámetros y retorna una cadena de caracteres con la dirección <code>PositiveX</code>, <code>NegativeX</code>, <code>PositiveY</code> o <code>NegativeY</code>. (Posible mejora con <code>class enum</code> https://kotlinlang.org/docs/enum-classes.html)</p>
 </li>
 <li>
-<p>El método mostrarPosicion() debe mostrar por consola la posición y dirección. Ejemplo: "R2D2 está en (10, -5) PositiveX".</p>
+<p>El método <code>mostrarPosicion()</code> debe mostrar por consola la posición y dirección. Ejemplo: <code>R2D2 está en (10, -5) PositiveX</code>.</p>
 </li>
 <li>
-<p>Un objeto de la clase Robot debe inicializarse siempre en la posición (0, 0) y la dirección eje Y positivo (hacia arriba) cuando se instancia.</p>
+<p>Un objeto de la clase Robot debe inicializarse siempre en la posición <code>(0, 0)</code> y la dirección eje Y positivo (hacia arriba) cuando se instancia.</p>
 </li>
 <li>
 <p>En este programa, vamos a realizar los mismos movimientos, pero el robot comenzará cada movimiento en la posición final después de realizar el movimiento anterior.</p>
 </li>
 <li>
-<p>En el main debes crear un objeto de Robot (o una variable de tipo Robot) con el nombre "R2D2". El nombre de la variable que utilices para crearlo puede ser robot1.</p>
+<p>En el main debes crear un objeto de Robot (o una variable de tipo Robot) con el nombre <code>R2D2</code>. El nombre de la variable que utilices para crearlo puede ser <code>robot1</code>.</p>
 </li>
 <li>
-<p>Cread los movimientos en un array de arrays y recorrerlos para realizar en cada iteración los movimientos del robot y mostrar la posición del mismo al finalizar cada uno. En cada iteración del bucle llamaremos a los métodos mover() y mostrarPosicion().</p>
+<p>Cread los movimientos en un array de arrays y recorrerlos para realizar en cada iteración los movimientos del robot y mostrar la posición del mismo al finalizar cada uno. En cada iteración del bucle llamaremos a los métodos <code>mover()</code> y <code>mostrarPosicion()</code>.</p>
 </li>
 <li>
 <p>Un ejemplo de una estructura que podéis utilizar para los movimientos sería la siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    [1, -5, 0, -9],
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    [3, 3, 5, 6, 1, 0, 0, -7],
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    [2, 1, 0, -1, 1, 1, -4],
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    [],
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    [3, 5]
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>]
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    [1, -5, 0, -9],
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    [3, 3, 5, 6, 1, 0, 0, -7],
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    [2, 1, 0, -1, 1, 1, -4],
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    [],
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    [3, 5]
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>]
 </code></pre></div>
 </li>
 </ol>

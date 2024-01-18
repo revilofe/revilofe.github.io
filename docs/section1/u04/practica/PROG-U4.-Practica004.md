@@ -53,7 +53,7 @@ x: 9, y: -20, direction: NEGATIVEX
       
    3. El método `mover()` debe recibir un array de elementos enteros y no retornará nada, ya que los cambios quedarán almacenados en las propiedades del mismo.
       
-   4. El método `obtenerDireccion()` no recibe parámetros y retorna una cadena de caracteres con la dirección `PositiveX`, `NegativeX`, `PositiveY` o `NegativeY`. ***(Posible mejora con `class enum` https://kotlinlang.org/docs/enum-classes.html)***
+   4. El método `obtenerDireccion()` no recibe parámetros y retorna una cadena de caracteres con la dirección `PositiveX`, `NegativeX`, `PositiveY` o `NegativeY`. ***(Posible mejora con `enum class` [Enum classes](https://kotlinlang.org/docs/enum-classes.html))***
       
    5. El método `mostrarPosicion()` debe mostrar por consola la posición y dirección. Ejemplo: `R2D2 está en (10, -5) PositiveX`.
        
@@ -69,12 +69,12 @@ x: 9, y: -20, direction: NEGATIVEX
 
 Un ejemplo de una estructura que podéis utilizar para los movimientos sería la siguiente:
 
-      ```
-      [
-          [1, -5, 0, -9],
-          [3, 3, 5, 6, 1, 0, 0, -7],
-          [2, 1, 0, -1, 1, 1, -4],
-          [],
-          [3, 5]
-      ]
-      ```
+   ```
+   [
+      [1, -5, 0, -9],
+      [3, 3, 5, 6, 1, 0, 0, -7],
+      [2, 1, 0, -1, 1, 1, -4],
+      [],
+      [3, 5]
+   ]
+   ```

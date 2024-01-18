@@ -89,3 +89,8 @@ tags:
    2. Crear el método `toString()` para mostrar el tiempo en formato: ***XXh XXm XXs***.
 
    3. En el programa principal, debe solicitar por teclado hora, minuto y segundo de forma que se puedan omitir los segundos o los minutos *(y segundos, claro)* e instancie la clase `Tiempo` mostrando su valor.
+
+   4. A tener en cuenta:  
+
+      * Si segundos o minutos es mayor que 60, se tendrá que hacer las operaciones necesarios para incrementar la magnitud superior por el resultado del modulo de 60, quedándose en segundos o minutos con el resto. Es decir 65 segundos equivale a : 1 minuto y 5 segundos.
+      * Hora siempre tendrá que ser menor que 24, si no, lanzará una excepción. 

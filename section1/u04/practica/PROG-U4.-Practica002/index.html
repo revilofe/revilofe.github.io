@@ -3822,18 +3822,20 @@
 <p>Crear una clase <code>Persona</code> que tenga <code>nombre</code>, <code>peso</code> <em>(en kg con decimales)</em>, <code>altura</code> <em>(en metros con decimales)</em> y su <code>imc</code>.</p>
 </li>
 <li>
-<p>Crear un <strong><em>constructor primario</em></strong> con todos los atributos, excepto nombre e imc. Este último atributo de la clase se calculará en un bloque <code>init</code> que situarás a continuación de la declaración del atributo.</p>
+<p>Crear un <strong><em>constructor primario</em></strong> con todos los atributos, excepto nombre e imc. Este último atributo se calcula en función del peso y la altura. Por tanto no se debe poder modificar, pero si consultar.  </p>
 </li>
 <li>
 <p>Crear un <strong><em>constructor secundario</em></strong> que también incluya el nombre de la persona cómo parámetro.</p>
 </li>
 <li>
-<p>En el main() crear 3 personas diferentes, utilizando el constructor primario y secundario, y realizar lo siguiente:</p>
-<ul>
-<li>La persona1 debe modificar su nombre y para ello debes solicitarlo al usuario por consola.</li>
-<li>Mostrar el nombre, peso y altura de la persona 2.</li>
-<li>Actualizar imc de la persona3 haciendo el cálculo con su peso y altura.</li>
-</ul>
+<p>Implementa el método <code>toString</code>, representación del objeto en forma de <code>String</code>:  <code>override fun toString() = ""</code></p>
+</li>
+<li>
+<p>En el <code>main()</code> crear 3 personas diferentes (la primera sin nombre) utilizando el constructor primario y secundario y mostrarlas por consola. A continuación, realizar lo siguiente:</p>
+<div class="highlight"><pre><span></span><code> * Sobre la persona 1: (a) modificar su nombre y para ello debes solicitarlo al usuario por consola. No puede ser nulo o vacio. (b) Mostrar por consola sólo el nombre, peso y altura.
+ * Sobre la persona 3: (a) Mostrar el peso, altura y imc. (b) Modificar la altura. (c) Mostrar el peso, altura y imc.
+ * Sobe la persona 2; (a) Modificar la altura para que tenga el mismo valor que la persona 3. (c) Mostrar la persona 2 y persona 3. (b) Comparar si las dos personas son iguales, y mostrar el resultado.
+</code></pre></div>
 </li>
 </ol>
 <h3 id="ejercicio-42"><strong>Ejercicio 4.2</strong><a class="headerlink" href="#ejercicio-42" title="Permanent link">&para;</a></h3>

@@ -3854,21 +3854,21 @@
 <h3 id="ejercicio-43"><strong>Ejercicio 4.3</strong><a class="headerlink" href="#ejercicio-43" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>Actualizar el ejercicio 1 para añadir a la clase el siguiente comportamiento:</p>
+<p>Actualizar el ejercicio 4.2 para añadir a la clase <code>Persona</code> el siguiente comportamiento:</p>
 <ul>
 <li>Debe retornar un saludo con su nombre... <code>saludar():String</code></li>
 <li>Debe retornar si altura por encima de la media (solo si altura &gt;= 1.75)... <code>alturaEncimaMedia():Boolean</code></li>
-<li>Debe retornar si peso por encima de la media (solo si peso &gt;= 70)... <code>alturaEncimaMedia():Boolean</code></li>
-<li>Sería conveniente añadir también un método <code>obtenerDescImc()</code> para usar en <code>mostrarDesc()</code>, que implemente el retorno de la descripción del rango de tipo de imc al que equivale su cálculo.</li>
+<li>Debe retornar si peso por encima de la media (solo si peso &gt;= 70)... <code>pesoEncimaMedia():Boolean</code></li>
+<li>Sería conveniente añadir también un método <code>obtenerDescImc()</code> para usar en <code>obtenerDesc()</code>, que implemente el retorno de la descripción del rango de tipo de imc al que equivale su cálculo. </li>
 </ul>
-<p><strong><em>Nota</em></strong>: 
+<p><strong><em>Nota</em></strong>: (Mejora: Enum class en https://www.baeldung.com/kotlin/enum)
      * Si el IMC es menos de 18.5, se encuentra dentro del rango de "peso insuficiente". 
      * Si el IMC está entre 18.5 y 24.9, se encuentra dentro del rango de "peso saludable". 
      * Si el IMC está entre 25.0 y 29.9, se encuentra dentro del rango de "sobrepeso". 
      * Si el IMC es 30.0 o superior, se encuentra dentro del rango de "obesidad".</p>
 <ul>
 <li>
-<p>Debe implementar también un método que muestre una descripción completa de la persona... <code>mostrarDesc():String</code>. Por ejemplo, este método mostrará por pantalla algo así:</p>
+<p>Debe implementar también un método que muestre una descripción completa de la persona... <code>obtenerDesc():String</code>. Por ejemplo, este método mostrará por pantalla algo así:</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot;Julia con una altura de 1.72m (Por debajo de la media) y un peso 64.7kg (Por encima de la media) tiene un IMC de 21,87 (peso saludable)&quot;. 
 </code></pre></div>
    2. Crear en el <code>main()</code> una estructura de datos con 4 o 5 personas más, recorrer la estructura y por cada persona debe saludar y mostrar su descripción completa.</p>

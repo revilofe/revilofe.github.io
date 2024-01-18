@@ -3744,27 +3744,27 @@
 <p>Los robots serán <code>R2D2</code>, <code>DAW1A</code>, <code>DAW1B</code> y <code>DAM1</code>.</p>
 </li>
 <li>
-<p><strong><em>RETO</em></strong>: En la clase Robot debéis realizar una modificación para que el método <code>mover()</code> reciba una función tipo que modifique la dirección del mismo según la info siguiente:</p>
+<p><strong><em>RETO</em></strong>: En la clase Robot debéis realizar una modificación para que la clase reciba una función tipo que modifique la dirección del mismo según la info siguiente:</p>
 <ul>
 <li>
 <p><code>R2D2</code> sigue igual, comienza en <code>(0, 0)</code> y <code>PositiveY</code> cuando se instancia el objeto y realiza un giro de <code>-90º</code> al detenerse en cada movimiento.</p>
 </li>
 <li>
 <p><code>DAW1A</code> comienza en una posición aleatoria entre <code>-5</code> y <code>5</code> para <code>x</code> y en el eje <code>y</code> en <code>0</code>. La dirección será <code>PositiveX</code>.
-    Al detenerse, si está en <code>x positiva</code> gira <code>180º</code> y si está en <code>x negativa</code> gira <code>90º</code>.</p>
+    Al detenerse, si su valor de la posición <code>x es positiva</code> gira <code>180º</code> y si su valor de la posición <code>x es negativa</code> gira <code>90º</code>.</p>
 </li>
 <li>
-<p><code>DAW1B</code> comienza en la posición <code>x = 0</code>, pero y es aleatoria entre <code>-10</code> y <code>10</code>. Su dirección inicial será aleatoria.
-    La dirección que toma al detenerse será <code>-90º</code> si la <code>y</code> es positiva y <code>270º</code> si la <code>y</code> es negativa.</p>
+<p><code>DAW1B</code> comienza en la posición <code>x = 0</code>, pero la posición <code>y</code> es aleatoria entre <code>-10</code> y <code>10</code>. Su dirección inicial será <code>aleatoria</code>.
+    La dirección que toma al detenerse será <code>-90º</code> si el valor de su posición <code>y</code> es positivo y <code>270º</code> si el valor de su posición <code>y</code> es negativo.</p>
 </li>
 <li>
-<p><code>DAM1</code> comienza en en una posición aleatoria entre <code>-5</code> y <code>5</code> en cada eje. La dirección inicial es aleatoria.
-    Debe tomar una también una dirección totalmente aleatoria al detenerse entre cada movimiento, siempre que no sea la misma en la que estaba.</p>
+<p><code>DAM1</code> comienza en en una posición aleatoria entre <code>-5</code> y <code>5</code> en cada eje. La dirección inicial es <code>aleatoria</code>.
+    Debe tomar una también una dirección totalmente aleatoria al detenerse entre cada movimiento, <code>siempre que no sea la misma en la que estaba</code>.</p>
 </li>
 </ul>
 </li>
 <li>
-<p>Si no sois capaces de realizar estos cambios en el método <code>mover()</code> pasándole una <code>función como parámetro</code>, intentad realizadlo de otra forma <em>(con sentido)</em>, pero que cada robot tenga el comportamiento que se indica al moverse con la dirección.</p>
+<p>Si no sois capaces de realizar estos cambios pasándole una <code>función como parámetro</code> a la clase, podéis realizarlo de otra forma <em>(con sentido)</em>, pero que cada robot tenga el comportamiento que se indica al moverse con la dirección.</p>
 </li>
 <li>
 <p>El programa debe pedirme un número de movimientos por consola y ejecutar esos movimientos con todos los robots, indicando su posición y dirección final.

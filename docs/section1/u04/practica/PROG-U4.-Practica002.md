@@ -19,6 +19,14 @@ tags:
 
 ### **Ejercicio 4.1**
 
+   1. Crear una clase `Rectángulo`, con atributos `base` y `altura`. La clase debe disponer del constructor y los métodos para calcular el `area` y el `perimetro`.
+
+   2. Opcionalmente se puede crear el método `toString()` para mostrar información sobre el rectángulo. `override fun toString() = ""`
+
+   3. En el programa principal, crear varios rectángulos y mostrar por pantalla sus áreas y perímetros.
+
+### **Ejercicio 4.2**
+
    1. Crear una clase `Persona` que tenga `nombre`, `peso` *(en kg con decimales)*, `altura` *(en metros con decimales)* y su `imc`.
    
    2. Crear un ***constructor primario*** con todos los atributos, excepto nombre e imc. Este último atributo se calcula en función del peso y la altura. Por tanto no se debe poder modificar, pero si consultar.  
@@ -33,7 +41,7 @@ tags:
       * Sobre la persona 3: a) Mostrar el peso, altura y imc. b) Modificar la altura, por ejemplo a `1.80` c) Mostrar el peso, altura y imc.
       * Sobre la persona 2; a) Modificar la altura para que tenga el mismo valor que la persona 3. b) Mostrar la persona 2 y persona 3. c) Comparar si las dos personas son iguales, y mostrar el resultado. 
 
-### **Ejercicio 4.2**
+### **Ejercicio 4.3**
 
    1. Actualizar el ejercicio 1 para añadir a la clase el siguiente comportamiento:
 
@@ -58,14 +66,6 @@ tags:
    3. Finalmente, revisa el IDE e intenta actualizar el modificador de visibilidad de los métodos de tu clase cómo os estará indicando... 
    veréis que los métodos que realmente no van a ser llamados desde fuera de la clase te recomienda que sean privados a la misma. 
    De esta manera estamos `encapsulando` estos métodos para que se puedan utilizar solo desde dentro de la clase y no sean públicos.
-
-### **Ejercicio 4.3**
-
-   1. Crear una clase `Rectángulo`, con atributos `base` y `altura`. La clase debe disponer del constructor y los métodos para calcular el `área` y el `perímetro`. 
-
-   2. Opcionalmente se puede crear el método `toString()` para mostrar información sobre el rectángulo.
-
-   3. En el programa principal, crear varios rectángulos y mostrar por pantalla sus áreas y perímetros.
 
 ### **Ejercicio 4.4**
 

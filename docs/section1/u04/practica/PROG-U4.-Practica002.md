@@ -38,9 +38,9 @@ tags:
    1. Actualizar el ejercicio 1 para añadir a la clase el siguiente comportamiento:
 
       * Debe retornar un saludo con su nombre... `saludar():String`
-      * Debe retornar si altura por encima de la media (solo altura >= 1.75)... `alturaEncimaMedia():Boolean`
-      * Debe retornar si peso por encima de la media (solo peso >= 70)... `alturaEncimaMedia():Boolean`
-      * Sería conveniente añadir también un método `obtenerImcDesc()` para usar en mostrarDesc(), que implemente el retorno de la descripción del rango de tipo de imc al que equivale su cálculo.
+      * Debe retornar si altura por encima de la media (solo si altura >= 1.75)... `alturaEncimaMedia():Boolean`
+      * Debe retornar si peso por encima de la media (solo si peso >= 70)... `alturaEncimaMedia():Boolean`
+      * Sería conveniente añadir también un método `obtenerDescImc()` para usar en `mostrarDesc()`, que implemente el retorno de la descripción del rango de tipo de imc al que equivale su cálculo.
 
       ***Nota***: 
          * Si el IMC es menos de 18.5, se encuentra dentro del rango de "peso insuficiente". 

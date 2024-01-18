@@ -3819,6 +3819,18 @@
 <h3 id="ejercicio-41"><strong>Ejercicio 4.1</strong><a class="headerlink" href="#ejercicio-41" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
+<p>Crear una clase <code>Rectángulo</code>, con atributos <code>base</code> y <code>altura</code>. La clase debe disponer del constructor y los métodos para calcular el <code>area</code> y el <code>perimetro</code>.</p>
+</li>
+<li>
+<p>Opcionalmente se puede crear el método <code>toString()</code> para mostrar información sobre el rectángulo. <code>override fun toString() = ""</code></p>
+</li>
+<li>
+<p>En el programa principal, crear varios rectángulos y mostrar por pantalla sus áreas y perímetros.</p>
+</li>
+</ol>
+<h3 id="ejercicio-42"><strong>Ejercicio 4.2</strong><a class="headerlink" href="#ejercicio-42" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
 <p>Crear una clase <code>Persona</code> que tenga <code>nombre</code>, <code>peso</code> <em>(en kg con decimales)</em>, <code>altura</code> <em>(en metros con decimales)</em> y su <code>imc</code>.</p>
 </li>
 <li>
@@ -3839,15 +3851,15 @@
 </ul>
 </li>
 </ol>
-<h3 id="ejercicio-42"><strong>Ejercicio 4.2</strong><a class="headerlink" href="#ejercicio-42" title="Permanent link">&para;</a></h3>
+<h3 id="ejercicio-43"><strong>Ejercicio 4.3</strong><a class="headerlink" href="#ejercicio-43" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>Actualizar el ejercicio 1 para añadir a la clase el siguiente comportamiento:</p>
 <ul>
 <li>Debe retornar un saludo con su nombre... <code>saludar():String</code></li>
-<li>Debe retornar si altura por encima de la media (solo altura &gt;= 1.75)... <code>alturaEncimaMedia():Boolean</code></li>
-<li>Debe retornar si peso por encima de la media (solo peso &gt;= 70)... <code>alturaEncimaMedia():Boolean</code></li>
-<li>Sería conveniente añadir también un método <code>obtenerImcDesc()</code> para usar en mostrarDesc(), que implemente el retorno de la descripción del rango de tipo de imc al que equivale su cálculo.</li>
+<li>Debe retornar si altura por encima de la media (solo si altura &gt;= 1.75)... <code>alturaEncimaMedia():Boolean</code></li>
+<li>Debe retornar si peso por encima de la media (solo si peso &gt;= 70)... <code>alturaEncimaMedia():Boolean</code></li>
+<li>Sería conveniente añadir también un método <code>obtenerDescImc()</code> para usar en <code>mostrarDesc()</code>, que implemente el retorno de la descripción del rango de tipo de imc al que equivale su cálculo.</li>
 </ul>
 <p><strong><em>Nota</em></strong>: 
      * Si el IMC es menos de 18.5, se encuentra dentro del rango de "peso insuficiente". 
@@ -3867,18 +3879,6 @@
 <p>Finalmente, revisa el IDE e intenta actualizar el modificador de visibilidad de los métodos de tu clase cómo os estará indicando... 
    veréis que los métodos que realmente no van a ser llamados desde fuera de la clase te recomienda que sean privados a la misma. 
    De esta manera estamos <code>encapsulando</code> estos métodos para que se puedan utilizar solo desde dentro de la clase y no sean públicos.</p>
-</li>
-</ol>
-<h3 id="ejercicio-43"><strong>Ejercicio 4.3</strong><a class="headerlink" href="#ejercicio-43" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p>Crear una clase <code>Rectángulo</code>, con atributos <code>base</code> y <code>altura</code>. La clase debe disponer del constructor y los métodos para calcular el <code>área</code> y el <code>perímetro</code>. </p>
-</li>
-<li>
-<p>Opcionalmente se puede crear el método <code>toString()</code> para mostrar información sobre el rectángulo.</p>
-</li>
-<li>
-<p>En el programa principal, crear varios rectángulos y mostrar por pantalla sus áreas y perímetros.</p>
 </li>
 </ol>
 <h3 id="ejercicio-44"><strong>Ejercicio 4.4</strong><a class="headerlink" href="#ejercicio-44" title="Permanent link">&para;</a></h3>

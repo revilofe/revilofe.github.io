@@ -3914,6 +3914,13 @@
 <li>
 <p>En el programa principal, debe solicitar por teclado hora, minuto y segundo de forma que se puedan omitir los segundos o los minutos <em>(y segundos, claro)</em> e instancie la clase <code>Tiempo</code> mostrando su valor.</p>
 </li>
+<li>
+<p>A tener en cuenta:  </p>
+<ul>
+<li>Si segundos o minutos es mayor que 60, se tendrá que hacer las operaciones necesarios para incrementar la magnitud superior por el resultado del modulo de 60, quedándose en segundos o minutos con el resto. Es decir 65 segundos equivale a : 1 minuto y 5 segundos.</li>
+<li>Hora siempre tendrá que ser menor que 24, si no, lanzará una excepción. </li>
+</ul>
+</li>
 </ol>
 
 

@@ -3884,23 +3884,19 @@
 <h3 id="ejercicio-44"><strong>Ejercicio 4.4</strong><a class="headerlink" href="#ejercicio-44" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>Crear una clase <code>Coche</code>, a través de la cual se pueda conocer el <code>color</code> del coche, la <code>marca</code>, el <code>modelo</code>, el <code>número de caballos</code>, el <code>número de puertas</code> y la <code>matrícula</code>. 
-   Crear el constructor del coche, así como los métodos estándar: <code>getters</code>, <code>setters</code> y <code>toString()</code>.</p>
+<p>Crear una clase <code>Coche</code>, a través de la cual se pueda conocer el <code>color</code> del coche, la <code>marca</code>, el <code>modelo</code>, el <code>número de caballos</code>, el <code>número de puertas</code> y la <code>matrícula</code>. Crear el constructor del coche, así como el método <code>toString()</code>. </p>
 </li>
 <li>
-<p>Para realizar getters y setters, añade el modificador private a los atributos de la clase y genera los métodos <code>getColor()</code>, <code>setColor()</code>, ..., así para todos los atributos.</p>
+<p>Recuerda que Kotlin añade los getters y setters con el comportamiento por defecto, por lo que no es necesario que los implementes, a no ser que tengas que añadir alguna funcionalidad extra.</p>
+<ul>
+<li>Modifica el atributo matricula para que no permita actualizar la matrícula con un valor que no tenga 7 caracteres.</li>
+<li>Los atributos de modelo la marca siempre se devolverán con la primera letra en mayúscula. </li>
+<li>Realiza también una modificación del atributo número de caballos, para que no permita actualizar el atributo <code>numCaballos</code> con un valor interior a 70, ni superior a 700.</li>
+<li>Realiza una modificación del atributo número de puertas, para que no permita actualizar el atributo <code>numPuertas</code> con un valor inferior a 3, ni superior a 5.</li>
+</ul>
 </li>
 <li>
-<p>En el programa principal, instancia varios coches, muestra su información, cambia el color a algunos de ellos y vuelve a mostrarlos por pantalla.</p>
-</li>
-<li>
-<p>Realiza también una modificación al método <code>setNumCaballos()</code> para que no permita actualizar el atributo <code>numCaballos</code> con un valor interior a 70, ni superior a 700.</p>
-</li>
-<li>
-<p>Realiza otra modificación al método <code>setNumPuertas()</code> para que no se pueda actualizar con un valor inferior a 3, ni superior a 5... pero esta vez utiliza <code>require</code>.</p>
-</li>
-<li>
-<p>Para probar las modificaciones a los métodos anteriores, solicita al usuario el número de caballos para un coche y haz lo mismo para el número de puertas.</p>
+<p>En el programa principal, instancia varios coches y muestralos por pantalla. Probar las modificaciones anteriores, modifica el número de caballos para un coche y haz lo mismo para el número de puertas, el color, la marca y modelo. Vuelve a mostrarlos por pantalla. </p>
 </li>
 </ol>
 <h3 id="ejercicio-45"><strong>Ejercicio 4.5</strong><a class="headerlink" href="#ejercicio-45" title="Permanent link">&para;</a></h3>

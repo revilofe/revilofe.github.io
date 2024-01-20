@@ -73,7 +73,8 @@ tags:
    1. Crear una clase `Coche`, a través de la cual se pueda conocer el `color` del coche, la `marca`, el `modelo`, el `número de caballos`, el `número de puertas` y la `matrícula`. Crear el constructor del coche, así como el método `toString()`. 
  
       * Marca y modelo no podrán ser blancos ni nulos y no podrán modificarse.
-      * Color, número de caballos, número de puertas y matrícula podrán modificarse, pero no podrán ser nulos.
+      * Número de caballos, número de puertas y matrícula no podrán modificarse, ni podrán ser nulos.
+      * Color podrá modificarse, pero no podrá ser nulo.
 
    2. Recuerda que Kotlin añade los getters y setters con el comportamiento por defecto, por lo que no es necesario que los implementes, a no ser que tengas que añadir alguna funcionalidad extra.
 

@@ -70,18 +70,16 @@ tags:
 
 ### **Ejercicio 4.4**
 
-   1. Crear una clase `Coche`, a través de la cual se pueda conocer el `color` del coche, la `marca`, el `modelo`, el `número de caballos`, el `número de puertas` y la `matrícula`. 
-   Crear el constructor del coche, así como los métodos estándar: `getters`, `setters` y `toString()`.
+   1. Crear una clase `Coche`, a través de la cual se pueda conocer el `color` del coche, la `marca`, el `modelo`, el `número de caballos`, el `número de puertas` y la `matrícula`. Crear el constructor del coche, así como el método `toString()`. 
 
-   2. Para realizar getters y setters, añade el modificador private a los atributos de la clase y genera los métodos `getColor()`, `setColor()`, ..., así para todos los atributos.
+   2. Recuerda que Kotlin añade los getters y setters con el comportamiento por defecto, por lo que no es necesario que los implementes, a no ser que tengas que añadir alguna funcionalidad extra.
 
-   3. En el programa principal, instancia varios coches, muestra su información, cambia el color a algunos de ellos y vuelve a mostrarlos por pantalla.
-
-   4. Realiza también una modificación al método `setNumCaballos()` para que no permita actualizar el atributo `numCaballos` con un valor interior a 70, ni superior a 700.
-
-   5. Realiza otra modificación al método `setNumPuertas()` para que no se pueda actualizar con un valor inferior a 3, ni superior a 5... pero esta vez utiliza `require`.
-
-   6. Para probar las modificaciones a los métodos anteriores, solicita al usuario el número de caballos para un coche y haz lo mismo para el número de puertas.
+      * Modifica el atributo matricula para que no permita actualizar la matrícula con un valor que no tenga 7 caracteres.
+      * Los atributos de modelo la marca siempre se devolverán con la primera letra en mayúscula. 
+      * Realiza también una modificación del atributo número de caballos, para que no permita actualizar el atributo `numCaballos` con un valor interior a 70, ni superior a 700.
+      * Realiza una modificación del atributo número de puertas, para que no permita actualizar el atributo `numPuertas` con un valor inferior a 3, ni superior a 5.
+   
+   3. En el programa principal, instancia varios coches y muestralos por pantalla. Probar las modificaciones anteriores, modifica el número de caballos para un coche y haz lo mismo para el número de puertas, el color, la marca y modelo. Vuelve a mostrarlos por pantalla. 
 
 ### **Ejercicio 4.5**
 

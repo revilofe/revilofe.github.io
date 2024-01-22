@@ -3915,7 +3915,7 @@
 <h3 id="ejercicio-45"><strong>Ejercicio 4.5</strong><a class="headerlink" href="#ejercicio-45" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>Crear una clase <code>Tiempo</code>, con atributos <code>hora</code>, <code>minuto</code> y <code>segundo</code>, que pueda ser construida indicando los tres atributos, sólo hora y minuto o sólo la hora <em>(si no se indica, el valor de minuto o segundo será 0)</em>. </p>
+<p>Crear una clase <code>Tiempo</code>, que refleja las horas de un día, es decír, desde <code>00:00:00</code> hasta <code>23:59:59</code>,  con atributos <code>hora</code>, <code>minuto</code> y <code>segundo</code>, que pueda ser construida indicando los tres atributos, sólo hora y minuto o sólo la hora <em>(si no se indica, el valor de minuto o segundo será 0)</em>. </p>
 </li>
 <li>
 <p>Crear el método <code>toString()</code> para mostrar el tiempo en formato: <strong><em><code>XXh XXm XXs</code></em></strong>.</p>
@@ -3929,6 +3929,33 @@
 <li>Si segundos o minutos es mayor que 60, se tendrá que hacer las operaciones necesarios para incrementar la magnitud superior por el resultado del modulo de 60, quedándose en segundos o minutos con el resto. Es decir 65 segundos equivale a : 1 minuto y 5 segundos.</li>
 <li>Hora siempre tendrá que ser menor que 24, si no, lanzará una excepción. </li>
 </ul>
+</li>
+<li>
+<p>Añadir un nuevo método <code>incrementar(t:Tiempo):Boolean</code>, que incrementa en <code>t</code>, el total del tiempo que almacena el objeto que recibe el mensaje, devolviendo false si al incrementar se superan las <code>23:59:59</code>, en cuyo caso no cambiaría nada del objeto que recibe el mensaje. En el programa principal, debe solicitar por teclado hora, minuto y segundo del objeto <code>t</code>. Mostrará por pantalla el resultado obtenido al incrementar en <code>t</code> el tiempo, mostrando un mensaje de error si devuelve <code>false</code>.</p>
+</li>
+<li>
+<p>Añadir un nuevo método <code>decrementar(t:Tiempo):Boolean</code>, que decrementa en <code>t</code>, el total del tiempo que almacena el objeto que recibe el mensaje, devolviendo false si al decrementar se superan las <code>00:00:00</code>, en cuyo caso no cambiaría nada del objeto que recibe el mensaje. En el programa principal, debe solicitar por teclado hora, minuto y segundo del objeto <code>t</code>. Mostrará por pantalla el resultado obtenido al decrementar en <code>t</code> el tiempo, mostrando un mensaje de error si devuelve <code>false</code>.</p>
+</li>
+<li>
+<p>Añadir un nuevo método <code>comparar(t:Tiempo):Int</code>, que compara el tiempo que almacena el objeto que recibe el mensaje con el tiempo que almacena <code>t</code>, devolviendo -1 si el tiempo del objeto que recibe el mensaje es menor que <code>t</code>, 0 si son iguales y 1 si es mayor. En el programa principal, debe solicitar por teclado hora, minuto y segundo del objeto <code>t</code>. Mostrará por pantalla el resultado obtenido al comparar el tiempo del objeto que recibe el mensaje con el tiempo de <code>t</code>.</p>
+</li>
+<li>
+<p>Añadir un nuevo método <code>copiar():Tiempo</code>, que devuelve un objeto <code>Tiempo</code> con el mismo tiempo que almacena el objeto que recibe el mensaje. En el programa principal, debe solicitar por teclado hora, minuto y segundo del objeto <code>t</code>. Mostrará por pantalla el resultado obtenido al copiar el tiempo del objeto que recibe el mensaje en un nuevo objeto <code>Tiempo</code>.</p>
+</li>
+<li>
+<p>Añadir un nuevo método <code>copiar(t:Tiempo):Tiempo</code>, que copia el tiempo que almacena <code>t</code> en el objeto que recibe el mensaje. En el programa principal, debe solicitar por teclado hora, minuto y segundo del objeto <code>t</code>. Mostrará por pantalla el resultado obtenido al copiar el tiempo de <code>t</code> en el objeto que recibe el mensaje.</p>
+</li>
+<li>
+<p>Añadir un nuevo método <code>sumar(t:Tiempo):Tiempo?</code>, que suma el tiempo que almacena el objeto que recibe el mensaje con el tiempo que almacena <code>t</code>, devolviendo un nuevo objeto <code>Tiempo</code> con el resultado o <code>null</code> si el resultado es mayor que <code>23:59:59</code>. En el programa principal, debe solicitar por teclado hora, minuto y segundo del objeto <code>t</code>. Mostrará por pantalla el resultado obtenido al sumar el tiempo del objeto que recibe el mensaje con el tiempo de <code>t</code>.</p>
+</li>
+<li>
+<p>Añadir un nuevo método <code>restar(t:Tiempo):Tiempo?</code>, que resta el tiempo que almacena el objeto que recibe el mensaje con el tiempo que almacena <code>t</code>, devolviendo un nuevo objeto <code>Tiempo</code> con el resultado o <code>null</code> si el resultado es menor que <code>00:00:00</code>. En el programa principal, debe solicitar por teclado hora, minuto y segundo del objeto <code>t</code>. Mostrará por pantalla el resultado obtenido al restar el tiempo del objeto que recibe el mensaje con el tiempo de <code>t</code>.</p>
+</li>
+<li>
+<p>Añadir un nuevo método <code>esMayorQue(t:Tiempo):Boolean</code>, que devuelve true si el tiempo que almacena el objeto que recibe el mensaje es mayor que el tiempo que almacena <code>t</code>. En el programa principal, debe solicitar por teclado hora, minuto y segundo del objeto <code>t</code>. Mostrará por pantalla el resultado obtenido al comparar si el tiempo del objeto que recibe el mensaje es mayor que el tiempo de <code>t</code>.</p>
+</li>
+<li>
+<p>Añadir un nuevo método <code>esMenorQue(t:Tiempo):Boolean</code>, que devuelve true si el tiempo que almacena el objeto que recibe el mensaje es menor que el tiempo que almacena <code>t</code>. En el programa principal, debe solicitar por teclado hora, minuto y segundo del objeto <code>t</code>. Mostrará por pantalla el resultado obtenido al comparar si el tiempo del objeto que recibe el mensaje es menor que el tiempo de <code>t</code>.</p>
 </li>
 </ol>
 

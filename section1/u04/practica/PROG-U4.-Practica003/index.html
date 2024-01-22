@@ -3878,10 +3878,14 @@
 <p>Crear también una clase Persona, que se caracteriza por un DNI y una lista de cuentas bancarias.</p>
 </li>
 <li>
-<p>La <code>Persona</code> puede tener asociada hasta 3 cuentas bancarias, y debe tener un método que permita añadir cuentas <em>(hasta 3 el máximo permitido)</em>. </p>
+<p>La <code>Persona</code> puede tener asociada hasta 3 cuentas bancarias, y debe tener un método que permita añadir cuentas <em>(hasta 3 el máximo permitido)</em>.  Las cuentas se almacenarán en un array/vector. No usar una lista.</p>
 </li>
 <li>
-<p>También debe contener un método que devuelva si la persona es morosa <em>(si tienen alguna cuenta con saldo negativo)</em>.</p>
+<p>Métodos de clase:</p>
+<ul>
+<li>Debe contener un método que devuelva si la persona es morosa <em>(si tienen alguna cuenta con saldo negativo)</em>. Recibirá como parámetro el objeto <code>Persona</code> y devolverá un booleano.</li>
+<li>Debe contener un método que realice una transferencia entre dos cuentas. Recibirá como parámetro dos objetos <code>PersonaB</code>, dos identificacdors de cuentas y la cantidad a transferir. Devolverá un booleano indicando si se ha podido realizar o no la operación.</li>
+</ul>
 </li>
 <li>
 <p>En el programa principal, instanciar un objeto Persona con un DNI cualquiera, así como dos objetos cuenta, una sin saldo inicial y otra con 700 euros.

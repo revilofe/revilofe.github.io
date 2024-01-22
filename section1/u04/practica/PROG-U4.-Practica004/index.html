@@ -3785,7 +3785,7 @@ Las salidas son estas:
 <p>Crear una versión del programa ¿Dónde está R2D2?, pero ORIENTADO A OBJETOS.</p>
 </li>
 <li>
-<p>La clase Robot debe tener 4 propiedades: <code>nombre</code>, <code>posX</code>, <code>posY</code> y <code>direccion</code>. También tendrá un comportamiento por medio de 3 métodos: <code>mover()</code>, <code>mostrarPosicion()</code> y <code>obtenerDireccion()</code>.</p>
+<p>La clase Robot debe tener 4 propiedades: <code>nombre</code>, <code>posX</code>, <code>posY</code> y <code>direccion</code>. También tendrá un comportamiento por medio de 3 métodos: <code>mover()</code>, <code>obtenerPosicion()</code> y <code>obtenerDireccion()</code>.</p>
 </li>
 <li>
 <p>El método <code>mover()</code> debe recibir un array de elementos enteros y no retornará nada, ya que los cambios quedarán almacenados en las propiedades del mismo.</p>
@@ -3794,7 +3794,10 @@ Las salidas son estas:
 <p>El método <code>obtenerDireccion()</code> no recibe parámetros y retorna una cadena de caracteres con la dirección <code>PositiveX</code>, <code>NegativeX</code>, <code>PositiveY</code> o <code>NegativeY</code>. <strong><em>(Posible mejora con <code>enum class</code> <a href="https://kotlinlang.org/docs/enum-classes.html">Enum classes</a>)</em></strong></p>
 </li>
 <li>
-<p>El método <code>mostrarPosicion()</code> debe mostrar por consola la posición y dirección. Ejemplo: <code>R2D2 está en (10, -5) PositiveX</code>.</p>
+<p>El método <code>obtenerPosicion()</code> debe devolver la posición. Ejemplo: <code>(10, -5)</code>.</p>
+</li>
+<li>
+<p>Describe la posición actual del robot en el método <code>toString()</code>. (Pulsa Ctrl+o) Ejemplo: <code>R2D2 está en (10, -5) PositiveX</code></p>
 </li>
 <li>
 <p>Un objeto de la clase Robot debe inicializarse siempre en la posición <code>(0, 0)</code> y la dirección eje Y positivo (hacia arriba) cuando se instancia. En esta versión ya no va a moverse siempre desde la posición (0,0), sino que lo hará desde la última posición y dirección dónde se quedó al realizar su último movimiento.</p>

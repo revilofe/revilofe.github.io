@@ -58,9 +58,7 @@ class GestionCafes {
          * @param tazas Lista de tazas a mostrar.
          */
         private fun mostrarTazas(tazas: List<Taza>) {
-            for (taza in tazas) {
-                println(taza)
-            }
+            tazas.forEach { println(it) }
         }
 
         /**
@@ -68,9 +66,7 @@ class GestionCafes {
          * @param cafeteras Lista de cafeteras a mostrar.
          */
         fun mostrarCafeteras(cafeteras: List<Cafetera>) {
-            for (cafetera in cafeteras) {
-                println(cafetera)
-            }
+            cafeteras.forEach { println(it) }
         }
     }
 }

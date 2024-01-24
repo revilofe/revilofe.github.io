@@ -78,11 +78,11 @@ class Cafetera(val ubicacion: String) {
      * @param cantidad Cantidad de café a agregar (por defecto 50 c.c.).
      */
     fun agregarCafe(cantidad: Int = 200) {
-        if (cantidad == this.capacidad || this.cantidad + cantidad > this.capacidad) {
+        if (this.cantidad + cantidad > this.capacidad) {
             llenar()
         }
         else {
-            this.cantidad = cantidad
+            this.cantidad += cantidad
         }
     }
 

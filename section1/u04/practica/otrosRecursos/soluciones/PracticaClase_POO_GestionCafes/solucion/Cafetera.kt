@@ -74,7 +74,7 @@ class Cafetera(val ubicacion: String) {
 
     /**
      * Añade a la cafetera la cantidad de café indicada. Por defecto, añade 50 c.c.
-     * Si la cantidad sumada es igual a la capacidad máxima o excede la capacidad, llena la cafetera.
+     * Si la cantidad sumada excede la capacidad máxima, llena la cafetera.
      * @param cantidad Cantidad de café a agregar (por defecto 50 c.c.).
      */
     fun agregarCafe(cantidad: Int = 200) {

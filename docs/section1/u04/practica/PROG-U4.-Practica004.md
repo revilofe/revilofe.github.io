@@ -59,7 +59,7 @@ x: 9, y: -20, direction: NEGATIVEX
 
    6. Describe la posición actual del robot en el método `toString()`. (Pulsa Ctrl+o) Ejemplo: `R2D2 está en (10, -5) PositiveX`
        
-   7. Un objeto de la clase Robot debe inicializarse siempre en la posición `(0, 0)` y la dirección eje Y positivo (hacia arriba) cuando se instancia. En esta versión ya no va a moverse siempre desde la posición (0,0), sino que lo hará desde la última posición y dirección dónde se quedó al realizar su último movimiento.
+   7. Un objeto de la clase Robot debe inicializarse siempre en la posición `(0, 0)` y la dirección eje Y positivo (hacia arriba) `PositiveY` cuando se instancia. En esta versión ya no va a moverse siempre desde la posición `(0,0)`, sino que lo hará desde la última posición y dirección dónde se quedó al realizar su último movimiento.
        
    8. En este programa, vamos a realizar los mismos movimientos, pero el robot comenzará cada movimiento en la posición final después de realizar el movimiento anterior.
        

@@ -64,8 +64,7 @@ tags:
          ```
    2. Crear en el `main()` una estructura de datos con 4 o 5 personas más, recorrer la estructura y por cada persona debe saludar y mostrar su descripción completa.
 
-   3. Finalmente, revisa el IDE e intenta actualizar el modificador de visibilidad de los métodos de tu clase cómo os estará indicando... 
-   veréis que los métodos que realmente no van a ser llamados desde fuera de la clase te recomienda que sean privados a la misma. 
+   3. Finalmente, revisa el IDE e intenta actualizar el modificador de visibilidad de los métodos de tu clase cómo os estará indicando... veréis que los métodos que realmente no van a ser llamados desde fuera de la clase te recomienda que sean privados a la misma. 
    De esta manera estamos `encapsulando` estos métodos para que se puedan utilizar solo desde dentro de la clase y no sean públicos.
 
 ### **Ejercicio 4.4**

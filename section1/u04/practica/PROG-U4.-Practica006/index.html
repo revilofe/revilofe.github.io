@@ -3763,7 +3763,7 @@
 <li>Clase <code>Cafetera</code> con atributos <code>ubicacion</code> <em>(nombre de la sala o habitación dónde se encuentra)</em>, <code>capacidad</code> <em>(la cantidad máxima de café que puede contener la cafetera)</em> y <code>cantidad</code> <em>(la cantidad actual de café
   que hay en la cafetera)</em>.</li>
 </ul>
-<p><strong>Implementa, al menos, lo siguiente:</strong></p>
+<p>Implementa, al menos, lo siguiente:</p>
 <ul>
 <li>En la clase se debe establecer la <code>capacidad</code> máxima en 1000 (c.c.) y la <code>cantidad</code> actual en cero (cafetera vacía).</li>
 <li><code>Constructor primario</code> con la <code>ubicacion</code>.</li>
@@ -3771,11 +3771,15 @@
 <li><code>Constructor secundario</code> con la <code>ubicacion</code>, la <code>capacidad</code> máxima y la <code>cantidad</code> actual. Si la <code>cantidad</code> actual es mayor que la <code>capacidad</code> máxima de la cafetera, la ajustará al máximo.</li>
 <li><code>llenar()</code>: hace que la <code>cantidad</code> actual sea igual a la <code>capacidad</code>.</li>
 <li><code>servirTaza(Taza)</code>: simula la acción de servir una <code>taza</code> con la <code>capacidad</code> que tenga la taza. Si la cafetera tiene café, llenará la taza y restará la cantidad servida en la cantidad de la cafetera.
-    Si la cantidad actual de café <strong><em>“no alcanza”</em></strong> para llenar la taza, se sirve lo que quede. Actualizar la cantidad de la cafetera y aplicar el método adecuado de la taza.</li>
+     Si la cantidad actual de café <strong><em>“no alcanza”</em></strong> para llenar la taza, se sirve lo que quede. Actualizar la cantidad de la cafetera y aplicar el método adecuado de la taza.</li>
 <li><code>vaciar()</code>: pone la <code>cantidad</code> de café actual en cero.</li>
 <li><code>agregarCafe(Int)</code>: añade a la cafetera la <code>cantidad</code> de café indicada. <strong><em>Por defecto añade 200 c.c.</em></strong> No se puede añadir más cantidad que su capacidad máxima, si ocurriera esta circunstancia, simplemente llenaríamos la cantidad de la cafetera a su capacidad máxima.</li>
-<li><code>toString()</code>: debe retornar por ejemplo <strong><em>"Cafetera(ubicación = Salón, capacidad = 1000 c.c., cantidad = 0 c.c.)"</em></strong></li>
-<li>Clase Taza, que tendrá los atributos <code>color</code>, <code>capacidad</code> y <code>cantidad</code>.</li>
+<li>
+<p><code>toString()</code>: debe retornar por ejemplo <strong><em>"Cafetera(ubicación = Salón, capacidad = 1000 c.c., cantidad = 0 c.c.)"</em></strong></p>
+</li>
+<li>
+<p>Clase Taza, que tendrá los atributos <code>color</code>, <code>capacidad</code> y <code>cantidad</code>.</p>
+</li>
 </ul>
 <p>Implementa, al menos, lo siguiente:</p>
 <ul>
@@ -3784,7 +3788,7 @@
 <li>El método <code>llenar()</code> que establecerá la cantidad de la taza a su máxima capacidad.</li>
 <li>El método <strong><em>"sobrecargado"</em></strong> <code>llenar(Int)</code> que establecerá la cantidad de la taza a la cantidad pasada como argumento al método.</li>
 <li>
-<p>Sobreescribir el método <code>toString()</code>, que debe retornar por ejemplo <strong><em>"Taza(color = BLANCO, capacidad = 50 c.c., cantidad = 30 c.c.)"</em></strong></p>
+<p>Sobreescribir el método <code>toString()</code>, que debe retornar por ejemplo <strong><em>"Taza(color = BLANCO, capacidad = 50 c.c., cantidad = 30 c.c.)"</em></strong>   </p>
 </li>
 <li>
 <p>Clase enumerada <code>Color</code>, que contendrá los colores disponibles: blanco, negro, gris, azul y verde.</p>

@@ -3760,10 +3760,9 @@
 <h2 id="practica-de-clase-1-poo">Práctica de clase 1 - POO<a class="headerlink" href="#practica-de-clase-1-poo" title="Permanent link">&para;</a></h2>
 <h3 id="desarrolla-un-programa-con-las-siguientes-clases">Desarrolla un programa con las siguientes clases:<a class="headerlink" href="#desarrolla-un-programa-con-las-siguientes-clases" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Clase <code>Cafetera</code> con atributos <code>ubicacion</code> <em>(nombre de la sala o habitación dónde se encuentra)</em>, <code>capacidad</code> <em>(la cantidad máxima de café que puede contener la cafetera)</em> y <code>cantidad</code> <em>(la cantidad actual de café
-  que hay en la cafetera)</em>.</li>
+<li>Clase <code>Cafetera</code> con atributos <code>ubicacion</code> <em>(nombre de la sala o habitación dónde se encuentra)</em>, <code>capacidad</code> <em>(la cantidad máxima de café que puede contener la cafetera)</em> y <code>cantidad</code> <em>(la cantidad actual de café que hay en la cafetera)</em>.   </li>
 </ul>
-<p>Implementa, al menos, lo siguiente:</p>
+<p>Implementa, al menos, lo siguiente:   </p>
 <ul>
 <li>En la clase se debe establecer la <code>capacidad</code> máxima en 1000 (c.c.) y la <code>cantidad</code> actual en cero (cafetera vacía).</li>
 <li><code>Constructor primario</code> con la <code>ubicacion</code>.</li>
@@ -3774,12 +3773,11 @@
      Si la cantidad actual de café <strong><em>“no alcanza”</em></strong> para llenar la taza, se sirve lo que quede. Actualizar la cantidad de la cafetera y aplicar el método adecuado de la taza.</li>
 <li><code>vaciar()</code>: pone la <code>cantidad</code> de café actual en cero.</li>
 <li><code>agregarCafe(Int)</code>: añade a la cafetera la <code>cantidad</code> de café indicada. <strong><em>Por defecto añade 200 c.c.</em></strong> No se puede añadir más cantidad que su capacidad máxima, si ocurriera esta circunstancia, simplemente llenaríamos la cantidad de la cafetera a su capacidad máxima.</li>
-<li>
-<p><code>toString()</code>: debe retornar por ejemplo <strong><em>"Cafetera(ubicación = Salón, capacidad = 1000 c.c., cantidad = 0 c.c.)"</em></strong></p>
-</li>
-<li>
-<p>Clase Taza, que tendrá los atributos <code>color</code>, <code>capacidad</code> y <code>cantidad</code>.</p>
-</li>
+<li><code>toString()</code>: debe retornar por ejemplo <strong><em>"Cafetera(ubicación = Salón, capacidad = 1000 c.c., cantidad = 0 c.c.)"</em></strong>   </li>
+</ul>
+<p>Ademas:</p>
+<ul>
+<li>Clase Taza, que tendrá los atributos <code>color</code>, <code>capacidad</code> y <code>cantidad</code>.</li>
 </ul>
 <p>Implementa, al menos, lo siguiente:</p>
 <ul>
@@ -3787,12 +3785,11 @@
 <li>La propiedad <code>cantidad</code> debe modificarse para que si el valor que recibe es mayor que la capacidad de la taza, solo establezca el valor de dicha capacidad.</li>
 <li>El método <code>llenar()</code> que establecerá la cantidad de la taza a su máxima capacidad.</li>
 <li>El método <strong><em>"sobrecargado"</em></strong> <code>llenar(Int)</code> que establecerá la cantidad de la taza a la cantidad pasada como argumento al método.</li>
-<li>
-<p>Sobreescribir el método <code>toString()</code>, que debe retornar por ejemplo <strong><em>"Taza(color = BLANCO, capacidad = 50 c.c., cantidad = 30 c.c.)"</em></strong>   </p>
-</li>
-<li>
-<p>Clase enumerada <code>Color</code>, que contendrá los colores disponibles: blanco, negro, gris, azul y verde.</p>
-</li>
+<li>Sobreescribir el método <code>toString()</code>, que debe retornar por ejemplo <strong><em>"Taza(color = BLANCO, capacidad = 50 c.c., cantidad = 30 c.c.)"</em></strong>   </li>
+</ul>
+<p>Por último:</p>
+<ul>
+<li>Clase enumerada <code>Color</code>, que contendrá los colores disponibles: blanco, negro, gris, azul y verde.</li>
 </ul>
 <p>En el programa principal se deben crear 3 cafeteras de capacidad 1000, 750 y 500 c.c. con 0, 750 y 200 c.c de cantidad respectivamente. Para crear cada cafetera, debéis utilizar un constructor diferente.
 También debéis generar una lista de 20 tazas con la capacidad de 50, 75 y 100 de manear aleatoria.
@@ -3800,7 +3797,53 @@ Implementar el resto de comentarios TODO de la función main().</p>
 <blockquote>
 <p>NOTA: La sobrecarga de métodos se refiere a la capacidad de definir varios métodos en una clase con el mismo nombre pero con diferentes parámetros. Esto permite que una clase tenga varios métodos con la misma firma (nombre de método) pero con listas de parámetros diferentes. 
 La sobrecarga de métodos facilita la legibilidad del código y proporciona flexibilidad al programador al permitirle utilizar el mismo nombre de método para realizar operaciones similares pero con diferentes conjuntos de datos.
-```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>```Kotlin
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>fun main() {
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    //TODO: Crear 3 cafeteras en la Sala, Cocina y Oficina
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    //TODO: Crear una lista de 20 tazas con capacidades aleatorias
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    println(&quot;**********************************************&quot;)
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    //TODO: Mostrar por pantalla el contenido de las 3 cafeteras y las tazas.
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    println(&quot;**********************************************&quot;)
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    println(&quot;Llenar la cafetera1 de café...&quot;)
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    println(&quot;Vaciar la cafetera2...&quot;)
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    println(&quot;Agregar café a la cafetera2 a la mitad de su capacidad...&quot;)
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    println(&quot;Agregar 400 c.c. de café a la cafereta3...&quot;)
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    //TODO: Llenar la cafetera1 de café.
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    //TODO: Vaciar la cafetera2.
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    //TODO: Agregar café a la cafetera2 a la mitad de su capacidad.
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    //TODO: Agregar 400 c.c. de café a la cafereta3
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    println(&quot;**********************************************&quot;)
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    //TODO: Mostrar por pantalla el contenido de las 3 cafeteras
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    println(&quot;**********************************************&quot;)
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>    println(&quot;Servir café en las tazas...&quot;)
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    //TODO: Servir café en las tazas... siempre que haya café en la cafetera y en el orden cafetera1, cafetera2 y cafetera3.
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    println(&quot;**********************************************&quot;)
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    //TODO: Mostrar por pantalla el contenido de las 3 cafeteras y las tazas.
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>}
+</code></pre></div></p>
 </blockquote>
 
 

@@ -30,7 +30,7 @@ Cada unidad contendrá una serie de contenidos, resultados de aprendizaje (desgl
 
 En esta sección se relaciona la unidad con el resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf).
 
-> RA 6. Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.
+> RA 2. Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.
 
 #### Criterios de evaluación
 

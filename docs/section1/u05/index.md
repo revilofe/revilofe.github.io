@@ -1,16 +1,17 @@
 ---
-title: "UD 3 - Estructuras de datos"
-description: Estructuras de dato
-summary: SEstructuras de dato
+title: "UD 5 - Puesta en practica de la POO"
+description: Puesta en practica de la POO
+summary: Puesta en practica de la POO
 authors:
     - Eduardo Fdez
-date: 2022-09-17
+date: 2024-01-10
 icon: 
-permalink: /prog/unidad2
+permalink: /prog/unidad4
 categories:
     - PROG
 tags:
     - Software
+    - POO
 
 # Relacionado con la tabla de contenidos
 toc: true
@@ -29,32 +30,36 @@ Cada unidad contendrá una serie de contenidos, resultados de aprendizaje (desgl
 
 En esta sección se relaciona la unidad con el resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf).
 
-RA 6. Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.
+> RA 4.  Desarrolla programas organizados en clases analizando y aplicando los principios de la programación orientada a objetos.
 
 #### Criterios de evaluación
 
 En esta sección se relaciona la unidad con los criterios de evaluación concretos, del resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
 
-* a) Se han escrito programas que utilicen arrays
-* b) Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.
-* c) Se han utilizado listas para almacenar y procesar información.
-* d) Se han utilizado iteradores para recorrer los elementos de las listas.
-* e) Se han reconocido las características y ventajas de cada una de la colecciones de datos disponibles.
-* (NO) f) Se han creado clases y métodos genéricos.
-* g) Se han utilizado expresiones regulares en la búsqueda de patrones en cadenas de texto.
-* (NO) h) Se han identificado las clases relacionadas con el tratamiento de documentos XML.
-* (NO) i) Se han realizado programas que realicen manipulaciones sobre documentos XML.
+
+Criterios de Evaluación:
+* a) Se ha reconocido la sintaxis, estructura y componentes típicos de una clase.
+* b) Se han definido clases.
+* c) Se han definido clases.
+* d) Se han definido propiedades y métodos.
+* e) Se han creado constructores.
+* f) Se han desarrollado programas que instancien y utilicen objetos de las clases creadas anteriormente.
+* g) Se han utilizado mecanismos para controlar la visibilidad de las clases y de sus miembros.
+* h) Se han definido y utilizado clases heredadas.
+* i) Se han creado y utilizado métodos estáticos.
+* j) Se han definido y utilizado interfaces.
+* k) Se han creado y utilizado conjuntos y librerías de clases.
 
 ### Contenidos
 
-La unidad se encuentra dentro del Bloque 2
+La unidad se encuentra dentro del Bloque 3 de Programación orientada a objetos.
 
-* U3: Estructuras de datos. 
+* U5: Puesta en práctica de la POO
 
-En la Unidad 3, veremos:
+En la Unidad 5, veremos:   
+- Clases y Objetos: (Data class, Enumerados, Genericos, Objects) 
+- Visibilidad de los miembros de una clase.
+- Práctica en la creación de constructores, métodos y atributos.
+- Práctica en el uso de clases y objetos.
+- Intro a la herencia e interfaces.
 
-* Listas y tuplas
-* Diccionarios
-* Conjuntos
-* String
-* Expresiones regulares

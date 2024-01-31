@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#52-herencia-interfaces" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -3688,56 +3688,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#52-herencia-interfaces" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      5.2. Herencia. Interfaces
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="">
+    <nav class="md-nav" aria-label="5.2. Herencia. Interfaces">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-revision-de-las-clases" class="md-nav__link">
+  <a href="#1-concepto-de-herencia" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Revisión de las clases
+      1. Concepto de Herencia
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Revisión de las clases">
+    <nav class="md-nav" aria-label="1. Concepto de Herencia">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-data-class" class="md-nav__link">
+  <a href="#11-objetivos-y-beneficios" class="md-nav__link">
     <span class="md-ellipsis">
-      1.1. Data Class
+      1.1. Objetivos y Beneficios
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-enumerados-enums" class="md-nav__link">
+  <a href="#12-mecanismos-y-consideraciones" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2. Enumerados (Enums)
+      1.2. Mecanismos y Consideraciones
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-genericos" class="md-nav__link">
+  <a href="#13-limitaciones-y-desventajas" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Genéricos
+      1.3. Limitaciones y Desventajas
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-objects" class="md-nav__link">
+  <a href="#14-ejemplo-conceptual" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Objects
+      1.4. Ejemplo Conceptual
     </span>
   </a>
   
@@ -3749,13 +3749,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#herencia-en-kotlin" class="md-nav__link">
+  <a href="#2-herencia-en-kotlin" class="md-nav__link">
     <span class="md-ellipsis">
-      Herencia en Kotlin
+      2. Herencia en Kotlin
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Herencia en Kotlin">
+    <nav class="md-nav" aria-label="2. Herencia en Kotlin">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3768,9 +3768,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#declaracion-de-herencia" class="md-nav__link">
+  <a href="#21-declaracion-de-herencia" class="md-nav__link">
     <span class="md-ellipsis">
-      Declaración de Herencia
+      2.1. Declaración de Herencia
     </span>
   </a>
   
@@ -3786,9 +3786,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#herencia-sin-constructor-primario" class="md-nav__link">
+  <a href="#22-herencia-sin-constructor-primario" class="md-nav__link">
     <span class="md-ellipsis">
-      Herencia sin Constructor Primario
+      2.2. Herencia sin Constructor Primario
     </span>
   </a>
   
@@ -3826,15 +3826,6 @@
   <a href="#fuente" class="md-nav__link">
     <span class="md-ellipsis">
       Fuente
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    <span class="md-ellipsis">
-      License
     </span>
   </a>
   
@@ -3883,42 +3874,32 @@
 
   <h1>UD 5 - 5.1 Revisión de las clases</h1>
 
-<h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="1-revision-de-las-clases">1. Revisión de las clases<a class="headerlink" href="#1-revision-de-las-clases" title="Permanent link">&para;</a></h3>
-<p>En Kotlin, la Programación Orientada a Objetos (POO) se maneja con una sintaxis concisa y poderosas características que simplifican la codificación y mejoran la legibilidad. Entre estas características, las clases y objetos juegan un papel central, permitiendo a los desarrolladores modelar el mundo real de manera eficiente y efectiva. Kotlin, diseñado para ser completamente interoperable con Java, introduce mejoras significativas sobre este, haciendo que el trabajo con POO sea más intuitivo y menos propenso a errores.</p>
-<h4 id="11-data-class">1.1. Data Class<a class="headerlink" href="#11-data-class" title="Permanent link">&para;</a></h4>
-<p>Las "data class" en Kotlin están específicamente diseñadas para clases que actúan principalmente como portadoras de datos. En otros lenguajes de programación, la creación de este tipo de clases requiere definir explícitamente constructores, métodos <code>getter</code> y <code>setter</code>, y otros métodos como <code>equals()</code>, <code>hashCode()</code>, y <code>toString()</code>. Kotlin simplifica este proceso permitiendo que el compilador genere automáticamente estos miembros a partir de la declaración de las propiedades en el constructor primario.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Usuario</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span>
-</code></pre></div>
-<p>En el ejemplo anterior, <code>Usuario</code> es una data class con dos propiedades: <code>nombre</code> y <code>edad</code>. Kotlin automáticamente proporciona una implementación de <code>equals()</code>, <code>hashCode()</code>, <code>toString()</code>, así como las funciones <code>componentN()</code> para cada propiedad, y una función <code>copy()</code>. Esto hace que las data class sean ideales para representar inmutables "puros" de datos sin la necesidad de escribir código boilerplate.</p>
-<p>Aqui puedes ver un ejemplo en el que se compara una data class en java con una data class en kotlin: <a href="https://devexpert.io/data-classes-kotlin/">data Class</a></p>
-<h4 id="12-enumerados-enums">1.2. <strong>Enumerados (Enums)</strong><a class="headerlink" href="#12-enumerados-enums" title="Permanent link">&para;</a></h4>
-<p>Los tipos enumerados en Kotlin sirven para definir un conjunto de constantes nombradas, mejorando la claridad y la seguridad del código. Además de definir valores fijos, Kotlin permite que los enums contengan propiedades y métodos.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">enum</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Estado</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">ACTIVO</span><span class="p">,</span><span class="w"> </span><span class="n">INACTIVO</span><span class="p">,</span><span class="w"> </span><span class="n">PENDIENTE</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
-</code></pre></div>
-<p>Kotlin permite una mayor personalización y funcionalidad dentro de los enums, incluyendo la definición de constructores para pasar valores adicionales.</p>
-<p>Aqui puedes ver un ejemplo más avanzado sobre el uso de enum class en kotlin: <a href="https://www.baeldung.com/kotlin/enum">enum Class</a></p>
-<h4 id="3-genericos">3. <strong>Genéricos</strong><a class="headerlink" href="#3-genericos" title="Permanent link">&para;</a></h4>
-<p>Los genéricos en Kotlin permiten la creación de clases, interfaces y funciones que pueden operar sobre tipos que se especifican al momento de la instancia. Esto facilita la reutilización del código y mejora la seguridad de tipo.</p>
-<pre><div class="dark bg-black rounded-md"><div class="flex items-center relative text-token-text-secondary bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>kotlin</span><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></span></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-kotlin">class Caja<T>(val contenido: T)
-</code></div></div></pre>
-
-<p>Aquí, <code>Caja</code> es una clase genérica que puede almacenar cualquier tipo de objeto especificado al momento de su creación, garantizando que el tipo de <code>contenido</code> se conozca y se restrinja adecuadamente.</p>
-<h4 id="4-objects">4. <strong>Objects</strong><a class="headerlink" href="#4-objects" title="Permanent link">&para;</a></h4>
-<p>Kotlin introduce el concepto de <code>object</code> para definir un singleton, una clase objeto o un objeto compañero dentro de otra clase. Esto permite una fácil creación de singletons y la definición de miembros estáticos en un contexto orientado a objetos.</p>
-<pre><div class="dark bg-black rounded-md"><div class="flex items-center relative text-token-text-secondary bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>kotlin</span><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></span></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-kotlin">object Configuracion {
-    val urlServidor = "https://mi.api.com"
-    fun imprimirUrl() {
-        println(urlServidor)
-    }
-}
-</code></div></div></pre>
-
-<p>En este ejemplo, <code>Configuracion</code> es un singleton que mantiene la configuración global de una aplicación.</p>
-<p>Estas características avanzadas de Kotlin ofrecen una forma poderosa y flexible de trabajar con POO, permitiendo a los desarrolladores concentrarse en la lógica de negocio mientras minimizan el código repetitivo y propenso a errores. Con estas herramientas, Kotlin se establece como un lenguaje moderno y eficiente para el desarrollo de aplicaciones.</p>
-<h3 id="herencia-en-kotlin">Herencia en Kotlin<a class="headerlink" href="#herencia-en-kotlin" title="Permanent link">&para;</a></h3>
+<h2 id="52-herencia-interfaces">5.2. Herencia. Interfaces<a class="headerlink" href="#52-herencia-interfaces" title="Permanent link">&para;</a></h2>
+<h3 id="1-concepto-de-herencia">1. Concepto de Herencia<a class="headerlink" href="#1-concepto-de-herencia" title="Permanent link">&para;</a></h3>
+<p>La herencia es uno de los pilares fundamentales de la OOP, junto con el encapsulamiento, la abstracción y el polimorfismo. Es un mecanismo que permite que una clase, conocida como subclase o clase hija, herede atributos (campos) y comportamientos (métodos) de otra clase, llamada superclase o clase padre. Esta relación no solo facilita la reutilización del código existente sino que también establece una jerarquía de clases dentro de la arquitectura del software.</p>
+<h4 id="11-objetivos-y-beneficios">1.1. Objetivos y Beneficios<a class="headerlink" href="#11-objetivos-y-beneficios" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Reutilización de Código:</strong> Reduce la duplicación de código al permitir que las clases compartan atributos y métodos, lo que facilita el mantenimiento y la actualización del software.</li>
+<li><strong>Jerarquía de Clases:</strong> Establece una estructura lógica y jerárquica que refleja relaciones del mundo real o categorizaciones lógicas, mejorando la legibilidad y organización del código.</li>
+<li><strong>Extensibilidad:</strong> Permite que el software se extienda con nuevas características de manera eficiente, añadiendo o modificando comportamientos en las subclases sin afectar la superclase o las clases hermanas.</li>
+<li><strong>Polimorfismo:</strong> Facilita el uso de polimorfismo, donde un objeto de la subclase puede ser tratado como un objeto de la superclase, permitiendo un diseño de software más flexible y dinámico.</li>
+</ul>
+<h4 id="12-mecanismos-y-consideraciones">1.2. Mecanismos y Consideraciones<a class="headerlink" href="#12-mecanismos-y-consideraciones" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Sobrescritura de Métodos:</strong> Las subclases pueden sobrescribir los métodos heredados de las superclases para proporcionar implementaciones específicas que se ajusten a sus necesidades particulares.</li>
+<li><strong>Acceso a Miembros Superiores:</strong> Las subclases pueden acceder a los miembros (atributos y métodos) de la superclase, dependiendo de los modificadores de acceso aplicados (private, protected, etc.).</li>
+<li><strong>Constructor de la Superclase:</strong> Al crear una instancia de una subclase, también se debe inicializar la superclase, a menudo llamando explícitamente al constructor de la superclase desde el constructor de la subclase.</li>
+</ul>
+<h4 id="13-limitaciones-y-desventajas">1.3. Limitaciones y Desventajas<a class="headerlink" href="#13-limitaciones-y-desventajas" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Precaución:</strong> La herencia puede introducir complejidad y riesgo en el diseño del software, por lo que debe usarse con precaución. En general, se recomienda favorecer la composición sobre la herencia. </li>
+<li><strong>Acoplamiento:</strong> Un uso excesivo o inadecuado de la herencia puede llevar a un acoplamiento elevado entre clases, lo que puede complicar el mantenimiento y la escalabilidad del software.</li>
+<li><strong>Jerarquías Profundas:</strong> Las jerarquías de herencia profundas o complicadas pueden hacer que el código sea difícil de seguir y entender.</li>
+<li><strong>Flexibilidad vs. Rigidez:</strong> Mientras que la herencia promueve la reutilización del código, también puede imponer una estructura rígida, lo que podría limitar la flexibilidad del diseño si no se usa cuidadosamente.</li>
+</ul>
+<h4 id="14-ejemplo-conceptual">1.4. Ejemplo Conceptual<a class="headerlink" href="#14-ejemplo-conceptual" title="Permanent link">&para;</a></h4>
+<p>Imaginemos un sistema de clasificación biológica. En este sistema, cada nivel hereda características del nivel anterior. Así, todos los mamíferos comparten ciertas características, pero dentro de los mamíferos, los primates forman un subgrupo con características adicionales, y dentro de los primates, los humanos tienen características aún más específicas. En términos de OOP, <code>Mamífero</code> sería una superclase de <code>Primate</code>, que a su vez sería una superclase de <code>Humano</code>. Cada subclase hereda y potencialmente extiende o modifica las características de su superclase.</p>
+<h3 id="2-herencia-en-kotlin">2. Herencia en Kotlin<a class="headerlink" href="#2-herencia-en-kotlin" title="Permanent link">&para;</a></h3>
 <p>La herencia es un concepto clave en la Programación Orientada a Objetos (POO), permitiendo a los desarrolladores crear nuevas clases basadas en otras preexistentes. Esta característica es esencial para reutilizar, extender y modificar el comportamiento de clases ya definidas, promoviendo así la eficiencia y la reducción de la redundancia en el código.</p>
 <p>En Kotlin, la herencia se maneja con una sintaxis clara y reglas específicas diseñadas para mantener la seguridad y la claridad del código:</p>
 <ol>
@@ -3937,57 +3918,45 @@
 <h4 id="actividad-1-herencia-de-any">Actividad 1: Herencia de <code>Any</code><a class="headerlink" href="#actividad-1-herencia-de-any" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Pregunta:</strong> ¿Qué métodos y propiedades hereda <code>Example</code> de <code>Any</code>?</li>
-<li>
-<p><strong>Código:</strong>
-<br />
-<pre><div class="dark bg-black rounded-md"><div class="flex items-center relative text-token-text-secondary bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>kotlin</span><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></span></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-kotlin">class Example
-  </code></div></div></pre></p>
-</li>
-<li>
-<p><strong>Respuesta:</strong><code>Example</code> hereda de <code>Any</code> los métodos <code>equals()</code>, <code>hashCode()</code>, y <code>toString()</code>.</p>
-</li>
+<li><strong>Código:</strong></li>
 </ul>
-<h4 id="declaracion-de-herencia">Declaración de Herencia<a class="headerlink" href="#declaracion-de-herencia" title="Permanent link">&para;</a></h4>
-<p>Para que una clase herede de otra en Kotlin, se coloca el nombre de la clase base después de los dos puntos en el encabezado de la subclase. Las clases en Kotlin son <code>final</code> por defecto; para permitir la herencia, se debe usar <code>open</code>.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Example</span>
+</code></pre></div>
+* <strong>Respuesta:</strong></p>
+<ul>
+<li><code>Example</code> hereda de <code>Any</code> los métodos <code>equals()</code>, <code>hashCode()</code>, y <code>toString()</code>.</li>
+</ul>
+<h4 id="21-declaracion-de-herencia">2.1. Declaración de Herencia<a class="headerlink" href="#21-declaracion-de-herencia" title="Permanent link">&para;</a></h4>
+<p>Para que una clase herede de otra en Kotlin, se coloca el nombre de la clase base después de los dos puntos en el encabezado de la subclase. Las clases en Kotlin son <code>final</code> por defecto (por similitud con java, utilizando <code>final</code> cuando se decide no permitir heredar de una clase); para permitir la herencia, se debe usar <code>open</code>.</p>
 <h4 id="actividad-2-instancia-de-clases-base-y-derivadas">Actividad 2: Instancia de Clases Base y Derivadas<a class="headerlink" href="#actividad-2-instancia-de-clases-base-y-derivadas" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Pregunta:</strong> ¿Crear una variable de clase <code>Base</code>? ¿Puedes asignarle una instancia de <code>DerivedWithConstructor</code>?</li>
-<li>
-<p><strong>Código:</strong>
-<br />
-<pre><div class="dark bg-black rounded-md"><div class="flex items-center relative text-token-text-secondary bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>kotlin</span><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></span></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-kotlin">open class Base(var p: Int)
-  class DerivedWithConstructor(p: Int) : Base(p)
-  </code></div></div></pre></p>
-</li>
-<li>
-<p><strong>Respuesta:</strong> Sí, puedes crear una variable de tipo <code>Base</code> y asignarle una instancia de <code>DerivedWithConstructor</code> debido a la herencia.</p>
-</li>
+<li><strong>Código:</strong></li>
 </ul>
-<h4 id="herencia-sin-constructor-primario">Herencia sin Constructor Primario<a class="headerlink" href="#herencia-sin-constructor-primario" title="Permanent link">&para;</a></h4>
-<p>Si una clase derivada no tiene un constructor primario, cada constructor secundario debe inicializar la clase base usando <code>super</code> o delegar a otro constructor que lo haga.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">open</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Base</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nv">p</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">class</span><span class="w"> </span><span class="nc">DerivedWithConstructor</span><span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Base</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</code></pre></div>
+* <strong>Respuesta:</strong> Sí, puedes crear una variable de tipo <code>Base</code> y asignarle una instancia de <code>DerivedWithConstructor</code> debido a la herencia.</p>
+<h4 id="22-herencia-sin-constructor-primario">2.2. Herencia sin Constructor Primario<a class="headerlink" href="#22-herencia-sin-constructor-primario" title="Permanent link">&para;</a></h4>
+<p>Si una clase derivada no tiene un constructor primario, cada constructor secundario debe inicializar la clase base usando <code>super</code> o delegar a otro constructor de la clase derivada que lo haga.</p>
 <h4 id="actividad-3-trabajando-con-constructores-secundarios">Actividad 3: Trabajando con Constructores Secundarios<a class="headerlink" href="#actividad-3-trabajando-con-constructores-secundarios" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Pregunta:</strong> Ejecuta el siguiente código, instancia la subclase con 1 e imprime el valor de <code>p</code>. ¿Qué muestra en pantalla? ¿Qué sucede si quitas el constructor de la subclase? ¿Podemos definir la subclase de otra forma? ¿Qué tenemos que hacer para llamar al constructor de 2 parámetros?</li>
-<li>
-<p><strong>Código:</strong>
-<br />
-<pre><div class="dark bg-black rounded-md"><div class="flex items-center relative text-token-text-secondary bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>kotlin</span><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></span></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-kotlin">open class Base(var p: Int) {
-      constructor(p: Int, q: Int): this(p)
-  }
-
-  class DerivedWithoutConstructor : Base {
-      constructor(p: Int) : super(p)
-  }
-
-  fun main() {
-      val instancia = DerivedWithoutConstructor(1)
-      println(instancia.p)
-  }
-  </code></div></div></pre></p>
-</li>
-<li>
-<p><strong>Respuesta:</strong></p>
-</li>
+<li><strong>Código:</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">open</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Base</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nv">p</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">constructor</span><span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">):</span><span class="w"> </span><span class="k">this</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kd">class</span><span class="w"> </span><span class="nc">DerivedWithoutConstructor</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Base</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="k">constructor</span><span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">super</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">instancia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DerivedWithoutConstructor</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">instancia</span><span class="p">.</span><span class="na">p</span><span class="p">)</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">}</span>
+</code></pre></div></li>
+<li><strong>Respuesta:</strong></li>
 <li>Al ejecutar, muestra <code>1</code> en pantalla, indicando el valor de <code>p</code>.</li>
 <li>Si quitas el constructor de la subclase, el código no compilará porque <code>DerivedWithoutConstructor</code> necesita definir cómo inicializar <code>Base</code>.</li>
 <li>Para definir la subclase de otra manera, podríamos considerar agregar un constructor primario o utilizar un constructor secundario que llame al constructor de dos parámetros de <code>Base</code>.</li>
@@ -3996,25 +3965,18 @@
 <hr />
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://kotlinlang.org/docs/reference/">https://kotlinlang.org/docs/reference/</a></li>
-<li><a href="https://code.tutsplus.com/series/kotlin-from-scratch--cms-1209">https://code.tutsplus.com/series/kotlin-from-scratch--cms-1209</a></li>
-<li><a href="https://www.packtpub.com/application-development/programming-kotlin">https://www.packtpub.com/application-development/programming-kotlin</a></li>
-<li><a href="https://learnxinyminutes.com/docs/kotlin/">https://learnxinyminutes.com/docs/kotlin/</a></li>
-<li><a href="https://gist.github.com/dodyg/5823184">https://gist.github.com/dodyg/5823184</a></li>
-<li><a href="https://gist.github.com/dodyg/5616605">https://gist.github.com/dodyg/5616605</a></li>
-<li><a href="https://github.com/Zhuinden/guide-to-kotlin">https://github.com/Zhuinden/guide-to-kotlin</a></li>
-<li><a href="https://superkotlin.com/kotlin-mega-tutorial/">https://superkotlin.com/kotlin-mega-tutorial/</a></li>
-<li><a href="https://revilofe.github.io/IESRA-DAM-Prog/#/">https://revilofe.github.io/IESRA-DAM-Prog/#/</a></li>
+<li><a href="https://kotlinlang.org/docs/inheritance.html">Kotlinlang Inheritance</a></li>
+<li><a href="https://kotlinlang.org/docs/reference/classes.html#inheritance">Kotlinlang Classes and Inheritance</a></li>
+<li><a href="https://kotlinlang.org/docs/reference/classes.html#constructors">Kotlinlang Constructors</a></li>
+<li><a href="https://kotlinlang.org/docs/reference/classes.html#secondary-constructors">Kotlinlang Secondary Constructors</a></li>
+<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Kotlinlang Any</a></li>
 </ul>
 <h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/alxgcrz/_kotlin_">Apuntes de kotlin</a></li>
 <li><a href="https://kotlinlang.org">Kotlinlang</a></li>
 </ul>
-<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
-<p><a href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
-Esta obra está bajo una <a href="http://creativecommons.org/licenses/by-sa/4.0/">licencia de Creative Commons Reconocimiento-Compartir Igual 4.0 Internacional</a>.
-```</p>
+<p>```</p>
 
 
 

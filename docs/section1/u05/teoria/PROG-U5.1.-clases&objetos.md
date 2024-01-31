@@ -484,8 +484,8 @@ MyClass.Factory.sayHelloFromCompanion() // Invocar un método del 'companion'
 
 ## Reference
 
-* [https://devexpert.io/data-classes-kotlin/](data class)
-* [https://www.baeldung.com/kotlin/enum](class enum)
+* [data class](https://devexpert.io/data-classes-kotlin/)
+* [class enum](https://www.baeldung.com/kotlin/enum)
 * [https://kotlinlang.org/docs/reference/](https://kotlinlang.org/docs/reference/)
 * [https://www.packtpub.com/application-development/programming-kotlin](https://www.packtpub.com/application-development/programming-kotlin)
 * [https://learnxinyminutes.com/docs/kotlin/](https://learnxinyminutes.com/docs/kotlin/)

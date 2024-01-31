@@ -379,7 +379,7 @@ fun main() {
 * Este orden garantiza que todas las propiedades y bloques de inicialización de la clase base se procesen antes de ejecutar cualquier lógica de inicialización en la clase derivada, siguiendo una secuencia lógica y predecible que previene errores en tiempo de ejecución relacionados con la inicialización prematura de propiedades.
 
 
-##### 3.6. Invocar la implementación de la superclase
+#### 3.6. Invocar la implementación de la superclase
 
 El código en una clase derivada puede llamar a funciones en la superclase e implementaciones de accesores de propiedades usando la palabra clave `'super'`:
 

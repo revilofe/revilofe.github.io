@@ -399,6 +399,102 @@ class Bar : Foo() {
 ```
 
 
+#### 4. Interfaces
+
+Las interfaces en Kotlin son muy similares a Java 8. Pueden contener declaraciones de métodos abstractos, así como implementaciones de métodos. Lo que los diferencia de las clases abstractas es que las interfaces no pueden almacenar el estado, es decir, no pueden tener variables de instancia. Pueden tener propiedades, pero estas deben ser abstractas o proporcionar implementaciones de accesores.
+
+Una interfaz se define usando la palabra clave `'interface'`. Un método en una interfaz es abstracto por defecto si no se proporciona una implementación.
+
+```kotlin
+interface MyInterface {
+    fun bar()  // abstract by default
+    fun foo() {
+        // optional body
+    }
+}
+```
+
+Una clase u objeto pueden implementar una o varias interfaces:
+
+```kotlin
+class Child : MyInterface {
+    override fun bar() {
+        // body
+    }
+}
+```
+
+En una interfaz se pueden declarar propiedades. Una propiedad declarada en una interfaz puede ser abstracta o puede proporcionar implementaciones para el `'getter()'` o `'setter()'`. Las propiedades declaradas en interfaces no pueden tener _'backing fields'_ y, por lo tanto, los accesores declarados en interfaces no pueden hacer referencia a ellos.
+
+```kotlin
+interface MyInterface {
+    val prop: Int // abstract
+
+    val propertyWithImplementation: String
+        get() = "foo"
+
+    fun foo() {
+        print(prop)
+    }
+}
+
+class Child : MyInterface {
+    override val prop: Int = 29
+}
+```
+
+Una interfaz puede derivar de otras interfaces y, por lo tanto, proporcionar implementaciones para sus miembros y declarar nuevas funciones y propiedades. Naturalmente, las clases que implementen dicha interfaz solo tienen que definir las implementaciones que faltan:
+
+```kotlin
+interface Named {
+    val name: String
+}
+
+interface Person : Named {
+    val firstName: String
+    val lastName: String
+    override val name: String get() = "$firstName $lastName"
+}
+
+data class Employee(
+    // implementing 'name' is not required
+    override val firstName: String,
+    override val lastName: String,
+    val position: Position
+) : Person
+```
+
+En el caso de clases que hereden de varias interfaces, para evitar ambigüedades la subclase deberá proporcionar implementaciones tanto para métodos que tienen una implementación en una de las interfaces como en métodos que tiene implementaciones en varias interfaces.
+
+```kotlin
+interface A {
+    fun foo() { print("A") }
+    fun bar()  // abstract
+}
+
+interface B {
+    fun foo() { print("B") }
+    fun bar() { print("bar") }
+}
+
+class C : A {
+    override fun bar() { print("bar") }
+}
+
+// la clase 'D' tiene que implementar tanto foo() como bar()
+class D : A, B {
+    override fun foo() {
+        super<A>.foo()
+        super<B>.foo()
+    }
+
+    override fun bar() {
+        super<B>.bar()
+    }
+}
+```
+
+
 
 
 ---

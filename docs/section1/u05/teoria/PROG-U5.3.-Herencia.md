@@ -366,17 +366,17 @@ fun main() {
 
 **Respuesta:** Al ejecutar el código proporcionado en la función `main`, el orden de salida en la consola será el siguiente:
 
-   1. "Argument for Base: John" - Este mensaje se imprime primero debido a la evaluación del argumento para el constructor de la clase base (`Base`) que se realiza antes de su inicialización.
-   2. "Initializing Base" - Indica que la inicialización de la clase base `Base` comienza inmediatamente después de la evaluación de los argumentos para su constructor.
-   3. "Initializing size in Base: 4" - Muestra la inicialización de la propiedad `size` en la clase base `Base`. El valor `4` corresponde a la longitud del nombre "John" después de aplicar `capitalize()`.
-   4. "Initializing Derived" - Señala que la inicialización de la clase derivada `Derived` comienza después de completar la inicialización de la clase base.
-   5. "Initializing size in Derived: 7" - Muestra la inicialización de la propiedad `size` sobrescrita en `Derived`, sumando la longitud del apellido "doe" a la `size` de la clase base, resultando en 7.
+1. "Argument for Base: John" - Este mensaje se imprime primero debido a la evaluación del argumento para el constructor de la clase base (`Base`) que se realiza antes de su inicialización.
+2. "Initializing Base" - Indica que la inicialización de la clase base `Base` comienza inmediatamente después de la evaluación de los argumentos para su constructor.
+3. "Initializing size in Base: 4" - Muestra la inicialización de la propiedad `size` en la clase base `Base`. El valor `4` corresponde a la longitud del nombre "John" después de aplicar `capitalize()`.
+4. "Initializing Derived" - Señala que la inicialización de la clase derivada `Derived` comienza después de completar la inicialización de la clase base.
+5. "Initializing size in Derived: 7" - Muestra la inicialización de la propiedad `size` sobrescrita en `Derived`, sumando la longitud del apellido "doe" a la `size` de la clase base, resultando en 7.
 
 **Diferencias Observadas:**
 
-   * El proceso de inicialización comienza con la evaluación de los argumentos pasados al constructor de la clase base, seguido de la inicialización de la clase base antes que la clase derivada.
-   * Las propiedades de la clase derivada que sobrescriben a las de la clase base no se inicializan hasta que no se complete la inicialización de la clase base, lo que es crucial para evitar referencias a propiedades que aún no se han inicializado.
-   * Este orden garantiza que todas las propiedades y bloques de inicialización de la clase base se procesen antes de ejecutar cualquier lógica de inicialización en la clase derivada, siguiendo una secuencia lógica y predecible que previene errores en tiempo de ejecución relacionados con la inicialización prematura de propiedades.
+* El proceso de inicialización comienza con la evaluación de los argumentos pasados al constructor de la clase base, seguido de la inicialización de la clase base antes que la clase derivada.
+* Las propiedades de la clase derivada que sobrescriben a las de la clase base no se inicializan hasta que no se complete la inicialización de la clase base, lo que es crucial para evitar referencias a propiedades que aún no se han inicializado.
+* Este orden garantiza que todas las propiedades y bloques de inicialización de la clase base se procesen antes de ejecutar cualquier lógica de inicialización en la clase derivada, siguiendo una secuencia lógica y predecible que previene errores en tiempo de ejecución relacionados con la inicialización prematura de propiedades.
 
 
 ##### 3.6. Invocar la implementación de la superclase

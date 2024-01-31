@@ -70,6 +70,8 @@ nav:
 
     - 'U5: Kotlin: PPO y creación de e.d.':
         - 'section1/u05/index.md'
+        - '5.1.-Revisitando las clases y los objetos': 'section1/u05/teoria/PROG-U5.1.-clases&objetos.md'
+                              
     - 'U6: Kotlin: Creación de programas con POO':
         - 'section1/u06/index.md'
     - 'U7: Kotlin: Entrada/Salida y GUI':

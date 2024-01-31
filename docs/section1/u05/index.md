@@ -38,18 +38,20 @@ En esta sección se relaciona la unidad con los criterios de evaluación concret
 
 
 Criterios de Evaluación:
-* a) Se ha reconocido la sintaxis, estructura y componentes típicos de una clase.
-* b) Se han definido clases.
-* c) Se han definido clases.
-* d) Se han definido propiedades y métodos.
-* e) Se han creado constructores.
-* f) Se han desarrollado programas que instancien y utilicen objetos de las clases creadas anteriormente.
-* g) Se han utilizado mecanismos para controlar la visibilidad de las clases y de sus miembros.
-* h) Se han definido y utilizado clases heredadas.
-* i) Se han creado y utilizado métodos estáticos.
-* j) Se han definido y utilizado interfaces.
-* k) Se han creado y utilizado conjuntos y librerías de clases.
 
+* a) Se ha reconocido la sintaxis, estructura y componentes típicos de una clase.  
+* b) Se han definido clases.   
+* c) Se han definido clases.   
+* d) Se han definido propiedades y métodos.  
+* e) Se han creado constructores.   
+* f) Se han desarrollado programas que instancien y utilicen objetos de las clases creadas anteriormente.  
+* g) Se han utilizado mecanismos para controlar la visibilidad de las clases y de sus miembros.   
+* h) Se han definido y utilizado clases heredadas.   
+* i) Se han creado y utilizado métodos estáticos.  
+* j) Se han definido y utilizado interfaces.   
+* k) Se han creado y utilizado conjuntos y librerías de clases.
+   
+   
 ### Contenidos
 
 La unidad se encuentra dentro del Bloque 3 de Programación orientada a objetos.
@@ -57,9 +59,9 @@ La unidad se encuentra dentro del Bloque 3 de Programación orientada a objetos.
 * U5: Puesta en práctica de la POO
 
 En la Unidad 5, veremos:   
-- Clases y Objetos: (Data class, Enumerados, Genericos, Objects) 
-- Visibilidad de los miembros de una clase.
-- Práctica en la creación de constructores, métodos y atributos.
-- Práctica en el uso de clases y objetos.
+  
+- Clases y Objetos: (Data class, Enumerados, Genericos, Objects)   
+- Visibilidad de los miembros de una clase.  
+- Práctica en la creación de constructores, métodos y atributos.   
+- Práctica en el uso de clases y objetos.   
 - Intro a la herencia e interfaces.
-

@@ -2210,17 +2210,17 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#36-invocar-la-implementacion-de-la-superclase" class="md-nav__link">
     <span class="md-ellipsis">
       3.6. Invocar la implementación de la superclase
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -4253,17 +4253,17 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#36-invocar-la-implementacion-de-la-superclase" class="md-nav__link">
     <span class="md-ellipsis">
       3.6. Invocar la implementación de la superclase
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -4637,7 +4637,7 @@
 <li>Las propiedades de la clase derivada que sobrescriben a las de la clase base no se inicializan hasta que no se complete la inicialización de la clase base, lo que es crucial para evitar referencias a propiedades que aún no se han inicializado.</li>
 <li>Este orden garantiza que todas las propiedades y bloques de inicialización de la clase base se procesen antes de ejecutar cualquier lógica de inicialización en la clase derivada, siguiendo una secuencia lógica y predecible que previene errores en tiempo de ejecución relacionados con la inicialización prematura de propiedades.</li>
 </ul>
-<h5 id="36-invocar-la-implementacion-de-la-superclase">3.6. Invocar la implementación de la superclase<a class="headerlink" href="#36-invocar-la-implementacion-de-la-superclase" title="Permanent link">&para;</a></h5>
+<h4 id="36-invocar-la-implementacion-de-la-superclase">3.6. Invocar la implementación de la superclase<a class="headerlink" href="#36-invocar-la-implementacion-de-la-superclase" title="Permanent link">&para;</a></h4>
 <p>El código en una clase derivada puede llamar a funciones en la superclase e implementaciones de accesores de propiedades usando la palabra clave <code>'super'</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">open</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Foo</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="kd">open</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">f</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Foo.f()&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>

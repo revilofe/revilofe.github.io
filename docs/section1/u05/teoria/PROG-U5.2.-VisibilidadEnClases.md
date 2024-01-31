@@ -58,49 +58,47 @@ Solo se puede aplicar a propiedades/atributos o funciones/métodos dentro de una
 
 En un proyecto que tiene un módulo (módulo Gradle o Maven), una clase, objeto, interfaz o función especificada con este modificador dentro de ese módulo solo es accesible desde ese módulo.
 
-**Actividad 1: Jugando con Modificadores de Visibilidad**   
-**Pregunta:** ¿Cómo afectan los modificadores de visibilidad al acceso de una propiedad dentro de una clase y desde fuera de ella en Kotlin?
+#### Actividad 1: Jugando con Modificadores de Visibilidad   
+* **Pregunta:** ¿Cómo afectan los modificadores de visibilidad al acceso de una propiedad dentro de una clase y desde fuera de ella en Kotlin?
 
-Supongamos que tienes una clase `Libro` que tiene una propiedad `titulo` y un método `mostrarTitulo()`. Queremos entender cómo los diferentes modificadores de visibilidad (`private`, `protected`, `internal`, `public`) afectan la capacidad de acceder a `titulo` desde dentro de la clase, desde una subclase, y desde fuera de cualquier clase.  
+  Supongamos que tienes una clase `Libro` que tiene una propiedad `titulo` y un método `mostrarTitulo()`. Queremos entender cómo los diferentes modificadores de visibilidad (`private`, `protected`, `internal`, `public`) afectan la capacidad de acceder a `titulo` desde dentro de la clase, desde una subclase, y desde fuera de cualquier clase.  
 
-**Código:**
+* **Código:**
 
-```Kotlin
-open class Libro {
-    var titulo: String = "El secreto de Kotlin"
-
-    fun mostrarTitulo():String {
-        return titulo.uppercase()
-    }
-}
-
-class Novela : Libro() {
-    fun revelarTitulo():String {
-        titulo.uppercase()
-    }
-}
-
-fun main() {
-    val miLibro = Libro()
-    println(miLibro.mostrarTitulo())  // Intenta acceder a titulo desde aquí
-    println(miLibro.titulo)  // Intenta acceder a titulo desde aquí
+  ```Kotlin
+  open class Libro {
+      var titulo: String = "El secreto de Kotlin"
   
-    val miNovela = Novela()
-    println(miNovela.revelarTitulo())  // Intenta acceder a titulo desde aquí
-    println(miNovela.titulo)  // Intenta acceder a titulo desde aquí
-}
-```
+      fun mostrarTitulo():String {
+          return titulo.uppercase()
+      }
+  }
+  
+  class Novela : Libro() {
+      fun revelarTitulo():String {
+          titulo.uppercase()
+      }
+  }
+  
+  fun main() {
+      val miLibro = Libro()
+      println(miLibro.mostrarTitulo())  // Intenta acceder a titulo desde aquí
+      println(miLibro.titulo)  // Intenta acceder a titulo desde aquí
+    
+      val miNovela = Novela()
+      println(miNovela.revelarTitulo())  // Intenta acceder a titulo desde aquí
+      println(miNovela.titulo)  // Intenta acceder a titulo desde aquí
+  }
+  ```
 
-**Respuesta:**
+* **Respuesta:** Para entender el impacto de los modificadores de visibilidad, vamos a modificar el modificador de visibilidad de la propiedad `titulo` en la clase `Libro` y observar los resultados:
 
-Para entender el impacto de los modificadores de visibilidad, vamos a modificar el modificador de visibilidad de la propiedad `titulo` en la clase `Libro` y observar los resultados:
+  * **`public` (Por defecto):** La propiedad `titulo` es accesible desde cualquier parte del código. En este caso, tanto `mostrarTitulo()` dentro de `Libro` como `revelarTitulo()` dentro de `Novela` pueden acceder a `titulo`, así como el acceso directo a `titulo` desde `main`.
+  * **`private`:** La propiedad `titulo` solo es accesible dentro de la clase `Libro`. Ni `Novela` ni el método `main` pueden acceder a `titulo` directamente. Tendrías que usar `mostrarTitulo()` para ver el título.
+  * **`protected`:** Similar a `private`, pero permite el acceso desde subclases. En este caso, `revelarTitulo()` en `Novela` puede acceder a `titulo`, pero `main` no puede.
+  * **`internal`:** La propiedad `titulo` es accesible desde cualquier archivo dentro del mismo módulo. Si `Libro`, `Novela`, y `main` están en el mismo módulo, todos pueden acceder a `titulo`. Este acceso es restringido fuera del módulo.
 
-* **`public` (Por defecto):** La propiedad `titulo` es accesible desde cualquier parte del código. En este caso, tanto `mostrarTitulo()` dentro de `Libro` como `revelarTitulo()` dentro de `Novela` pueden acceder a `titulo`, así como el acceso directo a `titulo` desde `main`.
-* **`private`:** La propiedad `titulo` solo es accesible dentro de la clase `Libro`. Ni `Novela` ni el método `main` pueden acceder a `titulo` directamente. Tendrías que usar `mostrarTitulo()` para ver el título.
-* **`protected`:** Similar a `private`, pero permite el acceso desde subclases. En este caso, `revelarTitulo()` en `Novela` puede acceder a `titulo`, pero `main` no puede.
-* **`internal`:** La propiedad `titulo` es accesible desde cualquier archivo dentro del mismo módulo. Si `Libro`, `Novela`, y `main` están en el mismo módulo, todos pueden acceder a `titulo`. Este acceso es restringido fuera del módulo.
-
-Para modificar el código y probar cada uno de estos escenarios, simplemente cambia el modificador de `titulo` en `Libro` a `private`, `protected`, o `internal` y observa los errores de compilación que surgen al intentar acceder a `titulo` desde diferentes partes del código.
+  Para modificar el código y probar cada uno de estos escenarios, simplemente cambia el modificador de `titulo` en `Libro` a `private`, `protected`, o `internal` y observa los errores de compilación que surgen al intentar acceder a `titulo` desde diferentes partes del código.
 
 ### 3. Resumen
 
@@ -125,7 +123,3 @@ Aquí te dejo una forma divertida de recordarlo:
 * [Apuntes de kotlin](https://github.com/alxgcrz/_kotlin_)
 * [Kotlinlang](https://kotlinlang.org)
 
-## License
-
-[![Licencia de Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)](http://creativecommons.org/licenses/by-sa/4.0/)
-Esta obra está bajo una [licencia de Creative Commons Reconocimiento-Compartir Igual 4.0 Internacional](http://creativecommons.org/licenses/by-sa/4.0/).

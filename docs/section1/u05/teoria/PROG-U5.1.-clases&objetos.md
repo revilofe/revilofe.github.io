@@ -278,7 +278,7 @@ Imagina que tienes una familia grande viviendo en una casa enorme. La "Nested Cl
 
 Por otro lado, la "Inner Class" es como tu hermano que vive en la misma habitación que tú. Está muy unido a ti y comparte todo contigo. En Kotlin, una "Inner Class" está marcada con la palabra clave `inner` y puede acceder a los miembros de su clase externa. Es como si tu hermano pudiera usar tu computadora portátil sin tener que pedirte permiso cada vez.
 
-En resumen:
+Por tanto:
 
 * **Nested Class (Clase Anidada)**: Es como un inquilino independiente en tu casa grande. No necesita de la clase externa para funcionar, por lo que no puede acceder a sus miembros directamente. Se declara sin la palabra clave `inner`.
 
@@ -305,7 +305,7 @@ En resumen:
     ```
 
 
-### 6. Enumeraciones
+### 5. Enumeraciones
 
 **Las clases de enumeración son similares a los tipos _'enum'_ de Java**. El uso más básico de las clases de enumeración es la implementación de enumeraciones de tipos seguros. Cada constante de la enumeración es un objeto. Las constantes de la enumeración están separadas por comas.
 
@@ -368,9 +368,9 @@ fun countries() {
 
 Aqui puedes ver un ejemplo más avanzado sobre el uso de [enum Class](https://www.baeldung.com/kotlin/enum) en kotlin. 
 
-### 7. Objects
+### 6. Objects
 
-Los objetos son muy similares a las clases. A veces necesitamos crear un objeto con una ligera modificación de alguna clase, sin declarar explícitamente una nueva subclase para ello. Java maneja este caso con clases internas anónimas. Kotlin generaliza ligeramente este concepto con _'object expressions'_ y _'objects declarations'_.
+En kotlin, los objetos pueden ser definidos de forma muy similar a las clases. A veces necesitamos crear un objeto con una ligera modificación de alguna clase, sin declarar explícitamente una nueva subclase para ello. Java maneja este caso con clases internas anónimas. Kotlin generaliza ligeramente este concepto con _'object expressions'_ y _'objects declarations'_.
 
 Estas son algunas de las características de los objetos en Kotlin:
 
@@ -382,10 +382,10 @@ Estas son algunas de las características de los objetos en Kotlin:
 Hay importantes diferencias semánticas entre un _'object expression'_ y un _'object declaration'_
 
 * Los _'object expression'_ se ejecutan (y se inicializan) inmediatamente, donde se usan.
-* Los _'object declaration'_ se inicializan cuando se accede por primera vez.
-* Por su parte, un _'companion object'_ se inicializa cuando se cargala clase correspondiente.
+* Los _'object declaration'_ se inicializan cuando se accede por primera vez, de forma perezosa. Suelen usarse para implementar patrones de diseño como el patrón _'Singleton'_.
+* Por su parte, un _'companion object'_ se inicializa cuando se carga la clase correspondiente. Se usa para implementar métodos y propiedades de nivel de clase en Kotlin.
 
-#### 7.1. Objects expressions
+#### 6.1. Objects expressions
 
 Para crear un objeto de una clase anónima que hereda de algún tipo (o tipos), escribimos:
 
@@ -407,29 +407,7 @@ fun countClicks(window: JComponent) {
 }
 ```
 
-Tambien nos los podemos encontrar como **Anonymous inner class**, es decir, una clase interna sin nombre. Se puede usar para implementar una clase abstracta o una interfaz. Se crea una instancia de una clase anónima usando una expresión de objeto.
-
-```kotlin
-interface OnClickListener {
-    fun onClick()
-}
-
-class Button {
-    fun setOnClickListener(listener: OnClickListener) {
-        // ...
-    }
-}
-
-val button = Button()
-
-button.setOnClickListener(object : OnClickListener {
-    override fun onClick() {
-        // ...
-    }
-})
-``` 
-
-#### 7.2. Objects declarations
+#### 6.2. Objects declarations
 
 Colocamos la palabra clave `'object'` antes del nombre del objeto que queremos crear. De hecho, estamos creando un **SINGLETON** cuando creamos objetos en Kotlin usando esta construcción ya que solo existe una instancia de un objeto.
 
@@ -459,9 +437,9 @@ object APIConstants {
 }
 ```
 
-### 8. Companion objects
+### 7. Companion objects
 
-Los _'companion objects'_ son un tipo de _'object declaration'_. Como Kotlin no admite clases, métodos o propiedades estáticas como las que tenemos en Java, Kotlin provee los _'companion objects'_. Estos objetos son básicamente un objeto que pertenece a una clase que se conoce como la clase complementaria del objeto. Este objeto se indica con la palabra clave `'companion'`.
+Los _'companion objects'_ son un tipo de _'object declaration'_. Como Kotlin no admite clases, métodos y/o propiedades estáticas, como las que tenemos en Java (tambien llamadas métodos/propiedades de clase),  Kotlin provee los _'companion objects'_. Estos objetos son básicamente un objeto que pertenece a una clase que se conoce como la clase complementaria del objeto. Este objeto se indica con la palabra clave `'companion'`.
 
 Similar a los métodos estáticos en Java, un _'companion object'_ no está asociado con una instancia de clase, sino con la propia clase.
 
@@ -506,15 +484,14 @@ MyClass.Factory.sayHelloFromCompanion() // Invocar un método del 'companion'
 
 ## Reference
 
+* [https://devexpert.io/data-classes-kotlin/](data class)
+* [https://www.baeldung.com/kotlin/enum](class enum)
 * [https://kotlinlang.org/docs/reference/](https://kotlinlang.org/docs/reference/)
-* [https://code.tutsplus.com/series/kotlin-from-scratch--cms-1209](https://code.tutsplus.com/series/kotlin-from-scratch--cms-1209)
 * [https://www.packtpub.com/application-development/programming-kotlin](https://www.packtpub.com/application-development/programming-kotlin)
 * [https://learnxinyminutes.com/docs/kotlin/](https://learnxinyminutes.com/docs/kotlin/)
-* [https://gist.github.com/dodyg/5823184](https://gist.github.com/dodyg/5823184)
-* [https://gist.github.com/dodyg/5616605](https://gist.github.com/dodyg/5616605)
 * [https://github.com/Zhuinden/guide-to-kotlin](https://github.com/Zhuinden/guide-to-kotlin)
 * [https://superkotlin.com/kotlin-mega-tutorial/](https://superkotlin.com/kotlin-mega-tutorial/)
-* [https://revilofe.github.io/IESRA-DAM-Prog/#/](https://revilofe.github.io/IESRA-DAM-Prog/#/)
+* [https://revilofe.github.io/](https://revilofe.github.io/)
 
 ## Fuente
 
@@ -525,7 +502,3 @@ MyClass.Factory.sayHelloFromCompanion() // Invocar un método del 'companion'
 
 [![Licencia de Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 Esta obra está bajo una [licencia de Creative Commons Reconocimiento-Compartir Igual 4.0 Internacional](http://creativecommons.org/licenses/by-sa/4.0/).
-
-```
-
-```

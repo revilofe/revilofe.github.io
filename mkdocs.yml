@@ -72,7 +72,8 @@ nav:
         - 'section1/u05/index.md'
         - '5.1.-Revisitando las clases y los objetos': 'section1/u05/teoria/PROG-U5.1.-clases&objetos.md'
         - '5.2.-Visibilidad en miembros': 'section1/u05/teoria/PROG-U5.2.-VisibilidadEnClases.md'
-        - '5.3.-Herencia': 'section1/u05/teoria/PROG-U5.3.-herencia.md' 
+        - '5.3.-Herencia': 'section1/u05/teoria/PROG-U5.3.-Herencia.md'
+
     - 'U6: Kotlin: Creación de programas con POO':
         - 'section1/u06/index.md'
     - 'U7: Kotlin: Entrada/Salida y GUI':

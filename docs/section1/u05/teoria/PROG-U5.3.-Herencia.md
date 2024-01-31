@@ -67,9 +67,10 @@ En Kotlin, la herencia se maneja con una sintaxis clara y reglas específicas di
 **Pregunta:** ¿Qué métodos y propiedades hereda `Example` de `Any`?
 **Código:**
 
-  ```Kotlin
-  class Example
-  ```
+```Kotlin
+class Example
+```
+
 **Respuesta:**
 
   * `Example` hereda de `Any` los métodos `equals()`, `hashCode()`, y `toString()`.
@@ -97,20 +98,20 @@ Si una clase derivada no tiene un constructor primario, cada constructor secunda
 
 **Pregunta:** Ejecuta el siguiente código, instancia la subclase con 1 e imprime el valor de `p`. ¿Qué muestra en pantalla? ¿Qué sucede si quitas el constructor de la subclase? ¿Podemos definir la subclase de otra forma? ¿Qué tenemos que hacer para llamar al constructor de 2 parámetros?
 **Código:**
-  ```kotlin
-  open class Base(var p: Int) {
-      constructor(p: Int, q: Int): this(p)
-  }
+```kotlin
+open class Base(var p: Int) {
+  constructor(p: Int, q: Int): this(p)
+}
 
-  class DerivedWithoutConstructor : Base {
-      constructor(p: Int) : super(p)
-  }
+class DerivedWithoutConstructor : Base {
+  constructor(p: Int) : super(p)
+}
 
-  fun main() {
-      val instancia = DerivedWithoutConstructor(1)
-      println(instancia.p)
-  }
-  ```
+fun main() {
+  val instancia = DerivedWithoutConstructor(1)
+  println(instancia.p)
+}
+```
 **Respuesta:**
   * Al ejecutar, muestra `1` en pantalla, indicando el valor de `p`.
   * Si quitas el constructor de la subclase, el código no compilará porque `DerivedWithoutConstructor` necesita definir cómo inicializar `Base`.
@@ -297,8 +298,8 @@ Cada propiedad declarada puede ser sobreescrita por una propiedad con un inicial
 
 ```kotlin
 open class Foo {
-open val x: String
-get() = "base"
+    open val x: String
+    get() = "base"
 }
 
 class Bar : Foo() {
@@ -347,22 +348,21 @@ Por lo tanto, durante la inicialización de las propiedades de la clase base las
 
 **Código:**
 
-    ```kotlin 
-    open class Base(val name: String) {
-        init { println("Initializing Base") }
-        open val size: Int = name.length.also { println("Initializing size in Base: $it") }
-    }
-    
-    class Derived(name: String, val lastName: String) : Base(name.capitalize().also { println("Argument for Base: $it") }) {
-        init { println("Initializing Derived") }
-        override val size: Int = (super.size + lastName.length).also { println("Initializing size in Derived: $it") }
-    }
-    
-    fun main() {
-        Derived("john", "doe")
-    }
+```kotlin 
+open class Base(val name: String) {
+    init { println("Initializing Base") }
+    open val size: Int = name.length.also { println("Initializing size in Base: $it") }
+}
 
-    ```
+class Derived(name: String, val lastName: String) : Base(name.capitalize().also { println("Argument for Base: $it") }) {
+    init { println("Initializing Derived") }
+    override val size: Int = (super.size + lastName.length).also { println("Initializing size in Derived: $it") }
+}
+
+fun main() {
+    Derived("john", "doe")
+}
+```
 
 **Respuesta:** Al ejecutar el código proporcionado en la función `main`, el orden de salida en la consola será el siguiente:
 

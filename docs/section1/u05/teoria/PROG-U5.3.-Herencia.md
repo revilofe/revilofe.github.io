@@ -64,13 +64,13 @@ En Kotlin, la herencia se maneja con una sintaxis clara y reglas específicas di
 
 #### Actividad 1: Herencia de `Any`
 
-* **Pregunta:** ¿Qué métodos y propiedades hereda `Example` de `Any`?
-* **Código:**
+**Pregunta:** ¿Qué métodos y propiedades hereda `Example` de `Any`?
+**Código:**
 
   ```Kotlin
   class Example
   ```
-* **Respuesta:**
+**Respuesta:**
 
   * `Example` hereda de `Any` los métodos `equals()`, `hashCode()`, y `toString()`.
 
@@ -80,14 +80,14 @@ Para que una clase herede de otra en Kotlin, se coloca el nombre de la clase bas
 
 #### Actividad 2: Instancia de Clases Base y Derivadas
 
-* **Pregunta:** ¿Crear una variable de clase `Base`? ¿Puedes asignarle una instancia de `DerivedWithConstructor`?
-* **Código:**
+**Pregunta:** ¿Crear una variable de clase `Base`? ¿Puedes asignarle una instancia de `DerivedWithConstructor`?
+**Código:**
 
   ```Kotlin
   open class Base(var p: Int)
   class DerivedWithConstructor(p: Int) : Base(p)
   ```
-* **Respuesta:** Sí, puedes crear una variable de tipo `Base` y asignarle una instancia de `DerivedWithConstructor` debido a la herencia.
+**Respuesta:** Sí, puedes crear una variable de tipo `Base` y asignarle una instancia de `DerivedWithConstructor` debido a la herencia.
 
 #### 2.2. Herencia sin Constructor Primario
 
@@ -95,8 +95,8 @@ Si una clase derivada no tiene un constructor primario, cada constructor secunda
 
 #### Actividad 3: Trabajando con Constructores Secundarios
 
-* **Pregunta:** Ejecuta el siguiente código, instancia la subclase con 1 e imprime el valor de `p`. ¿Qué muestra en pantalla? ¿Qué sucede si quitas el constructor de la subclase? ¿Podemos definir la subclase de otra forma? ¿Qué tenemos que hacer para llamar al constructor de 2 parámetros?
-* **Código:**
+**Pregunta:** Ejecuta el siguiente código, instancia la subclase con 1 e imprime el valor de `p`. ¿Qué muestra en pantalla? ¿Qué sucede si quitas el constructor de la subclase? ¿Podemos definir la subclase de otra forma? ¿Qué tenemos que hacer para llamar al constructor de 2 parámetros?
+**Código:**
   ```kotlin
   open class Base(var p: Int) {
       constructor(p: Int, q: Int): this(p)
@@ -111,7 +111,7 @@ Si una clase derivada no tiene un constructor primario, cada constructor secunda
       println(instancia.p)
   }
   ```
-* **Respuesta:**
+**Respuesta:**
   * Al ejecutar, muestra `1` en pantalla, indicando el valor de `p`.
   * Si quitas el constructor de la subclase, el código no compilará porque `DerivedWithoutConstructor` necesita definir cómo inicializar `Base`.
   * Para definir la subclase de otra manera, podríamos considerar agregar un constructor primario o utilizar un constructor secundario que llame al constructor de dos parámetros de `Base`.
@@ -155,7 +155,7 @@ Una función con la palabra clave `'override'` también es `'open'` por definici
 
 La sobreescritura de métodos en Kotlin permite modificar el comportamiento de métodos heredados en subclases, mientras que el uso de `final` previene la sobreescritura adicional, proporcionando un control detallado sobre la herencia y el polimorfismo en el diseño de software.
 
-#### Actividad 4: Exploración de Sobreescritura de Métodos en Kotlin
+##### Actividad 4: Exploración de Sobreescritura de Métodos en Kotlin
 
 **Pregunta:** ¿Cómo funcionan la sobreescritura de métodos y las restricciones de sobreescritura en Kotlin? Examina el comportamiento de sobreescritura en una jerarquía de clases, las limitaciones impuestas por el modificador `final` y la extensión de funcionalidad mediante la sobreescritura en una subclase adicional.
 
@@ -216,7 +216,7 @@ Derived2@hashcode: sin sobreescribir
 
 En Kotlin, la herencia está regulada por la siguiente regla: si una clase hereda varias implementaciones del mismo miembro de sus superclases inmediatas, debe invalidar este miembro y proporcionar su propia implementación. Para denotar el supertipo del cual se toma la implementación heredada, usamos la palaba clave `'super'` calificado por el nombre de supertipo entre paréntesis angulares, por ejemplo, `super<Base>`:
 
-#### Actividad 5: Entendiendo la Herencia y Polimorfismo en Kotlin
+##### Actividad 5: Entendiendo la Herencia y Polimorfismo en Kotlin
 
 **Pregunta:** ¿Cómo interactúan la herencia de clases y la implementación de interfaces en Kotlin cuando múltiples superclases proporcionan implementaciones para el mismo método? Explora el comportamiento al instanciar la subclase `C` y realizar llamadas polimórficas utilizando referencias de diferentes tipos.
 
@@ -289,11 +289,12 @@ Las propiedades declaradas en una superclase que luego se vuelven a declarar en 
 
 Cada propiedad declarada puede ser sobreescrita por una propiedad con un inicializador o por una propiedad con un método `'getter()'`
 
-#### Actividad 6: Explorando la Sobreescritura de Propiedades en Kotlin
+##### Actividad 6: Explorando la Sobreescritura de Propiedades en Kotlin
 
 **Pregunta:** ¿Cómo se comporta la sobreescritura de propiedades en Kotlin y qué diferencias se observan al imprimir los valores de las propiedades sobreescritas en una clase base y sus subclases?
 
 **Código:**
+
 ```kotlin
 open class Foo {
 open val x: String
@@ -321,6 +322,7 @@ fun main() {
     println(bar1.count)
 }
 ```
+
 **Respuesta:** Al ejecutar el código proporcionado en la función `main`, se observa lo siguiente en la consola:
 
 1. **Objeto de `Foo`:** Imprime el valor de la propiedad `x` definida en la clase base `Foo`, que es "base". Esto se debe a que se accede al getter de la propiedad `x` en la clase `Foo`, que devuelve el valor "base".
@@ -339,8 +341,7 @@ Durante la construcción de una nueva instancia de una clase derivada, **la inic
 Por lo tanto, durante la inicialización de las propiedades de la clase base las propiedades de la clase derivada aún no se han inicializado. Si alguna de esas propiedades se utilizan (de forma directa o indirecta) en la inicialización de la clase base se pueden producir comportamientos extraños o errores en tiempo de ejecución.
 
 
-
-#### Actividad 7: Comprendiendo el Orden de Inicialización en Kotlin
+##### Actividad 7: Comprendiendo el Orden de Inicialización en Kotlin
 
 **Pregunta:** ¿Cuál es el orden de inicialización de una clase base y su clase derivada en Kotlin, especialmente cuando la clase derivada sobreescribe propiedades de la clase base? Observa cómo este orden afecta la inicialización de las propiedades.
 
@@ -396,6 +397,10 @@ class Bar : Foo() {
     override val x: Int get() = super.x + 1
 }
 ```
+
+
+
+
 ---
 
 ## Reference

@@ -336,32 +336,32 @@ El límite superior predeterminado (si no se especifica) es `'Any?'`.
 
 En Kotlin, tenemos estas 'Clases Internamente Agrupadas', que pueden ser o bien 'Nested Classes' sin acceso directo a la clase exterior, o bien 'Inner Classes' que sí tienen acceso."
 
-#### 4.1 ¿Cuándo usarlas?
+#### 4.1. ¿Cuándo usarlas?
 
 Para explicar cuándo usar una Inner Class y cuándo optar por una Nested Class, podemos utilizar analogías que ayuden a comprender su propósito y diferencias en contextos reales. Es posible que necesites releer esta sección varias veces para comprender completamente las diferencias entre las dos.
 
-##### 4.1.1 Inner Class: El Miembro de la Familia
+##### 4.1.1. Inner Class: El Miembro de la Familia
 
 Imagina que una clase es como una casa familiar. Una Inner Class sería como un miembro de esta familia que vive en la casa. Este miembro tiene acceso completo a todos los recursos y secretos de la casa (la clase externa) porque es parte integral de la familia. Puede interactuar libremente con los demás miembros y utilizar todo lo que está en la casa.
 
 **¿Cuándo usarla?** Utiliza una Inner Class cuando necesites una clase que esté estrechamente vinculada a la clase externa y que necesite acceder a sus miembros, incluidos los privados. Es útil cuando tu clase interna debe "conocer" a la clase externa y colaborar estrechamente con ella, como un miembro de la familia que trabaja en un proyecto familiar.
 
-##### 4.1.2 Nested Class: El Vecino Independiente
+##### 4.1.2. Nested Class: El Vecino Independiente
 
 Por otro lado, una Nested Class (específicamente una clase anidada estática en lenguajes que lo soportan) es como un vecino que vive al lado de tu casa. Aunque comparten la misma localización (el archivo fuente), este vecino tiene su propia vida y no necesita entrar a tu casa para conseguir lo que necesita. No tiene acceso directo a tus recursos privados, pero aún así, puede interactuar con la familia (la clase externa) en cierta medida, mediante interfaces públicas.
 
 **¿Cuándo usarla?** Opta por una Nested Class cuando necesites agrupar clases que están relacionadas, pero que no necesitan acceso directo a los miembros de la clase externa. Es ideal para situaciones en las que deseas mantener una separación clara y una independencia funcional, como un vecino que colabora en proyectos comunitarios sin necesidad de acceso a tu casa.
 
-##### 4.1.3 Consideraciones Conceptuales
+##### 4.1.3. Consideraciones Conceptuales
 
 * **Acoplamiento:** Si tu clase interna está tan acoplada a la clase externa que no tiene sentido sin ella, una Inner Class es apropiada. Es una relación íntima y directa, como la de los miembros de una familia.
 * **Independencia y Modularidad:** Si tu clase puede funcionar de manera independiente de la clase externa, y especialmente si puede ser útil para otras clases, entonces una Nested Class (estática) es la mejor elección. Piensa en ella como un vecino que tiene su propia casa y vida pero comparte una comunidad contigo.
 
-##### 4.1.4 Conclusión
 
+#### 4.2. ¿Cómo usarlas?
 La elección entre Inner Class y Nested Class depende de la relación que necesitas que tenga tu clase con su clase externa. Considera si tu clase interna necesita estar íntimamente ligada y tener un acceso profundo a la clase externa (Inner Class) o si funciona mejor como una entidad independiente que, aunque relacionada, no necesita acceso directo a los recursos internos de la clase externa (Nested Class).
 
-#### 4.1 Nested classes
+##### 4.2.1. Nested classes
 
 Al igual que las funciones, Kotlin permite las clases internas, es decir, clases definidas dentro de otra clase. Son equivalentes a las clases internas estáticas en Java.
 
@@ -376,7 +376,7 @@ class OuterClass {
 val nestedClass = OuterClass.NestedClass().nestedClassFunc()
 ```
 
-#### 4.2. Inner class
+##### 4.2.2. Inner class
 
 Las clases internas, por otro lado, pueden hacer referencia a la clase externa en la que se declaró. Para crear una clase interna, colocamos la palabra clave `'inner'` antes de la palabra clave `'class'`.
 
@@ -394,7 +394,7 @@ class OuterClass() {
 val demo = OuterClass().InnerClass().innerClassFunc() // => yo
 ```
 
-#### 4.3. Diferencias entre Nested e Inner classes
+##### 4.2.3 Diferencias entre Nested e Inner classes
 
 ¡Vamos a desenredar este lío de clases en Kotlin con un poco de humor y claridad!
 
@@ -430,7 +430,7 @@ Por tanto:
 ### 5. Enumeraciones
 Las enumeraciones, o "enums", son tipos especiales en programación que definen un conjunto de constantes nombradas, mejorando la legibilidad y seguridad de tu código. 
 
-#### 5.1 ¿Cuándo usarlas?
+#### 5.1. ¿Cuándo usarlas?
 Son útiles en varios contextos:
 
 ##### 5.1.1. Representar un Conjunto Fijo de Constantes
@@ -453,7 +453,7 @@ Si tienes una variable que solo debería tomar uno de varios valores predefinido
 
 Algunos lenguajes permiten que las enums contengan no solo nombres de constantes, sino también propiedades y métodos. Esto es útil para agrupar datos y comportamientos relacionados, por ejemplo, asociar cada estado de un pedido con un mensaje específico o una acción.
 
-#### 5.2 ¿Cómo usarlas?
+#### 5.2. ¿Cómo usarlas?
 
 
 Las enumeraciones son una herramienta poderosa para mejorar la legibilidad, la seguridad de tipo y la integridad de tu código. Son especialmente útiles cuando trabajas con un conjunto cerrado de valores que conoces de antemano. Usar enums te ayuda a escribir código más claro y mantenible, asegurando que tus variables solo contengan valores válidos.
@@ -472,7 +472,7 @@ enum class Direccion {
 
 Este enfoque mejora la legibilidad del código y asegura que solo se puedan usar las direcciones definidas en la enum, en lugar de cadenas o números arbitrarios.
 
-##### 5.2.2 Constructores de Enumeración
+##### 5.2.2. Constructores de Enumeración
 
 Ademas, las enumeraciones pueden tener constructor:
 
@@ -482,7 +482,7 @@ enum class Direction(val angle: Int) {
 }
 ```
 
-##### 5.2.3 Clases anónimas en enumeraciones
+##### 5.2.3. Clases anónimas en enumeraciones
 
 
 En Kotlin las constantes de la enumeración pueden declarar sus propias clases anónimas con sus métodos correspondientes, así como sobreescribir métodos primarios.
@@ -503,7 +503,7 @@ enum class ProtocolState {
 }
 ```
 
-##### 5.2.4 Métodos predeterminados de Enumeración
+##### 5.2.4. Métodos predeterminados de Enumeración
 
 En Kotlin las enumeraciones disponen de forma predeterminada de los métodos:
 

@@ -70,7 +70,7 @@ nav:
 
     - 'U5: Kotlin: PPO y creación de e.d.':
         - 'section1/u05/index.md'
-        - '5.1.-Revisitando las clases y los objetos': 'section1/u05/teoria/PROG-U5.1.-clases&objetos.md'
+        - '5.1.-Revisitando las clases y los objetos': 'section1/u05/teoria/PROG-U5.1.-clasesYobjetos.md'
         - '5.2.-Visibilidad en miembros': 'section1/u05/teoria/PROG-U5.2.-VisibilidadEnClases.md'
         - '5.3.-Herencia': 'section1/u05/teoria/PROG-U5.3.-Herencia.md'
 

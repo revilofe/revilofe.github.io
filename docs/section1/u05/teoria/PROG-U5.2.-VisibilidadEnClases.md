@@ -59,11 +59,11 @@ Solo se puede aplicar a propiedades/atributos o funciones/métodos dentro de una
 En un proyecto que tiene un módulo (módulo Gradle o Maven), una clase, objeto, interfaz o función especificada con este modificador dentro de ese módulo solo es accesible desde ese módulo.
 
 #### Actividad 1: Jugando con Modificadores de Visibilidad   
-* **Pregunta:** ¿Cómo afectan los modificadores de visibilidad al acceso de una propiedad dentro de una clase y desde fuera de ella en Kotlin?
+**Pregunta:** ¿Cómo afectan los modificadores de visibilidad al acceso de una propiedad dentro de una clase y desde fuera de ella en Kotlin?
 
   Supongamos que tienes una clase `Libro` que tiene una propiedad `titulo` y un método `mostrarTitulo()`. Queremos entender cómo los diferentes modificadores de visibilidad (`private`, `protected`, `internal`, `public`) afectan la capacidad de acceder a `titulo` desde dentro de la clase, desde una subclase, y desde fuera de cualquier clase.  
 
-* **Código:**
+**Código:**
 
   ```Kotlin
   open class Libro {
@@ -91,7 +91,7 @@ En un proyecto que tiene un módulo (módulo Gradle o Maven), una clase, objeto,
   }
   ```
 
-* **Respuesta:** Para entender el impacto de los modificadores de visibilidad, vamos a modificar el modificador de visibilidad de la propiedad `titulo` en la clase `Libro` y observar los resultados:
+**Respuesta:** Para entender el impacto de los modificadores de visibilidad, vamos a modificar el modificador de visibilidad de la propiedad `titulo` en la clase `Libro` y observar los resultados:
 
   * **`public` (Por defecto):** La propiedad `titulo` es accesible desde cualquier parte del código. En este caso, tanto `mostrarTitulo()` dentro de `Libro` como `revelarTitulo()` dentro de `Novela` pueden acceder a `titulo`, así como el acceso directo a `titulo` desde `main`.
   * **`private`:** La propiedad `titulo` solo es accesible dentro de la clase `Libro`. Ni `Novela` ni el método `main` pueden acceder a `titulo` directamente. Tendrías que usar `mostrarTitulo()` para ver el título.

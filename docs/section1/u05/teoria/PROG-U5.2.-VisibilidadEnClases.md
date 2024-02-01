@@ -100,7 +100,7 @@ En un proyecto que tiene un módulo (módulo Gradle o Maven), una clase, objeto,
 
   Para modificar el código y probar cada uno de estos escenarios, simplemente cambia el modificador de `titulo` en `Libro` a `private`, `protected`, o `internal` y observa los errores de compilación que surgen al intentar acceder a `titulo` desde diferentes partes del código.
 
-### 3. Resumen
+### 2. Resumen
 
 Aquí te dejo una forma divertida de recordarlo:
 

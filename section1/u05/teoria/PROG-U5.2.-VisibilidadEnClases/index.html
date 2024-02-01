@@ -4006,13 +4006,9 @@
 <h4 id="14-internal">1.4. Internal<a class="headerlink" href="#14-internal" title="Permanent link">&para;</a></h4>
 <p>En un proyecto que tiene un módulo (módulo Gradle o Maven), una clase, objeto, interfaz o función especificada con este modificador dentro de ese módulo solo es accesible desde ese módulo.</p>
 <h4 id="actividad-1-jugando-con-modificadores-de-visibilidad">Actividad 1: Jugando con Modificadores de Visibilidad<a class="headerlink" href="#actividad-1-jugando-con-modificadores-de-visibilidad" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong>Pregunta:</strong> ¿Cómo afectan los modificadores de visibilidad al acceso de una propiedad dentro de una clase y desde fuera de ella en Kotlin?</li>
-</ul>
+<p><strong>Pregunta:</strong> ¿Cómo afectan los modificadores de visibilidad al acceso de una propiedad dentro de una clase y desde fuera de ella en Kotlin?</p>
 <p>Supongamos que tienes una clase <code>Libro</code> que tiene una propiedad <code>titulo</code> y un método <code>mostrarTitulo()</code>. Queremos entender cómo los diferentes modificadores de visibilidad (<code>private</code>, <code>protected</code>, <code>internal</code>, <code>public</code>) afectan la capacidad de acceder a <code>titulo</code> desde dentro de la clase, desde una subclase, y desde fuera de cualquier clase.  </p>
-<ul>
-<li><strong>Código:</strong></li>
-</ul>
+<p><strong>Código:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">open</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Libro</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">titulo</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;El secreto de Kotlin&quot;</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
@@ -4037,13 +4033,9 @@
 <a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">miNovela</span><span class="p">.</span><span class="na">titulo</span><span class="p">)</span><span class="w">  </span><span class="c1">// Intenta acceder a titulo desde aquí</span>
 <a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="p">}</span>
 </code></pre></div>
-<ul>
-<li>
 <p><strong>Respuesta:</strong> Para entender el impacto de los modificadores de visibilidad, vamos a modificar el modificador de visibilidad de la propiedad <code>titulo</code> en la clase <code>Libro</code> y observar los resultados:</p>
-</li>
-<li>
-<p><strong><code>public</code> (Por defecto):</strong> La propiedad <code>titulo</code> es accesible desde cualquier parte del código. En este caso, tanto <code>mostrarTitulo()</code> dentro de <code>Libro</code> como <code>revelarTitulo()</code> dentro de <code>Novela</code> pueden acceder a <code>titulo</code>, así como el acceso directo a <code>titulo</code> desde <code>main</code>.</p>
-</li>
+<ul>
+<li><strong><code>public</code> (Por defecto):</strong> La propiedad <code>titulo</code> es accesible desde cualquier parte del código. En este caso, tanto <code>mostrarTitulo()</code> dentro de <code>Libro</code> como <code>revelarTitulo()</code> dentro de <code>Novela</code> pueden acceder a <code>titulo</code>, así como el acceso directo a <code>titulo</code> desde <code>main</code>.</li>
 <li><strong><code>private</code>:</strong> La propiedad <code>titulo</code> solo es accesible dentro de la clase <code>Libro</code>. Ni <code>Novela</code> ni el método <code>main</code> pueden acceder a <code>titulo</code> directamente. Tendrías que usar <code>mostrarTitulo()</code> para ver el título.</li>
 <li><strong><code>protected</code>:</strong> Similar a <code>private</code>, pero permite el acceso desde subclases. En este caso, <code>revelarTitulo()</code> en <code>Novela</code> puede acceder a <code>titulo</code>, pero <code>main</code> no puede.</li>
 <li><strong><code>internal</code>:</strong> La propiedad <code>titulo</code> es accesible desde cualquier archivo dentro del mismo módulo. Si <code>Libro</code>, <code>Novela</code>, y <code>main</code> están en el mismo módulo, todos pueden acceder a <code>titulo</code>. Este acceso es restringido fuera del módulo.</li>

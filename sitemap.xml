@@ -396,6 +396,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://revilofe.github.io/section1/u05/teoria/otros/_ClasesAbstractas_vs_Interfaces/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section1/u05/teoria/otros/_Modificador_lateinit/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section1/u05/teoria/otros/_Propiedades_Atributos_C%23_Kotlin/</loc>
+         <lastmod>2024-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://revilofe.github.io/section1/u06/</loc>
          <lastmod>2024-02-01</lastmod>
          <changefreq>daily</changefreq>

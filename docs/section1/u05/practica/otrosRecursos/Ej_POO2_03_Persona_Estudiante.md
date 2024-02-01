@@ -1,4 +1,4 @@
-## Persona y Estudiante
+### Ejercicio: Persona y Estudiante
 
 1. **Clases y Objetos Básicos:**
     - Crea una clase `Persona` que tenga dos propiedades: `nombre` y `edad`. Luego, en el main crea un objeto de esta clase e imprime sus propiedades.

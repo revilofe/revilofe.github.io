@@ -1,4 +1,4 @@
-## El Restaurante
+## El Restaurante *(Sin herencias)*
 
 ### Bloque 1: Gestión de Platos y Pedidos
 
@@ -180,4 +180,3 @@ fun main() {
 }
 ```
 
-Este `main` proporciona una base sólida para probar el sistema. Los estudiantes pueden usarlo como punto de partida para verificar que todas las partes de su sistema funcionen como se espera. Se anima a los estudiantes a expandir o modificar este `main` según sea necesario para probar todas las características y manejar diferentes escenarios que puedan ocurrir en un restaurante real.

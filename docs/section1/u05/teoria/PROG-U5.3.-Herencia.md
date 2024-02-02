@@ -1,5 +1,5 @@
 ---
-title: "UD 5 - 5.1 Revisión de las clases"
+title: "UD 5 - 5.3 Herencia. Clases abstractas. Interfaces"
 description: kotlin
 summary: kotlin
 authors:
@@ -14,7 +14,7 @@ tags:
     - Software
     - kotlin
 ---
-## 5.2. Herencia. Interfaces
+## 5.3. Herencia. Clases abstractas. Interfaces
 
 ### 1. Concepto de Herencia
 

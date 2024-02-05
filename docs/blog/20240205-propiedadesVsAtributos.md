@@ -4,7 +4,7 @@ title: Atributos de clase vs Propiedades.
 description: Diferencia entre atributo de clase y propiedad.
 
 authors:
-    - Eduardo Fdez.
+    - Diego Cano.
 
 date: 2024-02-05
 

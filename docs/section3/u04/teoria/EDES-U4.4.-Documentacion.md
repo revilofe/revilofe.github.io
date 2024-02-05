@@ -17,7 +17,7 @@ tags:
 
 ## 4.4. Documentación y comentarios.
 
-### 1. La documentación
+### 1. Documentacion y comentarios
 
 A la hora de comentar, hay dos escuelas:
 

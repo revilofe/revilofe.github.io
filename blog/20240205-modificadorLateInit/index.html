@@ -3683,6 +3683,38 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-gestor-de-tareas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Gestor de Tareas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplo: Gestor de Tareas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#referencia-a-funciones-o-propiedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencia a Funciones o Propiedades:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3734,11 +3766,13 @@
 <h1 id="modificador-lateinit">Modificador lateinit<a class="headerlink" href="#modificador-lateinit" title="Permanent link">&para;</a></h1>
 <p>El modificador <code>lateinit</code> es útil en Kotlin para casos en los que queremos declarar una propiedad no nula pero no podemos inicializarla en el momento de la creación del objeto. 
 Es comúnmente utilizado en situaciones como la inyección de dependencias o la inicialización posterior en el ciclo de vida del objeto.</p>
-<p><strong>Ejemplo: Gestor de Tareas</strong></p>
+<h2 id="ejemplo-gestor-de-tareas"><strong>Ejemplo: Gestor de Tareas</strong><a class="headerlink" href="#ejemplo-gestor-de-tareas" title="Permanent link">&para;</a></h2>
 <p>Vamos a crear una clase <code>GestorTareas</code> que represente un sistema simple para manejar tareas. Inicialmente, cuando se crea el gestor, aún no tenemos una lista de tareas para asignarle, 
 así que queremos inicializar esa lista más tarde.</p>
 <ol>
-<li><strong>Creación de la Clase con <code>lateinit</code>:</strong><ul>
+<li>
+<p><strong>Creación de la Clase con <code>lateinit</code>:</strong></p>
+<ul>
 <li>Define una clase <code>Tarea</code> con una propiedad <code>descripcion</code>.</li>
 <li>Define la clase <code>GestorTareas</code> que inicialmente no sabe cuáles son las tareas que va a gestionar.</li>
 <li>Utiliza <code>lateinit</code> para declarar una propiedad que almacenará una lista de <code>Tarea</code>.</li>
@@ -3763,32 +3797,54 @@ así que queremos inicializar esa lista más tarde.</p>
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="p">}</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">gestor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GestorTareas</span><span class="p">()</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="n">gestor</span><span class="p">.</span><span class="na">mostrarTareas</span><span class="p">()</span><span class="w">  </span><span class="c1">// Debe indicar que las tareas no están inicializadas</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">listaTareas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="n">Tarea</span><span class="p">(</span><span class="s">&quot;Aprender Kotlin&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">Tarea</span><span class="p">(</span><span class="s">&quot;Hacer ejercicio&quot;</span><span class="p">))</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="n">gestor</span><span class="p">.</span><span class="na">inicializarTareas</span><span class="p">(</span><span class="n">listaTareas</span><span class="p">)</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="n">gestor</span><span class="p">.</span><span class="na">mostrarTareas</span><span class="p">()</span><span class="w">  </span><span class="c1">// Ahora debe mostrar las tareas asignadas</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">gestor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GestorTareas</span><span class="p">()</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">gestor</span><span class="p">.</span><span class="na">mostrarTareas</span><span class="p">()</span><span class="w">  </span><span class="c1">// Debe indicar que las tareas no están inicializadas</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">listaTareas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="n">Tarea</span><span class="p">(</span><span class="s">&quot;Aprender Kotlin&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">Tarea</span><span class="p">(</span><span class="s">&quot;Hacer ejercicio&quot;</span><span class="p">))</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">gestor</span><span class="p">.</span><span class="na">inicializarTareas</span><span class="p">(</span><span class="n">listaTareas</span><span class="p">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="n">gestor</span><span class="p">.</span><span class="na">mostrarTareas</span><span class="p">()</span><span class="w">  </span><span class="c1">// Ahora debe mostrar las tareas asignadas</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
 </code></pre></div>
 </li>
 </ul>
-</li>
-</ol>
 <p>En este ejemplo, el gestor de tareas comienza sin conocer las tareas. Solo después de inicializarlo con una lista de tareas (mediante el método <code>inicializarTareas</code>), 
 está listo para funcionar y mostrar las tareas. Esto demuestra el uso de <code>lateinit</code> para propiedades que serán inicializadas más tarde y también muestra cómo comprobar 
 si una propiedad <code>lateinit</code> ha sido inicializada antes de usarla, usando <code>::tareas.isInitialized</code>.</p>
 <p>En Kotlin, el operador <code>::</code> se utiliza como referencia a funciones o propiedades, y también para acceder a ciertas propiedades de la reflexión del lenguaje.</p>
-<ol>
-<li><strong>Referencia a Funciones o Propiedades:</strong></li>
+</li>
+<li>
+<p><strong>Verificación de Inicialización con <code>lateinit</code>:</strong></p>
+</li>
+<li>En el contexto de una propiedad <code>lateinit</code>, puedes usar <code>::</code> para hacer referencia a la propiedad y luego <code>.isInitialized</code> para verificar si la propiedad ha sido inicializada.</li>
+<li>Ejemplo:
+        <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Ejemplo</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">texto</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">ejemplo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ejemplo</span><span class="p">()</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">::</span><span class="n">texto</span><span class="p">.</span><span class="na">isInitialized</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Verifica si &#39;texto&#39; ha sido inicializado</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="n">ejemplo</span><span class="p">.</span><span class="na">texto</span><span class="p">)</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;texto no está inicializado.&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">}</span>
+</code></pre></div></li>
+<li>
+<p>Esto es especialmente útil para propiedades <code>lateinit</code>, ya que acceder a una propiedad <code>lateinit</code> no inicializada lanzaría una excepción.
+     La verificación con <code>.isInitialized</code> te permite evitar esta excepción comprobando primero si la propiedad ha sido inicializada.</p>
+<p>El uso de <code>::</code> es bastante versátil y forma parte de las capacidades reflexivas y funcionales de Kotlin, 
+permitiendo escribir código más abstracto y general, así como realizar comprobaciones en tiempo de ejecución sobre las propiedades y funciones de tus objetos.</p>
+</li>
+</ol>
+<h3 id="referencia-a-funciones-o-propiedades">Referencia a Funciones o Propiedades:<a class="headerlink" href="#referencia-a-funciones-o-propiedades" title="Permanent link">&para;</a></h3>
+<ul>
 <li>Puedes obtener una referencia a una función específica de una clase o un objeto usando el operador <code>::</code>.</li>
 <li>Esto es útil, por ejemplo cómo ya hemos visto anteriormente en esta unidad, cuando quieres pasar una función como argumento a otra función de orden superior.</li>
-<li>
-<p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code>```kotlin
+<li>Ejemplo:<div class="highlight"><pre><span></span><code>```kotlin
 fun saludar() {
     println(&quot;¡Hola!&quot;)
 }
@@ -3816,29 +3872,7 @@ fun main() {
     }</code></li>
 </ul>
 </li>
-<li>
-<p><strong>Verificación de Inicialización con <code>lateinit</code>:</strong></p>
-</li>
-<li>En el contexto de una propiedad <code>lateinit</code>, puedes usar <code>::</code> para hacer referencia a la propiedad y luego <code>.isInitialized</code> para verificar si la propiedad ha sido inicializada.</li>
-<li>Ejemplo:
-        <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Ejemplo</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">texto</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">ejemplo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ejemplo</span><span class="p">()</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">::</span><span class="n">texto</span><span class="p">.</span><span class="na">isInitialized</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Verifica si &#39;texto&#39; ha sido inicializado</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="n">ejemplo</span><span class="p">.</span><span class="na">texto</span><span class="p">)</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;texto no está inicializado.&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="p">}</span>
-</code></pre></div></li>
-<li>Esto es especialmente útil para propiedades <code>lateinit</code>, ya que acceder a una propiedad <code>lateinit</code> no inicializada lanzaría una excepción.
-     La verificación con <code>.isInitialized</code> te permite evitar esta excepción comprobando primero si la propiedad ha sido inicializada.</li>
-</ol>
-<p>El uso de <code>::</code> es bastante versátil y forma parte de las capacidades reflexivas y funcionales de Kotlin, 
-permitiendo escribir código más abstracto y general, así como realizar comprobaciones en tiempo de ejecución sobre las propiedades y funciones de tus objetos.</p>
+</ul>
 
 
 

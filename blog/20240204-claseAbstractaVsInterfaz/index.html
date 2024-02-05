@@ -6,13 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Modificador lateinit, ejemplo de uso.">
+        <meta name="description" content="Diferencias entre clase abstracta e interfaz.">
       
       
         <meta name="author" content="Eduardo Fdez">
       
       
-        <link rel="canonical" href="https://revilofe.github.io/blog/20240205-modificadorLateInit/">
+        <link rel="canonical" href="https://revilofe.github.io/blog/20240204-claseAbstractaVsInterfaz/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>Modificador lateinit. - R Z O</title>
+        <title>Diferencias entre clase abstracta e interfaz. - R Z O</title>
       
     
     
@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#modificador-lateinit" class="md-skip">
+        <a href="#diferencias-entre-clase-abstracta-e-interfaz" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -134,7 +134,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Modificador lateinit.
+              Diferencias entre clase abstracta e interfaz.
             
           </span>
         </div>
@@ -3690,26 +3690,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-gestor-de-tareas" class="md-nav__link">
+  <a href="#clase-abstracta" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo: Gestor de Tareas
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ejemplo: Gestor de Tareas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#referencia-a-funciones-o-propiedades" class="md-nav__link">
-    <span class="md-ellipsis">
-      Referencia a Funciones o Propiedades:
+      Clase Abstracta
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#interfaz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interfaz
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diferencias-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diferencias Principales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-usar-uno-u-otro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuándo usar uno u otro
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-clase-abstracta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Clase Abstracta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-interfaz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Interfaz
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumen
+    </span>
+  </a>
   
 </li>
       
@@ -3735,7 +3774,7 @@
       
     
     
-      <a href="../../tags/#lateinit" class="md-tag md-tag-icon">lateinit</a>
+      <a href="../../tags/#clase-abstracta" class="md-tag md-tag-icon">clase abstracta</a>
     
   
     
@@ -3744,7 +3783,7 @@
       
     
     
-      <a href="../../tags/#inicializacion" class="md-tag md-tag-icon">inicialización</a>
+      <a href="../../tags/#interfaz" class="md-tag md-tag-icon">interfaz</a>
     
   
     
@@ -3763,115 +3802,141 @@
   
 
 
-<h1 id="modificador-lateinit">Modificador lateinit<a class="headerlink" href="#modificador-lateinit" title="Permanent link">&para;</a></h1>
-<p>El modificador <code>lateinit</code> es útil en Kotlin para casos en los que queremos declarar una propiedad no nula pero no podemos inicializarla en el momento de la creación del objeto. 
-Es comúnmente utilizado en situaciones como la inyección de dependencias o la inicialización posterior en el ciclo de vida del objeto.</p>
-<h2 id="ejemplo-gestor-de-tareas"><strong>Ejemplo: Gestor de Tareas</strong><a class="headerlink" href="#ejemplo-gestor-de-tareas" title="Permanent link">&para;</a></h2>
-<p>Vamos a crear una clase <code>GestorTareas</code> que represente un sistema simple para manejar tareas. Inicialmente, cuando se crea el gestor, aún no tenemos una lista de tareas para asignarle, 
-así que queremos inicializar esa lista más tarde.</p>
-<ol>
-<li>
-<p><strong>Creación de la Clase con <code>lateinit</code>:</strong></p>
+<h1 id="diferencias-entre-clase-abstracta-e-interfaz">Diferencias entre clase abstracta e interfaz<a class="headerlink" href="#diferencias-entre-clase-abstracta-e-interfaz" title="Permanent link">&para;</a></h1>
+<p>En Kotlin, tanto las clases abstractas como las interfaces son conceptos fundamentales para la abstracción y el diseño de clases. 
+Permiten definir una estructura que otras clases pueden implementar o heredar. Aunque comparten algunos propósitos, 
+tienen características y usos distintos. </p>
+<h3 id="clase-abstracta">Clase Abstracta<a class="headerlink" href="#clase-abstracta" title="Permanent link">&para;</a></h3>
+<p>Una clase abstracta es una clase que no se puede instanciar por sí misma. Se utiliza como clase base para otras clases. 
+Las clases abstractas se utilizan para definir un patrón común para un grupo de clases relacionadas.</p>
+<p><strong>Características:</strong>
+- Puede contener implementaciones concretas de algunos métodos.
+- Puede declarar constructores.
+- Puede tener propiedades con estado (variables con valores almacenados).
+- Las clases que heredan de una clase abstracta deben implementar todos los métodos abstractos, a menos que ellas mismas sean abstractas.</p>
+<p><strong>Uso típico:</strong>
+- Cuando tienes una base común para varias clases, pero nunca necesitas instanciar la clase base por sí misma.
+- Cuando tus clases base necesitan tener algunas implementaciones comunes que quieres compartir con las clases derivadas.</p>
+<h3 id="interfaz">Interfaz<a class="headerlink" href="#interfaz" title="Permanent link">&para;</a></h3>
+<p>Una interfaz define un contrato que otras clases pueden implementar. En Kotlin, las interfaces son más flexibles y 
+potentes que en muchos otros lenguajes.</p>
+<p><strong>Características:</strong>
+- No puede contener un estado (no puede tener propiedades inicializadas).
+- Puede contener declaraciones de métodos así como implementaciones de métodos (a partir de Java 8 y Kotlin). 
+  Sin embargo, las implementaciones de métodos en las interfaces no pueden tener un estado.
+- Una clase puede implementar múltiples interfaces.</p>
+<p><strong>Uso típico:</strong>
+- Cuando varias clases no relacionadas deben compartir métodos comunes (pero la implementación puede ser diferente para cada clase).
+- Cuando necesitas asegurarte de que una clase implemente ciertos métodos.</p>
+<h3 id="diferencias-principales">Diferencias Principales<a class="headerlink" href="#diferencias-principales" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Define una clase <code>Tarea</code> con una propiedad <code>descripcion</code>.</li>
-<li>Define la clase <code>GestorTareas</code> que inicialmente no sabe cuáles son las tareas que va a gestionar.</li>
-<li>Utiliza <code>lateinit</code> para declarar una propiedad que almacenará una lista de <code>Tarea</code>.</li>
-<li>
-<p>Proporciona una función <code>inicializarTareas</code> para configurar las tareas después de la creación del objeto <code>GestorTareas</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Tarea</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">descripcion</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">class</span><span class="w"> </span><span class="nc">GestorTareas</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">tareas</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Tarea</span><span class="o">&gt;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">inicializarTareas</span><span class="p">(</span><span class="n">tareas</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Tarea</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">tareas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tareas</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
+<li><strong>Instanciación</strong>: No puedes instanciar clases abstractas ni interfaces. La diferencia es que una clase abstracta puede tener un constructor 
+  y puede realizar inicialización en él. Las interfaces no pueden tener constructores.</li>
+<li><strong>Estado</strong>: Las clases abstractas pueden mantener un estado (tener propiedades que almacenen valores), pero las interfaces no.</li>
+<li><strong>Implementación Múltiple</strong>: Las clases en Kotlin no pueden heredar de más de una clase (abstracta o no), pero pueden implementar múltiples interfaces.</li>
+<li><strong>Funciones con Implementación</strong>: Ambas, clases abstractas e interfaces, pueden tener funciones con implementación. 
+  Sin embargo, solo las clases abstractas pueden tener un estado que esas funciones puedan modificar.</li>
+</ul>
+<h3 id="cuando-usar-uno-u-otro">Cuándo usar uno u otro<a class="headerlink" href="#cuando-usar-uno-u-otro" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Usa una clase abstracta</strong> cuando tengas clases que compartan un código común muy estrechamente relacionado,
+  y cuando ese código incluya algún estado que deba ser mantenido.</li>
+<li><strong>Usa una interfaz</strong> cuando tengas clases que necesiten compartir métodos, pero no comportamientos (implementaciones de métodos) o estados,
+  o cuando quieras aprovechar la implementación múltiple para combinar varios comportamientos.</li>
+</ul>
+<p>En resumen, la elección entre una clase abstracta y una interfaz puede depender de las necesidades específicas de tu diseño de software y 
+de las características del lenguaje que estés utilizando. Kotlin ofrece una gran flexibilidad y características adicionales para interfaces 
+que otros lenguajes no tienen, por lo que vale la pena considerar estas características al tomar tu decisión.</p>
+<h3 id="ejemplo-de-clase-abstracta">Ejemplo de Clase Abstracta<a class="headerlink" href="#ejemplo-de-clase-abstracta" title="Permanent link">&para;</a></h3>
+<p><strong>Escenario:</strong>
+Supongamos que estás construyendo un sistema para un zoológico que necesita manejar diferentes tipos de animales. 
+Todos los animales tienen ciertas características en común, como la necesidad de alimentarse, pero cada tipo de animal tiene su propia forma de alimentarse.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Clase abstracta Animal</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Animal</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">alimentarse</span><span class="p">()</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">dormir</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="si">$</span><span class="n">nombre</span><span class="s"> está durmiendo&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">mostrarTareas</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">::</span><span class="n">tareas</span><span class="p">.</span><span class="na">isInitialized</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">            </span><span class="n">tareas</span><span class="p">.</span><span class="na">forEach</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">tarea</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="n">tarea</span><span class="p">.</span><span class="na">descripcion</span><span class="p">)</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Las tareas aún no han sido inicializadas.&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="p">}</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1">// Clase concreta León que hereda de Animal</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Leon</span><span class="p">(</span><span class="n">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Animal</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">alimentarse</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="si">$</span><span class="n">nombre</span><span class="s">, el león, está comiendo carne&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1">// Clase concreta Elefante que hereda de Animal</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Elefante</span><span class="p">(</span><span class="n">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Animal</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">alimentarse</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="si">$</span><span class="n">nombre</span><span class="s">, el elefante, está comiendo vegetales&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="p">}</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">leon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Leon</span><span class="p">(</span><span class="s">&quot;Leo&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="n">leon</span><span class="p">.</span><span class="na">alimentarse</span><span class="p">()</span><span class="w">  </span><span class="c1">// Output: Leo, el león, está comiendo carne</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="n">leon</span><span class="p">.</span><span class="na">dormir</span><span class="p">()</span><span class="w">       </span><span class="c1">// Output: Leo está durmiendo</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">elefante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Elefante</span><span class="p">(</span><span class="s">&quot;Eli&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="n">elefante</span><span class="p">.</span><span class="na">alimentarse</span><span class="p">()</span><span class="w">  </span><span class="c1">// Output: Eli, el elefante, está comiendo vegetales</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">    </span><span class="n">elefante</span><span class="p">.</span><span class="na">dormir</span><span class="p">()</span><span class="w">       </span><span class="c1">// Output: Eli está durmiendo</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">gestor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GestorTareas</span><span class="p">()</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">gestor</span><span class="p">.</span><span class="na">mostrarTareas</span><span class="p">()</span><span class="w">  </span><span class="c1">// Debe indicar que las tareas no están inicializadas</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">listaTareas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="n">Tarea</span><span class="p">(</span><span class="s">&quot;Aprender Kotlin&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">Tarea</span><span class="p">(</span><span class="s">&quot;Hacer ejercicio&quot;</span><span class="p">))</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">gestor</span><span class="p">.</span><span class="na">inicializarTareas</span><span class="p">(</span><span class="n">listaTareas</span><span class="p">)</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="n">gestor</span><span class="p">.</span><span class="na">mostrarTareas</span><span class="p">()</span><span class="w">  </span><span class="c1">// Ahora debe mostrar las tareas asignadas</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
+<p>En este ejemplo, <code>Animal</code> es una clase abstracta que define un método abstracto <code>alimentarse</code> y un método concreto <code>dormir</code>. 
+Las clases <code>Leon</code> y <code>Elefante</code> heredan de <code>Animal</code> y proporcionan su propia implementación del método <code>alimentarse</code>.</p>
+<h3 id="ejemplo-de-interfaz">Ejemplo de Interfaz<a class="headerlink" href="#ejemplo-de-interfaz" title="Permanent link">&para;</a></h3>
+<p><strong>Escenario:</strong>
+Imagina que estás desarrollando un software para gestionar dispositivos inteligentes en una casa. Cada dispositivo tiene diferentes capacidades, 
+pero todos deben poder ser encendidos o apagados.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Interfaz DispositivoInteligente</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">interface</span><span class="w"> </span><span class="nc">DispositivoInteligente</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">encender</span><span class="p">()</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">apagar</span><span class="p">()</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">// Clase Luz que implementa la interfaz DispositivoInteligente</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Luz</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">DispositivoInteligente</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">encender</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;La luz está encendida&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">apagar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;La luz está apagada&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p">}</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="c1">// Clase Termostato que implementa la interfaz DispositivoInteligente</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Termostato</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">DispositivoInteligente</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">encender</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;El termostato está ajustando la temperatura&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">apagar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;El termostato está apagado&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="p">}</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">luz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Luz</span><span class="p">()</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">    </span><span class="n">luz</span><span class="p">.</span><span class="na">encender</span><span class="p">()</span><span class="w">  </span><span class="c1">// Output: La luz está encendida</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="n">luz</span><span class="p">.</span><span class="na">apagar</span><span class="p">()</span><span class="w">    </span><span class="c1">// Output: La luz está apagada</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">termostato</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Termostato</span><span class="p">()</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">    </span><span class="n">termostato</span><span class="p">.</span><span class="na">encender</span><span class="p">()</span><span class="w">  </span><span class="c1">// Output: El termostato está ajustando la temperatura</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">    </span><span class="n">termostato</span><span class="p">.</span><span class="na">apagar</span><span class="p">()</span><span class="w">    </span><span class="c1">// Output: El termostato está apagado</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="p">}</span>
 </code></pre></div>
-</li>
-</ul>
-<p>En este ejemplo, el gestor de tareas comienza sin conocer las tareas. Solo después de inicializarlo con una lista de tareas (mediante el método <code>inicializarTareas</code>), 
-está listo para funcionar y mostrar las tareas. Esto demuestra el uso de <code>lateinit</code> para propiedades que serán inicializadas más tarde y también muestra cómo comprobar 
-si una propiedad <code>lateinit</code> ha sido inicializada antes de usarla, usando <code>::tareas.isInitialized</code>.</p>
-<p>En Kotlin, el operador <code>::</code> se utiliza como referencia a funciones o propiedades, y también para acceder a ciertas propiedades de la reflexión del lenguaje.</p>
-</li>
-<li>
-<p><strong>Verificación de Inicialización con <code>lateinit</code>:</strong></p>
-</li>
-<li>En el contexto de una propiedad <code>lateinit</code>, puedes usar <code>::</code> para hacer referencia a la propiedad y luego <code>.isInitialized</code> para verificar si la propiedad ha sido inicializada.</li>
-<li>Ejemplo:
-        <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Ejemplo</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">texto</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">ejemplo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ejemplo</span><span class="p">()</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">::</span><span class="n">texto</span><span class="p">.</span><span class="na">isInitialized</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Verifica si &#39;texto&#39; ha sido inicializado</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="n">ejemplo</span><span class="p">.</span><span class="na">texto</span><span class="p">)</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;texto no está inicializado.&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">}</span>
-</code></pre></div></li>
-<li>
-<p>Esto es especialmente útil para propiedades <code>lateinit</code>, ya que acceder a una propiedad <code>lateinit</code> no inicializada lanzaría una excepción.
-     La verificación con <code>.isInitialized</code> te permite evitar esta excepción comprobando primero si la propiedad ha sido inicializada.</p>
-<p>El uso de <code>::</code> es bastante versátil y forma parte de las capacidades reflexivas y funcionales de Kotlin, 
-permitiendo escribir código más abstracto y general, así como realizar comprobaciones en tiempo de ejecución sobre las propiedades y funciones de tus objetos.</p>
-</li>
-</ol>
-<h3 id="referencia-a-funciones-o-propiedades">Referencia a Funciones o Propiedades:<a class="headerlink" href="#referencia-a-funciones-o-propiedades" title="Permanent link">&para;</a></h3>
+<p>En este ejemplo, <code>DispositivoInteligente</code> es una interfaz que define dos métodos: <code>encender</code> y <code>apagar</code>. 
+Las clases <code>Luz</code> y <code>Termostato</code> implementan esta interfaz y proporcionan sus propias implementaciones de estos métodos.</p>
+<h3 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Puedes obtener una referencia a una función específica de una clase o un objeto usando el operador <code>::</code>.</li>
-<li>Esto es útil, por ejemplo cómo ya hemos visto anteriormente en esta unidad, cuando quieres pasar una función como argumento a otra función de orden superior.</li>
-<li>Ejemplo:<div class="highlight"><pre><span></span><code>```kotlin
-fun saludar() {
-    println(&quot;¡Hola!&quot;)
-}
-
-fun ejecutarAccion(accion: () -&gt; Unit) {
-    accion()
-}
-
-fun main() {
-    // Pasamos la referencia de la función &#39;saludar&#39; a &#39;ejecutarAccion&#39;
-    ejecutarAccion(::saludar) // Imprime &quot;¡Hola!&quot;
-}
-```
-</code></pre></div>
-<ul>
-<li>Lo mismo se puede hacer con propiedades para obtener una referencia a la propiedad que puedes usar para leer o modificar la propiedad.</li>
-<li>Ejemplo:
-    <code>kotlin
-    var contador = 0
-
-    fun main() {
-        val referenciaContador = ::contador
-        referenciaContador.set(referenciaContador.get() + 1)
-        println(contador) // Imprime 1
-    }</code></li>
-</ul>
-</li>
+<li><strong>Usa una clase abstracta</strong> cuando quieras que varias clases compartan un código común y tengan un estado común, como en el ejemplo del zoológico,
+  donde todos los animales se alimentan de formas diferentes, pero comparten ciertas características y comportamientos.</li>
+<li><strong>Usa una interfaz</strong> cuando quieras que diferentes clases sigan un contrato común pero no necesariamente compartan un código común o estado,
+  como en el ejemplo de los dispositivos inteligentes, donde diferentes dispositivos pueden ser encendidos y apagados, pero la implementación varía
+  significativamente entre dispositivos.</li>
 </ul>
 
 

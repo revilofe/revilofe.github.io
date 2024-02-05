@@ -6,34 +6,30 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Blog">
+        <meta name="description" content="Modificador lateinit, ejemplo de uso.">
       
       
         <meta name="author" content="Eduardo Fdez">
       
       
-        <link rel="canonical" href="https://revilofe.github.io/blog/">
+        <link rel="canonical" href="https://revilofe.github.io/blog/20240205-modificadorLateInit/">
       
       
-        <link rel="prev" href="../section2/u02/teoria/IS-U2.2.1.-SOC%26SIEM/">
       
       
-        <link rel="next" href="../tags/">
-      
-      
-      <link rel="icon" href="../assets/favicon-96x96.png">
+      <link rel="icon" href="../../assets/favicon-96x96.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
     
     
       
-        <title>Blog - R Z O</title>
+        <title>Modificador lateinit. - R Z O</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -63,7 +59,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -99,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#blog" class="md-skip">
+        <a href="#modificador-lateinit" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -119,9 +115,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href=".." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
+    <a href="../.." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
       
-  <img src="../assets/ms-icon-144x144.png" alt="logo">
+  <img src="../../assets/ms-icon-144x144.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -138,7 +134,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Blog
+              Modificador lateinit.
             
           </span>
         </div>
@@ -246,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -265,7 +261,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../section1/" class="md-tabs__link">
+        <a href="../../section1/" class="md-tabs__link">
           
   
     
@@ -285,7 +281,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../section3/" class="md-tabs__link">
+        <a href="../../section3/" class="md-tabs__link">
           
   
     
@@ -305,7 +301,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../section2/" class="md-tabs__link">
+        <a href="../../section2/" class="md-tabs__link">
           
   
     
@@ -321,11 +317,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
         
   
     
@@ -342,7 +336,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../tags/" class="md-tabs__link">
+      <a href="../../tags/" class="md-tabs__link">
         
   
     
@@ -359,7 +353,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../about/" class="md-tabs__link">
+      <a href="../../about/" class="md-tabs__link">
         
   
     
@@ -388,8 +382,6 @@
           
             
               
-                
-              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -401,9 +393,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
+    <a href="../.." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
       
-  <img src="../assets/ms-icon-144x144.png" alt="logo">
+  <img src="../../assets/ms-icon-144x144.png" alt="logo">
 
     </a>
     R Z O
@@ -430,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +483,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/" class="md-nav__link ">
+            <a href="../../section1/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -571,7 +563,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/u01/" class="md-nav__link ">
+            <a href="../../section1/u01/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -604,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
+      <a href="../../section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/teoria/PROG-U1.1.1-Pseudocodigo/" class="md-nav__link">
+      <a href="../../section1/u01/teoria/PROG-U1.1.1-Pseudocodigo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/practica/PROG-U1.-Practica001/" class="md-nav__link">
+      <a href="../../section1/u01/practica/PROG-U1.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -667,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
+      <a href="../../section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -688,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/teoria/PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
+      <a href="../../section1/u01/teoria/PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -709,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/practica/PROG-U1.-Practica002/" class="md-nav__link">
+      <a href="../../section1/u01/practica/PROG-U1.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -730,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/practica/PROG-U1.-Practica003/" class="md-nav__link">
+      <a href="../../section1/u01/practica/PROG-U1.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/practica/PROG-U1.-Practica004/" class="md-nav__link">
+      <a href="../../section1/u01/practica/PROG-U1.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -772,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/teoria/PROG-U1.4.-Pytest/" class="md-nav__link">
+      <a href="../../section1/u01/teoria/PROG-U1.4.-Pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -793,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/practica/PROG-U1.-Practica005/" class="md-nav__link">
+      <a href="../../section1/u01/practica/PROG-U1.-Practica005/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -814,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/practica/PROG-U1.-Practica006/" class="md-nav__link">
+      <a href="../../section1/u01/practica/PROG-U1.-Practica006/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -888,7 +880,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/u02/" class="md-nav__link ">
+            <a href="../../section1/u02/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -921,7 +913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
+      <a href="../../section1/u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -942,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
+      <a href="../../section1/u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -963,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
+      <a href="../../section1/u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -984,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
+      <a href="../../section1/u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1005,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
+      <a href="../../section1/u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1026,7 +1018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
+      <a href="../../section1/u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1047,7 +1039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
+      <a href="../../section1/u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1068,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
+      <a href="../../section1/u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1089,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
+      <a href="../../section1/u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1110,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/teoria/PROG-U2.5.1.-DeberiasDocumentar/" class="md-nav__link">
+      <a href="../../section1/u02/teoria/PROG-U2.5.1.-DeberiasDocumentar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1188,7 +1180,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/u03/" class="md-nav__link ">
+            <a href="../../section1/u03/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1221,7 +1213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/teoria/PROG-U3.0.-Cadenas/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.0.-Cadenas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1242,7 +1234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/practica/PROG-U3.-Practica000/" class="md-nav__link">
+      <a href="../../section1/u03/practica/PROG-U3.-Practica000/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1263,7 +1255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/teoria/PROG-U3.1.-Listas/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.1.-Listas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1284,7 +1276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/teoria/PROG-U3.2.-Tuplas/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.2.-Tuplas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1305,7 +1297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/practica/PROG-U3.-Practica001/" class="md-nav__link">
+      <a href="../../section1/u03/practica/PROG-U3.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1326,7 +1318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/teoria/PROG-U3.3.-Diccionarios/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.3.-Diccionarios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1347,7 +1339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/practica/PROG-U3.-Practica002/" class="md-nav__link">
+      <a href="../../section1/u03/practica/PROG-U3.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1368,7 +1360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/teoria/PROG-U3.4.-Conjuntos/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.4.-Conjuntos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1389,7 +1381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/practica/PROG-U3.-Practica003/" class="md-nav__link">
+      <a href="../../section1/u03/practica/PROG-U3.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1410,7 +1402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/teoria/PROG-U3.5.-Funciones/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.5.-Funciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1431,7 +1423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/teoria/PROG-U3.6.-OtrosAmpliacion1/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.6.-OtrosAmpliacion1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1452,7 +1444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/teoria/PROG-U3.7.-OtrosAmpliacion2/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.7.-OtrosAmpliacion2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1530,7 +1522,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/u04/" class="md-nav__link ">
+            <a href="../../section1/u04/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1563,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/teoria/PROG-U4.1.-kotlin/" class="md-nav__link">
+      <a href="../../section1/u04/teoria/PROG-U4.1.-kotlin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1584,7 +1576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/practica/PROG-U4.-Practica001/" class="md-nav__link">
+      <a href="../../section1/u04/practica/PROG-U4.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1605,7 +1597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
+      <a href="../../section1/u04/teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1626,7 +1618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/teoria/PROG-U4.2.1.-kotlin-aclaraciones/" class="md-nav__link">
+      <a href="../../section1/u04/teoria/PROG-U4.2.1.-kotlin-aclaraciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1647,7 +1639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/teoria/PROG-U4.3.-POO/" class="md-nav__link">
+      <a href="../../section1/u04/teoria/PROG-U4.3.-POO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1668,7 +1660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/teoria/PROG-U4.3.-kotlinPOO/" class="md-nav__link">
+      <a href="../../section1/u04/teoria/PROG-U4.3.-kotlinPOO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1689,7 +1681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/teoria/PROG-U4.4.-kotlinResumen/" class="md-nav__link">
+      <a href="../../section1/u04/teoria/PROG-U4.4.-kotlinResumen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1710,7 +1702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/practica/PROG-U4.-Practica002/" class="md-nav__link">
+      <a href="../../section1/u04/practica/PROG-U4.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1731,7 +1723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/practica/PROG-U4.-Practica003/" class="md-nav__link">
+      <a href="../../section1/u04/practica/PROG-U4.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1752,7 +1744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/practica/PROG-U4.-Practica004/" class="md-nav__link">
+      <a href="../../section1/u04/practica/PROG-U4.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1773,7 +1765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/practica/PROG-U4.-Practica005/" class="md-nav__link">
+      <a href="../../section1/u04/practica/PROG-U4.-Practica005/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1794,7 +1786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/practica/PROG-U4.-Practica006/" class="md-nav__link">
+      <a href="../../section1/u04/practica/PROG-U4.-Practica006/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1854,7 +1846,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/u05/" class="md-nav__link ">
+            <a href="../../section1/u05/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1887,7 +1879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u05/teoria/PROG-U5.1.-clasesYobjetos/" class="md-nav__link">
+      <a href="../../section1/u05/teoria/PROG-U5.1.-clasesYobjetos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1908,7 +1900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u05/teoria/PROG-U5.2.-VisibilidadEnClases/" class="md-nav__link">
+      <a href="../../section1/u05/teoria/PROG-U5.2.-VisibilidadEnClases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1929,7 +1921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u05/teoria/PROG-U5.3.-Herencia/" class="md-nav__link">
+      <a href="../../section1/u05/teoria/PROG-U5.3.-Herencia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1983,7 +1975,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/u06/" class="md-nav__link ">
+            <a href="../../section1/u06/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2054,7 +2046,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/u07/" class="md-nav__link ">
+            <a href="../../section1/u07/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2087,7 +2079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
+      <a href="../../section1/u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2108,7 +2100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
+      <a href="../../section1/u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2129,7 +2121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
+      <a href="../../section1/u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2150,7 +2142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
+      <a href="../../section1/u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2171,7 +2163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
+      <a href="../../section1/u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2235,7 +2227,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/u09/" class="md-nav__link ">
+            <a href="../../section1/u09/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2268,7 +2260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u09/teoria/PROG-U9.1.-AccesoBBDD/" class="md-nav__link">
+      <a href="../../section1/u09/teoria/PROG-U9.1.-AccesoBBDD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2289,7 +2281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u09/teoria/PROG-U9.2.-JDBC-1/" class="md-nav__link">
+      <a href="../../section1/u09/teoria/PROG-U9.2.-JDBC-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2310,7 +2302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u09/teoria/PROG-U9.3.-JDBC-2/" class="md-nav__link">
+      <a href="../../section1/u09/teoria/PROG-U9.3.-JDBC-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2331,7 +2323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u09/teoria/PROG-U9.4.-DAO/" class="md-nav__link">
+      <a href="../../section1/u09/teoria/PROG-U9.4.-DAO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2352,7 +2344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u09/teoria/PROG-U9.5.-OtrosAspectos/" class="md-nav__link">
+      <a href="../../section1/u09/teoria/PROG-U9.5.-OtrosAspectos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2421,7 +2413,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section3/" class="md-nav__link ">
+            <a href="../../section3/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2495,7 +2487,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section3/u01/" class="md-nav__link ">
+            <a href="../../section3/u01/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2528,7 +2520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u01/teoria/EDES-U1.1.-Software-PC/" class="md-nav__link">
+      <a href="../../section3/u01/teoria/EDES-U1.1.-Software-PC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2549,7 +2541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u01/teoria/EDES-U1.2.-Lenguajes/" class="md-nav__link">
+      <a href="../../section3/u01/teoria/EDES-U1.2.-Lenguajes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2570,7 +2562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u01/teoria/EDES-U1.3.-FuncionalidadesHerramientas/" class="md-nav__link">
+      <a href="../../section3/u01/teoria/EDES-U1.3.-FuncionalidadesHerramientas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2591,7 +2583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u01/teoria/EDES-U1.4.-Traductores/" class="md-nav__link">
+      <a href="../../section3/u01/teoria/EDES-U1.4.-Traductores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2612,7 +2604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u01/teoria/EDES-U1.5.-FasesDesarrollo/" class="md-nav__link">
+      <a href="../../section3/u01/teoria/EDES-U1.5.-FasesDesarrollo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2633,7 +2625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u01/practica/EDES-U1.-Practica001/" class="md-nav__link">
+      <a href="../../section3/u01/practica/EDES-U1.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2654,7 +2646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u01/practica/EDES-U1.-Practica002/" class="md-nav__link">
+      <a href="../../section3/u01/practica/EDES-U1.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2675,7 +2667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u01/practica/EDES-U1.-Practica003/" class="md-nav__link">
+      <a href="../../section3/u01/practica/EDES-U1.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2733,7 +2725,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section3/u02/" class="md-nav__link ">
+            <a href="../../section3/u02/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2766,7 +2758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u02/teoria/EDES-U2.1.-Herramientas/" class="md-nav__link">
+      <a href="../../section3/u02/teoria/EDES-U2.1.-Herramientas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2787,7 +2779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u02/practica/EDES-U2.-Practica001/" class="md-nav__link">
+      <a href="../../section3/u02/practica/EDES-U2.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2851,7 +2843,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section3/u03/" class="md-nav__link ">
+            <a href="../../section3/u03/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2884,7 +2876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u03/teoria/EDES-U3.1.-Pruebas/" class="md-nav__link">
+      <a href="../../section3/u03/teoria/EDES-U3.1.-Pruebas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2905,7 +2897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u03/teoria/EDES-U3.2.-TestUnidadYTDD/" class="md-nav__link">
+      <a href="../../section3/u03/teoria/EDES-U3.2.-TestUnidadYTDD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2926,7 +2918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u03/teoria/EDES-U3.2.1.-Kotest/" class="md-nav__link">
+      <a href="../../section3/u03/teoria/EDES-U3.2.1.-Kotest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2947,7 +2939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u03/teoria/EDES-U3.2.2.-Mockk/" class="md-nav__link">
+      <a href="../../section3/u03/teoria/EDES-U3.2.2.-Mockk/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2968,7 +2960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u03/teoria/EDES-U3.3.-Depuracion/" class="md-nav__link">
+      <a href="../../section3/u03/teoria/EDES-U3.3.-Depuracion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3040,7 +3032,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section3/u04/" class="md-nav__link ">
+            <a href="../../section3/u04/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3073,7 +3065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u04/teoria/EDES-U4.1.-Git_Github/" class="md-nav__link">
+      <a href="../../section3/u04/teoria/EDES-U4.1.-Git_Github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3094,7 +3086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u04/teoria/EDES-U4.2.-Refactorizacion/" class="md-nav__link">
+      <a href="../../section3/u04/teoria/EDES-U4.2.-Refactorizacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3115,7 +3107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u04/teoria/EDES-U4.3.-AnalizadorCodigo/" class="md-nav__link">
+      <a href="../../section3/u04/teoria/EDES-U4.3.-AnalizadorCodigo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3136,7 +3128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u04/teoria/EDES-U4.4.-Documentacion/" class="md-nav__link">
+      <a href="../../section3/u04/teoria/EDES-U4.4.-Documentacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3157,7 +3149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u04/practica/EDES-U4.-Practica001/" class="md-nav__link">
+      <a href="../../section3/u04/practica/EDES-U4.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3178,7 +3170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u04/practica/EDES-U4.-Practica002/" class="md-nav__link">
+      <a href="../../section3/u04/practica/EDES-U4.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3199,7 +3191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u04/practica/EDES-U4.-Practica003/" class="md-nav__link">
+      <a href="../../section3/u04/practica/EDES-U4.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3220,7 +3212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u04/practica/EDES-U4.-Practica004/" class="md-nav__link">
+      <a href="../../section3/u04/practica/EDES-U4.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3241,7 +3233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u04/practica/EDES-U4.-Practica005/" class="md-nav__link">
+      <a href="../../section3/u04/practica/EDES-U4.-Practica005/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3308,7 +3300,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section2/" class="md-nav__link ">
+            <a href="../../section2/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3341,7 +3333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section2/u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
+      <a href="../../section2/u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3389,7 +3381,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section2/u01/" class="md-nav__link ">
+            <a href="../../section2/u01/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3422,7 +3414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
+      <a href="../../section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3484,7 +3476,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section2/u02/" class="md-nav__link ">
+            <a href="../../section2/u02/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3517,7 +3509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section2/u02/teoria/IS-U2.1.1.-TaxonomiaDeIncidentes/" class="md-nav__link">
+      <a href="../../section2/u02/teoria/IS-U2.1.1.-TaxonomiaDeIncidentes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3538,7 +3530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section2/u02/teoria/IS-U2.2.1.-SIEM-Evolucion/" class="md-nav__link">
+      <a href="../../section2/u02/teoria/IS-U2.2.1.-SIEM-Evolucion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3559,7 +3551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section2/u02/teoria/IS-U2.2.1.-SIEM-Implantacion/" class="md-nav__link">
+      <a href="../../section2/u02/teoria/IS-U2.2.1.-SIEM-Implantacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3580,7 +3572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section2/u02/teoria/IS-U2.2.1.-SOC%26SIEM/" class="md-nav__link">
+      <a href="../../section2/u02/teoria/IS-U2.2.1.-SOC%26SIEM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3613,19 +3605,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3634,7 +3617,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -3646,7 +3628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tags/" class="md-nav__link">
+      <a href="../../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3666,7 +3648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3686,8 +3668,6 @@
               </div>
             
             
-              
-                
               
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
@@ -3714,364 +3694,151 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
   
+<nav class="md-tags" >
   
-
-
-<h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
-<hr />
-<p>
-
-
-
-<style>
-    .md-typeset .blog-post:first-of-type h3 {
-        margin-top: 0;
-    }
-
-    .md-typeset .blog-post-title {
-        margin-bottom: 0;
-    }
-
-    .md-typeset .blog-post-extra {
-        color: var(--md-default-fg-color--light);
-    }
-
-    .md-typeset .blog-center {
-        text-align: center;
-    }
-
-    .md-typeset .blog-pagination {
-        display: inline-block;
-        margin-top: 20px;
-    }
-
-    .md-typeset .blog-pagination a {
-        color: var(--md-typeset-color);
-        float: left;
-        padding: .25em 1em;
-        text-decoration: none;
-        border-radius: 1em;
-        margin-left: .25em;
-        margin-right: .25em;
-        transition: all .15s ease-in-out;
-    }
-
-    .md-typeset .blog-pagination a.active {
-        background-color: var(--md-typeset-a-color);
-        color: white;
-        font-weight: bold;
-    }
-
-    .md-typeset .blog-pagination a:hover:not(.active) {
-        background-color: #dddddda1;
-    }
-
-    .md-typeset .blog-hidden {
-        display: none;
-    }
-</style>
-
-<style>
-    .blog-override-post {
-        padding: 30px 60px 30px 0;
-        margin-top: 10px;
-        border: 1px solid transparent;
-        cursor: default;
-    }
-
-    .blog-override-post .blog-post-title {
-        color: var(--md-typeset-a-color);
-        margin-top: 0;
-    }
-
-    .blog-post-description {
-        color: var(--md-typeset-color);
-    }
-
-    .blog-override-post:first-of-type {
-        margin-top: 0;
-    }
-
-    .blog-override-post:hover {
-        border: 1px solid #e8e8e877;
-        box-shadow: 3px 4px 10px #e8e8e8;
-    }
-
-    .blog-override-post,
-    .blog-override-post>* {
-        transition: all 0.3s ease-in-out;
-    }
-
-    .blog-override-post:hover>* {
-        transform: translateX(30px);
-    }
-
-    .blog-post-description,
-    .blog-post-extra {
-        opacity: 0.8;
-    }
-
-    .blog-override-post:hover .blog-post-description,
-    .blog-override-post:hover .blog-post-extra {
-        opacity: 1;
-    }
-
-    @media only screen and (max-width: 1000px) {
-        .blog-override-post,
-        .blog-override-post>* {
-            transition: none;
-        }
-
-        .blog-override-post:hover>* {
-            transform: none;
-        }
-
-        .blog-override-post {
-            padding: 30px 0 30px 0;
-            border: none;
-            cursor: pointer;
-        }
-
-        .blog-override-post:hover {
-            border: none;
-            box-shadow: none;
-        }
-
-        .blog-post-description,
-        .blog-post-extra,
-        .blog-override-post:hover .blog-post-description,
-        .blog-override-post:hover .blog-post-extra {
-            opacity: 1;
-        }
-    }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <style>
-    .md-typeset .blogging-tags-grid {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 5px;
-    }
-
-    .md-typeset .blogging-tag {
-        color: var(--md-typeset-color);
-        background-color: var(--md-typeset-code-color);
-        white-space: nowrap;
-        display: block;
-    }
-
-    .md-typeset .blogging-tag code {
-        border-radius: 5px;
-    }
-</style>
-
     
-
-
-
-
-
-
-<div class = "md-typeset">
-    <div class="pages">
-        
-            
-            <div class="page" id="page1">
-
-                
-                    
-                    
-                    
-                    
-
-                    
-                    
-                        
-                    
-
-                    
-                    
-                        
-                    
-                    
-                    <a href="https://revilofe.github.io/blog/20240205-modificadorLateInit/">
-    <div class="blog-override-post">
-        <h3 class="blog-post-title">Modificador lateinit.</h3>
-        
-            <div class="blogging-tags-grid">
-        
-        <code style="color: var(--md-typeset-color)">#lateinit</code>
-        
-        <code style="color: var(--md-typeset-color)">#inicialización</code>
-        
-        <code style="color: var(--md-typeset-color)">#kotlin</code>
-        
-    </div>
     
-            
-
-        
-        <p class="blog-post-description">Modificador lateinit, ejemplo de uso.</p>
-        <div class="blog-post-extra">
-            Published at: 5/2/24, 0:00
-        </div>
-    </div>
-</a>
-
-                    
-                
-                    
-                    
-                    
-                    
-
-                    
-                    
-                        
-                    
-
-                    
-                    
-                        
-                    
-                    
-                    <a href="https://revilofe.github.io/blog/20240205-propiedadesVsAtributos/">
-    <div class="blog-override-post">
-        <h3 class="blog-post-title">Atributos de clase vs Propiedades.</h3>
-        
-            <div class="blogging-tags-grid">
-        
-        <code style="color: var(--md-typeset-color)">#atributo de clase</code>
-        
-        <code style="color: var(--md-typeset-color)">#propiedad</code>
-        
-        <code style="color: var(--md-typeset-color)">#kotlin</code>
-        
-    </div>
+      
+      
     
-            
-
-        
-        <p class="blog-post-description">Diferencia entre atributo de clase y propiedad.</p>
-        <div class="blog-post-extra">
-            Published at: 5/2/24, 0:00
-        </div>
-    </div>
-</a>
-
-                    
-                
-                    
-                    
-                    
-                    
-
-                    
-                    
-                        
-                    
-
-                    
-                    
-                        
-                    
-                    
-                    <a href="https://revilofe.github.io/blog/20230213-scopeFunctions/">
-    <div class="blog-override-post">
-        <h3 class="blog-post-title">Scope functions en kotlin, como usarlas.</h3>
-        
-            <div class="blogging-tags-grid">
-        
-        <code style="color: var(--md-typeset-color)">#scope functions</code>
-        
-        <code style="color: var(--md-typeset-color)">#kotlin</code>
-        
-    </div>
     
-            
-
-        
-        <p class="blog-post-description">Scope functions en kotlin, como usarlas.</p>
-        <div class="blog-post-extra">
-            Published at: 13/2/23, 0:00
-        </div>
-    </div>
-</a>
-
-                    
-                
-                    
-                    
-                    
-                    
-
-                    
-                    
-                        
-                    
-
-                    
-                    
-                        
-                    
-                    
-                    <a href="https://revilofe.github.io/blog/20221026-nameEnPython/">
-    <div class="blog-override-post">
-        <h3 class="blog-post-title">Porque en Python empiezan los programas con if __name__ == __main__</h3>
-        
-            <div class="blogging-tags-grid">
-        
-        <code style="color: var(--md-typeset-color)">#python</code>
-        
-    </div>
+      <a href="../../tags/#lateinit" class="md-tag md-tag-icon">lateinit</a>
     
-            
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../tags/#inicializacion" class="md-tag md-tag-icon">inicialización</a>
+    
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../tags/#kotlin" class="md-tag md-tag-icon">kotlin</a>
+    
+  
+</nav>
 
-        
-        <p class="blog-post-description">te has encontrado if __name__ == __main__ en los programas de python. Entra y descubre que significa.</p>
-        <div class="blog-post-extra">
-            Published at: 26/10/22, 0:00
-        </div>
-    </div>
-</a>
 
-                    
-                
-            </div>
-        
-    </div>
+  
+  
 
-    <div class="blog-center blog-hidden">
-        <div class="blog-pagination " id="blog-pagination">
-            
-                
-                    
-                
-                <a class="page-number" href="">1</a>
-            
-        </div>
-        
-            <div>Total <b>4</b> posts.</div>
-        
-    </div>
-</div></p>
+
+<h1 id="modificador-lateinit">Modificador lateinit<a class="headerlink" href="#modificador-lateinit" title="Permanent link">&para;</a></h1>
+<p>El modificador <code>lateinit</code> es útil en Kotlin para casos en los que queremos declarar una propiedad no nula pero no podemos inicializarla en el momento de la creación del objeto. 
+Es comúnmente utilizado en situaciones como la inyección de dependencias o la inicialización posterior en el ciclo de vida del objeto.</p>
+<p><strong>Ejemplo: Gestor de Tareas</strong></p>
+<p>Vamos a crear una clase <code>GestorTareas</code> que represente un sistema simple para manejar tareas. Inicialmente, cuando se crea el gestor, aún no tenemos una lista de tareas para asignarle, 
+así que queremos inicializar esa lista más tarde.</p>
+<ol>
+<li><strong>Creación de la Clase con <code>lateinit</code>:</strong><ul>
+<li>Define una clase <code>Tarea</code> con una propiedad <code>descripcion</code>.</li>
+<li>Define la clase <code>GestorTareas</code> que inicialmente no sabe cuáles son las tareas que va a gestionar.</li>
+<li>Utiliza <code>lateinit</code> para declarar una propiedad que almacenará una lista de <code>Tarea</code>.</li>
+<li>
+<p>Proporciona una función <code>inicializarTareas</code> para configurar las tareas después de la creación del objeto <code>GestorTareas</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Tarea</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">descripcion</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">class</span><span class="w"> </span><span class="nc">GestorTareas</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">tareas</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Tarea</span><span class="o">&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">inicializarTareas</span><span class="p">(</span><span class="n">tareas</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Tarea</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">tareas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tareas</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">mostrarTareas</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">::</span><span class="n">tareas</span><span class="p">.</span><span class="na">isInitialized</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">            </span><span class="n">tareas</span><span class="p">.</span><span class="na">forEach</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">tarea</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="n">tarea</span><span class="p">.</span><span class="na">descripcion</span><span class="p">)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Las tareas aún no han sido inicializadas.&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="p">}</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">gestor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GestorTareas</span><span class="p">()</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="n">gestor</span><span class="p">.</span><span class="na">mostrarTareas</span><span class="p">()</span><span class="w">  </span><span class="c1">// Debe indicar que las tareas no están inicializadas</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">listaTareas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="n">Tarea</span><span class="p">(</span><span class="s">&quot;Aprender Kotlin&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">Tarea</span><span class="p">(</span><span class="s">&quot;Hacer ejercicio&quot;</span><span class="p">))</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="n">gestor</span><span class="p">.</span><span class="na">inicializarTareas</span><span class="p">(</span><span class="n">listaTareas</span><span class="p">)</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="n">gestor</span><span class="p">.</span><span class="na">mostrarTareas</span><span class="p">()</span><span class="w">  </span><span class="c1">// Ahora debe mostrar las tareas asignadas</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="p">}</span>
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ol>
+<p>En este ejemplo, el gestor de tareas comienza sin conocer las tareas. Solo después de inicializarlo con una lista de tareas (mediante el método <code>inicializarTareas</code>), 
+está listo para funcionar y mostrar las tareas. Esto demuestra el uso de <code>lateinit</code> para propiedades que serán inicializadas más tarde y también muestra cómo comprobar 
+si una propiedad <code>lateinit</code> ha sido inicializada antes de usarla, usando <code>::tareas.isInitialized</code>.</p>
+<p>En Kotlin, el operador <code>::</code> se utiliza como referencia a funciones o propiedades, y también para acceder a ciertas propiedades de la reflexión del lenguaje.</p>
+<ol>
+<li><strong>Referencia a Funciones o Propiedades:</strong></li>
+<li>Puedes obtener una referencia a una función específica de una clase o un objeto usando el operador <code>::</code>.</li>
+<li>Esto es útil, por ejemplo cómo ya hemos visto anteriormente en esta unidad, cuando quieres pasar una función como argumento a otra función de orden superior.</li>
+<li>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>```kotlin
+fun saludar() {
+    println(&quot;¡Hola!&quot;)
+}
+
+fun ejecutarAccion(accion: () -&gt; Unit) {
+    accion()
+}
+
+fun main() {
+    // Pasamos la referencia de la función &#39;saludar&#39; a &#39;ejecutarAccion&#39;
+    ejecutarAccion(::saludar) // Imprime &quot;¡Hola!&quot;
+}
+```
+</code></pre></div>
+<ul>
+<li>Lo mismo se puede hacer con propiedades para obtener una referencia a la propiedad que puedes usar para leer o modificar la propiedad.</li>
+<li>Ejemplo:
+    <code>kotlin
+    var contador = 0
+
+    fun main() {
+        val referenciaContador = ::contador
+        referenciaContador.set(referenciaContador.get() + 1)
+        println(contador) // Imprime 1
+    }</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Verificación de Inicialización con <code>lateinit</code>:</strong></p>
+</li>
+<li>En el contexto de una propiedad <code>lateinit</code>, puedes usar <code>::</code> para hacer referencia a la propiedad y luego <code>.isInitialized</code> para verificar si la propiedad ha sido inicializada.</li>
+<li>Ejemplo:
+        <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Ejemplo</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">texto</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">ejemplo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ejemplo</span><span class="p">()</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">::</span><span class="n">texto</span><span class="p">.</span><span class="na">isInitialized</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Verifica si &#39;texto&#39; ha sido inicializado</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="n">ejemplo</span><span class="p">.</span><span class="na">texto</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;texto no está inicializado.&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="p">}</span>
+</code></pre></div></li>
+<li>Esto es especialmente útil para propiedades <code>lateinit</code>, ya que acceder a una propiedad <code>lateinit</code> no inicializada lanzaría una excepción.
+     La verificación con <code>.isInitialized</code> te permite evitar esta excepción comprobando primero si la propiedad ha sido inicializada.</li>
+</ol>
+<p>El uso de <code>::</code> es bastante versátil y forma parte de las capacidades reflexivas y funcionales de Kotlin, 
+permitiendo escribir código más abstracto y general, así como realizar comprobaciones en tiempo de ejecución sobre las propiedades y funciones de tus objetos.</p>
 
 
 
@@ -4086,8 +3853,6 @@
 
   
 
-
-  
 
 
   <form class="md-feedback" name="feedback" hidden>
@@ -4204,70 +3969,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.caa56a14.min.js"></script>
+      <script src="../../assets/javascripts/bundle.caa56a14.min.js"></script>
       
     
   </body>
-</html><script>var currentPage = 0
-const lastComponent = window.location.href.split("/").slice(-1).pop()
-
-if (lastComponent && lastComponent.slice(0, 7) == "#blog-p") {
-  const page = parseInt(lastComponent.slice(7))
-  if (page) {
-    currentPage = page - 1
-  }
-}
-
-function scrollToTop() {
-  setTimeout(function () {
-    window.scrollTo(0, 0);
-  }, 100);
-}
-
-const onButtonClick = (ele) => {
-  var current = pagination.getElementsByClassName("active");
-  if (current.length) {
-    current[0].className = current[0].className.replace(
-      " active", ""
-    );
-  }
-  ele.className += " active";
-
-  // Togglg visibility of pages
-  const destPage = parseInt(ele.textContent)
-  var pages = document.getElementsByClassName("page")
-  if (destPage && pages.length) {
-    for (var j = 0; j < pages.length; j++) {
-      const pageId = parseInt(pages[j].id.replace("page", ""))
-      if (pageId != destPage) {
-        // This is not the destination page
-        if (!pages[j].className.includes("blog-hidden")) {
-          pages[j].className += " blog-hidden"
-        }
-      } else {
-        // This is the destination page
-        pages[j].className = pages[j].className.replace(" blog-hidden", "")
-      }
-    }
-    scrollToTop();
-  }
-};
-
-var pagination = document.getElementById("blog-pagination");
-if (pagination) {
-  var links = pagination.getElementsByClassName("page-number");
-  if (links.length) {
-    for (var i = 0; i < links.length; i++) {
-      // Toggle pagination highlight
-      links[i].addEventListener("click", function () {
-        onButtonClick(this);
-      });
-    }
-    links[currentPage].className += " active"
-    onButtonClick(links[currentPage]);
-  }
-}
-</script>
+</html>

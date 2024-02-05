@@ -128,7 +128,7 @@ fun main() {
 }
 ```
 
-Diferencias y características de Kotlin en relación con C# en este contexto:
+### Diferencias y características de Kotlin en relación con C# en este contexto:
 
 1. **Propiedades Incorporadas**:
     - Kotlin maneja atributos de clase y propiedades como una sola entidad, a diferencia de C# que los maneja por separado.
@@ -150,6 +150,8 @@ Diferencias y características de Kotlin en relación con C# en este contexto:
 
 5. **Sintaxis de Funciones y Clases**:
     - La sintaxis de Kotlin es más concisa. Por ejemplo, no es necesario especificar el tipo de retorno para funciones que no retornan un valor (equivalente a `void` en C#).
+
+### Conclusión:
 
 Kotlin, con su diseño moderno, ofrece un enfoque más compacto y expresivo, especialmente útil para definir propiedades y realizar validaciones. 
 El idioma promueve un código más seguro y menos propenso a errores en tiempo de ejecución gracias a su manejo de nulos y su sistema de tipos.

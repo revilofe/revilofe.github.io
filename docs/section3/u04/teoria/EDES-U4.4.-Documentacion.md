@@ -15,7 +15,9 @@ tags:
     - KDoc
 ---
 
-## Documentación y comentarios.
+## 4.4. Documentación y comentarios.
+
+### 1. La documentación
 
 A la hora de comentar, hay dos escuelas:
 
@@ -28,24 +30,26 @@ Un sistema **sin documentación** está **incompleto**. Para tener **calidad**, 
 
 Si más tardes tienes que modificar el software, estos comentarios, facilitarán la **comprensíón** de lo que los programadores anteriores hicieron o intentarón hacer.
 
-### ¿Dónde situar la documentación?
+#### 1.1. ¿Dónde situar la documentación?
 
 Por tanto la documentación es **totalmente necesaria**, pero ¿donde la ponemos?    
 
-- En documentos **separados** del código. Suelen **olvidarse** y no se mantienen.
-- Lo más **cerca del código**, para eso tenemos los comentarios, **facilitará encontrarlos y mantenerlos**.
+- Mala práctica: En documentos **separados** del código. Suelen **olvidarse** y no se mantienen.
+- Buena práctica: Lo más **cerca del código**, para eso tenemos los comentarios, **facilitará encontrarlos y mantenerlos**.
   
 
-### ¿Qué documentar?
+#### 1.2. ¿Qué documentar?
 
-Puedes usar los comentarios para **documentar**:
-- Decisiones de diseño.
-- Explicaciones sobre la existencia, funcionamiento o razón de ser de cierta parte del código.
-- Las interfaces y su ejemplo de uso.
-- Efectos de usar cierto código.
-- Partes no finalizadas o que se pueden mejorar (TODO’s).
+Puedes usar los comentarios para **documentar**:   
 
-### ¿Por qué documentar?
+- Decisiones de diseño.   
+- Explicaciones sobre la existencia, funcionamiento o razón de ser de cierta parte del código.   
+- Las interfaces y su ejemplo de uso.   
+- Efectos de usar cierto código.   
+- Partes no finalizadas o que se pueden mejorar (TODO’s).   
+
+
+### 4. ¿Por qué documentar?
 Ten en cuenta que los comentarios pueden **ayudarte en el futuro**, ya que estarán ahi para recordarte lo que hiciste y por qué lo hiciste. Por ejemplo ,seguramente tu mente haya borrado información valiosa de por qué una variable tiene un valor de inicio y no otro. Por tanto, tu yo futuro y tu equipo te agradecerán los comentarios aclaratorios de tomas de decisiones.  
 
 Además, los comentarios son una **buena herramienta de diseño**. Existen gurus, como John Ousterhout, en “A Philosophy of Software Design” que recomienda **empezar con los comentarios antes de programar**. Pero, ¿por qué lo recomienda? Escribir en un lenguaje humano cómo funciona algo antes de implementarlo realmente, te da la capacidad de
@@ -55,13 +59,13 @@ Además, los comentarios son una **buena herramienta de diseño**. Existen gurus
 
 No te sientas mal si tienes que recurrir de vez en cuando a explicar la forma en que funciona algo, siempre y cuando *no sea la práctica común*.
 
-### ¿Cómo usar los comentarios para que sean valiosos?
+### 5. ¿Cómo usar los comentarios para que sean valiosos?
 
 Como una buena guía, si no eres capaz de crear un comentario **concreto y corto** sobre cómo funciona o por qué existe algo, lo más probable es que **tengas que re-pensar tu diseño**.
 
 No todos los comentarios son valiosos, hay **algunos que pueden estorbar** más de lo que ayudan, por ejemplo, los que no aportan información a lo que es obvio en el código.
 
-Hablemos de algunas formas de **aprovecharlos lo mejor posible** para que contribuyan positivamente a aumentar la calidad del proyecto:
+Hablemos de algunas formas de **aprovecharlos lo mejor posible** para que contribuyan positivamente a aumentar la calidad del proyecto:   
 
 - Escribe *los comentarios primero*: Una de las partes más importantes de los comentarios como documentación es que **deben ser concretos, cercanos a la realidad y que proporcionen la mayor cantidad de información útil posible**.  Para lograr esto, se tienen que **crear lo más cerca que puedas a la creación del código**. Pero como todos sabemos que después de escribir y probar (básicamente) el código vamos a sentir que ya está terminado, por tanto, es buena
   práctica obligarte a escribirlos antes, **justo como propone TDD con las pruebas**. De esta manera te asegurarás que tu código esté documentado incluso antes de escribirlo y **te servirán como una herramienta de diseño** que te ayudará a pensar mejor en la usabilidad de tus módulos y piezas de software.  
@@ -70,10 +74,11 @@ Hablemos de algunas formas de **aprovecharlos lo mejor posible** para que contri
 - *Crea comentarios sobre la interfaz*: **La interfaz es el medio de uso que tus módulos o funciones presentan** para que las demás partes de tu sistema lo usen. Lo primero que deberías documentar y explicar es esta interfaz, para que más personas a parte de ti puedan usar este pedazo de código.  
 
 
-- *Escribe comentarios claros* sobre:  
-  - **Cómo usar esa pieza de código**
-  - **Por qué existe esa parte del sistema**
-  - **Qué efectos tiene usarla**
+- *Escribe comentarios claros* sobre:
+   
+   * **Cómo usar esa pieza de código**   
+   * **Por qué existe esa parte del sistema**   
+   * **Qué efectos tiene usarla**   
 
   Este tipo de comentarios son los que aportan mayor valor al sistema y si están lo suficientemente completos, con ejemplos y explicaciones claras, son una documentación válida que está en un muy buen lugar: es fácil de encontrar y no se va a perder enterrada entre otros documentes que después nadie va a consultar.  
 

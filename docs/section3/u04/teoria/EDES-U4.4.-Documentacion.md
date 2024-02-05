@@ -49,7 +49,7 @@ Puedes usar los comentarios para **documentar**:
 - Partes no finalizadas o que se pueden mejorar (TODO’s).   
 
 
-### 4. ¿Por qué documentar?
+#### 1.3. ¿Por qué documentar?
 Ten en cuenta que los comentarios pueden **ayudarte en el futuro**, ya que estarán ahi para recordarte lo que hiciste y por qué lo hiciste. Por ejemplo ,seguramente tu mente haya borrado información valiosa de por qué una variable tiene un valor de inicio y no otro. Por tanto, tu yo futuro y tu equipo te agradecerán los comentarios aclaratorios de tomas de decisiones.  
 
 Además, los comentarios son una **buena herramienta de diseño**. Existen gurus, como John Ousterhout, en “A Philosophy of Software Design” que recomienda **empezar con los comentarios antes de programar**. Pero, ¿por qué lo recomienda? Escribir en un lenguaje humano cómo funciona algo antes de implementarlo realmente, te da la capacidad de
@@ -59,7 +59,7 @@ Además, los comentarios son una **buena herramienta de diseño**. Existen gurus
 
 No te sientas mal si tienes que recurrir de vez en cuando a explicar la forma en que funciona algo, siempre y cuando *no sea la práctica común*.
 
-### 5. ¿Cómo usar los comentarios para que sean valiosos?
+#### 1.4. ¿Cómo usar los comentarios para que sean valiosos?
 
 Como una buena guía, si no eres capaz de crear un comentario **concreto y corto** sobre cómo funciona o por qué existe algo, lo más probable es que **tengas que re-pensar tu diseño**.
 
@@ -88,8 +88,8 @@ Hablemos de algunas formas de **aprovecharlos lo mejor posible** para que contri
 > Escribir comentarios es una de las grandes tareas que los programadores debemos dominar. Los lenguajes de programación y los entornos de programación cada vez le dan más poder a esta parte de los programas y permiten incluso escribir pruebas en ellos, generar documentación automática y listar tareas a partir de ellos.
 > Si pones el suficiente esmero en aprender a escribir buenos comentarios y mantenerlos, serán una gran herramienta de diseño y documentación de tu software.
 
-### Herramientas para documentar
-#### DOKA
+### 2. Herramientas para documentar
+#### 2.1. DOKA
 [Dokka](https://kotlin.github.io/dokka/1.6.10/)
 
 - Herramienta que nos permite generar la documentación en distintos formatos.
@@ -106,7 +106,7 @@ repositories {
 ```
 Ahora en aparecerán nuevas tareas en la pestaña de gradle.
 
-#### KDOC
+#### 2.2. KDOC
 
 [Sintaxis de KDoc](https://kotlinlang.org/docs/kotlin-doc.html#kdoc-syntax)
 

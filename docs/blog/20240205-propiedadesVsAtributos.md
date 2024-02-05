@@ -22,9 +22,10 @@ contrastándolo con su contraparte en C#, donde la distinción entre ambos es m�
 
 A continuación, se desglosarán las diferencias fundamentales y las similitudes entre estas dos potencias de la programación, enfocándonos en cómo cada una maneja la encapsulación, 
 la validación y el control de acceso a los datos de una clase. Con el fin de ilustrar estos conceptos de manera práctica, se presentará un ejemplo comparativo, 
-demostrando cómo se definen y se manipulan los atributos de clase y las propiedades en C# y en Kotlin. Este análisis no solo resaltará las peculiaridades sintácticas y 
-estructurales de cada lenguaje sino que también profundizará en la filosofía de diseño y los patrones de programación que cada uno promueve, proporcionando así una comprensión 
-integral de sus capacidades y idiosincrasias.
+demostrando cómo se definen y se manipulan los atributos de clase y las propiedades en C# y en Kotlin. 
+
+Este análisis no solo resaltará las peculiaridades sintácticas y estructurales de cada lenguaje sino que también profundizará en la filosofía de diseño y los patrones de 
+programación que cada uno promueve, proporcionando así una comprensión integral de sus capacidades e idiosincrasias.
 
 ### C#
 

@@ -6,7 +6,7 @@ description: Polimorfismo en la Herencia con un ejemplo.
 authors:
     - Diego Cano.
 
-date: 2024-02-05
+date: 2024-02-03
 
 tags:
   - herencia

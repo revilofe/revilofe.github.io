@@ -27,7 +27,7 @@ demostrando cómo se definen y se manipulan los atributos de clase y las propied
 Este análisis no solo resaltará las peculiaridades sintácticas y estructurales de cada lenguaje sino que también profundizará en la filosofía de diseño y los patrones de 
 programación que cada uno promueve, proporcionando así una comprensión integral de sus capacidades e idiosincrasias.
 
-### C#
+### CSharp (C#)
 
 En C#, un atributo de clase es una variable que pertenece a la clase, mientras que una propiedad es una forma de acceder y 
 controlar el acceso a ese atributo. Las propiedades pueden ofrecer un control más detallado sobre cómo se accede o se modifica 

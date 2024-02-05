@@ -36,6 +36,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://revilofe.github.io/blog/20240205-polimorfismoHerencia/</loc>
+         <lastmod>2024-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://revilofe.github.io/blog/20240205-propiedadesVsAtributos/</loc>
          <lastmod>2024-02-05</lastmod>
          <changefreq>daily</changefreq>

@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon-96x96.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f2e4d321.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -2224,6 +2224,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#4-clases-abstractas" class="md-nav__link">
     <span class="md-ellipsis">
@@ -2239,11 +2244,6 @@
       5. Interfaces
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -4285,6 +4285,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#4-clases-abstractas" class="md-nav__link">
     <span class="md-ellipsis">
@@ -4300,11 +4305,6 @@
       5. Interfaces
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -4688,7 +4688,7 @@
 <a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">x</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="k">get</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">super</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span>
 <a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="4-clases-abstractas">4. Clases abstractas<a class="headerlink" href="#4-clases-abstractas" title="Permanent link">&para;</a></h4>
+<h3 id="4-clases-abstractas">4. Clases abstractas<a class="headerlink" href="#4-clases-abstractas" title="Permanent link">&para;</a></h3>
 <p>Kotlin admite <strong>clases abstractas</strong> al igual que Java. Una clase abstracta es una clase con métodos marcados como abstractos y que por tanto no puede ser instanciada. Si una clase tiene uno o varios métodos abstractos es una clase abstracta y se indica con la palabra clave <code>'abstract'</code>.</p>
 <p>La subclase concreta de una clase abstracta deberá implementar todos los métodos y propiedades definidos en la clase abstracta; de lo contrario, también será considerada como una clase abstracta.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">open</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Person</span><span class="w"> </span><span class="p">{</span>
@@ -4708,7 +4708,7 @@
 <a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="p">}</span>
 </code></pre></div>
 <p>Las clases abstractas pueden contener métodos con implementación por defecto como cualquier otra clase. Las subclases de la clase abstracta pueden sobreescribir la implementación predeterminada de un método pero solo si el método tiene el modificador <code>'open'</code>. Los métodos marcados como <code>'abstract'</code> también son <code>'open'</code> por defecto. Las clases abstractas también pueden definir variables de instancia al contrario que pasa con las interfaces.</p>
-<h4 id="5-interfaces">5. Interfaces<a class="headerlink" href="#5-interfaces" title="Permanent link">&para;</a></h4>
+<h3 id="5-interfaces">5. Interfaces<a class="headerlink" href="#5-interfaces" title="Permanent link">&para;</a></h3>
 <p>Las interfaces en Kotlin son muy similares a Java 8. Pueden contener declaraciones de métodos abstractos, así como implementaciones de métodos. Lo que los diferencia de las clases abstractas es que las interfaces no pueden almacenar el estado, es decir, no pueden tener variables de instancia. Pueden tener propiedades, pero estas deben ser abstractas o proporcionar implementaciones de accesores.</p>
 <p>Una interfaz se define usando la palabra clave <code>'interface'</code>. Un método en una interfaz es abstracto por defecto si no se proporciona una implementación.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">interface</span><span class="w"> </span><span class="nc">MyInterface</span><span class="w"> </span><span class="p">{</span>
@@ -4935,7 +4935,7 @@
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.caa56a14.min.js"></script>
       
     
   </body>

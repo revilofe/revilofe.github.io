@@ -6,7 +6,7 @@ description: Diferencias entre clase abstracta e interfaz.
 authors:
     - Diego Cano.
 
-date: 2024-02-05
+date: 2024-02-04
 
 tags:
   - clase abstracta

@@ -6,7 +6,7 @@ description: Modificador lateinit, ejemplo de uso.
 authors:
     - Diego Cano.
 
-date: 2024-02-05
+date: 2024-02-02
 
 tags:
   - lateinit

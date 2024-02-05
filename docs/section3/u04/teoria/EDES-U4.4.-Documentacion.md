@@ -29,9 +29,12 @@ Un sistema **sin documentación** está **incompleto**. Para tener **calidad**, 
 Si más tardes tienes que modificar el software, estos comentarios, facilitarán la **comprensíón** de lo que los programadores anteriores hicieron o intentarón hacer.
 
 ### ¿Dónde situar la documentación?
-Por tanto la documentación es **totalmente necesaria**, pero ¿donde la ponemos?
+
+Por tanto la documentación es **totalmente necesaria**, pero ¿donde la ponemos?    
+
 - En documentos **separados** del código. Suelen **olvidarse** y no se mantienen.
 - Lo más **cerca del código**, para eso tenemos los comentarios, **facilitará encontrarlos y mantenerlos**.
+  
 
 ### ¿Qué documentar?
 
@@ -67,7 +70,7 @@ Hablemos de algunas formas de **aprovecharlos lo mejor posible** para que contri
 - *Crea comentarios sobre la interfaz*: **La interfaz es el medio de uso que tus módulos o funciones presentan** para que las demás partes de tu sistema lo usen. Lo primero que deberías documentar y explicar es esta interfaz, para que más personas a parte de ti puedan usar este pedazo de código.  
 
 
-- *Escribe comentarios claros* sobre: 
+- *Escribe comentarios claros* sobre:  
   - **Cómo usar esa pieza de código**
   - **Por qué existe esa parte del sistema**
   - **Qué efectos tiene usarla**

@@ -18,7 +18,7 @@ tags:
 El modificador `lateinit` es útil en Kotlin para casos en los que queremos declarar una propiedad no nula pero no podemos inicializarla en el momento de la creación del objeto. 
 Es comúnmente utilizado en situaciones como la inyección de dependencias o la inicialización posterior en el ciclo de vida del objeto.
 
-**Ejemplo: Gestor de Tareas**
+## **Ejemplo: Gestor de Tareas**
 
 Vamos a crear una clase `GestorTareas` que represente un sistema simple para manejar tareas. Inicialmente, cuando se crea el gestor, aún no tenemos una lista de tareas para asignarle, 
 así que queremos inicializar esa lista más tarde.
@@ -49,7 +49,9 @@ así que queremos inicializar esa lista más tarde.
                 }
             }
         }
+        ```
         
+        ```kotlin
         fun main() {
             val gestor = GestorTareas()
             gestor.mostrarTareas()  // Debe indicar que las tareas no están inicializadas
@@ -61,13 +63,36 @@ así que queremos inicializar esa lista más tarde.
         }
         ```
 
-En este ejemplo, el gestor de tareas comienza sin conocer las tareas. Solo después de inicializarlo con una lista de tareas (mediante el método `inicializarTareas`), 
-está listo para funcionar y mostrar las tareas. Esto demuestra el uso de `lateinit` para propiedades que serán inicializadas más tarde y también muestra cómo comprobar 
-si una propiedad `lateinit` ha sido inicializada antes de usarla, usando `::tareas.isInitialized`.
+    En este ejemplo, el gestor de tareas comienza sin conocer las tareas. Solo después de inicializarlo con una lista de tareas (mediante el método `inicializarTareas`), 
+    está listo para funcionar y mostrar las tareas. Esto demuestra el uso de `lateinit` para propiedades que serán inicializadas más tarde y también muestra cómo comprobar 
+    si una propiedad `lateinit` ha sido inicializada antes de usarla, usando `::tareas.isInitialized`.
+    
+    En Kotlin, el operador `::` se utiliza como referencia a funciones o propiedades, y también para acceder a ciertas propiedades de la reflexión del lenguaje.
 
-En Kotlin, el operador `::` se utiliza como referencia a funciones o propiedades, y también para acceder a ciertas propiedades de la reflexión del lenguaje.
+2. **Verificación de Inicialización con `lateinit`:**
+   - En el contexto de una propiedad `lateinit`, puedes usar `::` para hacer referencia a la propiedad y luego `.isInitialized` para verificar si la propiedad ha sido inicializada.
+   - Ejemplo:
+        ```kotlin
+        class Ejemplo {
+            lateinit var texto: String
+        }
 
-1. **Referencia a Funciones o Propiedades:**
+        fun main() {
+            val ejemplo = Ejemplo()
+            if (::texto.isInitialized) { // Verifica si 'texto' ha sido inicializado
+                println(ejemplo.texto)
+            } else {
+                println("texto no está inicializado.")
+            }
+        }
+        ```
+   - Esto es especialmente útil para propiedades `lateinit`, ya que acceder a una propiedad `lateinit` no inicializada lanzaría una excepción.
+     La verificación con `.isInitialized` te permite evitar esta excepción comprobando primero si la propiedad ha sido inicializada.
+
+    El uso de `::` es bastante versátil y forma parte de las capacidades reflexivas y funcionales de Kotlin, 
+    permitiendo escribir código más abstracto y general, así como realizar comprobaciones en tiempo de ejecución sobre las propiedades y funciones de tus objetos.
+
+### Referencia a Funciones o Propiedades:
    - Puedes obtener una referencia a una función específica de una clase o un objeto usando el operador `::`.
    - Esto es útil, por ejemplo cómo ya hemos visto anteriormente en esta unidad, cuando quieres pasar una función como argumento a otra función de orden superior.
    - Ejemplo:
@@ -97,26 +122,3 @@ En Kotlin, el operador `::` se utiliza como referencia a funciones o propiedades
             println(contador) // Imprime 1
         }
         ```
-
-2. **Verificación de Inicialización con `lateinit`:**
-   - En el contexto de una propiedad `lateinit`, puedes usar `::` para hacer referencia a la propiedad y luego `.isInitialized` para verificar si la propiedad ha sido inicializada.
-   - Ejemplo:
-        ```kotlin
-        class Ejemplo {
-            lateinit var texto: String
-        }
-
-        fun main() {
-            val ejemplo = Ejemplo()
-            if (::texto.isInitialized) { // Verifica si 'texto' ha sido inicializado
-                println(ejemplo.texto)
-            } else {
-                println("texto no está inicializado.")
-            }
-        }
-        ```
-   - Esto es especialmente útil para propiedades `lateinit`, ya que acceder a una propiedad `lateinit` no inicializada lanzaría una excepción.
-     La verificación con `.isInitialized` te permite evitar esta excepción comprobando primero si la propiedad ha sido inicializada.
-
-El uso de `::` es bastante versátil y forma parte de las capacidades reflexivas y funcionales de Kotlin, 
-permitiendo escribir código más abstracto y general, así como realizar comprobaciones en tiempo de ejecución sobre las propiedades y funciones de tus objetos.

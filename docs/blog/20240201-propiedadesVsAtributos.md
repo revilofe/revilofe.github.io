@@ -6,7 +6,7 @@ description: Diferencia entre atributo de clase y propiedad.
 authors:
     - Diego Cano.
 
-date: 2024-02-05
+date: 2024-02-01
 
 tags:
   - atributo de clase

@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon-96x96.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
     
     
       
@@ -99,7 +99,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pruebas" class="md-skip">
+        <a href="#depuracion" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -3010,11 +3010,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pruebas" class="md-nav__link">
+  <a href="#depuracion" class="md-nav__link">
     <span class="md-ellipsis">
-      Pruebas
+      Depuración
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Depuración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uso-de-println-y-logging-para-depurar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de println y logging para depurar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depuracion-por-biseccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Depuración por bisección
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depuracion-de-patito-de-goma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Depuración de patito de goma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checks-de-sanidad-y-consistencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checks de sanidad y consistencia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-proceso-de-depuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      El proceso de depuración
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3759,11 +3810,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pruebas" class="md-nav__link">
+  <a href="#depuracion" class="md-nav__link">
     <span class="md-ellipsis">
-      Pruebas
+      Depuración
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Depuración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uso-de-println-y-logging-para-depurar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de println y logging para depurar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depuracion-por-biseccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Depuración por bisección
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depuracion-de-patito-de-goma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Depuración de patito de goma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checks-de-sanidad-y-consistencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checks de sanidad y consistencia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-proceso-de-depuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      El proceso de depuración
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3837,15 +3939,98 @@
 
   <h1>3.3.-Depuración</h1>
 
-<h2 id="pruebas">Pruebas<a class="headerlink" href="#pruebas" title="Permanent link">&para;</a></h2>
+<h2 id="depuracion">Depuración<a class="headerlink" href="#depuracion" title="Permanent link">&para;</a></h2>
+<p>Una de las habilidades más importantes que adquirirá cuando esté aprendiendo a programar es la depuración. Aunque puede ser frustrante, la depuración es una de las partes más intelectualmente gratificantes, desafiantes e interesantes de la programación.</p>
+<p>La depuración puede ser vista como un trabajo de detective. El programador se enfrenta a pistas y tiene que inferir los procesos y eventos que generaron los resultados que ve.</p>
+<p>La depuración también es como una ciencia experimental. Una vez que se tiene una idea de lo que está mal, se modifica el programa y se intenta nuevamente. Si la hipótesis era correcta, se puede predecir el resultado de la modificación y así estar un paso más cerca de un programa totalmente funcional. Si la hipótesis era incorrecta, se tiene que encontrar una nueva. Como Sherlock Holmes señaló:</p>
+<blockquote>
+<p>Cuando todo aquello que es imposible ha sido eliminado, lo que quede, por muy improbable que parezca, es la verdad.
+— A. Conan Doyle</p>
+</blockquote>
+<p>Para algunas personas, la programación y la depuración son lo mismo. Es decir, la programación es el proceso de depurar gradualmente un programa hasta que haga lo que desea. Lo ideal es comenzar con un programa que funcione y hacer pequeñas modificaciones, depurándolas a medida que avanza.</p>
+<p>A medida que comience a escribir programas más extensos, es posible que pase más tiempo depurando. Más código significa más posibilidades de cometer un error y más lugares dónde se pueden esconder los errores.</p>
+<h3 id="uso-de-println-y-logging-para-depurar">Uso de println y logging para depurar<a class="headerlink" href="#uso-de-println-y-logging-para-depurar" title="Permanent link">&para;</a></h3>
+<p>Muchos programadores principiantes utilizan la técnica de depuración más simple y efectiva: agregar al programa sentencias de impresión a consola. Por ejemplo, si no está seguro de qué valor tiene una variable, puede imprimirlo en la consola para verlo.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;z es </span><span class="si">$</span><span class="n">z</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</code></pre></div>
+Mostrar el valor de <code>z</code> en la consola le permitirá ver si el cálculo es correcto. Si no lo es, puede mostrar los valores de <code>x</code> e <code>y</code> para ver si son correctos. Si no lo son, puede mostrar los valores de las variables que los inicializan, y así sucesivamente. Este tipo de salida se llama <strong>trazas</strong>.</p>
+<p>Mostrar la información de depuración en la consola es una técnica efectiva, pero tiene dos desventajas.        </p>
+<ul>
+<li>La primera es que a veces es difícil encontrar el equilibrio entre mostrar demasiada información y no mostrar suficiente. Si muestra demasiada información, la consola se llenará de mensajes y será difícil encontrar lo que está buscando. Si no muestra suficiente información, puede pasar por alto la pista que necesita.</li>
+<li>La segunda desventaja es que, una vez que haya encontrado y corregido el error, debe eliminar o comentar las sentencias de impresión. Si no lo hace, el programa se llenará de mensajes de depuración que no necesita. Esto no es un problema en programas pequeños, pero en programas grandes, puede ser difícil recordar qué mensajes de depuración son importantes y cuáles no.</li>
+</ul>
+<p>El uso de sistemas de registro o logging es una técnica más avanzada que puede ayudar a superar estas desventajas. En lugar de imprimir mensajes en la consola, puede registrarlos en un archivo. Esto le permite controlar la cantidad de información que se muestra y le permite activar o desactivar los mensajes de depuración sin tener que modificar el código.</p>
+<p>Los sistemas de registro también pueden mostrar mensajes de depuración en diferentes niveles. Por ejemplo, puede mostrar mensajes de depuración solo cuando está depurando un programa, pero no cuando está en producción. O puede mostrar mensajes de depuración solo cuando ocurre un error. O puede mostrar mensajes de depuración solo cuando ocurre un error y solo en ciertas partes del programa.</p>
+<p>Los niveles de registro son una forma de controlar la cantidad de información que se muestra. Los niveles de registro más comunes son:
+- <strong>DEBUG</strong>: mensajes de depuración que muestran información detallada sobre el estado del programa.
+- <strong>INFO</strong>: mensajes informativos que muestran información sobre el estado del programa.
+- <strong>WARN</strong>: mensajes de advertencia que muestran información sobre un posible problema.
+- <strong>ERROR</strong>: mensajes de error que muestran información sobre un problema que ha ocurrido.
+- <strong>FATAL</strong>: mensajes de error que muestran información sobre un problema que ha causado que el programa se detenga.
+- <strong>TRACE</strong>: mensajes de depuración que muestran información detallada sobre el estado del programa.
+- <strong>OFF</strong>: no se muestran mensajes de registro.
+- <strong>ALL</strong>: se muestran todos los mensajes de registro.</p>
+<p>los sistemas de registro también pueden mostrar mensajes de depuración en diferentes partes del programa. Por ejemplo, puede mostrar mensajes de depuración solo en ciertas clases o paquetes. O puede mostrar mensajes de depuración solo en ciertas partes del programa, como cuando se ejecuta una función específica.</p>
+<p>Los lenguajes de programación modernos suelen tener bibliotecas de registro que facilitan el uso de sistemas de registro. Por ejemplo, Kotlin tiene una biblioteca de registro llamada <code>logback</code>. Esta biblioteca le permite controlar la cantidad de información que se muestra y le permite mostrar mensajes de depuración en diferentes niveles y partes del programa.</p>
+<h3 id="depuracion-por-biseccion">Depuración por bisección<a class="headerlink" href="#depuracion-por-biseccion" title="Permanent link">&para;</a></h3>
+<p>Una forma de reducir el tiempo de depuración es la técnica denominada "depurar por bisección". Por ejemplo, si hay 100 líneas en su programa y las revisa una a la vez, serían 100 revisiones.</p>
+<p>Es mejor tratar de dividir el problema en dos. Busque en la mitad del programa o un valor intermedio que pueda verificar. Agregue una sentencia de impresión (o algo que permita verificar) y ejecute el programa.</p>
+<p>Si esta verificación es incorrecta, debe haber un problema en la primera mitad del programa. Si es correcta, el problema está en la segunda mitad.</p>
+<p>Cada vez que realiza una verificación como esta, reduce a la mitad el número de líneas que debe revisar. Después de seis pasos (que es mucho menos que 100), se reduciría a una o dos líneas de código, al menos en teoría.</p>
+<p>En la práctica, no siempre se conoce dónde está la "mitad del programa", y no siempre es posible verificarlo. No tiene sentido contar líneas y encontrar el punto medio exacto. En su lugar, piense en los lugares del programa donde puede haber errores y en los lugares donde es fácil verificar. Luego, elija un lugar en donde usted crea que las posibilidades de encontrar un error antes o después de esta verificación son más o menos las mismas.</p>
+<h3 id="depuracion-de-patito-de-goma">Depuración de patito de goma<a class="headerlink" href="#depuracion-de-patito-de-goma" title="Permanent link">&para;</a></h3>
+<p>Otra técnica de depuración es la "depuración del patito de goma". Si está atascado en un problema, si le explica el problema a otra persona, a veces puede encontrar la respuesta incluso antes de terminar de hacer la pregunta. Generalmente no es necesaria otra persona, incluso se podría hablar con un pato de goma. Sí, un patito de goma. Es una técnica que a menudo funciona. Incluso si no resuelve el problema, puede ayudar a aclarar el problema. Este es el origen de la conocida estrategia llamada depuración del pato de goma. Esto es real, vea https://en.wikipedia.org/wiki/Rubber_duck_debugging.</p>
+<p>El método de depuración del patito de goma es un término informal utilizado en ingeniería de software para describir un método de revisión de código. El nombre es una referencia a una historia del libro The Pragmatic Programmer en donde un programador toma un patito de goma y revisa su código forzándose a sí mismo a explicarlo, línea por línea, al pato. Existen otros muchos términos para esta técnica, que a menudo tienen que ver con objetos inanimados.</p>
+<p>Muchos programadores han tenido la experiencia de explicar un problema de programación a alguien más, posiblemente a alguien que no sabe nada sobre programación, y encontrar la solución en el proceso de explicar el problema. Al comparar lo que supuestamente hace el código con lo que hace en realidad, cualquier incongruencia resulta evidente. Usando un objeto inanimado, el programador puede tratar de lograr el mismo efecto sin tener que hablar con otra persona.</p>
+<h3 id="checks-de-sanidad-y-consistencia">Checks de sanidad y consistencia<a class="headerlink" href="#checks-de-sanidad-y-consistencia" title="Permanent link">&para;</a></h3>
+<p>Los checks de sanidad y consistencia son una forma de depuración que se realiza durante el desarrollo de software. Estos checks ayudan a prevenir errores lógicos y asegurar la coherencia de los datos en tus programas.</p>
+<p><strong>sanity check</strong>, imagina una función que calcula la raíz cuadrada de un número. Un sanity check sería verificar que el número de entrada no sea negativo antes de realizar el cálculo, ya que la raíz cuadrada de un número negativo no es un número real en matemáticas básicas.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">calcularRaizCuadrada</span><span class="p">(</span><span class="n">numero</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">):</span><span class="w"> </span><span class="kt">Double</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;El número no puede ser negativo.&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">kotlin</span><span class="p">.</span><span class="na">math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
+</code></pre></div>
+<p>Para un <strong>consistency check</strong>, considera una aplicación que gestiona usuarios y sus roles. Un consistency check aseguraría que un usuario no se pueda asignar a un rol que no existe en el sistema.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">asignarRolAUsuario</span><span class="p">(</span><span class="n">usuario</span><span class="p">:</span><span class="w"> </span><span class="n">Usuario</span><span class="p">,</span><span class="w"> </span><span class="n">rol</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">rolesValidos</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">):</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">rolesValidos</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">rol</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Rol no válido.&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">usuario</span><span class="p">.</span><span class="na">rol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rol</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
+</code></pre></div>
+<p>Estos ejemplos muestran cómo los checks de sanidad y consistencia ayudan a prevenir errores lógicos y asegurar la coherencia de los datos en tus programas.</p>
+<h3 id="el-proceso-de-depuracion">El proceso de depuración<a class="headerlink" href="#el-proceso-de-depuracion" title="Permanent link">&para;</a></h3>
+<p>Cuando está depurando un programa, y especialmente si está tratando de resolver un error difícil, hay cinco cosas que puede probar:</p>
+<ol>
+<li>Lee: Examine su código, léalo y verifique que dice lo que quería decir.</li>
+<li>Ejecuta: Experimente haciendo cambios y ejecutando diferentes versiones. A menudo, si muestra lo correcto en el lugar correcto del programa, el problema se vuelve obvio, pero para ello a veces tiene que desarrollar andamiaje.</li>
+<li>Reflexiona: ¡Tómese un tiempo para pensar! ¿Qué tipo de error es: de sintaxis, tiempo de ejecución o semántica? ¿Qué información puede obtener de los mensajes de error o de la salida del programa? ¿Qué tipo de error podría causar el problema que estás viendo? ¿Qué cambió antes de que apareciera el problema?</li>
+<li>Prueba técnicas que te permitan encontrar el error. Habla con un pato de goma, usa la depuración por bisección, etc.</li>
+<li>Vuelve atrás: En ocasiones, lo mejor que puede hacer es retroceder, deshacer los cambios recientes hasta regresar a un programa que funcione y que comprenda. Una vez logrado esto, puede comenzar a reconstruir.</li>
+</ol>
+<p>Los programadores principiantes a veces se atascan en una de estas actividades y olvidan las otras. Cada actividad viene con su propia forma de fallar.</p>
+<p>Por ejemplo, leer su código podría ayudar si el problema es un error tipográfico, pero no si el problema es un malentendido conceptual. Si no comprende lo que hace su programa, puede leerlo 100 veces y nunca ver el error, porque el error está en su cabeza.</p>
+<p>Ejecutar experimentos puede ayudar, especialmente si ejecuta pruebas pequeñas y simples, pero si ejecuta experimentos sin pensar o leer su código, puede caer en un patrón llamado "programación de caminata aleatoria", que es el proceso de hacer cambios aleatorios hasta que el programa haga lo correcto. No hace falta decir que la programación de caminata aleatoria puede llevar mucho tiempo.</p>
+<p>La persona que programa tiene que tomarse su tiempo para pensar. La depuración es como una ciencia experimental. Debe tener al menos una hipótesis sobre la causa del problema. Si hay dos o más opciones, trate de pensar en una prueba que elimine una de ellas.</p>
+<p>Incluso las mejores técnicas de depuración fallarán si hay demasiados errores, o si el código que está tratando de corregir es demasiado grande y complicado. A veces, la mejor opción es volver atrás, simplificando el programa hasta que llegue a algo que funcione y que comprenda. Los programadores principiantes a menudo son reacios a volver atrás porque no pueden soportar eliminar una línea de código (incluso si es incorrecto). Si le hace sentir mejor copie su programa en otro archivo antes de comenzar a eliminarlo. Luego puede copiar las piezas una por una. O lo que es mejor, utilice un sistema de gestión de versiones para poder recuperar versiones anteriores.</p>
+<p>Encontrar un error difícil requiere leer, ejecutar, reflexionar y, a veces, volver atrás. Si se queda atascado en una de estas actividades, pruebe las otras.</p>
 <h2 id="recursos">Recursos<a class="headerlink" href="#recursos" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://surprograma.github.io/libro-disenio-oop/docs/pruebas-automatizadas/elaborar-casos-prueba/">¿Cómo elaborar casos de prueba?</a></li>
-<li><a href="http://wiki.uqbar.org/wiki/articles/testeo-unitario-avanzado.html">Test unitario avanzado</a></li>
+<li><a href="https://www.jetbrains.com/help/idea/debugging-code.html#refreshers">Debugging code</a></li>
+<li><a href="https://www.jetbrains.com/help/idea/using-breakpoints.html#breakpoint-statuses">Using breakpoints</a></li>
 </ul>
 <h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://www.baeldung.com/kotlin/kotest">Introduction to Kotest</a></li>
+<li><a href="https://codegym.cc/es/groups/posts/es.243.depuracion-en-intellij-idea-una-guia-para-principiantes">Depuración en IntelliJ Idea una guía para pricipiantes</a></li>
+<li><a href="https://codegym.cc/groups/posts/243-debugging-in-intellij-idea-a-beginners-guide">Debugging in IntelliJ Idea a beginners guide</a></li>
 </ul>
 
 
@@ -3980,7 +4165,7 @@
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.caa56a14.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
     
   </body>

@@ -6,7 +6,7 @@ authors:
     - Eduardo Fdez
 date: 2022-11-14
 icon:   
-permalink: /prog/unidad4/4.1
+permalink: /prog/unidad5/5.3
 categories:
     - PROG
     - kotlin
@@ -71,9 +71,7 @@ En Kotlin, la herencia se maneja con una sintaxis clara y reglas específicas di
 class Example
 ```
 
-**Respuesta:**
-
-  * `Example` hereda de `Any` los métodos `equals()`, `hashCode()`, y `toString()`.
+**Respuesta:** `Example` hereda de `Any` los métodos `equals()`, `hashCode()`, y `toString()`.
 
 #### 2.1. Declaración de Herencia
 

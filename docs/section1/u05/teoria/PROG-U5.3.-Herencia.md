@@ -50,16 +50,25 @@ La herencia es un concepto clave en la Programación Orientada a Objetos (POO), 
 
 En Kotlin, la herencia se maneja con una sintaxis clara y reglas específicas diseñadas para mantener la seguridad y la claridad del código:
 
-1. **Superclase y Subclase:**
-   * La **superclase** (o clase base) es la clase existente de la que se deriva una nueva clase.
-   * La **subclase** (o clase derivada) es la nueva clase creada, que hereda propiedades y métodos de la superclase.
-2. **Herencia Implícita:**
-   * Al heredar de una superclase, la subclase obtiene automáticamente todos los campos, propiedades y métodos de dicha superclase, incluyendo aquellos heredados por la superclase de otras superclases, si las hay.
-3. **Restricción de Herencia:**
+1. **Superclase y Subclase:**  
+
+      * La **superclase** (o clase base) es la clase existente de la que se deriva una nueva clase.
+      * La **subclase** (o clase derivada) es la nueva clase creada, que hereda propiedades y métodos de la superclase.
+
+3. **Herencia Implícita:**  
+
+      * Al heredar de una superclase, la subclase obtiene automáticamente todos los campos, propiedades y métodos de dicha superclase, incluyendo aquellos heredados por la superclase de otras superclases, si las hay.
+
+4. **Restricción de Herencia:**  
+
    * Kotlin permite una herencia simple, significando que una subclase solo puede tener una clase base directa, aunque puede implementar múltiples interfaces.
-4. **Herencia Transitiva:**
+
+5. **Herencia Transitiva:**  
+
    * La herencia es transitiva. Si una clase C hereda de B, y B hereda de A, entonces C indirectamente hereda de A.
-5. **Clase Any:**
+
+6. **Clase Any:**  
+  
    * Todas las clases en Kotlin heredan de `Any`, la superclase predeterminada que proporciona métodos básicos como `equals()`, `hashCode()`, y `toString()`.
 
 #### Actividad 1: Herencia de `Any`
@@ -73,21 +82,24 @@ class Example
 
 **Respuesta:**
 
-  * `Example` hereda de `Any` los métodos `equals()`, `hashCode()`, y `toString()`.
+* `Example` hereda de `Any` los métodos `equals()`, `hashCode()`, y `toString()`.
 
 #### 2.1. Declaración de Herencia
 
 Para que una clase herede de otra en Kotlin, se coloca el nombre de la clase base después de los dos puntos en el encabezado de la subclase. Las clases en Kotlin son `final` por defecto (por similitud con java, utilizando `final` cuando se decide no permitir heredar de una clase); para permitir la herencia, se debe usar `open`.
+
+Si la clase derivada tiene un constructor primario, la clase base puede (y debe) inicializarse allí mismo, utilizando los parámetros del constructor primario.
 
 #### Actividad 2: Instancia de Clases Base y Derivadas
 
 **Pregunta:** ¿Crear una variable de clase `Base`? ¿Puedes asignarle una instancia de `DerivedWithConstructor`?
 **Código:**
 
-  ```Kotlin
-  open class Base(var p: Int)
-  class DerivedWithConstructor(p: Int) : Base(p)
-  ```
+```Kotlin
+open class Base(var p: Int)
+class DerivedWithConstructor(p: Int) : Base(p)
+```
+
 **Respuesta:** Sí, puedes crear una variable de tipo `Base` y asignarle una instancia de `DerivedWithConstructor` debido a la herencia.
 
 #### 2.2. Herencia sin Constructor Primario
@@ -98,6 +110,7 @@ Si una clase derivada no tiene un constructor primario, cada constructor secunda
 
 **Pregunta:** Ejecuta el siguiente código, instancia la subclase con 1 e imprime el valor de `p`. ¿Qué muestra en pantalla? ¿Qué sucede si quitas el constructor de la subclase? ¿Podemos definir la subclase de otra forma? ¿Qué tenemos que hacer para llamar al constructor de 2 parámetros?
 **Código:**
+
 ```kotlin
 open class Base(var p: Int) {
   constructor(p: Int, q: Int): this(p)
@@ -112,11 +125,13 @@ fun main() {
   println(instancia.p)
 }
 ```
+
 **Respuesta:**
-  * Al ejecutar, muestra `1` en pantalla, indicando el valor de `p`.
-  * Si quitas el constructor de la subclase, el código no compilará porque `DerivedWithoutConstructor` necesita definir cómo inicializar `Base`.
-  * Para definir la subclase de otra manera, podríamos considerar agregar un constructor primario o utilizar un constructor secundario que llame al constructor de dos parámetros de `Base`.
-  * Para llamar al constructor de 2 parámetros de `Base`, necesitamos definir explícitamente ese constructor en la subclase y utilizar `super(p, q)` dentro del constructor secundario.
+
+* Al ejecutar, muestra `1` en pantalla, indicando el valor de `p`.
+* Si quitas el constructor de la subclase, el código no compilará porque `DerivedWithoutConstructor` necesita definir cómo inicializar `Base`.
+* Para definir la subclase de otra manera, podríamos considerar agregar un constructor primario o utilizar un constructor secundario que llame al constructor de dos parámetros de `Base`.
+* Para llamar al constructor de 2 parámetros de `Base`, necesitamos definir explícitamente ese constructor en la subclase y utilizar `super(p, q)` dentro del constructor secundario.
 
 ### 3. Sobreescritura
 
@@ -259,6 +274,7 @@ fun main() {
     aInstance.f()
 }
 ```
+
 **Respuesta:** Al ejecutar el código en `main`, observarás lo siguiente en la consola:
 
 1. **Instancia de C:** Al instanciar `C` y llamar a `c.f()`, muestra en pantalla "AB". Esto se debe a que `C.f()` sobreescrito ejecuta explícitamente ambas implementaciones de `f()` de `A` y `B`.
@@ -282,6 +298,7 @@ class B : A() {
     override fun foo(i: Int) { ... }  // no default value allowed
 }
 ```
+
 ##### 3.5.2. Sobreescritura de propiedades
 
 La sobreescritura de propiedades funciona de manera similar a la sobreescritura de métodos.
@@ -341,14 +358,13 @@ Durante la construcción de una nueva instancia de una clase derivada, **la inic
 
 Por lo tanto, durante la inicialización de las propiedades de la clase base las propiedades de la clase derivada aún no se han inicializado. Si alguna de esas propiedades se utilizan (de forma directa o indirecta) en la inicialización de la clase base se pueden producir comportamientos extraños o errores en tiempo de ejecución.
 
-
 ##### Actividad 7: Comprendiendo el Orden de Inicialización en Kotlin
 
 **Pregunta:** ¿Cuál es el orden de inicialización de una clase base y su clase derivada en Kotlin, especialmente cuando la clase derivada sobreescribe propiedades de la clase base? Observa cómo este orden afecta la inicialización de las propiedades.
 
 **Código:**
 
-```kotlin 
+```kotlin
 open class Base(val name: String) {
     init { println("Initializing Base") }
     open val size: Int = name.length.also { println("Initializing size in Base: $it") }
@@ -378,7 +394,6 @@ fun main() {
 * Las propiedades de la clase derivada que sobrescriben a las de la clase base no se inicializan hasta que no se complete la inicialización de la clase base, lo que es crucial para evitar referencias a propiedades que aún no se han inicializado.
 * Este orden garantiza que todas las propiedades y bloques de inicialización de la clase base se procesen antes de ejecutar cualquier lógica de inicialización en la clase derivada, siguiendo una secuencia lógica y predecible que previene errores en tiempo de ejecución relacionados con la inicialización prematura de propiedades.
 
-
 #### 3.6. Invocar la implementación de la superclase
 
 El código en una clase derivada puede llamar a funciones en la superclase e implementaciones de accesores de propiedades usando la palabra clave `'super'`:
@@ -398,10 +413,32 @@ class Bar : Foo() {
 }
 ```
 
+### 4. Interfaces
 
-#### 4. Interfaces
+#### 4.1. Interfaces en Kotlin
 
-Las interfaces en Kotlin son muy similares a Java 8. Pueden contener declaraciones de métodos abstractos, así como implementaciones de métodos. Lo que los diferencia de las clases abstractas es que las interfaces no pueden almacenar el estado, es decir, no pueden tener variables de instancia. Pueden tener propiedades, pero estas deben ser abstractas o proporcionar implementaciones de accesores.
+Las interfaces en programación son un concepto fundamental en la programación orientada a objetos (OOP), actuando como un contrato o una plantilla que define un conjunto de métodos (y en algunos lenguajes, propiedades) sin implementar su funcionalidad. Las clases que implementan una interfaz se comprometen a proporcionar implementaciones concretas de los métodos declarados en la interfaz. Esto permite a diferentes clases compartir la misma interfaz pero tener implementaciones distintas para los métodos definidos, promoviendo así el principio de polimorfismo en OOP.
+
+### Propósito y Beneficios de las Interfaces
+
+* **Desacoplamiento:** Las interfaces ayudan a desacoplar el código al permitir que las clases se comuniquen entre sí a través de contratos de interfaz, en lugar de referencias directas a implementaciones específicas. Esto facilita cambios y mejoras en el sistema sin afectar a las clases dependientes.
+* **Polimorfismo:** Permiten que objetos de diferentes clases sean tratados como objetos del mismo tipo si todas implementan la misma interfaz. Esto es especialmente útil para escribir código que puede trabajar con objetos de clases diversas, siempre y cuando compartan la misma interfaz.
+* **Flexibilidad y Escalabilidad:** Al utilizar interfaces, se puede cambiar fácilmente la implementación específica que se utiliza en una aplicación sin cambiar el código que utiliza la interfaz. Esto hace que el código sea más flexible y escalable.
+* **Múltiples Implementaciones:** Dado que una clase puede implementar múltiples interfaces, las interfaces permiten una forma de múltiple herencia, permitiendo que una clase tenga comportamientos de diferentes fuentes.
+
+### Características Clave
+
+* **Métodos Abstractos:** Los métodos definidos en una interfaz son por defecto abstractos y públicos, lo que significa que no tienen una implementación por sí mismos; la implementación debe ser proporcionada por las clases que implementan la interfaz.
+* **Propiedades:** Algunos lenguajes, como Kotlin, permiten que las interfaces declaren propiedades. Las clases que implementan la interfaz deben proporcionar almacenamiento para esas propiedades.
+* **Implementación por Defecto (Java 8 y posteriores, Kotlin):** Permiten que las interfaces proporcionen implementaciones por defecto para algunos métodos, permitiendo que las clases que implementan la interfaz hereden estas implementaciones sin necesidad de proporcionar una propia.
+
+### Ejemplo Conceptual
+
+Imagina una interfaz `Vehículo` que define un método `moverse()`. Tanto `Automóvil` como `Bicicleta` pueden implementar la interfaz `Vehículo`, pero proporcionarán implementaciones distintas para `moverse()`: `Automóvil` podría implementarlo como encender el motor y mover el vehículo hacia adelante, mientras que `Bicicleta` lo implementaría como pedalear para avanzar.
+
+#### 4.2. Interfaces en Kotlin
+
+Las interfaces en Kotlin son muy similares a Java 8. Pueden contener declaraciones de métodos abstractos, así como implementaciones de métodos. Lo que los diferencia de las clases abstractas es que las interfaces **no pueden almacenar el estado**, es decir, no pueden tener variables de instancia. Pueden tener propiedades, pero estas deben ser abstractas o proporcionar implementaciones de accesores.
 
 Una interfaz se define usando la palabra clave `'interface'`. Un método en una interfaz es abstracto por defecto si no se proporciona una implementación.
 
@@ -493,9 +530,6 @@ class D : A, B {
     }
 }
 ```
-
-
-
 
 ---
 

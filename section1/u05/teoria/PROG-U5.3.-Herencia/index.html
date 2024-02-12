@@ -4471,8 +4471,8 @@
 <h4 id="21-declaracion-de-herencia">2.1. Declaración de Herencia<a class="headerlink" href="#21-declaracion-de-herencia" title="Permanent link">&para;</a></h4>
 <p>Para que una clase herede de otra en Kotlin, se coloca el nombre de la clase base después de los dos puntos en el encabezado de la subclase. Las clases en Kotlin son <code>final</code> por defecto (por similitud con java, utilizando <code>final</code> cuando se decide no permitir heredar de una clase); para permitir la herencia, se debe usar <code>open</code>.</p>
 <h4 id="actividad-2-instancia-de-clases-base-y-derivadas">Actividad 2: Instancia de Clases Base y Derivadas<a class="headerlink" href="#actividad-2-instancia-de-clases-base-y-derivadas" title="Permanent link">&para;</a></h4>
-<p><strong>Pregunta:</strong> ¿Crear una variable de clase <code>Base</code>? ¿Puedes asignarle una instancia de <code>DerivedWithConstructor</code>?
-<strong>Código:</strong></p>
+<p><strong>Pregunta:</strong> ¿Crear una variable de clase <code>Base</code>? ¿Puedes asignarle una instancia de <code>DerivedWithConstructor</code>?   </p>
+<p><strong>Código:</strong></p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">open</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Base</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nv">p</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">class</span><span class="w"> </span><span class="nc">DerivedWithConstructor</span><span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Base</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 </code></pre></div>
@@ -4480,8 +4480,8 @@
 <h4 id="22-herencia-sin-constructor-primario">2.2. Herencia sin Constructor Primario<a class="headerlink" href="#22-herencia-sin-constructor-primario" title="Permanent link">&para;</a></h4>
 <p>Si una clase derivada no tiene un constructor primario, cada constructor secundario debe inicializar la clase base usando <code>super</code> o delegar a otro constructor de la clase derivada que lo haga.</p>
 <h4 id="actividad-3-trabajando-con-constructores-secundarios">Actividad 3: Trabajando con Constructores Secundarios<a class="headerlink" href="#actividad-3-trabajando-con-constructores-secundarios" title="Permanent link">&para;</a></h4>
-<p><strong>Pregunta:</strong> Ejecuta el siguiente código, instancia la subclase con 1 e imprime el valor de <code>p</code>. ¿Qué muestra en pantalla? ¿Qué sucede si quitas el constructor de la subclase? ¿Podemos definir la subclase de otra forma? ¿Qué tenemos que hacer para llamar al constructor de 2 parámetros?
-<strong>Código:</strong>
+<p><strong>Pregunta:</strong> Ejecuta el siguiente código, instancia la subclase con 1 e imprime el valor de <code>p</code>. ¿Qué muestra en pantalla? ¿Qué sucede si quitas el constructor de la subclase? ¿Podemos definir la subclase de otra forma? ¿Qué tenemos que hacer para llamar al constructor de 2 parámetros?   </p>
+<p><strong>Código:</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">open</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Base</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nv">p</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">constructor</span><span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">):</span><span class="w"> </span><span class="k">this</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
@@ -4494,26 +4494,28 @@
 <a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="nv">instancia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DerivedWithoutConstructor</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="n">instancia</span><span class="p">.</span><span class="na">p</span><span class="p">)</span>
 <a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">}</span>
-</code></pre></div>
-<strong>Respuesta:</strong>
-  * Al ejecutar, muestra <code>1</code> en pantalla, indicando el valor de <code>p</code>.
-  * Si quitas el constructor de la subclase, el código no compilará porque <code>DerivedWithoutConstructor</code> necesita definir cómo inicializar <code>Base</code>.
-  * Para definir la subclase de otra manera, podríamos considerar agregar un constructor primario o utilizar un constructor secundario que llame al constructor de dos parámetros de <code>Base</code>.
-  * Para llamar al constructor de 2 parámetros de <code>Base</code>, necesitamos definir explícitamente ese constructor en la subclase y utilizar <code>super(p, q)</code> dentro del constructor secundario.</p>
+</code></pre></div></p>
+<p><strong>Respuesta:</strong>     </p>
+<ul>
+<li>Al ejecutar, muestra <code>1</code> en pantalla, indicando el valor de <code>p</code>.   </li>
+<li>Si quitas el constructor de la subclase, el código no compilará porque <code>DerivedWithoutConstructor</code> necesita definir cómo inicializar <code>Base</code>.   </li>
+<li>Para definir la subclase de otra manera, podríamos considerar agregar un constructor primario o utilizar un constructor secundario que llame al constructor de dos parámetros de <code>Base</code>.   </li>
+<li>Para llamar al constructor de 2 parámetros de <code>Base</code>, necesitamos definir explícitamente ese constructor en la subclase y utilizar <code>super(p, q)</code> dentro del constructor secundario.   </li>
+</ul>
 <h3 id="3-sobreescritura">3. Sobreescritura<a class="headerlink" href="#3-sobreescritura" title="Permanent link">&para;</a></h3>
 <p>La sobreescritura de métodos o propiedades, también conocida como "overriding", es un concepto clave en la programación orientada a objetos (OOP) que se refiere a la capacidad de una clase derivada (subclase) de proporcionar una implementación específica para un método o propiedad que ya está definido en su clase base (superclase). Este mecanismo permite a las subclases ajustar o mejorar el comportamiento heredado de la superclase según sus propias necesidades.</p>
 <h4 id="31-conceptos-fundamentales">3.1. Conceptos Fundamentales<a class="headerlink" href="#31-conceptos-fundamentales" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Polimorfismo:</strong> La sobreescritura es una forma de polimorfismo, que permite que un objeto de una subclase se comporte de manera diferente al mismo método o propiedad definido en la superclase.</li>
-<li><strong>Invocación Dinámica:</strong> Cuando un método sobreescrito se invoca en un objeto, la versión del método que se ejecuta es la que corresponde a la clase real del objeto, no necesariamente la clase desde la cual se hace la llamada.</li>
+<li><strong>Polimorfismo:</strong> La sobreescritura es una forma de polimorfismo, que permite que un objeto de una subclase se comporte de manera diferente al mismo método o propiedad definido en la superclase.   </li>
+<li><strong>Invocación Dinámica:</strong> Cuando un método sobreescrito se invoca en un objeto, la versión del método que se ejecuta es la que corresponde a la clase real del objeto, no necesariamente la clase desde la cual se hace la llamada.   </li>
 </ul>
 <h4 id="32-como-funciona">3.2. ¿Cómo Funciona?<a class="headerlink" href="#32-como-funciona" title="Permanent link">&para;</a></h4>
 <p>Para sobreescibir un método o propiedad en Kotlin, la superclase debe marcar ese método o propiedad con el modificador <code>open</code>, indicando que está disponible para ser sobreescrito. Luego, la subclase usa el modificador <code>override</code> para proporcionar su propia implementación del método o propiedad.</p>
 <h4 id="33-proposito-y-beneficios">3.3. Propósito y Beneficios<a class="headerlink" href="#33-proposito-y-beneficios" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Especialización:</strong> Permite que las subclases especialicen o modifiquen comportamientos heredados de las superclases para satisfacer requisitos específicos.</li>
-<li><strong>Flexibilidad:</strong> Aumenta la flexibilidad del diseño del software al permitir que nuevas versiones de métodos o propiedades reemplacen a las antiguas en contextos específicos.</li>
-<li><strong>Consistencia:</strong> Mantiene una interfaz consistente, permitiendo que las subclases se utilicen en lugar de una superclase sin alterar el comportamiento esperado del programa.</li>
+<li><strong>Especialización:</strong> Permite que las subclases especialicen o modifiquen comportamientos heredados de las superclases para satisfacer requisitos específicos.   </li>
+<li><strong>Flexibilidad:</strong> Aumenta la flexibilidad del diseño del software al permitir que nuevas versiones de métodos o propiedades reemplacen a las antiguas en contextos específicos.   </li>
+<li><strong>Consistencia:</strong> Mantiene una interfaz consistente, permitiendo que las subclases se utilicen en lugar de una superclase sin alterar el comportamiento esperado del programa.   </li>
 </ul>
 <h4 id="34-consideraciones-importantes">3.4.  Consideraciones Importantes<a class="headerlink" href="#34-consideraciones-importantes" title="Permanent link">&para;</a></h4>
 <ul>

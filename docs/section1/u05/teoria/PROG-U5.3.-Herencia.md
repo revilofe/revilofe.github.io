@@ -97,7 +97,7 @@ Para que una clase herede de otra en Kotlin, se coloca el nombre de la clase bas
   open class Base(var p: Int)
   class DerivedWithConstructor(p: Int) : Base(p)
   ```
-**Respuesta:** Sí, puedes crear una variable de tipo `Base` y asignarle una instancia de `DerivedWithConstructor` debido a la herencia.
+**Respuesta:** Sí, puedes crear una variable de tipo `Base` y asignarle una instancia de `DerivedWithConstructor` debido a la herencia y polimorfismo.
 
 #### 2.2. Herencia sin Constructor Primario
 

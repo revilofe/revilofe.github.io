@@ -89,7 +89,8 @@ Para que una clase herede de otra en Kotlin, se coloca el nombre de la clase bas
 
 #### Actividad 2: Instancia de Clases Base y Derivadas
 
-**Pregunta:** ¿Crear una variable de clase `Base`? ¿Puedes asignarle una instancia de `DerivedWithConstructor`?
+**Pregunta:** ¿Crear una variable de clase `Base`? ¿Puedes asignarle una instancia de `DerivedWithConstructor`?   
+
 **Código:**
 
   ```Kotlin
@@ -104,7 +105,9 @@ Si una clase derivada no tiene un constructor primario, cada constructor secunda
 
 #### Actividad 3: Trabajando con Constructores Secundarios
 
-**Pregunta:** Ejecuta el siguiente código, instancia la subclase con 1 e imprime el valor de `p`. ¿Qué muestra en pantalla? ¿Qué sucede si quitas el constructor de la subclase? ¿Podemos definir la subclase de otra forma? ¿Qué tenemos que hacer para llamar al constructor de 2 parámetros?
+**Pregunta:** Ejecuta el siguiente código, instancia la subclase con 1 e imprime el valor de `p`. ¿Qué muestra en pantalla? ¿Qué sucede si quitas el constructor de la subclase? ¿Podemos definir la subclase de otra forma? ¿Qué tenemos que hacer para llamar al constructor de 2 parámetros?   
+
+
 **Código:**
 ```kotlin
 open class Base(var p: Int) {
@@ -119,21 +122,24 @@ fun main() {
   val instancia = DerivedWithoutConstructor(1)
   println(instancia.p)
 }
-```
-**Respuesta:**
-  * Al ejecutar, muestra `1` en pantalla, indicando el valor de `p`.
-  * Si quitas el constructor de la subclase, el código no compilará porque `DerivedWithoutConstructor` necesita definir cómo inicializar `Base`.
-  * Para definir la subclase de otra manera, podríamos considerar agregar un constructor primario o utilizar un constructor secundario que llame al constructor de dos parámetros de `Base`.
-  * Para llamar al constructor de 2 parámetros de `Base`, necesitamos definir explícitamente ese constructor en la subclase y utilizar `super(p, q)` dentro del constructor secundario.
+```   
 
+
+**Respuesta:**     
+    
+  * Al ejecutar, muestra `1` en pantalla, indicando el valor de `p`.   
+  * Si quitas el constructor de la subclase, el código no compilará porque `DerivedWithoutConstructor` necesita definir cómo inicializar `Base`.   
+  * Para definir la subclase de otra manera, podríamos considerar agregar un constructor primario o utilizar un constructor secundario que llame al constructor de dos parámetros de `Base`.   
+  * Para llamar al constructor de 2 parámetros de `Base`, necesitamos definir explícitamente ese constructor en la subclase y utilizar `super(p, q)` dentro del constructor secundario.   
+   
 ### 3. Sobreescritura
 
 La sobreescritura de métodos o propiedades, también conocida como "overriding", es un concepto clave en la programación orientada a objetos (OOP) que se refiere a la capacidad de una clase derivada (subclase) de proporcionar una implementación específica para un método o propiedad que ya está definido en su clase base (superclase). Este mecanismo permite a las subclases ajustar o mejorar el comportamiento heredado de la superclase según sus propias necesidades.
 
 #### 3.1. Conceptos Fundamentales
 
-* **Polimorfismo:** La sobreescritura es una forma de polimorfismo, que permite que un objeto de una subclase se comporte de manera diferente al mismo método o propiedad definido en la superclase.
-* **Invocación Dinámica:** Cuando un método sobreescrito se invoca en un objeto, la versión del método que se ejecuta es la que corresponde a la clase real del objeto, no necesariamente la clase desde la cual se hace la llamada.
+* **Polimorfismo:** La sobreescritura es una forma de polimorfismo, que permite que un objeto de una subclase se comporte de manera diferente al mismo método o propiedad definido en la superclase.   
+* **Invocación Dinámica:** Cuando un método sobreescrito se invoca en un objeto, la versión del método que se ejecuta es la que corresponde a la clase real del objeto, no necesariamente la clase desde la cual se hace la llamada.   
 
 #### 3.2. ¿Cómo Funciona?
 
@@ -141,9 +147,9 @@ Para sobreescibir un método o propiedad en Kotlin, la superclase debe marcar es
 
 #### 3.3. Propósito y Beneficios
 
-* **Especialización:** Permite que las subclases especialicen o modifiquen comportamientos heredados de las superclases para satisfacer requisitos específicos.
-* **Flexibilidad:** Aumenta la flexibilidad del diseño del software al permitir que nuevas versiones de métodos o propiedades reemplacen a las antiguas en contextos específicos.
-* **Consistencia:** Mantiene una interfaz consistente, permitiendo que las subclases se utilicen en lugar de una superclase sin alterar el comportamiento esperado del programa.
+* **Especialización:** Permite que las subclases especialicen o modifiquen comportamientos heredados de las superclases para satisfacer requisitos específicos.   
+* **Flexibilidad:** Aumenta la flexibilidad del diseño del software al permitir que nuevas versiones de métodos o propiedades reemplacen a las antiguas en contextos específicos.   
+* **Consistencia:** Mantiene una interfaz consistente, permitiendo que las subclases se utilicen en lugar de una superclase sin alterar el comportamiento esperado del programa.   
 
 #### 3.4.  Consideraciones Importantes
 

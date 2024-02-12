@@ -70,7 +70,7 @@ nav:
 
     - 'U5: Kotlin: PPO y creación de e.d.':
         - 'section1/u05/index.md'
-        - '5.1.-Revisitando las clases y los objetos': 'section1/u05/teoria/PROG-U5.1.-clases&objetos.md'
+        - '5.1.-Revisitando las clases y los objetos': 'section1/u05/teoria/PROG-U5.1.-clasesYobjetos.md'
         - '5.2.-Visibilidad en miembros': 'section1/u05/teoria/PROG-U5.2.-VisibilidadEnClases.md'
         - '5.3.-Herencia': 'section1/u05/teoria/PROG-U5.3.-Herencia.md'
 
@@ -119,7 +119,7 @@ nav:
         - '4.1.-Sistemas de control de versiones': 'section3/u04/teoria/EDES-U4.1.-Git_Github.md'
         - '4.2.-Refactorización': 'section3/u04/teoria/EDES-U4.2.-Refactorizacion.md'
         - '4.3.-Analizador de código': 'section3/u04/teoria/EDES-U4.3.-AnalizadorCodigo.md'
-        - '4.3.-Documentació': 'section3/u04/teoria/EDES-U4.4.-Documentacion.md'
+        - '4.3.-Documentación': 'section3/u04/teoria/EDES-U4.4.-Documentacion.md'
         - 'Práctica 4.1: Git/Github básico': 'section3/u04/practica/EDES-U4.-Practica001.md'
         - 'Práctica 4.2: Git/Github merge': 'section3/u04/practica/EDES-U4.-Practica002.md'
         - 'Práctica 4.3: Git/Github rebase I': 'section3/u04/practica/EDES-U4.-Practica003.md'

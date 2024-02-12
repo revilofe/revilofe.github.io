@@ -1,12 +1,12 @@
 ---
-title: "UD 5 - 5.1 Revisión de las clases"
+title: "UD 5 - 5.3 Herencia. Clases abstractas. Interfaces"
 description: kotlin
 summary: kotlin
 authors:
     - Eduardo Fdez
 date: 2022-11-14
 icon:   
-permalink: /prog/unidad4/4.1
+permalink: /prog/unidad5/5.3
 categories:
     - PROG
     - kotlin
@@ -14,7 +14,7 @@ tags:
     - Software
     - kotlin
 ---
-## 5.2. Herencia. Interfaces
+## 5.3. Herencia. Clases abstractas. Interfaces
 
 ### 1. Concepto de Herencia
 
@@ -82,13 +82,11 @@ class Example
 
 **Respuesta:**
 
-* `Example` hereda de `Any` los métodos `equals()`, `hashCode()`, y `toString()`.
+  * `Example` hereda de `Any` los métodos `equals()`, `hashCode()`, y `toString()`.
 
 #### 2.1. Declaración de Herencia
 
 Para que una clase herede de otra en Kotlin, se coloca el nombre de la clase base después de los dos puntos en el encabezado de la subclase. Las clases en Kotlin son `final` por defecto (por similitud con java, utilizando `final` cuando se decide no permitir heredar de una clase); para permitir la herencia, se debe usar `open`.
-
-Si la clase derivada tiene un constructor primario, la clase base puede (y debe) inicializarse allí mismo, utilizando los parámetros del constructor primario.
 
 #### Actividad 2: Instancia de Clases Base y Derivadas
 
@@ -125,7 +123,6 @@ fun main() {
   println(instancia.p)
 }
 ```
-
 **Respuesta:**
 
 * Al ejecutar, muestra `1` en pantalla, indicando el valor de `p`.
@@ -357,6 +354,7 @@ fun main() {
 Durante la construcción de una nueva instancia de una clase derivada, **la inicialización de la clase base se realiza como primer paso** (precedida solo por la evaluación de los argumentos para el constructor de la clase base) y, por lo tanto, ocurre antes de que se ejecute la lógica de inicialización de la clase derivada.
 
 Por lo tanto, durante la inicialización de las propiedades de la clase base las propiedades de la clase derivada aún no se han inicializado. Si alguna de esas propiedades se utilizan (de forma directa o indirecta) en la inicialización de la clase base se pueden producir comportamientos extraños o errores en tiempo de ejecución.
+
 
 ##### Actividad 7: Comprendiendo el Orden de Inicialización en Kotlin
 

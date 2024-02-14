@@ -1,5 +1,18 @@
+---
+title: OBJECTS - Ejemplos y diferencias claves.
 
-## OBJECTS - Ejemplos y diferencias
+description: OBJECTS - Ejemplos y diferencias claves.
+
+authors:
+    - Diego Cano.
+
+date: 2024-02-14
+
+tags:
+  - object
+  - kotlin
+---
+# OBJECTS - Ejemplos y diferencias claves
 
 En Kotlin, los objetos son una forma flexible y poderosa de definir estructuras únicas sin la necesidad de seguir el procedimiento tradicional de definición de clases. 
 Podemos pensar en ellos como una manera de crear una "instancia única" de una clase con funcionalidades específicas, sin necesidad de crear una clase de manera explícita.

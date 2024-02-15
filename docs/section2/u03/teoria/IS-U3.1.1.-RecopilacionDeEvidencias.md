@@ -57,11 +57,11 @@ Otras propuestas:
 
 - _[RFC 3227 «Guidelines for Evidence Collection and Archiving» o Directrices para la recopilación de evidencias y su almacenamiento](http://www.ietf.org/rfc/rfc3227.txt)_
 
-#### 2.1 RFC 3227
+### 3 RFC 3227
 
 El RFC 3227 es un __documento__ que recoge las directrices para la __recopilación__ de evidencias y su __almacenamiento__.  Puede llegar a servir como __estándar de facto__ para la recopilación de información en incidentes de seguridad.
 
-##### 2.2.1 Principios 
+#### 3.1. Principios 
 
 Principios durante la recolección de evidencias
 
@@ -77,7 +77,7 @@ Principios durante la recolección de evidencias
 
 - Tener en cuenta que por cada dispositivo __la recogida de información puede realizarse de distinta manera__.
 
-##### 2.2.2 Orden de volatilidad
+##### 3.1.1. Orden de volatilidad
 
 Período de __tiempo en el que está accesible cierta información__. Recolectar la de mayor volatilidad, según este orden:
 
@@ -95,7 +95,7 @@ Período de __tiempo en el que está accesible cierta información__. Recolectar
 
 - Documentos.
 
-##### 2.2.3 Acciones a evitarse
+##### 3.1.2. Acciones a evitarse
 
 Deben evitarse las acciones que invaliden el proceso de recolección de información, los resultados deben poder ser utilizados en un juicio si fuera necesario:
 
@@ -107,7 +107,7 @@ Deben evitarse las acciones que invaliden el proceso de recolección de informac
 
 - Recopilar la información mediante __programas desde un medio protegido__.
 
-##### 2.2.4 Consideraciones sobre la privacidad
+##### 3.1.3. Consideraciones sobre la privacidad
 
 - Es muy importante __tener en consideración las pautas de la empresa__ en lo que a privacidad se refiere:    
      * Es habitual __solicitar una autorización__ por escrito de quien corresponda para poder llevar a cabo la recolección de evidencias.    
@@ -115,9 +115,7 @@ Deben evitarse las acciones que invaliden el proceso de recolección de informac
 * __No hay que entrometerse en la privacidad__ de las personas sin una justificación.    
      * No se deben recopilar datos de lugares a los que normalmente no hay razón para acceder, como ficheros personales, a menos que haya suficientes indicios.
 
-#### Procedimiento de recolección
-
-#### Recolección
+#### 3.2. Procedimiento de recolección
 
 Debe de ser lo más detallado posible, procurando que no sea ambiguo y reduciendo al mínimo la toma de decisiones.
 
@@ -127,53 +125,50 @@ Los métodos utilizados para recolectar evidencias deben de ser __transparentes 
 
 Se debe estar preparado para reproducir con precisión los métodos usados, y que dichos métodos hayan sido __testados por expertos independientes__ .
 
-Pasos I
+Pasos:
 
-¿Dónde está la evidencia? Listar __qué sistemas están involucrados__ en el incidente y __de cuáles de ellos se deben tomar evidencias__ .
+- ¿Dónde está la evidencia? Listar __qué sistemas están involucrados__ en el incidente y __de cuáles de ellos se deben tomar evidencias__ .
 
-Establecer __qué es relevante__ . En caso de duda es mejor recopilar mucha información que poca.
+- Establecer __qué es relevante__ . En caso de duda es mejor recopilar mucha información que poca.
 
-Fijar el __orden de volatilidad__ para cada sistema.
+- Fijar el __orden de volatilidad__ para cada sistema.
 
-__Obtener la información__ de acuerdo al orden establecido
+- __Obtener la información__ de acuerdo al orden establecido
 
-Pasos II
+- Comprobar el __grado de sincronización del reloj del sistema__ .
 
-Comprobar el __grado de sincronización del reloj del sistema__ .
+- Según se vayan realizando los pasos de recolección preguntarse __qué más puede ser una evidencia__ .
 
-Según se vayan realizando los pasos de recolección preguntarse __qué más puede ser una evidencia__ .
+- __Documentar cada paso.__, el no encontrar una evidencia puede ser una evidencia en sí misma. Por tanto, __documentar también lo que no se ha encontrado__.
 
-__Documentar cada paso.__
+- No olvidar a la gente involucrada. Tomar notas sobre __qué gente estaba allí, qué estaban haciendo, qué observaron y cómo reaccionaron__ .
 
-No olvidar a la gente involucrada. Tomar notas sobre __qué gente estaba allí, qué estaban haciendo, qué observaron y cómo reaccionaron__ .
+#### 3.3. Procedimiento de almacenado
 
-#### Procedimiento de almacenado
-
-#### Almacenamiento
-
-__Cadena de custodia__
+##### 3.3.1. Cadena de custodia
 
 Debe estar claramente documentada y se deben detallar los siguientes puntos:
 
-¿Dónde?, ¿cuándo? y ¿quién? __descubrió y recolectó la evidencia__ .
+* ¿Dónde?, ¿cuándo? y ¿quién? __descubrió y recolectó la evidencia__ .
 
-¿Dónde?, ¿cuándo? y ¿quién? __manejó la evidencia__ .
+* ¿Dónde?, ¿cuándo? y ¿quién? __manejó la evidencia__ .
 
-¿Quién ha custodiado la evidencia?, ¿cuánto tiempo? y ¿cómo la ha almacenado?
+* ¿Quién ha custodiado la evidencia?, ¿cuánto tiempo? y ¿cómo la ha almacenado?
 
-En el caso de que la evidencia cambie de custodia __indicar cuándo y cómo se realizó el intercambio__ , incluyendo número de albarán, etc.
+* En el caso de que la evidencia cambie de custodia __indicar cuándo y cómo se realizó el intercambio__, incluyendo número de albarán, etc.
 
-__Dónde y cómo almacenarlo__
+##### 3.3.2. Dónde y cómo almacenarlo
 
 Se debe almacenar la información en dispositivos:
 
-cuya __seguridad__ haya sido __demostrada__
+* cuya __seguridad__ haya sido __demostrada__
 
-que __permitan detectar intentos de acceso no autorizados__ .
+* que __permitan detectar intentos de acceso no autorizados__ .
 
-#### Herramientas
+#### 3.4. Herramientas
 
-* Pautas para selección de herramientas, para la recolección:
+Pautas para selección de herramientas, para la recolección:    
+
 * herramientas externas al sistema, para evitar que hayan podido ser comprometidas.
 * herramientas que alteren lo mínimo posible el escenario (no GUI, uso excesivo de memoria)
 * deben estar ubicados en un dispositivo de solo lectura. (CDROM, USB)

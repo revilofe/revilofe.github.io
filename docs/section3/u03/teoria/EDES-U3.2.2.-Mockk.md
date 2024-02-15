@@ -78,10 +78,14 @@ fun givenServiceMock_whenCallingMockedMethod_thenCorrectlyVerified() {
     assertEquals("Expected Output", result)
 }
 ```
-Revisando las partes mas importantes del código anterior:
-- Para definir el objeto mockeado, hemos usado el método `mockk<…>()`.
-- En el siguiente paso, definimos el comportamiento de nuestro objeto mockeado. Para este propósito, hemos creado un bloque `every` que describe qué respuesta debe devolverse `returns "Expected"` para qué llamada, es decir, la llamada a un método `service.getDataFromDb` y con un argumento concreto `("Expected Param")`
-- Finalmente, usamos el bloque de `verify` para verificar si el simulacro se invocó como esperábamos, indicando que al menos se ha tenido que invocar una vez el método `service.getDataFromDb("Expected Param")`.
+Revisando las partes mas importantes del código anterior:    
+
+- Para definir el objeto mockeado `TestableService`, hemos usado el método `mockk<…>()`.
+  
+- En el siguiente paso, definimos el comportamiento de nuestro objeto mockeado `TestableService`. Para este propósito, hemos creado un bloque `every` que describe qué respuesta debe devolverse `returns "Expected"` para qué llamada y con qué argumento. Es decir, el resultado que devolverá cuando se llame al método `service.getDataFromDb` y con un argumento concreto `("Expected Param")`
+
+- Finalmente, usamos el bloque de `verify` para verificar si el simulacro se invocó como esperábamos, siendo verificado si al menos se ha invocado una vez el método `service.getDataFromDb("Expected Param")`.
+  
 
 ### 5. Ejemplo de uso de las anotaciones
 

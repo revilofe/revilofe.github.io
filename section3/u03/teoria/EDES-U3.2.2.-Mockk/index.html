@@ -3514,6 +3514,8 @@
       
         
       
+        
+      
     
     
       
@@ -3713,7 +3715,7 @@
               
   
   <span class="md-ellipsis">
-    U2: Sentencias condicionales y repetitivas
+    U2: Detección y análisis de incidentes de seguridad
   </span>
   
 
@@ -3729,7 +3731,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
-            U2: Sentencias condicionales y repetitivas
+            U2: Detección y análisis de incidentes de seguridad
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3810,6 +3812,95 @@
   
   <span class="md-ellipsis">
     2.2.3.-SOC & SIEM & Casos de uso
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/u03/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U3: Recopiación de evidencias
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            U3: Recopiación de evidencias
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u03/teoria/IS-U3.3.1.-MITRE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3.1.-Investigación incidentes:MITRE
   </span>
   
 
@@ -4189,10 +4280,12 @@
 <a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Expected Output&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
 <a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">}</span>
 </code></pre></div>
-Revisando las partes mas importantes del código anterior:
-- Para definir el objeto mockeado, hemos usado el método <code>mockk&lt;…&gt;()</code>.
-- En el siguiente paso, definimos el comportamiento de nuestro objeto mockeado. Para este propósito, hemos creado un bloque <code>every</code> que describe qué respuesta debe devolverse <code>returns "Expected"</code> para qué llamada, es decir, la llamada a un método <code>service.getDataFromDb</code> y con un argumento concreto <code>("Expected Param")</code>
-- Finalmente, usamos el bloque de <code>verify</code> para verificar si el simulacro se invocó como esperábamos, indicando que al menos se ha tenido que invocar una vez el método <code>service.getDataFromDb("Expected Param")</code>.</p>
+Revisando las partes mas importantes del código anterior:    </p>
+<ul>
+<li>Para definir el objeto mockeado <code>TestableService</code>, hemos usado el método <code>mockk&lt;…&gt;()</code>.    </li>
+<li>En el siguiente paso, definimos el comportamiento de nuestro objeto mockeado <code>TestableService</code>. Para este propósito, hemos creado un bloque <code>every</code> que describe qué respuesta debe devolverse <code>returns "Expected"</code> para qué llamada y con qué argumento. Es decir, el resultado que devolverá cuando se llame al método <code>service.getDataFromDb</code> y con un argumento concreto <code>("Expected Param")</code>   </li>
+<li>Finalmente, usamos el bloque de <code>verify</code> para verificar si el simulacro se invocó como esperábamos, siendo verificado si al menos se ha invocado una vez el método <code>service.getDataFromDb("Expected Param")</code>.</li>
+</ul>
 <h3 id="5-ejemplo-de-uso-de-las-anotaciones">5. Ejemplo de uso de las anotaciones<a class="headerlink" href="#5-ejemplo-de-uso-de-las-anotaciones" title="Permanent link">&para;</a></h3>
 <p>Es posible usar las anotaciones MockK <code>@MockK</code> para crear todo tipo de objetos mocks. Vamos a crear un servicio que requiera de dos instancias de nuestro <code>TestableService</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">InjectTestService</span><span class="w"> </span><span class="p">{</span>

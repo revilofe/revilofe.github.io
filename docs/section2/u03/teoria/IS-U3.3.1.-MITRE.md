@@ -108,23 +108,23 @@ Por ejemplo, en `Preparation`: nos plantará un conjunto de acciones a tomar que
 
 - `RA1103 y RA1104: acceso a los logs http`. Nos plantea la pregunta de si tenemos los logs del server que hosteamos en nuestra empresa y si tenemos los de la web que tenemos en el proveedor. Si estos últimos no los tenemos, ¿qué pasa si nos hacen un defacement en la web pública? nos quedamos sin poder investigar nada… porque claro… estaba “fuera”….
 
-- `RA1108: Logs de DHCP`, En cuanto a los logs DHCP, posiblemente ya los guardas y los exportas de su ubicación por defecto… pero por si acaso, sirva esta guía para tener un control de cuáles son estas medidas.
+- `RA1108: Logs de DHCP`, En cuanto a los logs DHCP, posiblemente ya los guardas y los exportas desde su ubicación por defecto… pero por si acaso, sirva esta guía para tener un control de cuáles son estas medidas.
 
-Ademas se plantearán un montón de ideas como: ¿eres capaz de detectar un fichero borrado? ¿Modificado? Una clave del registro? y que como hemos comentado, tendremos que resolver antes de tener un incidente.
+Además se plantearán un montón de ideas como: ¿eres capaz de detectar un fichero borrado? ¿Modificado? Una clave del registro? y que como hemos comentado, tendremos que resolver antes de tener un incidente.
 
-Si seguimos con la fase de `Identification`, se encoentrán acciones a emprender que nos ayudarán a iniciar esta fase, como listar ficheros borrados, listar ficheros modificados, listar claves del registro, etc.
+Si seguimos con la fase de `Identification`, se encuentrán acciones a emprender que nos ayudarán a iniciar esta fase, como listar ficheros borrados, listar ficheros modificados, listar claves del registro, etc.
 
-Contención, la parte a la que más valor se le suele dar, ¿pero estás preparado? Puedes bloquear un puerto interno ¿ puedes cambiar una ACL en un Switch para una Vlan? Una mac? Todas estas reflexiones las debes hacer antes de tener un incidente, o al menos, tener claro el procedimiento. Nos pasa en muchos clientes que se puede, pero lo lleva “otra empresa” y no se sabe muy bien quien es… se pierde tiempo, que en la contención es primordial.
+En cuanto a la `Containment`, es de las fases a la que más valor se le suele dar, pero ¿estás preparado? ¿puedes bloquear un puerto interno?, ¿puedes cambiar una ACL en un Switch para una Vlan? Todas estas reflexiones las debes hacer antes de tener un incidente, o al menos, tener claro el procedimiento. Suele pasar en muchas empresas que, aunque se puede, ésta delega a “otra empresa” estos trabajos, y se pierde el control… se pierde tiempo, que en la contención es primordial.
 
-No creo que haga falta seguir con la enumeración. Lo que si es interesante es que igual que ocurre con Mitre, que tenemos un proyecto de la matriz navegable, con Re@Ct tenemos lo mismo, [un mapa en el que podemos trabajar los ítems](https://atc-project.github.io/react-navigator/), dándole el enfoque que queramos.
+No creo que haga falta seguir con la enumeración. Lo que si es interesante es que igual que ocurre con MITRE, que tenemos un proyecto de la matriz navegable, con RE@CT tenemos lo mismo, [un mapa en el que podemos trabajar los ítems](https://atc-project.github.io/react-navigator/), dándole el enfoque que queramos.
 
-En este caso, tenemos una categorización por colores de las técnicas enumeradas, en referencia a si son elementos generales, de red, correo, ficheros, procesos, etc… pero lo bueno del map es que podemos configurarlo de la manera que queramos, por ejemplo, pintando el grado de madurez de nuestra organización, imagina un semáforo, y pintamos para cada técnica, si lo tenemos bien (verde), si lo tenemos en el radar o pendiente (amarillo) o si no tenemos cobertura ninguna de la técnica ( rojo). Me parece muy interesante a la hora de documentar a clientes su estado de madurez ante una respuesta a incidentes.
+En este caso, tenemos una categorización por colores de las técnicas enumeradas, en referencia a si son elementos generales, de red, correo, ficheros, procesos, etc… pero lo bueno de la matriz es que podemos configurarla de la manera que queramos. Un ejemplo de uso podría ser para reflejar el grado de madurez de nuestra organización, imagina un semáforo, y pintamos para cada técnica, si lo tenemos bien (verde), si lo tenemos en el radar o pendiente (amarillo) o si no tenemos cobertura ninguna de la técnica (rojo). Me parece muy interesante a la hora de documentar a clientes su estado de madurez ante una respuesta a incidentes.
 
 ![](assets/IS-U3.3.1.-REACT-EnterpriseMatrix.png)
 
-El proyecto es mucho más ambicioso, ya que contempla la recopilación de playbooks, una comunidad donde podamos crear elementos “accionables” que además, podemos importar en nuestro The Hive/Cortex &MISP como elementos de automatización de tareas…
+El proyecto es mucho más ambicioso, ya que contempla la recopilación de playbooks (guía estratégica que detalla las acciones a seguir en respuesta a eventos específicos, como incidentes de ciberseguridad), una comunidad donde podamos crear elementos “accionables” que además, podemos importar en nuestro The Hive/Cortex &MISP como elementos de automatización de tareas…
 
-Pero por si fuera poco, es una pata del proyecto  [Atomic Threat Coverage](https://github.com/atc-project/atomic-threat-coverage), lo que pretende ser el punto de unión de “todo esto” que hablamos de Mitre, reglas Sigma de detección, playbooks para automatizar, lenguaje de marcas para poder documentar mitigaciones, procesos de red team para generar el “ruido”, un proyecto BRUTAL que pone nombre y apellidos a toda la cadena de valor desde la nomenclatura del ataque, hasta la detección, hasta lecciones aprendidas, fortificación…
+Pero por si fuera poco, es una pata del proyecto  [Atomic Threat Coverage](https://github.com/atc-project/atomic-threat-coverage), lo que pretende ser el punto de unión de “todo esto” que hablamos de MITRE, reglas Sigma de detección, playbooks para automatizar, lenguaje de marcas para poder documentar mitigaciones, procesos de red team para generar el “ruido”, un proyecto BRUTAL que pone nombre y apellidos a toda la cadena de valor desde la nomenclatura del ataque, la detección, hasta lecciones aprendidas, fortificación…
 
 ![](assets/IS-U3.3.1.-AtomicThreatCoverage.png)
 
@@ -132,7 +132,7 @@ Si bien esto es un proyecto ambicioso, orientado a la respuesta a incidentes, no
 
 ### 5. ¿ATT&CK o RE&CT?
 
-Y ¿por qué no ambos? Estos dos marcos se crean con diferentes perspectivas de enfoque, según el rol de uso del marco.. Por lo tanto, familiarizarse con estos marcos y utilizarlos le dará una ventaja adicional sobre los adversarios, así como también lo ayudará a ser proactivo para poder prevenir los incidentes por completo.
+Y ¿por qué no ambos? Estos dos marcos se crean con diferentes perspectivas de enfoque, según el rol de uso del marco. Por lo tanto, familiarizarse con estos marcos y utilizarlos te dará una ventaja adicional sobre los adversarios, así como también te ayudará a ser proactivo para poder prevenir los incidentes por completo.
 
 ## Fuente:
 

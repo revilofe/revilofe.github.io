@@ -4113,18 +4113,28 @@
 <p>Imagina que estás construyendo un sistema para una biblioteca que gestiona libros y usuarios. Este sistema deberá poder manejar distintos tipos de items en la biblioteca (libros, revistas, DVDs) y distintos tipos de usuarios (estudiante, profesor, visitante).</p>
 <p>Parte 1: Definir <code>data class</code></p>
 <ol>
-<li>Libro</li>
-<li>Título: String</li>
-<li>Autor: String</li>
-<li>Año de Publicación: Int</li>
-<li>Revista</li>
-<li>Título: String</li>
-<li>Issue: Int</li>
-<li>Año: Int</li>
-<li>DVD</li>
-<li>Título: String</li>
-<li>Director: String</li>
-<li>Año: Int</li>
+<li>
+<p>Libro   </p>
+<ul>
+<li>Título:<code>String</code>  </li>
+<li>Autor:<code>String</code>  </li>
+<li>Año de Publicación:<code>Int</code>  </li>
+</ul>
+</li>
+<li>
+<p>Revista   </p>
+<ul>
+<li>Título:<code>String</code>  </li>
+<li>Issue:<code>Int</code>  </li>
+<li>Año:<code>Int</code> </li>
+</ul>
+</li>
+<li>DVD    <ul>
+<li>Título:<code>String</code> </li>
+<li>Director:<code>String</code> </li>
+<li>Año:<code>Int</code> </li>
+</ul>
+</li>
 </ol>
 <p>Estas clases almacenarán la información básica de cada ítem en la biblioteca. Usa <code>data class</code> para definir estas clases ya que son perfectas para almacenar datos sin necesidad de lógica adicional.</p>
 <p>Parte 2: Definir <code>sealed class</code></p>
@@ -4133,9 +4143,9 @@
 <li>Usuario</li>
 <li><code>sealed class Usuario</code><ul>
 <li>Clases que heredan de Usuario:</li>
-<li>Estudiante(id: String, nombre: String, carrera: String)</li>
-<li>Profesor(id: String, nombre: String, departamento: String)</li>
-<li>Visitante(id: String, nombre: String)</li>
+<li>Estudiante(id:<code>String</code>, nombre:<code>String</code>, carrera:<code>String</code>) </li>
+<li>Profesor(id:<code>String</code>, nombre:<code>String</code>, departamento:<code>String</code>) </li>
+<li>Visitante(id:<code>String</code>, nombre:<code>String</code>) </li>
 </ul>
 </li>
 </ol>

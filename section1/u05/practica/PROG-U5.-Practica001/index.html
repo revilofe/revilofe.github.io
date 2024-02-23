@@ -2066,6 +2066,51 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ejercicio-6-sistema-de-articulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 6: Sistema de articulos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-7-sistema-de-vehiculos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 7: Sistema de Vehículos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-8-persona-y-estudiante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 8: Persona y Estudiante
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-9-sistema-de-gestion-academica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 9: Sistema de Gestión Académica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-10-sistema-de-gestion-de-personal-en-una-empresa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 10: Sistema de Gestión de Personal en una Empresa
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3987,6 +4032,51 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ejercicio-6-sistema-de-articulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 6: Sistema de articulos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-7-sistema-de-vehiculos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 7: Sistema de Vehículos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-8-persona-y-estudiante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 8: Persona y Estudiante
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-9-sistema-de-gestion-academica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 9: Sistema de Gestión Académica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-10-sistema-de-gestion-de-personal-en-una-empresa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 10: Sistema de Gestión de Personal en una Empresa
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4114,27 +4204,29 @@
 <p>Parte 1: Definir <code>data class</code></p>
 <ol>
 <li>
-<p>Libro   </p>
-<ul>
-<li>Título:<code>String</code>  </li>
-<li>Autor:<code>String</code>  </li>
-<li>Año de Publicación:<code>Int</code>  </li>
-</ul>
+<p>Libro</p>
 </li>
 <li>
-<p>Revista   </p>
-<ul>
-<li>Título:<code>String</code>  </li>
-<li>Issue:<code>Int</code>  </li>
-<li>Año:<code>Int</code> </li>
-</ul>
+<p>Título:<code>String</code></p>
 </li>
-<li>DVD    <ul>
-<li>Título:<code>String</code> </li>
-<li>Director:<code>String</code> </li>
-<li>Año:<code>Int</code> </li>
-</ul>
+<li>Autor:<code>String</code></li>
+<li>Año de Publicación:<code>Int</code></li>
+<li>
+<p>Revista</p>
 </li>
+<li>
+<p>Título:<code>String</code></p>
+</li>
+<li>Issue:<code>Int</code></li>
+<li>Año:<code>Int</code></li>
+<li>
+<p>DVD</p>
+</li>
+<li>
+<p>Título:<code>String</code></p>
+</li>
+<li>Director:<code>String</code></li>
+<li>Año:<code>Int</code></li>
 </ol>
 <p>Estas clases almacenarán la información básica de cada ítem en la biblioteca. Usa <code>data class</code> para definir estas clases ya que son perfectas para almacenar datos sin necesidad de lógica adicional.</p>
 <p>Parte 2: Definir <code>sealed class</code></p>
@@ -4143,9 +4235,9 @@
 <li>Usuario</li>
 <li><code>sealed class Usuario</code><ul>
 <li>Clases que heredan de Usuario:</li>
-<li>Estudiante(id:<code>String</code>, nombre:<code>String</code>, carrera:<code>String</code>) </li>
-<li>Profesor(id:<code>String</code>, nombre:<code>String</code>, departamento:<code>String</code>) </li>
-<li>Visitante(id:<code>String</code>, nombre:<code>String</code>) </li>
+<li>Estudiante(id:<code>String</code>, nombre:<code>String</code>, carrera:<code>String</code>)</li>
+<li>Profesor(id:<code>String</code>, nombre:<code>String</code>, departamento:<code>String</code>)</li>
+<li>Visitante(id:<code>String</code>, nombre:<code>String</code>)</li>
 </ul>
 </li>
 </ol>
@@ -4156,6 +4248,119 @@
 <li>Crear una <code>sealed class Usuario</code> con las subclases Estudiante, Profesor, y Visitante. Cada subclase debe tener propiedades relevantes (como se describió anteriormente).</li>
 <li>Implementar una función que acepte un Usuario y un libro, y devuelva un mensaje indicando si el usuario puede o no tomar prestado el libro. Considerar reglas simples como que los Visitantes no pueden tomar prestados libros, o que los Profesores pueden tener préstamos por más tiempo.</li>
 </ol>
+<h4 id="ejercicio-6-sistema-de-articulos"><strong>Ejercicio 6:</strong> Sistema de articulos<a class="headerlink" href="#ejercicio-6-sistema-de-articulos" title="Permanent link">&para;</a></h4>
+<p>Crear una clase <code>Articulo</code> con un <code>nombre</code> y un <code>precio</code>, que ambos se puedan modificar.</p>
+<p>También tendrá un <code>id</code> que se generará de forma automática mediante un contador (<code>totalArticulos</code>) y una función <code>generarId()</code>. Este <code>id</code> no podrá modificarse ni obtenerse fuera de Articulo.</p>
+<p>Crear un método <code>promocionNavidad()</code> que reciba el porcentaje de rebaja y lo aplique al precio.</p>
+<p>Sobreescribir el método <code>toString()</code> para que retorne el <code>"{nombre} - {precio con dos decilames}€ (ID: {id})"</code>.</p>
+<p>Crear una clase que herede de <code>Articulo</code> y se llame <code>Ordenador</code>. Debe agregar a su constructor primario el <code>tipo</code>, que será de <code>TipoOrdenador</code>=&gt; <code>(BASICO, OFIMATICA, TODOTERRENO, GAMING)</code> y por defecto será <code>BASICO</code>.</p>
+<p>Sobreescribe el método <code>promocionNavidad()</code> para que solo aplique la promoción si el precio es superior a 500 euros.</p>
+<p>En el main crea dos artículos con precios 25 y 45 euros. También crea dos ordenadores, el primero GAMING de precio 1299.99 y el segundo un ordenador básico de 399.99 euros.</p>
+<p>Crear una variable para generar una lista con ellos y recorrerla aplicándoles la promoción e imprimiendo su contenido.</p>
+<p>Puedes declarar la variable de la siguiente forma:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>// Lista de todos los artículos
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>val articulos = listOf(articulo1, articulo2, ordenador1, ordenador2)
+</code></pre></div>
+<p><strong><em>Responde a las siguientes preguntas:</em></strong></p>
+<ol>
+<li>¿De qué tipo genera en la lista por defecto el compilador?</li>
+<li>¿Qué está ocurriendo en este ejemplo con respecto a lo que hemos visto del polimorfismo de la herencia?</li>
+<li>¿Qué pasaría si creáramos la lista con <code>listOf&lt;Ordenador&gt;</code>? ¿Y si la hiciéramos con <code>listOf&lt;Any&gt;</code>?</li>
+</ol>
+<h4 id="ejercicio-7-sistema-de-vehiculos"><strong>Ejercicio 7:</strong> Sistema de Vehículos<a class="headerlink" href="#ejercicio-7-sistema-de-vehiculos" title="Permanent link">&para;</a></h4>
+<p>Descripción: Crea una jerarquía de clases para representar diferentes tipos de vehículos. Cada vehículo tiene características comunes como la marca, el modelo y la capacidad de combustible, pero cada tipo tiene sus propias características y comportamientos.</p>
+<p>Clases a implementar:</p>
+<ol>
+<li>Clase Base <code>Vehiculo</code></li>
+<li>Propiedades comunes: marca (<code>String</code>), modelo (<code>String</code>), capacidadCombustible (<code>Int</code>).</li>
+<li>Método <code>mostrarInformacion()</code>, que imprime la información del vehículo.</li>
+<li>Método <code>calcularAutonomia()</code>, que retorna un valor Int (Suponemos que cada litro da para 10 km).</li>
+<li>Clase Derivada <code>Automovil</code> (hereda de Vehiculo)</li>
+<li>Propiedad específica: tipo (<code>String</code>), como "sedán", "SUV", "deportivo", etc.</li>
+<li>Implementa el método <code>calcularAutonomia()</code> (Suponemos que un automóvil puede hacer 100km más que el cálculo realizado en su clase base)</li>
+<li>Clase Derivada <code>Motocicleta</code> (hereda de Vehiculo)</li>
+<li>Propiedad específica: cilindrada (<code>Int</code>).</li>
+<li>Implementa el método <code>calcularAutonomia()</code> (Suponemos que una moto puede hacer 40km menos que el cálculo realizado en su clase base)</li>
+</ol>
+<p>Objetivo: Demostrar cómo se pueden crear clases derivadas de una superclase y cómo pueden extender o modificar su comportamiento.</p>
+<h4 id="ejercicio-8-persona-y-estudiante"><strong>Ejercicio 8:</strong> Persona y Estudiante<a class="headerlink" href="#ejercicio-8-persona-y-estudiante" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Clases y Objetos Básicos:</li>
+<li>Crea una clase <code>Persona</code> que tenga dos propiedades: <code>nombre</code> y <code>edad</code>. Luego, en el main crea un objeto de esta clase e imprime sus propiedades.</li>
+<li>Métodos Simples:</li>
+<li>Añade un método <code>cumple</code> a la clase <code>Persona</code> que incremente la edad de la persona en uno cada vez que se llama.</li>
+<li>Sobreescribe el método <code>toString()</code> y prográmalo para que se muestre una persona con todas sus propiedades. Por ejemplo "Persona (nombre = Lucía, edad = 21)".</li>
+<li>En el main ejecuta el cumple de la persona y muestra su información de dos formas: accediendo a sus propiedades y mediante el método <code>toString()</code> (recuerda que no es necesario llamar al método <code>toString()</code>, sino que se invocará automáticamente cuando necesite realizar la conversión del contenido a <code>String</code>).</li>
+<li>Encapsulamiento:</li>
+<li>Modifica la clase <code>Persona</code> para que reciba la fecha de nacimiento por el constructor, y se almacene en una propiedad privada. Modificar la edad para que no se pueda modificar, pero se pueda consultar su valor, calculándolo con respecto a la fecha de nacimiento.</li>
+<li>Herencia:</li>
+<li>Crea una clase <code>Estudiante</code> que herede de <code>Persona</code> y añade una propiedad <code>carrera</code>. Las propiedades deben incluir el modificador <code>open</code> (vuelve a dejar la propiedad edad pública).</li>
+<li>Realiza de nuevo un override de <code>toString()</code> para completar la información de Estudiante (intenta usar el resultado del método de la clase padre y completarlo).</li>
+<li>Polimorfismo:</li>
+<li>Añade un método <code>actividad()</code> a la clase <code>Persona</code> que imprima "Lucía está realizando una actividad." y sobreescribe en <code>Estudiante</code> para que muestre un mensaje específico para estudiantes.</li>
+<li>Crea en el main a una persona y un estudiante y muestra la actividad que realizan.</li>
+<li>Clases y Objetos con Validación:</li>
+<li>Modifica la clase <code>Persona</code> para que no acepte nombres vacíos y edades negativas. Utiliza un constructor primario con valores por defecto para edad.</li>
+<li>Prueba a crear un estudiante con una edad negativa, controlando las excepciones y mostrando el mensaje de error específico.</li>
+</ol>
+<p>Objetivo: Aprender a crear clases y objetos, a utilizar métodos y propiedades, a aplicar el encapsulamiento, a utilizar la herencia y el polimorfismo, y a controlar las excepciones.</p>
+<h4 id="ejercicio-9-sistema-de-gestion-academica"><strong>Ejercicio 9:</strong> Sistema de Gestión Académica<a class="headerlink" href="#ejercicio-9-sistema-de-gestion-academica" title="Permanent link">&para;</a></h4>
+<p>Descripción: Crea una jerarquía de clases para representar distintos roles en un entorno académico, como estudiantes y profesores.</p>
+<p>Clases a implementar:</p>
+<ol>
+<li>Clase Base <code>Persona</code></li>
+<li>Propiedades comunes: nombre (<code>String</code>), edad (<code>Int</code>), id (<code>String</code>).</li>
+<li>Método <code>mostrarRol()</code>, que imprime el rol de la persona (Estudiante, Profesor, etc.).</li>
+<li>Clase Derivada <code>Estudiante</code></li>
+<li>Propiedades específicas: curso (<code>String</code>), calificacionPromedio (<code>Double</code>).</li>
+<li>Implementa el método <code>mostrarRol()</code> y añade un método <code>mostrarCalificacion()</code> para imprimir la calificación promedio.</li>
+<li>Clase Derivada <code>Profesor</code></li>
+<li>Propiedades específicas: departamento (<code>String</code>), aniosExperiencia (<code>Int</code>).</li>
+<li>Implementa el método <code>mostrarRol()</code> y añade un método <code>mostrarExperiencia()</code> para imprimir los años de experiencia.</li>
+</ol>
+<p>Objetivo: Familiarizarse con la herencia y cómo las clases derivadas pueden tener propiedades y métodos adicionales, así como comportamientos específicos.</p>
+<h4 id="ejercicio-10-sistema-de-gestion-de-personal-en-una-empresa"><strong>Ejercicio 10:</strong> Sistema de Gestión de Personal en una Empresa<a class="headerlink" href="#ejercicio-10-sistema-de-gestion-de-personal-en-una-empresa" title="Permanent link">&para;</a></h4>
+<p>Requisitos:</p>
+<ol>
+<li>Clase Base <code>Persona</code>:</li>
+<li>Propiedades:<ul>
+<li>nombre (<code>String</code>)</li>
+<li>edad (<code>Int)</code></li>
+</ul>
+</li>
+<li>Métodos:<ul>
+<li><code>toString()</code>: Devuelve una cadena con información básica sobre la persona (por ejemplo, "Nombre: Julia, Edad: 24").</li>
+<li><code>celebrarCumple()</code>: Incrementa la edad en 1 y retorna un mensaje de felicitación (por ejemplo, "Feliz cumpleaños Julia! Ahora tienes 25 años.").</li>
+</ul>
+</li>
+<li>Clase Derivada <code>Empleado</code> (de <code>Persona</code>):</li>
+<li>Propiedades:<ul>
+<li>salarioBase (<code>Double</code>) (Intenta permitir también que se pueda construir un empleado con un argumento Int en esta propiedad)</li>
+<li>porcentajeImpuestos (<code>Double</code>) (Intenta permitir también que se pueda construir un empleado con un argumento Int en esta propiedad) (El valor por defecto es 10.0)</li>
+</ul>
+</li>
+<li>Métodos:<ul>
+<li><code>calcularSalario()</code>: Devuelve el salarioBase aplicando los impuestos.</li>
+<li><code>toString()</code>: Devuelve una cadena que incluye la información de <code>Persona</code> y detalles adicionales del <code>Empleado</code> (por ejemplo, "Nombre: Julia, Edad: 24, Salario: 28273.47€" con 2 posiciones decimales para el salario).</li>
+<li><code>trabajar()</code>: Retorna un mensaje que indica que el empleado está trabajando. (por ejemplo, "Pablo está trabajando en la empresa.")</li>
+</ul>
+</li>
+<li>Clase Derivada <code>Gerente</code> (de <code>Empleado</code>):</li>
+<li>Propiedades:<ul>
+<li>bonus (<code>Double</code>)</li>
+<li>exentoImpuestos (<code>Boolean</code>) (Por defecto no estará exento de los impuestos)</li>
+</ul>
+</li>
+<li>Sobrescribir el porcentajeImpuestos para que los gerentes tengan un porcentaje de impuestos siempre del 33.99%.</li>
+<li>Métodos:<ul>
+<li><code>calcularSalario()</code>: Devuelve el salarioBase más el bonus aplicando los impuestos solo al salario base o sin aplicar impuestos si exentoImpuestos es <code>true</code>.</li>
+<li><code>toString()</code>: Devuelve una cadena que incluye la información de <code>Persona</code> y <code>Empleado</code>, además de detalles específicos del <code>Gerente</code>.</li>
+<li><code>administrar()</code>: Retorna un mensaje que indica que el gerente está administrando. (por ejemplo, "Ana está administrando la empresa.")</li>
+</ul>
+</li>
+<li>Uso en la Función <code>main</code>:</li>
+</ol>
+<p>Crear una persona, un empleado y un gerente. Realizar distintas pruebas... para cada uno mostrar su información y ejecutar los métodos que tienen accesibles.</p>
 
 
 

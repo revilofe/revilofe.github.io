@@ -73,6 +73,7 @@ nav:
         - '5.1.-Revisitando las clases y los objetos': 'section1/u05/teoria/PROG-U5.1.-clasesYobjetos.md'
         - '5.2.-Visibilidad en miembros': 'section1/u05/teoria/PROG-U5.2.-VisibilidadEnClases.md'
         - '5.3.-Herencia': 'section1/u05/teoria/PROG-U5.3.-Herencia.md'
+        - '* Práctica 5.1: Relación de ejercicios': 'section1/u05/practica/PROG-U5.-Practica001.md'
 
     - 'U6: Kotlin: Creación de programas con POO':
         - 'section1/u06/index.md'

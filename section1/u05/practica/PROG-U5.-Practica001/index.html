@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Listas">
+        <meta name="description" content="Herencia, interfaces, clases abstractas">
       
       
         <meta name="author" content="Eduardo Fdez">
@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://revilofe.github.io/section1/u05/practica/PROG-U5.-Practica001/">
       
       
+        <link rel="prev" href="../../teoria/PROG-U5.3.-Herencia/">
+      
+      
+        <link rel="next" href="../../../u06/">
       
       
       <link rel="icon" href="../../../../assets/favicon-96x96.png">
@@ -22,7 +26,7 @@
     
     
       
-        <title>UD 3 - P1: Listas - R Z O</title>
+        <title>UD 5 - P1: Herencia, interfaces, clases abstractas - R Z O</title>
       
     
     
@@ -95,7 +99,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#p31-ejercicios" class="md-skip">
+        <a href="#p51-ejercicios" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -134,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UD 3 - P1: Listas
+              UD 5 - P1: Herencia, interfaces, clases abstractas
             
           </span>
         </div>
@@ -257,10 +261,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../../" class="md-tabs__link">
           
   
@@ -439,6 +445,8 @@
       
   
   
+    
+  
   
   
     
@@ -467,18 +475,19 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
@@ -494,13 +503,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Programación
@@ -549,10 +558,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -574,7 +586,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -866,10 +878,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -891,7 +906,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1166,10 +1181,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1191,7 +1209,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1508,10 +1526,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1533,7 +1554,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1812,6 +1833,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1827,21 +1850,24 @@
       
         
       
-    
-    
-      
-      
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
       
-        
+      
         
           
+          
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
         
           
           
@@ -1857,13 +1883,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             U5: Kotlin: PPO y creación de e.d.
@@ -1935,6 +1961,125 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    * Práctica 5.1: Relación de ejercicios
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 5.1: Relación de ejercicios
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#p51-ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      P5.1 - Ejercicios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="P5.1 - Ejercicios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1-sistema-de-figuras-geometricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 1: Sistema de Figuras Geométricas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-2-sistema-de-empleados-y-departamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 2: Sistema de Empleados y Departamentos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-3-sistema-de-dispositivos-electronicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 3: Sistema de Dispositivos Electrónicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-4-sistema-de-notificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 4: Sistema de Notificación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-5-sistema-de-gestion-de-biblioteca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 5: Sistema de Gestión de Biblioteca
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1961,10 +2106,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2032,10 +2180,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2057,7 +2208,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -2213,10 +2364,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2238,7 +2392,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_9" id="__nav_2_9_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -3779,127 +3933,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#p31-ejercicios" class="md-nav__link">
+  <a href="#p51-ejercicios" class="md-nav__link">
     <span class="md-ellipsis">
-      P3.1 - Ejercicios
+      P5.1 - Ejercicios
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="P3.1 - Ejercicios">
+    <nav class="md-nav" aria-label="P5.1 - Ejercicios">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejercicio-1" class="md-nav__link">
+  <a href="#ejercicio-1-sistema-de-figuras-geometricas" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 1
+      Ejercicio 1: Sistema de Figuras Geométricas
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejercicio-2" class="md-nav__link">
+  <a href="#ejercicio-2-sistema-de-empleados-y-departamentos" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 2
+      Ejercicio 2: Sistema de Empleados y Departamentos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejercicio-3" class="md-nav__link">
+  <a href="#ejercicio-3-sistema-de-dispositivos-electronicos" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 3
+      Ejercicio 3: Sistema de Dispositivos Electrónicos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejercicio-4" class="md-nav__link">
+  <a href="#ejercicio-4-sistema-de-notificacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 4
+      Ejercicio 4: Sistema de Notificación
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejercicio-5" class="md-nav__link">
+  <a href="#ejercicio-5-sistema-de-gestion-de-biblioteca" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 5
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-6" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio 6
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-7" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio 7
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-8" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio 8
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-9" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio 9
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-10" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio 10
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-11" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio 11
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-12" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio 12
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-13" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio 13
+      Ejercicio 5: Sistema de Gestión de Biblioteca
     </span>
   </a>
   
@@ -3950,7 +4032,7 @@
       
     
     
-      <a href="../../../../tags/#listas" class="md-tag md-tag-icon">Listas</a>
+      <a href="../../../../tags/#herencia" class="md-tag md-tag-icon">Herencia</a>
     
   
     
@@ -3959,7 +4041,16 @@
       
     
     
-      <a href="../../../../tags/#tuplas" class="md-tag md-tag-icon">Tuplas</a>
+      <a href="../../../../tags/#interfaces" class="md-tag md-tag-icon">interfaces</a>
+    
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../../../tags/#clases-abstractas" class="md-tag md-tag-icon">clases abstractas</a>
     
   
 </nav>
@@ -3969,93 +4060,92 @@
   
 
 
-  <h1>UD 3 - P1: Listas</h1>
+  <h1>* Práctica 5.1: Relación de ejercicios</h1>
 
-<h2 id="p31-ejercicios">P3.1 - Ejercicios<a class="headerlink" href="#p31-ejercicios" title="Permanent link">&para;</a></h2>
-<h4 id="ejercicio-1"><strong>Ejercicio 1</strong><a class="headerlink" href="#ejercicio-1" title="Permanent link">&para;</a></h4>
-<p>Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua) en una lista y la muestre por pantalla.</p>
-<!--
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio1.ipynb)
--->
-
-<h4 id="ejercicio-2"><strong>Ejercicio 2</strong><a class="headerlink" href="#ejercicio-2" title="Permanent link">&para;</a></h4>
-<p>Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua) en una lista y la muestre por pantalla el mensaje <code>Yo estudio &lt;asignatura&gt;</code>, donde <code>&lt;asignatura&gt;</code> sobre cada una de las asignaturas de la lista.</p>
-<!--
-
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio2.ipynb)
--->
-
-<h4 id="ejercicio-3"><strong>Ejercicio 3</strong><a class="headerlink" href="#ejercicio-3" title="Permanent link">&para;</a></h4>
-<p>Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua) en una lista, pregunte al usuario la nota que ha sacado en cada asignatura, y después las muestre por pantalla con el mensaje <code>En &lt;asignatura&gt; has sacado &lt;nota&gt;</code> donde <code>&lt;asignatura&gt;</code> es cada una des las asignaturas de la lista y <code>&lt;nota&gt;</code> cada una de las correspondientes notas introducidas por el usuario.</p>
-<!--
-
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio3.ipynb)
--->
-
-<h4 id="ejercicio-4"><strong>Ejercicio 4</strong><a class="headerlink" href="#ejercicio-4" title="Permanent link">&para;</a></h4>
-<p>Escribir un programa que pregunte al usuario los números ganadores de la lotería primitiva, los almacene en una lista y los muestre por pantalla ordenados de menor a mayor.</p>
-<!--
-
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio4.ipynb)
--->
-
-<h4 id="ejercicio-5"><strong>Ejercicio 5</strong><a class="headerlink" href="#ejercicio-5" title="Permanent link">&para;</a></h4>
-<p>Escribir un programa que almacene en una lista los números del 1 al 10 y los muestre por pantalla en orden inverso separados por comas.</p>
-<!--
-
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio5.ipynb)
--->
-
-<h4 id="ejercicio-6"><strong>Ejercicio 6</strong><a class="headerlink" href="#ejercicio-6" title="Permanent link">&para;</a></h4>
-<p>Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua) en una lista, pregunte al usuario la nota que ha sacado en cada asignatura y elimine de la lista las asignaturas aprobadas. Al final el programa debe mostrar por pantalla las asignaturas que el usuario tiene que repetir.</p>
-<!--
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio6.ipynb)
--->
-
-<h4 id="ejercicio-7"><strong>Ejercicio 7</strong><a class="headerlink" href="#ejercicio-7" title="Permanent link">&para;</a></h4>
-<p>Escribir un programa que almacene el abecedario en una lista, elimine de la lista las letras que ocupen posiciones múltiplos de 3, y muestre por pantalla la lista resultante.</p>
-<!--
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio7.ipynb)
--->
-
-<h4 id="ejercicio-8"><strong>Ejercicio 8</strong><a class="headerlink" href="#ejercicio-8" title="Permanent link">&para;</a></h4>
-<p>Escribir un programa que pida al usuario una palabra y muestre por pantalla si es un palíndromo.</p>
-<!--
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio8.ipynb)
--->
-
-<h4 id="ejercicio-9"><strong>Ejercicio 9</strong><a class="headerlink" href="#ejercicio-9" title="Permanent link">&para;</a></h4>
-<p>Escribir un programa que pida al usuario una palabra y muestre por pantalla el número de veces que contiene cada vocal.</p>
-<!--
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio9.ipynb)
--->
-
-<h4 id="ejercicio-10"><strong>Ejercicio 10</strong><a class="headerlink" href="#ejercicio-10" title="Permanent link">&para;</a></h4>
-<p>Escribir un programa que almacene en una lista los siguientes precios: <code>50, 75, 46, 22, 80, 65, 8</code> y muestre por pantalla el menor y el mayor de los precios.</p>
-<!--
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio10.ipynb)
--->
-
-<h4 id="ejercicio-11"><strong>Ejercicio 11</strong><a class="headerlink" href="#ejercicio-11" title="Permanent link">&para;</a></h4>
-<p>Escribir un programa que almacene los vectores <code>(1,2,3)</code> y <code>(-1,0,2)</code> en dos listas y muestre por pantalla su producto escalar.</p>
-<!--
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio11.ipynb)
--->
-
-<h4 id="ejercicio-12"><strong>Ejercicio 12</strong><a class="headerlink" href="#ejercicio-12" title="Permanent link">&para;</a></h4>
-<p>Escribir un programa que almacene las matrices <code>A=(123456)</code> y <code>B=(−100111)</code> en una lista y muestre por pantalla su producto.
-Nota: Para representar matrices mediante listas usar listas anidadas, representando cada vector fila en una lista.</p>
-<!--
-
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio12.ipynb)
--->
-
-<h4 id="ejercicio-13"><strong>Ejercicio 13</strong><a class="headerlink" href="#ejercicio-13" title="Permanent link">&para;</a></h4>
-<p>Escribir un programa que pregunte por una muestra de números, separados por comas, los guarde en una lista y muestre por pantalla su media y desviación típica.</p>
-<!--
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio13.ipynb)
-
--->
+<h2 id="p51-ejercicios">P5.1 - Ejercicios<a class="headerlink" href="#p51-ejercicios" title="Permanent link">&para;</a></h2>
+<h4 id="ejercicio-1-sistema-de-figuras-geometricas"><strong>Ejercicio 1:</strong> Sistema de Figuras Geométricas<a class="headerlink" href="#ejercicio-1-sistema-de-figuras-geometricas" title="Permanent link">&para;</a></h4>
+<p>Crea una clase abstracta <code>Figura</code> que tenga métodos abstractos para <code>area()</code> y <code>perimetro()</code>. Implementa subclases concretas como <code>Circulo</code>, <code>Rectangulo</code>, y <code>Triangulo</code>, proporcionando la implementación específica de estos métodos. La clase <code>Figura</code> podría tener propiedades comunes como el color, que se inicializarán a través del constructor.</p>
+<p>El valor de PI lo conseguimos con Math.PI</p>
+<p>Objetivos:</p>
+<ul>
+<li>Practicar la creación de clases abstractas y métodos abstractos.</li>
+<li>Entender cómo las subclases proporcionan implementaciones concretas de métodos abstractos.</li>
+<li>Familiarizarse con los conceptos básicos de geometría y cómo se pueden aplicar en la programación orientada a objetos.</li>
+</ul>
+<h4 id="ejercicio-2-sistema-de-empleados-y-departamentos"><strong>Ejercicio 2:</strong> Sistema de Empleados y Departamentos<a class="headerlink" href="#ejercicio-2-sistema-de-empleados-y-departamentos" title="Permanent link">&para;</a></h4>
+<p>Diseña una clase abstracta <code>Empleado</code> con propiedades como <code>nombre</code>, <code>id</code>, y un método abstracto <code>calculaSalario()</code>. Crea clases derivadas como <code>EmpleadoPorHora</code> y <code>EmpleadoFijo</code>, que implementen el método <code>calculaSalario()</code> de diferentes maneras. Considera añadir una clase <code>Departamento</code> que tenga una lista de empleados y pueda calcular el salario total que se debe pagar a todos sus empleados.</p>
+<p><code>EmpleadoPorHora</code> podría implementar dos propiedades cómo horasTrabajadas al mes y tarifaPorHora para realizar el cálculo de su salario mensual. <code>EmpleadoFijo</code> podría tener a su vez dos propiedades distintas, salarioFijo y numPagas del que podríamos calcular su salario mensual.</p>
+<p><code>Departamento</code> podría tener una lista de empleados y dos métodos: agregarEmpleado y calculaSalarioTotal que tienen sus empleados al mes.</p>
+<p>En el main crea una instancia de Departamento, agrega varios empleados, recorre la lista de los empleados mostrando su información "Nombre con ID-0001 tiene un salario de 28697.96 al mes." (el id siempre con 4 posiciones numéricas y el salario con 2 decimales)</p>
+<p>¿Se te ocurre alguna restricción lógica que podríamos introducir a las propiedades?</p>
+<p>Objetivos:</p>
+<ul>
+<li>Aprender a manejar la herencia y la implementación de métodos abstractos.</li>
+<li>Comprender cómo diferentes subclases pueden tener implementaciones distintas de la misma operación (polimorfismo).</li>
+<li>Entender cómo agrupar múltiples objetos en una colección y realizar operaciones sobre ellos.</li>
+</ul>
+<h4 id="ejercicio-3-sistema-de-dispositivos-electronicos"><strong>Ejercicio 3:</strong> Sistema de Dispositivos Electrónicos<a class="headerlink" href="#ejercicio-3-sistema-de-dispositivos-electronicos" title="Permanent link">&para;</a></h4>
+<p>Crea tres interfaces:</p>
+<ul>
+<li><code>EncendidoApagado</code> con métodos como <code>encender()</code> y <code>apagar()</code>.</li>
+<li><code>DispositivoElectronico</code> con un método llamado <code>reiniciar()</code>.</li>
+<li><code>Vehiculo</code> con dos propiedades: <code>motorEncendido</code> y <code>kmHora</code>; y los métodos <code>acelerar(Int)</code> y <code>frenar(Int)</code>.</li>
+</ul>
+<p>Implementa estas interfaces en varias clases como <code>Telefono</code>, <code>Lavadora</code> y <code>Coche</code>. Cada clase debería tener su propia implementación de los métodos de las interfaces que tengan sentido que implementen, simulando el comportamiento que le obligan a desarrollar a cada una.</p>
+<p>Un coche solo acelera y frena si tiene el motor encendido. Por defecto un objeto coche estará apagado. Si a un coche le mandamos frenar y su valor final fuera negativo le asignaremos a kmHora el valor 0.</p>
+<p>Objetivos:</p>
+<ul>
+<li>Practicar la implementación de interfaces y entender cómo fuerzan a las clases a proporcionar implementaciones concretas de los métodos definidos.</li>
+<li>Comprender cómo se puede usar una interfaz para imponer un contrato que varias clases deben seguir.</li>
+<li>Familiarizarse con el concepto de separación de la interfaz y la implementación.</li>
+</ul>
+<h4 id="ejercicio-4-sistema-de-notificacion"><strong>Ejercicio 4:</strong> Sistema de Notificación<a class="headerlink" href="#ejercicio-4-sistema-de-notificacion" title="Permanent link">&para;</a></h4>
+<p>Diseña una interfaz <code>Notificable</code> con un método <code>enviarNotificacion()</code>. Implementa esta interfaz en clases como <code>CorreoElectronico</code>, <code>MensajeTexto</code>, y <code>NotificacionPush</code>. Cada clase debe tener una implementación específica de <code>enviarNotificacion()</code>, simula el envío de la notificación a través del canal apropiado.</p>
+<p>En el programa principal crea una lista de tipo <code>Notificable</code> llamada notificaciones y en ella crea un objeto de cada clase. Recorre la lista enviando una notificación con cada elemento.</p>
+<p>Objetivos:</p>
+<ul>
+<li>Aprender a utilizar interfaces para definir un comportamiento común entre varias clases.</li>
+<li>Entender el beneficio de usar interfaces para permitir que diferentes clases sean tratadas de manera uniforme.</li>
+<li>Practicar el diseño de sistemas flexibles donde se pueden agregar nuevos tipos de notificaciones sin modificar el código que utiliza la interfaz <code>Notificable</code>.</li>
+</ul>
+<p>Estos ejercicios están diseñados para reforzar la comprensión de los conceptos de clases abstractas e interfaces, y cómo se aplican en diferentes situaciones en la programación orientada a objetos.</p>
+<h4 id="ejercicio-5-sistema-de-gestion-de-biblioteca"><strong>Ejercicio 5:</strong> Sistema de Gestión de Biblioteca<a class="headerlink" href="#ejercicio-5-sistema-de-gestion-de-biblioteca" title="Permanent link">&para;</a></h4>
+<p>Imagina que estás construyendo un sistema para una biblioteca que gestiona libros y usuarios. Este sistema deberá poder manejar distintos tipos de items en la biblioteca (libros, revistas, DVDs) y distintos tipos de usuarios (estudiante, profesor, visitante).</p>
+<p>Parte 1: Definir <code>data class</code></p>
+<ol>
+<li>Libro</li>
+<li>Título: String</li>
+<li>Autor: String</li>
+<li>Año de Publicación: Int</li>
+<li>Revista</li>
+<li>Título: String</li>
+<li>Issue: Int</li>
+<li>Año: Int</li>
+<li>DVD</li>
+<li>Título: String</li>
+<li>Director: String</li>
+<li>Año: Int</li>
+</ol>
+<p>Estas clases almacenarán la información básica de cada ítem en la biblioteca. Usa <code>data class</code> para definir estas clases ya que son perfectas para almacenar datos sin necesidad de lógica adicional.</p>
+<p>Parte 2: Definir <code>sealed class</code></p>
+<p>Para gestionar los distintos tipos de usuarios, puedes usar una <code>sealed class</code>. Esto te permitirá tener una jerarquía de clases cerrada, lo cual es útil para cuando se conocen todos los posibles subtipos.</p>
+<ol>
+<li>Usuario</li>
+<li><code>sealed class Usuario</code><ul>
+<li>Clases que heredan de Usuario:</li>
+<li>Estudiante(id: String, nombre: String, carrera: String)</li>
+<li>Profesor(id: String, nombre: String, departamento: String)</li>
+<li>Visitante(id: String, nombre: String)</li>
+</ul>
+</li>
+</ol>
+<p>La <code>sealed class Usuario</code> permitirá manejar operaciones específicas para cada tipo de usuario, como préstamos de libros o acceso a áreas restringidas de la biblioteca.</p>
+<p>Ejercicio Propuesto</p>
+<ol>
+<li>Definir las <code>data class</code> para Libro, Revista, y DVD.</li>
+<li>Crear una <code>sealed class Usuario</code> con las subclases Estudiante, Profesor, y Visitante. Cada subclase debe tener propiedades relevantes (como se describió anteriormente).</li>
+<li>Implementar una función que acepte un Usuario y un libro, y devuelva un mensaje indicando si el usuario puede o no tomar prestado el libro. Considerar reglas simples como que los Visitantes no pueden tomar prestados libros, o que los Profesores pueden tener préstamos por más tiempo.</li>
+</ol>
 
 
 

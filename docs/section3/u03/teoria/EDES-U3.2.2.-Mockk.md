@@ -155,9 +155,11 @@ fun givenServiceSpy_whenMockingOnlyOneMethod_thenOtherMethodsShouldBehaveAsOrigi
 }
 ```
 
-Revisemos lo más importante del código anterior:
-- Hemos usado el método `spyk` para crear un objeto spyk (espía) de la clase `TestableService`.  
-- También hemos usado `every` para definir el comportamiento del método que nos interesa, en concreto `service.getDataFromDb(any())`, como vimos en ejemplos anteriores.
+Revisemos lo más importante del código anterior:   
+
+   - Hemos usado el método `spyk` para crear un objeto spyk (espía) de la clase `TestableService`.  
+   - También hemos usado `every` para definir el comportamiento del método que nos interesa, en concreto `service.getDataFromDb(any())`, como vimos en ejemplos anteriores.
+
 
 También podemos haber usado la anotación `@SpyK` para lograr lo mismo que hicimos con la anotación `@MockK`. Veamos un ejemplo:
 
@@ -462,7 +464,7 @@ Se han visto algunas de las características más importantes de MockK. MockK es
 * [¿Cómo elaborar casos de prueba?](https://surprograma.github.io/libro-disenio-oop/docs/pruebas-automatizadas/elaborar-casos-prueba/)
 * [Test unitario avanzado](http://wiki.uqbar.org/wiki/articles/testeo-unitario-avanzado.html)
 * [Diseño de Software](https://surprograma.github.io/libro-disenio-oop/docs/intro/)
-* 
+
 ## Fuente
 * [MockK: A Mocking Library for Kotlin](https://www.baeldung.com/kotlin/mockk)
 * [MockK Guidebook](https://notwoods.github.io/mockk-guidebook/)

@@ -124,11 +124,14 @@ class AnnotationMockKUnitTest {
 }
 ```
 
-Revisemos lo más importante del código anterior:
-- Con la anotación `@MoockK`, hemos definido (marcado para crear) los objetos mocks `service1` y `service2` que vamos a inyectar en el servicio `objectUnderTest`.
-- Hemos usado la anotación `@InjectMockKs` para especificar el objeto `objectUnderTest` donde se deben inyectar los objetos mocks definidos.  
-- Por defecto, los objetos mocks se inyectan en variables que aún no están asignadas. Aunque, podemos usar `@OverrideMockKs` para anular campos que ya tienen un valor.
-- Por último, MockK requiere que se llame a `MockKAnnotations.init(…)` en el objeto que declara variables con anotaciones. Para Junit5, se puede reemplazar con `@ExtendWith(MockKExtension::class)`.
+Revisemos lo más importante del código anterior:   
+
+   - Con la anotación `@MoockK`, hemos definido (marcdo para crear) los objetos mocks `service1` y `service2` que vamos a inyectar en el servicio `objectUnderTest`.    
+   - Hemos usado la anotación `@InjectMockKs` para especificar el objeto `objectUnderTest` donde se deben inyectar los objetos mocks definidos.   
+   - Por defecto, los objetos mocks se inyectan en variables que aún no están asignadas. Aunque, podemos usar `@OverrideMockKs` para anular campos que ya tienen un valor.
+   - Por último, MockK requiere que se llame a `MockKAnnotations.init(…)` en el objeto que declara variables con anotaciones. Para Junit5, se puede reemplazar con `@ExtendWith(MockKExtension::class)`.
+
+
 
 ### 6. Spy
 

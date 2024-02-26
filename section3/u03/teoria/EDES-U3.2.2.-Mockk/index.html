@@ -4536,11 +4536,18 @@ Revisando las partes mas importantes del código anterior:    </p>
 <a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="w">    </span><span class="n">assertTrue</span><span class="p">(</span><span class="n">myList</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span>
 <a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="p">}</span>
 </code></pre></div>
-<p>Como muestra el código anterior, 
-- Agregamos la función <code>addHelloWorld()</code> usando <code>just runs</code>. 
-- Luego, llamamos a la función y le pasamos una <code>MutableList</code> vacía.
-- Por último, si omitimos la ejecución de la función con éxito, <code>“Hello World!”</code> no debe aparecer en la lista, pasada como parámetro, después de la invocación. 
-El test es ok tras de ejecutarlo.</p>
+<p>Como muestra el código anterior:   </p>
+<ul>
+<li>
+<p>Agregamos la función <code>addHelloWorld()</code> usando <code>just runs</code>.  </p>
+</li>
+<li>
+<p>Luego, llamamos a la función y le pasamos una <code>MutableList</code> vacía.  </p>
+</li>
+<li>
+<p>Por último, si hemos conseguido omitir la ejecución de la función con éxito, después de la invocación de la función, la cadena <code>“Hello World!”</code> no debe aparecer en la lista pasada como parámetro a la función, y por tanto el test deberá dar ok.  </p>
+</li>
+</ul>
 <p>Ahora entendamos cómo <code>just runs</code> omite la llamada de la función real. Primero, echemos un vistazo a la implementación de la función <code>just()</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">infix</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">MockKStubScope</span><span class="o">&lt;</span><span class="kt">Unit</span><span class="p">,</span><span class="w"> </span><span class="kt">Unit</span><span class="o">&gt;</span><span class="p">.</span><span class="na">just</span><span class="p">(</span><span class="n">runs</span><span class="p">:</span><span class="w"> </span><span class="n">Runs</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">answers</span><span class="p">(</span><span class="n">ConstantAnswer</span><span class="p">(</span><span class="kt">Unit</span><span class="p">))</span>
 </code></pre></div>

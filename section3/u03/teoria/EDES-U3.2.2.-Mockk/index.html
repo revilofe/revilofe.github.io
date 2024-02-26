@@ -4340,11 +4340,13 @@ Revisando las partes mas importantes del código anterior:    </p>
 <a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="p">...</span>
 <a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="p">}</span>
 </code></pre></div>
-<p>Revisemos lo más importante del código anterior:
-- Con la anotación <code>@MoockK</code>, hemos definido (marcado para crear) los objetos mocks <code>service1</code> y <code>service2</code> que vamos a inyectar en el servicio <code>objectUnderTest</code>.
-- Hemos usado la anotación <code>@InjectMockKs</code> para especificar el objeto <code>objectUnderTest</code> donde se deben inyectar los objetos mocks definidos.<br />
-- Por defecto, los objetos mocks se inyectan en variables que aún no están asignadas. Aunque, podemos usar <code>@OverrideMockKs</code> para anular campos que ya tienen un valor.
-- Por último, MockK requiere que se llame a <code>MockKAnnotations.init(…)</code> en el objeto que declara variables con anotaciones. Para Junit5, se puede reemplazar con <code>@ExtendWith(MockKExtension::class)</code>.</p>
+<p>Revisemos lo más importante del código anterior:   </p>
+<ul>
+<li>Con la anotación <code>@MoockK</code>, hemos definido (marcdo para crear) los objetos mocks <code>service1</code> y <code>service2</code> que vamos a inyectar en el servicio <code>objectUnderTest</code>.    </li>
+<li>Hemos usado la anotación <code>@InjectMockKs</code> para especificar el objeto <code>objectUnderTest</code> donde se deben inyectar los objetos mocks definidos.   </li>
+<li>Por defecto, los objetos mocks se inyectan en variables que aún no están asignadas. Aunque, podemos usar <code>@OverrideMockKs</code> para anular campos que ya tienen un valor.</li>
+<li>Por último, MockK requiere que se llame a <code>MockKAnnotations.init(…)</code> en el objeto que declara variables con anotaciones. Para Junit5, se puede reemplazar con <code>@ExtendWith(MockKExtension::class)</code>.</li>
+</ul>
 <h3 id="6-spy">6. Spy<a class="headerlink" href="#6-spy" title="Permanent link">&para;</a></h3>
 <p><code>Spy</code> permite en un objeto mezclar el comportamiento de objetos reales y mockeados, es decir, mockear solo una parte particular de alguna clase. Por ejemplo, se puede usar para simular un método específico del servicio  <code>TestableService</code>, el resto del servicio funcionará como se definió. Si no se define un comportamiento nuevo, el objeto entero funcionara como se definió en su clases, pero podremos usar sobre él verificaciones haciendo uso de <code>verify</code>. Veamos el ejemplo:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nd">@Test</span>

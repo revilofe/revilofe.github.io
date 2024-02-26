@@ -4366,9 +4366,11 @@ Revisando las partes mas importantes del código anterior:    </p>
 <a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;I don&#39;t want to!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">secondResult</span><span class="p">)</span>
 <a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="p">}</span>
 </code></pre></div>
-<p>Revisemos lo más importante del código anterior:
-- Hemos usado el método <code>spyk</code> para crear un objeto spyk (espía) de la clase <code>TestableService</code>.<br />
-- También hemos usado <code>every</code> para definir el comportamiento del método que nos interesa, en concreto <code>service.getDataFromDb(any())</code>, como vimos en ejemplos anteriores.</p>
+<p>Revisemos lo más importante del código anterior:   </p>
+<ul>
+<li>Hemos usado el método <code>spyk</code> para crear un objeto spyk (espía) de la clase <code>TestableService</code>.  </li>
+<li>También hemos usado <code>every</code> para definir el comportamiento del método que nos interesa, en concreto <code>service.getDataFromDb(any())</code>, como vimos en ejemplos anteriores.</li>
+</ul>
 <p>También podemos haber usado la anotación <code>@SpyK</code> para lograr lo mismo que hicimos con la anotación <code>@MockK</code>. Veamos un ejemplo:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">SpyKUnitTest</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
@@ -4603,7 +4605,6 @@ Revisando las partes mas importantes del código anterior:    </p>
 <li><a href="https://surprograma.github.io/libro-disenio-oop/docs/pruebas-automatizadas/elaborar-casos-prueba/">¿Cómo elaborar casos de prueba?</a></li>
 <li><a href="http://wiki.uqbar.org/wiki/articles/testeo-unitario-avanzado.html">Test unitario avanzado</a></li>
 <li><a href="https://surprograma.github.io/libro-disenio-oop/docs/intro/">Diseño de Software</a></li>
-<li></li>
 </ul>
 <h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
 <ul>

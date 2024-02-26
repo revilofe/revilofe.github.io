@@ -376,9 +376,7 @@ fun givenServiceMock_whenCallingMethodReturnsUnit_thenCorrectlyVerified() {
 Como muestra el código anterior:   
 
    - Agregamos la función `addHelloWorld()` usando `just runs`.  
-
    - Luego, llamamos a la función y le pasamos una `MutableList` vacía.  
-
    - Por último, si hemos conseguido omitir la ejecución de la función con éxito, después de la invocación de la función, la cadena `“Hello World!”` no debe aparecer en la lista pasada como parámetro a la función, y por tanto el test deberá dar ok.  
 
 Ahora entendamos cómo `just runs` omite la llamada de la función real. Primero, echemos un vistazo a la implementación de la función `just()`:

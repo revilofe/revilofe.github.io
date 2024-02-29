@@ -2177,6 +2177,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. Principios de SOLID.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-s-principio-de-responsabilidad-unica-single-responsibility-principle-srp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. S - Principio de Responsabilidad Única ("**S**ingle Responsibility Principle" - SRP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-o-principio-de-abiertocerrado-openclosed-principle-ocp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. O - Principio de Abierto/Cerrado ("**O**pen/Closed Principle" - OCP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-l-principio-de-substitucion-de-liskov-liskov-substitution-principle-lsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. L - Principio de Substitución de Liskov ("**L**iskov Substitution Principle" - LSP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-i-principio-de-segregacion-de-la-interfaz-interface-segregation-principle-isp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4. I - Principio de Segregación de la Interfaz ("**I**nterface Segregation Principle" - ISP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-d-principio-de-inversion-de-dependencias-dependency-inversion-principle-dip" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5. D - Principio de Inversión de Dependencias ("**D**ependency Inversion Principle" - DIP)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -4028,6 +4079,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. Principios de SOLID.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-s-principio-de-responsabilidad-unica-single-responsibility-principle-srp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. S - Principio de Responsabilidad Única ("**S**ingle Responsibility Principle" - SRP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-o-principio-de-abiertocerrado-openclosed-principle-ocp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. O - Principio de Abierto/Cerrado ("**O**pen/Closed Principle" - OCP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-l-principio-de-substitucion-de-liskov-liskov-substitution-principle-lsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. L - Principio de Substitución de Liskov ("**L**iskov Substitution Principle" - LSP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-i-principio-de-segregacion-de-la-interfaz-interface-segregation-principle-isp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4. I - Principio de Segregación de la Interfaz ("**I**nterface Segregation Principle" - ISP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-d-principio-de-inversion-de-dependencias-dependency-inversion-principle-dip" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5. D - Principio de Inversión de Dependencias ("**D**ependency Inversion Principle" - DIP)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -4105,120 +4207,120 @@
 <h3 id="2-principios-de-solid">2. Principios de SOLID.<a class="headerlink" href="#2-principios-de-solid" title="Permanent link">&para;</a></h3>
 <p>Los principios SOLID son un conjunto de cinco principios de diseño orientado a objetos introducidos por <em>Robert C. Martin</em>. Estos principios son fundamentales para escribir software limpio, mantenible y escalable.</p>
 <p>Los 5 principios SOLID son:</p>
-<p>#### 2.1. <strong>S</strong> - <strong>Principio de Responsabilidad Única</strong> <em>("**S**ingle Responsibility Principle" - SRP)</em></p>
+<h4 id="21-s-principio-de-responsabilidad-unica-single-responsibility-principle-srp">2.1. <strong>S</strong> - <strong>Principio de Responsabilidad Única</strong> <em>("**S**ingle Responsibility Principle" - SRP)</em><a class="headerlink" href="#21-s-principio-de-responsabilidad-unica-single-responsibility-principle-srp" title="Permanent link">&para;</a></h4>
 <p><strong>Definición</strong>: Un módulo o clase debe tener solo una razón para cambiar, lo que significa que debe tener solo una tarea o responsabilidad.</p>
 <p>Este principio establece que cada módulo o clase debe tener responsabilidad sobre una sola parte de la funcionalidad proporcionada por el software y esta responsabilidad debe estar encapsulada en su totalidad por la clase. Todos sus servicios deben estar estrechamente alineados con esa responsabilidad.</p>
 <p><strong>Ejemplo</strong>: Considera un módulo de sistema de gestión de pedidos que gestiona tanto los pedidos de los clientes como la logística de los mismos. Según el SRP, debemos dividir este módulo en dos clases: una para gestionar los pedidos y otra para manejar la logística.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Antes: Violación del SRP</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">class</span><span class="w"> </span><span class="nc">OrderManager</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">processOrder</span><span class="p">(</span><span class="n">order</span><span class="p">:</span><span class="w"> </span><span class="n">Order</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="c1">// procesa el pedido</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">calculateShippingCosts</span><span class="p">(</span><span class="n">order</span><span class="p">:</span><span class="w"> </span><span class="n">Order</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="c1">// calcula los costes de envío</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">   </span><span class="kd">fun</span><span class="w"> </span><span class="nf">processOrder</span><span class="p">(</span><span class="n">order</span><span class="p">:</span><span class="w"> </span><span class="n">Order</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">       </span><span class="c1">// procesa el pedido</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">   </span><span class="kd">fun</span><span class="w"> </span><span class="nf">calculateShippingCosts</span><span class="p">(</span><span class="n">order</span><span class="p">:</span><span class="w"> </span><span class="n">Order</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">       </span><span class="c1">// calcula los costes de envío</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">   </span><span class="p">}</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">// Después: Aplicando el SRP</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="kd">class</span><span class="w"> </span><span class="nc">OrderProcessor</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">processOrder</span><span class="p">(</span><span class="n">order</span><span class="p">:</span><span class="w"> </span><span class="n">Order</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="c1">// procesa el pedido</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">   </span><span class="kd">fun</span><span class="w"> </span><span class="nf">processOrder</span><span class="p">(</span><span class="n">order</span><span class="p">:</span><span class="w"> </span><span class="n">Order</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">       </span><span class="c1">// procesa el pedido</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">   </span><span class="p">}</span>
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">}</span>
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="kd">class</span><span class="w"> </span><span class="nc">ShippingCalculator</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">calculateShippingCosts</span><span class="p">(</span><span class="n">order</span><span class="p">:</span><span class="w"> </span><span class="n">Order</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="c1">// calcula los costes de envío</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">   </span><span class="kd">fun</span><span class="w"> </span><span class="nf">calculateShippingCosts</span><span class="p">(</span><span class="n">order</span><span class="p">:</span><span class="w"> </span><span class="n">Order</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">       </span><span class="c1">// calcula los costes de envío</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">   </span><span class="p">}</span>
 <a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="p">}</span>
 </code></pre></div>
-<p>#### 2.2. <strong>O</strong> - <strong>Principio de Abierto/Cerrado</strong> <em>("**O**pen/Closed Principle" - OCP)</em></p>
+<h4 id="22-o-principio-de-abiertocerrado-openclosed-principle-ocp">2.2. <strong>O</strong> - <strong>Principio de Abierto/Cerrado</strong> <em>("**O**pen/Closed Principle" - OCP)</em><a class="headerlink" href="#22-o-principio-de-abiertocerrado-openclosed-principle-ocp" title="Permanent link">&para;</a></h4>
 <p><strong>Definición</strong>: Las entidades de software (clases, módulos, funciones, etc.) deben estar abiertas para la extensión, pero cerradas para la modificación. Es decir, se debe poder extender el comportamiento de la entidad pero sin modificar su código fuente.</p>
 <p><strong>Ejemplo</strong>: Implementar un sistema de descuentos donde nuevos tipos de descuento puedan ser añadidos sin cambiar el código existente.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">interface</span><span class="w"> </span><span class="nc">Discount</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">applyDiscount</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">):</span><span class="w"> </span><span class="kt">Double</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">   </span><span class="kd">fun</span><span class="w"> </span><span class="nf">applyDiscount</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">):</span><span class="w"> </span><span class="kt">Double</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kd">class</span><span class="w"> </span><span class="nc">ChristmasDiscount</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Discount</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">applyDiscount</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">):</span><span class="w"> </span><span class="kt">Double</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">0.90</span><span class="w"> </span><span class="c1">// 10% de descuento</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">   </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">applyDiscount</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">):</span><span class="w"> </span><span class="kt">Double</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">0.90</span><span class="w"> </span><span class="c1">// 10% de descuento</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">   </span><span class="p">}</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="kd">class</span><span class="w"> </span><span class="nc">NewYearDiscount</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Discount</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">applyDiscount</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">):</span><span class="w"> </span><span class="kt">Double</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">0.85</span><span class="w"> </span><span class="c1">// 15% de descuento</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">   </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">applyDiscount</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">):</span><span class="w"> </span><span class="kt">Double</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">0.85</span><span class="w"> </span><span class="c1">// 15% de descuento</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">   </span><span class="p">}</span>
 <a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
 <a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
 <a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="c1">// La clase Checkout no necesita ser modificada para añadir nuevos tipos de descuentos</span>
 <a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Checkout</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">discount</span><span class="p">:</span><span class="w"> </span><span class="n">Discount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">calculatePrice</span><span class="p">(</span><span class="n">originalAmount</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">):</span><span class="w"> </span><span class="kt">Double</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">discount</span><span class="p">.</span><span class="na">applyDiscount</span><span class="p">(</span><span class="n">originalAmount</span><span class="p">)</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">   </span><span class="kd">fun</span><span class="w"> </span><span class="nf">calculatePrice</span><span class="p">(</span><span class="n">originalAmount</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">):</span><span class="w"> </span><span class="kt">Double</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">discount</span><span class="p">.</span><span class="na">applyDiscount</span><span class="p">(</span><span class="n">originalAmount</span><span class="p">)</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">   </span><span class="p">}</span>
 <a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="p">}</span>
 </code></pre></div>
-<p>#### 2.3. <strong>L</strong> - <strong>Principio de Substitución de Liskov</strong> <em>("**L**iskov Substitution Principle" - LSP)</em></p>
+<h4 id="23-l-principio-de-substitucion-de-liskov-liskov-substitution-principle-lsp">2.3. <strong>L</strong> - <strong>Principio de Substitución de Liskov</strong> <em>("**L**iskov Substitution Principle" - LSP)</em><a class="headerlink" href="#23-l-principio-de-substitucion-de-liskov-liskov-substitution-principle-lsp" title="Permanent link">&para;</a></h4>
 <p><strong>Definición</strong>: Los objetos de una superclase deben poder ser reemplazados con objetos de sus subclases sin afectar la correctitud del programa.</p>
 <p>Este principo puede definirse como: «cada clase que hereda de otra puede usarse como su padre sin necesidad de conocer las diferencias entre ellas».</p>
 <p><strong>Ejemplo</strong>: Extender la funcionalidad de una clase de vehículo asegurando que las subclases puedan sustituir a la superclase.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">open</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Vehicle</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kd">open</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">startEngine</span><span class="p">():</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="c1">// lógica para arrancar el motor</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">   </span><span class="kd">open</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">startEngine</span><span class="p">():</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">       </span><span class="c1">// lógica para arrancar el motor</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">   </span><span class="p">}</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">}</span>
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="kd">class</span><span class="w"> </span><span class="nc">ElectricCar</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Vehicle</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">startEngine</span><span class="p">():</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="c1">// lógica específica para arrancar un motor eléctrico</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">   </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">startEngine</span><span class="p">():</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">       </span><span class="c1">// lógica específica para arrancar un motor eléctrico</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">   </span><span class="p">}</span>
 <a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">}</span>
 <a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
 <a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">startVehicle</span><span class="p">(</span><span class="n">vehicle</span><span class="p">:</span><span class="w"> </span><span class="n">Vehicle</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vehicle</span><span class="p">.</span><span class="na">startEngine</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Vehículo arrancado.&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Falló al arrancar el vehículo.&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vehicle</span><span class="p">.</span><span class="na">startEngine</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">       </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Vehículo arrancado.&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">   </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">       </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Falló al arrancar el vehículo.&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">   </span><span class="p">}</span>
 <a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="p">}</span>
 </code></pre></div>
-<p>#### 2.4. <strong>I</strong> - <strong>Principio de Segregación de la Interfaz</strong> <em>("**I**nterface Segregation Principle" - ISP)</em></p>
+<h4 id="24-i-principio-de-segregacion-de-la-interfaz-interface-segregation-principle-isp">2.4. <strong>I</strong> - <strong>Principio de Segregación de la Interfaz</strong> <em>("**I**nterface Segregation Principle" - ISP)</em><a class="headerlink" href="#24-i-principio-de-segregacion-de-la-interfaz-interface-segregation-principle-isp" title="Permanent link">&para;</a></h4>
 <p><strong>Definición</strong>: Los clientes no deben ser forzados a depender de interfaces que no utilizan.</p>
 <p>Este principio establece que los clientes de un programa dado sólo deberían conocer aquellos métodos del programa que realmente usan, y no aquellos que no necesitan usar.</p>
 <p><strong>Ejemplo</strong>: Dividir una interfaz grande en interfaces más pequeñas y específicas.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// Antes: Violación del ISP</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">interface</span><span class="w"> </span><span class="nc">Worker</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">work</span><span class="p">()</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">eat</span><span class="p">()</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">   </span><span class="kd">fun</span><span class="w"> </span><span class="nf">work</span><span class="p">()</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">   </span><span class="kd">fun</span><span class="w"> </span><span class="nf">eat</span><span class="p">()</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
 <a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1">// Después: Aplicando el ISP</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="kd">interface</span><span class="w"> </span><span class="nc">Workable</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">work</span><span class="p">()</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">   </span><span class="kd">fun</span><span class="w"> </span><span class="nf">work</span><span class="p">()</span>
 <a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">}</span>
 <a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
 <a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="kd">interface</span><span class="w"> </span><span class="nc">Eatable</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">eat</span><span class="p">()</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">   </span><span class="kd">fun</span><span class="w"> </span><span class="nf">eat</span><span class="p">()</span>
 <a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">}</span>
 <a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
 <a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="kd">class</span><span class="w"> </span><span class="nc">HumanWorker</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Workable</span><span class="p">,</span><span class="w"> </span><span class="n">Eatable</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">work</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="c1">// trabajar</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">eat</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">        </span><span class="c1">// comer</span>
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">   </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">work</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">       </span><span class="c1">// trabajar</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">   </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">eat</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">       </span><span class="c1">// comer</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">   </span><span class="p">}</span>
 <a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="p">}</span>
 <a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>
 <a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="kd">class</span><span class="w"> </span><span class="nc">RobotWorker</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Workable</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">work</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">        </span><span class="c1">// trabajar</span>
-<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">   </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">work</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">       </span><span class="c1">// trabajar</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">   </span><span class="p">}</span>
 <a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="p">}</span>
 </code></pre></div>
-<p>#### 2.5. <strong>D</strong> - <strong>Principio de Inversión de Dependencias</strong> <em>("**D**ependency Inversion Principle" - DIP)</em></p>
+<h4 id="25-d-principio-de-inversion-de-dependencias-dependency-inversion-principle-dip">2.5. <strong>D</strong> - <strong>Principio de Inversión de Dependencias</strong> <em>("**D**ependency Inversion Principle" - DIP)</em><a class="headerlink" href="#25-d-principio-de-inversion-de-dependencias-dependency-inversion-principle-dip" title="Permanent link">&para;</a></h4>
 <p><strong>Definición</strong>: Este principio consta de dos partes:</p>
 <ul>
 <li>Módulos de alto nivel no deben depender de módulos de bajo nivel. Ambos deben depender de abstracciones.</li>
@@ -4226,19 +4328,19 @@
 </ul>
 <p><strong>Ejemplo</strong>: Usar una interfaz para desacoplar la lógica de notificación de la implementación concreta de envío de mensajes.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">interface</span><span class="w"> </span><span class="nc">MessageSender</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">sendMessage</span><span class="p">(</span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="kd">fun</span><span class="w"> </span><span class="nf">sendMessage</span><span class="p">(</span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">}</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="kd">class</span><span class="w"> </span><span class="nc">EmailSender</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MessageSender</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">sendMessage</span><span class="p">(</span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Enviando email: </span><span class="si">$</span><span class="n">message</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">sendMessage</span><span class="p">(</span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Enviando email: </span><span class="si">$</span><span class="n">message</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="p">}</span>
 <a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
 <a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="kd">class</span><span class="w"> </span><span class="nc">NotificationService</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">sender</span><span class="p">:</span><span class="w"> </span><span class="n">MessageSender</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">notifyUser</span><span class="p">(</span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="n">sender</span><span class="p">.</span><span class="na">sendMessage</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">  </span><span class="kd">fun</span><span class="w"> </span><span class="nf">notifyUser</span><span class="p">(</span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">      </span><span class="n">sender</span><span class="p">.</span><span class="na">sendMessage</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="p">}</span>
 </code></pre></div>
 <p>En este ejemplo, <code>NotificationService</code> depende de la abstracción <code>MessageSender</code>, no de su implementación concreta, cumpliendo con el DIP. Esto permite cambiar fácilmente la forma en que se envían las notificaciones (por ejemplo, a SMS) sin modificar <code>NotificationService</code>.</p>

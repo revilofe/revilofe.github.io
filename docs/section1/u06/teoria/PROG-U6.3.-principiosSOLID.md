@@ -12,7 +12,7 @@ categories:
     - kotlin
 tags:
     - Software
-    - kotlin
+    - kotlin 
 ---
 ## 6.3. Principios de SOLID.
 

@@ -124,11 +124,14 @@ class AnnotationMockKUnitTest {
 }
 ```
 
-Revisemos lo más importante del código anterior:
-- Con la anotación `@MoockK`, hemos definido (marcado para crear) los objetos mocks `service1` y `service2` que vamos a inyectar en el servicio `objectUnderTest`.
-- Hemos usado la anotación `@InjectMockKs` para especificar el objeto `objectUnderTest` donde se deben inyectar los objetos mocks definidos.  
-- Por defecto, los objetos mocks se inyectan en variables que aún no están asignadas. Aunque, podemos usar `@OverrideMockKs` para anular campos que ya tienen un valor.
-- Por último, MockK requiere que se llame a `MockKAnnotations.init(…)` en el objeto que declara variables con anotaciones. Para Junit5, se puede reemplazar con `@ExtendWith(MockKExtension::class)`.
+Revisemos lo más importante del código anterior:   
+
+   - Con la anotación `@MoockK`, hemos definido (marcdo para crear) los objetos mocks `service1` y `service2` que vamos a inyectar en el servicio `objectUnderTest`.    
+   - Hemos usado la anotación `@InjectMockKs` para especificar el objeto `objectUnderTest` donde se deben inyectar los objetos mocks definidos.   
+   - Por defecto, los objetos mocks se inyectan en variables que aún no están asignadas. Aunque, podemos usar `@OverrideMockKs` para anular campos que ya tienen un valor.
+   - Por último, MockK requiere que se llame a `MockKAnnotations.init(…)` en el objeto que declara variables con anotaciones. Para Junit5, se puede reemplazar con `@ExtendWith(MockKExtension::class)`.
+
+
 
 ### 6. Spy
 
@@ -155,9 +158,11 @@ fun givenServiceSpy_whenMockingOnlyOneMethod_thenOtherMethodsShouldBehaveAsOrigi
 }
 ```
 
-Revisemos lo más importante del código anterior:
-- Hemos usado el método `spyk` para crear un objeto spyk (espía) de la clase `TestableService`.  
-- También hemos usado `every` para definir el comportamiento del método que nos interesa, en concreto `service.getDataFromDb(any())`, como vimos en ejemplos anteriores.
+Revisemos lo más importante del código anterior:   
+
+   - Hemos usado el método `spyk` para crear un objeto spyk (espía) de la clase `TestableService`.  
+   - También hemos usado `every` para definir el comportamiento del método que nos interesa, en concreto `service.getDataFromDb(any())`, como vimos en ejemplos anteriores.
+
 
 También podemos haber usado la anotación `@SpyK` para lograr lo mismo que hicimos con la anotación `@MockK`. Veamos un ejemplo:
 
@@ -373,11 +378,11 @@ fun givenServiceMock_whenCallingMethodReturnsUnit_thenCorrectlyVerified() {
 }
 ```
 
-Como muestra el código anterior, 
-- Agregamos la función `addHelloWorld()` usando `just runs`. 
-- Luego, llamamos a la función y le pasamos una `MutableList` vacía.
-- Por último, si omitimos la ejecución de la función con éxito, `“Hello World!”` no debe aparecer en la lista, pasada como parámetro, después de la invocación. 
-El test es ok tras de ejecutarlo.
+Como muestra el código anterior:   
+
+   - Agregamos la función `addHelloWorld()` usando `just runs`.  
+   - Luego, llamamos a la función y le pasamos una `MutableList` vacía.  
+   - Por último, si hemos conseguido omitir la ejecución de la función con éxito, después de la invocación de la función, la cadena `“Hello World!”` no debe aparecer en la lista pasada como parámetro a la función, y por tanto el test deberá dar ok.  
 
 Ahora entendamos cómo `just runs` omite la llamada de la función real. Primero, echemos un vistazo a la implementación de la función `just()`:
 
@@ -462,7 +467,7 @@ Se han visto algunas de las características más importantes de MockK. MockK es
 * [¿Cómo elaborar casos de prueba?](https://surprograma.github.io/libro-disenio-oop/docs/pruebas-automatizadas/elaborar-casos-prueba/)
 * [Test unitario avanzado](http://wiki.uqbar.org/wiki/articles/testeo-unitario-avanzado.html)
 * [Diseño de Software](https://surprograma.github.io/libro-disenio-oop/docs/intro/)
-* 
+
 ## Fuente
 * [MockK: A Mocking Library for Kotlin](https://www.baeldung.com/kotlin/mockk)
 * [MockK Guidebook](https://notwoods.github.io/mockk-guidebook/)

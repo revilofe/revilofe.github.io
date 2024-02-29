@@ -16,6 +16,8 @@ tags:
 ---
 ## Depuración
 
+### 1. Introducción a la Depuración
+
 Una de las habilidades más importantes que adquirirá cuando esté aprendiendo a programar es la depuración. Aunque puede ser frustrante, la depuración es una de las partes más intelectualmente gratificantes, desafiantes e interesantes de la programación.
 
 La depuración puede ser vista como un trabajo de detective. El programador se enfrenta a pistas y tiene que inferir los procesos y eventos que generaron los resultados que ve.
@@ -29,7 +31,30 @@ Para algunas personas, la programación y la depuración son lo mismo. Es decir,
 
 A medida que comience a escribir programas más extensos, es posible que pase más tiempo depurando. Más código significa más posibilidades de cometer un error y más lugares dónde se pueden esconder los errores.
 
-### Uso de println y logging para depurar
+#### 1.1. ¿Qué es la depuración?
+
+La depuración es el proceso de identificar y corregir errores en el código software. Es una parte esencial del proceso de desarrollo de software y ayuda a garantizar que el software funcione correctamente.
+
+#### 1.2. Importancia de la depuración en el desarrollo de software
+
+La depuración es importante por varias razones:
+
+* **Ayuda a encontrar errores en el código:** Los errores pueden causar que el software se bloquee, funcione de forma incorrecta o produzca resultados inesperados. La depuración ayuda a identificar la causa de estos errores y a corregirlos.
+* **Mejora la calidad del software:** Un software con errores puede ser frustrante para los usuarios y puede dañar la reputación del desarrollador. La depuración ayuda a mejorar la calidad del software al eliminar los errores.
+* **Ahorra tiempo y dinero:** Los errores pueden retrasar el lanzamiento del software y aumentar los costes de desarrollo. La depuración puede ayudar a evitar estos problemas al encontrar y corregir los errores de forma temprana.
+
+### 2. Herramientas de depuración
+
+Existen diferentes herramientas de depuración disponibles, cada una con sus propias características y ventajas. Algunas de las herramientas de depuración más comunes incluyen:
+
+* **Depuradores integrados:** La mayoría de los IDEs modernos incluyen un depurador integrado que permite ejecutar el código línea por línea, inspeccionar variables y modificar el valor de las variables en tiempo de ejecución.
+* **Depuradores remotos:** Los depuradores remotos permiten depurar código que se ejecuta en un dispositivo remoto, como un teléfono móvil o un servidor.
+* **Herramientas de análisis de código estático:** Estas herramientas analizan el código fuente para identificar posibles errores, como errores de sintaxis o lógica.
+
+### 3. Técnicas de depuración**
+
+#### 3.1.  Uso de println y logging para depurar
+
 Muchos programadores principiantes utilizan la técnica de depuración más simple y efectiva: agregar al programa sentencias de impresión a consola. Por ejemplo, si no está seguro de qué valor tiene una variable, puede imprimirlo en la consola para verlo.
 
 ```kotlin
@@ -40,9 +65,10 @@ fun main() {
     println("z es $z")
 }
 ```
+
 Mostrar el valor de `z` en la consola le permitirá ver si el cálculo es correcto. Si no lo es, puede mostrar los valores de `x` e `y` para ver si son correctos. Si no lo son, puede mostrar los valores de las variables que los inicializan, y así sucesivamente. Este tipo de salida se llama **trazas**.
 
-Mostrar la información de depuración en la consola es una técnica efectiva, pero tiene dos desventajas.        
+Mostrar la información de depuración en la consola es una técnica efectiva, pero tiene dos desventajas.
 
 - La primera es que a veces es difícil encontrar el equilibrio entre mostrar demasiada información y no mostrar suficiente. Si muestra demasiada información, la consola se llenará de mensajes y será difícil encontrar lo que está buscando. Si no muestra suficiente información, puede pasar por alto la pista que necesita.
 - La segunda desventaja es que, una vez que haya encontrado y corregido el error, debe eliminar o comentar las sentencias de impresión. Si no lo hace, el programa se llenará de mensajes de depuración que no necesita. Esto no es un problema en programas pequeños, pero en programas grandes, puede ser difícil recordar qué mensajes de depuración son importantes y cuáles no.
@@ -52,6 +78,7 @@ El uso de sistemas de registro o logging es una técnica más avanzada que puede
 Los sistemas de registro también pueden mostrar mensajes de depuración en diferentes niveles. Por ejemplo, puede mostrar mensajes de depuración solo cuando está depurando un programa, pero no cuando está en producción. O puede mostrar mensajes de depuración solo cuando ocurre un error. O puede mostrar mensajes de depuración solo cuando ocurre un error y solo en ciertas partes del programa.
 
 Los niveles de registro son una forma de controlar la cantidad de información que se muestra. Los niveles de registro más comunes son:
+
 - **DEBUG**: mensajes de depuración que muestran información detallada sobre el estado del programa.
 - **INFO**: mensajes informativos que muestran información sobre el estado del programa.
 - **WARN**: mensajes de advertencia que muestran información sobre un posible problema.
@@ -65,7 +92,7 @@ los sistemas de registro también pueden mostrar mensajes de depuración en dife
 
 Los lenguajes de programación modernos suelen tener bibliotecas de registro que facilitan el uso de sistemas de registro. Por ejemplo, Kotlin tiene una biblioteca de registro llamada `logback`. Esta biblioteca le permite controlar la cantidad de información que se muestra y le permite mostrar mensajes de depuración en diferentes niveles y partes del programa.
 
-### Depuración por bisección
+#### 3.2. Depuración por bisección
 
 Una forma de reducir el tiempo de depuración es la técnica denominada "depurar por bisección". Por ejemplo, si hay 100 líneas en su programa y las revisa una a la vez, serían 100 revisiones.
 
@@ -77,7 +104,7 @@ Cada vez que realiza una verificación como esta, reduce a la mitad el número d
 
 En la práctica, no siempre se conoce dónde está la "mitad del programa", y no siempre es posible verificarlo. No tiene sentido contar líneas y encontrar el punto medio exacto. En su lugar, piense en los lugares del programa donde puede haber errores y en los lugares donde es fácil verificar. Luego, elija un lugar en donde usted crea que las posibilidades de encontrar un error antes o después de esta verificación son más o menos las mismas.
 
-### Depuración de patito de goma
+#### 3.3. Depuración de patito de goma
 
 Otra técnica de depuración es la "depuración del patito de goma". Si está atascado en un problema, si le explica el problema a otra persona, a veces puede encontrar la respuesta incluso antes de terminar de hacer la pregunta. Generalmente no es necesaria otra persona, incluso se podría hablar con un pato de goma. Sí, un patito de goma. Es una técnica que a menudo funciona. Incluso si no resuelve el problema, puede ayudar a aclarar el problema. Este es el origen de la conocida estrategia llamada depuración del pato de goma. Esto es real, vea https://en.wikipedia.org/wiki/Rubber_duck_debugging.
 
@@ -85,13 +112,13 @@ El método de depuración del patito de goma es un término informal utilizado e
 
 Muchos programadores han tenido la experiencia de explicar un problema de programación a alguien más, posiblemente a alguien que no sabe nada sobre programación, y encontrar la solución en el proceso de explicar el problema. Al comparar lo que supuestamente hace el código con lo que hace en realidad, cualquier incongruencia resulta evidente. Usando un objeto inanimado, el programador puede tratar de lograr el mismo efecto sin tener que hablar con otra persona.
 
-### Checks de sanidad y consistencia
+#### 3.4. Checks de sanidad y consistencia
 
 Los checks de sanidad y consistencia son una forma de depuración que se realiza durante el desarrollo de software. Estos checks ayudan a prevenir errores lógicos y asegurar la coherencia de los datos en tus programas.
 
-**sanity check**, imagina una función que calcula la raíz cuadrada de un número. Un sanity check sería verificar que el número de entrada no sea negativo antes de realizar el cálculo, ya que la raíz cuadrada de un número negativo no es un número real en matemáticas básicas.
+En el caso de **sanity check**, imagina una función que calcula la raíz cuadrada de un número. Un sanity check sería verificar que el número de entrada no sea negativo antes de realizar el cálculo, ya que la raíz cuadrada de un número negativo no es un número real en matemáticas básicas.
 
-```kotlin 
+```kotlin
 fun calcularRaizCuadrada(numero: Double): Double {
     if (numero < 0) {
         throw IllegalArgumentException("El número no puede ser negativo.")
@@ -114,7 +141,9 @@ fun asignarRolAUsuario(usuario: Usuario, rol: String, rolesValidos: List<String>
 
 Estos ejemplos muestran cómo los checks de sanidad y consistencia ayudan a prevenir errores lógicos y asegurar la coherencia de los datos en tus programas.
 
-### El proceso de depuración
+### 4. Flujo de trabajo
+
+#### 4.1 Flujo de trabajo genérica
 
 Cuando está depurando un programa, y especialmente si está tratando de resolver un error difícil, hay cinco cosas que puede probar:
 
@@ -136,12 +165,170 @@ Incluso las mejores técnicas de depuración fallarán si hay demasiados errores
 
 Encontrar un error difícil requiere leer, ejecutar, reflexionar y, a veces, volver atrás. Si se queda atascado en una de estas actividades, pruebe las otras.
 
-## Recursos
+#### 4.2 Flujo de trabajo usando una herramienta de depuración
 
-* [Debugging code](https://www.jetbrains.com/help/idea/debugging-code.html#refreshers)
-* [Using breakpoints](https://www.jetbrains.com/help/idea/using-breakpoints.html#breakpoint-statuses)
+El flujo de trabajo de depuración tipicamente involucra los siguientes pasos:
 
-## Fuente
+1. **Identificar el problema:** El primer paso es identificar el problema que está causando el error. Esto puede implicar observar el comportamiento del software, revisar los registros de errores o utilizar una herramienta de análisis de código estático.
+2. **Establecer un punto de interrupción:** Un punto de interrupción es una línea de código en la que el debugger se detendrá. Esto permite inspeccionar el estado del programa en ese punto específico.
+3. **Ejecutar el código línea por línea:** El debugger permite ejecutar el código línea por línea, lo que permite observar cómo cambia el estado del programa a medida que se ejecuta el código.
+4. **Inspeccionar variables:** El debugger permite inspeccionar el valor de las variables en cualquier momento. Esto puede ayudar a identificar la causa del error.
+5. **Modificar el valor de las variables:** El debugger permite modificar el valor de las variables en tiempo de ejecución. Esto puede ser útil para probar diferentes soluciones al error.
+6. **Corregir el error:** Una vez que se ha identificado la causa del error, se puede corregir el error modificando el código.
 
-* [Depuración en IntelliJ Idea una guía para pricipiantes](https://codegym.cc/es/groups/posts/es.243.depuracion-en-intellij-idea-una-guia-para-principiantes)
-* [Debugging in IntelliJ Idea a beginners guide](https://codegym.cc/groups/posts/243-debugging-in-intellij-idea-a-beginners-guide)
+### 5. Depuración en Kotlin
+
+#### 5.1. Entorno de desarrollo integrado (IDE)
+
+Se recomienda utilizar un IDE compatible con Kotlin para depurar código Kotlin. Algunos de los IDEs más populares para Kotlin incluyen:
+
+* **Android Studio:** El IDE oficial para el desarrollo de aplicaciones Android.
+* **IntelliJ IDEA:** Un IDE popular con soporte para una amplia gama de lenguajes de programación, incluido Kotlin.
+* **Visual Studio Code:** Un editor de código ligero y extensible con soporte para Kotlin.
+
+#### 5.2. Puntos de interrupción
+
+Los puntos de interrupción se pueden establecer en cualquier línea de código. Para establecer un punto de interrupción, haga clic en el margen izquierdo de la línea de código. También puede usar la tecla F9 para establecer un punto de interrupción en la línea de código actual.
+
+#### 5.3. Inspección de variables
+
+El valor de las variables se puede inspeccionar en el panel de variables del debugger. Este panel muestra el nombre, el tipo y el valor de todas las variables en el ámbito actual.
+
+#### 5.4. Pila de llamadas
+
+La pila de llamadas muestra la secuencia de funciones que se han llamado para llegar a la línea de código actual. Esto puede ser útil para comprender el contexto del error.
+
+#### 5.5. Modificación de variables en tiempo de ejecución
+
+El valor de las variables se puede modificar en el panel de variables del debugger. Esto puede ser útil para probar diferentes soluciones al error.
+
+### 6. Depuración Avanzada
+
+#### 6.1. Usar el debugger para analizar expresiones complejas**
+
+El debugger se puede utilizar para analizar expresiones complejas paso a paso. Esto puede ser útil para comprender cómo se evalúa la expresión y para identificar posibles errores.
+
+#### 6.2. Depuración de código multihilo
+
+La depuración de código multihilo puede ser compleja, ya que hay que tener en cuenta la interconexión entre los diferentes hilos. Algunas herramientas de depuración ofrecen funciones específicas para la depuración de código multihilo, como la posibilidad de ver el estado de cada hilo y de suspender y reanudar hilos individualmente.
+
+#### 6.3. Depuración de código asincrónico
+
+La depuración de código asincrónico también puede ser compleja, ya que es difícil seguir el flujo de ejecución del código. Algunas herramientas de depuración ofrecen funciones específicas para la depuración de código asincrónico, como la posibilidad de ver la cola de eventos y de ver el estado de las tareas asincrónicas.
+
+#### 6.4. Depuración de pruebas unitarias
+
+Las pruebas unitarias son una herramienta importante para la detección de errores. Las herramientas de depuración se pueden utilizar para depurar pruebas unitarias de la misma manera que se utilizan para depurar código normal.
+
+#### 6.5. Usar herramientas de análisis de código estático
+
+Las herramientas de análisis de código estático pueden identificar posibles errores en el código fuente sin necesidad de ejecutar el código. Esto puede ayudar a encontrar errores en una fase temprana del proceso de desarrollo, lo que puede ahorrar tiempo y esfuerzo.
+
+### 7. Ejemplos Prácticos:
+
+#### 7.1. Ejemplo 1: Depuración de una excepción NullPointerException
+
+**Descripción del problema:**
+
+El código tiene la intención de mostrar obtener la longitud de una cadena. Sin embargo, el código muestra una excepción. 
+
+**Código incorrecto:**
+
+```kotlin
+fun main() {
+    val str: String? = null
+    println(str.length) // NullPointerException
+}
+
+```
+
+**Explicación del error:**
+
+El error está al no comprobar si el objeto, definido como nulable, es nulo o no. La variable `str` nunca llega a inicializarse, por tanto, cualquier intento de acceder a ella resultará en `NullPointerException`.
+
+**Pasos para la depuración:**
+
+1. En este caso, se podría **utilizar un chequeo de sanidad y consistencia**
+2. **Chequee la sanidad de las variables**, identificando las posibles variables que pueden llegar a ser nulas.
+4. **Introduce comprobaciones** para evitar acceder a valores nulos.
+
+
+#### 7.2. Ejemplo 2: Depuración de un error de tipo.
+
+**Descripción del problema:**
+
+El código es básico, es el comienzo de un programa en el que se asignan valor a dos variables, y muestra un error.
+
+**Código incorrecto:**
+```kotlin
+fun main() {
+    val num1: Int = 10
+    val num2: Double = num1 // Error de tipo
+}
+
+```
+
+**Explicación del error:**
+
+El error está en la línea `val num2: Double = num1`. Ya que se está asignando un `Int` a un `Double`
+
+**Pasos para la depuración:**
+
+1. En este caso, se podría usar **Depuración de patito de goma**
+2. **Lea e mensaje de error** .
+3. **Entienda el mensaje** y intente explicar a alguien/algo que esta haciendo el código. 
+4. **Llegará a una inconsistencia** que dará lugar a solucionar el error. 
+5. **Modifique la línea** donde se asigna valores.
+
+
+#### 7.3. Ejemplo 3: Depuración de un error de lógica
+**Descripción del problema:**
+
+El código tiene la intención de calcular el promedio de los números en una lista. Sin embargo, el código no imprime el valor correcto.
+
+**Código incorrecto:**
+
+```kotlin
+fun main() {
+    val listaNumeros = listOf(1, 2, 3, 4, 5)
+    var suma = 0
+    var contador = 0
+    for (numero in listaNumeros) {
+        suma = numero
+        contador++
+    }
+    val promedio = suma / contador
+    println("El promedio es: $promedio") // Imprime 0
+}
+```
+
+**Explicación del error:**
+
+El error está en la línea `suma = numero`. La variable `suma` debería incrementarse con el valor de cada número en la lista, sin embargo se asigna. Esto significa que la variable `suma` siempre tendrá, al terminar el bucle for, el ultimo valor de la lista `listaNumeros`, lo que resultará en un promedio no correcto.
+
+**Pasos para la depuración:**
+
+1. **Establezca un punto de interrupción** dentro del bucle `for`.
+2. **Ejecute el código línea por línea** y observe el valor de las variables.
+3. **Observe que la variable `suma`** no aumenta, y solo va cambiando de valor.
+4. **Modifique la línea** donde se deberia incrementar para que en vez de `suma = numero`, sea `suma += numero`.
+
+### 8. Conclusión
+
+La depuración es una habilidad esencial para cualquier desarrollador de software. Esta unidad proporcionará a los estudiantes las herramientas y los conocimientos necesarios para depurar código Kotlin de forma eficaz, lo que les permitirá mejorar su productividad y la calidad de su código.
+
+### 9. Recursos y fuentes
+
+* Documentación oficial de Kotlin sobre depuración:
+
+  * [Debugging code](https://www.jetbrains.com/help/idea/debugging-code.html#refreshers)
+  * [Using breakpoints](https://www.jetbrains.com/help/idea/using-breakpoints.html#breakpoint-statuses)
+
+* Tutoriales y guías online:
+
+  * [Depuración en IntelliJ Idea una guía para pricipiantes](https://codegym.cc/es/groups/posts/es.243.depuracion-en-intellij-idea-una-guia-para-principiantes)
+  * [Debugging in IntelliJ Idea a beginners guide](https://codegym.cc/groups/posts/243-debugging-in-intellij-idea-a-beginners-guide)
+* Foros y comunidades de desarrolladores:
+
+  * Foro de Kotlin: [https://discuss.kotlinlang.org/](https://discuss.kotlinlang.org/)
+  * Stack Overflow: [https://stackoverflow.com/questions/tagged/kotlin](https://stackoverflow.com/questions/tagged/kotlin)

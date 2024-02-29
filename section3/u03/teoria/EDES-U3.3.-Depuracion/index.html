@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon-96x96.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
     
     
       
@@ -3055,45 +3055,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#uso-de-println-y-logging-para-depurar" class="md-nav__link">
+  <a href="#1-introduccion-a-la-depuracion" class="md-nav__link">
     <span class="md-ellipsis">
-      Uso de println y logging para depurar
+      1. Introducción a la Depuración
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción a la Depuración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-que-es-la-depuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. ¿Qué es la depuración?
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#depuracion-por-biseccion" class="md-nav__link">
+  <a href="#12-importancia-de-la-depuracion-en-el-desarrollo-de-software" class="md-nav__link">
     <span class="md-ellipsis">
-      Depuración por bisección
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#depuracion-de-patito-de-goma" class="md-nav__link">
-    <span class="md-ellipsis">
-      Depuración de patito de goma
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#checks-de-sanidad-y-consistencia" class="md-nav__link">
-    <span class="md-ellipsis">
-      Checks de sanidad y consistencia
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#el-proceso-de-depuracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      El proceso de depuración
+      1.2. Importancia de la depuración en el desarrollo de software
     </span>
   </a>
   
@@ -3103,22 +3086,282 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recursos" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-herramientas-de-depuracion" class="md-nav__link">
     <span class="md-ellipsis">
-      Recursos
+      2. Herramientas de depuración
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#3-tecnicas-de-depuracion" class="md-nav__link">
     <span class="md-ellipsis">
-      Fuente
+      3. Técnicas de depuración**
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="3. Técnicas de depuración**">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-uso-de-println-y-logging-para-depurar" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.  Uso de println y logging para depurar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-depuracion-por-biseccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Depuración por bisección
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-depuracion-de-patito-de-goma" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Depuración de patito de goma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-checks-de-sanidad-y-consistencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Checks de sanidad y consistencia
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-flujo-de-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Flujo de trabajo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Flujo de trabajo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-flujo-de-trabajo-generica" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Flujo de trabajo genérica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-flujo-de-trabajo-usando-una-herramienta-de-depuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Flujo de trabajo usando una herramienta de depuración
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-depuracion-en-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Depuración en Kotlin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Depuración en Kotlin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-entorno-de-desarrollo-integrado-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Entorno de desarrollo integrado (IDE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-puntos-de-interrupcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Puntos de interrupción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-inspeccion-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. Inspección de variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-pila-de-llamadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4. Pila de llamadas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-modificacion-de-variables-en-tiempo-de-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5. Modificación de variables en tiempo de ejecución
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-depuracion-avanzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Depuración Avanzada
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Depuración Avanzada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-usar-el-debugger-para-analizar-expresiones-complejas" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Usar el debugger para analizar expresiones complejas**
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-depuracion-de-codigo-multihilo" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Depuración de código multihilo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-depuracion-de-codigo-asincronico" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. Depuración de código asincrónico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-depuracion-de-pruebas-unitarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4. Depuración de pruebas unitarias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-usar-herramientas-de-analisis-de-codigo-estatico" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5. Usar herramientas de análisis de código estático
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-ejemplos-practicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Ejemplos Prácticos:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Ejemplos Prácticos:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-ejemplo-1-depuracion-de-una-excepcion-nullpointerexception" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1. Ejemplo 1: Depuración de una excepción NullPointerException
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-ejemplo-2-depuracion-de-un-error-de-tipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2. Ejemplo 2: Depuración de un error de tipo.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-ejemplo-3-depuracion-de-un-error-de-logica" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3. Ejemplo 3: Depuración de un error de lógica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Conclusión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-recursos-y-fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Recursos y fuentes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3949,45 +4192,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#uso-de-println-y-logging-para-depurar" class="md-nav__link">
+  <a href="#1-introduccion-a-la-depuracion" class="md-nav__link">
     <span class="md-ellipsis">
-      Uso de println y logging para depurar
+      1. Introducción a la Depuración
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción a la Depuración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-que-es-la-depuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. ¿Qué es la depuración?
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#depuracion-por-biseccion" class="md-nav__link">
+  <a href="#12-importancia-de-la-depuracion-en-el-desarrollo-de-software" class="md-nav__link">
     <span class="md-ellipsis">
-      Depuración por bisección
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#depuracion-de-patito-de-goma" class="md-nav__link">
-    <span class="md-ellipsis">
-      Depuración de patito de goma
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#checks-de-sanidad-y-consistencia" class="md-nav__link">
-    <span class="md-ellipsis">
-      Checks de sanidad y consistencia
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#el-proceso-de-depuracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      El proceso de depuración
+      1.2. Importancia de la depuración en el desarrollo de software
     </span>
   </a>
   
@@ -3997,22 +4223,282 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#recursos" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-herramientas-de-depuracion" class="md-nav__link">
     <span class="md-ellipsis">
-      Recursos
+      2. Herramientas de depuración
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#3-tecnicas-de-depuracion" class="md-nav__link">
     <span class="md-ellipsis">
-      Fuente
+      3. Técnicas de depuración**
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="3. Técnicas de depuración**">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-uso-de-println-y-logging-para-depurar" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.  Uso de println y logging para depurar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-depuracion-por-biseccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Depuración por bisección
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-depuracion-de-patito-de-goma" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Depuración de patito de goma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-checks-de-sanidad-y-consistencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Checks de sanidad y consistencia
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-flujo-de-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Flujo de trabajo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Flujo de trabajo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-flujo-de-trabajo-generica" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Flujo de trabajo genérica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-flujo-de-trabajo-usando-una-herramienta-de-depuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Flujo de trabajo usando una herramienta de depuración
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-depuracion-en-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Depuración en Kotlin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Depuración en Kotlin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-entorno-de-desarrollo-integrado-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Entorno de desarrollo integrado (IDE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-puntos-de-interrupcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Puntos de interrupción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-inspeccion-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. Inspección de variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-pila-de-llamadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4. Pila de llamadas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-modificacion-de-variables-en-tiempo-de-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5. Modificación de variables en tiempo de ejecución
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-depuracion-avanzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Depuración Avanzada
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Depuración Avanzada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-usar-el-debugger-para-analizar-expresiones-complejas" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Usar el debugger para analizar expresiones complejas**
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-depuracion-de-codigo-multihilo" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Depuración de código multihilo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-depuracion-de-codigo-asincronico" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. Depuración de código asincrónico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-depuracion-de-pruebas-unitarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4. Depuración de pruebas unitarias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-usar-herramientas-de-analisis-de-codigo-estatico" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5. Usar herramientas de análisis de código estático
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-ejemplos-practicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Ejemplos Prácticos:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Ejemplos Prácticos:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-ejemplo-1-depuracion-de-una-excepcion-nullpointerexception" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1. Ejemplo 1: Depuración de una excepción NullPointerException
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-ejemplo-2-depuracion-de-un-error-de-tipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2. Ejemplo 2: Depuración de un error de tipo.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-ejemplo-3-depuracion-de-un-error-de-logica" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3. Ejemplo 3: Depuración de un error de lógica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Conclusión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-recursos-y-fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Recursos y fuentes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4069,6 +4555,7 @@
   <h1>3.3.-Depuración</h1>
 
 <h2 id="depuracion">Depuración<a class="headerlink" href="#depuracion" title="Permanent link">&para;</a></h2>
+<h3 id="1-introduccion-a-la-depuracion">1. Introducción a la Depuración<a class="headerlink" href="#1-introduccion-a-la-depuracion" title="Permanent link">&para;</a></h3>
 <p>Una de las habilidades más importantes que adquirirá cuando esté aprendiendo a programar es la depuración. Aunque puede ser frustrante, la depuración es una de las partes más intelectualmente gratificantes, desafiantes e interesantes de la programación.</p>
 <p>La depuración puede ser vista como un trabajo de detective. El programador se enfrenta a pistas y tiene que inferir los procesos y eventos que generaron los resultados que ve.</p>
 <p>La depuración también es como una ciencia experimental. Una vez que se tiene una idea de lo que está mal, se modifica el programa y se intenta nuevamente. Si la hipótesis era correcta, se puede predecir el resultado de la modificación y así estar un paso más cerca de un programa totalmente funcional. Si la hipótesis era incorrecta, se tiene que encontrar una nueva. Como Sherlock Holmes señaló:</p>
@@ -4078,47 +4565,66 @@
 </blockquote>
 <p>Para algunas personas, la programación y la depuración son lo mismo. Es decir, la programación es el proceso de depurar gradualmente un programa hasta que haga lo que desea. Lo ideal es comenzar con un programa que funcione y hacer pequeñas modificaciones, depurándolas a medida que avanza.</p>
 <p>A medida que comience a escribir programas más extensos, es posible que pase más tiempo depurando. Más código significa más posibilidades de cometer un error y más lugares dónde se pueden esconder los errores.</p>
-<h3 id="uso-de-println-y-logging-para-depurar">Uso de println y logging para depurar<a class="headerlink" href="#uso-de-println-y-logging-para-depurar" title="Permanent link">&para;</a></h3>
+<h4 id="11-que-es-la-depuracion">1.1. ¿Qué es la depuración?<a class="headerlink" href="#11-que-es-la-depuracion" title="Permanent link">&para;</a></h4>
+<p>La depuración es el proceso de identificar y corregir errores en el código software. Es una parte esencial del proceso de desarrollo de software y ayuda a garantizar que el software funcione correctamente.</p>
+<h4 id="12-importancia-de-la-depuracion-en-el-desarrollo-de-software">1.2. Importancia de la depuración en el desarrollo de software<a class="headerlink" href="#12-importancia-de-la-depuracion-en-el-desarrollo-de-software" title="Permanent link">&para;</a></h4>
+<p>La depuración es importante por varias razones:</p>
+<ul>
+<li><strong>Ayuda a encontrar errores en el código:</strong> Los errores pueden causar que el software se bloquee, funcione de forma incorrecta o produzca resultados inesperados. La depuración ayuda a identificar la causa de estos errores y a corregirlos.</li>
+<li><strong>Mejora la calidad del software:</strong> Un software con errores puede ser frustrante para los usuarios y puede dañar la reputación del desarrollador. La depuración ayuda a mejorar la calidad del software al eliminar los errores.</li>
+<li><strong>Ahorra tiempo y dinero:</strong> Los errores pueden retrasar el lanzamiento del software y aumentar los costes de desarrollo. La depuración puede ayudar a evitar estos problemas al encontrar y corregir los errores de forma temprana.</li>
+</ul>
+<h3 id="2-herramientas-de-depuracion">2. Herramientas de depuración<a class="headerlink" href="#2-herramientas-de-depuracion" title="Permanent link">&para;</a></h3>
+<p>Existen diferentes herramientas de depuración disponibles, cada una con sus propias características y ventajas. Algunas de las herramientas de depuración más comunes incluyen:</p>
+<ul>
+<li><strong>Depuradores integrados:</strong> La mayoría de los IDEs modernos incluyen un depurador integrado que permite ejecutar el código línea por línea, inspeccionar variables y modificar el valor de las variables en tiempo de ejecución.</li>
+<li><strong>Depuradores remotos:</strong> Los depuradores remotos permiten depurar código que se ejecuta en un dispositivo remoto, como un teléfono móvil o un servidor.</li>
+<li><strong>Herramientas de análisis de código estático:</strong> Estas herramientas analizan el código fuente para identificar posibles errores, como errores de sintaxis o lógica.</li>
+</ul>
+<h3 id="3-tecnicas-de-depuracion">3. Técnicas de depuración**<a class="headerlink" href="#3-tecnicas-de-depuracion" title="Permanent link">&para;</a></h3>
+<h4 id="31-uso-de-println-y-logging-para-depurar">3.1.  Uso de println y logging para depurar<a class="headerlink" href="#31-uso-de-println-y-logging-para-depurar" title="Permanent link">&para;</a></h4>
 <p>Muchos programadores principiantes utilizan la técnica de depuración más simple y efectiva: agregar al programa sentencias de impresión a consola. Por ejemplo, si no está seguro de qué valor tiene una variable, puede imprimirlo en la consola para verlo.</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;z es </span><span class="si">$</span><span class="n">z</span><span class="s">&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
 </code></pre></div>
-Mostrar el valor de <code>z</code> en la consola le permitirá ver si el cálculo es correcto. Si no lo es, puede mostrar los valores de <code>x</code> e <code>y</code> para ver si son correctos. Si no lo son, puede mostrar los valores de las variables que los inicializan, y así sucesivamente. Este tipo de salida se llama <strong>trazas</strong>.</p>
-<p>Mostrar la información de depuración en la consola es una técnica efectiva, pero tiene dos desventajas.        </p>
+<p>Mostrar el valor de <code>z</code> en la consola le permitirá ver si el cálculo es correcto. Si no lo es, puede mostrar los valores de <code>x</code> e <code>y</code> para ver si son correctos. Si no lo son, puede mostrar los valores de las variables que los inicializan, y así sucesivamente. Este tipo de salida se llama <strong>trazas</strong>.</p>
+<p>Mostrar la información de depuración en la consola es una técnica efectiva, pero tiene dos desventajas.</p>
 <ul>
 <li>La primera es que a veces es difícil encontrar el equilibrio entre mostrar demasiada información y no mostrar suficiente. Si muestra demasiada información, la consola se llenará de mensajes y será difícil encontrar lo que está buscando. Si no muestra suficiente información, puede pasar por alto la pista que necesita.</li>
 <li>La segunda desventaja es que, una vez que haya encontrado y corregido el error, debe eliminar o comentar las sentencias de impresión. Si no lo hace, el programa se llenará de mensajes de depuración que no necesita. Esto no es un problema en programas pequeños, pero en programas grandes, puede ser difícil recordar qué mensajes de depuración son importantes y cuáles no.</li>
 </ul>
 <p>El uso de sistemas de registro o logging es una técnica más avanzada que puede ayudar a superar estas desventajas. En lugar de imprimir mensajes en la consola, puede registrarlos en un archivo. Esto le permite controlar la cantidad de información que se muestra y le permite activar o desactivar los mensajes de depuración sin tener que modificar el código.</p>
 <p>Los sistemas de registro también pueden mostrar mensajes de depuración en diferentes niveles. Por ejemplo, puede mostrar mensajes de depuración solo cuando está depurando un programa, pero no cuando está en producción. O puede mostrar mensajes de depuración solo cuando ocurre un error. O puede mostrar mensajes de depuración solo cuando ocurre un error y solo en ciertas partes del programa.</p>
-<p>Los niveles de registro son una forma de controlar la cantidad de información que se muestra. Los niveles de registro más comunes son:
-- <strong>DEBUG</strong>: mensajes de depuración que muestran información detallada sobre el estado del programa.
-- <strong>INFO</strong>: mensajes informativos que muestran información sobre el estado del programa.
-- <strong>WARN</strong>: mensajes de advertencia que muestran información sobre un posible problema.
-- <strong>ERROR</strong>: mensajes de error que muestran información sobre un problema que ha ocurrido.
-- <strong>FATAL</strong>: mensajes de error que muestran información sobre un problema que ha causado que el programa se detenga.
-- <strong>TRACE</strong>: mensajes de depuración que muestran información detallada sobre el estado del programa.
-- <strong>OFF</strong>: no se muestran mensajes de registro.
-- <strong>ALL</strong>: se muestran todos los mensajes de registro.</p>
+<p>Los niveles de registro son una forma de controlar la cantidad de información que se muestra. Los niveles de registro más comunes son:</p>
+<ul>
+<li><strong>DEBUG</strong>: mensajes de depuración que muestran información detallada sobre el estado del programa.</li>
+<li><strong>INFO</strong>: mensajes informativos que muestran información sobre el estado del programa.</li>
+<li><strong>WARN</strong>: mensajes de advertencia que muestran información sobre un posible problema.</li>
+<li><strong>ERROR</strong>: mensajes de error que muestran información sobre un problema que ha ocurrido.</li>
+<li><strong>FATAL</strong>: mensajes de error que muestran información sobre un problema que ha causado que el programa se detenga.</li>
+<li><strong>TRACE</strong>: mensajes de depuración que muestran información detallada sobre el estado del programa.</li>
+<li><strong>OFF</strong>: no se muestran mensajes de registro.</li>
+<li><strong>ALL</strong>: se muestran todos los mensajes de registro.</li>
+</ul>
 <p>los sistemas de registro también pueden mostrar mensajes de depuración en diferentes partes del programa. Por ejemplo, puede mostrar mensajes de depuración solo en ciertas clases o paquetes. O puede mostrar mensajes de depuración solo en ciertas partes del programa, como cuando se ejecuta una función específica.</p>
 <p>Los lenguajes de programación modernos suelen tener bibliotecas de registro que facilitan el uso de sistemas de registro. Por ejemplo, Kotlin tiene una biblioteca de registro llamada <code>logback</code>. Esta biblioteca le permite controlar la cantidad de información que se muestra y le permite mostrar mensajes de depuración en diferentes niveles y partes del programa.</p>
-<h3 id="depuracion-por-biseccion">Depuración por bisección<a class="headerlink" href="#depuracion-por-biseccion" title="Permanent link">&para;</a></h3>
+<h4 id="32-depuracion-por-biseccion">3.2. Depuración por bisección<a class="headerlink" href="#32-depuracion-por-biseccion" title="Permanent link">&para;</a></h4>
 <p>Una forma de reducir el tiempo de depuración es la técnica denominada "depurar por bisección". Por ejemplo, si hay 100 líneas en su programa y las revisa una a la vez, serían 100 revisiones.</p>
 <p>Es mejor tratar de dividir el problema en dos. Busque en la mitad del programa o un valor intermedio que pueda verificar. Agregue una sentencia de impresión (o algo que permita verificar) y ejecute el programa.</p>
 <p>Si esta verificación es incorrecta, debe haber un problema en la primera mitad del programa. Si es correcta, el problema está en la segunda mitad.</p>
 <p>Cada vez que realiza una verificación como esta, reduce a la mitad el número de líneas que debe revisar. Después de seis pasos (que es mucho menos que 100), se reduciría a una o dos líneas de código, al menos en teoría.</p>
 <p>En la práctica, no siempre se conoce dónde está la "mitad del programa", y no siempre es posible verificarlo. No tiene sentido contar líneas y encontrar el punto medio exacto. En su lugar, piense en los lugares del programa donde puede haber errores y en los lugares donde es fácil verificar. Luego, elija un lugar en donde usted crea que las posibilidades de encontrar un error antes o después de esta verificación son más o menos las mismas.</p>
-<h3 id="depuracion-de-patito-de-goma">Depuración de patito de goma<a class="headerlink" href="#depuracion-de-patito-de-goma" title="Permanent link">&para;</a></h3>
+<h4 id="33-depuracion-de-patito-de-goma">3.3. Depuración de patito de goma<a class="headerlink" href="#33-depuracion-de-patito-de-goma" title="Permanent link">&para;</a></h4>
 <p>Otra técnica de depuración es la "depuración del patito de goma". Si está atascado en un problema, si le explica el problema a otra persona, a veces puede encontrar la respuesta incluso antes de terminar de hacer la pregunta. Generalmente no es necesaria otra persona, incluso se podría hablar con un pato de goma. Sí, un patito de goma. Es una técnica que a menudo funciona. Incluso si no resuelve el problema, puede ayudar a aclarar el problema. Este es el origen de la conocida estrategia llamada depuración del pato de goma. Esto es real, vea https://en.wikipedia.org/wiki/Rubber_duck_debugging.</p>
 <p>El método de depuración del patito de goma es un término informal utilizado en ingeniería de software para describir un método de revisión de código. El nombre es una referencia a una historia del libro The Pragmatic Programmer en donde un programador toma un patito de goma y revisa su código forzándose a sí mismo a explicarlo, línea por línea, al pato. Existen otros muchos términos para esta técnica, que a menudo tienen que ver con objetos inanimados.</p>
 <p>Muchos programadores han tenido la experiencia de explicar un problema de programación a alguien más, posiblemente a alguien que no sabe nada sobre programación, y encontrar la solución en el proceso de explicar el problema. Al comparar lo que supuestamente hace el código con lo que hace en realidad, cualquier incongruencia resulta evidente. Usando un objeto inanimado, el programador puede tratar de lograr el mismo efecto sin tener que hablar con otra persona.</p>
-<h3 id="checks-de-sanidad-y-consistencia">Checks de sanidad y consistencia<a class="headerlink" href="#checks-de-sanidad-y-consistencia" title="Permanent link">&para;</a></h3>
+<h4 id="34-checks-de-sanidad-y-consistencia">3.4. Checks de sanidad y consistencia<a class="headerlink" href="#34-checks-de-sanidad-y-consistencia" title="Permanent link">&para;</a></h4>
 <p>Los checks de sanidad y consistencia son una forma de depuración que se realiza durante el desarrollo de software. Estos checks ayudan a prevenir errores lógicos y asegurar la coherencia de los datos en tus programas.</p>
-<p><strong>sanity check</strong>, imagina una función que calcula la raíz cuadrada de un número. Un sanity check sería verificar que el número de entrada no sea negativo antes de realizar el cálculo, ya que la raíz cuadrada de un número negativo no es un número real en matemáticas básicas.</p>
+<p>En el caso de <strong>sanity check</strong>, imagina una función que calcula la raíz cuadrada de un número. Un sanity check sería verificar que el número de entrada no sea negativo antes de realizar el cálculo, ya que la raíz cuadrada de un número negativo no es un número real en matemáticas básicas.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">calcularRaizCuadrada</span><span class="p">(</span><span class="n">numero</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">):</span><span class="w"> </span><span class="kt">Double</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;El número no puede ser negativo.&quot;</span><span class="p">)</span>
@@ -4136,7 +4642,8 @@ Mostrar el valor de <code>z</code> en la consola le permitirá ver si el cálcul
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
 </code></pre></div>
 <p>Estos ejemplos muestran cómo los checks de sanidad y consistencia ayudan a prevenir errores lógicos y asegurar la coherencia de los datos en tus programas.</p>
-<h3 id="el-proceso-de-depuracion">El proceso de depuración<a class="headerlink" href="#el-proceso-de-depuracion" title="Permanent link">&para;</a></h3>
+<h3 id="4-flujo-de-trabajo">4. Flujo de trabajo<a class="headerlink" href="#4-flujo-de-trabajo" title="Permanent link">&para;</a></h3>
+<h4 id="41-flujo-de-trabajo-generica">4.1 Flujo de trabajo genérica<a class="headerlink" href="#41-flujo-de-trabajo-generica" title="Permanent link">&para;</a></h4>
 <p>Cuando está depurando un programa, y especialmente si está tratando de resolver un error difícil, hay cinco cosas que puede probar:</p>
 <ol>
 <li>Lee: Examine su código, léalo y verifique que dice lo que quería decir.</li>
@@ -4151,15 +4658,132 @@ Mostrar el valor de <code>z</code> en la consola le permitirá ver si el cálcul
 <p>La persona que programa tiene que tomarse su tiempo para pensar. La depuración es como una ciencia experimental. Debe tener al menos una hipótesis sobre la causa del problema. Si hay dos o más opciones, trate de pensar en una prueba que elimine una de ellas.</p>
 <p>Incluso las mejores técnicas de depuración fallarán si hay demasiados errores, o si el código que está tratando de corregir es demasiado grande y complicado. A veces, la mejor opción es volver atrás, simplificando el programa hasta que llegue a algo que funcione y que comprenda. Los programadores principiantes a menudo son reacios a volver atrás porque no pueden soportar eliminar una línea de código (incluso si es incorrecto). Si le hace sentir mejor copie su programa en otro archivo antes de comenzar a eliminarlo. Luego puede copiar las piezas una por una. O lo que es mejor, utilice un sistema de gestión de versiones para poder recuperar versiones anteriores.</p>
 <p>Encontrar un error difícil requiere leer, ejecutar, reflexionar y, a veces, volver atrás. Si se queda atascado en una de estas actividades, pruebe las otras.</p>
-<h2 id="recursos">Recursos<a class="headerlink" href="#recursos" title="Permanent link">&para;</a></h2>
+<h4 id="42-flujo-de-trabajo-usando-una-herramienta-de-depuracion">4.2 Flujo de trabajo usando una herramienta de depuración<a class="headerlink" href="#42-flujo-de-trabajo-usando-una-herramienta-de-depuracion" title="Permanent link">&para;</a></h4>
+<p>El flujo de trabajo de depuración tipicamente involucra los siguientes pasos:</p>
+<ol>
+<li><strong>Identificar el problema:</strong> El primer paso es identificar el problema que está causando el error. Esto puede implicar observar el comportamiento del software, revisar los registros de errores o utilizar una herramienta de análisis de código estático.</li>
+<li><strong>Establecer un punto de interrupción:</strong> Un punto de interrupción es una línea de código en la que el debugger se detendrá. Esto permite inspeccionar el estado del programa en ese punto específico.</li>
+<li><strong>Ejecutar el código línea por línea:</strong> El debugger permite ejecutar el código línea por línea, lo que permite observar cómo cambia el estado del programa a medida que se ejecuta el código.</li>
+<li><strong>Inspeccionar variables:</strong> El debugger permite inspeccionar el valor de las variables en cualquier momento. Esto puede ayudar a identificar la causa del error.</li>
+<li><strong>Modificar el valor de las variables:</strong> El debugger permite modificar el valor de las variables en tiempo de ejecución. Esto puede ser útil para probar diferentes soluciones al error.</li>
+<li><strong>Corregir el error:</strong> Una vez que se ha identificado la causa del error, se puede corregir el error modificando el código.</li>
+</ol>
+<h3 id="5-depuracion-en-kotlin">5. Depuración en Kotlin<a class="headerlink" href="#5-depuracion-en-kotlin" title="Permanent link">&para;</a></h3>
+<h4 id="51-entorno-de-desarrollo-integrado-ide">5.1. Entorno de desarrollo integrado (IDE)<a class="headerlink" href="#51-entorno-de-desarrollo-integrado-ide" title="Permanent link">&para;</a></h4>
+<p>Se recomienda utilizar un IDE compatible con Kotlin para depurar código Kotlin. Algunos de los IDEs más populares para Kotlin incluyen:</p>
 <ul>
-<li><a href="https://www.jetbrains.com/help/idea/debugging-code.html#refreshers">Debugging code</a></li>
-<li><a href="https://www.jetbrains.com/help/idea/using-breakpoints.html#breakpoint-statuses">Using breakpoints</a></li>
+<li><strong>Android Studio:</strong> El IDE oficial para el desarrollo de aplicaciones Android.</li>
+<li><strong>IntelliJ IDEA:</strong> Un IDE popular con soporte para una amplia gama de lenguajes de programación, incluido Kotlin.</li>
+<li><strong>Visual Studio Code:</strong> Un editor de código ligero y extensible con soporte para Kotlin.</li>
 </ul>
-<h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
+<h4 id="52-puntos-de-interrupcion">5.2. Puntos de interrupción<a class="headerlink" href="#52-puntos-de-interrupcion" title="Permanent link">&para;</a></h4>
+<p>Los puntos de interrupción se pueden establecer en cualquier línea de código. Para establecer un punto de interrupción, haga clic en el margen izquierdo de la línea de código. También puede usar la tecla F9 para establecer un punto de interrupción en la línea de código actual.</p>
+<h4 id="53-inspeccion-de-variables">5.3. Inspección de variables<a class="headerlink" href="#53-inspeccion-de-variables" title="Permanent link">&para;</a></h4>
+<p>El valor de las variables se puede inspeccionar en el panel de variables del debugger. Este panel muestra el nombre, el tipo y el valor de todas las variables en el ámbito actual.</p>
+<h4 id="54-pila-de-llamadas">5.4. Pila de llamadas<a class="headerlink" href="#54-pila-de-llamadas" title="Permanent link">&para;</a></h4>
+<p>La pila de llamadas muestra la secuencia de funciones que se han llamado para llegar a la línea de código actual. Esto puede ser útil para comprender el contexto del error.</p>
+<h4 id="55-modificacion-de-variables-en-tiempo-de-ejecucion">5.5. Modificación de variables en tiempo de ejecución<a class="headerlink" href="#55-modificacion-de-variables-en-tiempo-de-ejecucion" title="Permanent link">&para;</a></h4>
+<p>El valor de las variables se puede modificar en el panel de variables del debugger. Esto puede ser útil para probar diferentes soluciones al error.</p>
+<h3 id="6-depuracion-avanzada">6. Depuración Avanzada<a class="headerlink" href="#6-depuracion-avanzada" title="Permanent link">&para;</a></h3>
+<h4 id="61-usar-el-debugger-para-analizar-expresiones-complejas">6.1. Usar el debugger para analizar expresiones complejas**<a class="headerlink" href="#61-usar-el-debugger-para-analizar-expresiones-complejas" title="Permanent link">&para;</a></h4>
+<p>El debugger se puede utilizar para analizar expresiones complejas paso a paso. Esto puede ser útil para comprender cómo se evalúa la expresión y para identificar posibles errores.</p>
+<h4 id="62-depuracion-de-codigo-multihilo">6.2. Depuración de código multihilo<a class="headerlink" href="#62-depuracion-de-codigo-multihilo" title="Permanent link">&para;</a></h4>
+<p>La depuración de código multihilo puede ser compleja, ya que hay que tener en cuenta la interconexión entre los diferentes hilos. Algunas herramientas de depuración ofrecen funciones específicas para la depuración de código multihilo, como la posibilidad de ver el estado de cada hilo y de suspender y reanudar hilos individualmente.</p>
+<h4 id="63-depuracion-de-codigo-asincronico">6.3. Depuración de código asincrónico<a class="headerlink" href="#63-depuracion-de-codigo-asincronico" title="Permanent link">&para;</a></h4>
+<p>La depuración de código asincrónico también puede ser compleja, ya que es difícil seguir el flujo de ejecución del código. Algunas herramientas de depuración ofrecen funciones específicas para la depuración de código asincrónico, como la posibilidad de ver la cola de eventos y de ver el estado de las tareas asincrónicas.</p>
+<h4 id="64-depuracion-de-pruebas-unitarias">6.4. Depuración de pruebas unitarias<a class="headerlink" href="#64-depuracion-de-pruebas-unitarias" title="Permanent link">&para;</a></h4>
+<p>Las pruebas unitarias son una herramienta importante para la detección de errores. Las herramientas de depuración se pueden utilizar para depurar pruebas unitarias de la misma manera que se utilizan para depurar código normal.</p>
+<h4 id="65-usar-herramientas-de-analisis-de-codigo-estatico">6.5. Usar herramientas de análisis de código estático<a class="headerlink" href="#65-usar-herramientas-de-analisis-de-codigo-estatico" title="Permanent link">&para;</a></h4>
+<p>Las herramientas de análisis de código estático pueden identificar posibles errores en el código fuente sin necesidad de ejecutar el código. Esto puede ayudar a encontrar errores en una fase temprana del proceso de desarrollo, lo que puede ahorrar tiempo y esfuerzo.</p>
+<h3 id="7-ejemplos-practicos">7. Ejemplos Prácticos:<a class="headerlink" href="#7-ejemplos-practicos" title="Permanent link">&para;</a></h3>
+<h4 id="71-ejemplo-1-depuracion-de-una-excepcion-nullpointerexception">7.1. Ejemplo 1: Depuración de una excepción NullPointerException<a class="headerlink" href="#71-ejemplo-1-depuracion-de-una-excepcion-nullpointerexception" title="Permanent link">&para;</a></h4>
+<p><strong>Descripción del problema:</strong></p>
+<p>El código tiene la intención de mostrar obtener la longitud de una cadena. Sin embargo, el código muestra una excepción. </p>
+<p><strong>Código incorrecto:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">str</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">length</span><span class="p">)</span><span class="w"> </span><span class="c1">// NullPointerException</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Explicación del error:</strong></p>
+<p>El error está al no comprobar si el objeto, definido como nulable, es nulo o no. La variable <code>str</code> nunca llega a inicializarse, por tanto, cualquier intento de acceder a ella resultará en <code>NullPointerException</code>.</p>
+<p><strong>Pasos para la depuración:</strong></p>
+<ol>
+<li>En este caso, se podría <strong>utilizar un chequeo de sanidad y consistencia</strong></li>
+<li><strong>Chequee la sanidad de las variables</strong>, identificando las posibles variables que pueden llegar a ser nulas.</li>
+<li><strong>Introduce comprobaciones</strong> para evitar acceder a valores nulos.</li>
+</ol>
+<h4 id="72-ejemplo-2-depuracion-de-un-error-de-tipo">7.2. Ejemplo 2: Depuración de un error de tipo.<a class="headerlink" href="#72-ejemplo-2-depuracion-de-un-error-de-tipo" title="Permanent link">&para;</a></h4>
+<p><strong>Descripción del problema:</strong></p>
+<p>El código es básico, es el comienzo de un programa en el que se asignan valor a dos variables, y muestra un error.</p>
+<p><strong>Código incorrecto:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">num1</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">num2</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="c1">// Error de tipo</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Explicación del error:</strong></p>
+<p>El error está en la línea <code>val num2: Double = num1</code>. Ya que se está asignando un <code>Int</code> a un <code>Double</code></p>
+<p><strong>Pasos para la depuración:</strong></p>
+<ol>
+<li>En este caso, se podría usar <strong>Depuración de patito de goma</strong></li>
+<li><strong>Lea e mensaje de error</strong> .</li>
+<li><strong>Entienda el mensaje</strong> y intente explicar a alguien/algo que esta haciendo el código. </li>
+<li><strong>Llegará a una inconsistencia</strong> que dará lugar a solucionar el error. </li>
+<li><strong>Modifique la línea</strong> donde se asigna valores.</li>
+</ol>
+<h4 id="73-ejemplo-3-depuracion-de-un-error-de-logica">7.3. Ejemplo 3: Depuración de un error de lógica<a class="headerlink" href="#73-ejemplo-3-depuracion-de-un-error-de-logica" title="Permanent link">&para;</a></h4>
+<p><strong>Descripción del problema:</strong></p>
+<p>El código tiene la intención de calcular el promedio de los números en una lista. Sin embargo, el código no imprime el valor correcto.</p>
+<p><strong>Código incorrecto:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">listaNumeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">contador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">listaNumeros</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">        </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numero</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="n">contador</span><span class="o">++</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">promedio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">contador</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;El promedio es: </span><span class="si">$</span><span class="n">promedio</span><span class="s">&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Imprime 0</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Explicación del error:</strong></p>
+<p>El error está en la línea <code>suma = numero</code>. La variable <code>suma</code> debería incrementarse con el valor de cada número en la lista, sin embargo se asigna. Esto significa que la variable <code>suma</code> siempre tendrá, al terminar el bucle for, el ultimo valor de la lista <code>listaNumeros</code>, lo que resultará en un promedio no correcto.</p>
+<p><strong>Pasos para la depuración:</strong></p>
+<ol>
+<li><strong>Establezca un punto de interrupción</strong> dentro del bucle <code>for</code>.</li>
+<li><strong>Ejecute el código línea por línea</strong> y observe el valor de las variables.</li>
+<li><strong>Observe que la variable <code>suma</code></strong> no aumenta, y solo va cambiando de valor.</li>
+<li><strong>Modifique la línea</strong> donde se deberia incrementar para que en vez de <code>suma = numero</code>, sea <code>suma += numero</code>.</li>
+</ol>
+<h3 id="8-conclusion">8. Conclusión<a class="headerlink" href="#8-conclusion" title="Permanent link">&para;</a></h3>
+<p>La depuración es una habilidad esencial para cualquier desarrollador de software. Esta unidad proporcionará a los estudiantes las herramientas y los conocimientos necesarios para depurar código Kotlin de forma eficaz, lo que les permitirá mejorar su productividad y la calidad de su código.</p>
+<h3 id="9-recursos-y-fuentes">9. Recursos y fuentes<a class="headerlink" href="#9-recursos-y-fuentes" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://codegym.cc/es/groups/posts/es.243.depuracion-en-intellij-idea-una-guia-para-principiantes">Depuración en IntelliJ Idea una guía para pricipiantes</a></li>
+<li>
+<p>Documentación oficial de Kotlin sobre depuración:</p>
+</li>
+<li>
+<p><a href="https://www.jetbrains.com/help/idea/debugging-code.html#refreshers">Debugging code</a></p>
+</li>
+<li>
+<p><a href="https://www.jetbrains.com/help/idea/using-breakpoints.html#breakpoint-statuses">Using breakpoints</a></p>
+</li>
+<li>
+<p>Tutoriales y guías online:</p>
+</li>
+<li>
+<p><a href="https://codegym.cc/es/groups/posts/es.243.depuracion-en-intellij-idea-una-guia-para-principiantes">Depuración en IntelliJ Idea una guía para pricipiantes</a></p>
+</li>
 <li><a href="https://codegym.cc/groups/posts/243-debugging-in-intellij-idea-a-beginners-guide">Debugging in IntelliJ Idea a beginners guide</a></li>
+<li>
+<p>Foros y comunidades de desarrolladores:</p>
+</li>
+<li>
+<p>Foro de Kotlin: <a href="https://discuss.kotlinlang.org/">https://discuss.kotlinlang.org/</a></p>
+</li>
+<li>Stack Overflow: <a href="https://stackoverflow.com/questions/tagged/kotlin">https://stackoverflow.com/questions/tagged/kotlin</a></li>
 </ul>
 
 
@@ -4294,7 +4918,7 @@ Mostrar el valor de <code>z</code> en la consola le permitirá ver si el cálcul
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
       
     
   </body>

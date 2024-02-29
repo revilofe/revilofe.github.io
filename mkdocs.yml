@@ -77,6 +77,11 @@ nav:
 
     - 'U6: Kotlin: Creación de programas con POO':
         - 'section1/u06/index.md'
+        - '6.1.-Jerarquía de Clases': 'section1/u06/teoria/PROG-U6.1.-jerarquiaDeClases.md'
+        - '6.2.-Ejemplo': 'section1/u06/teoria/PROG-U6.2.-ejemploYActividad.md'
+        - '6.3.-Principios SOLID': 'section1/u06/teoria/PROG-U6.3.-principiosSOLID.md'
+        - '6.4.-Comentarios y documentación': 'section1/u06/teoria/PROG-U6.4.-comentariosYDocumentacion.md'
+
     - 'U7: Kotlin: Entrada/Salida y GUI':
         - 'section1/u07/index.md'
         - '7.1.-Sistema archivos:E/S': 'section1/u07/teoria/PROG-U7.1.-SistemaArchivos.md'

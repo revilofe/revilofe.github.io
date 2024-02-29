@@ -12,7 +12,7 @@ categories:
     - kotlin
 tags:
     - Software
-    - kotlin
+    - kotlin 
 ---
 ## 6.3. Principios de SOLID.
 
@@ -52,167 +52,167 @@ Los principios SOLID son un conjunto de cinco principios de diseño orientado a 
 
 Los 5 principios SOLID son:
 
-   #### 2.1. **S** - **Principio de Responsabilidad Única** *("**S**ingle Responsibility Principle" - SRP)*
+#### 2.1. **S** - **Principio de Responsabilidad Única** *("**S**ingle Responsibility Principle" - SRP)*
    
-   **Definición**: Un módulo o clase debe tener solo una razón para cambiar, lo que significa que debe tener solo una tarea o responsabilidad.
+**Definición**: Un módulo o clase debe tener solo una razón para cambiar, lo que significa que debe tener solo una tarea o responsabilidad.
 
-   Este principio establece que cada módulo o clase debe tener responsabilidad sobre una sola parte de la funcionalidad proporcionada por el software y esta responsabilidad debe estar encapsulada en su totalidad por la clase. Todos sus servicios deben estar estrechamente alineados con esa responsabilidad.
+Este principio establece que cada módulo o clase debe tener responsabilidad sobre una sola parte de la funcionalidad proporcionada por el software y esta responsabilidad debe estar encapsulada en su totalidad por la clase. Todos sus servicios deben estar estrechamente alineados con esa responsabilidad.
 
-   **Ejemplo**: Considera un módulo de sistema de gestión de pedidos que gestiona tanto los pedidos de los clientes como la logística de los mismos. Según el SRP, debemos dividir este módulo en dos clases: una para gestionar los pedidos y otra para manejar la logística.
+**Ejemplo**: Considera un módulo de sistema de gestión de pedidos que gestiona tanto los pedidos de los clientes como la logística de los mismos. Según el SRP, debemos dividir este módulo en dos clases: una para gestionar los pedidos y otra para manejar la logística.
 
-   ```kotlin
-   // Antes: Violación del SRP
-   class OrderManager {
-       fun processOrder(order: Order) {
-           // procesa el pedido
-       }
-       fun calculateShippingCosts(order: Order) {
-           // calcula los costes de envío
-       }
+```kotlin
+// Antes: Violación del SRP
+class OrderManager {
+   fun processOrder(order: Order) {
+       // procesa el pedido
    }
-
-   // Después: Aplicando el SRP
-   class OrderProcessor {
-       fun processOrder(order: Order) {
-           // procesa el pedido
-       }
+   fun calculateShippingCosts(order: Order) {
+       // calcula los costes de envío
    }
+}
 
-   class ShippingCalculator {
-       fun calculateShippingCosts(order: Order) {
-           // calcula los costes de envío
-       }
+// Después: Aplicando el SRP
+class OrderProcessor {
+   fun processOrder(order: Order) {
+       // procesa el pedido
    }
-   ```
+}
 
-   #### 2.2. **O** - **Principio de Abierto/Cerrado** *("**O**pen/Closed Principle" - OCP)*
-
-   **Definición**: Las entidades de software (clases, módulos, funciones, etc.) deben estar abiertas para la extensión, pero cerradas para la modificación. Es decir, se debe poder extender el comportamiento de la entidad pero sin modificar su código fuente.
-
-   **Ejemplo**: Implementar un sistema de descuentos donde nuevos tipos de descuento puedan ser añadidos sin cambiar el código existente.
-
-   ```kotlin
-   interface Discount {
-       fun applyDiscount(amount: Double): Double
+class ShippingCalculator {
+   fun calculateShippingCosts(order: Order) {
+       // calcula los costes de envío
    }
+}
+```
 
-   class ChristmasDiscount : Discount {
-       override fun applyDiscount(amount: Double): Double {
-           return amount * 0.90 // 10% de descuento
-       }
+#### 2.2. **O** - **Principio de Abierto/Cerrado** *("**O**pen/Closed Principle" - OCP)*
+
+**Definición**: Las entidades de software (clases, módulos, funciones, etc.) deben estar abiertas para la extensión, pero cerradas para la modificación. Es decir, se debe poder extender el comportamiento de la entidad pero sin modificar su código fuente.
+
+**Ejemplo**: Implementar un sistema de descuentos donde nuevos tipos de descuento puedan ser añadidos sin cambiar el código existente.
+
+```kotlin
+interface Discount {
+   fun applyDiscount(amount: Double): Double
+}
+
+class ChristmasDiscount : Discount {
+   override fun applyDiscount(amount: Double): Double {
+       return amount * 0.90 // 10% de descuento
    }
+}
 
-   class NewYearDiscount : Discount {
-       override fun applyDiscount(amount: Double): Double {
-           return amount * 0.85 // 15% de descuento
-       }
+class NewYearDiscount : Discount {
+   override fun applyDiscount(amount: Double): Double {
+       return amount * 0.85 // 15% de descuento
    }
+}
 
-   // La clase Checkout no necesita ser modificada para añadir nuevos tipos de descuentos
-   class Checkout(private val discount: Discount) {
-       fun calculatePrice(originalAmount: Double): Double {
-           return discount.applyDiscount(originalAmount)
-       }
+// La clase Checkout no necesita ser modificada para añadir nuevos tipos de descuentos
+class Checkout(private val discount: Discount) {
+   fun calculatePrice(originalAmount: Double): Double {
+       return discount.applyDiscount(originalAmount)
    }
-   ```
+}
+```
 
-   #### 2.3. **L** - **Principio de Substitución de Liskov** *("**L**iskov Substitution Principle" - LSP)*
+#### 2.3. **L** - **Principio de Substitución de Liskov** *("**L**iskov Substitution Principle" - LSP)*
 
-   **Definición**: Los objetos de una superclase deben poder ser reemplazados con objetos de sus subclases sin afectar la correctitud del programa.
+**Definición**: Los objetos de una superclase deben poder ser reemplazados con objetos de sus subclases sin afectar la correctitud del programa.
 
-   Este principo puede definirse como: «cada clase que hereda de otra puede usarse como su padre sin necesidad de conocer las diferencias entre ellas».
+Este principo puede definirse como: «cada clase que hereda de otra puede usarse como su padre sin necesidad de conocer las diferencias entre ellas».
 
-   **Ejemplo**: Extender la funcionalidad de una clase de vehículo asegurando que las subclases puedan sustituir a la superclase.
+**Ejemplo**: Extender la funcionalidad de una clase de vehículo asegurando que las subclases puedan sustituir a la superclase.
 
-   ```kotlin
-   open class Vehicle {
-       open fun startEngine(): Boolean {
-           // lógica para arrancar el motor
-           return true
-       }
+```kotlin
+open class Vehicle {
+   open fun startEngine(): Boolean {
+       // lógica para arrancar el motor
+       return true
    }
+}
 
-   class ElectricCar : Vehicle() {
-       override fun startEngine(): Boolean {
-           // lógica específica para arrancar un motor eléctrico
-           return true
-       }
+class ElectricCar : Vehicle() {
+   override fun startEngine(): Boolean {
+       // lógica específica para arrancar un motor eléctrico
+       return true
    }
+}
 
-   fun startVehicle(vehicle: Vehicle) {
-       if (vehicle.startEngine()) {
-           println("Vehículo arrancado.")
-       } else {
-           println("Falló al arrancar el vehículo.")
-       }
+fun startVehicle(vehicle: Vehicle) {
+   if (vehicle.startEngine()) {
+       println("Vehículo arrancado.")
+   } else {
+       println("Falló al arrancar el vehículo.")
    }
-   ```
+}
+```
 
-   #### 2.4. **I** - **Principio de Segregación de la Interfaz** *("**I**nterface Segregation Principle" - ISP)*
+#### 2.4. **I** - **Principio de Segregación de la Interfaz** *("**I**nterface Segregation Principle" - ISP)*
 
-   **Definición**: Los clientes no deben ser forzados a depender de interfaces que no utilizan.
+**Definición**: Los clientes no deben ser forzados a depender de interfaces que no utilizan.
 
-   Este principio establece que los clientes de un programa dado sólo deberían conocer aquellos métodos del programa que realmente usan, y no aquellos que no necesitan usar.
+Este principio establece que los clientes de un programa dado sólo deberían conocer aquellos métodos del programa que realmente usan, y no aquellos que no necesitan usar.
 
-   **Ejemplo**: Dividir una interfaz grande en interfaces más pequeñas y específicas.
+**Ejemplo**: Dividir una interfaz grande en interfaces más pequeñas y específicas.
 
-   ```kotlin
-   // Antes: Violación del ISP
-   interface Worker {
-       fun work()
-       fun eat()
+```kotlin
+// Antes: Violación del ISP
+interface Worker {
+   fun work()
+   fun eat()
+}
+
+// Después: Aplicando el ISP
+interface Workable {
+   fun work()
+}
+
+interface Eatable {
+   fun eat()
+}
+
+class HumanWorker : Workable, Eatable {
+   override fun work() {
+       // trabajar
    }
-
-   // Después: Aplicando el ISP
-   interface Workable {
-       fun work()
+   override fun eat() {
+       // comer
    }
+}
 
-   interface Eatable {
-       fun eat()
+class RobotWorker : Workable {
+   override fun work() {
+       // trabajar
    }
+}
+```   
 
-   class HumanWorker : Workable, Eatable {
-       override fun work() {
-           // trabajar
-       }
-       override fun eat() {
-           // comer
-       }
-   }
+#### 2.5. **D** - **Principio de Inversión de Dependencias** *("**D**ependency Inversion Principle" - DIP)*
 
-   class RobotWorker : Workable {
-       override fun work() {
-           // trabajar
-       }
-   }
-   ```   
+**Definición**: Este principio consta de dos partes:
 
-   #### 2.5. **D** - **Principio de Inversión de Dependencias** *("**D**ependency Inversion Principle" - DIP)*
+* Módulos de alto nivel no deben depender de módulos de bajo nivel. Ambos deben depender de abstracciones.
+* Las abstracciones no deberían depender de detalles. Los detalles debieran depender de abstracciones.
 
-   **Definición**: Este principio consta de dos partes:
+**Ejemplo**: Usar una interfaz para desacoplar la lógica de notificación de la implementación concreta de envío de mensajes.
 
-   * Módulos de alto nivel no deben depender de módulos de bajo nivel. Ambos deben depender de abstracciones.
-   * Las abstracciones no deberían depender de detalles. Los detalles debieran depender de abstracciones.
+```kotlin
+interface MessageSender {
+  fun sendMessage(message: String)
+}
 
-   **Ejemplo**: Usar una interfaz para desacoplar la lógica de notificación de la implementación concreta de envío de mensajes.
+class EmailSender : MessageSender {
+  override fun sendMessage(message: String) {
+      println("Enviando email: $message")
+  }
+}
 
-   ```kotlin
-   interface MessageSender {
-       fun sendMessage(message: String)
-   }
+class NotificationService(private val sender: MessageSender) {
+  fun notifyUser(message: String) {
+      sender.sendMessage(message)
+  }
+}
+```
 
-   class EmailSender : MessageSender {
-       override fun sendMessage(message: String) {
-           println("Enviando email: $message")
-       }
-   }
-
-   class NotificationService(private val sender: MessageSender) {
-       fun notifyUser(message: String) {
-           sender.sendMessage(message)
-       }
-   }
-   ```
-
-   En este ejemplo, `NotificationService` depende de la abstracción `MessageSender`, no de su implementación concreta, cumpliendo con el DIP. Esto permite cambiar fácilmente la forma en que se envían las notificaciones (por ejemplo, a SMS) sin modificar `NotificationService`.
+En este ejemplo, `NotificationService` depende de la abstracción `MessageSender`, no de su implementación concreta, cumpliendo con el DIP. Esto permite cambiar fácilmente la forma en que se envían las notificaciones (por ejemplo, a SMS) sin modificar `NotificationService`.

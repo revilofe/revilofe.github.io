@@ -144,7 +144,7 @@ class BibliotecaDigital(val articulos: MutableList<Articulo>) : Buscable {
             println("Artículo prestado: ${it.titulo}")
         } ?: println("Artículo no disponible para préstamo: $titulo")
     }
-
+ 
     fun devolverArticulo(titulo: String) {
         articulos.find { it.titulo == titulo && !it.disponible }?.let {
             it.cambiarDisponibilidad()

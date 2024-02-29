@@ -141,9 +141,35 @@ fun asignarRolAUsuario(usuario: Usuario, rol: String, rolesValidos: List<String>
 
 Estos ejemplos muestran cómo los checks de sanidad y consistencia ayudan a prevenir errores lógicos y asegurar la coherencia de los datos en tus programas.
 
-### 4. Flujo de trabajo
+### 4. Flujos de trabajo
 
-#### 4.1 Flujo de trabajo genérica
+#### 4.1 Trabajo con errores (BUGS)
+
+Los errores en el código software se conocen comúnmente como bugs. Los bugs pueden causar que el software se bloquee, funcione de forma incorrecta o produzca resultados inesperados. Los bugs pueden ser causados por una variedad de razones, como errores de sintaxis, errores lógicos o errores de tiempo de ejecución. La depuración ayuda a identificar la causa de los bugs y a corregirlos.
+
+Los bugs pueden ser difíciles de encontrar y corregir, especialmente en programas grandes y complejos. La depuración puede ser un proceso largo y tedioso, pero es una parte esencial del desarrollo de software y ayuda a garantizar que el software sea de alta calidad.
+
+##### 4.1.1 Documentación de errores
+
+ Un aspecto clave de la depuración es poder reproducir los errores. Documentar claramente los pasos necesarios para recrear un problema, facilita su localización y solución. La documentación de errores incluyen:
+
+- Una descripción detallada del error, incluyendo el comportamiento esperado y el comportamiento observado.
+- Pasos para reproducir el error, incluyendo cualquier entrada o configuración necesaria.
+- Información sobre el entorno del usuario, roles, permisos, etc.
+- Información sobre el entorno en el que se produjo el error, como el sistema operativo, navegador, la versión del software y cualquier otra información relevante.
+- Los pasos seguidos por el usuario para llegar al error también son importantes, ya que pueden proporcionar pistas sobre la causa del error.
+- Capturas de pantalla o mensajes de error que se produjeron al producirse el error.
+- Cualquier otra información que pueda ser útil para identificar y solucionar el error.
+
+##### 4.1.2 Pasos para trabajar con errores
+
+1. Análisis y exploración del problema: Dedica tiempo a explorar el problema antes de sumergirte en posibles soluciones. Comprende el "por qué" del problema para abordarlo de manera eficaz.
+2. Planteamiento de hipótesis de soluciones: Formula hipótesis sobre posibles soluciones y pruébalas metódicamente. Esto te ayudará a reducir la causa raíz del problema.
+3. Pruebas de hipótesis: Realiza pruebas para validar o refutar tus hipótesis. Esto te ayudará a identificar la solución más eficaz.
+4. Solución de problemas: Una vez que hayas identificado la causa raíz del problema, implementa la solución y verifica que el problema se haya resuelto.
+
+
+#### 4.2 Flujo de trabajo genérica
 
 Cuando está depurando un programa, y especialmente si está tratando de resolver un error difícil, hay cinco cosas que puede probar:
 
@@ -165,7 +191,7 @@ Incluso las mejores técnicas de depuración fallarán si hay demasiados errores
 
 Encontrar un error difícil requiere leer, ejecutar, reflexionar y, a veces, volver atrás. Si se queda atascado en una de estas actividades, pruebe las otras.
 
-#### 4.2 Flujo de trabajo usando una herramienta de depuración
+#### 4.3 Flujo de trabajo usando una herramienta de depuración
 
 El flujo de trabajo de depuración tipicamente involucra los siguientes pasos:
 
@@ -175,6 +201,7 @@ El flujo de trabajo de depuración tipicamente involucra los siguientes pasos:
 4. **Inspeccionar variables:** El debugger permite inspeccionar el valor de las variables en cualquier momento. Esto puede ayudar a identificar la causa del error.
 5. **Modificar el valor de las variables:** El debugger permite modificar el valor de las variables en tiempo de ejecución. Esto puede ser útil para probar diferentes soluciones al error.
 6. **Corregir el error:** Una vez que se ha identificado la causa del error, se puede corregir el error modificando el código.
+
 
 ### 5. Depuración en Kotlin
 

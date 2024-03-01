@@ -14,9 +14,8 @@ tags:
     - Software
     - kotlin 
 ---
-## 6.3. Principios de SOLID.
 
-### 1. SOLID.
+## 1. SOLID.
 
 SOLID es el acrónimo que acuñó *Michael Feathers*, basándose en los principios de la programación orientada a objetos que *Robert C. Martin* había recopilado en el año 2000 en su paper *"Design Principles and Design Patterns"*.
 
@@ -46,13 +45,13 @@ Dice el tío Bob, que SOLID nos ayuda a categorizar lo que es un buen o mal cód
 
 ![Code Quality Measurement WTF](./assets/codeQualityMeasurementWTF.png)
 
-### 2. Principios de SOLID.
+## 2. Principios de SOLID.
 
 Los principios SOLID son un conjunto de cinco principios de diseño orientado a objetos introducidos por *Robert C. Martin*. Estos principios son fundamentales para escribir software limpio, mantenible y escalable.
 
 Los 5 principios SOLID son:
 
-#### 2.1. **S** - **Principio de Responsabilidad Única** *("**S**ingle Responsibility Principle" - SRP)*
+### 2.1. **S** - **Principio de Responsabilidad Única** *("**S**ingle Responsibility Principle" - SRP)*
    
 **Definición**: Un módulo o clase debe tener solo una razón para cambiar, lo que significa que debe tener solo una tarea o responsabilidad.
 
@@ -85,7 +84,7 @@ class ShippingCalculator {
 }
 ```
 
-#### 2.2. **O** - **Principio de Abierto/Cerrado** *("**O**pen/Closed Principle" - OCP)*
+### 2.2. **O** - **Principio de Abierto/Cerrado** *("**O**pen/Closed Principle" - OCP)*
 
 **Definición**: Las entidades de software (clases, módulos, funciones, etc.) deben estar abiertas para la extensión, pero cerradas para la modificación. Es decir, se debe poder extender el comportamiento de la entidad pero sin modificar su código fuente.
 
@@ -116,7 +115,7 @@ class Checkout(private val discount: Discount) {
 }
 ```
 
-#### 2.3. **L** - **Principio de Substitución de Liskov** *("**L**iskov Substitution Principle" - LSP)*
+### 2.3. **L** - **Principio de Substitución de Liskov** *("**L**iskov Substitution Principle" - LSP)*
 
 **Definición**: Los objetos de una superclase deben poder ser reemplazados con objetos de sus subclases sin afectar la correctitud del programa.
 
@@ -148,7 +147,7 @@ fun startVehicle(vehicle: Vehicle) {
 }
 ```
 
-#### 2.4. **I** - **Principio de Segregación de la Interfaz** *("**I**nterface Segregation Principle" - ISP)*
+### 2.4. **I** - **Principio de Segregación de la Interfaz** *("**I**nterface Segregation Principle" - ISP)*
 
 **Definición**: Los clientes no deben ser forzados a depender de interfaces que no utilizan.
 
@@ -188,7 +187,7 @@ class RobotWorker : Workable {
 }
 ```   
 
-#### 2.5. **D** - **Principio de Inversión de Dependencias** *("**D**ependency Inversion Principle" - DIP)*
+### 2.5. **D** - **Principio de Inversión de Dependencias** *("**D**ependency Inversion Principle" - DIP)*
 
 **Definición**: Este principio consta de dos partes:
 

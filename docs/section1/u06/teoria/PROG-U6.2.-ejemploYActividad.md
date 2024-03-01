@@ -56,9 +56,9 @@ class Revista(titulo: String, autor: String, val edicion: String, val categoria:
 }
 
 // Subclase para películas
-class Pelicula(titulo: String, director: String, val duracion: Int, val genero: String, val categoria: String) : Articulo(titulo, director) {
+class Pelicula(titulo: String, autor: String, val duracion: Int, val genero: String, val categoria: String) : Articulo(titulo, autor) {
     override fun descripcion() {
-        println("Película: '$titulo' dirigida por $director, Duración: $duracion minutos, Género: $genero, Categoría: $categoria")
+        println("Película: '$titulo' dirigida por $autor, Duración: $duracion minutos, Género: $genero, Categoría: $categoria")
     }
 }
 
@@ -99,27 +99,28 @@ fun main() {
 **Objetivo**: Ampliar la `BibliotecaDigital` para incluir funcionalidades de préstamo de artículos. Cada artículo debe tener un estado que indique si está disponible para préstamo. 
 Los usuarios pueden prestar y devolver artículos, cambiando su estado de disponibilidad.
 
-#### 4. Instrucciones
+### 4. Instrucciones
 
 1. Añade una propiedad `disponible` a la clase `Articulo` para indicar la disponibilidad.
 2. Implementa métodos `prestarArticulo(titulo: String)` y `devolverArticulo(titulo: String)` en `BibliotecaDigital` que cambien el estado de disponibilidad del artículo correspondiente.
 3. Asegúrate de manejar casos donde el artículo no esté disponible para préstamo o ya haya sido prestado.
 4. Modifica `main` para demostrar las funcionalidades de préstamo y devolución.
 
-### 5. Solución a la Actividad
-
-La solución implicaría modificar la clase `Articulo` para incluir la propiedad `disponible` y actualizar `BibliotecaDigital` con los métodos de préstamo y devolución. 
-Después, en `main`, se demostrarían estas nuevas funcionalidades prestando un libro y luego devolviéndolo, mostrando el cambio en su disponibilidad.
+### 5. Implementación de una posible solución.
 
 Esta actividad proporciona una oportunidad para explorar conceptos avanzados de herencia y la implementación de interfaces, al tiempo que se introducen nuevas funcionalidades que reflejan 
 operaciones del mundo real en sistemas de gestión de bibliotecas.
 
-### 6. Implementación de una posible solución
-
 Para completar la actividad propuesta y proporcionar una solución detallada, vamos a expandir la funcionalidad de la `BibliotecaDigital` para incluir el préstamo de artículos,
 modificando la clase base `Articulo` para añadir una propiedad que indique su disponibilidad y actualizando la lógica de la biblioteca para gestionar el préstamo y la devolución de artículos.
 
-#### 6.1. Paso 1: Modificar la Clase Base `Articulo`
+Aqui deberias **parar e intentar tu la solución** antes de seguir leyendo.
+
+La solución impica modificar la clase `Articulo` para incluir la propiedad `disponible` y actualizar `BibliotecaDigital` con los métodos de préstamo y devolución. 
+Después, en `main`, se demostrarían estas nuevas funcionalidades prestando un libro y luego devolviéndolo, mostrando el cambio en su disponibilidad.
+
+
+#### 5.1. Paso 1: Modificar la Clase Base `Articulo`
 
 Agregaremos una propiedad `disponible` a la clase `Articulo` para indicar si el artículo está disponible para préstamo.
 
@@ -130,7 +131,7 @@ abstract class Articulo(val titulo: String, val autor: String, var disponible: B
 }
 ```
 
-#### 6.2. Paso 2: Implementar Métodos de Préstamo y Devolución en `BibliotecaDigital`
+#### 5.2. Paso 2: Implementar Métodos de Préstamo y Devolución en `BibliotecaDigital`
 
 Actualizaremos `BibliotecaDigital` para incluir métodos que permitan prestar y devolver artículos, modificando su estado de disponibilidad.
 
@@ -154,7 +155,7 @@ class BibliotecaDigital(val articulos: MutableList<Articulo>) : Buscable {
 }
 ```
 
-#### 6.3. Paso 3: Demostración de Préstamo y Devolución
+#### 5.3. Paso 3: Demostración de Préstamo y Devolución
 
 Finalmente, modificaremos la función `main` para demostrar las funcionalidades de préstamo y devolución, asegurándonos de que los artículos cambian su estado de disponibilidad adecuadamente.
 

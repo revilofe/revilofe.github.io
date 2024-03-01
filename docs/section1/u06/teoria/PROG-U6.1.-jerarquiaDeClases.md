@@ -96,6 +96,18 @@ sino una ampliación de las capacidades.
 - **Ejemplo**: Si tenemos una clase `Lista` que implementa las operaciones básicas de una lista, una clase `ListaSalvable` podría heredar de `Lista` y extender su funcionalidad al añadir métodos para
   guardar y cargar el estado de la lista desde un archivo, sin alterar las operaciones básicas de la lista.
 
+```
+La diferencia entre "Especialización" y "Extensión" es que la primera se centra en el concepto de
+"ser un tipo específico de" una clase base, introduciendo propiedades y comportamientos que son
+únicos para la subclase, lo que hace que esta subclase sea más específica o adecuada para tareas
+detalladas dentro de la jerarquía de la clase.
+
+La "Extensión", por otro lado, se trata de añadir nuevas funcionalidades a la clase base sin cambiar
+su comportamiento original. La subclase mantiene todas las capacidades de la clase base y agrega
+nuevas funcionalidades que amplían su uso, pero no necesariamente cambia la naturaleza fundamental
+de lo que la clase base representa.
+```
+
 #### 1.7. Especificación (Define Interface)
 
 La especificación, a través de la herencia, se utiliza para definir una interfaz común para un grupo de clases. La superclase (o interfaz) declara un conjunto de métodos que todas las subclases 

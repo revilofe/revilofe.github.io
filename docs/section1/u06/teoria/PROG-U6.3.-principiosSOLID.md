@@ -44,7 +44,7 @@ Como indica el propio *Robert C. Martin* en su artículo *“Getting a SOLID sta
 
 Dice el tío Bob, que SOLID nos ayuda a categorizar lo que es un buen o mal código y es innegable que un código limpio tenderá más a salir airoso del *“control de calidad de código”* ***WTFs/Minute***. Consejo: cuando estés revisando un código, lleva la cuenta de cuántas veces por minuto sale de tu boca un ***WTF?***.
 
-![Code Quality Measurement WTF](/assets/codeQualityMeasurementWTF.png)
+![Code Quality Measurement WTF](./assets/codeQualityMeasurementWTF.png)
 
 ### 2. Principios de SOLID.
 

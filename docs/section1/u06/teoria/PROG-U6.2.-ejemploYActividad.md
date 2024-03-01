@@ -114,7 +114,16 @@ operaciones del mundo real en sistemas de gestión de bibliotecas.
 Para completar la actividad propuesta y proporcionar una solución detallada, vamos a expandir la funcionalidad de la `BibliotecaDigital` para incluir el préstamo de artículos,
 modificando la clase base `Articulo` para añadir una propiedad que indique su disponibilidad y actualizando la lógica de la biblioteca para gestionar el préstamo y la devolución de artículos.
 
-Aqui deberias **parar e intentar tu la solución** antes de seguir leyendo.
+### NO SIGAS...
+
+***IMPORTANTE***
+
+```
+Aquí deberías parar e intentar tu la solución antes de seguir leyendo...
+```
+
+***IMPORTANTE***
+
 
 La solución impica modificar la clase `Articulo` para incluir la propiedad `disponible` y actualizar `BibliotecaDigital` con los métodos de préstamo y devolución. 
 Después, en `main`, se demostrarían estas nuevas funcionalidades prestando un libro y luego devolviéndolo, mostrando el cambio en su disponibilidad.

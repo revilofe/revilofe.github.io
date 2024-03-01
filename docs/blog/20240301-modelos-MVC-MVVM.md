@@ -1,4 +1,21 @@
-# Modelo MVVM y MVC
+---
+title: Modelos MVVM y MVC.
+
+description: Modelos MVVM y MVC.
+
+authors:
+    - Diego Cano.
+
+date: 2024-03-01
+
+tags:
+  - patrones
+  - diseño
+  - MVC
+  - MVVM
+  - kotlin
+---
+# Modelos MVVM y MVC
 
 El modelo MVVM (Modelo-Vista-VistaModelo) y MVC (Modelo-Vista-Controlador) son patrones de diseño de software utilizados en el desarrollo de aplicaciones para separar 
 la lógica de negocio de la interfaz de usuario, facilitando así el mantenimiento y la escalabilidad del software. Aunque ambos patrones comparten algunas similitudes, 

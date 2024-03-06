@@ -3357,6 +3357,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#214-configuracion-de-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.4. Configuración de color
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3419,6 +3428,21 @@
       2.3. Comandos básicos
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="2.3. Comandos básicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-deshacer-cambios" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.1. Deshacer cambios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -3513,6 +3537,15 @@
   <a href="#33-pull-requests" class="md-nav__link">
     <span class="md-ellipsis">
       3.3. Pull Requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-gists" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Gists
     </span>
   </a>
   
@@ -4371,6 +4404,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#214-configuracion-de-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.4. Configuración de color
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4433,6 +4475,21 @@
       2.3. Comandos básicos
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="2.3. Comandos básicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-deshacer-cambios" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.1. Deshacer cambios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4527,6 +4584,15 @@
   <a href="#33-pull-requests" class="md-nav__link">
     <span class="md-ellipsis">
       3.3. Pull Requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-gists" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Gists
     </span>
   </a>
   
@@ -4631,21 +4697,12 @@
 - Permiten llevar un registro de los cambios realizados en el código.
 - Permiten trabajar en paralelo con otros desarrolladores.
 - Permiten colaborar en proyectos de código abierto.
-- Permiten volver a versiones anteriores del código.
-- Permiten comparar cambios, ver quién ha modificado algo, etc.
-- Permiten trabajar sin conexión a internet.
-- Permiten tener un historial completo de los cambios realizados en el código.
-- Permiten trabajar con ramas, etiquetas, etc.
-- Permiten automatizar tareas, como pruebas, despliegues, etc.</p>
+- Permiten volver a versiones anteriores del código.</p>
 <h4 id="13-desventajas">1.3. Desventajas<a class="headerlink" href="#13-desventajas" title="Permanent link">&para;</a></h4>
 <p>Los sistemas de control de versiones tienen algunas desventajas:
 - Pueden ser complicados de usar.
 - Pueden requerir mucho espacio en disco.
-- Pueden requerir mucho tiempo para aprender a usarlos.
-- Pueden requerir mucho tiempo para configurarlos.
-- Pueden requerir mucho tiempo para mantenerlos.
-- Pueden requerir mucho tiempo para solucionar problemas.
-- Pueden requerir mucho tiempo para migrar de un sistema a otro.</p>
+- Pueden requerir mucho tiempo para aprender a usarlos.</p>
 <h4 id="14-tipos">1.4. Tipos<a class="headerlink" href="#14-tipos" title="Permanent link">&para;</a></h4>
 <p>Hay varios tipos de sistemas de control de versiones:
 - <strong>Sistemas de control de versiones locales</strong>: Son sistemas de control de versiones que almacenan el código en un único lugar, como un disco duro, un servidor, etc. Ejemplos: RCS, SCCS, etc.
@@ -4670,6 +4727,9 @@
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="s2"># Configurar el editor de texto</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="s2">git config --global core.editor &quot;</span>nano<span class="s2">&quot;</span>
 </code></pre></div>
+<blockquote>
+<p>NOTA: La mayoría de estos comandos, y los que vendrán mas adelante, soportan múltiples opciones (banderas). Consultar documentación.</p>
+</blockquote>
 <h5 id="212-configuracion-de-gitingore">2.1.2. Configuración de .gitingore<a class="headerlink" href="#212-configuracion-de-gitingore" title="Permanent link">&para;</a></h5>
 <p>Git permite configurar un archivo .gitignore para especificar qué archivos o carpetas no se deben incluir en el repositorio. Esto es útil para evitar subir archivos temporales, logs, etc.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Crear un archivo .gitignore</span>
@@ -4686,6 +4746,21 @@
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Ver los alias configurados</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--get-regexp<span class="w"> </span><span class="nb">alias</span>
 </code></pre></div>
+<h5 id="214-configuracion-de-color">2.1.4. Configuración de color<a class="headerlink" href="#214-configuracion-de-color" title="Permanent link">&para;</a></h5>
+<p>Git permite configurar el color de la salida de los comandos. Esto es útil para resaltar la salida y hacerla más fácil de leer.
+Tambien se le puede indicar que muestre sólo una línea por cada commit en la traza o que agregue archivos de forma interactiva</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Configurar el color de la salida de los comandos</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>color.ui<span class="w"> </span>auto
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Configurar la traza de commits</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>git<span class="w"> </span>config<span class="w"> </span>format.pretty<span class="w"> </span>oneline
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># Configurar la adición de archivos de forma interactiva</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>git<span class="w"> </span>add<span class="w"> </span>-i
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1"># Ver la configuración</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>git<span class="w"> </span>config<span class="w"> </span>--list
+</code></pre></div>
 <h4 id="22-espacios-de-trabajo">2.2. Espacios de trabajo<a class="headerlink" href="#22-espacios-de-trabajo" title="Permanent link">&para;</a></h4>
 <p>Git tiene tres espacios de trabajo: el directorio de trabajo, el área de preparación y el repositorio.</p>
 <ul>
@@ -4693,141 +4768,174 @@
 <li>El área de preparación es donde se preparan los cambios que se van a incluir en el próximo commit.</li>
 <li>El repositorio es donde se almacenan los commits.</li>
 </ul>
+<p><img alt="FlujoGit" src="../assets/EDES-U4.1.-Git_Github-1709740252464.png" /></p>
 <h5 id="221-directorio-de-trabajo">2.2.1. Directorio de trabajo<a class="headerlink" href="#221-directorio-de-trabajo" title="Permanent link">&para;</a></h5>
 <p>El directorio de trabajo es donde se modifican los archivos.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Ver el estado del directorio de trabajo</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>status
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Ver los cambios realizados en el directorio de trabajo</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>git<span class="w"> </span>diff
+<p>Es la primera sección del flujo, consta de archivos en los que está trabajando actualmente. En esta sección los archivos están con el estado “Untracked” y están disponibles para ser enviados a siguiente sección llamada “Staging area”. Para realizar la operación de traspaso entre estas dos secciones se utiliza el comando <code>git add &lt;file&gt;</code> .</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Ver el estado del directorio de trabajo</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>status
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Ver los cambios realizados en el directorio de trabajo</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>git<span class="w"> </span>diff
 </code></pre></div>
 <h5 id="222-area-de-preparacion">2.2.2. Área de preparación<a class="headerlink" href="#222-area-de-preparacion" title="Permanent link">&para;</a></h5>
 <p>El área de preparación es donde se preparan los cambios que se van a incluir en el próximo commit. También se le conoce como "staging area" o "index".</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Añadir un archivo al área de preparación</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>add<span class="w"> </span>&lt;archivo&gt;
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Ver el estado del área de preparación</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>git<span class="w"> </span>status
+<p>Es la segunda sección del flujo, consta de archivos que están listos para ser enviados a la sección final llamada “Repositorio”. En esta sección los archivos están con el estado “Staged” y están disponibles para ser enviados a la sección final. Para realizar la operación de traspaso entre estas dos secciones se utiliza el comando <code>git commit -m “Mensaje”</code> .</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Añadir un archivo al área de preparación</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>add<span class="w"> </span>&lt;archivo&gt;
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Ver el estado del área de preparación</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>git<span class="w"> </span>status
 </code></pre></div>
 <h5 id="223-repositorio">2.2.3. Repositorio<a class="headerlink" href="#223-repositorio" title="Permanent link">&para;</a></h5>
 <p>El repositorio es donde se almacenan los commits.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Hacer un commit</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Mensaje del commit&quot;</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Ver el historial de commits</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>git<span class="w"> </span>log
+<p>Es la última sección del flujo, consta de archivos que están guardados formalmente en el almacenamiento virtual de tu proyecto e inicia el flujo nuevamente en Working directory con los últimos cambios formales.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Hacer un commit</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Mensaje del commit&quot;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Ver el historial de commits</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>git<span class="w"> </span>log
 </code></pre></div>
 <h5 id="224-head">2.2.4. Head<a class="headerlink" href="#224-head" title="Permanent link">&para;</a></h5>
 <p>Git tiene un puntero especial llamado HEAD que apunta al commit actual. Nos indica en qué punto de la historia del código estamos.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Ver el commit actual</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>git<span class="w"> </span>show<span class="w"> </span>HEAD
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Ver el commit actual</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>git<span class="w"> </span>show<span class="w"> </span>HEAD
 </code></pre></div>
 <h4 id="23-comandos-basicos">2.3. Comandos básicos<a class="headerlink" href="#23-comandos-basicos" title="Permanent link">&para;</a></h4>
 <p>Los comandos básicos de Git nos permiten inicializar un repositorio, registrar cambios, ver el estado del repositorio, ver el historial de commits, etc.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Inicializar un repositorio. En un nuevo directorio, ejecutar:</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>git<span class="w"> </span>init
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># Para registrar cambios. Añadir un archivo al index. </span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>git<span class="w"> </span>add<span class="w"> </span>&lt;archivo&gt;
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>git<span class="w"> </span>add<span class="w"> </span>.<span class="w"> </span><span class="c1"># Añadir todos los archivos</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="c1"># Hacer un commit. Ahora el archivo está en el HEAD, pero no en el repositorio remoto.</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Mensaje del commit&quot;</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="c1"># Ver el estado del repositorio</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>git<span class="w"> </span>status
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="c1"># Ver el historial de commits</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>git<span class="w"> </span>log
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Inicializar un repositorio. En un nuevo directorio, ejecutar:</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>git<span class="w"> </span>init
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Para registrar cambios. Añadir un archivo al index. </span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>git<span class="w"> </span>add<span class="w"> </span>&lt;archivo&gt;
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>git<span class="w"> </span>add<span class="w"> </span>.<span class="w"> </span><span class="c1"># Añadir todos los archivos</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="c1"># Hacer un commit. Ahora el archivo está en el HEAD, pero no en el repositorio remoto.</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Mensaje del commit&quot;</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="c1"># Ver el estado del repositorio</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>git<span class="w"> </span>status
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="c1"># Ver el historial de commits</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>git<span class="w"> </span>log
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="c1"># Deshacer cambios. Volver al último commit</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>git<span class="w"> </span>checkout<span class="w"> </span>--<span class="w"> </span>&lt;archivo&gt;
 </code></pre></div>
+<h5 id="231-deshacer-cambios">2.3.1. Deshacer cambios<a class="headerlink" href="#231-deshacer-cambios" title="Permanent link">&para;</a></h5>
+<p>Git permite deshacer cambios de varias formas:
+- <strong>Deshacer cambios en el directorio de trabajo</strong>: reemplazarás cambios locales usando el comando <code>git checkout -- &lt;archivo&gt;</code>. Este comando reemplaza los cambios en tu directorio de trabajo con el último contenido de HEAD. Los cambios que ya han sido agregados al Index, así como también los nuevos archivos, se mantendrán sin cambio.
+- <strong>Deshacer cambios en el área de preparación</strong>: <code>git reset HEAD &lt;archivo&gt;</code>
+- <strong>Deshacer un commit</strong>: <code>git reset --
+- **Deshacer un commit y deshacer cambios**:</code>git reset --hard HEAD~1<code>o Deshace todos los cambios locales y commits, puedes traer la última versión del servidor y apuntar a tu copia local principal de esta forma</code>git fetch origin`.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Deshacer cambios en el directorio de trabajo</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>--<span class="w"> </span>&lt;archivo&gt;
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># Deshacer cambios en el área de preparación</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>git<span class="w"> </span>reset<span class="w"> </span>HEAD<span class="w"> </span>&lt;archivo&gt;
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="c1"># Deshacer un commit</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>git<span class="w"> </span>reset<span class="w"> </span>--soft<span class="w"> </span>HEAD~1
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="c1"># Deshacer un commit y deshacer cambios</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>HEAD~1
+</code></pre></div>
+<p>La principal diferencia entre git fetch y git pull es:
+- Si haces un git fetch, simplemente obtendrá todos los cambios en el repositorio remoto (Github) y moverá el puntero origin/master a HEAD. Mientras tanto, tu rama local master seguirá apuntando a donde está.
+- Si haces un git pull, básicamente hará fetch (como se explicó anteriormente) y fusionará cualquier cambio nuevo en tu rama master y moverá el puntero a HEAD.</p>
+<p>por tanto, git pull = git fetch + merge.</p>
+<p><img alt="pull = fetch + merge" src="../assets/EDES-U4.1.-Git_Github-1709742195595.png" /></p>
 <h4 id="24-ramas">2.4. Ramas<a class="headerlink" href="#24-ramas" title="Permanent link">&para;</a></h4>
-<p>Las ramas son una forma de trabajar en paralelo en el mismo repositorio. Nos permiten trabajar en nuevas funcionalidades, arreglar errores, etc. de forma aislada.</p>
-<p>Por defecto, al crear el repositorio Git crea una rama llamada "master", que es la rama principal, pero se pueden crear otras ramas. </p>
+<p>Otra característica importante en flujo el trabajo de Git son el uso de las ramas. Las ramas son espacios o entornos independientes para que un desarrollador pueda usar y trabajar sobre el proyecto sin afectar el conjunto de archivos originales. Las ramas se utilizan básicamente para separar ambientes y colaborar entre desarrolladores en un mismo proyecto sin afectar el uno al otro. El flujo de trabajo de ramas se basa en la bifurcación y convergencia, en donde existe un punto de separación y otro de unión.</p>
+<p><img alt="Gitflow-workflow" src="../assets/EDES-U4.1.-Git_Github-1709740343955.png" /></p>
+<p>Por defecto, al crear el repositorio Git crea una rama llamada "master" o "main", que es la rama principal, pero se pueden crear otras ramas. </p>
 <p>Respecto a las ramas, se pueden crear, eliminar, fusionar, etc. </p>
 <p>Lo habitual es trabajar en una rama para desarrollar nuevas funcionalidades, arreglar errores, etc, y cuando se ha terminado, fusionarla con la rama principal.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Crear una rama</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>git<span class="w"> </span>branch<span class="w"> </span>&lt;nombre&gt;
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Cambiar a una rama</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>git<span class="w"> </span>checkout<span class="w"> </span>&lt;nombre&gt;
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1"># Crear una rama y cambiar a ella</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>&lt;nombre&gt;
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="c1"># Fusionar una rama con la rama actual</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>git<span class="w"> </span>merge<span class="w"> </span>&lt;nombre&gt;
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="c1"># Eliminar una rama</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>&lt;nombre&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Crear una rama</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>git<span class="w"> </span>branch<span class="w"> </span>&lt;nombre&gt;
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># Cambiar a una rama</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>git<span class="w"> </span>checkout<span class="w"> </span>&lt;nombre&gt;
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1"># Crear una rama y cambiar a ella</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>&lt;nombre&gt;
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="c1"># Fusionar una rama con la rama actual</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>git<span class="w"> </span>merge<span class="w"> </span>&lt;nombre&gt;
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="c1"># Eliminar una rama</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>&lt;nombre&gt;
 </code></pre></div>
 <p>Ten en cuenta que las ramas son locales, es decir, no se suben al repositorio remoto. Para subir una rama al repositorio remoto, hay que hacer un push.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Subir una rama al repositorio remoto</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;nombre_rama&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Subir una rama al repositorio remoto</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;nombre_rama&gt;
 </code></pre></div>
 <h4 id="241-rebase">2.4.1. Rebase<a class="headerlink" href="#241-rebase" title="Permanent link">&para;</a></h4>
 <p>El rebase es una forma de fusionar dos ramas de forma lineal, es decir, sin crear un commit de fusión. Es decir, se cogen los commits de una rama y se aplican sobre la otra rama. Nos permite llevar un conjunto de cambios a un punto de la historia del código diferente.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Cambiar a la rama que se quiere rebase</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>&lt;rama&gt;
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># Hacer el rebase</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>git<span class="w"> </span>rebase<span class="w"> </span>&lt;rama&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Cambiar a la rama que se quiere rebase</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>&lt;rama&gt;
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># Hacer el rebase</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>git<span class="w"> </span>rebase<span class="w"> </span>&lt;rama&gt;
 </code></pre></div>
 <h4 id="242-resolucion-de-conflictos">2.4.2. Resolución de conflictos<a class="headerlink" href="#242-resolucion-de-conflictos" title="Permanent link">&para;</a></h4>
 <p>Cuando se fusionan dos ramas que han modificado el mismo archivo, puede haber conflictos. Estos se deben resolver manualmente.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Ver las ramas fusionadas y no fusionadas</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>git<span class="w"> </span>branch<span class="w"> </span>--merged
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>git<span class="w"> </span>branch<span class="w"> </span>--no-merged
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="c1"># Resolver conflictos</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>git<span class="w"> </span>mergetool
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="c1"># Ver si hay conflictos pendientes</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>git<span class="w"> </span>status
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Ver las ramas fusionadas y no fusionadas</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>git<span class="w"> </span>branch<span class="w"> </span>--merged
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>git<span class="w"> </span>branch<span class="w"> </span>--no-merged
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="c1"># Resolver conflictos</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>git<span class="w"> </span>mergetool
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="c1"># Ver si hay conflictos pendientes</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>git<span class="w"> </span>status
 </code></pre></div>
 <h4 id="24-tags">2.4. Tags<a class="headerlink" href="#24-tags" title="Permanent link">&para;</a></h4>
 <p>Los tags son una forma de marcar un punto en la historia del repositorio. Se pueden usar para versiones, releases, etc.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Crear un tag</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>git<span class="w"> </span>tag<span class="w"> </span>&lt;nombre&gt;
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># Subir un tag a un repositorio remoto</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>git<span class="w"> </span>push<span class="w"> </span>--tags
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1"># Ver los tags</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>git<span class="w"> </span>tag
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="c1"># Ver el historial de un tag</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>git<span class="w"> </span>show<span class="w"> </span>&lt;nombre&gt;
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
-<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="c1"># Cambiar a un tag</span>
-<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>git<span class="w"> </span>checkout<span class="w"> </span>&lt;nombre&gt;
-<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>
-<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="c1"># Crear una rama a partir de un tag</span>
-<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>&lt;nombre&gt;<span class="w"> </span>&lt;tag&gt;
-<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>
-<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="c1"># Fusionar un tag con la rama actual</span>
-<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>git<span class="w"> </span>merge<span class="w"> </span>&lt;nombre&gt;
-<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>
-<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="c1"># Eliminar un tag</span>
-<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>git<span class="w"> </span>tag<span class="w"> </span>-d<span class="w"> </span>&lt;nombre&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Crear un tag</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>git<span class="w"> </span>tag<span class="w"> </span>&lt;nombre&gt;
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1"># Subir un tag a un repositorio remoto</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>git<span class="w"> </span>push<span class="w"> </span>--tags
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="c1"># Ver los tags</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>git<span class="w"> </span>tag
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="c1"># Ver el historial de un tag</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>git<span class="w"> </span>show<span class="w"> </span>&lt;nombre&gt;
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="c1"># Cambiar a un tag</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>git<span class="w"> </span>checkout<span class="w"> </span>&lt;nombre&gt;
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="c1"># Crear una rama a partir de un tag</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>&lt;nombre&gt;<span class="w"> </span>&lt;tag&gt;
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="c1"># Fusionar un tag con la rama actual</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>git<span class="w"> </span>merge<span class="w"> </span>&lt;nombre&gt;
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="c1"># Eliminar un tag</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>git<span class="w"> </span>tag<span class="w"> </span>-d<span class="w"> </span>&lt;nombre&gt;
 </code></pre></div>
 <h4 id="24-repositorios-remotos">2.4. Repositorios remotos<a class="headerlink" href="#24-repositorios-remotos" title="Permanent link">&para;</a></h4>
 <p>Cuantos más desarrolladores trabajen en un proyecto, más útil será tener un repositorio remoto. Los cambios inicialmente se realizan en un repositorio local, y luego se suben a un repositorio remoto.</p>
 <p>Un repositorio remoto es una copia del repositorio local en un servidor. Git permite trabajar con varios repositorios remotos, como GitHub, GitLab, Bitbucket, etc. Veremos github más adelante.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Clonar un repositorio remoto. </span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>git<span class="w"> </span>clone<span class="w"> </span>&lt;url&gt;
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># Si no se clonó el repositorio de uno existente, podemos conectar el repositorio local a un repositorio remoto. Para añadir un repositorio remoto. El nombre por defecto es &quot;origin&quot;</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>&lt;nombre&gt;<span class="w"> </span>&lt;url&gt;
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="c1"># Ver los repositorios remotos</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>git<span class="w"> </span>remote<span class="w"> </span>-v
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="c1"># Subir los cambios que están en el HEAD del repositorio local, a un repositorio remoto</span>
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>git<span class="w"> </span>push<span class="w"> </span>&lt;nombre&gt;<span class="w"> </span>&lt;rama&gt;
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
-<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="c1"># Descargar cambios de un repositorio remoto al repositorio local</span>
-<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>git<span class="w"> </span>pull<span class="w"> </span>&lt;nombre&gt;<span class="w"> </span>&lt;rama&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># Clonar un repositorio remoto. </span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>git<span class="w"> </span>clone<span class="w"> </span>&lt;url&gt;
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="c1"># Si no se clonó el repositorio de uno existente, podemos conectar el repositorio local a un repositorio remoto. Para añadir un repositorio remoto. El nombre por defecto es &quot;origin&quot;</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>&lt;nombre&gt;<span class="w"> </span>&lt;url&gt;
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="c1"># Ver los repositorios remotos</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>git<span class="w"> </span>remote<span class="w"> </span>-v
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="c1"># Subir los cambios que están en el HEAD del repositorio local, a un repositorio remoto</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>git<span class="w"> </span>push<span class="w"> </span>&lt;nombre&gt;<span class="w"> </span>&lt;rama&gt;
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="c1"># Descargar cambios de un repositorio remoto al repositorio local</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>git<span class="w"> </span>pull<span class="w"> </span>&lt;nombre&gt;<span class="w"> </span>&lt;rama&gt;
 </code></pre></div>
+<p><img alt="Operaciones locales y remotas" src="../assets/EDES-U4.1.-Git_Github-1709741580452.png" />
+<img alt="Varios repos" src="../assets/EDES-U4.1.-Git_Github-1709741845784.png" /></p>
 <h4 id="27-flujo-de-trabajo">2.7. Flujo de trabajo<a class="headerlink" href="#27-flujo-de-trabajo" title="Permanent link">&para;</a></h4>
 <p>El flujo de trabajo típico con Git es el siguiente:</p>
 <ol>
@@ -4843,17 +4951,67 @@
 <p>GitHub es una plataforma de desarrollo colaborativo que utiliza Git como sistema de control de versiones. Permite alojar proyectos, realizar seguimiento de problemas, tareas y solicitudes de funciones, y dar seguimiento a todos los cambios en el código. </p>
 <h4 id="31-repositorios">3.1. Repositorios<a class="headerlink" href="#31-repositorios" title="Permanent link">&para;</a></h4>
 <p>Un repositorio es un lugar donde se almacena el código fuente de un proyecto. Puede ser público o privado, y puede tener varios colaboradores.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Crear un repositorio</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>git<span class="w"> </span>init
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>git<span class="w"> </span>add<span class="w"> </span>.
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Primer commit&quot;</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>&lt;url&gt;
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>master
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Crear un repositorio</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>git<span class="w"> </span>init
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>git<span class="w"> </span>add<span class="w"> </span>.
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Primer commit&quot;</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>&lt;url&gt;
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>master
 </code></pre></div>
 <h4 id="32-issues">3.2. Issues<a class="headerlink" href="#32-issues" title="Permanent link">&para;</a></h4>
 <p>Las issues son una forma de realizar un seguimiento de tareas, mejoras, errores, etc. Se pueden asignar a usuarios, etiquetar, comentar, etc. </p>
 <h4 id="33-pull-requests">3.3. Pull Requests<a class="headerlink" href="#33-pull-requests" title="Permanent link">&para;</a></h4>
 <p>Un pull request es una forma de proponer cambios en un repositorio. Se pueden revisar, comentar, aprobar, rechazar, etc.</p>
+<p>Para crear un pull request, hay que hacer lo siguiente:   </p>
+<ol>
+<li>Sobre un repostiorio clonado, crear una rama con <code>git checkout -b &lt;rama&gt;</code>.</li>
+<li>Hacer cambios, añadir, hacer commits, etc.</li>
+<li>Subir la rama al repositorio remoto con <code>git push origin &lt;rama&gt;</code>.
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Crear un pull request </span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>&lt;rama&gt;
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>git<span class="w"> </span>add<span class="w"> </span>.
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Mensaje del commit&quot;</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;rama&gt;
+</code></pre></div></li>
+<li>
+<p>Ir a la página del repositorio en GitHub y hacer clic en "New pull request".</p>
+<p><img alt="crear un pull request" src="./assets/EDES-U4.1.-Git_Github-1709743019371.png" /></p>
+</li>
+<li>
+<p>Seleccionar la rama que se quiere fusionar con la rama principal.</p>
+</li>
+<li>Añadir un título y una descripción.</li>
+<li>
+<p>Hacer clic en "Create pull request".</p>
+<p><img alt="Create Pull request" src="./assets/EDES-U4.1.-Git_Github-1709743055290.png" /></p>
+</li>
+<li>
+<p>Esperar a que alguien revise el pull request.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Ver los pull requests</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>git<span class="w"> </span>fetch<span class="w"> </span>origin
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>git<span class="w"> </span>log<span class="w"> </span>origin/master..origin/&lt;rama&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Si se aprueba, fusionar el pull request.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># Fusionar un pull request</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>&lt;rama&gt;
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>&lt;rama&gt;
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>git<span class="w"> </span>merge<span class="w"> </span>&lt;rama&gt;
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
+</code></pre></div>
+</li>
+<li>
+<p>Eliminar la rama.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># Eliminar un pull request</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>&lt;rama&gt;
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>&lt;rama&gt;
+</code></pre></div>
+11. Si se rechaza, hacer los cambios necesarios y volver al paso 3.</p>
+</li>
+</ol>
+<h4 id="34-gists">3.4. Gists<a class="headerlink" href="#34-gists" title="Permanent link">&para;</a></h4>
+<p>Los gists son una forma de compartir pequeños fragmentos de código. Se pueden crear, editar, comentar, etc.</p>
 <h3 id="4-conclusiones">4. Conclusiones<a class="headerlink" href="#4-conclusiones" title="Permanent link">&para;</a></h3>
 <p>Git y GitHub son herramientas muy útiles para el desarrollo de software. Permiten llevar un control de los cambios realizados en el código, trabajar en paralelo, colaborar con otros desarrolladores, etc.</p>
 <h2 id="recursos">Recursos<a class="headerlink" href="#recursos" title="Permanent link">&para;</a></h2>
@@ -4862,6 +5020,10 @@
 <li><a href="https://git-scm.com/book/es/v2/Git-en-entornos-distribuidos-Flujos-de-trabajo-distribuidos">Git en entornos distribuidos</a></li>
 </ul>
 <h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://medium.com/@diego.coder/introducci%C3%B3n-a-git-5a7f6bd13343">Introducción a Git</a></li>
+<li><a href="https://dev.to/duxtech/como-hacer-un-pull-request-a-github-4c9l">Realizar un Pull Request</a></li>
+</ul>
 
 
 

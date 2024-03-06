@@ -423,7 +423,8 @@ Para crear un pull request, hay que hacer lo siguiente:
     # Eliminar un pull request
     git branch -d <rama>
     git push origin --delete <rama>
-    ```
+    ```   
+
 11. Si se rechaza, hacer los cambios necesarios y volver al paso 3.
 
 

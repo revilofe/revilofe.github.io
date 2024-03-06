@@ -46,7 +46,6 @@ Hay varios tipos de sistemas de control de versiones:
 ### 2. Git
 Git es un sistema de control de versiones distribuido, es decir, cada usuario tiene una copia completa del repositorio en su máquina. Esto permite trabajar sin conexión a internet y tener un historial completo de los cambios.
 
-
 #### 2.1. Configuración
 Git permite configurar varios parámetros, como el nombre del usuario, el correo electrónico, el editor de texto, alias, los ficheros que no se deben incluir en el repositorio, etc.
 

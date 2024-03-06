@@ -194,9 +194,38 @@ class RobotWorker : Workable {
 * Módulos de alto nivel no deben depender de módulos de bajo nivel. Ambos deben depender de abstracciones.
 * Las abstracciones no deberían depender de detalles. Los detalles debieran depender de abstracciones.
 
+El principio de inversión de dependencia establece que nuestras clases deben depender de interfaces o clases abstractas en lugar de clases y funciones concretas.
+
+En su artículo (2000), el tío Bob resume este principio de la siguiente manera:
+
+`"Si el OCP establece el objetivo de la arquitectura OO, el DIP establece el mecanismo principal"`
+
 **Ejemplo**: Usar una interfaz para desacoplar la lógica de notificación de la implementación concreta de envío de mensajes.
 
 ```kotlin
+// Código que no cumple DIP...
+// NotificationService depende directamente de la implementación concreta EmailSender en lugar de depender de una abstracción.
+// Esto hace que NotificationService esté directamente acoplado a EmailSender, lo que reduce la flexibilidad y la capacidad de
+// extender el código.
+
+class EmailSender {
+    fun sendMessage(message: String) {
+        println("Enviando email: $message")
+    }
+}
+
+class NotificationService {
+    private val sender = EmailSender()
+    
+    fun notifyUser(message: String) {
+        sender.sendMessage(message)
+    }
+}
+```
+
+```kotlin
+// Solución para cumplir DIP...
+
 interface MessageSender {
   fun sendMessage(message: String)
 }
@@ -214,4 +243,93 @@ class NotificationService(private val sender: MessageSender) {
 }
 ```
 
-En este ejemplo, `NotificationService` depende de la abstracción `MessageSender`, no de su implementación concreta, cumpliendo con el DIP. Esto permite cambiar fácilmente la forma en que se envían las notificaciones (por ejemplo, a SMS) sin modificar `NotificationService`.
+En este ejemplo, `NotificationService` depende de la abstracción `MessageSender`, no de su implementación concreta, cumpliendo con el DIP. Esto permite cambiar fácilmente la forma en que se envían 
+las notificaciones (por ejemplo, a SMS) sin modificar `NotificationService`.
+
+Si en un futuro quisiéramos ampliar la funcionalidad y enviar notificaciones a través de SMS o RRSS, tendríamos que modificar NotificationService directamente, lo cual va en contra del principio DIP.
+
+Para realizar este cambio en ambas versiones de la aplicación tendríamos que realizar lo siguiente:
+
+```kotlin
+// Versión que viola DIP...
+// La ampliación de la funcionalidad nos obligaría a modificar la clase NotificationService
+
+class EmailSender {
+    fun sendMessage(message: String) {
+        println("Enviando email: $message")
+    }
+}
+
+class SmsSender {
+    fun sendMessage(message: String) {
+        println("Enviando SMS: $message")
+    }
+}
+
+class SocialMediaSender {
+    fun sendMessage(message: String) {
+        println("Publicando en redes sociales: $message")
+    }
+}
+
+class NotificationService {
+    private val emailSender = EmailSender()
+    private val smsSender = SmsSender()
+    private val socialMediaSender = SocialMediaSender()
+    
+    fun notifyUserByEmail(message: String) {
+        emailSender.sendMessage(message)
+    }
+    
+    fun notifyUserBySms(message: String) {
+        smsSender.sendMessage(message)
+    }
+    
+    fun notifyUserOnSocialMedia(message: String) {
+        socialMediaSender.sendMessage(message)
+    }
+}
+```
+
+Sin embargo, nuestra nueva versión que si cumple DIP es más flexible y no tan dependiente, lo cuál es una ventaja a la hora de escalar el código y ampliar funcionalidades.
+
+```kotlin
+// Definimos la interfaz de abstracción
+interface MessageSender {
+    fun sendMessage(message: String)
+}
+
+// Implementación para enviar emails
+class EmailSender : MessageSender {
+    override fun sendMessage(message: String) {
+        println("Enviando email: $message")
+    }
+}
+
+// Implementación para enviar SMS
+class SmsSender : MessageSender {
+    override fun sendMessage(message: String) {
+        println("Enviando SMS: $message")
+    }
+}
+
+// Implementación para publicar en redes sociales
+class SocialMediaSender : MessageSender {
+    override fun sendMessage(message: String) {
+        println("Publicando en redes sociales: $message")
+    }
+}
+
+// Servicio de notificación que depende de la abstracción, no de la implementación
+class NotificationService(private val sender: MessageSender) {
+    fun notifyUser(message: String) {
+        sender.sendMessage(message)
+    }
+}
+```
+
+Para usar NotificationService con diferentes métodos de envío de mensajes en la versión que sigue el DIP, crearíamos una instancia de NotificationService pasando el sender específico
+(por ejemplo, EmailSender, SmsSender, o SocialMediaSender) en el momento de la creación. 
+
+Esto permite cambiar el método de envío de mensajes sin necesidad de modificar el código de NotificationService, manteniendo las dependencias desacopladas y facilitando la extensión y 
+mantenimiento del sistema.

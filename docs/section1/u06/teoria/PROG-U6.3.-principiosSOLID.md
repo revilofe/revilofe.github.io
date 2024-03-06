@@ -14,9 +14,8 @@ tags:
     - Software
     - kotlin 
 ---
-## 6.3. Principios de SOLID.
 
-### 1. SOLID.
+## 1. SOLID.
 
 SOLID es el acrónimo que acuñó *Michael Feathers*, basándose en los principios de la programación orientada a objetos que *Robert C. Martin* había recopilado en el año 2000 en su paper *"Design Principles and Design Patterns"*.
 
@@ -44,15 +43,15 @@ Como indica el propio *Robert C. Martin* en su artículo *“Getting a SOLID sta
 
 Dice el tío Bob, que SOLID nos ayuda a categorizar lo que es un buen o mal código y es innegable que un código limpio tenderá más a salir airoso del *“control de calidad de código”* ***WTFs/Minute***. Consejo: cuando estés revisando un código, lleva la cuenta de cuántas veces por minuto sale de tu boca un ***WTF?***.
 
-![Code Quality Measurement WTF](/assets/codeQualityMeasurementWTF.png)
+![Code Quality Measurement WTF](./assets/codeQualityMeasurementWTF.png)
 
-### 2. Principios de SOLID.
+## 2. Principios de SOLID.
 
 Los principios SOLID son un conjunto de cinco principios de diseño orientado a objetos introducidos por *Robert C. Martin*. Estos principios son fundamentales para escribir software limpio, mantenible y escalable.
 
 Los 5 principios SOLID son:
 
-#### 2.1. **S** - **Principio de Responsabilidad Única** *("**S**ingle Responsibility Principle" - SRP)*
+### 2.1. **S** - **Principio de Responsabilidad Única** *("**S**ingle Responsibility Principle" - SRP)*
    
 **Definición**: Un módulo o clase debe tener solo una razón para cambiar, lo que significa que debe tener solo una tarea o responsabilidad.
 
@@ -85,7 +84,7 @@ class ShippingCalculator {
 }
 ```
 
-#### 2.2. **O** - **Principio de Abierto/Cerrado** *("**O**pen/Closed Principle" - OCP)*
+### 2.2. **O** - **Principio de Abierto/Cerrado** *("**O**pen/Closed Principle" - OCP)*
 
 **Definición**: Las entidades de software (clases, módulos, funciones, etc.) deben estar abiertas para la extensión, pero cerradas para la modificación. Es decir, se debe poder extender el comportamiento de la entidad pero sin modificar su código fuente.
 
@@ -116,7 +115,7 @@ class Checkout(private val discount: Discount) {
 }
 ```
 
-#### 2.3. **L** - **Principio de Substitución de Liskov** *("**L**iskov Substitution Principle" - LSP)*
+### 2.3. **L** - **Principio de Substitución de Liskov** *("**L**iskov Substitution Principle" - LSP)*
 
 **Definición**: Los objetos de una superclase deben poder ser reemplazados con objetos de sus subclases sin afectar la correctitud del programa.
 
@@ -148,7 +147,7 @@ fun startVehicle(vehicle: Vehicle) {
 }
 ```
 
-#### 2.4. **I** - **Principio de Segregación de la Interfaz** *("**I**nterface Segregation Principle" - ISP)*
+### 2.4. **I** - **Principio de Segregación de la Interfaz** *("**I**nterface Segregation Principle" - ISP)*
 
 **Definición**: Los clientes no deben ser forzados a depender de interfaces que no utilizan.
 
@@ -188,16 +187,45 @@ class RobotWorker : Workable {
 }
 ```   
 
-#### 2.5. **D** - **Principio de Inversión de Dependencias** *("**D**ependency Inversion Principle" - DIP)*
+### 2.5. **D** - **Principio de Inversión de Dependencias** *("**D**ependency Inversion Principle" - DIP)*
 
 **Definición**: Este principio consta de dos partes:
 
 * Módulos de alto nivel no deben depender de módulos de bajo nivel. Ambos deben depender de abstracciones.
 * Las abstracciones no deberían depender de detalles. Los detalles debieran depender de abstracciones.
 
+El principio de inversión de dependencia establece que nuestras clases deben depender de interfaces o clases abstractas en lugar de clases y funciones concretas.
+
+En su artículo (2000), el tío Bob resume este principio de la siguiente manera:
+
+`"Si el OCP establece el objetivo de la arquitectura OO, el DIP establece el mecanismo principal"`
+
 **Ejemplo**: Usar una interfaz para desacoplar la lógica de notificación de la implementación concreta de envío de mensajes.
 
 ```kotlin
+// Código que no cumple DIP...
+// NotificationService depende directamente de la implementación concreta EmailSender en lugar de depender de una abstracción.
+// Esto hace que NotificationService esté directamente acoplado a EmailSender, lo que reduce la flexibilidad y la capacidad de
+// extender el código.
+
+class EmailSender {
+    fun sendMessage(message: String) {
+        println("Enviando email: $message")
+    }
+}
+
+class NotificationService {
+    private val sender = EmailSender()
+    
+    fun notifyUser(message: String) {
+        sender.sendMessage(message)
+    }
+}
+```
+
+```kotlin
+// Solución para cumplir DIP...
+
 interface MessageSender {
   fun sendMessage(message: String)
 }
@@ -215,4 +243,93 @@ class NotificationService(private val sender: MessageSender) {
 }
 ```
 
-En este ejemplo, `NotificationService` depende de la abstracción `MessageSender`, no de su implementación concreta, cumpliendo con el DIP. Esto permite cambiar fácilmente la forma en que se envían las notificaciones (por ejemplo, a SMS) sin modificar `NotificationService`.
+En este ejemplo, `NotificationService` depende de la abstracción `MessageSender`, no de su implementación concreta, cumpliendo con el DIP. Esto permite cambiar fácilmente la forma en que se envían 
+las notificaciones (por ejemplo, a SMS) sin modificar `NotificationService`.
+
+Si en un futuro quisiéramos ampliar la funcionalidad y enviar notificaciones a través de SMS o RRSS, tendríamos que modificar NotificationService directamente, lo cual va en contra del principio DIP.
+
+Para realizar este cambio en ambas versiones de la aplicación tendríamos que realizar lo siguiente:
+
+```kotlin
+// Versión que viola DIP...
+// La ampliación de la funcionalidad nos obligaría a modificar la clase NotificationService
+
+class EmailSender {
+    fun sendMessage(message: String) {
+        println("Enviando email: $message")
+    }
+}
+
+class SmsSender {
+    fun sendMessage(message: String) {
+        println("Enviando SMS: $message")
+    }
+}
+
+class SocialMediaSender {
+    fun sendMessage(message: String) {
+        println("Publicando en redes sociales: $message")
+    }
+}
+
+class NotificationService {
+    private val emailSender = EmailSender()
+    private val smsSender = SmsSender()
+    private val socialMediaSender = SocialMediaSender()
+    
+    fun notifyUserByEmail(message: String) {
+        emailSender.sendMessage(message)
+    }
+    
+    fun notifyUserBySms(message: String) {
+        smsSender.sendMessage(message)
+    }
+    
+    fun notifyUserOnSocialMedia(message: String) {
+        socialMediaSender.sendMessage(message)
+    }
+}
+```
+
+Sin embargo, nuestra nueva versión que si cumple DIP es más flexible y no tan dependiente, lo cuál es una ventaja a la hora de escalar el código y ampliar funcionalidades.
+
+```kotlin
+// Definimos la interfaz de abstracción
+interface MessageSender {
+    fun sendMessage(message: String)
+}
+
+// Implementación para enviar emails
+class EmailSender : MessageSender {
+    override fun sendMessage(message: String) {
+        println("Enviando email: $message")
+    }
+}
+
+// Implementación para enviar SMS
+class SmsSender : MessageSender {
+    override fun sendMessage(message: String) {
+        println("Enviando SMS: $message")
+    }
+}
+
+// Implementación para publicar en redes sociales
+class SocialMediaSender : MessageSender {
+    override fun sendMessage(message: String) {
+        println("Publicando en redes sociales: $message")
+    }
+}
+
+// Servicio de notificación que depende de la abstracción, no de la implementación
+class NotificationService(private val sender: MessageSender) {
+    fun notifyUser(message: String) {
+        sender.sendMessage(message)
+    }
+}
+```
+
+Para usar NotificationService con diferentes métodos de envío de mensajes en la versión que sigue el DIP, crearíamos una instancia de NotificationService pasando el sender específico
+(por ejemplo, EmailSender, SmsSender, o SocialMediaSender) en el momento de la creación. 
+
+Esto permite cambiar el método de envío de mensajes sin necesidad de modificar el código de NotificationService, manteniendo las dependencias desacopladas y facilitando la extensión y 
+mantenimiento del sistema.

@@ -1,12 +1,13 @@
 ---
-title: "UD 6 - Pendiente"
+title: "UD 6 - Creación de programas con POO"
 description: Estructuras de dato
 summary: SEstructuras de dato
 authors:
     - Eduardo Fdez
-date: 2022-09-17
+    - Diego Cano
+date: 2024-03-01
 icon: 
-permalink: /prog/unidad2
+permalink: /prog/unidad6
 categories:
     - PROG
 tags:
@@ -35,26 +36,24 @@ RA 6. Escribe programas que manipulen información seleccionando y utilizando ti
 
 En esta sección se relaciona la unidad con los criterios de evaluación concretos, del resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
 
-* a) Se han escrito programas que utilicen arrays
-* b) Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.
-* c) Se han utilizado listas para almacenar y procesar información.
-* d) Se han utilizado iteradores para recorrer los elementos de las listas.
-* e) Se han reconocido las características y ventajas de cada una de la colecciones de datos disponibles.
-* (NO) f) Se han creado clases y métodos genéricos.
-* g) Se han utilizado expresiones regulares en la búsqueda de patrones en cadenas de texto.
-* (NO) h) Se han identificado las clases relacionadas con el tratamiento de documentos XML.
-* (NO) i) Se han realizado programas que realicen manipulaciones sobre documentos XML.
+* a) Se han identificado los conceptos de herencia, superclase y subclase.
+* b) Se han utilizado modificadores para bloquear y forzar la herencia de clases y métodos.
+* c) Se ha reconocido la incidencia de los constructores en la herencia.
+* d) Se han creado clases heredadas que sobrescriban la implementación de métodos de la superclase.
+* e) Se han diseñado y aplicado jerarquías de clases.
+* f) Se han probado y depurado las jerarquías de clases.
+* g) Se han realizado programas que implementen y utilicen jerarquías de clases.
+* h) Se ha comentado y documentado el código.
 
 ### Contenidos
 
-La unidad se encuentra dentro del Bloque 2
+La unidad se encuentra dentro del Bloque 3 de Programación orientada a objetos.
 
-* U3: Estructuras de datos. 
+* U6: Estructuras de datos.
 
-En la Unidad 3, veremos:
+En la Unidad 6, veremos:
 
-* Listas y tuplas
-* Diccionarios
-* Conjuntos
-* String
-* Expresiones regulares
+* Jerarquías de clases
+* Ejemplo: Sistema de Gestión de Biblioteca de Medios
+* Principios de SOLID
+* Comentarios y documentación

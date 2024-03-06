@@ -86,6 +86,23 @@ significando que la subclase es un tipo especializado de la superclase.
   La clase `Cuadrado` sería una subclase que especializa a `Figura` definiendo cómo estos comportamientos se aplican específicamente a un cuadrado, aprovechando sus características únicas como tener
   todos sus lados de igual longitud.
 
+En este otro ejemplo, definiremos una clase base `Empleado` y una subclase `Ingeniero` que especializa a `Empleado`.
+
+```kotlin
+open class Empleado(val nombre: String, val apellido: String) {
+    fun calcularSalario(): Double {
+        // Implementación básica para calcular el salario
+        return 30000.0
+    }
+}
+
+class Ingeniero(nombre: String, apellido: String, val especialidad: String): Empleado(nombre, apellido) {
+    fun trabajarEnProyecto() {
+        println("El ingeniero $nombre $apellido, especializado en $especialidad, está trabajando en un proyecto.")
+    }
+}
+```
+
 #### 1.6. Extensión (Extiende Funcionalidad Heredada)
 
 A través de la extensión, una subclase añade nuevas funcionalidades a la clase base sin cambiar su comportamiento original. Esta relación no implica necesariamente una especialización, 
@@ -95,6 +112,35 @@ sino una ampliación de las capacidades.
 
 - **Ejemplo**: Si tenemos una clase `Lista` que implementa las operaciones básicas de una lista, una clase `ListaSalvable` podría heredar de `Lista` y extender su funcionalidad al añadir métodos para
   guardar y cargar el estado de la lista desde un archivo, sin alterar las operaciones básicas de la lista.
+
+En este otro ejemplo extendemos la funcionalidad de la clase `Controlador` mediante la creación de una subclase `ControladorAutenticado`.
+
+```kotlin
+open class Controlador {
+    fun manejarSolicitud() {
+        println("Manejando solicitud básica.")
+    }
+}
+
+class ControladorAutenticado: Controlador() {
+    fun verificarAutenticacion() {
+        println("Verificando autenticación del usuario.")
+    }
+
+    override fun manejarSolicitud() {
+        verificarAutenticacion()
+        super.manejarSolicitud()
+    }
+}
+```
+
+La diferencia clave entre estos dos usos de la herencia es que la `Especialización` se centra en el concepto de "ser un tipo específico de" una clase base, 
+introduciendo propiedades y comportamientos que son únicos para la subclase, lo que hace que esta subclase sea más específica o adecuada para tareas 
+detalladas dentro de la jerarquía de la clase.
+
+Mientras que la `Extensión`, por otro lado, trata de añadir nuevas funcionalidades a la clase base "sin cambiar su comportamiento original". La subclase 
+mantiene todas las capacidades de la clase base y agrega nuevas funcionalidades que amplían su uso, pero no necesariamente cambia la naturaleza fundamental 
+de lo que la clase base representa.
 
 #### 1.7. Especificación (Define Interface)
 
@@ -106,6 +152,35 @@ deben implementar, cada una a su manera.
 - **Ejemplo**: `ObjetoGrafico` podría ser una interfaz o clase abstracta que define operaciones comunes para objetos gráficos, como dibujar o mover. Las clases `Texto`, `Linea` y `Figura` implementarían
   esta interfaz, proporcionando implementaciones específicas para cada tipo de objeto gráfico.
 
+En este otro ejemplo, definimos una interfaz `ModuloCMS` y varias clases que la implementan, especificando distintas formas de renderizar y configurar módulos.
+
+```kotlin
+interface ModuloCMS {
+    fun renderizar()
+    fun configurar()
+}
+
+class ModuloTexto: ModuloCMS {
+    override fun renderizar() {
+        println("Renderizando módulo de texto.")
+    }
+
+    override fun configurar() {
+        println("Configurando módulo de texto.")
+    }
+}
+
+class ModuloImagen: ModuloCMS {
+    override fun renderizar() {
+        println("Renderizando módulo de imagen.")
+    }
+
+    override fun configurar() {
+        println("Configurando módulo de imagen.")
+    }
+}
+```
+
 #### 1.8. Construcción (Usado para Construir la Subbase)
 
 La construcción se refiere al uso de la herencia para construir una nueva clase basada en la funcionalidad de una clase existente, aunque la relación conceptual entre las dos clases no sea directa.
@@ -114,6 +189,30 @@ La construcción se refiere al uso de la herencia para construir una nueva clase
 
 - **Ejemplo**: La clase `Pila` podría heredar de la clase `Lista`. Aunque conceptualmente una pila no es una lista, esta herencia permite a `Pila` aprovechar la implementación y la funcionalidad de `Lista`
   para gestionar sus elementos internos, aplicando restricciones adicionales o métodos específicos de pilas, como operaciones LIFO (Last In, First Out).
+
+Este otro ejemplo, se muestra cómo la clase `Pila` puede ser construida usando la funcionalidad de una clase `Lista`, aunque conceptualmente no sean lo mismo.
+
+```kotlin
+open class Lista<T> {
+    private val elementos = mutableListOf<T>()
+
+    fun agregar(elemento: T) {
+        elementos.add(elemento)
+    }
+
+    fun remover(): T? = if (elementos.isNotEmpty()) elementos.removeAt(elementos.size - 1) else null
+}
+
+class Pila<T>: Lista<T>() {
+    fun push(elemento: T) {
+        agregar(elemento)
+    }
+
+    fun pop(): T? {
+        return remover()
+    }
+}
+```
 
 Cada uno de estos usos de la herencia ofrece diferentes ventajas y se adapta a distintas necesidades en el diseño de software. La elección de cuándo y cómo utilizar la herencia depende de los requisitos específicos 
 del sistema que se está desarrollando, así como de los principios de diseño de software como el acoplamiento, la cohesión y la encapsulación. La herencia, utilizada sabiamente, puede facilitar la creación de sistemas 
@@ -124,7 +223,86 @@ de software flexibles, mantenibles y escalables.
 Es crucial comprender cómo Kotlin, al igual que otros lenguajes de programación orientada a objetos, maneja la herencia y la polimorfia a través de diferentes constructos y modificadores de acceso. 
 Profundizaremos en los conceptos de clases abstractas e interfaces, así como en el uso de los modificadores `open`, `final`, `abstract` para controlar la herencia y la sobrescritura.
 
-absolutamente, el uso adecuado de clases abstractas, interfaces, y los modificadores `open`, `final`, y `abstract` en Kotlin son fundamentales para diseñar un código robusto y flexible que aprovecha los principios de la Programación Orientada a Objetos (POO). Estos elementos permiten a los desarrolladores construir jerarquías de clases bien estructuradas, promover la reutilización de código, y facilitar el mantenimiento y la escalabilidad del software.
+El uso adecuado de clases abstractas, interfaces, y los modificadores `open`, `final`, y `abstract` en Kotlin son fundamentales para diseñar un código robusto y flexible que aprovecha los principios de la Programación Orientada a Objetos (POO). Estos elementos permiten a los desarrolladores construir jerarquías de clases bien estructuradas, promover la reutilización de código, y facilitar el mantenimiento y la escalabilidad del software.
+
+Para ilustrar cómo bloquear y forzar la herencia de clases y métodos en Kotlin, usaremos los modificadores `open`, `final`, y `abstract`. Kotlin trata todas las clases como `final` por defecto, lo que 
+significa que no se pueden heredar a menos que se marquen explícitamente como `open` o sean `abstract`. Del mismo modo, los métodos son también `final` por defecto y deben marcarse como `open` para 
+permitir que las subclases los sobrescriban, a menos que el método pertenezca a una interfaz o a una clase abstracta.
+
+Ejemplos que demuestran estos conceptos:
+
+- Clase Base y Herencia Bloqueada:
+
+```kotlin
+// Esta clase no puede ser heredada sin el modificador 'open'
+open class Vehiculo(val marca: String, val modelo: String) {
+    open fun arrancar() {
+        println("El vehículo $marca $modelo está arrancando.")
+    }
+
+    // Este método no puede ser sobrescrito sin el modificador 'open'
+    open fun detener() {
+        println("El vehículo $marca $modelo se ha detenido.")
+    }
+}
+```
+
+- Herencia Permitida y Sobrescritura de Métodos:
+
+```kotlin
+class AutoDeportivo(marca: String, modelo: String, val velocidadMaxima: Int) : Vehiculo(marca, modelo) {
+    override fun arrancar() {
+        // Sobrescritura del método arrancar
+        println("El auto deportivo $marca $modelo está arrancando a una velocidad máxima de $velocidadMaxima km/h.")
+    }
+
+    final override fun detener() {
+        // Sobrescritura del método detener marcado como 'final' para prevenir más sobrescrituras
+        println("El auto deportivo $marca $modelo se ha detenido rápidamente.")
+    }
+}
+```
+
+- Uso de Clase Abstracta e Interface:
+
+```kotlin
+abstract class DispositivoElectronico {
+    abstract fun encender()
+    
+    // Este método no puede ser sobrescrito ya que no está marcado como 'open'
+    fun apagar() {
+        println("El dispositivo electrónico se está apagando.")
+    }
+}
+
+interface Conectividad {
+    fun conectar()
+    fun desconectar()
+}
+
+class Smartphone(val marca: String, val modelo: String) : DispositivoElectronico(), Conectividad {
+    override fun encender() {
+        println("El smartphone $marca $modelo se está encendiendo.")
+    }
+
+    override fun conectar() {
+        println("El smartphone $marca $modelo se está conectando a la red.")
+    }
+
+    override fun desconectar() {
+        println("El smartphone $marca $modelo se ha desconectado de la red.")
+    }
+}
+```
+
+Cómo se puede observar en estos dos ejemplos: 
+
+   - La clase base `Vehiculo` es una clase `open`, lo que permite que `AutoDeportivo` la herede. El método `arrancar` es `open` y por lo tanto puede ser sobrescrito por `AutoDeportivo`,
+     que además utiliza `final` en su sobrescritura de `detener` para prevenir más sobrescrituras.
+
+   - La clase `DispositivoElectronico` es abstracta, lo que obliga a cualquier subclase (como `Smartphone`) a implementar el método `encender`. `Smartphone` también implementa la interfaz `Conectividad`.
+
+Demostrando cómo se puede usar la herencia y la implementación de interfaces para forzar ciertas funcionalidades en las clases derivadas.
 
 ### 2. Clases Abstractas e Interfaces: Forzando la Herencia y Especificación
 

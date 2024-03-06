@@ -14,6 +14,7 @@ tags:
     - GIT
     - GitHub
 ---
+
 ## Git & GitHub
 
 ### 1. Introducción
@@ -28,21 +29,12 @@ Los sistemas de control de versiones tienen varias ventajas:
 - Permiten trabajar en paralelo con otros desarrolladores.
 - Permiten colaborar en proyectos de código abierto.
 - Permiten volver a versiones anteriores del código.
-- Permiten comparar cambios, ver quién ha modificado algo, etc.
-- Permiten trabajar sin conexión a internet.
-- Permiten tener un historial completo de los cambios realizados en el código.
-- Permiten trabajar con ramas, etiquetas, etc.
-- Permiten automatizar tareas, como pruebas, despliegues, etc.
 
 #### 1.3. Desventajas
 Los sistemas de control de versiones tienen algunas desventajas:
 - Pueden ser complicados de usar.
 - Pueden requerir mucho espacio en disco.
 - Pueden requerir mucho tiempo para aprender a usarlos.
-- Pueden requerir mucho tiempo para configurarlos.
-- Pueden requerir mucho tiempo para mantenerlos.
-- Pueden requerir mucho tiempo para solucionar problemas.
-- Pueden requerir mucho tiempo para migrar de un sistema a otro.
 
 #### 1.4. Tipos
 Hay varios tipos de sistemas de control de versiones:
@@ -75,6 +67,8 @@ git config --global user.email "
 git config --global core.editor "nano"
 ```
 
+> NOTA: La mayoría de estos comandos, y los que vendrán mas adelante, soportan múltiples opciones (banderas). Consultar documentación.
+
 ##### 2.1.2. Configuración de .gitingore
 Git permite configurar un archivo .gitignore para especificar qué archivos o carpetas no se deben incluir en el repositorio. Esto es útil para evitar subir archivos temporales, logs, etc.
 
@@ -97,6 +91,25 @@ git config --global alias.<nombre> <comando>
 git config --global --get-regexp alias
 ```
 
+##### 2.1.4. Configuración de color
+Git permite configurar el color de la salida de los comandos. Esto es útil para resaltar la salida y hacerla más fácil de leer.
+Tambien se le puede indicar que muestre sólo una línea por cada commit en la traza o que agregue archivos de forma interactiva
+
+```bash
+# Configurar el color de la salida de los comandos
+git config --global color.ui auto
+
+# Configurar la traza de commits
+git config format.pretty oneline
+
+# Configurar la adición de archivos de forma interactiva
+git add -i
+
+# Ver la configuración
+git config --list
+```
+
+
 #### 2.2. Espacios de trabajo
 Git tiene tres espacios de trabajo: el directorio de trabajo, el área de preparación y el repositorio.
 
@@ -104,8 +117,13 @@ Git tiene tres espacios de trabajo: el directorio de trabajo, el área de prepar
 * El área de preparación es donde se preparan los cambios que se van a incluir en el próximo commit.
 * El repositorio es donde se almacenan los commits.
 
+![FlujoGit](./assets/EDES-U4.1.-Git_Github-1709740252464.png)
+
+
 ##### 2.2.1. Directorio de trabajo
 El directorio de trabajo es donde se modifican los archivos.
+
+Es la primera sección del flujo, consta de archivos en los que está trabajando actualmente. En esta sección los archivos están con el estado “Untracked” y están disponibles para ser enviados a siguiente sección llamada “Staging area”. Para realizar la operación de traspaso entre estas dos secciones se utiliza el comando `git add <file>` .
 
 ```bash
 # Ver el estado del directorio de trabajo
@@ -118,6 +136,8 @@ git diff
 ##### 2.2.2. Área de preparación
 El área de preparación es donde se preparan los cambios que se van a incluir en el próximo commit. También se le conoce como "staging area" o "index".
 
+Es la segunda sección del flujo, consta de archivos que están listos para ser enviados a la sección final llamada “Repositorio”. En esta sección los archivos están con el estado “Staged” y están disponibles para ser enviados a la sección final. Para realizar la operación de traspaso entre estas dos secciones se utiliza el comando `git commit -m “Mensaje”` .
+
 ```bash
 # Añadir un archivo al área de preparación
 git add <archivo>
@@ -128,6 +148,8 @@ git status
 
 ##### 2.2.3. Repositorio
 El repositorio es donde se almacenan los commits.
+
+Es la última sección del flujo, consta de archivos que están guardados formalmente en el almacenamiento virtual de tu proyecto e inicia el flujo nuevamente en Working directory con los últimos cambios formales.
 
 ```bash
 # Hacer un commit
@@ -164,12 +186,52 @@ git status
 
 # Ver el historial de commits
 git log
+
+# Deshacer cambios. Volver al último commit
+git checkout -- <archivo>
+
+
+```
+##### 2.3.1. Deshacer cambios
+Git permite deshacer cambios de varias formas:
+- **Deshacer cambios en el directorio de trabajo**: reemplazarás cambios locales usando el comando `git checkout -- <archivo>`. Este comando reemplaza los cambios en tu directorio de trabajo con el último contenido de HEAD. Los cambios que ya han sido agregados al Index, así como también los nuevos archivos, se mantendrán sin cambio.
+- **Deshacer cambios en el área de preparación**: `git reset HEAD <archivo>`
+- **Deshacer un commit**: `git reset --
+- **Deshacer un commit y deshacer cambios**: `git reset --hard HEAD~1` o Deshace todos los cambios locales y commits, puedes traer la última versión del servidor y apuntar a tu copia local principal de esta forma `git fetch origin`.
+
+
+```bash
+# Deshacer cambios en el directorio de trabajo
+git checkout -- <archivo>
+
+# Deshacer cambios en el área de preparación
+git reset HEAD <archivo>
+
+# Deshacer un commit
+git reset --soft HEAD~1
+
+# Deshacer un commit y deshacer cambios
+git reset --hard HEAD~1
 ```
 
-#### 2.4. Ramas
-Las ramas son una forma de trabajar en paralelo en el mismo repositorio. Nos permiten trabajar en nuevas funcionalidades, arreglar errores, etc. de forma aislada.
+La principal diferencia entre git fetch y git pull es:
+- Si haces un git fetch, simplemente obtendrá todos los cambios en el repositorio remoto (Github) y moverá el puntero origin/master a HEAD. Mientras tanto, tu rama local master seguirá apuntando a donde está.
+- Si haces un git pull, básicamente hará fetch (como se explicó anteriormente) y fusionará cualquier cambio nuevo en tu rama master y moverá el puntero a HEAD.
 
-Por defecto, al crear el repositorio Git crea una rama llamada "master", que es la rama principal, pero se pueden crear otras ramas. 
+por tanto, git pull = git fetch + merge.
+
+![pull = fetch + merge](./assets/EDES-U4.1.-Git_Github-1709742195595.png)
+
+
+
+
+#### 2.4. Ramas
+Otra característica importante en flujo el trabajo de Git son el uso de las ramas. Las ramas son espacios o entornos independientes para que un desarrollador pueda usar y trabajar sobre el proyecto sin afectar el conjunto de archivos originales. Las ramas se utilizan básicamente para separar ambientes y colaborar entre desarrolladores en un mismo proyecto sin afectar el uno al otro. El flujo de trabajo de ramas se basa en la bifurcación y convergencia, en donde existe un punto de separación y otro de unión.
+
+![Gitflow-workflow](./assets/EDES-U4.1.-Git_Github-1709740343955.png)
+
+
+Por defecto, al crear el repositorio Git crea una rama llamada "master" o "main", que es la rama principal, pero se pueden crear otras ramas. 
 
 Respecto a las ramas, se pueden crear, eliminar, fusionar, etc. 
 
@@ -278,6 +340,10 @@ git push <nombre> <rama>
 git pull <nombre> <rama>
 ```
 
+![Operaciones locales y remotas](./assets/EDES-U4.1.-Git_Github-1709741580452.png)
+![Varios repos](./assets/EDES-U4.1.-Git_Github-1709741845784.png)
+
+
 #### 2.7. Flujo de trabajo
 El flujo de trabajo típico con Git es el siguiente:
 
@@ -312,6 +378,60 @@ Las issues son una forma de realizar un seguimiento de tareas, mejoras, errores,
 #### 3.3. Pull Requests
 Un pull request es una forma de proponer cambios en un repositorio. Se pueden revisar, comentar, aprobar, rechazar, etc.
 
+Para crear un pull request, hay que hacer lo siguiente:   
+
+1. Sobre un repostiorio clonado, crear una rama con `git checkout -b <rama>`.
+2. Hacer cambios, añadir, hacer commits, etc.
+3. Subir la rama al repositorio remoto con `git push origin <rama>`.
+    ```bash
+    # Crear un pull request 
+    git checkout -b <rama>
+    git add .
+    git commit -m "Mensaje del commit"
+    git push origin <rama>
+    ```
+4. Ir a la página del repositorio en GitHub y hacer clic en "New pull request".
+ 
+    ![crear un pull request](./assets/EDES-U4.1.-Git_Github-1709743019371.png)
+
+5. Seleccionar la rama que se quiere fusionar con la rama principal.
+6. Añadir un título y una descripción.
+7. Hacer clic en "Create pull request".
+
+    ![Create Pull request](./assets/EDES-U4.1.-Git_Github-1709743055290.png)
+
+8. Esperar a que alguien revise el pull request.
+
+    ```bash
+    # Ver los pull requests
+    git fetch origin
+    git log origin/master..origin/<rama>
+    ```
+   
+9. Si se aprueba, fusionar el pull request.
+
+    ```bash
+    # Fusionar un pull request
+    git checkout <rama>
+    git pull origin <rama>
+    git merge <rama>
+    git push origin master
+    ```
+   
+10. Eliminar la rama.
+
+    ```bash
+    # Eliminar un pull request
+    git branch -d <rama>
+    git push origin --delete <rama>
+    ```
+11. Si se rechaza, hacer los cambios necesarios y volver al paso 3.
+
+
+#### 3.4. Gists
+Los gists son una forma de compartir pequeños fragmentos de código. Se pueden crear, editar, comentar, etc.
+
+
 ### 4. Conclusiones
 Git y GitHub son herramientas muy útiles para el desarrollo de software. Permiten llevar un control de los cambios realizados en el código, trabajar en paralelo, colaborar con otros desarrolladores, etc.
     
@@ -324,3 +444,6 @@ Git y GitHub son herramientas muy útiles para el desarrollo de software. Permit
 
 
 ## Fuente
+
+- [Introducción a Git](https://medium.com/@diego.coder/introducci%C3%B3n-a-git-5a7f6bd13343)
+- [Realizar un Pull Request](https://dev.to/duxtech/como-hacer-un-pull-request-a-github-4c9l)

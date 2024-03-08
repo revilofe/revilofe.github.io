@@ -4017,6 +4017,57 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ejemplo-con-kotlinxserialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo con kotlinx.serialization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplo con kotlinx.serialization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-insertar-las-dependencias-necesarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Insertar las dependencias necesarias:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-definimos-la-clase-de-datos-usuario-y-agregamos-una-anotacion-para-la-serializacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Definimos la clase de datos Usuario y agregamos una Anotación para la serialización:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-lectura-de-un-archivo-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Lectura de un archivo JSON
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-escritura-a-un-archivo-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Escritura a un archivo JSON
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4306,6 +4357,59 @@
 <p>De esta manera, podemos manejar fácilmente el JSON proporcionado, asegurándonos de que solo los ingredientes válidos (no nulos) se incluyan en la lista de ingredientes de cada receta.</p>
 </li>
 </ul>
+<h2 id="ejemplo-con-kotlinxserialization">Ejemplo con kotlinx.serialization<a class="headerlink" href="#ejemplo-con-kotlinxserialization" title="Permanent link">&para;</a></h2>
+<p>Vamos a ver, por último, un ejemplo más general de lectura y escritura de archivos JSON en Kotlin, utilizando la biblioteca kotlinx.serialization, que es parte del ecosistema de Kotlin y ofrece una forma nativa de serializar y deserializar datos.</p>
+<h4 id="1-insertar-las-dependencias-necesarias">1. Insertar las dependencias necesarias:<a class="headerlink" href="#1-insertar-las-dependencias-necesarias" title="Permanent link">&para;</a></h4>
+<p>Para usar kotlinx.serialization, primero debemos agregar las dependencias necesarias a nuestro proyecto. Si estamos utilizando Gradle, podemos incluir lo siguiente en el archivo <code>build.gradle</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>plugins {
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    id &#39;org.jetbrains.kotlin.plugin.serialization&#39; version &#39;1.5.0&#39;
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>}
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>dependencies {
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    implementation &#39;org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1&#39;
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>}
+</code></pre></div>
+<p>Siempre debemos asegurarnos de usar las versiones más recientes de las dependencias.</p>
+<p>Ahora, veamos cómo podríamos leer y escribir un archivo JSON que contiene una lista de objetos. Usaremos un ejemplo simple de una lista de usuarios, donde cada usuario tiene un nombre y una edad.</p>
+<h4 id="2-definimos-la-clase-de-datos-usuario-y-agregamos-una-anotacion-para-la-serializacion">2. Definimos la clase de datos <code>Usuario</code> y agregamos una <code>Anotación</code> para la serialización:<a class="headerlink" href="#2-definimos-la-clase-de-datos-usuario-y-agregamos-una-anotacion-para-la-serializacion" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlinx.serialization.*</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlinx.serialization.json.*</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="nd">@Serializable</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Usuario</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="3-lectura-de-un-archivo-json">3. Lectura de un archivo JSON<a class="headerlink" href="#3-lectura-de-un-archivo-json" title="Permanent link">&para;</a></h4>
+<p>Para leer un archivo JSON y convertirlo en una lista de objetos <code>Usuario</code>, podríamos hacer lo siguiente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">leerUsuariosDeJSON</span><span class="p">(</span><span class="n">archivo</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Usuario</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">contenido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="n">archivo</span><span class="p">).</span><span class="na">readText</span><span class="p">()</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Json</span><span class="p">.</span><span class="na">decodeFromString</span><span class="p">(</span><span class="n">ListSerializer</span><span class="p">(</span><span class="n">Usuario</span><span class="p">.</span><span class="na">serializer</span><span class="p">()),</span><span class="w"> </span><span class="n">contenido</span><span class="p">)</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="p">}</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="kd">val</span><span class="w"> </span><span class="nv">usuarios</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leerUsuariosDeJSON</span><span class="p">(</span><span class="s">&quot;usuarios.json&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="n">usuarios</span><span class="p">.</span><span class="na">forEach</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Nombre: </span><span class="si">${</span><span class="nb">it</span><span class="p">.</span><span class="na">nombre</span><span class="si">}</span><span class="s">, Edad: </span><span class="si">${</span><span class="nb">it</span><span class="p">.</span><span class="na">edad</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="p">}</span>
+</code></pre></div>
+<p>Este código lee todo el contenido del archivo <code>usuarios.json</code> como un <code>String</code> y luego utiliza <code>Json.decodeFromString</code> para deserializar este <code>String</code> en una lista de objetos <code>Usuario</code>.</p>
+<h4 id="4-escritura-a-un-archivo-json">4. Escritura a un archivo JSON<a class="headerlink" href="#4-escritura-a-un-archivo-json" title="Permanent link">&para;</a></h4>
+<p>Para escribir una lista de objetos <code>Usuario</code> en un archivo JSON, podemos hacer lo siguiente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">escribirUsuariosAJSON</span><span class="p">(</span><span class="n">usuarios</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Usuario</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">archivo</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">contenido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Json</span><span class="p">.</span><span class="na">encodeToString</span><span class="p">(</span><span class="n">ListSerializer</span><span class="p">(</span><span class="n">Usuario</span><span class="p">.</span><span class="na">serializer</span><span class="p">()),</span><span class="w"> </span><span class="n">usuarios</span><span class="p">)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="n">File</span><span class="p">(</span><span class="n">archivo</span><span class="p">).</span><span class="na">writeText</span><span class="p">(</span><span class="n">contenido</span><span class="p">)</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">}</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="c1">// Lista de ejemplo para escribir en el archivo</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="kd">val</span><span class="w"> </span><span class="nv">listaDeUsuarios</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span><span class="n">Usuario</span><span class="p">(</span><span class="s">&quot;Juan&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">),</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">    </span><span class="n">Usuario</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">25</span><span class="p">)</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="p">)</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="n">escribirUsuariosAJSON</span><span class="p">(</span><span class="n">listaDeUsuarios</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;nuevos_usuarios.json&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Este código serializa una lista de objetos <code>Usuario</code> a un <code>String</code> JSON utilizando <code>Json.encodeToString</code> y luego escribe este <code>String</code> en un archivo llamado <code>nuevos_usuarios.json</code>.</p>
+<p>Este ejemplo cubre tanto la lectura como la escritura de datos JSON en Kotlin usando la biblioteca kotlinx.serialization, que proporciona una forma integrada y eficiente de trabajar con JSON en aplicaciones Kotlin.</p>
 
 
 

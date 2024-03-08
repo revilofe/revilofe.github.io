@@ -287,3 +287,78 @@ fun main() {
 - Luego, mapea esta lista a una nueva lista de `Receta`, donde cada `Receta` tiene un nombre y una lista de ingredientes que solo incluye los valores no nulos (utilizando `listOfNotNull` para filtrar los `null`).
 
 - De esta manera, podemos manejar fácilmente el JSON proporcionado, asegurándonos de que solo los ingredientes válidos (no nulos) se incluyan en la lista de ingredientes de cada receta.
+
+## Ejemplo con kotlinx.serialization
+
+Vamos a ver, por último, un ejemplo más general de lectura y escritura de archivos JSON en Kotlin, utilizando la biblioteca kotlinx.serialization, que es parte del ecosistema de Kotlin y ofrece una forma nativa de serializar y deserializar datos.
+
+#### 1. Insertar las dependencias necesarias:
+
+Para usar kotlinx.serialization, primero debemos agregar las dependencias necesarias a nuestro proyecto. Si estamos utilizando Gradle, podemos incluir lo siguiente en el archivo `build.gradle`:
+
+```gradle
+plugins {
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.5.0'
+}
+
+dependencies {
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1'
+}
+```
+
+Siempre debemos asegurarnos de usar las versiones más recientes de las dependencias.
+
+Ahora, veamos cómo podríamos leer y escribir un archivo JSON que contiene una lista de objetos. Usaremos un ejemplo simple de una lista de usuarios, donde cada usuario tiene un nombre y una edad.
+
+#### 2. Definimos la clase de datos `Usuario` y agregamos una `Anotación` para la serialización:
+
+```kotlin
+import kotlinx.serialization.*
+import kotlinx.serialization.json.*
+
+@Serializable
+data class Usuario(val nombre: String, val edad: Int)
+```
+
+#### 3. Lectura de un archivo JSON
+
+Para leer un archivo JSON y convertirlo en una lista de objetos `Usuario`, podríamos hacer lo siguiente:
+
+```kotlin
+import java.io.File
+
+fun leerUsuariosDeJSON(archivo: String): List<Usuario> {
+    val contenido = File(archivo).readText()
+    return Json.decodeFromString(ListSerializer(Usuario.serializer()), contenido)
+}
+
+val usuarios = leerUsuariosDeJSON("usuarios.json")
+usuarios.forEach {
+    println("Nombre: ${it.nombre}, Edad: ${it.edad}")
+}
+```
+
+Este código lee todo el contenido del archivo `usuarios.json` como un `String` y luego utiliza `Json.decodeFromString` para deserializar este `String` en una lista de objetos `Usuario`.
+
+#### 4. Escritura a un archivo JSON
+
+Para escribir una lista de objetos `Usuario` en un archivo JSON, podemos hacer lo siguiente:
+
+```kotlin
+fun escribirUsuariosAJSON(usuarios: List<Usuario>, archivo: String) {
+    val contenido = Json.encodeToString(ListSerializer(Usuario.serializer()), usuarios)
+    File(archivo).writeText(contenido)
+}
+
+// Lista de ejemplo para escribir en el archivo
+val listaDeUsuarios = listOf(
+    Usuario("Juan", 30),
+    Usuario("Ana", 25)
+)
+
+escribirUsuariosAJSON(listaDeUsuarios, "nuevos_usuarios.json")
+```
+
+Este código serializa una lista de objetos `Usuario` a un `String` JSON utilizando `Json.encodeToString` y luego escribe este `String` en un archivo llamado `nuevos_usuarios.json`.
+
+Este ejemplo cubre tanto la lectura como la escritura de datos JSON en Kotlin usando la biblioteca kotlinx.serialization, que proporciona una forma integrada y eficiente de trabajar con JSON en aplicaciones Kotlin.

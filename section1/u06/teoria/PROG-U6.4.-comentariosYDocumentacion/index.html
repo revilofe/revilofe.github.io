@@ -4217,8 +4217,7 @@
   <h1>6.4.-Comentarios y documentación</h1>
 
 <h2 id="64-se-ha-comentado-y-documentado-el-codigo">6.4. Se ha comentado y documentado el código.<a class="headerlink" href="#64-se-ha-comentado-y-documentado-el-codigo" title="Permanent link">&para;</a></h2>
-<p>Un código bien documentado y comentado es esencial para asegurar la calidad, mantenibilidad y escalabilidad de cualquier proyecto de software. A continuación, se detalla una guía sobre cómo abordar la documentación y los comentarios en el código, 
-tomando en cuenta las prácticas recomendadas y la filosofía detrás de un código bien documentado.</p>
+<p>Un código bien documentado y comentado es esencial para asegurar la calidad, mantenibilidad y escalabilidad de cualquier proyecto de software. A continuación, se detalla una guía sobre cómo abordar la documentación y los comentarios en el código, tomando en cuenta las prácticas recomendadas y la filosofía detrás de un código bien documentado.</p>
 <h3 id="1-como-abordar-los-comentarios-en-el-codigo">1. ¿Cómo Abordar los Comentarios en el Código?<a class="headerlink" href="#1-como-abordar-los-comentarios-en-el-codigo" title="Permanent link">&para;</a></h3>
 <p>A la hora de comentar, hay dos escuelas:</p>
 <ul>
@@ -4227,14 +4226,11 @@ tomando en cuenta las prácticas recomendadas y la filosofía detrás de un cód
 </ul>
 <p><strong><em><code>¿A cuál de los dos consejos deberías hacerle caso?</code></em></strong></p>
 <p>Existen gurus, como <em>John Ousterhout</em>, en <em>“A Philosophy of Software Design”</em> que recomienda <strong><em>empezar con los comentarios antes de programar</em></strong>. Pero, <strong><em>¿por qué lo recomienda?</em></strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Escribir en un lenguaje humano cómo funciona algo antes de implementarlo realmente, te da la capacidad de ver
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>si es lógico y suficiente, además te permite ponerte en los zapatos del usuario para notar deficiencias sobre
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>todo en la interfaz. 
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Los comentarios de la interfaz es lo primero que deberías crear porque te servirán de guía para avanzar con
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>tu diseño y, sobre todo, que sea lógico y fácil de usar.
-</code></pre></div>
-<p>Aunque existen diferentes opiniones sobre el uso de comentarios en el código, es indiscutible que un sistema sin documentación es incompleto. La documentación y los comentarios bien pensados son cruciales para entender la razón de ser de ciertos módulos, 
-funciones, y decisiones de diseño dentro del sistema. </p>
+<blockquote>
+<p>Escribir en un lenguaje humano cómo funciona algo antes de implementarlo realmente, te da la capacidad de ver si es lógico y suficiente, además te permite ponerte en los zapatos del usuario para notar deficiencias sobre todo en la interfaz.
+Los comentarios de la interfaz es lo primero que deberías crear porque te servirán de guía para avanzar con tu diseño y, sobre todo, que sea lógico y fácil de usar.</p>
+</blockquote>
+<p>Aunque existen diferentes opiniones sobre el uso de comentarios en el código, es indiscutible que un sistema sin documentación es incompleto. La documentación y los comentarios bien pensados son cruciales para entender la razón de ser de ciertos módulos, funciones, y decisiones de diseño dentro del sistema. </p>
 <h3 id="2-directrices-sobre-como-y-cuando-usar-comentarios">2. Directrices sobre cómo y cuándo usar comentarios<a class="headerlink" href="#2-directrices-sobre-como-y-cuando-usar-comentarios" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
@@ -4259,13 +4255,13 @@ funciones, y decisiones de diseño dentro del sistema. </p>
 <li><strong>DOKKA</strong>: Es una herramienta de documentación para Kotlin que permite generar documentación de alta calidad directamente desde los comentarios del código.
   La configuración básica en el fichero <code>build.gradle.kts</code> habilita nuevas tareas en Gradle para generar la documentación en formatos accesibles.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">  </span><span class="n">plugins</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">   </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;org.jetbrains.dokka&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s">&quot;1.6.10&quot;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">   </span><span class="n">mavenCentral</span><span class="p">()</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="n">plugins</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">   </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;org.jetbrains.dokka&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s">&quot;1.6.10&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">   </span><span class="n">mavenCentral</span><span class="p">()</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="p">}</span>
 </code></pre></div>
 <p><a href="https://kotlin.github.io/dokka/1.6.10/">Enlace a la web oficial de DOKKA</a></p>
 <ul>
@@ -4274,24 +4270,23 @@ funciones, y decisiones de diseño dentro del sistema. </p>
 </ul>
 <p><a href="https://kotlinlang.org/docs/kotlin-doc.html">Document Kotlin code: KDoc</a></p>
 <h3 id="ejemplo-de-documentacion-con-kdoc">Ejemplo de Documentación con KDoc<a class="headerlink" href="#ejemplo-de-documentacion-con-kdoc" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cm">/**</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cm"> * Representa un artículo en una biblioteca digital.</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="cm"> *</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="cm"> * Esta clase es la base para diferentes tipos de medios como libros, revistas y películas.</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="cm"> * @property titulo El título del artículo.</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="cm"> * @property autor El autor o director del artículo.</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="cm"> * @property disponible Indica si el artículo está disponible para préstamo.</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="cm"> */</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Articulo</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">titulo</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">autor</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">disponible</span><span class="p">:</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="cm">     * Proporciona una descripción detallada del artículo.</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="cm">     */</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">descripcion</span><span class="p">()</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cm">/**</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cm"> * Representa un artículo en una biblioteca digital.</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cm"> *</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="cm"> * Esta clase es la base para diferentes tipos de medios como libros, revistas y películas.</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="cm"> * @property titulo El título del artículo.</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="cm"> * @property autor El autor o director del artículo.</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="cm"> * @property disponible Indica si el artículo está disponible para préstamo.</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="cm"> */</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Articulo</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">titulo</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">autor</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">disponible</span><span class="p">:</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="cm">/**</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="cm">     * Proporciona una descripción detallada del artículo.</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="cm">     */</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">descripcion</span><span class="p">()</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="4-consejos-a-la-hora-de-documentar-tu-proyecto">4. Consejos a la hora de documentar tu proyecto<a class="headerlink" href="#4-consejos-a-la-hora-de-documentar-tu-proyecto" title="Permanent link">&para;</a></h3>
-<p>Ya hemos visto que un sistema sin documentación está incompleto. Para tener un software de calidad, se necesita tener documentación, pero esta tiene que tener sentido: es decir, información acerca del sistema que comunique cosas 
-como la razón de existir de ciertos módulos, valores y funciones y cómo usarlo.</p>
+<p>Ya hemos visto que un sistema sin documentación está incompleto. Para tener un software de calidad, se necesita tener documentación, pero esta tiene que tener sentido: es decir, información acerca del sistema que comunique cosas como la razón de existir de ciertos módulos, valores y funciones y cómo usarlo.</p>
 <ul>
 <li>
 <p>La documentación debe ubicarse lo más cerca posible del código, para eso tenemos los comentarios, facilitará encontrarlos y mantenerlos.</p>
@@ -4401,13 +4396,10 @@ intentar expresarlo con código, como los puristas afirman.</p>
 </li>
 </ul>
 <h3 id="5-conclusion">5. Conclusión<a class="headerlink" href="#5-conclusion" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Escribir comentarios es una de las grandes tareas que los programadores debemos dominar. Los lenguajes de
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>programación y los entornos de programación cada vez le dan más poder a esta parte de los programas y permiten
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>incluso escribir pruebas en ellos, generar documentación automática y listar tareas a partir de ellos.
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Si pones el suficiente esmero en aprender a escribir buenos comentarios y mantenerlos, serán una gran
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>herramienta de diseño y documentación de tu software.
-</code></pre></div>
+<blockquote>
+<p>Escribir comentarios es una de las grandes tareas que los programadores debemos dominar. Los lenguajes de programación y los entornos de programación cada vez le dan más poder a esta parte de los programas y permiten incluso escribir pruebas en ellos, generar documentación automática y listar tareas a partir de ellos.
+Si pones el suficiente esmero en aprender a escribir buenos comentarios y mantenerlos, serán una gran herramienta de diseño y documentación de tu software.</p>
+</blockquote>
 <p>La documentación y los comentarios en el código son herramientas indispensables para cualquier desarrollador. Facilitan la comprensión del sistema, ayudan en la futura mantenibilidad del código y 
 mejoran la colaboración dentro de equipos de desarrollo. Al seguir las prácticas recomendadas y utilizar herramientas como DOKKA y KDoc, puedes asegurar que tu documentación sea útil, relevante y 
 fácilmente accesible tanto para ti como para tus colegas en el futuro.</p>

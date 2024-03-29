@@ -14,13 +14,17 @@ tags:
     - Consola
     - Teclado
 ---
-## Lectura y escritura en entrada y salida estándar
+
+## 7.2. Lectura y escritura en entrada y salida estándar
 
 Dentro de la biblioteca estándar de Kotlin, el paquete `kotlin.io` proporciona elementos esenciales para trabajar con los flujos de entrada y salida estándar (Input/Output o I/O). Esta transmisión de información entre la memoria principal y los dispositivos de entrada y salida permite, entre otras cosas, leer y escribir datos.
 
 Vamos a ver cómo se transfieren datos de entrada y salida en consola (el paquete `kotlin.io` también proporciona herramientas para trabajar con archivos, como veremos mas adelante), lo que es útil para mostrar una información en **pantalla** y para obtener información aportada por el usuario, habitualmente a través de un dispositivo de entrada como el **teclado**.
 
-### Output: Escribir en consola
+### 1. Entrada y salida estándar
+A continuación se muestra un esquema de las interfaces básicas para leer/escribir información:
+
+#### 1.1 Output: Escribir en consola
 
 Como ya hemos visto en multitud de ejemplos previos durante el curso, para enviar un mensaje a la salida estándar (la pantalla) usamos habitualmente las funciones `print()` y `println()`, que se diferencian en que la segunda incluye un salto de línea al final. Este salto de línea es reproducible a través del caracter especial `\n`, de la siguiente forma `print("\n")`
 
@@ -60,7 +64,7 @@ println("${numero + numero}")   // 24.6
 println(12.3)                   // 12.3
 ```
 
-### Input: Lectura de datos en consola
+#### 1.2. Input: Lectura de datos en consola
 
 Para la lectura de datos por teclado utilizamos la función `readLine` y `readLn` (otra opción que no vamos a ver ahora es utilizar la clase `Scanner` importada desde la librería estándar de Java con `import java.util.Scanner`):
 
@@ -142,7 +146,7 @@ if (num != null) {
 
 En el ejemplo anterior llamamos a `readLine` con el operador `?` para realizar la conversión con `toIntOrNul` de forma segura. La función `toIntOrNull()` requiere que la variable sea de tipo anulable (`val num: Int?`) porque si la conversión a entero falla, se retorna null, que es asignado a `num`. Igualmente contamos con las funciones `toFloatOrNull()`, `toDoubleOrNull()`, `toLongOrNull()`, `toShortOrNull()` y `toByteOrNull()` que en caso de no poder realizar la conversión de tipos devuelven `null`.
 
-### Mejorando las funciones
+#### 1.3. Mejorando las funciones
 
 [Aquí](https://stackoverflow.com/questions/41283393/reading-console-input-in-kotlin) hay un grupo extendido (inspirado en el [artículo](https://kotlinlang.org/docs/competitive-programming.html#functional-operators-example-long-number-problem)) de funciones de ayuda para leer todos los tipos posibles, listas, arrays, arrays 2D, etc.:
 
@@ -212,7 +216,7 @@ private fun readFloats(n: Int) = generateSequence { readFloat() }.take(n)
 private fun readDoubles(n: Int) = generateSequence { readDouble() }.take(n)
 ```
 
-### Aplicando formato a la salida estándar
+#### 1.4. Aplicando formato a la salida estándar
 
 A continuación veremos como aplicar formato a las cadenas que se imprimen en salida estandar. La explicación esta hecha en Kotlin pero en Java aplica prácticamente lo mismo.
 
@@ -270,12 +274,15 @@ println(str4)
 println(str5)
 ```
 
-## Biblioteca KFormat
+### 2. Otras Bibliotecas
 
 Existen bibliotecas que intentan solucionar alguna necesidad que han encontrado en sus desarrollos. Algunas de ellas para trabajar con la consola:   
 - [KFormat](https://github.com/marcelmay/kformat)   
+- [Mordant](https://github.com/ajalt/mordant)
 - [clikt](https://ajalt.github.io/clikt/)   
 - [kotlinx-cli](https://github.com/Kotlin/kotlinx-cli)   
+
+#### 2.1. Kotlin Console Output Formatting
 
 [KFormat](https://github.com/marcelmay/kformat) es una pequeña biblioteca de Kotlin para la salida de texto con formato, como por ejemplo la impresión de valores en una tabla estructurada. Los casos de uso típicos incluyen el desarrollo de herramientas CLI. (Command Line Interface)
 
@@ -306,11 +313,12 @@ A  |     B |     C | Long_Header
 20 |    b2 | 0.33% |         bar
 ```
 
-## Kotlin Command-Line Arguments
+[Mordant](https://github.com/ajalt/mordant) es otra biblioteca que proporciona una API para dar formato a la salida de texto en la consola. Permite dar formato a texto en la consola, como colores, negritas, cursivas, subrayados, etc.
 
-[kotlinx-cli](https://github.com/Kotlin/kotlinx-cli) facilita el parseo y procesado de los argumentos que se le pasan al programa. Aunque podemos realizarlo nosotros mismos. 
+#### 2.2. Kotlin Command-Line Arguments
+En Kotlin, los argumentos de la línea de comandos se pasan a través de la función `main()`. En este apartado veremos cómo leer y procesar los argumentos de la línea de comandos en Kotlin.
 
-### Línea de comandos en `Main`
+##### 2.2.1 Línea de comandos en `Main`
 
 Al invocar un programa desde la línea de comandos, puedes pasarle un número variable de argumentos. Por ej: `> tar -vzf file.tar.gz`
 
@@ -378,6 +386,10 @@ Si compilas y ejecutas `MainArgConversion.kt` con los mismos argumentos de líne
 ```
 aaa 42 3.14159
 ```
+
+##### 2.2.2. Bibliotecas para manejar argumentos de la línea de comandos
+[clikt](https://ajalt.github.io/clikt/) y [kotlinx-cli](https://github.com/Kotlin/kotlinx-cli) son dos bibliotecas que facilitan el manejo de los argumentos que facilita el parseo y procesado de los argumentos que se le pasan al programa. Aunque podemos realizarlo nosotros mismos.
+
 
 ## Fuente
 

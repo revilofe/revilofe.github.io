@@ -15,8 +15,11 @@ tags:
   - File
 
 ---
+## 7.3 Manejo de archivos: File
+La clase `File` de Java y Kotlin permite manipular cualquier aspecto vinculado al sistema de archivos. Su nombre ("archivo", en inglés) es un poco engañoso, ya que no se refiere exactamente a un archivo. Sirve para realizar operaciones tanto sobre rutas al sistema de archivos que ya existan como no existentes. Además, se puede usar tanto para manipular archivos como directorios.
 
-## La clase `File`
+
+### 1. La clase `File`
 
 La pieza más básica para poder operar con archivos, independientemente de su tipo, en un programa Java es la **clase `File`** . Esta clase pertenece al *`package java.io`* de Java. Por lo tanto será necesario importarla antes de poder usarla.
 
@@ -58,7 +61,7 @@ var unaFoto: File = File("C:/Fotos/Foto1.png")
 var otraFoto: File = File("C:/Fotos/Foto2.png")
 ```
 
-### Rutas absolutas y relativas
+### 2. Rutas absolutas y relativas
 
 En los ejemplos empleados hasta el momento para crear objetos de la clase `File` se han usado rutas absolutas, ya que es la manera de dejar más claro a qué elemento dentro del sistema de archivos, ya sea archivo o carpeta, se está haciendo referencia.
 
@@ -122,12 +125,12 @@ val f = File("Activdades.txt")
 
 Dada esta ruta relativa, basta garantizar que el archivo `Activdades.txt` esté siempre en el mismo directorio de trabajo de la aplicación, cualquiera que sea éste e independientemente del sistema operativo utilizado (en un ordenador puede ser `C:\Programas` y en otro `/Kotlin`). En cualquiera de todos estos casos, la ruta siempre será correcta. De hecho, aún más. Nótese como **las rutas relativas a Kotlin permiten crear código independiente del sistema operativo**, ya que no es necesario especificar un formato de raíz ligada a un sistema de archivos concreto ( "C:", "D:", "/", etc.).
 
-### Métodos de la clase File
+### 3. Métodos de la clase File
 
 `File` ofrece varios métodos para poder manipular el sistema de archivos u obtener información a partir de su ruta.
 Algunos de los más significativos para entender las funcionalidades se muestran a continuación, ordenados por tipo de operación.
 
-#### Obtención de la ruta
+#### 3.1. Obtención de la ruta
 
 Una vez se ha instanciado un objeto de tipo `File`, puede ser necesario recuperar la información empleada durante su inicialización y conocer en formato texto a qué ruta se está refiriendo, o al menos parte de ella.
 
@@ -188,7 +191,7 @@ getName()       :   documento.txt
 getAbsolutePath():  /home/lionel/NetBeans/archivos/trabajos/documento.txt
 ```
 
-#### Comprobaciones de estado
+#### 3.2. Comprobaciones de estado
 
 Dada la ruta empleada para inicializar una variable de tipo File, esta puede que realmente exista dentro del sistema de archivos o no, ya sea en forma de archivo o carpeta. La clase `File` ofrece un conjunto de métodos que permiten hacer comprobaciones sobre su estado y saber si es así.
 
@@ -222,7 +225,7 @@ object PruebaExiste {
 }
 ```
 
-#### Propiedades de archivos
+#### 3.3. Propiedades de archivos
 
 El sistema de archivos de un sistema operativo almacena diversidad de información sobre los archivos y carpetas que puede resultar útil conocer: sus atributos de acceso, su tamaño, la fecha de modificación, etc. En general, todos los datos mostrados en acceder a las propiedades del archivo. Esta información también puede ser consultada usando los métodos adecuados. Entre los más populares hay los siguientes:
 
@@ -268,7 +271,7 @@ C:/Temp/Documento.txt
 Tamañodel archivo: 7
 ```
 
-#### Gestión de los archivos
+#### 3.4. Gestión de los archivos
 
 El conjunto de operaciones más habituales al acceder a un sistema de archivos de un ordenador son las vinculadas a su gestión directa: renombrar archivos, borrarlos, copiarlos o moverlos. Dado el nombre de una ruta, Java y kotlin también permite realizar estas acciones.
 
@@ -332,7 +335,7 @@ Como ya se ha comentado este método también sirve, implícitamente, para renom
 Por ejemplo, si utilizamos `C:/Trabajos/Doc.txt` como ruta origen y `C:/Trabajos/File.txt` como ruta destino, el archivo `Doc.txt` cambiará de nombre a `File.txt` pero permanecerá en la misma carpeta
 `C:/Trabajos`.
 
-#### Listado de archivos
+#### 3.5. Listado de archivos
 
 Finalmente, sólo en el caso de las carpetas, es posible consultar cuál es el listado de archivos y carpetas que contiene.
 
@@ -364,11 +367,11 @@ object PruebasGestionarchivos3 {
 }
 ```
 
-#### Creación de archivos
+#### 3.6. Creación de archivos
 
 En Kotlin, se puede crear un nuevo archivo usando `File.createNewFile()`, `File.writeText(text :String)`, `Files.writeBytes()`, etc. Hay muchas otras formas de crear un archivo en Kotlin. Examinaremos la implementación del código para algunos de ellos utilizando programas Kotlin de ejemplo.
 
-##### Crear archivo usando `File.createNewFile()`
+##### 3.6.1. Crear archivo usando `File.createNewFile()`
 
 `File.createNewFile()` crea un nuevo archivo si aún no existe y devuelve el valor booleano de `true`. Si el archivo ya existe en la ruta proporcionada, el método devuelve `false`. El archivo creado está vacío y tiene cero bytes escritos.
 
@@ -412,7 +415,7 @@ data.txt is created successfully.
 data.txt already exists.
 ```
 
-##### Crear archivo usando `File.writeText()`
+##### 3.6.2. Crear archivo usando `File.writeText()`
 
 `File.writeText()` crea un nuevo archivo si aún no existe y escribe el texto (argumento de cadena) en el archivo. Si se proporciona una cadena vacía, se crea el archivo y no se escribe nada en él. De forma predeterminada, el archivo está codificado como UTF-8. Pasar cualquier otro conjunto de caracteres como segundo argumento codifica el archivo en consecuencia.
 
@@ -440,7 +443,7 @@ fun main(args: Array<String>) {
 
 Al método `writeText()` se le puede proporcionar como argumento la cadena que le gustaría escribir en este archivo. Le hemos pasado una cadena vacía, como dato a escribir en el archivo.
 
-##### Crear archivo usando `File.writeBytes()`
+##### 3.6.3. Crear archivo usando `File.writeBytes()`
 
 `File.writeBytes()` crea un nuevo archivo si aún no existe y escribe los bytes del `ByteArray` proporcionado sin ningún formato. Si se proporciona un `ByteArray` vacío, se crea el archivo y no se escribe nada en él.
 

@@ -15,7 +15,7 @@ tags:
 ---
 
 
-## Lectura y escritura de archivos   
+## 7.4. Lectura y escritura de archivos   
 Normalmente las aplicaciones que utilizan archivos no están centradas en la gestión del sistema de archivos del ordenador. El objetivo principal de usar archivos es **poder almacenar datos de modo que entre diferentes ejecuciones del programa**, incluso en diferentes equipos, sea posible recuperar los datos almacenados. El caso más típico es un editor de documentos, que mientras se ejecuta se encarga de gestionar los datos relativos al texto que está escribiendo, pero en cualquier momento puede guardarlo en un archivo para poder recuperar este texto cuando se desee, y añadir otros nuevos si fuera necesario. El archivo con los datos del documento lo puede abrir tanto en el editor de su ordenador como en el de otro compañero.
 
 Para saber cómo tratar los datos de un archivo en un programa, hay que **tener muy claro cómo se estructuran**. Dentro de un archivo se pueden almacenar todo tipo de valores de cualquier tipo de datos. La parte más importante es que estos valores **se almacenan en forma de secuencia**, uno tras otro. Por lo tanto, como pronto veréis, la forma más habitual de tratar archivos es **secuencialmente**, de forma parecida a como se hace para leer los datos desde teclado, mostrarlas por pantalla o recorrer las posiciones de un array.
@@ -30,7 +30,7 @@ Kotlin, junto con otros lenguajes de programación, diferencia entre dos tipos d
 
 Nos centraremos principalmente en el procesamiento de archivos orientados a carácter.
 
-### archivos orientados a carácter
+### 1. Archivos orientados a carácter
 
 Un archivo orientado a carácter no es más que un **documento de texto**, como el que podría generar con cualquier editor de texto simple. Los valores están almacenados según su representación en cadena de texto, exactamente en el mismo formato que ha usado hasta ahora para entrar datos desde el teclado. Del mismo modo, los diferentes valores se distinguen al estar separados entre ellos con un delimitador, que por defecto es cualquier conjunto de espacios en blanco o salto de línea. Aunque estos valores se puedan distribuir en líneas de texto diferentes, conceptualmente, se puede considerar que están organizados uno tras otro, secuencialmente, como las palabras en la página de un libro.
 
@@ -64,7 +64,7 @@ Una diferencia importante a la hora de tratar con archivos respecto a leer datos
 1. Por un lado, recuerda que **cuando se lleva a cabo el proceso de lectura de una secuencia de valores, siempre hay que tener cuidado de usar el método adecuado al tipo de valor que se espera que venga a continuación** . Qué tipo de valor se espera es algo que habréis decidido vosotros a la hora de hacer el programa que escribió ese archivo, por lo que es vuestra responsabilidad saber qué hay que leer en cada momento. De todos modos nada garantiza que no se haya cometido algún error o que el archivo haya sido manipulado por otro programa o usuario. Como operamos con archivos y no por el teclado, no existe la opción de pedir al usuario que vuelva a escribir el dato. Por lo tanto, el programa debería decir que se ha producido un error ya que el archivo no tiene el formato correcto y finalizar el proceso de lectura.
 2. Por otra parte, **también es necesario controlar que nunca se lean más valores de los que hay disponibles para leer**. En el caso de la entrada de datos por el teclado el programa simplemente se bloqueaba y espera a que el usuario escribiera nuevos valores. Pero con archivos esto no sucede. Intentar leer un nuevo valor cuando el apuntador ya ha superado el último disponible se considera erróneo y lanzará una excepción. Para evitarlo, habrá que utilizar algún procedimiento que nos permita saber si se ha llegado al final de archivo en vez de suponer que siguen existiendo datos que leer.
 
-#### Lectura de archivo
+#### 1.1. Lectura de archivo
 
 En Kotlin demos leer el contenido de un archivo utilizando los métodos estándar de la clase `java.io.File` o los métodos que proporciona Kotlin como una extensión de `java.io.File`.
 
@@ -252,7 +252,7 @@ Existen otras formas de leer archivos:
 - `File.readText()`: devuelve todo el contenido del archivo como una sola cadena
 - `java.util.Scanner`: permite leer indicando el tipo de dato a leer.
 
-#### Escritura en archivo
+#### 1.2. Escritura en archivo
 
 Con en el lenguaje de programación Kotlin tambien se puede escribir en un archivo. Por lo general, en los archivos orientados a caracteres se escriben cadenas de texto.
 
@@ -492,7 +492,7 @@ instanciación del FileWriter agregando el segundo argumento (“append”) a tr
 FileWriterfw = new FileWriter(f, true); Pruébalo y verás que ya no se sobreescribe el archivo, sino que se añaden los 20
 números al final. -->
 
-### Archivos binarios.
+### 2. Archivos binarios.
 
 Los Data Stream (Flujos de datos) se utilizan para escribir datos binarios. `DataOutputStream` escribe datos binarios de tipos primitivos(`Int`, `Long`, `String`) mientras que `DataInputStream` lee datos del flujo binario y los convierte en tipos primitivos.
 

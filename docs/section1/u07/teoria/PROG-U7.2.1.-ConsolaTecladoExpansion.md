@@ -181,12 +181,12 @@ fun main() {
 
 La capacidad de utilizar `Scanner` de Java en Kotlin para leer datos del teclado es un excelente ejemplo de cómo Kotlin no solo simplifica el desarrollo sino que también mantiene la compatibilidad con Java, permitiéndonos elegir la herramienta más adecuada para cada tarea.
 
-### 4 Actualización
+### 4. Actualización
 En versiones recientes de Kotlin (a partir de Kotlin 1.6), se introdujo la función `readln()` como una alternativa a `readLine()`. La principal diferencia entre `readln()` y `readLine()` es que `readln()` nunca devuelve `null`. Si el flujo de entrada estándar está cerrado o llega a su fin, `readln()` lanzará una excepción (`NoSuchElementException`), en lugar de devolver `null` como lo hace `readLine()`.
 
 Esto hace que `readln()` sea más conveniente para los casos en los que estás seguro de que la entrada estará disponible y prefieres manejar una posible falta de entrada mediante excepciones en lugar de comprobar `null`. Esta función simplifica el código en muchos casos de uso, eliminando la necesidad de comprobaciones nulas explícitas después de cada llamada a `readLine()`.
 
-#### 3.4.1. Ejemplo de Uso de `readln()`
+#### 4.1. Ejemplo de Uso de `readln()`
 
 ```kotlin
 fun main() {
@@ -197,7 +197,7 @@ fun main() {
 }
 ```
 
-#### 3.4.2. Ejemplo con Conversión de Tipo
+#### 4.2. Ejemplo con Conversión de Tipo
 
 Junto con `readln()`, Kotlin 1.6 también introdujo las funciones `readlnOrNull()` para casos en los que pueda ser aceptable recibir un `null` (aunque su uso es menos común que `readln()`), y funciones de extensión como `toIntOrNull()` que pueden ser encadenadas directamente después de `readln()` para la conversión de tipos.
 
@@ -217,11 +217,11 @@ fun main() {
 Estas adiciones a Kotlin simplifican la lectura y el manejo de la entrada del usuario, permitiendo escribir código más claro y directo para la interacción con el usuario a través de la consola.
 
 
-### 3.5 Ejercicios de Lectura de Datos en Kotlin
+### 5. Ejercicios de Lectura de Datos en Kotlin
 
 Los siguientes ejercicios en Kotlin están diseñados para reforzar el aprendizaje sobre la lectura de datos desde el teclado, abarcando desde la lectura de tipos de datos simples hasta el manejo de entrada más compleja.
 
-#### 3.5.1. Ejercicio 1: Lectura de un Número y Cálculo de su Cuadrado
+#### 5.1. Ejercicio 1: Lectura de un Número y Cálculo de su Cuadrado
 
 Este ejercicio pide al usuario que introduzca un número entero y calcula el cuadrado de este número.
 
@@ -239,7 +239,7 @@ fun main() {
 }
 ```
 
-#### 3.5.2. Ejercicio 2: Lectura de Datos Personales
+#### 5.2. Ejercicio 2: Lectura de Datos Personales
 
 Solicita al usuario que introduzca su nombre, edad y país de origen, y luego imprime esta información en un formato estructurado.
 
@@ -260,7 +260,7 @@ fun main() {
 }
 ```
 
-#### 3.5.3. Ejercicio 3: Calculadora Simple
+#### 5.3. Ejercicio 3: Calculadora Simple
 
 Implementa una calculadora simple que lee dos números y un operador (+, -, *, /) desde el teclado, y muestra el resultado de la operación.
 

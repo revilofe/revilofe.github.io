@@ -66,7 +66,7 @@ Este ejemplo demuestra cómo crear un fichero, escribir un simple mensaje y lueg
 
 Escribir en ficheros de texto es una operación fundamental en la mayoría de las aplicaciones, desde el registro de eventos (logging) hasta la generación de reportes. Kotlin ofrece métodos directos y seguros para escribir en ficheros, facilitando esta tarea con su sintaxis concisa y expresiva.
 
-#### 2.1 Abrir o Crear un Fichero para Escritura
+#### 2.1. Abrir o Crear un Fichero para Escritura
 
 Antes de escribir en un fichero, primero debemos tener una referencia a este fichero. En Kotlin, esto se hace instanciando un objeto de la clase `File` del paquete `java.io`, que es totalmente accesible gracias a la interoperabilidad de Kotlin con Java.
 
@@ -78,7 +78,7 @@ val miFichero = File("miArchivo.txt")
 
 Si el fichero especificado no existe, se creará uno nuevo al realizar la escritura. Si ya existe, su contenido puede ser sobrescrito o complementado, dependiendo del método que se utilice.
 
-#### 2.2 Escribir Texto en el Fichero
+#### 2.2. Escribir Texto en el Fichero
 
 Kotlin simplifica la escritura en ficheros con el método `writeText()`, que toma una cadena de caracteres como argumento y la escribe en el fichero, sobrescribiendo cualquier contenido previo.
 
@@ -92,11 +92,11 @@ Para añadir texto a un fichero existente sin sobrescribir su contenido, se pued
 miFichero.appendText("Este texto se añade al final.\n")
 ```
 
-#### 2.3 Cerrar el Fichero
+#### 2.3. Cerrar el Fichero
 
 Una de las ventajas de trabajar con ficheros en Kotlin es que no es necesario cerrarlos explícitamente cuando se usan `writeText()` o `appendText()`. Estas funciones se encargan del manejo de recursos automáticamente, asegurando que el fichero se cierre adecuadamente después de la operación.
 
-#### 2.4 Ejemplo Práctico: Registro de Eventos
+#### 2.4. Ejemplo Práctico: Registro de Eventos
 
 A continuación, se muestra un ejemplo práctico de cómo podrías usar la escritura en ficheros para implementar un simple sistema de registro de eventos (logging).
 
@@ -125,7 +125,7 @@ Este código añade entradas de registro a un fichero, incluyendo una marca de t
 
 La lectura de ficheros de texto en Kotlin es una operación que se beneficia de la simplicidad y potencia del lenguaje, permitiendo procesar contenidos de archivos de manera eficiente y segura.
 
-#### 3.1 Abrir el Fichero para Lectura
+#### 3.1. Abrir el Fichero para Lectura
 
 Al igual que para la escritura, la lectura de un fichero comienza por obtener una referencia al archivo deseado mediante la clase `File`. No es necesario abrir explícitamente el fichero en un modo de lectura; el acceso se determina por la función que se utilice para leer el contenido.
 
@@ -135,7 +135,7 @@ import java.io.File
 val miFichero = File("miArchivo.txt")
 ```
 
-#### 3.2 Leer el Contenido Completo del Fichero
+#### 3.2. Leer el Contenido Completo del Fichero
 
 Kotlin proporciona el método `readText()` para leer el contenido completo de un fichero de texto en una sola operación, devolviendo todo el texto como una cadena (`String`).
 
@@ -146,7 +146,7 @@ println(contenido)
 
 Este método es conveniente cuando se necesita trabajar con el texto completo del fichero, pero puede ser ineficiente con archivos muy grandes debido a las limitaciones de memoria.
 
-#### 3.3 Leer el Fichero Línea por Línea
+#### 3.3. Leer el Fichero Línea por Línea
 
 Para ficheros grandes o cuando se necesita procesar el archivo línea por línea, Kotlin ofrece `readLines()`, que devuelve una lista de todas las líneas del fichero como cadenas (`List<String>`).
 
@@ -159,7 +159,7 @@ for (linea in lineas) {
 
 Leer el fichero de esta manera puede ser más eficiente para procesar archivos grandes, ya que permite iterar sobre las líneas del fichero sin cargar todo el contenido en memoria a la vez.
 
-#### 3.4 Uso de `useLines` para una Gestión de Recursos Eficiente
+#### 3.4. Uso de `useLines` para una Gestión de Recursos Eficiente
 
 Kotlin también proporciona una manera eficiente y segura de manejar la lectura de archivos grandes a través del método `useLines`, que abre un flujo de todas las líneas del archivo, permitiendo procesar cada una de ellas de manera secuencial. Este método asegura que el fichero se cierre correctamente una vez que se completa el procesamiento, incluso si ocurre una excepción.
 
@@ -171,7 +171,7 @@ miFichero.useLines { lineas ->
 }
 ```
 
-#### 3.5 Ejemplo Práctico: Contar Líneas de un Fichero
+#### 3.5. Ejemplo Práctico: Contar Líneas de un Fichero
 
 Un caso de uso común es contar el número de líneas de un fichero, lo cual se puede hacer eficientemente de la siguiente manera:
 
@@ -187,7 +187,7 @@ Este ejemplo demuestra cómo se puede usar `useLines` para realizar operaciones 
 
 Al trabajar con ficheros de texto, es crucial entender el papel que juegan ciertos caracteres especiales. Estos caracteres pueden afectar el formato del texto y son esenciales para el procesamiento correcto de los datos.
 
-#### 4.1 EOF (End of File / Fin de Archivo)
+#### 4.1. EOF (End of File / Fin de Archivo)
 
 - **Nombre en inglés**: End of File (EOF)
 - **Nombre en español**: Fin de Archivo
@@ -202,7 +202,7 @@ Al trabajar con ficheros de texto, es crucial entender el papel que juegan ciert
     // Al llegar al EOF, la lectura se detiene.
     ```
 
-#### 4.2 Salto de Línea (\n / LF - Line Feed)
+#### 4.2. Salto de Línea (\n / LF - Line Feed)
 
 - **Nombre en inglés**: Line Feed (LF)
 - **Nombre en español**: Salto de Línea
@@ -213,7 +213,7 @@ Al trabajar con ficheros de texto, es crucial entender el papel que juegan ciert
     println(texto) // Imprime el texto en dos líneas separadas.
     ```
 
-#### 4.3 Retorno de Carro (\r / CR - Carriage Return)
+#### 4.3. Retorno de Carro (\r / CR - Carriage Return)
 
 - **Nombre en inglés**: Carriage Return (CR)
 - **Nombre en español**: Retorno de Carro
@@ -224,7 +224,7 @@ Al trabajar con ficheros de texto, es crucial entender el papel que juegan ciert
     println(textoWindows) // Funciona como salto de línea en Windows.
     ```
 
-#### 4.4 Espacio en Blanco (' ' / Space)
+#### 4.4. Espacio en Blanco (' ' / Space)
 
 - **Nombre en inglés**: Space
 - **Nombre en español**: Espacio
@@ -235,7 +235,7 @@ Al trabajar con ficheros de texto, es crucial entender el papel que juegan ciert
     println(textoConEspacios) // Muestra el texto con espacios entre palabras.
     ```
 
-#### 4.5 Tabulador (\t / Tab)
+#### 4.5. Tabulador (\t / Tab)
 
 - **Nombre en inglés**: Horizontal Tab (HT)
 - **Nombre en español**: Tabulador
@@ -247,7 +247,7 @@ Al trabajar con ficheros de texto, es crucial entender el papel que juegan ciert
     // Imprime el texto con tabulaciones, alineando las columnas.
     ```
 
-#### 4.6 Consideraciones Adicionales
+#### 4.6. Consideraciones Adicionales
 
 El manejo adecuado de estos caracteres especiales es fundamental para la correcta lectura, escritura y presentación de los datos de un fichero de texto. Algunas funciones de Kotlin, como `print()` y `println()`, interpretan estos caracteres automáticamente, mientras que en otras situaciones, puede ser necesario gestionarlos de manera explícita para lograr el formato deseado.
 
@@ -256,7 +256,7 @@ El manejo adecuado de estos caracteres especiales es fundamental para la correct
 
 Manejar ficheros de texto en Kotlin, aunque es una tarea simplificada gracias a las funcionalidades del lenguaje, requiere atención a ciertos detalles para asegurar que el proceso sea eficiente, seguro y acorde a las necesidades de la aplicación.
 
-#### 5.1 Verificar la Existencia del Fichero
+#### 5.1. Verificar la Existencia del Fichero
 
 Antes de intentar leer o escribir en un fichero, es una buena práctica verificar si el fichero existe para evitar errores en tiempo de ejecución.
 
@@ -268,15 +268,15 @@ if (!miFichero.exists()) {
 }
 ```
 
-#### 5.2 Manejo Eficiente de Ficheros Grandes
+#### 5.2. Manejo Eficiente de Ficheros Grandes
 
 Para ficheros grandes, es recomendable utilizar métodos que lean o escriban de manera secuencial y no carguen todo el contenido en memoria a la vez. Kotlin ofrece varias funciones, como `useLines`, para manejar eficientemente grandes volúmenes de datos.
 
-#### 5.3 Tratamiento de Caracteres Especiales
+#### 5.3. Tratamiento de Caracteres Especiales
 
 Ser consciente de cómo los caracteres especiales (\n, \r, \t, etc.) afectan el contenido y formato de tu fichero. Asegúrate de manejarlos adecuadamente según el contexto de tu aplicación.
 
-#### 5.4 Seguridad y Excepciones
+#### 5.4. Seguridad y Excepciones
 
 Al trabajar con entrada/salida de ficheros, siempre existe el riesgo de enfrentarse a excepciones. Kotlin facilita el manejo de estas a través de bloques `try-catch`.
 
@@ -289,7 +289,7 @@ try {
 }
 ```
 
-#### 5.5 Ejemplo Integrado: Aplicación de Registro de Eventos
+#### 5.5. Ejemplo Integrado: Aplicación de Registro de Eventos
 
 A continuación, se presenta un ejemplo que combina la lectura, escritura y manejo de caracteres especiales en una aplicación simple de registro de eventos. Este ejemplo también ilustra cómo verificar la existencia de un fichero y manejar posibles excepciones.
 

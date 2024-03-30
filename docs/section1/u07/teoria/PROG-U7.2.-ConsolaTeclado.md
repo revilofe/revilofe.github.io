@@ -423,7 +423,7 @@ A  |     B |     C | Long_Header
 #### 2.2. Kotlin Command-Line Arguments
 En Kotlin, los argumentos de la línea de comandos se pasan a través de la función `main()`. En este apartado veremos cómo leer y procesar los argumentos de la línea de comandos en Kotlin.
 
-##### 2.2.1 Línea de comandos en `Main`
+##### 2.2.1. Línea de comandos en `Main`
 
 Al invocar un programa desde la línea de comandos, puedes pasarle un número variable de argumentos. Por ej: `> tar -vzf file.tar.gz`
 

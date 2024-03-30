@@ -26,7 +26,7 @@ La manera más sencilla de lograr este objetivo es almacenar la información apr
 
 En esta unidad se explican distintas clases de **Kotlin** que nos permiten crear, leer, escribir y eliminar desde distintas fuentes, tanto entrada/salida estándar como ficheros y directorios. También se introduce la serialización de objetos como mecanismo de gran utilidad para almacenar objetos en ficheros para luego recuperarlos en tiempo de ejecución.
 
-## 1. Gestión de archivos
+### 1. Gestión de archivos
 
 Entre las funciones de un sistema operativo está la de ofrecer mecanismos genéricos para gestionar sistemas de archivos.
 Normalmente, dentro de un sistema operativo moderno (o ya no tanto moderno), se espera disponer de algún tipo de interfaz o explorador para poder gestionar archivos, ya sea gráficamente o usando una línea de comandos de texto. Si bien la forma en que los datos se guardan realmente en los dispositivos físicos de almacenamiento de datos puede ser muy diferente según cada tipo (magnético, óptico, etc.), la manera de gestionar el sistema de archivos suele ser muy similar en la inmensa mayoría de los casos: una estructura jerárquica con **carpetas** y **ficheros**.
@@ -35,7 +35,7 @@ Normalmente, dentro de un sistema operativo moderno (o ya no tanto moderno), se 
 
 Ahora bien, en realidad, la capacidad de operar con el sistema de archivos no es exclusiva de la interfaz ofrecida por el sistema operativo. Muchos lenguajes de programación proporcionan bibliotecas que permiten acceder directamente a los mecanismos internos que ofrece el sistema, por lo que es posible crear código fuente desde el que, con las instrucciones adecuadas, se pueden realizar operaciones típicas de un explorador de archivos. De hecho, las interfaces como un explorador de archivos son un programa como cualquier otro, el cual, usando precisamente estas librerías, permite que el usuario gestione archivos fácilmente. Pero es habitual encontrar otras aplicaciones con su propia interfaz para gestionar archivos, aunque solo sea para poder seleccionar qué hay que cargar o guardar en un momento dado: editores de texto, compresores, reproductores de música, etc.
 
-### 1.1. Flujos
+#### 1.1. Flujos
 
 En Kotlin, heredado de Java, se define la abstracción de stream (flujo) para tratar la comunicación de información entre el programa y el exterior.
 
@@ -50,7 +50,7 @@ Las características principales:
   - El uso de flujos proporciona modos de acceso: secuencial, aleatorio.
   - El uso de flujos proporciona intercambio de información en diferentes formatos: caracteres de texto, binario, objetos.
 
-### 1.2. Entrada/Salida estándar   
+#### 1.2. Entrada/Salida estándar   
 
 Como en los sistemas Unix, existen 3 interfaces básicas para leer/escribir información:
 
@@ -67,7 +67,7 @@ En Java se accede a la E/S estándar a través de campos estáticos de la clase 
 * `System.out` implementa la salida estándar    
 * `System.err` implementa la salida de error    
 
-### 1.3. APIs para el manejo de flujos de datos
+#### 1.3. APIs para el manejo de flujos de datos
 
 Kotlin no es ninguna excepción, y ofrece este tipo de biblioteca en forma del conjunto de clases dentro del [`Package kotlin.io`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/) (IO API for working with files and streams). En java, lo podemos encontrar en *`package java.io`*.   
 

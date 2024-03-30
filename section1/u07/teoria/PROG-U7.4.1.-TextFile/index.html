@@ -6,19 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="JDBC y Kotlin">
+        <meta name="description" content="Text File">
       
       
         <meta name="author" content="Eduardo Fdez">
       
       
-        <link rel="canonical" href="https://revilofe.github.io/section1/u09/teoria/PROG-U9.2.-JDBC-1/">
+        <link rel="canonical" href="https://revilofe.github.io/section1/u07/teoria/PROG-U7.4.1.-TextFile/">
       
       
-        <link rel="prev" href="../PROG-U9.1.-AccesoBBDD/">
+        <link rel="prev" href="../PROG-U7.4.-LecturaEscritura/">
       
       
-        <link rel="next" href="../PROG-U9.3.-JDBC-2/">
+        <link rel="next" href="../PROG-U7.5.-GUI/">
       
       
       <link rel="icon" href="../../../../assets/favicon-96x96.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>UD 9 - 9.2 JDBC y kotlin - R Z O</title>
+        <title>UD 7 - 7.4.1 Text File - R Z O</title>
       
     
     
@@ -99,7 +99,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-acceder-a-una-base-de-datos-con-kotlin-usando-jdbc-los-fundamentos" class="md-skip">
+        <a href="#741-text-file" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UD 9 - 9.2 JDBC y kotlin
+              UD 7 - 7.4.1 Text File
             
           </span>
         </div>
@@ -2155,6 +2155,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2166,6 +2168,583 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U7: Kotlin: Entrada/Salida y GUI
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            U7: Kotlin: Entrada/Salida y GUI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.1.-Sistema archivos:E/S
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.2.-Entrada/Salida estandar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PROG-U7.2.1.-ConsolaTecladoExpansion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.2.1.-Lectura desde teclado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PROG-U7.3.-File/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.3.-Gestión Archivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.4.-Lectura/Escritura Archivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    7.4.1.-Archivo de texto
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    7.4.1.-Archivo de texto
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#741-text-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4.1 Text File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4.1 Text File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduccion-a-ficheros-de-texto-en-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción a Ficheros de Texto en Kotlin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción a Ficheros de Texto en Kotlin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-por-que-ficheros-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. ¿Por Qué Ficheros de Texto?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-ventajas-de-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Ventajas de Kotlin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-operaciones-basicas-con-ficheros" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Operaciones Básicas con Ficheros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-ejemplo-introductorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Ejemplo Introductorio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-escribir-en-un-fichero-de-texto-en-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Escribir en un Fichero de Texto en Kotlin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Escribir en un Fichero de Texto en Kotlin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-abrir-o-crear-un-fichero-para-escritura" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Abrir o Crear un Fichero para Escritura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-escribir-texto-en-el-fichero" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Escribir Texto en el Fichero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-cerrar-el-fichero" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Cerrar el Fichero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-ejemplo-practico-registro-de-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Ejemplo Práctico: Registro de Eventos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-leer-de-un-fichero-de-texto-en-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Leer de un Fichero de Texto en Kotlin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Leer de un Fichero de Texto en Kotlin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-abrir-el-fichero-para-lectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Abrir el Fichero para Lectura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-leer-el-contenido-completo-del-fichero" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Leer el Contenido Completo del Fichero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-leer-el-fichero-linea-por-linea" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Leer el Fichero Línea por Línea
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-uso-de-uselines-para-una-gestion-de-recursos-eficiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Uso de useLines para una Gestión de Recursos Eficiente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-ejemplo-practico-contar-lineas-de-un-fichero" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 Ejemplo Práctico: Contar Líneas de un Fichero
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-caracteres-especiales-en-ficheros-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Caracteres Especiales en Ficheros de Texto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Caracteres Especiales en Ficheros de Texto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-eof-end-of-file-fin-de-archivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 EOF (End of File / Fin de Archivo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-salto-de-linea-n-lf-line-feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Salto de Línea (\n / LF - Line Feed)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-retorno-de-carro-r-cr-carriage-return" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Retorno de Carro (\r / CR - Carriage Return)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-espacio-en-blanco-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Espacio en Blanco (' ' / Space)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-tabulador-t-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Tabulador (\t / Tab)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-consideraciones-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 Consideraciones Adicionales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-recomendaciones-finales-y-consideraciones-al-trabajar-con-ficheros-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Recomendaciones Finales y Consideraciones al Trabajar con Ficheros de Texto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Recomendaciones Finales y Consideraciones al Trabajar con Ficheros de Texto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-verificar-la-existencia-del-fichero" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Verificar la Existencia del Fichero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-manejo-eficiente-de-ficheros-grandes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Manejo Eficiente de Ficheros Grandes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-tratamiento-de-caracteres-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Tratamiento de Caracteres Especiales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-seguridad-y-excepciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Seguridad y Excepciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-ejemplo-integrado-aplicacion-de-registro-de-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Ejemplo Integrado: Aplicación de Registro de Eventos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fuente
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PROG-U7.5.-GUI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.5.-GUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
         
       
         
@@ -2195,238 +2774,12 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_9" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../u07/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    U7: Kotlin: Entrada/Salida y GUI
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_8">
-            <span class="md-nav__icon md-icon"></span>
-            U7: Kotlin: Entrada/Salida y GUI
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7.1.-Sistema archivos:E/S
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7.2.-Entrada/Salida estandar
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../u07/teoria/PROG-U7.2.1.-ConsolaTecladoExpansion/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7.2.1.-Lectura desde teclado
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7.3.-Gestión Archivos
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7.4.-Lectura/Escritura Archivos
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../u07/teoria/PROG-U7.4.1.-TextFile/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7.4.1.-Archivo de texto
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7.5.-GUI
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../u09/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2443,7 +2796,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_9">
             <span class="md-nav__icon md-icon"></span>
             U9: Acceso a base de datos relacionales
@@ -2459,7 +2812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PROG-U9.1.-AccesoBBDD/" class="md-nav__link">
+      <a href="../../../u09/teoria/PROG-U9.1.-AccesoBBDD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2477,30 +2830,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    9.2.-JDBC: Básico
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../u09/teoria/PROG-U9.2.-JDBC-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2509,163 +2842,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-aprenda-como-se-accede-a-las-bases-de-datos-a-bajo-nivel-usando-jdbc" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Aprenda cómo se accede a las bases de datos a bajo nivel usando JDBC
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Aprenda cómo se accede a las bases de datos a bajo nivel usando JDBC">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-que-es-jdbc" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.1. ¿Qué es JDBC?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-como-usar-jdbc-con-kotlin" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.2. ¿Cómo usar JDBC con Kotlin?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.2. ¿Cómo usar JDBC con Kotlin?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#121-prepara-una-tabla" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.2.1. Prepara una tabla
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#122-agregue-el-controlador-jdbc-a-su-proyecto" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.2.2. Agregue el controlador JDBC a su proyecto
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#123-establecer-una-conexion-de-base-de-datos-a-traves-de-una-url-de-jdbc" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.2.3 Establecer una conexión de base de datos a través de una URL de JDBC
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#124-escribir-y-ejecutar-consultas-sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.2.4. Escribir y ejecutar consultas SQL
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.2.4. Escribir y ejecutar consultas SQL">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#crear-una-clase-para-el-modelo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Crear una clase para el modelo
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#escribir-y-ejecutar-consultas-sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      Escribir y ejecutar consultas SQL
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-que-es-una-agrupacion-de-conexiones-connection-pooling" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. ¿Qué es una agrupación de conexiones (connection pooling)?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-por-que-necesitamos-abstraccion-adicional-sobre-jdbc" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. ¿Por qué necesitamos abstracción adicional sobre JDBC?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-conclusiones" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Conclusiones
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-bibliografia" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Bibliografía
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2678,7 +2854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PROG-U9.3.-JDBC-2/" class="md-nav__link">
+      <a href="../../../u09/teoria/PROG-U9.3.-JDBC-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2699,7 +2875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PROG-U9.4.-DAO/" class="md-nav__link">
+      <a href="../../../u09/teoria/PROG-U9.4.-DAO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2720,7 +2896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PROG-U9.5.-OtrosAspectos/" class="md-nav__link">
+      <a href="../../../u09/teoria/PROG-U9.5.-OtrosAspectos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4147,8 +4323,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -4157,84 +4331,296 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-aprenda-como-se-accede-a-las-bases-de-datos-a-bajo-nivel-usando-jdbc" class="md-nav__link">
+  <a href="#741-text-file" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Aprenda cómo se accede a las bases de datos a bajo nivel usando JDBC
+      7.4.1 Text File
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Aprenda cómo se accede a las bases de datos a bajo nivel usando JDBC">
+    <nav class="md-nav" aria-label="7.4.1 Text File">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-que-es-jdbc" class="md-nav__link">
+  <a href="#1-introduccion-a-ficheros-de-texto-en-kotlin" class="md-nav__link">
     <span class="md-ellipsis">
-      1.1. ¿Qué es JDBC?
+      1. Introducción a Ficheros de Texto en Kotlin
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-como-usar-jdbc-con-kotlin" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.2. ¿Cómo usar JDBC con Kotlin?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.2. ¿Cómo usar JDBC con Kotlin?">
+    <nav class="md-nav" aria-label="1. Introducción a Ficheros de Texto en Kotlin">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#121-prepara-una-tabla" class="md-nav__link">
+  <a href="#11-por-que-ficheros-de-texto" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2.1. Prepara una tabla
+      1.1. ¿Por Qué Ficheros de Texto?
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#122-agregue-el-controlador-jdbc-a-su-proyecto" class="md-nav__link">
+  <a href="#12-ventajas-de-kotlin" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2.2. Agregue el controlador JDBC a su proyecto
+      1.2. Ventajas de Kotlin
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#123-establecer-una-conexion-de-base-de-datos-a-traves-de-una-url-de-jdbc" class="md-nav__link">
+  <a href="#13-operaciones-basicas-con-ficheros" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2.3 Establecer una conexión de base de datos a través de una URL de JDBC
+      1.3. Operaciones Básicas con Ficheros
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#124-escribir-y-ejecutar-consultas-sql" class="md-nav__link">
+  <a href="#14-ejemplo-introductorio" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2.4. Escribir y ejecutar consultas SQL
+      1.4. Ejemplo Introductorio
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2.4. Escribir y ejecutar consultas SQL">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-escribir-en-un-fichero-de-texto-en-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Escribir en un Fichero de Texto en Kotlin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Escribir en un Fichero de Texto en Kotlin">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#crear-una-clase-para-el-modelo" class="md-nav__link">
+  <a href="#21-abrir-o-crear-un-fichero-para-escritura" class="md-nav__link">
     <span class="md-ellipsis">
-      Crear una clase para el modelo
+      2.1 Abrir o Crear un Fichero para Escritura
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#escribir-y-ejecutar-consultas-sql" class="md-nav__link">
+  <a href="#22-escribir-texto-en-el-fichero" class="md-nav__link">
     <span class="md-ellipsis">
-      Escribir y ejecutar consultas SQL
+      2.2 Escribir Texto en el Fichero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-cerrar-el-fichero" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Cerrar el Fichero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-ejemplo-practico-registro-de-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Ejemplo Práctico: Registro de Eventos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-leer-de-un-fichero-de-texto-en-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Leer de un Fichero de Texto en Kotlin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Leer de un Fichero de Texto en Kotlin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-abrir-el-fichero-para-lectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Abrir el Fichero para Lectura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-leer-el-contenido-completo-del-fichero" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Leer el Contenido Completo del Fichero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-leer-el-fichero-linea-por-linea" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Leer el Fichero Línea por Línea
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-uso-de-uselines-para-una-gestion-de-recursos-eficiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Uso de useLines para una Gestión de Recursos Eficiente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-ejemplo-practico-contar-lineas-de-un-fichero" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 Ejemplo Práctico: Contar Líneas de un Fichero
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-caracteres-especiales-en-ficheros-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Caracteres Especiales en Ficheros de Texto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Caracteres Especiales en Ficheros de Texto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-eof-end-of-file-fin-de-archivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 EOF (End of File / Fin de Archivo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-salto-de-linea-n-lf-line-feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Salto de Línea (\n / LF - Line Feed)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-retorno-de-carro-r-cr-carriage-return" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Retorno de Carro (\r / CR - Carriage Return)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-espacio-en-blanco-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Espacio en Blanco (' ' / Space)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-tabulador-t-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Tabulador (\t / Tab)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-consideraciones-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 Consideraciones Adicionales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-recomendaciones-finales-y-consideraciones-al-trabajar-con-ficheros-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Recomendaciones Finales y Consideraciones al Trabajar con Ficheros de Texto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Recomendaciones Finales y Consideraciones al Trabajar con Ficheros de Texto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-verificar-la-existencia-del-fichero" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Verificar la Existencia del Fichero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-manejo-eficiente-de-ficheros-grandes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Manejo Eficiente de Ficheros Grandes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-tratamiento-de-caracteres-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Tratamiento de Caracteres Especiales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-seguridad-y-excepciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Seguridad y Excepciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-ejemplo-integrado-aplicacion-de-registro-de-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Ejemplo Integrado: Aplicación de Registro de Eventos
     </span>
   </a>
   
@@ -4249,43 +4635,11 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#2-que-es-una-agrupacion-de-conexiones-connection-pooling" class="md-nav__link">
+  <a href="#fuente" class="md-nav__link">
     <span class="md-ellipsis">
-      2. ¿Qué es una agrupación de conexiones (connection pooling)?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-por-que-necesitamos-abstraccion-adicional-sobre-jdbc" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. ¿Por qué necesitamos abstracción adicional sobre JDBC?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-conclusiones" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Conclusiones
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-bibliografia" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Bibliografía
+      Fuente
     </span>
   </a>
   
@@ -4322,16 +4676,7 @@
       
     
     
-      <a href="../../../../tags/#jdbc" class="md-tag md-tag-icon">JDBC</a>
-    
-  
-    
-    
-      
-      
-    
-    
-      <a href="../../../../tags/#dao" class="md-tag md-tag-icon">DAO</a>
+      <a href="../../../../tags/#file" class="md-tag md-tag-icon">File</a>
     
   
 </nav>
@@ -4341,264 +4686,237 @@
   
 
 
-<h1 id="como-acceder-a-una-base-de-datos-con-kotlin-usando-jdbc-los-fundamentos">Cómo acceder a una base de datos con Kotlin usando JDBC: los fundamentos<a class="headerlink" href="#como-acceder-a-una-base-de-datos-con-kotlin-usando-jdbc-los-fundamentos" title="Permanent link">&para;</a></h1>
-<h2 id="1-aprenda-como-se-accede-a-las-bases-de-datos-a-bajo-nivel-usando-jdbc">1. Aprenda cómo se accede a las bases de datos a bajo nivel usando JDBC<a class="headerlink" href="#1-aprenda-como-se-accede-a-las-bases-de-datos-a-bajo-nivel-usando-jdbc" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="../assets/KotlinJDBC.png.png" /></p>
-<p>Acceder a las bases de datos es una tarea común en el desarrollo de aplicaciones. Todas las aplicaciones del lado del servidor acceden a las bases de datos de una forma u otra. En lo que respecta a Kotlin, hereda un rico conjunto de bibliotecas del mundo Java, gracias a la interoperabilidad. Estas bibliotecas brindan características deslumbrantes como ORM, SQL con seguridad de tipos, etc.</p>
-<p>Sin embargo, si estás haciendo esto por primera vez, es posible que todas las bibliotecas sofisticadas no tengan mucho sentido ahora mismo. Para ponerlo en marcha, haremos una introducción a JDBC.</p>
-<p>En este punto, trabajaremos sobre:</p>
-<ol>
-<li>¿Qué es JDBC? ¿Y cómo usarlo con Kotlin?</li>
-<li>¿Qué es una URL de JDBC?</li>
-<li>Cómo establecer una conexión con una base de datos y ejecutar consultas SQL.</li>
-<li>¿Qué es la agrupación de conexiones y cómo implementarla con <strong>HikariCP</strong>?</li>
-</ol>
-<h3 id="11-que-es-jdbc">1.1. <strong>¿Qué es JDBC?</strong><a class="headerlink" href="#11-que-es-jdbc" title="Permanent link">&para;</a></h3>
-<p>JDBC significa <strong>Conectividad de base de datos Java</strong>. Es una biblioteca de bajo nivel que proporciona funcionalidad para interactuar con una base de datos. Para usar JDBC no tienes que depender de ninguna biblioteca de terceros. Viene incluido con todos los JDK que existen.</p>
-<h3 id="12-como-usar-jdbc-con-kotlin">1.2. ¿Cómo usar JDBC con Kotlin?<a class="headerlink" href="#12-como-usar-jdbc-con-kotlin" title="Permanent link">&para;</a></h3>
-<p>Los pasos para trabajar con JDBC son los siguientes:</p>
+  <h1>7.4.1.-Archivo de texto</h1>
+
+<h2 id="741-text-file">7.4.1 Text File<a class="headerlink" href="#741-text-file" title="Permanent link">&para;</a></h2>
+<p>En esta sección se proporciona una guía detallada sobre cómo trabajar con ficheros de texto en Kotlin, incluyendo cómo escribir y leer ficheros, manejar caracteres especiales y consideraciones importantes al trabajar con ficheros de texto. Se incluyen ejemplos prácticos y recomendaciones para facilitar el manejo eficiente y seguro de ficheros en Kotlin.</p>
+<h3 id="1-introduccion-a-ficheros-de-texto-en-kotlin">1. Introducción a Ficheros de Texto en Kotlin<a class="headerlink" href="#1-introduccion-a-ficheros-de-texto-en-kotlin" title="Permanent link">&para;</a></h3>
+<p>El trabajo con ficheros de texto es una capacidad esencial en la programación que permite a las aplicaciones leer y escribir datos persistentes. Kotlin, gracias a su interoperabilidad con Java y sus propias abstracciones de alto nivel, facilita considerablemente estas tareas, proporcionando un conjunto de herramientas eficaces y sencillas de usar que mejoran tanto la productividad del desarrollador como la seguridad del código.</p>
+<h4 id="11-por-que-ficheros-de-texto">1.1. ¿Por Qué Ficheros de Texto?<a class="headerlink" href="#11-por-que-ficheros-de-texto" title="Permanent link">&para;</a></h4>
+<p>Los ficheros de texto se utilizan ampliamente para almacenar y transferir datos debido a su simplicidad, interoperabilidad entre diferentes sistemas y facilidad de edición y visualización. Desde la configuración de aplicaciones hasta el almacenamiento de grandes volúmenes de datos, los ficheros de texto ofrecen una forma flexible y accesible de manejar información.</p>
+<h4 id="12-ventajas-de-kotlin">1.2. Ventajas de Kotlin<a class="headerlink" href="#12-ventajas-de-kotlin" title="Permanent link">&para;</a></h4>
+<p>Kotlin se destaca en el manejo de ficheros de texto por varias razones:</p>
 <ul>
-<li><strong>Paso 1:</strong> Prepara una tabla en tu base de datos</li>
-<li><strong>Paso 2:</strong> Encuentre el controlador JDBC de su base de datos y agréguelo a su proyecto</li>
-<li><strong>Paso 3:</strong> Establecer una conexión mediante una URL de JDBC</li>
-<li><strong>Paso 4:</strong> Escribir y ejecutar consultas SQL</li>
+<li><strong>Sintaxis Concisa</strong>: Kotlin reduce la verbosidad típica de Java, permitiendo realizar operaciones complejas con ficheros en menos líneas de código y de manera más legible.</li>
+<li><strong>Seguridad de Tipos</strong>: Kotlin maneja la nulidad a nivel del sistema de tipos, lo que reduce el riesgo de errores comunes como <code>NullPointerException</code>.</li>
+<li><strong>Interoperabilidad con Java</strong>: Kotlin puede utilizar todas las bibliotecas de Java para manejar ficheros, incluyendo <code>java.io.File</code>, proporcionando una gran cantidad de funcionalidades mientras se añaden mejoras específicas de Kotlin.</li>
 </ul>
-<h4 id="121-prepara-una-tabla">1.2.1. Prepara una tabla<a class="headerlink" href="#121-prepara-una-tabla" title="Permanent link">&para;</a></h4>
-<p>Vamos a crear una tabla llamada <code>users</code> y llenarla con algunos datos. En el ejemplo usaremos PostgreSQL, pero puedes utilizar la base de datos que sea más de tu agrado.</p>
-<p>crear una tabla</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">-- SERIAL is similar to INTEGER AUTOINCREMENT</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w">  </span><span class="n">users</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">view</span><span class="w"> </span><span class="n">rawjdbc</span><span class="p">.</span><span class="k">sql</span><span class="w"> </span><span class="n">hosted</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="err">❤</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">GitHub</span>
-</code></pre></div>
-<p>llenarlo con datos</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p">(</span><span class="s1">&#39;Kohli&#39;</span><span class="p">),</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="p">(</span><span class="s1">&#39;Rohit&#39;</span><span class="p">),</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="p">(</span><span class="s1">&#39;Bumrah&#39;</span><span class="p">),</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="p">(</span><span class="s1">&#39;Dhawan&#39;</span><span class="p">);</span>
-</code></pre></div>
-<p>Ahora el resultado de una consulta <code>SELECT * FROM users</code> se parece a esto.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>SELECT * FROM users;
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a> id |  name  
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>----+--------
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  1 | Kohli
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  2 | Rohit
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  3 | Bumrah
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  4 | Dhawan
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>(4 rows)
-</code></pre></div>
-<h4 id="122-agregue-el-controlador-jdbc-a-su-proyecto">1.2.2. Agregue el controlador JDBC a su proyecto<a class="headerlink" href="#122-agregue-el-controlador-jdbc-a-su-proyecto" title="Permanent link">&para;</a></h4>
-<p>Para acceder a estos datos desde su código Kotlin, debe incluir el controlador JDBC de su base de datos como una dependencia de Gradle. Usaremos el DBMS PostgreSQL. Si no está usando PostgreSQL, deberás encontrar el controlador JDBC de la base de datos que estás utilizando. Una simple búsqueda en Google sería suficiente.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;org.postgresql:postgresql:42.3.1&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
-</code></pre></div>
-<p>Ahora, veremos cómo recuperar los datos de la base de datos.</p>
-<h4 id="123-establecer-una-conexion-de-base-de-datos-a-traves-de-una-url-de-jdbc">1.2.3 Establecer una conexión de base de datos a través de una URL de JDBC<a class="headerlink" href="#123-establecer-una-conexion-de-base-de-datos-a-traves-de-una-url-de-jdbc" title="Permanent link">&para;</a></h4>
-<p>Para crear una conexión a la base de datos, necesitaremos una URL de JDBC como la siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">jdbcUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:postgresql://localhost:5432/example&quot;</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">}</span>
-</code></pre></div>
-<p>Como se puede ver, la URL de JDBC consta de tres componentes principales. A continuación vemos una versión desglosada de una URL de JDBC</p>
-<ol>
-<li>El <code>host name</code> = <code>localhost</code></li>
-<li>El <code>port number</code> = <code>5432</code></li>
-<li>El <code>database name</code> = <code>example</code></li>
-</ol>
-<p><img alt="" src="../assets/FormatoURLJDBC.png.png" /></p>
-<p>Para crear una conexión, usa el método <code>DriverManager.getConnection</code>, pasando la URl y el login y password para conectar a la base de datos.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.sql.DriverManager</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1">// the model class</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">name</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">jdbcUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:postgresql://localhost:5432/example&quot;</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="c1">// get the connection</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">        </span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">jdbcUrl</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="p">}</span>
-</code></pre></div>
-<p>Como comentábamos:</p>
-<ol>
-<li>el primer argumento del método <code>DriverManager.getConnection</code> es la <code>URL JDBC</code>.</li>
-<li>el segundo argumento es el <code>username</code> de la base de datos.</li>
-<li>el último argumento es el <code>password</code>de ese usuario en particular.</li>
-</ol>
-<p>El método <code>DriverManager.getConnection</code> devolverá un objeto <code>Connection</code>. Podremos verificar si la conexión es válida o no usando el método <code>isValid()</code> del objeto <code>Connection</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.sql.DriverManager</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1">// the model class</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">name</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">jdbcUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:postgresql://localhost:5432/example&quot;</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="c1">// get the connection</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">        </span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">jdbcUrl</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="c1">// prints true if the connection is valid</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">connection</span><span class="p">.</span><span class="na">isValid</span><span class="p">(</span><span class="m">0</span><span class="p">))</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="p">}</span>
-</code></pre></div>
-<h4 id="124-escribir-y-ejecutar-consultas-sql">1.2.4. Escribir y ejecutar consultas SQL<a class="headerlink" href="#124-escribir-y-ejecutar-consultas-sql" title="Permanent link">&para;</a></h4>
-<p>Antes de ejecutar las consultas, tendremos que creear las clases que almacenarán los resultados.</p>
-<h5 id="crear-una-clase-para-el-modelo">Crear una clase para el modelo<a class="headerlink" href="#crear-una-clase-para-el-modelo" title="Permanent link">&para;</a></h5>
-<p>Primero, cree una clase modelo para representar los datos que estamos a punto de recibir de la base de datos.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// create a model class</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">name</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span>
-</code></pre></div>
-<h5 id="escribir-y-ejecutar-consultas-sql">Escribir y ejecutar consultas SQL<a class="headerlink" href="#escribir-y-ejecutar-consultas-sql" title="Permanent link">&para;</a></h5>
-<p>Ahora, puedes escribir y ejecutar consultas SQL usando la conexión. Pero como JDBC es una biblioteca de bajo nivel, todo debe hacerse a mano.</p>
-<p>Para ejecutar una consulta <code>SELECT</code> usando la conexión necesitas:</p>
-<ol>
-<li>Preparar una sentencia SQL: <code>Statement</code></li>
-<li>Ejecutar la <code>Statement</code>, que devolverá un objeto <code>ResultSet</code></li>
-<li>Iterar a través de <code>ResultSet</code>y recuperar valores con métodos como <code>getInt</code>o<code>getString</code></li>
-</ol>
-<p>Considera el siguiente ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.sql.DriverManager</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1">// the model class</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">name</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">jdbcUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:postgresql://localhost:5432/example&quot;</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="c1">// get the connection</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">        </span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">jdbcUrl</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span><span class="p">)</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="c1">// prints true if the connection is valid</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">connection</span><span class="p">.</span><span class="na">isValid</span><span class="p">(</span><span class="m">0</span><span class="p">))</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">    </span><span class="c1">// the query is only prepared not executed</span>
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">connection</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="s">&quot;SELECT * FROM users&quot;</span><span class="p">)</span>
-<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>
-<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">    </span><span class="c1">// the query is executed and results are fetched</span>
-<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">()</span>
-<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>
-<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="w">    </span><span class="c1">// an empty list for holding the results</span>
-<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="p">()</span>
-<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>
-<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="na">next</span><span class="p">()){</span>
-<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>
-<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="w">        </span><span class="c1">// getting the value of the id column</span>
-<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">)</span>
-<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>
-<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="w">        </span><span class="c1">// getting the value of the name column</span>
-<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">)</span>
-<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>
-<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="w">        </span><span class="cm">/*</span>
-<a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="cm">        constructing a User object and</span>
-<a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a><span class="cm">        putting data into the list</span>
-<a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a><span class="cm">         */</span>
-<a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a><span class="w">        </span><span class="n">users</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">User</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">))</span>
-<a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a><span class="w">    </span><span class="cm">/*</span>
-<a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a><span class="cm">    [User(id=1, name=Kohli), User(id=2, name=Rohit),</span>
-<a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a><span class="cm">    User(id=3, name=Bumrah), User(id=4, name=Dhawan)]</span>
-<a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a><span class="cm">     */</span>
-<a id="__codelineno-8-44" name="__codelineno-8-44" href="#__codelineno-8-44"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">users</span><span class="p">)</span>
-<a id="__codelineno-8-45" name="__codelineno-8-45" href="#__codelineno-8-45"></a><span class="p">}</span>
-</code></pre></div>
-<h2 id="2-que-es-una-agrupacion-de-conexiones-connection-pooling">2. ¿Qué es una agrupación de conexiones (connection pooling)?<a class="headerlink" href="#2-que-es-una-agrupacion-de-conexiones-connection-pooling" title="Permanent link">&para;</a></h2>
-<p>No se puede realizar una introducción a las bases de datos sin hablar de la agrupación de conexiones o pool de conexiones.</p>
-<p>Imagínate que estás escribiendo una aplicación del lado del servidor. Cada vez que un usuario necesita acceder a la base de datos, abrirá una nueva conexión de base de datos para obtener datos. Esto es ineficiente porque abrir una conexión a la base de datos es una tarea costosa y no debe hacerse una y otra vez. Este es exactamente el problema que puede resolver el pool de conexiones.</p>
-<p>Al utilizar un pool de conexiones, puedes abrir múltiples conexiones que estarán activas durante la vida útil de la aplicación. Estas conexiones se encapsularán en un archivo <code>DataSource</code>. Siempre que necesites acceder a la base de datos, en lugar de crear una nueva conexión, le pedirás al <code>DataSource</code> una conexión. El <code>DataSource</code> te cederá una conexión desde el pool de conexiones. Cuando termines la operación sobre la base de datos, la conexión retornará al pool de conexiones y volverá a estar disponible para su uso.</p>
-<p>La mayoría de las bibliotecas y marcos de trabajo que te facilitan la conexión a las base de datos ya traen consigo una API adecuada para solucionar este problema. <strong>HikariCP</strong> es una de las mejores bibliotecas que satisface este problema. Por defecto, utiliza 10 conexiones como límite máximo, y es fácilmente modificable. Si quieres obtener más información sobre la configuración del tamaño del pool, consulta esta guía: <a href="https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing"><strong>Sobre la modificación del tamaño del pool</strong></a> .</p>
-<p>Veamos un ejemplo rápido de agrupación de conexiones usando HikariCP.</p>
-<p>Comienza agregando la dependencia a tu archivo <code>build.gradle.kts</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;com.zaxxer:HikariCP:5.0.0&quot;</span><span class="p">)</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">}</span>
-</code></pre></div>
-<p>Para inicializar un <code>DataSource</code> realiza los siguientes pasos:</p>
-<ol>
-<li>Crea un objeto dataSource con el método <code>HikariDataSource()</code></li>
-<li>Establece en el objeto dataSource la URL de JDBC</li>
-<li>Establece en el objeto dataSource el nombre de usuario</li>
-<li>Establece en el objeto dataSource la contraseña</li>
-<li>Obtén la conexión de la <code>DataSource</code></li>
-<li>Usa la conexión de la manera que hemos visto.</li>
-</ol>
-<p>Aquí hay un ejemplo de los pasos anteriores:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="c1">// create a dataSource</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">dataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HikariDataSource</span><span class="p">()</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="c1">// set the jdbcUrl</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="n">dataSource</span><span class="p">.</span><span class="na">jdbcUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:postgresql://localhost:5432/example&quot;</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="c1">// set the username</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="n">dataSource</span><span class="p">.</span><span class="na">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span><span class="c1">// set the password</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">    </span><span class="n">dataSource</span><span class="p">.</span><span class="na">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">dataSource</span><span class="p">.</span><span class="na">maximumPoolSize</span><span class="p">)</span>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">    </span><span class="c1">// get a connection</span>
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dataSource</span><span class="p">.</span><span class="na">connection</span>
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>
-<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">    </span><span class="c1">// the query is only prepared not executed</span>
-<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">connection</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="s">&quot;SELECT * FROM users&quot;</span><span class="p">)</span>
-<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>
-<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">    </span><span class="c1">// the query is executed and results are fetched</span>
-<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">()</span>
-<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>
-<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="w">    </span><span class="c1">// an empty list for holding the results</span>
-<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="p">()</span>
-<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>
-<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="na">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>
-<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="w">        </span><span class="c1">// getting the value of the id column</span>
-<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">)</span>
-<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>
-<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a><span class="w">        </span><span class="c1">// getting the value of the name column</span>
-<a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">)</span>
-<a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a>
-<a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a><span class="w">        </span><span class="cm">/*</span>
-<a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a><span class="cm">        constructing a User object and</span>
-<a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a><span class="cm">        putting data into the list</span>
-<a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a><span class="cm">         */</span>
-<a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a><span class="w">        </span><span class="n">users</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">User</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">))</span>
-<a id="__codelineno-10-42" name="__codelineno-10-42" href="#__codelineno-10-42"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-10-43" name="__codelineno-10-43" href="#__codelineno-10-43"></a>
-<a id="__codelineno-10-44" name="__codelineno-10-44" href="#__codelineno-10-44"></a><span class="w">    </span><span class="cm">/*</span>
-<a id="__codelineno-10-45" name="__codelineno-10-45" href="#__codelineno-10-45"></a><span class="cm">    [User(id=1, name=Kohli), User(id=2, name=Rohit),</span>
-<a id="__codelineno-10-46" name="__codelineno-10-46" href="#__codelineno-10-46"></a><span class="cm">    User(id=3, name=Bumrah), User(id=4, name=Dhawan)]</span>
-<a id="__codelineno-10-47" name="__codelineno-10-47" href="#__codelineno-10-47"></a><span class="cm">     */</span>
-<a id="__codelineno-10-48" name="__codelineno-10-48" href="#__codelineno-10-48"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">users</span><span class="p">)</span>
-<a id="__codelineno-10-49" name="__codelineno-10-49" href="#__codelineno-10-49"></a>
-<a id="__codelineno-10-50" name="__codelineno-10-50" href="#__codelineno-10-50"></a><span class="p">}</span>
-</code></pre></div>
-<p><strong>Nota:</strong> Hay varias formas de inicializar un <code>DataSource</code> con <code>HikariCP</code>. Lee la <a href="https://gist.github.com/nilTheDev/c681d54b8c6e85369e3249a40ecf03e5"><strong>sección de inicialización</strong></a> del archivo README del <a href="https://github.com/brettwooldridge/HikariCP"><strong>Repositorio HikariCP Github</strong></a> .</p>
-<h2 id="3-por-que-necesitamos-abstraccion-adicional-sobre-jdbc">3. ¿Por qué necesitamos abstracción adicional sobre JDBC?<a class="headerlink" href="#3-por-que-necesitamos-abstraccion-adicional-sobre-jdbc" title="Permanent link">&para;</a></h2>
-<p>Como has podido comprobar si has intentado adaptarlo a alguna consultar de una tabla que tu tengas, acceder a las bases de datos haciendo uso de <code>JDBC</code> puro puede convertirse rápidamente en una tarea engorrosa. El proceso es propenso a errores y se requiere mucho trabajo pesado y disciplina por parte del desarrollador. Aquí es donde las bibliotecas y los marcos de trabajo son útiles.</p>
-<p>Cuando se trata de bibliotecas y marcos de trabajo para acceder a bases de datos, hay una variedad de opciones para elegir. Puede optar por usar un <strong>ORM</strong> completo como <strong>Hibernate</strong>, o puede usar algo de bajo nivel como <strong>JDBI</strong>. <strong>JDBI</strong> proporciona una capa de abstracción sobre JDBC. También hay algunas bibliotecas Kotlin-first. La más popular es la biblioteca <strong>Exposed</strong> de Jetbrains, que veremos más adelante. <strong>Exposed</strong> viene en dos sabores. Un <em>lenguaje específico del dominio</em>, (en inglés domain-specific language, DSL) con seguridad de tipos que hace de envoltorio a SQL y una capa liguera en la que se facilita la implementación de <em>objetos de acceso a datos</em> (en inglés data access objects, DAO).</p>
-<p>Para obtener una descripción general completa de todas las bibliotecas de bases de datos en el mundo de Java, puedes leer el artículo siguiente: <a href="https://www.marcobehler.com/guides/java-databases"><strong>Java y bases de datos: una descripción general de las bibliotecas y las API por Marco Behler</strong></a></p>
-<h2 id="4-conclusiones">4. Conclusiones<a class="headerlink" href="#4-conclusiones" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Puedes acceder a una base de datos a través de la biblioteca de bajo nivel JDBC, que viene incluido con todos los JDK que existen. Entonces, no hay necesidad de otra dependencia.</li>
-<li>Para conectarse con una base de datos en particular, necesita el controlador JDBC para esa base de datos en particular.</li>
-<li>Todas las bibliotecas para bases de datos en el mundo JVM están construidas sobre JDBC.</li>
-<li>Mientras trabaja en un proyecto real, debes utilizar algún mecanismo que te facilite el uso de un pool de conexiones. La agrupación de conexiones le permite mantener viva una pequeña cantidad de conexiones de bases de datos, en lugar de crear una conexión nueva cada vez, (re)utiliza una conexión del pool.</li>
-<li>HikariCP es una buena opción para usar un pool de conexiones. Por defecto, utiliza 10 conexiones como límite máximo. Y es fácilmente modificable.</li>
-</ol>
-<p>Independientemente de la biblioteca que uses, ahora tienes una comprensión básica de lo que sucede debajo del capó mientras consulta su base de datos desde la capa de aplicación.</p>
-<h2 id="5-bibliografia">5. Bibliografía<a class="headerlink" href="#5-bibliografia" title="Permanent link">&para;</a></h2>
+<h4 id="13-operaciones-basicas-con-ficheros">1.3. Operaciones Básicas con Ficheros<a class="headerlink" href="#13-operaciones-basicas-con-ficheros" title="Permanent link">&para;</a></h4>
+<p>En Kotlin, las operaciones más comunes con ficheros de texto incluyen:</p>
 <ul>
-<li><a href="https://levelup.gitconnected.com/how-to-access-database-with-kotlin-6b86f6680cd7">El articulo original</a></li>
-<li><a href="https://github.com/nilTheDev/jdbc-article">El repositorio original</a></li>
+<li><strong>Lectura de ficheros</strong>: Puede realizarse de manera simple con funciones como <code>readText()</code> para leer el contenido completo del fichero en una cadena de texto, o <code>readLines()</code> para obtener una lista de todas las líneas del fichero.</li>
+<li><strong>Escritura en ficheros</strong>: Con <code>writeText()</code>, se puede escribir una cadena de texto en un fichero, sobrescribiendo su contenido anterior, o <code>appendText()</code> para añadir texto al final del fichero existente.</li>
+<li><strong>Manejo de ficheros y directorios</strong>: Kotlin permite crear, borrar, y verificar la existencia de ficheros y directorios con métodos como <code>createNewFile()</code>, <code>delete()</code>, y <code>exists()</code>.</li>
+</ul>
+<h4 id="14-ejemplo-introductorio">1.4. Ejemplo Introductorio<a class="headerlink" href="#14-ejemplo-introductorio" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="c1">// Crear o abrir un fichero</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">miFichero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;miArchivo.txt&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="c1">// Escribir en el fichero</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">miFichero</span><span class="p">.</span><span class="na">writeText</span><span class="p">(</span><span class="s">&quot;Hola, Kotlin.\n&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="c1">// Leer del fichero</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">contenido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">miFichero</span><span class="p">.</span><span class="na">readText</span><span class="p">()</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">contenido</span><span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">}</span>
+</code></pre></div>
+<p>Este ejemplo demuestra cómo crear un fichero, escribir un simple mensaje y luego leer el mensaje del fichero, todo ello con pocas líneas de código gracias a las funciones de Kotlin diseñadas para trabajar de forma eficiente con ficheros de texto.</p>
+<h3 id="2-escribir-en-un-fichero-de-texto-en-kotlin">2. Escribir en un Fichero de Texto en Kotlin<a class="headerlink" href="#2-escribir-en-un-fichero-de-texto-en-kotlin" title="Permanent link">&para;</a></h3>
+<p>Escribir en ficheros de texto es una operación fundamental en la mayoría de las aplicaciones, desde el registro de eventos (logging) hasta la generación de reportes. Kotlin ofrece métodos directos y seguros para escribir en ficheros, facilitando esta tarea con su sintaxis concisa y expresiva.</p>
+<h4 id="21-abrir-o-crear-un-fichero-para-escritura">2.1 Abrir o Crear un Fichero para Escritura<a class="headerlink" href="#21-abrir-o-crear-un-fichero-para-escritura" title="Permanent link">&para;</a></h4>
+<p>Antes de escribir en un fichero, primero debemos tener una referencia a este fichero. En Kotlin, esto se hace instanciando un objeto de la clase <code>File</code> del paquete <code>java.io</code>, que es totalmente accesible gracias a la interoperabilidad de Kotlin con Java.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">miFichero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;miArchivo.txt&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Si el fichero especificado no existe, se creará uno nuevo al realizar la escritura. Si ya existe, su contenido puede ser sobrescrito o complementado, dependiendo del método que se utilice.</p>
+<h4 id="22-escribir-texto-en-el-fichero">2.2 Escribir Texto en el Fichero<a class="headerlink" href="#22-escribir-texto-en-el-fichero" title="Permanent link">&para;</a></h4>
+<p>Kotlin simplifica la escritura en ficheros con el método <code>writeText()</code>, que toma una cadena de caracteres como argumento y la escribe en el fichero, sobrescribiendo cualquier contenido previo.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">miFichero</span><span class="p">.</span><span class="na">writeText</span><span class="p">(</span><span class="s">&quot;Este es un nuevo contenido.\n&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Para añadir texto a un fichero existente sin sobrescribir su contenido, se puede usar <code>appendText()</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">miFichero</span><span class="p">.</span><span class="na">appendText</span><span class="p">(</span><span class="s">&quot;Este texto se añade al final.\n&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="23-cerrar-el-fichero">2.3 Cerrar el Fichero<a class="headerlink" href="#23-cerrar-el-fichero" title="Permanent link">&para;</a></h4>
+<p>Una de las ventajas de trabajar con ficheros en Kotlin es que no es necesario cerrarlos explícitamente cuando se usan <code>writeText()</code> o <code>appendText()</code>. Estas funciones se encargan del manejo de recursos automáticamente, asegurando que el fichero se cierre adecuadamente después de la operación.</p>
+<h4 id="24-ejemplo-practico-registro-de-eventos">2.4 Ejemplo Práctico: Registro de Eventos<a class="headerlink" href="#24-ejemplo-practico-registro-de-eventos" title="Permanent link">&para;</a></h4>
+<p>A continuación, se muestra un ejemplo práctico de cómo podrías usar la escritura en ficheros para implementar un simple sistema de registro de eventos (logging).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.time.LocalDateTime</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.time.format.DateTimeFormatter</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">registrarEvento</span><span class="p">(</span><span class="n">evento</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">formatter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DateTimeFormatter</span><span class="p">.</span><span class="na">ofPattern</span><span class="p">(</span><span class="s">&quot;yyyy-MM-dd HH:mm:ss&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">timestamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">format</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;registroDeEventos.txt&quot;</span><span class="p">).</span><span class="na">appendText</span><span class="p">(</span><span class="s">&quot;[</span><span class="si">$</span><span class="n">timestamp</span><span class="s">] </span><span class="si">$</span><span class="n">evento</span><span class="s">\n&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="p">}</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="n">registrarEvento</span><span class="p">(</span><span class="s">&quot;Inicio de la aplicación&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="c1">// Simular otras operaciones...</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="n">registrarEvento</span><span class="p">(</span><span class="s">&quot;Operación realizada correctamente&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="p">}</span>
+</code></pre></div>
+<p>Este código añade entradas de registro a un fichero, incluyendo una marca de tiempo para cada evento, demostrando cómo <code>appendText()</code> puede ser especialmente útil para mantener un historial de eventos sin sobrescribir los registros anteriores.</p>
+<h3 id="3-leer-de-un-fichero-de-texto-en-kotlin">3. Leer de un Fichero de Texto en Kotlin<a class="headerlink" href="#3-leer-de-un-fichero-de-texto-en-kotlin" title="Permanent link">&para;</a></h3>
+<p>La lectura de ficheros de texto en Kotlin es una operación que se beneficia de la simplicidad y potencia del lenguaje, permitiendo procesar contenidos de archivos de manera eficiente y segura.</p>
+<h4 id="31-abrir-el-fichero-para-lectura">3.1 Abrir el Fichero para Lectura<a class="headerlink" href="#31-abrir-el-fichero-para-lectura" title="Permanent link">&para;</a></h4>
+<p>Al igual que para la escritura, la lectura de un fichero comienza por obtener una referencia al archivo deseado mediante la clase <code>File</code>. No es necesario abrir explícitamente el fichero en un modo de lectura; el acceso se determina por la función que se utilice para leer el contenido.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">miFichero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;miArchivo.txt&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="32-leer-el-contenido-completo-del-fichero">3.2 Leer el Contenido Completo del Fichero<a class="headerlink" href="#32-leer-el-contenido-completo-del-fichero" title="Permanent link">&para;</a></h4>
+<p>Kotlin proporciona el método <code>readText()</code> para leer el contenido completo de un fichero de texto en una sola operación, devolviendo todo el texto como una cadena (<code>String</code>).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">contenido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">miFichero</span><span class="p">.</span><span class="na">readText</span><span class="p">()</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">println</span><span class="p">(</span><span class="n">contenido</span><span class="p">)</span>
+</code></pre></div>
+<p>Este método es conveniente cuando se necesita trabajar con el texto completo del fichero, pero puede ser ineficiente con archivos muy grandes debido a las limitaciones de memoria.</p>
+<h4 id="33-leer-el-fichero-linea-por-linea">3.3 Leer el Fichero Línea por Línea<a class="headerlink" href="#33-leer-el-fichero-linea-por-linea" title="Permanent link">&para;</a></h4>
+<p>Para ficheros grandes o cuando se necesita procesar el archivo línea por línea, Kotlin ofrece <code>readLines()</code>, que devuelve una lista de todas las líneas del fichero como cadenas (<code>List&lt;String&gt;</code>).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">lineas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">miFichero</span><span class="p">.</span><span class="na">readLines</span><span class="p">()</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">linea</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">lineas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">linea</span><span class="p">)</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">}</span>
+</code></pre></div>
+<p>Leer el fichero de esta manera puede ser más eficiente para procesar archivos grandes, ya que permite iterar sobre las líneas del fichero sin cargar todo el contenido en memoria a la vez.</p>
+<h4 id="34-uso-de-uselines-para-una-gestion-de-recursos-eficiente">3.4 Uso de <code>useLines</code> para una Gestión de Recursos Eficiente<a class="headerlink" href="#34-uso-de-uselines-para-una-gestion-de-recursos-eficiente" title="Permanent link">&para;</a></h4>
+<p>Kotlin también proporciona una manera eficiente y segura de manejar la lectura de archivos grandes a través del método <code>useLines</code>, que abre un flujo de todas las líneas del archivo, permitiendo procesar cada una de ellas de manera secuencial. Este método asegura que el fichero se cierre correctamente una vez que se completa el procesamiento, incluso si ocurre una excepción.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">miFichero</span><span class="p">.</span><span class="na">useLines</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">lineas</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="n">lineas</span><span class="p">.</span><span class="na">forEach</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">linea</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="n">linea</span><span class="p">)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="35-ejemplo-practico-contar-lineas-de-un-fichero">3.5 Ejemplo Práctico: Contar Líneas de un Fichero<a class="headerlink" href="#35-ejemplo-practico-contar-lineas-de-un-fichero" title="Permanent link">&para;</a></h4>
+<p>Un caso de uso común es contar el número de líneas de un fichero, lo cual se puede hacer eficientemente de la siguiente manera:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">numeroDeLineas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">miFichero</span><span class="p">.</span><span class="na">useLines</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">count</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;El fichero tiene </span><span class="si">$</span><span class="n">numeroDeLineas</span><span class="s"> líneas.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Este ejemplo demuestra cómo se puede usar <code>useLines</code> para realizar operaciones más complejas sobre el contenido del fichero de manera eficiente y segura.</p>
+<h3 id="4-caracteres-especiales-en-ficheros-de-texto">4. Caracteres Especiales en Ficheros de Texto<a class="headerlink" href="#4-caracteres-especiales-en-ficheros-de-texto" title="Permanent link">&para;</a></h3>
+<p>Al trabajar con ficheros de texto, es crucial entender el papel que juegan ciertos caracteres especiales. Estos caracteres pueden afectar el formato del texto y son esenciales para el procesamiento correcto de los datos.</p>
+<h4 id="41-eof-end-of-file-fin-de-archivo">4.1 EOF (End of File / Fin de Archivo)<a class="headerlink" href="#41-eof-end-of-file-fin-de-archivo" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Nombre en inglés</strong>: End of File (EOF)</li>
+<li><strong>Nombre en español</strong>: Fin de Archivo</li>
+<li><strong>Descripción</strong>: EOF no es un carácter visible dentro del texto del fichero pero es una condición importante que indica el final del contenido de un fichero.</li>
+<li><strong>Ejemplo</strong>:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;miArchivo.txt&quot;</span><span class="p">).</span><span class="na">bufferedReader</span><span class="p">()</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kd">var</span><span class="w"> </span><span class="nv">linea</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">reader</span><span class="p">.</span><span class="na">readLine</span><span class="p">().</span><span class="na">also</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">linea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">it</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">linea</span><span class="p">)</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">}</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="c1">// Al llegar al EOF, la lectura se detiene.</span>
+</code></pre></div></li>
+</ul>
+<h4 id="42-salto-de-linea-n-lf-line-feed">4.2 Salto de Línea (\n / LF - Line Feed)<a class="headerlink" href="#42-salto-de-linea-n-lf-line-feed" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Nombre en inglés</strong>: Line Feed (LF)</li>
+<li><strong>Nombre en español</strong>: Salto de Línea</li>
+<li><strong>Descripción</strong>: Representa el final de una línea de texto y el inicio de otra. Esencial para estructurar el contenido en líneas separadas.</li>
+<li><strong>Ejemplo</strong>:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Primera línea\nSegunda línea&quot;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">println</span><span class="p">(</span><span class="n">texto</span><span class="p">)</span><span class="w"> </span><span class="c1">// Imprime el texto en dos líneas separadas.</span>
+</code></pre></div></li>
+</ul>
+<h4 id="43-retorno-de-carro-r-cr-carriage-return">4.3 Retorno de Carro (\r / CR - Carriage Return)<a class="headerlink" href="#43-retorno-de-carro-r-cr-carriage-return" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Nombre en inglés</strong>: Carriage Return (CR)</li>
+<li><strong>Nombre en español</strong>: Retorno de Carro</li>
+<li><strong>Descripción</strong>: En los sistemas basados en Windows, se utiliza junto con \n para crear un salto de línea (\r\n). Solo o en otros contextos, mueve el cursor al inicio de la línea actual.</li>
+<li><strong>Ejemplo</strong>:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">textoWindows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Primera línea\r\nSegunda línea&quot;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">println</span><span class="p">(</span><span class="n">textoWindows</span><span class="p">)</span><span class="w"> </span><span class="c1">// Funciona como salto de línea en Windows.</span>
+</code></pre></div></li>
+</ul>
+<h4 id="44-espacio-en-blanco-space">4.4 Espacio en Blanco (' ' / Space)<a class="headerlink" href="#44-espacio-en-blanco-space" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Nombre en inglés</strong>: Space</li>
+<li><strong>Nombre en español</strong>: Espacio</li>
+<li><strong>Descripción</strong>: Un carácter que crea una separación horizontal entre caracteres o palabras.</li>
+<li><strong>Ejemplo</strong>:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">textoConEspacios</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Kotlin es increíble&quot;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">println</span><span class="p">(</span><span class="n">textoConEspacios</span><span class="p">)</span><span class="w"> </span><span class="c1">// Muestra el texto con espacios entre palabras.</span>
+</code></pre></div></li>
+</ul>
+<h4 id="45-tabulador-t-tab">4.5 Tabulador (\t / Tab)<a class="headerlink" href="#45-tabulador-t-tab" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Nombre en inglés</strong>: Horizontal Tab (HT)</li>
+<li><strong>Nombre en español</strong>: Tabulador</li>
+<li><strong>Descripción</strong>: Proporciona una separación horizontal más significativa que un espacio, comúnmente utilizado para alinear texto o datos en columnas.</li>
+<li><strong>Ejemplo</strong>:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">textoConTabs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Nombre:\tJohn Doe\nEdad:\t30&quot;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">println</span><span class="p">(</span><span class="n">textoConTabs</span><span class="p">)</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="c1">// Imprime el texto con tabulaciones, alineando las columnas.</span>
+</code></pre></div></li>
+</ul>
+<h4 id="46-consideraciones-adicionales">4.6 Consideraciones Adicionales<a class="headerlink" href="#46-consideraciones-adicionales" title="Permanent link">&para;</a></h4>
+<p>El manejo adecuado de estos caracteres especiales es fundamental para la correcta lectura, escritura y presentación de los datos de un fichero de texto. Algunas funciones de Kotlin, como <code>print()</code> y <code>println()</code>, interpretan estos caracteres automáticamente, mientras que en otras situaciones, puede ser necesario gestionarlos de manera explícita para lograr el formato deseado.</p>
+<h3 id="5-recomendaciones-finales-y-consideraciones-al-trabajar-con-ficheros-de-texto">5. Recomendaciones Finales y Consideraciones al Trabajar con Ficheros de Texto<a class="headerlink" href="#5-recomendaciones-finales-y-consideraciones-al-trabajar-con-ficheros-de-texto" title="Permanent link">&para;</a></h3>
+<p>Manejar ficheros de texto en Kotlin, aunque es una tarea simplificada gracias a las funcionalidades del lenguaje, requiere atención a ciertos detalles para asegurar que el proceso sea eficiente, seguro y acorde a las necesidades de la aplicación.</p>
+<h4 id="51-verificar-la-existencia-del-fichero">5.1 Verificar la Existencia del Fichero<a class="headerlink" href="#51-verificar-la-existencia-del-fichero" title="Permanent link">&para;</a></h4>
+<p>Antes de intentar leer o escribir en un fichero, es una buena práctica verificar si el fichero existe para evitar errores en tiempo de ejecución.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">miFichero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;miArchivo.txt&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">miFichero</span><span class="p">.</span><span class="na">exists</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;El fichero no existe.&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="k">return</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="52-manejo-eficiente-de-ficheros-grandes">5.2 Manejo Eficiente de Ficheros Grandes<a class="headerlink" href="#52-manejo-eficiente-de-ficheros-grandes" title="Permanent link">&para;</a></h4>
+<p>Para ficheros grandes, es recomendable utilizar métodos que lean o escriban de manera secuencial y no carguen todo el contenido en memoria a la vez. Kotlin ofrece varias funciones, como <code>useLines</code>, para manejar eficientemente grandes volúmenes de datos.</p>
+<h4 id="53-tratamiento-de-caracteres-especiales">5.3 Tratamiento de Caracteres Especiales<a class="headerlink" href="#53-tratamiento-de-caracteres-especiales" title="Permanent link">&para;</a></h4>
+<p>Ser consciente de cómo los caracteres especiales (\n, \r, \t, etc.) afectan el contenido y formato de tu fichero. Asegúrate de manejarlos adecuadamente según el contexto de tu aplicación.</p>
+<h4 id="54-seguridad-y-excepciones">5.4 Seguridad y Excepciones<a class="headerlink" href="#54-seguridad-y-excepciones" title="Permanent link">&para;</a></h4>
+<p>Al trabajar con entrada/salida de ficheros, siempre existe el riesgo de enfrentarse a excepciones. Kotlin facilita el manejo de estas a través de bloques <code>try-catch</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">contenido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;miArchivo.txt&quot;</span><span class="p">).</span><span class="na">readText</span><span class="p">()</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">contenido</span><span class="p">)</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">:</span><span class="w"> </span><span class="n">Exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Ocurrió un error al leer el fichero: </span><span class="si">${</span><span class="n">e</span><span class="p">.</span><span class="na">message</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="55-ejemplo-integrado-aplicacion-de-registro-de-eventos">5.5 Ejemplo Integrado: Aplicación de Registro de Eventos<a class="headerlink" href="#55-ejemplo-integrado-aplicacion-de-registro-de-eventos" title="Permanent link">&para;</a></h4>
+<p>A continuación, se presenta un ejemplo que combina la lectura, escritura y manejo de caracteres especiales en una aplicación simple de registro de eventos. Este ejemplo también ilustra cómo verificar la existencia de un fichero y manejar posibles excepciones.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.time.LocalDateTime</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.time.format.DateTimeFormatter</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">registrarEvento</span><span class="p">(</span><span class="n">fichero</span><span class="p">:</span><span class="w"> </span><span class="n">File</span><span class="p">,</span><span class="w"> </span><span class="n">evento</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">fichero</span><span class="p">.</span><span class="na">exists</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Creando fichero de registro...&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">        </span><span class="n">fichero</span><span class="p">.</span><span class="na">createNewFile</span><span class="p">()</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">timestamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">format</span><span class="p">(</span><span class="n">DateTimeFormatter</span><span class="p">.</span><span class="na">ofPattern</span><span class="p">(</span><span class="s">&quot;yyyy-MM-dd HH:mm:ss&quot;</span><span class="p">))</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="w">        </span><span class="n">fichero</span><span class="p">.</span><span class="na">appendText</span><span class="p">(</span><span class="s">&quot;[</span><span class="si">$</span><span class="n">timestamp</span><span class="s">] </span><span class="si">$</span><span class="n">evento</span><span class="s">\n&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">:</span><span class="w"> </span><span class="n">Exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Error al registrar evento: </span><span class="si">${</span><span class="n">e</span><span class="p">.</span><span class="na">message</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="p">}</span>
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">miFicheroDeRegistro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;registroDeEventos.txt&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a>
+<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a><span class="w">    </span><span class="n">registrarEvento</span><span class="p">(</span><span class="n">miFicheroDeRegistro</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Inicio de la aplicación&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a><span class="w">    </span><span class="c1">// Simula más operaciones...</span>
+<a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a><span class="w">    </span><span class="n">registrarEvento</span><span class="p">(</span><span class="n">miFicheroDeRegistro</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Operación realizada correctamente&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a>
+<a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Eventos registrados:\n</span><span class="si">${</span><span class="n">miFicheroDeRegistro</span><span class="p">.</span><span class="na">readText</span><span class="p">()</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a><span class="p">}</span>
+</code></pre></div>
+<p>Este código crea un fichero de registro si no existe, registra eventos con marcas de tiempo y finalmente lee y muestra todos los eventos registrados. Demuestra un manejo efectivo y seguro de ficheros en Kotlin, considerando las prácticas recomendadas y las consideraciones necesarias para trabajar con archivos de texto.</p>
+<h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.baeldung.com/kotlin/write-file">Writing to a File in kotlin</a></li>
+<li><a href="https://www.baeldung.com/kotlin/read-file">Reading from a File in kotlin</a></li>
+<li><a href="https://www.baeldung.com/kotlin/category/kotlin-io">Baeldung Kotlin IO</a></li>
+<li><a href="https://livebook.manning.com/book/the-joy-of-kotlin">Book: The joy of kotlin</a></li>
+<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/">Kotlin IO</a></li>
 </ul>
 
 

@@ -274,6 +274,111 @@ println(str4)
 println(str5)
 ```
 
+#### 1.5. Ejemplo
+
+Para mostrar una salida a consola tabulada que incluya fecha y hora, cantidades con tres decimales y texto, puedes aprovechar las capacidades de formateo de cadenas en Kotlin. Utilizaré el formato de `String` con la función `format` para lograr un alineamiento y formato adecuados para cada tipo de dato.
+
+Aquí tienes un ejemplo en el que definimos una clase `Registro` para almacenar la información relevante y luego mostramos una lista de estos registros con el formato deseado:
+
+```kotlin
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+
+data class Registro(val fechaHora: LocalDateTime, val cantidad: Double, val texto: String)
+
+fun main() {
+// Lista de registros para el ejemplo
+val registros = listOf(
+Registro(LocalDateTime.now(), 1234.567, "Texto de ejemplo 1"),
+Registro(LocalDateTime.now().minusDays(1), 89.1011, "Texto de ejemplo 2"),
+Registro(LocalDateTime.now().minusHours(5), 12.345, "Otro texto de ejemplo")
+)
+
+    // Encabezado
+    println("Fecha y Hora         |   Cantidad | Texto")
+    println("-------------------------------------------------------------")
+
+    // Formato para fecha y hora
+    val formatoFechaHora = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")
+
+    // Imprimir cada registro con formato
+    registros.forEach { registro ->
+        val fechaHora = registro.fechaHora.format(formatoFechaHora)
+        // Asegurando que la cantidad esté justificada a la derecha con 10 caracteres de ancho
+        val cantidad = "%10.3f".format(registro.cantidad)
+        val texto = registro.texto
+        println("%-20s | %10s | %s".format(fechaHora, cantidad, texto))
+    }
+}
+```
+El código anterior está diseñado para trabajar con una lista de registros, cada uno representando datos que incluyen una fecha y hora, una cantidad numérica y un texto. Vamos a desglosar y explicar cada parte relevante del código:
+
+##### 1.5.1. Formato para Fecha y Hora
+
+```kotlin
+val formatoFechaHora = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")
+```
+
+Esta línea crea un `DateTimeFormatter` con un patrón específico. El patrón `"yyyy-MM-dd HH:mm"` indica cómo se debe formatear la fecha y hora:
+
+- `yyyy`: Año completo.
+- `MM`: Mes en número con dos dígitos.
+- `dd`: Día del mes con dos dígitos.
+- `HH`: Hora del día (formato de 24 horas) con dos dígitos.
+- `mm`: Minuto de la hora con dos dígitos.
+
+Este formateador se utilizará para convertir objetos `LocalDateTime` a `String`, representando la fecha y hora en el formato especificado.
+
+##### 1.5.2. Iteración y Formateo de Registros
+
+```kotlin
+registros.forEach { registro ->
+    val fechaHora = registro.fechaHora.format(formatoFechaHora)
+    val cantidad = "%10.3f".format(registro.cantidad)
+    val texto = registro.texto
+    println("%-20s | %10s | %s".format(fechaHora, cantidad, texto))
+}
+```
+
+Esta sección del código itera sobre cada `registro` en la lista `registros` y realiza las siguientes operaciones para cada uno:
+
+1. **Formateo de Fecha y Hora**:
+    ```kotlin
+    val fechaHora = registro.fechaHora.format(formatoFechaHora)
+    ```
+   Aquí, `registro.fechaHora.format(formatoFechaHora)` formatea el `LocalDateTime` de `registro` usando el `DateTimeFormatter` creado previamente. El resultado es una cadena (`String`) que representa la fecha y hora del registro en el formato definido (`"yyyy-MM-dd HH:mm"`).
+
+2. **Formateo de la Cantidad**:
+    ```kotlin
+    val cantidad = "%10.3f".format(registro.cantidad)
+    ```
+   Se formatea la `cantidad` numérica del registro a una cadena con tres decimales (`%.3f`) y se asegura que tenga un ancho total de 10 caracteres, justificando el número a la derecha. Esto significa que si el número no ocupa los 10 caracteres, se añadirán espacios a la izquierda para cumplir con el ancho especificado.
+
+3. **Preparación del Texto**:
+    ```kotlin
+    val texto = registro.texto
+    ```
+   Simplemente asigna el texto del registro a la variable `texto`, sin realizar ninguna transformación o formateo adicional.
+
+4. **Impresión con Formato**:
+    ```kotlin
+    println("%-20s | %10s | %s".format(fechaHora, cantidad, texto))
+    ```
+   Finalmente, se imprime una línea para el registro actual, combinando `fechaHora`, `cantidad` y `texto` con un formato específico:
+    - `%-20s` asegura que `fechaHora` tenga un ancho de 20 caracteres y esté justificada a la izquierda.
+    - `%10s` es para `cantidad`, la cual ya se formateó para tener un ancho de 10 caracteres y justificada a la derecha.
+    - `%s` para `texto`, que se imprimirá tal cual sin un ancho fijo.
+
+Esto resulta en una salida tabulada donde cada columna tiene un ancho fijo y los datos están alineados según lo especificado, facilitando la lectura y la comparación de los registros.
+
+```
+Fecha y Hora         |   Cantidad | Texto
+-------------------------------------------------------------
+2024-03-30 00:30     |   1234.567 | Texto de ejemplo 1
+2024-03-29 00:30     |     89.101 | Texto de ejemplo 2
+2024-03-29 19:30     |     12.345 | Otro texto de ejemplo
+```
+
 ### 2. Otras Bibliotecas
 
 Existen bibliotecas que intentan solucionar alguna necesidad que han encontrado en sus desarrollos. Algunas de ellas para trabajar con la consola:   

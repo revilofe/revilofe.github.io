@@ -2353,6 +2353,39 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#15-ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5. Ejemplo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5. Ejemplo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-formato-para-fecha-y-hora" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.1. Formato para Fecha y Hora
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-iteracion-y-formateo-de-registros" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.2. Iteración y Formateo de Registros
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4203,6 +4236,39 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#15-ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5. Ejemplo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5. Ejemplo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-formato-para-fecha-y-hora" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.1. Formato para Fecha y Hora
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-iteracion-y-formateo-de-registros" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.2. Iteración y Formateo de Registros
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4564,6 +4630,99 @@
 <a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="n">println</span><span class="p">(</span><span class="n">str4</span><span class="p">)</span>
 <a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="n">println</span><span class="p">(</span><span class="n">str5</span><span class="p">)</span>
 </code></pre></div>
+<h4 id="15-ejemplo">1.5. Ejemplo<a class="headerlink" href="#15-ejemplo" title="Permanent link">&para;</a></h4>
+<p>Para mostrar una salida a consola tabulada que incluya fecha y hora, cantidades con tres decimales y texto, puedes aprovechar las capacidades de formateo de cadenas en Kotlin. Utilizaré el formato de <code>String</code> con la función <code>format</code> para lograr un alineamiento y formato adecuados para cada tipo de dato.</p>
+<p>Aquí tienes un ejemplo en el que definimos una clase <code>Registro</code> para almacenar la información relevante y luego mostramos una lista de estos registros con el formato deseado:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.time.LocalDateTime</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.time.format.DateTimeFormatter</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Registro</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">fechaHora</span><span class="p">:</span><span class="w"> </span><span class="n">LocalDateTime</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">cantidad</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">texto</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="c1">// Lista de registros para el ejemplo</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="kd">val</span><span class="w"> </span><span class="nv">registros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="n">Registro</span><span class="p">(</span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">(),</span><span class="w"> </span><span class="m">1234.567</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Texto de ejemplo 1&quot;</span><span class="p">),</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="n">Registro</span><span class="p">(</span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">minusDays</span><span class="p">(</span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="m">89.1011</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Texto de ejemplo 2&quot;</span><span class="p">),</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="n">Registro</span><span class="p">(</span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">minusHours</span><span class="p">(</span><span class="m">5</span><span class="p">),</span><span class="w"> </span><span class="m">12.345</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Otro texto de ejemplo&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="p">)</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">    </span><span class="c1">// Encabezado</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Fecha y Hora         |   Cantidad | Texto&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;-------------------------------------------------------------&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">    </span><span class="c1">// Formato para fecha y hora</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">formatoFechaHora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DateTimeFormatter</span><span class="p">.</span><span class="na">ofPattern</span><span class="p">(</span><span class="s">&quot;yyyy-MM-dd HH:mm&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="w">    </span><span class="c1">// Imprimir cada registro con formato</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="w">    </span><span class="n">registros</span><span class="p">.</span><span class="na">forEach</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">registro</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">fechaHora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registro</span><span class="p">.</span><span class="na">fechaHora</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">formatoFechaHora</span><span class="p">)</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a><span class="w">        </span><span class="c1">// Asegurando que la cantidad esté justificada a la derecha con 10 caracteres de ancho</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">cantidad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;%10.3f&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">registro</span><span class="p">.</span><span class="na">cantidad</span><span class="p">)</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registro</span><span class="p">.</span><span class="na">texto</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;%-20s | %10s | %s&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">fechaHora</span><span class="p">,</span><span class="w"> </span><span class="n">cantidad</span><span class="p">,</span><span class="w"> </span><span class="n">texto</span><span class="p">))</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a><span class="p">}</span>
+</code></pre></div>
+El código anterior está diseñado para trabajar con una lista de registros, cada uno representando datos que incluyen una fecha y hora, una cantidad numérica y un texto. Vamos a desglosar y explicar cada parte relevante del código:</p>
+<h5 id="151-formato-para-fecha-y-hora">1.5.1. Formato para Fecha y Hora<a class="headerlink" href="#151-formato-para-fecha-y-hora" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">formatoFechaHora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DateTimeFormatter</span><span class="p">.</span><span class="na">ofPattern</span><span class="p">(</span><span class="s">&quot;yyyy-MM-dd HH:mm&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Esta línea crea un <code>DateTimeFormatter</code> con un patrón específico. El patrón <code>"yyyy-MM-dd HH:mm"</code> indica cómo se debe formatear la fecha y hora:</p>
+<ul>
+<li><code>yyyy</code>: Año completo.</li>
+<li><code>MM</code>: Mes en número con dos dígitos.</li>
+<li><code>dd</code>: Día del mes con dos dígitos.</li>
+<li><code>HH</code>: Hora del día (formato de 24 horas) con dos dígitos.</li>
+<li><code>mm</code>: Minuto de la hora con dos dígitos.</li>
+</ul>
+<p>Este formateador se utilizará para convertir objetos <code>LocalDateTime</code> a <code>String</code>, representando la fecha y hora en el formato especificado.</p>
+<h5 id="152-iteracion-y-formateo-de-registros">1.5.2. Iteración y Formateo de Registros<a class="headerlink" href="#152-iteracion-y-formateo-de-registros" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">registros</span><span class="p">.</span><span class="na">forEach</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">registro</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">fechaHora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registro</span><span class="p">.</span><span class="na">fechaHora</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">formatoFechaHora</span><span class="p">)</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">cantidad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;%10.3f&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">registro</span><span class="p">.</span><span class="na">cantidad</span><span class="p">)</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registro</span><span class="p">.</span><span class="na">texto</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;%-20s | %10s | %s&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">fechaHora</span><span class="p">,</span><span class="w"> </span><span class="n">cantidad</span><span class="p">,</span><span class="w"> </span><span class="n">texto</span><span class="p">))</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="p">}</span>
+</code></pre></div>
+<p>Esta sección del código itera sobre cada <code>registro</code> en la lista <code>registros</code> y realiza las siguientes operaciones para cada uno:</p>
+<ol>
+<li>
+<p><strong>Formateo de Fecha y Hora</strong>:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">fechaHora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registro</span><span class="p">.</span><span class="na">fechaHora</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">formatoFechaHora</span><span class="p">)</span>
+</code></pre></div>
+   Aquí, <code>registro.fechaHora.format(formatoFechaHora)</code> formatea el <code>LocalDateTime</code> de <code>registro</code> usando el <code>DateTimeFormatter</code> creado previamente. El resultado es una cadena (<code>String</code>) que representa la fecha y hora del registro en el formato definido (<code>"yyyy-MM-dd HH:mm"</code>).</p>
+</li>
+<li>
+<p><strong>Formateo de la Cantidad</strong>:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">cantidad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;%10.3f&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">registro</span><span class="p">.</span><span class="na">cantidad</span><span class="p">)</span>
+</code></pre></div>
+   Se formatea la <code>cantidad</code> numérica del registro a una cadena con tres decimales (<code>%.3f</code>) y se asegura que tenga un ancho total de 10 caracteres, justificando el número a la derecha. Esto significa que si el número no ocupa los 10 caracteres, se añadirán espacios a la izquierda para cumplir con el ancho especificado.</p>
+</li>
+<li>
+<p><strong>Preparación del Texto</strong>:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registro</span><span class="p">.</span><span class="na">texto</span>
+</code></pre></div>
+   Simplemente asigna el texto del registro a la variable <code>texto</code>, sin realizar ninguna transformación o formateo adicional.</p>
+</li>
+<li>
+<p><strong>Impresión con Formato</strong>:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;%-20s | %10s | %s&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">fechaHora</span><span class="p">,</span><span class="w"> </span><span class="n">cantidad</span><span class="p">,</span><span class="w"> </span><span class="n">texto</span><span class="p">))</span>
+</code></pre></div>
+   Finalmente, se imprime una línea para el registro actual, combinando <code>fechaHora</code>, <code>cantidad</code> y <code>texto</code> con un formato específico:</p>
+<ul>
+<li><code>%-20s</code> asegura que <code>fechaHora</code> tenga un ancho de 20 caracteres y esté justificada a la izquierda.</li>
+<li><code>%10s</code> es para <code>cantidad</code>, la cual ya se formateó para tener un ancho de 10 caracteres y justificada a la derecha.</li>
+<li><code>%s</code> para <code>texto</code>, que se imprimirá tal cual sin un ancho fijo.</li>
+</ul>
+</li>
+</ol>
+<p>Esto resulta en una salida tabulada donde cada columna tiene un ancho fijo y los datos están alineados según lo especificado, facilitando la lectura y la comparación de los registros.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Fecha y Hora         |   Cantidad | Texto
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>-------------------------------------------------------------
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>2024-03-30 00:30     |   1234.567 | Texto de ejemplo 1
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>2024-03-29 00:30     |     89.101 | Texto de ejemplo 2
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>2024-03-29 19:30     |     12.345 | Otro texto de ejemplo
+</code></pre></div>
 <h3 id="2-otras-bibliotecas">2. Otras Bibliotecas<a class="headerlink" href="#2-otras-bibliotecas" title="Permanent link">&para;</a></h3>
 <p>Existen bibliotecas que intentan solucionar alguna necesidad que han encontrado en sus desarrollos. Algunas de ellas para trabajar con la consola: <br />
 - <a href="https://github.com/marcelmay/kformat">KFormat</a> <br />
@@ -4573,25 +4732,25 @@
 <h4 id="21-kotlin-console-output-formatting">2.1. Kotlin Console Output Formatting<a class="headerlink" href="#21-kotlin-console-output-formatting" title="Permanent link">&para;</a></h4>
 <p><a href="https://github.com/marcelmay/kformat">KFormat</a> es una pequeña biblioteca de Kotlin para la salida de texto con formato, como por ejemplo la impresión de valores en una tabla estructurada. Los casos de uso típicos incluyen el desarrollo de herramientas CLI. (Command Line Interface)</p>
 <p>Un ejemplo: Dar formato a una tabla, incluido el cambio de tamaño de celda:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">table</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">header</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Long_Header&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="n">row</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b...1&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">2.1f</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;foo&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="n">row</span><span class="p">(</span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b2&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">3f</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;bar&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">    </span><span class="n">hints</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">        </span><span class="n">alignment</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Hints</span><span class="p">.</span><span class="na">Alignment</span><span class="p">.</span><span class="na">LEFT</span><span class="p">)</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">        </span><span class="n">precision</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">        </span><span class="n">postfix</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">        </span><span class="n">borderStyle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Table</span><span class="p">.</span><span class="na">BorderStyle</span><span class="p">.</span><span class="na">SINGLE_LINE</span><span class="w"> </span><span class="c1">// or NONE</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="p">}.</span><span class="na">render</span><span class="p">(</span><span class="n">StringBuilder</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">table</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="n">header</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Long_Header&quot;</span><span class="p">)</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="n">row</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b...1&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">2.1f</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;foo&quot;</span><span class="p">)</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">    </span><span class="n">row</span><span class="p">(</span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b2&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">3f</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;bar&quot;</span><span class="p">)</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w">    </span><span class="n">hints</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">        </span><span class="n">alignment</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Hints</span><span class="p">.</span><span class="na">Alignment</span><span class="p">.</span><span class="na">LEFT</span><span class="p">)</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="w">        </span><span class="n">precision</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="w">        </span><span class="n">postfix</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%&quot;</span><span class="p">)</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="w">        </span><span class="n">borderStyle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Table</span><span class="p">.</span><span class="na">BorderStyle</span><span class="p">.</span><span class="na">SINGLE_LINE</span><span class="w"> </span><span class="c1">// or NONE</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="p">}.</span><span class="na">render</span><span class="p">(</span><span class="n">StringBuilder</span><span class="p">())</span>
 </code></pre></div>
 <p>Genera la siguiente salida:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>A  |     B |     C | Long_Header
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>---|-------|-------|------------
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>10 | b...1 | 2.10% |         foo
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>20 |    b2 | 0.33% |         bar
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>A  |     B |     C | Long_Header
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>---|-------|-------|------------
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>10 | b...1 | 2.10% |         foo
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>20 |    b2 | 0.33% |         bar
 </code></pre></div>
 <p><a href="https://github.com/ajalt/mordant">Mordant</a> es otra biblioteca que proporciona una API para dar formato a la salida de texto en la consola. Permite dar formato a texto en la consola, como colores, negritas, cursivas, subrayados, etc.</p>
 <h4 id="22-kotlin-command-line-arguments">2.2. Kotlin Command-Line Arguments<a class="headerlink" href="#22-kotlin-command-line-arguments" title="Permanent link">&para;</a></h4>
@@ -4599,44 +4758,44 @@
 <h5 id="221-linea-de-comandos-en-main">2.2.1 Línea de comandos en <code>Main</code><a class="headerlink" href="#221-linea-de-comandos-en-main" title="Permanent link">&para;</a></h5>
 <p>Al invocar un programa desde la línea de comandos, puedes pasarle un número variable de argumentos. Por ej: <code>&gt; tar -vzf file.tar.gz</code></p>
 <p>Para capturar los argumentos de la línea de comandos, debes proporcionar un parámetro predefinido a <code>main()</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1">// MainArgs.kt</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="n">imprimir</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1">// MainArgs.kt</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">    </span><span class="n">imprimir</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="p">}</span>
 </code></pre></div>
 <p>El parámetro se llama tradicionalmente <code>args</code> aunque puede llamarlo de cualquier manera, y el tipo de <code>args</code> solo puede ser <code>Array&lt;String&gt;</code> (Array of String).</p>
 <p>También se puede usar el compilador kotlinc para crear un programa que se ejecuta desde línea de comandos.</p>
 <p>Una vez que haya creado y guardado y compilado el código para un programa llamado <code>MainArgs.kt</code>, escriba lo siguiente en el símbolo del sistema:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>&gt;<span class="w"> </span>kotlinc<span class="w"> </span>MainArgsKt
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>&gt;<span class="w"> </span>kotlinc<span class="w"> </span>MainArgsKt
 </code></pre></div>
 <p>Puedes proporcionar los argumentos de la línea de comandos después de la invocación del programa, así:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>&gt;<span class="w"> </span>kotlin<span class="w"> </span>MainArgsKt<span class="w"> </span>aaa<span class="w"> </span><span class="m">42</span><span class="w"> </span><span class="m">3</span>.14159.
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>&gt;<span class="w"> </span>kotlin<span class="w"> </span>MainArgsKt<span class="w"> </span>aaa<span class="w"> </span><span class="m">42</span><span class="w"> </span><span class="m">3</span>.14159.
 </code></pre></div>
 Y por salida estandar, saldrá lo siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>aaa
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>42
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>3.14159
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>aaa
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>42
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>3.14159
 </code></pre></div>
 <p>Si una vez leídos los parśmetros quieres convertir un parámetro <code>String</code> en un tipo específico, Kotlin proporciona funciones de conversión, como<code>toInt()</code> para convertir a <code>Int</code> y <code>toFloat()</code> para convertir a <code>Float</code>...</p>
 <p>El uso de estos métodos supone que los argumentos de la línea de comandos aparecen en un orden particular.</p>
 <p>Por ejemplo, en el siguiente código, el programa espera un <code>String</code>, seguido de algo convertible a <code>Int</code>, seguido de algo convertible a <code>Float</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1">// MainArgConversion.kt`</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="na">size</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span>
-<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">primero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="m">0</span><span class="o">]</span>
-<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">segundo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="p">.</span><span class="na">toInt</span><span class="w"> </span><span class="p">()</span>
-<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">tercero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="m">2</span><span class="o">]</span><span class="p">.</span><span class="na">toFloat</span><span class="w"> </span><span class="p">()</span>
-<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;</span><span class="si">$</span><span class="n">primero</span><span class="s"> </span><span class="si">$</span><span class="n">segundo</span><span class="s"> </span><span class="si">$</span><span class="n">tercero</span><span class="s">&quot;</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c1">// MainArgConversion.kt`</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="na">size</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">primero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="m">0</span><span class="o">]</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">segundo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="p">.</span><span class="na">toInt</span><span class="w"> </span><span class="p">()</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">tercero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="m">2</span><span class="o">]</span><span class="p">.</span><span class="na">toFloat</span><span class="w"> </span><span class="p">()</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;</span><span class="si">$</span><span class="n">primero</span><span class="s"> </span><span class="si">$</span><span class="n">segundo</span><span class="s"> </span><span class="si">$</span><span class="n">tercero</span><span class="s">&quot;</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="p">}</span>
 </code></pre></div>
 <p>La primera línea de <code>main()</code> cierra el programa si no hay suficientes argumentos.</p>
 <p>Si no proporciona algo convertible a <code>Int</code> y <code>Float</code> como segundo y tercer argumento de la línea de comandos, verá errores de tiempo de ejecución.</p>
 <p>Si compilas y ejecutas <code>MainArgConversion.kt</code> con los mismos argumentos de línea de comandos que usamos antes, verás la siguiente salida:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>aaa 42 3.14159
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>aaa 42 3.14159
 </code></pre></div>
 <h5 id="222-bibliotecas-para-manejar-argumentos-de-la-linea-de-comandos">2.2.2. Bibliotecas para manejar argumentos de la línea de comandos<a class="headerlink" href="#222-bibliotecas-para-manejar-argumentos-de-la-linea-de-comandos" title="Permanent link">&para;</a></h5>
 <p><a href="https://ajalt.github.io/clikt/">clikt</a> y <a href="https://github.com/Kotlin/kotlinx-cli">kotlinx-cli</a> son dos bibliotecas que facilitan el manejo de los argumentos que facilita el parseo y procesado de los argumentos que se le pasan al programa. Aunque podemos realizarlo nosotros mismos.</p>

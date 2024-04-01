@@ -41,14 +41,22 @@ En Kotlin, heredado de Java, se define la abstracción de stream (flujo) para tr
 
 ![](assets/PROG-U7.1.-Flujos.png)
 
-Las características principales: 
-  - Entre una fuente y un destino fluye una secuencia de datos. 
+Las características principales:    
+
+  - Entre una fuente y un destino fluye una secuencia de datos.
+
   - Los flujos actúan como interfaz con el dispositivo o clase asociada. Es decir, todo se trata como un flujo de datos.
+
   - Las operaciones que se realizan son independientes del tipo de datos y del dispositivo: `Open, Close, Read, Write`.
+
   - El uso de flujos proporciona mayor flexibilidad (p.e. redirección, combinación)
+
   - El uso de flujos proporciona mayor diversidad de dispositivos (ficheros, entrada/salida estándar: teclado y pantalla, sockets en red, …). Todo se maneja como un flujo de datos.
+
   - El uso de flujos proporciona modos de acceso: secuencial, aleatorio.
+ 
   - El uso de flujos proporciona intercambio de información en diferentes formatos: caracteres de texto, binario, objetos.
+
 
 #### 1.2. Entrada/Salida estándar   
 

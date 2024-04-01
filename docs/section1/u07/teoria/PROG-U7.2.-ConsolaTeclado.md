@@ -14,13 +14,17 @@ tags:
     - Consola
     - Teclado
 ---
-## Lectura y escritura en entrada y salida estándar
+
+## 7.2. Lectura y escritura en entrada y salida estándar
 
 Dentro de la biblioteca estándar de Kotlin, el paquete `kotlin.io` proporciona elementos esenciales para trabajar con los flujos de entrada y salida estándar (Input/Output o I/O). Esta transmisión de información entre la memoria principal y los dispositivos de entrada y salida permite, entre otras cosas, leer y escribir datos.
 
 Vamos a ver cómo se transfieren datos de entrada y salida en consola (el paquete `kotlin.io` también proporciona herramientas para trabajar con archivos, como veremos mas adelante), lo que es útil para mostrar una información en **pantalla** y para obtener información aportada por el usuario, habitualmente a través de un dispositivo de entrada como el **teclado**.
 
-### Output: Escribir en consola
+### 1. Entrada y salida estándar
+A continuación se muestra un esquema de las interfaces básicas para leer/escribir información:
+
+#### 1.1 Output: Escribir en consola
 
 Como ya hemos visto en multitud de ejemplos previos durante el curso, para enviar un mensaje a la salida estándar (la pantalla) usamos habitualmente las funciones `print()` y `println()`, que se diferencian en que la segunda incluye un salto de línea al final. Este salto de línea es reproducible a través del caracter especial `\n`, de la siguiente forma `print("\n")`
 
@@ -60,7 +64,7 @@ println("${numero + numero}")   // 24.6
 println(12.3)                   // 12.3
 ```
 
-### Input: Lectura de datos en consola
+#### 1.2. Input: Lectura de datos en consola
 
 Para la lectura de datos por teclado utilizamos la función `readLine` y `readLn` (otra opción que no vamos a ver ahora es utilizar la clase `Scanner` importada desde la librería estándar de Java con `import java.util.Scanner`):
 
@@ -142,7 +146,7 @@ if (num != null) {
 
 En el ejemplo anterior llamamos a `readLine` con el operador `?` para realizar la conversión con `toIntOrNul` de forma segura. La función `toIntOrNull()` requiere que la variable sea de tipo anulable (`val num: Int?`) porque si la conversión a entero falla, se retorna null, que es asignado a `num`. Igualmente contamos con las funciones `toFloatOrNull()`, `toDoubleOrNull()`, `toLongOrNull()`, `toShortOrNull()` y `toByteOrNull()` que en caso de no poder realizar la conversión de tipos devuelven `null`.
 
-### Mejorando las funciones
+#### 1.3. Mejorando las funciones
 
 [Aquí](https://stackoverflow.com/questions/41283393/reading-console-input-in-kotlin) hay un grupo extendido (inspirado en el [artículo](https://kotlinlang.org/docs/competitive-programming.html#functional-operators-example-long-number-problem)) de funciones de ayuda para leer todos los tipos posibles, listas, arrays, arrays 2D, etc.:
 
@@ -212,7 +216,7 @@ private fun readFloats(n: Int) = generateSequence { readFloat() }.take(n)
 private fun readDoubles(n: Int) = generateSequence { readDouble() }.take(n)
 ```
 
-### Aplicando formato a la salida estándar
+#### 1.4. Aplicando formato a la salida estándar
 
 A continuación veremos como aplicar formato a las cadenas que se imprimen en salida estandar. La explicación esta hecha en Kotlin pero en Java aplica prácticamente lo mismo.
 
@@ -270,12 +274,120 @@ println(str4)
 println(str5)
 ```
 
-## Biblioteca KFormat
+#### 1.5. Ejemplo
+
+Para mostrar una salida a consola tabulada que incluya fecha y hora, cantidades con tres decimales y texto, puedes aprovechar las capacidades de formateo de cadenas en Kotlin. Utilizaré el formato de `String` con la función `format` para lograr un alineamiento y formato adecuados para cada tipo de dato.
+
+Aquí tienes un ejemplo en el que definimos una clase `Registro` para almacenar la información relevante y luego mostramos una lista de estos registros con el formato deseado:
+
+```kotlin
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+
+data class Registro(val fechaHora: LocalDateTime, val cantidad: Double, val texto: String)
+
+fun main() {
+// Lista de registros para el ejemplo
+val registros = listOf(
+Registro(LocalDateTime.now(), 1234.567, "Texto de ejemplo 1"),
+Registro(LocalDateTime.now().minusDays(1), 89.1011, "Texto de ejemplo 2"),
+Registro(LocalDateTime.now().minusHours(5), 12.345, "Otro texto de ejemplo")
+)
+
+    // Encabezado
+    println("Fecha y Hora         |   Cantidad | Texto")
+    println("-------------------------------------------------------------")
+
+    // Formato para fecha y hora
+    val formatoFechaHora = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")
+
+    // Imprimir cada registro con formato
+    registros.forEach { registro ->
+        val fechaHora = registro.fechaHora.format(formatoFechaHora)
+        // Asegurando que la cantidad esté justificada a la derecha con 10 caracteres de ancho
+        val cantidad = "%10.3f".format(registro.cantidad)
+        val texto = registro.texto
+        println("%-20s | %10s | %s".format(fechaHora, cantidad, texto))
+    }
+}
+```
+El código anterior está diseñado para trabajar con una lista de registros, cada uno representando datos que incluyen una fecha y hora, una cantidad numérica y un texto. Vamos a desglosar y explicar cada parte relevante del código:
+
+##### 1.5.1. Formato para Fecha y Hora
+
+```kotlin
+val formatoFechaHora = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")
+```
+
+Esta línea crea un `DateTimeFormatter` con un patrón específico. El patrón `"yyyy-MM-dd HH:mm"` indica cómo se debe formatear la fecha y hora:
+
+- `yyyy`: Año completo.
+- `MM`: Mes en número con dos dígitos.
+- `dd`: Día del mes con dos dígitos.
+- `HH`: Hora del día (formato de 24 horas) con dos dígitos.
+- `mm`: Minuto de la hora con dos dígitos.
+
+Este formateador se utilizará para convertir objetos `LocalDateTime` a `String`, representando la fecha y hora en el formato especificado.
+
+##### 1.5.2. Iteración y Formateo de Registros
+
+```kotlin
+registros.forEach { registro ->
+    val fechaHora = registro.fechaHora.format(formatoFechaHora)
+    val cantidad = "%10.3f".format(registro.cantidad)
+    val texto = registro.texto
+    println("%-20s | %10s | %s".format(fechaHora, cantidad, texto))
+}
+```
+
+Esta sección del código itera sobre cada `registro` en la lista `registros` y realiza las siguientes operaciones para cada uno:
+
+1. **Formateo de Fecha y Hora**:
+    ```kotlin
+    val fechaHora = registro.fechaHora.format(formatoFechaHora)
+    ```
+   Aquí, `registro.fechaHora.format(formatoFechaHora)` formatea el `LocalDateTime` de `registro` usando el `DateTimeFormatter` creado previamente. El resultado es una cadena (`String`) que representa la fecha y hora del registro en el formato definido (`"yyyy-MM-dd HH:mm"`).
+
+2. **Formateo de la Cantidad**:
+    ```kotlin
+    val cantidad = "%10.3f".format(registro.cantidad)
+    ```
+   Se formatea la `cantidad` numérica del registro a una cadena con tres decimales (`%.3f`) y se asegura que tenga un ancho total de 10 caracteres, justificando el número a la derecha. Esto significa que si el número no ocupa los 10 caracteres, se añadirán espacios a la izquierda para cumplir con el ancho especificado.
+
+3. **Preparación del Texto**:
+    ```kotlin
+    val texto = registro.texto
+    ```
+   Simplemente asigna el texto del registro a la variable `texto`, sin realizar ninguna transformación o formateo adicional.
+
+4. **Impresión con Formato**:
+    ```kotlin
+    println("%-20s | %10s | %s".format(fechaHora, cantidad, texto))
+    ```
+   Finalmente, se imprime una línea para el registro actual, combinando `fechaHora`, `cantidad` y `texto` con un formato específico:
+    - `%-20s` asegura que `fechaHora` tenga un ancho de 20 caracteres y esté justificada a la izquierda.
+    - `%10s` es para `cantidad`, la cual ya se formateó para tener un ancho de 10 caracteres y justificada a la derecha.
+    - `%s` para `texto`, que se imprimirá tal cual sin un ancho fijo.
+
+Esto resulta en una salida tabulada donde cada columna tiene un ancho fijo y los datos están alineados según lo especificado, facilitando la lectura y la comparación de los registros.
+
+```
+Fecha y Hora         |   Cantidad | Texto
+-------------------------------------------------------------
+2024-03-30 00:30     |   1234.567 | Texto de ejemplo 1
+2024-03-29 00:30     |     89.101 | Texto de ejemplo 2
+2024-03-29 19:30     |     12.345 | Otro texto de ejemplo
+```
+
+### 2. Otras Bibliotecas
 
 Existen bibliotecas que intentan solucionar alguna necesidad que han encontrado en sus desarrollos. Algunas de ellas para trabajar con la consola:   
 - [KFormat](https://github.com/marcelmay/kformat)   
+- [Mordant](https://github.com/ajalt/mordant)    
 - [clikt](https://ajalt.github.io/clikt/)   
 - [kotlinx-cli](https://github.com/Kotlin/kotlinx-cli)   
+
+#### 2.1. Kotlin Console Output Formatting
 
 [KFormat](https://github.com/marcelmay/kformat) es una pequeña biblioteca de Kotlin para la salida de texto con formato, como por ejemplo la impresión de valores en una tabla estructurada. Los casos de uso típicos incluyen el desarrollo de herramientas CLI. (Command Line Interface)
 
@@ -306,11 +418,12 @@ A  |     B |     C | Long_Header
 20 |    b2 | 0.33% |         bar
 ```
 
-## Kotlin Command-Line Arguments
+[Mordant](https://github.com/ajalt/mordant) es otra biblioteca que proporciona una API para dar formato a la salida de texto en la consola. Permite dar formato a texto en la consola, como colores, negritas, cursivas, subrayados, etc.
 
-[kotlinx-cli](https://github.com/Kotlin/kotlinx-cli) facilita el parseo y procesado de los argumentos que se le pasan al programa. Aunque podemos realizarlo nosotros mismos. 
+#### 2.2. Kotlin Command-Line Arguments
+En Kotlin, los argumentos de la línea de comandos se pasan a través de la función `main()`. En este apartado veremos cómo leer y procesar los argumentos de la línea de comandos en Kotlin.
 
-### Línea de comandos en `Main`
+##### 2.2.1. Línea de comandos en `Main`
 
 Al invocar un programa desde la línea de comandos, puedes pasarle un número variable de argumentos. Por ej: `> tar -vzf file.tar.gz`
 
@@ -378,6 +491,21 @@ Si compilas y ejecutas `MainArgConversion.kt` con los mismos argumentos de líne
 ```
 aaa 42 3.14159
 ```
+#### Actividad 1: Bibliotecas para formateo de salida: Adaptando el código del 1.5. Ejemplo
+**Pregunta:** ¿Cómo harias el ejemplo 1.5 utilizando las bibliotecas  [KFormat](https://github.com/marcelmay/kformat)
+y [Mordant](https://github.com/ajalt/mordant)?
+
+Visita las paginas web de las bibliotecas y investiga como usarlas para realizar la misma tabla que se muestra en el ejemplo 1.5.
+
+
+##### 2.2.2. Bibliotecas para manejar argumentos de la línea de comandos
+[clikt](https://ajalt.github.io/clikt/) y [kotlinx-cli](https://github.com/Kotlin/kotlinx-cli) son dos bibliotecas que facilitan el manejo de los argumentos que facilita el parseo y procesado de los argumentos que se le pasan al programa. Aunque podemos realizarlo nosotros mismos.
+
+#### Actividad 2: Bibliotecas para parseo de parámetros de entrada: Adaptando el código del 1.5. Ejemplo
+**Pregunta:** Imagínate que quieres poder indicarle a tu programa, que use una de las 3 posibles implementaciones de la tabla ¿Cómo lo harías haciendo uso de - [clikt](https://ajalt.github.io/clikt/) o [kotlinx-cli](https://github.com/Kotlin/kotlinx-cli)?
+
+Visita las páginas web de las bibliotecas y investiga como usarlas para poder indicarle a través de línea de comandos que versión de la tabla quieres que se muestre.
+
 
 ## Fuente
 

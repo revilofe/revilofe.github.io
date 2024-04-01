@@ -16,8 +16,7 @@ tags:
 ---
 ## 6.4. Se ha comentado y documentado el código.
 
-Un código bien documentado y comentado es esencial para asegurar la calidad, mantenibilidad y escalabilidad de cualquier proyecto de software. A continuación, se detalla una guía sobre cómo abordar la documentación y los comentarios en el código, 
-tomando en cuenta las prácticas recomendadas y la filosofía detrás de un código bien documentado.
+Un código bien documentado y comentado es esencial para asegurar la calidad, mantenibilidad y escalabilidad de cualquier proyecto de software. A continuación, se detalla una guía sobre cómo abordar la documentación y los comentarios en el código, tomando en cuenta las prácticas recomendadas y la filosofía detrás de un código bien documentado.
 
 ### 1. ¿Cómo Abordar los Comentarios en el Código?
 
@@ -30,16 +29,10 @@ A la hora de comentar, hay dos escuelas:
 
 Existen gurus, como *John Ousterhout*, en *“A Philosophy of Software Design”* que recomienda ***empezar con los comentarios antes de programar***. Pero, ***¿por qué lo recomienda?***
 
-   ```
-   Escribir en un lenguaje humano cómo funciona algo antes de implementarlo realmente, te da la capacidad de ver
-   si es lógico y suficiente, además te permite ponerte en los zapatos del usuario para notar deficiencias sobre
-   todo en la interfaz. 
-   Los comentarios de la interfaz es lo primero que deberías crear porque te servirán de guía para avanzar con
-   tu diseño y, sobre todo, que sea lógico y fácil de usar.
-   ```
+> Escribir en un lenguaje humano cómo funciona algo antes de implementarlo realmente, te da la capacidad de ver si es lógico y suficiente, además te permite ponerte en los zapatos del usuario para notar deficiencias sobre todo en la interfaz.
+> Los comentarios de la interfaz es lo primero que deberías crear porque te servirán de guía para avanzar con tu diseño y, sobre todo, que sea lógico y fácil de usar.
 
-Aunque existen diferentes opiniones sobre el uso de comentarios en el código, es indiscutible que un sistema sin documentación es incompleto. La documentación y los comentarios bien pensados son cruciales para entender la razón de ser de ciertos módulos, 
-funciones, y decisiones de diseño dentro del sistema. 
+Aunque existen diferentes opiniones sobre el uso de comentarios en el código, es indiscutible que un sistema sin documentación es incompleto. La documentación y los comentarios bien pensados son cruciales para entender la razón de ser de ciertos módulos, funciones, y decisiones de diseño dentro del sistema. 
 
 ### 2. Directrices sobre cómo y cuándo usar comentarios
 
@@ -98,8 +91,7 @@ abstract class Articulo(val titulo: String, val autor: String, var disponible: B
 
 ### 4. Consejos a la hora de documentar tu proyecto
 
-Ya hemos visto que un sistema sin documentación está incompleto. Para tener un software de calidad, se necesita tener documentación, pero esta tiene que tener sentido: es decir, información acerca del sistema que comunique cosas 
-como la razón de existir de ciertos módulos, valores y funciones y cómo usarlo.
+Ya hemos visto que un sistema sin documentación está incompleto. Para tener un software de calidad, se necesita tener documentación, pero esta tiene que tener sentido: es decir, información acerca del sistema que comunique cosas como la razón de existir de ciertos módulos, valores y funciones y cómo usarlo.
 
    - La documentación debe ubicarse lo más cerca posible del código, para eso tenemos los comentarios, facilitará encontrarlos y mantenerlos.
 
@@ -182,14 +174,8 @@ No te sientas mal si tienes que recurrir de vez en cuando a explicar la forma en
 
 ### 5. Conclusión
 
-   ```
-   Escribir comentarios es una de las grandes tareas que los programadores debemos dominar. Los lenguajes de
-   programación y los entornos de programación cada vez le dan más poder a esta parte de los programas y permiten
-   incluso escribir pruebas en ellos, generar documentación automática y listar tareas a partir de ellos.
-
-   Si pones el suficiente esmero en aprender a escribir buenos comentarios y mantenerlos, serán una gran
-   herramienta de diseño y documentación de tu software.
-   ```
+> Escribir comentarios es una de las grandes tareas que los programadores debemos dominar. Los lenguajes de programación y los entornos de programación cada vez le dan más poder a esta parte de los programas y permiten incluso escribir pruebas en ellos, generar documentación automática y listar tareas a partir de ellos.
+> Si pones el suficiente esmero en aprender a escribir buenos comentarios y mantenerlos, serán una gran herramienta de diseño y documentación de tu software.
 
 La documentación y los comentarios en el código son herramientas indispensables para cualquier desarrollador. Facilitan la comprensión del sistema, ayudan en la futura mantenibilidad del código y 
 mejoran la colaboración dentro de equipos de desarrollo. Al seguir las prácticas recomendadas y utilizar herramientas como DOKKA y KDoc, puedes asegurar que tu documentación sea útil, relevante y 

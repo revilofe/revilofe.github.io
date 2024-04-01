@@ -86,8 +86,10 @@ nav:
         - 'section1/u07/index.md'
         - '7.1.-Sistema archivos:E/S': 'section1/u07/teoria/PROG-U7.1.-SistemaArchivos.md'
         - '7.2.-Entrada/Salida estandar': 'section1/u07/teoria/PROG-U7.2.-ConsolaTeclado.md'
+        - '7.2.1.-Lectura desde teclado': 'section1/u07/teoria/PROG-U7.2.1.-ConsolaTecladoExpansion.md'
         - '7.3.-Gestión Archivos': 'section1/u07/teoria/PROG-U7.3.-File.md'
         - '7.4.-Lectura/Escritura Archivos': 'section1/u07/teoria/PROG-U7.4.-LecturaEscritura.md'
+        - '7.4.1.-Archivo de texto': 'section1/u07/teoria/PROG-U7.4.1.-TextFile.md'
         - '7.5.-GUI': 'section1/u07/teoria/PROG-U7.5.-GUI.md'
     - 'U9: Acceso a base de datos relacionales':
         - 'section1/u09/index.md'

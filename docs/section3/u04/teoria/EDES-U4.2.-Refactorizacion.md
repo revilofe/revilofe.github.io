@@ -207,4 +207,3 @@ Identificar y corregir estos "malos olores" mejora significativamente la calidad
 - [Code Smells](https://sourcemaking.com/refactoring/smells) - Sourcemaking
 - [Refactoring](https://martinfowler.com/tags/refactoring.html) - Martin Fowler
 - [Refactoring](https://en.wikipedia.org/wiki/Code_refactoring) - Wikipedia
-- 

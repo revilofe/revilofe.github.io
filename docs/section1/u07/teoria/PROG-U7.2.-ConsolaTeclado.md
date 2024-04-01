@@ -383,7 +383,7 @@ Fecha y Hora         |   Cantidad | Texto
 
 Existen bibliotecas que intentan solucionar alguna necesidad que han encontrado en sus desarrollos. Algunas de ellas para trabajar con la consola:   
 - [KFormat](https://github.com/marcelmay/kformat)   
-- [Mordant](https://github.com/ajalt/mordant)
+- [Mordant](https://github.com/ajalt/mordant)    
 - [clikt](https://ajalt.github.io/clikt/)   
 - [kotlinx-cli](https://github.com/Kotlin/kotlinx-cli)   
 
@@ -491,9 +491,20 @@ Si compilas y ejecutas `MainArgConversion.kt` con los mismos argumentos de líne
 ```
 aaa 42 3.14159
 ```
+#### Actividad 1: Bibliotecas para formateo de salida: Adaptando el código del 1.5. Ejemplo
+**Pregunta:** ¿Cómo harias el ejemplo 1.5 utilizando las bibliotecas  [KFormat](https://github.com/marcelmay/kformat)
+y [Mordant](https://github.com/ajalt/mordant)?
+
+Visita las paginas web de las bibliotecas y investiga como usarlas para realizar la misma tabla que se muestra en el ejemplo 1.5.
+
 
 ##### 2.2.2. Bibliotecas para manejar argumentos de la línea de comandos
 [clikt](https://ajalt.github.io/clikt/) y [kotlinx-cli](https://github.com/Kotlin/kotlinx-cli) son dos bibliotecas que facilitan el manejo de los argumentos que facilita el parseo y procesado de los argumentos que se le pasan al programa. Aunque podemos realizarlo nosotros mismos.
+
+#### Actividad 2: Bibliotecas para parseo de parámetros de entrada: Adaptando el código del 1.5. Ejemplo
+**Pregunta:** Imagínate que quieres poder indicarle a tu programa, que use una de las 3 posibles implementaciones de la tabla ¿Cómo lo harías haciendo uso de - [clikt](https://ajalt.github.io/clikt/) o [kotlinx-cli](https://github.com/Kotlin/kotlinx-cli)?
+
+Visita las páginas web de las bibliotecas y investiga como usarlas para poder indicarle a través de línea de comandos que versión de la tabla quieres que se muestre.
 
 
 ## Fuente

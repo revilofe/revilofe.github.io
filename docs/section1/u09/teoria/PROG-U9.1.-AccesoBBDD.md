@@ -14,103 +14,109 @@ tags:
     - JDBC
     - DAO
 ---
+## 9.1. Acceso a bases de datos
+A lo largo de este tema, se abordará el acceso a bases de datos relacionales desde aplicaciones desarrolladas en Kotlin. Se explicará qué es una base de datos y su importancia en el desarrollo de software, se describirá el lenguaje de programación Kotlin y su uso en la programación de aplicaciones que acceden a bases de datos, y se detallarán las características y métodos de acceso a sistemas gestores de bases de datos relacionales. Además, se explicará cómo programar conexiones con bases de datos, cómo almacenar, recuperar, mostrar, borrar y modificar información almacenada, y cómo crear aplicaciones para posibilitar la gestión de información en bases de datos.
 
-## Qué es una base de datos y su importancia en el desarrollo de software.
+### 1. Introducción
+En el desarrollo de aplicaciones de software, es común la necesidad de almacenar y acceder a grandes cantidades de información de manera eficiente y segura. Para ello, se utilizan bases de datos, que son sistemas de almacenamiento de información que permiten organizar, gestionar y recuperar datos de manera estructurada. Las bases de datos son fundamentales en el desarrollo de aplicaciones empresariales, sitios web, aplicaciones móviles y otros tipos de software, ya que permiten almacenar y acceder a información de manera eficiente y escalable.
+
+#### 1.1. Qué es una base de datos y su importancia en el desarrollo de software.
 
 Una base de datos es un conjunto organizado de información que se almacena y se gestiona en un sistema informático. Está diseñada para almacenar, recuperar y gestionar grandes cantidades de datos de manera eficiente y confiable. Las bases de datos se utilizan en una amplia variedad de aplicaciones informáticas, desde simples aplicaciones de escritorio hasta sistemas empresariales complejos.  Además, las bases de datos permiten que varios usuarios accedan a los mismos datos al mismo tiempo, lo que es especialmente importante en entornos empresariales donde muchos usuarios necesitan acceder a la misma información.
 
 La importancia de las bases de datos en el desarrollo de software radica en que permiten a los desarrolladores crear aplicaciones que pueden manejar grandes cantidades de información de manera eficiente y escalable. Las bases de datos también permiten a los desarrolladores implementar una lógica de negocio más sofisticada, lo que les permite crear aplicaciones más robustas y flexibles.
 
-## El lenguaje de programación Kotlin y su uso en la programación de aplicaciones que acceden a bases de datos.
+#### 1.2. Kotlin y su uso para acceder a bases de datos.
 
 En la programación de aplicaciones que acceden a bases de datos, Kotlin al igual que Java, es un lenguaje de programación muy útil, ya que tiene soporte integrado para la conexión y el acceso a bases de datos a través del API JDBC (Java Database Connectivity). Además, Kotlin tiene una sintaxis concisa y expresiva, lo que facilita la creación de código que interactúa con las bases de datos.
 
 El uso de Kotlin en la programación de aplicaciones que acceden a bases de datos permite a los desarrolladores crear aplicaciones más seguras, confiables y escalables. Kotlin ofrece características de seguridad como la prevención de nulos y la inmutabilidad, lo que reduce la posibilidad de errores y mejora la confiabilidad del código. Además, Kotlin es altamente escalable y fácil de mantener, lo que lo hace ideal para proyectos empresariales complejos.
 
-## Características y métodos de acceso a sistemas gestores de bases de datos relacionales
-Los sistemas gestores de bases de datos relacionales son herramientas fundamentales en el desarrollo de software, ya que permiten el almacenamiento y acceso a grandes cantidades de información de manera estructurada y eficiente. Para poder utilizarlos adecuadamente, es importante conocer sus características y métodos de acceso.
-
-En este punto, se abordará en detalle las características de los sistemas gestores de bases de datos relacionales, así como los diferentes métodos de acceso a las bases de datos, como JDBC y ORM. Además, se discutirán las ventajas y desventajas de cada método de acceso para que los alumnos puedan elegir el que mejor se adapte a sus necesidades. Con este conocimiento, los alumnos estarán capacitados para utilizar bases de datos en sus proyectos de programación con Kotlin.
-
-### Sistema gestor de bases de datos relacional y sus características
+### 2. Sistema gestor de bases de datos relacional y sus características
 
 Un sistema gestor de bases de datos relacional (RDBMS, por sus siglas en inglés) es un tipo de software que se utiliza para almacenar, organizar y manipular datos en una base de datos relacional. Este tipo de sistema gestor de bases de datos utiliza un modelo de datos relacional para organizar los datos en tablas con filas y columnas, y utiliza claves primarias y foráneas para establecer relaciones entre las tablas.
 
 Entre las características principales de los sistemas gestores de bases de datos relacionales, podemos destacar las siguientes:
 
-- **Estructura basada en tablas**: Los datos se almacenan en tablas con filas y columnas. Cada columna tiene un nombre y un tipo de datos que define el tipo de información que se puede almacenar.
-- **Relaciones entre tablas**: Los sistemas gestores de bases de datos relacionales permiten establecer relaciones entre las tablas utilizando claves primarias y foráneas. Esto permite que los datos se puedan relacionar entre sí de manera efectiva y eficiente.
-- **Consultas complejas**: Los sistemas gestores de bases de datos relacionales permiten realizar consultas complejas utilizando el lenguaje SQL (Structured Query Language). Esto permite que los datos se puedan buscar, filtrar y ordenar de manera efectiva y eficiente.
-- **Integridad de los datos**: Los sistemas gestores de bases de datos relacionales tienen mecanismos integrados para garantizar la integridad de los datos, como las restricciones de integridad referencial y las validaciones de datos.
+- **Estructura basada en tablas**: Los datos se almacenan en tablas con filas y columnas. Cada columna tiene un nombre y un tipo de datos que define el tipo de información que se puede almacenar.  
+- **Relaciones entre tablas**: Los sistemas gestores de bases de datos relacionales permiten establecer relaciones entre las tablas utilizando claves primarias y foráneas. Esto permite que los datos se puedan relacionar entre sí de manera efectiva y eficiente.  
+- **Consultas complejas**: Los sistemas gestores de bases de datos relacionales permiten realizar consultas complejas utilizando el lenguaje SQL (Structured Query Language). Esto permite que los datos se puedan buscar, filtrar y ordenar de manera efectiva y eficiente.  
+- **Integridad de los datos**: Los sistemas gestores de bases de datos relacionales tienen mecanismos integrados para garantizar la integridad de los datos, como las restricciones de integridad referencial y las validaciones de datos.  
 - **Escalabilidad**: Los sistemas gestores de bases de datos relacionales son altamente escalables y se pueden utilizar para gestionar grandes volúmenes de datos.
 
-###  Métodos de acceso a bases de datos  
+###  3. Métodos de acceso a bases de datos relacionales
+Existen varios métodos para acceder a bases de datos relacionales desde aplicaciones de software. Algunos de los métodos más comunes son:
+
 - **JDBC (Java Database Connectivity)**: JDBC es una API estándar de Java que permite a las aplicaciones Java acceder a bases de datos relacionales. Proporciona una interfaz común para que las aplicaciones se conecten a bases de datos, realicen consultas y actualicen datos. JDBC es ampliamente utilizado y está soportado por la mayoría de los sistemas gestores de bases de datos relacionales.  
 - **ORM (Object-Relational Mapping)**: Los ORM son frameworks que se construyen sobre JDBC y que permite mapear objetos de una aplicación a tablas de una base de datos relacional. Esto permite acceder a la base de datos utilizando objetos y métodos, en lugar de utilizar SQL directamente. El ORM proporciona una interfaz orientada a objetos para acceder a los datos de la base de datos. El ORM utiliza un lenguaje de consulta específico del ORM (como HQL en Hibernate) que se traduce automáticamente en SQL para interactuar con la base de datos. El ORM es una técnica popular para el acceso a bases de datos en las aplicaciones actuales, por ejemplo: [Hibernate](https://hibernate.org/) en Java o [Exposed](https://github.com/JetBrains/Exposed) en Kotlin.  
 - **JPA (Java Persistence API)**: JPA es una API de persistencia estándar de Java que permite a las aplicaciones Java acceder a bases de datos relacionales. JPA es una especificación que define una interfaz común para interactuar con diferentes sistemas gestores de bases de datos. JPA utiliza el ORM para mapear objetos de una aplicación a tablas de una base de datos relacional.  
 - **Spring Data**: Spring Data es un proyecto de Spring Framework que proporciona una abstracción de acceso a datos para aplicaciones Java. Spring Data utiliza diferentes tecnologías de acceso a bases de datos, como JDBC, JPA y el ORM. Spring Data proporciona una interfaz común para acceder a diferentes sistemas gestores de bases de datos relacionales.
 
-### Ventajas y desventajas de cada método de acceso a bases de datos relacionales.   
-#### JDBC (Java Database Connectivity):   
-Ventajas:   
-- Es una API estándar de Java y está soportada por la mayoría de los sistemas gestores de bases de datos relacionales.
-- Proporciona una interfaz común para que las aplicaciones se conecten a bases de datos, realicen consultas y actualicen datos.
-- Permite un control más granular sobre las consultas y las transacciones.
+#### 3.1. Ventajas y desventajas de cada método de acceso a bases de datos relacionales.   
 
-Desventajas:   
-- Requiere una cantidad significativa de código para interactuar con la base de datos.   
+##### 3.1.1. JDBC (Java Database Connectivity):   
+
+**Ventajas**:   
+- Es una API estándar de Java y está soportada por la mayoría de los sistemas gestores de bases de datos relacionales.  
+- Proporciona una interfaz común para que las aplicaciones se conecten a bases de datos, realicen consultas y actualicen datos.  
+- Permite un control más granular sobre las consultas y las transacciones.    
+
+**Desventajas**:   
+- Requiere una cantidad significativa de código para interactuar con la base de datos.    
 - Puede ser propenso a errores si se maneja incorrectamente.   
 - No proporciona una abstracción de acceso a datos orientada a objetos.   
 
-#### ORM (Object-Relational Mapping):   
-Ventajas:   
+##### 3.1.2. ORM (Object-Relational Mapping):   
+
+**Ventajas**:   
 - Proporciona una interfaz orientada a objetos para acceder a los datos de la base de datos.   
 - Reduce significativamente la cantidad de código requerido para interactuar con la base de datos.   
 - Proporciona una abstracción de acceso a datos orientada a objetos.   
 
-Desventajas:   
-- Puede haber una sobrecarga de rendimiento debido al mapeo de objetos a tablas de base de datos.
-- El ORM puede generar consultas SQL subóptimas.
-- La curva de aprendizaje inicial puede ser empinada.
+**Desventajas**:   
+- Puede haber una sobrecarga de rendimiento debido al mapeo de objetos a tablas de base de datos.   
+- El ORM puede generar consultas SQL subóptimas.   
+- La curva de aprendizaje inicial puede ser empinada.   
 
-#### JPA (Java Persistence API):
-Ventajas:   
-- Proporciona una interfaz de persistencia estándar de Java para acceder a bases de datos relacionales.
+##### 3.1.3. JPA (Java Persistence API):   
+
+**Ventajas**:   
+- Proporciona una interfaz de persistencia estándar de Java para acceder a bases de datos relacionales.   
+- Abstrae las diferencias entre los sistemas gestores de bases de datos subyacentes.    
+- Proporciona una interfaz orientada a objetos para acceder a los datos de la base de datos.   
+
+**Desventajas**:   
+- Puede ser más lento que JDBC si se requiere un control granular sobre las consultas y las transacciones.  
+- El ORM utilizado por JPA puede generar consultas SQL subóptimas.   
+- La curva de aprendizaje inicial puede ser empinada.   
+
+##### 3.1.4. Spring Data:   
+
+**Ventajas**:   
+- Proporciona una abstracción de acceso a datos para aplicaciones Java.   
 - Abstrae las diferencias entre los sistemas gestores de bases de datos subyacentes.   
 - Proporciona una interfaz orientada a objetos para acceder a los datos de la base de datos.   
 
-Desventajas:   
-- Puede ser más lento que JDBC si se requiere un control granular sobre las consultas y las transacciones.
-- El ORM utilizado por JPA puede generar consultas SQL subóptimas.
-- La curva de aprendizaje inicial puede ser empinada.
+**Desventajas**:   
+- Puede ser más lento que JDBC si se requiere un control granular sobre las consultas y las transacciones.   
+- La curva de aprendizaje inicial puede ser empinada.   
+- La configuración inicial puede ser más compleja que con JDBC.   
 
 
-#### Spring Data:
-Ventajas:   
-- Proporciona una abstracción de acceso a datos para aplicaciones Java.
-- Abstrae las diferencias entre los sistemas gestores de bases de datos subyacentes.
-- Proporciona una interfaz orientada a objetos para acceder a los datos de la base de datos.
+### 4. Trabajar con base de datos
+Para trabajar con bases de datos en Kotlin, es necesario utilizar una librería que permita la conexión y el acceso a la base de datos. Una de las librerías más comunes para trabajar con bases de datos en Kotlin es JDBC (Java Database Connectivity), que es una API estándar de Java que permite a las aplicaciones Java acceder a bases de datos relacionales.
 
-Desventajas:   
-- Puede ser más lento que JDBC si se requiere un control granular sobre las consultas y las transacciones.
-- La curva de aprendizaje inicial puede ser empinada.
-- La configuración inicial puede ser más compleja que con JDBC.
-
-## Programar conexiones con bases de datos
+#### 4.1. Conectarnos a bases de datos
 El establecimiento de conexiones con bases de datos es la primera tarea en el desarrollo de aplicaciones con acceso a datos. Para que una aplicación pueda interactuar con una base de datos, primero debe establecer una conexión con ella. Esta operación es una de las más costosas, y por eso existen varias implementaciones de los llamados pools de conexiones (por ejemplo [HikariCP](https://github.com/brettwooldridge/HikariCP)) que nos permiten optimizar esta tarea.
-
-En esta sección, se explicará cómo programar una conexión con una base de datos utilizando Kotlin y JDBC. También se demostrará cómo configurar la conexión.
-
-### Establecer y configurar una conexión
 
 Para establecer una conexión con una base de datos utilizando Kotlin y JDBC, se requiere importar la librería JDBC en el proyecto. Luego, se debe cargar el driver JDBC específico para el gestor de base de datos que se va a utilizar, mediante la función `Class.forName("nombre_del_controlador")`. A continuación, se crea una instancia de la clase `Connection` que representa la conexión con la base de datos, mediante la función `DriverManager.getConnection(url, usuario, contraseña)`.
 
-Para configurar la conexión, se deben proporcionar tres parámetros:
-1. la URL de la base de datos, que incluye el nombre del servidor, el puerto y el nombre de la base de datos;
-2. el nombre de usuario para acceder a la base de datos;
-3. la contraseña correspondiente.
-4. otras opciones de configuración.
+Para configurar la conexión, se deben proporcionar tres parámetros:   
 
+1. la URL de la base de datos, que incluye el nombre del servidor, el puerto y el nombre de la base de datos.   
+2. el nombre de usuario para acceder a la base de datos.    
+3. la contraseña correspondiente.    
+4. otras opciones de configuración.   
 
 La URL puede variar dependiendo del gestor de base de datos que se esté utilizando y del tipo de conexión (por ejemplo, si se usa SSL o no).
 
@@ -137,17 +143,18 @@ fun main() {
 }
 ```
 
-## Almacenar información
+#### 4.2. Almacenar información
+
 La inserción de registros en una base de datos, cuando estamos programando en un lenguaje orientado a objetos, suele coincidir con la inserción de la información de un objeto en una tabla. 
 
 El proceso mediante el cual se inserta la información de un objeto que represente un registro en la tabla y utilizar el método de inserción de JDBC para agregarlo a la tabla, se puede ver en los siguientes pasos:
 
-1. Crear una clase que represente la tabla y sus columnas.
-2. Crear una instancia de la clase y establecer los valores de las propiedades.
-3. Crear una conexión con la base de datos.
-4. Crear una sentencia `SQL INSERT` que especifique la tabla y los valores a insertar.
-5. Crear el objeto `PreparedStatement` para insertar la instancia en la tabla.
-4. Ejecutar la sentencia SQL utilizando un objeto `PreparedStatement`.
+1. Crear una clase que represente la tabla y sus columnas.   
+2. Crear una instancia de la clase y establecer los valores de las propiedades.   
+3. Crear una conexión con la base de datos.   
+4. Crear una sentencia `SQL INSERT` que especifique la tabla y los valores a insertar.   
+5. Crear el objeto `PreparedStatement` para insertar la instancia en la tabla.   
+4. Ejecutar la sentencia SQL utilizando un objeto `PreparedStatement`.   
 
 A continuación se muestra un ejemplo de cómo insertar un registro en una tabla `mytable` utilizando un objeto instanciado de la clase `MyTable` que representa la tabla:
 
@@ -170,12 +177,13 @@ stmt.executeUpdate()
 
 En este ejemplo, se crea una conexión con la base de datos utilizando el método `DriverManager.getConnection`. Luego, se crea una sentencia `SQL INSERT` utilizando un objeto `PreparedStatement`. Se crea una clase `MyTable` que representa la tabla y sus columnas, se crea una instancia de la clase . Se utiliza un objeto `PreparedStatement` para especificar los valores a insertar en las columnas de la tabla usando los métodos `setString`, `setInt` y `setDouble`. Finalmente, se ejecuta la sentencia utilizando el método `executeUpdate`.
 
-## Recuperar y mostrar información.   
+#### 4.3. Recuperar y mostrar información.   
+
 En el desarrollo de aplicaciones, es común necesitar recuperar y mostrar información almacenada en una base de datos. Para ello, se requiere conocer las técnicas y herramientas necesarias para conectarse a la base de datos, ejecutar consultas SQL y mapear los resultados a objetos en el lenguaje de programación utilizado.
 
 En este punto, nos enfocaremos en cómo crear programas en Kotlin, aspecto que no difiere de como se hace en java, para recuperar información almacenada en bases de datos relacionales utilizando JDBC. Explicaremos cómo ejecutar consultas SQL y mapear los resultados a objetos Kotlin para que puedan ser mostrados al usuario. Además, también hablaremos sobre cómo manejar errores y excepciones que puedan surgir durante el proceso.
 
-### Recuperar registros de la base de datos.   
+##### 4.3.1. Recuperar registros de la base de datos.   
 Para recuperar registros de una tabla de la base de datos utilizando Kotlin y JDBC, necesitamos ejecutar una consulta SQL que seleccione los registros que deseamos recuperar. Esta consulta se puede ejecutar mediante un objeto `Statement` de JDBC, que se crea a partir de la conexión a la base de datos:
 
 ```kotlin
@@ -199,23 +207,25 @@ while (resultSet.next()) {
 
 ```
 
-### Mostrar los resultados al usuario.   
+##### 4.3.2. Mostrar los resultados al usuario.   
 A la hora de trabajar con la información y mostrarla al usuario final, es importante tener en cuenta la sensibilidad de la información almacenada en la base de datos y asegurarnos de cumplir con las normas de privacidad y seguridad de la información.
 
 Para mostrar los resultados al usuario, podemos imprimirlos en la consola, mostrarlos en una interfaz de usuario o hacer cualquier otra cosa que queramos con ellos, dependiendo del tipo de aplicación que estemos desarrollando y de las necesidades del usuario. Algunas opciones comunes incluyen:
 
-- Mostrar los resultados en una tabla: podemos crear una tabla en la interfaz de usuario de nuestra aplicación y agregar cada registro como una fila en la tabla. Esto permite al usuario ver todos los datos de una manera clara y ordenada.
-- Mostrar los resultados en una lista: si la cantidad de registros es pequeña, podemos mostrarlos en una lista simple. Esto es especialmente útil si solo necesitamos mostrar algunos datos de cada registro, como el nombre y la fecha.
-- Mostrar los resultados en un gráfico: si los datos son numéricos, podemos mostrarlos en un gráfico para que el usuario pueda ver visualmente las tendencias y las comparaciones entre los registros.
+- Mostrar los resultados en una tabla: podemos crear una tabla en la interfaz de usuario de nuestra aplicación y agregar cada registro como una fila en la tabla. Esto permite al usuario ver todos los datos de una manera clara y ordenada.    
+- Mostrar los resultados en una lista: si la cantidad de registros es pequeña, podemos mostrarlos en una lista simple. Esto es especialmente útil si solo necesitamos mostrar algunos datos de cada registro, como el nombre y la fecha.    
+- Mostrar los resultados en un gráfico: si los datos son numéricos, podemos mostrarlos en un gráfico para que el usuario pueda ver visualmente las tendencias y las comparaciones entre los registros.   
 
-## Borrar y modificar la información almacenada.   
+#### 4.4. Eliminar y actualizar la información almacenada.   
+
 En el desarrollo de aplicaciones, es muy común la necesidad de modificar o eliminar información almacenada en una base de datos. Para ello, es necesario contar con los conocimientos y herramientas adecuadas para realizar estas operaciones de manera segura y eficiente.
 
 En este sentido, el lenguaje de programación Kotlin y la API JDBC ofrecen una serie de funcionalidades para llevar a cabo operaciones de modificación y eliminación en bases de datos relacionales. Es importante conocer cómo funcionan estos métodos para poder implementarlos correctamente en nuestras aplicaciones y evitar errores o problemas de seguridad en el manejo de la información almacenada.
 
 En este apartado se abordarán los aspectos fundamentales de la realización de modificaciones y eliminaciones en una base de datos.
 
-### Eliminar registros.
+##### 4.4.1. Eliminar registros.
+
 Para eliminar registros de una tabla en una base de datos utilizando Kotlin y JDBC, es necesario construir y ejecutar una consulta SQL de eliminación. Por ejemplo, si queremos eliminar un registro de la tabla `usuarios` que tenga un cierto identificador único. Hay que tener cuidado con la cláusula `WHERE`, ya que podemos tener un problema si no se establece adecuadamente. La consulta SQL podría ser algo como:
 
 ```Kotlin
@@ -234,7 +244,8 @@ Estas operaciones tienen la clave en la sintaxis correcta de la consulta SQL y e
 
 Por último, siempre será importante comprobar el resultado de la ejecución del método`executeUpdate()` y hacer el tratamiento que se estime oporturno en función del resultado obtenido. Por ejemplo, en este caso, el método `executeUpdate()` devuelve la cantidad de filas afectadas por la sentencia ejecutada, que en este caso debería ser `1` si se encontró y eliminó el registro correspondiente.
 
-### Actualizar registros.
+##### 4.4.2. Actualizar registros.  
+
 Para actualizar registros en una tabla de la base de datos utilizando Kotlin y JDBC, primero es necesario establecer una conexión a la base de datos y crear una declaración SQL que actualice los campos necesarios. La declaración SQL debe incluir la cláusula `WHERE` para identificar los registros que se deben actualizar.
 
 Por ejemplo, si tenemos una tabla llamada `usuarios` con los campos `nombre`, `apellido` y `email`, y queremos actualizar el email de un usuario en particular, podemos crear una declaración SQL como la siguiente:
@@ -242,9 +253,8 @@ Por ejemplo, si tenemos una tabla llamada `usuarios` con los campos `nombre`, `a
 ```SQL
 UPDATE usuarios SET email = 'nuevo_email@example.com' WHERE nombre = 'Juan' AND apellido = 'Pérez';
 ```
-Una vez que se tiene la declaración SQL, se debe utilizar el objeto Statement de JDBC para ejecutarla. El método `executeUpdate()` se utiliza para ejecutar la declaración y actualizar los registros correspondientes.
+Una vez que se tiene la declaración SQL, se debe utilizar el objeto `Statement` de JDBC para ejecutarla. El método `executeUpdate()` se utiliza para ejecutar la declaración y actualizar los registros correspondientes.
 
-Para ejecutar la consulta, se utiliza el método executeUpdate() de la misma forma que en el ejemplo anterior.
 
 ```kotlin
 val statement = connection.createStatement()
@@ -290,11 +300,11 @@ connection.close()
 
 En este ejemplo, primero se establece una conexión con la base de datos utilizando los detalles de conexión adecuados. Luego, se crea una consulta SQL para actualizar el nombre del usuario con `id = 1` en la tabla `users`. Sobre el objeto conexión se utiliza el método `prepareStatement` para crear un objeto `PreparedStatement`. Luego, se establecen los valores de los parámetros de la consulta utilizando los métodos set correspondientes de la clase `PreparedStatement` y se ejecuta la consulta utilizando el método `executeUpdate` de la clase `PreparedStatement`. Se verifica si se ha actualizado algún registro y se la sentencia y la conexión a la base de datos.
 
-## Consulta de información almacenada.
+#### 4.5. Consulta de información almacenada.
 
 Al desarrollar una aplicación que requiere acceder y manipular datos almacenados en una base de datos, es común que necesitemos realizar consultas más complejas para obtener la información requerida. Las consultas pueden involucrar operadores lógicos para filtrar resultados y funciones de agregación para realizar cálculos en los datos. Es importante que los programadores tengan conocimientos sólidos en la creación y ejecución de consultas SQL utilizando JDBC en Kotlin para obtener resultados precisos y eficientes. En esta sección, se explicará cómo crear consultas más complejas utilizando Kotlin y JDBC y se demostrará cómo utilizar operadores lógicos y funciones de agregación en las consultas SQL.
 
-### Consultas complejas.
+##### 4.5.1. Consultas complejas.
 Para crear consultas más complejas utilizando Kotlin y JDBC, se pueden concatenar distintas cláusulas de SQL en una sola sentencia. Por ejemplo, para realizar una consulta que seleccione registros de una tabla que cumplan ciertas condiciones y los ordene por un campo en particular, se puede utilizar la siguiente sintaxis:
 
 ```kotlin
@@ -305,7 +315,7 @@ val resultSet = statement.executeQuery(query)
 En este ejemplo, `tabla` es el nombre de la tabla que se desea consultar, `condicion` es una expresión que define las condiciones que deben cumplir los registros seleccionados, y `campo` es el nombre del campo por el cual se deben ordenar los resultados. La consulta se ejecuta mediante el método `executeQuery()` del objeto `Statement`.
 
 
-### Utilizar operadores lógicos y funciones de agregación en las consultas.
+##### 4.5.2. Utilizar operadores lógicos y funciones de agregación en las consultas.
 
 Para utilizar operadores lógicos y funciones de agregación en las consultas SQL, se puede utilizar la sintaxis estándar de SQL en la cadena de consulta. Por ejemplo, para realizar una consulta que seleccione registros de una tabla que cumplan ciertas condiciones y calcule la suma de los valores de un campo en particular, se puede utilizar la siguiente sintaxis:
 
@@ -342,7 +352,7 @@ En este ejemplo, la consulta SQL utiliza el operador lógico `AND` para combinar
 
 Si la consulta se ejecuta correctamente, el resultado se muestra por consola. Si ocurre un error, se muestra un mensaje de error.
 
-## Crear aplicaciones para posibilitar la gestión de información
+### 5. Crear aplicaciones para posibilitar la gestión de información
 Al desarrollar aplicaciones que requieren almacenamiento de datos, es fundamental comprender cómo interactuar con bases de datos para almacenar información de manera efectiva y segura.
 
 Un ejemplo de aplicación que permite la gestión de información en una base de datos podría ser un sistema de gestión de inventario para una tienda. La interfaz de usuario podría permitir al usuario agregar nuevos productos al inventario, actualizar la información de los productos existentes, eliminar productos, y realizar consultas para buscar productos por nombre, categoría, precio, etc.
@@ -351,7 +361,7 @@ Para implementar estas funcionalidades, se podría utilizar JDBC para establecer
 
 Para manejar errores en la aplicación, se podría implementar validaciones en la interfaz de usuario para asegurarse de que los datos ingresados por el usuario son correctos y cumplen con las restricciones de la base de datos. Además, se podrían implementar mecanismos de manejo de excepciones en el código para manejar errores que puedan surgir durante la ejecución de consultas o actualizaciones en la base de datos.
 
-### Gestión de información.
+#### 5.1. Gestión de información.
 
 Para crear aplicaciones que permitan la gestión de información en una base de datos, es necesario diseñar una interfaz de usuario que permita al usuario interactuar con la base de datos de manera intuitiva y eficiente. La interfaz debe permitir realizar operaciones básicas como crear, leer, actualizar y eliminar registros.
 
@@ -361,7 +371,7 @@ CRUD es un acrónimo que se utiliza para describir las cuatro operaciones básic
 
 Por lo tanto, al crear una aplicación para la gestión de la información presente en bases de datos relacionales, es común que se implementen estas cuatro operaciones CRUD para permitir al usuario realizar acciones como crear nuevos registros, leer la información almacenada, actualizar registros existentes o eliminar datos no deseados. A través de una interfaz de usuario adecuada, estas operaciones se pueden realizar de manera sencilla y eficiente, lo que mejora la experiencia del usuario y facilita la gestión de la información en la base de datos.
 
-### Un CRUD para gestionar la información
+#### 5.2. Un CRUD para gestionar la información
 
 Las operaciones del CRUD son fundamentales en la mayoría de las aplicaciones de gestión de bases de datos, ya que permiten al usuario interactuar con los datos de una manera intuitiva y eficiente. Un ejemplo de un CRUD para gestionar el acceso a una tabla `users`
 
@@ -538,13 +548,12 @@ La función `deleteRecord()` se utiliza para eliminar un registro existente en l
 deleteRecord(1)
 ```
 
-### Manejar los errores.
+#### 5.3. Manejar los errores.
 
-> You should explicitly close `Statements`, `ResultSets`, and `Connections` when you no longer need them,
+Al trabajar con JDBC es importante tener en cuenta que pueden ocurrir diversas excepciones durante todo el proceso de establecimiento de conexión, ejecución de sentencia, recuperación de resultados, etc, y que indicarán distintos tipos de errores, como falta de conexión con el servidor, credenciales incorrectas, error de tipos, errores propios de base de datos por inconsistencias, etc. Por lo tanto, se debe utilizar una estructura `try-catch` para manejar estas excepciones. En los ejemplos anteriores se han podido ver como se han utilizado estos bloques try-catch para encerrar las operaciones relacionadas con JDBC.
 
-Al trabajar con JDBC es importante tener en cuenta que pueden ocurrir diversas excepciones durante todo el proceso de establecimiento de conexión, ejecución de sentencia, recuperación de resultados, etc, y que indicarán distintos tipos de errores, como falta de conexión con el servidor, credenciales incorrectas, error de tipos, errores propios de base de datos por inconsistencias, etc. Por lo tanto, se debe utilizar una estructura `try-catch` para manejar estas excepciones. En los ejemplos anteriores se han podido ver como se han utilizado estos bloques try-catch para encerrar las operaciones relacionadas con JDBC. Por ejemplo,
-> 
-#### Manejar errores de conexión
+
+##### 5.3.1. Manejar errores de conexión
 
 Para manajar los posibles errores que se puedan producir al realizar la conexión tendremos que manejar las excepciones `SQLException` y `ClassNotFoundException`, que pueden ocurrir al intentar establecer la conexión o cargar el driver JDBC correspondiente. Además, se imprime un mensaje de error para cada una de estas excepciones. En la práctica, es importante identificar las excepciones que pueden ocurrir específicamente para el gestor de base de datos que se esté utilizando, y manejarlas adecuadamente.
 
@@ -580,13 +589,16 @@ fun getConnection(): Connection {
 }
 ```
 
+
 En este ejemplo, utilizamos un bloque `try-catch` para capturar la excepción `SQLException` si se produce un error al establecer la conexión. Si se produce un error, lanzamos una excepción personalizada con un mensaje de error descriptivo para informar al usuario del problema.
 
 En el bloque `finally`, cerramos la conexión utilizando el método `close` y también capturamos la excepción `SQLException` en caso de que se produzca un error al cerrar la conexión.
 
 Con este código, hemos mejorado el manejo de errores de conexión en nuestro programa, lo que nos permite informar al usuario de los problemas que puedan surgir al interactuar con la base de datos.
 
-#### Manejo de errores en la inserción
+> You should explicitly close `Statements`, `ResultSets`, and `Connections` when you no longer need them,
+
+##### 5.3.2. Manejo de errores en la inserción
 
 Es importante manejar los errores de inserción de datos en una base de datos para garantizar la integridad de la información. Para manejar estos errores en Kotlin y JDBC, podemos utilizar bloques `try-catch`.
 
@@ -616,14 +628,16 @@ try {
 
 En este ejemplo, estamos insertando un registro en la tabla `customers` con los valores `John Doe` y `johndoe@email.com`. Si se produce un error durante la inserción, capturamos la excepción `SQLException` y comprobamos el código de error devuelto por la base de datos.
 
-Si el código de error es `1062`, significa que se ha violado una restricción de clave única, en este caso, la restricción de correo electrónico único. Mostramos un mensaje de error indicando que el correo electrónico ya está registrado. Estos códigos de error son especificos de cada DBMS, por tanto hay que consultar la documetnación del motor de base de datos para identificar los posibles códigos de error.
+Si el código de error es `1062`, significa que se ha violado una restricción de clave única, en este caso, la restricción de correo electrónico único. Mostramos un mensaje de error indicando que el correo electrónico ya está registrado. Estos códigos de error son específicos de cada DBMS, por tanto hay que consultar la documetnación del motor de base de datos para identificar los posibles códigos de error.
 
 Si se produce cualquier otro tipo de excepción, mostramos un mensaje genérico con el mensaje de error devuelto por la base de datos.
 
-#### Describir cómo manejar errores de eliminación.
+##### 5.3.3. Manejo de errores de eliminación.   
+
 Para manejar errores de eliminación, podemos utilizar las mismas técnicas que se describieron para manejar errores de inserción. Es importante tener en cuenta que si se intenta eliminar un registro que no existe, la consulta SQL no afectará ninguna fila y el método `executeUpdate()` devolverá `0`. Por lo tanto, es una buena práctica verificar el valor devuelto por este método y manejar el caso en el que se intenta eliminar un registro que no existe.
 
-Un ejemplo completo podría ser:
+Un ejemplo completo podría ser:    
+
 ```kotlin
 //Eliminar un registro de la tabla
 try {
@@ -660,15 +674,19 @@ try {
 
 En este ejemplo, se utiliza un bloque `try-catch` para manejar cualquier excepción de SQL que pueda ocurrir al intentar eliminar un registro de la tabla usuarios. Dentro del bloque `try`, se establece la conexión con la base de datos, se crea una sentencia SQL para eliminar el registro con `id` `1` y se crea un objeto `PreparedStatement` para ejecutar la sentencia. A continuación, se utiliza la función `executeUpdate()` para eliminar el registro y se obtiene el número de registros eliminados. Si se ha eliminado el registro correctamente, se muestra un mensaje indicando que el registro ha sido eliminado. De lo contrario, se muestra un mensaje indicando que no se ha eliminado ningún registro. Finalmente, se cierra la conexión y se maneja cualquier excepción de SQL que pueda ocurrir en el bloque `catch`.
 
-
-#### Manejar errores de actualización.
+##### 5.3.4. Manejar errores de actualización.
 
 Al igual que en el caso de la eliminación de registros, es importante manejar correctamente los errores que puedan surgir al actualizar registros en una base de datos. Algunos de los errores más comunes son la falta de permisos para realizar la actualización, el incumplimiento de restricciones de integridad referencial o de validación, o la falta de conexión a la base de datos.
 
 
 Dentro del bloque `catch`, se puede proporcionar información sobre el error al usuario o registrar el error en un archivo de registro para su posterior análisis. Es importante asegurarse de que el usuario sea informado adecuadamente sobre los errores que puedan ocurrir durante la actualización de registros.
 
-### Un CRUD aplicando el patrón DAO
+### 6. Un CRUD aplicando el patrón DAO
+
+#### 6.1. Patrón DAO 
+El patrón DAO (Data Access Object) es un patrón de diseño que se utiliza para abstraer la capa de acceso a datos de una aplicación. El objetivo principal del patrón DAO es separar la lógica de acceso a datos de la lógica de negocio de la aplicación, lo que permite una mayor flexibilidad y mantenibilidad del código.
+
+#### 6.2. Ejemplo
 A continuación veremos un ejemplo en Kotlin de una implementación básica de un sistema CRUD (Create, Read, Update, Delete) usando un patrón DAO (Data Access Object) y servicios. Este código implementa una arquitectura básica de DAO y servicios para interactuar con una base de datos H2 y realizar operaciones CRUD en una tabla de usuarios. Se puede resumir en el siguiente extracto:
 
 La clase `UserEntity` define el modelo de datos para el usuario con tres atributos: `id` (de tipo `UUID`), `name` y `email`.
@@ -689,18 +707,18 @@ Ver el código aquí: [Servicio de usuario, haciendo uso del patron DAO](https:/
 
 Mas información en [CRUD](https://github.com/joseluisgs/Programacion-08-2022-2023#crud)
 
-## Resumiendo
-- Las bases de datos son una herramienta crucial para el desarrollo de software, ya que permiten a los desarrolladores almacenar y gestionar grandes cantidades de información de manera eficiente y confiable. La capacidad de almacenar y acceder a información de manera eficiente es una necesidad en cualquier aplicación de software moderna, y las bases de datos son la solución más común y eficaz para esta necesidad.
-- Kotlin es un lenguaje de programación moderno y seguro que se utiliza cada vez más en el desarrollo de aplicaciones informáticas. En la programación de aplicaciones que acceden a bases de datos, Kotlin es una opción popular y efectiva debido a su soporte integrado para el acceso a bases de datos y su sintaxis concisa y expresiva. El uso de Kotlin en la programación de aplicaciones que acceden a bases de datos permite a los desarrolladores crear aplicaciones más seguras, confiables y escalables.
-- Un sistema gestor de bases de datos relacional es un software utilizado para almacenar, organizar y manipular datos en una base de datos relacional. Los sistemas gestores de bases de datos relacionales tienen características como una estructura basada en tablas, relaciones entre tablas, consultas complejas, integridad de los datos y escalabilidad. Los métodos de acceso a sistemas gestores de bases de datos relacionales incluyen la API JDBC y el ORM.
-- Los métodos de acceso a bases de datos incluyen JDBC, ORM, JPA y Spring Data. JDBC proporciona una interfaz común para acceder a bases de datos relacionales desde aplicaciones Java. El ORM y JPA proporcionan una interfaz orientada a objetos para acceder a los datos de la base de datos. Spring Data proporciona una abstracción de acceso a datos para aplicaciones Java. Los diferentes métodos de acceso a bases de datos tienen sus propias ventajas y desventajas. Es importante elegir el método adecuado según las necesidades de la aplicación. Si se requiere un control más granular sobre las consultas y las transacciones, JDBC puede ser la mejor opción. Si se busca una abstracción de acceso a datos orientada a objetos, ORM, JPA o Spring Data pueden ser la mejor opción.
-- Debemos elegir la forma de mostrar los resultados que mejor se adapte a las necesidades de nuestros usuarios y al tipo de aplicación que estamos desarrollando. Es importante que la presentación de los datos sea clara y fácil de entender para que los usuarios puedan interactuar con ellos de manera efectiva.
-- Es importante manejar adecuadamente los errores que se producen durante la interación de base de datos, por ejemplo al conectarnos, al inserción de datos, etc. Podemos utilizar bloques try-catch en Kotlin y JDBC para capturar y manejar estas excepciones de forma adecuada.
+### 7. Resumiendo
+- Las bases de datos son una herramienta crucial para el desarrollo de software, ya que permiten a los desarrolladores almacenar y gestionar grandes cantidades de información de manera eficiente y confiable. La capacidad de almacenar y acceder a información de manera eficiente es una necesidad en cualquier aplicación de software moderna, y las bases de datos son la solución más común y eficaz para esta necesidad.    
+- Kotlin es un lenguaje de programación moderno y seguro que se utiliza cada vez más en el desarrollo de aplicaciones informáticas. En la programación de aplicaciones que acceden a bases de datos, Kotlin es una opción popular y efectiva debido a su soporte integrado para el acceso a bases de datos y su sintaxis concisa y expresiva. El uso de Kotlin en la programación de aplicaciones que acceden a bases de datos permite a los desarrolladores crear aplicaciones más seguras, confiables y escalables.    
+- Un sistema gestor de bases de datos relacional es un software utilizado para almacenar, organizar y manipular datos en una base de datos relacional. Los sistemas gestores de bases de datos relacionales tienen características como una estructura basada en tablas, relaciones entre tablas, consultas complejas, integridad de los datos y escalabilidad. Los métodos de acceso a sistemas gestores de bases de datos relacionales incluyen la API JDBC y el ORM.    
+- Los métodos de acceso a bases de datos incluyen JDBC, ORM, JPA y Spring Data. JDBC proporciona una interfaz común para acceder a bases de datos relacionales desde aplicaciones Java. El ORM y JPA proporcionan una interfaz orientada a objetos para acceder a los datos de la base de datos. Spring Data proporciona una abstracción de acceso a datos para aplicaciones Java. Los diferentes métodos de acceso a bases de datos tienen sus propias ventajas y desventajas. Es importante elegir el método adecuado según las necesidades de la aplicación. Si se requiere un control más granular sobre las consultas y las transacciones, JDBC puede ser la mejor opción. Si se busca una abstracción de acceso a datos orientada a objetos, ORM, JPA o Spring Data pueden ser la mejor opción.    
+- Debemos elegir la forma de mostrar los resultados que mejor se adapte a las necesidades de nuestros usuarios y al tipo de aplicación que estamos desarrollando. Es importante que la presentación de los datos sea clara y fácil de entender para que los usuarios puedan interactuar con ellos de manera efectiva.     
+- Es importante manejar adecuadamente los errores que se producen durante la interación de base de datos, por ejemplo al conectarnos, al inserción de datos, etc. Podemos utilizar bloques try-catch en Kotlin y JDBC para capturar y manejar estas excepciones de forma adecuada.    
 
-## Ejemplo
+### 8. Ejemplo
 - [Servicio de usuario, haciendo uso del patron DAO](https://github.com/revilofe/UserService)
 
-## Fuente y bibliografía
+### 9. Fuente y bibliografía
 - [The DAO Pattern](https://www.baeldung.com/java-dao-pattern)
 - [The DTO Pattern](https://www.baeldung.com/java-dto-pattern)
 - [Programación - 08 Programación con Bases de Datos - José Luis González](https://github.com/joseluisgs/Programacion-08-2022-2023)

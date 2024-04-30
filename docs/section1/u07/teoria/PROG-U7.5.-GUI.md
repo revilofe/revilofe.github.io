@@ -996,9 +996,10 @@ El patrón **State Hosting** ofrece las siguientes ventajas:
   * pintar información: Los datos tiene un flujo top-down
   * elevar eventos: Los eventos tiene un flujo bottom-up.
 
-![Ilustración del flujo de datos en una IU de Compose, desde los objetos de nivel superior hasta sus elementos secundarios.](https://developer.android.com/images/jetpack/compose/mmodel-flow-data.png?hl=es-419)
+![Ilustración del flujo de datos en una IU de Compose, desde los objetos de nivel superior hasta sus elementos secundarios.](assets/modelFlowDAta.png)
 
-![Ilustración de cómo responden los elementos de la IU a la interacción mediante la activación de eventos controlados por la lógica de la app.](https://developer.android.com/images/jetpack/compose/mmodel-flow-events.png?hl=es-419)[Mas informacion](https://developer.android.com/jetpack/compose/mental-model?hl=es-419#paradigm)
+![Ilustración de cómo responden los elementos de la IU a la interacción mediante la activación de eventos controlados por la lógica de la app.](https://developer.android.com/images/jetpack/compose/mmodel-flow-events.png?hl=es-419)[Mas informacion](assets/EventoFlow.png)
+
 
 A continuación, vamos a aplicar el patrón **State Hosting** a la aplicación de alumnos de la lección anterior. Para ello, seguiremos los siguientes pasos:
 

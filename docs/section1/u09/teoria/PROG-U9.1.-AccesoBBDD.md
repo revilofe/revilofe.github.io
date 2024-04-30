@@ -718,8 +718,7 @@ Mas información en [CRUD](https://github.com/joseluisgs/Programacion-08-2022-20
 ### 8. Ejemplo
 - [Servicio de usuario, haciendo uso del patron DAO](https://github.com/revilofe/UserService)
 
-### 9. Fuente y bibliografía
-- [The DAO Pattern](https://www.baeldung.com/java-dao-pattern)
+## Fuente y bibliografía
 - [The DTO Pattern](https://www.baeldung.com/java-dto-pattern)
 - [Programación - 08 Programación con Bases de Datos - José Luis González](https://github.com/joseluisgs/Programacion-08-2022-2023)
 - [Librería SQLDeLight]https://github.com/joseluisgs/Programacion-08-2022-2023#sqldelight

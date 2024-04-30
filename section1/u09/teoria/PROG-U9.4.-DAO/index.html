@@ -99,7 +99,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-access-object-dao-pattern" class="md-skip">
+        <a href="#94-data-access-object-dao-pattern" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -2566,46 +2566,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-access-object-dao-pattern" class="md-nav__link">
+  <a href="#94-data-access-object-dao-pattern" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Access Object (DAO) Pattern
+      9.4. Data Access Object (DAO) Pattern
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Data Access Object (DAO) Pattern">
+    <nav class="md-nav" aria-label="9.4. Data Access Object (DAO) Pattern">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#problematica" class="md-nav__link">
+  <a href="#1-problematica" class="md-nav__link">
     <span class="md-ellipsis">
-      Problemática
+      1. Problemática
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#solucion" class="md-nav__link">
+  <a href="#2-solucion" class="md-nav__link">
     <span class="md-ellipsis">
-      Solución
+      2. Solución
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#dao-y-el-patron-abstract-factory" class="md-nav__link">
+  <a href="#3-dao-y-el-patron-abstract-factory" class="md-nav__link">
     <span class="md-ellipsis">
-      DAO y el patrón Abstract Factory
+      3. DAO y el patrón Abstract Factory
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#conclusiones" class="md-nav__link">
+  <a href="#4-conclusiones" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusiones
+      4. Conclusiones
     </span>
   </a>
   
@@ -4076,46 +4076,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-access-object-dao-pattern" class="md-nav__link">
+  <a href="#94-data-access-object-dao-pattern" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Access Object (DAO) Pattern
+      9.4. Data Access Object (DAO) Pattern
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Data Access Object (DAO) Pattern">
+    <nav class="md-nav" aria-label="9.4. Data Access Object (DAO) Pattern">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#problematica" class="md-nav__link">
+  <a href="#1-problematica" class="md-nav__link">
     <span class="md-ellipsis">
-      Problemática
+      1. Problemática
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#solucion" class="md-nav__link">
+  <a href="#2-solucion" class="md-nav__link">
     <span class="md-ellipsis">
-      Solución
+      2. Solución
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#dao-y-el-patron-abstract-factory" class="md-nav__link">
+  <a href="#3-dao-y-el-patron-abstract-factory" class="md-nav__link">
     <span class="md-ellipsis">
-      DAO y el patrón Abstract Factory
+      3. DAO y el patrón Abstract Factory
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#conclusiones" class="md-nav__link">
+  <a href="#4-conclusiones" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusiones
+      4. Conclusiones
     </span>
   </a>
   
@@ -4187,37 +4187,37 @@
 
   <h1>9.4.-DAO</h1>
 
-<h2 id="data-access-object-dao-pattern">Data Access Object (DAO) Pattern<a class="headerlink" href="#data-access-object-dao-pattern" title="Permanent link">&para;</a></h2>
+<h2 id="94-data-access-object-dao-pattern">9.4. Data Access Object (DAO) Pattern<a class="headerlink" href="#94-data-access-object-dao-pattern" title="Permanent link">&para;</a></h2>
 <p>Prácticamente todas las aplicaciones de hoy en día, requiere acceso al menos a una fuente de datos, dichas fuentes son por lo general base de datos relacionales, por lo que muchas veces no tenemos problema en acceder a los datos, sin embargo, hay ocasiones en las que necesitamos tener más de una fuente de datos o la fuente de datos que tenemos puede variar, lo que nos obligaría a refactorizar gran parte del código. Para esto, tenemos el patrón Arquitectónico Data Access Object (DAO), el cual permite separar la lógica de acceso a datos de los Bussines Objects u Objetos de negocios, de tal forma que el DAO encapsula toda la lógica de acceso de datos al resto de la aplicación.</p>
-<h3 id="problematica">Problemática<a class="headerlink" href="#problematica" title="Permanent link">&para;</a></h3>
+<h3 id="1-problematica">1. Problemática<a class="headerlink" href="#1-problematica" title="Permanent link">&para;</a></h3>
 <p>Una de las grandes problemáticas al momento de acceder a los datos, es que <strong>la implementación y formato de la información puede variar según la fuente de los datos</strong>. Implementar la lógica de acceso a datos en la capa de lógica de negocio puedes ser un gran problema, pues tendríamos que lidiar con la lógica de negocio en sí, más la implementación para acceder a los datos, adicional, si tenemos múltiples fuentes de datos o estas pueden variar, tendríamos que implementar las diferentes lógicas para acceder las diferentes fuentes de datos, como podrían ser: bases de datos relacionales, No SQL, XML, archivos planos, Webservices, etc).</p>
-<h3 id="solucion">Solución<a class="headerlink" href="#solucion" title="Permanent link">&para;</a></h3>
+<h3 id="2-solucion">2. Solución<a class="headerlink" href="#2-solucion" title="Permanent link">&para;</a></h3>
 <p>Dado lo anterior, <strong>el patrón DAO propone separar por completo la lógica de negocio de la lógica para acceder a los datos</strong>, de esta forma, el DAO proporcionará los métodos necesarios para insertar, actualizar, borrar y consultar la información; por otra parte, la capa de negocio solo se preocupa por lógica de negocio y utiliza el DAO para interactuar con la fuente de datos.</p>
 <p><img alt="" src="../assets/UML-Clases.png" /></p>
 <p>Los compones que conforman el patrón son:</p>
 <ul>
-<li><em><code>BusinessObject</code></em> : representa un objeto con la lógica de negocio.</li>
-<li><em><code>DataAccessObject</code></em> : representa una capa de acceso a datos que oculta la fuente y los detalles técnicos para recuperar los datos.</li>
-<li><em><code>TransferObject</code></em> : este es un objeto plano que implementa el patrón <a href="https://www.oscarblancarteblog.com/2018/11/30/data-transfer-object-dto-patron-diseno/">Data Transfer Object (DTO)</a>, el cual sirve para transmitir la información entre el DAO y el Business Service.</li>
-<li><em><code>DataSource</code></em> : representa de forma abstracta la fuente de datos, la cual puede ser una base de datos, Webservices, LDAP, archivos de texto, etc.</li>
+<li><em><code>BusinessObject</code></em> : representa un objeto con la lógica de negocio.    </li>
+<li><em><code>DataAccessObject</code></em> : representa una capa de acceso a datos que oculta la fuente y los detalles técnicos para recuperar los datos.    </li>
+<li><em><code>TransferObject</code></em> : este es un objeto plano que implementa el patrón <a href="https://www.oscarblancarteblog.com/2018/11/30/data-transfer-object-dto-patron-diseno/">Data Transfer Object (DTO)</a>, el cual sirve para transmitir la información entre el DAO y el Business Service.     </li>
+<li><em><code>DataSource</code></em> : representa de forma abstracta la fuente de datos, la cual puede ser una base de datos, Webservices, LDAP, archivos de texto, etc.    </li>
 </ul>
 <p>El siguiente diagrama muestra mejor la forma en que funciona el patrón, pues muestra de forma secuencial la forma en que se ejecutaría el patrón.</p>
 <p><img alt="" src="../assets/UML-sequence.png" /></p>
 <p>El diagrama se interpreta de la siguiente manera:</p>
 <ol>
-<li>El <code>BusinessObject</code> creo u obtiene una referencia al  <code>DataAccessObject</code> .</li>
-<li>El <code>BusinessObject</code> solicita información al <code>DataAccessObject</code><ul>
-<li>El <code>DataAccessObject</code> solicita la información al <code>DataSource</code></li>
-<li>El <code>DataAccessObject</code> crea una instancia del TransferObject con los datos recuperados del <code>DataSource</code></li>
-<li>El <code>DataAccessObject</code> response con el <code>TransferObject</code> creado en los pasos anteriores.</li>
+<li>El <code>BusinessObject</code> creo u obtiene una referencia al  <code>DataAccessObject</code>.   </li>
+<li>El <code>BusinessObject</code> solicita información al <code>DataAccessObject</code>   <ul>
+<li>El <code>DataAccessObject</code> solicita la información al <code>DataSource</code>   </li>
+<li>El <code>DataAccessObject</code> crea una instancia del TransferObject con los datos recuperados del <code>DataSource</code>   </li>
+<li>El <code>DataAccessObject</code> response con el <code>TransferObject</code> creado en los pasos anteriores.    </li>
 </ul>
 </li>
-<li>El <code>BusinessObject</code> actualiza algún valor del <code>TransferObject</code><ul>
-<li>Más actualizaciones</li>
+<li>El <code>BusinessObject</code> actualiza algún valor del <code>TransferObject</code>    <ul>
+<li>Más actualizaciones   </li>
 </ul>
 </li>
-<li>El <code>BusinessObject</code> solicita el guardado de los datos actualizados al  <code>DataAccessObject</code> .<ul>
-<li>El <code>DataAccessObject</code> guarda los datos en el  <code>DataSource</code> .</li>
+<li>El <code>BusinessObject</code> solicita el guardado de los datos actualizados al  <code>DataAccessObject</code>.    <ul>
+<li>El <code>DataAccessObject</code> guarda los datos en el  <code>DataSource</code>.    </li>
 </ul>
 </li>
 </ol>
@@ -4225,7 +4225,7 @@
 <blockquote>
 <p>Hace unos días escribir sobre el patrón <a href="https://www.oscarblancarteblog.com/2018/11/30/data-transfer-object-dto-patron-diseno/">Data Transfer Object (DTO)</a> por si quieres profundizar en el tema.</p>
 </blockquote>
-<h3 id="dao-y-el-patron-abstract-factory">DAO y el patrón Abstract Factory<a class="headerlink" href="#dao-y-el-patron-abstract-factory" title="Permanent link">&para;</a></h3>
+<h3 id="3-dao-y-el-patron-abstract-factory">3. DAO y el patrón Abstract Factory<a class="headerlink" href="#3-dao-y-el-patron-abstract-factory" title="Permanent link">&para;</a></h3>
 <p>Hasta este punto solo hemos analizado como trabajaríamos si solo tuviéramos una fuente de datos, sin embargo, existe ocasiones donde requerimos obtener datos de más de una fuente, y es allí donde entra el patrón de diseño <a href="https://reactiveprogramming.io/books/design-patterns/es/catalog/abstract-factory">Abstract Factory</a></p>
 <p>Mediante el patrón Abstract Factory podemos definir una serie de familias de clases que permitan conectarnos a las diferentes fuentes de datos. Para esto, examinaremos un sistema de autenticación de usuarios, el cual puede leer los usuarios en una base de datos o sobre un XML, adicional, el sistema generara registros de login que podrán ser utilizados para auditorias.</p>
 <p>Lo primero sería implementar las clases para acceder de las dos fuentes:</p>
@@ -4238,24 +4238,22 @@
 <p><img alt="" src="../assets/UML-DAO-factory.png" /></p>
 <p>Analicemos como quedaría la secuencia de ejecución</p>
 <ol>
-<li>El <code>BusinessObject</code> solicita la creación de un <code>DAOFactory</code> para SQL<ul>
-<li>El <code>DAOFactory</code> crea una instancia de la clase *SQLDAOFactory *y la retorna</li>
+<li>El <code>BusinessObject</code> solicita la creación de un <code>DAOFactory</code> para SQL    <ul>
+<li>El <code>DAOFactory</code> crea una instancia de la clase <em>SQLDAOFactory</em> y la retorna    </li>
 </ul>
 </li>
-<li>El <code>BusinessObject</code> solicita al <code>SQLDAOFactory</code> la creación del <code>SQLUserDAO</code> para interactuar con los usuarios.<ul>
-<li>El <code>SQLDAOFactory</code> crea una nueva instancia del <code>SQLUserDAO</code></li>
-<li>El <code>SQLDAOFactory</code> retorna la instancia creada del <code>SQLUserDAO</code></li>
-</ul>
-</li>
-<li>El <code>BusinessObject</code> solicita el listado de todos los usuarios registrados al <code>SQLUserDAO</code><ul>
-<li>El <code>SQLUserDAO</code> recupera los usuarios del <em>SQLDataSource</em></li>
-<li>El <code>SQLUserDAO</code> crea un <code>TransferObject</code> con los datos recuperados del paso anterior.</li>
-<li>El <code>SQLUserDAO</code> retorna el <code>TransferObject</code> creado en el paso anterior.</li>
+<li>El <code>BusinessObject</code> solicita al <code>SQLDAOFactory</code> la creación del <code>SQLUserDAO</code> para interactuar con los usuarios.   </li>
+<li>El <code>SQLDAOFactory</code> crea una nueva instancia del <code>SQLUserDAO</code>    </li>
+<li>El <code>SQLDAOFactory</code> retorna la instancia creada del <code>SQLUserDAO</code>    </li>
+<li>El <code>BusinessObject</code> solicita el listado de todos los usuarios registrados al <code>SQLUserDAO</code>    <ul>
+<li>El <code>SQLUserDAO</code> recupera los usuarios del <em>SQLDataSource</em>    </li>
+<li>El <code>SQLUserDAO</code> crea un <code>TransferObject</code> con los datos recuperados del paso anterior.    </li>
+<li>El <code>SQLUserDAO</code> retorna el <code>TransferObject</code> creado en el paso anterior.    </li>
 </ul>
 </li>
 </ol>
 <p>Adicional a los pasos que hemos listado aquí, podríamos solicitar al <code>SQLDAOFactory</code> la creación del <code>SQLAuditDAO</code> o incluso, solicitar al <code>DAOFactory</code> la creación del <code>XMLFactory</code> para interactuar con la fuente de datos en XML.</p>
-<h3 id="conclusiones">Conclusiones<a class="headerlink" href="#conclusiones" title="Permanent link">&para;</a></h3>
+<h3 id="4-conclusiones">4. Conclusiones<a class="headerlink" href="#4-conclusiones" title="Permanent link">&para;</a></h3>
 <p>El patrón DAO es sin lugar a duda, unos de los más utilizados en la actualidad, ya que es fácil de implementar y proporciona claros beneficios, incluso, si solo tenemos una fuente de datos y esta no cambia, pues permite separar por completo la lógica de acceso a datos en una capa separada y así solo nos preocupamos por la lógica de negocio sin preocuparnos de donde viene los datos o los detalles técnicos para consultarlos o actualizarlos.</p>
 <h2 id="fuente-y-bibliografia">Fuente y Bibliografía<a class="headerlink" href="#fuente-y-bibliografia" title="Permanent link">&para;</a></h2>
 <ul>

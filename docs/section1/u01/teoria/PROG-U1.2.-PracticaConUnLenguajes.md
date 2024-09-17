@@ -27,11 +27,11 @@ Los programas están compuestos por un conjunto de bloques
 
 Python es un lenguaje de programación de alto nivel. Las principales características de Python son las siguientes:
 
-* **Es multiparadigma** , ya que soporta la programación imperativa, programación orientada a objetos y funcional.
-* **Es multiplataforma** : Se puede encontrar un intérprete de Python para los principales sistemas operativos:  *Windows* , *Linux* y  *Mac OS* . Además, se puede reutilizar el mismo código en cada una de las plataformas.
-* **Es dinámicamente tipado** : Es decir, el tipo de las variables se decide en tiempo de ejecución.
-* **Es fuertemente tipado:** No se puede usar una variable en un contexto fuera de su tipo. Si se quisiera, habría que hacer una conversión de tipos.
-* **Es interpretado** : El código no se compila a lenguaje máquina.
+* **Es multiparadigma**, ya que soporta la programación imperativa, programación orientada a objetos y funcional.
+* **Es multiplataforma**: Se puede encontrar un intérprete de Python para los principales sistemas operativos como *Windows*, *Linux* y *Mac OS*. Además, se puede reutilizar el mismo código en cada una de las plataformas.
+* **Es dinámicamente tipado**: Es decir, el tipo de las variables se decide en tiempo de ejecución.
+* **Es fuertemente tipado**: No se puede usar una variable en un contexto fuera de su tipo. Si se quisiera, habría que hacer una conversión de tipos.
+* **Es interpretado**: El código no se compila a lenguaje máquina.
 
 > El hecho de que Python sea **interpretado** quiere decir que **hace falta un intérprete** que permita ejecutar un programa o script escrito en Python sin necesidad de compilarlo.
 

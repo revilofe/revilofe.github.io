@@ -250,8 +250,8 @@ Fin
 
 ```
 Inicio
-Lee num1
-Lee num2
+    Lee num1
+    Lee num2
 
     Si (num1 > num2) Entonces
         Escribe num1 + “ es mayor que ” + num2

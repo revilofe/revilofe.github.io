@@ -1,21 +1,17 @@
 <!-- Con # se ponen los títulos -->
 
-# Programación
-
+# Programación  
 ![](./assets/PR-U0.1.1.-Presentacion-tarjeta.png)<!-- .element height="50%" width="50%" -->
+
 **2024/2025**
 
 ---
-
 # Indice
 
 ---
-
-# Presentación.
-
-## Profesor.
-
-* Profesor: Eduardo Fernández Oliver
+# Presentación.  
+## Profesor.  
+* Profesor: Eduardo Fernández Oliver  
   * _[efernandez@iesrafaelalberti\.es](mailto:efernandez@iesrafaelalberti.es)_
   * _[eferoli398@g.educaand\.es](mailto:eferoli398@g.educaand.es)_
   * _[https://www.linkedin.com/in/efoliver/](https://www.linkedin.com/in/efoliver/)_
@@ -23,8 +19,7 @@
 * Tutor + Tutor Dual de DAW A
 
 
-## Alumnos.
-
+## Alumnos.  
 Presentación entre vosotros:
   * Edad
   * Estudios previos
@@ -33,22 +28,18 @@ Presentación entre vosotros:
 
 ---
 
-# Información .
-
-## Ciclo.
-
+# Información.    
+## Ciclo.  
 [Información del módulo obtenida de la normativa vigente](https://drive.google.com/file/d/1m0ScGvyFUNazalNCOQFjBW_9gaQIJXll/view?usp=sharing)
 
 
 
-## Módulo: Objetivos generales y Competencias PPS.
-
+## Módulo: Objetivos generales y Competencias PPS.    
 [Información del módulo obtenida de la normativa vigente](https://drive.google.com/file/d/1m0ScGvyFUNazalNCOQFjBW_9gaQIJXll/view?usp=sharing)
 
 
 
-## Módulo: Objetivos RA.
-
+## Módulo: Objetivos RA.  
 |  RA  | LOGRO                | *OBJETO*                                                   | *ACCIONES EN EL CONTEXTO DE APRENDIZAJE*                                                                      |
 | :--: | :------------------- | :--------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------ |
 | RA 1 | **Conoce**           | **la estructura de un programa informático**              | **identificando y relacionando los elementos propios del lenguaje de programación utilizado**                |
@@ -64,53 +55,36 @@ Presentación entre vosotros:
 <!-- .element.table: style="font-size:50%;" -->
 
 ---
-
-# Contenidos.
-
-## Contenido.
-Planificación aproximada
-
-![Unidades](./assets/PR-U0.1.1.-Presentacion-unidades.png)<!-- .element height="75%" width="75%" -->
-
+# Contenidos.  
+![Unidades](./assets/PR-U0.1.1.-Presentacion-unidades.png)<!-- .element height="50%" width="50%" -->
 
 ---
-
-# Planificación y Horario.
-
-## Planificación.
-
-Como toda planificación, puede sufrir cambios.
-![](assets/prog-planif.png)
-
-Los sufrirá, hay que adaptarla a la dual.
+# Planificación y Horario.  
+![](assets/prog-planif.png)<!-- .element height="75%" width="75%" -->
+Como toda planificación, puede sufrir cambios. Los sufrirá, hay que adaptarla a la dual.
 
 
-## Horario. 
-
-Horario (8 horas semanales)
+## Horario.  
+Horario (8 horas semanales)  
 ![](./assets/PR-U0.1.1.-Presentacion-horario.png)<!-- .element height="75%" width="75%" -->
 
 ---
 
-# Evaluación y recuperación.
-
-## Evaluación I.
-
+# Evaluación y recuperación.  
+## Evaluación I.  
 * Se supera el módulo con una calificación mayor o igual a 5.
 * La nota se obtiene haciendo la media de los resultados de aprendizaje (RA).
 * Un RA no superado, implica no superar el módulo.
 
 
-## Evaluación II.
-
+## Evaluación II.  
 * Los calificación de los RA se obtienen de la media de la calificación de los criterios de evaluación (CE).
-* Los CE se evalúan y califican a través del trabajo en clases y la realización de prácticas y pruebas específicas.
+* Los CE se evalúan y califican a través del trabajo en clases y la realización de prácticas y pruebas específicas.  
 
 ![](./assets/IS-U011-Presentacion2.png)
 
 
-## Evaluación III.
-
+## Evaluación III.  
 * Hay 3 Evaluaciones Parciales
   * Diciembre
   * Marzo
@@ -119,64 +93,56 @@ Horario (8 horas semanales)
   * Junio
 
 
-## Evaluación IV.
-
+## Evaluación IV.  
 Este año tenemos la formación dual, por tanto, habrá que adaptar la evaluación a la formación dual, y habrá cambios que se irán comunicando.
 
 
-## Recuperación
-
+## Recuperación  
 * La recuperación de los RA pendientes se realiza durante el mes de junio.
 * Consistirá en un conjunto de prácticas y/o pruebas sobre los criterios de evaluación relacionados con el resultado de aprendizaje no superado, que tendrán que defenderse.
 
 
-## Resumen.
-
+## Resumen.  
 ![](assets/pro-eva&rec.png)
 
 ---
 
-# Metodología y comunicación.
-
-## Metodología.
-
-Por unidad:
-
+# Metodología y comunicación.    
+## Metodología I.    
+Por unidad:  
 * Explicar contenidos relacionados con criterios de evaluación asociados al RA con el que se está trabajando. Vuestros apuntes son importantes.
 * Trabajar los contenidos en grupo e individualmente, guiados por diapositivas, materiales de la red y discusión en grupo.
+
+
+## Metodología II.  
+Por unidad:  
 * Realización de ejercicios en los que aplicar los contenidos.
 * Puesta en práctica con trabajos y ejercicios que tendrán que defender en clase.
 
 
-## Comunicación.
-
+## Comunicación.  
 * Comunicación **oficial, preferida y obligada**: Asistiendo al aula y hablando directamente con el profesor.
 * Otros medios secundarios **opcionales**: Correo electrónico y Moodle.
 
 **ATENCIÓN!!!:** ***TEN EN CUENTA QUE ESTAS EN UNA FORMACIÓN PRESENCIAL.***
 
 ---
-
-# Recomendaciones y aclaraciones.
-
-## Recomendaciones.
-
+# Recomendaciones y aclaraciones.  
+## Recomendaciones.  
 * Recomendaciones al alumnado:
   * Leer y entender la programación del módulo.
   * Poner foto actualizada en moodle.
   * Añadir correo electrónico correcto en moodle.
 
 
-## Aclaraciones I.
-
+## Aclaraciones I.  
 * Formación presencial, por tanto la comunicación presencial.
 * Como regla general:
   - Los ejercicios individuales se corregirán en clase delante del profesor. Defendiendo el trabajo.
   - Los ejercicios en grupo se podrán presentar en grupo o un componente del grupo de forma aleatoria. El método será elegido por el profesor.
 
 
-## Aclaraciones II.
-
+## Aclaraciones II.  
 * Causas para no corregir una prueba (ejercicio, práctica, examen)
   - No se cumple las condiciones de entrega.
   - Se ha detectado la posibilidad de copiado de todo o parte de la prueba. Esto incluye textos (total o parcial) de internet y/o sin hacer referencia a la fuente.
@@ -184,38 +150,32 @@ Por unidad:
   - En caso de código, no compila.
 
 
-## Aclaraciones II.
-
+## Aclaraciones II.  
 * OJO con Chat GPT, Copilot, etc. -> Asegurate de saber que haces.
 
 
-## Aclaraciones III.
-
+## Aclaraciones III.  
 * Causas para no corregir una prueba (ejercicio, práctica, examen)
   - Si la entrega es el git, añadir en el README.md instrucciones para compilar y ejecutar el código, descripción de la aplicación, autoría y referencias.
 
 
-## Aclaraciones IV.
-
+## Aclaraciones IV.  
 * Es responsabilidad del alumnado la custodia y guarda de los trabajos, documentos, y cualquier otro material que realice durante las prácticas o en clase, por tanto, tendrán que asegurarse que quedan a salvo siempre que abandonen el aula, no siendo responsabilidad del profesorado la perdida de este material.
 * Cloud google, github, gitlab, bitbucket, etc.
 
 
-## Aclaraciones V.
-
+## Aclaraciones V.  
 * En cuando a las fechas de entrega de prácticas/trabajos/ejercicios, tendrán una fecha de entrega clara, **que no se podrá cambiar bajo ninguna circunstancia**. Quedando a elección del profesor posibles excepciones justificadas.
 * La entrega consiste en: subida a la plataforma (por defecto) en fecha + defensa en clase.
 
 ---
 
-# Dudas.
-
+# Dudas.    
 ![](./assets/IS-U011-Presentacion4.png)
 
 ---
 
-# Fin!
-
+# Fin!  
 ![](./assets/Fin.png) <!-- .element height="50%" width="50%" -->
 
 ¡¡Gracias!!

@@ -1,8 +1,9 @@
 <!-- Con # se ponen los títulos -->
 
 # Programación
-![Logo Alberti](assets/logo-iesra.png) <!-- .element height="50%" width="50%" -->
--2023/2024-
+
+![](./assets/PR-U0.1.1.-Presentacion-tarjeta.png)<!-- .element height="50%" width="50%" -->
+**2024/2025**
 
 ---
 
@@ -10,29 +11,46 @@
 
 ---
 
-# Presentación
+# Presentación.
 
+## Profesor.
 
-## Nos conocemos.
 * Profesor: Eduardo Fernández Oliver
   * _[efernandez@iesrafaelalberti\.es](mailto:efernandez@iesrafaelalberti.es)_
+  * _[eferoli398@g.educaand\.es](mailto:eferoli398@g.educaand.es)_
   * _[https://www.linkedin.com/in/efoliver/](https://www.linkedin.com/in/efoliver/)_
   * _[https://revilofe.github.io/](https://revilofe.github.io/)_
-* Alumnos (Edad, Estudios previos, Conocimiento de programación, Aspiraciones)
+* Tutor + Tutor Dual de DAW A
+
+
+## Alumnos.
+
+Presentación entre vosotros:
+  * Edad
+  * Estudios previos
+  * Conocimiento de programación
+  * Aspiraciones
 
 ---
 
-# Objetivos fundamentales
-RecomendadPR-U0.1.1.-Presentacion.htmlo la consulta de la [programación](https://revilofe.github.io/) para seguir esta presentación.
+# Información .
+
+## Ciclo.
+
+[Información del módulo obtenida de la normativa vigente](https://drive.google.com/file/d/1m0ScGvyFUNazalNCOQFjBW_9gaQIJXll/view?usp=sharing)
 
 
-## Objetivos generales
-La formación de este módulo contribuye a alcanzar los objetivos generales de este ciclo formativo que se relacionan a continuación: e), j), q), w).
+
+## Módulo: Objetivos generales y Competencias PPS.
+
+[Información del módulo obtenida de la normativa vigente](https://drive.google.com/file/d/1m0ScGvyFUNazalNCOQFjBW_9gaQIJXll/view?usp=sharing)
 
 
-## Objetivos RA
+
+## Módulo: Objetivos RA.
+
 |  RA  | LOGRO                | *OBJETO*                                                   | *ACCIONES EN EL CONTEXTO DE APRENDIZAJE*                                                                      |
-| :----: | :--------------------- | :----------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- |
+| :--: | :------------------- | :--------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------ |
 | RA 1 | **Conoce**           | **la estructura de un programa informático**              | **identificando y relacionando los elementos propios del lenguaje de programación utilizado**                |
 | RA 2 | **Escribe y prueba** | **programas sencillos**                                    | **reconociendo y aplicando los fundamentos de la programación orientada a objetos.**                         |
 | RA 3 | **Escribe y depura** | **código**                                                | **analizando y utilizando las estructuras de control del lenguaje.**                                          |
@@ -42,75 +60,57 @@ La formación de este módulo contribuye a alcanzar los objetivos generales de e
 | RA 7 | **Desarrolla**       | **programas**                                              | **aplicando características avanzadas de los lenguajes orientados a objetos y del entorno de programación** |
 | RA 8 | **Utiliza**          | **bases de datos orientadas a objetos**                    | **analizando sus características y aplicando técnicas para mantener la persistencia de la información**    |
 | RA 9 | **Gestiona**         | **información almacenada en bases de datos relacionales** | **manteniendo la integridad y consistencia de los datos**                                                     |
+
 <!-- .element.table: style="font-size:50%;" -->
-
-
-## Competencias PPS
-La formación del módulo contribuye a alcanzar las competencias profesionales, personales y sociales de este título que se relacionan a continuación: a), e), f), i), j, t), w).
 
 ---
 
-# Contenidos
-
+# Contenidos.
 
 ## Contenido.
-| Unidades didácticas | Descripción unidad                                | Sesiones | RA | Criterios |              |
-| :--------------------: | :--------------------------------------------------- | :--------: | :---: | :---------: | :-------------: |
-|         UD1         | Introducción a la programación                   |    16    | RA1 |  a)..i)  | 1er trimestre |
-|         UD2         | Estructura de los programas                        |    16    | RA2 |  a)..h)  |              |
-|         UD3         | Introducción a la POO                             |    24    | RA3 |  a)..i)  |              |
-|         UD4         | Estructuras de datos predefinidas usando POO       |    24    | RA4 |  a)..i)  |              |
-|         UD5         | Creación de estructuras de datos usando POO       |    22    | RA5 |  a)..k)  | 2o  trimestre |
-|         UD6         | reación de programas haciendo uso de POO avanzada |    30    | RA6 |  a)..i)  |              |
-|         UD7         | Operaciones de entrada y salida y IUG              |    26    | RA7 |  a)..h)  |              |
-|         UD8         | Persistencia y acceso a datos en BD OO             |    38    | RA8 |  a)..h)  |              |
-|         UD9         | Persistencia y acceso a datos en BD Relacionales   |    48    | RA9 |  a)..g)  | 3er trimestre |
-<!-- .element.table: style="font-size:50%;" -->
+Planificación aproximada
+
+![Unidades](./assets/PR-U0.1.1.-Presentacion-unidades.png)<!-- .element height="75%" width="75%" -->
+
 
 ---
 
 # Planificación y Horario.
 
-
 ## Planificación.
-![](assets/prog-planif.png)
+
 Como toda planificación, puede sufrir cambios.
+![](assets/prog-planif.png)
+
+Los sufrirá, hay que adaptarla a la dual.
+
+
+## Horario. 
+
+Horario (8 horas semanales)
+![](./assets/PR-U0.1.1.-Presentacion-horario.png)<!-- .element height="75%" width="75%" -->
 
 ---
 
+# Evaluación y recuperación.
 
-## Horario. Actualizar al 2023/2024!!
-Horario (8 horas semanales)  
+## Evaluación I.
 
-|     HORA     | L |  M  |  X  |  J  |  V  | 
-| :-------------: | :-: | :---: | :---: | :---: | :---: |
-| 08:00 - 09:00 | - |  -  | PRO |  -  | PRO | 
-| 09:00 - 10:00 | - |  -  | PRO |  -  | PRO |
-| 10:00 - 11:00 | - | PRO |  -  | PRO |  -  |
-| 11:00 - 11:30 | x |  x  |  x  |  x  |  x  |
-| 11:30 - 12:30 | - | PRO |  -  | PRO |  -  |
-| 12:30 - 13:30 | - |  -  |  -  |  -  |  -  |
-| 13:30 - 14:30 | - |  -  |  -  |  -  |  -  |
-<!-- .element.table: style="font-size:50%;" -->
-
-
-# Evaluación y recuperación
-
-
-## Evaluación I
 * Se supera el módulo con una calificación mayor o igual a 5.
-* La nota se obtiene haciendo la media ponderada de los resultados de aprendizaje (RA).
+* La nota se obtiene haciendo la media de los resultados de aprendizaje (RA).
 * Un RA no superado, implica no superar el módulo.
 
 
-## Evaluación II
-* Los calificación de los RA se obtienen de la media ponderada de la calificación de los criterios de evaluación (CE).
-* Los CE se evalúan y califican a través del trabajo en clases y la realización de prácticas y pruebas especificas.
+## Evaluación II.
+
+* Los calificación de los RA se obtienen de la media de la calificación de los criterios de evaluación (CE).
+* Los CE se evalúan y califican a través del trabajo en clases y la realización de prácticas y pruebas específicas.
 
 ![](./assets/IS-U011-Presentacion2.png)
 
 
-## Evaluación III
+## Evaluación III.
+
 * Hay 3 Evaluaciones Parciales
   * Diciembre
   * Marzo
@@ -119,28 +119,37 @@ Horario (8 horas semanales)
   * Junio
 
 
+## Evaluación IV.
+
+Este año tenemos la formación dual, por tanto, habrá que adaptar la evaluación a la formación dual, y habrá cambios que se irán comunicando.
+
+
 ## Recuperación
+
 * La recuperación de los RA pendientes se realiza durante el mes de junio.
-* Consistirá en un conjunto de prácticas y/o pruebas sobre los criterios de evaluación relacionados con el resultado de aprendizaje no superado.
+* Consistirá en un conjunto de prácticas y/o pruebas sobre los criterios de evaluación relacionados con el resultado de aprendizaje no superado, que tendrán que defenderse.
 
 
-## Resumen
+## Resumen.
+
 ![](assets/pro-eva&rec.png)
 
 ---
 
-# Metodología y comunicación
+# Metodología y comunicación.
 
+## Metodología.
 
-## Metodología
 Por unidad:
 
-* Explicar contenidos relacionados con criterios de evaluación  asociados al RA con el que se está trabajando.
+* Explicar contenidos relacionados con criterios de evaluación asociados al RA con el que se está trabajando. Vuestros apuntes son importantes.
 * Trabajar los contenidos en grupo e individualmente, guiados por diapositivas, materiales de la red y discusión en grupo.
-* Puesta en práctica con trabajos.
+* Realización de ejercicios en los que aplicar los contenidos.
+* Puesta en práctica con trabajos y ejercicios que tendrán que defender en clase.
 
 
-## Comunicación
+## Comunicación.
+
 * Comunicación **oficial, preferida y obligada**: Asistiendo al aula y hablando directamente con el profesor.
 * Otros medios secundarios **opcionales**: Correo electrónico y Moodle.
 
@@ -148,46 +157,59 @@ Por unidad:
 
 ---
 
-# Recomendaciones y aclaraciones
+# Recomendaciones y aclaraciones.
 
+## Recomendaciones.
 
-## Recomendaciones
 * Recomendaciones al alumnado:
   * Leer y entender la programación del módulo.
   * Poner foto actualizada en moodle.
   * Añadir correo electrónico correcto en moodle.
 
 
-## Aclaraciones I
+## Aclaraciones I.
+
 * Formación presencial, por tanto la comunicación presencial.
 * Como regla general:
-  - Los ejercicios individuales se corregirán en clase delante del profesor.
+  - Los ejercicios individuales se corregirán en clase delante del profesor. Defendiendo el trabajo.
   - Los ejercicios en grupo se podrán presentar en grupo o un componente del grupo de forma aleatoria. El método será elegido por el profesor.
 
 
-## Aclaraciones II
+## Aclaraciones II.
+
 * Causas para no corregir una prueba (ejercicio, práctica, examen)
   - No se cumple las condiciones de entrega.
-  - Se ha detectado la posibilidad de copiado de todo o parte de la prueba. Esto incluye textos (total o parcial) de internet y/o sin hacer referencia a la fuente
+  - Se ha detectado la posibilidad de copiado de todo o parte de la prueba. Esto incluye textos (total o parcial) de internet y/o sin hacer referencia a la fuente.
   - Se entrega fuera de plazo (aunque sean unos segundos).
   - En caso de código, no compila.
 
 
-## Aclaraciones III
+## Aclaraciones II.
+
+* OJO con Chat GPT, Copilot, etc. -> Asegurate de saber que haces.
+
+
+## Aclaraciones III.
+
 * Causas para no corregir una prueba (ejercicio, práctica, examen)
   - Si la entrega es el git, añadir en el README.md instrucciones para compilar y ejecutar el código, descripción de la aplicación, autoría y referencias.
 
 
-## Aclaraciones IV
+## Aclaraciones IV.
+
 * Es responsabilidad del alumnado la custodia y guarda de los trabajos, documentos, y cualquier otro material que realice durante las prácticas o en clase, por tanto, tendrán que asegurarse que quedan a salvo siempre que abandonen el aula, no siendo responsabilidad del profesorado la perdida de este material.
+* Cloud google, github, gitlab, bitbucket, etc.
 
 
-## Aclaraciones V
+## Aclaraciones V.
+
 * En cuando a las fechas de entrega de prácticas/trabajos/ejercicios, tendrán una fecha de entrega clara, **que no se podrá cambiar bajo ninguna circunstancia**. Quedando a elección del profesor posibles excepciones justificadas.
+* La entrega consiste en: subida a la plataforma (por defecto) en fecha + defensa en clase.
 
 ---
 
-# Dudas
+# Dudas.
+
 ![](./assets/IS-U011-Presentacion4.png)
 
 ---
@@ -200,7 +222,7 @@ Por unidad:
 
 ---
 
-# Primeros pasos
+# Primeros pasos.
 
 1. Identificar tu **email: correo electrónico**: xxx@g.educaand.es
 2. Acceder a moodle. Configurar tu usuario con email y foto.

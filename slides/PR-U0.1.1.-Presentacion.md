@@ -195,14 +195,14 @@ En clase, acordáis hablar conmigo.
 
 
 ## Tareas.    
-- Los módulos ya cursados y aprobados: SOLICITUD DE CONVALIDACIÓN DE MÓDULOS (antes del 30 de septiembre).
-– Salidas anticipadas/Llegadas tarde: INCOMPATIBILIDADES HORARIAS POR EL TRABAJO (se analiza y estudia con la jefa de estudios).
-– Otros asuntos (comentar con el tutor si es necesario rellenar el formulario).
+- Los módulos ya cursados y aprobados: SOLICITUD DE CONVALIDACIÓN DE MÓDULOS (antes del 30 de septiembre).  
+- Salidas anticipadas/Llegadas tarde: INCOMPATIBILIDADES HORARIAS POR EL TRABAJO (se analiza y estudia con la jefa de estudios).   
+- Otros asuntos (comentar con el tutor si es necesario rellenar el formulario).
 
 
 ## Observaciones
-- Faltas: deben justificarse antes de 5 días. Posibles causas: enfermedad (debe acudir al médico), causas laborales ”puntuales” (debidamente justificadas)…
-- Curso presencial: Además de los exámenes, debidamente notificados con antelación, el profes@r podrá poner prácticas evaluables en cualquiera de las clases diarias.
+- Faltas: deben justificarse antes de 5 días. Posibles causas: enfermedad (debe acudir al médico), causas laborales ”puntuales” (debidamente justificadas).   
+- Curso presencial: Además de los exámenes, debidamente notificados con antelación, el profes@r podrá poner prácticas evaluables en cualquiera de las clases diarias.  
 - Falta de asistencia de un profes@r: No justifica la falta del alumnado.
 
 
@@ -250,9 +250,9 @@ Bajas de oficio: 10 faltas injustificadas implica la baja de oficio, existe una 
 ## RRSS Centro.
 - https://es-es.facebook.com/IESAlbertiCadiz/
 - https://twitter.com/iesalberticadiz
-- https://www.instagram.com/iesalberticadiz/?hl=es
- 
- 
+- https://www.instagram.com/iesalberticadiz/?hl=es   
+
+
 ## RRSS otras.
 - Emprendimiento: https://x.com/AE_IESRACadiz
 - IA&BD: https://x.com/FPIABigData
@@ -267,14 +267,15 @@ Bajas de oficio: 10 faltas injustificadas implica la baja de oficio, existe una 
 ## Fin!  
 ![](./assets/Fin.png) <!-- .element height="50%" width="50%" -->
 
-¡¡Gracias y buen curso!!
+**¡¡Gracias y buen curso!!**
 
 ---
-
-# Primeros pasos.
-
+# Primeros pasos I.
 1. Identificar tu **email: correo electrónico**: xxx@g.educaand.es
 2. Acceder a moodle. Configurar tu usuario con email y foto.
 3. Rellenar los formularios que hay en la moodle. Sirven para entornos.
+
+
+# Primeros pasos II.
 4. Darte de alta en github.com con tu email, solicitan acceso PRO por ser estudiante.
 5. Darte de alta en jetbrains con tu email, solicitando acceso a las herramientas por ser estudiante.

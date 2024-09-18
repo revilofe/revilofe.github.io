@@ -1,16 +1,15 @@
 <!-- Con # se ponen los títulos -->
 
-# Programación  
+## Programación  
 ![](./assets/PR-U0.1.1.-Presentacion-tarjeta.png)<!-- .element height="50%" width="50%" -->
 
 **2024/2025**
 
 ---
-# Indice
+## Indice
 
 ---
-# Presentación.  
-## Profesor.  
+## Presentación profesor.  
 * Profesor: Eduardo Fernández Oliver  
   * _[efernandez@iesrafaelalberti\.es](mailto:efernandez@iesrafaelalberti.es)_
   * _[eferoli398@g.educaand\.es](mailto:eferoli398@g.educaand.es)_
@@ -27,19 +26,17 @@ Presentación entre vosotros:
   * Aspiraciones
 
 ---
-
-# Información.    
-## Ciclo.  
+## Info ciclo.  
 [Información del módulo obtenida de la normativa vigente](https://drive.google.com/file/d/1m0ScGvyFUNazalNCOQFjBW_9gaQIJXll/view?usp=sharing)
 
 
 
-## Módulo: Objetivos generales y Competencias PPS.    
+## Info módulo: Objetivos generales y Competencias PPS.    
 [Información del módulo obtenida de la normativa vigente](https://drive.google.com/file/d/1m0ScGvyFUNazalNCOQFjBW_9gaQIJXll/view?usp=sharing)
 
 
 
-## Módulo: Objetivos RA.  
+## Info módulo: Objetivos RA.  
 |  RA  | LOGRO                | *OBJETO*                                                   | *ACCIONES EN EL CONTEXTO DE APRENDIZAJE*                                                                      |
 | :--: | :------------------- | :--------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------ |
 | RA 1 | **Conoce**           | **la estructura de un programa informático**              | **identificando y relacionando los elementos propios del lenguaje de programación utilizado**                |
@@ -55,12 +52,13 @@ Presentación entre vosotros:
 <!-- .element.table: style="font-size:50%;" -->
 
 ---
-# Contenidos.  
+## Contenidos.  
 ![Unidades](./assets/PR-U0.1.1.-Presentacion-unidades.png)<!-- .element height="50%" width="50%" -->
 
 ---
-# Planificación y Horario.  
+## Planificación.  
 ![](assets/prog-planif.png)<!-- .element height="75%" width="75%" -->
+
 Como toda planificación, puede sufrir cambios. Los sufrirá, hay que adaptarla a la dual.
 
 
@@ -69,8 +67,6 @@ Horario (8 horas semanales)
 ![](./assets/PR-U0.1.1.-Presentacion-horario.png)<!-- .element height="75%" width="75%" -->
 
 ---
-
-# Evaluación y recuperación.  
 ## Evaluación I.  
 * Se supera el módulo con una calificación mayor o igual a 5.
 * La nota se obtiene haciendo la media de los resultados de aprendizaje (RA).
@@ -97,7 +93,7 @@ Horario (8 horas semanales)
 Este año tenemos la formación dual, por tanto, habrá que adaptar la evaluación a la formación dual, y habrá cambios que se irán comunicando.
 
 
-## Recuperación  
+## Recuperación.  
 * La recuperación de los RA pendientes se realiza durante el mes de junio.
 * Consistirá en un conjunto de prácticas y/o pruebas sobre los criterios de evaluación relacionados con el resultado de aprendizaje no superado, que tendrán que defenderse.
 
@@ -106,8 +102,6 @@ Este año tenemos la formación dual, por tanto, habrá que adaptar la evaluaci�
 ![](assets/pro-eva&rec.png)
 
 ---
-
-# Metodología y comunicación.    
 ## Metodología I.    
 Por unidad:  
 * Explicar contenidos relacionados con criterios de evaluación asociados al RA con el que se está trabajando. Vuestros apuntes son importantes.
@@ -127,7 +121,6 @@ Por unidad:
 **ATENCIÓN!!!:** ***TEN EN CUENTA QUE ESTAS EN UNA FORMACIÓN PRESENCIAL.***
 
 ---
-# Recomendaciones y aclaraciones.  
 ## Recomendaciones.  
 * Recomendaciones al alumnado:
   * Leer y entender la programación del módulo.
@@ -169,16 +162,112 @@ Por unidad:
 * La entrega consiste en: subida a la plataforma (por defecto) en fecha + defensa en clase.
 
 ---
+## Tutorias.    
+En clase, acordáis hablar conmigo.
 
-# Dudas.    
+
+## Módulos.   
+![](./assets/PR-U0.1.1.-Presentacion-modulos.png) <!-- .element height="75%" width="75%" -->
+
+
+## Equipo educativo
+![](./assets/PR-U0.1.1.-Presentacion-equipo.png) <!-- .element height="75%" width="75%" -->
+
+
+## Cursos de especialización.
+![](./assets/PR-U0.1.1.-Presentacion-cursos.png) <!-- .element height="75%" width="75%" -->
+
+
+## Centro I. Planta baja.   
+![](./assets/PR-U0.1.1.-Presentacion-plantabaja.png) <!-- .element height="75%" width="75%" -->
+
+
+## Centro II. Primera planta.   
+![](./assets/PR-U0.1.1.-Presentacion-plantaalta.png) <!-- .element height="75%" width="75%" -->
+
+
+## Centro III. Última planta.   
+![](./assets/PR-U0.1.1.-Presentacion-ultima.png)  <!-- .element height="75%" width="75%" -->
+
+
+## Herramientas.  
+- iPasen: Información, contacto, asistencia, calificaciones, etc.
+
+
+## Tareas.    
+- Los módulos ya cursados y aprobados: SOLICITUD DE CONVALIDACIÓN DE MÓDULOS (antes del 30 de septiembre).
+– Salidas anticipadas/Llegadas tarde: INCOMPATIBILIDADES HORARIAS POR EL TRABAJO (se analiza y estudia con la jefa de estudios).
+– Otros asuntos (comentar con el tutor si es necesario rellenar el formulario).
+
+
+## Observaciones
+- Faltas: deben justificarse antes de 5 días. Posibles causas: enfermedad (debe acudir al médico), causas laborales ”puntuales” (debidamente justificadas)…
+- Curso presencial: Además de los exámenes, debidamente notificados con antelación, el profes@r podrá poner prácticas evaluables en cualquiera de las clases diarias.
+- Falta de asistencia de un profes@r: No justifica la falta del alumnado.
+
+
+## Espacios
+- Acceso prohibido: zona de despachos y sala de profesores.
+- Acceso a aseos: durante el horario de clase con permiso del profes@r.
+- Durante el recreo: No está permitido permanecer en las aulas, pasillos ni escaleras.
+
+
+## Comportamiento I.
+- Elige tu sitio, será el tuyo para todo el año.
+- Se respeta el turno de palabra. 
+- **No hablar por encima del profesor.**
+- Si hay dudas, apuntarlas en un papel y se pregunta al final de la explicación y en tu turno.
+
+
+## Comportamiento II.   
+- Respeto: a los compañeros, profesores, personal del centro, instalaciones, etc. Se comparten con otrßs compañer@s.
+- No está permitido: comer, beber, mascar chicle, usar el móvil, etc.
+- Se finaliza la clase y se sale.
+
+
+## Comportamiento III.  
+- A la entrada: puntualidad, orden y silencio.
+- Llegar tarde, implica que quede registrado tu retraso.
+- Salir antes implica falta de asistencia.
+- Las justificaciones se entregan al tutor. 
+
+
+## Comportamiento IV.  
+- Antes de salir del aula: recoger y dejar el aula en condiciones, eso quiere decir que los Monitores y pcs se apagan, sillas en su sitio, etc.
+- A última hora: Se cierran las ventanas y se apagan las luces.
+- Retraso: los conserjes pueden deciros que no podéis entrar hasta la siguiente hora.
+
+
+## Asistencia.  
+Bajas de oficio: 10 faltas injustificadas implica la baja de oficio, existe una lista de espera muy grande.
+
+
+## Delegado y subdelegado.  
+- Elección del delegado de clase: antes del 30 de septiembre.
+- Eñlegir bien a vuestros representantes. Son muy importantes, son  interlocutores con el profesorado y la dirección del centro.
+
+
+## RRSS Centro.
+- https://es-es.facebook.com/IESAlbertiCadiz/
+- https://twitter.com/iesalberticadiz
+- https://www.instagram.com/iesalberticadiz/?hl=es
+ 
+ 
+## RRSS otras.
+- Emprendimiento: https://x.com/AE_IESRACadiz
+- IA&BD: https://x.com/FPIABigData
+- Ciber: https://x.com/FPCiberSec
+- Videojuegos: https://x.com/FPVideojuegosRV
+
+---
+## Dudas?.    
 ![](./assets/IS-U011-Presentacion4.png)
 
 ---
-
-# Fin!  
+## Fin!  
 ![](./assets/Fin.png) <!-- .element height="50%" width="50%" -->
 
-¡¡Gracias!!
+¡¡Gracias y buen curso!!
 
 ---
 

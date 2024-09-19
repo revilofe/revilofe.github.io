@@ -220,7 +220,7 @@ En clase, acordáis hablar conmigo.
 
 
 ## Comportamiento II.   
-- Respeto: a los compañeros, profesores, personal del centro, instalaciones, etc. Se comparten con otrßs compañer@s.
+- Respeto: a los compañeros, profesores, personal del centro, instalaciones, etc. Se comparten con otr@s compañer@s.
 - No está permitido: comer, beber, mascar chicle, usar el móvil, etc.
 - Se finaliza la clase y se sale.
 
@@ -244,7 +244,7 @@ Bajas de oficio: 10 faltas injustificadas implica la baja de oficio, existe una 
 
 ## Delegado y subdelegado.  
 - Elección del delegado de clase: antes del 30 de septiembre.
-- Eñlegir bien a vuestros representantes. Son muy importantes, son  interlocutores con el profesorado y la dirección del centro.
+- Elegir bien a vuestros representantes. Son muy importantes, son  interlocutores con el profesorado y la dirección del centro.
 
 
 ## RRSS Centro.

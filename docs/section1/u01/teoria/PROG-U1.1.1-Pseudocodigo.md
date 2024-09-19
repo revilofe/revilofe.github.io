@@ -325,7 +325,7 @@ Inicio
         Escribe num + “ => ”
         
         Mientras (num >= 0) hacer
-            Escriber num
+            Escribe num
             Si (num != 0) entonces
                 Escribe “, ”
             num = num - 1
@@ -347,7 +347,7 @@ Inicio
 
         Para i en (num...0) hacer
             Escribe i
-	    Si (i != 0) entonces
+            Si (i != 0) entonces
                 Escribe “, ”
 Fin
 ```

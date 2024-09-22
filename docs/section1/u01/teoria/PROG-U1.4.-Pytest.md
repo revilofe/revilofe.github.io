@@ -15,9 +15,11 @@ tags:
     - pytest
 ---
 
-# Pruebas con Pytest
+## 1.4 Realización de pruebas con Pytest
 
-## Instalación/Actualización de pip
+En este apartado vamos a ver como realizar pruebas con **pytest**. Para ello, vamos a crear un entorno virtual y vamos a instalar pytest.
+
+### 1. Instalación/Actualización de pip
 
 Antes de realizar, nada, vamos a actualizar la herramienta que nos va a permitir instalar los comandos que necesitamos. Como no viene por defecto, hay que instalarlo. Antes de instalarlo, actualizamos pip.
 
@@ -30,7 +32,7 @@ El comando para actualizar `pip`
 python3 -m pip install --upgrade pip
 ```
 
-## Crear un entorno virtual
+### 2. Crear un entorno virtual
 
 Las aplicaciones en Python usualmente hacen uso de paquetes y módulos que no forman parte de la librería estándar. Las aplicaciones a veces necesitan una versión específica de una librería, debido a que dicha aplicación requiere que un bug particular haya sido solucionado o bien la aplicación ha sido escrita usando una versión obsoleta de la interfaz de la librería.
 
@@ -63,7 +65,7 @@ cd prog1
 . ./bin/activate
 ```
 
-Elminando la carpeta eliminaremos el entorno.
+Eliminando la carpeta eliminaremos el entorno.
 
 Una vez tenemos activo el entorno, podemos listar los módulos que tenemos disponibles en el entorno que hemos creado y activado:
 
@@ -107,7 +109,7 @@ En general no es necesario poner nada en el archivo `__init__.py`, pero es muy c
   |_/__ini__.py
 ```
 
-## Pruebas con pytest
+### 3. Pruebas con pytest
 
 > **Pytest** es un marco de pruebas en Python que se utiliza para escribir y ejecutar pruebas de manera sencilla y eficiente. Proporciona una forma fácil de definir casos de prueba y realizar aserciones sobre el comportamiento esperado de las funciones o módulos que se están probando.
 >

@@ -14,9 +14,12 @@ tags:
 ---
 
 
-## Tipos de Datos Primitivos
+## 1.3. Tipos de datos
+En Python, como en otros lenguajes de programación, los datos se clasifican en distintos tipos según su naturaleza y el tipo de operaciones que se pueden realizar con ellos. Los tipos de datos primitivos simples son aquellos que no se pueden descomponer en partes más pequeñas y son los que se utilizan para representar los valores más básicos. Los tipos de datos primitivos compuestos son aquellos que se pueden descomponer en partes más pequeñas y son los que se utilizan para representar estructuras más complejas.
 
-### Tipos de datos primitivos simples
+
+### 1. Tipos de datos primitivos simples
+Los tipos de datos primitivos simples son aquellos que NO se pueden descomponer en partes más pequeñas y son los que se utilizan para representar los valores más básicos. Los tipos de datos primitivos simples en Python son:
 
 * **Números** (numbers): Secuencia de dígitos (pueden incluir el - para negativos y el . para decimales) que representan números.
   **Ejemplo** . 0, -1, 3.1415.
@@ -25,8 +28,8 @@ tags:
 * **Booleanos** (boolean): Contiene únicamente dos elementos `True` y `False` que representan los valores lógicos verdadero y falso respectivamente.
 
 
-### Tipos de datos primitivos compuestos (contenedores)
-Profundizaremos más adelante en ellos.
+### 2. Tipos de datos primitivos compuestos (contenedores)
+Los tipos de datos primitivos compuestos son aquellos que se pueden descomponer en partes más pequeñas y son los que se utilizan para representar estructuras más complejas. Profundizaremos más adelante en ellos. Los tipos de datos primitivos compuestos en Python son:
 
 * **Listas** (lists): Colecciones de objetos que representan secuencias ordenadas de objetos de distintos tipos. Se representan con corchetes y los elementos se separan por comas.
   **Ejemplo** . [1, “dos”, [3, 4], True].
@@ -35,7 +38,7 @@ Profundizaremos más adelante en ellos.
 * **Diccionarios** (dictionaries): Colecciones de objetos con una clave asociada. Se representan con llaves, los pares separados por comas y cada par contiene una clave y un objeto asociado separados por dos puntos.
   **Ejemplo** . {‘pi’:3.1416, ’e’:2.718}.
 
-### Clase de un dato (`type()`)
+### 3. Clase de un dato (`type()`)
 
 La clase a la que pertenece un dato se obtiene con el comando `type()`
 
@@ -52,7 +55,7 @@ La clase a la que pertenece un dato se obtiene con el comando `type()`
 <class 'tuple'>
 ```
 
-### Números (clases `int` y `float`)
+### 4. Números (clases `int` y `float`)
 
 Secuencia de dígitos (pueden incluir el - para negativos y el . para decimales) que representan números. Pueden ser enteros (`int`) o reales (`float`).
 
@@ -65,7 +68,7 @@ Secuencia de dígitos (pueden incluir el - para negativos y el . para decimales)
 <class 'float'>
 ```
 
-#### Operadores aritméticos
+#### 4.1. Operadores aritméticos
 
 * Operadores aritméticos: `+` (suma), `-` (resta), `*` (producto), `/` (cociente), `//` (cociente división entera), `%` (resto división entera), `**` (potencia).
 
@@ -95,7 +98,7 @@ Se puede saltar el orden de evaluación utilizando paréntesis `( )`.
 25
 ```
 
-#### Operadores lógicos con números
+#### 4.2. Operadores lógicos con números
 
 Devuelven un valor lógico o booleano.
 
@@ -110,7 +113,7 @@ False
 True
 ```
 
-### Cadenas (clase `str`)
+### 5. Cadenas (clase `str`)
 
 Secuencia de caracteres alfanuméricos que representan texto. Se escriben entre comillas sencillas ’ o dobles “.
 
@@ -128,7 +131,7 @@ Secuencia de caracteres alfanuméricos que representan texto. Se escriben entre 
 '\t'
 ```
 
-#### Acceso a los elementos de una cadena
+#### 5.1. Acceso a los elementos de una cadena
 
 Cada carácter tiene asociado un índice que permite acceder a él.
 
@@ -159,7 +162,7 @@ Traceback (most recent call last):
 IndexError: string index out of range
 ```
 
-#### Subcadenas
+#### 5.2. Subcadenas
 
 * `c[i:j:k]` : Devuelve la subcadena de `c` desde el carácter con el índice `i` hasta el carácter anterior al índice `j`, tomando caracteres cada `k`.
 
@@ -178,7 +181,7 @@ IndexError: string index out of range
 'Pto'
 ```
 
-#### Operaciones con cadenas
+#### 5.3. Operaciones con cadenas
 
 * `c1 + c2` : Devuelve la cadena resultado de concatenar las cadenas `c1` y `c2`.
 * `c * n` : Devuelve la cadena resultado de concatenar `n` copias de la cadena `c`.
@@ -198,7 +201,7 @@ True
 True
 ```
 
-#### Operaciones de comparación de cadenas
+#### 5.4. Operaciones de comparación de cadenas
 
 * `c1 == c2` : Devuelve `True` si la cadena `c1` es igual que la cadena `c2` y `False` en caso contrario.
 * `c1 > c2` : Devuelve `True` si la cadena `c1` sucede a la cadena `c2` y `False` en caso contrario.
@@ -222,7 +225,7 @@ False
 True
 ```
 
-#### Funciones de cadenas
+#### 5.5. Funciones de cadenas
 
 * `len(c)` : Devuelve el número de caracteres de la cadena `c`.
 * `min(c)` : Devuelve el carácter menor de la cadena `c`.
@@ -247,7 +250,7 @@ True
 ['I', 'love', 'Python']
 ```
 
-#### Cadenas formateadas (`format()`)
+#### 5.6. Cadenas formateadas (`format()`)
 
 * `c.format(valores)`: Devuelve la cadena `c` tras sustituir los valores de la secuencia `valores` en los marcadores de posición de `c`. Los marcadores de posición se indican mediante llaves `{}` en la cadena `c`, y el reemplazo de los valores se puede realizar por posición, indicando en número de orden del valor dentro de las llaves, o por nombre, indicando el nombre del valor, siempre y cuando los valores se pasen con el formato `nombre = valor`.
 
@@ -277,20 +280,20 @@ Los marcadores de posición, a parte de indicar la posición de los valores de r
 'Pi vale   3.1416'
 ```
 
-### Datos lógicos o booleanos (clase `bool`)
+### 6. Datos lógicos o booleanos (clase `bool`)
 
 Contiene únicamente dos elementos `True` y `False` que representan los valores lógicos verdadero y falso respectivamente.
 
 `False` tiene asociado el valor 0 y `True` tiene asociado el valor 1.
 
-#### Operaciones con valores lógicos
+#### 6.1. Operaciones con valores lógicos
 
 * Operadores lógicos: `==` (igual que), `>` (mayor), `<` (menor), `>=` (mayor o igual que), `<=` (menor o igual que), `!=` (distinto de).
 * `not b` (negación) : Devuelve `True` si el dato booleano `b` es `False` , y `False` en caso contrario.
 * `b1 and b2` : Devuelve `True` si los datos booleanos `b1` y `b2` son `True`, y `False` en caso contrario.
 * `b1 or b2` : Devuelve `True` si alguno de los datos booleanos `b1` o `b2` son `True`, y `False` en caso contrario.
 
-#### Tabla de verdad
+#### 6.2. Tabla de verdad
 
 
 | `x`     | `y`     | `not x` | `x and y` | `x or y` |
@@ -311,27 +314,56 @@ False
 True
 ```
 
-### Conversión de datos primitivos simples
+### 6.3. Conversión de datos primitivos simples
+
+Se pueden dar situaciones en las que sea necesario convertir un dato de un tipo en otro. Las conversiones de datos se pueden clasificar en dos tipos:
+1. **Conversiones explícitas**: Son aquellas en las que se especifica el tipo al que se quiere convertir el dato.
+2. **Conversiones implícitas**: Son aquellas en las que Python realiza la conversión de forma automática.
+
+#### 6.3.1. Conversiones explícitas
 
 Las siguientes funciones convierten un dato de un tipo en otro, siempre y cuando la conversión sea posible.
 
-* `int()` convierte a entero.
-  **Ejemplo** . `int('12')`  `12`
+* `int()` convierte a entero.   
+  **Ejemplo**.
+  `int('12')`  `12`
   `int(True)`  `1`
   `int('c')`  Error
 * `float()` convierte a real.
-  **Ejemplo** . `float('3.14')`  `3.14`
+  **Ejemplo**. 
+  `float('3.14')`  `3.14`
   `float(True)`  `1.0`
   `float('III')`  Error
 * `str()` convierte a cadena.
-  **Ejemplo** . `str(3.14)`  `'3.14'`
+  **Ejemplo**.
+  `str(3.14)`  `'3.14'`
   `str(True)`  `'True'`
 * `bool()` convierte a lógico.
-  **Ejemplo** . `bool('0')`  `False`
+  **Ejemplo**. 
+  `bool('0')`  `False`
   `bool('3.14')`  `True`
   `bool('')`  `False`
   `bool('Hola')`  `True`
-  
+
+#### 6.3.2. Conversiones implícitas
+
+En cuanto a las conversiones implicitas de tipos de datos, Python realiza las siguientes conversiones:
+- De `int` a `float` si se realiza una operación aritmética con un número real.
+- De `int` a `str` si se realiza una operación de concatenación con una cadena.
+- De `float` a `str` si se realiza una operación de concatenación con una cadena.
+- De `str` a `int` si se realiza una operación aritmética con un número entero.
+- De `str` a `float` si se realiza una operación aritmética con un número real.
+
+```python
+>>> 2 + 3.0
+5.0
+>>> 'Hola' + str(3)
+'Hola3'
+>>> 2 + int('3')
+5
+>>> 2 + float('3.0')
+5.0
+```
 
 ## Fuente
 

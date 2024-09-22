@@ -1,5 +1,5 @@
 ---
-title: "UD 1 - P1: Mi primer programa"
+title: "UD 1 - P1: Mi primer programa - Windows"
 summary: Mi primer programa
 description: Mi primer programa
 authors:
@@ -14,15 +14,15 @@ tags:
     - Ejercicios
 ---
 
-## P1.1 - Introducción al uso de Python en Windows para principiantes
+## P1.1 - Mi primer programa - Windows
 
 A continuación, ofrecemos una guía paso a paso para aquellos usuarios principiantes interesados en aprender Python con Windows.
 
-### Configurar el entorno de desarrollo
+### 1. Configurar el entorno de desarrollo
 
 Si eres un usuario principiante y no estás familiarizado con Python, te recomendamos [instalar Python desde Microsoft Store](https://www.microsoft.com/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab). La instalación a través de Microsoft Store utiliza el intérprete de Python3 básico, pero controla el establecimiento de la configuración del valor PATH para el usuario actual (lo que evita la necesidad de contar con acceso de administrador) y, además, proporciona actualizaciones automáticas. Resulta especialmente útil si te encuentras en un entorno educativo o en un departamento de una organización que restringe los permisos o el acceso administrativo en la máquina.
 
-### Instalar Python
+### 2. Instalar Python
 
 Para instalar Python con Microsoft Store:
 
@@ -31,7 +31,7 @@ Para instalar Python con Microsoft Store:
 3. Una vez que Python haya completado el proceso de descarga e instalación, abre Windows PowerShell mediante el menú **Inicio** (icono de Windows de la esquina inferior izquierda). Cuando PowerShell esté abierto, escribe `Python --version` para confirmar que Python3 está instalado en la máquina.
 4. La instalación de Microsoft Store de Python incluye  **PIP** , el administrador de paquetes estándar. PIP te permite instalar y administrar paquetes adicionales que no forman parte de la biblioteca estándar de Python. Para confirmar que también dispones de PIP para instalar y administrar paquetes, escribe `pip --version`.
 
-### Instalar Visual Studio Code
+### 3. Instalar Visual Studio Code
 
 Al usar VS Code como editor de texto/entorno de desarrollo integrado (IDE), puedes aprovechar [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense) (una ayuda de finalización de código), el [detector de errores](https://code.visualstudio.com/docs/python/linting) (permite evitar que se produzcan errores en el código), el [soporte técnico de depuración](https://code.visualstudio.com/docs/python/debugging) (ayuda a buscar errores en el código después de ejecutarlo), los [fragmentos de código](https://code.visualstudio.com/docs/editor/userdefinedsnippets) (plantillas para pequeños bloques de código reutilizables) y las [pruebas unitarias](https://code.visualstudio.com/docs/python/unit-testing) (para probar la interfaz del código con distintos tipos de entrada).
 
@@ -46,7 +46,7 @@ VS Code también contiene un [terminal integrado](https://code.visualstudio.com/
 6. Para probar el intérprete de Python, escribe `print("Hello World")`. Python devolverá la instrucción "Hola mundo".
    ![Python command line in VS Code](https://learn.microsoft.com/es-es/windows/images/python-in-vscode.png)
 
-### Instalar GIT (opcional)
+### 4. Instalar GIT (opcional)
 
 Si planeas colaborar con otras personas en el código de Python u hospedar el proyecto en un sitio de código abierto (como GitHub), VS Code admite el [control de versiones con GIT](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support). La pestaña Control de código fuente de VS Code realiza un seguimiento de todos los cambios y tiene comandos GIT comunes (agregar, confirmar, enviar cambios e incorporar cambios) integrados directamente en la interfaz de usuario. Primero, debes instalar GIT para alimentar el panel de control de código fuente.
 
@@ -54,7 +54,7 @@ Si planeas colaborar con otras personas en el código de Python u hospedar el pr
 2. Se incluye un asistente para instalación que te formulará una serie de preguntas sobre la configuración de la instalación de GIT. Te recomendamos que uses todas las opciones de configuración predeterminadas, a menos que tengas un motivo concreto para cambiar algo.
 3. Si nunca has trabajado con GIT, las [guías de GitHub](https://guides.github.com/) pueden resultarte de ayuda para empezar.
 
-### Tutorial de Hola mundo para algunos aspectos básicos de Python
+### 5. Tutorial de Hola mundo para algunos aspectos básicos de Python
 Python, según su creador Guido van Rossum, es un "lenguaje de programación de alto nivel y su filosofía de diseño básico trata sobre la legibilidad del código y una sintaxis que permite a los programadores expresar conceptos en unas pocas líneas de código".
 
 Python es un lenguaje interpretado. A diferencia de los lenguajes compilados, en los que el código que escribes debe traducirse en código máquina para que lo ejecute el procesador del equipo, el código de Python se pasa a un intérprete y se ejecuta directamente. Solo tienes que escribir el código y ejecutarlo. Probémoslo.
@@ -73,7 +73,7 @@ Python es un lenguaje interpretado. A diferencia de los lenguajes compilados, en
 
 Lo que acabas de ver, son algunos de los métodos de modificación de cadenas integrados de Python. Ahora intenta crear un archivo de programa de Python y ejecutarlo con VS Code.
 
-### Tutorial Hola mundo para usar Python con VS Code
+### 6. Tutorial Hola mundo para usar Python con VS Code
 
 El equipo de VS Code ha elaborado el excelente tutorial [Introducción a Python](https://code.visualstudio.com/docs/python/python-tutorial#_start-vs-code-in-a-project-workspace-folder) en el que se explica cómo crear un programa Hola mundo con Python, ejecutar el archivo de programa, configurar y ejecutar el depurador e instalar paquetes como *matplotlib* y *NumPy* para crear un trazado gráfico dentro de un entorno virtual.
 

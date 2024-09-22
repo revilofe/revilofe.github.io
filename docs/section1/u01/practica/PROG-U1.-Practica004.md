@@ -17,7 +17,7 @@ tags:
 
 ## P1.4 - Gestión de ramas con Git y enlazar a GitHub
 
-### Trabajar con ramas
+### 1. Trabajar con ramas
 
 Antes de nada, veamos [qué es una rama](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%C2%BFQu%C3%A9-es-una-rama%3F) y los [procedimientos básicos para ramificar y fusionar](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Procedimientos-B%C3%A1sicos-para-Ramificar-y-Fusionar)
 
@@ -135,7 +135,7 @@ Vamos a comenzar la práctica donde lo dejamos en la práctica anterior, P3.
 	```
  
 
-### Trabajar con `stash`
+### 2. Trabajar con `stash`
 
 Se trata de un comando que “congela” el estado en el que se encuentra el proyecto en un momento determinado, con todos los cambios que tenemos a "sin comitear", y lo guarda en una pila provisional brindando la posibilidad de poder recuperarlo más adelante.
 
@@ -181,7 +181,7 @@ Se trata de un comando que “congela” el estado en el que se encuentra el pro
    
     
     
-### Gestión del proyecto enlazado con Github    
+### 3. Gestión del proyecto enlazado con Github    
     
 GitHub es una plataforma de desarrollo colaborativo que utiliza el sistema de control de versiones Git. Git gestiona repositorios locales en tu ordenador, permitiendo el seguimiento de cambios en tu código. GitHub extiende esta funcionalidad al proporcionar repositorios remotos alojados en la nube, lo que facilita la colaboración entre equipos dispersos geográficamente. Permite a los desarrolladores subir sus cambios a un repositorio en línea y fusionarlos con el trabajo de otros. Además, GitHub ofrece herramientas como seguimiento de problemas, ramificaciones y solicitudes de extracción para facilitar la colaboración y la gestión de proyectos.   
 

@@ -16,7 +16,7 @@ tags:
 
 ## P1.5 - Creación de un entorno virtual con Pytest
 
-### Introducción
+### 1. Introducción
 
 Los `entornos virtuales` se pueden describir como directorios de instalación aislados. Este aislamiento te permite localizar la instalación de las dependencias de tu proyecto, sin obligarte a instalarlas en todo el sistema.
 
@@ -24,7 +24,7 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
 
 `Virtualenv` es una herramienta que se utiliza para crear entornos Python aislados. Crea una carpeta que contiene todos los ejecutables necesarios para usar los paquetes que necesitaría un proyecto de Python.
 
-### PASOS A SEGUIR EN LA PRÁCTICA
+### 2. Pasos a seguir en la práctica
 
 1. Antes de nada, debemos abrir una carpeta en Visual Studio Code, donde vamos a trabajar con nuestros programas de Python.
 

@@ -16,11 +16,11 @@ tags:
 
 ## P1.6 - Mis primeras pruebas unitarias
 
-### Introducción
+### 1. Introducción
 
 Para realizar pruebas unitarias de forma básica debemos conocer qué es y para qué se usan las funciones en los lenguajes de programación.
 
-### Funciones
+### 2. Funciones
 
 Una función te permite definir un bloque de código reutilizable que se puede ejecutar muchas veces dentro de tu programa.
 
@@ -53,7 +53,7 @@ En el código podemos llamarla las veces que nosotros necesitemos:
   tot = 100 + suma(25, 40)
 ```
 
-### Pruebas unitarias
+### 3. Pruebas unitarias
 
 Las pruebas automáticas son consideradas una herramienta y una metodología indispensable para producir software de calidad.
 
@@ -65,11 +65,11 @@ Cada prueba unitaria se ejecuta en un entorno aislado, lo que significa que no a
 
 Además de ejecutarse en la máquina del desarrollador, en entornos de trabajo profesional, estas se ejecutan en forma continua, por ejemplo cada hora o cada commit del código. Esta ejecución continua se realiza mediante sistemas automatizados como Jenkins. Debido a esto, agregar una pieza de código de pruebas implica que esta se probará una y otra vez cada que una funcionalidad sea agregada o un error sea corregido.
 
-### Pytest
+#### 3.1. Pytest
 
 Pytest es un framework con muchas funcionalidades, desde pruebas pequeñas hasta pruebas de gran escala como pruebas funcionales de aplicaciones y librerías. Ofrece la recolección automática de los tests, aserciones simples, soporte para fixtures, debugeo y mucho más…
 
-### Assert
+### 3.2. Assert
 
 La palabra assert en Python se refiere a un enunciado que verifica ciertas suposiciones sobre nuestro código. Si la suposición no es cierta, la afirmación falla y se genera una excepción.
 
@@ -83,7 +83,7 @@ Por ejemplo, si suponemos que una variable es mayor que cero, podemos usar asser
 	
 En este ejemplo, si x es igual a cero o menor que cero, se generará una excepción AssertionError con el mensaje “x no es mayor que cero”.
 
-### Creando el primer test
+### 4. Creando el primer test
 
 1. Para empezar, vamos a partir de la práctica 5, donde creamos un entorno virtual e instalamos pytest. Vamos a seguir los siguientes pasos para realizar nuestro primer test y ejecutarlo desde el terminal.
 
@@ -191,7 +191,7 @@ En este ejemplo, si x es igual a cero o menor que cero, se generará una excepci
 
 9. Pruébalo y vuelve a ejecutar las pruebas.
 
-### Crea tu el test
+### 5. Crea tu el test
 
 Desarrolla una función en `prueba1.py` que reciba dos números y retorne el mayor número de los dos o 0 si son iguales. Realiza las pruebas unitarias y ejecútalas con pytest.
 
@@ -201,13 +201,13 @@ Entrega lo siguiente:
 * Un pantallazo del terminal con las pruebas unitarias detalladas realizadas con éxito.   
 * Fuerza un error en tu código, no en los tests, y muestra un pantallazo de tus pruebas unitarias realizadas de nuevo.
 
-### Configura las pruebas en el IDE
+### 6. Configura las pruebas en el IDE
 
 Ahora vamos a configurar y realizar las pruebas unitarias desde el IDE, sin necesidad de usar los comandos. Para ello, sigue los 6 pasos de la siguiente documentación para configurar y ejecutar las pruebas unitarias:  
 
 [How to run pytest in VSCode](https://pytest-with-eric.com/introduction/how-to-run-pytest-in-vscode/)  
 
-### Crea tu el test usando el IDE 
+### 7. Crea tu el test usando el IDE 
 
 Desarrolla una función en `prueba1.py` que reciba un número y retorne el factorial del mismo. Crea también las pruebas unitarias.
 
@@ -220,7 +220,7 @@ Entrega lo siguiente:
 * Un pantallazo de la vista de Testing.  
 * Fuerza un error en tu código, no en los tests, y muestra un pantallazo de tus pruebas unitarias realizadas de nuevo en la vista de Testing de Visual Studio Code.
 
-### Fuentes:
+## Fuentes:
 
   * [Guía de funciones de Python con ejemplos](https://www.freecodecamp.org/espanol/news/guia-de-funciones-de-python-con-ejemplos/)
   * [Qué son las funciones en Python](https://keepcoding.io/blog/que-son-las-funciones-en-python/)

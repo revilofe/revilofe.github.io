@@ -22,7 +22,7 @@ El sistema de control de versiones Git es una herramienta fundamental para mucho
 
 Es la mejor forma de trabajar para un desarrollador. De esta manera vais a tener siempre vuestro código a salvo en la nube. Podéis clonar el proyecto y trabajar en cualquier ordenador.
 
-### Instalar Git
+### 1. Instalar Git
 
 La forma más oficial está disponible para ser descargada en el sitio web de Git. Solo tienes que visitar [Download](http://git-scm.com/download/), seleccionar tu sistema operativo y la descarga empezará automáticamente.
 
@@ -30,7 +30,7 @@ Una vez que hayamos instalado Git en nuestro ordenador, abriremos la aplicación
 
 En windows, Git Bash es la herramienta de línea de comandos que permite a los usuarios de Windows utilizar las funciones de Git. Git Bash es Git en una “Bourne Again Shell”. La aplicación contiene numerosas utilidades de Unix. Git Bash os permitirá usar herramientas MinGW/Linux Bash con Git en la línea de comandos. Todas esas cosas bonitas que se hacen en Linux también las podemos hacer en Windows a través de Git Bash.
 
-### Configurar Git y crear nuestro primer proyecto
+### 2. Configurar Git y crear nuestro primer proyecto
 
 1. Primero tenemos que definir nuestra identidad, para ello en la línea de comandos escribiremos las siguientes instrucciones utilizando nuestro usuario iPasen y `xxxxx@g.educaand.es`. Mas adelante podremos utilizar el correo `xxxxx@iesrafaelalberti.es`:
 

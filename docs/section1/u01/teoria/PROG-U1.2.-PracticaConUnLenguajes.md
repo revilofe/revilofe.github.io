@@ -12,18 +12,53 @@ categories:
 tags:
     - Software
 ---
-## Bloques básicos
 
+## 1.2. Practica con un lenguaje
+
+Vamos a iniciar con la práctica de un lenguaje de programación, en este caso, Python. Vemos los bloques de un programa y las estructuras básicas de un programa en Python.
+
+### 1. Bloques de un programa
+
+#### 1.1. En Kotlin
 Los programas están compuestos por un conjunto de bloques
-![](assets/PROG-U1-Bloques.png)
+<center> ![](assets/PROG-U1-Bloques.png) </center>
 
 * [Main, punto de entrada](https://kotlinlang.org/docs/basic-syntax.html#program-entry-point ): Inicio del flujo de ejecución de un programa
 * [Paquetes e import](https://kotlinlang.org/docs/basic-syntax.html#package-definition-and-imports): Agrupa clases, e incorpora clases para su uso, respectivamente
 * [Funciones](https://kotlinlang.org/docs/basic-syntax.html#functions): Bloques de código con nombre que pueden ser reutilizados
 
-## Python
+#### 1.2. En python
 
-### Introducción a Python: Características del lenguaje
+En Python, un programa es un conjunto de módulos. Un módulo es un archivo que contiene código Python. Puede contener definiciones de funciones, clases y variables, así como ejecutar código. A continuación, se muestra un ejemplo de un módulo simple y los bloques que lo componen.
+
+```Python
+# Importación de módulos
+
+from file_two import function_three
+
+print("File one __name__ is set to: {}" .format(__name__))
+
+
+# Definición de funciones
+
+def main():
+    print("Function main is executed")
+    print("Cuerpo principal")
+
+
+if __name__ == "__main__":
+    # Por aqui pasa cuando es ejecutado
+    main()
+else:
+    # Por aqui pasa cuando es importado
+    print("File one executed when imported")
+
+```
+
+### 2.  Comenzando con Python
+A continuación, se presenta una introducción a Python, un lenguaje de programación de alto nivel. Python es un lenguaje de programación interpretado, lo que significa que el código se ejecuta línea por línea. Python es un lenguaje de programación versátil y fácil de aprender, que se utiliza en una amplia variedad de aplicaciones, desde el desarrollo web hasta la ciencia de datos.
+
+#### 2.1. Introducción a Python: Características del lenguaje
 
 Python es un lenguaje de programación de alto nivel. Las principales características de Python son las siguientes:
 
@@ -35,7 +70,7 @@ Python es un lenguaje de programación de alto nivel. Las principales caracterí
 
 > El hecho de que Python sea **interpretado** quiere decir que **hace falta un intérprete** que permita ejecutar un programa o script escrito en Python sin necesidad de compilarlo.
 
-### El intérprete de Python
+#### 2.2. El intérprete de Python
 
 Cuando instalas Python correctamente (en cualquier sistema operativo) ocurren, entre otras, dos cosas: se añade el comando `python` (o `python3`, en caso de que instales la versión 3.x de Python) al path y se instala el intérprete de Python correspondiente.
 
@@ -60,7 +95,7 @@ Para salir del intérprete basta con ejecutar la instrucción `quit()`.
 
 No obstante, aunque esta forma de escribir código puede ser útil para aprender y en casos muy puntuales, no es la habitual a la hora de escribir un programa o script en Python.
 
-### Primer programa en Python
+#### 2.3. Primer programa en Python
 
 Normalmente, los programas en Python se escriben en archivos con la extensión `.py`. Estos archivos se pasan al intérprete de Python para que los interprete y ejecute.
 
@@ -80,194 +115,24 @@ En el terminal verás que aparece el número `5` como resultado de ejecutar el p
 
 Esta es la manera más común de crear y ejecutar programas en Python.
 
-## Operadores, expresiones y sentencias en Python
+### 3. Variables, literales y constantes
 
-Para introducirse en cualquier lenguajes es importante saber la diferencia entre operador, expresión y sentencia, ya que son las formas básicas que componen la estructura de cualquier programa.
+En esta sección vamos a ver cómo se definen las variables en Python, qué son los literales y cómo se definen las constantes.
 
-### Operador
-
-Un **operador** es un carácter o conjunto de caracteres que actúa sobre una, dos o más **variables** y/o **literales** para llevar a cabo una **operación** con un **resultado** determinado. Veremos la definición de variable y literales en los siguientes puntos.
-
-Ejemplos de operadores comunes son los operadores aritméticos `+` (suma), `-` (resta) o `*` (producto), aunque en Python existen otros operadores.
-
-#### Orden de las operaciones
-
-Cuando en una expresión aparece más de un operador, el orden de evaluación depende de las  *reglas de precedencia* . Para los operadores matemáticos, Python sigue las convenciones matemáticas. El acrónimo *PEMDSR* resulta útil para recordar esas reglas:
-
-* Los Paréntesis tienen el nivel superior de precedencia, y pueden usarse para forzar a que una expresión sea evaluada en el orden que se quiera. Dado que las expresiones entre paréntesis son evaluadas primero, `2 * (3-1)` es 4, y `(1+1)**(5-2)` es 8. Se pueden usar también paréntesis para hacer una expresión más sencilla de leer, incluso si el resultado de la misma no varía por ello, como en `(minuto * 100) / 60`.
-* La Exponenciación (elevar un número a una potencia) tiene el siguiente nivel más alto de precedencia, de modo que `2**1+1` es 3, no 4, y `3*1**3` es 3, no 27.
-* La Multiplicación y la División tienen la misma precedencia, que es superior a la de la *S*uma y la *R*esta, que también tienen entre si el mismo nivel de precedencia. Así que `2*3-1` es 5, no 4, y `6+4/2` es 8, no 5.
-* Los operadores con igual precedencia son evaluados de izquierda a derecha. Así que la expresión `5-3-1` es 1 y no 3, ya que `5-3` se evalúa antes, y después se resta `1` de `2`.
-
-En caso de duda, añade siempre paréntesis a tus expresiones para asegurarte de que las operaciones se realizan en el orden que tú quieres.
-
-#### Operaciones con cadenas
-
-El operador `+` funciona con las cadenas, pero no realiza una suma en el sentido matemático. En vez de eso, realiza una  *concatenación* , que quiere decir que une ambas cadenas, enlazando el final de la primera con el principio de la segunda. Por ejemplo:
-
-```py
-
->>> primero = 10
->>> segundo = 15
->>> print(primero+segundo)
-25
->>> primero = '100'
->>> segundo = '150'
->>> print(primero + segundo)
-100150
-
-```
-
-La salida de este programa es `100150`.
-
-El operador `*` también trabaja con cadenas multiplicando el contenido de una cadena por un entero. Por ejemplo:
-
-```py
-
->>> primero = 'Test '
->>> second = 3
->>> print(primero * second)
-Test Test Test
-
-```
-
-### Expresión
-
-Una expresión es una unidad de código que **devuelve un valor** y está formada por una combinación de operandos (variables y literales) y operadores. Los siguientes son ejemplos de expresiones (cada línea es una expresión diferente):
-
-```py
-
-5 + 2           # Suma del número 5 y el número 2
-a < 10            # Compara si el valor de la variable a es menor que 10
-b is None       # Compara si la identidad de la variable b es None
-3 * (200 - c)   # Resta a 200 el valor de c y lo multiplica por 3
-
-```
-
-### Sentencia
-
-Por su parte, una sentencia o declaración es una instrucción que define una acción. Una sentencia puede estar formada por una o varias expresiones, aunque no siempre es así.
-
-En definitiva, las sentencias son las instrucciones que componen nuestro programa y determinan su comportamiento.
-
-Ejemplos de sentencias son la asignación `=` o las instrucciones `if`, `if ... else ...`, `for` o `while` entre otras.
-
-> Una sentencia está delimitada por el carácter `Enter (\n)`.
-
-#### Sentencias de más de una línea
-
-Normalmente, las sentencias ocupan una sola línea. Por ejemplo:
-
-```py
-
-a = 2 + 3 #Asigna a la variable <a> el resultado de 2 + 3
-
-```
-
-Sin embargo, aquellas sentencias que son muy largas pueden ocupar más de una línea ([la guía de estilo PEP 8](https://www.python.org/dev/peps/pep-0008/), recomienda una longitud de línea máxima de 72 caracteres).
-
-Para dividir una sentencia en varias líneas se utiliza el carácter `\`. Por ejemplo:
-
-```py
-
-a = 2 + 3 + 5 + \
-7 + 9 + 4 + \
-6
-
-```
-
-Además de la separación explícita (la que se realiza con el carácter `\`), en Python la continuación de línea es implícita siempre y cuando la expresión vaya dentro de los caracteres `()`, `[]` y `{}`.
-
-Por ejemplo, podemos inicializar una lista del siguiente modo:
-
-```py
-
-a = [1, 2, 7,
-3, 8, 4,
-9]
-
-```
-
-No te preocupes si no sabes lo que es una lista o no entiendes lo que hace el ejemplo anterior. Lo importante es que comprendas que lo anterior es una sentencia multi-línea ya que está comprendida entre los caracteres `[]`.
-
-#### Bloques de código (Indentación)
-
-Lo último que veremos sobre sentencias en esta introducción a Python es cómo se pueden agrupar en bloques de código.
-
-Un bloque de código es un grupo de sentencias relacionadas bien delimitadas. A diferencia de otros lenguajes como JAVA o C, en los que se usan los caracteres `{}` para definir un bloque de código, en Python se usa la indentación o sangrado.
-
-El sangrado o indentación consiste en mover un bloque de texto hacia la derecha insertando espacios o tabuladores al principio de la línea, dejando un margen a la izquierda.
-
-> Esta es una de las principales características de Python.
-
-Un bloque comienza con un nuevo sangrado y acaba con la primera línea cuyo sangrado sea menor. De nuevo, la guía de estilo de Python recomienda usar los espacios en lugar de las tabulaciones para realizar el sangrado. Yo suelo utilizar 4 espacios.
-
-> Configura tu IDE de desarrollo para que use los espacios en lugar de los tabuladores para el sangrado. Establece el número de espacios a 4 ó 2.
-
-Veamos todo esto con un ejemplo:
-
-```py
-
-def suma_numeros(numeros):   # Bloque 1
-suma = 0                   # Bloque 2
-for n in numeros:          # Bloque 2
-  suma += n                # Bloque 3
-  print(suma)              # Bloque 3
-return suma                # Bloque 2
-
-```
-
-Como te decía en la sección anterior, no hace falta todavía que entiendas lo que hace el ejemplo. Simplemente debes comprender que en la línea 1 se define la función `suma_numeros`. El cuerpo de esta función está definido por el grupo de sentencias que pertenecen al bloque 2 y 3. A su vez, la sentencia `for` define las acciones a realizar dentro de la misma en el conjunto de sentencias que pertenecen al bloque 3.
-
-## Variables, literales y tipos
-
-### Variables
-
-Una de las características más potentes de un lenguaje de programación es la capacidad de manipular *variables*. Una variable es un nombre que se refiere a un valor.
-
-Una *sentencia de asignación* crea variables nuevas y las da valores:
-
-```py
-
->>> mensaje = 'Y ahora algo completamente diferente'
->>> n = 17
->>> pi = 3.1415926535897931
-
-```
-
-Este ejemplo hace tres asignaciones. La primera asigna una cadena a una variable nueva llamada `mensaje`; la segunda asigna el entero `17` a `n`; la tercera asigna el valor (aproximado) de *π* a `pi`.
-
-Para mostrar el valor de una variable, se puede usar la sentencia print:
-
-```py
-
->>> print(n)
-17
->>> print(pi)
-3.141592653589793
-
-```
-
-El tipo de una variable es el tipo del valor al que se refiere.
-
-```py
-
->>> type(mensaje)
-<class 'str'>
->>> type(n)
-<class 'int'>
->>> type(pi)
-<class 'float'>
-
-```
-
-### Valores (literales) y tipos
+#### 3.1. Valores (literales) y tipos
 
 Un *valor o literal* es una de las cosas básicas que utiliza un programa, como una letra o un número. Hasta ahora hemos visto valores o literales como `1`, `2`, y `'¡Hola, mundo!'`
 
 Esos valores pertenecen a *tipos* diferentes: `2` es un entero (int), y `'¡Hola, mundo!'` es una *cadena* (string), que recibe ese nombre porque contiene una “cadena” de letras. Tú (y el intérprete) podéis identificar las cadenas porque van encerradas entre comillas.
 
-La sentencia `print` también funciona con enteros. Vamos a usar el comando `python` para iniciar el intérprete.
+En python existen los siguientes tipos básicos de datos:
+- **int**: Números enteros. Por ejemplo, 2, 4, 20.  Los números enteros son aquellos que no tienen parte decimal. Por ejemplo, 2, 4, 20. Aunque en Python no hay un límite en el tamaño de los enteros, en la práctica, el tamaño de un entero está limitado por la memoria de la computadora.
+- **float**: Números decimales. Por ejemplo, 5.0, 1.6, 3.14159. Los números decimales son aquellos que tienen parte decimal. Por ejemplo, 5.0, 1.6, 3.14159. Los números decimales en Python se representan con un punto decimal.
+- **str**: Cadenas de texto. Por ejemplo, 'Hola', 'Python', '3.14159'. Las cadenas de texto son secuencias de caracteres. Por ejemplo, 'Hola', 'Python', '3.14159'. Las cadenas de texto en Python se pueden definir con comillas simples ('...') o dobles ("...").
+- **bool**: Valores booleanos. Por ejemplo, True, False. Los valores booleanos son aquellos que representan la verdad o la falsedad. En Python, los valores booleanos son True y False. Los valores booleanos se utilizan en expresiones lógicas y de comparación.
+- **None**: Representa la ausencia de valor. None es un valor especial en Python que se utiliza para representar la ausencia de valor. None es un valor único en Python y se utiliza para representar la ausencia de valor. None es un valor único en Python y se utiliza para representar la ausencia de valor.
+
+Vamos a usar el comando `python` para iniciar el intérprete.
 
 ```py
 
@@ -276,6 +141,7 @@ $python
 4
 
 ```
+La sentencia `print` ademas de funcionar con cadenas, también funciona con enteros.
 
 Si no estás seguro de qué tipo de valor estás manejando, el intérprete te lo puede decir.
 
@@ -323,7 +189,203 @@ Bien, ha funcionado. ¡Pero eso no era lo que esperábamos!. Python interpreta `
 
 Éste es el primer ejemplo que hemos visto de un error semántico: el código funciona sin producir ningún mensaje de error, pero no hace su trabajo “correctamente”.
 
-## Petición de información al usuario
+#### 3.2. Variables
+
+Una de las características más potentes de un lenguaje de programación es la capacidad de manipular *variables*. Una variable es un nombre que se refiere a un valor, un literal. 
+
+Una *sentencia de asignación* crea variables nuevas y las da valores:
+
+```py
+
+>>> mensaje = 'Y ahora algo completamente diferente'
+>>> n = 17
+>>> pi = 3.1415926535897931
+
+```
+
+Este ejemplo hace tres asignaciones. La primera asigna una cadena a una variable nueva llamada `mensaje`; la segunda asigna el entero `17` a `n`; la tercera asigna el valor (aproximado) de *π* a `pi`.
+
+Para mostrar el valor de una variable, se puede usar la sentencia print:
+
+```py
+
+>>> print(n)
+17
+>>> print(pi)
+3.141592653589793
+
+```
+
+El tipo de una variable es el tipo del valor al que se refiere.
+
+```py
+
+>>> type(mensaje)
+<class 'str'>
+>>> type(n)
+<class 'int'>
+>>> type(pi)
+<class 'float'>
+
+```
+
+#### 3.3. Constantes en Python
+
+A diferencia de otros lenguajes,  **en Python no existen las constantes** .
+
+Entendemos como *constante* una variable que una vez asignado un valor, este no se puede modificar. Es decir, que a la variable no se le puede asignar ningún otro valor una vez asignado el primero.
+
+Se puede simular este comportamiento, siempre desde el punto de vista del programador y atendiendo a convenciones propias, pero no podemos cambiar la naturaleza mutable de las variables.
+
+No obstante, sí que es cierto que el propio Python define una serie de valores constantes en su propio namespace. Los más importantes son:
+
+* **False:** El valor *false* del tipo `bool`.
+* **True:** El valor *true* del tipo `bool`.
+* **None:** El valor del tipo `NoneType`. Generalmente `None` se utiliza para representar la ausencia de valor de una variable.
+
+### 4. Operadores, expresiones y sentencias en Python
+
+Para introducirse en cualquier lenguajes es importante saber la diferencia entre operador, expresión y sentencia, ya que son las formas básicas que componen la estructura de cualquier programa.
+
+#### 4.1. Operador
+
+Un **operador** es un carácter o conjunto de caracteres que actúa sobre una, dos o más **variables** y/o **literales** para llevar a cabo una **operación** con un **resultado** determinado. Veremos la definición de variable y literales en los siguientes puntos.
+
+Ejemplos de operadores comunes son los operadores aritméticos `+` (suma), `-` (resta) o `*` (producto), aunque en Python existen otros operadores.
+
+##### 4.1.1 Orden de las operaciones
+
+Cuando en una expresión aparece más de un operador, el orden de evaluación depende de las  *reglas de precedencia*. Para los operadores matemáticos, Python sigue las convenciones matemáticas. El acrónimo *PEMDSR* resulta útil para recordar esas reglas:
+
+* Los Paréntesis tienen el nivel superior de precedencia, y pueden usarse para forzar a que una expresión sea evaluada en el orden que se quiera. Dado que las expresiones entre paréntesis son evaluadas primero, `2 * (3-1)` es 4, y `(1+1)**(5-2)` es 8. Se pueden usar también paréntesis para hacer una expresión más sencilla de leer, incluso si el resultado de la misma no varía por ello, como en `(minuto * 100) / 60`.
+* La Exponenciación (elevar un número a una potencia) tiene el siguiente nivel más alto de precedencia, de modo que `2**1+1` es 3, no 4, y `3*1**3` es 3, no 27.
+* La Multiplicación y la División tienen la misma precedencia, que es superior a la de la *S*uma y la *R*esta, que también tienen entre si el mismo nivel de precedencia. Así que `2*3-1` es 5, no 4, y `6+4/2` es 8, no 5.
+* Los operadores con igual precedencia son evaluados de izquierda a derecha. Así que la expresión `5-3-1` es 1 y no 3, ya que `5-3` se evalúa antes, y después se resta `1` de `2`.
+
+En caso de duda, añade siempre paréntesis a tus expresiones para asegurarte de que las operaciones se realizan en el orden que tú quieres.
+
+##### 4.1.2. Operaciones con cadenas
+
+El operador `+` funciona con las cadenas, pero no realiza una suma en el sentido matemático. En vez de eso, realiza una  *concatenación* , que quiere decir que une ambas cadenas, enlazando el final de la primera con el principio de la segunda. Por ejemplo:
+
+```py
+
+>>> primero = 10
+>>> segundo = 15
+>>> print(primero+segundo)
+25
+>>> primero = '100'
+>>> segundo = '150'
+>>> print(primero + segundo)
+100150
+
+```
+
+La salida de este programa es `100150`.
+
+El operador `*` también trabaja con cadenas multiplicando el contenido de una cadena por un entero. Por ejemplo:
+
+```py
+
+>>> primero = 'Test '
+>>> second = 3
+>>> print(primero * second)
+Test Test Test
+
+```
+
+Veremos más sobre los operadores en los siguientes puntos.
+
+#### 4.2. Expresión
+
+Una expresión es una unidad de código que **devuelve un valor** y está formada por una combinación de operandos (variables y literales) y operadores. Los siguientes son ejemplos de expresiones (cada línea es una expresión diferente):
+
+```py
+
+5 + 2           # Suma del número 5 y el número 2
+a < 10            # Compara si el valor de la variable a es menor que 10
+b is None       # Compara si la identidad de la variable b es None
+3 * (200 - c)   # Resta a 200 el valor de c y lo multiplica por 3
+
+```
+
+#### 4.3. Sentencia
+
+Por su parte, una sentencia o declaración es una instrucción que define una acción. Una sentencia puede estar formada por una o varias expresiones, aunque no siempre es así.
+
+En definitiva, las sentencias son las instrucciones que componen nuestro programa y determinan su comportamiento.
+
+Ejemplos de sentencias son la asignación `=` o las instrucciones `if`, `if ... else ...`, `for` o `while` entre otras.
+
+> Una sentencia está delimitada por el carácter `Enter (\n)`.
+
+##### 4.3.1. Sentencias de más de una línea
+
+Normalmente, las sentencias ocupan una sola línea. Por ejemplo:
+
+```py
+
+a = 2 + 3 #Asigna a la variable <a> el resultado de 2 + 3
+
+```
+
+Sin embargo, aquellas sentencias que son muy largas pueden ocupar más de una línea ([la guía de estilo PEP 8](https://www.python.org/dev/peps/pep-0008/), recomienda una longitud de línea máxima de 72 caracteres).
+
+Para dividir una sentencia en varias líneas se utiliza el carácter `\`. Por ejemplo:
+
+```py
+
+a = 2 + 3 + 5 + \
+7 + 9 + 4 + \
+6
+
+```
+
+Además de la separación explícita (la que se realiza con el carácter `\`), en Python la continuación de línea es implícita siempre y cuando la expresión vaya dentro de los caracteres `()`, `[]` y `{}`.
+
+Por ejemplo, podemos inicializar una lista del siguiente modo:
+
+```py
+
+a = [1, 2, 7,
+3, 8, 4,
+9]
+
+```
+
+No te preocupes si no sabes lo que es una lista o no entiendes lo que hace el ejemplo anterior. Lo importante es que comprendas que lo anterior es una sentencia multi-línea ya que está comprendida entre los caracteres `[]`.
+
+##### 4.3.2. Bloques de código (Indentación)
+
+Lo último que veremos sobre sentencias en esta introducción a Python es cómo se pueden agrupar en bloques de código.
+
+Un bloque de código es un grupo de sentencias relacionadas bien delimitadas. A diferencia de otros lenguajes como JAVA o C, en los que se usan los caracteres `{}` para definir un bloque de código, en Python se usa la indentación o sangrado.
+
+El sangrado o indentación consiste en mover un bloque de texto hacia la derecha insertando espacios o tabuladores al principio de la línea, dejando un margen a la izquierda.
+
+> Esta es una de las principales características de Python.
+
+Un bloque comienza con un nuevo sangrado y acaba con la primera línea cuyo sangrado sea menor. De nuevo, la guía de estilo de Python recomienda usar los espacios en lugar de las tabulaciones para realizar el sangrado. Yo suelo utilizar 4 espacios.
+
+> Configura tu IDE de desarrollo para que use los espacios en lugar de los tabuladores para el sangrado. Establece el número de espacios a 4 ó 2.
+
+Veamos todo esto con un ejemplo:
+
+```py
+
+def suma_numeros(numeros):     # Bloque 1
+    suma = 0                   # Bloque 2
+    for n in numeros:          # Bloque 2
+      suma += n                # Bloque 3
+      print(suma)              # Bloque 3
+    return suma                # Bloque 2
+
+```
+
+Como te decía en la sección anterior, no hace falta todavía que entiendas lo que hace el ejemplo. Simplemente debes comprender que en la línea 1 se define la función `suma_numeros`. El cuerpo de esta función está definido por el grupo de sentencias que pertenecen al bloque 2 y 3. A su vez, la sentencia `for` define las acciones a realizar dentro de la misma en el conjunto de sentencias que pertenecen al bloque 3.
+
+
+### 5. Petición de información al usuario
 
 A veces necesitaremos que sea el usuario quien nos proporcione el valor para una variable, a través del teclado. Python proporciona una función interna llamada `input` que recibe la entrada desde el teclado. Cuando se llama a esa función, el programa se detiene y espera a que el usuario escriba algo. Cuando el usuario pulsa `Retorno` o `Intro`, el programa continúa y `input` devuelve como **una cadena** aquello que el usuario escribió.
 
@@ -379,7 +441,7 @@ ValueError: invalid literal for int()
 
 Veremos cómo controlar este tipo de errores más adelante.
 
-## Comentarios en Python
+### 6. Comentarios en Python
 
 Como cualquier otro lenguaje de programación, Python permite escribir comentarios en el código. Para añadir un comentario a tu código simplemente comienza una línea con el carácter `#`:
 
@@ -394,7 +456,7 @@ print(a * 2)
 
 > Los comentarios son ignorados por el intérprete de Python. Solo tienen sentido para los programadores.
 
-### Comentarios de varias líneas
+#### 6.1. Comentarios de varias líneas
 
 Para escribir comentarios que ocupan varias líneas, simplemente escribe cada una de las líneas anteponiendo el carácter `#`:
 
@@ -405,7 +467,7 @@ Para escribir comentarios que ocupan varias líneas, simplemente escribe cada un
 
 ```
 
-### Docstrings
+#### 6.2. Docstrings
 
 Los docstrings son un tipo de comentarios especiales que se usan para documentar un módulo, función, clase o método. En realidad son la primera sentencia de cada uno de ellos y se encierran entre tres comillas simples o dobles.
 
@@ -419,7 +481,7 @@ def suma(a, b):
   
 ```
 
-## Palabras reservadas de Python
+### 7. Palabras reservadas de Python
 
 Python tiene una serie de palabras clave  **reservadas** , por tanto, **no pueden usarse como nombres de variables, funciones, etc.**
 
@@ -429,21 +491,9 @@ La lista de palabras reservadas es la siguiente:
 
 `and`, `as`, `assert`, `break`, `class`, `continue`, `def`, `del`, `elif`, `else`, `except`, `False`, `finally`, `for`, `from`, `global`, `if`, `import`, `in`, `is`, `lambda`, `None`, `nonlocal`, `not`, `or`, `pass`, `raise`, `return`, `True`, `try`, `yield`, `while` y `with`
 
-## Constantes en Python
 
-A diferencia de otros lenguajes,  **en Python no existen las constantes** .
 
-Entendemos como *constante* una variable que una vez asignado un valor, este no se puede modificar. Es decir, que a la variable no se le puede asignar ningún otro valor una vez asignado el primero.
-
-Se puede simular este comportamiento, siempre desde el punto de vista del programador y atendiendo a convenciones propias, pero no podemos cambiar la naturaleza mutable de las variables.
-
-No obstante, sí que es cierto que el propio Python define una serie de valores constantes en su propio namespace. Los más importantes son:
-
-* **False:** El valor *false* del tipo `bool`.
-* **True:** El valor *true* del tipo `bool`.
-* **None:** El valor del tipo `NoneType`. Generalmente `None` se utiliza para representar la ausencia de valor de una variable.
-
-## Convenciones de nombres en Python
+### 8. Convenciones de nombres en Python
 
 A la hora de nombrar una variable, una función, un módulo, una clase, etc. en Python, siempre se siguen las siguientes reglas y recomendaciones:
 
@@ -455,7 +505,7 @@ A la hora de nombrar una variable, una función, un módulo, una clase, etc. en 
 * Como recomendación, usa identificadores que sean expresivos. Por ejemplo, `contador` es mejor que simplemente `c`.
 * Python diferencia entre mayúsculas y minúsculas, de manera que `variable_1` y `Variable_1` son dos identificadores totalmente diferentes.
 
-## Depuración
+### 9. Depuración
 
 En este punto, el error de sintaxis que es más probable que cometas será intentar utilizar nombres de variables no válidos, como `class` y `yield`, que son palabras clave, o `odd~job` y `US$`, que contienen caracteres no válidos.
 
@@ -502,7 +552,7 @@ En este punto, la causa más probable de un error semántico es el orden de las 
 
 Pero la división se evalúa antes, ¡así que obtendrás  *π* **/2**, que no es lo mismo! No hay forma de que Python sepa qué es lo que querías escribir exactamente, así que en este caso no obtienes un mensaje de error; simplemente obtienes una respuesta incorrecta.
 
-## Operadores
+### 10. Mas sobre Operadores
 
 Ya hablamos sobre los operadores, los operadores son símbolos reservados por el propio lenguaje que se utilizan para llevar a cabo operaciones sobre uno, dos o más elementos llamados operandos. Los operandos pueden ser variables, literales, el valor devuelto por una expresión o el valor devuelto por una función.
 
@@ -515,7 +565,7 @@ El ejemplo más típico que siempre viene a la mente es el operador suma, `+`, q
 
 ```
 
-### Operador de concatenación de cadenas de caracteres
+#### 10.1. Operador de concatenación de cadenas de caracteres
 
 Una de las operaciones más básicas cuando se trabaja con cadenas de caracteres es la concatenación. Esto consiste en unir dos cadenas en una sola, siendo el resultado un nuevo  *string* .
 
@@ -531,7 +581,7 @@ Hola Pythonista
 
 ```
 
-### Operadores lógicos o booleanos
+#### 10.2. Operadores lógicos o booleanos
 
 A la hora de operar con valores booleanos, tenemos a nuestra disposición los operadores `and`, `or` y `not`.
 
@@ -569,7 +619,7 @@ True
 
 ```
 
-### Operadores de comparación
+#### 10.3. Operadores de comparación
 
 Los operadores de comparación se utilizan, como su nombre indica, para comparar dos o más valores. El resultado de estos operadores siempre es `True` o `False`.
 
@@ -598,7 +648,7 @@ False
 
 ```
 
-#### Consideraciones sobre los operadores de comparación
+##### 10.3.1. Consideraciones sobre los operadores de comparación
 
 Los objetos de diferentes tipos, excepto los tipos numéricos, nunca se comparan igual. El operador `==` siempre está definido, pero para algunos tipos de objetos (por ejemplo, objetos de clase) es equivalente a [is](https://j2logo.com/python/tutorial/operadores-en-python/#operadores-identidad).
 
@@ -619,7 +669,7 @@ True
 
 ```
 
-### Operadores aritméticos en Python
+#### 10.4.  Operadores aritméticos en Python
 
 En cuanto a los operadores aritméticos, estos permiten realizar las diferentes operaciones aritméticas del álgebra: suma, resta, producto, división, … Estos operadores Python son de los más utilizados. El listado completo es el siguiente:
 
@@ -658,7 +708,7 @@ Ejemplos:
 ```
 
 
-### Operadores a nivel de bits
+#### 10.5.  Operadores a nivel de bits
 
 Los operadores a nivel de bits actúan sobre los operandos como si fueran una cadena de dígitos binarios. Como su nombre indica, actúan sobre los operandos bit a bit. Son los siguientes:
 
@@ -694,7 +744,7 @@ Supongamos que tenemos el entero 2 (en bits es 00010) y el entero 7 (00111). El 
 ```
 
 
-### Operadores de asignación
+#### 10.6.  Operadores de asignación
 
 El operador de asignación se utiliza para asignar un valor a una variable. Como te he mencionado en otras secciones, este operador es el signo `=`.
 
@@ -720,7 +770,7 @@ A continuación, aparece la lista de todos los operadores de asignación compues
 | >>=      | x >>= 2 | x = x >> 2   |
 | <<=      | x <<= 2 | x = x << 2   |
 
-### Operadores de pertenencia
+#### 10.7.  Operadores de pertenencia
 
 Los operadores de pertenencia se utilizan para comprobar si un valor o variable se encuentran en una secuencia (`list`, `tuple`, `dict`, `set` o `str`).
 
@@ -746,7 +796,7 @@ True
 
 ```
 
-### Operadores de identidad
+#### 10.8. Operadores de identidad
 
 Por último, los operadores de identidad se utilizan para comprobar si dos variables son, o no, el mismo objeto.
 
@@ -775,7 +825,7 @@ True
 
 ```
 
-### Prioridad de los operadores en Python
+#### 10.9.  Prioridad de los operadores en Python
 
 Como ya dijimos, al igual que ocurre en las matemáticas, los operadores en Python tienen un orden de prioridad. Este orden es el siguiente, de menos prioritario a más prioritario: asignación; operadores booleanos; operadores de comparación, identidad y pertenencia; a nivel de bits y finalmente los aritméticos (con el mismo orden de prioridad que en las matemáticas).
 
@@ -796,5 +846,6 @@ Este orden de prioridad se puede alterar con el uso de los paréntesis `()`:
 
 ## Fuente
 
-* [Pagina de Juan Jose Lozano Gomez sobre Python](https://j2logo.com/)
-* [Python for Everybody](https://www.py4e.com/book)
+* [Pagina de Juan Jose Lozano Gomez sobre Python](https://j2logo.com/)    
+* [Python for Everybody](https://www.py4e.com/book)    
+* [Elementos de un programa de Python](https://www.mclibre.org/consultar/python/lecciones/python-elementos.html)    

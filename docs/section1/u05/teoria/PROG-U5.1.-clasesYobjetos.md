@@ -14,7 +14,7 @@ tags:
     - Software
     - kotlin
 ---
-## 5.1.- Revisitando las clases y los objetos
+## 5.1. Revisitando las clases y los objetos
 
 En Kotlin, la Programación Orientada a Objetos (POO) se maneja con una sintaxis concisa y poderosas características que simplifican la codificación y mejoran la legibilidad. Entre estas características, las clases y objetos juegan un papel central, permitiendo a los desarrolladores modelar el mundo real de manera eficiente y efectiva. Kotlin, diseñado para ser completamente interoperable con Java, introduce mejoras significativas sobre este, haciendo que el trabajo con POO sea más intuitivo y menos propenso a errores.
 

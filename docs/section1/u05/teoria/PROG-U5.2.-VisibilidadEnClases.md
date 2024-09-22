@@ -14,7 +14,7 @@ tags:
     - Software
     - kotlin
 ---
-## 5.2.- Visibilidad en miembros de clases
+## 5.2. Visibilidad en miembros de clases
 
 En Kotlin, al igual que en una base de superhéroes, no todo el mundo puede entrar en todas las áreas. Hay diferentes niveles de acceso dependiendo de quién seas y qué permisos tengas. Los modificadores de visibilidad de Kotlin controlan exactamente esto: quién puede acceder a tus clases, interfaces, funciones y propiedades. Vamos a ver los diferentes niveles de acceso disponibles:
 

@@ -715,7 +715,7 @@ Los operadores a nivel de bits actúan sobre los operandos como si fueran una ca
 
 | Operación | Descripción                             |
 | ------------ | ------------------------------------------ |
-| x | y      | or bit a bit de x e y.                   |
+| x \| y     | or bit a bit de x e y.                   |
 | x ^ y      | or exclusivo bit a bit de x e y.         |
 | x & y      | and bit a bit de x e y.                  |
 | x << n     | Desplaza x n bits a la izquierda.        |

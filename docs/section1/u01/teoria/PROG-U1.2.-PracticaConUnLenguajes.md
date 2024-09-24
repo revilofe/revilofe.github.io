@@ -765,7 +765,7 @@ A continuación, aparece la lista de todos los operadores de asignación compues
 | //=      | x //= 2 | x = x // 2   |
 | **=      | x **= 2 | x = x ** 2   |
 | &=       | x &= 2  | x = x & 2    |
-|          | =       | x            |
+| \|=      | x \|= 2 | x = x \| 2   |
 | ^=       | x ^= 2  | x = x ^ 2    |
 | >>=      | x >>= 2 | x = x >> 2   |
 | <<=      | x <<= 2 | x = x << 2   |

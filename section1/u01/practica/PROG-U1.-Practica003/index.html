@@ -4301,8 +4301,8 @@
 </li>
 <li>
 <p>No pasa nada, para eso tenemos un control de versiones... primero hacemos <code>git log</code>, copiamos el número que está a la derecha del commit de la versión a la que queremos volver y lo pegamos detrás del siguiente comando:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>&gt; git log
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>&gt; git checkout 8d0bd05d48f696b544e0eca0dce995d15f220e13
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>&gt; git log --oneline
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>&gt; git reset --hard &lt;commit_hash&gt;
 </code></pre></div>
 </li>
 <li>
@@ -4314,6 +4314,9 @@
 <li>Para añadir TODOS los ficheros de un directorio =&gt; <code>git add .</code>  </li>
 <li>Para añadir TODOS los cambios pendientes de una sola vez =&gt; <code>git add -A</code>      </li>
 <li>Para deshacer un <code>git add</code> antes de hacer un <code>git commit</code> =&gt; <code>git reset nombreArchivo</code> o <code>git reset</code> para deshacer todos los cambios. También podemos usar <code>git checkout .</code>.</li>
+<li>Para cambiar el HEAD al commit especificado, pero sin afectar la rama: <code>git checkout &lt;commit_hash&gt;</code></li>
+<li>Para mover la rama y borrar todos los cambios posteriores a ese commit: <code>git reset --hard &lt;commit_hash&gt;</code></li>
+<li>Para mover la rama pero mantener los cambios locales en staging: <code>git reset --soft &lt;commit_hash&gt;</code></li>
 <li>Para cambiar el nombre de la rama master por main, es decir, renombrar la rama =&gt; <code>git branch -m main</code></li>
 </ul>
 </li>

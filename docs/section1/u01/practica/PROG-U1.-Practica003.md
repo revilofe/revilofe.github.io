@@ -231,8 +231,8 @@ En windows, Git Bash es la herramienta de línea de comandos que permite a los u
 
 	```
 	
-	> git log
-	> git checkout 8d0bd05d48f696b544e0eca0dce995d15f220e13
+	> git log --oneline
+	> git reset --hard <commit_hash>
 	
 	```
 	
@@ -244,6 +244,9 @@ En windows, Git Bash es la herramienta de línea de comandos que permite a los u
 	* Para añadir TODOS los ficheros de un directorio => `git add .`  
 	* Para añadir TODOS los cambios pendientes de una sola vez => `git add -A`  	
 	* Para deshacer un `git add` antes de hacer un `git commit` => `git reset nombreArchivo` o `git reset` para deshacer todos los cambios. También podemos usar `git checkout .`.
+	* Para cambiar el HEAD al commit especificado, pero sin afectar la rama: `git checkout <commit_hash>`
+	* Para mover la rama y borrar todos los cambios posteriores a ese commit: `git reset --hard <commit_hash>`
+	* Para mover la rama pero mantener los cambios locales en staging: `git reset --soft <commit_hash>`
 	* Para cambiar el nombre de la rama master por main, es decir, renombrar la rama => `git branch -m main`
 
 

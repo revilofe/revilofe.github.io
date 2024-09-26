@@ -314,56 +314,82 @@ False
 True
 ```
 
-### 6.3. Conversión de datos primitivos simples
+#### 6.3. Conversión de datos primitivos simples
 
-Se pueden dar situaciones en las que sea necesario convertir un dato de un tipo en otro. Las conversiones de datos se pueden clasificar en dos tipos:
-1. **Conversiones explícitas**: Son aquellas en las que se especifica el tipo al que se quiere convertir el dato.
-2. **Conversiones implícitas**: Son aquellas en las que Python realiza la conversión de forma automática.
+En algunos casos, es necesario convertir un dato de un tipo a otro. Las conversiones de datos en Python se pueden clasificar en dos tipos:
+
+1. **Conversiones explícitas**: Son aquellas en las que se especifica manualmente el tipo al que se quiere convertir el dato.
+2. **Conversiones implícitas**: Son aquellas en las que Python realiza la conversión de forma automática durante la ejecución del programa.
 
 #### 6.3.1. Conversiones explícitas
 
-Las siguientes funciones convierten un dato de un tipo en otro, siempre y cuando la conversión sea posible.
+Las siguientes funciones permiten convertir un dato de un tipo a otro, siempre y cuando la conversión sea válida:
 
-* `int()` convierte a entero.   
-  **Ejemplo**.
-  `int('12')`  `12`
-  `int(True)`  `1`
-  `int('c')`  Error
-* `float()` convierte a real.
-  **Ejemplo**. 
-  `float('3.14')`  `3.14`
-  `float(True)`  `1.0`
-  `float('III')`  Error
-* `str()` convierte a cadena.
-  **Ejemplo**.
-  `str(3.14)`  `'3.14'`
-  `str(True)`  `'True'`
-* `bool()` convierte a lógico.
-  **Ejemplo**. 
-  `bool('0')`  `False`
-  `bool('3.14')`  `True`
-  `bool('')`  `False`
-  `bool('Hola')`  `True`
+- **`int()`** convierte a entero.
+  - Ejemplo:
+    ```python
+    int('12')  # 12
+    int(True)  # 1
+    int('c')   # Error
+    ```
+
+- **`float()`** convierte a número real (flotante).
+  - Ejemplo:
+    ```python
+    float('3.14')  # 3.14
+    float(True)    # 1.0
+    float('III')   # Error
+    ```
+
+- **`str()`** convierte a cadena.
+  - Ejemplo:
+    ```python
+    str(3.14)   # '3.14'
+    str(True)   # 'True'
+    ```
+
+- **`bool()`** convierte a booleano.
+  - Ejemplo:
+    ```python
+    bool('0')     # False
+    bool('3.14')  # True
+    bool('')      # False
+    bool('Hola')  # True
+    ```
 
 #### 6.3.2. Conversiones implícitas
 
-En cuanto a las conversiones implicitas de tipos de datos, Python realiza las siguientes conversiones:
-- De `int` a `float` si se realiza una operación aritmética con un número real.
-- De `int` a `str` si se realiza una operación de concatenación con una cadena.
-- De `float` a `str` si se realiza una operación de concatenación con una cadena.
-- De `str` a `int` si se realiza una operación aritmética con un número entero.
-- De `str` a `float` si se realiza una operación aritmética con un número real.
+Python realiza ciertas conversiones de tipos de datos de manera implícita durante las operaciones. Las conversiones implícitas que Python efectúa son las siguientes:
 
-```python
->>> 2 + 3.0
-5.0
->>> 'Hola' + str(3)
-'Hola3'
->>> 2 + int('3')
-5
->>> 2 + float('3.0')
-5.0
-```
+- **De `int` a `float`**: Si se realiza una operación aritmética entre un número entero y un número real, el entero se convierte automáticamente en un número real.
+
+  Ejemplo:
+  ```python
+  2 + 3.0  # 5.0 (int convertido a float)
+  ```
+
+- **De `float` a `int`**: Python no convierte automáticamente un `float` a `int` en una operación aritmética, ya que esto implicaría pérdida de precisión. Para convertir un `float` a `int`, se debe realizar una conversión explícita utilizando `int()`.
+
+- **No hay conversión implícita de `int` a `str` ni de `float` a `str`**: Para concatenar un número con una cadena, se debe convertir explícitamente el número a cadena utilizando `str()`. Python no realiza esta conversión de manera implícita.
+
+  Ejemplo:
+  ```python
+  'Hola' + str(3)  # 'Hola3'
+  ```
+
+- **No hay conversión implícita de `str` a `int` o `float`**: Si se necesita realizar operaciones aritméticas con una cadena que contiene un número, es necesario convertir la cadena explícitamente a `int` o `float` utilizando las funciones `int()` o `float()`.
+
+  Ejemplo:
+  ```python
+  2 + int('3')    # 5 (conversión explícita de str a int)
+  2 + float('3.0')  # 5.0 (conversión explícita de str a float)
+  ```
+
+**En resumen:**
+
+- Las **conversiones implícitas** en Python ocurren principalmente en operaciones numéricas entre `int` y `float`.
+- Para realizar operaciones con cadenas y números, es necesario realizar **conversiones explícitas** utilizando funciones como `str()`, `int()`, o `float()`.
+
 
 ## Fuente
 

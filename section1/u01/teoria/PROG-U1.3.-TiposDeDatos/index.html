@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon-96x96.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
     
     
       
@@ -904,11 +904,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#63-conversion-de-datos-primitivos-simples" class="md-nav__link">
     <span class="md-ellipsis">
@@ -916,8 +911,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6.3. Conversión de datos primitivos simples">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#631-conversiones-explicitas" class="md-nav__link">
@@ -4424,11 +4418,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#63-conversion-de-datos-primitivos-simples" class="md-nav__link">
     <span class="md-ellipsis">
@@ -4436,8 +4425,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6.3. Conversión de datos primitivos simples">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#631-conversiones-explicitas" class="md-nav__link">
@@ -4844,50 +4832,83 @@
 <a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="kc">True</span> <span class="ow">and</span> <span class="kc">True</span>
 <a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="kc">True</span>
 </code></pre></div>
-<h3 id="63-conversion-de-datos-primitivos-simples">6.3. Conversión de datos primitivos simples<a class="headerlink" href="#63-conversion-de-datos-primitivos-simples" title="Permanent link">&para;</a></h3>
-<p>Se pueden dar situaciones en las que sea necesario convertir un dato de un tipo en otro. Las conversiones de datos se pueden clasificar en dos tipos:
-1. <strong>Conversiones explícitas</strong>: Son aquellas en las que se especifica el tipo al que se quiere convertir el dato.
-2. <strong>Conversiones implícitas</strong>: Son aquellas en las que Python realiza la conversión de forma automática.</p>
+<h4 id="63-conversion-de-datos-primitivos-simples">6.3. Conversión de datos primitivos simples<a class="headerlink" href="#63-conversion-de-datos-primitivos-simples" title="Permanent link">&para;</a></h4>
+<p>En algunos casos, es necesario convertir un dato de un tipo a otro. Las conversiones de datos en Python se pueden clasificar en dos tipos:</p>
+<ol>
+<li><strong>Conversiones explícitas</strong>: Son aquellas en las que se especifica manualmente el tipo al que se quiere convertir el dato.</li>
+<li><strong>Conversiones implícitas</strong>: Son aquellas en las que Python realiza la conversión de forma automática durante la ejecución del programa.</li>
+</ol>
 <h4 id="631-conversiones-explicitas">6.3.1. Conversiones explícitas<a class="headerlink" href="#631-conversiones-explicitas" title="Permanent link">&para;</a></h4>
-<p>Las siguientes funciones convierten un dato de un tipo en otro, siempre y cuando la conversión sea posible.</p>
+<p>Las siguientes funciones permiten convertir un dato de un tipo a otro, siempre y cuando la conversión sea válida:</p>
 <ul>
-<li><code>int()</code> convierte a entero. <br />
-<strong>Ejemplo</strong>.
-  <code>int('12')</code>  <code>12</code>
-  <code>int(True)</code>  <code>1</code>
-  <code>int('c')</code>  Error</li>
-<li><code>float()</code> convierte a real.
-  <strong>Ejemplo</strong>. 
-  <code>float('3.14')</code>  <code>3.14</code>
-  <code>float(True)</code>  <code>1.0</code>
-  <code>float('III')</code>  Error</li>
-<li><code>str()</code> convierte a cadena.
-  <strong>Ejemplo</strong>.
-  <code>str(3.14)</code>  <code>'3.14'</code>
-  <code>str(True)</code>  <code>'True'</code></li>
-<li><code>bool()</code> convierte a lógico.
-  <strong>Ejemplo</strong>. 
-  <code>bool('0')</code>  <code>False</code>
-  <code>bool('3.14')</code>  <code>True</code>
-  <code>bool('')</code>  <code>False</code>
-  <code>bool('Hola')</code>  <code>True</code></li>
+<li><strong><code>int()</code></strong> convierte a entero.</li>
+<li>
+<p>Ejemplo:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;12&#39;</span><span class="p">)</span>  <span class="c1"># 12</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nb">int</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># 1</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>   <span class="c1"># Error</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong><code>float()</code></strong> convierte a número real (flotante).</p>
+</li>
+<li>
+<p>Ejemplo:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;3.14&#39;</span><span class="p">)</span>  <span class="c1"># 3.14</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">float</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>    <span class="c1"># 1.0</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;III&#39;</span><span class="p">)</span>   <span class="c1"># Error</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong><code>str()</code></strong> convierte a cadena.</p>
+</li>
+<li>
+<p>Ejemplo:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">str</span><span class="p">(</span><span class="mf">3.14</span><span class="p">)</span>   <span class="c1"># &#39;3.14&#39;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nb">str</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>   <span class="c1"># &#39;True&#39;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong><code>bool()</code></strong> convierte a booleano.</p>
+</li>
+<li>Ejemplo:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">)</span>     <span class="c1"># False</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;3.14&#39;</span><span class="p">)</span>  <span class="c1"># True</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>      <span class="c1"># False</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="nb">bool</span><span class="p">(</span><span class="s1">&#39;Hola&#39;</span><span class="p">)</span>  <span class="c1"># True</span>
+</code></pre></div></li>
 </ul>
 <h4 id="632-conversiones-implicitas">6.3.2. Conversiones implícitas<a class="headerlink" href="#632-conversiones-implicitas" title="Permanent link">&para;</a></h4>
-<p>En cuanto a las conversiones implicitas de tipos de datos, Python realiza las siguientes conversiones:
-- De <code>int</code> a <code>float</code> si se realiza una operación aritmética con un número real.
-- De <code>int</code> a <code>str</code> si se realiza una operación de concatenación con una cadena.
-- De <code>float</code> a <code>str</code> si se realiza una operación de concatenación con una cadena.
-- De <code>str</code> a <code>int</code> si se realiza una operación aritmética con un número entero.
-- De <code>str</code> a <code>float</code> si se realiza una operación aritmética con un número real.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="mf">5.0</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;Hola&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="s1">&#39;Hola3&#39;</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">)</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="mi">5</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;3.0&#39;</span><span class="p">)</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="mf">5.0</span>
-</code></pre></div>
+<p>Python realiza ciertas conversiones de tipos de datos de manera implícita durante las operaciones. Las conversiones implícitas que Python efectúa son las siguientes:</p>
+<ul>
+<li><strong>De <code>int</code> a <code>float</code></strong>: Si se realiza una operación aritmética entre un número entero y un número real, el entero se convierte automáticamente en un número real.</li>
+</ul>
+<p>Ejemplo:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span>  <span class="c1"># 5.0 (int convertido a float)</span>
+</code></pre></div></p>
+<ul>
+<li>
+<p><strong>De <code>float</code> a <code>int</code></strong>: Python no convierte automáticamente un <code>float</code> a <code>int</code> en una operación aritmética, ya que esto implicaría pérdida de precisión. Para convertir un <code>float</code> a <code>int</code>, se debe realizar una conversión explícita utilizando <code>int()</code>.</p>
+</li>
+<li>
+<p><strong>No hay conversión implícita de <code>int</code> a <code>str</code> ni de <code>float</code> a <code>str</code></strong>: Para concatenar un número con una cadena, se debe convertir explícitamente el número a cadena utilizando <code>str()</code>. Python no realiza esta conversión de manera implícita.</p>
+</li>
+</ul>
+<p>Ejemplo:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="s1">&#39;Hola&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># &#39;Hola3&#39;</span>
+</code></pre></div></p>
+<ul>
+<li><strong>No hay conversión implícita de <code>str</code> a <code>int</code> o <code>float</code></strong>: Si se necesita realizar operaciones aritméticas con una cadena que contiene un número, es necesario convertir la cadena explícitamente a <code>int</code> o <code>float</code> utilizando las funciones <code>int()</code> o <code>float()</code>.</li>
+</ul>
+<p>Ejemplo:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="mi">2</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">)</span>    <span class="c1"># 5 (conversión explícita de str a int)</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="mi">2</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;3.0&#39;</span><span class="p">)</span>  <span class="c1"># 5.0 (conversión explícita de str a float)</span>
+</code></pre></div></p>
+<p><strong>En resumen:</strong></p>
+<ul>
+<li>Las <strong>conversiones implícitas</strong> en Python ocurren principalmente en operaciones numéricas entre <code>int</code> y <code>float</code>.</li>
+<li>Para realizar operaciones con cadenas y números, es necesario realizar <strong>conversiones explícitas</strong> utilizando funciones como <code>str()</code>, <code>int()</code>, o <code>float()</code>.</li>
+</ul>
 <h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://aprendeconalf.es/">Aprende con Alf</a></li>

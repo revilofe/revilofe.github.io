@@ -9,11 +9,9 @@
 ![Logo Alberties](assets/logo-alberties.png)
 
 ---
+# Indice
 
-## Indice
-
----  
-
+---
 # Presentación
 
 
@@ -27,8 +25,7 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 
 Note: Recomendado, consultar la programación.
 
----  
-
+---
 # Objetivos
 
 
@@ -55,8 +52,7 @@ La formación del módulo contribuye a alcanzar las competencias a), b), k), l),
 
 _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i-xNGtTAMcRiCgj/view?usp=sharing)_
 
----   
-
+---
 # Horarios
 
 
@@ -82,8 +78,7 @@ Horario (5 horas semanales)
 
 _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i-xNGtTAMcRiCgj/view?usp=sharing)_
 
----  
-
+---
 # Contenidos
 
 
@@ -101,8 +96,7 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 
 _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i-xNGtTAMcRiCgj/view?usp=sharing)_
 
----   
-
+---
 # Evaluación y recuperación
 
 
@@ -133,8 +127,7 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 * La recuperación de los RA pendientes se realiza durante el mes de junio.
 * Consistirá en un conjunto de prácticas y/o pruebas sobre los criterios de evaluación relacionados con el resultado de aprendizaje no superado.
 
----  
-
+---
 # Metodología y comunicación
 
 
@@ -152,8 +145,7 @@ Por unidad:
 
 ![](./assets/IS-U011-Presentacion3.png) <!-- .element height="25%" width="25%" -->
 
----   
-
+---
 ## Metodología I.
 Por unidad:
 * Explicar contenidos relacionados con criterios de evaluación asociados al RA con el que se está trabajando. Vuestros apuntes son importantes.
@@ -173,8 +165,7 @@ Por unidad:
 
 **ATENCIÓN!!!:** ***TEN EN CUENTA QUE ESTAS EN UNA FORMACIÓN PRESENCIAL.***
 
----   
-
+---
 # Recomendaciones y aclaraciones
 
 
@@ -219,12 +210,10 @@ Por unidad:
 * La entrega consiste en: subida a la plataforma (por defecto) en fecha + defensa en clase.
 
 ---
-
 # Dudas
 ![](./assets/IS-U011-Presentacion4.png)
 
 ---
-
 # Fin!
 
 ![](./assets/Fin.png) <!-- .element height="50%" width="50%" -->

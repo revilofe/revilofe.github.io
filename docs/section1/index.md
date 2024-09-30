@@ -33,7 +33,7 @@ Todo el contenido está supeditado a mejora, de hecho está en construcción, y 
 
 En los siguientes enlaces se encuentran los contenidos, resultados de aprendizaje, criterios de evaluación y herramientas para trabajarlos y poder evaluarlos. Es solo una propuesta, pero puede servir de punto de partida inicial.
 
-1. [Introducción al desarrollo de software](page-1/)
+1. Introducción al desarrollo de software
 
 
 ### Relación de unidades y resultados de aprendizaje

@@ -242,7 +242,7 @@ Por unidad:
    
 
 ## Primeros pasos
-6. Rellenar los formularios que hay en la moodle. Sirven para entornos.
+3. Rellenar los formularios que hay en la moodle. Sirven para entornos.
 4. Darte de alta en github.com con tu email, solicitan acceso PRO por ser estudiante.
 
 

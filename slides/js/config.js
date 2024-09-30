@@ -287,10 +287,11 @@ export default {
 	// Script dependencies to load
 	dependencies: [],
 
-	// Plugin objects to register and use for this presentation
-	plugins: [],
-
 	// Generate table of contents
-	toc: true
+	//toc: true,
+
+	// Plugin objects to register and use for this presentation
+	plugins: []
+
 
 }

@@ -85,7 +85,7 @@ export default {
 	overview: true,
 
 	// Vertical centering of slides
-	center: true,
+	center: false,
 
 	// Enables touch navigation on devices with touch input
 	touch: true,
@@ -212,7 +212,7 @@ export default {
 	defaultTiming: null,
 
 	// Enable slide navigation via mouse wheel
-	mouseWheel: false,
+	mouseWheel: true,
 
 	// Opens links in an iframe preview overlay
 	// Add `data-preview-link` and `data-preview-link="false"` to customise each link
@@ -288,6 +288,9 @@ export default {
 	dependencies: [],
 
 	// Plugin objects to register and use for this presentation
-	plugins: []
+	plugins: [],
+
+	// Generate table of contents
+	toc: true
 
 }

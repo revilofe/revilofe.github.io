@@ -120,6 +120,8 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 * 1 Evaluación Final
   * Junio
 
+![](./assets/IS-U011-Presentacion4.png)<!-- .element height="50%" width="50%" -->
+
 
 ## Recuperación
 * La recuperación de los RA pendientes se realiza durante el mes de junio.
@@ -129,6 +131,21 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 # Metodología y comunicación
 
 
+## Metodología
+Por unidad:
+
+* Explicar contenidos relacionados con criterios de evaluación  asociados al RA con el que se está trabajando.
+* Trabajar los contenidos en grupo e individualmente, guiados por diapositivas, materiales de la red y discusión en grupo.
+* Puesta en práctica con trabajos.
+
+
+## Comunicación
+* Comunicación **oficial, preferida y obligada**: Asistiendo al aula y hablando directamente con el profesor.
+* Otros medios secundarios **opcionales**: Correo electrónico y Moodle.
+
+![](./assets/IS-U011-Presentacion3.png) <!-- .element height="25%" width="25%" -->
+
+---
 ## Metodología I.
 Por unidad:
 * Explicar contenidos relacionados con criterios de evaluación asociados al RA con el que se está trabajando. Vuestros apuntes son importantes.
@@ -145,8 +162,6 @@ Por unidad:
 ## Comunicación.
 * Comunicación **oficial, preferida y obligada**: Asistiendo al aula y hablando directamente con el profesor.
 * Otros medios secundarios **opcionales**: Correo electrónico y Moodle.
-
- ![](./assets/IS-U011-Presentacion3.png) <!-- .element height="25%" width="25%" -->
 
 **ATENCIÓN!!!:** ***TEN EN CUENTA QUE ESTAS EN UNA FORMACIÓN PRESENCIAL.***
 

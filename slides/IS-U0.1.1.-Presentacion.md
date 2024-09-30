@@ -1,6 +1,6 @@
 <!-- Con # se ponen los títulos -->
 
-# Incidentes de ciberseguridad
+## Incidentes de ciberseguridad
 
 
 ![Logo Alberti](assets/logo-iesra.png)
@@ -10,14 +10,14 @@
 
 ---
 
-# Indice
+## Indice
 
----
+---  
 
 # Presentación
 
 
-## Nos conocemos. Profesor
+## Presentación
 
 * Eduardo Fernández Oliver
   * _[efernandez@iesrafaelalberti\.es](mailto:efernandez@iesrafaelalberti.es)_
@@ -28,18 +28,17 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 
 Note: Recomendado, consultar la programación.
 
----
+---  
 
-# Objetivos fundamentales
+# Objetivos
 
 
-## Objetivos generales
+## Objetivos fundamentales
 
 La formación del módulo contribuye a alcanzar los objetivos generales a), b), c), d), q), r), s), t), u) y v) del curso de especialización.
 
 
 ## Objetivos RA
-
 
 |  RA  | LOGRO               | *OBJETO*                                                  | *ACCIONES EN EL CONTEXTO DE APRENDIZAJE*                                                    |
 | :----: | :-------------------- | :---------------------------------------------------------- | :-------------------------------------------------------------------------------------------- |
@@ -57,21 +56,20 @@ La formación del módulo contribuye a alcanzar las competencias a), b), k), l),
 
 _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i-xNGtTAMcRiCgj/view?usp=sharing)_
 
----
+---   
 
-# Horarios y planificación
+# Horarios
 
 
-## Horario. Actualizar al 2023/2024!!
+## Horario. Actualizar al 2024/2025!!
 
 Horario (5 horas semanales)
 
-
-|     HORA     |   L   | M | X | J | V |
-| :-------------: | :------: | :--: | :-: | :--: | :-: |
-| 08:00 - 09:00 |    IS    |  | IS |  |  |
-| 09:00 - 10:00 |    IS    |  | IS |  |  |
-| 10:00 - 11:00 |    IS    |  |  |  |  |
+|     HORA     |   L   | M  | X | J | V |
+| :-------------: | :------: |:--:| :-: | :--: | :-: |
+| 08:00 - 09:00 |      | IS | IS |  |  |
+| 09:00 - 10:00 |      | IS | IS |  |  |
+| 10:00 - 11:00 |      |    | IS |  |  |
 | 11:00 - 11:30 | Recreo |    |  |    |  |
 | 11:30 - 12:30 |        |    |  |    |  |
 | 12:30 - 13:30 |        |    |  |    |  |
@@ -79,18 +77,18 @@ Horario (5 horas semanales)
 <!-- .element.table: style="font-size:50%;" -->
 
 
-## Planificación. Actualizar al 2023!!
+## Planificación. Actualizar al 2024!!
 
 ![](./assets/IS-U011-Presentacion1.png)
 
 _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i-xNGtTAMcRiCgj/view?usp=sharing)_
 
----
+---  
 
 # Contenidos
 
 
-## Contenido. Actualizar al 2023!!
+## Contenido. Actualizar al 2024!!
 
 |                                               Unidades didácticas                                               | Descripción unidad                                      | Sesiones | RA | Criterios |                          |
 | :-----------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------- | :--------: | :---: | :---------: | :------------------------: |
@@ -104,7 +102,7 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 
 _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i-xNGtTAMcRiCgj/view?usp=sharing)_
 
----
+---   
 
 # Evaluación y recuperación
 
@@ -123,9 +121,8 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 
 
 ## Evaluación III
-* Hay 3 Evaluaciones Parciales
-  * Diciembre
-  * Marzo
+* Hay 2 Evaluaciones Parciales
+  * Enero
   * Mayo
 * 1 Evaluación Final
   * Junio
@@ -137,12 +134,7 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 * La recuperación de los RA pendientes se realiza durante el mes de junio.
 * Consistirá en un conjunto de prácticas y/o pruebas sobre los criterios de evaluación relacionados con el resultado de aprendizaje no superado.
 
-
-## Resumen
-![](assets/pro-eva&rec.png)
-![](./assets/IS-U011-Presentacion4.png)<!-- .element height="75%" width="75%" -->
-
----
+---  
 
 # Metodología y comunicación
 
@@ -161,44 +153,71 @@ Por unidad:
 
 ![](./assets/IS-U011-Presentacion3.png) <!-- .element height="25%" width="25%" -->
 
----
+---   
+
+## Metodología I.
+Por unidad:
+* Explicar contenidos relacionados con criterios de evaluación asociados al RA con el que se está trabajando. Vuestros apuntes son importantes.
+* Trabajar los contenidos en grupo e individualmente, guiados por diapositivas, materiales de la red y discusión en grupo.
+
+
+## Metodología II.
+Por unidad:
+* Exámenes tipo test sobre lo trabajado en clase.   
+* Realización de ejercicios en los que aplicar los contenidos.
+* Puesta en práctica con trabajos y ejercicios que se **tendrán que defender en clase**.
+
+
+## Comunicación.
+* Comunicación **oficial, preferida y obligada**: Asistiendo al aula y hablando directamente con el profesor.
+* Otros medios secundarios **opcionales**: Correo electrónico y Moodle.
+
+**ATENCIÓN!!!:** ***TEN EN CUENTA QUE ESTAS EN UNA FORMACIÓN PRESENCIAL.***
+
+---   
 
 # Recomendaciones y aclaraciones
 
 
-## Recomendaciones
+## Recomendaciones.
 * Recomendaciones al alumnado:
   * Leer y entender la programación del módulo.
   * Poner foto actualizada en moodle.
   * Añadir correo electrónico correcto en moodle.
 
 
-## Aclaraciones I
+## Aclaraciones I.
 * Formación presencial, por tanto la comunicación presencial.
 * Como regla general:
-  - Los ejercicios individuales se corregirán en clase delante del profesor.
+  - Los ejercicios individuales se corregirán en clase delante del profesor. Defendiendo el trabajo.
   - Los ejercicios en grupo se podrán presentar en grupo o un componente del grupo de forma aleatoria. El método será elegido por el profesor.
 
 
-## Aclaraciones II
+## Aclaraciones II.
 * Causas para no corregir una prueba (ejercicio, práctica, examen)
   - No se cumple las condiciones de entrega.
-  - Se ha detectado la posibilidad de copiado de todo o parte de la prueba. Esto incluye textos (total o parcial) de internet y/o sin hacer referencia a la fuente
+  - Se ha detectado la posibilidad de copiado de todo o parte de la prueba. Esto incluye textos (total o parcial) de internet y/o sin hacer referencia a la fuente.
   - Se entrega fuera de plazo (aunque sean unos segundos).
   - En caso de código, no compila.
 
 
-## Aclaraciones III
+## Aclaraciones II.
+* OJO con Chat GPT, Copilot, etc. -> Asegurate de saber que haces.
+
+
+## Aclaraciones III.
 * Causas para no corregir una prueba (ejercicio, práctica, examen)
   - Si la entrega es el git, añadir en el README.md instrucciones para compilar y ejecutar el código, descripción de la aplicación, autoría y referencias.
 
 
-## Aclaraciones IV
+## Aclaraciones IV.
 * Es responsabilidad del alumnado la custodia y guarda de los trabajos, documentos, y cualquier otro material que realice durante las prácticas o en clase, por tanto, tendrán que asegurarse que quedan a salvo siempre que abandonen el aula, no siendo responsabilidad del profesorado la perdida de este material.
+* Cloud google, github, gitlab, bitbucket, etc.
 
 
-## Aclaraciones V
+## Aclaraciones V.
 * En cuando a las fechas de entrega de prácticas/trabajos/ejercicios, tendrán una fecha de entrega clara, **que no se podrá cambiar bajo ninguna circunstancia**. Quedando a elección del profesor posibles excepciones justificadas.
+* La entrega consiste en: subida a la plataforma (por defecto) en fecha + defensa en clase.
 
 ---
 
@@ -211,13 +230,19 @@ Por unidad:
 
 ![](./assets/Fin.png) <!-- .element height="50%" width="50%" -->
 
-¡¡Gracias!!
+<center> ¡¡Gracias y buen curso!! </center> 
 
 ---
+# Seguimos  
 
-# Primeros pasos
 
+## Primeros pasos
 1. Identificar tu **email: correo electrónico**: xxx@g.educaand.es
 2. Acceder a moodle. Configurar tu usuario con email y foto.
-3. Rellenar los formularios que hay en la moodle. Sirven para entornos.
+   
+
+## Primeros pasos
+6. Rellenar los formularios que hay en la moodle. Sirven para entornos.
 4. Darte de alta en github.com con tu email, solicitan acceso PRO por ser estudiante.
+
+

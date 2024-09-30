@@ -27,6 +27,7 @@ nav:
         - '* Práctica 1.5: Creación de entorno': 'section1/u01/practica/PROG-U1.-Practica005.md'
         - '* Práctica 1.6: Uso de pytest': 'section1/u01/practica/PROG-U1.-Practica006.md'
         - '* Práctica 1.7: Acceso ssh a github': 'section1/u01/practica/PROG-U1.-Practica007.md'
+        - '* Práctica 1.8: Actualización de plantilla': 'section1/u01/practica/PROG-U1.-Practica008.md'
     - 'U2: Sentencias condicionales y repetitivas':
         - 'section1/u02/index.md'
         - '2.1.-Condicionales': 'section1/u02/teoria/PROG-U2.1.-Condicionales.md'

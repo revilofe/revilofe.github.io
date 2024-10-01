@@ -1,0 +1,5607 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Pruebas">
+      
+      
+        <meta name="author" content="Eduardo Fdez">
+      
+      
+        <link rel="canonical" href="https://revilofe.github.io/section3/u03/teoria/EDES-U3.1.-Pruebas/">
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../EDES-U3.2.-TestUnidadYTDD/">
+      
+      
+      <link rel="icon" href="../../../../assets/favicon-96x96.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>UD 3 - 3.1 Pruebas - R Z O</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag.md-tag--etiqueta{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.5 1.5 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1m0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg>');}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-GT5TGHD4YQ"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-GT5TGHD4YQ",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-GT5TGHD4YQ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pruebas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../.." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
+      
+  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            R Z O
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD 3 - 3.1 Pruebas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/revilofe/revilofe.github.io" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Principal
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../section1/" class="md-tabs__link">
+          
+  
+    
+  
+  Programación
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Entornos de desarrollo
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../section2/" class="md-tabs__link">
+          
+  
+    
+  
+  Incidentes de seguridad
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../blog/" class="md-tabs__link">
+        
+  
+    
+  
+  Blog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../tags/" class="md-tabs__link">
+        
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
+      
+  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
+
+    </a>
+    R Z O
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/revilofe/revilofe.github.io" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Programación
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u01/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U1: Introducción al desarrollo de software
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            U1: Introducción al desarrollo de software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1.-Un programa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.1.1-Pseudocodigo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1.1.-Pseudocódigo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.1: Instala python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2.-Practica con un lenguaje
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3.-Tipos de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.2: Primeros programas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.3: Git Básico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica004/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.4: GitHub Básico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.4.-Pytest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4.-Pruebas con pytest
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica005/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.5: Creación de entorno
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica006/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.6: Uso de pytest
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica007/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.7: Acceso ssh a github
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u02/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U2: Sentencias condicionales y repetitivas
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            U2: Sentencias condicionales y repetitivas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1.-Condicionales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 2.1: Sentencias condicionales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.-Iterativas y saltos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 2.2: Sentencias iterativas y saltos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3.-Captura de excepciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 2.3: Capturas de excepciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4.-Depurar programas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 2.4: Depurar programas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5.-Documentar el código
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.5.1.-DeberiasDocumentar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5.1-¿Deberías documentar tu código?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u03/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U3: Estructuras de datos
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            U3: Estructuras de datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.0.-Cadenas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.0.-Est.Datos: Cadenas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica000/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 3.0: Cadenas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.1.-Listas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1.-Est.Datos: Listas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.2.-Tuplas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2.-Est.Datos: Tuplas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 3.1: Listas y tuplas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.3.-Diccionarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3.-Est.Datos: Diccionarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 3.2: Diccionarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.4.-Conjuntos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.4.-Est.Datos: Conjuntos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 3.3: Conjuntos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.5.-Funciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.5.-Funciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.6.-OtrosAmpliacion1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.6.-Ampliación I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.7.-OtrosAmpliacion2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.7.-Ampliación II
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u04/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U4: Kotlin: POO y estructuras de datos
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            U4: Kotlin: POO y estructuras de datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.1.-kotlin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1.-Kotlin: Básico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.1: Kotlin Básico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2.-Kotlin: Colecciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.2.1.-kotlin-aclaraciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2.1.-Aclaraciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.3.-POO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3.1.-Programación orientada a objetos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.3.-kotlinPOO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3.2.-Kotlin: POO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.4.-kotlinResumen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.4.-Kotlin: Resumen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.2: Kotlin POO I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.3: Kotlin POO II
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica004/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.4: Kotlin POO III
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica005/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.5: Kotlin POO IV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica006/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.6: Prueba I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u05/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U5: Kotlin: PPO y creación de e.d.
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            U5: Kotlin: PPO y creación de e.d.
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u05/teoria/PROG-U5.1.-clasesYobjetos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.1.-Revisitando las clases y los objetos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u05/teoria/PROG-U5.2.-VisibilidadEnClases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.2.-Visibilidad en miembros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u05/teoria/PROG-U5.3.-Herencia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.3.-Herencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u05/practica/PROG-U5.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 5.1: Relación de ejercicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u06/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U6: Kotlin: Creación de programas con POO
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            U6: Kotlin: Creación de programas con POO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u06/teoria/PROG-U6.1.-jerarquiaDeClases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.1.-Jerarquía de Clases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u06/teoria/PROG-U6.2.-ejemploYActividad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.2.-Ejemplo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u06/teoria/PROG-U6.3.-principiosSOLID/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.3.-Principios SOLID
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u06/teoria/PROG-U6.4.-comentariosYDocumentacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.4.-Comentarios y documentación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u07/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U7: Kotlin: Entrada/Salida y GUI
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            U7: Kotlin: Entrada/Salida y GUI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.1.-Sistema archivos:E/S
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.2.-Entrada/Salida estandar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.2.1.-ConsolaTecladoExpansion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.2.1.-Lectura desde teclado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.3.-Gestión Archivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.4.-Lectura/Escritura Archivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.4.1.-TextFile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.4.1.-Archivo de texto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.5.-GUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u09/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U9: Acceso a base de datos relacionales
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            U9: Acceso a base de datos relacionales
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u09/teoria/PROG-U9.1.-AccesoBBDD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.1.-Acceso a BBDD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u09/teoria/PROG-U9.2.-JDBC-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.2.-JDBC: Básico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u09/teoria/PROG-U9.3.-JDBC-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.3.-JDBC: Prepared statement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u09/teoria/PROG-U9.4.-DAO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.4.-DAO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u09/teoria/PROG-U9.5.-OtrosAspectos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.5.-Otros aspectos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Entornos de desarrollo
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Entornos de desarrollo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u01/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U1: Introducción al desarrollo de software
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            U1: Introducción al desarrollo de software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/EDES-U1.1.-Software-PC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1.-Software y PC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/EDES-U1.2.-Lenguajes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2.-Lenguajes de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/EDES-U1.3.-FuncionalidadesHerramientas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3.-Herramientas y funcionalidades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/EDES-U1.4.-Traductores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4.-Traductores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/EDES-U1.5.-FasesDesarrollo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.5.-Proceso de desarrollo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/practica/EDES-U1.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 1.1: Lenguajes de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/practica/EDES-U1.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 1.2: Herramientas para generar programa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/practica/EDES-U1.-Practica003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 1.3: Scrum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u02/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U2: Herramientas de desarrollo
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            U2: Herramientas de desarrollo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u02/teoria/EDES-U2.1.-Herramientas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1.-Herramientas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u02/practica/EDES-U2.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2.1: Herramientas de desarrollo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U3: Pruebas y Depuración
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            U3: Pruebas y Depuración
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3.1.-Pruebas
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    3.1.-Pruebas
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pruebas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pruebas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-importancia-de-las-pruebas-de-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Importancia de las pruebas de software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-beneficios-de-realizar-pruebas-de-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Beneficios de realizar pruebas de software
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-verificacion-y-prueba-de-programas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Verificación y prueba de programas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Verificación y prueba de programas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-principios-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Principios básicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-el-ciclo-de-vida" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 El ciclo de vida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-niveles" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Niveles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tecnicas-de-verificacion-y-prueba-de-programas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Técnicas de verificación y prueba de programas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Técnicas de verificación y prueba de programas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-tecnicas-dinamicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Técnicas dinámicas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Técnicas dinámicas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-pruebas-de-caja-negra" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1 Pruebas de caja negra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-pruebas-de-caja-blanca" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.2 Pruebas de caja blanca
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-tecnicas-estaticas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Técnicas estáticas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Técnicas estáticas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-revision-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 Revisión de Código
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-analisis-estatico-automatizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 Análisis Estático Automatizado:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-inspecciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.3 Inspecciones:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-caminatas-de-codigo-code-walkthroughs" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.4 Caminatas de Código (Code Walkthroughs):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325-auditorias" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.5 Auditorías:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#326-analisis-de-documentacion-y-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.6 Análisis de Documentación y Requisitos:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tipos-de-pruebas-de-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Tipos de pruebas de software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Tipos de pruebas de software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-pruebas-unitarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Pruebas unitarias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-pruebas-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Pruebas de integración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-pruebas-de-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Pruebas de sistema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-pruebas-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Pruebas de aceptación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-pruebas-de-regresion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Pruebas de regresión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-pruebas-de-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 Pruebas de carga
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-pruebas-de-rendimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7 Pruebas de rendimiento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-pruebas-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8 Pruebas de seguridad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-plan-de-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Plan de pruebas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Plan de pruebas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-definicion-del-alcance-de-las-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Definición del alcance de las pruebas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-identificacion-de-los-recursos-necesarios-para-las-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Identificación de los recursos necesarios para las pruebas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-seleccion-de-herramientas-de-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Selección de herramientas de pruebas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-diseno-de-casos-de-prueba" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Diseño de casos de prueba
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-asignacion-de-responsabilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Asignación de responsabilidades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-cronograma-de-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6 Cronograma de pruebas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-pruebas-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Pruebas de integración
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Pruebas de integración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-definicion-de-pruebas-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Definición de pruebas de integración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-tipos-de-pruebas-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Tipos de pruebas de integración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-estrategias-para-realizar-pruebas-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Estrategias para realizar pruebas de integración
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-pruebas-de-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Pruebas de sistema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Pruebas de sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-definicion-de-pruebas-de-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Definición de pruebas de sistema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-tipos-de-pruebas-de-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Tipos de pruebas de sistema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-estrategias-para-realizar-pruebas-de-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3. Estrategias para realizar pruebas de sistema
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-pruebas-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Pruebas de aceptación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Pruebas de aceptación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-definicion-de-pruebas-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 Definición de pruebas de aceptación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-tipos-de-pruebas-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 Tipos de pruebas de aceptación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-estrategias-para-realizar-pruebas-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 Estrategias para realizar pruebas de aceptación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-documentacion-de-incidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Documentación de incidencias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Documentación de incidencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-definicion-de-incidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 Definición de incidencias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-proceso-de-documentacion-de-incidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 Proceso de documentación de incidencias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-clasificacion-de-incidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3 Clasificación de incidencias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-ejemplos-de-herramientas-de-seguimiento-de-incidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4 Ejemplos de herramientas de seguimiento de incidencias
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Conclusiones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EDES-U3.2.-TestUnidadYTDD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2.-Test unidad y TDD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EDES-U3.2.1.-Kotest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+      3.2.1.-Kotest
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EDES-U3.2.2.-Mockk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+      3.2.2.-MockK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EDES-U3.3.-Depuracion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3.-Depuración
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u04/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U4: SCV, refactorización y documentación
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            U4: SCV, refactorización y documentación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u04/teoria/EDES-U4.1.-Git_Github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1.-Sistemas de control de versiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u04/teoria/EDES-U4.2.-Refactorizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2.-Refactorización
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u04/teoria/EDES-U4.3.-AnalizadorCodigo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3.-Analizador de código
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u04/teoria/EDES-U4.4.-Documentacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3.-Documentación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u04/practica/EDES-U4.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4.1: Git/Github básico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u04/practica/EDES-U4.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4.2: Git/Github merge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u04/practica/EDES-U4.-Practica003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4.3: Git/Github rebase I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u04/practica/EDES-U4.-Practica004/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4.4: Git/Github rebase II
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u04/practica/EDES-U4.-Practica005/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4.5: Git/Github Pull Request (PR)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Incidentes de seguridad
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Incidentes de seguridad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U0: Nos conocemos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/u01/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U1: Principios generales y planes de seguridad
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            U1: Principios generales y planes de seguridad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1.-PrincipiosGenerales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/u02/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U2: Detección y análisis de incidentes de seguridad
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            U2: Detección y análisis de incidentes de seguridad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u02/teoria/IS-U2.1.1.-TaxonomiaDeIncidentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1.-Taxonomía de incidentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u02/teoria/IS-U2.2.1.-SIEM-Evolucion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.1.-Evolución de SIEM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u02/teoria/IS-U2.2.1.-SIEM-Implantacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.2.-Implantación de un SIEM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u02/teoria/IS-U2.2.1.-SOC%26SIEM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.3.-SOC & SIEM & Casos de uso
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section2/u03/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U3: Recopiación de evidencias
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            U3: Recopiación de evidencias
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u03/teoria/IS-U3.3.1.-MITRE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3.1.-Investigación incidentes:MITRE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acerca de
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pruebas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pruebas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-importancia-de-las-pruebas-de-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Importancia de las pruebas de software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-beneficios-de-realizar-pruebas-de-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Beneficios de realizar pruebas de software
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-verificacion-y-prueba-de-programas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Verificación y prueba de programas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Verificación y prueba de programas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-principios-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Principios básicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-el-ciclo-de-vida" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 El ciclo de vida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-niveles" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Niveles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tecnicas-de-verificacion-y-prueba-de-programas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Técnicas de verificación y prueba de programas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Técnicas de verificación y prueba de programas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-tecnicas-dinamicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Técnicas dinámicas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Técnicas dinámicas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-pruebas-de-caja-negra" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1 Pruebas de caja negra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-pruebas-de-caja-blanca" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.2 Pruebas de caja blanca
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-tecnicas-estaticas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Técnicas estáticas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Técnicas estáticas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-revision-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 Revisión de Código
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-analisis-estatico-automatizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 Análisis Estático Automatizado:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-inspecciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.3 Inspecciones:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-caminatas-de-codigo-code-walkthroughs" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.4 Caminatas de Código (Code Walkthroughs):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325-auditorias" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.5 Auditorías:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#326-analisis-de-documentacion-y-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.6 Análisis de Documentación y Requisitos:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tipos-de-pruebas-de-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Tipos de pruebas de software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Tipos de pruebas de software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-pruebas-unitarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Pruebas unitarias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-pruebas-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Pruebas de integración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-pruebas-de-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Pruebas de sistema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-pruebas-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Pruebas de aceptación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-pruebas-de-regresion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Pruebas de regresión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-pruebas-de-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 Pruebas de carga
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-pruebas-de-rendimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7 Pruebas de rendimiento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-pruebas-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8 Pruebas de seguridad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-plan-de-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Plan de pruebas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Plan de pruebas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-definicion-del-alcance-de-las-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Definición del alcance de las pruebas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-identificacion-de-los-recursos-necesarios-para-las-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Identificación de los recursos necesarios para las pruebas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-seleccion-de-herramientas-de-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Selección de herramientas de pruebas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-diseno-de-casos-de-prueba" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Diseño de casos de prueba
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-asignacion-de-responsabilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Asignación de responsabilidades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-cronograma-de-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6 Cronograma de pruebas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-pruebas-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Pruebas de integración
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Pruebas de integración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-definicion-de-pruebas-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Definición de pruebas de integración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-tipos-de-pruebas-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Tipos de pruebas de integración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-estrategias-para-realizar-pruebas-de-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Estrategias para realizar pruebas de integración
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-pruebas-de-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Pruebas de sistema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Pruebas de sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-definicion-de-pruebas-de-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Definición de pruebas de sistema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-tipos-de-pruebas-de-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Tipos de pruebas de sistema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-estrategias-para-realizar-pruebas-de-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3. Estrategias para realizar pruebas de sistema
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-pruebas-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Pruebas de aceptación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Pruebas de aceptación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-definicion-de-pruebas-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 Definición de pruebas de aceptación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-tipos-de-pruebas-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 Tipos de pruebas de aceptación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-estrategias-para-realizar-pruebas-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 Estrategias para realizar pruebas de aceptación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-documentacion-de-incidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Documentación de incidencias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Documentación de incidencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-definicion-de-incidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 Definición de incidencias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-proceso-de-documentacion-de-incidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 Proceso de documentación de incidencias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-clasificacion-de-incidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3 Clasificación de incidencias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-ejemplos-de-herramientas-de-seguimiento-de-incidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4 Ejemplos de herramientas de seguimiento de incidencias
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Conclusiones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../../../tags/#edes" class="md-tag md-tag-icon">EDES</a>
+    
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../../../tags/#software" class="md-tag md-tag-icon">Software</a>
+    
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../../../tags/#test" class="md-tag md-tag-icon">test</a>
+    
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../../../tags/#pruebas" class="md-tag md-tag-icon">Pruebas</a>
+    
+  
+</nav>
+
+
+  
+  
+
+
+  <h1>3.1.-Pruebas</h1>
+
+<h2 id="pruebas">Pruebas<a class="headerlink" href="#pruebas" title="Permanent link">&para;</a></h2>
+<p>Se pretente estudiar algunas técnicas de verificación y pruebas de programas, se comenzará por los principios básicos, ciclo de vida y niveles y tipos de pruebas, posteriormente profundizaremos en algunas técnicas de prueba más usadas para posteriormente mencionar algunas de las herramientas usadas para las pruebas.</p>
+<h3 id="1-introduccion">1. Introducción<a class="headerlink" href="#1-introduccion" title="Permanent link">&para;</a></h3>
+<p>Las pruebas de software son <em>el proceso de evaluación de un sistema o aplicación para determinar si cumple con los requisitos especificados y funciona correctamente</em>.El objetivo principal de las pruebas de software es:</p>
+<ul>
+<li>garantizar la calidad del software</li>
+<li>minimizar el riesgo de errores en el producto final.</li>
+</ul>
+<h4 id="11-importancia-de-las-pruebas-de-software">1.1 Importancia de las pruebas de software<a class="headerlink" href="#11-importancia-de-las-pruebas-de-software" title="Permanent link">&para;</a></h4>
+<p>Las pruebas de software son una parte crucial del proceso de desarrollo de software, ya que ayudan a identificar problemas y errores en una etapa temprana. Esto permite a los desarrolladores corregir los errores antes de que el software se lance al mercado, lo que puede ahorrar tiempo, costos y reducir la frustración del usuario final.</p>
+<p>Las pruebas de software son importantes porque permiten detectar errores y problemas que pueden tener un impacto significativo en la funcionalidad del software. Estos errores pueden incluir:</p>
+<ul>
+<li>Fallos de seguridad.</li>
+<li>Problemas de rendimiento.</li>
+<li>Problemas de usabilidad.</li>
+<li>Errores de lógica.</li>
+<li>Otros errores que pueden afectar la calidad del software y la satisfacción del usuario final.</li>
+</ul>
+<h4 id="12-beneficios-de-realizar-pruebas-de-software">1.2 Beneficios de realizar pruebas de software<a class="headerlink" href="#12-beneficios-de-realizar-pruebas-de-software" title="Permanent link">&para;</a></h4>
+<p>Los beneficios de realizar pruebas de software incluyen:</p>
+<ul>
+<li>Identificación temprana de errores y problemas en el software.</li>
+<li>Mejora de la calidad del software y la satisfacción del usuario.</li>
+<li>Reducción de costos y tiempos de corrección de errores.</li>
+<li>Reducción del riesgo de errores en el software en producción.</li>
+<li>Mejora de la confianza en el software y la marca de la empresa.</li>
+</ul>
+<p>En conclusión, las pruebas de software son una parte esencial del proceso de desarrollo de software que ayudan a garantizar la calidad del producto final y a reducir el riesgo de errores en producción.</p>
+<h3 id="2-verificacion-y-prueba-de-programas">2. Verificación y prueba de programas<a class="headerlink" href="#2-verificacion-y-prueba-de-programas" title="Permanent link">&para;</a></h3>
+<p>La ISTQB (International Software Testing Qualifications Board), una organización especializada en el campo de las pruebas y la industria del software, define la <em>verificación y pruebas de programas</em> como:</p>
+<blockquote>
+<p>Proceso que consiste en todas las actividades del ciclo de vida del software, tanto estáticas como dinámicas, concernientes con la planificación, preparación y evaluación de productos software y los trabajos relacionados para determinar que éstos satisfacen los requisitos especificados, para demostrar que se ajustan al propósito y para detectar defectos.</p>
+</blockquote>
+<h4 id="21-principios-basicos">2.1 Principios básicos<a class="headerlink" href="#21-principios-basicos" title="Permanent link">&para;</a></h4>
+<p>Los principios básicos que rigen el proceso de verificación y prueba de los programas son los siguientes:</p>
+<ul>
+<li>Las pruebas demuestran la presencia de defectos no la ausencia de ellos.</li>
+<li>Las pruebas exhaustivas no existen (salvo en casos triviales).</li>
+<li>Las pruebas tempranas ayudan a reducir costes.</li>
+<li>Agrupación de defectos: Normalmente, la mayor parte de los defectos detectados se concentran en un número reducido de módulos.</li>
+<li>Paradoja del pesticida (de Bruce Beizer): La eficacia en la detección de errores de las mismas pruebas disminuye con el paso del tiempo.</li>
+<li>Las pruebas dependen del contexto: Así por ejemplo, la forma de probar un software crítico de una central nuclear es diferente a  la página web de una frutería.</li>
+<li>La falacia de la ausencia de errores: La detección y corrección de defectos no servirá de nada si el sistema no es usable y no cumple con las expectativas de los usuarios.</li>
+</ul>
+<h4 id="22-el-ciclo-de-vida">2.2 El ciclo de vida<a class="headerlink" href="#22-el-ciclo-de-vida" title="Permanent link">&para;</a></h4>
+<p>El ciclo de vida en el proceso de pruebas consta de las siguientes actividades principales:</p>
+<p><img alt="" src="../assets/cicloVidaPruebas.png" /></p>
+<ol>
+<li>Planificación y control: Se establecen los objetivos y el plan de pruebas y se controla el avance con respecto a lo planificado.</li>
+<li>Análisis y diseño: los objetivos se transforman en casos de prueba tangibles</li>
+<li>Implementación y ejecución: Se configuran, desarrollan y ejecutan las pruebas.</li>
+<li>Evaluación de los criterios de salida: En este punto se evalúa los resultados de las pruebas respecto a los objetivos definidos y se decide sobre reproceso.</li>
+<li>Actividades de cierre de pruebas: Aquí se realizan varias tareas finales, tales como analizar lecciones aprendidas, documentar la aceptación del sistema, etc.</li>
+</ol>
+<h4 id="23-niveles">2.3 Niveles<a class="headerlink" href="#23-niveles" title="Permanent link">&para;</a></h4>
+<p>Según el ISTQB, el proceso de prueba se puede ejecutar en los siguientes niveles:</p>
+<ul>
+<li>Pruebas unitarias: Realizadas por el equipo de desarrollo, tienen como objeto comprobar el funcionamiento de un único componente.</li>
+<li>Pruebas de integración: Realizadas por el equipo de desarrollo, su objetivo principal es comprobar la interacción de diferentes partes de un sistema, validando la comunicación entre sus interfaces.</li>
+<li>Pruebas de sistema: Realizadas por el equipo de pruebas, buscan probar el sistema como un todo y si los componentes de un sistema son compatibles e  interactúan correctamente.</li>
+<li>Pruebas de aceptación de usuario: Realizadas por el usuario final, el objetivo de estas pruebas es validar la disposición de un sistema para su despliegue y uso.</li>
+</ul>
+<p>Los niveles de las pruebas están estrechamente relacionados con las fases del ciclo de desarrollo del software, así en el modelo o método en V se establece dicha relación de forma explícita:</p>
+<p><img alt="" src="../assets/ModeloV.png" /></p>
+<h3 id="3-tecnicas-de-verificacion-y-prueba-de-programas">3. Técnicas de verificación y prueba de programas<a class="headerlink" href="#3-tecnicas-de-verificacion-y-prueba-de-programas" title="Permanent link">&para;</a></h3>
+<p>Las técnicas pueden ser de dos tipos dependiendo de si el código de la aplicación es ejecutado o no.</p>
+<h4 id="31-tecnicas-dinamicas">3.1 Técnicas dinámicas<a class="headerlink" href="#31-tecnicas-dinamicas" title="Permanent link">&para;</a></h4>
+<p>Las pruebas dinámicas se clasifican, a su vez, en técnicas de pruebas de caja negra, en las que se desconoce el código fuente del componente y de caja blanca, en donde sí se conoce:</p>
+<h5 id="311-pruebas-de-caja-negra">3.1.1 Pruebas de caja negra<a class="headerlink" href="#311-pruebas-de-caja-negra" title="Permanent link">&para;</a></h5>
+<p>En las que los casos se diseñan considerando las entradas y salidas sin conocer la estructura interna. Las pruebas funcionales y no funcionales y de regresión suelen utilizar esta técnica.</p>
+<ul>
+<li>Partición equivalente: La idea es dividir los valores válidos y no válidos para entradas y salidas en un número reducido de particiones de forma que, el comportamiento del software sea el mismo para cualquier valor contenido en una partición particular. Así se reduce el número de casos que hay que probar. Por ejemplo, para las notas de un alumno tendríamos 3 clases de equivalencia (particionando los número enteros)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Clases</th>
+<th>Valores inferiores a los válidos</th>
+<th>Valores válidos</th>
+<th>Valores superiores a los válidos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V. representativos</td>
+<td>-1</td>
+<td>1,10</td>
+<td>11</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Análisis de valores límites: Los casos de prueba que exploran las condiciones límites de un programa producen buenos resultados. Para el ejemplo anterior, los valores límites serían (-1,0, y 10,11).</li>
+<li>Pruebas de transición de estado: En este caso se considera el sistema como una máquina de estados, y se diseñan pruebas para cubrir secuencias típicas de estados, o cubrir todos los estados, transiciones o probar transiciones inválidas.**    **</li>
+<li>Pruebas de caso de uso: Consisten en ejecutar escenarios que describen el uso que los usuarios van a darle al software. Son de gran utilidad para diseñar las pruebas de aceptación con la participación del cliente.</li>
+<li>Pruebas según la experiencia: Consisten en la generación de casos de prueba a partir de la intuición y la experiencia.</li>
+</ul>
+<h5 id="312-pruebas-de-caja-blanca">3.1.2 Pruebas de caja blanca<a class="headerlink" href="#312-pruebas-de-caja-blanca" title="Permanent link">&para;</a></h5>
+<p>Permiten examinar la estructura interna de un sistema, se centran en los detalles procedimentales, como las pruebas de software estructurales:</p>
+<ul>
+<li>Pruebas de camino básico: Consiste en hacer uso del grafo de flujo del código (nodos: bloques de código, y aristas: flujo de ejecución de esos bloques) y complejidad ciclomática que nos indica el número  de caminos independientes de ejecución y diseñar casos de prueba para verificar que todas las instrucciones del programa se ejecutan por lo menos una vez y los resultados son los esperados.</li>
+<li>Pruebas de coberturas de sentencias: La cobertura nos indica el porcentaje de sentencias en el código cubierto por un conjunto de pruebas (“test suite”)</li>
+</ul>
+<p>Con esta técnica se pretende diseñar casos de prueba que aumenten la  cobertura.</p>
+<h4 id="32-tecnicas-estaticas">3.2 Técnicas estáticas<a class="headerlink" href="#32-tecnicas-estaticas" title="Permanent link">&para;</a></h4>
+<p>Al contrario que las pruebas dinámicas, que exigen la ejecución de software, las técnicas de pruebas estáticas se basan en el examen manual (revisiones) y en el análisis automatizado (análisis estático) del código sin ejecutar el código. Ejemplo de este tipo de pruebas son:</p>
+<h5 id="321-revision-de-codigo">3.2.1 Revisión de Código<a class="headerlink" href="#321-revision-de-codigo" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Descripción</strong>: Involucra la inspección manual del código fuente por parte de otros desarrolladores para identificar errores, problemas de estilo, violaciones de las mejores prácticas y posibles mejoras.</li>
+<li><strong>Ejemplo</strong>: Un equipo de desarrollo realiza una reunión de revisión de código donde cada miembro examina y comenta el código de otros.</li>
+</ul>
+<h5 id="322-analisis-estatico-automatizado">3.2.2 Análisis Estático Automatizado:<a class="headerlink" href="#322-analisis-estatico-automatizado" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Descripción</strong>: Utiliza herramientas de software para analizar automáticamente el código fuente o los artefactos de diseño para encontrar defectos.</li>
+<li><strong>Ejemplo</strong>: Herramientas como SonarQube o Lint que se ejecutan en el código fuente para identificar problemas como fugas de memoria, errores de concurrencia, etc.</li>
+</ul>
+<h5 id="323-inspecciones">3.2.3 Inspecciones:<a class="headerlink" href="#323-inspecciones" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Descripción</strong>: Son más formales que las revisiones de código e incluyen una preparación y revisión exhaustiva del código por parte de un equipo, a menudo con roles asignados (moderador, autor, revisor, etc.).</li>
+<li><strong>Ejemplo</strong>: Un equipo realiza una inspección planificada y estructurada del código con un moderador guiando la discusión.</li>
+</ul>
+<h5 id="324-caminatas-de-codigo-code-walkthroughs">3.2.4 Caminatas de Código (Code Walkthroughs):<a class="headerlink" href="#324-caminatas-de-codigo-code-walkthroughs" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Descripción</strong>: Proceso en el cual el autor del código guía a un grupo a través de su código para explicar su lógica y decisiones de diseño, buscando retroalimentación y detección de errores.</li>
+<li><strong>Ejemplo</strong>: Un desarrollador presenta su código línea por línea a colegas, explicando el razonamiento detrás de cada sección.</li>
+</ul>
+<h5 id="325-auditorias">3.2.5 Auditorías:<a class="headerlink" href="#325-auditorias" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Descripción</strong>: Revisión formal del código y otros elementos relacionados (documentación, estándares de codificación, etc.) para asegurarse de que cumplen con los estándares y regulaciones especificados.</li>
+<li><strong>Ejemplo</strong>: Un auditor externo revisa el código fuente y la documentación para asegurarse de que cumple con las normas de seguridad o calidad específicas de la industria.</li>
+</ul>
+<h5 id="326-analisis-de-documentacion-y-requisitos">3.2.6 Análisis de Documentación y Requisitos:<a class="headerlink" href="#326-analisis-de-documentacion-y-requisitos" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Descripción</strong>: Revisión de los requisitos y documentación del proyecto (especificaciones, diseños, manuales de usuario) para detectar inconsistencias, omisiones y errores.</li>
+<li><strong>Ejemplo</strong>: Revisar la documentación de los requisitos para asegurarse de que sean completos, claros, coherentes y testables.</li>
+</ul>
+<p>Estas prácticas son complementarias a las pruebas dinámicas (que requieren la ejecución del código) y ayudan a mejorar la calidad del software desde las etapas iniciales de su desarrollo. Las pruebas estáticas son efectivas para mejorar la claridad y la mantenibilidad del código y para asegurar que el software cumpla con los estándares y regulaciones pertinentes.</p>
+<h3 id="4-tipos-de-pruebas-de-software">4. Tipos de pruebas de software<a class="headerlink" href="#4-tipos-de-pruebas-de-software" title="Permanent link">&para;</a></h3>
+<h4 id="41-pruebas-unitarias">4.1. Pruebas unitarias<a class="headerlink" href="#41-pruebas-unitarias" title="Permanent link">&para;</a></h4>
+<p>Las pruebas unitarias son un tipo de prueba que se enfoca en evaluar el funcionamiento individual de cada unidad de código del software, como funciones o métodos. Las pruebas unitarias se realizan en un ambiente aislado del resto del software para evaluar el comportamiento de una unidad de código específica y detectar errores en su funcionamiento.
+EJEMPLO: En una aplicación de gestión de tareas, se realiza una prueba unitaria en el módulo de creación de tareas para verificar que se crean correctamente con la información proporcionada y que se pueden guardar en la base de datos. Se verifica que la creación de tareas genera una respuesta de éxito y que la tarea se encuentra en la base de datos.</p>
+<h4 id="42-pruebas-de-integracion">4.2 Pruebas de integración<a class="headerlink" href="#42-pruebas-de-integracion" title="Permanent link">&para;</a></h4>
+<p>Las pruebas de integración son un tipo de prueba que se enfoa en evaluar cómo las diferentes unidades de código se integran y trabajan juntas como un todo. Este tipo de prueba se suele realizar después de las pruebas unitarias para detectar problemas en la interacción entre las diferentes unidades de código.
+EJEMPLO: En una aplicación de e-commerce, se realiza una prueba de integración para verificar que el módulo de pago interactúa correctamente con el módulo de compras. Se verifica que los datos de pago se envían correctamente a la pasarela de pago y que se actualiza el estado del pedido en la base de datos.</p>
+<h4 id="43-pruebas-de-sistema">4.3 Pruebas de sistema<a class="headerlink" href="#43-pruebas-de-sistema" title="Permanent link">&para;</a></h4>
+<p>Las pruebas de sistema son un tipo de prueba que se enfoca en evaluar el funcionamiento del software como un sistema completo. Este tipo de prueba se realiza después de las pruebas de integración para evaluar la funcionalidad del software en un ambiente más realista. <br />
+EJEMPLO: En una aplicación de chat en tiempo real, se realiza una prueba de sistema para verificar que el servicio de chat funciona correctamente con varios usuarios conectados al mismo tiempo. Se verifica que los mensajes se envían y reciben correctamente, y que se mantienen las conexiones entre los usuarios.</p>
+<h4 id="44-pruebas-de-aceptacion">4.4 Pruebas de aceptación<a class="headerlink" href="#44-pruebas-de-aceptacion" title="Permanent link">&para;</a></h4>
+<p>Las pruebas de aceptación son un tipo de prueba que se enfoca en evaluar si el software cumple con los requisitos y las expectativas del usuario final. Estas pruebas suelen ser realizadas por el cliente o el usuario final para evaluar si el software cumple con los requisitos establecidos. <br />
+EJEMPLO: En una aplicación de reserva de vuelos, se realiza una prueba de aceptación para verificar que se cumplen los requisitos del cliente. Se verifica que los usuarios pueden buscar vuelos disponibles, seleccionar asientos y reservar los vuelos seleccionados.</p>
+<h4 id="45-pruebas-de-regresion">4.5 Pruebas de regresión<a class="headerlink" href="#45-pruebas-de-regresion" title="Permanent link">&para;</a></h4>
+<p>Las pruebas de regresión son un tipo de prueba que se enfoca en evaluar que el sistema sigue funcionando adecuadamente tras la realización de nuevos cambios. Estas pruebas se realizan para asegurarnos que las modificaciones realizadas en el software no han introducido errores en áreas que antes funcionaban correctamente. Normalmente suelen ser automatizadas y se ejecutan cada vez que se genera una nueva versión para asegurarnos que las modificaciones se integran sin causar problemas. <br />
+EJEMPLO: En una aplicación de edición de imágenes, se realiza una prueba de regresión después de una actualización de software para verificar que las funcionalidades que funcionaban antes de la actualización siguen funcionando correctamente después. Se verifica que la edición de imágenes, la aplicación de efectos y la exportación de imágenes siguen funcionando sin errores.</p>
+<h4 id="46-pruebas-de-carga">4.6 Pruebas de carga<a class="headerlink" href="#46-pruebas-de-carga" title="Permanent link">&para;</a></h4>
+<p>Las pruebas de carga son un tipo de prueba que se enfoca en evaluar el comportamiento del software en condiciones de alta demanda. Estas pruebas se realizan para evaluar la capacidad del software para manejar una gran cantidad de usuarios o procesos simultáneamente. <br />
+EJEMPLO: En una aplicación web, simular un gran número de usuarios que acceden a esta de forma simultánea, y monitorizar cómo el software responde a esta carga. Se podrían medir aspectos como el tiempo de respuesta de la aplicación, el número de errores producidos y la tasa de transacciones completadas con éxito.</p>
+<h4 id="47-pruebas-de-rendimiento">4.7 Pruebas de rendimiento<a class="headerlink" href="#47-pruebas-de-rendimiento" title="Permanent link">&para;</a></h4>
+<p>Las pruebas de rendimiento son un tipo de prueba que se enfoca en evaluar la velocidad, la estabilidad y la escalabilidad del software en diferentes situaciones y cargas de trabajo. <br />
+EJEMPLO: En una aplicación de streaming de video, se realiza una prueba de rendimiento para verificar que la aplicación puede manejar la carga de usuarios concurrentes y ofrecer una experiencia de visualización sin interrupciones. Se miden tiempos de carga, calidad de imagen y velocidad de reproducción en diferentes resoluciones.</p>
+<h4 id="48-pruebas-de-seguridad">4.8 Pruebas de seguridad<a class="headerlink" href="#48-pruebas-de-seguridad" title="Permanent link">&para;</a></h4>
+<p>Las pruebas de seguridad son un tipo de prueba que se enfoca en evaluar la capacidad del software para proteger los datos y el sistema contra posibles amenazas y ataques externos. <br />
+EJEMPLO: En una aplicación de gestión de contraseñas, se realiza una prueba de seguridad para verificar que los datos de los usuarios están protegidos contra posibles amenazas externas. Se verifica la fortaleza de las contraseñas, la encriptación de los datos y la seguridad de los servidores de almacenamiento de contraseñas.</p>
+<p>Como has podido observar, existen varios tipos de pruebas de software que se pueden realizar para evaluar diferentes aspectos de la funcionalidad y la calidad del software. Es importante elegir el tipo de prueba adecuado para cada situación y realizar pruebas continuas durante todo el proceso de desarrollo para garantizar la calidad del software.</p>
+<h3 id="5-plan-de-pruebas">5. Plan de pruebas<a class="headerlink" href="#5-plan-de-pruebas" title="Permanent link">&para;</a></h3>
+<p>Un plan de pruebas es un documento que describe cómo se realizarán las pruebas de software y cuáles serán los objetivos y las expectativas de estas pruebas. El plan de pruebas es esencial para garantizar que las pruebas se realicen de manera efectiva y se puedan evaluar los resultados.
+La identificación de los objetivos de las pruebas nos permitirá acotar los puntos que forman el plan de pruebas. Por ejemplo, el objetivo puede ser identificar y corregir errores en el software, evaluar si el software cumple con los requisitos establecidos o evaluar la calidad y la funcionalidad del software, evaluar el rendimiento en horas de alta carga, etc.</p>
+<p>A continuación, se describen los elementos más comunes de un plan de pruebas:</p>
+<h4 id="51-definicion-del-alcance-de-las-pruebas">5.1 Definición del alcance de las pruebas<a class="headerlink" href="#51-definicion-del-alcance-de-las-pruebas" title="Permanent link">&para;</a></h4>
+<p>En este punto, se deben establecer los límites de las pruebas y definir cuáles son los componentes y funcionalidades del software que se van a probar. Es importante que esta definición sea lo suficientemente amplia como para cubrir todas las áreas críticas del software, pero también lo suficientemente específica como para asegurarse de que se están probando todas las funcionalidades de manera exhaustiva.</p>
+<p>Se establece que el alcance de las pruebas para una aplicación web de comercio electrónico incluye el registro de usuarios, el proceso de compra, la gestión de la cuenta de usuario, la gestión de productos y la integración con pasarelas de pago.</p>
+<h4 id="52-identificacion-de-los-recursos-necesarios-para-las-pruebas">5.2 Identificación de los recursos necesarios para las pruebas<a class="headerlink" href="#52-identificacion-de-los-recursos-necesarios-para-las-pruebas" title="Permanent link">&para;</a></h4>
+<p>Identificar los recursos necesarios para realizar las pruebas es otro de los aspectos importantes del plan de pruebas. Los recursos pueden incluir hardware, software, personal de pruebas y cualquier otro tipo de recurso que se necesite para ejecutar las pruebas de manera efectiva. Es importante identificar y asignar los recursos adecuados para garantizar que las pruebas se puedan realizar sin problemas.</p>
+<p>Se identifica que se necesitan 2 equipos para ejecutar las pruebas, cada equipo con diferentes navegadores y sistemas operativos. También se necesitan datos de prueba para simular la interacción del usuario con la aplicación, y un servidor para alojar la aplicación y las herramientas de pruebas.</p>
+<h4 id="53-seleccion-de-herramientas-de-pruebas">5.3 Selección de herramientas de pruebas<a class="headerlink" href="#53-seleccion-de-herramientas-de-pruebas" title="Permanent link">&para;</a></h4>
+<p>La selección de las herramientas de pruebas adecuadas es crucial para asegurar que las pruebas se realicen de manera efectiva. Las herramientas de pruebas pueden incluir software para la creación de casos de prueba, herramientas para la automatización de pruebas, herramientas para la gestión de defectos, entre otras. Es importante seleccionar las herramientas adecuadas para las necesidades específicas del proyecto.</p>
+<p>Se seleccionan las herramientas Selenium y JMeter para realizar las pruebas funcionales y de rendimiento respectivamente, y MockK y Kotest para realizar pruebas unitarias, de integración y aceptación. Además, se decide utilizar Git como sistema de control de versiones para el código de la aplicación y los scripts de pruebas.</p>
+<h4 id="54-diseno-de-casos-de-prueba">5.4 Diseño de casos de prueba<a class="headerlink" href="#54-diseno-de-casos-de-prueba" title="Permanent link">&para;</a></h4>
+<p>Los casos de prueba describen los pasos específicos que deben seguirse para evaluar el software y verificar si cumple con los requisitos establecidos. El diseño de casos de prueba debe ser exhaustivo para cubrir todas las áreas críticas del software y asegurar que todas las funcionalidades se prueben adecuadamente.</p>
+<p>Se elaboran casos de prueba para verificar la funcionalidad de la aplicación en diferentes escenarios, tales como pruebas de navegación, formularios, funcionalidad de compra, validaciones de datos y seguridad.</p>
+<p>Por ejemplo, para verificar la funcionalidad de una aplicación de gestión de tareas:</p>
+<ul>
+<li>Casos de prueba de creación de tareas:</li>
+<li>Verificación de que se pueden crear tareas con éxito.</li>
+<li>Verificación de que se pueden asignar tareas a usuarios específicos.</li>
+<li>Verificación de que se pueden establecer fechas de vencimiento para las tareas.</li>
+<li>Casos de prueba de edición de tareas:</li>
+<li>Verificación de que se pueden editar tareas existentes.</li>
+<li>Verificación de que se pueden actualizar los datos de la tarea, como la fecha de vencimiento y la asignación de usuarios.</li>
+<li>Casos de prueba de eliminación de tareas:</li>
+<li>Verificación de que se pueden eliminar tareas con éxito.</li>
+<li>Verificación de que no se pueden eliminar tareas asignadas a otros usuarios.</li>
+</ul>
+<h4 id="55-asignacion-de-responsabilidades">5.5 Asignación de responsabilidades<a class="headerlink" href="#55-asignacion-de-responsabilidades" title="Permanent link">&para;</a></h4>
+<p>La asignación de responsabilidades es crucial para garantizar que las pruebas se realicen de manera efectiva. En este punto, se deben definir los roles y responsabilidades de cada miembro del equipo de pruebas, así como los roles y responsabilidades de cualquier otro miembro del equipo que esté involucrado en el proceso de pruebas. Esto asegura que cada persona tenga claro lo que se espera de él o ella durante el proceso de pruebas.</p>
+<p>Se asignan responsabilidades a los miembros del equipo de pruebas, por ejemplo, un tester será responsable de la ejecución de las pruebas de integración, otro tester será responsable de las pruebas de sistema, y un tercero será responsable de las pruebas de aceptación.</p>
+<h4 id="56-cronograma-de-pruebas">5.6 Cronograma de pruebas<a class="headerlink" href="#56-cronograma-de-pruebas" title="Permanent link">&para;</a></h4>
+<p>El cronograma debe incluir la duración de cada fase de pruebas y los plazos de entrega para cada etapa. También debe tener en cuenta los plazos y recursos disponibles para el proyecto en su totalidad. El cronograma de pruebas ayuda a asegurar que las pruebas se realicen dentro de los plazos establecidos y que el proyecto se entregue en tiempo y forma.</p>
+<p>Se establece un cronograma que indica cuándo se llevarán a cabo las diferentes pruebas y quién será responsable de su ejecución, y el proceso mediante el cual el equipo de desarrollo debe corregir las incidencias reportadas durante las pruebas, por ejemplo,  antes de que se inicie la siguiente fase de pruebas.</p>
+<p>En ejemplo simple de cronograma:</p>
+<ul>
+<li>Semana 1:</li>
+<li>Revisión y aprobación de casos de prueba por el desarrollador.</li>
+<li>Configuración del entorno de prueba.</li>
+<li>Ejecución de pruebas unitarias.</li>
+<li>Semana 2:</li>
+<li>Ejecución de pruebas de interfaz de usuario.</li>
+<li>Ejecución de pruebas de rendimiento.</li>
+<li>Semana 3:</li>
+<li>Ejecución de pruebas de aceptación.</li>
+<li>Documentación de los resultados de las pruebas.</li>
+<li>Semana 4:</li>
+<li>Revisión de resultados de pruebas y toma de decisiones sobre la aprobación de la entrega.</li>
+</ul>
+<p>En definitiva, un plan de pruebas es esencial para garantizar que las pruebas de software se realicen de manera efectiva y se puedan evaluar los resultados. Un plan de pruebas detallado debe incluir los objetivos de las pruebas, el alcance de las pruebas, el cronograma y los recursos, el plan de pruebas detallado, los roles y las responsabilidades y el proceso de seguimiento y documentación de errores.</p>
+<h3 id="6-pruebas-de-integracion">6. Pruebas de integración<a class="headerlink" href="#6-pruebas-de-integracion" title="Permanent link">&para;</a></h3>
+<h4 id="61-definicion-de-pruebas-de-integracion">6.1 Definición de pruebas de integración<a class="headerlink" href="#61-definicion-de-pruebas-de-integracion" title="Permanent link">&para;</a></h4>
+<p>Las pruebas de integración son un tipo de prueba de software que se enfoca en probar cómo diferentes componentes de software interactúan entre sí cuando se integran. Estas pruebas se realizan después de haber completado las pruebas unitarias y antes de realizar las pruebas del sistema. El objetivo de las pruebas de integración es detectar problemas de integración entre los diferentes componentes de software para garantizar que el sistema completo funcione correctamente.</p>
+<h4 id="62-tipos-de-pruebas-de-integracion">6.2 Tipos de pruebas de integración<a class="headerlink" href="#62-tipos-de-pruebas-de-integracion" title="Permanent link">&para;</a></h4>
+<p>Existen diferentes tipos de pruebas de integración, que se pueden clasificar según el nivel de integración que se está probando:</p>
+<ul>
+<li>Pruebas de integración ascendente: se inician con las unidades de menor nivel (módulos o componentes) y se van integrando hacia arriba, hasta llegar al nivel de sistema completo.</li>
+<li>Pruebas de integración descendente: se inician con los módulos de más alto nivel y se van integrando hacia abajo, hasta llegar a las unidades de menor nivel.</li>
+<li>Pruebas de integración híbridas: combinan los dos enfoques anteriores, empezando por un grupo de módulos y luego continuando hacia arriba y hacia abajo simultáneamente.</li>
+</ul>
+<p>Además, las pruebas de integración también se pueden clasificar según la estrategia que se utilice para realizarlas.</p>
+<h4 id="63-estrategias-para-realizar-pruebas-de-integracion">6.3 Estrategias para realizar pruebas de integración<a class="headerlink" href="#63-estrategias-para-realizar-pruebas-de-integracion" title="Permanent link">&para;</a></h4>
+<p>Existen diferentes estrategias que se pueden utilizar para realizar pruebas de integración. Algunas de las más comunes son:</p>
+<ul>
+<li>Pruebas Big-Bang: en esta estrategia, se integran todos los componentes a la vez y se realizan pruebas para verificar que funcionen correctamente. Esta estrategia es rápida y sencilla de realizar, pero puede ser difícil detectar los problemas de integración si hay muchos componentes.</li>
+<li>Pruebas por módulos: esta estrategia consiste en integrar los componentes de software en módulos lógicos y realizar pruebas en cada uno de ellos. Luego, se integran los módulos y se realizan pruebas en el sistema completo.</li>
+<li>Pruebas de fachada: esta estrategia consiste en crear fachadas (interfaces) para los componentes que aún no se han desarrollado y realizar pruebas con estas interfaces, para simular el comportamiento de los componentes reales que aún no están disponibles.</li>
+<li>Pruebas de stub y <abbr title="Los drivers son los controladores de dispositivos.">driver</abbr>: esta estrategia consiste en utilizar stubs (programas que simulan la funcionalidad de los componentes faltantes) y drivers (programas que simulan la entrada y salida de los componentes faltantes) para realizar pruebas en los componentes que aún no están disponibles.</li>
+</ul>
+<p>Un ejemplo en de prueba de integración ascendente en la que se sigue una estrategia por modulos:</p>
+<p>Supongamos que estamos desarrollando un sistema de compras en línea que consta de tres módulos: el módulo de autenticación de usuarios, el módulo de gestión de carritos de compras y el módulo de procesamiento de pagos. Cada uno de estos módulos ha sido desarrollado por un equipo diferente de desarrolladores.</p>
+<p>Para realizar pruebas de integración ascendente, comenzamos con el módulo más bajo en la jerarquía y vamos subiendo gradualmente. En este caso, comenzaríamos con el módulo de autenticación de usuarios.</p>
+<ol>
+<li>Se desarrollan y prueban los componentes individuales del módulo de autenticación de usuarios, como la validación de la dirección de correo electrónico y la contraseña del usuario.</li>
+<li>Luego, se integran los componentes individuales del módulo y se prueban los flujos de trabajo completos, como el registro de nuevos usuarios y la autenticación de usuarios existentes.</li>
+<li>Una vez que se ha probado el módulo de autenticación de usuarios por completo, se procede a integrar el módulo de gestión de carritos de compras.</li>
+<li>Se siguen los mismos pasos que con el módulo de autenticación de usuarios: se prueban los componentes individuales del módulo, luego se integran y se prueban los flujos de trabajo completos.</li>
+<li>Finalmente, se integra el módulo de procesamiento de pagos y se prueban los flujos de trabajo completos, desde la selección de productos hasta la finalización del pago.</li>
+</ol>
+<p>De esta manera, se van integrando gradualmente los distintos módulos del sistema y se prueban los flujos de trabajo completos, asegurando que no hay conflictos o errores en la interacción entre los distintos componentes. Este proceso se denomina "ascendente" ya que se comienza con los módulos más bajos en la jerarquía y se va avanzando hacia arriba.</p>
+<p>En resumen, las pruebas de integración son un tipo de prueba de software que se enfoca en probar la integración de los diferentes componentes del software. Para realizarlas, se pueden utilizar diferentes estrategias, como pruebas Big-Bang, por módulos, de fachada y de stub y <abbr title="Los drivers son los controladores de dispositivos.">driver</abbr>. El objetivo es detectar problemas stubde integración para garantizar que el sistema completo funcione correctamente.</p>
+<h3 id="7-pruebas-de-sistema">7. Pruebas de sistema<a class="headerlink" href="#7-pruebas-de-sistema" title="Permanent link">&para;</a></h3>
+<h4 id="71-definicion-de-pruebas-de-sistema">7.1 Definición de pruebas de sistema<a class="headerlink" href="#71-definicion-de-pruebas-de-sistema" title="Permanent link">&para;</a></h4>
+<p>Las pruebas de sistema son una etapa importante del proceso de prueba de software en la que se evalúa el sistema completo para asegurarse de que cumple con los requisitos y especificaciones definidos. Estas pruebas se realizan después de las pruebas de integración y antes de las pruebas de aceptación.</p>
+<h4 id="72-tipos-de-pruebas-de-sistema">7.2 Tipos de pruebas de sistema<a class="headerlink" href="#72-tipos-de-pruebas-de-sistema" title="Permanent link">&para;</a></h4>
+<p>Los tipos de pruebas de sistema que se pueden realizar son los siguientes:</p>
+<ol>
+<li>Pruebas de funcionalidad: se asegura que todas las funciones del sistema estén funcionando correctamente.</li>
+<li>Pruebas de rendimiento: se verifica que el sistema cumpla con los requisitos de rendimiento definidos, como la velocidad de respuesta, el tiempo de carga, etc.</li>
+<li>Pruebas de carga: se comprueba la capacidad del sistema para manejar grandes volúmenes de datos o usuarios simultáneos.</li>
+<li>Pruebas de seguridad: se evalúa la seguridad del sistema y se verifica que cumple con los requisitos de seguridad definidos.</li>
+<li>Pruebas de compatibilidad: se verifica la capacidad del sistema para trabajar con diferentes entornos de hardware, software y configuraciones de red.</li>
+<li>Pruebas de usabilidad: se evalúa la facilidad de uso y la experiencia del usuario.</li>
+</ol>
+<h4 id="73-estrategias-para-realizar-pruebas-de-sistema">7.3. Estrategias para realizar pruebas de sistema<a class="headerlink" href="#73-estrategias-para-realizar-pruebas-de-sistema" title="Permanent link">&para;</a></h4>
+<p>Las estrategias comunes para realizar pruebas de sistema son:</p>
+<ol>
+<li>Pruebas de casos de uso: se prueban los casos de uso definidos y se verifica que el sistema funcione según lo previsto en cada caso.</li>
+<li>Pruebas de escenarios: se prueban los diferentes escenarios de uso del sistema, incluyendo los casos de uso complejos y poco comunes.</li>
+<li>Pruebas de extremo a extremo: se prueban las funcionalidades del sistema desde el inicio hasta el final, incluyendo todas las interacciones entre los diferentes módulos y componentes del sistema.</li>
+<li>Pruebas de seguridad: se realizan diferentes tipos de pruebas de seguridad, como pruebas de penetración, pruebas de vulnerabilidad, etc., para evaluar la seguridad del sistema.</li>
+<li>Pruebas de compatibilidad: se realizan pruebas en diferentes entornos de hardware y software para verificar la compatibilidad del sistema.</li>
+<li>Pruebas de estrés: se prueban las capacidades del sistema en situaciones de alta carga o bajo condiciones extremas para verificar su capacidad para manejar tales situaciones.</li>
+</ol>
+<p>Por último recordar que las pruebas de sistema son críticas para garantizar que el sistema cumpla con los requisitos y especificaciones definidos antes de que sea entregado al cliente. Para ello, se deben definir diferentes tipos de pruebas y estrategias apropiadas para realizarlas de manera efectiva.</p>
+<h3 id="8-pruebas-de-aceptacion">8. Pruebas de aceptación<a class="headerlink" href="#8-pruebas-de-aceptacion" title="Permanent link">&para;</a></h3>
+<h4 id="81-definicion-de-pruebas-de-aceptacion">8.1 Definición de pruebas de aceptación<a class="headerlink" href="#81-definicion-de-pruebas-de-aceptacion" title="Permanent link">&para;</a></h4>
+<h4 id="82-tipos-de-pruebas-de-aceptacion">8.2 Tipos de pruebas de aceptación<a class="headerlink" href="#82-tipos-de-pruebas-de-aceptacion" title="Permanent link">&para;</a></h4>
+<h4 id="83-estrategias-para-realizar-pruebas-de-aceptacion">8.3 Estrategias para realizar pruebas de aceptación<a class="headerlink" href="#83-estrategias-para-realizar-pruebas-de-aceptacion" title="Permanent link">&para;</a></h4>
+<h3 id="9-documentacion-de-incidencias">9. Documentación de incidencias<a class="headerlink" href="#9-documentacion-de-incidencias" title="Permanent link">&para;</a></h3>
+<h4 id="91-definicion-de-incidencias">9.1 Definición de incidencias<a class="headerlink" href="#91-definicion-de-incidencias" title="Permanent link">&para;</a></h4>
+<h4 id="92-proceso-de-documentacion-de-incidencias">9.2 Proceso de documentación de incidencias<a class="headerlink" href="#92-proceso-de-documentacion-de-incidencias" title="Permanent link">&para;</a></h4>
+<h4 id="93-clasificacion-de-incidencias">9.3 Clasificación de incidencias<a class="headerlink" href="#93-clasificacion-de-incidencias" title="Permanent link">&para;</a></h4>
+<h4 id="94-ejemplos-de-herramientas-de-seguimiento-de-incidencias">9.4 Ejemplos de herramientas de seguimiento de incidencias<a class="headerlink" href="#94-ejemplos-de-herramientas-de-seguimiento-de-incidencias" title="Permanent link">&para;</a></h4>
+<h3 id="10-conclusiones">10. Conclusiones<a class="headerlink" href="#10-conclusiones" title="Permanent link">&para;</a></h3>
+<p>Resumen de los puntos más importantes <br />
+Importancia de la colaboración entre desarrolladores y testers <br />
+La importancia de la mejora continua en el proceso de pruebas de software   </p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        ¿Te ha sido útíl la página?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Me ha sido de utilidad." data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="La página podría mejorar." data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Gracias por tu feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Gracias por tu feedback! Ayudame a mejorarla usando este formulario. <a href="https://forms.gle/bBtzHfjb41unBb5o9" target=_blank>feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2021-2022 Eduardo Fernández <a href="https://twitter.com/revilofe" target=_blank>@revilofe</a> - Licencia CC BY-NC-SA
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/revilofe" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<efernandez@iesrafaelalberti.es>" target="_blank" rel="noopener" title="e-mail" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/efoliver" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>

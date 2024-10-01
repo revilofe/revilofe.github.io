@@ -1,0 +1,16 @@
+.md-grid {
+  max-width: 1440px; 
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}

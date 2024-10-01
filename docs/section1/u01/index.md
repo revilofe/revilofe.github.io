@@ -21,7 +21,7 @@ toc_icon: "file-code"
 #  - footer
 ---
 
-Cada unidad contendrá una serie de contenidos, resultados de aprendizaje (desglosados en criterios de evaluación), una práctica o prácticas para evaluar la adquisición de dichos criterios de evaluación y una prueba específica para evaluar la asimilación de contenido.
+Cada unidad del módulo contendrá una serie de contenidos, resultados de aprendizaje (desglosados en criterios de evaluación), una práctica o prácticas para evaluar la adquisición de dichos criterios de evaluación y una prueba específica para evaluar la asimilación de contenido.
 
 ## Normativa que respalda la unidad
 

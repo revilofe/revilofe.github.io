@@ -110,6 +110,7 @@ fin. # (1)
 
 ``` 
 
+
 1.  :man_raising_hand: Con la palabra `fin`, __finaliza__ el programa.
 
 Los **diagramas de flujo** son representaciones gráficas de la secuencia de operaciones que se realizan dentro de un algoritmo.

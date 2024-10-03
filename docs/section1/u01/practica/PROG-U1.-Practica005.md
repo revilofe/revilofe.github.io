@@ -30,11 +30,11 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
 
    Podemos hacerlo de varias formas:
   
-      - Desde una terminal de tu sistema operativo, navegando donde queramos crear el directorio y usando el comando `mkdir nombreCarpeta`. Posteriormente accederemos a la nueva carpeta *(`cd`)* creada y ejecutaremos el comando code .
+     - Desde una terminal de tu sistema operativo, navegando donde queramos crear el directorio y usando el comando `mkdir nombreCarpeta`. Posteriormente accederemos a la nueva carpeta *(`cd`)* creada y ejecutaremos el comando `code .`.
 
-      - A nivel gráfico, desde el `Explorador de archivos`, creando una carpeta y arrastrándola dentro de `Visual Studio Code`.
+     - A nivel gráfico, desde el `Explorador de archivos`, creando una carpeta y arrastrándola dentro de `Visual Studio Code`.
 
-      - También podemos hacerlo desde `Visual Studio Code`, en el menú `File -> Open Folder`, navegaremos a la carpeta o la crearemos, después simplemente pulsamos en el botón `Seleccionar carpeta`.
+     - También podemos hacerlo desde `Visual Studio Code`, en el menú `File -> Open Folder`, navegaremos a la carpeta o la crearemos, después simplemente pulsamos en el botón `Seleccionar carpeta`.
 
 2. A continuación abrimos la consola del IDE:
 

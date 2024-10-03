@@ -26,7 +26,7 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
 
 ### 2. Pasos a seguir en la práctica
 
-1. Antes de nada, debemos abrir una carpeta en Visual Studio Code, donde vamos a trabajar con nuestros programas de Python.
+#### 2.1. Antes de nada, debemos abrir una carpeta en Visual Studio Code, donde vamos a trabajar con nuestros programas de Python.
 
    Podemos hacerlo de varias formas:
   
@@ -36,11 +36,11 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
 
    * También podemos hacerlo desde `Visual Studio Code`, en el menú `File -> Open Folder`, navegaremos a la carpeta o la crearemos, después simplemente pulsamos en el botón `Seleccionar carpeta`.
 
-2. A continuación abrimos la consola del IDE:
+#### 2.2. A continuación abrimos la consola del IDE:
 
 	Teclas rápidas `Ctrl+ñ` o desde el menú `View -> Terminal`
 
-3. Instalamos virtualenv con el siguiente comando:
+#### 2.3. Instalamos virtualenv con el siguiente comando:
 
 	```
  
@@ -48,7 +48,7 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
  
 	```
 
-4. Para comprobar su versión:
+#### 2.4. Para comprobar su versión:
 
 	```
  
@@ -56,7 +56,7 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
  
 	```
 	
-5. Creamos ahora un entorno virtual:
+#### 2.5. Creamos ahora un entorno virtual:
 
 	```
  
@@ -64,9 +64,9 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
  
  	```
 
-6. El entorno virtual crea físicamente una carpeta llamada venv, donde gestionará todas las librerías que instalemos.
+#### 2.6. El entorno virtual crea físicamente una carpeta llamada venv, donde gestionará todas las librerías que instalemos.
 
-7. Para utilizar el entorno virtual debemos activarlo:
+#### 2.7. Para utilizar el entorno virtual debemos activarlo:
 
 	```
  
@@ -74,7 +74,7 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
  
 	```
 
-8. Si queremos comprobar los paquetes instalados en el entorno virtual ejecutamos el siguiente comando:
+#### 2.8. Si queremos comprobar los paquetes instalados en el entorno virtual ejecutamos el siguiente comando:
 
 	```
  
@@ -82,15 +82,15 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
  
 	```
  
-9. Para comprobar que tenemos la última versión de pip y actualizarla:
+#### 2.9. Para comprobar que tenemos la última versión de pip y actualizarla:
 
 	```
  
-	python.exe -m pip install --upgrade pip
+	python -m pip install --upgrade pip
  
 	```
 
-10. Ya tenemos el entorno virtual preparado y activado para usarlo en nuestro proyecto. Vamos a instalar pytest, que nos van a ayudar a ejecutar las pruebas unitarias:
+#### 2.10. Ya tenemos el entorno virtual preparado y activado para usarlo en nuestro proyecto. Vamos a instalar pytest, que nos van a ayudar a ejecutar las pruebas unitarias:
 
 	```
  
@@ -98,7 +98,7 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
  
 	```
  
-11. Podemos volver a revisar los paquetes instalados y vemos cómo nos ha instalado pytest y otros paquetes necesarios:
+#### 2.11. Podemos volver a revisar los paquetes instalados y vemos cómo nos ha instalado pytest y otros paquetes necesarios:
 
 	```
  
@@ -106,7 +106,7 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
  
 	```
  	
-12. Para comprobar la versión que tenemos instalada de pytest:
+#### 2.12. Para comprobar la versión que tenemos instalada de pytest:
 
 	```
  
@@ -114,15 +114,15 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
  
 	```
  
-13. Si necesitamos desactivar el entorno virtual
+#### 2.13. Si necesitamos desactivar el entorno virtual
 
 	```
  
-	.\venv\Scripts\deactivate
+	deactivate
  
 	```
  
-14. Para exportar los paquetes que tenemos instalados, por si los queremos instalarlos en otro entorno posteriormente:
+#### 2.14. Para exportar los paquetes que tenemos instalados, por si los queremos instalarlos en otro entorno posteriormente:
 
 	```
  
@@ -130,7 +130,7 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
  
 	```
 
-15. Para importarlos en otro entorno virtual de otra carpeta o proyecto:
+#### 2.15. Para importarlos en otro entorno virtual de otra carpeta o proyecto:
 
 	```
  

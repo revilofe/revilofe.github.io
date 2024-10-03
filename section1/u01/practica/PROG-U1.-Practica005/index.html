@@ -4481,29 +4481,47 @@
 <h4 id="27-para-utilizar-el-entorno-virtual-debemos-activarlo">2.7. Para utilizar el entorno virtual debemos activarlo:<a class="headerlink" href="#27-para-utilizar-el-entorno-virtual-debemos-activarlo" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>.\venv\Scripts\activate
 </code></pre></div>
+<ul>
+<li>Si se produce un error que indica que "la ejecución de scripts está deshabilitada en el sistema"... debéis abrir como <strong>Administrador</strong> <code>Windows PowerShell</code> y ejecutar el siguiente comando:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Set-ExecutionPolicy RemoteSigned
+</code></pre></div>
+<ul>
+<li>
+<p>Este error ocurre porque, en PowerShell, la ejecución de scripts está deshabilitada por motivos de seguridad. Para solucionarlo, necesitas cambiar la política de ejecución para permitir la ejecución de scripts.</p>
+</li>
+<li>
+<p>El parámetro <code>RemoteSigned</code>: Permite ejecutar scripts locales <strong>no firmados</strong>, pero los scripts descargados de Internet necesitarán estar firmados.</p>
+</li>
+<li>
+<p>Si en un futuro quiers volver a la configuración original, solo tienes que ejecutar el mismo comando con el parámetro <code>Restricted</code>:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Set-ExecutionPolicy Restricted
+</code></pre></div>
 <h4 id="28-si-queremos-comprobar-los-paquetes-instalados-en-el-entorno-virtual-ejecutamos-el-siguiente-comando">2.8. Si queremos comprobar los paquetes instalados en el entorno virtual ejecutamos el siguiente comando:<a class="headerlink" href="#28-si-queremos-comprobar-los-paquetes-instalados-en-el-entorno-virtual-ejecutamos-el-siguiente-comando" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pip list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pip list
 </code></pre></div>
 <h4 id="29-para-comprobar-que-tenemos-la-ultima-version-de-pip-y-actualizarla">2.9. Para comprobar que tenemos la última versión de pip y actualizarla:<a class="headerlink" href="#29-para-comprobar-que-tenemos-la-ultima-version-de-pip-y-actualizarla" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python -m pip install --upgrade pip
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python -m pip install --upgrade pip
 </code></pre></div>
 <h4 id="210-ya-tenemos-el-entorno-virtual-preparado-y-activado-para-usarlo-en-nuestro-proyecto-vamos-a-instalar-pytest-que-nos-van-a-ayudar-a-ejecutar-las-pruebas-unitarias">2.10. Ya tenemos el entorno virtual preparado y activado para usarlo en nuestro proyecto. Vamos a instalar pytest, que nos van a ayudar a ejecutar las pruebas unitarias:<a class="headerlink" href="#210-ya-tenemos-el-entorno-virtual-preparado-y-activado-para-usarlo-en-nuestro-proyecto-vamos-a-instalar-pytest-que-nos-van-a-ayudar-a-ejecutar-las-pruebas-unitarias" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pip install pytest
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pip install pytest
 </code></pre></div>
 <h4 id="211-podemos-volver-a-revisar-los-paquetes-instalados-y-vemos-como-nos-ha-instalado-pytest-y-otros-paquetes-necesarios">2.11. Podemos volver a revisar los paquetes instalados y vemos cómo nos ha instalado pytest y otros paquetes necesarios:<a class="headerlink" href="#211-podemos-volver-a-revisar-los-paquetes-instalados-y-vemos-como-nos-ha-instalado-pytest-y-otros-paquetes-necesarios" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pip list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>pip list
 </code></pre></div>
 <h4 id="212-para-comprobar-la-version-que-tenemos-instalada-de-pytest">2.12. Para comprobar la versión que tenemos instalada de pytest:<a class="headerlink" href="#212-para-comprobar-la-version-que-tenemos-instalada-de-pytest" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pytest --version
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>pytest --version
 </code></pre></div>
 <h4 id="213-si-necesitamos-desactivar-el-entorno-virtual">2.13. Si necesitamos desactivar el entorno virtual<a class="headerlink" href="#213-si-necesitamos-desactivar-el-entorno-virtual" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>deactivate
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>deactivate
 </code></pre></div>
 <h4 id="214-para-exportar-los-paquetes-que-tenemos-instalados-por-si-los-queremos-instalarlos-en-otro-entorno-posteriormente">2.14. Para exportar los paquetes que tenemos instalados, por si los queremos instalarlos en otro entorno posteriormente:<a class="headerlink" href="#214-para-exportar-los-paquetes-que-tenemos-instalados-por-si-los-queremos-instalarlos-en-otro-entorno-posteriormente" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>pip freeze &gt; requirements.txt
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>pip freeze &gt; requirements.txt
 </code></pre></div>
 <h4 id="215-para-importarlos-en-otro-entorno-virtual-de-otra-carpeta-o-proyecto">2.15. Para importarlos en otro entorno virtual de otra carpeta o proyecto:<a class="headerlink" href="#215-para-importarlos-en-otro-entorno-virtual-de-otra-carpeta-o-proyecto" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>pip install -r requirements.txt
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>pip install -r requirements.txt
 </code></pre></div>
 <h2 id="fuentes">Fuentes:<a class="headerlink" href="#fuentes" title="Permanent link">&para;</a></h2>
 <ul>

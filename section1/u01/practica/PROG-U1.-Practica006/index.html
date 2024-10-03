@@ -910,17 +910,17 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#32-assert" class="md-nav__link">
     <span class="md-ellipsis">
       3.2. Assert
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4196,17 +4196,17 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#32-assert" class="md-nav__link">
     <span class="md-ellipsis">
       3.2. Assert
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4323,13 +4323,13 @@
 <li>Una sentencia de retorno (opcional)</li>
 </ol>
 <p>Un ejemplo, que además vamos a usar en nuestra práctica es el siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  def suma(num1, num2):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>def suma(num1, num2):
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    return num1 + num2
 </code></pre></div>
 <p>En el código podemos llamarla las veces que nosotros necesitemos:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>  print(suma(3, 2))
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  print(&quot;La suma de&quot;, 3, &quot;+&quot;, 2, &quot;es&quot;, suma(3, 2))
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  tot = 100 + suma(25, 40)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>print(suma(3, 2))
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>print(&quot;La suma de&quot;, 3, &quot;+&quot;, 2, &quot;es&quot;, suma(3, 2))
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>tot = 100 + suma(25, 40)
 </code></pre></div>
 <h3 id="3-pruebas-unitarias">3. Pruebas unitarias<a class="headerlink" href="#3-pruebas-unitarias" title="Permanent link">&para;</a></h3>
 <p>Las pruebas automáticas son consideradas una herramienta y una metodología indispensable para producir software de calidad.</p>
@@ -4339,10 +4339,10 @@
 <p>Además de ejecutarse en la máquina del desarrollador, en entornos de trabajo profesional, estas se ejecutan en forma continua, por ejemplo cada hora o cada commit del código. Esta ejecución continua se realiza mediante sistemas automatizados como Jenkins. Debido a esto, agregar una pieza de código de pruebas implica que esta se probará una y otra vez cada que una funcionalidad sea agregada o un error sea corregido.</p>
 <h4 id="31-pytest">3.1. Pytest<a class="headerlink" href="#31-pytest" title="Permanent link">&para;</a></h4>
 <p>Pytest es un framework con muchas funcionalidades, desde pruebas pequeñas hasta pruebas de gran escala como pruebas funcionales de aplicaciones y librerías. Ofrece la recolección automática de los tests, aserciones simples, soporte para fixtures, debugeo y mucho más…</p>
-<h3 id="32-assert">3.2. Assert<a class="headerlink" href="#32-assert" title="Permanent link">&para;</a></h3>
+<h4 id="32-assert">3.2. Assert<a class="headerlink" href="#32-assert" title="Permanent link">&para;</a></h4>
 <p>La palabra assert en Python se refiere a un enunciado que verifica ciertas suposiciones sobre nuestro código. Si la suposición no es cierta, la afirmación falla y se genera una excepción.</p>
 <p>Por ejemplo, si suponemos que una variable es mayor que cero, podemos usar assert para verificar esa suposición:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>  def funcion_ejemplo(x):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>def funcion_ejemplo(x):
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    assert x &gt; 0, &quot;x no es mayor que cero&quot;
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    return x * 2
 </code></pre></div>
@@ -4353,28 +4353,52 @@
 <p>Para empezar, vamos a partir de la práctica 5, donde creamos un entorno virtual e instalamos pytest. Vamos a seguir los siguientes pasos para realizar nuestro primer test y ejecutarlo desde el terminal.</p>
 </li>
 <li>
-<p>Abrir en Visual Studio Code nuestra carpeta de trabajo, activar el entorno virtual y comprobar que está instalado correctamente pytest.</p>
+<p>Abrir en Visual Studio Code nuestra carpeta de trabajo, vamos a crear una carpeta en <strong>~/Documents/practica6</strong>, activar el entorno virtual y comprobar que está instalado correctamente pytest.</p>
 </li>
 <li>
-<p>Crear una carpeta que se llame Pruebas. En ella crearemos un nuevo fichero prueba1.py con el siguiente contenido:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>  def suma(num1, num2):
+<p>Lo habitual es crear un directorio llamado <code>tests</code> que contenga los ficheros de pruebas y <code>src</code> para incluir los programas o módulos. Si hacéis esto, incluid en todas las carpetas del proyecto el fichero <code>__init__.py</code> vacío <em>(si lo hacéis desde el terminal: touch <strong>init</strong>.py)</em>.</p>
+<p>Por ejemplo, si tenemos la siguiente estructura de nuestra carpeta o proyecto <code>practica6</code>:</p>
+<p><code>practica6
+     --__init__.py
+     |
+     --scr
+     |   __init__.py
+     |   main.py
+     --tests
+     |   __init__.py
+     |   test_main.py</code>    </p>
+</li>
+<li>
+<p>Crear una carpeta que se llame <code>src</code>. En ella crearemos un nuevo fichero <code>main.py</code> con el siguiente contenido:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>def suma(num1, num2):
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    return num1 + num2
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  print(suma(3, 2))
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  print(&quot;La suma de&quot;, 3, &quot;+&quot;, 2, &quot;es&quot;, suma(3, 2))
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  print(&quot;La suma de &quot; + str(3) + &quot; + &quot; + str(2) + &quot; es &quot; + str(suma(3, 2)))
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  res = &quot;La suma de &quot;
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  res += str(3)
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  res += &quot; + &quot; + str(2)
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  res += &quot; es &quot; + str(suma(3, 2))
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  print(res)
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>  print(f&quot;La suma de {3} + {2} es {suma(3, 2)}&quot;)
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>def main():
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    print(&quot;La suma de 3 + 2 es {}&quot;.format(suma(3, 2)))
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    # Otras formas de hacer lo mismo:
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    print(&quot;La suma de&quot;, 3, &quot;+&quot;, 2, &quot;es&quot;, suma(3, 2))
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    print(&quot;La suma de &quot; + str(3) + &quot; + &quot; + str(2) + &quot; es &quot; + str(suma(3, 2)))
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    res = &quot;La suma de &quot;
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    res += str(3)
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    res += &quot; + &quot; + str(2)
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    res += &quot; es &quot; + str(suma(3, 2))
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    print(res)
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    print(f&quot;La suma de 3 + 2 es {suma(3, 2)}&quot;)
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>if __name__ == &quot;__main__&quot;:
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    main()
 </code></pre></div>
-<p>Si os fijáis en el código, no es más que una función que voy a llamar en mi código principal en varias ocasiones.</p>
+<p>Si os fijáis en el código, no es más que una función que voy a llamar en mi función principal en varias ocasiones.</p>
 </li>
 <li>
-<p>A continuación, nos creamos otro fichero con el nombre test_prueba1.py (Pytest va a reconocer por defecto todos los programas que comiencen por test_ cómo pruebas unitarias que debe realizar). El contenido será el siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>  from prueba1 import suma
+<p>A continuación, nos creamos la carpeta <code>tests</code> y dentro de ella un fichero con el nombre <code>test_main.py</code> <em>(Pytest va a reconocer por defecto todos los programas que comiencen por test_ cómo pruebas unitarias que debe realizar)</em>. El contenido será el siguiente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>  from src.main import suma
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  def test_suma():
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    assert suma(1, 1) == 2
@@ -4385,70 +4409,62 @@
 <li>
 <p>Para empezar, siempre debemos importar la función que deseamos probar del módulo dónde está definida.</p>
 </li>
-<li>Todas las pruebas serán también una función con el nombre test_nombreFunciónAProbar.</li>
+<li>Todas las pruebas serán también una función con el nombre <code>test_nombreFunciónAProbar</code>.</li>
 <li>Si realizamos varias funciones para probar una misma función es recomendable añadir un texto explicativo de la prueba.</li>
-<li>assert verifica que la expresión de la derecha es verdadera (true), sino generará una excepción.</li>
+<li><code>assert</code> verifica que la expresión de la derecha es verdadera (true), sino generará una excepción.</li>
 <li>
-<p>Pytest recogerá la excepción si se produce y la gestionará para mostrarnos los resultados.</p>
+<p>Pytest capturará la excepción si se produce y la gestionará para mostrarnos los resultados.</p>
 </li>
 <li>
 <p>Vamos a ejecutar las pruebas unitarias desde la terminal:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>  &gt; pytest
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>pytest
 </code></pre></div>
 <p>El comando <code>pytest</code> nos muestra si las pruebas pasaron o no. Si queremos una información un poco más detallada usamos el parámetro <code>-v</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>  &gt; pytest -v
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pytest -v
 </code></pre></div>
 </li>
 <li>
-<p>Se pueden usar las marcas para realizar múltiples pruebas sobre un determinado método <em>(marca parametrize)</em>. En el mismo fichero test_prueba1.py añadimos otra función:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>  @pytest.mark.parametrize(
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    &quot;input_n1, input_n2, expected&quot;,
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    [
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>      (1, 1, 2),
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>      (0, 0, 0),
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>      (100, -100, 0),
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>      (-15, -1, -16),
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>      (-3, 8, 5),
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>      (9, suma(-1, -2), 6)
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    ]
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>  )
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>  def test_suma_params(input_n1, input_n2, expected):
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    assert suma(input_n1, input_n2) == expected
+<p>Se pueden usar las marcas para realizar múltiples pruebas sobre un determinado método <em>(marca parametrize)</em>. En el mismo fichero <code>test_main.py</code> añadimos otra función:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>import pytest
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>from src.main import suma
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>def test_suma():
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    assert suma(1, 1) == 2
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    assert suma(0, 0) == 0
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    assert suma(100, -100) == 0
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>@pytest.mark.parametrize(
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    &quot;input_n1, input_n2, expected&quot;,
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    [
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>        (1, 1, 2),
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>        (0, 0, 0),
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>        (100, -100, 0),
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>        (-15, -1, -16),
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>        (-3, 8, 5),
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>        (9, suma(-1, -2), 6)
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>    ]
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>)
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>def test_suma_params(input_n1, input_n2, expected):
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>    assert suma(input_n1, input_n2) == expected
 </code></pre></div>
 Necesitamos importar las librerías de pytest en nuestro fichero de pruebas con <code>import pytest</code>.</p>
 </li>
 <li>
 <p>Al volver a realizar el test obtendremos un resultado por cada tupla de parámetros probados:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>  pytest -v
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pytest -v
 </code></pre></div>
 </li>
 <li>
 <p><strong>Obliguemos a que se produzca un error</strong>, por ejemplo modificando uno de los parámetros expected <code>(0, 0, 1)</code> y observemos lo que nos muestra pytest.</p>
 </li>
 <li>
-<p>Lo habitual es crear un directorio llamado tests que contenga los ficheros de pruebas. Si hacéis esto, incluid en todos las carpetas del proyecto el fichero <code>__init__.py</code> vacío <em>(ya lo veremos más adelante)</em>. Si no hacéis esto, es probable que no funcione correctamente pytest, ya que no encontrará las funciones que debe importar para probar.</p>
-<p>Nuestro código cambiaría y la importación se haría dando la ruta relativa donde se encuentra nuestro módulo a probar.</p>
-<p>Por ejemplo, si tenemos la siguiente estructura de nuestra carpeta o proyecto <code>DAM1-ProgPython</code>:</p>
-<p><code>DAM1-ProgPython
-     |
-     --Pruebas
-     |   __init__.py
-     |   prueba1.py
-     --tests
-     |   __init__.py
-     |   test_prueba1.py</code>  </p>
-<p>Nuestro código para importar la función suma pasaría a escribirse de la siguiente manera:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>from Pruebas.prueba1 import suma
-</code></pre></div>
-</li>
-<li>
-<p>Pruébalo y vuelve a ejecutar las pruebas.</p>
+<p>Pruébalo y vuelve a ejecutar los tests unitarios.</p>
 </li>
 </ol>
 <h3 id="5-crea-tu-el-test">5. Crea tu el test<a class="headerlink" href="#5-crea-tu-el-test" title="Permanent link">&para;</a></h3>
-<p>Desarrolla una función en <code>prueba1.py</code> que reciba dos números y retorne el mayor número de los dos o 0 si son iguales. Realiza las pruebas unitarias y ejecútalas con pytest.</p>
+<p>Desarrolla una función en <code>compara_numeros.py</code> que reciba dos números y retorne el mayor número de los dos o 0 si son iguales. Realiza las pruebas unitarias y ejecútalas con pytest.</p>
 <p>Entrega lo siguiente: <br />
-* Los ficheros <code>prueba1.py</code> y <code>test_prueba1.py</code>    <br />
+* Los ficheros <code>compara_numeros.py</code> y <code>test_compara_numeros.py</code>    <br />
 * Un pantallazo donde se muestre la vista del Explorador (View -&gt; Explorer) con las carpetas y ficheros del proyecto. <br />
 * Un pantallazo del terminal con las pruebas unitarias detalladas realizadas con éxito. <br />
 * Fuerza un error en tu código, no en los tests, y muestra un pantallazo de tus pruebas unitarias realizadas de nuevo.</p>
@@ -4456,13 +4472,12 @@ Necesitamos importar las librerías de pytest en nuestro fichero de pruebas con 
 <p>Ahora vamos a configurar y realizar las pruebas unitarias desde el IDE, sin necesidad de usar los comandos. Para ello, sigue los 6 pasos de la siguiente documentación para configurar y ejecutar las pruebas unitarias:  </p>
 <p><a href="https://pytest-with-eric.com/introduction/how-to-run-pytest-in-vscode/">How to run pytest in VSCode</a>  </p>
 <h3 id="7-crea-tu-el-test-usando-el-ide">7. Crea tu el test usando el IDE<a class="headerlink" href="#7-crea-tu-el-test-usando-el-ide" title="Permanent link">&para;</a></h3>
-<p>Desarrolla una función en <code>prueba1.py</code> que reciba un número y retorne el factorial del mismo. Crea también las pruebas unitarias.</p>
+<p>Desarrolla una función en <code>calcula_factorial.py</code> que reciba un número y retorne el factorial del mismo. Crea también las pruebas unitarias.</p>
 <p>Debe cumplir que el número de entrada debe ser igual o superior a 0 y menor o igual a 10 (si no es correcto, retornará -1).</p>
-<blockquote>
-<p>El factorial de 0 es 1. El factorial de un número entero se define como el producto de todos los números enteros positivos desde el 1 hasta n. Por ejemplo, el factorial de 3 es 6 (3! = 3 x 2 x 1 = 6).</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>&gt; El factorial de 0 es 1. El factorial de un número entero se define como el producto de todos los números enteros positivos desde el 1 hasta n. Por ejemplo, el factorial de 3 es 6 (3! = 3 x 2 x 1 = 6).
+</code></pre></div>
 <p>Entrega lo siguiente: <br />
-* Los ficheros prueba1.py y test_prueba1.py <br />
+* Los ficheros calcula_factorial.py y test_calcula_factorial.py <br />
 * Un pantallazo de la vista de Testing.<br />
 * Fuerza un error en tu código, no en los tests, y muestra un pantallazo de tus pruebas unitarias realizadas de nuevo en la vista de Testing de Visual Studio Code.</p>
 <h2 id="fuentes">Fuentes:<a class="headerlink" href="#fuentes" title="Permanent link">&para;</a></h2>

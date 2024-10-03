@@ -93,16 +93,16 @@ En este ejemplo, si x es igual a cero o menor que cero, se generará una excepci
 
     Por ejemplo, si tenemos la siguiente estructura de nuestra carpeta o proyecto `practica6`:
      
-     ```
-        practica6
-         --__init__.py
-         |
-         --scr
-         |   __init__.py
-         |   main.py
-         --tests
-         |   __init__.py
-         |   test_main.py
+    ```bash
+    \practica6
+    --__init__.py
+    |
+    --scr
+    |--__init__.py
+    |--main.py
+    --tests
+    |--__init__.py
+    |--test_main.py
     ```    
 
 4. Crear una carpeta que se llame `src`. En ella crearemos un nuevo fichero `main.py` con el siguiente contenido:

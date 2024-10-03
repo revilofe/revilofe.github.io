@@ -66,6 +66,22 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
    .\venv\Scripts\activate
    ```
 
+   * Si se produce un error que indica que "la ejecución de scripts está deshabilitada en el sistema"... debéis abrir como **Administrador** `Windows PowerShell` y ejecutar el siguiente comando:
+
+   ```
+   Set-ExecutionPolicy RemoteSigned
+   ```
+
+   * Este error ocurre porque, en PowerShell, la ejecución de scripts está deshabilitada por motivos de seguridad. Para solucionarlo, necesitas cambiar la política de ejecución para permitir la ejecución de scripts.
+
+   * El parámetro `RemoteSigned`: Permite ejecutar scripts locales **no firmados**, pero los scripts descargados de Internet necesitarán estar firmados.
+
+   * Si en un futuro quiers volver a la configuración original, solo tienes que ejecutar el mismo comando con el parámetro `Restricted`:
+
+   ```
+   Set-ExecutionPolicy Restricted
+   ```
+
 #### 2.8. Si queremos comprobar los paquetes instalados en el entorno virtual ejecutamos el siguiente comando:
 
    ```

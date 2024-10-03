@@ -26,7 +26,7 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
 
 ### 2. Pasos a seguir en la práctica
 
-#### 2.1. Antes de nada, debemos abrir una carpeta en Visual Studio Code, donde vamos a trabajar con nuestros programas de Python.
+#### 2.1. Antes de nada, debemos abrir una carpeta en Visual Studio Code, donde vamos a trabajar con nuestros programas de Python. (por ejemplo en **~/Documentos/practica5**)
 
    Podemos hacerlo de varias formas:
   
@@ -36,107 +36,83 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
 
    * También podemos hacerlo desde `Visual Studio Code`, en el menú `File -> Open Folder`, navegaremos a la carpeta o la crearemos, después simplemente pulsamos en el botón `Seleccionar carpeta`.
 
-#### 2.2. A continuación abrimos la consola del IDE:
+#### 2.2. A continuación abrimos la consola dentro del IDE:
 
-	Teclas rápidas `Ctrl+ñ` o desde el menú `View -> Terminal`
+   Teclas rápidas `Ctrl+ñ` o desde el menú `View -> Terminal`
 
 #### 2.3. Instalamos virtualenv con el siguiente comando:
 
-	```
- 
-	pip install virtualenv
- 
-	```
+   ```
+   pip install virtualenv
+   ```
 
 #### 2.4. Para comprobar su versión:
 
-	```
- 
-	virtualenv --version
- 
-	```
+   ```
+   virtualenv --version
+   ```
 	
 #### 2.5. Creamos ahora un entorno virtual:
 
-	```
- 
-	python -m virtualenv venv
- 
- 	```
+   ```
+   python -m virtualenv venv
+   ```
 
 #### 2.6. El entorno virtual crea físicamente una carpeta llamada venv, donde gestionará todas las librerías que instalemos.
 
 #### 2.7. Para utilizar el entorno virtual debemos activarlo:
 
-	```
- 
-	.\venv\Scripts\activate
- 
-	```
+   ```
+   .\venv\Scripts\activate
+   ```
 
 #### 2.8. Si queremos comprobar los paquetes instalados en el entorno virtual ejecutamos el siguiente comando:
 
-	```
- 
-	pip list
- 
-	```
+   ```
+   pip list
+   ```
  
 #### 2.9. Para comprobar que tenemos la última versión de pip y actualizarla:
 
-	```
- 
-	python -m pip install --upgrade pip
- 
-	```
+   ```
+   python -m pip install --upgrade pip
+   ```
 
 #### 2.10. Ya tenemos el entorno virtual preparado y activado para usarlo en nuestro proyecto. Vamos a instalar pytest, que nos van a ayudar a ejecutar las pruebas unitarias:
 
-	```
- 
-	pip install pytest
- 
-	```
+   ```
+   pip install pytest
+   ```
  
 #### 2.11. Podemos volver a revisar los paquetes instalados y vemos cómo nos ha instalado pytest y otros paquetes necesarios:
 
-	```
- 
-	pip list
- 
-	```
+   ```
+   pip list
+   ```
  	
 #### 2.12. Para comprobar la versión que tenemos instalada de pytest:
 
-	```
- 
-	pytest --version
- 
-	```
+   ```
+   pytest --version
+   ```
  
 #### 2.13. Si necesitamos desactivar el entorno virtual
 
-	```
- 
-	deactivate
- 
-	```
+   ```
+   deactivate
+   ```
  
 #### 2.14. Para exportar los paquetes que tenemos instalados, por si los queremos instalarlos en otro entorno posteriormente:
 
-	```
- 
-	pip freeze > requirements.txt
- 
-	```
+   ```
+   pip freeze > requirements.txt
+   ```
 
 #### 2.15. Para importarlos en otro entorno virtual de otra carpeta o proyecto:
 
-	```
- 
-	pip install -r requirements.txt
- 
-	```
+   ```
+   pip install -r requirements.txt
+   ```
  
 
 ## Fuentes:

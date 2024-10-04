@@ -4166,8 +4166,11 @@
 <p><strong>pip</strong> es un <a href="https://es.wikipedia.org/wiki/Sistema_de_gesti%C3%B3n_de_paquetes">sistema de gestión de paquetes</a> utilizado para instalar y administrar paquetes de software escritos en <a href="https://es.wikipedia.org/wiki/Python">Python</a>. Muchos paquetes pueden ser encontrados en el <a href="https://es.wikipedia.org/wiki/Python_Package_Index">Python Package Index</a> (<a href="https://es.wikipedia.org/wiki/PyPI">PyPI</a>). Python 2.7.9 y posteriores (en la serie Python2), Python 3.4 y posteriores incluyen pip (pip3 para Python3) por defecto.
 </p>
 </blockquote>
+<p>El comando para instalar <code>pip</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>pip
+</code></pre></div>
 <p>El comando para actualizar <code>pip</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
 </code></pre></div>
 <h3 id="2-crear-un-entorno-virtual">2. Crear un entorno virtual<a class="headerlink" href="#2-crear-un-entorno-virtual" title="Permanent link">&para;</a></h3>
 <p>Las aplicaciones en Python usualmente hacen uso de paquetes y módulos que no forman parte de la librería estándar. Las aplicaciones a veces necesitan una versión específica de una librería, debido a que dicha aplicación requiere que un bug particular haya sido solucionado o bien la aplicación ha sido escrita usando una versión obsoleta de la interfaz de la librería.</p>
@@ -4179,44 +4182,47 @@ Virtualenv es la manera más fácil recomendada para configurar un ambiente pers
 </p>
 </blockquote>
 <p>A contiuación instalamos el modulo <strong>virtualenv</strong>, haciendo uso de pip.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>virtualenv
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>virtualenv
+</code></pre></div>
+<p>Si tienes problemas con la instalación, puedes forzar la instalación con el siguiente comando:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>virtualenv<span class="w"> </span>--break-system-packages<span class="w"> </span>
 </code></pre></div>
 <p>Una vez instalado el modulo, podemos usarlo para crear un entorno llamado <strong>prog1</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>virtualenv<span class="w"> </span>prog1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>-m<span class="w"> </span>virtualenv<span class="w"> </span>prog1
 </code></pre></div>
 <p>La creación del entorno, creará una carpeta con el mismo nombre: <code>./prog1</code></p>
 <p>Una vez creado, pasamos a activar el entorno recien creado: prog1</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>prog1
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>.<span class="w"> </span>./bin/activate
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>prog1
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>.<span class="w"> </span>./bin/activate
 </code></pre></div>
 <p>Eliminando la carpeta eliminaremos el entorno.</p>
 <p>Una vez tenemos activo el entorno, podemos listar los módulos que tenemos disponibles en el entorno que hemos creado y activado:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pip<span class="w"> </span>list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pip<span class="w"> </span>list
 </code></pre></div>
-<p>Adicionalmente, si en un momento determinado necesitamos recoger los modulos instalados, podemos captura los requerimientos a un archivo.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
+<p>Adicionalmente, si en un momento determinado necesitamos recoger los módulos instalados, podemos captura los requerimientos a un archivo.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
 </code></pre></div>
-<p>Y posteriormente, reinstalar esos mismos modulos:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<p>Y posteriormente, reinstalar esos mismos módulos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div>
 <p>La estructura creada en el nuevo entorno, tiene por defecto los directorios <code>bin</code> (ejecutables) y <code>lib</code> (paquetes instalados).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>/prog1
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">|</span>_/bin
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">|</span>_/lib
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>/prog1
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="p">|</span>_/bin
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">|</span>_/lib
 </code></pre></div>
-<p>Crearemos los directorios <strong>src</strong> para almacenar el codigo fuente y <strong>test</strong> para almacenar los tests. Ademas, crearemos un archivo <strong><code>__init__.py</code></strong> vacío en cada uno de estos dos directorios.</p>
+<p>Crearemos los directorios <strong>src</strong> para almacenar el código fuente y <strong>test</strong> para almacenar los tests. Además, crearemos un archivo <strong><code>__init__.py</code></strong> vacío en cada uno de estos dos directorios.</p>
 <blockquote>
 <p>El archivo <strong><strong>init</strong>.py</strong> es utilizado para inicializar paquetes de Python, es decir, le indica al intérprete de Python que el directorio package contiene un módulo, y que debe tratarlo como tal (es decir, hacer que sea posible importar los archivos como parte del módulo).
 En general no es necesario poner nada en el archivo <code>__init__.py</code>, pero es muy común usarlo para realizar configuraciones e importar cualquier objeto necesario de nuestra librería.
 </p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>/prog1
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">|</span>_/bin
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">|</span>_/lib
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">|</span>_/src
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="p">|</span>_/__ini__.py
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">|</span>_/test
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="p">|</span>_/__ini__.py
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>/prog1
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="p">|</span>_/bin
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">|</span>_/lib
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">|</span>_/src
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">  </span><span class="p">|</span>_/__ini__.py
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">|</span>_/test
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">  </span><span class="p">|</span>_/__ini__.py
 </code></pre></div>
 <h3 id="3-pruebas-con-pytest">3. Pruebas con pytest<a class="headerlink" href="#3-pruebas-con-pytest" title="Permanent link">&para;</a></h3>
 <blockquote>
@@ -4228,13 +4234,13 @@ En general no es necesario poner nada en el archivo <code>__init__.py</code>, pe
 <li>
 <p>Asegúrate de tener pytest instalado en tu entorno virtual. Puedes instalarlo utilizando el siguiente comando.
    Despues de instalar pytest, si listamos de nuevo los módulos del entorno, veremos que los modulos instalados se habŕan incrementado.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pytest
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pytest
 </code></pre></div>
 </li>
 <li>
 <p>Suponiendo que tienes una función llamada suma en el archivo <code>main.py</code> en el directorio src de tu proyecto. Aquí tienes un ejemplo de una función <code>suma</code> en Python, que toma dos argumentos <code>a</code> y <code>b</code> y devuelve la suma de los dos números.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </code></pre></div>
 </li>
 <li>
@@ -4242,29 +4248,29 @@ En general no es necesario poner nada en el archivo <code>__init__.py</code>, pe
 </li>
 <li>
 <p>En este archivo de prueba, importa pytest y la función que deseas probar desde tu código fuente. Por ejemplo, podrías importar la función <code>suma</code> desde el módulo <code>main</code> en el directorio <code>src</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kn">from</span> <span class="nn">src.main</span> <span class="kn">import</span> <span class="n">suma</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kn">from</span> <span class="nn">src.main</span> <span class="kn">import</span> <span class="n">suma</span>
 </code></pre></div>
 </li>
 <li>
 <p>Define una función de prueba utilizando el decorador <code>@pytest.mark.parametrize</code>. Esta función de prueba <code>test_suma_params</code> debe tomar los parámetros de entrada que deseas probar y el resultado esperado. Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="s2">&quot;input_x, input_y, expected&quot;</span><span class="p">,</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    <span class="p">[</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>        <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>        <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    <span class="p">]</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="p">)</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="k">def</span> <span class="nf">test_suma_params</span><span class="p">(</span><span class="n">input_x</span><span class="p">,</span> <span class="n">input_y</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>    <span class="k">assert</span> <span class="n">suma</span><span class="p">(</span><span class="n">input_x</span><span class="p">,</span> <span class="n">input_y</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    <span class="s2">&quot;input_x, input_y, expected&quot;</span><span class="p">,</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    <span class="p">[</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>        <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>        <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>        <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>    <span class="p">]</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="p">)</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="k">def</span> <span class="nf">test_suma_params</span><span class="p">(</span><span class="n">input_x</span><span class="p">,</span> <span class="n">input_y</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>    <span class="k">assert</span> <span class="n">suma</span><span class="p">(</span><span class="n">input_x</span><span class="p">,</span> <span class="n">input_y</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected</span>
 </code></pre></div>
 <p>En este ejemplo, estamos probando la función "suma" con diferentes valores de entrada y comprobando si el resultado es igual al valor esperado.</p>
 </li>
 <li>
 <p>Desde el directorio base de tu proyecto, ejecuta los tests utilizando el siguiente comando en la terminal:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>pytest<span class="w"> </span>./test
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>pytest<span class="w"> </span>./test
 </code></pre></div>
 <p>Esto ejecutará todos los archivos de prueba con el prefijo "test_" en el nombre y mostrará los resultados de las pruebas.</p>
 </li>

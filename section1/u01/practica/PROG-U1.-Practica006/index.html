@@ -4399,12 +4399,24 @@
 </li>
 <li>
 <p>A continuación, nos creamos la carpeta <code>tests</code> y dentro de ella un fichero con el nombre <code>test_main.py</code> <em>(Pytest va a reconocer por defecto todos los programas que comiencen por test_ cómo pruebas unitarias que debe realizar)</em>. El contenido será el siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>  from src.main import suma
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>from src.main import suma
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  def test_suma():
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>def test_suma():
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    assert suma(1, 1) == 2
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    assert suma(0, 0) == 0
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    assert suma(100, -100) == 0
+</code></pre></div>
+<p>Si os da problemas porque no encuentra los paquetes importados desde la prueba unitaria, agregamos manualmente el directorio raíz del proyecto a sys.path:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>import sys
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>import os
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a># Agregar el directorio raíz del proyecto (practica6) al sys.path
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), &#39;..&#39;)))
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>def test_suma():
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    assert suma(1, 1) == 2
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    assert suma(0, 0) == 0
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    assert suma(100, -100) == 0
 </code></pre></div>
 </li>
 <li>
@@ -4418,41 +4430,41 @@
 </li>
 <li>
 <p>Vamos a ejecutar las pruebas unitarias desde la terminal:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pytest
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pytest
 </code></pre></div>
 <p>El comando <code>pytest</code> nos muestra si las pruebas pasaron o no. Si queremos una información un poco más detallada usamos el parámetro <code>-v</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pytest -v
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pytest -v
 </code></pre></div>
 </li>
 <li>
 <p>Se pueden usar las marcas para realizar múltiples pruebas sobre un determinado método <em>(marca parametrize)</em>. En el mismo fichero <code>test_main.py</code> añadimos otra función:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>import pytest
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>from src.main import suma
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>def test_suma():
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    assert suma(1, 1) == 2
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    assert suma(0, 0) == 0
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    assert suma(100, -100) == 0
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>@pytest.mark.parametrize(
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    &quot;input_n1, input_n2, expected&quot;,
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    [
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>        (1, 1, 2),
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>        (0, 0, 0),
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>        (100, -100, 0),
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>        (-15, -1, -16),
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>        (-3, 8, 5),
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>        (9, suma(-1, -2), 6)
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>    ]
-<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>)
-<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>def test_suma_params(input_n1, input_n2, expected):
-<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>    assert suma(input_n1, input_n2) == expected
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>import pytest
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>from src.main import suma
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>def test_suma():
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    assert suma(1, 1) == 2
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    assert suma(0, 0) == 0
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    assert suma(100, -100) == 0
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>@pytest.mark.parametrize(
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    &quot;input_n1, input_n2, expected&quot;,
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    [
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>        (1, 1, 2),
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>        (0, 0, 0),
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>        (100, -100, 0),
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>        (-15, -1, -16),
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>        (-3, 8, 5),
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>        (9, suma(-1, -2), 6)
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>    ]
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>)
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>def test_suma_params(input_n1, input_n2, expected):
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>    assert suma(input_n1, input_n2) == expected
 </code></pre></div>
 Necesitamos importar las librerías de pytest en nuestro fichero de pruebas con <code>import pytest</code>.</p>
 </li>
 <li>
 <p>Al volver a realizar el test obtendremos un resultado por cada tupla de parámetros probados:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>pytest -v
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>pytest -v
 </code></pre></div>
 </li>
 <li>
@@ -4475,7 +4487,7 @@ Necesitamos importar las librerías de pytest en nuestro fichero de pruebas con 
 <h3 id="7-crea-tu-el-test-usando-el-ide">7. Crea tu el test usando el IDE<a class="headerlink" href="#7-crea-tu-el-test-usando-el-ide" title="Permanent link">&para;</a></h3>
 <p>Desarrolla una función en <code>calcula_factorial.py</code> que reciba un número y retorne el factorial del mismo. Crea también las pruebas unitarias.</p>
 <p>Debe cumplir que el número de entrada debe ser igual o superior a 0 y menor o igual a 10 (si no es correcto, retornará -1).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>&gt; El factorial de 0 es 1. El factorial de un número entero se define como el producto de todos los números enteros positivos desde el 1 hasta n. Por ejemplo, el factorial de 3 es 6 (3! = 3 x 2 x 1 = 6).
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>&gt; El factorial de 0 es 1. El factorial de un número entero se define como el producto de todos los números enteros positivos desde el 1 hasta n. Por ejemplo, el factorial de 3 es 6 (3! = 3 x 2 x 1 = 6).
 </code></pre></div>
 <p>Entrega lo siguiente: <br />
 * Los ficheros calcula_factorial.py y test_calcula_factorial.py <br />

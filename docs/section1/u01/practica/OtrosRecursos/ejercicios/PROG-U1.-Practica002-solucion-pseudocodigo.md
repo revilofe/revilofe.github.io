@@ -17,9 +17,115 @@ tags:
 
 ## P1.2 - Ejercicios Resueltos en pseudocódigo
 
-Aquí tienes la continuación de las soluciones de la práctica 1.2 con explicaciones detalladas.
+## 1. Aquí tienes los algoritmos en pseudocódigo para las tareas solicitadas. Los algoritmos incluyen las instrucciones necesarias y las explicaciones correspondientes para que sean fáciles de entender.
+
 
 ---
+
+### Algoritmo 1 : Determinar si un número X es par o impar
+
+**Descripción**:
+Este algoritmo determina si un número es par o impar. Un número es par si al dividirlo por 2 el resto es cero, de lo contrario, es impar.
+
+**Pseudocódigo**:
+
+```plaintext
+Inicio
+    Escribe "Introduce un número entero: "
+    Lee X
+
+    Si (X % 2 == 0) Entonces  // Verificar si el resto de la división entre 2 es cero
+        Escribe X + " es un número par."
+    Sino
+        Escribe X + " es un número impar."
+    FinSi
+Fin
+```
+
+**Explicación**:
+1. El algoritmo solicita un número entero, `X`.
+2. Se verifica si `X` es divisible entre 2 (resto igual a cero).
+3. Si el resto es cero, se indica que el número es par.
+4. Si el resto no es cero, se indica que el número es impar.
+
+---
+
+### Algoritmo 2: Generar la tabla de multiplicar del número X desde 1 hasta 10
+
+**Descripción**:
+Este algoritmo genera la tabla de multiplicar de un número dado `X`, desde 1 hasta 10.
+
+**Pseudocódigo**:
+
+```plaintext
+Inicio
+    Escribe "Introduce un número entero: "
+    Lee X
+    
+    Escribe "Tabla de multiplicar del número " + X + ":"
+    
+    Para i en (1...10) hacer
+        resultado = X * i  // Multiplicar el número X por i
+        Escribe X + " x " + i + " = " + resultado
+    FinPara
+Fin
+```
+
+**Explicación**:
+1. El algoritmo solicita un número entero, `X`.
+2. Utiliza un bucle `Para` para iterar desde 1 hasta 10.
+3. En cada iteración, se multiplica `X` por el valor de `i` y se imprime el resultado en formato de tabla.
+4. Se genera la tabla de multiplicar completa del número `X`.
+
+---
+
+### Algoritmo 3: Determinar si un número X es primo
+
+**Descripción**:
+Este algoritmo determina si un número es primo o no. Un número es primo si solo es divisible por 1 y por sí mismo, es decir, no tiene divisores propios.
+
+**Pseudocódigo**:
+
+```plaintext
+Inicio
+    Escribe "Introduce un número entero: "
+    Lee X
+
+    es_primo = verdadero  // Inicialmente asumimos que el número es primo
+    
+    Si (X <= 1) Entonces  // Los números menores o iguales a 1 no son primos
+        es_primo = falso
+    Sino
+        Para i en (2 ... X-1) hacer
+            Si (X % i == 0) Entonces  // Si X es divisible por algún número entre 2 y X-1, no es primo
+                es_primo = falso
+                Romper  // Salir del bucle
+            FinSi
+        FinPara
+    FinSi
+
+    Si (es_primo) Entonces
+        Escribe X + " es un número primo."
+    Sino
+        Escribe X + " no es un número primo."
+    FinSi
+Fin
+```
+
+**Explicación**:
+1. El algoritmo solicita un número entero, `X`.
+2. Inicialmente se asume que el número es primo (variable `es_primo` se establece a `verdadero`).
+3. Si el número es menor o igual a 1, no es primo y se establece `es_primo = falso`.
+4. Luego, se recorre un bucle `Para` desde 2 hasta `X-1`. Si `X` es divisible por algún número en ese rango, se marca como no primo (`es_primo = falso`) y se interrumpe el bucle.
+5. Finalmente, se imprime si el número es primo o no, dependiendo del valor de `es_primo`.
+
+
+Si necesitas más detalles o ejemplos adicionales, no dudes en pedirlo.
+
+
+---
+## 2. Aquí tienes las soluciones de la práctica 1.2 con explicaciones detalladas.
+
 
 ### Ejercicio 1.2.1: Escribe un programa que pida el nombre del usuario para luego darle la bienvenida.
 

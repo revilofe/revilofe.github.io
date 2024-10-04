@@ -26,10 +26,17 @@ Antes de realizar, nada, vamos a actualizar la herramienta que nos va a permitir
 > **pip** es un [sistema de gestión de paquetes](https://es.wikipedia.org/wiki/Sistema_de_gesti%C3%B3n_de_paquetes) utilizado para instalar y administrar paquetes de software escritos en [Python](https://es.wikipedia.org/wiki/Python). Muchos paquetes pueden ser encontrados en el [Python Package Index](https://es.wikipedia.org/wiki/Python_Package_Index) ([PyPI](https://es.wikipedia.org/wiki/PyPI)). Python 2.7.9 y posteriores (en la serie Python2), Python 3.4 y posteriores incluyen pip (pip3 para Python3) por defecto.
 >
 
+El comando para instalar `pip`
+
+```bash
+sudo apt-get install pip
+
+```
+
 El comando para actualizar `pip`
 
 ```bash
-python3 -m pip install --upgrade pip
+sudo python3 -m pip install --upgrade pip
 ```
 
 ### 2. Crear un entorno virtual
@@ -48,6 +55,12 @@ A contiuación instalamos el modulo **virtualenv**, haciendo uso de pip.
 
 ```bash
 sudo pip install virtualenv
+```
+
+Si tienes problemas con la instalación, puedes forzar la instalación con el siguiente comando:
+
+```bash
+sudo pip install virtualenv --break-system-packages 
 ```
 
 Una vez instalado el modulo, podemos usarlo para crear un entorno llamado **prog1**
@@ -73,13 +86,13 @@ Una vez tenemos activo el entorno, podemos listar los módulos que tenemos dispo
 pip list
 ```
 
-Adicionalmente, si en un momento determinado necesitamos recoger los modulos instalados, podemos captura los requerimientos a un archivo.
+Adicionalmente, si en un momento determinado necesitamos recoger los módulos instalados, podemos captura los requerimientos a un archivo.
 
 ```bash
 pip freeze > “requirements.txt”
 ```
 
-Y posteriormente, reinstalar esos mismos modulos:
+Y posteriormente, reinstalar esos mismos módulos:
 
 ```bash
 pip install -r “requirements.txt”
@@ -93,7 +106,7 @@ La estructura creada en el nuevo entorno, tiene por defecto los directorios `bin
 |_/lib
 ```
 
-Crearemos los directorios **src** para almacenar el codigo fuente y **test** para almacenar los tests. Ademas, crearemos un archivo **`__init__.py`** vacío en cada uno de estos dos directorios.
+Crearemos los directorios **src** para almacenar el código fuente y **test** para almacenar los tests. Además, crearemos un archivo **`__init__.py`** vacío en cada uno de estos dos directorios.
 
 > El archivo **__init__.py** es utilizado para inicializar paquetes de Python, es decir, le indica al intérprete de Python que el directorio package contiene un módulo, y que debe tratarlo como tal (es decir, hacer que sea posible importar los archivos como parte del módulo).
 En general no es necesario poner nada en el archivo `__init__.py`, pero es muy común usarlo para realizar configuraciones e importar cualquier objeto necesario de nuestra librería.

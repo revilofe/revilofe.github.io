@@ -3972,7 +3972,58 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="P1.2 - Ejercicios Resueltos en pseudocódigo">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-aqui-tienes-los-algoritmos-en-pseudocodigo-para-las-tareas-solicitadas-los-algoritmos-incluyen-las-instrucciones-necesarias-y-las-explicaciones-correspondientes-para-que-sean-faciles-de-entender" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Aquí tienes los algoritmos en pseudocódigo para las tareas solicitadas. Los algoritmos incluyen las instrucciones necesarias y las explicaciones correspondientes para que sean fáciles de entender.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Aquí tienes los algoritmos en pseudocódigo para las tareas solicitadas. Los algoritmos incluyen las instrucciones necesarias y las explicaciones correspondientes para que sean fáciles de entender.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#algoritmo-1-determinar-si-un-numero-x-es-par-o-impar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algoritmo 1 : Determinar si un número X es par o impar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritmo-2-generar-la-tabla-de-multiplicar-del-numero-x-desde-1-hasta-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algoritmo 2: Generar la tabla de multiplicar del número X desde 1 hasta 10
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritmo-3-determinar-si-un-numero-x-es-primo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algoritmo 3: Determinar si un número X es primo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-aqui-tienes-las-soluciones-de-la-practica-12-con-explicaciones-detalladas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Aquí tienes las soluciones de la práctica 1.2 con explicaciones detalladas.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Aquí tienes las soluciones de la práctica 1.2 con explicaciones detalladas.">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4289,17 +4340,97 @@
   <h1>PROG U1. Practica002 solucion pseudocodigo</h1>
 
 <h2 id="p12-ejercicios-resueltos-en-pseudocodigo">P1.2 - Ejercicios Resueltos en pseudocódigo<a class="headerlink" href="#p12-ejercicios-resueltos-en-pseudocodigo" title="Permanent link">&para;</a></h2>
-<p>Aquí tienes la continuación de las soluciones de la práctica 1.2 con explicaciones detalladas.</p>
+<h2 id="1-aqui-tienes-los-algoritmos-en-pseudocodigo-para-las-tareas-solicitadas-los-algoritmos-incluyen-las-instrucciones-necesarias-y-las-explicaciones-correspondientes-para-que-sean-faciles-de-entender">1. Aquí tienes los algoritmos en pseudocódigo para las tareas solicitadas. Los algoritmos incluyen las instrucciones necesarias y las explicaciones correspondientes para que sean fáciles de entender.<a class="headerlink" href="#1-aqui-tienes-los-algoritmos-en-pseudocodigo-para-las-tareas-solicitadas-los-algoritmos-incluyen-las-instrucciones-necesarias-y-las-explicaciones-correspondientes-para-que-sean-faciles-de-entender" title="Permanent link">&para;</a></h2>
 <hr />
+<h3 id="algoritmo-1-determinar-si-un-numero-x-es-par-o-impar">Algoritmo 1 : Determinar si un número X es par o impar<a class="headerlink" href="#algoritmo-1-determinar-si-un-numero-x-es-par-o-impar" title="Permanent link">&para;</a></h3>
+<p><strong>Descripción</strong>:
+Este algoritmo determina si un número es par o impar. Un número es par si al dividirlo por 2 el resto es cero, de lo contrario, es impar.</p>
+<p><strong>Pseudocódigo</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Inicio
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    Escribe &quot;Introduce un número entero: &quot;
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    Lee X
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    Si (X % 2 == 0) Entonces  // Verificar si el resto de la división entre 2 es cero
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        Escribe X + &quot; es un número par.&quot;
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    Sino
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        Escribe X + &quot; es un número impar.&quot;
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    FinSi
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>Fin
+</code></pre></div>
+<p><strong>Explicación</strong>:
+1. El algoritmo solicita un número entero, <code>X</code>.
+2. Se verifica si <code>X</code> es divisible entre 2 (resto igual a cero).
+3. Si el resto es cero, se indica que el número es par.
+4. Si el resto no es cero, se indica que el número es impar.</p>
+<hr />
+<h3 id="algoritmo-2-generar-la-tabla-de-multiplicar-del-numero-x-desde-1-hasta-10">Algoritmo 2: Generar la tabla de multiplicar del número X desde 1 hasta 10<a class="headerlink" href="#algoritmo-2-generar-la-tabla-de-multiplicar-del-numero-x-desde-1-hasta-10" title="Permanent link">&para;</a></h3>
+<p><strong>Descripción</strong>:
+Este algoritmo genera la tabla de multiplicar de un número dado <code>X</code>, desde 1 hasta 10.</p>
+<p><strong>Pseudocódigo</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Inicio
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    Escribe &quot;Introduce un número entero: &quot;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    Lee X
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    Escribe &quot;Tabla de multiplicar del número &quot; + X + &quot;:&quot;
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    Para i en (1...10) hacer
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        resultado = X * i  // Multiplicar el número X por i
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        Escribe X + &quot; x &quot; + i + &quot; = &quot; + resultado
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    FinPara
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>Fin
+</code></pre></div>
+<p><strong>Explicación</strong>:
+1. El algoritmo solicita un número entero, <code>X</code>.
+2. Utiliza un bucle <code>Para</code> para iterar desde 1 hasta 10.
+3. En cada iteración, se multiplica <code>X</code> por el valor de <code>i</code> y se imprime el resultado en formato de tabla.
+4. Se genera la tabla de multiplicar completa del número <code>X</code>.</p>
+<hr />
+<h3 id="algoritmo-3-determinar-si-un-numero-x-es-primo">Algoritmo 3: Determinar si un número X es primo<a class="headerlink" href="#algoritmo-3-determinar-si-un-numero-x-es-primo" title="Permanent link">&para;</a></h3>
+<p><strong>Descripción</strong>:
+Este algoritmo determina si un número es primo o no. Un número es primo si solo es divisible por 1 y por sí mismo, es decir, no tiene divisores propios.</p>
+<p><strong>Pseudocódigo</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Inicio
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    Escribe &quot;Introduce un número entero: &quot;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    Lee X
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    es_primo = verdadero  // Inicialmente asumimos que el número es primo
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    Si (X &lt;= 1) Entonces  // Los números menores o iguales a 1 no son primos
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        es_primo = falso
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    Sino
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        Para i en (2 ... X-1) hacer
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>            Si (X % i == 0) Entonces  // Si X es divisible por algún número entre 2 y X-1, no es primo
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>                es_primo = falso
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>                Romper  // Salir del bucle
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>            FinSi
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        FinPara
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    FinSi
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    Si (es_primo) Entonces
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>        Escribe X + &quot; es un número primo.&quot;
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    Sino
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>        Escribe X + &quot; no es un número primo.&quot;
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    FinSi
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>Fin
+</code></pre></div>
+<p><strong>Explicación</strong>:
+1. El algoritmo solicita un número entero, <code>X</code>.
+2. Inicialmente se asume que el número es primo (variable <code>es_primo</code> se establece a <code>verdadero</code>).
+3. Si el número es menor o igual a 1, no es primo y se establece <code>es_primo = falso</code>.
+4. Luego, se recorre un bucle <code>Para</code> desde 2 hasta <code>X-1</code>. Si <code>X</code> es divisible por algún número en ese rango, se marca como no primo (<code>es_primo = falso</code>) y se interrumpe el bucle.
+5. Finalmente, se imprime si el número es primo o no, dependiendo del valor de <code>es_primo</code>.</p>
+<p>Si necesitas más detalles o ejemplos adicionales, no dudes en pedirlo.</p>
+<hr />
+<h2 id="2-aqui-tienes-las-soluciones-de-la-practica-12-con-explicaciones-detalladas">2. Aquí tienes las soluciones de la práctica 1.2 con explicaciones detalladas.<a class="headerlink" href="#2-aqui-tienes-las-soluciones-de-la-practica-12-con-explicaciones-detalladas" title="Permanent link">&para;</a></h2>
 <h3 id="ejercicio-121-escribe-un-programa-que-pida-el-nombre-del-usuario-para-luego-darle-la-bienvenida">Ejercicio 1.2.1: Escribe un programa que pida el nombre del usuario para luego darle la bienvenida.<a class="headerlink" href="#ejercicio-121-escribe-un-programa-que-pida-el-nombre-del-usuario-para-luego-darle-la-bienvenida" title="Permanent link">&para;</a></h3>
 <p><strong>Descripción</strong>:
 Este programa solicita al usuario que introduzca su nombre y luego le da la bienvenida mostrando un mensaje en pantalla.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Inicio
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    Escribe &quot;Escribe tu nombre: &quot;
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    Lee nombre
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    Escribe &quot;Hola, &quot; + nombre + &quot;.&quot;
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Inicio
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    Escribe &quot;Escribe tu nombre: &quot;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    Lee nombre
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    Escribe &quot;Hola, &quot; + nombre + &quot;.&quot;
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. El programa comienza pidiendo el nombre del usuario con la instrucción <code>Escribe</code>.
@@ -4310,16 +4441,16 @@ Este programa solicita al usuario que introduzca su nombre y luego le da la bien
 <p><strong>Descripción</strong>:
 Este programa solicita al usuario dos datos: las horas trabajadas y el precio por hora, y calcula el importe total multiplicando ambos valores.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Inicio
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    Escribe &quot;Introduce las horas de trabajo: &quot;
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    Lee horas
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    Escribe &quot;Introduce el coste por hora: &quot;
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    Lee coste_por_hora
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    total = horas * coste_por_hora
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    Escribe &quot;El importe total es: &quot; + total
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Inicio
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    Escribe &quot;Introduce las horas de trabajo: &quot;
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    Lee horas
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    Escribe &quot;Introduce el coste por hora: &quot;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    Lee coste_por_hora
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    total = horas * coste_por_hora
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    Escribe &quot;El importe total es: &quot; + total
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se solicitan al usuario las horas trabajadas y el coste por hora.
@@ -4346,14 +4477,14 @@ En este ejercicio, el alumno debe predecir el resultado de ciertas expresiones a
 Este programa convierte una temperatura dada en grados Celsius a grados Fahrenheit usando la fórmula:</p>
 <div class="arithmatex">\[ F = (C \times 9/5) + 32 \]</div>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Inicio
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    Escribe &quot;Introduce la temperatura en grados Celsius: &quot;
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    Lee celsius
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    fahrenheit = (celsius * 9/5) + 32
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    Escribe &quot;La temperatura en grados Fahrenheit es: &quot; + fahrenheit
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Inicio
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    Escribe &quot;Introduce la temperatura en grados Celsius: &quot;
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    Lee celsius
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    fahrenheit = (celsius * 9/5) + 32
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    Escribe &quot;La temperatura en grados Fahrenheit es: &quot; + fahrenheit
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se pide la temperatura en grados Celsius al usuario.
@@ -4364,16 +4495,16 @@ Este programa convierte una temperatura dada en grados Celsius a grados Fahrenhe
 <p><strong>Descripción</strong>:
 Este programa calcula el precio final de un artículo sumándole el IVA. El usuario introduce el precio sin IVA y el tipo de IVA a aplicar.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Inicio
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    Escribe &quot;Introduce el importe sin IVA: &quot;
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    Lee precio_sin_iva
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    Escribe &quot;Introduce el tipo de IVA (en porcentaje): &quot;
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    Lee iva
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    precio_final = precio_sin_iva + (precio_sin_iva * iva / 100)
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    Escribe &quot;El precio final del artículo es: &quot; + precio_final
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Inicio
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    Escribe &quot;Introduce el importe sin IVA: &quot;
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    Lee precio_sin_iva
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    Escribe &quot;Introduce el tipo de IVA (en porcentaje): &quot;
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    Lee iva
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    precio_final = precio_sin_iva + (precio_sin_iva * iva / 100)
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    Escribe &quot;El precio final del artículo es: &quot; + precio_final
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. El usuario introduce el precio del artículo sin IVA y el porcentaje del IVA.
@@ -4384,16 +4515,16 @@ Este programa calcula el precio final de un artículo sumándole el IVA. El usua
 <p><strong>Descripción</strong>:
 Este programa solicita el precio final de un artículo (incluyendo IVA) y calcula cuánto se ha pagado de IVA y el importe sin IVA. Se asume un tipo de IVA del 10%.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Inicio
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    Escribe &quot;Introduce el importe final: &quot;
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    Lee precio_final
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    precio_sin_iva = precio_final / 1.10
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    iva_pagado = precio_final - precio_sin_iva
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    Escribe &quot;El importe sin IVA es: &quot; + precio_sin_iva
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    Escribe &quot;El IVA pagado es: &quot; + iva_pagado
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Inicio
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    Escribe &quot;Introduce el importe final: &quot;
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    Lee precio_final
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    precio_sin_iva = precio_final / 1.10
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    iva_pagado = precio_final - precio_sin_iva
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    Escribe &quot;El importe sin IVA es: &quot; + precio_sin_iva
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    Escribe &quot;El IVA pagado es: &quot; + iva_pagado
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. El usuario introduce el precio final, que incluye el IVA.
@@ -4405,18 +4536,18 @@ Este programa solicita el precio final de un artículo (incluyendo IVA) y calcul
 <p><strong>Descripción</strong>:
 Este programa pide al usuario que introduzca tres números y luego calcula su suma.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Inicio
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    Escribe &quot;Introduce el primer número: &quot;
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    Lee num1
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    Escribe &quot;Introduce el segundo número: &quot;
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    Lee num2
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    Escribe &quot;Introduce el tercer número: &quot;
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    Lee num3
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    suma = num1 + num2 + num3
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    Escribe &quot;La suma es: &quot; + suma
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Inicio
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    Escribe &quot;Introduce el primer número: &quot;
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    Lee num1
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    Escribe &quot;Introduce el segundo número: &quot;
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    Lee num2
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    Escribe &quot;Introduce el tercer número: &quot;
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    Lee num3
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    suma = num1 + num2 + num3
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    Escribe &quot;La suma es: &quot; + suma
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. El programa solicita tres números al usuario.
@@ -4427,21 +4558,21 @@ Este programa pide al usuario que introduzca tres números y luego calcula su su
 <p><strong>Descripción</strong>:
 Este programa repite la suma de tres números pero usando solo dos variables, lo cual se puede hacer reutilizando las variables en el proceso de cálculo.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Inicio
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    Escribe &quot;Introduce el primer número: &quot;
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    Lee num1
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    Escribe &quot;Introduce el segundo número: &quot;
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    Lee num2
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    num1 = num1 + num2  // Reutilizamos la variable num1 para almacenar la suma de los dos primeros números
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    Escribe &quot;Introduce el tercer número: &quot;
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    Lee num2  // Reutilizamos la variable num2 para el tercer número
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    num1 = num1 + num2  // Sumamos el tercer número a la variable num1 que ya contiene la suma de los dos primeros
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>    Escribe &quot;La suma es: &quot; + num1
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Inicio
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    Escribe &quot;Introduce el primer número: &quot;
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    Lee num1
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    Escribe &quot;Introduce el segundo número: &quot;
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    Lee num2
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    num1 = num1 + num2  // Reutilizamos la variable num1 para almacenar la suma de los dos primeros números
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    Escribe &quot;Introduce el tercer número: &quot;
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    Lee num2  // Reutilizamos la variable num2 para el tercer número
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    num1 = num1 + num2  // Sumamos el tercer número a la variable num1 que ya contiene la suma de los dos primeros
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    Escribe &quot;La suma es: &quot; + num1
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se solicitan los dos primeros números y se suman en la variable <code>num1</code>.
@@ -4453,16 +4584,16 @@ Este programa repite la suma de tres números pero usando solo dos variables, lo
 <p><strong>Descripción</strong>:
 El desafío aquí es realizar la suma de tres números sin usar ninguna variable. Aunque se puede hacer sin variables, en pseudocódigo se deben usar variables para manejar los datos temporalmente, pero aquí intentamos reducirlas al mínimo.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Inicio
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    Escribe &quot;Introduce el primer número: &quot;
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    Lee num1
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    Escribe &quot;Introduce el segundo número: &quot;
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    Lee num2
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    Escribe &quot;Introduce el tercer número: &quot;
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    Lee num3
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    Escribe &quot;La suma es: &quot; + (num1 + num2 + num3)
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Inicio
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    Escribe &quot;Introduce el primer número: &quot;
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    Lee num1
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    Escribe &quot;Introduce el segundo número: &quot;
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    Lee num2
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    Escribe &quot;Introduce el tercer número: &quot;
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    Lee num3
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    Escribe &quot;La suma es: &quot; + (num1 + num2 + num3)
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Los tres números se leen y se suman directamente en la operación <code>Escribe</code> sin la necesidad de variables adicionales para almacenar el resultado de la suma.
@@ -4472,10 +4603,10 @@ El desafío aquí es realizar la suma de tres números sin usar ninguna variable
 <p><strong>Descripción</strong>:
 El ejercicio requiere escribir un programa que muestre una operación aritmética dada. Por ejemplo, si se quiere calcular <span class="arithmatex">\( (5 + 3) * 2 \)</span>, el resultado debería mostrarse directamente.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Inicio
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    resultado = (5 + 3) * 2
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    Escribe &quot;El resultado es: &quot; + resultado
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Inicio
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    resultado = (5 + 3) * 2
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    Escribe &quot;El resultado es: &quot; + resultado
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se realiza la operación directamente en una línea y se almacena el resultado en la variable <code>resultado</code>.
@@ -4485,14 +4616,14 @@ El ejercicio requiere escribir un programa que muestre una operación aritmétic
 <p><strong>Descripción</strong>:
 El programa solicita un número entero positivo, n, y luego calcula la suma de todos los números enteros desde 1 hasta n.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Inicio
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    Escribe &quot;Introduce un entero positivo: &quot;
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    Lee n
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    suma = n * (n + 1) / 2  // Fórmula para la suma de los n primeros enteros
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    Escribe &quot;La suma de los primeros &quot; + n + &quot; enteros es: &quot; + suma
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Inicio
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    Escribe &quot;Introduce un entero positivo: &quot;
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    Lee n
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    suma = n * (n + 1) / 2  // Fórmula para la suma de los n primeros enteros
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    Escribe &quot;La suma de los primeros &quot; + n + &quot; enteros es: &quot; + suma
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se utiliza la fórmula matemática <span class="arithmatex">\( \text{suma} = \frac{n(n+1)}{2} \)</span>, que permite calcular la suma de los n primeros números enteros.
@@ -4503,15 +4634,15 @@ El programa solicita un número entero positivo, n, y luego calcula la suma de t
 Este programa calcula el índice de masa corporal (IMC) usando la fórmula:</p>
 <div class="arithmatex">\[ IMC = \frac{peso}{altura^2} \]</div>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Inicio
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    Escribe &quot;Introduce tu peso en kg: &quot;
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    Lee peso
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    Escribe &quot;Introduce tu estatura en metros: &quot;
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    Lee estatura
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    imc = peso / (estatura * estatura)  // Cálculo del IMC
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    Escribe &quot;Tu índice de masa corporal es: &quot; + imc
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Inicio
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    Escribe &quot;Introduce tu peso en kg: &quot;
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    Lee peso
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    Escribe &quot;Introduce tu estatura en metros: &quot;
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    Lee estatura
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>    imc = peso / (estatura * estatura)  // Cálculo del IMC
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>    Escribe &quot;Tu índice de masa corporal es: &quot; + imc
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se solicitan al usuario su peso y altura.
@@ -4522,17 +4653,17 @@ Este programa calcula el índice de masa corporal (IMC) usando la fórmula:</p>
 <p><strong>Descripción</strong>:
 Este programa pide al usuario dos números enteros y muestra el cociente y el resto de la división entera entre ambos números.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Inicio
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    Escribe &quot;Introduce el primer número: &quot;
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    Lee n
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    Escribe &quot;Introduce el segundo número: &quot;
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    Lee m
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    cociente = n // m  // División entera
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    resto = n % m  // Resto de la división
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    Escribe &quot;La división de &quot; + n + &quot; entre &quot; + m + &quot; da un cociente de &quot; + cociente + &quot; y un resto de &quot; + resto
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Inicio
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    Escribe &quot;Introduce el primer número: &quot;
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    Lee n
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    Escribe &quot;Introduce el segundo número: &quot;
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    Lee m
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>    cociente = n // m  // División entera
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>    resto = n % m  // Resto de la división
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>    Escribe &quot;La división de &quot; + n + &quot; entre &quot; + m + &quot; da un cociente de &quot; + cociente + &quot; y un resto de &quot; + resto
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se leen dos números enteros.
@@ -4544,16 +4675,16 @@ Este programa pide al usuario dos números enteros y muestra el cociente y el re
 <p><strong>Descripción</strong>:
 Este programa calcula el peso total de un pedido de payasos y muñecas. Cada payaso pesa 112 g y cada muñeca pesa 75 g.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Inicio
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    Escribe &quot;Introduce el número de payasos vendidos: &quot;
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    Lee payasos
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    Escribe &quot;Introduce el número de muñecas vendidas: &quot;
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    Lee muñecas
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    peso_total = (payasos * 112) + (muñecas * 75)  // Cálculo del peso total
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    Escribe &quot;El peso total del paquete es: &quot; + peso_total + &quot; gramos&quot;
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Inicio
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    Escribe &quot;Introduce el número de payasos vendidos: &quot;
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    Lee payasos
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    Escribe &quot;Introduce el número de muñecas vendidas: &quot;
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    Lee muñecas
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>    peso_total = (payasos * 112) + (muñecas * 75)  // Cálculo del peso total
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>    Escribe &quot;El peso total del paquete es: &quot; + peso_total + &quot; gramos&quot;
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se solicitan la cantidad de payasos y muñecas vendidas.
@@ -4564,19 +4695,19 @@ Este programa calcula el peso total de un pedido de payasos y muñecas. Cada pay
 <p><strong>Descripción</strong>:
 Este programa calcula el crecimiento de los ahorros de una cuenta bancaria durante tres años con un interés anual del 4%.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Inicio
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    Escribe &quot;Introduce la cantidad depositada en la cuenta de ahorros: &quot;
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    Lee capital
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    interes = 0.04
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>    ahorro_ano1 = capital * (1 + interes)
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>    ahorro_ano2 = ahorro_ano1 * (1 + interes)
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>    ahorro_ano3 = ahorro_ano2 * (1 + interes)
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>    Escribe &quot;Ahorros tras el primer año: &quot; + ahorro_ano1
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>    Escribe &quot;Ahorros tras el segundo año: &quot; + ahorro_ano2
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>    Escribe &quot;Ahorros tras el tercer año: &quot; + ahorro_ano3
-<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Inicio
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    Escribe &quot;Introduce la cantidad depositada en la cuenta de ahorros: &quot;
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    Lee capital
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    interes = 0.04
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    ahorro_ano1 = capital * (1 + interes)
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    ahorro_ano2 = ahorro_ano1 * (1 + interes)
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    ahorro_ano3 = ahorro_ano2 * (1 + interes)
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>    Escribe &quot;Ahorros tras el primer año: &quot; + ahorro_ano1
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>    Escribe &quot;Ahorros tras el segundo año: &quot; + ahorro_ano2
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>    Escribe &quot;Ahorros tras el tercer año: &quot; + ahorro_ano3
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se introduce el capital inicial y se establece un interés del 4%.
@@ -4587,20 +4718,20 @@ Este programa calcula el crecimiento de los ahorros de una cuenta bancaria duran
 <p><strong>Descripción</strong>:
 Este programa calcula el precio de barras de pan no frescas, que tienen un descuento del 60%. El precio normal de una barra es de 3.49€, y el programa calcula el precio final con descuento.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Inicio
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    precio_normal = 3.49  // Precio de una barra de pan
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    descuento = 0.60  // Descuento por no ser fresca
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    Escribe &quot;Introduce el número de barras no frescas vendidas: &quot;
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    Lee barras_no_frescas
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>    precio_descuento = precio_normal * (1 - descuento)
-<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>    coste_total = precio_descuento * barras_no_frescas
-<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>
-<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>    Escribe &quot;Precio habitual de una barra de pan: &quot; + precio_normal + &quot;€&quot;
-<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>    Escribe &quot;Descuento aplicado: &quot; + (descuento * 100) + &quot;%&quot;
-<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>    Escribe &quot;Coste total por las barras no frescas: &quot; + coste_total + &quot;€&quot;
-<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Inicio
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    precio_normal = 3.49  // Precio de una barra de pan
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    descuento = 0.60  // Descuento por no ser fresca
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    Escribe &quot;Introduce el número de barras no frescas vendidas: &quot;
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    Lee barras_no_frescas
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>    precio_descuento = precio_normal * (1 - descuento)
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>    coste_total = precio_descuento * barras_no_frescas
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>    Escribe &quot;Precio habitual de una barra de pan: &quot; + precio_normal + &quot;€&quot;
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>    Escribe &quot;Descuento aplicado: &quot; + (descuento * 100) + &quot;%&quot;
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>    Escribe &quot;Coste total por las barras no frescas: &quot; + coste_total + &quot;€&quot;
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se fija el precio normal de una barra de pan (3.49€) y el descuento (60%).
@@ -4612,15 +4743,15 @@ Este programa calcula el precio de barras de pan no frescas, que tienen un descu
 <p><strong>Descripción</strong>:
 El programa solicita el nombre del usuario y un número entero. Luego imprime el nombre tantas veces como el número indicado, en líneas separadas.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Inicio
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    Escribe &quot;Introduce tu nombre: &quot;
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    Lee nombre
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    Escribe &quot;Introduce un número entero: &quot;
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    Lee n
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
-<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>    Para i en (1...n) hacer
-<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>        Escribe nombre
-<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Inicio
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    Escribe &quot;Introduce tu nombre: &quot;
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    Lee nombre
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    Escribe &quot;Introduce un número entero: &quot;
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>    Lee n
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>    Para i en (1...n) hacer
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>        Escribe nombre
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se solicita al usuario su nombre y un número entero.
@@ -4631,14 +4762,14 @@ El programa solicita el nombre del usuario y un número entero. Luego imprime el
 <p><strong>Descripción</strong>:
 Este programa solicita el nombre completo del usuario y lo muestra de tres formas diferentes: todo en minúsculas, todo en mayúsculas y con la primera letra de cada palabra en mayúscula.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Inicio
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    Escribe &quot;Introduce tu nombre completo: &quot;
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    Lee nombre_completo
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    Escribe &quot;En minúsculas: &quot; + minusculas(nombre_completo)
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    Escribe &quot;En mayúsculas: &quot; + mayusculas(nombre_completo)
-<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    Escribe &quot;Con mayúsculas iniciales: &quot; + capitalizar(nombre_completo)
-<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Inicio
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    Escribe &quot;Introduce tu nombre completo: &quot;
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    Lee nombre_completo
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>    Escribe &quot;En minúsculas: &quot; + minusculas(nombre_completo)
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    Escribe &quot;En mayúsculas: &quot; + mayusculas(nombre_completo)
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>    Escribe &quot;Con mayúsculas iniciales: &quot; + capitalizar(nombre_completo)
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se lee el nombre completo del usuario.
@@ -4652,15 +4783,15 @@ Este programa solicita el nombre completo del usuario y lo muestra de tres forma
 <p><strong>Descripción</strong>:
 El programa solicita el nombre del usuario, lo convierte a mayúsculas y luego cuenta cuántas letras tiene.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Inicio
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    Escribe &quot;Introduce tu nombre: &quot;
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    Lee nombre
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    nombre_mayusculas = mayusculas(nombre)
-<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    num_letras = longitud(nombre)
-<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>
-<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>    Escribe nombre_mayusculas + &quot; tiene &quot; + num_letras + &quot; letras.&quot;
-<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Inicio
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    Escribe &quot;Introduce tu nombre: &quot;
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    Lee nombre
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>    nombre_mayusculas = mayusculas(nombre)
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>    num_letras = longitud(nombre)
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>    Escribe nombre_mayusculas + &quot; tiene &quot; + num_letras + &quot; letras.&quot;
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se solicita el nombre del usuario.
@@ -4672,14 +4803,14 @@ El programa solicita el nombre del usuario, lo convierte a mayúsculas y luego c
 <p><strong>Descripción</strong>:
 El programa solicita un número de teléfono en formato <code>+34-número-extensión</code> y luego muestra el número de teléfono sin el prefijo ni la extensión.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Inicio
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    Escribe &quot;Introduce el número de teléfono (formato: +34-número-extensión): &quot;
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    Lee telefono
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
-<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>    partes = dividir(telefono, &quot;-&quot;)  // Separa el prefijo, número y extensión
-<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>
-<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>    Escribe &quot;El número sin prefijo ni extensión es: &quot; + partes[1]  // Muestra solo la parte central
-<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Inicio
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    Escribe &quot;Introduce el número de teléfono (formato: +34-número-extensión): &quot;
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>    Lee telefono
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>    partes = dividir(telefono, &quot;-&quot;)  // Separa el prefijo, número y extensión
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>    Escribe &quot;El número sin prefijo ni extensión es: &quot; + partes[1]  // Muestra solo la parte central
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. El programa solicita un número de teléfono en formato con prefijo y extensión.
@@ -4690,14 +4821,14 @@ El programa solicita un número de teléfono en formato <code>+34-número-extens
 <p><strong>Descripción</strong>:
 El programa solicita una frase y muestra la frase invertida.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Inicio
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    Escribe &quot;Introduce una frase: &quot;
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    Lee frase
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
-<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>    frase_invertida = invertir(frase)  // Invierte la cadena de caracteres
-<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
-<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>    Escribe &quot;La frase invertida es: &quot; + frase_invertida
-<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Inicio
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>    Escribe &quot;Introduce una frase: &quot;
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>    Lee frase
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>    frase_invertida = invertir(frase)  // Invierte la cadena de caracteres
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>    Escribe &quot;La frase invertida es: &quot; + frase_invertida
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. El programa solicita una frase al usuario.
@@ -4708,16 +4839,16 @@ El programa solicita una frase y muestra la frase invertida.</p>
 <p><strong>Descripción</strong>:
 Este programa solicita una frase y una vocal, luego reemplaza todas las ocurrencias de la vocal en la frase con su versión en mayúsculas.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Inicio
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    Escribe &quot;Introduce una frase: &quot;
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    Lee frase
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>    Escribe &quot;Introduce una vocal: &quot;
-<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>    Lee vocal
-<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
-<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>    frase_modificada = reemplazar(frase, vocal, mayusculas(vocal))  // Reemplaza la vocal por mayúsculas
-<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>
-<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>    Escribe &quot;La frase modificada es: &quot; + frase_modificada
-<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Inicio
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    Escribe &quot;Introduce una frase: &quot;
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    Lee frase
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>    Escribe &quot;Introduce una vocal: &quot;
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>    Lee vocal
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>    frase_modificada = reemplazar(frase, vocal, mayusculas(vocal))  // Reemplaza la vocal por mayúsculas
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>    Escribe &quot;La frase modificada es: &quot; + frase_modificada
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. El programa solicita una frase y una vocal.
@@ -4728,15 +4859,15 @@ Este programa solicita una frase y una vocal, luego reemplaza todas las ocurrenc
 <p><strong>Descripción</strong>:
 Este programa solicita un correo electrónico y cambia su dominio por <code>ceu.es</code>.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Inicio
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    Escribe &quot;Introduce tu correo electrónico: &quot;
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>    Lee correo
-<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
-<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>    partes = dividir(correo, &quot;@&quot;)  // Separa el nombre y el dominio
-<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>    nuevo_correo = partes[0] + &quot;@ceu.es&quot;
-<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>
-<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>    Escribe &quot;Tu nuevo correo es: &quot; + nuevo_correo
-<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Inicio
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>    Escribe &quot;Introduce tu correo electrónico: &quot;
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>    Lee correo
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>    partes = dividir(correo, &quot;@&quot;)  // Separa el nombre y el dominio
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>    nuevo_correo = partes[0] + &quot;@ceu.es&quot;
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>    Escribe &quot;Tu nuevo correo es: &quot; + nuevo_correo
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. El programa solicita el correo electrónico del usuario.
@@ -4747,15 +4878,15 @@ Este programa solicita un correo electrónico y cambia su dominio por <code>ceu.
 <p><strong>Descripción</strong>:
 El programa solicita el precio de un producto con dos decimales y separa la parte de los euros y los céntimos.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Inicio
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>    Escribe &quot;Introduce el precio del producto (con dos decimales): &quot;
-<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>    Lee precio
-<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
-<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>    euros = parte_entera(precio)
-<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>    centimos = (precio * 100) % 100  // Extrae los céntimos
-<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>
-<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>    Escribe &quot;Euros: &quot; + euros + &quot;, Céntimos: &quot; + centimos
-<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Inicio
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    Escribe &quot;Introduce el precio del producto (con dos decimales): &quot;
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>    Lee precio
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>    euros = parte_entera(precio)
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>    centimos = (precio * 100) % 100  // Extrae los céntimos
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>    Escribe &quot;Euros: &quot; + euros + &quot;, Céntimos: &quot; + centimos
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se solicita el precio del producto.
@@ -4767,18 +4898,18 @@ El programa solicita el precio de un producto con dos decimales y separa la part
 <p><strong>Descripción</strong>:
 El programa solicita una fecha de nacimiento en formato <code>dd/mm/aaaa</code> y muestra el día, mes y año por separado.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Inicio
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    Escribe &quot;Introduce tu fecha de nacimiento (dd/mm/aaaa): &quot;
-<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    Lee fecha
-<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
-<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>    partes = dividir(fecha, &quot;/&quot;)
-<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>
-<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>    Escribe &quot;Día: &quot; + partes[0]
-<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>    Es
-<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>
-<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>cribe &quot;Mes: &quot; + partes[1]
-<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>    Escribe &quot;Año: &quot; + partes[2]
-<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>Inicio
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>    Escribe &quot;Introduce tu fecha de nacimiento (dd/mm/aaaa): &quot;
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>    Lee fecha
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>    partes = dividir(fecha, &quot;/&quot;)
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>    Escribe &quot;Día: &quot; + partes[0]
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>    Es
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a>cribe &quot;Mes: &quot; + partes[1]
+<a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a>    Escribe &quot;Año: &quot; + partes[2]
+<a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. El programa solicita la fecha de nacimiento.
@@ -4789,15 +4920,15 @@ El programa solicita una fecha de nacimiento en formato <code>dd/mm/aaaa</code> 
 <p><strong>Descripción</strong>:
 Este programa solicita al usuario una lista de productos separados por comas y luego muestra cada producto en una línea distinta.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Inicio
-<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>    Escribe &quot;Introduce los productos de la cesta de la compra separados por comas: &quot;
-<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>    Lee productos
-<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>
-<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>    lista_productos = dividir(productos, &quot;,&quot;)  // Divide la cadena de productos en una lista
-<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>
-<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>    Para cada producto en lista_productos hacer
-<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>        Escribe producto
-<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Inicio
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>    Escribe &quot;Introduce los productos de la cesta de la compra separados por comas: &quot;
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>    Lee productos
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>    lista_productos = dividir(productos, &quot;,&quot;)  // Divide la cadena de productos en una lista
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>    Para cada producto en lista_productos hacer
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>        Escribe producto
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se solicita al usuario que introduzca una lista de productos separados por comas.
@@ -4808,22 +4939,22 @@ Este programa solicita al usuario una lista de productos separados por comas y l
 <p><strong>Descripción</strong>:
 El programa solicita el nombre de un producto, su precio unitario y el número de unidades, y luego muestra un formato específico con estos datos.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Inicio
-<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    Escribe &quot;Introduce el nombre del producto: &quot;
-<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>    Lee nombre_producto
-<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>    Escribe &quot;Introduce el precio unitario del producto: &quot;
-<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>    Lee precio
-<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>    Escribe &quot;Introduce el número de unidades: &quot;
-<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>    Lee unidades
-<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>
-<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>    coste_total = precio * unidades
-<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>
-<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>    // Mostrar el formato solicitado
-<a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>    Escribe &quot;Producto: &quot; + nombre_producto
-<a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>    Escribe &quot;Precio unitario: &quot; + formatear(precio, 6, 2)  // Formato de 6 dígitos enteros y 2 decimales
-<a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a>    Escribe &quot;Unidades: &quot; + formatear(unidades, 3)  // Formato de 3 dígitos enteros
-<a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a>    Escribe &quot;Coste total: &quot; + formatear(coste_total, 8, 2)  // Formato de 8 dígitos enteros y 2 decimales
-<a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Inicio
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>    Escribe &quot;Introduce el nombre del producto: &quot;
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>    Lee nombre_producto
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>    Escribe &quot;Introduce el precio unitario del producto: &quot;
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>    Lee precio
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>    Escribe &quot;Introduce el número de unidades: &quot;
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>    Lee unidades
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>    coste_total = precio * unidades
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>    // Mostrar el formato solicitado
+<a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a>    Escribe &quot;Producto: &quot; + nombre_producto
+<a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a>    Escribe &quot;Precio unitario: &quot; + formatear(precio, 6, 2)  // Formato de 6 dígitos enteros y 2 decimales
+<a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a>    Escribe &quot;Unidades: &quot; + formatear(unidades, 3)  // Formato de 3 dígitos enteros
+<a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a>    Escribe &quot;Coste total: &quot; + formatear(coste_total, 8, 2)  // Formato de 8 dígitos enteros y 2 decimales
+<a id="__codelineno-28-16" name="__codelineno-28-16" href="#__codelineno-28-16"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se solicitan el nombre del producto, su precio unitario y la cantidad de unidades.
@@ -4844,20 +4975,20 @@ s = \frac{a + b + c}{2}
 \text{Área} = \sqrt{s(s - a)(s - b)(s - c)}
 \]</div>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>Inicio
-<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>    Escribe &quot;Introduce la longitud del primer lado: &quot;
-<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>    Lee a
-<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>    Escribe &quot;Introduce la longitud del segundo lado: &quot;
-<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>    Lee b
-<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>    Escribe &quot;Introduce la longitud del tercer lado: &quot;
-<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>    Lee c
-<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>
-<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>    s = (a + b + c) / 2  // Semiperímetro
-<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a>
-<a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a>    area = raiz(s * (s - a) * (s - b) * (s - c))  // Cálculo del área usando la fórmula de Herón
-<a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a>
-<a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a>    Escribe &quot;El área del triángulo es: &quot; + area
-<a id="__codelineno-26-14" name="__codelineno-26-14" href="#__codelineno-26-14"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>Inicio
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>    Escribe &quot;Introduce la longitud del primer lado: &quot;
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>    Lee a
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>    Escribe &quot;Introduce la longitud del segundo lado: &quot;
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>    Lee b
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>    Escribe &quot;Introduce la longitud del tercer lado: &quot;
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>    Lee c
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>    s = (a + b + c) / 2  // Semiperímetro
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>    area = raiz(s * (s - a) * (s - b) * (s - c))  // Cálculo del área usando la fórmula de Herón
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>
+<a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a>    Escribe &quot;El área del triángulo es: &quot; + area
+<a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. El programa solicita las longitudes de los tres lados del triángulo.
@@ -4869,16 +5000,16 @@ s = \frac{a + b + c}{2}
 <p><strong>Descripción</strong>:
 Este programa solicita dos números y genera un número aleatorio entre esos dos valores.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Inicio
-<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>    Escribe &quot;Introduce el valor mínimo: &quot;
-<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>    Lee min
-<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>    Escribe &quot;Introduce el valor máximo: &quot;
-<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>    Lee max
-<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>
-<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>    aleatorio = generar_aleatorio(min, max)  // Función que genera un número aleatorio entre min y max
-<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>
-<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>    Escribe &quot;El número aleatorio generado es: &quot; + aleatorio
-<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Inicio
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>    Escribe &quot;Introduce el valor mínimo: &quot;
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>    Lee min
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>    Escribe &quot;Introduce el valor máximo: &quot;
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>    Lee max
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>    aleatorio = generar_aleatorio(min, max)  // Función que genera un número aleatorio entre min y max
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>    Escribe &quot;El número aleatorio generado es: &quot; + aleatorio
+<a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se solicitan los valores mínimo y máximo.
@@ -4889,28 +5020,28 @@ Este programa solicita dos números y genera un número aleatorio entre esos dos
 <p><strong>Descripción</strong>:
 Este programa solicita un número y determina si es primo o no. Un número es primo si solo es divisible entre 1 y él mismo.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Inicio
-<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>    Escribe &quot;Introduce un número entero: &quot;
-<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>    Lee num
-<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>
-<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>    es_primo = verdadero  // Asumimos que el número es primo al inicio
-<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>
-<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>    Si (num &lt;= 1) Entonces
-<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>        es_primo = falso
-<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>    Sino
-<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>        Para i en (2 ... num-1) hacer
-<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>            Si (num % i == 0) Entonces
-<a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a>                es_primo = falso
-<a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a>                Romper  // Salir del bucle si encontramos un divisor
-<a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a>            FinSi
-<a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a>        FinPara
-<a id="__codelineno-28-16" name="__codelineno-28-16" href="#__codelineno-28-16"></a>    FinSi
-<a id="__codelineno-28-17" name="__codelineno-28-17" href="#__codelineno-28-17"></a>
-<a id="__codelineno-28-18" name="__codelineno-28-18" href="#__codelineno-28-18"></a>    Si (es_primo) Entonces
-<a id="__codelineno-28-19" name="__codelineno-28-19" href="#__codelineno-28-19"></a>        Escribe num + &quot; es un número primo.&quot;
-<a id="__codelineno-28-20" name="__codelineno-28-20" href="#__codelineno-28-20"></a>    Sino
-<a id="__codelineno-28-21" name="__codelineno-28-21" href="#__codelineno-28-21"></a>        Escribe num + &quot; no es un número primo.&quot;
-<a id="__codelineno-28-22" name="__codelineno-28-22" href="#__codelineno-28-22"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>Inicio
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>    Escribe &quot;Introduce un número entero: &quot;
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>    Lee num
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>    es_primo = verdadero  // Asumimos que el número es primo al inicio
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>    Si (num &lt;= 1) Entonces
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>        es_primo = falso
+<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>    Sino
+<a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a>        Para i en (2 ... num-1) hacer
+<a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a>            Si (num % i == 0) Entonces
+<a id="__codelineno-31-12" name="__codelineno-31-12" href="#__codelineno-31-12"></a>                es_primo = falso
+<a id="__codelineno-31-13" name="__codelineno-31-13" href="#__codelineno-31-13"></a>                Romper  // Salir del bucle si encontramos un divisor
+<a id="__codelineno-31-14" name="__codelineno-31-14" href="#__codelineno-31-14"></a>            FinSi
+<a id="__codelineno-31-15" name="__codelineno-31-15" href="#__codelineno-31-15"></a>        FinPara
+<a id="__codelineno-31-16" name="__codelineno-31-16" href="#__codelineno-31-16"></a>    FinSi
+<a id="__codelineno-31-17" name="__codelineno-31-17" href="#__codelineno-31-17"></a>
+<a id="__codelineno-31-18" name="__codelineno-31-18" href="#__codelineno-31-18"></a>    Si (es_primo) Entonces
+<a id="__codelineno-31-19" name="__codelineno-31-19" href="#__codelineno-31-19"></a>        Escribe num + &quot; es un número primo.&quot;
+<a id="__codelineno-31-20" name="__codelineno-31-20" href="#__codelineno-31-20"></a>    Sino
+<a id="__codelineno-31-21" name="__codelineno-31-21" href="#__codelineno-31-21"></a>        Escribe num + &quot; no es un número primo.&quot;
+<a id="__codelineno-31-22" name="__codelineno-31-22" href="#__codelineno-31-22"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se solicita un número entero al usuario.
@@ -4923,18 +5054,18 @@ Este programa solicita un número y determina si es primo o no. Un número es pr
 <p><strong>Descripción</strong>:
 El programa solicita un número entero y muestra todos sus divisores.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>Inicio
-<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>    Escribe &quot;Introduce un número entero: &quot;
-<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>    Lee num
-<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>
-<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>    Escribe &quot;Los divisores de &quot; + num + &quot; son:&quot;
-<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>
-<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>    Para i en (1 ... num) hacer
-<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>        Si (num % i == 0) Entonces
-<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>            Escribe i  // Muestra el divisor
-<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>        FinSi
-<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>    FinPara
-<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>Inicio
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>    Escribe &quot;Introduce un número entero: &quot;
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>    Lee num
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>    Escribe &quot;Los divisores de &quot; + num + &quot; son:&quot;
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>    Para i en (1 ... num) hacer
+<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>        Si (num % i == 0) Entonces
+<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>            Escribe i  // Muestra el divisor
+<a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>        FinSi
+<a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a>    FinPara
+<a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. Se solicita un número entero al usuario.
@@ -4946,28 +5077,28 @@ El programa solicita un número entero y muestra todos sus divisores.</p>
 <p><strong>Descripción</strong>:
 El programa genera la serie de Fibonacci hasta un número dado por el usuario. La serie de Fibonacci comienza con 0 y 1, y cada número es la suma de los dos anteriores.</p>
 <p><strong>Pseudocódigo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Inicio
-<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>    Escribe &quot;Introduce el número de términos de la serie de Fibonacci: &quot;
-<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>    Lee n
-<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>
-<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>    a = 0
-<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>    b = 1
-<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>
-<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>    Si (n &gt;= 1) Entonces
-<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>        Escribe a  // Muestra el primer término
-<a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a>    FinSi
-<a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a>
-<a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a>    Si (n &gt;= 2) Entonces
-<a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a>        Escribe b  // Muestra el segundo término
-<a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a>    FinSi
-<a id="__codelineno-30-15" name="__codelineno-30-15" href="#__codelineno-30-15"></a>
-<a id="__codelineno-30-16" name="__codelineno-30-16" href="#__codelineno-30-16"></a>    Para i en (3 ... n) hacer
-<a id="__codelineno-30-17" name="__codelineno-30-17" href="#__codelineno-30-17"></a>        siguiente = a + b
-<a id="__codelineno-30-18" name="__codelineno-30-18" href="#__codelineno-30-18"></a>        Escribe siguiente
-<a id="__codelineno-30-19" name="__codelineno-30-19" href="#__codelineno-30-19"></a>        a = b  // Actualizamos los valores de a y b
-<a id="__codelineno-30-20" name="__codelineno-30-20" href="#__codelineno-30-20"></a>        b = siguiente
-<a id="__codelineno-30-21" name="__codelineno-30-21" href="#__codelineno-30-21"></a>    FinPara
-<a id="__codelineno-30-22" name="__codelineno-30-22" href="#__codelineno-30-22"></a>Fin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>Inicio
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>    Escribe &quot;Introduce el número de términos de la serie de Fibonacci: &quot;
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>    Lee n
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>    a = 0
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>    b = 1
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>
+<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>    Si (n &gt;= 1) Entonces
+<a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>        Escribe a  // Muestra el primer término
+<a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>    FinSi
+<a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a>
+<a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a>    Si (n &gt;= 2) Entonces
+<a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a>        Escribe b  // Muestra el segundo término
+<a id="__codelineno-33-14" name="__codelineno-33-14" href="#__codelineno-33-14"></a>    FinSi
+<a id="__codelineno-33-15" name="__codelineno-33-15" href="#__codelineno-33-15"></a>
+<a id="__codelineno-33-16" name="__codelineno-33-16" href="#__codelineno-33-16"></a>    Para i en (3 ... n) hacer
+<a id="__codelineno-33-17" name="__codelineno-33-17" href="#__codelineno-33-17"></a>        siguiente = a + b
+<a id="__codelineno-33-18" name="__codelineno-33-18" href="#__codelineno-33-18"></a>        Escribe siguiente
+<a id="__codelineno-33-19" name="__codelineno-33-19" href="#__codelineno-33-19"></a>        a = b  // Actualizamos los valores de a y b
+<a id="__codelineno-33-20" name="__codelineno-33-20" href="#__codelineno-33-20"></a>        b = siguiente
+<a id="__codelineno-33-21" name="__codelineno-33-21" href="#__codelineno-33-21"></a>    FinPara
+<a id="__codelineno-33-22" name="__codelineno-33-22" href="#__codelineno-33-22"></a>Fin
 </code></pre></div>
 <p><strong>Explicación</strong>:
 1. El programa solicita el número de términos de la serie de Fibonacci.

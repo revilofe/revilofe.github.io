@@ -139,9 +139,24 @@ En este ejemplo, si x es igual a cero o menor que cero, se generará una excepci
 5. A continuación, nos creamos la carpeta `tests` y dentro de ella un fichero con el nombre `test_main.py` *(Pytest va a reconocer por defecto todos los programas que comiencen por test_ cómo pruebas unitarias que debe realizar)*. El contenido será el siguiente:
 
     ```
-      from src.main import suma
-    
-      def test_suma():
+    from src.main import suma
+
+    def test_suma():
+        assert suma(1, 1) == 2
+        assert suma(0, 0) == 0
+        assert suma(100, -100) == 0
+    ```
+
+    Si os da problemas porque no encuentra los paquetes importados desde la prueba unitaria, agregamos manualmente el directorio raíz del proyecto a sys.path:
+
+    ```
+    import sys
+    import os
+
+    # Agregar el directorio raíz del proyecto (practica6) al sys.path
+    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+    def test_suma():
         assert suma(1, 1) == 2
         assert suma(0, 0) == 0
         assert suma(100, -100) == 0
@@ -153,7 +168,7 @@ En este ejemplo, si x es igual a cero o menor que cero, se generará una excepci
    - `assert` verifica que la expresión de la derecha es verdadera (true), sino generará una excepción.
    - Pytest capturará la excepción si se produce y la gestionará para mostrarnos los resultados.
 
-6. Vamos a ejecutar las pruebas unitarias desde la terminal:
+7. Vamos a ejecutar las pruebas unitarias desde la terminal:
 
     ```
     pytest
@@ -165,7 +180,7 @@ En este ejemplo, si x es igual a cero o menor que cero, se generará una excepci
     pytest -v
     ```
 
-7. Se pueden usar las marcas para realizar múltiples pruebas sobre un determinado método *(marca parametrize)*. En el mismo fichero `test_main.py` añadimos otra función:
+8. Se pueden usar las marcas para realizar múltiples pruebas sobre un determinado método *(marca parametrize)*. En el mismo fichero `test_main.py` añadimos otra función:
 
     ```
     import pytest
@@ -192,15 +207,15 @@ En este ejemplo, si x es igual a cero o menor que cero, se generará una excepci
     ```
     Necesitamos importar las librerías de pytest en nuestro fichero de pruebas con `import pytest`.
 
-8. Al volver a realizar el test obtendremos un resultado por cada tupla de parámetros probados:
+9. Al volver a realizar el test obtendremos un resultado por cada tupla de parámetros probados:
 
     ```
     pytest -v
     ```
 
-9. **Obliguemos a que se produzca un error**, por ejemplo modificando uno de los parámetros expected `(0, 0, 1)` y observemos lo que nos muestra pytest.
+10. **Obliguemos a que se produzca un error**, por ejemplo modificando uno de los parámetros expected `(0, 0, 1)` y observemos lo que nos muestra pytest.
 
-10. Pruébalo y vuelve a ejecutar los tests unitarios.
+11. Pruébalo y vuelve a ejecutar los tests unitarios.
 
 ### 5. Crea tu el test
 

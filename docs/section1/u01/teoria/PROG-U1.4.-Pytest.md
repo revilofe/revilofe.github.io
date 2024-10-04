@@ -89,13 +89,13 @@ pip list
 Adicionalmente, si en un momento determinado necesitamos recoger los módulos instalados, podemos captura los requerimientos a un archivo.
 
 ```bash
-pip freeze > “requirements.txt”
+pip freeze > requirements.txt
 ```
 
 Y posteriormente, reinstalar esos mismos módulos:
 
 ```bash
-pip install -r “requirements.txt”
+pip install -r requirements.txt
 ```
 
 La estructura creada en el nuevo entorno, tiene por defecto los directorios `bin` (ejecutables) y `lib` (paquetes instalados).

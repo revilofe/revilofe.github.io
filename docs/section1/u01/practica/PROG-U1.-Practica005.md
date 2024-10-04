@@ -26,117 +26,109 @@ Se trata de un entorno Python en el que el intérprete Python, las bibliotecas y
 
 ### 2. Pasos a seguir en la práctica
 
-1. Antes de nada, debemos abrir una carpeta en Visual Studio Code, donde vamos a trabajar con nuestros programas de Python.
+#### 2.1. Antes de nada, debemos abrir una carpeta en Visual Studio Code, donde vamos a trabajar con nuestros programas de Python. (por ejemplo en **~/Documentos/practica5**)
 
    Podemos hacerlo de varias formas:
   
-      - Desde una terminal de tu sistema operativo, navegando donde queramos crear el directorio y usando el comando `mkdir nombreCarpeta`. Posteriormente accederemos a la nueva carpeta *(`cd`)* creada y ejecutaremos el comando code .
+   * Desde una terminal de tu sistema operativo, navegando donde queramos crear el directorio y usando el comando `mkdir nombreCarpeta`. Posteriormente accederemos a la nueva carpeta *(`cd`)* creada y ejecutaremos el comando `code .`.
 
-      - A nivel gráfico, desde el `Explorador de archivos`, creando una carpeta y arrastrándola dentro de `Visual Studio Code`.
+   * A nivel gráfico, desde el `Explorador de archivos`, creando una carpeta y arrastrándola dentro de `Visual Studio Code`.
 
-      - También podemos hacerlo desde `Visual Studio Code`, en el menú `File -> Open Folder`, navegaremos a la carpeta o la crearemos, después simplemente pulsamos en el botón `Seleccionar carpeta`.
+   * También podemos hacerlo desde `Visual Studio Code`, en el menú `File -> Open Folder`, navegaremos a la carpeta o la crearemos, después simplemente pulsamos en el botón `Seleccionar carpeta`.
 
-2. A continuación abrimos la consola del IDE:
+#### 2.2. A continuación abrimos la consola dentro del IDE:
 
-	Teclas rápidas `Ctrl+ñ` o desde el menú `View -> Terminal`
+   Teclas rápidas `Ctrl+ñ` o desde el menú `View -> Terminal`
 
-3. Instalamos virtualenv con el siguiente comando:
+#### 2.3. Instalamos virtualenv con el siguiente comando:
 
-	```
- 
-	pip install virtualenv
- 
-	```
+   ```
+   pip install virtualenv
+   ```
 
-4. Para comprobar su versión:
+#### 2.4. Para comprobar su versión:
 
-	```
- 
-	virtualenv --version
- 
-	```
+   ```
+   virtualenv --version
+   ```
 	
-5. Creamos ahora un entorno virtual:
+#### 2.5. Creamos ahora un entorno virtual:
 
-	```
- 
-	python -m virtualenv venv
- 
- 	```
+   ```
+   python -m virtualenv venv
+   ```
 
-6. El entorno virtual crea físicamente una carpeta llamada venv, donde gestionará todas las librerías que instalemos.
+#### 2.6. El entorno virtual crea físicamente una carpeta llamada venv, donde gestionará todas las librerías que instalemos.
 
-7. Para utilizar el entorno virtual debemos activarlo:
+#### 2.7. Para utilizar el entorno virtual debemos activarlo:
 
-	```
- 
-	.\venv\Scripts\activate
- 
-	```
+   ```
+   .\venv\Scripts\activate
+   ```
 
-8. Si queremos comprobar los paquetes instalados en el entorno virtual ejecutamos el siguiente comando:
+   * Si se produce un error que indica que "la ejecución de scripts está deshabilitada en el sistema"... debéis abrir como **Administrador** `Windows PowerShell` y ejecutar el siguiente comando:
 
-	```
- 
-	pip list
- 
-	```
- 
-9. Para comprobar que tenemos la última versión de pip y actualizarla:
+   ```
+   Set-ExecutionPolicy RemoteSigned
+   ```
 
-	```
- 
-	python.exe -m pip install --upgrade pip
- 
-	```
+   * Este error ocurre porque, en PowerShell, la ejecución de scripts está deshabilitada por motivos de seguridad. Para solucionarlo, necesitas cambiar la política de ejecución para permitir la ejecución de scripts.
 
-10. Ya tenemos el entorno virtual preparado y activado para usarlo en nuestro proyecto. Vamos a instalar pytest, que nos van a ayudar a ejecutar las pruebas unitarias:
+   * El parámetro `RemoteSigned`: Permite ejecutar scripts locales **no firmados**, pero los scripts descargados de Internet necesitarán estar firmados.
 
-	```
- 
-	pip install pytest
- 
-	```
- 
-11. Podemos volver a revisar los paquetes instalados y vemos cómo nos ha instalado pytest y otros paquetes necesarios:
+   * Si en un futuro quiers volver a la configuración original, solo tienes que ejecutar el mismo comando con el parámetro `Restricted`:
 
-	```
+   ```
+   Set-ExecutionPolicy Restricted
+   ```
+
+#### 2.8. Si queremos comprobar los paquetes instalados en el entorno virtual ejecutamos el siguiente comando:
+
+   ```
+   pip list
+   ```
  
-	pip list
+#### 2.9. Para comprobar que tenemos la última versión de pip y actualizarla:
+
+   ```
+   python -m pip install --upgrade pip
+   ```
+
+#### 2.10. Ya tenemos el entorno virtual preparado y activado para usarlo en nuestro proyecto. Vamos a instalar pytest, que nos van a ayudar a ejecutar las pruebas unitarias:
+
+   ```
+   pip install pytest
+   ```
  
-	```
+#### 2.11. Podemos volver a revisar los paquetes instalados y vemos cómo nos ha instalado pytest y otros paquetes necesarios:
+
+   ```
+   pip list
+   ```
  	
-12. Para comprobar la versión que tenemos instalada de pytest:
+#### 2.12. Para comprobar la versión que tenemos instalada de pytest:
 
-	```
+   ```
+   pytest --version
+   ```
  
-	pytest --version
- 
-	```
- 
-13. Si necesitamos desactivar el entorno virtual
+#### 2.13. Si necesitamos desactivar el entorno virtual
 
-	```
+   ```
+   deactivate
+   ```
  
-	.\venv\Scripts\deactivate
- 
-	```
- 
-14. Para exportar los paquetes que tenemos instalados, por si los queremos instalarlos en otro entorno posteriormente:
+#### 2.14. Para exportar los paquetes que tenemos instalados, por si los queremos instalarlos en otro entorno posteriormente:
 
-	```
- 
-	pip freeze > requirements.txt
- 
-	```
+   ```
+   pip freeze > requirements.txt
+   ```
 
-15. Para importarlos en otro entorno virtual de otra carpeta o proyecto:
+#### 2.15. Para importarlos en otro entorno virtual de otra carpeta o proyecto:
 
-	```
- 
-	pip install -r requirements.txt
- 
-	```
+   ```
+   pip install -r requirements.txt
+   ```
  
 
 ## Fuentes:

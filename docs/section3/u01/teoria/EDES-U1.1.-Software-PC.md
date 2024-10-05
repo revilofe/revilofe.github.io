@@ -104,7 +104,6 @@ Vamos a imaginar un ejemplo práctico con un videojuego muy sencillo: **Tetris**
     - El **procesador** ejecuta esas instrucciones, mostrando las piezas en la **pantalla**.
     - Cuando pierdes, el **sistema operativo** se encarga de liberar la memoria y recursos que el juego estaba usando.
 
----
 
 ### 5. ¿Por Qué es Importante Entender Esta Relación?
 

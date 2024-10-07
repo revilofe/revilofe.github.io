@@ -20,6 +20,10 @@ toc_icon: "file-code"
 
 #hide:
 #  - footer
+
+# Enlace en el que trabajar:
+# https://revilofe.notion.site/Unidad-1-Fundamentos-del-Desarrollo-de-Software-Elementos-Herramientas-y-Lenguajes-e21494c5b49f478c8167ce2c08e9ceda?pvs=4
+
 ---
 
 ## **Unidad 1: Introducción al Desarrollo de Software**

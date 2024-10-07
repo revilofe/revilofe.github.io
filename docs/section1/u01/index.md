@@ -23,13 +23,13 @@ toc_icon: "file-code"
 
 ## **Unidad 1: Introducción al Desarrollo de Software**
 
-### **Normativa que Respalda la Unidad**
+### 1. Normativa que Respalda la Unidad
 
 Esta unidad está alineada con la normativa del curso **"Entornos de Desarrollo"** del ciclo formativo de **Desarrollo de Aplicaciones Web**, teniendo como base el **Resultado de Aprendizaje (RA) 1** y sus **Criterios de Evaluación (CE)**. El objetivo principal es que los estudiantes reconozcan y comprendan los elementos y herramientas esenciales que intervienen en el desarrollo de software, desde la planificación hasta la puesta en funcionamiento.
 
 ---
 
-### **Resultado de Aprendizaje a Trabajar**
+### 2. Resultado de Aprendizaje a Trabajar
 
 - **RA 1**: **Reconoce los elementos y herramientas que intervienen en el desarrollo de un programa informático**, analizando sus características y las fases en las que actúan hasta llegar a su puesta en funcionamiento.
 
@@ -37,7 +37,7 @@ Esta unidad está alineada con la normativa del curso **"Entornos de Desarrollo"
 
 ---
 
-### **Criterios de Evaluación**
+### 3. Criterios de Evaluación
 
 En esta unidad se trabajarán los siguientes **criterios de evaluación** relacionados con el **RA 1**:
 
@@ -63,7 +63,7 @@ En esta unidad se trabajarán los siguientes **criterios de evaluación** relaci
 
 ---
 
-### **Contenidos**
+### 4. Contenidos
 
 En esta sección se describen los contenidos que se impartirán en la Unidad 1, teniendo en cuenta la normativa del curso y los criterios de evaluación.
 
@@ -95,7 +95,7 @@ Durante la **Unidad 1**, trabajaremos los siguientes contenidos:
 
 ---
 
-### **Actividades de Evaluación**
+### 5. Actividades de Evaluación
 
 Para evaluar la adquisición de los criterios de evaluación, se propondrán las siguientes **actividades**:
 
@@ -121,9 +121,9 @@ Para evaluar la adquisición de los criterios de evaluación, se propondrán las
 
 ---
 
-### **Prueba de Evaluación de Contenidos**
+### 6. Prueba de Evaluación de Contenidos
 
-Al final de la unidad, se realizará una prueba escrita que incluirá preguntas teóricas y prácticas sobre los conceptos tratados. Los estudiantes deberán demostrar su comprensión de:
+Al final de la unidad, se realizará una pruebas  incluirán preguntas teóricas y prácticas sobre los conceptos tratados. Los estudiantes deberán demostrar su comprensión de:
 
 - La relación entre software y hardware.
 - La diferenciación entre tipos de código.

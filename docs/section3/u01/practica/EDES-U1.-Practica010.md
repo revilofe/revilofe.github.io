@@ -63,32 +63,32 @@ Compara un lenguaje **orientado a objetos** vs **funcional**.
 
 #### 4.4. Reflexión final
 4.4.1. ¿Qué lenguajes se sintieron más fáciles de usar? ¿Por qué?    
-4.4.2. ¿En qué casos es preferible usar un lenguaje compilado frente a uno interpretado?   
-4.4.3. ¿Cuándo es mejor usar un lenguaje de alto nivel en lugar de uno de bajo nivel?    
-4.4.4. ¿Cómo se siente trabajar con el paradigma orientado a objetos en comparación con el imperativo o funcional?     
+4.4.2. ¿En qué casos es preferible usar un lenguaje compilado frente a uno interpretado?      
+4.4.3. ¿Cuándo es mejor usar un lenguaje de alto nivel en lugar de uno de bajo nivel?        
+4.4.4. ¿Cómo se siente trabajar con el paradigma orientado a objetos en comparación con el imperativo o funcional?         
 
 
 ### 5. Herramientas de desarrollo
 
 #### 5.1. Primera parte
-Respecto a las proceso de creación de software identifica un conjunto de herramientas a usar.
-5.1.1. ¿Qué hace cada una de las herramientas? 
-5.1.2. ¿Qué tipo de tareas facilita?
-5.1.3. ¿Qué características ofrece que la hacen única o diferente de otras herramientas similares?
-5.1.4. Elige una ¿Cómo es la experiencia de usuario al usarla? ¿Es fácil o compleja?
-5.1.5. Elige una ¿En qué situaciones sería ideal utilizar esta herramienta?
-5.1.6. Elige una ¿Qué limitaciones encontraste en la herramienta?
+Respecto a las proceso de creación de software identifica un conjunto de herramientas a usar.    
+5.1.1. ¿Qué hace cada una de las herramientas?     
+5.1.2. ¿Qué tipo de tareas facilita?    
+5.1.3. ¿Qué características ofrece que la hacen única o diferente de otras herramientas similares?    
+5.1.4. Elige una ¿Cómo es la experiencia de usuario al usarla? ¿Es fácil o compleja?    
+5.1.5. Elige una ¿En qué situaciones sería ideal utilizar esta herramienta?    
+5.1.6. Elige una ¿Qué limitaciones encontraste en la herramienta?      
 
-#### 5.2. Segunda parte
-Céntrate en una herramienta dentro de la misma categoría y compárala con otras:
-5.2.1. ¿Qué herramienta se considera más útil y por qué?
-5.2.2. ¿Qué ventajas tiene una sobre la otra?
-5.2.3. ¿Cuál herramienta resultó ser la más intuitiva y por qué?
-5.2.4. ¿En qué casos se recomendaría usar un compilador en lugar de un intérprete?
-5.2.5. ¿Qué tipo de proyectos se beneficiarían más de un framework como Django?
+#### 5.2. Segunda parte   
+Céntrate en una herramienta dentro de la misma categoría y compárala con otras:    
+5.2.1. ¿Qué herramienta se considera más útil y por qué?    
+5.2.2. ¿Qué ventajas tiene una sobre la otra?    
+5.2.3. ¿Cuál herramienta resultó ser la más intuitiva y por qué?    
+5.2.4. ¿En qué casos se recomendaría usar un compilador en lugar de un intérprete?    
+5.2.5. ¿Qué tipo de proyectos se beneficiarían más de un framework como Django?     
 
 #### 5.3. Reflexión final
-Con base en la experiencia de evaluación de las herramientas:
-5.3.1. ¿Cómo crees que impacta la elección de la herramienta en la calidad del software?
-5.3.2. ¿Qué características buscarías en una herramienta para facilitar tu flujo de trabajo?
-5.3.3. ¿Cómo cambió tu percepción de estas herramientas después de haberlas probado y evaluado?
+Con base en la experiencia de evaluación de las herramientas:     
+5.3.1. ¿Cómo crees que impacta la elección de la herramienta en la calidad del software?    
+5.3.2. ¿Qué características buscarías en una herramienta para facilitar tu flujo de trabajo?    
+5.3.3. ¿Cómo cambió tu percepción de estas herramientas después de haberlas probado y evaluado?    

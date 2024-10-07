@@ -43,11 +43,11 @@ Hoy en día existen multitud de lenguajes de programación, donde cada uno de el
    
  - **Definición**: En estos lenguajes, el **código fuente** que escriben los programadores es **compilado** (traducido) a código máquina específico de una plataforma antes de ser ejecutado. Una vez compilado, se genera un archivo **ejecutable** que el procesador puede entender y ejecutar directamente.   
  - **Características**:   
-   - Más rápidos en tiempo de ejecución, ya que el código ya ha sido traducido a instrucciones máquina.   
-   - Necesitan ser recompilados para cada plataforma.   
+     - Más rápidos en tiempo de ejecución, ya que el código ya ha sido traducido a instrucciones máquina.   
+     - Necesitan ser recompilados para cada plataforma.   
  - **Ejemplos**: **C**, **C++**, **Go**, **Rust**.   
  - **Ejemplo**:   
-   - **C**: Cuando escribes un programa en C, como este:Debes compilarlo usando un compilador (como **GCC**), lo que genera un archivo ejecutable que el ordenador puede ejecutar directamente.    
+     - **C**: Cuando escribes un programa en C, como este:Debes compilarlo usando un compilador (como **GCC**), lo que genera un archivo ejecutable que el ordenador puede ejecutar directamente.    
 
      ```c
     
@@ -62,11 +62,11 @@ Hoy en día existen multitud de lenguajes de programación, donde cada uno de el
    
  - **Definición**: En estos lenguajes, el código fuente es **interpretado** por un programa llamado **intérprete**, que lo lee línea por línea y lo ejecuta al instante, sin necesidad de compilar todo el código antes.   
  - **Características**:   
-   - Son más lentos en tiempo de ejecución porque el código es traducido línea por línea en tiempo real.   
-   - Más flexibles y fáciles de probar, ya que no es necesario compilar.   
+     - Son más lentos en tiempo de ejecución porque el código es traducido línea por línea en tiempo real.   
+     - Más flexibles y fáciles de probar, ya que no es necesario compilar.   
  - **Ejemplos**: **Python**, **JavaScript**, **Ruby**, **PHP**.   
  - **Ejemplo**:   
-   - **Python**: En Python, puedes escribir un programa como este:Y ejecutarlo directamente con el intérprete de Python sin necesidad de compilarlo.   
+     - **Python**: En Python, puedes escribir un programa como este:Y ejecutarlo directamente con el intérprete de Python sin necesidad de compilarlo.   
 
      ```python
     
@@ -80,9 +80,9 @@ Hoy en día existen multitud de lenguajes de programación, donde cada uno de el
 ##### 2.2.1. Lenguajes de Alto Nivel   
     
  - **Definición**: Son lenguajes diseñados para ser fáciles de entender por los humanos. Son más abstractos y ofrecen muchas funcionalidades que ayudan a los desarrolladores, como la gestión de memoria automática.  
- - **Características**:  
-   - Más fáciles de escribir y entender, ya que se acercan al lenguaje humano.  
-   - Menos control sobre los detalles de bajo nivel del hardware.  
+ - **Características**:    
+     - Más fáciles de escribir y entender, ya que se acercan al lenguaje humano.  
+     - Menos control sobre los detalles de bajo nivel del hardware.  
  - **Ejemplos**: **Python**, **Java**, **C#**, **JavaScript**.  
  - **Ejemplo**:  
      - En Python, sumar dos números es tan simple como:  
@@ -100,8 +100,8 @@ Hoy en día existen multitud de lenguajes de programación, donde cada uno de el
     
  - **Definición**: Son lenguajes que están más cerca del **lenguaje de máquina**. Proporcionan un control directo sobre el hardware, como la memoria y los registros del procesador.   
  - **Características**:   
-   - Ofrecen mucho control y eficiencia, pero son más difíciles de escribir y entender.   
-   - Se utilizan cuando se necesita alto rendimiento o acceso directo a los recursos del sistema.    
+     - Ofrecen mucho control y eficiencia, pero son más difíciles de escribir y entender.   
+     - Se utilizan cuando se necesita alto rendimiento o acceso directo a los recursos del sistema.    
  - **Ejemplos**: **Assembly**, **C**.    
  - **Ejemplo**:   
      - Un código en **Assembly** puede verse así:   
@@ -122,7 +122,7 @@ Hoy en día existen multitud de lenguajes de programación, donde cada uno de el
  - **Definición**: En estos lenguajes, el programador da instrucciones detalladas sobre **cómo** el programa debe ejecutar las tareas. Se enfoca en el **estado** del programa y cómo cambia.   
  - **Ejemplos**: **C**, **C++**, **java, kotlin**,**Python** (puede ser usado en estilo imperativo).    
  - **Ejemplo**:    
-   - Un programa en C que calcula la suma de dos números es imperativo porque especifica los pasos exactos:    
+     - Un programa en C que calcula la suma de dos números es imperativo porque especifica los pasos exactos:    
 
      ```c
     
@@ -137,7 +137,7 @@ Hoy en día existen multitud de lenguajes de programación, donde cada uno de el
  - **Definición**: Se basan en la idea de que las funciones son unidades fundamentales de programación. En lugar de dar instrucciones sobre cómo cambiar el estado, las funciones toman entradas y producen salidas sin cambiar el estado del programa.    
  - **Ejemplos**: **Haskell**, **Lisp**, **Erlang**, **Scala** (también puede ser usado como orientado a objetos).    
  - **Ejemplo**:    
-   - En Haskell, la suma de dos números se define de manera funcional:    
+     - En Haskell, la suma de dos números se define de manera funcional:    
 
      ```haskell
     
@@ -151,7 +151,7 @@ Hoy en día existen multitud de lenguajes de programación, donde cada uno de el
  - **Definición**: Estos lenguajes organizan el código en **objetos**, que son instancias de **clases**. Los objetos encapsulan datos y comportamientos. Es útil cuando se desea modelar elementos del mundo real dentro del software.    
  - **Ejemplos**: **Java**, **C#**, **Python** (puede ser usado en estilo orientado a objetos).    
  - **Ejemplo**:    
-   - En **Java**, puedes crear una clase y un objeto:    
+     - En **Java**, puedes crear una clase y un objeto:    
 
      ```java
     
@@ -182,31 +182,31 @@ Aquí describimos algunas de las características de los lenguajes más populare
 
 - **Python**:
        
-   - **Nivel**: Alto nivel.
-   - **Modo de ejecución**: Interpretado.
-   - **Paradigma**: Soporta múltiples paradigmas (imperativo, orientado a objetos, funcional).
-   - **Características**: Muy fácil de leer y escribir, excelente para principiantes. Usado en ciencia de datos, automatización, desarrollo web.
+     - **Nivel**: Alto nivel.
+     - **Modo de ejecución**: Interpretado.
+     - **Paradigma**: Soporta múltiples paradigmas (imperativo, orientado a objetos, funcional).
+     - **Características**: Muy fácil de leer y escribir, excelente para principiantes. Usado en ciencia de datos, automatización, desarrollo web.
 
 - **Java**:
       
-   - **Nivel**: Alto nivel.
-   - **Modo de ejecución**: Compilado a **bytecode** y ejecutado en la JVM.
-   - **Paradigma**: Orientado a objetos.
-   - **Características**: Portátil gracias a la JVM, ampliamente utilizado en desarrollo empresarial, aplicaciones móviles (Android) y sistemas backend.
+     - **Nivel**: Alto nivel.
+     - **Modo de ejecución**: Compilado a **bytecode** y ejecutado en la JVM.
+     - **Paradigma**: Orientado a objetos.
+     - **Características**: Portátil gracias a la JVM, ampliamente utilizado en desarrollo empresarial, aplicaciones móviles (Android) y sistemas backend.
 
 - **C**:
     
-   - **Nivel**: Bajo nivel.
-   - **Modo de ejecución**: Compilado.
-   - **Paradigma**: Imperativo.
-   - **Características**: Rápido y eficiente, permite un control detallado del hardware. Utilizado para desarrollo de sistemas operativos, controladores y aplicaciones que requieren alto rendimiento.
+     - **Nivel**: Bajo nivel.
+     - **Modo de ejecución**: Compilado.
+     - **Paradigma**: Imperativo.
+     - **Características**: Rápido y eficiente, permite un control detallado del hardware. Utilizado para desarrollo de sistemas operativos, controladores y aplicaciones que requieren alto rendimiento.
     
 - **JavaScript**:
     
-   - **Nivel**: Alto nivel.
-   - **Modo de ejecución**: Interpretado.
-   - **Paradigma**: Imperativo y orientado a objetos.
-   - **Características**: El lenguaje de la web, utilizado para hacer páginas interactivas. También se utiliza en desarrollo backend con Node.js.
+     - **Nivel**: Alto nivel.
+     - **Modo de ejecución**: Interpretado.
+     - **Paradigma**: Imperativo y orientado a objetos.
+     - **Características**: El lenguaje de la web, utilizado para hacer páginas interactivas. También se utiliza en desarrollo backend con Node.js.
 
 
 ### 4. Elementos del lenguaje de programación

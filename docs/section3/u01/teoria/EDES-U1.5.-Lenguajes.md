@@ -181,25 +181,32 @@ Hoy en día existen multitud de lenguajes de programación, donde cada uno de el
 Aquí describimos algunas de las características de los lenguajes más populares hoy en día:
 
 - **Python**:
-  - **Nivel**: Alto nivel.
-  - **Modo de ejecución**: Interpretado.
-  - **Paradigma**: Soporta múltiples paradigmas (imperativo, orientado a objetos, funcional).
-  - **Características**: Muy fácil de leer y escribir, excelente para principiantes. Usado en ciencia de datos, automatización, desarrollo web.
+       
+   - **Nivel**: Alto nivel.
+   - **Modo de ejecución**: Interpretado.
+   - **Paradigma**: Soporta múltiples paradigmas (imperativo, orientado a objetos, funcional).
+   - **Características**: Muy fácil de leer y escribir, excelente para principiantes. Usado en ciencia de datos, automatización, desarrollo web.
+
 - **Java**:
-  - **Nivel**: Alto nivel.
-  - **Modo de ejecución**: Compilado a **bytecode** y ejecutado en la JVM.
-  - **Paradigma**: Orientado a objetos.
-  - **Características**: Portátil gracias a la JVM, ampliamente utilizado en desarrollo empresarial, aplicaciones móviles (Android) y sistemas backend.
+      
+   - **Nivel**: Alto nivel.
+   - **Modo de ejecución**: Compilado a **bytecode** y ejecutado en la JVM.
+   - **Paradigma**: Orientado a objetos.
+   - **Características**: Portátil gracias a la JVM, ampliamente utilizado en desarrollo empresarial, aplicaciones móviles (Android) y sistemas backend.
+
 - **C**:
-  - **Nivel**: Bajo nivel.
-  - **Modo de ejecución**: Compilado.
-  - **Paradigma**: Imperativo.
-  - **Características**: Rápido y eficiente, permite un control detallado del hardware. Utilizado para desarrollo de sistemas operativos, controladores y aplicaciones que requieren alto rendimiento.
+    
+   - **Nivel**: Bajo nivel.
+   - **Modo de ejecución**: Compilado.
+   - **Paradigma**: Imperativo.
+   - **Características**: Rápido y eficiente, permite un control detallado del hardware. Utilizado para desarrollo de sistemas operativos, controladores y aplicaciones que requieren alto rendimiento.
+    
 - **JavaScript**:
-  - **Nivel**: Alto nivel.
-  - **Modo de ejecución**: Interpretado.
-  - **Paradigma**: Imperativo y orientado a objetos.
-  - **Características**: El lenguaje de la web, utilizado para hacer páginas interactivas. También se utiliza en desarrollo backend con Node.js.
+    
+   - **Nivel**: Alto nivel.
+   - **Modo de ejecución**: Interpretado.
+   - **Paradigma**: Imperativo y orientado a objetos.
+   - **Características**: El lenguaje de la web, utilizado para hacer páginas interactivas. También se utiliza en desarrollo backend con Node.js.
 
 
 ### 4. Elementos del lenguaje de programación

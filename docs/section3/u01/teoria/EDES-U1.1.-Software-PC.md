@@ -22,7 +22,11 @@ Imagina que un ordenador es como una cocina muy moderna. Los **componentes físi
 
 Para que un ordenador pueda "cocinar" (o ejecutar un programa), el software necesita comunicarse con el hardware, siguiendo unos pasos muy específicos.  Al igual que una receta no tiene sentido sin alguien que la cocina, y alguien que cocina no tiene sentido sin receta. El hardware y el software se necesitan uno al otro.
 
-![](assets/EDES-U1.1.png)
+<figure markdown>
+  ![](assets/EDES-U1.1.png)
+  <figcaption>Hardware y software</figcaption>
+</figure>
+
 
 Un pc, portátil o dispositivo móvil, como teléfono móvil o tablet, está compuesto principalmente por un hardware y un software. A continuación, vamos a ver que es el hardware y el software y cómo trabajan juntos.
 
@@ -38,10 +42,11 @@ Aquí tienes los componentes más importantes:
 - **Disco duro o SSD**: Es donde el ordenador guarda información a largo plazo, como el propio videojuego o los documentos que escribes en un editor de texto. A diferencia de la memoria RAM, los datos aquí se mantienen incluso si apagas el equipo.
 - **Periféricos**: Son todos los dispositivos que permiten que el usuario se comunique con el ordenador, como el teclado, el ratón o la pantalla. También incluye dispositivos que se conectan al ordenador, como impresoras o memorias USB.
 
+<figure markdown>
+  ![](assets/EDES-U1-VonNeumann.gif) 
+  <figcaption>Maquina Von Neumann</figcaption>
+</figure>
 
-<center> 
-![](assets/EDES-U1-VonNeumann.gif) 
-</center>
 
 ### 2. ¿Qué es el Software?
 El *software*, por su parte, de acuerdo con el IEEE: “es el conjunto de los programas de cómputo, procedimientos, reglas, documentación y datos asociados, que forman parte de las operaciones de un sistema de computación”.
@@ -64,9 +69,11 @@ Una posible clasificación del software es:
 
 Aunque existen muchos tipos de software, uno de los más importante es el **sistema operativo** (como Windows, macOS o Linux), que actúa como el intermediario entre el hardware y los programas que usamos.  Piensa en el sistema operativo como el jefe de cocina. Cuando pides un plato (por ejemplo, abrir un archivo de texto), el sistema operativo se asegura de que el chef (procesador) tenga todo lo que necesita (ingredientes en la RAM) y los utensilios adecuados (acceso a disco duro o teclado) para completar la tarea.
 
-<center>
+<figure markdown>
   ![Tipos de Software](./assets/EDES-U1-TiposSoftware.png)
-</center> 
+  <figcaption>Tipos de Software</figcaption>
+</figure>
+
 
 
 ### 3. ¿Cómo se Comunican el Software y el Hardware?
@@ -115,7 +122,7 @@ Por ejemplo:
 - Si desarrollas un programa para un **teléfono móvil**, debes tener en cuenta que el procesador de un móvil es menos potente que el de un ordenador, por lo que tu software debe ser más ligero y eficiente.
 
 
-### **Conclusión**
+### 6. Conclusión
 
 El software y el hardware están estrechamente relacionados. El software da las instrucciones y el hardware las ejecuta, pero para que esto ocurra de manera eficiente, como desarrolladores, debemos entender cómo funciona cada componente. Al diseñar aplicaciones, debemos tener en cuenta qué recursos (memoria, procesador, periféricos) utilizamos y cómo optimizarlos.
 

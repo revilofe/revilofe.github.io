@@ -10,11 +10,11 @@ site_author: 'Eduardo Fdez'
 
 
 nav:
-  - 'Principal': 'index.md'
+  - 'Principal': 'inicio.md'
   - 'Programación':
-    - 'section1/index.md'
+    - 'section1/inicio.md'
     - 'U1: Introducción al desarrollo de software':
-        - 'section1/u01/index.md'
+        - 'section1/u01/inicio.md'
         - '1.1.-Un programa': 'section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico.md'
         - '1.1.1.-Pseudocódigo': 'section1/u01/teoria/PROG-U1.1.1-Pseudocodigo.md'
         - '* Práctica 1.1: Instala python': 'section1/u01/practica/PROG-U1.-Practica001.md'
@@ -29,7 +29,7 @@ nav:
         - '* Práctica 1.7: Acceso ssh a github': 'section1/u01/practica/PROG-U1.-Practica007.md'
 #        - '* Práctica 1.8: Actualización de plantilla': 'section1/u01/practica/PROG-U1.-Practica008.md'
     - 'U2: Sentencias condicionales y repetitivas':
-        - 'section1/u02/index.md'
+        - 'section1/u02/inicio.md'
         - '2.1.-Condicionales': 'section1/u02/teoria/PROG-U2.1.-Condicionales.md'
         - '* Práctica 2.1: Sentencias condicionales': 'section1/u02/practica/PROG-U2.-Practica001.md'
         - '2.2.-Iterativas y saltos': 'section1/u02/teoria/PROG-U2.2.-Iterativas.md'
@@ -42,7 +42,7 @@ nav:
         - '2.5.1-¿Deberías documentar tu código?': 'section1/u02/teoria/PROG-U2.5.1.-DeberiasDocumentar.md'
 #       - '* Práctica 2.5: Proyecto': 'https://classroom.github.com/a/1NxxJ6nu'
     - 'U3: Estructuras de datos':
-        - 'section1/u03/index.md'
+        - 'section1/u03/inicio.md'
         - '3.0.-Est.Datos: Cadenas': 'section1/u03/teoria/PROG-U3.0.-Cadenas.md'
         - '* Práctica 3.0: Cadenas': 'section1/u03/practica/PROG-U3.-Practica000.md'
         - '3.1.-Est.Datos: Listas': 'section1/u03/teoria/PROG-U3.1.-Listas.md'
@@ -56,7 +56,7 @@ nav:
         - '3.6.-Ampliación I': 'section1/u03/teoria/PROG-U3.6.-OtrosAmpliacion1.md'
         - '3.7.-Ampliación II': 'section1/u03/teoria/PROG-U3.7.-OtrosAmpliacion2.md'
     - 'U4: Kotlin: POO y estructuras de datos':
-        - 'section1/u04/index.md'
+        - 'section1/u04/inicio.md'
         - '4.1.-Kotlin: Básico': 'section1/u04/teoria/PROG-U4.1.-kotlin.md'
         - '* Práctica 4.1: Kotlin Básico': 'section1/u04/practica/PROG-U4.-Practica001.md'
         - '4.2.-Kotlin: Colecciones': 'section1/u04/teoria/PROG-U4.2.-kotlinColeciones.md'
@@ -71,21 +71,21 @@ nav:
         - '* Práctica 4.6: Prueba I': 'section1/u04/practica/PROG-U4.-Practica006.md'
 
     - 'U5: Kotlin: PPO y creación de e.d.':
-        - 'section1/u05/index.md'
+        - 'section1/u05/inicio.md'
         - '5.1.-Revisitando las clases y los objetos': 'section1/u05/teoria/PROG-U5.1.-clasesYobjetos.md'
         - '5.2.-Visibilidad en miembros': 'section1/u05/teoria/PROG-U5.2.-VisibilidadEnClases.md'
         - '5.3.-Herencia': 'section1/u05/teoria/PROG-U5.3.-Herencia.md'
         - '* Práctica 5.1: Relación de ejercicios': 'section1/u05/practica/PROG-U5.-Practica001.md'
 
     - 'U6: Kotlin: Creación de programas con POO':
-        - 'section1/u06/index.md'
+        - 'section1/u06/inicio.md'
         - '6.1.-Jerarquía de Clases': 'section1/u06/teoria/PROG-U6.1.-jerarquiaDeClases.md'
         - '6.2.-Ejemplo': 'section1/u06/teoria/PROG-U6.2.-ejemploYActividad.md'
         - '6.3.-Principios SOLID': 'section1/u06/teoria/PROG-U6.3.-principiosSOLID.md'
         - '6.4.-Comentarios y documentación': 'section1/u06/teoria/PROG-U6.4.-comentariosYDocumentacion.md'
 
     - 'U7: Kotlin: Entrada/Salida y GUI':
-        - 'section1/u07/index.md'
+        - 'section1/u07/inicio.md'
         - '7.1.-Sistema archivos:E/S': 'section1/u07/teoria/PROG-U7.1.-SistemaArchivos.md'
         - '7.2.-Entrada/Salida estandar': 'section1/u07/teoria/PROG-U7.2.-ConsolaTeclado.md'
         - '7.2.1.-Lectura desde teclado': 'section1/u07/teoria/PROG-U7.2.1.-ConsolaTecladoExpansion.md'
@@ -94,7 +94,7 @@ nav:
         - '7.4.1.-Archivo de texto': 'section1/u07/teoria/PROG-U7.4.1.-TextFile.md'
         - '7.5.-GUI': 'section1/u07/teoria/PROG-U7.5.-GUI.md'
     - 'U9: Acceso a base de datos relacionales':
-        - 'section1/u09/index.md'
+        - 'section1/u09/inicio.md'
         - '9.1.-Acceso a BBDD': 'section1/u09/teoria/PROG-U9.1.-AccesoBBDD.md'
         - '9.2.-JDBC: Básico': 'section1/u09/teoria/PROG-U9.2.-JDBC-1.md'
         - '9.3.-JDBC: Prepared statement': 'section1/u09/teoria/PROG-U9.3.-JDBC-2.md'
@@ -102,9 +102,9 @@ nav:
         - '9.5.-Otros aspectos': 'section1/u09/teoria/PROG-U9.5.-OtrosAspectos.md'
 
   - 'Entornos de desarrollo':
-    - 'section3/index.md'
+    - 'section3/inicio.md'
     - 'U1: Introducción al desarrollo de software':
-        - 'section3/u01/index.md'
+        - 'section3/u01/inicio.md'
         - '1.1.-Software y Hardware': 'section3/u01/teoria/EDES-U1.1.-Software-PC.md'
         - '1.2.-Código fuente, objeto y ejecutable': 'section3/u01/teoria/EDES-U1.2.-CodigoFuenteObjetoEjecutable.md'
         - '1.3.-Código intermedio': 'section3/u01/teoria/EDES-U1.3.-CodigoIntermedio.md'
@@ -116,18 +116,18 @@ nav:
 #        - 'Práctica 1.2: Herramientas para generar programa': 'section3/u01/practica/EDES-U1.-Practica002.md'
 #        - 'Práctica 1.3: Scrum': 'section3/u01/practica/EDES-U1.-Practica003.md'
 #    - 'U2: Herramientas de desarrollo':
-#        - 'section3/u02/index.md'
+#        - 'section3/u02/inicio.md'
 #        - '2.1.-Herramientas': 'section3/u02/teoria/EDES-U2.1.-Herramientas.md'
 #        - 'Práctica 2.1: Herramientas de desarrollo': 'section3/u02/practica/EDES-U2.-Practica001.md'
 #    - 'U3: Pruebas y Depuración':
-#        - 'section3/u03/index.md'
+#        - 'section3/u03/inicio.md'
 #        - '3.1.-Pruebas': 'section3/u03/teoria/EDES-U3.1.-Pruebas.md'
 #        - '3.2.-Test unidad y TDD': 'section3/u03/teoria/EDES-U3.2.-TestUnidadYTDD.md'
 #        - '  3.2.1.-Kotest': 'section3/u03/teoria/EDES-U3.2.1.-Kotest.md'
 #        - '  3.2.2.-MockK': 'section3/u03/teoria/EDES-U3.2.2.-Mockk.md'
 #        - '3.3.-Depuración': 'section3/u03/teoria/EDES-U3.3.-Depuracion.md'
 #    - 'U4: SCV, refactorización y documentación':
-#        - 'section3/u04/index.md'
+#        - 'section3/u04/inicio.md'
 #        - '4.1.-Sistemas de control de versiones': 'section3/u04/teoria/EDES-U4.1.-Git_Github.md'
 #        - '4.2.-Refactorización': 'section3/u04/teoria/EDES-U4.2.-Refactorizacion.md'
 #        - '4.3.-Analizador de código': 'section3/u04/teoria/EDES-U4.3.-AnalizadorCodigo.md'
@@ -138,19 +138,19 @@ nav:
 #        - 'Práctica 4.4: Git/Github rebase II': 'section3/u04/practica/EDES-U4.-Practica004.md'
 #        - 'Práctica 4.5: Git/Github Pull Request (PR)': 'section3/u04/practica/EDES-U4.-Practica005.md'
   - 'Incidentes de seguridad':
-    - 'section2/index.md'
+    - 'section2/inicio.md'
     - 'U0: Nos conocemos': 'section2/u00/recursos/IS-U0.-DinamicaPresentacion.md'
     - 'U1: Principios generales y planes de seguridad':
-      - 'section2/u01/index.md'
+      - 'section2/u01/inicio.md'
       - '1.1.-PrincipiosGenerales': 'section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales.md'
 #    - 'U2: Detección y análisis de incidentes de seguridad':
-#      - 'section2/u02/index.md'
+#      - 'section2/u02/inicio.md'
 #      - '2.1.-Taxonomía de incidentes': 'section2/u02/teoria/IS-U2.1.1.-TaxonomiaDeIncidentes.md'
 #      - '2.2.1.-Evolución de SIEM': 'section2/u02/teoria/IS-U2.2.1.-SIEM-Evolucion.md'
 #      - '2.2.2.-Implantación de un SIEM': 'section2/u02/teoria/IS-U2.2.1.-SIEM-Implantacion.md'
 #      - '2.2.3.-SOC & SIEM & Casos de uso': 'section2/u02/teoria/IS-U2.2.1.-SOC&SIEM.md'
 #    - 'U3: Recopiación de evidencias':
-#      - 'section2/u03/index.md'
+#      - 'section2/u03/inicio.md'
 #      - '3.3.1.-Investigación incidentes:MITRE': 'section2/u03/teoria/IS-U3.3.1.-MITRE.md'
   - 'Blog': 'blog.md'
   - 'Tags': 'tags.md'

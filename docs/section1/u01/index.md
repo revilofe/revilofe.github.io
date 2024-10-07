@@ -1,7 +1,7 @@
 ---
-title: "UD 1 - Mi primer programa"
-description: Mi primer programa
-summary: Mi primer programa
+title: "UD 1 - Introducción al Desarrollo de Software"
+description: Introducción al Desarrollo de Software
+summary: Introducción al Desarrollo de Software
 authors:
     - Eduardo Fdez
 date: 2022-09-17

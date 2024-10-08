@@ -151,7 +151,7 @@ def test_area_valores_negativos():
 Al probar la lógica de negocio, no tenemos que preocuparnos por si el usuario introduce letras en lugar de números o si el resultado se muestra correctamente. Nos centramos en verificar que, si se pasan datos válidos a la función `calcular_area`, esta devuelve el resultado correcto. Una vez que esta fase funcione bien, podemos estar seguros de que la parte central del programa está correcta.
 
 ## 4. Aplicación en desarrollo web
-Es importante que los alumnos comprendan que esta separación de fases se aplica a aplicaciones más grandes, como las aplicaciones web:
+Es importante comprender que esta separación de fases se aplica a aplicaciones más grandes, como las aplicaciones web:
 
 1. **Entrada y validación de datos**: Se realiza en el **frontend** (por ejemplo, en el navegador), validando que los datos sean correctos antes de enviarlos al servidor. Esto es similar a la fase de entrada y validación de datos en nuestro ejemplo.
 

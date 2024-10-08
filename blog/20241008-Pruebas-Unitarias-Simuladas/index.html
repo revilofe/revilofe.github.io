@@ -6,34 +6,30 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Blog">
+        <meta name="description" content="Pruebas Unitarias con monkeypatch y capfd.">
       
       
         <meta name="author" content="Eduardo Fdez">
       
       
-        <link rel="canonical" href="https://revilofe.github.io/blog/">
+        <link rel="canonical" href="https://revilofe.github.io/blog/20241008-Pruebas-Unitarias-Simuladas/">
       
       
-        <link rel="prev" href="../section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales/">
       
       
-        <link rel="next" href="../tags/">
-      
-      
-      <link rel="icon" href="../assets/favicon-96x96.png">
+      <link rel="icon" href="../../assets/favicon-96x96.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
-        <title>Blog - R Z O</title>
+        <title>Pruebas Unitarias con monkeypatch y capfd. - R Z O</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -63,7 +59,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -99,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#blog" class="md-skip">
+        <a href="#pruebas-unitarias-con-monkeypatch-y-capfd" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -119,9 +115,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href=".." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
+    <a href="../.." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
       
-  <img src="../assets/ms-icon-144x144.png" alt="logo">
+  <img src="../../assets/ms-icon-144x144.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -138,7 +134,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Blog
+              Pruebas Unitarias con monkeypatch y capfd.
             
           </span>
         </div>
@@ -246,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -265,7 +261,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../section1/" class="md-tabs__link">
+        <a href="../../section1/" class="md-tabs__link">
           
   
     
@@ -285,7 +281,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../section3/" class="md-tabs__link">
+        <a href="../../section3/" class="md-tabs__link">
           
   
     
@@ -305,7 +301,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../section2/" class="md-tabs__link">
+        <a href="../../section2/" class="md-tabs__link">
           
   
     
@@ -321,11 +317,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
         
   
     
@@ -342,7 +336,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../tags/" class="md-tabs__link">
+      <a href="../../tags/" class="md-tabs__link">
         
   
     
@@ -359,7 +353,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../about/" class="md-tabs__link">
+      <a href="../../about/" class="md-tabs__link">
         
   
     
@@ -388,8 +382,6 @@
           
             
               
-                
-              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -401,9 +393,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
+    <a href="../.." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
       
-  <img src="../assets/ms-icon-144x144.png" alt="logo">
+  <img src="../../assets/ms-icon-144x144.png" alt="logo">
 
     </a>
     R Z O
@@ -430,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +483,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/" class="md-nav__link ">
+            <a href="../../section1/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -573,7 +565,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/u01/" class="md-nav__link ">
+            <a href="../../section1/u01/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -606,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
+      <a href="../../section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -627,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/teoria/PROG-U1.1.1-Pseudocodigo/" class="md-nav__link">
+      <a href="../../section1/u01/teoria/PROG-U1.1.1-Pseudocodigo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -648,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/practica/PROG-U1.-Practica001/" class="md-nav__link">
+      <a href="../../section1/u01/practica/PROG-U1.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
+      <a href="../../section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -690,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/teoria/PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
+      <a href="../../section1/u01/teoria/PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -711,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/practica/PROG-U1.-Practica002/" class="md-nav__link">
+      <a href="../../section1/u01/practica/PROG-U1.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/practica/PROG-U1.-Practica003/" class="md-nav__link">
+      <a href="../../section1/u01/practica/PROG-U1.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -753,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/practica/PROG-U1.-Practica004/" class="md-nav__link">
+      <a href="../../section1/u01/practica/PROG-U1.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/teoria/PROG-U1.4.-Pytest/" class="md-nav__link">
+      <a href="../../section1/u01/teoria/PROG-U1.4.-Pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -795,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/practica/PROG-U1.-Practica005/" class="md-nav__link">
+      <a href="../../section1/u01/practica/PROG-U1.-Practica005/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -816,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/practica/PROG-U1.-Practica006/" class="md-nav__link">
+      <a href="../../section1/u01/practica/PROG-U1.-Practica006/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -837,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u01/practica/PROG-U1.-Practica007/" class="md-nav__link">
+      <a href="../../section1/u01/practica/PROG-U1.-Practica007/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -911,7 +903,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/u02/" class="md-nav__link ">
+            <a href="../../section1/u02/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -944,7 +936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
+      <a href="../../section1/u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -965,7 +957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
+      <a href="../../section1/u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -986,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
+      <a href="../../section1/u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1007,7 +999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
+      <a href="../../section1/u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1028,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
+      <a href="../../section1/u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1049,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
+      <a href="../../section1/u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1070,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
+      <a href="../../section1/u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1091,7 +1083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
+      <a href="../../section1/u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1112,7 +1104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
+      <a href="../../section1/u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1133,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u02/teoria/PROG-U2.5.1.-DeberiasDocumentar/" class="md-nav__link">
+      <a href="../../section1/u02/teoria/PROG-U2.5.1.-DeberiasDocumentar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1211,7 +1203,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/u03/" class="md-nav__link ">
+            <a href="../../section1/u03/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1244,7 +1236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/teoria/PROG-U3.0.-Cadenas/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.0.-Cadenas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1265,7 +1257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/practica/PROG-U3.-Practica000/" class="md-nav__link">
+      <a href="../../section1/u03/practica/PROG-U3.-Practica000/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1286,7 +1278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/teoria/PROG-U3.1.-Listas/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.1.-Listas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1307,7 +1299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/teoria/PROG-U3.2.-Tuplas/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.2.-Tuplas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1328,7 +1320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/practica/PROG-U3.-Practica001/" class="md-nav__link">
+      <a href="../../section1/u03/practica/PROG-U3.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1349,7 +1341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/teoria/PROG-U3.3.-Diccionarios/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.3.-Diccionarios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1370,7 +1362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/practica/PROG-U3.-Practica002/" class="md-nav__link">
+      <a href="../../section1/u03/practica/PROG-U3.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1391,7 +1383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/teoria/PROG-U3.4.-Conjuntos/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.4.-Conjuntos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1412,7 +1404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/practica/PROG-U3.-Practica003/" class="md-nav__link">
+      <a href="../../section1/u03/practica/PROG-U3.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/teoria/PROG-U3.5.-Funciones/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.5.-Funciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1454,7 +1446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/teoria/PROG-U3.6.-OtrosAmpliacion1/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.6.-OtrosAmpliacion1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1475,7 +1467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u03/teoria/PROG-U3.7.-OtrosAmpliacion2/" class="md-nav__link">
+      <a href="../../section1/u03/teoria/PROG-U3.7.-OtrosAmpliacion2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1553,7 +1545,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/u04/" class="md-nav__link ">
+            <a href="../../section1/u04/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1586,7 +1578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/teoria/PROG-U4.1.-kotlin/" class="md-nav__link">
+      <a href="../../section1/u04/teoria/PROG-U4.1.-kotlin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1607,7 +1599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/practica/PROG-U4.-Practica001/" class="md-nav__link">
+      <a href="../../section1/u04/practica/PROG-U4.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1628,7 +1620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
+      <a href="../../section1/u04/teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1649,7 +1641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/teoria/PROG-U4.2.1.-kotlin-aclaraciones/" class="md-nav__link">
+      <a href="../../section1/u04/teoria/PROG-U4.2.1.-kotlin-aclaraciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1670,7 +1662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/teoria/PROG-U4.3.-POO/" class="md-nav__link">
+      <a href="../../section1/u04/teoria/PROG-U4.3.-POO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1691,7 +1683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/teoria/PROG-U4.3.-kotlinPOO/" class="md-nav__link">
+      <a href="../../section1/u04/teoria/PROG-U4.3.-kotlinPOO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1712,7 +1704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/teoria/PROG-U4.4.-kotlinResumen/" class="md-nav__link">
+      <a href="../../section1/u04/teoria/PROG-U4.4.-kotlinResumen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1733,7 +1725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/practica/PROG-U4.-Practica002/" class="md-nav__link">
+      <a href="../../section1/u04/practica/PROG-U4.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1754,7 +1746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/practica/PROG-U4.-Practica003/" class="md-nav__link">
+      <a href="../../section1/u04/practica/PROG-U4.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1775,7 +1767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/practica/PROG-U4.-Practica004/" class="md-nav__link">
+      <a href="../../section1/u04/practica/PROG-U4.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1796,7 +1788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/practica/PROG-U4.-Practica005/" class="md-nav__link">
+      <a href="../../section1/u04/practica/PROG-U4.-Practica005/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1817,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u04/practica/PROG-U4.-Practica006/" class="md-nav__link">
+      <a href="../../section1/u04/practica/PROG-U4.-Practica006/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1879,7 +1871,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/u05/" class="md-nav__link ">
+            <a href="../../section1/u05/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1912,7 +1904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u05/teoria/PROG-U5.1.-clasesYobjetos/" class="md-nav__link">
+      <a href="../../section1/u05/teoria/PROG-U5.1.-clasesYobjetos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1933,7 +1925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u05/teoria/PROG-U5.2.-VisibilidadEnClases/" class="md-nav__link">
+      <a href="../../section1/u05/teoria/PROG-U5.2.-VisibilidadEnClases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1954,7 +1946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u05/teoria/PROG-U5.3.-Herencia/" class="md-nav__link">
+      <a href="../../section1/u05/teoria/PROG-U5.3.-Herencia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1975,7 +1967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u05/practica/PROG-U5.-Practica001/" class="md-nav__link">
+      <a href="../../section1/u05/practica/PROG-U5.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2037,7 +2029,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/u06/" class="md-nav__link ">
+            <a href="../../section1/u06/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2070,7 +2062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u06/teoria/PROG-U6.1.-jerarquiaDeClases/" class="md-nav__link">
+      <a href="../../section1/u06/teoria/PROG-U6.1.-jerarquiaDeClases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2091,7 +2083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u06/teoria/PROG-U6.2.-ejemploYActividad/" class="md-nav__link">
+      <a href="../../section1/u06/teoria/PROG-U6.2.-ejemploYActividad/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2112,7 +2104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u06/teoria/PROG-U6.3.-principiosSOLID/" class="md-nav__link">
+      <a href="../../section1/u06/teoria/PROG-U6.3.-principiosSOLID/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2133,7 +2125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u06/teoria/PROG-U6.4.-comentariosYDocumentacion/" class="md-nav__link">
+      <a href="../../section1/u06/teoria/PROG-U6.4.-comentariosYDocumentacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2201,7 +2193,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/u07/" class="md-nav__link ">
+            <a href="../../section1/u07/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2234,7 +2226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
+      <a href="../../section1/u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2255,7 +2247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
+      <a href="../../section1/u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2276,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u07/teoria/PROG-U7.2.1.-ConsolaTecladoExpansion/" class="md-nav__link">
+      <a href="../../section1/u07/teoria/PROG-U7.2.1.-ConsolaTecladoExpansion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2297,7 +2289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
+      <a href="../../section1/u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2318,7 +2310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
+      <a href="../../section1/u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2339,7 +2331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u07/teoria/PROG-U7.4.1.-TextFile/" class="md-nav__link">
+      <a href="../../section1/u07/teoria/PROG-U7.4.1.-TextFile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2360,7 +2352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
+      <a href="../../section1/u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2424,7 +2416,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section1/u09/" class="md-nav__link ">
+            <a href="../../section1/u09/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2457,7 +2449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u09/teoria/PROG-U9.1.-AccesoBBDD/" class="md-nav__link">
+      <a href="../../section1/u09/teoria/PROG-U9.1.-AccesoBBDD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2478,7 +2470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u09/teoria/PROG-U9.2.-JDBC-1/" class="md-nav__link">
+      <a href="../../section1/u09/teoria/PROG-U9.2.-JDBC-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2499,7 +2491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u09/teoria/PROG-U9.3.-JDBC-2/" class="md-nav__link">
+      <a href="../../section1/u09/teoria/PROG-U9.3.-JDBC-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2520,7 +2512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u09/teoria/PROG-U9.4.-DAO/" class="md-nav__link">
+      <a href="../../section1/u09/teoria/PROG-U9.4.-DAO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2541,7 +2533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section1/u09/teoria/PROG-U9.5.-OtrosAspectos/" class="md-nav__link">
+      <a href="../../section1/u09/teoria/PROG-U9.5.-OtrosAspectos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2604,7 +2596,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section3/" class="md-nav__link ">
+            <a href="../../section3/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2676,7 +2668,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section3/u01/" class="md-nav__link ">
+            <a href="../../section3/u01/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2709,7 +2701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u01/teoria/EDES-U1.1.-Software-PC/" class="md-nav__link">
+      <a href="../../section3/u01/teoria/EDES-U1.1.-Software-PC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2730,7 +2722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u01/teoria/EDES-U1.2.-CodigoFuenteObjetoEjecutable/" class="md-nav__link">
+      <a href="../../section3/u01/teoria/EDES-U1.2.-CodigoFuenteObjetoEjecutable/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2751,7 +2743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u01/teoria/EDES-U1.3.-CodigoIntermedio/" class="md-nav__link">
+      <a href="../../section3/u01/teoria/EDES-U1.3.-CodigoIntermedio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2772,7 +2764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u01/teoria/EDES-U1.4.-Traductores/" class="md-nav__link">
+      <a href="../../section3/u01/teoria/EDES-U1.4.-Traductores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2793,7 +2785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u01/teoria/EDES-U1.5.-Lenguajes/" class="md-nav__link">
+      <a href="../../section3/u01/teoria/EDES-U1.5.-Lenguajes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2814,7 +2806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u01/teoria/EDES-U1.6.-FuncionalidadesHerramientas/" class="md-nav__link">
+      <a href="../../section3/u01/teoria/EDES-U1.6.-FuncionalidadesHerramientas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2835,7 +2827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/u01/practica/EDES-U1.-Practica010/" class="md-nav__link">
+      <a href="../../section3/u01/practica/EDES-U1.-Practica010/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2900,7 +2892,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section2/" class="md-nav__link ">
+            <a href="../../section2/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2933,7 +2925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section2/u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
+      <a href="../../section2/u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2981,7 +2973,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../section2/u01/" class="md-nav__link ">
+            <a href="../../section2/u01/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3014,7 +3006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
+      <a href="../../section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3047,19 +3039,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3068,7 +3051,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -3080,7 +3062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tags/" class="md-nav__link">
+      <a href="../../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3100,7 +3082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3121,8 +3103,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -3137,6 +3117,200 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pruebas-con-entradas-simuladas-monkeypatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pruebas con entradas simuladas (monkeypatch)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pruebas con entradas simuladas (monkeypatch)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explicacion-detallada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicación detallada:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Explicación detallada:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pytestmarkparametrize" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. @pytest.mark.parametrize(...):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-la-funcion-de-prueba-test_introduce_entero_valid" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. La función de prueba test_introduce_entero_valid(...):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-monkeypatchsetattrbuiltinsinput-lambda-_-mock_input" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. monkeypatch.setattr('builtins.input', lambda _: mock_input):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-assert-introduce_entero-expected" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. assert introduce_entero(...) == expected:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecucion-del-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejecución del test:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consideraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pruebas-con-capturas-de-mensajes-de-error-monkeypatch-y-capfd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pruebas con capturas de mensajes de error (monkeypatch y capfd)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pruebas con capturas de mensajes de error (monkeypatch y capfd)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-para-introduce_entero-con-entrada-invalida-y-captura-del-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test para introduce_entero con entrada inválida y captura del error:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicacion-detallada_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicación detallada:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Explicación detallada:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pytestmarkparametrize_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. @pytest.mark.parametrize(...):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-la-funcion-de-prueba-test_introduce_entero_invalid_only" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. La función de prueba test_introduce_entero_invalid_only(...):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-monkeypatchsetattrbuiltinsinput-lambda-_-nextinput_iterator" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. monkeypatch.setattr('builtins.input', lambda _: next(input_iterator)):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-manejo-del-agotamiento-del-iterador-con-pytestraisesstopiteration" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Manejo del agotamiento del iterador con pytest.raises(StopIteration):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-captura-del-mensaje-de-salida-con-capfdreadouterr" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Captura del mensaje de salida con capfd.readouterr():
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecucion-del-test_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejecución del test:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3148,681 +3322,198 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+<nav class="md-tags" >
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../tags/#monkeypatch" class="md-tag md-tag-icon">monkeypatch</a>
+    
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../tags/#capfd" class="md-tag md-tag-icon">capfd</a>
+    
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../tags/#python" class="md-tag md-tag-icon">python</a>
+    
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../tags/#test" class="md-tag md-tag-icon">test</a>
+    
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../tags/#pytest" class="md-tag md-tag-icon">pytest</a>
+    
+  
+</nav>
+
 
   
   
 
 
-<h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
-<hr />
-<p>
-
-
-
-<style>
-    .md-typeset .blog-post:first-of-type h3 {
-        margin-top: 0;
-    }
-
-    .md-typeset .blog-post-title {
-        margin-bottom: 0;
-    }
-
-    .md-typeset .blog-post-extra {
-        color: var(--md-default-fg-color--light);
-    }
-
-    .md-typeset .blog-center {
-        text-align: center;
-    }
-
-    .md-typeset .blog-pagination {
-        display: inline-block;
-        margin-top: 20px;
-    }
-
-    .md-typeset .blog-pagination a {
-        color: var(--md-typeset-color);
-        float: left;
-        padding: .25em 1em;
-        text-decoration: none;
-        border-radius: 1em;
-        margin-left: .25em;
-        margin-right: .25em;
-        transition: all .15s ease-in-out;
-    }
-
-    .md-typeset .blog-pagination a.active {
-        background-color: var(--md-typeset-a-color);
-        color: white;
-        font-weight: bold;
-    }
-
-    .md-typeset .blog-pagination a:hover:not(.active) {
-        background-color: #dddddda1;
-    }
-
-    .md-typeset .blog-hidden {
-        display: none;
-    }
-</style>
-
-<style>
-    .blog-override-post {
-        padding: 30px 60px 30px 0;
-        margin-top: 10px;
-        border: 1px solid transparent;
-        cursor: default;
-    }
-
-    .blog-override-post .blog-post-title {
-        color: var(--md-typeset-a-color);
-        margin-top: 0;
-    }
-
-    .blog-post-description {
-        color: var(--md-typeset-color);
-    }
-
-    .blog-override-post:first-of-type {
-        margin-top: 0;
-    }
-
-    .blog-override-post:hover {
-        border: 1px solid #e8e8e877;
-        box-shadow: 3px 4px 10px #e8e8e8;
-    }
-
-    .blog-override-post,
-    .blog-override-post>* {
-        transition: all 0.3s ease-in-out;
-    }
-
-    .blog-override-post:hover>* {
-        transform: translateX(30px);
-    }
-
-    .blog-post-description,
-    .blog-post-extra {
-        opacity: 0.8;
-    }
-
-    .blog-override-post:hover .blog-post-description,
-    .blog-override-post:hover .blog-post-extra {
-        opacity: 1;
-    }
-
-    @media only screen and (max-width: 1000px) {
-        .blog-override-post,
-        .blog-override-post>* {
-            transition: none;
-        }
-
-        .blog-override-post:hover>* {
-            transform: none;
-        }
-
-        .blog-override-post {
-            padding: 30px 0 30px 0;
-            border: none;
-            cursor: pointer;
-        }
-
-        .blog-override-post:hover {
-            border: none;
-            box-shadow: none;
-        }
-
-        .blog-post-description,
-        .blog-post-extra,
-        .blog-override-post:hover .blog-post-description,
-        .blog-override-post:hover .blog-post-extra {
-            opacity: 1;
-        }
-    }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <style>
-    .md-typeset .blogging-tags-grid {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 5px;
-    }
-
-    .md-typeset .blogging-tag {
-        color: var(--md-typeset-color);
-        background-color: var(--md-typeset-code-color);
-        white-space: nowrap;
-        display: block;
-    }
-
-    .md-typeset .blogging-tag code {
-        border-radius: 5px;
-    }
-</style>
-
-    
-
-
-
-
-
-
-<div class = "md-typeset">
-    <div class="pages">
-        
-            
-            <div class="page" id="page1">
-
-                
-                    
-                    
-                    
-                    
-
-                    
-                    
-                        
-                    
-
-                    
-                    
-                        
-                    
-                    
-                    <a href="https://revilofe.github.io/blog/20241008-Pruebas-Unitarias-Simuladas/">
-    <div class="blog-override-post">
-        <h3 class="blog-post-title">Pruebas Unitarias con monkeypatch y capfd.</h3>
-        
-            <div class="blogging-tags-grid">
-        
-        <code style="color: var(--md-typeset-color)">#monkeypatch</code>
-        
-        <code style="color: var(--md-typeset-color)">#capfd</code>
-        
-        <code style="color: var(--md-typeset-color)">#python</code>
-        
-        <code style="color: var(--md-typeset-color)">#test</code>
-        
-        <code style="color: var(--md-typeset-color)">#pytest</code>
-        
-    </div>
-    
-            
-
-        
-        <p class="blog-post-description">Pruebas Unitarias con monkeypatch y capfd.</p>
-        <div class="blog-post-extra">
-            Published at: 8/10/24, 0:00
-        </div>
-    </div>
-</a>
-
-                    
-                
-                    
-                    
-                    
-                    
-
-                    
-                    
-                        
-                    
-
-                    
-                    
-                        
-                    
-                    
-                    <a href="https://revilofe.github.io/blog/20240308-Tratamiento-JSON/">
-    <div class="blog-override-post">
-        <h3 class="blog-post-title">Tratamiento de ficheros JSON.</h3>
-        
-            <div class="blogging-tags-grid">
-        
-        <code style="color: var(--md-typeset-color)">#JSON</code>
-        
-        <code style="color: var(--md-typeset-color)">#Gson</code>
-        
-        <code style="color: var(--md-typeset-color)">#kotlin</code>
-        
-    </div>
-    
-            
-
-        
-        <p class="blog-post-description">Tratamiento de ficheros JSON.</p>
-        <div class="blog-post-extra">
-            Published at: 8/3/24, 0:00
-        </div>
-    </div>
-</a>
-
-                    
-                
-                    
-                    
-                    
-                    
-
-                    
-                    
-                        
-                    
-
-                    
-                    
-                        
-                    
-                    
-                    <a href="https://revilofe.github.io/blog/20240301-modelos-MVC-MVVM/">
-    <div class="blog-override-post">
-        <h3 class="blog-post-title">Modelos MVVM y MVC.</h3>
-        
-            <div class="blogging-tags-grid">
-        
-        <code style="color: var(--md-typeset-color)">#patrones</code>
-        
-        <code style="color: var(--md-typeset-color)">#diseño</code>
-        
-        <code style="color: var(--md-typeset-color)">#MVC</code>
-        
-        <code style="color: var(--md-typeset-color)">#MVVM</code>
-        
-        <code style="color: var(--md-typeset-color)">#kotlin</code>
-        
-    </div>
-    
-            
-
-        
-        <p class="blog-post-description">Modelos MVVM y MVC.</p>
-        <div class="blog-post-extra">
-            Published at: 1/3/24, 0:00
-        </div>
-    </div>
-</a>
-
-                    
-                
-                    
-                    
-                    
-                    
-
-                    
-                    
-                        
-                    
-
-                    
-                    
-                        
-                    
-                    
-                    <a href="https://revilofe.github.io/blog/20240214-profundizandoObjects/">
-    <div class="blog-override-post">
-        <h3 class="blog-post-title">OBJECTS Ejemplos y diferencias claves.</h3>
-        
-            <div class="blogging-tags-grid">
-        
-        <code style="color: var(--md-typeset-color)">#object</code>
-        
-        <code style="color: var(--md-typeset-color)">#singleton</code>
-        
-        <code style="color: var(--md-typeset-color)">#kotlin</code>
-        
-    </div>
-    
-            
-
-        
-        <p class="blog-post-description">OBJECTS Ejemplos y diferencias claves.</p>
-        <div class="blog-post-extra">
-            Published at: 14/2/24, 0:00
-        </div>
-    </div>
-</a>
-
-                    
-                
-                    
-                    
-                    
-                    
-
-                    
-                    
-                        
-                    
-
-                    
-                    
-                        
-                    
-                    
-                    <a href="https://revilofe.github.io/blog/20240205-sealedClassEjemplos/">
-    <div class="blog-override-post">
-        <h3 class="blog-post-title">Clases selladas en detalle con varios ejemplos.</h3>
-        
-            <div class="blogging-tags-grid">
-        
-        <code style="color: var(--md-typeset-color)">#atributo de clase</code>
-        
-        <code style="color: var(--md-typeset-color)">#propiedad</code>
-        
-        <code style="color: var(--md-typeset-color)">#kotlin</code>
-        
-    </div>
-    
-            
-
-        
-        <p class="blog-post-description">Clases selladas en detalle con varios ejemplos.</p>
-        <div class="blog-post-extra">
-            Published at: 5/2/24, 0:00
-        </div>
-    </div>
-</a>
-
-                    
-                
-            </div>
-        
-            
-            <div class="page" id="page2">
-
-                
-                    
-                    
-                    
-                    
-
-                    
-                    
-                        
-                    
-
-                    
-                    
-                        
-                    
-                    
-                    <a href="https://revilofe.github.io/blog/20240204-claseAbstractaVsInterfaz/">
-    <div class="blog-override-post">
-        <h3 class="blog-post-title">Diferencias entre clase abstracta e interfaz.</h3>
-        
-            <div class="blogging-tags-grid">
-        
-        <code style="color: var(--md-typeset-color)">#clase abstracta</code>
-        
-        <code style="color: var(--md-typeset-color)">#interfaz</code>
-        
-        <code style="color: var(--md-typeset-color)">#kotlin</code>
-        
-    </div>
-    
-            
-
-        
-        <p class="blog-post-description">Diferencias entre clase abstracta e interfaz.</p>
-        <div class="blog-post-extra">
-            Published at: 4/2/24, 0:00
-        </div>
-    </div>
-</a>
-
-                    
-                
-                    
-                    
-                    
-                    
-
-                    
-                    
-                        
-                    
-
-                    
-                    
-                        
-                    
-                    
-                    <a href="https://revilofe.github.io/blog/20240203-polimorfismoHerencia/">
-    <div class="blog-override-post">
-        <h3 class="blog-post-title">Polimorfismo en la Herencia.</h3>
-        
-            <div class="blogging-tags-grid">
-        
-        <code style="color: var(--md-typeset-color)">#herencia</code>
-        
-        <code style="color: var(--md-typeset-color)">#polimorfismo</code>
-        
-        <code style="color: var(--md-typeset-color)">#kotlin</code>
-        
-    </div>
-    
-            
-
-        
-        <p class="blog-post-description">Polimorfismo en la Herencia con un ejemplo.</p>
-        <div class="blog-post-extra">
-            Published at: 3/2/24, 0:00
-        </div>
-    </div>
-</a>
-
-                    
-                
-                    
-                    
-                    
-                    
-
-                    
-                    
-                        
-                    
-
-                    
-                    
-                        
-                    
-                    
-                    <a href="https://revilofe.github.io/blog/20240202-modificadorLateInit/">
-    <div class="blog-override-post">
-        <h3 class="blog-post-title">Modificador lateinit.</h3>
-        
-            <div class="blogging-tags-grid">
-        
-        <code style="color: var(--md-typeset-color)">#lateinit</code>
-        
-        <code style="color: var(--md-typeset-color)">#inicialización</code>
-        
-        <code style="color: var(--md-typeset-color)">#kotlin</code>
-        
-    </div>
-    
-            
-
-        
-        <p class="blog-post-description">Modificador lateinit, ejemplo de uso.</p>
-        <div class="blog-post-extra">
-            Published at: 2/2/24, 0:00
-        </div>
-    </div>
-</a>
-
-                    
-                
-                    
-                    
-                    
-                    
-
-                    
-                    
-                        
-                    
-
-                    
-                    
-                        
-                    
-                    
-                    <a href="https://revilofe.github.io/blog/20240201-propiedadesVsAtributos/">
-    <div class="blog-override-post">
-        <h3 class="blog-post-title">Atributos de clase vs Propiedades.</h3>
-        
-            <div class="blogging-tags-grid">
-        
-        <code style="color: var(--md-typeset-color)">#atributo de clase</code>
-        
-        <code style="color: var(--md-typeset-color)">#propiedad</code>
-        
-        <code style="color: var(--md-typeset-color)">#kotlin</code>
-        
-    </div>
-    
-            
-
-        
-        <p class="blog-post-description">Diferencia entre atributo de clase y propiedad.</p>
-        <div class="blog-post-extra">
-            Published at: 1/2/24, 0:00
-        </div>
-    </div>
-</a>
-
-                    
-                
-                    
-                    
-                    
-                    
-
-                    
-                    
-                        
-                    
-
-                    
-                    
-                        
-                    
-                    
-                    <a href="https://revilofe.github.io/blog/20230213-scopeFunctions/">
-    <div class="blog-override-post">
-        <h3 class="blog-post-title">Scope functions en kotlin, como usarlas.</h3>
-        
-            <div class="blogging-tags-grid">
-        
-        <code style="color: var(--md-typeset-color)">#scope functions</code>
-        
-        <code style="color: var(--md-typeset-color)">#kotlin</code>
-        
-    </div>
-    
-            
-
-        
-        <p class="blog-post-description">Scope functions en kotlin, como usarlas.</p>
-        <div class="blog-post-extra">
-            Published at: 13/2/23, 0:00
-        </div>
-    </div>
-</a>
-
-                    
-                
-            </div>
-        
-            
-            <div class="page" id="page3">
-
-                
-                    
-                    
-                    
-                    
-
-                    
-                    
-                        
-                    
-
-                    
-                    
-                        
-                    
-                    
-                    <a href="https://revilofe.github.io/blog/20221026-nameEnPython/">
-    <div class="blog-override-post">
-        <h3 class="blog-post-title">Porque en Python empiezan los programas con if __name__ == __main__</h3>
-        
-            <div class="blogging-tags-grid">
-        
-        <code style="color: var(--md-typeset-color)">#python</code>
-        
-    </div>
-    
-            
-
-        
-        <p class="blog-post-description">te has encontrado if __name__ == __main__ en los programas de python. Entra y descubre que significa.</p>
-        <div class="blog-post-extra">
-            Published at: 26/10/22, 0:00
-        </div>
-    </div>
-</a>
-
-                    
-                
-            </div>
-        
-    </div>
-
-    <div class="blog-center ">
-        <div class="blog-pagination " id="blog-pagination">
-            
-                
-                    
-                
-                <a class="page-number" href="">1</a>
-            
-                
-                    
-                
-                <a class="page-number" href="#blog-p2">2</a>
-            
-                
-                    
-                
-                <a class="page-number" href="#blog-p3">3</a>
-            
-        </div>
-        
-            <div>Total <b>11</b> posts.</div>
-        
-    </div>
-</div></p>
+<h1 id="pruebas-unitarias-con-monkeypatch-y-capfd">Pruebas Unitarias con "monkeypatch" y "capfd"<a class="headerlink" href="#pruebas-unitarias-con-monkeypatch-y-capfd" title="Permanent link">&para;</a></h1>
+<h2 id="pruebas-con-entradas-simuladas-monkeypatch">Pruebas con entradas simuladas <strong><em>(monkeypatch)</em></strong><a class="headerlink" href="#pruebas-con-entradas-simuladas-monkeypatch" title="Permanent link">&para;</a></h2>
+<p>Supongamos que tenemos la siguiente función:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span> <span class="nf">introduce_entero</span><span class="p">(</span><span class="n">msj</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="n">valor</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">msj</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="k">if</span> <span class="n">valor</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="ow">or</span> <span class="p">(</span><span class="n">valor</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">valor</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()):</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>            <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">valor</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;**ERROR** </span><span class="se">\&#39;</span><span class="si">{</span><span class="n">valor</span><span class="si">}</span><span class="se">\&#39;</span><span class="s2"> no es un número entero válido!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Para poder probarla corectamente <em>de forma aislada</em>, la función input() que contiene debemos <strong><em>simularla</em></strong>. Para ello, observa el siguiente ejemplo de prueba unitaria, dónde únicamente vamos a probar la función con entradas válidas:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="s2">&quot;mock_input, expected&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="p">[</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="p">(</span><span class="s1">&#39;  10&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>   <span class="c1"># Número positivo válido</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        <span class="p">(</span><span class="s1">&#39;-5&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">),</span>     <span class="c1"># Número negativo válido</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>       <span class="c1"># Número cero</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="p">]</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">)</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="k">def</span> <span class="nf">test_introduce_entero_valid</span><span class="p">(</span><span class="n">mock_input</span><span class="p">,</span> <span class="n">expected</span><span class="p">,</span> <span class="n">monkeypatch</span><span class="p">):</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="n">monkeypatch</span><span class="o">.</span><span class="n">setattr</span><span class="p">(</span><span class="s1">&#39;builtins.input&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="n">mock_input</span><span class="p">)</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="k">assert</span> <span class="n">introduce_entero</span><span class="p">(</span><span class="s2">&quot;Introduce un entero: &quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected</span>
+</code></pre></div>
+<h3 id="explicacion-detallada">Explicación detallada:<a class="headerlink" href="#explicacion-detallada" title="Permanent link">&para;</a></h3>
+<h4 id="1-pytestmarkparametrize">1. <strong><code>@pytest.mark.parametrize(...)</code></strong>:<a class="headerlink" href="#1-pytestmarkparametrize" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Esta línea de código es un <strong>decorador</strong> que le dice a <strong>pytest</strong> que la misma prueba se debe ejecutar varias veces, cambiando los valores de entrada y salida esperados para cada prueba.</li>
+<li><strong><code>mock_input</code></strong>: Simula lo que el usuario introduciría en el teclado (por ejemplo, <code>'10'</code> o <code>'-5'</code>).</li>
+<li><strong><code>expected</code></strong>: Es el valor esperado que debería devolver la función después de convertir la entrada en un número entero.</li>
+<li>El decorador ejecutará la prueba para cada uno de los casos:<ul>
+<li><strong>('  10', 10)</strong>: Esperamos que el valor de entrada <code>'  10'</code> se convierta en <code>10</code>.</li>
+<li><strong>('-5', -5)</strong>: Esperamos que el valor de entrada <code>'-5'</code> se convierta en <code>-5</code>.</li>
+<li><strong>('0', 0)</strong>: El valor <code>'0'</code> debe devolver el número <code>0</code>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-la-funcion-de-prueba-test_introduce_entero_valid">2. <strong>La función de prueba <code>test_introduce_entero_valid(...)</code></strong>:<a class="headerlink" href="#2-la-funcion-de-prueba-test_introduce_entero_valid" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="nf">test_introduce_entero_valid</span><span class="p">(</span><span class="n">mock_input</span><span class="p">,</span> <span class="n">expected</span><span class="p">,</span> <span class="n">monkeypatch</span><span class="p">):</span>
+</code></pre></div>
+<ul>
+<li><strong><code>mock_input</code></strong>: Este valor es la entrada simulada (lo que el usuario "introduce").</li>
+<li><strong><code>expected</code></strong>: Es el valor que esperamos obtener al final.</li>
+<li><strong><code>monkeypatch</code></strong>: Este parámetro es una herramienta que nos permite simular el comportamiento de la función <strong><code>input()</code></strong> para que, durante la prueba, no tengamos que escribir nada en el teclado. </li>
+</ul>
+<h4 id="3-monkeypatchsetattrbuiltinsinput-lambda-_-mock_input">3. <strong><code>monkeypatch.setattr('builtins.input', lambda _: mock_input)</code></strong>:<a class="headerlink" href="#3-monkeypatchsetattrbuiltinsinput-lambda-_-mock_input" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Aquí, estamos usando <strong><code>monkeypatch</code></strong> para reemplazar la función <strong><code>input()</code></strong> por una versión que siempre devuelve el valor <strong><code>mock_input</code></strong>. Esto es como si estuviéramos "engañando" a la función para que piense que el usuario ha introducido un valor específico.</li>
+<li><strong><code>lambda _: mock_input</code></strong>: Es una función anónima que siempre devuelve <strong><code>mock_input</code></strong>, ignorando cualquier parámetro (el mensaje que mostraría el <strong><code>input()</code></strong>).</li>
+</ul>
+<h4 id="4-assert-introduce_entero-expected">4. <strong><code>assert introduce_entero(...) == expected</code></strong>:<a class="headerlink" href="#4-assert-introduce_entero-expected" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Esta línea ejecuta la función <strong><code>introduce_entero()</code></strong> con los parámetros de prueba, y después compara el resultado devuelto por la función con el valor <strong><code>expected</code></strong>.</li>
+<li>Si la función devuelve un valor distinto al esperado, la prueba fallará.</li>
+</ul>
+<h3 id="ejecucion-del-test">Ejecución del test:<a class="headerlink" href="#ejecucion-del-test" title="Permanent link">&para;</a></h3>
+<p>Cada vez que pytest ejecuta este test, usa uno de los conjuntos de parámetros definidos en <strong><code>@pytest.mark.parametrize</code></strong>. Por ejemplo:
+1. Cuando la entrada simulada es <code>'  10'</code>, la función <strong><code>introduce_entero</code></strong> debería devolver <code>10</code>, y la prueba comprobará si ese es el caso.
+2. Si la función devuelve algo diferente a lo esperado (por ejemplo, si la función falla y devuelve <code>'10'</code> en lugar de <code>10</code>), entonces la prueba fallará.</p>
+<h3 id="consideraciones">Consideraciones:<a class="headerlink" href="#consideraciones" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>isdigit()</code></strong> en <strong><code>introduce_entero()</code></strong> se asegura de que solo se consideren cadenas que representan enteros positivos. Para los números negativos, la función también verifica si la cadena comienza con un <code>-</code> y el resto de la cadena es un número.</li>
+<li><strong><code>strip()</code></strong> elimina los espacios adicionales alrededor del número introducido, lo cual garantiza que el valor se procese correctamente incluso si el usuario introduce espacios accidentales.</li>
+</ul>
+<h2 id="pruebas-con-capturas-de-mensajes-de-error-monkeypatch-y-capfd">Pruebas con capturas de mensajes de error <strong><em>(monkeypatch y capfd)</em></strong><a class="headerlink" href="#pruebas-con-capturas-de-mensajes-de-error-monkeypatch-y-capfd" title="Permanent link">&para;</a></h2>
+<p>Ahora vamos a realizar un <strong>test para simular una entrada inválida en la función <code>introduce_entero</code></strong>, capturando y comprobando el mensaje de error en la salida de la consola.</p>
+<p>Vamos a construir el código del test y la explicación detallada para entender cómo realizar este tipo de pruebas.</p>
+<h3 id="test-para-introduce_entero-con-entrada-invalida-y-captura-del-error">Test para <code>introduce_entero</code> con entrada inválida y captura del error:<a class="headerlink" href="#test-para-introduce_entero-con-entrada-invalida-y-captura-del-error" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="s2">&quot;mock_inputs, error_msg&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="p">[</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        <span class="p">([</span><span class="s1">&#39;abc&#39;</span><span class="p">],</span> <span class="s2">&quot;**ERROR** &#39;abc&#39; no es un número entero válido!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">),</span>  <span class="c1"># Entrada inválida sin valor válido posterior</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        <span class="p">([</span><span class="s1">&#39;123abc&#39;</span><span class="p">],</span> <span class="s2">&quot;**ERROR** &#39;123abc&#39; no es un número entero válido!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">),</span>  <span class="c1"># Entrada con mezcla de caracteres</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="p">([</span><span class="s1">&#39;-123a&#39;</span><span class="p">],</span> <span class="s2">&quot;**ERROR** &#39;-123a&#39; no es un número entero válido!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">),</span>  <span class="c1"># Entrada con número negativo y caracteres inválidos</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="p">]</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="k">def</span> <span class="nf">test_introduce_entero_invalid_only</span><span class="p">(</span><span class="n">mock_inputs</span><span class="p">,</span> <span class="n">error_msg</span><span class="p">,</span> <span class="n">monkeypatch</span><span class="p">,</span> <span class="n">capfd</span><span class="p">):</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="n">input_iterator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">mock_inputs</span><span class="p">)</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="n">monkeypatch</span><span class="o">.</span><span class="n">setattr</span><span class="p">(</span><span class="s1">&#39;builtins.input&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="nb">next</span><span class="p">(</span><span class="n">input_iterator</span><span class="p">))</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    <span class="c1"># Usamos pytest.raises para manejar el agotamiento del iterador</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">StopIteration</span><span class="p">):</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>        <span class="n">introduce_entero</span><span class="p">(</span><span class="s2">&quot;Introduce un entero: &quot;</span><span class="p">)</span>  <span class="c1"># Esto seguirá esperando una entrada válida</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    <span class="c1"># Capturamos el mensaje de salida y verificamos si se imprimió el mensaje de error</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    <span class="n">captured</span> <span class="o">=</span> <span class="n">capfd</span><span class="o">.</span><span class="n">readouterr</span><span class="p">()</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    <span class="k">assert</span> <span class="n">error_msg</span> <span class="ow">in</span> <span class="n">captured</span><span class="o">.</span><span class="n">out</span>
+</code></pre></div>
+<h3 id="explicacion-detallada_1">Explicación detallada:<a class="headerlink" href="#explicacion-detallada_1" title="Permanent link">&para;</a></h3>
+<h4 id="1-pytestmarkparametrize_1">1. <strong><code>@pytest.mark.parametrize(...)</code></strong>:<a class="headerlink" href="#1-pytestmarkparametrize_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>@pytest.mark.parametrize</code></strong>: Le indica a <strong>pytest</strong> que debe ejecutar la prueba varias veces con diferentes combinaciones de entradas y mensajes de error.</li>
+<li><strong><code>mock_inputs</code></strong>: Simula lo que el usuario introduciría (por ejemplo, <code>'abc'</code> o <code>'-123a'</code>), que en este caso son entradas inválidas.</li>
+<li><strong><code>error_msg</code></strong>: El mensaje de error esperado que debería imprimirse cuando se detecte una entrada inválida.</li>
+<li>Cada uno de estos casos simula una entrada incorrecta:<ul>
+<li><strong><code>['abc']</code></strong>: Entrada completamente no numérica.</li>
+<li><strong><code>['123abc']</code></strong>: Entrada con una mezcla de números y caracteres no válidos.</li>
+<li><strong><code>['-123a']</code></strong>: Un número negativo con caracteres adicionales no válidos.</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-la-funcion-de-prueba-test_introduce_entero_invalid_only">2. <strong>La función de prueba <code>test_introduce_entero_invalid_only(...)</code></strong>:<a class="headerlink" href="#2-la-funcion-de-prueba-test_introduce_entero_invalid_only" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">test_introduce_entero_invalid_only</span><span class="p">(</span><span class="n">mock_inputs</span><span class="p">,</span> <span class="n">error_msg</span><span class="p">,</span> <span class="n">monkeypatch</span><span class="p">,</span> <span class="n">capfd</span><span class="p">):</span>
+</code></pre></div>
+<ul>
+<li><strong><code>mock_inputs</code></strong>: Es una lista de entradas simuladas (cada una en su propio caso de prueba).</li>
+<li><strong><code>error_msg</code></strong>: Es el mensaje que esperamos que aparezca en la consola cuando el usuario introduce un valor no válido.</li>
+<li><strong><code>monkeypatch</code></strong>: Simula las entradas que el usuario introduciría, reemplazando la llamada a <strong><code>input()</code></strong>.</li>
+<li><strong><code>capfd</code></strong>: Captura la salida estándar (lo que se imprime en la consola), para verificar que se está mostrando el mensaje de error correcto.</li>
+</ul>
+<h4 id="3-monkeypatchsetattrbuiltinsinput-lambda-_-nextinput_iterator">3. <strong><code>monkeypatch.setattr('builtins.input', lambda _: next(input_iterator))</code></strong>:<a class="headerlink" href="#3-monkeypatchsetattrbuiltinsinput-lambda-_-nextinput_iterator" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Estamos usando <strong><code>monkeypatch</code></strong> para interceptar la función <strong><code>input()</code></strong> y devolver la entrada simulada de <strong><code>mock_inputs</code></strong> usando un iterador.</li>
+<li><strong><code>lambda _: next(input_iterator)</code></strong>: Simula el comportamiento de <strong><code>input()</code></strong>, devolviendo un valor de la lista <strong><code>mock_inputs</code></strong> cada vez que se llama.</li>
+</ul>
+<h4 id="4-manejo-del-agotamiento-del-iterador-con-pytestraisesstopiteration">4. <strong>Manejo del agotamiento del iterador con <code>pytest.raises(StopIteration)</code></strong>:<a class="headerlink" href="#4-manejo-del-agotamiento-del-iterador-con-pytestraisesstopiteration" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Este bloque permite que el test se maneje correctamente cuando el iterador se queda sin entradas simuladas.</li>
+<li>Como estamos simulando entradas inválidas, la función <strong><code>introduce_entero</code></strong> quedaría atrapada en un bucle infinito esperando una entrada válida. Para manejar esto, usamos <strong><code>pytest.raises(StopIteration)</code></strong> para finalizar la prueba cuando el iterador se queda sin entradas.</li>
+</ul>
+<h4 id="5-captura-del-mensaje-de-salida-con-capfdreadouterr">5. <strong>Captura del mensaje de salida con <code>capfd.readouterr()</code></strong>:<a class="headerlink" href="#5-captura-del-mensaje-de-salida-con-capfdreadouterr" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>capfd.readouterr()</code></strong>: Captura todo lo que se ha imprimido en la consola durante la ejecución de la prueba. Esto nos permite verificar que el mensaje de error que imprimió la función es exactamente el que esperamos.</li>
+<li><strong><code>assert error_msg in captured.out</code></strong>: Aquí verificamos que el mensaje de error esperado se encuentra en la salida capturada.</li>
+</ul>
+<h3 id="ejecucion-del-test_1">Ejecución del test:<a class="headerlink" href="#ejecucion-del-test_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Simulación de entradas inválidas</strong>: En cada ejecución del test, se simula una entrada no válida como <code>'abc'</code> o <code>'123abc'</code>.</li>
+<li><strong>Verificación de errores</strong>: La función <strong><code>introduce_entero</code></strong> debería imprimir el mensaje de error esperado, como <strong>`"**ERROR</strong> 'abc' no es un número entero válido!"**.</li>
+<li><strong>Agotamiento del iterador</strong>: Cuando el iterador de entradas se queda sin valores, <strong><code>pytest.raises(StopIteration)</code></strong> finaliza el test.</li>
+</ol>
+<h3 id="conclusion">Conclusión:<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
+<p>Este test ayuda a comprobar que la función <strong><code>introduce_entero</code></strong> detecta correctamente las entradas no válidas, imprime el mensaje de error adecuado y maneja de manera adecuada la espera de entradas válidas, incluso cuando solo se simulan entradas incorrectas.</p>
 
 
 
@@ -3837,8 +3528,6 @@
 
   
 
-
-  
 
 
   <form class="md-feedback" name="feedback" hidden>
@@ -3955,70 +3644,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>
-</html><script>var currentPage = 0
-const lastComponent = window.location.href.split("/").slice(-1).pop()
-
-if (lastComponent && lastComponent.slice(0, 7) == "#blog-p") {
-  const page = parseInt(lastComponent.slice(7))
-  if (page) {
-    currentPage = page - 1
-  }
-}
-
-function scrollToTop() {
-  setTimeout(function () {
-    window.scrollTo(0, 0);
-  }, 100);
-}
-
-const onButtonClick = (ele) => {
-  var current = pagination.getElementsByClassName("active");
-  if (current.length) {
-    current[0].className = current[0].className.replace(
-      " active", ""
-    );
-  }
-  ele.className += " active";
-
-  // Togglg visibility of pages
-  const destPage = parseInt(ele.textContent)
-  var pages = document.getElementsByClassName("page")
-  if (destPage && pages.length) {
-    for (var j = 0; j < pages.length; j++) {
-      const pageId = parseInt(pages[j].id.replace("page", ""))
-      if (pageId != destPage) {
-        // This is not the destination page
-        if (!pages[j].className.includes("blog-hidden")) {
-          pages[j].className += " blog-hidden"
-        }
-      } else {
-        // This is the destination page
-        pages[j].className = pages[j].className.replace(" blog-hidden", "")
-      }
-    }
-    scrollToTop();
-  }
-};
-
-var pagination = document.getElementById("blog-pagination");
-if (pagination) {
-  var links = pagination.getElementsByClassName("page-number");
-  if (links.length) {
-    for (var i = 0; i < links.length; i++) {
-      // Toggle pagination highlight
-      links[i].addEventListener("click", function () {
-        onButtonClick(this);
-      });
-    }
-    links[currentPage].className += " active"
-    onButtonClick(links[currentPage]);
-  }
-}
-</script>
+</html>

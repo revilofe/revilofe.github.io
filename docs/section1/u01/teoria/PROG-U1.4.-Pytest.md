@@ -29,14 +29,14 @@ Antes de realizar, nada, vamos a actualizar la herramienta que nos va a permitir
 El comando para instalar `pip`
 
 ```bash
-sudo apt-get install pip
+> sudo apt-get install pip
 
 ```
 
 El comando para actualizar `pip`
 
 ```bash
-sudo python3 -m pip install --upgrade pip
+> sudo python3 -m pip install --upgrade pip
 ```
 
 ### 2. Crear un entorno virtual
@@ -54,72 +54,110 @@ Virtualenv es la manera más fácil recomendada para configurar un ambiente pers
 A contiuación instalamos el modulo **virtualenv**, haciendo uso de pip.
 
 ```bash
-sudo pip install virtualenv
+> sudo pip install virtualenv
 ```
 
 Si tienes problemas con la instalación, puedes forzar la instalación con el siguiente comando:
 
 ```bash
-sudo pip install virtualenv --break-system-packages 
+> sudo pip install virtualenv --break-system-packages 
 ```
 
-Una vez instalado el modulo, podemos usarlo para crear un entorno llamado **prog1**
+Una vez instalado el módulo, podemos usarlo para crear un entorno llamado **env** en la carpeta base de nuestro proyecto. 
+
+Accedemos a la carpeta de nuestro proyecto
 
 ```bash
-python -m virtualenv prog1
+> cd /ruta/a/mi/proyecto
 ```
 
-La creación del entorno, creará una carpeta con el mismo nombre: `./prog1`
-
-Una vez creado, pasamos a activar el entorno recien creado: prog1
+ejecutamos el comando para crear el entorno virtual **env**:
 
 ```bash
-cd prog1
-. ./bin/activate
+> python -m virtualenv env
 ```
 
-Eliminando la carpeta eliminaremos el entorno.
+La creación del entorno, creará una carpeta con el mismo nombre: `./env`
 
-Una vez tenemos activo el entorno, podemos listar los módulos que tenemos disponibles en el entorno que hemos creado y activado:
+Una vez creado, pasamos a activar el entorno recien creado: env
 
 ```bash
-pip list
+> . ./env/bin/activate
+```
+
+Eliminando la carpeta `env` eliminaremos el entorno. Además, si queremos desactivar el entorno, podemos hacerlo con el comando:
+
+```bash
+> deactivate
+```
+
+Una vez hemos creado el entorno, y tenemos lo hemos activado, podemos listar los módulos que tenemos disponibles en el entorno:
+
+```bash
+> pip list
 ```
 
 Adicionalmente, si en un momento determinado necesitamos recoger los módulos instalados, podemos captura los requerimientos a un archivo.
 
 ```bash
-pip freeze > requirements.txt
+> pip freeze > requirements.txt
 ```
 
 Y posteriormente, reinstalar esos mismos módulos:
 
 ```bash
-pip install -r requirements.txt
+> pip install -r requirements.txt
 ```
 
 La estructura creada en el nuevo entorno, tiene por defecto los directorios `bin` (ejecutables) y `lib` (paquetes instalados).
 
 ```bash
-/prog1
-|_/bin
-|_/lib
+> ls env
+
+env/
+│
+├──/bin
+└──/lib
 ```
 
-Crearemos los directorios **src** para almacenar el código fuente y **test** para almacenar los tests. Además, crearemos un archivo **`__init__.py`** vacío en cada uno de estos dos directorios.
+Para continuar creando la estructura de nuestro proyecto, vamos a crear los directorios necesarios para almacenar el código fuente y los tests.
+
+En el raiz de nuestro proyecto `/ruta/a/mi/proyecto`, crearemos los directorios **src** para almacenar el código fuente y **test** para almacenar los tests. Además, crearemos un archivo **`__init__.py`** vacío en cada uno de estos dos directorios.
 
 > El archivo **__init__.py** es utilizado para inicializar paquetes de Python, es decir, le indica al intérprete de Python que el directorio package contiene un módulo, y que debe tratarlo como tal (es decir, hacer que sea posible importar los archivos como parte del módulo).
 En general no es necesario poner nada en el archivo `__init__.py`, pero es muy común usarlo para realizar configuraciones e importar cualquier objeto necesario de nuestra librería.
 >
+  
+La estructura final que tiene que tener es la siguiente:
 
 ```bash
-/prog1
-|_/bin
-|_/lib
-|_/src
-  |_/__ini__.py
-|_/test
-  |_/__ini__.py
+proyecto/              # Carpeta raíz del proyecto
+│
+├── env/           # Carpeta del entorno virtual (no incluida en Git)
+├── src/               # Código fuente del proyecto
+│   ├── __init__.py
+│   └── main.py
+├── tests/             # Pruebas unitarias
+│   └── test_suma.py
+├── .gitignore         # Archivo para excluir el entorno virtual y otros archivos innecesarios
+├── requirements.txt   # Dependencias del proyecto
+└── README.md          # Información del proyecto
+```
+
+Agrega las siguientes líneas a `.gitignore` para ignorar la carpeta del entorno virtual y otros archivos temporales:
+
+```
+# Ignorar entornos virtuales
+env/
+
+# Archivos de configuración de Python
+*.pyc
+__pycache__/
+
+# Archivos de configuración de IDEs y sistemas operativos
+.vscode/
+.idea/
+.DS_Store
 ```
 
 ### 3. Pruebas con pytest
@@ -133,7 +171,7 @@ Para realizar un test sencillo con pytest, sigue los siguientes pasos:
    Despues de instalar pytest, si listamos de nuevo los módulos del entorno, veremos que los modulos instalados se habŕan incrementado.
 
     ```bash
-    pip install pytest
+    > pip install pytest
     ```
 
 2. Suponiendo que tienes una función llamada suma en el archivo `main.py` en el directorio src de tu proyecto. Aquí tienes un ejemplo de una función `suma` en Python, que toma dos argumentos `a` y `b` y devuelve la suma de los dos números.
@@ -144,7 +182,7 @@ Para realizar un test sencillo con pytest, sigue los siguientes pasos:
     ```
 
 3. Crea un archivo de prueba en el directorio "test" de tu proyecto. Por ejemplo, podrías llamarlo `test_suma.py`.
-4. En este archivo de prueba, importa pytest y la función que deseas probar desde tu código fuente. Por ejemplo, podrías importar la función `suma` desde el módulo `main` en el directorio `src`.
+4. En este archivo de prueba, importa pytest y la función que deseas probar desde tu código fuente. Por ejemplo, podrías importar la función `suma` desde el módulo `main.py` en el directorio `src`.
 
     ```python
     import pytest
@@ -174,7 +212,7 @@ Para realizar un test sencillo con pytest, sigue los siguientes pasos:
 6. Desde el directorio base de tu proyecto, ejecuta los tests utilizando el siguiente comando en la terminal:
 
     ```bash
-    pytest ./test
+    > pytest ./test
     
     ```
     

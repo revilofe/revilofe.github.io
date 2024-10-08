@@ -3490,17 +3490,17 @@
 <p>Un conjunto de pruebas, es código que realiza pruebas a nuestro código. Las pruebas unitarias nos permiten verificar que nuestro código funciona como se espera.</p>
 <p>Las pruebas unitarias son un conjunto de casos de prueba diseñados para verificar que cada “unidad” o componente de nuestro código funciona como se espera.</p>
 <p>Cada prueba unitaria se ejecuta en un entorno aislado, lo que significa que no afecta a otras partes del código y viceversa.</p>
-<p>Además de ejecutarse en la máquina del desarrollador, en entornos de trabajo profesional, estas se ejecutan en forma continua, por ejemplo cada hora o cada commit del código. Esta ejecución continua se realiza mediante sistemas automatizados como Jenkins. Debido a esto, agregar una pieza de código de pruebas implica que esta se probará una y otra vez cada que una funcionalidad sea agregada o un error sea corregido.</p>
+<p>Además de ejecutarse en la máquina del desarrollador, en entornos de trabajo profesional, estas se ejecutan en forma continua, por ejemplo cada hora o cada commit del código. Esta ejecución continua se realiza mediante sistemas automatizados como <strong>Jenkins</strong>. Debido a esto, agregar una pieza de código de pruebas implica que esta se probará una y otra vez cada que una funcionalidad sea agregada o un error sea corregido.</p>
 <h4 id="31-pytest">3.1. Pytest<a class="headerlink" href="#31-pytest" title="Permanent link">&para;</a></h4>
 <p>Pytest es un framework con muchas funcionalidades, desde pruebas pequeñas hasta pruebas de gran escala como pruebas funcionales de aplicaciones y librerías. Ofrece la recolección automática de los tests, aserciones simples, soporte para fixtures, debugeo y mucho más…</p>
 <h4 id="32-assert">3.2. Assert<a class="headerlink" href="#32-assert" title="Permanent link">&para;</a></h4>
-<p>La palabra assert en Python se refiere a un enunciado que verifica ciertas suposiciones sobre nuestro código. Si la suposición no es cierta, la afirmación falla y se genera una excepción.</p>
-<p>Por ejemplo, si suponemos que una variable es mayor que cero, podemos usar assert para verificar esa suposición:</p>
+<p>La palabra <code>assert</code> en Python se refiere a un enunciado que verifica ciertas suposiciones sobre nuestro código. Si la suposición no es cierta, la afirmación falla y se genera una excepción.</p>
+<p>Por ejemplo, si suponemos que una variable es mayor que cero, podemos usar <code>assert</code> para verificar esa suposición:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>def funcion_ejemplo(x):
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    assert x &gt; 0, &quot;x no es mayor que cero&quot;
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    return x * 2
 </code></pre></div>
-<p>En este ejemplo, si x es igual a cero o menor que cero, se generará una excepción AssertionError con el mensaje “x no es mayor que cero”.</p>
+<p>En este ejemplo, si <code>x</code> es igual a 0 o menor que 0, se generará una excepción <code>AssertionError</code> con el mensaje “x no es mayor que cero”.</p>
 <h3 id="4-creando-el-primer-test">4. Creando el primer test<a class="headerlink" href="#4-creando-el-primer-test" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
@@ -3513,14 +3513,13 @@
 <p>Lo habitual es crear un directorio llamado <code>tests</code> que contenga los ficheros de pruebas y <code>src</code> para incluir los programas o módulos. Si hacéis esto, incluid en todas las carpetas del proyecto el fichero <code>__init__.py</code> vacío <em>(si lo hacéis desde el terminal: touch <strong>init</strong>.py)</em>.</p>
 <p>Por ejemplo, si tenemos la siguiente estructura de nuestra carpeta o proyecto <code>practica6</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="se">\p</span>ractica6
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>--__init__.py
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">|</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>--scr
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">|</span>--__init__.py
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">|</span>--main.py
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>--tests
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">|</span>--__init__.py
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">|</span>--test_main.py
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">|</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>--scr
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span>--__init__.py
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">|</span><span class="w"> </span><span class="p">|</span>--main.py
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>--tests
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="p">|</span>--__init__.py
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="p">|</span>--test_main.py
 </code></pre></div>
 </li>
 <li>
@@ -3552,7 +3551,7 @@
 <p>Si os fijáis en el código, no es más que una función que voy a llamar en mi función principal en varias ocasiones.</p>
 </li>
 <li>
-<p>A continuación, nos creamos la carpeta <code>tests</code> y dentro de ella un fichero con el nombre <code>test_main.py</code> <em>(Pytest va a reconocer por defecto todos los programas que comiencen por test_ cómo pruebas unitarias que debe realizar)</em>. El contenido será el siguiente:</p>
+<p>A continuación, nos creamos la carpeta <code>tests</code> y dentro de ella un fichero con el nombre <code>test_main.py</code> <em>(Pytest va a reconocer por defecto todos los programas que comiencen por <code>test_</code> cómo pruebas unitarias que debe realizar)</em>. El contenido será el siguiente:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>from src.main import suma
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>def test_suma():
@@ -3578,16 +3577,16 @@
 </li>
 <li>Todas las pruebas serán también una función con el nombre <code>test_nombreFunciónAProbar</code>.</li>
 <li>Si realizamos varias funciones para probar una misma función es recomendable añadir un texto explicativo de la prueba.</li>
-<li><code>assert</code> verifica que la expresión de la derecha es verdadera (true), sino generará una excepción.</li>
+<li><code>assert</code> verifica que la expresión de la derecha es verdadera (<code>true</code>), sino generará una excepción.</li>
 <li>
 <p>Pytest capturará la excepción si se produce y la gestionará para mostrarnos los resultados.</p>
 </li>
 <li>
 <p>Vamos a ejecutar las pruebas unitarias desde la terminal:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pytest
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&gt; pytest
 </code></pre></div>
 <p>El comando <code>pytest</code> nos muestra si las pruebas pasaron o no. Si queremos una información un poco más detallada usamos el parámetro <code>-v</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pytest -v
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>&gt; pytest -v
 </code></pre></div>
 </li>
 <li>
@@ -3618,7 +3617,7 @@ Necesitamos importar las librerías de pytest en nuestro fichero de pruebas con 
 </li>
 <li>
 <p>Al volver a realizar el test obtendremos un resultado por cada tupla de parámetros probados:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>pytest -v
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>&gt; pytest -v
 </code></pre></div>
 </li>
 <li>

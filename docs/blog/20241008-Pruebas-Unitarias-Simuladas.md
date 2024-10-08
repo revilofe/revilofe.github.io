@@ -17,7 +17,7 @@ tags:
 ---
 # Pruebas Unitarias con "monkeypatch" y "capfd"
 
-## Pruebas con entradas simuladas ***(monkeypatch)***
+## 1. Pruebas con entradas simuladas ***(monkeypatch)***
 
 Supongamos que tenemos la siguiente función:
 
@@ -31,7 +31,7 @@ def introduce_entero(msj: str) -> int:
             print(f"**ERROR** \'{valor}\' no es un número entero válido!")
 ```
 
-Para poder probarla corectamente *de forma aislada*, la función input() que contiene debemos ***simularla***. Para ello, observa el siguiente ejemplo de prueba unitaria, dónde únicamente vamos a probar la función con entradas válidas:
+Para poder probarla correctamente *de forma aislada*, la función `input()` que contiene debemos ***simularla***. Para ello, observa el siguiente ejemplo de prueba unitaria, dónde únicamente vamos a probar la función con entradas válidas:
 
 ```python
 import pytest
@@ -78,15 +78,16 @@ def test_introduce_entero_valid(mock_input, expected, monkeypatch):
    - Si la función devuelve un valor distinto al esperado, la prueba fallará.
 
 ### Ejecución del test:
-Cada vez que pytest ejecuta este test, usa uno de los conjuntos de parámetros definidos en **`@pytest.mark.parametrize`**. Por ejemplo:
-1. Cuando la entrada simulada es `'  10'`, la función **`introduce_entero`** debería devolver `10`, y la prueba comprobará si ese es el caso.
-2. Si la función devuelve algo diferente a lo esperado (por ejemplo, si la función falla y devuelve `'10'` en lugar de `10`), entonces la prueba fallará.
+Cada vez que pytest ejecuta este test, usa uno de los conjuntos de parámetros definidos en **`@pytest.mark.parametrize`**.     
+Por ejemplo:    
+1. Cuando la entrada simulada es `'  10'`, la función **`introduce_entero`** debería devolver `10`, y la prueba comprobará si ese es el caso.   
+2. Si la función devuelve algo diferente a lo esperado (por ejemplo, si la función falla y devuelve `'10'` en lugar de `10`), entonces la prueba fallará.    
 
 ### Consideraciones:
-- **`isdigit()`** en **`introduce_entero()`** se asegura de que solo se consideren cadenas que representan enteros positivos. Para los números negativos, la función también verifica si la cadena comienza con un `-` y el resto de la cadena es un número.
+- **`isdigit()`** en **`introduce_entero()`** se asegura de que solo se consideren cadenas que representan enteros positivos. Para los números negativos, la función también verifica si la cadena comienza con un `-` y el resto de la cadena es un número.    
 - **`strip()`** elimina los espacios adicionales alrededor del número introducido, lo cual garantiza que el valor se procese correctamente incluso si el usuario introduce espacios accidentales.
 
-## Pruebas con capturas de mensajes de error ***(monkeypatch y capfd)***
+## 2. Pruebas con capturas de mensajes de error ***(monkeypatch y capfd)***
 
 Ahora vamos a realizar un **test para simular una entrada inválida en la función `introduce_entero`**, capturando y comprobando el mensaje de error en la salida de la consola.
 

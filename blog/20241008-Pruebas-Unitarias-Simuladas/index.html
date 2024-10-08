@@ -3124,13 +3124,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pruebas-con-entradas-simuladas-monkeypatch" class="md-nav__link">
+  <a href="#1-pruebas-con-entradas-simuladas-monkeypatch" class="md-nav__link">
     <span class="md-ellipsis">
-      Pruebas con entradas simuladas (monkeypatch)
+      1. Pruebas con entradas simuladas (monkeypatch)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Pruebas con entradas simuladas (monkeypatch)">
+    <nav class="md-nav" aria-label="1. Pruebas con entradas simuladas (monkeypatch)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3208,13 +3208,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pruebas-con-capturas-de-mensajes-de-error-monkeypatch-y-capfd" class="md-nav__link">
+  <a href="#2-pruebas-con-capturas-de-mensajes-de-error-monkeypatch-y-capfd" class="md-nav__link">
     <span class="md-ellipsis">
-      Pruebas con capturas de mensajes de error (monkeypatch y capfd)
+      2. Pruebas con capturas de mensajes de error (monkeypatch y capfd)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Pruebas con capturas de mensajes de error (monkeypatch y capfd)">
+    <nav class="md-nav" aria-label="2. Pruebas con capturas de mensajes de error (monkeypatch y capfd)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3378,7 +3378,7 @@
 
 
 <h1 id="pruebas-unitarias-con-monkeypatch-y-capfd">Pruebas Unitarias con "monkeypatch" y "capfd"<a class="headerlink" href="#pruebas-unitarias-con-monkeypatch-y-capfd" title="Permanent link">&para;</a></h1>
-<h2 id="pruebas-con-entradas-simuladas-monkeypatch">Pruebas con entradas simuladas <strong><em>(monkeypatch)</em></strong><a class="headerlink" href="#pruebas-con-entradas-simuladas-monkeypatch" title="Permanent link">&para;</a></h2>
+<h2 id="1-pruebas-con-entradas-simuladas-monkeypatch">1. Pruebas con entradas simuladas <strong><em>(monkeypatch)</em></strong><a class="headerlink" href="#1-pruebas-con-entradas-simuladas-monkeypatch" title="Permanent link">&para;</a></h2>
 <p>Supongamos que tenemos la siguiente función:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span> <span class="nf">introduce_entero</span><span class="p">(</span><span class="n">msj</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -3388,7 +3388,7 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="k">else</span><span class="p">:</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;**ERROR** </span><span class="se">\&#39;</span><span class="si">{</span><span class="n">valor</span><span class="si">}</span><span class="se">\&#39;</span><span class="s2"> no es un número entero válido!&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>Para poder probarla corectamente <em>de forma aislada</em>, la función input() que contiene debemos <strong><em>simularla</em></strong>. Para ello, observa el siguiente ejemplo de prueba unitaria, dónde únicamente vamos a probar la función con entradas válidas:</p>
+<p>Para poder probarla correctamente <em>de forma aislada</em>, la función <code>input()</code> que contiene debemos <strong><em>simularla</em></strong>. Para ello, observa el siguiente ejemplo de prueba unitaria, dónde únicamente vamos a probar la función con entradas válidas:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span>
@@ -3435,15 +3435,16 @@
 <li>Si la función devuelve un valor distinto al esperado, la prueba fallará.</li>
 </ul>
 <h3 id="ejecucion-del-test">Ejecución del test:<a class="headerlink" href="#ejecucion-del-test" title="Permanent link">&para;</a></h3>
-<p>Cada vez que pytest ejecuta este test, usa uno de los conjuntos de parámetros definidos en <strong><code>@pytest.mark.parametrize</code></strong>. Por ejemplo:
-1. Cuando la entrada simulada es <code>'  10'</code>, la función <strong><code>introduce_entero</code></strong> debería devolver <code>10</code>, y la prueba comprobará si ese es el caso.
-2. Si la función devuelve algo diferente a lo esperado (por ejemplo, si la función falla y devuelve <code>'10'</code> en lugar de <code>10</code>), entonces la prueba fallará.</p>
+<p>Cada vez que pytest ejecuta este test, usa uno de los conjuntos de parámetros definidos en <strong><code>@pytest.mark.parametrize</code></strong>.   <br />
+Por ejemplo:  <br />
+1. Cuando la entrada simulada es <code>'  10'</code>, la función <strong><code>introduce_entero</code></strong> debería devolver <code>10</code>, y la prueba comprobará si ese es el caso. <br />
+2. Si la función devuelve algo diferente a lo esperado (por ejemplo, si la función falla y devuelve <code>'10'</code> en lugar de <code>10</code>), entonces la prueba fallará.    </p>
 <h3 id="consideraciones">Consideraciones:<a class="headerlink" href="#consideraciones" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong><code>isdigit()</code></strong> en <strong><code>introduce_entero()</code></strong> se asegura de que solo se consideren cadenas que representan enteros positivos. Para los números negativos, la función también verifica si la cadena comienza con un <code>-</code> y el resto de la cadena es un número.</li>
+<li><strong><code>isdigit()</code></strong> en <strong><code>introduce_entero()</code></strong> se asegura de que solo se consideren cadenas que representan enteros positivos. Para los números negativos, la función también verifica si la cadena comienza con un <code>-</code> y el resto de la cadena es un número.    </li>
 <li><strong><code>strip()</code></strong> elimina los espacios adicionales alrededor del número introducido, lo cual garantiza que el valor se procese correctamente incluso si el usuario introduce espacios accidentales.</li>
 </ul>
-<h2 id="pruebas-con-capturas-de-mensajes-de-error-monkeypatch-y-capfd">Pruebas con capturas de mensajes de error <strong><em>(monkeypatch y capfd)</em></strong><a class="headerlink" href="#pruebas-con-capturas-de-mensajes-de-error-monkeypatch-y-capfd" title="Permanent link">&para;</a></h2>
+<h2 id="2-pruebas-con-capturas-de-mensajes-de-error-monkeypatch-y-capfd">2. Pruebas con capturas de mensajes de error <strong><em>(monkeypatch y capfd)</em></strong><a class="headerlink" href="#2-pruebas-con-capturas-de-mensajes-de-error-monkeypatch-y-capfd" title="Permanent link">&para;</a></h2>
 <p>Ahora vamos a realizar un <strong>test para simular una entrada inválida en la función <code>introduce_entero</code></strong>, capturando y comprobando el mensaje de error en la salida de la consola.</p>
 <p>Vamos a construir el código del test y la explicación detallada para entender cómo realizar este tipo de pruebas.</p>
 <h3 id="test-para-introduce_entero-con-entrada-invalida-y-captura-del-error">Test para <code>introduce_entero</code> con entrada inválida y captura del error:<a class="headerlink" href="#test-para-introduce_entero-con-entrada-invalida-y-captura-del-error" title="Permanent link">&para;</a></h3>

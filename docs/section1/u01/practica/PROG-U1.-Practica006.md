@@ -63,7 +63,7 @@ Las pruebas unitarias son un conjunto de casos de prueba diseñados para verific
 
 Cada prueba unitaria se ejecuta en un entorno aislado, lo que significa que no afecta a otras partes del código y viceversa.
 
-Además de ejecutarse en la máquina del desarrollador, en entornos de trabajo profesional, estas se ejecutan en forma continua, por ejemplo cada hora o cada commit del código. Esta ejecución continua se realiza mediante sistemas automatizados como Jenkins. Debido a esto, agregar una pieza de código de pruebas implica que esta se probará una y otra vez cada que una funcionalidad sea agregada o un error sea corregido.
+Además de ejecutarse en la máquina del desarrollador, en entornos de trabajo profesional, estas se ejecutan en forma continua, por ejemplo cada hora o cada commit del código. Esta ejecución continua se realiza mediante sistemas automatizados como **Jenkins**. Debido a esto, agregar una pieza de código de pruebas implica que esta se probará una y otra vez cada que una funcionalidad sea agregada o un error sea corregido.
 
 #### 3.1. Pytest
 
@@ -71,9 +71,9 @@ Pytest es un framework con muchas funcionalidades, desde pruebas pequeñas hasta
 
 #### 3.2. Assert
 
-La palabra assert en Python se refiere a un enunciado que verifica ciertas suposiciones sobre nuestro código. Si la suposición no es cierta, la afirmación falla y se genera una excepción.
+La palabra `assert` en Python se refiere a un enunciado que verifica ciertas suposiciones sobre nuestro código. Si la suposición no es cierta, la afirmación falla y se genera una excepción.
 
-Por ejemplo, si suponemos que una variable es mayor que cero, podemos usar assert para verificar esa suposición:
+Por ejemplo, si suponemos que una variable es mayor que cero, podemos usar `assert` para verificar esa suposición:
 
 ```
 def funcion_ejemplo(x):
@@ -81,7 +81,7 @@ def funcion_ejemplo(x):
     return x * 2
 ```
 	
-En este ejemplo, si x es igual a cero o menor que cero, se generará una excepción AssertionError con el mensaje “x no es mayor que cero”.
+En este ejemplo, si `x` es igual a 0 o menor que 0, se generará una excepción `AssertionError` con el mensaje “x no es mayor que cero”.
 
 ### 4. Creando el primer test
 
@@ -95,14 +95,13 @@ En este ejemplo, si x es igual a cero o menor que cero, se generará una excepci
      
     ```bash
     \practica6
-    --__init__.py
     |
     --scr
-    |--__init__.py
-    |--main.py
+    | |--__init__.py
+    | |--main.py
     --tests
-    |--__init__.py
-    |--test_main.py
+      |--__init__.py
+      |--test_main.py
     ```    
 
 4. Crear una carpeta que se llame `src`. En ella crearemos un nuevo fichero `main.py` con el siguiente contenido:
@@ -136,7 +135,7 @@ En este ejemplo, si x es igual a cero o menor que cero, se generará una excepci
     
     Si os fijáis en el código, no es más que una función que voy a llamar en mi función principal en varias ocasiones.
 
-5. A continuación, nos creamos la carpeta `tests` y dentro de ella un fichero con el nombre `test_main.py` *(Pytest va a reconocer por defecto todos los programas que comiencen por test_ cómo pruebas unitarias que debe realizar)*. El contenido será el siguiente:
+5. A continuación, nos creamos la carpeta `tests` y dentro de ella un fichero con el nombre `test_main.py` *(Pytest va a reconocer por defecto todos los programas que comiencen por `test_` cómo pruebas unitarias que debe realizar)*. El contenido será el siguiente:
 
     ```
     from src.main import suma
@@ -165,19 +164,19 @@ En este ejemplo, si x es igual a cero o menor que cero, se generará una excepci
    - Para empezar, siempre debemos importar la función que deseamos probar del módulo dónde está definida.
    - Todas las pruebas serán también una función con el nombre `test_nombreFunciónAProbar`.
    - Si realizamos varias funciones para probar una misma función es recomendable añadir un texto explicativo de la prueba.
-   - `assert` verifica que la expresión de la derecha es verdadera (true), sino generará una excepción.
+   - `assert` verifica que la expresión de la derecha es verdadera (`true`), sino generará una excepción.
    - Pytest capturará la excepción si se produce y la gestionará para mostrarnos los resultados.
 
 7. Vamos a ejecutar las pruebas unitarias desde la terminal:
 
     ```
-    pytest
+    > pytest
     ```
     
     El comando `pytest` nos muestra si las pruebas pasaron o no. Si queremos una información un poco más detallada usamos el parámetro `-v`:
     
     ```
-    pytest -v
+    > pytest -v
     ```
 
 8. Se pueden usar las marcas para realizar múltiples pruebas sobre un determinado método *(marca parametrize)*. En el mismo fichero `test_main.py` añadimos otra función:
@@ -210,7 +209,7 @@ En este ejemplo, si x es igual a cero o menor que cero, se generará una excepci
 9. Al volver a realizar el test obtendremos un resultado por cada tupla de parámetros probados:
 
     ```
-    pytest -v
+    > pytest -v
     ```
 
 10. **Obliguemos a que se produzca un error**, por ejemplo modificando uno de los parámetros expected `(0, 0, 1)` y observemos lo que nos muestra pytest.

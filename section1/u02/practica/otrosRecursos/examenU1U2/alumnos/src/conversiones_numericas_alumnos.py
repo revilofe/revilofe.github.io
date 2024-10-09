@@ -135,22 +135,7 @@ def comprobar_valor_base(valor: str, base) -> bool:
 
 
 def dame_simbolo(valor: int) -> str:
-    """
-    Retorna el símbolo correspondiente a un valor en base hexadecimal.
-
-    Args:
-        valor (int): El valor entero entre 0 y 15.
-
-    Returns:
-        str: El símbolo correspondiente al valor.
-
-    Raises:
-        ValueError: Si el valor está fuera del rango permitido.
-    """
-    if valor not in range(len(SIMBOLOS)):
-        raise ValueError(f"Valor {valor} fuera del rango hexadecimal permitido.")
-    
-    return SIMBOLOS[valor]
+    pass
 
 
 def valor_simbolo(posicion: str) -> int:
@@ -281,28 +266,6 @@ def validar_base(base: str) -> bool:
     return base in ('2', '8', '10', '16')
 
 
-def dame_nombre_base(base: int) -> str:
-    """
-    Retorna el nombre de la base numérica.
-
-    Args:
-        base (int): El valor numérico de la base (2, 8, 10, 16).
-
-    Returns:
-        str: El nombre descriptivo de la base (por ejemplo, 'binaria').
-    """
-    if base == BASE_BINARIA:
-        return "binaria"
-    elif base == BASE_OCTAL:
-        return "octal"
-    elif base == BASE_DECIMAL:
-        return "decimal"
-    elif base == BASE_HEXADECIMAL:
-        return "hexadecimal"
-    else:
-        return "desconocida"
-
-
 def introduce_base(msj: str) -> int:
     """
     Solicita al usuario una base numérica válida (2, 8, 10 o 16).
@@ -329,16 +292,6 @@ def introduce_base(msj: str) -> int:
 
 
 def introduce_numero(msj: str, base: int) -> str:
-    """
-    Solicita al usuario un número válido para la base dada.
-
-    Args:
-        msj (str): El mensaje a mostrar al usuario.
-        base (int): La base numérica en la que debe estar el número.
-
-    Returns:
-        str: El número introducido por el usuario.
-    """
     numero_valido = False
     valor = None
     
@@ -350,17 +303,6 @@ def introduce_numero(msj: str, base: int) -> str:
             print(MENSAJE_ERROR_NUMERO.format(numero = valor, base = dame_nombre_base(base)))
 
     return valor
-
-
-def desea_salir() -> bool:
-    """
-    Pregunta al usuario si desea salir del programa.
-
-    Returns:
-        bool: True si el usuario desea salir, False en caso contrario.
-    """
-    salir = input("\n¿Desea salir del programa? (S/N) ").replace(" ", "").upper()
-    return salir in {'S', 'SI', 'Y', 'YES'}
 
 
 def realizar_conversion():

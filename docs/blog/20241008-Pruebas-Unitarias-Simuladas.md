@@ -23,12 +23,13 @@ Supongamos que tenemos la siguiente función:
 
 ```python
 def introduce_entero(msj: str) -> int:
-    while True:
+    valor = input(msj).strip()
+
+    while not (valor.isdigit() or (valor.startswith("-") and valor[1:].isdigit())):
+        print(f"**ERROR** '{valor}' no es un número entero válido!")
         valor = input(msj).strip()
-        if valor.isdigit() or (valor.startswith("-") and valor[1:].isdigit()):
-            return int(valor)
-        else:
-            print(f"**ERROR** \'{valor}\' no es un número entero válido!")
+
+    return int(valor)
 ```
 
 Para poder probarla correctamente *de forma aislada*, la función `input()` que contiene debemos ***simularla***. Para ello, observa el siguiente ejemplo de prueba unitaria, dónde únicamente vamos a probar la función con entradas válidas:

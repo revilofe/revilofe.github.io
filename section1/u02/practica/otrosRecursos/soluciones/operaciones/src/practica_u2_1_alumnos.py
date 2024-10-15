@@ -74,7 +74,12 @@ def resetear_saldo(saldo: float, cont_compras: int, cont_ventas: int) -> tuple[f
     """
     Retorna el saldo y las operaciones realizadas, mostrando antes el saldo anterior.
 
-    Se utiliza simplemente porque no hemos llegado a las estructuras de datos aún
+    Se utiliza simplemente porque no hemos llegado a las estructuras de datos aún. 
+    
+    Podríamos haberlo realizado directamente en el main:
+    saldo = 0
+    cont_compras = 0
+    cont_ventas = 0
 
     Args:
         saldo (float): El saldo actual.

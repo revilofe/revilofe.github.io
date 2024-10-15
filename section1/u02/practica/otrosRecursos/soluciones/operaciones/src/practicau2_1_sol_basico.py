@@ -131,23 +131,6 @@ def recuperar_comando_e_importe(linea: str) -> tuple[str, str]:
         return None, None
 
 
-def guardar_valores(saldo, compras, ventas) -> tuple[float, int, int]:
-    """
-    Usar la función para agrupar las actualizaciones de saldo, compras y ventas. 
-    
-    Cómo aún no hemos visto los diccionarios no podemos usar esta estructura de datos.
-
-    Args:
-        saldo (float): El saldo.
-        compras (int): Número de compras.
-        ventas (int): Número de ventas.
-
-    Returns:
-        tuple: Una tupla con el saldo, número de compras y número de ventas.
-    """
-    return saldo, compras, ventas
-
-
 def main():
     """
     Función principal que gestiona el flujo del programa. El programa permite al usuario realizar
@@ -178,12 +161,7 @@ def main():
     encuentra_fin = False
     cont_compras = 0
     cont_ventas = 0
-    saldo = 0
-
-    # Guardar los valores previos para deshacer
-    ultimo_saldo = 0
-    ultimo_cont_compras = 0
-    ultimo_cont_ventas = 0    
+    saldo = 0 
 
     while not encuentra_fin:
         linea = input("> ").strip().lower()
@@ -192,20 +170,13 @@ def main():
         if comando is None or not comprobar_comando(comando):
             mostrar_mensaje_error()
 
-        elif comando in ("saldo", "reset", "deshacer", "fin") and importe is not None:
+        elif comando in ("saldo", "reset", "fin") and importe is not None:
             mostrar_mensaje_error()
 
         elif comando == "saldo":
             mostrar_saldo(saldo, cont_compras, cont_ventas)
 
         elif comando == "reset":
-            # Guardar el estado previo para deshacer
-            ultimo_saldo, ultimo_cont_compras, ultimo_cont_ventas = guardar_valores(saldo, cont_compras, cont_ventas)
-            # Es lo mismo que hacer esto...
-            # ultimo_saldo = saldo
-            # ultimo_cont_compras = cont_compras
-            # ultimo_cont_ventas = cont_ventas
-
             saldo, cont_compras, cont_ventas = resetear_saldo(saldo, cont_compras, cont_ventas)
             # Es lo mismo que hacer esto...
             # print(f"Saldo anterior = {saldo:.2f} ({cont_compras} compras y {cont_ventas} ventas)")
@@ -216,25 +187,10 @@ def main():
         elif comando == "fin":
             encuentra_fin = True
 
-        elif comando == "deshacer":
-            saldo, cont_compras, cont_ventas = guardar_valores(ultimo_saldo, ultimo_cont_compras, ultimo_cont_ventas)
-            # Es lo mismo que hacer esto...
-            # saldo = ultimo_saldo
-            # cont_compras = ultimo_cont_compras
-            # cont_ventas = ultimo_cont_ventas
-            print("Última operación deshecha.")
-
         elif importe is None or not comprobar_importe(importe):
             mostrar_mensaje_error()
 
         else:
-            # Guardar el estado previo para deshacer
-            ultimo_saldo, ultimo_cont_compras, ultimo_cont_ventas = guardar_valores(saldo, cont_compras, cont_ventas)
-            # Es lo mismo que hacer esto...
-            # ultimo_saldo = saldo
-            # ultimo_cont_compras = cont_compras
-            # ultimo_cont_ventas = cont_ventas
-
             importe = float(importe)
             if comando == "compra":
                 saldo = procesar_compra(saldo, importe)
@@ -242,6 +198,7 @@ def main():
             elif comando == "venta":
                 saldo = procesar_venta(saldo, importe)
                 cont_ventas += 1
+
 
             
 if __name__ == "__main__":

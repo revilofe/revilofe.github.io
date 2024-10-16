@@ -1,6 +1,6 @@
 import pytest
 
-from src.practicau2_1_solucion import (
+from src.practicau2_1_sol_basico.py import (
     comprobar_importe, comprobar_comando, procesar_compra, procesar_venta,
     mostrar_saldo, resetear_saldo, recuperar_comando_e_importe, mostrar_mensaje_error
 )

@@ -155,33 +155,26 @@ def main():
         Saldo actual = 0.00 (0 compras y 0 ventas)
         > fin
     """
+    encuentra_fin = 
     cont_compras = 0
     cont_ventas = 0
     saldo = 0
 
     while not encuentra_fin:
-
+        linea = 
         comando, importe = recuperar_comando_e_importe(linea)
+        importe_valido = 
 
-        if comando is None or not comprobar_comando(comando):
-            mostrar_mensaje_error()
-        elif comando in ("saldo", "reset", "fin") and importe is not None:
-            
-        elif comando == "saldo":
-            
-        elif comando == "reset":
-            
-        elif comando == "fin":
-            
-        elif importe is None or not comprobar_importe(importe):
-            
+        if comando in ("compra", "venta") and importe_valido:
+
+
+        elif comando in ("saldo", "reset", "fin") and importe is None:
+
+
+
         else:
 
-            if comando == "compra":
-
-            elif comando == "venta":
 
 
-            
 if __name__ == "__main__":
     main()

@@ -72,7 +72,8 @@ def mostrar_saldo(saldo: float, cont_compras: int, cont_ventas: int):
 
 def resetear_saldo(saldo: float, cont_compras: int, cont_ventas: int) -> tuple[float, int, int]:
     """
-    Retorna el saldo y las operaciones realizadas, mostrando antes el saldo anterior.
+    Muestra el saldo anterior y retorna los valores a 0 de saldo, compras y ventas para 
+    resetearlos al ser reasignados.
 
     Se utiliza simplemente porque no hemos llegado a las estructuras de datos aún. 
     
@@ -81,13 +82,9 @@ def resetear_saldo(saldo: float, cont_compras: int, cont_ventas: int) -> tuple[f
     cont_compras = 0
     cont_ventas = 0
 
-    Args:
-        saldo (float): El saldo actual.
-        cont_compras (int): Número total de compras realizadas.
-        cont_ventas (int): Número total de ventas realizadas.
-
     Returns:
-        tuple[float, int, int]: El nuevo saldo (0), número de compras (0) y número de ventas (0) después del reinicio.
+        tuple[float, int, int]: El nuevo saldo (0), número de compras (0) y número de ventas (0) 
+        después del reinicio.
     """
     print()
     return 0, 0, 0

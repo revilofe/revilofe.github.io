@@ -189,45 +189,10 @@ def main():
         linea = input("> ").strip().lower()
         comando, importe = recuperar_comando_e_importe(linea)
 
-        if comando is None or not comprobar_comando(comando):
-            mostrar_mensaje_error()
 
-        elif comando in ("saldo", "reset", "deshacer", "fin") and importe is not None:
-            mostrar_mensaje_error()
+        importe_valido = importe is not None and comprobar_importe(importe)
 
-        elif comando == "saldo":
-            mostrar_saldo(saldo, cont_compras, cont_ventas)
-
-        elif comando == "reset":
-            # Guardar el estado previo para deshacer
-            ultimo_saldo, ultimo_cont_compras, ultimo_cont_ventas = guardar_valores(saldo, cont_compras, cont_ventas)
-            # Es lo mismo que hacer esto...
-            # ultimo_saldo = saldo
-            # ultimo_cont_compras = cont_compras
-            # ultimo_cont_ventas = cont_ventas
-
-            saldo, cont_compras, cont_ventas = resetear_saldo(saldo, cont_compras, cont_ventas)
-            # Es lo mismo que hacer esto...
-            # print(f"Saldo anterior = {saldo:.2f} ({cont_compras} compras y {cont_ventas} ventas)")
-            # saldo = 0
-            # cont_compras = 0
-            # cont_ventas = 0
-            
-        elif comando == "fin":
-            encuentra_fin = True
-
-        elif comando == "deshacer":
-            saldo, cont_compras, cont_ventas = guardar_valores(ultimo_saldo, ultimo_cont_compras, ultimo_cont_ventas)
-            # Es lo mismo que hacer esto...
-            # saldo = ultimo_saldo
-            # cont_compras = ultimo_cont_compras
-            # cont_ventas = ultimo_cont_ventas
-            print("Última operación deshecha.")
-
-        elif importe is None or not comprobar_importe(importe):
-            mostrar_mensaje_error()
-
-        else:
+        if comando in ("compra", "venta") and importe_valido:
             # Guardar el estado previo para deshacer
             ultimo_saldo, ultimo_cont_compras, ultimo_cont_ventas = guardar_valores(saldo, cont_compras, cont_ventas)
             # Es lo mismo que hacer esto...
@@ -236,12 +201,49 @@ def main():
             # ultimo_cont_ventas = cont_ventas
 
             importe = float(importe)
+
             if comando == "compra":
                 saldo = procesar_compra(saldo, importe)
                 cont_compras += 1
+
             elif comando == "venta":
                 saldo = procesar_venta(saldo, importe)
                 cont_ventas += 1
+
+        elif comando in ("saldo", "reset", "deshacer", "fin") and importe is None:
+
+            if comando == "saldo":
+                mostrar_saldo(saldo, cont_compras, cont_ventas)
+
+            elif comando == "reset":
+                # Guardar el estado previo para deshacer
+                ultimo_saldo, ultimo_cont_compras, ultimo_cont_ventas = guardar_valores(saldo, cont_compras, cont_ventas)
+                # Es lo mismo que hacer esto...
+                # ultimo_saldo = saldo
+                # ultimo_cont_compras = cont_compras
+                # ultimo_cont_ventas = cont_ventas
+
+                saldo, cont_compras, cont_ventas = resetear_saldo(saldo, cont_compras, cont_ventas)
+                # Es lo mismo que hacer esto...
+                # print(f"Saldo anterior = {saldo:.2f} ({cont_compras} compras y {cont_ventas} ventas)")
+                # saldo = 0
+                # cont_compras = 0
+                # cont_ventas = 0
+
+            elif comando == "deshacer":
+                saldo, cont_compras, cont_ventas = guardar_valores(ultimo_saldo, ultimo_cont_compras, ultimo_cont_ventas)
+                # Es lo mismo que hacer esto...
+                # saldo = ultimo_saldo
+                # cont_compras = ultimo_cont_compras
+                # cont_ventas = ultimo_cont_ventas
+                print("Última operación deshecha.")
+
+            else:
+                encuentra_fin = True
+
+        else:
+            mostrar_mensaje_error()
+
 
             
 if __name__ == "__main__":

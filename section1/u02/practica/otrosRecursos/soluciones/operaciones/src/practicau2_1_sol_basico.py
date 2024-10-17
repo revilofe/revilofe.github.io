@@ -1,5 +1,5 @@
 
-COMANDOS = ["compra", "venta", "saldo", "reset", "deshacer", "fin"]
+COMANDOS = ("compra", "venta", "saldo", "reset", "deshacer", "fin")
 MENSAJE_ERROR = "*ERROR* Entrada inválida"
 
 

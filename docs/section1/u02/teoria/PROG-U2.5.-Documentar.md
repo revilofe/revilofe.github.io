@@ -13,7 +13,7 @@ tags:
     - Software
     - Documentar
 ---
-## Documentar el código en Python
+## 2.5. Documentar el código en Python
 
 Intentaremos explicar como documentar el código de Python. Ya sea un script pequeño o un proyecto grande, ya sea un [principiante](https://realpython.com/python-beginner-tips/) o un Pythonista experimentado.
 
@@ -24,7 +24,7 @@ La unidad se divide en cuatro secciones principales:
 3. **Documentación de la base de código de Python mediante Docstrings:** una inmersión profunda en docstrings para clases, métodos de clase, funciones, módulos, paquetes y scripts, así como lo que se debe encontrar dentro de cada uno
 4. **Documentación de sus proyectos de Python:** los elementos necesarios y lo que deben contener para sus proyectos de Python
 
-### Por qué es tan importante documentar su código
+### 1. Por qué es tan importante documentar su código
 
 Es posible que ya te hayas dado cuenta de la importancia de documentar el código. Pero si no, ten en cuenta esto que dijo Guido en una [PyCon](https://realpython.com/pycon-guide/), creador del Python:
 
@@ -43,7 +43,7 @@ it** “
 >
 > —Daniel *[Procida](https://www.divio.com/en/blog/documentation/)*
 
-### Comentar vs Documentar Código
+### 2. Comentar vs Documentar Código
 
 Antes de que podamos analizar cómo documentar su código Python, debemos distinguir la documentación de los comentarios.
 
@@ -55,7 +55,7 @@ En general, **comentar código** es describirlo para los desarrolladores. La aud
 
 Por otra parte, **documentar código** es describir su uso y funcionalidad a los usuarios que harán uso de este. Si bien puede ser útil en el proceso de desarrollo, la principal audiencia prevista son los usuarios. Seguidamente veremos cómo y cuándo comentar su código.
 
-#### Conceptos básicos durante los comentarios en el código
+#### 2.1. Conceptos básicos durante los comentarios en el código
 
 En python, los comentarios se crean haciendo uso del carácter `#` al comienzo de la linea. Deben ser declaraciones breves de no más de unas pocas frases. Aquí hay un ejemplo simple:
 
@@ -112,7 +112,7 @@ Los comentarios a su código deben ser breves y clarificadores. Evite el uso de 
 
 Recuerda que los comentarios están diseñados para el lector, incluido tu mismo, para ayudarlo a comprender el propósito y el diseño del software.
 
-#### Comentarios a través de las sugerencias de tipo (Python 3.5+)
+#### 2.2. Comentarios a través de las sugerencias de tipo (Python 3.5+)
 
 La sugerencia de tipo se agregó a Python 3.5 y es una forma adicional para ayudar a los lectores. Aplica la cuarta sugerencia de Jeff, ya que permite al desarrollador diseñar y explicar partes del código sin comentar. He aquí un ejemplo rápido:
 
@@ -123,11 +123,11 @@ def hello_name(name: str) -> str:
 
 Al examinar la sugerencia de tipo, inmediatamente entiendes que la función espera que la entrada `name`sea de tipo `str`. También entienes que la salida esperada de la función será de tipo `str`. Si bien las sugerencias de tipo ayudan a reducir los comentarios, tenga en cuenta que hacerlo también puede generar trabajo adicional al crear o actualizar la documentación de su proyecto.
 
-### Documentar su base de código de Python usando Docstrings
+### 3. Documentar su base de código de Python usando Docstrings
 
 Ahora que hemos aprendido a comentar, profundicemos en la documentación del código de Python. Veremos como usar las cadenas de documentación `docstring` y cómo usarlas para la documentación:
 
-#### Cadenas de documentación `docstring`
+#### 3.1. Cadenas de documentación `docstring`
 
 La documentación de código Python se centra en cadenas de documentación. La propiedad `docstring` viene predefinida en los objetos y , cuando se configuran correctamente, pueden ayudar a los usuarios de este código a entender los objetos, y al desarrollador a tener documentado el proyecto. Junto con las cadenas de documentación, Python también tiene la función `help()` que imprime la cadena de documentación de los objetos en la consola. He aquí un ejemplo rápido:
 
@@ -216,7 +216,7 @@ say_hello(name)
 
 Ya que conoces el trasfondo de las docstrings. Ahora es el momento de conocer los diferentes tipos de docstrings y qué información deben contener.
 
-#### Tipos de cadenas de documentos
+#### 3.2. Tipos de cadenas de documentos
 
 Las convenciones de docstring se describen en [PEP 257](https://www.python.org/dev/peps/pep-0257/). Su propósito es proporcionar a sus usuarios una breve descripción general del objeto. Deben mantenerse lo suficientemente concisos para que sean fáciles de mantener, pero aún así ser lo suficientemente elaborados para que los nuevos usuarios entiendan su propósito y cómo usar el objeto documentado.
 
@@ -251,7 +251,7 @@ Las Docstrings deben tener la misma longitud que la recomendad para los comentar
 * **Docstrings de paquetes y módulos:** paquetes, módulos y funciones
 * **Script Docstrings:** Script y funciones
 
-##### Docstrings de clase
+##### 3.2.1. Docstrings de clase
 
 Las Docstrings de clase se crean para la clase en sí, así como para cualquier método de clase. Se colocan inmediatamente después de la clase o el método de clase con una sangría de un nivel:
 
@@ -351,7 +351,7 @@ class Animal:
         print(self.says_str.format(name=self.name, sound=out_sound))
 ```
 
-##### Docstrings de paquetes y módulos
+##### 3.2.2. Docstrings de paquetes y módulos
 
 Las **docstring del paquete** deben colocarse en la parte superior del archivo `__init__.py` del paquete. Esta cadena de documentación debe enumerar los módulos y subpaquetes que exporta el paquete.
 
@@ -369,7 +369,7 @@ La **docstring para una función de módulo** debe incluir los mismos elementos 
 * Cualquier excepción que se plantee
 * Cualquier restricción sobre cuándo se puede llamar a la función
 
-##### Docstrings de scripts
+##### 3.2.3. Docstrings de scripts
 
 Los scripts se consideran ejecutables de un solo archivo que se ejecutan desde la consola. Las docstrings para los scripts se colocan en la parte superior del archivo y deben documentarse lo suficientemente bien como para que los usuarios puedan tener una comprensión suficiente de cómo usar el script. Debería poder usarse para obtener un mensaje de como "usar el script", cuando el usuario pasa incorrectamente un parámetro o usa la opción `-h` al ejecutar el script.
 
@@ -443,7 +443,7 @@ if __name__ == "__main__":
     main()
 ```
 
-#### Formatos de docstrings
+#### 3.3. Formatos de docstrings
 
 Es posible que haya notado en los ejemplos vistos hasta ahora de docstrings que existían elementos comunes: `Arguments`, `Returns`y `Attributes`. Hay formatos específicos de docstrings que se pueden usar para ayudar a los analizadores de docstrings y a los usuarios a tener un formato familiar y conocido. El formato utilizado para los docstrings sigue el estilo NumPy/SciPy. Algunos de los formatos más comunes son los siguientes:
 
@@ -457,7 +457,7 @@ Es posible que haya notado en los ejemplos vistos hasta ahora de docstrings que 
 
 La selección del formato a seguir en la creación de las docstrings es decisión personal, pero una vez eligida una, hay que ceñirse al mismo formato en todo el documento/proyecto. Los siguientes son ejemplos de cada tipo para darle una idea de cómo se ve cada formato de documentación.
 
-##### Ejemplo de docstrings de Google
+##### 3.3.1. Ejemplo de docstrings de Google
 
 ```Python
 """Gets and prints the spreadsheet's header columns
@@ -472,7 +472,7 @@ Returns:
 """
 ```
 
-##### Ejemplo de texto reestructurado
+##### 3.3.2. Ejemplo de texto reestructurado
 
 ```Python
 """Gets and prints the spreadsheet's header columns
@@ -487,7 +487,7 @@ Returns:
 """
 ```
 
-##### Ejemplo de cadenas de documentación NumPy/SciPy
+##### 3.3.3. Ejemplo de cadenas de documentación NumPy/SciPy
 
 ```Python
 """Gets and prints the spreadsheet's header columns
@@ -506,7 +506,7 @@ list
 """
 ```
 
-##### Ejemplo de epitexto
+##### 3.3.4. Ejemplo de epitexto
 
 ```Python
 """Gets and prints the spreadsheet's header columns
@@ -521,7 +521,7 @@ list
 """
 ```
 
-### Documentación de sus proyectos de Python
+### 4. Documentación de sus proyectos de Python
 
 Los proyectos de Python vienen en todo tipo de formas, tamaños y propósitos. La forma en que documente su proyecto debe adaptarse a su situación específica. Ten en cuenta quiénes van a ser los usuarios de tu proyecto y adáptate a sus necesidades. Dependiendo del tipo de proyecto, se recomiendan ciertos aspectos de la documentación. El [diseño](https://realpython.com/python-application-layouts/) general del proyecto y su documentación debe ser el siguiente:
 
@@ -538,7 +538,7 @@ project_root/
 
 Los proyectos se pueden subdividir generalmente en tres tipos principales: Privado, Compartido y Público/Código Abierto.
 
-#### Proyectos Privados
+#### 4.1. Proyectos Privados
 
 Los proyectos privados son proyectos destinados solo para uso personal y, por lo general, no se comparten con otros usuarios o desarrolladores. La documentación puede ser bastante ligera en este tipo de proyectos. La documentación recomendada para este tipo de proyectos, según sea necesario:
 
@@ -547,7 +547,7 @@ Los proyectos privados son proyectos destinados solo para uso personal y, por lo
 
 Recuerda, aunque los proyectos privados están destinados a ti, también eres considerado un usuario. Piense en cualquier cosa que pueda resultarle confusa en el futuro y asegúrese de capturarla en comentarios, docstring o el archivo Readme.md.
 
-#### Proyectos Compartidos
+#### 4.2. Proyectos Compartidos
 
 Los proyectos compartidos son proyectos en los que colaboras con otras personas en el desarrollo y/o uso del proyecto. El "cliente" o usuario del proyecto sigue siendo usted mismo y otros desarrolladores que utilizan el proyecto.
 
@@ -557,7 +557,7 @@ La documentación debe ser un poco más rigurosa de lo que debe ser para un proy
 * **`examples.py`:** un archivo de secuencia de comandos de Python que brinda ejemplos simples de cómo usar los proyectos.
 * **Cómo contribuir:** esto debe incluir cómo los nuevos contribuyentes al proyecto pueden comenzar a contribuir.
 
-#### Proyectos públicos y de código abierto
+#### 4.3. Proyectos públicos y de código abierto
 
 Los proyectos públicos y de código abierto son proyectos que están destinados a compartirse con un gran grupo de usuarios y pueden involucrar a grandes equipos de desarrollo. Estos proyectos deben otorgar una prioridad tan alta a la documentación del proyecto como al desarrollo real del proyecto en sí. La documentación recomendada para estos proyectos es las siguiente:
 
@@ -567,7 +567,7 @@ Los proyectos públicos y de código abierto son proyectos que están destinados
 * **Licencia:** un archivo de texto sin formato que describe la licencia que utiliza su proyecto. Especialmente para proyectos de código abierto, considere agregar esto.
 * **docs:** una carpeta que contiene más documentación. La siguiente sección describe con más detalle qué debe incluirse y cómo organizar el contenido de esta carpeta.
 
-##### Las cuatro secciones principales de la carpeta `docs`
+##### 4.3.1. Las cuatro secciones principales de la carpeta `docs`
 
 Daniele Procida dio una maravillosa [charla sobre PyCon 2017](https://www.youtube.com/watch?v=azf6yzuJt54) y una publicación de [blog posterior](https://www.divio.com/en/blog/documentation/) sobre la documentación de proyectos de Python. Menciona que todos los proyectos deben tener las siguientes cuatro secciones principales para ayudarlo a enfocar su trabajo:
 
@@ -586,7 +586,7 @@ La siguiente tabla muestra cómo todas estas secciones se relacionan entre sí, 
 
 Al final, deseas asegurarte de que los usuarios tiene acceso a las respuestas a cualquier pregunta que puedan tener. Al organizar el proyecto de esta manera, podrás responder esas preguntas fácilmente y en un formato que podrán navegar rápidamente.
 
-#### Herramientas y recursos de documentación
+#### 4.4. Herramientas y recursos de documentación
 
 Documentar su código, especialmente proyectos grandes, puede ser desalentador. Afortunadamente, existen algunas herramientas y referencias para comenzar:
 
@@ -618,7 +618,7 @@ A veces, la mejor forma de aprender es imitando a los demás. Aquí hay algunos 
 * **Haga clic en:** [Documentos](http://click.pocoo.org/dev/) ( [Fuente](https://github.com/pallets/click/tree/master/docs) )
 * **Pandas:** [Documentos](http://pandas.pydata.org/pandas-docs/stable/) ( [Fuente](https://github.com/pandas-dev/pandas/tree/master/doc) )
 
-### ¿Dónde empiezo?
+### 5. ¿Dónde empiezo?
 
 La documentación de proyectos tiene una progresión sencilla:
 

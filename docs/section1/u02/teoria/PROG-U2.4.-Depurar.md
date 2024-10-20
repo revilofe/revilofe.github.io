@@ -13,18 +13,19 @@ tags:
     - Software
     - Depurar
 ---
-## Depurar (Debug) un programa
+## 2.4. Depurar (Debug) un programa
 
-### ¿Qué es hacer debug o depurar?
-En ocasiones, cuando realizamos un programa, el resultado obtenido no es el esperado, es decir, hemos cometido algún error de cálculo, el cual hace que el programa funcione pero no lo haga correctamente. En estas ocasiones es muy importante depurar el programa.
+### 1. ¿Qué es hacer debug o depurar?
+En ocasiones, cuando realizamos un programa, el resultado obtenido no es el esperado, es decir, hemos cometido algún error de cálculo, el cual hace que el programa funcione pero no lo haga correctamente. En estas ocasiones es muy importante depurar el programa, encontrar el origen del error.
 
 En la depuración lo que hacemos es ejecutar el programa **paso a paso**, así podemos ver las instrucciones que se están ejecutando, además de poder ver los valores que van tomando las variables. Esto nos sirve de ayuda para ver las variables, los valores que van tomando, las instrucciones que se están ejecutando y así poder ver dónde hemos cometido un error.
 
 Para depurar, podemos usar las herramientas que viene en los entornos de desarrollo integrados/editores, como Visual Code, o usar herramientas que vienen con el interprete de Python, como [Pdb](https://realpython.com/python-debugging-pdb/)
 
 A continuación veremos un ejemplo del uso de Visual Code 
-### Ejemplo de uso de Visual Code
-En Visual Code, el editor de texto que vamos a utilizar, para poder depurar un programa en Python se necesita instalar el plugin correspondiente.
+
+### 2. Ejemplo de uso de Visual Code
+En Visual Code, el editor de texto que vamos a utilizar, para poder depurar un programa en Python se necesita instalar el plugin correspondiente. Para ello, vamos a la opción **Extensions** y buscamos **Python**. Nos aparecerá una lista de plugins, y seleccionamos el que se llama **Python**.
 
 Una vez instalado este plugin, vamos a la opción **Debug**, que se encuentra en la columna izquierda de Visual Code, así podemos empezar a depurar nuestro programa.
 
@@ -100,7 +101,7 @@ Si estamos seguros que dicha función se ejecuta sin problemas y no necesitemos 
 
 > Step over: Ejecuta una sentencia y en el caso de ser la llamada a una función, no entra dentro de esta para depurarla.
 
-Si realmente queremos ver cómo se ejecuta esa función, pulsamos **F11** y la ejecución iría la función, calcularía el máximo y el mínimo de la lista y nos devolvería esos valores.
+Si realmente queremos ver cómo se ejecuta esa función, pulsamos **F11** y la ejecución entraría en la función, calcularía el máximo y el mínimo de la lista y nos devolvería esos valores.
 
 Por último, en el apartado **Calla Stack** podremos ver la pila de llamadas que se ha hecho en nuestro programa, pudiendo hacer un seguimiento de qué función ha llamado a qué otra función.
 

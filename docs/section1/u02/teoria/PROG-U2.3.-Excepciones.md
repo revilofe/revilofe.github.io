@@ -12,27 +12,27 @@ categories:
 tags:
     - Software
 ---
-## Captura de excepciones
+## 2.3. Captura de excepciones
 
 Las excepciones y los errores son dos conceptos fundamentales en programación, pero tienen significados distintos.
 
-### Diferencia entre errores y excepciones
+### 1. Diferencia entre errores y excepciones
 
 La principal diferencia entre errores y excepciones radica en su naturaleza y cómo afectan el flujo de ejecución del programa. Los errores indican problemas en el código que **deben ser corregidos**, mientras que las excepciones son **situaciones inesperadas** que pueden ser manejadas para asegurar que el programa siga funcionando sin interrupciones.
 
-#### Errores
+#### 1.1. Errores
 
 Los errores, también conocidos como bugs, son problemas en el código que impiden que el programa funcione correctamente.
 Pueden ser de diferentes tipos, como errores de sintaxis, errores lógicos (cuando el programa produce resultados incorrectos debido a un error en el algoritmo), o errores de tiempo de ejecución (que ocurren mientras el programa se está ejecutando).
 Los errores pueden ser causados por una variedad de razones, incluyendo lógica incorrecta, mal uso de funciones o librerías, o incluso problemas con la configuración del entorno de desarrollo.
 
-#### Excepciones:
+#### 1.2. Excepciones:
 
 Las excepciones son eventos anómalos o inusuales que ocurren durante la ejecución de un programa y que afectan el flujo normal del mismo.
-A diferencia de los errores, las excepciones no siempre indican un fallo en el código. Por ejemplo, si un programa intenta abrir un archivo que no existe, esto generará una excepción (FileNotFoundError). Sin embargo, esto no es un error en el código en sí, sino una situación inesperada que el programa debe saber cómo manejar.
+A diferencia de los errores, las excepciones no siempre indican un fallo en el código. Por ejemplo, si un programa intenta abrir un archivo que no existe, esto generará una excepción `FileNotFoundError`. Sin embargo, esto no es un error en el código en sí, sino una situación inesperada que el programa debe saber cómo manejar.
 Las excepciones en Python están diseñadas para gestionar este tipo de situaciones y permitir que el programa continúe su ejecución en lugar de detenerse abruptamente.
 
-### Uso de try y except
+### 2. Uso de try y except
 
 Hemos visto varios casos de código en donde usábamos las funciones `input` e `int` para leer y analizar un número entero introducido por el usuario. También vimos lo poco seguro que podía llegar a resultar hacer algo así:
 
@@ -77,7 +77,7 @@ Traceback (most recent call last):
 ValueError: invalid literal for float(): fred
 ```
 
-Existen estructuras de ejecución condicional dentro de Python para manejar este tipo de errores/excepciones esperados e inesperados, llamadas `try / except`. La idea de `try` y `except` es que si se sabe que cierta secuencia de instrucciones puede generar un problema, sea posible añadir ciertas sentencias para que sean ejecutadas en caso de error. Estas sentencias extras (el bloque except) serán ignoradas si no se produce ningún error.
+Existen estructuras de ejecución condicional dentro de Python para manejar este tipo de errores/excepciones esperados e inesperados, llamadas `try / except`. La idea de `try` y `except` es que si se sabe que cierta secuencia de instrucciones puede generar un problema, sea posible añadir ciertas sentencias para que sean ejecutadas en caso de error. Estas sentencias extras (el bloque `except`) serán ignoradas si no se produce ningún error.
 
 Puedes pensar en la característica `try` y `except` de Python como una “póliza de seguros” en una secuencia de sentencias.
 
@@ -111,9 +111,9 @@ Por favor, introduzca un número
 
 Gestionar una excepción con una sentencia `try` recibe el nombre de *capturar una excepción*. En este ejemplo, la cláusula `except` muestra un mensaje de error. En general, capturar una excepción te da la oportunidad de corregir el problema, volverlo a intentar o, al menos, terminar el programa con elegancia.
 
-### Capturar excepciones concretas
+### 3. Capturar excepciones concretas
 
-Es posible escribir programas que capturen y manejen determnadas excepciones.Durante el siguiente ejemplo, se le pide al usuario que ingrese un numero hasta que se haya ingresado un número entero válido, aunque el usuario podrá interrumpir el programa (puede variar las formas entres sistemas operativos);En linux/windows se utiliza Control-C y esta interrupción generara la excepción.[`KeyboardInterrupt`](https://docs.python.org/3/library/exceptions.html#KeyboardInterrupt)
+Es posible escribir programas que capturen y manejen determinadas excepciones. Durante el siguiente ejemplo, se le pide al usuario que ingrese un numero hasta que se haya ingresado un número entero válido, aunque el usuario podrá interrumpir el programa (puede variar las formas entre sistemas operativos); En linux/windows se utiliza Control-C y esta interrupción generará la excepción[`KeyboardInterrupt`](https://docs.python.org/3/library/exceptions.html#KeyboardInterrupt)
 
 ```Python
 >>>x = None
@@ -126,7 +126,7 @@ Es posible escribir programas que capturen y manejen determnadas excepciones.Dur
 
 Ten en cuenta que se a la cláusula except le puedes indicar que gestione varias excepciones, añadiendo el nombre de la excepción a continuación de la otra. Además, se pueden añadir varias cláusulas `except` cada diferenciar los bloques que gestionan la excepción en función de la excepción que se ha producido.
 
-### Lanzar excepciones
+### 4. Lanzar excepciones
 
 La declaración [`raise`](https://docs.python.org/3/reference/simple_stmts.html#raise) permite al programador forzar que ocurra una excepción específica.
 
@@ -160,8 +160,8 @@ Traceback (most recent call last):
 NameError: HiThere
 ```
 
-### Testear
-También podemos testear que se lanza una determinada excepción cuando esperamos que se lance. Supongamos que tienes una función llamada dividir en un archivo `calculadora.py` que debería lanzar una excepción `ZeroDivisionError` cuando se intenta dividir por cero. Aquí está cómo escribirías la prueba:
+### 5. Testear
+También podemos testear que se lanza una determinada excepción cuando esperamos que se lance. Supongamos que tienes una función llamada dividir en un archivo `calculadora.py` que debería lanzar una excepción `ZeroDivisionError` cuando se intenta dividir por cero. A continuación puedes ver cómo escribirías la prueba:
 
 ```Python
 # Archivo: test_calculadora.py
@@ -182,7 +182,7 @@ En este caso, si la función `dividir` está correctamente implementada y lanza 
 Este es un ejemplo simple, pero pytest es una herramienta muy versátil que puede manejar una amplia gama de situaciones de prueba. Puedes escribir pruebas para casos normales, casos de borde, y muchas otras situaciones que desees probar en tu código.
 
 
-### Ejemplo completo
+### 6. Ejemplo completo
 
 ```Python
 
@@ -222,13 +222,13 @@ def test_fahr2cel():
 ```
 
 
-### Actividades
+### 7. Actividades
 
 **Actividad 1**: Escribe un programa que capture la excepción división entre cero. Tendrá que mostar el mensaje del error capturado.
 
 **Actividad 2**: Reescribe el programa conversor de temperaturas para que lea repetidamente la temperatura hasta que sea correcta, debe detectar los fallos usando `try` y `except`.
 
-### Fuente
+## Fuente
 
 * [Pagina de Juan Jose Lozano Gomez sobre Python](https://j2logo.com/)
 * [Aprende con Alf](https://aprendeconalf.es/)

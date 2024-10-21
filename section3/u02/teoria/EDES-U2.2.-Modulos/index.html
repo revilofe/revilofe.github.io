@@ -6,28 +6,34 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Gestión de módulos y extensiones">
+      
       
         <meta name="author" content="Eduardo Fdez">
       
       
-        <link rel="canonical" href="https://revilofe.github.io/section1/u06/practica/otrosRecursos/ej02_SOLID_SRP/">
+        <link rel="canonical" href="https://revilofe.github.io/section3/u02/teoria/EDES-U2.2.-Modulos/">
       
       
+        <link rel="prev" href="../EDES-U2.1.-IDEs/">
       
       
-      <link rel="icon" href="../../../../../assets/favicon-96x96.png">
+        <link rel="next" href="../EDES-U2.3.-Personalizacion/">
+      
+      
+      <link rel="icon" href="../../../../assets/favicon-96x96.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
-        <title>ej02 SOLID SRP - R Z O</title>
+        <title>UD 2 - 2.2 Gestión de módulos y extensiones  - R Z O</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -57,7 +63,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -93,7 +99,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ejercicio-02-sistema-de-biblioteca" class="md-skip">
+        <a href="#22-gestion-de-modulos-y-extensiones" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -113,9 +119,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="../../../../.." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
+    <a href="../../../.." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
       
-  <img src="../../../../../assets/ms-icon-144x144.png" alt="logo">
+  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -132,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ej02 SOLID SRP
+              UD 2 - 2.2 Gestión de módulos y extensiones 
             
           </span>
         </div>
@@ -240,7 +246,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
     
@@ -259,7 +265,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../" class="md-tabs__link">
+        <a href="../../../../section1/" class="md-tabs__link">
           
   
     
@@ -275,11 +281,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../../section3/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
           
   
     
@@ -299,7 +307,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../section2/" class="md-tabs__link">
+        <a href="../../../../section2/" class="md-tabs__link">
           
   
     
@@ -317,7 +325,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../blog/" class="md-tabs__link">
+      <a href="../../../../blog/" class="md-tabs__link">
         
   
     
@@ -334,7 +342,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../tags/" class="md-tabs__link">
+      <a href="../../../../tags/" class="md-tabs__link">
         
   
     
@@ -351,7 +359,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../about/" class="md-tabs__link">
+      <a href="../../../../about/" class="md-tabs__link">
         
   
     
@@ -391,9 +399,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
+    <a href="../../../.." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
       
-  <img src="../../../../../assets/ms-icon-144x144.png" alt="logo">
+  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
 
     </a>
     R Z O
@@ -420,7 +428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -481,7 +489,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../" class="md-nav__link ">
+            <a href="../../../../section1/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -563,7 +571,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u01/" class="md-nav__link ">
+            <a href="../../../../section1/u01/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -596,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u01/teoria/PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
+      <a href="../../../../section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -617,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u01/teoria/PROG-U1.1.1-Pseudocodigo/" class="md-nav__link">
+      <a href="../../../../section1/u01/teoria/PROG-U1.1.1-Pseudocodigo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -638,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u01/practica/PROG-U1.-Practica001/" class="md-nav__link">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -659,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u01/teoria/PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
+      <a href="../../../../section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -680,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u01/teoria/PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
+      <a href="../../../../section1/u01/teoria/PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -701,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u01/practica/PROG-U1.-Practica002/" class="md-nav__link">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -722,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u01/practica/PROG-U1.-Practica003/" class="md-nav__link">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -743,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u01/practica/PROG-U1.-Practica004/" class="md-nav__link">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -764,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u01/teoria/PROG-U1.4.-Pytest/" class="md-nav__link">
+      <a href="../../../../section1/u01/teoria/PROG-U1.4.-Pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -785,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u01/practica/PROG-U1.-Practica005/" class="md-nav__link">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica005/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -806,7 +814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u01/practica/PROG-U1.-Practica006/" class="md-nav__link">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica006/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -827,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u01/practica/PROG-U1.-Practica007/" class="md-nav__link">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica007/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -901,7 +909,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u02/" class="md-nav__link ">
+            <a href="../../../../section1/u02/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -934,7 +942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
+      <a href="../../../../section1/u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -955,7 +963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -976,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
+      <a href="../../../../section1/u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -997,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1018,7 +1026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
+      <a href="../../../../section1/u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1039,7 +1047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1060,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
+      <a href="../../../../section1/u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1081,7 +1089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1102,7 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
+      <a href="../../../../section1/u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1123,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/teoria/PROG-U2.5.1.-DeberiasDocumentar/" class="md-nav__link">
+      <a href="../../../../section1/u02/teoria/PROG-U2.5.1.-DeberiasDocumentar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1201,7 +1209,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u03/" class="md-nav__link ">
+            <a href="../../../../section1/u03/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1234,7 +1242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/PROG-U3.0.-Cadenas/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.0.-Cadenas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1255,7 +1263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/practica/PROG-U3.-Practica000/" class="md-nav__link">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica000/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1276,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/PROG-U3.1.-Listas/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.1.-Listas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1297,7 +1305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/PROG-U3.2.-Tuplas/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.2.-Tuplas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1318,7 +1326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/practica/PROG-U3.-Practica001/" class="md-nav__link">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1339,7 +1347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/PROG-U3.3.-Diccionarios/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.3.-Diccionarios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1360,7 +1368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/practica/PROG-U3.-Practica002/" class="md-nav__link">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1381,7 +1389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/PROG-U3.4.-Conjuntos/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.4.-Conjuntos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1402,7 +1410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/practica/PROG-U3.-Practica003/" class="md-nav__link">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1423,7 +1431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/PROG-U3.5.-Funciones/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.5.-Funciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1444,7 +1452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/PROG-U3.6.-OtrosAmpliacion1/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.6.-OtrosAmpliacion1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1465,7 +1473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/PROG-U3.7.-OtrosAmpliacion2/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.7.-OtrosAmpliacion2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1543,7 +1551,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u04/" class="md-nav__link ">
+            <a href="../../../../section1/u04/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1576,7 +1584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u04/teoria/PROG-U4.1.-kotlin/" class="md-nav__link">
+      <a href="../../../../section1/u04/teoria/PROG-U4.1.-kotlin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1597,7 +1605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u04/practica/PROG-U4.-Practica001/" class="md-nav__link">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1618,7 +1626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u04/teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
+      <a href="../../../../section1/u04/teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1639,7 +1647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u04/teoria/PROG-U4.2.1.-kotlin-aclaraciones/" class="md-nav__link">
+      <a href="../../../../section1/u04/teoria/PROG-U4.2.1.-kotlin-aclaraciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1660,7 +1668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u04/teoria/PROG-U4.3.-POO/" class="md-nav__link">
+      <a href="../../../../section1/u04/teoria/PROG-U4.3.-POO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1681,7 +1689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u04/teoria/PROG-U4.3.-kotlinPOO/" class="md-nav__link">
+      <a href="../../../../section1/u04/teoria/PROG-U4.3.-kotlinPOO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1702,7 +1710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u04/teoria/PROG-U4.4.-kotlinResumen/" class="md-nav__link">
+      <a href="../../../../section1/u04/teoria/PROG-U4.4.-kotlinResumen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1723,7 +1731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u04/practica/PROG-U4.-Practica002/" class="md-nav__link">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1744,7 +1752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u04/practica/PROG-U4.-Practica003/" class="md-nav__link">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1765,7 +1773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u04/practica/PROG-U4.-Practica004/" class="md-nav__link">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1786,7 +1794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u04/practica/PROG-U4.-Practica005/" class="md-nav__link">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica005/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1807,7 +1815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u04/practica/PROG-U4.-Practica006/" class="md-nav__link">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica006/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1869,7 +1877,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u05/" class="md-nav__link ">
+            <a href="../../../../section1/u05/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1902,7 +1910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u05/teoria/PROG-U5.1.-clasesYobjetos/" class="md-nav__link">
+      <a href="../../../../section1/u05/teoria/PROG-U5.1.-clasesYobjetos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1923,7 +1931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u05/teoria/PROG-U5.2.-VisibilidadEnClases/" class="md-nav__link">
+      <a href="../../../../section1/u05/teoria/PROG-U5.2.-VisibilidadEnClases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1944,7 +1952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u05/teoria/PROG-U5.3.-Herencia/" class="md-nav__link">
+      <a href="../../../../section1/u05/teoria/PROG-U5.3.-Herencia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1965,7 +1973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u05/practica/PROG-U5.-Practica001/" class="md-nav__link">
+      <a href="../../../../section1/u05/practica/PROG-U5.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2027,7 +2035,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../../../section1/u06/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2060,7 +2068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../teoria/PROG-U6.1.-jerarquiaDeClases/" class="md-nav__link">
+      <a href="../../../../section1/u06/teoria/PROG-U6.1.-jerarquiaDeClases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2081,7 +2089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../teoria/PROG-U6.2.-ejemploYActividad/" class="md-nav__link">
+      <a href="../../../../section1/u06/teoria/PROG-U6.2.-ejemploYActividad/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2102,7 +2110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../teoria/PROG-U6.3.-principiosSOLID/" class="md-nav__link">
+      <a href="../../../../section1/u06/teoria/PROG-U6.3.-principiosSOLID/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2123,7 +2131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../teoria/PROG-U6.4.-comentariosYDocumentacion/" class="md-nav__link">
+      <a href="../../../../section1/u06/teoria/PROG-U6.4.-comentariosYDocumentacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2191,7 +2199,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u07/" class="md-nav__link ">
+            <a href="../../../../section1/u07/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2224,7 +2232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
+      <a href="../../../../section1/u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2245,7 +2253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
+      <a href="../../../../section1/u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2266,7 +2274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u07/teoria/PROG-U7.2.1.-ConsolaTecladoExpansion/" class="md-nav__link">
+      <a href="../../../../section1/u07/teoria/PROG-U7.2.1.-ConsolaTecladoExpansion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2287,7 +2295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
+      <a href="../../../../section1/u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2308,7 +2316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
+      <a href="../../../../section1/u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2329,7 +2337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u07/teoria/PROG-U7.4.1.-TextFile/" class="md-nav__link">
+      <a href="../../../../section1/u07/teoria/PROG-U7.4.1.-TextFile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2350,7 +2358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
+      <a href="../../../../section1/u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2414,7 +2422,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u09/" class="md-nav__link ">
+            <a href="../../../../section1/u09/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2447,7 +2455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u09/teoria/PROG-U9.1.-AccesoBBDD/" class="md-nav__link">
+      <a href="../../../../section1/u09/teoria/PROG-U9.1.-AccesoBBDD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2468,7 +2476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u09/teoria/PROG-U9.2.-JDBC-1/" class="md-nav__link">
+      <a href="../../../../section1/u09/teoria/PROG-U9.2.-JDBC-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2489,7 +2497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u09/teoria/PROG-U9.3.-JDBC-2/" class="md-nav__link">
+      <a href="../../../../section1/u09/teoria/PROG-U9.3.-JDBC-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2510,7 +2518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u09/teoria/PROG-U9.4.-DAO/" class="md-nav__link">
+      <a href="../../../../section1/u09/teoria/PROG-U9.4.-DAO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2531,7 +2539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u09/teoria/PROG-U9.5.-OtrosAspectos/" class="md-nav__link">
+      <a href="../../../../section1/u09/teoria/PROG-U9.5.-OtrosAspectos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2564,6 +2572,8 @@
       
   
   
+    
+  
   
   
     
@@ -2580,23 +2590,24 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section3/" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2607,13 +2618,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Entornos de desarrollo
@@ -2656,10 +2667,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2670,7 +2684,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section3/u01/" class="md-nav__link ">
+            <a href="../../../u01/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2681,7 +2695,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -2703,7 +2717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.1.-Software-PC/" class="md-nav__link">
+      <a href="../../../u01/teoria/EDES-U1.1.-Software-PC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2724,7 +2738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.2.-CodigoFuenteObjetoEjecutable/" class="md-nav__link">
+      <a href="../../../u01/teoria/EDES-U1.2.-CodigoFuenteObjetoEjecutable/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2745,7 +2759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.3.-CodigoIntermedio/" class="md-nav__link">
+      <a href="../../../u01/teoria/EDES-U1.3.-CodigoIntermedio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2766,7 +2780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.4.-Traductores/" class="md-nav__link">
+      <a href="../../../u01/teoria/EDES-U1.4.-Traductores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2787,7 +2801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.5.-Lenguajes/" class="md-nav__link">
+      <a href="../../../u01/teoria/EDES-U1.5.-Lenguajes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2808,7 +2822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.6.-FuncionalidadesHerramientas/" class="md-nav__link">
+      <a href="../../../u01/teoria/EDES-U1.6.-FuncionalidadesHerramientas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2829,7 +2843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/practica/EDES-U1.-Practica010/" class="md-nav__link">
+      <a href="../../../u01/practica/EDES-U1.-Practica010/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2850,7 +2864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/practica/EDES-U1.-Practica011/" class="md-nav__link">
+      <a href="../../../u01/practica/EDES-U1.-Practica011/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2876,6 +2890,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2896,21 +2912,22 @@
       
       
         
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
+          
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section3/u02/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2921,13 +2938,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             U2: Entornos de desarollo integrado
@@ -2943,7 +2960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u02/teoria/EDES-U2.1.-IDEs/" class="md-nav__link">
+      <a href="../EDES-U2.1.-IDEs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2961,10 +2978,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../section3/u02/teoria/EDES-U2.2.-Modulos/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2.2.-Modulos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2973,6 +3008,251 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#22-gestion-de-modulos-y-extensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Gestión de módulos y extensiones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2. Gestión de módulos y extensiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-que-son-los-modulos-y-las-extensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ¿Qué son los módulos y las extensiones?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. ¿Qué son los módulos y las extensiones?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Definición
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ejemplo-practico-de-extensiones-en-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Ejemplo práctico de extensiones en Visual Studio Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-instalacion-de-extensiones-en-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Instalación de extensiones en Visual Studio Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Instalación de extensiones en Visual Studio Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-acceso-al-marketplace-de-extensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Acceso al Marketplace de extensiones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-instalacion-de-una-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Instalación de una extensión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-instalacion-de-multiples-extensiones-para-un-proyecto-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Instalación de múltiples extensiones para un proyecto web
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-gestion-de-modulos-en-jetbrains-intellij-idea-pycharm" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Gestión de módulos en JetBrains (IntelliJ IDEA, PyCharm)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Gestión de módulos en JetBrains (IntelliJ IDEA, PyCharm)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-que-es-un-modulo-en-jetbrains" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. ¿Qué es un módulo en JetBrains?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-instalacion-de-modulos-en-intellij-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Instalación de módulos en IntelliJ IDEA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-instalacion-de-plugins-en-jetbrains-pycharm" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Instalación de plugins en JetBrains (PyCharm)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-desinstalacion-y-actualizacion-de-extensiones-y-modulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Desinstalación y actualización de extensiones y módulos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Desinstalación y actualización de extensiones y módulos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-desinstalacion-en-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Desinstalación en Visual Studio Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-actualizacion-de-extensiones-en-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Actualización de extensiones en Visual Studio Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-gestion-de-modulos-y-plugins-en-jetbrains" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. Gestión de módulos y plugins en JetBrains
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-enlaces-y-recursos-de-interes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Enlaces y recursos de interés
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Enlaces y recursos de interés">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-extensiones-en-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Extensiónes en Visual Studio Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-extensiones-en-herramientas-jetbrains" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Extensiónes en herramientas Jetbrains
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Conclusión
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2985,7 +3265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u02/teoria/EDES-U2.3.-Personalizacion/" class="md-nav__link">
+      <a href="../EDES-U2.3.-Personalizacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3050,7 +3330,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section2/" class="md-nav__link ">
+            <a href="../../../../section2/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3083,7 +3363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
+      <a href="../../../../section2/u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3133,7 +3413,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section2/u01/" class="md-nav__link ">
+            <a href="../../../../section2/u01/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3166,7 +3446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
+      <a href="../../../../section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3187,7 +3467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u01/teoria/IS-U1.2.2.-AnalisiDeRiesgos/" class="md-nav__link">
+      <a href="../../../../section2/u01/teoria/IS-U1.2.2.-AnalisiDeRiesgos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3223,7 +3503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/" class="md-nav__link">
+      <a href="../../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3243,7 +3523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tags/" class="md-nav__link">
+      <a href="../../../../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3263,7 +3543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../about/" class="md-nav__link">
+      <a href="../../../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3303,37 +3583,220 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-02-sistema-de-biblioteca" class="md-nav__link">
+  <a href="#22-gestion-de-modulos-y-extensiones" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 02: Sistema de Biblioteca
+      2.2. Gestión de módulos y extensiones
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Ejercicio 02: Sistema de Biblioteca">
+    <nav class="md-nav" aria-label="2.2. Gestión de módulos y extensiones">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#contexto" class="md-nav__link">
+  <a href="#1-introduccion" class="md-nav__link">
     <span class="md-ellipsis">
-      Contexto:
+      1. Introducción
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tarea" class="md-nav__link">
+  <a href="#2-que-son-los-modulos-y-las-extensiones" class="md-nav__link">
     <span class="md-ellipsis">
-      Tarea:
+      2. ¿Qué son los módulos y las extensiones?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. ¿Qué son los módulos y las extensiones?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Definición
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#solucion-propuesta" class="md-nav__link">
+  <a href="#22-ejemplo-practico-de-extensiones-en-visual-studio-code" class="md-nav__link">
     <span class="md-ellipsis">
-      Solución Propuesta
+      2.2. Ejemplo práctico de extensiones en Visual Studio Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-instalacion-de-extensiones-en-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Instalación de extensiones en Visual Studio Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Instalación de extensiones en Visual Studio Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-acceso-al-marketplace-de-extensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Acceso al Marketplace de extensiones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-instalacion-de-una-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Instalación de una extensión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-instalacion-de-multiples-extensiones-para-un-proyecto-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Instalación de múltiples extensiones para un proyecto web
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-gestion-de-modulos-en-jetbrains-intellij-idea-pycharm" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Gestión de módulos en JetBrains (IntelliJ IDEA, PyCharm)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Gestión de módulos en JetBrains (IntelliJ IDEA, PyCharm)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-que-es-un-modulo-en-jetbrains" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. ¿Qué es un módulo en JetBrains?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-instalacion-de-modulos-en-intellij-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Instalación de módulos en IntelliJ IDEA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-instalacion-de-plugins-en-jetbrains-pycharm" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Instalación de plugins en JetBrains (PyCharm)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-desinstalacion-y-actualizacion-de-extensiones-y-modulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Desinstalación y actualización de extensiones y módulos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Desinstalación y actualización de extensiones y módulos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-desinstalacion-en-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Desinstalación en Visual Studio Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-actualizacion-de-extensiones-en-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Actualización de extensiones en Visual Studio Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-gestion-de-modulos-y-plugins-en-jetbrains" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. Gestión de módulos y plugins en JetBrains
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-enlaces-y-recursos-de-interes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Enlaces y recursos de interés
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Enlaces y recursos de interés">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-extensiones-en-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Extensiónes en Visual Studio Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-extensiones-en-herramientas-jetbrains" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Extensiónes en herramientas Jetbrains
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Conclusión
     </span>
   </a>
   
@@ -3357,167 +3820,136 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+<nav class="md-tags" >
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../../../tags/#edes" class="md-tag md-tag-icon">EDES</a>
+    
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../../../tags/#ide" class="md-tag md-tag-icon">IDE</a>
+    
+  
+</nav>
+
 
   
   
 
 
-  <h1>ej02 SOLID SRP</h1>
+  <h1>2.2.-Modulos</h1>
 
-<h2 id="ejercicio-02-sistema-de-biblioteca">Ejercicio 02: Sistema de Biblioteca<a class="headerlink" href="#ejercicio-02-sistema-de-biblioteca" title="Permanent link">&para;</a></h2>
-<h3 id="contexto"><strong>Contexto:</strong><a class="headerlink" href="#contexto" title="Permanent link">&para;</a></h3>
-<p>Imagina que estás diseñando un sistema para una biblioteca que gestiona libros y préstamos. El sistema necesita soportar operaciones para agregar nuevos libros al inventario, 
-prestar libros a los usuarios, devolver libros y generar informes de libros prestados.</p>
-<p>Inicialmente, se te ocurre crear una clase <code>Libro</code> que maneje todo: las propiedades del libro, la gestión del inventario, los préstamos, las devoluciones y la generación de informes. 
-Rápidamente te das cuenta de que esto viola el Principio de Responsabilidad Única (SRP).</p>
-<h3 id="tarea"><strong>Tarea:</strong><a class="headerlink" href="#tarea" title="Permanent link">&para;</a></h3>
+<h2 id="22-gestion-de-modulos-y-extensiones">2.2. Gestión de módulos y extensiones<a class="headerlink" href="#22-gestion-de-modulos-y-extensiones" title="Permanent link">&para;</a></h2>
+<h3 id="1-introduccion">1. Introducción<a class="headerlink" href="#1-introduccion" title="Permanent link">&para;</a></h3>
+<p>Cuando trabajamos con entornos de desarrollo integrados (IDEs) como <strong>Visual Studio Code</strong> o los de <strong>JetBrains</strong> (IntelliJ IDEA, PyCharm, Fleet), una de sus grandes ventajas es la <strong>flexibilidad</strong>. Esta flexibilidad se consigue a través de los <strong>módulos</strong> y <strong>extensiones</strong> que podemos añadir para personalizar y ampliar las capacidades del IDE. En este punto aprenderemos qué son los módulos y extensiones, cómo instalarlos, gestionarlos y por qué son fundamentales para mejorar nuestra productividad.</p>
+<h3 id="2-que-son-los-modulos-y-las-extensiones">2. ¿Qué son los módulos y las extensiones?<a class="headerlink" href="#2-que-son-los-modulos-y-las-extensiones" title="Permanent link">&para;</a></h3>
+<h4 id="21-definicion">2.1. Definición<a class="headerlink" href="#21-definicion" title="Permanent link">&para;</a></h4>
+<p>Los <strong>módulos</strong> y <strong>extensiones</strong> son pequeños complementos o "plugins" que puedes agregar a tu IDE para dotarlo de nuevas funcionalidades. Estas funcionalidades pueden incluir:</p>
+<ul>
+<li>Soporte para nuevos lenguajes de programación.   </li>
+<li>Herramientas de depuración avanzadas.   </li>
+<li>Integración con frameworks populares (como React o Django).   </li>
+<li>Herramientas de diseño de interfaces gráficas.   </li>
+<li>Conexión con bases de datos o servidores.   </li>
+</ul>
+<p>En resumen, permiten <strong>personalizar</strong> el entorno según tus necesidades, añadiendo únicamente las herramientas que vas a utilizar en tu proyecto. Así, no sobrecargas el IDE con funciones que no necesitas.   </p>
+<h4 id="22-ejemplo-practico-de-extensiones-en-visual-studio-code">2.2. Ejemplo práctico de extensiones en Visual Studio Code<a class="headerlink" href="#22-ejemplo-practico-de-extensiones-en-visual-studio-code" title="Permanent link">&para;</a></h4>
+<p>Visual Studio Code es conocido por ser un <strong>editor</strong> ligero y altamente extensible. Por defecto, cuando lo instalas, solo incluye las herramientas más básicas, pero puedes adaptarlo a casi cualquier tipo de desarrollo añadiendo extensiones.    </p>
+<p><strong>Ejemplo</strong>: Imagina que quieres desarrollar una página web utilizando <strong><abbr title="Hyper Text Markup Language">HTML</abbr>, CSS y JavaScript</strong>. Al abrir Visual Studio Code, notarás que el soporte para estos lenguajes es básico. Sin embargo, al agregar extensiones específicas, puedes tener un entorno completamente optimizado para el desarrollo web.   </p>
+<h3 id="3-instalacion-de-extensiones-en-visual-studio-code">3. Instalación de extensiones en Visual Studio Code<a class="headerlink" href="#3-instalacion-de-extensiones-en-visual-studio-code" title="Permanent link">&para;</a></h3>
+<h4 id="31-acceso-al-marketplace-de-extensiones">3.1. Acceso al Marketplace de extensiones<a class="headerlink" href="#31-acceso-al-marketplace-de-extensiones" title="Permanent link">&para;</a></h4>
 <ol>
-<li>
-<p>Refactoriza este diseño inicial para adherir al Principio de Responsabilidad Única. Considera separar las responsabilidades en diferentes clases, por ejemplo, una clase para 
-manejar las operaciones del inventario, otra para los préstamos de libros, y otra para generar informes, además de mantener la clase <code>Libro</code> centrada en las propiedades del libro.</p>
-</li>
-<li>
-<p>Las características de los libros pueden ser el isbn, titulo, autor y estado (disponible, prestado). El sistema debe permitir agregar, eliminar y comprobar si un libro está disponible (por isbn).</p>
-</li>
-<li>
-<p>En el <code>main</code> utiliza las clases para agregar tres libros, prestar dos de ellos, intentar volver a prestar uno ya prestado y finalmente eliminar un libro del inventario. Los datos de los libros son los siguientes:</p>
-</li>
-<li>
-<p>isbn: 123-456-789, título: Kotlin para principiantes y autor: Juan Pérez.</p>
-</li>
-<li>isbn: 987-654-321, título: Desarrollo Avanzado con Kotlin y autor: Ana López.</li>
-<li>
-<p>isbn: 456-789-123, título: Fundamentos de Programación en Kotlin y autor: Carlos García.</p>
-</li>
-<li>
-<p>Por último, nuestro sistema debe ser capaz de generar los siguientes informes: un informe detallado que incluya todos los libros, un informe con los libros disponibles para préstamo y otro con
-   los que actualmente están prestados. Mostrar en el main los tres informes al final del programa.</p>
+<li>Abre Visual Studio Code.   </li>
+<li>En el panel de la izquierda, verás un ícono de <strong>cuadrado</strong> con otro más pequeño en la esquina (es el icono del <strong>Marketplace de Extensiones</strong>). Haz clic en él.   </li>
+<li>Se abrirá una barra de búsqueda donde podrás buscar extensiones para añadir.   </li>
+</ol>
+<h4 id="32-instalacion-de-una-extension">3.2. Instalación de una extensión<a class="headerlink" href="#32-instalacion-de-una-extension" title="Permanent link">&para;</a></h4>
+<p>Supongamos que estás desarrollando en <strong>Python</strong> y necesitas añadir soporte completo para este lenguaje.</p>
+<ol>
+<li>En el Marketplace de Extensiones, escribe "Python" en la barra de búsqueda.    </li>
+<li>Selecciona la extensión llamada <strong>Python</strong> (desarrollada por Microsoft) de los resultados.   </li>
+<li>Haz clic en el botón <strong>Instalar</strong>. En unos segundos, tu IDE tendrá completo soporte para Python, incluyendo autocompletado, depuración y análisis de errores.   </li>
+</ol>
+<h4 id="33-instalacion-de-multiples-extensiones-para-un-proyecto-web">3.3. Instalación de múltiples extensiones para un proyecto web<a class="headerlink" href="#33-instalacion-de-multiples-extensiones-para-un-proyecto-web" title="Permanent link">&para;</a></h4>
+<p>Si estás desarrollando una aplicación web en <strong>JavaScript</strong> con el framework <strong>React</strong>, podrías necesitar varias extensiones.</p>
+<ol>
+<li>Busca e instala:<ul>
+<li><strong>ESLint</strong>: Para verificar y corregir errores de estilo de código en JavaScript.   </li>
+<li><strong>Prettier</strong>: Para formatear tu código automáticamente según unas reglas predefinidas.   </li>
+<li><strong>React</strong>: Para tener snippets y autocompletado específicos de React.   </li>
+</ul>
 </li>
 </ol>
-<h3 id="solucion-propuesta">Solución Propuesta<a class="headerlink" href="#solucion-propuesta" title="Permanent link">&para;</a></h3>
-<p>A continuación, se detalla una solución posible para el ejercicio propuesto. La idea es dividir las responsabilidades en clases distintas, cada una enfocada en un único aspecto del sistema de la biblioteca.</p>
-<p><strong>Paso 1: Definir la clase <code>Libro</code> como una <code>data class</code></strong></p>
-<p>Esta clase contiene solo las propiedades que definen un libro.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Libro</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">isbn</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">titulo</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">autor</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">estado</span><span class="p">:</span><span class="w"> </span><span class="n">EstadoLibro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EstadoLibro</span><span class="p">.</span><span class="na">DISPONIBLE</span><span class="p">)</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">enum</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">EstadoLibro</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">DISPONIBLE</span><span class="p">,</span><span class="w"> </span><span class="n">PRESTADO</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
-</code></pre></div>
-<p><strong>Paso 2: Crear una clase <code>GestorInventario</code> para manejar el inventario de libros</strong></p>
-<p>Esta clase se encarga de agregar y remover libros del inventario.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">GestorInventario</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">libros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="o">&lt;</span><span class="n">Libro</span><span class="o">&gt;</span><span class="p">()</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">agregarLibro</span><span class="p">(</span><span class="n">libro</span><span class="p">:</span><span class="w"> </span><span class="n">Libro</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="n">libros</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">libro</span><span class="p">)</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Libro agregado: </span><span class="si">${</span><span class="n">libro</span><span class="p">.</span><span class="na">titulo</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">removerLibro</span><span class="p">(</span><span class="n">libro</span><span class="p">:</span><span class="w"> </span><span class="n">Libro</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="n">libros</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">libro</span><span class="p">)</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Libro removido: </span><span class="si">${</span><span class="n">libro</span><span class="p">.</span><span class="na">titulo</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">cambiarEstadoLibro</span><span class="p">(</span><span class="n">isbn</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">nuevoEstado</span><span class="p">:</span><span class="w"> </span><span class="n">EstadoLibro</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span><span class="n">libros</span><span class="p">.</span><span class="na">find</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">isbn</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">isbn</span><span class="w"> </span><span class="p">}</span><span class="o">?.</span><span class="na">let</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">            </span><span class="nb">it</span><span class="p">.</span><span class="na">estado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nuevoEstado</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Estado cambiado a </span><span class="si">$</span><span class="n">nuevoEstado</span><span class="s"> para el libro: </span><span class="si">${</span><span class="nb">it</span><span class="p">.</span><span class="na">titulo</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">estaDisponible</span><span class="p">(</span><span class="n">isbn</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">libros</span><span class="p">.</span><span class="na">any</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">isbn</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">isbn</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">estado</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">EstadoLibro</span><span class="p">.</span><span class="na">DISPONIBLE</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">listarTodosLosLibros</span><span class="p">():</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Libro</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">libros</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">listarLibrosDisponibles</span><span class="p">():</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Libro</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">libros</span><span class="p">.</span><span class="na">filter</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">estado</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">EstadoLibro</span><span class="p">.</span><span class="na">DISPONIBLE</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">listarLibrosPrestados</span><span class="p">():</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Libro</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">libros</span><span class="p">.</span><span class="na">filter</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">estado</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">EstadoLibro</span><span class="p">.</span><span class="na">PRESTADO</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="p">}</span>
-</code></pre></div>
-<p><strong>Paso 3: Crear una clase <code>SistemaPrestamos</code> para manejar los préstamos</strong></p>
-<p>Esta clase gestiona el préstamo de libros a los usuarios.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">SistemaPrestamos</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">inventario</span><span class="p">:</span><span class="w"> </span><span class="n">GestorInventario</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">prestarLibro</span><span class="p">(</span><span class="n">isbn</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inventario</span><span class="p">.</span><span class="na">estaDisponible</span><span class="p">(</span><span class="n">isbn</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">            </span><span class="n">inventario</span><span class="p">.</span><span class="na">cambiarEstadoLibro</span><span class="p">(</span><span class="n">isbn</span><span class="p">,</span><span class="w"> </span><span class="n">EstadoLibro</span><span class="p">.</span><span class="na">PRESTADO</span><span class="p">)</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Libro prestado con ISBN: </span><span class="si">$</span><span class="n">isbn</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;El libro con ISBN </span><span class="si">$</span><span class="n">isbn</span><span class="s"> no está disponible para préstamo.&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">devolverLibro</span><span class="p">(</span><span class="n">isbn</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="n">inventario</span><span class="p">.</span><span class="na">cambiarEstadoLibro</span><span class="p">(</span><span class="n">isbn</span><span class="p">,</span><span class="w"> </span><span class="n">EstadoLibro</span><span class="p">.</span><span class="na">DISPONIBLE</span><span class="p">)</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Libro devuelto con ISBN: </span><span class="si">$</span><span class="n">isbn</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="p">}</span>
-</code></pre></div>
-<p><strong>Paso 4: Crear una clase <code>GeneradorInformes</code> para generar informes de libros</strong></p>
-<p>Esta clase se encarga de generar informes relacionados con los libros, como los libros más prestados.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">GeneradorInformes</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">inventario</span><span class="p">:</span><span class="w"> </span><span class="n">GestorInventario</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">generarInformeDetalladoCompleto</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;\nInforme Detallado Completo de la Biblioteca:&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="n">inventario</span><span class="p">.</span><span class="na">listarTodosLosLibros</span><span class="p">().</span><span class="na">forEach</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">libro</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;- </span><span class="si">${</span><span class="n">libro</span><span class="p">.</span><span class="na">titulo</span><span class="si">}</span><span class="s"> (ISBN: </span><span class="si">${</span><span class="n">libro</span><span class="p">.</span><span class="na">isbn</span><span class="si">}</span><span class="s">) - Estado: </span><span class="si">${</span><span class="n">libro</span><span class="p">.</span><span class="na">estado</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">generarInformeLibrosDisponibles</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;\nInforme de Libros Disponibles para Préstamo:&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="n">inventario</span><span class="p">.</span><span class="na">listarLibrosDisponibles</span><span class="p">().</span><span class="na">forEach</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">libro</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;- </span><span class="si">${</span><span class="n">libro</span><span class="p">.</span><span class="na">titulo</span><span class="si">}</span><span class="s"> (ISBN: </span><span class="si">${</span><span class="n">libro</span><span class="p">.</span><span class="na">isbn</span><span class="si">}</span><span class="s">)&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">generarInformeLibrosPrestados</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;\nInforme de Libros Actualmente Prestados:&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="n">inventario</span><span class="p">.</span><span class="na">listarLibrosPrestados</span><span class="p">().</span><span class="na">forEach</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">libro</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;- </span><span class="si">${</span><span class="n">libro</span><span class="p">.</span><span class="na">titulo</span><span class="si">}</span><span class="s"> (ISBN: </span><span class="si">${</span><span class="n">libro</span><span class="p">.</span><span class="na">isbn</span><span class="si">}</span><span class="s">)&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="p">}</span>
-</code></pre></div>
-<p><strong>Implementación en el <code>main</code>:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">libro1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Libro</span><span class="p">(</span><span class="s">&quot;123-456-789&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Kotlin para principiantes&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Juan Pérez&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">libro2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Libro</span><span class="p">(</span><span class="s">&quot;987-654-321&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Desarrollo Avanzado con Kotlin&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Ana López&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">libro3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Libro</span><span class="p">(</span><span class="s">&quot;456-789-123&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Fundamentos de Programación en Kotlin&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Carlos García&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">gestorInventario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GestorInventario</span><span class="p">()</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="n">gestorInventario</span><span class="p">.</span><span class="na">agregarLibro</span><span class="p">(</span><span class="n">libro1</span><span class="p">)</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="n">gestorInventario</span><span class="p">.</span><span class="na">agregarLibro</span><span class="p">(</span><span class="n">libro2</span><span class="p">)</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="n">gestorInventario</span><span class="p">.</span><span class="na">agregarLibro</span><span class="p">(</span><span class="n">libro3</span><span class="p">)</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">sistemaPrestamos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SistemaPrestamos</span><span class="p">(</span><span class="n">gestorInventario</span><span class="p">)</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Prestar libros:&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="n">sistemaPrestamos</span><span class="p">.</span><span class="na">prestarLibro</span><span class="p">(</span><span class="n">libro1</span><span class="p">.</span><span class="na">isbn</span><span class="p">)</span><span class="w"> </span><span class="c1">// Libro 1 prestado</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="n">sistemaPrestamos</span><span class="p">.</span><span class="na">prestarLibro</span><span class="p">(</span><span class="n">libro2</span><span class="p">.</span><span class="na">isbn</span><span class="p">)</span><span class="w"> </span><span class="c1">// Libro 2 prestado</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;\nIntentar prestar un libro ya prestado:&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="n">sistemaPrestamos</span><span class="p">.</span><span class="na">prestarLibro</span><span class="p">(</span><span class="n">libro1</span><span class="p">.</span><span class="na">isbn</span><span class="p">)</span><span class="w"> </span><span class="c1">// Intento fallido, libro 1 ya está prestado</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;\nDevolver un libro y luego eliminarlo:&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="n">sistemaPrestamos</span><span class="p">.</span><span class="na">devolverLibro</span><span class="p">(</span><span class="n">libro2</span><span class="p">.</span><span class="na">isbn</span><span class="p">)</span><span class="w"> </span><span class="c1">// Libro 2 devuelto</span>
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">    </span><span class="n">gestorInventario</span><span class="p">.</span><span class="na">removerLibro</span><span class="p">(</span><span class="n">libro2</span><span class="p">)</span><span class="w"> </span><span class="c1">// Libro 2 eliminado del inventario</span>
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">generadorInformes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GeneradorInformes</span><span class="p">(</span><span class="n">gestorInventario</span><span class="p">)</span>
-<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="n">generadorInformes</span><span class="p">.</span><span class="na">generarInformeDetalladoCompleto</span><span class="p">()</span><span class="w"> </span><span class="c1">// Genera un informe detallado de todos los libros</span>
-<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">    </span><span class="n">generadorInformes</span><span class="p">.</span><span class="na">generarInformeLibrosDisponibles</span><span class="p">()</span><span class="w"> </span><span class="c1">// Genera un informe de los libros disponibles</span>
-<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">    </span><span class="n">generadorInformes</span><span class="p">.</span><span class="na">generarInformeLibrosPrestados</span><span class="p">()</span><span class="w"> </span><span class="c1">// Genera un informe de los libros prestados</span>
-<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="p">}</span>
-</code></pre></div>
-<p>Esta solución demuestra cómo aplicar el Principio de Responsabilidad Única en un sistema de biblioteca. Cada clase tiene una única razón para cambiar, lo que facilita 
-el mantenimiento y la extensión del sistema.</p>
+<p>Estas extensiones no solo te ayudarán a escribir código más rápido, sino que también te aseguran que sigues buenas prácticas en tu proyecto.   </p>
+<p>Al finalizar te proporciono unas URL para seguir los pasos a través de la documentación oficial del producto.   </p>
+<h3 id="4-gestion-de-modulos-en-jetbrains-intellij-idea-pycharm">4. Gestión de módulos en JetBrains (IntelliJ IDEA, PyCharm)<a class="headerlink" href="#4-gestion-de-modulos-en-jetbrains-intellij-idea-pycharm" title="Permanent link">&para;</a></h3>
+<p>Los entornos de JetBrains también permiten una gran personalización mediante <strong>módulos</strong> y <strong>plugins</strong>. Estos módulos se instalan y gestionan directamente desde el IDE, y están orientados a proyectos más complejos o lenguajes específicos.   </p>
+<h4 id="41-que-es-un-modulo-en-jetbrains">4.1. ¿Qué es un módulo en JetBrains?<a class="headerlink" href="#41-que-es-un-modulo-en-jetbrains" title="Permanent link">&para;</a></h4>
+<p>Un <strong>módulo</strong> en JetBrains es un conjunto de archivos y configuraciones que añaden soporte para ciertos lenguajes o frameworks en tu proyecto. Por ejemplo, si estás desarrollando una aplicación con <strong>Spring</strong> (framework de Java), necesitarás instalar el módulo de Spring.   </p>
+<h4 id="42-instalacion-de-modulos-en-intellij-idea">4.2. Instalación de módulos en IntelliJ IDEA<a class="headerlink" href="#42-instalacion-de-modulos-en-intellij-idea" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Abre IntelliJ IDEA.   </li>
+<li>Dirígete a la barra superior y selecciona <code>File &gt; Project Structure</code>.   </li>
+<li>En la ventana de estructura de proyecto, selecciona la opción <strong>Modules</strong> y haz clic en <strong>+</strong> para añadir un nuevo módulo.   </li>
+<li>Elige el tipo de módulo que quieres instalar, por ejemplo, <strong>Java</strong>, <strong>Kotlin</strong>, o <strong>Spring</strong>. Sigue las indicaciones del asistente para configurarlo.    </li>
+</ol>
+<h4 id="43-instalacion-de-plugins-en-jetbrains-pycharm">4.3. Instalación de plugins en JetBrains (PyCharm)<a class="headerlink" href="#43-instalacion-de-plugins-en-jetbrains-pycharm" title="Permanent link">&para;</a></h4>
+<p>Además de los módulos, JetBrains permite la instalación de <strong>plugins</strong> que amplían las capacidades de su IDE de forma similar a las extensiones de Visual Studio Code.</p>
+<ol>
+<li>En la barra superior, ve a <code>File &gt; Settings</code> (o <code>Preferences</code> en Mac).   </li>
+<li>Selecciona la opción <strong>Plugins</strong>.   </li>
+<li>En el campo de búsqueda, escribe el nombre del plugin que necesitas. Por ejemplo, si trabajas con Kotest (framework de pruebas unitarias), puedes buscar el plugin Kotest.   </li>
+<li>Haz clic en <strong>Instalar</strong> y reinicia el IDE para que los cambios se apliquen.   </li>
+</ol>
+<h3 id="5-desinstalacion-y-actualizacion-de-extensiones-y-modulos">5. Desinstalación y actualización de extensiones y módulos<a class="headerlink" href="#5-desinstalacion-y-actualizacion-de-extensiones-y-modulos" title="Permanent link">&para;</a></h3>
+<h4 id="51-desinstalacion-en-visual-studio-code">5.1. Desinstalación en Visual Studio Code<a class="headerlink" href="#51-desinstalacion-en-visual-studio-code" title="Permanent link">&para;</a></h4>
+<p>Si en algún momento ya no necesitas una extensión, puedes desinstalarla fácilmente.   </p>
+<ol>
+<li>Abre el panel de extensiones en Visual Studio Code (<code>Ctrl + Shift + X</code>).   </li>
+<li>Encuentra la extensión que deseas desinstalar.   </li>
+<li>Haz clic en el botón de la <strong>papelera</strong> que aparece junto a su nombre.   </li>
+</ol>
+<h4 id="52-actualizacion-de-extensiones-en-visual-studio-code">5.2. Actualización de extensiones en Visual Studio Code<a class="headerlink" href="#52-actualizacion-de-extensiones-en-visual-studio-code" title="Permanent link">&para;</a></h4>
+<p>Visual Studio Code te notificará automáticamente cuando haya actualizaciones disponibles para tus extensiones. Solo tienes que hacer clic en el botón de <strong>Actualizar</strong> que aparecerá junto a la extensión en el Marketplace.   </p>
+<h4 id="53-gestion-de-modulos-y-plugins-en-jetbrains">5.3. Gestión de módulos y plugins en JetBrains<a class="headerlink" href="#53-gestion-de-modulos-y-plugins-en-jetbrains" title="Permanent link">&para;</a></h4>
+<p>Desde <code>File &gt; Settings &gt; Plugins</code>, puedes gestionar tus plugins instalados: desactivarlos temporalmente, actualizarlos o desinstalarlos por completo. Esto te permite mantener tu IDE optimizado y evitar sobrecargarlo con funcionalidades innecesarias.   </p>
+<h3 id="6-enlaces-y-recursos-de-interes">6. Enlaces y recursos de interés<a class="headerlink" href="#6-enlaces-y-recursos-de-interes" title="Permanent link">&para;</a></h3>
+<p>Siguiendo los siguientes enlaces podrás instalar extensiones y plugins en Visual Studio Code y los IDEs de JetBrains:   </p>
+<h4 id="61-extensiones-en-visual-studio-code">6.1. Extensiónes en Visual Studio Code<a class="headerlink" href="#61-extensiones-en-visual-studio-code" title="Permanent link">&para;</a></h4>
+<ul>
+<li>https://code.visualstudio.com/docs/editor/extension-marketplace</li>
+<li>https://code.visualstudio.com/docs/introvideos/extend</li>
+<li>https://learn.microsoft.com/es-es/training/modules/python-install-vscode/5-exercise-install-python-extension?pivots=linux</li>
+</ul>
+<h4 id="62-extensiones-en-herramientas-jetbrains">6.2. Extensiónes en herramientas Jetbrains<a class="headerlink" href="#62-extensiones-en-herramientas-jetbrains" title="Permanent link">&para;</a></h4>
+<ul>
+<li>https://www.jetbrains.com/help/pycharm/managing-plugins.html</li>
+<li>https://www.jetbrains.com/help/pycharm/plugins-settings.html</li>
+<li>https://www.jetbrains.com/help/idea/managing-plugins.html</li>
+<li>https://www.jetbrains.com/help/idea/plugins-settings.html</li>
+</ul>
+<h3 id="7-conclusion">7. Conclusión<a class="headerlink" href="#7-conclusion" title="Permanent link">&para;</a></h3>
+<p>La gestión de <strong>módulos</strong> y <strong>extensiones</strong> es una parte fundamental para personalizar tu entorno de desarrollo y ajustarlo a las necesidades de tu proyecto. Tanto en <strong>Visual Studio Code</strong> como en los <strong>IDEs de JetBrains</strong>, puedes añadir o eliminar funcionalidades según lo que vayas necesitando. Esto te permite trabajar de forma más eficiente, ahorrando tiempo y mejorando la calidad de tu código. ¡Aprovecha todas las herramientas a tu disposición para hacer que tu entorno de desarrollo sea perfecto para ti!</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -3639,10 +4071,10 @@ el mantenimiento y la extensión del sistema.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../../assets/javascripts/workers/search.6ce7567c.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>

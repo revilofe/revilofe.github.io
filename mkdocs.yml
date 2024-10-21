@@ -145,6 +145,7 @@ nav:
     - 'U1: Principios generales y planes de seguridad':
       - 'section2/u01/index.md'
       - '1.1.-PrincipiosGenerales': 'section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales.md'
+      - '1.2.2.-Análisis de Riesgos': 'section2/u01/teoria/IS-U1.2.2.-AnalisiDeRiesgos.md'
 #    - 'U2: Detección y análisis de incidentes de seguridad':
 #      - 'section2/u02/index.md'
 #      - '2.1.-Taxonomía de incidentes': 'section2/u02/teoria/IS-U2.1.1.-TaxonomiaDeIncidentes.md'

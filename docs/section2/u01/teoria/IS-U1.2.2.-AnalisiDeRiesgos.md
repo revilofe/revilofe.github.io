@@ -101,3 +101,6 @@ Por último, cabe señalar que como realizamos este análisis de riesgos en el c
 
 ### 4. Conclusiones
 El análisis de riesgos es un proceso fundamental para la gestión de la seguridad de la información y la ciberseguridad. A través del análisis de riesgos, las organizaciones pueden identificar los activos más valiosos, las amenazas a las que están expuestas y las vulnerabilidades que pueden ser explotadas por los atacantes. Con esta información, las organizaciones pueden tomar decisiones informadas sobre cómo mitigar los riesgos y proteger sus activos. Por tanto, es fundamental que las organizaciones realicen análisis de riesgos de forma regular y sistemática para garantizar la seguridad de la información y la ciberseguridad.
+
+## Fuentes
+- https://www.incibe.es/empresas/blog/analisis-riesgos-pasos-sencillo

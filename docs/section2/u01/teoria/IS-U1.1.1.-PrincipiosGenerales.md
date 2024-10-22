@@ -95,9 +95,9 @@ Proteger los sistemas informáticos significa garantizar que el hardware (dispos
 **Ejemplo práctico**:
 
 * Sistema informático: La red de computadoras en una empresa, junto con los servidores que ejecutan el sistema operativo y los programas de software.
-  * Ciberseguridad: Asegurar que los servidores y computadoras estén protegidos frente a malware, actualizados y funcionando correctamente.
+    * Ciberseguridad: Asegurar que los servidores y computadoras estén protegidos frente a malware, actualizados y funcionando correctamente.
 * Sistema de información: El sistema que gestiona las ventas en esa misma empresa, incluyendo las bases de datos que almacenan las transacciones, los procesos que generan reportes financieros, y los empleados que analizan esos datos para tomar decisiones.
-  * Ciberseguridad: Proteger no solo los servidores y computadoras, sino también la información sensible de los clientes, la confidencialidad de los registros de ventas, y la integridad de los reportes financieros para que no sean alterados sin autorización.
+    * Ciberseguridad: Proteger no solo los servidores y computadoras, sino también la información sensible de los clientes, la confidencialidad de los registros de ventas, y la integridad de los reportes financieros para que no sean alterados sin autorización.
 
 ### 2. Seguridad vs fiabilidad
 
@@ -113,9 +113,9 @@ La frase “La seguridad total es imposible de conseguir, por tanto hablaremos m
 
 * Dado que la seguridad perfecta no es posible, se pone mayor énfasis en la fiabilidad. En lugar de intentar lograr una protección 100% segura, el objetivo es hacer que los sistemas sean confiables y resilientes. Esto significa que, si ocurre un incidente o un fallo, los sistemas puedan seguir funcionando, recuperarse rápidamente, y los daños se minimicen.
 * Fiabilidad no significa que los sistemas sean invulnerables, sino que son capaces de funcionar correctamente incluso en situaciones de fallo o ataque. La fiabilidad se basa en conceptos como:
-  * **Alta disponibilidad**: Asegurar que los sistemas estén disponibles para los usuarios, incluso ante fallos.
-  * **Resiliencia**: Capacidad del sistema de recuperarse después de un incidente (por ejemplo, un ataque cibernético o un fallo técnico).
-  * **Tolerancia a fallos**: Los sistemas están diseñados de manera que puedan seguir funcionando o minimizar el impacto ante un fallo de componentes.
+    * **Alta disponibilidad**: Asegurar que los sistemas estén disponibles para los usuarios, incluso ante fallos.
+    * **Resiliencia**: Capacidad del sistema de recuperarse después de un incidente (por ejemplo, un ataque cibernético o un fallo técnico).
+    * **Tolerancia a fallos**: Los sistemas están diseñados de manera que puedan seguir funcionando o minimizar el impacto ante un fallo de componentes.
 
 #### 2.3. Cómo se conectan seguridad y fiabilidad en esta frase
 
@@ -167,9 +167,9 @@ La confidencialidad asegura que solo las personas o sistemas autorizados puedan 
 
 * Objetivo: Evitar que personas no autorizadas accedan, lean o vean datos privados o confidenciales.
 * Ejemplos:
-  * Cifrado de datos: Cuando envías un mensaje cifrado, solo el receptor autorizado puede leerlo.
-  * Contraseñas seguras: Solo los usuarios que conocen la contraseña correcta pueden acceder a una cuenta o sistema.
-  * Autenticación multifactor (MFA): Requiere más de un método de verificación (por ejemplo, una contraseña y un código en el móvil) para acceder a una cuenta.
+    * Cifrado de datos: Cuando envías un mensaje cifrado, solo el receptor autorizado puede leerlo.
+    * Contraseñas seguras: Solo los usuarios que conocen la contraseña correcta pueden acceder a una cuenta o sistema.
+    * Autenticación multifactor (MFA): Requiere más de un método de verificación (por ejemplo, una contraseña y un código en el móvil) para acceder a una cuenta.
 * Analogía: Imagina que tienes un diario privado con un candado. Solo tú tienes la llave, por lo que nadie más puede leer tus escritos. Esto es confidencialidad: proteger tu información para que solo quienes tengan acceso autorizado puedan verla.
 
 ![](assets/IS-U111-PrincipiosGenerales5.png)
@@ -180,9 +180,9 @@ La integridad garantiza que los datos no sean alterados o modificados de manera 
 
 * Objetivo: Proteger los datos de modificaciones no autorizadas o daños, ya sea intencionales (como ataques) o accidentales.
 * Ejemplos:
-  * Firmas digitales: Se utilizan para asegurar que los documentos o archivos no han sido alterados durante su transmisión.
-  * Controles de acceso: Solo personas autorizadas pueden modificar los datos en una base de datos.
-  * Hashing: Utilizar algoritmos de hash para asegurar que un archivo o mensaje no ha sido modificado. Si el contenido cambia, el hash también cambiará, lo que indicaría que la integridad se ha comprometido.
+    * Firmas digitales: Se utilizan para asegurar que los documentos o archivos no han sido alterados durante su transmisión.
+    * Controles de acceso: Solo personas autorizadas pueden modificar los datos en una base de datos.
+    * Hashing: Utilizar algoritmos de hash para asegurar que un archivo o mensaje no ha sido modificado. Si el contenido cambia, el hash también cambiará, lo que indicaría que la integridad se ha comprometido.
 * Analogía: Es como enviar una carta sellada. Si la carta llega con el sello roto, sabes que alguien ha abierto la carta o modificado su contenido. La integridad asegura que la carta (o los datos) llegue tal como fue enviada, sin que nadie la haya alterado en el camino.
 
 ![](assets/IS-U111-PrincipiosGenerales7.png)
@@ -193,9 +193,9 @@ La disponibilidad asegura que los sistemas y datos estén accesibles y operativo
 
 * Objetivo: Garantizar que la información y los recursos estén siempre accesibles en el momento en que sean requeridos.
 * Ejemplos:
-  * Redundancia de sistemas: Tener servidores duplicados (o en la nube) para que si uno falla, otro lo reemplace automáticamente.
-  * Planes de recuperación ante desastres: En caso de que ocurra un incidente (como un incendio o un ataque), el sistema puede ser restaurado y volver a estar operativo rápidamente.
-  * Mantenimiento regular: Actualizar y hacer mantenimiento a los sistemas para prevenir fallos y evitar que se caigan en momentos críticos.
+    * Redundancia de sistemas: Tener servidores duplicados (o en la nube) para que si uno falla, otro lo reemplace automáticamente.
+    * Planes de recuperación ante desastres: En caso de que ocurra un incidente (como un incendio o un ataque), el sistema puede ser restaurado y volver a estar operativo rápidamente.
+    * Mantenimiento regular: Actualizar y hacer mantenimiento a los sistemas para prevenir fallos y evitar que se caigan en momentos críticos.
 * Analogía: Piensa en un cajero automático que necesitas usar. La disponibilidad significa que el cajero esté funcionando cuando llegues, sin interrupciones. Si está fuera de servicio cuando lo necesitas, se compromete la disponibilidad.
 
 ![](assets/IS-U111-PrincipiosGenerales6.png)
@@ -210,8 +210,8 @@ La fiabilidad garantiza que el sistema funcione de manera correcta y predecible,
 
 * En seguridad de la información: La fiabilidad implica que tanto los sistemas como los datos pueden ser usados sin problemas, y que el sistema es capaz de funcionar correctamente incluso bajo condiciones de estrés o cuando hay fallos.
 * Ejemplo:
-  * Piensa en un sistema bancario: si haces una transferencia, esperas que el sistema funcione correctamente y que el dinero llegue a su destino sin errores. Si el sistema tiene problemas y las transacciones fallan o los datos se pierden, no sería confiable.
-  * En ciberseguridad, un sistema confiable evita interrupciones inesperadas y asegura que las operaciones se realicen según lo previsto.
+    * Piensa en un sistema bancario: si haces una transferencia, esperas que el sistema funcione correctamente y que el dinero llegue a su destino sin errores. Si el sistema tiene problemas y las transacciones fallan o los datos se pierden, no sería confiable.
+    * En ciberseguridad, un sistema confiable evita interrupciones inesperadas y asegura que las operaciones se realicen según lo previsto.
 
 ##### 3.2.2. Autenticidad (Authenticity)
 
@@ -219,8 +219,8 @@ La autenticidad asegura que la información o el usuario es quien dice ser, y qu
 
 * En seguridad de la información: Garantiza que tanto los datos como las identidades sean verificables. Un mensaje o documento es auténtico si proviene de una fuente confiable, y los sistemas de autenticación aseguran que los usuarios son quienes dicen ser (por ejemplo, usando contraseñas, biometría, o certificados digitales).
 * Ejemplo:
-  * Cuando accedes a tu cuenta de correo electrónico, el sistema te autentica usando tu usuario y contraseña. Esto asegura que tú eres el verdadero dueño de la cuenta.
-  * Si recibes un mensaje firmado digitalmente, la firma asegura la autenticidad del remitente, de modo que puedes estar seguro de que el mensaje viene de quien dice ser y no ha sido alterado.
+    * Cuando accedes a tu cuenta de correo electrónico, el sistema te autentica usando tu usuario y contraseña. Esto asegura que tú eres el verdadero dueño de la cuenta.
+    * Si recibes un mensaje firmado digitalmente, la firma asegura la autenticidad del remitente, de modo que puedes estar seguro de que el mensaje viene de quien dice ser y no ha sido alterado.
 
 ##### 3.2.3. No repudio (Non-repudiation)
 
@@ -228,8 +228,8 @@ El no repudio significa que ninguna de las partes involucradas en una comunicaci
 
 * En seguridad de la información: Se utiliza para garantizar la responsabilidad en las transacciones digitales. Técnicas como las firmas digitales y los logs (registros de eventos) se utilizan para asegurar que las personas no puedan negar haber realizado una acción determinada.
 * Ejemplo:
-  * Si firmas un contrato digitalmente, el sistema garantiza que no puedas negar haber firmado dicho contrato en el futuro. La firma digital proporciona evidencia de que tú (el remitente) lo hiciste, y esta evidencia puede ser verificada.
-  * En una transacción bancaria en línea, el no repudio asegura que si transfieres dinero a alguien, no puedas negar que hiciste esa transacción, y el banco puede probarlo si fuera necesario.
+    * Si firmas un contrato digitalmente, el sistema garantiza que no puedas negar haber firmado dicho contrato en el futuro. La firma digital proporciona evidencia de que tú (el remitente) lo hiciste, y esta evidencia puede ser verificada.
+    * En una transacción bancaria en línea, el no repudio asegura que si transfieres dinero a alguien, no puedas negar que hiciste esa transacción, y el banco puede probarlo si fuera necesario.
 
 #### 3.3. Ejemplo práctico integrando todo
 
@@ -289,7 +289,7 @@ No es suficiente solo implementar medidas de seguridad, también debemos reducir
 Toda la información sensible o confidencial debe estar cifrada. Esto significa que, incluso si alguien accede a los datos sin permiso, no podrá leerlos sin la clave para descifrarlos.
 
 * Relación con CIA: Directamente relacionado con la confidencialidad.
-  1. Confidencialidad: El cifrado asegura que, aunque alguien acceda a los datos, no podrá entenderlos sin la clave correcta. Protege la información frente a accesos no autorizados.
+    1. Confidencialidad: El cifrado asegura que, aunque alguien acceda a los datos, no podrá entenderlos sin la clave correcta. Protege la información frente a accesos no autorizados.
 * Ejemplo: Cuando enviamos datos personales o financieros por Internet, deben estar cifrados para que, si son interceptados, no puedan ser leídos. Usar cifrado es esencial para proteger la privacidad de la información.**
 
 #### 4.7. Borrado seguro de información
@@ -297,8 +297,8 @@ Toda la información sensible o confidencial debe estar cifrada. Esto significa 
 Cuando ya no necesitas un archivo o cuando vas a deshacerte de un dispositivo, debes asegurarte de que los datos se eliminen completamente. Un simple "borrado" puede dejar rastros de información que un atacante podría recuperar.
 
 * Relación con CIA: Refuerza la confidencialidad y la integridad.
-  1. Confidencialidad: El borrado seguro evita que los datos sensibles que ya no son necesarios puedan ser recuperados por personas no autorizadas.
-  2. Integridad: Garantiza que los datos eliminados no puedan ser restaurados o manipulados indebidamente.
+    1. Confidencialidad: El borrado seguro evita que los datos sensibles que ya no son necesarios puedan ser recuperados por personas no autorizadas.
+    2. Integridad: Garantiza que los datos eliminados no puedan ser restaurados o manipulados indebidamente.
 * Ejemplo: Antes de vender o desechar un ordenador o teléfono, debes usar una herramienta de borrado seguro que sobrescriba los datos varias veces, para que no puedan recuperarse.
 
 #### 4.8. Realizar copias de seguridad periódicas
@@ -306,8 +306,8 @@ Cuando ya no necesitas un archivo o cuando vas a deshacerte de un dispositivo, d
 Las copias de seguridad son esenciales para proteger tus datos contra fallos o ataques, como el ransomware. Las copias deben ser frecuentes y seguras, y es importante asegurarse de que no estás respaldando también malware accidentalmente.
 
 * Relación con CIA: Este principio se relaciona principalmente con la disponibilidad y también con la integridad.
-  1. Disponibilidad: Las copias de seguridad permiten recuperar los sistemas rápidamente después de un fallo o ataque, asegurando que la información esté siempre disponible.
-  2. Integridad: Las copias de seguridad periódicas aseguran que se pueda restaurar la información tal como estaba en el momento de la copia, preservando su exactitud.
+    1. Disponibilidad: Las copias de seguridad permiten recuperar los sistemas rápidamente después de un fallo o ataque, asegurando que la información esté siempre disponible.
+    2. Integridad: Las copias de seguridad periódicas aseguran que se pueda restaurar la información tal como estaba en el momento de la copia, preservando su exactitud.
 * Ejemplo: Imagina que tu empresa es víctima de un ataque que borra o cifra todos los archivos. Sin copias de seguridad, podrías perderlo todo. Si tienes una copia reciente, puedes recuperar los datos rápidamente y minimizar el impacto.**
 
 #### 4.9. Mantener actualizados los sistemas y aplicaciones
@@ -315,9 +315,9 @@ Las copias de seguridad son esenciales para proteger tus datos contra fallos o a
 Mantener el sistema operativo y las aplicaciones actualizadas es crucial para evitar vulnerabilidades. Las actualizaciones suelen incluir parches de seguridad que corrigen errores que los atacantes podrían explotar.
 
 * Relación con CIA: Apoya los tres principios.
-  1. Confidencialidad: Mantener el software actualizado cierra vulnerabilidades que los atacantes podrían usar para acceder a datos sensibles.
-  2. Integridad: Evita que malware o exploits dañen o alteren los datos al aprovechar fallos no corregidos.
-  3. Disponibilidad: Las actualizaciones de seguridad evitan que los sistemas sean comprometidos, lo que puede llevar a interrupciones en el servicio.
+    1. Confidencialidad: Mantener el software actualizado cierra vulnerabilidades que los atacantes podrían usar para acceder a datos sensibles.
+    2. Integridad: Evita que malware o exploits dañen o alteren los datos al aprovechar fallos no corregidos.
+    3. Disponibilidad: Las actualizaciones de seguridad evitan que los sistemas sean comprometidos, lo que puede llevar a interrupciones en el servicio.
 * Ejemplo: Si estás usando una versión desactualizada de una aplicación, los hackers podrían aprovechar una vulnerabilidad conocida. Al actualizarla, cierras esa puerta y proteges tu sistema.
 
 #### 4.10. Revisar regularmente la configuración de seguridad
@@ -325,9 +325,9 @@ Mantener el sistema operativo y las aplicaciones actualizadas es crucial para ev
 Es importante revisar y ajustar regularmente la configuración de seguridad de los sistemas y las aplicaciones. Esto incluye revisar los permisos y las opciones de seguridad para asegurarse de que están configuradas correctamente y de acuerdo con las mejores prácticas.
 
 * Relación con CIA: Apoya la confidencialidad, integridad y disponibilidad.
-  1. Confidencialidad: Revisar la configuración de seguridad asegura que los permisos y accesos estén correctamente establecidos, evitando accesos no autorizados.
-  2. Integridad: Una configuración revisada y adecuada previene cambios o manipulaciones no deseadas en los sistemas.
-  3. Disponibilidad: Mantener la configuración de seguridad actualizada evita que el sistema sea vulnerable a fallos o ataques que podrían causar interrupciones.
+    1. Confidencialidad: Revisar la configuración de seguridad asegura que los permisos y accesos estén correctamente establecidos, evitando accesos no autorizados.
+    2. Integridad: Una configuración revisada y adecuada previene cambios o manipulaciones no deseadas en los sistemas.
+    3. Disponibilidad: Mantener la configuración de seguridad actualizada evita que el sistema sea vulnerable a fallos o ataques que podrían causar interrupciones.
 * Ejemplo: Revisar los permisos de las aplicaciones para asegurarse de que no tienen más acceso del necesario. Una aplicación que no necesita acceder a tu ubicación o contactos no debería tener ese permiso. También es bueno revisar los ajustes de seguridad de tus redes y sistemas para asegurarte de que están actualizados y ajustados a las últimas amenazas.
 
 ### 4. Activos, vulnerabilidades, amenazas y riesgos

@@ -334,7 +334,7 @@ Es importante revisar y ajustar regularmente la configuración de seguridad de l
      3. Disponibilidad: Mantener la configuración de seguridad actualizada evita que el sistema sea vulnerable a fallos o ataques que podrían causar interrupciones.
 * Ejemplo: Revisar los permisos de las aplicaciones para asegurarse de que no tienen más acceso del necesario. Una aplicación que no necesita acceder a tu ubicación o contactos no debería tener ese permiso. También es bueno revisar los ajustes de seguridad de tus redes y sistemas para asegurarte de que están actualizados y ajustados a las últimas amenazas.
 
-### 4. Activos, vulnerabilidades, amenazas y riesgos
+### 5. Activos, vulnerabilidades, amenazas y riesgos
 
 En ciberseguridad, es fundamental comprender los conceptos de activos, vulnerabilidades, amenazas y riesgos. Estos elementos son la base para identificar y proteger los sistemas y datos de una organización.
 
@@ -357,17 +357,17 @@ Amenaza, vulnerabilidad y riesgo: Las piezas clave del rompecabezas de la seguri
 Estos tres conceptos son fundamentales porque nos permiten anticipar los problemas y tomar medidas antes de que un incidente ocurra. Ahora, vamos a explorar cada uno de ellos en detalle y cómo se interrelacionan para ayudarnos a proteger mejor nuestros sistemas.
 
 
-#### 4.1. Activos
+#### 5.1. Activos
 
 Antes de hablar de amenazas, vulnerabilidades y riesgos, es esencial que primero entendamos qué son los activos en el contexto de la ciberseguridad. Los activos son todos los elementos valiosos para una organización que deben ser protegidos, ya que un ataque o incidente podría afectar su funcionamiento, productividad o incluso la reputación de la empresa.
 
 
 
-##### 4.1.1. ¿Qué es un activo?
+##### 5.1.1. ¿Qué es un activo?
 
 Un activo es cualquier recurso o bien que tiene valor para la empresa. En el ámbito de la ciberseguridad, se refiere a cualquier cosa que pueda afectar la seguridad o el funcionamiento de los sistemas de información si se viera comprometido. Los activos pueden ser tangibles (como equipos o edificios) o intangibles (como datos o software), y su protección es el objetivo principal de la ciberseguridad.
 
-##### 4.1.2. Ejemplo práctico
+##### 5.1.2. Ejemplo práctico
 
 Imagina que trabajas en una empresa que gestiona datos financieros. Los activos más importantes de esa empresa serían:
 
@@ -377,61 +377,61 @@ Imagina que trabajas en una empresa que gestiona datos financieros. Los activos 
 
 Cada uno de estos activos necesita ser protegido porque su pérdida o daño podría afectar gravemente a la empresa.
 
-##### 4.1.3. Tipos de activos
+##### 5.1.3. Tipos de activos
 
 Para hacer más fácil su gestión y protección, los activos se clasifican en diferentes categorías según su naturaleza:
 
 1. Datos: Son todos los datos e información que maneja la empresa en cualquier formato (digital, físico, en la nube, etc.). Estos datos pueden ser personales, financieros, de clientes, operacionales y más.   
-   * Ejemplos:
-       * Bases de datos de clientes o ventas.
-       * Documentación importante como contratos, manuales, normativas o informes.
-   * Importancia: La confidencialidad y integridad de los datos son esenciales, ya que su pérdida o alteración puede dañar gravemente la empresa.
+    * Ejemplos:
+        * Bases de datos de clientes o ventas.
+        * Documentación importante como contratos, manuales, normativas o informes.
+    * Importancia: La confidencialidad y integridad de los datos son esenciales, ya que su pérdida o alteración puede dañar gravemente la empresa.
 
 2. Aplicaciones: Son los programas y software que utiliza la organización para gestionar y operar su negocio. Incluyen tanto aplicaciones comerciales como sistemas personalizados desarrollados específicamente para la empresa.
-   * Ejemplos:
-       * Sistemas SCADA (usados en procesos industriales).
-       * Software operativo como sistemas operativos, firmware, aplicaciones de gestión de usuarios o recursos (ERP, CRM).
-   * Importancia: La disponibilidad y seguridad de las aplicaciones son clave para garantizar que los sistemas y procesos funcionen sin interrupciones.
+    * Ejemplos:
+        * Sistemas SCADA (usados en procesos industriales).
+        * Software operativo como sistemas operativos, firmware, aplicaciones de gestión de usuarios o recursos (ERP, CRM).
+    * Importancia: La disponibilidad y seguridad de las aplicaciones son clave para garantizar que los sistemas y procesos funcionen sin interrupciones.
 
 3. Hardware industrial: Se refiere a los equipos físicos que son necesarios para el funcionamiento de la empresa, especialmente en industrias o sectores que dependen de tecnología avanzada.
-   * Ejemplos:
-       * PLC (Controladores Lógicos Programables), que automatizan procesos industriales.
-       * Servidores y terminales remotas en fábricas.
-       * Dispositivos móviles usados para gestionar procesos.
-   * Importancia: El hardware es crítico para las operaciones diarias, y si falla, puede causar pérdidas operativas significativas.
+    * Ejemplos:
+        * PLC (Controladores Lógicos Programables), que automatizan procesos industriales.
+        * Servidores y terminales remotas en fábricas.
+        * Dispositivos móviles usados para gestionar procesos.
+    * Importancia: El hardware es crítico para las operaciones diarias, y si falla, puede causar pérdidas operativas significativas.
 
 4. Red: Son los dispositivos y equipos que permiten la conectividad y comunicación entre los sistemas, usuarios y procesos.
-   * Ejemplos:
-       * Routers, switches y firewalls que mantienen la red segura y operativa.
-       * Pasarelas que permiten la conexión entre diferentes sistemas.
-   * Importancia: La disponibilidad y seguridad de las redes son fundamentales para que los sistemas de la empresa se mantengan conectados y puedan compartir información de manera eficiente y segura.
+    * Ejemplos:
+        * Routers, switches y firewalls que mantienen la red segura y operativa.
+        * Pasarelas que permiten la conexión entre diferentes sistemas.
+    * Importancia: La disponibilidad y seguridad de las redes son fundamentales para que los sistemas de la empresa se mantengan conectados y puedan compartir información de manera eficiente y segura.
 
 5. Tecnología: Son otros equipos tecnológicos necesarios para el funcionamiento empresarial. Son más generales que el hardware industrial, pero siguen siendo críticos para la gestión diaria.
-   * Ejemplos:
-       * Servidores que alojan los sistemas y aplicaciones empresariales.
-       * Teléfonos, impresoras y routers.
-   * Importancia: La disponibilidad de estos equipos es vital para la operatividad y la comunicación interna y externa de la empresa.
+    * Ejemplos:
+         * Servidores que alojan los sistemas y aplicaciones empresariales.
+         * Teléfonos, impresoras y routers.
+    * Importancia: La disponibilidad de estos equipos es vital para la operatividad y la comunicación interna y externa de la empresa.
 
 6. Personal: El personal es un activo clave, ya que son quienes manejan los sistemas y toman decisiones sobre la información y los procesos de la empresa.
-   * Ejemplos:
-       * Plantilla propia de la organización.
-       * Personal subcontratado o de mantenimiento.
-   * Importancia: La concienciación y capacitación en ciberseguridad del personal son fundamentales para evitar errores humanos, que muchas veces son la principal causa de vulnerabilidades.
+    * Ejemplos:
+        * Plantilla propia de la organización.
+        * Personal subcontratado o de mantenimiento.
+    * Importancia: La concienciación y capacitación en ciberseguridad del personal son fundamentales para evitar errores humanos, que muchas veces son la principal causa de vulnerabilidades.
 
 7. Instalaciones: Son los lugares físicos donde la organización aloja sus sistemas y operaciones.
-   * Ejemplos:
-       * Edificios, oficinas, instalaciones eléctricas.
-       * Centros de datos y servidores físicos.
-   * Importancia: Las instalaciones deben estar protegidas físicamente para evitar acceso no autorizado o daños físicos, como incendios o robos.
+    * Ejemplos:
+        * Edificios, oficinas, instalaciones eléctricas.
+        * Centros de datos y servidores físicos.
+    * Importancia: Las instalaciones deben estar protegidas físicamente para evitar acceso no autorizado o daños físicos, como incendios o robos.
 
 8. Equipamiento auxiliar: Son los equipos de soporte que ayudan a mantener el funcionamiento de los sistemas de información, aunque no son parte del núcleo principal de operación.
-   * Ejemplos:
-       * Equipos de destrucción de datos, climatización o SAI (Sistemas de Alimentación Ininterrumpida) que mantienen los servidores funcionando incluso en caso de fallos eléctricos.
-   * Importancia: Aseguran que los sistemas críticos sigan operando bajo condiciones adversas o en situaciones de emergencia.
+    * Ejemplos:
+        * Equipos de destrucción de datos, climatización o SAI (Sistemas de  Alimentación Ininterrumpida) que mantienen los servidores funcionando incluso en caso de fallos eléctricos.
+    * Importancia: Aseguran que los sistemas críticos sigan operando bajo condiciones adversas o en situaciones de emergencia.
 
 ![](assets/IS-U111-PrincipiosGenerales9.png)
 
-##### 4.1.4. ¿Por qué es importante clasificar los activos?
+##### 5.1.4. ¿Por qué es importante clasificar los activos?
 
 Clasificar los activos es un paso fundamental en la gestión de la ciberseguridad, ya que permite identificar y priorizar los activos más críticos para la organización. Al clasificar los activos, podemos:
 

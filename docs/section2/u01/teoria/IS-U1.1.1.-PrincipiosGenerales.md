@@ -259,75 +259,79 @@ La cultura de ciberseguridad es vital en cualquier organización. No solo se tra
 
 Nunca debemos abrir enlaces ni descargar archivos adjuntos de correos electrónicos que nos parezcan sospechosos. Este tipo de correos puede contener malware o llevarnos a sitios fraudulentos.
 
-* Relación con CIA: Este principio refuerza la confidencialidad y integridad.
-  1. Confidencialidad: Al evitar hacer clic en enlaces sospechosos o descargar archivos potencialmente maliciosos, se protege la información sensible de caer en manos equivocadas.
-  2. Integridad: Impide la descarga de malware que podría modificar o corromper los datos.
+* Relación con CIA: Este principio refuerza la confidencialidad y integridad.   
+
+     1. Confidencialidad: Al evitar hacer clic en enlaces sospechosos o descargar archivos potencialmente maliciosos, se protege la información sensible de caer en manos equivocadas.
+     2. Integridad: Impide la descarga de malware que podría modificar o corromper los datos.
 * Ejemplo: Si recibes un correo que parece raro, aunque parezca que viene de un amigo o compañero, es mejor verificar antes de hacer clic o descargar algo. Los ciberataques, como el phishing, suelen empezar con un correo aparentemente inocente.
 
 #### 4.3. Usar software de seguridad
 
 Siempre debemos usar software de seguridad como antivirus, cortafuegos (firewalls), y herramientas antimalware. Estas herramientas ayudan a detectar y bloquear amenazas antes de que lleguen a nuestros sistemas.
 
-* Relación con CIA: Apoya los tres principios de la CIA:
+* Relación con CIA: Apoya los tres principios de la CIA    
 
-  1. Confidencialidad: El uso de antivirus y cortafuegos ayuda a bloquear accesos no autorizados a los datos.
-  2. Integridad: Los antivirus evitan que el malware modifique o dañe archivos y sistemas.
-  3. Disponibilidad: Mantener los sistemas libres de amenazas asegura que los recursos estén disponibles para su uso cuando sea necesario.
+     1. Confidencialidad: El uso de antivirus y cortafuegos ayuda a bloquear accesos no autorizados a los datos.
+     2. Integridad: Los antivirus evitan que el malware modifique o dañe archivos y sistemas.
+     3. Disponibilidad: Mantener los sistemas libres de amenazas asegura que los recursos estén disponibles para su uso cuando sea necesario.
 * Ejemplo: Tener un antivirus actualizado nos protege de virus conocidos, mientras que un cortafuegos limita el acceso no autorizado a tu red. También es útil tener herramientas de borrado seguro para eliminar completamente archivos confidenciales.**
 
 #### 4.4. Limitar la superficie de exposición a amenazas
 
 No es suficiente solo implementar medidas de seguridad, también debemos reducir la cantidad de servicios expuestos al mínimo necesario. Cuantos más servicios tengamos abiertos en nuestra red, más oportunidades tienen los atacantes de encontrar una brecha.
 
-* Relación con CIA: Refuerza la disponibilidad y la confidencialidad.
-  1. Confidencialidad: Limitar los servicios y accesos minimiza el riesgo de que los atacantes accedan a información confidencial.
-  2. Disponibilidad: Al reducir la cantidad de servicios innecesarios, se minimiza el riesgo de ataques que puedan comprometer la operatividad de los sistemas.
+* Relación con CIA: Refuerza la disponibilidad y la confidencialidad.    
+
+     1. Confidencialidad: Limitar los servicios y accesos minimiza el riesgo de que los atacantes accedan a información confidencial.
+     2. Disponibilidad: Al reducir la cantidad de servicios innecesarios, se minimiza el riesgo de ataques que puedan comprometer la operatividad de los sistemas.
 * Ejemplo: Si tienes un servidor que ofrece varios servicios, desactiva aquellos que no uses o que no sean necesarios para la operación diaria. Esto reduce el número de "puertas" que los atacantes pueden intentar abrir.
 
 #### 4.5. Cifrar la información sensible
 
 Toda la información sensible o confidencial debe estar cifrada. Esto significa que, incluso si alguien accede a los datos sin permiso, no podrá leerlos sin la clave para descifrarlos.
 
-* Relación con CIA: Directamente relacionado con la confidencialidad.
-    1. Confidencialidad: El cifrado asegura que, aunque alguien acceda a los datos, no podrá entenderlos sin la clave correcta. Protege la información frente a accesos no autorizados.
+* Relación con CIA: Directamente relacionado con la confidencialidad.  
+
+     1. Confidencialidad: El cifrado asegura que, aunque alguien acceda a los datos, no podrá entenderlos sin la clave correcta. Protege la información frente a accesos no autorizados.
 * Ejemplo: Cuando enviamos datos personales o financieros por Internet, deben estar cifrados para que, si son interceptados, no puedan ser leídos. Usar cifrado es esencial para proteger la privacidad de la información.**
 
 #### 4.7. Borrado seguro de información
 
 Cuando ya no necesitas un archivo o cuando vas a deshacerte de un dispositivo, debes asegurarte de que los datos se eliminen completamente. Un simple "borrado" puede dejar rastros de información que un atacante podría recuperar.
 
-* Relación con CIA: Refuerza la confidencialidad y la integridad.
-    1. Confidencialidad: El borrado seguro evita que los datos sensibles que ya no son necesarios puedan ser recuperados por personas no autorizadas.
-    2. Integridad: Garantiza que los datos eliminados no puedan ser restaurados o manipulados indebidamente.
+* Relación con CIA: Refuerza la confidencialidad y la integridad.    
+
+     1. Confidencialidad: El borrado seguro evita que los datos sensibles que ya no son necesarios puedan ser recuperados por personas no autorizadas.
+     2. Integridad: Garantiza que los datos eliminados no puedan ser restaurados o manipulados indebidamente.
 * Ejemplo: Antes de vender o desechar un ordenador o teléfono, debes usar una herramienta de borrado seguro que sobrescriba los datos varias veces, para que no puedan recuperarse.
 
 #### 4.8. Realizar copias de seguridad periódicas
 
 Las copias de seguridad son esenciales para proteger tus datos contra fallos o ataques, como el ransomware. Las copias deben ser frecuentes y seguras, y es importante asegurarse de que no estás respaldando también malware accidentalmente.
 
-* Relación con CIA: Este principio se relaciona principalmente con la disponibilidad y también con la integridad.
-    1. Disponibilidad: Las copias de seguridad permiten recuperar los sistemas rápidamente después de un fallo o ataque, asegurando que la información esté siempre disponible.
-    2. Integridad: Las copias de seguridad periódicas aseguran que se pueda restaurar la información tal como estaba en el momento de la copia, preservando su exactitud.
+* Relación con CIA: Este principio se relaciona principalmente con la disponibilidad y también con la integridad.   
+     1. Disponibilidad: Las copias de seguridad permiten recuperar los sistemas rápidamente después de un fallo o ataque, asegurando que la información esté siempre disponible.
+     2. Integridad: Las copias de seguridad periódicas aseguran que se pueda restaurar la información tal como estaba en el momento de la copia, preservando su exactitud.
 * Ejemplo: Imagina que tu empresa es víctima de un ataque que borra o cifra todos los archivos. Sin copias de seguridad, podrías perderlo todo. Si tienes una copia reciente, puedes recuperar los datos rápidamente y minimizar el impacto.**
 
 #### 4.9. Mantener actualizados los sistemas y aplicaciones
 
 Mantener el sistema operativo y las aplicaciones actualizadas es crucial para evitar vulnerabilidades. Las actualizaciones suelen incluir parches de seguridad que corrigen errores que los atacantes podrían explotar.
 
-* Relación con CIA: Apoya los tres principios.
-    1. Confidencialidad: Mantener el software actualizado cierra vulnerabilidades que los atacantes podrían usar para acceder a datos sensibles.
-    2. Integridad: Evita que malware o exploits dañen o alteren los datos al aprovechar fallos no corregidos.
-    3. Disponibilidad: Las actualizaciones de seguridad evitan que los sistemas sean comprometidos, lo que puede llevar a interrupciones en el servicio.
+* Relación con CIA: Apoya los tres principios.   
+     1. Confidencialidad: Mantener el software actualizado cierra vulnerabilidades que los atacantes podrían usar para acceder a datos sensibles.
+     2. Integridad: Evita que malware o exploits dañen o alteren los datos al aprovechar fallos no corregidos.
+      3. Disponibilidad: Las actualizaciones de seguridad evitan que los sistemas sean comprometidos, lo que puede llevar a interrupciones en el servicio.
 * Ejemplo: Si estás usando una versión desactualizada de una aplicación, los hackers podrían aprovechar una vulnerabilidad conocida. Al actualizarla, cierras esa puerta y proteges tu sistema.
 
 #### 4.10. Revisar regularmente la configuración de seguridad
 
 Es importante revisar y ajustar regularmente la configuración de seguridad de los sistemas y las aplicaciones. Esto incluye revisar los permisos y las opciones de seguridad para asegurarse de que están configuradas correctamente y de acuerdo con las mejores prácticas.
 
-* Relación con CIA: Apoya la confidencialidad, integridad y disponibilidad.
-    1. Confidencialidad: Revisar la configuración de seguridad asegura que los permisos y accesos estén correctamente establecidos, evitando accesos no autorizados.
-    2. Integridad: Una configuración revisada y adecuada previene cambios o manipulaciones no deseadas en los sistemas.
-    3. Disponibilidad: Mantener la configuración de seguridad actualizada evita que el sistema sea vulnerable a fallos o ataques que podrían causar interrupciones.
+* Relación con CIA: Apoya la confidencialidad, integridad y disponibilidad.    
+     1. Confidencialidad: Revisar la configuración de seguridad asegura que los permisos y accesos estén correctamente establecidos, evitando accesos no autorizados.
+     2. Integridad: Una configuración revisada y adecuada previene cambios o manipulaciones no deseadas en los sistemas.
+     3. Disponibilidad: Mantener la configuración de seguridad actualizada evita que el sistema sea vulnerable a fallos o ataques que podrían causar interrupciones.
 * Ejemplo: Revisar los permisos de las aplicaciones para asegurarse de que no tienen más acceso del necesario. Una aplicación que no necesita acceder a tu ubicación o contactos no debería tener ese permiso. También es bueno revisar los ajustes de seguridad de tus redes y sistemas para asegurarte de que están actualizados y ajustados a las últimas amenazas.
 
 ### 4. Activos, vulnerabilidades, amenazas y riesgos

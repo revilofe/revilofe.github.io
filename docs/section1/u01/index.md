@@ -44,7 +44,7 @@ toc_icon: "file-code"
 ### 4. **Contenidos**  
    La unidad se encuentra dentro del **Bloque 1** e incluye los siguientes temas:   
     - **U1**: Mi primer programa.   
-    - **U2**: Sentencias condicionales y repetitivas.   
+    - **U2**: Estructuras de control en la programación.
 
 ### 5. **Detalles de los contenidos**
    Durante la unidad, los estudiantes aprenderán:   

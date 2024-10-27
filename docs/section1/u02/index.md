@@ -21,40 +21,39 @@ toc_icon: "file-code"
 #  - footer
 ---
 
-Cada unidad contendrá una serie de contenidos, resultados de aprendizaje (desglosados en criterios de evaluación), una práctica o prácticas para evaluar la adquisición de dichos criterios de evaluación y una prueba específica para evaluar la asimilación de contenido.
+## Unidad 2: Estructuras de control en la programación
 
-## Normativa que respalda la unidad
+### 1. **Normativa de respaldo**
+La unidad está respaldada por la normativa [oficial del curso](https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf).
 
-### Resultados de aprendizaje a trabajar
+### 2. **Resultados de aprendizaje (RA)**
+**RA 3**: Escribir y depurar código, analizando y utilizando las estructuras de control del lenguaje.
 
-En esta sección se relaciona la unidad con el resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf).
+### 3. **Criterios de evaluación**
+Los criterios de evaluación para la unidad 2 son los siguientes:   
+- **a)** Escribir y probar código que haga uso de estructuras de selección.   
+- **b)** Utilizar estructuras de repetición.   
+- **c)** Reconocer las posibilidades de las sentencias de salto.   
+- **d)** Escribir código utilizando control de excepciones.   
+- **e)** Crear programas ejecutables utilizando diferentes estructuras de control.    
+- **f)** Probar y depurar los programas.   
+- **g)** Comentar y documentar el código.   
 
-RA 3. Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.
+### 4. **Contenidos**
+La unidad se encuentra dentro del **Bloque 1** e incluye los siguientes temas:   
+- **U1**: Mi primer programa.   
+- **U2**: Estructuras de control en la programación.
 
-#### Criterios de evaluación
+### 5. **Detalles de los contenidos**
+Durante la unidad, los estudiantes aprenderán:
+- **2.1**. Estructuras de selección.
+- **2.2**. Estructuras de repetición.
+- **2.3**. Estructuras de salto.
+- **2.4**. Control de excepciones.
+- **2.5**. Depuración de programas, utilizando el depurador como herramienta de control de errores.
+- **2.6**. Documentación de programas.
 
-En esta sección se relaciona la unidad con los criterios de evaluación concretos, del resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2010-8067).
-
-* a) Se ha escrito y probado código que haga uso de estructuras de selección.
-* b) Se han utilizado estructuras de repetición.
-* c) Se han reconocido las posibilidades de las sentencias de salto.
-* d) Se ha escrito código utilizando control de excepciones.
-* e) Se han creado programas ejecutables utilizando diferentes estructuras de control.
-* f) Se han probado y depurado los programas.
-* g) Se ha comentado y documentado el código. 
-
-### Contenidos
-
-La unidad se encuentra dentro del Bloque 1
-
-* U1: Mi primer programa. 
-* U2: Sentencias condicionales y repetitivas.
-
-En la Unidad 2, veremos:
-
-* Estructuras de selección.
-* Estructuras de repetición.
-* Estructuras de salto.
-* Control de excepciones.
-* Depuración de programas, mediante el depurador como herramienta de control de errores.
-* Documentación de programas.
+### 6. **Evaluación**
+Para evaluar la unidad se realizarán:
+- **Práctica**: Creación de programas que utilicen estructuras de control, implementación de control de excepciones y uso del depurador.      
+- **Prueba específica**: Evaluación de las competencias relacionadas con el uso y depuración de estructuras de control en los programas.

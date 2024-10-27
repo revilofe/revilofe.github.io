@@ -1,7 +1,7 @@
 ---
-title: "UD 2 - 2.1 Condicionales"
-description: Condicionales
-summary: Condicionales
+title: "UD 2 - 2.1 Sentencias Condicionales"
+description: Sentencias Condicionales
+summary: Sentencias Condicionales
 authors:
     - Eduardo Fdez
 date: 2022-09-18
@@ -11,10 +11,11 @@ categories:
     - PROG
 tags:
     - Software
+    - Sentencias condicionales
 ---
-## Sentencias Condicionales
+## 2.1. Sentencias Condicionales
 
-### Expresiones booleanas
+### 1. Expresiones booleanas
 
 Una *expresión booleana* es aquella que puede ser verdadera (`True`) o falsa (`False`). Los ejemplos siguientes usan el operador `==`, que compara dos operandos y devuelve `True` si son iguales y `False` en caso contrario:
 
@@ -48,15 +49,13 @@ x is not y           # x no es lo mismo que y
 
 A pesar de que estas operaciones probablemente te resulten familiares, los símbolos en Python son diferentes de los símbolos matemáticos que se usan para realizar las mismas operaciones. Un error muy común es usar sólo un símbolo igual (`=`) en vez del símbolo de doble igualdad (`==`). Recuerda que `=` es un operador de asignación, y `==` es un operador de comparación. No existe algo como `=<` o `=>`.
 
-### Operadores lógicos
+### 2. Operadores lógicos
 
 Existen tres  *operadores lógicos* : `and (y)`, `or (o)`, y `not (no)`. El significado semántico de estas operaciones es similar a su significado en inglés. Por ejemplo,
 
-`x > 0 and x < 10`
+- `x > 0 and x < 10` es verdadero sólo cuando `x` es mayor que 0 *y* menor que 10.
 
-es verdadero sólo cuando `x` es mayor que 0 *y* menor que 10.
-
-`n%2 == 0 or n%3 == 0` es verdadero si *cualquiera* de las condiciones es verdadera, es decir, si el número es divisible por 2 *o* por 3.
+- `n%2 == 0 or n%3 == 0` es verdadero si *cualquiera* de las condiciones es verdadera, es decir, si el número es divisible por 2 *o* por 3.
 
 Finalmente, el operador `not` niega una expresión booleana, de modo que `not (x > y)` es verdadero si `x > y` es falso; es decir, si `x` es menor o igual que `y`.
 
@@ -69,7 +68,7 @@ True
 
 Esta flexibilidad puede ser útil, pero existen ciertas sutilezas en ese tipo de uso que pueden resultar confusas. Es posible que prefieras evitar usarlo de este modo hasta que estés bien seguro de lo que estás haciendo.
 
-### Ejecución condicional
+### 3. Ejecución condicional
 
 Para poder escribir programas útiles, casi siempre vamos a necesitar la capacidad de comprobar condiciones y cambiar el comportamiento del programa de acuerdo a ellas. Las `sentencias condicionales` nos proporcionan esa capacidad. La forma más sencilla es la sentencia `if`:
 
@@ -122,7 +121,7 @@ SyntaxError: invalid syntax
 
 No es necesaria una línea en blanco al final de un bloque de instrucciones al escribir y ejecutar un script, pero puede mejorar la legibilidad de su código.
 
-### Ejecución alternativa
+### 4. Ejecución alternativa
 
 La segunda forma de la sentencia `if` es la  *ejecución alternativa* , en la cual existen dos posibilidades y la condición determina cual de ellas será ejecutada. La sintaxis es similar a ésta:
 
@@ -142,7 +141,7 @@ Si al dividir `x` por 2 obtenemos como resto 0, entonces sabemos que `x` es par,
 
 Dado que la condición debe ser obligatoriamente verdadera o falsa, solamente una de las alternativas será ejecutada. Las alternativas reciben el nombre de  *ramas* , dado que se trata de ramificaciones en el flujo de la ejecución.
 
-### Condicionales encadenados
+### 5. Condicionales encadenados
 
 Algunas veces hay más de dos posibilidades, de modo que necesitamos más de dos ramas. Una forma de expresar una operación como ésa es usar un  *condicional encadenado* :
 
@@ -176,7 +175,7 @@ elif choice == 'c':
 
 Cada condición es comprobada en orden. Si la primera es falsa, se comprueba la siguiente y así con las demás. Si una de ellas es verdadera, se ejecuta la rama correspondiente, y la sentencia termina. Incluso si hay más de una condición que sea verdadera, sólo se ejecuta la primera que se encuentra.
 
-### Condicionales anidados
+### 6. Condicionales anidados
 
 Un condicional puede también estar anidado dentro de otro. Podríamos haber escrito el ejemplo anterior de las tres ramas de este modo:
 
@@ -215,7 +214,7 @@ if 0 < x and x < 10:
     print('x es un número positivo con un sólo dígito.')
 ```
 
-## Evaluación en cortocircuito de expresiones lógicas
+### 7. Evaluación en cortocircuito de expresiones lógicas
 
 Cuando Python está procesando una expresión lógica, como `x >= 2 and (x/y) > 2`, evalúa la expresión de izquierda a derecha. Debido a la definición de `and`, si `x` es menor de 2, la expresión `x >= 2` resulta ser `falsa`, de modo que la expresión completa ya va a resultar `falsa`, independientemente de si `(x/y) > 2` se evalúa como `verdadera` o `falsa`.
 
@@ -267,11 +266,11 @@ En la tercera expresión lógica, el `y != 0` va *después* del cálculo de `(x/
 
 En la segunda expresión, se dice que `y != 0` actúa como *guardián* para garantizar que sólo se ejecute `(x/y)` en el caso de que `y` no sea cero.
 
-## Depuración
+### 8. Depuración
 
 Los “traceback” que Python muestra cuando se produce un error contienen un montón de información, pero pueden resultar abrumadores. Las partes más útiles normalmente son:
 
-* Qué tipo de error se ha producido, y
+* Qué tipo de error se ha producido, y    
 * Dónde ha ocurrido.
 
 Los errores de sintaxis (syntax errors), normalmente son fáciles de localizar, pero a veces tienen trampa. Los errores debido a espacios en blanco pueden ser complicados, ya que los espacios y las tabulaciones son invisibles, y solemos ignorarlos.

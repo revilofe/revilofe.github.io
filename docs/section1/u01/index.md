@@ -54,6 +54,6 @@ toc_icon: "file-code"
     - **1.4**. Instalación y uso básico de un IDE.    
 
 ### 6. **Evaluación**
-   Para evaluar la unidad se realizarán:
+   Para evaluar la unidad se realizarán:    
     - **Práctica**: Creación de un proyecto básico de programación utilizando un IDE.      
-    - **Prueba específica**: Evaluación de los conocimientos sobre estructura de programas y uso de variables.
+    - **Prueba específica**: Evaluación de los conocimientos sobre estructura de programas y uso de variables.     

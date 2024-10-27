@@ -43,26 +43,26 @@ Este resultado de aprendizaje se abordará desglosando el contenido en varios pu
 En esta unidad, trabajaremos los siguientes **Criterios de Evaluación (CE)** relacionados con el RA 2:
 
 1. **CE 2.a**: Se han instalado entornos de desarrollo, propietarios y libres.    
-   - **Contenido asociado**: Proceso de instalación de entornos de desarrollo como **Visual Studio Code** y los IDEs de **JetBrains** (IntelliJ IDEA, PyCharm, Fleet), tanto en sistemas operativos Windows, Mac y Linux. Se abordarán las ventajas de utilizar IDEs libres frente a propietarios, y cómo seleccionar el entorno adecuado según el proyecto.   
+     - **Contenido asociado**: Proceso de instalación de entornos de desarrollo como **Visual Studio Code** y los IDEs de **JetBrains** (IntelliJ IDEA, PyCharm, Fleet), tanto en sistemas operativos Windows, Mac y Linux. Se abordarán las ventajas de utilizar IDEs libres frente a propietarios, y cómo seleccionar el entorno adecuado según el proyecto.   
 
 2. **CE 2.b**: Se han añadido y eliminado módulos en el entorno de desarrollo.       
-   - **Contenido asociado**: Gestión de módulos y extensiones para personalizar el entorno. Se verá cómo agregar funcionalidades adicionales a través de plugins en JetBrains y Visual Studio Code, como soporte para lenguajes adicionales, frameworks (Spring, Django) y herramientas de análisis de código.    
+     - **Contenido asociado**: Gestión de módulos y extensiones para personalizar el entorno. Se verá cómo agregar funcionalidades adicionales a través de plugins en JetBrains y Visual Studio Code, como soporte para lenguajes adicionales, frameworks (Spring, Django) y herramientas de análisis de código.    
 
 3. **CE 2.c**: Se ha personalizado y automatizado el entorno de desarrollo.    
-    - **Contenido asociado**: Personalización del entorno de desarrollo cambiando temas, configurando atajos de teclado y ajustando las preferencias del editor. Además, se abordará la automatización de tareas frecuentes como la compilación, ejecución de pruebas y depuración utilizando herramientas internas de los IDEs.    
+      - **Contenido asociado**: Personalización del entorno de desarrollo cambiando temas, configurando atajos de teclado y ajustando las preferencias del editor. Además, se abordará la automatización de tareas frecuentes como la compilación, ejecución de pruebas y depuración utilizando herramientas internas de los IDEs.    
 
 4. **CE 2.d**: Se ha configurado el sistema de actualización del entorno de desarrollo.   
-    - **Contenido asociado**: Configuración de actualizaciones automáticas y manuales en Visual Studio Code y JetBrains para mantener el entorno al día con las nuevas versiones y parches de seguridad.    
+      - **Contenido asociado**: Configuración de actualizaciones automáticas y manuales en Visual Studio Code y JetBrains para mantener el entorno al día con las nuevas versiones y parches de seguridad.    
 
 5. **CE 2.e**: Se han generado ejecutables a partir de código fuente de diferentes lenguajes en un mismo entorno de desarrollo.
 
-    - **Contenido asociado**: Práctica de generación de ejecutables en distintos lenguajes de programación (como Python, Java, JavaScript y C++) dentro de un solo IDE. Se trabajará con ejemplos que muestren cómo un mismo entorno puede gestionar múltiples lenguajes.    
+      - **Contenido asociado**: Práctica de generación de ejecutables en distintos lenguajes de programación (como Python, Java, JavaScript y C++) dentro de un solo IDE. Se trabajará con ejemplos que muestren cómo un mismo entorno puede gestionar múltiples lenguajes.    
 
 6. **CE 2.f**: Se han generado ejecutables a partir de un mismo código fuente con varios entornos de desarrollo.    
-    - **Contenido asociado**: Comparativa de cómo generar ejecutables a partir del mismo código fuente utilizando diferentes IDEs como Visual Studio Code y JetBrains. Se evaluará la eficiencia y las diferencias en el proceso entre estos entornos.    
+      - **Contenido asociado**: Comparativa de cómo generar ejecutables a partir del mismo código fuente utilizando diferentes IDEs como Visual Studio Code y JetBrains. Se evaluará la eficiencia y las diferencias en el proceso entre estos entornos.    
 
 7. **CE 2.g**: Se han identificado las características comunes y específicas de diversos entornos de desarrollo.    
-    - **Contenido asociado**: Evaluación de las funcionalidades comunes y diferenciadoras de los principales entornos de desarrollo, como la integración con sistemas de control de versiones, depuración, soporte para lenguajes y frameworks, personalización, y gestión de dependencias.    
+      - **Contenido asociado**: Evaluación de las funcionalidades comunes y diferenciadoras de los principales entornos de desarrollo, como la integración con sistemas de control de versiones, depuración, soporte para lenguajes y frameworks, personalización, y gestión de dependencias.    
 
 ---
 

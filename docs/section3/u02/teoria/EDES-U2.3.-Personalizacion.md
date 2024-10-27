@@ -12,17 +12,21 @@ categories:
 tags:
     - EDES
     - IDE
+    - Personalización
 ---
 
 ## 2.3. Personalización del entorno
+La **personalización** y **automatización** del entorno de desarrollo son esenciales para maximizar la productividad y optimizar el flujo de trabajo.  En este punto veremos cómo personalizar y automatizar estos IDEs para que trabajen de la manera que mejor se ajuste a tus necesidades.
+
 
 ### 1. Introducción
 
-Uno de los aspectos más importantes a la hora de trabajar en un entorno de desarrollo es la **personalización** y **automatización** del mismo. Adaptar el entorno de trabajo a nuestras preferencias y automatizar tareas repetitivas nos ayuda a ser más eficientes y productivos. Tanto **JetBrains** como **Visual Studio Code** ofrecen muchas opciones para personalizar la apariencia, atajos de teclado y automatizar tareas como la compilación, pruebas o ejecución de scripts. En este punto veremos cómo personalizar y automatizar estos IDEs para que trabajen de la manera que mejor se ajuste a tus necesidades.
-
+Uno de los aspectos más importantes a la hora de trabajar en un entorno de desarrollo es la **personalización** y **automatización** del mismo. Adaptar el entorno de trabajo a nuestras preferencias y automatizar tareas repetitivas nos ayuda a ser más eficientes y productivos. Tanto **JetBrains** como **Visual Studio Code** ofrecen muchas opciones para personalizar la apariencia, atajos de teclado y automatizar tareas como la compilación, ejecución de scripts o ejecución de pruebas son pasos clave que te permitirán centrarte en lo que realmente importa: escribir buen código. 
 ### 2. Personalización del entorno
 
 Cada desarrollador tiene preferencias distintas, desde la forma en que se muestra el código hasta los atajos de teclado. Personalizar el entorno puede hacer que te sientas más cómodo y trabajes de manera más fluida.   
+
+Aunque se darán instrucciones sobre cómo personalizar los IDES, al final del punto se incluirán enlaces a los productos oficiales de Visual Studio Code y JetBrains ya que los pasos pueden cambiar con el tiempo.
 
 #### 2.1. Personalización de Visual Studio Code
 
@@ -84,17 +88,39 @@ La **automatización** te permite reducir tareas repetitivas, como ejecutar prue
 
 Visual Studio Code soporta la ejecución de **tareas automatizadas** a través de su sistema de "tasks". Esto es especialmente útil para automatizar procesos como la compilación o ejecución de pruebas.   
 
-##### 3.1.1. **Crear una tarea de compilación automática**
+##### 3.1.1. **Crear una tarea de ejecución automática**
 
 1. Dirígete a `Terminal > Configurar tarea`.   
 2. Selecciona el tipo de tarea que quieres automatizar, por ejemplo, **compilación**. Visual Studio Code generará un archivo `tasks.json`.   
 3. Configura el script de compilación que deseas automatizar. Aquí puedes definir que, al guardar el archivo (`Ctrl + S`), se ejecute automáticamente la compilación.   
-    - **Ejemplo**: Si estás trabajando en un proyecto en C++, puedes configurar el compilador `g++` para que compile tu código automáticamente después de cada cambio.   
+    - **Ejemplo**: Si estás trabajando en un proyecto en python, puedes configurar una tarea  para que se ejecute tu código automáticamente después de cada cambio.
+   
+     ```json
+     {
+         "version": "2.0.0",
+         "tasks": [
+             {
+                 "label": "Run Python",
+                 "type": "shell",
+                 "command": "python3",
+                 "args": [
+                     "${file}"
+                 ],
+                 "group": {
+                     "kind": "build",
+                     "isDefault": true
+                 }
+             }
+         ]
+     }
+     ```    
+4. Ve a Preferencias > Teclado y busca el comando Run Task. Asigna un atajo de teclado, por ejemplo `Ctrl + S`, para que cuando guardes el archivo, también ejecute la tarea.
+
 
 ##### 3.1.2. **Automatización de pruebas**
 
-1. Si usas frameworks como **Mocha** para pruebas en JavaScript, puedes configurar Visual Studio Code para ejecutar las pruebas automáticamente cada vez que guardes un archivo.   
-2. Para ello, instala la extensión de Mocha y configura el archivo `tasks.json` para que ejecute las pruebas cada vez que haya cambios.   
+1. Si usas frameworks como **Pytest** para pruebas en Python, puedes configurar Visual Studio Code para ejecutar las pruebas automáticamente cada vez que guardes un archivo.   
+2. Para ello, instala la extensión de pytest y configura el archivo `tasks.json` para que ejecute las pruebas cada vez que haya cambios.   
 
 #### 3.2. Automatización en JetBrains (IntelliJ IDEA, PyCharm)
 
@@ -118,12 +144,12 @@ En los siguientes enlaces encontrarás más información sobre cómo personaliza
   
 #### 4.1. Personalizar Visual Studio Code
 
-- https://code.visualstudio.com/docs/getstarted/getting-started
+- [Get started with Visual Studio Code](https://code.visualstudio.com/docs/getstarted/getting-started)
 
 #### 4.2. Personalizar herramientas Jetbrains
 
-- https://www.jetbrains.com/help/pycharm/configuring-project-and-ide-settings.html
-- https://www.jetbrains.com/help/idea/configuring-project-and-ide-settings.html
+- [Configuring PyCharm settings](https://www.jetbrains.com/help/pycharm/configuring-project-and-ide-settings.html)
+- [Configuring the IDE](https://www.jetbrains.com/help/idea/configuring-project-and-ide-settings.html)
 
 ### 5. Conclusión
 

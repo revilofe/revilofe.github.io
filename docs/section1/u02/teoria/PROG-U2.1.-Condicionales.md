@@ -15,6 +15,10 @@ tags:
 ---
 ## 2.1. Sentencias Condicionales
 
+Las *sentencias condicionales* nos permiten comprobar si una o más condiciones son verdaderas o falsas, y ejecutar diferentes bloques de código en función de los resultados. En Python, las sentencias condicionales se realizan con las palabras clave `if`, `elif` y `else`. 
+
+Estas sentencias se repiten en muchos lenguajes de programación, pero la sintaxis puede variar ligeramente. A lo largo de esta unidad, veremos cómo funcionan las sentencias condicionales en Python y cómo podemos utilizarlas para controlar el flujo de ejecución de nuestros programas.
+
 ### 1. Expresiones booleanas
 
 Una *expresión booleana* es aquella que puede ser verdadera (`True`) o falsa (`False`). Los ejemplos siguientes usan el operador `==`, que compara dos operandos y devuelve `True` si son iguales y `False` en caso contrario:

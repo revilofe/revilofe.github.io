@@ -222,7 +222,7 @@ def test_fahr2cel():
 ```
 
 
-### 7. Actividades
+## Actividades
 
 **Actividad 1**: Escribe un programa que capture la excepción división entre cero. Tendrá que mostar el mensaje del error capturado.
 

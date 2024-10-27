@@ -1,7 +1,7 @@
 ---
-title: "UD 2 - 2.2 Iterativas y salto"
-description: Iterativas y salto
-summary: Iterativas y salto
+title: "UD 2 - 2.2 Sentencias Iterativas y salto"
+description: Sentencias Iterativas y salto
+summary: Sentencias Iterativas y salto
 authors:
     - Eduardo Fdez
 date: 2022-09-18
@@ -11,10 +11,17 @@ categories:
     - PROG
 tags:
     - Software
+    - Sentencias iterativas
 ---
-## Sentencias Iterativas
+## 2.2. Sentencias Iterativas
 
-### Actualización de variables
+Las sentencias iterativas o bucles permiten ejecutar un bloque de código varias veces. En Python, existen dos tipos de bucles: `for` y `while`. Estas setencias nos las encontramos en la mayoría de los lenguajes de programación y son fundamentales para la programación. Por ejemplo, en otros lenguajes de programación, como C, C++, Java, kotlin ,etc., nos las encontramos, y ademas también se utilizan las sentencias `do-while`, pero en Python no existe esta sentencia.
+
+A lo largo de esta unidad, veremos cómo se utilizan estas sentencias en Python, y cómo se pueden combinar con otras sentencias de control de flujo, como `break`, `continue`, `pass`, etc.
+
+Antes de comenzar con las sentencias iterativas, vamos a recordar conceptos básicos de programación como son las sentencias de asignación de valores a las variables. Ya que en muchos casos, los bucles se utilizan para realizar operaciones repetitivas sobre variables, y es importante la inicialización y actualización de las mismas.
+
+### 1. Actualización de variables
 
 Uno de los usos habituales de las sentencias de asignación consiste en realizar una actualización sobre una variable – en la cual el valor nuevo de esa variable depende del antiguo.
 
@@ -31,7 +38,7 @@ Si intentas actualizar una variable que no existe, obtendrás un error, ya que P
 NameError: name 'x' is not defined
 ```
 
-Antes de que puedas actualizar una variable, debes  *inicializarla*, normalmente mediante una simple asignación:
+Antes de que puedas actualizar una variable, debes *inicializarla*, normalmente mediante una simple asignación:
 
 ```python
 >>> x = 0
@@ -40,9 +47,9 @@ Antes de que puedas actualizar una variable, debes  *inicializarla*, normalmente
 
 Actualizar una variable añadiéndole 1 se denomina *incrementar*; restarle 1 recibe el nombre de *decrementar* (o disminuir).
 
-### La sentencia `while`
+### 2. Bucles mediante la sentencia `while`
 
-Los PCs se suelen utilizar a menudo para automatizar tareas repetitivas. Repetir tareas idénticas o muy similares sin cometer errores es algo que a las máquinas se les da bien y en cambio a las personas no. Como las iteraciones resultan tan habituales, Python proporciona varias características en su lenguaje para hacerlas más sencillas.
+Los ordenadores, móviles, tables, etc se suelen utilizar a menudo para automatizar tareas repetitivas. Repetir tareas idénticas o muy similares sin cometer errores es algo que a las máquinas se les da bien y en cambio a las personas no. Como las iteraciones resultan tan habituales, Python y la mayoría de los lenguajes de programación proporcionan varias características para hacer más sencillas programar estas tareas..
 
 Una forma de iteración en Python es la sentencia `while`. He aquí un programa sencillo que cuenta hacia atrás desde cinco y luego dice “¡Despegue!”.
 
@@ -58,21 +65,21 @@ Casi se puede leer la sentencia `while` como si estuviera escrita en inglés. Si
 
 Éste es el flujo de ejecución de la sentencia `while`, explicado de un modo más formal:
 
-1. Se evalúa la condición, obteniendo `Verdadero` or `Falso`.
-2. Si la condición es falsa, se sale de la sentencia `while` y se continúa la ejecución en la siguiente sentencia.
-3. Si la condición es verdadera, se ejecuta el cuerpo del `while` y luego se vuelve al paso 1.
+1. Se evalúa la condición, obteniendo `Verdadero` or `Falso`.    
+2. Si la condición es falsa, se sale de la sentencia `while` y se continúa la ejecución en la siguiente sentencia.     
+3. Si la condición es verdadera, se ejecuta el cuerpo del `while` y luego se vuelve al paso 1.     
 
 Este tipo de flujo recibe el nombre de *bucle*, ya que el tercer paso enlaza de nuevo con el primero. Cada vez que se ejecuta el cuerpo del bucle se dice que realizamos una *iteración*. Para el bucle anterior, podríamos decir que “ha tenido cinco iteraciones”, lo que significa que el cuerpo del bucle se ha ejecutado cinco veces.
 
 El cuerpo del bucle debe cambiar el valor de una o más variables, de modo que la condición pueda en algún momento evaluarse como falsa y el bucle termine. La variable que cambia cada vez que el bucle se ejecuta y controla cuándo termina éste, recibe el nombre de *variable de iteración*. Si no hay variable de iteración, el bucle se repetirá para siempre, resultando así un *bucle infinito*.
 
-### Bucles infinitos
+#### 2.1. Bucles infinitos
 
 Una fuente de diversión sin fin para los programadores es la constatación de que las instrucciones del champú: “Enjabone, aclare, repita”, son un bucle infinito, ya que no hay una *variable de iteración* que diga cuántas veces debe ejecutarse el proceso.
 
 En el caso de una `cuenta atrás`, podemos verificar que el bucle termina, ya que sabemos que el valor de `n` es finito, y podemos ver que ese valor se va haciendo más pequeño cada vez que se repite el bucle, de modo que en algún momento llegará a 0. Otras veces un bucle es obviamente infinito, porque no tiene ninguna variable de iteración.
 
-### “Bucles infinitos” y `break`
+##### 2.2.1. “Bucles infinitos” y `break`
 
 A veces no se sabe si hay que terminar un bucle hasta que se ha recorrido la mitad del cuerpo del mismo. En ese caso se puede crear un bucle infinito a propósito y usar la sentencia `break` para salir fuera de él cuando se desee, aunque no es aconsejable puesto que podemos poner la condición de salida en la evaluación del `while`.
 
@@ -115,10 +122,13 @@ he terminado
 > fin
 ¡Terminado!
 ```
+Es importante tener en cuenta que la sentencia `break` sólo afecta al bucle más interno en el que se encuentra. Si se utiliza en un bucle anidado, sólo se saldrá del bucle en el que se encuentra. El bucle exterior continuará ejecutándose.
+
+En este ciclo vamos a evitar el uso del break, ya que no es una buena práctica, y vamos a utilizar una condición en la evaluación del `while` para salir del bucle. De esta forma nos acostumbramos a utilizar la estructura de control de flujo de forma correcta. En un futuro, cuando tu crezcas como programador, tendrás tu propio criterio para utilizar o no utilizar el `break`. 
 
 > ¿Cómo lo harías sin usar `while True:` y `break`?
 
-### Finalizar iteraciones con `continue`
+#### 2.2. Finalizar iteraciones con `continue`
 
 Algunas veces, estando dentro de un bucle se necesita terminar con la iteración actual y saltar a la siguiente de forma inmediata. En ese caso se puede utilizar la sentencia `continue` para pasar a la siguiente iteración sin terminar la ejecución del cuerpo del bucle para la actual.
 
@@ -151,9 +161,11 @@ hola a todos
 
 Todas las líneas se imprimen en pantalla, excepto la que comienza con el símbolo de almohadilla, ya que en ese caso se ejecuta `continue`, finaliza la iteración actual y salta de vuelta a la sentencia `while` para comenzar la siguiente iteración, de modo que que se omite la sentencia `print`.
 
+Al igual que hemos dicho con el break, en este ciclo vamos a evitar el uso del `continue`, ya que no es una buena práctica, y vamos a utilizar una condición en la evaluación de que sentencias queremos ejecutar. De esta forma nos acostumbramos a utilizar la estructura de control de flujo de forma correcta. En un futuro, cuando tu crezcas como programador, tendrás tu propio criterio para utilizar o no utilizar el `continue`.
+
 > ¿Cómo lo harías sin usar `while True:`, `break`, `continue`?
 
-### Bucles definidos usando `for`
+### 3. Bucles definidos usando `for`
 
 A veces se desea repetir un bucle a través de un *conjunto* de cosas, como una lista de palabras, las líneas de un archivo, o una lista de números. Cuando se tiene una lista de cosas para recorrer, se puede construir un bucle *definido* usando una sentencia `for`. A la sentencia `while` se la llama un bucle  *indefinido*, porque simplemente se repite hasta que cierta condición se hace `Falsa`, mientras que el bucle `for` se repite a través de un conjunto conocido de elementos, de modo que ejecuta tantas iteraciones como elementos hay en el conjunto.
 
@@ -198,19 +210,19 @@ Otra forma de usar los bucles `for` es haciendo uso de la instrucción `range`:
 1, 3, 5, 7, 9, >>>
 ```
 
-### Diseños de bucles
+### 4. Diseños de bucles
 
 A menudo se usa un bucle `for` o `while` para movernos a través de una lista de elementos o el contenido de un archivo y se busca algo, como el valor más grande o el más pequeño de los datos que estamos revisando.
 
 Los bucles generalmente se construyen así:
 
-* Se inicializan una o más variables antes de que el bucle comience
-* Se realiza alguna operación con cada elemento en el cuerpo del bucle, posiblemente cambiando las variables dentro de ese cuerpo.
-* Se revisan las variables resultantes cuando el bucle se completa
+* Se inicializan una o más variables antes de que el bucle comience   
+* Se realiza alguna operación con cada elemento en el cuerpo del bucle, posiblemente cambiando las variables dentro de ese cuerpo.    
+* Se revisan las variables resultantes cuando el bucle se completa    
 
 Usaremos ahora una lista de números para demostrar los conceptos y construcción de estos diseños de bucles.
 
-#### Bucles de recuento y suma
+#### 4.1. Bucles de recuento y suma
 
 Por ejemplo, para contar el número de elementos en una lista, podemos escribir el siguiente bucle `for`:
 
@@ -242,7 +254,7 @@ Cuando el bucle se ejecuta, `total` acumula la suma de los elementos; una variab
 
 Ni el bucle que cuenta los elementos ni el que los suma resultan particularmente útiles en la práctica, dado que existen las funciones internas `len()` y `sum()` que cuentan el número de elementos de una lista y el total de elementos en la misma respectivamente.
 
-#### Bucles de máximos y mínimos
+#### 4.2. Bucles de máximos y mínimos
 
 Para encontrar el valor mayor de una lista o secuencia, construimos el bucle siguiente:
 
@@ -305,7 +317,7 @@ def min(valores):
 
 En esta versión de la función para calcular el mínimo, hemos eliminado las sentencias `print`, de modo que sea equivalente a la función `min`, que ya está incorporada dentro de Python.
 
-### Depuración
+### 5. Depuración
 
 A medida que vayas escribiendo programas más grandes, puede que notes que vas necesitando emplear cada vez más tiempo en depurarlos. Más código significa más oportunidades de cometer un error y más lugares donde los **bugs** pueden esconderse.
 

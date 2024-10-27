@@ -75,26 +75,26 @@ La Unidad 2 se enmarca dentro del **Bloque 1: Instalación y Uso de Entornos de 
 Durante la **Unidad 2**, se trabajarán los siguientes contenidos:
 
 1. **Instalación de entornos de desarrollo (CE 2.a)**:    
-   * Instalación de entornos de desarrollo como **Visual Studio Code** y los **IDEs de JetBrains** (IntelliJ IDEA, PyCharm, Fleet) en diferentes sistemas operativos.    
-   * Comparativa de las ventajas de los IDEs libres frente a los propietarios.    
+     * Instalación de entornos de desarrollo como **Visual Studio Code** y los **IDEs de JetBrains** (IntelliJ IDEA, PyCharm, Fleet) en diferentes sistemas operativos.    
+     * Comparativa de las ventajas de los IDEs libres frente a los propietarios.    
 2. **Gestión de módulos y extensiones (CE 2.b)**:    
-   * Instalación y eliminación de módulos en Visual Studio Code (extensiones) y JetBrains (plugins).    
-   * Ejemplos prácticos de personalización del entorno añadiendo soporte para lenguajes adicionales, herramientas de depuración y frameworks populares.    
+     * Instalación y eliminación de módulos en Visual Studio Code (extensiones) y JetBrains (plugins).    
+     * Ejemplos prácticos de personalización del entorno añadiendo soporte para lenguajes adicionales, herramientas de depuración y frameworks populares.    
 3. **Personalización y automatización del entorno (CE 2.c)**:    
-   * Personalización de la apariencia y atajos de teclado en los IDEs.    
-   * Automatización de tareas comunes como la ejecución de pruebas y compilación automática utilizando herramientas de los entornos de desarrollo.    
+     * Personalización de la apariencia y atajos de teclado en los IDEs.    
+     * Automatización de tareas comunes como la ejecución de pruebas y compilación automática utilizando herramientas de los entornos de desarrollo.    
 4. **Configuración de actualizaciones (CE 2.d)**:   
-   * Configuración del sistema de actualizaciones en Visual Studio Code y JetBrains.    
-   * Importancia de mantener el entorno actualizado para evitar problemas de compatibilidad y aprovechar nuevas funcionalidades.    
+     * Configuración del sistema de actualizaciones en Visual Studio Code y JetBrains.    
+     * Importancia de mantener el entorno actualizado para evitar problemas de compatibilidad y aprovechar nuevas funcionalidades.    
 5. **Generación de ejecutables en distintos lenguajes (CE 2.e)**:    
-   * Prácticas para compilar y generar ejecutables en diferentes lenguajes de programación dentro de un mismo entorno (Python, Java, C++).    
-   * Comparativa entre la creación de ejecutables en proyectos multiplataforma.   
+     * Prácticas para compilar y generar ejecutables en diferentes lenguajes de programación dentro de un mismo entorno (Python, Java, C++).    
+     * Comparativa entre la creación de ejecutables en proyectos multiplataforma.   
 6. **Generación de ejecutables en diferentes entornos (CE 2.f)**:    
-   * Comparación entre Visual Studio Code y JetBrains al generar ejecutables a partir del mismo código fuente.   
-   * Análisis de las diferencias de rendimiento y flujo de trabajo entre los distintos entornos.    
+     * Comparación entre Visual Studio Code y JetBrains al generar ejecutables a partir del mismo código fuente.   
+     * Análisis de las diferencias de rendimiento y flujo de trabajo entre los distintos entornos.    
 7. **Evaluación de las características de los entornos (CE 2.g)**:    
-   * Identificación de las características comunes entre los entornos de desarrollo, como la integración con control de versiones y depuradores.    
-   * Análisis de las funcionalidades avanzadas que diferencian a JetBrains y Visual Studio Code.    
+     * Identificación de las características comunes entre los entornos de desarrollo, como la integración con control de versiones y depuradores.    
+     * Análisis de las funcionalidades avanzadas que diferencian a JetBrains y Visual Studio Code.    
 
 ---
 

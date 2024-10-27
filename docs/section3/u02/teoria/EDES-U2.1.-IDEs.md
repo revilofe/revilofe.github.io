@@ -80,7 +80,7 @@ Los IDEs modernos están integrados con herramientas de **control de versiones**
 
 #### 3.5. **Pruebas automatizadas**
 
-Algunos IDEs, como PyCharm o Visual Studio Code, permiten la integración de herramientas de pruebas automáticas como **JUnit** (para Java) o **pytest** (para Python), lo que facilita la detección de errores a lo largo del desarrollo.
+Algunos IDEs, como PyCharm o Visual Studio Code, permiten la integración de herramientas de pruebas automáticas como **JUnit** (para Java y kotlin), **Kotest** para kotlin o **pytest** (para Python), lo que facilita la detección de errores a lo largo del desarrollo.
 
 #### 3.6. **Soporte para frameworks populares**
 
@@ -120,7 +120,7 @@ Existen diferentes tipos de IDEs que se utilizan según el tipo de lenguaje o pr
 
 #### 4.5. **Fleet: IDE de nueva generación**
 
-- **Fleet** es un IDE de JetBrains diseñado para ser ligero, flexible y compatible con múltiples lenguajes de programación. Ofrece una experiencia simplificada pero potente, permitiendo la colaboración en tiempo real entre equipos.
+- **Fleet** es un editor de JetBrains diseñado para ser ligero, flexible y compatible con múltiples lenguajes de programación. Se ofrece como alternativa a Visual Studio Code y presenta una experiencia simplificada pero potente, permitiendo la colaboración en tiempo real entre equipos.
 
 ### 5. Enlaces y recursos de interés
 Siguiendo los siguientes enlaces podrás instalar las herramientas que se mencionan en este documento:

@@ -45,7 +45,7 @@ La unidad se encuentra dentro del **Bloque 1** e incluye los siguientes temas:
 - **U2**: Estructuras de control en la programación.    
 
 ### 5. **Detalles de los contenidos**
-Durante la unidad, los estudiantes aprenderán:    
+Durante la unidad, los estudiantes aprenderán:     
 - **2.1**. Estructuras de selección.    
 - **2.2**. Estructuras de repetición.    
 - **2.3**. Estructuras de salto.    

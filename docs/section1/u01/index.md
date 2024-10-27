@@ -47,13 +47,13 @@ toc_icon: "file-code"
     - **U2**: Estructuras de control en la programación.
 
 ### 5. **Detalles de los contenidos**
-   Durante la unidad, los estudiantes aprenderán:   
+   Durante la unidad, los estudiantes aprenderán:      
     - **1.1**. Qué es un programa y un algoritmo.   
     - **1.2**. Bloques principales de un programa.   
     - **1.3**. Elementos básicos de un lenguaje de programación.   
     - **1.4**. Instalación y uso básico de un IDE.    
 
 ### 6. **Evaluación**
-   Para evaluar la unidad se realizarán:    
+   Para evaluar la unidad se realizarán:      
     - **Práctica**: Creación de un proyecto básico de programación utilizando un IDE.      
-    - **Prueba específica**: Evaluación de los conocimientos sobre estructura de programas y uso de variables.     
+    - **Prueba específica**: Evaluación de los conocimientos sobre estructura de programas y uso de variables.      

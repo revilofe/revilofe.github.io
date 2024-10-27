@@ -16,6 +16,10 @@ tags:
 
 ## 2.1. Entornos de desarrollo integrado
 
+Los **Entornos de Desarrollo Integrado (IDEs)** son herramientas totalmente necesarias para el desarrollo de software. En esta unidad, aprenderemos a instalar, personalizar y automatizar entornos de desarrollo, así como a generar ejecutables en diferentes lenguajes y entornos.
+
+En esta sección, veremos los conceptos básicos de los IDEs y su importancia en el desarrollo de software.
+
 ### 1. Introducción
 
 Las **herramientas CASE (Computer Aided Software Engineering)** son software diseñado para asistir a los desarrolladores en las distintas fases del ciclo de vida del desarrollo de software. Estas herramientas ayudan a automatizar tareas en el diseño, análisis, desarrollo y pruebas de aplicaciones. Dependiendo del momento en el que se utilicen, las herramientas CASE se dividen en tres grandes categorías:

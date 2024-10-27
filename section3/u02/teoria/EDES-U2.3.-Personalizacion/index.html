@@ -3193,9 +3193,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#311-crear-una-tarea-de-compilacion-automatica" class="md-nav__link">
+  <a href="#311-crear-una-tarea-de-ejecucion-automatica" class="md-nav__link">
     <span class="md-ellipsis">
-      3.1.1. Crear una tarea de compilación automática
+      3.1.1. Crear una tarea de ejecución automática
     </span>
   </a>
   
@@ -3760,9 +3760,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#311-crear-una-tarea-de-compilacion-automatica" class="md-nav__link">
+  <a href="#311-crear-una-tarea-de-ejecucion-automatica" class="md-nav__link">
     <span class="md-ellipsis">
-      3.1.1. Crear una tarea de compilación automática
+      3.1.1. Crear una tarea de ejecución automática
     </span>
   </a>
   
@@ -3901,6 +3901,15 @@
       <a href="../../../../tags/#ide" class="md-tag md-tag-icon">IDE</a>
     
   
+    
+    
+      
+      
+    
+    
+      <a href="../../../../tags/#personalizacion" class="md-tag md-tag-icon">Personalización</a>
+    
+  
 </nav>
 
 
@@ -3911,10 +3920,12 @@
   <h1>2.3.-Personalización</h1>
 
 <h2 id="23-personalizacion-del-entorno">2.3. Personalización del entorno<a class="headerlink" href="#23-personalizacion-del-entorno" title="Permanent link">&para;</a></h2>
+<p>La <strong>personalización</strong> y <strong>automatización</strong> del entorno de desarrollo son esenciales para maximizar la productividad y optimizar el flujo de trabajo.  En este punto veremos cómo personalizar y automatizar estos IDEs para que trabajen de la manera que mejor se ajuste a tus necesidades.</p>
 <h3 id="1-introduccion">1. Introducción<a class="headerlink" href="#1-introduccion" title="Permanent link">&para;</a></h3>
-<p>Uno de los aspectos más importantes a la hora de trabajar en un entorno de desarrollo es la <strong>personalización</strong> y <strong>automatización</strong> del mismo. Adaptar el entorno de trabajo a nuestras preferencias y automatizar tareas repetitivas nos ayuda a ser más eficientes y productivos. Tanto <strong>JetBrains</strong> como <strong>Visual Studio Code</strong> ofrecen muchas opciones para personalizar la apariencia, atajos de teclado y automatizar tareas como la compilación, pruebas o ejecución de scripts. En este punto veremos cómo personalizar y automatizar estos IDEs para que trabajen de la manera que mejor se ajuste a tus necesidades.</p>
+<p>Uno de los aspectos más importantes a la hora de trabajar en un entorno de desarrollo es la <strong>personalización</strong> y <strong>automatización</strong> del mismo. Adaptar el entorno de trabajo a nuestras preferencias y automatizar tareas repetitivas nos ayuda a ser más eficientes y productivos. Tanto <strong>JetBrains</strong> como <strong>Visual Studio Code</strong> ofrecen muchas opciones para personalizar la apariencia, atajos de teclado y automatizar tareas como la compilación, ejecución de scripts o ejecución de pruebas son pasos clave que te permitirán centrarte en lo que realmente importa: escribir buen código. </p>
 <h3 id="2-personalizacion-del-entorno">2. Personalización del entorno<a class="headerlink" href="#2-personalizacion-del-entorno" title="Permanent link">&para;</a></h3>
 <p>Cada desarrollador tiene preferencias distintas, desde la forma en que se muestra el código hasta los atajos de teclado. Personalizar el entorno puede hacer que te sientas más cómodo y trabajes de manera más fluida.   </p>
+<p>Aunque se darán instrucciones sobre cómo personalizar los IDES, al final del punto se incluirán enlaces a los productos oficiales de Visual Studio Code y JetBrains ya que los pasos pueden cambiar con el tiempo.</p>
 <h4 id="21-personalizacion-de-visual-studio-code">2.1. Personalización de Visual Studio Code<a class="headerlink" href="#21-personalizacion-de-visual-studio-code" title="Permanent link">&para;</a></h4>
 <p>Visual Studio Code es muy flexible y permite modificar casi cualquier aspecto del entorno.   </p>
 <h5 id="211-cambiar-el-tema-de-color">2.1.1. <strong>Cambiar el tema de color</strong><a class="headerlink" href="#211-cambiar-el-tema-de-color" title="Permanent link">&para;</a></h5>
@@ -3978,19 +3989,40 @@
 <p>La <strong>automatización</strong> te permite reducir tareas repetitivas, como ejecutar pruebas, compilar o ejecutar scripts, haciendo que el IDE haga esto por ti automáticamente en momentos clave.   </p>
 <h4 id="31-automatizacion-en-visual-studio-code">3.1. Automatización en Visual Studio Code<a class="headerlink" href="#31-automatizacion-en-visual-studio-code" title="Permanent link">&para;</a></h4>
 <p>Visual Studio Code soporta la ejecución de <strong>tareas automatizadas</strong> a través de su sistema de "tasks". Esto es especialmente útil para automatizar procesos como la compilación o ejecución de pruebas.   </p>
-<h5 id="311-crear-una-tarea-de-compilacion-automatica">3.1.1. <strong>Crear una tarea de compilación automática</strong><a class="headerlink" href="#311-crear-una-tarea-de-compilacion-automatica" title="Permanent link">&para;</a></h5>
+<h5 id="311-crear-una-tarea-de-ejecucion-automatica">3.1.1. <strong>Crear una tarea de ejecución automática</strong><a class="headerlink" href="#311-crear-una-tarea-de-ejecucion-automatica" title="Permanent link">&para;</a></h5>
 <ol>
 <li>Dirígete a <code>Terminal &gt; Configurar tarea</code>.   </li>
 <li>Selecciona el tipo de tarea que quieres automatizar, por ejemplo, <strong>compilación</strong>. Visual Studio Code generará un archivo <code>tasks.json</code>.   </li>
-<li>Configura el script de compilación que deseas automatizar. Aquí puedes definir que, al guardar el archivo (<code>Ctrl + S</code>), se ejecute automáticamente la compilación.   <ul>
-<li><strong>Ejemplo</strong>: Si estás trabajando en un proyecto en C++, puedes configurar el compilador <code>g++</code> para que compile tu código automáticamente después de cada cambio.   </li>
+<li>
+<p>Configura el script de compilación que deseas automatizar. Aquí puedes definir que, al guardar el archivo (<code>Ctrl + S</code>), se ejecute automáticamente la compilación.   </p>
+<ul>
+<li><strong>Ejemplo</strong>: Si estás trabajando en un proyecto en python, puedes configurar una tarea  para que se ejecute tu código automáticamente después de cada cambio.</li>
 </ul>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.0.0&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;tasks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">            </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Run Python&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shell&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;python3&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">                </span><span class="s2">&quot;${file}&quot;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">            </span><span class="p">],</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">            </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">                </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;build&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">                </span><span class="nt">&quot;isDefault&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="p">}</span>
+</code></pre></div>
+4. Ve a Preferencias &gt; Teclado y busca el comando Run Task. Asigna un atajo de teclado, por ejemplo <code>Ctrl + S</code>, para que cuando guardes el archivo, también ejecute la tarea.</p>
 </li>
 </ol>
 <h5 id="312-automatizacion-de-pruebas">3.1.2. <strong>Automatización de pruebas</strong><a class="headerlink" href="#312-automatizacion-de-pruebas" title="Permanent link">&para;</a></h5>
 <ol>
-<li>Si usas frameworks como <strong>Mocha</strong> para pruebas en JavaScript, puedes configurar Visual Studio Code para ejecutar las pruebas automáticamente cada vez que guardes un archivo.   </li>
-<li>Para ello, instala la extensión de Mocha y configura el archivo <code>tasks.json</code> para que ejecute las pruebas cada vez que haya cambios.   </li>
+<li>Si usas frameworks como <strong>Pytest</strong> para pruebas en Python, puedes configurar Visual Studio Code para ejecutar las pruebas automáticamente cada vez que guardes un archivo.   </li>
+<li>Para ello, instala la extensión de pytest y configura el archivo <code>tasks.json</code> para que ejecute las pruebas cada vez que haya cambios.   </li>
 </ol>
 <h4 id="32-automatizacion-en-jetbrains-intellij-idea-pycharm">3.2. Automatización en JetBrains (IntelliJ IDEA, PyCharm)<a class="headerlink" href="#32-automatizacion-en-jetbrains-intellij-idea-pycharm" title="Permanent link">&para;</a></h4>
 <p>JetBrains incluye herramientas que facilitan la automatización de tareas comunes, como la compilación, la ejecución de pruebas y la integración continua.   </p>
@@ -4015,12 +4047,12 @@
 <p>En los siguientes enlaces encontrarás más información sobre cómo personalizar y automatizar tu entorno de desarrollo:   </p>
 <h4 id="41-personalizar-visual-studio-code">4.1. Personalizar Visual Studio Code<a class="headerlink" href="#41-personalizar-visual-studio-code" title="Permanent link">&para;</a></h4>
 <ul>
-<li>https://code.visualstudio.com/docs/getstarted/getting-started</li>
+<li><a href="https://code.visualstudio.com/docs/getstarted/getting-started">Get started with Visual Studio Code</a></li>
 </ul>
 <h4 id="42-personalizar-herramientas-jetbrains">4.2. Personalizar herramientas Jetbrains<a class="headerlink" href="#42-personalizar-herramientas-jetbrains" title="Permanent link">&para;</a></h4>
 <ul>
-<li>https://www.jetbrains.com/help/pycharm/configuring-project-and-ide-settings.html</li>
-<li>https://www.jetbrains.com/help/idea/configuring-project-and-ide-settings.html</li>
+<li><a href="https://www.jetbrains.com/help/pycharm/configuring-project-and-ide-settings.html">Configuring PyCharm settings</a></li>
+<li><a href="https://www.jetbrains.com/help/idea/configuring-project-and-ide-settings.html">Configuring the IDE</a></li>
 </ul>
 <h3 id="5-conclusion">5. Conclusión<a class="headerlink" href="#5-conclusion" title="Permanent link">&para;</a></h3>
 <p>La <strong>personalización</strong> y <strong>automatización</strong> del entorno de desarrollo son esenciales para maximizar la productividad y optimizar el flujo de trabajo. Tanto Visual Studio Code como los IDEs de JetBrains ofrecen un amplio conjunto de herramientas para adaptar el entorno a tus preferencias y para automatizar tareas repetitivas. Personalizar temas, atajos de teclado y automatizar procesos como la compilación o ejecución de pruebas son pasos clave que te permitirán centrarte en lo que realmente importa: escribir buen código. ¡Aprovecha estas herramientas y ajusta tu entorno de desarrollo para que trabaje a tu favor!</p>

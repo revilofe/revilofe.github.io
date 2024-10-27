@@ -35,11 +35,11 @@ Estas herramientas son las que asisten en las fases de **desarrollo**, **pruebas
 
 
 ### 2. Los Entornos de Desarrollo Integrado (IDEs)
-Los **Entornos de Desarrollo Integrado (IDEs)** son herramientas esenciales dentro de las herramientas **Lower CASE**. Un IDE reúne en una sola interfaz todas las herramientas necesarias para el desarrollo de software, simplificando el proceso y haciéndolo más productivo. Los IDEs permiten a los programadores escribir código, depurarlo, compilarlo, gestionarlo y probarlo sin necesidad de utilizar múltiples aplicaciones.
+Los **Entornos de Desarrollo Integrado (IDEs)** son herramientas esenciales dentro de las herramientas **Lower CASE**. 
 
 #### 2.1. ¿Qué es un IDE?
 
-Un **Entorno de Desarrollo Integrado (IDE)** es una herramienta indispensable dentro de las herramientas **Lower CASE**. Un IDE reúne en una sola interfaz todas las herramientas necesarias para el desarrollo de software, simplificando el proceso y haciéndolo más productivo. Los IDEs permiten a los programadores escribir código, depurarlo, compilarlo, gestionarlo y probarlo sin necesidad de utilizar múltiples aplicaciones.
+Un IDE reúne en una sola interfaz todas las herramientas necesarias para el desarrollo de software, simplificando el proceso y haciéndolo más productivo. Los IDEs permiten a los programadores escribir código, depurarlo, compilarlo, gestionarlo y probarlo sin necesidad de utilizar múltiples aplicaciones.
 
 Algunas de las características fundamentales de un IDE son:
 

@@ -130,6 +130,8 @@ En equipo, comparen las características comunes y específicas de los IDEs que 
 
 1. ¿Qué características comunes comparten los IDEs en términos de edición de código, depuración y control de versiones?
 2. ¿Qué diferencias notaron en la forma en que los IDEs manejan módulos, personalización y generación de ejecutables?
+3. ¿Cuál de los IDEs elegidos consideran que es más adecuado para proyectos de desarrollo específicos y por qué?
+4. ¿Qué IDE recomendarían a un equipo de desarrollo que trabaja en proyectos de Python, Java o Kotlin y por qué?
 
 **Evidencia**:
 

@@ -88,12 +88,12 @@ Aunque veremos como, recomendamos revisar la [documentación oficial de Visual S
 Visual Studio Code es famoso por su uso de extensiones para añadir funcionalidades. A continuación te mostramos cómo mantener estas extensiones actualizadas.
 
 1. **Acceder a la lista de extensiones**:
-   - Haz clic en el icono de **Extensiones** en la barra lateral izquierda o usa `Ctrl + Shift + X`.
-   - Aquí verás todas las extensiones instaladas. Si alguna necesita actualizarse, aparecerá un ícono de actualización junto a su nombre.
+     - Haz clic en el icono de **Extensiones** en la barra lateral izquierda o usa `Ctrl + Shift + X`.
+     - Aquí verás todas las extensiones instaladas. Si alguna necesita actualizarse, aparecerá un ícono de actualización junto a su nombre.
 2. **Actualizar extensiones automáticamente**:
-   - **Extensiones actualizadas automáticamente**: De manera predeterminada, Visual Studio Code actualiza las extensiones de forma automática. Puedes verificar o cambiar esta configuración en `Archivo > Preferencias > Configuración`, buscando la opción **Extensions: Auto Update**. Asegúrate de que esté marcada para mantener siempre las extensiones al día.
+     - **Extensiones actualizadas automáticamente**: De manera predeterminada, Visual Studio Code actualiza las extensiones de forma automática. Puedes verificar o cambiar esta configuración en `Archivo > Preferencias > Configuración`, buscando la opción **Extensions: Auto Update**. Asegúrate de que esté marcada para mantener siempre las extensiones al día.
 3. **Ejemplo práctico**:
-   - Imagina que tienes instalada la extensión de **Python** y la de **Kotlin** en Visual Studio Code. Si ambas reciben actualizaciones (mejoras en el autocompletado, soporte para nuevas características de lenguaje), el IDE actualizará estas extensiones automáticamente, y no tendrás que preocuparte por hacerlo manualmente.
+     - Imagina que tienes instalada la extensión de **Python** y la de **Kotlin** en Visual Studio Code. Si ambas reciben actualizaciones (mejoras en el autocompletado, soporte para nuevas características de lenguaje), el IDE actualizará estas extensiones automáticamente, y no tendrás que preocuparte por hacerlo manualmente.
 
 ### 5. Recursos adicionales
 - [documentación oficial sobre actualización de JetBrains](https://www.jetbrains.com/help/idea/update.html)

@@ -146,6 +146,11 @@ Siguiendo los siguientes enlaces podrás instalar extensiones y plugins en Visua
 - [Plugins en pycharm](https://www.jetbrains.com/help/pycharm/plugins-settings.html)
 - [Instalando plugins en IDEA](https://www.jetbrains.com/help/idea/managing-plugins.html)
 - [Plugins en IDEA](https://www.jetbrains.com/help/idea/plugins-settings.html)
+- [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/)
+- [Extensiones recomendadas para Python en Visual Studio Code](https://code.visualstudio.com/docs/python/environments)
+- [Extensiones recomendadas para Kotlin en Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=mathiasfrohlich.Kotlin)
+- [Extensiones recomendadas para Python en PyCharm](https://www.jetbrains.com/help/pycharm/python.html)
+- [Extensiones recomendadas para Kotlin en IntelliJ IDEA](https://www.jetbrains.com/help/idea/kotlin.html)
 
 
 ### 7. Conclusión

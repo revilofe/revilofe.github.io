@@ -1,7 +1,7 @@
 
 import pytest
 
-from src.calculadora_alumnos import es_resultado_negativo, multiplicar, dividir
+from src.calculadora_alumnos import es_resultado_negativo, multiplicar, dividir, potencia
 
 
 def test_es_resultado_negativo():

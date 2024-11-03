@@ -257,7 +257,7 @@ def realizar_calculo(decimales: int, resultado_almacenado: float) -> float:
     print("\n## Ingrese número, operador, 'resultado', 'cancelar' o <ENTER> para finalizar el cálculo ##\n")
 
     while realizando_calculos:
-        entrada = pedir_entrada(f"\t (Cálculo = {resultado if resultado != None else 0}) >> ")
+        entrada = pedir_entrada(f"\t (Cálculo = {resultado if resultado != None else 0:.{decimales}f}) >> ")
         
         if entrada == "cancelar":
             resultado = None

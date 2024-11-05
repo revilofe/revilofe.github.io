@@ -133,6 +133,13 @@ JetBrains incluye herramientas que facilitan la automatización de tareas comune
 3. Activa la opción para que cada vez que guardes el archivo, las pruebas se ejecuten automáticamente.   
     - **Ejemplo**: Si estás desarrollando una aplicación en **Java** con **JUnit**, cada vez que guardes un archivo de prueba, el IDE ejecutará automáticamente las pruebas y mostrará los resultados en el panel de salida.   
 
+Otra opción es configurar un **automatización de test** en el IDE después de realizar cualquier cambio, a través del plugin Kotest. En la siguiente imagen se muestra un ejemplo de cómo configurar un test en un proyecto Kotlin.
+
+<figure markdown>
+  ![](assets/EDES-U2.3.-AutomatTest.png)
+  <figcaption>Automatización test</figcaption>
+</figure>
+
 ##### 3.2.2. **Configuración de tareas previas a la ejecución**
 
 1. Si necesitas realizar una serie de tareas previas a la ejecución de tu proyecto, como limpiar archivos temporales o reiniciar un servidor, JetBrains te permite configurar **Before Launch Tasks**.   

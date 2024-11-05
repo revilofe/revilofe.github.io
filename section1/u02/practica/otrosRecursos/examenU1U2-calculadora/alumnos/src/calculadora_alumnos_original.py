@@ -1,9 +1,9 @@
-# ATENCIÓN!!!
+# TODO: ATENCIÓN!!!
 # 1. Importar los paquetes necesarios
-# 2. NO usar print de los errores en nigún sitio (excepto en la propia función 
-#    mostrar_error), SIEMPRE llamar a la función mostrar_error.
-# 3. En comentarios internos tenéis ayuda para guiaros en la resolución de esta prueba.
-# 4. CADA función SOLO puede tener una instrucción return
+# 2. Usar la función mostrar_error para imprimir los errores por consola.
+# 3. Los comentarios TODO os ayudan a resolver cada apartado de esta prueba.
+# 4. CADA función SOLO puede tener una instrucción return.
+# 5. En test_calculadora_alumnos.py crear el test unitario para la función es_resultado_negativo y hacer que todos los test unitarios se cumplan.
 
 
 
@@ -18,7 +18,7 @@ MENSAJES_ERROR = (
 
 # Operadores soportados por la calculadora
 OPERADORES = 
-# Ayuda: los símbolos que reconocerá la aplicación para el cálculo de las operaciones serán los siguientes:
+# TODO: Ayuda: incluye en esta constante los símbolos que reconocerá la aplicación para el cálculo de las operaciones:
 # '+' para la suma.
 # '-' para la resta.
 # 'x' o '*' para la multiplicación.
@@ -31,7 +31,7 @@ def limpiar_pantalla():
     """
     Limpia la consola según el sistema operativo.
     """
-    # El desarrollo de esta función está incompleto y con errores...
+    # TODO: El desarrollo de esta función está incompleto y con errores.
     try:
         os.system(clear if os.name = posix else cls)
         # Otra forma de expresar la misma instrucción sería la siguiente:
@@ -47,7 +47,7 @@ def pausa():
     """
     Pausa la ejecución del programa hasta que se pulse ENTER... "\nPresione ENTER para continuar..."
     """
-    # El desarrollo de esta sin realizar... ver documentación. 
+    # TODO: Desarrollar esta función según su documentación. 
 
 
 def mostrar_error(indice_error: int, msj_error = None):
@@ -58,9 +58,9 @@ def mostrar_error(indice_error: int, msj_error = None):
         indice_error (int): Índice del mensaje de error en MENSAJES_ERROR.
         msj_error (str, opcional): Texto adicional para personalizar el mensaje de error.
     """
-    # Completa el código de esta función para que controle específicamente las excepciones IndexError y 
+    # TODO: Completa el código de esta función para que controle específicamente las excepciones IndexError y 
     # muestre el mensaje: "\n*ERROR* Mensaje de error no definido.\n"
-    # También se pide que se controle cualquier otra excepción que se pueda producir y muestr el mensaje:
+    # También se pide que se controle cualquier otra excepción que se pueda producir y muestre el mensaje:
     # "\n*ERROR* Problemas al mostrar error!\n{e}\n"
     # En esta función los mensajes de error deben mostrarse con print.
     if msj_error != None:
@@ -70,21 +70,21 @@ def mostrar_error(indice_error: int, msj_error = None):
 
 
 def sumar():
-    # Realizar el desarrollo completo, incluida la documentación... recibe 2 números float y retorna la suma de ambos
+    # TODO: Realizar el desarrollo completo, incluida la documentación... recibe 2 números float y retorna la suma de ambos.
 
 
 
 def restar():
-    # Realizar el desarrollo completo, incluida la documentación... recibe 2 números float y retorna la resta de ambos
+    # TODO: Realizar el desarrollo completo, incluida la documentación... recibe 2 números float y retorna la resta de ambos.
     
 
 
 def es_resultado_negativo(num1: float, num2: float) -> bool:
     """Determina si el resultado de una operación entre num1 y num2 debe ser negativo."""
-    # Realizar el desarrollo completo de esta función teniendo en cuenta la documentación y completándola también. 
+    # TODO: Realizar el desarrollo completo de esta función teniendo en cuenta la documentación y completándola también. 
     # Debe pasar las pruebas unitarias.
-    # Se trata de una función que os puede venir bien utilizar tanto en la función multiplicar, como en dividir.
-    # Ya que va a determinar si la multiplicación o división entre dos números debería ser de signo negativo o no
+    # Se trata de una función que os puede venir bien para utilizarla tanto en la función multiplicar, como en dividir.
+    # Ya que va a determinar si la multiplicación o división entre dos números debería ser de signo negativo o no.
 
 
 
@@ -102,6 +102,7 @@ def multiplicar():
     Note:
         Debe redondear los números recibidos a enteros para trabajar.
     """
+    # TODO: 
     # 1. Realizar el desarrollo completo de esta función teniendo en cuenta la documentación. 
     # 2. Esta función debe pasar las pruebas unitarias.
     # 3. No podéis usar el operador de multiplicación de Python para realizar el desarrollo de la misma, 
@@ -109,7 +110,8 @@ def multiplicar():
     # 4. Aunque se reciben números de tipo float, debéis redondearlos como números enteros para 
     #    simplificar esta función, es decir, la operación 4.98 * 3.33, deberá convertirse en 5 * 3.
     # 5. Tened en cuenta que podéis recibir números negativos, es decir, la operación -5 * -5 = 25
-    # 6. OBLIGATORIO usar un bucle for
+    # 6. OBLIGATORIO usar un bucle for.
+    # 7. Incluir algún comentario para mejorar la claridad y permitir que otros comprendan el propósito y funcionamiento del código.
 
 
 
@@ -130,6 +132,7 @@ def dividir():
     Note:
         Debe redondear los números recibidos a enteros para trabajar.        
     """
+    # TODO: 
     # 1. Realizar el desarrollo completo de esta función teniendo en cuenta la documentación. 
     # 2. Esta función debe pasar las pruebas unitarias.
     # 3. No podéis usar el operador de división de Python para realizar el desarrollo de la misma, 
@@ -137,10 +140,11 @@ def dividir():
     # 4. Aunque se reciben números de tipo float, debéis redondearlos como números enteros para 
     #    simplificar esta función, es decir, la operación 4.98 / 3.33, deberá convertirse en 5 / 3.
     # 5. Tened en cuenta que podéis recibir números negativos, es decir, la operación -5 / -5 = 1
-    
+    # 6. Incluir algún comentario para mejorar la claridad y permitir que otros comprendan el propósito y funcionamiento del código.
 
 
 def potencia():
+    # TODO: 
     # 1. Realizar el desarrollo completo de esta función y su documentación. 
     # 2. Esta función debe pasar las pruebas unitarias.
     # 3. PREMISAS a tener en cuenta:
@@ -150,7 +154,7 @@ def potencia():
     # 4. Utiliza la función de multiplicar para realizar los cálculos que te 
     #    harán falta en esta función (RECUERDA que no puedes usar directamente los operadores 
     #    de Python para la multiplicación y división).
-
+    # 5. Incluir algún comentario para mejorar la claridad y permitir que otros comprendan el propósito y funcionamiento del código.
 
 
 def pedir_entrada(msj: str) -> str:
@@ -163,7 +167,7 @@ def pedir_entrada(msj: str) -> str:
     Returns:
         str: Entrada del usuario.
     """
-    # El desarrollo de esta función está incompleto, debéis terminarla teniendo en cuenta la documentación
+    # TODO: El desarrollo de esta función está incompleto, debéis terminarla teniendo en cuenta la documentación
     return input(msj)
 
 
@@ -179,9 +183,9 @@ def calcular_operacion(num1: float, num2: float, operador: str) -> float:
     Returns:
         float: Resultado de la operación.
     """        
-    # El desarrollo de esta función está incompleto... completadla teniendo en cuenta la documentación
+    # TODO: El desarrollo de esta función está incompleto... completadla teniendo en cuenta la documentación
     # y que debe realizar las llamadas adecuadas a las funciones ya creadas para realizar los distintos 
-    # cálculos.
+    # cálculos... sumar, restar, multiplicar, dividir y potencia.
 
     return resultado
 
@@ -194,7 +198,7 @@ def obtener_operaciones() -> str:
     Returns:
         (str): cadena de caracteres con la información de las operaciones disponibles.
     """
-    # El desarrollo de esta función está incompleto...
+    # TODO: El desarrollo de esta función está incompleto... ver documentación para solucionarla correctamente.
     """
     Operaciones disponibles:
       ce => Reiniciar resultado a 0
@@ -237,7 +241,7 @@ def realizar_calculo():
         * También podemos escribir "cancelar", volviendo sin realizar ningún cambio en el 
           resultado almacenado de la calculadora.    
     """
-    # El desarrollo de esta función está incompleto... ver documentación para solucionarla correctamente.
+    # TODO: El desarrollo de esta función está incompleto... ver documentación para solucionarla correctamente.
 
     operador = None
     resultado = None
@@ -305,7 +309,7 @@ def main():
         
         5. Finalmente, se limpia la pantalla, el programa se despide con el mensaje "\n\nBye, bye...\n\n" y termina.
     """
-    # Corrige los errores y haz que el main funcione correctamente...
+    # TODO: Corrige los errores y haz que el main funcione correctamente...
 
     decimales = 2
     resultado = 0.0

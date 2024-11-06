@@ -58,15 +58,19 @@ def mostrar_error(indice_error: int, msj_error = None):
         indice_error (int): Índice del mensaje de error en MENSAJES_ERROR.
         msj_error (str, opcional): Texto adicional para personalizar el mensaje de error.
     """
-    # TODO: Completa el código de esta función para que controle específicamente las excepciones IndexError y 
-    # muestre el mensaje: "\n*ERROR* Mensaje de error no definido.\n"
-    # También se pide que se controle cualquier otra excepción que se pueda producir y muestre el mensaje:
-    # "\n*ERROR* Problemas al mostrar error!\n{e}\n"
-    # En esta función los mensajes de error deben mostrarse con print.
+    # TODO: 
+    # 1. Corrige el error que existe a la hora de acceder a los mensajes de error que están en la constante
+    #    MENSAJES_ERROR. A los elementos de una tupla se accede igual que a los caracteres de una 
+    #    cadena de caracteres.
+    # 2. Completa el código de esta función para que controle específicamente las excepciones IndexError y 
+    #    muestre el mensaje: "\n*ERROR* Mensaje de error no definido.\n"
+    # 3. También se pide que se controle cualquier otra excepción que se pueda producir y muestre el mensaje:
+    #    "\n*ERROR* Problemas al mostrar error!\n{e}\n"
+    # 4. En esta función los mensajes de error deben mostrarse con print.
     if msj_error != None:
-        print(f"\n*ERROR* {MENSAJES_ERROR[indice_error].format(error = msj_error)}\n")
+        print(f"\n*ERROR* {MENSAJES_ERROR.format(error = msj_error)}\n")
     else:
-        print(f"\n*ERROR* {MENSAJES_ERROR[indice_error]}\n")
+        print(f"\n*ERROR* {MENSAJES_ERROR}\n")
 
 
 def sumar():

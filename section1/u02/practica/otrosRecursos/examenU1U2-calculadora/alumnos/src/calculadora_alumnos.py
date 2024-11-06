@@ -14,6 +14,8 @@ MENSAJES_ERROR = (
     "Entrada no válida. Ingrese número, operador, 'resultado', 'cancelar' o <ENTER> para finalizar el cálculo.",
     "Error: Introduzca un operador antes de otro número.",
     "Comando no reconocido. Escriba 'lista' para ver las operaciones disponibles.",
+    "Error: no es posible la división por 0! Introduzca otro valor diferente a 0...",
+    "Se produjo un error: {error}"
 )
 
 # Operadores soportados por la calculadora
@@ -186,10 +188,16 @@ def calcular_operacion(num1: float, num2: float, operador: str) -> float:
     
     Returns:
         float: Resultado de la operación.
+
+    Raises:
+        ZeroDivisionError: Si el divisor es cero.
     """        
     # TODO: El desarrollo de esta función está incompleto... completadla teniendo en cuenta la documentación
     # y que debe realizar las llamadas adecuadas a las funciones ya creadas para realizar los distintos 
     # cálculos... sumar, restar, multiplicar, dividir y potencia.
+    # IMPORTANTE: Si hacemos caso a la documentación de esta función, NO debéis capturar la excepción 
+    # ZeroDivisionError aquí, sino que hay que dejadla que se propague a la función llamante, realizar_calculo(), 
+    # dónde se os indica cómo realizar la gestión de estos errores.
 
     return resultado
 
@@ -219,7 +227,6 @@ def obtener_operaciones() -> str:
     """
 
 
-
 def realizar_calculo():
     """
     Realiza una secuencia de cálculos solicitando números y operadores al usuario.
@@ -234,7 +241,7 @@ def realizar_calculo():
     Note:
         * Dentro de esta función el usuario puede realizar cálculos secuenciales, es decir, 
           comenzará introduciendo un número, después un operador, y otro número... a partir 
-          de aquí sobre el resultado acumulado introducirá operador y número para seguir 
+          de aquí sobre el resultado acumulado, introducirá operador y número para seguir 
           realizando cálculos (ver ejemplos en README.md de la tarea en el repositorio de GitHub).
         * El usuario es guiado para introducir números y operadores secuencialmente 
           para realizar operaciones básicas.
@@ -254,7 +261,7 @@ def realizar_calculo():
     print("\n## Ingrese número, operador, 'resultado', 'cancelar' o <ENTER> para finalizar el cálculo ##\n")
 
     while realizando_calculos:
-        entrada = pedir_entrada(f"\t (Cálculo = {resultado if resultado is not None else 0}) >> ")
+        entrada = pedir_entrada(f"\t (Cálculo = resultado) >> ")
         
         if entrada == "cancelar":
 
@@ -266,23 +273,29 @@ def realizar_calculo():
             operador = 
 
         else:
+            # TODO: este código funciona cuando solucionéis que reconozca las variables resultado_almacenado y decimales.
+            # Pero no gestiona los posibles tipos de Excepciones que se pueden producir: 
+            #    - ValueError que debe mostrar el error que está en la posición 2 de MENSAJES_ERROR.
+            #    - ZeroDivisionError que debe mostrar el error que está en la posición 5 de MENSAJES_ERROR.
+            #    - Exception que debe mostrar el error que está en la posición 6 de MENSAJES_ERROR.
             if entrada == "resultado":
                 entrada = resultado_almacenado
 
-            numero = float(entrada)
+            try:
+                numero = float(entrada)
 
-            if operador is not None:
-                if resultado is None:
-                    resultado = 0
-                resultado = round(calcular_operacion(resultado, numero, operador), decimales)
-                operador = None
+                if operador is not None:
+                    if resultado is None:
+                        resultado = 0
+                    resultado = round(calcular_operacion(resultado, numero, operador), decimales)
+                    operador = None
 
-            elif resultado is None:
-                resultado = numero
+                elif resultado is None:
+                    resultado = numero
 
-            else:
-                mostrar_error(3)
-
+                else:
+                    mostrar_error(3)
+            except
 
 
 def main():
@@ -332,7 +345,7 @@ def main():
             pausa
 
         elif entrada == "ce":
-            resultado = 0
+
 
         elif entrada.startswith("decimales"):
             decimales = int(entrada.split()[1])
@@ -342,11 +355,6 @@ def main():
 
         elif entrada == "calculo":
             realizar_calculo(decimales, resultado)
-
-            if resultado_ultimo_calculo != None:
-                resultado = resultado_ultimo_calculo
-
-            pausa
 
         else:
             mostrar_error

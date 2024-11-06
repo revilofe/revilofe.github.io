@@ -21,7 +21,7 @@ def limpiar_pantalla():
     try:
         os.system('clear' if os.name == 'posix' else 'cls')
     except Exception as e:
-        mostrar_error(0, str(e))
+        mostrar_error(0, e)
 
 
 def pausa():

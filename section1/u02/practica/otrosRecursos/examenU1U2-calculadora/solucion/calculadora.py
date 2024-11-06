@@ -8,6 +8,8 @@ MENSAJES_ERROR = (
     "Entrada no válida. Ingrese número, operador, 'resultado', 'cancelar' o <ENTER> para finalizar el cálculo.",
     "Error: Introduzca un operador antes de otro número.",
     "Comando no reconocido. Escriba 'lista' para ver las operaciones disponibles.",
+    "Error: no es posible la división por 0! Introduzca otro valor diferente a 0...",
+    "Se produjo un error: {error}"
 )
 
 # Operadores soportados por la calculadora
@@ -145,7 +147,7 @@ def potencia(base: float, exponente: float) -> int:
 
     Args:
         base (float): La base que se va a elevar.
-        exponente (int): El exponente al que se elevará la base.
+        exponente (float): El exponente al que se elevará la base.
     
     Returns:
         int: El resultado de elevar la base al exponente.
@@ -206,6 +208,9 @@ def calcular_operacion(num1: float, num2: float, operador: str) -> float:
     
     Returns:
         float: Resultado de la operación.
+
+    Raises:
+        ZeroDivisionError: Si el divisor es cero.
     """    
     if operador in "x*":
         resultado = multiplicar(num1, num2)
@@ -290,6 +295,10 @@ def realizar_calculo(decimales: int, resultado_almacenado: float) -> float:
 
             except ValueError:
                 mostrar_error(2)
+            except ZeroDivisionError:
+                mostrar_error(5)
+            except Exception as e:
+                mostrar_error(6, e)
     
     return resultado
 

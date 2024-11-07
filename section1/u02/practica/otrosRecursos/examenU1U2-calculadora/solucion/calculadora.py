@@ -238,7 +238,7 @@ def obtener_operaciones() -> str:
           - => Resta
           x o * => Multiplicación
           / o : => División
-          ** exp => Potencia
+          ** o exp => Potencia
           cancelar => vovler sin actualizar resultado de la calculadora
           cadena vacía + <ENTER> => volver actualizando resultado de la calculadora
     """
@@ -347,7 +347,6 @@ def main():
 
         elif entrada == "lista":
             print(obtener_operaciones())
-            pausa()
 
         elif entrada == "ce":
             resultado = 0
@@ -358,8 +357,6 @@ def main():
                 print(f"Decimales configurados a {decimales}.")
             except (IndexError, ValueError):
                 mostrar_error(1)
-            
-            pausa()                
 
         elif entrada == "calculo":
             resultado_ultimo_calculo = realizar_calculo(decimales, resultado)
@@ -367,15 +364,17 @@ def main():
             if resultado_ultimo_calculo != None:
                 resultado = resultado_ultimo_calculo
 
-            pausa()
-
         else:
             mostrar_error(4)
+
+
+        if not desea_salir and entrada != "ce":
             pausa()
 
 
     limpiar_pantalla()
     print("\n\nBye, bye...\n\n")
+
 
 
 if __name__ == "__main__":

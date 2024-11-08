@@ -75,13 +75,13 @@ Operación (RES => 1.00) >> calculo
 
 ## Ingrese número, operador, 'resultado', 'cancelar' o <ENTER> para finalizar el cálculo ##
 
-    (Cálculo = 0) >> 5
-    (Cálculo = 5) >> +
-    (Cálculo = 5) >> 3
-    (Cálculo = 8) >> *
-    (Cálculo = 8) >> resultado
-    (Cálculo = 8) >> ** 2
-    (Cálculo = 64) >> 
+    (Cálculo = 0.00) >> 5
+    (Cálculo = 5.00) >> +
+    (Cálculo = 5.00) >> 3
+    (Cálculo = 8.00) >> *
+    (Cálculo = 8.00) >> resultado
+    (Cálculo = 8.00) >> ** 2
+    (Cálculo = 64.00) >> 
 ```
 
 5.1. **Realizar operaciones secuenciales**: 
@@ -101,13 +101,13 @@ Operación (RES => 1.00) >> calculo
 
 ## Ingrese número, operador, 'resultado', 'cancelar' o <ENTER> para finalizar el cálculo ##
 
-    (Cálculo = 0) >> 5
-    (Cálculo = 5) >> +
-    (Cálculo = 5) >> 3
-    (Cálculo = 8) >> *
-    (Cálculo = 8) >> resultado
-    (Cálculo = 8) >> ** 2
-    (Cálculo = 64) >> cancelar
+    (Cálculo = 0.00) >> 5
+    (Cálculo = 5.00) >> +
+    (Cálculo = 5.00) >> 3
+    (Cálculo = 8.00) >> *
+    (Cálculo = 8.00) >> resultado
+    (Cálculo = 8.00) >> ** 2
+    (Cálculo = 64.00) >> cancelar
 Secuencia cancelada. Resultado almacenado sin cambios.
 
 Presione ENTER para continuar...
@@ -128,13 +128,13 @@ Operación (RES => 1.00) >> calculo
 
 ## Ingrese número, operador, 'resultado', 'cancelar' o <ENTER> para finalizar el cálculo ##
 
-    (Cálculo = 0) >> 5
-    (Cálculo = 5) >> +
-    (Cálculo = 5) >> 3
-    (Cálculo = 8) >> *
-    (Cálculo = 8) >> resultado
-    (Cálculo = 8) >> ** 2
-    (Cálculo = 64) >> 
+    (Cálculo = 0.00) >> 5
+    (Cálculo = 5.00) >> +
+    (Cálculo = 5.00) >> 3
+    (Cálculo = 8.00) >> *
+    (Cálculo = 8.00) >> resultado
+    (Cálculo = 8.00) >> ** 2
+    (Cálculo = 64.00) >> 
 
 Presione ENTER para continuar...
 ```

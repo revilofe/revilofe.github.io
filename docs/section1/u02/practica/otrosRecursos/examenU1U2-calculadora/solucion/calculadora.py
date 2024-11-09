@@ -123,25 +123,35 @@ def multiplicar(num1: float, num2: float) -> int:
     Note:
         Debe redondear los números recibidos a enteros para trabajar.
     """
-    
-    if num2 == 0:
-        resultado = 0
-    else:
-        resultado_negativo = es_resultado_negativo(num1, num2)
+    resultado_negativo = es_resultado_negativo(num1, num2)
 
-        num1 = round(abs(num1))
-        num2 = round(abs(num2))
+    # Redondeo a enteros
+    num1 = round(abs(num1))
+    num2 = round(abs(num2))
 
-        # Para optimizar el menor número de iteraciones del bucle for, seleccionamos el rango del número menor
+    # Inicializa el resultado a 0, por si alguno de los números es 0
+    resultado = 0
+
+    if num1 != 0 and num2 != 0:
+        # Para optimizar, usamos el menor número en el rango de iteraciones
         num_a_sumar = max(num1, num2)
         num_rango = min(num1, num2)
 
-        resultado = 0
+        # Calcula el resultado usando solo sumas
         for _ in range(num_rango):
             resultado += num_a_sumar
 
+        # También podríamos haber utilizado la función sumar:
+        # for _ in range(num_rango):
+        #     resultado += sumar(resultado, num_a_sumar)
+
+        # Ajuste de signo si el resultado es negativo
         if resultado_negativo:
             resultado = 0 - resultado
+
+        # También podríamos haber utilizado la función restar:
+        # if resultado_negativo:
+        #     resultado = restar(0, resultado)
 
     return resultado
    
@@ -166,19 +176,32 @@ def dividir(num1: float, num2: float) -> int:
     
     if num2 == 0:
         raise ZeroDivisionError("No es posible dividir por cero!")
-    else:    
-        resultado_negativo = es_resultado_negativo(num1, num2)
 
+    resultado_negativo = es_resultado_negativo(num1, num2)
+    resultado = 0
+
+    if num1 != 0:
+        # Redondeo a enteros
         num1 = round(abs(num1))
         num2 = round(abs(num2))
 
-        resultado = 0
+        # Realiza la división entera restando repetidamente el divisor
         while num1 >= num2:
             num1 -= num2
             resultado += 1
 
+        # También podríamos haber utilizado la función restar
+        # while num1 >= num2:
+        #     num1 += restar(num1, num2)
+        #     resultado = sumar(resultado, 1)
+
+        # Ajuste de signo si el resultado es negativo
         if resultado_negativo:
             resultado = 0 - resultado
+
+        # También podríamos haber utilizado la función restar:
+        # if resultado_negativo:
+        #     resultado = restar(0, resultado)
 
     return resultado
 

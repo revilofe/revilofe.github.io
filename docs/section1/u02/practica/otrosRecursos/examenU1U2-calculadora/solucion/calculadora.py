@@ -53,18 +53,60 @@ def mostrar_error(indice_error: int, msj_error = None):
 
 
 def sumar(num1: float, num2: float) -> float:
-    """Devuelve la suma de num1 y num2."""
+    """Suma dos números.
+
+    Args:
+        num1 (float): El primer número a sumar.
+        num2 (float): El segundo número a sumar.
+
+    Returns:
+        float: El resultado de la suma de num1 y num2.
+    """
     return num1 + num2
 
 
 def restar(num1: float, num2: float) -> float:
-    """Devuelve la resta de num1 y num2."""
+    """Resta dos números.
+
+    Args:
+        num1 (float): El número del que se resta (minuendo).
+        num2 (float): El número a restar (sustraendo).
+
+    Returns:
+        float: El resultado de la resta de num1 y num2.
+    """
     return num1 - num2
 
 
-def es_resultado_negativo(num1: float, num2: float) -> bool:
-    """Determina si el resultado de una operación entre num1 y num2 debe ser negativo."""
-    return (num1 < 0) != (num2 < 0)
+def es_resultado_negativo(num1: float, num2: float, es_potencia: bool = False) -> bool:
+    """Determina si el resultado de una operación entre num1 y num2 debe ser negativo.
+
+    Esta función verifica si el resultado de una operación matemática entre `num1` y `num2`
+    tendría un valor negativo. Si el parámetro `es_potencia` es `True`, se considera una
+    operación de potencia; de lo contrario, se considera una operación de multiplicación o
+    división.
+
+    Args:
+        num1 (float): El primer número de la operación.
+        num2 (float): El segundo número de la operación.
+        es_potencia (bool, optional): Indica si la operación es una potencia. 
+
+    Returns:
+        bool: `True` si el resultado debería ser negativo, `False` en caso contrario. 
+              Valor por defecto es `False`.
+
+    Note:
+        * Si es_potencia es `True` (potencia), el resultado es negativo si `num1` (base)
+          es negativo y `num2` (exponente) es impar. 
+        * Si es_potencia es `False` (multiplicación y división), el resultado es negativo 
+         si solo uno de los números es negativo.
+    """
+    if es_potencia:
+        es_negativo = (num1 < 0) and (num2 % 2 != 0)
+    else:
+        es_negativo = (num1 < 0) != (num2 < 0)
+
+    return es_negativo
 
 
 def multiplicar(num1: float, num2: float) -> int:
@@ -99,7 +141,7 @@ def multiplicar(num1: float, num2: float) -> int:
             resultado += num_a_sumar
 
         if resultado_negativo:
-            resultado = resultado - (resultado + resultado)
+            resultado = 0 - resultado
 
     return resultado
    
@@ -136,7 +178,7 @@ def dividir(num1: float, num2: float) -> int:
             resultado += 1
 
         if resultado_negativo:
-            resultado = resultado - (resultado + resultado)
+            resultado = 0 - resultado
 
     return resultado
 
@@ -168,7 +210,7 @@ def potencia(base: float, exponente: float) -> int:
     else:
         # Comprobamos si el signo del resultado debe ser negativo: 
         # Solo para bases negativas con exponentes impares...
-        resultado_negativo = base < 0 and exponente % 2 != 0
+        resultado_negativo = es_resultado_negativo(base, exponente, True)
 
         # Tomamos el valor absoluto de la base y exponente como entero
         exponente = round(abs(exponente))
@@ -179,7 +221,7 @@ def potencia(base: float, exponente: float) -> int:
             resultado = multiplicar(resultado, base)
         
         if resultado_negativo:
-            resultado = resultado - (resultado + resultado)
+            resultado = 0 - resultado
 
     return resultado
 
@@ -220,8 +262,13 @@ def calcular_operacion(num1: float, num2: float, operador: str) -> float:
         resultado = sumar(num1, num2)
     elif operador in "**exp":
         resultado = potencia(num1, num2)
-    else:
+    elif operador == "-":
         resultado = restar(num1, num2)
+    else:
+        # En principio no sería necesario controlar este error, ya que nunca va
+        # a llamar a esta función con un operador que no esté en la constante 
+        # OPERADORES (ver realizar_calculo()).
+        raise ValueError
 
     return resultado
 
@@ -272,19 +319,37 @@ def realizar_calculo(decimales: int, resultado_almacenado: float) -> float:
             realizando_calculos = False
         
         elif entrada in OPERADORES:
+            # Cogemos el último operador ingresado (si antes había otro, lo reemplaza)
+            # De esta manera, si ingresamos varios operadores seguidos, se realizará 
+            # la operación que indique el último operador introducido.
             operador = entrada
         
         else:
+            # Si se ingresó el comando resultado, reemplazamos el valor de entrada por
+            # el valor del resultado de la calculadora.
             if entrada == "resultado":
                 entrada = resultado_almacenado
 
             try:
+                # Si estamos aquí es porque esperamos un número, pero siempre con el 
+                # control de excepciones, para capturar errores de conversión.
                 numero = float(entrada)
 
+                # Si existe un operador, debemos realizar un cálculo.
                 if operador is not None:
+                    # Si el resultado aún no se ha asignado, tomamos 0 cómo el valor 
+                    # inicial del cálculo. Esto se produce cuando solo ingresamos un
+                    # operador y después un número.
                     if resultado is None:
                         resultado = 0
+
+                    # Realizamos el cálculo y ajustamos el resultado a las posiciones
+                    # decimales adecuadas.
                     resultado = round(calcular_operacion(resultado, numero, operador), decimales)
+
+                    # Importante! Debemos reiniciar el operador después de realizar un 
+                    # cálculo, para que lo siguiente válido sea un operador y no un 
+                    # número.
                     operador = None
 
                 elif resultado is None:
@@ -301,6 +366,28 @@ def realizar_calculo(decimales: int, resultado_almacenado: float) -> float:
                 mostrar_error(6, e)
     
     return resultado
+
+
+def ajustar_decimales(decimales: int, entrada: str) -> int:
+    """
+    Ajusta el número de posiciones decimales según la entrada proporcionada.
+
+    Args:
+        decimales (int): El número de posiciones decimales actual.
+        entrada (str): Una cadena de texto que se espera contenga, en la segunda palabra,
+            el número deseado de posiciones decimales. La primera palabra se ignora.
+
+    Returns:
+        (int): El número de posiciones decimales ajustado. Si ocurre un error en la conversión, devuelve el valor original de `decimales`.
+    """
+    posiciones_decimales = decimales
+    
+    try:
+        posiciones_decimales = int(entrada.split()[1])
+    except (IndexError, ValueError):
+        mostrar_error(1)
+
+    return posiciones_decimales
 
 
 def main():
@@ -352,11 +439,8 @@ def main():
             resultado = 0
 
         elif entrada.startswith("decimales"):
-            try:
-                decimales = int(entrada.split()[1])
-                print(f"Decimales configurados a {decimales}.")
-            except (IndexError, ValueError):
-                mostrar_error(1)
+            decimales = ajustar_decimales(decimales, entrada)
+            print(f"Decimales configurados a {decimales}.")
 
         elif entrada == "calculo":
             resultado_ultimo_calculo = realizar_calculo(decimales, resultado)

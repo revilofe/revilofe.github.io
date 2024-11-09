@@ -173,18 +173,19 @@ def dividir(num1: float, num2: float) -> int:
     Note:
         Debe redondear los números recibidos a enteros para trabajar.        
     """
-    
+    resultado_negativo = es_resultado_negativo(num1, num2)
+
+    # Redondeo a enteros
+    num1 = round(abs(num1))
+    num2 = round(abs(num2))
+
     if num2 == 0:
         raise ZeroDivisionError("No es posible dividir por cero!")
 
-    resultado_negativo = es_resultado_negativo(num1, num2)
+    # Inicializa el resultado a 0, por si num1 es 0
     resultado = 0
 
     if num1 != 0:
-        # Redondeo a enteros
-        num1 = round(abs(num1))
-        num2 = round(abs(num2))
-
         # Realiza la división entera restando repetidamente el divisor
         while num1 >= num2:
             num1 -= num2
@@ -221,28 +222,27 @@ def potencia(base: float, exponente: float) -> int:
         Utiliza la función multiplicar para realizar la operación de potencia.
         Este método está diseñado para exponentes enteros no negativos.
     """
+    resultado_negativo = es_resultado_negativo(base, exponente, True)
+
+    # Redondeamos a entero. La base no debe tener signo para realizar los cálculos
+    exponente = round(exponente)
+    base = round(abs(base))
+
     # Cualquier número elevado a 0 es 1
     if exponente == 0:
         resultado = 1
 
-    # Para esta práctica vamos a suponer que un número elevado a un exponente 
-    # negativo siempre dará 0 (aunque en realidad no es así matemáticamente)
+    # Premisa de resultado 0 con exponente negativo
     elif exponente < 0: 
         resultado = 0
 
     else:
-        # Comprobamos si el signo del resultado debe ser negativo: 
-        # Solo para bases negativas con exponentes impares...
-        resultado_negativo = es_resultado_negativo(base, exponente, True)
-
-        # Tomamos el valor absoluto de la base y exponente como entero
-        exponente = round(abs(exponente))
-        base = round(abs(base))
+        # Inicializa el resultado como la base y realiza la potencia mediante multiplicaciones sucesivas
         resultado = base
-
         for _ in range(exponente - 1):
             resultado = multiplicar(resultado, base)
         
+        # Ajusta el signo del resultado si el cálculo debe ser negativo
         if resultado_negativo:
             resultado = 0 - resultado
 
@@ -324,6 +324,20 @@ def realizar_calculo(decimales: int, resultado_almacenado: float) -> float:
     
     Returns:
         float: Resultado final del cálculo o None si se cancela.
+
+    Note:
+        * Dentro de esta función el usuario puede realizar cálculos secuenciales, es decir, 
+          comenzará introduciendo un número, después un operador, y otro número... a partir 
+          de aquí sobre el resultado acumulado, introducirá operador y número para seguir 
+          realizando cálculos (ver ejemplos en README.md de la tarea en el repositorio de GitHub).
+        * El usuario es guiado para introducir números y operadores secuencialmente 
+          para realizar operaciones básicas.
+        * El usuario puede utilizar "resultado" en la secuencia de cálculo para reutilizar el 
+          resultado almacenado en la calculadora.
+        * El cálculo finaliza al pulsar <ENTER>, volviendo y actualizando el resultado almacenado 
+          de la calculadora con el cálculo realizado.
+        * También podemos escribir "cancelar", volviendo sin realizar ningún cambio en el 
+          resultado almacenado de la calculadora.    
     """
     operador = None
     resultado = None

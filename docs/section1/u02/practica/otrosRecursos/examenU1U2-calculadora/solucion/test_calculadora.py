@@ -1,10 +1,15 @@
 
 import pytest
 
-from src.calculadora import es_resultado_negativo, multiplicar, dividir, potencia
+from otros.calculadora import es_resultado_negativo, multiplicar, dividir, potencia
 
 
 def test_es_resultado_negativo():
+    # Casos con números 0
+    assert es_resultado_negativo(0, 0) is False
+    assert es_resultado_negativo(0, -7) is False
+    assert es_resultado_negativo(-4, 0) is False
+
     # Casos donde el resultado debe ser negativo
     assert es_resultado_negativo(-5, 3) is True
     assert es_resultado_negativo(4, -7) is True

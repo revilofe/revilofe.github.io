@@ -12,9 +12,11 @@ categories:
 tags:
     - Software
 ---
-## Listas
+## 3.1 Listas
 
-### Estructuras de datos
+Las listas son una de las estructuras de datos más versátiles en Python. A continuación, se describe a que nos referimos con estructuras de datos y se profundiza en las listas.
+
+### 1. Estructuras de datos
 
 Las **estructuras de datos en programación** son un modo de representar información en una computadora, aunque además, cuentan con un comportamiento interno. ¿Qué significa? Que se rige por determinadas reglas/restricciones que han sido dadas por la forma en que está construida internamente.
 
@@ -22,83 +24,89 @@ Las **estructuras de datos en programación** son un modo de representar informa
 
 En Python estas estructuras vienen definidas en la [biblioteca estándar de Python](https://docs.python.org/es/3/library/index.html)
 
-#### ¿Para qué sirven las estructuras de datos?
+#### 1.1. ¿Para qué sirven las estructuras de datos?
 
 En el ámbito de la informática, las **estructuras de datos** son aquellas que nos permiten, como desarrolladores, organizar la información de manera eficiente, y en definitiva diseñar la solución correcta para un determinado problema.
 
-Ya sean las más utilizadas comúnmente -como las  **variables** ,  **arrays** , **conjuntos **o  **clases** - o las diseñadas para un propósito específico - **árboles** ,  **grafos** ,  **tablas** , etc.-, una **estructura de datos **nos permite trabajar en un algo nivel de abstracción almacenando información para luego acceder a ella, modificarla y manipularla.
+Ya sean las más utilizadas comúnmente - como las  **variables**,  **arrays**, **conjuntos ** o  **clases** - o las diseñadas para un propósito específico - **árboles**,  **grafos**,  **tablas**, etc., una **estructura de datos ** nos permite trabajar en un alto nivel de abstracción almacenando información para luego acceder a ella, modificarla y manipularla.
 
-#### ¿Cuáles son los tipos de estructuras de datos?
+#### 1.2. ¿Cuáles son los tipos de estructuras de datos?
 
 Primero, debemos diferenciar entre **estructura de dato estática** y **estructura de dato dinámica**
 
+##### 1.2.1. Estructura de datos estáticas
+
 Las **estructuras de datos estáticas** son aquellas en las que el tamaño ocupado en memoria se define antes de que el programa se ejecute y no puede modificarse dicho tamaño durante la ejecución del programa, mientras que una **estructura de datos dinámica** es aquella en la que el tamaño ocupado en memoria puede modificarse durante la ejecución del programa.
 
-Cada tipo de estructura dependerá del tipo de aplicación que se requiera. Una típica dentro de las **estructuras de datos estáticas** son los **arrays**:
+Cada tipo de estructura dependerá del tipo de aplicación que se requiera. Una **estructuras de datos estáticas** típica son los **arrays**:
 
-##### Arrays
+###### ¿Qué es un array en programación? 
 
-¿Qué es un array en programación? Un **array **es un tipo de **dato estructurado** que permite almacenar un conjunto de datos homogéneo y ordenado, es decir, todos ellos del mismo tipo y relacionados. Su condición de  *homogéneo* , indica que sus elementos están compuestos por el mismo tipo de dato, y su condición de *ordenado *hace que se pueda identificar del primer al último elemento que lo compone.
+Un **array** es un tipo de **dato estructurado** que permite almacenar un conjunto de datos homogéneo y ordenado, es decir, todos ellos del mismo tipo y relacionados. Su condición de *homogéneo*, indica que sus elementos están compuestos por el mismo tipo de dato, y su condición de *ordenado* hace que se pueda identificar la posición que ocupan desde el primer al último elemento que lo compone.
 
-##### Estructura de datos dinámicas
+Los arrays de términos generales hacen referencia a menudo a los vectores y las matrices. Un vector es un array de 1 fila x n columnas (vector de fila) o 1 columna x n filas (vector de columna), mientras que una matriz es un array de m filas x n columnas.
 
-Por otro lado, vimos que en programación existen  **estructuras de datos dinámicas** , es decir, una colección de elementos -nodos- que normalmente se utilizan para dejar asentados registros. A diferencia de un **array** que contiene espacio para almacenar un número fijo de elementos, una **estructura dinámica de datos** se amplía y contrae durante la ejecución del programa. Veamos algunos casos:
+##### 1.2.2. Estructura de datos dinámicas
 
-##### Estructura de datos lineales
+Por otro lado, en programación existen **estructuras de datos dinámicas**, es decir, una colección de elementos -nodos- que se utilizan para almacenar y organizar datos. A diferencia de un **array** que contiene espacio para almacenar un número fijo de elementos, una **estructura dinámica de datos** se amplía y contrae durante la ejecución del programa. Veamos algunos ejemplos:
 
-Las **estructuras de datos lineales ** son aquellas en las que los elementos ocupan lugares sucesivos en la estructura y cada uno de ellos tiene un único sucesor y un único predecesor, es decir, sus elementos están ubicados uno al lado del otro relacionados en forma lineal.
+###### Estructura de datos lineales
 
-Hay tres tipos de **estructuras de datos lineales**:
+Las **estructuras de datos lineales** son aquellas en las que los elementos ocupan lugares sucesivos en la estructura y cada uno de ellos tiene un único sucesor y un único predecesor, es decir, sus elementos están ubicados uno al lado del otro relacionados en forma lineal.
 
-* Listas enlazadas
-* Pilas
-* Colas
+Hay tres tipos de **estructuras de datos lineales** listas enlazadas, pilas y colas.:
 
-**Listas enlazadas**
+* **Listas enlazadas**: En las **estructuras de datos**, las listas enlazadas se construyen con elementos que están ubicados en una secuencia. Aquí, cada elemento se conecta con el siguiente a través de un enlace que contiene la posición del siguiente elemento. De este modo, teniendo la referencia del principio de la lista podemos acceder a todos los elementos de la misma. También existen las listas doblemente enlazadas, en las que cada nodo tiene dos enlaces, uno al nodo anterior y otro al siguiente.
 
-En las **estructuras de datos**, las listas enlazadas se construyen con elementos que están ubicados en una secuencia. Aquí, cada elemento se conecta con el siguiente a través de un enlace que contiene la posición del siguiente elemento. De este modo, teniendo la referencia del principio de la lista podemos acceder a todos los elementos de la misma.
+   <figure markdown>
+      ![](assets/PROG-U3.1.-ListaEnlazada.png)
+  	  <figcaption>Lista doblemente enlazada</figcaption>
+   </figure>
 
-![](assets/PROG-U3.1.-ListaEnlazada.png)
-Lista simplemente enlazada.
+* **Pila**: es un tipo especial de **lista lineal** dentro de las **estructuras de datos dinámicas** que permite almacenar y recuperar datos, siendo el modo de acceso a sus elementos de tipo LIFO (del inglés  *Last In, First Out*, es decir, *último en entrar, primero en salir*). ¿Cómo funciona? A través de dos operaciones básicas: apilar (push), que coloca un objeto en la pila, y su operación inversa, desapilar (pop), que retira el último elemento apilado.   
 
-**Pila**
+   <figure markdown>
+      ![](assets/PROG-U3.1.-Pila.png)
+  	  <figcaption>Lista doblemente enlazada</figcaption>
+   </figure>
 
-La pila es un tipo especial de **lista lineal** dentro de las **estructuras de datos dinámicas **que permite almacenar y recuperar datos, siendo el modo de acceso a sus elementos de tipo LIFO (del inglés  *Last In, First Out* , es decir,  *último en entrar, primero en salir* ). ¿Cómo funciona? A través de dos operaciones básicas: apilar (push), que coloca un objeto en la pila, y su operación inversa, desapilar (pop), que retira el último elemento apilado.
-
-![](assets/PROG-U3.1.-Pila.png)
 
 ##### Estructura de datos no lineales
 
-Las  **estructuras de datos no lineales** , también llamadas multienlazadas, son aquellas en las que cada elemento puede estar enlazado a cualquier otro componente. Es decir, cada elemento puede tener varios sucesores o varios predecesores.
+Las **estructuras de datos no lineales**, también llamadas multienlazadas, son aquellas en las que cada elemento puede estar enlazado a cualquier otro componente. Es decir, cada elemento puede tener varios sucesores o varios predecesores.
 
-Existen dos tipos:
+Entre ellos, destacamos dos tipos: Árboles, Grafos
 
-* Árboles
-* Grafos
+* **Árboles**: En **estructura de datos**, los árboles consisten en una **estructura no lineal** que se utiliza para representar datos con una relación jerárquica en la que cada elemento tiene un único antecesor y puede tener varios sucesores.    
+   Los mismos se encuentran clasificados en:      
 
-**Árboles**
+     * **árbol general**, un árbol donde cada elemento puede tener un número ilimitado de sub árboles
+     * **árboles binarios**, que son una estructura de datos homogénea, dinámica y no lineal en donde a cada elemento le pueden seguir como máximo dos nodos.
 
-En **estructura de datos**, los árboles consisten en una **estructura no lineal **que se utiliza para representar datos con una relación jerárquica en la que cada elemento tiene un único antecesor y puede tener varios sucesores.
+   <figure markdown>
+      ![](assets/PROG-U3.1.-Arbol.png)
+  	  <figcaption>Lista doblemente enlazada</figcaption>
+   </figure>
 
-Los mismos se encuentran clasificados en: **árbol general**, un árbol donde cada elemento puede tener un número ilimitado de sub árboles y **árboles binarios**, que son una estructura de datos homogénea, dinámica y no lineal en donde a cada elemento le pueden seguir como máximo dos nodos.
 
-![](assets/PROG-U3.1.-Arbol.png)
+* **Grafos**: Otro tipo **no lineal** de **estructura de datos en programación** son los **grafos**. Se trata de una estructura matemática formada por un conjunto de puntos — una estructura de datos — y un conjunto de líneas, cada una de las cuales une un punto a otro. Los puntos se llaman nodos o vértices del grafo y las líneas se llaman aristas o arcos.
 
-**Grafos**
+   <figure markdown>
+      ![](assets/PROG-U3.1.-Grafo.png)
+  	  <figcaption>Lista doblemente enlazada</figcaption>
+   </figure>
 
-Otro tipo de **no lineal** de **estructura de datos en programación**, son los  **grafos**. Se trata de una estructura matemática formada por un conjunto de puntos —una estructura de datos— y un conjunto de líneas, cada una de las cuales une un punto a otro. Los puntos se llaman nodos o vértices del grafo y las líneas se llaman aristas o arcos.
+Las estructuras de datos son un aspecto clave a conocer en el mundo de la programación. Nos permiten mejorar nuestro código y habilidades técnicas, y en definitiva, resolver de manera eficiente problemas complejos.
 
-![](assets/PROG-U3.1.-Grafo.png)
+### 2. Qué es una lista
 
-Ya sabes, las estructuras de datos en programación son un aspecto clave para conocer. Nos permiten mejorar nuestro código y habilidades técnicas, y en definitiva, resolver de manera eficiente problemas complejos.
+Las listas en Python son un tipo **contenedor** compuesto, que **se usan para almacenar conjuntos de elementos relacionados** del mismo tipo o de tipos distintos.
 
-### Qué es una lista
+Junto a las clases `tuple`, `range` y `str`, **son uno de los tipos de secuencia en Python**, con la particularidad de que son *mutables*. Esto último quiere decir que su contenido se puede modificar después de haber sido creada.
 
-Las listas en Python son un tipo  **contenedor**, compuesto, que **se usan para almacenar conjuntos de elementos relacionados** del mismo tipo o de tipos distintos.
+#### 2.1. Crear una lista en Python
 
-Junto a las clases  `tuple`, `range` y `str`, **son uno de los tipos de secuencia en Python**, con la particularidad de que son *mutables*. Esto último quiere decir que su contenido se puede modificar después de haber sido creada.
-
-Para crear una lista en Python, simplemente hay que encerrar una secuencia de elementos separados por comas entre paréntesis cuadrados `[]`.
+Para crear una lista en Python, simplemente hay que encerrar una secuencia de elementos separados por comas entre corchetes `[]`.
 
 Por ejemplo, para crear una lista con los números del 1 al 10 se haría del siguiente modo:
 
@@ -106,7 +114,7 @@ Por ejemplo, para crear una lista con los números del 1 al 10 se haría del sig
 >>> numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-Como te decía, las listas pueden almacenar elementos de distinto tipo. La siguiente lista también es válida:
+Como te decía, en python, las listas pueden almacenar elementos de distinto tipo. La siguiente lista también es válida:
 
 ```python
 >>> elementos = [3, 'a', 8, 7.2, 'hola']
@@ -128,16 +136,19 @@ Por ejemplo, el tipo *str* también es un tipo secuencia. Si pasamos un string a
 >>> ['a', 'e', 'i', 'o', 'u']
 ```
 
-Termino esta sección mostrando dos alternativas de crear una lista vacía:
+Para terminar, a continuación podemos ver dos alternativas para crear una lista vacía:
 
 ```python
 >>> lista_1 = []  # Opción 1
 >>> lista_2 = list()  # Opción 2
 ```
 
-#### Cómo acceder a los elementos de una lista en Python
+#### 2.2. Trabajar con los elementos de una lista
+En Python, las listas son secuencias mutables, es decir, sus elementos pueden ser modificados (se pueden añadir nuevos ítems, actualizar o eliminar).
 
-Para acceder a un elemento de una lista se utilizan los índices.  **Un índice es un número entero que indica la posición de un elemento en una lista** . El primer elemento de una lista siempre comienza en el índice 0.
+##### 2.2.1 Cómo acceder a los elementos de una lista en Python
+
+Para acceder a un elemento de una lista se utilizan los índices. **Un índice es un número entero que indica la posición de un elemento en una lista**. El primer elemento de una lista siempre comienza en el índice 0.
 
 Por ejemplo, en una lista con 4 elementos, los índices de cada uno de los ítems serían 0, 1, 2 y 3.
 
@@ -171,7 +182,7 @@ Como hemos visto, las listas pueden contener otros elementos de tipo secuencia d
 >>> 'b'
 ```
 
-##### Acceso a los elementos usando un índice negativo
+###### Acceso a los elementos usando un índice negativo
 
 En Python está permitido usar índices negativos para acceder a los elementos de una secuencia. En este caso, el índice -1 hace referencia al último elemento de la secuencia, el -2 al penúltimo y así, sucesivamente:
 
@@ -183,7 +194,7 @@ En Python está permitido usar índices negativos para acceder a los elementos d
 >>> 'e'
 ```
 
-##### Acceso a un subconjunto de elementos
+###### Acceso a un subconjunto de elementos
 
 También es posible acceder a un subconjunto de elementos de una lista utilizando rangos en los índices. Esto es usando el operador `[:]`:
 
@@ -213,20 +224,7 @@ También es posible acceder a los elementos de una lista indicando un paso con e
 >>> ['b', 'e']
 ```
 
-#### for list Python – Recorrer una lista
-
-Ya hemos visto que se puede usar el bucle [for en Python](https://j2logo.com/bucle-for-en-python/) para recorrer los elementos de una secuencia. En nuestro caso, para recorrer una lista en Python utilizaríamos la siguiente estructura:
-
-```python
->>> colores = ['azul', 'blanco', 'negro']
->>> for color in colores:
->>> print(color)
->>> azul
->>> blanco
->>> negro
-```
-
-#### Añadir elementos a una lista en Python
+##### 2.2.2. Añadir elementos a una lista en Python
 
 Tal y como te he adelantado, las listas son secuencias mutables, es decir, sus elementos pueden ser modificados (se pueden añadir nuevos ítems, actualizar o eliminar).
 
@@ -270,7 +268,7 @@ Y para terminar esta sección, indicarte que también es posible añadir un elem
 >>> ['a', 'e', 'i', 'u']
 ```
 
-#### Modificar elementos de una lista
+##### 2.2.3. Modificar elementos de una lista
 
 Es posible modificar un elemento de una lista en Python con el operador de asignación `=`. Para ello, lo único que necesitas conocer es el índice del elemento que quieres modificar o el rango de índices:
 
@@ -288,7 +286,7 @@ Es posible modificar un elemento de una lista en Python con el operador de asign
 >>> ['a', 'e', 'i', 'o', 'u']
 ```
 
-#### Eliminar un elemento de una lista en Python
+##### 2.2.4. Eliminar un elemento de una lista en Python
 
 En Python se puede eliminar un elemento de una lista de varias formas.
 
@@ -341,7 +339,11 @@ Finalmente, es posible eliminar todos los elementos de una lista a través del m
 
 El código anterior sería equivalente a `del letras[:]`.
 
-#### Longitud (len) de una lista en Python
+#### 2.3. Patrones de uso
+Algunos patrones de uso de las listas son los siguientes:
+
+
+##### 2.3.1. Longitud (len) de una lista en Python
 
 Como cualquier tipo secuencia, para conocer la longitud de una lista en Python se hace uso de la función `len()`. Esta función devuelve el número de elementos de una lista:
 
@@ -352,10 +354,22 @@ Como cualquier tipo secuencia, para conocer la longitud de una lista en Python s
 >>> 5
 
 ```
+##### 2.3.2. Recorrer una lista - `for` list Python
 
-#### Cómo saber si un elemento está en una lista en Python
+Como vimos en las unidades anteriores, se puede usar el bucle [for en Python](https://j2logo.com/bucle-for-en-python/) para recorrer los elementos de una secuencia `String`. En nuestro caso, para recorrer una lista en Python utilizaríamos la siguiente estructura, similar a la que ya hemos visto:
 
-Ya adelanté en el tutorial sobre [operadores en Python](https://j2logo.com/python/tutorial/operadores-en-python/), que para saber si un elemento está contenido en una lista, se utiliza el operador de pertenencia `in`:
+```python
+>>> colores = ['azul', 'blanco', 'negro']
+>>> for color in colores:
+>>>     print(color)
+>>> azul
+>>> blanco
+>>> negro
+```
+
+##### 2.3.3. Cómo saber si un elemento está en una lista en Python
+
+Como vimos anteriormente con las cadenas, para saber si un elemento carácter está contenido en una lista de caracteres, se utiliza el operador de pertenencia `in`. En las listas funciona exactamente igual:
 
 ```python
 >>> vocales = ['a', 'e', 'i', 'o', 'u']
@@ -370,7 +384,7 @@ Ya adelanté en el tutorial sobre [operadores en Python](https://j2logo.com/pyth
 
 ```
 
-#### sort list Python – Ordenar una lista en Python
+##### 2.3.4. Ordenar una lista en Python - `sort` list Python
 
 Las listas son secuencias ordenadas. Esto quiere decir que sus elementos siempre se devuelven en el mismo orden en que fueron añadidos.
 
@@ -396,26 +410,7 @@ No obstante, es posible ordenar los elementos de una lista con el método `sort(
 
 ```
 
-#### Listado de métodos de la clase list
-
-Termino este tutorial mostrando la lista completa de métodos de la clase list. Algunos de ellos ya se han mencionado en las secciones anteriores.
-
-
-| Método                    | Descripción                                                                                                                              |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `append()`                 | Añade un nuevo elemento al final de la lista.                                                                                            |
-| `extend()`                 | Añade un grupo de elementos (iterables) al final de la lista.                                                                            |
-| `insert(indice, elemento)` | Inserta un elemento en una posición concreta de la lista.                                                                                |
-| `remove(elemento)`         | Elimina la primera ocurrencia del elemento en la lista.                                                                                   |
-| `pop([i])`                 | Obtiene y elimina el elemento de la lista en la posición i. Si no se especifica, obtiene y elimina el último elemento.                  |
-| `clear()`                  | Borra todos los elementos de la lista.                                                                                                    |
-| `index(elemento)`          | Obtiene el índice de la primera ocurrencia del elemento en la lista. Si el elemento no se encuentra, se lanza la excepción`ValueError`. |
-| `count(elemento)`          | Devuelve el número de ocurrencias del elemento en la lista.                                                                              |
-| `sort()`                   | Ordena los elementos de la lista utilizando el operador`<`.                                                                               |
-| `reverse()`                | Obtiene los elementos de la lista en orden inverso.                                                                                       |
-| `copy()`                   | Devuelve una copia poco profunda de la lista.                                                                                             |
-
-#### Copia de listas
+##### 2.3.5. Copia de listas
 
 Existen dos formas de copiar listas:
 
@@ -448,11 +443,31 @@ Existen dos formas de copiar listas:
 [1, 2, 3]
 ```
 
-## Depuración
+#### 2.4. Listado de métodos de la clase list
+
+Finalizamos mostrando la lista completa de métodos de la clase `list`. Algunos de ellos ya se han mencionado en las secciones anteriores.
+
+
+| Método                    | Descripción                                                                                                                              |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `append()`                 | Añade un nuevo elemento al final de la lista.                                                                                            |
+| `extend()`                 | Añade un grupo de elementos (iterables) al final de la lista.                                                                            |
+| `insert(indice, elemento)` | Inserta un elemento en una posición concreta de la lista.                                                                                |
+| `remove(elemento)`         | Elimina la primera ocurrencia del elemento en la lista.                                                                                   |
+| `pop([i])`                 | Obtiene y elimina el elemento de la lista en la posición i. Si no se especifica, obtiene y elimina el último elemento.                  |
+| `clear()`                  | Borra todos los elementos de la lista.                                                                                                    |
+| `index(elemento)`          | Obtiene el índice de la primera ocurrencia del elemento en la lista. Si el elemento no se encuentra, se lanza la excepción`ValueError`. |
+| `count(elemento)`          | Devuelve el número de ocurrencias del elemento en la lista.                                                                              |
+| `sort()`                   | Ordena los elementos de la lista utilizando el operador`<`.                                                                               |
+| `reverse()`                | Obtiene los elementos de la lista en orden inverso.                                                                                       |
+| `copy()`                   | Devuelve una copia poco profunda de la lista.                                                                                             |
+
+
+### 3. Depuración
 
 El uso descuidado de listas (y otros objetos mutables) puede llevar a largas horas de depuración. Aquí están algunos de los errores más comunes y las formas de evitarlos:
-
-1. No olvides que la mayoría de métodos de listas modifican el argumento y regresan `None`. Esto es lo opuesto a los métodos de cadenas, que regresan una nueva cadena y dejan la original sin modificar.
+#### 3.1. Revisa los métodos
+No olvides que la mayoría de métodos de listas modifican el argumento y regresan `None`. Esto es lo opuesto a los métodos de cadenas, que regresan una nueva cadena y dejan la original sin modificar.
    
    Si estás acostumbrado a escribir código de cadenas como este:
 
@@ -475,7 +490,9 @@ El uso descuidado de listas (y otros objetos mutables) puede llevar a largas hor
    Los métodos y operadores que solamente aplican a secuencias mutables están documentados en:
 
    [docs.python.org/library/stdtypes.html#mutable-sequence-types](https://docs.python.org/library/stdtypes.html#mutable-sequence-types)
-2. Elige un estilo y apégate a él.
+
+#### 3.2. Elige un estilo y apégate a él.
+
    Parte del problema con listas es que hay demasiadas formas de hacer las cosas. Por ejemplo, para remover un elemento de una lista, puedes utilizar `pop`, `remove`, `del`, o incluso una asignación por rebanado.
    Para agregar un elemento, puedes utilizar el método `append` o el operador `+`. Pero no olvides que esos también son correctos:
 
@@ -494,7 +511,8 @@ El uso descuidado de listas (y otros objetos mutables) puede llevar a largas hor
    ```
 
    Prueba cada uno de esos ejemplos en modo interactivo para asegurarte que entiendes lo que hacen. Nota que solamente la última provoca un error en tiempo de ejecución (runtime error); los otros tres son válidos, pero hacen la función equivocada.
-3. Hacer copias para evitar alias.
+
+#### 3.3. Hacer copias para evitar alias.
    Si quieres utilizar un método como `sort` que modifica el argumento, pero necesitas mantener la lista original también, puedes hacer una copia.
 
    ```Python
@@ -503,7 +521,8 @@ El uso descuidado de listas (y otros objetos mutables) puede llevar a largas hor
    ```
 
    En este ejemplo podrías también usar la función interna `sorted`, la cual regresa una lista nueva y ordenada, y deja la original sin modificar. ¡Pero en ese caso deberías evitar usar `sorted` como un nombre de variable!
-4. Listas, `split`, y archivos
+
+#### 3.4. Listas, `split`, y archivos
    Cuando leemos y analizamos archivos, hay muchas oportunidades de encontrar entradas que pueden hacer fallar a nuestro programa, así que es una buena idea revisar el patrón *guardián* cuando escribimos programas que leen a través de un archivo y buscan una “aguja en un pajar”.
    Vamos a revisar nuestro programa que busca por el día de la semana en las líneas que contienen “from” en el archivo":
 

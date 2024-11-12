@@ -16,7 +16,11 @@ tags:
 
 Antes de comenzar a trabajar en la ciberseguridad de una organización, es importante tener en cuenta los principios generales que rigen la seguridad de la información. Estos principios son la base sobre la que se construye cualquier estrategia de ciberseguridad y deben ser conocidos y apoyados por la dirección de la organización.
 
-![](assets/IS-U111-PrincipiosGenerales1.png)
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales1.png)
+  <figcaption>Principios generales</figcaption>
+</figure>
+
 
 ### 1. Cibserseguridad de sistemas informáticos
 
@@ -59,7 +63,12 @@ Proteger los sistemas de información implica proteger no solo el hardware y sof
 * **Integridad de los datos**: Asegurar que la información no sea alterada sin permiso.
 * **Disponibilidad**: Garantizar que los sistemas estén operativos cuando los usuarios los necesiten.
 
-![](assets/IS-U111-PrincipiosGenerales2.png)
+
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales2.png)
+  <figcaption>Sistema de información</figcaption>
+</figure>
+
 
 Si bien los sistemas informáticos no tiene por que contener elementos informáticos, en la actualidad se hace difícil imaginarse esta situación. Se tratará la seguridad de los sistemas de información en general, y los sistemas informáticos en particular.
 
@@ -84,7 +93,11 @@ Proteger los sistemas informáticos significa garantizar que el hardware (dispos
 * Mantenimiento de hardware.
 * Uso de antivirus y firewalls para evitar que el hardware y software sean comprometidos.
 
-![](assets/IS-U111-PrincipiosGenerales3.png)
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales3.png)
+  <figcaption>Sistema informático</figcaption>
+</figure>
+
 
 **Analogía para visualizarlo mejor**:
 
@@ -159,7 +172,12 @@ Ejemplo práctico integrando CIA: Imagina que trabajas en una empresa financiera
 1. Confidencialidad: Solo tú, como empleado autorizado, puedes acceder a esos datos financieros. Para protegerlos, los sistemas utilizan cifrado y contraseñas seguras.
 2. Integridad: Los registros de las cuentas no deben ser alterados sin permiso. Si alguien intenta modificar los datos sin autorización, el sistema detectará el cambio y activará alertas para corregirlo. También se usan copias de seguridad para asegurar que los datos originales pueden ser restaurados.
 3. Disponibilidad: Cuando los clientes intenten acceder a su cuenta bancaria en línea, el sistema debe estar activo y funcional, permitiéndoles realizar transacciones en cualquier momento sin interrupciones.
-   ![](assets/IS-U111-PrincipiosGenerales4.png)
+
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales4.png)
+  <figcaption>Triada CIA</figcaption>
+</figure>
+
 
 ##### 3.1.1 Confidencialidad (Confidentiality)
 
@@ -172,7 +190,11 @@ La confidencialidad asegura que solo las personas o sistemas autorizados puedan 
     * Autenticación multifactor (MFA): Requiere más de un método de verificación (por ejemplo, una contraseña y un código en el móvil) para acceder a una cuenta.
 * Analogía: Imagina que tienes un diario privado con un candado. Solo tú tienes la llave, por lo que nadie más puede leer tus escritos. Esto es confidencialidad: proteger tu información para que solo quienes tengan acceso autorizado puedan verla.
 
-![](assets/IS-U111-PrincipiosGenerales5.png)
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales5.png)
+  <figcaption>Confidencialidad</figcaption>
+</figure>
+
 
 ##### 3.1.2. Integridad (Integrity)
 
@@ -185,7 +207,11 @@ La integridad garantiza que los datos no sean alterados o modificados de manera 
     * Hashing: Utilizar algoritmos de hash para asegurar que un archivo o mensaje no ha sido modificado. Si el contenido cambia, el hash también cambiará, lo que indicaría que la integridad se ha comprometido.
 * Analogía: Es como enviar una carta sellada. Si la carta llega con el sello roto, sabes que alguien ha abierto la carta o modificado su contenido. La integridad asegura que la carta (o los datos) llegue tal como fue enviada, sin que nadie la haya alterado en el camino.
 
-![](assets/IS-U111-PrincipiosGenerales7.png)
+
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales7.png)
+  <figcaption>Integridad</figcaption>
+</figure>
 
 ##### 3.1.3. Disponibilidad (Availability)
 
@@ -198,7 +224,11 @@ La disponibilidad asegura que los sistemas y datos estén accesibles y operativo
     * Mantenimiento regular: Actualizar y hacer mantenimiento a los sistemas para prevenir fallos y evitar que se caigan en momentos críticos.
 * Analogía: Piensa en un cajero automático que necesitas usar. La disponibilidad significa que el cajero esté funcionando cuando llegues, sin interrupciones. Si está fuera de servicio cuando lo necesitas, se compromete la disponibilidad.
 
-![](assets/IS-U111-PrincipiosGenerales6.png)
+
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales6.png)
+  <figcaption>Disponibilidad</figcaption>
+</figure>
 
 #### 3.2. Otros principios
 
@@ -291,7 +321,7 @@ Toda la información sensible o confidencial debe estar cifrada. Esto significa 
      1. Confidencialidad: El cifrado asegura que, aunque alguien acceda a los datos, no podrá entenderlos sin la clave correcta. Protege la información frente a accesos no autorizados.    
 * Ejemplo: Cuando enviamos datos personales o financieros por Internet, deben estar cifrados para que, si son interceptados, no puedan ser leídos. Usar cifrado es esencial para proteger la privacidad de la información.**
 
-#### 4.7. Borrado seguro de información
+#### 4.6. Borrado seguro de información
 
 Cuando ya no necesitas un archivo o cuando vas a deshacerte de un dispositivo, debes asegurarte de que los datos se eliminen completamente. Un simple "borrado" puede dejar rastros de información que un atacante podría recuperar.
 
@@ -300,7 +330,7 @@ Cuando ya no necesitas un archivo o cuando vas a deshacerte de un dispositivo, d
      2. Integridad: Garantiza que los datos eliminados no puedan ser restaurados o manipulados indebidamente.    
 * Ejemplo: Antes de vender o desechar un ordenador o teléfono, debes usar una herramienta de borrado seguro que sobrescriba los datos varias veces, para que no puedan recuperarse.
 
-#### 4.8. Realizar copias de seguridad periódicas
+#### 4.7. Realizar copias de seguridad periódicas
 
 Las copias de seguridad son esenciales para proteger tus datos contra fallos o ataques, como el ransomware. Las copias deben ser frecuentes y seguras, y es importante asegurarse de que no estás respaldando también malware accidentalmente.
 
@@ -309,7 +339,7 @@ Las copias de seguridad son esenciales para proteger tus datos contra fallos o a
      2. Integridad: Las copias de seguridad periódicas aseguran que se pueda restaurar la información tal como estaba en el momento de la copia, preservando su exactitud.    
 * Ejemplo: Imagina que tu empresa es víctima de un ataque que borra o cifra todos los archivos. Sin copias de seguridad, podrías perderlo todo. Si tienes una copia reciente, puedes recuperar los datos rápidamente y minimizar el impacto.**
 
-#### 4.9. Mantener actualizados los sistemas y aplicaciones
+#### 4.8. Mantener actualizados los sistemas y aplicaciones
 
 Mantener el sistema operativo y las aplicaciones actualizadas es crucial para evitar vulnerabilidades. Las actualizaciones suelen incluir parches de seguridad que corrigen errores que los atacantes podrían explotar.
 
@@ -319,7 +349,7 @@ Mantener el sistema operativo y las aplicaciones actualizadas es crucial para ev
       3. Disponibilidad: Las actualizaciones de seguridad evitan que los sistemas sean comprometidos, lo que puede llevar a interrupciones en el servicio.    
 * Ejemplo: Si estás usando una versión desactualizada de una aplicación, los hackers podrían aprovechar una vulnerabilidad conocida. Al actualizarla, cierras esa puerta y proteges tu sistema.
 
-#### 4.10. Revisar regularmente la configuración de seguridad
+#### 4.9. Revisar regularmente la configuración de seguridad
 
 Es importante revisar y ajustar regularmente la configuración de seguridad de los sistemas y las aplicaciones. Esto incluye revisar los permisos y las opciones de seguridad para asegurarse de que están configuradas correctamente y de acuerdo con las mejores prácticas.
 
@@ -341,12 +371,12 @@ Estos conceptos nos permiten ver cómo y por qué los sistemas pueden fallar o s
 
 Amenaza, vulnerabilidad y riesgo: Las piezas clave del rompecabezas de la seguridad
 
-1. Amenaza:
+1. **Amenaza**:
      * Una amenaza es cualquier evento o acción que tiene el potencial de causar daño a nuestros sistemas de información o comprometer la confidencialidad, integridad o disponibilidad de los datos. Las amenazas pueden provenir de factores externos como ataques cibernéticos (hackers, malware) o de factores internos como errores humanos o fallos de software. Por ejemplo, un ataque de phishing es una amenaza diseñada para engañar a los usuarios y obtener información confidencial.
-2. Vulnerabilidad:
+2. **Vulnerabilidad**:
      * Las vulnerabilidades son las debilidades o fallos que existen en nuestros sistemas y que pueden ser explotados por una amenaza. Estas vulnerabilidades pueden encontrarse en software desactualizado, configuraciones incorrectas o incluso en la falta de concienciación de los usuarios. Si no se corrigen, las vulnerabilidades dejan nuestras infraestructuras expuestas a las amenazas, como una puerta abierta que facilita el acceso a un atacante.
 
-1. Riesgo:
+3. **Riesgo**:
      * El riesgo es la combinación de una amenaza que intenta aprovechar una vulnerabilidad. Se puede definir como la probabilidad de que una amenaza tenga éxito y cause un impacto negativo en el sistema. La gestión del riesgo implica identificar las vulnerabilidades y amenazas para minimizar el daño potencial. Por ejemplo, si un sistema crítico está desactualizado (vulnerabilidad) y sabemos que los atacantes buscan activamente explotar esa falla (amenaza), el riesgo de un ataque es elevado.
 
 Estos tres conceptos son fundamentales porque nos permiten anticipar los problemas y tomar medidas antes de que un incidente ocurra. Ahora, vamos a explorar cada uno de ellos en detalle y cómo se interrelacionan para ayudarnos a proteger mejor nuestros sistemas.
@@ -355,7 +385,6 @@ Estos tres conceptos son fundamentales porque nos permiten anticipar los problem
 #### 5.1. Activos
 
 Antes de hablar de amenazas, vulnerabilidades y riesgos, es esencial que primero entendamos qué son los activos en el contexto de la ciberseguridad. Los activos son todos los elementos valiosos para una organización que deben ser protegidos, ya que un ataque o incidente podría afectar su funcionamiento, productividad o incluso la reputación de la empresa.
-
 
 
 ##### 5.1.1. ¿Qué es un activo?
@@ -424,7 +453,10 @@ Para hacer más fácil su gestión y protección, los activos se clasifican en d
         * Equipos de destrucción de datos, climatización o SAI (Sistemas de  Alimentación Ininterrumpida) que mantienen los servidores funcionando incluso en caso de fallos eléctricos.
     * Importancia: Aseguran que los sistemas críticos sigan operando bajo condiciones adversas o en situaciones de emergencia.
 
-![](assets/IS-U111-PrincipiosGenerales9.png)
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales9.png)
+  <figcaption>Activos</figcaption>
+</figure>
 
 ##### 5.1.4. ¿Por qué es importante clasificar los activos?
 

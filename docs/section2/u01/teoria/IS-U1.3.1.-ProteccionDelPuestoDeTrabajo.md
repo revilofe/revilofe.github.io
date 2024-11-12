@@ -88,9 +88,9 @@ Por tanto, la política es la visión o intención general, como un "norte" o l�
 Una **normativa** traduce la política en **reglas y requisitos más concretos** que deben cumplirse para seguir esa política. Es decir, establece **qué** se debe hacer o cumplir para mantener la seguridad, y a veces **quién** es responsable de llevarlo a cabo.
 
 * **Ejemplo:** Siguiendo la política de seguridad de la información, una normativa específica puede ser la **normativa de protección del puesto de trabajo**. Esta normativa podría incluir medidas como:
-  * "Todo empleado debe bloquear su pantalla al ausentarse del escritorio".
-  * "Se requiere que todas las contraseñas de usuario tengan al menos 10 caracteres e incluyan letras, números y símbolos".
-  * "Los empleados deben realizar un curso básico de seguridad informática cada seis meses".
+    * "Todo empleado debe bloquear su pantalla al ausentarse del escritorio".   
+    * "Se requiere que todas las contraseñas de usuario tengan al menos 10 caracteres e incluyan letras, números y símbolos".   
+    * "Los empleados deben realizar un curso básico de seguridad informática cada seis meses".   
   * **En la práctica**: La normativa detalla requisitos claros en base a medidas que los empleados y los sistemas deben cumplir. No describe cómo hacerlo (ese es el trabajo del procedimiento), sino que define las condiciones que deben cumplirse.
 * **Importancia de la normativa:** Proporciona una capa de control y dirección más concreta que la política, ayudando a mantener una estructura de cumplimiento y a reducir riesgos.
 
@@ -101,10 +101,10 @@ Por tanto, la normativa establece medidas específicas y requisitos que deben cu
 Un **procedimiento** detalla los **pasos específicos** que deben seguirse para cumplir con la normativa y, por ende, con la política. Responde a la pregunta de **cómo** hacer algo. Los procedimientos suelen ser detallados y prácticos, y pueden incluir capturas de pantalla, ejemplos o listas paso a paso.
 
 * **Ejemplo:** Si la normativa de protección del puesto de trabajo exige "bloquear la pantalla al ausentarse", el procedimiento explicará cómo hacerlo en diferentes sistemas operativos:
-  * **Windows:** “Presiona `Win + L` para bloquear la pantalla”.
-  * **MacOS:** “Presiona `Control + Command + Q` o configura el bloqueo automático desde Preferencias del Sistema”.
-  * **Linux:** “Configura el bloqueo de pantalla en las preferencias o presiona `Super + L`”.
-  * **En la práctica**: Este procedimiento ofrece las instrucciones detalladas de cómo cada usuario puede cumplir con el requisito de la normativa.
+    * **Windows:** “Presiona `Win + L` para bloquear la pantalla”.   
+    * **MacOS:** “Presiona `Control + Command + Q` o configura el bloqueo automático desde Preferencias del Sistema”.   
+    * **Linux:** “Configura el bloqueo de pantalla en las preferencias o presiona `Super + L`”.   
+  * **En la práctica**: Este procedimiento ofrece las instrucciones detalladas de cómo cada usuario puede cumplir con el requisito de la normativa.   
 * **Importancia del procedimiento:** Los procedimientos eliminan la ambigüedad sobre cómo realizar una tarea específica. Son muy útiles para nuevos empleados, para procesos de auditoría y para asegurar que todos los empleados tengan claridad sobre las acciones que deben seguir.
 
 Por lo tanto, los procedimientos son guías prácticas y detalladas sobre **cómo** realizar acciones específicas para cumplir con la normativa.

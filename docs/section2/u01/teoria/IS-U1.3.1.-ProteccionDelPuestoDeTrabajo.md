@@ -671,7 +671,7 @@ Para que las pequeñas y medianas empresas (PYMEs) puedan mejorar su ciberseguri
 #### 3.2. Estructura de los Documentos
 Los documentos de políticas de seguridad de INCIBE siguen una estructura común que facilita su lectura y comprensión. A continuación, se describen los elementos clave de cada documento:
 
-1. **Antecedentes**
+1. **Antecedentes**   
     - **Descripción**: Los documentos comienzan con una sección de antecedentes que justifica la necesidad de la política. Por ejemplo, en el documento sobre “Aplicaciones permitidas” se justifica por la obligación de utilizar software legal para evitar sanciones y reducir riesgos de malware. En el caso de “Protección del puesto de trabajo”, se destacan riesgos tanto tecnológicos como no tecnológicos que justifican la necesidad de proteger el entorno de trabajo.
     - **Relación con los conceptos vistos**: Esta sección se vincula con la identificación de factores vulnerables o **elementos asociados al puesto de trabajo** y sus **escenarios de riesgos**, que justifican la implementación de la política. También sirve de introducción para contextualizar la importancia de implementar medidas a nivel de **personas, tecnología y procesos**.
 

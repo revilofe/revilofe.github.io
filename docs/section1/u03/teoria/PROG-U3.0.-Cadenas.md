@@ -49,7 +49,12 @@ b
 
 Así que “b” es la letra 0 (“cero”) de “banana”, “a” es la letra con índice 1, y “n” es la que tiene índice 2, etc.
 
-![](assets/PROG-U3.0.-Cadena.png)
+
+   <figure markdown>
+       ![](assets/PROG-U3.0.-Cadena.png)
+  	  <figcaption>Representación de una Cadena de texto</figcaption>
+   </figure>
+
 
 #### 1.1. Indices de Cadenas
 

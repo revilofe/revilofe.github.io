@@ -60,14 +60,14 @@ Hay tres tipos de **estructuras de datos lineales** listas enlazadas, pilas y co
 
    <figure markdown>
       ![](assets/PROG-U3.1.-ListaEnlazada.png)
-  	  <figcaption>Lista doblemente enlazada</figcaption>
+  	  <figcaption>Estructura de datos: Lista doblemente enlazada</figcaption>
    </figure>
 
 * **Pila**: es un tipo especial de **lista lineal** dentro de las **estructuras de datos dinámicas** que permite almacenar y recuperar datos, siendo el modo de acceso a sus elementos de tipo LIFO (del inglés  *Last In, First Out*, es decir, *último en entrar, primero en salir*). ¿Cómo funciona? A través de dos operaciones básicas: apilar (push), que coloca un objeto en la pila, y su operación inversa, desapilar (pop), que retira el último elemento apilado.   
 
    <figure markdown>
       ![](assets/PROG-U3.1.-Pila.png)
-  	  <figcaption>Lista doblemente enlazada</figcaption>
+  	  <figcaption>Estructura de datos: Pila</figcaption>
    </figure>
 
 
@@ -85,7 +85,7 @@ Entre ellos, destacamos dos tipos: Árboles, Grafos
 
    <figure markdown>
       ![](assets/PROG-U3.1.-Arbol.png)
-  	  <figcaption>Lista doblemente enlazada</figcaption>
+  	  <figcaption>Estructura de datos: Arbol</figcaption>
    </figure>
 
 
@@ -93,7 +93,7 @@ Entre ellos, destacamos dos tipos: Árboles, Grafos
 
    <figure markdown>
       ![](assets/PROG-U3.1.-Grafo.png)
-  	  <figcaption>Lista doblemente enlazada</figcaption>
+  	  <figcaption>Estructura de datos: Grafo</figcaption>
    </figure>
 
 Las estructuras de datos son un aspecto clave a conocer en el mundo de la programación. Nos permiten mejorar nuestro código y habilidades técnicas, y en definitiva, resolver de manera eficiente problemas complejos.

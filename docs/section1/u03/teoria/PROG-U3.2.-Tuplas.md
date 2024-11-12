@@ -13,24 +13,16 @@ tags:
     - Software
     - tuplas
 ---
-## Tuplas
-Las tublas son unos iterables que se utilizan para almacenar objetos de cualquier tipo. Se pueden considerar como listas inmutables. Se definen entre paréntesis y los elementos se separan por comas.
+## 3.2. Tuplas
+Otra estructura de datos que nos ofrece Python son las tuplas. Vamos a ver qué son y cómo trabajar con ellas. 
 
-### Diferencia entre tuplas y listas.
+### 1. Que es una tupla
 
-Una lista no es lo mismo que una tupla. Ambas son un conjunto ordenado de valores, en donde este último puede ser cualquier objeto: un número, una cadena, una función, una clase, una instancia, etc. La diferencia es que las listas presentan una serie de funciones adicionales que permiten un amplio manejo de los valores que contienen. Basándonos en esta definición, puede decirse que las listas son dinámicas, mientras que las tuplas son estáticas.
+La clase `tuple` en Python es un tipo **contenedor** compuesto, que **en un principio se pensó para almacenar grupos de elementos heterogéneos**, aunque también puede contener elementos homogéneos. Se pueden considerar como **listas inmutables**. Se definen entre paréntesis y los elementos se separan por comas.
 
-La principal diferencia entre las listas y las tuplas de Python, y el motivo por el que muchos usuarios solamente utilizar listas, es que **las listas son mutables** mientras que **las tuplas son inmutables**. ¿Pero qué significa ser mutable o no? Básicamente un objeto mutable se puede modificar una vez creado mientras que uno que no lo es no. Así el contenido de las listas se puede modificar durante la ejecución del programa mientras para las tuplas no es posible alterar su contenido. Las tuplas se podrán usar como las listas teniendo en cuenta su inmutabilidad.
+Junto a las clases *list* y *range*, **es uno de los tipos de secuencia en Python**, con la particularidad de que son *inmutables*. Esto último quiere decir que su contenido **NO** se puede modificar después de haber sido creada.
 
-El hecho de ser mutable tiene además otras consecuencias. Para ser mutables las listas se almacena en dos bloques de memoria, mientras que las tuplas solo necesitan uno. Lo que provoca que las tuplas ocupen menos memoria que las listas. Además, por el hecho de no ser mutables, es más rápido manejar tuplas que listas. Debido a esto, hay que tener en cuenta lo anterior para elegir en nuestros algoritmos el tipo que mejor se adapte. En el caso de que no sea necesario modificar el contenido de los datos la mejor opción es la tupla, ya que es ocupa menos memoria y es más rápida. En el resto de los casos la mejor opción será utilizar listas.
-
-### Qué es una tupla
-
-La clase tuple en Python es un tipo **contenedor**, compuesto, que **en un principio se pensó para almacenar grupos de elementos heterogéneos**, aunque también puede contener elementos homogéneos.
-
-Junto a las clases *list* y  *range* , **es uno de los tipos de secuencia en Python**, con la particularidad de que son  *inmutables* . Esto último quiere decir que su contenido **NO** se puede modificar después de haber sido creada.
-
-En general, para crear una tupla en Python simplemente hay que definir una secuencia de elementos separados por comas.
+En general, para crear una tupla en Python simplemente hay que definir una secuencia de elementos separados por comas. No es obligarorio encerrar los elementos entre paréntesis, aunque es una buena práctica hacerlo.
 
 Por ejemplo, para crear una tupla con los números del 1 al 5 se haría del siguiente modo:
 
@@ -71,7 +63,18 @@ A continuación se ven las diferentes formas que existen de crear una tupla en P
 
 > La forma de crear una tupla sin paréntesis es conocida como *tuple packing* (algo así como empaquetado de tuplas).
 
-### Cómo acceder a los elementos de una tupla en Python
+### 2. Diferencia entre tuplas y listas.
+
+Una lista no es lo mismo que una tupla. Ambas son un conjunto ordenado de valores, en donde este último puede ser cualquier objeto: un número, una cadena, una función, una clase, una instancia, etc. La diferencia es que las listas presentan una serie de funciones adicionales que permiten un amplio manejo de los valores que contienen. Basándonos en esta definición, puede decirse que las listas son dinámicas, mientras que las tuplas son estáticas.
+
+La principal diferencia entre las listas y las tuplas de Python, y el motivo por el que muchos usuarios solamente utilizar listas, es que **las listas son mutables** mientras que **las tuplas son inmutables**. ¿Pero qué significa ser mutable o no? Básicamente un objeto mutable se puede modificar una vez creado mientras que uno que no lo es no. Así el contenido de las listas se puede modificar durante la ejecución del programa mientras para las tuplas no es posible alterar su contenido. Las tuplas se podrán usar como las listas teniendo en cuenta su inmutabilidad.
+
+El hecho de ser mutable tiene además otras consecuencias. Para ser mutables las listas se almacena en dos bloques de memoria, mientras que las tuplas solo necesitan uno. Lo que provoca que las tuplas ocupen menos memoria que las listas. Además, por el hecho de no ser mutables, es más rápido manejar tuplas que listas. Debido a esto, hay que tener en cuenta lo anterior para elegir en nuestros algoritmos el tipo que mejor se adapte. En el caso de que no sea necesario modificar el contenido de los datos la mejor opción es la tupla, ya que es ocupa menos memoria y es más rápida. En el resto de los casos la mejor opción será utilizar listas.
+
+### 3. Trabajar con tuplas en Python
+Las tuplas en Python son objetos inmutables, lo que significa que una vez creadas no se pueden modificar. A continuación, se muestran algunas operaciones básicas que se pueden realizar con las tuplas en Python.
+
+#### 3.1. Cómo acceder a los elementos de una tupla en Python
 
 Para acceder a un elemento de una tupla se utilizan los índices. **Un índice es un número entero que indica la posición de un elemento en una tupla**. El primer elemento de una tupla siempre comienza en el índice 0.
 
@@ -100,7 +103,7 @@ TypeError: tuple indices must be integers or slices, not float
 >
 ```
 
-#### Acceso a los elementos usando un índice negativo
+##### 3.1.1. Acceso a los elementos usando un índice negativo
 Al igual que ocurre con las listas (y todos los tipos secuenciales), está permitido usar índices negativos para acceder a los elementos de una tupla. En este caso, el índice -1 hace referencia al último elemento de la secuencia, el -2 al penúltimo y así, sucesivamente:
 
 ```Python
@@ -111,7 +114,7 @@ Al igual que ocurre con las listas (y todos los tipos secuenciales), está permi
 'café'
 ```
 
-#### Acceso a un subconjunto de elementos
+##### 3.1.2. Acceso a un subconjunto de elementos
 También es posible acceder a un subconjunto de elementos de una tupla utilizando el operador `[:]`:
 
 ```Python
@@ -139,8 +142,57 @@ O indicando un salto entre los elementos con el operador `[::]`:
 >>> pares[1:6:3]  # Elementos del índice 1 al 5 de 3 en 3
 (4, 10)
 ```
+#### 3.2. Modificar una tupla en Python
+Como hemos dicho ya, las tuplas son objetos inmutables. No obstante, las tuplas pueden contener objetos u otros elementos de tipo secuencia, por ejemplo, una lista. Estos objetos, si son mutables, sí se pueden modificar:
 
-#### tuple unpacking
+```Python
+>>> tupla = (1, ['a', 'b'], 'hola', 8.2)
+>>> tupla[1].append('c')  # tupla[1] hace referencia a la lista
+>>> tupla
+(1, ['a', 'b', 'c'], 'hola', 8.2)
+```
+
+### 4. Patrones de uso 
+
+#### 4.1. Longitud (len) de una tupla en Python
+Como cualquier tipo secuencia, para conocer la longitud de una tupla en Python se hace uso de la función `len()`. Esta función devuelve el número de elementos de una tupla:
+
+```Python
+>>> vocales = ('a', 'e', 'i', 'o', 'u')
+>>> len(vocales)
+5
+```
+
+
+#### 4.2. Recorrer una tupla - `for` tuple Python
+El bucle `for` en Python es una de las estructuras ideales para iterar sobre los elementos de una secuencia. Para recorrer una tupla en Python utiliza la siguiente estructura:
+
+```Python
+>>> colores = 'azul', 'blanco', 'negro'
+>>> for color in colores:
+...   print(color)
+azul
+blanco
+negro
+```
+
+#### 4.3. Cómo saber si un elemento está en una tupla en Python
+Como hemos visto en otras unidades, para saber si un elemento está contenido en una tupla, se utiliza el operador de pertenencia `in`:
+
+```Python
+>>> colores = 'azul', 'blanco', 'negro'
+>>> if 'azul' in colores:
+...     print('Sí')
+...     
+Sí
+>>> if 'verde' not in colores:
+...     print('No')
+...     
+No
+```
+
+
+#### 4.4. tuple unpacking
 El concepto conocido como *tuple unpacking* (desempaquetado de una tupla) se puede aplicar sobre cualquier objeto de tipo secuencia, aunque se usa mayoritariamente con las tuplas, y consiste en lo siguiente:
 
 ```Python
@@ -156,54 +208,9 @@ El concepto conocido como *tuple unpacking* (desempaquetado de una tupla) se pue
 
 Como puedes apreciar, es un tipo de asignación múltiple. Requiere que haya tantas variables a la izquierda del operador de asignación `=` como elementos haya en la secuencia.
 
-### for tuple Python – Recorrer una tupla
-El bucle `for` en Python es una de las estructuras ideales para iterar sobre los elementos de una secuencia. Para recorrer una tupla en Python utiliza la siguiente estructura:
 
-```Python
->>> colores = 'azul', 'blanco', 'negro'
->>> for color in colores:
-...   print(color)
-azul
-blanco
-negro
-```
-
-### Modificar una tupla en Python
-Como hemos dicho ya, las tuplas son objetos inmutables. No obstante, las tuplas pueden contener objetos u otros elementos de tipo secuencia, por ejemplo, una lista. Estos objetos, si son mutables, sí se pueden modificar:
-
-```Python
->>> tupla = (1, ['a', 'b'], 'hola', 8.2)
->>> tupla[1].append('c')  # tupla[1] hace referencia a la lista
->>> tupla
-(1, ['a', 'b', 'c'], 'hola', 8.2)
-```
-
-### Longitud (len) de una tupla en Python
-Como cualquier tipo secuencia, para conocer la longitud de una tupla en Python se hace uso de la función `len()`. Esta función devuelve el número de elementos de una tupla:
-
-```Python
->>> vocales = ('a', 'e', 'i', 'o', 'u')
->>> len(vocales)
-5
-```
-
-### Cómo saber si un elemento está en una tupla en Python
-Como hemos visto en otras unidades, para saber si un elemento está contenido en una tupla, se utiliza el operador de pertenencia `in`:
-
-```Python
->>> colores = 'azul', 'blanco', 'negro'
->>> if 'azul' in colores:
-...     print('Sí')
-...     
-Sí
->>> if 'verde' not in colores:
-...     print('No')
-...     
-No
-```
-
-### Listado de métodos de la clase tuple en Python
-Para terminar, se muestran los métodos de la clase tuple en Python, que son los métodos definidos para cualquier tipo secuencial:
+### 5. Listado de métodos de la clase tuple en Python
+Para terminar, se muestran los métodos de la clase `tuple` en Python, que son los métodos definidos para cualquier tipo secuencial:
 
 | Método           | Descripción                                                                                                                              |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |

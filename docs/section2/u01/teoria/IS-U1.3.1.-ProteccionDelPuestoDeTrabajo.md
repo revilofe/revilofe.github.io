@@ -236,7 +236,7 @@ Los **dispositivos de hardware** son los equipos físicos que los empleados util
     - **Riesgo**: La pérdida o el robo de un dispositivo físico puede exponer datos confidenciales y credenciales de acceso si cae en manos de personas no autorizadas. Esto es especialmente crítico si el dispositivo se utiliza fuera de las instalaciones de la empresa y no cuenta con medidas de seguridad avanzadas, como el cifrado.
     - **Consecuencias**: Una persona no autorizada con acceso físico al dispositivo puede recuperar información confidencial, acceder a sistemas de la organización o modificar datos importantes.
 
-    **Política**: La organización se compromete a proteger todos los dispositivos de trabajo con medidas de seguridad que garanticen la integridad, confidencialidad y disponibilidad de la información almacenada y procesada ante cualquier incidente.
+    **Política**: La organización se compromete a proteger todos los dispositivos de trabajo con medidas de seguridad que garanticen la integridad, confidencialidad y disponibilidad de la información almacenada y procesada ante cualquier incidente.    
         - **Normativa**:      
             - Todos los dispositivos deben estar protegidos mediante autenticación segura, como contraseñas complejas y, cuando sea posible, autenticación multifactor (MFA).     
             - Los dispositivos deben configurarse para bloquearse automáticamente tras un periodo de inactividad de 5 minutos.     

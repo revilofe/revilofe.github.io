@@ -121,7 +121,7 @@ Las medidas de seguridad pueden clasificarse en dos niveles de complejidad, que 
 
 1. **Básico (B)**: Este nivel es asequible y relativamente sencillo de implementar.     
 
-    - Las medidas de nivel básico requieren pocos recursos y suelen aplicarse mediante funcionalidades ya incorporadas en herramientas y aplicaciones comunes.      
+    - Las medidas de nivel básico requieren pocos recursos y suelen aplicarse mediante funcionalidades ya incorporadas en herramientas y aplicaciones comunes.       
     - Son ideales para proteger datos y activos sin necesidad de configuraciones avanzadas o personal altamente especializado.      
 
     **Ejemplo de medida básica (B)**:     
@@ -130,10 +130,10 @@ Las medidas de seguridad pueden clasificarse en dos niveles de complejidad, que 
 
 2. **Avanzado (A)**: Este nivel requiere una inversión significativa en términos de recursos, esfuerzo y conocimientos técnicos.
 
-    - Las medidas avanzadas suelen involucrar configuraciones complejas y, a veces, herramientas adicionales de seguridad. También pueden incluir mecanismos de recuperación ante fallos, como sistemas de respaldo y restauración.
-    - Son esenciales en áreas de alto riesgo o donde la protección de datos críticos es una prioridad.
+    - Las medidas avanzadas suelen involucrar configuraciones complejas y, a veces, herramientas adicionales de seguridad. También pueden incluir mecanismos de recuperación ante fallos, como sistemas de respaldo y restauración.    
+    - Son esenciales en áreas de alto riesgo o donde la protección de datos críticos es una prioridad.    
 
-   **Ejemplo de medida avanzada (A)**:     
+    **Ejemplo de medida avanzada (A)**:     
         - **Cifrado de disco completo**: En sistemas que almacenan datos confidenciales, se configura el cifrado de disco completo (como BitLocker en Windows o FileVault en MacOS) para proteger la información ante un posible robo o pérdida del dispositivo.     
         - **Política de copias de seguridad**: Aplicar una política de copias de seguridad automatizada, que incluya la configuración de respaldos regulares y la verificación de la integridad de las copias de seguridad. Esto implica conocimientos técnicos y una configuración detallada.     
 

@@ -646,46 +646,46 @@ Para que las pequeñas y medianas empresas (PYMEs) puedan mejorar su ciberseguri
 
 #### 3.1. ¿Qué Contienen Estas Políticas?
 
-1. **Aspectos y Elementos de Seguridad Esenciales**:
+1. **Aspectos y Elementos de Seguridad Esenciales**:    
 
-   - Cada política abarca aspectos fundamentales de la seguridad que deben ser supervisados y gestionados activamente. Estos elementos van desde la **protección de los equipos** y el **control de accesos**, hasta la **gestión de aplicaciones** y el **almacenamiento de datos**.    
-   - La idea es que toda PYME, sin importar su tamaño, identifique áreas clave donde aplicar controles y pueda adaptarlos según sus necesidades.   
+    - Cada política abarca aspectos fundamentales de la seguridad que deben ser supervisados y gestionados activamente. Estos elementos van desde la **protección de los equipos** y el **control de accesos**, hasta la **gestión de aplicaciones** y el **almacenamiento de datos**.    
+    - La idea es que toda PYME, sin importar su tamaño, identifique áreas clave donde aplicar controles y pueda adaptarlos según sus necesidades.   
 
 2. **Roles y Responsabilidades Claras**:
 
-   - Estas políticas están diseñadas para que **el empresario, el equipo técnico y todos los empleados** conozcan y sigan las prácticas de seguridad.    
-   - Incluyen una **checklist o lista de verificación** con acciones específicas para cada grupo:    
-      - **Para el empresario**: decisiones sobre políticas de acceso o configuración de copias de seguridad.    
-      - **Para el equipo técnico**: implementación de medidas técnicas como la configuración de redes y el cifrado de datos.     
-      - **Para los empleados**: prácticas de seguridad diarias, como el bloqueo de pantallas y el uso de software autorizado.     
+    - Estas políticas están diseñadas para que **el empresario, el equipo técnico y todos los empleados** conozcan y sigan las prácticas de seguridad.    
+    - Incluyen una **checklist o lista de verificación** con acciones específicas para cada grupo:    
+        - **Para el empresario**: decisiones sobre políticas de acceso o configuración de copias de seguridad.    
+        - **Para el equipo técnico**: implementación de medidas técnicas como la configuración de redes y el cifrado de datos.     
+        - **Para los empleados**: prácticas de seguridad diarias, como el bloqueo de pantallas y el uso de software autorizado.     
 3. **Formatos Editables y Listos para Usar**:
 
-   - Las políticas están disponibles en versiones PDF y Word para que cada empresa pueda **personalizarlas** y adaptarlas a su contexto.     
-   - También incluyen una **checklist editable** digitalmente, donde se pueden registrar las acciones que ya se han completado y aquellas que quedan pendientes. Esto ayuda a la empresa a realizar un **seguimiento** del cumplimiento de las políticas y a identificar áreas donde aún hay margen de mejora.
+    - Las políticas están disponibles en versiones PDF y Word para que cada empresa pueda **personalizarlas** y adaptarlas a su contexto.     
+    - También incluyen una **checklist editable** digitalmente, donde se pueden registrar las acciones que ya se han completado y aquellas que quedan pendientes. Esto ayuda a la empresa a realizar un **seguimiento** del cumplimiento de las políticas y a identificar áreas donde aún hay margen de mejora.
 
 
 #### 3.2. Estructura de los Documentos
 Los documentos de políticas de seguridad de INCIBE siguen una estructura común que facilita su lectura y comprensión. A continuación, se describen los elementos clave de cada documento:
 
 1. **Antecedentes**
-   - **Descripción**: Los documentos comienzan con una sección de antecedentes que justifica la necesidad de la política. Por ejemplo, en el documento sobre “Aplicaciones permitidas” se justifica por la obligación de utilizar software legal para evitar sanciones y reducir riesgos de malware. En el caso de “Protección del puesto de trabajo”, se destacan riesgos tanto tecnológicos como no tecnológicos que justifican la necesidad de proteger el entorno de trabajo.
-   - **Relación con los conceptos vistos**: Esta sección se vincula con la identificación de factores vulnerables o **elementos asociados al puesto de trabajo** y sus **escenarios de riesgos**, que justifican la implementación de la política. También sirve de introducción para contextualizar la importancia de implementar medidas a nivel de **personas, tecnología y procesos**.
+    - **Descripción**: Los documentos comienzan con una sección de antecedentes que justifica la necesidad de la política. Por ejemplo, en el documento sobre “Aplicaciones permitidas” se justifica por la obligación de utilizar software legal para evitar sanciones y reducir riesgos de malware. En el caso de “Protección del puesto de trabajo”, se destacan riesgos tanto tecnológicos como no tecnológicos que justifican la necesidad de proteger el entorno de trabajo.
+    - **Relación con los conceptos vistos**: Esta sección se vincula con la identificación de factores vulnerables o **elementos asociados al puesto de trabajo** y sus **escenarios de riesgos**, que justifican la implementación de la política. También sirve de introducción para contextualizar la importancia de implementar medidas a nivel de **personas, tecnología y procesos**.
 
 2. **Objetivos**
-   - **Descripción**: Los objetivos establecen qué busca lograr la política, generalmente expresado en términos de seguridad, control y prevención. Por ejemplo, los objetivos de la política de almacenamiento se centran en mantener la información segura y gestionar adecuadamente su almacenamiento en dispositivos.
-   - **Relación con los conceptos vistos**: Los objetivos conectan directamente con la **política** como declaración de intenciones generales, ya que definen el marco y el “norte” que se persigue. Además, cada objetivo suele guiar el desarrollo de normativas y procedimientos específicos.
+    - **Descripción**: Los objetivos establecen qué busca lograr la política, generalmente expresado en términos de seguridad, control y prevención. Por ejemplo, los objetivos de la política de almacenamiento se centran en mantener la información segura y gestionar adecuadamente su almacenamiento en dispositivos.
+    - **Relación con los conceptos vistos**: Los objetivos conectan directamente con la **política** como declaración de intenciones generales, ya que definen el marco y el “norte” que se persigue. Además, cada objetivo suele guiar el desarrollo de normativas y procedimientos específicos.
 
 3. **Checklist (Lista de Verificación)**
-   - **Descripción**: La checklist es una lista de controles (medidas) específicos que ayudan a verificar el cumplimiento de la política. Cada control está clasificado por nivel de complejidad (Básico o Avanzado) y alcance (Procesos, Tecnología o Personas). Por ejemplo, el documento de “Protección del puesto de trabajo” incluye controles como el bloqueo de sesión o la desactivación de puertos USB por defecto.
-   - **Relación con los conceptos vistos**: Aquí se aplica la clasificación de **niveles de complejidad**. Las medidas básicas son aquellas que pueden aplicarse con poco esfuerzo y recursos, mientras que las avanzadas requieren configuraciones más complejas. También se utiliza el alcance para definir si la medida afecta a procesos (PRO), tecnología (TEC) o personas (PER), lo que ayuda a entender el tipo de personal involucrado en cada medida.
+    - **Descripción**: La checklist es una lista de controles (medidas) específicos que ayudan a verificar el cumplimiento de la política. Cada control está clasificado por nivel de complejidad (Básico o Avanzado) y alcance (Procesos, Tecnología o Personas). Por ejemplo, el documento de “Protección del puesto de trabajo” incluye controles como el bloqueo de sesión o la desactivación de puertos USB por defecto.
+    - **Relación con los conceptos vistos**: Aquí se aplica la clasificación de **niveles de complejidad**. Las medidas básicas son aquellas que pueden aplicarse con poco esfuerzo y recursos, mientras que las avanzadas requieren configuraciones más complejas. También se utiliza el alcance para definir si la medida afecta a procesos (PRO), tecnología (TEC) o personas (PER), lo que ayuda a entender el tipo de personal involucrado en cada medida.
 
 4. **Puntos Clave**
-   - **Descripción**: Esta sección resume las prácticas o reglas esenciales que todos deben cumplir para que la política sea efectiva. En el documento de “Almacenamiento en los equipos de trabajo”, se destacan puntos clave como el cifrado de la información y la normativa sobre lo que puede almacenarse en los equipos. En “Aplicaciones permitidas”, se detalla la importancia del repositorio de software y la auditoría de aplicaciones instaladas.
-   - **Relación con los conceptos vistos**: Los puntos clave funcionan como **normativas** que definen lo que debe cumplirse en detalle. Aquí se incluyen las reglas y requisitos específicos necesarios para cumplir con la política general de seguridad. Cada punto clave ayuda a reducir los riesgos identificados, tanto para personas como para tecnología.
+    - **Descripción**: Esta sección resume las prácticas o reglas esenciales que todos deben cumplir para que la política sea efectiva. En el documento de “Almacenamiento en los equipos de trabajo”, se destacan puntos clave como el cifrado de la información y la normativa sobre lo que puede almacenarse en los equipos. En “Aplicaciones permitidas”, se detalla la importancia del repositorio de software y la auditoría de aplicaciones instaladas.
+    - **Relación con los conceptos vistos**: Los puntos clave funcionan como **normativas** que definen lo que debe cumplirse en detalle. Aquí se incluyen las reglas y requisitos específicos necesarios para cumplir con la política general de seguridad. Cada punto clave ayuda a reducir los riesgos identificados, tanto para personas como para tecnología.
 
 5. **Referencias**
-   - **Descripción**: Cada documento finaliza con una lista de referencias que enlazan a normativas o guías externas relevantes. Esto facilita la consulta de fuentes adicionales o normativas legales aplicables.
-   - **Relación con los conceptos vistos**: Las referencias fortalecen la política al alinearla con regulaciones externas y buenas prácticas, como la protección de datos personales bajo el GDPR. Este punto es clave para asegurar que la política cumple con regulaciones y estándares externos.
+    - **Descripción**: Cada documento finaliza con una lista de referencias que enlazan a normativas o guías externas relevantes. Esto facilita la consulta de fuentes adicionales o normativas legales aplicables.
+    - **Relación con los conceptos vistos**: Las referencias fortalecen la política al alinearla con regulaciones externas y buenas prácticas, como la protección de datos personales bajo el GDPR. Este punto es clave para asegurar que la política cumple con regulaciones y estándares externos.
 
 #### 3.3.  ¿Cómo Utilizar Estas Políticas en un Supuesto Práctico?
 
@@ -693,19 +693,19 @@ Para un supuesto práctico, los estudiantes pueden seguir estos pasos para aplic
 
 1. **Identificar los Elementos de Seguridad Esenciales**:
 
-   - Revisen los puntos clave de cada política, identificando cuáles son los aspectos de seguridad que deben estar bajo control. Esto les ayudará a comprender la relevancia de cada medida y a priorizar qué proteger en cada área.   
+    - Revisen los puntos clave de cada política, identificando cuáles son los aspectos de seguridad que deben estar bajo control. Esto les ayudará a comprender la relevancia de cada medida y a priorizar qué proteger en cada área.   
    
 2. **Asignar Roles y Responsabilidades**:
 
-   - Dividan las responsabilidades entre el empresario (o dirección), el equipo técnico y el resto de los empleados, para que cada grupo conozca claramente sus funciones. Esto permite que cada persona entienda su rol en la seguridad de la empresa y que todos participen activamente en proteger la información.    
+    - Dividan las responsabilidades entre el empresario (o dirección), el equipo técnico y el resto de los empleados, para que cada grupo conozca claramente sus funciones. Esto permite que cada persona entienda su rol en la seguridad de la empresa y que todos participen activamente en proteger la información.    
    
 3. **Adaptar las Políticas a Necesidades Específicas**:
 
-   - Utilicen el formato editable de la política para personalizar las medidas según el contexto del ejercicio, ajustando las normas, los procesos y los procedimientos para reflejar una situación realista. Por ejemplo, si el supuesto incluye el uso de aplicaciones en la nube, se pueden añadir controles de seguridad específicos para el acceso y la protección de estos servicios.    
+    - Utilicen el formato editable de la política para personalizar las medidas según el contexto del ejercicio, ajustando las normas, los procesos y los procedimientos para reflejar una situación realista. Por ejemplo, si el supuesto incluye el uso de aplicaciones en la nube, se pueden añadir controles de seguridad específicos para el acceso y la protección de estos servicios.    
    
 4. **Usar la Checklist para Seguimiento**:
 
-   - Utilicen la checklist para registrar qué medidas se han implementado y cuáles siguen pendientes. Esto les permitirá visualizar el progreso y tomar decisiones sobre los siguientes pasos en la protección de la empresa.
+    - Utilicen la checklist para registrar qué medidas se han implementado y cuáles siguen pendientes. Esto les permitirá visualizar el progreso y tomar decisiones sobre los siguientes pasos en la protección de la empresa.
 
 
 

@@ -143,20 +143,20 @@ Las medidas de seguridad también pueden clasificarse según el alcance o el tip
 
 1. **Procesos (PRO)**: Las medidas de procesos son aquellas que aplican principalmente a la dirección o al personal de gestión. Estas medidas aseguran que se establezcan procedimientos y políticas claras para proteger la información en toda la organización.
 
-   * **Ejemplo de medida de proceso (PRO)**:
-       - **Procedimiento de verificación de pagos**: Antes de aprobar el pago de una factura, el equipo de gestión debe validar los datos del proveedor. Esta medida implica la creación de un proceso seguro que controle el flujo de pagos para evitar fraudes.
-       - **Revisión de permisos de acceso**: La dirección revisa periódicamente los permisos de acceso del personal para asegurarse de que cada empleado tenga solo los permisos necesarios para su rol, limitando así el riesgo de acceso no autorizado a información sensible.    
+    **Ejemplo de medida de proceso (PRO)**:     
+        - **Procedimiento de verificación de pagos**: Antes de aprobar el pago de una factura, el equipo de gestión debe validar los datos del proveedor. Esta medida implica la creación de un proceso seguro que controle el flujo de pagos para evitar fraudes.     
+        - **Revisión de permisos de acceso**: La dirección revisa periódicamente los permisos de acceso del personal para asegurarse de que cada empleado tenga solo los permisos necesarios para su rol, limitando así el riesgo de acceso no autorizado a información sensible.    
 
 2. **Tecnología (TEC)**: Las medidas tecnológicas están dirigidas al personal técnico y requieren conocimientos avanzados. Estas medidas implican el uso de herramientas, configuraciones especializadas o sistemas de seguridad que protegen la infraestructura y los datos.
 
-   * **Ejemplo de medida de tecnología (TEC)**:   
-       - **Implementación de un firewall**: El equipo de TI instala y configura un firewall para controlar el tráfico de red y evitar accesos no autorizados a la red corporativa. Esto requiere conocimientos técnicos para su configuración y monitoreo.
-       - **Política de copias de seguridad**: Se establece un sistema de copias de seguridad periódicas, que el equipo de TI gestiona y verifica para asegurar la recuperación de datos en caso de fallos o incidentes.
+    **Ejemplo de medida de tecnología (TEC)**:     
+        - **Implementación de un firewall**: El equipo de TI instala y configura un firewall para controlar el tráfico de red y evitar accesos no autorizados a la red corporativa. Esto requiere conocimientos técnicos para su configuración y monitoreo.     
+        - **Política de copias de seguridad**: Se establece un sistema de copias de seguridad periódicas, que el equipo de TI gestiona y verifica para asegurar la recuperación de datos en caso de fallos o incidentes.         
 3. **Personas (PER)**: Estas medidas están orientadas a todo el personal de la organización y suelen ser sencillas de aplicar. A través de estas, los empleados se conciencian sobre buenas prácticas de seguridad y sobre cómo contribuir a la protección de la información.
 
-   * **Ejemplo de medida para personas (PER)**:
-       - **Política de escritorio limpio**: Los empleados deben asegurarse de no dejar documentos o dispositivos con información sensible desatendidos en sus escritorios al finalizar su jornada laboral o al ausentarse.
-       - **Capacitación en seguridad de la información**: Todos los empleados reciben capacitación anual sobre buenas prácticas de seguridad y cómo identificar amenazas comunes, como el phishing.
+    **Ejemplo de medida para personas (PER)**:     
+        - **Política de escritorio limpio**: Los empleados deben asegurarse de no dejar documentos o dispositivos con información sensible desatendidos en sus escritorios al finalizar su jornada laboral o al ausentarse.     
+        - **Capacitación en seguridad de la información**: Todos los empleados reciben capacitación anual sobre buenas prácticas de seguridad y cómo identificar amenazas comunes, como el phishing.     
 
 > Por lo general, las medidas orientadas a las personas (PER) están complementadas por medidas de procesos (PRO) y tecnología (TEC), asegurando que se implemente una protección completa y eficaz en toda la organización. Por ejemplo, una capacitación sobre ciberseguridad (PER) puede ir acompañada de un procedimiento de auditoría de accesos (PRO) y el uso de autenticación multifactor (TEC) en sistemas críticos.
 
@@ -236,17 +236,15 @@ Los **dispositivos de hardware** son los equipos físicos que los empleados util
     - **Riesgo**: La pérdida o el robo de un dispositivo físico puede exponer datos confidenciales y credenciales de acceso si cae en manos de personas no autorizadas. Esto es especialmente crítico si el dispositivo se utiliza fuera de las instalaciones de la empresa y no cuenta con medidas de seguridad avanzadas, como el cifrado.
     - **Consecuencias**: Una persona no autorizada con acceso físico al dispositivo puede recuperar información confidencial, acceder a sistemas de la organización o modificar datos importantes.
 
-**Política**: La organización se compromete a proteger todos los dispositivos de trabajo con medidas de seguridad que garanticen la integridad, confidencialidad y disponibilidad de la información almacenada y procesada ante cualquier incidente.
-
-   - **Normativa**:
-       - Todos los dispositivos deben estar protegidos mediante autenticación segura, como contraseñas complejas y, cuando sea posible, autenticación multifactor (MFA).
-       - Los dispositivos deben configurarse para bloquearse automáticamente tras un periodo de inactividad de 5 minutos.
-       - Todo dispositivo de trabajo que contenga datos confidenciales debe contar con cifrado de disco.
-   - **Procedimiento**:
-       - **Activación del bloqueo automático**: Instrucciones detalladas para configurar el bloqueo automático en dispositivos con diferentes sistemas operativos, como Windows, MacOS y dispositivos móviles.
-       - **Configuración del cifrado de disco**: Pasos para activar el cifrado de disco en dispositivos compatibles (Windows BitLocker, MacOS FileVault) y verificar su estado de activación.
-       - **Reporte de pérdida o robo de dispositivos**: Proceso para notificar al departamento de TI en caso de pérdida o robo, incluyendo información relevante del dispositivo y las acciones inmediatas que deben seguirse para mitigar el riesgo.    
-
+    **Política**: La organización se compromete a proteger todos los dispositivos de trabajo con medidas de seguridad que garanticen la integridad, confidencialidad y disponibilidad de la información almacenada y procesada ante cualquier incidente.
+        - **Normativa**:      
+            - Todos los dispositivos deben estar protegidos mediante autenticación segura, como contraseñas complejas y, cuando sea posible, autenticación multifactor (MFA).     
+            - Los dispositivos deben configurarse para bloquearse automáticamente tras un periodo de inactividad de 5 minutos.     
+            - Todo dispositivo de trabajo que contenga datos confidenciales debe contar con cifrado de disco.     
+        - **Procedimiento**:     
+            - **Activación del bloqueo automático**: Instrucciones detalladas para configurar el bloqueo automático en dispositivos con diferentes sistemas operativos, como Windows, MacOS y dispositivos móviles.    
+            - **Configuración del cifrado de disco**: Pasos para activar el cifrado de disco en dispositivos compatibles (Windows BitLocker, MacOS FileVault) y verificar su estado de activación.     
+            - **Reporte de pérdida o robo de dispositivos**: Proceso para notificar al departamento de TI en caso de pérdida o robo, incluyendo información relevante del dispositivo y las acciones inmediatas que deben seguirse para mitigar el riesgo.    
 
 2. **Acceso No Autorizado**   
     - **Riesgo**: Si un dispositivo queda desbloqueado cuando el usuario se ausenta o si no cuenta con autenticación robusta, personas no autorizadas pueden acceder a información confidencial o realizar acciones no autorizadas.

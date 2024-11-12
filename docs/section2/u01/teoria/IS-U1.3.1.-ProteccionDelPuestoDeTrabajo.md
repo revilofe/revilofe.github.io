@@ -119,23 +119,23 @@ Un enfoque equilibrado y bien estructurado, donde medidas básicas y avanzadas s
 
 Las medidas de seguridad pueden clasificarse en dos niveles de complejidad, que determinan el esfuerzo y los recursos necesarios para su implementación:
 
-1. **Básico (B)**: Este nivel es asequible y relativamente sencillo de implementar.
+1. **Básico (B)**: Este nivel es asequible y relativamente sencillo de implementar.     
 
-    - Las medidas de nivel básico requieren pocos recursos y suelen aplicarse mediante funcionalidades ya incorporadas en herramientas y aplicaciones comunes.   
-    - Son ideales para proteger datos y activos sin necesidad de configuraciones avanzadas o personal altamente especializado.   
+    - Las medidas de nivel básico requieren pocos recursos y suelen aplicarse mediante funcionalidades ya incorporadas en herramientas y aplicaciones comunes.      
+    - Son ideales para proteger datos y activos sin necesidad de configuraciones avanzadas o personal altamente especializado.      
 
-    **Ejemplo de medida básica (B)**:
-        - **Bloqueo de pantalla**: Configurar el bloqueo automático de los dispositivos tras un breve periodo de inactividad. Esta funcionalidad está incluida en la mayoría de sistemas operativos (Windows, MacOS) y no requiere un esfuerzo adicional considerable.
-        - **Política de escritorio limpio**: Consiste en pedir a los empleados que mantengan sus escritorios libres de documentos o dispositivos con información sensible cuando no están presentes. Esta medida es fácil de implementar y solo requiere concienciación del personal.   
+    **Ejemplo de medida básica (B)**:     
+        - **Bloqueo de pantalla**: Configurar el bloqueo automático de los dispositivos tras un breve periodo de inactividad. Esta funcionalidad está incluida en la mayoría de sistemas operativos (Windows, MacOS) y no requiere un esfuerzo adicional considerable.     
+        - **Política de escritorio limpio**: Consiste en pedir a los empleados que mantengan sus escritorios libres de documentos o dispositivos con información sensible cuando no están presentes. Esta medida es fácil de implementar y solo requiere concienciación del personal.      
 
 2. **Avanzado (A)**: Este nivel requiere una inversión significativa en términos de recursos, esfuerzo y conocimientos técnicos.
 
     - Las medidas avanzadas suelen involucrar configuraciones complejas y, a veces, herramientas adicionales de seguridad. También pueden incluir mecanismos de recuperación ante fallos, como sistemas de respaldo y restauración.
     - Son esenciales en áreas de alto riesgo o donde la protección de datos críticos es una prioridad.
 
-   **Ejemplo de medida avanzada (A)**:
-        - **Cifrado de disco completo**: En sistemas que almacenan datos confidenciales, se configura el cifrado de disco completo (como BitLocker en Windows o FileVault en MacOS) para proteger la información ante un posible robo o pérdida del dispositivo.
-        - **Política de copias de seguridad**: Aplicar una política de copias de seguridad automatizada, que incluya la configuración de respaldos regulares y la verificación de la integridad de las copias de seguridad. Esto implica conocimientos técnicos y una configuración detallada.
+   **Ejemplo de medida avanzada (A)**:     
+        - **Cifrado de disco completo**: En sistemas que almacenan datos confidenciales, se configura el cifrado de disco completo (como BitLocker en Windows o FileVault en MacOS) para proteger la información ante un posible robo o pérdida del dispositivo.     
+        - **Política de copias de seguridad**: Aplicar una política de copias de seguridad automatizada, que incluya la configuración de respaldos regulares y la verificación de la integridad de las copias de seguridad. Esto implica conocimientos técnicos y una configuración detallada.     
 
 ###### Alcance de las Medidas de Seguridad
 

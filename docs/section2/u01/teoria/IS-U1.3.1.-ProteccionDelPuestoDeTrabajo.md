@@ -237,56 +237,60 @@ Los **dispositivos de hardware** son los equipos físicos que los empleados util
     - **Consecuencias**: Una persona no autorizada con acceso físico al dispositivo puede recuperar información confidencial, acceder a sistemas de la organización o modificar datos importantes.
 
     **Política**: La organización se compromete a proteger todos los dispositivos de trabajo con medidas de seguridad que garanticen la integridad, confidencialidad y disponibilidad de la información almacenada y procesada ante cualquier incidente.    
-        * **Normativa**:      
-            - Todos los dispositivos deben estar protegidos mediante autenticación segura, como contraseñas complejas y, cuando sea posible, autenticación multifactor (MFA).     
-            - Los dispositivos deben configurarse para bloquearse automáticamente tras un periodo de inactividad de 5 minutos.     
-            - Todo dispositivo de trabajo que contenga datos confidenciales debe contar con cifrado de disco.     
-        * **Procedimiento**:     
-            - **Activación del bloqueo automático**: Instrucciones detalladas para configurar el bloqueo automático en dispositivos con diferentes sistemas operativos, como Windows, MacOS y dispositivos móviles.    
-            - **Configuración del cifrado de disco**: Pasos para activar el cifrado de disco en dispositivos compatibles (Windows BitLocker, MacOS FileVault) y verificar su estado de activación.     
-            - **Reporte de pérdida o robo de dispositivos**: Proceso para notificar al departamento de TI en caso de pérdida o robo, incluyendo información relevante del dispositivo y las acciones inmediatas que deben seguirse para mitigar el riesgo.    
+
+    **Normativa**:      
+        - Todos los dispositivos deben estar protegidos mediante autenticación segura, como contraseñas complejas y, cuando sea posible, autenticación multifactor (MFA).     
+        - Los dispositivos deben configurarse para bloquearse automáticamente tras un periodo de inactividad de 5 minutos.     
+        - Todo dispositivo de trabajo que contenga datos confidenciales debe contar con cifrado de disco.
+    
+    **Procedimiento**:     
+        - **Activación del bloqueo automático**: Instrucciones detalladas para configurar el bloqueo automático en dispositivos con diferentes sistemas operativos, como Windows, MacOS y dispositivos móviles.    
+        - **Configuración del cifrado de disco**: Pasos para activar el cifrado de disco en dispositivos compatibles (Windows BitLocker, MacOS FileVault) y verificar su estado de activación.     
+        - **Reporte de pérdida o robo de dispositivos**: Proceso para notificar al departamento de TI en caso de pérdida o robo, incluyendo información relevante del dispositivo y las acciones inmediatas que deben seguirse para mitigar el riesgo.    
 
 2. **Acceso No Autorizado**   
     - **Riesgo**: Si un dispositivo queda desbloqueado cuando el usuario se ausenta o si no cuenta con autenticación robusta, personas no autorizadas pueden acceder a información confidencial o realizar acciones no autorizadas.
     - **Consecuencias**: Esto podría comprometer la confidencialidad y seguridad de la información, permitiendo que personas sin autorización accedan o manipulen datos en el sistema de la organización.
 
-**Política**: La organización se compromete a proteger todos los dispositivos de trabajo con medidas de seguridad que garanticen la integridad, confidencialidad y disponibilidad de la información almacenada y procesada ante cualquier incidente.
+    **Política**: La organización se compromete a proteger todos los dispositivos de trabajo con medidas de seguridad que garanticen la integridad, confidencialidad y disponibilidad de la información almacenada y procesada ante cualquier incidente.
 
-- **Normativa**:
-    - Los dispositivos de trabajo deben configurarse para bloquearse automáticamente después de un breve periodo de inactividad.
-    - Los usuarios deben autenticar su identidad mediante contraseñas seguras y, siempre que sea posible, activar la autenticación biométrica (como huellas dactilares o reconocimiento facial).
-- **Procedimiento**:
-    - **Establecimiento de contraseñas seguras**: Instrucciones para crear contraseñas que cumplan con los requisitos de seguridad, como una longitud mínima y combinación de caracteres especiales.
-    - **Configuración de autenticación biométrica**: Guía para activar y utilizar autenticación biométrica en dispositivos compatibles.
-    - **Bloqueo manual del dispositivo**: Recordatorio para bloquear manualmente el dispositivo cuando el usuario se ausente, con pasos específicos sobre cómo hacerlo en diferentes sistemas operativos.
+    **Normativa**:
+        - Los dispositivos de trabajo deben configurarse para bloquearse automáticamente después de un breve periodo de inactividad.
+        - Los usuarios deben autenticar su identidad mediante contraseñas seguras y, siempre que sea posible, activar la autenticación biométrica (como huellas dactilares o reconocimiento facial).
+
+    **Procedimiento**:
+        - **Establecimiento de contraseñas seguras**: Instrucciones para crear contraseñas que cumplan con los requisitos de seguridad, como una longitud mínima y combinación de caracteres especiales.
+        - **Configuración de autenticación biométrica**: Guía para activar y utilizar autenticación biométrica en dispositivos compatibles.
+        - **Bloqueo manual del dispositivo**: Recordatorio para bloquear manualmente el dispositivo cuando el usuario se ausente, con pasos específicos sobre cómo hacerlo en diferentes sistemas operativos.
 
 3. **Falta de Cifrado en el Dispositivo**
-     - **Riesgo**: Si el almacenamiento en el dispositivo no está cifrado, los datos pueden ser fácilmente extraídos o manipulados por cualquier persona con acceso físico al dispositivo en caso de pérdida o robo.
-     - **Consecuencias**: La información almacenada sin cifrado queda expuesta y puede ser leída o modificada sin autorización, lo que aumenta el riesgo de fuga de datos confidenciales.
+    - **Riesgo**: Si el almacenamiento en el dispositivo no está cifrado, los datos pueden ser fácilmente extraídos o manipulados por cualquier persona con acceso físico al dispositivo en caso de pérdida o robo.
+    - **Consecuencias**: La información almacenada sin cifrado queda expuesta y puede ser leída o modificada sin autorización, lo que aumenta el riesgo de fuga de datos confidenciales.
 
-**Política**: La organización se compromete a proteger todos los dispositivos de trabajo con medidas de seguridad que garanticen la integridad, confidencialidad y disponibilidad de la información almacenada y procesada ante cualquier incidente.
+    **Política**: La organización se compromete a proteger todos los dispositivos de trabajo con medidas de seguridad que garanticen la integridad, confidencialidad y disponibilidad de la información almacenada y procesada ante cualquier incidente.
 
-- **Normativa**:
-    - Todos los dispositivos de trabajo que almacenen datos sensibles deben estar cifrados completamente.
-    - No se permite almacenar información confidencial en dispositivos que no estén cifrados ni en dispositivos personales no autorizados.
-- **Procedimiento**:
-    - **Activación de cifrado en diferentes plataformas**: Instrucciones detalladas para activar el cifrado en dispositivos Windows (BitLocker), MacOS (FileVault) y en dispositivos móviles con Android e iOS.
-    - **Verificación del cifrado de disco**: Pasos para comprobar que el cifrado esté activado correctamente en cada dispositivo.
-    - **Reporte de excepciones**: Procedimiento para informar al departamento de TI si un empleado detecta que el cifrado no está activado en su dispositivo de trabajo.
+    **Normativa**:
+        - Todos los dispositivos de trabajo que almacenen datos sensibles deben estar cifrados completamente.
+        - No se permite almacenar información confidencial en dispositivos que no estén cifrados ni en dispositivos personales no autorizados.
+    **Procedimiento**:
+        - **Activación de cifrado en diferentes plataformas**: Instrucciones detalladas para activar el cifrado en dispositivos Windows (BitLocker), MacOS (FileVault) y en dispositivos móviles con Android e iOS.
+        - **Verificación del cifrado de disco**: Pasos para comprobar que el cifrado esté activado correctamente en cada dispositivo.
+        - **Reporte de excepciones**: Procedimiento para informar al departamento de TI si un empleado detecta que el cifrado no está activado en su dispositivo de trabajo.
 
 4. **Infección de Malware o Software Malicioso**
-     - **Riesgo**: Los dispositivos de hardware pueden infectarse con malware o software malicioso si el usuario descarga archivos de fuentes inseguras, visita sitios web maliciosos o utiliza medios externos no verificados, como memorias USB.
-     - **Consecuencias**: La infección con malware puede comprometer el dispositivo, capturar información confidencial, o incluso propagarse a otros dispositivos dentro de la red corporativa, incrementando los riesgos de seguridad.
+    - **Riesgo**: Los dispositivos de hardware pueden infectarse con malware o software malicioso si el usuario descarga archivos de fuentes inseguras, visita sitios web maliciosos o utiliza medios externos no verificados, como memorias USB.
+    - **Consecuencias**: La infección con malware puede comprometer el dispositivo, capturar información confidencial, o incluso propagarse a otros dispositivos dentro de la red corporativa, incrementando los riesgos de seguridad.
 
-**Política**: La organización se compromete a proteger todos los dispositivos de trabajo con medidas de seguridad que garanticen la integridad, confidencialidad y disponibilidad de la información almacenada y procesada ante cualquier incidente.
+    **Política**: La organización se compromete a proteger todos los dispositivos de trabajo con medidas de seguridad que garanticen la integridad, confidencialidad y disponibilidad de la información almacenada y procesada ante cualquier incidente.
 
-- **Normativa**:
-    - Todos los dispositivos deben tener un antivirus y firewall activos y actualizados para protección contra malware.
-    - No se permite la descarga ni instalación de software que no esté previamente autorizado por el departamento de TI.
-- **Procedimiento**:
-    - **Instalación y actualización de antivirus**: Pasos para instalar el antivirus aprobado por la organización y cómo activar las actualizaciones automáticas.
-    - **Activación de firewall**: Guía para configurar y activar el firewall en sistemas operativos Windows, MacOS y dispositivos móviles.
-    - **Buenas prácticas de navegación segura**: Pautas para evitar hacer clic en enlaces desconocidos, no descargar archivos de fuentes no verificadas y recomendaciones para identificar correos electrónicos sospechosos.
+    **Normativa**:
+        - Todos los dispositivos deben tener un antivirus y firewall activos y actualizados para protección contra malware.
+        - No se permite la descarga ni instalación de software que no esté previamente autorizado por el departamento de TI.
+
+    **Procedimiento**:
+        - **Instalación y actualización de antivirus**: Pasos para instalar el antivirus aprobado por la organización y cómo activar las actualizaciones automáticas.
+        - **Activación de firewall**: Guía para configurar y activar el firewall en sistemas operativos Windows, MacOS y dispositivos móviles.
+        - **Buenas prácticas de navegación segura**: Pautas para evitar hacer clic en enlaces desconocidos, no descargar archivos de fuentes no verificadas y recomendaciones para identificar correos electrónicos sospechosos.
 
 #### 2.2 Software y Aplicaciones
 

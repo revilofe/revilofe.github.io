@@ -23,7 +23,7 @@ El puesto de usuario es el lugar donde se realiza el trabajo diario con los sist
   <figcaption>Puesto de trabajo</figcaption>
 </figure>
 
-### 1. Introducción
+### 1. Políticas en el puesto de trabajo
 
 Ya que el puesto de trabajo es el lugar donde se almacena y se accede a la información, es un lugar crítico en la seguridad de la información. Por tanto, es necesario establecer una normativa de protección del puesto de trabajo. Haremos una introducción a lo que es un puesto de trabajo y a la importancia de establecer una normativa de protección del puesto de trabajo.
 
@@ -88,9 +88,9 @@ Por tanto, la política es la visión o intención general, como un "norte" o l�
 Una **normativa** traduce la política en **reglas y requisitos más concretos** que deben cumplirse para seguir esa política. Es decir, establece **qué** se debe hacer o cumplir para mantener la seguridad, y a veces **quién** es responsable de llevarlo a cabo.
 
 * **Ejemplo:** Siguiendo la política de seguridad de la información, una normativa específica puede ser la **normativa de protección del puesto de trabajo**. Esta normativa podría incluir reglas como:
-  * "Todo empleado debe bloquear su pantalla al ausentarse del escritorio".
-  * "Se requiere que todas las contraseñas de usuario tengan al menos 10 caracteres e incluyan letras, números y símbolos".
-  * "Los empleados deben realizar un curso básico de seguridad informática cada seis meses".
+    * "Todo empleado debe bloquear su pantalla al ausentarse del escritorio".
+    * "Se requiere que todas las contraseñas de usuario tengan al menos 10 caracteres e incluyan letras, números y símbolos".
+    * "Los empleados deben realizar un curso básico de seguridad informática cada seis meses".
   * **En la práctica**: La normativa detalla requisitos claros que los empleados y los sistemas deben cumplir. No describe cómo hacerlo (ese es el trabajo del procedimiento), sino que define las condiciones que deben cumplirse.
 * **Importancia de la normativa:** Proporciona una capa de control y dirección más concreta que la política, ayudando a mantener una estructura de cumplimiento y a reducir riesgos.
 
@@ -101,9 +101,9 @@ Por tanto, la normativa establece reglas específicas y requisitos que deben cum
 Un **procedimiento** detalla los **pasos específicos** que deben seguirse para cumplir con la normativa y, por ende, con la política. Responde a la pregunta de **cómo** hacer algo. Los procedimientos suelen ser detallados y prácticos, y pueden incluir capturas de pantalla, ejemplos o listas paso a paso.
 
 * **Ejemplo:** Si la normativa de protección del puesto de trabajo exige "bloquear la pantalla al ausentarse", el procedimiento explicará cómo hacerlo en diferentes sistemas operativos:
-  * **Windows:** “Presiona `Win + L` para bloquear la pantalla”.
-  * **MacOS:** “Presiona `Control + Command + Q` o configura el bloqueo automático desde Preferencias del Sistema”.
-  * **Linux:** “Configura el bloqueo de pantalla en las preferencias o presiona `Super + L`”.
+    * **Windows:** “Presiona `Win + L` para bloquear la pantalla”.
+    * **MacOS:** “Presiona `Control + Command + Q` o configura el bloqueo automático desde Preferencias del Sistema”.
+    * **Linux:** “Configura el bloqueo de pantalla en las preferencias o presiona `Super + L`”.
   * **En la práctica**: Este procedimiento ofrece las instrucciones detalladas de cómo cada usuario puede cumplir con el requisito de la normativa.
 * **Importancia del procedimiento:** Los procedimientos eliminan la ambigüedad sobre cómo realizar una tarea específica. Son muy útiles para nuevos empleados, para procesos de auditoría y para asegurar que todos los empleados tengan claridad sobre las acciones que deben seguir.
 
@@ -113,9 +113,9 @@ Por lo tanto, los procedimientos son guías prácticas y detalladas sobre **cóm
 
 Cada nivel aporta un grado de especificidad creciente y va dirigido a distintos aspectos de la estructura organizativa de seguridad.
 
-* **Política de Seguridad de la Información**: "XYZ se compromete a proteger la información de acuerdo con altos estándares de seguridad".
-* **Normativa de Protección del Puesto de Trabajo**: "Todos los empleados deben bloquear sus equipos al ausentarse".
-* **Procedimiento de Bloqueo de Pantalla**: "Para bloquear la pantalla, usa `Win + L` en Windows, `Control + Command + Q` en MacOS, y `Super + L` en Linux".
+* **Política de Seguridad de la Información**: "XYZ se compromete a proteger la información de acuerdo con altos estándares de seguridad".    
+* **Normativa de Protección del Puesto de Trabajo**: "Todos los empleados deben bloquear sus equipos al ausentarse".    
+* **Procedimiento de Bloqueo de Pantalla**: "Para bloquear la pantalla, usa `Win + L` en Windows, `Control + Command + Q` en MacOS, y `Super + L` en Linux".    
 
 #### 1.4 Normativas
 
@@ -174,14 +174,14 @@ En el caso de la protección del puesto de trabajo, las medidas de seguridad pre
 A continuación, desglosaremos estos elementos y mostraremos cómo cada uno se relaciona con los distintos escenarios de riesgo y con la necesidad de establecer políticas, normativas y procedimientos claros.
 
 
-### 2.1 Dispositivos de Hardware
+#### 2.1 Dispositivos de Hardware
 
 Los **dispositivos de hardware** son los equipos físicos que los empleados utilizan para realizar su trabajo y acceder a los sistemas de la organización. Dado que son el punto de acceso principal a la información corporativa, representan un componente crítico en la seguridad de la información y un punto vulnerable si no están adecuadamente protegidos.
 
 **Elementos incluidos**: Computadoras de escritorio, laptops, tabletas, teléfonos inteligentes y cualquier otro dispositivo físico utilizado en el entorno de trabajo.
 
 
-#### Escenarios de Riesgo Asociados
+##### 2.1.1 Escenarios de Riesgo Asociados
 
 1. **Pérdida o Robo de Dispositivos**
     - **Riesgo**: La pérdida o el robo de un dispositivo físico puede exponer datos confidenciales y credenciales de acceso si cae en manos de personas no autorizadas. Esto es especialmente crítico si el dispositivo se utiliza fuera de las instalaciones de la empresa y no cuenta con medidas de seguridad avanzadas, como el cifrado.
@@ -246,13 +246,13 @@ Los **dispositivos de hardware** son los equipos físicos que los empleados util
      - **Activación de firewall**: Guía para configurar y activar el firewall en sistemas operativos Windows, MacOS y dispositivos móviles.
      - **Buenas prácticas de navegación segura**: Pautas para evitar hacer clic en enlaces desconocidos, no descargar archivos de fuentes no verificadas y recomendaciones para identificar correos electrónicos sospechosos.
 
-### 2.2 Software y Aplicaciones
+#### 2.2 Software y Aplicaciones
 
 El **software y las aplicaciones** son herramientas esenciales para que los empleados realicen sus tareas diarias. Incluyen desde aplicaciones de oficina hasta herramientas de gestión, comunicación, y plataformas específicas de la organización. Debido a que estos programas procesan y almacenan información sensible, es fundamental proteger su uso y mantenimiento.
 
 **Elementos incluidos**: Aplicaciones de oficina (procesadores de texto, hojas de cálculo), software de gestión (CRM, ERP), plataformas de comunicación (correo electrónico, mensajería), navegadores web y herramientas personalizadas.
 
-#### Escenarios de Riesgo Asociados
+##### 2.2.1 Escenarios de Riesgo Asociados
 
 1. **Descarga o Uso de Software No Autorizado**
     - **Riesgo**: La instalación o uso de software no autorizado puede incluir programas maliciosos que comprometan la seguridad del sistema y expongan los datos de la organización.
@@ -311,14 +311,14 @@ El **software y las aplicaciones** son herramientas esenciales para que los empl
      - **Configuración de privacidad y acceso en aplicaciones en la nube**: Instrucciones para configurar la privacidad y los permisos de acceso en las aplicaciones en la nube.
      - **Proceso de revisión de seguridad en aplicaciones compartidas**: Pasos que debe seguir el departamento de TI para revisar y verificar que las aplicaciones en la nube cumplen con los requisitos de seguridad antes de ser utilizadas.
 
-### 2.3 Comunicación y Acceso a la Red
+#### 2.3 Comunicación y Acceso a la Red
 
 La **comunicación y acceso a la red** incluye todas las conexiones necesarias para que los empleados puedan acceder a internet, intranet, servidores internos y servicios en la nube, tanto desde la oficina como desde ubicaciones remotas. Estos accesos son esenciales para la operatividad diaria, pero también representan riesgos importantes que deben gestionarse adecuadamente.
 
 **Elementos incluidos**: Conexiones a internet, redes de la empresa, VPNs (Redes Privadas Virtuales), aplicaciones en la nube y acceso remoto.
 
 
-#### Escenarios de Riesgo Asociados
+##### 2.3.1 Escenarios de Riesgo Asociados
 
 1. **Acceso No Seguro a Redes Públicas**
     - **Riesgo**: Conectar dispositivos de trabajo a redes Wi-Fi públicas o no seguras puede facilitar la interceptación de datos sensibles por parte de terceros.
@@ -379,14 +379,14 @@ La **comunicación y acceso a la red** incluye todas las conexiones necesarias p
      - **Activación de cifrado en correos y transferencias de archivos**: Guía para que los empleados configuren el cifrado en los correos y archivos que contengan información confidencial.
      - **Uso de plataformas seguras para el envío de datos**: Instrucciones para utilizar las plataformas aprobadas por la organización para enviar datos sensibles y asegurar su protección.
 
-### 2.4 Instalaciones Físicas
+#### 2.4 Instalaciones Físicas
 
 Las **instalaciones físicas** comprenden las áreas donde los empleados realizan su trabajo, acceden a sistemas y manejan información confidencial. Las áreas físicas de trabajo representan un componente clave en la seguridad de la información, ya que permiten el acceso directo a documentos, dispositivos y otros recursos críticos.
 
 **Elementos incluidos**: Oficinas, salas de reuniones, áreas de trabajo compartidas, centros de datos y cualquier otro espacio físico de la empresa.
 
 
-#### Escenarios de Riesgo Asociados
+##### 2.4.1 Escenarios de Riesgo Asociados
 
 1. **Acceso No Autorizado a Áreas Restringidas**
     - **Riesgo**: Personas no autorizadas podrían entrar en áreas restringidas de la organización, exponiendo dispositivos y documentos confidenciales a riesgos de seguridad.
@@ -452,14 +452,14 @@ Las **instalaciones físicas** comprenden las áreas donde los empleados realiza
      - **Revisión periódica de residuos de documentación**: Guía para que los empleados revisen y clasifiquen los documentos antes de desecharlos, asegurando la correcta destrucción de los materiales sensibles.
 
 
-### 2.5 Acceso a Datos
+#### 2.5 Acceso a Datos
 
 El **acceso a datos** se refiere a los permisos otorgados a los empleados para ver, editar o compartir documentos, bases de datos y aplicaciones internas que contienen información valiosa o sensible de la organización. Una adecuada gestión de los permisos de acceso es fundamental para proteger la información y evitar que personas no autorizadas tengan acceso a datos confidenciales.
 
 **Elementos incluidos**: Documentos electrónicos y físicos, bases de datos, archivos compartidos, aplicaciones internas y cualquier otro recurso de la organización que contenga información sensible.
 
 
-#### Escenarios de Riesgo Asociados
+##### 2.5.1 Escenarios de Riesgo Asociados
 
 1. **Permisos Excesivos o Inadecuados**
     - **Riesgo**: Dar a un empleado permisos de acceso que exceden los necesarios para su función laboral puede permitirle acceder a datos o recursos sensibles sin autorización real.
@@ -524,14 +524,14 @@ El **acceso a datos** se refiere a los permisos otorgados a los empleados para v
      - **Monitoreo automático de accesos**: Configuración de un sistema de monitoreo que registre y alerte sobre intentos de acceso a datos sensibles.
      - **Informe de auditoría de acceso a datos**: Pasos para generar y documentar informes de auditoría de accesos a información confidencial, incluyendo observaciones y acciones correctivas.
 
-### 2.6 Personal
+#### 2.6 Personal
 
 El **personal** de la organización es fundamental para la seguridad de la información, ya que sus hábitos de trabajo y su conocimiento de las políticas de seguridad son factores críticos para proteger los datos y recursos corporativos. La formación y concienciación del empleado en temas de seguridad contribuyen significativamente a reducir los riesgos de incidentes de seguridad.
 
 **Elementos incluidos**: El propio empleado, sus prácticas de trabajo diarias, su familiaridad con las políticas de seguridad y su capacidad para reconocer y actuar frente a amenazas de seguridad.
 
 
-#### Escenarios de Riesgo Asociados
+##### 2.6.1 Escenarios de Riesgo Asociados
 
 1. **Falta de Concienciación en Seguridad de la Información**
     - **Riesgo**: La falta de conocimientos de seguridad en el personal puede llevar a errores que comprometan la confidencialidad, integridad y disponibilidad de los datos.

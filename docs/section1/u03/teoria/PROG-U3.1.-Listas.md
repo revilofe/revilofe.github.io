@@ -58,17 +58,17 @@ Hay tres tipos de **estructuras de datos lineales** listas enlazadas, pilas y co
 
 * **Listas enlazadas**: En las **estructuras de datos**, las listas enlazadas se construyen con elementos que están ubicados en una secuencia. Aquí, cada elemento se conecta con el siguiente a través de un enlace que contiene la posición del siguiente elemento. De este modo, teniendo la referencia del principio de la lista podemos acceder a todos los elementos de la misma. También existen las listas doblemente enlazadas, en las que cada nodo tiene dos enlaces, uno al nodo anterior y otro al siguiente.
 
-   <figure markdown>
-      ![](assets/PROG-U3.1.-ListaEnlazada.png)
-  	  <figcaption>Estructura de datos: Lista doblemente enlazada</figcaption>
-   </figure>
+<figure markdown>
+  ![](assets/PROG-U3.1.-ListaEnlazada.png)
+  <figcaption>Estructura de datos: Lista doblemente enlazada</figcaption>
+</figure>
 
 * **Pila**: es un tipo especial de **lista lineal** dentro de las **estructuras de datos dinámicas** que permite almacenar y recuperar datos, siendo el modo de acceso a sus elementos de tipo LIFO (del inglés  *Last In, First Out*, es decir, *último en entrar, primero en salir*). ¿Cómo funciona? A través de dos operaciones básicas: apilar (push), que coloca un objeto en la pila, y su operación inversa, desapilar (pop), que retira el último elemento apilado.   
 
-   <figure markdown>
-      ![](assets/PROG-U3.1.-Pila.png)
-  	  <figcaption>Estructura de datos: Pila</figcaption>
-   </figure>
+<figure markdown>
+  ![](assets/PROG-U3.1.-Pila.png)
+  <figcaption>Estructura de datos: Pila</figcaption>
+</figure>
 
 
 ##### Estructura de datos no lineales
@@ -83,18 +83,18 @@ Entre ellos, destacamos dos tipos: Árboles, Grafos
      * **árbol general**, un árbol donde cada elemento puede tener un número ilimitado de sub árboles
      * **árboles binarios**, que son una estructura de datos homogénea, dinámica y no lineal en donde a cada elemento le pueden seguir como máximo dos nodos.
 
-   <figure markdown>
-      ![](assets/PROG-U3.1.-Arbol.png)
-  	  <figcaption>Estructura de datos: Arbol</figcaption>
-   </figure>
+<figure markdown>
+  ![](assets/PROG-U3.1.-Arbol.png)
+  <figcaption>Estructura de datos: Arbol</figcaption>
+</figure>
 
 
 * **Grafos**: Otro tipo **no lineal** de **estructura de datos en programación** son los **grafos**. Se trata de una estructura matemática formada por un conjunto de puntos — una estructura de datos — y un conjunto de líneas, cada una de las cuales une un punto a otro. Los puntos se llaman nodos o vértices del grafo y las líneas se llaman aristas o arcos.
 
-   <figure markdown>
-      ![](assets/PROG-U3.1.-Grafo.png)
-  	  <figcaption>Estructura de datos: Grafo</figcaption>
-   </figure>
+<figure markdown>
+  ![](assets/PROG-U3.1.-Grafo.png)
+  <figcaption>Estructura de datos: Grafo</figcaption>
+</figure>
 
 Las estructuras de datos son un aspecto clave a conocer en el mundo de la programación. Nos permiten mejorar nuestro código y habilidades técnicas, y en definitiva, resolver de manera eficiente problemas complejos.
 

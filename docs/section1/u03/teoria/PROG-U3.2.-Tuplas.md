@@ -16,8 +16,6 @@ tags:
 ## Tuplas
 Las tublas son unos iterables que se utilizan para almacenar objetos de cualquier tipo. Se pueden considerar como listas inmutables. Se definen entre paréntesis y los elementos se separan por comas.
 
-```Python
-
 ### Diferencia entre tuplas y listas.
 
 Una lista no es lo mismo que una tupla. Ambas son un conjunto ordenado de valores, en donde este último puede ser cualquier objeto: un número, una cadena, una función, una clase, una instancia, etc. La diferencia es que las listas presentan una serie de funciones adicionales que permiten un amplio manejo de los valores que contienen. Basándonos en esta definición, puede decirse que las listas son dinámicas, mientras que las tuplas son estáticas.

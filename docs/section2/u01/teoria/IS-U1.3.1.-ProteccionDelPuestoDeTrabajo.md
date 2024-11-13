@@ -238,12 +238,14 @@ Los **dispositivos de hardware** son los equipos físicos que los empleados util
 
     **Política**: La organización se compromete a proteger todos los dispositivos de trabajo con medidas de seguridad que garanticen la integridad, confidencialidad y disponibilidad de la información almacenada y procesada ante cualquier incidente.    
 
-    **Normativa**:      
+    **Normativa**:    
+
     - Todos los dispositivos deben estar protegidos mediante autenticación segura, como contraseñas complejas y, cuando sea posible, autenticación multifactor (MFA).     
     - Los dispositivos deben configurarse para bloquearse automáticamente tras un periodo de inactividad de 5 minutos.     
     - Todo dispositivo de trabajo que contenga datos confidenciales debe contar con cifrado de disco.
-    
-    **Procedimiento**:     
+
+    **Procedimiento**:
+
     - **Activación del bloqueo automático**: Instrucciones detalladas para configurar el bloqueo automático en dispositivos con diferentes sistemas operativos, como Windows, MacOS y dispositivos móviles.    
     - **Configuración del cifrado de disco**: Pasos para activar el cifrado de disco en dispositivos compatibles (Windows BitLocker, MacOS FileVault) y verificar su estado de activación.     
     - **Reporte de pérdida o robo de dispositivos**: Proceso para notificar al departamento de TI en caso de pérdida o robo, incluyendo información relevante del dispositivo y las acciones inmediatas que deben seguirse para mitigar el riesgo.    
@@ -284,11 +286,13 @@ Los **dispositivos de hardware** son los equipos físicos que los empleados util
 
     **Política**: La organización se compromete a proteger todos los dispositivos de trabajo con medidas de seguridad que garanticen la integridad, confidencialidad y disponibilidad de la información almacenada y procesada ante cualquier incidente.
 
-    **Normativa**:     
+    **Normativa**:    
+
     - Todos los dispositivos deben tener un antivirus y firewall activos y actualizados para protección contra malware.     
     - No se permite la descarga ni instalación de software que no esté previamente autorizado por el departamento de TI.     
 
     **Procedimiento**:     
+
     - **Instalación y actualización de antivirus**: Pasos para instalar el antivirus aprobado por la organización y cómo activar las actualizaciones automáticas.     
     - **Activación de firewall**: Guía para configurar y activar el firewall en sistemas operativos Windows, MacOS y dispositivos móviles.     
     - **Buenas prácticas de navegación segura**: Pautas para evitar hacer clic en enlaces desconocidos, no descargar archivos de fuentes no verificadas y recomendaciones para identificar correos electrónicos sospechosos.      

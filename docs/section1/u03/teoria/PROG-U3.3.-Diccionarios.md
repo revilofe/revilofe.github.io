@@ -56,7 +56,8 @@ La más simple es encerrar una secuencia de pares *clave: valor* separados por c
 
 En el diccionario anterior, los enteros `1` y `89` y las cadenas `'a'` y `'c'` son las claves. Como ves, se pueden mezclar claves y valores de distinto tipo sin problema.
 
-Para crear un **diccionario vacío**:     
+Para crear un **diccionario vacío**:    
+
 * Asigna a una variable el valor `{}`.      
 * Usar el constructor de la clase `dict()`, aunque este constructor se puede de varias maneras:
 

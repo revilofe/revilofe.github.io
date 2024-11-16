@@ -3934,13 +3934,13 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;hola&#39;</span><span class="p">,</span> <span class="mi">89</span><span class="p">:</span> <span class="s1">&#39;Pythonista&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">27</span><span class="p">}</span>
 </code></pre></div>
 <p>En el diccionario anterior, los enteros <code>1</code> y <code>89</code> y las cadenas <code>'a'</code> y <code>'c'</code> son las claves. Como ves, se pueden mezclar claves y valores de distinto tipo sin problema.</p>
-<p>Para crear un <strong>diccionario vacío</strong>:
-* Asigna a una variable el valor <code>{}</code>. 
-* Usar el constructor de la clase <code>dict()</code>, aunque este constructor se puede de varias maneras:  <br />
-    * <strong>Sin parámetros</strong> . Esto creará un diccionario vacío.
-    * Con pares <em>clave: valor</em> encerrados entre llaves.
-    * <strong>Con argumentos con nombre</strong>. El nombre del argumento será la clave en el diccionario. En este caso, las claves solo pueden ser identificadores válidos y mantienen el orden en el que se indican. No se podría, por ejemplo, tener números enteros como claves. Para utilizar los números enteros como claves, se debe usar otra forma de crear los diccionarios.
-   * <strong>Pasando un iterable</strong>. En este caso, cada elemento del iterable debe ser también un iterable con solo dos elementos. El primero se toma como clave del diccionario y el segundo como valor. Si la clave aparece varias veces, el valor que prevalece es el último.</p>
+<p>Para crear un <strong>diccionario vacío</strong>:   <br />
+* Asigna a una variable el valor <code>{}</code>.    <br />
+* Usar el constructor de la clase <code>dict()</code>, aunque este constructor se puede de varias maneras:       <br />
+    * <strong>Sin parámetros</strong> . Esto creará un diccionario vacío.   <br />
+    * Con pares <em>clave: valor</em> encerrados entre llaves.    <br />
+    * <strong>Con argumentos con nombre</strong>. El nombre del argumento será la clave en el diccionario. En este caso, las claves solo pueden ser identificadores válidos y mantienen el orden en el que se indican. No se podría, por ejemplo, tener números enteros como claves. Para utilizar los números enteros como claves, se debe usar otra forma de crear los diccionarios.    <br />
+   * <strong>Pasando un iterable</strong>. En este caso, cada elemento del iterable debe ser también un iterable con solo dos elementos. El primero se toma como clave del diccionario y el segundo como valor. Si la clave aparece varias veces, el valor que prevalece es el último.       </p>
 <p>Veamos un ejemplo con todo lo anterior. Vamos a crear el mismo diccionario de todos los modos que te he explicado:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 1. Pares clave: valor encerrados entre llaves</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;uno&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;dos&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;tres&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>

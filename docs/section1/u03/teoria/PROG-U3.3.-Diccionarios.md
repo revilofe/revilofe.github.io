@@ -12,22 +12,39 @@ categories:
 tags:
     - Software
 ---
-## Diccionarios
+## 3.3. Diccionarios   
 
-La clase dict de Python es un tipo mapa que asocia claves a valores. A diferencia de los tipos secuenciales `list`, `tuple`, `range` o `str`, que son indexados por un índice numérico, los diccionarios son indexados por claves. Estas claves siempre deben ser de un tipo inmutable, concretamente un tipo *hashable*.
+Los diccionarios son una estructura de datos que permite almacenar un conjunto de pares clave-valor. Cada clave es única y está asociada a un valor. Los diccionarios son una estructura de datos muy utilizada en Python y en otros lenguajes de programación. En este apartado vamos a ver cómo se crean y se utilizan los diccionarios en Python.
+
+### 1. Introducción
+
+La clase `dict` de Python es un tipo mapa que asocia claves a valores. A diferencia de los tipos secuenciales `list`, `tuple`, `range` o `str`, que son indexados por un índice numérico, los diccionarios son indexados por claves. Estas claves siempre deben ser de un tipo inmutable, concretamente un tipo *hashable*.
 
 > 🎯 **NOTA:** Un objeto es *hashable* si tiene un valor de *hash* que no cambia durante todo su ciclo de vida. En principio, los objetos que son instancias de clases definidas por el usuario son *hashables*. También lo son la mayoría de tipos inmutables definidos por Python (`int`,`float` o `str`).
 
 Piensa siempre en un diccionario como un contenedor de pares *clave*: *valor*, en el que la clave puede ser de cualquier tipo hashable y es única en el diccionario que la contiene. Generalmente, se suelen usar como claves los tipos `int` y `str` aunque, como se ha comentado, cualquier tipo *hashable* puede ser una clave.
 
+> **Ten cuenta que no todo los objetos pueden ser clave, solo los hashables**
+
+<figure markdown>
+  ![](./assets/PROG-U3.3.-Diccionarios-representacion.png)
+  <figcaption>Estructura de datos: Diccionario</figcaption>
+</figure>
+
+
 **Las principales operaciones** que se suelen realizar con diccionarios **son almacenar un valor asociado a una clave y recuperar un valor a partir de una clave**. Esta es la esencia de los diccionarios y es aquí donde son realmente importantes. **En un diccionario, el acceso a un elemento a partir de una clave es una operación realmente rápida, eficaz y que consume pocos recursos** si lo comparamos con cómo lo haríamos con otros tipos de datos.
 
 Otras características a resaltar de los diccionarios:
 
-* **Es un tipo mutable**, es decir, su contenido se puede modificar después de haber sido creado.
-* **Es un tipo ordenado**. Preserva el orden en que se insertan los pares *clave: valor*.
+* **Es un tipo mutable**: su contenido se puede modificar después de haber sido creado.
+* **Es un tipo ordenado**: en el sentido de que preserva el orden en que se insertan los pares *clave: valor*.
+* **Es un tipo dinámico**: no es necesario declarar el tamaño del diccionario antes de usarlo.
+* **Es un tipo heterogéneo**: las claves y los valores pueden ser de cualquier tipo y mezclarse en un mismo diccionario.
 
-### Cómo crear un diccionario
+### 2. Trabajar con diccionarios en Python
+Los diccionarios en Python son un tipo de datos muy versátil y potente. Se pueden crear, modificar y eliminar elementos de un diccionario, así como acceder a sus elementos de distintas formas. A continuación, se describen las operaciones más comunes que se pueden realizar con diccionarios en Python.
+
+#### 2.1. Cómo crear un diccionario
 
 En Python hay varias formas de crear un diccionario. Las veremos todas a continuación.
 
@@ -39,14 +56,13 @@ La más simple es encerrar una secuencia de pares *clave: valor* separados por c
 
 En el diccionario anterior, los enteros `1` y `89` y las cadenas `'a'` y `'c'` son las claves. Como ves, se pueden mezclar claves y valores de distinto tipo sin problema.
 
-Para crear un diccionario vacío, simplemente asigna a una variable el valor `{}`.
-
-También se puede usar el constructor de la clase `dict()` de varias maneras:
-
-* **Sin parámetros** . Esto creará un diccionario vacío.
-* Con pares *clave: valor* encerrados entre llaves.
-* **Con argumentos con nombre**. El nombre del argumento será la clave en el diccionario. En este caso, las claves solo pueden ser identificadores válidos y mantienen el orden en el que se indican. No se podría, por ejemplo, tener números enteros como claves.
-* **Pasando un iterable**. En este caso, cada elemento del iterable debe ser también un iterable con solo dos elementos. El primero se toma como clave del diccionario y el segundo como valor. Si la clave aparece varias veces, el valor que prevalece es el último.
+Para crear un **diccionario vacío**:
+* Asigna a una variable el valor `{}`. 
+* Usar el constructor de la clase `dict()`, aunque este constructor se puede de varias maneras:    
+    * **Sin parámetros** . Esto creará un diccionario vacío.
+    * Con pares *clave: valor* encerrados entre llaves.
+    * **Con argumentos con nombre**. El nombre del argumento será la clave en el diccionario. En este caso, las claves solo pueden ser identificadores válidos y mantienen el orden en el que se indican. No se podría, por ejemplo, tener números enteros como claves. Para utilizar los números enteros como claves, se debe usar otra forma de crear los diccionarios.
+   * **Pasando un iterable**. En este caso, cada elemento del iterable debe ser también un iterable con solo dos elementos. El primero se toma como clave del diccionario y el segundo como valor. Si la clave aparece varias veces, el valor que prevalece es el último.
 
 Veamos un ejemplo con todo lo anterior. Vamos a crear el mismo diccionario de todos los modos que te he explicado:
 
@@ -82,7 +98,7 @@ Veamos un ejemplo con todo lo anterior. Vamos a crear el mismo diccionario de to
 {}
 ```
 
-### Cómo acceder a los elementos de un diccionario en Python
+#### 2.2. Cómo acceder a los elementos de un diccionario en Python
 
 Acceder a un elemento de un diccionario es una de las principales operaciones por las que existe este tipo de dato. El acceso a un valor se realiza mediante indexación de la clave. Para ello, simplemente encierra entre corchetes la clave del elemento `d[clave]`. En caso de que la clave no exista, se lanzará la excepción `KeyError`.
 
@@ -97,7 +113,7 @@ KeyError: 4
 > 
 ```
 
-La clase `dict` también ofrece el método `get(clave [, valor por defecto])`. Este método devuelve el valor correspondiente a la clave `clave`. En caso de que la clave no exista no lanza ningún error, sino que devuelve el segundo argumento `valor por defecto`. Si no se proporciona este argumento, se devuelve el valor `None`.
+La clase `dict` también ofrece el método `get(clave [, valor por defecto])`. Este método devuelve el valor correspondiente a la clave `clave`. En caso de que la clave no exista **no lanza ningún error**, sino que devuelve el segundo argumento `valor por defecto`. Si no se proporciona este argumento, se devuelve el valor `None`.
 
 ```Python
 >>> d = {'uno': 1, 'dos': 2, 'tres': 3}
@@ -115,45 +131,7 @@ La clase `dict` también ofrece el método `get(clave [, valor por defecto])`. E
 <class 'NoneType'>
 ```
 
-### for dict Python – Recorrer un diccionario
-
-Hay varias formas de recorrer los elementos de un diccionario: recorrer solo las claves, solo los valores o recorrer a la vez las claves y los valores. Puedes ver aquí [cómo usar el bucle for para recorrer un diccionario](https://j2logo.com/bucle-for-en-python/#for-diccionarios).
-
-```Python
->>> d = {'uno': 1, 'dos': 2, 'tres': 3}
->>> for e in d:
-...     print(e)
-... 
-uno
-dos
-tres
-
-# Recorrer las claves del diccionario
->>> for k in d.keys():
-...     print(k)
-...   
-uno
-dos
-tres
-
-# Recorrer los valores del diccionario
->>> for v in d.values():
-...     print(v)
-...   
-1
-2
-3
-
-# Recorrer los pares clave valor
->>> for i in d.items():
-...     print(i)
-...   
-('uno', 1)
-('dos', 2)
-('tres', 3)
-```
-
-### Añadir elementos a un diccionario en Python
+#### 2.3. Añadir elementos a un diccionario en Python
 
 Como hemos comentado, la clase `dict` es mutable, por lo que se pueden añadir, modificar y/o eliminar elementos después de haber creado un objeto de este tipo.
 
@@ -184,7 +162,7 @@ También existe el método `setdefault(clave[, valor])`. Este método devuelve e
 {'uno': 1, 'dos': 2, 'tres': 3, 'cuatro': None}
 ```
 
-### Modificar elementos de un diccionario
+#### 2.4. Modificar elementos de un diccionario
 
 En el apartado anterior hemos visto que para actualizar el valor asociado a una clave, simplemente se asigna un nuevo valor a dicha clave del diccionario.
 
@@ -197,13 +175,13 @@ En el apartado anterior hemos visto que para actualizar el valor asociado a una 
 {'uno': 1.0, 'dos': 2}
 ```
 
-### Eliminar un elemento de un diccionario en Python
+#### 2.5. Eliminar un elemento de un diccionario en Python
 
 En Python existen diversos modos de eliminar un elemento de un diccionario. Son los siguientes:
 
 * `pop(clave [, valor por defecto])`: Si la `clave` está en el diccionario, elimina el elemento y devuelve su valor; si no, devuelve el `valor por defecto`. Si no se proporciona el `valor por defecto` y la `clave` no está en el diccionario, se lanza la excepción `KeyError`.
 * `popitem()`: Elimina el último par *clave: valor* del diccionario y lo devuelve. Si el diccionario está vacío se lanza la excepción `KeyError`. (**NOTA:** En versiones anteriores a Python 3.7, se elimina/devuelve un par aleatorio, no se garantiza que sea el último).
-* `del d[clave]`: Elimina el par  *clave: valor* . Si no existe la clave, se lanza la excepción `KeyError`.
+* `del d[clave]`: Elimina el par *clave: valor*. Si no existe la clave, se lanza la excepción `KeyError`.
 * `clear()`: Borra todos los pares *clave: valor* del diccionario.
 
 ```Python
@@ -243,8 +221,10 @@ KeyError: 'seis'
 >>> d
 {}
 ```
+### 3. Patrones de uso de diccionarios en Python
+Python es un lenguaje muy versátil y flexible que permite utilizar los diccionarios de muchas formas. A continuación, se describen algunos de los patrones de uso más comunes de los diccionarios en Python.
 
-### Número de elementos (len) de un diccionario en Python
+#### 3.1. Número de elementos (len) de un diccionario en Python
 
 Al igual que sucede con otros tipos contenedores, se puede usar la función de Python `len()` para obtener el número de elementos de un diccionario.
 
@@ -253,8 +233,47 @@ Al igual que sucede con otros tipos contenedores, se puede usar la función de P
 >>> len(d)
 3
 ```
+#### 3.2. Recorrer un diccionario - for dict Python
 
-### Comprobar si un elemento está en un diccionario en Python
+Hay varias formas de recorrer los elementos de un diccionario: recorrer solo las claves, solo los valores o recorrer a la vez las claves y los valores. Puedes ver aquí [cómo usar el bucle for para recorrer un diccionario](https://j2logo.com/bucle-for-en-python/#for-diccionarios).
+
+```Python
+>>> d = {'uno': 1, 'dos': 2, 'tres': 3}
+>>> for e in d:
+...     print(e)
+... 
+uno
+dos
+tres
+
+# Recorrer las claves del diccionario
+>>> for k in d.keys():
+...     print(k)
+...   
+uno
+dos
+tres
+
+# Recorrer los valores del diccionario
+>>> for v in d.values():
+...     print(v)
+...   
+1
+2
+3
+
+# Recorrer los pares clave valor
+>>> for i in d.items():
+...     print(i)
+...   
+('uno', 1)
+('dos', 2)
+('tres', 3)
+```
+
+
+
+#### 3.3. Comprobar si un elemento está en un diccionario en Python
 
 Al operar con diccionarios, se puede usar el operador de pertenencia `in` para comprobar si una clave está contenida, o no, en un diccionario. Esto resulta útil, por ejemplo, para asegurarnos de que una clave existe antes de intentar eliminarla.
 
@@ -273,7 +292,7 @@ True
 {'uno': 1, 'dos': 2, 'tres': 3}
 ```
 
-### Comparar si dos diccionarios son iguales
+#### 3.4. Comparar si dos diccionarios son iguales
 
 En Python se puede utilizar el operador de igualdad `==` para comparar si dos diccionarios son iguales.  **Dos diccionarios son iguales si contienen el mismo conjunto de pares *clave: valor*** , independientemente del orden que tengan.
 
@@ -293,7 +312,7 @@ File "<input>", line 1, in <module>
 TypeError: '>' not supported between instances of 'dict' and 'dict'
 ```
 
-### Diccionarios anidados en Python
+#### 3.5. Diccionarios anidados en Python
 
 Un diccionario puede contener un valor de cualquier tipo, entre ellos, otro diccionario. Este hecho se conoce como diccionarios anidados.
 
@@ -315,7 +334,7 @@ File "<input>", line 1, in <module>
 KeyError: 'd3'
 ```
 
-### Obtener una lista con las claves de un diccionario
+#### 3.6. Obtener una lista con las claves de un diccionario
 
 En ocasiones, es necesario tener almacenado en una lista las claves de un diccionario. Para ello, simplemente pasa el diccionario como argumento del constructor `list()`. Esto devolverá las claves del diccionario en una lista.
 
@@ -325,7 +344,7 @@ En ocasiones, es necesario tener almacenado en una lista las claves de un diccio
 ['uno', 'dos', 'tres']
 ```
 
-### Objetos vista de un diccionario
+#### 3.7. Objetos vista de un diccionario
 
 La clase *dict* implementa tres métodos muy particulares, dado que devuelven un tipo de dato, *iterable*, conocido como *objetos vista*. Estos objetos ofrecen una vista de las claves y valores contenidos en el diccionario y si el diccionario se modifica, dichos objetos se actualizan al instante.
 
@@ -345,16 +364,19 @@ Los métodos son los siguientes:
 <class 'dict_keys'>
 >>> v
 dict_keys(['uno', 'dos', 'tres'])
+
 >>> l = list(d)
 >>> type(l)
 <class 'list'>
 >>> l
 ['uno', 'dos', 'tres']
+
 >>> v = d.values()
 >>> type(v)
 <class 'dict_values'>
 >>> v
 dict_values([1, 2, 3])
+
 >>> v = d.items()
 >>> type(v)
 <class 'dict_items'>
@@ -362,7 +384,7 @@ dict_values([1, 2, 3])
 dict_items([('uno', 1), ('dos', 2), ('tres', 3)])
 ```
 
-### Listado de métodos de la clase dict
+### 4. Listado de métodos de la clase dict
 
 Finalmente, enumeramos 0el listado de los principales métodos de la clase *dict*. Algunos de ellos ya los hemos visto durante la unidad:
 
@@ -381,7 +403,7 @@ Finalmente, enumeramos 0el listado de los principales métodos de la clase *dict
 | `values()`                   | Devuelve una vista de los valores del diccionario.                                                                                                                                                                                              |
 
 
-## Depuración
+### 5. Depuración
 
 Conforme trabajes con conjuntos de datos más grandes puede ser complicado depurar imprimiendo y revisando los datos a mano. Aquí hay algunas sugerencias para depurar grandes conjuntos de datos:
 

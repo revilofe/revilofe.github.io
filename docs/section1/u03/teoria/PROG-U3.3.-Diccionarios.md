@@ -56,13 +56,13 @@ La más simple es encerrar una secuencia de pares *clave: valor* separados por c
 
 En el diccionario anterior, los enteros `1` y `89` y las cadenas `'a'` y `'c'` son las claves. Como ves, se pueden mezclar claves y valores de distinto tipo sin problema.
 
-Para crear un **diccionario vacío**:
-* Asigna a una variable el valor `{}`. 
-* Usar el constructor de la clase `dict()`, aunque este constructor se puede de varias maneras:    
-    * **Sin parámetros** . Esto creará un diccionario vacío.
-    * Con pares *clave: valor* encerrados entre llaves.
-    * **Con argumentos con nombre**. El nombre del argumento será la clave en el diccionario. En este caso, las claves solo pueden ser identificadores válidos y mantienen el orden en el que se indican. No se podría, por ejemplo, tener números enteros como claves. Para utilizar los números enteros como claves, se debe usar otra forma de crear los diccionarios.
-   * **Pasando un iterable**. En este caso, cada elemento del iterable debe ser también un iterable con solo dos elementos. El primero se toma como clave del diccionario y el segundo como valor. Si la clave aparece varias veces, el valor que prevalece es el último.
+Para crear un **diccionario vacío**:     
+* Asigna a una variable el valor `{}`.      
+* Usar el constructor de la clase `dict()`, aunque este constructor se puede de varias maneras:         
+    * **Sin parámetros** . Esto creará un diccionario vacío.     
+    * Con pares *clave: valor* encerrados entre llaves.      
+    * **Con argumentos con nombre**. El nombre del argumento será la clave en el diccionario. En este caso, las claves solo pueden ser identificadores válidos y mantienen el orden en el que se indican. No se podría, por ejemplo, tener números enteros como claves. Para utilizar los números enteros como claves, se debe usar otra forma de crear los diccionarios.      
+   * **Pasando un iterable**. En este caso, cada elemento del iterable debe ser también un iterable con solo dos elementos. El primero se toma como clave del diccionario y el segundo como valor. Si la clave aparece varias veces, el valor que prevalece es el último.       
 
 Veamos un ejemplo con todo lo anterior. Vamos a crear el mismo diccionario de todos los modos que te he explicado:
 

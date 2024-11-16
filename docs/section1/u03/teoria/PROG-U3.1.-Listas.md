@@ -98,7 +98,7 @@ Entre ellos, destacamos dos tipos: Árboles, Grafos
 
 Las estructuras de datos son un aspecto clave a conocer en el mundo de la programación. Nos permiten mejorar nuestro código y habilidades técnicas, y en definitiva, resolver de manera eficiente problemas complejos.
 
-### 2. Qué es una lista
+### 2. Listas
 
 Las listas en Python son un tipo **contenedor** compuesto, que **se usan para almacenar conjuntos de elementos relacionados** del mismo tipo o de tipos distintos.
 

@@ -128,7 +128,7 @@ B=
  1, 1
 ``` 
 
-en una lista y muestre por pantalla su producto.   
+en una lista y muestre por pantalla su producto. El resultado debe ser una matriz de 2x2.
 
 Nota: Para representar matrices mediante listas usar listas anidadas, representando cada vector fila en una lista.
 

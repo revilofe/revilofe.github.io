@@ -684,14 +684,15 @@ Para que las pequeñas y medianas empresas (PYMEs) puedan mejorar su ciberseguri
     - Cada política abarca aspectos fundamentales de la seguridad que deben ser supervisados y gestionados activamente. Estos elementos van desde la **protección de los equipos** y el **control de accesos**, hasta la **gestión de aplicaciones** y el **almacenamiento de datos**.    
     - La idea es que toda PYME, sin importar su tamaño, identifique áreas clave donde aplicar controles y pueda adaptarlos según sus necesidades.   
 
-2. **Roles y Responsabilidades Claras**:
+2. **Roles y Responsabilidades Claras**:    
 
     - Estas políticas están diseñadas para que **el empresario, el equipo técnico y todos los empleados** conozcan y sigan las prácticas de seguridad.     
     - Incluyen una **checklist o lista de verificación** con acciones específicas para cada grupo:    
         - **Para el empresario**: decisiones sobre políticas de acceso o configuración de copias de seguridad.    
         - **Para el equipo técnico**: implementación de medidas técnicas como la configuración de redes y el cifrado de datos.     
-        - **Para los empleados**: prácticas de seguridad diarias, como el bloqueo de pantallas y el uso de software autorizado.     
-3. **Formatos Editables y Listos para Usar**:
+        - **Para los empleados**: prácticas de seguridad diarias, como el bloqueo de pantallas y el uso de software autorizado.      
+
+3. **Formatos Editables y Listos para Usar**:    
 
     - Las políticas están disponibles en versiones PDF y Word para que cada empresa pueda **personalizarlas** y adaptarlas a su contexto.     
     - También incluyen una **checklist editable** digitalmente, donde se pueden registrar las acciones que ya se han completado y aquellas que quedan pendientes. Esto ayuda a la empresa a realizar un **seguimiento** del cumplimiento de las políticas y a identificar áreas donde aún hay margen de mejora.
@@ -700,11 +701,11 @@ Para que las pequeñas y medianas empresas (PYMEs) puedan mejorar su ciberseguri
 #### 3.2. Estructura de los Documentos
 Los documentos de políticas de seguridad de INCIBE siguen una estructura común que facilita su lectura y comprensión. A continuación, se describen los elementos clave de cada documento:
 
-1. **Antecedentes**   
+1. **Antecedentes**       
     - **Descripción**: Los documentos comienzan con una sección de antecedentes que justifica la necesidad de la política. Por ejemplo, en el documento sobre “Aplicaciones permitidas” se justifica por la obligación de utilizar software legal para evitar sanciones y reducir riesgos de malware. En el caso de “Protección del puesto de trabajo”, se destacan riesgos tanto tecnológicos como no tecnológicos que justifican la necesidad de proteger el entorno de trabajo. Por tanto, esta sección **establece el contexto y la importancia de la política en base a los riesgos identificados**.
     - **Relación con los conceptos vistos**: Esta sección se vincula con la identificación de factores vulnerables o **elementos asociados al puesto de trabajo** y sus **escenarios de riesgos**, que justifican la implementación de la política. También sirve de introducción para contextualizar la importancia de implementar medidas a nivel de **personas, tecnología y procesos**.
 
-2. **Objetivos**
+2. **Objetivos**    
     - **Descripción**: Los objetivos establecen qué busca lograr la política, generalmente expresado en términos de seguridad, control y prevención. Por ejemplo, los objetivos de la política de almacenamiento se centran en mantener la información segura y gestionar adecuadamente su almacenamiento en dispositivos.
     - **Relación con los conceptos vistos**: Los objetivos conectan directamente con la **política** como declaración de intenciones generales, ya que definen el marco y el “norte” que se persigue. Además, cada objetivo suele guiar el desarrollo de normativas y procedimientos específicos.
 

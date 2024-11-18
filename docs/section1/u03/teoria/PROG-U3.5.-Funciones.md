@@ -324,11 +324,11 @@ programa_principal()
 
     - **Operaciones sobre datos**: Son funciones puras que no dependen de la interacción con el usuario. Ejemplo: `añadir_tarea`, `eliminar_tarea`, `completar_tarea`.    
     - **Entrada y salida**: Se encargan exclusivamente de interactuar con el usuario. Ejemplo: `mostrar_menu`, `mostrar_tareas`, `pedir_opcion`.
-    - **Controlador principal**: Coordina la lógica del programa conectando la E/S con las operaciones sobre los datos.    
+    - **Controlador principal**: Coordina la lógica del programa conectando la E/S con las operaciones sobre los datos: `opción_añadir_tarea`, `opción_mostrar_tareas`, `opción_completar_tarea`, `opción_eliminar_tarea`.
 
 2. **Reutilización de código**:    
 
-    - Las funciones de entrada y salida pueden usarse en otros contextos. Por ejemplo, `mostrar_tareas` podría conectarse a una interfaz gráfica en lugar de imprimir en consola.
+    - Las funciones de entrada y salida pueden usarse en otros contextos. Por ejemplo, `opción_mostrar_tareas` podría conectarse a una interfaz gráfica en lugar de imprimir en consola.
 
 3. **Facilidad para pruebas**:    
 
@@ -343,7 +343,17 @@ Dibujar un diagrama de flujo puede ayudarte a visualizar cómo fluye el programa
 ##### 1.9.2. Empieza simple
 Crea primero una versión básica del programa. Luego, añade funciones y complejidad de manera incremental.
 
-##### 1.9.3. Piensa en términos de "entrada-proceso-salida"
+##### 1.9.3. De arriba a abajo: top-down
+Empieza por la función principal y luego desglosa en funciones más pequeñas. Esto te ayuda a mantener el enfoque en el objetivo principal del programa. 
+
+![](./assets/PROG-U3.5.-Funciones-top-down.png)
+
+
+##### 1.9.4. De abajo a arriba: bottom-up
+Si tienes problemas para dividir el programa en funciones, empieza por las funciones más pequeñas y luego agrúpalas en funciones más grandes. 
+
+
+##### 1.9.5. Piensa en términos de "entrada-proceso-salida"
 Para cada función:
 - **Entrada**: ¿Qué datos necesita?
 - **Proceso**: ¿Qué hace con esos datos?

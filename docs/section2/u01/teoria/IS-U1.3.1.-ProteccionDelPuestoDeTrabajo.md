@@ -220,9 +220,9 @@ Las medidas de seguridad se pueden clasificar en:
 * **Monitorización**: Aquellas que buscan identificar incidentes de seguridad en el momento en que ocurren.
 * **Correctivas**: Aquellas que buscan corregir los incidentes de seguridad una vez que han ocurrido, y restaurar la operatividad normal de los sistemas.
 
-En el caso de la protección del puesto de trabajo, las medidas de seguridad preventivas son las más comunes, ya que buscan evitar que los incidentes de seguridad ocurran en primer lugar.
+En el caso de la protección del puesto de trabajo, **las medidas de seguridad preventivas son las más comunes**, ya que buscan evitar que los incidentes de seguridad ocurran en primer lugar.
 
-A continuación, desglosaremos estos elementos y mostraremos cómo cada uno se relaciona con los distintos escenarios de riesgo y con la necesidad de establecer políticas, normativas y procedimientos claros.
+A continuación, desglosaremos estos elementos componentes del puesto de trabajo y mostraremos cómo cada uno se relaciona con los distintos escenarios de riesgo y con la necesidad de establecer políticas, normativas y procedimientos claros.
 
 #### 2.1 Dispositivos de Hardware
 
@@ -257,39 +257,43 @@ Los **dispositivos de hardware** son los equipos físicos que los empleados util
     **Política**: La organización se compromete a proteger todos los dispositivos de trabajo con medidas de seguridad que garanticen la integridad, confidencialidad y disponibilidad de la información almacenada y procesada ante cualquier incidente.    
 
     **Normativa**:    
+
     - Los dispositivos de trabajo deben configurarse para bloquearse automáticamente después de un breve periodo de inactividad.      
     - Los usuarios deben autenticar su identidad mediante contraseñas seguras y, siempre que sea posible, activar la autenticación biométrica (como huellas dactilares o reconocimiento facial).    
 
-    **Procedimiento**:
+    **Procedimiento**:     
+
     - **Establecimiento de contraseñas seguras**: Instrucciones para crear contraseñas que cumplan con los requisitos de seguridad, como una longitud mínima y combinación de caracteres especiales.    
     - **Configuración de autenticación biométrica**: Guía para activar y utilizar autenticación biométrica en dispositivos compatibles.     
     - **Bloqueo manual del dispositivo**: Recordatorio para bloquear manualmente el dispositivo cuando el usuario se ausente, con pasos específicos sobre cómo hacerlo en diferentes sistemas operativos.     
 
 3. **Falta de Cifrado en el Dispositivo**
-    - **Riesgo**: Si el almacenamiento en el dispositivo no está cifrado, los datos pueden ser fácilmente extraídos o manipulados por cualquier persona con acceso físico al dispositivo en caso de pérdida o robo.    
+    - **Riesgo**: Si el almacenamiento en el dispositivo no está cifrado, los datos pueden ser fácilmente extraídos o manipulados por cualquier persona con acceso físico al dispositivo en caso de pérdida o robo.     
     - **Consecuencias**: La información almacenada sin cifrado queda expuesta y puede ser leída o modificada sin autorización, lo que aumenta el riesgo de fuga de datos confidenciales.     
 
     **Política**: La organización se compromete a proteger todos los dispositivos de trabajo con medidas de seguridad que garanticen la integridad, confidencialidad y disponibilidad de la información almacenada y procesada ante cualquier incidente.    
 
-    **Normativa**:
-    - Todos los dispositivos de trabajo que almacenen datos sensibles deben estar cifrados completamente.    
-    - No se permite almacenar información confidencial en dispositivos que no estén cifrados ni en dispositivos personales no autorizados.    
+    **Normativa**:     
 
-    **Procedimiento**:
-    - **Activación de cifrado en diferentes plataformas**: Instrucciones detalladas para activar el cifrado en dispositivos Windows (BitLocker), MacOS (FileVault) y en dispositivos móviles con Android e iOS.    
-    - **Verificación del cifrado de disco**: Pasos para comprobar que el cifrado esté activado correctamente en cada dispositivo.     
-    - **Reporte de excepciones**: Procedimiento para informar al departamento de TI si un empleado detecta que el cifrado no está activado en su dispositivo de trabajo.     
+    - Todos los dispositivos de trabajo que almacenen datos sensibles deben estar cifrados completamente.     
+    - No se permite almacenar información confidencial en dispositivos que no estén cifrados ni en dispositivos personales no autorizados.        
+
+    **Procedimiento**:    
+
+    - **Activación de cifrado en diferentes plataformas**: Instrucciones detalladas para activar el cifrado en dispositivos Windows (BitLocker), MacOS (FileVault) y en dispositivos móviles con Android e iOS.        
+    - **Verificación del cifrado de disco**: Pasos para comprobar que el cifrado esté activado correctamente en cada dispositivo.           
+    - **Reporte de excepciones**: Procedimiento para informar al departamento de TI si un empleado detecta que el cifrado no está activado en su dispositivo de trabajo.        
 
 4. **Infección de Malware o Software Malicioso**
-    - **Riesgo**: Los dispositivos de hardware pueden infectarse con malware o software malicioso si el usuario descarga archivos de fuentes inseguras, visita sitios web maliciosos o utiliza medios externos no verificados, como memorias USB.
-    - **Consecuencias**: La infección con malware puede comprometer el dispositivo, capturar información confidencial, o incluso propagarse a otros dispositivos dentro de la red corporativa, incrementando los riesgos de seguridad.
+    - **Riesgo**: Los dispositivos de hardware pueden infectarse con malware o software malicioso si el usuario descarga archivos de fuentes inseguras, visita sitios web maliciosos o utiliza medios externos no verificados, como memorias USB.    
+    - **Consecuencias**: La infección con malware puede comprometer el dispositivo, capturar información confidencial, o incluso propagarse a otros dispositivos dentro de la red corporativa, incrementando los riesgos de seguridad.     
 
-    **Política**: La organización se compromete a proteger todos los dispositivos de trabajo con medidas de seguridad que garanticen la integridad, confidencialidad y disponibilidad de la información almacenada y procesada ante cualquier incidente.
+    **Política**: La organización se compromete a proteger todos los dispositivos de trabajo con medidas de seguridad que garanticen la integridad, confidencialidad y disponibilidad de la información almacenada y procesada ante cualquier incidente.    
 
-    **Normativa**:    
+    **Normativa**:      
 
-    - Todos los dispositivos deben tener un antivirus y firewall activos y actualizados para protección contra malware.     
-    - No se permite la descarga ni instalación de software que no esté previamente autorizado por el departamento de TI.     
+    - Todos los dispositivos deben tener un antivirus y firewall activos y actualizados para protección contra malware.       
+    - No se permite la descarga ni instalación de software que no esté previamente autorizado por el departamento de TI.       
 
     **Procedimiento**:     
 
@@ -306,64 +310,68 @@ El **software y las aplicaciones** son herramientas esenciales para que los empl
 ##### 2.2.1 Escenarios de Riesgo Asociados
 
 1. **Descarga o Uso de Software No Autorizado**
-   - **Riesgo**: La instalación o uso de software no autorizado puede incluir programas maliciosos que comprometan la seguridad del sistema y expongan los datos de la organización.
-   - **Consecuencias**: El uso de software no autorizado aumenta el riesgo de infecciones de malware, pérdida de datos y vulnerabilidades que pueden explotarse para acceder a información sensible.
+    - **Riesgo**: La instalación o uso de software no autorizado puede incluir programas maliciosos que comprometan la seguridad del sistema y expongan los datos de la organización.    
+    - **Consecuencias**: El uso de software no autorizado aumenta el riesgo de infecciones de malware, pérdida de datos y vulnerabilidades que pueden explotarse para acceder a información sensible.    
 
-**Política**: La organización se compromete a garantizar la seguridad y el uso controlado del software y las aplicaciones para proteger la integridad, confidencialidad y disponibilidad de la información en todos los sistemas corporativos.
+    **Política**: La organización se compromete a garantizar la seguridad y el uso controlado del software y las aplicaciones para proteger la integridad, confidencialidad y disponibilidad de la información en todos los sistemas corporativos.    
 
-- **Normativa**:
+    - **Normativa**:    
 
-  - Solo se permite la instalación de software autorizado y aprobado previamente por el departamento de TI.
-  - Los empleados deben obtener la aprobación de TI antes de instalar cualquier aplicación o herramienta en dispositivos de trabajo.
-- **Procedimiento**:
+    - Solo se permite la instalación de software autorizado y aprobado previamente por el departamento de TI.     
+    - Los empleados deben obtener la aprobación de TI antes de instalar cualquier aplicación o herramienta en dispositivos de trabajo.    
 
-  - **Solicitud de instalación de software**: Pasos para que los empleados soliciten la instalación de software no disponible, enviando la solicitud al departamento de TI y justificando su necesidad.
-  - **Verificación del software autorizado**: Instrucciones para que el empleado consulte y verifique qué aplicaciones están aprobadas por TI antes de descargarlas.
+    - **Procedimiento**:     
+
+    - **Solicitud de instalación de software**: Pasos para que los empleados soliciten la instalación de software no disponible, enviando la solicitud al departamento de TI y justificando su necesidad.
+    - **Verificación del software autorizado**: Instrucciones para que el empleado consulte y verifique qué aplicaciones están aprobadas por TI antes de descargarlas.
 
 2. **Uso de Software Desactualizado**
-   - **Riesgo**: El uso de software desactualizado aumenta la posibilidad de que existan vulnerabilidades no parcheadas, que pueden ser explotadas por atacantes para acceder a sistemas o datos de la organización.
-   - **Consecuencias**: Las vulnerabilidades en software desactualizado pueden comprometer la seguridad de la información, facilitando ataques como la ejecución remota de código o el robo de datos.
+    - **Riesgo**: El uso de software desactualizado aumenta la posibilidad de que existan vulnerabilidades no parcheadas, que pueden ser explotadas por atacantes para acceder a sistemas o datos de la organización.      
+    - **Consecuencias**: Las vulnerabilidades en software desactualizado pueden comprometer la seguridad de la información, facilitando ataques como la ejecución remota de código o el robo de datos.      
 
-**Política**: La organización se compromete a garantizar la seguridad y el uso controlado del software y las aplicaciones para proteger la integridad, confidencialidad y disponibilidad de la información en todos los sistemas corporativos.
+    **Política**: La organización se compromete a garantizar la seguridad y el uso controlado del software y las aplicaciones para proteger la integridad, confidencialidad y disponibilidad de la información en todos los sistemas corporativos.    
 
-- **Normativa**:
+    - **Normativa**:    
 
-  - Todo el software utilizado en dispositivos de trabajo debe estar actualizado y contar con los últimos parches de seguridad.
-  - Los usuarios deben permitir las actualizaciones automáticas de software, siempre que sea posible.
-- **Procedimiento**:
+    - Todo el software utilizado en dispositivos de trabajo debe estar actualizado y contar con los últimos parches de seguridad.    
+    - Los usuarios deben permitir las actualizaciones automáticas de software, siempre que sea posible.    
 
-  - **Proceso de actualización de software**: Instrucciones para realizar actualizaciones periódicas de las aplicaciones y activar la opción de actualización automática.
-  - **Notificación de software desactualizado**: Proceso para que los empleados informen al departamento de TI si detectan que una aplicación en su dispositivo necesita actualizarse o tiene problemas de seguridad.
+    - **Procedimiento**:    
+   
+    - **Proceso de actualización de software**: Instrucciones para realizar actualizaciones periódicas de las aplicaciones y activar la opción de actualización automática.    
+    - **Notificación de software desactualizado**: Proceso para que los empleados informen al departamento de TI si detectan que una aplicación en su dispositivo necesita actualizarse o tiene problemas de seguridad.     
 
-3. **Falta de Control en los Permisos de Acceso a Aplicaciones**
-   - **Riesgo**: La falta de un control adecuado de los permisos puede permitir que usuarios no autorizados accedan a funciones o datos confidenciales a través de aplicaciones.
-   - **Consecuencias**: Los accesos no controlados pueden exponer la información sensible a personas que no tienen autorización, lo cual representa un riesgo de fugas de datos y de uso indebido de la información.
+3. **Falta de Control en los Permisos de Acceso a Aplicaciones**    
+    - **Riesgo**: La falta de un control adecuado de los permisos puede permitir que usuarios no autorizados accedan a funciones o datos confidenciales a través de aplicaciones.    
+    - **Consecuencias**: Los accesos no controlados pueden exponer la información sensible a personas que no tienen autorización, lo cual representa un riesgo de fugas de datos y de uso indebido de la información.    
 
-**Política**: La organización se compromete a garantizar la seguridad y el uso controlado del software y las aplicaciones para proteger la integridad, confidencialidad y disponibilidad de la información en todos los sistemas corporativos.
+    **Política**: La organización se compromete a garantizar la seguridad y el uso controlado del software y las aplicaciones para proteger la integridad, confidencialidad y disponibilidad de la información en todos los sistemas corporativos.    
 
-- **Normativa**:
+    - **Normativa**:
 
-  - Los permisos de acceso a aplicaciones deben configurarse y revisarse de acuerdo con los roles y funciones de cada usuario.
-  - El acceso a aplicaciones críticas debe estar limitado y controlado por el departamento de TI.
-- **Procedimiento**:
+    - Los permisos de acceso a aplicaciones deben configurarse y revisarse de acuerdo con los roles y funciones de cada usuario.     
+    - El acceso a aplicaciones críticas debe estar limitado y controlado por el departamento de TI.    
 
-  - **Asignación y revisión de permisos**: Pasos para que el departamento de TI otorgue, revise o revoque permisos de acceso a aplicaciones, asegurándose de que se mantengan los principios de mínimo privilegio.
-  - **Solicitud de permisos de acceso**: Proceso para que los empleados soliciten acceso a una aplicación específica, justificando la necesidad y obteniendo la autorización correspondiente.
+    - **Procedimiento**:    
+
+    - **Asignación y revisión de permisos**: Pasos para que el departamento de TI otorgue, revise o revoque permisos de acceso a aplicaciones, asegurándose de que se mantengan los principios de mínimo privilegio. En la medida de lo posible se debe automatizar este proceso, incrustando la revisión de permisos en el ciclo de vida del empleado.        
+    - **Solicitud de permisos de acceso**: Proceso para que los empleados soliciten acceso a una aplicación específica, justificando la necesidad y obteniendo la autorización correspondiente.    
 
 4. **Riesgo de Fugas de Información a Través de Aplicaciones en la Nube o Compartidas**
-   - **Riesgo**: Algunas aplicaciones en la nube o compartidas pueden tener configuraciones de privacidad inadecuadas, lo cual facilita la transferencia o acceso no autorizado a los datos de la organización.
-   - **Consecuencias**: Las fugas de información a través de aplicaciones pueden exponer datos sensibles a personas no autorizadas o incluso al público si la configuración de privacidad no está debidamente gestionada.
+    - **Riesgo**: Algunas aplicaciones en la nube o compartidas pueden tener configuraciones de privacidad inadecuadas, lo cual facilita la transferencia o acceso no autorizado a los datos de la organización.     
+    - **Consecuencias**: Las fugas de información a través de aplicaciones pueden exponer datos sensibles a personas no autorizadas o incluso al público si la configuración de privacidad no está debidamente gestionada.    
 
-**Política**: La organización se compromete a garantizar la seguridad y el uso controlado del software y las aplicaciones para proteger la integridad, confidencialidad y disponibilidad de la información en todos los sistemas corporativos.
+    **Política**: La organización se compromete a garantizar la seguridad y el uso controlado del software y las aplicaciones para proteger la integridad, confidencialidad y disponibilidad de la información en todos los sistemas corporativos.
 
-- **Normativa**:
+    - **Normativa**:    
 
-  - Las aplicaciones en la nube deben configurarse con controles de acceso adecuados para limitar el acceso a información sensible.
-  - La información confidencial no debe compartirse a través de aplicaciones que no cuenten con la aprobación de seguridad del departamento de TI.
-- **Procedimiento**:
+    - Las aplicaciones en la nube deben configurarse con controles de acceso adecuados para limitar el acceso a información sensible.    
+    - La información confidencial no debe compartirse a través de aplicaciones que no cuenten con la aprobación de seguridad del departamento de TI.    
 
-  - **Configuración de privacidad y acceso en aplicaciones en la nube**: Instrucciones para configurar la privacidad y los permisos de acceso en las aplicaciones en la nube.
-  - **Proceso de revisión de seguridad en aplicaciones compartidas**: Pasos que debe seguir el departamento de TI para revisar y verificar que las aplicaciones en la nube cumplen con los requisitos de seguridad antes de ser utilizadas.
+    - **Procedimiento**:     
+
+    - **Configuración de privacidad y acceso en aplicaciones en la nube**: Instrucciones para configurar la privacidad y los permisos de acceso en las aplicaciones en la nube.    
+    - **Proceso de revisión de seguridad en aplicaciones compartidas**: Pasos que debe seguir el departamento de TI para revisar y verificar que las aplicaciones en la nube cumplen con los requisitos de seguridad antes de ser utilizadas.     
 
 #### 2.3 Comunicación y Acceso a la Red
 
@@ -533,7 +541,7 @@ El **acceso a datos** se refiere a los permisos otorgados a los empleados para v
    - **Riesgo**: Sin un control adecuado de los accesos, personas no autorizadas podrían visualizar o modificar información confidencial de la organización.
    - **Consecuencias**: El acceso no autorizado compromete la confidencialidad y seguridad de la información, exponiéndola a personas sin los permisos adecuados y aumentando el riesgo de fuga o manipulación de datos.
 
-**Política**: La organización se compromete a garantizar el acceso seguro y controlado a los datos, aplicando el principio de mínimo privilegio para proteger la integridad, confidencialidad y disponibilidad de la información.
+**Política**: La organización se compromete a garantizar el acceso seguro y controlado a los datos, aplicando el principio de mínimo privilegio para proteger la integridad, confidencialidad y disponibilidad de la información.     
 
 - **Normativa**:
 

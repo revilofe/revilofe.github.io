@@ -135,6 +135,7 @@ Nota: Para representar matrices mediante listas usar listas anidadas, representa
 Prueba ahora con estas matrices
 ![](./assets/matriz.png)
 
+El resultado debe ser una matriz de 3x3.
 
 <!--
 

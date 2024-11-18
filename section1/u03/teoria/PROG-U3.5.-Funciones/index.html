@@ -1622,9 +1622,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#193-piensa-en-terminos-de-entrada-proceso-salida" class="md-nav__link">
+  <a href="#193-de-arriba-a-abajo-top-down" class="md-nav__link">
     <span class="md-ellipsis">
-      1.9.3. Piensa en términos de "entrada-proceso-salida"
+      1.9.3. De arriba a abajo: top-down
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#194-de-abajo-a-arriba-bottom-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9.4. De abajo a arriba: bottom-up
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#195-piensa-en-terminos-de-entrada-proceso-salida" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9.5. Piensa en términos de "entrada-proceso-salida"
     </span>
   </a>
   
@@ -3989,9 +4007,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#193-piensa-en-terminos-de-entrada-proceso-salida" class="md-nav__link">
+  <a href="#193-de-arriba-a-abajo-top-down" class="md-nav__link">
     <span class="md-ellipsis">
-      1.9.3. Piensa en términos de "entrada-proceso-salida"
+      1.9.3. De arriba a abajo: top-down
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#194-de-abajo-a-arriba-bottom-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9.4. De abajo a arriba: bottom-up
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#195-piensa-en-terminos-de-entrada-proceso-salida" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9.5. Piensa en términos de "entrada-proceso-salida"
     </span>
   </a>
   
@@ -4539,13 +4575,13 @@ Funciones necesarias inicialmente:
 <ul>
 <li><strong>Operaciones sobre datos</strong>: Son funciones puras que no dependen de la interacción con el usuario. Ejemplo: <code>añadir_tarea</code>, <code>eliminar_tarea</code>, <code>completar_tarea</code>.    </li>
 <li><strong>Entrada y salida</strong>: Se encargan exclusivamente de interactuar con el usuario. Ejemplo: <code>mostrar_menu</code>, <code>mostrar_tareas</code>, <code>pedir_opcion</code>.</li>
-<li><strong>Controlador principal</strong>: Coordina la lógica del programa conectando la E/S con las operaciones sobre los datos.    </li>
+<li><strong>Controlador principal</strong>: Coordina la lógica del programa conectando la E/S con las operaciones sobre los datos: <code>opción_añadir_tarea</code>, <code>opción_mostrar_tareas</code>, <code>opción_completar_tarea</code>, <code>opción_eliminar_tarea</code>.</li>
 </ul>
 </li>
 <li>
 <p><strong>Reutilización de código</strong>:    </p>
 <ul>
-<li>Las funciones de entrada y salida pueden usarse en otros contextos. Por ejemplo, <code>mostrar_tareas</code> podría conectarse a una interfaz gráfica en lugar de imprimir en consola.</li>
+<li>Las funciones de entrada y salida pueden usarse en otros contextos. Por ejemplo, <code>opción_mostrar_tareas</code> podría conectarse a una interfaz gráfica en lugar de imprimir en consola.</li>
 </ul>
 </li>
 <li>
@@ -4560,7 +4596,12 @@ Funciones necesarias inicialmente:
 <p>Dibujar un diagrama de flujo puede ayudarte a visualizar cómo fluye el programa entre las funciones.</p>
 <h5 id="192-empieza-simple">1.9.2. Empieza simple<a class="headerlink" href="#192-empieza-simple" title="Permanent link">&para;</a></h5>
 <p>Crea primero una versión básica del programa. Luego, añade funciones y complejidad de manera incremental.</p>
-<h5 id="193-piensa-en-terminos-de-entrada-proceso-salida">1.9.3. Piensa en términos de "entrada-proceso-salida"<a class="headerlink" href="#193-piensa-en-terminos-de-entrada-proceso-salida" title="Permanent link">&para;</a></h5>
+<h5 id="193-de-arriba-a-abajo-top-down">1.9.3. De arriba a abajo: top-down<a class="headerlink" href="#193-de-arriba-a-abajo-top-down" title="Permanent link">&para;</a></h5>
+<p>Empieza por la función principal y luego desglosa en funciones más pequeñas. Esto te ayuda a mantener el enfoque en el objetivo principal del programa. </p>
+<p><img alt="" src="../assets/PROG-U3.5.-Funciones-top-down.png" /></p>
+<h5 id="194-de-abajo-a-arriba-bottom-up">1.9.4. De abajo a arriba: bottom-up<a class="headerlink" href="#194-de-abajo-a-arriba-bottom-up" title="Permanent link">&para;</a></h5>
+<p>Si tienes problemas para dividir el programa en funciones, empieza por las funciones más pequeñas y luego agrúpalas en funciones más grandes. </p>
+<h5 id="195-piensa-en-terminos-de-entrada-proceso-salida">1.9.5. Piensa en términos de "entrada-proceso-salida"<a class="headerlink" href="#195-piensa-en-terminos-de-entrada-proceso-salida" title="Permanent link">&para;</a></h5>
 <p>Para cada función:
 - <strong>Entrada</strong>: ¿Qué datos necesita?
 - <strong>Proceso</strong>: ¿Qué hace con esos datos?

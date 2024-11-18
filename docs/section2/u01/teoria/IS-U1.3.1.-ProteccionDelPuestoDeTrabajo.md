@@ -605,73 +605,77 @@ El **personal** de la organización es fundamental para la seguridad de la infor
 
 ##### 2.6.1 Escenarios de Riesgo Asociados
 
-1. **Falta de Concienciación en Seguridad de la Información**
-   - **Riesgo**: La falta de conocimientos de seguridad en el personal puede llevar a errores que comprometan la confidencialidad, integridad y disponibilidad de los datos.
-   - **Consecuencias**: Sin una adecuada concienciación, el personal es más vulnerable a ataques como el phishing, la manipulación social y otros tipos de amenazas que pueden comprometer la seguridad de la organización.
+1. **Falta de Concienciación en Seguridad de la Información**    
+    - **Riesgo**: La falta de conocimientos de seguridad en el personal puede llevar a errores que comprometan la confidencialidad, integridad y disponibilidad de los datos.
+    - **Consecuencias**: Sin una adecuada concienciación, el personal es más vulnerable a ataques como el phishing, la manipulación social y otros tipos de amenazas que pueden comprometer la seguridad de la organización.    
 
-**Política**: La organización se compromete a fomentar una cultura de seguridad a través de la capacitación y la concienciación, asegurando que todo el personal tenga el conocimiento necesario para proteger la integridad, confidencialidad y disponibilidad de la información.
+    **Política**: La organización se compromete a fomentar una cultura de seguridad a través de la capacitación y la concienciación, asegurando que todo el personal tenga el conocimiento necesario para proteger la integridad, confidencialidad y disponibilidad de la información.    
 
-- **Normativa**:
+    **Normativa**:    
 
-  - Todo el personal debe participar en sesiones de capacitación en seguridad de la información al menos una vez al año.
-  - Los empleados deben demostrar conocimiento básico de las políticas de seguridad y los riesgos asociados a sus funciones.
-- **Procedimiento**:
+    - Todo el personal debe participar en sesiones de capacitación en seguridad de la información al menos una vez al año.    
+    - Los empleados deben demostrar conocimiento básico de las políticas de seguridad y los riesgos asociados a sus funciones.    
 
-  - **Programación de capacitaciones en seguridad**: Instrucciones para el departamento de recursos humanos y TI sobre la organización de sesiones de capacitación anuales para todo el personal.
-  - **Evaluación de conocimientos en seguridad**: Guía para realizar evaluaciones de conocimientos básicos en seguridad de la información tras cada sesión de capacitación.
-  - **Registro de asistencia y resultados**: Procedimiento para llevar un registro de la asistencia y resultados de los empleados en las capacitaciones y evaluaciones de seguridad.
+    **Procedimiento**:    
 
-2. **Hábitos Inseguros de Trabajo**
-   - **Riesgo**: Los empleados pueden desarrollar hábitos de trabajo inseguros, como dejar dispositivos desbloqueados, usar contraseñas débiles o compartir información sensible de manera informal, lo cual aumenta el riesgo de incidentes de seguridad.
-   - **Consecuencias**: Los malos hábitos de seguridad pueden resultar en el acceso no autorizado a información confidencial, la filtración de datos sensibles y un mayor riesgo de ataques internos o externos.
+    - **Programación de capacitaciones en seguridad**: Instrucciones para el departamento de recursos humanos y TI sobre la organización de sesiones de capacitación anuales para todo el personal.     
+    - **Evaluación de conocimientos en seguridad**: Guía para realizar evaluaciones de conocimientos básicos en seguridad de la información tras cada sesión de capacitación.    
+    - **Registro de asistencia y resultados**: Procedimiento para llevar un registro de la asistencia y resultados de los empleados en las capacitaciones y evaluaciones de seguridad.    
 
-**Política**: La organización se compromete a fomentar una cultura de seguridad a través de la capacitación y la concienciación, asegurando que todo el personal tenga el conocimiento necesario para proteger la integridad, confidencialidad y disponibilidad de la información.
+2. **Hábitos Inseguros de Trabajo**     
+    - **Riesgo**: Los empleados pueden desarrollar hábitos de trabajo inseguros, como dejar dispositivos desbloqueados, usar contraseñas débiles o compartir información sensible de manera informal, lo cual aumenta el riesgo de incidentes de seguridad.    
+    - **Consecuencias**: Los malos hábitos de seguridad pueden resultar en el acceso no autorizado a información confidencial, la filtración de datos sensibles y un mayor riesgo de ataques internos o externos.     
 
-- **Normativa**:
+    **Política**: La organización se compromete a fomentar una cultura de seguridad a través de la capacitación y la concienciación, asegurando que todo el personal tenga el conocimiento necesario para proteger la integridad, confidencialidad y disponibilidad de la información.     
 
-  - Los empleados deben mantener sus dispositivos bloqueados cuando no los estén utilizando activamente.
-  - Está prohibido compartir contraseñas o información sensible sin autorización y sin las medidas de seguridad adecuadas.
-- **Procedimiento**:
+    **Normativa**:    
 
-  - **Bloqueo manual de dispositivos**: Instrucciones para que los empleados bloqueen manualmente sus dispositivos cuando se ausenten, especificando cómo hacerlo en diferentes sistemas operativos.
-  - **Uso de contraseñas seguras**: Guía para que los empleados establezcan contraseñas seguras y únicas para cada sistema o aplicación.
-  - **Revisión periódica de hábitos de seguridad**: Proceso de auditoría para verificar que los empleados cumplan con los hábitos de seguridad recomendados, y revisión con el supervisor en caso de incumplimiento.
+    - Los empleados deben mantener sus dispositivos bloqueados cuando no los estén utilizando activamente.    
+    - Está prohibido compartir contraseñas o información sensible sin autorización y sin las medidas de seguridad adecuadas.    
 
-3. **Exposición a Amenazas de Ingeniería Social (Phishing, Vishing, Smishing)**
-   - **Riesgo**: Los empleados pueden ser blanco de ataques de ingeniería social, como phishing, vishing (llamadas telefónicas fraudulentas) o smishing (mensajes SMS fraudulentos), que buscan engañarlos para que divulguen información confidencial o realicen acciones no autorizadas.
-   - **Consecuencias**: Si los empleados caen en estos ataques, podrían revelar información sensible, comprometer cuentas o permitir la entrada de malware en el sistema de la organización.
+    **Procedimiento**:     
 
-**Política**: La organización se compromete a fomentar una cultura de seguridad a través de la capacitación y la concienciación, asegurando que todo el personal tenga el conocimiento necesario para proteger la integridad, confidencialidad y disponibilidad de la información.
+    - **Bloqueo manual de dispositivos**: Instrucciones para que los empleados bloqueen manualmente sus dispositivos cuando se ausenten, especificando cómo hacerlo en diferentes sistemas operativos.     
+    - **Uso de contraseñas seguras**: Guía para que los empleados establezcan contraseñas seguras y únicas para cada sistema o aplicación.    
+    - **Revisión periódica de hábitos de seguridad**: Proceso de auditoría para verificar que los empleados cumplan con los hábitos de seguridad recomendados, y revisión con el supervisor en caso de incumplimiento.     
+      
+3. **Exposición a Amenazas de Ingeniería Social (Phishing, Vishing, Smishing)**    
+    - **Riesgo**: Los empleados pueden ser blanco de ataques de ingeniería social, como phishing, vishing (llamadas telefónicas fraudulentas) o smishing (mensajes SMS fraudulentos), que buscan engañarlos para que divulguen información confidencial o realicen acciones no autorizadas.    
+    - **Consecuencias**: Si los empleados caen en estos ataques, podrían revelar información sensible, comprometer cuentas o permitir la entrada de malware en el sistema de la organización.      
 
-- **Normativa**:
+    **Política**: La organización se compromete a fomentar una cultura de seguridad a través de la capacitación y la concienciación, asegurando que todo el personal tenga el conocimiento necesario para proteger la integridad, confidencialidad y disponibilidad de la información.
 
-  - Los empleados deben estar capacitados para reconocer correos electrónicos, mensajes y llamadas sospechosas, y seguir los protocolos de reporte en caso de detección.
-  - Todo intento de phishing, vishing o smishing debe ser reportado inmediatamente al departamento de TI.
-- **Procedimiento**:
+    **Normativa**:     
 
-  - **Identificación y reporte de mensajes sospechosos**: Guía para que los empleados reconozcan los signos de ataques de phishing y los reporten al departamento de TI.
-  - **Simulaciones de ataques de ingeniería social**: Instrucciones para el departamento de TI sobre cómo realizar pruebas periódicas de phishing y vishing para evaluar la preparación del personal.
-  - **Proceso de reporte de intentos de ingeniería social**: Procedimiento para que los empleados notifiquen de manera rápida y segura cualquier intento de ingeniería social, incluyendo detalles del ataque y acciones tomadas.
+    - Los empleados deben estar capacitados para reconocer correos electrónicos, mensajes y llamadas sospechosas, y seguir los protocolos de reporte en caso de detección.     
+    - Todo intento de phishing, vishing o smishing debe ser reportado inmediatamente al departamento de TI.    
 
-4. **Desconocimiento o Incumplimiento de Políticas de Seguridad**
-   - **Riesgo**: El desconocimiento o incumplimiento de las políticas de seguridad puede llevar a que los empleados tomen decisiones o realicen acciones que expongan a la organización a riesgos de seguridad.
-   - **Consecuencias**: El incumplimiento de políticas de seguridad puede resultar en accesos no autorizados, pérdida de datos o errores operativos que afecten la integridad de los sistemas y datos de la organización.
+    **Procedimiento**:
 
-**Política**: La organización se compromete a fomentar una cultura de seguridad a través de la capacitación y la concienciación, asegurando que todo el personal tenga el conocimiento necesario para proteger la integridad, confidencialidad y disponibilidad de la información.
+    - **Identificación y reporte de mensajes sospechosos**: Guía para que los empleados reconozcan los signos de ataques de phishing y los reporten al departamento de TI.     
+    - **Simulaciones de ataques de ingeniería social**: Instrucciones para el departamento de TI sobre cómo realizar pruebas periódicas de phishing y vishing para evaluar la preparación del personal.     
+    - **Proceso de reporte de intentos de ingeniería social**: Procedimiento para que los empleados notifiquen de manera rápida y segura cualquier intento de ingeniería social, incluyendo detalles del ataque y acciones tomadas.     
 
-- **Normativa**:
+4. **Desconocimiento o Incumplimiento de Políticas de Seguridad**     
+    - **Riesgo**: El desconocimiento o incumplimiento de las políticas de seguridad puede llevar a que los empleados tomen decisiones o realicen acciones que expongan a la organización a riesgos de seguridad.    
+    - **Consecuencias**: El incumplimiento de políticas de seguridad puede resultar en accesos no autorizados, pérdida de datos o errores operativos que afecten la integridad de los sistemas y datos de la organización.     
 
-  - Los empleados deben leer y firmar un compromiso de cumplimiento de las políticas de seguridad de la información al inicio de su contratación y tras cada actualización importante de las políticas.
-  - Se realizarán auditorías periódicas para verificar el cumplimiento de las políticas de seguridad en todas las áreas de trabajo.
-- **Procedimiento**:
+    **Política**: La organización se compromete a fomentar una cultura de seguridad a través de la capacitación y la concienciación, asegurando que todo el personal tenga el conocimiento necesario para proteger la integridad, confidencialidad y disponibilidad de la información.    
 
-  - **Firma de compromiso de seguridad**: Pasos para que los nuevos empleados revisen y firmen el compromiso de cumplimiento de las políticas de seguridad.
-  - **Actualización de políticas y notificación**: Proceso para que el departamento de TI comunique y capacite a los empleados sobre cualquier cambio importante en las políticas de seguridad.
-  - **Auditorías de cumplimiento de políticas**: Procedimiento para realizar auditorías regulares, revisar el cumplimiento y documentar cualquier incidencia o incumplimiento de las políticas de seguridad.
+    **Normativa**:    
+
+    - Los empleados deben leer y firmar un compromiso de cumplimiento de las políticas de seguridad de la información al inicio de su contratación y tras cada actualización importante de las políticas.    
+    - Se realizarán auditorías periódicas para verificar el cumplimiento de las políticas de seguridad en todas las áreas de trabajo.     
+
+    **Procedimiento**:
+
+    - **Firma de compromiso de seguridad**: Pasos para que los nuevos empleados revisen y firmen el compromiso de cumplimiento de las políticas de seguridad.     
+    - **Actualización de políticas y notificación**: Proceso para que el departamento de TI comunique y capacite a los empleados sobre cualquier cambio importante en las políticas de seguridad.    
+    - **Auditorías de cumplimiento de políticas**: Procedimiento para realizar auditorías regulares, revisar el cumplimiento y documentar cualquier incidencia o incumplimiento de las políticas de seguridad.    
 
 ### 3. Políticas de seguridad de INCIBE
 
-Para que las pequeñas y medianas empresas (PYMEs) puedan mejorar su ciberseguridad y gestionar los riesgos de manera más organizada, el Instituto Nacional de Ciberseguridad (INCIBE) ha desarrollado una serie de **políticas de seguridad**. Estas políticas son documentos que guían a la empresa en los **procesos internos necesarios para proteger la información y la infraestructura digital**.
+Para que las pequeñas y medianas empresas (PYMEs) puedan mejorar su ciberseguridad y gestionar los riesgos de manera más organizada, el Instituto Nacional de Ciberseguridad (INCIBE) ha desarrollado una serie de **políticas de seguridad**. Estas políticas son documentos que guían a la empresa en los **procesos internos necesarios para proteger la información y la infraestructura digital**. Puede acceder a estas políticas consultando los enlaces de la Fuentes de Información que hay al final de este documento.
 
 #### 3.1. ¿Qué Contienen Estas Políticas?
 
@@ -682,7 +686,7 @@ Para que las pequeñas y medianas empresas (PYMEs) puedan mejorar su ciberseguri
 
 2. **Roles y Responsabilidades Claras**:
 
-    - Estas políticas están diseñadas para que **el empresario, el equipo técnico y todos los empleados** conozcan y sigan las prácticas de seguridad.    
+    - Estas políticas están diseñadas para que **el empresario, el equipo técnico y todos los empleados** conozcan y sigan las prácticas de seguridad.     
     - Incluyen una **checklist o lista de verificación** con acciones específicas para cada grupo:    
         - **Para el empresario**: decisiones sobre políticas de acceso o configuración de copias de seguridad.    
         - **Para el equipo técnico**: implementación de medidas técnicas como la configuración de redes y el cifrado de datos.     
@@ -697,7 +701,7 @@ Para que las pequeñas y medianas empresas (PYMEs) puedan mejorar su ciberseguri
 Los documentos de políticas de seguridad de INCIBE siguen una estructura común que facilita su lectura y comprensión. A continuación, se describen los elementos clave de cada documento:
 
 1. **Antecedentes**   
-    - **Descripción**: Los documentos comienzan con una sección de antecedentes que justifica la necesidad de la política. Por ejemplo, en el documento sobre “Aplicaciones permitidas” se justifica por la obligación de utilizar software legal para evitar sanciones y reducir riesgos de malware. En el caso de “Protección del puesto de trabajo”, se destacan riesgos tanto tecnológicos como no tecnológicos que justifican la necesidad de proteger el entorno de trabajo.
+    - **Descripción**: Los documentos comienzan con una sección de antecedentes que justifica la necesidad de la política. Por ejemplo, en el documento sobre “Aplicaciones permitidas” se justifica por la obligación de utilizar software legal para evitar sanciones y reducir riesgos de malware. En el caso de “Protección del puesto de trabajo”, se destacan riesgos tanto tecnológicos como no tecnológicos que justifican la necesidad de proteger el entorno de trabajo. Por tanto, esta sección **establece el contexto y la importancia de la política en base a los riesgos identificados**.
     - **Relación con los conceptos vistos**: Esta sección se vincula con la identificación de factores vulnerables o **elementos asociados al puesto de trabajo** y sus **escenarios de riesgos**, que justifican la implementación de la política. También sirve de introducción para contextualizar la importancia de implementar medidas a nivel de **personas, tecnología y procesos**.
 
 2. **Objetivos**
@@ -706,7 +710,7 @@ Los documentos de políticas de seguridad de INCIBE siguen una estructura común
 
 3. **Checklist (Lista de Verificación)**
     - **Descripción**: La checklist es una lista de controles (medidas) específicos que ayudan a verificar el cumplimiento de la política. Cada control está clasificado por nivel de complejidad (Básico o Avanzado) y alcance (Procesos, Tecnología o Personas). Por ejemplo, el documento de “Protección del puesto de trabajo” incluye controles como el bloqueo de sesión o la desactivación de puertos USB por defecto.
-    - **Relación con los conceptos vistos**: Aquí se aplica la clasificación de **niveles de complejidad**. Las medidas básicas son aquellas que pueden aplicarse con poco esfuerzo y recursos, mientras que las avanzadas requieren configuraciones más complejas. También se utiliza el alcance para definir si la medida afecta a procesos (PRO), tecnología (TEC) o personas (PER), lo que ayuda a entender el tipo de personal involucrado en cada medida.
+    - **Relación con los conceptos vistos**: Aquí se aplica la clasificación de **niveles de complejidad**. Las medidas básicas son aquellas que pueden aplicarse con poco esfuerzo y recursos, mientras que las avanzadas requieren configuraciones más complejas. También se utiliza el alcance para definir si la medida afecta a procesos (PRO), tecnología (TEC) o personas (PER), lo que ayuda a entender el tipo de personal involucrado en cada medida. El checklist es una herramienta clave para **evaluar y medir el cumplimiento** de la política, y por tanto el nivel de madurez en seguridad de la empresa, en relación a la política tratada.
 
 4. **Puntos Clave**
     - **Descripción**: Esta sección resume las prácticas o reglas esenciales que todos deben cumplir para que la política sea efectiva. En el documento de “Almacenamiento en los equipos de trabajo”, se destacan puntos clave como el cifrado de la información y la normativa sobre lo que puede almacenarse en los equipos. En “Aplicaciones permitidas”, se detalla la importancia del repositorio de software y la auditoría de aplicaciones instaladas.
@@ -737,41 +741,9 @@ Para un supuesto práctico, los estudiantes pueden seguir estos pasos para aplic
     - Utilicen la checklist para registrar qué medidas se han implementado y cuáles siguen pendientes. Esto les permitirá visualizar el progreso y tomar decisiones sobre los siguientes pasos en la protección de la empresa.
 
 
-
-### ANEXO
-
-#### Escenarios de riesgo
-
-![](assets/IS-U131-ProteccionDelPuestoDeTrabajo5.png)
-
-![](assets/IS-U131-ProteccionDelPuestoDeTrabajo6.png)
-
-![](assets/IS-U131-ProteccionDelPuestoDeTrabajo7.png)
-
-#### Riesgos
-
-![](assets/IS-U131-ProteccionDelPuestoDeTrabajo8.png)
-
-![](assets/IS-U131-ProteccionDelPuestoDeTrabajo9.png)
-
-![](assets/IS-U131-ProteccionDelPuestoDeTrabajo10.png)
-
-![](assets/IS-U131-ProteccionDelPuestoDeTrabajo11.png)
-
-![](assets/IS-U131-ProteccionDelPuestoDeTrabajo12.png)
-
-![](assets/IS-U131-ProteccionDelPuestoDeTrabajo13.png)
-
-![](assets/IS-U131-ProteccionDelPuestoDeTrabajo14.png)
-
-#### Gestionar los riesgos
-
-![](assets/IS-U131-ProteccionDelPuestoDeTrabajo4.png)
-
 ## Fuentes
 
 - https://www.incibe.es/empresas/herramientas/politicas
 - https://www.incibe.es/empresas/que-te-interesa/proteccion-puesto-trabajo
 - https://www.incibe.es/sites/default/files/contenidos/dosieres/metad_proteccion_del_puesto_de_trabajo.pdf
 - https://files.incibe.es/incibe/politicas/politicas-pyme.zip
--

@@ -315,12 +315,12 @@ El **software y las aplicaciones** son herramientas esenciales para que los empl
 
     **Política**: La organización se compromete a garantizar la seguridad y el uso controlado del software y las aplicaciones para proteger la integridad, confidencialidad y disponibilidad de la información en todos los sistemas corporativos.    
 
-    - **Normativa**:    
+    **Normativa**:    
 
     - Solo se permite la instalación de software autorizado y aprobado previamente por el departamento de TI.     
     - Los empleados deben obtener la aprobación de TI antes de instalar cualquier aplicación o herramienta en dispositivos de trabajo.    
 
-    - **Procedimiento**:     
+    **Procedimiento**:     
 
     - **Solicitud de instalación de software**: Pasos para que los empleados soliciten la instalación de software no disponible, enviando la solicitud al departamento de TI y justificando su necesidad.
     - **Verificación del software autorizado**: Instrucciones para que el empleado consulte y verifique qué aplicaciones están aprobadas por TI antes de descargarlas.
@@ -331,12 +331,12 @@ El **software y las aplicaciones** son herramientas esenciales para que los empl
 
     **Política**: La organización se compromete a garantizar la seguridad y el uso controlado del software y las aplicaciones para proteger la integridad, confidencialidad y disponibilidad de la información en todos los sistemas corporativos.    
 
-    - **Normativa**:    
+    **Normativa**:    
 
     - Todo el software utilizado en dispositivos de trabajo debe estar actualizado y contar con los últimos parches de seguridad.    
     - Los usuarios deben permitir las actualizaciones automáticas de software, siempre que sea posible.    
 
-    - **Procedimiento**:    
+    **Procedimiento**:    
    
     - **Proceso de actualización de software**: Instrucciones para realizar actualizaciones periódicas de las aplicaciones y activar la opción de actualización automática.    
     - **Notificación de software desactualizado**: Proceso para que los empleados informen al departamento de TI si detectan que una aplicación en su dispositivo necesita actualizarse o tiene problemas de seguridad.     
@@ -347,12 +347,12 @@ El **software y las aplicaciones** son herramientas esenciales para que los empl
 
     **Política**: La organización se compromete a garantizar la seguridad y el uso controlado del software y las aplicaciones para proteger la integridad, confidencialidad y disponibilidad de la información en todos los sistemas corporativos.    
 
-    - **Normativa**:
+    **Normativa**:
 
     - Los permisos de acceso a aplicaciones deben configurarse y revisarse de acuerdo con los roles y funciones de cada usuario.     
     - El acceso a aplicaciones críticas debe estar limitado y controlado por el departamento de TI.    
 
-    - **Procedimiento**:    
+    **Procedimiento**:    
 
     - **Asignación y revisión de permisos**: Pasos para que el departamento de TI otorgue, revise o revoque permisos de acceso a aplicaciones, asegurándose de que se mantengan los principios de mínimo privilegio. En la medida de lo posible se debe automatizar este proceso, incrustando la revisión de permisos en el ciclo de vida del empleado.        
     - **Solicitud de permisos de acceso**: Proceso para que los empleados soliciten acceso a una aplicación específica, justificando la necesidad y obteniendo la autorización correspondiente.    
@@ -363,12 +363,12 @@ El **software y las aplicaciones** son herramientas esenciales para que los empl
 
     **Política**: La organización se compromete a garantizar la seguridad y el uso controlado del software y las aplicaciones para proteger la integridad, confidencialidad y disponibilidad de la información en todos los sistemas corporativos.
 
-    - **Normativa**:    
+    **Normativa**:    
 
     - Las aplicaciones en la nube deben configurarse con controles de acceso adecuados para limitar el acceso a información sensible.    
     - La información confidencial no debe compartirse a través de aplicaciones que no cuenten con la aprobación de seguridad del departamento de TI.    
 
-    - **Procedimiento**:     
+    **Procedimiento**:     
 
     - **Configuración de privacidad y acceso en aplicaciones en la nube**: Instrucciones para configurar la privacidad y los permisos de acceso en las aplicaciones en la nube.    
     - **Proceso de revisión de seguridad en aplicaciones compartidas**: Pasos que debe seguir el departamento de TI para revisar y verificar que las aplicaciones en la nube cumplen con los requisitos de seguridad antes de ser utilizadas.     
@@ -381,65 +381,69 @@ La **comunicación y acceso a la red** incluye todas las conexiones necesarias p
 
 ##### 2.3.1 Escenarios de Riesgo Asociados
 
-1. **Acceso No Seguro a Redes Públicas**
-   - **Riesgo**: Conectar dispositivos de trabajo a redes Wi-Fi públicas o no seguras puede facilitar la interceptación de datos sensibles por parte de terceros.
-   - **Consecuencias**: La información transmitida a través de redes inseguras puede ser capturada y utilizada sin autorización, comprometiendo la confidencialidad de los datos de la empresa.
+1. **Acceso No Seguro a Redes Públicas**    
+    - **Riesgo**: Conectar dispositivos de trabajo a redes Wi-Fi públicas o no seguras puede facilitar la interceptación de datos sensibles por parte de terceros.    
+    - **Consecuencias**: La información transmitida a través de redes inseguras puede ser capturada y utilizada sin autorización, comprometiendo la confidencialidad de los datos de la empresa.    
 
-**Política**: La organización se compromete a garantizar la seguridad de la comunicación y acceso a la red, protegiendo la confidencialidad, integridad y disponibilidad de la información en todas las conexiones y puntos de acceso.
+    **Política**: La organización se compromete a garantizar la seguridad de la comunicación y acceso a la red, protegiendo la confidencialidad, integridad y disponibilidad de la información en todas las conexiones y puntos de acceso.    
 
-- **Normativa**:
+    **Normativa**:    
 
-  - Todos los accesos remotos deben realizarse únicamente a través de una VPN (Red Privada Virtual) aprobada por el departamento de TI.
-  - Está prohibido el uso de redes públicas o inseguras sin medidas de protección adicionales.
-- **Procedimiento**:
+    - Todos los accesos remotos deben realizarse únicamente a través de una VPN (Red Privada Virtual) aprobada por el departamento de TI.    
+    - Está prohibido el uso de redes públicas o inseguras sin medidas de protección adicionales.    
 
-  - **Conexión a la VPN**: Instrucciones detalladas para que los empleados configuren y utilicen la VPN aprobada en dispositivos de trabajo.
-  - **Verificación de seguridad de la red**: Pasos para que los empleados comprueben la seguridad de la red antes de conectarse y consejos para identificar redes seguras.
+    **Procedimiento**:     
 
-2. **Acceso No Autorizado a la Red Corporativa**
-   - **Riesgo**: Sin controles de acceso adecuados, personas no autorizadas podrían intentar conectarse a la red corporativa, exponiendo la red a ataques y posibles accesos a datos internos.
-   - **Consecuencias**: El acceso no autorizado puede comprometer la seguridad de la red, permitir la entrada de malware o robo de datos, y facilitar ataques internos.
+    - **Conexión a la VPN**: Instrucciones detalladas para que los empleados configuren y utilicen la VPN aprobada en dispositivos de trabajo.     
+    - **Verificación de seguridad de la red**: Pasos para que los empleados comprueben la seguridad de la red antes de conectarse y consejos para identificar redes seguras.    
 
-**Política**: La organización se compromete a garantizar la seguridad de la comunicación y acceso a la red, protegiendo la confidencialidad, integridad y disponibilidad de la información en todas las conexiones y puntos de acceso.
+2. **Acceso No Autorizado a la Red Corporativa**    
+    - **Riesgo**: Sin controles de acceso adecuados, personas no autorizadas podrían intentar conectarse a la red corporativa, exponiendo la red a ataques y posibles accesos a datos internos.      
+    - **Consecuencias**: El acceso no autorizado puede comprometer la seguridad de la red, permitir la entrada de malware o robo de datos, y facilitar ataques internos.     
 
-- **Normativa**:
+    **Política**: La organización se compromete a garantizar la seguridad de la comunicación y acceso a la red, protegiendo la confidencialidad, integridad y disponibilidad de la información en todas las conexiones y puntos de acceso.
 
-  - Todo acceso a la red corporativa debe estar protegido por autenticación multifactor (MFA).
-  - Solo los dispositivos autorizados por el departamento de TI pueden conectarse a la red interna de la empresa.
-- **Procedimiento**:
+    **Normativa**:
 
-  - **Implementación de autenticación multifactor (MFA)**: Instrucciones para activar y usar MFA en todos los dispositivos y accesos a la red corporativa.
-  - **Registro y autorización de dispositivos**: Procedimiento para registrar dispositivos en la red corporativa, asegurando que solo los equipos aprobados puedan conectarse.
+    - Todo acceso a la red corporativa debe estar protegido por autenticación multifactor (MFA).     
+    - Solo los dispositivos autorizados por el departamento de TI pueden conectarse a la red interna de la empresa.    
 
-3. **Fugas de Datos a Través de Aplicaciones en la Nube**
-   - **Riesgo**: El uso de aplicaciones en la nube puede facilitar la transferencia de datos fuera de la red segura de la organización, aumentando el riesgo de fuga de información y acceso no autorizado.
-   - **Consecuencias**: La información confidencial podría ser expuesta o manipulada por personas sin permisos adecuados si las aplicaciones en la nube no están configuradas con los controles de acceso y seguridad apropiados.
+    **Procedimiento**:
 
-**Política**: La organización se compromete a garantizar la seguridad de la comunicación y acceso a la red, protegiendo la confidencialidad, integridad y disponibilidad de la información en todas las conexiones y puntos de acceso.
+    - **Implementación de autenticación multifactor (MFA)**: Instrucciones para activar y usar MFA en todos los dispositivos y accesos a la red corporativa.     
+    - **Registro y autorización de dispositivos**: Procedimiento para registrar dispositivos en la red corporativa, asegurando que solo los equipos aprobados puedan conectarse.      
 
-- **Normativa**:
+3. **Fugas de Datos a Través de Aplicaciones en la Nube**    
+    - **Riesgo**: El uso de aplicaciones en la nube puede facilitar la transferencia de datos fuera de la red segura de la organización, aumentando el riesgo de fuga de información y acceso no autorizado.      
+    - **Consecuencias**: La información confidencial podría ser expuesta o manipulada por personas sin permisos adecuados si las aplicaciones en la nube no están configuradas con los controles de acceso y seguridad apropiados.     
 
-  - El uso de aplicaciones en la nube debe estar aprobado por el departamento de TI y configurado con controles de acceso adecuados.
-  - Los empleados deben evitar compartir información sensible a través de aplicaciones en la nube que no cumplan con los estándares de seguridad de la organización.
-- **Procedimiento**:
+    **Política**: La organización se compromete a garantizar la seguridad de la comunicación y acceso a la red, protegiendo la confidencialidad, integridad y disponibilidad de la información en todas las conexiones y puntos de acceso.
 
-  - **Configuración de privacidad en aplicaciones en la nube**: Instrucciones para ajustar los permisos de acceso y privacidad en aplicaciones en la nube aprobadas.
-  - **Proceso de autorización de aplicaciones en la nube**: Pasos que debe seguir el departamento de TI para revisar y aprobar aplicaciones en la nube antes de su uso en la organización.
+    **Normativa**:
 
-4. **Intercepción de Datos Sensibles Durante la Comunicación**
-   - **Riesgo**: La información confidencial transmitida sin cifrado, como correos electrónicos o transferencias de archivos, puede ser interceptada y utilizada por personas no autorizadas.
-   - **Consecuencias**: La intercepción de datos confidenciales puede llevar a la exposición de información sensible, afectando la seguridad y privacidad de los datos corporativos.
+    - El uso de aplicaciones en la nube debe estar aprobado por el departamento de TI y configurado con controles de acceso adecuados.     
+    - Los empleados deben evitar compartir información sensible a través de aplicaciones en la nube que no cumplan con los estándares de seguridad de la organización.    
 
-**Política**: La organización se compromete a garantizar la seguridad de la comunicación y acceso a la red, protegiendo la confidencialidad, integridad y disponibilidad de la información en todas las conexiones y puntos de acceso.
+    **Procedimiento**:
 
-- **Normativa**:
+    - **Configuración de privacidad en aplicaciones en la nube**: Instrucciones para ajustar los permisos de acceso y privacidad en aplicaciones en la nube aprobadas.
+    - **Proceso de autorización de aplicaciones en la nube**: Pasos que debe seguir el departamento de TI para revisar y aprobar aplicaciones en la nube antes de su uso en la organización.
 
-  - Toda la información confidencial transmitida por la red debe estar cifrada, tanto en tránsito como en reposo.
-  - Los correos electrónicos que contengan datos sensibles deben enviarse utilizando cifrado de extremo a extremo o una plataforma segura aprobada.
-- **Procedimiento**:
+4. **Intercepción de Datos Sensibles Durante la Comunicación**     
+    - **Riesgo**: La información confidencial transmitida sin cifrado, como correos electrónicos o transferencias de archivos, puede ser interceptada y utilizada por personas no autorizadas.    
+    - **Consecuencias**: La intercepción de datos confidenciales puede llevar a la exposición de información sensible, afectando la seguridad y privacidad de los datos corporativos.     
 
-  - **Activación de cifrado en correos y transferencias de archivos**: Guía para que los empleados configuren el cifrado en los correos y archivos que contengan información confidencial.
-  - **Uso de plataformas seguras para el envío de datos**: Instrucciones para utilizar las plataformas aprobadas por la organización para enviar datos sensibles y asegurar su protección.
+    **Política**: La organización se compromete a garantizar la seguridad de la comunicación y acceso a la red, protegiendo la confidencialidad, integridad y disponibilidad de la información en todas las conexiones y puntos de acceso.
+
+    **Normativa**:
+
+    - Toda la información confidencial transmitida por la red debe estar cifrada, tanto en tránsito como en reposo.
+    - Los correos electrónicos que contengan datos sensibles deben enviarse utilizando cifrado de extremo a extremo o una plataforma segura aprobada.
+
+    **Procedimiento**:
+
+    - **Activación de cifrado en correos y transferencias de archivos**: Guía para que los empleados configuren el cifrado en los correos y archivos que contengan información confidencial.
+    - **Uso de plataformas seguras para el envío de datos**: Instrucciones para utilizar las plataformas aprobadas por la organización para enviar datos sensibles y asegurar su protección.
 
 #### 2.4 Instalaciones Físicas
 
@@ -449,69 +453,73 @@ Las **instalaciones físicas** comprenden las áreas donde los empleados realiza
 
 ##### 2.4.1 Escenarios de Riesgo Asociados
 
-1. **Acceso No Autorizado a Áreas Restringidas**
-   - **Riesgo**: Personas no autorizadas podrían entrar en áreas restringidas de la organización, exponiendo dispositivos y documentos confidenciales a riesgos de seguridad.
-   - **Consecuencias**: El acceso físico no autorizado puede llevar a la manipulación, robo o destrucción de información o dispositivos sensibles de la organización.
+1. **Acceso No Autorizado a Áreas Restringidas**     
+    - **Riesgo**: Personas no autorizadas podrían entrar en áreas restringidas de la organización, exponiendo dispositivos y documentos confidenciales a riesgos de seguridad.     
+    - **Consecuencias**: El acceso físico no autorizado puede llevar a la manipulación, robo o destrucción de información o dispositivos sensibles de la organización.      
 
-**Política**: La organización se compromete a proteger la seguridad de las instalaciones físicas mediante medidas de control de acceso y vigilancia, para garantizar la integridad, confidencialidad y disponibilidad de los recursos corporativos.
+    **Política**: La organización se compromete a proteger la seguridad de las instalaciones físicas mediante medidas de control de acceso y vigilancia, para garantizar la integridad, confidencialidad y disponibilidad de los recursos corporativos.     
 
-- **Normativa**:
+    **Normativa**:     
 
-  - Solo el personal autorizado podrá acceder a áreas restringidas de la empresa, como centros de datos y oficinas de alto nivel.
-  - Todo acceso a estas áreas debe ser registrado y monitoreado mediante sistemas de control de acceso y cámaras de seguridad.
-- **Procedimiento**:
+    - Solo el personal autorizado podrá acceder a áreas restringidas de la empresa, como centros de datos y oficinas de alto nivel.      
+    - Todo acceso a estas áreas debe ser registrado y monitoreado mediante sistemas de control de acceso y cámaras de seguridad.    
 
-  - **Registro de acceso a áreas restringidas**: Instrucciones para el uso adecuado de tarjetas de acceso o credenciales biométricas para ingresar a áreas protegidas.
-  - **Monitoreo de cámaras de seguridad**: Procedimiento para que el personal de seguridad revise regularmente los videos de las cámaras y alerte sobre cualquier actividad sospechosa.
-  - **Solicitud de acceso autorizado**: Pasos para que los empleados soliciten acceso temporal o permanente a áreas restringidas, incluyendo la autorización de un supervisor o el departamento de seguridad.
+    **Procedimiento**:     
 
-2. **Exposición de Información Confidencial en Áreas Compartidas**
-   - **Riesgo**: Documentos confidenciales o dispositivos con información sensible pueden quedar expuestos en áreas compartidas, como salas de reuniones o espacios de trabajo abiertos, accesibles a personas no autorizadas.
-   - **Consecuencias**: La exposición de información en áreas comunes puede llevar a la fuga de datos confidenciales y al acceso indebido a documentos sensibles de la organización.
+    - **Registro de acceso a áreas restringidas**: Instrucciones para el uso adecuado de tarjetas de acceso o credenciales biométricas para ingresar a áreas protegidas.    
+    - **Monitoreo de cámaras de seguridad**: Procedimiento para que el personal de seguridad revise regularmente los videos de las cámaras y alerte sobre cualquier actividad sospechosa.      
+    - **Solicitud de acceso autorizado**: Pasos para que los empleados soliciten acceso temporal o permanente a áreas restringidas, incluyendo la autorización de un supervisor o el departamento de seguridad.    
 
-**Política**: La organización se compromete a proteger la seguridad de las instalaciones físicas mediante medidas de control de acceso y vigilancia, para garantizar la integridad, confidencialidad y disponibilidad de los recursos corporativos.
+2. **Exposición de Información Confidencial en Áreas Compartidas**     
+    - **Riesgo**: Documentos confidenciales o dispositivos con información sensible pueden quedar expuestos en áreas compartidas, como salas de reuniones o espacios de trabajo abiertos, accesibles a personas no autorizadas.     
+    - **Consecuencias**: La exposición de información en áreas comunes puede llevar a la fuga de datos confidenciales y al acceso indebido a documentos sensibles de la organización.     
 
-- **Normativa**:
+    **Política**: La organización se compromete a proteger la seguridad de las instalaciones físicas mediante medidas de control de acceso y vigilancia, para garantizar la integridad, confidencialidad y disponibilidad de los recursos corporativos.    
 
-  - Los empleados deben evitar dejar documentos o dispositivos desatendidos en áreas compartidas.
-  - La información confidencial debe almacenarse en espacios seguros, como archivadores con llave, cuando no esté en uso.
-- **Procedimiento**:
+    **Normativa**:     
 
-  - **Almacenamiento seguro de documentos**: Instrucciones para el uso de archivadores y otras áreas de almacenamiento seguras para guardar documentos y dispositivos fuera de las horas de trabajo.
-  - **Retiro de documentos de áreas compartidas**: Guía para que los empleados revisen y aseguren sus documentos y dispositivos antes de abandonar cualquier área compartida.
-  - **Uso de lockers y armarios**: Proceso para que el personal almacene de manera segura sus objetos personales y documentos en áreas designadas.
+    - Los empleados deben evitar dejar documentos o dispositivos desatendidos en áreas compartidas.    
+    - La información confidencial debe almacenarse en espacios seguros, como archivadores con llave, cuando no esté en uso.
 
-3. **Pérdida o Robo de Dispositivos en las Instalaciones**
-   - **Riesgo**: Dispositivos de trabajo, como laptops, teléfonos móviles o memorias USB, pueden extraviarse o ser robados dentro de las instalaciones de la empresa.
-   - **Consecuencias**: La pérdida o robo de dispositivos en las instalaciones puede exponer la información almacenada en ellos a personas no autorizadas, comprometiendo la seguridad de los datos.
+    **Procedimiento**:
 
-**Política**: La organización se compromete a proteger la seguridad de las instalaciones físicas mediante medidas de control de acceso y vigilancia, para garantizar la integridad, confidencialidad y disponibilidad de los recursos corporativos.
+    - **Almacenamiento seguro de documentos**: Instrucciones para el uso de archivadores y otras áreas de almacenamiento seguras para guardar documentos y dispositivos fuera de las horas de trabajo.     
+    - **Retiro de documentos de áreas compartidas**: Guía para que los empleados revisen y aseguren sus documentos y dispositivos antes de abandonar cualquier área compartida.     
+    - **Uso de lockers y armarios**: Proceso para que el personal almacene de manera segura sus objetos personales y documentos en áreas designadas.    
 
-- **Normativa**:
+3. **Pérdida o Robo de Dispositivos en las Instalaciones**    
+    - **Riesgo**: Dispositivos de trabajo, como laptops, teléfonos móviles o memorias USB, pueden extraviarse o ser robados dentro de las instalaciones de la empresa.     
+    - **Consecuencias**: La pérdida o robo de dispositivos en las instalaciones puede exponer la información almacenada en ellos a personas no autorizadas, comprometiendo la seguridad de los datos.     
 
-  - Los dispositivos deben estar asegurados con contraseñas y, cuando sea posible, con cifrado de disco para proteger la información en caso de pérdida o robo.
-  - Es obligatorio que los empleados guarden dispositivos portátiles en cajones con llave o lockers cuando no los utilicen.
-- **Procedimiento**:
+    **Política**: La organización se compromete a proteger la seguridad de las instalaciones físicas mediante medidas de control de acceso y vigilancia, para garantizar la integridad, confidencialidad y disponibilidad de los recursos corporativos.
 
-  - **Cifrado y contraseñas en dispositivos portátiles**: Instrucciones para configurar contraseñas seguras y cifrado de disco en dispositivos portátiles de la organización.
-  - **Almacenamiento seguro de dispositivos en las instalaciones**: Pasos para asegurar laptops y otros dispositivos en lugares cerrados con llave o en lockers asignados.
-  - **Reporte de dispositivos extraviados o robados**: Proceso para que los empleados notifiquen de inmediato al departamento de TI y de seguridad en caso de pérdida o robo de dispositivos.
+    **Normativa**:
 
-4. **Descuido en la Gestión de Residuos de Documentación Confidencial**
-   - **Riesgo**: Documentos confidenciales pueden ser desechados sin los procedimientos de destrucción adecuados, exponiendo información sensible a personas no autorizadas que podrían acceder a ellos.
-   - **Consecuencias**: La eliminación no segura de documentos confidenciales puede llevar a la fuga de información sensible y comprometer la seguridad de la organización.
+    - Los dispositivos deben estar asegurados con contraseñas y, cuando sea posible, con cifrado de disco para proteger la información en caso de pérdida o robo.    
+    - Es obligatorio que los empleados guarden dispositivos portátiles en cajones con llave o lockers cuando no los utilicen.    
+   
+    **Procedimiento**:
 
-**Política**: La organización se compromete a proteger la seguridad de las instalaciones físicas mediante medidas de control de acceso y vigilancia, para garantizar la integridad, confidencialidad y disponibilidad de los recursos corporativos.
+    - **Cifrado y contraseñas en dispositivos portátiles**: Instrucciones para configurar contraseñas seguras y cifrado de disco en dispositivos portátiles de la organización.    
+    - **Almacenamiento seguro de dispositivos en las instalaciones**: Pasos para asegurar laptops y otros dispositivos en lugares cerrados con llave o en lockers asignados.    
+    - **Reporte de dispositivos extraviados o robados**: Proceso para que los empleados notifiquen de inmediato al departamento de TI y de seguridad en caso de pérdida o robo de dispositivos.    
 
-- **Normativa**:
+4. **Descuido en la Gestión de Residuos de Documentación Confidencial**    
+    - **Riesgo**: Documentos confidenciales pueden ser desechados sin los procedimientos de destrucción adecuados, exponiendo información sensible a personas no autorizadas que podrían acceder a ellos.    
+    - **Consecuencias**: La eliminación no segura de documentos confidenciales puede llevar a la fuga de información sensible y comprometer la seguridad de la organización.    
 
-  - Todos los documentos confidenciales que ya no se necesiten deben ser destruidos adecuadamente, utilizando trituradoras de papel o servicios de destrucción de documentos.
-  - Está prohibido desechar documentos confidenciales en cestos de basura comunes sin haberlos destruido previamente.
-- **Procedimiento**:
+    **Política**: La organización se compromete a proteger la seguridad de las instalaciones físicas mediante medidas de control de acceso y vigilancia, para garantizar la integridad, confidencialidad y disponibilidad de los recursos corporativos.    
 
-  - **Uso de trituradoras de papel**: Instrucciones para utilizar las trituradoras de papel disponibles en las instalaciones de la organización.
-  - **Procedimiento de destrucción de documentos**: Pasos para solicitar la destrucción segura de documentos mediante servicios especializados, si es necesario.
-  - **Revisión periódica de residuos de documentación**: Guía para que los empleados revisen y clasifiquen los documentos antes de desecharlos, asegurando la correcta destrucción de los materiales sensibles.
+    **Normativa**:    
+
+    - Todos los documentos confidenciales que ya no se necesiten deben ser destruidos adecuadamente, utilizando trituradoras de papel o servicios de destrucción de documentos.     
+    - Está prohibido desechar documentos confidenciales en cestos de basura comunes sin haberlos destruido previamente.    
+
+    **Procedimiento**:     
+
+    - **Uso de trituradoras de papel**: Instrucciones para utilizar las trituradoras de papel disponibles en las instalaciones de la organización.    
+    - **Procedimiento de destrucción de documentos**: Pasos para solicitar la destrucción segura de documentos mediante servicios especializados, si es necesario.    
+    - **Revisión periódica de residuos de documentación**: Guía para que los empleados revisen y clasifiquen los documentos antes de desecharlos, asegurando la correcta destrucción de los materiales sensibles.    
 
 #### 2.5 Acceso a Datos
 
@@ -522,68 +530,72 @@ El **acceso a datos** se refiere a los permisos otorgados a los empleados para v
 ##### 2.5.1 Escenarios de Riesgo Asociados
 
 1. **Permisos Excesivos o Inadecuados**
-   - **Riesgo**: Dar a un empleado permisos de acceso que exceden los necesarios para su función laboral puede permitirle acceder a datos o recursos sensibles sin autorización real.
-   - **Consecuencias**: Los permisos inadecuados aumentan el riesgo de acceso no autorizado a información sensible, lo que puede llevar a la filtración o modificación indebida de datos confidenciales.
+    - **Riesgo**: Dar a un empleado permisos de acceso que exceden los necesarios para su función laboral puede permitirle acceder a datos o recursos sensibles sin autorización real.     
+    - **Consecuencias**: Los permisos inadecuados aumentan el riesgo de acceso no autorizado a información sensible, lo que puede llevar a la filtración o modificación indebida de datos confidenciales.     
 
-**Política**: La organización se compromete a garantizar el acceso seguro y controlado a los datos, aplicando el principio de mínimo privilegio para proteger la integridad, confidencialidad y disponibilidad de la información.
+    **Política**: La organización se compromete a garantizar el acceso seguro y controlado a los datos, aplicando el principio de mínimo privilegio para proteger la integridad, confidencialidad y disponibilidad de la información.     
 
-- **Normativa**:
+    **Normativa**:     
 
-  - Los permisos de acceso a datos deben otorgarse según el principio de mínimo privilegio, limitando los accesos al mínimo necesario para cumplir con las responsabilidades del puesto.
-  - Los permisos deben revisarse regularmente, especialmente cuando un empleado cambia de rol o función en la organización.
-- **Procedimiento**:
+    - Los permisos de acceso a datos deben otorgarse según el principio de mínimo privilegio, limitando los accesos al mínimo necesario para cumplir con las responsabilidades del puesto.
+    - Los permisos deben revisarse regularmente, especialmente cuando un empleado cambia de rol o función en la organización. Este proceso debe ser automatizado en la medida de lo posible, y debe incluir la revisión de permisos en el ciclo de vida del empleado.        
 
-  - **Asignación de permisos mínimos**: Guía para que el departamento de TI configure permisos que se ajusten estrictamente a las necesidades del rol de cada empleado.
-  - **Revisión periódica de permisos**: Pasos para realizar revisiones regulares de permisos, asegurando que se ajusten a las responsabilidades actuales del empleado.
-  - **Revocación de permisos tras cambio de rol**: Procedimiento para actualizar o revocar permisos cuando un empleado cambia de puesto o función.
+    **Procedimiento**:     
 
-2. **Acceso No Autorizado a Información Confidencial**
-   - **Riesgo**: Sin un control adecuado de los accesos, personas no autorizadas podrían visualizar o modificar información confidencial de la organización.
-   - **Consecuencias**: El acceso no autorizado compromete la confidencialidad y seguridad de la información, exponiéndola a personas sin los permisos adecuados y aumentando el riesgo de fuga o manipulación de datos.
+    - **Asignación de permisos mínimos**: Guía para que el departamento de TI configure permisos que se ajusten estrictamente a las necesidades del rol de cada empleado.    
+    - **Revisión periódica de permisos**: Pasos para realizar revisiones regulares de permisos, asegurando que se ajusten a las responsabilidades actuales del empleado.    
+    - **Revocación de permisos tras cambio de rol**: Procedimiento para actualizar o revocar permisos cuando un empleado cambia de puesto o función.    
 
-**Política**: La organización se compromete a garantizar el acceso seguro y controlado a los datos, aplicando el principio de mínimo privilegio para proteger la integridad, confidencialidad y disponibilidad de la información.     
+2. **Acceso No Autorizado a Información Confidencial**    
+    - **Riesgo**: Sin un control adecuado de los accesos, personas no autorizadas podrían visualizar o modificar información confidencial de la organización.    
+    - **Consecuencias**: El acceso no autorizado compromete la confidencialidad y seguridad de la información, exponiéndola a personas sin los permisos adecuados y aumentando el riesgo de fuga o manipulación de datos.    
 
-- **Normativa**:
+    **Política**: La organización se compromete a garantizar el acceso seguro y controlado a los datos, aplicando el principio de mínimo privilegio para proteger la integridad, confidencialidad y disponibilidad de la información.         
 
-  - El acceso a información confidencial debe estar protegido mediante autenticación multifactor (MFA) para verificar la identidad del usuario.
-  - Los registros de acceso a información confidencial deben ser monitoreados y auditados regularmente para detectar accesos inusuales o no autorizados.
-- **Procedimiento**:
+    **Normativa**:    
 
-  - **Activación de autenticación multifactor (MFA)**: Instrucciones para que los empleados configuren y utilicen MFA para acceder a información confidencial.
-  - **Monitoreo de registros de acceso**: Procedimiento para que el equipo de TI audite los registros de acceso y detecte actividades sospechosas o no autorizadas.
-  - **Proceso de solicitud de acceso a datos sensibles**: Pasos que deben seguir los empleados para solicitar acceso a información confidencial, justificando la necesidad y obteniendo la aprobación correspondiente.
+    - El acceso a información confidencial debe estar protegido mediante autenticación multifactor (MFA) para verificar la identidad del usuario.    
+    - Los registros de acceso a información confidencial deben ser monitoreados y auditados regularmente para detectar accesos inusuales o no autorizados.    
 
-3. **Compartición Insegura de Información Sensible**
-   - **Riesgo**: La información sensible puede compartirse de manera insegura, ya sea a través de canales no autorizados o sin las medidas de protección adecuadas, lo cual incrementa el riesgo de fuga de datos.
-   - **Consecuencias**: La compartición insegura de información sensible puede llevar a la exposición o manipulación indebida de datos críticos para la organización.
+    **Procedimiento**:    
 
-**Política**: La organización se compromete a garantizar el acceso seguro y controlado a los datos, aplicando el principio de mínimo privilegio para proteger la integridad, confidencialidad y disponibilidad de la información.
+    - **Activación de autenticación multifactor (MFA)**: Instrucciones para que los empleados configuren y utilicen MFA para acceder a información confidencial.    
+    - **Monitoreo de registros de acceso**: Procedimiento para que el equipo de TI audite los registros de acceso y detecte actividades sospechosas o no autorizadas.    
+    - **Proceso de solicitud de acceso a datos sensibles**: Pasos que deben seguir los empleados para solicitar acceso a información confidencial, justificando la necesidad y obteniendo la aprobación correspondiente.     
 
-- **Normativa**:
+3. **Compartición Insegura de Información Sensible**     
+    - **Riesgo**: La información sensible puede compartirse de manera insegura, ya sea a través de canales no autorizados o sin las medidas de protección adecuadas, lo cual incrementa el riesgo de fuga de datos.    
+    - **Consecuencias**: La compartición insegura de información sensible puede llevar a la exposición o manipulación indebida de datos críticos para la organización.    
 
-  - La información sensible solo debe compartirse a través de canales aprobados y con medidas de protección, como el cifrado.
-  - Está prohibido utilizar servicios o plataformas no autorizadas para compartir información confidencial.
-- **Procedimiento**:
+    **Política**: La organización se compromete a garantizar el acceso seguro y controlado a los datos, aplicando el principio de mínimo privilegio para proteger la integridad, confidencialidad y disponibilidad de la información.
 
-  - **Uso de canales seguros para compartición de información**: Instrucciones para que los empleados utilicen canales aprobados para compartir información sensible, como plataformas de transferencia de archivos cifradas.
-  - **Activación de cifrado en comunicaciones**: Guía para cifrar documentos y correos electrónicos antes de compartirlos con usuarios autorizados.
-  - **Solicitud de acceso compartido**: Proceso para solicitar acceso compartido a información confidencial, especificando los destinatarios y el propósito de la compartición.
+    **Normativa**:    
 
-4. **Falta de Seguimiento y Auditoría de los Accesos a Datos**
-   - **Riesgo**: Sin una auditoría regular de los accesos, puede ser difícil detectar el uso inadecuado o indebido de los permisos de acceso a información sensible.
-   - **Consecuencias**: La falta de auditoría de accesos puede permitir que accesos no autorizados o usos indebidos de información confidencial pasen desapercibidos, comprometiendo la seguridad de los datos.
+    - La información sensible solo debe compartirse a través de canales aprobados y con medidas de protección, como el cifrado.    
+    - Está prohibido utilizar servicios o plataformas no autorizadas para compartir información confidencial.    
 
-**Política**: La organización se compromete a garantizar el acceso seguro y controlado a los datos, aplicando el principio de mínimo privilegio para proteger la integridad, confidencialidad y disponibilidad de la información.
+    **Procedimiento**:
 
-- **Normativa**:
+    - **Uso de canales seguros para compartición de información**: Instrucciones para que los empleados utilicen canales aprobados para compartir información sensible, como plataformas de transferencia de archivos cifradas.     
+    - **Activación de cifrado en comunicaciones**: Guía para cifrar documentos y correos electrónicos antes de compartirlos con usuarios autorizados.     
+    - **Solicitud de acceso compartido**: Proceso para solicitar acceso compartido a información confidencial, especificando los destinatarios y el propósito de la compartición.     
 
-  - Los accesos a información sensible deben ser auditados regularmente para identificar y mitigar posibles abusos o accesos no autorizados.
-  - Todo acceso a datos confidenciales debe registrarse automáticamente en un sistema de monitoreo.
-- **Procedimiento**:
+4. **Falta de Seguimiento y Auditoría de los Accesos a Datos**     
+    - **Riesgo**: Sin una auditoría regular de los accesos, puede ser difícil detectar el uso inadecuado o indebido de los permisos de acceso a información sensible.     
+    - **Consecuencias**: La falta de auditoría de accesos puede permitir que accesos no autorizados o usos indebidos de información confidencial pasen desapercibidos, comprometiendo la seguridad de los datos.   
 
-  - **Revisión periódica de registros de acceso**: Instrucciones para que el equipo de seguridad revise los registros de acceso en busca de patrones inusuales o accesos no autorizados.
-  - **Monitoreo automático de accesos**: Configuración de un sistema de monitoreo que registre y alerte sobre intentos de acceso a datos sensibles.
-  - **Informe de auditoría de acceso a datos**: Pasos para generar y documentar informes de auditoría de accesos a información confidencial, incluyendo observaciones y acciones correctivas.
+    **Política**: La organización se compromete a garantizar el acceso seguro y controlado a los datos, aplicando el principio de mínimo privilegio para proteger la integridad, confidencialidad y disponibilidad de la información.     
+
+    **Normativa**:    
+
+    - Los accesos a información sensible deben ser auditados regularmente para identificar y mitigar posibles abusos o accesos no autorizados.     
+    - Todo acceso a datos confidenciales debe registrarse automáticamente en un sistema de monitoreo.     
+
+    **Procedimiento**:     
+
+    - **Revisión periódica de registros de acceso**: Instrucciones para que el equipo de seguridad revise los registros de acceso en busca de patrones inusuales o accesos no autorizados.     
+    - **Monitoreo automático de accesos**: Configuración de un sistema de monitoreo que registre y alerte sobre intentos de acceso a datos sensibles.     
+    - **Informe de auditoría de acceso a datos**: Pasos para generar y documentar informes de auditoría de accesos a información confidencial, incluyendo observaciones y acciones correctivas.      
 
 #### 2.6 Personal
 

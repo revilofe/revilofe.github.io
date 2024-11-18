@@ -114,13 +114,19 @@ Escribir un programa que almacene los vectores `(1,2,3)` y `(-1,0,2)` en dos lis
 Escribir un programa que almacene las matrices 
 
 matriz 2x3
-`A=  1,2,3, 
-     4,5,6` 
+```
+A=  
+ 1, 2, 3
+ 4, 5, 6
+``` 
 
 matriz 3x2
-`B=  −1,0
-      0,1
-      1,1` 
+```
+B=  
+−1, 0    
+ 0, 1
+ 1, 1
+``` 
 
 en una lista y muestre por pantalla su producto.   
 

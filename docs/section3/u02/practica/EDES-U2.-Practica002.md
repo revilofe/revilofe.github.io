@@ -116,7 +116,7 @@ Escribe un programa en **Python** que cuente de 10 a 0 y luego imprima "¡Despeg
 
 ### 3. Parte grupal: Comparación y análisis en grupo (punto 7)
 
-Tras completar el trabajo individual, el equipo se reunirá para discutir los resultados y completar la parte grupal de la actividad:
+Tras completar el trabajo individual, el equipo se reunirá para discutir los resultados y completar la parte grupal de la actividad, concluirán y decidirán aquellos puntos destacables en cada una de las preguntas, susceptibles se ser comentadas en el trabajo:
 
 #### 3.1. Comparación de las características comunes y específicas de diversos entornos de desarrollo (CE 2.g)**
 
@@ -124,7 +124,7 @@ Tras completar el trabajo individual, el equipo se reunirá para discutir los re
 
 En equipo, comparen las características comunes y específicas de los IDEs que utilizaron (por ejemplo, **PyCharm** vs. **Visual Studio Code**, o **IntelliJ IDEA** vs. **Eclipse**). Basen su comparación en los resultados obtenidos en los puntos anteriores.
 
-**Preguntas evaluativas anteriores**: Dar una respuesta común a todas las anteriores.
+**Preguntas evaluativas anteriores**: Dar una respuesta común a todas las anteriores, solo aquellos puntos que se quieran destacar. Que IDES son mejores? que plugin son mejores? que funcionalidades son mas interesantes? etc....
 
 **Preguntas evaluativas** (para responder en grupo):
 

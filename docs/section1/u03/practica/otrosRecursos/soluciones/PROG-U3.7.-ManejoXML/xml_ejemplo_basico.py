@@ -109,7 +109,7 @@ def main():
     """
     Función principal.
     """
-    nombre_fichero = "src/otros/datos_usuarios.xml"
+    nombre_fichero = "datos_usuarios.xml"
 
     # 1. Cargar XML
     arbol = cargar_xml(nombre_fichero)

@@ -193,8 +193,8 @@ def main():
     """
     Función principal.
     """
-    nombre_fichero_orig = "src/otros/datos_usuarios_orig.xml"
-    nombre_fichero = "src/otros/datos_usuarios.xml"
+    nombre_fichero_orig = "datos_usuarios_orig.xml"
+    nombre_fichero = "datos_usuarios.xml"
 
     limpiar_consola()
 

@@ -4759,7 +4759,8 @@
 En Python, se gestionan principalmente con el módulo integrado <code>json</code>, que permite leer, escribir y manipular datos JSON de forma sencilla.</p>
 <h3 id="conceptos-basicos-de-json"><strong>Conceptos básicos de JSON</strong><a class="headerlink" href="#conceptos-basicos-de-json" title="Permanent link">&para;</a></h3>
 <p>Un archivo JSON está estructurado en pares clave-valor, similar a un diccionario de Python. Puede contener objetos (estructuras anidadas) y listas.</p>
-<p>Ejemplo de JSON:
+<p>Ejemplo de JSON, nombre del archivo: <code>datos.json</code>
+:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">,</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
@@ -4891,6 +4892,7 @@ En Python, se gestionan principalmente con el módulo integrado <code>json</code
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="nt">&quot;fecha&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-11-22T12:34:56.789123&quot;</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">}</span>
 </code></pre></div></p>
+<p>En este ejemplo, la función <code>convertir</code> convierte objetos <code>datetime</code> a cadenas ISO 8601 para que puedan ser serializados. La función se pasa como argumento <code>default</code> a <code>json.dumps()</code>. Cuando se serializa un objeto, se llama a esta función para convertir los tipos no estándar. Al serializar el objeto <code>datos</code>, cuando se encuentra con "evento" que es un string, no necesita convertirlo y lo deja tal cual. Al encontrar "fecha" que es un objeto datetime, llama a la función convertir y la convierte a una cadena ISO 8601. Si no encuentra como convertir el objeto, lanza una excepción de tipo TypeError. </p>
 <h4 id="62-ordenar-claves"><strong>6.2 Ordenar claves</strong><a class="headerlink" href="#62-ordenar-claves" title="Permanent link">&para;</a></h4>
 <p>Para ordenar las claves del JSON, usa el argumento <code>sort_keys</code>.</p>
 <p>Ejemplo:

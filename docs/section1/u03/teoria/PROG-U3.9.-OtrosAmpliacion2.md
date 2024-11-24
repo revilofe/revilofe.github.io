@@ -16,7 +16,6 @@ tags:
   - Iterables con for
   - Return con operadores lógicos
 ---
-## 3.9 Ampliación II
 
 ## Variables globales
 

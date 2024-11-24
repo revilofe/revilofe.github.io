@@ -13,7 +13,8 @@ tags:
     - Software
     - XML
 ---
-## 3.7. XML
+
+## XML
 
 XML (eXtensible Markup Language) es un formato estándar utilizado para estructurar y almacenar datos. 
 En Python, se gestiona principalmente con los módulos integrados `xml.etree.ElementTree` (más simple) o `xml.dom.minidom` (para representación legible). 

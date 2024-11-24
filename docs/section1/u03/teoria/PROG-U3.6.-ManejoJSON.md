@@ -13,7 +13,6 @@ tags:
     - Software
     - JSON
 ---
-## 3.6. Manejo de JSON
 
 ## JSON
 

@@ -1,12 +1,12 @@
 ---
-title: "UD 3 - 3.6 Ampliación 1"
+title: "UD 3 - 3.8 Ampliación 1"
 description: Ampliación 1
 summary: Ampliación 1
 authors:
     - Diego Cano
 date: 2023-11-15
 icon: 
-permalink: /prog/unidad3/3.6
+permalink: /prog/unidad3/3.8
 categories:
     - PROG
 tags:
@@ -19,6 +19,7 @@ tags:
     - Copia superficial
     - Copia profunda
 ---
+## 3.8 Ampliación I
 
 ## Identidad, tipo y valor
 

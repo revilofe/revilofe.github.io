@@ -19,7 +19,6 @@ tags:
     - Copia superficial
     - Copia profunda
 ---
-## 3.8 Ampliación I
 
 ## Identidad, tipo y valor
 

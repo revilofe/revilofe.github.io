@@ -23,7 +23,8 @@ En Python, se gestionan principalmente con el módulo integrado `json`, que perm
 
 Un archivo JSON está estructurado en pares clave-valor, similar a un diccionario de Python. Puede contener objetos (estructuras anidadas) y listas.
 
-Ejemplo de JSON:
+Ejemplo de JSON, nombre del archivo: `datos.json`
+:
 ```json
 {
     "nombre": "Juan",
@@ -194,6 +195,8 @@ Salida:
     "fecha": "2024-11-22T12:34:56.789123"
 }
 ```
+
+En este ejemplo, la función `convertir` convierte objetos `datetime` a cadenas ISO 8601 para que puedan ser serializados. La función se pasa como argumento `default` a `json.dumps()`. Cuando se serializa un objeto, se llama a esta función para convertir los tipos no estándar. Al serializar el objeto `datos`, cuando se encuentra con "evento" que es un string, no necesita convertirlo y lo deja tal cual. Al encontrar "fecha" que es un objeto datetime, llama a la función convertir y la convierte a una cadena ISO 8601. Si no encuentra como convertir el objeto, lanza una excepción de tipo TypeError. 
 
 #### **6.2 Ordenar claves**
 

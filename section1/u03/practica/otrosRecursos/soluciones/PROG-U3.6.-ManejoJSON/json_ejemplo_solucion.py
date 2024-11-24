@@ -161,8 +161,8 @@ def main():
     Función principal que realiza las operaciones de gestión de un archivo JSON.
     """
     # Nombre del fichero JSON
-    nombre_fichero_orig = "src/otros/datos_usuarios_orig.json"
-    nombre_fichero = "src/otros/datos_usuarios.json"
+    nombre_fichero_orig = "datos_usuarios_orig.json"
+    nombre_fichero = "datos_usuarios.json"
 
     limpiar_consola()
 

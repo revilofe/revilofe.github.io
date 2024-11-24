@@ -1,21 +1,22 @@
 ---
-title: "UD 3 - 3.7 Ampliación 2"
+title: "UD 3 - 3.9 Ampliación 2"
 description: Ampliación 2
 summary: Ampliación 2
 authors:
   - Diego Cano
 date: 2023-11-15
 icon:
-permalink: /prog/unidad3/3.7
+permalink: /prog/unidad3/3.9
 categories:
   - PROG
 tags:
   - Software
-  - Variables globales
-  - Método join
-  - for iterables
+  - Globales
+  - join
+  - Iterables con for
   - Return con operadores lógicos
 ---
+## 3.9 Ampliación II
 
 ## Variables globales
 

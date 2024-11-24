@@ -6,7 +6,7 @@ authors:
     - Diego Cano
 date: 2024-10-24
 icon: 
-permalink: /prog/unidad2/p3.4
+permalink: /prog/unidad3/p3.4
 categories:
     - PROG
 tags:

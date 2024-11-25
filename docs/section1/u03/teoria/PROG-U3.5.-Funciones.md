@@ -16,7 +16,8 @@ tags:
 ## 3.5. Modularizar un programa.
 
 La modularización de un programa es una técnica de programación que consiste en dividir un programa en partes más pequeñas y manejables. Cada una de estas partes se denomina módulo y se encarga de realizar una tarea específica. La modularización de un programa tiene varias ventajas:    
-- Facilita la comprensión del programa.    
+
+- Facilita la comprensión del programa.     
 - Facilita la depuración del programa.    
 - Facilita la reutilización del código.   
 - Facilita la colaboración entre programadores.    

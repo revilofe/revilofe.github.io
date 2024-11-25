@@ -54,12 +54,12 @@ Diseña un programa que gestione una lista de tareas pendientes. El usuario debe
 Divide el problema principal en subtareas o pasos más pequeños. Cada subtarea puede convertirse en una función.
 
 **Ejemplo:**    
-Para el problema de la lista de tareas, las subtareas podrían ser:     
-
+Para el problema de la lista de tareas, las subtareas podrían ser:    
+    
 1. Mostrar un menú con opciones.    
-2. Añadir una tarea a la lista.   
-3. Mostrar la lista de tareas.   
-4. Marcar una tarea como completada.    
+3. Añadir una tarea a la lista.   
+4. Mostrar la lista de tareas.   
+5. Marcar una tarea como completada.    
 
 
 #### 1.3. Define la estructura del programa

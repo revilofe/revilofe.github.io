@@ -100,17 +100,16 @@ Mientras el programa no haya terminado:
 
 Para cada paso del pseudocódigo, identifica qué funciones serán necesarias. Pregúntate:    
 
-- **¿Qué tareas son independientes?**      
-- **¿Qué código se repite?**    
-- **¿Puedo separar la entrada, procesamiento y salida?**    
-- **¿Cada función tiene una responsabilidad clara?**    
+* **¿Qué tareas son independientes?**     
+* **¿Qué código se repite?**    
+* **¿Puedo separar la entrada, procesamiento y salida?**    
+* **¿Cada función tiene una responsabilidad clara?**    
 
-Y para cada funcion:    
-
-- **¿Qué tarea realiza esta función?**       
-- **¿Qué datos necesita esta función?** (parámetros)        
-- **¿Qué devuelve esta función?** (resultado)      
-
+Y para cada función:    
+* **¿Qué tarea realiza esta función?**    
+* **¿Qué datos necesita esta función?** (parámetros)    
+* **¿Qué devuelve esta función?** (resultado)      
+ 
 **Ejemplo:**
 Funciones necesarias inicialmente:
 

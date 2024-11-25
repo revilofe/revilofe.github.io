@@ -14,14 +14,16 @@ tags:
     - JSON
 ---
 
-## JSON
+## 3.6. JSON
 
 Los archivos JSON *(JavaScript Object Notation)* son un formato de datos ligero utilizado para intercambiar información de manera sencilla. 
 En Python, se gestionan principalmente con el módulo integrado `json`, que permite leer, escribir y manipular datos JSON de forma sencilla.
 
-### **Conceptos básicos de JSON**
+---
 
-Un archivo JSON está estructurado en pares clave-valor, similar a un diccionario de Python. Puede contener objetos (estructuras anidadas) y listas.
+### 1. Conceptos básicos de JSON
+
+Un archivo JSON está estructurado en pares clave-valor, similar a un diccionario de Python. Puede contener objetos *(estructuras anidadas)* y listas.
 
 Ejemplo de JSON, nombre del archivo: `datos.json`
 :
@@ -36,22 +38,24 @@ Ejemplo de JSON, nombre del archivo: `datos.json`
 
 ---
 
-## JSON en Python
+### 2. JSON en Python
 
-### **1. Importar el módulo `json`**
+#### 2.1. Importar el módulo `json`
 
-El módulo `json` está disponible en la biblioteca estándar de Python, por lo que no necesitas instalar nada adicional.
+El módulo `json` está disponible en la biblioteca estándar de Python, por lo que no necesitamos instalar nada adicional.
 
 ```python
 import json
 ```
 
-### **2. Leer archivos JSON**
+#### 2.2. Leer archivos JSON
 
-#### **2.1 Leer JSON desde un archivo**
-Se usa `json.load()` para convertir el contenido del archivo JSON en un objeto de Python (normalmente un diccionario o una lista).
+##### **2.2.1. Leer JSON desde un archivo**
+
+Se usa `json.load()` para convertir el contenido del archivo JSON en un objeto de Python *(normalmente un diccionario o una lista)*.
 
 Ejemplo:
+
 ```python
 import json
 
@@ -63,10 +67,12 @@ with open("datos.json", "r") as archivo:
 print(datos["nombre"])  # Ejemplo: 'Juan'
 ```
 
-#### **2.2 Leer JSON desde una cadena de caracteres**
+##### **2.2.2. Leer JSON desde una cadena de caracteres**
+
 Para leer JSON desde una cadena, se usa `json.loads()`.
 
 Ejemplo:
+
 ```python
 import json
 
@@ -76,12 +82,14 @@ datos = json.loads(cadena_json)
 print(datos["edad"])  # 30
 ```
 
-### **3. Escribir archivos JSON**
+#### 2.3. Escribir archivos JSON
 
-#### **3.1 Escribir JSON en un archivo**
+##### **2.3.1. Escribir JSON en un archivo**
+
 Se usa `json.dump()` para convertir un objeto de Python a JSON y escribirlo en un archivo.
 
 Ejemplo:
+
 ```python
 import json
 
@@ -94,25 +102,27 @@ datos = {
 
 # Escribir datos en un archivo JSON
 with open("salida.json", "w") as archivo:
-    json.dump(datos, archivo, indent=4)  # `indent` para una salida legible
+    json.dump(datos, archivo, indent = 4)  # `indent` para una salida legible
 ```
 
-#### **3.2 Convertir objetos Python a cadenas JSON**
+##### **2.3.2. Convertir objetos Python a cadenas JSON**
 
 Para convertir datos de Python a una cadena JSON, se usa `json.dumps()`.
 
 Ejemplo:
+
 ```python
 import json
 
 datos = {"nombre": "Pedro", "edad": 40}
 
 # Convertir a cadena JSON
-cadena_json = json.dumps(datos, indent=2)
+cadena_json = json.dumps(datos, indent = 2)
 print(cadena_json)
 ```
 
 Salida:
+
 ```json
 {
   "nombre": "Pedro",
@@ -120,15 +130,16 @@ Salida:
 }
 ```
 
-### **4. Manipular datos JSON**
+#### 2.4. Manipular datos JSON
 
-Después de cargar un archivo JSON como un objeto de Python (como un diccionario o lista), puedes manipular los datos con las operaciones estándar de Python.
+Después de cargar un archivo JSON como un objeto de Python *(como un diccionario o lista)*, podemos manipular los datos con las operaciones estándar de Python.
 
 Ejemplo:
+
 ```python
 import json
 
-# Leer y modificar datos JSON
+# Leer el archivo JSON
 with open("datos.json", "r") as archivo:
     datos = json.load(archivo)
 
@@ -138,14 +149,15 @@ datos["habilidades"].append("SQL")
 
 # Escribir los cambios de nuevo al archivo
 with open("datos.json", "w") as archivo:
-    json.dump(datos, archivo, indent=4)
+    json.dump(datos, archivo, indent = 4)
 ```
 
-### **5. Manejo de errores**
+#### 2.5. Manejo de errores
 
-Cuando trabajas con JSON, es importante manejar **posibles excepciones** para evitar errores inesperados.
+Cuando trabajamos con JSON, es importante manejar **posibles excepciones** para evitar errores inesperados.
 
 Ejemplo:
+
 ```python
 import json
 
@@ -160,75 +172,9 @@ except Exception as e:
     print(f"*ERROR* {e}.")
 ```
 
-### **6. Opciones avanzadas**
+#### 2.6. Ejemplo Completo
 
-#### **6.1 Serializar objetos personalizados**
-
-El módulo `json` puede serializar objetos personalizados usando el argumento `default`.
-
-Ejemplo:
-```python
-import json
-from datetime import datetime
-
-# Crear un objeto con un tipo no JSON serializable
-datos = {
-    "evento": "Reunión",
-    "fecha": datetime.now()
-}
-
-# Serializador personalizado
-def convertir(obj):
-    if isinstance(obj, datetime):
-        return obj.isoformat()  # Convertir a formato ISO 8601
-    raise TypeError("Tipo no serializable")
-
-# Serializar el objeto
-cadena_json = json.dumps(datos, default = convertir, indent = 4)
-print(cadena_json)
-```
-
-Salida:
-```json
-{
-    "evento": "Reunión",
-    "fecha": "2024-11-22T12:34:56.789123"
-}
-```
-
-En este ejemplo, la función `convertir` convierte objetos `datetime` a cadenas ISO 8601 para que puedan ser serializados. La función se pasa como argumento `default` a `json.dumps()`. Cuando se serializa un objeto, se llama a esta función para convertir los tipos no estándar. Al serializar el objeto `datos`, cuando se encuentra con "evento" que es un string, no necesita convertirlo y lo deja tal cual. Al encontrar "fecha" que es un objeto datetime, llama a la función convertir y la convierte a una cadena ISO 8601. Si no encuentra como convertir el objeto, lanza una excepción de tipo TypeError. 
-
-#### **6.2 Ordenar claves**
-
-Para ordenar las claves del JSON, usa el argumento `sort_keys`.
-
-Ejemplo:
-```python
-import json
-
-datos = {"z": 1, "a": 2, "m": 3}
-cadena_json = json.dumps(datos, sort_keys = True, indent = 2)
-print(cadena_json)
-```
-
-Salida:
-```json
-{
-  "a": 2,
-  "m": 3,
-  "z": 1
-}
-```
-
-### **7. Conclusión**
-
-- El manejo de archivos JSON en Python es sencillo y flexible gracias al módulo `json`. Este permite trabajar con datos estructurados de forma legible y eficiente. 
-- Con las funciones `load`, `loads`, `dump` y `dumps`, puedes realizar operaciones comunes como leer, escribir y manipular datos JSON en tus programas. 
-- Además, con personalizaciones avanzadas, puedes adaptar el manejo de JSON a necesidades específicas.
-
-### **8. Ejemplo Completo**
-
-#### 8.1. Fichero JSON inicial (`datos.json`).
+##### **2.6.1. Fichero JSON inicial (`datos.json`)**
 
 Este es el contenido inicial del archivo JSON que usaremos:
 
@@ -241,7 +187,7 @@ Este es el contenido inicial del archivo JSON que usaremos:
 }
 ```
 
-#### 8.2. Operaciones que el programa de ejemplo va a realizar.
+##### **2.6.2. Operaciones que el programa de ejemplo va a realizar**
 
 El código realiza las siguientes operaciones:
 
@@ -251,7 +197,7 @@ El código realiza las siguientes operaciones:
 4. Elimina un usuario por su `id`.
 5. Guarda los cambios en el archivo.
 
-#### 8.3. Código en Python.
+##### **2.6.3. Código en Python**
 
 ```python
 import json
@@ -386,7 +332,7 @@ if __name__ == "__main__":
     main()
 ```
 
-#### 8.4. Explicación paso a paso
+##### **2.6.4. Explicación paso a paso**
 
 1. **Función `cargar_json`:**
    - Lee el contenido del archivo JSON.
@@ -412,7 +358,7 @@ if __name__ == "__main__":
    - Realiza las operaciones necesarias (actualizar, insertar, eliminar).
    - Guarda los datos actualizados en el archivo.
 
-### 8.5. Resultado final (`datos.json`).
+##### **2.6.5. Resultado final (`datos.json`)**
 
 Después de ejecutar el programa, el archivo `datos.json` tendrá el siguiente contenido:
 
@@ -431,21 +377,145 @@ Después de ejecutar el programa, el archivo `datos.json` tendrá el siguiente c
         }
     ]
 }
-``` 
+```
+
+#### 2.7. Conclusión - JSON en Python
+
+- El manejo de archivos JSON en Python es sencillo y flexible gracias al módulo `json`. Este permite trabajar con datos estructurados de forma legible y eficiente. 
+- Con las funciones `load`, `loads`, `dump` y `dumps`, podemos realizar operaciones comunes como leer, escribir y manipular datos JSON en nuestros programas. 
+
+#### 2.8. Opciones avanzadas
+
+##### **2.8.1. Serialización de Objetos**
+
+La serialización es el proceso de convertir un objeto en memoria *(como una lista, diccionario, o incluso objetos más complejos)* en un formato que pueda ser fácilmente almacenado o transmitido, como un archivo JSON, XML o binario. En el contexto de JSON, serializar un objeto significa convertirlo a una cadena en formato JSON para:
+	1.	Almacenamiento persistente: Guardarlo en un archivo o base de datos.
+	2.	Transmisión de datos: Enviarlo a través de una red, como en una API o un servicio web.
+	3.	Compatibilidad: Interoperar con otros sistemas que usen JSON.
+
+Deserialización, por el contrario, es el proceso inverso: convertir la representación JSON de vuelta a un objeto en memoria.
+
+**¿Qué es un Objeto Serializable?**
+
+Un objeto serializable es aquel que puede ser convertido directamente a un formato de almacenamiento/transmisión *(en este caso, JSON)*. En Python, los objetos básicos como str, int, float, list, dict, bool, y None son serializables a JSON de manera directa.
+
+Sin embargo, no todos los tipos de objetos en Python son serializables por defecto. Por ejemplo, objetos como datetime, set, o instancias de clases personalizadas necesitan una forma específica de ser convertidos.
+
+##### **2.8.2. Serializar objetos personalizados**
+
+El módulo `json` puede serializar objetos personalizados usando el argumento `default`.
+
+**Ejemplo:**
+
+```python
+import json
+from datetime import datetime
+
+# Crear un objeto con un tipo no JSON serializable
+datos = {
+    "evento": "Reunión",
+    "fecha": datetime.now()
+}
+
+# Serializador personalizado
+def convertir(obj):
+    if isinstance(obj, datetime):
+        return obj.isoformat()  # Convertir a formato ISO 8601
+    raise TypeError("Tipo no serializable")
+
+# Serializar el objeto
+cadena_json = json.dumps(datos, default = convertir, indent = 4)
+print(cadena_json)
+```
+
+**¿Qué sucede aquí?**
+	- El diccionario `datos` contiene:
+	    * "evento": una cadena (str), que es serializable de manera directa.
+	    * "fecha": un objeto de tipo datetime, que no es serializable por defecto.
+	- La función `json.dumps()` intenta serializar cada valor del diccionario.
+	    * Al llegar a "fecha", detecta que es un tipo datetime (no serializable directamente).
+        * Llama a la función proporcionada en el argumento default, que es `convertir`.
+	- La función `convertir`:
+	    * Verifica si el objeto es de tipo datetime con `isinstance(obj, datetime)`.
+	    * Si lo es, lo convierte al formato ISO 8601 utilizando el método `isoformat()`.
+	    * Si no puede convertir el objeto, lanza un ***TypeError***.
+	- Finalmente, `json.dumps()` crea la cadena JSON con el formato que podemos observar en ***Salida***.
+
+**Salida:**
+
+```json
+{
+    "evento": "Reunión",
+    "fecha": "2024-11-22T12:34:56.789123"
+}
+```
+
+**El argumento default**
+	- Sirve como un callback que json.dumps() llama cada vez que encuentra un objeto no serializable.
+	- Si no proporcionas este argumento y se encuentra un tipo no serializable, json.dumps() lanza una excepción TypeError.
+	- Útil para convertir tipos personalizados, como datetime, set, o incluso instancias de clases.
+
+##### **2.8.3. Ordenar claves**
+
+Para ordenar las claves del JSON, usa el argumento `sort_keys`.
+
+**Ejemplo:**
+
+```python
+import json
+
+datos = {"z": 1, "a": 2, "m": 3}
+cadena_json = json.dumps(datos, sort_keys = True, indent = 2)
+print(cadena_json)
+```
+
+**¿Qué sucede aquí?:**
+	- `datos` es un diccionario que contiene:
+	    * "z": 1
+	    * "a": 2
+	    * "m": 3
+	- Cuando usamos el argumento `sort_keys = True`:
+	    * Python ordena las claves del diccionario alfabéticamente (a, m, z) antes de convertirlo a JSON.
+	    * Esto es útil cuando queremos garantizar un orden consistente de las claves en el JSON, especialmente en archivos o transmisiones donde el orden importa.
+	- El resultado es el que se muestra en ***Salida***.
+	- Sin `sort_keys = True`, el orden de las claves en el JSON seguiría el orden original del diccionario.
+
+**Salida:**
+
+```json
+{
+  "a": 2,
+  "m": 3,
+  "z": 1
+}
+```
+
+**El argumento sort_keys**
+	- No afecta la estructura o contenido del JSON, solo su presentación.
+	- Es puramente estético o práctico, por ejemplo, para facilitar la lectura o las comparaciones en pruebas automatizadas.
+
+##### **2.8.4. Conclusión - Opciones avanzadas**
+
+La serialización personalizada y la ordenación de claves son características avanzadas pero muy útiles del módulo json. Permiten:
+	1.	Adaptabilidad: Serializar tipos personalizados como datetime, o incluso tus propias clases.
+	2.	Consistencia: Ordenar las claves del JSON para garantizar un formato estándar, útil en pruebas, depuración o contratos API.
+	3.	Flexibilidad: Personalizar la salida del JSON para que cumpla con los requisitos específicos de tu aplicación.
+
+Al dominar estas técnicas, podemos aprovechar al máximo el módulo json en proyectos de cualquier complejidad.
 
 ---
 
-## JSON en Kotlin
+### 3. JSON en Kotlin
 
 El formato JSON en Kotlin es similar al de Python: se utiliza para representar pares clave-valor y listas. Es compatible con las estructuras de datos de Kotlin, como `Map` y `List`.
 
 En Kotlin, estos datos se pueden mapear a clases de datos (`data class`) para trabajar con ellos de forma estructurada.
 
-### **1. Importar y configurar Gson**
+#### 3.1. Importar y configurar Gson
 
 Kotlin no tiene soporte nativo para JSON, pero librerías como **Gson** permiten manejarlo fácilmente.
 
-#### **Configuración del proyecto**
+##### **3.1.1. Configuración del proyecto**
 
 1. Añade la dependencia de Gson al archivo `build.gradle.kts`:
 
@@ -461,13 +531,13 @@ dependencies {
 import com.google.gson.Gson
 ```
 
-### **2. Leer archivos JSON**
+#### 3.2. Leer archivos JSON
 
-#### **2.1 Leer JSON desde un archivo**
+##### **3.2.1. Leer JSON desde un archivo**
 
 Usamos la clase `File` de Kotlin para leer el archivo como texto y luego `Gson` para convertirlo en objetos de Kotlin.
 
-Ejemplo:
+**Ejemplo:**
 
 ```kotlin
 import com.google.gson.Gson
@@ -491,13 +561,12 @@ Este código:
 - Lee el archivo JSON como texto.
 - Usa `Gson().fromJson()` para convertir el texto JSON en un objeto `Datos` (con una lista de `Usuario`).
 
----
+##### **3.2.2. Leer JSON desde una cadena**
 
-#### **2.2 Leer JSON desde una cadena**
+Podemos trabajar con cadenas JSON directamente en lugar de un archivo. 
 
-Puedes trabajar con cadenas JSON directamente en lugar de un archivo. 
+**Ejemplo:**
 
-Ejemplo:
 ```kotlin
 val cadenaJson = """
     {"usuarios": [{"id": 1, "nombre": "Juan", "edad": 30}]}
@@ -506,13 +575,13 @@ val datos = Gson().fromJson(cadenaJson, Datos::class.java)
 println(datos.usuarios[0].nombre) // Salida: Juan
 ```
 
-### **3. Escribir archivos JSON**
+#### 3.3. Escribir archivos JSON
 
-#### **3.1 Escribir JSON en un archivo**
+##### **3.3.1. Escribir JSON en un archivo**
 
 Usamos `Gson().toJson()` para convertir un objeto Kotlin a JSON y luego lo guardamos con `File.writeText()`.
 
-Ejemplo:
+**Ejemplo:**
 
 ```kotlin
 fun guardarJson(nombreFichero: String, datos: Datos) {
@@ -525,18 +594,20 @@ fun guardarJson(nombreFichero: String, datos: Datos) {
 }
 ```
 
-#### **3.2 Convertir objetos Kotlin a cadenas JSON**
+##### **3.3.2. Convertir objetos Kotlin a cadenas JSON**
 
-Si no quieres guardar los datos en un archivo, puedes simplemente convertirlos a una cadena JSON.
+Si no queremos guardar los datos en un archivo, podemos simplemente convertirlos a una cadena JSON.
 
-Ejemplo:
+**Ejemplo:**
+
 ```kotlin
 val datos = Datos(mutableListOf(Usuario(1, "Juan", 30)))
 val cadenaJson = Gson().toJson(datos)
 println(cadenaJson)
 ```
 
-Salida:
+**Salida:**
+
 ```json
 {
   "usuarios": [
@@ -549,11 +620,11 @@ Salida:
 }
 ```
 
-### **4. Manipular datos JSON**
+#### 3.4. Manipular datos JSON
 
-Una vez que los datos JSON se cargan en un objeto Kotlin, puedes manipularlos fácilmente como cualquier otra colección.
+Una vez que los datos JSON se cargan en un objeto Kotlin, podemos manipularlos fácilmente como cualquier otra colección.
 
-#### **Actualizar un dato**
+##### **3.4.1. Actualizar un dato**
 
 Actualiza la edad de un usuario específico buscando su `id`:
 
@@ -569,7 +640,7 @@ fun actualizarUsuario(datos: Datos, idUsuario: Int, nuevaEdad: Int) {
 }
 ```
 
-#### **Insertar un nuevo usuario**
+##### **3.4.2. Insertar un nuevo usuario**
 
 Añade un nuevo usuario a la lista:
 
@@ -580,7 +651,7 @@ fun insertarUsuario(datos: Datos, nuevoUsuario: Usuario) {
 }
 ```
 
-#### **Eliminar un usuario**
+##### **3.4.3. Eliminar un usuario**
 
 Elimina un usuario de la lista buscando su `id`:
 
@@ -596,11 +667,11 @@ fun eliminarUsuario(datos: Datos, idUsuario: Int) {
 }
 ```
 
-### **5. Manejo de errores**
+#### 3.5. Manejo de errores
 
 Usamos bloques `try-catch` para manejar excepciones al leer o escribir archivos JSON.
 
-Ejemplo:
+**Ejemplo:**
 
 ```kotlin
 fun cargarJsonSeguro(nombreFichero: String): Datos? {
@@ -617,7 +688,7 @@ fun cargarJsonSeguro(nombreFichero: String): Datos? {
 }
 ```
 
-### **6. Ejemplo completo**
+#### 3.6. Ejemplo completo
 
 Con todas las piezas juntas, el flujo completo de operaciones sería:
 
@@ -645,7 +716,7 @@ fun main() {
 }
 ```
 
-### **7. Resultado final**
+#### 3.7. Resultado final
 
 Después de ejecutar el programa, el archivo `datos.json` se verá así:
 ```json
@@ -657,13 +728,13 @@ Después de ejecutar el programa, el archivo `datos.json` se verá así:
 }
 ```
 
-### **8. JSON en un `Map<String, Any>`**
+#### 3.8. JSON en un `Map<String, Any>`
 
-Si necesitas mayor flexibilidad, puedes deserializar el JSON en un `Map`. Esto es útil si no conoces la estructura del JSON o prefieres manipular los datos dinámicamente.
+Si necesitamos mayor flexibilidad, podemos deserializar el JSON en un `Map`. Esto es útil si no conocemos la estructura del JSON o prefirimos manipular los datos dinámicamente.
 
-#### **Deserialización a un `Map`**
+##### **3.8.1. Deserialización a un `Map`**
 
-Con **Gson**, puedes hacerlo utilizando un `TypeToken`:
+Con **Gson**, podemos hacerlo utilizando un `TypeToken`:
 
 ```kotlin
 import com.google.gson.Gson
@@ -693,7 +764,7 @@ fun main() {
 }
 ```
 
-#### **Ejemplo de Salida**
+##### **3.8.2. Ejemplo de Salida**
 
 Dado este archivo `datos.json`:
 
@@ -713,7 +784,6 @@ Datos cargados como Map:
 usuarios: [{id=1.0, nombre=Juan, edad=30.0}, {id=2.0, nombre=Ana, edad=25.0}]
 ```
 
-### **Conclusión**
+#### 3.9. Conclusión - JSON en Kotlin
 
-El manejo de JSON en Kotlin es muy sencillo gracias a librerías como Gson. Al igual que en Python, puedes realizar operaciones como leer, escribir, actualizar e 
-insertar datos con un enfoque modular y utilizando clases de datos (`data class`) para estructurar los datos.
+El manejo de JSON en Kotlin es muy sencillo gracias a librerías como Gson. Al igual que en Python, podemos realizar operaciones como leer, escribir, actualizar e insertar datos con un enfoque modular y utilizando clases de datos (`data class`) para estructurar los datos.

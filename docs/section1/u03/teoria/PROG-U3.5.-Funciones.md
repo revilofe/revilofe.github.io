@@ -354,7 +354,13 @@ Crea primero una versión básica del programa. Luego, añade funciones y comple
 ##### 1.9.3. De arriba a abajo: top-down
 Empieza por la función principal y luego desglosa en funciones más pequeñas. Esto te ayuda a mantener el enfoque en el objetivo principal del programa. 
 
-![](./assets/PROG-U3.5.-Funciones-top-down.png)
+
+
+<figure markdown>
+   ![](./assets/PROG-U3.5.-Funciones-top-down.png)
+   <figcaption>Desglose top down</figcaption>
+</figure>
+
 
 
 ##### 1.9.4. De abajo a arriba: bottom-up
@@ -386,7 +392,12 @@ Puedes encontrar una lista de funciones predefinidas en Python [aquí](https://d
 Sin embargo, tú como programador, puedes definir tus propias funciones para estructurar el código de manera que sea más legible y para reutilizar aquellas partes que se repiten a lo largo de una aplicación. Esto es una tarea fundamental a medida que va creciendo el número de líneas de un programa.
 
 La idea la puedes observar en la siguiente imagen:
-![](assets/PROG-U3.5.-Funciones.png)
+
+<figure markdown>
+   ![](assets/PROG-U3.5.-Funciones.png)
+  <figcaption>Funciones</figcaption>
+</figure>
+
 
 En principio, un programa es una secuencia ordenada de instrucciones que se ejecutan una a continuación de la otra. Sin embargo, cuando se utilizan funciones, puedes agrupar parte de esas instrucciones como una unidad más pequeña que ejecuta dichas instrucciones y suele devolver un resultado.
 
@@ -396,7 +407,11 @@ En el siguiente apartado te muestro cómo definir una función en Python.
 
 La siguiente imagen muestra el esquema de una función en Python:
 
-![](assets/PROG-U3.5.-DefFunciones.png)
+<figure markdown>
+   ![](assets/PROG-U3.5.-DefFunciones.png)
+   <figcaption>Esquema de una función</figcaption>
+</figure>
+
 
 Para definir una función en Python:
 

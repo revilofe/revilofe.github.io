@@ -22,7 +22,14 @@ tags:
 
 La ciberseguridad no solo depende de tecnologías avanzadas, sino también del personal que las utiliza. Un **Plan de Formación y Concienciación** busca capacitar a los empleados para **prevenir, mitigar o responder** a posibles amenazas que puedan afectar a la organización. Este enfoque integral permite que todos, desde técnicos hasta personal administrativo, desempeñen un papel activo en la protección de los activos digitales.
 
-#### 1.1. Misión del Plan
+
+<figure markdown>
+  ![](assets/PlanFormacion.jpeg)
+  <figcaption>Plan de Formación y Concienciación</figcaption>
+</figure>
+
+
+#### 1.1. Misión del Plan de Formación y Concienciación
 
 El objetivo principal del plan es **crear una fuerza laboral consciente y preparada**. Esto significa que cada empleado debe ser capaz de:
 
@@ -32,11 +39,13 @@ El objetivo principal del plan es **crear una fuerza laboral consciente y prepar
 
 Una organización con empleados formados y concienciados no solo mejora su postura de seguridad, sino que también reduce significativamente la posibilidad de incidentes.
 
-#### 1.2. Aspectos clave del Plan
+#### 1.2. Inclusividad de la formación y concienciación
 
-El Plan de Formación y Concienciación debe estar diseñado para ser **inclusivo y continuo**, asegurando que todos los niveles de la organización estén alineados en términos de seguridad.
+El Plan de Formación y Concienciación debe estar diseñado para ser **inclusivo y continuo**
 
-##### 1.2.1. Formación inicial para todo el personal
+. En lo que respecta a la inclusividad, tenemos que asegurarnos que todos los niveles de la organización estén alineados en términos de seguridad.
+
+##### 1.2.1. Formación para todo el personal
 
 La **formación inicial** es crucial para que todos los empleados comiencen con un conocimiento básico de seguridad. Según los roles, esta formación se divide en:
 
@@ -44,16 +53,16 @@ La **formación inicial** es crucial para que todos los empleados comiencen con 
 
     - Dirigida al personal especializado, como administradores de sistemas y técnicos de TI.    
     - Enfocada en temas como configuración segura de sistemas, gestión de vulnerabilidades y respuesta a incidentes.   
-    - Ejemplo: Un técnico debe aprender a aplicar parches de seguridad en los sistemas críticos para prevenir exploits.   
+    - **Ejemplo**: Un técnico debe aprender a aplicar parches de seguridad en los sistemas críticos para prevenir exploits.   
 
 2. **Formación básica**:    
 
     - Diseñada para el resto del personal, enfocándose en temas como el reconocimiento de correos de phishing, uso seguro de contraseñas y manejo responsable de dispositivos corporativos.    
-    - Ejemplo: Enseñar a los empleados a detectar correos maliciosos basándose en errores de gramática o URLs sospechosas.
+    - **Ejemplo**: Enseñar a los empleados a detectar correos maliciosos basándose en errores de gramática o URLs sospechosas.
 
 ##### 1.2.2. Concienciación general para todos los empleados
 
-La **concienciación** no requiere conocimientos técnicos avanzados, pero busca garantizar que todos los empleados comprendan la importancia de la seguridad y cómo su comportamiento puede influir en el bienestar de la organización.
+La **concienciación** no requiere conocimientos técnicos avanzados, pero busca garantizar que todos los empleados comprendan la importancia de la seguridad y cómo su comportamiento puede influir en el bienestar de la organización. En difinitiva, generar una **cultura de seguridad**.
 
 - **Temas clave**:    
 
@@ -61,11 +70,11 @@ La **concienciación** no requiere conocimientos técnicos avanzados, pero busca
     - Mantener los dispositivos bloqueados cuando no están en uso.   
     - Utilizar redes Wi-Fi públicas de manera segura (por ejemplo, mediante una VPN).   
   
-- **Ejemplo práctico**: Un empleado que trabaja en un café debe confirmar con el establecimiento el nombre de la red Wi-Fi antes de conectarse.
+- **Ejemplo**: Un empleado que se quiere conectar para trabajar desde la Wi-Fi de una cafetería, debería confirmar con el establecimiento el nombre de la red Wi-Fi antes de conectarse.
 
-#### 1.3. Refrescos periódicos de la formación y concienciación
+#### 1.3. Continuidad de la formación y concienciación
 
-La formación y la concienciación no son actividades de una sola vez. **La repetición y actualización son esenciales para garantizar que el personal esté al día con las amenazas y medidas más recientes**.
+En cuanto a la continuidad, la formación y la concienciación no son actividades de una sola vez. **La repetición y actualización son esenciales para garantizar que el personal esté al día con las amenazas y medidas más recientes**.
 
 ##### 1.3.1. Formación técnica actualizada
 
@@ -76,10 +85,10 @@ Cada vez que se introducen cambios significativos en los sistemas de TI, se debe
 
 ##### 1.3.2. Refresco de normativas de seguridad
 
-Incluso si no se producen incidentes ni cambios tecnológicos, es fundamental reforzar periódicamente las normativas de seguridad para todo el personal.
+Incluso si no se producen incidentes, ni cambios tecnológicos, es fundamental reforzar periódicamente las normativas de seguridad para todo el personal.
 
 - **Beneficio**: Mantener la seguridad como una prioridad diaria y no algo que se deje en segundo plano.     
-- **Ejemplo práctico**: Enviar recordatorios trimestrales sobre la política de uso responsable de contraseñas, junto con ejemplos de cómo crear una contraseña segura.     
+- **Ejemplo**: Enviar recordatorios trimestrales sobre la política de uso responsable de contraseñas, junto con ejemplos de cómo crear una contraseña segura.     
 
 #### 1.4. Ejemplo final: Un día en la vida de un empleado concienciado
 
@@ -87,26 +96,28 @@ Imaginemos a Laura, que trabaja en el departamento de Recursos Humanos. Durante 
 
 ### 2. Criterios para el Diseño del Plan de Formación y Concienciación
 
-El diseño de un Plan de Formación y Concienciación en ciberseguridad debe garantizar que **todos los empleados estén capacitados y preparados** para proteger los activos de la organización. Este proceso requiere establecer criterios claros para que cada persona:
+El diseño de un Plan de Formación y Concienciación en ciberseguridad debe garantizar que **todos los empleados estén capacitados y preparados** para proteger los activos de la organización. Este proceso requiere establecer criterios claros en el diseño del plan,  para que cada persona:
 
 - **Conozca y entienda** las normativas y medidas de seguridad.    
 - **Sea capaz de identificar comportamientos sospechosos o incidentes.**     
 - **Notifique de manera efectiva** al personal especializado cualquier anomalía.   
 
-El diseño debe adaptarse a las características de la organización, sus empleados y los servicios que utiliza, asegurando que sea práctico, comprensible y aplicable para todos.
+Por otra parte, el diseño debe adaptarse a las características de la organización, sus empleados y los servicios que utiliza, asegurando que sea práctico, comprensible y aplicable para todos.
 
 #### 2.1. Nivel de inicio
 
 Antes de desarrollar los contenidos de formación, es necesario evaluar los niveles de conocimiento de los empleados para diseñar una capacitación adecuada. Esto evita que sea **demasiado básica para algunos o compleja para otros**, promoviendo el interés y la efectividad.
 
 Para lograr esto, se realiza una **evaluación inicial** con preguntas como:    
+
 - ¿Saben reconocer un correo de phishing?
 - ¿Conocen las buenas prácticas para crear contraseñas seguras?
 - ¿Están familiarizados con los procedimientos para reportar un incidente?
 
-A partir de esta evaluación, se diseña una formación que cubra tanto a empleados con conocimientos básicos como a aquellos con experiencia técnica.
+Estas evaluaciones iniciales se pueden realizar mediante cuestionarios, pruebas de conocimiento o simulaciones de ataques, y permiten adaptar la formación a las necesidades reales de los empleados, y particularizando tanto a empleados con conocimientos básicos como a aquellos con experiencia técnica.
 
 Por ejemplo, si en una empresa se detecta que el 70% de los empleados no sabe cómo verificar la autenticidad de un enlace en un correo, la formación inicial incluirá ejercicios prácticos como analizar correos falsos y aprender a identificar señales de phishing.
+
 
 #### 2.2. Factores clave en el diseño
 
@@ -196,9 +207,10 @@ Imaginemos una empresa que maneja información financiera y tiene tanto personal
     - El equipo administrativo aprende a manejar documentos financieros de manera segura y a reconocer intentos de phishing.    
 
 3. **Políticas de trabajo híbrido**: Se les enseña a los empleados remotos a usar VPN, evitar redes Wi-Fi públicas y almacenar información en plataformas corporativas seguras.    
-4. **Actualización continua**: Cada seis meses, se realizan simulacros de phishing para evaluar si los empleados aplican lo aprendido y refrescar los contenidos.
+4. **Adaptación a horarios**: Se ofrecen talleres en línea para que los empleados con turnos nocturnos puedan acceder a la formación en horarios flexibles. 
+5. **Actualización continua**: Cada seis meses, se realizan simulacros de phishing para evaluar si los empleados aplican lo aprendido y refrescar los contenidos.
 
-Con estos criterios, el diseño del plan será inclusivo, efectivo y orientado a las necesidades reales de la organización y su personal.
+Con estos criterios, el diseño del plan será inclusivo, continuo, efectivo y orientado a las necesidades reales de la organización y su personal.
 
 
 ### 3. Contenidos de la Formación
@@ -207,7 +219,7 @@ La formación en ciberseguridad debe partir de los **conocimientos previos** de 
 
 #### 3.1. Conceptos básicos
 
-La formación comenzará con temas esenciales que son comunes a todos los empleados, independientemente de su rol. Estos contenidos se centran en comportamientos seguros y buenas prácticas que reducen los riesgos de seguridad en la organización.
+La formación comenzará con temas esenciales que son comunes a todos los empleados, independientemente de su rol. Estos contenidos se centran en comportamientos seguros y buenas prácticas que reducen los riesgos de seguridad en la organización. Algunos temas a trabajar son:
 
 ##### 3.1.1. Uso de contraseñas y sistemas de verificación
 
@@ -300,7 +312,7 @@ La elaboración de un **Plan de Formación y Concienciación** es el primer paso
 
 #### 4.1. Objetivos del Plan
 
-El principal objetivo del plan es **fomentar una cultura de ciberseguridad**, es decir, lograr que los empleados no solo sigan políticas de seguridad, sino que entiendan y valoren su importancia. Esto ayuda a minimizar el riesgo de incidentes y fortalece la protección de los activos corporativos.
+El principal objetivo del plan es **fomentar una cultura de ciberseguridad**, es decir, lograr que los empleados no solo sigan políticas de seguridad, sino concienciar, es decir, que entiendan y valoren su importancia. Esto ayuda a minimizar el riesgo de incidentes y fortalece la protección de los activos corporativos.
 
 **Objetivos específicos**:     
 
@@ -318,14 +330,19 @@ El principal objetivo del plan es **fomentar una cultura de ciberseguridad**, es
 
 Un plan con estos objetivos no solo refuerza la seguridad, sino que también crea empleados más conscientes y responsables.
 
+**Resultado esperado**: Los objetivos claros y medibles que guíen el diseño y la implementación del plan, asegurando que cada actividad formativa contribuya a la seguridad de la organización.   
+
+- Objetivo centrados en la protección de los datos corporativos, promover prácticas seguras y concienciar sobre amenazas potenciales.
+
 
 #### 4.2. Evaluación de las Necesidades de Formación
 
-Antes de diseñar los contenidos y estrategias formativas, es imprescindible realizar una **evaluación inicial** que permita identificar:     
+Antes de diseñar los contenidos y estrategias formativas, como ya comentamos anteriormente, es imprescindible realizar una **evaluación inicial** que permita identificar:     
+
 - **Áreas de debilidad**: ¿Dónde existen brechas en el conocimiento o la práctica de la ciberseguridad?    
 - **Recursos necesarios**: ¿Qué materiales, herramientas o tiempo se requieren para abordar estas debilidades?     
 
-##### Pasos para la evaluación:
+Los pasos para la evaluación:
 
 1. **Realizar encuestas y pruebas de conocimiento**:     
 
@@ -343,10 +360,11 @@ Antes de diseñar los contenidos y estrategias formativas, es imprescindible rea
     - **Ejemplo práctico**: Enviar un correo simulado con un enlace sospechoso y registrar cuántos empleados hacen clic en él.     
 
 
-**Resultado esperado**: La evaluación inicial proporciona datos concretos para:
+**Resultado esperado**: Una evaluación inicial, que nos proporcionará datos concretos para:
 
-- Diseñar contenidos enfocados en las debilidades detectadas.     
-- Priorizar áreas críticas, como la capacitación en la identificación de amenazas comunes o la protección de datos sensibles.    
+- Una lista de debilidades, que nos permitirá contenidos enfocados en las áreas de mayor riesgo. Ej:      
+- Una priorización sobre áreas críticas, como la capacitación en la identificación de amenazas comunes o la protección de datos sensibles.
+- La identificación de recursos necesarios, como herramientas de formación, tiempo de los empleados y apoyo de los líderes de equipo.
 
 
 #### 4.3. Roles Incluidos en el Plan de Formación y Concienciación
@@ -358,22 +376,22 @@ Cada empleado tiene un papel importante en la seguridad de la organización. Por
 1. **Empleados técnicos**:
 
     - Requieren formación avanzada en áreas como gestión de vulnerabilidades, configuración de firewalls, y respuesta a incidentes.    
-    - **Ejemplo práctico**: Un administrador de sistemas debe aprender a aplicar parches de seguridad en servidores críticos de manera eficiente y sin afectar la operación.     
+    - **Ejemplo**: Un administrador de sistemas debe aprender a aplicar parches de seguridad en servidores críticos de manera eficiente y sin afectar la operación.     
 
 2. **Personal administrativo**:
 
     - Necesitan formación básica en el manejo seguro de datos, como evitar compartir información sensible por correo no cifrado.     
-    - **Ejemplo práctico**: Un empleado de RR.HH. aprende a proteger datos de nóminas utilizando contraseñas cifradas para archivos adjuntos.     
+    - **Ejemplo**: Un empleado de RR.HH. aprende a proteger datos de nóminas utilizando contraseñas cifradas para archivos adjuntos.     
 
 3. **Gerentes y líderes**:
 
     - Deben ser capacitados en la toma de decisiones en caso de incidentes y en la supervisión del cumplimiento de políticas.     
-    - **Ejemplo práctico**: Un gerente debe saber cómo coordinar con el equipo de TI si se detecta un ataque de ransomware.     
+    - **Ejemplo**: Un gerente debe saber cómo coordinar con el equipo de TI si se detecta un ataque de ransomware.     
 
 4. **Empleados con trabajo remoto**:     
 
     - Formación específica en el uso de redes Wi-Fi seguras y herramientas como VPN.     
-    - **Ejemplo práctico**: Un comercial remoto aprende a identificar redes Wi-Fi públicas falsas que podrían ser utilizadas para interceptar su tráfico.     
+    - **Ejemplo**: Un comercial remoto aprende a identificar redes Wi-Fi públicas falsas que podrían ser utilizadas para interceptar su tráfico.     
 
 ##### 4.3.2. Adaptación por características logísticas
 
@@ -382,10 +400,9 @@ La segmentación del plan también debe considerar factores como:
 - **Geografía**: Formación adaptada a normativas locales, como el RGPD en Europa o la CCPA en EE.UU.
 - **Horarios y turnos**: Asegurarse de que los empleados en diferentes horarios puedan acceder a las formaciones, ya sea en vivo o grabadas.
 
-**Ejemplo práctico**:  
-Un comercial remoto en otra zona horaria recibe formación asincrónica sobre prácticas de seguridad al usar dispositivos móviles en viajes internacionales.
+**Ejemplo**: Un comercial remoto en otra zona horaria recibe formación asincrónica sobre prácticas de seguridad al usar dispositivos móviles en viajes internacionales.
 
-##### 4.3.2. Subdivisión de grupos según necesidades específicas
+##### 4.3.3. Subdivisión de grupos según necesidades específicas
 
 La subdivisión puede hacerse para personalizar los contenidos según el nivel de exposición a riesgos o las responsabilidades del rol.
 - **Ejemplo práctico**:    
@@ -395,11 +412,18 @@ La subdivisión puede hacerse para personalizar los contenidos según el nivel d
 
 Al estructurar el plan de esta manera, se asegura que todos los empleados reciban la capacitación que realmente necesitan para su función, maximizando la efectividad del programa.       
 
+
+**Resultado esperado**: El conjunto de de los roles y características de los empleados, características logísticas y necesidades específicas, que nos permitirán identificar los grupos de empleados que requieren formación y concienciación específica, adaptada a sus responsabilidades y riesgos:
+
+- Los diferentes roles y departamentos de la organización, incluyendo técnicos, administrativos, gerentes y empleados remotos.
+- Las características logísticas, como la geografía, los horarios y los turnos de trabajo.
+- La subdivisión de grupos según necesidades específicas, como la exposición a riesgos o las responsabilidades del rol.
+
 #### 4.4. Contenidos del Plan
 
 Los contenidos del Plan de Formación y Concienciación deben ser relevantes, prácticos y adaptados a las necesidades de la organización. El propósito es involucrar a los empleados, garantizar que comprendan la situación actual en materia de seguridad y enseñarles cómo proteger los activos y servicios de la empresa frente a amenazas cibernéticas.
 
-##### 4.4.1. Tipos de contenidos
+Los tipos de contenidos pueden variar según los objetivos del plan y los roles de los empleados, pero es fundamental que sean claros, comprensibles y aplicables a la vida laboral diaria. Estos contenidos versarán sobre:     
 
 1. **Involucrar y notificar**: Explicar de manera clara y directa cuál es la situación de la organización en términos de seguridad, destacando incidentes pasados, vulnerabilidades conocidas o tendencias de amenazas actuales.    
 
@@ -418,13 +442,17 @@ Los contenidos del Plan de Formación y Concienciación deben ser relevantes, pr
     - **Ejemplo práctico**: Capacitar al equipo financiero en la validación de transferencias electrónicas para evitar fraudes.
 
 
-**Resultado esperado**: Los empleados entienden cómo sus acciones impactan la seguridad de la organización y aplican los conocimientos adquiridos en su día a día.
+**Resultado esperado**: Una lista de los contenidos que permitan a los empleados comprender la situación actual de la organización en materia de seguridad, las amenazas más relevantes, las políticas corporativas y cómo proteger los activos y servicios de la empresa frente a amenazas cibernéticas:
 
+- Información de la organización sobre incidentes pasados, vulnerabilidades conocidas y tendencias de amenazas actuales.     
+- Amenazas más relevantes, como phishing, ransomware, ingeniería social y malware, en función de la evaluación de necesidades, y las amenazas más comunes en la organización.     
+- Formación sobre normativas internas, como el uso de contraseñas, políticas de mesa limpia y prohibición de software no autorizado.     
+- Formación específica sobre la protección de activos y servicios críticos, como documentos financieros, datos de clientes o sistemas clave.    
 
 
 #### 4.5. Asociación de Roles y Contenidos
 
-La efectividad del plan depende de su capacidad para adaptarse a las necesidades de cada rol en la organización. Esto implica asociar los contenidos a los grupos de empleados según sus responsabilidades, niveles de conocimiento y riesgos específicos.
+La efectividad del plan depende de su capacidad para adaptarse a las necesidades de cada rol en la organización. Esto implica asociar/adaptar los contenidos a los grupos de empleados según sus responsabilidades, niveles de conocimiento y riesgos específicos.
 
 ##### 4.5.1. Criterios de diseño
 
@@ -443,7 +471,7 @@ La efectividad del plan depende de su capacidad para adaptarse a las necesidades
 
     **Ejemplo práctico**: Para el equipo comercial remoto, simular un intento de suplantación de identidad mientras usan una red Wi-Fi pública.
 
-##### 4.5.2. Ejemplo de asociación
+##### 4.5.2. Ejemplo de asociación/ adaptación de contenidos
 
 | **Rol/Grupo**           | **Contenidos clave**              | **Ejemplo práctico**                                                        |  
 |--------------------------|------------------------------------|-----------------------------------------------------------------------------|  
@@ -452,6 +480,11 @@ La efectividad del plan depende de su capacidad para adaptarse a las necesidades
 | Comerciales remotos      | Uso seguro de redes Wi-Fi         | Mostrar cómo verificar un punto de acceso antes de conectarse.               |  
 | Gerentes                 | Gestión de incidentes             | Simulación de toma de decisiones frente a un ransomware que afecta datos clave. |  
 
+**Resultado esperado**: Los contenidos asociados/adaptados a las necesidades de cada grupo de empleados, garantizando que la formación sea relevante, efectiva y aplicable a su entorno laboral específico
+
+- Contenidos clave para cada grupo de empleados, como phishing, políticas de mesa limpia, configuración segura, respuesta a incidentes, uso seguro de redes Wi-Fi y gestión de incidentes.
+- Adaptando la formación a las necesidades de cada grupo (lenguaje, conocimiento, rol) y garantizando su relevancia y efectividad.
+- Ejemplos prácticos específicos para cada grupo, como identificar errores en un correo sospechoso, configurar firewalls, verificar un punto de acceso o tomar decisiones frente a un ransomware.
 
 
 #### 4.6. Metodologías Formativas
@@ -463,19 +496,27 @@ Para alcanzar los objetivos del plan, las estrategias formativas deben ser viabl
 1. **División por grupos o subgrupos**:    
 
     - Separar a los empleados en grupos según sus roles, horarios o ubicaciones para personalizar las sesiones.    
-    - **Ejemplo práctico**: Un equipo técnico recibe formación presencial sobre gestión de vulnerabilidades, mientras los empleados administrativos acceden a un módulo online sobre phishing.      
+    - **Ejemplo**: Un equipo técnico recibe formación presencial sobre gestión de vulnerabilidades, mientras los empleados administrativos acceden a un módulo online sobre phishing.      
 
-2. **Variedad de metodologías**:     
+2. **Variedad de materiales**: (Ver el punto 5)    
+
+    - **Infografías**: Resúmenes visuales de conceptos clave, como uso de contraseñas seguras o detección de phishing.    
+    - **Manuales**: Guías detalladas sobre procedimientos de seguridad, como respuesta a incidentes o configuración de redes.    
+    - **Simulaciones**: Pruebas prácticas de ataques, como phishing o ransomware, para evaluar la respuesta de los empleados.  
+    - **Módulos online**: Cursos interactivos que permitan a los empleados aprender a su propio ritmo y en cualquier momento.
+    - **Estudios de caso**: Análisis de incidentes reales o simulados para que los empleados aprendan de experiencias pasadas.
+
+3. **Variedad de metodologías**:     
 
     - **Jornadas presenciales o virtuales**: Sesiones interactivas que incluyan preguntas, ejemplos y ejercicios prácticos.     
     - **Correos educativos**: Mensajes regulares con consejos prácticos y recordatorios.     
     - **Simulacros**: Realizar campañas de phishing simuladas o simulaciones de ataques de ransomware.     
     - **Materiales de apoyo**: Guías, infografías y vídeos que refuercen los conceptos.     
 
-3. **Calendario de implementación**:     
+4. **Calendario de implementación**:     
 
     - Establecer una periodicidad para las formaciones (mensual, trimestral o anual).
-    - **Ejemplo práctico**:     
+    - **Ejemplo**:     
         - Enero: Taller práctico de phishing para empleados generales.     
         - Marzo: Simulación de ransomware para técnicos.     
         - Junio: Evaluación general y retroalimentación.     
@@ -489,114 +530,124 @@ Para alcanzar los objetivos del plan, las estrategias formativas deben ser viabl
 | Comerciales remotos       | Redes Wi-Fi seguras, 2FA             | Guías digitales, ejemplos prácticos | Módulo online            | Febrero, Agosto    |  
 | Gerentes                  | Gestión de incidentes, supervisión   | Estudios de caso                  | Simulación de decisión   | Abril, Octubre     |  
 
-**Resultado esperado**: Los empleados reciben formación personalizada y participan activamente en un proceso continuo que fortalece la seguridad de la organización.
+**Resultado esperado**: Una personalización de la formación a los distintos grupos de empleados, con una variedad de metodologías y un calendario de implementación que garantice la efectividad y el impacto del plan. Por cada contenidos clave y  grupo:  
+
+- Materiales de apoyo, como infografías, simulaciones, manuales, laboratorios prácticos, guías digitales y ejemplos prácticos.
+- Metodologías formativas variadas, como talleres interactivos, simulaciones, módulos online, estudios de caso y simulaciones de decisión.
+- Calendario de implementación con sesiones mensuales, trimestrales o semestrales, adaptado a las necesidades de cada grupo de empleados.
 
 
-#### 4.7. Evaluación del Plan de Concienciación
+#### 4.7. Evaluación y actualización del Plan de Concienciación
 
-La evaluación del Plan de Formación y Concienciación es fundamental para medir su impacto, identificar áreas de mejora y asegurar que los objetivos de seguridad se estén alcanzando. Una evaluación bien diseñada permite ajustar el plan a las necesidades cambiantes de la organización y de las amenazas emergentes.
+El Plan de Formación y Concienciación debe ser **dinámico y evolutivo**, adaptándose a los cambios en el entorno de amenazas y a las necesidades internas de la organización. Para asegurar su efectividad, es fundamental evaluar el plan y ajustarlo según los resultados obtenidos.
+
+La evaluación del Plan de Formación y Concienciación es fundamental para medir su impacto, **identificar áreas de mejora y asegurar que los objetivos de seguridad se estén alcanzando**. Una evaluación bien diseñada permite ajustar el plan a las necesidades cambiantes de la organización y de las amenazas emergentes.
+
 
 ##### 4.7.1. Objetivos de la Evaluación
+La evaluación del plan tiene varios objetivos:
 
 1. **Comprobar resultados**: Verificar si los empleados han adquirido los conocimientos y habilidades necesarios para prevenir y responder a incidentes de seguridad.     
-2. **Actualizar el plan**: Adaptar los contenidos y metodologías según los resultados de la evaluación y las nuevas necesidades de seguridad.      
-3. **Identificar brechas**: Detectar grupos o áreas que requieran formación adicional o refuerzo específico.      
+2. **Identificar brechas**: Detectar grupos o áreas que requieran formación adicional o refuerzo específico.
+3. **Actualizar el plan**: Adaptar los contenidos y metodologías según los resultados de la evaluación y las nuevas necesidades de seguridad.      
 
 ##### 4.7.2. Métodos de Evaluación
+La evaluación puede realizarse a través de diferentes métodos, como:
 
 1. **Pruebas de conocimiento**: Cuestionarios diseñados para medir la comprensión de los conceptos clave.
 
-    **Ejemplo práctico**: Una prueba que evalúe si los empleados pueden identificar características de un correo de phishing.      
+    **Ejemplo**: Una prueba que evalúe si los empleados pueden identificar características de un correo de phishing.      
 
 2. **Encuestas de opinión**: Solicitar retroalimentación sobre la calidad, relevancia y utilidad de la formación.     
 
-    **Ejemplo práctico**: Preguntar si los empleados se sienten más preparados para reconocer amenazas después de la capacitación.     
+    **Ejemplo**: Preguntar si los empleados se sienten más preparados para reconocer amenazas después de la capacitación.     
 
 3. **Simulaciones prácticas**: Realizar simulacros de ataques, como phishing o ransomware, para evaluar el comportamiento real de los empleados.   
 
-    **Ejemplo práctico**: Enviar correos simulados con enlaces maliciosos para medir cuántos empleados caen en la trampa.     
+    **Ejemplo**: Enviar correos simulados con enlaces maliciosos para medir cuántos empleados caen en la trampa.     
 
-4. **Revisiones periódicas**: Evaluar el cumplimiento de políticas y normativas de seguridad.      
-
-    **Ejemplo práctico**: Supervisar si los empleados están utilizando contraseñas seguras en sus cuentas corporativas.    
-
-5. **Enfoques prácticos avanzados**:
+6. **Enfoques prácticos avanzados**:
 
     - **Campañas de phishing simuladas**: Monitorear la cantidad de empleados que hacen clic en correos maliciosos.     
     - **Ataques simulados**: Simular una intrusión en la red para medir la respuesta del equipo técnico.    
 
-##### 4.7.3. Formación de refuerzo
 
-Aquellos empleados que no superen la evaluación recibirán formación adicional adaptada a sus deficiencias.    
+##### 4.7.3. Mejora continua
+Tras la evaluación, el plan debe ser actualizado para mejorar su efectividad y adaptarse a las necesidades cambiantes de la organización. La mejora continua garantiza que la formación siga siendo relevante y útil en un entorno de amenazas en constante evolución.
 
-- **Ejemplo práctico**: Si un empleado no puede identificar enlaces sospechosos en una prueba, participará en un taller intensivo sobre phishing.    
+1. **Adaptar según resultados de evaluaciones**: Si un simulacro muestra que los empleados caen fácilmente en ataques de ingeniería social, se refuerza este tema en la próxima capacitación.
 
-
-#### 4.8. Actualización del Plan
-
-El Plan de Formación y Concienciación debe ser **dinámico y evolutivo**, adaptándose a los cambios en el entorno de amenazas y a las necesidades internas de la organización.
-
-##### 4.8.1. Revisión periódica
-
-1. **Frecuencia de revisión**: Realizar revisiones anuales o semestrales del plan para asegurar que los contenidos y metodologías sigan siendo relevantes.     
-
-2. **Incorporación de nuevas amenazas**: Actualizar el plan para incluir temas emergentes, como ataques basados en inteligencia artificial o deepfakes.    
-
-    **Ejemplo práctico**: Introducir formación sobre cómo detectar vídeos falsificados que intenten manipular decisiones empresariales.     
-
-##### 4.8.2. Mejora continua
-
-1. **Adaptar según resultados de evaluaciones**: Si un simulacro muestra que los empleados caen fácilmente en ataques de ingeniería social, se refuerza este tema en la próxima capacitación.    
-
-2. **Integración de retroalimentación**: Incorporar las sugerencias de los empleados para mejorar la experiencia formativa.    
-
-##### 4.8.3. Comunicación de actualizaciones
-
-1. **Informar a los empleados**: Comunicar claramente los cambios y las razones detrás de ellos.     
-
-    **Ejemplo práctico**: "Hemos actualizado nuestra formación para incluir riesgos asociados a deepfakes, ya que se ha identificado como una amenaza emergente."
-
-2. **Asegurar la participación continua**: Motivar a los empleados destacando cómo el plan mejora la seguridad tanto personal como corporativa.
+2. **Integración de retroalimentación**: Incorporar las sugerencias de los empleados para mejorar la experiencia formativa.
 
 
-#### 4.9. Aplicación periódica del Plan
+##### 4.7.4. Formación de refuerzo
 
-Un buen plan debe ser **constante y recurrente**. La aplicación periódica asegura que la concienciación y formación no pierdan vigencia y que los empleados mantengan una postura activa frente a la seguridad.
+De nuevo, tras la evaluación, es importante ofrecer formación adicional adaptada a sus deficiencias a los empleados que no hayan alcanzado los objetivos esperados. Esto garantiza que todos los miembros de la organización estén alineados con las políticas de seguridad y preparados para enfrentar amenazas.
 
-##### 4.9.1. Frecuencia de la formación
+- **Ejemplo**: Si un empleado no puede identificar enlaces sospechosos en una prueba, participará en un taller intensivo sobre phishing.
 
-1. **Formación inicial**:    
 
-    - Impartida a nuevos empleados como parte de su incorporación.     
-    - **Ejemplo práctico**: Un módulo introductorio sobre políticas de seguridad y prácticas básicas, como contraseñas seguras.    
+**Resultado esperado**: Una evaluación del plan de formación y concienciación que permita medir su impacto, identificar áreas de mejora y ajustar los contenidos y metodologías según los resultados obtenidos:
 
-2. **Refrescos regulares**:    
+- Los resultados a medir en función de los objetivos, como la comprensión de conceptos clave, la retroalimentación de los empleados y la efectividad de las simulaciones prácticas.
+- Preguntas claves para obtener la actualización del plan, como la calidad, relevancia y utilidad de la formación.
+- Preguntas claves para identificar brechas en la formación, como el cumplimiento de políticas y normativas de seguridad.
+- Métodos de evaluación variados, como pruebas de conocimiento, encuestas de opinión, simulaciones prácticas, revisiones periódicas y enfoques prácticos avanzados.
+- Formación de refuerzo para los empleados que no hayan alcanzado los objetivos esperados, adaptada a sus deficiencias y necesidades específicas.
 
-    - Sesiones trimestrales o semestrales para reforzar conceptos clave y abordar nuevas amenazas.     
-    - **Ejemplo práctico**: Taller de actualización sobre los últimos tipos de ransomware y cómo prevenirlos.     
 
-3. **Formaciones especiales**:     
+#### 4.9. Planificación y revisión periódica del Plan de Formación y Concienciación
 
-    - Impartidas en respuesta a cambios importantes, como una actualización masiva de sistemas o la implementación de nuevas normativas.     
-    - **Ejemplo práctico**: Capacitar a los empleados sobre cómo usar un nuevo software de cifrado implementado por la empresa.     
+Un buen plan debe ser **constante y recurrente**. La aplicación y revisión periódica del plan asegura que se mantenga actualizado y relevante en un entorno de amenazas en constante evolución, que la concienciación y formación no pierdan vigencia y que los empleados mantengan una postura activa frente a la seguridad.
+
+La revisión debe incluir la incorporación de nuevas amenazas, la adaptación a cambios internos y la mejora continua de los contenidos y metodologías.
+
+
+##### 4.9.1. Frecuencia de la formación y revisión
+La formación  deben ser **continuas y adaptativas**, con diferentes tipos de actividades y una frecuencia de revisión que garantice la efectividad y la actualización constante del plan.
+
+1. **Formación inicial**: Impartida a nuevos empleados como parte de su incorporación.    
+
+    - **Ejemplo**: Un módulo introductorio sobre políticas de seguridad y prácticas básicas, como contraseñas seguras.    
+
+2. **Refrescos regulares**: Sesiones trimestrales o semestrales para reforzar conceptos clave y abordar nuevas amenazas.
+
+    - **Ejemplo**: Taller de actualización sobre los últimos tipos de ransomware y cómo prevenirlos.     
+
+3. **Formaciones especiales**: Impartidas en respuesta a cambios importantes, como una actualización masiva de sistemas o la implementación de nuevas normativas. 
+
+    - **Ejemplo**: Capacitar a los empleados sobre cómo usar un nuevo software de cifrado implementado por la empresa.     
+
+4. **Frecuencia de revisión**: Realizar revisiones tras cada ejecución regular, para asegurar que los contenidos y metodologías sigan siendo relevantes.
+    
+    - **Ejemplo**: Tras la evaluación de una formación regular, revisar los resultados y ajustar el plan según las necesidades identificadas.
+
+5. **Incorporación de nuevas amenazas**: Actualizar el plan para incluir temas emergentes, es responsabilidad de la organización mantenerse al día con las últimas tendencias en ciberseguridad.    
+
+    - **Ejemplo**: Introducir formación sobre cómo detectar vídeos falsificados que intenten manipular decisiones empresariales.
 
 ##### 4.9.2. Continuidad en la concienciación
+La concienciación en ciberseguridad debe ser un **proceso continuo y constante**, no un evento puntual. La organización debe mantener la ciberseguridad presente en el día a día de los empleados, reforzando los conceptos clave y fomentando una cultura de seguridad.
 
-1. **Campañas informativas**:    
+1. **Campañas informativas**: Correos electrónicos, infografías y alertas periódicas para mantener la ciberseguridad presente en el día a día de los empleados.  
 
-    - Correos electrónicos, infografías y alertas periódicas para mantener la ciberseguridad presente en el día a día de los empleados.
+    - **Ejemplo**: Enviar un correo semanal con consejos de seguridad y recordatorios sobre políticas internas.
 
-2. **Gamificación y competencias**:    
+2. **Gamificación y competencias**: Organizar concursos para reforzar conceptos de seguridad de manera divertida.    
 
-    - Organizar concursos para reforzar conceptos de seguridad de manera divertida.    
-    - **Ejemplo práctico**: Una competencia donde los empleados ganen puntos por identificar correos de phishing en simulaciones.     
+    - **Ejemplo**: Una competencia donde los empleados ganen puntos por identificar correos de phishing en simulaciones.     
 
-##### 4.9.3. Resultados esperados
-
-1. **Cultura de ciberseguridad sólida**: Los empleados se sienten empoderados y responsables de la seguridad.         
-2. **Reducción de incidentes**: Al mantener una capacitación constante, la organización reduce significativamente su superficie de ataque.    
 
 Con estos pasos, la evaluación, actualización y aplicación periódica del plan se convierten en un ciclo continuo que refuerza la postura de seguridad de la organización y mejora su resiliencia frente a amenazas.
+
+
+**Resultado esperado**: Una planificación periódica de ejecución del plan de formación y concienciación y de revisión de este, que garantice la continuidad y efectividad de las actividades formativas:    
+
+- Temporización de ejecución del Plan de formación regular para mantener a los empleados actualizados sobre las últimas tendencias en ciberseguridad y cómo detectar nuevas amenazas.    
+- Temporización del Plan de concienciación con campañas informativas, gamificación y competencias para mantener la ciberseguridad presente en el día a día de los empleados.     
+- Plan de formación inicial para nuevos empleados, refrescos regulares trimestrales o semestrales, formaciones especiales en respuesta a cambios importantes y revisiones periódicas para ajustar el plan según las necesidades identificadas.   
+- Frecuencia de revisión de plan e inclusión de nuevas amenazas, para asegurar que los contenidos y metodologías sigan siendo relevantes y que asi garantice la efectividad y la adaptabilidad del plan de formación y concienciación.    
+
 
 
 ### 5. Tipos de Materiales para la Formación y Concienciación

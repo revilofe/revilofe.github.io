@@ -414,7 +414,8 @@ Para crear un pull request, hay que hacer lo siguiente:
     git add .
     git commit -m "Mensaje del commit"
     git push origin <rama>
-    ```
+    ```   
+
 4. Ir a la página del repositorio en GitHub y hacer clic en "New pull request".    
 
     ![crear un pull request](./assets/EDES-U4.1.-Git_Github-1709743019371.png)

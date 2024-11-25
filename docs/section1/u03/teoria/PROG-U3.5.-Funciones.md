@@ -53,11 +53,13 @@ Diseña un programa que gestione una lista de tareas pendientes. El usuario debe
 Divide el problema principal en subtareas o pasos más pequeños. Cada subtarea puede convertirse en una función.
 
 **Ejemplo:**    
-Para el problema de la lista de tareas, las subtareas podrían ser:
-1. Mostrar un menú con opciones.
-2. Añadir una tarea a la lista.
-3. Mostrar la lista de tareas.
-4. Marcar una tarea como completada.
+Para el problema de la lista de tareas, las subtareas podrían ser:     
+
+1. Mostrar un menú con opciones.    
+2. Añadir una tarea a la lista.   
+3. Mostrar la lista de tareas.   
+4. Marcar una tarea como completada.    
+
 
 #### 1.3. Define la estructura del programa
 Crea un esquema básico que describa qué hace cada parte del programa. Este esquema es como un "borrador" del programa.
@@ -96,51 +98,57 @@ Mientras el programa no haya terminado:
 #### 1.5. Identifica las funciones necesarias
 
 Para cada paso del pseudocódigo, identifica qué funciones serán necesarias. Pregúntate:    
-- **¿Qué tareas son independientes?**    
+
+- **¿Qué tareas son independientes?**      
 - **¿Qué código se repite?**    
 - **¿Puedo separar la entrada, procesamiento y salida?**    
 - **¿Cada función tiene una responsabilidad clara?**    
 
 Y para cada funcion:    
+
 - **¿Qué tarea realiza esta función?**       
 - **¿Qué datos necesita esta función?** (parámetros)        
 - **¿Qué devuelve esta función?** (resultado)      
 
 **Ejemplo:**
 Funciones necesarias inicialmente:
-1. `mostrar_menu()`: Muestra el menú de opciones al usuario.
-2. `opcion_añadir_tarea(lista_tareas)`: Añade una tarea a la lista.
-3. `opcion_mostrar_tareas(lista_tareas)`: Muestra todas las tareas.
-4. `opcion_completar_tarea(lista_tareas)`: Marca una tarea como completada.
+
+1. `mostrar_menu()`: Muestra el menú de opciones al usuario.    
+2. `opcion_añadir_tarea(lista_tareas)`: Añade una tarea a la lista.   
+3. `opcion_mostrar_tareas(lista_tareas)`: Muestra todas las tareas.    
+4. `opcion_completar_tarea(lista_tareas)`: Marca una tarea como completada.   
 
 En un análisis posterior puedes analizar que hace cada función para separar las funciones que interactuan con el usuario de las que realizan operaciones sobre los datos.
 
-Funciones auxilares de entrada y salida, interactúan con el usuario.
-1. `mostrar_menu`
-2. `pedir_opcion`
-3. `pedir_descripcion`
-4. `pedir_indice`
-5. `mostrar_tareas` 
-6. `mostrar_mensaje` 
+Funciones auxilares de entrada y salida, interactúan con el usuario.    
 
-Funciones que realizan operaciones sobre los datos.
-1. `añadir_tarea`
-2. `eliminar_tarea`
-3. `completar_tarea`
-4. `listar_tareas`
+1. `mostrar_menu`    
+2. `pedir_opcion`    
+3. `pedir_descripcion`    
+4. `pedir_indice`    
+5. `mostrar_tareas`     
+6. `mostrar_mensaje`     
+
+Funciones que realizan operaciones sobre los datos.    
+
+1. `añadir_tarea`    
+2. `eliminar_tarea`     
+3. `completar_tarea`    
+4. `listar_tareas`    
 
 Es posible que tengas que realizar varias iteraciones para identificar todas las funciones necesarias.
 
 #### 1.6. Esquema de funciones
 Organiza las funciones según su propósito:    
 
-1. **Funciones principales**: Coordinan el flujo general del programa.    
-2. **Funciones auxiliares**: Realizan tareas específicas dentro de las funciones     principales.
+1. **Funciones principales**: Coordinan el flujo general del programa.     
+2. **Funciones auxiliares**: Realizan tareas específicas dentro de las funciones principales.     
 
-**Ejemplo:**
-1. Las funciones opcion_añadir_tarea, opcion_mostrar_tareas, opcion_completar_tarea y opcion_mostrar_tareas son funciones principales, guía el flujo del programa.
-2. Las funciones añadir_tarea, eliminar_tarea, completar_tarea y listar_tareas son funciones auxiliares, son funciones auxiliares que realizan operaciones específicas sobre los datos.
-3. Las funciones mostrar_menu, pedir_opcion, pedir_descripcion, pedir_indice, mostrar_tareas y mostrar_mensaje son funciones auxilares de entrada y salida, interactúan con el usuario.
+**Ejemplo:**     
+
+1. Las funciones opcion_añadir_tarea, opcion_mostrar_tareas, opcion_completar_tarea y opcion_mostrar_tareas son funciones principales, guía el flujo del programa.    
+2. Las funciones añadir_tarea, eliminar_tarea, completar_tarea y listar_tareas son funciones auxiliares, son funciones auxiliares que realizan operaciones específicas sobre los datos.     
+3. Las funciones mostrar_menu, pedir_opcion, pedir_descripcion, pedir_indice, mostrar_tareas y mostrar_mensaje son funciones auxilares de entrada y salida, interactúan con el usuario.     
 
 
 #### 1.7. Implementa una función a la vez
@@ -151,7 +159,7 @@ Empieza escribiendo las funciones más simples y ve construyendo desde ahí. Est
 
 **Estructura básica**    
 
-1. **Operaciones sobre la estructura de datos**: Funciones que trabajan exclusivamente con los datos (añadir, eliminar, cambiar el estado de una tarea, etc.).
+1. **Operaciones sobre la estructura de datos**: Funciones que trabajan exclusivamente con los datos (añadir, eliminar, cambiar el estado de una tarea, etc.).     
 2. **Entrada y salida**: Funciones que se encargan de interactuar con el usuario (mostrar menús, recibir entradas y mostrar resultados).     
 3. **Controlador**: Coordina las operaciones entre la E/S y las funciones que manipulan los datos.    
 

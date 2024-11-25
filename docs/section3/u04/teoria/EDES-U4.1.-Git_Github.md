@@ -416,23 +416,20 @@ Para crear un pull request, hay que hacer lo siguiente:
     git push origin <rama>
     ```
 4. Ir a la página del repositorio en GitHub y hacer clic en "New pull request".   
- 
 
-   <figure markdown>
-       ![](./assets/EDES-U4.1.-Git_Github-1709743019371.png)
-      <figcaption>crear un pull request</figcaption>
-   </figure>
-
+ <figure markdown>
+     ![](./assets/EDES-U4.1.-Git_Github-1709743019371.png)
+    <figcaption>crear un pull request</figcaption>
+ </figure>
 
 5. Seleccionar la rama que se quiere fusionar con la rama principal.    
 6. Añadir un título y una descripción.    
 7. Hacer clic en "Create pull request".    
 
-   <figure markdown>
-       ![](./assets/EDES-U4.1.-Git_Github-1709743055290.png)
-      <figcaption>Create Pull request</figcaption>
-   </figure>
-
+ <figure markdown>
+     ![](./assets/EDES-U4.1.-Git_Github-1709743055290.png)
+    <figcaption>Create Pull request</figcaption>
+ </figure>
 
 8. Esperar a que alguien revise el pull request.    
 

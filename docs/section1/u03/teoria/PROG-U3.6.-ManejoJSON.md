@@ -429,17 +429,28 @@ print(cadena_json)
 ```
 
 **¿Qué sucede aquí?**
-	- El diccionario `datos` contiene:
-	    * "evento": una cadena (str), que es serializable de manera directa.
-	    * "fecha": un objeto de tipo datetime, que no es serializable por defecto.
-	- La función `json.dumps()` intenta serializar cada valor del diccionario.
-	    * Al llegar a "fecha", detecta que es un tipo datetime (no serializable directamente).
-        * Llama a la función proporcionada en el argumento default, que es `convertir`.
-	- La función `convertir`:
-	    * Verifica si el objeto es de tipo datetime con `isinstance(obj, datetime)`.
-	    * Si lo es, lo convierte al formato ISO 8601 utilizando el método `isoformat()`.
-	    * Si no puede convertir el objeto, lanza un ***TypeError***.
-	- Finalmente, `json.dumps()` crea la cadena JSON con el formato que podemos observar en ***Salida***.
+
+   - El diccionario `datos` contiene:
+      
+      * "evento": una cadena (str), que es serializable de manera directa.
+      
+      * "fecha": un objeto de tipo datetime, que no es serializable por defecto.
+
+   - La función `json.dumps()` intenta serializar cada valor del diccionario.
+   
+      * Al llegar a "fecha", detecta que es un tipo datetime (no serializable directamente).
+      
+      * Llama a la función proporcionada en el argumento default, que es `convertir`.
+
+   - La función `convertir`:
+   
+      * Verifica si el objeto es de tipo datetime con `isinstance(obj, datetime)`.
+      
+      * Si lo es, lo convierte al formato ISO 8601 utilizando el método `isoformat()`.
+
+      * Si no puede convertir el objeto, lanza un ***TypeError***.
+   
+   - Finalmente, `json.dumps()` crea la cadena JSON con el formato que podemos observar en ***Salida***.
 
 **Salida:**
 

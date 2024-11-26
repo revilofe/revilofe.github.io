@@ -1,4 +1,4 @@
-## **Análisis de datos en un censo**
+## **Prueba Práctica 02: Análisis de datos en un censo**
 
 ### **Contexto:**
 

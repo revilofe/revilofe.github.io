@@ -388,10 +388,15 @@ Después de ejecutar el programa, el archivo `datos.json` tendrá el siguiente c
 
 ##### **2.8.1. Serialización de Objetos**
 
-La serialización es el proceso de convertir un objeto en memoria *(como una lista, diccionario, o incluso objetos más complejos)* en un formato que pueda ser fácilmente almacenado o transmitido, como un archivo JSON, XML o binario. En el contexto de JSON, serializar un objeto significa convertirlo a una cadena en formato JSON para:
-	1.	Almacenamiento persistente: Guardarlo en un archivo o base de datos.
-	2.	Transmisión de datos: Enviarlo a través de una red, como en una API o un servicio web.
-	3.	Compatibilidad: Interoperar con otros sistemas que usen JSON.
+La serialización es el proceso de convertir un objeto en memoria *(como una lista, diccionario, o incluso objetos más complejos)* en un formato que pueda ser fácilmente almacenado o transmitido, como un archivo JSON, XML o binario. 
+
+En el contexto de JSON, serializar un objeto significa convertirlo a una cadena en formato JSON para:
+
+   1. Almacenamiento persistente: Guardarlo en un archivo o base de datos.
+
+   2. Transmisión de datos: Enviarlo a través de una red, como en una API o un servicio web.
+
+   3. Compatibilidad: Interoperar con otros sistemas que usen JSON.
 
 Deserialización, por el contrario, es el proceso inverso: convertir la representación JSON de vuelta a un objeto en memoria.
 

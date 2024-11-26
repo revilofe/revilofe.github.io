@@ -5146,18 +5146,48 @@ En Python, se gestionan principalmente con el módulo integrado <code>json</code
 <a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="n">cadena_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">datos</span><span class="p">,</span> <span class="n">default</span> <span class="o">=</span> <span class="n">convertir</span><span class="p">,</span> <span class="n">indent</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
 <a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="nb">print</span><span class="p">(</span><span class="n">cadena_json</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>¿Qué sucede aquí?</strong>
-    - El diccionario <code>datos</code> contiene:
-        * "evento": una cadena (str), que es serializable de manera directa.
-        * "fecha": un objeto de tipo datetime, que no es serializable por defecto.
-    - La función <code>json.dumps()</code> intenta serializar cada valor del diccionario.
-        * Al llegar a "fecha", detecta que es un tipo datetime (no serializable directamente).
-        * Llama a la función proporcionada en el argumento default, que es <code>convertir</code>.
-    - La función <code>convertir</code>:
-        * Verifica si el objeto es de tipo datetime con <code>isinstance(obj, datetime)</code>.
-        * Si lo es, lo convierte al formato ISO 8601 utilizando el método <code>isoformat()</code>.
-        * Si no puede convertir el objeto, lanza un <strong><em>TypeError</em></strong>.
-    - Finalmente, <code>json.dumps()</code> crea la cadena JSON con el formato que podemos observar en <strong><em>Salida</em></strong>.</p>
+<p><strong>¿Qué sucede aquí?</strong></p>
+<ul>
+<li>
+<p>El diccionario <code>datos</code> contiene:</p>
+<ul>
+<li>
+<p>"evento": una cadena (str), que es serializable de manera directa.</p>
+</li>
+<li>
+<p>"fecha": un objeto de tipo datetime, que no es serializable por defecto.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>La función <code>json.dumps()</code> intenta serializar cada valor del diccionario.</p>
+<ul>
+<li>
+<p>Al llegar a "fecha", detecta que es un tipo datetime (no serializable directamente).</p>
+</li>
+<li>
+<p>Llama a la función proporcionada en el argumento default, que es <code>convertir</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>La función <code>convertir</code>:</p>
+<ul>
+<li>
+<p>Verifica si el objeto es de tipo datetime con <code>isinstance(obj, datetime)</code>.</p>
+</li>
+<li>
+<p>Si lo es, lo convierte al formato ISO 8601 utilizando el método <code>isoformat()</code>.</p>
+</li>
+<li>
+<p>Si no puede convertir el objeto, lanza un <strong><em>TypeError</em></strong>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Finalmente, <code>json.dumps()</code> crea la cadena JSON con el formato que podemos observar en <strong><em>Salida</em></strong>.</p>
+</li>
+</ul>
 <p><strong>Salida:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">{</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="nt">&quot;evento&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Reunión&quot;</span><span class="p">,</span>

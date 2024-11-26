@@ -19,15 +19,17 @@ tags:
 
 ## 4.1. Plan de Formación y Concienciación en Ciberseguridad
 
-### 1. Introducción al plan de formación y concienciación
-
-La ciberseguridad no solo depende de tecnologías avanzadas, sino también del personal que las utiliza. Un **Plan de Formación y Concienciación** busca capacitar a los empleados para **prevenir, mitigar o responder** a posibles amenazas que puedan afectar a la organización. Este enfoque integral permite que todos, desde técnicos hasta personal administrativo, desempeñen un papel activo en la protección de los activos digitales.
+La formación y concienciación complementan las medidas técnicas de seguridad, permitiendo que los empleados sean un eslabón fuerte en la protección de la organización. Todas la medidas de seguridad, como cortafuegos, antivirus o sistemas de detección de intrusos, políticas de seguridad, etc., pueden ser inútiles si los empleados no están formados y concienciados en ciberseguridad.
 
 
 <figure markdown>
   ![](assets/PlanFormacion.jpeg)
   <figcaption>Plan de Formación y Concienciación</figcaption>
 </figure>
+
+### 1. Introducción al plan de formación y concienciación
+
+La ciberseguridad no solo depende de tecnologías avanzadas, sino también del personal que las utiliza. Un **Plan de Formación y Concienciación** busca capacitar a los empleados para **prevenir, mitigar o responder** a posibles amenazas que puedan afectar a la organización. Este enfoque integral permite que todos, desde técnicos hasta personal administrativo, desempeñen un papel activo en la protección de los activos digitales.
 
 
 #### 1.1. Misión del Plan de Formación y Concienciación

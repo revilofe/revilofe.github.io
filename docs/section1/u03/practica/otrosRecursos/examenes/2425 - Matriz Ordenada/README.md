@@ -1,4 +1,4 @@
-### **Prueba Práctica: Manipulación de Matrices**
+## **Prueba Práctica 01: Manipulación de Matrices**
 
 **Objetivo:**
 En esta práctica, trabajarás con matrices en Python, aprendiendo a manipular y organizar datos almacenados en colecciones avanzadas como listas y diccionarios. Diseñarás un programa modular que permita al usuario crear, ordenar y mostrar matrices siguiendo unos requisitos específicos.

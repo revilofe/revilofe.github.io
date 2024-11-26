@@ -155,7 +155,7 @@ Los servicios que utiliza la organización también deben considerarse en el dis
 - **Almacenamiento en la nube**: Enseñar a los empleados cómo gestionar permisos en plataformas como Google Drive o OneDrive, asegurándose de no compartir documentos confidenciales públicamente.     
 - **Redes sociales corporativas**: Entrenar a los encargados de gestionar redes sociales para detectar intentos de suplantación de identidad o manipulación de cuentas oficiales.     
 
-Un ejemplo práctico sería enseñar a un empleado que gestiona las redes sociales de la empresa a reconocer mensajes maliciosos dirigidos a hackear la cuenta oficial, como correos falsos de "verificación de cuenta".
+Un Ejemplo sería enseñar a un empleado que gestiona las redes sociales de la empresa a reconocer mensajes maliciosos dirigidos a hackear la cuenta oficial, como correos falsos de "verificación de cuenta".
 
 ##### 2.2.5.  Políticas de la empresa
 
@@ -196,7 +196,7 @@ Las características propias de la organización también influyen en el diseño
 
 Por ejemplo, una empresa multinacional que opera en Europa debe capacitar a su personal sobre el manejo adecuado de datos personales según el Reglamento General de Protección de Datos (GDPR).
 
-#### 2.3. Ejemplo práctico del diseño del plan
+#### 2.3. Ejemplo del diseño del plan
 
 Imaginemos una empresa que maneja información financiera y tiene tanto personal administrativo como técnico, además de una política de trabajo híbrido. El diseño del plan incluiría:
 
@@ -224,69 +224,69 @@ La formación comenzará con temas esenciales que son comunes a todos los emplea
 ##### 3.1.1. Uso de contraseñas y sistemas de verificación
 
 - **Objetivo**: Enseñar a los empleados a crear y gestionar contraseñas seguras y a utilizar sistemas de autenticación de múltiples factores (MFA).
-- **Ejemplo práctico**: Aprender a generar una contraseña usando las iniciales de una frase, como “Me gusta el café con leche” → **MgECCL2024!**.
+- **Ejemplo**: Aprender a generar una contraseña usando las iniciales de una frase, como “Me gusta el café con leche” → **MgECCL2024!**.
 - **Consejo**: Introducir administradores de contraseñas para evitar contraseñas repetidas o débiles.
 
 ##### 3.1.2. Reconocimiento de phishing
 
 - **Objetivo**: Capacitar a los empleados para identificar correos electrónicos y mensajes sospechosos que intenten robar información confidencial.
-- **Ejemplo práctico**: Presentar simulacros de correos de phishing con errores comunes, como un dominio falso (*empresaa.com* en lugar de *empresa.com*).
+- **Ejemplo**: Presentar simulacros de correos de phishing con errores comunes, como un dominio falso (*empresaa.com* en lugar de *empresa.com*).
 - **Consejo**: Enfatizar la importancia de no hacer clic en enlaces o descargar archivos de remitentes desconocidos.
 
 ##### 3.1.3. Peligros de descargas y uso de software no autorizado
 
 - **Objetivo**: Concienciar sobre los riesgos de instalar software no aprobado, que podría contener malware o comprometer la seguridad de la red.
-- **Ejemplo práctico**: Mostrar casos reales donde programas descargados de sitios no oficiales infectaron sistemas empresariales.
+- **Ejemplo**: Mostrar casos reales donde programas descargados de sitios no oficiales infectaron sistemas empresariales.
 
 ##### 3.1.4. Uso apropiado de internet
 
 - **Objetivo**: Establecer normas para navegar de manera segura y evitar visitar sitios web sospechosos o inapropiados.
-- **Ejemplo práctico**: Enseñar a verificar certificados de seguridad en páginas web para compras en línea o transferencias bancarias.
+- **Ejemplo**: Enseñar a verificar certificados de seguridad en páginas web para compras en línea o transferencias bancarias.
 
 ##### 3.1.5. Ingeniería social
 
 - **Objetivo**: Detectar y prevenir intentos de manipulación psicológica diseñados para obtener información confidencial.
-- **Ejemplo práctico**: Relatar un escenario donde una llamada telefónica pretende ser del soporte técnico para obtener credenciales.
+- **Ejemplo**: Relatar un escenario donde una llamada telefónica pretende ser del soporte técnico para obtener credenciales.
 
 ##### 3.1.6. Uso de dispositivos de almacenamiento externos
 
 - **Objetivo**: Capacitar sobre los riesgos de conectar dispositivos externos no verificados, como pendrives, a los sistemas corporativos.
-- **Ejemplo práctico**: Explicar cómo un USB infectado podría contener un malware capaz de robar información.
+- **Ejemplo**: Explicar cómo un USB infectado podría contener un malware capaz de robar información.
 
 ##### 3.1.7. Políticas de trabajo remoto
 
 - **Objetivo**: Enseñar prácticas seguras para trabajar desde casa o en ubicaciones externas.
-- **Ejemplo práctico**: Mostrar cómo usar una VPN para proteger las conexiones a la red corporativa.
+- **Ejemplo**: Mostrar cómo usar una VPN para proteger las conexiones a la red corporativa.
 
 ##### 3.1.8. Uso de redes inalámbricas
 
 - **Objetivo**: Prevenir conexiones inseguras a redes Wi-Fi públicas.
-- **Ejemplo práctico**: Enseñar a verificar el nombre del punto de acceso con el establecimiento antes de conectarse.
+- **Ejemplo**: Enseñar a verificar el nombre del punto de acceso con el establecimiento antes de conectarse.
 
 ##### 3.1.9. Actualización del software
 
 - **Objetivo**: Fomentar la instalación de actualizaciones y parches para reducir vulnerabilidades en sistemas y aplicaciones.
-- **Ejemplo práctico**: Explicar cómo un sistema desactualizado puede ser vulnerable a exploits conocidos, como ocurrió en el caso del ransomware WannaCry.
+- **Ejemplo**: Explicar cómo un sistema desactualizado puede ser vulnerable a exploits conocidos, como ocurrió en el caso del ransomware WannaCry.
 
 ##### 3.1.10. Copias de seguridad
 
 - **Objetivo**: Capacitar sobre la importancia de realizar copias de seguridad regularmente para proteger la información ante incidentes.
-- **Ejemplo práctico**: Mostrar cómo una copia de seguridad bien hecha puede salvar datos tras un ataque de ransomware.
+- **Ejemplo**: Mostrar cómo una copia de seguridad bien hecha puede salvar datos tras un ataque de ransomware.
 
 ##### 3.1.11. Notificación de incidentes
 
 - **Objetivo**: Establecer procedimientos claros para reportar incidentes de seguridad.
-- **Ejemplo práctico**: Instruir a los empleados sobre cómo contactar al equipo de TI si detectan un correo malicioso o actividad sospechosa.
+- **Ejemplo**: Instruir a los empleados sobre cómo contactar al equipo de TI si detectan un correo malicioso o actividad sospechosa.
 
 ##### 3.1.12. Leyes y normativas (RGPD, LOPD GDD)
 
 - **Objetivo**: Proporcionar una visión general de las leyes de protección de datos relevantes para la organización.
-- **Ejemplo práctico**: Explicar cómo manejar datos personales de acuerdo con el RGPD, como obtener el consentimiento explícito antes de recopilar información de clientes.
+- **Ejemplo**: Explicar cómo manejar datos personales de acuerdo con el RGPD, como obtener el consentimiento explícito antes de recopilar información de clientes.
 
 ##### 3.1.13. Políticas de “mesa limpia”
 
 - **Objetivo**: Promover el hábito de mantener los escritorios y estaciones de trabajo libres de documentos o dispositivos confidenciales cuando no estén en uso.
-- **Ejemplo práctico**: Enseñar a guardar contratos, informes u otros materiales sensibles en armarios cerrados al final de la jornada laboral.
+- **Ejemplo**: Enseñar a guardar contratos, informes u otros materiales sensibles en armarios cerrados al final de la jornada laboral.
 
 #### 3.2. Personalización y profundización
 
@@ -297,7 +297,7 @@ Por ejemplo:
 - **RR.HH.**: Manejo de datos personales de empleados según el RGPD.
 - **Finanzas**: Identificación de fraudes en transferencias bancarias y medidas para proteger sistemas de pago.
 
-#### 3.3. Ejemplo práctico de capacitación
+#### 3.3. Ejemplo de capacitación
 
 **Escenario 1:** Se realiza una sesión de formación donde los empleados reciben ejemplos de correos de phishing reales. Aprenden a identificar señales sospechosas, como direcciones de remitente inusuales o errores gramaticales. Después, los empleados participan en un simulacro donde deben responder si un correo es legítimo o fraudulento.
 
@@ -318,15 +318,15 @@ El principal objetivo del plan es **fomentar una cultura de ciberseguridad**, es
 
 1. **Proteger los datos corporativos**: Reducir la exposición de información sensible a amenazas internas y externas.    
 
-    - **Ejemplo práctico**: Asegurar que los empleados sepan cifrar documentos antes de compartirlos externamente.   
+    - **Ejemplo**: Asegurar que los empleados sepan cifrar documentos antes de compartirlos externamente.   
 
 2. **Promover prácticas seguras**: Enseñar hábitos cotidianos que reduzcan riesgos, como el uso de contraseñas robustas y la identificación de correos maliciosos.    
 
-    - **Ejemplo práctico**: Realizar un taller práctico para que cada empleado configure autenticación de dos factores (2FA) en sus cuentas laborales.      
+    - **Ejemplo**: Realizar un taller práctico para que cada empleado configure autenticación de dos factores (2FA) en sus cuentas laborales.      
 
 3. **Concienciar sobre amenazas potenciales**: Hacer que los empleados sean capaces de reconocer tácticas de ingeniería social, intentos de phishing y otras amenazas.    
 
-    - **Ejemplo práctico**: Mostrar ejemplos reales de ataques a empresas similares para enfatizar los riesgos.
+    - **Ejemplo**: Mostrar ejemplos reales de ataques a empresas similares para enfatizar los riesgos.
 
 Un plan con estos objetivos no solo refuerza la seguridad, sino que también crea empleados más conscientes y responsables.
 
@@ -347,17 +347,17 @@ Los pasos para la evaluación:
 1. **Realizar encuestas y pruebas de conocimiento**:     
 
     - Aplicar cuestionarios para medir el nivel de comprensión sobre temas clave, como phishing o uso de contraseñas.     
-    - **Ejemplo práctico**: Una encuesta revela que solo el 40% de los empleados sabe cómo verificar un enlace en un correo electrónico.     
+    - **Ejemplo**: Una encuesta revela que solo el 40% de los empleados sabe cómo verificar un enlace en un correo electrónico.     
     
 2. **Entrevistas con líderes de equipos y responsables técnicos**:      
 
     - Recopilar información sobre incidentes pasados o puntos críticos en la seguridad de cada departamento.     
-    - **Ejemplo práctico**: El equipo de TI reporta que muchos empleados no actualizan sus sistemas, lo que expone la organización a vulnerabilidades conocidas.     
+    - **Ejemplo**: El equipo de TI reporta que muchos empleados no actualizan sus sistemas, lo que expone la organización a vulnerabilidades conocidas.     
 
 3. **Simulaciones de ataques**:    
 
     - Realizar pruebas prácticas, como una campaña de phishing simulada, para medir el comportamiento real de los empleados frente a amenazas.     
-    - **Ejemplo práctico**: Enviar un correo simulado con un enlace sospechoso y registrar cuántos empleados hacen clic en él.     
+    - **Ejemplo**: Enviar un correo simulado con un enlace sospechoso y registrar cuántos empleados hacen clic en él.     
 
 
 **Resultado esperado**: Una evaluación inicial, que nos proporcionará datos concretos para:
@@ -405,10 +405,10 @@ La segmentación del plan también debe considerar factores como:
 ##### 4.3.3. Subdivisión de grupos según necesidades específicas
 
 La subdivisión puede hacerse para personalizar los contenidos según el nivel de exposición a riesgos o las responsabilidades del rol.
-- **Ejemplo práctico**:    
+**Ejemplo**:    
 
-    - Grupo 1: Técnicos que manejan sistemas críticos → Formación sobre detección de intrusiones.    
-    - Grupo 2: Empleados administrativos → Talleres sobre phishing e ingeniería social.    
+- Grupo 1: Técnicos que manejan sistemas críticos → Formación sobre detección de intrusiones.    
+- Grupo 2: Empleados administrativos → Talleres sobre phishing e ingeniería social.    
 
 Al estructurar el plan de esta manera, se asegura que todos los empleados reciban la capacitación que realmente necesitan para su función, maximizando la efectividad del programa.       
 
@@ -427,19 +427,19 @@ Los tipos de contenidos pueden variar según los objetivos del plan y los roles 
 
 1. **Involucrar y notificar**: Explicar de manera clara y directa cuál es la situación de la organización en términos de seguridad, destacando incidentes pasados, vulnerabilidades conocidas o tendencias de amenazas actuales.    
 
-    - **Ejemplo práctico**: Mostrar un caso donde la empresa sufrió una brecha de datos debido a un correo de phishing.
+    - **Ejemplo**: Mostrar un caso donde la empresa sufrió una brecha de datos debido a un correo de phishing.
 
 2. **Formar y concienciar sobre amenazas**: Proveer información sobre las amenazas más relevantes, como phishing, ransomware, ataques por ingeniería social o malware.     
 
-    - **Ejemplo práctico**: Simular un correo que intenta obtener credenciales para demostrar cómo los ciberdelincuentes engañan a las víctimas.
+    - **Ejemplo**: Simular un correo que intenta obtener credenciales para demostrar cómo los ciberdelincuentes engañan a las víctimas.
 
 3. **Relacionados con políticas corporativas**: Detallar las normativas internas que los empleados deben cumplir, como el uso de contraseñas, políticas de mesa limpia o la prohibición de instalar software no autorizado.     
 
-    - **Ejemplo práctico**: Explicar la política de actualización de software, mostrando cómo un sistema sin parches puede ser explotado.
+    - **Ejemplo**: Explicar la política de actualización de software, mostrando cómo un sistema sin parches puede ser explotado.
 
 4. **Protección de activos y servicios**: Enseñar cómo proteger datos y sistemas específicos de la organización, como documentos financieros, datos de clientes o sistemas críticos.
 
-    - **Ejemplo práctico**: Capacitar al equipo financiero en la validación de transferencias electrónicas para evitar fraudes.
+    - **Ejemplo**: Capacitar al equipo financiero en la validación de transferencias electrónicas para evitar fraudes.
 
 
 **Resultado esperado**: Una lista de los contenidos que permitan a los empleados comprender la situación actual de la organización en materia de seguridad, las amenazas más relevantes, las políticas corporativas y cómo proteger los activos y servicios de la empresa frente a amenazas cibernéticas:
@@ -458,22 +458,22 @@ La efectividad del plan depende de su capacidad para adaptarse a las necesidades
 
 1. **Adaptación por rol**: Los contenidos deben ser relevantes para las tareas y riesgos de cada grupo.     
 
-    **Ejemplo práctico**:     
+    **Ejemplo**:     
 
     - **Empleados en general**: Phishing, ingeniería social, uso básico de contraseñas.
     - **Técnicos**: Gestión de firewalls, análisis de vulnerabilidades, respuesta a incidentes.
 
 2. **Lenguaje y ejemplos claros**: Usar un lenguaje comprensible para cada grupo, evitando jerga técnica innecesaria con empleados no técnicos.    
 
-    **Ejemplo práctico**: Explicar a los empleados administrativos que "ransomware bloquea tus archivos hasta que se paga un rescate", en lugar de usar términos técnicos como "cifrado simétrico".     
+    **Ejemplo**: Explicar a los empleados administrativos que "ransomware bloquea tus archivos hasta que se paga un rescate", en lugar de usar términos técnicos como "cifrado simétrico".     
 
 3. **Escenarios específicos**: Presentar situaciones prácticas relacionadas con el entorno laboral.      
 
-    **Ejemplo práctico**: Para el equipo comercial remoto, simular un intento de suplantación de identidad mientras usan una red Wi-Fi pública.
+    **Ejemplo**: Para el equipo comercial remoto, simular un intento de suplantación de identidad mientras usan una red Wi-Fi pública.
 
 ##### 4.5.2. Ejemplo de asociación/ adaptación de contenidos
 
-| **Rol/Grupo**           | **Contenidos clave**              | **Ejemplo práctico**                                                        |  
+| **Rol/Grupo**           | **Contenidos clave**              | **Ejemplo**                                                        |  
 |--------------------------|------------------------------------|-----------------------------------------------------------------------------|  
 | Administrativos          | Phishing, políticas de mesa limpia | Identificar errores en un correo sospechoso o simular cierre de sesión diaria. |  
 | Técnicos                 | Configuración segura, respuesta a incidentes | Taller práctico para configurar firewalls o analizar alertas de un IDS.       |  
@@ -541,7 +541,7 @@ Para alcanzar los objetivos del plan, las estrategias formativas deben ser viabl
 
 El Plan de Formación y Concienciación debe ser **dinámico y evolutivo**, adaptándose a los cambios en el entorno de amenazas y a las necesidades internas de la organización. Para asegurar su efectividad, es fundamental evaluar el plan y ajustarlo según los resultados obtenidos.
 
-La evaluación del Plan de Formación y Concienciación es fundamental para medir su impacto, **identificar áreas de mejora y asegurar que los objetivos de seguridad se estén alcanzando**. Una evaluación bien diseñada permite ajustar el plan a las necesidades cambiantes de la organización y de las amenazas emergentes.
+La evaluación del Plan de Formación y Concienciación es fundamental para medir su impacto, **identificar áreas de mejora y asegurar que los objetivos de seguridad se estén alcanzando**. Una evaluación bien diseñada permite ajustar el plan, teniendo presente los resultados obtenidos, las necesidades cambiantes de la organización y  las amenazas emergentes. Para mas información sobre la evaluación del plan, ver el punto 6.
 
 
 ##### 4.7.1. Objetivos de la Evaluación
@@ -665,7 +665,7 @@ Los pósteres son ideales para **comunicaciones rápidas y visuales**. Sus mensa
     - Un título breve y atractivo.    
     - Imágenes impactantes que refuercen el mensaje.    
 
-- **Ejemplo práctico**: Un cartel en la sala común con el mensaje “¡No caigas en el anzuelo! Aprende a identificar correos de phishing” acompañado de ejemplos visuales.
+- **Ejemplo**: Un cartel en la sala común con el mensaje “¡No caigas en el anzuelo! Aprende a identificar correos de phishing” acompañado de ejemplos visuales.
 
 
 
@@ -678,7 +678,7 @@ Las presentaciones son herramientas útiles para profundizar en temas específic
     - Incluyen diapositivas dinámicas con gráficos y ejemplos.   
     - Ideales para acompañar sesiones presenciales o virtuales.    
 
-- **Ejemplo práctico**: Una presentación para una jornada formativa sobre **ingeniería social** que incluya vídeos breves mostrando intentos de manipulación realista.     
+- **Ejemplo**: Una presentación para una jornada formativa sobre **ingeniería social** que incluya vídeos breves mostrando intentos de manipulación realista.     
 
 
 #### 5.3. Trípticos
@@ -691,22 +691,9 @@ Los trípticos combinan la atracción visual de un póster con la capacidad de r
     - Información resumida y clara en su interior, como consejos o pasos para reconocer amenazas.    
     - Contraportada con datos de contacto o recursos adicionales.    
 
-- **Ejemplo práctico**: Un tríptico titulado “10 pasos para mantener tus datos seguros” que se entregue a los empleados durante su incorporación.
+- **Ejemplo**: Un tríptico titulado “10 pasos para mantener tus datos seguros” que se entregue a los empleados durante su incorporación.
 
-
-#### 5.4. Encuestas de Satisfacción
-
-Las encuestas son una herramienta valiosa para recopilar **opiniones y sugerencias** de los empleados sobre el plan de formación.
-
-- **Características esenciales**:     
-
-    - Preguntas claras y directas sobre la utilidad de la formación.
-    - Espacios para comentarios o recomendaciones.    
-
-- **Ejemplo práctico**: Una encuesta posterior a una jornada de formación preguntando: “¿Te sientes más preparado para reconocer un ataque de phishing después de la capacitación?”     
-
-
-#### 5.5. Ataques Simulados de Malware
+#### 5.4. Ataques Simulados de Malware
 
 Estas simulaciones permiten que los empleados experimenten cómo sería un ataque real y aprendan a responder de manera segura.
 
@@ -715,10 +702,10 @@ Estas simulaciones permiten que los empleados experimenten cómo sería un ataqu
     - Uso de entornos controlados para realizar simulaciones seguras.    
     - Métodos variados para replicar ataques comunes, como infecciones por USB o descargas sospechosas.    
   
-- **Ejemplo práctico**: Dejar un USB con etiquetas llamativas como “Confidencial – Nóminas” en un espacio común y observar cuántos empleados lo conectan sin verificar su procedencia.    
+- **Ejemplo**: Dejar un USB con etiquetas llamativas como “Confidencial – Nóminas” en un espacio común y observar cuántos empleados lo conectan sin verificar su procedencia.    
 
 
-#### 5.6. Campañas de Simulación de Phishing
+#### 5.5. Campañas de Simulación de Phishing
 
 Las simulaciones de phishing son una de las herramientas más efectivas para evaluar y reforzar la capacidad de los empleados para reconocer correos maliciosos. Existen herramientas para realizar este tipo de simulacros. 
 
@@ -727,23 +714,35 @@ Las simulaciones de phishing son una de las herramientas más efectivas para eva
     - Envío de correos simulados que imitan tácticas reales de phishing.    
     - Análisis de las respuestas para identificar empleados que necesitan refuerzo.   
 
-- **Ejemplo práctico**: Enviar un correo con el asunto “Actualización urgente de contraseña” y analizar cuántos empleados intentan acceder al enlace proporcionado.    
+- **Ejemplo**: Enviar un correo con el asunto “Actualización urgente de contraseña” y analizar cuántos empleados intentan acceder al enlace proporcionado.    
 
 
-#### 5.7. Otros Materiales Complementarios
+#### 5.6. Otros Materiales Complementarios
 
 1. **Vídeos y salvapantallas**: Material audiovisual que refuerza conceptos clave de manera breve y visual.     
 
-    - **Ejemplo práctico**: Un vídeo corto que explica cómo detectar un ataque de ransomware.    
+    - **Ejemplo**: Un vídeo corto que explica cómo detectar un ataque de ransomware.    
 
 2. **Plataformas de entrenamiento**: Portales interactivos, gratuitos o de pago, que permiten a los empleados practicar en simulaciones de amenazas.     
 
-    - **Ejemplo práctico**: Un curso en línea sobre “Cómo protegerse frente al malware” con ejercicios interactivos.     
+    - **Ejemplo**: Un curso en línea sobre “Cómo protegerse frente al malware” con ejercicios interactivos.     
 
 3. **Boletines informativos**: Resúmenes periódicos con actualizaciones sobre nuevas amenazas y consejos prácticos.
 
-    - **Ejemplo práctico**: Un boletín mensual que detalla los ataques más comunes detectados recientemente por INCIBE.     
+    - **Ejemplo**: Un boletín mensual que detalla los ataques más comunes detectados recientemente por INCIBE.     
 
+
+
+#### 5.7. Encuestas de Satisfacción (Se hablará más en el punto 6)
+
+Las encuestas son una herramienta valiosa para recopilar **opiniones y sugerencias** de los empleados sobre el plan de formación.
+
+- **Características esenciales**:
+
+    - Preguntas claras y directas sobre la utilidad de la formación.
+    - Espacios para comentarios o recomendaciones.
+
+- **Ejemplo**: Una encuesta posterior a una jornada de formación preguntando: “¿Te sientes más preparado para reconocer un ataque de phishing después de la capacitación?”
 
 
 #### 5.8. Distribución de Materiales
@@ -754,18 +753,19 @@ Los materiales deben llegar a los empleados a través de canales accesibles y ef
 - **Espacios comunes**: Carteles, pósteres y salvapantallas.     
 - **Talleres presenciales o virtuales**: Presentaciones multimedia y simulaciones prácticas.    
 
-**Ejemplo práctico**: Publicar un cartel sobre el uso de contraseñas seguras en las salas de descanso y enviar un boletín con ejemplos de contraseñas robustas por correo electrónico.
+**Ejemplo**: Publicar un cartel sobre el uso de contraseñas seguras en las salas de descanso y enviar un boletín con ejemplos de contraseñas robustas por correo electrónico.
 
 
 
 #### 5.9. Recursos para Autoaprendizaje
 
 Dado que la ciberseguridad también se aplica al ámbito personal, es útil ofrecer a los empleados **recursos para autoaprendizaje**:    
+
 - Cursos sobre ciberseguridad personal.     
 - Guías para navegar de forma segura desde casa.      
 - Enlaces a plataformas de entrenamiento en línea.     
 
-**Ejemplo práctico**: Compartir un curso gratuito sobre **protección de dispositivos personales** para que los empleados refuercen su seguridad fuera del trabajo.     
+**Ejemplo**: Compartir un curso gratuito sobre **protección de dispositivos personales** para que los empleados refuercen su seguridad fuera del trabajo.     
 
 
 #### 5.10. Fuentes y Recursos para Acceder a los Materiales
@@ -790,7 +790,7 @@ Los materiales para el **Plan de Formación y Concienciación** pueden obtenerse
 1. **Plataformas de formación en ciberseguridad**:
 
     - Hay recursos tanto gratuitos como de pago, diseñados para capacitar a empleados en simulaciones prácticas y temas específicos.       
-    - **Ejemplo práctico**: Plataformas como Cyber Awareness Platform, KnowBe4, o plataformas de e-learning como Coursera y Udemy.     
+    - **Ejemplo**: Plataformas como Cyber Awareness Platform, KnowBe4, o plataformas de e-learning como Coursera y Udemy.     
 
 2. **Recursos interactivos gratuitos**:    
 
@@ -802,7 +802,7 @@ Los materiales para el **Plan de Formación y Concienciación** pueden obtenerse
 1. **Documentación propia**:    
 
     - Revisar políticas y guías internas de la organización para generar contenidos personalizados.
-    - **Ejemplo práctico**: Crear trípticos con ejemplos reales de incidentes que hayan ocurrido dentro de la empresa, destacando cómo se solucionaron y qué se aprendió.    
+    - **Ejemplo**: Crear trípticos con ejemplos reales de incidentes que hayan ocurrido dentro de la empresa, destacando cómo se solucionaron y qué se aprendió.    
 
 2. **Intranet corporativa**:    
 
@@ -829,7 +829,7 @@ La realización de auditorías internas es un componente esencial en la estrateg
 2. **Evaluar las medidas de seguridad implementadas**: Verificar que las tecnologías, políticas y procedimientos están funcionando según lo previsto.
 3. **Comprobar el cumplimiento normativo**: Asegurarse de que la organización cumple con regulaciones como el **RGPD** o la **Ley Orgánica 3/2018 de Protección de Datos y Garantía de los Derechos Digitales (LOPD GDD)**.
 
-**Ejemplo práctico**: Una auditoría detecta que un porcentaje significativo de empleados utiliza contraseñas débiles, lo que puede llevar a reforzar la formación en este aspecto y actualizar la política de contraseñas.
+**Ejemplo**: Una auditoría detecta que un porcentaje significativo de empleados utiliza contraseñas débiles, lo que puede llevar a reforzar la formación en este aspecto y actualizar la política de contraseñas.
 
 
 #### 6.2. Métricas e Indicadores de Logro
@@ -840,15 +840,15 @@ Para evaluar el éxito del plan y las medidas de ciberseguridad, es fundamental 
 
     - **Número de denuncias sobre posibles incidentes**: Aumentos pueden indicar mayor concienciación.     
     - **Tasa de participación en jornadas y cursos**: Baja participación podría señalar la necesidad de mejorar la motivación o accesibilidad.    
-    - **Resultados de simulaciones de phishing**:    
-        Ejemplo práctico: Si el 50% de los empleados cae en una campaña de phishing simulada, se necesita refuerzo.     
+    - **Resultados de simulaciones de phishing**:  Si el porcentaje de empleados que caen en correos maliciosos disminuye, la formación ha sido efectiva.    
+      **Ejemplo**: Si el 50% de los empleados cae en una campaña de phishing simulada, se necesita refuerzo.     
     - **Calificaciones en pruebas o certificaciones técnicas**: Evaluar el nivel de conocimiento adquirido por empleados técnicos.    
 
 2. **Indicadores técnicos y operativos**:     
 
     - **Número de reinstalaciones de sistemas por malware**: Reducciones indican una mejora en la prevención.    
-    - **Comparativa de incidentes antes y después del plan**:    
-        Ejemplo práctico: Una disminución en ataques exitosos tras la implementación del plan refleja su efectividad.      
+    - **Comparativa de incidentes antes y después del plan**: Evaluar si ha habido una disminución en ataques o brechas de seguridad.     
+        **Ejemplo**: Una disminución en ataques exitosos tras la implementación del plan refleja su efectividad.      
     - **Frecuencia de clics en enlaces maliciosos**: Cuantificar errores en simulaciones de phishing o incidentes reales.    
 
 3. **Indicadores de cumplimiento normativo**:    
@@ -861,13 +861,13 @@ Para que las métricas sean útiles, es importante definir qué resultados se co
 
 1. **Definición de logros esperados**: Establecer límites para cada indicador, basados en las metas de seguridad y cumplimiento normativo.      
 
-    - **Ejemplo práctico**: Se considera satisfactorio que menos del 10% de los empleados caigan en simulaciones de phishing.      
+    - **Ejemplo**: Se considera satisfactorio que menos del 10% de los empleados caigan en simulaciones de phishing.      
 
 2. **Acciones correctivas**: Revisar el contenido del plan si los resultados no son los esperados, identificar áreas de mejora y aplicar medidas correctivas: realizar formación adicional específica para empleados que presenten debilidades.      
 
-3. **Recompensas por logros alcanzados**:Reconocer a los equipos o empleados que demuestren un desempeño sobresaliente.     
+3. **Recompensas por logros alcanzados**: Reconocer a los equipos o empleados que demuestren un desempeño sobresaliente.     
 
-    - **Ejemplo práctico**: Premiar con un reconocimiento público al equipo que mejor responda a simulaciones de ataque.     
+    - **Ejemplo**: Premiar con un reconocimiento público al equipo que mejor responda a simulaciones de ataque.     
 
 
 #### 6.4. Frecuencia de las Auditorías
@@ -878,7 +878,7 @@ La periodicidad de las auditorías dependerá de factores como:
 2. **Regulaciones específicas**: Cumplir con requisitos legales, como revisiones anuales exigidas por normativas de protección de datos.     
 3. **Entorno de amenazas**: Un aumento en ciberataques en el sector de la empresa puede justificar auditorías más frecuentes.      
 
-**Ejemplo práctico**: Una empresa mediana realiza auditorías trimestrales para comprobar el cumplimiento de su política de uso de contraseñas y simulaciones semestrales de phishing.
+**Ejemplo**: Una empresa mediana realiza auditorías trimestrales para comprobar el cumplimiento de su política de uso de contraseñas y simulaciones semestrales de phishing.
 
 #### 6.5. Beneficios de las Auditorías
 
@@ -886,7 +886,7 @@ La periodicidad de las auditorías dependerá de factores como:
 2. **Cumplimiento normativo**: Evitar sanciones y proteger la reputación corporativa al cumplir con leyes como el RGPD.    
 3. **Concienciación continua**: Mantener a los empleados alerta y comprometidos con la seguridad de la organización.
 
-**Ejemplo práctico**: Una auditoría detecta que el 80% de los empleados ha mejorado su capacidad para identificar correos de phishing, lo que se traduce en una disminución del 50% en clics en enlaces maliciosos.
+**Ejemplo**: Una auditoría detecta que el 80% de los empleados ha mejorado su capacidad para identificar correos de phishing, lo que se traduce en una disminución del 50% en clics en enlaces maliciosos.
 
 #### 6.6. Factores a Tener en Cuenta
 
@@ -894,7 +894,7 @@ La periodicidad de las auditorías dependerá de factores como:
 2. **Adaptación de las auditorías al entorno**: Ajustar las métricas y metodologías según las amenazas emergentes y las innovaciones en ciberseguridad.       
 3. **Colaboración interna**: Involucrar a todos los departamentos en la preparación y ejecución de las auditorías.     
 
-**Ejemplo práctico**: Un análisis detallado de los resultados de una auditoría revela que la disminución en clics en enlaces maliciosos se debe a una mejora en la detección de correos de phishing, lo que indica que la formación ha sido efectiva.
+**Ejemplo**: Un análisis detallado de los resultados de una auditoría revela que la disminución en clics en enlaces maliciosos se debe a una mejora en la detección de correos de phishing, lo que indica que la formación ha sido efectiva.
 
 #### 6.7. Conclusión
 
@@ -903,3 +903,41 @@ Las auditorías internas de cumplimiento son esenciales para garantizar la efect
 **Ejemplo final**: Una auditoría en una empresa de servicios detecta que el 30% de los empleados desconoce cómo reportar un incidente. Como acción correctiva, se realiza una sesión específica sobre los procedimientos de notificación, lo que mejora significativamente la tasa de reporte en la siguiente auditoría.
 
 La evaluación y mejora continua permiten que las organizaciones enfrenten los desafíos de la ciberseguridad con mayor resiliencia y eficacia.  
+
+
+### 7. Kit de Concienciación en Ciberseguridad de INCIBE
+
+Podemos implantar los mejores antivirus, cortafuegos y otras herramientas de seguridad a nuestro alcance para mejorar la ciberseguridad de nuestra empresa. Podemos establecer políticas internas para tener copias de seguridad y para configurar y administrar nuestros sistemas de forma segura. Pero, estas herramientas y políticas no serán muy útiles si los empleados no siguen una serie de buenas prácticas. Si no están atentos y no conocen qué puede pasar, podrán cometer errores que deriven en incidentes o los delincuentes encontrarán la forma de engañarlos para atacar a nuestra empresa.
+
+Por todo esto, los empleados son siempre el eslabón más importante en la cadena de la seguridad para proteger nuestros recursos y la buena marcha de nuestro negocio. Por ello, para concienciarlos en un uso seguro de la tecnología actualizamos el kit de concienciación. Con esta herramienta podrás mejorar la ciberseguridad de tu organización desde el corazón de esta: sus empleados.
+
+El kit de concienciación cuenta con:
+
+- Materiales gráficos como posters, trípticos y consejos;
+- 9 recursos formativos temáticos en formato texto para su lectura con apoyo de presentaciones para el aula, cada uno de ellos con un test de evaluación;
+- 3 tipos distintos de ataques dirigidos para evaluar el nivel de ciberseguridad del personal de la organización, antes de realizar el plan de formación y después de haberlo concluido.
+
+A la hora de implantar el kit de concienciación cada empresa puede hacerlo como mejor se adapte a sus necesidades. Para facilitar esta tarea se recomienda utilizar el manual diseñado para su implantación durante un año, también incluido en el kit. Este manual describe una forma práctica para utilizar los diferentes elementos del kit, además del tiempo estimado que se deberá emplear en cada uno.
+
+#### 7.1. Elementos del kit de concienciación
+
+Las diferentes secciones por las que está formado el kit de concienciación son:
+
+- **Ataques dirigidos** especialmente diseñados para evaluar el nivel de concienciación del personal en el uso del correo electrónico. El correo electrónico es el medio más utilizado por los ciberdelincuentes para realizar campañas de malware y robar información confidencial. Mediante los ataques dirigidos se simulan las campañas realizadas por los ciberdelincuentes, tanto de distribución de malware como del tipo phishing, para comprobar cuan concienciados están los empleados frente a estos ataques. Ten en cuentras que tendrás que evaluar si en tu organización, el correo electrónico es el medio más utilizado por los ciberdelincuentes para realizar campañas de malware y robar información confidencial.
+- **Posters** con imágenes diseñadas para imprimir y ubicar en diferentes estancias de la empresa con contenido y mensaje para concienciar en aspectos concretos. Cada temática en la que se centra el kit de concienciación consta de dos tipos de posters diferentes, además de dos posters con los que dar el pistoletazo de salida a la formación.
+- **Trípticos** que servirán para reforzar los contenidos incluidos en los diferentes recursos formativos. El objetivo de estos elementos es que sean impresos y colocados en lugares visibles de la organización para que el personal puedan acceder a su contenido de manera ágil.
+- **Recursos formativos** en los que consiste la formación dirigida al personal de la organización. Consta de 9 recursos formativos divididos en 6 temáticas distintas: la información, fraudes a través de correo electrónico, contraseñas, el puesto de trabajo, BYOD y teletrabajo y las redes sociales. Cada recurso formativo consta de varios elementos:     
+
+    - **Documento en formato PDF** para su lectura o consulta con la información específica de cada temática a tratar.         
+    - **Presentación en PowerPoint** con un extracto de la información de cada PDF, diseñada para facilitar su exposición en el aula.
+    - **Consejos asociados** en forma de imágenes con un texto asociado que servirán para reforzar los contenidos de cada recurso formativo vía correo electrónico, mensajes al móvil o mediante otros medios de difusión interna.    
+    - **Test de evaluación** con los que el personal podrán comprobar si han asimilado los conocimientos de cada recurso y reforzar aquellos necesarios.
+
+- **Encuesta de satisfacción**. Formulario en PDF donde se evaluará cómo ha sido la implantación del kit y los diferentes recursos. La información facilitada servirá de ayuda para mejorar futuras versiones del kit de concienciación. 
+
+## Fuentes
+
+- [Kit de concienciación - INCIBE](https://www.incibe.es/empresas/blog/actualizate-ciberseguridad-el-nuevo-kit-concienciacion)
+- [Video - Kit de concienciación - INCIBE](https://www.youtube.com/watch?v=AFYZSFWD-Qo)
+- [Descarga - kit de concienciación - INCIBE](https://files.incibe.es/incibe/kit_concienciacion/kit_concienciacion.zip)
+- [Kit de concienciación para universidades](https://www.metared.org/global/kit-concienciacion-cyber.html)

@@ -123,9 +123,9 @@ No pretende ser un índice exhaustivo, sino una guía para estructurar un plan d
 
 #### **5. Evaluación del Plan**
 
-####  5.1. **Métricas de Evaluación**
+####  5.1. **Métricas de Evaluación**     
 
-* **Resultado esperado**: Lista de indicadores clave para medir el éxito del plan, como:
+* **Resultado esperado**: Lista de indicadores clave para medir el éxito del plan, como:    
 
     * Tasa de participación en formaciones.
     * Resultados en simulaciones de phishing.
@@ -138,7 +138,7 @@ No pretende ser un índice exhaustivo, sino una guía para estructurar un plan d
     * Encuestas de satisfacción.
     * Cuestionarios post-formación.
 
-#### 5.3. **Revisión de Resultados**   
+#### 5.3. **Revisión de Resultados**      
 
 * **Resultado esperado**: Informe consolidado con los resultados de las métricas y recomendaciones para mejorar.
 

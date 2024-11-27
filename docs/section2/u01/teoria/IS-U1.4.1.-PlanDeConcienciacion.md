@@ -311,6 +311,13 @@ Con esta estructura, la formación será práctica, accesible y efectiva para cr
 
 ### 4. Elaboración del Plan de Formación y Concienciación
 
+
+<figure markdown>
+  ![](assets/CicloPlanFormación.png)
+  <figcaption>Ciclo Plan de Formación y Concienciación</figcaption>
+</figure>
+
+
 La elaboración de un **Plan de Formación y Concienciación** es el primer paso hacia la creación de una cultura de ciberseguridad en la organización. Este proceso debe ser estratégico, considerando los objetivos generales, las necesidades específicas de formación y la variedad de roles dentro de la empresa.
 
 #### 4.1. Objetivos del Plan

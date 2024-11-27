@@ -1,14 +1,14 @@
 # Actividad: Hundir la Flota Multijugador
 
-**ID actividad:** PROG-001
+**ID actividad:** PROG-2425-U3-001
 
-**Agrupamiento de la actividad**: Individual
+**Agrupamiento de la actividad**: Individual/Parejas
 
 ---
 
 ### 1. Descripción
 
-La actividad consiste en implementar un juego de "Hundir la Flota" en Python para dos jugadores, utilizando archivos JSON para compartir información entre turnos. Los jugadores deben alternar turnos, registrar movimientos, atacar al oponente, y cumplir las reglas del juego. Se trabaja con estructuras de datos complejas y gestión de archivos JSON.
+La actividad consiste en implementar un juego de "Hundir la Flota" en Python para dos jugadores, utilizando archivos JSON para compartir información entre turnos, y la configuración inicial del juego. Los jugadores deben alternar turnos, registrar movimientos, atacar al oponente, y cumplir las reglas del juego. Se trabaja con estructuras de datos complejas y gestión de archivos JSON.
 
 **Objetivo:**
 1. Desarrollar habilidades en programación estructurada, utilizando funciones y estructuras de datos avanzadas como listas, conjuntos y diccionarios.
@@ -18,7 +18,7 @@ La actividad consiste en implementar un juego de "Hundir la Flota" en Python par
 **Trabajo a realizar:**
 
 1. Crear un programa en Python que implemente el juego **Hundir la Flota**.
-2. Diseñar y gestionar tres ficheros JSON: uno común para la configuración y estado global del juego, y uno para cada jugador.
+2. Diseñar y gestionar tres ficheros JSON: uno común para la configuración y estado global del juego, y uno para cada jugador que contenga la información de la partida relativa al jugador: Configuración de tablero, estado, e información de ataque.
 3. Implementar funciones para colocar tablero inicial, realizar ataques, registrar movimientos, gestionar turnos, verificar el estado de los barcos y mostrar información por consola.
 4. Garantizar que el flujo del juego se respete y que los datos se actualicen correctamente tras cada turno.
 5. Implementar el sistema para que sincronice los turnos y asegure que cada jugador interactúe correctamente con los datos compartidos.
@@ -27,15 +27,15 @@ Ver el ejemplo con la descripción completa en el punto 5.
 
 ### 2. Recursos
 
-- **Temario trabajado en clase:** Programación con Python, manipulación de estructuras de datos y uso de bibliotecas estándar para manejo de archivos.
+- **Temario trabajado en clase:** Programación con Python, manipulación de estructuras de datos y uso de bibliotecas estándar para manejo de archivos: Listas y tuplas, Diccionarios, Conjuntos y JSON.
 - **Recursos vistos en clase:** Ejemplos de JSON, manejo de bucles, estructuras condicionales y funciones.
 
 
 ### 3. Evaluación y Calificación
-# TODO:
 
 **Rúbrica:**
-Ver moodle.
+# TODO:
+
 
 ### 4. Condiciones de Entrega
 
@@ -44,6 +44,7 @@ Ver moodle.
 1. Cumple la fecha y hora de entrega.
 2. **Entrega de código mediante repositorio GitHub:**
     - El contenido se entregará en un repositorio GitHub, y el documento principal será el **README.md** ubicado en el raíz del repositorio.
+    - El juego debe compilar y ejecutarse correctamente.
     - Asegúrate de que el profesor tenga permisos de acceso. Si no se puede acceder al repositorio, se considerará como no entregado.
     - El README.md debe incluir:
         - Instrucciones para compilar y ejecutar el código.
@@ -51,49 +52,123 @@ Ver moodle.
         - Autoría y referencias utilizadas.
 
 
-### 5. Ejemplo del Ejercicio
+### 5. Descripción detallada del ejercicio
 
-#### **Ficheros JSON**
 
-1. **`nombre_de_la_partida.json`:**
+#### 5.1. Inicio y estructura de archivos
+
+Al inicio de la partida, el juego preguntará por:
+1. Las carpeta utilizadas para compartir la información entre los jugadores.
+2. El nombre de la partida. 
+
+Un ejemplo de los mensajes iniciales durante la interacción con el juego, podemos verlo a continuación:
+
+```text
+Iniciando el juego Hundir la Flota Multijugador.
+____________________________________________________
+
+Introduce la carpeta de la partida: /partidas/hundir_la_flota
+Introduce el nombre de la partida: MiPartida
+```
+
+Esto indicará que el juego utilizará la carpeta `/partidas/hundir_la_flota/MiPartida` para almacenar los archivos JSON de la partida `MiPartida`.
+
+La estructura de directorios solicitada será:
+
+```
+/partidas
+└── /hundir_la_flota
+    └── /MiPartida
+        ├── MiPartida.json
+        ├── MiPartida.j1.json
+        └── MiPartida.j2.json
+```
+
+En donde:
+- **`/partidas/hundir_la_flota`**: Carpeta específica para el juego "Hundir la Flota".
+- **`/MiPartida`**: Carpeta para una partida específica llamada "MiPartida".
+   - **`MiPartida.json`**: Archivo de configuración general de la partida.
+   - **`MiPartida.j1.json`**: Archivo con los datos específicos del Jugador 1.
+   - **`MiPartida.j2.json`**: Archivo con los datos específicos del Jugador 2.
+
+#### 5.2. Archivo de configuración y estado de la partida
+
+El archivo `MiPartida.json` contendrá la configuración general de la partida:
+
+**`MiPartida.json`:**
 ```json
 {
     "nombre_partida": "MiPartida",
     "dimensiones_tablero": 10,
     "tiempo_refresco": 2,
+    "tiempo_ataque": 30,
     "configuracion_barcos": {
         "Portaaviones": {"tamaño": 5, "numero": 1},
-        "Submarino": {"tamaño": 3, "numero": 2},
-        "Destructor": {"tamaño": 2, "numero": 4}
+        "Submarino": {"tamaño": 2, "numero": 2},
+        "Destructor": {"tamaño": 1, "numero": 3}
     },
     "turnos_jugados": 0,
-    "turno_actual": "Jugador 1"
+    "turno_actual": "j1"
 }
 ```
 
-2. **`MiPartida.jugador1.json`:**
+En donde:
+- **`nombre_partida`**: Nombre de la partida. En este caso, "MiPartida". Si no coincide con el nombre indicado al inicio, se mostrará un mensaje de error y terminará el juego.
+- **`dimensiones_tablero`**: Tamaño del tablero cuadrado. En este caso, 10x10.
+- **`tiempo_refresco`**: Tiempo de espera antes de volver a consultar la información de estado de tablero. Este tiempo se utilizará para mostrar el tablero actualizado.
+- **`tiempo_ataque`**: Tiempo de espera entre turnos. Si pasado este tiempo no se realiza un ataque, se considerará un ataque fallido.
+- **`configuracion_barcos`**: Contenrá la configuración de los barcos. Cada barco, tendrá el siguiente formato `{"NombreBarco": {"tamaño": N, "numero": M}}`.    
+
+    - `"tamaño"`: Tamaño del barco.
+    - `"numero"`: Número de barcos de ese tipo.
+
+- **`turnos_jugados`**: Número de turnos jugados. Iniciará en 0, y se irá incrementando en cada ataque ejecutado, es decir, puede incrementarse el turno_jugado sin cambiar el turno_actual, siempre y cuando el jugador ataque y acierte.
+- **`turno_actual`**: Jugador que tiene el turno actualmente {j1, j2}
+- Otros datos relevantes que consideréis necesarios.
+
+Los archivos `MiPartida.j1.json` y `MiPartida.j2.json` contendrán la información específica de cada jugador, incluyendo su tablero, barcos y movimientos realizados:
+
+**`MiPartida.j1.json`:**
 ```json
 {
-    "nombre": "Jugador 1",
+    "nombre": "j1",
     "tablero": [
+        ["B", "~", "H", "~", "B"],
+        ["B", "B", "B", "B", "T"],
         ["~", "~", "~", "~", "~"],
-        ["~", "B", "B", "B", "~"],
-        ["~", "~", "~", "~", "~"],
-        ["~", "~", "B", "B", "~"],
-        ["~", "~", "~", "~", "~"]
+        ["H", "~", "T", "B", "~"],
+        ["H", "O", "~", "~", "O"]
     ],
     "barcos": {
         "Portaaviones": {
             "coordenadas": [[1, 1], [1, 2], [1, 3], [1, 4], [1, 5]],
-            "estado": {"[1, 1]": "intacto", "[1, 2]": "tocado", "[1, 3]": "intacto", "[1, 4]": "tocado", "[1, 5]": "intacto"}
+            "estado": {"[1, 1]": "I", "[1, 2]": "T", "[1, 3]": "I", "[1, 4]": "I", "[1, 5]": "I"}
         }
     },
     "movimientos": [
-        {"coordenada": [3, 4], "resultado": "agua"},
-        {"coordenada": [1, 2], "resultado": "tocado"}
+        {"coordenada": [3, 4], "resultado": "A"},
+        {"coordenada": [1, 2], "resultado": "T"}
     ]
 }
 ```
+En donde:
+- **`nombre`**: Nombre del jugador. En este caso, "j1".
+- **`tablero`**: Tablero de juego del jugador. Cada casilla puede tomar los siguientes valores:    
+
+    - `"~"` (agua), 
+    - `"B"` (barco), 
+    - `"T"` (barco atacado), 
+    - `"O"` (agua atacada), 
+    - `"H"` (barco hundido).
+- **`barcos`**: Diccionario con los barcos del jugador y su estado. Cada barco se representa con un diccionario que contiene las **coordenadas** que ocupa cada parte del barco y el **estado** de estas. Por tanto:    
+
+    - `coordenadas`: será la lista de pares `[fila, columna]`. 
+    - `estado`: tomará los siguientes valores `"I"` - intacto, `"T"` - Tocado o `"H"` - Hundido. Este último valor se asignará cuando todas las coordenadas del barco estén en estado `"T"`.
+- **`movimientos`**: Lista de movimientos realizados por el jugador. En donde cada movimiento estarán representados por los siguientes datos:
+    - `coordenada`: Coordenada del ataque en formato `[fila, columna]`.
+    - `resultado`: Resultado del ataque (`"A"` - Agua, `"T"` - Tocado, `"H"` - Hundido). Este último valor se asignará cuando todas las coordenadas del barco del jugador atacado estén en estado `"T"`. 
+- Otros datos relevantes que consideréis necesarios.
+
 
 ---
 

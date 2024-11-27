@@ -158,6 +158,7 @@ nav:
       - '1.2.2.-Análisis de Riesgos': 'section2/u01/teoria/IS-U1.2.2.-AnalisiDeRiesgos.md'
       - '1.3.-Puesto de trabajo': 'section2/u01/teoria/IS-U1.3.1.-ProteccionDelPuestoDeTrabajo.md'
       - '1.4.-Concienciación y formación': 'section2/u01/teoria/IS-U1.4.1.-PlanDeConcienciacion.md'
+      - '1.4.-Concienciación y formación': 'section2/u01/teoria/IS-U1.4.1.-PlanDeConcienciacion-Eje.md'
 #    - 'U2: Detección y análisis de incidentes de seguridad':
 #      - 'section2/u02/index.md'
 #      - '2.1.-Taxonomía de incidentes': 'section2/u02/teoria/IS-U2.1.1.-TaxonomiaDeIncidentes.md'

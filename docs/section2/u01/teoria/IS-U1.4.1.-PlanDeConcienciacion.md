@@ -313,7 +313,7 @@ Con esta estructura, la formación será práctica, accesible y efectiva para cr
 
 
 <figure markdown>
-  ![](assets/CicloPlanFormación.png)
+  ![](assets/CicloPlanFormacion.png)
   <figcaption>Ciclo Plan de Formación y Concienciación</figcaption>
 </figure>
 

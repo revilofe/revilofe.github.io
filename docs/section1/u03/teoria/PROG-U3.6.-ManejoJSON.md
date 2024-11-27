@@ -331,6 +331,8 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+NOTA: Aunque estamos utilizando `print()` dentro de las funciones que tratan con las estructuras de datos, es recomendable que estas funciones devuelvan valores y que sea la función principal la que se encargue de mostrar los mensajes al usuario.  Para mostrar mensaje, en un programa real se recomienda usar un sistema de registro de errores más robusto, como el módulo `logging`.
+
 
 ##### **2.6.4. Explicación paso a paso**
 

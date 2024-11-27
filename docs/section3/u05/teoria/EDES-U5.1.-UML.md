@@ -14,7 +14,8 @@ tags:
     - UML
     - Diagramas
     - Software
----
+---    
+
 ## 5.1. ¿Qué es UML?
 
 El Lenguaje Unificado de Modelado o UML («Unified Modeling Language») es un lenguaje estandarizado de modelado. Está especialmente desarrollado para ayudar a todos los intervinientes en el desarrollo y modelado de un sistema o producto software a **describir, diseñar, especificar, visualizar, construir y documentar** todos los artefactos que lo componen, utilizando varios tipos de diagramas.

@@ -58,6 +58,14 @@ Si estás comenzando con UML, puedes consultar esta [lista de libros para aprend
 
 ### 3. Tipos de diagramas UML
 
+![](assets/img.png)
+
+<figure markdown>
+   ![](assets/img.png)
+   <figcaption>Tipos de diagramas</figcaption>
+</figure>
+
+
 A día de hoy, en su versión 2.5.1, UML clasifica sus diagramas en:
 
 #### 3.1. Diagramas estructurales

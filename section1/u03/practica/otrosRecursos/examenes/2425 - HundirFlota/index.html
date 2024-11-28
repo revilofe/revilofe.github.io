@@ -3821,7 +3821,7 @@
 <p><strong>Trabajo a realizar:</strong></p>
 <ol>
 <li>Crear un programa en Python que implemente el juego <strong>Hundir la Flota</strong>.</li>
-<li>Diseñar y gestionar tres ficheros JSON: uno común para la configuración y estado global del juego, y uno para cada jugador que contenga la información de la partida relativa al jugador: Configuración de tablero, estado, e información de ataque.</li>
+<li>Diseñar y gestionar tres ficheros JSON: uno común para los dos jugadores que contiene la configuración y estado global del juego, y dos más, uno por cada jugador que contenga la información de la partida relativa al jugador: Configuración de tablero, estado, e información de los movimientos de ataque.</li>
 <li>Implementar funciones para colocar tablero inicial, realizar ataques, registrar movimientos, gestionar turnos, verificar el estado de los barcos y mostrar información por consola.</li>
 <li>Garantizar que el flujo del juego se respete y que los datos se actualicen correctamente tras cada turno.</li>
 <li>Implementar el sistema para que sincronice los turnos y asegure que cada jugador interactúe correctamente con los datos compartidos.</li>
@@ -3882,11 +3882,13 @@
    - <strong><code>MiPartida.j1.json</code></strong>: Archivo con los datos específicos del Jugador 1.
    - <strong><code>MiPartida.j2.json</code></strong>: Archivo con los datos específicos del Jugador 2.</p>
 <h4 id="52-archivo-de-configuracion-y-estado-de-la-partida">5.2. Archivo de configuración y estado de la partida<a class="headerlink" href="#52-archivo-de-configuracion-y-estado-de-la-partida" title="Permanent link">&para;</a></h4>
+<p>La partida se gestionará a través de un archivo JSON que contendrá la configuración general y el estado actual de la partida. Este archivo se utilizará para determinar el turno actual, el estado de los barcos, el tablero, y otros datos relevantes.</p>
+<h5 id="521-archivo-de-configuracion">5.2.1 Archivo de configuración<a class="headerlink" href="#521-archivo-de-configuracion" title="Permanent link">&para;</a></h5>
 <p>El archivo <code>MiPartida.json</code> contendrá la configuración general de la partida:</p>
 <p><strong><code>MiPartida.json</code>:</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nt">&quot;nombre_partida&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MiPartida&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">&quot;dimensiones_tablero&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">&quot;dimensiones_tablero&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">&quot;tiempo_refresco&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">&quot;tiempo_ataque&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nt">&quot;configuracion_barcos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -3899,336 +3901,545 @@
 <a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">}</span>
 </code></pre></div></p>
 <p>En donde:
-- <strong><code>nombre_partida</code></strong>: Nombre de la partida. En este caso, "MiPartida". Si no coincide con el nombre indicado al inicio, se mostrará un mensaje de error y terminará el juego.
-- <strong><code>dimensiones_tablero</code></strong>: Tamaño del tablero cuadrado. En este caso, 10x10.
+- <strong><code>nombre_partida</code></strong>: Información estática. Nombre de la partida. En este caso, "MiPartida". Si no coincide con el nombre indicado al inicio, se mostrará un mensaje de error y terminará el juego.
+- <strong><code>dimensiones_tablero</code></strong>: Información estática. Tamaño del tablero cuadrado. En este caso, 10x10.
 - <strong><code>tiempo_refresco</code></strong>: Tiempo de espera antes de volver a consultar la información de estado de tablero. Este tiempo se utilizará para mostrar el tablero actualizado.
-- <strong><code>tiempo_ataque</code></strong>: Tiempo de espera entre turnos. Si pasado este tiempo no se realiza un ataque, se considerará un ataque fallido.
-- <strong><code>configuracion_barcos</code></strong>: Contenrá la configuración de los barcos. Cada barco, tendrá el siguiente formato <code>{"NombreBarco": {"tamaño": N, "numero": M}}</code>.    </p>
+- <strong><code>tiempo_ataque</code></strong>: Información estática. Tiempo de espera entre turnos. Si pasado este tiempo no se realiza un ataque, se considerará un ataque fallido.
+- <strong><code>configuracion_barcos</code></strong>: Información estática. Contendrá la configuración de los barcos. Cada barco, tendrá el siguiente formato <code>{"NombreBarco": {"tamaño": N, "numero": M}}</code>.    </p>
 <div class="highlight"><pre><span></span><code>- `&quot;tamaño&quot;`: Tamaño del barco.
 - `&quot;numero&quot;`: Número de barcos de ese tipo.
 </code></pre></div>
 <ul>
-<li><strong><code>turnos_jugados</code></strong>: Número de turnos jugados. Iniciará en 0, y se irá incrementando en cada ataque ejecutado, es decir, puede incrementarse el turno_jugado sin cambiar el turno_actual, siempre y cuando el jugador ataque y acierte.</li>
-<li><strong><code>turno_actual</code></strong>: Jugador que tiene el turno actualmente {j1, j2}</li>
-<li>Otros datos relevantes que consideréis necesarios.</li>
+<li><strong><code>turnos_jugados</code></strong>: Información cambiante. Número de turnos jugados. Iniciará en 0, y se irá incrementando en cada ataque ejecutado, es decir, puede incrementarse el turno_jugado sin cambiar el turno_actual, siempre y cuando el jugador ataque y acierte.</li>
+<li><strong><code>turno_actual</code></strong>: Información cambiante. Jugador que tiene el turno actualmente {"j1", "j2"}. Se alternará entre los jugadores en cada turno cada vez que se realice un ataque y sea fallido.</li>
 </ul>
+<p>Este archivo tendrá la información global de la partida y se utilizará para determinar la información de los barcos, los datos de refresco y el turno actual. </p>
+<h5 id="522-archivo-de-configuracion">5.2.2 Archivo de configuración<a class="headerlink" href="#522-archivo-de-configuracion" title="Permanent link">&para;</a></h5>
 <p>Los archivos <code>MiPartida.j1.json</code> y <code>MiPartida.j2.json</code> contendrán la información específica de cada jugador, incluyendo su tablero, barcos y movimientos realizados:</p>
 <p><strong><code>MiPartida.j1.json</code>:</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;j1&quot;</span><span class="p">,</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">&quot;tablero&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;H&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">],</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;T&quot;</span><span class="p">],</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;T&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">],</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="p">[</span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">],</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="p">[</span><span class="s2">&quot;H&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;T&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">],</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="p">[</span><span class="s2">&quot;H&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;O&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;O&quot;</span><span class="p">]</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="p">[</span><span class="s2">&quot;H&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;T&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;A&quot;</span><span class="p">],</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="p">[</span><span class="s2">&quot;H&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;A&quot;</span><span class="p">]</span>
 <a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">],</span>
 <a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="nt">&quot;barcos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="nt">&quot;Portaaviones&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">            </span><span class="nt">&quot;coordenadas&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">]],</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">            </span><span class="nt">&quot;estado&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;[1, 1]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;[1, 2]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;T&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;[1, 3]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;[1, 4]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;[1, 5]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I&quot;</span><span class="p">}</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="nt">&quot;movimientos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;coordenada&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;resultado&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A&quot;</span><span class="p">},</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;coordenada&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;resultado&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;T&quot;</span><span class="p">}</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="p">]</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="p">}</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="nt">&quot;Portaaviones1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">            </span><span class="nt">&quot;coordenadas&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">]],</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">            </span><span class="nt">&quot;estado&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;[1, 0]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;[1, 1]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;T&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;[1, 2]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;[1, 3]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;[1, 4]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">}</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="nt">&quot;submarino1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">            </span><span class="nt">&quot;coordenadas&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]],</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">            </span><span class="nt">&quot;estado&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;[3, 0]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;H&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;[4, 0]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;H&quot;</span><span class="p">}</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="nt">&quot;submarino2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">            </span><span class="nt">&quot;coordenadas&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]],</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">            </span><span class="nt">&quot;estado&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;[3, 2]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;T&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;[3, 3]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">}</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">        </span><span class="nt">&quot;Destructor1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">            </span><span class="nt">&quot;coordenadas&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">]],</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">            </span><span class="nt">&quot;estado&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;[0, 2]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;H&quot;</span><span class="p">}</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">        </span><span class="nt">&quot;Destructor2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">            </span><span class="nt">&quot;coordenadas&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]],</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">            </span><span class="nt">&quot;estado&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;[0, 0]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">}</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">        </span><span class="nt">&quot;Destructor3&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">            </span><span class="nt">&quot;coordenadas&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">]],</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">            </span><span class="nt">&quot;estado&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;[0, 4]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">}</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="w">    </span><span class="nt">&quot;movimientos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;coordenada&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;resultado&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A&quot;</span><span class="p">},</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;coordenada&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;resultado&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A&quot;</span><span class="p">},</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;coordenada&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;resultado&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;T&quot;</span><span class="p">}</span>
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="p">}</span>
 </code></pre></div>
 En donde:
 - <strong><code>nombre</code></strong>: Nombre del jugador. En este caso, "j1".
 - <strong><code>tablero</code></strong>: Tablero de juego del jugador. Cada casilla puede tomar los siguientes valores:    </p>
 <div class="highlight"><pre><span></span><code>- `&quot;~&quot;` (agua), 
-- `&quot;B&quot;` (barco), 
-- `&quot;T&quot;` (barco atacado), 
-- `&quot;O&quot;` (agua atacada), 
-- `&quot;H&quot;` (barco hundido).
+- `&quot;B&quot;` (Barco), 
+- `&quot;T&quot;` (barco Tocado), 
+- `&quot;A&quot;` (Agua atacada), 
+- `&quot;H&quot;` (barco Hundido). Este último valor se asignará cuando todas las coordenadas del barco estén en estado `&quot;T&quot;`.
 </code></pre></div>
 <ul>
 <li>
 <p><strong><code>barcos</code></strong>: Diccionario con los barcos del jugador y su estado. Cada barco se representa con un diccionario que contiene las <strong>coordenadas</strong> que ocupa cada parte del barco y el <strong>estado</strong> de estas. Por tanto:    </p>
 <ul>
 <li><code>coordenadas</code>: será la lista de pares <code>[fila, columna]</code>. </li>
-<li><code>estado</code>: tomará los siguientes valores <code>"I"</code> - intacto, <code>"T"</code> - Tocado o <code>"H"</code> - Hundido. Este último valor se asignará cuando todas las coordenadas del barco estén en estado <code>"T"</code>.</li>
-<li><strong><code>movimientos</code></strong>: Lista de movimientos realizados por el jugador. En donde cada movimiento estarán representados por los siguientes datos:</li>
+<li><code>estado</code>: tomará los siguientes valores <code>"B"</code> - Barco intacto, <code>"T"</code> - Tocado o <code>"H"</code> - Hundido. Este último valor se asignará cuando todas las coordenadas del barco estén en estado <code>"T"</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>movimientos</code></strong>: Lista de movimientos realizados por el jugador. En donde cada movimiento estarán representados por los siguientes datos:</p>
+<ul>
 <li><code>coordenada</code>: Coordenada del ataque en formato <code>[fila, columna]</code>.</li>
-<li><code>resultado</code>: Resultado del ataque (<code>"A"</code> - Agua, <code>"T"</code> - Tocado, <code>"H"</code> - Hundido). Este último valor se asignará cuando todas las coordenadas del barco del jugador atacado estén en estado <code>"T"</code>. </li>
-<li>Otros datos relevantes que consideréis necesarios.</li>
+<li><code>resultado</code>: Resultado del ataque (<code>"A"</code> - Agua, <code>"T"</code> - Tocado, <code>"H"</code> - Hundido). Este último valor se asignará cuando todas las coordenadas del barco del jugador atacado estén en estado <code>"T"</code>.   </li>
 </ul>
 </li>
 </ul>
-<hr />
-<h4 id="interaccion"><strong>Interacción</strong><a class="headerlink" href="#interaccion" title="Permanent link">&para;</a></h4>
-<p><strong>Inicio del Turno:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Turno del Jugador 1.
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Tu tablero de ataques:
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>~ ~ ~ ~ ~
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>~ ~ X ~ ~
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>~ ~ ~ ~ ~
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>~ ~ ~ O ~
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>~ ~ ~ ~ ~
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>Introduce coordenadas para atacar (fila, columna): 3, 4
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>Resultado del ataque: Agua
+<p>Ten en cuenta, que en el fichero del j2, los movimientos tiene que ser coherentes con los datos del fichero del jugador 1. </p>
+<p><strong><code>MiPartida.j2.json</code>:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;j2&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">&quot;tablero&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">&quot;barcos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nt">&quot;movimientos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;coordenada&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;resultado&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;H&quot;</span><span class="p">},</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;coordenada&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;resultado&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;H&quot;</span><span class="p">},</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;coordenada&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;resultado&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A&quot;</span><span class="p">},</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;coordenada&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;resultado&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;H&quot;</span><span class="p">},</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;coordenada&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;resultado&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A&quot;</span><span class="p">},</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;coordenada&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;resultado&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;T&quot;</span><span class="p">},</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;coordenada&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;resultado&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;T&quot;</span><span class="p">},</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;coordenada&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;resultado&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A&quot;</span><span class="p">}</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="p">}</span>
 </code></pre></div></p>
-<p><strong>Actualización de JSON:</strong>
-- El tablero de <code>Jugador 2</code> se actualiza para reflejar el ataque.
+<h4 id="53-flujo-del-juego">5.3. Flujo del Juego<a class="headerlink" href="#53-flujo-del-juego" title="Permanent link">&para;</a></h4>
+<p>El juego se desarrolla en un <strong>bucle principal</strong> que organiza la lógica de turnos y permite que los jugadores alternen para atacar el tablero del oponente. </p>
+<p>A continuación, se describe el flujo en lenguaje natural:   </p>
+<ol>
+<li>Un jugador comienza el juego identificado la <strong>carpeta de la partida</strong> y el <strong>nombre de la partida</strong>. </li>
+<li>El archivo de configuración general <strong>tiene que estar ya generado</strong>. Se lee para obtener las dimensiones del tablero, la configuración de los barcos y el jugador que comienza. Chequea si el nombre de la partida coincide con el nombre del archivo, y chequea la demás información relevante.</li>
+<li>El programa intentará crear el archivo del j1, si existe intentará crear el archivo del j2. Si existe, mostrará un mensaje de error y terminará el juego.</li>
+<li>Cada jugador dispone de su propio archivo JSON con su tablero, barcos, y registro de movimientos. Al iniciar, se generará el tablero en base a la configuración de los barcos, preguntando por la posición de cada uno. Esta posición tiene que ser correcta y no puede superponerse con otro barco, ni estar fuera del tablero. </li>
+<li>Se selecciona el jugador que inicia el turno: el jugador activo. Siendo el otro, el jugador pasivo.</li>
+<li>Se muestra los tableros actualizados: jugador activo "tablero de ataque", y jugador pasivo "tablero de estado". </li>
+<li>Se solicita al jugador activo que introduzca una coordenada para atacar. Tiene que cumplir el tiempo establecido, sino se dará el ataque por fallido.</li>
+<li>En el JSON del jugador pasivo: Se chequea el ataque realizado y se registra el movimiento en el estado de los barcos y el tablero. </li>
+<li>En el JSON del jugador activo: Se registra el movimiento y su resultado. </li>
+<li>En consola, el "tablero de estado" del jugador pasivo se actualiza con el resultado del ataque. </li>
+<li>En consola, el "tablero de ataque" del jugador activo se muestra actualizado. </li>
+<li>Se actualiza el archivo global con el nuevo turno: Si es exitoso, se cambia el turno al siguiente jugador.</li>
+<li>Volvemos al paso 4. </li>
+<li>Se declara al ganador y se finaliza el juego. </li>
+</ol>
+<h5 id="531-interaccion-con-el-juego">5.3.1. Interacción con el Juego<a class="headerlink" href="#531-interaccion-con-el-juego" title="Permanent link">&para;</a></h5>
+<p>En una interacción típica con el juego, se mostrarán mensajes informativos y se solicitarán datos al usuario para realizar los ataques. A continuación, se muestra un ejemplo de interacción con el juego:</p>
+<p><strong>Inicio del Turno: Jugador activo</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Turno del Jugador 1.
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Tablero de ataque:
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>~ ~ H ~ ~
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>~ ~ ~ ~ T
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>~ ~ ~ ~ ~
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>H ~ T ~ ~
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>H A ~ ~ A
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>--- Tiempo de espera maximo: 30 segundos ---
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>Introduce coordenadas para atacar (fila, columna): 3, 4
+</code></pre></div>
+Una vez se pulsa "Enter", se actualizarán los tableros y se mostrará el resultado del ataque:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Turno del Jugador 1.
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Tablero de ataque: 
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>~ ~ H ~ ~
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>~ ~ ~ ~ T
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>~ ~ ~ ~ ~
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>H ~ T ~ A
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>H A ~ ~ A
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>Ataque 3, 4
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>Resultado del ataque: Agua
+</code></pre></div>
+<p><strong>Fin del Turno: Jugador activo - Actualización de JSON:</strong>
+- Se actualiza <code>MiPartida.j2.json</code>. Chequea el movimiento, obtiene el resultado. Deja reflejado el resultado en el tablero (Con X, para dejar constancia de que es el último movimiento) y en el estado de los barcos.
+- Se actualiza <code>MiPartida.j1.json</code>, registra el movimiento con el resultado.
 - El archivo global <code>MiPartida.json</code> se actualiza:
-    - <code>"turnos_jugados": 1</code>
-    - <code>"turno_actual": "Jugador 2"</code></p>
-<hr />
-<p>¿Especificamos más ejemplos de implementación o flujo detallado? 😊</p>
-<h6 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h6>
-<h3 id="ejercicio-hundir-la-flota-multijugador-en-python"><strong>Ejercicio: Hundir la Flota Multijugador en Python</strong><a class="headerlink" href="#ejercicio-hundir-la-flota-multijugador-en-python" title="Permanent link">&para;</a></h3>
-<p>Este ejercicio propone desarrollar un juego de "Hundir la Flota" en Python, enfocado en el uso de estructuras de datos avanzadas y archivos JSON para gestionar la configuración y el intercambio de información entre dos jugadores. A continuación, se describe el juego, las especificaciones, las estructuras de datos requeridas, los ficheros necesarios y los aspectos clave a implementar.</p>
-<hr />
-<h3 id="descripcion-del-bucle-principal-del-juego"><strong>Descripción del Bucle Principal del Juego</strong><a class="headerlink" href="#descripcion-del-bucle-principal-del-juego" title="Permanent link">&para;</a></h3>
-<p>El juego se desarrolla en un <strong>bucle principal</strong> que organiza la lógica de turnos y permite que los jugadores alternen para atacar el tablero del oponente. A continuación, se describe el flujo en lenguaje natural:</p>
-<ol>
-<li>
-<p><strong>Inicio del Juego:</strong></p>
-<ul>
-<li>El archivo de configuración general se lee para obtener las dimensiones del tablero, la configuración de los barcos y el jugador que comienza.</li>
-<li>Cada jugador dispone de su propio archivo JSON con su tablero, barcos, y registro de movimientos.</li>
-</ul>
-</li>
-<li>
-<p><strong>Turnos Alternos:</strong></p>
-<ul>
-<li><strong>Comprobación de Turno:</strong> El programa consulta el archivo global (<code>nombre_de_la_partida.json</code>) para verificar quién tiene el turno.</li>
-<li><strong>Tablero de Ataques:</strong> Se construye dinámicamente un tablero basado en el registro de movimientos del jugador activo.</li>
-<li><strong>Ataque:</strong> El jugador introduce una coordenada (fila, columna) para atacar.<ul>
-<li>Si la coordenada coincide con un barco del oponente, el ataque se registra como "tocado" o "hundido".</li>
-<li>Si no, se registra como "agua".</li>
-</ul>
-</li>
-<li><strong>Registro del Movimiento:</strong> El ataque se añade al registro de movimientos del jugador activo.</li>
-<li><strong>Actualización del Tablero del Oponente:</strong> El tablero del oponente se actualiza con el resultado del ataque.</li>
-<li><strong>Cambio de Turno:</strong> El archivo global se actualiza para pasar el turno al siguiente jugador.</li>
-</ul>
-</li>
-<li>
-<p><strong>Fin del Juego:</strong></p>
-<ul>
-<li>Después de cada turno, se verifica si todos los barcos de un jugador han sido hundidos.</li>
-<li>Si un jugador pierde todos sus barcos, se declara al ganador y el juego termina.</li>
-</ul>
-</li>
-</ol>
-<hr />
-<h3 id="estructura-de-datos"><strong>Estructura de Datos</strong><a class="headerlink" href="#estructura-de-datos" title="Permanent link">&para;</a></h3>
-<h4 id="1-tablero"><strong>1. Tablero</strong><a class="headerlink" href="#1-tablero" title="Permanent link">&para;</a></h4>
-<p>El tablero de cada jugador es una lista de listas (<code>N x N</code>) que representa las casillas:
-- <code>"~"</code>: Agua.
-- <code>"B"</code>: Barco.
-- <code>"X"</code>: Barco atacado.
-- <code>"O"</code>: Agua atacada.</p>
-<p><strong>Ejemplo de Tablero Inicial (Jugador 1):</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">tablero</span> <span class="o">=</span> <span class="p">[</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="p">[</span><span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">],</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="p">[</span><span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">],</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="p">[</span><span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">],</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="p">[</span><span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">],</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="p">[</span><span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">]</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">]</span>
-</code></pre></div></p>
-<hr />
-<h4 id="2-barcos"><strong>2. Barcos</strong><a class="headerlink" href="#2-barcos" title="Permanent link">&para;</a></h4>
-<p>Cada barco es un diccionario que contiene:
-- <code>coordenadas</code>: Lista de tuplas con las posiciones ocupadas por el barco.
-- <code>estado</code>: Diccionario que indica si cada coordenada está <code>"intacto"</code> o <code>"tocado"</code>.</p>
-<p><strong>Ejemplo de un Barco:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">barco</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="s2">&quot;coordenadas&quot;</span><span class="p">:</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)],</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="s2">&quot;estado&quot;</span><span class="p">:</span> <span class="p">{</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        <span class="s2">&quot;(1, 1)&quot;</span><span class="p">:</span> <span class="s2">&quot;intacto&quot;</span><span class="p">,</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        <span class="s2">&quot;(1, 2)&quot;</span><span class="p">:</span> <span class="s2">&quot;intacto&quot;</span><span class="p">,</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        <span class="s2">&quot;(1, 3)&quot;</span><span class="p">:</span> <span class="s2">&quot;tocado&quot;</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="p">}</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p">}</span>
-</code></pre></div></p>
-<hr />
-<h4 id="3-registro-de-movimientos"><strong>3. Registro de Movimientos</strong><a class="headerlink" href="#3-registro-de-movimientos" title="Permanent link">&para;</a></h4>
-<p>El registro de movimientos realizados por cada jugador se almacena en un <strong>conjunto</strong> de tuplas, donde cada tupla contiene:
-- La coordenada del ataque.
-- El resultado del ataque (<code>"agua"</code>, <code>"tocado"</code>, <code>"hundido"</code>).</p>
-<p><strong>Ejemplo de Registro de Movimientos:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">movimientos</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;tocado&quot;</span><span class="p">),</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;agua&quot;</span><span class="p">),</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;hundido&quot;</span><span class="p">)</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">}</span>
-</code></pre></div></p>
-<hr />
-<h4 id="4-jugador"><strong>4. Jugador</strong><a class="headerlink" href="#4-jugador" title="Permanent link">&para;</a></h4>
-<p>Cada jugador tiene:
-- <code>nombre</code>: Nombre del jugador.
-- <code>tablero</code>: Su tablero de juego.
-- <code>barcos</code>: Un diccionario que almacena los barcos y su estado.
-- <code>movimientos</code>: Conjunto que almacena los ataques realizados.</p>
-<p><strong>Ejemplo de un Jugador:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">jugador</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Jugador 1&quot;</span><span class="p">,</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="s2">&quot;tablero&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;~&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span><span class="p">],</span> <span class="o">...</span><span class="p">],</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="s2">&quot;barcos&quot;</span><span class="p">:</span> <span class="p">{</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        <span class="s2">&quot;Portaaviones&quot;</span><span class="p">:</span> <span class="p">{</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>            <span class="s2">&quot;coordenadas&quot;</span><span class="p">:</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)],</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>            <span class="s2">&quot;estado&quot;</span><span class="p">:</span> <span class="p">{</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>                <span class="s2">&quot;(1, 1)&quot;</span><span class="p">:</span> <span class="s2">&quot;intacto&quot;</span><span class="p">,</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>                <span class="s2">&quot;(1, 2)&quot;</span><span class="p">:</span> <span class="s2">&quot;intacto&quot;</span><span class="p">,</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>                <span class="s2">&quot;(1, 3)&quot;</span><span class="p">:</span> <span class="s2">&quot;tocado&quot;</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>            <span class="p">}</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>        <span class="p">}</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    <span class="p">},</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    <span class="s2">&quot;movimientos&quot;</span><span class="p">:</span> <span class="p">{</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>        <span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;tocado&quot;</span><span class="p">),</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>        <span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;agua&quot;</span><span class="p">)</span>
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>    <span class="p">}</span>
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="p">}</span>
-</code></pre></div></p>
-<hr />
-<h3 id="ficheros-de-configuracion-json"><strong>Ficheros de Configuración JSON</strong><a class="headerlink" href="#ficheros-de-configuracion-json" title="Permanent link">&para;</a></h3>
-<h4 id="1-archivo-general"><strong>1. Archivo General</strong><a class="headerlink" href="#1-archivo-general" title="Permanent link">&para;</a></h4>
-<p>Contiene información fija sobre la partida y el estado actual del juego.</p>
-<p><strong>Ejemplo:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">{</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="nt">&quot;nombre_partida&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MiPartida&quot;</span><span class="p">,</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="nt">&quot;dimensiones_tablero&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="nt">&quot;tiempo_refresco&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="nt">&quot;configuracion_barcos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">        </span><span class="nt">&quot;Portaaviones&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;tamaño&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;numero&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">        </span><span class="nt">&quot;Destructor&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;tamaño&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;numero&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">}</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="nt">&quot;turnos_jugados&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="nt">&quot;turno_actual&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jugador 1&quot;</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="p">}</span>
-</code></pre></div></p>
-<hr />
-<h4 id="2-archivos-de-jugadores"><strong>2. Archivos de Jugadores</strong><a class="headerlink" href="#2-archivos-de-jugadores" title="Permanent link">&para;</a></h4>
-<p>Cada jugador tiene su propio archivo JSON con:
-- Su tablero.
-- La configuración de sus barcos.
-- El registro de movimientos realizados.</p>
-<p><strong>Ejemplo (Jugador 1):</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">{</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jugador 1&quot;</span><span class="p">,</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="nt">&quot;tablero&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">        </span><span class="p">[</span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">],</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">        </span><span class="p">[</span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">],</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">        </span><span class="p">[</span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">],</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">        </span><span class="p">[</span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">],</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">        </span><span class="p">[</span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;~&quot;</span><span class="p">]</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="p">],</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="nt">&quot;barcos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">        </span><span class="nt">&quot;Portaaviones&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">            </span><span class="nt">&quot;coordenadas&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]],</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">            </span><span class="nt">&quot;estado&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;[1, 1]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;intacto&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;[1, 2]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;intacto&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;[1, 3]&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tocado&quot;</span><span class="p">}</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">    </span><span class="nt">&quot;movimientos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">        </span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot;tocado&quot;</span><span class="p">],</span>
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">        </span><span class="p">[[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot;agua&quot;</span><span class="p">]</span>
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">    </span><span class="p">]</span>
-<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="p">}</span>
-</code></pre></div></p>
-<hr />
-<h3 id="especificaciones-de-las-funciones"><strong>Especificaciones de las Funciones</strong><a class="headerlink" href="#especificaciones-de-las-funciones" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p><strong>Crear Tablero:</strong>
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span> <span class="nf">crear_tablero</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+   - <code>"turnos_jugados": 6</code>
+   - <code>"turno_actual": "j2"</code></p>
+<p>Si el jugador activo no realiza un ataque en el tiempo establecido, se considerará un ataque fallido y se pasará al siguiente jugador, en ese caso simplemente se incrementa el <code>turnos_jugados</code> y se cambia el <code>turno_actual</code> al siguiente jugador en el archivo global.</p>
+<p>Tened en cuenta que en el tablero de ataque solo hay que mostrar los ataques realizados y sus resultados, pero no los barcos del jugador pasivo.</p>
+<p><strong>Inicio de espera: Jugador pasivo</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Turno del Jugador 1.
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Tablero de estado:
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>B ~ H ~ B
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>B B B B T
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>~ ~ ~ ~ ~
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>H ~ T B ~
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>H A ~ ~ A
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>Esperando ataque... 
+</code></pre></div>
+El jugador pasivo queda esperando el ataque del jugador activo. Una vez el jugador activo ataca, muestra el resultado al jugador pasivo. </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Turno del Jugador 1.
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Tablero de estado:
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>B ~ H ~ B
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>B B B B T
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>~ ~ ~ ~ ~
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>H ~ T B A
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>H A ~ ~ A
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>Ataque 3, 4
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>Resultado del ataque: Agua
+</code></pre></div>
+<p><strong>Fin de espera: Jugador pasivo - Actualización de JSON:</strong>
+- El tablero de <code>Jugador 2</code> se actualiza para reflejar el resultado del ataque. Busca X y lo sustituye por el resultado.</p>
+<p>A continuación se describen de forma NO exhaustiva algunas de las funciones que se podrían implementar crear para desarrollar el juego <strong>Hundir la Flota Multijugador</strong>, detallando los argumentos que reciben, los valores que retornan, y su propósito. Como comentaba,la lista no pretende ser completa, ni obligatoria. Se intenta dar un ejemplo guía de algunas de las funciones en las que podría descomponerse el desarrollo.</p>
+<h4 id="54-funciones-relacionadas-con-la-configuracion">5.4. Funciones Relacionadas con la Configuración<a class="headerlink" href="#54-funciones-relacionadas-con-la-configuracion" title="Permanent link">&para;</a></h4>
+<h5 id="541-crear-archivos-de-la-partida">5.4.1. Crear Archivos de la Partida<a class="headerlink" href="#541-crear-archivos-de-la-partida" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span> <span class="nf">crear_archivos_partida</span><span class="p">(</span><span class="n">carpeta</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">nombre_partida</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dimensiones</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">configuracion_barcos</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="sd">    Crea los archivos necesarios para una nueva partida, incluyendo el archivo global y los archivos de los jugadores.</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="sd">    Args:</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="sd">        carpeta (str): Ruta a la carpeta donde se almacenarán los archivos de la partida.</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="sd">        nombre_partida (str): Nombre de la partida.</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="sd">        dimensiones (int): Dimensiones del tablero cuadrado (N x N).</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="sd">        configuracion_barcos (dict): Configuración de los barcos en formato {&quot;nombre&quot;: {&quot;tamaño&quot;: int, &quot;numero&quot;: int}}.</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="sd">        None</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<h5 id="542-leer-archivo-global">5.4.2. Leer Archivo Global<a class="headerlink" href="#542-leer-archivo-global" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span> <span class="nf">leer_archivo_global</span><span class="p">(</span><span class="n">carpeta</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">nombre_partida</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="sd">    Lee el archivo global de configuración de la partida.</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="sd">    Args:</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="sd">        carpeta (str): Ruta a la carpeta donde se encuentra el archivo de la partida.</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="sd">        nombre_partida (str): Nombre de la partida.</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="sd">        dict: Contenido del archivo global en forma de diccionario.</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<h5 id="543-leer-archivo-de-un-jugador">5.4.3. Leer Archivo de un Jugador<a class="headerlink" href="#543-leer-archivo-de-un-jugador" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span> <span class="nf">leer_archivo_jugador</span><span class="p">(</span><span class="n">carpeta</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">nombre_partida</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">jugador</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="sd">    Crea un tablero vacío de tamaño N x N.</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="sd">    &quot;&quot;&quot;</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Colocar Barco:</strong>
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">def</span> <span class="nf">colocar_barco</span><span class="p">(</span><span class="n">jugador</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">tipo_barco</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">coordenadas</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="sd">    Lee el archivo JSON de un jugador específico.</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="sd">    Args:</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="sd">        carpeta (str): Ruta a la carpeta donde se encuentra el archivo de la partida.</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="sd">        nombre_partida (str): Nombre de la partida.</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="sd">        jugador (str): Identificador del jugador (&quot;j1&quot; o &quot;j2&quot;).</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="sd">        dict: Contenido del archivo del jugador en forma de diccionario.</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<h5 id="544-guardar-archivo-global">5.4.4. Guardar Archivo Global<a class="headerlink" href="#544-guardar-archivo-global" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">def</span> <span class="nf">guardar_archivo_global</span><span class="p">(</span><span class="n">carpeta</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">nombre_partida</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">datos</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="sd">    Coloca un barco en el tablero del jugador.</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="sd">    &quot;&quot;&quot;</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Realizar Ataque:</strong>
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">def</span> <span class="nf">realizar_ataque</span><span class="p">(</span><span class="n">jugador_oponente</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">coordenada</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="sd">    Guarda los cambios en el archivo global de configuración de la partida.</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="sd">    Args:</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="sd">        carpeta (str): Ruta a la carpeta donde se encuentra el archivo de la partida.</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="sd">        nombre_partida (str): Nombre de la partida.</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="sd">        datos (dict): Contenido actualizado del archivo global.</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="sd">        None</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<h5 id="545-guardar-archivo-de-un-jugador">5.4.5. Guardar Archivo de un Jugador**<a class="headerlink" href="#545-guardar-archivo-de-un-jugador" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">def</span> <span class="nf">guardar_archivo_jugador</span><span class="p">(</span><span class="n">carpeta</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">nombre_partida</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">jugador</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">datos</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="sd">    Realiza un ataque en el tablero del oponente.</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="sd">    &quot;&quot;&quot;</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Registrar Movimiento:</strong>
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">def</span> <span class="nf">registrar_movimiento</span><span class="p">(</span><span class="n">jugador</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">coordenada</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">resultado</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="sd">    Guarda los cambios en el archivo JSON de un jugador.</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="sd">    Args:</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="sd">        carpeta (str): Ruta a la carpeta donde se encuentra el archivo de la partida.</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="sd">        nombre_partida (str): Nombre de la partida.</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="sd">        jugador (str): Identificador del jugador (&quot;j1&quot; o &quot;j2&quot;).</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="sd">        datos (dict): Contenido actualizado del archivo del jugador.</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="sd">        None</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<h4 id="55-funciones-relacionadas-con-el-tablero-y-los-barcos">5.5. Funciones Relacionadas con el Tablero y los Barcos<a class="headerlink" href="#55-funciones-relacionadas-con-el-tablero-y-los-barcos" title="Permanent link">&para;</a></h4>
+<h5 id="551-crear-tablero">5.5.1. Crear Tablero<a class="headerlink" href="#551-crear-tablero" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">def</span> <span class="nf">crear_tablero</span><span class="p">(</span><span class="n">dimensiones</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="sd">    Registra un ataque realizado por el jugador.</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="sd">    &quot;&quot;&quot;</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Actualizar Turno:</strong>
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">def</span> <span class="nf">actualizar_turno</span><span class="p">(</span><span class="n">nombre_archivo</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">siguiente_jugador</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="sd">    Crea un tablero vacío de dimensiones N x N.</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="sd">    Args:</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="sd">        dimensiones (int): Tamaño del tablero (N x N).</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="sd">        list: Tablero vacío representado como una lista de listas.</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<h3 id="552-colocar-barco">5.5.2. Colocar Barco<a class="headerlink" href="#552-colocar-barco" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">def</span> <span class="nf">colocar_barco</span><span class="p">(</span><span class="n">tablero</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">barco</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">coordenadas</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="sd">    Cambia el turno al siguiente jugador en el archivo global.</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="sd">    &quot;&quot;&quot;</span>
-</code></pre></div></p>
-</li>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="sd">    Coloca un barco en el tablero si las coordenadas son válidas.</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="sd">    Args:</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="sd">        tablero (list): Tablero del jugador.</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="sd">        barco (dict): Diccionario que representa el barco.</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="sd">        coordenadas (list[tuple]): Lista de coordenadas donde colocar el barco.</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="sd">        bool: True si el barco se colocó correctamente, False si hubo un error.</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<h5 id="553-actualizar-tablero">5.5.3. Actualizar Tablero<a class="headerlink" href="#553-actualizar-tablero" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">def</span> <span class="nf">actualizar_tablero</span><span class="p">(</span><span class="n">tablero</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">coordenada</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">resultado</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="sd">    Actualiza el tablero con el resultado de un ataque.</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="sd">    Args:</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="sd">        tablero (list): Tablero del jugador.</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="sd">        coordenada (tuple): Coordenada del ataque (fila, columna).</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="sd">        resultado (str): Resultado del ataque (&quot;A&quot;, &quot;T&quot;, &quot;H&quot;).</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="sd">        None</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<h4 id="56-funciones-relacionadas-con-los-movimientos">5.6. Funciones Relacionadas con los Movimientos<a class="headerlink" href="#56-funciones-relacionadas-con-los-movimientos" title="Permanent link">&para;</a></h4>
+<h5 id="561-registrar-movimiento">5.6.1. Registrar Movimiento<a class="headerlink" href="#561-registrar-movimiento" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">def</span> <span class="nf">registrar_movimiento</span><span class="p">(</span><span class="n">movimientos</span><span class="p">:</span> <span class="nb">set</span><span class="p">,</span> <span class="n">coordenada</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">resultado</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="sd">    Registra un movimiento en el conjunto de movimientos del jugador.</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="sd">    Args:</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="sd">        movimientos (set): Conjunto de movimientos del jugador.</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="sd">        coordenada (tuple): Coordenada del ataque (fila, columna).</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="sd">        resultado (str): Resultado del ataque (&quot;A&quot;, &quot;T&quot;, &quot;H&quot;).</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="sd">        None</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<h5 id="562-verificar-movimiento-valido">5.6.2. Verificar Movimiento Válido<a class="headerlink" href="#562-verificar-movimiento-valido" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">def</span> <span class="nf">verificar_movimiento</span><span class="p">(</span><span class="n">movimientos</span><span class="p">:</span> <span class="nb">set</span><span class="p">,</span> <span class="n">coordenada</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="sd">    Verifica si un movimiento ya ha sido realizado en las coordenadas dadas.</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="sd">    Args:</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="sd">        movimientos (set): Conjunto de movimientos del jugador.</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="sd">        coordenada (tuple): Coordenada a verificar (fila, columna).</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="sd">        bool: True si el movimiento es válido, False si ya ha sido realizado.</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<h4 id="57-funciones-relacionadas-con-el-flujo-del-juego">5.7. Funciones Relacionadas con el Flujo del Juego<a class="headerlink" href="#57-funciones-relacionadas-con-el-flujo-del-juego" title="Permanent link">&para;</a></h4>
+<h5 id="571-realizar-ataque">5.7.1. Realizar Ataque<a class="headerlink" href="#571-realizar-ataque" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">def</span> <span class="nf">realizar_ataque</span><span class="p">(</span><span class="n">jugador_activo</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">jugador_pasivo</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">coordenada</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="sd">    Realiza un ataque del jugador activo al jugador pasivo, registrando el resultado.</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="sd">    Args:</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="sd">        jugador_activo (dict): Diccionario con la información del jugador activo.</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="sd">        jugador_pasivo (dict): Diccionario con la información del jugador pasivo.</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="sd">        coordenada (tuple): Coordenada del ataque (fila, columna).</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="sd">        str: Resultado del ataque (&quot;A&quot;, &quot;T&quot;, &quot;H&quot;).</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<h5 id="572-cambiar-turno">5.7.2. Cambiar Turno<a class="headerlink" href="#572-cambiar-turno" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">def</span> <span class="nf">cambiar_turno</span><span class="p">(</span><span class="n">archivo_global</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="sd">    Cambia el turno al siguiente jugador en el archivo global.</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="sd">    Args:</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="sd">        archivo_global (str): Ruta al archivo global de la partida.</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="sd">        str: Nuevo turno actual (&quot;j1&quot; o &quot;j2&quot;).</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<h5 id="573-verificar-fin-del-juego">5.7.3. Verificar Fin del Juego<a class="headerlink" href="#573-verificar-fin-del-juego" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">def</span> <span class="nf">verificar_fin_juego</span><span class="p">(</span><span class="n">jugador</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="sd">    Verifica si todos los barcos de un jugador han sido hundidos.</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="sd">    Args:</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="sd">        jugador (dict): Diccionario con la información del jugador.</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="sd">        bool: True si todos los barcos han sido hundidos, False en caso contrario.</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<h4 id="58-funciones-relacionadas-con-la-consola">5.8. Funciones Relacionadas con la Consola<a class="headerlink" href="#58-funciones-relacionadas-con-la-consola" title="Permanent link">&para;</a></h4>
+<h5 id="581-mostrar-tablero">5.8.1. Mostrar Tablero<a class="headerlink" href="#581-mostrar-tablero" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">def</span> <span class="nf">mostrar_tablero</span><span class="p">(</span><span class="n">tablero</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">modo</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;ataque&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="sd">    Muestra el tablero en consola. Si el modo es &quot;ataque&quot;, oculta los barcos intactos.</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="sd">    Args:</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="sd">        tablero (list): Tablero del jugador.</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="sd">        modo (str): Modo de visualización (&quot;ataque&quot; o &quot;estado&quot;).</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="sd">        None</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<h3 id="6-consejos">6. Consejos<a class="headerlink" href="#6-consejos" title="Permanent link">&para;</a></h3>
+<p>A continuación, se presentan consejos prácticos para implementar el juego de <strong>Hundir la Flota Multijugador</strong>. Estos están diseñados para guiarte paso a paso en la resolución del ejercicio de manera estructurada.</p>
+<h4 id="61-comprender-el-problema">6.1. Comprender el Problema<a class="headerlink" href="#61-comprender-el-problema" title="Permanent link">&para;</a></h4>
+<p>Antes de comenzar a programar, asegúrate de comprender completamente el problema y los requerimientos:
+1. Lee cuidadosamente la descripción del ejercicio.
+2. Comprende el flujo del juego: inicialización, colocación de barcos, ataques, cambios de turno, y finalización.
+3. Identifica qué datos se necesitan en cada etapa y cómo interactúan los jugadores con el sistema.</p>
+<h4 id="62-planificacion-y-diseno">6.2. Planificación y Diseño<a class="headerlink" href="#62-planificacion-y-diseno" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Divide el problema en partes más pequeñas. Implementa primero funciones sencillas como la creación de tableros, y después pasa a funciones más complejas, como los ataques.</li>
+<li>Usa pseudocódigo o diagramas para planificar la lógica del juego. Esto puede ayudarte a visualizar el flujo de datos entre funciones y archivos.</li>
+<li>Diseña las funciones pensando en la modularidad. Cada función debe realizar una tarea específica.</li>
 </ol>
-<hr />
-<h3 id="volcado-de-datos-a-consola"><strong>Volcado de Datos a Consola</strong><a class="headerlink" href="#volcado-de-datos-a-consola" title="Permanent link">&para;</a></h3>
+<h4 id="63-modularidad-y-funciones">6.3. Modularidad y Funciones<a class="headerlink" href="#63-modularidad-y-funciones" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
-<p><strong>Inicio del Turno:</strong>
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Turno del Jugador 1.
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>Tu tablero de ataques:
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>~ ~ ~ ~ ~
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>~ ~ X ~ ~
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>~ ~ ~ ~ ~
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>~ ~ ~ O ~
-<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>~ ~ ~ ~ ~
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Después del Ataque:</strong>
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Ataque a la coordenada (3, 4): Agua
-</code></pre></div></p>
-</li>
-</ol>
-<hr />
-<h3 id="intercambio-de-informacion-entre-ataques"><strong>Intercambio de Información entre Ataques</strong><a class="headerlink" href="#intercambio-de-informacion-entre-ataques" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p><strong>Información Registrada por el Atacante:</strong></p>
+<p>Escribe una función para cada operación. Por ejemplo, crea funciones separadas para:   </p>
 <ul>
-<li>Coordenada del ataque.</li>
-<li>Resultado del ataque (<code>"agua"</code>, <code>"tocado"</code>, <code>"hundido"</code>).</li>
+<li>Leer y guardar archivos JSON.  </li>
+<li>Crear el tablero.</li>
+<li>Registrar un movimiento.</li>
+<li>Realizar un ataque.</li>
 </ul>
 </li>
 <li>
-<p><strong>Actualización en el Archivo del Oponente:</strong></p>
+<p>Prueba cada función de manera independiente antes de integrarla en el programa principal.   </p>
+</li>
+<li>Evita escribir todo el código en un solo archivo. Si es posible, organiza las funciones en módulos según su propósito.</li>
+</ol>
+<h4 id="64-uso-de-archivos-json">6.4. Uso de Archivos JSON<a class="headerlink" href="#64-uso-de-archivos-json" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Familiarízate con el formato JSON. Asegúrate de comprender cómo se representan listas, diccionarios, y estructuras anidadas.    </li>
+<li>Valida los datos al leer un archivo JSON. Por ejemplo, comprueba que las dimensiones del tablero sean correctas y que los barcos estén definidos adecuadamente.  </li>
+<li>Guarda los datos regularmente. Asegúrate de que los archivos de los jugadores y el archivo global reflejen siempre el estado más reciente de la partida.   </li>
+</ol>
+<h4 id="65-trabajar-con-tableros-y-barcos">6.5. Trabajar con Tableros y Barcos<a class="headerlink" href="#65-trabajar-con-tableros-y-barcos" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Representa el tablero como una lista de listas y actualízalo conforme ocurran ataques.</li>
+<li>
+<p>Asegúrate de que los barcos se coloquen en posiciones válidas:</p>
 <ul>
-<li>Estado del tablero.</li>
-<li>Estado de los barcos afectados.</li>
+<li>Dentro de los límites del tablero.  </li>
+<li>Sin superponer a otros barcos.  </li>
 </ul>
 </li>
 <li>
-<p><strong>Cambio de Turno:</strong></p>
+<p>Al realizar un ataque, actualiza tanto el tablero como el estado del barco atacado.</p>
+</li>
+</ol>
+<h4 id="66-manejo-de-movimientos">6.6. Manejo de Movimientos<a class="headerlink" href="#66-manejo-de-movimientos" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Usa un conjunto para registrar las coordenadas de los ataques realizados por cada jugador. Esto evita duplicados automáticamente.</li>
+<li>Antes de realizar un ataque, verifica si la coordenada ya ha sido atacada.</li>
+<li>Guarda el resultado del ataque (agua, tocado, hundido) junto con las coordenadas en los archivos correspondientes.</li>
+</ol>
+<h4 id="67-depuracion-y-validacion">6.7. Depuración y Validación<a class="headerlink" href="#67-depuracion-y-validacion" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>Asegúrate de que cada función se comporta como se espera antes de integrarla. Por ejemplo:   </p>
 <ul>
-<li>Actualización en el archivo global (<code>turno_actual</code>).</li>
+<li>Prueba si la función <code>crear_tablero</code> genera correctamente un tablero vacío.</li>
+<li>Valida si los archivos JSON son leídos y escritos correctamente.</li>
+</ul>
+</li>
+<li>
+<p>Utiliza mensajes de error claros para detectar problemas rápidamente. Por ejemplo:   </p>
+<ul>
+<li>"Coordenada fuera de los límites del tablero."   </li>
+<li>"El barco no cabe en la posición indicada."    </li>
 </ul>
 </li>
 </ol>
-<hr />
-<h3 id="sincronizacion-y-turnos"><strong>Sincronización y Turnos</strong><a class="headerlink" href="#sincronizacion-y-turnos" title="Permanent link">&para;</a></h3>
+<h4 id="68-prueba-escenarios-simples">6.8. Prueba Escenarios Simples<a class="headerlink" href="#68-prueba-escenarios-simples" title="Permanent link">&para;</a></h4>
 <ol>
-<li><strong>Lectura de Turno:</strong> Cada jugador lee el archivo global para saber si es su turno.</li>
-<li><strong>Espera Activa:</strong> Si no es su turno, el jugador espera (según <code>tiempo_refresco</code>).</li>
-<li><strong>Cambio de Turno:</strong> Después de cada ataque, el archivo global se actualiza para pasar el turno al siguiente jugador.</li>
+<li>
+<p>Antes de probar el juego completo, simula pequeñas partes del flujo. Por ejemplo:    </p>
+<ul>
+<li>Coloca un barco y verifica su representación en el tablero.</li>
+<li>Realiza un ataque y verifica si el resultado se registra correctamente.</li>
+<li>Usa datos de prueba realistas, como un tablero parcialmente lleno y un archivo de configuración global válido.</li>
+</ul>
+</li>
 </ol>
-<hr />
-<p>Este esquema detalla todos los</p>
-<p>aspectos necesarios para que los alumnos comprendan la lógica del juego y las herramientas a utilizar. ¿Te gustaría algún diagrama para complementar? 😊</p>
+<h4 id="69-interaccion-con-el-usuario">6.9. Interacción con el Usuario<a class="headerlink" href="#69-interaccion-con-el-usuario" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>Proporciona mensajes claros y detallados. Por ejemplo:    </p>
+<ul>
+<li>"Es tu turno. Introduce una coordenada para atacar."</li>
+<li>"Ataque exitoso: Has tocado un barco en (2, 3)."</li>
+</ul>
+</li>
+<li>
+<p>Asegúrate de que el tablero mostrado en consola sea fácil de interpretar:   </p>
+<ul>
+<li>Tablero del jugador activo: Muestra solo los ataques realizados y sus resultados.</li>
+<li>Tablero del jugador pasivo: Muestra los barcos, incluyendo cuáles han sido tocados o hundidos.</li>
+</ul>
+</li>
+</ol>
+<h4 id="610-control-de-turnos">6.10. Control de Turnos<a class="headerlink" href="#610-control-de-turnos" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Lee el archivo global para determinar quién tiene el turno.</li>
+<li>Asegúrate de que el turno se actualiza correctamente después de cada ataque.</li>
+<li>Implementa un temporizador (si es requerido) para forzar el cambio de turno si el jugador activo no realiza un ataque dentro del tiempo límite.</li>
+</ol>
+<h4 id="611-documentacion-y-organizacion">6.11. Documentación y Organización<a class="headerlink" href="#611-documentacion-y-organizacion" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Comenta tu código. Explica el propósito de cada función y cualquier lógica compleja.</li>
+<li>
+<p>Escribe un README que explique:    </p>
+<ul>
+<li>Cómo ejecutar el programa.</li>
+<li>Cómo están organizados los archivos JSON.</li>
+<li>Las reglas del juego y las convenciones utilizadas en el código.   </li>
+</ul>
+</li>
+<li>
+<p>Organiza el código en secciones lógicas. Por ejemplo:    </p>
+<ul>
+<li>Funciones relacionadas con el tablero.</li>
+<li>Funciones para manejar los archivos JSON.</li>
+<li>Funciones para la interacción del usuario.</li>
+</ul>
+</li>
+</ol>
+<h4 id="612-errores-comunes-y-como-evitarlos">6.12. Errores Comunes y Cómo Evitarlos<a class="headerlink" href="#612-errores-comunes-y-como-evitarlos" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Barcos superpuestos o fuera de los límites:</strong>    </p>
+<ul>
+<li>Valida las posiciones de los barcos antes de colocarlos en el tablero.   </li>
+</ul>
+</li>
+<li>
+<p><strong>Ataques duplicados:</strong></p>
+<ul>
+<li>Usa el conjunto de movimientos para evitar ataques repetidos en la misma coordenada.</li>
+</ul>
+</li>
+<li>
+<p><strong>Turnos desincronizados:</strong></p>
+<ul>
+<li>Asegúrate de que el archivo global refleje correctamente el turno actual.</li>
+</ul>
+</li>
+<li>
+<p><strong>JSON malformado:</strong></p>
+<ul>
+<li>Usa estructuras claras y validadas antes de guardar los datos.</li>
+</ul>
+</li>
+</ol>
+<h4 id="613-prueba-completa">6.13. Prueba Completa<a class="headerlink" href="#613-prueba-completa" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>Antes de finalizar, prueba una partida completa:    </p>
+<ul>
+<li>Configura un tablero inicial con barcos colocados.   </li>
+<li>Realiza ataques alternados entre los jugadores.   </li>
+<li>Verifica que los archivos JSON se actualicen correctamente después de cada turno.   </li>
+</ul>
+</li>
+<li>
+<p>Asegúrate de que las condiciones de victoria se detecten correctamente y que el juego termine de manera adecuada.</p>
+</li>
+</ol>
 
 
 

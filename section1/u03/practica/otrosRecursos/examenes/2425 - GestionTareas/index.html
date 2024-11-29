@@ -3805,26 +3805,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#instrucciones" class="md-nav__link">
+  <a href="#tareas-a-realizar" class="md-nav__link">
     <span class="md-ellipsis">
-      Instrucciones
+      Tareas a realizar:
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Instrucciones">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-completar-las-funciones" class="md-nav__link">
-    <span class="md-ellipsis">
-      A. Completar las Funciones
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -3905,12 +3890,13 @@
   <h1>Index</h1>
 
 <h2 id="prueba-practica-03-gestion-de-tareas"><strong>Prueba Práctica 03: Gestión de Tareas</strong><a class="headerlink" href="#prueba-practica-03-gestion-de-tareas" title="Permanent link">&para;</a></h2>
-<p>En esta práctica, implementarás funciones para gestionar una lista de tareas predefinidas. El programa contará con un menú interactivo que permitirá:
-1. <strong>Filtrar tareas</strong>: Seleccionar solo las tareas con un estado específico.
-2. <strong>Mostrar todas las tareas</strong>: Listar todas las tareas en formato legible.
-3. <strong>Mostrar la siguiente tarea</strong>: Recorrer las tareas (filtradas o completas) secuencialmente con un iterador.
-4. <strong>Salir</strong>: Finalizar el programa.</p>
-<hr />
+<p>En esta práctica, implementarás funciones para gestionar una lista de tareas predefinidas. El programa contará con un menú interactivo que permitirá:</p>
+<ol>
+<li><strong>Filtrar tareas</strong>: Seleccionar solo las tareas con un estado específico.</li>
+<li><strong>Mostrar todas las tareas</strong>: Listar todas las tareas en formato legible.</li>
+<li><strong>Mostrar la siguiente tarea</strong>: Recorrer las tareas (filtradas o completas) secuencialmente con un iterador.</li>
+<li><strong>Salir</strong>: Finalizar el programa.</li>
+</ol>
 <h3 id="detalles-tecnicos"><strong>Detalles Técnicos</strong><a class="headerlink" href="#detalles-tecnicos" title="Permanent link">&para;</a></h3>
 <h4 id="1-lista-de-tareas"><strong>1. Lista de Tareas</strong><a class="headerlink" href="#1-lista-de-tareas" title="Permanent link">&para;</a></h4>
 <p>Se proporciona la función <code>crear_tareas_ejemplo()</code> que genera una lista predefinida de tareas con los siguientes atributos:
@@ -3941,10 +3927,8 @@
 </li>
 <li>Finaliza el programa.</li>
 </ul>
-<hr />
-<h3 id="instrucciones"><strong>Instrucciones</strong><a class="headerlink" href="#instrucciones" title="Permanent link">&para;</a></h3>
-<h4 id="a-completar-las-funciones"><strong>A. Completar las Funciones</strong><a class="headerlink" href="#a-completar-las-funciones" title="Permanent link">&para;</a></h4>
-<p>Se te proporciona un esqueleto del programa. Debes completar las siguientes funciones:</p>
+<h3 id="tareas-a-realizar"><strong>Tareas a realizar:</strong><a class="headerlink" href="#tareas-a-realizar" title="Permanent link">&para;</a></h3>
+<p>Se te proporciona un esqueleto del programa, con algunas funciones ya terminadas. Pero debes completar las siguientes:</p>
 <ol>
 <li><strong><code>obtener_tareas</code></strong></li>
 <li>Toma una lista de tareas y retorna una cadena con todas las tareas en formato:
@@ -3953,7 +3937,7 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>...
 </code></pre></div></li>
 <li>
-<p><strong>Obligatorio</strong>: Usa <code>join</code> para construir la cadena.</p>
+<p><strong>Obligatorio</strong>: Usa <code>join</code> para separar las tareas en diferentes líneas.</p>
 </li>
 <li>
 <p><strong><code>mostrar_tarea</code></strong></p>
@@ -3966,29 +3950,27 @@
 <li>
 <p><strong><code>filtrar_tareas_por_estado</code></strong></p>
 </li>
-<li>Recibe una lista de tareas y un estado, y retorna una tupla con las tareas que coinciden.</li>
 <li>
-<p><strong>Restricción</strong>: No puedes usar el método <code>filter</code>.</p>
+<p>Recibe una lista de tareas y un estado, y retorna una tupla con las tareas que coinciden.</p>
 </li>
 <li>
-<p><strong>Lógica de Filtrado (Opción 1 del Menú)</strong></p>
+<p><strong><code>main</code> Lógica de Filtrado (Opción 1 del Menú)</strong></p>
 </li>
 <li>Filtra las tareas por estado si el usuario introduce un estado válido. Si no introduce nada, elimina el filtro.</li>
 <li>
 <p>Reinicia el iterador con la nueva lista de tareas.</p>
 </li>
 <li>
-<p><strong>Lógica de Mostrar Tareas (Opción 2 del Menú)</strong></p>
+<p><strong><code>main</code> Lógica de Mostrar Tareas (Opción 2 del Menú)</strong></p>
 </li>
 <li>
 <p>Utiliza <code>obtener_tareas</code> para mostrar todas las tareas en formato legible.</p>
 </li>
 <li>
-<p><strong>Lógica de Mostrar Siguiente Tarea (Opción 3 del Menú)</strong></p>
+<p><strong><code>main</code> Lógica de Mostrar Siguiente Tarea (Opción 3 del Menú)</strong></p>
 </li>
 <li>Muestra la siguiente tarea del iterador. Si no hay más tareas, reinicia el iterador e informa al usuario.</li>
 </ol>
-<hr />
 <h3 id="ejemplo-de-ejecucion"><strong>Ejemplo de Ejecución</strong><a class="headerlink" href="#ejemplo-de-ejecucion" title="Permanent link">&para;</a></h3>
 <h4 id="menu-principal"><strong>Menú Principal</strong><a class="headerlink" href="#menu-principal" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Menú:
@@ -4002,11 +3984,13 @@
 <h4 id="opcion-1-filtrar-tareas"><strong>Opción 1: Filtrar tareas</strong><a class="headerlink" href="#opcion-1-filtrar-tareas" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Input</strong>: en proceso</li>
-<li><strong>Resultado</strong>: Filtra las tareas por el estado <code>En Proceso</code>. Las tareas filtradas serán:
-  <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ID: 2, Descripción: Terminar proyecto, Estado: En Proceso
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ID: 6, Descripción: Actualizar currículum, Estado: En Proceso
-</code></pre></div></li>
+<li><strong>Resultado</strong>: Filtra las tareas por el estado <code>En Proceso</code>. Las tareas filtradas serán:</li>
 </ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ID: 2, Descripción: Terminar proyecto, Estado: En Proceso
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ID: 6, Descripción: Actualizar currículum, Estado: En Proceso
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Presione una tecla para continuar . . . 
+</code></pre></div>
 <h4 id="opcion-2-mostrar-todas-las-tareas"><strong>Opción 2: Mostrar todas las tareas</strong><a class="headerlink" href="#opcion-2-mostrar-todas-las-tareas" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ID: 1, Descripción: Estudiar Python, Estado: Pendiente
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>ID: 2, Descripción: Terminar proyecto, Estado: En Proceso
@@ -4016,17 +4000,25 @@
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>ID: 6, Descripción: Actualizar currículum, Estado: En Proceso
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>ID: 7, Descripción: Organizar escritorio, Estado: Completada
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>ID: 8, Descripción: Preparar presentación, Estado: Pendiente   
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>Presione una tecla para continuar . . . 
 </code></pre></div>
 <h4 id="opcion-3-mostrar-siguiente-tarea"><strong>Opción 3: Mostrar siguiente tarea</strong><a class="headerlink" href="#opcion-3-mostrar-siguiente-tarea" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Primera vez</strong>:
-  <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Siguiente tarea:
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>ID: 1, Descripción: Estudiar Python, Estado: Pendiente
-</code></pre></div></li>
-<li><strong>Sin más tareas</strong>:
-  <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>No hay más tareas! Se ha reiniciado el iterador...
-</code></pre></div></li>
+<li><strong>Primera vez</strong>:</li>
 </ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Siguiente tarea:
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>ID: 1, Descripción: Estudiar Python, Estado: Pendiente
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Presione una tecla para continuar . . . 
+</code></pre></div>
+<ul>
+<li><strong>Si no existen más tareas</strong>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>No hay más tareas! Se ha reiniciado el iterador...
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Presione una tecla para continuar . . . 
+</code></pre></div>
 
 
 

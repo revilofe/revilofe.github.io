@@ -43,58 +43,6 @@ def crear_tareas_ejemplo() -> list:
     ]
 
 
-def obtener_tareas(tareas: list) -> str:
-    """
-    Genera una cadena que contiene todas las tareas formateadas.
-
-    Args:
-        tareas (list): Lista de tareas.
-
-    Returns:
-        str: Cadena formateada con todas las tareas.
-    """
-    # TODO: Utiliza join.
-    # Ejemplo de cadena de caracteres que debe retornar:
-    """
-    ID: 1, Descripción: Estudiar Python, Estado: Pendiente
-    ID: 2, Descripción: Terminar proyecto, Estado: En Proceso
-    ID: 3, Descripción: Revisar correos, Estado: Completada
-    ID: 4, Descripción: Planificar reunión, Estado: Pendiente
-    ID: 5, Descripción: Comprar libros, Estado: Pendiente
-    ID: 6, Descripción: Actualizar currículum, Estado: En Proceso
-    ID: 7, Descripción: Organizar escritorio, Estado: Completada
-    ID: 8, Descripción: Preparar presentación, Estado: Pendiente    
-    """
-
-
-
-def mostrar_tarea(tarea: dict):
-    """
-    Muestra una tarea en formato legible.
-    
-    Args:
-        tarea (dict): Diccionario con la información de la tarea.
-    """
-    # TODO: Debe mostrar por consola la tarea como en el siguiente ejemplo:
-    # ID: 1, Descripción: Estudiar Python, Estado: Pendiente
-
-
-
-def filtrar_tareas_por_estado(tareas: list, estado: str) -> tuple:
-    """
-    Filtra las tareas por el estado especificado.
-
-    Args:
-        tareas (list): Lista de tareas.
-        estado (str): Estado por el cual filtrar las tareas.
-
-    Returns:
-        tuple: Tareas que coinciden con el estado indicado.
-    """
-    # TODO: No podéis usar el método filter() para filtrar en la lista
-
-
-
 def mostrar_menu(estado = ""):
     """
     Muestra el menú de opciones. Indica el filtro actual si está activo.
@@ -108,7 +56,6 @@ def mostrar_menu(estado = ""):
     print("2. Mostrar todas las tareas")
     print("3. Mostrar siguiente tarea")
     print("4. Salir")
-
 
 
 def elegir_opcion():
@@ -148,6 +95,58 @@ def pedir_estado() -> str:
     return estado
 
 
+def obtener_tareas(tareas: list) -> str:
+    """
+    Genera una cadena que contiene todas las tareas formateadas.
+
+    Args:
+        tareas (list): Lista de tareas.
+
+    Returns:
+        str: Cadena formateada con todas las tareas.
+    """
+    # TODO: Retornar una cadena de caracteres con las tareas.
+    # Utilizad join para separar las tareas en diferentes líneas.
+    # Ejemplo de cadena de caracteres que debe retornar:
+    """
+    ID: 1, Descripción: Estudiar Python, Estado: Pendiente
+    ID: 2, Descripción: Terminar proyecto, Estado: En Proceso
+    ID: 3, Descripción: Revisar correos, Estado: Completada
+    ID: 4, Descripción: Planificar reunión, Estado: Pendiente
+    ID: 5, Descripción: Comprar libros, Estado: Pendiente
+    ID: 6, Descripción: Actualizar currículum, Estado: En Proceso
+    ID: 7, Descripción: Organizar escritorio, Estado: Completada
+    ID: 8, Descripción: Preparar presentación, Estado: Pendiente    
+    """
+
+
+def mostrar_tarea(tarea: dict):
+    """
+    Muestra una tarea en formato legible.
+    
+    Args:
+        tarea (dict): Diccionario con la información de la tarea.
+    """
+    # TODO: Debe mostrar por consola la tarea como en el siguiente ejemplo:
+    # ID: 1, Descripción: Estudiar Python, Estado: Pendiente
+
+
+
+def filtrar_tareas_por_estado(tareas: list, estado: str) -> tuple:
+    """
+    Filtra las tareas por el estado especificado.
+
+    Args:
+        tareas (list): Lista de tareas.
+        estado (str): Estado por el cual filtrar las tareas.
+
+    Returns:
+        tuple: Tareas que coinciden con el estado indicado.
+    """
+    # TODO: Retornar una tupla con las tareas filtradas
+
+
+
 def main():
     """
     Función principal que administra el programa.
@@ -168,13 +167,14 @@ def main():
 
         if opcion == "1":
             estado = pedir_estado()
-            # TODO: Asignar tareas... debéis filtrar las tareas si existe un estado y sino volver a cargar todas las tareas.
+            # TODO: Asignar tareas... 
+            # Debéis filtrar las tareas si existe un estado y si ha introducido solo la cadena vacía, volver a cargar todas las tareas.
             # TODO: Después de asignar correctamente tareas, debéis crear el iterador con la nueva lista.
 
 
         elif opcion == "2":
             print("\nTodas las tareas:")
-            # TODO: Mostrar TODAS las tareas (usad la lista tareas_todas)
+            # TODO: Mostrar TODAS las tareas mediante la funcion obtener_tareas
 
 
         elif opcion == "3":

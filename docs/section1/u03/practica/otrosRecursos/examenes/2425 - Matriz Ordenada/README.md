@@ -1,38 +1,29 @@
-## **Prueba Práctica 01: Manipulación de Matrices**
 
-**Objetivo:**
-En esta práctica, trabajarás con matrices en Python, aprendiendo a manipular y organizar datos almacenados en colecciones avanzadas como listas y diccionarios. Diseñarás un programa modular que permita al usuario crear, ordenar y mostrar matrices siguiendo unos requisitos específicos.
+## **Prueba Práctica 01: Matriz Ordenada**
 
-Además, usarás un **diccionario** para almacenar los parámetros requeridos (límites y configuraciones) tanto para las dimensiones de la matriz como para los valores que contendrá.
+En esta práctica trabajarás con **matrices** en Python, diseñando un programa modular que permita al usuario crear, ordenar y mostrar matrices. Además, guardarás la configuración y los resultados en un fichero **JSON** para consolidar el manejo de estructuras avanzadas.
 
----
+Tu programa deberá utilizar un **diccionario** para almacenar la configuración del programa, como los límites de las dimensiones de la matriz, los valores permitidos y el formato de salida de los números. Esta configuración debe ser consultada a lo largo del programa, en lugar de usar valores codificados directamente.
 
-### **Descripción del programa**
+### **Tareas a realizar**
 
-El programa debe realizar las siguientes acciones:
+1. **Definir las dimensiones de la matriz:**
+   - Solicita al usuario las dimensiones de la matriz.
+   - Las dimensiones deben cumplir con un límite mínimo y máximo definido en el diccionario de configuración.
 
-1. **Definir las dimensiones de la matriz:**  
-   
-   - Solicita al usuario las dimensiones de la matriz (filas y columnas), con un mínimo de 1 y un máximo de 10.
-   
-   - Asegúrate de validar que las dimensiones sean correctas antes de continuar.
-
-   **Ejemplo de entrada del usuario:**  
-   
+   **Ejemplo:**
    ```
    Dime las dimensiones de la matriz...
    Filas >> 2
    Columnas >> 2
    ```
 
-2. **Pedir los elementos de la matriz:**  
-   
-   - Solicita al usuario los elementos de la matriz uno por uno. Los valores deben ser **números flotantes entre -9.98 y 9.98**.
-   
-   - Usa un bucle para recopilar los valores y almacenarlos en una lista, que luego convertirás en una matriz (lista anidada).
+2. **Recopilar los elementos de la matriz:**
+   - Solicita al usuario que introduzca los elementos de la matriz uno por uno.
+   - Los valores deben estar dentro de un rango mínimo y máximo definido en el diccionario de configuración.
+   - Almacena los elementos en una estructura que represente la matriz.
 
-   **Ejemplo de entrada del usuario:**  
-   
+   **Ejemplo:**
    ```
    Dame los elementos:
    >> 4.789
@@ -41,86 +32,70 @@ El programa debe realizar las siguientes acciones:
    >> 3.9987
    ```
 
-3. **Crear la matriz original:**
+3. **Crear y mostrar la matriz original:**
+   - Imprime la matriz con un formato que alinee todos los números correctamente.
+   - El formato de salida para los valores (tamaño y número de decimales) debe estar definido en el diccionario de configuración.
 
-   - Internamente deberás almacenar los números introducidos en la siguiente estructura de datos, según el ejemplo anterior: ((4.789, -0.8938), (-6.8, 3.9987))
-
-4. **Mostrar la matriz original:**  
-   
-   - Imprime la matriz con los valores alineados, ocupando un espacio de 6 caracteres, incluidos 2 decimales.  
-   
-   - Asegúrate de indicar que se trata de la matriz original.
-
-   **Ejemplo de salida:**  
+   **Ejemplo:**
    ```
                          4.79 -0.89
    Matriz 2x2 original: -6.80  4.00
    ```
 
-5. **Ordenar los elementos de la matriz:**  
-   
-   - Ordena los números de la matriz de menor a mayor.
+4. **Ordenar los elementos de la matriz:**
+   - Una buena práctica para ordenar los valores de la matriz puede ser extraerlos a una única lista, ordenarlos y reconstruir de nuevo la matriz con los valores ordenados respetando las dimensiones originales.
 
-   - Pista: Una buena estrategia es, primero, extraer todos los elementos de la matriz en una lista. Y luego, ordenar esta lista y distribuir sus elementos nuevamente en filas y columnas convirtiéndolos de nuevo en una matriz de las mismas dimensiones, pero con sus elementos ordenados.
+5. **Mostrar la matriz ordenada:**
+   - Imprime la matriz ordenada usando el mismo formato que la original.
 
-6. **Mostrar la matriz ordenada:**  
-   
-   - Imprime la nueva matriz ordenada con el mismo formato que la original.
-
-   **Ejemplo de salida:**  
+   **Ejemplo:**
    ```
                         -6.80 -0.89
    Matriz 2x2 ordenada:  4.00  4.79
    ```
 
----
+6. **Guardar en un fichero JSON:**
+   - Almacena en un fichero JSON:
+     - La configuración del programa.
+     - La matriz original.
+     - La matriz ordenada.
+
+   - Si el archivo ya existe, debe sobrescribirse.
 
 ### **Requisitos adicionales**
 
 1. **Uso de un diccionario:**
-
-   - Debes almacenar los límites de las dimensiones y los valores de la matriz en un diccionario llamado **CONFIG**.
+   - Define un diccionario de configuración para almacenar:
+     - Los límites de las dimensiones de la matriz ***(1 a 10)***.
+     - Los valores mínimo y máximo permitidos en la matriz ***(-9.98 a 9.98)***.
+     - El formato de salida de los números ***(número de decimales = 2 y tamaño total = 5)***.
+   - No uses valores codificados directamente en el programa. Consulta siempre los límites desde el diccionario.
 
 2. **Gestión de errores:**
-   
-   - Valida todas las entradas del usuario. Si introduce un valor no válido o fuera de rango, muestra un mensaje de error y solicita de nuevo la entrada.
+   - Valida todas las entradas del usuario:
+     - Si introduce un valor fuera de rango o no válido, muestra un mensaje de error y vuelve a pedir la entrada.
 
-3. **Formato de salida:**
+3. **Modularidad:**
+   - Divide tu programa en funciones independientes. Algunas sugerencias:
+     - **`pedir_dimensiones`**: Solicita las dimensiones de la matriz al usuario.
+     - **`generar_matriz`**: Recopila los valores y genera la matriz.
+     - **`ordenar_matriz`**: Ordena los valores y reestructura la matriz.
+     - **`mostrar_matriz`**: Muestra cualquier matriz formateada.
+     - **`guardar_json`**: Guarda la información en un fichero JSON.
 
-   - Todos los números deben mostrarse con 2 decimales y alineados, ocupando al menos 6 caracteres (esta configuración también debéis incluirla en el diccionario).
+### **Preguntas a responder**
 
-4. **Modularidad:**  
-   
-   - Diseña tu programa dividiendo las tareas en funciones independientes. Por ejemplo:
-   
-     - **`generar_matriz`**: Para recopilar los elementos del usuario y construir la matriz.
-     - **`mostrar_matriz`**: Para mostrar la matriz formateada.
-     - **`ordenar_matriz`**: Para ordenar los elementos y reorganizar la matriz.
-     - etc. 
+Debes responder a esta pregunta, en este mismo fichero, debajo de la misma...
 
----
+1. **¿Por qué es más adecuado usar un diccionario en lugar de una lista para almacenar la configuración del programa?**
 
-### **Evaluación**
 
-Tu programa será evaluado según los siguientes criterios:
 
-1. **Correcto manejo de matrices:**
+2. **¿Cuándo utilizarías un conjunto y para qué?**. Proporciona un ejemplo de cualquiera de los 3 ejercicios que has realizado.
 
-   - La matriz generada debe respetar las dimensiones indicadas por el usuario.
-   - Los valores deben estar dentro del rango especificado.
-   - La matriz ordenada debe estar correctamente organizada.
 
-2. **Estructura del código:**
-   
-   - Usa funciones para organizar las tareas del programa.
-   - Asegúrate de que las funciones sean específicas y reutilizables.
 
-3. **Gestión de errores:**
-   
-   - Valida correctamente las entradas del usuario (dimensiones y valores).
-   - Los mensajes de error deben ser claros.
+3. **¿Sería más adecuado almacenar la información de la matriz en una tupla de tuplas? Responde "Sí" o "No" y razona tu respuesta.**
 
-4. **Formato de salida:**
-   
-   - Los números deben estar formateados correctamente (alineados y con 2 decimales).
+
 

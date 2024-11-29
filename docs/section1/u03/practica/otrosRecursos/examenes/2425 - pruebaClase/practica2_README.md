@@ -17,7 +17,7 @@ Deberás completar las funciones siguientes:
 
 #### **1. `cargar_datos()`**
 
-Realiza la carga de los datos *(censo_info.json)* en una estructura de datos adecuada, manejando los posibles errores que se puedan producir.
+Realiza la carga de los datos *(practica2_censo_info.json)* en una estructura de datos adecuada, manejando los posibles errores que se puedan producir.
 
 #### **2. `obtener_ciudades_unicas()`**
 
@@ -67,9 +67,9 @@ Realiza la carga de los datos *(censo_info.json)* en una estructura de datos ade
 - **Entrada:** Recibe la lista de datos cargados.
 - **Requisitos:**
   - Invocar las funciones creadas anteriormente y mostrar los resultados de cada una:
-    1. **Ciudades únicas.** (ordenadas alfabéticamente)
-    2. **Número de personas por profesión.**
-    3. **Personas agrupadas por edad.**
+    1. **Ciudades únicas**.
+    2. **Número de personas por profesión**.
+    3. **Personas agrupadas por edad**.
     4. **Búsqueda por ciudad**:
        - Solicitar al usuario una ciudad para buscar personas.
        - Mostrar los nombres de las personas que viven allí o indicar que no hay resultados.
@@ -125,7 +125,7 @@ Introduce una ciudad para buscar personas: Cádiz
 
 4. **Descripción del formato de salida de cada apartado:** 
 
-- La lista de ciudades está ordenada alfabéticamente a la hora de mostrarse. Ademá, si no hay ciudades debe mostrar "No existen!", si solo hubiera una ciudad debe mostrar por ejemplo "Cádiz.". Por último, si hay más de una ciudad las debe mostrar como en el ejemplo.
+- La lista de ciudades está ordenada alfabéticamente a la hora de mostrarse. Además, si no hay ciudades debe mostrar "No existen!", si solo hubiera una ciudad debe mostrar por ejemplo "Cádiz.". Por último, si hay más de una ciudad las debe mostrar como en el ejemplo.
 
 - El número de personas por profesión debe mostrarse ordenadas alfabéticamente por la clave. Para hacer esto de forma más sencilla, podéis crear un nuevo diccionario con las claves ordenadas del diccionario original.
 

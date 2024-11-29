@@ -3781,36 +3781,87 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#tareas" class="md-nav__link">
+  <a href="#tareas-a-realizar" class="md-nav__link">
     <span class="md-ellipsis">
-      Tareas:
+      Tareas a realizar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tareas a realizar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cargar_datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. cargar_datos()
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#formato-esperado-de-salida" class="md-nav__link">
+  <a href="#2-obtener_ciudades_unicas" class="md-nav__link">
     <span class="md-ellipsis">
-      Formato esperado de salida:
+      2. obtener_ciudades_unicas()
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#estructura-del-archivo-json" class="md-nav__link">
+  <a href="#3-contar_profesiones" class="md-nav__link">
     <span class="md-ellipsis">
-      Estructura del archivo JSON:
+      3. contar_profesiones()
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#importante" class="md-nav__link">
+  <a href="#4-agrupar_personas_por_edad" class="md-nav__link">
     <span class="md-ellipsis">
-      IMPORTANTE:
+      4. agrupar_personas_por_edad()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-crear-la-funcion-buscar_personas_por_ciudad" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Crear la función buscar_personas_por_ciudad()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-mostrar_estadisticas" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. mostrar_estadisticas()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-salida-del-programa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de salida del programa:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pautas-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pautas importantes:
     </span>
   </a>
   
@@ -3851,90 +3902,131 @@
 <li><strong>Profesión</strong>: Profesión de la persona.</li>
 </ul>
 <p>El objetivo es trabajar con estos datos en memoria y generar estadísticas útiles sobre ellos, utilizando las estructuras de datos y funcionalidades avanzadas de Python como <strong>conjuntos</strong> y <strong>diccionarios</strong>.</p>
-<h3 id="tareas"><strong>Tareas:</strong><a class="headerlink" href="#tareas" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>Crear la función <code>cargar_datos()</code></strong>:</li>
-<li>Debe recibir como argumento la ruta a un archivo JSON y cargar los datos en memoria.</li>
-<li>El archivo JSON contiene una lista de personas.</li>
-<li>
-<p>Si ocurre algún error al leer el archivo, debe mostrar un mensaje de error adecuado.</p>
-</li>
-<li>
-<p><strong>Crear la función <code>generar_estadistica()</code></strong>:</p>
-</li>
-<li>Debe recibir como argumento la estructura de datos cargada y realizar las siguientes tareas:<ul>
-<li>Listar todas las <strong>ciudades únicas</strong> registradas en el censo.</li>
-<li>Contar cuántas personas tienen cada <strong>profesión</strong>.</li>
-<li>Agrupar a las personas que tienen la misma edad, mostrando el grupo de nombres por edad.</li>
-<li>Permitir buscar personas por ciudad, devolviendo un conjunto con los nombres de las personas que viven en dicha ciudad.</li>
+<h3 id="tareas-a-realizar"><strong>Tareas a realizar</strong><a class="headerlink" href="#tareas-a-realizar" title="Permanent link">&para;</a></h3>
+<p>Deberás completar las funciones siguientes:</p>
+<h4 id="1-cargar_datos"><strong>1. <code>cargar_datos()</code></strong><a class="headerlink" href="#1-cargar_datos" title="Permanent link">&para;</a></h4>
+<p>Realiza la carga de los datos <em>(censo_info.json)</em> en una estructura de datos adecuada, manejando los posibles errores que se puedan producir.</p>
+<h4 id="2-obtener_ciudades_unicas"><strong>2. <code>obtener_ciudades_unicas()</code></strong><a class="headerlink" href="#2-obtener_ciudades_unicas" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Entrada:</strong> Recibe la lista de datos cargados.</li>
+<li><strong>Salida:</strong> Devuelve un conjunto con las ciudades únicas registradas en el censo.</li>
+<li><strong>Ejemplo de salida:</strong> <code>{"Madrid", "Barcelona", "Sevilla", "Valencia", "Bilbao"}</code></li>
 </ul>
-</li>
-<li>La función debe mostrar los resultados de estas operaciones.</li>
-</ol>
-<h3 id="formato-esperado-de-salida"><strong>Formato esperado de salida:</strong><a class="headerlink" href="#formato-esperado-de-salida" title="Permanent link">&para;</a></h3>
-<p><strong>Ejemplo de estadísticas generadas:</strong></p>
-<ol>
+<h4 id="3-contar_profesiones"><strong>3. <code>contar_profesiones()</code></strong><a class="headerlink" href="#3-contar_profesiones" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Entrada:</strong> Recibe la lista de datos cargados.</li>
+<li><strong>Salida:</strong> Devuelve un diccionario con las profesiones como claves y la cantidad de personas que las ejercen como valores.</li>
 <li>
-<p><strong>Ciudades únicas</strong>:<br />
-<code>{"Madrid", "Barcelona", "Sevilla", "Valencia", "Bilbao"}</code></p>
-</li>
-<li>
-<p><strong>Número de personas por profesión</strong>:<br />
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<p><strong>Ejemplo de salida:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="s2">&quot;Ingeniero&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="s2">&quot;Médico&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="s2">&quot;Abogado&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="s2">&quot;Profesor&quot;</span><span class="p">:</span> <span class="mi">5</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
 </li>
+</ul>
+<h4 id="4-agrupar_personas_por_edad"><strong>4. <code>agrupar_personas_por_edad()</code></strong><a class="headerlink" href="#4-agrupar_personas_por_edad" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Entrada:</strong> Recibe la lista de datos cargados.</li>
+<li><strong>Salida:</strong> Devuelve un diccionario en el que:</li>
+<li>Las claves son las edades.</li>
+<li>Los valores son conjuntos con los nombres de las personas de esa edad.</li>
 <li>
-<p><strong>Personas agrupadas por edad</strong>:<br />
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<p><strong>Ejemplo de salida:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="mi">25</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Juan&quot;</span><span class="p">,</span> <span class="s2">&quot;Pedro&quot;</span><span class="p">},</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="mi">30</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="s2">&quot;Luis&quot;</span><span class="p">},</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="mi">40</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Carmen&quot;</span><span class="p">,</span> <span class="s2">&quot;Jose&quot;</span><span class="p">}</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
+</li>
+</ul>
+<h4 id="5-crear-la-funcion-buscar_personas_por_ciudad"><strong>5. Crear la función <code>buscar_personas_por_ciudad()</code></strong><a class="headerlink" href="#5-crear-la-funcion-buscar_personas_por_ciudad" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Entrada:</strong> Recibe la lista de datos cargados y una ciudad.</li>
+<li><strong>Salida:</strong> Devuelve un conjunto con los nombres de las personas que viven en esa ciudad.</li>
+<li><strong>Ejemplo de salida:</strong> Si la ciudad es <code>"Madrid"</code>: <code>{"Juan", "Carmen", "Luis"}</code></li>
+</ul>
+<h4 id="6-mostrar_estadisticas"><strong>6. <code>mostrar_estadisticas()</code></strong><a class="headerlink" href="#6-mostrar_estadisticas" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Entrada:</strong> Recibe la lista de datos cargados.</li>
+<li><strong>Requisitos:</strong></li>
+<li>Invocar las funciones creadas anteriormente y mostrar los resultados de cada una:<ol>
+<li><strong>Ciudades únicas.</strong> (ordenadas alfabéticamente)</li>
+<li><strong>Número de personas por profesión.</strong></li>
+<li><strong>Personas agrupadas por edad.</strong></li>
+<li><strong>Búsqueda por ciudad</strong>:</li>
+<li>Solicitar al usuario una ciudad para buscar personas.</li>
+<li>Mostrar los nombres de las personas que viven allí o indicar que no hay resultados.</li>
+</ol>
+</li>
+</ul>
+<h3 id="ejemplo-de-salida-del-programa"><strong>Ejemplo de salida del programa:</strong><a class="headerlink" href="#ejemplo-de-salida-del-programa" title="Permanent link">&para;</a></h3>
+<p>Al ejecutar el programa, debe cargar los datos del archivo y generar las estadísticas solicitadas en el ejercicio, con una salida similar a la siguiente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>1. Ciudades únicas:
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>   Barcelona, Bilbao, Cádiz, Madrid, Sevilla y Valencia.
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2. Número de personas por profesión:
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>   Abogado: 2
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>   Estudiante: 1
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>   Ingeniero: 7
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>   Médico: 4
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>   Profesor: 7
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>3. Personas agrupadas por edad:
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>   22: Lucia - Raul - Maria.
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>   25: Pedro - Juan.
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>   28: Eva - Sara - Manuel.
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>   30: Julia - Luis - Ana - Laura.
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>   33: Juani - Alberto.
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>   35: Irene - Victor - Pablo.
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>   40: Jose - Elena - David - Carmen.
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>Introduce una ciudad para buscar personas: Cádiz
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>4. Personas en Cádiz:
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>   Ana
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>   Juani
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>   Manuel
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>   Sara
+</code></pre></div>
+<h3 id="pautas-importantes"><strong>Pautas importantes:</strong><a class="headerlink" href="#pautas-importantes" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Modularización del código:</strong></li>
+<li>Implementa las funciones descritas y las que necesites o veas necesarias para implementar tu solución.</li>
+<li>
+<p>Evita escribir toda la lógica en la función <code>main()</code>.</p>
 </li>
 <li>
-<p><strong>Búsqueda por ciudad</strong>:  </p>
+<p><strong>Errores y excepciones:</strong></p>
 </li>
-<li>Ciudad: <code>"Madrid"</code></li>
-<li>Resultado: <code>{"Juan", "Carmen", "Luis"}</code></li>
+<li>
+<p>Asegúrate de manejar correctamente los errores al leer el archivo JSON.</p>
+</li>
+<li>
+<p><strong>Ejemplo del archivo JSON:</strong>
+   Utiliza el archivo proporcionado en el enunciado como entrada para probar tu programa.</p>
+</li>
+<li>
+<p><strong>Descripción del formato de salida de cada apartado:</strong> </p>
+</li>
+<li>
+<p>La lista de ciudades está ordenada alfabéticamente a la hora de mostrarse. Ademá, si no hay ciudades debe mostrar "No existen!", si solo hubiera una ciudad debe mostrar por ejemplo "Cádiz.". Por último, si hay más de una ciudad las debe mostrar como en el ejemplo.</p>
+</li>
+<li>
+<p>El número de personas por profesión debe mostrarse ordenadas alfabéticamente por la clave. Para hacer esto de forma más sencilla, podéis crear un nuevo diccionario con las claves ordenadas del diccionario original.</p>
+</li>
+<li>
+<p>Las personas agrupadas por edad también deben aparecer por las claves ordenadas y con el separador " - " entre los nombres, finalizando cada línea con un punto (".").</p>
+</li>
+<li>
+<p>Las personas de una ciudad deben aparecer de forma ordenada alfabéticamente en líneas diferentes.</p>
+</li>
 </ol>
-<h3 id="estructura-del-archivo-json"><strong>Estructura del archivo JSON:</strong><a class="headerlink" href="#estructura-del-archivo-json" title="Permanent link">&para;</a></h3>
-<p>Nombre del archivo: <code>agenda.json</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">[</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Madrid&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ingeniero&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Barcelona&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Médico&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Pedro&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Madrid&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Profesor&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Valencia&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Abogado&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Carmen&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Madrid&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Médico&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jose&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bilbao&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ingeniero&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Maria&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sevilla&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ingeniero&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Pablo&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bilbao&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Profesor&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Eva&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Barcelona&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Médico&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Raul&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Valencia&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Profesor&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Laura&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sevilla&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ingeniero&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Elena&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Madrid&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Abogado&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Alberto&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bilbao&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Profesor&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sara&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Barcelona&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ingeniero&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Victor&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sevilla&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Profesor&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Julia&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Valencia&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ingeniero&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;David&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Madrid&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Profesor&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Lucia&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bilbao&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ingeniero&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Irene&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sevilla&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Médico&quot;</span><span class="p">},</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Manuel&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;ciudad&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Barcelona&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;profesion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Profesor&quot;</span><span class="p">}</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="p">]</span>
-</code></pre></div>
-<h3 id="importante"><strong>IMPORTANTE:</strong><a class="headerlink" href="#importante" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Modulariza tu código creando las funciones solicitadas y un ejemplo de su funcionamiento en el main.</li>
-<li>Utiliza <strong>conjuntos</strong> para las ciudades únicas y los nombres por edad.</li>
-<li>Usa <strong>diccionarios</strong> para contar las profesiones y agrupar a las personas por edad.</li>
-<li>Documenta y Comenta, si es necesario, claramente tu código para explicar lo que hace cada parte.</li>
-</ul>
 
 
 

@@ -323,7 +323,7 @@ def main():
         datos["matriz_orig"] = matriz_orig
         datos["matriz_ordenada"] = matriz_ordenada
 
-        if guardar_json("examenes/matriz_ordenada.json", datos):
+        if guardar_json("examenes/practica1_matriz_ordenada.json", datos):
             print("\nFichero JSON guardado correctamente!")
 
     print("\n")

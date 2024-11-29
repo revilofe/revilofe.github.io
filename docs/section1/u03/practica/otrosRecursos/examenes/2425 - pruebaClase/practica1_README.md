@@ -1,4 +1,3 @@
-
 ## **Prueba Práctica 01: Matriz Ordenada**
 
 En esta práctica trabajarás con **matrices** en Python, diseñando un programa modular que permita al usuario crear, ordenar y mostrar matrices. Además, guardarás la configuración y los resultados en un fichero **JSON** para consolidar el manejo de estructuras avanzadas.
@@ -85,7 +84,7 @@ Tu programa deberá utilizar un **diccionario** para almacenar la configuración
 
 ### **Preguntas a responder**
 
-Debes responder a esta pregunta, en este mismo fichero, debajo de la misma...
+Debes responder a estas preguntas editando este mismo fichero, y debajo de cada una...
 
 1. **¿Por qué es más adecuado usar un diccionario en lugar de una lista para almacenar la configuración del programa?**
 

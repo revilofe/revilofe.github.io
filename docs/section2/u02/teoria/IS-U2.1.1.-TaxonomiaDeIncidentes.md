@@ -1,9 +1,36 @@
-# Taxonomía de incidentes de ciberseguridad
-![Taxonomía](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702481926843.png){: .center}
+---
+title: "UD 1 - 2.1.1 Taxonomía de incidentes"
+description: Taxonomía de incidentes
+summary: Taxonomía de incidentes
+authors:
+    - Eduardo Fdez
+date: 2024-10-21
+icon: 
+permalink: /is/unidad1/2.1.1
+categories:
+    - IS
+tags:
+    - incidentes
+    - taxonomía
+---
 
-**RA2**
+## 2.1.1 Taxonomía de incidentes de ciberseguridad
 
-> a) Se ha clasificado y definido la taxonomía de incidentes de ciberseguridad que pueden afectar a la organización.
+
+
+| Código    | Descripción                                                                                                   |
+|-----------|---------------------------------------------------------------------------------------------------------------|
+| RA2       | Analiza incidentes de ciberseguridad utilizando herramientas, mecanismos de detección y alertas de seguridad. |
+| CEa       | Se ha clasificado y definido la taxonomía de incidentes de ciberseguridad que pueden afectar a la organización.|
+
+Los incidentes de ciberseguridad pueden tener un impacto significativo en las organizaciones, desde la pérdida de datos confidenciales hasta la interrupción de los servicios críticos. Por ello, es fundamental contar con una taxonomía de incidentes que permita clasificar y describir los diferentes tipos de amenazas de manera estructurada y coherente.
+
+<figure markdown>
+  ![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702481926843.png)
+  <figcaption>Taxonomía de incidentes de seguridad</figcaption>
+</figure>
+
+    
 
 ### 1. Introducciíon
 
@@ -21,7 +48,11 @@ Por tanto, disponer de una taxonomía común de incidentes de ciberseguridad es 
 
 #### 1.2 Incidente de seguridad
 
-![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702240345923.png){: .center}
+<figure markdown>
+  ![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702240345923.png)
+  <figcaption>Tratamiento de incidentes</figcaption>
+</figure>
+
 
 Un incidente de ciberseguridad se refiere a cualquier evento no planificado o no deseado que pueda comprometer la seguridad de la información y afectar la integridad, confidencialidad o disponibilidad de los datos. Estos incidentes pueden tomar muchas formas, desde ataques de malware hasta brechas de seguridad y accesos no autorizados.
 
@@ -37,7 +68,12 @@ La gestión de incidentes de ciberseguridad es un proceso continuo que implica a
 
 **Definición:** Clasificación u ordenación en grupos de cosas que tienen unas características comunes.
 
-![](assets/IS-U211-TaxonomiaDeIncidentes1.png){:.center}
+
+<figure markdown>
+  ![](assets/IS-U211-TaxonomiaDeIncidentes1.png)
+  <figcaption>Taxonomía de incidentes</figcaption>
+</figure>
+
 
 #### 2.1 ¿Qué es una Taxonomía en este contexto?
 
@@ -176,7 +212,14 @@ El establecimiento de ciertos criterios permitirá asignar el **grado de peligro
 
 El indicador de peligrosidad determina la potencial amenaza que supondría la materialización de un incidente en los sistemas de información o comunicación del ente afectado, así como para los servicios prestados o la continuidad de negocio en caso de haberla. Este indicador se fundamenta en las características intrínsecas a la tipología de amenaza y su comportamiento.
 
-![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702240026150.png){: .center}
+
+<figure markdown>
+  ![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702240026150.png)
+  <figcaption>Grado de gravedad/peligrosidad</figcaption>
+</figure>
+
+
+
 
 En la GUÍA NACIONAL DE NOTIFICACIÓN Y GESTIÓN DE CIBERINCIDENTES, podrás ver una relación entre el tipo de incidente y el nivel de peligrosidad.
 
@@ -188,7 +231,11 @@ El indicador de impacto de un ciberincidente se determinará evaluando las conse
 
 Por ejemplo, en lo que se refiere al Impacto Operativo y Financiero, un ataque de ransomware puede causar la pérdida de acceso a datos críticos, lo que resulta en paralización operativa y pérdidas económicas significativas.
 
-![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702240157348.png){: .center}
+
+<figure markdown>
+  ![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702240157348.png){: .center}
+  <figcaption>Impacto/Alcance del incidente</figcaption>
+</figure>
 
 En la GUÍA NACIONAL DE NOTIFICACIÓN Y GESTIÓN DE CIBERINCIDENTES, podrás ver una relación entre los parámetros tenidos en cuenta y el nivel de impacto.
 

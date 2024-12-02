@@ -34,33 +34,33 @@ Los incidentes de ciberseguridad pueden tener un impacto significativo en las or
 
 ### 1. Introducciíon
 
-#### 1.1 Motivación
+#### 1.1. Motivación
 
 En el mundo de la ciberseguridad, nos enfrentamos a una diversidad asombrosa. No solo en términos de las empresas que operan en distintos sectores y tamaños, sino también en la variedad de ciberincidentes que pueden encontrarse. Al igual que en un ecosistema natural donde cada especie juega un papel único, en el ciberespacio, cada tipo de incidente tiene sus propias características y repercusiones.
 
 Imaginemos que cada organización habla un idioma diferente cuando describe los ciberincidentes. Sin una taxonomía común, el desafío de comunicarse y entenderse entre sí sería abrumador. Esto es precisamente lo que sucede en el ámbito de la ciberseguridad sin una clasificación estándar. Cada empresa podría tener su propia forma de describir y abordar los incidentes, lo que llevaría a confusiones y, en última instancia, a una respuesta menos eficaz.
 
-La taxonomía de incidentes, en este contexto, actúa como un idioma común. Nos permite categorizar y describir los incidentes de ciberseguridad de manera estandarizada. ¿Por qué es esto crucial? Porque cuando todas las organizaciones utilizan la misma clasificación, se facilita enormemente la colaboración, el intercambio de información y, lo más importante, la respuesta rápida y efectiva.
+**La taxonomía de incidentes, en este contexto, actúa como un idioma común**. Nos permite categorizar y describir los incidentes de ciberseguridad de manera estandarizada. ¿Por qué es esto crucial? Porque cuando todas las organizaciones utilizan la misma clasificación, se facilita enormemente la colaboración, el intercambio de información y, lo más importante, la respuesta rápida y efectiva.
 
 La clasificación uniforme de incidentes permite a las organizaciones no solo identificar rápidamente el tipo de amenaza a la que se enfrentan, sino también aplicar las mejores prácticas y lecciones aprendidas de otros en situaciones similares. Esto es fundamental para una gestión de incidentes efectiva: comprender rápidamente lo que está sucediendo, cómo ha sucedido y qué se puede hacer al respecto.
 
 Por tanto, disponer de una taxonomía común de incidentes de ciberseguridad es como tener un mapa detallado en un terreno desconocido. Nos proporciona la orientación necesaria para abordar, contener y erradicar eficazmente las amenazas, garantizando así una ciberseguridad más robusta y una red más segura para todos.
 
-#### 1.2 Incidente de seguridad
+#### 1.2. Incidente de seguridad
 
 <figure markdown>
   ![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702240345923.png)
-  <figcaption>Tratamiento de incidentes</figcaption>
+  <figcaption>Fases por las que pasa la respuesta a un incidente</figcaption>
 </figure>
 
 
-Un incidente de ciberseguridad se refiere a cualquier evento no planificado o no deseado que pueda comprometer la seguridad de la información y afectar la integridad, confidencialidad o disponibilidad de los datos. Estos incidentes pueden tomar muchas formas, desde ataques de malware hasta brechas de seguridad y accesos no autorizados.
+**Un incidente de ciberseguridad se refiere a cualquier evento no planificado o no deseado que pueda comprometer la seguridad de la información y afectar la integridad, confidencialidad o disponibilidad de los datos**. Estos incidentes pueden tomar muchas formas, desde ataques de malware hasta brechas de seguridad y accesos no autorizados.
 
-La gestión de un ciberincidente implica varias fases críticas, y la clasificación (taxonomía) de estos incidentes es un paso esencial en las etapas iniciales de la gestión. La identificación y clasificación correcta de los incidentes de ciberseguridad son cruciales para las organizaciones. Esto no solo ayuda a comprender la naturaleza y el alcance del ataque, sino que también es fundamental para una respuesta eficaz. Por ejemplo, un ataque de phishing que busca robar credenciales de acceso requiere una respuesta diferente a un ataque de denegación de servicio distribuido (DDoS) que busca interrumpir los servicios.
+La respuesta a un ciberincidente pasas por varias fases críticas, y la clasificación (taxonomía) de estos incidentes es un paso esencial en las etapas iniciales de la gestión. La identificación y clasificación correcta de los incidentes de ciberseguridad son cruciales para las organizaciones. Esto no solo ayuda a comprender la naturaleza y el alcance del ataque, sino que también es fundamental para una respuesta eficaz. Por ejemplo, un ataque de phishing que busca robar credenciales de acceso requiere una respuesta diferente a un ataque de denegación de servicio distribuido (DDoS) que busca interrumpir los servicios.
 
 Comprender los incidentes de ciberseguridad también implica reconocer sus fuentes y métodos. Las fuentes pueden variar desde actores internos (empleados, contratistas) hasta externos (hackers, competidores), y los métodos pueden incluir software malicioso, explotación de vulnerabilidades o ingeniería social.
 
-La gestión eficaz de incidentes de ciberseguridad es un aspecto crucial de la seguridad de la información. Implica no solo la detección y respuesta inmediata a los incidentes, sino también la recuperación y la prevención de futuros ataques. La gestión de incidentes no es solo una cuestión técnica; también requiere una planificación organizativa, incluyendo la formación de empleados, la creación de políticas y procedimientos adecuados, y la implementación de controles de seguridad apropiados.
+La gestión eficaz de incidentes de ciberseguridad es un aspecto crucial de la seguridad de la información. Implica no solo la **detección** y **respuesta inmediata** a los incidentes, sino también la **recuperación** y la **prevención** de futuros ataques. La gestión de incidentes no es solo una cuestión técnica; también requiere una planificación organizativa, incluyendo la formación de empleados, la creación de políticas y procedimientos adecuados, y la implementación de controles de seguridad apropiados.
 
 La gestión de incidentes de ciberseguridad es un proceso continuo que implica aprender de los incidentes anteriores. Cada incidente ofrece una oportunidad para mejorar las defensas y prepararse mejor para los desafíos futuros. Por ello, es esencial mantener registros detallados de los incidentes, realizar análisis post-incidente y actualizar constantemente las estrategias de seguridad.
 
@@ -75,69 +75,73 @@ La gestión de incidentes de ciberseguridad es un proceso continuo que implica a
 </figure>
 
 
-#### 2.1 ¿Qué es una Taxonomía en este contexto?
+#### 2.1. ¿Qué es una Taxonomía en este contexto?
 
 Es un sistema de clasificación que agrupa incidentes de ciberseguridad en categorías basadas en características comunes.
 Categorías Comunes: Por ejemplo, los ataques de malware se clasifican según el tipo de software malicioso (virus, gusanos, troyanos), mientras que los ataques DDoS se categorizan por el volumen de tráfico generado o los recursos específicos atacados.
 
-#### 2.2 ¿Qué es la Taxonomía de Incidentes de Ciberseguridad?
+#### 2.2. ¿Qué es la Taxonomía de Incidentes de Ciberseguridad?
 
 Cuando hablamos de taxonomía en el contexto de la ciberseguridad, nos referimos a un sistema de clasificación estructurado para los incidentes de ciberseguridad. Esta taxonomía es como un marco que nos ayuda a categorizar y describir los diferentes tipos de incidentes de una manera estandarizada y ordenada.
 
 Imagina que estás en una gran biblioteca con miles de libros, pero sin un sistema de clasificación. Encontrar un libro específico sería una tarea desalentadora. La taxonomía actúa como ese sistema de clasificación en la biblioteca, pero en lugar de libros, clasifica los incidentes de ciberseguridad.
 
-#### 2.3 ¿Por qué es importante?
+#### 2.3. ¿Por qué es importante?
 
 La diversidad y complejidad de los ciberataques son enormes y están en constante evolución. Sin una taxonomía, cada organización podría tener su propio método para describir y responder a estos incidentes, lo que llevaría a confusión, malentendidos y, finalmente, a una respuesta menos eficaz a las amenazas.
 
 Al adoptar una taxonomía común, todas las organizaciones pueden hablar el mismo "idioma" en términos de ciberseguridad. Esto facilita la identificación rápida de los tipos de incidentes, permite compartir información de manera más efectiva y ayuda en la coordinación de respuestas a amenazas entre diferentes entidades.
 
-Aplicaciones Prácticas de la Taxonomía. Una taxonomía bien definida ayuda en varios aspectos:
+En definitiva, una taxonomía bien definida ayuda en varios aspectos prácticos:
 
-1. **Identificación Rápida:** Permite a las organizaciones identificar de manera eficiente el tipo de ciberataque al que se enfrentan.
-2. **Mejor Comunicación:** Facilita la comunicación clara y precisa entre diferentes departamentos, organizaciones y, en algunos casos, incluso entre países.
-3. **Respuesta Efectiva:** Proporciona una base para desarrollar estrategias específicas y efectivas de respuesta y recuperación.
-4. **Aprendizaje y Mejora:** Ayuda a las organizaciones a aprender de incidentes anteriores y a mejorar continuamente sus prácticas de ciberseguridad.
+1. **Identificación rápida:** Permite a las organizaciones identificar de manera eficiente el tipo de ciberataque al que se enfrentan, dándonos información sobre posible origen y métodos utilizados, impacto potencial, peligrosidad y prioridad de respuesta, etc.
+2. **Mejor comunicación:** Facilita la comunicación clara y precisa entre diferentes departamentos, organizaciones y, en algunos casos, incluso entre países.
+3. **Respuesta efectiva:** Proporciona una base para desarrollar estrategias específicas y efectivas de respuesta y recuperación.
+4. **Aprendizaje y mejora:** Ayuda a las organizaciones a aprender de incidentes anteriores y a mejorar continuamente sus prácticas de ciberseguridad.
 
 Por tanto la taxonomía de incidentes de ciberseguridad es una herramienta esencial para la organización, la comprensión y la respuesta efectiva a las amenazas cibernéticas. Al proporcionar un marco común, simplifica y refuerza nuestras defensas contra los ciberataques.
 
 ### 3. Taxonomía de incidentes
 
-La elaboración de una taxonomía no es sencilla, pero puede basarse en modelos de taxonomía diseñados por organismos de referencia, como el CCN-CERT y la ENISA. Deben tener considerarse los siguientes factores a la hora de establecer criterios de clasificación:
+La elaboración de una taxonomía no es sencilla, pero puede basarse en modelos de taxonomía diseñados por organismos de referencia, como el **CCN-CERT* y la **ENISA**. Por otra parte, durante la clasificación deben considerarse los siguientes factores a la hora de establecer criterios de clasificación.
 
-* Tipo de amenaza: código dañino, intrusiones, fraude, etc.
-* Origen de la amenaza: Interna o externa.
-* La categoría de seguridad de los sistemas afectados.
-* El perfil de los usuarios afectados, su posición en la estructura organizativa de la entidad y, en su consecuencia, sus privilegios de acceso a información sensible o confidencial.
-* El número y tipología de los sistemas afectados.
-* El impacto que el incidente puede tener en la organización, desde los puntos de vista de la protección de la información, la prestación de los servicios, la conformidad legal y/o la imagen pública.
-* Los requerimientos legales y regulatorios.
+#### 3.1. Factores a considerar en la clasificación de incidentes
+Los incidentes de ciberseguridad pueden variar en su naturaleza, alcance y gravedad. Por ello, es importante tener en cuenta una serie de factores al clasificarlos. Algunos de los factores clave a considerar incluyen:
 
-La toma en consideración de estos factores determinará la decisión de crear un ciberincidente y, en su caso, su peligrosidad y la prioridad de actuación.
+* **Tipo de amenaza:** código dañino, intrusiones, fraude, etc. Nos permitirá identificar el tipo de incidente y aplicar las medidas de respuesta adecuadas. 
+* **Origen de la amenaza:** Interna o externa. Nos permitirá identificar si el ataque proviene de un empleado descontento o de un hacker externo.
+* **La categoría de seguridad de los sistemas afectados:** Así, por ejemplo, un incidente que afecte a sistemas críticos de información tendrá una prioridad mayor que otro que afecte a sistemas menos críticos.
+* **El perfil de los usuarios afectados:** la posición de estos en la estructura organizativa de la entidad y, en su consecuencia, sus privilegios de acceso a información sensible o confidencial.
+* **El número y tipología de los sistemas afectados:** Un incidente que afecte a un único sistema puede tener un impacto menor que otro que afecte a toda la red de la organización. La la tipología de los sistemas afectados (servidores, estaciones de trabajo, dispositivos móviles) influirá en la gravedad del incidente.
+* **El impacto que el incidente puede tener en la organización:** Como impáctará desde el punto de vista de la protección de la información, la prestación de los servicios, la conformidad legal y/o la imagen pública.
+* **Los requerimientos legales y regulatorios:** Algunos incidentes pueden requerir notificación a las autoridades competentes o a los afectados. 
 
-Por ejemplo, en cuanto a la clasificación de Incidentes:
+La toma en consideración de estos factores determinará la decisión de clasificar un incidente como un tipo u otro y, en su caso, su peligrosidad y la prioridad de actuación. Es decir, un ataque puede clasificarse por el tipo de amenaza (correo electrónico, explotación de vulnerabilidades) o por el impacto en el tipo de datos afectados (acceso a datos personales, robo de información financiera). En esta misma línea acerca de como podría variar el tipo de incidente en función de los factores considerados, un ejemplo sería el siguiente: un ataque de phishing dirigido a empleados de alto nivel podría clasificarse como un incidente de fraude, pero si el atacante logra acceder a información confidencial, en cuyo caso el impacto del incidente es mayor, podría clasificarse como un incidente de acceso no autorizado a información.
 
-Criterios de Clasificación: Por ejemplo, un ataque puede clasificarse por el método de entrada (correo electrónico, explotación de vulnerabilidades) o por el tipo de datos afectados (datos personales, información financiera). Ejemplo Práctico: Un ataque de phishing dirigido a empleados para obtener credenciales podría clasificarse como un incidente de "Engaño y Manipulación".
 
-#### 3.1 Taxonomía de Referencia para la Clasificación de Incidentes de Seguridad
+#### 3.2. Taxonomía de Referencia para la Clasificación de Incidentes de Seguridad
 
 La taxonomía definida en la **Guía Nacional de Notificación y Gestión de Ciberincidentes**, se basa en la Taxonomía de Referencia para la Clasificación de Incidentes de Seguridad, desarrollada coordinadamente por un grupo internacional de equipos de respuesta a incidentes (clasificación de los ciberincidentes tomando como referencia la incluida en la guía CCN-STIC 817.):
 
 [https://github.com/flosada/RSITaxonomy_ES/blob/master/humanv1.md](https://github.com/flosada/RSITaxonomy_ES/blob/master/humanv1.md)
 
-Se muestra en un primer nivel la clasificación del incidente y, en un segundo nivel los tipos de incidentes dentro de esa clasificación.
+A continuación, se muestra en un primer nivel la clasificación del incidente y, en un segundo nivel los tipos de incidentes dentro de esa clasificación.
 
-##### Contenido abusivo:  
+##### 3.2.1. Contenido abusivo 
 Incidentes que muestren signos evidentes de spam, contengan comentarios ofensivos o inciten a la pederastia, violencia y/o delitos sexuales.   
   
   * **SPAM:** correo electrónico masivo no solicitado. El receptor del contenido no ha otorgado autorización válida para recibir un mensaje colectivo.  
-  * **Delito de odio:** contenido difamatorio o discriminatorio. Ejemplos: ciberacoso, racismo, amenazas a una persona o dirigidas contra colectivos.  
-  * **Pornografía infantil, contenido sexual o violento inadecuado:** material que represente de manera visual contenido relacionado con pornografía infantil, apología de la violencia, etc.   
+     **Ejemplo:** envío de correos electrónicos no solicitados con fines publicitarios.
+  * **Delito de odio:** contenido difamatorio o discriminatorio. 
+     **Ejemplo:** ciberacoso, racismo, amenazas a una persona o dirigidas contra colectivos, publicación de comentarios ofensivos en redes sociales.
+  * **Pornografía infantil, contenido sexual o violento inadecuado:** material que represente de manera visual contenido relacionado con pornografía infantil, apología de la violencia, etc.
+     **Ejemplo:** publicación de imágenes de menores de edad en situaciones de abuso.
   
-##### Contenido dañino:  
+#####  3.2.2. Contenido dañino
 Problemas relacionados con virus, troyanos, gusanos, spyware, bots e inyección de código   
   
-  * **Sistema infectado:** sistema infectado con malware. Ejemplo: sistema, computadora o teléfono móvil infectado con un rootkit.  
+  * **Sistema infectado:** sistema infectado con malware. 
+     **Ejemplo:** sistema, computadora o teléfono móvil infectado con un rootkit.  
   * **Servidor C&C (Mando y Control):** conexión con servidor de Mando y Control (C&C) mediante malware o sistemas infectados.  
   * **Distribución de malware:** recurso usado para distribución de malware. Ejemplo: recurso de una organización empleado para distribuir malware.  
   * **Configuración de malware:** recurso que aloje ficheros de configuración de malware. Ejemplo: ataque de webinjects para troyano.  

@@ -23,14 +23,15 @@ tags:
 | RA2       | Analiza incidentes de ciberseguridad utilizando herramientas, mecanismos de detección y alertas de seguridad. |
 | CEa       | Se ha clasificado y definido la taxonomía de incidentes de ciberseguridad que pueden afectar a la organización.|
 
-Los incidentes de ciberseguridad pueden tener un impacto significativo en las organizaciones, desde la pérdida de datos confidenciales hasta la interrupción de los servicios críticos. Por ello, es fundamental contar con una taxonomía de incidentes que permita clasificar y describir los diferentes tipos de amenazas de manera estructurada y coherente.
+Durante la unidad anterior, hemos visto cómo las organizaciones pueden prepararse para prevenir y responder a los incidentes de ciberseguridad. En esta unidad, nos centraremos en la detección y clasificación de los incidentes de ciberseguridad.
+
+Como vimos, existen numerosas amenazas que, en el caso de materializarse, es decir, afectar al activo vulnerable, provocarán un incidente de seguridad. Estos últimos pueden tener un impacto significativo en las organizaciones, desde la pérdida de datos confidenciales hasta la interrupción de los servicios críticos. Por ello, es fundamental contar con una **taxonomía de incidentes** que permita clasificar y describir los diferentes tipos de amenazas de manera estructurada y coherente.
 
 <figure markdown>
   ![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702481926843.png)
   <figcaption>Taxonomía de incidentes de seguridad</figcaption>
 </figure>
 
-    
 
 ### 1. Introducciíon
 
@@ -44,19 +45,28 @@ Imaginemos que cada organización habla un idioma diferente cuando describe los 
 
 La clasificación uniforme de incidentes permite a las organizaciones no solo identificar rápidamente el tipo de amenaza a la que se enfrentan, sino también aplicar las mejores prácticas y lecciones aprendidas de otros en situaciones similares. Esto es fundamental para una gestión de incidentes efectiva: comprender rápidamente lo que está sucediendo, cómo ha sucedido y qué se puede hacer al respecto.
 
-Por tanto, disponer de una taxonomía común de incidentes de ciberseguridad es como tener un mapa detallado en un terreno desconocido. Nos proporciona la orientación necesaria para abordar, contener y erradicar eficazmente las amenazas, garantizando así una ciberseguridad más robusta y una red más segura para todos.
+Por tanto, disponer de una taxonomía común de incidentes de ciberseguridad es como tener un mapa detallado en un terreno desconocido. Nos proporciona la orientación necesaria para abordar, contener y erradicar eficazmente las amenazas, es decir adaptar la respuesta a las amenazas, garantizando así una ciberseguridad más robusta.
 
 #### 1.2. Incidente de seguridad
 
-<figure markdown>
-  ![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702240345923.png)
-  <figcaption>Fases por las que pasa la respuesta a un incidente</figcaption>
-</figure>
-
-
 **Un incidente de ciberseguridad se refiere a cualquier evento no planificado o no deseado que pueda comprometer la seguridad de la información y afectar la integridad, confidencialidad o disponibilidad de los datos**. Estos incidentes pueden tomar muchas formas, desde ataques de malware hasta brechas de seguridad y accesos no autorizados.
 
-La respuesta a un ciberincidente pasas por varias fases críticas, y la clasificación (taxonomía) de estos incidentes es un paso esencial en las etapas iniciales de la gestión. La identificación y clasificación correcta de los incidentes de ciberseguridad son cruciales para las organizaciones. Esto no solo ayuda a comprender la naturaleza y el alcance del ataque, sino que también es fundamental para una respuesta eficaz. Por ejemplo, un ataque de phishing que busca robar credenciales de acceso requiere una respuesta diferente a un ataque de denegación de servicio distribuido (DDoS) que busca interrumpir los servicios.
+<figure markdown>
+  ![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702240345923.png)
+  <figcaption>Fases por las que pasa la gestión de un incidente</figcaption>
+</figure>
+
+Durante el ciclo de vida de un incidente, se siguen varias fases críticas:
+1. **Preparación:** Implementación de medidas preventivas, es decir, prepararse antes de que ocurra un incidente. Algunas de las medidas preventivas incluyen la formación de empleados, la implementación de controles de seguridad y la realización de pruebas de seguridad, vistas en la unidad anterior.     
+2. **Identificación:** Detección y alerta de un incidente de seguridad. Esto puede ser a través de alertas, monitoreo de sistemas o informes de usuarios. En esta fase, es fundamental contar con herramientas y mecanismos de detección de incidentes. Será en está fase en la que pongamos el foco en esta unidad.   
+3. **Contención:** Aislar el incidente para evitar que se propague.     
+4. **Erradicación:** Eliminar la causa raíz del incidente y restaurar los sistemas afectados.     
+5. **Recuperación:** Restaurar los sistemas y datos afectados a un estado operativo normal.    
+6. **Lecciones aprendidas:** Analizar el incidente para identificar áreas de mejora y prevenir futuros incidentes.
+
+Aunque esta ciclo de vida puede variar según la organización y el tipo de incidente, es fundamental seguir un enfoque estructurado y sistemático para garantizar una respuesta efectiva y eficiente a los incidentes de ciberseguridad.
+
+Como hemos visto, la gestión de ciberincidentes pasa por varias fases críticas, y la clasificación (taxonomía) de estos incidentes es un paso esencial en las etapas iniciales de este proceso. La identificación y clasificación correcta de los incidentes de ciberseguridad son cruciales para las organizaciones. Esto no solo ayuda a comprender la naturaleza y el alcance del ataque, sino que también es fundamental para una respuesta eficaz. Por ejemplo, un ataque de phishing que busca robar credenciales de acceso requiere una respuesta diferente a un ataque de denegación de servicio distribuido (DDoS) que busca interrumpir los servicios.
 
 Comprender los incidentes de ciberseguridad también implica reconocer sus fuentes y métodos. Las fuentes pueden variar desde actores internos (empleados, contratistas) hasta externos (hackers, competidores), y los métodos pueden incluir software malicioso, explotación de vulnerabilidades o ingeniería social.
 
@@ -108,7 +118,7 @@ La elaboración de una taxonomía no es sencilla, pero puede basarse en modelos 
 #### 3.1. Factores a considerar en la clasificación de incidentes
 Los incidentes de ciberseguridad pueden variar en su naturaleza, alcance y gravedad. Por ello, es importante tener en cuenta una serie de factores al clasificarlos. Algunos de los factores clave a considerar incluyen:
 
-* **Tipo de amenaza:** código dañino, intrusiones, fraude, etc. Nos permitirá identificar el tipo de incidente y aplicar las medidas de respuesta adecuadas. 
+* **Tipo de amenaza o método:** Determinar la técnica utilizada por los atacantes: código dañino, intrusiones, fraude, etc. Nos permitirá identificar el tipo de incidente y aplicar las medidas de respuesta adecuadas. 
 * **Origen de la amenaza:** Interna o externa. Nos permitirá identificar si el ataque proviene de un empleado descontento o de un hacker externo.
 * **La categoría de seguridad de los sistemas afectados:** Así, por ejemplo, un incidente que afecte a sistemas críticos de información tendrá una prioridad mayor que otro que afecte a sistemas menos críticos.
 * **El perfil de los usuarios afectados:** la posición de estos en la estructura organizativa de la entidad y, en su consecuencia, sus privilegios de acceso a información sensible o confidencial.
@@ -116,12 +126,12 @@ Los incidentes de ciberseguridad pueden variar en su naturaleza, alcance y grave
 * **El impacto que el incidente puede tener en la organización:** Como impáctará desde el punto de vista de la protección de la información, la prestación de los servicios, la conformidad legal y/o la imagen pública.
 * **Los requerimientos legales y regulatorios:** Algunos incidentes pueden requerir notificación a las autoridades competentes o a los afectados. 
 
-La toma en consideración de estos factores determinará la decisión de clasificar un incidente como un tipo u otro y, en su caso, su peligrosidad y la prioridad de actuación. Es decir, un ataque puede clasificarse por el tipo de amenaza (correo electrónico, explotación de vulnerabilidades) o por el impacto en el tipo de datos afectados (acceso a datos personales, robo de información financiera). En esta línea, acerca de como podría variar el tipo de incidente en función de los factores considerados, un ejemplo sería el siguiente: un ataque de phishing dirigido a empleados de alto nivel podría clasificarse como un incidente de fraude, pero si el atacante logra acceder a información confidencial, en cuyo caso el impacto del incidente es mayor, podría clasificarse como un incidente de acceso no autorizado a información.
+La toma en consideración de estos factores determinará la decisión de clasificar un incidente como un tipo u otro y, en su caso, su peligrosidad y la prioridad de actuación. Es decir, un ataque puede clasificarse por el tipo de amenaza (correo electrónico, explotación de vulnerabilidades) o por el impacto en el tipo de datos afectados (acceso a datos personales, robo de información financiera). En esta línea, acerca de como podría variar el tipo de incidente en función de los factores considerados, un ejemplo sería el siguiente: Un ataque de phishing dirigido a empleados de alto nivel podría clasificarse como un incidente de fraude, pero si el atacante logra acceder a información confidencial, en cuyo caso el impacto del incidente es mayor, podría clasificarse como un incidente de acceso no autorizado a información.
 
 
 #### 3.2. Taxonomía de Referencia para la Clasificación de Incidentes de Seguridad
 
-La taxonomía definida en la **Guía Nacional de Notificación y Gestión de Ciberincidentes**, se basa en la Taxonomía de Referencia para la Clasificación de Incidentes de Seguridad, desarrollada coordinadamente por un grupo internacional de equipos de respuesta a incidentes (clasificación de los ciberincidentes tomando como referencia la incluida en la [guía CCN-STIC 817](https://www.aec.es/wp-media/uploads/DPD-00266.SEG-GUI-004-CCN-STIC-817_Gestion_de_Ciberincidentes_ENS.pdf)):
+La taxonomía definida en la **[Guía Nacional de Notificación y Gestión de Ciberincidentes](https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_nacional_notificacion_gestion_ciberincidentes.pdf)** usada por INCIBE, se basa en la Taxonomía de Referencia para la Clasificación de Incidentes de Seguridad, desarrollada coordinadamente por un grupo internacional de equipos de respuesta a incidentes (clasificación de los ciberincidentes tomando como referencia la incluida en la [guía CCN-STIC 817](https://www.aec.es/wp-media/uploads/DPD-00266.SEG-GUI-004-CCN-STIC-817_Gestion_de_Ciberincidentes_ENS.pdf) y presentada por ENISA):
 
 En este enlace, también puedes acceder a un repositorio de trabajo, en el que se trabaja la taxonomía de referencia para la clasificación de incidentes de seguridad:   
 
@@ -139,41 +149,44 @@ Incidentes que muestren signos evidentes de spam, contengan comentarios ofensivo
   * **Pornografía infantil, contenido sexual o violento inadecuado:** material que represente de manera visual contenido relacionado con pornografía infantil, apología de la violencia, etc.   
      **Ejemplo:** publicación de imágenes de menores de edad en situaciones de abuso.
   
-#####  3.2.2. Contenido dañino
+#####  3.2.2. Contenido dañino o malicioso
 Problemas relacionados con virus, troyanos, gusanos, spyware, bots e inyección de código   
   
   * **Sistema infectado:** sistema infectado con malware.    
      **Ejemplo:** sistema, computadora o teléfono móvil infectado con un rootkit.  
   * **Servidor C&C (Mando y Control):** conexión con servidor de Mando y Control (C&C) mediante malware o sistemas infectados.      
-     **Ejemplo:** conexión de un troyano con un servidor C&C para recibir órdenes.
+     **Ejemplo:** Los botnets son redes de ordenadores infectados que se conectan a un servidor C&C para recibir instrucciones.
   * **Distribución de malware:** recurso usado para distribución de malware.     
-     **Ejemplo:** página web que aloje un exploit kit, servidor de descarga de malware.   
+     **Ejemplo:** página web que aloje un exploit kit, servidor de descarga de malware, distribuidos a través de spam.
   * **Configuración de malware:** recurso que aloje ficheros de configuración de malware.     
-     **Ejemplo:** ataque de webinjects para troyano.  
+     **Ejemplo:** los archivos de configuración de ransomware, que contienen las instrucciones para cifrar los archivos, nota de rescate, etc.
   * **Malware dominio DGA:** nombre de dominio generado mediante DGA (Algoritmo de Generación de Dominio), empleado por malware para contactar con un servidor de Mando y Control (C&C).     
      **Ejemplo:** malware que genera nombres de dominio de manera aleatoria para contactar con un servidor C&C.
 
-##### Obtención de información:  
+#####  3.2.3.  Obtención de información  
 Los escaneos como reporte más común. También se consideran dentro de esta clasificación aquellos relacionados con los usos de sniffers, ingeniería social o ataques de fuerza bruta.  
   
-  * **Escaneo de redes (scanning):** envío de peticiones a un sistema para descubrir posibles debilidades. Se incluyen también procesos de comprobación o testeo para recopilar información de alojamientos, servicios y cuentas. Ejemplos: peticiones DNS, ICMP, SMTP, escaneo de puertos.  
-  * **Análisis de paquetes (sniffing):** observación y grabación del tráfico de redes.  
-  * **Ingeniería social:** recopilación de información personal sin el uso de la tecnología. Ejemplos: mentiras, trucos, sobornos, amenazas.  
+  * **Escaneo de redes (scanning):** envío de peticiones a un sistema para descubrir posibles debilidades, puertos abiertos. Se incluyen también procesos de comprobación o testeo para recopilar información de alojamientos, servicios y cuentas.     
+     **Ejemplos**: peticiones DNS, ICMP, SMTP, escaneo de puertos.  
+  * **Análisis de paquetes (sniffing):** interceptar, observación y grabación del tráfico de redes, con el objetivo de capturar infomración confidencial, como nombre de usaurios, contraseñas u otros datos confidenciales.    
+     **Ejemplo:** captura de tráfico de red para obtener credenciales de acceso a través del conocido ataque man-in-the-middle (MitM).
+  * **Ingeniería social:** recopilación de información personal sin el uso de la tecnología. A través de engaños o uso de técnicas psicológicas para que revele información confidencial o realicen una acción que comprometa la seguridad      
+     **Ejemplo:** mentiras, trucos, sobornos, amenazas. Por ejemplo, convencer a un usuario para que revele su contraseña, o para que ejecute un archivo malicioso.   
 
-##### Intento de intrusión:  
+#####  3.2.4.  Intento de intrusión  
   * **Explotación de vulnerabilidades conocidas:** intento de compromiso de un sistema o de interrupción de un servicio mediante la explotación de vulnerabilidades con un identificador estandarizado (véase CVE). Ejemplos: desbordamiento de buffer, puertas traseras, cross site scripting (XSS).
   * **Intento de acceso con vulneración de credenciales:** múltiples intentos de vulnerar credenciales. Ejemplos: intentos de ruptura de contraseñas, ataque por fuerza bruta.
   * **Ataque desconocido:** ataque empleando exploit desconocido.
 
-##### Intrusión: 
+#####  3.2.5.  Intrusión 
 Incidentes en los que se manifieste el claro acceso a cuentas privilegiadas, no privilegiadas, compromiso de aplicaciones y ataques de 0-day.  
   
   * **Compromiso de cuenta con privilegios:** compromiso de un sistema en el que el atacante ha adquirido privilegios.  
   * **Compromiso de cuenta sin privilegios:** compromiso de un sistema empleando cuentas sin privilegios.  
   * **Compromiso de aplicaciones:** compromiso de una aplicación mediante la explotación de vulnerabilidades de software.  Ejemplo: inyección SQL.  
   * **Robo:** intrusión física. Ejemplo: acceso no autorizado a Centro de Proceso de Datos y sustracción de equipo.  
-  
-##### Disponibilidad: 
+
+#####  3.2.6.  Disponibilidad
 Ataques de denegación de servicio, tales como DoS, DDoS y sabotajes.  
   
   * **DoS (Denegación de Servicio):** ataque de Denegación de Servicio. Ejemplo: envío de peticiones a una aplicación web que provoca la interrupción o ralentización en la prestación del servicio.  
@@ -181,14 +194,14 @@ Ataques de denegación de servicio, tales como DoS, DDoS y sabotajes.
   * **Sabotaje:** sabotaje físico. Ejemplos: cortes de cableados de equipos o incendios provocados.  
   * **Interrupciones:** interrupciones por causas externas. Ejemplo: desastre natural.  
 
-##### Compromiso de la información:  
+#####  3.2.7.  Compromiso de la información  
 Problemas relacionados con el acceso a información y/o modificación no autorizada.  
   
   * **Acceso no autorizado a información:** acceso no autorizado a información. Ejemplos: robo de credenciales de acceso mediante interceptación de tráfico o mediante el acceso a documentos físicos.  
   * **Modificación no autorizada de información:** modificación no autorizada de información. Ejemplos: modificación por un atacante empleando credenciales sustraídas de un sistema o aplicación o encriptado de datos mediante ransomware.  
   * **Pérdida de datos:** pérdida de información. Ejemplos: pérdida por fallo de disco duro o robo físico.   
 
-##### Fraude:  
+#####  3.2.8.  Fraude  
 Reportes que tengan nexo con el uso no autorizado, derechos de autor, suplantación de identidad, phishing y robo de credenciales.  
   
   * **Uso no autorizado de recursos:** uso de recursos para propósitos inadecuados, incluyendo acciones con ánimo de lucro. Ejemplo: uso de correo electrónico para participar en estafas piramidales.  
@@ -196,14 +209,14 @@ Reportes que tengan nexo con el uso no autorizado, derechos de autor, suplantaci
   * **Suplantación:** tipo de ataque en el que una entidad suplanta a otra para obtener beneficios ilegítimos.  
   * **Phishing:** suplantación de otra entidad con la finalidad de convencer al usuario para que revele sus credenciales privadas.  
 
-##### Vulnerable:
+#####  3.2.9.  Vulnerable    
   * **Criptografía débil:** servicios accesibles públicamente que pueden presentar criptografía débil. Ejemplo: servidores web susceptibles de ataques POODLE/FREAK.
   * **Amplificador DDoS:** servicios accesibles públicamente que puedan ser empleados para la reflexión o amplificación de ataques DDoS. Ejemplos: DNS open\-resolvers o Servidores NTP con monitorización monlist.
   * **Servicios con acceso potencial no deseado:** servicios accesibles públicamente potencialmente no deseados. Ejemplos: Telnet, RDP o VNC.
   * **Revelación de información:** acceso público a servicios en los que potencialmente pueda revelarse información sensible. Ejemplos: SNMP o Redis.
   * **Sistema vulnerable:** sistema vulnerable. Ejemplos: mala configuración de proxy en cliente (WPAD), versiones desfasadas de sistema.
 
-##### Otros:  
+#####  3.2.10.  Otros  
 Aquellos incidentes que realicen consultas técnicas, mensajes informativos y peticiones judiciales. Reportes recibidos en el servicio gestionado por el CERT, pero que no se debe tomar acciones puesto que no pertenece a su ámbito de actuación. También se incluirán en esta clasificación aquellas quejas sobre las que no se reporten evidencias o éstas no sean contrastadas.  
   
   * **Otros:** todo aquel incidente que no tenga cabida en ninguna categoría anterior.  
@@ -230,8 +243,7 @@ El indicador de peligrosidad determina la potencial amenaza que supondría la ma
 
 
 
-
-En la GUÍA NACIONAL DE NOTIFICACIÓN Y GESTIÓN DE CIBERINCIDENTES, podrás ver una relación entre el tipo de incidente y el nivel de peligrosidad.
+En la [GUÍA NACIONAL DE NOTIFICACIÓN Y GESTIÓN DE CIBERINCIDENTES](https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_nacional_notificacion_gestion_ciberincidentes.pdf), podrás ver una **relación entre el tipo de incidente y el nivel de peligrosidad**.
 
 ##### 3.2.2 Impacto/Alcance del incidente
 

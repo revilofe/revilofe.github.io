@@ -64,7 +64,7 @@ La gestión eficaz de incidentes de ciberseguridad es un aspecto crucial de la s
 
 La gestión de incidentes de ciberseguridad es un proceso continuo que implica aprender de los incidentes anteriores. Cada incidente ofrece una oportunidad para mejorar las defensas y prepararse mejor para los desafíos futuros. Por ello, es esencial mantener registros detallados de los incidentes, realizar análisis post-incidente y actualizar constantemente las estrategias de seguridad.
 
-### 2. Taxonomía
+### 2. ¿Que significa Taxonomía?
 
 **Definición:** Clasificación u ordenación en grupos de cosas que tienen unas características comunes.
 
@@ -103,7 +103,7 @@ Por tanto la taxonomía de incidentes de ciberseguridad es una herramienta esenc
 
 ### 3. Taxonomía de incidentes
 
-La elaboración de una taxonomía no es sencilla, pero puede basarse en modelos de taxonomía diseñados por organismos de referencia, como el **CCN-CERT* y la **ENISA**. Por otra parte, durante la clasificación deben considerarse los siguientes factores a la hora de establecer criterios de clasificación.
+La elaboración de una taxonomía no es sencilla, pero puede basarse en modelos de taxonomía diseñados por organismos de referencia, como el **CCN-CERT** y la **ENISA**. Por otra parte, durante la clasificación deben considerarse los siguientes factores a la hora de establecer criterios de clasificación.
 
 #### 3.1. Factores a considerar en la clasificación de incidentes
 Los incidentes de ciberseguridad pueden variar en su naturaleza, alcance y gravedad. Por ello, es importante tener en cuenta una serie de factores al clasificarlos. Algunos de los factores clave a considerar incluyen:
@@ -116,36 +116,42 @@ Los incidentes de ciberseguridad pueden variar en su naturaleza, alcance y grave
 * **El impacto que el incidente puede tener en la organización:** Como impáctará desde el punto de vista de la protección de la información, la prestación de los servicios, la conformidad legal y/o la imagen pública.
 * **Los requerimientos legales y regulatorios:** Algunos incidentes pueden requerir notificación a las autoridades competentes o a los afectados. 
 
-La toma en consideración de estos factores determinará la decisión de clasificar un incidente como un tipo u otro y, en su caso, su peligrosidad y la prioridad de actuación. Es decir, un ataque puede clasificarse por el tipo de amenaza (correo electrónico, explotación de vulnerabilidades) o por el impacto en el tipo de datos afectados (acceso a datos personales, robo de información financiera). En esta misma línea acerca de como podría variar el tipo de incidente en función de los factores considerados, un ejemplo sería el siguiente: un ataque de phishing dirigido a empleados de alto nivel podría clasificarse como un incidente de fraude, pero si el atacante logra acceder a información confidencial, en cuyo caso el impacto del incidente es mayor, podría clasificarse como un incidente de acceso no autorizado a información.
+La toma en consideración de estos factores determinará la decisión de clasificar un incidente como un tipo u otro y, en su caso, su peligrosidad y la prioridad de actuación. Es decir, un ataque puede clasificarse por el tipo de amenaza (correo electrónico, explotación de vulnerabilidades) o por el impacto en el tipo de datos afectados (acceso a datos personales, robo de información financiera). En esta línea, acerca de como podría variar el tipo de incidente en función de los factores considerados, un ejemplo sería el siguiente: un ataque de phishing dirigido a empleados de alto nivel podría clasificarse como un incidente de fraude, pero si el atacante logra acceder a información confidencial, en cuyo caso el impacto del incidente es mayor, podría clasificarse como un incidente de acceso no autorizado a información.
 
 
 #### 3.2. Taxonomía de Referencia para la Clasificación de Incidentes de Seguridad
 
-La taxonomía definida en la **Guía Nacional de Notificación y Gestión de Ciberincidentes**, se basa en la Taxonomía de Referencia para la Clasificación de Incidentes de Seguridad, desarrollada coordinadamente por un grupo internacional de equipos de respuesta a incidentes (clasificación de los ciberincidentes tomando como referencia la incluida en la guía CCN-STIC 817.):
+La taxonomía definida en la **Guía Nacional de Notificación y Gestión de Ciberincidentes**, se basa en la Taxonomía de Referencia para la Clasificación de Incidentes de Seguridad, desarrollada coordinadamente por un grupo internacional de equipos de respuesta a incidentes (clasificación de los ciberincidentes tomando como referencia la incluida en la [guía CCN-STIC 817](https://www.aec.es/wp-media/uploads/DPD-00266.SEG-GUI-004-CCN-STIC-817_Gestion_de_Ciberincidentes_ENS.pdf)):
 
-[https://github.com/flosada/RSITaxonomy_ES/blob/master/humanv1.md](https://github.com/flosada/RSITaxonomy_ES/blob/master/humanv1.md)
+En este enlace, también puedes acceder a un repositorio de trabajo, en el que se trabaja la taxonomía de referencia para la clasificación de incidentes de seguridad:   
+
+- [https://github.com/flosada/RSITaxonomy_ES/blob/master/humanv1.md](https://github.com/flosada/RSITaxonomy_ES/blob/master/humanv1.md)
 
 A continuación, se muestra en un primer nivel la clasificación del incidente y, en un segundo nivel los tipos de incidentes dentro de esa clasificación.
 
 ##### 3.2.1. Contenido abusivo 
 Incidentes que muestren signos evidentes de spam, contengan comentarios ofensivos o inciten a la pederastia, violencia y/o delitos sexuales.   
   
-  * **SPAM:** correo electrónico masivo no solicitado. El receptor del contenido no ha otorgado autorización válida para recibir un mensaje colectivo.  
+  * **SPAM:** correo electrónico masivo no solicitado. El receptor del contenido no ha otorgado autorización válida para recibir un mensaje colectivo.   
      **Ejemplo:** envío de correos electrónicos no solicitados con fines publicitarios.
-  * **Delito de odio:** contenido difamatorio o discriminatorio. 
+  * **Delito de odio:** contenido difamatorio o discriminatorio.     
      **Ejemplo:** ciberacoso, racismo, amenazas a una persona o dirigidas contra colectivos, publicación de comentarios ofensivos en redes sociales.
-  * **Pornografía infantil, contenido sexual o violento inadecuado:** material que represente de manera visual contenido relacionado con pornografía infantil, apología de la violencia, etc.
+  * **Pornografía infantil, contenido sexual o violento inadecuado:** material que represente de manera visual contenido relacionado con pornografía infantil, apología de la violencia, etc.   
      **Ejemplo:** publicación de imágenes de menores de edad en situaciones de abuso.
   
 #####  3.2.2. Contenido dañino
 Problemas relacionados con virus, troyanos, gusanos, spyware, bots e inyección de código   
   
-  * **Sistema infectado:** sistema infectado con malware. 
+  * **Sistema infectado:** sistema infectado con malware.    
      **Ejemplo:** sistema, computadora o teléfono móvil infectado con un rootkit.  
-  * **Servidor C&C (Mando y Control):** conexión con servidor de Mando y Control (C&C) mediante malware o sistemas infectados.  
-  * **Distribución de malware:** recurso usado para distribución de malware. Ejemplo: recurso de una organización empleado para distribuir malware.  
-  * **Configuración de malware:** recurso que aloje ficheros de configuración de malware. Ejemplo: ataque de webinjects para troyano.  
-  * **Malware dominio DGA:** nombre de dominio generado mediante DGA (Algoritmo de Generación de Dominio), empleado por malware para contactar con un servidor de Mando y Control (C&C).  
+  * **Servidor C&C (Mando y Control):** conexión con servidor de Mando y Control (C&C) mediante malware o sistemas infectados.      
+     **Ejemplo:** conexión de un troyano con un servidor C&C para recibir órdenes.
+  * **Distribución de malware:** recurso usado para distribución de malware.     
+     **Ejemplo:** página web que aloje un exploit kit, servidor de descarga de malware.   
+  * **Configuración de malware:** recurso que aloje ficheros de configuración de malware.     
+     **Ejemplo:** ataque de webinjects para troyano.  
+  * **Malware dominio DGA:** nombre de dominio generado mediante DGA (Algoritmo de Generación de Dominio), empleado por malware para contactar con un servidor de Mando y Control (C&C).     
+     **Ejemplo:** malware que genera nombres de dominio de manera aleatoria para contactar con un servidor C&C.
 
 ##### Obtención de información:  
 Los escaneos como reporte más común. También se consideran dentro de esta clasificación aquellos relacionados con los usos de sniffers, ingeniería social o ataques de fuerza bruta.  
@@ -312,8 +318,9 @@ Tarea: Clasificar cada incidente según los criterios de taxonomía.
 
 Consulta la moodle.
 
-### 5. Fuente
-
+## Fuente
+* [Repositorio de trabajo de taxonomía de incidentes de seguridad](https://github.com/flosada/RSITaxonomy_ES/blob/master/humanv1.md)
+* [guía CCN-STIC 817](https://www.aec.es/wp-media/uploads/DPD-00266.SEG-GUI-004-CCN-STIC-817_Gestion_de_Ciberincidentes_ENS.pdf)
 * [Taxonomia de un incidente](https://globalt4e.com/taxonomia-de-un-incidente/)
 * [Taxonomía](https://www.incibe.es/incibe-cert/respuesta-incidentes/rediris/taxonomia)
 * [Conoce a tus enemigos](https://www.incibe.es/empresas/blog/incidentes-seguridad-conoce-tus-enemigos)

@@ -20,3 +20,46 @@
 
 *[driver]: Los drivers son los controladores de dispositivos.
 
+*[CCN-CERT]: Centro Criptológico Nacional - Centro de Respuesta a Incidentes de Seguridad de la Información del sector público estatal.
+
+*[CERT]: Computer Emergency Response Team
+
+*[CSIRT]: Computer Security Incident Response Team
+
+*[CNI]: Centro Nacional de Inteligencia
+
+*[CNP]: Cuerpo Nacional de Policía
+
+*[ENISA]: Agencia Europea de Ciberseguridad
+
+*[GDPR]: Reglamento General de Protección de Datos
+
+*[ISO]: International Organization for Standardization
+
+*[NIST]: National Institute of Standards and Technology
+
+*[PCI DSS]: Payment Card Industry Data Security Standard
+
+*[RGPD]: Reglamento General de Protección de Datos
+
+*[UE]: Unión Europea
+
+*[VPN]: Virtual Private Network
+
+*[Zero Day]: Vulnerabilidad de día cero. Es una vulnerabilidad de seguridad que es desconocida por la persona o el grupo que debería estar interesado en mitigarla o corregirla. La vulnerabilidad de día cero es un problema de seguridad de la información que se produce en un software o hardware y que es desconocido por el fabricante o por el proveedor de servicios de seguridad. Por lo tanto, no se ha corregido y no se ha publicado una actualización para corregirlo. Los atacantes pueden aprovecharse de esta vulnerabilidad para atacar sistemas informáticos y redes, ya que no hay una solución disponible para protegerse de ella.
+
+*[Zoombombing]: Es una práctica que consiste en un ataque de seguridad en el que un individuo no autorizado se une a una reunión de Zoom y comparte contenido inapropiado
+
+*[virus]: Programa informático que tiene la capacidad de replicarse a sí mismo y propagarse de un ordenador a otro, sin intervención del usuario. Los virus pueden destruir, modificar o robar información de los ordenadores infectados.
+
+*[troyano] Programa informático que se presenta como inofensivo, pero que al ejecutarlo realiza funciones maliciosas. Los troyanos pueden robar información, controlar el sistema, instalar otros programas maliciosos, etc.
+
+*[gusano] Programa informático que se replica a sí mismo y se propaga a través de redes, sin necesidad de intervención del usuario. Los gusanos pueden consumir ancho de banda, ralentizar los sistemas, robar información, etc.
+
+*[spyware] Programa informático que recopila información sobre un usuario sin su consentimiento. El spyware puede recopilar información sobre las páginas web visitadas, las contraseñas, los datos bancarios, etc.
+
+*[bot] Programa informático que realiza tareas automatizadas en internet. Los bots pueden ser utilizados para realizar tareas legítimas, como indexar páginas web, o para realizar tareas maliciosas, como enviar spam, realizar ataques de denegación de servicio, etc.
+
+
+
+

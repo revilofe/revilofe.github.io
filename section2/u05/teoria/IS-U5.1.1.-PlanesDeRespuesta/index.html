@@ -4219,7 +4219,7 @@ f) Se ha realizado un seguimiento adecuado del incidente para evitar que una sit
 <p>1.  <strong>Tener conformado un equipo de respuesta a incidentes</strong> \, con la preparación y experiencia para poder atender\, dar seguimiento y solución a cualquier incidente de seguridad.</p>
 <p>2.  <strong>Contar con un Plan de Respuesta ante Incidentes\,</strong>  que defina de manera clara y secuencial <span class="arithmatex">\(se recomienda hacerlo a manera de checklist\)</span>\, los pasos a seguir ante un incidente de seguridad.</p>
 <p>3.  <strong>Tener preparado Hardware y Software para análisis de incidentes</strong> \, tal como:</p>
-<p><em>Software</em>  <span class="arithmatex">\(como EDR\)</span> y/o Hardware para la  __recolección de datos forenses __ digitales y respaldo de información.</p>
+<p><em>Software</em>  <span class="arithmatex">\(como <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr>\)</span> y/o Hardware para la  __recolección de datos forenses __ digitales y respaldo de información.</p>
 <p><em>Equipos</em>  para tareas de  <strong>análisis de datos\, análisis de tráfico de red</strong> \, redacción de reportes.</p>
 <p>Analizadores de paquetes y protocolos de red.</p>
 <p>4. __ __  __Tener identificada y documentada la infraestructura de TI __ de la organización:</p>
@@ -4243,17 +4243,17 @@ f) Se ha realizado un seguimiento adecuado del incidente para evitar que una sit
 <p>3. Tener en cuenta __ los vectores de ataque__ \, tales como <span class="arithmatex">\(se mencionan los más comunes\)</span>:</p>
 <p>Dispositivos externos/removibles <span class="arithmatex">\(usb’s\)</span>.</p>
 <p>Ataques de fuerza bruta <span class="arithmatex">\(Attrition\)</span>.</p>
-<p>Navegación\, Email <span class="arithmatex">\(Spear phishing\, Bussiness Email Compromise\)</span>.</p>
+<p>Navegación\, Email <span class="arithmatex">\(Spear <abbr title="Técnica de ingeniería social utilizada para engañar a los usuarios y obtener información confidencial, como contraseñas, números de tarjeta de crédito, etc. Los atacantes suelen enviar correos electrónicos o mensajes de texto que parecen provenir de una fuente legítima, como un banco o una empresa, y solicitan al usuario que haga clic en un enlace o proporcione información confidencial.">phishing</abbr>\, Bussiness Email Compromise\)</span>.</p>
 <p>Explotación de vulnerabilidades <span class="arithmatex">\(de sistema operativo\, aplicaciones\)</span>.</p>
 <p>Pérdida o robo de equipo.</p>
 <p>Ataques Man in the Middle <span class="arithmatex">\(MIM\)</span>.</p>
 <p>Dependerán del tipo de incidente para el que nos estemos preparando.</p>
 <p>4. Las fuentes más comunes de  <strong>indicadores de incidentes</strong>  son:</p>
-<p>Sistemas SIEM.</p>
+<p>Sistemas <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>.</p>
 <p>Software Antimalware y Antispam.</p>
 <p>Soluciones de File Integrity Checking.</p>
 <p>Servicios de monitoreo e información de seguridad y amenazas de terceros\, Open Source <span class="arithmatex">\(OSINT\)</span>\, Comerciales\, Gubernamentales <span class="arithmatex">\(como <abbr title="Computer Emergency Response Team">CERT</abbr>’s\, ISAC’s\, Data Feeds\)</span>.</p>
-<p>Logs de sistemas operativos\, así como dispositivos de red <span class="arithmatex">\(como UTM’s \(IDS e IPS\)</span>\, routers\, switches).</p>
+<p>Logs de sistemas operativos\, así como dispositivos de red <span class="arithmatex">\(como UTM’s \(<abbr title="Sistema de Detección de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas. Los IDS pueden detectar ataques de denegación de servicio, escaneos de puertos, intentos de intrusión, etc.">IDS</abbr> e <abbr title="Sistema de Prevención de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas, y toma medidas para prevenir o detener los ataques. Los IPS pueden bloquear el tráfico malicioso, rechazar las conexiones sospechosas, etc.">IPS</abbr>\)</span>\, routers\, switches).</p>
 <p>Personas dentro y fuera de la organización\, afines al área de Ciberseguridad.</p>
 <h4 id="respuesta-a-incidentes-sp800-61_3">Respuesta a incidentes: SP800-61<a class="headerlink" href="#respuesta-a-incidentes-sp800-61_3" title="Permanent link">&para;</a></h4>
 <ol>
@@ -4266,7 +4266,7 @@ f) Se ha realizado un seguimiento adecuado del incidente para evitar que una sit
 <p><strong>Entender comportamientos normales:</strong>  El equipo de respuesta a incidentes debe analizar las redes\, sistemas y aplicaciones de la organización\, para entender cuál es su comportamiento normal <span class="arithmatex">\(Baseline\)</span>\, de tal manera\, cuando se presente un comportamiento anormal\, sea más fácil de identificar.</p>
 <p><strong>Crear una política de retención de logs</strong> : Crear e implementar esta política que especifique por cuanto tiempo  los logs deben de mantenerse es de gran utilidad en el análisis porque principalmente los incidentes pueden ser descubiertos después de varios días\, semanas o meses después de haber ocurrido <span class="arithmatex">\(UTM’s\, Antimalware\, Sistemas\)</span>.</p>
 <p>Las siguientes son recomendaciones para hacer el análisis de incidentes más fáciles y efectivas:</p>
-<p><strong>Realizar correlación de eventos</strong> : La evidencia de un incidente puede ser registrada en logs de varios sistemas <span class="arithmatex">\(UTM’s\, Antimalware\, Sistemas operativos\, aplicaciones\)</span>. Recomendado uso de solución SIEM.</p>
+<p><strong>Realizar correlación de eventos</strong> : La evidencia de un incidente puede ser registrada en logs de varios sistemas <span class="arithmatex">\(UTM’s\, Antimalware\, Sistemas operativos\, aplicaciones\)</span>. Recomendado uso de solución <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>.</p>
 <p><strong>Mantener todos los relojes de los sistemas sincronizados:</strong>  Hacer uso de protocolos como NTP\, con el fin de mantener la sincronización entre hosts y evitar que los eventos sean inconsistentes en lo que respecta a su hora de ocurrencia\, lo que dificulta en gran medida en análisis de incidentes.</p>
 <p>Las siguientes son recomendaciones para hacer el análisis de incidentes más fáciles y efectivas:</p>
 <p><strong>Hacer uso de motores de búsqueda en internet  para investigar incidentes.</strong></p>
@@ -4314,7 +4314,7 @@ f) Se ha realizado un seguimiento adecuado del incidente para evitar que una sit
 <tr>
 <td style="text-align: center;">Reconocimiento</td>
 <td style="text-align: center;">Scanning de puertos</td>
-<td style="text-align: center;">Incorporación de reglas de filtrado en el firewall</td>
+<td style="text-align: center;">Incorporación de reglas de filtrado en el <abbr title="Dispositivo de seguridad que se utiliza para proteger una red de comunicaciones. El firewall controla el tráfico de red y decide qué paquetes de datos pueden entrar o salir de la red.">firewall</abbr></td>
 </tr>
 </tbody>
 </table>
@@ -4347,7 +4347,7 @@ f) Se ha realizado un seguimiento adecuado del incidente para evitar que una sit
 </ol>
 <p>Posterior a la contención de un incidente\,  <strong>la erradicación es necesaria</strong>  <span class="arithmatex">\(aunque no siempre o se realiza en la etapa de recuperación\)</span> y es importante  <strong>identificar todos los hosts afectados</strong>  dentro de la organización para que puedan ser recuperados.</p>
 <p>Algunas de las acciones a realizar en esta etapa son:</p>
-<p>Eliminar malware.</p>
+<p>Eliminar <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr>.</p>
 <p>Eliminar usuarios maliciosos o vulnerados.</p>
 <p>Parcheo de sistemas para mitigar vulnerabilidades utilizadas.</p>
 <p>Crear nuevas reglas en las soluciones de seguridad.</p>
@@ -4380,7 +4380,7 @@ f) Se ha realizado un seguimiento adecuado del incidente para evitar que una sit
 </tr>
 <tr>
 <td style="text-align: center;">Intrusión</td>
-<td style="text-align: center;">Instalación de un rootkit</td>
+<td style="text-align: center;">Instalación de un <abbr title="Programa informático que oculta la presencia de otros programas maliciosos en un sistema. Los rootkits pueden ocultar procesos, archivos, claves de registro, etc.">rootkit</abbr></td>
 <td style="text-align: center;">Reinstalación del equipo y recuperación de datos</td>
 </tr>
 </tbody>
@@ -4507,10 +4507,6 @@ f) Se ha realizado un seguimiento adecuado del incidente para evitar que una sit
 <p>Crear un plan de respuesta a incidentes partiendo de la plantilla.</p>
 <p>Crear e incorporar un conjunto de playbook básicos.</p>
 <p><img alt="" src="../assets/IS-U411-PlanesDeRespuesta20.png" /></p>
-<p>*[troyano] Programa informático que se presenta como inofensivo, pero que al ejecutarlo realiza funciones maliciosas. Los troyanos pueden robar información, controlar el sistema, instalar otros programas maliciosos, etc.</p>
-<p>*[gusano] Programa informático que se replica a sí mismo y se propaga a través de redes, sin necesidad de intervención del usuario. Los gusanos pueden consumir ancho de banda, ralentizar los sistemas, robar información, etc.</p>
-<p>*[spyware] Programa informático que recopila información sobre un usuario sin su consentimiento. El spyware puede recopilar información sobre las páginas web visitadas, las contraseñas, los datos bancarios, etc.</p>
-<p>*[bot] Programa informático que realiza tareas automatizadas en internet. Los bots pueden ser utilizados para realizar tareas legítimas, como indexar páginas web, o para realizar tareas maliciosas, como enviar spam, realizar ataques de denegación de servicio, etc.</p>
 
 
 

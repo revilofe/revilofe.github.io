@@ -1,3 +1,4 @@
+
 import json
 import os
 
@@ -99,7 +100,7 @@ def pedir_entero(msj: str, min: int, max: int) -> int:
 
 
 # O también con una sola función y un parámetro que indique el tipo de dato de retorno
-def pedir_numero_v1(msj: str, min: float, max: float, entero = True) -> float:
+def pedir_numero_v1(msj: str, min: float, max: float, entero = True) -> int | float:
     """
     Solicita al usuario un número flotante dentro de un rango definido.
 
@@ -125,7 +126,7 @@ def pedir_numero_v1(msj: str, min: float, max: float, entero = True) -> float:
     return num
 
 
-def generar_matriz(filas: int, columnas: int) -> tuple[tuple]:
+def generar_matriz(filas: int, columnas: int, min: float, max: float) -> tuple[tuple]:
     """
     Genera una matriz solicitando al usuario los elementos uno por uno.
 
@@ -135,14 +136,14 @@ def generar_matriz(filas: int, columnas: int) -> tuple[tuple]:
 
     Returns:
         tuple[list]: Matriz generada en forma de una tupla de listas.
-    """    
-    num_elementos = filas * columnas
+    """
     numeros = list()
 
     print("Dame los elementos:")
 
-    for _ in range(num_elementos):
-        numeros.append(pedir_numero_v1(">> ", CONFIG["valor"]["min"], CONFIG["valor"]["max"], False))
+    for fila in range(filas):
+        for col in range(columnas):
+            numeros.append(pedir_numero_v1(f"({fila + 1}, {col + 1}) >> ", min, max, False))
 
     return convertir_lista_en_matriz(numeros, columnas)
 
@@ -269,6 +270,16 @@ def pedir_dimensiones_matriz(min: int, max: int) -> tuple[int]:
     return filas, columnas
 
 
+def mostrar_estadisticas(matriz: tuple[tuple], filas: int, pos_decimales: int, pos_totales: int):
+    for i in range(filas):
+        fila = matriz[i]
+        minimo = formatear_numero(min(fila), pos_decimales, pos_totales)
+        maximo = formatear_numero(max(fila), pos_decimales, pos_totales)
+        media = formatear_numero(sum(fila) / len(fila), pos_decimales, pos_totales)
+        numeros = " ".join(formatear_numero(valor, pos_decimales, pos_totales) for valor in fila)
+        print(f"fila {i + 1}: {numeros} min: {minimo}  max: {maximo}  media: {media}")     
+
+
 def guardar_json(nombre_fichero: str, datos: dict):
     """
     Guarda los datos en un fichero JSON.
@@ -305,25 +316,27 @@ def main():
         print("\n\nNo es posible generar una matriz con filas o columnas inferiores a 1")
     else:
         print("\n")
-        matriz_orig = generar_matriz(filas, columnas)
+        matriz_orig = generar_matriz(filas, columnas, CONFIG["valor"]["min"], CONFIG["valor"]["max"])
     
-        print("\n")
         pos_decimales = CONFIG["valor"]["pos_decimales"]
         pos_totales = CONFIG["valor"]["pos_totales"]
 
+        print("\n")
         mostrar_matriz("Matriz 2x2 original: ", matriz_orig, filas, columnas, pos_decimales, pos_totales)
 
         matriz_ordenada = ordenar_matriz(matriz_orig, columnas)
 
         print("\n")
-
         mostrar_matriz("Matriz 2x2 ordenada: ", matriz_ordenada, filas, columnas, pos_decimales, pos_totales)
     
+        print("\n")
+        mostrar_estadisticas(matriz_ordenada, filas, pos_decimales, pos_totales)
+
         datos = dict(CONFIG)
         datos["matriz_orig"] = matriz_orig
         datos["matriz_ordenada"] = matriz_ordenada
 
-        if guardar_json("examenes/practica1_matriz_ordenada.json", datos):
+        if guardar_json("examenes/matriz_ordenada.json", datos):
             print("\nFichero JSON guardado correctamente!")
 
     print("\n")

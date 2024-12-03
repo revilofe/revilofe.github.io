@@ -272,6 +272,20 @@
 
 *[DNS]: Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.
 
+*[ICMP]: Protocolo de Mensajes de Control de Internet. Es un protocolo que se utiliza para enviar mensajes de control y error entre dispositivos en una red. El ICMP permite a los dispositivos comunicarse entre
+
+*[CVE]: Vulnerabilidad y Exposición Común. Es un sistema que se utiliza para identificar y catalogar las vulnerabilidades de seguridad en el software y el hardware. El CVE proporciona una lista de identificadores únicos para las vulnerabilidades, que se utilizan para rastrear y gestionar las vulnerabilidades de forma eficiente.
+
+*[XSS]: Cross-Site Scripting. Es una vulnerabilidad de seguridad que permite a los atacantes inyectar scripts maliciosos en páginas web y aplicaciones web. Los ataques XSS pueden ser utilizados para robar información confidencial, como cookies, contraseñas, etc.
+
+*[SQL]: Lenguaje de Consulta Estructurado. Es un lenguaje de programación que se utiliza para gestionar y manipular bases de datos relacionales. El SQL permite a los usuarios crear, leer, actualizar y eliminar datos de las bases de datos, así como definir y modificar la estructura de las tablas.
+
+*[SQL Injection]: Vulnerabilidad de seguridad que permite a los atacantes ejecutar comandos SQL maliciosos en una base de datos. Los ataques de inyección SQL pueden ser utilizados para robar información confidencial, modificar los datos, etc.
+
+*[inyección SQL]: Vulnerabilidad de seguridad que permite a los atacantes ejecutar comandos SQL maliciosos en una base de datos. Los ataques de inyección SQL pueden ser utilizados para robar información confidencial, modificar los datos, etc.
+
+*[Meltdown]: Vulnerabilidad de seguridad que afecta a los procesadores modernos y permite a los atacantes acceder a la memoria protegida del sistema. Los ataques Meltdown pueden ser utilizados para robar información confidencial, como contraseñas, claves de cifrado, etc.
+
 *[DHCP]: Protocolo de Configuración Dinámica de Host. Es un protocolo que se utiliza para asignar direcciones IP de forma dinámica a los dispositivos de una red. El DHCP permite a los dispositivos obtener automáticamente una dirección IP, una máscara de subred, una puerta de enlace, etc.
 
 *[FTP]: Protocolo de Transferencia de Archivos. Es un protocolo que se utiliza para transferir archivos entre un cliente y un servidor a través de una red. El FTP permite a los usuarios subir y descargar archivos de forma segura y eficiente.
@@ -325,3 +339,12 @@
 *[RDP]: Protocolo de Escritorio Remoto
 
 *[SSH]: Secure Shell
+
+*[INCIBE]: Instituto Nacional de Ciberseguridad
+
+*[SPAM]: Correo no deseado. Es un tipo de correo electrónico no solicitado que se envía a un gran número de destinatarios, generalmente con fines publicitarios o maliciosos.
+
+*[C&C]: Comando y Control. Es un sistema de comunicación utilizado por los atacantes para controlar y coordinar los dispositivos infectados en una botnet. Los servidores C&C permiten a los atacantes enviar comandos, recibir información, actualizar el malware, etc.
+
+*[DGA]: Algoritmo de Generación de Dominios. Es un algoritmo utilizado por los atacantes para generar nombres de dominio de forma aleatoria y dinámica. Los algoritmos DGA permiten a los atacantes evitar la detección y el bloqueo de los servidores C&C.
+

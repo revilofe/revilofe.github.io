@@ -56,7 +56,8 @@ Por tanto, disponer de una taxonomía común de incidentes de ciberseguridad es 
   <figcaption>Fases por las que pasa la gestión de un incidente</figcaption>
 </figure>
 
-Durante el ciclo de vida de un incidente, se siguen varias fases críticas:
+Durante el ciclo de vida de un incidente, se siguen varias fases críticas:     
+
 1. **Preparación:** Implementación de medidas preventivas, es decir, prepararse antes de que ocurra un incidente. Algunas de las medidas preventivas incluyen la formación de empleados, la implementación de controles de seguridad y la realización de pruebas de seguridad, vistas en la unidad anterior.     
 2. **Identificación:** Detección y alerta de un incidente de seguridad. Esto puede ser a través de alertas, monitoreo de sistemas o informes de usuarios. En esta fase, es fundamental contar con herramientas y mecanismos de detección de incidentes. Será en está fase en la que pongamos el foco en esta unidad.   
 3. **Contención:** Aislar el incidente para evitar que se propague.     
@@ -214,7 +215,7 @@ Problemas relacionados con el acceso a información y/o modificación no autoriz
   
   * **Acceso no autorizado a información:** acceso no autorizado a información. Esto puede ocurrir deliberadamente haciendo uso de las credenciales obtenidas de forma fraudulenta o accidentalmente por fallos en la configuración de los sistemas.      
      **Ejemplos:** acceso a información expuesta a través de un servicio web que permiten acceder desde el exterior a rutas de directorio con información sensible, por personal no autorizado.     
-  * **Modificación no autorizada de información:** derivado del incidente anterior, modificación no autorizada de información. 
+  * **Modificación no autorizada de información:** derivado del incidente anterior, modificación no autorizada de información.      
      **Ejemplos:** modificación de un sistema o contenido de una página web por un atacante, empleando credenciales sustraídas de un sistema o aplicación o encriptado de datos mediante ransomware.       
   * **Pérdida de datos:** pérdida de acceso a la información o eliminación de esta. Puede ocurrir por acciones fraudulentas, como un ataque ransomware en el que no se recupera la información cifrada, o por accidentes, como el fallo de un sistema de almacenamiento.      
      **Ejemplos:** pérdida por fallo de disco duro o robo físico.   
@@ -240,9 +241,9 @@ Reportes que tengan nexo con el uso no autorizado, derechos de autor, suplantaci
      **Ejemplo:** servidores DNS abiertos, servidores NTP abiertos.
   * **Servicios con acceso potencial no deseado:** servicios accesibles públicamente potencialmente no deseados. Es decir, dejar sin protección servicios que no deberían estar accesibles desde el exterior.       
      **Ejemplo:** servidores de base de datos sin protección, servidores de correo abiertos, servidores de ficheros sin protección, Telnet, RDP o VNC.
-  * **Revelación de información:** Revelar información sensible o confidencial de manera involuntaria a personas no autorizadas.
+  * **Revelación de información:** Revelar información sensible o confidencial de manera involuntaria a personas no autorizadas.      
      **Ejemplo:** publicación de información sensible en un sitio web, o envío de información confidencial a terceros. Mensaje de error de una aplicación web que revela información sensible.
-  * **Sistema vulnerable:** sistema vulnerable a ciertos tipos de ataques, por ejemplo, por no haber sido actualizado con los últimos parches de seguridad. No tiene por qué haber sido comprometido, pero es susceptible de serlo.
+  * **Sistema vulnerable:** sistema vulnerable a ciertos tipos de ataques, por ejemplo, por no haber sido actualizado con los últimos parches de seguridad. No tiene por qué haber sido comprometido, pero es susceptible de serlo.      
      **Ejemplo:** sistema operativo sin parchear, software desactualizado, configuración incorrecta de un sistema, o vulnerabilidad conocida en un software.
 
 #####  3.2.10.  Otros  
@@ -250,21 +251,22 @@ Aquellos incidentes que realicen consultas técnicas, mensajes informativos y pe
   
   * **APT (Advanced Persistent Threats):** ataques dirigidos contra organizaciones concretas, sustentados en mecanismos muy sofisticados de ocultación, anonimato y persistencia. Esta amenaza habitualmente emplea técnicas de ingeniería social para conseguir sus objetivos junto con el uso de procedimientos de ataque conocidos o genuinos.  
   * **Ciberterrorismo:** uso de redes o sistemas de información para atacar deliberadamente infraestructuras críticas, o la seguridad nacional de un país, habitualmente por motivos políticos o ideológicos.
-  * **Incidentes relacionados con infraestructuras críticas:** borrado, dañado, alteración, supresión o inaccesibilidad de datos, programas informáticos o documentos electrónicos de una infraestructura crítica. Conductas graves relacionadas con los términos anteriores que afecten a la prestación de un servicio esencial.
+  * **Incidentes relacionados con infraestructuras críticas:** borrado, dañado, alteración, supresión o inaccesibilidad de datos, programas informáticos o documentos electrónicos de una infraestructura crítica. Conductas graves relacionadas con los términos anteriores que afecten a la prestación de un servicio esencial.      
      **Ejemplo:** ataque a una central eléctrica que provoque un corte de suministro eléctrico, redes de comunicaciones, sistemas de transporte, sistemas de agua potable, servicios de salud, etc.
   * **Otros:** todo aquel incidente que no tenga cabida en ninguna categoría anterior.
   
 
 #### 3.2 Peligrosidad e impacto
 
-Para completar una adecuada clasificación de los ciberincidentes, además de asignarlos a un grupo o tipo, será necesario determinar tanto el grado de **peligrosidad** como el **impacto** que puede tener en la organización.
+Para completar una adecuada clasificación de los ciberincidentes, además de asignarlos a un grupo o tipo, hay que valorar tanto el grado de **peligrosidad** como el **impacto** que puede tener en la organización.
 
 ##### 3.2.1 Grado de gravedad/peligrosidad
 
 El establecimiento de ciertos criterios permitirá asignar el **grado de peligrosidad** en la primera fase de detección.
 
-El indicador de peligrosidad determina la potencial amenaza que supondría la materialización de un incidente en los sistemas de información o comunicación del ente afectado, así como para los servicios prestados o la continuidad de negocio en caso de haberla. Este indicador se fundamenta en las características intrínsecas a la tipología de amenaza y su comportamiento.
+El indicador de peligrosidad determina *la potencial amenaza que supondría la materialización de un incidente en los sistemas de información o comunicación del ente afectado, así como para los servicios prestados o la continuidad de negocio* en caso de haberla. Este indicador se fundamenta en las características intrínsecas a la tipología de amenaza y su comportamiento.
 
+Ej: Un ataque de ransomware que cifra los datos de la organización y exige un rescate para su recuperación, se considera de alta peligrosidad debido a su capacidad para causar daños significativos a la organización.
 
 <figure markdown>
   ![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702240026150.png)
@@ -272,17 +274,17 @@ El indicador de peligrosidad determina la potencial amenaza que supondría la ma
 </figure>
 
 
-
 En la [GUÍA NACIONAL DE NOTIFICACIÓN Y GESTIÓN DE CIBERINCIDENTES](https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_nacional_notificacion_gestion_ciberincidentes.pdf), podrás ver una **relación entre el tipo de incidente y el nivel de peligrosidad**.
 
 ##### 3.2.2 Impacto/Alcance del incidente
 
-También tendremos que tener en cuenta el **impacto de los Incidentes** en las Organizaciones. Éste se podrá medir teniendo en cuenta las consecuencias que puede desencadenar el ciberincidente en la operación de la organización, en sus activos o, incluso, en los propios individuos.
+También tendremos que tener en cuenta el **impacto del incidente** en la Organización.
 
-El indicador de impacto de un ciberincidente se determinará evaluando las consecuencias que tal ciberincidente ha tenido en las funciones y actividades de la organización afectada, en sus activos o en los individuos afectados. De acuerdo a ello, se tienen en cuenta aspectos como las consecuencias potenciales o materializadas que provoca una determinada amenaza en un sistema de información y/o comunicación, así como en la propia entidad afectada (organismos públicos o privados, y particulares).
+El indicador de impacto de un ciberincidente se determinará *evaluando las consecuencias que tal ciberincidente que puede tener en las funciones y actividades de la organización afectada, en sus activos o en los individuos afectados*. De acuerdo a ello, se tienen en cuenta aspectos como las consecuencias potenciales o materializadas que provoca una determinada amenaza en un sistema de información y/o comunicación, así como en la propia entidad afectada (organismos públicos o privados, y particulares).
 
 Por ejemplo, en lo que se refiere al Impacto Operativo y Financiero, un ataque de ransomware puede causar la pérdida de acceso a datos críticos, lo que resulta en paralización operativa y pérdidas económicas significativas.
 
+Ej: Un ataque de denegación de servicio (DoS) que interrumpe los servicios en línea de una empresa, se considera de alto impacto debido a su capacidad para afectar la disponibilidad de los servicios y la reputación de la empresa.
 
 <figure markdown>
   ![](./assets/IS-U2.1.1.-TaxonomiaDeIncidentes-1702240157348.png){: .center}
@@ -291,15 +293,18 @@ Por ejemplo, en lo que se refiere al Impacto Operativo y Financiero, un ataque d
 
 En la GUÍA NACIONAL DE NOTIFICACIÓN Y GESTIÓN DE CIBERINCIDENTES, podrás ver una relación entre los parámetros tenidos en cuenta y el nivel de impacto.
 
+
+Diferenciar entre peligrosidad e impacto es importante, ya que un incidente puede ser altamente peligroso, pero tener un impacto bajo si se detecta y se responde rápidamente. Por otro lado, un incidente de baja peligrosidad puede tener un impacto significativo si no se detecta a tiempo.
+
 #### 3.3 Prioridades
 
 La asignación de prioridad a un incidente podrá variar a lo largo del tiempo en función de la nueva información disponible sobre el mismo. Esta clasificación se podrá obtener a partir de una conjunción de las dos anteriores y puede ayudar a concretar en un único indicador como de prioritario es el incidente..
 
 Por ello, esta relación pretende ser meramente orientativa pudiendo ser alterada en aquellos casos en los que el equipo de operación lo estimen oportuno, atendiendo al alcance/impacto y gravedad/peligrosidad del incidente.
 
-* **Emergencia:** incidentes cuya resolución no admite demora. Los incidentes de este tipo se procesarán en paralelo de haber varios y, en su resolución, se emplearán todos los recursos disponibles. Ejemplos: aquellos que supongan peligro para vidas humanas, para la seguridad nacional, para la infraestructura de Internet. Hasta ahora también se consideran emergencias todos aquellos incidentes que requieran acción inmediata debido a su rapidez y ámbito de difusión.
-* **Alta:** aquellos cuyas características requieren que sea atendido antes que otros, aunque sea detectado posteriormente. Se mantienen en una cola independiente de incidentes de alta prioridad, y no se procesarán los de prioridad inferior mientras que estos no estén atendidos. Los incidentes de alta prioridad se procesan en serie.
-* **Normal:** por defecto, los incidentes se atienden en serie por orden de llegada, mientras no requiera atención uno de prioridad superior. Un incidente de prioridad normal puede adquirir la categoría de alta prioridad si no recibe atención por un tiempo prolongado. Ejemplos: todos los incidentes no clasificados como alta prioridad o emergencia donde el atacante haya ganado acceso a un sistema informático ajeno. También se incluyen escaneos insistentes de redes.
+* **Emergencia:** incidentes cuya resolución no admite demora. Los incidentes de este tipo se procesarán en paralelo de haber varios y, en su resolución, se emplearán todos los recursos disponibles. Ejemplos: aquellos que supongan peligro para vidas humanas, para la seguridad nacional, para la infraestructura de Internet. Hasta ahora también se consideran emergencias todos aquellos incidentes que requieran acción inmediata debido a su rapidez y ámbito de difusión.     
+* **Alta:** aquellos cuyas características requieren que sea atendido antes que otros, aunque sea detectado posteriormente. Se mantienen en una cola independiente de incidentes de alta prioridad, y no se procesarán los de prioridad inferior mientras que estos no estén atendidos. Los incidentes de alta prioridad se procesan en serie.    
+* **Normal:** por defecto, los incidentes se atienden en serie por orden de llegada, mientras no requiera atención uno de prioridad superior. Un incidente de prioridad normal puede adquirir la categoría de alta prioridad si no recibe atención por un tiempo prolongado. Ejemplos: todos los incidentes no clasificados como alta prioridad o emergencia donde el atacante haya ganado acceso a un sistema informático ajeno. También se incluyen escaneos insistentes de redes.      
 * **Baja:** los incidentes de baja prioridad se atienden en serie por orden de llegada, mientras no requiera atención uno de prioridad superior. Un incidente de baja prioridad será cerrado automáticamente si no recibe atención por un tiempo prolongado. Ejemplos: incidentes aislados en grado de tentativa, donde el atacante no ha conseguido su propósito y no es probable que lo consiga.
 
 #### 3.4 Respuesta al incidente

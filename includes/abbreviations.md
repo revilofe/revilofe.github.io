@@ -298,6 +298,10 @@
 
 *[TCP]: Protocol Control de Transmisión. Es un protocolo que se utiliza para establecer y gestionar conexiones entre dispositivos en una red. El TCP garantiza la entrega de los datos, el control de flujo, la detección de errores, etc.
 
+*[NTP]: Protocolo de Tiempo de Red. Es un protocolo que se utiliza para sincronizar el reloj de los dispositivos en una red. El NTP permite a los dispositivos mantener la hora y la fecha actualizadas, sincronizar los eventos, etc.
+
+*[VNC]: Virtual Network Computing. Es un sistema que se utiliza para controlar de forma remota un ordenador a través de una red. El VNC permite a los usuarios ver la pantalla, mover el ratón, escribir en el teclado, etc., de un ordenador remoto.
+
 *[UDP]: Protocolo de Datagramas de Usuario. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El UDP es un protocolo sin conexión que no garantiza la entrega de los datos ni el control de flujo.
 
 *[SMTP]: Protocolo de Transferencia de Correo Simple. Es un protocolo que se utiliza para enviar y recibir correos electrónicos entre servidores de correo. El SMTP permite a los usuarios enviar correos electrónicos a través de la red de forma segura y eficiente.

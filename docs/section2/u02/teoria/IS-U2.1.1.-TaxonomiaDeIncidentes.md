@@ -121,9 +121,9 @@ Los incidentes de ciberseguridad pueden variar en su naturaleza, alcance y grave
 
 * **Tipo de amenaza o método:** Determinar la técnica utilizada por los atacantes: código dañino, intrusiones, fraude, etc. Nos permitirá identificar el tipo de incidente y aplicar las medidas de respuesta adecuadas. 
 * **Origen de la amenaza:** Interna o externa. Nos permitirá identificar si el ataque proviene de un empleado descontento o de un hacker externo.
-* **La categoría de seguridad de los sistemas afectados:** Así, por ejemplo, un incidente que afecte a sistemas críticos de información tendrá una prioridad mayor que otro que afecte a sistemas menos críticos.
+* **La [categoria de seguridad de los sistemas de información](https://ens.ccn.cni.es/es/soporte-ens/real-decreto-311-2022/anexo/3) afectados:** Así, por ejemplo, un incidente que afecte a sistemas críticos de información tendrá una prioridad mayor que otro que afecte a sistemas menos críticos.
 * **El perfil de los usuarios afectados:** la posición de estos en la estructura organizativa de la entidad y, en su consecuencia, sus privilegios de acceso a información sensible o confidencial.
-* **El número y tipología de los sistemas afectados:** Un incidente que afecte a un único sistema puede tener un impacto menor que otro que afecte a toda la red de la organización. La la tipología de los sistemas afectados (servidores, estaciones de trabajo, dispositivos móviles) influirá en la gravedad del incidente.
+* **El número y tipología de los sistemas afectados:** Un incidente que afecte a un único sistema puede tener un impacto menor que otro que afecte a toda la red de la organización. La tipología de los sistemas afectados (servidores, estaciones de trabajo, dispositivos móviles) influirá en la gravedad del incidente.
 * **El impacto que el incidente puede tener en la organización:** Como impáctará desde el punto de vista de la protección de la información, la prestación de los servicios, la conformidad legal y/o la imagen pública.
 * **Los requerimientos legales y regulatorios:** Algunos incidentes pueden requerir notificación a las autoridades competentes o a los afectados. 
 
@@ -291,21 +291,40 @@ Ej: Un ataque de denegación de servicio (DoS) que interrumpe los servicios en l
   <figcaption>Impacto/Alcance del incidente</figcaption>
 </figure>
 
-En la GUÍA NACIONAL DE NOTIFICACIÓN Y GESTIÓN DE CIBERINCIDENTES, podrás ver una relación entre los parámetros tenidos en cuenta y el nivel de impacto.
+En la [GUÍA NACIONAL DE NOTIFICACIÓN Y GESTIÓN DE CIBERINCIDENTES](https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_nacional_notificacion_gestion_ciberincidentes.pdf), podrás ver una relación entre los parámetros tenidos en cuenta y el nivel de impacto.
 
 
 Diferenciar entre peligrosidad e impacto es importante, ya que un incidente puede ser altamente peligroso, pero tener un impacto bajo si se detecta y se responde rápidamente. Por otro lado, un incidente de baja peligrosidad puede tener un impacto significativo si no se detecta a tiempo.
 
 #### 3.3 Prioridades
 
-La asignación de prioridad a un incidente podrá variar a lo largo del tiempo en función de la nueva información disponible sobre el mismo. Esta clasificación se podrá obtener a partir de una conjunción de las dos anteriores y puede ayudar a concretar en un único indicador como de prioritario es el incidente..
+La asignación de prioridad a un incidente podrá variar a lo largo del tiempo en función de la nueva información disponible sobre el mismo. Esta clasificación se podrá obtener a partir de una conjunción de las dos anteriores y puede ayudar a concretar en un único indicador como de prioritario es el incidente.
 
-Por ello, esta relación pretende ser meramente orientativa pudiendo ser alterada en aquellos casos en los que el equipo de operación lo estimen oportuno, atendiendo al alcance/impacto y gravedad/peligrosidad del incidente.
+Aquí tienes una matriz que cruza los niveles de peligrosidad e impacto para determinar la prioridad. En este caso, se utiliza un enfoque común basado en las mejores prácticas para gestión de incidentes:
+
+
+| **Peligrosidad/Impacto** | **L1: Bajo**     | **L2: Medio**    | **L3: Alto**     | **L4: Muy Alto** | **L5: Crítico** |
+|---------------------------|------------------|------------------|------------------|------------------|-----------------|
+| **1: Bajo**              | **Baja**         | **Baja**         | **Media**        | **Media**        | **Alta**        |
+| **2: Medio**             | **Baja**         | **Media**        | **Media**        | **Alta**         | **Alta**        |
+| **3: Alto**              | **Media**        | **Media**        | **Alta**         | **Alta**         | **Emergencia**  |
+| **4: Muy Alto**          | **Media**        | **Alta**         | **Alta**         | **Emergencia**   | **Emergencia**  |
+| **5: Crítico**           | **Alta**         | **Alta**         | **Emergencia**   | **Emergencia**   | **Emergencia**  |
+
+
+Esta relación pretende ser meramente orientativa pudiendo ser alterada en aquellos casos en los que el equipo de operación lo estimen oportuno, atendiendo al alcance/impacto y gravedad/peligrosidad del incidente.
 
 * **Emergencia:** incidentes cuya resolución no admite demora. Los incidentes de este tipo se procesarán en paralelo de haber varios y, en su resolución, se emplearán todos los recursos disponibles. Ejemplos: aquellos que supongan peligro para vidas humanas, para la seguridad nacional, para la infraestructura de Internet. Hasta ahora también se consideran emergencias todos aquellos incidentes que requieran acción inmediata debido a su rapidez y ámbito de difusión.     
 * **Alta:** aquellos cuyas características requieren que sea atendido antes que otros, aunque sea detectado posteriormente. Se mantienen en una cola independiente de incidentes de alta prioridad, y no se procesarán los de prioridad inferior mientras que estos no estén atendidos. Los incidentes de alta prioridad se procesan en serie.    
 * **Normal:** por defecto, los incidentes se atienden en serie por orden de llegada, mientras no requiera atención uno de prioridad superior. Un incidente de prioridad normal puede adquirir la categoría de alta prioridad si no recibe atención por un tiempo prolongado. Ejemplos: todos los incidentes no clasificados como alta prioridad o emergencia donde el atacante haya ganado acceso a un sistema informático ajeno. También se incluyen escaneos insistentes de redes.      
 * **Baja:** los incidentes de baja prioridad se atienden en serie por orden de llegada, mientras no requiera atención uno de prioridad superior. Un incidente de baja prioridad será cerrado automáticamente si no recibe atención por un tiempo prolongado. Ejemplos: incidentes aislados en grado de tentativa, donde el atacante no ha conseguido su propósito y no es probable que lo consiga.
+
+**Ejemplo de Uso:**
+1. **Caso:** Un ataque de ransomware (peligrosidad 5: Crítico) afecta sistemas críticos de una organización (impacto L5: Crítico).
+     - **Resultado:** Prioridad **Emergencia**.
+
+2. **Caso:** Un incidente de phishing dirigido a empleados de bajo nivel (peligrosidad 2: Medio) con impacto limitado en la organización (impacto L2: Medio).
+     - **Resultado:** Prioridad **Media**.
 
 #### 3.4 Respuesta al incidente
 

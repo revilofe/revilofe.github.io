@@ -4659,9 +4659,9 @@ Categorías Comunes: Por ejemplo, los ataques de <abbr title="Término genérico
 <ul>
 <li><strong>Tipo de amenaza o método:</strong> Determinar la técnica utilizada por los atacantes: código dañino, intrusiones, fraude, etc. Nos permitirá identificar el tipo de incidente y aplicar las medidas de respuesta adecuadas. </li>
 <li><strong>Origen de la amenaza:</strong> Interna o externa. Nos permitirá identificar si el ataque proviene de un empleado descontento o de un hacker externo.</li>
-<li><strong>La categoría de seguridad de los sistemas afectados:</strong> Así, por ejemplo, un incidente que afecte a sistemas críticos de información tendrá una prioridad mayor que otro que afecte a sistemas menos críticos.</li>
+<li><strong>La <a href="https://ens.ccn.cni.es/es/soporte-ens/real-decreto-311-2022/anexo/3">categoria de seguridad de los sistemas de información</a> afectados:</strong> Así, por ejemplo, un incidente que afecte a sistemas críticos de información tendrá una prioridad mayor que otro que afecte a sistemas menos críticos.</li>
 <li><strong>El perfil de los usuarios afectados:</strong> la posición de estos en la estructura organizativa de la entidad y, en su consecuencia, sus privilegios de acceso a información sensible o confidencial.</li>
-<li><strong>El número y tipología de los sistemas afectados:</strong> Un incidente que afecte a un único sistema puede tener un impacto menor que otro que afecte a toda la red de la organización. La la tipología de los sistemas afectados (servidores, estaciones de trabajo, dispositivos móviles) influirá en la gravedad del incidente.</li>
+<li><strong>El número y tipología de los sistemas afectados:</strong> Un incidente que afecte a un único sistema puede tener un impacto menor que otro que afecte a toda la red de la organización. La tipología de los sistemas afectados (servidores, estaciones de trabajo, dispositivos móviles) influirá en la gravedad del incidente.</li>
 <li><strong>El impacto que el incidente puede tener en la organización:</strong> Como impáctará desde el punto de vista de la protección de la información, la prestación de los servicios, la conformidad legal y/o la imagen pública.</li>
 <li><strong>Los requerimientos legales y regulatorios:</strong> Algunos incidentes pueden requerir notificación a las autoridades competentes o a los afectados. </li>
 </ul>
@@ -4811,17 +4811,81 @@ Categorías Comunes: Por ejemplo, los ataques de <abbr title="Término genérico
   </p>
 <figcaption>Impacto/Alcance del incidente</figcaption>
 </figure>
-<p>En la GUÍA NACIONAL DE NOTIFICACIÓN Y GESTIÓN DE CIBERINCIDENTES, podrás ver una relación entre los parámetros tenidos en cuenta y el nivel de impacto.</p>
+<p>En la <a href="https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_nacional_notificacion_gestion_ciberincidentes.pdf">GUÍA NACIONAL DE NOTIFICACIÓN Y GESTIÓN DE CIBERINCIDENTES</a>, podrás ver una relación entre los parámetros tenidos en cuenta y el nivel de impacto.</p>
 <p>Diferenciar entre peligrosidad e impacto es importante, ya que un incidente puede ser altamente peligroso, pero tener un impacto bajo si se detecta y se responde rápidamente. Por otro lado, un incidente de baja peligrosidad puede tener un impacto significativo si no se detecta a tiempo.</p>
 <h4 id="33-prioridades">3.3 Prioridades<a class="headerlink" href="#33-prioridades" title="Permanent link">&para;</a></h4>
-<p>La asignación de prioridad a un incidente podrá variar a lo largo del tiempo en función de la nueva información disponible sobre el mismo. Esta clasificación se podrá obtener a partir de una conjunción de las dos anteriores y puede ayudar a concretar en un único indicador como de prioritario es el incidente..</p>
-<p>Por ello, esta relación pretende ser meramente orientativa pudiendo ser alterada en aquellos casos en los que el equipo de operación lo estimen oportuno, atendiendo al alcance/impacto y gravedad/peligrosidad del incidente.</p>
+<p>La asignación de prioridad a un incidente podrá variar a lo largo del tiempo en función de la nueva información disponible sobre el mismo. Esta clasificación se podrá obtener a partir de una conjunción de las dos anteriores y puede ayudar a concretar en un único indicador como de prioritario es el incidente.</p>
+<p>Aquí tienes una matriz que cruza los niveles de peligrosidad e impacto para determinar la prioridad. En este caso, se utiliza un enfoque común basado en las mejores prácticas para gestión de incidentes:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Peligrosidad/Impacto</strong></th>
+<th><strong>L1: Bajo</strong></th>
+<th><strong>L2: Medio</strong></th>
+<th><strong>L3: Alto</strong></th>
+<th><strong>L4: Muy Alto</strong></th>
+<th><strong>L5: Crítico</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1: Bajo</strong></td>
+<td><strong>Baja</strong></td>
+<td><strong>Baja</strong></td>
+<td><strong>Media</strong></td>
+<td><strong>Media</strong></td>
+<td><strong>Alta</strong></td>
+</tr>
+<tr>
+<td><strong>2: Medio</strong></td>
+<td><strong>Baja</strong></td>
+<td><strong>Media</strong></td>
+<td><strong>Media</strong></td>
+<td><strong>Alta</strong></td>
+<td><strong>Alta</strong></td>
+</tr>
+<tr>
+<td><strong>3: Alto</strong></td>
+<td><strong>Media</strong></td>
+<td><strong>Media</strong></td>
+<td><strong>Alta</strong></td>
+<td><strong>Alta</strong></td>
+<td><strong>Emergencia</strong></td>
+</tr>
+<tr>
+<td><strong>4: Muy Alto</strong></td>
+<td><strong>Media</strong></td>
+<td><strong>Alta</strong></td>
+<td><strong>Alta</strong></td>
+<td><strong>Emergencia</strong></td>
+<td><strong>Emergencia</strong></td>
+</tr>
+<tr>
+<td><strong>5: Crítico</strong></td>
+<td><strong>Alta</strong></td>
+<td><strong>Alta</strong></td>
+<td><strong>Emergencia</strong></td>
+<td><strong>Emergencia</strong></td>
+<td><strong>Emergencia</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Esta relación pretende ser meramente orientativa pudiendo ser alterada en aquellos casos en los que el equipo de operación lo estimen oportuno, atendiendo al alcance/impacto y gravedad/peligrosidad del incidente.</p>
 <ul>
 <li><strong>Emergencia:</strong> incidentes cuya resolución no admite demora. Los incidentes de este tipo se procesarán en paralelo de haber varios y, en su resolución, se emplearán todos los recursos disponibles. Ejemplos: aquellos que supongan peligro para vidas humanas, para la seguridad nacional, para la infraestructura de Internet. Hasta ahora también se consideran emergencias todos aquellos incidentes que requieran acción inmediata debido a su rapidez y ámbito de difusión.     </li>
 <li><strong>Alta:</strong> aquellos cuyas características requieren que sea atendido antes que otros, aunque sea detectado posteriormente. Se mantienen en una cola independiente de incidentes de alta prioridad, y no se procesarán los de prioridad inferior mientras que estos no estén atendidos. Los incidentes de alta prioridad se procesan en serie.    </li>
 <li><strong>Normal:</strong> por defecto, los incidentes se atienden en serie por orden de llegada, mientras no requiera atención uno de prioridad superior. Un incidente de prioridad normal puede adquirir la categoría de alta prioridad si no recibe atención por un tiempo prolongado. Ejemplos: todos los incidentes no clasificados como alta prioridad o emergencia donde el atacante haya ganado acceso a un sistema informático ajeno. También se incluyen escaneos insistentes de redes.      </li>
 <li><strong>Baja:</strong> los incidentes de baja prioridad se atienden en serie por orden de llegada, mientras no requiera atención uno de prioridad superior. Un incidente de baja prioridad será cerrado automáticamente si no recibe atención por un tiempo prolongado. Ejemplos: incidentes aislados en grado de tentativa, donde el atacante no ha conseguido su propósito y no es probable que lo consiga.</li>
 </ul>
+<p><strong>Ejemplo de Uso:</strong>
+1. <strong>Caso:</strong> Un ataque de <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> (peligrosidad 5: Crítico) afecta sistemas críticos de una organización (impacto L5: Crítico).
+     - <strong>Resultado:</strong> Prioridad <strong>Emergencia</strong>.</p>
+<ol>
+<li><strong>Caso:</strong> Un incidente de <abbr title="Técnica de ingeniería social utilizada para engañar a los usuarios y obtener información confidencial, como contraseñas, números de tarjeta de crédito, etc. Los atacantes suelen enviar correos electrónicos o mensajes de texto que parecen provenir de una fuente legítima, como un banco o una empresa, y solicitan al usuario que haga clic en un enlace o proporcione información confidencial.">phishing</abbr> dirigido a empleados de bajo nivel (peligrosidad 2: Medio) con impacto limitado en la organización (impacto L2: Medio).<ul>
+<li><strong>Resultado:</strong> Prioridad <strong>Media</strong>.</li>
+</ul>
+</li>
+</ol>
 <h4 id="34-respuesta-al-incidente">3.4 Respuesta al incidente<a class="headerlink" href="#34-respuesta-al-incidente" title="Permanent link">&para;</a></h4>
 <p>Todo lo anterior nos permitirá definir la mejores estrategias de Respuesta a Incidentes:</p>
 <ul>

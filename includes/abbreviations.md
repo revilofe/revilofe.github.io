@@ -160,6 +160,8 @@
 
 *[DDoS]: Ataque de Denegación de Servicio Distribuido. Es un ataque en el que los atacantes intentan saturar los recursos de un sistema o una red para que deje de funcionar correctamente. Los ataques DDoS pueden ser utilizados para interrumpir los servicios, causar daños económicos, etc.
 
+*[DoS]: Ataque de Denegación de Servicio. Es un ataque en el que los atacantes intentan saturar los recursos de un sistema o una red para que deje de funcionar correctamente. Los ataques DoS pueden ser utilizados para interrumpir los servicios, causar daños económicos, etc.
+
 *[botnet]: Red de dispositivos infectados que son controlados por los atacantes para realizar actividades maliciosas, como enviar spam, realizar ataques DDoS, robar información, etc.
 
 *[pharming]: Técnica utilizada para redirigir a los usuarios a sitios web falsos sin su conocimiento. Los atacantes pueden utilizar el pharming para robar información confidencial, como contraseñas, números de tarjeta de crédito, etc
@@ -262,3 +264,58 @@
 
 *[Lean]: Metodología de desarrollo de software que se basa en la eliminación de desperdicios y la mejora continua. En Lean, los proyectos se dividen en iteraciones cortas llamadas sprints, en las que se planifican, se desarrollan y se entregan incrementos del producto.
 
+*[DNS]: Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.
+
+*[DHCP]: Protocolo de Configuración Dinámica de Host. Es un protocolo que se utiliza para asignar direcciones IP de forma dinámica a los dispositivos de una red. El DHCP permite a los dispositivos obtener automáticamente una dirección IP, una máscara de subred, una puerta de enlace, etc.
+
+*[FTP]: Protocolo de Transferencia de Archivos. Es un protocolo que se utiliza para transferir archivos entre un cliente y un servidor a través de una red. El FTP permite a los usuarios subir y descargar archivos de forma segura y eficiente.
+
+*[HTTP]: Protocolo de Transferencia de Hipertexto. Es un protocolo que se utiliza para transferir información entre un cliente y un servidor a través de una red. El HTTP permite a los usuarios acceder a sitios web, enviar y recibir datos, etc.
+
+*[HTTPS]: Protocolo de Transferencia de Hipertexto Seguro. Es una versión segura del protocolo HTTP que se utiliza para transferir información de forma cifrada entre un cliente y un servidor a través de una red. El HTTPS protege la privacidad y la integridad de los datos.
+
+*[IP]: Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.
+
+*[TCP]: Protocol Control de Transmisión. Es un protocolo que se utiliza para establecer y gestionar conexiones entre dispositivos en una red. El TCP garantiza la entrega de los datos, el control de flujo, la detección de errores, etc.
+
+*[UDP]: Protocolo de Datagramas de Usuario. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El UDP es un protocolo sin conexión que no garantiza la entrega de los datos ni el control de flujo.
+
+*[SMTP]: Protocolo de Transferencia de Correo Simple. Es un protocolo que se utiliza para enviar y recibir correos electrónicos entre servidores de correo. El SMTP permite a los usuarios enviar correos electrónicos a través de la red de forma segura y eficiente.
+
+*[POP3]: Protocolo de Oficina de Correos 3. Es un protocolo que se utiliza para recibir correos electrónicos de un servidor de correo. El POP3 permite a los usuarios descargar los correos electrónicos en sus dispositivos y leerlos sin conexión.
+
+*[IMAP]: Protocolo de Acceso a Mensajes de Internet. Es un protocolo que se utiliza para recibir correos electrónicos de un servidor de correo. El IMAP permite a los usuarios acceder a los correos electrónicos en el servidor, organizarlos en carpetas, marcarlos como leídos, etc.
+
+*[DNS]: Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.
+
+*[MitM]: Ataque de Hombre en el Medio. Es un ataque en el que los atacantes interceptan y manipulan la comunicación entre dos partes. Los ataques MitM pueden ser utilizados para robar información confidencial, modificar los datos, etc.
+
+*[POODLE]: Ataque de Padding Oracle On Downgraded Legacy Encryption. Es un ataque en el que los atacantes explotan una vulnerabilidad en el protocolo SSL/TLS para descifrar la comunicación cifrada. Los ataques POODLE pueden ser utilizados para robar información confidencial, como contraseñas, números de tarjeta de crédito, etc.
+
+*[MD5]: Algoritmo de Resumen de Mensajes
+
+*[SHA-1]: Algoritmo de Resumen Seguro
+
+*[SHA-256]: Algoritmo de Resumen Seguro
+
+*[SHA-512]: Algoritmo de Resumen Seguro
+
+*[DES]: Estándar de Cifrado de Datos
+
+*[AES]: Estándar de Cifrado Avanzado
+
+*[RSA]: Algoritmo de Cifrado de Clave Pública
+
+*[WEP]: Protocolo de Privacidad Equivalente
+
+*[WPA]: Acceso Protegido Wi-Fi
+
+*[WPA2]: Acceso Protegido Wi-Fi 2
+
+*[WPA3]: Acceso Protegido Wi-Fi 3
+
+*[WEB]: World Wide Web
+
+*[RDP]: Protocolo de Escritorio Remoto
+
+*[SSH]: Secure Shell

@@ -4700,63 +4700,92 @@ Categorías Comunes: Por ejemplo, los ataques de <abbr title="Término genérico
 <ul>
 <li><strong>Escaneo de redes (scanning):</strong> envío de peticiones a un sistema para descubrir posibles debilidades, puertos abiertos. Se incluyen también procesos de comprobación o testeo para recopilar información de alojamientos, servicios y cuentas.   <br />
 <strong>Ejemplos</strong>: peticiones DNS, ICMP, SMTP, escaneo de puertos.  </li>
-<li><strong>Análisis de paquetes (sniffing):</strong> interceptar, observación y grabación del tráfico de redes, con el objetivo de capturar infomración confidencial, como nombre de usaurios, contraseñas u otros datos confidenciales.  <br />
+<li><strong>Análisis de paquetes (sniffing):</strong> interceptar, observación y grabación del tráfico de redes, con el objetivo de capturar información confidencial, como nombre de usuarios, contraseñas u otros datos confidenciales.   <br />
 <strong>Ejemplo:</strong> captura de tráfico de red para obtener credenciales de acceso a través del conocido ataque man-in-the-middle (MitM).</li>
 <li><strong>Ingeniería social:</strong> recopilación de información personal sin el uso de la tecnología. A través de engaños o uso de técnicas psicológicas para que revele información confidencial o realicen una acción que comprometa la seguridad    <br />
-<strong>Ejemplo:</strong> mentiras, trucos, sobornos, amenazas. Por ejemplo, convencer a un usuario para que revele su contraseña, o para que ejecute un archivo malicioso.   </li>
+<strong>Ejemplo:</strong> convencer a un usuario para que revele su contraseña, o para que ejecute un archivo malicioso a través de mentiras, trucos, sobornos, amenazas.   </li>
 </ul>
 <h5 id="324-intento-de-intrusion">3.2.4.  Intento de intrusión<a class="headerlink" href="#324-intento-de-intrusion" title="Permanent link">&para;</a></h5>
+<p>Intentos de acceso no autorizado a sistemas o servicios.</p>
 <ul>
-<li><strong>Explotación de vulnerabilidades conocidas:</strong> intento de compromiso de un sistema o de interrupción de un servicio mediante la explotación de vulnerabilidades con un identificador estandarizado (véase CVE). Ejemplos: desbordamiento de buffer, puertas traseras, cross site scripting (XSS).</li>
-<li><strong>Intento de acceso con vulneración de credenciales:</strong> múltiples intentos de vulnerar credenciales. Ejemplos: intentos de ruptura de contraseñas, ataque por fuerza bruta.</li>
-<li><strong>Ataque desconocido:</strong> ataque empleando exploit desconocido.</li>
+<li><strong>Explotación de vulnerabilidades conocidas:</strong> intento de compromiso de un sistema o de interrupción de un servicio mediante la explotación de vulnerabilidades con un identificador estandarizado (véase CVE).   <br />
+<strong>Ejemplos:</strong> desbordamiento de buffer, puertas traseras, cross site scripting (XSS).</li>
+<li><strong>Intento de acceso con vulneración de credenciales:</strong> múltiples intentos de vulnerar credenciales.    <br />
+<strong>Ejemplos:</strong> intentos de ruptura de contraseñas, ataque por fuerza bruta, ataques de diccionario, o intentos de acceso a servicios con credenciales robadas.</li>
+<li><strong>Ataque desconocido:</strong> ataque empleando exploit desconocido, <abbr title="Vulnerabilidad de día cero. Es una vulnerabilidad de seguridad que es desconocida por la persona o el grupo que debería estar interesado en mitigarla o corregirla. La vulnerabilidad de día cero es un problema de seguridad de la información que se produce en un software o hardware y que es desconocido por el fabricante o por el proveedor de servicios de seguridad. Por lo tanto, no se ha corregido y no se ha publicado una actualización para corregirlo. Los atacantes pueden aprovecharse de esta vulnerabilidad para atacar sistemas informáticos y redes, ya que no hay una solución disponible para protegerse de ella.">Zero Day</abbr>.   <br />
+<strong>Ejemplo:</strong> ataque que emplea una vulnerabilidad no conocida por el fabricante del software.</li>
 </ul>
 <h5 id="325-intrusion">3.2.5.  Intrusión<a class="headerlink" href="#325-intrusion" title="Permanent link">&para;</a></h5>
 <p>Incidentes en los que se manifieste el claro acceso a cuentas privilegiadas, no privilegiadas, compromiso de aplicaciones y ataques de 0-day.  </p>
 <ul>
-<li><strong>Compromiso de cuenta con privilegios:</strong> compromiso de un sistema en el que el atacante ha adquirido privilegios.  </li>
+<li><strong>Compromiso de cuenta con privilegios:</strong> compromiso de un sistema con privilegios de administración, de la cual el atacante ha adquirido sus credenciales.  </li>
 <li><strong>Compromiso de cuenta sin privilegios:</strong> compromiso de un sistema empleando cuentas sin privilegios.  </li>
-<li><strong>Compromiso de aplicaciones:</strong> compromiso de una aplicación mediante la explotación de vulnerabilidades de software.  Ejemplo: inyección SQL.  </li>
-<li><strong>Robo:</strong> intrusión física. Ejemplo: acceso no autorizado a Centro de Proceso de Datos y sustracción de equipo.  </li>
+<li><strong>Compromiso de aplicaciones:</strong> compromiso de una aplicación mediante la explotación de vulnerabilidades de software.<br />
+<strong>Ejemplo:</strong> inyección SQL en un campo de texto de una aplicación web, para que se ejecute una consulta en la base de datos y obterner información sensible de la base de datos.  </li>
+<li><strong>Compromiso de sistemas:</strong> utilizar una vulnerabilidad el sistema para acceder a información sensible o afectar a su disponibilidad.   <br />
+<strong>Ejemplo:</strong> una vulnerabilidad famosa Meltdown que afecto a una gama de procesadores y que permitía acceder a la memoria del sistema durante ciertas fases de la ejecución de instrucciones. </li>
+<li><strong>Robo:</strong> acceder físicamente y de forma fraudulenta a dependencias de una organización para sustraer equipos, documentación o acceder a información sensible.    <br />
+<strong>Ejemplo:</strong> acceso no autorizado a Centro de Proceso de Datos y sustracción de equipo.  </li>
 </ul>
 <h5 id="326-disponibilidad">3.2.6.  Disponibilidad<a class="headerlink" href="#326-disponibilidad" title="Permanent link">&para;</a></h5>
 <p>Ataques de denegación de servicio, tales como DoS, DDoS y sabotajes.  </p>
 <ul>
-<li><strong>DoS (Denegación de Servicio):</strong> ataque de Denegación de Servicio. Ejemplo: envío de peticiones a una aplicación web que provoca la interrupción o ralentización en la prestación del servicio.  </li>
-<li><strong>DDoS (Denegación Distribuida de Servicio):</strong> ataque de Denegación Distribuida de Servicio. Ejemplos: inundación de paquetes SYN, ataques de reflexión y amplificación utilizando servicios basados en UDP.  </li>
-<li><strong>Sabotaje:</strong> sabotaje físico. Ejemplos: cortes de cableados de equipos o incendios provocados.  </li>
-<li><strong>Interrupciones:</strong> interrupciones por causas externas. Ejemplo: desastre natural.  </li>
+<li><strong>DoS (Denegación de Servicio):</strong> ataque a un sistema con el objeto de que los servicios que provee no estén disponibles para los usuarios legítimos.   <br />
+<strong>Ejemplo:</strong> envío de peticiones a una aplicación web que provoca la interrupción o ralentización en la prestación del servicio.  </li>
+<li><strong>DDoS (Denegación Distribuida de Servicio):</strong> ataque a un sistema para colapsar sus servicios usando para ello un conjunto de quipos que atacan a la vez al objetivo.    <br />
+<strong>Ejemplos:</strong> uso de una red zombi de botnets para enviar una gran cantidad de tráfico al objetivo.</li>
+<li><strong>Mala configuración:</strong> configuración incorrecta de un sistema que provoca la interrupción de un servicio.     <br />
+<strong>Ejemplo:</strong> configuración incorrecta de un <abbr title="Dispositivo de seguridad que se utiliza para proteger una red de comunicaciones. El firewall controla el tráfico de red y decide qué paquetes de datos pueden entrar o salir de la red.">firewall</abbr> que bloquea el tráfico legítimo, o mala configuración en la quota de disco de usuario de un servicio de almacenamiento.</li>
+<li><strong>Sabotaje:</strong> realizar actos deliberados para interrumpir la prestación de un servicio.    <br />
+<strong>Ejemplos:</strong> cortes de cableados de equipos o incendios provocados.  </li>
+<li><strong>Interrupciones:</strong> interrupciones de los servicios por causas ajenas a la organización.    <br />
+<strong>Ejemplo:</strong> desastre natural, como la caída de un rayo en una central eléctrica que provoca un corte de suministro eléctrico.  </li>
 </ul>
 <h5 id="327-compromiso-de-la-informacion">3.2.7.  Compromiso de la información<a class="headerlink" href="#327-compromiso-de-la-informacion" title="Permanent link">&para;</a></h5>
 <p>Problemas relacionados con el acceso a información y/o modificación no autorizada.  </p>
 <ul>
-<li><strong>Acceso no autorizado a información:</strong> acceso no autorizado a información. Ejemplos: robo de credenciales de acceso mediante interceptación de tráfico o mediante el acceso a documentos físicos.  </li>
-<li><strong>Modificación no autorizada de información:</strong> modificación no autorizada de información. Ejemplos: modificación por un atacante empleando credenciales sustraídas de un sistema o aplicación o encriptado de datos mediante <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr>.  </li>
-<li><strong>Pérdida de datos:</strong> pérdida de información. Ejemplos: pérdida por fallo de disco duro o robo físico.   </li>
+<li><strong>Acceso no autorizado a información:</strong> acceso no autorizado a información. Esto puede ocurrir deliberadamente haciendo uso de las credenciales obtenidas de forma fraudulenta o accidentalmente por fallos en la configuración de los sistemas.    <br />
+<strong>Ejemplos:</strong> acceso a información expuesta a través de un servicio web que permiten acceder desde el exterior a rutas de directorio con información sensible, por personal no autorizado.     </li>
+<li><strong>Modificación no autorizada de información:</strong> derivado del incidente anterior, modificación no autorizada de información. 
+     <strong>Ejemplos:</strong> modificación de un sistema o contenido de una página web por un atacante, empleando credenciales sustraídas de un sistema o aplicación o encriptado de datos mediante <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr>.       </li>
+<li><strong>Pérdida de datos:</strong> pérdida de acceso a la información o eliminación de esta. Puede ocurrir por acciones fraudulentas, como un ataque <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> en el que no se recupera la información cifrada, o por accidentes, como el fallo de un sistema de almacenamiento.    <br />
+<strong>Ejemplos:</strong> pérdida por fallo de disco duro o robo físico.   </li>
+<li><strong>Fuga de información confidencial:</strong> divulgación no autorizada de información confidencial. Esta información puede haber sido obtenida de forma fraudulenta o lícitamente pero no estar autorizada su divulgación.     <br />
+<strong>Ejemplos:</strong> publicación de información confidencial en un sitio web o envío de información confidencial a terceros.</li>
 </ul>
 <h5 id="328-fraude">3.2.8.  Fraude<a class="headerlink" href="#328-fraude" title="Permanent link">&para;</a></h5>
 <p>Reportes que tengan nexo con el uso no autorizado, derechos de autor, suplantación de identidad, <abbr title="Técnica de ingeniería social utilizada para engañar a los usuarios y obtener información confidencial, como contraseñas, números de tarjeta de crédito, etc. Los atacantes suelen enviar correos electrónicos o mensajes de texto que parecen provenir de una fuente legítima, como un banco o una empresa, y solicitan al usuario que haga clic en un enlace o proporcione información confidencial.">phishing</abbr> y robo de credenciales.  </p>
 <ul>
-<li><strong>Uso no autorizado de recursos:</strong> uso de recursos para propósitos inadecuados, incluyendo acciones con ánimo de lucro. Ejemplo: uso de correo electrónico para participar en estafas piramidales.  </li>
-<li><strong>Derechos de autor:</strong> ofrecimiento o instalación de software carente de licencia u otro material protegido por derechos de autor. Ejemplos: Warez.  </li>
-<li><strong>Suplantación:</strong> tipo de ataque en el que una entidad suplanta a otra para obtener beneficios ilegítimos.  </li>
-<li><strong>Phishing:</strong> suplantación de otra entidad con la finalidad de convencer al usuario para que revele sus credenciales privadas.  </li>
+<li><strong>Uso no autorizado de recursos:</strong> uso de recursos (redes, sistemas, aplicaciones o dispositivos) para propósitos inadecuados, incluyendo acciones con ánimo de lucro.   <br />
+<strong>Ejemplo:</strong> uso de correo electrónico para participar en estafas piramidales, o el portátil de trabajo como servidor de un juego online.  </li>
+<li><strong>Derechos de autor:</strong> usar de manera no autorizada material protegido por derechos de autor.   <br />
+<strong>Ejemplo:</strong> ofrecimiento o instalación de software carente de licencia u otro material protegido por derechos de autor. </li>
+<li><strong>Suplantación de identidad:</strong> tipo de ataque en el que una entidad suplanta a otra para obtener beneficios ilegítimos, como acceder a información confidencial para el que no se tiene autorización. Son difíciles de detectar porque parecen ser legítimos.     <br />
+<strong>Ejemplo:</strong> suplantación de la identidad de un usuario para acceder a su cuenta bancaria. </li>
+<li><strong>Phishing:</strong> suplantación de otra entidad con la finalidad de convencer al usuario para que revele sus credenciales privadas, como contraseñas o números de tarjeta, información personal o financiera. Usando para ello técnicas de ingeniería social a través de correo electrónico, mensajes de texto o llamadas telefónicas.   <br />
+<strong>Ejemplo:</strong> envío de correos electrónicos que parecen ser de una entidad bancaria solicitando al usuario que introduzca sus credenciales en una página web falsa.  </li>
 </ul>
 <h5 id="329-vulnerable">3.2.9.  Vulnerable<a class="headerlink" href="#329-vulnerable" title="Permanent link">&para;</a></h5>
 <ul>
-<li><strong>Criptografía débil:</strong> servicios accesibles públicamente que pueden presentar criptografía débil. Ejemplo: servidores web susceptibles de ataques POODLE/FREAK.</li>
-<li><strong>Amplificador DDoS:</strong> servicios accesibles públicamente que puedan ser empleados para la reflexión o amplificación de ataques DDoS. Ejemplos: DNS open-resolvers o Servidores NTP con monitorización monlist.</li>
-<li><strong>Servicios con acceso potencial no deseado:</strong> servicios accesibles públicamente potencialmente no deseados. Ejemplos: Telnet, RDP o VNC.</li>
-<li><strong>Revelación de información:</strong> acceso público a servicios en los que potencialmente pueda revelarse información sensible. Ejemplos: SNMP o Redis.</li>
-<li><strong>Sistema vulnerable:</strong> sistema vulnerable. Ejemplos: mala configuración de proxy en cliente (WPAD), versiones desfasadas de sistema.</li>
+<li><strong>Criptografía débil:</strong> servicios accesibles públicamente que pueden presentar algoritmos o protocolos criptográficos de manera errónea, obsoletos o vulnerables, o cuando las claves de cifrado son débiles.     <br />
+<strong>Ejemplo:</strong> servidores web susceptibles de ataques POODLE/FREAK; protocolo WEB para redes wifi o algoritmos hash MD5, ambos con vulnerabilidades conocidas.</li>
+<li><strong>Amplificador DDoS:</strong> servicios accesibles públicamente que puedan ser empleados para la reflexión o amplificación de ataques DDoS, forzando a un servidor a enviar grandes cantidades de datos a un tercero. 
+     <strong>Ejemplo:</strong> servidores DNS abiertos, servidores NTP abiertos.</li>
+<li><strong>Servicios con acceso potencial no deseado:</strong> servicios accesibles públicamente potencialmente no deseados. Es decir, dejar sin protección servicios que no deberían estar accesibles desde el exterior.     <br />
+<strong>Ejemplo:</strong> servidores de base de datos sin protección, servidores de correo abiertos, servidores de ficheros sin protección, Telnet, RDP o VNC.</li>
+<li><strong>Revelación de información:</strong> Revelar información sensible o confidencial de manera involuntaria a personas no autorizadas.
+     <strong>Ejemplo:</strong> publicación de información sensible en un sitio web, o envío de información confidencial a terceros. Mensaje de error de una aplicación web que revela información sensible.</li>
+<li><strong>Sistema vulnerable:</strong> sistema vulnerable a ciertos tipos de ataques, por ejemplo, por no haber sido actualizado con los últimos parches de seguridad. No tiene por qué haber sido comprometido, pero es susceptible de serlo.
+     <strong>Ejemplo:</strong> sistema operativo sin parchear, software desactualizado, configuración incorrecta de un sistema, o vulnerabilidad conocida en un software.</li>
 </ul>
 <h5 id="3210-otros">3.2.10.  Otros<a class="headerlink" href="#3210-otros" title="Permanent link">&para;</a></h5>
 <p>Aquellos incidentes que realicen consultas técnicas, mensajes informativos y peticiones judiciales. Reportes recibidos en el servicio gestionado por el <abbr title="Computer Emergency Response Team">CERT</abbr>, pero que no se debe tomar acciones puesto que no pertenece a su ámbito de actuación. También se incluirán en esta clasificación aquellas quejas sobre las que no se reporten evidencias o éstas no sean contrastadas.  </p>
 <ul>
-<li><strong>Otros:</strong> todo aquel incidente que no tenga cabida en ninguna categoría anterior.  </li>
-<li><strong><abbr title="Acrónimo en inglés de Advanced Persistent Threat (Amenaza avanzada persistente), consiste en un tipo de ataque informático que se caracteriza por realizarse con sigilo, permaneciendo activo y oculto durante mucho tiempo, utilizando diferentes formas de ataque. Suelen estar patrocinados por compañías, mafias o un estado. El objetivo principal es vigilar, exfiltrar datos o modificar los recursos de una empresa u organización de forma integrada y continuada en el tiempo. Generalmente, este tipo de malware hace uso de exploits o ejecutables, aprovechando vulnerabilidades de tipo Zero Day presentes en el software de la víctima.">APT</abbr>:</strong> ataques dirigidos contra organizaciones concretas, sustentados en mecanismos muy sofisticados de ocultación, anonimato y persistencia. Esta amenaza habitualmente emplea técnicas de ingeniería social para conseguir sus objetivos junto con el uso de procedimientos de ataque conocidos o genuinos.  </li>
-<li><strong>Ciberterrorismo:</strong> uso de redes o sistemas de información con fines de carácter terrorista.  </li>
-<li><strong>Daños informáticos PIC:</strong> borrado, dañado, alteración, supresión o inaccesibilidad de datos, programas informáticos o documentos electrónicos de una infraestructura crítica. Conductas graves relacionadas con los términos anteriores que afecten a la prestación de un servicio esencial.  </li>
+<li><strong><abbr title="Acrónimo en inglés de Advanced Persistent Threat (Amenaza avanzada persistente), consiste en un tipo de ataque informático que se caracteriza por realizarse con sigilo, permaneciendo activo y oculto durante mucho tiempo, utilizando diferentes formas de ataque. Suelen estar patrocinados por compañías, mafias o un estado. El objetivo principal es vigilar, exfiltrar datos o modificar los recursos de una empresa u organización de forma integrada y continuada en el tiempo. Generalmente, este tipo de malware hace uso de exploits o ejecutables, aprovechando vulnerabilidades de tipo Zero Day presentes en el software de la víctima.">APT</abbr> (Advanced Persistent Threats):</strong> ataques dirigidos contra organizaciones concretas, sustentados en mecanismos muy sofisticados de ocultación, anonimato y persistencia. Esta amenaza habitualmente emplea técnicas de ingeniería social para conseguir sus objetivos junto con el uso de procedimientos de ataque conocidos o genuinos.  </li>
+<li><strong>Ciberterrorismo:</strong> uso de redes o sistemas de información para atacar deliberadamente infraestructuras críticas, o la seguridad nacional de un país, habitualmente por motivos políticos o ideológicos.</li>
+<li><strong>Incidentes relacionados con infraestructuras críticas:</strong> borrado, dañado, alteración, supresión o inaccesibilidad de datos, programas informáticos o documentos electrónicos de una infraestructura crítica. Conductas graves relacionadas con los términos anteriores que afecten a la prestación de un servicio esencial.
+     <strong>Ejemplo:</strong> ataque a una central eléctrica que provoque un corte de suministro eléctrico, redes de comunicaciones, sistemas de transporte, sistemas de agua potable, servicios de salud, etc.</li>
+<li><strong>Otros:</strong> todo aquel incidente que no tenga cabida en ninguna categoría anterior.</li>
 </ul>
 <h4 id="32-peligrosidad-e-impacto">3.2 Peligrosidad e impacto<a class="headerlink" href="#32-peligrosidad-e-impacto" title="Permanent link">&para;</a></h4>
 <p>Para completar una adecuada clasificación de los ciberincidentes, además de asignarlos a un grupo o tipo, será necesario determinar tanto el grado de <strong>peligrosidad</strong> como el <strong>impacto</strong> que puede tener en la organización.</p>

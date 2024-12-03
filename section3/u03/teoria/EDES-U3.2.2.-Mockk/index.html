@@ -4085,7 +4085,7 @@
 <p>Vamos a revisar algunas de las funciones básicas de la biblioteca  <a href="https://mockk.io/">MockK</a>.</p>
 <h3 id="2-mockk">2. MockK<a class="headerlink" href="#2-mockk" title="Permanent link">&para;</a></h3>
 <p>En Kotlin, todas las clases y métodos son finales.  Si bien esto nos ayuda a escribir código inmutable, también causa algunos problemas durante las pruebas.</p>
-<p>La mayoría de las bibliotecas que simulan objetos (mock) que se usan en JVM tienen problemas con las clases finales usadas para mocking or stubbing. Por supuesto, podemos agregar la palabra clave <code>open</code> a las clases y métodos que queremos "mockear" (simular). Pero cambiar el código solo para poder mockearla no parece el mejor enfoque.</p>
+<p>La mayoría de las bibliotecas que simulan objetos (mock) que se usan en <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr> tienen problemas con las clases finales usadas para mocking or stubbing. Por supuesto, podemos agregar la palabra clave <code>open</code> a las clases y métodos que queremos "mockear" (simular). Pero cambiar el código solo para poder mockearla no parece el mejor enfoque.</p>
 <p>La biblioteca MockK ofrece compatibilidad con las características y construcciones del lenguaje Kotlin.  MockK construye proxies para las clases mockeadas. Esto provoca cierta degradación del rendimiento, pero los beneficios generales que nos brinda MockK valen la pena.</p>
 <h3 id="3-instalacion">3. Instalación<a class="headerlink" href="#3-instalacion" title="Permanent link">&para;</a></h3>
 <p>La configuración del proyecto consiste en añadir las dependencias de <a href="https://search.maven.org/search?q=g:io.mockk%20a:mockk">mockk</a> al fichero <code>build.gradle.kts</code></p>
@@ -4423,7 +4423,7 @@ Revisando las partes mas importantes del código anterior:    </p>
 <li><a href="https://es.wikipedia.org/wiki/Stub">¿Que es un Stub?</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Mock_object">Mock Object</a></li>
 <li><a href="https://gabimoreno.soy/que-diferencias-hay-entre-un-stub-un-spy-y-un-mock">Stub, Spy, Mock</a></li>
-<li><a href="https://www.digite.com/es/agile/desarrollo-dirigido-por-pruebas-tdd/">¿Qué es TDD?</a></li>
+<li><a href="https://www.digite.com/es/agile/desarrollo-dirigido-por-pruebas-tdd/">¿Qué es <abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr>?</a></li>
 <li><a href="https://surprograma.github.io/libro-disenio-oop/docs/pruebas-automatizadas/elaborar-casos-prueba/">¿Cómo elaborar casos de prueba?</a></li>
 <li><a href="http://wiki.uqbar.org/wiki/articles/testeo-unitario-avanzado.html">Test unitario avanzado</a></li>
 <li><a href="https://surprograma.github.io/libro-disenio-oop/docs/intro/">Diseño de Software</a></li>

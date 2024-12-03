@@ -4279,10 +4279,10 @@
 </figure>
 <h4 id="12-el-proceso-de-desarrollo-y-prueba-de-software-y-las-utilidades-necesarias">1.2. El proceso de desarrollo y prueba de software y las utilidades necesarias<a class="headerlink" href="#12-el-proceso-de-desarrollo-y-prueba-de-software-y-las-utilidades-necesarias" title="Permanent link">&para;</a></h4>
 <p>Durante las fases de desarrollo y pruebas se realizan los trabajos de desarrollo de software en base a los diseños realizados y posteriormente se testea con objeto de obtener un software de calidad.</p>
-<p>Tradicionalmente, los programas que se han venido usando en estas fases han sido editores, intérpretes y compiladores (codificación y generación de ejecutables) y los depuradores (pruebas), si bien posteriormente surgió el concepto de CASE (Computer Aided Software Engineering) que aglutina todas las etapas.</p>
+<p>Tradicionalmente, los programas que se han venido usando en estas fases han sido editores, intérpretes y compiladores (codificación y generación de ejecutables) y los depuradores (pruebas), si bien posteriormente surgió el concepto de <abbr title="Ingeniería de Software Asistida por Computadora. Es un conjunto de herramientas y métodos que se utilizan para automatizar el proceso de desarrollo de software. Los CASEs incluyen herramientas de modelado, generación de código, gestión de proyectos, etc.">CASE</abbr> (Computer Aided Software Engineering) que aglutina todas las etapas.</p>
 <p>Cuando programamos en lenguajes de alto nivel, y desde una perspectiva clásica, estamos generando mediante un programa de edición el <strong>código fuente</strong> del software final. Los editores suelen incorporar un coloreado de la sintaxis, indentación automática y otras funcionalidades que ayudan al programador.</p>
 <p>El código fuente se suele guardar en uno o varios archivos con una extensión concreta según el lenguaje utilizado y debe ser traducido a binario para que las instrucciones puedan ser entendidas y ejecutadas por la máquina. Para esto existe otro programa encargado de realizar la traducción llamado <strong>traductor</strong>, y pueden ser: ensambladores, compiladores e interpretes.</p>
-<p>Por último, existen otros traductores que producen un código intermedio entre el código fuente y el máquina. Son por tanto, una mezcla de interpretados y compilados. En el lenguaje Java y kotlin por ejemplo, se genera un recurso bytecode: código precompilado que necesita interpretarse por la JVM o máquina virtual de Java para ejecutarse.</p>
+<p>Por último, existen otros traductores que producen un código intermedio entre el código fuente y el máquina. Son por tanto, una mezcla de interpretados y compilados. En el lenguaje Java y kotlin por ejemplo, se genera un recurso bytecode: código precompilado que necesita interpretarse por la <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr> o máquina virtual de Java para ejecutarse.</p>
 <p>Una vez tenemos el código objeto, mediante el linkado, que puede ser dinámico (quedan enlazados los distintos ficheros binarios, pero en archivos diferentes) o estático (se añade todos los binarios a un único fichero) quedan enlazados los distintos códigos objetos y se genera un <em>ejecutable</em>.</p>
 <p>Una vez tenemos el <em>ejecutable</em>, el software está listo para ser ejecutado y se entra el proceso de pruebas, detección y solución de errores, para el que podemos usar frameworks de testeo para diseñar e implementar pruebas que detecten los errores, programas de depuración para encontrar el origen de los errores, así como otros programas de monitorización y seguimiento que se encargan de monitorizar el funcionamiento de las aplicaciones para ver el comportamiento que tienen en cuanto a rendimiento.</p>
 <p>Si se identifican errores, para solucionarlos se tendrá que pasar por los pasos anteriores de generación de código fuente y compilación hasta generar de nuevo ejecutable.-</p>
@@ -4290,7 +4290,7 @@
 <h3 id="2-utilidades-para-el-desarrollo-y-pruebas-de-programas">2. Utilidades para el desarrollo y pruebas de programas<a class="headerlink" href="#2-utilidades-para-el-desarrollo-y-pruebas-de-programas" title="Permanent link">&para;</a></h3>
 <p>A continuación se listan algunas de las utilidades necesarias en el proceso de creación de software durante las fases de desarrollo y pruebas.</p>
 <h4 id="21-editores-de-texto-y-su-uso-en-el-desarrollo-de-software">2.1. Editores de Texto y su Uso en el Desarrollo de Software<a class="headerlink" href="#21-editores-de-texto-y-su-uso-en-el-desarrollo-de-software" title="Permanent link">&para;</a></h4>
-<p>Un <strong>editor de texto</strong> es una herramienta básica utilizada para escribir y modificar el código fuente de los programas. Aunque su funcionalidad es simple en comparación con un IDE, los editores de texto son versátiles y ligeros, lo que los hace ideales para editar rápidamente archivos de código en diferentes lenguajes.</p>
+<p>Un <strong>editor de texto</strong> es una herramienta básica utilizada para escribir y modificar el código fuente de los programas. Aunque su funcionalidad es simple en comparación con un <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr>, los editores de texto son versátiles y ligeros, lo que los hace ideales para editar rápidamente archivos de código en diferentes lenguajes.</p>
 <ul>
 <li><strong>Ejemplos</strong>:<ul>
 <li><strong>Sublime Text</strong>: Un editor de texto ligero con soporte para múltiples lenguajes, resaltado de sintaxis y plugins que se pueden añadir para aumentar su funcionalidad.</li>
@@ -4300,7 +4300,7 @@
 <li><strong>Aplicación</strong>: Se suelen usar para edición rápida de código fuente, scripts o archivos de configuración (como <code>config.yml</code>). También son útiles en sistemas embebidos o cuando se necesita realizar cambios directamente en el servidor.</li>
 <li><strong>Ventajas</strong>:<ul>
 <li><strong>Ligereza</strong>: Consumen pocos recursos, lo que los hace útiles en sistemas con poca capacidad de procesamiento.</li>
-<li><strong>Flexibilidad</strong>: Pueden ser utilizados en sistemas donde no es práctico instalar un IDE completo.</li>
+<li><strong>Flexibilidad</strong>: Pueden ser utilizados en sistemas donde no es práctico instalar un <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr> completo.</li>
 </ul>
 </li>
 </ul>
@@ -4342,7 +4342,7 @@
 <li><strong>JSDoc</strong>: Utilizado para documentar proyectos en JavaScript. Genera documentación en formato <abbr title="Hyper Text Markup Language">HTML</abbr> a partir de comentarios estructurados.</li>
 </ul>
 </li>
-<li><strong>Aplicación</strong>: Se usan para crear guías de uso, referencias de API y documentación técnica de los proyectos, facilitando así la colaboración entre equipos y la comprensión del código.</li>
+<li><strong>Aplicación</strong>: Se usan para crear guías de uso, referencias de <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de reglas y especificaciones que permiten a las aplicaciones comunicarse entre sí. Las API permiten a los desarrolladores acceder a funcionalidades y datos de otras aplicaciones de forma segura y eficiente.">API</abbr> y documentación técnica de los proyectos, facilitando así la colaboración entre equipos y la comprensión del código.</li>
 <li><strong>Ventajas</strong>:<ul>
 <li>Automatizan la creación de documentación, reduciendo el esfuerzo manual.</li>
 <li>Aseguran que la documentación se mantenga actualizada con el código.</li>
@@ -4368,8 +4368,8 @@
 <p>Los <strong>sistemas de gestión de versiones</strong> permiten a los desarrolladores rastrear los cambios en su código, trabajar en diferentes ramas de desarrollo y colaborar sin riesgo de sobrescribir el trabajo de otros.</p>
 <ul>
 <li><strong>Ejemplos</strong>:<ul>
-<li><strong>Git</strong>: El sistema de control de versiones más popular, utilizado junto con plataformas como GitHub y GitLab.</li>
-<li><strong>Mercurial</strong>: Similar a Git, pero con una interfaz más sencilla para usuarios menos experimentados.</li>
+<li><strong><abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr></strong>: El sistema de control de versiones más popular, utilizado junto con plataformas como <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> y GitLab.</li>
+<li><strong>Mercurial</strong>: Similar a <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr>, pero con una interfaz más sencilla para usuarios menos experimentados.</li>
 </ul>
 </li>
 <li><strong>Aplicación</strong>: Facilitan la colaboración en equipo, permiten gestionar diferentes versiones del código y garantizan la trazabilidad de los cambios.</li>

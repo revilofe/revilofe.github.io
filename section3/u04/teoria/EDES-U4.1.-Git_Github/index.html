@@ -4640,7 +4640,7 @@
 
   <h1>4.1.-Sistemas de control de versiones</h1>
 
-<h2 id="41-sistemas-de-control-de-versiones-git-github">4.1. Sistemas de control de versiones: Git &amp; GitHub<a class="headerlink" href="#41-sistemas-de-control-de-versiones-git-github" title="Permanent link">&para;</a></h2>
+<h2 id="41-sistemas-de-control-de-versiones-git-github">4.1. Sistemas de control de versiones: <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> &amp; <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr><a class="headerlink" href="#41-sistemas-de-control-de-versiones-git-github" title="Permanent link">&para;</a></h2>
 <h3 id="1-introduccion">1. Introducción<a class="headerlink" href="#1-introduccion" title="Permanent link">&para;</a></h3>
 <p>Un sistema de control de versiones es una herramienta que permite llevar un registro de los cambios realizados en el código fuente de un proyecto. Esto es útil para poder volver a versiones anteriores del código, comparar cambios, ver quién ha modificado algo, etc.</p>
 <h4 id="11-historia">1.1. Historia<a class="headerlink" href="#11-historia" title="Permanent link">&para;</a></h4>
@@ -4665,13 +4665,13 @@
 <ul>
 <li><strong>Sistemas de control de versiones locales</strong>: Son sistemas de control de versiones que almacenan el código en un único lugar, como un disco duro, un servidor, etc. Ejemplos: RCS, SCCS, etc.     </li>
 <li><strong>Sistemas de control de versiones centralizados</strong>: Son sistemas de control de versiones que almacenan el código en un único lugar, como un servidor central. Ejemplos: CVS, Subversion, etc.     </li>
-<li><strong>Sistemas de control de versiones distribuidos</strong>: Son sistemas de control de versiones que almacenan el código en varios lugares, como en el disco duro de cada desarrollador, en un servidor central, etc. Ejemplos: Git, Mercurial, Bazaar, etc.     </li>
-<li><strong>Sistemas de control de versiones en la nube</strong>: Son sistemas de control de versiones que almacenan el código en la nube, es decir, en servidores remotos. Ejemplos: GitHub, GitLab, Bitbucket, etc.     </li>
+<li><strong>Sistemas de control de versiones distribuidos</strong>: Son sistemas de control de versiones que almacenan el código en varios lugares, como en el disco duro de cada desarrollador, en un servidor central, etc. Ejemplos: <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr>, Mercurial, Bazaar, etc.     </li>
+<li><strong>Sistemas de control de versiones en la nube</strong>: Son sistemas de control de versiones que almacenan el código en la nube, es decir, en servidores remotos. Ejemplos: <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr>, GitLab, Bitbucket, etc.     </li>
 </ul>
-<h3 id="2-git">2. Git<a class="headerlink" href="#2-git" title="Permanent link">&para;</a></h3>
-<p>Git es un sistema de control de versiones distribuido, es decir, cada usuario tiene una copia completa del repositorio en su máquina. Esto permite trabajar sin conexión a internet y tener un historial completo de los cambios.</p>
+<h3 id="2-git">2. <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr><a class="headerlink" href="#2-git" title="Permanent link">&para;</a></h3>
+<p><abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> es un sistema de control de versiones distribuido, es decir, cada usuario tiene una copia completa del repositorio en su máquina. Esto permite trabajar sin conexión a internet y tener un historial completo de los cambios.</p>
 <h4 id="21-configuracion">2.1. Configuración<a class="headerlink" href="#21-configuracion" title="Permanent link">&para;</a></h4>
-<p>Git permite configurar varios parámetros, como el nombre del usuario, el correo electrónico, el editor de texto, alias, los ficheros que no se deben incluir en el repositorio, etc.</p>
+<p><abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> permite configurar varios parámetros, como el nombre del usuario, el correo electrónico, el editor de texto, alias, los ficheros que no se deben incluir en el repositorio, etc.</p>
 <h5 id="212-configuracion-del-usuario">2.1.2. Configuración del usuario<a class="headerlink" href="#212-configuracion-del-usuario" title="Permanent link">&para;</a></h5>
 <p>La configuración del usuario incluye parámetros como el nombre del usuario, el correo electrónico, el editor de texto, etc.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>La<span class="w"> </span>como<span class="w"> </span>el<span class="w"> </span>nombre<span class="w"> </span>del<span class="w"> </span>usuario,<span class="w"> </span>el<span class="w"> </span>correo<span class="w"> </span>electrónico,<span class="w"> </span>el<span class="w"> </span>editor<span class="w"> </span>de<span class="w"> </span>texto,<span class="w"> </span>etc.
@@ -4690,7 +4690,7 @@
 <p>NOTA: La mayoría de estos comandos, y los que vendrán mas adelante, soportan múltiples opciones (banderas). Consultar documentación.</p>
 </blockquote>
 <h5 id="212-configuracion-de-gitingore">2.1.2. Configuración de .gitingore<a class="headerlink" href="#212-configuracion-de-gitingore" title="Permanent link">&para;</a></h5>
-<p>Git permite configurar un archivo .gitignore para especificar qué archivos o carpetas no se deben incluir en el repositorio. Esto es útil para evitar subir archivos temporales, logs, etc.</p>
+<p><abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> permite configurar un archivo .gitignore para especificar qué archivos o carpetas no se deben incluir en el repositorio. Esto es útil para evitar subir archivos temporales, logs, etc.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Crear un archivo .gitignore</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>touch<span class="w"> </span>.gitignore
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
@@ -4698,7 +4698,7 @@
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;*.log&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore
 </code></pre></div>
 <h5 id="213-configuracion-de-alias">2.1.3. Configuración de alias<a class="headerlink" href="#213-configuracion-de-alias" title="Permanent link">&para;</a></h5>
-<p>Git permite configurar alias para los comandos más utilizados. Esto es útil para abreviar los comandos y hacerlos más fáciles de recordar.</p>
+<p><abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> permite configurar alias para los comandos más utilizados. Esto es útil para abreviar los comandos y hacerlos más fáciles de recordar.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Configurar un alias</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.&lt;nombre&gt;<span class="w"> </span>&lt;comando&gt;
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
@@ -4706,7 +4706,7 @@
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--get-regexp<span class="w"> </span><span class="nb">alias</span>
 </code></pre></div>
 <h5 id="214-configuracion-de-color">2.1.4. Configuración de color<a class="headerlink" href="#214-configuracion-de-color" title="Permanent link">&para;</a></h5>
-<p>Git permite configurar el color de la salida de los comandos. Esto es útil para resaltar la salida y hacerla más fácil de leer.
+<p><abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> permite configurar el color de la salida de los comandos. Esto es útil para resaltar la salida y hacerla más fácil de leer.
 También se le puede indicar que muestre sólo una línea por cada commit en la traza o que agregue archivos de forma interactiva</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Configurar el color de la salida de los comandos</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>color.ui<span class="w"> </span>auto
@@ -4721,7 +4721,7 @@ También se le puede indicar que muestre sólo una línea por cada commit en la 
 <a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>git<span class="w"> </span>config<span class="w"> </span>--list
 </code></pre></div>
 <h4 id="22-espacios-de-trabajo">2.2. Espacios de trabajo<a class="headerlink" href="#22-espacios-de-trabajo" title="Permanent link">&para;</a></h4>
-<p>Git tiene tres espacios de trabajo: el directorio de trabajo, el área de preparación y el repositorio.</p>
+<p><abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> tiene tres espacios de trabajo: el directorio de trabajo, el área de preparación y el repositorio.</p>
 <ul>
 <li>El directorio de trabajo es donde se modifican los archivos.    </li>
 <li>El área de preparación es donde se preparan los cambios que se van a incluir en el próximo commit.    </li>
@@ -4760,12 +4760,12 @@ También se le puede indicar que muestre sólo una línea por cada commit en la 
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>git<span class="w"> </span>log
 </code></pre></div>
 <h5 id="224-head">2.2.4. Head<a class="headerlink" href="#224-head" title="Permanent link">&para;</a></h5>
-<p>Git tiene un puntero especial llamado HEAD que apunta al commit actual. Nos indica en qué punto de la historia del código estamos.</p>
+<p><abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> tiene un puntero especial llamado HEAD que apunta al commit actual. Nos indica en qué punto de la historia del código estamos.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Ver el commit actual</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>git<span class="w"> </span>show<span class="w"> </span>HEAD
 </code></pre></div>
 <h4 id="23-comandos-basicos">2.3. Comandos básicos<a class="headerlink" href="#23-comandos-basicos" title="Permanent link">&para;</a></h4>
-<p>Los comandos básicos de Git nos permiten inicializar un repositorio, registrar cambios, ver el estado del repositorio, ver el historial de commits, etc.</p>
+<p>Los comandos básicos de <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> nos permiten inicializar un repositorio, registrar cambios, ver el estado del repositorio, ver el historial de commits, etc.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Inicializar un repositorio. En un nuevo directorio, ejecutar:</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>git<span class="w"> </span>init
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
@@ -4786,7 +4786,7 @@ También se le puede indicar que muestre sólo una línea por cada commit en la 
 <a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>git<span class="w"> </span>checkout<span class="w"> </span>--<span class="w"> </span>&lt;archivo&gt;
 </code></pre></div>
 <h5 id="231-deshacer-cambios">2.3.1. Deshacer cambios<a class="headerlink" href="#231-deshacer-cambios" title="Permanent link">&para;</a></h5>
-<p>Git permite deshacer cambios de varias formas:</p>
+<p><abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> permite deshacer cambios de varias formas:</p>
 <ul>
 <li><strong>Deshacer cambios en el directorio de trabajo</strong>: reemplazarás cambios locales usando el comando <code>git checkout -- &lt;archivo&gt;</code>. Este comando reemplaza los cambios en tu directorio de trabajo con el último contenido de HEAD. Los cambios que ya han sido agregados al Index, así como también los nuevos archivos, se mantendrán sin cambio.    </li>
 <li><strong>Deshacer cambios en el área de preparación</strong>: <code>git reset HEAD &lt;archivo&gt;</code>    </li>
@@ -4817,13 +4817,13 @@ También se le puede indicar que muestre sólo una línea por cada commit en la 
 <figcaption>pull = fetch + merge</figcaption>
 </figure>
 <h4 id="24-ramas">2.4. Ramas<a class="headerlink" href="#24-ramas" title="Permanent link">&para;</a></h4>
-<p>Otra característica importante en flujo el trabajo de Git son el uso de las ramas. Las ramas son espacios o entornos independientes para que un desarrollador pueda usar y trabajar sobre el proyecto sin afectar el conjunto de archivos originales. Las ramas se utilizan básicamente para separar ambientes y colaborar entre desarrolladores en un mismo proyecto sin afectar el uno al otro. El flujo de trabajo de ramas se basa en la bifurcación y convergencia, en donde existe un punto de separación y otro de unión.</p>
+<p>Otra característica importante en flujo el trabajo de <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> son el uso de las ramas. Las ramas son espacios o entornos independientes para que un desarrollador pueda usar y trabajar sobre el proyecto sin afectar el conjunto de archivos originales. Las ramas se utilizan básicamente para separar ambientes y colaborar entre desarrolladores en un mismo proyecto sin afectar el uno al otro. El flujo de trabajo de ramas se basa en la bifurcación y convergencia, en donde existe un punto de separación y otro de unión.</p>
 <figure>
 <p><img alt="" src="../assets/EDES-U4.1.-Git_Github-1709740343955.png" />
    </p>
 <figcaption>Gitflow-workflow</figcaption>
 </figure>
-<p>Por defecto, al crear el repositorio Git crea una rama llamada "master" o "main", que es la rama principal, pero se pueden crear otras ramas. </p>
+<p>Por defecto, al crear el repositorio <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> crea una rama llamada "master" o "main", que es la rama principal, pero se pueden crear otras ramas. </p>
 <p>Respecto a las ramas, se pueden crear, eliminar, fusionar, etc. </p>
 <p>Lo habitual es trabajar en una rama para desarrollar nuevas funcionalidades, arreglar errores, etc, y cuando se ha terminado, fusionarla con la rama principal.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Crear una rama</span>
@@ -4893,7 +4893,7 @@ También se le puede indicar que muestre sólo una línea por cada commit en la 
 </code></pre></div>
 <h4 id="24-repositorios-remotos">2.4. Repositorios remotos<a class="headerlink" href="#24-repositorios-remotos" title="Permanent link">&para;</a></h4>
 <p>Cuantos más desarrolladores trabajen en un proyecto, más útil será tener un repositorio remoto. Los cambios inicialmente se realizan en un repositorio local, y luego se suben a un repositorio remoto.</p>
-<p>Un repositorio remoto es una copia del repositorio local en un servidor. Git permite trabajar con varios repositorios remotos, como GitHub, GitLab, Bitbucket, etc. Veremos github más adelante.</p>
+<p>Un repositorio remoto es una copia del repositorio local en un servidor. <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> permite trabajar con varios repositorios remotos, como <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr>, GitLab, Bitbucket, etc. Veremos github más adelante.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># Clonar un repositorio remoto. </span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>git<span class="w"> </span>clone<span class="w"> </span>&lt;url&gt;
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
@@ -4920,7 +4920,7 @@ También se le puede indicar que muestre sólo una línea por cada commit en la 
 <figcaption>Varios repos</figcaption>
 </figure>
 <h4 id="27-flujo-de-trabajo">2.7. Flujo de trabajo<a class="headerlink" href="#27-flujo-de-trabajo" title="Permanent link">&para;</a></h4>
-<p>El flujo de trabajo típico con Git es el siguiente:    </p>
+<p>El flujo de trabajo típico con <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> es el siguiente:    </p>
 <ol>
 <li>Crear un repositorio local con <code>git init</code> o clonar un repositorio remoto con <code>git clone /path/to/repository</code>.    </li>
 <li>Añadir archivos al repositorio con <code>git add</code>.    </li>
@@ -4930,8 +4930,8 @@ También se le puede indicar que muestre sólo una línea por cada commit en la 
 <li>Hacer cambios, añadir, hacer commits, etc.    </li>
 <li>Fusionar la rama con <code>git merge</code>.    </li>
 </ol>
-<h3 id="3-github">3. GitHub<a class="headerlink" href="#3-github" title="Permanent link">&para;</a></h3>
-<p>GitHub es una plataforma de desarrollo colaborativo que utiliza Git como sistema de control de versiones. Permite alojar proyectos, realizar seguimiento de problemas, tareas y solicitudes de funciones, y dar seguimiento a todos los cambios en el código. </p>
+<h3 id="3-github">3. <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr><a class="headerlink" href="#3-github" title="Permanent link">&para;</a></h3>
+<p><abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> es una plataforma de desarrollo colaborativo que utiliza <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> como sistema de control de versiones. Permite alojar proyectos, realizar seguimiento de problemas, tareas y solicitudes de funciones, y dar seguimiento a todos los cambios en el código. </p>
 <h4 id="31-repositorios">3.1. Repositorios<a class="headerlink" href="#31-repositorios" title="Permanent link">&para;</a></h4>
 <p>Un repositorio es un lugar donde se almacena el código fuente de un proyecto. Puede ser público o privado, y puede tener varios colaboradores.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Crear un repositorio</span>
@@ -4959,7 +4959,7 @@ También se le puede indicar que muestre sólo una línea por cada commit en la 
 </code></pre></div>
 </li>
 <li>
-<p>Ir a la página del repositorio en GitHub y hacer clic en "New pull request".    </p>
+<p>Ir a la página del repositorio en <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> y hacer clic en "New pull request".    </p>
 <p><img alt="crear un pull request" src="../assets/EDES-U4.1.-Git_Github-1709743019371.png" /></p>
 </li>
 <li>
@@ -5000,15 +5000,15 @@ También se le puede indicar que muestre sólo una línea por cada commit en la 
 <h4 id="34-gists">3.4. Gists<a class="headerlink" href="#34-gists" title="Permanent link">&para;</a></h4>
 <p>Los gists son una forma de compartir pequeños fragmentos de código. Se pueden crear, editar, comentar, etc.</p>
 <h3 id="4-conclusiones">4. Conclusiones<a class="headerlink" href="#4-conclusiones" title="Permanent link">&para;</a></h3>
-<p>Git y GitHub son herramientas muy útiles para el desarrollo de software. Permiten llevar un control de los cambios realizados en el código, trabajar en paralelo, colaborar con otros desarrolladores, etc.</p>
+<p><abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> y <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> son herramientas muy útiles para el desarrollo de software. Permiten llevar un control de los cambios realizados en el código, trabajar en paralelo, colaborar con otros desarrolladores, etc.</p>
 <h3 id="5-recursos">5. Recursos<a class="headerlink" href="#5-recursos" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="http://rogerdudler.github.io/git-guide/index.es.html">Git la guía sencilla</a></li>
-<li><a href="https://git-scm.com/book/es/v2/Git-en-entornos-distribuidos-Flujos-de-trabajo-distribuidos">Git en entornos distribuidos</a></li>
+<li><a href="http://rogerdudler.github.io/git-guide/index.es.html"><abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> la guía sencilla</a></li>
+<li><a href="https://git-scm.com/book/es/v2/Git-en-entornos-distribuidos-Flujos-de-trabajo-distribuidos"><abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> en entornos distribuidos</a></li>
 </ul>
 <h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://medium.com/@diego.coder/introducci%C3%B3n-a-git-5a7f6bd13343">Introducción a Git</a></li>
+<li><a href="https://medium.com/@diego.coder/introducci%C3%B3n-a-git-5a7f6bd13343">Introducción a <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr></a></li>
 <li><a href="https://dev.to/duxtech/como-hacer-un-pull-request-a-github-4c9l">Realizar un Pull Request</a></li>
 </ul>
 

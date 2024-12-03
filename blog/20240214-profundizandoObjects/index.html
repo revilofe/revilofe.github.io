@@ -4161,7 +4161,7 @@ sin crear una clase <code>MouseAdapter</code> completa en otra parte:</p>
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="c1">// Aquí podemos usar clickCount y enterCount según lo necesites.</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span>
 </code></pre></div>
-<p>En este ejemplo estamos creando una única instancia de una clase que hereda de MouseAdapter. La clase MouseAdapter es una clase existente en el API de Swing de Java, que se usa para recibir eventos del ratón (mouse). 
+<p>En este ejemplo estamos creando una única instancia de una clase que hereda de MouseAdapter. La clase MouseAdapter es una clase existente en el <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de reglas y especificaciones que permiten a las aplicaciones comunicarse entre sí. Las API permiten a los desarrolladores acceder a funcionalidades y datos de otras aplicaciones de forma segura y eficiente.">API</abbr> de Swing de Java, que se usa para recibir eventos del ratón (mouse). 
 Lo que hacemos con el "object expression" es crear un objeto anónimo que extiende MouseAdapter y sobreescribimos los métodos mouseClicked y mouseEntered para modificar su funcionalidad de acuerdo con nuestras necesidades específicas.</p>
 <ul>
 <li>Al sobreescribir mouseClicked, definimos lo que sucede cada vez que se hace clic con el mouse sobre el componente JComponent (en este caso, incrementando el contador clickCount).</li>
@@ -4262,7 +4262,7 @@ proporciona no solo una solución elegante para necesidades específicas sino ta
 <h2 id="2-object-declarations">2. Object Declarations<a class="headerlink" href="#2-object-declarations" title="Permanent link">&para;</a></h2>
 <p>Los "object declarations" se usan para crear un único objeto de una clase. Kotlin gestiona la creación de este objeto de manera que solo se crea una instancia (Singleton). 
 Esto es útil para cosas como mantener un conjunto de constantes relacionadas o una instancia de un servicio que se va a usar a lo largo de toda tu aplicación.</p>
-<p>Supongamos que necesitamos una configuración global en nuestra aplicación para mantener URLs o configuraciones de API. En lugar de pasar esta configuración alrededor, 
+<p>Supongamos que necesitamos una configuración global en nuestra aplicación para mantener URLs o configuraciones de <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de reglas y especificaciones que permiten a las aplicaciones comunicarse entre sí. Las API permiten a los desarrolladores acceder a funcionalidades y datos de otras aplicaciones de forma segura y eficiente.">API</abbr>. En lugar de pasar esta configuración alrededor, 
 podemos usar un object declaration para tenerla accesible globalmente:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">object</span><span class="w"> </span><span class="nc">ConfiguracionGlobal</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">urlAPI</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://api.misitio.com&quot;</span>
@@ -4274,7 +4274,7 @@ podemos usar un object declaration para tenerla accesible globalmente:</p>
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1">// Acceso a la configuración global desde cualquier parte del código</span>
 <a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">ConfiguracionGlobal</span><span class="p">.</span><span class="na">obtenerInfo</span><span class="p">()</span>
 </code></pre></div>
-<p>Este código define <code>ConfiguracionGlobal</code> como un singleton, asegurándose de que la URL de la API y el método <code>obtenerInfo</code> estén disponibles globalmente sin necesidad de crear 
+<p>Este código define <code>ConfiguracionGlobal</code> como un singleton, asegurándose de que la URL de la <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de reglas y especificaciones que permiten a las aplicaciones comunicarse entre sí. Las API permiten a los desarrolladores acceder a funcionalidades y datos de otras aplicaciones de forma segura y eficiente.">API</abbr> y el método <code>obtenerInfo</code> estén disponibles globalmente sin necesidad de crear 
 múltiples instancias de la configuración.</p>
 <p>En Kotlin, un "object declaration" se utiliza para declarar un tipo de objeto con una única instancia en toda la aplicación. 
 A diferencia de las clases, donde puedes crear múltiples instancias, un "object declaration" nos permite tener una sola instancia de ese objeto, accesible globalmente. 

@@ -4070,14 +4070,14 @@
 
   <h1>* Práctica 1.4: GitHub Básico</h1>
 
-<h2 id="p14-gestion-de-ramas-con-git-y-enlazar-a-github">P1.4 - Gestión de ramas con Git y enlazar a GitHub<a class="headerlink" href="#p14-gestion-de-ramas-con-git-y-enlazar-a-github" title="Permanent link">&para;</a></h2>
+<h2 id="p14-gestion-de-ramas-con-git-y-enlazar-a-github">P1.4 - Gestión de ramas con <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> y enlazar a <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr><a class="headerlink" href="#p14-gestion-de-ramas-con-git-y-enlazar-a-github" title="Permanent link">&para;</a></h2>
 <h3 id="1-trabajar-con-ramas">1. Trabajar con ramas<a class="headerlink" href="#1-trabajar-con-ramas" title="Permanent link">&para;</a></h3>
 <p>Antes de nada, veamos <a href="https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%C2%BFQu%C3%A9-es-una-rama%3F">qué es una rama</a> y los <a href="https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Procedimientos-B%C3%A1sicos-para-Ramificar-y-Fusionar">procedimientos básicos para ramificar y fusionar</a></p>
 <p><img alt="Ramas de un proyecto" src="https://git-scm.com/book/en/v2/images/basic-branching-6.png" /></p>
 <p>Vamos a comenzar la práctica donde lo dejamos en la práctica anterior, P3.</p>
 <ol>
 <li>
-<p>Abrimos Git Bash o una terminal y nos movemos a la carpeta de nuestro proyecto. Ahora vamos a ejecutar un comando para crear una <strong><em>rama nueva</em></strong> y también nos va a situar en ella:</p>
+<p>Abrimos <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> Bash o una terminal y nos movemos a la carpeta de nuestro proyecto. Ahora vamos a ejecutar un comando para crear una <strong><em>rama nueva</em></strong> y también nos va a situar en ella:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&gt; git checkout -b desEjercicios1
 </code></pre></div>
 <p>Ya estamos en otra rama de desarrollo, no en <strong>main</strong> <em>(la rama principal)</em>. En esta nueva rama vamos a tener todos los ficheros de la rama main tal y cómo están en este mismo momento <em>(cómo si hubiéramos sacado una foto exacta)</em>.</p>
@@ -4096,7 +4096,7 @@
 </code></pre></div>
 </li>
 <li>
-<p>Observad que los IDEs, tienen integrado Git y podéis hacerlo también desde el mismo IDE, ya que ha detectado que el proyecto está gestionado por Git <em>(En PyCharm, haciendo clic con el botón derecho del ratón encima del fichero aparecen las opciones de Git)</em></p>
+<p>Observad que los IDEs, tienen integrado <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> y podéis hacerlo también desde el mismo <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr>, ya que ha detectado que el proyecto está gestionado por <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> <em>(En PyCharm, haciendo clic con el botón derecho del ratón encima del fichero aparecen las opciones de <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr>)</em></p>
 </li>
 <li>
 <p>Después hacemos Commit para pasarlo al repositorio:</p>
@@ -4126,7 +4126,7 @@
 </li>
 <li>
 <p>Si hay conflictos y falla,  hacemos lo siguiente para arreglarlo:</p>
-<p>La forma más directa de resolver un conflicto de fusión es editar el archivo conflictivo. Abre el archivo que tiene el conflicto en el editor o el IDE. Vamos a eliminar todas las líneas divisorias de conflictos, como estas:
+<p>La forma más directa de resolver un conflicto de fusión es editar el archivo conflictivo. Abre el archivo que tiene el conflicto en el editor o el <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr>. Vamos a eliminar todas las líneas divisorias de conflictos, como estas:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; master
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>=======
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>&gt;&gt;&gt;&gt;&gt;&gt;&gt; desEjercicios1
@@ -4134,7 +4134,7 @@
 y arreglar el archivo hasta que quede como se desea. Cuando hayas editado el archivo, utiliza <code>git add archivoEditado.txt</code> para preparar el nuevo contenido fusionado. Para finalizar la fusión, crea una nueva confirmación ejecutando lo siguiente:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>&gt; git commit -m &quot;merged and resolved the conflict in archivoEditado.txt&quot;
 </code></pre></div>
-<p>Git verá que se ha resuelto el conflicto y crea una nueva confirmación de fusión para finalizar la fusión.</p>
+<p><abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> verá que se ha resuelto el conflicto y crea una nueva confirmación de fusión para finalizar la fusión.</p>
 </li>
 <li>
 <p>Para ver las ramas que tengo:</p>
@@ -4180,17 +4180,17 @@ y arreglar el archivo hasta que quede como se desea. Cuando hayas editado el arc
 </li>
 </ol>
 <h3 id="3-gestion-del-proyecto-enlazado-con-github">3. Gestión del proyecto enlazado con Github<a class="headerlink" href="#3-gestion-del-proyecto-enlazado-con-github" title="Permanent link">&para;</a></h3>
-<p>GitHub es una plataforma de desarrollo colaborativo que utiliza el sistema de control de versiones Git. Git gestiona repositorios locales en tu ordenador, permitiendo el seguimiento de cambios en tu código. GitHub extiende esta funcionalidad al proporcionar repositorios remotos alojados en la nube, lo que facilita la colaboración entre equipos dispersos geográficamente. Permite a los desarrolladores subir sus cambios a un repositorio en línea y fusionarlos con el trabajo de otros. Además, GitHub ofrece herramientas como seguimiento de problemas, ramificaciones y solicitudes de extracción para facilitar la colaboración y la gestión de proyectos.   </p>
+<p><abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> es una plataforma de desarrollo colaborativo que utiliza el sistema de control de versiones <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr>. <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> gestiona repositorios locales en tu ordenador, permitiendo el seguimiento de cambios en tu código. <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> extiende esta funcionalidad al proporcionar repositorios remotos alojados en la nube, lo que facilita la colaboración entre equipos dispersos geográficamente. Permite a los desarrolladores subir sus cambios a un repositorio en línea y fusionarlos con el trabajo de otros. Además, <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> ofrece herramientas como seguimiento de problemas, ramificaciones y solicitudes de extracción para facilitar la colaboración y la gestión de proyectos.   </p>
 <blockquote>
 <p>Ojo, parar conectar git y github, tendreis que tener una clave publica. <a href="https://leninner.medium.com/c%C3%B3mo-conectar-git-y-guthub-4af70a43ec9d">Aqui</a> se explica como.</p>
 </blockquote>
 <ol>
 <li>
-<p>Lo primero que debemos hacer es ir a la página web de <a href="https://github.com/">GitHub</a> y registrarnos con nuestro correo corporativo de <code>xxxxxxx@g.educaand.es</code></p>
-<p><a href="https://git-scm.com/book/es/v2/GitHub-Creaci%C3%B3n-y-configuraci%C3%B3n-de-la-cuenta">GitHub - Creación y configuración de la cuenta</a></p>
+<p>Lo primero que debemos hacer es ir a la página web de <a href="https://github.com/"><abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr></a> y registrarnos con nuestro correo corporativo de <code>xxxxxxx@g.educaand.es</code></p>
+<p><a href="https://git-scm.com/book/es/v2/GitHub-Creaci%C3%B3n-y-configuraci%C3%B3n-de-la-cuenta"><abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> - Creación y configuración de la cuenta</a></p>
 </li>
 <li>
-<p>Después crearemos un repositorio en GitHub (para más información podéis acceder a la documentación de GitHub, <a href="https://docs.github.com/es/get-started/quickstart/create-a-repo">Creación de un repositorio</a>). El nombre del repositorio puede ser el siguiente, dependiendo del curso dónde estés:</p>
+<p>Después crearemos un repositorio en <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> (para más información podéis acceder a la documentación de <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr>, <a href="https://docs.github.com/es/get-started/quickstart/create-a-repo">Creación de un repositorio</a>). El nombre del repositorio puede ser el siguiente, dependiendo del curso dónde estés:</p>
 <ul>
 <li>DAM1_ProgPhyton</li>
 <li>DAW1A_ProgPython</li>
@@ -4198,7 +4198,7 @@ y arreglar el archivo hasta que quede como se desea. Cuando hayas editado el arc
 </ul>
 </li>
 <li>
-<p>Ahora ya tenemos nuestro proyecto gestionado por Git en local y un repositorio en la nube. Para enlazarlos y así estar tranquilos que nuestros ficheros nunca se van a perder seguiremos las instrucciones que nos proporciona GitHub al crearnos el nuevo repositorio para conectarlo con mi repo local... por ejemplo, si lo hubiéramos llamado <code>PruebasProgPython</code> y mi usuario de GitHub fuera <code>dcansib438</code>, nos generaría un comando similar al siguiente <em>(lo copiamos y pegamos en Git Bash o la terminal)</em>:</p>
+<p>Ahora ya tenemos nuestro proyecto gestionado por <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> en local y un repositorio en la nube. Para enlazarlos y así estar tranquilos que nuestros ficheros nunca se van a perder seguiremos las instrucciones que nos proporciona <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> al crearnos el nuevo repositorio para conectarlo con mi repo local... por ejemplo, si lo hubiéramos llamado <code>PruebasProgPython</code> y mi usuario de <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> fuera <code>dcansib438</code>, nos generaría un comando similar al siguiente <em>(lo copiamos y pegamos en <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> Bash o la terminal)</em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>&gt; git remote add origin https://github.com/dcansib438/PruebasProgPhyton.git
 </code></pre></div>
 </li>
@@ -4215,13 +4215,13 @@ y arreglar el archivo hasta que quede como se desea. Cuando hayas editado el arc
 </ol>
 <h2 id="otros-enlaces">Otros enlaces<a class="headerlink" href="#otros-enlaces" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/">GitHub</a></li>
+<li><a href="https://github.com/"><abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr></a></li>
 <li><a href="https://docs.github.com/es/get-started/quickstart/create-a-repo">Creación de un repositorio en github</a>)</li>
 <li><a href="https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-es.md">Chuleta de comandos git</a></li>
 <li><a href="https://ndpsoftware.com/git-cheatsheet.html#loc=index">Ayuda visual</a></li>
 <li><a href="https://training.github.com/downloads/es_ES/github-git-cheat-sheet/">Guia rápida</a></li>
 <li><a href="https://git-scm.com/docs">Documentación de referencia de git</a></li>
-<li><a href="https://git-scm.com/book/es/v2">Libro de Git</a></li>
+<li><a href="https://git-scm.com/book/es/v2">Libro de <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr></a></li>
 </ul>
 
 

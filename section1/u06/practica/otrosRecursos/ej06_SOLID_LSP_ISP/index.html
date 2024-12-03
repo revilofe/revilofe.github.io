@@ -4008,8 +4008,8 @@
 </code></pre></div>
 <h3 id="tarea"><strong>Tarea:</strong><a class="headerlink" href="#tarea" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Refactoriza el código para cumplir el principio SOLID de Sustitución de Liskov (LSP)</li>
-<li>Responde a la siguiente pregunta: ¿Qué otro principio SOLID estamos aplicando a nuestra solución para hacer cumplir el principio de Sustitución de Liskov?</li>
+<li>Refactoriza el código para cumplir el principio <abbr title="Principios de diseño de software que se basan en la creación de código fuente limpio, mantenible y escalable. Los principios SOLID incluyen el Principio de Responsabilidad Única, el Principio de Abierto/Cerrado, el Principio de Sustitución de Liskov, el Principio de Segregación de Interfaces y el Principio de Inversión de Dependencias.">SOLID</abbr> de Sustitución de Liskov (LSP)</li>
+<li>Responde a la siguiente pregunta: ¿Qué otro principio <abbr title="Principios de diseño de software que se basan en la creación de código fuente limpio, mantenible y escalable. Los principios SOLID incluyen el Principio de Responsabilidad Única, el Principio de Abierto/Cerrado, el Principio de Sustitución de Liskov, el Principio de Segregación de Interfaces y el Principio de Inversión de Dependencias.">SOLID</abbr> estamos aplicando a nuestra solución para hacer cumplir el principio de Sustitución de Liskov?</li>
 </ul>
 <h3 id="solucion-refactorizada"><strong>Solución refactorizada:</strong><a class="headerlink" href="#solucion-refactorizada" title="Permanent link">&para;</a></h3>
 <p>Para solucionar la violación del LSP y seguir el principio correctamente, podemos eliminar el método <code>prestar()</code> de la clase abstracta <code>ElementoBiblioteca</code> y crear una interfaz separada <code>Prestable</code> para los elementos que 
@@ -4111,7 +4111,7 @@ Aunque la implementación específica involucre tanto clases abstractas como int
 <p>Aunque el principio se llama "Segregación de la Interfaz", el espíritu del principio es evitar que las clases tengan que implementar comportamientos que no usan, independientemente de si estos comportamientos están definidos 
 en interfaces o clases abstractas. En este contexto, segregamos las responsabilidades de prestar (Prestable) de otras operaciones de elementos de la biblioteca (ElementoBiblioteca), lo cual permite una mejor organización del 
 código, facilita su mantenibilidad y extensión, y asegura que las implementaciones específicas de nuestras clases se adhieran solo a las abstracciones que necesitan.</p>
-<p><strong><em>Por lo tanto, aunque el foco principal de este ejercicio era demostrar y resolver una violación del LSP, el diseño adoptado también aplica y beneficia de los principios del ISP, demostrando cómo estos principios SOLID 
+<p><strong><em>Por lo tanto, aunque el foco principal de este ejercicio era demostrar y resolver una violación del LSP, el diseño adoptado también aplica y beneficia de los principios del ISP, demostrando cómo estos principios <abbr title="Principios de diseño de software que se basan en la creación de código fuente limpio, mantenible y escalable. Los principios SOLID incluyen el Principio de Responsabilidad Única, el Principio de Abierto/Cerrado, el Principio de Sustitución de Liskov, el Principio de Segregación de Interfaces y el Principio de Inversión de Dependencias.">SOLID</abbr> 
 frecuentemente se apoyan y refuerzan mutuamente en el diseño de software efectivo y sostenible.</em></strong></p>
 
 

@@ -4116,13 +4116,13 @@
   </p>
 <figcaption>Código intermedio</figcaption>
 </figure>
-<p>Este concepto es fundamental para lenguajes que se ejecutan sobre las plataformas de <strong>JVM (java, kotlin)</strong> o <strong>(.NET) (C#)</strong>, que no se compilan directamente a <strong>código ejecutable</strong> (que es específico para una máquina), sino a un <strong>código intermedio</strong> que es independiente de la plataforma.</p>
+<p>Este concepto es fundamental para lenguajes que se ejecutan sobre las plataformas de <strong><abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr> (java, kotlin)</strong> o <strong>(.NET) (C#)</strong>, que no se compilan directamente a <strong>código ejecutable</strong> (que es específico para una máquina), sino a un <strong>código intermedio</strong> que es independiente de la plataforma.</p>
 <h3 id="1-que-es-el-codigo-intermedio">1. ¿Qué es el Código Intermedio?<a class="headerlink" href="#1-que-es-el-codigo-intermedio" title="Permanent link">&para;</a></h3>
 <p>El <strong>código intermedio</strong> es un código generado después de la compilación del <strong>código fuente</strong>, pero que no está listo para ser ejecutado directamente por el procesador. En lugar de ser específico para una arquitectura de hardware (como un procesador Intel o ARM), el código intermedio está diseñado para ser ejecutado en una <strong>máquina virtual</strong>.</p>
 <ul>
 <li><strong>Máquina Virtual (VM)</strong>: Una máquina virtual es un programa que actúa como un "intérprete" o "mediador" entre el código intermedio y el hardware. Las máquinas virtuales se encargan de ejecutar el código intermedio, traduciendo este código a instrucciones que el procesador pueda entender.</li>
 <li><strong>Ejemplos comunes</strong>:<ul>
-<li><strong>Java</strong> genera un código intermedio llamado <strong>bytecode</strong>, que es ejecutado por la <strong>JVM (Java Virtual Machine)</strong>.</li>
+<li><strong>Java</strong> genera un código intermedio llamado <strong>bytecode</strong>, que es ejecutado por la <strong><abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr> (Java Virtual Machine)</strong>.</li>
 <li><strong>C#</strong> genera <strong>CIL (Common Intermediate Language)</strong>, que es ejecutado por la máquina virtual <strong>CLR (Common Language Runtime)</strong> de .NET.</li>
 </ul>
 </li>
@@ -4148,19 +4148,19 @@
 <p><strong>Compilar a Código Intermedio</strong>: Cuando el código fuente se <strong>compila</strong>, en lugar de generar código máquina específico para una plataforma (como lo haríamos con C o C++), se genera un <strong>código intermedio</strong>. En Java, este código intermedio es llamado <strong>bytecode</strong> y se guarda en un archivo <strong>.class</strong>.</p>
 <ul>
 <li>
-<p><strong>Ejemplo de bytecode generado por la JVM</strong> (en binario):</p>
+<p><strong>Ejemplo de bytecode generado por la <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr></strong> (en binario):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>CA FE BA BE 00 00 00 34 00 0F 01 00 16 ...
 </code></pre></div>
 </li>
 </ul>
-<p>Este código bytecode no puede ser ejecutado directamente por el procesador del ordenador, pero está diseñado para ser ejecutado por una <strong>máquina virtual</strong> (como la JVM en el caso de Java).</p>
+<p>Este código bytecode no puede ser ejecutado directamente por el procesador del ordenador, pero está diseñado para ser ejecutado por una <strong>máquina virtual</strong> (como la <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr> en el caso de Java).</p>
 </li>
 <li>
-<p><strong>Ejecución en la Máquina Virtual</strong>: Cuando ejecutas el programa en tu ordenador, la <strong>máquina virtual</strong> (en este caso, la JVM) toma el <strong>bytecode</strong> y lo interpreta, traduciéndolo en instrucciones de bajo nivel que el procesador de tu máquina pueda entender.</p>
+<p><strong>Ejecución en la Máquina Virtual</strong>: Cuando ejecutas el programa en tu ordenador, la <strong>máquina virtual</strong> (en este caso, la <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr>) toma el <strong>bytecode</strong> y lo interpreta, traduciéndolo en instrucciones de bajo nivel que el procesador de tu máquina pueda entender.</p>
 <ul>
 <li><strong>Máquinas virtuales en acción</strong>:<ul>
-<li>Si ejecutas el programa Java en <strong>Windows</strong>, la <strong>JVM</strong> instalada en Windows traducirá el bytecode al lenguaje de máquina específico de un procesador Intel/AMD.</li>
-<li>Si ejecutas el mismo programa en <strong>macOS</strong> o <strong>Linux</strong>, la JVM correspondiente en esas plataformas traducirá el mismo bytecode a instrucciones específicas de su hardware.</li>
+<li>Si ejecutas el programa Java en <strong>Windows</strong>, la <strong><abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr></strong> instalada en Windows traducirá el bytecode al lenguaje de máquina específico de un procesador Intel/AMD.</li>
+<li>Si ejecutas el mismo programa en <strong>macOS</strong> o <strong>Linux</strong>, la <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr> correspondiente en esas plataformas traducirá el mismo bytecode a instrucciones específicas de su hardware.</li>
 </ul>
 </li>
 </ul>
@@ -4170,13 +4170,13 @@
 <p>El uso de <strong>código intermedio</strong> tiene varias ventajas:</p>
 <ul>
 <li><strong>Portabilidad</strong>: El mismo programa puede correr en diferentes sistemas operativos sin necesidad de recompilar el código. Solo necesitas una máquina virtual para cada plataforma.<ul>
-<li><strong>Ejemplo</strong>: Un programa escrito en Java puede ejecutarse en <strong>Windows</strong>, <strong>Linux</strong> y <strong>macOS</strong> con solo tener instalada la JVM correspondiente en cada sistema. El bytecode generado no cambia, pero la JVM se encarga de adaptarlo.</li>
+<li><strong>Ejemplo</strong>: Un programa escrito en Java puede ejecutarse en <strong>Windows</strong>, <strong>Linux</strong> y <strong>macOS</strong> con solo tener instalada la <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr> correspondiente en cada sistema. El bytecode generado no cambia, pero la <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr> se encarga de adaptarlo.</li>
 </ul>
 </li>
-<li><strong>Seguridad</strong>: Las máquinas virtuales, como la <strong>JVM</strong>, pueden agregar capas de seguridad, ya que verifican y controlan el acceso del código intermedio al sistema operativo y al hardware. Esto evita que programas maliciosos accedan a áreas no autorizadas del sistema.</li>
+<li><strong>Seguridad</strong>: Las máquinas virtuales, como la <strong><abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr></strong>, pueden agregar capas de seguridad, ya que verifican y controlan el acceso del código intermedio al sistema operativo y al hardware. Esto evita que programas maliciosos accedan a áreas no autorizadas del sistema.</li>
 <li><strong>Optimización en Tiempo de Ejecución</strong>: Algunas máquinas virtuales utilizan técnicas como <strong>compilación Just-In-Time (JIT)</strong>, que convierte el código intermedio en código de máquina justo antes de que sea ejecutado, optimizando el rendimiento del programa.</li>
 </ul>
-<h3 id="4-ejemplo-completo-java-y-la-jvm">4. Ejemplo Completo: Java y la JVM<a class="headerlink" href="#4-ejemplo-completo-java-y-la-jvm" title="Permanent link">&para;</a></h3>
+<h3 id="4-ejemplo-completo-java-y-la-jvm">4. Ejemplo Completo: Java y la <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr><a class="headerlink" href="#4-ejemplo-completo-java-y-la-jvm" title="Permanent link">&para;</a></h3>
 <p>Veamos el ciclo completo de generación de código intermedio utilizando <strong>Java</strong> como ejemplo:</p>
 <ol>
 <li>
@@ -4216,12 +4216,12 @@
 </code></pre></div>
 </li>
 <li>
-<p><strong>Ejecutar en la Máquina Virtual (JVM)</strong>: Para ejecutar el programa, se utiliza el comando:</p>
+<p><strong>Ejecutar en la Máquina Virtual (<abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr>)</strong>: Para ejecutar el programa, se utiliza el comando:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&gt;<span class="w"> </span>java<span class="w"> </span>Suma<span class="w">   </span><span class="c1"># Ejecuta el programa con la JVM</span>
 </code></pre></div>
 </li>
 </ol>
-<p>La <strong>JVM</strong> traduce el bytecode en lenguaje de máquina específico para la plataforma y muestra el resultado en pantalla:</p>
+<p>La <strong><abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr></strong> traduce el bytecode en lenguaje de máquina específico para la plataforma y muestra el resultado en pantalla:</p>
 <div class="highlight"><pre><span></span><code>```text
 El resultado es: 8
 
@@ -4236,10 +4236,10 @@ El resultado es: 8
 <ol>
 <li><strong>Código Fuente (Java)</strong> → Escribes el código en Java.</li>
 <li><strong>Compilación a Bytecode</strong> → El compilador genera el <strong>bytecode</strong> (código intermedio).</li>
-<li><strong>Ejecución en la JVM</strong> → La <strong>JVM</strong> interpreta el bytecode y lo convierte a lenguaje de máquina específico para el sistema operativo.</li>
+<li><strong>Ejecución en la <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr></strong> → La <strong><abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr></strong> interpreta el bytecode y lo convierte a lenguaje de máquina específico para el sistema operativo.</li>
 </ol>
 <h3 id="7-conclusion">7. Conclusión<a class="headerlink" href="#7-conclusion" title="Permanent link">&para;</a></h3>
-<p>La <strong>generación de código intermedio</strong> permite que los programas sean <strong>portables</strong> y puedan ejecutarse en diferentes plataformas sin necesidad de recompilar el código. Las máquinas virtuales, como la <strong>JVM</strong> para Java, toman este código intermedio y lo ejecutan de manera eficiente, garantizando la portabilidad y seguridad del software. Este enfoque es fundamental en lenguajes modernos como <strong>Java</strong> y <strong>C#</strong>, que han sido diseñados para funcionar en múltiples entornos de manera eficiente.</p>
+<p>La <strong>generación de código intermedio</strong> permite que los programas sean <strong>portables</strong> y puedan ejecutarse en diferentes plataformas sin necesidad de recompilar el código. Las máquinas virtuales, como la <strong><abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr></strong> para Java, toman este código intermedio y lo ejecutan de manera eficiente, garantizando la portabilidad y seguridad del software. Este enfoque es fundamental en lenguajes modernos como <strong>Java</strong> y <strong>C#</strong>, que han sido diseñados para funcionar en múltiples entornos de manera eficiente.</p>
 
 
 

@@ -4187,12 +4187,12 @@
 <h2 id="relacion-414-integracion-de-ramas-rebase-ii">Relación 4.1.4: Integración de ramas - Rebase II<a class="headerlink" href="#relacion-414-integracion-de-ramas-rebase-ii" title="Permanent link">&para;</a></h2>
 <h3 id="objetivos">Objetivos<a class="headerlink" href="#objetivos" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Ver nuevos usos de GitHub y de "git rebase"</li>
+<li>Ver nuevos usos de <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> y de "git rebase"</li>
 <li>Aprender a usar "git fork"</li>
 <li>Gestionar ficheros que no sean programas</li>
 </ul>
 <h3 id="descripcion-de-la-practica">Descripción de la práctica<a class="headerlink" href="#descripcion-de-la-practica" title="Permanent link">&para;</a></h3>
-<p>En esta práctica vamos a duplicar el repositorio <a href="https://github.com/ging-moocs/MOOC_git_mod6-tf_agenda">https://github.com/ging-moocs/MOOC_git_mod6-tf_agenda</a> haciendo un "fork" en su cuenta de GitHub y clonarlo en un directorio local del mismo nombre. Este repositorio contiene solo el fichero tf-agenda.txt con texto plano. Es una agenda telefónica muy sencilla, con 3 teléfonos, creada en 4 commits, cuyo único objetivo es practicar con "git rebase --interactive ..."</p>
+<p>En esta práctica vamos a duplicar el repositorio <a href="https://github.com/ging-moocs/MOOC_git_mod6-tf_agenda">https://github.com/ging-moocs/MOOC_git_mod6-tf_agenda</a> haciendo un "fork" en su cuenta de <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> y clonarlo en un directorio local del mismo nombre. Este repositorio contiene solo el fichero tf-agenda.txt con texto plano. Es una agenda telefónica muy sencilla, con 3 teléfonos, creada en 4 commits, cuyo único objetivo es practicar con "git rebase --interactive ..."</p>
 <p><em>Contenido de la agenda</em>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ cat tf_agenda.txt 
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  John: 913-677-899;
@@ -4261,7 +4261,7 @@ El script está en las 3 primeras líneas, que siguiendo las instrucciones (come
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>...
 </code></pre></div>
-<p>Al cerrar la edición del fichero con el nuevo script, Git integra los commits 2 y 3 automáticamente (sabe que tiene que dejar el código del commit 3), pero nos abre el editor para que editemos el mensaje asociado al nuevo commit en la historia</p>
+<p>Al cerrar la edición del fichero con el nuevo script, <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> integra los commits 2 y 3 automáticamente (sabe que tiene que dejar el código del commit 3), pero nos abre el editor para que editemos el mensaje asociado al nuevo commit en la historia</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a># This is a combination of 2 commits.
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a># The first commit&#39;s message is:
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
@@ -4283,7 +4283,7 @@ El script está en las 3 primeras líneas, que siguiendo las instrucciones (come
 <a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>#       modified:   tf_agenda.txt
 <a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>#
 </code></pre></div>
-<p>Dejamos el segundo mensaje añadiendo la palabra "integrated" al final (para indicar que se han integrado los dos commits) y cerramos la edición para que el rebase continúe. El script indica que queremos editar el commit 4 por lo que Git devuelve control a la shell (sin finalizar el rebase) dando el siguiente mensaje</p>
+<p>Dejamos el segundo mensaje añadiendo la palabra "integrated" al final (para indicar que se han integrado los dos commits) y cerramos la edición para que el rebase continúe. El script indica que queremos editar el commit 4 por lo que <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> devuelve control a la shell (sin finalizar el rebase) dando el siguiente mensaje</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>[detached HEAD 4716ce5] Add Eva tf    integrated
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a> Date: Fri Jan 11 18:58:54 2019 +0100
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a> 1 file changed, 1 insertion(+)
@@ -4296,11 +4296,11 @@ El script está en las 3 primeras líneas, que siguiendo las instrucciones (come
 <a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
 <a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    git rebase --continue
 </code></pre></div>
-<p>Git nos deja en el commit 4 de la rama master original, indicándonos que debemos modificar el código de dicho commit con un "amend" y continuar el rebase. La opción --amend rehace el commit anterior, en vez de crear uno nuevo. Editamos el fichero tf_agenda.txt para cambiar el teléfono de Mary por 918-555-555 y una vez modificado hacemos amend al commit 4 con:</p>
+<p><abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> nos deja en el commit 4 de la rama master original, indicándonos que debemos modificar el código de dicho commit con un "amend" y continuar el rebase. La opción --amend rehace el commit anterior, en vez de crear uno nuevo. Editamos el fichero tf_agenda.txt para cambiar el teléfono de Mary por 918-555-555 y una vez modificado hacemos amend al commit 4 con:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$ git add tf_agenda.txt
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>$ git commit --amend
 </code></pre></div>
-<p>Antes de cerrar el nuevo commit 4, Git nos abre el editor con el mensaje asociado al commit para que lo podamos modificar, le añadimos la palabra  "fixed" al final (para indicar que hemos corregido el commit) y cerramos la edición para que el amend finalice</p>
+<p>Antes de cerrar el nuevo commit 4, <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> nos abre el editor con el mensaje asociado al commit para que lo podamos modificar, le añadimos la palabra  "fixed" al final (para indicar que hemos corregido el commit) y cerramos la edición para que el amend finalice</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>[detached HEAD 2eb1703] Add Mary tf   fixed
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a> Date: Fri Jan 11 19:01:44 2019 +0100
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a> 1 file changed, 1 insertion(+)

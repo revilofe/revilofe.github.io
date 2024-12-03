@@ -54,11 +54,17 @@
 
 *[troyano]: Programa informático que se presenta como inofensivo, pero que al ejecutarlo realiza funciones maliciosas. Los troyanos pueden robar información, controlar el sistema, instalar otros programas maliciosos, etc.
 
+*[troyanos]: Programa informático que se presenta como inofensivo, pero que al ejecutarlo realiza funciones maliciosas. Los troyanos pueden robar información, controlar el sistema, instalar otros programas maliciosos, etc.
+
 *[gusano]: Programa informático que se replica a sí mismo y se propaga a través de redes, sin necesidad de intervención del usuario. Los gusanos pueden consumir ancho de banda, ralentizar los sistemas, robar información, etc.
+
+*[gusanos]: Programa informático que se replica a sí mismo y se propaga a través de redes, sin necesidad de intervención del usuario. Los gusanos pueden consumir ancho de banda, ralentizar los sistemas, robar información, etc.
 
 *[spyware]: Programa informático que recopila información sobre un usuario sin su consentimiento. El spyware puede recopilar información sobre las páginas web visitadas, las contraseñas, los datos bancarios, etc.
 
 *[bot]: Programa informático que realiza tareas automatizadas en internet. Los bots pueden ser utilizados para realizar tareas legítimas, como indexar páginas web, o para realizar tareas maliciosas, como enviar spam, realizar ataques de denegación de servicio, etc.
+
+*[botnet]: Red de dispositivos infectados que son controlados por los atacantes para realizar actividades maliciosas, como enviar spam, realizar ataques DDoS, robar información, etc.
 
 *[rootkit]: Programa informático que oculta la presencia de otros programas maliciosos en un sistema. Los rootkits pueden ocultar procesos, archivos, claves de registro, etc.
 

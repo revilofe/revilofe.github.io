@@ -60,7 +60,7 @@ Hay un método de cadenas llamado `find`, que es similar a `count`. Lee la docum
 * [Métodos en ingles](https://docs.python.org/library/stdtypes.html#string-methods)
 * [Métodos en castellano](https://docs.python.org/es/3/library/stdtypes.html#string-methods)
 
-Escribe el código necesario para invocar a este método y contar el número de veces que una letra aparece en “banana”.
+Escribe el código necesario para invocar a este método `find` y contar el número de veces que una letra aparece en “banana”.
 
 <!--
 

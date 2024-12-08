@@ -67,3 +67,7 @@ En este punto ya no existen intercambios, pero el algoritmo va a recorrer hasta 
 
 Ahora que ya sabemos como funciona el algoritmo de burbuja, pasemos a la práctica. Implementación en Python y utiliza el debugger para asegurarte que funciona adecuadamente y entiendes su funcionamiento.
 
+Entrega:
+1. El algoritmo implementado en src/main.py
+2. Evidencia de haberlo debugueado: Capturas de pantallas con un (a) punto de ruptura establecido y el (b) valor que toman alguna variable mientras se está ejecutando.
+3. Una evidencia de haberlo ejecutado y haber funcionado: Copia la salida por consola tras ejecutar tu programa.

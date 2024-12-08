@@ -17,6 +17,8 @@ tags:
 # http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-buclewhile-python.html
 ---
 
+> Salvo que se indique lo contrario, el objetivo de los ejercicios es evitar que una excepción llegue al programa principal y se aborte. Es decir, debes controlar cualquier evento que se pueda dar en tu progrmama. Ante cualquier duda, pregúntala.
+
 ## P2.3 - Ejercicios. 
 
 Controla la excepciones en los programas, para que los datos introducidos sean correctos. 

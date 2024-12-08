@@ -17,6 +17,8 @@ tags:
 # http://patriciaemiguel.com/ejercicios/python/2019/03/10/ejercicios-buclewhile-python.html
 ---
 
+> Durante la realización de estos ejercicios, no debes usar ninguna función (método) de las clases para ayudarte a realizarlo. Es decir, evita hacer uso de las funciones `len`, `count` de `str`, etc. La reaización de estas funciones forman parte de la realización del ejercicio.  
+
 ## P2.2 - Ejercicios
 
 #### **Ejercicio 2.2.1**

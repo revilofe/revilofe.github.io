@@ -42,7 +42,12 @@ for letra in palabra:
         contador = contador + 1
 print(contador)
 ```
-Encapsúlalo en una función llamada `cuenta`, y hazla genérica de tal modo que pueda aceptar una cadena y una letra como argumentos.
+Encapsúlalo en una función llamada `cuenta`, y hazla genérica de tal modo que pueda aceptar una cadena y una letra como argumentos. De tal forma que pueda hacer la siguiente llamada:
+
+```
+numero_de_os = cuenta("consuelo","o") # Resultado debe ser 2
+
+```
 
 <!--
 
@@ -50,11 +55,12 @@ Encapsúlalo en una función llamada `cuenta`, y hazla genérica de tal modo que
 
 #### **Ejercicio 3.0.4**
 
-Hay un método de cadenas llamado `count` que es similar a `find`. Lee la documentación de este método en:
+Hay un método de cadenas llamado `find`, que es similar a `count`. Lee la documentación de este método en:     
+
 * [Métodos en ingles](https://docs.python.org/library/stdtypes.html#string-methods)
 * [Métodos en castellano](https://docs.python.org/es/3/library/stdtypes.html#string-methods)
 
-y escribe el código necesario para invocar a este método y contar el número de veces que una letra aparece en “banana”.
+Escribe el código necesario para invocar a este método y contar el número de veces que una letra aparece en “banana”.
 
 <!--
 

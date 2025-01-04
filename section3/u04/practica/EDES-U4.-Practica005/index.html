@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon-96x96.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -4302,7 +4302,7 @@
 <h3 id="descripcion-de-la-practica">Descripción de la práctica<a class="headerlink" href="#descripcion-de-la-practica" title="Permanent link">&para;</a></h3>
 <p>En esta práctica vamos a duplicar el repositorio <a href="https://github.com/ging-moocs/MOOC_git_mod7-cal_2com">https://github.com/ging-moocs/MOOC_git_mod7-cal_2com</a> en nuestra cuenta de <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr>, de nuevo usando el botón de "Fork". Este repositorio tiene 2 commits en la rama master. El primer commit añade los ficheros README.md y LICENSE, y el segundo commit añade el fichero calculator.html con una calculadora que tiene solo el botón x^2.</p>
 <p>Primero vamos a crear una organización o una segunda cuenta con un nombre diferente (<tu_cuenta_2>) en <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr>. A continuación duplicamos el repositorio (https://github.com/<mi_usuario_de_github>/MOOC_git_mod7-cal_2com), ya clonado en la primera cuenta, en esta última.</p>
-<p>Luego clonamos el repositorio "MOOC_git_mod7-cal_2com" de <tu_cuenta_2> en un repositorio local y creamos un nuevo commit en la rama "master" del repositorio local que añada al fichero calculator.html una cabecera <abbr title="Hyper Text Markup Language">HTML</abbr> (&lt;h1&gt;) al comienzo del body con el texto "Calculadora de <nombre y apellidos>".</p>
+<p>Luego clonamos el repositorio "MOOC_git_mod7-cal_2com" de <tu_cuenta_2> en un repositorio local y creamos un nuevo commit en la rama "master" del repositorio local que añada al fichero calculator.html una cabecera <abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> (&lt;h1&gt;) al comienzo del body con el texto "Calculadora de <nombre y apellidos>".</p>
 <p>Copiamos la rama "inverse" del repositorio <a href="https://github.com/ging-moocs/https://github.com/ging-moocs/MOOC_git_mod7-cal_branches">https://github.com/ging-moocs/https://github.com/ging-moocs/MOOC_git_mod7-cal_branches</a> a nuestro repositorio local. Esta rama tiene 3 commits, el primero y el segundo son los mismos que los dos primeros de la rama master de "cal_2com" y el tercero añade el botón 1/x a la calculadora.</p>
 <p>Integramos primero la rama master en la rama inverse. La integración debe incorporar el título &lt;h1&gt; de la rama master y los dos los botones x^2 y 1/x de la rama inverse.</p>
 <p>Integramos a continuación también la rama inverse en la rama master (con FF)y subimos ambas ramas al repositorio origen de la clonación en la segunda cuenta.</p>
@@ -4317,7 +4317,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ git clone git@github.com:&lt;tu_cuenta_2&gt;/MOOC_git_mod7-cal_2com
 </code></pre></div>
 <h4 id="paso-4-anadir-cambios">Paso 4: Añadir cambios<a class="headerlink" href="#paso-4-anadir-cambios" title="Permanent link">&para;</a></h4>
-<p>Entramos en el directorio de trabajo del nuevo repositorio clonado y añadir al fichero calculator.html, al principio del bloque &lt;body&gt; de <abbr title="Hyper Text Markup Language">HTML</abbr>, un título &lt;h1&gt; con su nombre y apellidos.</p>
+<p>Entramos en el directorio de trabajo del nuevo repositorio clonado y añadir al fichero calculator.html, al principio del bloque &lt;body&gt; de <abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr>, un título &lt;h1&gt; con su nombre y apellidos.</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ cd MOOC_git_mod7-cal_2com 
 </code></pre></div>
 Creamos un nuevo commit "Título con autor" con esta modificación.</p>
@@ -4523,7 +4523,7 @@ Podemos comprobar que la rama "inverse" está disponible en local con el comando
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

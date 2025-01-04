@@ -23,7 +23,7 @@ tags:
 | RA2       | Analiza incidentes de ciberseguridad utilizando herramientas, mecanismos de detección y alertas de seguridad. |
 | CEa       | Se ha clasificado y definido la taxonomía de incidentes de ciberseguridad que pueden afectar a la organización.|
 
-Durante la unidad anterior, hemos visto cómo las organizaciones pueden prepararse para prevenir y responder a los incidentes de ciberseguridad. En esta unidad, nos centraremos en la detección y clasificación de los incidentes de ciberseguridad.
+Durante la unidad anterior, hemos visto cómo las organizaciones pueden prepararse para prevenir los incidentes de ciberseguridad. En esta unidad, nos centraremos en la detección y clasificación de los incidentes de ciberseguridad.
 
 Como vimos, existen numerosas amenazas que, en el caso de materializarse, es decir, afectar al activo vulnerable, provocarán un incidente de seguridad. Estos últimos pueden tener un impacto significativo en las organizaciones, desde la pérdida de datos confidenciales hasta la interrupción de los servicios críticos. Por ello, es fundamental contar con una **taxonomía de incidentes** que permita clasificar y describir los diferentes tipos de amenazas de manera estructurada y coherente.
 

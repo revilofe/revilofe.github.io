@@ -1,0 +1,4913 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Eduardo Fdez">
+      
+      
+        <link rel="canonical" href="https://revilofe.github.io/section2/u02/teoria/IS-U2.2.1.-SOC-ServiciosYHerramientas/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/favicon-96x96.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>IS U2.2.1. SOC ServiciosYHerramientas - R Z O</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag.md-tag--etiqueta{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.5 1.5 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1m0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg>');}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-GT5TGHD4YQ"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-GT5TGHD4YQ",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-GT5TGHD4YQ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#211-taxonomia-de-incidentes-de-ciberseguridad" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../.." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
+      
+  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            R Z O
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              IS U2.2.1. SOC ServiciosYHerramientas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/revilofe/revilofe.github.io" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Principal
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../section1/" class="md-tabs__link">
+          
+  
+    
+  
+  Programación
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../section3/" class="md-tabs__link">
+          
+  
+    
+  
+  Entornos de desarrollo
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Incidentes de seguridad
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../blog/" class="md-tabs__link">
+        
+  
+    
+  
+  Blog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../tags/" class="md-tabs__link">
+        
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
+      
+  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
+
+    </a>
+    R Z O
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/revilofe/revilofe.github.io" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Programación
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u01/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U1: Primer programa en Python
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            U1: Primer programa en Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1.-Un programa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.1.1-Pseudocodigo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1.1.-Pseudocódigo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.1: Instala python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2.-Practica con un lenguaje
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3.-Tipos de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.2: Primeros programas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.3: Git Básico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica004/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.4: GitHub Básico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.4.-Pytest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4.-Pruebas con pytest
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica005/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.5: Creación de entorno
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica006/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.6: Uso de pytest
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica007/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.7: Acceso ssh a github
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u02/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U2: Estructuras de control en la programación
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            U2: Estructuras de control en la programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1.-Condicionales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 2.1: Sentencias condicionales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.-Iterativas y saltos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 2.2: Sentencias iterativas y saltos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3.-Captura de excepciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 2.3: Capturas de excepciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4.-Depurar programas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 2.4: Depurar programas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5.-Documentar el código
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.5.1.-DeberiasDocumentar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5.1-¿Deberías documentar tu código?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u03/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U3: Estructuras de datos
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            U3: Estructuras de datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.0.-Cadenas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.0.-Est.Datos: Cadenas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica000/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 3.0: Cadenas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.1.-Listas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1.-Est.Datos: Listas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.2.-Tuplas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2.-Est.Datos: Tuplas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 3.1: Listas y tuplas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.3.-Diccionarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3.-Est.Datos: Diccionarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 3.2: Diccionarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.4.-Conjuntos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.4.-Est.Datos: Conjuntos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 3.3: Conjuntos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.5.-Funciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.5.-Funciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.6.-ManejoJSON/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.6.-Manejo de JSON
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica004/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 3.4: JSON
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.7.-ManejoXML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.7.-Manejo de XML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica005/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 3.5: XML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.8.-OtrosAmpliacion1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.8.-Ampliación I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.9.-OtrosAmpliacion2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.9.-Ampliación II
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u04/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U4: Kotlin: POO y estructuras de datos
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            U4: Kotlin: POO y estructuras de datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.1.-kotlin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1.-Kotlin: Básico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.1: Kotlin Básico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2.-Kotlin: Colecciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.2.1.-kotlin-aclaraciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2.1.-Aclaraciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.3.-POO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3.1.-Programación orientada a objetos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.3.-kotlinPOO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3.2.-Kotlin: POO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.4.-kotlinResumen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.4.-Kotlin: Resumen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.2: Kotlin POO I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.3: Kotlin POO II
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica004/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.4: Kotlin POO III
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica005/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.5: Kotlin POO IV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica006/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.6: Prueba I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u05/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U5: Kotlin: PPO y creación de e.d.
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            U5: Kotlin: PPO y creación de e.d.
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u05/teoria/PROG-U5.1.-clasesYobjetos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.1.-Revisitando las clases y los objetos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u05/teoria/PROG-U5.2.-VisibilidadEnClases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.2.-Visibilidad en miembros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u05/teoria/PROG-U5.3.-Herencia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.3.-Herencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u05/practica/PROG-U5.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 5.1: Relación de ejercicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u06/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U6: Kotlin: Creación de programas con POO
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            U6: Kotlin: Creación de programas con POO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u06/teoria/PROG-U6.1.-jerarquiaDeClases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.1.-Jerarquía de Clases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u06/teoria/PROG-U6.2.-ejemploYActividad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.2.-Ejemplo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u06/teoria/PROG-U6.3.-principiosSOLID/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.3.-Principios SOLID
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u06/teoria/PROG-U6.4.-comentariosYDocumentacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.4.-Comentarios y documentación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u07/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U7: Kotlin: Entrada/Salida y GUI
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            U7: Kotlin: Entrada/Salida y GUI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.1.-Sistema archivos:E/S
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.2.-Entrada/Salida estandar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.2.1.-ConsolaTecladoExpansion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.2.1.-Lectura desde teclado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.3.-Gestión Archivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.4.-Lectura/Escritura Archivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.4.1.-TextFile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.4.1.-Archivo de texto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.5.-GUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u09/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U9: Acceso a base de datos relacionales
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            U9: Acceso a base de datos relacionales
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u09/teoria/PROG-U9.1.-AccesoBBDD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.1.-Acceso a BBDD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u09/teoria/PROG-U9.2.-JDBC-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.2.-JDBC: Básico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u09/teoria/PROG-U9.3.-JDBC-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.3.-JDBC: Prepared statement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u09/teoria/PROG-U9.4.-DAO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.4.-DAO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u09/teoria/PROG-U9.5.-OtrosAspectos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.5.-Otros aspectos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section3/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Entornos de desarrollo
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Entornos de desarrollo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section3/u01/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U1: Introducción al desarrollo de software
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            U1: Introducción al desarrollo de software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u01/teoria/EDES-U1.1.-Software-PC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1.-Software y Hardware
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u01/teoria/EDES-U1.2.-CodigoFuenteObjetoEjecutable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2.-Código fuente, objeto y ejecutable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u01/teoria/EDES-U1.3.-CodigoIntermedio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3.-Código intermedio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u01/teoria/EDES-U1.4.-Traductores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4.-Traductores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u01/teoria/EDES-U1.5.-Lenguajes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.5.-Lenguajes de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u01/teoria/EDES-U1.6.-FuncionalidadesHerramientas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.6.-Herramientas y funcionalidades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u01/practica/EDES-U1.-Practica010/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 1.10: Preguntas sobre actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u01/practica/EDES-U1.-Practica011/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 1.11: Elementos de desarrollo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section3/u02/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U2: Entornos de desarollo integrado
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            U2: Entornos de desarollo integrado
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u02/teoria/EDES-U2.1.-IDEs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1.-IDEs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u02/teoria/EDES-U2.2.-Modulos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.-Modulos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u02/teoria/EDES-U2.3.-Personalizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3.-Personalización
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u02/teoria/EDES-U2.4.-ActualizacionIDEs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4.-Actualizaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u02/teoria/EDES-U2.5.-Ejecutables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5.-Ejecutables en IDEs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u02/teoria/EDES-U2.6.-Evaluacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.6.-Evaluación de IDEs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u02/practica/EDES-U2.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2.2: Evaluación IDEs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section3/u04/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U4: SCV, refactorización y documentación
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            U4: SCV, refactorización y documentación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u04/teoria/EDES-U4.1.-Git_Github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1.-Sistemas de control de versiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u04/practica/EDES-U4.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4.1: Git/Github básico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u04/practica/EDES-U4.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4.2: Git/Github merge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u04/practica/EDES-U4.-Practica003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4.3: Git/Github rebase I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u04/practica/EDES-U4.-Practica004/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4.4: Git/Github rebase II
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u04/practica/EDES-U4.-Practica005/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4.5: Git/Github Pull Request (PR)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Incidentes de seguridad
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Incidentes de seguridad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U0: Nos conocemos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u01/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U1: Principios generales y planes de seguridad
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            U1: Principios generales y planes de seguridad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1.-PrincipiosGenerales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/IS-U1.2.2.-AnalisiDeRiesgos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2.2.-Análisis de Riesgos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/IS-U1.3.1.-ProteccionDelPuestoDeTrabajo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3.-Puesto de trabajo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/IS-U1.4.1.-PlanDeConcienciacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4.-Concienciación y formación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/IS-U1.4.1.-PlanDeConcienciacion-Eje/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4.-Concienciación y formación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U2: Detección y análisis de incidentes de seguridad
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            U2: Detección y análisis de incidentes de seguridad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IS-U2.1.1.-TaxonomiaDeIncidentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1.-Taxonomía de incidentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acerca de
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#211-taxonomia-de-incidentes-de-ciberseguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1 Taxonomía de incidentes de ciberseguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1.1 Taxonomía de incidentes de ciberseguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introducciion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducciíon
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducciíon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-que-es-un-soc" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. ¿Qué es un SOC?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-objetivos-principales-de-un-soc" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Objetivos principales de un SOC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-diferencias-entre-soc-cert-cirt-y-csirt" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Diferencias entre SOC, CERT, CIRT y CSIRT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. Diferencias entre SOC, CERT, CIRT y CSIRT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-definicion-de-terminos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1. Definición de términos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-relacion-y-diferencias-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2. Relación y diferencias clave
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-importancia-de-los-soc-en-la-ciberseguridad-empresarial" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Importancia de los SOC en la ciberseguridad empresarial
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4. Importancia de los SOC en la ciberseguridad empresarial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-amenazas-crecientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.1. Amenazas crecientes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-beneficios-de-contar-con-un-soc" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.2. Beneficios de contar con un SOC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-relevancia-estrategica" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.3. Relevancia estratégica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-componentes-de-un-soc" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Componentes de un SOC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Componentes de un SOC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-personas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Personas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1. Personas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-roles-en-un-soc" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1. Roles en un SOC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-formacion-y-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2. Formación y desarrollo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-procesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Procesos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2. Procesos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-que-son-los-procesos-en-un-soc" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1. ¿Qué son los procesos en un SOC?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-procesos-clave-en-un-soc" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2. Procesos clave en un SOC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2.2. Procesos clave en un SOC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2221-monitoreo-continuo" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2.1. Monitoreo continuo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2222-gestion-de-incidentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2.2. Gestión de incidentes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2223-analisis-forense" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2.3. Análisis forense
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2224-gestion-del-conocimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2.4. Gestión del conocimiento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2225-inteligencia-de-amenazas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2.5. Inteligencia de amenazas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2226-reportes-y-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2.6. Reportes y métricas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-estandarizacion-de-procesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.3. Estandarización de procesos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-tecnologias" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. Tecnologías
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3. Tecnologías">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-herramientas-principales-en-un-soc" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.1. Herramientas principales en un SOC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3.1. Herramientas principales en un SOC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2311-siem-security-information-and-event-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.1.1. SIEM (Security Information and Event Management)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2312-soar-security-orchestration-automation-and-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.1.2. SOAR (Security Orchestration, Automation, and Response)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2313-herramientas-de-threat-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.1.3. Herramientas de Threat Intelligence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2314-herramientas-de-monitoreo-de-red-y-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.1.4. Herramientas de monitoreo de red y endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2315-herramientas-idsips" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.1.5. Herramientas IDS/IPS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2316-sistemas-de-ticketing" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.1.6. Sistemas de ticketing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2316-tecnologias-de-analisis-forense" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.1.6. Tecnologías de análisis forense
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-integracion-de-tecnologias" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.2. Integración de tecnologías
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#233-retos-en-el-uso-de-tecnologias" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.3. Retos en el uso de tecnologías
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4. Servicios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4. Servicios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#241-servicios-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.1. Servicios principales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion-del-punto-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión del punto 2:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>IS U2.2.1. SOC ServiciosYHerramientas</h1>
+
+<h2 id="211-taxonomia-de-incidentes-de-ciberseguridad">2.1.1 Taxonomía de incidentes de ciberseguridad<a class="headerlink" href="#211-taxonomia-de-incidentes-de-ciberseguridad" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA2</td>
+<td>Analiza incidentes de ciberseguridad utilizando herramientas, mecanismos de detección y alertas de seguridad.</td>
+</tr>
+<tr>
+<td>CEb</td>
+<td>Se han establecido controles, herramientas y mecanismos de monitorización, identificación, detección y alerta de incidentes.</td>
+</tr>
+</tbody>
+</table>
+<p>En el punto anterior hemos visto como clasificar y valorar los incidentes de ciberseguridad. En este apartado vamos a ver las herramientas y servicios que nos ayudarán a detectar y responder a estos incidentes.</p>
+<p>En el proceso de detección y respuesta a incidentes de ciberseguridad, es fundamental contar con herramientas y servicios que nos ayuden a detectar y responder a estos incidentes. En este apartado vamos a ver las herramientas y servicios más comunes que se utilizan en un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> para detectar y responder a incidentes de ciberseguridad.</p>
+<figure>
+<p><img alt="" src="../assets/IS-U2.2.1.-SOC.png" />
+  </p>
+<figcaption>Representación de un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr></figcaption>
+</figure>
+<h3 id="1-introducciion">1. Introducciíon<a class="headerlink" href="#1-introducciion" title="Permanent link">&para;</a></h3>
+<p>Los Centros de Operaciones de Seguridad (<abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>, por sus siglas en inglés) son el corazón operativo de la ciberseguridad en una organización. Antes de adentrarnos en sus componentes y servicios, es fundamental comprender qué es un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>, qué objetivos persigue, cómo se diferencia de otras estructuras de seguridad y por qué es crucial en el entorno empresarial moderno.</p>
+<h4 id="11-que-es-un-soc">1.1. ¿Qué es un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>?<a class="headerlink" href="#11-que-es-un-soc" title="Permanent link">&para;</a></h4>
+<p>Un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> es un equipo centralizado compuesto por profesionales de ciberseguridad, procesos estandarizados y tecnologías avanzadas, diseñado para supervisar, detectar, responder y prevenir amenazas de seguridad.</p>
+<ul>
+<li><strong>Analogía:</strong> Imagina un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> como un “centro de control aéreo” para la ciberseguridad. Así como los controladores de tráfico aéreo supervisan vuelos y responden a emergencias, los analistas del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> vigilan el tráfico digital de una organización y reaccionan ante amenazas.</li>
+<li>
+<p><strong>Funciones principales:</strong></p>
+</li>
+<li>
+<p>Supervisar continuamente la infraestructura tecnológica (redes, sistemas, aplicaciones), asi como la información de la organización. Estar preparados y actualizados, buscando amenazas y vulnerabilidades.</p>
+</li>
+<li>Detectar amenazas o actividades sospechosas.</li>
+<li>Responder y mitigar incidentes de seguridad.</li>
+<li>Prevenir futuros ataques mediante el aprendizaje continuo y la mejora de defensas.</li>
+</ul>
+<h4 id="12-objetivos-principales-de-un-soc">1.2. Objetivos principales de un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr><a class="headerlink" href="#12-objetivos-principales-de-un-soc" title="Permanent link">&para;</a></h4>
+<p>El <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> tiene como objetivo proteger los activos críticos de la organización (datos, sistemas y reputación) mediante:</p>
+<ol>
+<li>
+<p><strong>Prevención:</strong> Implementar controles y configuraciones para evitar ataques.</p>
+</li>
+<li>
+<p><em>Ejemplo:</em> Configurar firewalls para bloquear conexiones no autorizadas. Configurar <abbr title="Sistema de Detección de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas. Los IDS pueden detectar ataques de denegación de servicio, escaneos de puertos, intentos de intrusión, etc.">IDS</abbr>/<abbr title="Sistema de Prevención de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas, y toma medidas para prevenir o detener los ataques. Los IPS pueden bloquear el tráfico malicioso, rechazar las conexiones sospechosas, etc.">IPS</abbr> para detectar y bloquear ataques.</p>
+</li>
+<li>
+<p><strong>Detección:</strong> Identificar actividades sospechosas que puedan indicar un ataque.</p>
+</li>
+<li>
+<p><em>Ejemplo:</em> Alertas del <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> que detectan intentos de acceso inusuales.</p>
+</li>
+<li>
+<p><strong>Respuesta:</strong> Actuar rápidamente para minimizar el impacto de los incidentes.</p>
+</li>
+<li>
+<p><em>Ejemplo:</em> Aislar un servidor comprometido para evitar que un <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr> se propague y eliminar la amenaza.</p>
+</li>
+<li>
+<p><strong>Recuperación:</strong> Restaurar los sistemas afectados y garantizar que vuelvan a operar normalmente.</p>
+</li>
+<li>
+<p><em>Ejemplo:</em> Restaurar datos desde una copia de seguridad tras un ataque de <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr>.</p>
+</li>
+</ol>
+<h4 id="13-diferencias-entre-soc-cert-cirt-y-csirt">1.3. Diferencias entre <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>, <abbr title="Computer Emergency Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CERTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CERT</abbr>, CIRT y <abbr title="Computer Security Incident Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CSIRTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CSIRT</abbr><a class="headerlink" href="#13-diferencias-entre-soc-cert-cirt-y-csirt" title="Permanent link">&para;</a></h4>
+<p>En el mundo de la ciberseguridad, es común encontrar términos como <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>, <abbr title="Computer Emergency Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CERTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CERT</abbr>, CIRT y <abbr title="Computer Security Incident Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CSIRTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CSIRT</abbr>. Aunque están relacionados, tienen enfoques y funciones específicas.</p>
+<h5 id="131-definicion-de-terminos">1.3.1. Definición de términos<a class="headerlink" href="#131-definicion-de-terminos" title="Permanent link">&para;</a></h5>
+<ol>
+<li><strong><abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> (Security Operations Center):</strong> Centro de operaciones de seguridad, que se encarga de la <strong>supervisión continua, detección, respuesta y prevención</strong> de amenazas. Su enfoque es amplio y abarca todas las operaciones de seguridad. El <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> es el encargado de la seguridad de la organización y abarca todas las operaciones de seguridad.</li>
+<li><strong><abbr title="Computer Emergency Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CERTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CERT</abbr> (Computer Emergency Response Team):</strong> Equipo especializado en preparar y responder a <strong>emergencias de ciberseguridad</strong>, como ataques <abbr title="Ataque de Denegación de Servicio Distribuido. Es un ataque en el que los atacantes intentan saturar los recursos de un sistema o una red para que deje de funcionar correctamente. Los ataques DDoS pueden ser utilizados para interrumpir los servicios, causar daños económicos, etc.">DDoS</abbr> o <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr>. Suele actuar de manera reactiva ante incidentes.</li>
+<li><strong>CIRT (Computer Incident Response Team):</strong> Similar al <abbr title="Computer Emergency Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CERTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CERT</abbr>, pero centrado en la gestión de <strong>incidentes de seguridad específicos</strong>, con un enfoque en la contención y erradicación.</li>
+<li><strong><abbr title="Computer Security Incident Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CSIRTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CSIRT</abbr> (Computer Security Incident Response Team):</strong> Variante más amplia del CIRT, que incluye una visión más estratégica y alineada con las políticas de seguridad.</li>
+</ol>
+<h5 id="132-relacion-y-diferencias-clave">1.3.2. Relación y diferencias clave<a class="headerlink" href="#132-relacion-y-diferencias-clave" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Relación:</strong> Un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> generalmente abarca múltiples aspectos de las operaciones de seguridad, mientras que los <abbr title="Computer Security Incident Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CSIRTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CSIRT</abbr>, <abbr title="Computer Emergency Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CERTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CERT</abbr> y CIRTS se enfocan específicamente en la respuesta a incidentes. El <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> normalmente incluirá las funciones de <abbr title="Computer Emergency Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CERTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CERT</abbr>/CIRT/<abbr title="Computer Security Incident Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CSIRTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CSIRT</abbr> como parte de sus operaciones.</li>
+</ul>
+<p>Los términos <abbr title="Computer Emergency Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CERTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CERT</abbr>, CIRT y <abbr title="Computer Security Incident Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CSIRTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CSIRT</abbr> suelen utilizarse como sinónimos, aunque pueden tener diferencias sutiles en su alcance y enfoque. En general, estos equipos <strong>se activan ante incidentes críticos</strong> y trabajan para contener, investigar y mitigar los daños.</p>
+<p><abbr title="Computer Security Incident Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CSIRTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CSIRT</abbr> y CIRT son casi siempre casi equivalentes, referentes a respuesta de incidentes de seguridad informática. Respecto al término <abbr title="Computer Emergency Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CERTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CERT</abbr>, aunque muchas compañías lo usan de forma genérica, ha sido una marca registrada de <em>Carnegie Mellon University</em> desde 1997, y se enfoca más ampliamente en mejorar la respuesta a incidentes.
+* <strong>Diferencias:</strong></p>
+<ul>
+<li><strong><abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>:</strong> Supervisión continua y gestión integral de las operaciones de seguridad.</li>
+<li><strong><abbr title="Computer Emergency Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CERTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CERT</abbr>/CIRT/<abbr title="Computer Security Incident Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CSIRTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CSIRT</abbr>:</strong> Actúan principalmente ante incidentes de ciberseguridad, para contener, eliminar y recuperarse de los mismos.</li>
+<li>
+<p><strong>Ejemplo:</strong></p>
+</li>
+<li>
+<p>A través de los servicios y herramientas que hay implementadas en el SOCm, se detecta un comportamiento sospechoso y genera una alerta.</p>
+</li>
+<li>El equipo de respuesta a incidentes investiga el incidente y coordina la respuesta: Contener el ataque, eliminar la amenaza.</li>
+<li>Tras contener el ataque, el equipo de respuesta a incidentes continua con la recuperación de los sistemas afectados.</li>
+<li><strong>Analogía:</strong> El <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> es como un hospital completo que incluye áreas de prevención, diagnóstico y tratamiento, mientras que un <abbr title="Computer Emergency Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CERTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CERT</abbr>/CIRT/<abbr title="Computer Security Incident Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CSIRTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CSIRT</abbr> sería como la unidad de emergencias, que se activa solo cuando ocurre un evento crítico.</li>
+</ul>
+<h4 id="14-importancia-de-los-soc-en-la-ciberseguridad-empresarial">1.4. Importancia de los <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> en la ciberseguridad empresarial<a class="headerlink" href="#14-importancia-de-los-soc-en-la-ciberseguridad-empresarial" title="Permanent link">&para;</a></h4>
+<p>En un mundo cada vez más digitalizado, las organizaciones dependen de los <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> para protegerse contra un panorama de amenazas en constante evolución.</p>
+<ul>
+<li><strong>Ejemplo:</strong> Imagina una tienda en línea que es víctima de un ataque de <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> (secuestro de datos). Si no tiene un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> que monitoree las actividades sospechosas y responda rápidamente, los atacantes podrían paralizar sus operaciones y exigir un rescate para liberar los datos.</li>
+</ul>
+<h5 id="141-amenazas-crecientes"><strong>1.4.1. Amenazas crecientes</strong><a class="headerlink" href="#141-amenazas-crecientes" title="Permanent link">&para;</a></h5>
+<p>Las organizaciones enfrentan un aumento en la frecuencia, sofisticación y diversidad de los ciberataques.</p>
+<ul>
+<li><strong>Ejemplo:</strong> En 2023, los ataques de <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> afectaron a miles de empresas, causando interrupciones y pérdidas millonarias. Un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> puede ayudar a detectar y bloquear estos ataques antes de que causen daños irreparables.</li>
+</ul>
+<h5 id="142-beneficios-de-contar-con-un-soc">1.4.2. Beneficios de contar con un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr><a class="headerlink" href="#142-beneficios-de-contar-con-un-soc" title="Permanent link">&para;</a></h5>
+<ol>
+<li>
+<p><strong>Protección proactiva:</strong> Los <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> no solo reaccionan a amenazas, sino que también trabajan para prevenirlas.</p>
+</li>
+<li>
+<p><em>Ejemplo:</em> Un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> implementa reglas en el <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> para bloquear intentos de fuerza bruta antes de que comprometan un sistema.</p>
+</li>
+<li>
+<p><strong>Respuesta rápida:</strong> Los <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> reducen el tiempo de respuesta a incidentes críticos.</p>
+</li>
+<li>
+<p><em>Ejemplo:</em> Detectar y contener un ataque en minutos puede evitar una filtración masiva de datos.</p>
+</li>
+<li>
+<p><strong>Cumplimiento normativo:</strong> Ayudan a las organizaciones a cumplir con regulaciones como <abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El GDPR garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">GDPR</abbr>, <abbr title="Norma internacional que establece los requisitos para un sistema de gestión de la seguridad de la información. La ISO 27001 proporciona un marco de trabajo para identificar, evaluar y gestionar los riesgos de seguridad de la información, con el objetivo de proteger los activos de una organización.">ISO 27001</abbr> o <abbr title="National Institute of Standards and Technology (Instituto Nacional de Estándares y Tecnología). Es una agencia del gobierno de los Estados Unidos que establece normas y guías en diversas áreas, como la ciberseguridad, la tecnología, la ciencia, etc. El NIST publica normas, recomendaciones y guías para ayudar a las organizaciones a mejorar su seguridad y eficiencia.">NIST</abbr> CSF.</p>
+</li>
+<li>
+<p><em>Ejemplo:</em> Generar reportes de incidentes detallados para auditorías regulatorias.</p>
+</li>
+<li><strong>Confianza del cliente:</strong> Un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> demuestra el compromiso de la organización con la seguridad, fortaleciendo la confianza de clientes y socios.</li>
+</ol>
+<h5 id="143-relevancia-estrategica">1.4.3. Relevancia estratégica<a class="headerlink" href="#143-relevancia-estrategica" title="Permanent link">&para;</a></h5>
+<p>En muchas organizaciones, el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> es considerado un habilitador estratégico, ya que protege la continuidad del negocio y permite a las empresas operar en entornos digitales de forma segura.</p>
+<ul>
+<li><strong>Ejemplo:</strong> Un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> ayuda a una empresa de servicios financieros a detectar y bloquear un ataque <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr>, evitando la pérdida de datos confidenciales y disponibilidad de servicios. De esta forma, el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> contribuye a la reputación y sostenibilidad del negocio, de otra manera el impacto podría haber sido catastrófico, no disponibilidad de servicios, pérdida de confianza de los clientes, sanciones regulatorias, etc.</li>
+</ul>
+<p>El <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> es mucho más que un equipo técnico; es una estructura estratégica que protege los activos más valiosos de una organización. Al comprender su definición, objetivos y diferencias con estructuras relacionadas como <abbr title="Computer Emergency Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CERTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CERT</abbr> o <abbr title="Computer Security Incident Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Es un grupo de expertos en seguridad informática que se encarga de prevenir, detectar, responder y recuperarse de los incidentes de seguridad en una organización. Los CSIRTs pueden ser internos o externos, y pueden estar formados por personal interno, externo o una combinación de ambos.">CSIRT</abbr>, se puede apreciar su papel crucial en el ecosistema de ciberseguridad actual.</p>
+<h3 id="2-componentes-de-un-soc">2. Componentes de un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr><a class="headerlink" href="#2-componentes-de-un-soc" title="Permanent link">&para;</a></h3>
+<p>Los Centros de Operaciones de Seguridad están compuestos por varios elementos clave que trabajan en conjunto para proteger la infraestructura y los datos de una organización. Estos elementos incluyen personas, procesos, tecnologías y servicios. Cada uno de ellos desempeña un papel único y esencial dentro del funcionamiento de un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</p>
+<p>Para entender cómo se estructuran y colaboran estos componentes, abordaremos cada uno de ellos por separado, con ejemplos y descripciones detalladas.</p>
+<h4 id="21-personas">2.1. Personas<a class="headerlink" href="#21-personas" title="Permanent link">&para;</a></h4>
+<p>Las personas son el núcleo de cualquier <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>. Aunque las tecnologías y los procesos son fundamentales, es el equipo humano quien toma decisiones críticas y actúa frente a los incidentes de seguridad.
+A continuación, exploraremos los roles clave en un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>, la importancia de la formación y desarrollo continuo, y cómo cada miembro del equipo contribuye a la seguridad de la organización.</p>
+<h5 id="211-roles-en-un-soc">2.1.1. Roles en un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr><a class="headerlink" href="#211-roles-en-un-soc" title="Permanent link">&para;</a></h5>
+<p>Un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> incluye una variedad de roles especializados, diseñados para cubrir distintos aspectos de la seguridad cibernética:</p>
+<ol>
+<li>
+<p><strong>Gerente del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>:</strong> Supervisa las operaciones y coordina la respuesta a incidentes importantes.</p>
+</li>
+<li>
+<p><em>Ejemplo:</em> Coordinar la respuesta a un ataque de <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> que afecta a múltiples sistemas.</p>
+</li>
+<li>
+<p><strong>Analistas <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> (Niveles 1, 2, 3):</strong></p>
+</li>
+<li>
+<p><em>Nivel 1:</em> Monitorea eventos y alerta sobre actividades sospechosas.</p>
+<p><em>Ejemplo:</em> Revisión de un intento de inicio de sesión desde ubicaciones inusuales.</p>
+</li>
+<li>
+<p><em>Nivel 2:</em> Investiga las alertas generadas por el Nivel 1 para determinar si son incidentes reales.</p>
+<p><em>Ejemplo:</em> Analizar patrones de tráfico para confirmar si un ataque está en curso.</p>
+</li>
+<li>
+<p><em>Nivel 3:</em> Maneja incidentes complejos y realiza análisis forenses.</p>
+<p><em>Ejemplo:</em> Determinar cómo un atacante accedió a un sistema y prevenir futuros ataques.</p>
+</li>
+<li>
+<p><strong>Threat Hunters:</strong> Buscan proactivamente amenazas avanzadas que pueden haber evadido los controles de seguridad de nuestra organización.</p>
+</li>
+</ol>
+<p><em>Ejemplo:</em> Buscar señales de un <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr> recién descubierto que afecta a empresas similares.    </p>
+<ol>
+<li><strong>Especialistas en <abbr title="Información sobre las amenazas de seguridad que pueden afectar a una organización. La inteligencia de amenazas incluye datos sobre los actores de amenazas, las tácticas y técnicas de los atacantes, las vulnerabilidades de seguridad, etc.">Threat Intelligence</abbr>:</strong> Identifican nuevas amenazas que han surgido en el panorama de ciberseguridad y comparten información relevante con el equipo del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>, por ejemplo actualizando reglas de detección del <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>.</li>
+</ol>
+<p><em>Ejemplo:</em> Investigar un aumento de ataques phishing en la región y compartir indicadores relevantes, como direcciones <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> maliciosas, emails o URLs.   </p>
+<ol>
+<li><strong>Ingenieros de Seguridad:</strong> Configuran y mantienen las herramientas tecnológicas del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</li>
+</ol>
+<h5 id="212-formacion-y-desarrollo">2.1.2. Formación y desarrollo<a class="headerlink" href="#212-formacion-y-desarrollo" title="Permanent link">&para;</a></h5>
+<p>La capacitación continua es crucial en un entorno de ciberseguridad, donde las amenazas evolucionan constantemente.</p>
+<ul>
+<li><strong>Ejemplo:</strong> Los analistas deben aprender regularmente sobre nuevas técnicas de ataque, como el <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> basado en IA, para adaptar las defensas del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</li>
+</ul>
+<h4 id="22-procesos">2.2. Procesos<a class="headerlink" href="#22-procesos" title="Permanent link">&para;</a></h4>
+<p>Los procesos son fundamentales en un Centro de Operaciones de Seguridad (<abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>). Representan la base sobre la que las personas y las tecnologías trabajan en conjunto para proteger a una organización frente a amenazas cibernéticas. Un proceso bien definido no solo asegura eficiencia, sino que también garantiza consistencia y mejora continua en la respuesta a incidentes.</p>
+<p>A continuación, exploraremos qué son los procesos en un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>, cómo se estructuran y su importancia, además de ejemplos prácticos para ilustrar su funcionamiento.</p>
+<h5 id="221-que-son-los-procesos-en-un-soc">2.2.1. ¿Qué son los procesos en un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>?<a class="headerlink" href="#221-que-son-los-procesos-en-un-soc" title="Permanent link">&para;</a></h5>
+<p>Los procesos son los pasos estructurados y repetibles que un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> sigue para manejar tareas clave como la detección de amenazas, la gestión de incidentes, la recuperación y el análisis post-incidente. Estos procesos están diseñados para:</p>
+<ul>
+<li><strong>Estandarizar operaciones:</strong> Asegurarse de que cada analista sepa exactamente qué hacer en cada situación.</li>
+<li><strong>Reducir el tiempo de respuesta:</strong> Minimizar el impacto de los incidentes mediante una actuación rápida y efectiva.</li>
+<li><strong>Facilitar la comunicación:</strong> Proveer un marco común para que todos los miembros del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> trabajen en conjunto.</li>
+<li><strong>Promover la mejora continua:</strong> Analizar cada incidente para aprender y mejorar los procesos.</li>
+</ul>
+<p><strong>Ejemplo:</strong> Supongamos que el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> recibe una alerta sobre tráfico sospechoso en un servidor web. El proceso estándar indicaría los pasos sobre como verificar la fuente del tráfico, determinar si es legítimo o malicioso, y tomar medidas correctivas.</p>
+<h5 id="222-procesos-clave-en-un-soc">2.2.2. Procesos clave en un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr><a class="headerlink" href="#222-procesos-clave-en-un-soc" title="Permanent link">&para;</a></h5>
+<p>Los procesos principales que permiten a un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> operar de manera efectiva podría ser:</p>
+<h6 id="2221-monitoreo-continuo">2.2.2.1. Monitoreo continuo<a class="headerlink" href="#2221-monitoreo-continuo" title="Permanent link">&para;</a></h6>
+<p>Este proceso implica la supervisión ininterrumpida de los sistemas y redes de una organización, buscando comportamientos anómalos o amenazas.</p>
+<ul>
+<li>
+<p><strong>Pasos principales:</strong>   </p>
+</li>
+<li>
+<p>Configurar sistemas de monitoreo como <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> para recolectar datos de eventos.   </p>
+</li>
+<li>
+<p>Analizar los datos en tiempo real en busca de patrones sospechosos.  </p>
+</li>
+<li>
+<p>Generar alertas para eventos que requieran atención humana.</p>
+</li>
+</ul>
+<p><strong>Ejemplo:</strong> Un <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> detecta múltiples intentos fallidos de inicio de sesión desde una <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> desconocida. El sistema genera una alerta para que un analista la investigue.</p>
+<h6 id="2222-gestion-de-incidentes">2.2.2.2. Gestión de incidentes<a class="headerlink" href="#2222-gestion-de-incidentes" title="Permanent link">&para;</a></h6>
+<p>La gestión de incidentes es uno de los procesos más críticos, ya que define cómo el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> responde a una amenaza detectada. Este proceso se divide en las siguientes fases:</p>
+<ol>
+<li><strong>Detección:</strong> Identificar y confirmar que un incidente está ocurriendo.   </li>
+</ol>
+<p><em>Ejemplo:</em> Verificar una alerta de tráfico anómalo hacia un servidor crítico.</p>
+<ol>
+<li><strong>Contención:</strong> Limitar el impacto del incidente.   </li>
+</ol>
+<p><em>Ejemplo:</em> Aislar una máquina infectada con <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr> para evitar que se propague.</p>
+<ol>
+<li><strong>Erradicación:</strong> Eliminar completamente la amenaza.   </li>
+</ol>
+<p><em>Ejemplo:</em> Eliminar archivos maliciosos y cerrar las vulnerabilidades explotadas.    </p>
+<ol>
+<li><strong>Recuperación:</strong> Restaurar los sistemas afectados y volver a la operación normal.      </li>
+</ol>
+<p><em>Ejemplo:</em> Restaurar datos desde una copia de seguridad.</p>
+<ol>
+<li><strong>Análisis post-incidente:</strong> Documentar lo sucedido para aprender y mejorar las defensas.    </li>
+</ol>
+<p><em>Ejemplo:</em> Identificar cómo un atacante obtuvo acceso y ajustar los controles de seguridad para prevenir futuros incidentes.</p>
+<h6 id="2223-analisis-forense">2.2.2.3. Análisis forense<a class="headerlink" href="#2223-analisis-forense" title="Permanent link">&para;</a></h6>
+<p>El análisis forense investiga incidentes para determinar cómo ocurrieron y qué impacto tuvieron.</p>
+<ul>
+<li>
+<p><strong>Pasos principales:</strong></p>
+</li>
+<li>
+<p>Recolectar evidencias digitales como registros, archivos y tráfico de red.   </p>
+</li>
+<li>
+<p>Analizar las evidencias para reconstruir el ataque.   </p>
+</li>
+<li>
+<p>Generar un informe detallado para los líderes de seguridad.</p>
+</li>
+</ul>
+<p><strong>Ejemplo:</strong> Un equipo forense descubre que un ataque de <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> se originó por un archivo adjunto malicioso en un correo electrónico. Este hallazgo se usa para implementar filtros de correo más estrictos.</p>
+<h6 id="2224-gestion-del-conocimiento">2.2.2.4. Gestión del conocimiento<a class="headerlink" href="#2224-gestion-del-conocimiento" title="Permanent link">&para;</a></h6>
+<p>Este proceso asegura que el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> aproveche cada incidente como una oportunidad de aprendizaje.</p>
+<ul>
+<li>
+<p><strong>Acciones clave:</strong></p>
+</li>
+<li>
+<p>Documentar cada incidente en detalle.   </p>
+</li>
+<li>
+<p>Crear y mantener una base de datos de casos para referencia futura.   </p>
+</li>
+<li>
+<p>Compartir mejores prácticas con el equipo.</p>
+</li>
+</ul>
+<p><strong>Ejemplo:</strong> Tras un incidente, el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> documenta las tácticas del atacante y actualiza las reglas del <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> para detectar ataques similares.</p>
+<h6 id="2225-inteligencia-de-amenazas">2.2.2.5. Inteligencia de amenazas<a class="headerlink" href="#2225-inteligencia-de-amenazas" title="Permanent link">&para;</a></h6>
+<p>La inteligencia de amenazas es el proceso de recopilar, analizar y aplicar información sobre ataques potenciales.</p>
+<ul>
+<li>
+<p><strong>Pasos principales:</strong></p>
+</li>
+<li>
+<p>Recopilar indicadores de compromiso (<abbr title="Indicadores de Compromiso. Son pistas o evidencias que indican la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoCs</abbr>) de fuentes confiables.   </p>
+</li>
+<li>
+<p>Identificar tácticas, técnicas y procedimientos (<abbr title="Tácticas, Técnicas y Procedimientos. Son patrones de comportamiento utilizados por los atacantes para llevar a cabo un ataque. Los TTPs pueden incluir tácticas de ataque, técnicas de evasión, procedimientos de explotación, etc.">TTPs</abbr>) de atacantes.   </p>
+</li>
+<li>
+<p>Usar esta información para crear reglas de detección y guiar ejercicios de <abbr title="Proceso de búsqueda proactiva de amenazas de seguridad en una red. Los cazadores de amenazas utilizan técnicas de análisis de datos, correlación de eventos y detección de anomalías para identificar y responder a las amenazas de seguridad.">Threat Hunting</abbr>.</p>
+</li>
+</ul>
+<p><strong>Ejemplo:</strong> Detectar un patrón de ataque utilizado por un grupo de hackers, identificar los distintos <abbr title="Indicadores de Compromiso. Son pistas o evidencias que indican la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoCs</abbr> que se han utilizado en los ataques y actualizar las reglas del <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> para detectarlos, para posteriormente asegurarse de que la organización esté preparada para enfrentarlo.</p>
+<h6 id="2226-reportes-y-metricas">2.2.2.6. Reportes y métricas<a class="headerlink" href="#2226-reportes-y-metricas" title="Permanent link">&para;</a></h6>
+<p>Los reportes permiten a los líderes/gerente del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> evaluar su desempeño y justificar inversiones en seguridad. O tomar decisiones basadas en datos que permitan mejorar el desempeño del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</p>
+<ul>
+<li>
+<p><strong>Indicadores comunes:</strong></p>
+</li>
+<li>
+<p>Tiempo promedio de detección de amenazas (MTTD).   </p>
+</li>
+<li>
+<p>Tiempo promedio de respuesta (MTTR).   </p>
+</li>
+<li>
+<p>Porcentaje de alertas procesadas.</p>
+</li>
+</ul>
+<p><strong>Ejemplo:</strong> Un informe mensual muestra que el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> ha reducido su tiempo de respuesta a incidentes críticos de 6 a 4 horas, gracias a la automatización de tareas. Esto demuestra una mejora en la eficiencia del equipo. En el caso de que el tiempo de respuesta no se haya reducido, se podrían tomar medidas correctivas para mejorar el desempeño del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</p>
+<h5 id="223-estandarizacion-de-procesos">2.2.3. Estandarización de procesos<a class="headerlink" href="#223-estandarizacion-de-procesos" title="Permanent link">&para;</a></h5>
+<p>La estandarización asegura que todos los analistas trabajen de manera consistente y que el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> opere según las mejores prácticas de la industria. </p>
+<ul>
+<li>
+<p><strong>Los marcos más utilizados incluyen:</strong></p>
+</li>
+<li>
+<p><strong><abbr title="National Institute of Standards and Technology (Instituto Nacional de Estándares y Tecnología). Es una agencia del gobierno de los Estados Unidos que establece normas y guías en diversas áreas, como la ciberseguridad, la tecnología, la ciencia, etc. El NIST publica normas, recomendaciones y guías para ayudar a las organizaciones a mejorar su seguridad y eficiencia.">NIST</abbr> Cybersecurity Framework (CSF):</strong> Define cinco funciones clave: Identificar, Proteger, Detectar, Responder y Recuperar.   </p>
+</li>
+<li>
+<p><strong><abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr>/IEC 27001:</strong> Proporciona estándares para la gestión de la seguridad de la información.   </p>
+</li>
+<li>
+<p><strong><abbr title="Information Technology Infrastructure Library. Es un conjunto de buenas prácticas para la gestión de servicios de tecnologías de la información. ITIL proporciona un marco de trabajo para la planificación, la entrega y el soporte de servicios de TI, con el objetivo de mejorar la eficiencia, la calidad y la seguridad de los servicios.">ITIL</abbr> (Information Technology Infrastructure Library):</strong> Guía sobre la gestión de servicios de TI.</p>
+</li>
+</ul>
+<p><strong>Ejemplo:</strong> Implementar el marco <abbr title="National Institute of Standards and Technology (Instituto Nacional de Estándares y Tecnología). Es una agencia del gobierno de los Estados Unidos que establece normas y guías en diversas áreas, como la ciberseguridad, la tecnología, la ciencia, etc. El NIST publica normas, recomendaciones y guías para ayudar a las organizaciones a mejorar su seguridad y eficiencia.">NIST</abbr> permite al <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> estructurar sus operaciones desde la identificación de activos críticos hasta la recuperación post-incidente.</p>
+<p>Los procesos en un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> son el motor que asegura que las amenazas sean gestionadas de manera eficiente y efectiva. Al estandarizar operaciones y apoyarse en marcos reconocidos, el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> puede garantizar una respuesta consistente, reducir los tiempos de reacción y mejorar continuamente sus defensas.</p>
+<h4 id="23-tecnologias">2.3. Tecnologías<a class="headerlink" href="#23-tecnologias" title="Permanent link">&para;</a></h4>
+<p>Las tecnologías son un pilar esencial en el funcionamiento de un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>, ya que proporcionan las herramientas necesarias para monitorear, detectar y responder a amenazas de seguridad de manera eficiente. Estas tecnologías permiten automatizar tareas repetitivas, identificar patrones de ataque y facilitar la colaboración entre los equipos del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</p>
+<p>En este apartado exploraremos las tecnologías clave utilizadas en un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>, su función específica y cómo se integran para formar un ecosistema de seguridad robusto.</p>
+<h5 id="231-herramientas-principales-en-un-soc">2.3.1. Herramientas principales en un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr><a class="headerlink" href="#231-herramientas-principales-en-un-soc" title="Permanent link">&para;</a></h5>
+<p>El <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> utiliza una combinación de herramientas que se complementan para proporcionar capacidades de monitoreo, detección, análisis y respuesta. Estas herramientas se agrupan según su función:</p>
+<h6 id="2311-siem-security-information-and-event-management">2.3.1.1. <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> (Security Information and Event Management)<a class="headerlink" href="#2311-siem-security-information-and-event-management" title="Permanent link">&para;</a></h6>
+<p>El <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> es el corazón tecnológico del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>. Su función principal es recopilar y correlacionar datos de múltiples fuentes para identificar eventos de seguridad relevantes.</p>
+<ul>
+<li>
+<p><strong>Funciones clave:</strong>    </p>
+</li>
+<li>
+<p><strong>Recolección de datos:</strong> Agrupa registros (logs) de sistemas, aplicaciones, firewalls, routers y otros dispositivos. </p>
+</li>
+<li>
+<p><strong>Correlación:</strong> Analiza patrones en los datos para identificar posibles amenazas.   </p>
+</li>
+<li>
+<p><strong>Generación de alertas:</strong> Notifica al equipo cuando detecta un comportamiento sospechoso.   </p>
+</li>
+</ul>
+<p><em>Ejemplo práctico:</em> Si detecta múltiples intentos de acceso fallidos seguidos por un inicio de sesión exitoso desde una ubicación inusual, el <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> genera una alerta para investigar un posible <abbr title="Técnica utilizada para descifrar contraseñas o claves de cifrado probando todas las combinaciones posibles. Los ataques de fuerza bruta pueden ser utilizados para obtener acceso a sistemas o cuentas protegidas por contraseñas débiles.">ataque de fuerza bruta</abbr>.    </p>
+<ul>
+<li>
+<p><strong>Beneficio adicional:</strong> Los sistemas <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> modernos incluyen capacidades de inteligencia artificial (IA) para mejorar la precisión de las alertas y reducir los falsos positivos.</p>
+</li>
+<li>
+<p><strong>Ejemplo de herramientas <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>:</strong> Splunk, IBM QRadar, ArcSight (Micro Focus), LogRhythm, Sumo Logic, SolarWinds Security Event Manager, Elastic Security, Microsoft Sentinel, Graylog, ManageEngine Log360.</p>
+</li>
+</ul>
+<h6 id="2312-soar-security-orchestration-automation-and-response">2.3.1.2. <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr> (Security Orchestration, Automation, and Response)<a class="headerlink" href="#2312-soar-security-orchestration-automation-and-response" title="Permanent link">&para;</a></h6>
+<p>El <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr> automatiza tareas de respuesta y orquesta las interacciones entre herramientas del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</p>
+<ul>
+<li>
+<p><strong>Funciones clave:</strong></p>
+</li>
+<li>
+<p><strong>Automatización:</strong> Responde automáticamente a amenazas comunes.   </p>
+<p><em>Ejemplo:</em> Si un <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> detecta <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr>, el <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr> puede ejecutar un script que aísle automáticamente la máquina afectada.  </p>
+</li>
+<li>
+<p><strong>Orquestación:</strong> Integra múltiples herramientas para que trabajen en conjunto.  </p>
+<p><em>Ejemplo:</em> Crear un flujo de trabajo que inicie un análisis forense cuando se detecta un incidente crítico.</p>
+</li>
+<li>
+<p><strong>Gestión de casos:</strong> Documenta incidentes, asigna tareas y realiza seguimientos.</p>
+<p><em>Ejemplo:</em> Crear un ticket para que un analista investigue un ataque phishing y asignar tareas para mitigar la amenaza.</p>
+</li>
+<li>
+<p><strong>Beneficio adicional:</strong> Permite a los analistas centrarse en incidentes complejos, mientras automatiza las tareas repetitivas.   </p>
+</li>
+<li>
+<p><strong>Ejemplo de herramientas <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr>:</strong> Palo Alto Networks Cortex XSOAR, IBM Resilient, Splunk Phantom, Siemplify, Swimlane, DFLabs IncMan, CyberSponse.</p>
+</li>
+</ul>
+<h6 id="2313-herramientas-de-threat-intelligence"><strong>2.3.1.3. Herramientas de <abbr title="Información sobre las amenazas de seguridad que pueden afectar a una organización. La inteligencia de amenazas incluye datos sobre los actores de amenazas, las tácticas y técnicas de los atacantes, las vulnerabilidades de seguridad, etc.">Threat Intelligence</abbr></strong><a class="headerlink" href="#2313-herramientas-de-threat-intelligence" title="Permanent link">&para;</a></h6>
+<p>Estas herramientas recopilan información sobre amenazas emergentes y la comparten con el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.   </p>
+<ul>
+<li>
+<p><strong>Funciones clave:</strong>   </p>
+</li>
+<li>
+<p><strong>Recopilación de <abbr title="Indicadores de Compromiso. Son pistas o evidencias que indican la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoCs</abbr> (Indicadores de Compromiso):</strong> Direcciones <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> maliciosas, URLs sospechosas, hashes de archivos.</p>
+<p><em>Ejemplo:</em> Identificar una dirección <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> utilizada por un grupo de hackers para lanzar ataques.</p>
+</li>
+<li>
+<p><strong>Análisis de <abbr title="Tácticas, Técnicas y Procedimientos. Son patrones de comportamiento utilizados por los atacantes para llevar a cabo un ataque. Los TTPs pueden incluir tácticas de ataque, técnicas de evasión, procedimientos de explotación, etc.">TTPs</abbr> (Tácticas, Técnicas y Procedimientos):</strong> Métodos comunes utilizados por actores maliciosos.</p>
+<p><em>Ejemplo:</em> Identificar que un <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> específico utiliza un puerto poco común para comunicarse con su servidor de control y comando, y bloquear ese tráfico.</p>
+</li>
+<li>
+<p><strong>Beneficio adicional:</strong> Ayuda al <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> a anticiparse a nuevas amenazas antes de que impacten a la organización.     </p>
+</li>
+<li>
+<p><strong>Ejemplo de herramientas de <abbr title="Información sobre las amenazas de seguridad que pueden afectar a una organización. La inteligencia de amenazas incluye datos sobre los actores de amenazas, las tácticas y técnicas de los atacantes, las vulnerabilidades de seguridad, etc.">Threat Intelligence</abbr>:</strong> Recorded Future, ThreatConnect, Anomali, FireEye iSIGHT, IBM X-Force Exchange, AlienVault OTX, VirusTotal, OpenCTI (Open Cyber <abbr title="Información sobre las amenazas de seguridad que pueden afectar a una organización. La inteligencia de amenazas incluye datos sobre los actores de amenazas, las tácticas y técnicas de los atacantes, las vulnerabilidades de seguridad, etc.">Threat Intelligence</abbr>)</p>
+</li>
+</ul>
+<h6 id="2314-herramientas-de-monitoreo-de-red-y-endpoints"><strong>2.3.1.4. Herramientas de monitoreo de red y endpoints</strong><a class="headerlink" href="#2314-herramientas-de-monitoreo-de-red-y-endpoints" title="Permanent link">&para;</a></h6>
+<ol>
+<li><strong><abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr> (Endpoint Detection and Response):</strong><ul>
+<li>Supervisa actividades en dispositivos finales (endpoints) para detectar y responder a amenazas.</li>
+<li><em>Ejemplo práctico:</em> Identificar un archivo sospechoso descargado en un portátil y bloquear su ejecución.</li>
+</ul>
+</li>
+<li><strong>NDR (Network Detection and Response):</strong><ul>
+<li>Monitorea el tráfico de red para identificar comportamientos anómalos.</li>
+<li><em>Ejemplo práctico:</em> Detectar una transferencia de datos inusualmente grande a un servidor externo.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h6 id="2315-herramientas-idsips">2.3.1.5. Herramientas <abbr title="Sistema de Detección de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas. Los IDS pueden detectar ataques de denegación de servicio, escaneos de puertos, intentos de intrusión, etc.">IDS</abbr>/<abbr title="Sistema de Prevención de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas, y toma medidas para prevenir o detener los ataques. Los IPS pueden bloquear el tráfico malicioso, rechazar las conexiones sospechosas, etc.">IPS</abbr><a class="headerlink" href="#2315-herramientas-idsips" title="Permanent link">&para;</a></h6>
+<p>Los sistemas de detección y prevención de intrusiones (<abbr title="Sistema de Detección de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas. Los IDS pueden detectar ataques de denegación de servicio, escaneos de puertos, intentos de intrusión, etc.">IDS</abbr>/<abbr title="Sistema de Prevención de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas, y toma medidas para prevenir o detener los ataques. Los IPS pueden bloquear el tráfico malicioso, rechazar las conexiones sospechosas, etc.">IPS</abbr>) monitorean y bloquean actividades maliciosas en la red.</p>
+<ul>
+<li>
+<p><strong>Funciones clave:</strong></p>
+<ol>
+<li><strong>Detección:</strong> Identificar intentos de intrusión o comportamientos sospechosos.   </li>
+</ol>
+<p><em>Ejemplo:</em> Un <abbr title="Sistema de Detección de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas. Los IDS pueden detectar ataques de denegación de servicio, escaneos de puertos, intentos de intrusión, etc.">IDS</abbr> alerta sobre un escaneo de puertos en un servidor.   </p>
+<ol>
+<li><strong>Prevención:</strong> Bloquear tráfico malicioso antes de que cause daño.</li>
+</ol>
+<p><em>Ejemplo:</em> Un <abbr title="Sistema de Prevención de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas, y toma medidas para prevenir o detener los ataques. Los IPS pueden bloquear el tráfico malicioso, rechazar las conexiones sospechosas, etc.">IPS</abbr> detecta un escaneo de puertos inusual y bloquea la <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> del atacante.</p>
+</li>
+<li>
+<p><strong>Beneficio adicional:</strong> Protege la red contra ataques conocidos y desconocidos.   </p>
+</li>
+<li>
+<p><strong>Ejemplo de herramientas <abbr title="Sistema de Detección de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas. Los IDS pueden detectar ataques de denegación de servicio, escaneos de puertos, intentos de intrusión, etc.">IDS</abbr>/<abbr title="Sistema de Prevención de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas, y toma medidas para prevenir o detener los ataques. Los IPS pueden bloquear el tráfico malicioso, rechazar las conexiones sospechosas, etc.">IPS</abbr>:</strong> Snort, Suricata, Cisco Firepower, Palo Alto Networks, Fortinet, Check Point.</p>
+</li>
+</ul>
+<h6 id="2316-sistemas-de-ticketing">2.3.1.6. Sistemas de ticketing<a class="headerlink" href="#2316-sistemas-de-ticketing" title="Permanent link">&para;</a></h6>
+<p>Los sistemas de ticketing gestionan y documentan los incidentes dentro del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.
+- <strong>Funciones clave:</strong>
+    1. <strong>Registro de incidentes:</strong> Cada incidente se documenta con detalles como la fecha, la gravedad y las acciones tomadas.
+    2. <strong>Colaboración:</strong> Permite asignar tareas a diferentes miembros del equipo.
+    - <em>Ejemplo:</em> Cuando se detecta un ataque phishing, se genera un ticket para que un analista investigue los correos afectados.</p>
+<hr />
+<h6 id="2316-tecnologias-de-analisis-forense"><strong>2.3.1.6. Tecnologías de análisis forense</strong><a class="headerlink" href="#2316-tecnologias-de-analisis-forense" title="Permanent link">&para;</a></h6>
+<p>Estas herramientas permiten a los equipos analizar incidentes después de que han ocurrido para comprender cómo sucedieron.
+- <strong>Funciones clave:</strong>
+    1. Recuperar y analizar datos de sistemas comprometidos.
+    2. Reconstruir la secuencia de eventos que llevaron al incidente.
+    - <em>Ejemplo:</em> Analizar los logs de un servidor comprometido para determinar si el atacante usó una vulnerabilidad de software específica.</p>
+<hr />
+<h4 id="232-integracion-de-tecnologias"><strong>2.3.2. Integración de tecnologías</strong><a class="headerlink" href="#232-integracion-de-tecnologias" title="Permanent link">&para;</a></h4>
+<p>La verdadera fuerza de un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> reside en cómo se integran estas herramientas para trabajar en conjunto. Aquí hay algunas consideraciones importantes para la integración:
+- <strong>Centralización:</strong> Un <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> actúa como punto central para recopilar datos de todas las herramientas.
+- <strong>Automatización:</strong> <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr> conecta herramientas como el <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>, <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr> y ticketing para agilizar la respuesta.
+- <strong>Interoperabilidad:</strong> Las herramientas deben ser compatibles entre sí para maximizar su efectividad.</p>
+<ul>
+<li><strong>Ejemplo de integración:</strong><ol>
+<li>El <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> detecta una actividad sospechosa en un servidor y genera una alerta.</li>
+<li>El <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr> ejecuta un playbook automatizado que aísla el servidor y genera un ticket.</li>
+<li>Un analista revisa el ticket, realiza un análisis forense en el servidor y actualiza las reglas del <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> para detectar actividades similares en el futuro.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h4 id="233-retos-en-el-uso-de-tecnologias"><strong>2.3.3. Retos en el uso de tecnologías</strong><a class="headerlink" href="#233-retos-en-el-uso-de-tecnologias" title="Permanent link">&para;</a></h4>
+<p>Aunque las tecnologías son fundamentales, presentan desafíos:
+1. <strong>Sobrecarga de alertas:</strong> Un <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> mal configurado puede generar demasiadas alertas, causando fatiga en los analistas.
+    - <em>Solución:</em> Afinar las reglas de detección y usar inteligencia artificial para priorizar alertas.
+2. <strong>Costo:</strong> Las herramientas avanzadas pueden ser costosas de implementar y mantener.
+    - <em>Solución:</em> Evaluar herramientas de código abierto o servicios en la nube.
+3. <strong>Falta de habilidades:</strong> Requieren personal capacitado para su configuración y uso.
+    - <em>Solución:</em> Capacitar continuamente al equipo del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</p>
+<p>Las tecnologías son el esqueleto que soporta las operaciones de un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>. Desde herramientas de monitoreo como el <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> hasta sistemas de automatización como el <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr>, cada tecnología juega un papel crítico en la detección y respuesta a amenazas. Sin embargo, su efectividad depende de una implementación adecuada, una integración robusta y una configuración que equilibre precisión y eficiencia.</p>
+<h4 id="24-servicios"><strong>2.4. Servicios</strong><a class="headerlink" href="#24-servicios" title="Permanent link">&para;</a></h4>
+<p>Los servicios que ofrece un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> son el resultado de la colaboración entre las personas, procesos y tecnologías. Ahora exploraremos los servicios más destacados.</p>
+<h5 id="241-servicios-principales"><strong>2.4.1. Servicios principales</strong><a class="headerlink" href="#241-servicios-principales" title="Permanent link">&para;</a></h5>
+<ol>
+<li><strong><abbr title="Información sobre las amenazas de seguridad que pueden afectar a una organización. La inteligencia de amenazas incluye datos sobre los actores de amenazas, las tácticas y técnicas de los atacantes, las vulnerabilidades de seguridad, etc.">Threat Intelligence</abbr>:</strong> Proporciona información sobre amenazas emergentes y cómo mitigarlas.</li>
+<li><em>Ejemplo:</em> Crear un informe sobre un <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> específico que afecta a empresas del mismo sector.</li>
+<li><strong>Monitoring &amp; Triage:</strong> Gestiona alertas y determina su relevancia.</li>
+<li><em>Ejemplo:</em> Filtrar falsos positivos de intentos de inicio de sesión.</li>
+<li><strong>Incident Response:</strong> Contiene y elimina amenazas activas.</li>
+<li><strong>Forensics:</strong> Proporciona detalles post-incidente para mejorar defensas futuras.</li>
+<li><strong><abbr title="Proceso de búsqueda proactiva de amenazas de seguridad en una red. Los cazadores de amenazas utilizan técnicas de análisis de datos, correlación de eventos y detección de anomalías para identificar y responder a las amenazas de seguridad.">Threat Hunting</abbr>:</strong> Busca amenazas que las herramientas automáticas podrían haber omitido.</li>
+</ol>
+<hr />
+<h3 id="conclusion-del-punto-2">Conclusión del punto 2:<a class="headerlink" href="#conclusion-del-punto-2" title="Permanent link">&para;</a></h3>
+<p>Un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> eficaz requiere una integración armoniosa entre personas capacitadas, procesos definidos, tecnologías avanzadas y servicios bien implementados. Estos componentes trabajan juntos para proteger a las organizaciones frente a amenazas cibernéticas modernas.</p>
+<p>¿Te gustaría que continuemos con el siguiente punto o prefieres profundizar en alguno de los componentes aquí tratados? 😊</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        ¿Te ha sido útíl la página?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Me ha sido de utilidad." data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="La página podría mejorar." data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Gracias por tu feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Gracias por tu feedback! Ayudame a mejorarla usando este formulario. <a href="https://forms.gle/bBtzHfjb41unBb5o9" target=_blank>feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2021-2022 Eduardo Fernández <a href="https://twitter.com/revilofe" target=_blank>@revilofe</a> - Licencia CC BY-NC-SA
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/revilofe" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<efernandez@iesrafaelalberti.es>" target="_blank" rel="noopener" title="e-mail" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/efoliver" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

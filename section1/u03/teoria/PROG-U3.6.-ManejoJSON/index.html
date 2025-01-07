@@ -4923,13 +4923,13 @@ En Python, se gestionan principalmente con el módulo integrado <code>json</code
 <h3 id="2-json-en-python">2. JSON en Python<a class="headerlink" href="#2-json-en-python" title="Permanent link">&para;</a></h3>
 <h4 id="21-importar-el-modulo-json">2.1. Importar el módulo <code>json</code><a class="headerlink" href="#21-importar-el-modulo-json" title="Permanent link">&para;</a></h4>
 <p>El módulo <code>json</code> está disponible en la biblioteca estándar de Python, por lo que no necesitamos instalar nada adicional.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">json</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 </code></pre></div>
 <h4 id="22-leer-archivos-json">2.2. Leer archivos JSON<a class="headerlink" href="#22-leer-archivos-json" title="Permanent link">&para;</a></h4>
 <h5 id="221-leer-json-desde-un-archivo"><strong>2.2.1. Leer JSON desde un archivo</strong><a class="headerlink" href="#221-leer-json-desde-un-archivo" title="Permanent link">&para;</a></h5>
 <p>Se usa <code>json.load()</code> para convertir el contenido del archivo JSON en un objeto de Python <em>(normalmente un diccionario o una lista)</em>.</p>
 <p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">json</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># Leer el archivo JSON</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;datos.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">archivo</span><span class="p">:</span>
@@ -4941,7 +4941,7 @@ En Python, se gestionan principalmente con el módulo integrado <code>json</code
 <h5 id="222-leer-json-desde-una-cadena-de-caracteres"><strong>2.2.2. Leer JSON desde una cadena de caracteres</strong><a class="headerlink" href="#222-leer-json-desde-una-cadena-de-caracteres" title="Permanent link">&para;</a></h5>
 <p>Para leer JSON desde una cadena, se usa <code>json.loads()</code>.</p>
 <p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">json</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">cadena_json</span> <span class="o">=</span> <span class="s1">&#39;{&quot;nombre&quot;: &quot;Juan&quot;, &quot;edad&quot;: 30}&#39;</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">datos</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">cadena_json</span><span class="p">)</span>
@@ -4952,7 +4952,7 @@ En Python, se gestionan principalmente con el módulo integrado <code>json</code
 <h5 id="231-escribir-json-en-un-archivo"><strong>2.3.1. Escribir JSON en un archivo</strong><a class="headerlink" href="#231-escribir-json-en-un-archivo" title="Permanent link">&para;</a></h5>
 <p>Se usa <code>json.dump()</code> para convertir un objeto de Python a JSON y escribirlo en un archivo.</p>
 <p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">json</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">datos</span> <span class="o">=</span> <span class="p">{</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Ana&quot;</span><span class="p">,</span>
@@ -4968,7 +4968,7 @@ En Python, se gestionan principalmente con el módulo integrado <code>json</code
 <h5 id="232-convertir-objetos-python-a-cadenas-json"><strong>2.3.2. Convertir objetos Python a cadenas JSON</strong><a class="headerlink" href="#232-convertir-objetos-python-a-cadenas-json" title="Permanent link">&para;</a></h5>
 <p>Para convertir datos de Python a una cadena JSON, se usa <code>json.dumps()</code>.</p>
 <p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span> <span class="nn">json</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">datos</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Pedro&quot;</span><span class="p">,</span> <span class="s2">&quot;edad&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">}</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
@@ -4985,7 +4985,7 @@ En Python, se gestionan principalmente con el módulo integrado <code>json</code
 <h4 id="24-manipular-datos-json">2.4. Manipular datos JSON<a class="headerlink" href="#24-manipular-datos-json" title="Permanent link">&para;</a></h4>
 <p>Después de cargar un archivo JSON como un objeto de Python <em>(como un diccionario o lista)</em>, podemos manipular los datos con las operaciones estándar de Python.</p>
 <p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span> <span class="nn">json</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1"># Leer el archivo JSON</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;datos.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">archivo</span><span class="p">:</span>
@@ -5002,7 +5002,7 @@ En Python, se gestionan principalmente con el módulo integrado <code>json</code
 <h4 id="25-manejo-de-errores">2.5. Manejo de errores<a class="headerlink" href="#25-manejo-de-errores" title="Permanent link">&para;</a></h4>
 <p>Cuando trabajamos con JSON, es importante manejar <strong>posibles excepciones</strong> para evitar errores inesperados.</p>
 <p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">import</span> <span class="nn">json</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">try</span><span class="p">:</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;datos.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">archivo</span><span class="p">:</span>
@@ -5034,10 +5034,10 @@ En Python, se gestionan principalmente con el módulo integrado <code>json</code
 <li>Guarda los cambios en el archivo.</li>
 </ol>
 <h5 id="263-codigo-en-python"><strong>2.6.3. Código en Python</strong><a class="headerlink" href="#263-codigo-en-python" title="Permanent link">&para;</a></h5>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">import</span> <span class="nn">json</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">def</span> <span class="nf">cargar_json</span><span class="p">(</span><span class="n">nombre_fichero</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">cargar_json</span><span class="p">(</span><span class="n">nombre_fichero</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="sd">    Carga el contenido de un fichero JSON.</span>
 <a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
@@ -5063,7 +5063,7 @@ En Python, se gestionan principalmente con el módulo integrado <code>json</code
 <a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>    <span class="k">return</span> <span class="kc">None</span>
 <a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>
 <a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>
-<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="k">def</span> <span class="nf">guardar_json</span><span class="p">(</span><span class="n">nombre_fichero</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">datos</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="k">def</span><span class="w"> </span><span class="nf">guardar_json</span><span class="p">(</span><span class="n">nombre_fichero</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">datos</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
 <a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="sd">    Guarda los datos en un fichero JSON.</span>
 <a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>
@@ -5085,7 +5085,7 @@ En Python, se gestionan principalmente con el módulo integrado <code>json</code
 <a id="__codelineno-10-49" name="__codelineno-10-49" href="#__codelineno-10-49"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;*ERROR* Problemas al guardar los datos: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-10-50" name="__codelineno-10-50" href="#__codelineno-10-50"></a>
 <a id="__codelineno-10-51" name="__codelineno-10-51" href="#__codelineno-10-51"></a>
-<a id="__codelineno-10-52" name="__codelineno-10-52" href="#__codelineno-10-52"></a><span class="k">def</span> <span class="nf">actualizar_usuario</span><span class="p">(</span><span class="n">datos</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">id_usuario</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">nueva_edad</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<a id="__codelineno-10-52" name="__codelineno-10-52" href="#__codelineno-10-52"></a><span class="k">def</span><span class="w"> </span><span class="nf">actualizar_usuario</span><span class="p">(</span><span class="n">datos</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">id_usuario</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">nueva_edad</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
 <a id="__codelineno-10-53" name="__codelineno-10-53" href="#__codelineno-10-53"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-10-54" name="__codelineno-10-54" href="#__codelineno-10-54"></a><span class="sd">    Actualiza la edad de un usuario dado su ID.</span>
 <a id="__codelineno-10-55" name="__codelineno-10-55" href="#__codelineno-10-55"></a>
@@ -5103,7 +5103,7 @@ En Python, se gestionan principalmente con el módulo integrado <code>json</code
 <a id="__codelineno-10-67" name="__codelineno-10-67" href="#__codelineno-10-67"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Usuario con ID </span><span class="si">{</span><span class="n">id_usuario</span><span class="si">}</span><span class="s2"> no encontrado.&quot;</span><span class="p">)</span>
 <a id="__codelineno-10-68" name="__codelineno-10-68" href="#__codelineno-10-68"></a>
 <a id="__codelineno-10-69" name="__codelineno-10-69" href="#__codelineno-10-69"></a>
-<a id="__codelineno-10-70" name="__codelineno-10-70" href="#__codelineno-10-70"></a><span class="k">def</span> <span class="nf">insertar_usuario</span><span class="p">(</span><span class="n">datos</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">nuevo_usuario</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+<a id="__codelineno-10-70" name="__codelineno-10-70" href="#__codelineno-10-70"></a><span class="k">def</span><span class="w"> </span><span class="nf">insertar_usuario</span><span class="p">(</span><span class="n">datos</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">nuevo_usuario</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
 <a id="__codelineno-10-71" name="__codelineno-10-71" href="#__codelineno-10-71"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-10-72" name="__codelineno-10-72" href="#__codelineno-10-72"></a><span class="sd">    Inserta un nuevo usuario.</span>
 <a id="__codelineno-10-73" name="__codelineno-10-73" href="#__codelineno-10-73"></a>
@@ -5115,7 +5115,7 @@ En Python, se gestionan principalmente con el módulo integrado <code>json</code
 <a id="__codelineno-10-79" name="__codelineno-10-79" href="#__codelineno-10-79"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Usuario </span><span class="si">{</span><span class="n">nuevo_usuario</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> añadido con éxito.&quot;</span><span class="p">)</span>
 <a id="__codelineno-10-80" name="__codelineno-10-80" href="#__codelineno-10-80"></a>
 <a id="__codelineno-10-81" name="__codelineno-10-81" href="#__codelineno-10-81"></a>
-<a id="__codelineno-10-82" name="__codelineno-10-82" href="#__codelineno-10-82"></a><span class="k">def</span> <span class="nf">eliminar_usuario</span><span class="p">(</span><span class="n">datos</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">id_usuario</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<a id="__codelineno-10-82" name="__codelineno-10-82" href="#__codelineno-10-82"></a><span class="k">def</span><span class="w"> </span><span class="nf">eliminar_usuario</span><span class="p">(</span><span class="n">datos</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">id_usuario</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
 <a id="__codelineno-10-83" name="__codelineno-10-83" href="#__codelineno-10-83"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-10-84" name="__codelineno-10-84" href="#__codelineno-10-84"></a><span class="sd">    Elimina un usuario dado su ID.</span>
 <a id="__codelineno-10-85" name="__codelineno-10-85" href="#__codelineno-10-85"></a>
@@ -5132,7 +5132,7 @@ En Python, se gestionan principalmente con el módulo integrado <code>json</code
 <a id="__codelineno-10-96" name="__codelineno-10-96" href="#__codelineno-10-96"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Usuario con ID </span><span class="si">{</span><span class="n">id_usuario</span><span class="si">}</span><span class="s2"> no encontrado.&quot;</span><span class="p">)</span>
 <a id="__codelineno-10-97" name="__codelineno-10-97" href="#__codelineno-10-97"></a>
 <a id="__codelineno-10-98" name="__codelineno-10-98" href="#__codelineno-10-98"></a>
-<a id="__codelineno-10-99" name="__codelineno-10-99" href="#__codelineno-10-99"></a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-10-99" name="__codelineno-10-99" href="#__codelineno-10-99"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-10-100" name="__codelineno-10-100" href="#__codelineno-10-100"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-10-101" name="__codelineno-10-101" href="#__codelineno-10-101"></a><span class="sd">    Función principal que realiza las operaciones de gestión de un archivo JSON.</span>
 <a id="__codelineno-10-102" name="__codelineno-10-102" href="#__codelineno-10-102"></a><span class="sd">    &quot;&quot;&quot;</span>
@@ -5251,8 +5251,8 @@ NOTA: Aunque estamos utilizando <code>print()</code> dentro de las funciones que
 <h5 id="282-serializar-objetos-personalizados"><strong>2.8.2. Serializar objetos personalizados</strong><a class="headerlink" href="#282-serializar-objetos-personalizados" title="Permanent link">&para;</a></h5>
 <p>El módulo <code>json</code> puede serializar objetos personalizados usando el argumento <code>default</code>.</p>
 <p><strong>Ejemplo:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">import</span> <span class="nn">json</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># Crear un objeto con un tipo no JSON serializable</span>
 <a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="n">datos</span> <span class="o">=</span> <span class="p">{</span>
@@ -5261,7 +5261,7 @@ NOTA: Aunque estamos utilizando <code>print()</code> dentro de las funciones que
 <a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="p">}</span>
 <a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
 <a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="c1"># Serializador personalizado</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="k">def</span> <span class="nf">convertir</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="k">def</span><span class="w"> </span><span class="nf">convertir</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
 <a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
 <a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>        <span class="k">return</span> <span class="n">obj</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>  <span class="c1"># Convertir a formato ISO 8601</span>
 <a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>    <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Tipo no serializable&quot;</span><span class="p">)</span>
@@ -5325,7 +5325,7 @@ NOTA: Aunque estamos utilizando <code>print()</code> dentro de las funciones que
 <h5 id="283-ordenar-claves"><strong>2.8.3. Ordenar claves</strong><a class="headerlink" href="#283-ordenar-claves" title="Permanent link">&para;</a></h5>
 <p>Para ordenar las claves del JSON, usa el argumento <code>sort_keys</code>.</p>
 <p><strong>Ejemplo:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kn">import</span> <span class="nn">json</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">datos</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;m&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="n">cadena_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">datos</span><span class="p">,</span> <span class="n">sort_keys</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">indent</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>

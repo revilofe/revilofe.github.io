@@ -5176,7 +5176,7 @@ A = \sqrt{s \times (s - a) \times (s - b) \times (s - c)}
 <div class="arithmatex">\[
 s = \frac{a + b + c}{2}
 \]</div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 <a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>
 <a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="c1"># Pedimos al usuario los tres lados del triángulo</span>
 <a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introduce el primer lado del triángulo: &quot;</span><span class="p">))</span>
@@ -5210,7 +5210,7 @@ s = \frac{a + b + c}{2}
 <a id="__codelineno-37-10" name="__codelineno-37-10" href="#__codelineno-37-10"></a><span class="c1"># Implementamos la raíz cuadrada manualmente usando el método de Newton-Raphson</span>
 <a id="__codelineno-37-11" name="__codelineno-37-11" href="#__codelineno-37-11"></a>
 <a id="__codelineno-37-12" name="__codelineno-37-12" href="#__codelineno-37-12"></a><span class="c1"># Valor inicial para la raíz cuadrada (semilla)</span>
-<a id="__codelineno-37-13" name="__codelineno-37-13" href="#__codelineno-37-13"></a><span class="k">def</span> <span class="nf">raiz_cuadrada</span><span class="p">(</span><span class="n">valor</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mf">0.00001</span><span class="p">):</span>
+<a id="__codelineno-37-13" name="__codelineno-37-13" href="#__codelineno-37-13"></a><span class="k">def</span><span class="w"> </span><span class="nf">raiz_cuadrada</span><span class="p">(</span><span class="n">valor</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mf">0.00001</span><span class="p">):</span>
 <a id="__codelineno-37-14" name="__codelineno-37-14" href="#__codelineno-37-14"></a>    <span class="c1"># Aseguramos que valor sea positivo para evitar errores</span>
 <a id="__codelineno-37-15" name="__codelineno-37-15" href="#__codelineno-37-15"></a>    <span class="k">if</span> <span class="n">valor</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
 <a id="__codelineno-37-16" name="__codelineno-37-16" href="#__codelineno-37-16"></a>        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
@@ -5281,7 +5281,7 @@ s = \frac{a + b + c}{2}
 <h3 id="ejercicio-1229-generar-un-numero-aleatorio-entre-dos-valores"><strong>Ejercicio 1.2.29</strong> - Generar un Número Aleatorio entre dos Valores<a class="headerlink" href="#ejercicio-1229-generar-un-numero-aleatorio-entre-dos-valores" title="Permanent link">&para;</a></h3>
 <p>En este ejercicio, vamos a generar un número aleatorio entre dos valores introducidos por el usuario. La forma más común de hacerlo en Python es usando la función <code>randint</code> del módulo <code>random</code>.</p>
 <h3 id="version-normal">Versión Normal<a class="headerlink" href="#version-normal" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 <a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>
 <a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="c1"># Pedimos al usuario los dos valores</span>
 <a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="n">valor_inferior</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introduce el valor inferior: &quot;</span><span class="p">))</span>
@@ -5305,7 +5305,7 @@ s = \frac{a + b + c}{2}
 <a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="n">valor_superior</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introduce el valor superior: &quot;</span><span class="p">))</span>
 <a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>
 <a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="c1"># Función para generar un número aleatorio utilizando el método LCG (Linear Congruential Generator)</span>
-<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a><span class="k">def</span> <span class="nf">generar_numero_aleatorio</span><span class="p">(</span><span class="n">minimo</span><span class="p">,</span> <span class="n">maximo</span><span class="p">):</span>
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">generar_numero_aleatorio</span><span class="p">(</span><span class="n">minimo</span><span class="p">,</span> <span class="n">maximo</span><span class="p">):</span>
 <a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a>    <span class="c1"># Parámetros del generador LCG (se pueden ajustar para diferentes distribuciones)</span>
 <a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a>    <span class="n">a</span> <span class="o">=</span> <span class="mi">1664525</span>   <span class="c1"># Multiplicador</span>
 <a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a>    <span class="n">c</span> <span class="o">=</span> <span class="mi">1013904223</span>  <span class="c1"># Incremento</span>
@@ -5329,7 +5329,7 @@ s = \frac{a + b + c}{2}
 <a id="__codelineno-39-27" name="__codelineno-39-27" href="#__codelineno-39-27"></a><span class="c1"># Imprimimos cada carácter del mensaje manualmente (sin usar print)</span>
 <a id="__codelineno-39-28" name="__codelineno-39-28" href="#__codelineno-39-28"></a><span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">mensaje</span><span class="p">:</span>
 <a id="__codelineno-39-29" name="__codelineno-39-29" href="#__codelineno-39-29"></a>    <span class="c1"># Utilizamos end=&#39;&#39; para imprimir sin saltos de línea (simulando el comportamiento de print)</span>
-<a id="__codelineno-39-30" name="__codelineno-39-30" href="#__codelineno-39-30"></a>    <span class="kn">import</span> <span class="nn">sys</span>
+<a id="__codelineno-39-30" name="__codelineno-39-30" href="#__codelineno-39-30"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <a id="__codelineno-39-31" name="__codelineno-39-31" href="#__codelineno-39-31"></a>    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>Explicación detallada</strong>:</p>
@@ -5370,7 +5370,7 @@ s = \frac{a + b + c}{2}
 <a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introduce un número entero: &quot;</span><span class="p">))</span>
 <a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>
 <a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="c1"># Función para determinar si un número es primo</span>
-<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="k">def</span> <span class="nf">es_primo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">es_primo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>    <span class="c1"># Si el número es menor que 2, no es primo</span>
 <a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
 <a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a>        <span class="k">return</span> <span class="kc">False</span>
@@ -5400,7 +5400,7 @@ s = \frac{a + b + c}{2}
 <a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introduce un número entero: &quot;</span><span class="p">))</span>
 <a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>
 <a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="c1"># Función para determinar si un número es primo</span>
-<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a><span class="k">def</span> <span class="nf">es_primo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">es_primo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>    <span class="c1"># Si el número es menor que 2, no es primo</span>
 <a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
 <a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a>        <span class="k">return</span> <span class="kc">False</span>
@@ -5424,7 +5424,7 @@ s = \frac{a + b + c}{2}
 <a id="__codelineno-41-26" name="__codelineno-41-26" href="#__codelineno-41-26"></a><span class="c1"># Imprimimos cada carácter del mensaje manualmente (sin usar print)</span>
 <a id="__codelineno-41-27" name="__codelineno-41-27" href="#__codelineno-41-27"></a><span class="k">for</span> <span class="n">caracter</span> <span class="ow">in</span> <span class="n">mensaje</span><span class="p">:</span>
 <a id="__codelineno-41-28" name="__codelineno-41-28" href="#__codelineno-41-28"></a>    <span class="c1"># Utilizamos `sys.stdout.write` para imprimir sin saltos de línea</span>
-<a id="__codelineno-41-29" name="__codelineno-41-29" href="#__codelineno-41-29"></a>    <span class="kn">import</span> <span class="nn">sys</span>
+<a id="__codelineno-41-29" name="__codelineno-41-29" href="#__codelineno-41-29"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <a id="__codelineno-41-30" name="__codelineno-41-30" href="#__codelineno-41-30"></a>    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">caracter</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>Explicación detallada</strong>:</p>
@@ -5493,7 +5493,7 @@ s = \frac{a + b + c}{2}
 <a id="__codelineno-43-16" name="__codelineno-43-16" href="#__codelineno-43-16"></a><span class="c1"># Mostramos el mensaje carácter a carácter sin usar print</span>
 <a id="__codelineno-43-17" name="__codelineno-43-17" href="#__codelineno-43-17"></a><span class="k">for</span> <span class="n">caracter</span> <span class="ow">in</span> <span class="n">mensaje</span><span class="p">:</span>
 <a id="__codelineno-43-18" name="__codelineno-43-18" href="#__codelineno-43-18"></a>    <span class="c1"># Utilizamos `sys.stdout.write` para imprimir sin saltos de línea ni espacios adicionales</span>
-<a id="__codelineno-43-19" name="__codelineno-43-19" href="#__codelineno-43-19"></a>    <span class="kn">import</span> <span class="nn">sys</span>
+<a id="__codelineno-43-19" name="__codelineno-43-19" href="#__codelineno-43-19"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <a id="__codelineno-43-20" name="__codelineno-43-20" href="#__codelineno-43-20"></a>    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">caracter</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>Explicación detallada</strong>:</p>
@@ -5580,7 +5580,7 @@ s = \frac{a + b + c}{2}
 <a id="__codelineno-45-19" name="__codelineno-45-19" href="#__codelineno-45-19"></a><span class="c1"># Mostramos el mensaje carácter a carácter sin usar print</span>
 <a id="__codelineno-45-20" name="__codelineno-45-20" href="#__codelineno-45-20"></a><span class="k">for</span> <span class="n">caracter</span> <span class="ow">in</span> <span class="n">mensaje</span><span class="p">:</span>
 <a id="__codelineno-45-21" name="__codelineno-45-21" href="#__codelineno-45-21"></a>    <span class="c1"># Utilizamos `sys.stdout.write` para imprimir sin saltos de línea ni espacios adicionales</span>
-<a id="__codelineno-45-22" name="__codelineno-45-22" href="#__codelineno-45-22"></a>    <span class="kn">import</span> <span class="nn">sys</span>
+<a id="__codelineno-45-22" name="__codelineno-45-22" href="#__codelineno-45-22"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <a id="__codelineno-45-23" name="__codelineno-45-23" href="#__codelineno-45-23"></a>    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">caracter</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>Explicación detallada</strong>:</p>

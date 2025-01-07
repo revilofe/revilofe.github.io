@@ -4796,14 +4796,14 @@
 <p>En Python, un programa es un conjunto de módulos. Un módulo es un archivo que contiene código Python. Puede contener definiciones de funciones, clases y variables, así como ejecutar código. A continuación, se muestra un ejemplo de un módulo simple y los bloques que lo componen.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Importación de módulos</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">file_two</span> <span class="kn">import</span> <span class="n">function_three</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">file_two</span><span class="w"> </span><span class="kn">import</span> <span class="n">function_three</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File one __name__ is set to: </span><span class="si">{}</span><span class="s2">&quot;</span> <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="vm">__name__</span><span class="p">))</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># Definición de funciones</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Function main is executed&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cuerpo principal&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
@@ -4872,19 +4872,19 @@
 La sentencia <code>print</code> ademas de funcionar con cadenas, también funciona con enteros.</p>
 <p>Si no estás seguro de qué tipo de valor estás manejando, el intérprete te lo puede decir.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="o">&gt;&gt;&gt;</span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;¡Hola, mundo!&#39;</span><span class="p">)</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="o">&gt;&gt;&gt;</span><span class="nb">type</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
 </code></pre></div>
 <p>No es sorprendente que las cadenas pertenezcan al tipo <code>str</code> y los enteros pertenezcan al tipo <code>int</code>. De manera menos obvia, los números con un punto decimal pertenecen a un tipo llamado <code>float</code>, porque estos números se representan en un formato llamado <em>punto flotante</em>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="o">&gt;&gt;&gt;</span><span class="nb">type</span><span class="p">(</span><span class="mf">3.2</span><span class="p">)</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="o">&gt;&gt;&gt;&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">float</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="o">&gt;&gt;&gt;&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nc">float</span><span class="s1">&#39;&gt;</span>
 </code></pre></div>
 <p>¿Qué ocurre con valores como <code>17</code> y <code>3.2</code>? Parecen números, pero van entre comillas como las cadenas.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">&gt;&gt;&gt;</span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;17&#39;</span><span class="p">)</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="o">&gt;&gt;&gt;</span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;3.2&#39;</span><span class="p">)</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
 </code></pre></div>
 <p>Pues son cadenas.</p>
 <p>Cuando escribes un entero grande, puede que te sientas tentado a usar comas o puntos para separarlo en grupos de tres dígitos, como en <code>1,000,000</code>. Eso no es un entero válido en Python, pero en cambio sí que resulta válido algo como:</p>
@@ -4909,11 +4909,11 @@ La sentencia <code>print</code> ademas de funcionar con cadenas, también funcio
 </code></pre></div>
 <p>El tipo de una variable es el tipo del valor al que se refiere.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">mensaje</span><span class="p">)</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
 <a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">float</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nc">float</span><span class="s1">&#39;&gt;</span>
 </code></pre></div>
 <h4 id="33-constantes-en-python">3.3. Constantes en Python<a class="headerlink" href="#33-constantes-en-python" title="Permanent link">&para;</a></h4>
 <p>A diferencia de otros lenguajes,  <strong>en Python no existen las constantes</strong> .</p>
@@ -5001,7 +5001,7 @@ La sentencia <code>print</code> ademas de funcionar con cadenas, también funcio
 <p>Configura tu <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr> de desarrollo para que use los espacios en lugar de los tabuladores para el sangrado. Establece el número de espacios a 4 ó 2.</p>
 </blockquote>
 <p>Veamos todo esto con un ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">def</span> <span class="nf">suma_numeros</span><span class="p">(</span><span class="n">numeros</span><span class="p">):</span>     <span class="c1"># Bloque 1</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">suma_numeros</span><span class="p">(</span><span class="n">numeros</span><span class="p">):</span>     <span class="c1"># Bloque 1</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span>                   <span class="c1"># Bloque 2</span>
 <a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numeros</span><span class="p">:</span>          <span class="c1"># Bloque 2</span>
 <a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>      <span class="n">suma</span> <span class="o">+=</span> <span class="n">n</span>                <span class="c1"># Bloque 3</span>
@@ -5060,7 +5060,7 @@ La sentencia <code>print</code> ademas de funcionar con cadenas, también funcio
 <h4 id="62-docstrings">6.2. Docstrings<a class="headerlink" href="#62-docstrings" title="Permanent link">&para;</a></h4>
 <p>Los docstrings son un tipo de comentarios especiales que se usan para documentar un módulo, función, clase o método. En realidad son la primera sentencia de cada uno de ellos y se encierran entre tres comillas simples o dobles.</p>
 <p>Los docstrings son utilizados para generar la documentación de un programa. Además, suelen utilizarlos los entornos de desarrollo para mostrar la documentación al programador de forma fácil e intuitiva.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
 <a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">  </span><span class="sd">&quot;&quot;&quot;Esta función devuelve la suma de los parámetros a y b&quot;&quot;&quot;</span>
 <a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>  <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </code></pre></div>

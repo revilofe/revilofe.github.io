@@ -4284,9 +4284,9 @@ Las excepciones en Python están diseñadas para gestionar este tipo de situacio
 <p>También podemos testear que se lanza una determinada excepción cuando esperamos que se lance. Supongamos que tienes una función llamada dividir en un archivo <code>calculadora.py</code> que debería lanzar una excepción <code>ZeroDivisionError</code> cuando se intenta dividir por cero. A continuación puedes ver cómo escribirías la prueba:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Archivo: test_calculadora.py</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kn">from</span> <span class="nn">calculadora</span> <span class="kn">import</span> <span class="n">dividir</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">calculadora</span><span class="w"> </span><span class="kn">import</span> <span class="n">dividir</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="k">def</span> <span class="nf">test_dividir_por_cero_deberia_lanzar_excepcion</span><span class="p">():</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_dividir_por_cero_deberia_lanzar_excepcion</span><span class="p">():</span>
 <a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ZeroDivisionError</span><span class="p">):</span>
 <a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="n">dividir</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </code></pre></div>
@@ -4295,9 +4295,9 @@ Las excepciones en Python están diseñadas para gestionar este tipo de situacio
 <p>En este caso, si la función <code>dividir</code> está correctamente implementada y lanza una excepción <code>ZeroDivisionError</code> cuando se divide por cero, la prueba pasará con éxito. Si no, la prueba fallará y te proporcionará información sobre el fallo.</p>
 <p>Este es un ejemplo simple, pero pytest es una herramienta muy versátil que puede manejar una amplia gama de situaciones de prueba. Puedes escribir pruebas para casos normales, casos de borde, y muchas otras situaciones que desees probar en tu código.</p>
 <h3 id="6-ejemplo-completo">6. Ejemplo completo<a class="headerlink" href="#6-ejemplo-completo" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">def</span> <span class="nf">fahr2cel</span><span class="p">(</span><span class="n">fahr</span><span class="p">:</span><span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">fahr2cel</span><span class="p">(</span><span class="n">fahr</span><span class="p">:</span><span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="sd">&#39;&#39;&#39; Convertir grados Fahrenheit a grados Celsius&#39;&#39;&#39;</span>
 <a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    <span class="k">if</span> <span class="n">fahr</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">459.67</span><span class="p">:</span>
 <a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Temperatura Fahrenheit incorrecta: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">fahr</span><span class="p">))</span>
@@ -4324,7 +4324,7 @@ Las excepciones en Python están diseñadas para gestionar este tipo de situacio
 <a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a>
 <a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a>
 <a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a>
-<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="k">def</span> <span class="nf">test_fahr2cel</span><span class="p">():</span>
+<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_fahr2cel</span><span class="p">():</span>
 <a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a>    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
 <a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a>        <span class="n">fahr2cel</span><span class="p">(</span><span class="o">-</span><span class="mi">300</span><span class="p">)</span>
 </code></pre></div>

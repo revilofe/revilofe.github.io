@@ -4172,9 +4172,9 @@
 </code></pre></div>
 <p><code>True</code> y <code>False</code> son valores especiales que pertenecen al tipo <code>bool (booleano)</code>; no son cadenas:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">bool</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nc">bool</span><span class="s1">&#39;&gt;</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">bool</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nc">bool</span><span class="s1">&#39;&gt;</span>
 </code></pre></div>
 <p>El operador <code>==</code> es uno de los  <em>operadores de comparación</em> ; los demás son:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>x != y               # x es distinto de y
@@ -4357,7 +4357,7 @@
 </code></pre></div>
 <p>En este ejemplo, el problema es que la segunda línea está indentada por un espacio. Pero el mensaje de error apunta a <code>y</code>, lo cual resulta engañoso. En general, los mensajes de error indican dónde se ha descubierto el problema, pero el error real podría estar en el código previo, a veces en alguna línea anterior.</p>
 <p>Ocurre lo mismo con los errores en tiempo de ejecución (runtime errors). Supón que estás tratando de calcular una relación señal-ruido en decibelios. La fórmula es SNR*<sub>db</sub>=10log <sub>10</sub> ( P<sub>senal</sub> / P <sub>ruido</sub> ). En Python, podrías escribir algo como esto:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">int_senal</span> <span class="o">=</span> <span class="mi">9</span>
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="n">int_ruido</span> <span class="o">=</span> <span class="mi">10</span>
 <a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="n">relacion</span> <span class="o">=</span> <span class="n">int_senal</span> <span class="o">/</span> <span class="n">int_ruido</span>

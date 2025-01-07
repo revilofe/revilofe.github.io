@@ -4673,13 +4673,13 @@ También puedes usar librerías externas como <code>lxml</code> para funcionalid
 <h2 id="xml-en-python">XML en Python<a class="headerlink" href="#xml-en-python" title="Permanent link">&para;</a></h2>
 <h3 id="1-importar-el-modulo-xmletreeelementtree"><strong>1. Importar el módulo <code>xml.etree.ElementTree</code></strong><a class="headerlink" href="#1-importar-el-modulo-xmletreeelementtree" title="Permanent link">&para;</a></h3>
 <p>El módulo <code>xml.etree.ElementTree</code> permite leer y manipular XML de manera sencilla.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xml.etree.ElementTree</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ET</span>
 </code></pre></div>
 <h3 id="2-leer-archivos-xml"><strong>2. Leer archivos XML</strong><a class="headerlink" href="#2-leer-archivos-xml" title="Permanent link">&para;</a></h3>
 <h4 id="21-leer-xml-desde-un-archivo"><strong>2.1 Leer XML desde un archivo</strong><a class="headerlink" href="#21-leer-xml-desde-un-archivo" title="Permanent link">&para;</a></h4>
 <p>Se usa <code>ET.parse()</code> para convertir el contenido del archivo XML en un árbol de elementos.</p>
 <p>Ejemplo:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xml.etree.ElementTree</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ET</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># Leer el archivo XML</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">arbol</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;datos.xml&quot;</span><span class="p">)</span>
@@ -4691,7 +4691,7 @@ También puedes usar librerías externas como <code>lxml</code> para funcionalid
 <h4 id="22-leer-xml-desde-una-cadena-de-caracteres"><strong>2.2 Leer XML desde una cadena de caracteres</strong><a class="headerlink" href="#22-leer-xml-desde-una-cadena-de-caracteres" title="Permanent link">&para;</a></h4>
 <p>Para leer XML desde una cadena, se usa <code>ET.fromstring()</code>.</p>
 <p>Ejemplo:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xml.etree.ElementTree</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ET</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">cadena_xml</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="s2">&lt;usuario&gt;</span>
@@ -4707,7 +4707,7 @@ También puedes usar librerías externas como <code>lxml</code> para funcionalid
 <h4 id="31-escribir-xml-en-un-archivo"><strong>3.1 Escribir XML en un archivo</strong><a class="headerlink" href="#31-escribir-xml-en-un-archivo" title="Permanent link">&para;</a></h4>
 <p>Se construyen los elementos con <code>ET.Element</code> y luego se escribe en un archivo con <code>ET.ElementTree.write()</code>.</p>
 <p>Ejemplo:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xml.etree.ElementTree</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ET</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># Crear el elemento raíz</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">raiz</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">Element</span><span class="p">(</span><span class="s2">&quot;usuarios&quot;</span><span class="p">)</span>
@@ -4725,7 +4725,7 @@ También puedes usar librerías externas como <code>lxml</code> para funcionalid
 <h4 id="32-convertir-objetos-python-a-cadenas-xml"><strong>3.2 Convertir objetos Python a cadenas XML</strong><a class="headerlink" href="#32-convertir-objetos-python-a-cadenas-xml" title="Permanent link">&para;</a></h4>
 <p>Para convertir datos de Python a XML como cadena, usa <code>ET.tostring()</code>.</p>
 <p>Ejemplo:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xml.etree.ElementTree</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ET</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># Crear el elemento raíz</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">raiz</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">Element</span><span class="p">(</span><span class="s2">&quot;usuario&quot;</span><span class="p">)</span>
@@ -4745,7 +4745,7 @@ También puedes usar librerías externas como <code>lxml</code> para funcionalid
 <h3 id="4-manipular-datos-xml"><strong>4. Manipular datos XML</strong><a class="headerlink" href="#4-manipular-datos-xml" title="Permanent link">&para;</a></h3>
 <p>Después de cargar un archivo XML como un árbol de elementos, puedes manipular los datos con operaciones estándar de Python.</p>
 <p>Ejemplo:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xml.etree.ElementTree</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ET</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1"># Leer y modificar datos XML</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">arbol</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;datos.xml&quot;</span><span class="p">)</span>
@@ -4765,7 +4765,7 @@ También puedes usar librerías externas como <code>lxml</code> para funcionalid
 <h3 id="4-manejo-de-errores"><strong>4. Manejo de errores</strong><a class="headerlink" href="#4-manejo-de-errores" title="Permanent link">&para;</a></h3>
 <p>Es importante manejar posibles excepciones al trabajar con XML para evitar errores inesperados.</p>
 <p>Ejemplo:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xml.etree.ElementTree</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ET</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">try</span><span class="p">:</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="n">arbol</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;datos.xml&quot;</span><span class="p">)</span>
@@ -4801,10 +4801,10 @@ incluso en escenarios avanzados que requieren validación o extensibilidad.</p>
 <a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="nt">&lt;/usuarios&gt;</span>
 </code></pre></div>
 <h4 id="62-codigo-en-python"><strong>6.2. Código en Python</strong><a class="headerlink" href="#62-codigo-en-python" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xml.etree.ElementTree</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ET</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">def</span> <span class="nf">cargar_xml</span><span class="p">(</span><span class="n">nombre_fichero</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ET</span><span class="o">.</span><span class="n">ElementTree</span><span class="p">:</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">cargar_xml</span><span class="p">(</span><span class="n">nombre_fichero</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ET</span><span class="o">.</span><span class="n">ElementTree</span><span class="p">:</span>
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="sd">    Carga el contenido de un archivo XML.</span>
 <a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
@@ -4829,7 +4829,7 @@ incluso en escenarios avanzados que requieren validación o extensibilidad.</p>
 <a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>    <span class="k">return</span> <span class="kc">None</span>
 <a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>
 <a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>
-<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="k">def</span> <span class="nf">guardar_xml</span><span class="p">(</span><span class="n">arbol</span><span class="p">:</span> <span class="n">ET</span><span class="o">.</span><span class="n">ElementTree</span><span class="p">,</span> <span class="n">nombre_fichero</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="k">def</span><span class="w"> </span><span class="nf">guardar_xml</span><span class="p">(</span><span class="n">arbol</span><span class="p">:</span> <span class="n">ET</span><span class="o">.</span><span class="n">ElementTree</span><span class="p">,</span> <span class="n">nombre_fichero</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="sd">    Guarda un árbol XML en un archivo.</span>
 <a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>
@@ -4857,7 +4857,7 @@ incluso en escenarios avanzados que requieren validación o extensibilidad.</p>
 <a id="__codelineno-10-54" name="__codelineno-10-54" href="#__codelineno-10-54"></a>    <span class="k">return</span> <span class="kc">False</span>
 <a id="__codelineno-10-55" name="__codelineno-10-55" href="#__codelineno-10-55"></a>
 <a id="__codelineno-10-56" name="__codelineno-10-56" href="#__codelineno-10-56"></a>
-<a id="__codelineno-10-57" name="__codelineno-10-57" href="#__codelineno-10-57"></a><span class="k">def</span> <span class="nf">actualizar_usuario</span><span class="p">(</span><span class="n">raiz</span><span class="p">:</span> <span class="n">ET</span><span class="o">.</span><span class="n">Element</span><span class="p">,</span> <span class="n">id_usuario</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">nueva_edad</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<a id="__codelineno-10-57" name="__codelineno-10-57" href="#__codelineno-10-57"></a><span class="k">def</span><span class="w"> </span><span class="nf">actualizar_usuario</span><span class="p">(</span><span class="n">raiz</span><span class="p">:</span> <span class="n">ET</span><span class="o">.</span><span class="n">Element</span><span class="p">,</span> <span class="n">id_usuario</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">nueva_edad</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
 <a id="__codelineno-10-58" name="__codelineno-10-58" href="#__codelineno-10-58"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-10-59" name="__codelineno-10-59" href="#__codelineno-10-59"></a><span class="sd">    Actualiza la edad de un usuario dado su ID.</span>
 <a id="__codelineno-10-60" name="__codelineno-10-60" href="#__codelineno-10-60"></a>
@@ -4875,7 +4875,7 @@ incluso en escenarios avanzados que requieren validación o extensibilidad.</p>
 <a id="__codelineno-10-72" name="__codelineno-10-72" href="#__codelineno-10-72"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Usuario con ID </span><span class="si">{</span><span class="n">id_usuario</span><span class="si">}</span><span class="s2"> no encontrado.&quot;</span><span class="p">)</span>
 <a id="__codelineno-10-73" name="__codelineno-10-73" href="#__codelineno-10-73"></a>
 <a id="__codelineno-10-74" name="__codelineno-10-74" href="#__codelineno-10-74"></a>
-<a id="__codelineno-10-75" name="__codelineno-10-75" href="#__codelineno-10-75"></a><span class="k">def</span> <span class="nf">insertar_usuario</span><span class="p">(</span><span class="n">raiz</span><span class="p">:</span> <span class="n">ET</span><span class="o">.</span><span class="n">Element</span><span class="p">,</span> <span class="n">nuevo_usuario</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+<a id="__codelineno-10-75" name="__codelineno-10-75" href="#__codelineno-10-75"></a><span class="k">def</span><span class="w"> </span><span class="nf">insertar_usuario</span><span class="p">(</span><span class="n">raiz</span><span class="p">:</span> <span class="n">ET</span><span class="o">.</span><span class="n">Element</span><span class="p">,</span> <span class="n">nuevo_usuario</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
 <a id="__codelineno-10-76" name="__codelineno-10-76" href="#__codelineno-10-76"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-10-77" name="__codelineno-10-77" href="#__codelineno-10-77"></a><span class="sd">    Inserta un nuevo usuario en el XML.</span>
 <a id="__codelineno-10-78" name="__codelineno-10-78" href="#__codelineno-10-78"></a>
@@ -4891,7 +4891,7 @@ incluso en escenarios avanzados que requieren validación o extensibilidad.</p>
 <a id="__codelineno-10-88" name="__codelineno-10-88" href="#__codelineno-10-88"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Usuario </span><span class="si">{</span><span class="n">nuevo_usuario</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> añadido con éxito.&quot;</span><span class="p">)</span>
 <a id="__codelineno-10-89" name="__codelineno-10-89" href="#__codelineno-10-89"></a>
 <a id="__codelineno-10-90" name="__codelineno-10-90" href="#__codelineno-10-90"></a>
-<a id="__codelineno-10-91" name="__codelineno-10-91" href="#__codelineno-10-91"></a><span class="k">def</span> <span class="nf">eliminar_usuario</span><span class="p">(</span><span class="n">raiz</span><span class="p">:</span> <span class="n">ET</span><span class="o">.</span><span class="n">Element</span><span class="p">,</span> <span class="n">id_usuario</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<a id="__codelineno-10-91" name="__codelineno-10-91" href="#__codelineno-10-91"></a><span class="k">def</span><span class="w"> </span><span class="nf">eliminar_usuario</span><span class="p">(</span><span class="n">raiz</span><span class="p">:</span> <span class="n">ET</span><span class="o">.</span><span class="n">Element</span><span class="p">,</span> <span class="n">id_usuario</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
 <a id="__codelineno-10-92" name="__codelineno-10-92" href="#__codelineno-10-92"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-10-93" name="__codelineno-10-93" href="#__codelineno-10-93"></a><span class="sd">    Elimina un usuario por su ID.</span>
 <a id="__codelineno-10-94" name="__codelineno-10-94" href="#__codelineno-10-94"></a>
@@ -4908,7 +4908,7 @@ incluso en escenarios avanzados que requieren validación o extensibilidad.</p>
 <a id="__codelineno-10-105" name="__codelineno-10-105" href="#__codelineno-10-105"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Usuario con ID </span><span class="si">{</span><span class="n">id_usuario</span><span class="si">}</span><span class="s2"> no encontrado.&quot;</span><span class="p">)</span>
 <a id="__codelineno-10-106" name="__codelineno-10-106" href="#__codelineno-10-106"></a>
 <a id="__codelineno-10-107" name="__codelineno-10-107" href="#__codelineno-10-107"></a>
-<a id="__codelineno-10-108" name="__codelineno-10-108" href="#__codelineno-10-108"></a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-10-108" name="__codelineno-10-108" href="#__codelineno-10-108"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-10-109" name="__codelineno-10-109" href="#__codelineno-10-109"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-10-110" name="__codelineno-10-110" href="#__codelineno-10-110"></a><span class="sd">    Función principal.</span>
 <a id="__codelineno-10-111" name="__codelineno-10-111" href="#__codelineno-10-111"></a><span class="sd">    &quot;&quot;&quot;</span>

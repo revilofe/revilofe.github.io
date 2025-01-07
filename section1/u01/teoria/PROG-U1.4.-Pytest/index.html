@@ -4153,7 +4153,7 @@ En general no es necesario poner nada en el archivo <code>__init__.py</code>, pe
 </li>
 <li>
 <p>Suponiendo que tienes una función llamada suma en el archivo <code>main.py</code> en el directorio src de tu proyecto. Aquí tienes un ejemplo de una función <code>suma</code> en Python, que toma dos argumentos <code>a</code> y <code>b</code> y devuelve la suma de los dos números.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </code></pre></div>
 </li>
@@ -4162,8 +4162,8 @@ En general no es necesario poner nada en el archivo <code>__init__.py</code>, pe
 </li>
 <li>
 <p>En este archivo de prueba, importa pytest y la función que deseas probar desde tu código fuente. Por ejemplo, podrías importar la función <code>suma</code> desde el módulo <code>main.py</code> en el directorio <code>src</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kn">from</span> <span class="nn">src.main</span> <span class="kn">import</span> <span class="n">suma</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">src.main</span><span class="w"> </span><span class="kn">import</span> <span class="n">suma</span>
 </code></pre></div>
 </li>
 <li>
@@ -4177,7 +4177,7 @@ En general no es necesario poner nada en el archivo <code>__init__.py</code>, pe
 <a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>    <span class="p">]</span>
 <a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="p">)</span>
 <a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
-<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="k">def</span> <span class="nf">test_suma_params</span><span class="p">(</span><span class="n">input_x</span><span class="p">,</span> <span class="n">input_y</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_suma_params</span><span class="p">(</span><span class="n">input_x</span><span class="p">,</span> <span class="n">input_y</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
 <a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>    <span class="k">assert</span> <span class="n">suma</span><span class="p">(</span><span class="n">input_x</span><span class="p">,</span> <span class="n">input_y</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected</span>
 </code></pre></div>
 <p>En este ejemplo, estamos probando la función "suma" con diferentes valores de entrada y comprobando si el resultado es igual al valor esperado.</p>

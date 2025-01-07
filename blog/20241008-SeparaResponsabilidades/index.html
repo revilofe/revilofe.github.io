@@ -4117,7 +4117,7 @@
 <h2 id="3-ejemplo-practico-calcular-el-area-de-un-rectangulo">3. Ejemplo práctico: Calcular el área de un rectángulo<a class="headerlink" href="#3-ejemplo-practico-calcular-el-area-de-un-rectangulo" title="Permanent link">&para;</a></h2>
 <p>Vamos a usar el ejemplo de calcular el área de un rectángulo:</p>
 <h4 id="31-codigo-inicial-todo-junto-en-una-sola-funcion">3.1. Código inicial (todo junto en una sola función):<a class="headerlink" href="#31-codigo-inicial-todo-junto-en-una-sola-funcion" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span> <span class="nf">calcular_area_rectangulo</span><span class="p">():</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">calcular_area_rectangulo</span><span class="p">():</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="c1"># Entrada de datos</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">ancho</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introduce el ancho del rectángulo: &quot;</span><span class="p">))</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">alto</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introduce el alto del rectángulo: &quot;</span><span class="p">))</span>
@@ -4130,7 +4130,7 @@
 </code></pre></div>
 <p>Este código mezcla la entrada, el procesamiento y la salida en una sola función, lo cual dificulta su prueba y mantenimiento. Vamos a separarlo en tres funciones distintas.</p>
 <h4 id="32-fase-1-entrada-y-validacion-de-datos">3.2. Fase 1: <strong>Entrada y validación de datos</strong><a class="headerlink" href="#32-fase-1-entrada-y-validacion-de-datos" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span> <span class="nf">obtener_datos_rectangulo</span><span class="p">():</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">obtener_datos_rectangulo</span><span class="p">():</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Obtiene y valida los datos de entrada del rectángulo.&quot;&quot;&quot;</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">ancho</span> <span class="o">=</span> <span class="kc">None</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">alto</span> <span class="o">=</span> <span class="kc">None</span>
@@ -4160,7 +4160,7 @@
 <li><strong>Qué hace esta función</strong>: Toma la entrada del usuario y valida que sean números positivos. Si el usuario introduce un valor inválido, le pide que vuelva a intentarlo.</li>
 </ul>
 <h4 id="33-fase-2-procesamiento-logica-de-negocio">3.3. Fase 2: <strong>Procesamiento (lógica de negocio)</strong><a class="headerlink" href="#33-fase-2-procesamiento-logica-de-negocio" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="nf">calcular_area</span><span class="p">(</span><span class="n">ancho</span><span class="p">,</span> <span class="n">alto</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">calcular_area</span><span class="p">(</span><span class="n">ancho</span><span class="p">,</span> <span class="n">alto</span><span class="p">):</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Calcula el área de un rectángulo dado su ancho y alto.&quot;&quot;&quot;</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="k">return</span> <span class="n">ancho</span> <span class="o">*</span> <span class="n">alto</span>
 </code></pre></div>
@@ -4168,7 +4168,7 @@
 <li><strong>Qué hace esta función</strong>: Toma dos números (ancho y alto) y calcula el área del rectángulo. No tiene idea de cómo se obtuvieron estos números ni de cómo se va a mostrar el resultado. Esto es lo que se conoce como <strong>lógica de negocio</strong>.</li>
 </ul>
 <h4 id="34-fase-3-salida-o-presentacion-de-resultados">3.4. Fase 3: <strong>Salida o presentación de resultados</strong><a class="headerlink" href="#34-fase-3-salida-o-presentacion-de-resultados" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span> <span class="nf">mostrar_resultado</span><span class="p">(</span><span class="n">area</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">mostrar_resultado</span><span class="p">(</span><span class="n">area</span><span class="p">):</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Muestra el resultado del área en la salida estándar.&quot;&quot;&quot;</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El área del rectángulo es: </span><span class="si">{</span><span class="n">area</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
@@ -4176,7 +4176,7 @@
 <li><strong>Qué hace esta función</strong>: Muestra el resultado en la consola. No realiza cálculos ni toma datos de entrada.</li>
 </ul>
 <h4 id="35-funcion-principal-que-une-las-tres-fases">3.5. Función principal que une las tres fases<a class="headerlink" href="#35-funcion-principal-que-une-las-tres-fases" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">ancho</span><span class="p">,</span> <span class="n">alto</span> <span class="o">=</span> <span class="n">obtener_datos_rectangulo</span><span class="p">()</span>  <span class="c1"># Entrada y validación de datos</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">area</span> <span class="o">=</span> <span class="n">calcular_area</span><span class="p">(</span><span class="n">ancho</span><span class="p">,</span> <span class="n">alto</span><span class="p">)</span>         <span class="c1"># Procesamiento o lógica de negocio</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">mostrar_resultado</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>                   <span class="c1"># Presentación de resultados</span>
@@ -4194,15 +4194,15 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># test_calcular_area.py</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># Importar la función calcular_area desde el archivo donde la definiste</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kn">from</span> <span class="nn">main</span> <span class="kn">import</span> <span class="n">calcular_area</span>  <span class="c1"># Ajusta el nombre del archivo si es necesario</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">main</span><span class="w"> </span><span class="kn">import</span> <span class="n">calcular_area</span>  <span class="c1"># Ajusta el nombre del archivo si es necesario</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">def</span> <span class="nf">test_area_positiva</span><span class="p">():</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_area_positiva</span><span class="p">():</span>
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="k">assert</span> <span class="n">calcular_area</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;Error: el área de 5x10 debería ser 50&quot;</span>
 <a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="k">def</span> <span class="nf">test_area_cero</span><span class="p">():</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_area_cero</span><span class="p">():</span>
 <a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="k">assert</span> <span class="n">calcular_area</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Error: el área de 0x10 debería ser 0&quot;</span>
 <a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="k">def</span> <span class="nf">test_area_valores_negativos</span><span class="p">():</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_area_valores_negativos</span><span class="p">():</span>
 <a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    <span class="c1"># Dependiendo de la lógica de negocio, puedes decidir si aceptar o no valores negativos</span>
 <a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    <span class="k">assert</span> <span class="n">calcular_area</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;Error: el área de -5x10 debería ser -50&quot;</span>
 </code></pre></div>

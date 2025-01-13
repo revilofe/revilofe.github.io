@@ -39,13 +39,14 @@ Los Centros de Operaciones de Seguridad (SOC, por sus siglas en inglés) son el 
 
 Un SOC es un centro de operaciones centralizado compuesto por profesionales de ciberseguridad, procesos estandarizados y tecnologías avanzadas, diseñado para supervisar, detectar, responder y prevenir amenazas de seguridad.
 
-* **Analogía:** Imagina un SOC como un “centro de control aéreo” para la ciberseguridad. Así como los controladores de tráfico aéreo supervisan vuelos y responden a emergencias, los analistas del SOC vigilan el tráfico digital de una organización y reaccionan ante amenazas.
+* **Analogía:** Imagina un SOC como un “centro de control aéreo” para la ciberseguridad. Así como los controladores de tráfico aéreo supervisan vuelos y responden a emergencias, los analistas del SOC vigilan el tráfico digital de una organización y reaccionan ante amenazas.  
+
 * **Funciones principales:**
 
-  1. Supervisar continuamente la infraestructura tecnológica (redes, sistemas, aplicaciones), asi como la información de la organización. Estar preparados y actualizados, buscando amenazas y vulnerabilidades.
-  2. Detectar amenazas o actividades sospechosas.
-  3. Responder y mitigar incidentes de seguridad. U
-  4. Prevenir futuros ataques mediante el aprendizaje continuo y la mejora de defensas.
+  1. Supervisar continuamente la infraestructura tecnológica (redes, sistemas, aplicaciones), asi como la información de la organización. Estar preparados y actualizados, buscando amenazas y vulnerabilidades.   
+  2. Detectar amenazas o actividades sospechosas.   
+  3. Responder y mitigar incidentes de seguridad.    
+  4. Prevenir futuros ataques mediante el aprendizaje continuo y la mejora de defensas.   
 
 #### 1.2. Objetivos principales de un SOC
 
@@ -53,13 +54,16 @@ El SOC tiene como objetivo proteger los activos críticos de la organización (d
 
 1. **Prevención:** Implementar controles y configuraciones para evitar ataques.
 
-   *Ejemplo:* Configurar firewalls para bloquear conexiones no autorizadas. Configurar IDS/IPS para detectar y bloquear ataques.
+   *Ejemplo:* Configurar firewalls para bloquear conexiones no autorizadas. Configurar IDS/IPS para detectar y bloquear ataques.  
+
 2. **Detección:** Detectar actividades sospechosas que puedan ser indicativas de un incidente de seguridad.
 
-   *Ejemplo:* Alertas del SIEM que detectan intentos de acceso inusuales, según reglas de detección configuradas.
+   *Ejemplo:* Alertas del SIEM que detectan intentos de acceso inusuales, según reglas de detección configuradas.   
+
 3. **Respuesta:** Actuar rápidamente para minimizar el impacto de los incidentes.
 
-   *Ejemplo:* Aislar un servidor comprometido para evitar que un malware se propague y eliminar la amenaza.
+   *Ejemplo:* Aislar un servidor comprometido para evitar que un malware se propague y eliminar la amenaza.    
+
 4. **Recuperación:** Restaurar los sistemas afectados y garantizar que vuelvan a operar normalmente.
 
    *Ejemplo:* Restaurar datos desde una copia de seguridad tras un ataque de ransomware.
@@ -70,28 +74,31 @@ En el mundo de la ciberseguridad, es común encontrar términos como SOC, CERT, 
 
 ##### 1.3.1. Definición de términos
 
-1. **SOC (Security Operations Center):** Centro de operaciones de seguridad, que se encarga de la **supervisión continua, detección, respuesta y prevención** de amenazas. Su enfoque es amplio y abarca todas las operaciones de seguridad. El SOC es el encargado de la seguridad de la organización y abarca todas las operaciones de seguridad.
-2. **CERT (Computer Emergency Response Team):** Equipo especializado en preparar y responder a **emergencias de ciberseguridad**, como ataques DDoS o ransomware. Suele actuar de manera reactiva ante incidentes.
-3. **CIRT (Computer Incident Response Team):** Similar al CERT, pero centrado en la gestión de **incidentes de seguridad específicos**, con un enfoque en la contención y erradicación.
-4. **CSIRT (Computer Security Incident Response Team):** Variante más amplia del CIRT, que incluye una visión más estratégica y alineada con las políticas de seguridad.
+1. **SOC (Security Operations Center):** Centro de operaciones de seguridad, que se encarga de la **supervisión continua, detección, respuesta y prevención** de amenazas. Su enfoque es amplio y abarca todas las operaciones de seguridad. El SOC es el encargado de la seguridad de la organización y abarca todas las operaciones de seguridad.   
+2. **CERT (Computer Emergency Response Team):** Equipo especializado en preparar y responder a **emergencias de ciberseguridad**, como ataques DDoS o ransomware. Suele actuar de manera reactiva ante incidentes.   
+3. **CIRT (Computer Incident Response Team):** Similar al CERT, pero centrado en la gestión de **incidentes de seguridad específicos**, con un enfoque en la contención y erradicación.   
+4. **CSIRT (Computer Security Incident Response Team):** Variante más amplia del CIRT, que incluye una visión más estratégica y alineada con las políticas de seguridad.    
 
 ##### 1.3.2. Relación y diferencias clave
 
 * **Relación:** Un SOC generalmente abarca múltiples aspectos de las operaciones de seguridad, mientras que los CSIRT, CERT y CIRTS se enfocan específicamente en la respuesta a incidentes. El SOC normalmente incluirá además las funciones de CERT/CIRT/CSIRT como parte de sus operaciones.
 
-  Los términos CERT, CIRT y CSIRT suelen utilizarse como sinónimos, aunque pueden tener diferencias sutiles en su alcance y enfoque. En general, estos equipos **se activan ante incidentes críticos** y trabajan para contener, investigar y mitigar los daños.
+   Los términos CERT, CIRT y CSIRT suelen utilizarse como sinónimos, aunque pueden tener diferencias sutiles en su alcance y enfoque. En general, estos equipos **se activan ante incidentes críticos** y trabajan para contener, investigar y mitigar los daños.
 
-  CSIRT y CIRT son casi siempre casi equivalentes, referentes a respuesta de incidentes de seguridad informática. Respecto al término CERT, aunque muchas compañías lo usan de forma genérica, ha sido una marca registrada de *Carnegie Mellon University* desde 1997, y se enfoca más ampliamente en mejorar la respuesta a incidentes.
+   CSIRT y CIRT son casi siempre casi equivalentes, referentes a respuesta de incidentes de seguridad informática. Respecto al término CERT, aunque muchas compañías lo usan de forma genérica, ha sido una marca registrada de *Carnegie Mellon University* desde 1997, y se enfoca más ampliamente en mejorar la respuesta a incidentes.    
+
 * **Diferencias:**
 
-  * **SOC:** Supervisión continua y gestión integral de las operaciones de seguridad.
-  * **CERT/CIRT/CSIRT:** Actúan principalmente ante incidentes de ciberseguridad, para contener, eliminar y recuperarse de los mismos.
+   * **SOC:** Supervisión continua y gestión integral de las operaciones de seguridad.   
+   * **CERT/CIRT/CSIRT:** Actúan principalmente ante incidentes de ciberseguridad, para contener, eliminar y recuperarse de los mismos.   
+  
 * **Ejemplo:**
 
-  * A través de los servicios y herramientas que hay implementadas en el SOC, se detecta un comportamiento sospechoso y genera una alerta.
-  * El equipo de respuesta a incidentes investiga el incidente y coordina la respuesta: Contener el ataque, eliminar la amenaza.
-  * Tras contener el ataque, el equipo de respuesta a incidentes continua con la recuperación de los sistemas afectados.
-* **Analogía:** El SOC es como un hospital completo que incluye áreas de prevención, diagnóstico y tratamiento, mientras que un CERT/CIRT/CSIRT sería como la unidad de emergencias, que se activa solo cuando ocurre un evento crítico.
+   * A través de los servicios y herramientas que hay implementadas en el SOC, se detecta un comportamiento sospechoso y genera una alerta.   
+   * El equipo de respuesta a incidentes investiga el incidente y coordina la respuesta: Contener el ataque, eliminar la amenaza.   
+   * Tras contener el ataque, el equipo de respuesta a incidentes continua con la recuperación de los sistemas afectados.    
+  
+* **Analogía:** El SOC es como un hospital completo que incluye áreas de prevención, diagnóstico y tratamiento, mientras que un CERT/CIRT/CSIRT sería como la unidad de emergencias, que se activa solo cuando ocurre un evento crítico.    
 
 #### 1.4. Importancia de los SOC en la ciberseguridad empresarial
 
@@ -109,13 +116,16 @@ Las organizaciones enfrentan un aumento en la frecuencia, sofisticación y diver
 
 1. **Protección proactiva:** Los SOC no solo reaccionan a amenazas, sino que también trabajan para prevenirlas.
 
-   *Ejemplo:* Un SOC implementa reglas en el SIEM para bloquear intentos de fuerza bruta antes de que comprometan un sistema.
+   *Ejemplo:* Un SOC implementa reglas en el SIEM para bloquear intentos de fuerza bruta antes de que comprometan un sistema.    
+
 2. **Respuesta rápida:** Los SOC reducen el tiempo de respuesta a incidentes críticos.
 
-   *Ejemplo:* Detectar y contener un ataque en minutos puede evitar una filtración masiva de datos.
+   *Ejemplo:* Detectar y contener un ataque en minutos puede evitar una filtración masiva de datos.   
+
 3. **Cumplimiento normativo:** Ayudan a las organizaciones a cumplir con regulaciones como GDPR, ISO 27001 o NIST CSF.
 
-   *Ejemplo:* Generar reportes de incidentes detallados para auditorías regulatorias.
+   *Ejemplo:* Generar reportes de incidentes detallados para auditorías regulatorias.   
+
 4. **Confianza del cliente:** Un SOC demuestra el compromiso de la organización con la seguridad, fortaleciendo la confianza de clientes y socios.
 
    *Ejemplo:* Mostrar a los clientes que sus datos están protegidos y que la empresa está preparada para enfrentar amenazas.
@@ -131,6 +141,9 @@ El SOC es mucho más que un equipo técnico; es una estructura estratégica que 
 ### 2. Componentes de un SOC
 
 Los Centros de Operaciones de Seguridad están compuestos por varios elementos clave que trabajan en conjunto para proteger la infraestructura y los datos de una organización. Estos elementos incluyen personas, procesos, tecnologías y servicios. Cada uno de ellos desempeña un papel único y esencial dentro del funcionamiento de un SOC.
+
+![Componentes de un SOC](./assets/IS-U2.2.1.-SOC-ServiciosYHerramientas-1736785548912.png)
+
 
 Para entender cómo se estructuran y colaboran estos componentes, abordaremos cada uno de ellos por separado, con ejemplos y descripciones detalladas.
 
@@ -152,17 +165,17 @@ Un SOC incluye una variedad de roles especializados, diseñados para cubrir dist
 
    - *Nivel 1:* Monitorea eventos y alerta sobre actividades sospechosas.
 
-     *Ejemplo:* Revisión de un intento de inicio de sesión desde ubicaciones inusuales.    
+      *Ejemplo:* Revisión de un intento de inicio de sesión desde ubicaciones inusuales.    
    
    - *Nivel 2:* Investiga las alertas generadas por el Nivel 1 para determinar si son incidentes reales.
 
-     *Ejemplo:* Analizar patrones de tráfico para confirmar si un ataque está en curso.    
+      *Ejemplo:* Analizar patrones de tráfico para confirmar si un ataque está en curso.    
    
    - *Nivel 3:* Maneja incidentes complejos y realiza análisis forenses.
 
-     *Ejemplo:* Determinar cómo un atacante accedió a un sistema y prevenir futuros ataques.    
+      *Ejemplo:* Determinar cómo un atacante accedió a un sistema y prevenir futuros ataques.    
    
-3. **Threat Hunters:** Buscan proactivamente amenazas avanzadas que pueden haber evadido los controles de seguridad de nuestra organización.
+3. **Especialistas en Threat Hunters:** Buscan proactivamente amenazas avanzadas que pueden haber evadido los controles de seguridad de nuestra organización.
 
    *Ejemplo:* Buscar señales de un malware recién descubierto que afecta a empresas similares.   
 
@@ -196,9 +209,9 @@ Los procesos son los pasos estructurados y repetibles que un SOC sigue para mane
 
 **Ejemplo:** Supongamos que el SOC recibe una alerta sobre tráfico sospechoso en un servidor web. El proceso estándar indicaría los pasos sobre como verificar la fuente del tráfico, determinar si es legítimo o malicioso, y tomar medidas correctivas.
 
-Los procesos que un SOC puede seguir incluyen:
+Un ejemplo de los procesos que podemos encontrarnos en un SOC son los siguientes:
 
-##### 2.2.1. Procesos clave en un SOC
+##### 2.2.1. Procesos en un SOC
 
 1. **Monitoreo continuo:** Supervisión 24/7 de eventos y alertas.
 
@@ -218,6 +231,9 @@ Los veremos con un poco más de detalle más adelante.
 ##### 2.2.2. Importancia de la estandarización de procesos
 
 La estandarización asegura que todos los analistas trabajen de manera consistente y que el SOC opere según las mejores prácticas de la industria.
+
+![Pasos en la respuesta a un incidente NIST CFS](./assets/IS-U2.2.1.-SOC-ServiciosYHerramientas-1736785655904.png)
+
 
 * **Los marcos más utilizados incluyen:**
 
@@ -253,7 +269,7 @@ Las herramientas clave que se utilizan en un SOC incluyen:
 
    *Ejemplo:* Crear un ticket para investigar un ataque de phishing y asignar tareas a los analistas.    
 
-5. **Herramientas de monitoreo de red y endpoints:** Supervisan el tráfico y las actividades en dispositivos finales.
+5. **Herramientas de monitoreo de red y endpoints (IDS/IPS,XDR):** Supervisan el tráfico y las actividades en dispositivos finales.
 
    *Ejemplo:* Documentar cada etapa del manejo de un ataque de phishing.
 
@@ -298,6 +314,10 @@ Las tecnologías son el esqueleto que soporta las operaciones de un SOC. Desde h
 
 Los servicios que ofrece un Centro de Operaciones de Seguridad (SOC) son el resultado del trabajo conjunto de sus personas, procesos y tecnologías. Cada servicio aborda aspectos específicos de la ciberseguridad, desde la identificación temprana de amenazas hasta la recuperación posterior a un incidente. Estos servicios permiten a una organización no solo reaccionar a los incidentes, sino también anticiparse a ellos y aprender de cada evento para fortalecer sus defensas.
 
+
+![Interconexión servicios de un SOC](./assets/IS-U2.2.1.-SOC-ServiciosYHerramientas-1736785775500.png)
+
+
 Los servicios principales de un SOC incluyen los siguientes:
 
 ##### 2.4.1. Servicios principales
@@ -306,7 +326,11 @@ Los servicios principales de un SOC incluyen los siguientes:
 
    *Ejemplo:* Crear un informe sobre un ransomware específico que afecta a empresas del mismo sector.    
 
-2. **Monitoring & Triage:** Gestiona alertas y determina su relevancia.
+2. **SIEM Intelligence & alerting :** Configura y mantiene reglas de detección en el SIEM.
+
+   *Ejemplo:* Actualizar reglas para detectar nuevas variantes de malware.
+
+3. **Monitoring & Triage:** Gestiona alertas y determina su relevancia.
 
    *Ejemplo:* Filtrar falsos positivos de intentos de inicio de sesión.    
 
@@ -321,6 +345,10 @@ Los servicios principales de un SOC incluyen los siguientes:
 5. **Threat Hunting:** Busca amenazas que las herramientas automáticas podrían haber omitido.
 
    *Ejemplo:* Buscar señales de un ataque avanzado que evadió los controles de seguridad.
+
+6. **Purple Team:** Colabora con el equipo de Red Team para mejorar la detección y respuesta a amenazas.
+
+   *Ejemplo:* Simular un ataque de ransomware para
 
 Los veremos con un poco más de detalle más adelante.
 
@@ -349,7 +377,7 @@ Los servicios del SOC no funcionan de manera aislada. Hay una interacción const
    * *Solución:* Comenzar con servicios esenciales e ir añadiendo capacidades conforme crece la madurez del SOC.    
 
 
-Los servicios de un SOC necesarios para gestionar la ciberseguridad de manera proactiva y reactiva. Cada servicio cumple un papel único, pero su valor real radica en cómo interactúan para formar una defensa cohesiva contra amenazas. Un SOC bien diseñado no solo responde a incidentes, sino que también aprende y mejora continuamente para anticiparse a los ataques futuros.
+Los servicios de un SOC son necesarios para gestionar la ciberseguridad de manera proactiva y reactiva. Cada servicio cumple un papel único, pero su valor real radica en cómo interactúan para formar una defensa cohesiva contra amenazas. Un SOC bien diseñado no solo responde a incidentes, sino que también aprende y mejora continuamente para anticiparse a los ataques futuros.
 
 Un SOC eficaz requiere una integración armoniosa entre personas capacitadas, procesos definidos, tecnologías avanzadas y servicios bien implementados. Estos componentes trabajan juntos para proteger a las organizaciones frente a amenazas cibernéticas modernas.
 
@@ -402,75 +430,103 @@ Un SOC tercerizado es operado por un proveedor externo que ofrece servicios de s
   
    2. **Riesgos de confidencialidad:** Compartir datos sensibles con un tercero puede ser un desafío para empresas con requisitos estrictos.
 
-##### **3.1.3. Modelos híbridos**
+##### 3.1.3. Modelos híbridos
 Algunas organizaciones optan por un enfoque híbrido, donde ciertas funciones del SOC son internas y otras son tercerizadas.    
 
 *Ejemplo:* Una empresa puede mantener un equipo interno para gestionar incidentes críticos mientras utiliza un MSSP para monitorear la red 24/7.
-
 
 
 #### 3.2. Relación entre capacidades, servicios y procesos
 
 El SOC es un ecosistema interdependiente donde las capacidades, servicios y procesos trabajan en conjunto para proteger a la organización.
 
-##### **3.2.1. Definición de términos**
-1. **Capacidades:** Habilidades o competencias del SOC, como detección, respuesta y recuperación.
-2. **Servicios:** Funciones específicas que ofrece el SOC, como Threat Intelligence o Incident Response. 
-3. **Procesos:** Pasos definidos que guían cómo se llevan a cabo las operaciones del SOC. 
+##### 3.2.1. Definición de términos
+
+1. **Capacidades:** Habilidades o competencias del SOC, como detección, respuesta y recuperación.    
+
+2. **Servicios:** Funciones específicas que ofrece el SOC, como Threat Intelligence o Incident Response.    
+
+3. **Procesos:** Pasos definidos que guían cómo se llevan a cabo las operaciones del SOC.   
 
 Un ejemplo en el que se diferencien las distintas partes claramente, sería: 
 
-- **Capacidad:** Ser capaz de detectar un ataque de phishing.
-- **Servicio:** Ofrecer un servicio de Threat Intelligence que alerte sobre campañas novedosas de pishing, que aunque no hayan sido detectadas por las capacidades del SOC, si han sido detectadas por otros equipos de seguridad.
-- **Proceso:** Tener un proceso de respuesta a incidentes que incluya la detección de un ataque de phishing, la contención del mismo, la recuperación de los sistemas afectados y el análisis post-incidente.
+- **Capacidad:** Ser capaz de detectar un ataque de phishing.    
+
+- **Servicio:** Ofrecer un servicio de Threat Intelligence que alerte sobre campañas novedosas de pishing, que aunque no hayan sido detectadas por las capacidades del SOC, si han sido detectadas por otros equipos de seguridad.    
+
+- **Proceso:** Tener un proceso de respuesta a incidentes que incluya la detección de un ataque de phishing, la contención del mismo, la recuperación de los sistemas afectados y el análisis post-incidente.   
 
 
-##### **3.2.2. Sinergia entre componentes**
-1. **Capacidades habilitan servicios:** Por ejemplo, la capacidad de detección es esencial para el servicio de SIEM Intelligence.
-2. **Procesos garantizan eficiencia:** Procesos bien diseñados aseguran que los servicios sean prestados de manera efectiva.
-3. **Ejemplo práctico:**
-    - Capacidad: Identificar amenazas avanzadas.
-    - Servicio: Threat Hunting, que se apoya en información de Threat Intelligence.
-    - Proceso: El equipo de Threat Hunting sigue un flujo estructurado que comienza con la creación de una hipótesis basada en TTPs y termina con un reporte de hallazgos.
 
-##### **3.2.3. Importancia de la integración**
-Una integración efectiva entre capacidades, servicios y procesos asegura que los flujos de trabajo sean fluidos y reduzcan los tiempos de respuesta.
-- **Ejemplo:** Si el servicio de Incident Response no está integrado con el proceso de análisis forense, puede haber retrasos en la recuperación de sistemas comprometidos.
+##### 3.2.2. Sinergia entre componentes
 
----
+1. **Capacidades habilitan servicios:** Por ejemplo, la capacidad de detección es esencial para el servicio de SIEM Intelligence.    
 
-#### **3.3. Fases de implementación: Negocio, personas, procesos, tecnologías y servicios**
+2. **Procesos garantizan eficiencia:** Procesos bien diseñados aseguran que los servicios sean prestados de manera efectiva.     
+
+3. **Ejemplo práctico:**   
+
+   - Capacidad: Identificar amenazas avanzadas.    
+
+   - Servicio: Threat Hunting, que se apoya en información de Threat Intelligence.   
+
+   - Proceso: El equipo de Threat Hunting sigue un flujo estructurado que comienza con la creación de una hipótesis basada en TTPs y termina con un reporte de hallazgos.   
+
+
+##### 3.2.3. Importancia de la integración
+
+Una integración efectiva entre capacidades, servicios y procesos asegura que los flujos de trabajo sean fluidos y reduzcan los tiempos de respuesta.    
+
+**Ejemplo:** Si el servicio de Incident Response no está integrado con el proceso de análisis forense, puede haber retrasos en la recuperación de sistemas comprometidos.
+
+
+
+#### 3.3. Fases de implementación: Negocio, personas, procesos, tecnologías y servicios
 
 La implementación de un SOC requiere un enfoque estructurado que cubra múltiples áreas críticas. Estas fases son fundamentales para garantizar que el SOC sea efectivo y sostenible.
 
-##### **3.3.1. Negocio**
-- **Definición de objetivos:** Identificar qué se espera lograr con el SOC.
-    - *Ejemplo práctico:* Proteger la confidencialidad de los datos de los clientes y cumplir con normativas como GDPR.
-- **Gestión de costes:** Determinar el presupuesto y planificar la inversión en tecnología y personal.
+##### 3.3.1. Negocio
+
+- **Definición de objetivos:** Identificar qué se espera lograr con el SOC.   
+
+   - *Ejemplo práctico:* Proteger la confidencialidad de los datos de los clientes y cumplir con normativas como GDPR.    
+
+- **Gestión de costes:** Determinar el presupuesto y planificar la inversión en tecnología y personal.   
+
 - **Documento de constitución:** Formalizar la misión, alcance y estructura del SOC.
 
-##### **3.3.2. Personas**
-- **Selección de roles:** Identificar los roles necesarios, desde analistas hasta gerentes.
-    - *Ejemplo práctico:* Contratar analistas SOC con experiencia en herramientas SIEM y Threat Intelligence.
-- **Capacitación inicial:** Asegurar que el equipo esté entrenado en los procesos y tecnologías del SOC.
+##### 3.3.2. Personas  
 
-##### **3.3.3. Procesos**
-- **Definición de flujos de trabajo:** Crear procesos para gestionar incidentes, realizar análisis forenses y actualizar reglas de detección.
-    - *Ejemplo práctico:* Diseñar un proceso de respuesta a incidentes que incluya fases de detección, contención y recuperación.
-- **Estandarización:** Implementar marcos como NIST CSF para estructurar las operaciones.
+- **Selección de roles:** Identificar los roles necesarios, desde analistas hasta gerentes.   
 
-##### **3.3.4. Tecnologías**
-- **Selección de herramientas:** Implementar tecnologías como SIEM, SOAR, y EDR.
-    - *Ejemplo práctico:* Configurar un SIEM para recopilar registros de toda la infraestructura tecnológica.
-- **Integración:** Asegurar que las herramientas trabajen en conjunto para maximizar la eficiencia.
+   - *Ejemplo práctico:* Contratar analistas SOC con experiencia en herramientas SIEM y Threat Intelligence.   
 
-##### **3.3.5. Servicios**
+- **Capacitación inicial:** Asegurar que el equipo esté entrenado en los procesos y tecnologías del SOC.    
+
+
+##### 3.3.3. Procesos 
+
+- **Definición de flujos de trabajo:** Crear procesos para gestionar incidentes, realizar análisis forenses y actualizar reglas de detección.    
+
+   - *Ejemplo práctico:* Diseñar un proceso de respuesta a incidentes que incluya fases de detección, contención y recuperación.    
+
+- **Estandarización:** Implementar marcos como NIST CSF para estructurar las operaciones.    
+
+ 
+##### 3.3.4. Tecnologías
+
+- **Selección de herramientas:** Implementar tecnologías como SIEM, SOAR, y EDR.    
+
+   - *Ejemplo práctico:* Configurar un SIEM para recopilar registros de toda la infraestructura tecnológica.    
+
+- **Integración:** Asegurar que las herramientas trabajen en conjunto para maximizar la eficiencia.    
+
+
+##### 3.3.5. Servicios
+
 - **Definición de servicios iniciales:** Comenzar con servicios básicos como monitoreo y respuesta a incidentes, y añadir otros como Threat Hunting a medida que el SOC madura.
+
 - **Establecimiento de métricas:** Medir la efectividad de los servicios para justificar inversiones futuras.
-
----
-
-### **Conclusión del punto 3**
 
 El diseño y estructura de un SOC deben adaptarse a las necesidades específicas de cada organización. Desde decidir entre un SOC interno o tercerizado, hasta integrar capacidades, servicios y procesos, cada decisión afecta directamente la efectividad del SOC. Una implementación bien planificada, que abarque las áreas de negocio, personas, procesos, tecnologías y servicios, garantiza que el SOC sea una pieza clave en la estrategia de ciberseguridad de la organización.
 
@@ -586,6 +642,7 @@ Las tecnologías permiten a los analistas realizar su trabajo de manera eficient
 
 En este apartado exploraremos las tecnologías clave utilizadas en un SOC, su función específica y cómo se integran para formar un ecosistema de seguridad robusto.
 
+
 ##### 2.3.1. Herramientas principales en un SOC
 
 El SOC utiliza una combinación de herramientas que se complementan para proporcionar capacidades de monitoreo, detección, análisis y respuesta. Estas herramientas se agrupan según su función:
@@ -596,12 +653,14 @@ El SIEM es el corazón tecnológico del SOC. Su función principal es recopilar 
 
 - **Funciones clave:**
 
-  1. **Recolección de datos:** Agrupa registros (logs) de sistemas, aplicaciones, firewalls, routers y otros dispositivos.
-  2. **Correlación:** Analiza patrones en los datos para identificar posibles amenazas.
-  3. **Generación de alertas:** Notifica al equipo cuando detecta un comportamiento sospechoso.
+   1. **Recolección de datos:** Agrupa registros (logs) de sistemas, aplicaciones, firewalls, routers y otros dispositivos.   
+   2. **Correlación:** Analiza patrones en los datos para identificar posibles amenazas.    
+   3. **Generación de alertas:** Notifica al equipo cuando detecta un comportamiento sospechoso.    
 
-  *Ejemplo práctico:* Si detecta múltiples intentos de acceso fallidos seguidos por un inicio de sesión exitoso desde una ubicación inusual, el SIEM genera una alerta para investigar un posible ataque de fuerza bruta.
-- **Beneficio adicional:** Los sistemas SIEM modernos incluyen capacidades de inteligencia artificial (IA) para mejorar la precisión de las alertas y reducir los falsos positivos.
+   *Ejemplo práctico:* Si detecta múltiples intentos de acceso fallidos seguidos por un inicio de sesión exitoso desde una ubicación inusual, el SIEM genera una alerta para investigar un posible ataque de fuerza bruta.   
+
+- **Beneficio adicional:** Los sistemas SIEM modernos incluyen capacidades de inteligencia artificial (IA) para mejorar la precisión de las alertas y reducir los falsos positivos.    
+
 - **Ejemplo de herramientas SIEM:** Splunk, IBM QRadar, ArcSight (Micro Focus), LogRhythm, Sumo Logic, SolarWinds Security Event Manager, Elastic Security, Microsoft Sentinel, Graylog, ManageEngine Log360.
 
 ###### 2.3.1.2. SOAR (Security Orchestration, Automation, and Response)
@@ -700,6 +759,13 @@ Estas herramientas permiten a los equipos analizar incidentes después de que ha
 #### **2.4. Servicios**
 
 Los servicios que ofrece un SOC son el resultado de la colaboración entre las personas, procesos y tecnologías. Ahora exploraremos los servicios más destacados.
+
+
+![Interconexión servicios de un SOC](./assets/IS-U2.2.1.-SOC-ServiciosYHerramientas-1736785775500.png)
+
+
+
+
 
 ##### **2.4.1. Servicios principales**
 

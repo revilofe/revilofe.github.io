@@ -116,19 +116,19 @@ Las organizaciones enfrentan un aumento en la frecuencia, sofisticación y diver
 
 ##### 1.4.2. Beneficios de contar con un SOC
 
-1. **Protección proactiva:** Los SOC no solo reaccionan a amenazas, sino que también trabajan para prevenirlas.
+- **Protección proactiva:** Los SOC no solo reaccionan a amenazas, sino que también trabajan para prevenirlas.
 
-   *Ejemplo:* Un SOC implementa reglas en el SIEM para bloquear intentos de fuerza bruta antes de que comprometan un sistema.    
+   *Ejemplo:* Un SOC implementa reglas en el SIEM para bloquear intentos de fuerza bruta antes de que comprometan un sistema.   
 
-2. **Respuesta rápida:** Los SOC reducen el tiempo de respuesta a incidentes críticos.
+- **Respuesta rápida:** Los SOC reducen el tiempo de respuesta a incidentes críticos.
 
-   *Ejemplo:* Detectar y contener un ataque en minutos puede evitar una filtración masiva de datos.    
+   *Ejemplo:* Detectar y contener un ataque en minutos puede evitar una filtración masiva de datos.   
 
-3. **Cumplimiento normativo:** Ayudan a las organizaciones a cumplir con regulaciones como GDPR, ISO 27001 o NIST CSF.
+- **Cumplimiento normativo:** Ayudan a las organizaciones a cumplir con regulaciones como GDPR, ISO 27001 o NIST CSF.
 
    *Ejemplo:* Generar reportes de incidentes detallados para auditorías regulatorias.   
 
-4. **Confianza del cliente:** Un SOC demuestra el compromiso de la organización con la seguridad, fortaleciendo la confianza de clientes y socios.
+- **Confianza del cliente:** Un SOC demuestra el compromiso de la organización con la seguridad, fortaleciendo la confianza de clientes y socios.
 
    *Ejemplo:* Mostrar a los clientes que sus datos están protegidos y que la empresa está preparada para enfrentar amenazas.
 
@@ -158,12 +158,12 @@ A continuación, exploraremos los roles clave en un SOC, la importancia de la fo
 
 Un SOC incluye una variedad de roles especializados, diseñados para cubrir distintos aspectos de la seguridad cibernética:
 
-1. **Gerente del SOC:** Supervisa las operaciones y coordina la respuesta a incidentes importantes.    
+- **Gerente del SOC:** Supervisa las operaciones y coordina la respuesta a incidentes importantes.    
 
    *Ejemplo:* Coordinar la respuesta a un ataque de ransomware que afecta a múltiples sistemas.    
 
 
-2. **Analistas SOC (Niveles 1, 2, 3):**     
+- **Analistas SOC (Niveles 1, 2, 3):**     
 
    - *Nivel 1:* Monitorea eventos y alerta sobre actividades sospechosas.
 
@@ -178,15 +178,15 @@ Un SOC incluye una variedad de roles especializados, diseñados para cubrir dist
       *Ejemplo:* Determinar cómo un atacante accedió a un sistema y prevenir futuros ataques.    
 
 
-3. **Especialistas en Threat Hunters:** Buscan proactivamente amenazas avanzadas que pueden haber evadido los controles de seguridad de nuestra organización.    
+- **Especialistas en Threat Hunters:** Buscan proactivamente amenazas avanzadas que pueden haber evadido los controles de seguridad de nuestra organización.    
 
-    *Ejemplo:* Buscar señales de un malware recién descubierto que afecta a empresas similares.    
+   *Ejemplo:* Buscar señales de un malware recién descubierto que afecta a empresas similares.    
 
-4. **Especialistas en Threat Intelligence:** Identifican nuevas amenazas que han surgido en el panorama de ciberseguridad y comparten información relevante con el equipo del SOC, por ejemplo actualizando reglas de detección del SIEM.    
+- **Especialistas en Threat Intelligence:** Identifican nuevas amenazas que han surgido en el panorama de ciberseguridad y comparten información relevante con el equipo del SOC, por ejemplo actualizando reglas de detección del SIEM.    
 
    *Ejemplo:* Investigar un aumento de ataques phishing en la región y compartir indicadores relevantes, como direcciones IP maliciosas, emails o URLs.    
 
-5. **Ingenieros de Seguridad:** Configuran y mantienen las herramientas tecnológicas del SOC.    
+- **Ingenieros de Seguridad:** Configuran y mantienen las herramientas tecnológicas del SOC.    
 
    *Ejemplo:* Configurar reglas de detección en el SIEM para alertar sobre actividades sospechosas. Estas reglas pueden ser actualizadas por los realizados por los especialistas en Threat Intelligence, por las lecciones aprendidas en incidentes previos, por los trabajos realizados por los Threat Hunters, etc.
 
@@ -216,17 +216,17 @@ Los procesos son los pasos estructurados y repetibles que un SOC sigue para mane
 
 Los procesos son fundamentales en un Centro de Operaciones de Seguridad (SOC). Representan la base sobre la que las personas y las tecnologías trabajan en conjunto para proteger a una organización frente a amenazas cibernéticas. Un proceso bien definido no solo asegura eficiencia, sino que también garantiza consistencia y mejora continua en la respuesta a incidentes.
 
-1. **Monitoreo continuo:** Supervisión 24/7 de eventos y alertas.
+- **Monitoreo continuo:** Supervisión 24/7 de eventos y alertas.
 
    *Ejemplo:* Utilizar un SIEM para correlacionar eventos de seguridad y detectar patrones sospechosos.    
 
 
-2. **Generación de reportes y métricas:** Evaluar la efectividad del SOC y cumplir con requisitos regulatorios.
+- **Generación de reportes y métricas:** Evaluar la efectividad del SOC y cumplir con requisitos regulatorios.
 
    *Ejemplo:* Producir un informe mensual que muestre el número de incidentes detectados y mitigados.
 
 
-3. **Gestión del conocimiento:** Documentar y compartir lecciones aprendidas de incidentes pasados.
+- **Gestión del conocimiento:** Documentar y compartir lecciones aprendidas de incidentes pasados.
 
    *Ejemplo:* Crear una base de datos de incidentes que incluya detalles sobre cómo se detectaron y mitigaron.
 
@@ -316,7 +316,7 @@ Estas herramientas recopilan información sobre amenazas emergentes y la compart
 
 Estas herramientas supervisan el tráfico de red y las actividades en dispositivos finales para detectar amenazas. Detectan comportamientos anómalos y responden a incidentes en tiempo real.
 
-***Tipo de herramientas:**
+**Tipo de herramientas:**
 
    1. **EDR (Endpoint Detection and Response):** Se enfoca en la seguridad de los dispositivos finales, como computadoras y servidores para detectar y responder a amenazas.
 
@@ -324,7 +324,7 @@ Estas herramientas supervisan el tráfico de red y las actividades en dispositiv
 
    2. **NDR (Network Detection and Response):** Se enfoca en la seguridad de la red, monitorea el tráfico de red para identificar comportamientos anómalos.
 
-     *Ejemplo:* Detectar una transferencia de datos inusualmente grande a un servidor externo.    
+      *Ejemplo:* Detectar una transferencia de datos inusualmente grande a un servidor externo.    
 
 **Beneficio adicional:** Proporcionan visibilidad en tiempo real de las actividades en la red y los dispositivos finales, enviando alertas cuando se detectan amenazas potenciales. Suministran logs y datos de tráfico para análisis forense.   
 
@@ -477,7 +477,7 @@ El funcionamiento del SOC se basa en la interacción entre sus servicios princip
 ![Monitoring & Triage](./assets/IS-U2.2.1.-SOC-ServiciosYHerramientas-1736796192187.png)
 
 
-* **Funciones principales:**    
+**Funciones principales:**    
 
   * Validar alertas del SIEM y priorizarlas según su criticidad.   
 
@@ -499,7 +499,7 @@ El funcionamiento del SOC se basa en la interacción entre sus servicios princip
 ![Incident Response](./assets/IS-U2.2.1.-SOC-ServiciosYHerramientas-1736795652317.png)
 
 
-* **Funciones principales:**   
+**Funciones principales:**   
 
    * Contener amenazas activas.    
 
@@ -517,7 +517,7 @@ El funcionamiento del SOC se basa en la interacción entre sus servicios princip
 
 **Forensics** investiga los incidentes para entender cómo ocurrieron, su impacto y cómo prevenir futuros ataques. Este servicio es esencial para fortalecer las defensas de la organización.
 
-* **Funciones principales:**   
+**Funciones principales:**   
 
    * Recolectar, salvaguardar y analizar evidencias digitales.    
 
@@ -559,7 +559,7 @@ El funcionamiento del SOC se basa en la interacción entre sus servicios princip
 
 **Purple Team** evalúa la efectividad del SOC mediante simulaciones de ataques y pruebas de las defensas existentes. Este servicio conecta las capacidades del Blue Team (defensivo) y el Red Team (ofensivo).
 
-* **Funciones principales:**    
+**Funciones principales:**    
 
    * Simular ataques controlados para probar las defensas del SOC.   
   
@@ -599,15 +599,15 @@ Este flujo asegura que cada servicio funcione de manera independiente, pero inte
 
 1. **Falta de integración:** Si las herramientas y procesos no están alineados, los servicios pueden no ser efectivos.
 
-   * *Solución:* Usar plataformas que centralicen la gestión y faciliten la colaboración.    
+   *Solución:* Usar plataformas que centralicen la gestión y faciliten la colaboración.    
 
 2. **Sobrecarga de alertas:** Un exceso de alertas puede abrumar a los equipos de Monitoring & Triage.
 
-   * *Solución:* Afinar las reglas del SIEM y priorizar alertas críticas.     
+   *Solución:* Afinar las reglas del SIEM y priorizar alertas críticas.     
 
 3. **Costos:** Los servicios avanzados como Threat Hunting y Purple Team pueden requerir inversiones significativas.
 
-   * *Solución:* Comenzar con servicios esenciales e ir añadiendo capacidades conforme crece la madurez del SOC.
+   *Solución:* Comenzar con servicios esenciales e ir añadiendo capacidades conforme crece la madurez del SOC.
 
 Los servicios de un SOC son necesarios para gestionar la ciberseguridad de manera proactiva y reactiva. Cada servicio cumple un papel único, pero su valor real radica en cómo interactúan para formar una defensa cohesiva contra amenazas. Un SOC bien diseñado no solo responde a incidentes, sino que también aprende y mejora continuamente para anticiparse a los ataques futuros.
 

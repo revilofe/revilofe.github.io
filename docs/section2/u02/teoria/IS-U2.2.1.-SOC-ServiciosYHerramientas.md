@@ -160,7 +160,9 @@ Un SOC incluye una variedad de roles especializados, diseñados para cubrir dist
 
 1. **Gerente del SOC:** Supervisa las operaciones y coordina la respuesta a incidentes importantes.
 
-   *Ejemplo:* Coordinar la respuesta a un ataque de ransomware que afecta a múltiples sistemas.
+   *Ejemplo:* Coordinar la respuesta a un ataque de ransomware que afecta a múltiples sistemas.    
+
+
 2. **Analistas SOC (Niveles 1, 2, 3):**
 
    - *Nivel 1:* Monitorea eventos y alerta sobre actividades sospechosas.
@@ -175,9 +177,10 @@ Un SOC incluye una variedad de roles especializados, diseñados para cubrir dist
 
       *Ejemplo:* Determinar cómo un atacante accedió a un sistema y prevenir futuros ataques.    
 
+
 3. **Especialistas en Threat Hunters:** Buscan proactivamente amenazas avanzadas que pueden haber evadido los controles de seguridad de nuestra organización.
 
-   *Ejemplo:* Buscar señales de un malware recién descubierto que afecta a empresas similares.    
+    *Ejemplo:* Buscar señales de un malware recién descubierto que afecta a empresas similares.    
 
 4. **Especialistas en Threat Intelligence:** Identifican nuevas amenazas que han surgido en el panorama de ciberseguridad y comparten información relevante con el equipo del SOC, por ejemplo actualizando reglas de detección del SIEM.
 
@@ -200,8 +203,11 @@ Para que un SOC funcione eficazmente, debe contar con procesos bien definidos qu
 Los procesos son los pasos estructurados y repetibles que un SOC sigue para manejar tareas clave como la detección de amenazas, la gestión de incidentes, la recuperación y el análisis post-incidente. Estos procesos están diseñados para:
 
 * **Estandarizar operaciones:** Asegurarse de que cada analista sepa exactamente qué hacer en cada situación.    
+
 * **Reducir el tiempo de respuesta:** Minimizar el impacto de los incidentes mediante una actuación rápida y efectiva.    
+
 * **Facilitar la comunicación:** Proveer un marco común para que todos los miembros del SOC trabajen en conjunto.    
+
 * **Promover la mejora continua:** Analizar cada incidente para aprender y mejorar los procesos.
 
 **Ejemplo:** Supongamos que el SOC recibe una alerta sobre tráfico sospechoso en un servidor web. El proceso estándar indicaría los pasos sobre como verificar la fuente del tráfico, determinar si es legítimo o malicioso, y tomar medidas correctivas.    
@@ -214,9 +220,11 @@ Los procesos son fundamentales en un Centro de Operaciones de Seguridad (SOC). R
 
    *Ejemplo:* Utilizar un SIEM para correlacionar eventos de seguridad y detectar patrones sospechosos.    
 
+
 2. **Generación de reportes y métricas:** Evaluar la efectividad del SOC y cumplir con requisitos regulatorios.
 
-   *Ejemplo:* Producir un informe mensual que muestre el número de incidentes detectados y mitigados.    
+   *Ejemplo:* Producir un informe mensual que muestre el número de incidentes detectados y mitigados.
+
 
 3. **Gestión del conocimiento:** Documentar y compartir lecciones aprendidas de incidentes pasados.
 
@@ -228,7 +236,7 @@ La estandarización asegura que todos los analistas trabajen de manera consisten
 
 ![Pasos en la respuesta a un incidente NIST CFS](./assets/IS-U2.2.1.-SOC-ServiciosYHerramientas-1736785655904.png)
 
-* **Los marcos más utilizados incluyen:**
+**Los marcos más utilizados incluyen:**
 
    1. **NIST Cybersecurity Framework (CSF):** Define cinco funciones clave: Identificar, Proteger, Detectar, Responder y Recuperar.    
    2. **ISO/IEC 27001:** Proporciona estándares para la gestión de la seguridad de la información.    
@@ -252,7 +260,7 @@ El SOC utiliza una combinación de herramientas que se complementan para proporc
 
 El SIEM es el corazón tecnológico del SOC. Su función principal es recopilar y correlacionar datos de múltiples fuentes para identificar eventos de seguridad relevantes.
 
-- **Funciones clave:**
+**Funciones clave:**
 
    1. **Recolección de datos:** Agrupa registros (logs) de sistemas, aplicaciones, firewalls, routers y otros dispositivos.   
    2. **Correlación:** Analiza patrones en los datos para identificar posibles amenazas.   
@@ -260,15 +268,15 @@ El SIEM es el corazón tecnológico del SOC. Su función principal es recopilar 
 
   *Ejemplo:* Si detecta múltiples intentos de acceso fallidos seguidos por un inicio de sesión exitoso desde una ubicación inusual, el SIEM genera una alerta para investigar un posible ataque de fuerza bruta.   
 
-- **Beneficio adicional:** Los sistemas SIEM modernos incluyen capacidades de inteligencia artificial (IA) para mejorar la precisión de las alertas y reducir los falsos positivos.    
+**Beneficio adicional:** Los sistemas SIEM modernos incluyen capacidades de inteligencia artificial (IA) para mejorar la precisión de las alertas y reducir los falsos positivos.    
 
-- **Ejemplo de herramientas SIEM:** Splunk, IBM QRadar, ArcSight (Micro Focus), LogRhythm, Sumo Logic, SolarWinds Security Event Manager, Elastic Security, Microsoft Sentinel, Graylog, ManageEngine Log360.
+**Ejemplo de herramientas SIEM:** Splunk, IBM QRadar, ArcSight (Micro Focus), LogRhythm, Sumo Logic, SolarWinds Security Event Manager, Elastic Security, Microsoft Sentinel, Graylog, ManageEngine Log360.
 
 ###### 2.3.1.2. SOAR (Security Orchestration, Automation, and Response)
 
 El SOAR automatiza tareas de respuesta y orquesta las interacciones entre herramientas del SOC.
 
-- **Funciones clave:**
+**Funciones clave:**
 
    1. **Automatización:** Responde automáticamente a amenazas comunes.
 
@@ -282,15 +290,15 @@ El SOAR automatiza tareas de respuesta y orquesta las interacciones entre herram
 
      *Ejemplo:* Crear un ticket para que un analista investigue un ataque phishing y asignar tareas para mitigar la amenaza.    
 
-- **Beneficio adicional:** Permite a los analistas centrarse en incidentes complejos, mientras automatiza las tareas repetitivas.    
+**Beneficio adicional:** Permite a los analistas centrarse en incidentes complejos, mientras automatiza las tareas repetitivas.    
 
-- **Ejemplo de herramientas SOAR:** Palo Alto Networks Cortex XSOAR, IBM Resilient, Splunk Phantom, Siemplify, Swimlane, DFLabs IncMan, CyberSponse.
+**Ejemplo de herramientas SOAR:** Palo Alto Networks Cortex XSOAR, IBM Resilient, Splunk Phantom, Siemplify, Swimlane, DFLabs IncMan, CyberSponse.
 
 ###### 2.3.1.3. Herramientas de Threat Intelligence
 
 Estas herramientas recopilan información sobre amenazas emergentes y la comparten con el SOC. Identifican patrones de ataque, IoCs y TTPs utilizados por actores maliciosos.
 
-- **Funciones clave:**
+**Funciones clave:**
 
    1. **Recopilación de IoCs (Indicadores de Compromiso):** Direcciones IP maliciosas, URLs sospechosas, hashes de archivos.
 
@@ -300,15 +308,15 @@ Estas herramientas recopilan información sobre amenazas emergentes y la compart
 
       *Ejemplo:* Identificar que un ransomware específico utiliza un puerto poco común para comunicarse con su servidor de control y comando, y bloquear ese tráfico.    
 
-- **Beneficio adicional:** Ayuda al SOC a anticiparse a nuevas amenazas antes de que impacten a la organización.    
+**Beneficio adicional:** Ayuda al SOC a anticiparse a nuevas amenazas antes de que impacten a la organización.    
 
-- **Ejemplo de herramientas de Threat Intelligence:** Recorded Future, ThreatConnect, Anomali, FireEye iSIGHT, IBM X-Force Exchange, AlienVault OTX, VirusTotal, OpenCTI (Open Cyber Threat Intelligence)
+**Ejemplo de herramientas de Threat Intelligence:** Recorded Future, ThreatConnect, Anomali, FireEye iSIGHT, IBM X-Force Exchange, AlienVault OTX, VirusTotal, OpenCTI (Open Cyber Threat Intelligence)
 
 ###### 2.3.1.4. Herramientas de monitoreo de red y endpoints
 
 Estas herramientas supervisan el tráfico de red y las actividades en dispositivos finales para detectar amenazas. Detectan comportamientos anómalos y responden a incidentes en tiempo real.
 
-- Tipo de herramientas:
+***Tipo de herramientas:**
 
    1. **EDR (Endpoint Detection and Response):** Se enfoca en la seguridad de los dispositivos finales, como computadoras y servidores para detectar y responder a amenazas.
 
@@ -318,15 +326,15 @@ Estas herramientas supervisan el tráfico de red y las actividades en dispositiv
 
      *Ejemplo:* Detectar una transferencia de datos inusualmente grande a un servidor externo.    
 
-- **Beneficio adicional:** Proporcionan visibilidad en tiempo real de las actividades en la red y los dispositivos finales, enviando alertas cuando se detectan amenazas potenciales. Suministran logs y datos de tráfico para análisis forense.   
+**Beneficio adicional:** Proporcionan visibilidad en tiempo real de las actividades en la red y los dispositivos finales, enviando alertas cuando se detectan amenazas potenciales. Suministran logs y datos de tráfico para análisis forense.   
 
-- **Ejemplo de herramientas EDR:** CrowdStrike Falcon, Carbon Black, SentinelOne, Cylance, McAfee ENS, Microsoft Defender for Endpoint.
+**Ejemplo de herramientas EDR:** CrowdStrike Falcon, Carbon Black, SentinelOne, Cylance, McAfee ENS, Microsoft Defender for Endpoint.
 
 ###### 2.3.1.5. Herramientas IDS/IPS
 
 Los sistemas de detección y prevención de intrusiones (IDS/IPS) monitorean y bloquean actividades maliciosas en la red.
 
-- **Funciones clave:**
+**Funciones clave:**
 
    1. **Detección:** Identificar intentos de intrusión o comportamientos sospechosos.
 
@@ -336,15 +344,15 @@ Los sistemas de detección y prevención de intrusiones (IDS/IPS) monitorean y b
 
       *Ejemplo:* Un IPS detecta un escaneo de puertos inusual y bloquea la IP del atacante.    
 
-- **Beneficio adicional:** Protege la red contra ataques conocidos y desconocidos.    
+**Beneficio adicional:** Protege la red contra ataques conocidos y desconocidos.    
 
-- **Ejemplo de herramientas IDS/IPS:** Snort, Suricata, Cisco Firepower, Palo Alto Networks, Fortinet, Check Point.
+**Ejemplo de herramientas IDS/IPS:** Snort, Suricata, Cisco Firepower, Palo Alto Networks, Fortinet, Check Point.
 
 ###### 2.3.1.6. Sistemas de ticketing
 
 Los sistemas de ticketing gestionan y documentan los incidentes dentro del SOC. Permiten asignar tareas, hacer seguimiento de la resolución y documentar las acciones tomadas.
 
-- **Funciones clave:**
+**Funciones clave:**
 
    1. **Registro de incidentes:** Cada incidente se documenta con detalles como la fecha, la gravedad y las acciones tomadas.
 
@@ -354,15 +362,15 @@ Los sistemas de ticketing gestionan y documentan los incidentes dentro del SOC. 
 
       *Ejemplo:* Cuando se detecta un ataque phishing, se genera un ticket para que un analista investigue los correos afectados.    
 
-- **Beneficio adicional:** Facilita la comunicación y la colaboración entre los miembros del equipo, asegurando que los incidentes se gestionen de manera eficiente.    
+**Beneficio adicional:** Facilita la comunicación y la colaboración entre los miembros del equipo, asegurando que los incidentes se gestionen de manera eficiente.    
 
-- **Ejemplo de herramientas de ticketing:** TheHive, IBM Resilient, Splunk SOAR (anteriormente Phantom), Cortex XSOAR (de Palo Alto Networks), DFLabs IncMan SOAR, Siemplify, LogRhythm SOAR, ServiceNow Security Operations, FortiSOAR (Fortinet), MISP (Malware Information Sharing Platform), Jira, ServiceNow, Freshdesk, OTRS.
+**Ejemplo de herramientas de ticketing:** TheHive, IBM Resilient, Splunk SOAR (anteriormente Phantom), Cortex XSOAR (de Palo Alto Networks), DFLabs IncMan SOAR, Siemplify, LogRhythm SOAR, ServiceNow Security Operations, FortiSOAR (Fortinet), MISP (Malware Information Sharing Platform), Jira, ServiceNow, Freshdesk, OTRS.
 
 ###### 2.3.1.7. Tecnologías de análisis forense
 
 Estas herramientas permiten a los equipos analizar incidentes después de que han ocurrido para comprender cómo sucedieron.
 
-- **Funciones clave:**
+**Funciones clave:**
 
    1. Recuperar, salvaguardar las evidencias digitales de los sistemas afectados.
 
@@ -372,9 +380,9 @@ Estas herramientas permiten a los equipos analizar incidentes después de que ha
 
      *Ejemplo:* Analizar los logs de un servidor comprometido para determinar si el atacante usó una vulnerabilidad de software específica.   
 
-- **Beneficio adicional:** Proporciona información valiosa para mejorar las defensas y prevenir futuros incidentes.    
+**Beneficio adicional:** Proporciona información valiosa para mejorar las defensas y prevenir futuros incidentes.    
 
-- **Ejemplo de herramientas de análisis forense:** EnCase Forensic, FTK (Forensic Toolkit by AccessData), Autopsy, Volatility, SIFT (SANS Investigative Forensic Toolkit), OSForensics, X-Ways Forensics, Sleuth Kit, Cellebrite, Magnet AXIOM, BlackLight, Oxygen Forensic Detective, Axiom Cyber, Cyber Triage, etc.
+**Ejemplo de herramientas de análisis forense:** EnCase Forensic, FTK (Forensic Toolkit by AccessData), Autopsy, Volatility, SIFT (SANS Investigative Forensic Toolkit), OSForensics, X-Ways Forensics, Sleuth Kit, Cellebrite, Magnet AXIOM, BlackLight, Oxygen Forensic Detective, Axiom Cyber, Cyber Triage, etc.
 
 ##### 2.3.2. Integración de tecnologías
 

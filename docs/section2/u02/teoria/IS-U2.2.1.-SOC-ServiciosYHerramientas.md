@@ -39,13 +39,14 @@ Los Centros de Operaciones de Seguridad (SOC, por sus siglas en inglés) son el 
 
 Un SOC es un centro de operaciones centralizado compuesto por profesionales de ciberseguridad, procesos estandarizados y tecnologías avanzadas, diseñado para supervisar, detectar, responder y prevenir amenazas de seguridad.
 
-* **Analogía:** Imagina un SOC como un “centro de control aéreo” para la ciberseguridad. Así como los controladores de tráfico aéreo supervisan vuelos y responden a emergencias, los analistas del SOC vigilan el tráfico digital de una organización y reaccionan ante amenazas.
+* **Analogía:** Imagina un SOC como un “centro de control aéreo” para la ciberseguridad. Así como los controladores de tráfico aéreo supervisan vuelos y responden a emergencias, los analistas del SOC vigilan el tráfico digital de una organización y reaccionan ante amenazas.    
+
 * **Funciones principales:**
 
-  1. Supervisar continuamente la infraestructura tecnológica (redes, sistemas, aplicaciones), asi como la información de la organización. Estar preparados y actualizados, buscando amenazas y vulnerabilidades.
-  2. Detectar amenazas o actividades sospechosas.
-  3. Responder y mitigar incidentes de seguridad.
-  4. Prevenir futuros ataques mediante el aprendizaje continuo y la mejora de defensas.
+   1. Supervisar continuamente la infraestructura tecnológica (redes, sistemas, aplicaciones), asi como la información de la organización. Estar preparados y actualizados, buscando amenazas y vulnerabilidades.   
+   2. Detectar amenazas o actividades sospechosas.   
+   3. Responder y mitigar incidentes de seguridad.   
+   4. Prevenir futuros ataques mediante el aprendizaje continuo y la mejora de defensas.   
 
 #### 1.2. Objetivos principales de un SOC
 
@@ -53,13 +54,16 @@ El SOC tiene como objetivo proteger los activos críticos de la organización (d
 
 1. **Prevención:** Implementar controles y configuraciones para evitar ataques.
 
-   *Ejemplo:* Configurar firewalls para bloquear conexiones no autorizadas. Configurar IDS/IPS para detectar y bloquear ataques.
+   *Ejemplo:* Configurar firewalls para bloquear conexiones no autorizadas. Configurar IDS/IPS para detectar y bloquear ataques.    
+
 2. **Detección:** Detectar actividades sospechosas que puedan ser indicativas de un incidente de seguridad.
 
-   *Ejemplo:* Alertas del SIEM que detectan intentos de acceso inusuales, según reglas de detección configuradas.
+   *Ejemplo:* Alertas del SIEM que detectan intentos de acceso inusuales, según reglas de detección configuradas.    
+
 3. **Respuesta:** Actuar rápidamente para minimizar el impacto de los incidentes.
 
-   *Ejemplo:* Aislar un servidor comprometido para evitar que un malware se propague y eliminar la amenaza.
+   *Ejemplo:* Aislar un servidor comprometido para evitar que un malware se propague y eliminar la amenaza.   
+
 4. **Recuperación:** Restaurar los sistemas afectados y garantizar que vuelvan a operar normalmente.
 
    *Ejemplo:* Restaurar datos desde una copia de seguridad tras un ataque de ransomware.
@@ -79,18 +83,23 @@ En el mundo de la ciberseguridad, es común encontrar términos como SOC, CERT, 
 
 * **Relación:** Un SOC generalmente abarca múltiples aspectos de las operaciones de seguridad, mientras que los CSIRT, CERT y CIRTS se enfocan específicamente en la respuesta a incidentes. El SOC normalmente incluirá además las funciones de CERT/CIRT/CSIRT como parte de sus operaciones.
 
-  Los términos CERT, CIRT y CSIRT suelen utilizarse como sinónimos, aunque pueden tener diferencias sutiles en su alcance y enfoque. En general, estos equipos **se activan ante incidentes críticos** y trabajan para contener, investigar y mitigar los daños.
+   Los términos CERT, CIRT y CSIRT suelen utilizarse como sinónimos, aunque pueden tener diferencias sutiles en su alcance y enfoque. En general, estos equipos **se activan ante incidentes críticos** y trabajan para contener, investigar y mitigar los daños.
 
-  CSIRT y CIRT son casi siempre casi equivalentes, referentes a respuesta de incidentes de seguridad informática. Respecto al término CERT, aunque muchas compañías lo usan de forma genérica, ha sido una marca registrada de *Carnegie Mellon University* desde 1997, y se enfoca más ampliamente en mejorar la respuesta a incidentes.
+   CSIRT y CIRT son casi siempre casi equivalentes, referentes a respuesta de incidentes de seguridad informática. Respecto al término CERT, aunque muchas compañías lo usan de forma genérica, ha sido una marca registrada de *Carnegie Mellon University* desde 1997, y se enfoca más ampliamente en mejorar la respuesta a incidentes.   
+
+
 * **Diferencias:**
 
-  * **SOC:** Supervisión continua y gestión integral de las operaciones de seguridad.
-  * **CERT/CIRT/CSIRT:** Actúan principalmente ante incidentes de ciberseguridad, para contener, eliminar y recuperarse de los mismos.
+   * **SOC:** Supervisión continua y gestión integral de las operaciones de seguridad.   
+
+   * **CERT/CIRT/CSIRT:** Actúan principalmente ante incidentes de ciberseguridad, para contener, eliminar y recuperarse de los mismos.   
+
 * **Ejemplo:**
 
-  * A través de los servicios y herramientas que hay implementadas en el SOC, se detecta un comportamiento sospechoso y genera una alerta.
-  * El equipo de respuesta a incidentes investiga el incidente y coordina la respuesta: Contener el ataque, eliminar la amenaza.
-  * Tras contener el ataque, el equipo de respuesta a incidentes continua con la recuperación de los sistemas afectados.
+   * A través de los servicios y herramientas que hay implementadas en el SOC, se detecta un comportamiento sospechoso y genera una alerta.   
+   * El equipo de respuesta a incidentes investiga el incidente y coordina la respuesta: Contener el ataque, eliminar la amenaza.    
+   * Tras contener el ataque, el equipo de respuesta a incidentes continua con la recuperación de los sistemas afectados.   
+
 * **Analogía:** El SOC es como un hospital completo que incluye áreas de prevención, diagnóstico y tratamiento, mientras que un CERT/CIRT/CSIRT sería como la unidad de emergencias, que se activa solo cuando ocurre un evento crítico.
 
 #### 1.4. Importancia de los SOC en la ciberseguridad empresarial
@@ -109,13 +118,16 @@ Las organizaciones enfrentan un aumento en la frecuencia, sofisticación y diver
 
 1. **Protección proactiva:** Los SOC no solo reaccionan a amenazas, sino que también trabajan para prevenirlas.
 
-   *Ejemplo:* Un SOC implementa reglas en el SIEM para bloquear intentos de fuerza bruta antes de que comprometan un sistema.
+   *Ejemplo:* Un SOC implementa reglas en el SIEM para bloquear intentos de fuerza bruta antes de que comprometan un sistema.    
+
 2. **Respuesta rápida:** Los SOC reducen el tiempo de respuesta a incidentes críticos.
 
-   *Ejemplo:* Detectar y contener un ataque en minutos puede evitar una filtración masiva de datos.
+   *Ejemplo:* Detectar y contener un ataque en minutos puede evitar una filtración masiva de datos.    
+
 3. **Cumplimiento normativo:** Ayudan a las organizaciones a cumplir con regulaciones como GDPR, ISO 27001 o NIST CSF.
 
-   *Ejemplo:* Generar reportes de incidentes detallados para auditorías regulatorias.
+   *Ejemplo:* Generar reportes de incidentes detallados para auditorías regulatorias.   
+
 4. **Confianza del cliente:** Un SOC demuestra el compromiso de la organización con la seguridad, fortaleciendo la confianza de clientes y socios.
 
    *Ejemplo:* Mostrar a los clientes que sus datos están protegidos y que la empresa está preparada para enfrentar amenazas.
@@ -153,19 +165,24 @@ Un SOC incluye una variedad de roles especializados, diseñados para cubrir dist
 
    - *Nivel 1:* Monitorea eventos y alerta sobre actividades sospechosas.
 
-     *Ejemplo:* Revisión de un intento de inicio de sesión desde ubicaciones inusuales.
+      *Ejemplo:* Revisión de un intento de inicio de sesión desde ubicaciones inusuales.   
+
    - *Nivel 2:* Investiga las alertas generadas por el Nivel 1 para determinar si son incidentes reales.
 
-     *Ejemplo:* Analizar patrones de tráfico para confirmar si un ataque está en curso.
+      *Ejemplo:* Analizar patrones de tráfico para confirmar si un ataque está en curso.    
+
    - *Nivel 3:* Maneja incidentes complejos y realiza análisis forenses.
 
-     *Ejemplo:* Determinar cómo un atacante accedió a un sistema y prevenir futuros ataques.
+      *Ejemplo:* Determinar cómo un atacante accedió a un sistema y prevenir futuros ataques.    
+
 3. **Especialistas en Threat Hunters:** Buscan proactivamente amenazas avanzadas que pueden haber evadido los controles de seguridad de nuestra organización.
 
-   *Ejemplo:* Buscar señales de un malware recién descubierto que afecta a empresas similares.
+   *Ejemplo:* Buscar señales de un malware recién descubierto que afecta a empresas similares.    
+
 4. **Especialistas en Threat Intelligence:** Identifican nuevas amenazas que han surgido en el panorama de ciberseguridad y comparten información relevante con el equipo del SOC, por ejemplo actualizando reglas de detección del SIEM.
 
-   *Ejemplo:* Investigar un aumento de ataques phishing en la región y compartir indicadores relevantes, como direcciones IP maliciosas, emails o URLs.
+   *Ejemplo:* Investigar un aumento de ataques phishing en la región y compartir indicadores relevantes, como direcciones IP maliciosas, emails o URLs.    
+
 5. **Ingenieros de Seguridad:** Configuran y mantienen las herramientas tecnológicas del SOC.
 
    *Ejemplo:* Configurar reglas de detección en el SIEM para alertar sobre actividades sospechosas. Estas reglas pueden ser actualizadas por los realizados por los especialistas en Threat Intelligence, por las lecciones aprendidas en incidentes previos, por los trabajos realizados por los Threat Hunters, etc.

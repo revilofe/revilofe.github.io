@@ -81,26 +81,26 @@ En el mundo de la ciberseguridad, es común encontrar términos como SOC, CERT, 
 
 ##### 1.3.2. Relación y diferencias clave
 
-* **Relación:** Un SOC generalmente abarca múltiples aspectos de las operaciones de seguridad, mientras que los CSIRT, CERT y CIRTS se enfocan específicamente en la respuesta a incidentes. El SOC normalmente incluirá además las funciones de CERT/CIRT/CSIRT como parte de sus operaciones.
+**Relación:** Un SOC generalmente abarca múltiples aspectos de las operaciones de seguridad, mientras que los CSIRT, CERT y CIRTS se enfocan específicamente en la respuesta a incidentes. El SOC normalmente incluirá además las funciones de CERT/CIRT/CSIRT como parte de sus operaciones.
 
    Los términos CERT, CIRT y CSIRT suelen utilizarse como sinónimos, aunque pueden tener diferencias sutiles en su alcance y enfoque. En general, estos equipos **se activan ante incidentes críticos** y trabajan para contener, investigar y mitigar los daños.
 
    CSIRT y CIRT son casi siempre casi equivalentes, referentes a respuesta de incidentes de seguridad informática. Respecto al término CERT, aunque muchas compañías lo usan de forma genérica, ha sido una marca registrada de *Carnegie Mellon University* desde 1997, y se enfoca más ampliamente en mejorar la respuesta a incidentes.   
 
 
-* **Diferencias:**
+**Diferencias:**
 
    * **SOC:** Supervisión continua y gestión integral de las operaciones de seguridad.   
 
    * **CERT/CIRT/CSIRT:** Actúan principalmente ante incidentes de ciberseguridad, para contener, eliminar y recuperarse de los mismos.   
 
-* **Ejemplo:**
+**Ejemplo:**
 
    * A través de los servicios y herramientas que hay implementadas en el SOC, se detecta un comportamiento sospechoso y genera una alerta.   
    * El equipo de respuesta a incidentes investiga el incidente y coordina la respuesta: Contener el ataque, eliminar la amenaza.    
    * Tras contener el ataque, el equipo de respuesta a incidentes continua con la recuperación de los sistemas afectados.   
 
-* **Analogía:** El SOC es como un hospital completo que incluye áreas de prevención, diagnóstico y tratamiento, mientras que un CERT/CIRT/CSIRT sería como la unidad de emergencias, que se activa solo cuando ocurre un evento crítico.
+**Analogía:** El SOC es como un hospital completo que incluye áreas de prevención, diagnóstico y tratamiento, mientras que un CERT/CIRT/CSIRT sería como la unidad de emergencias, que se activa solo cuando ocurre un evento crítico.
 
 #### 1.4. Importancia de los SOC en la ciberseguridad empresarial
 
@@ -158,12 +158,12 @@ A continuación, exploraremos los roles clave en un SOC, la importancia de la fo
 
 Un SOC incluye una variedad de roles especializados, diseñados para cubrir distintos aspectos de la seguridad cibernética:
 
-1. **Gerente del SOC:** Supervisa las operaciones y coordina la respuesta a incidentes importantes.
+1. **Gerente del SOC:** Supervisa las operaciones y coordina la respuesta a incidentes importantes.    
 
    *Ejemplo:* Coordinar la respuesta a un ataque de ransomware que afecta a múltiples sistemas.    
 
 
-2. **Analistas SOC (Niveles 1, 2, 3):**
+2. **Analistas SOC (Niveles 1, 2, 3):**     
 
    - *Nivel 1:* Monitorea eventos y alerta sobre actividades sospechosas.
 
@@ -178,15 +178,15 @@ Un SOC incluye una variedad de roles especializados, diseñados para cubrir dist
       *Ejemplo:* Determinar cómo un atacante accedió a un sistema y prevenir futuros ataques.    
 
 
-3. **Especialistas en Threat Hunters:** Buscan proactivamente amenazas avanzadas que pueden haber evadido los controles de seguridad de nuestra organización.
+3. **Especialistas en Threat Hunters:** Buscan proactivamente amenazas avanzadas que pueden haber evadido los controles de seguridad de nuestra organización.    
 
     *Ejemplo:* Buscar señales de un malware recién descubierto que afecta a empresas similares.    
 
-4. **Especialistas en Threat Intelligence:** Identifican nuevas amenazas que han surgido en el panorama de ciberseguridad y comparten información relevante con el equipo del SOC, por ejemplo actualizando reglas de detección del SIEM.
+4. **Especialistas en Threat Intelligence:** Identifican nuevas amenazas que han surgido en el panorama de ciberseguridad y comparten información relevante con el equipo del SOC, por ejemplo actualizando reglas de detección del SIEM.    
 
    *Ejemplo:* Investigar un aumento de ataques phishing en la región y compartir indicadores relevantes, como direcciones IP maliciosas, emails o URLs.    
 
-5. **Ingenieros de Seguridad:** Configuran y mantienen las herramientas tecnológicas del SOC.
+5. **Ingenieros de Seguridad:** Configuran y mantienen las herramientas tecnológicas del SOC.    
 
    *Ejemplo:* Configurar reglas de detección en el SIEM para alertar sobre actividades sospechosas. Estas reglas pueden ser actualizadas por los realizados por los especialistas en Threat Intelligence, por las lecciones aprendidas en incidentes previos, por los trabajos realizados por los Threat Hunters, etc.
 

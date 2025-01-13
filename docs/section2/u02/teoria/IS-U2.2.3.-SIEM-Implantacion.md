@@ -1,4 +1,20 @@
-# Las mejores prácticas para implementar una estrategia SIEM
+---
+title: "UD 2 - 2.2.3 Implementación de SIEM"
+description: SOC: Servicios y herramientas
+summary: SOC: Servicios y herramientas
+authors:
+    - Eduardo Fdez
+date: 2025-01-04
+icon: 
+permalink: /is/unidad2/2.2.3
+categories:
+    - IS
+tags:
+    - SOC
+    - SIEM
+---
+
+## 2.2.3 Las mejores prácticas para implementar una estrategia SIEM
 
 Al comenzar a implementar un SIEM, es importante plantearnos, qué es lo que deseamos que el SIEM logre para nuestro negocio en cuanto a ciberseguridad.
 
@@ -8,7 +24,7 @@ Al comenzar a implementar un SIEM, es importante plantearnos, qué es lo que des
 
 La gestión de eventos de seguridad mediante [SIEM](https://ciberseguridad.blog/por-que-las-herramientas-soar-revitalizaran-el-ecosistema-siem/)s nos permite obtener análisis en tiempo real sobre las amenazas y las alertas de seguridad en nuestro negocio. Controla el almacenamiento, la manipulación, el análisis y la generación de informes de diferentes datos de seguridad, nos permitirá correlacionar diferentes eventos y alertas, llevando así la seguridad de nuestra organización a otro nivel.
 
-## 1. SIEM y componentes.
+### 1. SIEM y componentes.
 
 El SIEM juega un papel determinante en el [cumplimiento normativo](https://ciberseguridad.blog/balbix-la-plataforma-predictiva-de-riesgo-de-incumplimiento/) de nuestra entidad y por ello, debe ser una de las piezas claves en nuestra estrategia corporativa. Una solución de gestión de eventos e información de seguridad bien implementada nos permitirá ir un paso por delante de los ciberataques al proporcionar una vista centralizada de los eventos e información relacionados con la [**ciberseguridad**](https://ciberseguridad.blog/).
 
@@ -26,9 +42,11 @@ El SIEM tiene varios [componentes clave](https://www.uhcl.edu/information-securi
 
 
 
-## 2. Estrategia para implementar un SIEM
+### 2. Estrategia para implementar un SIEM
 
-### 2.1. Fase de descubrimiento y planificación
+La implementación de un SIEM es un proceso complejo que requiere una planificación cuidadosa y una ejecución precisa. A continuación, se describen las fases clave de la implementación de un SIEM:
+
+#### 2.1. Fase de descubrimiento y planificación
 
 Al igual que con cualquier proceso empresarial y de TI, la implementación de sistemas SIEM comienza con una **planificación y revisión exhaustivas**.
 
@@ -60,7 +78,7 @@ Debemos tener una visión clara de los controles actuales usados para auditar es
 
 La fase de descubrimiento generalmente implica la implementación del SIEM en un subconjunto pequeño pero representativo de la tecnología y la política existentes de la organización, lo que nos permite recopilar datos críticos que pueden informar cambios y mejoras antes de una implementación completa. *Un objetivo principal es identificar las debilidades y lagunas en la ejecución de los controles y la implementación de planes para remediarlos*. Idealmente, deberíamos poder cubrir cualquier brecha antes de que estos elementos y controles de seguridad se incorporen en su implementación de SIEM. De lo contrario, no agregarán valor a nuestros procesos de monitorización de ciberseguridad.
 
-### 2.2. Fase piloto
+#### 2.2. Fase piloto
 
 Comenzando con la fase de implementación, debe tener dos objetivos en mente:
 
@@ -71,19 +89,19 @@ Durante la etapa de descubrimiento, debemos ejecutar el SIEM en un pequeño subc
 
 En la fase piloto, todas las suposiciones que hemos creado durante la fase de descubrimiento debemos probarlas minuciosamente, mientras nos ocupamos de un número creciente de dispositivos cubiertos. Una vez logrados los resultados de de nuestras pruebas de una forma satisfactoria, debemos tener todos los datos y la información que necesitamos para pasar a la fase de implementación controlada.
 
-### 2.3. Fase de implementación
+#### 2.3. Fase de implementación
 
 La implementación de SIEM no necesita realizarse en una fase rápida. Primero podemos desarrollar la capacidad de manera gradual y constante a medida que pasamos por la fase de implementación.
 
 La fase de implementación es cuando desarrollamos un flujo de trabajo de implementación que nos permita desarrollar la capacidad para la implementación completa, además de servir como etapa de prueba en un entorno de producción real. Durante esta fase, todos los procesos, procedimientos y operaciones deben describirse claramente en el **[runbook](https://es.wikipedia.org/wiki/Runbook?ref=ciberseguridad.blog)**.
 
-### 2.3. Fase de mejora continua
+#### 2.3. Fase de mejora continua
 
 La implementación exitosas de un SIEM, no es algo único y ligado a la propia implementación, si no que debe estar en continuo desarrollo. Los actores maliciosos, nunca dejan de desarrollar métodos de ataque más sofisticados, por lo que debemos seguir evolucionando para estar un paso por delante de nuestros posibles enemigos.
 
 Después de la fase de desarrollo, y a medida que continuemos implementando nuestro sistema SIEM, obtendremos más datos sobre cómo funciona todo en producción. Debemos utilizar estos datos e información para ajustar nuestra implementación y desarrollar las políticas y los procesos de seguridad de nuestra organización. Esto significa que nuestras implementaciones de SIEM están en constante cambio, y este proceso nunca debería detenerse.
 
-## 3. Las mejores prácticas para la implementación de SIEM
+### 3. Las mejores prácticas para la implementación de SIEM
 
 La mejor forma de implementar un SIEM es gradualmente. Un enfoque paso a paso nos ayudará a aprender más sobre nuestros sistemas actuales e implementar nuestra estrategia pieza por pieza, lo que nos permitirá ajustarla a lo largo del camino.
 
@@ -99,6 +117,6 @@ De una forma sencilla, desgajaremos, cuáles son las mejores prácticas para imp
 
 Para llegar al summun de la monitorización ([**SOAR**](https://ciberseguridad.blog/por-que-las-herramientas-soar-revitalizaran-el-ecosistema-siem/)), que ya tratamos hace tiempo, tenemos que empezar con una lógica idéntica que los SIEM tradicionales, por ello, tener claro como implementar un SIEM en todas sus variedades, es una metodología atemporal que nos ayudará en muchísimas implementaciones. Podremos dividir en más o menos fases, según los gustos , pero todas ellas llevan a la alineación de nuestros SIEMs, con nuestra estrategia de ciberseguridad, de forma que intentemos ir un paso por delante de nuestros actores maliciosos. 
 
-## 4. Referencia
+## Referencia
 - [Las Mejores prácticas para implemetar una estrategía SIEM](https://ciberseguridad.blog/las-mejores-practicas-para-implementar-una-estrategia-siem/)
 - [Ruben.Ramiro](https://ciberseguridad.blog/author/ruben-ramiro/)

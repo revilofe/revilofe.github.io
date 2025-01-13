@@ -1,4 +1,21 @@
-# Por qué las herramientas SOAR revitalizarán el ecosistema SIEM
+---
+title: "UD 2 - 2.2.4 Evolución de SIEM. SOAR."
+description: SOC: Servicios y herramientas
+summary: SOC: Servicios y herramientas
+authors:
+    - Eduardo Fdez
+date: 2025-01-04
+icon: 
+permalink: /is/unidad2/2.2.4
+categories:
+    - IS
+tags:
+    - SOC
+    - SIEM
+    - SOAR
+---
+
+# 2.2.3 Evolución de SIEM. SOAR.
 
 Las soluciones SIEM, se nos quedan cortas, adquirir soluciones SOAR (Security Orchestration Automation and Response) es más que necesario. ! EVOLUCIONA ¡
 
@@ -11,7 +28,7 @@ Cómo cambian los tiempos. La superficie de ataque se ha transformado en la últ
 
 Para evitar ser descartados como una solución heredada, **las tecnologías SIEM tienen que mejorar** su estrategia.
 
-## 1. La evolución del SIEM.
+### 1. La evolución del SIEM.
 
 El panorama digital cambiante está creando una serie de nuevos desafíos para los desarrolladores de tecnologías SIEM. Si bien SIEM se basó en solo unas pocas fuentes de datos, como firewalls y sistemas de detección de intrusos (IDS / IPS), la '*próxima generación*' de sistemas SIEM debe evolucionar para procesar un mayor volumen y variedad de datos, así como mejorar su capacidad de correlación.
 
@@ -21,15 +38,15 @@ Mejorar la interoperabilidad con las nuevas tecnologías de seguridad, como las 
 
 A pesar de su capacidad para aumentar la visibilidad de las amenazas, las tecnologías complementarias tienen el potencial de aumentar la **fatiga de alertas** y el tiempo muerto cuando el contexto cambia entre aplicaciones. La mejora del flujo de trabajo, la reducción de la carga de la monitorización de seguridad y la aceleración de la [**respuesta ante incidentes**](https://www.welivesecurity.com/la-es/2015/05/18/que-es-como-trabaja-csirt-respuesta-incidentes/?ref=ciberseguridad.blog) (CSIRT) son áreas que se deben mejorar para que los equipos de seguridad se den cuenta de los beneficios de los sistemas SIEM más inteligentes. Esto es particularmente importante dado los muchos desafíos que a los que se enfrentan las organizaciones para atraer y retener el talento de seguridad que necesitan para ejecutar las operaciones: **el objetivo es trabajar de manera más inteligente**, no más difícil.
 
-## 2. Herramientas SOAR
+### 2. Herramientas SOAR
 
 **Security Orchestration, Automation and Response (SOAR)** es un área de seguridad en crecimiento que los proveedores de SIEM están aprovechando.
 
 Está compuesto por tres mercados tecnológicos distintos:
 
-1. Orquestación y automatización de la seguridad
-2. Plataformas de respuesta a incidentes de seguridad (SIRP)
-3. Plataformas de inteligencia de amenazas (TIP).
+1. Orquestación y automatización de la seguridad.   
+2. Plataformas de respuesta a incidentes de seguridad (SIRP)   
+3. Plataformas de inteligencia de amenazas (TIP).    
 
 Su propósito general es ayudar a las organizaciones a mejorar la detección y respuesta de amenazas a través de la agregación y la correlación de datos más ricos y de calidad unida a la automatización de las tareas rutinarias de seguridad.
 
@@ -39,9 +56,9 @@ Otra manera clave en la que las **herramientas SOAR** está influenciando los pl
 
 A través de la automatización de acciones de respuesta, como bloquear una dirección IP en un firewall o un sistema de detección de intrusos, suspender las cuentas de usuario o poner en cuarentena los puntos finales infectados de una red, las herramientas SOAR pueden ayudar a facilitar una respuesta a incidentes más rápida y, por lo tanto, reducir el daño potencial y las interrupciones que las violaciones pueden provocar.
 
-Playbooks Demisto
+Playbooks Demisto es un ejemplo de cómo las herramientas SOAR están ayudando a las organizaciones a estandarizar y automatizar las respuestas a incidentes. Los Playbooks son una serie de pasos predefinidos que se pueden ejecutar automáticamente en respuesta a una alerta de seguridad. Estos Playbooks pueden ser personalizados por los equipos de seguridad para adaptarse a las necesidades específicas de su organización, lo que les permite responder a incidentes de manera más rápida y eficiente.
 
-## 3. El SIEM del futuro
+### 3. El SIEM del futuro
 
 *[Gartner](https://www.gartner.com/en?ref=ciberseguridad.blog) predice que para fines de 2020, el 15% de las organizaciones con un equipo de seguridad de más de cinco personas aprovechará las soluciones SOAR*. Su enorme potencial para mejorar la eficiencia y eficacia de las operaciones de seguridad significa que es probable que desempeñe un papel crucial para ayudar a dar forma al desarrollo del futuro SIEM.
 
@@ -51,7 +68,7 @@ Aprovechar al máximo el SIEM, para ayudar a enfrentarnos a los crecientes desaf
 
 La superficie de ataque, que ya se ha transformado drásticamente desde la introducción de SIEM, continuará cambiando a gran velocidad en los próximos años. Las organizaciones solo podrán responder a estos cambios con mejores herramientas y una fuerza laboral más capacitada y eficiente.
 
-## 4. La necesidad de disponer herramientas SOAR
+### 4. La necesidad de disponer herramientas SOAR
 
 Por ahora, los beneficios de los sistemas **Security Orchestration, Automation and Response** (**SOAR**) son obvios para casi todos los analistas CISO y de seguridad.
 
@@ -69,10 +86,10 @@ Aquí hay una rápida lista de obstáculos en el despliegue de herramientas SOAR
 * **Muchos sistemas SOAR son demasiado caros**: Las nuevas tecnologías potentes a menudo tienen precios exorbitantes cuándo se presentan. Los automóviles solían ser accesibles solo por los aficionados más ricos. Con el tiempo, se convirtieron en necesidades asequibles para todos los hogares. Muchos sistemas SOAR de hoy solo son asequibles para SOC con grandes presupuestos.
 * **Los sistemas SOAR requieren programación, pero la mayoría de los equipos SOC carecen de desarrolladores**: Muchos sistemas SOAR requieren que los usuarios escriban Python para construir Playbooks e integrarlos con otras herramientas y aplicaciones de seguridad. La gran mayoría de los equipos de SOC carecen de las habilidades de programación de Python y el tiempo para asumir un nuevo trabajo de integración, por lo que el requisito de la programación se convierte en un factor decisivo.
 * **Las llamadas integraciones listas para usar son demasiado limitadas:** Los SOAR deben integrarse con herramientas de seguridad para las que puedan recopilar alertas y otros datos de ellos y emitir comandos, orquestando las respuestas a las amenazas. Algunos proveedores SOAR ofrecen integraciones, pero los SOC pronto descubren que las integraciones no incluyen funciones para las tareas y características de las que dependen. Con demasiada frecuencia, los SOC se ven obligados a desarrollar integraciones o contratar a expertos externos para crear integraciones no proporcionadas por los proveedores.
-* **Las API de las herramientas de seguridad son demasiado limitadas**: Para complicar aún más el desafío de integrar SOARs con herramientas de seguridad, está la limitación de muchas API de herramientas de seguridad. Estas herramientas pueden ofrecer APIs para unas pocas operaciones básicas, suficientes para aprobar una demostración, pero no lo suficiente como para admitir la automatización efectiva de sus operaciones. Hay datos en los que ciertos SOCs  solo han integrado un 30% de las funciones de sus herramientas de seguridad debido a la dispodición de las APIs. Sin APIs para aprovechar, la automatización de la seguridad, se termina confiando en comandos basados en el navegador. O bien los analistas continúan emitiendo estos comandos en los navegadores, o las soluciones de automatización de seguridad necesitan expandir sus características para admitir la automatización basada en el navegador. Hasta ahora, la mayoría de los sistemas SOAR siguen siendo débiles en esta área de automatización, y por ello, debemos conocer muy bien nuestro scope de integración.
-* **Los SOCs creen que sus procesos son demasiado ad hoc o especializados para ser automatizados**: Escuchamos esta objeción de muchos analistas de seguridad. Están convencidos de que lo que hacen es demasiado único o complicado de documentar. Y es que si no se puede documentar, no se puede automatizar.
-* **Los SOCs carecen del tiempo necesario para construir y ajustar las automatizaciones por sí solas:** La construcción de la automatización lleva tiempo. Se necesita atención sostenida y un poco de ensayo y error. Desafortunadamente, la mayoría de los SOCs están tan ocupados luchando contra sus colas de clasificación que no pueden disponer de las horas o los días para crear lo que les llevaría a ahorrarse semanas o meses a lo largo del año.
+* **Las API de las herramientas de seguridad son demasiado limitadas**: Para complicar aún más el desafío de integrar SOARs con herramientas de seguridad, está la limitación de muchas API de herramientas de seguridad. Estas herramientas pueden ofrecer APIs para unas pocas operaciones básicas, suficientes para aprobar una demostración, pero no lo suficiente como para admitir la automatización efectiva de sus operaciones. Hay datos en los que ciertos SOCs  solo han integrado un 30% de las funciones de sus herramientas de seguridad debido a la dispodición de las APIs. Sin APIs para aprovechar, la automatización de la seguridad, se termina confiando en comandos basados en el navegador. O bien los analistas continúan emitiendo estos comandos en los navegadores, o las soluciones de automatización de seguridad necesitan expandir sus características para admitir la automatización basada en el navegador. Hasta ahora, la mayoría de los sistemas SOAR siguen siendo débiles en esta área de automatización, y por ello, debemos conocer muy bien nuestro scope de integración.   
+* **Los SOCs creen que sus procesos son demasiado ad hoc o especializados para ser automatizados**: Escuchamos esta objeción de muchos analistas de seguridad. Están convencidos de que lo que hacen es demasiado único o complicado de documentar. Y es que si no se puede documentar, no se puede automatizar.    
+* **Los SOCs carecen del tiempo necesario para construir y ajustar las automatizaciones por sí solas:** La construcción de la automatización lleva tiempo. Se necesita atención sostenida y un poco de ensayo y error. Desafortunadamente, la mayoría de los SOCs están tan ocupados luchando contra sus colas de clasificación que no pueden disponer de las horas o los días para crear lo que les llevaría a ahorrarse semanas o meses a lo largo del año.    
 
-## 5. Referencia
+## Referencia
 - [Herramientas SOAR que revitalizaran el ecosistema SIEM](https://ciberseguridad.blog/por-que-las-herramientas-soar-revitalizaran-el-ecosistema-siem.html)
 - [Ruben.Ramiro](https://ciberseguridad.blog/author/ruben-ramiro/)

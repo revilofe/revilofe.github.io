@@ -116,19 +116,19 @@ Las organizaciones enfrentan un aumento en la frecuencia, sofisticación y diver
 
 ##### 1.4.2. Beneficios de contar con un SOC
 
-- **Protección proactiva:** Los SOC no solo reaccionan a amenazas, sino que también trabajan para prevenirlas.
+1. **Protección proactiva:** Los SOC no solo reaccionan a amenazas, sino que también trabajan para prevenirlas.
 
    *Ejemplo:* Un SOC implementa reglas en el SIEM para bloquear intentos de fuerza bruta antes de que comprometan un sistema.   
 
-- **Respuesta rápida:** Los SOC reducen el tiempo de respuesta a incidentes críticos.
+2. **Respuesta rápida:** Los SOC reducen el tiempo de respuesta a incidentes críticos.
 
    *Ejemplo:* Detectar y contener un ataque en minutos puede evitar una filtración masiva de datos.   
 
-- **Cumplimiento normativo:** Ayudan a las organizaciones a cumplir con regulaciones como GDPR, ISO 27001 o NIST CSF.
+3. **Cumplimiento normativo:** Ayudan a las organizaciones a cumplir con regulaciones como GDPR, ISO 27001 o NIST CSF.
 
    *Ejemplo:* Generar reportes de incidentes detallados para auditorías regulatorias.   
 
-- **Confianza del cliente:** Un SOC demuestra el compromiso de la organización con la seguridad, fortaleciendo la confianza de clientes y socios.
+4. **Confianza del cliente:** Un SOC demuestra el compromiso de la organización con la seguridad, fortaleciendo la confianza de clientes y socios.
 
    *Ejemplo:* Mostrar a los clientes que sus datos están protegidos y que la empresa está preparada para enfrentar amenazas.
 
@@ -158,12 +158,12 @@ A continuación, exploraremos los roles clave en un SOC, la importancia de la fo
 
 Un SOC incluye una variedad de roles especializados, diseñados para cubrir distintos aspectos de la seguridad cibernética:
 
-- **Gerente del SOC:** Supervisa las operaciones y coordina la respuesta a incidentes importantes.    
+1. **Gerente del SOC:** Supervisa las operaciones y coordina la respuesta a incidentes importantes.    
 
    *Ejemplo:* Coordinar la respuesta a un ataque de ransomware que afecta a múltiples sistemas.    
 
 
-- **Analistas SOC (Niveles 1, 2, 3):**     
+2. **Analistas SOC (Niveles 1, 2, 3):**     
 
    - *Nivel 1:* Monitorea eventos y alerta sobre actividades sospechosas.
 
@@ -178,15 +178,15 @@ Un SOC incluye una variedad de roles especializados, diseñados para cubrir dist
       *Ejemplo:* Determinar cómo un atacante accedió a un sistema y prevenir futuros ataques.    
 
 
-- **Especialistas en Threat Hunters:** Buscan proactivamente amenazas avanzadas que pueden haber evadido los controles de seguridad de nuestra organización.    
+3. **Especialistas en Threat Hunters:** Buscan proactivamente amenazas avanzadas que pueden haber evadido los controles de seguridad de nuestra organización.    
 
    *Ejemplo:* Buscar señales de un malware recién descubierto que afecta a empresas similares.    
 
-- **Especialistas en Threat Intelligence:** Identifican nuevas amenazas que han surgido en el panorama de ciberseguridad y comparten información relevante con el equipo del SOC, por ejemplo actualizando reglas de detección del SIEM.    
+4. **Especialistas en Threat Intelligence:** Identifican nuevas amenazas que han surgido en el panorama de ciberseguridad y comparten información relevante con el equipo del SOC, por ejemplo actualizando reglas de detección del SIEM.    
 
    *Ejemplo:* Investigar un aumento de ataques phishing en la región y compartir indicadores relevantes, como direcciones IP maliciosas, emails o URLs.    
 
-- **Ingenieros de Seguridad:** Configuran y mantienen las herramientas tecnológicas del SOC.    
+5. **Ingenieros de Seguridad:** Configuran y mantienen las herramientas tecnológicas del SOC.    
 
    *Ejemplo:* Configurar reglas de detección en el SIEM para alertar sobre actividades sospechosas. Estas reglas pueden ser actualizadas por los realizados por los especialistas en Threat Intelligence, por las lecciones aprendidas en incidentes previos, por los trabajos realizados por los Threat Hunters, etc.
 

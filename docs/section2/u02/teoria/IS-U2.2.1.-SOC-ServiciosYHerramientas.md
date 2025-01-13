@@ -39,9 +39,9 @@ Los Centros de Operaciones de Seguridad (SOC, por sus siglas en inglés) son el 
 
 Un SOC es un centro de operaciones centralizado compuesto por profesionales de ciberseguridad, procesos estandarizados y tecnologías avanzadas, diseñado para supervisar, detectar, responder y prevenir amenazas de seguridad.
 
-* **Analogía:** Imagina un SOC como un “centro de control aéreo” para la ciberseguridad. Así como los controladores de tráfico aéreo supervisan vuelos y responden a emergencias, los analistas del SOC vigilan el tráfico digital de una organización y reaccionan ante amenazas.    
+**Analogía:** Imagina un SOC como un “centro de control aéreo” para la ciberseguridad. Así como los controladores de tráfico aéreo supervisan vuelos y responden a emergencias, los analistas del SOC vigilan el tráfico digital de una organización y reaccionan ante amenazas.    
 
-* **Funciones principales:**
+**Funciones principales:**
 
    1. Supervisar continuamente la infraestructura tecnológica (redes, sistemas, aplicaciones), asi como la información de la organización. Estar preparados y actualizados, buscando amenazas y vulnerabilidades.   
    2. Detectar amenazas o actividades sospechosas.   
@@ -52,21 +52,21 @@ Un SOC es un centro de operaciones centralizado compuesto por profesionales de c
 
 El SOC tiene como objetivo proteger los activos críticos de la organización (datos, sistemas y reputación) mediante:
 
-1. **Prevención:** Implementar controles y configuraciones para evitar ataques.
+1. **Prevención:** Implementar controles y configuraciones para evitar ataques.   
 
-   *Ejemplo:* Configurar firewalls para bloquear conexiones no autorizadas. Configurar IDS/IPS para detectar y bloquear ataques.    
+    *Ejemplo:* Configurar firewalls para bloquear conexiones no autorizadas. Configurar IDS/IPS para detectar y bloquear ataques.    
 
-2. **Detección:** Detectar actividades sospechosas que puedan ser indicativas de un incidente de seguridad.
+2. **Detección:** Detectar actividades sospechosas que puedan ser indicativas de un incidente de seguridad.   
 
-   *Ejemplo:* Alertas del SIEM que detectan intentos de acceso inusuales, según reglas de detección configuradas.    
+    *Ejemplo:* Alertas del SIEM que detectan intentos de acceso inusuales, según reglas de detección configuradas.    
 
-3. **Respuesta:** Actuar rápidamente para minimizar el impacto de los incidentes.
+3. **Respuesta:** Actuar rápidamente para minimizar el impacto de los incidentes.    
 
-   *Ejemplo:* Aislar un servidor comprometido para evitar que un malware se propague y eliminar la amenaza.   
+    *Ejemplo:* Aislar un servidor comprometido para evitar que un malware se propague y eliminar la amenaza.   
 
-4. **Recuperación:** Restaurar los sistemas afectados y garantizar que vuelvan a operar normalmente.
+4. **Recuperación:** Restaurar los sistemas afectados y garantizar que vuelvan a operar normalmente.   
 
-   *Ejemplo:* Restaurar datos desde una copia de seguridad tras un ataque de ransomware.
+    *Ejemplo:* Restaurar datos desde una copia de seguridad tras un ataque de ransomware.
 
 #### 1.3. Diferencias entre SOC, CERT, CIRT y CSIRT
 
@@ -74,10 +74,10 @@ En el mundo de la ciberseguridad, es común encontrar términos como SOC, CERT, 
 
 ##### 1.3.1. Definición de términos
 
-1. **SOC (Security Operations Center):** Centro de operaciones de seguridad, que se encarga de la **supervisión continua, detección, respuesta y prevención** de amenazas. Su enfoque es amplio y abarca todas las operaciones de seguridad. El SOC es el encargado de la seguridad de la organización y abarca todas las operaciones de seguridad.
-2. **CERT (Computer Emergency Response Team):** Equipo especializado en preparar y responder a **emergencias de ciberseguridad**, como ataques DDoS o ransomware. Suele actuar de manera reactiva ante incidentes.
-3. **CIRT (Computer Incident Response Team):** Similar al CERT, pero centrado en la gestión de **incidentes de seguridad específicos**, con un enfoque en la contención y erradicación.
-4. **CSIRT (Computer Security Incident Response Team):** Variante más amplia del CIRT, que incluye una visión más estratégica y alineada con las políticas de seguridad.
+1. **SOC (Security Operations Center):** Centro de operaciones de seguridad, que se encarga de la **supervisión continua, detección, respuesta y prevención** de amenazas. Su enfoque es amplio y abarca todas las operaciones de seguridad. El SOC es el encargado de la seguridad de la organización y abarca todas las operaciones de seguridad.   
+2. **CERT (Computer Emergency Response Team):** Equipo especializado en preparar y responder a **emergencias de ciberseguridad**, como ataques DDoS o ransomware. Suele actuar de manera reactiva ante incidentes.   
+3. **CIRT (Computer Incident Response Team):** Similar al CERT, pero centrado en la gestión de **incidentes de seguridad específicos**, con un enfoque en la contención y erradicación.   
+4. **CSIRT (Computer Security Incident Response Team):** Variante más amplia del CIRT, que incluye una visión más estratégica y alineada con las políticas de seguridad.   
 
 ##### 1.3.2. Relación y diferencias clave
 

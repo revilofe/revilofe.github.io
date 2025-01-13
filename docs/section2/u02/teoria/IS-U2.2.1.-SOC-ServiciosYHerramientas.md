@@ -1,7 +1,7 @@
 ---
 title: "UD 2 - 2.2.1 SOC: Servicios y herramientas"
-description: SOC: Servicios y herramientas
-summary: SOC: Servicios y herramientas
+description: SOC - Servicios y herramientas
+summary: SOC - Servicios y herramientas
 authors:
     - Eduardo Fdez
 date: 2025-01-04

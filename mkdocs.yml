@@ -162,7 +162,7 @@ nav:
     - 'U2: Detección y análisis de incidentes de seguridad':
       - 'section2/u02/index.md'
       - '2.1.-Taxonomía de incidentes': 'section2/u02/teoria/IS-U2.1.1.-TaxonomiaDeIncidentes.md'
-      - '2.2.1.-SOC: Servicios y herramientas: 'section2/u02/teoria/IS-U2.2.2.-CasosUso.md'
+      - '2.2.1.-SOC - Servicios y herramientas': 'section2/u02/teoria/IS-U2.2.1.-SOC-ServiciosYHerramientas.md'
       - '2.2.2.-SIEM & Casos de uso': 'section2/u02/teoria/IS-U2.2.2.-CasosUso.md'
       - '2.2.3.-Implantación de un SIEM': 'section2/u02/teoria/IS-U2.2.3.-SIEM-Implantacion.md'
       - '2.2.4.-Evolución de SIEM': 'section2/u02/teoria/IS-U2.2.4.-SIEM-Evolucion.md'

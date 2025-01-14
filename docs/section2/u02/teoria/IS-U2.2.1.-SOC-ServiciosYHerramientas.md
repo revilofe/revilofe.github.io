@@ -652,7 +652,7 @@ Un SOC tercerizado es operado por un proveedor externo que ofrece servicios de s
 
    *Ejemplo:* Una pequeña empresa contrata un MSSP para gestionar la detección y respuesta a incidentes debido a su limitado presupuesto.
 
-- **Desafíos:**
+**Desafíos:**
 
    1. **Menor control:** La organización depende del proveedor para gestionar incidentes.   
 

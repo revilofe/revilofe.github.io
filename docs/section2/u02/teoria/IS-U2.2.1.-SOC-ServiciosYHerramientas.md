@@ -94,7 +94,7 @@ En el mundo de la ciberseguridad, es común encontrar términos como SOC, CERT, 
 
    * **CERT/CIRT/CSIRT:** Actúan principalmente ante incidentes de ciberseguridad, para contener, eliminar y recuperarse de los mismos.   
 
-**Ejemplo:**
+*Ejemplo:*
 
    * A través de los servicios y herramientas que hay implementadas en el SOC, se detecta un comportamiento sospechoso y genera una alerta.   
    * El equipo de respuesta a incidentes investiga el incidente y coordina la respuesta: Contener el ataque, eliminar la amenaza.    
@@ -106,13 +106,13 @@ En el mundo de la ciberseguridad, es común encontrar términos como SOC, CERT, 
 
 En un mundo cada vez más digitalizado, las organizaciones dependen de los SOC para protegerse contra un panorama de amenazas en constante evolución.
 
-**Ejemplo:** Imagina una tienda en línea que es víctima de un ataque de ransomware (secuestro de datos). Si no tiene un SOC que monitoree las actividades sospechosas y responda rápidamente, los atacantes podrían paralizar sus operaciones y exigir un rescate para liberar los datos.
+*Ejemplo:* Imagina una tienda en línea que es víctima de un ataque de ransomware (secuestro de datos). Si no tiene un SOC que monitoree las actividades sospechosas y responda rápidamente, los atacantes podrían paralizar sus operaciones y exigir un rescate para liberar los datos.
 
 ##### **1.4.1. Amenazas crecientes**
 
 Las organizaciones enfrentan un aumento en la frecuencia, sofisticación y diversidad de los ciberataques.
 
-**Ejemplo:** En 2023, los ataques de ransomware afectaron a miles de empresas, causando interrupciones y pérdidas millonarias. Un SOC puede ayudar a detectar y bloquear estos ataques antes de que causen daños irreparables.
+*Ejemplo:* En 2023, los ataques de ransomware afectaron a miles de empresas, causando interrupciones y pérdidas millonarias. Un SOC puede ayudar a detectar y bloquear estos ataques antes de que causen daños irreparables.
 
 ##### 1.4.2. Beneficios de contar con un SOC
 
@@ -132,7 +132,7 @@ Las organizaciones enfrentan un aumento en la frecuencia, sofisticación y diver
 
 En muchas organizaciones, el SOC es considerado un habilitador estratégico, ya que protege la continuidad del negocio y permite a las empresas operar en entornos digitales de forma segura.
 
-**Ejemplo:** Un SOC ayuda a una empresa de servicios financieros a detectar y bloquear un ataque ransomware, evitando la pérdida de datos confidenciales y disponibilidad de servicios. De esta forma, el SOC contribuye a la reputación y sostenibilidad del negocio, de otra manera el impacto podría haber sido catastrófico, no disponibilidad de servicios, pérdida de confianza de los clientes, sanciones regulatorias, etc.
+*Ejemplo:* Un SOC ayuda a una empresa de servicios financieros a detectar y bloquear un ataque ransomware, evitando la pérdida de datos confidenciales y disponibilidad de servicios. De esta forma, el SOC contribuye a la reputación y sostenibilidad del negocio, de otra manera el impacto podría haber sido catastrófico, no disponibilidad de servicios, pérdida de confianza de los clientes, sanciones regulatorias, etc.
 
 El SOC es mucho más que un equipo técnico; es una estructura estratégica que protege los activos más valiosos de una organización. Al comprender su definición, objetivos y diferencias con estructuras relacionadas como CERT o CSIRT, se puede apreciar su papel crucial en el ecosistema de ciberseguridad actual.
 
@@ -158,11 +158,11 @@ Un SOC incluye una variedad de roles especializados, diseñados para cubrir dist
    *Ejemplo:* Coordinar la respuesta a un ataque de ransomware que afecta a múltiples sistemas.    
 
 2. **Analistas SOC (Niveles 1, 2, 3):**    
-   *Nivel 1:* Monitorea eventos y alerta sobre actividades sospechosas.    
+   **Nivel 1:** Monitorea eventos y alerta sobre actividades sospechosas.    
        *Ejemplo:* Revisión de un intento de inicio de sesión desde ubicaciones inusuales.    
-   *Nivel 2:* Investiga las alertas generadas por el Nivel 1 para determinar si son incidentes reales.      
+   **Nivel 2:** Investiga las alertas generadas por el Nivel 1 para determinar si son incidentes reales.      
        *Ejemplo:* Analizar patrones de tráfico para confirmar si un ataque está en curso.    
-   *Nivel 3:* Maneja incidentes complejos y realiza análisis forenses.    
+   **Nivel 3:** Maneja incidentes complejos y realiza análisis forenses.    
       *Ejemplo:* Determinar cómo un atacante accedió a un sistema y prevenir futuros ataques.
 
 3. **Especialistas en Threat Hunters:** Buscan proactivamente amenazas avanzadas que pueden haber evadido los controles de seguridad de nuestra organización.    
@@ -176,7 +176,7 @@ Un SOC incluye una variedad de roles especializados, diseñados para cubrir dist
 
 La capacitación continua es crucial en un entorno de ciberseguridad, donde las amenazas evolucionan constantemente.
 
-**Ejemplo:** Los analistas deben aprender regularmente sobre nuevas técnicas de ataque, como el ransomware basado en IA, para adaptar las defensas del SOC.
+*Ejemplo:* Los analistas deben aprender regularmente sobre nuevas técnicas de ataque, como el ransomware basado en IA, para adaptar las defensas del SOC.
 
 #### 2.2. Procesos
 
@@ -192,7 +192,7 @@ Los procesos son los pasos estructurados y repetibles que un SOC sigue para mane
 
 * **Promover la mejora continua:** Analizar cada incidente para aprender y mejorar los procesos.
 
-**Ejemplo:** Supongamos que el SOC recibe una alerta sobre tráfico sospechoso en un servidor web. El proceso estándar indicaría los pasos sobre como verificar la fuente del tráfico, determinar si es legítimo o malicioso, y tomar medidas correctivas.    
+*Ejemplo:* Supongamos que el SOC recibe una alerta sobre tráfico sospechoso en un servidor web. El proceso estándar indicaría los pasos sobre como verificar la fuente del tráfico, determinar si es legítimo o malicioso, y tomar medidas correctivas.    
 
 ##### 2.2.1. Procesos en un SOC
 
@@ -224,7 +224,7 @@ La estandarización asegura que todos los analistas trabajen de manera consisten
    2. **ISO/IEC 27001:** Proporciona estándares para la gestión de la seguridad de la información.    
    3. **ITIL (Information Technology Infrastructure Library):** Guía sobre la gestión de servicios de TI.     
 
-  **Ejemplo:** Implementar el marco NIST permite al SOC estructurar sus operaciones desde la identificación de activos críticos hasta la recuperación post-incidente.    
+  *Ejemplo:* Implementar el marco NIST permite al SOC estructurar sus operaciones desde la identificación de activos críticos hasta la recuperación post-incidente.    
 
 Los procesos en un SOC son el motor que asegura que las amenazas sean gestionadas de manera eficiente y efectiva. Al estandarizar operaciones y apoyarse en marcos reconocidos, el SOC puede garantizar una respuesta consistente, reducir los tiempos de reacción y mejorar continuamente sus defensas.
 
@@ -428,7 +428,7 @@ El funcionamiento del SOC se basa en la interacción entre sus servicios princip
 
 2. Entrega IoCs, TTPs, Reportes y tendencias de ataque al equipo de **Threat Hunting** para guiar investigaciones proactivas.
 
-**Ejemplo:** Threat Intelligence detecta un ransomware en aumento y actualiza las reglas del SIEM con las direcciones IP utilizadas por los atacantes.
+*Ejemplo:* Threat Intelligence detecta un ransomware en aumento y actualiza las reglas del SIEM con las direcciones IP utilizadas por los atacantes.
 
 
 #### 2.4.1.2. SIEM Intelligence & Alerting
@@ -450,7 +450,7 @@ El funcionamiento del SOC se basa en la interacción entre sus servicios princip
 
 2. Proporciona alertas al servicio de **Monitoring & Triage** para su evaluación, y proporciona ajustes de IoCs y TTPs, basados en hallazgos, a **Threat Intelligence**.   
 
-**Ejemplo:** El SIEM detecta múltiples intentos de acceso fallidos desde una IP desconocida y genera una alerta.
+*Ejemplo:* El SIEM detecta múltiples intentos de acceso fallidos desde una IP desconocida y genera una alerta.
 
 #### 2.4.1.3. Monitoring & Triage
 
@@ -471,7 +471,7 @@ El funcionamiento del SOC se basa en la interacción entre sus servicios princip
 
 2. Escala incidentes confirmados al equipo de **Incident Response**, y envia ajustes de los casos de usos al **SIEM Intelligence & Alerting**.
 
-**Ejemplo:** Monitoring & Triage recibe una alerta de intentos de acceso desde una IP sospechosa, confirma que es un ataque real y lo escala para su contención al segundo nivel, Incident Response.
+*Ejemplo:* Monitoring & Triage recibe una alerta de intentos de acceso desde una IP sospechosa, confirma que es un ataque real y lo escala para su contención al segundo nivel, Incident Response.
 
 
 #### 2.4.1.4. Incident Response
@@ -493,7 +493,7 @@ El funcionamiento del SOC se basa en la interacción entre sus servicios princip
 
 2. Proporciona datos iniciales para el análisis de **Forensics**, y ajustes de casos de usos, como IoCs y TTPs, a **SIEM Intelligence & Alerting**.   
 
-**Ejemplo:** Incident Response aísla un servidor comprometido y coordina la eliminación del malware detectado.
+*Ejemplo:* Incident Response aísla un servidor comprometido y coordina la eliminación del malware detectado.
 
 #### 2.4.1.5. Forensics
 
@@ -511,7 +511,7 @@ El funcionamiento del SOC se basa en la interacción entre sus servicios princip
 
 2. Retroalimenta a **Incident Response** con hallazgos para mejorar la respuesta a incidentes.
 
-**Ejemplo:** Forensics descubre que el atacante explotó una vulnerabilidad en un servidor web y recomienda parches de seguridad.
+*Ejemplo:* Forensics descubre que el atacante explotó una vulnerabilidad en un servidor web y recomienda parches de seguridad.
 
 
 #### **2.4.1.6. Threat Hunting**
@@ -534,7 +534,7 @@ El funcionamiento del SOC se basa en la interacción entre sus servicios princip
 
 2. Proporciona hallazgos sobre nuevos incidentes a **Incident Response** y reportes y recomendaciones **SIEM Intelligence & Alerting** para mejorar reglas de detección.
 
-**Ejemplo:** Threat Hunting detecta un archivo malicioso que pasó inadvertido por el SIEM, confirmando una amenaza activa en un servidor.
+*Ejemplo:* Threat Hunting detecta un archivo malicioso que pasó inadvertido por el SIEM, confirmando una amenaza activa en un servidor.
 
 
 #### **2.4.1.7. Purple Team**
@@ -553,7 +553,7 @@ El funcionamiento del SOC se basa en la interacción entre sus servicios princip
 
 2. Retroalimenta a todos los servicios con mejoras basadas en los resultados de las simulaciones.    
 
-**Ejemplo :** Purple Team simula un ataque de phishing avanzado y detecta que Monitoring & Triage necesita reducir el tiempo de clasificación de alertas críticas.
+*Ejemplo:* Purple Team simula un ataque de phishing avanzado y detecta que Monitoring & Triage necesita reducir el tiempo de clasificación de alertas críticas.
 
 
 ##### 2.4.2. Interacción entre servicios
@@ -672,7 +672,7 @@ Un ejemplo en el que se diferencien las distintas partes claramente, sería:
 
 2. **Procesos garantizan eficiencia:** Procesos bien diseñados aseguran que los servicios sean prestados de manera efectiva.    
 
-3. **Ejemplo:**
+3. *Ejemplo:*
 
    - Capacidad: Identificar amenazas avanzadas.   
    
@@ -684,7 +684,7 @@ Un ejemplo en el que se diferencien las distintas partes claramente, sería:
 
 Una integración efectiva entre capacidades, servicios y procesos asegura que los flujos de trabajo sean fluidos y reduzcan los tiempos de respuesta.
 
-**Ejemplo:** Si el servicio de Incident Response no está integrado con el proceso de análisis forense, puede haber retrasos en la recuperación de sistemas comprometidos.
+*Ejemplo:* Si el servicio de Incident Response no está integrado con el proceso de análisis forense, puede haber retrasos en la recuperación de sistemas comprometidos.
 
 #### 3.3. Fases de implementación: Negocio, personas, procesos, tecnologías y servicios
 

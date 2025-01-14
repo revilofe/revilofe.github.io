@@ -1,6 +1,6 @@
 ---
 title: "UD 2 - 2.2.1 SOC: Servicios y herramientas"  
-description: SOC - Servicios y herramientas 
+description: SOC, Servicios y herramientas 
 summary: Servicios y herramientas en un SOC 
 authors:
     - Eduardo Fdez
@@ -16,7 +16,7 @@ tags:
     - IPS
     - SIEM
 ---
-## 2.1.1 Taxonomía de incidentes de ciberseguridad
+## 2.2.1 Ecosistema de un SOC: Servicios y herramientas
 
 
 | Código | Descripción                                                                                                                    |
@@ -168,11 +168,11 @@ Un SOC incluye una variedad de roles especializados, diseñados para cubrir dist
    - *Nivel 1:* Monitorea eventos y alerta sobre actividades sospechosas.
 
       *Ejemplo:* Revisión de un intento de inicio de sesión desde ubicaciones inusuales.   
-
+   
    - *Nivel 2:* Investiga las alertas generadas por el Nivel 1 para determinar si son incidentes reales.
 
       *Ejemplo:* Analizar patrones de tráfico para confirmar si un ataque está en curso.    
-
+   
    - *Nivel 3:* Maneja incidentes complejos y realiza análisis forenses.
 
       *Ejemplo:* Determinar cómo un atacante accedió a un sistema y prevenir futuros ataques.    
@@ -655,7 +655,7 @@ Un SOC tercerizado es operado por un proveedor externo que ofrece servicios de s
 **Desafíos:**
 
    1. **Menor control:** La organización depende del proveedor para gestionar incidentes.   
-
+  
    2. **Riesgos de confidencialidad:** Compartir datos sensibles con un tercero puede ser un desafío para empresas con requisitos estrictos.
 
 ##### 3.1.3. Modelos híbridos
@@ -676,7 +676,7 @@ El SOC es un ecosistema interdependiente donde las capacidades, servicios y proc
 
 3. **Procesos:** Pasos definidos que guían cómo se llevan a cabo las operaciones del SOC.
 
-Un ejemplo en el que se diferencien las distintas partes claramente, sería:
+Un ejemplo en el que se diferencien las distintas partes claramente, sería: 
 
 - **Capacidad:** Ser capaz de detectar un ataque de phishing.    
 

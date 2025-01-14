@@ -408,15 +408,15 @@ Aunque las tecnologías son fundamentales, presentan desafíos:
 
 1. **Sobrecarga de alertas:** Un SIEM mal configurado puede generar demasiadas alertas, causando fatiga en los analistas.
 
-   - *Solución:* Afinar las reglas de detección y usar inteligencia artificial para priorizar alertas.    
+   *Solución:* Afinar las reglas de detección y usar inteligencia artificial para priorizar alertas.    
 
 2. **Costo:** Las herramientas avanzadas pueden ser costosas de implementar y mantener.
 
-   - *Solución:* Evaluar herramientas de código abierto o servicios en la nube.    
+   *Solución:* Evaluar herramientas de código abierto o servicios en la nube.    
    
 3. **Falta de habilidades:** Requieren personal capacitado para su configuración y uso.
 
-   - *Solución:* Capacitar continuamente al equipo del SOC.
+   *Solución:* Capacitar continuamente al equipo del SOC.
 
 Las tecnologías son el esqueleto que soporta las operaciones de un SOC. Desde herramientas de monitoreo como el SIEM hasta sistemas de automatización como el SOAR, cada tecnología juega un papel crítico en la detección y respuesta a amenazas. Sin embargo, su efectividad depende de una implementación adecuada, una integración robusta y una configuración que equilibre precisión y eficiencia.
 

@@ -376,9 +376,9 @@ Estas herramientas permiten a los equipos analizar incidentes después de que ha
 
       *Ejemplo:* Extraer registros, logs y archivos de un servidor comprometido y dejar una copia forense para análisis.    
 
-  2. Analizar las evidencias y reconstruir la secuencia de eventos que llevaron al incidente.
+   2. Analizar las evidencias y reconstruir la secuencia de eventos que llevaron al incidente.
 
-     *Ejemplo:* Analizar los logs de un servidor comprometido para determinar si el atacante usó una vulnerabilidad de software específica.   
+      *Ejemplo:* Analizar los logs de un servidor comprometido para determinar si el atacante usó una vulnerabilidad de software específica.   
 
 **Beneficio adicional:** Proporciona información valiosa para mejorar las defensas y prevenir futuros incidentes.    
 
@@ -597,17 +597,14 @@ Este flujo asegura que cada servicio funcione de manera independiente, pero inte
 
 ##### 2.4.3. Retos en la prestación de servicios
 
-1. **Falta de integración:** Si las herramientas y procesos no están alineados, los servicios pueden no ser efectivos.
+1. **Falta de integración:** Si las herramientas y procesos no están alineados, los servicios pueden no ser efectivos.    
+    *Solución:* Usar plataformas que centralicen la gestión y faciliten la colaboración.    
 
-   *Solución:* Usar plataformas que centralicen la gestión y faciliten la colaboración.    
+2. **Sobrecarga de alertas:** Un exceso de alertas puede abrumar a los equipos de Monitoring & Triage.    
+    *Solución:* Afinar las reglas del SIEM y priorizar alertas críticas.     
 
-2. **Sobrecarga de alertas:** Un exceso de alertas puede abrumar a los equipos de Monitoring & Triage.
-
-   *Solución:* Afinar las reglas del SIEM y priorizar alertas críticas.     
-
-3. **Costos:** Los servicios avanzados como Threat Hunting y Purple Team pueden requerir inversiones significativas.
-
-   *Solución:* Comenzar con servicios esenciales e ir añadiendo capacidades conforme crece la madurez del SOC.
+3. **Costos:** Los servicios avanzados como Threat Hunting y Purple Team pueden requerir inversiones significativas.    
+    *Solución:* Comenzar con servicios esenciales e ir añadiendo capacidades conforme crece la madurez del SOC.
 
 Los servicios de un SOC son necesarios para gestionar la ciberseguridad de manera proactiva y reactiva. Cada servicio cumple un papel único, pero su valor real radica en cómo interactúan para formar una defensa cohesiva contra amenazas. Un SOC bien diseñado no solo responde a incidentes, sino que también aprende y mejora continuamente para anticiparse a los ataques futuros.
 

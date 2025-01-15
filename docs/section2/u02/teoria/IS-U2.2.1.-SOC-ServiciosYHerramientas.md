@@ -379,7 +379,7 @@ Los servicios que ofrece un Centro de Operaciones de Seguridad (SOC) son el resu
 
 ![Interconexión servicios de un SOC](./assets/IS-U2.2.1.-SOC-ServiciosYHerramientas-1736785775500.png)
 
-### **2.4.1. Servicios principales: Flujo detallado de funcionamiento**
+### 2.4.1. Servicios principales: Flujo detallado de funcionamiento
 
 El funcionamiento del SOC se basa en la interacción entre sus servicios principales, que trabajan en conjunto para proteger la infraestructura de la organización. Este flujo describe cómo cada servicio opera de manera independiente y cómo se conectan para formar un ecosistema cohesivo.
 

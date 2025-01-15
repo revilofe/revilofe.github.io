@@ -4284,7 +4284,8 @@
 <li>
 <p>Crear una clase <code>Coche</code>, a través de la cual se pueda conocer el <code>color</code> del coche, la <code>marca</code>, el <code>modelo</code>, el <code>número de caballos</code>, el <code>número de puertas</code> y la <code>matrícula</code>. Crear el constructor del coche, así como el método <code>toString()</code>. </p>
 <ul>
-<li>Marca y modelo no podrán ser blancos ni nulos y no podrán modificarse.</li>
+<li>Todas sus propiedades tendrán tipos de datos nulables.</li>
+<li>Marca y modelo no podrán ser vacíos, ni nulos. Tampoco podrán modificarse y solo se inicializarán al crear el objeto.</li>
 <li>Número de caballos, número de puertas y matrícula no podrán modificarse, ni podrán ser nulos.</li>
 <li>Color podrá modificarse, pero no podrá ser nulo.</li>
 </ul>
@@ -4292,21 +4293,22 @@
 <li>
 <p>Recuerda que Kotlin añade los getters y setters con el comportamiento por defecto, por lo que no es necesario que los implementes, a no ser que tengas que añadir alguna funcionalidad extra.</p>
 <ul>
-<li>Modifica el atributo matricula para que no permita actualizar la matrícula con un valor que no tenga 7 caracteres.</li>
-<li>Los atributos de modelo la marca siempre se devolverán con la primera letra en mayúscula. </li>
-<li>Realiza también una modificación del atributo número de caballos, para que no permita actualizar el atributo <code>numCaballos</code> con un valor interior a 70, ni superior a 700.</li>
-<li>Realiza una modificación del atributo número de puertas, para que no permita actualizar el atributo <code>numPuertas</code> con un valor inferior a 3, ni superior a 5.</li>
+<li>El atributo matricula no debe permitir un valor que no tenga 7 caracteres.</li>
+<li>Los atributos modelo y marca siempre se devolverán con la primera letra en mayúscula (getter).</li>
+<li>El número de caballosdeberá tener un valor entre 70 y 700.</li>
+<li>El número de puertasno podrá ser inferior a 3, ni superior a 5.</li>
 <li>Ten en cuenta todas estas condiciones a la hora de crear el constructor de la clase.</li>
 </ul>
 </li>
 <li>
-<p>En el programa principal, instancia varios coches y muéstralos por pantalla. Probar las modificaciones anteriores, modifica el número de caballos para un coche y haz lo mismo para el número de puertas, el color, la marca y modelo. Vuelve a mostrarlos por pantalla. </p>
+<p>En el programa principal, instancia varios coches, muéstralos por pantalla (toString) y realiza lo siguiente: </p>
 <ul>
-<li>Intenta instanciar y modificar con la marca y modelo con valores nulos o blancos y comprueba que no es posible.</li>
-<li>Intenta instanciar y modificar con el número de caballos con un valor inferior a 70 o superior a 700 y comprueba que no es posible.</li>
-<li>Intenta instanciar y modificar con el número de puertas con un valor inferior a 3 o superior a 5 y comprueba que no es posible.</li>
-<li>Intenta instanciar y modificar con la matrícula con un valor que no tenga 7 caracteres y comprueba que no es posible.</li>
-<li>Intenta instanciar y modificar con el color, el número de caballos, el número de puertas y la matrícula con valores nulos/blancos y comprueba que no es posible.</li>
+<li>Intenta instanciar un coche con la marca y modelo con valores nulos o vacíos y comprueba que no es posible.</li>
+<li>Intenta instanciar un coche con el número de caballos con un valor inferior a 70 o superior a 700 y comprueba que no es posible.</li>
+<li>Intenta instanciar un coche con el número de puertas con un valor inferior a 3 o superior a 5 y comprueba que no es posible.</li>
+<li>Intenta instanciar un coche con la matrícula con un valor que no tenga 7 caracteres y comprueba que no es posible.</li>
+<li>Intenta instanciar y modificar el color a un valor nulo y comprueba que no es posible.</li>
+<li>Todas estas pruebas debes hacerla capturando las excepciones que deben lanzarse desde la clase Coche cuando el valor de una propiedad no es correcto (según los resuisitos del ejercicio)</li>
 </ul>
 </li>
 </ol>

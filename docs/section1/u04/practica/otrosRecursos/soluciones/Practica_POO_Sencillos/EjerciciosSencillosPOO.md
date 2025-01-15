@@ -1,5 +1,6 @@
+# Ejercicios de introducción a la programación orientada a objetos   
 
-## Ejercicio 1: Clase Cuenta Bancaria
+## Ejercicio 1: Clase Cuenta Bancaria.
 
 Crea una clase CuentaBancaria con las propiedades:
    - titular (de tipo String).
@@ -8,8 +9,8 @@ Crea una clase CuentaBancaria con las propiedades:
 La clase debe tener:
    1. Un constructor que inicialice el titular con el saldo en 0 por defecto.
    2. Métodos para:
-      - Ingresar dinero (ingresar).
-      - Retirar dinero (retirar). Este método debe lanzar una excepción si se intenta retirar más dinero del que hay en la cuenta.
+   - Ingresar dinero (ingresar).
+   - Retirar dinero (retirar). Este método debe lanzar una excepción si se intenta retirar más dinero del que hay en la cuenta.
 
 A tener en cuenta:
    1. El saldo no podrá ser modificado directamente desde fuera de la clase. Solo será posible su cambio mediante los métodos ingresar y retirar.
@@ -28,13 +29,13 @@ Aquí tienes el diagrama UML para la clase **CuentaBancaria** que implementa las
 
 #### Contenido del Diagrama:     
 1. **Clase**: `CuentaBancaria`     
-      - **Atributos**:     
-            - `titular: String`: El nombre del titular.     
-            - `saldo: Double = 0.0`: El saldo de la cuenta, inicializado a 0.     
-      - **Métodos**:     
-            - `CuentaBancaria(titular: String)`: Constructor que inicializa la cuenta con un titular y saldo en 0.     
-            - `ingresar(cantidad: Double): void`: Método para ingresar dinero.     
-            - `retirar(cantidad: Double): void`: Método para retirar dinero.     
+   - **Atributos**:     
+      - `titular: String`: El nombre del titular.     
+      - `saldo: Double = 0.0`: El saldo de la cuenta, inicializado a 0.     
+   - **Métodos**:     
+      - `CuentaBancaria(titular: String)`: Constructor que inicializa la cuenta con un titular y saldo en 0.     
+      - `ingresar(cantidad: Double): void`: Método para ingresar dinero.     
+      - `retirar(cantidad: Double): void`: Método para retirar dinero.     
 
 #### Características del diseño:     
 - Los atributos son privados (`-`) para asegurar el encapsulamiento.     
@@ -62,13 +63,13 @@ Aquí tienes el diagrama UML para la clase **Vehículo** que implementa las espe
 
 #### Contenido del Diagrama:     
 1. **Clase**: `Vehiculo`     
-      - **Atributos**:     
-            - `marca: String`: Marca del vehículo.     
-            - `modelo: String`: Modelo del vehículo.     
-            - `kilometraje: Double = 0.0`: Kilometraje inicializado a 0.     
-      - **Métodos**:     
-            - `registrarViaje(kilometros: Double): void`: Método para aumentar el kilometraje.     
-            - `detalles(): String`: Método para obtener una descripción detallada del vehículo.     
+   - **Atributos**:     
+      - `marca: String`: Marca del vehículo.     
+      - `modelo: String`: Modelo del vehículo.     
+      - `kilometraje: Double = 0.0`: Kilometraje inicializado a 0.     
+   - **Métodos**:     
+      - `registrarViaje(kilometros: Double): void`: Método para aumentar el kilometraje.     
+      - `detalles(): String`: Método para obtener una descripción detallada del vehículo.     
 
 #### Características del diseño:     
 - Los atributos son privados (`-`) para proteger la información.     
@@ -106,14 +107,14 @@ Aquí tienes el diagrama UML para la clase **Libro** que implementa las especifi
 
 #### Contenido del Diagrama:     
 1. **Clase**: `Libro`     
-      - **Atributos**:     
-            - `titulo: String`: El título del libro.   
-            - `autor: String`: El autor del libro.   
-            - `numPaginas: Int = 100`: Número de páginas con valor predeterminado de 100.    
-            - `leido: Boolean = false`: Indica si el libro ha sido leído, inicializado en `false`.         
-      - **Métodos**:     
-            - `Libro(titulo: String, autor: String, numPaginas: Int = 100, leido: Boolean = false)`: Constructor que permite inicializar el libro.    
-            - `toString(): String`: Sobrescribe el método `toString` para proporcionar una descripción del libro.    
+   - **Atributos**:     
+      - `titulo: String`: El título del libro.   
+      - `autor: String`: El autor del libro.   
+      - `numPaginas: Int = 100`: Número de páginas con valor predeterminado de 100.    
+      - `leido: Boolean = false`: Indica si el libro ha sido leído, inicializado en `false`.         
+   - **Métodos**:     
+      - `Libro(titulo: String, autor: String, numPaginas: Int = 100, leido: Boolean = false)`: Constructor que permite inicializar el libro.    
+      - `toString(): String`: Sobrescribe el método `toString` para proporcionar una descripción del libro.    
 
 #### Características del diseño:
 - Las propiedades son privadas (`-`) para mantener su encapsulación.    
@@ -146,14 +147,14 @@ Aquí tienes el diagrama UML para la clase **Estudiante**, implementando las esp
 
 #### Contenido del Diagrama:     
 1. **Clase**: `Estudiante`     
-      - **Atributos**:     
-            - `nombre: String`: Nombre del estudiante, inmutable y no visible externamente.     
-            - `nota: Double`: Nota del estudiante, ajustable dentro del rango 0-10 mediante un método.     
+   - **Atributos**:     
+      - `nombre: String`: Nombre del estudiante, inmutable y no visible externamente.     
+      - `nota: Double`: Nota del estudiante, ajustable dentro del rango 0-10 mediante un método.     
 
-      - **Métodos**:     
-            - `Estudiante(nombre: String)`: Constructor que inicializa el nombre del estudiante.     
-            - `setNota(nota: Double): void`: Establece la nota validando que esté entre 0 y 10.     
-            - `toString(): String`: Devuelve una descripción en el formato: `Estudiante: [nombre], Nota: [nota]`.     
+   - **Métodos**:     
+      - `Estudiante(nombre: String)`: Constructor que inicializa el nombre del estudiante.     
+      - `setNota(nota: Double): void`: Establece la nota validando que esté entre 0 y 10.     
+      - `toString(): String`: Devuelve una descripción en el formato: `Estudiante: [nombre], Nota: [nota]`.     
 
 #### Características del diseño:
 - Las propiedades son privadas (`-`) para mantener su encapsulación. Sin embargo existen los métodos getter y setter, adaptados para la propiedad `nota` según las especificaciones.     
@@ -183,15 +184,15 @@ Aquí tienes el diagrama UML para la clase **Producto**, implementando las espec
 
 #### Contenido del Diagrama:     
 1. **Clase**: `Atributos`     
-      - **Atributos**:     
-            - `nombre: String`: Nombre del producto.     
-            - `precio: Double`: Precio del producto, validado para ser positivo mediante un bloque `init`.     
-            - `stock: Int`: Cantidad de stock disponible, validada para ser positiva mediante un bloque `init`.     
-      - **Métodos**:     
-            - `Producto(nombre: String, precio: Double, stock: Int)`: Constructor que inicializa el producto y valida los atributos.     
-            - `vender(cantidad: Int): void`: Reduce el stock si hay suficiente cantidad disponible.     
-            - `reabastecer(cantidad: Int): void`: Incrementa el stock del producto.     
-            - `toString(): String`: Devuelve una descripción en el formato: `Producto: [nombre], Precio: [precio]€, Stock: [stock]`.     
+   - **Atributos**:     
+      - `nombre: String`: Nombre del producto.     
+      - `precio: Double`: Precio del producto, validado para ser positivo mediante un bloque `init`.     
+      - `stock: Int`: Cantidad de stock disponible, validada para ser positiva mediante un bloque `init`.     
+   - **Métodos**:     
+      - `Producto(nombre: String, precio: Double, stock: Int)`: Constructor que inicializa el producto y valida los atributos.     
+      - `vender(cantidad: Int): void`: Reduce el stock si hay suficiente cantidad disponible.     
+      - `reabastecer(cantidad: Int): void`: Incrementa el stock del producto.     
+      - `toString(): String`: Devuelve una descripción en el formato: `Producto: [nombre], Precio: [precio]€, Stock: [stock]`.     
 
 #### Características del diseño:
 - Las propiedades son privadas (`-`) para mantener su encapsulación. Sin embargo, se han definido métodos para operar con ellas.    

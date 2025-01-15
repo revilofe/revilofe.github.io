@@ -20,7 +20,7 @@
     
     
       
-        <title>EjerciciosSencillosPOO - R Z O</title>
+        <title>Ejercicios de introducción a la programación orientada a objetos - R Z O</title>
       
     
     
@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ejercicio-1-clase-cuenta-bancaria" class="md-skip">
+        <a href="#ejercicios-de-introduccion-a-la-programacion-orientada-a-objetos" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -132,7 +132,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EjerciciosSencillosPOO
+              Ejercicios de introducción a la programación orientada a objetos
             
           </span>
         </div>
@@ -3937,6 +3937,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -3947,11 +3949,11 @@
         <li class="md-nav__item">
   <a href="#ejercicio-1-clase-cuenta-bancaria" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 1: Clase Cuenta Bancaria
+      Ejercicio 1: Clase Cuenta Bancaria.
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Ejercicio 1: Clase Cuenta Bancaria">
+    <nav class="md-nav" aria-label="Ejercicio 1: Clase Cuenta Bancaria.">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4202,17 +4204,16 @@
   
 
 
-  <h1>EjerciciosSencillosPOO</h1>
-
-<h2 id="ejercicio-1-clase-cuenta-bancaria">Ejercicio 1: Clase Cuenta Bancaria<a class="headerlink" href="#ejercicio-1-clase-cuenta-bancaria" title="Permanent link">&para;</a></h2>
+<h1 id="ejercicios-de-introduccion-a-la-programacion-orientada-a-objetos">Ejercicios de introducción a la programación orientada a objetos<a class="headerlink" href="#ejercicios-de-introduccion-a-la-programacion-orientada-a-objetos" title="Permanent link">&para;</a></h1>
+<h2 id="ejercicio-1-clase-cuenta-bancaria">Ejercicio 1: Clase Cuenta Bancaria.<a class="headerlink" href="#ejercicio-1-clase-cuenta-bancaria" title="Permanent link">&para;</a></h2>
 <p>Crea una clase CuentaBancaria con las propiedades:
    - titular (de tipo String).
    - saldo (de tipo Double).</p>
 <p>La clase debe tener:
    1. Un constructor que inicialice el titular con el saldo en 0 por defecto.
    2. Métodos para:
-      - Ingresar dinero (ingresar).
-      - Retirar dinero (retirar). Este método debe lanzar una excepción si se intenta retirar más dinero del que hay en la cuenta.</p>
+   - Ingresar dinero (ingresar).
+   - Retirar dinero (retirar). Este método debe lanzar una excepción si se intenta retirar más dinero del que hay en la cuenta.</p>
 <p>A tener en cuenta:
    1. El saldo no podrá ser modificado directamente desde fuera de la clase. Solo será posible su cambio mediante los métodos ingresar y retirar.
    2. Los métodos ingresar y retirar debe mostrar un mensaje con el saldo final después de la operación.
@@ -4226,14 +4227,16 @@
 <p><img alt="CuentaBancaria" src="../CuentaBancaria.png" /></p>
 <h4 id="contenido-del-diagrama">Contenido del Diagrama:<a class="headerlink" href="#contenido-del-diagrama" title="Permanent link">&para;</a></h4>
 <ol>
-<li><strong>Clase</strong>: <code>CuentaBancaria</code>     <ul>
-<li><strong>Atributos</strong>:   <br />
-        - <code>titular: String</code>: El nombre del titular.   <br />
-        - <code>saldo: Double = 0.0</code>: El saldo de la cuenta, inicializado a 0.     </li>
-<li><strong>Métodos</strong>:   <br />
-        - <code>CuentaBancaria(titular: String)</code>: Constructor que inicializa la cuenta con un titular y saldo en 0.   <br />
-        - <code>ingresar(cantidad: Double): void</code>: Método para ingresar dinero.   <br />
-        - <code>retirar(cantidad: Double): void</code>: Método para retirar dinero.     </li>
+<li><strong>Clase</strong>: <code>CuentaBancaria</code>     </li>
+<li><strong>Atributos</strong>:     <ul>
+<li><code>titular: String</code>: El nombre del titular.     </li>
+<li><code>saldo: Double = 0.0</code>: El saldo de la cuenta, inicializado a 0.     </li>
+</ul>
+</li>
+<li><strong>Métodos</strong>:     <ul>
+<li><code>CuentaBancaria(titular: String)</code>: Constructor que inicializa la cuenta con un titular y saldo en 0.     </li>
+<li><code>ingresar(cantidad: Double): void</code>: Método para ingresar dinero.     </li>
+<li><code>retirar(cantidad: Double): void</code>: Método para retirar dinero.     </li>
 </ul>
 </li>
 </ol>
@@ -4257,14 +4260,16 @@
 <p><img alt="Vehiculo.png" src="../Vehiculo.png" /></p>
 <h4 id="contenido-del-diagrama_1">Contenido del Diagrama:<a class="headerlink" href="#contenido-del-diagrama_1" title="Permanent link">&para;</a></h4>
 <ol>
-<li><strong>Clase</strong>: <code>Vehiculo</code>     <ul>
-<li><strong>Atributos</strong>:   <br />
-        - <code>marca: String</code>: Marca del vehículo.   <br />
-        - <code>modelo: String</code>: Modelo del vehículo.   <br />
-        - <code>kilometraje: Double = 0.0</code>: Kilometraje inicializado a 0.     </li>
-<li><strong>Métodos</strong>:   <br />
-        - <code>registrarViaje(kilometros: Double): void</code>: Método para aumentar el kilometraje.   <br />
-        - <code>detalles(): String</code>: Método para obtener una descripción detallada del vehículo.     </li>
+<li><strong>Clase</strong>: <code>Vehiculo</code>     </li>
+<li><strong>Atributos</strong>:     <ul>
+<li><code>marca: String</code>: Marca del vehículo.     </li>
+<li><code>modelo: String</code>: Modelo del vehículo.     </li>
+<li><code>kilometraje: Double = 0.0</code>: Kilometraje inicializado a 0.     </li>
+</ul>
+</li>
+<li><strong>Métodos</strong>:     <ul>
+<li><code>registrarViaje(kilometros: Double): void</code>: Método para aumentar el kilometraje.     </li>
+<li><code>detalles(): String</code>: Método para obtener una descripción detallada del vehículo.     </li>
 </ul>
 </li>
 </ol>
@@ -4295,15 +4300,17 @@
 <p><img alt="Libro.png" src="../Libro.png" /></p>
 <h4 id="contenido-del-diagrama_2">Contenido del Diagrama:<a class="headerlink" href="#contenido-del-diagrama_2" title="Permanent link">&para;</a></h4>
 <ol>
-<li><strong>Clase</strong>: <code>Libro</code>     <ul>
-<li><strong>Atributos</strong>:   <br />
-        - <code>titulo: String</code>: El título del libro. <br />
-        - <code>autor: String</code>: El autor del libro. <br />
-        - <code>numPaginas: Int = 100</code>: Número de páginas con valor predeterminado de 100.  <br />
-        - <code>leido: Boolean = false</code>: Indica si el libro ha sido leído, inicializado en <code>false</code>.         </li>
-<li><strong>Métodos</strong>:   <br />
-        - <code>Libro(titulo: String, autor: String, numPaginas: Int = 100, leido: Boolean = false)</code>: Constructor que permite inicializar el libro.  <br />
-        - <code>toString(): String</code>: Sobrescribe el método <code>toString</code> para proporcionar una descripción del libro.    </li>
+<li><strong>Clase</strong>: <code>Libro</code>     </li>
+<li><strong>Atributos</strong>:     <ul>
+<li><code>titulo: String</code>: El título del libro.   </li>
+<li><code>autor: String</code>: El autor del libro.   </li>
+<li><code>numPaginas: Int = 100</code>: Número de páginas con valor predeterminado de 100.    </li>
+<li><code>leido: Boolean = false</code>: Indica si el libro ha sido leído, inicializado en <code>false</code>.         </li>
+</ul>
+</li>
+<li><strong>Métodos</strong>:     <ul>
+<li><code>Libro(titulo: String, autor: String, numPaginas: Int = 100, leido: Boolean = false)</code>: Constructor que permite inicializar el libro.    </li>
+<li><code>toString(): String</code>: Sobrescribe el método <code>toString</code> para proporcionar una descripción del libro.    </li>
 </ul>
 </li>
 </ol>
@@ -4329,20 +4336,20 @@
 <p><img alt="Estudiante" src="../Estudiante.png" />     </p>
 <h4 id="contenido-del-diagrama_3">Contenido del Diagrama:<a class="headerlink" href="#contenido-del-diagrama_3" title="Permanent link">&para;</a></h4>
 <ol>
+<li><strong>Clase</strong>: <code>Estudiante</code>     </li>
 <li>
-<p><strong>Clase</strong>: <code>Estudiante</code>     </p>
+<p><strong>Atributos</strong>:     </p>
 <ul>
-<li>
-<p><strong>Atributos</strong>:   <br />
-        - <code>nombre: String</code>: Nombre del estudiante, inmutable y no visible externamente.   <br />
-        - <code>nota: Double</code>: Nota del estudiante, ajustable dentro del rango 0-10 mediante un método.     </p>
+<li><code>nombre: String</code>: Nombre del estudiante, inmutable y no visible externamente.     </li>
+<li><code>nota: Double</code>: Nota del estudiante, ajustable dentro del rango 0-10 mediante un método.     </li>
+</ul>
 </li>
 <li>
-<p><strong>Métodos</strong>:   <br />
-        - <code>Estudiante(nombre: String)</code>: Constructor que inicializa el nombre del estudiante.   <br />
-        - <code>setNota(nota: Double): void</code>: Establece la nota validando que esté entre 0 y 10.   <br />
-        - <code>toString(): String</code>: Devuelve una descripción en el formato: <code>Estudiante: [nombre], Nota: [nota]</code>.     </p>
-</li>
+<p><strong>Métodos</strong>:     </p>
+<ul>
+<li><code>Estudiante(nombre: String)</code>: Constructor que inicializa el nombre del estudiante.     </li>
+<li><code>setNota(nota: Double): void</code>: Establece la nota validando que esté entre 0 y 10.     </li>
+<li><code>toString(): String</code>: Devuelve una descripción en el formato: <code>Estudiante: [nombre], Nota: [nota]</code>.     </li>
 </ul>
 </li>
 </ol>
@@ -4368,16 +4375,18 @@
 <p><img alt="Producto" src="../Producto.png" /></p>
 <h4 id="contenido-del-diagrama_4">Contenido del Diagrama:<a class="headerlink" href="#contenido-del-diagrama_4" title="Permanent link">&para;</a></h4>
 <ol>
-<li><strong>Clase</strong>: <code>Atributos</code>     <ul>
-<li><strong>Atributos</strong>:   <br />
-        - <code>nombre: String</code>: Nombre del producto.   <br />
-        - <code>precio: Double</code>: Precio del producto, validado para ser positivo mediante un bloque <code>init</code>.   <br />
-        - <code>stock: Int</code>: Cantidad de stock disponible, validada para ser positiva mediante un bloque <code>init</code>.     </li>
-<li><strong>Métodos</strong>:   <br />
-        - <code>Producto(nombre: String, precio: Double, stock: Int)</code>: Constructor que inicializa el producto y valida los atributos.   <br />
-        - <code>vender(cantidad: Int): void</code>: Reduce el stock si hay suficiente cantidad disponible.   <br />
-        - <code>reabastecer(cantidad: Int): void</code>: Incrementa el stock del producto.   <br />
-        - <code>toString(): String</code>: Devuelve una descripción en el formato: <code>Producto: [nombre], Precio: [precio]€, Stock: [stock]</code>.     </li>
+<li><strong>Clase</strong>: <code>Atributos</code>     </li>
+<li><strong>Atributos</strong>:     <ul>
+<li><code>nombre: String</code>: Nombre del producto.     </li>
+<li><code>precio: Double</code>: Precio del producto, validado para ser positivo mediante un bloque <code>init</code>.     </li>
+<li><code>stock: Int</code>: Cantidad de stock disponible, validada para ser positiva mediante un bloque <code>init</code>.     </li>
+</ul>
+</li>
+<li><strong>Métodos</strong>:     <ul>
+<li><code>Producto(nombre: String, precio: Double, stock: Int)</code>: Constructor que inicializa el producto y valida los atributos.     </li>
+<li><code>vender(cantidad: Int): void</code>: Reduce el stock si hay suficiente cantidad disponible.     </li>
+<li><code>reabastecer(cantidad: Int): void</code>: Incrementa el stock del producto.     </li>
+<li><code>toString(): String</code>: Devuelve una descripción en el formato: <code>Producto: [nombre], Precio: [precio]€, Stock: [stock]</code>.     </li>
 </ul>
 </li>
 </ol>

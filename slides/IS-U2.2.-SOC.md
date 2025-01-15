@@ -110,7 +110,7 @@ Note: Detalla las tecnologías más relevantes en un SOC y cómo contribuyen al 
 
 ### Servicio: Threat Intelligence
 
-* Recopila información sobre amenazas externas.
+* Recopila información sobre amenazas externas, desconocidas.
 * Identifica indicadores de compromiso (IoCs).
 * Informa sobre tácticas y procedimientos de actores maliciosos.
 

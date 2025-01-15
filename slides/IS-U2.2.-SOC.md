@@ -134,7 +134,6 @@ Note: Explica la función de este servicio como el filtro inicial que asegura qu
 
 Note: Presenta Incident Response como el servicio que toma acción directa ante incidentes, minimizando su impacto.
 
----
 
 ### Servicio: Forensics
 
@@ -210,7 +209,7 @@ Note: Explora cómo la tecnología está transformando el futuro de los SOC, hac
 
 ---
 
-![Diagrama de un SOC](./assets/IS-U2.2.1.-SOC-ServiciosYHerramientas-1736785775500.png) <!-- .element height="50%" width="50%" -->
+![Diagrama de un SOC](./assets/IS-U2.2.1.-SOC-ServiciosYHerramientas-1736785775500.png) <!-- .element height="100%" width="100%" -->
 
 Note: La imagen proporciona una visión general de cómo interactúan los servicios del SOC.
 
@@ -218,4 +217,4 @@ Note: La imagen proporciona una visión general de cómo interactúan los servic
 
 ## ¡Gracias por su atención!
 
-Note: ¿Alguna pregunta sobre funciones en Python?
+Note: ¿Alguna pregunta sobre lo visto?

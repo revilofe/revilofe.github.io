@@ -21,6 +21,25 @@ En el programa principal:
    - Realiza un ingreso de 100.0 y un retiro de 50.0.
    - Intenta realizar un retiro que supere el saldo y captura la excepción.
 
+### Diseño:
+Aquí tienes el diagrama UML para la clase **CuentaBancaria** que implementa las especificaciones del ejercicio:
+
+![CuentaBancaria](CuentaBancaria.png)
+
+#### Contenido del Diagrama:
+1. **Clase**: `CuentaBancaria`
+      - **Atributos**:
+            - `titular: String`: El nombre del titular.
+            - `saldo: Double = 0.0`: El saldo de la cuenta, inicializado a 0.
+      - **Métodos**:
+            - `CuentaBancaria(titular: String)`: Constructor que inicializa la cuenta con un titular y saldo en 0.
+            - `ingresar(cantidad: Double): void`: Método para ingresar dinero.
+            - `retirar(cantidad: Double): void`: Método para retirar dinero.
+
+#### Características del diseño:
+- Los atributos son privados (`-`) para asegurar el encapsulamiento.
+- Los métodos públicos (`+`) controlan las operaciones sobre el saldo.
+
 
 ## Ejercicio 2: Clase Vehículo
 
@@ -35,6 +54,26 @@ La clase debe tener:
 
 En el programa principal:
    - Crea un vehículo, registra un viaje de 100 km y muestra sus detalles.
+
+### Diseño:
+Aquí tienes el diagrama UML para la clase **Vehículo** que implementa las especificaciones del ejercicio:
+
+![Vehiculo.png](Vehiculo.png)
+
+#### Contenido del Diagrama:
+1. **Clase**: `Vehiculo`
+      - **Atributos**:
+            - `marca: String`: Marca del vehículo.
+            - `modelo: String`: Modelo del vehículo.
+            - `kilometraje: Double = 0.0`: Kilometraje inicializado a 0.
+      - **Métodos**:
+            - `registrarViaje(kilometros: Double): void`: Método para aumentar el kilometraje.
+            - `detalles(): String`: Método para obtener una descripción detallada del vehículo.
+
+#### Características del diseño:
+- Los atributos son privados (`-`) para proteger la información.
+- Los métodos públicos (`+`) permiten operar y acceder a la información del vehículo.
+
 
 
 ## Ejercicio 3: Clase Libro
@@ -59,6 +98,28 @@ En el programa principal:
    - Crea dos libros, marca uno como leído e imprime el valor de cada libro.
    - Crea un libro con titulo vacío que muestre el mensaje de error correspondiente (acuérdate de capturar las excepciones).
 
+### Diseño:
+Aquí tienes el diagrama UML para la clase **Libro** que implementa las especificaciones del ejercicio:
+
+![Libro.png](Libro.png)
+
+
+#### Contenido del Diagrama:
+1. **Clase**: `Libro`
+      - **Atributos**:
+            - `titulo: String`: El título del libro.   
+            - `autor: String`: El autor del libro.   
+            - `numPaginas: Int = 100`: Número de páginas con valor predeterminado de 100.    
+            - `leido: Boolean = false`: Indica si el libro ha sido leído, inicializado en `false`.    
+      - **Métodos**:
+            - `Libro(titulo: String, autor: String, numPaginas: Int = 100, leido: Boolean = false)`: Constructor que permite inicializar el libro.    
+            - `toString(): String`: Sobrescribe el método `toString` para proporcionar una descripción del libro.    
+
+#### Características del diseño:
+- Las propiedades son privadas (`-`) para mantener su encapsulación.    
+- Se permite un constructor secundario que inicializa valores predeterminados para `numPaginas` y `leido`.    
+
+
 
 ## Ejercicio 4: Clase Estudiante
 
@@ -77,6 +138,27 @@ A tener en cuenta:
 En el programa principal:
    - Crea varios estudiantes, intenta asignarles notas fuera del rango y muestra sus detalles.
 
+### Diseño:
+Aquí tienes el diagrama UML para la clase **Estudiante**, implementando las especificaciones del ejercicio 4:
+
+![Estudiante](Estudiante.png)
+
+
+#### Contenido del Diagrama:
+1. **Clase**: `Estudiante`
+      - **Atributos**:
+            - `nombre: String`: Nombre del estudiante, inmutable y no visible externamente.
+            - `nota: Double`: Nota del estudiante, ajustable dentro del rango 0-10 mediante un método.
+
+      - **Métodos**:
+            - `Estudiante(nombre: String)`: Constructor que inicializa el nombre del estudiante.
+            - `setNota(nota: Double): void`: Establece la nota validando que esté entre 0 y 10.
+            - `toString(): String`: Devuelve una descripción en el formato: `Estudiante: [nombre], Nota: [nota]`.
+
+#### Características del diseño:
+- Las propiedades son privadas (`-`) para mantener su encapsulación. Sin embargo existen los métodos getter y setter, adaptados para la propiedad `nota` según las especificaciones.
+- El constructor estaría disponible para inicializar el nombre del estudiante.
+
 
 ## Ejercicio 5: Clase Producto
 
@@ -93,3 +175,25 @@ La clase debe:
 
 En el programa principal:
    - Crea varios productos, usa sus métodos y muestra sus detalles.
+
+### Diseño:
+Aquí tienes el diagrama UML para la clase **Producto**, implementando las especificaciones del ejercicio 5:
+
+![Producto](Producto.png)
+
+#### Contenido del Diagrama:
+1. **Clase**: `Atributos`
+      - **Atributos**:
+            - `nombre: String`: Nombre del producto.
+            - `precio: Double`: Precio del producto, validado para ser positivo mediante un bloque `init`.
+            - `stock: Int`: Cantidad de stock disponible, validada para ser positiva mediante un bloque `init`.
+      - **Métodos**:
+            - `Producto(nombre: String, precio: Double, stock: Int)`: Constructor que inicializa el producto y valida los atributos.
+            - `vender(cantidad: Int): void`: Reduce el stock si hay suficiente cantidad disponible.
+            - `reabastecer(cantidad: Int): void`: Incrementa el stock del producto.
+            - `toString(): String`: Devuelve una descripción en el formato: `Producto: [nombre], Precio: [precio]€, Stock: [stock]`.
+
+#### Características del diseño:
+- Las propiedades son privadas (`-`) para mantener su encapsulación. Sin embargo, se han definido métodos para operar con ellas. 
+- El constructor inicializa el producto y valida los atributos.
+

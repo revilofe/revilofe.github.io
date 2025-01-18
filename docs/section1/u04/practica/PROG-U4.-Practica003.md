@@ -23,7 +23,7 @@ tags:
 
    2. Te proporciono algunas pistas de una posible solución:
 
-      ```
+      ```kotin
       /**
       * Clase Compra
       * @param cliente cliente que realizo la compra
@@ -31,23 +31,25 @@ tags:
       * @param monto monto de la compra
       * @constructor Crea una compra con cliente, dia y monto
       */
-      ```
-      ```
+      ```    
+      
+      ```kotin
       /**
        * Clase Cliente
        * @param nombre nombre del cliente
        * @param domicilio domicilio del cliente
        * @constructor Crea un cliente con nombre y domicilio
        */
-       ```
-      ```      
+      ```       
+      
+      ```kotin      
       /**
        * Clase Domicilio
        * @param calle calle del domicilio
        * @param numero numero del domicilio
        * @constructor Crea un domicilio con calle y numero
-       */
-      ```
+       */ 
+      ```    
       
    3. La clase Domicilio tendrá un método llamado dirCompleta()que retornará el domicilio completo con la calle y el número.
 

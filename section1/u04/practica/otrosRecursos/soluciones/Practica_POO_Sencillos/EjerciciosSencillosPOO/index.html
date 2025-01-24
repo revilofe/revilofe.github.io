@@ -4206,194 +4206,234 @@
 
 <h1 id="ejercicios-de-introduccion-a-la-programacion-orientada-a-objetos">Ejercicios de introducción a la programación orientada a objetos<a class="headerlink" href="#ejercicios-de-introduccion-a-la-programacion-orientada-a-objetos" title="Permanent link">&para;</a></h1>
 <h2 id="ejercicio-1-clase-cuenta-bancaria">Ejercicio 1: Clase Cuenta Bancaria.<a class="headerlink" href="#ejercicio-1-clase-cuenta-bancaria" title="Permanent link">&para;</a></h2>
-<p>Crea una clase CuentaBancaria con las propiedades:
-   - titular (de tipo String).
-   - saldo (de tipo Double).</p>
-<p>La clase debe tener:
-   1. Un constructor que inicialice el titular con el saldo en 0 por defecto.
-   2. Métodos para:
-   - Ingresar dinero (ingresar).
-   - Retirar dinero (retirar). Este método debe lanzar una excepción si se intenta retirar más dinero del que hay en la cuenta.</p>
-<p>A tener en cuenta:
-   1. El saldo no podrá ser modificado directamente desde fuera de la clase. Solo será posible su cambio mediante los métodos ingresar y retirar.
-   2. Los métodos ingresar y retirar debe mostrar un mensaje con el saldo final después de la operación.
-   3. No será posible retirar más dinero del saldo actual, ni ingresar cantidades negativas o 0. Deberá generar una excepción si ocurre esta situación.</p>
-<p>En el programa principal:
-   - Crea una cuenta bancaria con un titular.
-   - Realiza un ingreso de 100.0 y un retiro de 50.0.
-   - Intenta realizar un retiro que supere el saldo y captura la excepción.</p>
+<p>Crea una clase CuentaBancaria con las propiedades:</p>
+<ul>
+<li>titular (de tipo String).</li>
+<li>saldo (de tipo Double).</li>
+</ul>
+<p>La clase debe tener:</p>
+<ol>
+<li>Un constructor que inicialice el titular con el saldo en 0 por defecto.</li>
+<li>
+<p>Métodos para:</p>
+</li>
+<li>
+<p>Ingresar dinero (ingresar).</p>
+</li>
+<li>Retirar dinero (retirar). Este método debe lanzar una excepción si se intenta retirar más dinero del que hay en la cuenta.</li>
+</ol>
+<p>A tener en cuenta:</p>
+<ol>
+<li>El saldo no podrá ser modificado directamente desde fuera de la clase. Solo será posible su cambio mediante los métodos ingresar y retirar.</li>
+<li>Los métodos ingresar y retirar debe mostrar un mensaje con el saldo final después de la operación.</li>
+<li>No será posible retirar más dinero del saldo actual, ni ingresar cantidades negativas o 0. Deberá generar una excepción si ocurre esta situación.</li>
+</ol>
+<p>En el programa principal:</p>
+<ul>
+<li>Crea una cuenta bancaria con un titular.</li>
+<li>Realiza un ingreso de 100.0 y un retiro de 50.0.</li>
+<li>Intenta realizar un retiro que supere el saldo y captura la excepción.</li>
+</ul>
 <h3 id="diseno">Diseño:<a class="headerlink" href="#diseno" title="Permanent link">&para;</a></h3>
-<p>Aquí tienes el diagrama <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> para la clase <strong>CuentaBancaria</strong> que implementa las especificaciones del ejercicio:     </p>
-<p><img alt="CuentaBancaria" src="../CuentaBancaria.png" /></p>
+<p>Aquí tienes el diagrama <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> para la clase <strong>CuentaBancaria</strong> que implementa las especificaciones del ejercicio:</p>
+<p><img alt="CuentaBancaria" src="../assets/CuentaBancaria.png" /></p>
 <h4 id="contenido-del-diagrama">Contenido del Diagrama:<a class="headerlink" href="#contenido-del-diagrama" title="Permanent link">&para;</a></h4>
 <ol>
-<li><strong>Clase</strong>: <code>CuentaBancaria</code>     </li>
-<li><strong>Atributos</strong>:     <ul>
-<li><code>titular: String</code>: El nombre del titular.     </li>
-<li><code>saldo: Double = 0.0</code>: El saldo de la cuenta, inicializado a 0.     </li>
+<li><strong>Clase</strong>: <code>CuentaBancaria</code></li>
+<li><strong>Atributos</strong>:<ul>
+<li><code>titular: String</code>: El nombre del titular.</li>
+<li><code>saldo: Double = 0.0</code>: El saldo de la cuenta, inicializado a 0.</li>
 </ul>
 </li>
-<li><strong>Métodos</strong>:     <ul>
-<li><code>CuentaBancaria(titular: String)</code>: Constructor que inicializa la cuenta con un titular y saldo en 0.     </li>
-<li><code>ingresar(cantidad: Double): void</code>: Método para ingresar dinero.     </li>
-<li><code>retirar(cantidad: Double): void</code>: Método para retirar dinero.     </li>
+<li><strong>Métodos</strong>:<ul>
+<li><code>CuentaBancaria(titular: String)</code>: Constructor que inicializa la cuenta con un titular y saldo en 0.</li>
+<li><code>ingresar(cantidad: Double): void</code>: Método para ingresar dinero.</li>
+<li><code>retirar(cantidad: Double): void</code>: Método para retirar dinero.</li>
 </ul>
 </li>
 </ol>
 <h4 id="caracteristicas-del-diseno">Características del diseño:<a class="headerlink" href="#caracteristicas-del-diseno" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Los atributos son privados (<code>-</code>) para asegurar el encapsulamiento.     </li>
-<li>Los métodos públicos (<code>+</code>) controlan las operaciones sobre el saldo.     </li>
+<li>Los atributos son privados (<code>-</code>) para asegurar el encapsulamiento.</li>
+<li>Los métodos públicos (<code>+</code>) controlan las operaciones sobre el saldo.</li>
 </ul>
 <h2 id="ejercicio-2-clase-vehiculo">Ejercicio 2: Clase Vehículo<a class="headerlink" href="#ejercicio-2-clase-vehiculo" title="Permanent link">&para;</a></h2>
-<p>Crea una clase Vehiculo con las propiedades:
-   - marca.
-   - modelo.
-   - kilometraje.</p>
-<p>La clase debe tener:
-   1. Métodos para registrar un viaje que aumente el kilometraje.
-   2. Un método detalles que devuelva una descripción del vehículo o modificar el método toString.</p>
-<p>En el programa principal:
-   - Crea un vehículo, registra un viaje de 100 km y muestra sus detalles.</p>
+<p>Crea una clase Vehiculo con las propiedades:</p>
+<ul>
+<li>marca.</li>
+<li>modelo.</li>
+<li>kilometraje.</li>
+</ul>
+<p>La clase debe tener:</p>
+<ol>
+<li>Métodos para registrar un viaje que aumente el kilometraje.</li>
+<li>Un método detalles que devuelva una descripción del vehículo o modificar el método toString.</li>
+</ol>
+<p>En el programa principal:</p>
+<ul>
+<li>Crea un vehículo, registra un viaje de 100 km y muestra sus detalles.</li>
+</ul>
 <h3 id="diseno_1">Diseño:<a class="headerlink" href="#diseno_1" title="Permanent link">&para;</a></h3>
-<p>Aquí tienes el diagrama <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> para la clase <strong>Vehículo</strong> que implementa las especificaciones del ejercicio:     </p>
-<p><img alt="Vehiculo.png" src="../Vehiculo.png" /></p>
+<p>Aquí tienes el diagrama <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> para la clase <strong>Vehículo</strong> que implementa las especificaciones del ejercicio:</p>
+<p><img alt="Vehiculo.png" src="../../../../assets/Vehiculo.png" /></p>
 <h4 id="contenido-del-diagrama_1">Contenido del Diagrama:<a class="headerlink" href="#contenido-del-diagrama_1" title="Permanent link">&para;</a></h4>
 <ol>
-<li><strong>Clase</strong>: <code>Vehiculo</code>     </li>
-<li><strong>Atributos</strong>:     <ul>
-<li><code>marca: String</code>: Marca del vehículo.     </li>
-<li><code>modelo: String</code>: Modelo del vehículo.     </li>
-<li><code>kilometraje: Double = 0.0</code>: Kilometraje inicializado a 0.     </li>
+<li><strong>Clase</strong>: <code>Vehiculo</code></li>
+<li><strong>Atributos</strong>:<ul>
+<li><code>marca: String</code>: Marca del vehículo.</li>
+<li><code>modelo: String</code>: Modelo del vehículo.</li>
+<li><code>kilometraje: Double = 0.0</code>: Kilometraje inicializado a 0.</li>
 </ul>
 </li>
-<li><strong>Métodos</strong>:     <ul>
-<li><code>registrarViaje(kilometros: Double): void</code>: Método para aumentar el kilometraje.     </li>
-<li><code>detalles(): String</code>: Método para obtener una descripción detallada del vehículo.     </li>
+<li><strong>Métodos</strong>:<ul>
+<li><code>registrarViaje(kilometros: Double): void</code>: Método para aumentar el kilometraje.</li>
+<li><code>detalles(): String</code>: Método para obtener una descripción detallada del vehículo.</li>
 </ul>
 </li>
 </ol>
 <h4 id="caracteristicas-del-diseno_1">Características del diseño:<a class="headerlink" href="#caracteristicas-del-diseno_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Los atributos son privados (<code>-</code>) para proteger la información.     </li>
-<li>Los métodos públicos (<code>+</code>) permiten operar y acceder a la información del vehículo.     </li>
+<li>Los atributos son privados (<code>-</code>) para proteger la información.</li>
+<li>Los métodos públicos (<code>+</code>) permiten operar y acceder a la información del vehículo.</li>
 </ul>
 <h2 id="ejercicio-3-clase-libro">Ejercicio 3: Clase Libro<a class="headerlink" href="#ejercicio-3-clase-libro" title="Permanent link">&para;</a></h2>
-<p>Crea una clase Libro con las propiedades:
-   - titulo (de tipo String).
-   - autor (de tipo String).
-   - numPaginas (de tipo Int).
-   - leido (de tipo Boolean, inicializado en false).</p>
-<p>La clase debe:
-   1. Sobrescribir el método toString para mostrar: "Libro: [titulo] por [autor], Páginas: [numPaginas], Leído: [Sí/No]".
-   2. Incluir un constructor secundario que inicialice numPaginas y leido con valores predeterminados.</p>
-<p>A tener en cuenta:
-   1. las propiedades titulo, autor y numPaginas serán propiedades inmutables.
-   2. titulo y autor no pueden ser cadenas vacías.
-   3. numPaginas debe ser un valor positivo, no superior a 5000.
-   4. Por defecto un libro tiene 100 páginas si no se especifica al inicializarlo.</p>
-<p>En el programa principal:
-   - Crea dos libros, marca uno como leído e imprime el valor de cada libro.
-   - Crea un libro con titulo vacío que muestre el mensaje de error correspondiente (acuérdate de capturar las excepciones).</p>
+<p>Crea una clase Libro con las propiedades:</p>
+<ul>
+<li>titulo (de tipo String).</li>
+<li>autor (de tipo String).</li>
+<li>numPaginas (de tipo Int).</li>
+<li>leido (de tipo Boolean, inicializado en false).</li>
+</ul>
+<p>La clase debe:</p>
+<ol>
+<li>Sobrescribir el método toString para mostrar: "Libro: [titulo] por [autor], Páginas: [numPaginas], Leído: [Sí/No]".</li>
+<li>Incluir un constructor secundario que inicialice numPaginas y leido con valores predeterminados.</li>
+</ol>
+<p>A tener en cuenta:</p>
+<ol>
+<li>las propiedades titulo, autor y numPaginas serán propiedades inmutables.</li>
+<li>titulo y autor no pueden ser cadenas vacías.</li>
+<li>numPaginas debe ser un valor positivo, no superior a 5000.</li>
+<li>Por defecto un libro tiene 100 páginas si no se especifica al inicializarlo.</li>
+</ol>
+<p>En el programa principal:</p>
+<ul>
+<li>Crea dos libros, marca uno como leído e imprime el valor de cada libro.</li>
+<li>Crea un libro con titulo vacío que muestre el mensaje de error correspondiente (acuérdate de capturar las excepciones).</li>
+</ul>
 <h3 id="diseno_2">Diseño:<a class="headerlink" href="#diseno_2" title="Permanent link">&para;</a></h3>
-<p>Aquí tienes el diagrama <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> para la clase <strong>Libro</strong> que implementa las especificaciones del ejercicio:     </p>
-<p><img alt="Libro.png" src="../Libro.png" /></p>
+<p>Aquí tienes el diagrama <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> para la clase <strong>Libro</strong> que implementa las especificaciones del ejercicio:</p>
+<p><img alt="Libro.png" src="../../../../assets/Libro.png" /></p>
 <h4 id="contenido-del-diagrama_2">Contenido del Diagrama:<a class="headerlink" href="#contenido-del-diagrama_2" title="Permanent link">&para;</a></h4>
 <ol>
-<li><strong>Clase</strong>: <code>Libro</code>     </li>
-<li><strong>Atributos</strong>:     <ul>
-<li><code>titulo: String</code>: El título del libro.   </li>
-<li><code>autor: String</code>: El autor del libro.   </li>
-<li><code>numPaginas: Int = 100</code>: Número de páginas con valor predeterminado de 100.    </li>
-<li><code>leido: Boolean = false</code>: Indica si el libro ha sido leído, inicializado en <code>false</code>.         </li>
+<li><strong>Clase</strong>: <code>Libro</code></li>
+<li><strong>Atributos</strong>:<ul>
+<li><code>titulo: String</code>: El título del libro.</li>
+<li><code>autor: String</code>: El autor del libro.</li>
+<li><code>numPaginas: Int = 100</code>: Número de páginas con valor predeterminado de 100.</li>
+<li><code>leido: Boolean = false</code>: Indica si el libro ha sido leído, inicializado en <code>false</code>.</li>
 </ul>
 </li>
-<li><strong>Métodos</strong>:     <ul>
-<li><code>Libro(titulo: String, autor: String, numPaginas: Int = 100, leido: Boolean = false)</code>: Constructor que permite inicializar el libro.    </li>
-<li><code>toString(): String</code>: Sobrescribe el método <code>toString</code> para proporcionar una descripción del libro.    </li>
+<li><strong>Métodos</strong>:<ul>
+<li><code>Libro(titulo: String, autor: String, numPaginas: Int = 100, leido: Boolean = false)</code>: Constructor que permite inicializar el libro.</li>
+<li><code>toString(): String</code>: Sobrescribe el método <code>toString</code> para proporcionar una descripción del libro.</li>
 </ul>
 </li>
 </ol>
 <h4 id="caracteristicas-del-diseno_2">Características del diseño:<a class="headerlink" href="#caracteristicas-del-diseno_2" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Las propiedades son privadas (<code>-</code>) para mantener su encapsulación.    </li>
-<li>Se permite un constructor secundario que inicializa valores predeterminados para <code>numPaginas</code> y <code>leido</code>.    </li>
+<li>Las propiedades son privadas (<code>-</code>) para mantener su encapsulación.</li>
+<li>Se permite un constructor secundario que inicializa valores predeterminados para <code>numPaginas</code> y <code>leido</code>.</li>
 </ul>
 <h2 id="ejercicio-4-clase-estudiante">Ejercicio 4: Clase Estudiante<a class="headerlink" href="#ejercicio-4-clase-estudiante" title="Permanent link">&para;</a></h2>
-<p>Crea una clase Estudiante con las propiedades:
-   - nombre
-   - nota</p>
-<p>La clase debe:
-   1. Modificar el setter de nota para asegurarse de que esté en el rango 0-10.
-   2. Sobrescribir el método toString para mostrar: "Estudiante: [nombre], Nota: [nota]".</p>
-<p>A tener en cuenta:
-   1. El nombre del estudiante no se podrá modificar una vez inicializado un objeto de tipo Estudiante.
-   2. La propiedad nombre no puede ser tampoco visible desde fuera de la clase Estudiante.</p>
-<p>En el programa principal:
-   - Crea varios estudiantes, intenta asignarles notas fuera del rango y muestra sus detalles.</p>
+<p>Crea una clase Estudiante con las propiedades:</p>
+<ul>
+<li>nombre</li>
+<li>nota</li>
+</ul>
+<p>La clase debe:</p>
+<ol>
+<li>Modificar el setter de nota para asegurarse de que esté en el rango 0-10.</li>
+<li>Sobrescribir el método toString para mostrar: "Estudiante: [nombre], Nota: [nota]".</li>
+</ol>
+<p>A tener en cuenta:</p>
+<ol>
+<li>El nombre del estudiante no se podrá modificar una vez inicializado un objeto de tipo Estudiante.</li>
+<li>La propiedad nombre no puede ser tampoco visible desde fuera de la clase Estudiante.</li>
+</ol>
+<p>En el programa principal:</p>
+<ul>
+<li>Crea varios estudiantes, intenta asignarles notas fuera del rango y muestra sus detalles.</li>
+</ul>
 <h3 id="diseno_3">Diseño:<a class="headerlink" href="#diseno_3" title="Permanent link">&para;</a></h3>
-<p>Aquí tienes el diagrama <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> para la clase <strong>Estudiante</strong>, implementando las especificaciones del ejercicio 4:     </p>
-<p><img alt="Estudiante" src="../Estudiante.png" />     </p>
+<p>Aquí tienes el diagrama <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> para la clase <strong>Estudiante</strong>, implementando las especificaciones del ejercicio 4:</p>
+<p><img alt="Estudiante" src="../../../../assets/Estudiante.png" /></p>
 <h4 id="contenido-del-diagrama_3">Contenido del Diagrama:<a class="headerlink" href="#contenido-del-diagrama_3" title="Permanent link">&para;</a></h4>
 <ol>
-<li><strong>Clase</strong>: <code>Estudiante</code>     </li>
+<li><strong>Clase</strong>: <code>Estudiante</code></li>
 <li>
-<p><strong>Atributos</strong>:     </p>
+<p><strong>Atributos</strong>:</p>
 <ul>
-<li><code>nombre: String</code>: Nombre del estudiante, inmutable y no visible externamente.     </li>
-<li><code>nota: Double</code>: Nota del estudiante, ajustable dentro del rango 0-10 mediante un método.     </li>
-</ul>
+<li><code>nombre: String</code>: Nombre del estudiante, inmutable y no visible externamente.</li>
+<li><code>nota: Double</code>: Nota del estudiante, ajustable dentro del rango 0-10 mediante un método.</li>
+<li>
+<p><strong>Métodos</strong>:</p>
 </li>
 <li>
-<p><strong>Métodos</strong>:     </p>
-<ul>
-<li><code>Estudiante(nombre: String)</code>: Constructor que inicializa el nombre del estudiante.     </li>
-<li><code>setNota(nota: Double): void</code>: Establece la nota validando que esté entre 0 y 10.     </li>
-<li><code>toString(): String</code>: Devuelve una descripción en el formato: <code>Estudiante: [nombre], Nota: [nota]</code>.     </li>
+<p><code>Estudiante(nombre: String)</code>: Constructor que inicializa el nombre del estudiante.</p>
+</li>
+<li><code>setNota(nota: Double): void</code>: Establece la nota validando que esté entre 0 y 10.</li>
+<li><code>toString(): String</code>: Devuelve una descripción en el formato: <code>Estudiante: [nombre], Nota: [nota]</code>.</li>
 </ul>
 </li>
 </ol>
 <h4 id="caracteristicas-del-diseno_3">Características del diseño:<a class="headerlink" href="#caracteristicas-del-diseno_3" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Las propiedades son privadas (<code>-</code>) para mantener su encapsulación. Sin embargo existen los métodos getter y setter, adaptados para la propiedad <code>nota</code> según las especificaciones.     </li>
-<li>El constructor estaría disponible para inicializar el nombre del estudiante.     </li>
+<li>Las propiedades son privadas (<code>-</code>) para mantener su encapsulación. Sin embargo existen los métodos getter y setter, adaptados para la propiedad <code>nota</code> según las especificaciones.</li>
+<li>El constructor estaría disponible para inicializar el nombre del estudiante.</li>
 </ul>
 <h2 id="ejercicio-5-clase-producto">Ejercicio 5: Clase Producto<a class="headerlink" href="#ejercicio-5-clase-producto" title="Permanent link">&para;</a></h2>
-<p>Crea una clase Producto con las propiedades:
-   - nombre
-   - precio
-   - stock</p>
-<p>La clase debe:
-   1. Utilizar un bloque init para asegurarse de que el precio y el stock sean positivos.   <br />
-   2. Sobrescribir el método toString para mostrar: "Producto: [nombre], Precio: [precio]€, Stock: [stock]".   <br />
-   3. Métodos vender y readastecer, que actualizarán el stock. Realizar los controles que veáis adecuados.   <br />
-   4. Las propiedades precio y stock no pueden ser modificadas directamente desde fuera de la clase Producto.     </p>
-<p>En el programa principal:   <br />
-   - Crea varios productos, usa sus métodos y muestra sus detalles.     </p>
+<p>Crea una clase Producto con las propiedades:</p>
+<ul>
+<li>nombre</li>
+<li>precio</li>
+<li>stock</li>
+</ul>
+<p>La clase debe:</p>
+<ol>
+<li>Utilizar un bloque init para asegurarse de que el precio y el stock sean positivos.</li>
+<li>Sobrescribir el método toString para mostrar: "Producto: [nombre], Precio: [precio]€, Stock: [stock]".</li>
+<li>Métodos vender y readastecer, que actualizarán el stock. Realizar los controles que veáis adecuados.</li>
+<li>Las propiedades precio y stock no pueden ser modificadas directamente desde fuera de la clase Producto.</li>
+</ol>
+<p>En el programa principal:</p>
+<ul>
+<li>Crea varios productos, usa sus métodos y muestra sus detalles.</li>
+</ul>
 <h3 id="diseno_4">Diseño:<a class="headerlink" href="#diseno_4" title="Permanent link">&para;</a></h3>
-<p>Aquí tienes el diagrama <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> para la clase <strong>Producto</strong>, implementando las especificaciones del ejercicio 5:     </p>
-<p><img alt="Producto" src="../Producto.png" /></p>
+<p>Aquí tienes el diagrama <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> para la clase <strong>Producto</strong>, implementando las especificaciones del ejercicio 5:</p>
+<p><img alt="Producto" src="../../../../assets/Producto.png" /></p>
 <h4 id="contenido-del-diagrama_4">Contenido del Diagrama:<a class="headerlink" href="#contenido-del-diagrama_4" title="Permanent link">&para;</a></h4>
 <ol>
-<li><strong>Clase</strong>: <code>Atributos</code>     </li>
-<li><strong>Atributos</strong>:     <ul>
-<li><code>nombre: String</code>: Nombre del producto.     </li>
-<li><code>precio: Double</code>: Precio del producto, validado para ser positivo mediante un bloque <code>init</code>.     </li>
-<li><code>stock: Int</code>: Cantidad de stock disponible, validada para ser positiva mediante un bloque <code>init</code>.     </li>
+<li><strong>Clase</strong>: <code>Atributos</code></li>
+<li><strong>Atributos</strong>:<ul>
+<li><code>nombre: String</code>: Nombre del producto.</li>
+<li><code>precio: Double</code>: Precio del producto, validado para ser positivo mediante un bloque <code>init</code>.</li>
+<li><code>stock: Int</code>: Cantidad de stock disponible, validada para ser positiva mediante un bloque <code>init</code>.</li>
 </ul>
 </li>
-<li><strong>Métodos</strong>:     <ul>
-<li><code>Producto(nombre: String, precio: Double, stock: Int)</code>: Constructor que inicializa el producto y valida los atributos.     </li>
-<li><code>vender(cantidad: Int): void</code>: Reduce el stock si hay suficiente cantidad disponible.     </li>
-<li><code>reabastecer(cantidad: Int): void</code>: Incrementa el stock del producto.     </li>
-<li><code>toString(): String</code>: Devuelve una descripción en el formato: <code>Producto: [nombre], Precio: [precio]€, Stock: [stock]</code>.     </li>
+<li><strong>Métodos</strong>:<ul>
+<li><code>Producto(nombre: String, precio: Double, stock: Int)</code>: Constructor que inicializa el producto y valida los atributos.</li>
+<li><code>vender(cantidad: Int): void</code>: Reduce el stock si hay suficiente cantidad disponible.</li>
+<li><code>reabastecer(cantidad: Int): void</code>: Incrementa el stock del producto.</li>
+<li><code>toString(): String</code>: Devuelve una descripción en el formato: <code>Producto: [nombre], Precio: [precio]€, Stock: [stock]</code>.</li>
 </ul>
 </li>
 </ol>
 <h4 id="caracteristicas-del-diseno_4">Características del diseño:<a class="headerlink" href="#caracteristicas-del-diseno_4" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Las propiedades son privadas (<code>-</code>) para mantener su encapsulación. Sin embargo, se han definido métodos para operar con ellas.    </li>
-<li>El constructor inicializa el producto y valida los atributos.    </li>
+<li>Las propiedades son privadas (<code>-</code>) para mantener su encapsulación. Sin embargo, se han definido métodos para operar con ellas.</li>
+<li>El constructor inicializa el producto y valida los atributos.</li>
 </ul>
 
 

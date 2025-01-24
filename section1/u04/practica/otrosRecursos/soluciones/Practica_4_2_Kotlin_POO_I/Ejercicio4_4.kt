@@ -35,65 +35,81 @@ Vuelve a mostrarlos por pantalla.
 
 /**
  * Clase Coche.
+ * Representa un coche con atributos esenciales como marca, modelo, número de caballos, número de puertas, matrícula y color.
+ * Incluye validaciones para garantizar la integridad de los datos.
  * @param marca Marca del coche
  * @param modelo Modelo del coche
  * @param numCaballos Numero de caballos del coche
  * @param color Color del coche
  * @param numPuertas Numero de puertas del coche
  * @param matricula Matricula del coche
+ * 
  */
-
 class Coche(
     marca: String,
     modelo: String,
-    val numCaballos: Int,
-    val numPuertas: Int,
-    val matricula: String,
-    color: String) {
+    val numCaballos: Int, // Número de caballos, debe estar entre 70 y 700.
+    val numPuertas: Int, // Número de puertas, debe estar entre 3 y 5.
+    val matricula: String, // Matrícula, debe tener exactamente 7 caracteres.
+    color: String // Color del coche, puede ser modificado pero no nulo o blanco.
+) {
 
+    /**
+     * Propiedad color, con validación para evitar valores nulos o blancos.
+     */
     var color: String = color
         set(value) {
-            require(!value.isBlank()) { "Color no puede ser nulo o blanco" }
+            require(value.isNotBlank()) { "Color no puede ser nulo o blanco" }
             field = value
         }
 
+    /**
+     * Propiedad marca, se asegura de que la primera letra esté en mayúscula.
+     */
     var marca: String = marca
-        get() = field.capitalize()
+        get() = field.replaceFirstChar { it.uppercase() }
 
+    /**
+     * Propiedad modelo, se asegura de que la primera letra esté en mayúscula.
+     */
     var modelo: String = modelo
-        get() = field.capitalize()
+        get() = field.replaceFirstChar { it.uppercase() }
 
     init {
-        require(!marca.isBlank()) { "Marca no puede ser nula o blanca" }
-        require(!modelo.isBlank()) { "Modelo no puede ser nulo o blanco" }
-        require(numCaballos in 70..700) { "El numero de caballos debe estar entre 70 y 700" }
-        require(numPuertas in 3..5) { "El numero de puertas debe estar entre 3 y 5" }
-        require(matricula.length == 7) { "La matricula debe tener 7 caracteres" }
-        require(!color.isBlank()) { "Color no puede ser nulo o blanco" }
+        // Validación de los valores iniciales del coche.
+        require(marca.isNotBlank()) { "Marca no puede ser nula o blanca" }
+        require(modelo.isNotBlank()) { "Modelo no puede ser nulo o blanco" }
+        require(numCaballos in 70..700) { "El número de caballos debe estar entre 70 y 700" }
+        require(numPuertas in 3..5) { "El número de puertas debe estar entre 3 y 5" }
+        require(matricula.length == 7) { "La matrícula debe tener 7 caracteres" }
+        require(color.isNotBlank()) { "Color no puede ser nulo o blanco" }
     }
 
+    /**
+     * Representación en forma de cadena del objeto Coche.
+     * @return Información legible sobre el coche.
+     */
     override fun toString(): String {
-        return "Coche: marca $marca, modelo $modelo, numero de caballos $numCaballos, color $color, numero de puertas $numPuertas, matricula $matricula"
+        return "Coche: marca $marca, modelo $modelo, número de caballos $numCaballos, color $color, número de puertas $numPuertas, matrícula $matricula"
     }
-
 }
 
-fun main()
-{
-    //Creamos los coches
+fun main() {
+    // Creamos los coches.
     println("Creamos los coches. Coche 1 con color blanco y coche 2 con color gris")
     val c1 = Coche("Opel", "Corsa", 90, 3, "ASJ8453", "Blanco")
-    val c2 = Coche("reanult", "espace", 110, 5, "AHK8453", "Gris")
+    val c2 = Coche("Renault", "Espace", 110, 5, "AHK8453", "Gris")
     println(c1)
     println(c2)
-    //Modificamos los coches
 
+    // Modificamos los coches.
     println("Modificamos los coches, cambio el color a rojo y azul")
     c1.color = "Rojo"
     c2.color = "Azul"
     println(c1)
     println(c2)
-    //Intentamos modificar los coches con valores nulos o blancos
+
+    // Intentamos modificar los coches con valores nulos o blancos.
     println("Intentamos modificar los coches con valores nulos o blancos")
     try {
         c1.color = ""
@@ -108,14 +124,12 @@ fun main()
         println(e.message)
     }
 
-    println("Intentamos crear un coche 3 con valores de caballos, puertas y matricula incorrectos")
-    var c3:Coche
+    // Intentamos crear un coche con valores incorrectos.
+    println("Intentamos crear un coche 3 con valores de caballos, puertas y matrícula incorrectos")
     try {
-        c3 = Coche("", "", 69, 2, "AHK845", "")
+        val c3 = Coche("", "", 69, 2, "AHK845", "")
         println(c3)
     } catch (e: IllegalArgumentException) {
-        println("ERROR:" + e.message)
-
+        println("ERROR: ${e.message}")
     }
-
 }

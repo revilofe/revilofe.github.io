@@ -59,13 +59,13 @@ tags:
       * Debe retornar un saludo con su nombre... `saludar():String`
       * Debe retornar si altura por encima de la media (solo si altura >= 1.75)... `alturaEncimaMedia():Boolean`
       * Debe retornar si peso por encima de la media (solo si peso >= 70)... `pesoEncimaMedia():Boolean`
-      * Sería conveniente añadir también un método `obtenerDescImc()` para usar en `obtenerDesc()`, que implemente el retorno de la descripción del rango de tipo de imc al que equivale su cálculo. 
-
-      ***Nota***: (Mejora: Enum class en https://www.baeldung.com/kotlin/enum)
+      * Sería conveniente añadir también un método `obtenerDescImc()` para usar en `obtenerDesc()`, que implemente el retorno de la descripción del rango de tipo de imc al que equivale su cálculo.    
          * Si el IMC es menos de 18.5, se encuentra dentro del rango de "peso insuficiente". 
          * Si el IMC está entre 18.5 y 24.9, se encuentra dentro del rango de "peso saludable". 
          * Si el IMC está entre 25.0 y 29.9, se encuentra dentro del rango de "sobrepeso". 
          * Si el IMC es 30.0 o superior, se encuentra dentro del rango de "obesidad".
+
+         ***Nota***: (Mejora: Enum class en https://www.baeldung.com/kotlin/enum)       
 
       * Debe implementar también un método que muestre una descripción completa de la persona... `obtenerDesc():String`. Por ejemplo, este método mostrará por pantalla algo así:
 

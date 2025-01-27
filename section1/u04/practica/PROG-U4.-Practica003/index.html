@@ -4309,10 +4309,10 @@
 <p>La <code>Persona</code> puede tener asociada hasta 3 cuentas bancarias, y debe tener un método que permita añadir cuentas <em>(hasta 3 el máximo permitido)</em>.  Las cuentas se almacenarán en un array/vector. No usar una lista.</p>
 </li>
 <li>
-<p>Métodos de clase:</p>
+<p>Métodos estáticos de la clase <code>Cuenta</code>:</p>
 <ul>
-<li>Debe contener un método que devuelva si la persona es morosa <em>(si tienen alguna cuenta con saldo negativo)</em>. Recibirá como parámetro el objeto <code>Persona</code> y devolverá un booleano.</li>
-<li>Debe contener un método que realice una transferencia entre dos cuentas. Recibirá como parámetro dos objetos <code>PersonaB</code>, dos identificacdors de cuentas y la cantidad a transferir. Devolverá un booleano indicando si se ha podido realizar o no la operación.</li>
+<li>Debe contener un método, <code>esMorosa</code>, que devuelva si la persona es morosa <em>(si tienen alguna cuenta con saldo negativo)</em>. Recibirá como parámetro el objeto <code>Persona</code> y devolverá un booleano.</li>
+<li>También contendrá otro método, <code>transferencia</code>, que realice una transferencia entre dos cuentas. Recibirá como parámetro dos objetos <code>PersonaB</code>, dos identificacdors de cuentas y la cantidad a transferir. Devolverá un booleano indicando si se ha podido realizar o no la operación.</li>
 </ul>
 </li>
 <li>

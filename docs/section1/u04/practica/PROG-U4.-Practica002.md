@@ -133,3 +133,5 @@ tags:
    12. Añadir un nuevo método `esMayorQue(t:Tiempo):Boolean`, que devuelve true si el tiempo que almacena el objeto que recibe el mensaje es mayor que el tiempo que almacena `t`. En el programa principal, debe solicitar por teclado hora, minuto y segundo del objeto `t`. Mostrará por pantalla el resultado obtenido al comparar si el tiempo del objeto que recibe el mensaje es mayor que el tiempo de `t`.
     
    13. Añadir un nuevo método `esMenorQue(t:Tiempo):Boolean`, que devuelve true si el tiempo que almacena el objeto que recibe el mensaje es menor que el tiempo que almacena `t`. En el programa principal, debe solicitar por teclado hora, minuto y segundo del objeto `t`. Mostrará por pantalla el resultado obtenido al comparar si el tiempo del objeto que recibe el mensaje es menor que el tiempo de `t`.
+
+   **En el siguiente enlace tenéis ayuda con pistas para resolver los apartados 5 al 13:** [Guía de ayuda para realizar los apartados 5 al 13](PROG-U4.-Practica002-Guia45.md)

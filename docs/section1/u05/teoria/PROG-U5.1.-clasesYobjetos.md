@@ -22,31 +22,82 @@ En Kotlin, la Programación Orientada a Objetos (POO) se maneja con una sintaxis
 
 Las clases de datos, o "data classes", son una característica de Kotlin diseñada para contener datos puros. Son particularmente útiles cuando necesitas crear clases que actúen principalmente como contenedores de datos sin mucha lógica adicional.
 
+Un ejemplo de data class en Kotlin:
+```
+data class User(val name: String, val age: Int, val email: String)
+```
+
+La clase de datos anterior define una clase `User` con dos propiedades: `name`, `age` y `email`. Kotlin genera automáticamente métodos como `equals()`, `hashCode()`, y `toString()` para esta clase, lo que la hace muy conveniente para trabajar con datos de forma clara y concisa.
+
 #### 1.1. ¿Cuándo usarlas?
 
 Aquí te explico cuándo es especialmente apropiado usarlas:
 
 ##### 1.1.1. Modelado de Datos Simples
 
-Usa data classes cuando necesites modelar datos simples y concisos. Por ejemplo, si estás creando una aplicación que maneja usuarios, una data class podría ser perfecta para representar un usuario con propiedades como nombre, correo electrónico y edad.
+Usa data classes cuando necesites modelar datos simples y concisos. Por ejemplo, si estás creando una aplicación que maneja usuarios, una data class podría ser perfecta para representar un usuario con propiedades como nombre, edad y correo electrónico. Las data classes te permiten definir estos datos de forma clara y legible.
 
 ##### 1.1.2. Objetos Inmutables
 
-Las data classes son una buena elección cuando prefieres trabajar con objetos inmutables. Aunque Kotlin permite propiedades mutables en data classes, el paradigma funcional favorece la inmutabilidad para evitar efectos secundarios.
+Las data classes son una buena elección cuando prefieres trabajar con objetos inmutables. Aunque Kotlin permite propiedades mutables en data classes, el paradigma funcional favorece la inmutabilidad para evitar efectos secundarios. Es decir, si prefieres que tus objetos de datos no cambien una vez creados, las data classes son una excelente opción. Ademas, proporcionan un método `copy()` que te permite crear copias inmutables de un objeto con propiedades modificadas.
+
+```kotlin
+data class User(val name: String, val age: Int, val email: String)
+
+val jack = User(name = "Jack", age = 1, email = "jack@sd.es")
+val olderJack = jack.copy(age = 2) // Crear una copia inmutable con la edad modificada
+```
+
 
 ##### 1.1.3. Necesidad de Métodos Útiles Integrados
 
 Kotlin genera automáticamente métodos útiles para data classes, como `equals()`, `hashCode()`, y `toString()`. Esto es muy útil para comparar instancias de data classes o para imprimir sus propiedades de forma legible. Si necesitas estas funcionalidades "gratis" sin implementarlas tú mismo, las data classes son el camino a seguir.
 
+Los métodos generados automáticamente por Kotlin para data classes son:
+- `equals()`: Compara dos instancias de la clase por igualdad estructural. Equivale a usar el operador `==`.
+- `hashCode()`: Devuelve un valor hash único para cada instancia de la clase.
+- `toString()`: Devuelve una representación de cadena de la instancia de la clase.
+
+```kotlin
+// uso de metodos generados equals(), hashCode() y toString()
+data class User(val name: String, val age: Int)
+
+val jack = User(name = "Jack", age = 1)
+val olderJack = User(name = "Jack", age = 1)
+
+println(jack == olderJack) // => true
+println(jack.hashCode() == olderJack.hashCode()) // => true
+println(jack.toString()) // => User(name=Jack, age=1)
+```
+
 ##### 1.1.4. Destructuración de Objetos
 
 Las data classes admiten la destructuración de objetos de forma nativa. Si quieres descomponer un objeto en varias variables fácilmente, las data classes te permiten hacerlo de manera elegante. Esto es especialmente útil en operaciones como iterar sobre una colección de objetos de datos y acceder a sus propiedades directamente.
+
+```kotlin
+data class User(val name: String, val age: Int)
+
+val jane = User("Jane", 35)
+val (name, age) = jane // Destructuración de objetos, asignando propiedades a variables individuales. Tiene el mismo efecto que val name = jane.name y val age = jane.age
+println("$name, $age years of age") // => Jane, 35 years of age
+```
+
 
 ##### 1.1.5. Uso con Colecciones y Operaciones Funcionales
 
 Si trabajas frecuentemente con colecciones y realizas operaciones funcionales sobre ellas (como filtrar, mapear, etc.), las data classes pueden ser muy prácticas. Permiten representar elementos de colecciones de una manera clara y concisa, facilitando operaciones funcionales sobre esos datos.
 
-En resumen, úsalas cuando quieras simplicidad, claridad y funcionalidad integrada para tus objetos de datos.
+```kotlin
+data class User(val name: String, val age: Int)
+
+val users = listOf(User("Alice", 25), User("Bob", 30), User("Charlie", 35))
+
+val names = users.map { it.name } // Operación funcional para mapear la lista de usuarios a una lista de nombres
+val adults = users.filter { it.age >= 30 } // Operación funcional para filtrar la lista de usuarios para obtener solo los mayores de 30 años
+```
+
+
+Como puedes ver, son bastante útiles. Úsalas cuando quieras simplicidad, claridad y funcionalidad integrada para tus objetos de datos.
 
 #### 1.2. ¿Cómo se implementan en kotlin?
 
@@ -60,11 +111,11 @@ De forma automática el compilador crear los métodos `hashCode()`, `equals()`, 
 
 Para evitar comportamientos extraños estas clases deben **cumplir ciertos requisitos**:
 
-* El constructor primario necesita tener al menos un parámetro.
-* Todos los parámetros del constructor primario estarán marcados como `'val'` o `'var'`.
-* Una _'data class'_ no puede ser `'abstract'`, `'open'`, `'sealed'` o `'inner'`.
-* (Antes de 1.1) Las _'data classes'_ no pueden extender de otras clases (pero pueden implementar interfaces).
-
+* El constructor primario necesita tener al menos un parámetro.    
+* Todos los parámetros del constructor primario estarán marcados como `'val'` o `'var'`.    
+* Una _'data class'_ no puede ser `'abstract'`, `'open'`, `'sealed'` o `'inner'`.     
+* (Antes de 1.1) Las _'data classes'_ no pueden extender de otras clases (pero pueden implementar interfaces).    
+ 
 El compilador sólo tiene en cuenta las propiedades declaradas en el constructor primario a la hora de generar los métodos de forma automática. Por tanto, para excluir propiedades se deben declarar en el cuerpo de la clase.
 
 ```kotlin
@@ -103,11 +154,11 @@ val (name, age) = jane
 println("$name, $age years of age") // => Jane, 35 years of age
 ```
 
-Cada tipo se deriva de `'Any'`, que viene con una declaración de método `'hashCode()'`. Esto es el equivalente de un método `'hashCode()'` de clase _'Object'_ de Java. Este método es importante cuando se insertan instancias del objeto en colecciones, como un mapa. Al implementar este método, se debe cumplir con una serie de requisitos:
+Cada clase deriva de `'Any'`, y viene con una declaración de método `'hashCode()'`. Esto es el equivalente de un método `'hashCode()'` de clase _'Object'_ de Java. Este método es importante cuando se insertan instancias del objeto en colecciones, como un mapa. Al implementar este método, se debe cumplir con una serie de requisitos:
 
-1. Cuando se invoque en el mismo objeto más de una vez durante el tiempo de ejecución, el método `'hashCode()'` debe devolver constantemente el mismo valor, dado que el objeto no se modificó.
-2. Si para dos objetos el método `'equals()'`  devuelve true, entonces llamar al método `'hashCode()'` en cada uno de ellos debería devolver el mismo valor entero.
-3. Si dos objetos no son iguales, es decir, que el método `'equals()'` devuelve false cuando se comparan, no es un requisito que cada método `'hashCode()'` del objeto devuelva valores distintos. Sin embargo, producir un entero distinto para objetos desiguales podría mejorar el rendimiento de las colecciones basadas en 'hash'.
+1. Cuando se invoque en el mismo objeto más de una vez durante el tiempo de ejecución sin que haya sufrido cambios, el método `'hashCode()'` debe devolver constantemente el mismo valor, dado que el objeto no se modificó.      
+2. Si para dos objetos el método `'equals()'`  devuelve true, entonces llamar al método `'hashCode()'` en cada uno de ellos debería devolver el mismo valor entero.      
+3. Si dos objetos no son iguales, es decir, que el método `'equals()'` devuelve false cuando se comparan, no es un requisito que cada método `'hashCode()'` del objeto devuelva valores distintos. Sin embargo, producir un entero distinto para objetos desiguales podría mejorar el rendimiento de las colecciones basadas en 'hash'.     
 
 Las _'data classes'_ son un forma compacta y legible de devolver dos o más valores de una función. Otra alternativa, menos legible, es utilizar el tipo `'Pair'` o `'Triple'` proporcionado por Kotlin:
 
@@ -119,11 +170,29 @@ fun checkStatus() = Result(10, true)  // función que retorna un tipo 'Result'
 val (result, status) = checkStatus() // usamos la desestructuración de datos para acceder a los datos
 ```
 
-Aqui puedes ver un ejemplo en el que se compara una data class en java con una data class en kotlin: [data Class](https://devexpert.io/data-classes-kotlin/)
+Aquí puedes ver un ejemplo en el que se compara una data class en java con una data class en kotlin: [data Class](https://devexpert.io/data-classes-kotlin/)
+
 
 ### 2. Sealed classes
 
-Las clases selladas, o "sealed classes", son un concepto poderoso en Kotlin que te permite restringir la jerarquía de herencia. Son especialmente útiles en casos donde un valor puede tener uno de los tipos limitados, pero no cualquier otro.
+Las clases selladas, o "sealed classes", son un concepto poderoso en Kotlin que te permite restringir la jerarquía de herencia. Son especialmente útiles en casos donde un valor puede tener uno de varios tipos específicos, pero no puede tener cualquier otro tipo. 
+
+```kotlin
+sealed class ResultadoOperacion {
+    data class Exito(val data: String): ResultadoOperacion()
+    data class Error(val error: Exception): ResultadoOperacion()
+}
+
+fun procesarResultado(resultado: ResultadoOperacion) {
+    when (resultado) {
+        is ResultadoOperacion.Exito -> println("Operación exitosa: ${resultado.data}")
+        is ResultadoOperacion.Error -> println("Error en la operación: ${resultado.error.message}")
+    }
+}
+
+```
+En el ejemplo anterior, la variable `resultado` de tipo `ResultadoOperacion` puede ser de tipo `Exito` o `Error`, pero no de ningún otro tipo. Las sealed classes permiten definir un conjunto limitado de subclases que pueden ser utilizadas para representar diferentes estados o resultados de manera segura y controlada.
+
 
 #### 2.1. ¿Cuándo usarlas?
 
@@ -131,23 +200,68 @@ Aquí te dejo algunos escenarios en los cuales es ideal usarlas:
 
 ##### 2.1.1. Modelado de Estados o Resultados Limitados
 
-Cuando estás modelando un conjunto finito de estados para un sistema o los posibles resultados de una operación, las sealed classes son tu mejor opción. Permiten representar de manera segura y clara estos estados limitados, garantizando que todos los casos posibles sean cubiertos durante la compilación.
+Cuando estás modelando un conjunto finito de estados para un sistema o los posibles resultados de una operación, las sealed classes son tu mejor opción. Permiten representar de manera segura y clara estos estados limitados, garantizando que todos los casos posibles sean cubiertos durante la compilación, como vimos en el ejemplo anterior.
 
 ##### 2.1.2. Uso en Patrones de Diseño Tipo "Cuando" (when)
 
-Las sealed classes son particularmente útiles con el patrón de diseño "when" en Kotlin, ya que el compilador puede verificar si todos los casos posibles han sido cubiertos. Esto elimina la necesidad de un cláusula `else` innecesaria y aumenta la seguridad del código al garantizar que todos los casos posibles sean considerados.
+Las sealed classes son particularmente útiles con el patrón de diseño "when" en Kotlin, ya que el compilador puede verificar si todos los casos posibles han sido cubiertos. Esto elimina la necesidad de un cláusula `else` innecesaria y aumenta la seguridad del código al garantizar que todos los casos posibles sean considerados. 
+
+```kotlin
+sealed class ResultadoOperacion {
+    data class Exito(val data: String): ResultadoOperacion()
+    data class Error(val error: Exception): ResultadoOperacion()
+}
+
+fun procesarResultado(resultado: ResultadoOperacion) {
+    when (resultado) {
+        is ResultadoOperacion.Exito -> println("Operación exitosa: ${resultado.data}")
+        is ResultadoOperacion.Error -> println("Error en la operación: ${resultado.error.message}")
+    }
+}
+```
 
 ##### 2.1.3. Definición de API Internas y Controladas
 
 Si estás diseñando una API o un conjunto de interacciones dentro de tu módulo o librería y quieres controlar estrictamente cómo pueden ser extendidas o utilizadas las clases, las clases selladas son una excelente elección. Limitan la creación de subclases a las definidas dentro del mismo archivo, manteniendo un control sobre la extensión y uso de tu API.
 
+```kotlin
+sealed class Shape
+
+class Circle : Shape()
+class Triangle : Shape()
+class Rectangle: Shape()
+```
+
+En este ejemplo, la clase `Shape` es sellada, lo que significa que solo las subclases `Circle`, `Triangle` y `Rectangle` pueden extenderla. Esto asegura que no se puedan crear subclases adicionales fuera de este archivo, manteniendo el control sobre la jerarquía de clases.
+
 ##### 2.1.4. Manejo de Eventos o Acciones Específicas
 
 En sistemas de manejo de eventos o en la implementación de patrones como el MVI (Model-View-Intent) en desarrollo de aplicaciones, las sealed classes permiten definir un conjunto cerrado de acciones o eventos que pueden ser manejados o disparados, asegurando que todos los casos sean considerados y tratados adecuadamente.
 
+```kotlin
+sealed class Evento {
+    object CargarDatos: Evento()
+    data class MostrarError(val mensaje: String): Evento()
+    data class MostrarDatos(val datos: List<String>): Evento()
+}
+
+fun procesarEvento(evento: Evento) {
+    when (evento) {
+        is Evento.CargarDatos -> println("Cargando datos...")
+        is Evento.MostrarError -> println("Error: ${evento.mensaje}")
+        is Evento.MostrarDatos -> println("Mostrando datos: ${evento.datos}")
+    }
+}
+
+```
+
+En este ejemplo, la clase sellada `Evento` define tres tipos de eventos posibles: `CargarDatos`, `MostrarError` y `MostrarDatos`. Cada uno de estos eventos puede ser manejado de manera específica, asegurando que todos los casos posibles sean considerados y tratados adecuadamente. El beneficio de usar sealed classes en este contexto es que el compilador te obliga a considerar todos los casos posibles, evitando errores en tiempo de ejecución.
+
 ##### 2.1.5. Simplificación de la Lógica de Negocio
 
 Al usar sealed classes para representar diferentes tipos de operaciones o entidades con comportamientos específicos, puedes simplificar significativamente la lógica de negocio. Esto se debe a que puedes usar el tipo de la clase sellada para controlar el flujo de la lógica en tu aplicación, asegurándote de que solo se consideren las instancias permitidas.
+
+En los ejemplos anteriores, las sealed classes se utilizan para representar diferentes resultados de operaciones y eventos, lo que simplifica la lógica de manejo de estos casos específicos. Al usar sealed classes, puedes garantizar que solo se consideren los casos permitidos y que la lógica de negocio sea más clara y concisa.k
 
 #### 2.2. ¿Cómo usarlas?
 
@@ -158,7 +272,7 @@ Las _'sealed class'_ son una herramienta excelente para cuando necesitas asegura
 * Podemos agregar el modificador `'abstract'`, pero esto es redundante porque estas clases son abstractas por defecto.
 * No pueden tener el modificador `'open'` ni `'final'`.
 * Podemos declarar clases de datos y objetos como subclases a una _'sealed class'_ (aún deben declararse en el mismo archivo).
-* No pueden tener constructores públicos ya que sus constructores son privados de forma predeterminada.
+* No pueden tener constructores públicos, ya que sus constructores son privados de forma predeterminada.
 
 ##### 2.2.1 Ejemplos Prácticos
 

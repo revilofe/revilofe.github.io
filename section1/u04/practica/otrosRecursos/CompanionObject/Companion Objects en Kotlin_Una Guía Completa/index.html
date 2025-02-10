@@ -10,24 +10,24 @@
         <meta name="author" content="Eduardo Fdez">
       
       
-        <link rel="canonical" href="https://revilofe.github.io/section1/u04/practica/otrosRecursos/soluciones/Practica_POO_Sencillos/EjerciciosSencillosPOO/">
+        <link rel="canonical" href="https://revilofe.github.io/section1/u04/practica/otrosRecursos/CompanionObject/Companion%20Objects%20en%20Kotlin_Una%20Gu%C3%ADa%20Completa/">
       
       
       
       
-      <link rel="icon" href="../../../../../../../assets/favicon-96x96.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.2">
+      <link rel="icon" href="../../../../../../assets/favicon-96x96.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
     
     
       
-        <title>Ejercicios de introducción a la programación orientada a objetos - R Z O</title>
+        <title>Companion Objects en Kotlin Una Guía Completa - R Z O</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.d7758b05.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.d7758b05.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -57,7 +57,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ejercicios-de-introduccion-a-la-programacion-orientada-a-objetos" class="md-skip">
+        <a href="#companion-objects-en-kotlin-una-guia-completa" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -113,9 +113,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="../../../../../../.." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
+    <a href="../../../../../.." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
       
-  <img src="../../../../../../../assets/ms-icon-144x144.png" alt="logo">
+  <img src="../../../../../../assets/ms-icon-144x144.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -132,7 +132,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ejercicios de introducción a la programación orientada a objetos
+              Companion Objects en Kotlin Una Guía Completa
             
           </span>
         </div>
@@ -240,7 +240,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../.." class="md-tabs__link">
+      <a href="../../../../../.." class="md-tabs__link">
         
   
     
@@ -259,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../" class="md-tabs__link">
+        <a href="../../../../../" class="md-tabs__link">
           
   
     
@@ -279,7 +279,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../../section3/" class="md-tabs__link">
+        <a href="../../../../../../section3/" class="md-tabs__link">
           
   
     
@@ -299,7 +299,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../../../section2/" class="md-tabs__link">
+        <a href="../../../../../../section2/" class="md-tabs__link">
           
   
     
@@ -317,7 +317,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../../blog/" class="md-tabs__link">
+      <a href="../../../../../../blog/" class="md-tabs__link">
         
   
     
@@ -334,7 +334,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../../tags/" class="md-tabs__link">
+      <a href="../../../../../../tags/" class="md-tabs__link">
         
   
     
@@ -351,7 +351,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../../../about/" class="md-tabs__link">
+      <a href="../../../../../../about/" class="md-tabs__link">
         
   
     
@@ -391,9 +391,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../../../.." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
+    <a href="../../../../../.." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
       
-  <img src="../../../../../../../assets/ms-icon-144x144.png" alt="logo">
+  <img src="../../../../../../assets/ms-icon-144x144.png" alt="logo">
 
     </a>
     R Z O
@@ -420,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../.." class="md-nav__link">
+      <a href="../../../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -482,7 +482,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../" class="md-nav__link ">
+            <a href="../../../../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -565,7 +565,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../u01/" class="md-nav__link ">
+            <a href="../../../../../u01/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -599,7 +599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u01/teoria/PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
+      <a href="../../../../../u01/teoria/PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -621,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u01/teoria/PROG-U1.1.1-Pseudocodigo/" class="md-nav__link">
+      <a href="../../../../../u01/teoria/PROG-U1.1.1-Pseudocodigo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -643,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u01/practica/PROG-U1.-Practica001/" class="md-nav__link">
+      <a href="../../../../../u01/practica/PROG-U1.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -665,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u01/teoria/PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
+      <a href="../../../../../u01/teoria/PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -687,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u01/teoria/PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
+      <a href="../../../../../u01/teoria/PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -709,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u01/practica/PROG-U1.-Practica002/" class="md-nav__link">
+      <a href="../../../../../u01/practica/PROG-U1.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -731,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u01/practica/PROG-U1.-Practica003/" class="md-nav__link">
+      <a href="../../../../../u01/practica/PROG-U1.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -753,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u01/practica/PROG-U1.-Practica004/" class="md-nav__link">
+      <a href="../../../../../u01/practica/PROG-U1.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -775,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u01/teoria/PROG-U1.4.-Pytest/" class="md-nav__link">
+      <a href="../../../../../u01/teoria/PROG-U1.4.-Pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -797,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u01/practica/PROG-U1.-Practica005/" class="md-nav__link">
+      <a href="../../../../../u01/practica/PROG-U1.-Practica005/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -819,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u01/practica/PROG-U1.-Practica006/" class="md-nav__link">
+      <a href="../../../../../u01/practica/PROG-U1.-Practica006/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -841,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u01/practica/PROG-U1.-Practica007/" class="md-nav__link">
+      <a href="../../../../../u01/practica/PROG-U1.-Practica007/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -916,7 +916,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../u02/" class="md-nav__link ">
+            <a href="../../../../../u02/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -950,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
+      <a href="../../../../../u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -972,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
+      <a href="../../../../../u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -994,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
+      <a href="../../../../../u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1016,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
+      <a href="../../../../../u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1038,7 +1038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
+      <a href="../../../../../u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1060,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
+      <a href="../../../../../u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1082,7 +1082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
+      <a href="../../../../../u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1104,7 +1104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
+      <a href="../../../../../u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1126,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
+      <a href="../../../../../u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1148,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u02/teoria/PROG-U2.5.1.-DeberiasDocumentar/" class="md-nav__link">
+      <a href="../../../../../u02/teoria/PROG-U2.5.1.-DeberiasDocumentar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1235,7 +1235,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../u03/" class="md-nav__link ">
+            <a href="../../../../../u03/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1269,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u03/teoria/PROG-U3.0.-Cadenas/" class="md-nav__link">
+      <a href="../../../../../u03/teoria/PROG-U3.0.-Cadenas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1291,7 +1291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u03/practica/PROG-U3.-Practica000/" class="md-nav__link">
+      <a href="../../../../../u03/practica/PROG-U3.-Practica000/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1313,7 +1313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u03/teoria/PROG-U3.1.-Listas/" class="md-nav__link">
+      <a href="../../../../../u03/teoria/PROG-U3.1.-Listas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1335,7 +1335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u03/teoria/PROG-U3.2.-Tuplas/" class="md-nav__link">
+      <a href="../../../../../u03/teoria/PROG-U3.2.-Tuplas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1357,7 +1357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u03/practica/PROG-U3.-Practica001/" class="md-nav__link">
+      <a href="../../../../../u03/practica/PROG-U3.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1379,7 +1379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u03/teoria/PROG-U3.3.-Diccionarios/" class="md-nav__link">
+      <a href="../../../../../u03/teoria/PROG-U3.3.-Diccionarios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1401,7 +1401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u03/practica/PROG-U3.-Practica002/" class="md-nav__link">
+      <a href="../../../../../u03/practica/PROG-U3.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1423,7 +1423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u03/teoria/PROG-U3.4.-Conjuntos/" class="md-nav__link">
+      <a href="../../../../../u03/teoria/PROG-U3.4.-Conjuntos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1445,7 +1445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u03/practica/PROG-U3.-Practica003/" class="md-nav__link">
+      <a href="../../../../../u03/practica/PROG-U3.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1467,7 +1467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u03/teoria/PROG-U3.5.-Funciones/" class="md-nav__link">
+      <a href="../../../../../u03/teoria/PROG-U3.5.-Funciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1489,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u03/teoria/PROG-U3.6.-ManejoJSON/" class="md-nav__link">
+      <a href="../../../../../u03/teoria/PROG-U3.6.-ManejoJSON/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1511,7 +1511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u03/practica/PROG-U3.-Practica004/" class="md-nav__link">
+      <a href="../../../../../u03/practica/PROG-U3.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1533,7 +1533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u03/teoria/PROG-U3.7.-ManejoXML/" class="md-nav__link">
+      <a href="../../../../../u03/teoria/PROG-U3.7.-ManejoXML/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1555,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u03/practica/PROG-U3.-Practica005/" class="md-nav__link">
+      <a href="../../../../../u03/practica/PROG-U3.-Practica005/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1577,7 +1577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u03/teoria/PROG-U3.8.-OtrosAmpliacion1/" class="md-nav__link">
+      <a href="../../../../../u03/teoria/PROG-U3.8.-OtrosAmpliacion1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1599,7 +1599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u03/teoria/PROG-U3.9.-OtrosAmpliacion2/" class="md-nav__link">
+      <a href="../../../../../u03/teoria/PROG-U3.9.-OtrosAmpliacion2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1682,7 +1682,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../" class="md-nav__link ">
+            <a href="../../../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1716,7 +1716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../teoria/PROG-U4.1.-kotlin/" class="md-nav__link">
+      <a href="../../../../teoria/PROG-U4.1.-kotlin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1738,7 +1738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../PROG-U4.-Practica001/" class="md-nav__link">
+      <a href="../../../PROG-U4.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1760,7 +1760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
+      <a href="../../../../teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1782,7 +1782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../teoria/PROG-U4.2.1.-kotlin-aclaraciones/" class="md-nav__link">
+      <a href="../../../../teoria/PROG-U4.2.1.-kotlin-aclaraciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1804,7 +1804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../teoria/PROG-U4.3.-POO/" class="md-nav__link">
+      <a href="../../../../teoria/PROG-U4.3.-POO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1826,7 +1826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../teoria/PROG-U4.3.-kotlinPOO/" class="md-nav__link">
+      <a href="../../../../teoria/PROG-U4.3.-kotlinPOO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1848,7 +1848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../teoria/PROG-U4.4.-kotlinResumen/" class="md-nav__link">
+      <a href="../../../../teoria/PROG-U4.4.-kotlinResumen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1870,7 +1870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../PROG-U4.-Practica002/" class="md-nav__link">
+      <a href="../../../PROG-U4.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1892,7 +1892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../PROG-U4.-Practica003/" class="md-nav__link">
+      <a href="../../../PROG-U4.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1914,7 +1914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../PROG-U4.-Practica004/" class="md-nav__link">
+      <a href="../../../PROG-U4.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1936,7 +1936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../PROG-U4.-Practica005/" class="md-nav__link">
+      <a href="../../../PROG-U4.-Practica005/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1958,7 +1958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../PROG-U4.-Practica006/" class="md-nav__link">
+      <a href="../../../PROG-U4.-Practica006/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1980,7 +1980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../PROG-U4.-Practica007/" class="md-nav__link">
+      <a href="../../../PROG-U4.-Practica007/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2002,7 +2002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../PROG-U4.-Practica008/" class="md-nav__link">
+      <a href="../../../PROG-U4.-Practica008/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2065,7 +2065,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../u05/" class="md-nav__link ">
+            <a href="../../../../../u05/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2099,7 +2099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u05/teoria/PROG-U5.1.-clasesYobjetos/" class="md-nav__link">
+      <a href="../../../../../u05/teoria/PROG-U5.1.-clasesYobjetos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2121,7 +2121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u05/teoria/PROG-U5.2.-VisibilidadEnClases/" class="md-nav__link">
+      <a href="../../../../../u05/teoria/PROG-U5.2.-VisibilidadEnClases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2143,7 +2143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u05/teoria/PROG-U5.3.-Herencia/" class="md-nav__link">
+      <a href="../../../../../u05/teoria/PROG-U5.3.-Herencia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2165,7 +2165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u05/practica/PROG-U5.-Practica001/" class="md-nav__link">
+      <a href="../../../../../u05/practica/PROG-U5.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2228,7 +2228,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../u06/" class="md-nav__link ">
+            <a href="../../../../../u06/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2262,7 +2262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u06/teoria/PROG-U6.1.-jerarquiaDeClases/" class="md-nav__link">
+      <a href="../../../../../u06/teoria/PROG-U6.1.-jerarquiaDeClases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2284,7 +2284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u06/teoria/PROG-U6.2.-ejemploYActividad/" class="md-nav__link">
+      <a href="../../../../../u06/teoria/PROG-U6.2.-ejemploYActividad/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2306,7 +2306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u06/teoria/PROG-U6.3.-principiosSOLID/" class="md-nav__link">
+      <a href="../../../../../u06/teoria/PROG-U6.3.-principiosSOLID/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2328,7 +2328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u06/teoria/PROG-U6.4.-comentariosYDocumentacion/" class="md-nav__link">
+      <a href="../../../../../u06/teoria/PROG-U6.4.-comentariosYDocumentacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2397,7 +2397,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../u07/" class="md-nav__link ">
+            <a href="../../../../../u07/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2431,7 +2431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
+      <a href="../../../../../u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2453,7 +2453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
+      <a href="../../../../../u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2475,7 +2475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u07/teoria/PROG-U7.2.1.-ConsolaTecladoExpansion/" class="md-nav__link">
+      <a href="../../../../../u07/teoria/PROG-U7.2.1.-ConsolaTecladoExpansion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2497,7 +2497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
+      <a href="../../../../../u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2519,7 +2519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
+      <a href="../../../../../u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2541,7 +2541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u07/teoria/PROG-U7.4.1.-TextFile/" class="md-nav__link">
+      <a href="../../../../../u07/teoria/PROG-U7.4.1.-TextFile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2563,7 +2563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
+      <a href="../../../../../u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2628,7 +2628,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../u09/" class="md-nav__link ">
+            <a href="../../../../../u09/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2662,7 +2662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u09/teoria/PROG-U9.1.-AccesoBBDD/" class="md-nav__link">
+      <a href="../../../../../u09/teoria/PROG-U9.1.-AccesoBBDD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2684,7 +2684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u09/teoria/PROG-U9.2.-JDBC-1/" class="md-nav__link">
+      <a href="../../../../../u09/teoria/PROG-U9.2.-JDBC-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2706,7 +2706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u09/teoria/PROG-U9.3.-JDBC-2/" class="md-nav__link">
+      <a href="../../../../../u09/teoria/PROG-U9.3.-JDBC-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2728,7 +2728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u09/teoria/PROG-U9.4.-DAO/" class="md-nav__link">
+      <a href="../../../../../u09/teoria/PROG-U9.4.-DAO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2750,7 +2750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../u09/teoria/PROG-U9.5.-OtrosAspectos/" class="md-nav__link">
+      <a href="../../../../../u09/teoria/PROG-U9.5.-OtrosAspectos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2818,7 +2818,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../../section3/" class="md-nav__link ">
+            <a href="../../../../../../section3/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2893,7 +2893,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../../section3/u01/" class="md-nav__link ">
+            <a href="../../../../../../section3/u01/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2927,7 +2927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u01/teoria/EDES-U1.1.-Software-PC/" class="md-nav__link">
+      <a href="../../../../../../section3/u01/teoria/EDES-U1.1.-Software-PC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2949,7 +2949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u01/teoria/EDES-U1.2.-CodigoFuenteObjetoEjecutable/" class="md-nav__link">
+      <a href="../../../../../../section3/u01/teoria/EDES-U1.2.-CodigoFuenteObjetoEjecutable/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2971,7 +2971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u01/teoria/EDES-U1.3.-CodigoIntermedio/" class="md-nav__link">
+      <a href="../../../../../../section3/u01/teoria/EDES-U1.3.-CodigoIntermedio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2993,7 +2993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u01/teoria/EDES-U1.4.-Traductores/" class="md-nav__link">
+      <a href="../../../../../../section3/u01/teoria/EDES-U1.4.-Traductores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3015,7 +3015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u01/teoria/EDES-U1.5.-Lenguajes/" class="md-nav__link">
+      <a href="../../../../../../section3/u01/teoria/EDES-U1.5.-Lenguajes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3037,7 +3037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u01/teoria/EDES-U1.6.-FuncionalidadesHerramientas/" class="md-nav__link">
+      <a href="../../../../../../section3/u01/teoria/EDES-U1.6.-FuncionalidadesHerramientas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3059,7 +3059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u01/practica/EDES-U1.-Practica010/" class="md-nav__link">
+      <a href="../../../../../../section3/u01/practica/EDES-U1.-Practica010/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3081,7 +3081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u01/practica/EDES-U1.-Practica011/" class="md-nav__link">
+      <a href="../../../../../../section3/u01/practica/EDES-U1.-Practica011/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3150,7 +3150,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../../section3/u02/" class="md-nav__link ">
+            <a href="../../../../../../section3/u02/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3184,7 +3184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u02/teoria/EDES-U2.1.-IDEs/" class="md-nav__link">
+      <a href="../../../../../../section3/u02/teoria/EDES-U2.1.-IDEs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3206,7 +3206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u02/teoria/EDES-U2.2.-Modulos/" class="md-nav__link">
+      <a href="../../../../../../section3/u02/teoria/EDES-U2.2.-Modulos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3228,7 +3228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u02/teoria/EDES-U2.3.-Personalizacion/" class="md-nav__link">
+      <a href="../../../../../../section3/u02/teoria/EDES-U2.3.-Personalizacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3250,7 +3250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u02/teoria/EDES-U2.4.-ActualizacionIDEs/" class="md-nav__link">
+      <a href="../../../../../../section3/u02/teoria/EDES-U2.4.-ActualizacionIDEs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3272,7 +3272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u02/teoria/EDES-U2.5.-Ejecutables/" class="md-nav__link">
+      <a href="../../../../../../section3/u02/teoria/EDES-U2.5.-Ejecutables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3294,7 +3294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u02/teoria/EDES-U2.6.-Evaluacion/" class="md-nav__link">
+      <a href="../../../../../../section3/u02/teoria/EDES-U2.6.-Evaluacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3316,7 +3316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u02/practica/EDES-U2.-Practica002/" class="md-nav__link">
+      <a href="../../../../../../section3/u02/practica/EDES-U2.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3383,7 +3383,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../../section3/u04/" class="md-nav__link ">
+            <a href="../../../../../../section3/u04/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3417,7 +3417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u04/teoria/EDES-U4.1.-Git_Github/" class="md-nav__link">
+      <a href="../../../../../../section3/u04/teoria/EDES-U4.1.-Git_Github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3439,7 +3439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u04/practica/EDES-U4.-Practica001/" class="md-nav__link">
+      <a href="../../../../../../section3/u04/practica/EDES-U4.-Practica001/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3461,7 +3461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u04/practica/EDES-U4.-Practica002/" class="md-nav__link">
+      <a href="../../../../../../section3/u04/practica/EDES-U4.-Practica002/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3483,7 +3483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u04/practica/EDES-U4.-Practica003/" class="md-nav__link">
+      <a href="../../../../../../section3/u04/practica/EDES-U4.-Practica003/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3505,7 +3505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u04/practica/EDES-U4.-Practica004/" class="md-nav__link">
+      <a href="../../../../../../section3/u04/practica/EDES-U4.-Practica004/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3527,7 +3527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section3/u04/practica/EDES-U4.-Practica005/" class="md-nav__link">
+      <a href="../../../../../../section3/u04/practica/EDES-U4.-Practica005/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3595,7 +3595,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../../section2/" class="md-nav__link ">
+            <a href="../../../../../../section2/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3629,7 +3629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section2/u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
+      <a href="../../../../../../section2/u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3686,7 +3686,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../../section2/u01/" class="md-nav__link ">
+            <a href="../../../../../../section2/u01/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3720,7 +3720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
+      <a href="../../../../../../section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3742,7 +3742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section2/u01/teoria/IS-U1.2.2.-AnalisiDeRiesgos/" class="md-nav__link">
+      <a href="../../../../../../section2/u01/teoria/IS-U1.2.2.-AnalisiDeRiesgos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3764,7 +3764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section2/u01/teoria/IS-U1.3.1.-ProteccionDelPuestoDeTrabajo/" class="md-nav__link">
+      <a href="../../../../../../section2/u01/teoria/IS-U1.3.1.-ProteccionDelPuestoDeTrabajo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3786,7 +3786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section2/u01/teoria/IS-U1.4.1.-PlanDeConcienciacion/" class="md-nav__link">
+      <a href="../../../../../../section2/u01/teoria/IS-U1.4.1.-PlanDeConcienciacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3808,7 +3808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section2/u01/teoria/IS-U1.4.1.-PlanDeConcienciacion-Eje/" class="md-nav__link">
+      <a href="../../../../../../section2/u01/teoria/IS-U1.4.1.-PlanDeConcienciacion-Eje/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3873,7 +3873,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../../section2/u02/" class="md-nav__link ">
+            <a href="../../../../../../section2/u02/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3907,7 +3907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section2/u02/teoria/IS-U2.1.1.-TaxonomiaDeIncidentes/" class="md-nav__link">
+      <a href="../../../../../../section2/u02/teoria/IS-U2.1.1.-TaxonomiaDeIncidentes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3929,7 +3929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section2/u02/teoria/IS-U2.2.1.-SOC-ServiciosYHerramientas/" class="md-nav__link">
+      <a href="../../../../../../section2/u02/teoria/IS-U2.2.1.-SOC-ServiciosYHerramientas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3951,7 +3951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section2/u02/teoria/IS-U2.2.2.-CasosUso/" class="md-nav__link">
+      <a href="../../../../../../section2/u02/teoria/IS-U2.2.2.-CasosUso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3973,7 +3973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section2/u02/teoria/IS-U2.2.3.-SIEM-Implantacion/" class="md-nav__link">
+      <a href="../../../../../../section2/u02/teoria/IS-U2.2.3.-SIEM-Implantacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3995,7 +3995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../section2/u02/teoria/IS-U2.2.4.-SIEM-Evolucion/" class="md-nav__link">
+      <a href="../../../../../../section2/u02/teoria/IS-U2.2.4.-SIEM-Evolucion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4032,7 +4032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../blog/" class="md-nav__link">
+      <a href="../../../../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4053,7 +4053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../tags/" class="md-nav__link">
+      <a href="../../../../../../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4074,7 +4074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../about/" class="md-nav__link">
+      <a href="../../../../../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4107,8 +4107,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -4117,237 +4115,102 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-1-clase-cuenta-bancaria" class="md-nav__link">
+  <a href="#companion-objects-en-kotlin-una-guia-completa" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 1: Clase Cuenta Bancaria.
+      Companion Objects en Kotlin: Una Guía Completa
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Ejercicio 1: Clase Cuenta Bancaria.">
+    <nav class="md-nav" aria-label="Companion Objects en Kotlin: Una Guía Completa">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#diseno" class="md-nav__link">
+  <a href="#que-es-un-companion-object" class="md-nav__link">
     <span class="md-ellipsis">
-      Diseño:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Diseño:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#contenido-del-diagrama" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contenido del Diagrama:
+      ¿Qué es un Companion Object?
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caracteristicas-del-diseno" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Características del diseño:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#ejercicio-2-clase-vehiculo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio 2: Clase Vehículo
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ejercicio 2: Clase Vehículo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#diseno_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diseño:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Diseño:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#contenido-del-diagrama_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contenido del Diagrama:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caracteristicas-del-diseno_1" class="md-nav__link">
+  <a href="#caracteristicas-principales" class="md-nav__link">
     <span class="md-ellipsis">
-      Características del diseño:
+      Características principales
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#ventajas-de-usar-companion-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ventajas de usar Companion Objects
+    </span>
+  </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
       
-        <li class="md-nav__item">
-  <a href="#ejercicio-3-clase-libro" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio 3: Clase Libro
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ejercicio 3: Clase Libro">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#diseno_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diseño:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Diseño:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#contenido-del-diagrama_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contenido del Diagrama:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caracteristicas-del-diseno_2" class="md-nav__link">
+  <a href="#desventajas" class="md-nav__link">
     <span class="md-ellipsis">
-      Características del diseño:
+      Desventajas
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
       
-        <li class="md-nav__item">
-  <a href="#ejercicio-4-clase-estudiante" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio 4: Clase Estudiante
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ejercicio 4: Clase Estudiante">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#diseno_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diseño:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Diseño:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#contenido-del-diagrama_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contenido del Diagrama:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caracteristicas-del-diseno_3" class="md-nav__link">
+  <a href="#ejemplo-generador-de-ids-unicos" class="md-nav__link">
     <span class="md-ellipsis">
-      Características del diseño:
+      Ejemplo: Generador de IDs únicos
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
       
-        <li class="md-nav__item">
-  <a href="#ejercicio-5-clase-producto" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio 5: Clase Producto
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ejercicio 5: Clase Producto">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#diseno_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diseño:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Diseño:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#contenido-del-diagrama_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contenido del Diagrama:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#caracteristicas-del-diseno_4" class="md-nav__link">
+  <a href="#cuando-usar-companion-objects" class="md-nav__link">
     <span class="md-ellipsis">
-      Características del diseño:
+      ¿Cuándo usar Companion Objects?
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -4375,237 +4238,105 @@
   
 
 
-<h1 id="ejercicios-de-introduccion-a-la-programacion-orientada-a-objetos">Ejercicios de introducción a la programación orientada a objetos<a class="headerlink" href="#ejercicios-de-introduccion-a-la-programacion-orientada-a-objetos" title="Permanent link">&para;</a></h1>
-<h2 id="ejercicio-1-clase-cuenta-bancaria">Ejercicio 1: Clase Cuenta Bancaria.<a class="headerlink" href="#ejercicio-1-clase-cuenta-bancaria" title="Permanent link">&para;</a></h2>
-<p>Crea una clase CuentaBancaria con las propiedades:</p>
-<ul>
-<li>titular (de tipo String).</li>
-<li>saldo (de tipo Double).</li>
-</ul>
-<p>La clase debe tener:</p>
+  <h1>Companion Objects en Kotlin Una Guía Completa</h1>
+
+<h3 id="companion-objects-en-kotlin-una-guia-completa"><strong>Companion Objects en Kotlin: Una Guía Completa</strong><a class="headerlink" href="#companion-objects-en-kotlin-una-guia-completa" title="Permanent link">&para;</a></h3>
+<h4 id="que-es-un-companion-object"><strong>¿Qué es un Companion Object?</strong><a class="headerlink" href="#que-es-un-companion-object" title="Permanent link">&para;</a></h4>
+<p>Un <strong>companion object</strong> es una característica especial en Kotlin que permite asociar un único objeto a una clase. Este objeto actúa como una extensión estática de la clase, permitiendo que contenga <strong>propiedades y métodos que pertenecen directamente a la clase, en lugar de a sus instancias</strong>. Gracias a esto, puedes acceder a ellos sin necesidad de crear una instancia de la clase.</p>
+<p>El concepto es similar al de <strong>métodos estáticos</strong> en Java, pero ofrece mayor flexibilidad y está más integrado con el paradigma orientado a objetos.</p>
+<hr />
+<h4 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<h4 id="caracteristicas-principales"><strong>Características principales</strong><a class="headerlink" href="#caracteristicas-principales" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Un constructor que inicialice el titular con el saldo en 0 por defecto.</li>
-<li>
-<p>Métodos para:</p>
-</li>
-<li>
-<p>Ingresar dinero (ingresar).</p>
-</li>
-<li>Retirar dinero (retirar). Este método debe lanzar una excepción si se intenta retirar más dinero del que hay en la cuenta.</li>
+<li><strong>Asociación única a una clase:</strong>  </li>
+<li>Solo puede existir un companion object por clase.  </li>
+<li>Se declara con la palabra clave <code>companion</code> dentro de la clase.  </li>
+<li><strong>Acceso como miembro estático:</strong>  </li>
+<li>Puedes acceder a los métodos y propiedades del companion object directamente a través del nombre de la clase.  </li>
+<li>Ejemplo: MiClase.miMetodoEstatico()  </li>
+<li><strong>Encapsulación de lógica estática:</strong>  </li>
+<li>Agrupa lógica que no depende de instancias, como configuraciones globales o métodos auxiliares.  </li>
+<li><strong>Compatibilidad con Java:</strong>  </li>
+<li>Los métodos en un companion object son visibles como métodos estáticos cuando se acceden desde Java.  </li>
+<li><strong>Acceso a miembros privados de la clase:</strong>  </li>
+<li>El companion object tiene acceso total a los atributos y métodos privados de la clase a la que pertenece.</li>
 </ol>
-<p>A tener en cuenta:</p>
-<ol>
-<li>El saldo no podrá ser modificado directamente desde fuera de la clase. Solo será posible su cambio mediante los métodos ingresar y retirar.</li>
-<li>Los métodos ingresar y retirar debe mostrar un mensaje con el saldo final después de la operación.</li>
-<li>No será posible retirar más dinero del saldo actual, ni ingresar cantidades negativas o 0. Deberá generar una excepción si ocurre esta situación.</li>
-</ol>
-<p>En el programa principal:</p>
+<hr />
+<h4 id="ventajas-de-usar-companion-objects"><strong>Ventajas de usar Companion Objects</strong><a class="headerlink" href="#ventajas-de-usar-companion-objects" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Crea una cuenta bancaria con un titular.</li>
-<li>Realiza un ingreso de 100.0 y un retiro de 50.0.</li>
-<li>Intenta realizar un retiro que supere el saldo y captura la excepción.</li>
+<li><strong>Centralización de lógica compartida:</strong>  </li>
+<li>Agrupa propiedades y métodos que deben ser consistentes entre todas las instancias de la clase.  </li>
+<li><strong>Compatibilidad con lenguajes externos:</strong>  </li>
+<li>Al usarse como métodos estáticos desde Java, facilita la interoperabilidad entre Kotlin y Java.  </li>
+<li><strong>Encapsulación:</strong>  </li>
+<li>Mantiene el código relacionado con la clase dentro de su mismo contexto, evitando la necesidad de crear clases auxiliares externas.  </li>
+<li><strong>Ideal para funciones de fábrica:</strong>  </li>
+<li>Facilita la creación de instancias personalizadas o con validaciones específicas antes de la construcción del objeto.</li>
 </ul>
-<h3 id="diseno">Diseño:<a class="headerlink" href="#diseno" title="Permanent link">&para;</a></h3>
-<p>Aquí tienes el diagrama <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> para la clase <strong>CuentaBancaria</strong> que implementa las especificaciones del ejercicio:</p>
-<p><img alt="CuentaBancaria" src="../assets/CuentaBancaria.png" /></p>
-<h4 id="contenido-del-diagrama">Contenido del Diagrama:<a class="headerlink" href="#contenido-del-diagrama" title="Permanent link">&para;</a></h4>
-<ol>
-<li><strong>Clase</strong>: <code>CuentaBancaria</code></li>
-<li><strong>Atributos</strong>:<ul>
-<li><code>titular: String</code>: El nombre del titular.</li>
-<li><code>saldo: Double = 0.0</code>: El saldo de la cuenta, inicializado a 0.</li>
-</ul>
-</li>
-<li><strong>Métodos</strong>:<ul>
-<li><code>CuentaBancaria(titular: String)</code>: Constructor que inicializa la cuenta con un titular y saldo en 0.</li>
-<li><code>ingresar(cantidad: Double): void</code>: Método para ingresar dinero.</li>
-<li><code>retirar(cantidad: Double): void</code>: Método para retirar dinero.</li>
-</ul>
-</li>
-</ol>
-<h4 id="caracteristicas-del-diseno">Características del diseño:<a class="headerlink" href="#caracteristicas-del-diseno" title="Permanent link">&para;</a></h4>
+<hr />
+<h4 id="_2"><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h4 id="desventajas"><strong>Desventajas</strong><a class="headerlink" href="#desventajas" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Los atributos son privados (<code>-</code>) para asegurar el encapsulamiento.</li>
-<li>Los métodos públicos (<code>+</code>) controlan las operaciones sobre el saldo.</li>
+<li><strong>Sobrecarga de responsabilidades:</strong>  </li>
+<li>Si se abusa de los companion objects para manejar demasiada lógica, pueden volverse difíciles de mantener y probar.  </li>
+<li><strong>Confusión conceptual:</strong>  </li>
+<li>Para principiantes, puede ser complicado entender cómo se diferencian los métodos del companion object de los métodos de instancia.  </li>
+<li><strong>Pérdida de flexibilidad en herencia:</strong>  </li>
+<li>Al no poder tener múltiples companion objects en una clase, se limita la capacidad de modularizar diferentes aspectos.</li>
 </ul>
-<h2 id="ejercicio-2-clase-vehiculo">Ejercicio 2: Clase Vehículo<a class="headerlink" href="#ejercicio-2-clase-vehiculo" title="Permanent link">&para;</a></h2>
-<p>Crea una clase Vehiculo con las propiedades:</p>
+<hr />
+<h4 id="_3"><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h4 id="ejemplo-generador-de-ids-unicos"><strong>Ejemplo: Generador de IDs únicos</strong><a class="headerlink" href="#ejemplo-generador-de-ids-unicos" title="Permanent link">&para;</a></h4>
+<p>Supongamos que tenemos una clase <code>Usuario</code> y necesitamos generar un ID único para cada nueva instancia. Usaremos un companion object para centralizar esta lógica:</p>
+<p>class Usuario(val nombre: String) {<br />
+    val id: Int</p>
+<div class="highlight"><pre><span></span><code>companion object {  
+    private var ultimoId \= 0
+
+    fun generarId(): Int {  
+        ultimoId++  
+        return ultimoId  
+    }  
+}
+
+init {  
+    id \= generarId()  
+}
+</code></pre></div>
+<p>}</p>
+<p>fun main() {<br />
+    val usuario1 = Usuario("Martina")<br />
+    val usuario2 = Usuario("Elena")</p>
+<p>println("Usuario 1: \<span class="arithmatex" usuario1.id="usuario1.id">\({usuario1.nombre}, ID: \\\)</span>")<br />
+println("Usuario 2: \<span class="arithmatex" usuario2.id="usuario2.id">\({usuario2.nombre}, ID: \\\)</span>")<br />
+}</p>
+<p><strong>Salida esperada:</strong></p>
+<p>Usuario 1: Martina, ID: 1<br />
+Usuario 2: Elena, ID: 2  </p>
+<hr />
+<h4 id="_4"><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h4 id="cuando-usar-companion-objects"><strong>¿Cuándo usar Companion Objects?</strong><a class="headerlink" href="#cuando-usar-companion-objects" title="Permanent link">&para;</a></h4>
 <ul>
-<li>marca.</li>
-<li>modelo.</li>
-<li>kilometraje.</li>
+<li><strong>Almacenar constantes y configuraciones:</strong>  </li>
+<li>Ejemplo: Valores predeterminados para tu aplicación, como límites o configuraciones globales.<br />
+    class Configuracion {<br />
+        companion object {<br />
+            const val TIEMPO_MAXIMO = 60<br />
+        }<br />
+    }  </li>
+<li><strong>Funciones de fábrica (Factory):</strong>  </li>
+<li>Permiten crear instancias de una clase con validaciones o ajustes previos.<br />
+    class Usuario(val nombre: String) {<br />
+        companion object {<br />
+            fun crearAnonimo(): Usuario {<br />
+                return Usuario("Anónimo")<br />
+            }<br />
+        }<br />
+    }  </li>
+<li><strong>Lógica compartida entre todas las instancias:</strong>  </li>
+<li>Métodos auxiliares o de utilidades relacionados con la clase.</li>
 </ul>
-<p>La clase debe tener:</p>
-<ol>
-<li>Métodos para registrar un viaje que aumente el kilometraje.</li>
-<li>Un método detalles que devuelva una descripción del vehículo o modificar el método toString.</li>
-</ol>
-<p>En el programa principal:</p>
-<ul>
-<li>Crea un vehículo, registra un viaje de 100 km y muestra sus detalles.</li>
-</ul>
-<h3 id="diseno_1">Diseño:<a class="headerlink" href="#diseno_1" title="Permanent link">&para;</a></h3>
-<p>Aquí tienes el diagrama <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> para la clase <strong>Vehículo</strong> que implementa las especificaciones del ejercicio:</p>
-<p><img alt="Vehiculo.png" src="../../../../assets/Vehiculo.png" /></p>
-<h4 id="contenido-del-diagrama_1">Contenido del Diagrama:<a class="headerlink" href="#contenido-del-diagrama_1" title="Permanent link">&para;</a></h4>
-<ol>
-<li><strong>Clase</strong>: <code>Vehiculo</code></li>
-<li><strong>Atributos</strong>:<ul>
-<li><code>marca: String</code>: Marca del vehículo.</li>
-<li><code>modelo: String</code>: Modelo del vehículo.</li>
-<li><code>kilometraje: Double = 0.0</code>: Kilometraje inicializado a 0.</li>
-</ul>
-</li>
-<li><strong>Métodos</strong>:<ul>
-<li><code>registrarViaje(kilometros: Double): void</code>: Método para aumentar el kilometraje.</li>
-<li><code>detalles(): String</code>: Método para obtener una descripción detallada del vehículo.</li>
-</ul>
-</li>
-</ol>
-<h4 id="caracteristicas-del-diseno_1">Características del diseño:<a class="headerlink" href="#caracteristicas-del-diseno_1" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Los atributos son privados (<code>-</code>) para proteger la información.</li>
-<li>Los métodos públicos (<code>+</code>) permiten operar y acceder a la información del vehículo.</li>
-</ul>
-<h2 id="ejercicio-3-clase-libro">Ejercicio 3: Clase Libro<a class="headerlink" href="#ejercicio-3-clase-libro" title="Permanent link">&para;</a></h2>
-<p>Crea una clase Libro con las propiedades:</p>
-<ul>
-<li>titulo (de tipo String).</li>
-<li>autor (de tipo String).</li>
-<li>numPaginas (de tipo Int).</li>
-<li>leido (de tipo Boolean, inicializado en false).</li>
-</ul>
-<p>La clase debe:</p>
-<ol>
-<li>Sobrescribir el método toString para mostrar: "Libro: [titulo] por [autor], Páginas: [numPaginas], Leído: [Sí/No]".</li>
-<li>Incluir un constructor secundario que inicialice numPaginas y leido con valores predeterminados.</li>
-</ol>
-<p>A tener en cuenta:</p>
-<ol>
-<li>las propiedades titulo, autor y numPaginas serán propiedades inmutables.</li>
-<li>titulo y autor no pueden ser cadenas vacías.</li>
-<li>numPaginas debe ser un valor positivo, no superior a 5000.</li>
-<li>Por defecto un libro tiene 100 páginas si no se especifica al inicializarlo.</li>
-</ol>
-<p>En el programa principal:</p>
-<ul>
-<li>Crea dos libros, marca uno como leído e imprime el valor de cada libro.</li>
-<li>Crea un libro con titulo vacío que muestre el mensaje de error correspondiente (acuérdate de capturar las excepciones).</li>
-</ul>
-<h3 id="diseno_2">Diseño:<a class="headerlink" href="#diseno_2" title="Permanent link">&para;</a></h3>
-<p>Aquí tienes el diagrama <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> para la clase <strong>Libro</strong> que implementa las especificaciones del ejercicio:</p>
-<p><img alt="Libro.png" src="../../../../assets/Libro.png" /></p>
-<h4 id="contenido-del-diagrama_2">Contenido del Diagrama:<a class="headerlink" href="#contenido-del-diagrama_2" title="Permanent link">&para;</a></h4>
-<ol>
-<li><strong>Clase</strong>: <code>Libro</code></li>
-<li><strong>Atributos</strong>:<ul>
-<li><code>titulo: String</code>: El título del libro.</li>
-<li><code>autor: String</code>: El autor del libro.</li>
-<li><code>numPaginas: Int = 100</code>: Número de páginas con valor predeterminado de 100.</li>
-<li><code>leido: Boolean = false</code>: Indica si el libro ha sido leído, inicializado en <code>false</code>.</li>
-</ul>
-</li>
-<li><strong>Métodos</strong>:<ul>
-<li><code>Libro(titulo: String, autor: String, numPaginas: Int = 100, leido: Boolean = false)</code>: Constructor que permite inicializar el libro.</li>
-<li><code>toString(): String</code>: Sobrescribe el método <code>toString</code> para proporcionar una descripción del libro.</li>
-</ul>
-</li>
-</ol>
-<h4 id="caracteristicas-del-diseno_2">Características del diseño:<a class="headerlink" href="#caracteristicas-del-diseno_2" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Las propiedades son privadas (<code>-</code>) para mantener su encapsulación.</li>
-<li>Se permite un constructor secundario que inicializa valores predeterminados para <code>numPaginas</code> y <code>leido</code>.</li>
-</ul>
-<h2 id="ejercicio-4-clase-estudiante">Ejercicio 4: Clase Estudiante<a class="headerlink" href="#ejercicio-4-clase-estudiante" title="Permanent link">&para;</a></h2>
-<p>Crea una clase Estudiante con las propiedades:</p>
-<ul>
-<li>nombre</li>
-<li>nota</li>
-</ul>
-<p>La clase debe:</p>
-<ol>
-<li>Modificar el setter de nota para asegurarse de que esté en el rango 0-10.</li>
-<li>Sobrescribir el método toString para mostrar: "Estudiante: [nombre], Nota: [nota]".</li>
-</ol>
-<p>A tener en cuenta:</p>
-<ol>
-<li>El nombre del estudiante no se podrá modificar una vez inicializado un objeto de tipo Estudiante.</li>
-<li>La propiedad nombre no puede ser tampoco visible desde fuera de la clase Estudiante.</li>
-</ol>
-<p>En el programa principal:</p>
-<ul>
-<li>Crea varios estudiantes, intenta asignarles notas fuera del rango y muestra sus detalles.</li>
-</ul>
-<h3 id="diseno_3">Diseño:<a class="headerlink" href="#diseno_3" title="Permanent link">&para;</a></h3>
-<p>Aquí tienes el diagrama <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> para la clase <strong>Estudiante</strong>, implementando las especificaciones del ejercicio 4:</p>
-<p><img alt="Estudiante" src="../../../../assets/Estudiante.png" /></p>
-<h4 id="contenido-del-diagrama_3">Contenido del Diagrama:<a class="headerlink" href="#contenido-del-diagrama_3" title="Permanent link">&para;</a></h4>
-<ol>
-<li><strong>Clase</strong>: <code>Estudiante</code></li>
-<li>
-<p><strong>Atributos</strong>:</p>
-<ul>
-<li><code>nombre: String</code>: Nombre del estudiante, inmutable y no visible externamente.</li>
-<li><code>nota: Double</code>: Nota del estudiante, ajustable dentro del rango 0-10 mediante un método.</li>
-<li>
-<p><strong>Métodos</strong>:</p>
-</li>
-<li>
-<p><code>Estudiante(nombre: String)</code>: Constructor que inicializa el nombre del estudiante.</p>
-</li>
-<li><code>setNota(nota: Double): void</code>: Establece la nota validando que esté entre 0 y 10.</li>
-<li><code>toString(): String</code>: Devuelve una descripción en el formato: <code>Estudiante: [nombre], Nota: [nota]</code>.</li>
-</ul>
-</li>
-</ol>
-<h4 id="caracteristicas-del-diseno_3">Características del diseño:<a class="headerlink" href="#caracteristicas-del-diseno_3" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Las propiedades son privadas (<code>-</code>) para mantener su encapsulación. Sin embargo existen los métodos getter y setter, adaptados para la propiedad <code>nota</code> según las especificaciones.</li>
-<li>El constructor estaría disponible para inicializar el nombre del estudiante.</li>
-</ul>
-<h2 id="ejercicio-5-clase-producto">Ejercicio 5: Clase Producto<a class="headerlink" href="#ejercicio-5-clase-producto" title="Permanent link">&para;</a></h2>
-<p>Crea una clase Producto con las propiedades:</p>
-<ul>
-<li>nombre</li>
-<li>precio</li>
-<li>stock</li>
-</ul>
-<p>La clase debe:</p>
-<ol>
-<li>Utilizar un bloque init para asegurarse de que el precio y el stock sean positivos.</li>
-<li>Sobrescribir el método toString para mostrar: "Producto: [nombre], Precio: [precio]€, Stock: [stock]".</li>
-<li>Métodos vender y readastecer, que actualizarán el stock. Realizar los controles que veáis adecuados.</li>
-<li>Las propiedades precio y stock no pueden ser modificadas directamente desde fuera de la clase Producto.</li>
-</ol>
-<p>En el programa principal:</p>
-<ul>
-<li>Crea varios productos, usa sus métodos y muestra sus detalles.</li>
-</ul>
-<h3 id="diseno_4">Diseño:<a class="headerlink" href="#diseno_4" title="Permanent link">&para;</a></h3>
-<p>Aquí tienes el diagrama <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> para la clase <strong>Producto</strong>, implementando las especificaciones del ejercicio 5:</p>
-<p><img alt="Producto" src="../../../../assets/Producto.png" /></p>
-<h4 id="contenido-del-diagrama_4">Contenido del Diagrama:<a class="headerlink" href="#contenido-del-diagrama_4" title="Permanent link">&para;</a></h4>
-<ol>
-<li><strong>Clase</strong>: <code>Atributos</code></li>
-<li><strong>Atributos</strong>:<ul>
-<li><code>nombre: String</code>: Nombre del producto.</li>
-<li><code>precio: Double</code>: Precio del producto, validado para ser positivo mediante un bloque <code>init</code>.</li>
-<li><code>stock: Int</code>: Cantidad de stock disponible, validada para ser positiva mediante un bloque <code>init</code>.</li>
-</ul>
-</li>
-<li><strong>Métodos</strong>:<ul>
-<li><code>Producto(nombre: String, precio: Double, stock: Int)</code>: Constructor que inicializa el producto y valida los atributos.</li>
-<li><code>vender(cantidad: Int): void</code>: Reduce el stock si hay suficiente cantidad disponible.</li>
-<li><code>reabastecer(cantidad: Int): void</code>: Incrementa el stock del producto.</li>
-<li><code>toString(): String</code>: Devuelve una descripción en el formato: <code>Producto: [nombre], Precio: [precio]€, Stock: [stock]</code>.</li>
-</ul>
-</li>
-</ol>
-<h4 id="caracteristicas-del-diseno_4">Características del diseño:<a class="headerlink" href="#caracteristicas-del-diseno_4" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Las propiedades son privadas (<code>-</code>) para mantener su encapsulación. Sin embargo, se han definido métodos para operar con ellas.</li>
-<li>El constructor inicializa el producto y valida los atributos.</li>
-</ul>
+<hr />
 
 
 
@@ -4733,10 +4464,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../../../assets/javascripts/bundle.f13b1293.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
     
   </body>

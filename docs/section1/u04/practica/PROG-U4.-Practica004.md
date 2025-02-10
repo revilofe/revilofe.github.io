@@ -67,7 +67,7 @@ x: 9, y: -20, direction: NEGATIVEX
 
    10. La clase Robot debe obligar a introducir un nombre que no esté vacío.
        
-   11. Cread los movimientos en un array de arrays y recorrerlos para realizar en cada iteración los movimientos del robot y mostrar la posición del mismo al finalizar cada uno. En cada iteración del bucle llamaremos a los métodos `mover()` y `mostrarPosicion()`.
+   11. Cread los movimientos en un array de arrays y recorrerlos para realizar en cada iteración los movimientos del robot y mostrar la posición del mismo al finalizar cada uno. En cada iteración del bucle llamaremos al método `mover()` y mostraremos por consola el contenido del robot, es decir, el método `toString()`.
 
 Un ejemplo de una estructura que podéis utilizar para los movimientos sería la siguiente:
 
@@ -79,4 +79,14 @@ Un ejemplo de una estructura que podéis utilizar para los movimientos sería la
       [],
       [3, 5]
    ]
+   ```
+
+La salida correcta del programa sería la siguiente:
+
+   ```
+   R2D2 está en (-4, 1) PositiveY
+   R2D2 está en (-8, 0) PositiveY
+   R2D2 está en (-11, 7) PositiveX
+   R2D2 está en (-11, 7) PositiveX
+   R2D2 está en (-8, 12) NegativeX
    ```

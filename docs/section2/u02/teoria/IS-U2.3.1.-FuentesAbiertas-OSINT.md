@@ -1,16 +1,17 @@
-title: "UD 2 - 2.3.1 Fuentes Abiertas. OSINT."
+---
+title: title: "UD 2 - 2.3.1 Fuentes Abiertas. OSINT."
 description: Fuentes Abiertas. OSINT
 summary: Fuentes Abiertas. OSINT
 authors:
-
-- Eduardo Fdez
-  date: 2025-02-11
-  icon:
-  permalink: /is/unidad2/2.3.1
-  categories:
-- IS
-  tags:
-- OSINT
+    - Eduardo Fdez
+date: 2025-02-11
+icon:
+permalink: /is/unidad2/2.3.1
+categories:
+    - IS
+tags:
+    - OSINT
+---
 
 # Fuentes Abiertas. OSINT
 

@@ -793,16 +793,16 @@ Aplicar todas las técnicas aprendidas en un caso completo de investigación.
 
 * Dividir a los alumnos en grupos y asignarles una empresa ficticia.    
 * Cada grupo deberá:    
-  
-   * Encontrar información pública sobre la empresa (Google Dorking, WHOIS, Shodan).    
-   * Analizar perfiles de empleados en redes sociales.    
-   * Buscar posibles vulnerabilidades de seguridad.    
+
+    - Encontrar información pública sobre la empresa (Google Dorking, WHOIS, Shodan).    
+    - Analizar perfiles de empleados en redes sociales.    
+    - Buscar posibles vulnerabilidades de seguridad.    
 
 * Presentar un **informe final** con:    
 
-   * **Hallazgos clave**.   
-   * **Riesgos detectados**.   
-   * **Recomendaciones de seguridad**.    
+    - **Hallazgos clave**.   
+    - **Riesgos detectados**.
+    - **Recomendaciones de seguridad**.    
 
 **Resultados esperados:**
 

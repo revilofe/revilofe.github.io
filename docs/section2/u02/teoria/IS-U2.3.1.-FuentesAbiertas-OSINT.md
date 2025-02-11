@@ -82,14 +82,14 @@ OSINT es una metodología poderosa que permite recopilar información sin infrin
 
 ### 1.4. Actividades
 
-1. **Ejercicio 1: ¿Qué información hay sobre ti en Internet?
-   * Pide a los alumnos que busquen su propio nombre en Google y redes sociales para analizar qué información pública existe sobre ellos.
-   * Discusión: ¿Es peligroso? ¿Cómo podrían mejorar su privacidad?
-2. **Ejercicio 2: Comparación de metodologías de inteligencia
-   * Presenta a los alumnos varios casos ficticios y pídeles que clasifiquen si el método utilizado es OSINT, HUMINT, SIGINT, etc.
-3. **Ejercicio 3: OSINT en la vida real
-   * Divide a los alumnos en grupos y entrégales diferentes escenarios (ej. "Una empresa quiere saber qué información sensible está expuesta en internet").
-   * Deberán proponer estrategias de OSINT para recopilar información útil de forma ética y legal.
+1. **Ejercicio 1: ¿Qué información hay sobre ti en Internet?**       
+   Pide a los alumnos que busquen su propio nombre en Google y redes sociales para analizar qué información pública existe sobre ellos.    
+   Discusión: ¿Es peligroso? ¿Cómo podrían mejorar su privacidad?      
+2. **Ejercicio 2: Comparación de metodologías de inteligencia**    
+   Presenta a los alumnos varios casos ficticios y pídeles que clasifiquen si el método utilizado es OSINT, HUMINT, SIGINT, etc.    
+3. **Ejercicio 3: OSINT en la vida real**    
+   Divide a los alumnos en grupos y entrégales diferentes escenarios (ej. "Una empresa quiere saber qué información sensible está expuesta en internet").    
+   Deberán proponer estrategias de OSINT para recopilar información útil de forma ética y legal.   
 
 ## 2. Uso de OSINT en Ciberseguridad
 
@@ -160,13 +160,13 @@ Un investigador de OSINT quiere obtener datos sobre una persona. Es legal buscar
 ### 2.5. Actividades
 
 1. **Ejercicio 1: OSINT en auditoría de seguridad**
-   * Los alumnos deben buscar información pública sobre una empresa ficticia utilizando OSINT (Google Dorking, redes sociales, WHOIS).
-   * Reflexión: ¿Qué información expuesta podría ser peligrosa?
+   Los alumnos deben buscar información pública sobre una empresa ficticia utilizando OSINT (Google Dorking, redes sociales, WHOIS).
+   Reflexión: ¿Qué información expuesta podría ser peligrosa?
 2. **Ejercicio 2: Identificación de amenazas con OSINT**
-   * Se da a los alumnos un caso de posible ataque a una empresa.
-   * Deben investigar en fuentes OSINT para detectar si hay información filtrada en foros o la dark web.
+   Se da a los alumnos un caso de posible ataque a una empresa.
+   Deben investigar en fuentes OSINT para detectar si hay información filtrada en foros o la dark web.
 3. **Ejercicio 3: Legalidad y ética en OSINT**
-   * Se presentan varios escenarios y los alumnos deben decidir si la actividad es legal o ilegal.
+   Se presentan varios escenarios y los alumnos deben decidir si la actividad es legal o ilegal.
 
 ## 3. Proceso de OSINT
 
@@ -310,15 +310,15 @@ El proceso OSINT es un ciclo estructurado que permite convertir datos dispersos 
 ### 3.8. Actividades
 
 1. **Ejercicio 1: Simulación de un Ciclo OSINT**
-   * Dividir a los alumnos en grupos.
-   * Cada grupo investiga un objetivo ficticio siguiendo las fases del ciclo OSINT.
-   * Al final, presentan un informe con sus hallazgos y recomendaciones.
+Dividir a los alumnos en grupos.
+Cada grupo investiga un objetivo ficticio siguiendo las fases del ciclo OSINT.
+Al final, presentan un informe con sus hallazgos y recomendaciones.
 2. **Ejercicio 2: Adquisición y Procesamiento de Datos**
-   * Se les da a los alumnos un conjunto de datos de credenciales filtradas (ficticias).
-   * Deben procesar y organizar la información para identificar patrones y riesgos.
+Se les da a los alumnos un conjunto de datos de credenciales filtradas (ficticias).
+Deben procesar y organizar la información para identificar patrones y riesgos.
 3. **Ejercicio 3: Creación de un Informe OSINT**
-   * Cada alumno selecciona un tema de investigación OSINT (por ejemplo, análisis de redes sociales de una marca).
-   * Deben realizar el proceso completo y elaborar un informe detallado con sus hallazgos.
+Cada alumno selecciona un tema de investigación OSINT (por ejemplo, análisis de redes sociales de una marca).
+Deben realizar el proceso completo y elaborar un informe detallado con sus hallazgos.
 
 ## 4. Técnicas de OSINT
 
@@ -475,19 +475,19 @@ Las técnicas OSINT permiten extraer información valiosa de fuentes abiertas de
 ### 4.8. Actividades
 
 1. **Ejercicio 1: Google Dorking**
-   * Los alumnos deben usar operadores avanzados de Google para encontrar información pública de un sitio web (ficticio).
-   * Reflexión: ¿Qué riesgos implica que una empresa exponga archivos en internet?
+   Los alumnos deben usar operadores avanzados de Google para encontrar información pública de un sitio web (ficticio).
+   Reflexión: ¿Qué riesgos implica que una empresa exponga archivos en internet?
 2. **Ejercicio 2: Extracción de Metadatos**
-   * Se proporciona un conjunto de documentos (ficticios).
-   * Los alumnos deben analizar los metadatos con **ExifTool** o **FOCA**.
+   Se proporciona un conjunto de documentos (ficticios).
+   Los alumnos deben analizar los metadatos con **ExifTool** o **FOCA**.
 3. **Ejercicio 3: Análisis OSINT en Redes Sociales**
-   * Cada alumno investiga un perfil público de una celebridad o empresa (sin invadir la privacidad).
-   * Discusión: ¿Qué información personal puede obtenerse legalmente de redes sociales?
+   Cada alumno investiga un perfil público de una celebridad o empresa (sin invadir la privacidad).
+   Discusión: ¿Qué información personal puede obtenerse legalmente de redes sociales?
 4. **Ejercicio 4: Identificación de Infraestructura**
-   * Los alumnos usan **WHOIS** y **NSLookup** para analizar dominios.
-   * Reflexión: ¿Cómo podrían los ciberdelincuentes utilizar esta información?
+   Los alumnos usan **WHOIS** y **NSLookup** para analizar dominios.
+   Reflexión: ¿Cómo podrían los ciberdelincuentes utilizar esta información?
 5. **Ejercicio 5: Búsqueda Inversa de Imágenes**
-   * Se presentan imágenes falsas y los alumnos deben verificar su autenticidad con Google Imágenes o TinEye.
+   Se presentan imágenes falsas y los alumnos deben verificar su autenticidad con Google Imágenes o TinEye.
 
 ## 5. Herramientas OSINT
 
@@ -632,13 +632,13 @@ Las herramientas OSINT permiten recopilar información de forma rápida y organi
 ### 5.9. Actividades
 
 1. **Ejercicio 1: Uso de Shodan**
-   * Los alumnos buscan dispositivos conectados a internet con Shodan y analizan su exposición.
+   Los alumnos buscan dispositivos conectados a internet con Shodan y analizan su exposición.
 2. **Ejercicio 2: Análisis de redes sociales con Sherlock**
-   * Se les asigna un nombre de usuario y deben rastrear en qué redes sociales está presente.
+   Se les asigna un nombre de usuario y deben rastrear en qué redes sociales está presente.
 3. **Ejercicio 3: Búsqueda de datos con Google Dorking**
-   * Se les da un dominio y deben encontrar información oculta usando operadores de Google.
+   Se les da un dominio y deben encontrar información oculta usando operadores de Google.
 4. **Ejercicio 4: Extracción de metadatos con ExifTool**
-   * Se proporciona un conjunto de imágenes y documentos para que extraigan sus metadatos.
+   Se proporciona un conjunto de imágenes y documentos para que extraigan sus metadatos.
 
 Este desarrollo cubre **las herramientas OSINT más importantes**, con ejemplos prácticos y ejercicios para su aplicación en el aula. ¿Quieres que amplíe algún apartado o añada más detalles? 😊
 
@@ -865,13 +865,13 @@ El uso de OSINT implica un equilibrio entre la obtención de información y el r
 ### 7.4. Actividades
 
 1. **Ejercicio 1: Evaluación de casos éticos en OSINT**
-   * Se presentan diferentes escenarios y los alumnos deben determinar si la actividad es legal y ética.
-   * **Ejemplo:** ¿Es correcto recolectar información de empleados en LinkedIn para un análisis de seguridad?
+   Se presentan diferentes escenarios y los alumnos deben determinar si la actividad es legal y ética.
+   **Ejemplo:** ¿Es correcto recolectar información de empleados en LinkedIn para un análisis de seguridad?
 2. **Ejercicio 2: Análisis de regulaciones sobre privacidad**
-   * Cada grupo investiga una ley de privacidad (GDPR, CCPA, etc.).
-   * Explican cómo afecta el uso de OSINT y presentan ejemplos de casos legales.
+   Cada grupo investiga una ley de privacidad (GDPR, CCPA, etc.).
+   Explican cómo afecta el uso de OSINT y presentan ejemplos de casos legales.
 3. **Ejercicio 3: Uso ético de OSINT en un caso práctico**
-   * Se asigna un caso ficticio donde los alumnos deben recopilar información con OSINT, asegurando que cumplen las normas legales y éticas.
+   Se asigna un caso ficticio donde los alumnos deben recopilar información con OSINT, asegurando que cumplen las normas legales y éticas.
 
 Como resumen, se presentan las **consideraciones éticas y legales** más importantes en el uso de OSINT:
 

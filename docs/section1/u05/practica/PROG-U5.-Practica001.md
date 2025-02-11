@@ -87,19 +87,19 @@ Imagina que estás construyendo un sistema para una biblioteca que gestiona libr
 Parte 1: Definir `data class`
 
 1. Libro:  
-   * Título:`String`
-   * Autor:`String`
-   * Año de Publicación:`Int`
+  * Título:`String`
+  * Autor:`String`
+  * Año de Publicación:`Int`
 
 2. Revista:  
-   * Título:`String`
-   * Issue:`Int`
-   * Año:`Int`
+  * Título:`String`
+  * Issue:`Int`
+  * Año:`Int`
 
 3. DVD:  
-   * Título:`String`
-   * Director:`String`
-   * Año:`Int`
+  * Título:`String`
+  * Director:`String`
+  * Año:`Int`
 
 Estas clases almacenarán la información básica de cada ítem en la biblioteca. Usa `data class` para definir estas clases ya que son perfectas para almacenar datos sin necesidad de lógica adicional.
 

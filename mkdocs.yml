@@ -168,6 +168,7 @@ nav:
       - '2.2.2.-SIEM & Casos de uso': 'section2/u02/teoria/IS-U2.2.2.-CasosUso.md'
       - '2.2.3.-Implantación de un SIEM': 'section2/u02/teoria/IS-U2.2.3.-SIEM-Implantacion.md'
       - '2.2.4.-Evolución de SIEM': 'section2/u02/teoria/IS-U2.2.4.-SIEM-Evolucion.md'
+      - '2.3.1.-Fuentes Abiertas. OSINT': 'section2/u02/teoria/IS-U2.3.1.-FuentesAbiertas-OSINT.md'
 #    - 'U3: Recopiación de evidencias':
 #      - 'section2/u03/index.md'
 #      - '3.3.1.-Investigación incidentes:MITRE': 'section2/u03/teoria/IS-U3.3.1.-MITRE.md'

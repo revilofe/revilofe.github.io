@@ -362,6 +362,17 @@ site:target.com intitle:"index of" "wp-admin"
 
 Encuentra archivos con información interna que nunca debieron ser públicos.
 
+#### 4.2.1. Recursos para Google Dorking
+
+Algunos recursos útiles para Google Dorking son:
+* https://achirou.com/dorks-de-google-hacking-para-osint/
+* https://www.exploit-db.com/google-hacking-database
+* https://github.com/chr3st5an/Google-Dorking
+* https://github.com/Tobee1406/Awesome-Google-Dorks
+* https://www.udemy.com/course/osint-de-principiante-a-experto-en-investigacion-digital/
+
+
+
 ### 4.3. Recopilación de Metadatos en Documentos
 
 Los documentos digitales (PDF, DOC, JPG, etc.) contienen **metadatos ocultos** que pueden revelar información sobre sus autores, fechas de creación y herramientas utilizadas.
@@ -504,7 +515,7 @@ Un investigador usa **Wayback Machine** para revisar cómo lucía un sitio web a
 
 **Shodan** es un motor de búsqueda que permite encontrar dispositivos conectados a internet como servidores, cámaras de seguridad, routers, sistemas industriales, etc. Es útil para identificar vulnerabilidades en infraestructuras y evaluar la exposición de activos a posibles ataques. Los resultados de Shodan pueden ser utilizados en auditorías de seguridad, pentesting y análisis de amenazas.
 
-### 5.2.1. Características principales de Shodan
+#### 5.2.1. Características principales de Shodan
 
 Algunas características de Shodan son:
 
@@ -519,6 +530,16 @@ Un pentester busca dispositivos con acceso remoto expuesto mediante el puerto **
 `port:3389`
 
 Encuentra varios servidores accesibles sin autenticación segura.
+
+#### 5.2.2. Recursos utiles para Shodan
+
+Algunos recursos útiles para Google Dorking son:
+- https://github.com/jakejarvis/awesome-shodan-queries
+- https://hayageek.com/shodan-search-queries/
+- https://help.shodan.io/the-basics/search-query-fundamentals
+- https://www.shodan.io/search/examples
+- https://github.com/JavierOlmedo/shodan-filters
+
 
 ### 5.3. Wayback Machine: Análisis de Versiones Antiguas de Sitios Web
 
@@ -536,7 +557,7 @@ Un investigador encuentra que un sitio web eliminó un archivo con nombres de em
 
 **Maltego** es una herramienta de inteligencia que permite visualizar conexiones entre personas, organizaciones y servidores. Es útil para mapear infraestructuras digitales, identificar relaciones entre entidades y analizar redes de amenazas. Maltego se utiliza en ciberseguridad, investigación forense y análisis de inteligencia.
 
-### 5.4.1. Usos de Maltego en OSINT
+#### 5.4.1. Usos de Maltego en OSINT
 
 Algunos usos de Maltego en OSINT son:
 
@@ -824,7 +845,7 @@ Un investigador OSINT recopila correos electrónicos expuestos en una filtració
 
 Para evitar problemas éticos y legales, es fundamental seguir **buenas prácticas** en la recopilación y análisis de información de fuentes abiertas. Respetar la privacidad, cumplir con las regulaciones y utilizar OSINT de manera ética son aspectos clave para un uso responsable.
 
-### 7.3.1. Principios de uso ético de OSINT
+#### 7.3.1. Principios de uso ético de OSINT
 
 Algunos principios éticos para el uso de OSINT son:
 

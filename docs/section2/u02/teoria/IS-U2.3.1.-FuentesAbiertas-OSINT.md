@@ -656,17 +656,18 @@ Enseñar a los alumnos a utilizar **búsquedas avanzadas en Google** para encont
 1. Explicar el concepto de **Google Dorking** y sus operadores.
 2. Presentar una serie de búsquedas específicas con operadores avanzados:
 
-   * Encontrar archivos PDF en un dominio:
+   Encontrar archivos PDF en un dominio:
 
    `site:empresa.com filetype:pdf`
 
-   * Buscar páginas con credenciales filtradas:
+   Buscar páginas con credenciales filtradas:
 
    `intext:"password" site:pastebin.com`
 
-   * Ver páginas de administración de un sitio:
+   Ver páginas de administración de un sitio:
 
-   `intitle:"admin login" site:empresa.com`
+   `intitle:"admin login" site:empresa.com`    
+
 3. Pedir a los alumnos que realicen búsquedas sobre un dominio ficticio y **documenten sus hallazgos**.
 
 **Resultados esperados:**
@@ -685,18 +686,20 @@ Enseñar cómo obtener información de un **dominio** mediante herramientas OSIN
 1. Explicar cómo funcionan **WHOIS** y las consultas **DNS**.
 2. Pedir a los alumnos que usen **WHOIS** para investigar un dominio:
 
-   `whois google.com`
+   `whois google.com`   
+
 3. Usar **nslookup** o **dig** para obtener registros DNS:
 
    ```
    nslookup google.com
    dig google.com MX
-   ```
+   ```   
+
 4. Analizar los resultados y responder:
 
-   * ¿Quién registró el dominio?
-   * ¿Dónde están sus servidores?
-   * ¿Hay correos electrónicos filtrados?
+   ¿Quién registró el dominio?
+   ¿Dónde están sus servidores?
+   ¿Hay correos electrónicos filtrados?
 
 **Resultados esperados:**
 
@@ -715,11 +718,12 @@ Mostrar cómo se pueden encontrar **cámaras, routers y servidores** expuestos e
 2. Pedir a los alumnos que busquen dispositivos en España con ciertos puertos abiertos:
 
    `country:ES port:3389`
-   `product:"Webcam"`
+   `product:"Webcam"`   
+
 3. Analizar los resultados y responder:
 
-   * ¿Cuántos dispositivos hay expuestos?
-   * ¿Qué riesgos de seguridad tienen?
+   ¿Cuántos dispositivos hay expuestos?
+   ¿Qué riesgos de seguridad tienen?
 
 **Resultados esperados:**
 
@@ -736,12 +740,14 @@ Aprender a rastrear **nombres de usuario** en múltiples plataformas.
 
 1. Explicar cómo **los ciberdelincuentes usan OSINT** en redes sociales.
 2. Instalar y ejecutar **Sherlock**:
+
    ```bash
    python3 sherlock.py usuario
-   ```
+   ```   
+
 3. Elegir un usuario ficticio y analizar:
-   * ¿En qué plataformas está presente?
-   * ¿Se puede obtener más información sobre él?
+   ¿En qué plataformas está presente?
+   ¿Se puede obtener más información sobre él?
 
 **Resultados esperados:**
 

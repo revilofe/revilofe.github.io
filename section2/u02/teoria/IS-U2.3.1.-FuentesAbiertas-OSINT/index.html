@@ -6297,7 +6297,6 @@ Deben realizar el proceso completo y elaborar un informe detallado con sus halla
 <li><strong>Ejercicio 4: Extracción de metadatos con ExifTool</strong>
    Se proporciona un conjunto de imágenes y documentos para que extraigan sus metadatos.</li>
 </ol>
-<p>Este desarrollo cubre <strong>las herramientas OSINT más importantes</strong>, con ejemplos prácticos y ejercicios para su aplicación en el aula. ¿Quieres que amplíe algún apartado o añada más detalles? 😊</p>
 <h2 id="6-casos-practicos-y-actividades-de-osint">6. Casos Prácticos y Actividades de OSINT<a class="headerlink" href="#6-casos-practicos-y-actividades-de-osint" title="Permanent link">&para;</a></h2>
 <p>Para que los alumnos comprendan y apliquen el conocimiento sobre <strong>OSINT</strong>, es fundamental trabajar con <strong>casos prácticos y ejercicios</strong> que simulen situaciones reales. En este apartado, se presentan seis ejercicios prácticos que permitirán a los estudiantes desarrollar sus habilidades en inteligencia de fuentes abiertas. Estos ejercicios pueden adaptarse a diferentes niveles de conocimiento y ser utilizados en cursos de ciberseguridad, análisis forense y prevención de amenazas.</p>
 <h3 id="61-ejercicio-uso-de-google-dorking-para-encontrar-informacion-oculta">6.1. Ejercicio: Uso de Google Dorking para encontrar información oculta<a class="headerlink" href="#61-ejercicio-uso-de-google-dorking-para-encontrar-informacion-oculta" title="Permanent link">&para;</a></h3>
@@ -6306,23 +6305,17 @@ Deben realizar el proceso completo y elaborar un informe detallado con sus halla
 <p><strong>Instrucciones:</strong></p>
 <ol>
 <li>Explicar el concepto de <strong>Google Dorking</strong> y sus operadores.</li>
-<li>
-<p>Presentar una serie de búsquedas específicas con operadores avanzados:</p>
-</li>
-<li>
-<p>Encontrar archivos PDF en un dominio:</p>
-</li>
+<li>Presentar una serie de búsquedas específicas con operadores avanzados:</li>
 </ol>
+<p>Encontrar archivos PDF en un dominio:</p>
 <p><code>site:empresa.com filetype:pdf</code></p>
-<ul>
-<li>Buscar páginas con credenciales filtradas:</li>
-</ul>
+<p>Buscar páginas con credenciales filtradas:</p>
 <p><code>intext:"password" site:pastebin.com</code></p>
-<ul>
-<li>Ver páginas de administración de un sitio:</li>
-</ul>
-<p><code>intitle:"admin login" site:empresa.com</code>
-3. Pedir a los alumnos que realicen búsquedas sobre un dominio ficticio y <strong>documenten sus hallazgos</strong>.</p>
+<p>Ver páginas de administración de un sitio:</p>
+<p><code>intitle:"admin login" site:empresa.com</code>    </p>
+<ol>
+<li>Pedir a los alumnos que realicen búsquedas sobre un dominio ficticio y <strong>documenten sus hallazgos</strong>.</li>
+</ol>
 <p><strong>Resultados esperados:</strong></p>
 <ul>
 <li>Comprensión del uso de <strong>Google Dorking</strong>.</li>
@@ -6336,17 +6329,19 @@ Deben realizar el proceso completo y elaborar un informe detallado con sus halla
 <li>Explicar cómo funcionan <strong>WHOIS</strong> y las consultas <strong><abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr></strong>.</li>
 <li>Pedir a los alumnos que usen <strong>WHOIS</strong> para investigar un dominio:</li>
 </ol>
-<p><code>whois google.com</code>
-3. Usar <strong>nslookup</strong> o <strong>dig</strong> para obtener registros <abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr>:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>nslookup google.com
+<p><code>whois google.com</code>   </p>
+<ol>
+<li>Usar <strong>nslookup</strong> o <strong>dig</strong> para obtener registros <abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr>:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>nslookup google.com
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>dig google.com MX
 </code></pre></div>
-4. Analizar los resultados y responder:</p>
-<ul>
-<li>¿Quién registró el dominio?</li>
-<li>¿Dónde están sus servidores?</li>
-<li>¿Hay correos electrónicos filtrados?</li>
-</ul>
+<ol>
+<li>Analizar los resultados y responder:</li>
+</ol>
+<p>¿Quién registró el dominio?
+   ¿Dónde están sus servidores?
+   ¿Hay correos electrónicos filtrados?</p>
 <p><strong>Resultados esperados:</strong></p>
 <ul>
 <li>Identificación de <strong>propietarios de dominios</strong>.</li>
@@ -6361,12 +6356,12 @@ Deben realizar el proceso completo y elaborar un informe detallado con sus halla
 <li>Pedir a los alumnos que busquen dispositivos en España con ciertos puertos abiertos:</li>
 </ol>
 <p><code>country:ES port:3389</code>
-   <code>product:"Webcam"</code>
-3. Analizar los resultados y responder:</p>
-<ul>
-<li>¿Cuántos dispositivos hay expuestos?</li>
-<li>¿Qué riesgos de seguridad tienen?</li>
-</ul>
+   <code>product:"Webcam"</code>   </p>
+<ol>
+<li>Analizar los resultados y responder:</li>
+</ol>
+<p>¿Cuántos dispositivos hay expuestos?
+   ¿Qué riesgos de seguridad tienen?</p>
 <p><strong>Resultados esperados:</strong></p>
 <ul>
 <li>Comprender la importancia de <strong>seguridad en dispositivos conectados</strong>.</li>
@@ -6378,12 +6373,14 @@ Deben realizar el proceso completo y elaborar un informe detallado con sus halla
 <p><strong>Instrucciones:</strong></p>
 <ol>
 <li>Explicar cómo <strong>los ciberdelincuentes usan OSINT</strong> en redes sociales.</li>
-<li>Instalar y ejecutar <strong>Sherlock</strong>:
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python3<span class="w"> </span>sherlock.py<span class="w"> </span>usuario
-</code></pre></div></li>
-<li>Elegir un usuario ficticio y analizar:</li>
-<li>¿En qué plataformas está presente?</li>
-<li>¿Se puede obtener más información sobre él?</li>
+<li>Instalar y ejecutar <strong>Sherlock</strong>:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python3<span class="w"> </span>sherlock.py<span class="w"> </span>usuario
+</code></pre></div>
+<ol>
+<li>Elegir un usuario ficticio y analizar:
+   ¿En qué plataformas está presente?
+   ¿Se puede obtener más información sobre él?</li>
 </ol>
 <p><strong>Resultados esperados:</strong></p>
 <ul>

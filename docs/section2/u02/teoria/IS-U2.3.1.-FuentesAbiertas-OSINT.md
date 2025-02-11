@@ -13,7 +13,7 @@ tags:
     - OSINT
 ---
 
-# Fuentes Abiertas. OSINT
+# 2.3.1.- Fuentes Abiertas. OSINT
 
 Al detectar un incidente se debe llevar a cabo un análisis mas detallado, comprender la causa, el alcance, etc. El objetivo es identificar la vulnerabilidad, evluar amenajas potenciales y detectar brechas de seguirad o indicios sobre porque se ha producido el incidente.
 

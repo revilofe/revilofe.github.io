@@ -6327,19 +6327,19 @@
 <p><strong>Objetivo:</strong></p>
 <p>Enseñar a los alumnos a utilizar <strong>búsquedas avanzadas en Google</strong> para encontrar información que no está fácilmente accesible.</p>
 <p><strong>Instrucciones:</strong></p>
-<ol>
+<ul>
 <li>Explicar el concepto de <strong>Google Dorking</strong> y sus operadores.</li>
 <li>Presentar una serie de búsquedas específicas con operadores avanzados:</li>
-</ol>
+</ul>
 <p>Encontrar archivos PDF en un dominio:</p>
 <p><code>site:empresa.com filetype:pdf</code></p>
 <p>Buscar páginas con credenciales filtradas:</p>
 <p><code>intext:"password" site:pastebin.com</code></p>
 <p>Ver páginas de administración de un sitio:</p>
 <p><code>intitle:"admin login" site:empresa.com</code>    </p>
-<ol>
+<ul>
 <li>Pedir a los alumnos que realicen búsquedas sobre un dominio ficticio y <strong>documenten sus hallazgos</strong>.</li>
-</ol>
+</ul>
 <p><strong>Resultados esperados:</strong></p>
 <ul>
 <li>Comprensión del uso de <strong>Google Dorking</strong>.</li>
@@ -6349,20 +6349,20 @@
 <p><strong>Objetivo:</strong></p>
 <p>Enseñar cómo obtener información de un <strong>dominio</strong> mediante herramientas OSINT.</p>
 <p><strong>Instrucciones:</strong></p>
-<ol>
+<ul>
 <li>Explicar cómo funcionan <strong>WHOIS</strong> y las consultas <strong><abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr></strong>.</li>
 <li>Pedir a los alumnos que usen <strong>WHOIS</strong> para investigar un dominio:</li>
-</ol>
+</ul>
 <p><code>whois google.com</code>   </p>
-<ol>
+<ul>
 <li>Usar <strong>nslookup</strong> o <strong>dig</strong> para obtener registros <abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr>:</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>nslookup google.com
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>dig google.com MX
 </code></pre></div>
-<ol>
+<ul>
 <li>Analizar los resultados y responder:</li>
-</ol>
+</ul>
 <p>¿Quién registró el dominio?
    ¿Dónde están sus servidores?
    ¿Hay correos electrónicos filtrados?</p>
@@ -6375,15 +6375,15 @@
 <p><strong>Objetivo</strong></p>
 <p>Mostrar cómo se pueden encontrar <strong>cámaras, routers y servidores</strong> expuestos en internet con Shodan.</p>
 <p><strong>Instrucciones:</strong></p>
-<ol>
+<ul>
 <li>Explicar qué es <strong>Shodan</strong> y cómo funciona.</li>
 <li>Pedir a los alumnos que busquen dispositivos en España con ciertos puertos abiertos:</li>
-</ol>
+</ul>
 <p><code>country:ES port:3389</code>
    <code>product:"Webcam"</code>   </p>
-<ol>
+<ul>
 <li>Analizar los resultados y responder:</li>
-</ol>
+</ul>
 <p>¿Cuántos dispositivos hay expuestos?
    ¿Qué riesgos de seguridad tienen?</p>
 <p><strong>Resultados esperados:</strong></p>
@@ -6395,17 +6395,17 @@
 <p><strong>Objetivo:</strong></p>
 <p>Aprender a rastrear <strong>nombres de usuario</strong> en múltiples plataformas.</p>
 <p><strong>Instrucciones:</strong></p>
-<ol>
+<ul>
 <li>Explicar cómo <strong>los ciberdelincuentes usan OSINT</strong> en redes sociales.</li>
 <li>Instalar y ejecutar <strong>Sherlock</strong>:</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python3<span class="w"> </span>sherlock.py<span class="w"> </span>usuario
 </code></pre></div>
-<ol>
+<ul>
 <li>Elegir un usuario ficticio y analizar:
    ¿En qué plataformas está presente?
    ¿Se puede obtener más información sobre él?</li>
-</ol>
+</ul>
 <p><strong>Resultados esperados:</strong></p>
 <ul>
 <li>Concienciación sobre <strong>riesgos de exposición en redes sociales</strong>.</li>
@@ -6415,11 +6415,11 @@
 <p><strong>Objetivo:</strong></p>
 <p>Mostrar cómo verificar la <strong>autenticidad de imágenes</strong> mediante herramientas OSINT.</p>
 <p><strong>Instrucciones:</strong></p>
-<ol>
-<li>Explicar qué es la <strong>búsqueda inversa de imágenes</strong>.</li>
-<li>Proporcionar a los alumnos imágenes sospechosas.</li>
-<li>Usar <strong>Google Images</strong> o <strong>TinEye</strong> para rastrear su origen.</li>
-</ol>
+<ul>
+<li>Explicar qué es la <strong>búsqueda inversa de imágenes</strong>.    </li>
+<li>Proporcionar a los alumnos imágenes sospechosas.   </li>
+<li>Usar <strong>Google Images</strong> o <strong>TinEye</strong> para rastrear su origen.   </li>
+</ul>
 <p><strong>Resultados esperados:</strong></p>
 <ul>
 <li>Identificar <strong>fuentes originales de imágenes</strong>.</li>
@@ -6429,24 +6429,34 @@
 <p><strong>Objetivo:</strong></p>
 <p>Aplicar todas las técnicas aprendidas en un caso completo de investigación.</p>
 <p><strong>Instrucciones:</strong></p>
-<ol>
-<li>Dividir a los alumnos en grupos y asignarles una empresa ficticia.</li>
-<li>Cada grupo deberá:</li>
-<li>Encontrar información pública sobre la empresa (Google Dorking, WHOIS, Shodan).</li>
-<li>Analizar perfiles de empleados en redes sociales.</li>
-<li>Buscar posibles vulnerabilidades de seguridad.</li>
-<li>Presentar un <strong>informe final</strong> con:</li>
-<li><strong>Hallazgos clave</strong>.</li>
-<li><strong>Riesgos detectados</strong>.</li>
-<li><strong>Recomendaciones de seguridad</strong>.</li>
-</ol>
+<ul>
+<li>Dividir a los alumnos en grupos y asignarles una empresa ficticia.    </li>
+<li>
+<p>Cada grupo deberá:    </p>
+</li>
+<li>
+<p>Encontrar información pública sobre la empresa (Google Dorking, WHOIS, Shodan).    </p>
+</li>
+<li>Analizar perfiles de empleados en redes sociales.    </li>
+<li>
+<p>Buscar posibles vulnerabilidades de seguridad.    </p>
+</li>
+<li>
+<p>Presentar un <strong>informe final</strong> con:    </p>
+</li>
+<li>
+<p><strong>Hallazgos clave</strong>.   </p>
+</li>
+<li><strong>Riesgos detectados</strong>.   </li>
+<li><strong>Recomendaciones de seguridad</strong>.    </li>
+</ul>
 <p><strong>Resultados esperados:</strong></p>
 <ul>
 <li>Capacidad para realizar <strong>investigaciones OSINT completas</strong>.</li>
 <li>Desarrollo de habilidades en <strong>ciberseguridad y análisis forense</strong>.</li>
 </ul>
 <p>Las actividades prácticas son esenciales para que los alumnos entiendan <strong>cómo funciona OSINT en el mundo real</strong>. Estos ejercicios les permiten desarrollar una <strong>mentalidad analítica</strong>, fortalecer sus habilidades en <strong>ciberseguridad</strong> y comprender la <strong>importancia de la privacidad en línea</strong>.</p>
-<p>Las actividades prácticas son esenciales para que los alumnos entiendan <strong>cómo funciona OSINT en el mundo real</strong>. Estos ejercicios les permiten desarrollar una <strong>mentalidad analítica</strong>, fortalecer sus habilidades en <strong>ciberseguridad</strong> y comprender la <strong>importancia de la privacidad en línea</strong>. Un resumen de las actividades propuestas:</p>
+<p>Las actividades prácticas son esenciales para entender <strong>cómo funciona OSINT en el mundo real</strong>. Estos ejercicios les permiten desarrollar una <strong>mentalidad analítica</strong>, fortalecer sus habilidades en <strong>ciberseguridad</strong> y comprender la <strong>importancia de la privacidad en línea</strong>. Un resumen de las actividades propuestas:</p>
 <table>
 <thead>
 <tr>

@@ -178,12 +178,12 @@ El ciclo OSINT es un modelo teórico que guía la recopilación, procesamiento y
 
 Las **seis fases del ciclo OSINT** son:
 
-1. **Planificación y dirección
-2. **Identificación de fuentes
-3. **Adquisición de información
-4. **Procesamiento y organización
-5. **Análisis e interpretación
-6. **Difusión y aplicación de la inteligencia
+1. **Planificación y dirección**
+2. **Identificación de fuentes**
+3. **Adquisición de información**
+4. **Procesamiento y organización**
+5. **Análisis e interpretación**
+6. **Difusión y aplicación de la inteligencia**
 
 ### 3.2. Planificación y Dirección
 
@@ -310,15 +310,15 @@ El proceso OSINT es un ciclo estructurado que permite convertir datos dispersos 
 ### 3.8. Actividades
 
 1. **Ejercicio 1: Simulación de un Ciclo OSINT**
-Dividir a los alumnos en grupos.
-Cada grupo investiga un objetivo ficticio siguiendo las fases del ciclo OSINT.
-Al final, presentan un informe con sus hallazgos y recomendaciones.
+   Dividir a los alumnos en grupos.
+   Cada grupo investiga un objetivo ficticio siguiendo las fases del ciclo OSINT.
+   Al final, presentan un informe con sus hallazgos y recomendaciones.
 2. **Ejercicio 2: Adquisición y Procesamiento de Datos**
-Se les da a los alumnos un conjunto de datos de credenciales filtradas (ficticias).
-Deben procesar y organizar la información para identificar patrones y riesgos.
+   Se les da a los alumnos un conjunto de datos de credenciales filtradas (ficticias).
+   Deben procesar y organizar la información para identificar patrones y riesgos.
 3. **Ejercicio 3: Creación de un Informe OSINT**
-Cada alumno selecciona un tema de investigación OSINT (por ejemplo, análisis de redes sociales de una marca).
-Deben realizar el proceso completo y elaborar un informe detallado con sus hallazgos.
+   Cada alumno selecciona un tema de investigación OSINT (por ejemplo, análisis de redes sociales de una marca).
+   Deben realizar el proceso completo y elaborar un informe detallado con sus hallazgos.
 
 ## 4. Técnicas de OSINT
 

@@ -365,12 +365,18 @@ Encuentra archivos con información interna que nunca debieron ser públicos.
 
 #### 4.2.1. Recursos para Google Dorking
 
-Algunos recursos útiles para Google Dorking son:
-* https://achirou.com/dorks-de-google-hacking-para-osint/
-* https://www.exploit-db.com/google-hacking-database
-* https://github.com/chr3st5an/Google-Dorking
-* https://github.com/Tobee1406/Awesome-Google-Dorks
-* https://www.udemy.com/course/osint-de-principiante-a-experto-en-investigacion-digital/
+Algunos recursos útiles para Google Dorking son:    
+
+* https://achirou.com/dorks-de-google-hacking-para-osint/    
+
+* https://www.exploit-db.com/google-hacking-database    
+
+* https://github.com/chr3st5an/Google-Dorking    
+
+* https://github.com/Tobee1406/Awesome-Google-Dorks    
+
+* https://www.udemy.com/course/osint-de-principiante-a-experto-en-investigacion-digital/    
+
 
 
 
@@ -535,11 +541,17 @@ Encuentra varios servidores accesibles sin autenticación segura.
 #### 5.2.2. Recursos utiles para Shodan
 
 Algunos recursos útiles para Google Dorking son:
-- https://github.com/jakejarvis/awesome-shodan-queries
-- https://hayageek.com/shodan-search-queries/
-- https://help.shodan.io/the-basics/search-query-fundamentals
-- https://www.shodan.io/search/examples
-- https://github.com/JavierOlmedo/shodan-filters
+
+- https://github.com/jakejarvis/awesome-shodan-queries    
+
+- https://hayageek.com/shodan-search-queries/    
+
+- https://help.shodan.io/the-basics/search-query-fundamentals    
+
+- https://www.shodan.io/search/examples    
+
+- https://github.com/JavierOlmedo/shodan-filters    
+
 
 
 ### 5.3. Wayback Machine: Análisis de Versiones Antiguas de Sitios Web

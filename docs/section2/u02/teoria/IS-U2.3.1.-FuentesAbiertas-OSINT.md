@@ -665,8 +665,8 @@ Enseñar a los alumnos a utilizar **búsquedas avanzadas en Google** para encont
 
 **Instrucciones:**
 
-1. Explicar el concepto de **Google Dorking** y sus operadores.
-2. Presentar una serie de búsquedas específicas con operadores avanzados:
+* Explicar el concepto de **Google Dorking** y sus operadores.
+* Presentar una serie de búsquedas específicas con operadores avanzados:
 
    Encontrar archivos PDF en un dominio:
 
@@ -680,7 +680,7 @@ Enseñar a los alumnos a utilizar **búsquedas avanzadas en Google** para encont
 
    `intitle:"admin login" site:empresa.com`    
 
-3. Pedir a los alumnos que realicen búsquedas sobre un dominio ficticio y **documenten sus hallazgos**.
+* Pedir a los alumnos que realicen búsquedas sobre un dominio ficticio y **documenten sus hallazgos**.
 
 **Resultados esperados:**
 
@@ -695,19 +695,19 @@ Enseñar cómo obtener información de un **dominio** mediante herramientas OSIN
 
 **Instrucciones:**
 
-1. Explicar cómo funcionan **WHOIS** y las consultas **DNS**.
-2. Pedir a los alumnos que usen **WHOIS** para investigar un dominio:
+* Explicar cómo funcionan **WHOIS** y las consultas **DNS**.
+* Pedir a los alumnos que usen **WHOIS** para investigar un dominio:
 
    `whois google.com`   
 
-3. Usar **nslookup** o **dig** para obtener registros DNS:
+* Usar **nslookup** o **dig** para obtener registros DNS:
 
    ```
    nslookup google.com
    dig google.com MX
    ```   
 
-4. Analizar los resultados y responder:
+* Analizar los resultados y responder:
 
    ¿Quién registró el dominio?
    ¿Dónde están sus servidores?
@@ -726,13 +726,13 @@ Mostrar cómo se pueden encontrar **cámaras, routers y servidores** expuestos e
 
 **Instrucciones:**
 
-1. Explicar qué es **Shodan** y cómo funciona.
-2. Pedir a los alumnos que busquen dispositivos en España con ciertos puertos abiertos:
+* Explicar qué es **Shodan** y cómo funciona.
+* Pedir a los alumnos que busquen dispositivos en España con ciertos puertos abiertos:
 
    `country:ES port:3389`
    `product:"Webcam"`   
 
-3. Analizar los resultados y responder:
+* Analizar los resultados y responder:
 
    ¿Cuántos dispositivos hay expuestos?
    ¿Qué riesgos de seguridad tienen?
@@ -750,14 +750,14 @@ Aprender a rastrear **nombres de usuario** en múltiples plataformas.
 
 **Instrucciones:**
 
-1. Explicar cómo **los ciberdelincuentes usan OSINT** en redes sociales.
-2. Instalar y ejecutar **Sherlock**:
+* Explicar cómo **los ciberdelincuentes usan OSINT** en redes sociales.
+* Instalar y ejecutar **Sherlock**:
 
    ```bash
    python3 sherlock.py usuario
    ```   
 
-3. Elegir un usuario ficticio y analizar:
+* Elegir un usuario ficticio y analizar:
    ¿En qué plataformas está presente?
    ¿Se puede obtener más información sobre él?
 
@@ -774,9 +774,9 @@ Mostrar cómo verificar la **autenticidad de imágenes** mediante herramientas O
 
 **Instrucciones:**
 
-1. Explicar qué es la **búsqueda inversa de imágenes**.
-2. Proporcionar a los alumnos imágenes sospechosas.
-3. Usar **Google Images** o **TinEye** para rastrear su origen.
+* Explicar qué es la **búsqueda inversa de imágenes**.    
+* Proporcionar a los alumnos imágenes sospechosas.   
+* Usar **Google Images** o **TinEye** para rastrear su origen.   
 
 **Resultados esperados:**
 
@@ -791,15 +791,18 @@ Aplicar todas las técnicas aprendidas en un caso completo de investigación.
 
 **Instrucciones:**
 
-1. Dividir a los alumnos en grupos y asignarles una empresa ficticia.
-2. Cada grupo deberá:
-   * Encontrar información pública sobre la empresa (Google Dorking, WHOIS, Shodan).
-   * Analizar perfiles de empleados en redes sociales.
-   * Buscar posibles vulnerabilidades de seguridad.
-3. Presentar un **informe final** con:
-   * **Hallazgos clave**.
-   * **Riesgos detectados**.
-   * **Recomendaciones de seguridad**.
+* Dividir a los alumnos en grupos y asignarles una empresa ficticia.    
+* Cada grupo deberá:    
+  
+   * Encontrar información pública sobre la empresa (Google Dorking, WHOIS, Shodan).    
+   * Analizar perfiles de empleados en redes sociales.    
+   * Buscar posibles vulnerabilidades de seguridad.    
+
+* Presentar un **informe final** con:    
+
+   * **Hallazgos clave**.   
+   * **Riesgos detectados**.   
+   * **Recomendaciones de seguridad**.    
 
 **Resultados esperados:**
 
@@ -808,7 +811,7 @@ Aplicar todas las técnicas aprendidas en un caso completo de investigación.
 
 Las actividades prácticas son esenciales para que los alumnos entiendan **cómo funciona OSINT en el mundo real**. Estos ejercicios les permiten desarrollar una **mentalidad analítica**, fortalecer sus habilidades en **ciberseguridad** y comprender la **importancia de la privacidad en línea**.
 
-Las actividades prácticas son esenciales para que los alumnos entiendan **cómo funciona OSINT en el mundo real**. Estos ejercicios les permiten desarrollar una **mentalidad analítica**, fortalecer sus habilidades en **ciberseguridad** y comprender la **importancia de la privacidad en línea**. Un resumen de las actividades propuestas:
+Las actividades prácticas son esenciales para entender **cómo funciona OSINT en el mundo real**. Estos ejercicios les permiten desarrollar una **mentalidad analítica**, fortalecer sus habilidades en **ciberseguridad** y comprender la **importancia de la privacidad en línea**. Un resumen de las actividades propuestas:
 
 
 | **Ejercicio**                        | **Objetivo**                                        | **Herramientas utilizadas**  |

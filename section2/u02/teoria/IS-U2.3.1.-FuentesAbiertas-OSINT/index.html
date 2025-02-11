@@ -1,0 +1,6627 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Fuentes Abiertas. OSINT">
+      
+      
+        <meta name="author" content="Eduardo Fdez">
+      
+      
+        <link rel="canonical" href="https://revilofe.github.io/section2/u02/teoria/IS-U2.3.1.-FuentesAbiertas-OSINT/">
+      
+      
+        <link rel="prev" href="../IS-U2.2.4.-SIEM-Evolucion/">
+      
+      
+        <link rel="next" href="../../../../blog/">
+      
+      
+      <link rel="icon" href="../../../../assets/favicon-96x96.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>"UD 2 - 2.3.1 Fuentes Abiertas. OSINT." - R Z O</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag.md-tag--etiqueta{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.5 1.5 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1m0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg>');}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-GT5TGHD4YQ"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-GT5TGHD4YQ",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-GT5TGHD4YQ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fuentes-abiertas-osint" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../.." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
+      
+  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            R Z O
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              "UD 2 - 2.3.1 Fuentes Abiertas. OSINT."
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/revilofe/revilofe.github.io" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Principal
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../section1/" class="md-tabs__link">
+          
+  
+    
+  
+  Programación
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../section3/" class="md-tabs__link">
+          
+  
+    
+  
+  Entornos de desarrollo
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Incidentes de seguridad
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../blog/" class="md-tabs__link">
+        
+  
+    
+  
+  Blog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../tags/" class="md-tabs__link">
+        
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
+      
+  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
+
+    </a>
+    R Z O
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/revilofe/revilofe.github.io" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Programación
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u01/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U1: Primer programa en Python
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            U1: Primer programa en Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1.-Un programa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.1.1-Pseudocodigo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1.1.-Pseudocódigo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.1: Instala python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2.-Practica con un lenguaje
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3.-Tipos de datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.2: Primeros programas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.3: Git Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica004/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.4: GitHub Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/teoria/PROG-U1.4.-Pytest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4.-Pruebas con pytest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica005/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.5: Creación de entorno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica006/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.6: Uso de pytest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica007/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 1.7: Acceso ssh a github
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u02/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U2: Estructuras de control en la programación
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            U2: Estructuras de control en la programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1.-Condicionales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 2.1: Sentencias condicionales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.-Iterativas y saltos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 2.2: Sentencias iterativas y saltos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3.-Captura de excepciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 2.3: Capturas de excepciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4.-Depurar programas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 2.4: Depurar programas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5.-Documentar el código
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u02/teoria/PROG-U2.5.1.-DeberiasDocumentar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5.1-¿Deberías documentar tu código?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u03/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U3: Estructuras de datos
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            U3: Estructuras de datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.0.-Cadenas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.0.-Est.Datos: Cadenas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica000/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 3.0: Cadenas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.1.-Listas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1.-Est.Datos: Listas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.2.-Tuplas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2.-Est.Datos: Tuplas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 3.1: Listas y tuplas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.3.-Diccionarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3.-Est.Datos: Diccionarios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 3.2: Diccionarios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.4.-Conjuntos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.4.-Est.Datos: Conjuntos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 3.3: Conjuntos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.5.-Funciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.5.-Funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.6.-ManejoJSON/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.6.-Manejo de JSON
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica004/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 3.4: JSON
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.7.-ManejoXML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.7.-Manejo de XML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica005/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 3.5: XML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.8.-OtrosAmpliacion1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.8.-Ampliación I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u03/teoria/PROG-U3.9.-OtrosAmpliacion2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.9.-Ampliación II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u04/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U4: Kotlin: POO y estructuras de datos
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            U4: Kotlin: POO y estructuras de datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.1.-kotlin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1.-Kotlin: Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.1: Kotlin Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2.-Kotlin: Colecciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.2.1.-kotlin-aclaraciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2.1.-Aclaraciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.3.-POO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3.1.-Programación orientada a objetos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.3.-kotlinPOO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3.2.-Kotlin: POO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/teoria/PROG-U4.4.-kotlinResumen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.4.-Kotlin: Resumen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.2: Kotlin POO I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.3: Kotlin POO II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica004/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.4: Kotlin POO III
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica005/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.5: Kotlin POO IV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica006/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.6: Prueba I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica007/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.7: Grupos I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica008/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 4.8: Grupos II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u05/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U5: Kotlin: PPO y creación de e.d.
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            U5: Kotlin: PPO y creación de e.d.
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u05/teoria/PROG-U5.1.-clasesYobjetos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.1.-Revisitando las clases y los objetos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u05/teoria/PROG-U5.2.-VisibilidadEnClases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.2.-Visibilidad en miembros
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u05/teoria/PROG-U5.3.-Herencia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.3.-Herencia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u05/practica/PROG-U5.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    * Práctica 5.1: Relación de ejercicios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u06/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U6: Kotlin: Creación de programas con POO
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            U6: Kotlin: Creación de programas con POO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u06/teoria/PROG-U6.1.-jerarquiaDeClases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.1.-Jerarquía de Clases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u06/teoria/PROG-U6.2.-ejemploYActividad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.2.-Ejemplo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u06/teoria/PROG-U6.3.-principiosSOLID/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.3.-Principios SOLID
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u06/teoria/PROG-U6.4.-comentariosYDocumentacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.4.-Comentarios y documentación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u07/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U7: Kotlin: Entrada/Salida y GUI
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            U7: Kotlin: Entrada/Salida y GUI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.1.-Sistema archivos:E/S
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.2.-Entrada/Salida estandar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.2.1.-ConsolaTecladoExpansion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.2.1.-Lectura desde teclado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.3.-Gestión Archivos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.4.-Lectura/Escritura Archivos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.4.1.-TextFile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.4.1.-Archivo de texto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.5.-GUI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section1/u09/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U9: Acceso a base de datos relacionales
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            U9: Acceso a base de datos relacionales
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u09/teoria/PROG-U9.1.-AccesoBBDD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.1.-Acceso a BBDD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u09/teoria/PROG-U9.2.-JDBC-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.2.-JDBC: Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u09/teoria/PROG-U9.3.-JDBC-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.3.-JDBC: Prepared statement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u09/teoria/PROG-U9.4.-DAO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.4.-DAO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u09/teoria/PROG-U9.5.-OtrosAspectos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9.5.-Otros aspectos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section3/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Entornos de desarrollo
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Entornos de desarrollo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section3/u01/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U1: Introducción al desarrollo de software
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            U1: Introducción al desarrollo de software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u01/teoria/EDES-U1.1.-Software-PC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1.-Software y Hardware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u01/teoria/EDES-U1.2.-CodigoFuenteObjetoEjecutable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2.-Código fuente, objeto y ejecutable
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u01/teoria/EDES-U1.3.-CodigoIntermedio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3.-Código intermedio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u01/teoria/EDES-U1.4.-Traductores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4.-Traductores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u01/teoria/EDES-U1.5.-Lenguajes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.5.-Lenguajes de programación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u01/teoria/EDES-U1.6.-FuncionalidadesHerramientas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.6.-Herramientas y funcionalidades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u01/practica/EDES-U1.-Practica010/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 1.10: Preguntas sobre actividades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u01/practica/EDES-U1.-Practica011/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 1.11: Elementos de desarrollo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section3/u02/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U2: Entornos de desarollo integrado
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            U2: Entornos de desarollo integrado
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u02/teoria/EDES-U2.1.-IDEs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1.-IDEs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u02/teoria/EDES-U2.2.-Modulos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.-Modulos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u02/teoria/EDES-U2.3.-Personalizacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3.-Personalización
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u02/teoria/EDES-U2.4.-ActualizacionIDEs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4.-Actualizaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u02/teoria/EDES-U2.5.-Ejecutables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5.-Ejecutables en IDEs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u02/teoria/EDES-U2.6.-Evaluacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.6.-Evaluación de IDEs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u02/practica/EDES-U2.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2.2: Evaluación IDEs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../section3/u04/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U4: SCV, refactorización y documentación
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            U4: SCV, refactorización y documentación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u04/teoria/EDES-U4.1.-Git_Github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1.-Sistemas de control de versiones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u04/practica/EDES-U4.-Practica001/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4.1: Git/Github básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u04/practica/EDES-U4.-Practica002/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4.2: Git/Github merge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u04/practica/EDES-U4.-Practica003/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4.3: Git/Github rebase I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u04/practica/EDES-U4.-Practica004/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4.4: Git/Github rebase II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section3/u04/practica/EDES-U4.-Practica005/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4.5: Git/Github Pull Request (PR)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Incidentes de seguridad
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Incidentes de seguridad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    U0: Nos conocemos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../u01/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U1: Principios generales y planes de seguridad
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            U1: Principios generales y planes de seguridad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1.-PrincipiosGenerales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/IS-U1.2.2.-AnalisiDeRiesgos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2.2.-Análisis de Riesgos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/IS-U1.3.1.-ProteccionDelPuestoDeTrabajo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3.-Puesto de trabajo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/IS-U1.4.1.-PlanDeConcienciacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4.-Concienciación y formación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u01/teoria/IS-U1.4.1.-PlanDeConcienciacion-Eje/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4.-Concienciación y formación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    U2: Detección y análisis de incidentes de seguridad
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            U2: Detección y análisis de incidentes de seguridad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IS-U2.1.1.-TaxonomiaDeIncidentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1.-Taxonomía de incidentes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IS-U2.2.1.-SOC-ServiciosYHerramientas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.1.-SOC - Servicios y herramientas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IS-U2.2.2.-CasosUso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.2.-SIEM & Casos de uso
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IS-U2.2.3.-SIEM-Implantacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.3.-Implantación de un SIEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IS-U2.2.4.-SIEM-Evolucion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.4.-Evolución de SIEM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2.3.1.-Fuentes Abiertas. OSINT
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    2.3.1.-Fuentes Abiertas. OSINT
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-a-osint-inteligencia-de-fuentes-abiertas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción a OSINT (Inteligencia de Fuentes Abiertas)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción a OSINT (Inteligencia de Fuentes Abiertas)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-importancia-y-aplicaciones-de-osint-en-ciberseguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Importancia y Aplicaciones de OSINT en Ciberseguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1. Importancia y Aplicaciones de OSINT en Ciberseguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-principales-usos-de-osint-en-ciberseguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1. Principales usos de OSINT en ciberseguridad:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-diferencias-entre-osint-y-otras-metodologias-de-recopilacion-de-informacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Diferencias entre OSINT y otras metodologías de recopilación de información
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Actividades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-uso-de-osint-en-ciberseguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Uso de OSINT en Ciberseguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Uso de OSINT en Ciberseguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-osint-en-auditoria-de-seguridad-e-investigacion-forense" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. OSINT en Auditoría de Seguridad e Investigación Forense
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-osint-en-pentesting-y-hacking-etico" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. OSINT en Pentesting y Hacking Ético
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-osint-en-prevencion-de-ataques-y-deteccion-de-amenazas-threat-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. OSINT en Prevención de Ataques y Detección de Amenazas (Threat Intelligence)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-riesgos-y-limites-legales-de-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4. Riesgos y Límites Legales de OSINT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5. Actividades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-proceso-de-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Proceso de OSINT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Proceso de OSINT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-ciclo-osint-fases-y-estructura" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Ciclo OSINT: Fases y Estructura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-planificacion-y-direccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Planificación y Dirección
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. Planificación y Dirección">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-errores-comunes-en-esta-fase" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1. Errores comunes en esta fase
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-identificacion-de-fuentes-de-informacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Identificación de Fuentes de Información
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-adquisicion-de-informacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Adquisición de Información
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Adquisición de Información">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341-tecnicas-de-adquisicion-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.1. Técnicas de adquisición OSINT:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-procesamiento-y-organizacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Procesamiento y Organización de Datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5. Procesamiento y Organización de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351-errores-comunes-en-esta-fase" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.1. Errores comunes en esta fase
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-analisis-e-interpretacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6. Análisis e Interpretación de Datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6. Análisis e Interpretación de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-metodos-de-analisis-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1. Métodos de análisis OSINT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-difusion-y-aplicacion-de-la-inteligencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7. Difusión y Aplicación de la Inteligencia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.7. Difusión y Aplicación de la Inteligencia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#371-formatos-comunes-de-presentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7.1. Formatos comunes de presentación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8. Actividades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tecnicas-de-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Técnicas de OSINT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Técnicas de OSINT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-footprinting-y-fingerprinting" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Footprinting y Fingerprinting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-google-dorking-busquedas-avanzadas-en-google" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Google Dorking: Búsquedas Avanzadas en Google
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-recopilacion-de-metadatos-en-documentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Recopilación de Metadatos en Documentos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3. Recopilación de Metadatos en Documentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-herramientas-osint-para-extraer-metadatos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.1. Herramientas OSINT para extraer metadatos:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-busqueda-de-informacion-en-redes-sociales" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4. Búsqueda de Información en Redes Sociales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4. Búsqueda de Información en Redes Sociales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441-herramientas-para-osint-en-redes-sociales" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.1. Herramientas para OSINT en redes sociales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-identificacion-de-infraestructuras-con-whois-dns-y-direcciones-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5. Identificación de Infraestructuras con WHOIS, DNS y Direcciones IP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5. Identificación de Infraestructuras con WHOIS, DNS y Direcciones IP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#451-metodos-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.1. Métodos comunes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-monitorizacion-de-la-deep-y-dark-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6. Monitorización de la Deep y Dark Web
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.6. Monitorización de la Deep y Dark Web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#461-herramientas-para-exploracion-en-la-dark-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6.1. Herramientas para exploración en la Dark Web
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-analisis-de-imagenes-y-videos-con-tecnicas-forenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7. Análisis de Imágenes y Videos con Técnicas Forenses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7. Análisis de Imágenes y Videos con Técnicas Forenses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#471-tecnicas-forenses-en-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.1. Técnicas forenses en imágenes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8. Actividades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-herramientas-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Herramientas OSINT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Herramientas OSINT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-motores-de-busqueda-especializados" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Motores de Búsqueda Especializados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1. Motores de Búsqueda Especializados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511-herramientas-destacadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1. Herramientas destacadas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-shodan-busqueda-de-dispositivos-conectados-a-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Shodan: Búsqueda de Dispositivos Conectados a Internet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#521-caracteristicas-principales-de-shodan" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1. Características principales de Shodan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-wayback-machine-analisis-de-versiones-antiguas-de-sitios-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. Wayback Machine: Análisis de Versiones Antiguas de Sitios Web
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-maltego-visualizacion-y-analisis-de-relaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4. Maltego: Visualización y Análisis de Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#541-usos-de-maltego-en-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.1. Usos de Maltego en OSINT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-spiderfoot-automatizacion-de-la-recopilacion-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5. SpiderFoot: Automatización de la Recopilación OSINT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-osint-framework-repositorio-de-herramientas-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6. OSINT Framework: Repositorio de Herramientas OSINT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-buscadores-de-informacion-en-redes-sociales" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7. Buscadores de Información en Redes Sociales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58-tecnicas-de-busqueda-en-telegram-linkedin-twitter-facebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.8. Técnicas de Búsqueda en Telegram, LinkedIn, Twitter, Facebook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#59-actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.9. Actividades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-casos-practicos-y-actividades-de-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Casos Prácticos y Actividades de OSINT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Casos Prácticos y Actividades de OSINT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-ejercicio-uso-de-google-dorking-para-encontrar-informacion-oculta" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Ejercicio: Uso de Google Dorking para encontrar información oculta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-ejercicio-analisis-de-dominios-con-whois-y-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Ejercicio: Análisis de dominios con WHOIS y DNS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-ejercicio-identificacion-de-dispositivos-iot-con-shodan" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. Ejercicio: Identificación de dispositivos IoT con Shodan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-ejercicio-busqueda-de-usuarios-en-redes-sociales-con-sherlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4. Ejercicio: Búsqueda de usuarios en redes sociales con Sherlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-ejercicio-analisis-de-imagenes-con-busqueda-inversa" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5. Ejercicio: Análisis de imágenes con búsqueda inversa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-proyecto-final-investigacion-osint-sobre-una-empresa-ficticia" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6. Proyecto Final: Investigación OSINT sobre una empresa ficticia
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-retos-eticos-y-legales-de-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Retos Éticos y Legales de OSINT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Retos Éticos y Legales de OSINT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-privacidad-y-derechos-de-los-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1. Privacidad y Derechos de los Usuarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1. Privacidad y Derechos de los Usuarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#711-principales-preocupaciones-sobre-privacidad-en-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.1. Principales preocupaciones sobre privacidad en OSINT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-regulaciones-legales-gdpr-codigo-penal-normativas-de-privacidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2. Regulaciones Legales (GDPR, Código Penal, Normativas de Privacidad)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2. Regulaciones Legales (GDPR, Código Penal, Normativas de Privacidad)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721-principales-regulaciones-sobre-privacidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.1. Principales regulaciones sobre privacidad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-buenas-practicas-y-uso-responsable-de-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3. Buenas Prácticas y Uso Responsable de OSINT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#731-principios-de-uso-etico-de-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3.1. Principios de uso ético de OSINT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4. Actividades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acerca de
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-a-osint-inteligencia-de-fuentes-abiertas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción a OSINT (Inteligencia de Fuentes Abiertas)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción a OSINT (Inteligencia de Fuentes Abiertas)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-importancia-y-aplicaciones-de-osint-en-ciberseguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Importancia y Aplicaciones de OSINT en Ciberseguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1. Importancia y Aplicaciones de OSINT en Ciberseguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-principales-usos-de-osint-en-ciberseguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1. Principales usos de OSINT en ciberseguridad:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-diferencias-entre-osint-y-otras-metodologias-de-recopilacion-de-informacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Diferencias entre OSINT y otras metodologías de recopilación de información
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Actividades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-uso-de-osint-en-ciberseguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Uso de OSINT en Ciberseguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Uso de OSINT en Ciberseguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-osint-en-auditoria-de-seguridad-e-investigacion-forense" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. OSINT en Auditoría de Seguridad e Investigación Forense
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-osint-en-pentesting-y-hacking-etico" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. OSINT en Pentesting y Hacking Ético
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-osint-en-prevencion-de-ataques-y-deteccion-de-amenazas-threat-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. OSINT en Prevención de Ataques y Detección de Amenazas (Threat Intelligence)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-riesgos-y-limites-legales-de-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4. Riesgos y Límites Legales de OSINT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5. Actividades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-proceso-de-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Proceso de OSINT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Proceso de OSINT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-ciclo-osint-fases-y-estructura" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Ciclo OSINT: Fases y Estructura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-planificacion-y-direccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Planificación y Dirección
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. Planificación y Dirección">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-errores-comunes-en-esta-fase" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1. Errores comunes en esta fase
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-identificacion-de-fuentes-de-informacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Identificación de Fuentes de Información
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-adquisicion-de-informacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Adquisición de Información
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Adquisición de Información">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341-tecnicas-de-adquisicion-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.1. Técnicas de adquisición OSINT:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-procesamiento-y-organizacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Procesamiento y Organización de Datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5. Procesamiento y Organización de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351-errores-comunes-en-esta-fase" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.1. Errores comunes en esta fase
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-analisis-e-interpretacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6. Análisis e Interpretación de Datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6. Análisis e Interpretación de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-metodos-de-analisis-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1. Métodos de análisis OSINT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-difusion-y-aplicacion-de-la-inteligencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7. Difusión y Aplicación de la Inteligencia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.7. Difusión y Aplicación de la Inteligencia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#371-formatos-comunes-de-presentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7.1. Formatos comunes de presentación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8. Actividades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tecnicas-de-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Técnicas de OSINT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Técnicas de OSINT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-footprinting-y-fingerprinting" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Footprinting y Fingerprinting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-google-dorking-busquedas-avanzadas-en-google" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Google Dorking: Búsquedas Avanzadas en Google
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-recopilacion-de-metadatos-en-documentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Recopilación de Metadatos en Documentos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3. Recopilación de Metadatos en Documentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-herramientas-osint-para-extraer-metadatos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.1. Herramientas OSINT para extraer metadatos:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-busqueda-de-informacion-en-redes-sociales" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4. Búsqueda de Información en Redes Sociales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4. Búsqueda de Información en Redes Sociales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441-herramientas-para-osint-en-redes-sociales" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.1. Herramientas para OSINT en redes sociales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-identificacion-de-infraestructuras-con-whois-dns-y-direcciones-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5. Identificación de Infraestructuras con WHOIS, DNS y Direcciones IP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5. Identificación de Infraestructuras con WHOIS, DNS y Direcciones IP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#451-metodos-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.1. Métodos comunes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-monitorizacion-de-la-deep-y-dark-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6. Monitorización de la Deep y Dark Web
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.6. Monitorización de la Deep y Dark Web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#461-herramientas-para-exploracion-en-la-dark-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6.1. Herramientas para exploración en la Dark Web
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-analisis-de-imagenes-y-videos-con-tecnicas-forenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7. Análisis de Imágenes y Videos con Técnicas Forenses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7. Análisis de Imágenes y Videos con Técnicas Forenses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#471-tecnicas-forenses-en-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.1. Técnicas forenses en imágenes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8. Actividades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-herramientas-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Herramientas OSINT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Herramientas OSINT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-motores-de-busqueda-especializados" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Motores de Búsqueda Especializados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1. Motores de Búsqueda Especializados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511-herramientas-destacadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1. Herramientas destacadas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-shodan-busqueda-de-dispositivos-conectados-a-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Shodan: Búsqueda de Dispositivos Conectados a Internet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#521-caracteristicas-principales-de-shodan" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1. Características principales de Shodan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-wayback-machine-analisis-de-versiones-antiguas-de-sitios-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. Wayback Machine: Análisis de Versiones Antiguas de Sitios Web
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-maltego-visualizacion-y-analisis-de-relaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4. Maltego: Visualización y Análisis de Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#541-usos-de-maltego-en-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.1. Usos de Maltego en OSINT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-spiderfoot-automatizacion-de-la-recopilacion-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5. SpiderFoot: Automatización de la Recopilación OSINT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-osint-framework-repositorio-de-herramientas-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6. OSINT Framework: Repositorio de Herramientas OSINT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-buscadores-de-informacion-en-redes-sociales" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7. Buscadores de Información en Redes Sociales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58-tecnicas-de-busqueda-en-telegram-linkedin-twitter-facebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.8. Técnicas de Búsqueda en Telegram, LinkedIn, Twitter, Facebook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#59-actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.9. Actividades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-casos-practicos-y-actividades-de-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Casos Prácticos y Actividades de OSINT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Casos Prácticos y Actividades de OSINT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-ejercicio-uso-de-google-dorking-para-encontrar-informacion-oculta" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Ejercicio: Uso de Google Dorking para encontrar información oculta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-ejercicio-analisis-de-dominios-con-whois-y-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Ejercicio: Análisis de dominios con WHOIS y DNS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-ejercicio-identificacion-de-dispositivos-iot-con-shodan" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. Ejercicio: Identificación de dispositivos IoT con Shodan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-ejercicio-busqueda-de-usuarios-en-redes-sociales-con-sherlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4. Ejercicio: Búsqueda de usuarios en redes sociales con Sherlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-ejercicio-analisis-de-imagenes-con-busqueda-inversa" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5. Ejercicio: Análisis de imágenes con búsqueda inversa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-proyecto-final-investigacion-osint-sobre-una-empresa-ficticia" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6. Proyecto Final: Investigación OSINT sobre una empresa ficticia
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-retos-eticos-y-legales-de-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Retos Éticos y Legales de OSINT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Retos Éticos y Legales de OSINT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-privacidad-y-derechos-de-los-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1. Privacidad y Derechos de los Usuarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1. Privacidad y Derechos de los Usuarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#711-principales-preocupaciones-sobre-privacidad-en-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.1. Principales preocupaciones sobre privacidad en OSINT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-regulaciones-legales-gdpr-codigo-penal-normativas-de-privacidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2. Regulaciones Legales (GDPR, Código Penal, Normativas de Privacidad)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2. Regulaciones Legales (GDPR, Código Penal, Normativas de Privacidad)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721-principales-regulaciones-sobre-privacidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.1. Principales regulaciones sobre privacidad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-buenas-practicas-y-uso-responsable-de-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3. Buenas Prácticas y Uso Responsable de OSINT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#731-principios-de-uso-etico-de-osint" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3.1. Principios de uso ético de OSINT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4. Actividades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<ul>
+<li>Eduardo Fdez
+  date: 2025-02-11
+  icon:
+  permalink: /is/unidad2/2.3.1
+  categories:</li>
+<li>IS
+  tags:</li>
+<li>OSINT</li>
+</ul>
+<h1 id="fuentes-abiertas-osint">Fuentes Abiertas. OSINT<a class="headerlink" href="#fuentes-abiertas-osint" title="Permanent link">&para;</a></h1>
+<p>Al detectar un incidente se debe llevar a cabo un análisis mas detallado, comprender la causa, el alcance, etc. El objetivo es identificar la vulnerabilidad, evluar amenajas potenciales y detectar brechas de seguirad o indicios sobre porque se ha producido el incidente.</p>
+<p>El análisis incluye:</p>
+<ul>
+<li>Recogida de la información</li>
+<li>AnálIsis de datos relacionados con el entorno digital de la organización: red de comunicaciones, sistemas, aplicaciones, empleados, usuarios, etc.</li>
+</ul>
+<p>La recopilación de la información se realiza a través de diferentes técnicas y herramientas:</p>
+<ul>
+<li>Herramientas de monitorización de red: direcciones ip, dominios, protocolos. Por ejemplo <em>wireshark</em></li>
+<li>Recopilación de datos de registro, que nos proporcionan información sobre las actividades o detectar anomalías producidas en los sistemas. Por ejmplo <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> de elastic para recolectar datos de registros</li>
+<li>Entrevistas con miembros de personal, que nos dan información de los sistemas con los que trabajan, y nos pueden proporcionar detalles sobre posibles riesgos que no serán fáciles de detectar a través de herramientas. Por ejemplo: Software instalado q no se utiliza, contraseñas débiles o compartidas</li>
+</ul>
+<p>El FOOTPRINTING hace referencia a la huella digital, técnica de recopilación de información que se usa en el hacking ético, y que consiste en recopilar datos del entorno digital de una org. para identificar vulnerabilidades y posibles puntos de entrada para la penetración. La información se obtiene de los sistemas informáticos y de la red, para recopilar datos de la org., de los empleados y socios externos. Se recopilan: SO, Config. de los cortafuegos, direcciones <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr>, Mapas de Red, Config. de seguridad, emails, password, Confg. de servidores, URLs, <abbr title="Red Privada Virtual. Es un sistema de seguridad que se utiliza para establecer una conexión segura entre un cliente y un servidor a través de una red pública. Las VPN cifran la comunicación, protegen la privacidad de los datos y permiten a los usuarios acceder a recursos de red de forma segura.">VPN</abbr>, infor. de empleados, Nombres de dominios,etc</p>
+<p>Este trabajo puede ser:</p>
+<ul>
+<li>Activo: Se interactúa con el SO para recopilar la info. a través de herramientas y técnicas como escaneos de red y comandos tipo traceroute o tracert</li>
+<li>Pasivo: No se interactúa, solo se consulta motores de búsqueda y redes sociales u otras fuentes publicas.</li>
+</ul>
+<p>Cuando se hace a través de fuentes publicas, hablamos de OSINT. La diferencia entre fooprinting y OSINT, es que en el primero esta mas centrado en recopilar info técnica en un sistema concreto, mientras que en el segundo es un concepto más amplio que incluye varios métodos de recopilación de fuentes abiertas.</p>
+<h2 id="1-introduccion-a-osint-inteligencia-de-fuentes-abiertas">1. Introducción a OSINT (Inteligencia de Fuentes Abiertas)<a class="headerlink" href="#1-introduccion-a-osint-inteligencia-de-fuentes-abiertas" title="Permanent link">&para;</a></h2>
+<p>OSINT (Open Source Intelligence) se refiere a la recopilación y análisis de información proveniente de fuentes públicas o accesibles libremente, con el objetivo de extraer inteligencia útil. Se emplea en diversos campos, como la ciberseguridad, el periodismo, la investigación criminal, el análisis de amenazas y la inteligencia empresarial.</p>
+<p><strong>Ejemplo:</strong></p>
+<p>Imagina que un investigador de ciberseguridad quiere analizar la posible filtración de datos de una empresa. En lugar de acceder ilegalmente a sus servidores, realiza búsquedas avanzadas en Google para encontrar documentos públicos que contengan credenciales expuestas.</p>
+<h3 id="11-importancia-y-aplicaciones-de-osint-en-ciberseguridad">1.1. Importancia y Aplicaciones de OSINT en Ciberseguridad<a class="headerlink" href="#11-importancia-y-aplicaciones-de-osint-en-ciberseguridad" title="Permanent link">&para;</a></h3>
+<p>OSINT es una herramienta clave en el mundo de la seguridad informática, ya que permite anticiparse a posibles amenazas y evaluar riesgos sin la necesidad de acceder a información privada.</p>
+<h4 id="111-principales-usos-de-osint-en-ciberseguridad">1.1.1. Principales usos de OSINT en ciberseguridad:<a class="headerlink" href="#111-principales-usos-de-osint-en-ciberseguridad" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>Detección de amenazas</strong>: Identificación de posibles ataques dirigidos a una organización a partir de información pública en foros o redes sociales.</li>
+<li><strong>Investigaciones forenses</strong>: Análisis de incidentes de ciberseguridad mediante la recopilación de evidencias de fuentes abiertas.</li>
+<li><strong>Pentesting y hacking ético</strong>: Recopilación de datos de un objetivo antes de realizar pruebas de seguridad (footprinting y fingerprinting).</li>
+<li><strong>Protección de la identidad digital</strong>: Identificación de información personal expuesta en internet para mitigar posibles ataques de ingeniería social.</li>
+<li><strong>Vigilancia de la dark web</strong>: Monitoreo de mercados ilegales y foros donde se comercializan datos robados.</li>
+</ol>
+<p><strong>Ejemplo:</strong></p>
+<p>Un auditor de seguridad usa OSINT para descubrir que en un foro de hacking se están vendiendo credenciales de acceso a una empresa, permitiendo a la organización tomar medidas preventivas antes de sufrir un ataque.</p>
+<h3 id="12-diferencias-entre-osint-y-otras-metodologias-de-recopilacion-de-informacion">1.2. Diferencias entre OSINT y otras metodologías de recopilación de información<a class="headerlink" href="#12-diferencias-entre-osint-y-otras-metodologias-de-recopilacion-de-informacion" title="Permanent link">&para;</a></h3>
+<p>OSINT se diferencia de otros métodos de inteligencia en que <strong>toda la información obtenida es legalmente accesible</strong>. No se trata de hacking ilegal ni de violar la privacidad de los usuarios.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Método</strong></th>
+<th><strong>Descripción</strong></th>
+<th><strong>Ejemplo</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OSINT</strong>(Open Source Intelligence)</td>
+<td>Recopilación de información pública y accesible legalmente.</td>
+<td>Búsqueda de información en redes sociales y bases de datos públicas.</td>
+</tr>
+<tr>
+<td><strong>HUMINT</strong>(Human Intelligence)</td>
+<td>Obtención de información mediante interacción con personas.</td>
+<td>Entrevistas a empleados o infiltración en eventos.</td>
+</tr>
+<tr>
+<td><strong>SIGINT</strong>(Signals Intelligence)</td>
+<td>Intercepción de señales de comunicación.</td>
+<td>Escucha de comunicaciones en redes inalámbricas.</td>
+</tr>
+<tr>
+<td><strong>ELINT</strong>(Electronic Intelligence)</td>
+<td>Captura de datos electrónicos.</td>
+<td>Análisis de tráfico de red con herramientas como Wireshark.</td>
+</tr>
+<tr>
+<td><strong>SOCMINT</strong>(Social Media Intelligence)</td>
+<td>Recopilación de información en redes sociales.</td>
+<td>Análisis de perfiles de LinkedIn y Twitter para identificar empleados de una empresa.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ejemplo:</strong></p>
+<p>Un atacante malintencionado usa <strong>SIGINT</strong> para interceptar el tráfico de red y capturar contraseñas en una WiFi pública (actividad ilegal). En cambio, un auditor de seguridad usa <strong>OSINT</strong> para analizar si la empresa ha expuesto contraseñas en documentos PDF indexados en Google (actividad legal).</p>
+<p>OSINT es una metodología poderosa que permite recopilar información sin infringir leyes ni normas éticas. Su correcta aplicación en ciberseguridad permite detectar vulnerabilidades, prevenir ataques y mejorar la protección de datos personales y corporativos.</p>
+<h3 id="14-actividades">1.4. Actividades<a class="headerlink" href="#14-actividades" title="Permanent link">&para;</a></h3>
+<ol>
+<li>**Ejercicio 1: ¿Qué información hay sobre ti en Internet?</li>
+<li>Pide a los alumnos que busquen su propio nombre en Google y redes sociales para analizar qué información pública existe sobre ellos.</li>
+<li>Discusión: ¿Es peligroso? ¿Cómo podrían mejorar su privacidad?</li>
+<li>**Ejercicio 2: Comparación de metodologías de inteligencia</li>
+<li>Presenta a los alumnos varios casos ficticios y pídeles que clasifiquen si el método utilizado es OSINT, HUMINT, SIGINT, etc.</li>
+<li>**Ejercicio 3: OSINT en la vida real</li>
+<li>Divide a los alumnos en grupos y entrégales diferentes escenarios (ej. "Una empresa quiere saber qué información sensible está expuesta en internet").</li>
+<li>Deberán proponer estrategias de OSINT para recopilar información útil de forma ética y legal.</li>
+</ol>
+<h2 id="2-uso-de-osint-en-ciberseguridad">2. Uso de OSINT en Ciberseguridad<a class="headerlink" href="#2-uso-de-osint-en-ciberseguridad" title="Permanent link">&para;</a></h2>
+<p>El uso de OSINT (Inteligencia de Fuentes Abiertas) en ciberseguridad es fundamental para identificar amenazas, evaluar vulnerabilidades y proteger la información de una organización. Esta metodología permite recopilar información de fuentes públicas para anticiparse a posibles ataques y fortalecer la seguridad digital.</p>
+<h3 id="21-osint-en-auditoria-de-seguridad-e-investigacion-forense">2.1. OSINT en Auditoría de Seguridad e Investigación Forense<a class="headerlink" href="#21-osint-en-auditoria-de-seguridad-e-investigacion-forense" title="Permanent link">&para;</a></h3>
+<p>La recopilación de información de fuentes abiertas es una herramienta clave en las auditorías de seguridad y en la investigación de incidentes. OSINT permite:</p>
+<ul>
+<li>Identificar información expuesta que podría ser utilizada por atacantes.</li>
+<li>Analizar vulnerabilidades en infraestructuras y sistemas sin interacción directa.</li>
+<li>Obtener evidencias en investigaciones forenses tras un ataque.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Un equipo de ciberseguridad quiere evaluar si una empresa tiene credenciales filtradas en internet. Utilizan OSINT para buscar en bases de datos de filtraciones como <strong>"Have I Been Pwned?"</strong> y descubren que varias cuentas de correo de empleados han sido comprometidas.</p>
+<h3 id="22-osint-en-pentesting-y-hacking-etico">2.2. OSINT en Pentesting y Hacking Ético<a class="headerlink" href="#22-osint-en-pentesting-y-hacking-etico" title="Permanent link">&para;</a></h3>
+<p>Antes de realizar una prueba de penetración (pentesting), los expertos en seguridad usan OSINT para recolectar información del objetivo sin necesidad de lanzar escaneos activos que puedan ser detectados.</p>
+<p>Las técnicas OSINT aplicadas en pentesting incluyen:</p>
+<ul>
+<li><strong>Google Dorking</strong> para encontrar documentos sensibles expuestos.</li>
+<li><strong>Búsqueda en redes sociales</strong> para obtener información sobre empleados.</li>
+<li><strong>Análisis de metadatos</strong> en documentos públicos para descubrir información interna.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Un pentester usa Google para buscar información sobre una empresa antes de un ataque:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>site:empresa.com filetype:pdf
+</code></pre></div>
+<p>Encuentra un documento con metadatos que contienen nombres de usuario internos, lo que podría facilitar ataques de fuerza bruta.</p>
+<h3 id="23-osint-en-prevencion-de-ataques-y-deteccion-de-amenazas-threat-intelligence">2.3. OSINT en Prevención de Ataques y Detección de Amenazas (<abbr title="Información sobre las amenazas de seguridad que pueden afectar a una organización. La inteligencia de amenazas incluye datos sobre los actores de amenazas, las tácticas y técnicas de los atacantes, las vulnerabilidades de seguridad, etc.">Threat Intelligence</abbr>)<a class="headerlink" href="#23-osint-en-prevencion-de-ataques-y-deteccion-de-amenazas-threat-intelligence" title="Permanent link">&para;</a></h3>
+<p>El análisis OSINT es una parte esencial de la <strong>inteligencia sobre amenazas (<abbr title="Información sobre las amenazas de seguridad que pueden afectar a una organización. La inteligencia de amenazas incluye datos sobre los actores de amenazas, las tácticas y técnicas de los atacantes, las vulnerabilidades de seguridad, etc.">Threat Intelligence</abbr>)</strong>, ya que permite monitorear posibles ataques antes de que ocurran.</p>
+<p>Los expertos en ciberseguridad pueden:</p>
+<ul>
+<li><strong>Detectar filtraciones</strong> de datos en la dark web.</li>
+<li><strong>Analizar grupos de ciberdelincuentes</strong> que planean ataques.</li>
+<li><strong>Monitorear menciones</strong> a la empresa en foros de hacking.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Una empresa de ciberseguridad detecta en un foro clandestino que se vende acceso a su red corporativa. Gracias a OSINT, identifica las credenciales filtradas y obliga a los empleados a cambiarlas antes de que sean explotadas.</p>
+<h3 id="24-riesgos-y-limites-legales-de-osint">2.4. Riesgos y Límites Legales de OSINT<a class="headerlink" href="#24-riesgos-y-limites-legales-de-osint" title="Permanent link">&para;</a></h3>
+<p>Aunque OSINT se basa en la recopilación de información pública, es fundamental respetar la <strong>legalidad y la ética</strong> en su aplicación.</p>
+<p>Algunos <strong>límites legales</strong> incluyen:</p>
+<ul>
+<li>No acceder a información privada sin permiso (ej. correos electrónicos protegidos).</li>
+<li>No usar OSINT con fines de acoso, espionaje o suplantación de identidad.</li>
+<li>Respetar normativas de privacidad como el <strong><abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El GDPR garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">GDPR</abbr></strong> en Europa.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Un investigador de OSINT quiere obtener datos sobre una persona. Es legal buscar su perfil de LinkedIn, pero no lo es entrar a su correo privado sin permiso.</p>
+<blockquote>
+<p>OSINT es una herramienta poderosa en ciberseguridad, pero su uso debe estar guiado por principios éticos y legales. Aplicado correctamente, permite anticiparse a ataques, fortalecer la seguridad y mejorar la protección de la información.</p>
+</blockquote>
+<h3 id="25-actividades">2.5. Actividades<a class="headerlink" href="#25-actividades" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Ejercicio 1: OSINT en auditoría de seguridad</strong></li>
+<li>Los alumnos deben buscar información pública sobre una empresa ficticia utilizando OSINT (Google Dorking, redes sociales, WHOIS).</li>
+<li>Reflexión: ¿Qué información expuesta podría ser peligrosa?</li>
+<li><strong>Ejercicio 2: Identificación de amenazas con OSINT</strong></li>
+<li>Se da a los alumnos un caso de posible ataque a una empresa.</li>
+<li>Deben investigar en fuentes OSINT para detectar si hay información filtrada en foros o la dark web.</li>
+<li><strong>Ejercicio 3: Legalidad y ética en OSINT</strong></li>
+<li>Se presentan varios escenarios y los alumnos deben decidir si la actividad es legal o ilegal.</li>
+</ol>
+<h2 id="3-proceso-de-osint">3. Proceso de OSINT<a class="headerlink" href="#3-proceso-de-osint" title="Permanent link">&para;</a></h2>
+<p>El proceso de OSINT sigue un ciclo estructurado para garantizar la recolección, análisis y utilización efectiva de la información obtenida de fuentes abiertas. Aunque existen varias metodologías, el modelo más común consta de <strong>seis fases</strong>.</p>
+<h3 id="31-ciclo-osint-fases-y-estructura">3.1. Ciclo OSINT: Fases y Estructura<a class="headerlink" href="#31-ciclo-osint-fases-y-estructura" title="Permanent link">&para;</a></h3>
+<p>El ciclo OSINT es un modelo teórico que guía la recopilación, procesamiento y análisis de información. Sus fases no siempre son secuenciales, ya que a veces es necesario volver a etapas previas para mejorar la precisión de los datos obtenidos.</p>
+<p>Las <strong>seis fases del ciclo OSINT</strong> son:</p>
+<ol>
+<li>**Planificación y dirección</li>
+<li>**Identificación de fuentes</li>
+<li>**Adquisición de información</li>
+<li>**Procesamiento y organización</li>
+<li>**Análisis e interpretación</li>
+<li>**Difusión y aplicación de la inteligencia</li>
+</ol>
+<h3 id="32-planificacion-y-direccion">3.2. Planificación y Dirección<a class="headerlink" href="#32-planificacion-y-direccion" title="Permanent link">&para;</a></h3>
+<p>La fase inicial consiste en definir <strong>qué información se necesita</strong> y establecer los objetivos de la investigación OSINT.</p>
+<p><strong>Ejemplo:</strong></p>
+<p>Una empresa quiere saber si existen filtraciones de datos de sus empleados. Se establecen los siguientes objetivos:</p>
+<ul>
+<li>Buscar credenciales filtradas en bases de datos públicas.</li>
+<li>Analizar redes sociales en busca de información sensible.</li>
+<li>Identificar vulnerabilidades en su infraestructura digital.</li>
+</ul>
+<h4 id="321-errores-comunes-en-esta-fase">3.2.1. Errores comunes en esta fase<a class="headerlink" href="#321-errores-comunes-en-esta-fase" title="Permanent link">&para;</a></h4>
+<p>Durante la planificación, es importante evitar errores como:</p>
+<ul>
+<li>No definir claramente el alcance de la investigación.</li>
+<li>Buscar información sin un objetivo específico.</li>
+<li>No considerar aspectos legales y éticos antes de iniciar.</li>
+</ul>
+<h3 id="33-identificacion-de-fuentes-de-informacion">3.3. Identificación de Fuentes de Información<a class="headerlink" href="#33-identificacion-de-fuentes-de-informacion" title="Permanent link">&para;</a></h3>
+<p>Una vez definidos los objetivos, se deben identificar las <strong>fuentes</strong> de donde se obtendrá la información.  Los requisitos nos guiarán a la hora de identificar las fuentes potenciales desde las que recopilar la información</p>
+<p>Algunas fuentes OSINT incluyen:</p>
+<ul>
+<li><strong>Motores de búsqueda:</strong> Google, Bing, DuckDuckGo.</li>
+<li><strong>Registros públicos:</strong> BOE, registros mercantiles, patentes.</li>
+<li><strong>Redes sociales:</strong> Twitter, Facebook, LinkedIn, Telegram.</li>
+<li><strong>Bases de datos filtradas:</strong> Have I Been Pwned?, DeHashed.</li>
+<li><strong>Foros y Dark Web:</strong> Pastebin, BreachForums, Tor.</li>
+<li><strong>Archivos históricos:</strong> Wayback Machine.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Un investigador busca información sobre una empresa en <strong>Wayback Machine</strong> para ver cómo ha cambiado su página web a lo largo del tiempo y descubrir si en el pasado expuso información sensible.</p>
+<h3 id="34-adquisicion-de-informacion">3.4. Adquisición de Información<a class="headerlink" href="#34-adquisicion-de-informacion" title="Permanent link">&para;</a></h3>
+<p>En esta fase se recopila activamente la información de las fuentes identificadas. Se trabaja en la recopilación a partir de las fuentes. La información se almacena y se tratará posteriormente. Suele ser la fase más larga. Hay que acotar las fuentes adecuadamente para no alargar mucho.</p>
+<h4 id="341-tecnicas-de-adquisicion-osint">3.4.1. Técnicas de adquisición OSINT:<a class="headerlink" href="#341-tecnicas-de-adquisicion-osint" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>Google Dorking:</strong> Uso de operadores avanzados en Google para encontrar información oculta.</li>
+<li><strong>Búsqueda en registros WHOIS:</strong> Identificación de propietarios de dominios web.</li>
+<li><strong>Uso de herramientas especializadas:</strong> Shodan (dispositivos conectados), Maltego (visualización de relaciones), SpiderFoot (automatización de OSINT).</li>
+<li><strong>Análisis de redes sociales:</strong> Herramientas como Sherlock permiten rastrear nombres de usuario en múltiples plataformas.</li>
+</ol>
+<p><strong>Ejemplo:</strong></p>
+<p>Un investigador usa Google Dorking para encontrar los paneles phpMyAdmin en el sitio web de la empresa target:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>site:target.com inurl:&quot;/phpmyadmin/&quot;
+</code></pre></div>
+<p>Encuentra paneles que tienen que estar ocultos al acceso externo.</p>
+<h3 id="35-procesamiento-y-organizacion-de-datos">3.5. Procesamiento y Organización de Datos<a class="headerlink" href="#35-procesamiento-y-organizacion-de-datos" title="Permanent link">&para;</a></h3>
+<p>Después de recopilar la información, es necesario:</p>
+<ul>
+<li>Clasificarla según su relevancia y fiabilidad.</li>
+<li>Eliminar datos redundantes o irrelevantes.</li>
+<li>Organizarla de manera que facilite su análisis.</li>
+</ul>
+<p>Si durante el procesamiento surgen nuevos requisitos, se vuelve a la fase de identificación de fuentes.</p>
+<p><strong>Ejemplo:</strong></p>
+<p>Un equipo de seguridad ha encontrado <strong>100 posibles credenciales filtradas</strong>. Ahora deben:</p>
+<ul>
+<li>Eliminar registros duplicados.</li>
+<li>Verificar si las contraseñas aún son válidas.</li>
+<li>Evaluar si las cuentas comprometidas pertenecen a usuarios activos.</li>
+</ul>
+<h4 id="351-errores-comunes-en-esta-fase">3.5.1. Errores comunes en esta fase<a class="headerlink" href="#351-errores-comunes-en-esta-fase" title="Permanent link">&para;</a></h4>
+<p>Al procesar los datos, es importante evitar errores como:</p>
+<ul>
+<li>No verificar la autenticidad de la información.</li>
+<li>No documentar adecuadamente las fuentes de los datos obtenidos.</li>
+<li>Recopilar información en exceso sin un criterio claro.</li>
+</ul>
+<h3 id="36-analisis-e-interpretacion-de-datos">3.6. Análisis e Interpretación de Datos<a class="headerlink" href="#36-analisis-e-interpretacion-de-datos" title="Permanent link">&para;</a></h3>
+<p>Aquí es donde la información se convierte en <strong>inteligencia útil</strong>. El análisis debe identificar patrones, correlaciones y amenazas potenciales.</p>
+<p><strong>Ejemplo:</strong></p>
+<p>Un analista de seguridad detecta que varias cuentas de empleados han sido filtradas junto con sus contraseñas. Analiza los patrones y descubre que la mayoría de las contraseñas son débiles y repetitivas.</p>
+<h4 id="361-metodos-de-analisis-osint">3.6.1. Métodos de análisis OSINT<a class="headerlink" href="#361-metodos-de-analisis-osint" title="Permanent link">&para;</a></h4>
+<p>Los métodos de análisis incluyen:</p>
+<ul>
+<li><strong>Análisis de correlación:</strong> Relacionar datos de diferentes fuentes para obtener conclusiones.</li>
+<li><strong>Identificación de tendencias:</strong> Detectar patrones recurrentes en filtraciones de datos.</li>
+<li><strong>Visualización de datos:</strong> Uso de herramientas como <strong>Maltego</strong> para representar conexiones entre información.</li>
+</ul>
+<h3 id="37-difusion-y-aplicacion-de-la-inteligencia">3.7. Difusión y Aplicación de la Inteligencia<a class="headerlink" href="#37-difusion-y-aplicacion-de-la-inteligencia" title="Permanent link">&para;</a></h3>
+<p>Finalmente, la información obtenida se presenta de forma clara para que los responsables de seguridad puedan tomar decisiones. Presentar los resultados, a través de medio adecuado para que sea útil y comprensible. Si es un peritaje informático para una investigación, sería a través de un informe pericial informáticos que se remite al tribunal competente.</p>
+<h4 id="371-formatos-comunes-de-presentacion">3.7.1. Formatos comunes de presentación<a class="headerlink" href="#371-formatos-comunes-de-presentacion" title="Permanent link">&para;</a></h4>
+<p>Para difundir la inteligencia OSINT, se utilizan:</p>
+<ul>
+<li>Informes escritos detallados.</li>
+<li>Visualización de datos en gráficos o diagramas de relaciones.</li>
+<li>Alertas sobre amenazas emergentes.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Un analista OSINT elabora un informe sobre una filtración de datos de empleados de una empresa, recomendando:</p>
+<ol>
+<li>Obligar a los empleados a cambiar sus contraseñas.</li>
+<li>Implementar autenticación en dos factores (2FA).</li>
+<li>Monitorear foros de hacking en busca de futuras filtraciones.</li>
+</ol>
+<p>El proceso OSINT es un ciclo estructurado que permite convertir datos dispersos en <strong>inteligencia útil</strong> para la ciberseguridad. Una correcta planificación y análisis permiten anticiparse a amenazas y mejorar la protección de la información.</p>
+<h3 id="38-actividades">3.8. Actividades<a class="headerlink" href="#38-actividades" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Ejercicio 1: Simulación de un Ciclo OSINT</strong></li>
+<li>Dividir a los alumnos en grupos.</li>
+<li>Cada grupo investiga un objetivo ficticio siguiendo las fases del ciclo OSINT.</li>
+<li>Al final, presentan un informe con sus hallazgos y recomendaciones.</li>
+<li><strong>Ejercicio 2: Adquisición y Procesamiento de Datos</strong></li>
+<li>Se les da a los alumnos un conjunto de datos de credenciales filtradas (ficticias).</li>
+<li>Deben procesar y organizar la información para identificar patrones y riesgos.</li>
+<li><strong>Ejercicio 3: Creación de un Informe OSINT</strong></li>
+<li>Cada alumno selecciona un tema de investigación OSINT (por ejemplo, análisis de redes sociales de una marca).</li>
+<li>Deben realizar el proceso completo y elaborar un informe detallado con sus hallazgos.</li>
+</ol>
+<h2 id="4-tecnicas-de-osint">4. Técnicas de OSINT<a class="headerlink" href="#4-tecnicas-de-osint" title="Permanent link">&para;</a></h2>
+<p>Para que la recopilación de información OSINT sea efectiva, se utilizan diversas <strong>técnicas y estrategias</strong> que permiten encontrar, extraer y analizar datos relevantes de fuentes públicas. Estas técnicas pueden aplicarse en ciberseguridad, investigación forense, análisis de amenazas y otros campos.</p>
+<h3 id="41-footprinting-y-fingerprinting">4.1. Footprinting y Fingerprinting<a class="headerlink" href="#41-footprinting-y-fingerprinting" title="Permanent link">&para;</a></h3>
+<p><strong>Footprinting</strong>: Es el proceso de recopilar información sobre un objetivo (persona, empresa, sistema) sin interactuar directamente con él. Permite entender la infraestructura, tecnologías y servicios utilizados.</p>
+<p><strong>Fingerprinting</strong>: Se refiere a la identificación de características específicas de sistemas, dispositivos o usuarios, como versiones de software, sistemas operativos o configuraciones de red.</p>
+<p>La diferencia entre ambos radica en que el footprinting es más amplio y se enfoca en la recopilación de información general, mientras que el fingerprinting es más específico y se centra en identificar características técnicas.</p>
+<p><strong>Ejemplo:</strong></p>
+<p>Un pentester usa OSINT para recopilar información sobre una empresa antes de realizar un ataque de prueba. Utiliza:</p>
+<ul>
+<li><strong>Google Dorking</strong> para encontrar documentos internos.</li>
+<li><strong>WHOIS y Shodan</strong> para identificar servidores y direcciones <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> públicas.</li>
+<li><strong>LinkedIn</strong> para conocer a los empleados y sus roles dentro de la empresa.</li>
+</ul>
+<h3 id="42-google-dorking-busquedas-avanzadas-en-google">4.2. Google Dorking: Búsquedas Avanzadas en Google<a class="headerlink" href="#42-google-dorking-busquedas-avanzadas-en-google" title="Permanent link">&para;</a></h3>
+<p>Google Dorking (también conocido como Google Hacking) permite encontrar información oculta usando operadores avanzados en Google.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Operador</strong></th>
+<th><strong>Función</strong></th>
+<th><strong>Ejemplo</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>site:</strong></td>
+<td>Busca dentro de un dominio específico</td>
+<td><code>site:empresa.com</code></td>
+</tr>
+<tr>
+<td><strong>filetype:</strong></td>
+<td>Filtra por tipo de archivo (PDF, XLS, DOC)</td>
+<td><code>filetype:pdf site:empresa.com</code></td>
+</tr>
+<tr>
+<td><strong>intitle:</strong></td>
+<td>Busca en el título de una página web</td>
+<td><code>intitle:"Acceso restringido"</code></td>
+</tr>
+<tr>
+<td><strong>inurl:</strong></td>
+<td>Busca en las URL de los sitios web</td>
+<td><code>inurl:admin login</code></td>
+</tr>
+<tr>
+<td><strong>"palabras"</strong></td>
+<td>Búsqueda exacta</td>
+<td><code>"documento confidencial"</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ejemplo:</strong></p>
+<p>Un investigador usa el siguiente comando para buscar carpetas de administración de WordPress en un sitio web:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>site:target.com intitle:&quot;index of&quot; &quot;wp-admin&quot;
+</code></pre></div>
+<p>Encuentra archivos con información interna que nunca debieron ser públicos.</p>
+<h3 id="43-recopilacion-de-metadatos-en-documentos">4.3. Recopilación de Metadatos en Documentos<a class="headerlink" href="#43-recopilacion-de-metadatos-en-documentos" title="Permanent link">&para;</a></h3>
+<p>Los documentos digitales (PDF, DOC, JPG, etc.) contienen <strong>metadatos ocultos</strong> que pueden revelar información sobre sus autores, fechas de creación y herramientas utilizadas.</p>
+<h4 id="431-herramientas-osint-para-extraer-metadatos">4.3.1. Herramientas OSINT para extraer metadatos:<a class="headerlink" href="#431-herramientas-osint-para-extraer-metadatos" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>ExifTool</strong>: Extrae metadatos de imágenes, documentos y archivos multimedia.</li>
+<li><strong>FOCA</strong>: Analiza documentos para extraer metadatos y descubrir servidores internos.</li>
+<li><strong>Metagoofil</strong>: Automatiza la búsqueda de documentos en un dominio y extrae sus metadatos.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Un auditor de seguridad descarga un documento de una empresa y usa <strong>ExifTool</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>exiftool<span class="w"> </span>documento.pdf
+</code></pre></div>
+<p>Descubre que el archivo contiene nombres de usuarios internos y la versión de software utilizada para crearlo.</p>
+<h3 id="44-busqueda-de-informacion-en-redes-sociales">4.4. Búsqueda de Información en Redes Sociales<a class="headerlink" href="#44-busqueda-de-informacion-en-redes-sociales" title="Permanent link">&para;</a></h3>
+<p>Las redes sociales son una fuente clave de información OSINT. Muchos empleados y directivos publican datos sensibles sin darse cuenta. La búsqueda en redes sociales permite identificar posibles vulnerabilidades y filtraciones de datos. Es importante respetar la privacidad de los usuarios y no infringir las normas de las plataformas.</p>
+<h4 id="441-herramientas-para-osint-en-redes-sociales">4.4.1. Herramientas para OSINT en redes sociales<a class="headerlink" href="#441-herramientas-para-osint-en-redes-sociales" title="Permanent link">&para;</a></h4>
+<p>Algunas herramientas especializadas en OSINT en redes sociales son:</p>
+<ul>
+<li><strong>Sherlock</strong>: Busca nombres de usuario en múltiples plataformas.</li>
+<li><strong>OSINTgram</strong>: Extrae información de perfiles de Instagram.</li>
+<li><strong>Twint</strong>: Recopila datos de Twitter sin necesidad de una cuenta.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Un investigador quiere saber si un hacker está activo en redes sociales. Usa <strong>Sherlock</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python3<span class="w"> </span>sherlock.py<span class="w"> </span>usuario
+</code></pre></div>
+<p>Obtiene una lista de redes sociales donde el usuario tiene cuentas.</p>
+<h3 id="45-identificacion-de-infraestructuras-con-whois-dns-y-direcciones-ip">4.5. Identificación de Infraestructuras con WHOIS, <abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr> y Direcciones <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr><a class="headerlink" href="#45-identificacion-de-infraestructuras-con-whois-dns-y-direcciones-ip" title="Permanent link">&para;</a></h3>
+<p>La información sobre dominios y servidores puede obtenerse con herramientas OSINT. WHOIS, NSLookup y Shodan son útiles para identificar propietarios de dominios, registros <abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr> y dispositivos conectados a internet. Estas técnicas son fundamentales para el análisis de infraestructuras y la detección de vulnerabilidades. Es importante respetar las normativas de privacidad y no realizar escaneos sin autorización.</p>
+<h4 id="451-metodos-comunes">4.5.1. Métodos comunes<a class="headerlink" href="#451-metodos-comunes" title="Permanent link">&para;</a></h4>
+<p>Algunos métodos comunes para identificar infraestructuras son:</p>
+<ul>
+<li><strong>WHOIS</strong>: Identifica el propietario de un dominio y sus datos de registro.</li>
+<li><strong>NSLookup/Dig</strong>: Consulta registros <abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr> de un dominio.</li>
+<li><strong>Shodan</strong>: Encuentra dispositivos y servidores conectados a internet.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Un investigador quiere saber quién registró un dominio. Usa <strong>WHOIS</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>whois<span class="w"> </span>empresa.com
+</code></pre></div>
+<p>Obtiene el nombre, correo y dirección del registrante.</p>
+<h3 id="46-monitorizacion-de-la-deep-y-dark-web">4.6. Monitorización de la Deep y Dark Web<a class="headerlink" href="#46-monitorizacion-de-la-deep-y-dark-web" title="Permanent link">&para;</a></h3>
+<p>La Deep Web y la Dark Web contienen información que no aparece en buscadores convencionales. La monitorización de estos espacios es esencial para detectar amenazas y filtraciones de datos. Es importante tener en cuenta que acceder a la Dark Web puede ser peligroso y debe hacerse con precaución. Se recomienda utilizar herramientas especializadas y respetar la legalidad.</p>
+<h4 id="461-herramientas-para-exploracion-en-la-dark-web">4.6.1. Herramientas para exploración en la Dark Web<a class="headerlink" href="#461-herramientas-para-exploracion-en-la-dark-web" title="Permanent link">&para;</a></h4>
+<p>Algunas herramientas para explorar la Dark Web son:</p>
+<ul>
+<li><strong>TOR Browser</strong>: Permite acceder a sitios .onion.</li>
+<li><strong>OnionScan</strong>: Identifica vulnerabilidades en servicios ocultos.</li>
+<li><strong>DarkSearch</strong>: Un buscador especializado en la Dark Web.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Un analista de seguridad usa TOR para buscar filtraciones de datos de una empresa en foros de hacking.</p>
+<h3 id="47-analisis-de-imagenes-y-videos-con-tecnicas-forenses">4.7. Análisis de Imágenes y Videos con Técnicas Forenses<a class="headerlink" href="#47-analisis-de-imagenes-y-videos-con-tecnicas-forenses" title="Permanent link">&para;</a></h3>
+<p>Las imágenes y videos contienen datos ocultos que pueden ser analizados con OSINT. La búsqueda inversa de imágenes, el análisis de metadatos y la detección de manipulaciones son técnicas útiles para verificar la autenticidad de los archivos y descubrir información oculta. Es importante respetar los derechos de autor y la privacidad de las personas.</p>
+<h4 id="471-tecnicas-forenses-en-imagenes">4.7.1. Técnicas forenses en imágenes<a class="headerlink" href="#471-tecnicas-forenses-en-imagenes" title="Permanent link">&para;</a></h4>
+<p>Algunas técnicas forenses en imágenes son:</p>
+<ul>
+<li><strong>Búsqueda inversa de imágenes</strong> (Google Images, TinEye).</li>
+<li><strong>Análisis de metadatos con ExifTool</strong>.</li>
+<li>**Comparación de imágenes para detectar manipulaciones (FotoForensics).</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Un investigador encuentra una imagen sospechosa en internet. Usa Google Imágenes para verificar su autenticidad y descubre que ha sido modificada para desinformar.</p>
+<p>Las técnicas OSINT permiten extraer información valiosa de fuentes abiertas de manera ética y legal. Su correcto uso en ciberseguridad ayuda a prevenir ataques, detectar amenazas y fortalecer la defensa de organizaciones y personas.</p>
+<h3 id="48-actividades">4.8. Actividades<a class="headerlink" href="#48-actividades" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Ejercicio 1: Google Dorking</strong></li>
+<li>Los alumnos deben usar operadores avanzados de Google para encontrar información pública de un sitio web (ficticio).</li>
+<li>Reflexión: ¿Qué riesgos implica que una empresa exponga archivos en internet?</li>
+<li><strong>Ejercicio 2: Extracción de Metadatos</strong></li>
+<li>Se proporciona un conjunto de documentos (ficticios).</li>
+<li>Los alumnos deben analizar los metadatos con <strong>ExifTool</strong> o <strong>FOCA</strong>.</li>
+<li><strong>Ejercicio 3: Análisis OSINT en Redes Sociales</strong></li>
+<li>Cada alumno investiga un perfil público de una celebridad o empresa (sin invadir la privacidad).</li>
+<li>Discusión: ¿Qué información personal puede obtenerse legalmente de redes sociales?</li>
+<li><strong>Ejercicio 4: Identificación de Infraestructura</strong></li>
+<li>Los alumnos usan <strong>WHOIS</strong> y <strong>NSLookup</strong> para analizar dominios.</li>
+<li>Reflexión: ¿Cómo podrían los ciberdelincuentes utilizar esta información?</li>
+<li><strong>Ejercicio 5: Búsqueda Inversa de Imágenes</strong></li>
+<li>Se presentan imágenes falsas y los alumnos deben verificar su autenticidad con Google Imágenes o TinEye.</li>
+</ol>
+<h2 id="5-herramientas-osint">5. Herramientas OSINT<a class="headerlink" href="#5-herramientas-osint" title="Permanent link">&para;</a></h2>
+<p>Las herramientas OSINT permiten automatizar la recopilación y análisis de información de fuentes abiertas. Se dividen en varias categorías según el tipo de datos que procesan, desde buscadores especializados hasta herramientas de análisis de redes sociales y metadatos. Es importante elegir las herramientas adecuadas para cada objetivo y respetar las normativas de privacidad y legalidad.</p>
+<p>El uso de herramientas OSINT especializadas permite automatizar la recopilación de información y el análisis de datos de fuentes abiertas. Estas herramientas son fundamentales en ciberseguridad, investigación forense y análisis de amenazas para identificar vulnerabilidades, prevenir ataques y proteger la información.</p>
+<h3 id="51-motores-de-busqueda-especializados">5.1. Motores de Búsqueda Especializados<a class="headerlink" href="#51-motores-de-busqueda-especializados" title="Permanent link">&para;</a></h3>
+<p>Aunque Google es el buscador más conocido, existen herramientas específicas que permiten acceder a información más detallada. Estos motores de búsqueda especializados facilitan la búsqueda de datos en la web profunda, la dark web y otros espacios no indexados por Google.</p>
+<h4 id="511-herramientas-destacadas">5.1.1. Herramientas destacadas<a class="headerlink" href="#511-herramientas-destacadas" title="Permanent link">&para;</a></h4>
+<p>Algunos motores de búsqueda especializados son:</p>
+<ul>
+<li><strong>Google Dorking</strong>: Usa operadores avanzados para encontrar información oculta en internet.</li>
+<li><strong>DuckDuckGo</strong>: No rastrea las búsquedas y permite encontrar información que Google filtra.</li>
+<li><strong>Bing y Yandex</strong>: Alternativas para obtener resultados distintos a los de Google.</li>
+<li><strong>Wayback Machine</strong>: Permite ver versiones antiguas de sitios web y detectar cambios en su contenido.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Un investigador usa <strong>Wayback Machine</strong> para revisar cómo lucía un sitio web antes de una supuesta filtración de datos.</p>
+<h3 id="52-shodan-busqueda-de-dispositivos-conectados-a-internet">5.2. Shodan: Búsqueda de Dispositivos Conectados a Internet<a class="headerlink" href="#52-shodan-busqueda-de-dispositivos-conectados-a-internet" title="Permanent link">&para;</a></h3>
+<p><strong>Shodan</strong> es un motor de búsqueda que permite encontrar dispositivos conectados a internet como servidores, cámaras de seguridad, routers, sistemas industriales, etc. Es útil para identificar vulnerabilidades en infraestructuras y evaluar la exposición de activos a posibles ataques. Los resultados de Shodan pueden ser utilizados en auditorías de seguridad, pentesting y análisis de amenazas.</p>
+<h3 id="521-caracteristicas-principales-de-shodan">5.2.1. Características principales de Shodan<a class="headerlink" href="#521-caracteristicas-principales-de-shodan" title="Permanent link">&para;</a></h3>
+<p>Algunas características de Shodan son:</p>
+<ul>
+<li>Permite filtrar por <strong>puertos abiertos, protocolos y versiones de software</strong>.</li>
+<li>Se pueden buscar <strong>dispositivos vulnerables</strong> según CVEs (vulnerabilidades conocidas).</li>
+<li>Ayuda a las empresas a identificar <strong>sus propios activos expuestos</strong>.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Un pentester busca dispositivos con acceso remoto expuesto mediante el puerto <strong>3389</strong> (Remote Desktop Protocol):</p>
+<p><code>port:3389</code></p>
+<p>Encuentra varios servidores accesibles sin autenticación segura.</p>
+<h3 id="53-wayback-machine-analisis-de-versiones-antiguas-de-sitios-web">5.3. Wayback Machine: Análisis de Versiones Antiguas de Sitios Web<a class="headerlink" href="#53-wayback-machine-analisis-de-versiones-antiguas-de-sitios-web" title="Permanent link">&para;</a></h3>
+<p><strong>Wayback Machine</strong> permite acceder a versiones archivadas de sitios web, lo que ayuda a:</p>
+<ul>
+<li><strong>Analizar cambios en una web a lo largo del tiempo</strong>.</li>
+<li><strong>Recuperar información eliminada</strong> por administradores.</li>
+<li><strong>Detectar filtraciones accidentales</strong> de datos en versiones anteriores de un sitio.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Un investigador encuentra que un sitio web eliminó un archivo con nombres de empleados. Usa <strong>Wayback Machine</strong> para ver versiones anteriores del sitio y recuperar la información.</p>
+<h3 id="54-maltego-visualizacion-y-analisis-de-relaciones">5.4. Maltego: Visualización y Análisis de Relaciones<a class="headerlink" href="#54-maltego-visualizacion-y-analisis-de-relaciones" title="Permanent link">&para;</a></h3>
+<p><strong>Maltego</strong> es una herramienta de inteligencia que permite visualizar conexiones entre personas, organizaciones y servidores. Es útil para mapear infraestructuras digitales, identificar relaciones entre entidades y analizar redes de amenazas. Maltego se utiliza en ciberseguridad, investigación forense y análisis de inteligencia.</p>
+<h3 id="541-usos-de-maltego-en-osint">5.4.1. Usos de Maltego en OSINT<a class="headerlink" href="#541-usos-de-maltego-en-osint" title="Permanent link">&para;</a></h3>
+<p>Algunos usos de Maltego en OSINT son:</p>
+<ul>
+<li>Relacionar direcciones de correo, nombres de dominio y redes sociales.</li>
+<li>Identificar conexiones entre infraestructuras digitales.</li>
+<li>Analizar redes de amenazas y actores malintencionados.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Un investigador introduce un dominio en <strong>Maltego</strong> y descubre conexiones con otras webs de la misma empresa, lo que ayuda a mapear su infraestructura digital.</p>
+<h3 id="55-spiderfoot-automatizacion-de-la-recopilacion-osint">5.5. SpiderFoot: Automatización de la Recopilación OSINT<a class="headerlink" href="#55-spiderfoot-automatizacion-de-la-recopilacion-osint" title="Permanent link">&para;</a></h3>
+<p><strong>SpiderFoot</strong> permite realizar búsquedas automatizadas en más de <strong>200 fuentes</strong> para recopilar información sobre:</p>
+<ul>
+<li><strong>Direcciones <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> y dominios</strong>.</li>
+<li><strong>Correos electrónicos filtrados</strong>.</li>
+<li><strong>Vulnerabilidades conocidas</strong> en sistemas.</li>
+<li><strong>Perfiles en redes sociales</strong>.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Un investigador ejecuta <strong>SpiderFoot</strong> sobre un dominio y descubre que está relacionado con varias direcciones <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> en otros países, lo que sugiere la existencia de servidores adicionales no documentados.</p>
+<h3 id="56-osint-framework-repositorio-de-herramientas-osint">5.6. OSINT Framework: Repositorio de Herramientas OSINT<a class="headerlink" href="#56-osint-framework-repositorio-de-herramientas-osint" title="Permanent link">&para;</a></h3>
+<p><strong>OSINT Framework</strong> es un directorio online con herramientas de código abierto organizadas por categorías:</p>
+<ul>
+<li><strong>Búsqueda de usuarios y correos electrónicos</strong>.</li>
+<li><strong>Análisis de redes sociales</strong>.</li>
+<li><strong>Investigación de dominios y direcciones <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr></strong>.</li>
+</ul>
+<p>🌍 <strong>Acceso:</strong><a href="https://osintframework.com">https://osintframework.com</a></p>
+<p><strong>Ejemplo:</strong></p>
+<p>Un investigador usa OSINT Framework para encontrar herramientas gratuitas para analizar redes sociales sin necesidad de registrarse.</p>
+<h3 id="57-buscadores-de-informacion-en-redes-sociales">5.7. Buscadores de Información en Redes Sociales<a class="headerlink" href="#57-buscadores-de-informacion-en-redes-sociales" title="Permanent link">&para;</a></h3>
+<p>Las redes sociales son una fuente clave de información OSINT. Existen herramientas especializadas en cada plataforma:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Red Social</strong></th>
+<th><strong>Herramienta OSINT</strong></th>
+<th><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Twitter/X</strong></td>
+<td><strong>Twint</strong></td>
+<td>Extrae tuits sin necesidad de cuenta.</td>
+</tr>
+<tr>
+<td><strong>Instagram</strong></td>
+<td><strong>Osintgram</strong></td>
+<td>Permite analizar perfiles sin iniciar sesión.</td>
+</tr>
+<tr>
+<td><strong>LinkedIn</strong></td>
+<td><strong>CrossLinked</strong></td>
+<td>Extrae datos de empleados de una empresa.</td>
+</tr>
+<tr>
+<td><strong>Telegram</strong></td>
+<td><strong>Telegram OSINT</strong></td>
+<td>Rastrea usuarios y grupos públicos.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ejemplo:</strong></p>
+<p>Un investigador usa <strong>Twint</strong> para analizar la actividad de un usuario de Twitter sin necesidad de iniciar sesión. Descubre que ha publicado información sensible sobre su empresa.</p>
+<h3 id="58-tecnicas-de-busqueda-en-telegram-linkedin-twitter-facebook">5.8. Técnicas de Búsqueda en Telegram, LinkedIn, Twitter, Facebook<a class="headerlink" href="#58-tecnicas-de-busqueda-en-telegram-linkedin-twitter-facebook" title="Permanent link">&para;</a></h3>
+<p>Cada red social tiene técnicas de búsqueda avanzadas para obtener información pública. Estas técnicas permiten encontrar perfiles, grupos y publicaciones relevantes sin necesidad de una cuenta. Es importante respetar la privacidad de los usuarios y no infringir las normas de las plataformas.</p>
+<p><strong>Ejemplo:</strong></p>
+<p>Para buscar empleados de una empresa en LinkedIn sin iniciar sesión:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>site:linkedin.com<span class="w"> </span><span class="s2">&quot;trabaja en empresa&quot;</span>
+</code></pre></div>
+<p>Esto muestra perfiles públicos de personas que mencionan trabajar en la empresa.</p>
+<p>Las herramientas OSINT permiten recopilar información de forma rápida y organizada. Su uso responsable y ético es clave para evitar violaciones de privacidad y legalidad.</p>
+<h3 id="59-actividades">5.9. Actividades<a class="headerlink" href="#59-actividades" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Ejercicio 1: Uso de Shodan</strong></li>
+<li>Los alumnos buscan dispositivos conectados a internet con Shodan y analizan su exposición.</li>
+<li><strong>Ejercicio 2: Análisis de redes sociales con Sherlock</strong></li>
+<li>Se les asigna un nombre de usuario y deben rastrear en qué redes sociales está presente.</li>
+<li><strong>Ejercicio 3: Búsqueda de datos con Google Dorking</strong></li>
+<li>Se les da un dominio y deben encontrar información oculta usando operadores de Google.</li>
+<li><strong>Ejercicio 4: Extracción de metadatos con ExifTool</strong></li>
+<li>Se proporciona un conjunto de imágenes y documentos para que extraigan sus metadatos.</li>
+</ol>
+<p>Este desarrollo cubre <strong>las herramientas OSINT más importantes</strong>, con ejemplos prácticos y ejercicios para su aplicación en el aula. ¿Quieres que amplíe algún apartado o añada más detalles? 😊</p>
+<h2 id="6-casos-practicos-y-actividades-de-osint">6. Casos Prácticos y Actividades de OSINT<a class="headerlink" href="#6-casos-practicos-y-actividades-de-osint" title="Permanent link">&para;</a></h2>
+<p>Para que los alumnos comprendan y apliquen el conocimiento sobre <strong>OSINT</strong>, es fundamental trabajar con <strong>casos prácticos y ejercicios</strong> que simulen situaciones reales. En este apartado, se presentan seis ejercicios prácticos que permitirán a los estudiantes desarrollar sus habilidades en inteligencia de fuentes abiertas. Estos ejercicios pueden adaptarse a diferentes niveles de conocimiento y ser utilizados en cursos de ciberseguridad, análisis forense y prevención de amenazas.</p>
+<h3 id="61-ejercicio-uso-de-google-dorking-para-encontrar-informacion-oculta">6.1. Ejercicio: Uso de Google Dorking para encontrar información oculta<a class="headerlink" href="#61-ejercicio-uso-de-google-dorking-para-encontrar-informacion-oculta" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong></p>
+<p>Enseñar a los alumnos a utilizar <strong>búsquedas avanzadas en Google</strong> para encontrar información que no está fácilmente accesible.</p>
+<p><strong>Instrucciones:</strong></p>
+<ol>
+<li>Explicar el concepto de <strong>Google Dorking</strong> y sus operadores.</li>
+<li>
+<p>Presentar una serie de búsquedas específicas con operadores avanzados:</p>
+</li>
+<li>
+<p>Encontrar archivos PDF en un dominio:</p>
+</li>
+</ol>
+<p><code>site:empresa.com filetype:pdf</code></p>
+<ul>
+<li>Buscar páginas con credenciales filtradas:</li>
+</ul>
+<p><code>intext:"password" site:pastebin.com</code></p>
+<ul>
+<li>Ver páginas de administración de un sitio:</li>
+</ul>
+<p><code>intitle:"admin login" site:empresa.com</code>
+3. Pedir a los alumnos que realicen búsquedas sobre un dominio ficticio y <strong>documenten sus hallazgos</strong>.</p>
+<p><strong>Resultados esperados:</strong></p>
+<ul>
+<li>Comprensión del uso de <strong>Google Dorking</strong>.</li>
+<li>Identificación de <strong>información expuesta accidentalmente</strong>.</li>
+</ul>
+<h3 id="62-ejercicio-analisis-de-dominios-con-whois-y-dns">6.2. Ejercicio: Análisis de dominios con WHOIS y <abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr><a class="headerlink" href="#62-ejercicio-analisis-de-dominios-con-whois-y-dns" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong></p>
+<p>Enseñar cómo obtener información de un <strong>dominio</strong> mediante herramientas OSINT.</p>
+<p><strong>Instrucciones:</strong></p>
+<ol>
+<li>Explicar cómo funcionan <strong>WHOIS</strong> y las consultas <strong><abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr></strong>.</li>
+<li>Pedir a los alumnos que usen <strong>WHOIS</strong> para investigar un dominio:</li>
+</ol>
+<p><code>whois google.com</code>
+3. Usar <strong>nslookup</strong> o <strong>dig</strong> para obtener registros <abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr>:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>nslookup google.com
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>dig google.com MX
+</code></pre></div>
+4. Analizar los resultados y responder:</p>
+<ul>
+<li>¿Quién registró el dominio?</li>
+<li>¿Dónde están sus servidores?</li>
+<li>¿Hay correos electrónicos filtrados?</li>
+</ul>
+<p><strong>Resultados esperados:</strong></p>
+<ul>
+<li>Identificación de <strong>propietarios de dominios</strong>.</li>
+<li>Análisis de <strong>infraestructura digital</strong>.</li>
+</ul>
+<h3 id="63-ejercicio-identificacion-de-dispositivos-iot-con-shodan">6.3. Ejercicio: Identificación de dispositivos IoT con Shodan<a class="headerlink" href="#63-ejercicio-identificacion-de-dispositivos-iot-con-shodan" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo</strong></p>
+<p>Mostrar cómo se pueden encontrar <strong>cámaras, routers y servidores</strong> expuestos en internet con Shodan.</p>
+<p><strong>Instrucciones:</strong></p>
+<ol>
+<li>Explicar qué es <strong>Shodan</strong> y cómo funciona.</li>
+<li>Pedir a los alumnos que busquen dispositivos en España con ciertos puertos abiertos:</li>
+</ol>
+<p><code>country:ES port:3389</code>
+   <code>product:"Webcam"</code>
+3. Analizar los resultados y responder:</p>
+<ul>
+<li>¿Cuántos dispositivos hay expuestos?</li>
+<li>¿Qué riesgos de seguridad tienen?</li>
+</ul>
+<p><strong>Resultados esperados:</strong></p>
+<ul>
+<li>Comprender la importancia de <strong>seguridad en dispositivos conectados</strong>.</li>
+<li>Identificar <strong>errores comunes en configuraciones de red</strong>.</li>
+</ul>
+<h3 id="64-ejercicio-busqueda-de-usuarios-en-redes-sociales-con-sherlock">6.4. Ejercicio: Búsqueda de usuarios en redes sociales con Sherlock<a class="headerlink" href="#64-ejercicio-busqueda-de-usuarios-en-redes-sociales-con-sherlock" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong></p>
+<p>Aprender a rastrear <strong>nombres de usuario</strong> en múltiples plataformas.</p>
+<p><strong>Instrucciones:</strong></p>
+<ol>
+<li>Explicar cómo <strong>los ciberdelincuentes usan OSINT</strong> en redes sociales.</li>
+<li>Instalar y ejecutar <strong>Sherlock</strong>:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python3<span class="w"> </span>sherlock.py<span class="w"> </span>usuario
+</code></pre></div></li>
+<li>Elegir un usuario ficticio y analizar:</li>
+<li>¿En qué plataformas está presente?</li>
+<li>¿Se puede obtener más información sobre él?</li>
+</ol>
+<p><strong>Resultados esperados:</strong></p>
+<ul>
+<li>Concienciación sobre <strong>riesgos de exposición en redes sociales</strong>.</li>
+<li>Desarrollo de habilidades de <strong>recolección de datos en plataformas públicas</strong>.</li>
+</ul>
+<h3 id="65-ejercicio-analisis-de-imagenes-con-busqueda-inversa">6.5. Ejercicio: Análisis de imágenes con búsqueda inversa<a class="headerlink" href="#65-ejercicio-analisis-de-imagenes-con-busqueda-inversa" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong></p>
+<p>Mostrar cómo verificar la <strong>autenticidad de imágenes</strong> mediante herramientas OSINT.</p>
+<p><strong>Instrucciones:</strong></p>
+<ol>
+<li>Explicar qué es la <strong>búsqueda inversa de imágenes</strong>.</li>
+<li>Proporcionar a los alumnos imágenes sospechosas.</li>
+<li>Usar <strong>Google Images</strong> o <strong>TinEye</strong> para rastrear su origen.</li>
+</ol>
+<p><strong>Resultados esperados:</strong></p>
+<ul>
+<li>Identificar <strong>fuentes originales de imágenes</strong>.</li>
+<li>Detectar <strong>fake news y manipulación de imágenes</strong>.</li>
+</ul>
+<h3 id="66-proyecto-final-investigacion-osint-sobre-una-empresa-ficticia">6.6. Proyecto Final: Investigación OSINT sobre una empresa ficticia<a class="headerlink" href="#66-proyecto-final-investigacion-osint-sobre-una-empresa-ficticia" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong></p>
+<p>Aplicar todas las técnicas aprendidas en un caso completo de investigación.</p>
+<p><strong>Instrucciones:</strong></p>
+<ol>
+<li>Dividir a los alumnos en grupos y asignarles una empresa ficticia.</li>
+<li>Cada grupo deberá:</li>
+<li>Encontrar información pública sobre la empresa (Google Dorking, WHOIS, Shodan).</li>
+<li>Analizar perfiles de empleados en redes sociales.</li>
+<li>Buscar posibles vulnerabilidades de seguridad.</li>
+<li>Presentar un <strong>informe final</strong> con:</li>
+<li><strong>Hallazgos clave</strong>.</li>
+<li><strong>Riesgos detectados</strong>.</li>
+<li><strong>Recomendaciones de seguridad</strong>.</li>
+</ol>
+<p><strong>Resultados esperados:</strong></p>
+<ul>
+<li>Capacidad para realizar <strong>investigaciones OSINT completas</strong>.</li>
+<li>Desarrollo de habilidades en <strong>ciberseguridad y análisis forense</strong>.</li>
+</ul>
+<p>Las actividades prácticas son esenciales para que los alumnos entiendan <strong>cómo funciona OSINT en el mundo real</strong>. Estos ejercicios les permiten desarrollar una <strong>mentalidad analítica</strong>, fortalecer sus habilidades en <strong>ciberseguridad</strong> y comprender la <strong>importancia de la privacidad en línea</strong>.</p>
+<p>Las actividades prácticas son esenciales para que los alumnos entiendan <strong>cómo funciona OSINT en el mundo real</strong>. Estos ejercicios les permiten desarrollar una <strong>mentalidad analítica</strong>, fortalecer sus habilidades en <strong>ciberseguridad</strong> y comprender la <strong>importancia de la privacidad en línea</strong>. Un resumen de las actividades propuestas:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Ejercicio</strong></th>
+<th><strong>Objetivo</strong></th>
+<th><strong>Herramientas utilizadas</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Google Dorking</strong></td>
+<td>Encontrar información oculta en Google</td>
+<td>Google, operadores avanzados</td>
+</tr>
+<tr>
+<td><strong>Análisis de dominios</strong></td>
+<td>Identificar propietarios y servidores de un dominio</td>
+<td>WHOIS, nslookup, dig</td>
+</tr>
+<tr>
+<td><strong>Uso de Shodan</strong></td>
+<td>Detectar dispositivos expuestos en internet</td>
+<td>Shodan</td>
+</tr>
+<tr>
+<td><strong>Investigación en redes sociales</strong></td>
+<td>Rastrear nombres de usuario en varias plataformas</td>
+<td>Sherlock, LinkedIn, Twitter</td>
+</tr>
+<tr>
+<td><strong>Búsqueda inversa de imágenes</strong></td>
+<td>Verificar autenticidad de imágenes</td>
+<td>Google Images, TinEye</td>
+</tr>
+<tr>
+<td><strong>Proyecto Final OSINT</strong></td>
+<td>Aplicar todas las técnicas en un caso real</td>
+<td>Todas las herramientas</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-retos-eticos-y-legales-de-osint">7. Retos Éticos y Legales de OSINT<a class="headerlink" href="#7-retos-eticos-y-legales-de-osint" title="Permanent link">&para;</a></h2>
+<p>El uso de <strong>OSINT</strong> (Open Source Intelligence) implica la recopilación y análisis de información de fuentes abiertas. Sin embargo, aunque la información sea pública, su uso indebido puede generar problemas <strong>legales y éticos</strong>. En este apartado se abordan las consideraciones clave para garantizar un uso responsable de OSINT.</p>
+<h3 id="71-privacidad-y-derechos-de-los-usuarios">7.1. Privacidad y Derechos de los Usuarios<a class="headerlink" href="#71-privacidad-y-derechos-de-los-usuarios" title="Permanent link">&para;</a></h3>
+<p>La recopilación de información OSINT debe respetar la privacidad de las personas y las organizaciones. Aunque los datos sean accesibles públicamente, su recolección y análisis pueden representar riesgos. Es fundamental tener en cuenta las normas de privacidad y los derechos de los usuarios al utilizar OSINT.</p>
+<h4 id="711-principales-preocupaciones-sobre-privacidad-en-osint">7.1.1. Principales preocupaciones sobre privacidad en OSINT<a class="headerlink" href="#711-principales-preocupaciones-sobre-privacidad-en-osint" title="Permanent link">&para;</a></h4>
+<p>Algunas preocupaciones comunes sobre privacidad en OSINT son:</p>
+<ul>
+<li><strong>Doxxing:</strong> Publicación de información personal con intención de dañar o acosar a alguien.</li>
+<li><strong>Perfiles en redes sociales:</strong> Aunque la información sea pública, usarla sin consentimiento puede ser considerado una invasión a la privacidad.</li>
+<li><strong>Metadatos ocultos:</strong> Extraer información oculta de documentos e imágenes puede ser problemático si se usa con fines maliciosos.</li>
+<li><strong>Dark Web:</strong> Monitorear foros en la Dark Web puede llevar a la exposición de datos sensibles o ilegales.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Un analista OSINT encuentra información personal de un individuo en un foro. Aunque los datos sean públicos, compartirlos sin su consentimiento podría violar leyes de privacidad.</p>
+<h3 id="72-regulaciones-legales-gdpr-codigo-penal-normativas-de-privacidad">7.2. Regulaciones Legales (<abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El GDPR garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">GDPR</abbr>, Código Penal, Normativas de Privacidad)<a class="headerlink" href="#72-regulaciones-legales-gdpr-codigo-penal-normativas-de-privacidad" title="Permanent link">&para;</a></h3>
+<p>El uso de OSINT está regulado por diversas leyes que protegen la privacidad de los datos personales. Es importante conocer las normativas legales aplicables en cada país para evitar problemas legales y sanciones. Algunas de las regulaciones más comunes son el <strong><abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El GDPR garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">GDPR</abbr></strong> (General Data Protection Regulation), el <strong>Código Penal</strong> y las leyes de protección de datos personales.</p>
+<h4 id="721-principales-regulaciones-sobre-privacidad">7.2.1. Principales regulaciones sobre privacidad<a class="headerlink" href="#721-principales-regulaciones-sobre-privacidad" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Regulación</strong></th>
+<th><strong>Descripción</strong></th>
+<th><strong>Ámbito</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El GDPR garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">GDPR</abbr> (General Data Protection Regulation)</strong></td>
+<td>Regula la recopilación y uso de datos personales en la <abbr title="Unión Europea. Es una organización internacional que agrupa a 27 países europeos y que tiene como objetivo promover la cooperación y la integración entre los países miembros.">UE</abbr>.</td>
+<td>Europa</td>
+</tr>
+<tr>
+<td><strong>Código Penal (España, Art. 197)</strong></td>
+<td>Penaliza el acceso y uso indebido de información privada.</td>
+<td>España</td>
+</tr>
+<tr>
+<td><strong>CCPA (California Consumer Privacy Act)</strong></td>
+<td>Protege los datos personales de los ciudadanos de California.</td>
+<td>EE.UU.</td>
+</tr>
+<tr>
+<td><strong>Ley de Protección de Datos Personales (México, Argentina, etc.)</strong></td>
+<td>Establece normas para la recopilación y tratamiento de datos personales.</td>
+<td>Latinoamérica</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ejemplo:</strong></p>
+<p>Un investigador OSINT recopila correos electrónicos expuestos en una filtración y los almacena en una base de datos. Según el <strong><abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El GDPR garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">GDPR</abbr></strong>, si estos datos incluyen información personal identificable, su uso sin consentimiento puede ser ilegal.</p>
+<h3 id="73-buenas-practicas-y-uso-responsable-de-osint">7.3. Buenas Prácticas y Uso Responsable de OSINT<a class="headerlink" href="#73-buenas-practicas-y-uso-responsable-de-osint" title="Permanent link">&para;</a></h3>
+<p>Para evitar problemas éticos y legales, es fundamental seguir <strong>buenas prácticas</strong> en la recopilación y análisis de información de fuentes abiertas. Respetar la privacidad, cumplir con las regulaciones y utilizar OSINT de manera ética son aspectos clave para un uso responsable.</p>
+<h3 id="731-principios-de-uso-etico-de-osint">7.3.1. Principios de uso ético de OSINT<a class="headerlink" href="#731-principios-de-uso-etico-de-osint" title="Permanent link">&para;</a></h3>
+<p>Algunos principios éticos para el uso de OSINT son:</p>
+<ol>
+<li><strong>Respeto a la privacidad:</strong> No recopilar ni divulgar información personal sin consentimiento.</li>
+<li><strong>Cumplimiento legal:</strong> Conocer y respetar las regulaciones de protección de datos.</li>
+<li><strong>Propósito legítimo:</strong> Utilizar OSINT solo para fines de seguridad, investigación o análisis legítimo.</li>
+<li><strong>Fuentes verificadas:</strong> Asegurar que la información recopilada proviene de fuentes confiables y legítimas.</li>
+<li><strong>Minimización de datos:</strong> Recopilar solo la información necesaria para la investigación.</li>
+</ol>
+<p><strong>Ejemplo:</strong></p>
+<p>Una empresa de ciberseguridad usa OSINT para identificar filtraciones de datos. En lugar de divulgar la información públicamente, contacta a la empresa afectada para advertirle sobre la vulnerabilidad.</p>
+<p>El uso de OSINT implica un equilibrio entre la obtención de información y el respeto por la privacidad y la legalidad. Aplicar <strong>buenas prácticas</strong> y conocer las normativas legales es esencial para evitar problemas éticos y jurídicos.</p>
+<h3 id="74-actividades">7.4. Actividades<a class="headerlink" href="#74-actividades" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Ejercicio 1: Evaluación de casos éticos en OSINT</strong></li>
+<li>Se presentan diferentes escenarios y los alumnos deben determinar si la actividad es legal y ética.</li>
+<li><strong>Ejemplo:</strong> ¿Es correcto recolectar información de empleados en LinkedIn para un análisis de seguridad?</li>
+<li><strong>Ejercicio 2: Análisis de regulaciones sobre privacidad</strong></li>
+<li>Cada grupo investiga una ley de privacidad (<abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El GDPR garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">GDPR</abbr>, CCPA, etc.).</li>
+<li>Explican cómo afecta el uso de OSINT y presentan ejemplos de casos legales.</li>
+<li><strong>Ejercicio 3: Uso ético de OSINT en un caso práctico</strong></li>
+<li>Se asigna un caso ficticio donde los alumnos deben recopilar información con OSINT, asegurando que cumplen las normas legales y éticas.</li>
+</ol>
+<p>Como resumen, se presentan las <strong>consideraciones éticas y legales</strong> más importantes en el uso de OSINT:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Aspecto</strong></th>
+<th><strong>Consideraciones Éticas y Legales</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Privacidad</strong></td>
+<td>No exponer información personal sin consentimiento.</td>
+</tr>
+<tr>
+<td><strong>Regulaciones</strong></td>
+<td>Cumplir con normativas como <abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El GDPR garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">GDPR</abbr>, CCPA y leyes nacionales.</td>
+</tr>
+<tr>
+<td><strong>Uso Responsable</strong></td>
+<td>OSINT solo debe utilizarse con fines legítimos y éticos.</td>
+</tr>
+<tr>
+<td><strong>Riesgos</strong></td>
+<td>Uso indebido puede llevar a sanciones legales o problemas éticos.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        ¿Te ha sido útíl la página?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Me ha sido de utilidad." data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="La página podría mejorar." data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Gracias por tu feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Gracias por tu feedback! Ayudame a mejorarla usando este formulario. <a href="https://forms.gle/bBtzHfjb41unBb5o9" target=_blank>feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2021-2022 Eduardo Fernández <a href="https://twitter.com/revilofe" target=_blank>@revilofe</a> - Licencia CC BY-NC-SA
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/revilofe" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<efernandez@iesrafaelalberti.es>" target="_blank" rel="noopener" title="e-mail" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/efoliver" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -640,7 +640,6 @@ Las herramientas OSINT permiten recopilar información de forma rápida y organi
 4. **Ejercicio 4: Extracción de metadatos con ExifTool**
    Se proporciona un conjunto de imágenes y documentos para que extraigan sus metadatos.
 
-Este desarrollo cubre **las herramientas OSINT más importantes**, con ejemplos prácticos y ejercicios para su aplicación en el aula. ¿Quieres que amplíe algún apartado o añada más detalles? 😊
 
 ## 6. Casos Prácticos y Actividades de OSINT
 

@@ -14,7 +14,7 @@
     - Modifica la clase `Persona` para hacer la propiedad `edad` privada y añade un método `mostrarEdad()` para acceder a su valor.
 
 4. **Herencia:**
-    - Crea una clase `Estudiante` que herede de `Persona` y añade una propiedad `carrera`. Las propiedades deben incluir el modificador `open` *(vuelve a dejar la propiedad edad pública)*
+    - Crea una clase `Estudiante` que herede de `Persona` y añade una propiedad `carrera`.
     - Realiza de nuevo un override de toString() para completar la información de Estudiante *(intenta usar el resultado del método de la clase padre y completarlo)*.
 
 5. **Polimorfismo:**

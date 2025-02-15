@@ -65,7 +65,7 @@ En Kotlin, la herencia se maneja con una sintaxis clara y reglas específicas di
     * La herencia es transitiva. Si una clase C hereda de B, y B hereda de A, entonces C indirectamente hereda de A.      
 
 * **Clase Any:**     
-   * Todas las clases en Kotlin heredan de `Any`, la superclase predeterminada que proporciona métodos básicos como `equals()`, `hashCode()`, y `toString()`.    
+    * Todas las clases en Kotlin heredan de `Any`, la superclase predeterminada que proporciona métodos básicos como `equals()`, `hashCode()`, y `toString()`.    
 
 
 #### Actividad 1: Herencia de `Any`

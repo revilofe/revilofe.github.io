@@ -50,26 +50,22 @@ La herencia es un concepto clave en la Programación Orientada a Objetos (POO), 
 
 En Kotlin, la herencia se maneja con una sintaxis clara y reglas específicas diseñadas para mantener la seguridad y la claridad del código:
 
-* **Superclase y Subclase:**
-   
-   - La **superclase** (o clase base) es la clase existente de la que se deriva una nueva clase.    
-   - La **subclase** (o clase derivada) es la nueva clase creada, que hereda propiedades y métodos de la superclase.    
+* **Superclase y Subclase:**     
+    - La **superclase** (o clase base) es la clase existente de la que se deriva una nueva clase.    
+    - La **subclase** (o clase derivada) es la nueva clase creada, que hereda propiedades y métodos de la superclase.    
 
-* **Herencia Implícita:**
-    
-   - Al heredar de una superclase, la subclase obtiene automáticamente todos los campos, propiedades y métodos de dicha superclase, incluyendo aquellos heredados por la superclase de otras superclases, si las hay.    
+* **Herencia Implícita:**    
 
-* **Restricción de Herencia:** 
-    
-   - Kotlin permite una herencia simple, significando que una subclase solo puede tener una clase base directa, aunque puede implementar múltiples interfaces.   
+    - Al heredar de una superclase, la subclase obtiene automáticamente todos los campos, propiedades y métodos de dicha superclase, incluyendo aquellos heredados por la superclase de otras superclases, si las hay.    
 
-* **Herencia Transitiva:** 
-    
-   - La herencia es transitiva. Si una clase C hereda de B, y B hereda de A, entonces C indirectamente hereda de A.      
+* **Restricción de Herencia:**     
+    * Kotlin permite una herencia simple, significando que una subclase solo puede tener una clase base directa, aunque puede implementar múltiples interfaces.   
 
-* **Clase Any:**  
+* **Herencia Transitiva:**         
+    * La herencia es transitiva. Si una clase C hereda de B, y B hereda de A, entonces C indirectamente hereda de A.      
 
-   - Todas las clases en Kotlin heredan de `Any`, la superclase predeterminada que proporciona métodos básicos como `equals()`, `hashCode()`, y `toString()`.    
+* **Clase Any:**     
+   * Todas las clases en Kotlin heredan de `Any`, la superclase predeterminada que proporciona métodos básicos como `equals()`, `hashCode()`, y `toString()`.    
 
 
 #### Actividad 1: Herencia de `Any`

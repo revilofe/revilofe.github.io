@@ -133,13 +133,13 @@ nav:
          - '2.6.-Evaluación de IDEs': 'section3/u02/teoria/EDES-U2.6.-Evaluacion.md'
          - 'Práctica 2.2: Evaluación IDEs': 'section3/u02/practica/EDES-U2.-Practica002.md'
 #        - 'Práctica 2.1: Herramientas de desarrollo': 'section3/u02/practica/EDES-U2.-Practica001.md'
-#    - 'U3: Pruebas y Depuración':
-#        - 'section3/u03/index.md'
-#        - '3.1.-Pruebas': 'section3/u03/teoria/EDES-U3.1.-Pruebas.md'
-#        - '3.2.-Test unidad y TDD': 'section3/u03/teoria/EDES-U3.2.-TestUnidadYTDD.md'
-#        - '  3.2.1.-Kotest': 'section3/u03/teoria/EDES-U3.2.1.-Kotest.md'
-#        - '  3.2.2.-MockK': 'section3/u03/teoria/EDES-U3.2.2.-Mockk.md'
-#        - '3.3.-Depuración': 'section3/u03/teoria/EDES-U3.3.-Depuracion.md'
+    - 'U3: Pruebas y Depuración':
+        - 'section3/u03/index.md'
+        - '3.1.-Pruebas': 'section3/u03/teoria/EDES-U3.1.-Pruebas.md'
+        - '3.2.-Test unidad y TDD': 'section3/u03/teoria/EDES-U3.2.-TestUnidadYTDD.md'
+        - '  3.2.1.-Kotest': 'section3/u03/teoria/EDES-U3.2.1.-Kotest.md'
+        - '  3.2.2.-MockK': 'section3/u03/teoria/EDES-U3.2.2.-Mockk.md'
+        - '3.3.-Depuración': 'section3/u03/teoria/EDES-U3.3.-Depuracion.md'
     - 'U4: SCV, refactorización y documentación':
         - 'section3/u04/index.md'
         - '4.1.-Sistemas de control de versiones': 'section3/u04/teoria/EDES-U4.1.-Git_Github.md'

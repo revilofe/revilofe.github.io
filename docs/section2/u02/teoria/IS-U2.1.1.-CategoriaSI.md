@@ -1,5 +1,5 @@
 ---
-title: "UD 1 - 2.1.1 Taxonomía de incidentes"
+title: "UD 2 - 2.1.1 Taxonomía de incidentes"
 description: Taxonomía de incidentes
 summary: Taxonomía de incidentes
 authors:
@@ -15,7 +15,7 @@ tags:
 ---
 ## 2.1.1 Categorías de Seguridad de los Sistemas de Información
 
-### Categorías de Seguridad de los Sistemas de Información**
+### Categorías de Seguridad de los Sistemas de Información
 
 Desarrollo de como obtener la [categoria de seguridad de los sistemas de información](https://ens.ccn.cni.es/es/soporte-ens/real-decreto-311-2022/anexo/3)
 

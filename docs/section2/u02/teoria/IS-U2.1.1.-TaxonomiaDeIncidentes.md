@@ -1,5 +1,5 @@
 ---
-title: "UD 1 - 2.1.1 Taxonomía de incidentes"
+title: "UD 2 - 2.1.1 Taxonomía de incidentes"
 description: Taxonomía de incidentes
 summary: Taxonomía de incidentes
 authors:
@@ -18,10 +18,10 @@ tags:
 
 
 
-| Código    | Descripción                                                                                                   |
-|-----------|---------------------------------------------------------------------------------------------------------------|
-| RA2       | Analiza incidentes de ciberseguridad utilizando herramientas, mecanismos de detección y alertas de seguridad. |
-| CEa       | Se ha clasificado y definido la taxonomía de incidentes de ciberseguridad que pueden afectar a la organización.|
+| Código    | Descripción                                                                                                   |   |
+|-----------|---------------------------------------------------------------------------------------------------------------|---|
+| RA2       | Analiza incidentes de ciberseguridad utilizando herramientas, mecanismos de detección y alertas de seguridad. |   |
+| CEa       | Se ha clasificado y definido la taxonomía de incidentes de ciberseguridad que pueden afectar a la organización.|   |
 
 Durante la unidad anterior, hemos visto cómo las organizaciones pueden prepararse para prevenir los incidentes de ciberseguridad. En esta unidad, nos centraremos en la detección y clasificación de los incidentes de ciberseguridad.
 

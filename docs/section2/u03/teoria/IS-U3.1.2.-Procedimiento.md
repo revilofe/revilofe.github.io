@@ -19,6 +19,10 @@ tags:
 
 ##  3.1.2 Guía y Procedimiento para la Recopilación y Almacenamiento de Evidencias Digitales
 
+El **procedimiento de recopilación y almacenamiento de evidencias digitales** es un proceso crítico en el ámbito de la **seguridad informática** y la **investigación forense**. El presente documento proporciona una guía general para llevar a cabo este procedimiento de manera efectiva y segura. Se ha intentado extraer los principios y prácticas comunes utilizados en la industria y en el ámbito legal.
+
+### Objetivo
+
 El objetivo de este procedimiento es asegurar que la evidencia digital se recopile y almacene de manera **segura**, **preservando su integridad**, **autenticidad** y **cadena de custodia**, para su posterior análisis y posible presentación legal.
 
 ### Fase 1: Preparación para la Recopilación
@@ -29,30 +33,32 @@ El objetivo de este procedimiento es asegurar que la evidencia digital se recopi
 * Verificar la **autoridad legal** para la recopilación (por ejemplo, orden judicial, consentimiento).
 * El personal encargado debe estar **debidamente autorizado** y, si es externo, contar con un **contrato de servicio** o **autorización escrita**.
 
-**2.  Equipo y Herramientas:**     
+**2.  Herramientas:**     
 
 * Preparar un **kit de herramientas forenses** que incluya hardware y software reconocidos. Esto puede incluir:    
 
-* Dispositivos de **bloqueo de escritura (write blockers)**.
-* Dispositivos para **crear copias forenses/imágenes**.
-* **Medios de almacenamiento limpios y suficientes** para las copias.
-* Herramientas para **calcular hashes (MD5, SHA-1, SHA-256)**.
-* **Etiquetas de evidencia**.
-* **Bolsas antiestáticas** y materiales de embalaje adecuados.
-* **Cámara fotográfica o de vídeo** para documentar la escena.
-* **Formularios de cadena de custodia**.
-* **Bloc de notas y bolígrafos** para la documentación.
+   * Dispositivos de **bloqueo de escritura (write blockers)**.
+   * Dispositivos para **crear copias forenses/imágenes**.
+   * **Medios de almacenamiento limpios y suficientes** para las copias.
+   * Herramientas para **calcular hashes (MD5, SHA-1, SHA-256)**.
+   * **Etiquetas de evidencia**.
+   * **Bolsas antiestáticas** y materiales de embalaje adecuados.
+   * **Cámara fotográfica o de vídeo** para documentar la escena.
+   * **Formularios de cadena de custodia**.
+   * **Bloc de notas y bolígrafos** para la documentación.
 
 **3.  Personal:**    
 
 * Asignar **personal capacitado en forense digital** para realizar la recopilación. En algunos casos, puede ser necesario un equipo de al menos dos personas.
-* Considerar la necesidad de **testigos independientes** (fedatario público, etc.) para dar fe del proceso.
+* Considerar la necesidad de **testigos independientes** para dar fe del proceso.
 
 **4.  Planificación Previa a la Escena:**      
 
-* Revisar los **procedimientos predefinidos del laboratorio** para la preparación antes de la escena.   
+La escena hace referencia al lugar donde se encuentra la evidencia digital. Antes de llegar a la escena, es importante:
+
+* Revisar los **procedimientos predefinidos del laboratorio** para la preparación antes de la escena. Dicho de otra forma, tener un **plan de acción** antes de llegar a la escena en la que se encuentre la evidencia.
 * Comprender las **directrices policiales locales** relacionadas con la búsqueda y el decomiso de evidencia.
-* Si se conoce la presencia de equipos informáticos, considerar la necesidad de **personal con formación especializada**.
+* Si se conoce la presencia de equipos informáticos especializados, considerar la necesidad de **personal con formación especializada** en la recopilación de evidencia de estos sistemas.
 
 ### Fase 2: Recopilación de Evidencia en la Escena
 
@@ -65,7 +71,7 @@ El objetivo de este procedimiento es asegurar que la evidencia digital se recopi
    * **Detalles de todas las personas presentes**.    
    * **Fotografías y/o vídeos** de la ubicación de los equipos, conexiones, periféricos y cualquier información visible en las pantallas.   
 
-* Tomar **notas contemporáneas** de todas las observaciones y acciones realizadas, incluyendo fechas y horas.
+* Tomar **notas en el momento** de todas las observaciones y acciones realizadas, incluyendo fechas y horas.
 
 **2.  Identificación y Manejo de Dispositivos:**
 
@@ -84,7 +90,7 @@ El objetivo de este procedimiento es asegurar que la evidencia digital se recopi
 
 **4.  Adquisición de Evidencia en la Escena (si es necesario):**
 
-* Si se realiza la adquisición en la escena, utilizar **dispositivos de bloqueo de escritura**.
+* Si se realiza la adquisición en la escena, utilizar **dispositivos de bloqueo de escritura**. Es decir, no permitir que se escriba en los dispositivos durante la adquisición.
 * Crear una **copia forense (clon o imagen)** del medio de almacenamiento utilizando herramientas forenses validadas.
 * Calcular el **hash del original antes de la copia** y el **hash de la copia después de la creación** para verificar la integridad. Documentar los valores hash y el algoritmo utilizado.
 

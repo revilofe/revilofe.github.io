@@ -35,9 +35,10 @@ Se empieza una nueva unidad relacionada con la investigación de incidentes de c
 **La recopilación de evidencias**: es un proceso crítico en la gestión de incidentes de seguridad. La **integridad**, **autenticidad** y **admisibilidad** de la evidencia son fundamentales para garantizar que los resultados de la investigación sean válidos y puedan ser utilizados en un juicio. La forma en la que se realiza el proceso de recogida de esta información es clave para una gestión eficaz de un incidente, y toda entidad debe estar lista para ejecutarla en cualquier momento..
 
 Una buena **anticipación** y **entrenamiento previo** es clave para realizar una gestión eficaz de las evidencias, para lo que hace falta tener en cuenta tres pilares fundamentales: las personas, los procedimientos y la tecnología:    
-- personas: contar con personal especializado en la recopilación de evidencias, dentro de un equipo de respuesta a incidentes.
-- procedimientos: tener procedimientos claros y bien definidos para la gestión de incidentes, que incluyan la recopilación de evidencias.
-- herramientas: disponer de las herramientas necesarias para recopilar y analizar las evidencias de un incidente.
+
+* Personas: contar con personal especializado en la recopilación de evidencias, dentro de un equipo de respuesta a incidentes.
+* Procedimientos: tener procedimientos claros y bien definidos para la gestión de incidentes, que incluyan la recopilación de evidencias.
+* Herramientas: disponer de las herramientas necesarias para recopilar y analizar las evidencias de un incidente.
 
 ### 2. Metodologías de Recopilación y Almacenamiento
 
@@ -47,8 +48,8 @@ En el día a día se dan gran diversidad de incidentes, y de muchos tipos… com
 
 - Preservación: **mantener la integridad** de la evidencia.
 - Adquisición: **recoger la evidencia** de forma que sea **admitida en un juicio**.
-- Documentación: **documentar** el proceso de recogida de evidencias.
-- Análisis: **analizar** la evidencia de forma **imparcial**. an
+- Documentación: **documentar** el proceso de recogida de evidencias. Debe ser **preciso** y **detallado**.
+- Análisis: **analizar** la evidencia de forma **imparcial**, con el objetivo de **extraer información**.
 - Presentación: **presentar** la evidencia de forma **clara y comprensible**.
 
 Existen distintas guías y estándares que proporcionan pautas para la recopilación y almacenamiento de evidencias digitales. De las distintas guías que existen, la **RFC 3227** es un estándar ampliamente usado.
@@ -156,10 +157,11 @@ Más que una lista de herramientas, la RFC 3227 proporciona una serie de **pauta
 * Herramientas externas al sistema, para evitar que hayan podido ser comprometidas.
 * Herramientas que alteren lo mínimo posible el escenario (no GUI, evitar uso excesivo de memoria).
 * Deben estar ubicados en un dispositivo de solo lectura. (CDROM, USB).
-* Tener un kit básico de herramientas según S.O, que incluyan:
-   * listar y examinar procesos.
-   * examinar el estado del sistema.
-   * realizar copias bit a bit.
+* Tener un kit básico de herramientas según S.O, que incluyan:    
+
+   * Listar y examinar procesos.
+   * Examinar el estado del sistema.
+   * Realizar copias bit a bit.
 
 
 ### 4. Ejemplo de recopilación de evidencias
@@ -167,26 +169,30 @@ A continuación se muestra un ejemplo muy básico de recopilación de evidencias
 
 **INCIDENTE**: Se ha detectado que el servidor web ha dejado de responder y se ha detectado un tráfico anómalo en la red. Se concluye que el servidor web ha sido atacado. Se ha detectado un ataque de denegación de servicio (DoS)
 
-Tras detectar el ataque, se procede a la **recopilación de evidencias**:
-- Se ha identificado el servidor web afectado y se ha aislado de la red. 
-- Se ha decidido recopilar evidencia de la memoria, del tráfico de red y del disco duro del servidor web.
+Tras detectar el ataque, se procede a la **recopilación de evidencias**:     
 
-Se ha utilizado: 
-- La herramienta `volatility` para la recopilación de evidencias que se encuentran en la memoria.
-- También se ha utilizado `wireshark` para la recopilación de tráfico de red.
-- Por último, para la recopilación de evidencias del disco duro se ha utilizado `dd`, creando una imagen del disco duro.
+- Se ha identificado el servidor web afectado y se ha aislado de la red.    
+- Se ha decidido recopilar evidencia de la memoria, del tráfico de red y del disco duro del servidor web.    
 
+Se ha utilizado:     
+
+- La herramienta `volatility` para la recopilación de evidencias que se encuentran en la memoria.    
+- También se ha utilizado `wireshark` para la recopilación de tráfico de red.    
+- Por último, para la recopilación de evidencias del disco duro se ha utilizado `dd`, creando una imagen del disco duro.    
+ 
 En cuanto al **almacenamiento de evidencias**:
-- Se ha almacenado la evidencia de la memoria en un fichero llamado `memoria.img`. 
-- La evidencia del tráfico de red se ha almacenado en un fichero llamado `trafico.pcap`.
-- La evidencia del disco duro en un fichero llamado `disco.img`. 
-- Estos ficheros se han almacenado en un dispositivo de almacenamiento seguro, con un sistema de detección de intentos de acceso no autorizados. 
-- Se ha etiquetado el dispositivo de almacenamiento con la información de la evidencia almacenada.
 
-En cuanto a la **documentado la cadena de custodia**, ha quedado constancia de
-- Quién ha descubierto y recolectado la evidencia.
-- Quién ha manejado la evidencia.
-- Quién ha custodiado la evidencia.
+- Se ha almacenado la evidencia de la memoria en un fichero llamado `memoria.img`.    
+- La evidencia del tráfico de red se ha almacenado en un fichero llamado `trafico.pcap`.    
+- La evidencia del disco duro en un fichero llamado `disco.img`.    
+- Estos ficheros se han almacenado en un dispositivo de almacenamiento seguro, con un sistema de detección de intentos de acceso no autorizados.    
+- Se ha etiquetado el dispositivo de almacenamiento con la información de la evidencia almacenada.    
+
+En cuanto a la **documentado la cadena de custodia**, ha quedado constancia de:    
+
+- Quién ha descubierto y recolectado la evidencia.    
+- Quién ha manejado la evidencia.    
+- Quién ha custodiado la evidencia.    
 
 De esta forma se ha recopilado evidencia de la memoria, del tráfico de red y del disco duro junto con la documentación de los pasos seguidos y la cadena de custodia, se ha recopilado evidencia de forma efectiva.
 

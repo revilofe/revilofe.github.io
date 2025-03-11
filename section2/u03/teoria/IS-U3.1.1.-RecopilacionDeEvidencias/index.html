@@ -5020,18 +5020,20 @@
 <h3 id="1-recopilacion-de-evidencias">1. Recopilación de evidencias<a class="headerlink" href="#1-recopilacion-de-evidencias" title="Permanent link">&para;</a></h3>
 <p><strong>Evidencias</strong>: son los <strong>datos</strong> que se recopilan durante la investigación de un <abbr title="Evento que pone en peligro la confidencialidad, integridad o disponibilidad de los activos de una organización. Los incidentes de seguridad pueden ser causados por errores humanos, fallos de software, ataques maliciosos, desastres naturales, etc.">incidente de seguridad</abbr>. Estos datos pueden ser de <strong>distintos tipos</strong> y <strong>procedencias</strong>, como logs, registros de eventos, capturas de red, imágenes de disco, etc. Esta información, por sí misma, o en combinación con otra información, se utiliza para <em>probar algo</em>.</p>
 <p><strong>La recopilación de evidencias</strong>: es un proceso crítico en la gestión de incidentes de seguridad. La <strong>integridad</strong>, <strong>autenticidad</strong> y <strong>admisibilidad</strong> de la evidencia son fundamentales para garantizar que los resultados de la investigación sean válidos y puedan ser utilizados en un juicio. La forma en la que se realiza el proceso de recogida de esta información es clave para una gestión eficaz de un incidente, y toda entidad debe estar lista para ejecutarla en cualquier momento..</p>
-<p>Una buena <strong>anticipación</strong> y <strong>entrenamiento previo</strong> es clave para realizar una gestión eficaz de las evidencias, para lo que hace falta tener en cuenta tres pilares fundamentales: las personas, los procedimientos y la tecnología:  <br />
-- personas: contar con personal especializado en la recopilación de evidencias, dentro de un equipo de respuesta a incidentes.
-- procedimientos: tener procedimientos claros y bien definidos para la gestión de incidentes, que incluyan la recopilación de evidencias.
-- herramientas: disponer de las herramientas necesarias para recopilar y analizar las evidencias de un incidente.</p>
+<p>Una buena <strong>anticipación</strong> y <strong>entrenamiento previo</strong> es clave para realizar una gestión eficaz de las evidencias, para lo que hace falta tener en cuenta tres pilares fundamentales: las personas, los procedimientos y la tecnología:    </p>
+<ul>
+<li>Personas: contar con personal especializado en la recopilación de evidencias, dentro de un equipo de respuesta a incidentes.</li>
+<li>Procedimientos: tener procedimientos claros y bien definidos para la gestión de incidentes, que incluyan la recopilación de evidencias.</li>
+<li>Herramientas: disponer de las herramientas necesarias para recopilar y analizar las evidencias de un incidente.</li>
+</ul>
 <h3 id="2-metodologias-de-recopilacion-y-almacenamiento">2. Metodologías de Recopilación y Almacenamiento<a class="headerlink" href="#2-metodologias-de-recopilacion-y-almacenamiento" title="Permanent link">&para;</a></h3>
 <p>En el día a día se dan gran diversidad de incidentes, y de muchos tipos… como hemos visto hasta ahora. No obstante, una vez que se ha detectado un incidente, es necesario preservar y adquirir las evidencias de forma adecuada. Este primer paso forma parte del un conjunto de pasos que se deben seguir para llevar a cabo una investigación forense digital.</p>
 <p><img alt="" src="../assets/IS-U311-RecopilacionDeEvidencias1.png" /></p>
 <ul>
 <li>Preservación: <strong>mantener la integridad</strong> de la evidencia.</li>
 <li>Adquisición: <strong>recoger la evidencia</strong> de forma que sea <strong>admitida en un juicio</strong>.</li>
-<li>Documentación: <strong>documentar</strong> el proceso de recogida de evidencias.</li>
-<li>Análisis: <strong>analizar</strong> la evidencia de forma <strong>imparcial</strong>. an</li>
+<li>Documentación: <strong>documentar</strong> el proceso de recogida de evidencias. Debe ser <strong>preciso</strong> y <strong>detallado</strong>.</li>
+<li>Análisis: <strong>analizar</strong> la evidencia de forma <strong>imparcial</strong>, con el objetivo de <strong>extraer información</strong>.</li>
 <li>Presentación: <strong>presentar</strong> la evidencia de forma <strong>clara y comprensible</strong>.</li>
 </ul>
 <p>Existen distintas guías y estándares que proporcionan pautas para la recopilación y almacenamiento de evidencias digitales. De las distintas guías que existen, la <strong>RFC 3227</strong> es un estándar ampliamente usado.</p>
@@ -5127,31 +5129,43 @@
 <li>Herramientas externas al sistema, para evitar que hayan podido ser comprometidas.</li>
 <li>Herramientas que alteren lo mínimo posible el escenario (no GUI, evitar uso excesivo de memoria).</li>
 <li>Deben estar ubicados en un dispositivo de solo lectura. (CDROM, USB).</li>
-<li>Tener un kit básico de herramientas según S.O, que incluyan:</li>
-<li>listar y examinar procesos.</li>
-<li>examinar el estado del sistema.</li>
-<li>realizar copias bit a bit.</li>
+<li>
+<p>Tener un kit básico de herramientas según S.O, que incluyan:    </p>
+</li>
+<li>
+<p>Listar y examinar procesos.</p>
+</li>
+<li>Examinar el estado del sistema.</li>
+<li>Realizar copias bit a bit.</li>
 </ul>
 <h3 id="4-ejemplo-de-recopilacion-de-evidencias">4. Ejemplo de recopilación de evidencias<a class="headerlink" href="#4-ejemplo-de-recopilacion-de-evidencias" title="Permanent link">&para;</a></h3>
 <p>A continuación se muestra un ejemplo muy básico de recopilación de evidencias. </p>
 <p><strong>INCIDENTE</strong>: Se ha detectado que el servidor web ha dejado de responder y se ha detectado un tráfico anómalo en la red. Se concluye que el servidor web ha sido atacado. Se ha detectado un <abbr title="Ataque en el que los atacantes intentan saturar los recursos de un sistema o una red para que deje de funcionar correctamente. Los ataques DoS pueden ser utilizados para interrumpir los servicios, causar daños económicos, etc.">ataque de denegación de servicio</abbr> (<abbr title="Ataque de Denegación de Servicio. Es un ataque en el que los atacantes intentan saturar los recursos de un sistema o una red para que deje de funcionar correctamente. Los ataques DoS pueden ser utilizados para interrumpir los servicios, causar daños económicos, etc.">DoS</abbr>)</p>
-<p>Tras detectar el ataque, se procede a la <strong>recopilación de evidencias</strong>:
-- Se ha identificado el servidor web afectado y se ha aislado de la red. 
-- Se ha decidido recopilar evidencia de la memoria, del tráfico de red y del disco duro del servidor web.</p>
-<p>Se ha utilizado: 
-- La herramienta <code>volatility</code> para la recopilación de evidencias que se encuentran en la memoria.
-- También se ha utilizado <code>wireshark</code> para la recopilación de tráfico de red.
-- Por último, para la recopilación de evidencias del disco duro se ha utilizado <code>dd</code>, creando una imagen del disco duro.</p>
-<p>En cuanto al <strong>almacenamiento de evidencias</strong>:
-- Se ha almacenado la evidencia de la memoria en un fichero llamado <code>memoria.img</code>. 
-- La evidencia del tráfico de red se ha almacenado en un fichero llamado <code>trafico.pcap</code>.
-- La evidencia del disco duro en un fichero llamado <code>disco.img</code>. 
-- Estos ficheros se han almacenado en un dispositivo de almacenamiento seguro, con un sistema de detección de intentos de acceso no autorizados. 
-- Se ha etiquetado el dispositivo de almacenamiento con la información de la evidencia almacenada.</p>
-<p>En cuanto a la <strong>documentado la cadena de custodia</strong>, ha quedado constancia de
-- Quién ha descubierto y recolectado la evidencia.
-- Quién ha manejado la evidencia.
-- Quién ha custodiado la evidencia.</p>
+<p>Tras detectar el ataque, se procede a la <strong>recopilación de evidencias</strong>:     </p>
+<ul>
+<li>Se ha identificado el servidor web afectado y se ha aislado de la red.    </li>
+<li>Se ha decidido recopilar evidencia de la memoria, del tráfico de red y del disco duro del servidor web.    </li>
+</ul>
+<p>Se ha utilizado:     </p>
+<ul>
+<li>La herramienta <code>volatility</code> para la recopilación de evidencias que se encuentran en la memoria.    </li>
+<li>También se ha utilizado <code>wireshark</code> para la recopilación de tráfico de red.    </li>
+<li>Por último, para la recopilación de evidencias del disco duro se ha utilizado <code>dd</code>, creando una imagen del disco duro.    </li>
+</ul>
+<p>En cuanto al <strong>almacenamiento de evidencias</strong>:</p>
+<ul>
+<li>Se ha almacenado la evidencia de la memoria en un fichero llamado <code>memoria.img</code>.    </li>
+<li>La evidencia del tráfico de red se ha almacenado en un fichero llamado <code>trafico.pcap</code>.    </li>
+<li>La evidencia del disco duro en un fichero llamado <code>disco.img</code>.    </li>
+<li>Estos ficheros se han almacenado en un dispositivo de almacenamiento seguro, con un sistema de detección de intentos de acceso no autorizados.    </li>
+<li>Se ha etiquetado el dispositivo de almacenamiento con la información de la evidencia almacenada.    </li>
+</ul>
+<p>En cuanto a la <strong>documentado la cadena de custodia</strong>, ha quedado constancia de:    </p>
+<ul>
+<li>Quién ha descubierto y recolectado la evidencia.    </li>
+<li>Quién ha manejado la evidencia.    </li>
+<li>Quién ha custodiado la evidencia.    </li>
+</ul>
 <p>De esta forma se ha recopilado evidencia de la memoria, del tráfico de red y del disco duro junto con la documentación de los pasos seguidos y la cadena de custodia, se ha recopilado evidencia de forma efectiva.</p>
 <h3 id="5-conclusiones">5. Conclusiones<a class="headerlink" href="#5-conclusiones" title="Permanent link">&para;</a></h3>
 <p>Como hemos visto, la recopilación de evidencias es un proceso fundamental en la gestión de incidentes de seguridad. La RFC 3227 proporciona una serie de pautas para la recopilación de evidencias, que deben ser seguidas para garantizar que la recopilación de evidencias se realiza de forma efectiva. El almacenamiento de evidencias también es un proceso fundamental, y la RFC 3227 proporciona una serie de pautas para el almacenamiento de evidencias, que deben ser seguidas para garantizar que las evidencias se almacenan de forma segura. 

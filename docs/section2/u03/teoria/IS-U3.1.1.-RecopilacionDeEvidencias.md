@@ -202,8 +202,8 @@ La cadena de custodia es un aspecto fundamental en la recopilación y almacenami
 Por último, es importante tener en cuenta que la recopilación y almacenamiento de evidencias debe ser realizada por personal cualificado, que siga las pautas proporcionadas por la RFC 3227. 
 
 
-#### Bibliografía
+### 6. Bibliografía
 
-*[https://www.incibe-cert.es/blog/rfc3227](https://www.incibe-cert.es/blog/rfc3227)*
-*[https://www.ietf.org/rfc/rfc3227.txt](https://www.ietf.org/rfc/rfc3227.txt)*
+* [https://www.incibe-cert.es/blog/rfc3227](https://www.incibe-cert.es/blog/rfc3227)
+* [https://www.ietf.org/rfc/rfc3227.txt](https://www.ietf.org/rfc/rfc3227.txt)*
 

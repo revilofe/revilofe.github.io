@@ -29,11 +29,11 @@ El desarrollo de software es un proceso que conlleva una serie de pasos. Genér
 - **Análisis del problema**: Consiste en ver y comprender **qué** tarea se quiere resolver. Es imprescindible partir de una especificación de requisitos lo más exacta y detallada posible. El proceso de comprensión y simplificación del mundo real se llama análisis del problema y lo que se obtiene tras el análisis es el modelo.
 - **Diseño de una solución**: Consiste en **cómo** se va a resolver el problema, suele consistir en dividir el problema principal en problemas más sencillos cuya combinación resuelve la tarea final.
 - **Codificación**: Una vez definidos los algoritmos, los traducimos al lenguaje de programación que tengamos que usar. Un lenguaje de programación es un conjunto de símbolos y reglas sintácticas especialmente diseñado para transmitir ordenes al ordenador (C, Java, Pascal…).
-- **Pruebas**: Servirán para identificar y corregir posibles errores, tendremos varios tipos de errores:
+- **Pruebas**: Servirán para identificar y corregir posibles errores, tendremos varios tipos de errores:     
    - Sintácticos: Errores sintácticos, producidos por un mal uso del lenguaje.
    - Semánticos: Lo que está equivocado es la solución que yo he ideado. (Durante la ejecución p. ej: división entre 0, o de lógica p ej: mal diseño algoritmo.)
 - **Despliegue**: una vez que el programa está terminado, se debe implantar en el dispositivo o infraestructura del usuario final sobre la que se ejecutará.
-- **Mantenimiento**: Hay tres tipos de mantenimiento:
+- **Mantenimiento**: Hay tres tipos de mantenimiento:    
    - Correctivo: Sirve para corregir posibles errores o fallos del programa.
    - Perfectivo: Se usa para perfeccionarlo.
    - Adaptativo: Sirve para adaptarlo a nuevas situaciones.
@@ -41,19 +41,35 @@ El desarrollo de software es un proceso que conlleva una serie de pasos. Genér
 ## 2. Modelos de desarrollo de software
 Los modelos de desarrollo de software son marcos metodológicos utilizados para estructurar, planificar y controlar el proceso de desarrollo de un sistema informático. Hay varios modelos, y cada uno tiene sus propias características, ventajas y desventajas. 
 
+![EDES-U1-ProcesoDesarrollo.png](assets/EDES-U1-ProcesoDesarrollo.png)
+
 ### 2.1. Modelo en cascada 
-Consiste en dividir el proceso de desarrollo en fases, cada una de las cuales se ejecuta una vez que la anterior ha finalizado. El modelo en cascada es un modelo secuencial, es decir, las fases se ejecutan una tras otra.     
-- Sin realimentación: es el modelo de vida clásico del software. Es prácticamente imposible que se pueda utilizar, ya que requiere conocer de antemano todos los requisitos del sistema. Sólo es aplicable a pequeños desarrollos, ya que las etapas pasan de una a otra sin retorno posible. (se presupone que no habrá errores ni variaciones del software).
-- Con realimentación: es uno de los modelos más utilizados. Proviene del modelo anterior, pero se introduce una realimentación entre etapas, de forma que podamos volver atrás en cualquier momento para corregir, modificar o depurar algún aspecto. No obstante, si se prevén muchos cambios durante el desarrollo no es el modelo más idóneo. Es el modelo perfecto si el proyecto es rígido (pocos cambios, poco evolutivo) y los requisitos están claros.  
+Consiste en dividir el proceso de desarrollo en fases, cada una de las cuales se ejecuta una vez que la anterior ha finalizado. El modelo en cascada es un modelo secuencial, es decir, **las fases se ejecutan una tras otra**.     
+
+- Sin realimentación: es el modelo de vida clásico del software. Es prácticamente imposible que se pueda utilizar, ya que requiere conocer de antemano todos los requisitos del sistema. Sólo es aplicable a pequeños desarrollos, ya que las etapas pasan de una a otra sin retorno posible. (se presupone que no habrá errores ni variaciones del software).    
+
+- Con realimentación: es uno de los modelos más utilizados. Proviene del modelo anterior, pero se introduce una realimentación entre etapas, de forma que podamos volver atrás en cualquier momento para corregir, modificar o depurar algún aspecto. No obstante, si se preveén muchos cambios durante el desarrollo no es el modelo más idóneo. Es el modelo perfecto si el proyecto es rígido (pocos cambios, poco evolutivo) y los requisitos están claros.  
 
 ### 2.2. Modelo evolutivo
-Tiene en cuenta la naturaleza cambiante y evolutiva del software. La idea detrás de este modelo es el desarrollo y entrega de partes funcionales del sistema de forma temprana, exponerla a los comentarios del usuario, refinarla en N versiones hasta que se desarrolle el sistema adecuado. Una ventaja de este modelo es que se obtiene una rápida realimentación del usuario, ya que las fases de especificación, desarrollo y pruebas se ejecutan en cada iteración no necesariamente en cascada. Destacando los metodologías aǵiles, **XP (eXtreme Programming)** y frameworks como **Scrum** como su máximo exponente. Destacan en estos modelos el carácter iterativo e incremental del proceso seguido:      
+Tiene en cuenta la naturaleza cambiante y evolutiva del software. La idea detrás de este modelo es:    
 
-- En un desarrollo iterativo e incremental el proyecto se planifica en diversos bloques temporales (en el caso de Scrum de un mes natural o hasta de dos semanas, si así se necesita) llamados iteraciones. Las iteraciones se pueden entender como miniproyectos: en todas las iteraciones se repite un proceso de trabajo similar (de ahí el nombre “iterativo”) para proporcionar un resultado parcial, pero funcional, sobre producto final, de manera que el cliente pueda obtener los beneficios del proyecto de forma incremental. Para ello, cada requisito se debe completar en una única iteración: el equipo debe realizar todas las tareas necesarias para completarlo (incluyendo pruebas y documentación) y que esté preparado para ser entregado al cliente con el mínimo esfuerzo necesario. De esta manera no se deja para el final del proyecto ninguna actividad arriesgada relacionada con la entrega de requisitos.   
-- En cada iteración el equipo evoluciona el producto de dos formas:     
-    - hace una entrega incremental: a partir de los resultados completados en las iteraciones anteriores, añade nuevos objetivos/requisitos.    
-    - hace una entrega iterativa:  partir de los resultados completados en las iteraciones anteriores, y basándose en la retroalimentación que le ha dado el usuario final sobre las funcionalidades ya entregadas, se revisan para mejorarlas y adaptarlas a las necesidades de estos.     
+- El desarrollo y entrega de partes funcionales del sistema de forma temprana.   
+- Exponer estos desarrollos a los comentarios del usuario/cliente.    
+- Refinarla en N versiones hasta que se desarrolle el sistema adecuado.     
+
+Una ventaja de este modelo es que se obtiene una rápida realimentación del usuario, ya que las fases de especificación, desarrollo y pruebas se ejecutan en cada iteración no necesariamente en cascada. 
+
+Destaca en estos modelos el carácter **iterativo** e **incremental** del proceso seguido:      
+
+- En un desarrollo iterativo e incremental el proyecto se planifica en diversos bloques temporales (en el caso de Scrum de un mes natural o hasta de dos semanas, si así se necesita) llamados iteraciones. Las iteraciones se pueden entender como miniproyectos: en todas las iteraciones se repite un proceso de trabajo similar (de ahí el nombre “iterativo”) para proporcionar un resultado parcial, pero funcional, sobre producto final, de manera que el cliente pueda obtener los beneficios del proyecto de forma incremental. Para ello, cada requisito se debe completar en una única iteración: el equipo debe realizar todas las tareas necesarias para completarlo (incluyendo pruebas y documentación) y asegurar que esté preparado para ser entregado al cliente con el mínimo esfuerzo necesario. De esta manera no se deja para el final del proyecto ninguna actividad arriesgada relacionada con la entrega de requisitos.    
+
+- En cada iteración el equipo evoluciona el producto de dos formas, haciendo una entrega:     
+    - **incremental**: a partir de los resultados completados en las iteraciones anteriores, añade nuevos objetivos/requisitos.      
+    - **iterativa**:  partir de los resultados completados en las iteraciones anteriores, y basándose en la retroalimentación que le ha dado el usuario final sobre las funcionalidades ya entregadas, se revisan para mejorarlas y adaptarlas a las necesidades de estos.          
     - Un aspecto fundamental para guiar el desarrollo iterativo e incremental es la priorización de los objetivos/requisitos en función del valor que aportan al cliente.     
+
+
+Destacamos las metodologías aǵiles, **XP (eXtreme Programming)** y frameworks como **Scrum** como su máximo exponente.
 
 ## 3. Scrum: qué es y cómo funciona este marco de trabajo
 

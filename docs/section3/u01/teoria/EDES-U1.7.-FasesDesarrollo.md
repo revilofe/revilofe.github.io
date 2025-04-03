@@ -15,11 +15,13 @@ tags:
 ---
 # Fases del proceso de desarrollo del software
 
-Entendemos por el Proceso de Desarrollo de Software el conjunto de fases o pasos que ocurren desde que se concibe una idea hasta que ese software está implantado en un dispositivo y funcionando.
+Antes de nada, definamos lo siguiente:
 
-Ingeniera del software: se define como la ciencia y el arte de especificar, diseñar y desarrollar programas, documentación y procedimientos operativos.
+- **Ingeniera del software**: se define como la ciencia y el arte de especificar, diseñar y desarrollar programas, documentación y procedimientos operativos.    
+- **Proceso de Desarrollo de Software**: El conjunto de fases o pasos que ocurren desde que se concibe una idea hasta que ese software está implantado en un dispositivo y funcionando*.      
+  
 
-El proceso de desarrollo, que en un principio puede parecer una tarea simple, consta de una serie de pasos de obligado cumplimiento, pues sólo así podremos garantizar que los programas creados son eficientes, fiables, seguros y responden a las necesidades de los usuarios finales (aquellos que van a utilizar el programa). Esta última parte, la de responder a las necesidades finales de los usuarios no es sencillo cumplir con ella, y da lugar a multiples problemas durante este proceso de desarrollo que impactan negativamente en el trabajo y provocan al fracaso o directamente cancelación de los proyectos .
+El proceso de desarrollo, que en un principio puede parecer una tarea simple, consta de una serie de pasos de obligado cumplimiento, pues sólo así podremos garantizar que los programas creados son eficientes, fiables, seguros y responden a las necesidades de los usuarios finales (aquellos que van a utilizar el programa). Esta última parte, la de responder a las necesidades finales de los usuarios, es compleja de conseguir y da lugar a multiples problemas durante este proceso de desarrollo, lo que provoca, en muchos casos, el fracaso o directamente cancelación de los proyectos.
 
 El desarrollo de software es un proceso que conlleva una serie de pasos. Genéricamente, estos pasos son los siguientes:
 

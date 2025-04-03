@@ -5342,9 +5342,12 @@
 
 
 <h1 id="fases-del-proceso-de-desarrollo-del-software">Fases del proceso de desarrollo del software<a class="headerlink" href="#fases-del-proceso-de-desarrollo-del-software" title="Permanent link">&para;</a></h1>
-<p>Entendemos por el Proceso de Desarrollo de Software el conjunto de fases o pasos que ocurren desde que se concibe una idea hasta que ese software está implantado en un dispositivo y funcionando.</p>
-<p>Ingeniera del software: se define como la ciencia y el arte de especificar, diseñar y desarrollar programas, documentación y procedimientos operativos.</p>
-<p>El proceso de desarrollo, que en un principio puede parecer una tarea simple, consta de una serie de pasos de obligado cumplimiento, pues sólo así podremos garantizar que los programas creados son eficientes, fiables, seguros y responden a las necesidades de los usuarios finales (aquellos que van a utilizar el programa). Esta última parte, la de responder a las necesidades finales de los usuarios no es sencillo cumplir con ella, y da lugar a multiples problemas durante este proceso de desarrollo que impactan negativamente en el trabajo y provocan al fracaso o directamente cancelación de los proyectos .</p>
+<p>Antes de nada, definamos lo siguiente:</p>
+<ul>
+<li><strong>Ingeniera del software</strong>: se define como la ciencia y el arte de especificar, diseñar y desarrollar programas, documentación y procedimientos operativos.    </li>
+<li><strong>Proceso de Desarrollo de Software</strong>: El conjunto de fases o pasos que ocurren desde que se concibe una idea hasta que ese software está implantado en un dispositivo y funcionando*.      </li>
+</ul>
+<p>El proceso de desarrollo, que en un principio puede parecer una tarea simple, consta de una serie de pasos de obligado cumplimiento, pues sólo así podremos garantizar que los programas creados son eficientes, fiables, seguros y responden a las necesidades de los usuarios finales (aquellos que van a utilizar el programa). Esta última parte, la de responder a las necesidades finales de los usuarios, es compleja de conseguir y da lugar a multiples problemas durante este proceso de desarrollo, lo que provoca, en muchos casos, el fracaso o directamente cancelación de los proyectos.</p>
 <p>El desarrollo de software es un proceso que conlleva una serie de pasos. Genéricamente, estos pasos son los siguientes:</p>
 <h2 id="1-fases-del-desarrollo-del-software">1. Fases del desarrollo del Software<a class="headerlink" href="#1-fases-del-desarrollo-del-software" title="Permanent link">&para;</a></h2>
 <ul>
@@ -5352,14 +5355,18 @@
 <li><strong>Análisis del problema</strong>: Consiste en ver y comprender <strong>qué</strong> tarea se quiere resolver. Es imprescindible partir de una especificación de requisitos lo más exacta y detallada posible. El proceso de comprensión y simplificación del mundo real se llama análisis del problema y lo que se obtiene tras el análisis es el modelo.</li>
 <li><strong>Diseño de una solución</strong>: Consiste en <strong>cómo</strong> se va a resolver el problema, suele consistir en dividir el problema principal en problemas más sencillos cuya combinación resuelve la tarea final.</li>
 <li><strong>Codificación</strong>: Una vez definidos los algoritmos, los traducimos al lenguaje de programación que tengamos que usar. Un lenguaje de programación es un conjunto de símbolos y reglas sintácticas especialmente diseñado para transmitir ordenes al ordenador (C, Java, Pascal…).</li>
-<li><strong>Pruebas</strong>: Servirán para identificar y corregir posibles errores, tendremos varios tipos de errores:     </li>
-<li>Sintácticos: Errores sintácticos, producidos por un mal uso del lenguaje.</li>
-<li>Semánticos: Lo que está equivocado es la solución que yo he ideado. (Durante la ejecución p. ej: división entre 0, o de lógica p ej: mal diseño algoritmo.)</li>
+<li><strong>Pruebas</strong>: Servirán para identificar y corregir posibles errores, tendremos varios tipos de errores:     <ul>
+<li>Sintácticos: Errores sintácticos, producidos por un mal uso del lenguaje.     </li>
+<li>Semánticos: Lo que está equivocado es la solución que yo he ideado. (Durante la ejecución p. ej: división entre 0, o de lógica p ej: mal diseño algoritmo.)     </li>
+</ul>
+</li>
 <li><strong>Despliegue</strong>: una vez que el programa está terminado, se debe implantar en el dispositivo o infraestructura del usuario final sobre la que se ejecutará.</li>
-<li><strong>Mantenimiento</strong>: Hay tres tipos de mantenimiento:    </li>
-<li>Correctivo: Sirve para corregir posibles errores o fallos del programa.</li>
-<li>Perfectivo: Se usa para perfeccionarlo.</li>
-<li>Adaptativo: Sirve para adaptarlo a nuevas situaciones.</li>
+<li><strong>Mantenimiento</strong>: Hay tres tipos de mantenimiento:    <ul>
+<li>Correctivo: Sirve para corregir posibles errores o fallos del programa.    </li>
+<li>Perfectivo: Se usa para perfeccionarlo.    </li>
+<li>Adaptativo: Sirve para adaptarlo a nuevas situaciones.    </li>
+</ul>
+</li>
 </ul>
 <h2 id="2-modelos-de-desarrollo-de-software">2. Modelos de desarrollo de software<a class="headerlink" href="#2-modelos-de-desarrollo-de-software" title="Permanent link">&para;</a></h2>
 <p>Los modelos de desarrollo de software son marcos metodológicos utilizados para estructurar, planificar y controlar el proceso de desarrollo de un sistema informático. Hay varios modelos, y cada uno tiene sus propias características, ventajas y desventajas. </p>
@@ -5368,10 +5375,10 @@
 <p>Consiste en dividir el proceso de desarrollo en fases, cada una de las cuales se ejecuta una vez que la anterior ha finalizado. El modelo en cascada es un modelo secuencial, es decir, <strong>las fases se ejecutan una tras otra</strong>.     </p>
 <ul>
 <li>
-<p>Sin realimentación: es el modelo de vida clásico del software. Es prácticamente imposible que se pueda utilizar, ya que requiere conocer de antemano todos los requisitos del sistema. Sólo es aplicable a pequeños desarrollos, ya que las etapas pasan de una a otra sin retorno posible. (se presupone que no habrá errores ni variaciones del software).    </p>
+<p><strong>Sin realimentación</strong>: es el modelo de vida clásico del software. Es prácticamente imposible que se pueda utilizar, ya que requiere conocer de antemano todos los requisitos del sistema. Sólo es aplicable a pequeños desarrollos, ya que las etapas pasan de una a otra sin retorno posible. (se presupone que no habrá errores ni variaciones del software).    </p>
 </li>
 <li>
-<p>Con realimentación: es uno de los modelos más utilizados. Proviene del modelo anterior, pero se introduce una realimentación entre etapas, de forma que podamos volver atrás en cualquier momento para corregir, modificar o depurar algún aspecto. No obstante, si se preveén muchos cambios durante el desarrollo no es el modelo más idóneo. Es el modelo perfecto si el proyecto es rígido (pocos cambios, poco evolutivo) y los requisitos están claros.  </p>
+<p><strong>Con realimentación</strong>: es uno de los modelos más utilizados. Proviene del modelo anterior, pero se introduce una realimentación entre etapas, de forma que podamos volver atrás en cualquier momento para corregir, modificar o depurar algún aspecto. No obstante, si se preveén muchos cambios durante el desarrollo no es el modelo más idóneo. Es el modelo perfecto si el proyecto es rígido (pocos cambios, poco evolutivo) y los requisitos están claros.  </p>
 </li>
 </ul>
 <h3 id="22-modelo-evolutivo">2.2. Modelo evolutivo<a class="headerlink" href="#22-modelo-evolutivo" title="Permanent link">&para;</a></h3>

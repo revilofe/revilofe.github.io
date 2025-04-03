@@ -162,11 +162,23 @@ Los equipos de desarrollo no tienen sub-equipos o especialistas. La finalidad de
 
 ### 3.4. Los eventos del equipo Scrum
 
+El desarrollo iterativo se realiza a través de un conjunto de iteraciones, cada iteración es un sprint, y cada sprint contiene los siguientes eventos Scrum:    
+
+- Sprint Planning.   
+- Daily Meeting.   
+- Sprint Review.   
+- Sprint Retrospective.     
+- Refinamiento o grooming.    
+
+Cada una de estas reuniones tiene un objetivo claro y un tiempo definido. En la siguiente tabla se puede ver el tiempo (timebox) estimado para cada evento, según la duración del sprint.
+
+
 ![eventos del equipo Scrum](./assets/EDES-U1-ScrumTabla.png)
 
-Este timebox refleja las diferentes ceremonias Scrum y su peso en horas según se avanza en semanas de trabajo. El desarrollo iterativo se realiza en un sprint que contiene los siguientes eventos Scrum: Sprint Planning, Daily Meeting, Sprint Review, Sprint Retrospective y Grooming.
 
-Antes de profundizar en los diferentes eventos, es importante definir qué es un sprint en Scrum. El sprint es el corazón de este marco de trabajo, el contenedor de los demás hitos del proceso. Todo lo que ocurre en una iteración para entregar valor está dentro de un sprint. La duración máxima es de un mes, el tiempo se determina en base al nivel de comunicación que el cliente quiere tener con el equipo. **Los sprints largos pueden hacer que se pierda feedback valioso** del cliente y poner en peligro el proyecto.
+Antes de profundizar en los diferentes eventos/ceremonias, es importante definir qué es un sprint en Scrum. 
+
+El sprint es el corazón de este marco de trabajo, el contenedor de los demás hitos del proceso. Todo lo que ocurre en una iteración para entregar valor está dentro de un sprint. La duración máxima es de un mes, el tiempo se determina en base al nivel de comunicación que el cliente quiere tener con el equipo. **Los sprints largos pueden hacer que se pierda feedback valioso** del cliente y poner en peligro el proyecto.
 
 #### 3.4.1. Sprint Planning
 

@@ -32,13 +32,13 @@ El desarrollo de software es un proceso que conlleva una serie de pasos. Genér
 - **Diseño de una solución**: Consiste en **cómo** se va a resolver el problema, suele consistir en dividir el problema principal en problemas más sencillos cuya combinación resuelve la tarea final.
 - **Codificación**: Una vez definidos los algoritmos, los traducimos al lenguaje de programación que tengamos que usar. Un lenguaje de programación es un conjunto de símbolos y reglas sintácticas especialmente diseñado para transmitir ordenes al ordenador (C, Java, Pascal…).
 - **Pruebas**: Servirán para identificar y corregir posibles errores, tendremos varios tipos de errores:     
-   - Sintácticos: Errores sintácticos, producidos por un mal uso del lenguaje.
-   - Semánticos: Lo que está equivocado es la solución que yo he ideado. (Durante la ejecución p. ej: división entre 0, o de lógica p ej: mal diseño algoritmo.)
+    - Sintácticos: Errores sintácticos, producidos por un mal uso del lenguaje.     
+    - Semánticos: Lo que está equivocado es la solución que yo he ideado. (Durante la ejecución p. ej: división entre 0, o de lógica p ej: mal diseño algoritmo.)     
 - **Despliegue**: una vez que el programa está terminado, se debe implantar en el dispositivo o infraestructura del usuario final sobre la que se ejecutará.
 - **Mantenimiento**: Hay tres tipos de mantenimiento:    
-   - Correctivo: Sirve para corregir posibles errores o fallos del programa.
-   - Perfectivo: Se usa para perfeccionarlo.
-   - Adaptativo: Sirve para adaptarlo a nuevas situaciones.
+    - Correctivo: Sirve para corregir posibles errores o fallos del programa.    
+    - Perfectivo: Se usa para perfeccionarlo.    
+    - Adaptativo: Sirve para adaptarlo a nuevas situaciones.    
 
 ## 2. Modelos de desarrollo de software
 Los modelos de desarrollo de software son marcos metodológicos utilizados para estructurar, planificar y controlar el proceso de desarrollo de un sistema informático. Hay varios modelos, y cada uno tiene sus propias características, ventajas y desventajas. 
@@ -48,9 +48,9 @@ Los modelos de desarrollo de software son marcos metodológicos utilizados para 
 ### 2.1. Modelo en cascada 
 Consiste en dividir el proceso de desarrollo en fases, cada una de las cuales se ejecuta una vez que la anterior ha finalizado. El modelo en cascada es un modelo secuencial, es decir, **las fases se ejecutan una tras otra**.     
 
-- Sin realimentación: es el modelo de vida clásico del software. Es prácticamente imposible que se pueda utilizar, ya que requiere conocer de antemano todos los requisitos del sistema. Sólo es aplicable a pequeños desarrollos, ya que las etapas pasan de una a otra sin retorno posible. (se presupone que no habrá errores ni variaciones del software).    
+- **Sin realimentación**: es el modelo de vida clásico del software. Es prácticamente imposible que se pueda utilizar, ya que requiere conocer de antemano todos los requisitos del sistema. Sólo es aplicable a pequeños desarrollos, ya que las etapas pasan de una a otra sin retorno posible. (se presupone que no habrá errores ni variaciones del software).    
 
-- Con realimentación: es uno de los modelos más utilizados. Proviene del modelo anterior, pero se introduce una realimentación entre etapas, de forma que podamos volver atrás en cualquier momento para corregir, modificar o depurar algún aspecto. No obstante, si se preveén muchos cambios durante el desarrollo no es el modelo más idóneo. Es el modelo perfecto si el proyecto es rígido (pocos cambios, poco evolutivo) y los requisitos están claros.  
+- **Con realimentación**: es uno de los modelos más utilizados. Proviene del modelo anterior, pero se introduce una realimentación entre etapas, de forma que podamos volver atrás en cualquier momento para corregir, modificar o depurar algún aspecto. No obstante, si se preveén muchos cambios durante el desarrollo no es el modelo más idóneo. Es el modelo perfecto si el proyecto es rígido (pocos cambios, poco evolutivo) y los requisitos están claros.  
 
 ### 2.2. Modelo evolutivo
 Tiene en cuenta la naturaleza cambiante y evolutiva del software. La idea detrás de este modelo es:    

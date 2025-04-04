@@ -1,129 +1,135 @@
 ---
-title: "UD 3 - P1: Listas"
-summary: Listas
-description: Listas
+title: "UD 9 - P1: Base de Datos en Kotlin"
+summary: Conexión, inserción, consultas y operaciones con bases de datos H2 en Kotlin.
+description: Actividad práctica para trabajar con H2 y SQL desde Kotlin.
 authors:
-    - Eduardo Fdez
-date: 2022-09-18
-icon:   
-permalink: /prog/unidad2/p3.1
+    - Eduardo Fdez by Alejandro Navarrete
+date: 2025-04-04
+icon: database
+permalink: /prog/unidad6/p1
 categories:
     - PROG
 tags:
-    - Software
-    - Ejercicios
-    - Listas
-    - Tuplas
+    - Kotlin
+    - Bases de Datos
+    - H2
+    - SQL
+    - JDBC
 ---
-## P3.1 - Ejercicios
+## P6.1 - Actividades con Bases de Datos H2
 
-#### **Ejercicio 1**
+#### **Ejercicio 1: Instalación, configuración y conexión con H2**
 
-Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua) en una lista y la muestre por pantalla.
+1. Instala la base de datos H2 en tu entorno de desarrollo.
+2. Configura la base de datos para que funcione en modo fichero.
+3. Cambia el PATH de la base de datos. Usa por ejemplo: `./data/tienda`.
+4. Crea un programa en Kotlin para establecer conexión con H2, asegurando el uso de `try-catch` para manejar errores correctamente.
 
-<!--
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio1.ipynb)
--->
+#### **Ejercicio 2: Creación de tablas e inserciones con manejo de errores**
 
-#### **Ejercicio 2**
+##### Modelo Entidad-Relación: ![img.png](img.png)
 
-Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua) en una lista y la muestre por pantalla el mensaje `Yo estudio <asignatura>`, donde `<asignatura>` sobre cada una de las asignaturas de la lista.
+##### Código SQL para crear las tablas:
 
-<!--
+```sql
+CREATE TABLE Usuario (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(255) NOT NULL,
+  email VARCHAR(255) UNIQUE
+);
 
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio2.ipynb)
--->
+CREATE TABLE Producto (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(255) NOT NULL,
+  precio DECIMAL NOT NULL,
+  stock INT NOT NULL
+);
 
-#### **Ejercicio 3**
+CREATE TABLE Pedido (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  precioTotal DECIMAL NOT NULL,
+  idUsuario INT,
+  FOREIGN KEY (idUsuario) REFERENCES Usuario(id)
+);
 
-Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua) en una lista, pregunte al usuario la nota que ha sacado en cada asignatura, y después las muestre por pantalla con el mensaje `En <asignatura> has sacado <nota>` donde `<asignatura>` es cada una des las asignaturas de la lista y `<nota>` cada una de las correspondientes notas introducidas por el usuario.
+CREATE TABLE LineaPedido (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  cantidad INT NOT NULL,
+  precio DECIMAL NOT NULL,
+  idPedido INT,
+  idProducto INT,
+  FOREIGN KEY (idPedido) REFERENCES Pedido(id),
+  FOREIGN KEY (idProducto) REFERENCES Producto(id)
+);
+```
 
-<!--
+##### Inserciones a realizar desde Kotlin:
 
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio3.ipynb)
--->
+> Pista: los id son autoincrementales, por lo que no hace falta incluirlos en la inserción. Se asignan automáticamente.
 
-#### **Ejercicio 4**
+**Usuarios**
 
-Escribir un programa que pregunte al usuario los números ganadores de la lotería primitiva, los almacene en una lista y los muestre por pantalla ordenados de menor a mayor.
 
-<!--
+| nombre             | email            |
+| ------------------ | ---------------- |
+| Facundo Pérez     | facuper@mail.com |
+| Ataulfo Rodríguez | ataurod@mail.com |
+| Cornelio Ramírez  | Cornram@mail.com |
 
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio4.ipynb)
--->
+**Productos**
 
-#### **Ejercicio 5**
 
-Escribir un programa que almacene en una lista los números del 1 al 10 y los muestre por pantalla en orden inverso separados por comas.
+| nombre     | precio (€) | stock |
+| ---------- | ----------- | ----- |
+| Ventilador | 10          | 2     |
+| Abanico    | 150         | 47    |
+| Estufa     | 24.99       | 1     |
 
-<!--
+**Pedidos**
 
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio5.ipynb)
--->
 
-#### **Ejercicio 6**
+| idUsuario | precioTotal (€) |
+| --------- | ---------------- |
+| 2         | 160              |
+| 1         | 20               |
+| 2         | 150              |
 
-Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua) en una lista, pregunte al usuario la nota que ha sacado en cada asignatura y elimine de la lista las asignaturas aprobadas. Al final el programa debe mostrar por pantalla las asignaturas que el usuario tiene que repetir.
+**Líneas de pedido**
 
-<!--
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio6.ipynb)
--->
 
-#### **Ejercicio 7**
+| idPedido | idProducto | cantidad | precio (€) |
+| -------- | ---------- | -------- | ----------- |
+| 1        | 1          | 1        | 10          |
+| 1        | 2          | 1        | 150         |
+| 2        | 1          | 2        | 20          |
+| 3        | 2          | 1        | 150         |
 
-Escribir un programa que almacene el abecedario en una lista, elimine de la lista las letras que ocupen posiciones múltiplos de 3, y muestre por pantalla la lista resultante.
+#### **Ejercicio 3: Consultas con manejo de errores**
 
-<!--
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio7.ipynb)
--->
+1. Mostrar todas las líneas de pedido del pedido con ID = 1.
+2. Mostrar la suma del importe total de los pedidos realizados por el usuario «Ataulfo Rodríguez».
+3. Mostrar los nombres de los usuarios que hayan comprado un «Abanico».
 
-#### **Ejercicio 8**
+#### **Ejercicio 4: Eliminaciones con manejo de errores**
 
-Escribir un programa que pida al usuario una palabra y muestre por pantalla si es un palíndromo.
+1. Elimina al usuario "Cornelio Ramírez".
+2. Elimina el producto con un precio de 24,99 €.
+3. Elimina el pedido con id igual a 4, asegurándote de eliminar primero sus líneas de pedido si existieran.
 
-<!--
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio8.ipynb)
--->
+#### **Ejercicio 5: Modificaciones con manejo de errores**
 
-#### **Ejercicio 9**
+1. Modifica el precio del producto «Abanico» para ponerlo en oferta (por ejemplo, 120 €).
+2. Modifica la línea de pedido con id = 3:
+   - Cambia el producto a "Abanico" (id = 2)
+   - Cambia el precio al doble del precio actual del "Abanico".
 
-Escribir un programa que pida al usuario una palabra y muestre por pantalla el número de veces que contiene cada vocal.
+#### **Ejercicio 6: Pool de conexiones con HikariCP**
 
-<!--
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio9.ipynb)
--->
+1. Crea un programa en Kotlin usando HikariCP para insertar el siguiente usuario:
 
-#### **Ejercicio 10**
 
-Escribir un programa que almacene en una lista los siguientes precios: `50, 75, 46, 22, 80, 65, 8` y muestre por pantalla el menor y el mayor de los precios.
+| nombre             | email            |
+| ------------------ | ---------------- |
+| Reinaldo Girúndez | reingir@mail.com |
 
-<!--
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio10.ipynb)
--->
-
-#### **Ejercicio 11**
-
-Escribir un programa que almacene los vectores `(1,2,3)` y `(-1,0,2)` en dos listas y muestre por pantalla su producto escalar.
-
-<!--
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio11.ipynb)
--->
-
-#### **Ejercicio 12**
-
-Escribir un programa que almacene las matrices `A=(123456)` y `B=(−100111)` en una lista y muestre por pantalla su producto.
-Nota: Para representar matrices mediante listas usar listas anidadas, representando cada vector fila en una lista.
-
-<!--
-
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio12.ipynb)
--->
-
-#### **Ejercicio 13**
-
-Escribir un programa que pregunte por una muestra de números, separados por comas, los guarde en una lista y muestre por pantalla su media y desviación típica.
-
-<!--
-[Solución](https://colab.research.google.com/github/asalber/aprendeconalf/blob/master/content/es/docencia/python/ejercicios/soluciones/listas-tuplas/ejercicio13.ipynb)
-
--->
+2. Realiza una consulta que muestre los pedidos realizados por "Facundo Pérez".

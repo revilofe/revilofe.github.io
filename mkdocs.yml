@@ -106,6 +106,7 @@ nav:
         - '9.3.-JDBC: Prepared statement': 'section1/u09/teoria/PROG-U9.3.-JDBC-2.md'
         - '9.4.-DAO': 'section1/u09/teoria/PROG-U9.4.-DAO.md'
         - '9.5.-Otros aspectos': 'section1/u09/teoria/PROG-U9.5.-OtrosAspectos.md'
+        - '* Práctica 9.1: Acceso a datos I': 'section1/u09/practica/PROG-U9.-Practica001.md'
 
   - 'Entornos de desarrollo':
     - 'section3/index.md'

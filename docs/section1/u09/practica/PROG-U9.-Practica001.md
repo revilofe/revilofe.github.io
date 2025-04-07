@@ -5,7 +5,7 @@ description: Actividad práctica para trabajar con H2 y SQL desde Kotlin.
 authors:
     - Eduardo Fdez by Alejandro Navarrete
 date: 2025-04-04
-icon: database
+icon: 
 permalink: /prog/unidad6/p1
 categories:
     - PROG
@@ -29,7 +29,7 @@ tags:
 
 ##### Modelo Entidad-Relación: 
 
-![img.png](img.png)
+![Entidad-Relacion](./assets/img.png)
 
 ##### Código SQL para crear las tablas:
 

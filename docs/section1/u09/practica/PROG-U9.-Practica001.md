@@ -27,7 +27,9 @@ tags:
 
 #### **Ejercicio 2: Creación de tablas e inserciones con manejo de errores**
 
-##### Modelo Entidad-Relación: ![img.png](img.png)
+##### Modelo Entidad-Relación: 
+
+![img.png](img.png)
 
 ##### Código SQL para crear las tablas:
 
@@ -133,3 +135,4 @@ CREATE TABLE LineaPedido (
 | Reinaldo Girúndez | reingir@mail.com |
 
 2. Realiza una consulta que muestre los pedidos realizados por "Facundo Pérez".
+

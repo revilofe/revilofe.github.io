@@ -116,7 +116,7 @@ CREATE TABLE LineaPedido (
 
 1. Elimina al usuario "Cornelio Ramírez".
 2. Elimina el producto con un precio de 24,99 €.
-3. Elimina el pedido con id igual a 4, asegurándote de eliminar primero sus líneas de pedido si existieran.
+3. Elimina el pedido con id igual a 3, asegurándote de eliminar primero sus líneas de pedido si existieran.
 
 #### **Ejercicio 5: Modificaciones con manejo de errores**
 

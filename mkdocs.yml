@@ -144,9 +144,9 @@ nav:
     - 'U4: SCV, refactorización y documentación':
         - 'section3/u04/index.md'
         - '4.1.-Sistemas de control de versiones': 'section3/u04/teoria/EDES-U4.1.-Git_Github.md'
-#        - '4.2.-Refactorización': 'section3/u04/teoria/EDES-U4.2.-Refactorizacion.md'
-#        - '4.3.-Analizador de código': 'section3/u04/teoria/EDES-U4.3.-AnalizadorCodigo.md'
-#        - '4.3.-Documentación': 'section3/u04/teoria/EDES-U4.4.-Documentacion.md'
+        - '4.2.-Refactorización': 'section3/u04/teoria/EDES-U4.2.-Refactorizacion.md'
+        - '4.3.-Analizador de código': 'section3/u04/teoria/EDES-U4.3.-AnalizadorCodigo.md'
+        - '4.4.-Documentación': 'section3/u04/teoria/EDES-U4.4.-Documentacion.md'
         - 'Práctica 4.1: Git/Github básico': 'section3/u04/practica/EDES-U4.-Practica001.md'
         - 'Práctica 4.2: Git/Github merge': 'section3/u04/practica/EDES-U4.-Practica002.md'
         - 'Práctica 4.3: Git/Github rebase I': 'section3/u04/practica/EDES-U4.-Practica003.md'

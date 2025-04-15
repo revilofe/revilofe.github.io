@@ -14,7 +14,7 @@ tags:
   - Software
   - Debug
 ---
-## Depuración
+## 3.3. Depuración
 
 ### 1. Introducción a la Depuración
 

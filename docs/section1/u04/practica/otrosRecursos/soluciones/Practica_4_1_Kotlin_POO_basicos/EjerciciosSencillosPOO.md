@@ -31,7 +31,7 @@ En el programa principal:
 
 Aquí tienes el diagrama UML para la clase **CuentaBancaria** que implementa las especificaciones del ejercicio:
 
-![CuentaBancaria](./assets/CuentaBancaria.png)
+![CuentaBancaria](../../../assets/CuentaBancaria.png)
 
 #### Contenido del Diagrama:
 

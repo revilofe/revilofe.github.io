@@ -15,10 +15,6 @@ tags:
   - Debug
 ---
 
-Claro, aquí tienes una descripción formal, clara y sobria del concepto de logging y de las herramientas más comunes, con especial atención a logback y sus componentes principales. Está redactada siguiendo el estilo estructurado que me indicaste, y encaja perfectamente como una nueva subsección del documento que ya estás trabajando.
-
----
-
 ## 3.3.1. Logging
 
 

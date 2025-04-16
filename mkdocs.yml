@@ -144,6 +144,7 @@ nav:
         - '3.2.1.-Kotest': 'section3/u03/teoria/EDES-U3.2.1.-Kotest.md'
         - '3.2.2.-MockK': 'section3/u03/teoria/EDES-U3.2.2.-Mockk.md'
         - '3.3.-Depuración': 'section3/u03/teoria/EDES-U3.3.-Depuracion.md'
+        - '3.3.1.-Logging': 'section3/u03/teoria/EDES-U3.3.1.-LoggingCode.md'
     - 'U4: SCV, refactorización y documentación':
         - 'section3/u04/index.md'
         - '4.1.-Sistemas de control de versiones': 'section3/u04/teoria/EDES-U4.1.-Git_Github.md'

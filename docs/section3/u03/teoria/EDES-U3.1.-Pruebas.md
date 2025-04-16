@@ -15,46 +15,47 @@ tags:
   - test
   - Pruebas
 ---
-## Pruebas
+## 3.1. Pruebas
 
 Se pretente estudiar algunas técnicas de verificación y pruebas de programas, se comenzará por los principios básicos, ciclo de vida y niveles y tipos de pruebas, posteriormente profundizaremos en algunas técnicas de prueba más usadas para posteriormente mencionar algunas de las herramientas usadas para las pruebas.
 
 ### 1. Introducción
 
-Las pruebas de software son *el proceso de evaluación de un sistema o aplicación para determinar si cumple con los requisitos especificados y funciona correctamente*.El objetivo principal de las pruebas de software es:
+Las pruebas de software son *el proceso de evaluación de un sistema o aplicación para determinar si cumple con los requisitos especificados y funciona correctamente*. El objetivo principal de las pruebas de software es:
 
-* garantizar la calidad del software
-* minimizar el riesgo de errores en el producto final.
+1. Garantizar la calidad del software.     
+2. Minimizar el riesgo de errores en el producto final.     
 
-#### 1.1 Importancia de las pruebas de software
+#### 1.1. Importancia de las pruebas de software
 
-Las pruebas de software son una parte crucial del proceso de desarrollo de software, ya que ayudan a identificar problemas y errores en una etapa temprana. Esto permite a los desarrolladores corregir los errores antes de que el software se lance al mercado, lo que puede ahorrar tiempo, costos y reducir la frustración del usuario final.
+Las pruebas de software es uno de los puntos más importantes del proceso de desarrollo de software, ya que ayudan a identificar problemas y errores en una etapa temprana, que pueden tener un impacto significativo en la funcionalidad del software. Esto permite a los desarrolladores corregir los errores antes de que el software se lance al mercado, lo que puede ahorrar tiempo, costos y reducir la frustración del usuario final.
 
-Las pruebas de software son importantes porque permiten detectar errores y problemas que pueden tener un impacto significativo en la funcionalidad del software. Estos errores pueden incluir:
+Los errores que son identificados, pueden incluir:
 
-* Fallos de seguridad.
-* Problemas de rendimiento.
-* Problemas de usabilidad.
-* Errores de lógica.
-* Otros errores que pueden afectar la calidad del software y la satisfacción del usuario final.
+* Fallos de seguridad.      
+* Problemas de rendimiento.      
+* Problemas de usabilidad.     
+* Errores de lógica.     
+* Otros errores que pueden afectar la calidad del software y la satisfacción del usuario final.       
+
 
 #### 1.2 Beneficios de realizar pruebas de software
 
 Los beneficios de realizar pruebas de software incluyen:
 
-- Identificación temprana de errores y problemas en el software.
-- Mejora de la calidad del software y la satisfacción del usuario.
-- Reducción de costos y tiempos de corrección de errores.
-- Reducción del riesgo de errores en el software en producción.
-- Mejora de la confianza en el software y la marca de la empresa.
+- Identificación temprana de errores y problemas en el software.          
+- Mejora de la calidad del software y la satisfacción del usuario.          
+- Reducción de costos y tiempos de corrección de errores.             
+- Reducción del riesgo de errores en el software en producción.           
+- Mejora de la confianza en el software y la marca de la empresa.          
 
-En conclusión, las pruebas de software son una parte esencial del proceso de desarrollo de software que ayudan a garantizar la calidad del producto final y a reducir el riesgo de errores en producción.
+Por todo esto, las pruebas de software son una parte mas que importante del proceso de desarrollo de software que ayudan a garantizar la calidad del producto final y a reducir el riesgo de errores en producción.
 
 ### 2. Verificación y prueba de programas
 
-La ISTQB (International Software Testing Qualifications Board), una organización especializada en el campo de las pruebas y la industria del software, define la *verificación y pruebas de programas* como:
+La **ISTQB*** (International Software Testing Qualifications Board), una organización especializada en el campo de las pruebas y la industria del software, define la *verificación y pruebas de programas* como:
 
-> Proceso que consiste en todas las actividades del ciclo de vida del software, tanto estáticas como dinámicas, concernientes con la planificación, preparación y evaluación de productos software y los trabajos relacionados para determinar que éstos satisfacen los requisitos especificados, para demostrar que se ajustan al propósito y para detectar defectos.
+> Proceso que consiste en todas las actividades del ciclo de vida del software, tanto estáticas como dinámicas, concernientes con la planificación, preparación y evaluación de productos software y los trabajos relacionados, para determinar que éstos satisfacen los requisitos especificados, para demostrar que se ajustan al propósito y para detectar defectos.
 
 #### 2.1 Principios básicos
 
@@ -65,7 +66,7 @@ Los principios básicos que rigen el proceso de verificación y prueba de los pr
 - Las pruebas tempranas ayudan a reducir costes.
 - Agrupación de defectos: Normalmente, la mayor parte de los defectos detectados se concentran en un número reducido de módulos.
 - Paradoja del pesticida (de Bruce Beizer): La eficacia en la detección de errores de las mismas pruebas disminuye con el paso del tiempo.
-- Las pruebas dependen del contexto: Así por ejemplo, la forma de probar un software crítico de una central nuclear es diferente a  la página web de una frutería.
+- Las pruebas dependen del contexto: Así por ejemplo, la forma de probar un software crítico de una central nuclear es diferente a la página web de una frutería.
 - La falacia de la ausencia de errores: La detección y corrección de defectos no servirá de nada si el sistema no es usable y no cumple con las expectativas de los usuarios.
 
 #### 2.2 El ciclo de vida
@@ -86,7 +87,7 @@ Según el ISTQB, el proceso de prueba se puede ejecutar en los siguientes nivele
 
 * Pruebas unitarias: Realizadas por el equipo de desarrollo, tienen como objeto comprobar el funcionamiento de un único componente.
 * Pruebas de integración: Realizadas por el equipo de desarrollo, su objetivo principal es comprobar la interacción de diferentes partes de un sistema, validando la comunicación entre sus interfaces.
-* Pruebas de sistema: Realizadas por el equipo de pruebas, buscan probar el sistema como un todo y si los componentes de un sistema son compatibles e  interactúan correctamente.
+* Pruebas de sistema: Realizadas por el equipo de pruebas, buscan probar el sistema como un todo y si los componentes de un sistema son compatibles e interactúan correctamente.
 * Pruebas de aceptación de usuario: Realizadas por el usuario final, el objetivo de estas pruebas es validar la disposición de un sistema para su despliegue y uso.
 
 Los niveles de las pruebas están estrechamente relacionados con las fases del ciclo de desarrollo del software, así en el modelo o método en V se establece dicha relación de forma explícita:

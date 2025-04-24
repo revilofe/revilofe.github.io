@@ -204,6 +204,7 @@ Note: Ejemplo de uso de writeBytes, útil para archivos binarios o cuando se req
 ---
 
 ## Resumen
+
 Estas slides cubren los conceptos clave sobre la clase File en Java/Kotlin:
 
 - Qué es y cómo se instancia.

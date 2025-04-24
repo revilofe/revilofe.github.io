@@ -35,7 +35,6 @@ Note: Explica cómo instanciar un objeto File y que no accede realmente al siste
 
 ## Rutas Absolutas y Relativas
 
-
 ### Rutas absolutas
 
 * Una ruta absoluta parte del directorio raíz del sistema de archivos.
@@ -203,8 +202,7 @@ Note: Ejemplo de uso de writeBytes, útil para archivos binarios o cuando se req
 
 ---
 
-## Resumen
-Estas slides cubren los conceptos clave sobre la clase File en Java/Kotlin:
+Note:Estas slides cubren los conceptos clave sobre la clase File en Java/Kotlin:
 
 - Qué es y cómo se instancia.
 - Diferencias entre rutas absolutas y relativas y su impacto en la portabilidad.

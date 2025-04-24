@@ -357,14 +357,8 @@ Por último recordar que las pruebas de sistema son críticas para garantizar qu
 #### 8.2 Tipos de pruebas de aceptación
 #### 8.3 Estrategias para realizar pruebas de aceptación
 
-### 9. Documentación de incidencias
 
-#### 9.1 Definición de incidencias
-#### 9.2 Proceso de documentación de incidencias
-#### 9.3 Clasificación de incidencias
-#### 9.4 Ejemplos de herramientas de seguimiento de incidencias
-
-### 10. Conclusiones
+### 9. Conclusiones
 
 Resumen de los puntos más importantes   
 Importancia de la colaboración entre desarrolladores y testers   

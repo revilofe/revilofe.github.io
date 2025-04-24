@@ -1,11 +1,9 @@
-## U7.3 - Gestión de Archivos con la clase File
-
-
----
-
-## Introducción a la clase File
+# U7.3 - Gestión de Archivos con la clase File
 
 ---
+
+## Introducción a la clase ´File´
+
 
 ### ¿Qué es la clase File?
 
@@ -18,7 +16,6 @@
 
 Note: Presenta la clase File, aclarando que gestiona rutas (archivos o carpetas) y que se debe importar y crear instancias para operar sobre ellas.
 
----
 
 ### Ejemplo de uso básico
 
@@ -37,8 +34,6 @@ Note: Explica cómo instanciar un objeto File y que no accede realmente al siste
 ---
 
 ## Rutas Absolutas y Relativas
-
----
 
 ### Rutas absolutas
 
@@ -65,7 +60,6 @@ Note: Explica rutas relativas, su relación con el directorio de trabajo y su ve
 
 ## Métodos principales de la clase File
 
----
 
 ### Métodos para obtener información de la ruta
 
@@ -99,7 +93,6 @@ Note: Presenta métodos para consultar tamaño y fecha de modificación, útiles
 
 ## Gestión de Archivos y Carpetas
 
----
 
 ### Operaciones básicas
 
@@ -123,7 +116,6 @@ Note: Explica cómo obtener el listado de archivos y carpetas dentro de un direc
 
 ## Creación de Archivos en Kotlin
 
----
 
 ### Crear archivos de distintas formas
 
@@ -133,6 +125,7 @@ Note: Explica cómo obtener el listado de archivos y carpetas dentro de un direc
 * Si el archivo ya existe, `writeText` y `writeBytes` lo sobrescriben.
 
 Note: Presenta los métodos más comunes para crear archivos en Kotlin, destacando el comportamiento ante archivos existentes.
+
 
 ### Usando `createNewFile()`
 
@@ -160,6 +153,7 @@ if (creado) {
 * Crea el archivo solo si no existe, evitando sobrescribir datos.
 
 Note: Ejemplo práctico de uso de createNewFile, mostrando cómo evitar sobrescribir archivos existentes.
+
 
 ### Usando `writeText()`
 
@@ -208,12 +202,10 @@ Note: Ejemplo de uso de writeBytes, útil para archivos binarios o cuando se req
 
 ---
 
-Note:
-Estas slides cubren los conceptos clave sobre la clase File en Java/Kotlin:
+Note:Estas slides cubren los conceptos clave sobre la clase File en Java/Kotlin:
 
 - Qué es y cómo se instancia.
 - Diferencias entre rutas absolutas y relativas y su impacto en la portabilidad.
 - Métodos principales para obtener información, comprobar estado y gestionar archivos/carpetas.
 - Ejemplos prácticos de creación de archivos usando distintos métodos en Kotlin.
-- El profesor puede ampliar cada punto mostrando ejemplos en vivo, haciendo énfasis en las diferencias de rutas según el sistema operativo y la importancia de validar la existencia y tipo de los elementos antes de operar sobre ellos.
 

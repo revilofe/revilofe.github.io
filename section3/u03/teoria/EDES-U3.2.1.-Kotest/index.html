@@ -99,7 +99,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccion-a-kotest" class="md-skip">
+        <a href="#321-introduccion-a-kotest" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -3726,13 +3726,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion-a-kotest" class="md-nav__link">
+  <a href="#321-introduccion-a-kotest" class="md-nav__link">
     <span class="md-ellipsis">
-      Introducción a Kotest
+      3.2.1. Introducción a Kotest
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Introducción a Kotest">
+    <nav class="md-nav" aria-label="3.2.1. Introducción a Kotest">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3791,9 +3791,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#34-especificaciones-mediante-mediante-descripciones-describe" class="md-nav__link">
+  <a href="#34-especificaciones-mediante-descripciones-describe" class="md-nav__link">
     <span class="md-ellipsis">
-      3.4. Especificaciones mediante mediante descripciones (describe)
+      3.4. Especificaciones mediante descripciones (describe)
     </span>
   </a>
   
@@ -3885,24 +3885,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#13-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Recursos
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#recursos" class="md-nav__link">
+  <a href="#fuentes" class="md-nav__link">
     <span class="md-ellipsis">
-      Recursos
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fuente
+      Fuentes
     </span>
   </a>
   
@@ -5042,13 +5042,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion-a-kotest" class="md-nav__link">
+  <a href="#321-introduccion-a-kotest" class="md-nav__link">
     <span class="md-ellipsis">
-      Introducción a Kotest
+      3.2.1. Introducción a Kotest
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Introducción a Kotest">
+    <nav class="md-nav" aria-label="3.2.1. Introducción a Kotest">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -5107,9 +5107,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#34-especificaciones-mediante-mediante-descripciones-describe" class="md-nav__link">
+  <a href="#34-especificaciones-mediante-descripciones-describe" class="md-nav__link">
     <span class="md-ellipsis">
-      3.4. Especificaciones mediante mediante descripciones (describe)
+      3.4. Especificaciones mediante descripciones (describe)
     </span>
   </a>
   
@@ -5201,24 +5201,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#13-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Recursos
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#recursos" class="md-nav__link">
+  <a href="#fuentes" class="md-nav__link">
     <span class="md-ellipsis">
-      Recursos
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fuente
+      Fuentes
     </span>
   </a>
   
@@ -5276,18 +5276,18 @@
 
   <h1>3.2.1.-Kotest</h1>
 
-<h2 id="introduccion-a-kotest">Introducción a Kotest<a class="headerlink" href="#introduccion-a-kotest" title="Permanent link">&para;</a></h2>
+<h2 id="321-introduccion-a-kotest">3.2.1. Introducción a Kotest<a class="headerlink" href="#321-introduccion-a-kotest" title="Permanent link">&para;</a></h2>
 <h3 id="1-informacion-general">1. Información general<a class="headerlink" href="#1-informacion-general" title="Permanent link">&para;</a></h3>
 <p><a href="https://kotest.io/">Kotest</a> es un framework de pruebas multiplataforma escrito en Kotlin. Consta de 3 subproyectos principales:</p>
 <ul>
-<li>Framework para pruebas</li>
-<li>Biblioteca de aserciones</li>
-<li>Pruebas de propiedad</li>
+<li>Framework para pruebas (El nucleo de la biblioteca de pruebas).</li>
+<li>Biblioteca de aserciones (Aserciones: Afirmaciones que tienen que cumplirse tras realizar el test).</li>
+<li>Pruebas de propiedad </li>
 </ul>
-<p>Podemos usar cada proyecto independientemente, integrándolos con otros framework de prueba. Por ejemplo, es posible usar las aserciones de Kotest en lugar de otros frameworks de <a href="https://www.baeldung.com/introduction-to-assertj">asserciones</a>.</p>
-<p>Podemos ejecutar pruebas Kotest en <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr>, Javascript o Native. Esto nos permite utilizar la misma biblioteca de pruebas para el desarrollo web, móvil y back-end. Nos centraremos en la plataforma <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr> .</p>
+<p>Podemos usar cada subproyecto independientemente, integrándolos con otros framework de prueba. Por ejemplo, es posible usar las aserciones de Kotest en lugar de otros frameworks de <a href="https://www.baeldung.com/introduction-to-assertj">asserciones</a>.</p>
+<p>También se puede ejecutar pruebas Kotest en <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr>, Javascript o Native. Esto nos permite utilizar la misma biblioteca de pruebas para el desarrollo web, móvil y back-end. Nos centraremos en la plataforma <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr>.</p>
 <h3 id="2-pruebas-en-jvm">2. Pruebas en <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr><a class="headerlink" href="#2-pruebas-en-jvm" title="Permanent link">&para;</a></h3>
-<p>Kotest utiliza la plataforma JUnit en la <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr>. Entonces, en un proyecto <a href="https://search.maven.org/artifact/io.kotest/kotest-runner-junit5-jvm">Maven</a> , podemos activarlo usando las siguientes sentencias dentro del fichero <code>build.gradle.kts</code></p>
+<p>Kotest utiliza la plataforma JUnit en la <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr>. Entonces, en un proyecto <a href="https://search.maven.org/artifact/io.kotest/kotest-runner-junit5-jvm">Maven</a>, podemos activarlo usando las siguientes sentencias dentro del fichero <code>build.gradle.kts</code></p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">testImplementation</span><span class="p">(</span><span class="n">kotlin</span><span class="p">(</span><span class="s">&quot;test&quot;</span><span class="p">))</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">testImplementation</span><span class="p">(</span><span class="s">&quot;io.kotest:kotest-runner-junit5-jvm:5.5.4&quot;</span><span class="p">)</span>
@@ -5296,11 +5296,11 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">testImplementation</span><span class="p">(</span><span class="s">&quot;io.kotest:kotest-property:5.5.4&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
 </code></pre></div>
-ten en cuenta que estamos estableciendo la version <code>5.5.4</code>, <a href="https://search.maven.org/artifact/io.kotest/kotest-runner-junit5-jvm">aqui</a> puedes consultar cual es la última versión.</p>
+ten en cuenta que estamos estableciendo la version <code>5.5.4</code>, <a href="https://search.maven.org/artifact/io.kotest/kotest-runner-junit5-jvm">aqui</a> puedes consultar cuál es la última versión.</p>
 <h3 id="3-estilos-de-prueba">3. Estilos de prueba<a class="headerlink" href="#3-estilos-de-prueba" title="Permanent link">&para;</a></h3>
 <p>Kotest proporciona muchos estilos de prueba diferentes. Veamos ejemplos de algunos los estilos más usados.</p>
 <h4 id="31-especificaciones-de-comportamiento">3.1. Especificaciones de comportamiento<a class="headerlink" href="#31-especificaciones-de-comportamiento" title="Permanent link">&para;</a></h4>
-<p>Podemos escribir pruebas similares a <a href="https://es.wikipedia.org/wiki/Desarrollo_guiado_por_comportamiento"><abbr title="Desarrollo Guiado por Comportamiento. Práctica de desarrollo de software que se basa en escribir las pruebas en un lenguaje natural que describe el comportamiento esperado del sistema. En BDD, los desarrolladores y los stakeholders colaboran para definir el comportamiento del sistema antes de escribir el código.">BDD</abbr></a>, en este estilo se usan las palabras clave <code>given</code> (Bajo unas condiciones) , <code>when</code> (cuando se cumpla tal cosa) y <code>then</code> (entonces sucederá):</p>
+<p>Podemos escribir pruebas similares a <a href="https://es.wikipedia.org/wiki/Desarrollo_guiado_por_comportamiento"><abbr title="Desarrollo Guiado por Comportamiento. Práctica de desarrollo de software que se basa en escribir las pruebas en un lenguaje natural que describe el comportamiento esperado del sistema. En BDD, los desarrolladores y los stakeholders colaboran para definir el comportamiento del sistema antes de escribir el código.">BDD</abbr></a>, en este estilo se usan las palabras clave <code>given</code> (Bajo unas condiciones), <code>when</code> (cuando se cumpla tal cosa) y <code>then</code> (entonces sucederá):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>// En una situación en el que tengo suficiente balance,
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>// cuando se realice un pago
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>// el pago se debe realizar sin problemas. 
@@ -5315,7 +5315,7 @@ ten en cuenta que estamos estableciendo la version <code>5.5.4</code>, <a href="
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>})
 </code></pre></div>
 <h4 id="32-especificaciones-mediante-should">3.2. Especificaciones mediante <code>should</code><a class="headerlink" href="#32-especificaciones-mediante-should" title="Permanent link">&para;</a></h4>
-<p>Podemos crear pruebas usando la palabra clave <code>should</code> (Debería cumplirse) :</p>
+<p>Podemos crear pruebas usando la palabra clave <code>should</code> (Debería cumplirse):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// Debería convertir el dinero de entrada a la moneda destino.</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">class</span><span class="w"> </span><span class="nc">MoneyTests</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ShouldSpec</span><span class="p">({</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">should</span><span class="p">(</span><span class="s">&quot;Convert input money to the target currency&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -5352,7 +5352,7 @@ ten en cuenta que estamos estableciendo la version <code>5.5.4</code>, <a href="
 <a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">})</span>
 </code></pre></div>
-<h4 id="34-especificaciones-mediante-mediante-descripciones-describe">3.4. Especificaciones mediante mediante descripciones (<code>describe</code>)<a class="headerlink" href="#34-especificaciones-mediante-mediante-descripciones-describe" title="Permanent link">&para;</a></h4>
+<h4 id="34-especificaciones-mediante-descripciones-describe">3.4. Especificaciones mediante descripciones (<code>describe</code>)<a class="headerlink" href="#34-especificaciones-mediante-descripciones-describe" title="Permanent link">&para;</a></h4>
 <p>Usando <code>describe</code>, podemos escribir pruebas en un estilo muy popular entre los desarrolladores de Javascript y Ruby, de hecho será el que usaremos en nuestros ejemplos:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">PaymentTests</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">DescribeSpec</span><span class="p">({</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">describe</span><span class="p">(</span><span class="s">&quot;CardPayments&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -5479,12 +5479,12 @@ ten en cuenta que estamos estableciendo la version <code>5.5.4</code>, <a href="
 </code></pre></div>
 <h3 id="12-conclusion">12. Conclusión<a class="headerlink" href="#12-conclusion" title="Permanent link">&para;</a></h3>
 <p>Se han visto varias funcionalidades básicas proporcionadas por el marco Kotest. y los ejemplos de código se pueden encontrar <a href="https://github.com/Baeldung/kotlin-tutorials/tree/master/kotlin-testing">en <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr></a>.</p>
-<h2 id="recursos">Recursos<a class="headerlink" href="#recursos" title="Permanent link">&para;</a></h2>
+<h3 id="13-recursos">13. Recursos<a class="headerlink" href="#13-recursos" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://surprograma.github.io/libro-disenio-oop/docs/pruebas-automatizadas/elaborar-casos-prueba/">¿Cómo elaborar casos de prueba?</a></li>
 <li><a href="http://wiki.uqbar.org/wiki/articles/testeo-unitario-avanzado.html">Test unitario avanzado</a></li>
 </ul>
-<h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
+<h2 id="fuentes">Fuentes<a class="headerlink" href="#fuentes" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.baeldung.com/kotlin/kotest">Introduction to Kotest</a></li>
 </ul>

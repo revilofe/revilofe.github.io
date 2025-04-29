@@ -15,23 +15,23 @@ tags:
   - kotest
 ---
 
-## Introducción a Kotest
+## 3.2.1. Introducción a Kotest
 
 ### 1. Información general
 
 [Kotest](https://kotest.io/) es un framework de pruebas multiplataforma escrito en Kotlin. Consta de 3 subproyectos principales:
 
-* Framework para pruebas
-* Biblioteca de aserciones
-* Pruebas de propiedad
+* Framework para pruebas (El nucleo de la biblioteca de pruebas).
+* Biblioteca de aserciones (Aserciones: Afirmaciones que tienen que cumplirse tras realizar el test).
+* Pruebas de propiedad 
 
-Podemos usar cada proyecto independientemente, integrándolos con otros framework de prueba. Por ejemplo, es posible usar las aserciones de Kotest en lugar de otros frameworks de [asserciones](https://www.baeldung.com/introduction-to-assertj).
+Podemos usar cada subproyecto independientemente, integrándolos con otros framework de prueba. Por ejemplo, es posible usar las aserciones de Kotest en lugar de otros frameworks de [asserciones](https://www.baeldung.com/introduction-to-assertj).
 
-Podemos ejecutar pruebas Kotest en JVM, Javascript o Native. Esto nos permite utilizar la misma biblioteca de pruebas para el desarrollo web, móvil y back-end. Nos centraremos en la plataforma JVM .
+También se puede ejecutar pruebas Kotest en JVM, Javascript o Native. Esto nos permite utilizar la misma biblioteca de pruebas para el desarrollo web, móvil y back-end. Nos centraremos en la plataforma JVM.
 
 ### 2. Pruebas en JVM
 
-Kotest utiliza la plataforma JUnit en la JVM. Entonces, en un proyecto [Maven](https://search.maven.org/artifact/io.kotest/kotest-runner-junit5-jvm) , podemos activarlo usando las siguientes sentencias dentro del fichero `build.gradle.kts`
+Kotest utiliza la plataforma JUnit en la JVM. Entonces, en un proyecto [Maven](https://search.maven.org/artifact/io.kotest/kotest-runner-junit5-jvm), podemos activarlo usando las siguientes sentencias dentro del fichero `build.gradle.kts`
 
 ```kotlin
 dependencies {
@@ -42,7 +42,7 @@ dependencies {
     testImplementation("io.kotest:kotest-property:5.5.4")
 }
 ```
-ten en cuenta que estamos estableciendo la version `5.5.4`, [aqui](https://search.maven.org/artifact/io.kotest/kotest-runner-junit5-jvm) puedes consultar cual es la última versión.
+ten en cuenta que estamos estableciendo la version `5.5.4`, [aqui](https://search.maven.org/artifact/io.kotest/kotest-runner-junit5-jvm) puedes consultar cuál es la última versión.
 
 ### 3. Estilos de prueba
 
@@ -50,7 +50,7 @@ Kotest proporciona muchos estilos de prueba diferentes. Veamos ejemplos de algun
 
 #### 3.1. Especificaciones de comportamiento
 
-Podemos escribir pruebas similares a [BDD](https://es.wikipedia.org/wiki/Desarrollo_guiado_por_comportamiento), en este estilo se usan las palabras clave `given` (Bajo unas condiciones) , `when` (cuando se cumpla tal cosa) y `then` (entonces sucederá):
+Podemos escribir pruebas similares a [BDD](https://es.wikipedia.org/wiki/Desarrollo_guiado_por_comportamiento), en este estilo se usan las palabras clave `given` (Bajo unas condiciones), `when` (cuando se cumpla tal cosa) y `then` (entonces sucederá):
 
 ```kolin
 // En una situación en el que tengo suficiente balance,
@@ -69,7 +69,7 @@ class CardPaymentTests : BehaviorSpec({
 
 #### 3.2. Especificaciones mediante `should`
 
-Podemos crear pruebas usando la palabra clave `should` (Debería cumplirse) :
+Podemos crear pruebas usando la palabra clave `should` (Debería cumplirse):
 
 ```kotlin
 // Debería convertir el dinero de entrada a la moneda destino.
@@ -116,7 +116,7 @@ class HomePageTests : FeatureSpec({
 })
 ```
 
-#### 3.4. Especificaciones mediante mediante descripciones (`describe`)
+#### 3.4. Especificaciones mediante descripciones (`describe`)
 
 Usando `describe`, podemos escribir pruebas en un estilo muy popular entre los desarrolladores de Javascript y Ruby, de hecho será el que usaremos en nuestros ejemplos:
 
@@ -287,10 +287,11 @@ class SlowTests : ShouldSpec({})
 
 Se han visto varias funcionalidades básicas proporcionadas por el marco Kotest. y los ejemplos de código se pueden encontrar [en GitHub](https://github.com/Baeldung/kotlin-tutorials/tree/master/kotlin-testing).
 
-## Recursos
+### 13. Recursos
 
 * [¿Cómo elaborar casos de prueba?](https://surprograma.github.io/libro-disenio-oop/docs/pruebas-automatizadas/elaborar-casos-prueba/)
 * [Test unitario avanzado](http://wiki.uqbar.org/wiki/articles/testeo-unitario-avanzado.html)
 
-## Fuente
+## Fuentes
+
 * [Introduction to Kotest](https://www.baeldung.com/kotlin/kotest)

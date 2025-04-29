@@ -15,7 +15,7 @@ tags:
   - Mock
 ---
 
-## MockK: una biblioteca burlona para Kotlin
+## 3.2.2. MockK: una biblioteca burlona para Kotlin
 
 ### 1. Información general
 
@@ -459,7 +459,8 @@ Como podemos ver en el código anterior, agregamos la función `addHelloWorld()`
 Se han visto algunas de las características más importantes de MockK. MockK es una poderosa biblioteca para el lenguaje Kotlin y proporciona muchas características útiles. Para más información sobre MockK, podemos consultar la  [documentación en la web de MockK](https://mockk.io/).
 
 
-## Recursos
+### 13. Recursos
+
 * [¿Que es un Stub?](https://es.wikipedia.org/wiki/Stub)
 * [Mock Object](https://en.wikipedia.org/wiki/Mock_object)
 * [Stub, Spy, Mock](https://gabimoreno.soy/que-diferencias-hay-entre-un-stub-un-spy-y-un-mock)
@@ -468,6 +469,7 @@ Se han visto algunas de las características más importantes de MockK. MockK es
 * [Test unitario avanzado](http://wiki.uqbar.org/wiki/articles/testeo-unitario-avanzado.html)
 * [Diseño de Software](https://surprograma.github.io/libro-disenio-oop/docs/intro/)
 
-## Fuente
+## Fuentes
+
 * [MockK: A Mocking Library for Kotlin](https://www.baeldung.com/kotlin/mockk)
 * [MockK Guidebook](https://notwoods.github.io/mockk-guidebook/)

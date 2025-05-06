@@ -5874,18 +5874,14 @@
 <p>Las pruebas de software es uno de los puntos más importantes del proceso de desarrollo de software, ya que ayudan a identificar problemas y errores en una etapa temprana, que pueden tener un impacto significativo en la funcionalidad del software. Esto permite a los desarrolladores corregir los errores antes de que el software se lance al mercado, lo que puede ahorrar tiempo, costos y reducir la frustración del usuario final.</p>
 <p>Los errores que son identificados, pueden incluir:</p>
 <ul>
-<li>
-<p>Errores que pueden afectar la calidad del software y la satisfacción del usuario final, por ejemplo, errores producidos por el no cumplimiento de los requisitos especificados, ya sea por malentendidos durante la fase de análisis o por cambios en los requisitos durante el desarrollo.    </p>
-</li>
-<li>
-<p>Otros errores:</p>
-</li>
-<li>
-<p>Fallos de seguridad.             </p>
-</li>
+<li><strong>Errores que pueden **afectar la calidad del software y la satisfacción del usuario final</strong>, por ejemplo, errores producidos por el no cumplimiento de los requisitos especificados, ya sea por malentendidos durante la fase de análisis o por cambios en los requisitos durante el desarrollo.</li>
+<li>**Otros errores:    <ul>
+<li>Fallos de seguridad.             </li>
 <li>Problemas de rendimiento.            </li>
 <li>Problemas de usabilidad.      </li>
 <li>Errores de lógica.   </li>
+</ul>
+</li>
 </ul>
 <h4 id="12-beneficios-de-realizar-pruebas-de-software">1.2. Beneficios de realizar pruebas de software<a class="headerlink" href="#12-beneficios-de-realizar-pruebas-de-software" title="Permanent link">&para;</a></h4>
 <p>Los beneficios de realizar pruebas de software incluyen:</p>
@@ -5932,7 +5928,11 @@
 <li><strong>Pruebas de aceptación de usuario</strong>: Realizadas por el usuario final, el objetivo de estas pruebas es validar la disposición de un sistema para su despliegue y uso.</li>
 </ul>
 <p>Los niveles de las pruebas están estrechamente relacionados con las fases del ciclo de desarrollo del software, así en el modelo o método en V se establece dicha relación de forma explícita:</p>
-<p><img alt="" src="../assets/ModeloV.png" /></p>
+<figure>
+<p><img alt="" src="../assets/ModeloV.png" />
+  </p>
+<figcaption>Modelo V</figcaption>
+</figure>
 <h3 id="3-tecnicas-de-verificacion-y-prueba-de-programas">3. Técnicas de verificación y prueba de programas<a class="headerlink" href="#3-tecnicas-de-verificacion-y-prueba-de-programas" title="Permanent link">&para;</a></h3>
 <p>Las técnicas pueden ser de dos tipos dependiendo de si el código de la aplicación es ejecutado o no.</p>
 <h4 id="31-tecnicas-dinamicas">3.1. Técnicas dinámicas<a class="headerlink" href="#31-tecnicas-dinamicas" title="Permanent link">&para;</a></h4>
@@ -6073,20 +6073,26 @@
 </ul>
 <p>Por ejemplo, para verificar la funcionalidad de una aplicación de gestión de tareas:</p>
 <ul>
-<li>Casos de prueba de creación de tareas:       </li>
+<li>Casos de prueba de creación de tareas:       <ul>
 <li>Verificación de que se pueden crear tareas con éxito.    </li>
 <li>Verificación de que se pueden asignar tareas a usuarios específicos.    </li>
 <li>Verificación de que se pueden establecer fechas de vencimiento para las tareas.    </li>
-<li>Casos de prueba de edición de tareas:    </li>
-<li>Verificación de que se pueden editar tareas existentes.    </li>
+</ul>
+</li>
 <li>
-<p>Verificación de que se pueden actualizar los datos de la tarea, como la fecha de vencimiento y la asignación de usuarios.    </p>
+<p>Casos de prueba de edición de tareas:    </p>
+<ul>
+<li>Verificación de que se pueden editar tareas existentes.    </li>
+<li>Verificación de que se pueden actualizar los datos de la tarea, como la fecha de vencimiento y la asignación de usuarios.    </li>
+</ul>
 </li>
 <li>
 <p>Casos de prueba de eliminación de tareas:    </p>
-</li>
+<ul>
 <li>Verificación de que se pueden eliminar tareas con éxito.    </li>
 <li>Verificación de que no se pueden eliminar tareas asignadas a otros usuarios.    </li>
+</ul>
+</li>
 </ul>
 <h4 id="55-asignacion-de-responsabilidades">5.5. Asignación de responsabilidades<a class="headerlink" href="#55-asignacion-de-responsabilidades" title="Permanent link">&para;</a></h4>
 <p>La asignación de responsabilidades es vital para garantizar que las pruebas se realicen de manera efectiva. En este punto, se deben <strong>definir los roles y responsabilidades de cada miembro del equipo de pruebas</strong>, así como los roles y responsabilidades de cualquier otro miembro del equipo que esté involucrado en el proceso de pruebas. Esto asegura que cada persona tenga claro lo que se espera de él o ella durante el proceso de pruebas.</p>
@@ -6100,30 +6106,34 @@
 </ul>
 <p>En ejemplo simple de cronograma:</p>
 <ul>
-<li>Semana 1:        </li>
+<li>
+<p>Semana 1:        </p>
+<ul>
 <li>Revisión y aprobación de casos de prueba por el desarrollador.   </li>
 <li>Configuración del entorno de prueba.    </li>
-<li>
-<p>Ejecución de pruebas unitarias.    </p>
+<li>Ejecución de pruebas unitarias.    </li>
+</ul>
 </li>
 <li>
 <p>Semana 2:   </p>
-</li>
+<ul>
 <li>Ejecución de pruebas de interfaz de usuario.    </li>
-<li>
-<p>Ejecución de pruebas de rendimiento.    </p>
+<li>Ejecución de pruebas de rendimiento.    </li>
+</ul>
 </li>
 <li>
 <p>Semana 3:    </p>
-</li>
+<ul>
 <li>Ejecución de pruebas de aceptación.    </li>
-<li>
-<p>Documentación de los resultados de las pruebas.    </p>
+<li>Documentación de los resultados de las pruebas.    </li>
+</ul>
 </li>
 <li>
 <p>Semana 4:    </p>
-</li>
+<ul>
 <li>Revisión de resultados de pruebas y toma de decisiones sobre la aprobación de la entrega.   </li>
+</ul>
+</li>
 </ul>
 <p>Por tanto, un plan de pruebas es esencial para garantizar que las pruebas de software se realicen de manera efectiva y se puedan evaluar los resultados. Un plan de pruebas detallado debe incluir los objetivos de las pruebas, el alcance de las pruebas, el cronograma y los recursos, el plan de pruebas detallado, los roles y las responsabilidades y el proceso de seguimiento y documentación de errores.</p>
 <h3 id="6-pruebas-de-integracion">6. Pruebas de integración<a class="headerlink" href="#6-pruebas-de-integracion" title="Permanent link">&para;</a></h3>
@@ -6190,9 +6200,11 @@
 1. Cumple con los requisitos funcionales: se verifica que el sistema cumpla con los requisitos funcionales establecidos en la especificación de requisitos, es decir el sistema debe funcionar como se espera.
 2. Cumple con los requisitos no funcionales (usabilidad,  seguridad, compatibilidad, rendimiento,  escalabilidad, mantenimiento,  portabilidad, fiabilidad, disponibilidad, recuperación ante fallos, documentación)</p>
 <h4 id="82-estrategias-para-realizar-pruebas-de-aceptacion">8.2. Estrategias para realizar pruebas de aceptación<a class="headerlink" href="#82-estrategias-para-realizar-pruebas-de-aceptacion" title="Permanent link">&para;</a></h4>
-<p>Las estrategias para realizar pruebas estan orientadas a la realziación y cumplimiento del tipo de pruebas que hemos visto anteriormente. Algunas de las estrategias más comunes son:
-1. Pruebas de aceptación funcional: se centran en verificar que el sistema cumpla con los requisitos funcionales establecidos. Se realizan por el cliente o el usuario final, y se basan en los casos de uso y escenarios de negocio definidos en la especificación de requisitos.
-2. Pruebas de aceptación no funcional: se centran en verificar que el sistema cumpla con los requisitos no funcionales establecidos. Se realizan por el equipo de pruebas y se basan en los criterios de aceptación definidos en la especificación de requisitos no funcionales.</p>
+<p>Las estrategias para realizar pruebas estan orientadas a la realziación y cumplimiento del tipo de pruebas que hemos visto anteriormente. Algunas de las estrategias más comunes son:</p>
+<ol>
+<li>Pruebas de aceptación funcional: se centran en verificar que el sistema cumpla con los requisitos funcionales establecidos. Se realizan por el cliente o el usuario final, y se basan en los casos de uso y escenarios de negocio definidos en la especificación de requisitos.</li>
+<li>Pruebas de aceptación no funcional: se centran en verificar que el sistema cumpla con los requisitos no funcionales establecidos. Se realizan por el equipo de pruebas y se basan en los criterios de aceptación definidos en la especificación de requisitos no funcionales.</li>
+</ol>
 <h3 id="9-conclusiones">9. Conclusiones<a class="headerlink" href="#9-conclusiones" title="Permanent link">&para;</a></h3>
 <p>Concluimos destacando la importancia de las pruebas de software en el ciclo de vida del desarrollo de software, como algo fundamental para garantizar la calidad y el correcto funcionamiento del sistema. Hemos explorado los diferentes tipos de pruebas, sus objetivos y estrategias, así como la importancia de un plan de pruebas bien definido.
 Es vital la colaboración entre desarrolladores y testers para asegurar que el software cumpla con los requisitos y expectativas del cliente. Además, hemos visto cómo las pruebas de integración, sistema y aceptación son esenciales para garantizar que el software funcione correctamente en un entorno real y cumpla con los requisitos establecidos.

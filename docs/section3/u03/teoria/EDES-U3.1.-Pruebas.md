@@ -26,7 +26,7 @@ Las pruebas de software son **el proceso de evaluación de un sistema o aplicaci
 1. Garantizar la calidad del software.     
 2. Minimizar el riesgo de errores en el producto final.     
    
-   Como calidad del software se entiende la capacidad de un producto para satisfacer las necesidades y expectativas de los usuarios, así como su capacidad para funcionar correctamente en diferentes entornos y condiciones. Esto incluye aspectos como la funcionalidad, la usabilidad, el rendimiento, la seguridad y la mantenibilidad del software.
+Como **calidad del software** se entiende la capacidad de un producto para satisfacer las necesidades y expectativas de los usuarios, así como su capacidad para funcionar correctamente en diferentes entornos y condiciones. Esto incluye aspectos como la funcionalidad, la usabilidad, el rendimiento, la seguridad y la mantenibilidad del software.
 
 #### 1.1. Importancia de las pruebas de software
 
@@ -34,12 +34,15 @@ Las pruebas de software es uno de los puntos más importantes del proceso de des
 
 Los errores que son identificados, pueden incluir:
 
-* Errores que pueden afectar la calidad del software y la satisfacción del usuario final, por ejemplo, errores producidos por el no cumplimiento de los requisitos especificados, ya sea por malentendidos durante la fase de análisis o por cambios en los requisitos durante el desarrollo.   
-* Otros errores:   
-   * Fallos de seguridad.         
-   * Problemas de rendimiento.         
+- Errores que pueden afectar la calidad del software y la satisfacción del usuario final, por ejemplo, errores producidos por el no cumplimiento de los requisitos especificados, ya sea por malentendidos durante la fase de análisis o por cambios en los requisitos durante el desarrollo.    
+
+- Otros errores:
+
+   * Fallos de seguridad.             
+   * Problemas de rendimiento.            
    * Problemas de usabilidad.      
-   * Errores de lógica.      
+   * Errores de lógica.   
+
 
 #### 1.2. Beneficios de realizar pruebas de software
 
@@ -124,7 +127,7 @@ En las que los casos se diseñan **considerando las entradas y salidas sin conoc
 
 Permiten examinar la estructura interna de un sistema, **se centran en los detalles procedimentales**, como las pruebas de software estructurales:
 
-* **Pruebas de camino básico**: Esta técnica consiste en utilizar el **grafo de flujo** del código —donde los **nodos** representan bloques de instrucciones y las **aristas** representan el flujo de ejecución entre esos bloques— junto con el cálculo de la **complejidad ciclomática**, que indica el número de caminos de ejecución independientes del programa. A partir de esta información, se diseñan casos de prueba con el objetivo de recorrer cada uno de esos caminos, asegurando que **todas las instrucciones** del programa se ejecuten **al menos una vez** y que los resultados obtenidos sean los **esperados**.
+* **Pruebas de camino básico**: Esta técnica consiste en utilizar el **grafo de flujo** del código —donde los **nodos** representan bloques de instrucciones y las **aristas** representan el flujo de ejecución entre esos bloques— junto con el cálculo de la **complejidad ciclomática**, que indica el número de caminos de ejecución independientes del programa. A partir de esta información, se diseñan casos de prueba con el objetivo de recorrer cada uno de esos caminos, asegurando que **todas las instrucciones** del programa se ejecuten **al menos una vez** y que los resultados obtenidos sean los **esperados**.    
 * **Pruebas de coberturas de sentencias**: Este tipo de pruebas mide el porcentaje de sentencias del código que han sido ejecutadas durante la ejecución de un conjunto de pruebas (o test suite). Su objetivo principal es evaluar en qué medida las pruebas existentes ejercitan el código, proporcionando un indicador cuantitativo de la cobertura alcanzada, permitiendo identificar casos para los que diseñar pruebas que aumenten la cobertura.
 
 #### 3.2. Técnicas estáticas
@@ -256,16 +259,17 @@ Los casos de prueba describen los **pasos específicos que deben seguirse para e
 
 Por ejemplo, para verificar la funcionalidad de una aplicación de gestión de tareas:
 
-- Casos de prueba de creación de tareas:
-  - Verificación de que se pueden crear tareas con éxito.
-  - Verificación de que se pueden asignar tareas a usuarios específicos.
-  - Verificación de que se pueden establecer fechas de vencimiento para las tareas.
-- Casos de prueba de edición de tareas:
-  - Verificación de que se pueden editar tareas existentes.
-  - Verificación de que se pueden actualizar los datos de la tarea, como la fecha de vencimiento y la asignación de usuarios.
-- Casos de prueba de eliminación de tareas:
-  - Verificación de que se pueden eliminar tareas con éxito.
-  - Verificación de que no se pueden eliminar tareas asignadas a otros usuarios.
+- Casos de prueba de creación de tareas:       
+   * Verificación de que se pueden crear tareas con éxito.    
+   * Verificación de que se pueden asignar tareas a usuarios específicos.    
+   * Verificación de que se pueden establecer fechas de vencimiento para las tareas.    
+- Casos de prueba de edición de tareas:    
+   * Verificación de que se pueden editar tareas existentes.    
+   * Verificación de que se pueden actualizar los datos de la tarea, como la fecha de vencimiento y la asignación de usuarios.    
+
+- Casos de prueba de eliminación de tareas:    
+   * Verificación de que se pueden eliminar tareas con éxito.    
+   * Verificación de que no se pueden eliminar tareas asignadas a otros usuarios.    
 
 #### 5.5. Asignación de responsabilidades
 
@@ -281,18 +285,22 @@ El cronograma debe incluir la **duración de cada fase de pruebas y los plazos d
 
 En ejemplo simple de cronograma:
 
-- Semana 1:
-  - Revisión y aprobación de casos de prueba por el desarrollador.
-  - Configuración del entorno de prueba.
-  - Ejecución de pruebas unitarias.
-- Semana 2:
-  - Ejecución de pruebas de interfaz de usuario.
-  - Ejecución de pruebas de rendimiento.
-- Semana 3:
-  - Ejecución de pruebas de aceptación.
-  - Documentación de los resultados de las pruebas.
-- Semana 4:
-  - Revisión de resultados de pruebas y toma de decisiones sobre la aprobación de la entrega.
+- Semana 1:        
+   * Revisión y aprobación de casos de prueba por el desarrollador.   
+   * Configuración del entorno de prueba.    
+   * Ejecución de pruebas unitarias.    
+
+- Semana 2:   
+   * Ejecución de pruebas de interfaz de usuario.    
+   * Ejecución de pruebas de rendimiento.    
+
+- Semana 3:    
+   * Ejecución de pruebas de aceptación.    
+   * Documentación de los resultados de las pruebas.    
+
+- Semana 4:    
+   * Revisión de resultados de pruebas y toma de decisiones sobre la aprobación de la entrega.   
+
 
 Por tanto, un plan de pruebas es esencial para garantizar que las pruebas de software se realicen de manera efectiva y se puedan evaluar los resultados. Un plan de pruebas detallado debe incluir los objetivos de las pruebas, el alcance de las pruebas, el cronograma y los recursos, el plan de pruebas detallado, los roles y las responsabilidades y el proceso de seguimiento y documentación de errores.
 

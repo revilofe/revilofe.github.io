@@ -74,10 +74,15 @@ Si no podemos escribir una prueba es porque no está claro lo que quieres hacer,
 La técnica tiene 3 pasos:
 
 1. **RED**: Escribe un test que falla, ver como muestra el error.
-2. **GREEN**: Escribe el código mínimo necesario y simple para que el test no falle. Esto nos permitirá realizar un diseñon simple, sin sobrediseñar.
+2. **GREEN**: Escribe el código mínimo necesario y simple para que el test no falle. Esto nos permitirá realizar un diseño simple, sin sobrediseñar.
 3. **REFACTOR**: Refactoriza tu código y tu test. Mejorar el código sin modificar lo que hace este.
 
-![](assets/TDD.png)
+
+<figure markdown>
+  ![](assets/TDD.png)
+  <figcaption>Ciclo TDD</figcaption>
+</figure>
+
 
 Este ciclo se repite continuamente. Aunque no indica cuando parar y cuando refactorizar. Estas decisiones las tomaremos e iremos mejorando conforme vayamos tomando práctica en la técnica.
 

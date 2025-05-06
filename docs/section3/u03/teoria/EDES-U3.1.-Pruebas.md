@@ -34,14 +34,12 @@ Las pruebas de software es uno de los puntos más importantes del proceso de des
 
 Los errores que son identificados, pueden incluir:
 
-- Errores que pueden afectar la calidad del software y la satisfacción del usuario final, por ejemplo, errores producidos por el no cumplimiento de los requisitos especificados, ya sea por malentendidos durante la fase de análisis o por cambios en los requisitos durante el desarrollo.    
-
-- Otros errores:
-
-   * Fallos de seguridad.             
-   * Problemas de rendimiento.            
-   * Problemas de usabilidad.      
-   * Errores de lógica.   
+* **Errores que pueden **afectar la calidad del software y la satisfacción del usuario final**, por ejemplo, errores producidos por el no cumplimiento de los requisitos especificados, ya sea por malentendidos durante la fase de análisis o por cambios en los requisitos durante el desarrollo.
+* **Otros errores:    
+    - Fallos de seguridad.             
+    - Problemas de rendimiento.            
+    - Problemas de usabilidad.      
+    - Errores de lógica.   
 
 
 #### 1.2. Beneficios de realizar pruebas de software
@@ -97,7 +95,12 @@ Según el ISTQB, el proceso de prueba se puede ejecutar en los siguientes nivele
 
 Los niveles de las pruebas están estrechamente relacionados con las fases del ciclo de desarrollo del software, así en el modelo o método en V se establece dicha relación de forma explícita:
 
-![](assets/ModeloV.png)
+<figure markdown>
+  ![](assets/ModeloV.png)
+  <figcaption>Modelo V</figcaption>
+</figure>
+
+
 
 ### 3. Técnicas de verificación y prueba de programas
 
@@ -259,17 +262,17 @@ Los casos de prueba describen los **pasos específicos que deben seguirse para e
 
 Por ejemplo, para verificar la funcionalidad de una aplicación de gestión de tareas:
 
-- Casos de prueba de creación de tareas:       
-   * Verificación de que se pueden crear tareas con éxito.    
-   * Verificación de que se pueden asignar tareas a usuarios específicos.    
-   * Verificación de que se pueden establecer fechas de vencimiento para las tareas.    
+* Casos de prueba de creación de tareas:       
+    - Verificación de que se pueden crear tareas con éxito.    
+    - Verificación de que se pueden asignar tareas a usuarios específicos.    
+    - Verificación de que se pueden establecer fechas de vencimiento para las tareas.    
 - Casos de prueba de edición de tareas:    
-   * Verificación de que se pueden editar tareas existentes.    
-   * Verificación de que se pueden actualizar los datos de la tarea, como la fecha de vencimiento y la asignación de usuarios.    
+    - Verificación de que se pueden editar tareas existentes.    
+    - Verificación de que se pueden actualizar los datos de la tarea, como la fecha de vencimiento y la asignación de usuarios.    
 
 - Casos de prueba de eliminación de tareas:    
-   * Verificación de que se pueden eliminar tareas con éxito.    
-   * Verificación de que no se pueden eliminar tareas asignadas a otros usuarios.    
+    - Verificación de que se pueden eliminar tareas con éxito.    
+    - Verificación de que no se pueden eliminar tareas asignadas a otros usuarios.    
 
 #### 5.5. Asignación de responsabilidades
 
@@ -285,21 +288,21 @@ El cronograma debe incluir la **duración de cada fase de pruebas y los plazos d
 
 En ejemplo simple de cronograma:
 
-- Semana 1:        
-   * Revisión y aprobación de casos de prueba por el desarrollador.   
-   * Configuración del entorno de prueba.    
-   * Ejecución de pruebas unitarias.    
+* Semana 1:        
+    - Revisión y aprobación de casos de prueba por el desarrollador.   
+    - Configuración del entorno de prueba.    
+    - Ejecución de pruebas unitarias.    
 
 - Semana 2:   
-   * Ejecución de pruebas de interfaz de usuario.    
-   * Ejecución de pruebas de rendimiento.    
+    - Ejecución de pruebas de interfaz de usuario.    
+    - Ejecución de pruebas de rendimiento.    
 
 - Semana 3:    
-   * Ejecución de pruebas de aceptación.    
-   * Documentación de los resultados de las pruebas.    
+    - Ejecución de pruebas de aceptación.    
+    - Documentación de los resultados de las pruebas.    
 
 - Semana 4:    
-   * Revisión de resultados de pruebas y toma de decisiones sobre la aprobación de la entrega.   
+    - Revisión de resultados de pruebas y toma de decisiones sobre la aprobación de la entrega.   
 
 
 Por tanto, un plan de pruebas es esencial para garantizar que las pruebas de software se realicen de manera efectiva y se puedan evaluar los resultados. Un plan de pruebas detallado debe incluir los objetivos de las pruebas, el alcance de las pruebas, el cronograma y los recursos, el plan de pruebas detallado, los roles y las responsabilidades y el proceso de seguimiento y documentación de errores.
@@ -382,6 +385,8 @@ Se enfoca en que el sistema cumpla con los distintos aspectos que se han definid
 
 #### 8.2. Estrategias para realizar pruebas de aceptación
 Las estrategias para realizar pruebas estan orientadas a la realziación y cumplimiento del tipo de pruebas que hemos visto anteriormente. Algunas de las estrategias más comunes son:
+
+
 1. Pruebas de aceptación funcional: se centran en verificar que el sistema cumpla con los requisitos funcionales establecidos. Se realizan por el cliente o el usuario final, y se basan en los casos de uso y escenarios de negocio definidos en la especificación de requisitos.
 2. Pruebas de aceptación no funcional: se centran en verificar que el sistema cumpla con los requisitos no funcionales establecidos. Se realizan por el equipo de pruebas y se basan en los criterios de aceptación definidos en la especificación de requisitos no funcionales.
 

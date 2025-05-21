@@ -5,7 +5,7 @@ summary: "Detección y documentación de incidentes."
 authors:
   - Eduardo Fdez
 date: 2024-07-15
-icon: rule_folder # Or any other relevant icon
+icon: 
 permalink: /incidencias/unidad5
 categories:
   - INCIDENCIAS

@@ -5,7 +5,7 @@ summary: "Investigación de incidentes de ciberseguridad."
 authors:
   - Eduardo Fdez
 date: 2024-07-15
-icon: science # Or any other relevant icon
+icon: 
 permalink: /incidencias/unidad3
 categories:
   - INCIDENCIAS

@@ -75,9 +75,11 @@ Para evaluar la adquisición de los criterios de evaluación, se propondrán div
 *(Esta sección se detallará con actividades específicas)*
 
 ## 6. Prueba de Evaluación de Contenidos
-Al final de la unidad, se realizará una prueba que incluirá preguntas teóricas y prácticas sobre los conceptos tratados. Los estudiantes deberán demostrar su comprensión de:
-*   Los principios generales de la ciberseguridad en una organización.
-*   La normativa de protección del puesto de trabajo.
-*   El desarrollo de planes y materiales de concienciación.
-*   La ejecución de auditorías de cumplimiento.
-*(Esta sección se detallará con el formato específico de la prueba)*
+Al final de la unidad, se realizará una prueba que incluirá preguntas teóricas y prácticas sobre los conceptos tratados. Los estudiantes deberán demostrar su comprensión de:    
+
+*   Los principios generales de la ciberseguridad en una organización.   
+*   La normativa de protección del puesto de trabajo.   
+*   El desarrollo de planes y materiales de concienciación.   
+*   La ejecución de auditorías de cumplimiento.   
+     
+*(Esta sección se detallará con el formato específico de la prueba)*    

@@ -77,7 +77,9 @@ Para evaluar la adquisición de los criterios de evaluación, se propondrán div
 
 ## 6. Prueba de Evaluación de Contenidos
 Al final de la unidad, se realizará una prueba que incluirá preguntas teóricas y prácticas sobre los conceptos tratados. Los estudiantes deberán demostrar su comprensión de:
-*   El desarrollo de procedimientos de notificación de incidentes.
-*   La notificación interna efectiva.
-*   Los procesos y consideraciones para notificar a autoridades, afectados y medios de comunicación.
+    
+*   El desarrollo de procedimientos de notificación de incidentes.    
+*   La notificación interna efectiva.    
+*   Los procesos y consideraciones para notificar a autoridades, afectados y medios de comunicación.    
+    
 *(Esta sección se detallará con el formato específico de la prueba)*

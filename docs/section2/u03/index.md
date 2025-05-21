@@ -80,9 +80,11 @@ Para evaluar la adquisición de los criterios de evaluación, se propondrán div
 *(Esta sección se detallará con actividades específicas)*
 
 ## 6. Prueba de Evaluación de Contenidos
-Al final de la unidad, se realizará una prueba que incluirá preguntas teóricas y prácticas sobre los conceptos tratados. Los estudiantes deberán demostrar su comprensión de:
-*   La recopilación y el almacenamiento seguro de evidencias.
-*   El análisis de evidencias y la investigación de incidentes.
-*   El intercambio de información relevante sobre incidentes.
-*   La aplicación de medidas de contención eficaces.
+Al final de la unidad, se realizará una prueba que incluirá preguntas teóricas y prácticas sobre los conceptos tratados. Los estudiantes deberán demostrar su comprensión de:    
+
+*   La recopilación y el almacenamiento seguro de evidencias.    
+*   El análisis de evidencias y la investigación de incidentes.    
+*   El intercambio de información relevante sobre incidentes.    
+*   La aplicación de medidas de contención eficaces.    
+    
 *(Esta sección se detallará con el formato específico de la prueba)*

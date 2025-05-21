@@ -82,10 +82,12 @@ Para evaluar la adquisición de los criterios de evaluación, se propondrán div
 *(Esta sección se detallará con actividades específicas)*
 
 ## 6. Prueba de Evaluación de Contenidos
-Al final de la unidad, se realizará una prueba que incluirá preguntas teóricas y prácticas sobre los conceptos tratados. Los estudiantes deberán demostrar su comprensión de:
-*   El desarrollo y aplicación de procedimientos de respuesta a incidentes.
-*   La implementación de estrategias de ciberresiliencia.
-*   Los flujos de toma de decisiones y escalado.
-*   Las tareas de restablecimiento de servicios y la documentación post-incidente.
-*   El seguimiento y la prevención de futuros incidentes.
+Al final de la unidad, se realizará una prueba que incluirá preguntas teóricas y prácticas sobre los conceptos tratados. Los estudiantes deberán demostrar su comprensión de:    
+
+*   El desarrollo y aplicación de procedimientos de respuesta a incidentes.    
+*   La implementación de estrategias de ciberresiliencia.    
+*   Los flujos de toma de decisiones y escalado.    
+*   Las tareas de restablecimiento de servicios y la documentación post-incidente.    
+*   El seguimiento y la prevención de futuros incidentes.    
+    
 *(Esta sección se detallará con el formato específico de la prueba)*

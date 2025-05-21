@@ -78,9 +78,12 @@ Para evaluar la adquisición de los criterios de evaluación, se propondrán div
 *(Esta sección se detallará con actividades específicas)*
 
 ## 6. Prueba de Evaluación de Contenidos
-Al final de la unidad, se realizará una prueba que incluirá preguntas teóricas y prácticas sobre los conceptos tratados. Los estudiantes deberán demostrar su comprensión de:
-*   La taxonomía y clasificación de incidentes.
-*   Las herramientas y mecanismos de detección y monitorización.
-*   La identificación de incidentes de seguridad física y mediante OSINT.
-*   El proceso inicial de clasificación, valoración y documentación de incidentes.
+Al final de la unidad, se realizará una prueba que incluirá preguntas teóricas y prácticas sobre los conceptos tratados. Los estudiantes deberán demostrar su comprensión de:    
+
+*   La taxonomía y clasificación de incidentes.    
+*   Las herramientas y mecanismos de detección y
+monitorización.    
+*   La identificación de incidentes de seguridad física y mediante OSINT.    
+*   El proceso inicial de clasificación, valoración y documentación de incidentes.     
+     
 *(Esta sección se detallará con el formato específico de la prueba)*

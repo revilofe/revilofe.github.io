@@ -3,9 +3,9 @@ title: "UD 2 - Análisis de incidentes de ciberseguridad"
 description: "Análisis de incidentes de ciberseguridad utilizando herramientas, mecanismos de detección y alertas de seguridad."
 summary: "Análisis de incidentes de ciberseguridad."
 authors:
-  - Eduardo Fdez
+  - Eduardo Fdez.
 date: 2024-07-15
-icon: 
+icon:  
 permalink: /incidencias/unidad2
 categories:
   - INCIDENCIAS

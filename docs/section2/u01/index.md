@@ -3,9 +3,9 @@ title: "UD 1 - Planes de prevención y concienciación en ciberseguridad"
 description: "Desarrollo de planes de prevención y concienciación en ciberseguridad, estableciendo normas y medidas de protección."
 summary: "Planes de prevención y concienciación en ciberseguridad."
 authors:
-  - Eduardo Fdez
+  - Eduardo Fdez.
 date: 2024-07-15
-icon: 
+icon:  
 permalink: /incidencias/unidad1
 categories:
   - INCIDENCIAS

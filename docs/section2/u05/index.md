@@ -3,9 +3,9 @@ title: "UD 5 - Detección y documentación de incidentes"
 description: "Detección y documentación de incidentes de ciberseguridad siguiendo procedimientos de actuación establecidos."
 summary: "Detección y documentación de incidentes."
 authors:
-  - Eduardo Fdez
+  - Eduardo Fdez.
 date: 2024-07-15
-icon: 
+icon:  
 permalink: /incidencias/unidad5
 categories:
   - INCIDENCIAS

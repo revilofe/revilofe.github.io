@@ -3,9 +3,9 @@ title: "UD 3 - Investigación de incidentes de ciberseguridad"
 description: "Investigación de incidentes de ciberseguridad analizando los riesgos implicados y definiendo las posibles medidas a adoptar."
 summary: "Investigación de incidentes de ciberseguridad."
 authors:
-  - Eduardo Fdez
+  - Eduardo Fdez.
 date: 2024-07-15
-icon: 
+icon:  
 permalink: /incidencias/unidad3
 categories:
   - INCIDENCIAS

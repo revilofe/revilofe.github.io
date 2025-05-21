@@ -3,9 +3,9 @@ title: "UD 4 - Implementación de medidas de ciberseguridad"
 description: "Implementación de medidas de ciberseguridad en redes y sistemas respondiendo a los incidentes detectados y aplicando las técnicas de protección adecuadas."
 summary: "Implementación de medidas de ciberseguridad."
 authors:
-  - Eduardo Fdez
+  - Eduardo Fdez.
 date: 2024-07-15
-icon: 
+icon:  
 permalink: /incidencias/unidad4
 categories:
   - INCIDENCIAS

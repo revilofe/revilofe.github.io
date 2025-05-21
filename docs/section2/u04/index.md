@@ -5,7 +5,7 @@ summary: "Implementación de medidas de ciberseguridad."
 authors:
   - Eduardo Fdez
 date: 2024-07-15
-icon: construction # Or any other relevant icon
+icon:  
 permalink: /incidencias/unidad4
 categories:
   - INCIDENCIAS

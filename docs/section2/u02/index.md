@@ -5,7 +5,7 @@ summary: "Análisis de incidentes de ciberseguridad."
 authors:
   - Eduardo Fdez
 date: 2024-07-15
-icon: find_in_page # Or any other relevant icon
+icon: 
 permalink: /incidencias/unidad2
 categories:
   - INCIDENCIAS

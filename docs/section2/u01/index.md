@@ -5,7 +5,7 @@ summary: "Planes de prevención y concienciación en ciberseguridad."
 authors:
   - Eduardo Fdez
 date: 2024-07-15
-icon: security # Or any other relevant icon
+icon: 
 permalink: /incidencias/unidad1
 categories:
   - INCIDENCIAS

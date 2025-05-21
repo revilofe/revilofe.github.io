@@ -1,75 +1,83 @@
 ---
-title: "UD 5 - Implemetación de medidas"
-description: Implementación de planes de respuestas
-icon: 
-permalink: /incidentes/unidad5
+title: "UD 5 - Detección y documentación de incidentes"
+description: "Detección y documentación de incidentes de ciberseguridad siguiendo procedimientos de actuación establecidos."
+summary: "Detección y documentación de incidentes."
+authors:
+  - Eduardo Fdez
+date: 2024-07-15
+icon: rule_folder # Or any other relevant icon
+permalink: /incidencias/unidad5
 categories:
-  - IC
+  - INCIDENCIAS
 tags:
-  - Incidentes
+  - INCIDENCIAS
   - Ciberseguridad
-# Relacionado con la tabla de contenidos
+  - Documentación de Incidentes
+  - Notificación
 toc: true
 toc_label: "Contenido"
 toc_icon: "file-code"
+#hide:
+#  - footer
 ---
 
+# UD 5: Detección y documentación de incidentes de ciberseguridad
 
-Cada unidad contendrá una serie de contenidos, resultados de aprendizaje (desglosados en criterios de evaluación), una práctica o prácticas para evaluar la adquisición de dichos criterios de evaluación y una prueba teórica para evaluar la asimilación de contenido.
+## 1. Normativa que Respalda la Unidad
+Esta unidad está alineada con la normativa del Curso de Especialización en Ciberseguridad en Entornos TI, teniendo como base el Resultado de Aprendizaje (RA) 5 y sus Criterios de Evaluación (CE) asociados. El objetivo principal es que los estudiantes aprendan a detectar y documentar incidentes de ciberseguridad, siguiendo los procedimientos de actuación y notificación establecidos.
 
-## Normativa que respalda la unidad
+## 2. Resultado de Aprendizaje a Trabajar
+**RA 5:** Detecta y documenta incidentes de ciberseguridad siguiendo procedimientos de actuación establecidos.
 
-### Contenidos
+Este resultado de aprendizaje se logrará desglosando el contenido en varios puntos, cada uno enfocado en un criterio de evaluación específico.
 
-En esta sección se incluyen los contenidos mínimos a impartir en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
+## 3. Criterios de Evaluación
+En esta unidad se trabajarán los siguientes criterios de evaluación relacionados con el RA 5:
 
-Bloque 4 - Implementación de medidas de ciberseguridad:
+*   **CE 5.a:** Se ha desarrollado un procedimiento de actuación detallado para la notificación de incidentes de ciberseguridad en los tiempos adecuados.
+*   **CE 5.b:** Se ha notificado el incidente de manera adecuada al personal interno de la organización responsable de la toma de decisiones.
+*   **CE 5.c:** Se ha notificado el incidente de manera adecuada a las autoridades competentes en el ámbito de la gestión de incidentes de ciberseguridad en caso de ser necesario.
+*   **CE 5.d:** Se ha notificado formalmente el incidente a los afectados, personal interno, clientes, proveedores, etc., en caso de ser necesario.
+*   **CE 5.e:** Se ha notificado el incidente a los medios de comunicación en caso de ser necesario.
 
-- Desarrollar procedimientos de actuación detallados para dar respuesta, mitigar, eliminar o contener los tipos de incidentes.
-- Implantar capacidades de ciberresiliencia.
-- Establecer flujos de toma de decisiones y escalado interno y/o externo adecuados.
-- Tareas para reestablecer los servicios afectados por incidentes.
-- Documentación
-- Seguimiento de incidentes para evitar una situación similar.
+## 4. Contenidos
+En esta sección se describen los contenidos que se impartirán en la Unidad 5, teniendo en cuenta la normativa del curso y los criterios de evaluación.
 
-### Resultados de aprendizaje a trabajar
+La unidad pertenece al Módulo: Incidentes de Ciberseguridad.
 
-En esta sección se relaciona la unidad con el resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
+**U5: Detección y documentación de incidentes de ciberseguridad**
 
-RA 4. Implementa medidas de ciberseguridad en redes y sistemas respondiendo a los incidentes detectados y aplicando las técnicas de protección adecuadas
+Durante la Unidad 5, trabajaremos los siguientes contenidos:
 
-#### Criterios de evaluación
+*   **Desarrollar procedimientos de actuación para la notificación de incidentes (CE 5.a):**
+    *   Importancia de la notificación temprana y adecuada.
+    *   Definición de umbrales y criterios para la notificación.
+    *   Creación de plantillas y canales de comunicación para notificaciones.
+    *   Cumplimiento de plazos legales y regulatorios (e.g., GDPR para brechas de datos).
+*   **Notificación interna de incidentes (CE 5.b):**
+    *   Identificación de los stakeholders internos (dirección, legal, comunicación, TI).
+    *   Contenido y formato de las notificaciones internas.
+    *   Flujos de comunicación y escalado dentro de la organización.
+*   **Notificación de incidentes a quienes corresponda (CE 5.c, CE 5.d, CE 5.e):**
+    *   **Autoridades competentes (CE 5.c):**
+        *   Identificación de las autoridades relevantes (INCIBE-CERT, AEPD, etc.).
+        *   Procedimientos y requisitos para la notificación a autoridades.
+    *   **Afectados (personal interno, clientes, proveedores) (CE 5.d):**
+        *   Determinación de la necesidad de notificar a los afectados.
+        *   Contenido de la notificación: transparencia y recomendaciones.
+        *   Canales de comunicación con los afectados.
+    *   **Medios de comunicación (CE 5.e):**
+        *   Estrategia de comunicación con medios.
+        *   Portavoces designados y mensajes clave.
+        *   Gestión de la reputación de la organización.
 
-En esta sección se relaciona la unidad con los criterios de evaluación concretos, del resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
+## 5. Actividades de Evaluación
+Para evaluar la adquisición de los criterios de evaluación, se propondrán diversas actividades prácticas y teóricas a lo largo de la unidad.
+*(Esta sección se detallará con actividades específicas)*
 
-- a) Se han desarrollado procedimientos de actuación detallados para dar respuesta, mitigar, eliminar o contener los tipos de incidentes de ciberseguridad más habituales.
-- b) Se han preparado respuestas ciberresilientes ante incidentes que permitan seguir prestando los servicios de la organización y fortaleciendo las capacidades de identificación, detección, prevención, contención, recuperación y cooperación con terceros.
-- c) Se ha establecido un flujo de toma de decisiones y escalado de incidentes interno y/o externo adecuados.
-- d) Se han llevado a cabo las tareas de restablecimiento de los servicios afectados por un incidente hasta confirmar la vuelta a la normalidad.
-- e) Se han documentado las acciones realizadas y las conclusiones que permitan mantener un registro de “lecciones aprendidas”.
-- f) Se ha realizado un seguimiento adecuado del incidente para evitar que una situación similar se vuelva a repetir.
-
-## Cómo impartir la unidad
-
-Esta es la sección más interesante, y se incluye cómo trabajar la unidad, haciendo referencia a herramientas, guías, materiales y recursos, de manera individual para cada criterio.
-
-- **Criterio de evaluación a**: se pueden desarrollar procedimientos de actuación basándonos en los que nos ofrece [Incibe en los siguientes casos](https://www.incibe.es/protege-tu-empresa/juego-rol-pyme-seguridad). Con este juego el alumnado puede trabajar posibles incidentes y desarrollar a partir de ellos sus soluciones.
-- **Criterio de evaluación e**: se puede montar [una herramienta de ticketing, como FIR,](https://github.com/certsocietegenerale/FIR/) para llevar el control de los incidentes, desde su origen hasta su resolución. Se puede usar [una herramienta como DFIRTrack](https://github.com/dfirtrack/dfirtrack) para llevar las evidencias y artefactos de los incidentes de ciberseguridad.
-
-### Teoría
-
-Por hacer.
-
-### Ejercicios
-
-Por hacer.
-
-## Cómo evaluar la unidad
-
-### Práctica de la unidad
-
-En esta sección se incluye una propuesta de práctica o prácticas con los que evaluar la unidad.
-
-### Controles de ejemplo
-
-En esta sección se incluyen controles de ejemplo para evaluar la unidad.
+## 6. Prueba de Evaluación de Contenidos
+Al final de la unidad, se realizará una prueba que incluirá preguntas teóricas y prácticas sobre los conceptos tratados. Los estudiantes deberán demostrar su comprensión de:
+*   El desarrollo de procedimientos de notificación de incidentes.
+*   La notificación interna efectiva.
+*   Los procesos y consideraciones para notificar a autoridades, afectados y medios de comunicación.
+*(Esta sección se detallará con el formato específico de la prueba)*

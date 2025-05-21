@@ -1,73 +1,91 @@
 ---
-title: "UD 4 - Investigación de incidentes de ciberseguridad"
-description: Describe incidentes
-icon: 
-permalink: /incidentes/unidad4
+title: "UD 4 - Implementación de medidas de ciberseguridad"
+description: "Implementación de medidas de ciberseguridad en redes y sistemas respondiendo a los incidentes detectados y aplicando las técnicas de protección adecuadas."
+summary: "Implementación de medidas de ciberseguridad."
+authors:
+  - Eduardo Fdez
+date: 2024-07-15
+icon: construction # Or any other relevant icon
+permalink: /incidencias/unidad4
 categories:
-  - IC
+  - INCIDENCIAS
 tags:
-  - Incidentes
+  - INCIDENCIAS
   - Ciberseguridad
-# Relacionado con la tabla de contenidos
+  - Implementación
+  - Respuesta a Incidentes
+  - Ciberresiliencia
 toc: true
 toc_label: "Contenido"
 toc_icon: "file-code"
+#hide:
+#  - footer
 ---
 
-Cada unidad contendrá una serie de contenidos, resultados de aprendizaje (desglosados en criterios de evaluación), una práctica o prácticas para evaluar la adquisición de dichos criterios de evaluación y una prueba teórica para evaluar la asimilación de contenido.
+# UD 4: Implementación de medidas de ciberseguridad
 
-## Normativa que respalda la unidad
+## 1. Normativa que Respalda la Unidad
+Esta unidad está alineada con la normativa del Curso de Especialización en Ciberseguridad en Entornos TI, teniendo como base el Resultado de Aprendizaje (RA) 4 y sus Criterios de Evaluación (CE) asociados. El objetivo principal es que los estudiantes aprendan a implementar medidas de ciberseguridad en respuesta a incidentes, aplicando técnicas de protección y fomentando la ciberresiliencia.
 
-### Contenidos
+## 2. Resultado de Aprendizaje a Trabajar
+**RA 4:** Implementa medidas de ciberseguridad en redes y sistemas respondiendo a los incidentes detectados y aplicando las técnicas de protección adecuadas.
 
-En esta sección se incluyen los contenidos mínimos a impartir en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
+Este resultado de aprendizaje se logrará desglosando el contenido en varios puntos, cada uno enfocado en un criterio de evaluación específico.
 
-Bloque 3 - Investigación de los incidentes de ciberseguridad:
+## 3. Criterios de Evaluación
+En esta unidad se trabajarán los siguientes criterios de evaluación relacionados con el RA 4:
 
-- Recopilación de evidencias.
-- Análisis de evidencias.
-- Investigación del incidente
-- Intercambio de información del incidente con proveedores u organismos competentes.
-- Medidas de contención de incidentes.
+*   **CE 4.a:** Se han desarrollado procedimientos de actuación detallados para dar respuesta, mitigar, eliminar o contener los tipos de incidentes de ciberseguridad más habituales.
+*   **CE 4.b:** Se han preparado respuestas ciberresilientes ante incidentes que permitan seguir prestando los servicios de la organización y fortaleciendo las capacidades de identificación, detección, prevención, contención, recuperación y cooperación con terceros.
+*   **CE 4.c:** Se ha establecido un flujo de toma de decisiones y escalado de incidentes interno y/o externo adecuados.
+*   **CE 4.d:** Se han llevado a cabo las tareas de restablecimiento de los servicios afectados por un incidente hasta confirmar la vuelta a la normalidad.
+*   **CE 4.e:** Se han documentado las acciones realizadas y las conclusiones que permitan mantener un registro de “lecciones aprendidas”.
+*   **CE 4.f:** Se ha realizado un seguimiento adecuado del incidente para evitar que una situación similar se vuelva a repetir.
 
-### Resultados de aprendizaje a trabajar
+## 4. Contenidos
+En esta sección se describen los contenidos que se impartirán en la Unidad 4, teniendo en cuenta la normativa del curso y los criterios de evaluación.
 
-En esta sección se relaciona la unidad con el resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
+La unidad pertenece al Módulo: Incidentes de Ciberseguridad.
 
-RA 3. Investiga incidentes de ciberseguridad analizando los riesgos implicados y definiendo las posibles medidas a adoptar.
+**U4: Implementación de medidas de ciberseguridad**
 
-#### Criterios de evaluación
+Durante la Unidad 4, trabajaremos los siguientes contenidos:
 
-En esta sección se relaciona la unidad con los criterios de evaluación concretos, del resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
+*   **Desarrollar procedimientos de actuación detallados para dar respuesta, mitigar, eliminar o contener los tipos de incidentes (CE 4.a):**
+    *   Creación de playbooks y runbooks para diferentes tipos de incidentes.
+    *   Fases de la respuesta a incidentes (Preparación, Identificación, Contención, Erradicación, Recuperación, Lecciones Aprendidas - PICERL).
+    *   Técnicas de mitigación y erradicación específicas para amenazas comunes.
+*   **Implantar capacidades de ciberresiliencia (CE 4.b):**
+    *   Concepto de ciberresiliencia y su importancia.
+    *   Estrategias de continuidad de negocio y recuperación ante desastres (BCP/DRP).
+    *   Fortalecimiento de las capacidades de identificación, detección, prevención, contención y recuperación.
+    *   Cooperación con terceros (proveedores, autoridades).
+*   **Establecer flujos de toma de decisiones y escalado interno y/o externo adecuados (CE 4.c):**
+    *   Definición de roles y responsabilidades en la gestión de incidentes.
+    *   Criterios para el escalado de incidentes.
+    *   Comunicación efectiva durante la crisis.
+*   **Tareas para reestablecer los servicios afectados por incidentes (CE 4.d):**
+    *   Procesos de restauración de sistemas y datos.
+    *   Validación y monitorización post-recuperación.
+    *   Comunicación con los usuarios sobre el restablecimiento del servicio.
+*   **Documentación (CE 4.e):**
+    *   Importancia del registro de todas las acciones tomadas.
+    *   Creación de informes post-incidente.
+    *   Análisis de "lecciones aprendidas" para la mejora continua.
+*   **Seguimiento de incidentes para evitar una situación similar (CE 4.f):**
+    *   Análisis de la causa raíz y vulnerabilidades explotadas.
+    *   Implementación de medidas correctivas y preventivas.
+    *   Actualización de políticas y procedimientos de seguridad.
 
-- a) Se han recopilado y almacenado de forma segura evidencias de incidentes de ciberseguridad que afectan a la organización.
-- b) Se ha realizado un análisis de evidencias.
-- c) Se ha realizado la investigación de incidentes de ciberseguridad.
-- d) Se ha intercambiado información de incidentes, con proveedores y/o organismos competentes que podrían hacer aportaciones al respecto.
-- e) Se han iniciado las primeras medidas de contención de los incidentes para limitar los posibles daños causados.
+## 5. Actividades de Evaluación
+Para evaluar la adquisición de los criterios de evaluación, se propondrán diversas actividades prácticas y teóricas a lo largo de la unidad.
+*(Esta sección se detallará con actividades específicas)*
 
-## Cómo impartir la unidad
-
-Esta es la sección más interesante, y se incluye cómo trabajar la unidad, haciendo referencia a herramientas, guías, materiales y recursos, de manera individual para cada criterio.
-
-- **Criterio de evaluación a**: se puede usar [una herramienta como DFIRTrack](https://github.com/dfirtrack/dfirtrack) para llevar las evidencias y artefactos de los incidentes de ciberseguridad.
-- **Criterio de evaluación b**: en caso de incidentes con ransomware, se recomienda ]el uso de la herramienta id-ransomware](https://id-ransomware.malwarehunterteam.com/) para comprobar qué tipo de malware nos ha infectado y qué pasos tomar a continuación.
-- **Criterio de evaluación c**: para entrenar la investigación de incidentes se pueden emplear plataformas de aprendizaje como [Let's Defend](https://letsdefend.io/) o [Cyberdefenders](https://cyberdefenders.org/).
-
-### Teoría
-
-Por hacer.
-
-### Ejercicios
-
-Por hacer.
-
-## Cómo evaluar la unidad
-
-### Práctica de la unidad
-
-En esta sección se incluye una propuesta de práctica o prácticas con los que evaluar la unidad.
-
-### Controles de ejemplo
-
-En esta sección se incluyen controles de ejemplo para evaluar la unidad.
+## 6. Prueba de Evaluación de Contenidos
+Al final de la unidad, se realizará una prueba que incluirá preguntas teóricas y prácticas sobre los conceptos tratados. Los estudiantes deberán demostrar su comprensión de:
+*   El desarrollo y aplicación de procedimientos de respuesta a incidentes.
+*   La implementación de estrategias de ciberresiliencia.
+*   Los flujos de toma de decisiones y escalado.
+*   Las tareas de restablecimiento de servicios y la documentación post-incidente.
+*   El seguimiento y la prevención de futuros incidentes.
+*(Esta sección se detallará con el formato específico de la prueba)*

@@ -1,79 +1,86 @@
 ---
-title: "UD 2 - Detección de de incidentes de ciberseguridad"
-description: Detección de incidentes de seguridad. 
-icon: 
-permalink: /incidentes/unidad2
+title: "UD 2 - Análisis de incidentes de ciberseguridad"
+description: "Análisis de incidentes de ciberseguridad utilizando herramientas, mecanismos de detección y alertas de seguridad."
+summary: "Análisis de incidentes de ciberseguridad."
+authors:
+  - Eduardo Fdez
+date: 2024-07-15
+icon: find_in_page # Or any other relevant icon
+permalink: /incidencias/unidad2
 categories:
-  - IC
+  - INCIDENCIAS
 tags:
-  - Incidentes
+  - INCIDENCIAS
   - Ciberseguridad
-# Relacionado con la tabla de contenidos
+  - Análisis de Incidentes
+  - Detección
 toc: true
 toc_label: "Contenido"
 toc_icon: "file-code"
+#hide:
+#  - footer
 ---
 
+# UD 2: Análisis de incidentes de ciberseguridad
 
-Cada unidad contendrá una serie de contenidos, resultados de aprendizaje (desglosados en criterios de evaluación), una práctica o prácticas para evaluar la adquisición de dichos criterios de evaluación y una prueba teórica para evaluar la asimilación de contenido.
+## 1. Normativa que Respalda la Unidad
+Esta unidad está alineada con la normativa del Curso de Especialización en Ciberseguridad en Entornos TI, teniendo como base el Resultado de Aprendizaje (RA) 2 y sus Criterios de Evaluación (CE) asociados. El objetivo principal es que los estudiantes aprendan a analizar incidentes de ciberseguridad, utilizando herramientas y mecanismos de detección y alerta.
 
-## Normativa que respalda la unidad
+## 2. Resultado de Aprendizaje a Trabajar
+**RA 2:** Analiza incidentes de ciberseguridad utilizando herramientas, mecanismos de detección y alertas de seguridad.
 
-### Contenidos
+Este resultado de aprendizaje se logrará desglosando el contenido en varios puntos, cada uno enfocado en un criterio de evaluación específico.
 
-En esta sección se incluyen los contenidos mínimos a impartir en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
+## 3. Criterios de Evaluación
+En esta unidad se trabajarán los siguientes criterios de evaluación relacionados con el RA 2:
 
-Bloque 2 - Auditoría de incidentes de ciberseguridad:
+*   **CE 2.a:** Se ha clasificado y definido la taxonomía de incidentes de ciberseguridad que pueden afectar a la organización.
+*   **CE 2.b:** Se han establecido controles, herramientas y mecanismos de monitorización, identificación, detección y alerta de incidentes.
+*   **CE 2.c:** Se han establecido controles y mecanismos de detección e identificación de incidentes de seguridad física.
+*   **CE 2.d:** Se han establecido controles, herramientas y mecanismos de monitorización, identificación, detección y alerta de incidentes a través de la investigación en fuentes abiertas (OSINT: Open Source Intelligence).
+*   **CE 2.e:** Se ha realizado una clasificación, valoración, documentación y seguimiento de los incidentes detectados dentro de la organización.
 
-- Taxonomía, documentación y valoración de incidentes de ciberseguridad.
-- Controles, herramientas y mecanismos de detección e identificación y alerta de incidentes.
-- Controles, herramientas y mecanismos de detección e identificación de incidentes de seguridad física.
-- Controles, herramientas y mecanismos de monitorización, identificación, detección y alerta de incidentes a través de la investigación en fuentes abiertas (OSINT).
+## 4. Contenidos
+En esta sección se describen los contenidos que se impartirán en la Unidad 2, teniendo en cuenta la normativa del curso y los criterios de evaluación.
 
-### Resultados de aprendizaje a trabajar
+La unidad pertenece al Módulo: Incidentes de Ciberseguridad.
 
-En esta sección se relaciona la unidad con el resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
+**U2: Auditoría de incidentes de ciberseguridad**
 
-RA 2. Analiza incidentes de ciberseguridad utilizando herramientas, mecanismos de detección y alertas de seguridad.
+Durante la Unidad 2, trabajaremos los siguientes contenidos:
 
-#### Criterios de evaluación
+*   **Taxonomía de incidentes de ciberseguridad (CE 2.a):**
+    *   Tipos de incidentes (malware, phishing, DoS/DDoS, intrusiones, etc.).
+    *   Clasificación según su impacto y severidad.
+    *   Estándares y marcos de referencia (e.g., NIST).
+*   **Controles, herramientas y mecanismos de monitorización, identificación, detección y alerta de incidentes (CE 2.b):**
+    *   SIEM (Security Information and Event Management).
+    *   IDS/IPS (Intrusion Detection/Prevention Systems).
+    *   Análisis de logs y flujos de red.
+    *   Fuentes de inteligencia de amenazas.
+*   **Controles y mecanismos de detección e identificación de incidentes de seguridad física (CE 2.c):**
+    *   Sistemas de control de acceso físico.
+    *   CCTV y videovigilancia.
+    *   Sensores y alarmas.
+    *   Procedimientos de respuesta a incidentes físicos.
+*   **Controles, herramientas y mecanismos de monitorización, identificación, detección y alerta de incidentes a través de la investigación en fuentes abiertas (OSINT) (CE 2.d):**
+    *   Metodologías OSINT.
+    *   Herramientas de recolección y análisis de información pública.
+    *   Identificación de amenazas y vulnerabilidades expuestas.
+*   **Clasificación, valoración, documentación y seguimiento inicial de incidentes de ciberseguridad (CE 2.e):**
+    *   Proceso de triaje de alertas.
+    *   Evaluación del impacto y alcance del incidente.
+    *   Sistemas de ticketing y gestión de casos.
+    *   Informes iniciales de incidentes.
 
-En esta sección se relaciona la unidad con los criterios de evaluación concretos, del resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
+## 5. Actividades de Evaluación
+Para evaluar la adquisición de los criterios de evaluación, se propondrán diversas actividades prácticas y teóricas a lo largo de la unidad.
+*(Esta sección se detallará con actividades específicas)*
 
-- a) Se ha clasificado y definido la taxonomía de incidentes de ciberseguridad que pueden afectar a la organización.
-- b) Se han establecido controles, herramientas y mecanismos de monitorización, identificación, detección y alerta de incidentes.
-- c) Se han establecido controles y mecanismos de detección e identificación de incidentes de seguridad física.
-- d) Se han establecido controles, herramientas y mecanismos de monitorización, identificación, detección y alerta de incidentes a través de la investigación en fuentes abiertas (OSINT: Open Source Intelligence).
-- e) Se ha realizado una clasificación, valoración, documentación y seguimiento de los incidentes detectados dentro de la organización.
-
-## Cómo impartir la unidad
-
-Esta es la sección más interesante, y se incluye cómo trabajar la unidad, haciendo referencia a herramientas, guías, materiales y recursos, de manera individual para cada criterio.
-
-- **Criterio de evaluación a**: nos podemos basar en la taxonomía que Incibe pone a nuestra disposición en la [guía nacional de notificación y gestión de ciberincidentes](https://www.incibe-cert.es/sites/default/files/contenidos/guias/doc/guia_nacional_notificacion_gestion_ciberincidentes.pdf), en la página 14 y posteriores.
-- **Criterio de evaluación d**: para trabajar este criterio de evaluación se pueden emplear las herramientas de [HaveIBeenPwnd](https://haveibeenpwned.com/) y de [Firefox Monitor](https://monitor.firefox.com/). Si se produce una filtración de datos, estas herramientas notificarán dicha filtración.
-
-### Teoría
-
-En moodle.
-
-### Ejercicios
-
-En moodle.
-
-## Cómo evaluar la unidad
-
-Presentación de trabajos + examen teórico.
-
-### Práctica de la unidad
-
-En esta sección se incluye una propuesta de práctica o prácticas con los que evaluar la unidad.
-- Clasificación, valoración y documentación de un incidente.
-- Uso de herramientas OSINT para obtener información de una persona o entidad.
-- Puesta en funcionamiento de herramientas de monitorización (SIEM)
-
-
-### Controles de ejemplo
-
-En esta sección se incluyen controles de ejemplo para evaluar la unidad.
-Tipos test principal, aunque con posibilidad de supuesto prácticos y desarrollo de contenidos.
+## 6. Prueba de Evaluación de Contenidos
+Al final de la unidad, se realizará una prueba que incluirá preguntas teóricas y prácticas sobre los conceptos tratados. Los estudiantes deberán demostrar su comprensión de:
+*   La taxonomía y clasificación de incidentes.
+*   Las herramientas y mecanismos de detección y monitorización.
+*   La identificación de incidentes de seguridad física y mediante OSINT.
+*   El proceso inicial de clasificación, valoración y documentación de incidentes.
+*(Esta sección se detallará con el formato específico de la prueba)*

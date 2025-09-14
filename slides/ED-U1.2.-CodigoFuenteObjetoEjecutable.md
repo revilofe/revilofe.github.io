@@ -33,14 +33,13 @@
     - Ilustración del Proceso
 - Proceso de Conversión
     - Etapas
-- Conclusión
 
 
 ## Índice 4
 
 - Conclusión
     - Resumen Final
-- ¡Gracias por su atención!
+
 ---
 
 ## Relación entre el Software y el Hardware

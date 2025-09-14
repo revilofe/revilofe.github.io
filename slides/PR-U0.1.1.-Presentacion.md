@@ -3,7 +3,7 @@
 ## Programación  
 ![](./assets/PR-U0.1.1.-Presentacion-tarjeta.png)<!-- .element height="50%" width="50%" -->
 
-**2024/2025**
+**2025/2026**
 
 ---
 ## Indice
@@ -15,7 +15,7 @@
   * _[eferoli398@g.educaand\.es](mailto:eferoli398@g.educaand.es)_
   * _[https://www.linkedin.com/in/efoliver/](https://www.linkedin.com/in/efoliver/)_
   * _[https://revilofe.github.io/](https://revilofe.github.io/)_
-* Tutor + Tutor Dual de DAW A
+* Tutor 1 DAW A
 
 
 ## Alumnos.  
@@ -59,7 +59,8 @@ Presentación entre vosotros:
 ## Planificación.  
 ![](assets/prog-planif.png)<!-- .element height="75%" width="75%" -->
 
-Como toda planificación, puede sufrir cambios. Los sufrirá, hay que adaptarla a la dual.
+Como toda planificación, puede sufrir cambios.    
+De hecho, los sufrirá, hay que adaptarla a la dual.
 
 
 ## Horario.  
@@ -74,7 +75,7 @@ Horario (8 horas semanales)
 
 
 ## Evaluación II.  
-* Los calificación de los RA se obtienen de la media de la calificación de los criterios de evaluación (CE).
+* Los calificación de los RA se obtienen de la media de la calificación de los criterios de evaluación (CE) del RA.
 * Los CE se evalúan y califican a través del trabajo en clases y la realización de prácticas y pruebas específicas.  
 
 ![](./assets/IS-U011-Presentacion2.png)
@@ -98,8 +99,12 @@ Este año tenemos la formación dual, por tanto, habrá que adaptar la evaluaci�
 * Consistirá en un conjunto de prácticas y/o pruebas sobre los criterios de evaluación relacionados con el resultado de aprendizaje no superado, que tendrán que defenderse.
 
 
-## Resumen.  
-![](assets/pro-eva&rec.png)
+## Resumen evaluación y recuperación.
+- Se evalua a lo largo del curso el RA conforme se termina de trabajar el RA.
+- A veces se pueden evaluar varios RA juntos.
+- La nota de cada evaluación es la media de los RA trabajados en esa evaluación.
+- La notas intermedias de cada evaluación son orientativas.
+- La recuperación es en junio, y se recuperan por RA completos no superados.
 
 ---
 ## Metodología I.    
@@ -137,19 +142,17 @@ Por unidad:
 
 ## Aclaraciones II.  
 * Causas para no corregir una prueba (ejercicio, práctica, examen)
-  - No se cumple las condiciones de entrega.
-  - Se ha detectado la posibilidad de copiado de todo o parte de la prueba. Esto incluye textos (total o parcial) de internet y/o sin hacer referencia a la fuente.
-  - Se entrega fuera de plazo (aunque sean unos segundos).
-  - En caso de código, no compila.
+  - No se cumple las **CONDICIONES DE ENTREGA**.
+  - Se ha detectado la posibilidad de **COPIADO DE TODO O PARTE** de la prueba. Esto incluye textos (total o parcial) de internet y/o sin hacer referencia a la fuente.
+  - Se entrega **FUERA DE PLAZO** (aunque sean unos segundos).
+  - En caso de código, **NO COMPILAR**.
 
 
 ## Aclaraciones II.  
-* OJO con Chat GPT, Copilot, etc. -> Asegurate de saber que haces.
-
-
-## Aclaraciones III.  
 * Causas para no corregir una prueba (ejercicio, práctica, examen)
-  - Si la entrega es el git, añadir en el README.md instrucciones para compilar y ejecutar el código, descripción de la aplicación, autoría y referencias.
+   - El **USO DE LA IA** durante las pruebas (ejercicios, prácticas, exámenes).
+   - OJO con Chat GPT, Copilot, etc. -> Asegurate de saber que haces.
+   - Si la entrega es el git, añadir en el README.md instrucciones para compilar y ejecutar el código, descripción de la aplicación, autoría y referencias.
 
 
 ## Aclaraciones IV.  
@@ -159,7 +162,9 @@ Por unidad:
 
 ## Aclaraciones V.  
 * En cuando a las fechas de entrega de prácticas/trabajos/ejercicios, tendrán una fecha de entrega clara, **que no se podrá cambiar bajo ninguna circunstancia**. Quedando a elección del profesor posibles excepciones justificadas.
-* La entrega consiste en: subida a la plataforma (por defecto) en fecha + defensa en clase.
+* La entrega **consiste en**: 
+    1. subida a la plataforma (por defecto) en fecha 
+    2. **DEFENSA EN CLASE**.
 
 ---
 ## Tutorias.    
@@ -167,15 +172,41 @@ En clase, acordáis hablar conmigo.
 
 
 ## Módulos.   
-![](./assets/PR-U0.1.1.-Presentacion-modulos.png) <!-- .element height="75%" width="75%" -->
+| Nº | Módulo                                                        | Horas Totales | Horas/Semana | % sobre total |
+|----|---------------------------------------------------------------|---------------|--------------|---------------|
+| 1  | Programación                                                   | 256 h         | 8 h/semana   | 26.67 %       |
+| 2  | Bases de Datos                                                 | 192 h         | 6 h/semana   | 20.00 %       |
+| 3  | Sistemas Informáticos                                          | 160 h         | 5 h/semana   | 16.67 %       |
+| 4  | Lenguajes de Marcas y Sistemas de Gestión de Información       | 96 h          | 3 h/semana   | 10.00 %       |
+| 5  | Entornos de Desarrollo                                         | 96 h          | 3 h/semana   | 10.00 %       |
+| 6  | Digitalización aplicada al sistema productivo                  | 32 h          | 1 h/semana   | 3.33 %        |
+| 7  | Sostenibilidad aplicada al sistema productivo                  | 32 h          | 1 h/semana   | 3.33 %        |
+| 8  | Itinerario personal para la empleabilidad I                    | 96 h          | 3 h/semana   | 10.00 %       |
+<!-- .element.table: style="font-size:50%;" -->
+
 
 
 ## Equipo educativo
-![](./assets/PR-U0.1.1.-Presentacion-equipo.png) <!-- .element height="75%" width="75%" -->
+| Profesor                         | Módulo                                                        | Horas |
+|----------------------------------|---------------------------------------------------------------|-------|
+| Fernández Oliver, Eduardo        | Programación                                                   | 8     |
+| Rivas Cano, José Ramón           | Bases de Datos                                                 | 6     |
+| González Castillo, José Manuel   | Sistemas Informáticos                                          | 5     |
+| Carmona Martos, Alejandro        | Lenguaje de Marcas y Sistemas de Gestión de la Información     | 3     |
+| Fernández Oliver, Eduardo        | Entornos de Desarrollo                                         | 3     |
+| García Romero, José Javier       | Digitalización aplicada al sistema productivo                  | 1     |
+| *Pendiente de asignar*           | Sostenibilidad aplicada al sistema productivo                  | 1     |
+| *Pendiente de asignar*           | Itinerario personal para la empleabilidad I                    | 3     |
+<!-- .element.table: style="font-size:50%;" -->
 
 
 ## Cursos de especialización.
-![](./assets/PR-U0.1.1.-Presentacion-cursos.png) <!-- .element height="75%" width="75%" -->
+| Curso de Especialización                | Enlace a X |
+|-----------------------------------------|------------|
+| Ciberseguridad                          | [@FPCiberSec](https://x.com/fpcibersec) |
+| Videojuegos y Realidad Virtual          | [@fpvideojuegosrv](https://x.com/fpvideojuegosrv) |
+| Inteligencia Artificial y Big Data      | [@FPIABigData](https://x.com/fpiabigdata) |
+
 
 
 ## Centro I. Planta baja.   

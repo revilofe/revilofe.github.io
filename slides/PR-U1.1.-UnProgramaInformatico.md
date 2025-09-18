@@ -1,206 +1,295 @@
-<!-- Con # se ponen los títulos -->
+# U1.1 - Mi primer programa
 
-# U1 - Un programa informático
+---
+
 ![Logo Alberti](assets/logo-iesra.png) <!-- .element height="50%" width="50%" -->
 
 ---
 
-# Indice
+## Índice 1
+
+- U1.1 - Mi primer programa
+- 1. La Programación
+    - Definición
+    - Ciclo de Vida de un Programa
+- 2. El Ordenador
+    - ¿Qué es un ordenador?
+
+
+## Índice 2
+
+- 2. El Ordenador
+    - Estructura de Von Neumann
+- 3. ¿Qué es un Programa o Software?
+    - Definición de Software
+    - Tipos de Software
+- 4. Relación Hardware - Software
+
+
+## Índice 3
+
+- 4. Relación Hardware - Software
+    - Hardware y Software
+    - Elementos principales
+- 5. Algoritmos
+    - Definición de Algoritmo
+    - Ejemplo de Algoritmo (Pseudocódigo)
+
+
+## Índice 4
+
+- 5. Algoritmos
+    - Diagramas de Flujo
+- 6. Lenguajes de Programación
+    - Definición
+    - Clasificación y Usos
+
+
+## Índice 5
+
+- Cierre de la Unidad
+    - Resumen
+    - Preguntas para Reflexionar
+---
+
+## 1. La Programación
+
+
+### Definición
+
+* Proceso de crear programas para resolver problemas o automatizar tareas.
+* Usa lenguajes de programación para dar instrucciones a un dispositivo.
+* Requiere un traductor (compilador/intérprete) para convertir a lenguaje máquina.
+* Lenguaje máquina: único que entiende la CPU.
+* Microprocesadores ejecutan estas instrucciones de forma secuencial.
+
+Note: Explica qué significa programar: transformar ideas en instrucciones ejecutables.
+Recalca que necesitamos un lenguaje intermedio porque la máquina solo entiende ceros y unos.
+Introduce la noción de traductor (compilador o intérprete).
+
+
+### Ciclo de Vida de un Programa
+
+* Comprender el problema.
+* Recopilar requisitos.
+* Planificar la solución.
+* Diseñar el programa.
+* Programar (codificar).
+* Probar el programa.
+* Desplegarlo para su uso.
+* Mantener y mejorar el software.
+
+Note: Recorre cada fase del ciclo de vida. Usa ejemplos simples: crear una calculadora
+o una app de notas. Destaca que la programación no es solo "picar código".
+
 
 ---
 
-# Presentación
+## 2. El Ordenador
 
 
-## Nos conocemos.
-* Profesor: Eduardo Fernández Oliver
-  * _[efernandez@iesrafaelalberti\.es](mailto:efernandez@iesrafaelalberti.es)_
-  * _[https://www.linkedin.com/in/efoliver/](https://www.linkedin.com/in/efoliver/)_
-  * _[https://revilofe.github.io/](https://revilofe.github.io/)_
-* Alumnos (Edad, Estudios previos, Conocimiento de programación, Aspiraciones)
+### ¿Qué es un ordenador?
+
+* Máquina electrónica que procesa información.
+* Puede ser digital o analógica.
+* Ejecuta programas para resolver problemas lógicos o matemáticos.
+* Posee memoria y métodos de tratamiento de datos.
+* Realiza operaciones siguiendo instrucciones.
+
+Note: Señala que un ordenador no es solo un PC: también un móvil, consola o tablet.
+Lo importante es que ejecuta programas y procesa datos.
+
+
+### Estructura de Von Neumann
+
+* Modelo clásico de funcionamiento del ordenador.
+* Partes principales: CPU, memoria, dispositivos de entrada/salida.
+* CPU ejecuta instrucciones de memoria.
+* Memoria RAM almacena datos e instrucciones temporalmente.
+* Discos y periféricos aportan almacenamiento y comunicación.
+
+Note: Explica con la figura de Von Neumann. Subraya que este modelo sigue vigente
+hoy en día. Usa ejemplos: teclado (entrada), monitor (salida), disco duro (almacenamiento).
+
 
 ---
 
-# Objetivos fundamentales
-Recomendado la consulta de la [programación](https://revilofe.github.io/) para seguir esta presentación.
+## 3. ¿Qué es un Programa o Software?
 
 
-## Objetivos generales
-La formación de este módulo contribuye a alcanzar los objetivos generales de este ciclo formativo que se relacionan a continuación: e), j), q), w).
+### Definición de Software
+
+* Conjunto de programas, datos y documentación.
+* Da instrucciones al hardware sobre qué hacer y cómo.
+* Permite realizar tareas específicas en dispositivos.
+* Incluye desde sistemas operativos hasta aplicaciones.
+* IEEE: software = programas + procedimientos + datos asociados.
+
+Note: Destaca que el software no son solo “apps”. Incluye drivers, documentación,
+instrucciones para hardware. Usa ejemplos de software cotidiano (Word, Chrome, antivirus).
 
 
-## Objetivos RA
-|  RA  | LOGRO                | *OBJETO*                                                   | *ACCIONES EN EL CONTEXTO DE APRENDIZAJE*                                                                      |
-| :----: | :--------------------- | :----------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- |
-| RA 1 | **Conoce**           | **la estructura de un programa informático**              | **identificando y relacionando los elementos propios del lenguaje de programación utilizado**                |
-| RA 2 | **Escribe y prueba** | **programas sencillos**                                    | **reconociendo y aplicando los fundamentos de la programación orientada a objetos.**                         |
-| RA 3 | **Escribe y depura** | **código**                                                | **analizando y utilizando las estructuras de control del lenguaje.**                                          |
-| RA 4 | **Desarrolla**       | **programas organizados en clases**                        | **analizando y aplicando los principios de la programación orientada a objetos.**                            |
-| RA 5 | **Realiza**          | **operaciones de entrada y salida de información**        | **utilizando procedimientos específicos del lenguaje y librerías de clases**                                |
-| RA 6 | **Escribe**          | **programas que manipulen información**                   | **seleccionando y utilizando tipos avanzados de datos.**                                                      |
-| RA 7 | **Desarrolla**       | **programas**                                              | **aplicando características avanzadas de los lenguajes orientados a objetos y del entorno de programación** |
-| RA 8 | **Utiliza**          | **bases de datos orientadas a objetos**                    | **analizando sus características y aplicando técnicas para mantener la persistencia de la información**    |
-| RA 9 | **Gestiona**         | **información almacenada en bases de datos relacionales** | **manteniendo la integridad y consistencia de los datos**                                                     |
-<!-- .element.table: style="font-size:50%;" -->
+### Tipos de Software
 
+* **De sistema**: sistema operativo, drivers.
+* **De aplicación**: navegadores, ofimática, juegos.
+* **De desarrollo**: compiladores, editores, depuradores.
+* Todos cooperan entre sí.
+* Los drivers permiten que el hardware funcione correctamente.
 
-## Competencias PPS
-La formación del módulo contribuye a alcanzar las competencias profesionales, personales y sociales de este título que se relacionan a continuación: a), e), f), i), j, t), w).
-
----
-
-# Contenidos
-
-
-## Contenido.
-| Unidades didácticas | Descripción unidad                                | Sesiones | RA | Criterios |              |
-| :--------------------: | :--------------------------------------------------- | :--------: | :---: | :---------: | :-------------: |
-|         UD1         | Introducción a la programación                   |    16    | RA1 |  a)..i)  | 1er trimestre |
-|         UD2         | Estructura de los programas                        |    16    | RA2 |  a)..h)  |              |
-|         UD3         | Introducción a la POO                             |    24    | RA3 |  a)..i)  |              |
-|         UD4         | Estructuras de datos predefinidas usando POO       |    24    | RA4 |  a)..i)  |              |
-|         UD5         | Creación de estructuras de datos usando POO       |    22    | RA5 |  a)..k)  | 2o  trimestre |
-|         UD6         | reación de programas haciendo uso de POO avanzada |    30    | RA6 |  a)..i)  |              |
-|         UD7         | Operaciones de entrada y salida y IUG              |    26    | RA7 |  a)..h)  |              |
-|         UD8         | Persistencia y acceso a datos en BD OO             |    38    | RA8 |  a)..h)  |              |
-|         UD9         | Persistencia y acceso a datos en BD Relacionales   |    48    | RA9 |  a)..g)  | 3er trimestre |
-<!-- .element.table: style="font-size:50%;" -->
+Note: Explica cada tipo con ejemplos: Windows (sistema), WhatsApp (aplicación),
+IntelliJ IDEA (desarrollo). Haz hincapié en la importancia de los drivers.
 
 ---
 
-# Horarios y planificación
+## 4. Relación Hardware - Software
 
 
-## Horario.
-Horario (8 horas semanales)
-|     HORA     | L |  M  |  X  |  J  |  V  |
-| :-------------: | :-: | :---: | :---: | :---: | :---: |
-| 08:00 - 09:00 | - |  -  | PRO |  -  | PRO |
-| 09:00 - 10:00 | - |  -  | PRO |  -  | PRO |
-| 10:00 - 11:00 | - | PRO |  -  | PRO |  -  |
-| 11:00 - 11:30 | x |  x  |  x  |  x  |  x  |
-| 11:30 - 12:30 | - | PRO |  -  | PRO |  -  |
-| 12:30 - 13:30 | - |  -  |  -  |  -  |  -  |
-| 13:30 - 14:30 | - |  -  |  -  |  -  |  -  |
-<!-- .element.table: style="font-size:50%;" -->
+### Hardware y Software
+
+* Hardware: parte física del ordenador.  
+* Software: conjunto de instrucciones que dirigen al hardware.  
+* Ambos se necesitan mutuamente.  
+* Hardware sin software: máquina inerte.  
+* Software sin hardware: no puede ejecutarse.  
+
+Note: Haz ver que uno no existe sin el otro. Da ejemplos: un móvil sin apps, 
+o una app sin dispositivo físico.
 
 
-## Planificación.
-![](assets/prog-planif.png)
-Como toda planificación, puede sufrir cambios.
+### Elementos principales
+
+* **Disco duro**: guarda programas y datos de forma permanente.  
+* **Memoria RAM**: almacén temporal de programas y datos en uso.  
+* **CPU**: ejecuta instrucciones y coordina el sistema.  
+* **Entrada/Salida (E/S)**: teclado, ratón, pantalla, impresora.  
+* Disco duro también se considera periférico de E/S.  
+
+Note: Usa la analogía de una oficina: disco duro como archivo, RAM como mesa de trabajo, 
+CPU como trabajador y periféricos como comunicación con el exterior.
+
 
 ---
 
-# Evaluación y recuperación
+## 5. Algoritmos
 
 
-## Evaluación I
-* Se supera el módulo con una calificación mayor o igual a 5.
-* La nota se obtiene haciendo la media ponderada de los resultados de aprendizaje (RA).
-* Un RA no superado, implica no superar el módulo.
+### Definición de Algoritmo
+
+* Secuencia de pasos lógicos para resolver un problema.  
+* Es independiente del lenguaje de programación.  
+* Primero se diseña el algoritmo, luego se codifica.  
+* Todo algoritmo debe ser: preciso, definido y finito.  
+* Base fundamental de la programación.  
+
+Note: Insiste en que programar no es solo escribir en Kotlin, 
+sino aprender a pensar en algoritmos. Usa ejemplos cotidianos: 
+receta de cocina, instrucciones para armar un mueble.
 
 
-## Evaluación II
-* Los calificación de los RA se obtienen de la media ponderada de la calificación de los criterios de evaluación (CE).
-* Los CE se evalúan y califican a través del trabajo en clases y la realización de prácticas y pruebas especificas.
+### Ejemplo de Algoritmo (Pseudocódigo)
 
-![](./assets/IS-U011-Presentacion2.png)
+```text
+Si la lámpara funciona entonces
+    fin. # programa termina
+Si no
+    Si NO está enchufada entonces
+        Enchufar.
+    Si el foco está quemado entonces
+        Reemplazar foco.
+    Si sigue sin funcionar entonces
+        Comprar nueva lámpara.
+fin.
+````
 
-
-## Evaluación III
-* Hay 3 Evaluaciones Parciales
-  * Diciembre
-  * Marzo
-  * Mayo
-* 1 Evaluación Final
-  * Junio
-
-
-## Recuperación
-* La recuperación de los RA pendientes se realiza durante el mes de junio.
-* Consistirá en un conjunto de prácticas y/o pruebas sobre los criterios de evaluación relacionados con el resultado de aprendizaje no superado.
+Note: Explica qué significa cada condición. Señala que el pseudocódigo
+se parece a lenguaje humano, pero estructurado.
 
 
-## Resumen
-![](assets/pro-eva&rec.png)
+### Diagramas de Flujo
 
----
+* Representación gráfica de un algoritmo.
+* Óvalos: inicio y fin.
+* Rectángulos: acciones o procesos.
+* Rombos: decisiones (sí/no).
+* Flechas: orden de ejecución.
+* Claros y visuales para entender procesos.
 
-# Metodología y comunicación
-
-
-## Metodología
-Por unidad:
-
-* Explicar contenidos relacionados con criterios de evaluación  asociados al RA con el que se está trabajando.
-* Trabajar los contenidos en grupo e individualmente, guiados por diapositivas, materiales de la red y discusión en grupo.
-* Puesta en práctica con trabajos.
-
-
-## Comunicación
-* Comunicación **oficial, preferida y obligada**: Asistiendo al aula y hablando directamente con el profesor.
-* Otros medios secundarios **opcionales**: Correo electrónico y Moodle.
-
-![](./assets/IS-U011-Presentacion3.png) <!-- .element height="25%" width="25%" -->
+Note: Muestra el diagrama de flujo de la lámpara.
+Explica que ayuda a visualizar decisiones y caminos alternativos.
 
 ---
 
-# Recomendaciones y aclaraciones
+## 6. Lenguajes de Programación
 
 
-## Recomendaciones
-* Recomendaciones al alumnado:
-  * Leer y entender la programación del módulo.
-  * Poner foto actualizada en moodle.
-  * Añadir correo electrónico correcto en moodle.
+### Definición
+
+* Lenguajes formales con reglas estrictas.
+* Permiten expresar algoritmos en código ejecutable.
+* Controlan flujo de ejecución y manipulan datos.
+* Ejemplos: Python, Java, C, Kotlin, JavaScript.
+* Traducidos a lenguaje máquina mediante compiladores o intérpretes.
+
+Note: Diferencia entre lenguaje natural y lenguaje formal.
+Da ejemplos de sintaxis: Python vs Kotlin.
 
 
-## Aclaraciones I
-* Formación presencial, por tanto la comunicación presencial.
-* Como regla general:
-  - Los ejercicios individuales se corregirán en clase delante del profesor.
-  - Los ejercicios en grupo se podrán presentar en grupo o un componente del grupo de forma aleatoria. El método será elegido por el profesor.
+### Clasificación y Usos
+
+* Multiplataforma: Kotlin, Java, C#.
+* Desarrollo web: JavaScript, PHP, Python.
+* Sistemas operativos: C, C++.
+* Ciencia de datos: Python, R.
+* Cada lenguaje tiene fortalezas y contextos ideales.
+
+Note: Relaciona con encuestas de popularidad (TIOBE, StackOverflow).
+Pregunta a los alumnos qué lenguajes conocen y cuáles les gustaría aprender.
+
+---
+
+## Cierre de la Unidad
 
 
-## Aclaraciones II
-* Causas para no corregir una prueba (ejercicio, práctica, examen)
-  - No se cumple las condiciones de entrega.
-  - Se ha detectado la posibilidad de copiado de todo o parte de la prueba. Esto incluye textos (total o parcial) de internet y/o sin hacer referencia a la fuente
-  - Se entrega fuera de plazo (aunque sean unos segundos).
-  - En caso de código, no compila.
+### Resumen
+
+* Programar = transformar problemas en soluciones ejecutables.
+* Ordenadores siguen el modelo de Von Neumann.
+* Software guía al hardware en las tareas.
+* Algoritmos = base de la programación.
+* Pseudocódigo y diagramas ayudan a planificar.
+* Lenguajes formales convierten algoritmos en programas.
+
+Note: Haz un repaso global. Conecta los puntos: problema → algoritmo → programa.
+Resalta que esta es la base antes de escribir el primer código en Kotlin o Python.
 
 
-## Aclaraciones III
-* Causas para no corregir una prueba (ejercicio, práctica, examen)
-  - Si la entrega es el git, añadir en el README.md instrucciones para compilar y ejecutar el código, descripción de la aplicación, autoría y referencias.
+### Preguntas para Reflexionar
 
+* ¿Qué lenguajes de programación conoces?
+* ¿Cuál te resulta más interesante y por qué?
+* ¿Qué ventajas tiene escribir pseudocódigo antes de programar?
+* ¿Cómo ayuda un diagrama de flujo a entender un problema?
+* ¿Crees que hardware y software podrían existir uno sin otro?
 
-## Aclaraciones IV
-* Es responsabilidad del alumnado la custodia y guarda de los trabajos, documentos, y cualquier otro material que realice durante las prácticas o en clase, por tanto, tendrán que asegurarse que quedan a salvo siempre que abandonen el aula, no siendo responsabilidad del profesorado la perdida de este material.
-
-
-## Aclaraciones V
-* En cuando a las fechas de entrega de prácticas/trabajos/ejercicios, tendrán una fecha de entrega clara, **que no se podrá cambiar bajo ninguna circunstancia**. Quedando a elección del profesor posibles excepciones justificadas.
+Note: Lanza las preguntas al grupo. Promueve debate abierto.
+El objetivo es comprobar comprensión y motivar curiosidad.
+Invita a que los alumnos compartan ejemplos cotidianos de algoritmos.
 
 ---
 
 # Dudas
 ![](./assets/IS-U011-Presentacion4.png)
 
+Note: Abre el espacio para preguntas. Anima a los alumnos a expresar dudas o compartir ideas.
+
 ---
 
-# Fin!
+## ¡Gracias por su atención!
 
 ![](./assets/Fin.png) <!-- .element height="50%" width="50%" -->
 
-¡¡Gracias!!
+Note: Finaliza la presentación invitando a preguntas y aclaraciones. Refuerza que la relación entre hardware y software es fundamental para comprender cómo funciona un ordenador y que este conocimiento será la base de temas más avanzados en programación y sistemas.
 
 ---
 
-# Primeros pasos
-
-1. Identificar tu **email: correo electrónico**: xxx@g.educaand.es
-2. Acceder a moodle. Configurar tu usuario con email y foto.
-3. Rellenar los formularios que hay en la moodle. Sirven para entornos.
-4. Darte de alta en github.com con tu email, solicitan acceso PRO por ser estudiante.
-5. Darte de alta en jetbrains con tu email, solicitando acceso a las herramientas por ser estudiante.

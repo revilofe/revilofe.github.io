@@ -82,7 +82,6 @@ Introduce la noción de traductor (compilador o intérprete).
 Note: Recorre cada fase del ciclo de vida. Usa ejemplos simples: crear una calculadora
 o una app de notas. Destaca que la programación no es solo "picar código".
 
-
 ---
 
 ## 2. El Ordenador
@@ -110,7 +109,6 @@ Lo importante es que ejecuta programas y procesa datos.
 
 Note: Explica con la figura de Von Neumann. Subraya que este modelo sigue vigente
 hoy en día. Usa ejemplos: teclado (entrada), monitor (salida), disco duro (almacenamiento).
-
 
 ---
 
@@ -167,7 +165,6 @@ o una app sin dispositivo físico.
 
 Note: Usa la analogía de una oficina: disco duro como archivo, RAM como mesa de trabajo, 
 CPU como trabajador y periféricos como comunicación con el exterior.
-
 
 ---
 

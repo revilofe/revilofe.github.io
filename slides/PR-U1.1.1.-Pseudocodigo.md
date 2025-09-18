@@ -89,7 +89,6 @@
 Note: Explica que el pseudocódigo es un puente entre el lenguaje humano y la codificación real. 
 No es estándar ni ejecutable, pero sirve para planificar y comunicar algoritmos.
 
-
 ---
 
 ## 1. Características del Pseudocódigo
@@ -106,7 +105,6 @@ No es estándar ni ejecutable, pero sirve para planificar y comunicar algoritmos
 
 Note: Recalca la importancia de la claridad y simplicidad. 
 El pseudocódigo no tiene un estándar universal, pero sigue convenciones comunes.
-
 
 ---
 
@@ -138,7 +136,6 @@ en Kotlin, Python, etc. Sirven para estructurar algoritmos de forma clara.
 
 Note: Explica cómo estas instrucciones permiten expresar cálculos, decisiones y bucles. 
 Son la base de cualquier programa.
-
 
 ---
 
@@ -217,7 +214,6 @@ Es un ejemplo práctico y fácil de seguir.
 
 Note: Introduce los tres tipos de estructuras de control. 
 Son los bloques básicos para construir algoritmos más complejos.
-
 
 ---
 
@@ -477,6 +473,7 @@ Fin
 Note: Ejercicio de validación de entrada.
 Introduce el concepto de *bucles de control de errores*.
 
+
 ### Ejercicio 2 - Serie entre dos números
 
 * Leer dos números.
@@ -506,7 +503,6 @@ Salida: 7 10 14
 
 Note: Problema clásico de ordenación.
 Introduce a los alumnos en el razonamiento algorítmico.
-
 
 ---
 

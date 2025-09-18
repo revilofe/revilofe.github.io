@@ -21,7 +21,13 @@ Vamos a iniciar con la práctica de un lenguaje de programación, en este caso, 
 
 #### 1.1. En Kotlin
 Los programas están compuestos por un conjunto de bloques
-<center> ![](assets/PROG-U1-Bloques.png) </center>
+
+<figure markdown>   
+  ![](assets/PROG-U1-Bloques.png)   
+  <figcaption>Bloques en un programa</figcaption>   
+</figure>   
+
+
 
 * [Main, punto de entrada](https://kotlinlang.org/docs/basic-syntax.html#program-entry-point ): Inicio del flujo de ejecución de un programa
 * [Paquetes e import](https://kotlinlang.org/docs/basic-syntax.html#package-definition-and-imports): Agrupa clases, e incorpora clases para su uso, respectivamente
@@ -125,12 +131,14 @@ Un *valor o literal* es una de las cosas básicas que utiliza un programa, como 
 
 Esos valores pertenecen a *tipos* diferentes: `2` es un entero (int), y `'¡Hola, mundo!'` es una *cadena* (string), que recibe ese nombre porque contiene una “cadena” de letras. Tú (y el intérprete) podéis identificar las cadenas porque van encerradas entre comillas.
 
-En python existen los siguientes tipos básicos de datos:    
-* **int**: Números enteros. Por ejemplo, 2, 4, 20.  Los números enteros son aquellos que no tienen parte decimal. Por ejemplo, 2, 4, 20. Aunque en Python no hay un límite en el tamaño de los enteros, en la práctica, el tamaño de un entero está limitado por la memoria de la computadora.       
-* * **float**: Números decimales. Por ejemplo, 5.0, 1.6, 3.14159. Los números decimales son aquellos que tienen parte decimal. Por ejemplo, 5.0, 1.6, 3.14159. Los números decimales en Python se representan con un punto decimal.   
-* **str**: Cadenas de texto. Por ejemplo, 'Hola', 'Python', '3.14159'. Las cadenas de texto son secuencias de caracteres. Por ejemplo, 'Hola', 'Python', '3.14159'. Las cadenas de texto en Python se pueden definir con comillas simples ('...') o dobles ("...").    
-* **bool**: Valores booleanos. Por ejemplo, True, False. Los valores booleanos son aquellos que representan la verdad o la falsedad. En Python, los valores booleanos son True y False. Los valores booleanos se utilizan en expresiones lógicas y de comparación.   
-* **None**: Representa la ausencia de valor. None es un valor especial en Python que se utiliza para representar la ausencia de valor.    
+En python existen los siguientes tipos básicos de datos:     
+
+* **int**: Números enteros. Por ejemplo, 2, 4, 20.  Los números enteros son aquellos que no tienen parte decimal. Por ejemplo, 2, 4, 20. Aunque en Python no hay un límite en el tamaño de los enteros, en la práctica, el tamaño de un entero está limitado por la memoria de la computadora.    
+* * **float**: Números decimales. Por ejemplo, 5.0, 1.6, 3.14159. Los números decimales son aquellos que tienen parte decimal. Por ejemplo, 5.0, 1.6, 3.14159. Los números decimales en Python se representan con un punto decimal.     
+* **str**: Cadenas de texto. Por ejemplo, 'Hola', 'Python', '3.14159'. Las cadenas de texto son secuencias de caracteres. Por ejemplo, 'Hola', 'Python', '3.14159'. Las cadenas de texto en Python se pueden definir con comillas simples ('...') o dobles ("...").         
+* **bool**: Valores booleanos. Por ejemplo, True, False. Los valores booleanos son aquellos que representan la verdad o la falsedad. En Python, los valores booleanos son True y False. Los valores booleanos se utilizan en expresiones lógicas y de comparación.      
+* **None**: Representa la ausencia de valor. None es un valor especial en Python que se utiliza para representar la ausencia de valor.     
+
 
 Vamos a usar el comando `python` para iniciar el intérprete.
 

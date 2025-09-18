@@ -66,7 +66,6 @@ Note: Explica la metáfora de la cocina: el hardware son los utensilios y electr
 
 Note: Aclara cómo el software necesita del hardware para ejecutarse, y cómo este último no tiene sentido sin instrucciones que seguir.
 
-
 ---
 
 ## Hardware
@@ -91,9 +90,7 @@ Note: Define el concepto de hardware, explicando que abarca tanto componentes in
 
 Note: Explica cada componente con ejemplos sencillos: CPU como cerebro, RAM como memoria temporal, disco duro como almacenamiento duradero, periféricos como interfaces de usuario.
 
-
 ---
-
 
 ## Software
 
@@ -116,7 +113,6 @@ Note: El software no es tangible, son las instrucciones que permiten al hardware
 * El sistema operativo es el intermediario clave.
 
 Note: Explica los tres grandes tipos de software con ejemplos claros y resalta la importancia del sistema operativo como coordinador.
-
 
 ---
 
@@ -142,7 +138,6 @@ Note: Describe cómo se produce el ciclo de ejecución de un programa, desde su 
 
 Note: Muestra un ejemplo concreto de interacción software-hardware para que los estudiantes lo visualicen con claridad.
 
-
 ---
 
 ## Ejemplo Práctico: Tetris
@@ -166,7 +161,6 @@ Note: Reproduce el ejemplo de Tetris como forma de ilustrar la interacción en u
 
 Note: Explica cómo el software dicta reglas, la CPU ejecuta y el sistema operativo administra los recursos necesarios.
 
-
 ---
 
 ## Importancia de la Relación
@@ -180,7 +174,6 @@ Note: Explica cómo el software dicta reglas, la CPU ejecuta y el sistema operat
 * Mejora el rendimiento en ordenadores y móviles.
 
 Note: Señala que entender esta relación es clave para los futuros desarrolladores, ya que podrán optimizar programas para distintos entornos.
-
 
 ---
 
@@ -196,7 +189,6 @@ Note: Señala que entender esta relación es clave para los futuros desarrollado
 * Base para estudiar código fuente, objeto y ejecutable.
 
 Note: Cierra la sesión recordando que hardware y software son inseparables, y que esta relación es la base para avanzar hacia conceptos más técnicos en desarrollo.
-
 
 ---
 

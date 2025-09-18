@@ -23,22 +23,104 @@ Antes de nada, definamos lo siguiente:
 
 El proceso de desarrollo, que en un principio puede parecer una tarea simple, consta de una serie de pasos de obligado cumplimiento, pues sólo así podremos garantizar que los programas creados son eficientes, fiables, seguros y responden a las necesidades de los usuarios finales (aquellos que van a utilizar el programa). Esta última parte, la de responder a las necesidades finales de los usuarios, es compleja de conseguir y da lugar a multiples problemas durante este proceso de desarrollo, lo que provoca, en muchos casos, el fracaso o directamente cancelación de los proyectos.
 
-El desarrollo de software es un proceso que conlleva una serie de pasos. Genéricamente, estos pasos son los siguientes:
+El desarrollo de software es un proceso que conlleva una serie de pasos, esos pasos son los que conforman el Ciclo de Vida del desarrollo del Software. Genéricamente, estos pasos son los siguientes:
 
-## 1. Fases del desarrollo del Software
+## 1.  El Ciclo de Vida del Desarrollo de Software (Fases)
 
-- **Planificación**: en esta fase se establecen los objetivos del proyecto, se define el alcance del mismo y se realiza un estudio de viabilidad y costes.
-- **Análisis del problema**: Consiste en ver y comprender **qué** tarea se quiere resolver. Es imprescindible partir de una especificación de requisitos lo más exacta y detallada posible. El proceso de comprensión y simplificación del mundo real se llama análisis del problema y lo que se obtiene tras el análisis es el modelo.
-- **Diseño de una solución**: Consiste en **cómo** se va a resolver el problema, suele consistir en dividir el problema principal en problemas más sencillos cuya combinación resuelve la tarea final.
-- **Codificación**: Una vez definidos los algoritmos, los traducimos al lenguaje de programación que tengamos que usar. Un lenguaje de programación es un conjunto de símbolos y reglas sintácticas especialmente diseñado para transmitir ordenes al ordenador (C, Java, Pascal…).
-- **Pruebas**: Servirán para identificar y corregir posibles errores, tendremos varios tipos de errores:     
-    - Sintácticos: Errores sintácticos, producidos por un mal uso del lenguaje.     
-    - Semánticos: Lo que está equivocado es la solución que yo he ideado. (Durante la ejecución p. ej: división entre 0, o de lógica p ej: mal diseño algoritmo.)     
-- **Despliegue**: una vez que el programa está terminado, se debe implantar en el dispositivo o infraestructura del usuario final sobre la que se ejecutará.
-- **Mantenimiento**: Hay tres tipos de mantenimiento:    
-    - Correctivo: Sirve para corregir posibles errores o fallos del programa.    
-    - Perfectivo: Se usa para perfeccionarlo.    
-    - Adaptativo: Sirve para adaptarlo a nuevas situaciones.    
+Independientemente del modelo elegido, siempre hay una serie de etapas que se deben seguir para construir software fiable y de calidad. Las fases principales, comúnmente aceptadas, son:
+
+![Diagrama: Fases del Desarrollo de Software](assets/EDES-U1-Fases.png)
+
+### 1.1. Fase Inicial (Planificación)
+En esta fase se establecen los **objetivos** del proyecto, se define su **alcance** y se realiza un **estudio de viabilidad y costes**. Es la fase más compleja, que precisa de expertos en planificación de proyectos y donde se desarrollan documentos importantes como el de viabilidad y estimación.
+
+### 1.2. Análisis (Etapa de Análisis)
+Esta es la primera fase y la de mayor importancia en el desarrollo del proyecto. Todo lo demás dependerá de lo bien detallada que esté, siendo también la más complicada ya que no está automatizada y depende en gran medida del analista que la realice.
+
+En esta fase, se determina y define claramente las **necesidades del cliente** y se especifican los **requisitos** que debe cumplir el software a desarrollar. Lo fundamental es una buena comunicación entre el analista y el cliente para que la aplicación desarrollada cumpla con sus expectativas, es decir, necesitamos saber el "**qué**" hace nuestro software.
+
+La **especificación de requisitos** debe:
+*   Ser completa y sin omisiones.
+*   Ser concisa y sin trivialidades.
+*   Evitar ambigüedades, utilizando lenguaje formal.
+*   Evitar detalles de diseño o implementación.
+*   Ser entendible por el cliente.
+*   Separar requisitos funcionales y no funcionales.
+*   Dividir y jerarquizar el modelo.
+*   Fijar criterios de validación.
+
+Tipos de Requisitos a especificar:
+*   **Requisitos Funcionales**: Definen qué funciones tendrá que realizar la aplicación. Responden a preguntas como qué respuesta dará la aplicación ante todas las entradas o cómo se comportará en situaciones inesperadas. Por ejemplo, en una aplicación de cosmética, podría ser si desea que la lectura de productos se haga mediante códigos de barras, cómo se detallan las facturas, si se controlará el stock o si se operará con tarjetas de crédito.
+*   **Requisitos No Funcionales**: Definen las características de calidad del sistema. Incluyen tiempos de respuesta del programa, legislación aplicable, tratamiento ante la simultaneidad de peticiones, etc..
+*   **Requisitos de Información** (Información no provista directamente en las fuentes, se basa en conocimiento general del área): Detallan qué información se ofrecerá como salida y qué datos son necesarios como entrada para resolver el problema.
+
+La culminación de esta fase es el documento de **Especificación de Requisitos del Software (ERS)**, que actúa como un contrato entre el cliente y el desarrollador. Este documento especifica la planificación de reuniones, los objetivos del usuario y del sistema, la relación de requisitos funcionales y no funcionales, los objetivos prioritarios y la temporización, y el reconocimiento de requisitos mal planteados o contradictorios. No detectar o entender mal los requisitos en esta etapa puede provocar un fuerte impacto negativo en todo el proceso de desarrollo.
+
+Por tanto, consiste en ver y comprender qué tarea se quiere resolver. Es imprescindible partir de una especificación de requisitos lo más exacta y detallada posible. El proceso de comprensión y simplificación del mundo real se llama análisis del problema y lo que se obtiene tras el análisis, es el modelo del problema.
+
+
+### 1.3. Diseño
+Durante esta fase, una vez que ya se sabe "qué" hay que hacer, el siguiente paso es definir "**cómo**" hacerlo. Se descompone y organiza el sistema en elementos componentes que pueden ser desarrollados por separado, especificando su interrelación y funcionalidad.
+
+Las actividades habituales incluyen el diseño arquitectónico, el diseño detallado, el diseño de datos y el diseño de la interfaz de usuario. En este punto, se deben tomar decisiones importantes como las entidades y relaciones de las bases de datos, la selección del lenguaje de programación y la elección del Sistema Gestor de Base de Datos (SGBD). Los documentos generados son más técnicos. El resultado tras el diseño arquitectónico es el **Documento de arquitectura del software**, y tras el diseño detallado, la **Especificación de módulos y funciones**.
+
+En conclusión, consiste en cómo se va a resolver el problema, suele consistir en dividir el problema principal en problemas más sencillos cuya combinación resuelve la tarea final. Al finalizar esta fase, se obtiene un modelo de diseño que servirá de guía para la siguiente fase: la codificación.
+
+### 1.4. Codificación (Implementación)
+Esta etapa consiste en transformar o traducir los resultados obtenidos de las fases de analisis y diseño (por ejemplo, determinados algoritmos) a un determinado lenguaje de programación. Se escribe el código fuente de cada componente, traduciendo los algoritmos definidos en la fase de diseño. Esta tarea la realiza el programador y debe cumplir exhaustivamente con los datos impuestos en el análisis y diseño.
+
+Las características deseables de todo código son:
+1.  **Modularidad**: Dividido en trozos pequeños.
+2.  **Corrección**: Que haga lo que se le pide.
+3.  **Facilidad de lectura**: Para facilitar su desarrollo y mantenimiento futuro.
+4.  **Eficiencia**: Que haga un buen uso de los recursos.
+5.  **Portabilidad**: Que se pueda implementar en cualquier equipo.
+
+Durante esta fase, el código pasa por diferentes estados (código fuente, objeto, ejecutable). El resultado de esta fase es el **Código fuente**.
+
+### 1.5. Pruebas
+El principal objetivo de las **pruebas** es conseguir que el programa funcione incorrectamente para descubrir y corregir defectos. El programa debe ser sometido al máximo número de situaciones diferentes. Las pruebas son imprescindibles para asegurar la validación y verificación del software construido.
+
+Entre los tipos de pruebas se distinguen:
+*   **Pruebas Unitarias**: Prueban, una a una, las diferentes partes del software y comprueban su funcionamiento por separado.
+*   **Pruebas de Integración**: Se realizan una vez que las pruebas unitarias han sido exitosas, comprobando el funcionamiento del sistema completo con todas sus partes interrelacionadas.
+*   **Pruebas Funcionales**: Validan que la aplicación hace lo que tiene que hacer, a menudo con la participación del cliente.
+*   **Pruebas Estructurales**: Pruebas técnicas sobre el sistema (estrés, carga, integración, etc.).
+*   **Beta Test**: La prueba final que se realiza sobre el entorno de producción, en el entorno real del cliente y bajo un funcionamiento normal de su empresa.
+
+Los resultados de las pruebas de unidades son **Módulos utilizables**, y de las pruebas de integración, un **Sistema utilizable**. Las pruebas del sistema culminan con un **Sistema aceptado**.
+
+### 1.6. Documentación
+La **documentación** es vital para el desarrollo y mantenimiento del software. Todas las etapas en el desarrollo de software deben quedar perfectamente documentadas. Una correcta documentación permitirá la reutilización de parte de los programas en otras aplicaciones, especialmente si se desarrollan con diseño modular.
+
+Se distinguen tres grandes tipos de documentos:
+*   **Guía Técnica (o Manual Técnico)**: Dirigida al personal técnico (analistas y programadores). Refleja el diseño, la codificación de los programas y las pruebas realizadas. Su objetivo es facilitar el desarrollo, las correcciones y el mantenimiento futuro.
+*   **Guía de Uso (o Manual de Usuario)**: Dirigida a los usuarios finales (clientes). Describe la funcionalidad de la aplicación, cómo empezar a ejecutarla y ejemplos de uso. Su objetivo es dar a los usuarios toda la información necesaria para utilizar la aplicación.
+*   **Guía de Instalación (o Manual de Instalación)**: Dirigida al personal informático responsable de la instalación. Detalla los requerimientos software de la aplicación y la solución a posibles problemas. Su objetivo es garantizar una implantación segura, confiable y precisa.
+
+El resultado final es la **Documentación técnica y de usuario**.
+
+### 1.7. Despliegue y explotación
+
+En el despliegue, una vez que el programa está terminado y probado, se debe implantar en el dispositivo o infraestructura del usuario final sobre la que se ejecutará.   
+
+La **explotación** es la fase en que los usuarios finales conocen la aplicación y comienzan a utilizarla. Implica la instalación, puesta a punto y funcionamiento de la aplicación en el equipo final del cliente. En esta fase, los programas son transferidos al computador del usuario, configurados y verificados. Es recomendable que los clientes estén presentes durante la instalación. También se pueden llevar a cabo las Beta Test en los equipos del cliente bajo cargas normales de trabajo. La configuración puede ser realizada por los propios usuarios con la guía de instalación o programarse automáticamente si el software es sencillo. Es un momento crítico del proyecto tenerlo todo preparado antes de la presentación al cliente.
+
+### 1.8. Mantenimiento
+La etapa de **mantenimiento** es la más larga de todo el ciclo de vida del software. Por su naturaleza, el software es cambiante y deberá actualizarse y evolucionar con el tiempo, adaptándose a mejoras de hardware y nuevas situaciones. Siempre surgen errores y la necesidad de nuevas versiones. El mantenimiento se define como el proceso de control, mejora y optimización del software.
+
+Los **tipos de mantenimiento** incluyen:
+*   **Correctivo**: Para corregir defectos o fallos encontrados en el software.
+*   **Perfectivo**: Para mejorar la funcionalidad existente del software.
+*   **Evolutivo**: Para añadir nuevas funcionalidades solicitadas por el cliente o expansiones de código.
+*   **Adaptativo**: Para ajustar el software a nuevos entornos, tendencias del mercado o componentes hardware.
+
+Los resultados del mantenimiento son **Informes de errores y control de cambios**.
+
+### 1.9. Retirada del Software
+Esta fase ocurre cuando el software ha llegado al **final de su vida útil** y ya no resulta rentable seguir ampliándolo o manteniéndolo. En este punto, el ciclo puede comenzar de nuevo, ya sea comprando un nuevo software o desarrollando uno a medida.
+
+
 
 ## 2. Modelos de desarrollo de software
 Los modelos de desarrollo de software son marcos metodológicos utilizados para estructurar, planificar y controlar el proceso de desarrollo de un sistema informático. Hay varios modelos, y cada uno tiene sus propias características, ventajas y desventajas. 
@@ -53,7 +135,15 @@ Consiste en dividir el proceso de desarrollo en fases, cada una de las cuales se
 - **Con realimentación**: es uno de los modelos más utilizados. Proviene del modelo anterior, pero se introduce una realimentación entre etapas, de forma que podamos volver atrás en cualquier momento para corregir, modificar o depurar algún aspecto. No obstante, si se preveén muchos cambios durante el desarrollo no es el modelo más idóneo. Es el modelo perfecto si el proyecto es rígido (pocos cambios, poco evolutivo) y los requisitos están claros.  
 
 ### 2.2. Modelo evolutivo
-Tiene en cuenta la naturaleza cambiante y evolutiva del software. La idea detrás de este modelo es:    
+Son modelos más modernos que los clásicos y tienen en cuenta la naturaleza cambiante y evolutiva del software. La idea es desarrollar una implementación inicial del sistema, exponerla a los comentarios del usuario y refinarla en sucesivas versiones hasta obtener el sistema adecuado. Permiten una rápida realimentación del usuario, ya que las actividades de especificación, desarrollo y pruebas se ejecutan en cada iteración.
+
+Distinguimos dos variantes:
+
+#### 2.2.1. Modelo Iterativo Incremental
+
+Está basado en el modelo en cascada con realimentación, donde las fases se repiten y refinan, propagando su mejora a las fases siguientes.
+
+La idea detrás de este modelo     
 
 - El desarrollo y entrega de partes funcionales del sistema de forma temprana.   
 - Exponer estos desarrollos a los comentarios del usuario/cliente.    
@@ -63,13 +153,62 @@ Una ventaja de este modelo es que se obtiene una rápida realimentación del usu
 
 Destaca en estos modelos el carácter **iterativo** e **incremental** del proceso seguido:      
 
-- En un desarrollo iterativo e incremental el proyecto se planifica en diversos bloques temporales (en el caso de Scrum de un mes natural o hasta de dos semanas, si así se necesita) llamados iteraciones. Las iteraciones se pueden entender como miniproyectos: en todas las iteraciones se repite un proceso de trabajo similar (de ahí el nombre “iterativo”) para proporcionar un resultado parcial, pero funcional, sobre producto final, de manera que el cliente pueda obtener los beneficios del proyecto de forma incremental. Para ello, cada requisito se debe completar en una única iteración: el equipo debe realizar todas las tareas necesarias para completarlo (incluyendo pruebas y documentación) y asegurar que esté preparado para ser entregado al cliente con el mínimo esfuerzo necesario. De esta manera no se deja para el final del proyecto ninguna actividad arriesgada relacionada con la entrega de requisitos.    
+- En un desarrollo iterativo e incremental el proyecto se planifica en diversos bloques temporales llamados iteraciones. Las iteraciones se pueden entender como miniproyectos: en todas las iteraciones se repite un proceso de trabajo similar (de ahí el nombre “iterativo”) para proporcionar un resultado parcial, pero funcional, sobre producto final, de manera que el cliente pueda obtener los beneficios del proyecto de forma incremental. Para ello, cada requisito se debe completar en una única iteración: el equipo debe realizar todas las tareas necesarias para completarlo (incluyendo pruebas y documentación) y asegurar que esté preparado para ser entregado al cliente con el mínimo esfuerzo necesario. De esta manera no se deja para el final del proyecto ninguna actividad arriesgada relacionada con la entrega de requisitos.    
 
 - En cada iteración el equipo evoluciona el producto de dos formas, haciendo una entrega:     
     - **incremental**: a partir de los resultados completados en las iteraciones anteriores, añade nuevos objetivos/requisitos.      
     - **iterativa**:  partir de los resultados completados en las iteraciones anteriores, y basándose en la retroalimentación que le ha dado el usuario final sobre las funcionalidades ya entregadas, se revisan para mejorarlas y adaptarlas a las necesidades de estos.          
-    - Un aspecto fundamental para guiar el desarrollo iterativo e incremental es la priorización de los objetivos/requisitos en función del valor que aportan al cliente.     
+    - Un aspecto fundamental para guiar el desarrollo iterativo e incremental es la priorización de los objetivos/requisitos en función del valor que aportan al cliente.        
+#### 2.2.2. Modelo en Espiral
 
+Desarrollado por Boehm en 1988, es una combinación del modelo iterativo incremental con el modelo en cascada. El software se construye repetidamente en forma de versiones que son cada vez mejores, incrementando la funcionalidad en cada versión. Este modelo también se centra en la gestión de riesgos en cada fase del proceso de desarrollo. Es un modelo bastante complejo.
+    Las cuatro fases principales son:
+    1.  **Determinación de objetivos**: Identificar objetivos para la iteración actual (nuevas características, mejoras, corrección de errores).
+    2.  **Análisis de riesgos**: Identificar y evaluar riesgos potenciales (técnicos, de gestión).
+    3.  **Desarrollo y validación**: Desarrollar y probar el software, incluyendo prototipos e implementación.
+    4.  **Planificación**: Revisar el proyecto y planificar la próxima iteración.
+
+![Diagrama: Modelo en Espiral](assets/EDES-U1-espiral.png)
+
+### 2.3. Metodologías Ágiles (Adaptativos)
+
+Las metodologías ágiles son un conjunto de metodologías de desarrollo de software basadas en el desarrollo iterativo e incremental. Los requisitos y soluciones evolucionan con el tiempo según la necesidad del proyecto. Promueven el trabajo en equipo, la colaboración con el cliente y la adaptación al cambio. Los equipos se autoorganizan y son multidisciplinares, inmersos en un proceso compartido de toma de decisiones a corto plazo.
+
+#### 2.3.1. Manifiesto Ágil
+Todos los equipos de desarrollo ágil deben seguir los cuatro valores y los doce principios del Manifiesto Ágil. Los cuatro valores son:
+*   **Individuos e interacciones** sobre procesos y herramientas.
+*   **Software funcionando** sobre documentación extensiva.
+*   **Colaboración con el cliente** sobre negociación contractual.
+*   **Respuesta ante el cambio** sobre seguir un plan.
+
+#### 2.3.2. Kanban
+También conocido como "sistema de tarjetas", fue desarrollado inicialmente por Toyota para la industria de fabricación de productos. Controla por demanda la fabricación de los productos necesarios en la cantidad y tiempo justos. Está enfocado a entregar el máximo valor para los clientes, utilizando los recursos justos. Se basa en el *Lean manufacturing*.
+
+![Diagrama: Proceso Kanban](/assets/EDES-U1-Kanban.png)
+
+#### 2.3.4. Scrum
+Es un modelo de desarrollo incremental. Utiliza **iteraciones (sprint)** regulares, que suelen durar entre 2 y 4 semanas. Al principio de cada iteración se establecen sus **objetivos priorizados (sprint backlog)**. Al finalizar cada iteración se obtiene una **entrega parcial utilizable por el cliente**. Existen reuniones diarias para tratar la marcha del *sprint*.
+
+#### 2.3.5. XP (eXtreme Programming)
+Se basa en los siguientes **valores**:
+*   Simplicidad
+*   Comunicación
+*   Retroalimentación
+*   Valentía o coraje
+*   Respeto o humildad
+
+Sus **características** incluyen:
+*   Diseño sencillo.
+*   Pequeñas mejoras continuas.
+*   Pruebas y refactorización.
+*   Integración continua.
+*   **Programación por parejas**.
+*   **El cliente se integra en el equipo de desarrollo**.
+*   Propiedad del código compartida.
+*   Estándares de codificación.
+*   Trabajo de 40 horas semanales.
+
+![Diagrama: Tradicional vs Agil](/assets/EDES-U1-TradicionalVSAgil.png)
 
 Destacamos las metodologías aǵiles, **XP (eXtreme Programming)** y frameworks como **Scrum** como su máximo exponente.
 
@@ -268,7 +407,7 @@ Una vez sabemos  **cómo funciona Scrum**, hablemos de sus ventajas y desventaja
 Resumiendo, **el marco de trabajo Scrum es especialmente útil cuando se trabaja en entornos de alta incertidumbre**, en los que la probabilidad de que haya cambios durante el proyecto es alta. Si los requisitos no están claros, si el cliente tiene prisa en sacar un producto al mercado o necesita un MVP, Scrum es el framework perfecto. Este marco nos permite entregar un proyecto en varias partes funcionales e independientes entre sí, a un ritmo rápido y con capacidad de corregir errores en el momento.
 
 ## Fuentes
-- [GitHub de Jose Luis González Sánchez](https://github.com/joseluisgs/EntornosDesarrollo-01-2022-2023)
+- [GitHub de Jose Luis González Sánchez](https://github.com/joseluisgs/EntornosDesarrollo-01-2025-2026)
 - https://intelequia.com/blog/post/2083/ciclo-de-vida-del-software-todo-lo-que-necesitas-saber
 - https://www.monografias.com/docs114/modelos-desarrollo/modelos-desarrollo
 - https://proyectosagiles.org/desarrollo-iterativo-incremental/

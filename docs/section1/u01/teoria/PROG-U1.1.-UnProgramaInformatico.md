@@ -22,13 +22,23 @@ Un programa informático es un conjunto de instrucciones que permiten a un dispo
 * [Definición](https://es.wikipedia.org/wiki/Programaci%C3%B3n): Es el **proceso** por el cual se desarrolla un **programa**, haciendo uso de herramientas, entre otras: un **lenguajes de programación** mediante el que se indican las instrucciones al dispositivo y un **traductor** que sea capaz de *traducirlo* al lenguaje máquina. Este lenguaje máquina lo *entiende* el microprocesador del dispositivo (ordenador, móvil, tablet,...)
 * El **Ciclo de vida** para el desarrollo de un programa es: Entender el problema, Recopilar requisitos, Planificar, Diseñar, Programar, Probar, Desplegar, Mantener.
 
-<center>![](assets/PROG-U1-CicloVida.png)</center>
+
+<figure markdown>   
+  ![](assets/PROG-U1-CicloVida.png)   
+  <figcaption>Ciclo de vida</figcaption>   
+</figure>   
+
 
 ### 2. Ordenador (o cualquier otro dispositivo)
 * **Máquina** electrónica, analógica o digital, dotada de una memoria y de métodos de tratamiento de la información, capaz de resolver problemas matemáticos y lógicos mediante la utilización de programas informáticos.
 * Un ordenador **ejecuta programas**, que son un conjunto de instrucciones representadas mediante un lenguaje de programación y datos que se ejecutan de forma secuencial y que a partir de unos datos de entrada producen una salida. Para ejecutar esos programas el ordenador sigue esta estructura básica:
 
-<center>![](assets/PROG-U1-VonNeuman.png)</center>
+
+<figure markdown>   
+  ![](assets/PROG-U1-VonNeuman.png)   
+  <figcaption>Maquina de Von Neuman</figcaption>   
+</figure>   
+
 
 ### 3. ¿Qué es un programa o software?
 El **software**, de acuerdo con el IEEE: “es el conjunto de los programas de cómputo, procedimientos, reglas, documentación y datos asociados, que forman parte de las operaciones de un sistema de computación”.
@@ -73,7 +83,12 @@ Para que este proceso tenga éxito, se ha de analizar el problema que se quiere 
 
 Una vez se tenga el algoritmo, se podrá pasar a su codificación, es decir, escribir ese algoritmo a código fuente mediante un lenguaje de programación y por último se generará el programa que se ejecutará en el ordenador para poder depurarse antes de darlo por finalizado.
 
-<center> ![](assets/PROG-U1-CicloAlgoritmo.png) </center>
+
+<figure markdown>   
+  ![](assets/PROG-U1-CicloAlgoritmo.png)   
+  <figcaption>Ciclo algoritmo</figcaption>   
+</figure>   
+
 
 
 #### 5.1 Características de los algoritmos   
@@ -116,7 +131,12 @@ fin. # (1)
 Los **diagramas de flujo** son representaciones gráficas de la secuencia de operaciones que se realizan dentro de un algoritmo.
 Se representan mediante un conjunto de formas unidas por flechas. Para indicar el inicio del diagrama, se representa en un óvalo la palabra “inicio”. Una secuencia de operaciones se representan mediante una secuencia (lo más detallada posible) de rectángulos de arriba-abajo o derecha-izquierda. Un rombo representa una operación condicional con dos posibles caminos a seguir.
 
-<center>![](assets/PROG-U1-DiagramaFlujo.png)</center>
+
+<figure markdown>   
+  ![](assets/PROG-U1-DiagramaFlujo.png)   
+  <figcaption>Diagrama de flujo</figcaption>   
+</figure>   
+
 
 **¿Podrías mejorar el algoritmo anterior?**
 

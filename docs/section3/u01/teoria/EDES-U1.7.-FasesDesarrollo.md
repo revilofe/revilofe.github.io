@@ -184,7 +184,7 @@ Todos los equipos de desarrollo ágil deben seguir los cuatro valores y los doce
 #### 2.3.2. Kanban
 También conocido como "sistema de tarjetas", fue desarrollado inicialmente por Toyota para la industria de fabricación de productos. Controla por demanda la fabricación de los productos necesarios en la cantidad y tiempo justos. Está enfocado a entregar el máximo valor para los clientes, utilizando los recursos justos. Se basa en el *Lean manufacturing*.
 
-![Diagrama: Proceso Kanban](/assets/EDES-U1-Kanban.png)
+![Diagrama: Proceso Kanban](assets/EDES-U1-Kanban.png)
 
 #### 2.3.4. Scrum
 Es un modelo de desarrollo incremental. Utiliza **iteraciones (sprint)** regulares, que suelen durar entre 2 y 4 semanas. Al principio de cada iteración se establecen sus **objetivos priorizados (sprint backlog)**. Al finalizar cada iteración se obtiene una **entrega parcial utilizable por el cliente**. Existen reuniones diarias para tratar la marcha del *sprint*.
@@ -208,7 +208,7 @@ Sus **características** incluyen:
 *   Estándares de codificación.
 *   Trabajo de 40 horas semanales.
 
-![Diagrama: Tradicional vs Agil](/assets/EDES-U1-TradicionalVSAgil.png)
+![Diagrama: Tradicional vs Agil](assets/EDES-U1-TradicionalVSAgil.png)
 
 Destacamos las metodologías aǵiles, **XP (eXtreme Programming)** y frameworks como **Scrum** como su máximo exponente.
 

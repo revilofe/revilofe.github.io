@@ -1,12 +1,28 @@
 name: slides-to-pdf
 on:
-  # Si quieres elegir cuándo lanzarlo, comenta las líneas push y siguientes y descomenta la línea a continuación:
-  # workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - 'slides/*'
+  # ======================================================
+  # OPCIONES DE EJECUCIÓN DEL WORKFLOW
+  #
+  # 1. Automática: se ejecuta con cada push en la rama main 
+  #    que afecte a archivos dentro de 'slides/*'.
+  #    👉 Deja descomentado el bloque 'push:' y comenta 'workflow_dispatch:'.
+  #
+  # 2. Manual: solo se ejecuta desde la pestaña "Actions" 
+  #    en GitHub (botón "Run workflow").
+  #    👉 Comenta el bloque 'push:' y descomenta 'workflow_dispatch:'.
+  #
+  # IMPORTANTE: solo debe estar activa UNA de las dos opciones.
+  # ======================================================
+
+  # --- Opción 1: Automática ---
+  # push:
+  #  branches:
+  #    - main
+  #  paths:
+  #    - 'slides/*'
+
+  # --- Opción 2: Manual ---
+  workflow_dispatch:
 
 jobs:
   list-files:

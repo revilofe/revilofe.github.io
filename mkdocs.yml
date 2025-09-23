@@ -182,6 +182,15 @@ nav:
       - '3.1.1.-Recopilación de evidencias': 'section2/u03/teoria/IS-U3.1.1.-RecopilacionDeEvidencias.md'
       - '3.1.2.-Procedimiento': 'section2/u03/teoria/IS-U3.1.2.-Procedimiento.md'
       - '3.3.1.-Investigación incidentes:MITRE': 'section2/u03/teoria/IS-U3.3.1.-MITRE.md'
+  ## ***********************
+  ## DESPLIEGUE DE APLI. WEB.
+  ## ***********************
+  - 'Despliegue de aplicaciones Web':
+      - 'section4/index.md'
+      - 'U1: Documentación y Control de versiones':
+          - 'section4/u01/index.md'
+          - '1.1.-DevOps': 'section4/u01/teoria/DAW-U1.1.-DevOps.md'
+          - '1.2.-Documentación': 'section4/u01/teoria/DAW-U1.2.-Documentacion.md'
   - 'Blog': 'blog.md'
   - 'Tags': 'tags.md'
   - 'Acerca de': 'about.md'

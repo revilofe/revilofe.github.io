@@ -65,39 +65,36 @@ Como una buena guía, si no eres capaz de crear un comentario **concreto y corto
 
 No todos los comentarios son valiosos, hay **algunos que pueden estorbar** más de lo que ayudan, por ejemplo, los que no aportan información a lo que es obvio en el código.
 
-Hablemos de algunas formas de **aprovecharlos lo mejor posible** para que contribuyan positivamente a aumentar la calidad del proyecto:   
+Hablemos de algunas formas de **aprovecharlos lo mejor posible** para que contribuyan positivamente a aumentar la calidad del proyecto:    
 
 - Escribe *los comentarios primero*: Una de las partes más importantes de los comentarios como documentación es que **deben ser concretos, cercanos a la realidad y que proporcionen la mayor cantidad de información útil posible**.  Para lograr esto, se tienen que **crear lo más cerca que puedas a la creación del código**. Pero como todos sabemos que después de escribir y probar (básicamente) el código vamos a sentir que ya está terminado, por tanto, es buena
-  práctica obligarte a escribirlos antes, **justo como propone TDD con las pruebas**. De esta manera te asegurarás que tu código esté documentado incluso antes de escribirlo y **te servirán como una herramienta de diseño** que te ayudará a pensar mejor en la usabilidad de tus módulos y piezas de software.  
+  práctica obligarte a escribirlos antes, **justo como propone TDD con las pruebas**. De esta manera te asegurarás que tu código esté documentado incluso antes de escribirlo y **te servirán como una herramienta de diseño** que te ayudará a pensar mejor en la usabilidad de tus módulos y piezas de software.   
 
+- *Crea comentarios sobre la interfaz*: **La interfaz es el medio de uso que tus módulos o funciones presentan** para que las demás partes de tu sistema lo usen. Lo primero que deberías documentar y explicar es esta interfaz, para que más personas a parte de ti puedan usar este pedazo de código.    
 
-- *Crea comentarios sobre la interfaz*: **La interfaz es el medio de uso que tus módulos o funciones presentan** para que las demás partes de tu sistema lo usen. Lo primero que deberías documentar y explicar es esta interfaz, para que más personas a parte de ti puedan usar este pedazo de código.  
-
-
-- *Escribe comentarios claros* sobre:
+- *Escribe comentarios claros* sobre:    
    
-   * **Cómo usar esa pieza de código**   
-   * **Por qué existe esa parte del sistema**   
-   * **Qué efectos tiene usarla**   
+    * **Cómo usar esa pieza de código**   
+    * **Por qué existe esa parte del sistema**   
+    * **Qué efectos tiene usarla**   
 
-  Este tipo de comentarios son los que aportan mayor valor al sistema y si están lo suficientemente completos, con ejemplos y explicaciones claras, son una documentación válida que está en un muy buen lugar: es fácil de encontrar y no se va a perder enterrada entre otros documentes que después nadie va a consultar.  
+    Este tipo de comentarios son los que aportan mayor valor al sistema y si están lo suficientemente completos, con ejemplos y explicaciones claras, son una documentación válida que está en un muy buen lugar: es fácil de encontrar y no se va a perder enterrada entre otros documentes que después nadie va a consultar.  
 
-
-- *Evita los comentarios sobre la implementación*: Los comentarios sobre la implementación son aquello que describen qué estas haciendo, como por ejemplo, sumar número, abrir un archivo, etc. Estos comentarios normalmente **son innecesarios**, ya que lo que se está haciendo es obvio si el código es lo suficientemente expresivo y siempre deberíamos buscar que sea así. De hecho, estos son los comentarios que hacen que la gente odie a los comentarios en general, pues **en vez de proporcionar información extra son una carga que hay que mantener y pueden confundir si no son actualizados**. Si realmente sientes que tienes que explicar qué estás haciendo con cierta pieza de código, primero **pregúntate si no hay una manera de reescribirlo para que sea obvio**. Si no existe o no es práctica esta solución, entonces escribe el comentario de la manera más concisa posible, incluyendo la razón de la existencia de ese código. Para hacer esto debes tomar muy en cuenta los recursos del proyecto: **no te puedes tardar el triple del tiempo** implementando la pieza de código perfecta porque no quieres escribir un comentario que explique cómo funciona.
+- *Evita los comentarios sobre la implementación*: Los comentarios sobre la implementación son aquellos que describen qué estás haciendo, como por ejemplo, sumar número, abrir un archivo, etc. Estos comentarios normalmente **son innecesarios**, ya que lo que se está haciendo es obvio si el código es lo suficientemente expresivo y siempre deberíamos buscar que sea así. De hecho, estos son los comentarios que hacen que la gente odie a los comentarios en general, pues **en vez de proporcionar información extra son una carga que hay que mantener y pueden confundir si no son actualizados**. Si realmente sientes que tienes que explicar qué estás haciendo con cierta pieza de código, primero **pregúntate si no hay una manera de reescribirlo para que sea obvio**. Si no existe o no es práctica esta solución, entonces escribe el comentario de la manera más concisa posible, incluyendo la razón de la existencia de ese código. Para hacer esto debes tomar muy en cuenta los recursos del proyecto: **no te puedes tardar el triple del tiempo** implementando la pieza de código perfecta porque no quieres escribir un comentario que explique cómo funciona.    
 
 > Escribir comentarios es una de las grandes tareas que los programadores debemos dominar. Los lenguajes de programación y los entornos de programación cada vez le dan más poder a esta parte de los programas y permiten incluso escribir pruebas en ellos, generar documentación automática y listar tareas a partir de ellos.
 > Si pones el suficiente esmero en aprender a escribir buenos comentarios y mantenerlos, serán una gran herramienta de diseño y documentación de tu software.
 
 ### 2. Herramientas para documentar
 #### 2.1. DOKA
-[Dokka](https://kotlin.github.io/dokka/1.6.10/)
+[Dokka](https://kotlin.github.io/dokka/2.1.0-Beta/)
 
 - Herramienta que nos permite generar la documentación en distintos formatos.
 - Configuración básica y mínima: Añade al fichero `build.gradle.kts:`
 
 ```kotlin
 plugins {
-    id("org.jetbrains.dokka") version "1.6.10"
+    id("org.jetbrains.dokka") version "2.0.0"
 }
 
 repositories {
@@ -105,6 +102,13 @@ repositories {
 }
 ```
 Ahora en aparecerán nuevas tareas en la pestaña de gradle.
+
+Para generar documentación, ejecute las siguientes tareas de Gradle:    
+
+* `dokkaHtml` para compilaciones de un solo proyecto.
+* `dokkaHtmlMultiModule` para compilaciones de múltiples proyectos.
+
+De forma predeterminada, el directorio de salida se establece en `/build/dokka/html` y `/build/dokka/htmlMultiModule`.
 
 #### 2.2. KDOC
 
@@ -115,7 +119,9 @@ Ahora en aparecerán nuevas tareas en la pestaña de gradle.
 - Para genera la documentación, en las opciones de `Gradle`, busca la tarea `Task->Documentación->DokkaHtml` y púlsala.
 - La documentación se genera en la carpeta `build` de tu proyecto.
 
-## Bibliografía y fuente
+## Bibliografía y fuente    
 * [Deberías comentar tu código - Héctor Patricio](https://blog.thedojo.mx/2020/12/30/deberias-comentar-tu-codigo.html)
+* [Como escribir comentarios para documentar tu código](https://www.oracle.com/es/technical-resources/articles/java/javadoc-tool.html)
+* [Document Kotlin code: KDoc](https://kotlinlang.org/docs/kotlin-doc.html)
 * Head First Kotlin, A Brain-Friendly Guide; Dawn Griffiths & David Griffiths; 2019 - O'Reilly Media
 * A Philosophy of Software Design, John Ousterhout. (Le dedica 4 capítulos a buen uso de los comentarios)

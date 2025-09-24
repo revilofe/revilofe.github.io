@@ -10,11 +10,15 @@ permalink: /deaw/unidad1/1.3
 categories:
     - DAW
 tags:
-    - DAW
+    - DevOps
+    - CI/CD
+    - Despliegue
     - Git
-    - GitHub
-    - Control de versiones
+    - GitHub 
+    - GitFlow 
+    - GitHubFlow
 ---
+
 
 
 ## 1.3. Git y GitHub
@@ -426,7 +430,7 @@ Un flujo de trabajo simple y ágil, centrado en ramas de vida corta y despliegue
 </figure>   
 
 
-#### 7.3. Trunk Based Development*
+#### 7.3. Trunk Based Development
 
 Un flujo de trabajo simple y directo, ideal para equipos pequeños o proyectos con ciclos de desarrollo rápidos. Este enfoque minimiza la complejidad de la gestión de ramas, pero puede ser arriesgado si no se tienen prácticas sólidas de revisión y pruebas, ya que cualquier error puede afectar a toda la base de código. Algunas de sus características clave son:
 

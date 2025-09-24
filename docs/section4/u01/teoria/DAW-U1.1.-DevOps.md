@@ -88,14 +88,20 @@ La imagen muestra un flujo típico de CI/CD dividido en dos grandes etapas: CI P
 
 - **Commit**: Acción de guardar los cambios realizados en el código en el sistema de control de versiones (por ejemplo, Git). Este paso marca un punto de partida para activar el pipeline automatizado.
 
-**CI Pipeline (Integración Continua)**
-- **Build**: Compilación o ensamblado del código fuente para asegurarse de que todo se une correctamente y produce los artefactos necesarios.
-- **Unit Tests**: Ejecución de pruebas unitarias que comprueban que cada componente individual del software funciona de forma correcta y aislada.[1]
-- **Integration Tests**: Pruebas para verificar que diferentes componentes o módulos funcionan correctamente cuando interactúan entre sí. Validan las dependencias y la comunicación entre partes del sistema.[1]
+**CI Pipeline (Integración Continua)**    
 
-**CD Pipeline (Despliegue Continuo)**
-- **Review**: Revisión del build y procesos; generalmente incluye validación manual o automática por parte de otros desarrolladores o herramientas de calidad, asegurando que todo cumpla los estándares antes de avanzar.[1]
-- **Staging**: Despliegue en un entorno de pruebas que simula la producción. Permite probar el sistema completo en condiciones casi reales para detectar posibles problemas antes del lanzamiento final.
+- **Build**: Compilación o ensamblado del código fuente para asegurarse de que todo se une correctamente y produce los artefactos necesarios.   
+
+- **Unit Tests**: Ejecución de pruebas unitarias que comprueban que cada componente individual del software funciona de forma correcta y aislada.   
+
+- **Integration Tests**: Pruebas para verificar que diferentes componentes o módulos funcionan correctamente cuando interactúan entre sí. Validan las dependencias y la comunicación entre partes del sistema.
+
+**CD Pipeline (Despliegue Continuo)**   
+
+- **Review**: Revisión del build y procesos; generalmente incluye validación manual o automática por parte de otros desarrolladores o herramientas de calidad, asegurando que todo cumpla los estándares antes de avanzar.   
+
+- **Staging**: Despliegue en un entorno de pruebas que simula la producción. Permite probar el sistema completo en condiciones casi reales para detectar posibles problemas antes del lanzamiento final.   
+
 - **Production**: Despliegue final del software en el entorno de producción real. El código está accesible para los usuarios finales y soporta la carga y operación real del negocio.
 
 Como resumen, decir que cada paso realiza una función específica y secuencial: escritura de código, inclusión en el control de versiones, pruebas y compilación automatizadas (CI), revisión y despliegue controlado y seguro (CD).

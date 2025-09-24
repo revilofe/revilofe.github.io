@@ -14,10 +14,10 @@ tags:
     - Git
     - GitHub
     - Control de versiones
-
 ---
 
-## 1.2. Git y GitHub
+
+## 1.3. Git y GitHub
 En el vasto y dinámico mundo del desarrollo de software, dos pilares se erigen como esenciales para la eficiencia, la calidad y la colaboración: el control de versiones y la documentación del código visto en el punto atnerior. Este tema explora en profundidad cómo Git y GitHub han revolucionado la forma en que los equipos gestionan sus proyectos.
 
 
@@ -403,6 +403,11 @@ Una metodología más estructurada y compleja, popular para proyectos con entreg
 *   **`release-*`**: Ramas temporales que se bifurcan de `develop` cuando el desarrollo ha adquirido suficientes funcionalidades para una publicación. En estas ramas se hacen los últimos ajustes y correcciones antes del lanzamiento. Luego se fusionan en `master` (y se etiquetan) y de nuevo en `develop`.
 *   **`hotfix-*`**: Ramas temporales que se originan directamente de `master` para reparar rápidamente errores urgentes en producción. Una vez corregido el error, se fusionan tanto en `master` (y se etiquetan) como en `develop`.
 
+<figure markdown>   
+  ![](assets/DAW-U1.3.-git-flow.png)   
+  <figcaption>Git-Flow</figcaption>   
+</figure>   
+
 #### 7.2. GitHub Flow
 
 Un flujo de trabajo simple y ágil, centrado en ramas de vida corta y despliegues continuos. Se basa en cinco principios:
@@ -414,6 +419,13 @@ Un flujo de trabajo simple y ágil, centrado en ramas de vida corta y despliegue
 5.  Los cambios integrados en `master` se despliegan en producción de inmediato.
     Este flujo es conocido por impulsar la entrega continua.
 
+
+<figure markdown>   
+  ![](assets/DAW-U1.3.-gitHub-flow.png)   
+  <figcaption>GitHub-Flow</figcaption>   
+</figure>   
+
+
 #### 7.3. Trunk Based Development*
 
 Un flujo de trabajo simple y directo, ideal para equipos pequeños o proyectos con ciclos de desarrollo rápidos. Este enfoque minimiza la complejidad de la gestión de ramas, pero puede ser arriesgado si no se tienen prácticas sólidas de revisión y pruebas, ya que cualquier error puede afectar a toda la base de código. Algunas de sus características clave son:
@@ -423,6 +435,12 @@ Un flujo de trabajo simple y directo, ideal para equipos pequeños o proyectos c
 3.  Se utilizan pruebas automatizadas para asegurar la calidad del código, promoviendo la integración continua (CI).
 4.  Se fomenta la comunicación constante entre los miembros del equipo para coordinar cambios y evitar conflictos.
 5. Se promueve una cultura de colaboración y responsabilidad compartida por la calidad del código.
+
+<figure markdown>   
+  ![](assets/DAW-U1.3.-trunk-flow.png)   
+  <figcaption>Trunk-Based Development</figcaption>   
+</figure>   
+
 
 ### 8. Herramientas Complementarias para Git y GitHub
 

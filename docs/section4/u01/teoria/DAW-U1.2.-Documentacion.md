@@ -193,14 +193,17 @@ La clave es combinar:
 
 ## Bibliografía y fuentes
 
-- [¿Cómo documentar proyectos de software? Guía sencilla](https://www.educaopen.com/digital-lab/blog/guias-digitales/como-documentar-proyectos-de-software)
+- Articulo: [¿Cómo documentar proyectos de software? Guía sencilla](https://www.educaopen.com/digital-lab/blog/guias-digitales/como-documentar-proyectos-de-software)
 - Kotlin Docs: [KDoc](https://kotlinlang.org/docs/kotlin-doc.html)  
 - Oracle: [Javadoc Tool](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html)  
 - Dokka: [Documentación oficial](https://kotlin.github.io/dokka/)  
 - Doxygen: [Sitio oficial](https://www.doxygen.nl)  
 - MkDocs: [Página oficial](https://www.mkdocs.org)
 - Markdown Guide: [The Markdown Guide](https://www.markdownguide.org)
+- Markdown Tutroial: [Tutorial de Markdown](https://tutorialmarkdown.com/)
 - GitHub Docs: [About wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
 - JSDoc: [JSDoc Official Site](https://jsdoc.app/)
 - Docusaurus: [Docusaurus Official Site](https://docusaurus.io/)
 - PyDoc: [PyDoc Documentation](https://docs.python.org/3/library/pydoc.html)
+- Jose Luis Gonzalez: [Repositorio del Módulo](https://github.com/joseluisgs/DespliegueAplicacionesWeb-01-2025-2026)
+- JavaDoc: [Tutorial de JavaDoc](https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=646:documentar-proyectos-java-con-javadoc-comentarios-simbolos-tags-deprecated-param-etc-cu00680b&catid=68&Itemid=188)

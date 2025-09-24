@@ -191,6 +191,7 @@ nav:
           - 'section4/u01/index.md'
           - '1.1.-DevOps': 'section4/u01/teoria/DAW-U1.1.-DevOps.md'
           - '1.2.-Documentación': 'section4/u01/teoria/DAW-U1.2.-Documentacion.md'
+          - '1.3.-Git Github': 'section4/u01/teoria/DAW-U1.3.-GitGitHub.md'
   - 'Blog': 'blog.md'
   - 'Tags': 'tags.md'
   - 'Acerca de': 'about.md'

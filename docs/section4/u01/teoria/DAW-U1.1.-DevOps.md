@@ -19,17 +19,20 @@ tags:
 
 ### 1. ¿Qué es DevOps?
 
-**DevOps** es la unión de dos mundos que tradicionalmente estaban separados:
-- **Dev (Desarrollo):** programadores, que desarrollan el código para crear aplicaciones y prueban ese código para asegurarse de que funciona.
+**DevOps** es la unión de dos mundos que tradicionalmente estaban separados:    
+
+- **Dev (Desarrollo):** programadores, que desarrollan el código para crear aplicaciones y prueban ese código para asegurarse de que funciona.    
+
 - **Ops (Operaciones):** administradores de sistemas, que despliegan y mantienen las aplicaciones en servidores, asegurándose de que estén disponibles y funcionando correctamente.
 
 El objetivo de DevOps es **mejorar la colaboración entre ambos** para que las aplicaciones lleguen más rápido al usuario, con mayor calidad y menos errores.
 
-Un ingeniero o perfil DevOps no solo instala aplicaciones en servidores, sino que también:
-- Automatiza despliegues.
-- Supervisa el rendimiento de aplicaciones.
-- Configura sistemas en la nube.
-- Define buenas prácticas para asegurar que el software se entrega de forma continua.
+Un ingeniero o perfil DevOps no solo instala aplicaciones en servidores, sino que también:    
+
+- Automatiza despliegues.   
+- Supervisa el rendimiento de aplicaciones.   
+- Configura sistemas en la nube.   
+- Define buenas prácticas para asegurar que el software se entrega de forma continua.   
 
 DevOps persigue **pasar del código en el IDE al software funcionando en un servidor real** de la forma más rápida, segura y eficiente posible.
 

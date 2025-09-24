@@ -16,8 +16,10 @@ tags:
 ---
 
 ## 1.1. DevOps y términos relacionados
+En esta unidad se introduce el concepto de **DevOps**, su importancia en el desarrollo de software moderno, y los términos clave asociados como **CI/CD** (Integración Continua y Entrega/Despliegue Continuo). Se explica cómo estas prácticas mejoran la colaboración entre desarrolladores y administradores de sistemas, agilizando la entrega de software de alta calidad. En definitiva como DevOps es la base para entender el despliegue de aplicaciones web.
 
 ### 1. ¿Qué es DevOps?
+Se entiende por DevOps las prácticas, herramientas y una filosofía cultural que **unifica el desarrollo de software (Dev)** y **las operaciones de TI (Ops)**.
 
 **DevOps** es la unión de dos mundos que tradicionalmente estaban separados:    
 

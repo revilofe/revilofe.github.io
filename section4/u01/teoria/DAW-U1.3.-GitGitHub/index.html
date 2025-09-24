@@ -99,7 +99,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#12-git-y-github" class="md-skip">
+        <a href="#13-git-y-github" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -4968,13 +4968,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#12-git-y-github" class="md-nav__link">
+  <a href="#13-git-y-github" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2. Git y GitHub
+      1.3. Git y GitHub
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2. Git y GitHub">
+    <nav class="md-nav" aria-label="1.3. Git y GitHub">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -5315,13 +5315,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#12-git-y-github" class="md-nav__link">
+  <a href="#13-git-y-github" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2. Git y GitHub
+      1.3. Git y GitHub
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2. Git y GitHub">
+    <nav class="md-nav" aria-label="1.3. Git y GitHub">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -5566,8 +5566,7 @@
 
   <h1>1.3.-Git Github</h1>
 
-<hr />
-<h2 id="12-git-y-github">1.2. <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> y <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr><a class="headerlink" href="#12-git-y-github" title="Permanent link">&para;</a></h2>
+<h2 id="13-git-y-github">1.3. <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> y <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr><a class="headerlink" href="#13-git-y-github" title="Permanent link">&para;</a></h2>
 <p>En el vasto y dinámico mundo del desarrollo de software, dos pilares se erigen como esenciales para la eficiencia, la calidad y la colaboración: el control de versiones y la documentación del código visto en el punto atnerior. Este tema explora en profundidad cómo <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> y <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> han revolucionado la forma en que los equipos gestionan sus proyectos.</p>
 <h3 id="1-control-de-versiones-con-git-y-github">1. Control de Versiones con <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> y <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr><a class="headerlink" href="#1-control-de-versiones-con-git-y-github" title="Permanent link">&para;</a></h3>
 <p>El <strong>control de versiones</strong> es, en esencia, un sistema que registra los cambios realizados en un archivo o un conjunto de archivos a lo largo del tiempo. Su propósito principal es permitir a los desarrolladores recuperar versiones específicas de sus proyectos en cualquier momento, lo que resulta invaluable para rastrear la evolución del software, revertir errores y, fundamentalmente, coordinar el trabajo de múltiples personas en archivos compartidos. Sin un sistema robusto de control de versiones, el desarrollo colaborativo sería caótico, propenso a la pérdida de trabajo y lleno de conflictos irresolubles.</p>
@@ -5945,6 +5944,11 @@ Para que las etiquetas locales se compartan con el repositorio remoto, deben sub
 <li><strong><code>release-*</code></strong>: Ramas temporales que se bifurcan de <code>develop</code> cuando el desarrollo ha adquirido suficientes funcionalidades para una publicación. En estas ramas se hacen los últimos ajustes y correcciones antes del lanzamiento. Luego se fusionan en <code>master</code> (y se etiquetan) y de nuevo en <code>develop</code>.</li>
 <li><strong><code>hotfix-*</code></strong>: Ramas temporales que se originan directamente de <code>master</code> para reparar rápidamente errores urgentes en producción. Una vez corregido el error, se fusionan tanto en <code>master</code> (y se etiquetan) como en <code>develop</code>.</li>
 </ul>
+<figure>
+<p><img alt="" src="../assets/DAW-U1.3.-git-flow.png" /> <br />
+</p>
+<figcaption>Git-Flow</figcaption>
+</figure>
 <h4 id="72-github-flow">7.2. <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Flow<a class="headerlink" href="#72-github-flow" title="Permanent link">&para;</a></h4>
 <p>Un flujo de trabajo simple y ágil, centrado en ramas de vida corta y despliegues continuos. Se basa en cinco principios:</p>
 <ol>
@@ -5955,6 +5959,11 @@ Para que las etiquetas locales se compartan con el repositorio remoto, deben sub
 <li>Los cambios integrados en <code>master</code> se despliegan en producción de inmediato.
     Este flujo es conocido por impulsar la entrega continua.</li>
 </ol>
+<figure>
+<p><img alt="" src="../assets/DAW-U1.3.-gitHub-flow.png" /> <br />
+</p>
+<figcaption>GitHub-Flow</figcaption>
+</figure>
 <h4 id="73-trunk-based-development">7.3. Trunk Based Development*<a class="headerlink" href="#73-trunk-based-development" title="Permanent link">&para;</a></h4>
 <p>Un flujo de trabajo simple y directo, ideal para equipos pequeños o proyectos con ciclos de desarrollo rápidos. Este enfoque minimiza la complejidad de la gestión de ramas, pero puede ser arriesgado si no se tienen prácticas sólidas de revisión y pruebas, ya que cualquier error puede afectar a toda la base de código. Algunas de sus características clave son:</p>
 <ol>
@@ -5964,6 +5973,11 @@ Para que las etiquetas locales se compartan con el repositorio remoto, deben sub
 <li>Se fomenta la comunicación constante entre los miembros del equipo para coordinar cambios y evitar conflictos.</li>
 <li>Se promueve una cultura de colaboración y responsabilidad compartida por la calidad del código.</li>
 </ol>
+<figure>
+<p><img alt="" src="../assets/DAW-U1.3.-trunk-flow.png" /> <br />
+</p>
+<figcaption>Trunk-Based Development</figcaption>
+</figure>
 <h3 id="8-herramientas-complementarias-para-git-y-github">8. Herramientas Complementarias para <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> y <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr><a class="headerlink" href="#8-herramientas-complementarias-para-git-y-github" title="Permanent link">&para;</a></h3>
 <p>Además de la línea de comandos, existen diversas herramientas que mejoran la experiencia de uso de <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> y <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr>:</p>
 <ul>

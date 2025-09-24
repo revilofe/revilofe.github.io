@@ -95,7 +95,8 @@ Una herramienta para generar documentación externa. Permite crear sitios web de
 - Ejemplo real: la documentación de Python ([docs.python.org](https://docs.python.org)) podría montarse en un formato similar.
 
 #### 3.6. Markdown
-Un formato de texto ligero muy usado para escribir documentación externa e interna.
+Un formato de texto ligero muy usado para escribir documentación externa e interna.    
+
 - Fácil de aprender y usar.
 - Compatible con muchas plataformas (GitHub, GitLab, Bitbucket).
 - Se usa en archivos README.md, wikis y blogs.

@@ -5530,9 +5530,11 @@ Solo declaras <code>uses:</code> y aprovechas el trabajo ya hecho.  </p>
 <h4 id="31-ejemplo-practico-actualizar-readme-automaticamente">3.1. Ejemplo práctico: Actualizar README automáticamente<a class="headerlink" href="#31-ejemplo-practico-actualizar-readme-automaticamente" title="Permanent link">&para;</a></h4>
 <p>Con este ejemplo vamos a ver cómo <strong>actualizar el README.md automáticamente</strong> cada vez que se ejecuten tests. Esto es útil para mostrar el estado del proyecto, resultados de tests, cobertura de código, etc.</p>
 <p>Supongamos que queremos que, cada vez que ejecutemos tests, el <strong>resultado se escriba en el README.md</strong>.  </p>
-<p>Para eso usaremos:
-- Un <strong>script en Python</strong> (<code>update_readme.py</code>) que modifica el archivo.<br />
-- La acción <code>git-auto-commit-action</code> para guardar el cambio en el repo.  </p>
+<p>Para eso usaremos:    </p>
+<ul>
+<li>Un <strong>script en Python</strong> (<code>update_readme.py</code>) que modifica el archivo.  </li>
+<li>La acción <code>git-auto-commit-action</code> para guardar el cambio en el repo.  </li>
+</ul>
 <p><strong>Workflow (ci.yml):</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CI con auto-commit</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
@@ -5592,14 +5594,16 @@ Solo declaras <code>uses:</code> y aprovechas el trabajo ya hecho.  </p>
 <a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">          </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
 <a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">          </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./site</span>
 </code></pre></div>
-<p>Con este ejemplo, cada vez que hagan un <code>push</code> a <code>main</code>, su web de documentación se actualiza sola. Para ello, los pasos que siguen son:
-1. Clonan el repo.
-2. Instalan MkDocs.
-3. Generan la web estática en la carpeta <code>site/</code>.
-4. Despliegan el contenido de la carpeta <code>site/</code> a <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Pages, haciendo push a la rama <code>gh-pages</code> usando la acción <code>peaceiris/actions-gh-pages</code>.
-5. Usan el token secreto que <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> proporciona automáticamente para autenticar el despliegue.
-6. Publican en la rama <code>gh-pages</code> (configurada en las opciones del repositorio para <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Pages).
-7. ¡Listo! La web está actualizada sin tocar nada más.</p>
+<p>Con este ejemplo, cada vez que hagan un <code>push</code> a <code>main</code>, su web de documentación se actualiza sola. Para ello, los pasos que siguen son:    </p>
+<ol>
+<li>Clonan el repo.   </li>
+<li>Instalan MkDocs.   </li>
+<li>Generan la web estática en la carpeta <code>site/</code>.   </li>
+<li>Despliegan el contenido de la carpeta <code>site/</code> a <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Pages, haciendo push a la rama <code>gh-pages</code> usando la acción <code>peaceiris/actions-gh-pages</code>.    </li>
+<li>Usan el token secreto que <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> proporciona automáticamente para autenticar el despliegue.    </li>
+<li>Publican en la rama <code>gh-pages</code> (configurada en las opciones del repositorio para <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Pages).    </li>
+<li>¡Listo! La web está actualizada sin tocar nada más.    </li>
+</ol>
 <h3 id="4-github-actions-en-cicd-real">4. <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions en <abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr> real<a class="headerlink" href="#4-github-actions-en-cicd-real" title="Permanent link">&para;</a></h3>
 <p>En un proyecto real de despliegue de aplicaciones web, Actions se puede usar para:</p>
 <ul>
@@ -5645,12 +5649,12 @@ Solo declaras <code>uses:</code> y aprovechas el trabajo ya hecho.  </p>
 </ol>
 <p>Entregable: Captura de pantalla mostrando el workflow ejecutado.</p>
 <h2 id="bibliografia-y-fuentes">Bibliografía y fuentes<a class="headerlink" href="#bibliografia-y-fuentes" title="Permanent link">&para;</a></h2>
-<ol>
+<ul>
 <li><a href="https://www.redhat.com/en/topics/devops/what-is-ci-cd">What is <abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr>? A Beginner’s Guide to Continuous Integration and Continuous Delivery</a></li>
 <li><a href="https://docs.github.com/en/actions"><abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions Documentation</a></li>
 <li><a href="https://github.com/marketplace"><abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions Marketplace</a></li>
 <li><a href="https://github.github.io/actions-cheat-sheet/actions-cheat-sheet.pdf"><abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions Cheat Sheet</a></li>
-</ol>
+</ul>
 
 
 

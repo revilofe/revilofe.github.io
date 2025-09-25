@@ -173,7 +173,8 @@ Con este ejemplo vamos a ver cómo **actualizar el README.md automáticamente** 
 
 Supongamos que queremos que, cada vez que ejecutemos tests, el **resultado se escriba en el README.md**.  
 
-Para eso usaremos:
+Para eso usaremos:    
+
 - Un **script en Python** (`update_readme.py`) que modifica el archivo.  
 - La acción `git-auto-commit-action` para guardar el cambio en el repo.  
 
@@ -248,14 +249,15 @@ jobs:
           publish_dir: ./site
 ```
 
-Con este ejemplo, cada vez que hagan un `push` a `main`, su web de documentación se actualiza sola. Para ello, los pasos que siguen son:
-1. Clonan el repo.
-2. Instalan MkDocs.
-3. Generan la web estática en la carpeta `site/`.
-4. Despliegan el contenido de la carpeta `site/` a GitHub Pages, haciendo push a la rama `gh-pages` usando la acción `peaceiris/actions-gh-pages`.
-5. Usan el token secreto que GitHub proporciona automáticamente para autenticar el despliegue.
-6. Publican en la rama `gh-pages` (configurada en las opciones del repositorio para GitHub Pages).
-7. ¡Listo! La web está actualizada sin tocar nada más.
+Con este ejemplo, cada vez que hagan un `push` a `main`, su web de documentación se actualiza sola. Para ello, los pasos que siguen son:    
+
+1. Clonan el repo.   
+2. Instalan MkDocs.   
+3. Generan la web estática en la carpeta `site/`.   
+4. Despliegan el contenido de la carpeta `site/` a GitHub Pages, haciendo push a la rama `gh-pages` usando la acción `peaceiris/actions-gh-pages`.    
+5. Usan el token secreto que GitHub proporciona automáticamente para autenticar el despliegue.    
+6. Publican en la rama `gh-pages` (configurada en las opciones del repositorio para GitHub Pages).    
+7. ¡Listo! La web está actualizada sin tocar nada más.    
 
 
 ### 4. GitHub Actions en CI/CD real
@@ -303,8 +305,8 @@ Entregable: Captura de pantalla mostrando el workflow ejecutado.
 
 
 ## Bibliografía y fuentes
-1. [What is CI/CD? A Beginner’s Guide to Continuous Integration and Continuous Delivery](https://www.redhat.com/en/topics/devops/what-is-ci-cd)
-2. [GitHub Actions Documentation](https://docs.github.com/en/actions)
-3. [GitHub Actions Marketplace](https://github.com/marketplace)
-4. [GitHub Actions Cheat Sheet](https://github.github.io/actions-cheat-sheet/actions-cheat-sheet.pdf)
+- [What is CI/CD? A Beginner’s Guide to Continuous Integration and Continuous Delivery](https://www.redhat.com/en/topics/devops/what-is-ci-cd)
+- [GitHub Actions Documentation](https://docs.github.com/en/actions)
+- [GitHub Actions Marketplace](https://github.com/marketplace)
+- [GitHub Actions Cheat Sheet](https://github.github.io/actions-cheat-sheet/actions-cheat-sheet.pdf)
 

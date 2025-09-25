@@ -283,18 +283,18 @@ En un proyecto real de despliegue de aplicaciones web, Actions se puede usar par
 1. Crea un repositorio nuevo en GitHub con un `README.md`.
 2. Añade la carpeta `.github/workflows/` y dentro un archivo `hello.yml` con:
 
-```yaml
-name: Hola Mundo
-
-on: workflow_dispatch
-
-jobs:
-  say-hello:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Saludar
-        run: echo "Hola, GitHub Actions!!"
-```
+    ```yaml
+    name: Hola Mundo
+    
+    on: workflow_dispatch
+    
+    jobs:
+      say-hello:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Saludar
+            run: echo "Hola, GitHub Actions!!"
+    ```
 
 3. Ve a la pestaña **Actions** y lanza el workflow manualmente con *Run Workflow*.
 4. Observa el log de ejecución.

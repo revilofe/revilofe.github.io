@@ -207,7 +207,7 @@ jobs:
         with:
           commit_message: "Update README con estado de tests"
           file_pattern: README.md
-````
+```
 
 Con este workflow, se puede ver **cómo GitHub Actions ejecuta código propio, modifica archivos y guarda cambios automáticamente**.
 

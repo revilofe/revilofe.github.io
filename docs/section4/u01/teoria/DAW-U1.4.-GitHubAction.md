@@ -66,7 +66,7 @@ jobs:                      # Conjunto de trabajos
 
       - name: Run a command
         run: echo "Hola, GitHub Actions"   # Comando que se ejecuta en la shell
-````
+```
 
 Como ves, un workflow es básicamente un script en YAML que define **qué hacer y cuándo hacerlo**. Vamos a desglosar sus partes.
 
@@ -178,27 +178,34 @@ Para eso usaremos:
 - Un **script en Python** (`update_readme.py`) que modifica el archivo.  
 - La acción `git-auto-commit-action` para guardar el cambio en el repo.  
 
-**Workflow (ci.yml):**
+**Workflow (ci.yaml):**
 
 ```yaml
-name: CI con auto-commit
+name: CI con AutoCommit
 
-on: [push, workflow_dispatch]
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
 
 permissions:
-  contents: write   # Da permiso al bot para hacer push
+  contents: write   # 👈 IMPORTANTE: permite que el bot pueda hacer commits/push
+
 
 jobs:
   test-and-update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-python@v4
+      - name: Configurar Python
+        uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - run: pip install pytest
+      - name: Instalar dependencias
+        run: pip install pytest
 
       - name: Ejecutar script de tests y actualizar README
         run: python update_readme.py
@@ -210,7 +217,18 @@ jobs:
           file_pattern: README.md
 ```
 
+La explicación del workflow:   
+
+1. Se ejecuta en cada push a `main` o manualmente.   
+2. Configura Python 3.10.  
+3. Instala `pytest` para correr tests.  
+4. Ejecuta el script `update_readme.py` que corre los tests y actualiza el README.md conel resultado.    
+5. Hace commit automático del README.md si ha cambiado.    
+6. Usa el token de GitHub Actions para autenticarse y hacer push.    
+
 Con este workflow, se puede ver **cómo GitHub Actions ejecuta código propio, modifica archivos y guarda cambios automáticamente**.
+
+Aquí tienes el ejemplo completo en [github](https://github.com/revilofe/2526_DAW_u1_action). En el repo está el script `update_readme.py` que corre tests y actualiza el README.md con el resultado.
 
 
 #### 3.2. Ejemplo práctico: Despliegue automático en GitHub Pages

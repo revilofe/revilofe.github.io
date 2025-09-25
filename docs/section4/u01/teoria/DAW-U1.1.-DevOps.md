@@ -74,9 +74,10 @@ Ejemplo: al hacer un *push* en GitHub, se ejecutan tests que verifican si el có
 - **Despliegue Continuo (Continuous Deployment):**  
   Es el siguiente paso: el sistema despliega automáticamente las nuevas versiones en producción sin intervención manual.
 
-¿Para qué sirve?
-- Para que los usuarios reciban las mejoras rápidamente.
-- Para reducir riesgos: se despliegan cambios pequeños y frecuentes, no “grandes actualizaciones” que pueden fallar.
+¿Para qué sirve?    
+
+- Para que los usuarios reciban las mejoras rápidamente.    
+- Para reducir riesgos: se despliegan cambios pequeños y frecuentes, no “grandes actualizaciones” que pueden fallar.     
 
 #### 3.3. Ejemplo de CI/CD 
 
@@ -124,11 +125,12 @@ El flujo asegura una entrega rápida y segura, minimizando errores y permitiendo
 
 ### 4. Conexión con el módulo de Despliegue de Aplicaciones Web
 
-En el módulo intentaremos trabajar con:
-- **Servidores web y de aplicaciones**, donde desplegar software.
-- **Tecnologías de virtualización y contenedores** (como Docker).
-- **Control de versiones e integración continua** (Git y GitHub Actions).
-- **Documentación y automatización** para que los despliegues sean rápidos, seguros y reproducibles.
+En el módulo intentaremos trabajar con:     
+
+- **Servidores web y de aplicaciones**, donde desplegar software.    
+- **Tecnologías de virtualización y contenedores** (como Docker).    
+- **Control de versiones e integración continua** (Git y GitHub Actions).   
+- **Documentación y automatización** para que los despliegues sean rápidos, seguros y reproducibles.    
 
 Por tanto, conocer DevOps y sus términos es la **base** para entender el resto de unidades del módulo.
 

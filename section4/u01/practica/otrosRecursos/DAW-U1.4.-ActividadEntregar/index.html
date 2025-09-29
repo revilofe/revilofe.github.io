@@ -10,7 +10,7 @@
         <meta name="author" content="Eduardo Fdez">
       
       
-        <link rel="canonical" href="https://revilofe.github.io/section4/u01/practica/otrosRecursos/DAW-U1.4.-Actividad-GitHubAction/">
+        <link rel="canonical" href="https://revilofe.github.io/section4/u01/practica/otrosRecursos/DAW-U1.4.-ActividadEntregar/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>1. ACTIVIDAD BASE: "GitHub Actions + Python Script + Auto Commit" - R Z O</title>
+        <title>3. ACTIVIDAD A ENTREGAR: Mejorando un Workflow con GitHub Actions - R Z O</title>
       
     
     
@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-actividad-base-github-actions-python-script-auto-commit" class="md-skip">
+        <a href="#3-actividad-a-entregar-mejorando-un-workflow-con-github-actions" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -134,7 +134,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. ACTIVIDAD BASE: "GitHub Actions + Python Script + Auto Commit"
+              3. ACTIVIDAD A ENTREGAR: Mejorando un Workflow con GitHub Actions
             
           </span>
         </div>
@@ -5059,78 +5059,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preparacion-del-repositorio-base" class="md-nav__link">
+  <a href="#objetivos-de-aprendizaje" class="md-nav__link">
     <span class="md-ellipsis">
-      📝 Preparación del repositorio base
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📝 Preparación del repositorio base">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#readmemd-inicial" class="md-nav__link">
-    <span class="md-ellipsis">
-      README.md inicial
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mainpy" class="md-nav__link">
-    <span class="md-ellipsis">
-      main.py
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#test_mainpy" class="md-nav__link">
-    <span class="md-ellipsis">
-      test_main.py
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#script-en-python-update_readmepy" class="md-nav__link">
-    <span class="md-ellipsis">
-      🐍 Script en Python (update_readme.py)
+      🎯 Objetivos de aprendizaje
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#workflow-githubworkflowsciyml" class="md-nav__link">
+  <a href="#contexto" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚙️ Workflow (.github/workflows/ci.yml)
+      📝 Contexto
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#flujo-de-la-actividad" class="md-nav__link">
+  <a href="#parte-1-workflow-basico" class="md-nav__link">
     <span class="md-ellipsis">
-      🚦 Flujo de la actividad
+      🔹 Parte 1: Workflow básico
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#entregable-del-alumno" class="md-nav__link">
+  <a href="#parte-2-mejoras-obligatorias-nivel-basico" class="md-nav__link">
     <span class="md-ellipsis">
-      📑 Entregable del alumno
+      🔹 Parte 2: Mejoras obligatorias (nivel básico)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-3-documentacion-y-preguntas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Parte 3: Documentación y Preguntas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-3-mejoras-opcionales-nivel-intermedio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Parte 3: Mejoras opcionales (nivel intermedio)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entregables" class="md-nav__link">
+    <span class="md-ellipsis">
+      📑 Entregables
     </span>
   </a>
   
@@ -5155,242 +5140,129 @@
   
 
 
-<h1 id="1-actividad-base-github-actions-python-script-auto-commit">1. ACTIVIDAD BASE: "<abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions + Python Script + Auto Commit"<a class="headerlink" href="#1-actividad-base-github-actions-python-script-auto-commit" title="Permanent link">&para;</a></h1>
-<h2 id="preparacion-del-repositorio-base">📝 Preparación del repositorio base<a class="headerlink" href="#preparacion-del-repositorio-base" title="Permanent link">&para;</a></h2>
-<p>Estructura:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mi-proyecto-actions/
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> ├── main.py
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> ├── test_main.py
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a> ├── update_readme.py   👈 nuevo script
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a> └── README.md
-</code></pre></div>
-<h3 id="readmemd-inicial">README.md inicial<a class="headerlink" href="#readmemd-inicial" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gh"># Mi Proyecto con GitHub Actions</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Este proyecto sirve para aprender a usar GitHub Actions 🚀
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="gu">## Estado de los tests</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="ge">*Aún no ejecutados...*</span>
-</code></pre></div>
-<h3 id="mainpy">main.py<a class="headerlink" href="#mainpy" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">saludo</span><span class="p">(</span><span class="n">nombre</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hola, </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s2">!&quot;</span>
-</code></pre></div>
-<h3 id="test_mainpy">test_main.py<a class="headerlink" href="#test_mainpy" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">main</span><span class="w"> </span><span class="kn">import</span> <span class="n">saludo</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_saludo</span><span class="p">():</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="k">assert</span> <span class="n">saludo</span><span class="p">(</span><span class="s2">&quot;Mundo&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Hola, Mundo!&quot;</span>
-</code></pre></div>
+<h1 id="3-actividad-a-entregar-mejorando-un-workflow-con-github-actions">3. ACTIVIDAD A ENTREGAR: <em>Mejorando un Workflow con <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions</em><a class="headerlink" href="#3-actividad-a-entregar-mejorando-un-workflow-con-github-actions" title="Permanent link">&para;</a></h1>
+<p>La siguiente actividad está diseñada para que aprendais a usar <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions de forma práctica, empezando por un workflow básico y luego añadiendo mejoras progresivas, asi como incidir en las herramientas y proceso de documentación La idea es que podais avanzar a vuestro ritmo, alcanzando un nivel mínimo común pero con la posibilidad de explorar funcionalidades más avanzadas si lo desea.</p>
+<h3 id="objetivos-de-aprendizaje">🎯 Objetivos de aprendizaje<a class="headerlink" href="#objetivos-de-aprendizaje" title="Permanent link">&para;</a></h3>
+<p>Al completar esta actividad, los alumnos serán capaces de:
+1. Identificar las diferentes herramientas de generación de documentación.
+2. Documentar los componentes software utilizando los generadores específicos de las plataformas.
+3. Usar diferentes formatos para la documentación.
+4. Utilizar herramientas colaborativas para la elaboración y mantenimiento de la documentación.
+5. Instalar, configurar y usar un sistema de control de versiones.
+6. Garantizar la accesibilidad y seguridad de la documentación almacenada por el sistema de control de versiones.
+7. Implementar y utilizar herramientas para la integración continua del código (<abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr>).</p>
 <hr />
-<h2 id="script-en-python-update_readmepy">🐍 Script en Python (<code>update_readme.py</code>)<a class="headerlink" href="#script-en-python-update_readmepy" title="Permanent link">&para;</a></h2>
-<p>Este script ejecuta los tests y actualiza el README:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">run_tests</span><span class="p">():</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="k">try</span><span class="p">:</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        <span class="n">subprocess</span><span class="o">.</span><span class="n">check_call</span><span class="p">([</span><span class="s2">&quot;pytest&quot;</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="k">return</span> <span class="s2">&quot;✅ Tests correctos&quot;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="k">except</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">CalledProcessError</span><span class="p">:</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="k">return</span> <span class="s2">&quot;❌ Tests fallidos&quot;</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="k">def</span><span class="w"> </span><span class="nf">update_readme</span><span class="p">(</span><span class="n">status</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;README.md&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>        <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="n">new_lines</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>        <span class="n">new_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;## Estado de los tests&quot;</span><span class="p">:</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>            <span class="n">new_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">status</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>            <span class="k">break</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;README.md&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>        <span class="n">f</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">new_lines</span><span class="p">)</span>
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>    <span class="n">status</span> <span class="o">=</span> <span class="n">run_tests</span><span class="p">()</span>
-<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>    <span class="n">update_readme</span><span class="p">(</span><span class="n">status</span><span class="p">)</span>
-</code></pre></div>
-<p>👉 Lo que hace:</p>
-<ol>
-<li>Ejecuta los tests con <code>pytest</code>.</li>
-<li>Según el resultado, genera un estado ✅ o ❌.</li>
-<li>Modifica el <code>README.md</code> justo debajo de la sección <code>## Estado de los tests</code>.</li>
-</ol>
-<hr />
-<h2 id="workflow-githubworkflowsciyml">⚙️ Workflow (<code>.github/workflows/ci.yml</code>)<a class="headerlink" href="#workflow-githubworkflowsciyml" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CI con AutoCommit</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nt">on</span><span class="p">:</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nt">push</span><span class="p">:</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&quot;main&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="nt">workflow_dispatch</span><span class="p">:</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nt">jobs</span><span class="p">:</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">  </span><span class="nt">test-and-update</span><span class="p">:</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout repo</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Configurar Python</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v4</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.10&#39;</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Instalar dependencias</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install pytest</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>
-<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ejecutar script de tests y actualizar README</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python update_readme.py</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>
-<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Commit automático del README</span>
-<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stefanzweifel/git-auto-commit-action@v5</span>
-<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="w">          </span><span class="nt">commit_message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Update</span><span class="nv"> </span><span class="s">README</span><span class="nv"> </span><span class="s">con</span><span class="nv"> </span><span class="s">estado</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">tests&quot;</span>
-<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="w">          </span><span class="nt">file_pattern</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">README.md</span>
-</code></pre></div>
-<hr />
-<h2 id="flujo-de-la-actividad">🚦 Flujo de la actividad<a class="headerlink" href="#flujo-de-la-actividad" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Alumno hace un <strong>push</strong> en <code>main</code>.</li>
-<li>El workflow ejecuta el script en Python.</li>
-<li>El script corre los tests y modifica el <code>README.md</code>.</li>
-<li>La acción <code>git-auto-commit-action</code> hace commit automático con los cambios.</li>
-<li>
-<p>El alumno ve en el repo cómo el <code>README.md</code> se actualiza con:</p>
+<h2 id="contexto">📝 Contexto<a class="headerlink" href="#contexto" title="Permanent link">&para;</a></h2>
+<p>Partiendos del <strong>repositorio base</strong> de la actividad de ejemplo, que contiene:</p>
 <ul>
-<li>✅ Tests correctos</li>
-<li>❌ Tests fallidos</li>
+<li>Un programa sencillo (<code>main.py</code>).</li>
+<li>Un test unitario (<code>test_main.py</code>).</li>
+<li>Un script (<code>update_readme.py</code>) que ejecuta los tests y modifica el <code>README.md</code>.</li>
+<li>Un workflow básico (<code>ci.yml</code>) que ejecuta el script y hace commit automático con <code>git-auto-commit-action</code>.</li>
+</ul>
+<hr />
+<h2 id="parte-1-workflow-basico">🔹 Parte 1: Workflow básico<a class="headerlink" href="#parte-1-workflow-basico" title="Permanent link">&para;</a></h2>
+<ol>
+<li>El alumno clona el repositorio base.</li>
+<li>Comprende el contenido del script y del workflow.</li>
+<li>
+<p>Ejecuta el workflow manualmente y comprueba que el <code>README.md</code> se actualiza con:</p>
+<ul>
+<li>✅ <em>Tests correctos</em></li>
+<li>❌ <em>Tests fallidos</em></li>
 </ul>
 </li>
 </ol>
+<p>Con esto aprenden el ciclo <strong>evento → ejecución → modificación → commit automático</strong>.</p>
 <hr />
-<h2 id="entregable-del-alumno">📑 Entregable del alumno<a class="headerlink" href="#entregable-del-alumno" title="Permanent link">&para;</a></h2>
+<h2 id="parte-2-mejoras-obligatorias-nivel-basico">🔹 Parte 2: Mejoras obligatorias (nivel básico)<a class="headerlink" href="#parte-2-mejoras-obligatorias-nivel-basico" title="Permanent link">&para;</a></h2>
+<p>Cada alumno debe implementar esta mejora:</p>
 <ul>
-<li>Enlace a su repositorio con el <code>README.md</code> actualizado automáticamente.</li>
-<li>Evidencia de haber provocado un test fallido y un test correcto.</li>
-<li>
-<p>Explicación breve de:</p>
-<ul>
-<li>Qué hace el script.</li>
-<li>Qué hace el workflow.</li>
-<li>Qué aporta <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions a un proyecto real.</li>
+<li><strong>Generar la documentación en <abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> y otro fomato adicional:</strong> volcandola posteriormente en un archivo <code>docs/report.html</code> o similar.</li>
 </ul>
-</li>
-</ul>
-<hr />
-<p>👉 Con esta versión los alumnos <strong>programan un pequeño script</strong> y ven cómo <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions:</p>
-<ul>
-<li>Ejecuta código propio.</li>
-<li>Modifica el repositorio automáticamente.</li>
-<li>Se integra con acciones externas (auto-commit).</li>
-</ul>
-<hr />
-<h1 id="2-posibles-mejoras-al-ejemplo-anterior">2. POSIBLES MEJORAS AL EJEMPLO ANTERIOR<a class="headerlink" href="#2-posibles-mejoras-al-ejemplo-anterior" title="Permanent link">&para;</a></h1>
-<p>La idea es que no solo no repitais el ejemplo, sino que <strong>investigueis, mejoreis y veais el potencial real de <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions</strong>. Para ello se piden funcionalidades <strong>extra e imaginativas</strong>. Aqui teneis varias propuestas, de más sencillas a más potentes, todas pensadas para que veais ventajas prácticas:</p>
-<hr />
-<h2 id="mejoras-propuestas-para-el-action">💡 Mejoras propuestas para el Action<a class="headerlink" href="#mejoras-propuestas-para-el-action" title="Permanent link">&para;</a></h2>
-<h3 id="1-historial-en-el-readme">1. <strong>Historial en el README</strong><a class="headerlink" href="#1-historial-en-el-readme" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Que en lugar de sobrescribir el estado, <strong>guarden un histórico</strong> en el README:</li>
-</ul>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="gu">## Estado de los tests</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">-</span><span class="w"> </span>✅ 2025-09-22 18:00 - Tests correctos
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">-</span><span class="w"> </span>❌ 2025-09-22 17:45 - Tests fallidos
-</code></pre></div>
-* 👉 Les enseña a <strong>manejar fechas</strong> y a <strong>modificar archivos de forma acumulativa</strong>.</p>
-<hr />
-<h3 id="2-generar-un-reportmd-con-detalles">2. <strong>Generar un <code>report.md</code> con detalles</strong><a class="headerlink" href="#2-generar-un-reportmd-con-detalles" title="Permanent link">&para;</a></h3>
+<h2 id="parte-3-documentacion-y-preguntas">🔹 Parte 3: Documentación y Preguntas<a class="headerlink" href="#parte-3-documentacion-y-preguntas" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Crear un archivo <code>test-report.md</code> con:</p>
+<p>(g) <strong>Actualizar el <code>README.md</code></strong> para que describa:</p>
 <ul>
-<li>Número total de tests.</li>
-<li>Tests pasados y fallidos.</li>
-<li>Tiempo de ejecución.</li>
-<li>👉 Les muestra cómo <strong>exportar resultados de procesos</strong> y tener <strong>documentación viva</strong> del proyecto.</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h3 id="3-badges-automaticos-en-readme">3. <strong>Badges automáticos en README</strong><a class="headerlink" href="#3-badges-automaticos-en-readme" title="Permanent link">&para;</a></h3>
-<ul>
+<li>(a) Las herramientas usadas para generar la documentación, y los comandos ejecutados para ello. (No olvidad esta documentación y markdown como herramienta de documentación).</li>
 <li>
-<p>Añadir un <strong>badge</strong> dinámico al README con el estado:</p>
+<p>(b) Ejemplos de código documentado (Enlaces), y de la generación &copy; en distintos formatos (al menos uno mas, p.ej. PDF, Markdown).</p>
 <ul>
-<li>Verde = Tests correctos</li>
-<li>Rojo = Tests fallidos</li>
-<li>Usando <a href="https://shields.io/">shields.io</a> o generando un badge local en SVG.</li>
-<li>👉 Entienden cómo <strong>mejorar la comunicación del estado</strong> de un proyecto.</li>
+<li>La documentación que se va a generar y enlace a esta.</li>
+<li>Los distintos formatos generados y enlaces a los mismos.</li>
 </ul>
 </li>
-</ul>
-<hr />
-<h3 id="4-notificaciones-externas">4. <strong>Notificaciones externas</strong><a class="headerlink" href="#4-notificaciones-externas" title="Permanent link">&para;</a></h3>
-<ul>
 <li>
-<p>Enviar el resultado a:</p>
-<ul>
-<li><strong>Slack/Discord</strong> (webhook sencillo).</li>
-<li><strong>Email</strong> (con una acción de envío).</li>
-<li>👉 Descubren que Actions también sirve para <strong>integrar con herramientas externas</strong>.</li>
+<p>(g) El repositorio y como usarlo (clonarlo) para generar la documentación, el funcionamiento del workflow (d) Una explicación breve de su funcionamiento para que cualquier persona pueda entenderlo.</p>
+</li>
+<li>(e) Los comentarios de los commits en el sistema de control que evidencien la mejora implementada, deben ser claros y descriptivos.</li>
+<li>(f) Evidenciar de la configuración del acceso al sistema de control de versiones (<abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr>) a través de ssh.</li>
 </ul>
+<hr />
 </li>
 </ul>
-<hr />
-<h3 id="5-ejecutar-en-multiples-entornos-matrix">5. <strong>Ejecutar en múltiples entornos (matrix)</strong><a class="headerlink" href="#5-ejecutar-en-multiples-entornos-matrix" title="Permanent link">&para;</a></h3>
+<p>Responde a las siguientes preguntas:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">CE</th>
+<th style="text-align: left;">Pregunta de Evaluación Asociada a la Actividad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>a</strong></td>
+<td style="text-align: left;"><strong>Se han identificado diferentes herramientas de generación de documentación</strong>. ¿Qué herramienta o generador específico (ej., Javadoc, Doxygen) fue utilizado en el <em>workflow</em> para procesar el código y generar la documentación en la carpeta <code>/doc</code>?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>b</strong></td>
+<td style="text-align: left;"><strong>Se han documentado los componentes software utilizando los generadores específicos de las plataformas</strong>. Muestre un fragmento del código fuente y señale los comentarios estructurados (ej. etiquetas <code>@param</code> o <code>@return</code>) que permitieron a la herramienta generar la documentación.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>c</strong></td>
+<td style="text-align: left;"><strong>Se han utilizado diferentes formatos para la documentación</strong>. ¿Qué segundo formato de documentación eligió, además de <abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr>? Describa la configuración o los comandos que incluyó en su <em>workflow</em> de <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions para producir ese formato adicional.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>d</strong></td>
+<td style="text-align: left;"><strong>Se han utilizado herramientas colaborativas para la elaboración y mantenimiento de la documentación</strong>. Describa de qué manera el uso de <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> facilita el mantenimiento de la documentación (específicamente la actualización del <code>README.md</code> y de los archivos en <code>/doc</code>) cuando colaboran múltiples programadores.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>e</strong></td>
+<td style="text-align: left;"><strong>Se ha instalado, configurado y utilizado un sistema de control de versiones</strong>. Muestre los mensajes de los <em>commits</em> que evidencian la implementación del nuevo <em>workflow</em>. ¿Fueron estos mensajes claros y descriptivos, como lo requiere el enunciado?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>f</strong></td>
+<td style="text-align: left;"><strong>Se ha garantizado la accesibilidad y seguridad de la documentación almacenada por el sistema de control de versiones</strong>. ¿Qué medidas implementó o qué configuraciones del repositorio garantizan que solo el personal autorizado pueda acceder al código y la documentación generada?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>g</strong></td>
+<td style="text-align: left;"><strong>Se ha documentado la instalación, configuración y uso del sistema de control de versiones utilizado</strong>. Señale en el <code>README.md</code> dónde documentó la explicación breve del funcionamiento del nuevo <em>workflow</em> y dónde se describen las herramientas y comandos utilizados para generar la documentación.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>h</strong></td>
+<td style="text-align: left;"><strong>Se han utilizado herramientas para la integración continua del código</strong>. Explique porqué se clasifica el <em>workflow</em> de <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions utilizado como una herramienta de Integración Continua (CI). ¿Qué evento específico dispara automáticamente la generación y actualización de la documentación?</td>
+</tr>
+<tr>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="parte-3-mejoras-opcionales-nivel-intermedio">🔹 Parte 3: Mejoras opcionales (nivel intermedio)<a class="headerlink" href="#parte-3-mejoras-opcionales-nivel-intermedio" title="Permanent link">&para;</a></h2>
+<p>Los alumnos más avanzados pueden añadir:</p>
 <ul>
-<li>
-<p>Hacer que los tests se ejecuten en:</p>
-<ul>
-<li>Varias versiones de Python (<code>3.8</code>, <code>3.9</code>, <code>3.10</code>).</li>
-<li>O en Linux y Windows.</li>
-<li>👉 Ven la potencia del <code>strategy.matrix</code> y comprueban compatibilidad multiplataforma.</li>
+<li><strong>Página de documentación con MKdocs en <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Pages</strong> con <code>peaceiris/actions-gh-pages</code>.</li>
 </ul>
-</li>
-</ul>
+<p>Aquí experimentarás con <strong>automatización multiplataforma</strong> y <strong>despliegues automáticos</strong>.</p>
 <hr />
-<h3 id="6-programar-ejecucion-automatica">6. <strong>Programar ejecución automática</strong><a class="headerlink" href="#6-programar-ejecucion-automatica" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Añadir <code>schedule</code> para que se ejecute cada día a medianoche.</li>
-<li>El README mostraría:</li>
-</ul>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>✅ Última comprobación automática: 2025-09-22 00:00
-</code></pre></div>
-* 👉 Aprenden a <strong>programar tareas recurrentes</strong>.</p>
-<hr />
-<h3 id="7-generar-una-pagina-web-de-resultados">7. <strong>Generar una página web de resultados</strong><a class="headerlink" href="#7-generar-una-pagina-web-de-resultados" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Publicar los resultados en <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Pages (<code>gh-pages</code>) usando <code>peaceiris/actions-gh-pages</code>.</li>
-<li>👉 Visualizan cómo <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions puede hacer <strong><abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr> real</strong> (tests + despliegue).</li>
-</ul>
-<hr />
-<h3 id="8-crear-issues-automaticos-si-fallan-los-tests">8. <strong>Crear Issues automáticos si fallan los tests</strong><a class="headerlink" href="#8-crear-issues-automaticos-si-fallan-los-tests" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Si un test falla → abrir un <strong>issue automático</strong> en el repositorio:</li>
-</ul>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/github-script@v7</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">      </span><span class="no">github.issues.create({</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">        </span><span class="no">owner: context.repo.owner,</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">        </span><span class="no">repo: context.repo.repo,</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">        </span><span class="no">title: &quot;❌ Tests fallidos&quot;,</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">        </span><span class="no">body: &quot;Se han detectado errores en los tests. Revisa el último commit.&quot;</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">      </span><span class="no">})</span>
-</code></pre></div>
-* 👉 Aprenden a <strong>automatizar la gestión de incidencias</strong>.</p>
-<hr />
-<h2 id="aprendizaje-con-estas-mejoras">🎯 Aprendizaje con estas mejoras<a class="headerlink" href="#aprendizaje-con-estas-mejoras" title="Permanent link">&para;</a></h2>
-<p>Con estas extensiones conseguireis:</p>
-<ul>
-<li>Experimentar <strong>cómo <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions conecta piezas del desarrollo real</strong> (tests, docs, issues, notificaciones, despliegues).</li>
-<li>Entender la <strong>ventaja competitiva</strong> de <abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr>: feedback inmediato, documentación viva y automatización.</li>
-<li>Pasar de un ejemplo didáctico a un flujo de trabajo que se parece mucho al que usan empresas reales.</li>
-</ul>
-<hr />
+<h2 id="entregables">📑 Entregables<a class="headerlink" href="#entregables" title="Permanent link">&para;</a></h2>
+<p>Cada alumno debe entregar:</p>
+<ol>
+<li>Enlace a su repositorio con el workflow funcionando.</li>
+<li>La documentación del README.md.</li>
+<li>Las respuestas a las preguntas.</li>
+</ol>
 
 
 

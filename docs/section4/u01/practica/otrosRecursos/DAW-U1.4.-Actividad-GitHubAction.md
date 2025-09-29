@@ -1,3 +1,5 @@
+
+
 # 1. ACTIVIDAD BASE: "GitHub Actions + Python Script + Auto Commit"
 
 ## 📝 Preparación del repositorio base
@@ -153,7 +155,7 @@ jobs:
 
 ---
 
-# 3. MEJORAS
+# 2. POSIBLES MEJORAS AL EJEMPLO ANTERIOR
 
 La idea es que no solo no repitais el ejemplo, sino que **investigueis, mejoreis y veais el potencial real de GitHub Actions**. Para ello se piden funcionalidades **extra e imaginativas**. Aqui teneis varias propuestas, de más sencillas a más potentes, todas pensadas para que veais ventajas prácticas:
 
@@ -263,90 +265,4 @@ Con estas extensiones conseguireis:
 * Pasar de un ejemplo didáctico a un flujo de trabajo que se parece mucho al que usan empresas reales.
 
 ---
-
-# 3 ACTIVIDAD A ENTREGAR: *Mejorando un Workflow con GitHub Actions*
-La siguiente actividad está diseñada para que aprendais a usar GitHub Actions de forma práctica, empezando por un workflow básico y luego añadiendo mejoras progresivas. La idea es que podais avanzar a vuestro ritmo, alcanzando un nivel mínimo común pero con la posibilidad de explorar funcionalidades más avanzadas si lo desea.
-
-### 🎯 Objetivos de aprendizaje
-
-* Comprender la estructura de un workflow (`on`, `jobs`, `steps`).
-* Ejecutar tests automáticamente en GitHub.
-* Automatizar la actualización del `README.md` con el resultado.
-* Explorar mejoras progresivas para descubrir el potencial de GitHub Actions.
-
----
-
-## 📝 Contexto
-
-Partimos de un **repositorio base** que contiene:
-
-* Un programa sencillo (`main.py`).
-* Un test unitario (`test_main.py`).
-* Un script (`update_readme.py`) que ejecuta los tests y modifica el `README.md`.
-* Un workflow básico (`ci.yml`) que ejecuta el script y hace commit automático con `git-auto-commit-action`.
-
----
-
-## 🔹 Parte 1: Workflow básico
-
-1. El alumno clona el repositorio base.
-2. Comprende el contenido del script y del workflow.
-3. Ejecuta el workflow manualmente y comprueba que el `README.md` se actualiza con:
-    
-    * ✅ *Tests correctos*
-    * ❌ *Tests fallidos*
-
-Con esto aprenden el ciclo **evento → ejecución → modificación → commit automático**.
-
----
-
-## 🔹 Parte 2: Mejoras obligatorias (nivel básico)
-
-Cada alumno debe implementar esta mejora:
-
-* **Generar la documentación en HTML y otro fomato adicional:** volcandola posteriormente en un archivo `docs/report.html` o similar.
-
-Aquí refuerzan el aprendizaje sobre **edición de archivos** y **automatización de documentación**.
-
----
-
-## 🔹 Parte 3: Mejoras opcionales (nivel intermedio)
-
-Los alumnos más avanzados pueden añadir:
-
-* **Página de documentación con MKdocs en GitHub Pages** con `peaceiris/actions-gh-pages`.
-
-Aquí experimentan con **automatización multiplataforma** y **despliegues automáticos**.
-
----
-
-
-## 📑 Entregables
-
-Cada alumno debe entregar:
-
-1. Enlace a su repositorio con el workflow funcionando.
-2. Evidencia en el historial de commits de:
-    
-    * La mejora relacionada con la documentación, implementada.
-    * Al menos una ejecución del workflow básico funcionando.
-
-3. Documentación em README.md explicando:
-    
-    * Qué hace su workflow.
-    * Qué mejoras ha implementado.
-    * Qué ventajas aporta GitHub Actions al trabajo en equipo.
-
----
-
-## 📌 Evaluación (rúbrica simplificada)
-
-* ✅ Repositorio creado correctamente.
-* ✅ Buen uso git: Ramas, Merges, Commits + comentarios.
-* ✅ Workflow básico funciona y genera documentación.
-* ✅ Mejora implementada.
-* ✅ Usa más de una herramienta para generar documentación.
-* ✅ Genera documentación en varios formatos.
-* ✅ Explicación clara del funcionamiento y ventajas. README.md.
-* 🔝 Extra: despliegue en GitHub Pages.
 

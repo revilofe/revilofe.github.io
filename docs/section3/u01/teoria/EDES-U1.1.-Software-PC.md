@@ -86,7 +86,7 @@ La relación entre el *software* y el *hardware* se pueden describir de la sigui
 - **E/S**: recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guardan a disco, ...
 
 > El disco duro se considera un periférico de E/S (Entrada/Salida).  
-> La CPU se llama también UCP (en inglés), procesador o microprocesador.
+> La CPU se llama también UPC (en castellano:  Unidad de Procesamiento Central), procesador o microprocesador.
 
 
 Cada vez que ejecutamos un programa en el ordenador, este se carga en la **memoria RAM**, y la **CPU** va recuperando una a una las **instrucciones** y ésta las va ejecutando, llevando a cabo las tareas que el software tenia programadas. Por ejemplo:

@@ -41,7 +41,11 @@ Aprender, de forma incremental, a:
 
 ### Contexto de trabajo
 
-Trabajarás **sobre tu *fork*** del repositorio base. Deberás ejecutar y **entender** el script y el *workflow* inicial, y después **mejorarlo**. Se espera un nivel mínimo común (Parte 1 y 2) y la posibilidad de profundizar (Parte 3 opcional).
+En la primera parte, trabajarás **sobre tu *fork*** del repositorio base. Deberás ejecutar y **entender** el script y el *workflow* inicial, y después **mejorarlo**. 
+
+Para la segunda y tercera parte, debes usar **tu propio proyecto**, el que usarás para desarrollar el proyecto intemodular que se realizará durante el ciclo.
+
+Se espera un nivel mínimo común (Parte 1 y 2) y la posibilidad de profundizar (Parte 3 opcional).
 
 ---
 
@@ -64,60 +68,64 @@ Trabajarás **sobre tu *fork*** del repositorio base. Deberás ejecutar y **ente
 
 ### 🔹 Parte 2: Mejora obligatoria (nivel básico)
 
-**Añade generación de documentación en HTML y al menos otro formato adicional.**   
+#### A. Trabajo técnico, para generación automático de documentación multi-formato
+
+Prepara tu proyecto intermodular para **la generación de documentación en HTML y al menos otro formato adicional** de forma automática con GitHubActions y el uso de otras herramientas que se ajusten a las tecnologías que uses.
 
 Sugerencias para Python:
 
-* **Sphinx** o **pdoc** (HTML).
+* Formato / Estilo de documentación: **reStructuredText** o **Google Style**. Para ello tendrás que revisar las guías de estilo de la herramienta que elijas. Tendrás que revisar las guías de estilo del lenguaje que uses.
+* **Sphinx** o **pdoc** (HTML). Tendrás que revisar el funcionamiento de la herramienta que elijas.
 * Segundo formato: **PDF** (vía `sphinxcontrib-rsvgconverter`/LaTeX) o **Markdown** (por ejemplo con **pdoc** o **pandoc**).
 
 **Requisitos mínimos:**
 
-1. Prepara la herramienta elegida (por ejemplo `sphinx-quickstart` o `pdoc`).
-2. Documenta al menos **una función** de `main.py` con comentarios estructurados/docstrings.
-3. Extiende el *workflow*:
+1. Estilo de documentación seleccionado.
+2. Documenta algún código básico para que la herramienta pueda generar documentación, y asi comprobar que funciona.
+2. Estudia y prepara la herramienta elegida para generar documentación en **HTML** y **otro formato**.
+2. Genera documentación **localmente** (fuera de GitHub) y comprueba que funciona.
+3. Extiende todo al *workflow*:
 
   * Instala dependencias (`pip install ...`).
   * **Genera documentación** en `docs/` (por ejemplo `docs/_build/html/index.html`).
-  * **Genera un segundo formato** (p. ej., `docs/report.pdf` o `docs/report.md`).
+  * **Genera un segundo formato** (p. ej., `docs/pdf/report.pdf` o `docs/md/report.md`).
   * **Sube artefactos** del *job* (Action `actions/upload-artifact`) *o* **hace commit** de `docs/` al repositorio (con `git-auto-commit-action`), dejando claro en los mensajes de *commit* qué se genera y por qué.
-4. Mantén el test unitario en el flujo de CI (si falla, que el workflow lo refleje).
 
-> Entregables de esta parte: enlaces a `docs/` (HTML + otro formato) y al *run* que los genera.
+
+> Entregables de esta parte: enlaces repositorio, con el `docs/` (HTML + otro formato) y el flujo que los genera.
 > El lenguaje de programación es libre y dependerá del proyecto que te plantees hacer. Es my posible que sea Java + JS.
-> Si tienes que generar algun script para generar la documentación, tu decides el lenguaje.No tiene porque ser Python.
+> Si tienes que generar algun script que complemente el flujo del action para generar la documentación, tu decides el lenguaje. No tiene porque ser Python.
 > El profesor clonará el repositorio y ejecutará el workflow para comprobar que funciona correctamente.
 
----
 
-### 🔹 Parte 3: Documentación y Preguntas (evidencias)
+#### B. Documentación del proceso y preguntas (evidencias)
 
 **Actualiza tu `README.md`** para que incluya, con enlaces, **toda** esta información:
 
 Ten en cuenta que el `README.md` es la **carta de presentación** de tu proyecto, y debe ser claro y completo.
 
 * (a) **Herramientas** usadas para generar documentación y **comandos** ejecutados.
-* (b) **Ejemplos de código documentado** (enlace al fuente) y fragmento con las etiquetas/estructura usadas (docstrings, `@param`, `@return`, etc.).
+* (b) **Ejemplos de código documentado** (enlace al fuente) y fragmento con las etiquetas/estructura usadas (docstrings, `@param`, `@return`, Kdoc, reStructuredText o Google Style, Estilo según JavaDoc.
 * (c) **Formatos generados** (HTML + otro) y **enlaces** a cada uno.
 * (d) **Explicación breve** del *workflow* (pasos del job, eventos que lo disparan).
 * (e) **Mensajes de *commit*** que evidencien la mejora: claros, descriptivos, en imperativo.
 * (f) **Evidencia de configuración SSH** para GitHub (clave pública añadida, prueba `ssh -T git@github.com`).
 * (g) **Cómo clonar/usar** el repositorio para reproducir la generación de documentación.
 
-#### Cuestionario a responder (inclúyelo al final del `README.md`)
+##### Cuestionario a responder (inclúyelo al final del `README.md`)
 
 Las preguntas son obligatorias y clave para la evaluación, por tanto responde de forma clara y concisa y cociente. 
 
-|   CE  | Pregunta de evaluación asociada a la actividad                                                                                                                                                                                              |
-| :---: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **a** | **Identificación de herramientas de generación de documentación.** ¿Qué herramienta o generador (p. ej., Sphinx, pdoc, Javadoc, Doxygen) utilizaste en el *workflow* para crear la documentación en `/docs`?                                |
-| **b** | **Documentación de componentes.** Muestra un fragmento del código con comentarios/docstrings estructurados (p. ej., `:param`, `:return:` o etiquetas equivalentes) que haya sido procesado por la herramienta.                              |
-| **c** | **Multiformato.** ¿Qué **segundo formato** (además de HTML) generaste? Explica la **configuración** o **comandos** del *workflow* que lo producen.                                                                                          |
-| **d** | **Colaboración.** Explica cómo **GitHub** facilita mantener la documentación (actualizaciones del `README.md` y de `/docs`) cuando colaboran varias personas (PRs, *reviews*, *checks* de CI, protección de ramas).                         |
-| **e** | **Control de versiones.** Muestra **mensajes de *commit*** que evidencien el nuevo *workflow*. ¿Son claros y descriptivos? Justifícalo.                                                                                                     |
-| **f** | **Accesibilidad y seguridad.** ¿Qué medidas/configuración del repositorio garantizan que solo personal autorizado accede al código y la documentación? (p. ej., repositorio privado, equipos, roles, claves/secretos, *branch protection*). |
-| **g** | **Instalación/uso documentados.** Indica **dónde** en el `README.md` explicas el funcionamiento del *workflow* y **dónde** detallas las herramientas y comandos de documentación.                                                           |
-| **h** | **Integración continua.** Justifica por qué el *workflow* utilizado es **CI**. ¿Qué **evento** dispara automáticamente la generación/actualización de la documentación (p. ej., `push`, `pull_request`, `workflow_dispatch`)?               |
+|   CE  | Pregunta de evaluación asociada a la actividad                                                                                                                                                                                                                                                                  |
+| :---: |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **a** | **Identificación de herramientas de generación de documentación.** ¿Qué herramienta o generador (p. ej., Sphinx, pdoc, Javadoc, Doxygen, Dokka) utilizaste en el *workflow* para crear la documentación en `/docs`?                                                                                             |
+| **b** | **Documentación de componentes.** Muestra un fragmento del código con comentarios/docstrings estructurados (p. ej., `:param`, `:return:` o etiquetas equivalentes) que haya sido procesado por la herramienta. Comenta que estilo de documentación has utlicado: (p. ej., reStructuredText, Google Style, KDoc) |
+| **c** | **Multiformato.** ¿Qué **segundo formato** (además de HTML) generaste? Explica la **configuración** o **comandos** del *workflow* y herramientas que lo producen.                                                                                                                                               |
+| **d** | **Colaboración.** Explica cómo **GitHub** facilita mantener la documentación (actualizaciones del `README.md` y de `/docs`) cuando colaboran varias personas (PRs, *reviews*, *checks* de CI, protección de ramas).                                                                                             |
+| **e** | **Control de versiones.** Muestra **mensajes de *commit*** que evidencien el nuevo *workflow*. ¿Son claros y descriptivos? Justifícalo.  Ademas de un conjunto de mensajes de tus commits.                                                                                                                      |
+| **f** | **Accesibilidad y seguridad.** ¿Qué medidas/configuración del repositorio garantizan que solo personal autorizado accede al código y la documentación? (p. ej., repositorio privado, equipos, roles, claves/secretos, *branch protection*).                                                                     |
+| **g** | **Instalación/uso documentados.** Indica **dónde** en el `README.md` explicas el funcionamiento del *workflow* y **dónde** detallas las herramientas y comandos de documentación.                                                                                                                               |
+| **h** | **Integración continua.** Justifica por qué el *workflow* utilizado es **CI**. ¿Qué **evento** dispara automáticamente la generación/actualización de la documentación (p. ej., `push`, `pull_request`, `workflow_dispatch`)?                                                                                   |
 
 > Aunque se habla de herramientas de documentación para Python, puedes usar cualquier lenguaje y herramienta que permita generar documentación en varios formatos. 
 > Sugerencia: añade una sección final de **Conclusiones** en tu `README.md` resumiendo qué aprendiste sobre herramientas de documentación, CI/CD y control de versiones.
@@ -136,7 +144,7 @@ Las preguntas son obligatorias y clave para la evaluación, por tanto responde d
 
 ## Entregables
 
-1. **Enlace a tu repositorio** con el *workflow* funcionando (Runs visibles en *Actions*).
+1. **Enlace a tu repositorio** con el *workflow* funcionando (Runs visibles en *Actions*). Si el repositorio es privado, añade al profesor como colaborador.
 2. **Documentación** generada (HTML + otro formato) accesible desde el repositorio.
 3. **`README.md` actualizado** con:
 

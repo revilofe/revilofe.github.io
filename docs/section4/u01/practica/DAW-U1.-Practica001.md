@@ -150,13 +150,13 @@ Las preguntas son obligatorias y clave para la evaluación, por tanto responde d
 
 1. **Enlace a tu repositorio** con el *workflow* funcionando (Runs visibles en *Actions*). Si el repositorio es privado, añade al profesor como colaborador.
 2. **Documentación** generada (HTML + otro formato) accesible desde el repositorio.
-3. **`README.md` actualizado** con:
+3. **`README.md` actualizado** con:  
 
-  * Herramientas y comandos utilizados.
-  * Explicación del *workflow* y eventos.
-  * Enlaces a documentación y artefactos.
-  * Respuestas al **cuestionario (a–h)**.
-  * Evidencias de *commits* y acceso por **SSH**.
+    * Herramientas y comandos utilizados.
+    * Explicación del *workflow* y eventos.
+    * Enlaces a documentación y artefactos.
+    * Respuestas al **cuestionario (a–h)**.
+    * Evidencias de *commits* y acceso por **SSH**.
 4. (Opcional) **Enlace a GitHub Pages** si implementas MkDocs.
 
 ---

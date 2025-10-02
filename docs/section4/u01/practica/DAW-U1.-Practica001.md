@@ -92,9 +92,12 @@ Sugerencias para Python:
   * **Sube artefactos** del *job* (Action `actions/upload-artifact`) *o* **hace commit** de `docs/` al repositorio (con `git-auto-commit-action`), dejando claro en los mensajes de *commit* qué se genera y por qué.
 
 
-> Entregables de esta parte: enlaces repositorio, con el `docs/` (HTML + otro formato) y el flujo que los genera.
-> El lenguaje de programación es libre y dependerá del proyecto que te plantees hacer. Es my posible que sea Java + JS.
-> Si tienes que generar algun script que complemente el flujo del action para generar la documentación, tu decides el lenguaje. No tiene porque ser Python.
+> Entregables de esta parte: enlaces repositorio, con el `docs/` (HTML + otro formato) y el flujo que los genera.   
+
+> El lenguaje de programación es libre y dependerá del proyecto que te plantees hacer. Es my posible que sea Java + JS.   
+
+> Si tienes que generar algun script que complemente el flujo del action para generar la documentación, tu decides el lenguaje. No tiene porque ser Python.   
+
 > El profesor clonará el repositorio y ejecutará el workflow para comprobar que funciona correctamente.
 
 
@@ -127,7 +130,8 @@ Las preguntas son obligatorias y clave para la evaluación, por tanto responde d
 | **g** | **Instalación/uso documentados.** Indica **dónde** en el `README.md` explicas el funcionamiento del *workflow* y **dónde** detallas las herramientas y comandos de documentación.                                                                                                                               |
 | **h** | **Integración continua.** Justifica por qué el *workflow* utilizado es **CI**. ¿Qué **evento** dispara automáticamente la generación/actualización de la documentación (p. ej., `push`, `pull_request`, `workflow_dispatch`)?                                                                                   |
 
-> Aunque se habla de herramientas de documentación para Python, puedes usar cualquier lenguaje y herramienta que permita generar documentación en varios formatos. 
+> Aunque se habla de herramientas de documentación para Python, puedes usar cualquier lenguaje y herramienta que permita generar documentación en varios formatos.    
+
 > Sugerencia: añade una sección final de **Conclusiones** en tu `README.md` resumiendo qué aprendiste sobre herramientas de documentación, CI/CD y control de versiones.
 
 ---

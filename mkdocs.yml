@@ -193,6 +193,7 @@ nav:
           - '1.2.-Documentación': 'section4/u01/teoria/DAW-U1.2.-Documentacion.md'
           - '1.3.-Git Github': 'section4/u01/teoria/DAW-U1.3.-GitGitHub.md'
           - '1.4.-Github Action': 'section4/u01/teoria/DAW-U1.4.-GitHubAction.md'
+          - 'Práctica 1.1: GH Action para documentación': 'section4/u01/practica/DAW-U1.-Practica010.md'
   - 'Blog': 'blog.md'
   - 'Tags': 'tags.md'
   - 'Acerca de': 'about.md'

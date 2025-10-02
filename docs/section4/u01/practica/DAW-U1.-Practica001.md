@@ -107,13 +107,13 @@ Sugerencias para Python:
 
 Ten en cuenta que el `README.md` es la **carta de presentación** de tu proyecto, y debe ser claro y completo.
 
-* (a) **Herramientas** usadas para generar documentación y **comandos** ejecutados.
-* (b) **Ejemplos de código documentado** (enlace al fuente) y fragmento con las etiquetas/estructura usadas (docstrings, `@param`, `@return`, Kdoc, reStructuredText o Google Style, Estilo según JavaDoc.
-* (c) **Formatos generados** (HTML + otro) y **enlaces** a cada uno.
-* (d) **Explicación breve** del *workflow* (pasos del job, eventos que lo disparan).
-* (e) **Mensajes de *commit*** que evidencien la mejora: claros, descriptivos, en imperativo.
-* (f) **Evidencia de configuración SSH** para GitHub (clave pública añadida, prueba `ssh -T git@github.com`).
-* (g) **Cómo clonar/usar** el repositorio para reproducir la generación de documentación.
+* a) **Herramientas** usadas para generar documentación y **comandos** ejecutados.
+* b) **Ejemplos de código documentado** (enlace al fuente) y fragmento con las etiquetas/estructura usadas (docstrings, `@param`, `@return`, Kdoc, reStructuredText o Google Style, Estilo según JavaDoc.
+* c) **Formatos generados** (HTML + otro) y **enlaces** a cada uno.
+* d) **Explicación breve** del *workflow* (pasos del job, eventos que lo disparan).
+* e) **Mensajes de *commit*** que evidencien la mejora: claros, descriptivos, en imperativo.
+* f) **Evidencia de configuración SSH** para GitHub (clave pública añadida, prueba `ssh -T git@github.com`).
+* g) **Cómo clonar/usar** el repositorio para reproducir la generación de documentación.
 
 ##### Cuestionario a responder (inclúyelo al final del `README.md`)
 

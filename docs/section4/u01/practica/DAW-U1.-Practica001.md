@@ -56,10 +56,12 @@ Se espera un nivel mínimo común (Parte 1 y 2) y la posibilidad de profundizar 
 
     * Qué hace `update_readme.py`.
     * Qué hace el *job* definido en `.github/workflows/ci.yml`.
+
 3. **Ejecuta el workflow manualmente** (evento `workflow_dispatch` desde la pestaña *Actions*):
 
     * Fuerza **tests correctos** para ver el mensaje ✅ en `README.md`.
     * Fuerza **tests fallidos** para ver el mensaje ❌ en `README.md`.
+
 4. Observa el ciclo: **evento → ejecución → modificación → *commit* automático** y confirma en el historial de *commits*.
 
 > Esta parte ya la has debido hacer en clase. Te ha servido para tener una primera toma de contacto y entender que todo el proceso o preguntar las dudas para llegar a entenderlo. No se entrega. 
@@ -157,6 +159,7 @@ Las preguntas son obligatorias y clave para la evaluación, por tanto responde d
     * Enlaces a documentación y artefactos.
     * Respuestas al **cuestionario (a–h)**.
     * Evidencias de *commits* y acceso por **SSH**.
+
 4. (Opcional) **Enlace a GitHub Pages** si implementas MkDocs.
 
 ---
@@ -183,12 +186,15 @@ Las publicadas en la moodle del curso.
     * `actions/upload-artifact`: [https://github.com/actions/upload-artifact](https://github.com/actions/upload-artifact)
     * `stefanzweifel/git-auto-commit-action`: [https://github.com/stefanzweifel/git-auto-commit-action](https://github.com/stefanzweifel/git-auto-commit-action)
     * `peaceiris/actions-gh-pages`: [https://github.com/peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages)
+
 * Generadores de documentación:
 
     * **Sphinx** (Python): [https://www.sphinx-doc.org](https://www.sphinx-doc.org)
     * **pdoc** (Python): [https://pdoc.dev](https://pdoc.dev)
     * **Doxygen** (multi-lenguaje): [https://www.doxygen.nl](https://www.doxygen.nl)
     * **Javadoc** (Java): [https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html)
+    * **Dokka** (Kotlin/Java): [https://kotlinlang.org/docs/dokka-overview.html](https://kotlinlang.org/docs/dokka-overview.html)
+    * **Pandoc** (multi-formato): [https://pandoc.org](https://pandoc.org)
 
 * Publicación:
 

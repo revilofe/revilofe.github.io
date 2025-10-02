@@ -178,18 +178,19 @@ Las publicadas en la moodle del curso.
 * GitHub Actions (documentación): [https://docs.github.com/actions](https://docs.github.com/actions)
 * Acciones útiles:
 
-  * `actions/checkout`: [https://github.com/actions/checkout](https://github.com/actions/checkout)
-  * `actions/setup-python`: [https://github.com/actions/setup-python](https://github.com/actions/setup-python)
-  * `actions/upload-artifact`: [https://github.com/actions/upload-artifact](https://github.com/actions/upload-artifact)
-  * `stefanzweifel/git-auto-commit-action`: [https://github.com/stefanzweifel/git-auto-commit-action](https://github.com/stefanzweifel/git-auto-commit-action)
-  * `peaceiris/actions-gh-pages`: [https://github.com/peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages)
+    * `actions/checkout`: [https://github.com/actions/checkout](https://github.com/actions/checkout)
+    * `actions/setup-python`: [https://github.com/actions/setup-python](https://github.com/actions/setup-python)
+    * `actions/upload-artifact`: [https://github.com/actions/upload-artifact](https://github.com/actions/upload-artifact)
+    * `stefanzweifel/git-auto-commit-action`: [https://github.com/stefanzweifel/git-auto-commit-action](https://github.com/stefanzweifel/git-auto-commit-action)
+    * `peaceiris/actions-gh-pages`: [https://github.com/peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages)
 * Generadores de documentación:
 
-  * **Sphinx** (Python): [https://www.sphinx-doc.org](https://www.sphinx-doc.org)
-  * **pdoc** (Python): [https://pdoc.dev](https://pdoc.dev)
-  * **Doxygen** (multi-lenguaje): [https://www.doxygen.nl](https://www.doxygen.nl)
-  * **Javadoc** (Java): [https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html)
+    * **Sphinx** (Python): [https://www.sphinx-doc.org](https://www.sphinx-doc.org)
+    * **pdoc** (Python): [https://pdoc.dev](https://pdoc.dev)
+    * **Doxygen** (multi-lenguaje): [https://www.doxygen.nl](https://www.doxygen.nl)
+    * **Javadoc** (Java): [https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html)
+
 * Publicación:
 
-  * **MkDocs**: [https://www.mkdocs.org](https://www.mkdocs.org)
-  * **MkDocs Material**: [https://squidfunk.github.io/mkdocs-material/](https://squidfunk.github.io/mkdocs-material/)
+    * **MkDocs**: [https://www.mkdocs.org](https://www.mkdocs.org)
+    * **MkDocs Material**: [https://squidfunk.github.io/mkdocs-material/](https://squidfunk.github.io/mkdocs-material/)

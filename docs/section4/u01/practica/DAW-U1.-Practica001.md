@@ -54,12 +54,12 @@ Se espera un nivel mínimo común (Parte 1 y 2) y la posibilidad de profundizar 
 1. **Clona** tu *fork* del repositorio base.
 2. **Lee y comprende**:
 
-  * Qué hace `update_readme.py`.
-  * Qué hace el *job* definido en `.github/workflows/ci.yml`.
+    * Qué hace `update_readme.py`.
+    * Qué hace el *job* definido en `.github/workflows/ci.yml`.
 3. **Ejecuta el workflow manualmente** (evento `workflow_dispatch` desde la pestaña *Actions*):
 
-  * Fuerza **tests correctos** para ver el mensaje ✅ en `README.md`.
-  * Fuerza **tests fallidos** para ver el mensaje ❌ en `README.md`.
+    * Fuerza **tests correctos** para ver el mensaje ✅ en `README.md`.
+    * Fuerza **tests fallidos** para ver el mensaje ❌ en `README.md`.
 4. Observa el ciclo: **evento → ejecución → modificación → *commit* automático** y confirma en el historial de *commits*.
 
 > Esta parte ya la has debido hacer en clase. Te ha servido para tener una primera toma de contacto y entender que todo el proceso o preguntar las dudas para llegar a entenderlo. No se entrega. 
@@ -84,12 +84,12 @@ Sugerencias para Python:
 2. Documenta algún código básico para que la herramienta pueda generar documentación, y asi comprobar que funciona.
 2. Estudia y prepara la herramienta elegida para generar documentación en **HTML** y **otro formato**.
 2. Genera documentación **localmente** (fuera de GitHub) y comprueba que funciona.
-3. Extiende todo al *workflow*:
+3. Extiende todo al *workflow*:   
 
-  * Instala dependencias (`pip install ...`).
-  * **Genera documentación** en `docs/` (por ejemplo `docs/_build/html/index.html`).
-  * **Genera un segundo formato** (p. ej., `docs/pdf/report.pdf` o `docs/md/report.md`).
-  * **Sube artefactos** del *job* (Action `actions/upload-artifact`) *o* **hace commit** de `docs/` al repositorio (con `git-auto-commit-action`), dejando claro en los mensajes de *commit* qué se genera y por qué.
+    * Instala dependencias (`pip install ...`).
+    * **Genera documentación** en `docs/` (por ejemplo `docs/_build/html/index.html`).
+    * **Genera un segundo formato** (p. ej., `docs/pdf/report.pdf` o `docs/md/report.md`).
+    * **Sube artefactos** del *job* (Action `actions/upload-artifact`) *o* **hace commit** de `docs/` al repositorio (con `git-auto-commit-action`), dejando claro en los mensajes de *commit* qué se genera y por qué.
 
 
 > Entregables de esta parte: enlaces repositorio, con el `docs/` (HTML + otro formato) y el flujo que los genera.   

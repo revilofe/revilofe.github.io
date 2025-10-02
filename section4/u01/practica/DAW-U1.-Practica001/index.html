@@ -5539,15 +5539,17 @@
 <ul>
 <li>Qué hace <code>update_readme.py</code>.</li>
 <li>Qué hace el <em>job</em> definido en <code>.github/workflows/ci.yml</code>.</li>
+</ul>
+</li>
 <li>
 <p><strong>Ejecuta el workflow manualmente</strong> (evento <code>workflow_dispatch</code> desde la pestaña <em>Actions</em>):</p>
+<ul>
+<li>Fuerza <strong>tests correctos</strong> para ver el mensaje ✅ en <code>README.md</code>.</li>
+<li>Fuerza <strong>tests fallidos</strong> para ver el mensaje ❌ en <code>README.md</code>.</li>
+</ul>
 </li>
 <li>
-<p>Fuerza <strong>tests correctos</strong> para ver el mensaje ✅ en <code>README.md</code>.</p>
-</li>
-<li>Fuerza <strong>tests fallidos</strong> para ver el mensaje ❌ en <code>README.md</code>.</li>
-<li>Observa el ciclo: <strong>evento → ejecución → modificación → <em>commit</em> automático</strong> y confirma en el historial de <em>commits</em>.</li>
-</ul>
+<p>Observa el ciclo: <strong>evento → ejecución → modificación → <em>commit</em> automático</strong> y confirma en el historial de <em>commits</em>.</p>
 </li>
 </ol>
 <blockquote>
@@ -5666,8 +5668,10 @@
 <li>Enlaces a documentación y artefactos.</li>
 <li>Respuestas al <strong>cuestionario (a–h)</strong>.</li>
 <li>Evidencias de <em>commits</em> y acceso por <strong><abbr title="Secure Shell. Es un sistema de seguridad que se utiliza para acceder de forma segura a un servidor remoto a través de una red. El SSH cifra la comunicación entre el cliente y el servidor, autentica a los usuarios y protege la integridad de los datos.">SSH</abbr></strong>.</li>
-<li>(Opcional) <strong>Enlace a <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Pages</strong> si implementas MkDocs.</li>
 </ul>
+</li>
+<li>
+<p>(Opcional) <strong>Enlace a <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Pages</strong> si implementas MkDocs.</p>
 </li>
 </ol>
 <hr />
@@ -5688,15 +5692,17 @@
 <li><code>actions/upload-artifact</code>: <a href="https://github.com/actions/upload-artifact">https://github.com/actions/upload-artifact</a></li>
 <li><code>stefanzweifel/git-auto-commit-action</code>: <a href="https://github.com/stefanzweifel/git-auto-commit-action">https://github.com/stefanzweifel/git-auto-commit-action</a></li>
 <li><code>peaceiris/actions-gh-pages</code>: <a href="https://github.com/peaceiris/actions-gh-pages">https://github.com/peaceiris/actions-gh-pages</a></li>
+</ul>
+</li>
 <li>
 <p>Generadores de documentación:</p>
-</li>
-<li>
-<p><strong>Sphinx</strong> (Python): <a href="https://www.sphinx-doc.org">https://www.sphinx-doc.org</a></p>
-</li>
+<ul>
+<li><strong>Sphinx</strong> (Python): <a href="https://www.sphinx-doc.org">https://www.sphinx-doc.org</a></li>
 <li><strong>pdoc</strong> (Python): <a href="https://pdoc.dev">https://pdoc.dev</a></li>
 <li><strong>Doxygen</strong> (multi-lenguaje): <a href="https://www.doxygen.nl">https://www.doxygen.nl</a></li>
 <li><strong>Javadoc</strong> (Java): <a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html">https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html</a></li>
+<li><strong>Dokka</strong> (Kotlin/Java): <a href="https://kotlinlang.org/docs/dokka-overview.html">https://kotlinlang.org/docs/dokka-overview.html</a></li>
+<li><strong>Pandoc</strong> (multi-formato): <a href="https://pandoc.org">https://pandoc.org</a></li>
 </ul>
 </li>
 <li>

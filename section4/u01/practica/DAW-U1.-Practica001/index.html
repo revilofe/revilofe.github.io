@@ -5536,10 +5536,8 @@
 <li><strong>Clona</strong> tu <em>fork</em> del repositorio base.</li>
 <li>
 <p><strong>Lee y comprende</strong>:</p>
-</li>
-<li>
-<p>Qué hace <code>update_readme.py</code>.</p>
-</li>
+<ul>
+<li>Qué hace <code>update_readme.py</code>.</li>
 <li>Qué hace el <em>job</em> definido en <code>.github/workflows/ci.yml</code>.</li>
 <li>
 <p><strong>Ejecuta el workflow manualmente</strong> (evento <code>workflow_dispatch</code> desde la pestaña <em>Actions</em>):</p>
@@ -5549,6 +5547,8 @@
 </li>
 <li>Fuerza <strong>tests fallidos</strong> para ver el mensaje ❌ en <code>README.md</code>.</li>
 <li>Observa el ciclo: <strong>evento → ejecución → modificación → <em>commit</em> automático</strong> y confirma en el historial de <em>commits</em>.</li>
+</ul>
+</li>
 </ol>
 <blockquote>
 <p>Esta parte ya la has debido hacer en clase. Te ha servido para tener una primera toma de contacto y entender que todo el proceso o preguntar las dudas para llegar a entenderlo. No se entrega. </p>
@@ -5570,14 +5570,14 @@
 <li>Estudia y prepara la herramienta elegida para generar documentación en <strong><abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr></strong> y <strong>otro formato</strong>.</li>
 <li>Genera documentación <strong>localmente</strong> (fuera de <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr>) y comprueba que funciona.</li>
 <li>
-<p>Extiende todo al <em>workflow</em>:</p>
-</li>
-<li>
-<p>Instala dependencias (<code>pip install ...</code>).</p>
-</li>
+<p>Extiende todo al <em>workflow</em>:   </p>
+<ul>
+<li>Instala dependencias (<code>pip install ...</code>).</li>
 <li><strong>Genera documentación</strong> en <code>docs/</code> (por ejemplo <code>docs/_build/html/index.html</code>).</li>
 <li><strong>Genera un segundo formato</strong> (p. ej., <code>docs/pdf/report.pdf</code> o <code>docs/md/report.md</code>).</li>
 <li><strong>Sube artefactos</strong> del <em>job</em> (Action <code>actions/upload-artifact</code>) <em>o</em> <strong>hace commit</strong> de <code>docs/</code> al repositorio (con <code>git-auto-commit-action</code>), dejando claro en los mensajes de <em>commit</em> qué se genera y por qué.</li>
+</ul>
+</li>
 </ol>
 <blockquote>
 <p>Entregables de esta parte: enlaces repositorio, con el <code>docs/</code> (<abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> + otro formato) y el flujo que los genera.   </p>
@@ -5589,13 +5589,13 @@
 <p><strong>Actualiza tu <code>README.md</code></strong> para que incluya, con enlaces, <strong>toda</strong> esta información:</p>
 <p>Ten en cuenta que el <code>README.md</code> es la <strong>carta de presentación</strong> de tu proyecto, y debe ser claro y completo.</p>
 <ul>
-<li>(a) <strong>Herramientas</strong> usadas para generar documentación y <strong>comandos</strong> ejecutados.</li>
-<li>(b) <strong>Ejemplos de código documentado</strong> (enlace al fuente) y fragmento con las etiquetas/estructura usadas (docstrings, <code>@param</code>, <code>@return</code>, Kdoc, reStructuredText o Google Style, Estilo según JavaDoc.</li>
-<li>&copy; <strong>Formatos generados</strong> (<abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> + otro) y <strong>enlaces</strong> a cada uno.</li>
-<li>(d) <strong>Explicación breve</strong> del <em>workflow</em> (pasos del job, eventos que lo disparan).</li>
-<li>(e) <strong>Mensajes de <em>commit</em></strong> que evidencien la mejora: claros, descriptivos, en imperativo.</li>
-<li>(f) <strong>Evidencia de configuración <abbr title="Secure Shell. Es un sistema de seguridad que se utiliza para acceder de forma segura a un servidor remoto a través de una red. El SSH cifra la comunicación entre el cliente y el servidor, autentica a los usuarios y protege la integridad de los datos.">SSH</abbr></strong> para <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> (clave pública añadida, prueba <code>ssh -T git@github.com</code>).</li>
-<li>(g) <strong>Cómo clonar/usar</strong> el repositorio para reproducir la generación de documentación.</li>
+<li>a) <strong>Herramientas</strong> usadas para generar documentación y <strong>comandos</strong> ejecutados.</li>
+<li>b) <strong>Ejemplos de código documentado</strong> (enlace al fuente) y fragmento con las etiquetas/estructura usadas (docstrings, <code>@param</code>, <code>@return</code>, Kdoc, reStructuredText o Google Style, Estilo según JavaDoc.</li>
+<li>c) <strong>Formatos generados</strong> (<abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> + otro) y <strong>enlaces</strong> a cada uno.</li>
+<li>d) <strong>Explicación breve</strong> del <em>workflow</em> (pasos del job, eventos que lo disparan).</li>
+<li>e) <strong>Mensajes de <em>commit</em></strong> que evidencien la mejora: claros, descriptivos, en imperativo.</li>
+<li>f) <strong>Evidencia de configuración <abbr title="Secure Shell. Es un sistema de seguridad que se utiliza para acceder de forma segura a un servidor remoto a través de una red. El SSH cifra la comunicación entre el cliente y el servidor, autentica a los usuarios y protege la integridad de los datos.">SSH</abbr></strong> para <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> (clave pública añadida, prueba <code>ssh -T git@github.com</code>).</li>
+<li>g) <strong>Cómo clonar/usar</strong> el repositorio para reproducir la generación de documentación.</li>
 </ul>
 <h5 id="cuestionario-a-responder-incluyelo-al-final-del-readmemd">Cuestionario a responder (inclúyelo al final del <code>README.md</code>)<a class="headerlink" href="#cuestionario-a-responder-incluyelo-al-final-del-readmemd" title="Permanent link">&para;</a></h5>
 <p>Las preguntas son obligatorias y clave para la evaluación, por tanto responde de forma clara y concisa y cociente. </p>
@@ -5659,16 +5659,16 @@
 <li><strong>Enlace a tu repositorio</strong> con el <em>workflow</em> funcionando (Runs visibles en <em>Actions</em>). Si el repositorio es privado, añade al profesor como colaborador.</li>
 <li><strong>Documentación</strong> generada (<abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> + otro formato) accesible desde el repositorio.</li>
 <li>
-<p><strong><code>README.md</code> actualizado</strong> con:</p>
-</li>
-<li>
-<p>Herramientas y comandos utilizados.</p>
-</li>
+<p><strong><code>README.md</code> actualizado</strong> con:  </p>
+<ul>
+<li>Herramientas y comandos utilizados.</li>
 <li>Explicación del <em>workflow</em> y eventos.</li>
 <li>Enlaces a documentación y artefactos.</li>
 <li>Respuestas al <strong>cuestionario (a–h)</strong>.</li>
 <li>Evidencias de <em>commits</em> y acceso por <strong><abbr title="Secure Shell. Es un sistema de seguridad que se utiliza para acceder de forma segura a un servidor remoto a través de una red. El SSH cifra la comunicación entre el cliente y el servidor, autentica a los usuarios y protege la integridad de los datos.">SSH</abbr></strong>.</li>
 <li>(Opcional) <strong>Enlace a <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Pages</strong> si implementas MkDocs.</li>
+</ul>
+</li>
 </ol>
 <hr />
 <h3 id="evaluacion">Evaluación<a class="headerlink" href="#evaluacion" title="Permanent link">&para;</a></h3>
@@ -5682,10 +5682,8 @@
 <li><abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions (documentación): <a href="https://docs.github.com/actions">https://docs.github.com/actions</a></li>
 <li>
 <p>Acciones útiles:</p>
-</li>
-<li>
-<p><code>actions/checkout</code>: <a href="https://github.com/actions/checkout">https://github.com/actions/checkout</a></p>
-</li>
+<ul>
+<li><code>actions/checkout</code>: <a href="https://github.com/actions/checkout">https://github.com/actions/checkout</a></li>
 <li><code>actions/setup-python</code>: <a href="https://github.com/actions/setup-python">https://github.com/actions/setup-python</a></li>
 <li><code>actions/upload-artifact</code>: <a href="https://github.com/actions/upload-artifact">https://github.com/actions/upload-artifact</a></li>
 <li><code>stefanzweifel/git-auto-commit-action</code>: <a href="https://github.com/stefanzweifel/git-auto-commit-action">https://github.com/stefanzweifel/git-auto-commit-action</a></li>
@@ -5699,13 +5697,15 @@
 <li><strong>pdoc</strong> (Python): <a href="https://pdoc.dev">https://pdoc.dev</a></li>
 <li><strong>Doxygen</strong> (multi-lenguaje): <a href="https://www.doxygen.nl">https://www.doxygen.nl</a></li>
 <li><strong>Javadoc</strong> (Java): <a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html">https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html</a></li>
+</ul>
+</li>
 <li>
 <p>Publicación:</p>
-</li>
-<li>
-<p><strong>MkDocs</strong>: <a href="https://www.mkdocs.org">https://www.mkdocs.org</a></p>
-</li>
+<ul>
+<li><strong>MkDocs</strong>: <a href="https://www.mkdocs.org">https://www.mkdocs.org</a></li>
 <li><strong>MkDocs Material</strong>: <a href="https://squidfunk.github.io/mkdocs-material/">https://squidfunk.github.io/mkdocs-material/</a></li>
+</ul>
+</li>
 </ul>
 
 

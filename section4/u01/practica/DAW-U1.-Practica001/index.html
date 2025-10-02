@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Mejorando un workflow con GitHub Actions para generar y publicar documentación">
+      
       
         <meta name="author" content="Eduardo Fdez">
       
@@ -20,7 +22,7 @@
     
     
       
-        <title>DAW U1. Practica001 - R Z O</title>
+        <title>UD 6 - P1: CI/CD y documentación con GitHub Actions - R Z O</title>
       
     
     
@@ -134,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DAW U1. Practica001
+              UD 6 - P1: CI/CD y documentación con GitHub Actions
             
           </span>
         </div>
@@ -4810,6 +4812,8 @@
       
         
       
+        
+      
     
     
     
@@ -4949,6 +4953,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DAW-U1.-Practica010.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Práctica 1.1: GH Action para documentación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -5073,7 +5100,97 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Descripción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo general
+    </span>
+  </a>
+  
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contexto-de-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexto de trabajo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-1-workflow-basico-comprension-y-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Parte 1: Workflow básico (comprensión y validación)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-2-mejora-obligatoria-nivel-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Parte 2: Mejora obligatoria (nivel básico)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-3-documentacion-y-preguntas-evidencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Parte 3: Documentación y Preguntas (evidencias)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Parte 3: Documentación y Preguntas (evidencias)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuestionario-a-responder-incluyelo-al-final-del-readmemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuestionario a responder (inclúyelo al final del README.md)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-3-opcional-nivel-intermedio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Parte 3 (opcional, nivel intermedio)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entregables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entregables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entregables">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#evaluacion" class="md-nav__link">
@@ -5121,72 +5238,247 @@
                 
                   
 
+  <nav class="md-tags" >
+    
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:cicd" class="md-tag md-tag-icon">CI/CD</a>
+      
+    
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:control-de-versiones" class="md-tag md-tag-icon">Control de versiones</a>
+      
+    
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:documentación" class="md-tag md-tag-icon">Documentación</a>
+      
+    
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:github-actions" class="md-tag md-tag-icon">GitHub Actions</a>
+      
+    
+  </nav>
+
 
   
   
 
 
-  <h1>DAW U1. Practica001</h1>
+  <h1>UD 6 - P1: CI/CD y documentación con GitHub Actions</h1>
 
 <h2 id="relacion-11">Relación 1.1<a class="headerlink" href="#relacion-11" title="Permanent link">&para;</a></h2>
 <h3 id="descripcion">Descripción<a class="headerlink" href="#descripcion" title="Permanent link">&para;</a></h3>
-<p>Haciendo uso de los distintos <a href="https://www.digitallearning.es/blog/rankings-de-lenguajes-de-programacion/">Rankings de lenguajes de programación</a> y páginas de búsqueda de empleo como <a href="https://www.infojobs.net/">infojobs</a>, <a href="https://www.tecnoempleo.com/">tecnoempleo</a>, <a href="https://www.linkedin.com/">linkedin</a> localiza los 5 lenguajes más usados y los 5 lenguajes con más ofertas de empleo respectivamente. Añade la información más relevante sobre estos lenguajes, mínimo responde a las siguientes preguntas:</p>
+<p><strong>Actividad:</strong> <em>Mejorando un Workflow con <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions</em></p>
+<p>Vas a partir de un <strong>repositorio base</strong> (visto en clase) que contiene:</p>
+<ul>
+<li><code>main.py</code> — programa sencillo.</li>
+<li><code>test_main.py</code> — test unitario.</li>
+<li><code>update_readme.py</code> — ejecuta los tests y actualiza el <code>README.md</code>.</li>
+<li><code>.github/workflows/ci.yml</code> — <em>workflow</em> básico que ejecuta el script y realiza <em>commit</em> automático usando <code>git-auto-commit-action</code>.</li>
+</ul>
+<h4 id="objetivo-general">Objetivo general<a class="headerlink" href="#objetivo-general" title="Permanent link">&para;</a></h4>
+<p>Aprender, de forma incremental, a:</p>
+<ul>
+<li>Generar y versionar documentación <strong>en distintos formatos</strong>.</li>
+<li>Automatizar su <strong>generación y actualización</strong> con <strong><abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions</strong> (<abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr>).</li>
+<li>Documentar el proceso (herramientas, comandos, <em>workflow</em>, evidencia en <em>commits</em> y acceso por <abbr title="Secure Shell. Es un sistema de seguridad que se utiliza para acceder de forma segura a un servidor remoto a través de una red. El SSH cifra la comunicación entre el cliente y el servidor, autentica a los usuarios y protege la integridad de los datos.">SSH</abbr>).</li>
+</ul>
+<hr />
+<h3 id="contexto-de-trabajo">Contexto de trabajo<a class="headerlink" href="#contexto-de-trabajo" title="Permanent link">&para;</a></h3>
+<p>Trabajarás <strong>sobre tu <em>fork</em></strong> del repositorio base. Deberás ejecutar y <strong>entender</strong> el script y el <em>workflow</em> inicial, y después <strong>mejorarlo</strong>. Se espera un nivel mínimo común (Parte 1 y 2) y la posibilidad de profundizar (Parte 3 opcional).</p>
+<hr />
+<h3 id="parte-1-workflow-basico-comprension-y-validacion">🔹 Parte 1: Workflow básico (comprensión y validación)<a class="headerlink" href="#parte-1-workflow-basico-comprension-y-validacion" title="Permanent link">&para;</a></h3>
 <ol>
-<li>¿Qué paradigmas destacan en el lenguaje?</li>
-<li>¿Cuál es la posición y evolución de este lenguaje durante los últimos 2 años?</li>
-<li>¿Para que se usa mayoritariamente este lenguaje</li>
-<li>¿Qué tipo de traductor se usa para poder ejecutar los programas realizados en este lenguaje?</li>
-<li>¿Existen otras opciones de traducción para este lenguaje?</li>
-<li>¿Cuál es el traductor más usado para este lenguaje y que características tiene?</li>
+<li><strong>Clona</strong> tu <em>fork</em> del repositorio base.</li>
+<li>
+<p><strong>Lee y comprende</strong>:</p>
+</li>
+<li>
+<p>Qué hace <code>update_readme.py</code>.</p>
+</li>
+<li>Qué hace el <em>job</em> definido en <code>.github/workflows/ci.yml</code>.</li>
+<li>
+<p><strong>Ejecuta el workflow manualmente</strong> (evento <code>workflow_dispatch</code> desde la pestaña <em>Actions</em>):</p>
+</li>
+<li>
+<p>Fuerza <strong>tests correctos</strong> para ver el mensaje ✅ en <code>README.md</code>.</p>
+</li>
+<li>Fuerza <strong>tests fallidos</strong> para ver el mensaje ❌ en <code>README.md</code>.</li>
+<li>Observa el ciclo: <strong>evento → ejecución → modificación → <em>commit</em> automático</strong> y confirma en el historial de <em>commits</em>.</li>
 </ol>
-<p>Finaliza con una <strong>conclusiones</strong> que hayas sacado sobre el lenguaje mas usados y traductores asociados.</p>
-<h3 id="evaluacion">Evaluación<a class="headerlink" href="#evaluacion" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Esta parte ya la has debido hacer en clase. Te ha servido para tener una primera toma de contacto y entender que todo el proceso o preguntar las dudas para llegar a entenderlo. No se entrega. </p>
+</blockquote>
+<hr />
+<h3 id="parte-2-mejora-obligatoria-nivel-basico">🔹 Parte 2: Mejora obligatoria (nivel básico)<a class="headerlink" href="#parte-2-mejora-obligatoria-nivel-basico" title="Permanent link">&para;</a></h3>
+<p><strong>Añade generación de documentación en <abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> y al menos otro formato adicional.</strong>   </p>
+<p>Sugerencias para Python:</p>
+<ul>
+<li><strong>Sphinx</strong> o <strong>pdoc</strong> (<abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr>).</li>
+<li>Segundo formato: <strong>PDF</strong> (vía <code>sphinxcontrib-rsvgconverter</code>/LaTeX) o <strong>Markdown</strong> (por ejemplo con <strong>pdoc</strong> o <strong>pandoc</strong>).</li>
+</ul>
+<p><strong>Requisitos mínimos:</strong></p>
+<ol>
+<li>Prepara la herramienta elegida (por ejemplo <code>sphinx-quickstart</code> o <code>pdoc</code>).</li>
+<li>Documenta al menos <strong>una función</strong> de <code>main.py</code> con comentarios estructurados/docstrings.</li>
+<li>
+<p>Extiende el <em>workflow</em>:</p>
+</li>
+<li>
+<p>Instala dependencias (<code>pip install ...</code>).</p>
+</li>
+<li><strong>Genera documentación</strong> en <code>docs/</code> (por ejemplo <code>docs/_build/html/index.html</code>).</li>
+<li><strong>Genera un segundo formato</strong> (p. ej., <code>docs/report.pdf</code> o <code>docs/report.md</code>).</li>
+<li><strong>Sube artefactos</strong> del <em>job</em> (Action <code>actions/upload-artifact</code>) <em>o</em> <strong>hace commit</strong> de <code>docs/</code> al repositorio (con <code>git-auto-commit-action</code>), dejando claro en los mensajes de <em>commit</em> qué se genera y por qué.</li>
+<li>Mantén el test unitario en el flujo de CI (si falla, que el workflow lo refleje).</li>
+</ol>
+<blockquote>
+<p>Entregables de esta parte: enlaces a <code>docs/</code> (<abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> + otro formato) y al <em>run</em> que los genera.
+El lenguaje de programación es libre y dependerá del proyecto que te plantees hacer. Es my posible que sea Java + JS.
+Si tienes que generar algun script para generar la documentación, tu decides el lenguaje.No tiene porque ser Python.
+El profesor clonará el repositorio y ejecutará el workflow para comprobar que funciona correctamente.</p>
+</blockquote>
+<hr />
+<h3 id="parte-3-documentacion-y-preguntas-evidencias">🔹 Parte 3: Documentación y Preguntas (evidencias)<a class="headerlink" href="#parte-3-documentacion-y-preguntas-evidencias" title="Permanent link">&para;</a></h3>
+<p><strong>Actualiza tu <code>README.md</code></strong> para que incluya, con enlaces, <strong>toda</strong> esta información:</p>
+<p>Ten en cuenta que el <code>README.md</code> es la <strong>carta de presentación</strong> de tu proyecto, y debe ser claro y completo.</p>
+<ul>
+<li>(a) <strong>Herramientas</strong> usadas para generar documentación y <strong>comandos</strong> ejecutados.</li>
+<li>(b) <strong>Ejemplos de código documentado</strong> (enlace al fuente) y fragmento con las etiquetas/estructura usadas (docstrings, <code>@param</code>, <code>@return</code>, etc.).</li>
+<li>&copy; <strong>Formatos generados</strong> (<abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> + otro) y <strong>enlaces</strong> a cada uno.</li>
+<li>(d) <strong>Explicación breve</strong> del <em>workflow</em> (pasos del job, eventos que lo disparan).</li>
+<li>(e) <strong>Mensajes de <em>commit</em></strong> que evidencien la mejora: claros, descriptivos, en imperativo.</li>
+<li>(f) <strong>Evidencia de configuración <abbr title="Secure Shell. Es un sistema de seguridad que se utiliza para acceder de forma segura a un servidor remoto a través de una red. El SSH cifra la comunicación entre el cliente y el servidor, autentica a los usuarios y protege la integridad de los datos.">SSH</abbr></strong> para <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> (clave pública añadida, prueba <code>ssh -T git@github.com</code>).</li>
+<li>(g) <strong>Cómo clonar/usar</strong> el repositorio para reproducir la generación de documentación.</li>
+</ul>
+<h4 id="cuestionario-a-responder-incluyelo-al-final-del-readmemd">Cuestionario a responder (inclúyelo al final del <code>README.md</code>)<a class="headerlink" href="#cuestionario-a-responder-incluyelo-al-final-del-readmemd" title="Permanent link">&para;</a></h4>
+<p>Las preguntas son obligatorias y clave para la evaluación, por tanto responde de forma clara y concisa y cociente. </p>
 <table>
 <thead>
 <tr>
-<th>Criterio</th>
-<th>Valor 1</th>
-<th>Valor 2</th>
-<th>Valor 3</th>
+<th style="text-align: center;">CE</th>
+<th style="text-align: left;">Pregunta de evaluación asociada a la actividad</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>RA1.b</td>
-<td>No identifica todos los lenguajes</td>
-<td>Identifica lenguajes con información completa.</td>
-<td>Identifica lenguajes con información adicional.</td>
+<td style="text-align: center;"><strong>a</strong></td>
+<td style="text-align: left;"><strong>Identificación de herramientas de generación de documentación.</strong> ¿Qué herramienta o generador (p. ej., Sphinx, pdoc, Javadoc, Doxygen) utilizaste en el <em>workflow</em> para crear la documentación en <code>/docs</code>?</td>
 </tr>
 <tr>
-<td>RA1.f</td>
-<td>No identifica adecuadamente el traductor</td>
-<td>Identifica una sola.</td>
-<td>Identifica traductores con información adicional.</td>
+<td style="text-align: center;"><strong>b</strong></td>
+<td style="text-align: left;"><strong>Documentación de componentes.</strong> Muestra un fragmento del código con comentarios/docstrings estructurados (p. ej., <code>:param</code>, <code>:return:</code> o etiquetas equivalentes) que haya sido procesado por la herramienta.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>c</strong></td>
+<td style="text-align: left;"><strong>Multiformato.</strong> ¿Qué <strong>segundo formato</strong> (además de <abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr>) generaste? Explica la <strong>configuración</strong> o <strong>comandos</strong> del <em>workflow</em> que lo producen.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>d</strong></td>
+<td style="text-align: left;"><strong>Colaboración.</strong> Explica cómo <strong><abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr></strong> facilita mantener la documentación (actualizaciones del <code>README.md</code> y de <code>/docs</code>) cuando colaboran varias personas (PRs, <em>reviews</em>, <em>checks</em> de CI, protección de ramas).</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>e</strong></td>
+<td style="text-align: left;"><strong>Control de versiones.</strong> Muestra <strong>mensajes de <em>commit</em></strong> que evidencien el nuevo <em>workflow</em>. ¿Son claros y descriptivos? Justifícalo.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>f</strong></td>
+<td style="text-align: left;"><strong>Accesibilidad y seguridad.</strong> ¿Qué medidas/configuración del repositorio garantizan que solo personal autorizado accede al código y la documentación? (p. ej., repositorio privado, equipos, roles, claves/secretos, <em>branch protection</em>).</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>g</strong></td>
+<td style="text-align: left;"><strong>Instalación/uso documentados.</strong> Indica <strong>dónde</strong> en el <code>README.md</code> explicas el funcionamiento del <em>workflow</em> y <strong>dónde</strong> detallas las herramientas y comandos de documentación.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>h</strong></td>
+<td style="text-align: left;"><strong>Integración continua.</strong> Justifica por qué el <em>workflow</em> utilizado es <strong>CI</strong>. ¿Qué <strong>evento</strong> dispara automáticamente la generación/actualización de la documentación (p. ej., <code>push</code>, <code>pull_request</code>, <code>workflow_dispatch</code>)?</td>
 </tr>
 </tbody>
 </table>
-<h3 id="condiciones-de-entrega">Condiciones de entrega<a class="headerlink" href="#condiciones-de-entrega" title="Permanent link">&para;</a></h3>
-<p>El trabajo tiene las siguientes condiciones de entrega:</p>
+<blockquote>
+<p>Aunque se habla de herramientas de documentación para Python, puedes usar cualquier lenguaje y herramienta que permita generar documentación en varios formatos. 
+Sugerencia: añade una sección final de <strong>Conclusiones</strong> en tu <code>README.md</code> resumiendo qué aprendiste sobre herramientas de documentación, <abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr> y control de versiones.</p>
+</blockquote>
+<hr />
+<h3 id="parte-3-opcional-nivel-intermedio">🔹 Parte 3 (opcional, nivel intermedio)<a class="headerlink" href="#parte-3-opcional-nivel-intermedio" title="Permanent link">&para;</a></h3>
+<p><strong>Publicación de documentación con MkDocs en <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Pages</strong></p>
 <ul>
-<li>Es un trabajo individual.</li>
-<li>Se realiza en un documento de google drive.</li>
-<li>El trabajo tiene que estar correctamente identificado:<ul>
-<li>Fecha</li>
-<li>Tu nombre</li>
-<li>Identificación del curso y grupo.</li>
-<li>Identificación del módulo, unidad y ejercicio.</li>
+<li>Crea un sitio con <strong>MkDocs</strong> (o <strong>MkDocs Material</strong>).</li>
+<li>Añade un <em>workflow</em> que construya el sitio y lo publique con <strong><code>peaceiris/actions-gh-pages</code></strong> en la rama <code>gh-pages</code>.</li>
+<li>Incluye en el <code>README.md</code> el <strong>enlace público</strong> a la documentación.</li>
 </ul>
+<hr />
+<h2 id="entregables">Entregables<a class="headerlink" href="#entregables" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Enlace a tu repositorio</strong> con el <em>workflow</em> funcionando (Runs visibles en <em>Actions</em>).</li>
+<li><strong>Documentación</strong> generada (<abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> + otro formato) accesible desde el repositorio.</li>
+<li>
+<p><strong><code>README.md</code> actualizado</strong> con:</p>
 </li>
-<li>Si no tiene nombre asignado, el trabajo tendrá por nombre <code>DAW1A_id_iniciales</code> donde:<ul>
-<li><code>id</code>: es el identificador de la actividad, por ejemplo 1_1</li>
-<li><code>iniciales</code>: son tus iniciales por ejemplo <code>EFO</code> las mías.</li>
-</ul>
+<li>
+<p>Herramientas y comandos utilizados.</p>
 </li>
-</ul>
+<li>Explicación del <em>workflow</em> y eventos.</li>
+<li>Enlaces a documentación y artefactos.</li>
+<li>Respuestas al <strong>cuestionario (a–h)</strong>.</li>
+<li>Evidencias de <em>commits</em> y acceso por <strong><abbr title="Secure Shell. Es un sistema de seguridad que se utiliza para acceder de forma segura a un servidor remoto a través de una red. El SSH cifra la comunicación entre el cliente y el servidor, autentica a los usuarios y protege la integridad de los datos.">SSH</abbr></strong>.</li>
+<li>(Opcional) <strong>Enlace a <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Pages</strong> si implementas MkDocs.</li>
+</ol>
+<hr />
+<h3 id="evaluacion">Evaluación<a class="headerlink" href="#evaluacion" title="Permanent link">&para;</a></h3>
+<p>Se evaluará los entregables y las respuestas al cuestionario.</p>
+<hr />
+<h3 id="condiciones-de-entrega">Condiciones de entrega<a class="headerlink" href="#condiciones-de-entrega" title="Permanent link">&para;</a></h3>
+<p>Las publicadas en la moodle del curso.</p>
+<hr />
 <h3 id="apoyo">Apoyo<a class="headerlink" href="#apoyo" title="Permanent link">&para;</a></h3>
 <ul>
-<li>https://revilofe.github.io</li>
-<li>https://www.digitallearning.es/blog/rankings-de-lenguajes-de-programacion/</li>
+<li><abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions (documentación): <a href="https://docs.github.com/actions">https://docs.github.com/actions</a></li>
+<li>
+<p>Acciones útiles:</p>
+</li>
+<li>
+<p><code>actions/checkout</code>: <a href="https://github.com/actions/checkout">https://github.com/actions/checkout</a></p>
+</li>
+<li><code>actions/setup-python</code>: <a href="https://github.com/actions/setup-python">https://github.com/actions/setup-python</a></li>
+<li><code>actions/upload-artifact</code>: <a href="https://github.com/actions/upload-artifact">https://github.com/actions/upload-artifact</a></li>
+<li><code>stefanzweifel/git-auto-commit-action</code>: <a href="https://github.com/stefanzweifel/git-auto-commit-action">https://github.com/stefanzweifel/git-auto-commit-action</a></li>
+<li><code>peaceiris/actions-gh-pages</code>: <a href="https://github.com/peaceiris/actions-gh-pages">https://github.com/peaceiris/actions-gh-pages</a></li>
+<li>
+<p>Generadores de documentación:</p>
+</li>
+<li>
+<p><strong>Sphinx</strong> (Python): <a href="https://www.sphinx-doc.org">https://www.sphinx-doc.org</a></p>
+</li>
+<li><strong>pdoc</strong> (Python): <a href="https://pdoc.dev">https://pdoc.dev</a></li>
+<li><strong>Doxygen</strong> (multi-lenguaje): <a href="https://www.doxygen.nl">https://www.doxygen.nl</a></li>
+<li><strong>Javadoc</strong> (Java): <a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html">https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html</a></li>
+<li>
+<p>Publicación:</p>
+</li>
+<li>
+<p><strong>MkDocs</strong>: <a href="https://www.mkdocs.org">https://www.mkdocs.org</a></p>
+</li>
+<li><strong>MkDocs Material</strong>: <a href="https://squidfunk.github.io/mkdocs-material/">https://squidfunk.github.io/mkdocs-material/</a></li>
 </ul>
 
 
@@ -5194,6 +5486,9 @@
 
 
 
+
+  
+  
 
 
 

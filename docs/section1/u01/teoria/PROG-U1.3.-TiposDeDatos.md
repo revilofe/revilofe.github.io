@@ -388,6 +388,7 @@ Python realiza ciertas conversiones de tipos de datos de manera implícita duran
 **En resumen:**
 
 - Las **conversiones implícitas** en Python ocurren principalmente en operaciones numéricas entre `int` y `float`.
+- Tambien ocurren **conversiones implicitas** a tipo `bool` al utilizar `""`, `0`, `None` a `False`. Y todo lo que no sea  `""`, `0`, `None` a `False` se convierte a `true`.
 - Para realizar operaciones con cadenas y números, es necesario realizar **conversiones explícitas** utilizando funciones como `str()`, `int()`, o `float()`.
 
 

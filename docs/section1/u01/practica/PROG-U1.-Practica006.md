@@ -31,23 +31,23 @@ Las funciones en Python son componentes importantes en la programación que cuen
 	
 En Python, una definición de función tiene las siguientes características:
 
-1. La palabra clave def.
+1. La palabra clave `def`.
 2. Un nombre de función
-3. Paréntesis ’()’, y dentro de los paréntesis los parámetros de entrada (opcionales).
-4. Dos puntos ’:’
+3. Paréntesis `()`, y dentro de los paréntesis los parámetros de entrada (opcionales).
+4. Dos puntos `:`
 5. Algún bloque de código para ejecutar
 6. Una sentencia de retorno (opcional)
 	
 Un ejemplo, que además vamos a usar en nuestra práctica es el siguiente:
 
-```
+```python
 def suma(num1, num2):
     return num1 + num2
 ```
 		
 En el código podemos llamarla las veces que nosotros necesitemos:
 
-```
+```python
 print(suma(3, 2))
 print("La suma de", 3, "+", 2, "es", suma(3, 2))
 tot = 100 + suma(25, 40)
@@ -69,27 +69,33 @@ Además de ejecutarse en la máquina del desarrollador, en entornos de trabajo p
 
 Pytest es un framework con muchas funcionalidades, desde pruebas pequeñas hasta pruebas de gran escala como pruebas funcionales de aplicaciones y librerías. Ofrece la recolección automática de los tests, aserciones simples, soporte para fixtures, debugeo y mucho más…
 
+Recuerda instalar pytest en tu entorno virtual (Es posible que ya lo tengas instalado si has seguido las prácticas anteriores):
+
+```bash
+> pip install pytest
+```
+
 #### 3.2. Assert
 
 La palabra `assert` en Python se refiere a un enunciado que verifica ciertas suposiciones sobre nuestro código. Si la suposición no es cierta, la afirmación falla y se genera una excepción.
 
 Por ejemplo, si suponemos que una variable es mayor que cero, podemos usar `assert` para verificar esa suposición:
 
-```
+```python
 def funcion_ejemplo(x):
     assert x > 0, "x no es mayor que cero"
     return x * 2
 ```
 	
-En este ejemplo, si `x` es igual a 0 o menor que 0, se generará una excepción `AssertionError` con el mensaje “x no es mayor que cero”.
+En este ejemplo, si `x` es igual a `0` o menor que `0`, se generará una excepción `AssertionError` con el mensaje `x no es mayor que cero`.
 
 ### 4. Creando el primer test
 
 1. Para empezar, vamos a partir de la práctica 5, donde creamos un entorno virtual e instalamos pytest. Vamos a seguir los siguientes pasos para realizar nuestro primer test y ejecutarlo desde el terminal.
 
-2. Abrir en Visual Studio Code nuestra carpeta de trabajo, vamos a crear una carpeta en **~/Documents/practica6**, activar el entorno virtual y comprobar que está instalado correctamente pytest.
+2. Abrir en Visual Studio Code nuestra carpeta de trabajo, vamos a crear una carpeta en `~/Documents/practica6`, activar el entorno virtual y comprobar que está instalado correctamente pytest.
 
-3. Lo habitual es crear un directorio llamado `tests` que contenga los ficheros de pruebas y `src` para incluir los programas o módulos. Si hacéis esto, incluid en todas las carpetas del proyecto el fichero `__init__.py` vacío *(si lo hacéis desde el terminal: touch __init__.py)*.
+3. Lo habitual es crear un directorio llamado `tests` que contenga los ficheros de pruebas y `src` para incluir los programas o módulos. Si hacéis esto, incluid en todas las carpetas del proyecto el fichero `__init__.py` vacío *(si lo hacéis desde el terminal: `touch __init__.py`)*.
 
     Por ejemplo, si tenemos la siguiente estructura de nuestra carpeta o proyecto `practica6`:
      
@@ -106,7 +112,7 @@ En este ejemplo, si `x` es igual a 0 o menor que 0, se generará una excepción 
 
 4. Crear una carpeta que se llame `src`. En ella crearemos un nuevo fichero `main.py` con el siguiente contenido:
 
-    ```
+    ```python
     def suma(num1, num2):
         return num1 + num2
 
@@ -135,55 +141,52 @@ En este ejemplo, si `x` es igual a 0 o menor que 0, se generará una excepción 
     
     Si os fijáis en el código, no es más que una función que voy a llamar en mi función principal en varias ocasiones.
 
-5. A continuación, nos creamos la carpeta `tests` y dentro de ella un fichero con el nombre `test_main.py` *(Pytest va a reconocer por defecto todos los programas que comiencen por `test_` cómo pruebas unitarias que debe realizar)*. El contenido será el siguiente:
+5. A continuación, nos creamos la carpeta `tests` y dentro de ella un fichero con el nombre `test_main.py` *(Pytest va a reconocer por defecto todos los programas que comiencen por `test_` cómo pruebas unitarias que debe realizar)*. 
 
+    Antes, para que `pytest` pueda encontrar el modulo `suma`, que se ubica en la carpeta `src`, crearemos un fichero que informará a éste sobre la localización de los módulos que vamos a probar. Este fichero se llamara `pytest.ini` y lo situaremos en la raíz del proyecto `practica6` con el siguiente contenido:
+
+    ```ini
+    [pytest]
+    pythonpath = ./src
     ```
-    from src.main import suma
+
+    Ahora si, crearemos el codigo de las pruebas. El contenido será el siguiente:
+
+    ```python
+    from main import suma
 
     def test_suma():
         assert suma(1, 1) == 2
         assert suma(0, 0) == 0
         assert suma(100, -100) == 0
     ```
+    
+    A tener en cuenta:
 
-    Si os da problemas porque no encuentra los paquetes importados desde la prueba unitaria, agregamos manualmente el directorio raíz del proyecto a sys.path:
+    - Siempre debemos importar la función que deseamos probar del módulo dónde está definida.
+    - Todas las pruebas serán también una función con el nombre `test_nombreFunciónAProbar`.
+    - Si realizamos varias funciones para probar una misma función es recomendable añadir un texto explicativo de la prueba.
+    - `assert` verifica que la expresión de la derecha es verdadera (`true`), sino generará una excepción.
+    - Pytest capturará la excepción si se produce y la gestionará para mostrarnos los resultados.
 
-    ```
-    import sys
-    import os
 
-    # Agregar el directorio raíz del proyecto (practica6) al sys.path
-    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+6. Vamos a ejecutar las pruebas unitarias desde la terminal:
 
-    def test_suma():
-        assert suma(1, 1) == 2
-        assert suma(0, 0) == 0
-        assert suma(100, -100) == 0
-    ```
-   
-   - Para empezar, siempre debemos importar la función que deseamos probar del módulo dónde está definida.
-   - Todas las pruebas serán también una función con el nombre `test_nombreFunciónAProbar`.
-   - Si realizamos varias funciones para probar una misma función es recomendable añadir un texto explicativo de la prueba.
-   - `assert` verifica que la expresión de la derecha es verdadera (`true`), sino generará una excepción.
-   - Pytest capturará la excepción si se produce y la gestionará para mostrarnos los resultados.
-
-7. Vamos a ejecutar las pruebas unitarias desde la terminal:
-
-    ```
+    ```bash
     > pytest
     ```
     
     El comando `pytest` nos muestra si las pruebas pasaron o no. Si queremos una información un poco más detallada usamos el parámetro `-v`:
     
-    ```
+    ```bash
     > pytest -v
     ```
 
-8. Se pueden usar las marcas para realizar múltiples pruebas sobre un determinado método *(marca parametrize)*. En el mismo fichero `test_main.py` añadimos otra función:
+7. Se pueden usar las marcas para realizar múltiples pruebas sobre un determinado método *(marca parametrize)*. En el mismo fichero `test_main.py` añadimos otra función:
 
-    ```
+    ```python
     import pytest
-    from src.main import suma
+    from main import suma
 
     def test_suma():
         assert suma(1, 1) == 2
@@ -206,15 +209,15 @@ En este ejemplo, si `x` es igual a 0 o menor que 0, se generará una excepción 
     ```
     Necesitamos importar las librerías de pytest en nuestro fichero de pruebas con `import pytest`.
 
-9. Al volver a realizar el test obtendremos un resultado por cada tupla de parámetros probados:
+8. Al volver a realizar el test obtendremos un resultado por cada tupla de parámetros probados:
 
-    ```
+    ```bash
     > pytest -v
     ```
 
-10. **Obliguemos a que se produzca un error**, por ejemplo modificando uno de los parámetros expected `(0, 0, 1)` y observemos lo que nos muestra pytest.
+9. **Obliguemos a que se produzca un error**, por ejemplo modificando uno de los parámetros expected `(0, 0, 1)` y observemos lo que nos muestra pytest.
 
-11. Pruébalo y vuelve a ejecutar los tests unitarios.
+10. Pruébalo y vuelve a ejecutar los tests unitarios.
 
 ### 5. Crea tu el test
 
@@ -238,7 +241,7 @@ Desarrolla una función en `calcula_factorial.py` que reciba un número y retorn
 
 Debe cumplir que el número de entrada debe ser igual o superior a 0 y menor o igual a 10 (si no es correcto, retornará -1).
 
-   ```
+   ```text
    > El factorial de 0 es 1. El factorial de un número entero se define como el producto de todos los números enteros positivos desde el 1 hasta n. Por ejemplo, el factorial de 3 es 6 (3! = 3 x 2 x 1 = 6).
    ```
 

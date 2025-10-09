@@ -223,7 +223,8 @@ En este ejemplo, si `x` es igual a `0` o menor que `0`, se generará una excepci
 
 Desarrolla una función en `compara_numeros.py` que reciba dos números y retorne el mayor número de los dos o 0 si son iguales. Realiza las pruebas unitarias y ejecútalas con pytest.
 
-Entrega lo siguiente:   
+Entrega lo siguiente:    
+
 * Los ficheros `compara_numeros.py` y `test_compara_numeros.py`      
 * Un pantallazo donde se muestre la vista del Explorador (View -> Explorer) con las carpetas y ficheros del proyecto.   
 * Un pantallazo del terminal con las pruebas unitarias detalladas realizadas con éxito.   
@@ -245,7 +246,8 @@ Debe cumplir que el número de entrada debe ser igual o superior a 0 y menor o i
    > El factorial de 0 es 1. El factorial de un número entero se define como el producto de todos los números enteros positivos desde el 1 hasta n. Por ejemplo, el factorial de 3 es 6 (3! = 3 x 2 x 1 = 6).
    ```
 
-Entrega lo siguiente:   
+Entrega lo siguiente:    
+
 * Los ficheros calcula_factorial.py y test_calcula_factorial.py   
 * Un pantallazo de la vista de Testing.  
 * Fuerza un error en tu código, no en los tests, y muestra un pantallazo de tus pruebas unitarias realizadas de nuevo en la vista de Testing de Visual Studio Code.

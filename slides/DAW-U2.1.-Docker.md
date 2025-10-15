@@ -923,9 +923,9 @@ Note: Reemplaza múltiples `docker run` con parámetros complejos por una defini
 
 Note: Para clúster y HA usa Swarm/Kubernetes; Compose brilla en single-host y pipelines de desarrollo.
 
---- 
+---
 
-### 6.2. Sintaxis y Configuración del Archivo `docker-compose.yml`
+### 6.2. `docker-compose.yml`  
 
 
 #### Estructura principal

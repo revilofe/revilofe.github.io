@@ -19,29 +19,28 @@ tags:
 Evaluar la relación entre **software y hardware**, clasificar lenguajes de programación y comprender los diferentes procesos de ejecución (compilación, interpretación y máquinas virtuales), utilizando ejemplos de lenguajes interpretados, compilados y que generan código intermedio para su ejecución en una máquina virtual.
 
 ### 2. Dinámica
-- Individual.
-- Cada grupo deberá trabajar con **tres lenguajes** de programación diferentes:
+- Individual o en grupo. Queda a elección del profesor.
+- Cada individuo/grupo deberá trabajar con **tres lenguajes** de programación diferentes:
     - **Lenguajes interpretados** (Python).
     - **Lenguajes compilados** (C).
     - **Lenguajes que generan código intermedio ejecutado en una máquina virtual** (Java).
 
 ### 3. Tarea
-Escribir un pequeño programa en cada lenguaje y responder a las preguntas.   
+Escribir un pequeño programa en cada lenguaje y responder a las preguntas en el README.md, usando capturas de pantalla para ilustrar las respuestas y el lenguaje de marcas markdown para formatear el texto.
 
-El programa que se debe desarrollar es el siguiente:   
+Deberá escribirse un programa por cada uno de los tres lenguajes elegidos que:
 
-**Programa**:    
-
-Escribe un programa básico en cada uno de los tres lenguajes elegidos que:   
-
-1. Pregunte el nombre del usuario.    
-2. Muestre un mensaje que diga: `"Hola [nombre del usuario]. Este programa está hecho en el lenguaje de programación: [lenguaje]"`.    
+1. Pregunte el nombre del usuario.
+2. Pregunte el año de nacimiento. Y obtenga la edad del usuario.
+3. Muestre un mensaje que diga: `"Hola [nombre del usuario], tienes [x] años. Este programa está hecho en el lenguaje de programación: [lenguaje]"`.    
 
 ---
 
 ### 5. Preguntas y Actividades para Evaluar Cada Criterio de Evaluación
 
-Contesta a estás preguntas de forma concisa y clara. Las respuestas deben estar bien estructuradas e ir al grano. Si es necesario añade capturas de pantalla para ilustrar tus respuestas.
+Contesta a estas preguntas de forma concisa y clara. Las respuestas deben estar bien estructuradas e ir al grano. Realiza capturas de pantalla para ilustrar tus respuestas.
+
+Las respuestas deberán responderse por cada uno de los lenguajes utilizados (interpretado, compilado y en máquina virtual), siempre que aplique. Si no aplica, indícalo claramente.
 
 #### 5.1. Criterio de Evaluación 1.a: Relación entre Software y Hardware    
 
@@ -78,9 +77,9 @@ Contesta a estás preguntas de forma concisa y clara. Las respuestas deben estar
 1. Clasifica los tres lenguajes utilizados (interpretado, compilado y en máquina virtual) según su:
      - **Modo de ejecución** (interpretado vs compilado vs máquina virtual).   
      - **Nivel de abstracción** (alto nivel vs bajo nivel).   
-     - **Paradigma de programación** (imperativo, orientado a objetos, funcional).   
+     - **Paradigma de programación** (imperativo, orientado a objetos, funcional,...).   
 
-2. Explica qué características de estos lenguajes influyeron en su clasificación.    
+2. Explica qué características de estos lenguajes influyeron en su clasificación. Es decir, ahonde en las razones por las que cada lenguaje pertenece a una categoría específica. 
 
 
 #### 5.5. Criterio de Evaluación 1.f: Evaluación de Herramientas Utilizadas en el Desarrollo    
@@ -93,13 +92,13 @@ Contesta a estás preguntas de forma concisa y clara. Las respuestas deben estar
      - **Compilador o intérprete** (¿cómo se transformó o ejecutó el código?).   
      - **Depurador** (si lo usaste, ¿cómo lo empleaste para encontrar errores?).     
      - **Sistema de gestión de versiones** (si lo usaste, ¿cómo guardaste las versiones del código?).     
-
+     - **Otras herramientas** Añade alguna herramienta más a la lista. ¿Cómo te ayudó en el desarrollo?
 
 ---
 
 ### 6. Entrega
 
-Cada grupo deberá entregar:    
+Cada individuo/grupo deberá entregar:    
 
 1. **El código fuente** de los tres lenguajes elegidos (interpretado, compilado y en máquina virtual).    
 2. **Capturas de pantalla** de la ejecución del programa en cada lenguaje.    

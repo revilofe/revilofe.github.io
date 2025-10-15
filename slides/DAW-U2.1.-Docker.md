@@ -1,21 +1,23 @@
-# U1.2 - Código Fuente, Objeto y Ejecutable
+# U2.1 - Docker
 
 ---
 
 ![Logo Alberti](assets/logo-iesra.png) <!-- .element height="50%" width="50%" -->
 
----
-## Índice 
----
+---  
 
-# 1. Conceptos Fundamentales de Docker
+## Índice
 
 ---
 
-## ¿Qué es Docker?
+## 1. Conceptos Fundamentales de Docker
+
+---
+
+### 1.1. ¿Qué es Docker?
 
 
-### Definición
+#### Definición
 
 * Docker es una plataforma de código abierto para desplegar aplicaciones.
 * Permite empaquetar apps en entornos aislados llamados contenedores.
@@ -26,7 +28,7 @@
 Note: Presenta Docker como tecnología central de contenedores. Explica que permite encapsular aplicaciones para ser ejecutadas en cualquier entorno de forma eficiente.
 
 
-### Propósito
+#### Propósito
 
 * Automatiza el despliegue de aplicaciones con contenedores.
 * Aísla apps del entorno para mayor flexibilidad y portabilidad.
@@ -37,7 +39,7 @@ Note: Presenta Docker como tecnología central de contenedores. Explica que perm
 Note: Explica cómo Docker mejora el flujo DevOps y facilita la entrega continua de software aislando aplicaciones del entorno subyacente.
 
 
-### Contenedores
+#### Contenedores
 
 * Son entornos autocontenidos que ejecutan una app o proceso.
 * Comparten el kernel del sistema operativo anfitrión.
@@ -49,11 +51,11 @@ Note: Define qué es un contenedor en contraste con una máquina virtual. Enfati
 
 ---
 
-## Contenedores vs. Máquinas Virtuales
+### 1.2. Contenedores vs. Máquinas Virtuales
 
 
 
-### Diferencias de Arquitectura
+#### Diferencias de Arquitectura
 
 * MV emulan hardware y ejecutan un sistema operativo completo.
 * Los contenedores comparten el kernel del sistema anfitrión.
@@ -64,7 +66,7 @@ Note: Define qué es un contenedor en contraste con una máquina virtual. Enfati
 Note: Compara la arquitectura base entre MV y contenedores. Destaca eficiencia de los contenedores gracias a la ausencia de emulación.
 
 
-### Ventajas de los Contenedores
+#### Ventajas de los Contenedores
 
 * Imágenes muy ligeras (ej. nginx:alpine pesa 15MB).
 * Menor consumo de memoria y recursos.
@@ -75,7 +77,7 @@ Note: Compara la arquitectura base entre MV y contenedores. Destaca eficiencia d
 Note: Resalta los beneficios clave de los contenedores frente a las MV, centrándose en eficiencia, portabilidad y velocidad.
 
 
-### Desventajas
+#### Desventajas
 
 * Menor aislamiento en comparación con MV (comparten kernel).
 * Migrar apps complejas puede requerir reestructuración.
@@ -86,10 +88,10 @@ Note: Detalla las principales limitaciones de los contenedores, especialmente en
 
 ---
 
-## Arquitectura y Componentes de Docker
+### 1.3. Arquitectura y Componentes de Docker
 
 
-### Componentes Principales
+#### Componentes Principales
 
 * Docker Engine (motor que ejecuta contenedores).
 * Imágenes Docker (plantillas inmutables de contenedores).
@@ -98,7 +100,7 @@ Note: Detalla las principales limitaciones de los contenedores, especialmente en
 Note: Describe brevemente los tres componentes esenciales del ecosistema Docker.
 
 
-### Docker Engine
+#### Docker Engine
 
 * Consta de cliente (CLI), daemon (dockerd) y API REST.
 * Dockerd gestiona contenedores, imágenes, redes y volúmenes.
@@ -108,7 +110,7 @@ Note: Describe brevemente los tres componentes esenciales del ecosistema Docker.
 Note: Explica cómo funciona el motor Docker como sistema cliente-servidor y sus tres partes principales.
 
 
-### Imágenes Docker
+#### Imágenes Docker
 
 * Son plantillas inmutables, de solo lectura.
 * Definen el entorno base para crear contenedores.
@@ -119,7 +121,7 @@ Note: Explica cómo funciona el motor Docker como sistema cliente-servidor y sus
 Note: Explica que las imágenes son el punto de partida de los contenedores. Son reutilizables y definidas mediante Dockerfile.
 
 
-### Contenedores Docker
+#### Contenedores Docker
 
 * Son instancias en ejecución de una imagen.
 * Aislados, modificables, y con red y volúmenes propios.
@@ -131,10 +133,10 @@ Note: Resume el funcionamiento de los contenedores como instancias activas de im
 
 ---
 
-## Almacenamiento en Docker
+### 1.4. Almacenamiento en Docker
 
 
-### Naturaleza Efímera
+#### Naturaleza Efímera
 
 * Por defecto, los datos dentro del contenedor se pierden al borrarlo.
 * Alternativas: volúmenes, bind mounts y almacenamiento en memoria.
@@ -146,14 +148,14 @@ Note: Detalla cómo Docker maneja el almacenamiento. Subraya que los contenedore
 
 ---
 
-# 2. Instalación y Comandos Básicos de Docker CLI
+## 2. Instalación y Comandos Básicos de Docker CLI
 
 ---
 
-## Instalación y configuración inicial
+### 2.1. Instalación y configuración inicial
 
 
-### Requisitos Previos
+#### Requisitos Previos
 
 * Revisar la documentación oficial según el sistema operativo.
 * Docker requiere kernel Linux moderno o WSL2 en Windows.
@@ -163,7 +165,7 @@ Note: Detalla cómo Docker maneja el almacenamiento. Subraya que los contenedore
 Note: Explica la necesidad de consultar la documentación para instalar Docker. Aclara que varía según el sistema operativo y se deben cumplir requisitos como el kernel compatible.
 
 
-### Instalación y Comprobación
+#### Instalación y Comprobación
 
 * En Ubuntu: `sudo apt install docker-ce`.
 * Verifica con `docker --version`.
@@ -177,7 +179,7 @@ $ docker run hello-world
 Note: Describe el proceso básico de instalación y la verificación con `hello-world`. Este comando descarga una imagen de prueba y la ejecuta.
 
 
-### Permisos de Usuario
+#### Permisos de Usuario
 
 * Solo root o usuarios del grupo `docker` pueden ejecutar Docker.
 * Añade tu usuario al grupo:
@@ -192,10 +194,10 @@ Note: Indica cómo evitar el uso constante de `sudo` para ejecutar Docker añadi
 
 ---
 
-## Manejo del ciclo de vida de contenedores
+### 2.2. Manejo del ciclo de vida de contenedores
 
 
-### Crear y Ejecutar Contenedores
+#### Crear y Ejecutar Contenedores
 
 * Usa `docker run` para crear y ejecutar un contenedor.
 * Combina `docker create` y `docker start`.
@@ -204,7 +206,7 @@ Note: Indica cómo evitar el uso constante de `sudo` para ejecutar Docker añadi
 Note: Explica que `docker run` es la forma rápida de lanzar contenedores. Equivale a crear e iniciar en una sola instrucción.
 
 
-### Modos de Ejecución
+#### Modos de Ejecución
 
 * **Interactivo:** `-it` abre terminal para interacción.
 * **Detenido:** `-d` lo ejecuta en segundo plano (daemon).
@@ -213,7 +215,7 @@ Note: Explica que `docker run` es la forma rápida de lanzar contenedores. Equiv
 Note: Explica los modos principales: interactivo (para acceso tipo consola) y en background (para servicios).
 
 
-### Identificación y Nombres
+#### Identificación y Nombres
 
 * Docker asigna un ID y nombre automático al contenedor.
 * Se puede nombrar con `--name`.
@@ -222,7 +224,7 @@ Note: Explica los modos principales: interactivo (para acceso tipo consola) y en
 Note: Señala cómo se identifican los contenedores, y la utilidad de asignar un nombre personalizado.
 
 
-### Visualizar Contenedores
+#### Visualizar Contenedores
 
 * Ver activos: `docker ps` o `docker container ls`.
 * Ver todos (incluso detenidos): `docker ps -a`.
@@ -230,7 +232,7 @@ Note: Señala cómo se identifican los contenedores, y la utilidad de asignar un
 Note: Explica cómo listar contenedores activos y también los que han sido detenidos. Diferencia entre ambos modos.
 
 
-### Operaciones Básicas
+#### Operaciones Básicas
 
 * `docker start`: inicia un contenedor detenido.
 * `docker stop`: detiene uno en ejecución.
@@ -240,7 +242,7 @@ Note: Explica cómo listar contenedores activos y también los que han sido dete
 Note: Describe operaciones esenciales para controlar el ciclo de vida de los contenedores.
 
 
-### Inspección y Logs
+#### Inspección y Logs
 
 * `docker inspect <id/nombre>` muestra info detallada.
 * `docker logs <id/nombre>` muestra la salida del contenedor.
@@ -250,10 +252,10 @@ Note: Explica cómo ver la configuración e información interna de un contenedo
 
 ---
 
-## Comandos avanzados y acceso
+### 2.3. Comandos avanzados y acceso
 
 
-### Acceder a la Shell
+#### Acceder a la Shell
 
 * `docker exec -it <id/nombre> /bin/bash`
 * Permite entrar en un contenedor ya en ejecución.
@@ -262,7 +264,7 @@ Note: Explica cómo ver la configuración e información interna de un contenedo
 Note: Presenta el comando para acceder a la shell del contenedor y poder ejecutar instrucciones desde dentro.
 
 
-### Mapeo de Puertos
+#### Mapeo de Puertos
 
 * Redirige puertos del host al contenedor.
 * Sintaxis: `-p host:contenedor`.
@@ -271,7 +273,7 @@ Note: Presenta el comando para acceder a la shell del contenedor y poder ejecuta
 Note: Explica cómo exponer puertos del contenedor hacia fuera para servicios como servidores web.
 
 
-### Variables de Entorno
+#### Variables de Entorno
 
 * Usar `-e VARIABLE=VALOR` en `docker run`.
 * Ideal para pasar credenciales o configuración.
@@ -280,7 +282,7 @@ Note: Explica cómo exponer puertos del contenedor hacia fuera para servicios co
 Note: Comenta el uso de variables de entorno para configurar la app en el momento de ejecución.
 
 
-### Crear Imagen desde Contenedor
+#### Crear Imagen desde Contenedor
 
 * `docker commit` guarda el estado actual como imagen.
 * Útil para prototipos o estados modificados.
@@ -294,14 +296,14 @@ Note: Muestra cómo convertir un contenedor con modificaciones en una nueva imag
 
 ---
 
-# 3. Creación y Optimización de Imágenes (Dockerfile)
+## 3. Creación y Optimización de Imágenes (Dockerfile)
 
 ---
 
-## Introducción al Dockerfile
+### 3.1. Introducción al Dockerfile
 
 
-### ¿Qué es un Dockerfile?
+#### ¿Qué es un Dockerfile?
 
 * Archivo de texto con instrucciones para construir imágenes.
 * Automatiza la creación del entorno del contenedor.
@@ -312,7 +314,7 @@ Note: Muestra cómo convertir un contenedor con modificaciones en una nueva imag
 Note: Presenta el Dockerfile como la receta o script para crear imágenes. Ayuda a mantener consistencia y automatización en entornos.
 
 
-### Sintaxis básica
+#### Sintaxis básica
 
 * Cada instrucción en mayúscula (ej. `FROM`, `RUN`, `COPY`).
 * Se ejecutan en orden, creando capas intermedias.
@@ -323,10 +325,10 @@ Note: Explica cómo se interpreta el Dockerfile. El orden de las instrucciones i
 
 ---
 
-## Instrucciones esenciales del Dockerfile
+### 3.2. Instrucciones esenciales del Dockerfile
 
 
-### FROM
+#### FROM
 
 * Define la imagen base del contenedor.
 * Ejemplo: `FROM python:3.11-slim`.
@@ -335,7 +337,7 @@ Note: Explica cómo se interpreta el Dockerfile. El orden de las instrucciones i
 Note: Indica la imagen de la cual partimos. Puede ser oficial o personalizada.
 
 
-### RUN
+#### RUN
 
 * Ejecuta comandos en la imagen en construcción.
 * Ejemplo: instalar paquetes con `apt`, `pip`, etc.
@@ -348,7 +350,7 @@ RUN apt update && apt install -y curl
 Note: RUN se utiliza para preparar el entorno, instalar dependencias, ejecutar scripts de instalación, etc.
 
 
-### COPY y ADD
+#### COPY y ADD
 
 * `COPY`: copia archivos desde el host al contenedor. **Recomendado**.
 * `ADD`: copia y además puede descomprimir archivos.
@@ -361,7 +363,7 @@ COPY app.py /app/
 Note: COPY es más predecible y preferible a ADD, salvo que se necesite extracción automática.
 
 
-### CMD y ENTRYPOINT I
+#### CMD y ENTRYPOINT I
 
 * CMD: comando por defecto al ejecutar la imagen.
 * ENTRYPOINT: define el proceso principal del contenedor.
@@ -374,7 +376,7 @@ CMD ["python", "app.py"]
 Note: CMD y ENTRYPOINT definen cómo se comporta el contenedor al iniciarse.
 
 
-### CMD y ENTRYPOINT II
+#### CMD y ENTRYPOINT II
 
 * El contenido de CMD se pasa por parametro a ENTRYPOINT.
 * Si ENTRYPOINT no existe, se usa CMD.
@@ -384,7 +386,7 @@ Note: CMD y ENTRYPOINT definen cómo se comporta el contenedor al iniciarse.
 Note: CMD puede ser sobrescrito por el usuario.
 
 
-### WORKDIR y ENV
+#### WORKDIR y ENV
 
 * WORKDIR: define el directorio de trabajo por defecto dentro del contenedor
 * ENV: define variables de entorno dentro del contenedor.
@@ -399,10 +401,10 @@ Note: Estas instrucciones permiten definir contexto de ejecución y configuraci�
 
 ---
 
-## Buenas prácticas y optimización
+### 3.3. Buenas prácticas y optimización
 
 
-### Orden lógico y limpieza
+#### Orden lógico y limpieza
 
 * Ordenar instrucciones: primero lo menos cambiante.
 * Fusiona instrucciones con `&&`
@@ -416,7 +418,7 @@ RUN apt-get update && apt-get install -y nodejs && rm -rf /var/lib/apt/lists/*
 Note: El orden influye en la reutilización de capas. Elimina archivos temporales para mantener la imagen ligera.
 
 
-### Multietapa (multi-stage builds)
+#### Multietapa (multi-stage builds)
 
 * Permite compilar en una imagen y copiar a otra más liviana.
 * Reduce el tamaño final de la imagen.
@@ -434,7 +436,7 @@ COPY --from=build /app/myapp /myapp
 Note: Muestra cómo separar fases de compilación y ejecución. Muy útil en lenguajes compilados.
 
 
-### `.dockerignore`
+#### `.dockerignore`
 
 * Similar a `.gitignore`, evita copiar archivos innecesarios.
 * Mejora velocidad de build y reduce tamaño.
@@ -448,7 +450,7 @@ node_modules/
 Note: `.dockerignore` es fundamental para evitar subir archivos temporales o pesados a la imagen.
 
 
-### Uso de imágenes ligeras
+#### Uso de imágenes ligeras
 
 * Usar versiones `alpine`, `slim` cuando sea posible.
 * Menor superficie de ataque y tamaño.
@@ -460,7 +462,7 @@ FROM node:18-alpine
 Note: Recomienda imágenes pequeñas para producción. Reduce vulnerabilidades y mejora eficiencia.
 
 
-### Uso de etiquetas y versiones
+#### Uso de etiquetas y versiones
 
 * Siempre especificar versiones (`python:3.11`, no `latest`).
 * Facilita reproducibilidad y control de cambios.
@@ -469,14 +471,14 @@ Note: Explica la importancia de no usar `latest` para evitar builds impredecible
 
 ---
 
-# 4. Persistencia y Redes Avanzadas
+## 4. Persistencia y Redes Avanzadas
 
 ---
 
-## 4.1. Manejo de la Persistencia de Datos
+### 4.1. Manejo de la Persistencia de Datos
 
 
-### Naturaleza efímera y necesidad de persistencia
+#### Naturaleza efímera y necesidad de persistencia
 
 * Los contenedores son **efímeros**: al eliminar el contenedor, **se pierden** los datos internos.
 * Para conservar datos entre reinicios o recreaciones: **Volúmenes** y **Bind Mounts**.
@@ -485,7 +487,7 @@ Note: Explica la importancia de no usar `latest` para evitar builds impredecible
 Note: Motiva por qué no basta con el filesystem interno y presenta los dos mecanismos soportados por Docker.
 
 
-### Volúmenes I
+#### Volúmenes I
 
 * **Objeto gestionado por Docker**: su ciclo de vida es independiente del contenedor.
 * Persisten aunque borres el contenedor; pueden **reutilizarse** entre varios contenedores.
@@ -500,7 +502,7 @@ docker volume ls
 Note: Recalca que volúmenes = opción recomendada para datos de aplicaciones/BDD por rendimiento, aislamiento y portabilidad.
 
 
-### Volúmenes II
+#### Volúmenes II
 
 * Montaje con `--mount` (verboso y claro) o `-v` (atajo).
 * Ejemplo `--mount`:
@@ -514,7 +516,7 @@ docker run -dit --name miapache-php \
 Note: Muestra ambas sintaxis y cuándo elegir cada una.
 
 
-### Volúmenes III
+#### Volúmenes III
 
 * Volumen anónimo con `-v`. Luego tendras que consultarlos:
 
@@ -531,7 +533,7 @@ docker volume rm datos-app
 Note: Recuerda no borrar volúmenes usados.
 
 
-### Bind Mounts I
+#### Bind Mounts I
 
 * **Mapean un directorio del host** dentro del contenedor.
 * Ideales para **desarrollo** (código del host visible dentro del contenedor).
@@ -546,7 +548,7 @@ docker run -dit --name miapache -p 5555:80 \
 Note: Enfatiza la rapidez de iteración en dev y que dependen de la estructura del host.
 
 
-### Bind Mounts II
+#### Bind Mounts II
 
 * Sintaxis extendida con `--mount type=bind`:
 
@@ -563,7 +565,7 @@ docker run --mount type=bind,source="$PWD/src",target=/var/www/html ...
 Note: Da “gotchas”: permisos/SELinux/solo-lectura y necesidad de que la ruta exista.
 
 
-### Casos de uso
+#### Casos de uso
 
 * **Bases de datos, logs, artefactos persistentes → Volúmenes.**
 * **Código fuente, assets en caliente → Bind Mounts.**
@@ -573,10 +575,10 @@ Note: Resume decisión rápida para el día a día del alumnado y justifica la e
 
 ---
 
-## 4.2. Configuración de Redes (Networking)
+### 4.2. Configuración de Redes (Networking)
 
 
-### Aislamiento
+#### Aislamiento
 
 * Docker usa **namespaces** de red y pares **veth** para aislar contenedores.
 * Bridge `docker0`: NAT mediante **iptables** para tráfico saliente y publicación de puertos.
@@ -585,7 +587,7 @@ Note: Resume decisión rápida para el día a día del alumnado y justifica la e
 Note: Explica el “cómo” básico: namespaces + veth + NAT; fija el vocabulario que aparecerá en comandos.
 
 
-### Modos de red I (bridge / host)
+#### Modos de red I (bridge / host)
 
 * **bridge (por defecto)**:
     
@@ -602,7 +604,7 @@ Note: Explica el “cómo” básico: namespaces + veth + NAT; fija el vocabular
 Note: Contrasta rendimiento vs. aislamiento y cuándo elegir cada modo.
 
 
-### Modos de red II (none)
+#### Modos de red II (none)
 
 * **none**:
     
@@ -617,7 +619,7 @@ docker run -d --name job --network none busybox sleep 60   # none
 Note: Contrasta rendimiento vs. aislamiento y cuándo elegir cada modo.
 
 
-### Modos de red III (macvlan / overlay)
+#### Modos de red III (macvlan / overlay)
 
 Avanzado
 
@@ -633,7 +635,7 @@ Avanzado
 Note: Presenta casos típicos: macvlan para visibilidad L2; overlay para orquestadores.
 
 
-### Redes definidas por usuario I
+#### Redes definidas por usuario I
 
 * Mejor práctica: crear redes **bridge de usuario**.
 * Beneficios:
@@ -650,7 +652,7 @@ docker run -d --name web --network mired -p 8080:80 miweb
 Note: Diferencia explícita: el bridge por defecto no resuelve nombres; las redes de usuario sí.
 
 
-### Redes definidas por usuario II
+#### Redes definidas por usuario II
 
 * Inspeccionar, conectar y desconectar:
 
@@ -667,7 +669,7 @@ docker network disconnect mired api
 Note: Enseña operaciones típicas y relación directa con Compose.
 
 
-### Enlace de contenedores I (Legacy `--link`)
+#### Enlace de contenedores I (Legacy `--link`)
 
 * `--link` está **obsoleto**: alteraba `/etc/hosts` y pasaba variables de entorno.
 * Solo tenía sentido en el bridge por defecto (sin DNS).
@@ -680,7 +682,7 @@ docker run --link db:dbalias app
 Note: Desaconseja su uso, justifica por qué y deja rastro histórico.
 
 
-### Enlace de contenedores II (DNS moderno)
+#### Enlace de contenedores II (DNS moderno)
 
 * Con redes de usuario, usa **DNS integrado**:
     
@@ -700,7 +702,7 @@ services:
 Note: Refuerza “usa el nombre del servicio” como patrón mental en Compose.
 
 
-### Diagnóstico de red
+#### Diagnóstico de red
 
 * Comandos útiles:
 
@@ -716,7 +718,7 @@ docker exec -it web sh -c "apk add --no-cache bind-tools curl; nslookup api; cur
 Note: Proporciona un checklist rápido para resolver “no me resuelve / no conecta”.
 
 
-### Seguridad de red y exposición
+#### Seguridad de red y exposición
 
 * Publica **solo** lo necesario (`-p` / `ports:`). `EXPOSE` es **informativo**.
 * Separa servicios en **redes distintas**; reduce la **ICC** (inter-container communication).
@@ -727,14 +729,14 @@ Note: Conecta persistencia y red con hardening básico del despliegue.
 
 ---
 
-# 5. Compartiendo Imágenes y Registros
+## 5. Compartiendo Imágenes y Registros
 
 ---
 
-## 5.1. Docker Hub y Gestión Remota
+### 5.1. Docker Hub y Gestión Remota
 
 
-### Panorama general
+#### Panorama general
 
 * Un **registro** almacena y distribuye **imágenes** (OCI/Docker).
 * **Docker Hub** es el registro público por defecto del cliente Docker.
@@ -743,7 +745,7 @@ Note: Conecta persistencia y red con hardening básico del despliegue.
 Note: Aclara la diferencia imagen (plantilla) vs. contenedor (instancia) y el rol de un registro.
 
 
-### Buscar imágenes (docker search)
+#### Buscar imágenes (docker search)
 
 * Encuentra imágenes oficiales y de la comunidad.
 * Observa **STARS** (popularidad) y **OFFICIAL**.
@@ -756,7 +758,7 @@ docker search "postgres"
 Note: `docker search` consulta Docker Hub salvo que especifiques otro registro en el nombre (no muestra todo el metadata de seguridad).
 
 
-### Descargar imágenes (docker pull)
+#### Descargar imágenes (docker pull)
 
 * Descarga una imagen localmente (si falta se hace en `docker run`).
 * Especifica **tag**; evita confiar en `:latest`.
@@ -769,7 +771,7 @@ docker pull nginx:1.27-alpine
 Note: Fijar versiones mejora reproducibilidad y seguridad; `:latest` puede cambiar sin aviso.
 
 
-### Autenticación (docker login)
+#### Autenticación (docker login)
 
 * Requisito para *push* y para repos **privados**.
 
@@ -782,7 +784,7 @@ docker logout
 Note: Las credenciales se guardan en el helper/config del cliente; usa 2FA/tokens personales cuando sea posible.
 
 
-### Etiquetado (docker tag)
+#### Etiquetado (docker tag)
 
 * Formato Docker Hub: `USUARIO/REPO:TAG`.
 * Puedes añadir varias **etiquetas** al mismo `IMAGE ID`.
@@ -795,7 +797,7 @@ docker images
 Note: El tag enlaza tu imagen local con el repositorio remoto objetivo; no copia bytes por sí mismo.
 
 
-### Publicar (docker push)
+#### Publicar (docker push)
 
 * Sube la imagen etiquetada al registro remoto.
 
@@ -808,7 +810,7 @@ docker push joseluisgs/mi-app:v1
 Note: Si intentas `push` sin prefijo de usuario en Docker Hub, fallará (no puedes publicar en “raíz”).
 
 
-### Buenas prácticas de publicación
+#### Buenas prácticas de publicación
 
 * Usa **tags semánticos** (`v1.2.3`, `1.2-alpine`) y marca **inmutable**.
 * Añade **LABEL** de metadatos (source, version, maintainer).
@@ -819,10 +821,10 @@ Note: La inmutabilidad de tags evita sorpresas; si necesitas mover un tag, crea 
 
 ---
 
-## 5.2. Automatización y Registros Alternativos
+### 5.2. Automatización y Registros Alternativos
 
 
-### Builds automatizados (visión general)
+#### Builds automatizados (visión general)
 
 * Conecta un repo (GitHub/Bitbucket) a un registro para construir en cada **commit/tag**.
 * Resultado: imagen construida en servidores del registro y subida automáticamente.
@@ -830,7 +832,7 @@ Note: La inmutabilidad de tags evita sorpresas; si necesitas mover un tag, crea 
 Note: Ideal para pipelines simples; para escenarios avanzados usa tu propio CI (GitHub Actions, GitLab CI, Jenkins) + `docker buildx`.
 
 
-### Builds automatizados (pasos típicos) I
+#### Builds automatizados (pasos típicos) I
 
 1. Repo con `Dockerfile` (y `.dockerignore`).
 2. Configura **reglas** por rama/tag.
@@ -839,7 +841,7 @@ Note: Ideal para pipelines simples; para escenarios avanzados usa tu propio CI (
 Note: Coloca el Dockerfile en la raíz o indica el contexto/subcarpeta según soporte del registro.
 
 
-### Builds automatizados (pasos típicos) II
+#### Builds automatizados (pasos típicos) II
 
 * Estrategia de tags:
     
@@ -851,7 +853,7 @@ Note: Coloca el Dockerfile en la raíz o indica el contexto/subcarpeta según so
 Note: Publica imágenes de producción solo desde tags Git firmados/revisionados.
 
 
-### Registros alternativos I (visión)
+#### Registros alternativos I (visión)
 
 * **Quay** (Red Hat): público/privado, escaneo integrado.
 * **Amazon ECR**: privado, integrado con IAM y AWS.
@@ -862,7 +864,7 @@ Note: Publica imágenes de producción solo desde tags Git firmados/revisionados
 Note: Elige por integración cloud, cumplimiento (RBAC/retención), escaneo y coste.
 
 
-### Registros alternativos II (nomenclatura)
+#### Registros alternativos II (nomenclatura)
 
 * ECR: `aws_account_id.dkr.ecr.REGION.amazonaws.com/mi-repo:tag`
 * GCR/Artifact Registry: `REGION-docker.pkg.dev/PROJECT/REPO/img:tag`
@@ -878,7 +880,7 @@ docker push <endpoint>/<repo>:<tag>
 Note: La autenticación suele delegarse en el CLI cloud (aws/gcloud/az) para obtener tokens temporales.
 
 
-### Registro privado básico con `registry:2`
+#### Registro privado básico con `registry:2`
 
 * Levanta un registro local sencillo (desarrollo/pruebas):
 
@@ -897,14 +899,14 @@ Note: Úsalo en entornos controlados; por defecto no lleva TLS ni autenticación
 
 ---
 
-# 6. Docker Compose: Orquestación Local de Multicontenedores
+## 6. Docker Compose: Orquestación Local de Multicontenedores
 
 ---
 
-## 6.1. Introducción y Utilidad
+### 6.1. Introducción y Utilidad
 
 
-### ¿Qué es Docker Compose?
+#### ¿Qué es Docker Compose?
 
 * Herramienta para **definir y ejecutar** aplicaciones **multi-contenedor**.
 * Un único archivo **YAML** describe servicios, redes y volúmenes.
@@ -913,7 +915,7 @@ Note: Úsalo en entornos controlados; por defecto no lleva TLS ni autenticación
 Note: Reemplaza múltiples `docker run` con parámetros complejos por una definición declarativa, reproducible y versionable.
 
 
-### Casos de uso
+#### Casos de uso
 
 * **Desarrollo local**: levantar web + BD + cache con un solo comando.
 * **CI/Test**: entornos efímeros, predecibles y aislados.
@@ -923,10 +925,10 @@ Note: Para clúster y HA usa Swarm/Kubernetes; Compose brilla en single-host y p
 
 --- 
 
-## 6.2. Sintaxis y Configuración del Archivo `docker-compose.yml`
+### 6.2. Sintaxis y Configuración del Archivo `docker-compose.yml`
 
 
-### Estructura principal
+#### Estructura principal
 
 * Secciones típicas: `services`, `volumes`, `networks`.
 * Versión recomendada: formato v3+ (especialmente si luego migras a Swarm).
@@ -945,7 +947,7 @@ networks:
 Note: Mantén el archivo pequeño y legible; considera dividir por entorno (`-f docker-compose.prod.yml`).
 
 
-### Definición de servicios I
+#### Definición de servicios I
 
 Significado de algunos parametros que pueden aparecer
 
@@ -967,7 +969,7 @@ services:
 Note: Prefiere `image` para reproducibilidad; usa `build` cuando controlas el Dockerfile en el repo.
 
 
-### Definición de servicios II
+#### Definición de servicios II
 
 * `volumes`: persistencia o bind mounts (`./src:/app`).
 * `depends_on`: orden de arranque (no espera readiness).
@@ -987,7 +989,7 @@ services:
 Note: Para readiness usa healthchecks o lógica de reintentos a nivel de aplicación/entrypoint.
 
 
-### Redes y DNS en Compose
+#### Redes y DNS en Compose
 
 * Las redes **de usuario** dan DNS interno (resuelve por **nombre de servicio**).
 * Los servicios en la misma red se ven sin exponer puertos al host.
@@ -1005,7 +1007,7 @@ services:
 Note: En redes definidas por usuario no necesitas `--link`; Compose crea un DNS interno por red.
 
 
-### Buenas prácticas de YAML/Compose
+#### Buenas prácticas de YAML/Compose
 
 * Usa **`.env`** para credenciales no sensibles y puertos.
 * Divide overrides por entorno: `-f docker-compose.yml -f docker-compose.prod.yml`.
@@ -1025,7 +1027,7 @@ services:
 Note: `depends_on` no espera healthcheck; usa `restart` policies y reintentos app-side.
 
 
-### Ejemplo: WordPress + MariaDB I
+#### Ejemplo: WordPress + MariaDB I
 
 * Stack típico de web + base de datos con persistencia y variables de entorno.
 
@@ -1047,7 +1049,7 @@ services:
 Note: Las variables de entorno inicializan MariaDB; el volumen `data` persiste los datos.
 
 
-### Ejemplo: WordPress + MariaDB II
+#### Ejemplo: WordPress + MariaDB II
 
 ```yaml
   web:
@@ -1071,10 +1073,10 @@ Note: `WORDPRESS_DB_HOST=db` usa el **nombre del servicio** (DNS interno). El bi
 
 ---
 
-## 6.3. Comandos Útiles con Docker Compose
+### 6.3. Comandos Útiles con Docker Compose
 
 
-### Levantar servicios
+#### Levantar servicios
 
 * Primer plano (logs combinados) o en **detached**.
 
@@ -1086,7 +1088,7 @@ docker-compose up -d         # segundo plano
 Note: `up` crea redes/volúmenes si no existen y construye imágenes si hay `build` configurado.
 
 
-### Escalado y reconstrucción
+#### Escalado y reconstrucción
 
 * Escala réplicas del servicio (stateless):
 
@@ -1104,7 +1106,7 @@ docker-compose up -d --build
 Note: Escalar bases de datos estateless no es trivial; reserva `--scale` para componentes sin estado.
 
 
-### Parada y eliminación
+#### Parada y eliminación
 
 ```bash
 docker-compose stop          # detiene, conserva contenedores
@@ -1117,7 +1119,7 @@ docker-compose down -v       # elimina también volúmenes
 Note: `down -v` borra **datos** (irreversible). Úsalo con precaución si hay BDs.
 
 
-### Logs y acceso
+#### Logs y acceso
 
 ```bash
 docker-compose ps
@@ -1129,7 +1131,7 @@ docker-compose exec web /bin/bash   # shell dentro del contenedor
 Note: Usa `exec` para tareas administrativas puntuales; evita instalar SSH en contenedores.
 
 
-### Multiples archivos y entornos
+#### Multiples archivos y entornos
 
 * Combina archivos para overrides por entorno:
 
@@ -1147,7 +1149,7 @@ POSTGRES_PORT=5432
 Note: Los valores de `.env` pueden referenciarse en YAML (`${POSTGRES_PORT}`) y no deben versionar secretos sensibles.
 
 
-### Buenas prácticas con Compose
+#### Buenas prácticas con Compose
 
 * Fija **versiones** de imágenes (no `latest`).
 * Define volúmenes nombrados para **persistencia**.

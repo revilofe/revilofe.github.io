@@ -142,7 +142,7 @@ Los **sistemas de gestión de versiones** permiten a los desarrolladores rastrea
     - Facilitan el seguimiento y revertido de cambios.
 
 
-#### 2.7. Frameworks: Plantillas y Librerías que Facilitan el Desarrollo**
+#### 2.7. Frameworks: Plantillas y Librerías que Facilitan el Desarrollo
 
 Los **frameworks** proporcionan una estructura predefinida para desarrollar aplicaciones, facilitando la creación de proyectos mediante librerías y plantillas reutilizables.
 
@@ -154,7 +154,7 @@ Los **frameworks** proporcionan una estructura predefinida para desarrollar apli
     - Ahorro de tiempo en el desarrollo al reutilizar componentes.
     - Estandarizan la estructura y organización del código.
 
-#### 2.8. Herramientas para Pruebas y Calidad de Código**
+#### 2.8. Herramientas para Pruebas y Calidad de Código
 
 Las **herramientas de pruebas** aseguran que el software funcione como se espera. Pueden realizar pruebas automáticas de diferentes aspectos del software, desde pruebas unitarias hasta pruebas de carga y rendimiento.
 
@@ -167,11 +167,13 @@ Las **herramientas de pruebas** aseguran que el software funcione como se espera
     - Detectan errores y malas prácticas antes de que lleguen al entorno de producción.
     - Mejoran la mantenibilidad y legibilidad del código.
 
-#### 2.9. Otras herramientas
-Existen otras herramientas que pueden ser útiles en el desarrollo de software, como:
-- **Make GNU**: Utilidad disponible normalmente en Linux que agiliza la tarea de compilar código desde la terminal. Nos evita tener que escribir los comandos de compilación a mano, que suelen ser muy largos, y en cambio nos permite escribir algo mucho más corto que al final hace lo mismo.
-- **Maven** y **Ant**: Herramientas de automatización facilitar la compilación y creación de programas Java;
-- **Herramientas de refactorización**: Incluidas como funcionalidades avanzadas de editores, permiten realizar cambios en el código fuente para hacerlo más legible, fácil de mantener y eficiente sin cambiar la funcionalidad.
+#### 2.9. Otras herramientas   
+
+Existen otras herramientas que pueden ser útiles en el desarrollo de software, como:    
+
+- **Make GNU**: Utilidad disponible normalmente en Linux que agiliza la tarea de compilar código desde la terminal. Nos evita tener que escribir los comandos de compilación a mano, que suelen ser muy largos, y en cambio nos permite escribir algo mucho más corto que al final hace lo mismo.   
+- **Maven** y **Ant**: Herramientas de automatización facilitar la compilación y creación de programas Java   
+- **Herramientas de refactorización**: Incluidas como funcionalidades avanzadas de editores, permiten realizar cambios en el código fuente para hacerlo más legible, fácil de mantener y eficiente sin cambiar la funcionalidad.   
 
 ### 3. Conclusión
 

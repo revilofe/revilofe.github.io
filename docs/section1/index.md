@@ -16,9 +16,19 @@ toc_icon: "file-code"
 
 Módulo de programación, 1 DAW.
 
-* [Presentación](https://revilofe.github.io/slides/PR-U0.1.1.-Presentacion.html)
+## Presentaciones
+
+* [PR-U0.1.1 - Presentación](https://revilofe.github.io/slides/PR-U0.1.1.-Presentacion.html)
   * Formulario 1: [Como soy](https://forms.gle/HjjPbyUWF9njHkBM8)
   * Formulario 2: [Conocimientos previos](https://forms.gle/HDqysZSEuv27F56e8)
+* [PR-U1.1 - Un Programa Informático](https://revilofe.github.io/slides/PR-U1.1.-UnProgramaInformatico.html)
+* [PR-U1.1.1 - Pseudocódigo](https://revilofe.github.io/slides/PR-U1.1.1.-Pseudocodigo.html)
+* [PR-U1.2 - Práctica con un Lenguaje](https://revilofe.github.io/slides/PR-U1.2.PracticaConUnLenguajes.html)
+* [PR-U3.3 - Diccionarios](https://revilofe.github.io/slides/PR-U3.3.-Diccionarios.html)
+* [PR-U3.4 - Conjuntos](https://revilofe.github.io/slides/PR-U3.4.-Conjuntos.html)
+* [PR-U3.5 - Funciones](https://revilofe.github.io/slides/PR-U3.5.-Funciones.html)
+* [PR-U4.1 - Kotlin Básico](https://revilofe.github.io/slides/PR-U4.1.-KotlinBasico.html)
+* [PR-U7.3 - Gestión de Archivos Clase File](https://revilofe.github.io/slides/PR-U7.3.-GestionArchivosClaseFile.html)
 
 Se describe el módulo profesional de programación. Esta información se divide en:
 

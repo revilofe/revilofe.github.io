@@ -23,6 +23,13 @@ Se describe el módulo profesional de Entornos de Desarrollo. Esta información 
 
 Todo el contenido está supeditado a mejora, de hecho está en construcción, y por tanto es solo una propuesta que irá cambiando, espero que a mejor. Si tienes una propuesta de mejora, no te cortes y pásamela ;-).
 
+## Presentaciones
+
+* [ED-U1.1 - Software y Hardware](https://revilofe.github.io/slides/ED-U1.1.-Software-Hardware.html)
+* [ED-U1.2 - Código Fuente, Objeto y Ejecutable](https://revilofe.github.io/slides/ED-U1.2.-CodigoFuenteObjetoEjecutable.html)
+* [ED-U3.1 - Pruebas](https://revilofe.github.io/slides/ED-U3.1.-Pruebas.html)
+* [ED-U3.2.1 - Kotest](https://revilofe.github.io/slides/ED-U3.2.1.-Kotest.html)
+
 ## Información
 
 ### Propuesta de temario

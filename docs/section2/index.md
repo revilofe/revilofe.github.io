@@ -22,6 +22,11 @@ Se describe el módulo profesional de Incidentes de ciberseguridad. Esta informa
 
 Todo el contenido está supeditado a mejora, pues es solo una propuesta que irá cambiando, espero que a mejor. Si tienes una propuesta de mejora, no te cortes y pasamela ;-).
 
+## Presentaciones
+
+* [IS-U0.1.1 - Presentación](https://revilofe.github.io/slides/IS-U0.1.1.-Presentacion.html)
+* [IS-U2.2 - SOC](https://revilofe.github.io/slides/IS-U2.2.-SOC.html)
+
 ## Información
 
 ### Propuesta de temario

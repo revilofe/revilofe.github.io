@@ -41,3 +41,39 @@ Los apuntes están en constante revisión y actualización, por lo que te recomi
 
 Espero que encuentres útil la información que aquí se comparte. ¡Gracias por tu visita!
 
+## Presentaciones
+
+Aquí tienes acceso directo a todas las presentaciones disponibles, organizadas por módulo:
+
+### Programación (PR)
+
+* [PR-U0.1.1 - Presentación](https://revilofe.github.io/slides/PR-U0.1.1.-Presentacion.html)
+* [PR-U1.1 - Un Programa Informático](https://revilofe.github.io/slides/PR-U1.1.-UnProgramaInformatico.html)
+* [PR-U1.1.1 - Pseudocódigo](https://revilofe.github.io/slides/PR-U1.1.1.-Pseudocodigo.html)
+* [PR-U1.2 - Práctica con un Lenguaje](https://revilofe.github.io/slides/PR-U1.2.PracticaConUnLenguajes.html)
+* [PR-U3.3 - Diccionarios](https://revilofe.github.io/slides/PR-U3.3.-Diccionarios.html)
+* [PR-U3.4 - Conjuntos](https://revilofe.github.io/slides/PR-U3.4.-Conjuntos.html)
+* [PR-U3.5 - Funciones](https://revilofe.github.io/slides/PR-U3.5.-Funciones.html)
+* [PR-U4.1 - Kotlin Básico](https://revilofe.github.io/slides/PR-U4.1.-KotlinBasico.html)
+* [PR-U7.3 - Gestión de Archivos Clase File](https://revilofe.github.io/slides/PR-U7.3.-GestionArchivosClaseFile.html)
+
+### Entornos de Desarrollo (ED)
+
+* [ED-U1.1 - Software y Hardware](https://revilofe.github.io/slides/ED-U1.1.-Software-Hardware.html)
+* [ED-U1.2 - Código Fuente, Objeto y Ejecutable](https://revilofe.github.io/slides/ED-U1.2.-CodigoFuenteObjetoEjecutable.html)
+* [ED-U3.1 - Pruebas](https://revilofe.github.io/slides/ED-U3.1.-Pruebas.html)
+* [ED-U3.2.1 - Kotest](https://revilofe.github.io/slides/ED-U3.2.1.-Kotest.html)
+
+### Incidentes de Seguridad (IS)
+
+* [IS-U0.1.1 - Presentación](https://revilofe.github.io/slides/IS-U0.1.1.-Presentacion.html)
+* [IS-U2.2 - SOC](https://revilofe.github.io/slides/IS-U2.2.-SOC.html)
+
+### Despliegue de Aplicaciones Web (DAW)
+
+* [DAW-U1.1 - DevOps](https://revilofe.github.io/slides/DAW-U1.1.-DevOps.html)
+* [DAW-U1.2 - Documentación](https://revilofe.github.io/slides/DAW-U1.2.-Documentacion.html)
+* [DAW-U1.3 - Git y GitHub](https://revilofe.github.io/slides/DAW-U1.3.-GitGitHub.html)
+* [DAW-U1.4 - GitHub Actions](https://revilofe.github.io/slides/DAW-U1.4.-GitHubAction.html)
+* [DAW-U2.1 - Docker](https://revilofe.github.io/slides/DAW-U2.1.-Docker.html)
+

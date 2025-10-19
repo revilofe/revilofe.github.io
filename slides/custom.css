@@ -1,0 +1,15 @@
+/* Custom styles to ensure progress bar and slide numbers are visible */
+
+/* Force progress bar to be visible */
+.reveal .progress {
+    display: block !important;
+    height: 4px !important;
+    z-index: 1000 !important;
+}
+
+/* Ensure slide number has enough bottom margin */
+.reveal .slide-number {
+    bottom: 15px !important;
+    right: 15px !important;
+    font-size: 14px !important;
+}

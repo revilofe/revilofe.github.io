@@ -23,6 +23,14 @@ toc_icon: "file-code"
 
 ## Unidad 2: Estructuras de control en la programación
 
+### Presentaciones de la Unidad 2
+
+* [PR-U2.1 - Condicionales](https://revilofe.github.io/slides/PR-U2.1.-Condicionales.html)
+* [PR-U2.2 - Iterativas](https://revilofe.github.io/slides/PR-U2.2.-Iterativas.html)
+* [PR-U2.3 - Excepciones](https://revilofe.github.io/slides/PR-U2.3.-Excepciones.html)
+* [PR-U2.4 - Depurar](https://revilofe.github.io/slides/PR-U2.4.-Depurar.html)
+* [PR-U2.5 - Documentar](https://revilofe.github.io/slides/PR-U2.5.-Documentar.html)
+
 ### 1. **Normativa de respaldo**
 La unidad está respaldada por la normativa [oficial del curso](https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf).
 

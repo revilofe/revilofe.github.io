@@ -14,7 +14,7 @@ tags:
 ---
 ## 1.1.1. Principios generales
 
-Antes de comenzar a trabajar en la ciberseguridad de una organización, es importante tener en cuenta los principios generales que rigen la seguridad de la información. Estos principios son la base sobre la que se construye cualquier estrategia de ciberseguridad y deben ser conocidos y apoyados por la dirección de la organización.
+Antes de comenzar a trabajar en la ciberseguridad de una organización, es importante tener en cuenta los **principios generales** que rigen la seguridad de la información. Estos principios son la base sobre la que se construye cualquier estrategia de ciberseguridad y deben ser conocidos y apoyados por la dirección de la organización.
 
 <figure markdown>
   ![](assets/IS-U111-PrincipiosGenerales1.png)
@@ -28,17 +28,17 @@ La ciberseguridad es un campo complejo que abarca una amplia gama de temas y tec
 
 #### 1.1. Ciberseguridad
 
-Imagina que la ciberseguridad es como poner cerraduras, alarmas y cámaras en una casa. Su objetivo es proteger todo lo que hay dentro y evitar que alguien no autorizado entre, dañe o robe algo. En el mundo digital, la ciberseguridad **protege nuestros ordenadores, teléfonos, redes y la información que almacenamos en ellos de ataques, robos de datos o virus**.
+Imagina que la ciberseguridad es como poner cerraduras, alarmas y cámaras en una casa. Su objetivo es **proteger** todo lo que hay dentro y evitar que alguien no autorizado entre, dañe o robe algo. En el mundo digital, la ciberseguridad **protege nuestros ordenadores, teléfonos, redes y la información que almacenamos en ellos de ataques, robos de datos o virus**.
 
-Ejemplo práctico: Cuando configuras una contraseña en tu correo electrónico, estás usando ciberseguridad para proteger tu información personal.
+Ejemplo: Cuando configuras una contraseña en tu correo electrónico, estás usando ciberseguridad para proteger tu información personal.
 
 #### 1.2. Ciberdefensa
 
-Si la ciberseguridad es poner cerraduras en la casa, la ciberdefensa sería contratar a un guardia de seguridad para vigilar y estar preparado por si alguien intenta entrar. La ciberdefensa se enfoca en **responder a ataques que ya están ocurriendo o evitar que vuelvan a suceder**. Incluye monitorear las redes, detectar comportamientos sospechosos y reaccionar rápidamente.
+Si la ciberseguridad es poner cerraduras en la casa, la ciberdefensa sería contratar a un guardia de seguridad para **vigilar** y estar preparado por si alguien intenta entrar. La ciberdefensa se enfoca en **responder a ataques que ya están ocurriendo o evitar que vuelvan a suceder**. Incluye monitorear las redes, detectar comportamientos sospechosos y reaccionar rápidamente.
 
-Ejemplo práctico: Si una empresa detecta un ataque en su sistema, la ciberdefensa entra en acción para detenerlo, buscar de dónde vino y mejorar la seguridad para que no vuelva a pasar.
+Ejemplo: Si una empresa detecta un ataque en su sistema, la ciberdefensa entra en acción para detenerlo, buscar de dónde vino y mejorar la seguridad para que no vuelva a pasar.
 
-la ciberseguridad y la ciberdefensa son dos caras de la misma moneda. La ciberseguridad se enfoca en prevenir ataques, mientras que la ciberdefensa se enfoca en responder a ellos. Ambas son esenciales para proteger los sistemas de información de una organización.
+La ciberseguridad y la ciberdefensa son dos caras de la misma moneda. La ciberseguridad se enfoca en prevenir ataques, mientras que la ciberdefensa se enfoca en responder a ellos. Ambas son necesarios para proteger los sistemas de información de una organización.
 
 #### 1.3. Sistemas de información
 
@@ -51,10 +51,10 @@ Los sistemas de información incluyen:
 * **Personas**: Usuarios que interactúan con los sistemas para obtener y procesar la información.
 * **Tecnología**: Los sistemas informáticos (hardware y software) que permiten gestionar los datos.
 
-Ejemplos:
+Ejemplos de sistemas de información pueden ser:
 
 * Un sistema de gestión de inventario que controla las existencias en un almacén.
-* Un sistema de nómina en una empresa, que gestiona los pagos a los empleados.
+* Un sistema de nóminas en una empresa, que gestiona los pagos a los empleados.
 * Un CRM (Customer Relationship Management), que almacena datos sobre los clientes y ayuda a las empresas a gestionar sus interacciones.
 
 Proteger los sistemas de información implica proteger no solo el hardware y software (que forman parte de los sistemas informáticos), sino también la información y los procesos que los utilizan. Esto incluye:
@@ -70,7 +70,15 @@ Proteger los sistemas de información implica proteger no solo el hardware y sof
 </figure>
 
 
-Si bien los sistemas informáticos no tiene por que contener elementos informáticos, en la actualidad se hace difícil imaginarse esta situación. Se tratará la seguridad de los sistemas de información en general, y los sistemas informáticos en particular.
+Si bien **los sistemas de información no tiene por qué contener elementos informáticos**, por ejemplo, los sistemas de información no informáticos pueden incluir, por ejemplo:   
+
+* Archivos en papel almacenados en un archivo físico.
+* Procesos manuales para gestionar la información, como formularios en papel.
+* Personas que manejan la información sin el uso de tecnología digital.
+* Sistemas de comunicación no digitales, como el correo postal.
+* Sistemas de control manuales, como registros escritos a mano.
+
+En la actualidad se hace difícil imaginarse esta situación. Por tanto, la ciberseguridad de los sistemas de información abarca tanto la protección de los componentes digitales (sistemas informáticos) como la protección de los procesos, datos y personas que interactúan con esos sistemas.
 
 #### 1.4. Sistema informático
 
@@ -78,20 +86,25 @@ Los sistemas informáticos se refieren al hardware y software que permiten proce
 
 Los sistemas de información incluyen:
 
-* **Hardware**: Computadoras, servidores, dispositivos móviles, routers, etc.
+* **Hardware**: Ordenadores personales, servidores, dispositivos móviles, electrónica de red, etc.
 * **Software**: Sistemas operativos, aplicaciones, programas, bases de datos.
+
 
 Ejemplos:
 
-* Tu computadora personal, con su sistema operativo (Windows, Linux, macOS) y los programas que usas (Microsoft Word, Google Chrome).
+* Tu ordenador personal, con su sistema operativo (Windows, Linux, macOS) y las aplicaciones que usas (Microsoft Word, Google Chrome).
 * Un servidor en una empresa que procesa y almacena los datos de los empleados.
 * El router que utilizas para conectarte a Internet.
 
-Proteger los sistemas informáticos significa garantizar que el hardware (dispositivos) y el software (programas) estén seguros y funcionen correctamente. Esto incluye:
+Proteger los sistemas informáticos significa garantizar que el hardware (dispositivos) y el software (programas y aplicaciones) estén seguros y funcionen correctamente. Esto incluye:
 
 * Actualización de software.
 * Mantenimiento de hardware.
 * Uso de antivirus y firewalls para evitar que el hardware y software sean comprometidos.
+* Asegurar que solo usuarios autorizados puedan acceder a los sistemas.
+* Proteger el acceso físico a los dispositivos.
+* Etc.
+
 
 <figure markdown>
   ![](assets/IS-U111-PrincipiosGenerales3.png)
@@ -101,11 +114,10 @@ Proteger los sistemas informáticos significa garantizar que el hardware (dispos
 
 **Analogía para visualizarlo mejor**:
 
-* Sistemas informáticos son como los vehículos en una flota de autos de una empresa (los autos, motores, llantas, etc.). Se trata de la tecnología física y los programas que permiten el funcionamiento.
-* Sistemas de información son como todo el sistema de logística de la empresa que usa esos vehículos. Incluyen los autos (sistemas informáticos), pero también el proceso de entrega, los conductores (personas), y la información de cada paquete o envío (datos). En este caso, proteger los sistemas de información no solo significa cuidar los vehículos, sino también asegurar que los paquetes lleguen a tiempo, sin daños, y que los conductores sigan los procedimientos correctos.
-*
+* Los sistemas informáticos son como los vehículos en una flota de autos de una empresa (los autos, motores, llantas, etc.). Se trata de la tecnología física y los programas que permiten el funcionamiento.
+* Los sistemas de información son como todo el sistema de logística de la empresa que usa esos vehículos. Incluyen los autos (sistemas informáticos), pero también el proceso de entrega, los conductores (personas), y la información de cada paquete o envío (datos). En este caso, proteger los sistemas de información no solo significa cuidar los vehículos, sino también asegurar que los paquetes lleguen a tiempo, sin daños, y que los conductores sigan los procedimientos correctos.
 
-**Ejemplo práctico**:
+**Ejemplo:**:
 
 * Sistema informático: La red de computadoras en una empresa, junto con los servidores que ejecutan el sistema operativo y los programas de software.
     * Ciberseguridad: Asegurar que los servidores y computadoras estén protegidos frente a malware, actualizados y funcionando correctamente.
@@ -114,21 +126,23 @@ Proteger los sistemas informáticos significa garantizar que el hardware (dispos
 
 ### 2. Seguridad vs fiabilidad
 
-La frase “La seguridad total es imposible de conseguir, por tanto hablaremos más de fiabilidad” nos ayuda a entender una verdad clave en ciberseguridad y en la gestión de sistemas: la seguridad perfecta no existe. Vamos a desglosarla paso a paso y explicar por qué la fiabilidad se convierte en un enfoque más realista.
+La frase “La seguridad total es imposible de conseguir, por tanto hablaremos más de fiabilidad” nos ayuda a entender una verdad clave en ciberseguridad y en la gestión de sistemas: **la seguridad perfecta no existe**. Vamos a desglosarla paso a paso y explicar por qué la fiabilidad se convierte en un enfoque más realista.
 
 #### 2.1. Imposibilidad de la seguridad total
 
 * La seguridad total es inalcanzable porque siempre habrá nuevas amenazas, errores humanos y vulnerabilidades desconocidas. Por más que una empresa implemente controles, firewalls, políticas y medidas avanzadas, siempre existe el riesgo de que algo no salga como se esperaba.
 * Los sistemas informáticos y de información son complejos y dinámicos: constantemente se introducen nuevos componentes, actualizaciones y tecnologías que pueden abrir nuevas brechas. Además, los atacantes también están en evolución constante, encontrando nuevas formas de vulnerar los sistemas.
-* Ejemplo en la vida real: Piensa en una casa. Aunque pongas puertas blindadas, cámaras de seguridad, y alarmas, siempre puede haber un ladrón que descubra una nueva forma de entrar o que se aproveche de un pequeño descuido, como una ventana abierta por error. Lo mismo sucede en ciberseguridad: siempre hay un margen de vulnerabilidad.
+
+**Ejemplo:** Piensa en una casa. Aunque pongas puertas blindadas, cámaras de seguridad, y alarmas, siempre puede haber un ladrón que descubra una nueva forma de entrar o que se aproveche de un pequeño descuido, como una ventana abierta por error. Lo mismo sucede en ciberseguridad: siempre hay un margen de vulnerabilidad.
 
 #### 2.2. El enfoque en la fiabilidad
 
-* Dado que la seguridad perfecta no es posible, se pone mayor énfasis en la fiabilidad. En lugar de intentar lograr una protección 100% segura, el objetivo es hacer que los sistemas sean confiables y resilientes. Esto significa que, si ocurre un incidente o un fallo, los sistemas puedan seguir funcionando, recuperarse rápidamente, y los daños se minimicen.
+* Dado que la seguridad perfecta no es posible, se pone mayor énfasis en la fiabilidad. En lugar de intentar lograr una protección 100% segura, el objetivo es hacer que los sistemas sean **confiables** y **resilientes**. Esto significa que, si ocurre un incidente o un fallo, los sistemas puedan seguir funcionando, recuperarse rápidamente, y los daños se minimicen.
 * Fiabilidad no significa que los sistemas sean invulnerables, sino que son capaces de funcionar correctamente incluso en situaciones de fallo o ataque. La fiabilidad se basa en conceptos como:
-    * **Alta disponibilidad**: Asegurar que los sistemas estén disponibles para los usuarios, incluso ante fallos.
-    * **Resiliencia**: Capacidad del sistema de recuperarse después de un incidente (por ejemplo, un ataque cibernético o un fallo técnico).
-    * **Tolerancia a fallos**: Los sistemas están diseñados de manera que puedan seguir funcionando o minimizar el impacto ante un fallo de componentes.
+
+    * **Alta disponibilidad**: Asegurar que los sistemas estén disponibles para los usuarios, incluso ante fallos. Hay blip corto y vuelve solo 
+    * **Resiliencia**: Capacidad del sistema de recuperarse después de un incidente (por ejemplo, un ataque cibernético o un fallo técnico). Hay parada y recuperas con DR/backups.
+    * **Tolerancia a fallos**: Los sistemas están diseñados de manera que puedan seguir funcionando o minimizar el impacto ante un fallo de componentes. (No hay corte, ante componente conocido que falle).
 
 #### 2.3. Cómo se conectan seguridad y fiabilidad en esta frase
 
@@ -145,7 +159,7 @@ La fiabilidad es un enfoque más realista y efectivo que la seguridad total. Alg
 * **Protección ante lo inesperado**: Nadie puede prever todas las amenazas futuras. En lugar de intentar anticiparlas todas, se asegura que los sistemas puedan seguir funcionando de manera predecible y estable a pesar de los desafíos.
 * **Costos y recursos**: Intentar alcanzar una seguridad perfecta sería muy costoso y agotador. En cambio, mejorar la fiabilidad suele ser una inversión más equilibrada que ofrece mayores beneficios en términos de continuidad operativa.
 
-Ejemplo práctico en ciberseguridad:
+Ejemplo:
 
 Imagina una pequeña empresa que almacena datos importantes en sus servidores. En lugar de invertir en una seguridad "perfecta" (lo que implicaría un gasto altísimo en tecnologías de punta, personal especializado, y auditorías constantes), la empresa decide focalizarse en la fiabilidad:
 
@@ -159,7 +173,7 @@ Este enfoque permite que, aunque haya un incidente de seguridad (lo que es inevi
 
 ### 3. Los principios generales de la ciberseguridad
 
-Los principios generales de la ciberseguridad son los pilares sobre los que se construye cualquier estrategia de protección de la información. Estos principios son universales y aplicables a cualquier organización, independientemente de su tamaño o sector. Algunos de los principios más importantes son los siguientes
+Los **principios generales de la ciberseguridad** son los pilares sobre los que se construye cualquier estrategia de protección de la información. Estos principios son universales y aplicables a cualquier organización, independientemente de su tamaño o sector. Algunos de los principios más importantes son los siguientes
 
 #### 3.1. Triada CIA
 
@@ -167,7 +181,7 @@ Los principios generales de la ciberseguridad son los pilares sobre los que se c
 * Integridad: La información debe mantenerse exacta y completa, sin modificaciones no autorizadas.
 * Disponibilidad: La información y los sistemas deben estar disponibles cuando se necesiten.
 
-Ejemplo práctico integrando CIA: Imagina que trabajas en una empresa financiera y tienes acceso a información sobre las cuentas de los clientes:
+Ejemplo integrando CIA: Imagina que trabajas en una empresa financiera y tienes acceso a información sobre las cuentas de los clientes:
 
 1. Confidencialidad: Solo tú, como empleado autorizado, puedes acceder a esos datos financieros. Para protegerlos, los sistemas utilizan cifrado y contraseñas seguras.
 2. Integridad: Los registros de las cuentas no deben ser alterados sin permiso. Si alguien intenta modificar los datos sin autorización, el sistema detectará el cambio y activará alertas para corregirlo. También se usan copias de seguridad para asegurar que los datos originales pueden ser restaurados.
@@ -232,7 +246,7 @@ La disponibilidad asegura que los sistemas y datos estén accesibles y operativo
 
 #### 3.2. Otros principios
 
-Existen principios adicionales que complementan el enfoque de seguridad de la información y que son igualmente importantes en muchos contextos, como son: fiabilidad, autenticidad y no repudio. Vamos a explicarlos de manera didáctica para que quede todo claro.
+Existen principios adicionales que complementan el enfoque de seguridad de la información y que son igualmente importantes en muchos contextos, como son: fiabilidad, autenticidad y no repudio. Vamos a comentarlos a continuación: 
 
 ##### 3.2.1. Fiabilidad (Reliability)
 
@@ -261,7 +275,7 @@ El no repudio significa que ninguna de las partes involucradas en una comunicaci
     * Si firmas un contrato digitalmente, el sistema garantiza que no puedas negar haber firmado dicho contrato en el futuro. La firma digital proporciona evidencia de que tú (el remitente) lo hiciste, y esta evidencia puede ser verificada.
     * En una transacción bancaria en línea, el no repudio asegura que si transfieres dinero a alguien, no puedas negar que hiciste esa transacción, y el banco puede probarlo si fuera necesario.
 
-#### 3.3. Ejemplo práctico integrando todo
+#### 3.3. Ejemplo integrando todo
 
 Imagina que estás comprando algo en línea:
 
@@ -391,7 +405,7 @@ Antes de hablar de amenazas, vulnerabilidades y riesgos, es esencial que primero
 
 Un activo es cualquier recurso o bien que tiene valor para la empresa. En el ámbito de la ciberseguridad, se refiere a cualquier cosa que pueda afectar la seguridad o el funcionamiento de los sistemas de información si se viera comprometido. Los activos pueden ser tangibles (como equipos o edificios) o intangibles (como datos o software), y su protección es el objetivo principal de la ciberseguridad.
 
-##### 5.1.2. Ejemplo práctico
+##### 5.1.2. Ejemplo
 
 Imagina que trabajas en una empresa que gestiona datos financieros. Los activos más importantes de esa empresa serían:
 
@@ -409,20 +423,20 @@ Para hacer más fácil su gestión y protección, los activos se clasifican en d
     * Ejemplos:
         * Bases de datos de clientes o ventas.
         * Documentación importante como contratos, manuales, normativas o informes.
-    * Importancia: La confidencialidad y integridad de los datos son esenciales, ya que su pérdida o alteración puede dañar gravemente la empresa.
+    * Importancia: La confidencialidad e integridad de los datos es vital, ya que su pérdida o alteración puede tener consecuencias legales, financieras y de reputación para la empresa.
 
 2. Aplicaciones: Son los programas y software que utiliza la organización para gestionar y operar su negocio. Incluyen tanto aplicaciones comerciales como sistemas personalizados desarrollados específicamente para la empresa.
     * Ejemplos:
         * Sistemas SCADA (usados en procesos industriales).
         * Software operativo como sistemas operativos, firmware, aplicaciones de gestión de usuarios o recursos (ERP, CRM).
-    * Importancia: La disponibilidad y seguridad de las aplicaciones son clave para garantizar que los sistemas y procesos funcionen sin interrupciones.
+    * Importancia: La disponibilidad y seguridad de las aplicaciones son clave para garantizar que los sistemas y procesos funcionen sin interrupciones, y que los datos se manejen de manera segura.
 
 3. Hardware industrial: Se refiere a los equipos físicos que son necesarios para el funcionamiento de la empresa, especialmente en industrias o sectores que dependen de tecnología avanzada.
     * Ejemplos:
         * PLC (Controladores Lógicos Programables), que automatizan procesos industriales.
         * Servidores y terminales remotas en fábricas.
         * Dispositivos móviles usados para gestionar procesos.
-    * Importancia: El hardware es crítico para las operaciones diarias, y si falla, puede causar pérdidas operativas significativas.
+    * Importancia: El hardware es crítico para las operaciones diarias, y si falla, puede causar pérdidas operativas significativas o incluso riesgos de seguridad.
 
 4. Red: Son los dispositivos y equipos que permiten la conectividad y comunicación entre los sistemas, usuarios y procesos.
     * Ejemplos:

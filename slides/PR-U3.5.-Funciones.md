@@ -1,7 +1,4 @@
-<!-- Con # se ponen los títulos -->
-
-## U3.5
-## Funciones
+# U3.5 - Funciones
 
 ---
 
@@ -9,390 +6,511 @@
 
 ---
 
-## Indice
+## Índice
 
 ---
 
-### Funciones en Python
-
-* Las funciones son estructuras esenciales de código.
-* Unidades lógicas del programa.
-* Dividen y organizan el código para mayor legibilidad y reutilización.
-* Agrupan instrucciones para resolver un problema concreto.
-* Objetivos:
-  * Dividir y organizar el código.
-  * Encapsular código repetitivo.
-
-Note: Las funciones predefinidas en Python facilitan el trabajo, pero puedes definir las tuyas propias.
-
----
-
-### Cómo definir una función en Python
-
-* Utiliza la palabra reservada `def`.
-* Nombre de la función seguido de paréntesis y lista de parámetros (opcional).
-* Cabecera termina con dos puntos.
-* Cuerpo de la función con sangrado mayor.
-* Opcional: instrucción `return` para devolver un resultado.
-* docstring se utiliza para documentar la función.
-
-Note: El primer string de una función se llama docstring y se usa para documentar la función. Documenta siempre las
-funciones.
-
----
-
-### Cómo usar una función en Python
-
-* Para invocarla, escribe su nombre como una instrucción.
-* Pasa los argumentos según los parámetros definidos.
-
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def multiplica_por_5(numero):
-    print(f'{numero} * 5 = {numero * 5}')  # 7 * 5 = 35
-
-multiplica_por_5(7)
-</code></div></div></pre>
-
-Note: El flujo de ejecución se desplaza a la función cuando es llamada.
-
----
-
-## Parámetros y argumentos
+## Introducción
 
 
-### Diferencia entre parámetro y argumento
+### ¿Por qué funciones?
 
-* Parámetro: definido en la función.
-* Argumento: valor pasado a la función al ser invocada.
+* Evitar repetir código (DRY - Don't Repeat Yourself)
+* Dividir programas complejos en partes manejables
+* Facilitar testing y depuración
+* Reutilizar código en múltiples lugares
+* Hacer código más legible y mantenible
 
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def multiplica_por_5(numero):  # 'numero' es un parámetro
-    print(f'{numero} * 5 = {numero * 5}')
-
-multiplica_por_5(7)  # '7' es un argumento
-</code></div></div></pre>
-
-Note: Es importante distinguir entre ambos conceptos.
+Note: Las funciones son fundamentales en programación. Imagina copiar-pegar el mismo código 10 veces: si hay un bug, debes arreglarlo 10 veces. Con funciones, lo arreglas una vez. Las funciones son los bloques de construcción de programas grandes.
 
 
-### Parámetros
+### ¿Qué es una función?
 
-* Paso por valor: copia el valor de las variables.
-* Paso por referencia: copia la dirección de memoria.
+* Bloque de código reutilizable
+* Tiene un nombre descriptivo
+* Puede recibir datos (parámetros)
+* Puede devolver resultados (return)
+* Se ejecuta solo cuando se llama
 
-Note: En Python, se pasa por valor la referencia del objeto.
+```python
+# Definir función
+def saludar(nombre):
+    return f'Hola, {nombre}!'
+
+# Llamar función
+mensaje = saludar('Ana')
+print(mensaje)  # 'Hola, Ana!'
+```
+
+Note: Una función es como una mini-máquina: le das input (parámetros), hace algo, y te da output (retorno). La defines una vez con def, la usas muchas veces llamándola por nombre.
+
+
+### Anatomía de una función
+
+```python
+def nombre_funcion(parametro1, parametro2):
+    """Documentación de la función (docstring)"""
+    # Cuerpo de la función
+    resultado = parametro1 + parametro2
+    return resultado
+
+# def: palabra clave
+# nombre_funcion: identificador descriptivo
+# (parametro1, parametro2): parámetros (entrada)
+# ""docstring"": documentación
+# return: devuelve valor (salida)
+```
+
+Note: Los componentes esenciales: def inicia definición, nombre debe ser descriptivo (snake_case), paréntesis contienen parámetros, dos puntos inician bloque, docstring documenta, return devuelve resultado.
 
 ---
 
-## \*args y \*\*kwargs en Python
+## Definir y Llamar Funciones
 
 
-### Significado de \*args y \*\*kwargs en Python
+### Definir función simple
 
-* Permiten funciones con un número variable de argumentos.
-* Proporcionan flexibilidad en la cantidad y tipo de argumentos.
+```python
+# Función sin parámetros ni retorno
+def saludar():
+    print('¡Hola!')
 
-Note: `*args` y `**kwargs` permiten flexibilidad en las funciones.
+# Función con parámetro, sin retorno
+def saludar_persona(nombre):
+    print(f'Hola, {nombre}!')
 
+# Función sin parámetros, con retorno
+def obtener_pi():
+    return 3.14159
 
-### Uso de \*args
+# Función completa
+def sumar(a, b):
+    resultado = a + b
+    return resultado
+```
 
-* `*args` permite argumentos sin palabras clave.
-
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def sumar(*args):
-    return sum(args)  # sum es una función incorporada de Python
-
-print(sumar(3, 5, 10, 15))  # Imprime 33
-</code></div></div></pre>
-
-Note: `*args` permite pasar una lista variable de argumentos.
-
-
-### Uso de \*\*kwargs  
-  
-* `**kwargs` permite argumentos con palabras clave.  
-
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def describir_persona(**kwargs):
-    for clave, valor in kwargs.items():
-        print(f"{clave}: {valor}")
-
-describir_persona(nombre="John", edad=25, ciudad="Nueva York")
-</code></div></div></pre>
-  
-Note: `**kwargs` permite pasar un diccionario variable de argumentos con palabras clave.
-  
-  
-### Ejemplo de \*args para sumar números  
-
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def sum(*args):
-    value = 0
-    for n in args:
-        value += n
-    return value
-</code></div></div></pre>
-  
-Note: Ejemplos de funciones que utilizan `*args`.
+Note: Las funciones pueden tener 0+ parámetros y retornar o no retornar valor. Sin return, devuelven None implícitamente. Con return, devuelven el valor especificado. Elige según necesidad.
 
 
-### Ejemplo de \*\*kwargs para filtrar datos   
-  
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def filtrar(**kwargs):
-    condiciones = " AND ".join([f"{k}='{v}'" for k, v in kwargs.items()])
-    return f"SELECT * FROM clientes WHERE {condiciones};"
-</code></div></div></pre>
-      
-Note: Ejemplos de funciones que utilizan `**kwargs`.
+### Llamar funciones
+
+```python
+def multiplicar(a, b):
+    return a * b
+
+# Llamada básica
+resultado = multiplicar(5, 3)
+print(resultado)  # 15
+
+# Usar directamente el resultado
+print(multiplicar(10, 2))  # 20
+
+# En expresiones
+total = multiplicar(4, 5) + multiplicar(3, 2)
+print(total)  # 26
+
+# Llamadas anidadas
+print(multiplicar(multiplicar(2, 3), 4))  # 24
+```
+
+Note: Llamar una función ejecuta su código. Captura el retorno en variable o úsalo directamente. Puedes llamar funciones dentro de expresiones o como argumentos de otras funciones. Las llamadas anidadas se evalúan de dentro hacia fuera.
 
 
-### El Orden Importa  
-   
-* En la definición de la función, usa `*args` y luego `**kwargs`.   
-   
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def ejemplo(arg1, arg2, *args, **kwargs):
-    pass
-</code></div></div></pre>
+### Retorno de valores
 
-Note: En la definición de la función, el orden es importante.  
+```python
+# Retorno simple
+def cuadrado(x):
+    return x ** 2
 
+# Retorno múltiple (tupla)
+def dividir(a, b):
+    cociente = a // b
+    resto = a % b
+    return cociente, resto
 
-### Usando \*args para Desempaquetar una Lista o Tupla    
-    
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def resultado(x, y, op):
-    if op == '+':
-        return x + y
-    elif op == '-':
-        return x - y
+c, r = dividir(10, 3)  # c=3, r=1
 
-a = (1, 2, '+')
-print(resultado(*a))  # Imprime 3
-</code></div></div></pre>
-   
-Note: Puedes desempaquetar argumentos usando `*args` y `**kwargs`.
+# Retorno condicional
+def es_par(numero):
+    if numero % 2 == 0:
+        return True
+    return False
 
+# Sin return explícito (devuelve None)
+def imprimir_mensaje():
+    print('Hola')
+    # return None implícito
+```
 
-### Usando \*\*kwargs para Desempaquetar un Diccionario  
-
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">a = {"op": "+", "x": 2, "y": 5}
-print(resultado(**a))  # Imprime 7
-</code></div></div></pre>
-
-Note: Puedes desempaquetar argumentos usando `*args` y `**kwargs`.
+Note: return detiene la ejecución y devuelve valor. Puedes retornar múltiples valores como tupla y desempaquetar. Puedes tener múltiples returns (diferentes condiciones). Sin return, la función devuelve None.
 
 ---
 
-## Parámetros Opcionales en Funciones Python
+## Parámetros y Argumentos
 
 
-### ¿Qué son los parámetros opcionales?  
+### Parámetros posicionales
 
-* Los parámetros opcionales en una función tienen valores predeterminados.
-* Toman esos valores si no se proporciona un valor específico al invocar la función.
+```python
+def restar(a, b):
+    return a - b
 
-Note: Los parámetros opcionales hacen que las funciones sean más flexibles en su uso.
+# Orden importa
+print(restar(10, 3))   # 7
+print(restar(3, 10))   # -7
 
+# Deben pasarse todos
+print(restar(5, 2))    # OK
+# print(restar(5))     # TypeError: falta 1 argumento
+# print(restar(5,2,1)) # TypeError: sobra 1 argumento
+```
 
-### Ejemplo de Función con Parámetro Opcional
-
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def saludo(nombre, mensaje="encantado de saludarte"):
-    print("Hola {}, {}".format(nombre, mensaje))
-</code></div></div></pre>
-
-* El parámetro `nombre` es obligatorio.
-* El parámetro `mensaje` es opcional y tiene un valor predeterminado.
-
-Note: El parámetro opcional `mensaje` toma el valor predeterminado si no se proporciona uno específico.
-
-
-### Uso de la Función con Parámetro Opcional
-
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">saludo("Juan")
-# Salida: Hola Juan, encantado de saludarte
-
-saludo("Ana", "bienvenida")
-# Salida: Hola Ana, bienvenida
-</code></div></div></pre>
-
-* En la primera llamada, se usa el valor predeterminado para `mensaje`.
-* En la segunda llamada, se proporciona un valor específico para `mensaje`.
-
-Note: Los parámetros opcionales permiten adaptar la función según la necesidad.
+Note: Los parámetros posicionales se asignan por posición. El orden importa: primer argumento → primer parámetro. Debes pasar exactamente el número correcto de argumentos. Es la forma más común y simple.
 
 
-### Restricciones en la Definición de Parámetros Opcionales
+### Argumentos con nombre (keyword)
 
-* Una vez definido un parámetro opcional, todos los parámetros a su derecha también deben ser opcionales.
+```python
+def crear_usuario(nombre, edad, ciudad):
+    return {'nombre': nombre, 'edad': edad, 'ciudad': ciudad}
 
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2"></path><path d="M9 6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V6C15 6.55228 14.5523 7 14 7H10C9.44772 7 9 6.55228 9 6V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"># Incorrecto
-def ejemplo(param1, param2="opcional", param3):
-    # Código de la función
+# Posicionales (orden importa)
+u1 = crear_usuario('Ana', 25, 'Madrid')
 
-# Correcto
-def ejemplo(param1, param2="opcional", param3="otro opcional"):
-    # Código de la función
-</code></div></div></pre>
+# Con nombre (orden no importa)
+u2 = crear_usuario(edad=30, ciudad='Barcelona', nombre='Bob')
 
-Note: Los parámetros obligatorios no pueden seguir a los parámetros opcionales en la definición de la función.
+# Mixtos (posicionales primero)
+u3 = crear_usuario('Carlos', ciudad='Valencia', edad=35)
+
+# Más legible con nombres
+u4 = crear_usuario(nombre='Diana', edad=28, ciudad='Sevilla')
+```
+
+Note: Los argumentos con nombre (keyword arguments) son más legibles y no dependen del orden. Puedes mezclar posicionales y con nombre, pero posicionales deben ir primero. Úsalos cuando hay muchos parámetros o el significado no es obvio.
 
 
-### Beneficios de Parámetros Opcionales
+### Parámetros con valor por defecto
 
-* Flexibilidad: Permite a los usuarios de la función adaptarla según sus necesidades.
-* Valores Predeterminados: Proporciona valores por defecto para evitar errores en llamadas incompletas.
-* Facilita el Uso: Simplifica el uso de funciones al reducir la necesidad de proporcionar todos los argumentos.
+```python
+def saludar(nombre, saludo='Hola'):
+    return f'{saludo}, {nombre}!'
 
-Note: Los parámetros opcionales hacen que las funciones sean más versátiles y fáciles de usar.
-   
+# Usa valor por defecto
+print(saludar('Ana'))          # 'Hola, Ana!'
+
+# Sobreescribe valor por defecto
+print(saludar('Bob', '¿Qué tal?'))     # '¿Qué tal?, Bob!'
+
+# Múltiples valores por defecto
+def conectar(host='localhost', port=8080, timeout=30):
+    return f'Conectando a {host}:{port} (timeout:{timeout}s)'
+
+print(conectar())                    # Todos por defecto
+print(conectar('example.com'))       # Solo host
+print(conectar(port=3000))           # Solo port
+print(conectar('example.com', timeout=60))  # host y timeout
+```
+
+Note: Los parámetros con valores por defecto son opcionales al llamar. Deben ir después de los obligatorios en la definición. Úsalos para configuración común con opciones personalizables. Hacen las funciones más flexibles.
+
+
+### Parámetros *args
+
+* Captura argumentos posicionales adicionales
+* Se recibe como tupla
+* Por convención se llama args
+
+```python
+def sumar(*numeros):
+    total = 0
+    for num in numeros:
+        total += num
+    return total
+
+print(sumar(1, 2, 3))           # 6
+print(sumar(10, 20, 30, 40))    # 100
+print(sumar())                   # 0
+
+# Con sum()
+def sumar_mejorado(*numeros):
+    return sum(numeros)
+
+# Mixto con parámetros fijos
+def procesar(operacion, *valores):
+    print(f'Operación: {operacion}')
+    print(f'Valores: {valores}')
+```
+
+Note: *args permite número variable de argumentos posicionales. Útil cuando no sabes cuántos argumentos recibirás. Internamente es una tupla. Puedes combinarlo con parámetros fijos (que van antes).
+
+
+### Parámetros **kwargs
+
+* Captura argumentos con nombre adicionales
+* Se recibe como diccionario
+* Por convención se llama kwargs
+
+```python
+def crear_config(**opciones):
+    return opciones
+
+config = crear_config(host='localhost', port=8080, debug=True)
+print(config)  # {'host': 'localhost', 'port': 8080, 'debug': True}
+
+# Procesar kwargs
+def conectar(**config):
+    host = config.get('host', 'localhost')
+    port = config.get('port', 8080)
+    print(f'Conectando a {host}:{port}')
+
+conectar(host='example.com', port=3000)
+
+# Mixto: fijos, *args, **kwargs
+def funcion_completa(fijo, *args, **kwargs):
+    print(f'Fijo: {fijo}')
+    print(f'Args: {args}')
+    print(f'Kwargs: {kwargs}')
+```
+
+Note: **kwargs captura argumentos con nombre en un diccionario. Útil para funciones altamente configurables. Puedes combinar parámetros fijos, *args y **kwargs en ese orden. Muy flexible pero puede ser menos claro.
+
 ---
-   
-## Retorno de valores
+
+## Scope y Variables
 
 
-### Sentencia return
+### Scope local vs global
 
-* El retorno de valores es opcional, puede devolver o no un valor.
-* Termina la ejecución de la función y continúa el programa.
+```python
+# Variable global
+mensaje = 'Global'
 
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def cuadrado_de_par(numero):
-    if not numero % 2 == 0:
-        return
-    else:
-        print(numero ** 2)  # 64
+def funcion():
+    # Variable local
+    mensaje = 'Local'
+    print(mensaje)  # 'Local'
 
-cuadrado_de_par(8)
-</code></div></div></pre>
+funcion()
+print(mensaje)  # 'Global' (sin cambios)
 
-Note: `return` puede usarse para finalizar una función y/o devolver un valor. Ten en cuenta que los ejemplos no muestras buenas prácticas de uso, sino que son para ilustrar el concepto.
+# Las locales no afectan globales
+x = 10
+def modificar():
+    x = 20  # Crea local x, no modifica global
+    print(x)  # 20
 
+modificar()
+print(x)  # 10 (sin cambios)
+```
 
-### Devolver más de un valor   
-   
-* En Python, se puede devolver más de un valor con `return`.
-* En tal caso, por defecto, se devuelve una tupla de valores.
-
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def cuadrado_y_cubo(numero):
-    return numero ** 2, numero ** 3
-
-cuad, cubo = cuadrado_y_cubo(4)
-cuad  # 16
-cubo  # 64
-</code></div></div></pre>
-
-Note: `return` permite devolver múltiples valores en una función.
+Note: Las variables definidas en funciones son locales: solo existen dentro de la función. Las globales existen fuera. Python busca primero en scope local, luego global. Asignar en función crea variable local, no modifica global.
 
 
-### Devolver resultados en una lista   
-   
-* Se pueden devolver diferentes resultados en una lista.
+### Keyword global
 
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def tabla_del(numero):
-    resultados = []
-    for i in range(11):
-        resultados.append(numero * i)
-    return resultados
+```python
+contador = 0
 
-res = tabla_del(3)
-res  # [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30]
-</code></div></div></pre>
+def incrementar():
+    global contador  # Indica que usarás la global
+    contador += 1
 
-Note: `return` puede utilizarse para devolver listas de resultados.
+incrementar()
+print(contador)  # 1
 
+incrementar()
+print(contador)  # 2
 
-### Python siempre devuelve un valor   
-   
-* A diferencia de otros lenguajes, Python no tiene procedimientos.
-* Si no hay `return`, se devuelve automáticamente `None`.
+# Sin global causaría error
+def incrementar_mal():
+    contador += 1  # UnboundLocalError
 
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">def saludo(nombre):
-    print(f'Hola {nombre}')
+# Mejor: retornar y reasignar
+def incrementar_bien(valor):
+    return valor + 1
 
-print(saludo('j2logo'))  # Hola j2logo \n None
-</code></div></div></pre>
+contador = incrementar_bien(contador)
+```
 
-Note: Python siempre devuelve un valor, incluso si no hay `return`. Por defecto, `None`
-   
----
-
-## Variables y ámbito
+Note: global permite modificar variables globales desde funciones. Generalmente se debe evitar: crea dependencias ocultas y dificulta testing. Mejor: pasar como parámetro y retornar nuevo valor. Usa global solo cuando realmente necesario.
 
 
-### Ámbito y ciclo de vida de las variables   
-   
-* Local: dentro de una función, no accesible fuera.
-* Global: definidas fuera de funciones, visibles dentro.
+### Keyword nonlocal
 
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">
-def muestra_x():
+```python
+def externa():
     x = 10
-    print(f'x vale {x}')  # x vale 10
+    
+    def interna():
+        nonlocal x  # Modifica x de externa()
+        x = 20
+    
+    interna()
+    print(x)  # 20 (modificado por interna)
 
-x = 20
-muestra_x()
-print(x)  # 20
-</code></div></div></pre>
+externa()
 
-Note: Las variables tienen ámbitos locales o globales y ciclos de vida definidos.
+# Sin nonlocal
+def externa2():
+    x = 10
+    
+    def interna2():
+        x = 20  # Crea nuevo x local
+    
+    interna2()
+    print(x)  # 10 (sin cambios)
 
+externa2()
+```
 
-### Ámbito y ciclo de vida de las variables   
-   
-* Ámbito local: dentro de una función.
-* Variables desaparecen al finalizar la función.
-
-Note: Las variables definidas dentro de una función tienen un ámbito local y desaparecen al finalizar la función.
-
-
-### Variables globales   
-
-* Ámbito global: fuera de funciones.
-* Pueden ser consultadas dentro de funciones.
-
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">
-y = 20
-def muestra_x():
-    global x
-    x += 1
-    print(f'x vale {x}')
-    print(f'y vale {y}')
-</code></div></div></pre>
-
-Note: Para modificar una variable global dentro de una función, se usa la palabra clave `global`.
+Note: nonlocal es para funciones anidadas. Permite modificar variables del scope enclosing (función contenedora). Sin nonlocal, se crea variable local. Útil en closures pero también debe usarse con cuidado.
 
 ---
 
-### Funciones Lambda en Python   
+## Docstrings
 
-* Funciones anónimas y pequeñas.
-* No requieren definición con `def`.
-* Sintaxis: `lambda argumentos: expresion`.
 
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gizmo:ml-0 gap-2 items-center"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">doble = lambda x: x * 2
-</code></div></div></pre>
+### ¿Qué son los docstrings?
 
-Note: Las funciones lambda son útiles para casos simples y breves.
+* Documentación de la función
+* Primera cadena después de def
+* Accesible vía `__doc__`
+* Mostrada por help()
+
+```python
+def calcular_area(base, altura):
+    """
+    Calcula el área de un triángulo.
+    
+    Args:
+        base: Base del triángulo
+        altura: Altura del triángulo
+        
+    Returns:
+        Área del triángulo
+    """
+    return (base * altura) / 2
+
+print(calcular_area.__doc__)
+help(calcular_area)
+```
+
+Note: Los docstrings documentan qué hace la función, qué parámetros toma, qué retorna. Son la documentación oficial de Python. Herramientas las usan para generar documentación HTML. Siempre documenta funciones públicas.
+
+
+### Formato de docstrings
+
+```python
+# Formato Google Style
+def dividir(dividendo, divisor):
+    """
+    Divide dos números.
+    
+    Args:
+        dividendo (float): Número a dividir
+        divisor (float): Número por el cual dividir
+        
+    Returns:
+        float: Resultado de la división
+        
+    Raises:
+        ValueError: Si divisor es cero
+        
+    Example:
+        >>> dividir(10, 2)
+        5.0
+    """
+    if divisor == 0:
+        raise ValueError('División por cero')
+    return dividendo / divisor
+```
+
+Note: Hay varios formatos: Google, NumPy, Sphinx. Google Style es popular y legible. Documenta parámetros con tipo, retorno, excepciones, y ejemplos. Los ejemplos se pueden ejecutar con doctest.
 
 ---
 
-### Resumen I
-   
-* Funciones en Python son unidades lógicas de código.
-* Dividen y organizan el código, facilitando la reutilización.
-* Se definen con `def`, seguido del nombre y parámetros (opcional).
-* Se invocan escribiendo el nombre y pasando argumentos.
-* \*args para argumentos no clave.
-* \*args recoge en una tupla.
+## Funciones Lambda
 
 
-### Resumen II
+### Sintaxis lambda
 
-* \*\*kwargs para argumentos clave.
-* \*\*kwargs recoge en un diccionario.
-* Orden en la definición: \*args primero, luego \*\*kwargs.
-* `return` opcional para devolver resultados.
-* Ámbito de las variables: local y global.
-* Las funciones lamda son utiles para casos simples y breves.
+* Funciones anónimas de una línea
+* Sintaxis: `lambda parametros: expresion`
+* Retorna resultado de la expresión
 
-Note: ¡Enhorabuena! Has aprendido los conceptos fundamentales sobre funciones en Python.
+```python
+# Función normal
+def cuadrado(x):
+    return x ** 2
 
----
+# Lambda equivalente
+cuadrado_lambda = lambda x: x ** 2
 
-## ¡Gracias por su atención!
+print(cuadrado(5))         # 25
+print(cuadrado_lambda(5))  # 25
 
-Note: ¿Alguna pregunta sobre funciones en Python?
+# Lambda con múltiples parámetros
+sumar = lambda a, b: a + b
+print(sumar(3, 4))  # 7
+
+# Lambda sin parámetros
+obtener_pi = lambda: 3.14159
+print(obtener_pi())  # 3.14159
+```
+
+Note: Lambda crea funciones pequeñas inline. Solo puede contener una expresión (no statements como if, for). Son funciones reales pero sin nombre. Útiles para funciones simples de uso único.
+
+
+### Cuándo usar lambda
+
+```python
+# Bueno: función simple de una línea
+cuadrados = list(map(lambda x: x**2, [1, 2, 3, 4]))
+
+# Bueno: como argumento
+numeros = [4, 1, 3, 2]
+numeros.sort(key=lambda x: -x)  # Ordenar descendente
+
+# Malo: lambda compleja (mejor función normal)
+# compleja = lambda x: x**2 if x > 0 else -x**2
+
+# Malo: lambda con nombre (mejor def)
+# calcular = lambda x, y: (x + y) * 2
+
+# Mejor:
+def calcular(x, y):
+    return (x + y) * 2
+```
+
+Note: Lambda es para funciones triviales usadas una vez, típicamente como argumentos de map, filter, sort. Para funciones complejas o reusables, usa def. Lambda con nombre derrota su propósito (anónimo). Si necesitas nombre, usa def.
+
+
+### Lambda con map, filter, sorted
+
+```python
+numeros = [1, 2, 3, 4, 5]
+
+# map: transformar
+cuadrados = list(map(lambda x: x**2, numeros))
+# [1, 4, 9, 16, 25]
+
+# filter: filtrar
+pares = list(filter(lambda x: x % 2 == 0, numeros))
+# [2, 4]
+
+# sorted con key
+palabras = ['Python', 'es', 'genial']
+por_longitud = sorted(palabras, key=lambda p: len(p))
+# ['es', 'Python', 'genial']
+
+# Ordenar tuplas por segundo elemento
+pares = [(1, 'd'), (2, 'b'), (3, 'a')]
+ordenado = sorted(pares, key=lambda x: x[1])
+# [(3, 'a'), (2, 'b'), (1, 'd')]
+```
+
+Note: Lambda brilla con funciones de alto orden: map, filter, sorted, max, min. Permite transformaciones concisas. Aunque comprensiones suelen ser más pythónicas para map/filter.
+
+

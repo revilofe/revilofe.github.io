@@ -3571,15 +3571,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#34-instalacion-de-multiples-extensiones-para-un-proyecto-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.4. Instalación de múltiples extensiones para un proyecto web
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3628,6 +3619,57 @@
       4.3. Instalación de linting y formateadores de código
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="4.3. Instalación de linting y formateadores de código">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-instalar-las-herramientas-en-el-interprete-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.1. Instalar las herramientas en el intérprete del proyecto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-external-tool-autopep8" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.2. External Tool – autopep8
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-external-tool-pylint" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.3. External Tool – pylint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434-file-watcher-autopep8-formateo-al-guardar" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.4. File Watcher – autopep8 (formateo al guardar)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#435-file-watcher-pylint-lint-al-guardar" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.5. File Watcher – pylint (lint al guardar)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -5476,15 +5518,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#34-instalacion-de-multiples-extensiones-para-un-proyecto-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.4. Instalación de múltiples extensiones para un proyecto web
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -5533,6 +5566,57 @@
       4.3. Instalación de linting y formateadores de código
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="4.3. Instalación de linting y formateadores de código">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-instalar-las-herramientas-en-el-interprete-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.1. Instalar las herramientas en el intérprete del proyecto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-external-tool-autopep8" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.2. External Tool – autopep8
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-external-tool-pylint" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.3. External Tool – pylint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434-file-watcher-autopep8-formateo-al-guardar" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.4. File Watcher – autopep8 (formateo al guardar)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#435-file-watcher-pylint-lint-al-guardar" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.5. File Watcher – pylint (lint al guardar)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -5686,92 +5770,196 @@
 <p>Los <strong>módulos</strong> y <strong>extensiones</strong> son pequeños complementos o "plugins" que puedes agregar a tu <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr> para dotarlo de nuevas funcionalidades.</p>
 <p>En este punto aprenderemos qué son los módulos y extensiones, cómo instalarlos, gestionarlos y por qué son fundamentales para mejorar nuestra productividad.</p>
 <h3 id="1-introduccion">1. Introducción<a class="headerlink" href="#1-introduccion" title="Permanent link">&para;</a></h3>
-<p>Cuando trabajamos con entornos de desarrollo integrados (IDEs, aunque alguna veces nos referiremos con IDES tambien a editores potentes como Visual Studio Code, Fleet) como <strong>Visual Studio Code</strong> o los de <strong>JetBrains</strong> (IntelliJ IDEA, PyCharm, Fleet), una de sus grandes ventajas es la <strong>flexibilidad</strong>. Esta flexibilidad se consigue a través de los <strong>módulos</strong> y <strong>extensiones</strong> que podemos añadir para personalizar y ampliar las capacidades del <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr>. </p>
+<p>Cuando trabajamos con entornos de desarrollo integrados (IDEs, aunque alguna veces nos referiremos con IDES tambien a editores potentes como Visual Studio Code, Fleet) como <strong>Visual Studio Code</strong> o los de <strong>JetBrains</strong> (IntelliJ IDEA, PyCharm, Fleet), una de sus grandes ventajas es la <strong>flexibilidad</strong>. Esta flexibilidad se consigue a través de los <strong>módulos</strong> y <strong>extensiones</strong> que podemos añadir para personalizar y ampliar las capacidades del <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr>.</p>
 <h3 id="2-que-son-los-modulos-y-las-extensiones">2. ¿Qué son los módulos y las extensiones?<a class="headerlink" href="#2-que-son-los-modulos-y-las-extensiones" title="Permanent link">&para;</a></h3>
 <h4 id="21-definicion">2.1. Definición<a class="headerlink" href="#21-definicion" title="Permanent link">&para;</a></h4>
 <p>Los <strong>módulos</strong> y <strong>extensiones</strong> son pequeños complementos o "plugins" que puedes agregar a tu <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr> para dotarlo de nuevas funcionalidades. Estas funcionalidades pueden incluir:</p>
 <ul>
-<li>Soporte para nuevos lenguajes de programación.   </li>
-<li>Herramientas de depuración avanzadas.   </li>
-<li>Integración con frameworks populares (como React o Django).   </li>
-<li>Herramientas de diseño de interfaces gráficas.   </li>
-<li>Conexión con bases de datos o servidores.   </li>
+<li>Soporte para nuevos lenguajes de programación.</li>
+<li>Herramientas de depuración avanzadas.</li>
+<li>Integración con frameworks populares (como React o Django).</li>
+<li>Herramientas de diseño de interfaces gráficas.</li>
+<li>Herramientas de formateo y linting de código.</li>
+<li>Conexión con bases de datos o servidores.</li>
 </ul>
-<p>En resumen, permiten <strong>personalizar</strong> el entorno según tus necesidades, añadiendo únicamente las herramientas que vas a utilizar en tu proyecto. Así, no sobrecargas el <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr> con funciones que no necesitas.   </p>
+<p>En resumen, permiten <strong>personalizar</strong> el entorno según tus necesidades, añadiendo únicamente las herramientas que vas a utilizar en tu proyecto. Así, no sobrecargas el <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr> con funciones que no necesitas.</p>
 <h4 id="22-ejemplo-practico-de-extensiones-en-visual-studio-code">2.2. Ejemplo práctico de extensiones en Visual Studio Code<a class="headerlink" href="#22-ejemplo-practico-de-extensiones-en-visual-studio-code" title="Permanent link">&para;</a></h4>
-<p>Visual Studio Code es conocido por ser un <strong>editor</strong> ligero y altamente extensible. Por defecto, cuando lo instalas, solo incluye las herramientas más básicas, pero puedes adaptarlo a casi cualquier tipo de desarrollo añadiendo extensiones.    </p>
-<p><strong>Ejemplo</strong>: Imagina que quieres desarrollar una página web utilizando <strong><abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr>, CSS y JavaScript</strong>. Al abrir Visual Studio Code, notarás que el soporte para estos lenguajes es básico. Sin embargo, al agregar extensiones específicas, puedes tener un entorno completamente optimizado para el desarrollo web.   </p>
+<p>Visual Studio Code es conocido por ser un <strong>editor</strong> ligero y altamente extensible. Por defecto, cuando lo instalas, solo incluye las herramientas más básicas, pero puedes adaptarlo a casi cualquier tipo de desarrollo añadiendo extensiones.</p>
+<p><strong>Ejemplo</strong>: Imagina que quieres desarrollar una página web utilizando <strong><abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr>, CSS y JavaScript</strong>. Al abrir Visual Studio Code, notarás que el soporte para estos lenguajes es básico. Sin embargo, al agregar extensiones específicas, puedes tener un entorno completamente optimizado para el desarrollo web.</p>
 <h3 id="3-instalacion-de-extensiones-en-visual-studio-code">3. Instalación de extensiones en Visual Studio Code<a class="headerlink" href="#3-instalacion-de-extensiones-en-visual-studio-code" title="Permanent link">&para;</a></h3>
 <p>Aunque se dan instrucciones para instalar extensiones y módulos en distintos IDES, al final se proporcionan enlaces a la documentación oficial de los productos para seguir los pasos. Esta información puede variar con el tiempo, por lo que es recomendable consultar la documentación oficial para obtener la información más actualizada.</p>
 <h4 id="31-acceso-al-marketplace-de-extensiones">3.1. Acceso al Marketplace de extensiones<a class="headerlink" href="#31-acceso-al-marketplace-de-extensiones" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Abre Visual Studio Code.   </li>
-<li>En el panel de la izquierda, verás un ícono de <strong>cuadrado</strong> con otro más pequeño en la esquina (es el icono del <strong>Marketplace de Extensiones</strong>). Haz clic en él.   </li>
-<li>Se abrirá una barra de búsqueda donde podrás buscar extensiones para añadir.   </li>
+<li>Abre Visual Studio Code.</li>
+<li>En el panel de la izquierda, verás un ícono de <strong>cuadrado</strong> con otro más pequeño en la esquina (es el icono del <strong>Marketplace de Extensiones</strong>). Haz clic en él.</li>
+<li>Se abrirá una barra de búsqueda donde podrás buscar extensiones para añadir.</li>
 </ol>
 <h4 id="32-instalacion-de-una-extension">3.2. Instalación de una extensión<a class="headerlink" href="#32-instalacion-de-una-extension" title="Permanent link">&para;</a></h4>
 <p>Supongamos que estás desarrollando en <strong>Python</strong> y necesitas añadir soporte completo para este lenguaje.</p>
 <ol>
-<li>En el Marketplace de Extensiones, escribe "Python" en la barra de búsqueda.    </li>
-<li>Selecciona la extensión llamada <strong>Python</strong> (desarrollada por Microsoft) de los resultados.   </li>
-<li>Haz clic en el botón <strong>Instalar</strong>. En unos segundos, tu <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr> tendrá completo soporte para Python, incluyendo autocompletado, depuración y análisis de errores.   </li>
+<li>En el Marketplace de Extensiones, escribe "Python" en la barra de búsqueda.</li>
+<li>Selecciona la extensión llamada <strong>Python</strong> (desarrollada por Microsoft) de los resultados.</li>
+<li>Haz clic en el botón <strong>Instalar</strong>. En unos segundos, tu <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr> tendrá completo soporte para Python, incluyendo autocompletado, depuración y análisis de errores.</li>
 </ol>
 <h4 id="33-instalacion-de-linting-y-formateadores-de-codigo">3.3. Instalación de linting y formateadores de código<a class="headerlink" href="#33-instalacion-de-linting-y-formateadores-de-codigo" title="Permanent link">&para;</a></h4>
-<p>Los <strong>linters</strong> y <strong>formateadores de código</strong> son extensiones que te ayudan a mantener un código limpio y consistente.    </p>
+<p>Los <strong>linters</strong> y <strong>formateadores de código</strong> son extensiones que te ayudan a mantener un código limpio y consistente.</p>
 <ul>
-<li>linters: Verifican tu código en busca de errores y malas prácticas. Por ejemplo, si escribiste una variable que nunca usas, el linter te lo indicará, o por ejemplo si tienes una variable que no sigue la convención de nombres.   </li>
+<li>linters: Verifican tu código en busca de errores y malas prácticas. Por ejemplo, si escribiste una variable que nunca usas, el linter te lo indicará, o por ejemplo si tienes una variable que no sigue la convención de nombres.</li>
 <li>Formateadores: Ajustan automáticamente el formato de tu código según unas reglas predefinidas. Por ejemplo si tienes un código con sangrías incorrectas, el formateador lo corregirá.</li>
 </ul>
-<p>Existen extensiones que te permiten utilizar estas herramientas en Visual Studio Code y Pycharm. A continuación, te proporciono una URL para seguir los pasos a través de un articulo:
-- <a href="https://leanmind.es/es/blog/como-configurar-linter-y-formatter-de-python-en-vscode/">Configurar linter y formatter en VSC</a></p>
+<p>Existen extensiones que te permiten utilizar estas herramientas en Visual Studio Code. La forma de instalarlas es similar a la de cualquier otra extensión. Luego puedes acceder a su configuración para ajustarlas a tus preferencias.</p>
 <p>Estas extensiones no solo te ayudarán a escribir código más rápido, sino que también te aseguran que sigues buenas prácticas en tu proyecto.</p>
-<h4 id="34-instalacion-de-multiples-extensiones-para-un-proyecto-web">3.4. Instalación de múltiples extensiones para un proyecto web<a class="headerlink" href="#34-instalacion-de-multiples-extensiones-para-un-proyecto-web" title="Permanent link">&para;</a></h4>
-<p>Si estás desarrollando una aplicación web en <strong>JavaScript</strong> con el framework <strong>React</strong>, podrías necesitar varias extensiones.</p>
-<ol>
-<li>Busca e instala:<ul>
-<li><strong>ESLint</strong>: Para verificar y corregir errores de estilo de código en JavaScript.   </li>
-<li><strong>Prettier</strong>: Para formatear tu código automáticamente según unas reglas predefinidas.   </li>
-<li><strong>React</strong>: Para tener snippets y autocompletado específicos de React.</li>
+<p>Como ejemplo, si estás trabajando con <strong>Python</strong>, podrías instalar las siguientes extensiones:</p>
+<ul>
+<li><strong>Pylint</strong>: Un linter popular para Python que te ayuda a identificar errores y mejorar la calidad de tu código.</li>
+<li><strong>AutoPEP8</strong>: Un formateador que ajusta tu código para que siga las convenciones de estilo PEP 8.</li>
 </ul>
-</li>
-</ol>
+<p>Busca estas extensiones en el Marketplace de Visual Studio Code e instálalas siguiendo los pasos mencionados anteriormente. Luego, configura cada extensión según tus necesidades para aprovechar al máximo sus funcionalidades. (<code>File &gt; Preferences &gt; Settings &gt; Extensions</code>). </p>
+<p>Por ejemplo, puedes configurar <strong>Pylint</strong> y <strong>AutoPEP8</strong> para que muestre siempre las notificaciones, estableciendo "Show Notifications" a "always" y así estar al tanto de los problemas y correcciones sugeridas por estas herramientas.</p>
+<p><img alt="Instalación y configuración de extensiones" src="../assets/EDES-U2.2.-Modulos.png" /></p>
 <h3 id="4-gestion-de-modulos-en-jetbrains-intellij-idea-pycharm">4. Gestión de módulos en JetBrains (IntelliJ IDEA, PyCharm)<a class="headerlink" href="#4-gestion-de-modulos-en-jetbrains-intellij-idea-pycharm" title="Permanent link">&para;</a></h3>
-<p>Los entornos de JetBrains también permiten una gran personalización mediante <strong>módulos</strong> y <strong>plugins</strong>. Estos módulos se instalan y gestionan directamente desde el <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr>, y están orientados a proyectos más complejos o lenguajes específicos.   </p>
+<p>Los entornos de JetBrains también permiten una gran personalización mediante <strong>módulos</strong> y <strong>plugins</strong>. Estos módulos se instalan y gestionan directamente desde el <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr>, y están orientados a proyectos más complejos o lenguajes específicos.</p>
 <h4 id="41-que-es-un-modulo-en-jetbrains">4.1. ¿Qué es un módulo en JetBrains?<a class="headerlink" href="#41-que-es-un-modulo-en-jetbrains" title="Permanent link">&para;</a></h4>
-<p>Un <strong>módulo</strong> en JetBrains es un conjunto de archivos y configuraciones que añaden soporte para ciertos lenguajes o frameworks en tu proyecto. Si trabajas con <strong>Python</strong>, puedes instalar el módulo de Python, y además añadir un modulo para Django si trabajas con este framework. O si estas en IntelliJ IDEA  y trabajas con <strong>Java</strong> o <strong>kotlin</strong>, puedes instalar un módulo para soportar el framework Spring. IntelliJ IDEA y PyCharm tienen módulos específicos para cada lenguaje y framework, lo que te permite personalizar tu entorno de desarrollo según tus necesidades.</p>
+<p>Un <strong>módulo</strong> en JetBrains es un conjunto de archivos y configuraciones que añaden soporte para ciertos lenguajes o frameworks en tu proyecto. Si trabajas con <strong>Python</strong>, puedes instalar el módulo de Python, y además añadir un módulo para <strong>Django</strong> si trabajas con este framework para el desarrollo de aplicaciones web. O si estas en IntelliJ IDEA  y trabajas con <strong>Java</strong> o <strong>kotlin</strong>, puedes instalar un módulo para soportar el framework <strong>Spring</strong>. IntelliJ IDEA y PyCharm tienen módulos específicos para cada lenguaje y framework, lo que te permite personalizar tu entorno de desarrollo según tus necesidades.</p>
 <h4 id="42-instalacion-de-modulos-en-intellij-idea">4.2. Instalación de módulos en IntelliJ IDEA<a class="headerlink" href="#42-instalacion-de-modulos-en-intellij-idea" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Abre IntelliJ IDEA.   </li>
-<li>Dirígete a la barra superior y selecciona <code>File &gt; Project Structure</code>.   </li>
-<li>En la ventana de estructura de proyecto, selecciona la opción <strong>Modules</strong> y haz clic en <strong>+</strong> para añadir un nuevo módulo.   </li>
-<li>Elige el tipo de módulo que quieres instalar, por ejemplo, <strong>Java</strong>, <strong>Kotlin</strong>, o <strong>Spring</strong>. Sigue las indicaciones del asistente para configurarlo.    </li>
+<li>Abre IntelliJ IDEA.</li>
+<li>Dirígete a la barra superior y selecciona <code>File &gt; Project Structure</code>.</li>
+<li>En la ventana de estructura de proyecto, selecciona la opción <strong>Modules</strong> y haz clic en <strong>+</strong> para añadir un nuevo módulo.</li>
+<li>Elige el tipo de módulo que quieres instalar, por ejemplo, <strong>Java</strong>, <strong>Kotlin</strong>, o <strong>Spring</strong>. Sigue las indicaciones del asistente para configurarlo.</li>
 </ol>
 <h4 id="43-instalacion-de-plugins-en-jetbrains-pycharm">4.3. Instalación de plugins en JetBrains (PyCharm)<a class="headerlink" href="#43-instalacion-de-plugins-en-jetbrains-pycharm" title="Permanent link">&para;</a></h4>
 <p>Además de los módulos, JetBrains permite la instalación de <strong>plugins</strong> que amplían las capacidades de su <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr> de forma similar a las extensiones de Visual Studio Code.</p>
 <ol>
-<li>En la barra superior, ve a <code>File &gt; Settings</code> (o <code>Preferences</code> en Mac).   </li>
-<li>Selecciona la opción <strong>Plugins</strong>.   </li>
-<li>En el campo de búsqueda, escribe el nombre del plugin que necesitas. Por ejemplo, si trabajas con Kotest (framework de pruebas unitarias para kotlin), puedes buscar el plugin Kotest.   </li>
-<li>Haz clic en <strong>Instalar</strong> y reinicia el <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr> para que los cambios se apliquen.   </li>
+<li>En la barra superior, ve a <code>File &gt; Settings</code> (o <code>Preferences</code> en Mac).</li>
+<li>Selecciona la opción <strong>Plugins</strong>.</li>
+<li>En el campo de búsqueda, escribe el nombre del plugin que necesitas. Por ejemplo, si trabajas con Kotest (framework de pruebas unitarias para kotlin), puedes buscar el plugin Kotest.</li>
+<li>Haz clic en <strong>Instalar</strong> y reinicia el <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr> para que los cambios se apliquen.</li>
 </ol>
 <h4 id="43-instalacion-de-linting-y-formateadores-de-codigo">4.3. Instalación de linting y formateadores de código<a class="headerlink" href="#43-instalacion-de-linting-y-formateadores-de-codigo" title="Permanent link">&para;</a></h4>
 <p>Como hemos dicho, los <strong>linters</strong> y <strong>formateadores de código</strong> son extensiones que te ayudan a mantener un código limpio y consistente.</p>
-<p>Existen extensiones que te permiten utilizar estas herramientas en Pycharm. A continuación, te proporciono una URL para seguir los pasos a través de un articulos.
-     - <a href="https://leanmind.es/es/blog/como-configurar-un-linter-y-formatter-en-pycharm/">Configurar linter y formatter en pycharm</a></p>
+<p>Existen extensiones que te permiten utilizar estas herramientas en Pycharm. A continuación te explico cómo configurarlas tanto para ejecutarlas manualmente (External Tools) como automáticamente al guardar (File Watchers).</p>
+<h5 id="431-instalar-las-herramientas-en-el-interprete-del-proyecto">4.3.1. Instalar las herramientas en el intérprete del proyecto<a class="headerlink" href="#431-instalar-las-herramientas-en-el-interprete-del-proyecto" title="Permanent link">&para;</a></h5>
+<p>Antes de nada, debes instalar las aplicaciones..</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>autopep8<span class="w"> </span>pylint
+</code></pre></div>
+<blockquote>
+<p>Consejo: instala en el mismo venv que usa PyCharm para el proyecto. Es decir, recuerda hacerlo dentro de tu entorno virtual, así funcionará con <code>$PyInterpreterDirectory$</code>.</p>
+</blockquote>
+<h5 id="432-external-tool-autopep8">4.3.2.  External Tool – <strong>autopep8</strong><a class="headerlink" href="#432-external-tool-autopep8" title="Permanent link">&para;</a></h5>
+<p><img alt="External Tools: AutoPEP8" src="../assets/EDES-U2.2.-ET-Autopep9.png" /></p>
+<p><strong>Ruta:</strong> <em>Settings / Preferences → Tools → External Tools → (+)</em></p>
+<ul>
+<li><strong>Name:</strong> <code>Autopep8</code></li>
+<li><strong>Group:</strong> <code>External Tools</code></li>
+<li><strong>Description:</strong> <code>Autopep8</code></li>
+<li><strong>Program:</strong> <code>autopep8</code>
+  <em>(Alternativa más robusta: <code>$PyInterpreterDirectory$/autopep8</code> o <code>$PyInterpreterDirectory$/python</code> con <code>-m autopep8</code>)</em></li>
+<li><strong>Arguments:</strong> <code>--in-place --aggressive --aggressive $FilePath$</code></li>
+<li><strong>Working directory:</strong> <code>$ProjectFileDir$</code></li>
+</ul>
+<p><strong>Advanced Options</strong></p>
+<ul>
+<li>☑ <strong>Synchronize files after execution</strong></li>
+<li>☑ <strong>Open console for tool output</strong></li>
+<li>☐ Make console active on message in stdout</li>
+<li>☐ Make console active on message in stderr</li>
+<li><strong>Output filters:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$FILE_PATH$:$LINE$:$COLUMN$:.* 
+</code></pre></div>
+<blockquote>
+<p>Uso: <em>Tools → External Tools → Autopep8</em> sobre el fichero abierto.</p>
+</blockquote>
+<h5 id="433-external-tool-pylint">4.3.3. External Tool – <strong>pylint</strong><a class="headerlink" href="#433-external-tool-pylint" title="Permanent link">&para;</a></h5>
+<p><img alt="External Tools: Pylint" src="../assets/EDES-U2.2.-ET-Pylint.png" /></p>
+<p><strong>Ruta:</strong> <em>Settings / Preferences → Tools → External Tools → (+)</em></p>
+<ul>
+<li><strong>Name:</strong> <code>Pylint</code></li>
+<li><strong>Group:</strong> <code>External Tools</code></li>
+<li><strong>Description:</strong> <code>Analizador de código estático de Python</code></li>
+<li><strong>Program:</strong> <code>$PyInterpreterDirectory$/pylint</code>
+  <em>(Alternativa universal: <code>$PyInterpreterDirectory$/python</code> con <code>-m pylint</code>)</em></li>
+<li><strong>Arguments:</strong> <code>--output-format=text $FilePath$</code></li>
+<li><strong>Working directory:</strong> <code>$ProjectFileDir$</code></li>
+</ul>
+<p><strong>Advanced Options</strong></p>
+<ul>
+<li>☑ <strong>Synchronize files after execution</strong></li>
+<li>☑ <strong>Open console for tool output</strong></li>
+<li><strong>Output filters:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$FILE_PATH$:$LINE$:$COLUMN$:.* 
+</code></pre></div>
+<blockquote>
+<p>Uso: <em>Tools → External Tools → Pylint</em>. Podrás hacer clic en <code>ruta.py:línea:columna</code> gracias al filtro.</p>
+</blockquote>
+<h5 id="434-file-watcher-autopep8-formateo-al-guardar">4.3.4. File Watcher – <strong>autopep8</strong> (formateo al guardar)<a class="headerlink" href="#434-file-watcher-autopep8-formateo-al-guardar" title="Permanent link">&para;</a></h5>
+<p><img alt="File Watcher: AutoPEP8" src="../assets/EDES-U2.2.-FW-Autopep9.png" /></p>
+<p><strong>Ruta:</strong> <em>Settings / Preferences → Tools → File Watchers → (+) → Custom</em></p>
+<p><strong>Files to Watch</strong></p>
+<ul>
+<li><strong>File type:</strong> <code>Python</code></li>
+<li><strong>Scope:</strong> <code>Project Files</code></li>
+</ul>
+<p><strong>Tool to Run on Changes</strong></p>
+<ul>
+<li><strong>Program:</strong> <code>$PyInterpreterDirectory$/autopep8</code></li>
+<li><strong>Arguments:</strong> <code>--in-place $FilePath$</code></li>
+<li><strong>Output paths to refresh:</strong> <em>(vacío)</em></li>
+<li><strong>Working directory:</strong> <code>$ProjectFileDir$</code></li>
+<li><strong>Environment variables:</strong> <em>(vacío)</em></li>
+</ul>
+<p><strong>Advanced Options</strong></p>
+<ul>
+<li>☑ <strong>Auto-save edited files to trigger the watcher</strong></li>
+<li>☑ <strong>Trigger the watcher on external changes</strong></li>
+<li>☐ Trigger the watcher regardless of syntax errors</li>
+<li>☐ Create output file from stdout</li>
+<li><strong>Show console:</strong> <code>On error</code></li>
+<li><strong>Output filters:</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$FILE_PATH$:$LINE$:$COLUMN$:.* 
+</code></pre></div>
+<blockquote>
+<p>Efecto: cada vez que guardes un <code>.py</code>, autopep8 reescribe el archivo con el formato PEP 8.</p>
+</blockquote>
+<h5 id="435-file-watcher-pylint-lint-al-guardar">4.3.5.  File Watcher – <strong>pylint</strong> (lint al guardar)<a class="headerlink" href="#435-file-watcher-pylint-lint-al-guardar" title="Permanent link">&para;</a></h5>
+<p><img alt="File Watcher: Pylint" src="../assets/EDES-U2.2.-FW-Pylint.png" /></p>
+<p><strong>Ruta:</strong> <em>Settings / Preferences → Tools → File Watchers → (+) → Custom</em></p>
+<p><strong>Files to Watch</strong></p>
+<ul>
+<li><strong>File type:</strong> <code>Python</code></li>
+<li><strong>Scope:</strong> <code>Project Files</code></li>
+</ul>
+<p><strong>Tool to Run on Changes</strong></p>
+<ul>
+<li><strong>Program:</strong> <code>$PyInterpreterDirectory$/pylint</code></li>
+<li><strong>Arguments:</strong> <code>$FilePath$</code></li>
+<li><strong>Output paths to refresh:</strong> <em>(vacío)</em></li>
+<li><strong>Working directory:</strong> <code>$ProjectFileDir$</code></li>
+</ul>
+<p><strong>Advanced Options</strong></p>
+<ul>
+<li>☑ <strong>Auto-save edited files to trigger the watcher</strong></li>
+<li>☑ <strong>Trigger the watcher on external changes</strong></li>
+<li><strong>Show console:</strong> <code>On error</code></li>
+<li><strong>Output filters:</strong> <em>(puedes dejarlo vacío o usar el mismo patrón de antes para que PyCharm enlace a línea/columna)</em></li>
+</ul>
 <h3 id="5-desinstalacion-y-actualizacion-de-extensiones-y-modulos">5. Desinstalación y actualización de extensiones y módulos<a class="headerlink" href="#5-desinstalacion-y-actualizacion-de-extensiones-y-modulos" title="Permanent link">&para;</a></h3>
 <h4 id="51-desinstalacion-en-visual-studio-code">5.1. Desinstalación en Visual Studio Code<a class="headerlink" href="#51-desinstalacion-en-visual-studio-code" title="Permanent link">&para;</a></h4>
-<p>Si en algún momento ya no necesitas una extensión, puedes desinstalarla fácilmente.   </p>
+<p>Si en algún momento ya no necesitas una extensión, puedes desinstalarla fácilmente.</p>
 <ol>
-<li>Abre el panel de extensiones en Visual Studio Code (<code>Ctrl + Shift + X</code>).   </li>
-<li>Encuentra la extensión que deseas desinstalar.   </li>
-<li>Haz clic en el botón de la <strong>papelera</strong> que aparece junto a su nombre.   </li>
+<li>Abre el panel de extensiones en Visual Studio Code (<code>Ctrl + Shift + X</code>).</li>
+<li>Encuentra la extensión que deseas desinstalar.</li>
+<li>Haz clic en el botón de la <strong>papelera</strong> que aparece junto a su nombre.</li>
 </ol>
 <h4 id="52-actualizacion-de-extensiones-en-visual-studio-code">5.2. Actualización de extensiones en Visual Studio Code<a class="headerlink" href="#52-actualizacion-de-extensiones-en-visual-studio-code" title="Permanent link">&para;</a></h4>
-<p>Visual Studio Code te notificará automáticamente cuando haya actualizaciones disponibles para tus extensiones. Solo tienes que hacer clic en el botón de <strong>Actualizar</strong> que aparecerá junto a la extensión en el Marketplace.   </p>
+<p>Visual Studio Code te notificará automáticamente cuando haya actualizaciones disponibles para tus extensiones. Solo tienes que hacer clic en el botón de <strong>Actualizar</strong> que aparecerá junto a la extensión en el Marketplace.</p>
 <h4 id="53-gestion-de-modulos-y-plugins-en-jetbrains">5.3. Gestión de módulos y plugins en JetBrains<a class="headerlink" href="#53-gestion-de-modulos-y-plugins-en-jetbrains" title="Permanent link">&para;</a></h4>
-<p>Desde <code>File &gt; Settings &gt; Plugins</code>, puedes gestionar tus plugins instalados: desactivarlos temporalmente, actualizarlos o desinstalarlos por completo. Esto te permite mantener tu <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr> optimizado y evitar sobrecargarlo con funcionalidades innecesarias.   </p>
+<p>Desde <code>File &gt; Settings &gt; Plugins</code>, puedes gestionar tus plugins instalados: desactivarlos temporalmente, actualizarlos o desinstalarlos por completo. Esto te permite mantener tu <abbr title="Entorno de Desarrollo Integrado. Es una herramienta que proporciona a los desarrolladores un conjunto de funcionalidades integradas para escribir, compilar, depurar y probar programas. Los IDEs suelen incluir un editor de código, un compilador, un depurador, un gestor de proyectos, etc.">IDE</abbr> optimizado y evitar sobrecargarlo con funcionalidades innecesarias.</p>
 <h3 id="6-enlaces-y-recursos-de-interes">6. Enlaces y recursos de interés<a class="headerlink" href="#6-enlaces-y-recursos-de-interes" title="Permanent link">&para;</a></h3>
-<p>Siguiendo los siguientes enlaces podrás instalar extensiones y plugins en Visual Studio Code y los IDEs de JetBrains:   </p>
+<p>Siguiendo los siguientes enlaces podrás instalar extensiones y plugins en Visual Studio Code y los IDEs de JetBrains:</p>
 <h4 id="61-extensiones-en-visual-studio-code">6.1. Extensiónes en Visual Studio Code<a class="headerlink" href="#61-extensiones-en-visual-studio-code" title="Permanent link">&para;</a></h4>
 <ul>
 <li><a href="https://code.visualstudio.com/docs/editor/extension-marketplace">Extensiones en markeplace</a></li>

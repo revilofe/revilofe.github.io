@@ -285,7 +285,7 @@ Siguiendo los siguientes enlaces podrás instalar extensiones y plugins en Visua
 - [Instalando plugins en IDEA](https://www.jetbrains.com/help/idea/managing-plugins.html)
 - [Plugins en IDEA](https://www.jetbrains.com/help/idea/plugins-settings.html)
 - [Extensiones recomendadas para Python en PyCharm](https://www.jetbrains.com/help/pycharm/python.html)
-- [Extensiones recomendadas para Kotlin en IntelliJ IDEA](https://www.jetbrains.com/help/idea/kotlin.html)
+
 
 ### 7. Conclusión
 

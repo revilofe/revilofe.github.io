@@ -13,3 +13,28 @@
     right: 15px !important;
     font-size: 14px !important;
 }
+
+/* Center only headings horizontally */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    text-align: center !important;
+}
+
+/* Left-align all other content (paragraphs, lists, etc.) */
+.reveal p,
+.reveal ul,
+.reveal ol,
+.reveal li {
+    text-align: left !important;
+}
+
+/* Keep images centered */
+.reveal img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

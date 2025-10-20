@@ -64,12 +64,13 @@ Supongamos que estás desarrollando en **Python** y necesitas añadir soporte co
 3. Haz clic en el botón **Instalar**. En unos segundos, tu IDE tendrá completo soporte para Python, incluyendo autocompletado, depuración y análisis de errores.   
 
 #### 3.3. Instalación de linting y formateadores de código
-Los **linters** y **formateadores de código** son extensiones que te ayudan a mantener un código limpio y consistente.
-    - linters: Verifican tu código en busca de errores y malas prácticas. Por ejemplo, si escribiste una variable que nunca usas, el linter te lo indicará, o por ejemplo si tienes una variable que no sigue la convención de nombres.
-    - Formateadores: Ajustan automáticamente el formato de tu código según unas reglas predefinidas. Por ejemplo si tienes un código con sangrías incorrectas, el formateador lo corregirá.
+Los **linters** y **formateadores de código** son extensiones que te ayudan a mantener un código limpio y consistente.    
+
+- linters: Verifican tu código en busca de errores y malas prácticas. Por ejemplo, si escribiste una variable que nunca usas, el linter te lo indicará, o por ejemplo si tienes una variable que no sigue la convención de nombres.   
+- Formateadores: Ajustan automáticamente el formato de tu código según unas reglas predefinidas. Por ejemplo si tienes un código con sangrías incorrectas, el formateador lo corregirá.
 
 Existen extensiones que te permiten utilizar estas herramientas en Visual Studio Code y Pycharm. A continuación, te proporciono una URL para seguir los pasos a través de un articulo:
-    - [Configurar linter y formatter en VSC](https://leanmind.es/es/blog/como-configurar-linter-y-formatter-de-python-en-vscode/)
+- [Configurar linter y formatter en VSC](https://leanmind.es/es/blog/como-configurar-linter-y-formatter-de-python-en-vscode/)
 
 Estas extensiones no solo te ayudarán a escribir código más rápido, sino que también te aseguran que sigues buenas prácticas en tu proyecto.
 

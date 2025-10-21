@@ -694,7 +694,7 @@ Las amenazas se pueden clasificar según diferentes criterios:
     * **Definición**: Son acciones **no intencionadas** de las personas que causan daños a los sistemas, como borrar archivos accidentalmente, apagar sistemas críticos o mal configurar un software.
     * **Ejemplo**: Un empleado borra por error archivos importantes en un servidor, sin tener una copia de seguridad.
 
-4. **Fallos de suministro eléctric
+4. **Fallos de suministro eléctrico**
 
     * **Definición**: La **pérdida de electricidad** puede hacer que los sistemas se apaguen de manera repentina, provocando **pérdida de datos** o incluso daños a los equipos.
     * **Ejemplo**: Un corte de luz durante el proceso de actualización de un servidor puede causar una **corrupción en el software** o la pérdida de datos.

@@ -49,11 +49,11 @@ A la hora de identificar las amenazas, puede ser útil tomar como punto de parti
 
 #### 3.4. Fase 4. Identificar vulnerabilidades y salvaguardas
 
-La siguiente fase consiste en estudiar las características de nuestros activos para identificar puntos débiles o vulnerabilidades. *Por ejemplo,* una posible vulnerabilidad puede ser identificar un conjunto de ordenadores o servidores cuyo sistemas antivirus no están actualizados o una serie de activos para los que no existe soporte ni mantenimiento por parte del fabricante. Posteriormente, a la hora de evaluar el riesgo aplicaremos penalizaciones para reflejar las vulnerabilidades identificadas.
+La siguiente fase consiste en estudiar las **características de nuestros activos** para identificar puntos débiles o **vulnerabilidades**. *Por ejemplo,* una posible vulnerabilidad puede ser identificar un conjunto de ordenadores o servidores cuyo sistemas antivirus no están actualizados o una serie de activos para los que no existe soporte ni mantenimiento por parte del fabricante. Posteriormente, a la hora de evaluar el riesgo **aplicaremos penalizaciones para reflejar las vulnerabilidades identificadas**.
 
 ![Imagen riesgos mitigacion escalada](https://www.incibe.es/sites/default/files/contenidos/blog/analisis_riesgos_escalada_ciberseguridad.png)
 
-Por otra parte, también analizaremos y documentaremos las medidas de seguridad implantadas en nuestra organización. *Por ejemplo*, es posible que hayamos instalado un sistema SAI (Sistema de Alimentación Ininterrumpida) o un grupo electrógeno para abastecer de electricidad a los equipos del CPD. Ambas medidas de seguridad (también conocidas como salvaguardas) contribuyen a reducir el riesgo de las amenazas relacionadas con el corte de suministro eléctrico.
+Por otra parte, también **analizaremos y documentaremos las medidas de seguridad implantadas** en nuestra organización. *Por ejemplo*, es posible que hayamos instalado un sistema SAI (Sistema de Alimentación Ininterrumpida) o un grupo electrógeno para abastecer de electricidad a los equipos del CPD. Ambas medidas de seguridad (también conocidas como salvaguardas) **contribuyen a reducir el riesgo de las amenazas relacionadas** con el corte de suministro eléctrico.
 
 Estas consideraciones (vulnerabilidades y salvaguardas) debemos tenerlas en cuenta cuando vayamos a estimar la probabilidad y el impacto como veremos en la siguiente fase.
 
@@ -66,7 +66,7 @@ Llegado a este punto disponemos de los siguientes elementos:
 * Conjunto de vulnerabilidades asociadas a cada activo (si corresponde).    
 * Conjunto de medidas de seguridad implantadas.   
 
-Con esta información, nos encontramos en condiciones de calcular el riesgo. Para cada par activo-amenaza, estimaremos la probabilidad de que la amenaza se materialice y el impacto sobre el negocio que esto produciría. El cálculo de riesgo se puede realizar usando tanto criterios cuantitativos como cualitativos. Pero para entenderlo mejor, veremos a modo de *ejemplo* las tablas para estimar los factores probabilidad e impacto.
+Con esta información, nos encontramos en condiciones de calcular el riesgo. **Para cada par activo-amenaza, estimaremos la probabilidad de que la amenaza se materialice y el impacto sobre el negocio que esto produciría**. El cálculo de riesgo se puede realizar usando tanto criterios cuantitativos como cualitativos. Pero para entenderlo mejor, veremos a modo de *ejemplo* las tablas para estimar los factores probabilidad e impacto.
 
 **Tabla para el cálculo de la probabilidad**
 
@@ -80,27 +80,27 @@ Tabla para el cálculo del impacto
 
 A la hora de calcular el riesgo, si hemos optado por hacer el análisis cuantitativo, calcularemos multiplicando los factores probabilidad e impacto:
 
-**RIESGO = PROBABILIDAD x IMPACTO.**
+> **RIESGO = PROBABILIDAD x IMPACTO.**
 
 Si por el contrario hemos optado por el análisis cualitativo, haremos uso de una matriz de riesgo como la que se muestra a continuación:
 
 ![Analisis de riesgo tabla cálculo del riesgo](https://www.incibe.es/sites/default/files/contenidos/blog/matriz_de_riesgo.png)
 
-Tal y como indicábamos en el apartado anterior, cuando vayamos a estimar la probabilidad y el impacto debemos tener en cuenta las vulnerabilidades y salvaguardas existentes. *Por ejemplo,* la caída del servidor principal podría tener un impacto alto para el negocio. Sin embargo, si existe una solución de alta disponibilidad (*Ej*. Servidores redundados), podemos considerar que el impacto será medio ya que estas medidas de seguridad harán que los procesos de negocio no se vean gravemente afectados por la caída del servidor. Si por el contrario hemos identificado vulnerabilidades asociadas al activo, aplicaremos una penalización a la hora de estimar el impacto. *Por ejemplo*, si los equipos de climatización del CPD no han recibido el mantenimiento recomendado por el fabricante, incrementaremos el impacto de amenazas como “condiciones ambientales inadecuadas” o “malfuncionamiento de los equipos debido a altas temperaturas”.
+Tal y como indicábamos en el apartado anterior, cuando vayamos a estimar la probabilidad y el impacto debemos tener en cuenta las vulnerabilidades y salvaguardas existentes. *Por ejemplo*, la caída del servidor principal podría tener un impacto alto para el negocio. Sin embargo, si existe una solución de alta disponibilidad (*Ej*. Servidores redundados), podemos considerar que el impacto será medio ya que estas medidas de seguridad harán que los procesos de negocio no se vean gravemente afectados por la caída del servidor. Si por el contrario hemos identificado vulnerabilidades asociadas al activo, aplicaremos una penalización a la hora de estimar el impacto. *Por ejemplo*, si los equipos de climatización del CPD no han recibido el mantenimiento recomendado por el fabricante, incrementaremos el impacto de amenazas como “condiciones ambientales inadecuadas” o “malfuncionamiento de los equipos debido a altas temperaturas”.
 
 #### 3.6. Fase 6. Tratar el riesgo
 
-Una vez calculado el riesgo, debemos tratar aquellos riesgos que superen un límite que nosotros mismos hayamos establecido. *Por ejemplo,* trataremos aquellos riesgos cuyo valor sea superior a “4” o superior a “Medio” en caso de que hayamos hecho el cálculo en términos cualitativos. A la hora de tratar el riesgo, existen cuatro estrategias principales:
+Una vez calculado el riesgo, debemos tratar aquellos **riesgos que superen un límite** que nosotros mismos hayamos establecido. *Por ejemplo,* trataremos aquellos riesgos cuyo valor sea superior a “4” o superior a “Medio” en caso de que hayamos hecho el cálculo en términos cualitativos. A la hora de tratar el riesgo, existen cuatro estrategias principales:
 
 * **Transferir** el riesgo a un tercero. *Por ejemplo*, contratando un [seguro ](https://www.incibe.es/empresas/blog/porque-veces-pasa-y-si-contrato-ciberseguro)que cubra los daños a terceros ocasionados por fugas de información.   
 * **Eliminar** el riesgo. *Por ejemplo,* eliminando un proceso o sistema que está sujeto a un riesgo elevado. En el caso práctico que hemos expuesto, podríamos eliminar la wifi de cortesía para dar servicio a los clientes si no es estrictamente necesario.    
 * **Asumir** el riesgo, siempre justificadamente. *Por ejemplo,* el coste de instalar un grupo electrógeno puede ser demasiado alto y por tanto, la organización puede optar por asumir.   
 * **Implantar** medidas para mitigarlo. *Por ejemplo,* contratando un acceso a internet de respaldo para poder acceder a los servicios en la nube en caso de que la línea principal haya caído.   
 
-Por último, cabe señalar que como realizamos este análisis de riesgos en el contexto de un PDS, las acciones e iniciativas para tratar los riesgos pasarán a formar parte del mismo. Por lo tanto, deberemos clasificarlas y priorizarlas considerando el resto de proyectos que forman parte del PDS. Asimismo, tal y como indicábamos en la introducción, llevar a cabo un análisis de riesgos nos proporciona información de gran valor y contribuye en gran medida a mejorar la seguridad de nuestra organización. Dada esta situación, es muy recomendable llevar a cabo este tipo de proyectos ya bien sea de forma aislada o dentro del contexto de un proyecto mayor como es el caso del Plan Director de Seguridad.
+Por último, cabe señalar que como realizamos este análisis de riesgos en el contexto de un PDS, **las acciones e iniciativas** para tratar los riesgos pasarán a formar parte del mismo. Por lo tanto, deberemos **clasificarlas y priorizarlas considerando el resto de proyectos que forman parte del PDS**. Asimismo, tal y como indicábamos en la introducción, llevar a cabo un análisis de riesgos nos proporciona información de gran valor y contribuye en gran medida a mejorar la seguridad de nuestra organización. Dada esta situación, es muy recomendable llevar a cabo este tipo de proyectos ya bien sea de forma aislada o dentro del contexto de un proyecto mayor como es el caso del Plan Director de Seguridad.
 
 ### 4. Conclusiones
-El análisis de riesgos es un proceso fundamental para la gestión de la seguridad de la información y la ciberseguridad. A través del análisis de riesgos, las organizaciones pueden identificar los activos más valiosos, las amenazas a las que están expuestas y las vulnerabilidades que pueden ser explotadas por los atacantes. Con esta información, las organizaciones pueden tomar decisiones informadas sobre cómo mitigar los riesgos y proteger sus activos. Por tanto, es fundamental que las organizaciones realicen análisis de riesgos de forma regular y sistemática para garantizar la seguridad de la información y la ciberseguridad.
+El análisis de riesgos es un proceso fundamental para la gestión de la seguridad de la información y la ciberseguridad. A través del análisis de riesgos, las organizaciones pueden identificar los activos más valiosos, las amenazas a las que están expuestas y las vulnerabilidades que pueden ser explotadas por los atacantes. Con esta información, las organizaciones pueden tomar decisiones informadas sobre cómo mitigar los riesgos y proteger sus activos. Por tanto, es **fundamental que las organizaciones realicen análisis de riesgos de forma regular y sistemática para garantizar la seguridad de la información y la ciberseguridad**.
 
 ## Fuentes
 - https://www.incibe.es/empresas/blog/analisis-riesgos-pasos-sencillo

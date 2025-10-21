@@ -409,13 +409,13 @@ Cada uno de estos activos necesita ser protegido porque su pérdida o daño podr
 
 Para hacer más fácil su gestión y protección, los activos se clasifican en diferentes categorías según su naturaleza:
 
-1. Datos: Son todos los datos e información que maneja la empresa en cualquier formato (digital, físico, en la nube, etc.). Estos datos pueden ser personales, financieros, de clientes, operacionales y más.
+1. **Datos:** Son todos los datos e información que maneja la empresa en cualquier formato (digital, físico, en la nube, etc.). Estos datos pueden ser personales, financieros, de clientes, operacionales y más.
 
    * Ejemplos:
      * Bases de datos de clientes o ventas.
      * Documentación importante como contratos, manuales, normativas o informes.
    * Importancia: La confidencialidad e integridad de los datos es vital, ya que su pérdida o alteración puede tener consecuencias legales, financieras y de reputación para la empresa.
-2. Aplicaciones: Son los programas y software que utiliza la organización para gestionar y operar su negocio. Incluyen tanto aplicaciones comerciales como sistemas personalizados desarrollados específicamente para la empresa.
+2. **Aplicaciones:** Son los programas y software que utiliza la organización para gestionar y operar su negocio. Incluyen tanto aplicaciones comerciales como sistemas personalizados desarrollados específicamente para la empresa.
 
    * Ejemplos:
      * Sistemas SCADA (usados en procesos industriales).
@@ -428,13 +428,13 @@ Para hacer más fácil su gestión y protección, los activos se clasifican en d
      * Servidores y terminales remotas en fábricas.
      * Dispositivos móviles usados para gestionar procesos.
    * Importancia: El hardware es crítico para las operaciones diarias, y si falla, puede causar pérdidas operativas significativas o incluso riesgos de seguridad.
-4. Red: Son los dispositivos y equipos que permiten la conectividad y comunicación entre los sistemas, usuarios y procesos.
+4. **Red:** Son los dispositivos y equipos que permiten la conectividad y comunicación entre los sistemas, usuarios y procesos.
 
    * Ejemplos:
      * Routers, switches y firewalls que mantienen la red segura y operativa.
      * Pasarelas que permiten la conexión entre diferentes sistemas.
    * Importancia: La disponibilidad y seguridad de las redes son fundamentales para que los sistemas de la empresa se mantengan conectados y puedan compartir información de manera eficiente y segura.
-5. Tecnología: Son otros equipos tecnológicos necesarios para el funcionamiento empresarial. Son más generales que el hardware industrial, pero siguen siendo críticos para la gestión diaria.
+5. **Tecnología:** Son otros equipos tecnológicos necesarios para el funcionamiento empresarial. Son más generales que el hardware industrial, pero siguen siendo críticos para la gestión diaria.
 
    * Ejemplos:
      * Servidores que alojan los sistemas y aplicaciones empresariales.
@@ -446,13 +446,13 @@ Para hacer más fácil su gestión y protección, los activos se clasifican en d
      * Plantilla propia de la organización.
      * Personal subcontratado o de mantenimiento.
    * Importancia: La concienciación y capacitación en ciberseguridad del personal son fundamentales para evitar errores humanos, que muchas veces son la principal causa de vulnerabilidades.
-7. Instalaciones: Son los lugares físicos donde la organización aloja sus sistemas y operaciones.
+7. **Instalaciones:** Son los lugares físicos donde la organización aloja sus sistemas y operaciones.
 
    * Ejemplos:
      * Edificios, oficinas, instalaciones eléctricas.
      * Centros de datos y servidores físicos.
    * Importancia: Las instalaciones deben estar protegidas físicamente para evitar acceso no autorizado o daños físicos, como incendios o robos.
-8. Equipamiento auxiliar: Son los equipos de soporte que ayudan a mantener el funcionamiento de los sistemas de información, aunque no son parte del núcleo principal de operación.
+8. **Equipamiento auxiliar:** Son los equipos de soporte que ayudan a mantener el funcionamiento de los sistemas de información, aunque no son parte del núcleo principal de operación.
 
    * Ejemplos:
      * Equipos de destrucción de datos, climatización o SAI (Sistemas de  Alimentación Ininterrumpida) que mantienen los servidores funcionando incluso en caso de fallos eléctricos.
@@ -473,10 +473,6 @@ Clasificar los activos es un paso fundamental en la gestión de la cibersegurida
 
 Ahora que hemos entendido qué son los activos y cómo clasificarlos, podemos avanzar a entender las amenazas, vulnerabilidades y riesgos que pueden afectar estos activos.
 
-<figure markdown>
-  ![](assets/IS-U111-PrincipiosGenerales10.png)
-  <figcaption>Activos en el contexto de seguridad</figcaption>
-</figure>
 
 #### 5.2. Vulnerabilidades
 
@@ -608,8 +604,8 @@ El sistema CVE actualmente es importante en el campo de la ciberseguridad por va
 ###### 5.2.4.4 Conde consultar
 En estos enlaces puedes consultar vulnerabilidades registradas CVE:
 
-https://www.incibe-cert.es/alerta-temprana/vulnerabilidades
-https://www.ccn-cert.cni.es/seguridad-al-dia/avisos-ccn-cert.html
+* [Incibe Cert](https://www.incibe-cert.es/alerta-temprana/vulnerabilidades)
+* [CCN Cert](https://www.ccn-cert.cni.es/seguridad-al-dia/avisos-ccn-cert.html)
 
 
 
@@ -626,12 +622,6 @@ Las amenazas atentan contra la seguridad, por tanto, **se incumplirán los princ
 
 
 ##### 5.3.1. Clasificación de amenazas
-
-<figure markdown>
-  ![](assets/IS-U111-PrincipiosGenerales18.png)
-  <figcaption>Tipos de amenazas</figcaption>
-</figure>
-
 
 Las amenazas se pueden clasificar según diferentes criterios:
 
@@ -1192,11 +1182,6 @@ Basándose en el análisis anterior y los recursos disponibles.
 #### 5.6. Visión integrada: activos, vulnerabilidades, amenazas, riesgos y medidas
 
 Ahora que hemos visto cada concepto por separado, es fundamental entender cómo se relacionan entre sí en un sistema integrado de ciberseguridad.
-
-<figure markdown>
-  ![](assets/IS-U111-PrincipiosGenerales26.png)
-  <figcaption>Todo junto: visión integrada</figcaption>
-</figure>
 
 ##### 5.6.1. La cadena de la seguridad
 

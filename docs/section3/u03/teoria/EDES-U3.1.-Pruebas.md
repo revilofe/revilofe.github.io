@@ -76,7 +76,11 @@ Los principios básicos que rigen el proceso de verificación y prueba de los pr
 
 El ciclo de vida en el proceso de pruebas consta de las siguientes actividades principales:
 
-![](assets/cicloVidaPruebas.png)
+<figure markdown>
+  ![](assets/cicloVidaPruebas.png)
+  <figcaption>Ciclo de vida de pruebas</figcaption>
+</figure>
+
 
 1. **Planificación y control**: Se establecen los objetivos y el plan de pruebas y se controla el avance con respecto a lo planificado.
 2. **Análisis y diseño**: los objetivos se transforman en casos de prueba tangibles

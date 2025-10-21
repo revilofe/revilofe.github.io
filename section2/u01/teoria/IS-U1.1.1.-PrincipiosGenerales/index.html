@@ -7650,15 +7650,25 @@ Imagina que en tu casa y te das cuenta de que una puerta no tiene cerradura. Esa
 <p><strong>Opciones de tratamiento:</strong></p>
 <ol>
 <li><strong>EVITAR</strong>: Cerrar la tienda online (no viable, es el negocio principal)</li>
-<li><strong>MITIGAR</strong>:</li>
+<li>
+<p><strong>MITIGAR</strong>:</p>
+<ul>
 <li>Contratar servicio CDN con protección <abbr title="Ataque de Denegación de Servicio Distribuido. Es un ataque en el que los atacantes intentan saturar los recursos de un sistema o una red para que deje de funcionar correctamente. Los ataques DDoS pueden ser utilizados para interrumpir los servicios, causar daños económicos, etc.">DDoS</abbr> (coste: 2.000€/mes)</li>
 <li>Implementar sistemas de balanceo de carga (coste: 5.000€ inicial)</li>
 <li>Reduce probabilidad a Baja y el impacto a Medio</li>
 <li><strong>Riesgo residual</strong>: MEDIO-BAJO</li>
-<li><strong>TRANSFERIR</strong>:</li>
+</ul>
+</li>
+<li>
+<p><strong>TRANSFERIR</strong>:</p>
+<ul>
 <li>Contratar seguro que cubra pérdidas por indisponibilidad (coste: 1.500€/mes)</li>
 <li>Riesgo permanece pero impacto económico se comparte</li>
-<li><strong>ACEPTAR</strong>: No hacer nada y asumir las pérdidas si ocurre</li>
+</ul>
+</li>
+<li>
+<p><strong>ACEPTAR</strong>: No hacer nada y asumir las pérdidas si ocurre</p>
+</li>
 </ol>
 <p><strong>Decisión</strong>: La empresa decide MITIGAR (opción 2) porque el coste de las medidas (2.000€/mes) es significativamente menor que la pérdida potencial (50.000€/día).</p>
 <h4 id="55-medidas-de-seguridad">5.5. Medidas de seguridad<a class="headerlink" href="#55-medidas-de-seguridad" title="Permanent link">&para;</a></h4>
@@ -7675,7 +7685,9 @@ Imagina que en tu casa y te das cuenta de que una puerta no tiene cerradura. Esa
 <p><strong>1. Controles preventivos</strong></p>
 <p>Eliminan o reducen la posibilidad de que las amenazas lleguen a materializarse.</p>
 <ul>
-<li><strong>Ejemplos</strong>:</li>
+<li>
+<p><strong>Ejemplos</strong>:</p>
+<ul>
 <li><strong>Firewall</strong>: Bloquea accesos no autorizados desde Internet</li>
 <li><strong>Sistema de autenticación multifactor (<abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr>)</strong>: Requiere múltiples formas de verificación</li>
 <li><strong>Cifrado de datos</strong>: Protege la información en reposo y en tránsito</li>
@@ -7683,10 +7695,14 @@ Imagina que en tu casa y te das cuenta de que una puerta no tiene cerradura. Esa
 <li><strong>Segmentación de red</strong>: Separa sistemas críticos de otros menos seguros</li>
 <li><strong>Formación de empleados</strong>: Previene errores humanos y ataques de ingeniería social</li>
 </ul>
+</li>
+</ul>
 <p><strong>2. Controles de detección</strong></p>
 <p>Permiten detectar un suceso no deseado cuando está ocurriendo o ha ocurrido.</p>
 <ul>
-<li><strong>Ejemplos</strong>:</li>
+<li>
+<p><strong>Ejemplos</strong>:</p>
+<ul>
 <li><strong><abbr title="Sistema de Detección de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas. Los IDS pueden detectar ataques de denegación de servicio, escaneos de puertos, intentos de intrusión, etc.">IDS</abbr> (Sistema de Detección de Intrusos)</strong>: Detecta intentos de acceso no autorizado</li>
 <li><strong><abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> (Security Information and Event Management)</strong>: Correlaciona eventos de seguridad</li>
 <li><strong>Monitorización de logs</strong>: Registra y analiza actividades sospechosas</li>
@@ -7694,16 +7710,22 @@ Imagina que en tu casa y te das cuenta de que una puerta no tiene cerradura. Esa
 <li><strong>Auditorías de seguridad</strong>: Revisiones periódicas de controles</li>
 <li><strong>Alertas de accesos anómalos</strong>: Notifica comportamientos inusuales</li>
 </ul>
+</li>
+</ul>
 <p><strong>3. Medidas de reacción y recuperación</strong></p>
 <p>Reducen el impacto en caso de haberse materializado las amenazas.</p>
 <ul>
-<li><strong>Ejemplos</strong>:</li>
+<li>
+<p><strong>Ejemplos</strong>:</p>
+<ul>
 <li><strong>Backups o copias de seguridad</strong>: Permiten restaurar datos perdidos</li>
 <li><strong>Plan de Continuidad de Negocio (BCP)</strong>: Mantiene operaciones críticas</li>
 <li><strong>Plan de Recuperación ante Desastres (DRP)</strong>: Restaura sistemas tras incidentes graves</li>
 <li><strong>Dispositivos redundantes</strong>: Equipos duplicados para sustitución inmediata</li>
 <li><strong>Equipo de Respuesta a Incidentes (<abbr title="Computer Security Incident Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Variante más amplia del CIRT, que incluye una visión más estratégica y alineada con las políticas de seguridad.">CSIRT</abbr>)</strong>: Gestiona y resuelve incidentes de seguridad</li>
 <li><strong>Sistemas de respaldo automático (failover)</strong>: Cambian a sistemas alternativos automáticamente</li>
+</ul>
+</li>
 </ul>
 <h5 id="552-ejemplos-de-implementacion-de-medidas">5.5.2. Ejemplos de implementación de medidas<a class="headerlink" href="#552-ejemplos-de-implementacion-de-medidas" title="Permanent link">&para;</a></h5>
 <p><strong>Caso práctico 1: Empresa de desarrollo de software</strong></p>
@@ -7712,28 +7734,28 @@ Imagina que en tu casa y te das cuenta de que una puerta no tiene cerradura. Esa
 <ul>
 <li>
 <p><strong>Preventivas</strong>:</p>
-</li>
-<li>
-<p>Control de acceso basado en roles (solo desarrolladores acceden al repositorio)</p>
-</li>
+<ul>
+<li>Control de acceso basado en roles (solo desarrolladores acceden al repositorio)</li>
 <li>Autenticación de dos factores para acceso al repositorio</li>
 <li>Cifrado de datos en repositorios</li>
+</ul>
+</li>
 <li>
 <p><strong>Detectivas</strong>:</p>
-</li>
-<li>
-<p>Monitorización de descargas masivas de código</p>
-</li>
+<ul>
+<li>Monitorización de descargas masivas de código</li>
 <li>Logs de acceso al repositorio con alertas automáticas</li>
 <li>Auditorías trimestrales de permisos</li>
+</ul>
+</li>
 <li>
 <p><strong>Reacción/Recuperación</strong>:</p>
-</li>
-<li>
-<p>Backups diarios del repositorio</p>
-</li>
+<ul>
+<li>Backups diarios del repositorio</li>
 <li>Procedimiento de revocación inmediata de accesos</li>
 <li>Seguro de ciberseguridad que cubre pérdidas por robo de <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr></li>
+</ul>
+</li>
 </ul>
 <p><strong>Caso práctico 2: Hospital con datos médicos</strong></p>
 <p><strong>Situación</strong>: Riesgo de exposición de datos de pacientes (<abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El RGPD garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">RGPD</abbr>)</p>
@@ -7741,30 +7763,30 @@ Imagina que en tu casa y te das cuenta de que una puerta no tiene cerradura. Esa
 <ul>
 <li>
 <p><strong>Preventivas</strong>:</p>
-</li>
-<li>
-<p>Cifrado de bases de datos</p>
-</li>
+<ul>
+<li>Cifrado de bases de datos</li>
 <li><abbr title="Red Privada Virtual. Es un sistema de seguridad que se utiliza para establecer una conexión segura entre un cliente y un servidor a través de una red pública. Las VPN cifran la comunicación, protegen la privacidad de los datos y permiten a los usuarios acceder a recursos de red de forma segura.">VPN</abbr> obligatoria para acceso remoto</li>
 <li>Formación anual en protección de datos para todo el personal</li>
 <li>Políticas estrictas de manejo de información sensible</li>
+</ul>
+</li>
 <li>
 <p><strong>Detectivas</strong>:</p>
-</li>
-<li>
-<p>Sistema <abbr title="Prevención de Pérdida de Datos. Es un sistema de seguridad que se utiliza para proteger la información confidencial de una organización y prevenir su divulgación no autorizada. El DLP puede monitorizar y controlar el tráfico de red, los dispositivos de almacenamiento, los dispositivos móviles, etc.">DLP</abbr> (Data Loss Prevention) que detecta transferencias no autorizadas</p>
-</li>
+<ul>
+<li>Sistema <abbr title="Prevención de Pérdida de Datos. Es un sistema de seguridad que se utiliza para proteger la información confidencial de una organización y prevenir su divulgación no autorizada. El DLP puede monitorizar y controlar el tráfico de red, los dispositivos de almacenamiento, los dispositivos móviles, etc.">DLP</abbr> (Data Loss Prevention) que detecta transferencias no autorizadas</li>
 <li>Monitorización de accesos a historiales médicos</li>
 <li>Alertas ante accesos desde ubicaciones inusuales</li>
+</ul>
+</li>
 <li>
 <p><strong>Reacción/Recuperación</strong>:</p>
-</li>
-<li>
-<p>Plan de respuesta a brechas de datos conforme a <abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El RGPD garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">RGPD</abbr></p>
-</li>
+<ul>
+<li>Plan de respuesta a brechas de datos conforme a <abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El RGPD garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">RGPD</abbr></li>
 <li>Backups cifrados cada 4 horas</li>
 <li>Sistema de notificación a pacientes afectados</li>
 <li>Equipo legal especializado en protección de datos</li>
+</ul>
+</li>
 </ul>
 <h5 id="553-proceso-de-analisis-y-seleccion-de-medidas-de-seguridad">5.5.3. Proceso de análisis y selección de medidas de seguridad<a class="headerlink" href="#553-proceso-de-analisis-y-seleccion-de-medidas-de-seguridad" title="Permanent link">&para;</a></h5>
 <p>Para identificar e implementar las medidas de seguridad adecuadas, debemos seguir un proceso sistemático:</p>
@@ -7776,45 +7798,65 @@ Imagina que en tu casa y te das cuenta de que una puerta no tiene cerradura. Esa
 <p><strong>Fase 2: Identificar qué activos participarán en el estudio</strong></p>
 <p>De qué sistema, departamento, servicio, etc. y realizar su valoración.</p>
 <ul>
-<li><strong>Ejemplo</strong>:</li>
+<li>
+<p><strong>Ejemplo</strong>:</p>
+<ul>
 <li>Base de datos de empleados (Valor: Crítico)</li>
 <li>Software de nóminas (Valor: Alto)</li>
 <li>Servidores donde se alojan (Valor: Alto)</li>
 <li>Documentos de contratos (Valor: Medio)</li>
 </ul>
+</li>
+</ul>
 <p><strong>Fase 3: Identificar las medidas de seguridad existentes</strong></p>
 <p>Es decir, qué controles ya están implementados. Si no hay, entonces hay puntos débiles.</p>
 <ul>
-<li><strong>Ejemplo</strong>:</li>
+<li>
+<p><strong>Ejemplo</strong>:</p>
+<ul>
 <li>✓ Existe <abbr title="Dispositivo de seguridad que se utiliza para proteger una red de comunicaciones. El firewall controla el tráfico de red y decide qué paquetes de datos pueden entrar o salir de la red.">firewall</abbr> perimetral</li>
 <li>✗ No hay cifrado de base de datos</li>
 <li>✓ Existe control de acceso con usuario/contraseña</li>
 <li>✗ No hay autenticación multifactor</li>
 <li>✗ No se realizan backups regularmente</li>
 </ul>
+</li>
+</ul>
 <p><strong>Fase 4: Descubrir los puntos débiles o vulnerabilidades</strong></p>
 <p>Que afectan a los activos.</p>
 <ul>
-<li><strong>Ejemplo</strong>:</li>
+<li>
+<p><strong>Ejemplo</strong>:</p>
+<ul>
 <li>Base de datos sin cifrar → Exposición de datos en caso de acceso no autorizado</li>
 <li>Falta de <abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr> → Facilita accesos con contraseñas robadas</li>
 <li>Sin backups → Imposibilidad de recuperar datos tras <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr></li>
 </ul>
+</li>
+</ul>
 <p><strong>Fase 5: Valorar las posibles amenazas</strong></p>
 <p>Que pueden afectar a los activos.</p>
 <ul>
-<li><strong>Ejemplo</strong>:</li>
+<li>
+<p><strong>Ejemplo</strong>:</p>
+<ul>
 <li>Ataque de <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> (Probabilidad: Media, Impacto: Crítico)</li>
 <li>Robo de credenciales por phishing (Probabilidad: Alta, Impacto: Alto)</li>
 <li>Empleado con acceso no autorizado (Probabilidad: Baja, Impacto: Alto)</li>
 </ul>
+</li>
+</ul>
 <p><strong>Fase 6: Obtener el riesgo para cada activo/amenaza</strong></p>
 <p>Valorar la probabilidad y el impacto sobre el negocio que produciría un ataque.</p>
 <ul>
-<li><strong>Ejemplo</strong>:</li>
+<li>
+<p><strong>Ejemplo</strong>:</p>
+<ul>
 <li>Riesgo 1: Ransomware en BD de empleados = Media × Crítico = <strong>RIESGO ALTO</strong></li>
 <li>Riesgo 2: <abbr title="Técnica de ingeniería social utilizada para engañar a los usuarios y obtener información confidencial, como contraseñas, números de tarjeta de crédito, etc. Los atacantes suelen enviar correos electrónicos o mensajes de texto que parecen provenir de una fuente legítima, como un banco o una empresa, y solicitan al usuario que haga clic en un enlace o proporcione información confidencial.">Phishing</abbr> para robo de credenciales = Alta × Alto = <strong>RIESGO MUY ALTO</strong></li>
 <li>Riesgo 3: Acceso no autorizado interno = Baja × Alto = <strong>RIESGO MEDIO</strong></li>
+</ul>
+</li>
 </ul>
 <p><strong>Fase 7: Establecer los objetivos de seguridad de la organización</strong></p>
 <p>El umbral por encima del cual la organización tomará medidas.</p>
@@ -7824,20 +7866,30 @@ Imagina que en tu casa y te das cuenta de que una puerta no tiene cerradura. Esa
 <p><strong>Fase 8: Seleccionar las medidas de protección posibles</strong></p>
 <p>Basándose en el análisis anterior y los recursos disponibles.</p>
 <ul>
-<li><strong>Ejemplo de plan de acción</strong>:</li>
-<li><strong>Inmediato</strong> (Riesgo Muy Alto):<ul>
+<li>
+<p><strong>Ejemplo de plan de acción</strong>:</p>
+<ul>
+<li>
+<p><strong>Inmediato</strong> (Riesgo Muy Alto):</p>
+<ul>
 <li>Implementar <abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr> en todos los accesos</li>
 <li>Programa de formación anti-phishing</li>
 </ul>
 </li>
-<li><strong>Corto plazo</strong> (Riesgo Alto):<ul>
+<li>
+<p><strong>Corto plazo</strong> (Riesgo Alto):</p>
+<ul>
 <li>Cifrado de base de datos</li>
 <li>Sistema de backups automatizado diario</li>
 </ul>
 </li>
-<li><strong>Medio plazo</strong> (Riesgo Medio):<ul>
+<li>
+<p><strong>Medio plazo</strong> (Riesgo Medio):</p>
+<ul>
 <li>Implementar <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> para detección de anomalías</li>
 <li>Auditorías trimestrales de accesos</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

@@ -1008,13 +1008,17 @@ Una empresa de retail online identifica el siguiente riesgo:
 
 1. **EVITAR**: Cerrar la tienda online (no viable, es el negocio principal)
 2. **MITIGAR**:
-   - Contratar servicio CDN con protección DDoS (coste: 2.000€/mes)
-   - Implementar sistemas de balanceo de carga (coste: 5.000€ inicial)
-   - Reduce probabilidad a Baja y el impacto a Medio
-   - **Riesgo residual**: MEDIO-BAJO
+
+    - Contratar servicio CDN con protección DDoS (coste: 2.000€/mes)
+    - Implementar sistemas de balanceo de carga (coste: 5.000€ inicial)
+    - Reduce probabilidad a Baja y el impacto a Medio
+    - **Riesgo residual**: MEDIO-BAJO
+
 3. **TRANSFERIR**:
-   - Contratar seguro que cubra pérdidas por indisponibilidad (coste: 1.500€/mes)
-   - Riesgo permanece pero impacto económico se comparte
+
+    - Contratar seguro que cubra pérdidas por indisponibilidad (coste: 1.500€/mes)
+    - Riesgo permanece pero impacto económico se comparte
+
 4. **ACEPTAR**: No hacer nada y asumir las pérdidas si ocurre
 
 **Decisión**: La empresa decide MITIGAR (opción 2) porque el coste de las medidas (2.000€/mes) es significativamente menor que la pérdida potencial (50.000€/día).
@@ -1042,36 +1046,39 @@ Se dividen en tres grandes grupos:
 Eliminan o reducen la posibilidad de que las amenazas lleguen a materializarse.
 
 * **Ejemplos**:
-  * **Firewall**: Bloquea accesos no autorizados desde Internet
-  * **Sistema de autenticación multifactor (MFA)**: Requiere múltiples formas de verificación
-  * **Cifrado de datos**: Protege la información en reposo y en tránsito
-  * **Políticas de contraseñas fuertes**: Requiere complejidad y renovación periódica
-  * **Segmentación de red**: Separa sistemas críticos de otros menos seguros
-  * **Formación de empleados**: Previene errores humanos y ataques de ingeniería social
+
+    * **Firewall**: Bloquea accesos no autorizados desde Internet
+    * **Sistema de autenticación multifactor (MFA)**: Requiere múltiples formas de verificación
+    * **Cifrado de datos**: Protege la información en reposo y en tránsito
+    * **Políticas de contraseñas fuertes**: Requiere complejidad y renovación periódica
+    * **Segmentación de red**: Separa sistemas críticos de otros menos seguros
+    * **Formación de empleados**: Previene errores humanos y ataques de ingeniería social
 
 **2. Controles de detección**
 
 Permiten detectar un suceso no deseado cuando está ocurriendo o ha ocurrido.
 
 * **Ejemplos**:
-  * **IDS (Sistema de Detección de Intrusos)**: Detecta intentos de acceso no autorizado
-  * **SIEM (Security Information and Event Management)**: Correlaciona eventos de seguridad
-  * **Monitorización de logs**: Registra y analiza actividades sospechosas
-  * **Sistemas de detección de malware**: Identifica software malicioso
-  * **Auditorías de seguridad**: Revisiones periódicas de controles
-  * **Alertas de accesos anómalos**: Notifica comportamientos inusuales
+
+    * **IDS (Sistema de Detección de Intrusos)**: Detecta intentos de acceso no autorizado
+    * **SIEM (Security Information and Event Management)**: Correlaciona eventos de seguridad
+    * **Monitorización de logs**: Registra y analiza actividades sospechosas
+    * **Sistemas de detección de malware**: Identifica software malicioso
+    * **Auditorías de seguridad**: Revisiones periódicas de controles
+    * **Alertas de accesos anómalos**: Notifica comportamientos inusuales
 
 **3. Medidas de reacción y recuperación**
 
 Reducen el impacto en caso de haberse materializado las amenazas.
 
 * **Ejemplos**:
-  * **Backups o copias de seguridad**: Permiten restaurar datos perdidos
-  * **Plan de Continuidad de Negocio (BCP)**: Mantiene operaciones críticas
-  * **Plan de Recuperación ante Desastres (DRP)**: Restaura sistemas tras incidentes graves
-  * **Dispositivos redundantes**: Equipos duplicados para sustitución inmediata
-  * **Equipo de Respuesta a Incidentes (CSIRT)**: Gestiona y resuelve incidentes de seguridad
-  * **Sistemas de respaldo automático (failover)**: Cambian a sistemas alternativos automáticamente
+
+    * **Backups o copias de seguridad**: Permiten restaurar datos perdidos
+    * **Plan de Continuidad de Negocio (BCP)**: Mantiene operaciones críticas
+    * **Plan de Recuperación ante Desastres (DRP)**: Restaura sistemas tras incidentes graves
+    * **Dispositivos redundantes**: Equipos duplicados para sustitución inmediata
+    * **Equipo de Respuesta a Incidentes (CSIRT)**: Gestiona y resuelve incidentes de seguridad
+    * **Sistemas de respaldo automático (failover)**: Cambian a sistemas alternativos automáticamente
 
 ##### 5.5.2. Ejemplos de implementación de medidas
 
@@ -1083,19 +1090,21 @@ Reducen el impacto en caso de haberse materializado las amenazas.
 
 * **Preventivas**:
 
-  * Control de acceso basado en roles (solo desarrolladores acceden al repositorio)
-  * Autenticación de dos factores para acceso al repositorio
-  * Cifrado de datos en repositorios
+    * Control de acceso basado en roles (solo desarrolladores acceden al repositorio)
+    * Autenticación de dos factores para acceso al repositorio
+    * Cifrado de datos en repositorios
+  
 * **Detectivas**:
 
-  * Monitorización de descargas masivas de código
-  * Logs de acceso al repositorio con alertas automáticas
-  * Auditorías trimestrales de permisos
+    * Monitorización de descargas masivas de código
+    * Logs de acceso al repositorio con alertas automáticas
+    * Auditorías trimestrales de permisos
+  
 * **Reacción/Recuperación**:
 
-  * Backups diarios del repositorio
-  * Procedimiento de revocación inmediata de accesos
-  * Seguro de ciberseguridad que cubre pérdidas por robo de IP
+    * Backups diarios del repositorio
+    * Procedimiento de revocación inmediata de accesos
+    * Seguro de ciberseguridad que cubre pérdidas por robo de IP
 
 **Caso práctico 2: Hospital con datos médicos**
 
@@ -1105,21 +1114,23 @@ Reducen el impacto en caso de haberse materializado las amenazas.
 
 * **Preventivas**:
 
-  * Cifrado de bases de datos
-  * VPN obligatoria para acceso remoto
-  * Formación anual en protección de datos para todo el personal
-  * Políticas estrictas de manejo de información sensible
+    * Cifrado de bases de datos
+    * VPN obligatoria para acceso remoto
+    * Formación anual en protección de datos para todo el personal
+    * Políticas estrictas de manejo de información sensible
+  
 * **Detectivas**:
 
-  * Sistema DLP (Data Loss Prevention) que detecta transferencias no autorizadas
-  * Monitorización de accesos a historiales médicos
-  * Alertas ante accesos desde ubicaciones inusuales
+    * Sistema DLP (Data Loss Prevention) que detecta transferencias no autorizadas
+    * Monitorización de accesos a historiales médicos
+    * Alertas ante accesos desde ubicaciones inusuales
+  
 * **Reacción/Recuperación**:
 
-  * Plan de respuesta a brechas de datos conforme a RGPD
-  * Backups cifrados cada 4 horas
-  * Sistema de notificación a pacientes afectados
-  * Equipo legal especializado en protección de datos
+    * Plan de respuesta a brechas de datos conforme a RGPD
+    * Backups cifrados cada 4 horas
+    * Sistema de notificación a pacientes afectados
+    * Equipo legal especializado en protección de datos
 
 ##### 5.5.3. Proceso de análisis y selección de medidas de seguridad
 
@@ -1136,48 +1147,53 @@ Es decir, si nos centramos en un servicio, departamento y actividades o alguno e
 De qué sistema, departamento, servicio, etc. y realizar su valoración.
 
 * **Ejemplo**:
-  * Base de datos de empleados (Valor: Crítico)
-  * Software de nóminas (Valor: Alto)
-  * Servidores donde se alojan (Valor: Alto)
-  * Documentos de contratos (Valor: Medio)
+
+    * Base de datos de empleados (Valor: Crítico)
+    * Software de nóminas (Valor: Alto)
+    * Servidores donde se alojan (Valor: Alto)
+    * Documentos de contratos (Valor: Medio)
 
 **Fase 3: Identificar las medidas de seguridad existentes**
 
 Es decir, qué controles ya están implementados. Si no hay, entonces hay puntos débiles.
 
 * **Ejemplo**:
-  * ✓ Existe firewall perimetral
-  * ✗ No hay cifrado de base de datos
-  * ✓ Existe control de acceso con usuario/contraseña
-  * ✗ No hay autenticación multifactor
-  * ✗ No se realizan backups regularmente
 
+    * ✓ Existe firewall perimetral
+    * ✗ No hay cifrado de base de datos
+    * ✓ Existe control de acceso con usuario/contraseña
+    * ✗ No hay autenticación multifactor
+    * ✗ No se realizan backups regularmente
+  
 **Fase 4: Descubrir los puntos débiles o vulnerabilidades**
 
 Que afectan a los activos.
 
 * **Ejemplo**:
-  * Base de datos sin cifrar → Exposición de datos en caso de acceso no autorizado
-  * Falta de MFA → Facilita accesos con contraseñas robadas
-  * Sin backups → Imposibilidad de recuperar datos tras ransomware
+
+    * Base de datos sin cifrar → Exposición de datos en caso de acceso no autorizado
+    * Falta de MFA → Facilita accesos con contraseñas robadas
+    * Sin backups → Imposibilidad de recuperar datos tras ransomware
 
 **Fase 5: Valorar las posibles amenazas**
 
 Que pueden afectar a los activos.
 
 * **Ejemplo**:
-  * Ataque de ransomware (Probabilidad: Media, Impacto: Crítico)
-  * Robo de credenciales por phishing (Probabilidad: Alta, Impacto: Alto)
-  * Empleado con acceso no autorizado (Probabilidad: Baja, Impacto: Alto)
+
+    * Ataque de ransomware (Probabilidad: Media, Impacto: Crítico)
+    * Robo de credenciales por phishing (Probabilidad: Alta, Impacto: Alto)
+    * Empleado con acceso no autorizado (Probabilidad: Baja, Impacto: Alto)
 
 **Fase 6: Obtener el riesgo para cada activo/amenaza**
 
 Valorar la probabilidad y el impacto sobre el negocio que produciría un ataque.
 
 * **Ejemplo**:
-  * Riesgo 1: Ransomware en BD de empleados = Media × Crítico = **RIESGO ALTO**
-  * Riesgo 2: Phishing para robo de credenciales = Alta × Alto = **RIESGO MUY ALTO**
-  * Riesgo 3: Acceso no autorizado interno = Baja × Alto = **RIESGO MEDIO**
+
+    * Riesgo 1: Ransomware en BD de empleados = Media × Crítico = **RIESGO ALTO**
+    * Riesgo 2: Phishing para robo de credenciales = Alta × Alto = **RIESGO MUY ALTO**
+    * Riesgo 3: Acceso no autorizado interno = Baja × Alto = **RIESGO MEDIO**
 
 **Fase 7: Establecer los objetivos de seguridad de la organización**
 
@@ -1190,15 +1206,21 @@ El umbral por encima del cual la organización tomará medidas.
 Basándose en el análisis anterior y los recursos disponibles.
 
 * **Ejemplo de plan de acción**:
-  * **Inmediato** (Riesgo Muy Alto):
-    * Implementar MFA en todos los accesos
-    * Programa de formación anti-phishing
-  * **Corto plazo** (Riesgo Alto):
-    * Cifrado de base de datos
-    * Sistema de backups automatizado diario
-  * **Medio plazo** (Riesgo Medio):
-    * Implementar SIEM para detección de anomalías
-    * Auditorías trimestrales de accesos
+
+    * **Inmediato** (Riesgo Muy Alto):
+
+        * Implementar MFA en todos los accesos
+        * Programa de formación anti-phishing
+
+    * **Corto plazo** (Riesgo Alto):
+  
+        * Cifrado de base de datos
+        * Sistema de backups automatizado diario
+  
+    * **Medio plazo** (Riesgo Medio):
+
+        * Implementar SIEM para detección de anomalías
+        * Auditorías trimestrales de accesos
 
 
 

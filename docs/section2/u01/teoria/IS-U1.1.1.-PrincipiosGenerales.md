@@ -482,195 +482,743 @@ Clasificar los activos es un paso fundamental en la gestión de la cibersegurida
 
 Ahora que hemos entendido qué son los activos y cómo clasificarlos, podemos avanzar a entender las amenazas, vulnerabilidades y riesgos que pueden afectar estos activos.
 
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales10.png)
+  <figcaption>Activos en el contexto de seguridad</figcaption>
+</figure>
 
+#### 5.2. Vulnerabilidades
 
+Una **vulnerabilidad** es una debilidad o fallo en un sistema de información que pone en riesgo la seguridad de la información, pudiendo permitir que un atacante comprometa la **integridad**, **disponibilidad** o **confidencialidad** de la misma. También puede afectar a otros principios como la **autenticidad**, **fiabilidad** y **no repudio**.
 
+Las vulnerabilidades son las condiciones y características propias de los sistemas de una organización, de los **activos**, que la hacen susceptible a las **amenazas**.
 
-**
+##### 5.2.1. Características de las vulnerabilidades
 
+Las vulnerabilidades pueden ser:
 
-**
+* **Propias del sistema**: Fallos en el diseño o implementación del software o hardware.
+* **De configuración**: Errores en la configuración de sistemas o aplicaciones.
+* **Humanas**: Falta de formación, errores de usuarios o malas prácticas.
+* **Físicas**: Deficiencias en la protección física de los equipos o instalaciones.
 
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales11.png)
+  <figcaption>Vulnerabilidad vs Amenaza</figcaption>
+</figure>
 
---
---
+##### 5.2.2. Ejemplos de vulnerabilidades
 
----
+**Ejemplo 1: Vulnerabilidad de software desactualizado**
 
----
+Imagina que tu empresa utiliza un servidor web con una versión antigua de software que tiene un fallo de seguridad conocido. Esta vulnerabilidad podría permitir que un atacante acceda al sistema sin autorización.
 
-#### Activos
+* **Activo afectado**: Servidor web (Hardware industrial / Tecnología)
+* **Vulnerabilidad**: Software no actualizado con parches de seguridad
+* **Principio comprometido**: Confidencialidad, Integridad
 
-Activo: cualquier recurso de la empresa necesario para desempeñar las actividades diarias y cuya no disponibilidad o deterioro supone un agravio o coste\.
+**Ejemplo 2: Contraseñas débiles**
 
+En una empresa, varios empleados utilizan contraseñas simples como "123456" o "password" para acceder a sistemas críticos.
 
+* **Activo afectado**: Datos de la empresa, sistemas de autenticación (Aplicaciones)
+* **Vulnerabilidad**: Políticas de contraseñas débiles, falta de formación del personal
+* **Principio comprometido**: Confidencialidad, Autenticidad
 
-![](assets/IS-U111-PrincipiosGenerales10.png)
+**Ejemplo 3: Falta de cifrado en comunicaciones**
 
-Intenta definirlas
+Una aplicación móvil envía datos sensibles de clientes sin cifrar a través de Internet.
 
-#### Vulnerabilidad vs Amenaza
+* **Activo afectado**: Datos de clientes (Datos)
+* **Vulnerabilidad**: Ausencia de cifrado en las comunicaciones
+* **Principio comprometido**: Confidencialidad
 
-La diferencia entre vulnerabilidad y amenaza es muy interesante\, aunque son términos que se confunden a menudo\.
+**Ejemplo 4: Acceso físico no controlado**
 
-![](assets/IS-U111-PrincipiosGenerales11.png)
+Un centro de datos no tiene control de acceso adecuado y cualquier empleado puede entrar sin identificarse.
 
-Intenta definirlas
+* **Activo afectado**: Servidores, sistemas de almacenamiento (Instalaciones, Tecnología)
+* **Vulnerabilidad**: Falta de controles de acceso físico
+* **Principio comprometido**: Disponibilidad, Integridad
 
-Las  _vulnerabilidades_  son las condiciones y características propias de los sistemas de una organización\, de los  _activos_ \, que la hacen susceptible a las  _amenazas_ \.
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales12.png)
+  <figcaption>Ejemplo de vulnerabilidad explotada</figcaption>
+</figure>
 
-Las amenazas atentan contra la seguridad\, por tanto\,  <span style="color:#FF0000"> __se incumplirán los principios generales de la seguridad de la __ </span>  <span style="color:#FF0000"> __organización__ </span> \.
+##### 5.2.3. Clasificación de vulnerabilidades por severidad
 
-__Problema__ : si existe una vulnerabilidad\, siempre existirá alguien que intentará explotarla\, es decir\, sacar provecho de su existencia\.
+Las vulnerabilidades se clasifican según su gravedad, generalmente utilizando sistemas como CVSS (Common Vulnerability Scoring System):
 
-![](assets/IS-U111-PrincipiosGenerales12.png)
+* **Críticas**: Permiten control total del sistema sin autenticación
+* **Altas**: Permiten acceso significativo con pocos requisitos
+* **Medias**: Requieren condiciones específicas para ser explotadas
+* **Bajas**: Impacto limitado o difícil de explotar
 
-![](assets/IS-U111-PrincipiosGenerales13.png)
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales13.png)
+  <figcaption>Clasificación de vulnerabilidades</figcaption>
+</figure>
 
-![](assets/IS-U111-PrincipiosGenerales14.png)
+**Ejemplo real: Vulnerabilidades en TCP/IP en Microsoft**
 
-¿ejemplos de vulnerabilida?
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales16.png)
+  <figcaption>Vulnerabilidades TCP/IP Microsoft</figcaption>
+</figure>
 
-__Vulnerabilidad propia del sistema__
+En un análisis de seguridad de Microsoft:
 
-#### Vulnerabilidad
+* **Número total de vulnerabilidades detectadas**: 56
+* **11 críticas**: Requieren acción inmediata
+* **43 altas**: Deben tratarse prioritariamente
+* **2 medias**: Pueden planificarse en el tiempo
 
-Una __ vulnerabilidad __ es una debilidad o fallo en un sistema de información que pone en riesgo la seguridad de la información pudiendo permitir que un atacante pueda comprometer la  __integridad__ \,  __disponibilidad__  o  __confidencialidad__  de la misma\, por lo que es necesario encontrarlas y eliminarlas lo antes posible\.
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales14.png)
+  <figcaption>Vulnerabilidad propia del sistema</figcaption>
+</figure>
 
-![](assets/IS-U111-PrincipiosGenerales15.png)
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales15.png)
+  <figcaption>Impacto de vulnerabilidades</figcaption>
+</figure>
 
-No nos olvidemos de la:
+##### 5.2.4. La importancia de gestionar las vulnerabilidades
 
-Autenticidad
+**Problema fundamental**: Si existe una vulnerabilidad, siempre existirá alguien que intentará explotarla, es decir, sacar provecho de su existencia.
 
-Fiabilidad
+Por eso es necesario:
 
-No repudio
+1. **Identificar** las vulnerabilidades mediante auditorías y análisis
+2. **Evaluar** su gravedad e impacto potencial
+3. **Priorizar** su corrección según el riesgo
+4. **Implementar** medidas correctivas (parches, actualizaciones, configuraciones)
+5. **Verificar** que las medidas son efectivas
+6. **Monitorizar** continuamente para detectar nuevas vulnerabilidades
 
-Vulnerabilidades en TCP/IP en Microsoft
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales17.png)
+  <figcaption>Ciclo de gestión de vulnerabilidades</figcaption>
+</figure>
 
-![](assets/IS-U111-PrincipiosGenerales16.png)
+#### 5.3. Amenazas
 
-__Número total de vulnerabilidades: 56__
+Una **amenaza** es toda acción que aprovecha una vulnerabilidad para atentar contra la seguridad de un sistema de información. Es decir, que podría tener un potencial efecto negativo sobre algún elemento de nuestros sistemas. Desde el punto de vista de una organización pueden ser tanto **internas** como **externas**.
 
-__11 __  __críticas__
+Las amenazas atentan contra la seguridad, por tanto, **se incumplirán los principios generales de la seguridad de la organización** (Confidencialidad, Integridad, Disponibilidad, Autenticidad, Fiabilidad, No repudio).
 
-__43 altas__
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales18.png)
+  <figcaption>Tipos de amenazas</figcaption>
+</figure>
 
-__2 medias__
+##### 5.3.1. Clasificación de amenazas
 
-![](assets/IS-U111-PrincipiosGenerales17.png)
+Las amenazas se pueden clasificar según diferentes criterios:
 
-#### Amenaza
+**Por su naturaleza (a qué afectan):**
 
-__Amenaza: __ toda acción que aprovecha una vulnerabilidad para atentar contra la seguridad de un sistema de información\. Es decir\, que podría tener un potencial efecto negativo sobre algún elemento de nuestros sistemas\. Desde el punto de vista de una organización pueden ser tanto internas como externas\.
+* **Lógicas**: Afectan al software, datos o sistemas operativos
+  * Virus, malware, troyanos
+  * Ataques de ingeniería social
+  * Exploits de vulnerabilidades de software
 
-![](assets/IS-U111-PrincipiosGenerales18.png)
+* **Físicas**: Afectan al hardware o infraestructura física
+  * Robo o destrucción de equipos
+  * Incendios, inundaciones
+  * Sabotajes físicos
+  * Cortes de suministro eléctrico
 
-* Amenaza: naturaleza de a lo que afecta:
-  * Lógica
-  * Física
-* Amenaza: como interfiere
-  * Interrupción
-  * Interceptación
-  * Modificación
-  * Fabricación
+**Por cómo interfieren:**
 
-![](assets/IS-U111-PrincipiosGenerales19.png)
+* **Interrupción**: La amenaza hace que un activo del sistema se pierda, quede no disponible o inutilizable
+  * Ejemplo: Ataque DDoS que hace caer un servidor web
 
-#### Riesgo
+* **Interceptación**: Un elemento no autorizado consigue acceso a un activo
+  * Ejemplo: Escucha de comunicaciones no cifradas (sniffing)
 
-El riesgo es la probabilidad de que se produzca un incidente de seguridad\, materializandose una amenaza y causando pérdidas o daños\.
+* **Modificación**: Un elemento no autorizado no solo accede, sino que modifica el activo
+  * Ejemplo: Alteración de registros en una base de datos
 
-El riesgo depende entonces de los siguientes factores:  __la probabilidad de que la __  _amenaza_  __ se materialice aprovechando una __  _vulnerabilidad_  __ y produciendo un daño o impacto__ \. El producto de estos factores representa el riesgo existirá alguien que intentará explotarla\, es decir\, sacar provecho de su existencia\.
+* **Fabricación**: Un elemento no autorizado crea objetos falsos en el sistema
+  * Ejemplo: Inserción de transacciones fraudulentas en un sistema bancario
 
-PROBABILIDAD DE QUE OCURRA
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales19.png)
+  <figcaption>Cómo interfieren las amenazas</figcaption>
+</figure>
 
-![](assets/IS-U111-PrincipiosGenerales20.png)
+##### 5.3.2. Ejemplos detallados de amenazas
 
-__El riesgo  es la probabilidad de que una amenaza se materialice por el impacto que provocaría la explotación de una vulnerabilidad\.__
+**Ejemplo 1: Ataque de Phishing (Amenaza lógica - Interceptación)**
 
-Podemos  _identificar_  los  __activos críticos__  de los sistemas de información que pueden suponer un  __riesgo__ \, realizando un  _análisis_  de riesgos
+Un empleado recibe un correo electrónico que aparenta ser del departamento de IT solicitando sus credenciales para "actualizar el sistema".
 
-__Este análisis nos llevará a obtener una imagen rigurosa de los riesgos a los que se encuentra expuesta una organización\. __
+* **Activo objetivo**: Credenciales de acceso (Datos)
+* **Vulnerabilidad explotada**: Falta de formación en ciberseguridad del personal
+* **Tipo de amenaza**: Lógica, externa, interceptación
+* **Principios comprometidos**: Confidencialidad, Autenticidad
+* **Impacto**: El atacante obtiene acceso no autorizado a sistemas internos
 
-#### Medidas de seguridad
+**Ejemplo 2: Ransomware (Amenaza lógica - Modificación/Interrupción)**
 
-El  __tratamiento__  del riesgo \(control\) supone unos claros beneficios para la «salud» de la ciberseguridad\.
+Un malware cifra todos los archivos de los servidores de la empresa y exige un rescate para descifrarlos.
 
-De esta manera mantendremos protegida nuestra información confidencial frente a la mayoría de amenazas y vulnerabilidades detectadas \(o no\)\, evitando robos y fugas de información\.
+* **Activo objetivo**: Datos corporativos, servidores (Datos, Tecnología)
+* **Vulnerabilidad explotada**: Falta de actualizaciones de seguridad, ausencia de copias de seguridad
+* **Tipo de amenaza**: Lógica, externa, modificación e interrupción
+* **Principios comprometidos**: Disponibilidad, Integridad
+* **Impacto**: Pérdida de acceso a información crítica, paralización de operaciones
 
-![](assets/IS-U111-PrincipiosGenerales21.png)
+**Ejemplo 3: Empleado descontento (Amenaza física/lógica - Modificación)**
 
-![](assets/IS-U111-PrincipiosGenerales22.png)
+Un empleado con acceso a sistemas críticos decide modificar datos antes de abandonar la empresa.
 
-![](assets/IS-U111-PrincipiosGenerales23.png)
+* **Activo objetivo**: Base de datos de clientes (Datos)
+* **Vulnerabilidad explotada**: Falta de control de accesos basado en roles, ausencia de auditorías
+* **Tipo de amenaza**: Lógica, interna, modificación
+* **Principios comprometidos**: Integridad, No repudio
+* **Impacto**: Datos corruptos, pérdida de confianza, problemas legales
 
-Con el  _análisis_  del riesgo averiguamos  __la magnitud y la gravedad de las consecuencias del riesgo__  a la que está expuesta la organización\.
+**Ejemplo 4: Corte de energía prolongado (Amenaza física - Interrupción)**
 
-Para ello tendremos que definir un  _umbral_  que determine los riesgos asumibles de los que no lo son\.
+Un apagón eléctrico en la zona donde está el centro de datos deja sin servicio los sistemas durante horas.
 
-En función de la relevancia de los riegos podremos optar por:
+* **Activo objetivo**: Servidores, sistemas críticos (Tecnología, Instalaciones)
+* **Vulnerabilidad explotada**: Ausencia de sistemas SAI adecuados, falta de redundancia
+* **Tipo de amenaza**: Física, externa, interrupción
+* **Principios comprometidos**: Disponibilidad
+* **Impacto**: Pérdida de servicio, posible pérdida de datos no guardados
 
-__Evitar__  el riesgo eliminando su causa\, por ejemplo\, cuando sea viable optar por no implementar una actividad o proceso que pudiera implicar un riesgo\.
+**Ejemplo 5: Ataque Man-in-the-Middle (Amenaza lógica - Interceptación)**
 
-Adoptar  _medidas_  que  __mitiguen__  el impacto o la probabilidad del riesgo a través de la implementación y monitorización de controles\.
+Un atacante se coloca entre un usuario y un servidor interceptando toda la comunicación.
 
-Compartir o  __transferir__  el riesgo con terceros a través de seguros\, contratos etc\.
+* **Activo objetivo**: Comunicaciones, datos en tránsito (Red, Datos)
+* **Vulnerabilidad explotada**: Falta de cifrado, redes WiFi inseguras
+* **Tipo de amenaza**: Lógica, externa, interceptación
+* **Principios comprometidos**: Confidencialidad, Integridad
+* **Impacto**: Robo de credenciales, captura de información sensible
 
-__Aceptar__  la existencia del riesgo y monitorizarlo\.
+**Ejemplo 6: SQL Injection (Amenaza lógica - Modificación/Interceptación)**
 
-A los procedimientos utilizados para reducir los riesgos o minimizar su impacto se les denomina __ “mecanismos o medidas de seguridad”\.__
+Un atacante introduce código SQL malicioso en un formulario web para acceder o modificar la base de datos.
+
+* **Activo objetivo**: Base de datos de aplicación web (Aplicaciones, Datos)
+* **Vulnerabilidad explotada**: Falta de validación de entradas en la aplicación
+* **Tipo de amenaza**: Lógica, externa, interceptación y modificación
+* **Principios comprometidos**: Confidencialidad, Integridad, Autenticidad
+* **Impacto**: Acceso no autorizado a información, modificación de registros
+
+##### 5.3.3. Amenazas internas vs externas
+
+Es importante distinguir entre amenazas que provienen del interior de la organización y las que vienen del exterior:
+
+**Amenazas externas:**
+
+* Hackers y ciberdelincuentes
+* Competencia desleal
+* Grupos organizados de ciberdelincuencia
+* Estados y grupos con motivaciones políticas
+
+**Amenazas internas:**
+
+* Empleados descontentos o negligentes
+* Personal sin formación adecuada
+* Ex-empleados con acceso no revocado
+* Proveedores o contratistas con acceso
+
+#### 5.4. Riesgos
+
+El **riesgo** es la probabilidad de que se produzca un incidente de seguridad, materializándose una amenaza y causando pérdidas o daños.
+
+**El riesgo es la probabilidad de que una amenaza se materialice por el impacto que provocaría la explotación de una vulnerabilidad.**
+
+##### 5.4.1. Componentes del riesgo
+
+El riesgo depende de los siguientes factores:
+
+```
+RIESGO = PROBABILIDAD de que la amenaza se materialice × IMPACTO del daño causado
+```
+
+Donde:
+
+* **Probabilidad**: Es la posibilidad de que una amenaza aproveche una vulnerabilidad
+* **Impacto**: Es la magnitud del daño que causaría si la amenaza se materializa
+
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales20.png)
+  <figcaption>Probabilidad de que ocurra</figcaption>
+</figure>
+
+##### 5.4.2. Análisis de riesgos
+
+Podemos **identificar** los **activos críticos** de los sistemas de información que pueden suponer un **riesgo**, realizando un **análisis** de riesgos.
+
+**Este análisis nos llevará a obtener una imagen rigurosa de los riesgos a los que se encuentra expuesta una organización.**
+
+Con el **análisis** del riesgo averiguamos **la magnitud y la gravedad de las consecuencias del riesgo** a la que está expuesta la organización.
+
+Para ello tendremos que definir un **umbral** que determine los riesgos asumibles de los que no lo son.
+
+##### 5.4.3. Ejemplos prácticos de evaluación de riesgos
+
+**Ejemplo 1: Servidor web sin actualizar**
+
+* **Activo**: Servidor web de comercio electrónico
+* **Vulnerabilidad**: Software con vulnerabilidades conocidas (sin parches)
+* **Amenaza**: Ataque de explotación remota por hackers
+* **Probabilidad**: Alta (vulnerabilidad pública, herramientas disponibles)
+* **Impacto**: Crítico (robo de datos de tarjetas, pérdida económica, daño reputacional)
+* **RIESGO**: **MUY ALTO** → Requiere acción inmediata
+
+**Ejemplo 2: Falta de copias de seguridad**
+
+* **Activo**: Base de datos de clientes
+* **Vulnerabilidad**: Ausencia de backups automatizados
+* **Amenaza**: Fallo de hardware, ransomware
+* **Probabilidad**: Media (puede ocurrir en cualquier momento)
+* **Impacto**: Crítico (pérdida total de datos, imposibilidad de recuperación)
+* **RIESGO**: **ALTO** → Debe implementarse solución urgente
+
+**Ejemplo 3: Acceso WiFi de invitados sin segmentación**
+
+* **Activo**: Red corporativa interna
+* **Vulnerabilidad**: WiFi de invitados en la misma red que sistemas críticos
+* **Amenaza**: Acceso no autorizado a recursos internos
+* **Probabilidad**: Media (requiere conocimientos técnicos)
+* **Impacto**: Alto (acceso a información sensible)
+* **RIESGO**: **MEDIO-ALTO** → Planificar segmentación de red
+
+**Ejemplo 4: Contraseñas en post-it**
+
+* **Activo**: Credenciales de acceso a sistemas
+* **Vulnerabilidad**: Contraseñas escritas en notas físicas
+* **Amenaza**: Robo de contraseñas por personal de limpieza o visitantes
+* **Probabilidad**: Baja (requiere acceso físico)
+* **Impacto**: Medio (acceso limitado a un usuario)
+* **RIESGO**: **MEDIO** → Formación en buenas prácticas
+
+**Ejemplo 5: Sistema legacy crítico sin soporte**
+
+* **Activo**: Sistema de control industrial SCADA
+* **Vulnerabilidad**: Sistema operativo Windows XP sin actualizaciones
+* **Amenaza**: Malware especializado (ej: Stuxnet, WannaCry)
+* **Probabilidad**: Media (sistemas industriales objetivo creciente)
+* **Impacto**: Crítico (paralización de producción)
+* **RIESGO**: **ALTO** → Aislamiento de red + plan de migración
+
+##### 5.4.4. Matriz de riesgos
+
+Una herramienta común para visualizar los riesgos es la matriz de probabilidad e impacto:
+
+| Probabilidad/Impacto | Bajo | Medio | Alto | Crítico |
+|---------------------|------|-------|------|---------|
+| **Muy Alta** | Medio | Alto | Muy Alto | Crítico |
+| **Alta** | Medio | Alto | Alto | Muy Alto |
+| **Media** | Bajo | Medio | Alto | Alto |
+| **Baja** | Bajo | Bajo | Medio | Alto |
+| **Muy Baja** | Bajo | Bajo | Bajo | Medio |
+
+##### 5.4.5. Tratamiento del riesgo
+
+En función de la relevancia de los riesgos podremos optar por diferentes estrategias:
+
+**1. EVITAR el riesgo**
+
+Eliminando su causa. Por ejemplo, cuando sea viable optar por no implementar una actividad o proceso que pudiera implicar un riesgo.
+
+* **Ejemplo**: Una empresa decide no ofrecer servicios de almacenamiento en la nube para evitar los riesgos asociados con el manejo de datos de terceros.
+
+**2. MITIGAR el riesgo**
+
+Adoptar medidas que **mitiguen** el impacto o la probabilidad del riesgo a través de la implementación y monitorización de controles.
+
+* **Ejemplo**: Instalar un firewall y sistemas de detección de intrusos para reducir la probabilidad de ataques exitosos.
+
+**3. TRANSFERIR el riesgo**
+
+Compartir o **transferir** el riesgo con terceros a través de seguros, contratos, etc.
+
+* **Ejemplo**: Contratar un seguro de ciberseguridad que cubra las pérdidas en caso de un ataque de ransomware.
+
+**4. ACEPTAR el riesgo**
+
+**Aceptar** la existencia del riesgo y monitorizarlo (cuando el coste de mitigación supera el impacto potencial).
+
+* **Ejemplo**: Una pequeña empresa acepta el riesgo de no tener redundancia en un sistema no crítico porque el coste del sistema duplicado es muy alto en relación al impacto.
+
+**Ejemplo práctico de tratamiento de riesgo:**
+
+Una empresa de retail online identifica el siguiente riesgo:
+
+* **Riesgo**: Ataque DDoS que deje inaccesible la web durante las rebajas
+* **Probabilidad**: Media
+* **Impacto**: Alto (pérdida de ventas estimada: 50.000€/día)
+* **Evaluación inicial**: Riesgo ALTO
+
+**Opciones de tratamiento:**
+
+1. **EVITAR**: Cerrar la tienda online (no viable, es el negocio principal)
+2. **MITIGAR**: 
+   - Contratar servicio CDN con protección DDoS (coste: 2.000€/mes)
+   - Implementar sistemas de balanceo de carga (coste: 5.000€ inicial)
+   - Reduce probabilidad a Baja y el impacto a Medio
+   - **Riesgo residual**: MEDIO-BAJO
+3. **TRANSFERIR**: 
+   - Contratar seguro que cubra pérdidas por indisponibilidad (coste: 1.500€/mes)
+   - Riesgo permanece pero impacto económico se comparte
+4. **ACEPTAR**: No hacer nada y asumir las pérdidas si ocurre
+
+**Decisión**: La empresa decide MITIGAR (opción 2) porque el coste de las medidas (2.000€/mes) es significativamente menor que la pérdida potencial (50.000€/día).
+
+#### 5.5. Medidas de seguridad
+
+El **tratamiento** del riesgo (control) supone unos claros beneficios para la «salud» de la ciberseguridad.
+
+De esta manera mantendremos protegida nuestra información confidencial frente a la mayoría de amenazas y vulnerabilidades detectadas (o no), evitando robos y fugas de información.
+
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales21.png)
+  <figcaption>Beneficios del tratamiento de riesgos</figcaption>
+</figure>
+
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales22.png)
+  <figcaption>Protección de información</figcaption>
+</figure>
+
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales23.png)
+  <figcaption>Medidas de seguridad</figcaption>
+</figure>
+
+A los procedimientos utilizados para reducir los riesgos o minimizar su impacto se les denomina **"mecanismos o medidas de seguridad"**.
+
+##### 5.5.1. Tipos de medidas de seguridad
 
 Se dividen en tres grandes grupos:
 
-<span style="color:#2F5496">Controles preventivos</span> : eliminan o reducen la posibilidad de que las amenazas lleguen a materializarse\. Por ejemplo: un firewall o un sistema de autenticación\.
+**1. Controles preventivos**
 
-<span style="color:#2F5496">Medidas de reacción y recuperación: </span> reducen el impacto en caso de haberse materializado las amenazas\.
+Eliminan o reducen la posibilidad de que las amenazas lleguen a materializarse.
 
-A los procedimientos utilizados para reducir los riesgos o minimizar su impacto se les denomina  __“mecanismos o medidas de seguridad”\.__
+* **Ejemplos**:
+  * **Firewall**: Bloquea accesos no autorizados desde Internet
+  * **Sistema de autenticación multifactor (MFA)**: Requiere múltiples formas de verificación
+  * **Cifrado de datos**: Protege la información en reposo y en tránsito
+  * **Políticas de contraseñas fuertes**: Requiere complejidad y renovación periódica
+  * **Segmentación de red**: Separa sistemas críticos de otros menos seguros
+  * **Formación de empleados**: Previene errores humanos y ataques de ingeniería social
 
-Se dividen en tres grandes grupos:
+**2. Controles de detección**
 
-<span style="color:#2F5496">Controles de detección</span> : permiten detectar un suceso no deseado\. Por ejemplo un IDS \(Sistema de Detección de Intrusos\)
+Permiten detectar un suceso no deseado cuando está ocurriendo o ha ocurrido.
 
-Mecanismos o medidas de seguridad\, ejemplos:
+* **Ejemplos**:
+  * **IDS (Sistema de Detección de Intrusos)**: Detecta intentos de acceso no autorizado
+  * **SIEM (Security Information and Event Management)**: Correlaciona eventos de seguridad
+  * **Monitorización de logs**: Registra y analiza actividades sospechosas
+  * **Sistemas de detección de malware**: Identifica software malicioso
+  * **Auditorías de seguridad**: Revisiones periódicas de controles
+  * **Alertas de accesos anómalos**: Notifica comportamientos inusuales
 
-Disponer de dispositivos redundantes \(duplicado\) para poder sustituirlo en caso de un problema\.
+**3. Medidas de reacción y recuperación**
 
-Recuperar un sistema al estado más próximo previo a la ocurrencia de una amenaza\.
+Reducen el impacto en caso de haberse materializado las amenazas.
 
-Realizar un backup\, o copia de seguridad de nuestros datos\.
+* **Ejemplos**:
+  * **Backups o copias de seguridad**: Permiten restaurar datos perdidos
+  * **Plan de Continuidad de Negocio (BCP)**: Mantiene operaciones críticas
+  * **Plan de Recuperación ante Desastres (DRP)**: Restaura sistemas tras incidentes graves
+  * **Dispositivos redundantes**: Equipos duplicados para sustitución inmediata
+  * **Equipo de Respuesta a Incidentes (CSIRT)**: Gestiona y resuelve incidentes de seguridad
+  * **Sistemas de respaldo automático (failover)**: Cambian a sistemas alternativos automáticamente
 
-Entonces ¿ __Cómo__  __ realizamos este __  __análisis__  que nos permita  __identificar las Medidas de Seguridad __ de un sistema?
+##### 5.5.2. Ejemplos prácticos de implementación de medidas
 
-Fase 1:  __Definir el alcance del análisis__ \. Es decir\, si nos centramos en un servicio\, departamento y actividades o alguno en concreto\.
+**Caso práctico 1: Empresa de desarrollo de software**
 
-Fase 2:  __Identificar qué activos__  de qué sistema\, departamento\, servicio\, etc participarán en el estudio y su valoración\.
+**Situación**: Riesgo de robo de código fuente
 
-Fase 3: Identificar las  __medidas de seguridad existentes__ \, es decir\. Si no hay\, entonces hay puntos débiles\.
+**Medidas implementadas**:
 
-¿Cómo actuamos para solventar las principales riesgos de un sistema?
+* **Preventivas**:
+  * Control de acceso basado en roles (solo desarrolladores acceden al repositorio)
+  * Autenticación de dos factores para acceso al repositorio
+  * Cifrado de datos en repositorios
+  
+* **Detectivas**:
+  * Monitorización de descargas masivas de código
+  * Logs de acceso al repositorio con alertas automáticas
+  * Auditorías trimestrales de permisos
+  
+* **Reacción/Recuperación**:
+  * Backups diarios del repositorio
+  * Procedimiento de revocación inmediata de accesos
+  * Seguro de ciberseguridad que cubre pérdidas por robo de IP
 
-Fase 4:  __Descubrir los puntos débiles o vulnerabilidades__  que afectan a los activos\.
+**Caso práctico 2: Hospital con datos médicos**
 
-Fase 5: Valorar las  __posibles amenazas __ que pueden afectar a los activos\.
+**Situación**: Riesgo de exposición de datos de pacientes (RGPD)
 
-Fase 6: Obtener __ el riesgo para cada activo/amenaza__ \, valorar la probabilidad y el impacto sobre el negocio que produciría un ataque\.\.
+**Medidas implementadas**:
 
-¿Cómo actuamos para solventar las principales riesgos de un sistema?
+* **Preventivas**:
+  * Cifrado de bases de datos
+  * VPN obligatoria para acceso remoto
+  * Formación anual en protección de datos para todo el personal
+  * Políticas estrictas de manejo de información sensible
+  
+* **Detectivas**:
+  * Sistema DLP (Data Loss Prevention) que detecta transferencias no autorizadas
+  * Monitorización de accesos a historiales médicos
+  * Alertas ante accesos desde ubicaciones inusuales
+  
+* **Reacción/Recuperación**:
+  * Plan de respuesta a brechas de datos conforme a RGPD
+  * Backups cifrados cada 4 horas
+  * Sistema de notificación a pacientes afectados
+  * Equipo legal especializado en protección de datos
 
-Fase 7: Establecer los  __objetivos de seguridad de la organización__ \. El umbral por encima del cual la organización tomará medidas\.
+##### 5.5.3. Proceso de análisis y selección de medidas de seguridad
 
-Fase 8:  __Seleccionar las medidas de protección__  posibles\.
+Para identificar e implementar las medidas de seguridad adecuadas, debemos seguir un proceso sistemático:
 
-![](assets/IS-U111-PrincipiosGenerales24.png)
+**Fase 1: Definir el alcance del análisis**
 
-![](assets/IS-U111-PrincipiosGenerales25.jpg)
+Es decir, si nos centramos en un servicio, departamento y actividades o alguno en concreto.
 
-#### Todo junto
+* **Ejemplo**: Analizar la seguridad del departamento de recursos humanos y su sistema de gestión de nóminas.
 
-![](assets/IS-U111-PrincipiosGenerales26.png)
+**Fase 2: Identificar qué activos participarán en el estudio**
+
+De qué sistema, departamento, servicio, etc. y realizar su valoración.
+
+* **Ejemplo**: 
+  * Base de datos de empleados (Valor: Crítico)
+  * Software de nóminas (Valor: Alto)
+  * Servidores donde se alojan (Valor: Alto)
+  * Documentos de contratos (Valor: Medio)
+
+**Fase 3: Identificar las medidas de seguridad existentes**
+
+Es decir, qué controles ya están implementados. Si no hay, entonces hay puntos débiles.
+
+* **Ejemplo**: 
+  * ✓ Existe firewall perimetral
+  * ✗ No hay cifrado de base de datos
+  * ✓ Existe control de acceso con usuario/contraseña
+  * ✗ No hay autenticación multifactor
+  * ✗ No se realizan backups regularmente
+
+**Fase 4: Descubrir los puntos débiles o vulnerabilidades**
+
+Que afectan a los activos.
+
+* **Ejemplo**:
+  * Base de datos sin cifrar → Exposición de datos en caso de acceso no autorizado
+  * Falta de MFA → Facilita accesos con contraseñas robadas
+  * Sin backups → Imposibilidad de recuperar datos tras ransomware
+
+**Fase 5: Valorar las posibles amenazas**
+
+Que pueden afectar a los activos.
+
+* **Ejemplo**:
+  * Ataque de ransomware (Probabilidad: Media, Impacto: Crítico)
+  * Robo de credenciales por phishing (Probabilidad: Alta, Impacto: Alto)
+  * Empleado con acceso no autorizado (Probabilidad: Baja, Impacto: Alto)
+
+**Fase 6: Obtener el riesgo para cada activo/amenaza**
+
+Valorar la probabilidad y el impacto sobre el negocio que produciría un ataque.
+
+* **Ejemplo**:
+  * Riesgo 1: Ransomware en BD de empleados = Media × Crítico = **RIESGO ALTO**
+  * Riesgo 2: Phishing para robo de credenciales = Alta × Alto = **RIESGO MUY ALTO**
+  * Riesgo 3: Acceso no autorizado interno = Baja × Alto = **RIESGO MEDIO**
+
+**Fase 7: Establecer los objetivos de seguridad de la organización**
+
+El umbral por encima del cual la organización tomará medidas.
+
+* **Ejemplo**: La organización decide que todo riesgo ALTO o superior debe ser tratado con medidas activas, mientras que los MEDIOS se monitorizan.
+
+**Fase 8: Seleccionar las medidas de protección posibles**
+
+Basándose en el análisis anterior y los recursos disponibles.
+
+* **Ejemplo de plan de acción**:
+  * **Inmediato** (Riesgo Muy Alto):
+    * Implementar MFA en todos los accesos
+    * Programa de formación anti-phishing
+  * **Corto plazo** (Riesgo Alto):
+    * Cifrado de base de datos
+    * Sistema de backups automatizado diario
+  * **Medio plazo** (Riesgo Medio):
+    * Implementar SIEM para detección de anomalías
+    * Auditorías trimestrales de accesos
+
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales24.png)
+  <figcaption>Proceso de análisis de seguridad</figcaption>
+</figure>
+
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales25.jpg)
+  <figcaption>Fases del análisis de riesgos</figcaption>
+</figure>
+
+#### 5.6. Visión integrada: activos, vulnerabilidades, amenazas, riesgos y medidas
+
+Ahora que hemos visto cada concepto por separado, es fundamental entender cómo se relacionan entre sí en un sistema integrado de ciberseguridad.
+
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales26.png)
+  <figcaption>Todo junto: visión integrada</figcaption>
+</figure>
+
+##### 5.6.1. La cadena de la seguridad
+
+La seguridad se puede entender como una cadena de elementos interrelacionados:
+
+```
+ACTIVOS ← protegidos de ← AMENAZAS
+   ↓                          ↓
+tienen                   explotan
+   ↓                          ↓
+VULNERABILIDADES ← generan → RIESGOS
+   ↓                          ↓
+requieren                reducidos por
+   ↓                          ↓
+MEDIDAS DE SEGURIDAD ←←←←←←←←←
+```
+
+##### 5.6.2. Ejemplo integrado completo
+
+**Contexto**: Una cadena de supermercados con sistema de pago con tarjeta
+
+**1. ACTIVO**:
+* Base de datos con información de transacciones de tarjetas de crédito
+* Valor: Crítico (datos financieros de clientes, regulación PCI-DSS)
+
+**2. VULNERABILIDAD**:
+* El sistema de punto de venta (TPV) no está segmentado del resto de la red
+* Software del TPV tiene una versión antigua con vulnerabilidades conocidas
+* El personal no está formado en seguridad
+
+**3. AMENAZA**:
+* Ataque dirigido para instalar malware en los TPV que capture datos de tarjetas
+* Ataque de ingeniería social a empleados para acceder a la red interna
+* Conexión de dispositivos USB infectados en los TPV
+
+**4. ANÁLISIS DE RIESGO**:
+* **Probabilidad**: Alta (objetivo atractivo para ciberdelincuentes, vulnerabilidades conocidas)
+* **Impacto**: Crítico (pérdida masiva de datos financieros, multas millonarias, pérdida de confianza, cierre de negocio)
+* **RIESGO TOTAL**: MUY ALTO
+
+**5. MEDIDAS DE SEGURIDAD IMPLEMENTADAS**:
+
+**Preventivas**:
+* Segmentación de red (TPV en VLAN aislada)
+* Actualización de software de TPV a última versión
+* Desactivación de puertos USB en TPV
+* Whitelist de aplicaciones (solo software autorizado puede ejecutarse)
+* Formación trimestral del personal en ciberseguridad
+* Cifrado punto a punto (P2PE) de datos de tarjetas
+
+**Detectivas**:
+* IDS/IPS monitorizando tráfico de red de TPV
+* Logs centralizados de todos los TPV
+* Auditorías mensuales de seguridad
+* Sistema de detección de anomalías en transacciones
+
+**Reacción/Recuperación**:
+* Plan de respuesta a incidentes PCI-DSS
+* Seguro de ciberseguridad con cobertura específica
+* Backups cifrados de configuraciones de TPV
+* Equipo de respuesta 24/7
+
+**6. RESULTADO**:
+* **Riesgo residual**: BAJO (bajo control y monitorización continua)
+* **Coste anual de medidas**: 150.000€
+* **Pérdida potencial evitada**: Varios millones de euros + reputación
+
+##### 5.6.3. Otro ejemplo: Pequeña empresa de consultoría
+
+**Contexto**: Empresa de 20 empleados que maneja información confidencial de clientes
+
+**1. ACTIVOS**:
+* Informes y documentos de consultoría (Valor: Alto)
+* Correos electrónicos con clientes (Valor: Alto)
+* Portátiles de empleados (Valor: Medio)
+
+**2. VULNERABILIDADES**:
+* Empleados trabajan desde casa con redes WiFi domésticas
+* No hay política de contraseñas
+* Documentos compartidos en servicios cloud sin cifrar
+* Falta de copias de seguridad
+
+**3. AMENAZAS**:
+* Intercepción de comunicaciones en WiFi público
+* Pérdida o robo de portátiles
+* Ransomware
+* Acceso no autorizado a archivos compartidos
+
+**4. RIESGOS IDENTIFICADOS**:
+* Riesgo 1: Pérdida de datos por ransomware → ALTO
+* Riesgo 2: Robo de portátil con datos sin cifrar → MEDIO-ALTO
+* Riesgo 3: Intercepción de emails → MEDIO
+* Riesgo 4: Acceso no autorizado a cloud → MEDIO
+
+**5. MEDIDAS (presupuesto limitado)**:
+
+**Preventivas** (prioridad alta, bajo coste):
+* VPN corporativa obligatoria para todos
+* Política de contraseñas + gestor de contraseñas corporativo
+* Cifrado de disco completo en todos los portátiles
+* Autenticación de dos factores en servicios cloud
+* Formación básica en ciberseguridad (online)
+
+**Detectivas** (prioridad media):
+* Antivirus con EDR en todos los equipos
+* Monitorización de accesos anómalos en cloud
+
+**Reacción/Recuperación** (esencial):
+* Backups automáticos diarios a cloud cifrado
+* Plan básico de respuesta a incidentes
+* Contrato con empresa especializada para soporte en emergencias
+
+**6. INVERSIÓN Y RESULTADOS**:
+* **Coste inicial**: 5.000€ (licencias + formación)
+* **Coste mensual**: 800€ (servicios VPN, cloud, antivirus EDR)
+* **Riesgo residual**: MEDIO-BAJO
+* **Tiempo de implementación**: 2 meses
+
+### 5.7. Conclusión de la sección
+
+Entender la relación entre activos, vulnerabilidades, amenazas, riesgos y medidas de seguridad es fundamental para construir una estrategia de ciberseguridad efectiva. Estos conceptos forman la base sobre la que se construyen:
+
+* **Plan Director de Seguridad**: Estrategia a largo plazo de la organización
+* **Análisis de Riesgos**: Evaluación continua de amenazas y vulnerabilidades
+* **Políticas de Seguridad**: Normativas y procedimientos de la organización
+* **Sistemas de Gestión de Seguridad (SGSI)**: Implementación sistemática de controles
+
+En las siguientes secciones profundizaremos en cómo estos conceptos se aplican de forma práctica en el Plan Director de Seguridad y el Análisis de Riesgos.
+
+---
+
+#### 5.8. Resumen visual
+
+<figure markdown>
+  ![](assets/IS-U111-PrincipiosGenerales26.png)
+  <figcaption>Relación entre conceptos clave de ciberseguridad</figcaption>
+</figure>
+
+---
 
 #### ÍNDICE
 

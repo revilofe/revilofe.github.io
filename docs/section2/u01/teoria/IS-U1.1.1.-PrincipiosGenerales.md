@@ -493,6 +493,15 @@ Una **vulnerabilidad** es una debilidad o fallo en un sistema de información qu
 
 Las vulnerabilidades son las condiciones y características propias de los sistemas de una organización, de los **activos**, que la hacen susceptible a las **amenazas**.
 
+Ejemplo:
+Imagina que en tu casa y te das cuenta de que una puerta no tiene cerradura. Esa puerta sin cerradura es una vulnerabilidad: un punto débil que podría ser aprovechado por un ladrón (Amenaza) para entrar a tu casa.
+
+<p align="center">
+    <img src="assets/IS-U111-PrincipiosGenerales12.png" style="width: 75%; height: auto;" alt="Vulnerabilidad">
+</p>
+
+Esto, llevado a nuestro medio, podría ser, por ejemplo, un sistema informático con software desactualizado que no tiene los parches de seguridad más recientes. Este software vulnerable deja la puerta abierta para que los atacantes aprovechen los errores en el programa.
+
 ##### 5.2.1. Características de las vulnerabilidades
 
 Las vulnerabilidades pueden ser:
@@ -1086,9 +1095,9 @@ Ahora que hemos visto cada concepto por separado, es fundamental entender cómo 
 La seguridad se puede entender como una cadena de elementos interrelacionados:
 
 ```
-ACTIVOS ← protegidos de ← AMENAZAS
+ACTIVOS ← protegidos de ←  AMENAZAS
    ↓                          ↓
-tienen                   explotan
+tienen                     explotan
    ↓                          ↓
 VULNERABILIDADES ← generan → RIESGOS
    ↓                          ↓
@@ -1198,14 +1207,13 @@ MEDIDAS DE SEGURIDAD ←←←←←←←←←
 * **Riesgo residual**: MEDIO-BAJO
 * **Tiempo de implementación**: 2 meses
 
-### 5.7. Conclusión de la sección
+#### 5.7. Conclusión de la sección
 
 Entender la relación entre activos, vulnerabilidades, amenazas, riesgos y medidas de seguridad es fundamental para construir una estrategia de ciberseguridad efectiva. Estos conceptos forman la base sobre la que se construyen:
 
 * **Plan Director de Seguridad**: Estrategia a largo plazo de la organización
 * **Análisis de Riesgos**: Evaluación continua de amenazas y vulnerabilidades
 * **Políticas de Seguridad**: Normativas y procedimientos de la organización
-* **Sistemas de Gestión de Seguridad (SGSI)**: Implementación sistemática de controles
 
 En las siguientes secciones profundizaremos en cómo estos conceptos se aplican de forma práctica en el Plan Director de Seguridad y el Análisis de Riesgos.
 

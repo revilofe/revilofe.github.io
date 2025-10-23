@@ -3,16 +3,16 @@ title: "UD 3 - 3.2 Test de unidad y TDD"
 description: Relación entre software y hardware
 summary: Relación entre software y hardware
 authors:
-- Eduardo Fdez
+    - Eduardo Fdez
 date: 2022-09-18
 icon:   
 permalink: /edes/unidad1/1.1
 categories:
-- EDES
+    - EDES
 tags:
-- EDES
-- Software
-- Hardware
+    - EDES
+    - Software
+    - Hardware
 ---
 ## 3.2. Test de unidad y TDD
 
@@ -122,15 +122,20 @@ Para una **empresa constructora**, tenemos más variantes:
 
 Combinando eso con las posibles deudas, podríamos definir los siguientes escenarios:
 
-* Dado un cliente particular:      
-   * **Si debe algo:** no se le puede fiar.     
-   * **Si no debe nada:** se le puede fiar.     
-* Dada una constructora con muchos (5) albañiles:        
-   * **Si la obra debe más de 10.000 €:** no se le puede fiar.     
-   * **Si la obra debe menos o igual a 10.000 €:** se le puede fiar.       
-* Dada una constructora con pocos (4) albañiles:    
-   * **Si la obra debe más de 5.000 €:** no se le puede fiar.        
-   * **Si la obra debe menos o igual a 5.000 €:** se le puede fiar.        
+* Dado un cliente particular:
+
+    * **Si debe algo:** no se le puede fiar.     
+    * **Si no debe nada:** se le puede fiar.
+
+* Dada una constructora con muchos (5) albañiles:
+
+    * **Si la obra debe más de 10.000 €:** no se le puede fiar.     
+    * **Si la obra debe menos o igual a 10.000 €:** se le puede fiar.
+
+* Dada una constructora con pocos (4) albañiles:
+
+    * **Si la obra debe más de 5.000 €:** no se le puede fiar.        
+    * **Si la obra debe menos o igual a 5.000 €:** se le puede fiar.        
 
 En el caso de la constructora, elegimos la cantidad de obreros basándonos en el **valor límite**: como 5 es el número que distingue entre *pocos* y *muchos*, elegimos 4 para representar al caso *pocos* y 5 para el caso *muchos*.
 

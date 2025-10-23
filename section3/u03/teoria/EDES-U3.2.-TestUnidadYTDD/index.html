@@ -5657,15 +5657,27 @@ escenarios según las características que comparten nos va a permitir contempla
 </ul>
 <p>Combinando eso con las posibles deudas, podríamos definir los siguientes escenarios:</p>
 <ul>
-<li>Dado un cliente particular:      </li>
+<li>
+<p>Dado un cliente particular:</p>
+<ul>
 <li><strong>Si debe algo:</strong> no se le puede fiar.     </li>
-<li><strong>Si no debe nada:</strong> se le puede fiar.     </li>
-<li>Dada una constructora con muchos (5) albañiles:        </li>
+<li><strong>Si no debe nada:</strong> se le puede fiar.</li>
+</ul>
+</li>
+<li>
+<p>Dada una constructora con muchos (5) albañiles:</p>
+<ul>
 <li><strong>Si la obra debe más de 10.000 €:</strong> no se le puede fiar.     </li>
-<li><strong>Si la obra debe menos o igual a 10.000 €:</strong> se le puede fiar.       </li>
-<li>Dada una constructora con pocos (4) albañiles:    </li>
+<li><strong>Si la obra debe menos o igual a 10.000 €:</strong> se le puede fiar.</li>
+</ul>
+</li>
+<li>
+<p>Dada una constructora con pocos (4) albañiles:</p>
+<ul>
 <li><strong>Si la obra debe más de 5.000 €:</strong> no se le puede fiar.        </li>
 <li><strong>Si la obra debe menos o igual a 5.000 €:</strong> se le puede fiar.        </li>
+</ul>
+</li>
 </ul>
 <p>En el caso de la constructora, elegimos la cantidad de obreros basándonos en el <strong>valor límite</strong>: como 5 es el número que distingue entre <em>pocos</em> y <em>muchos</em>, elegimos 4 para representar al caso <em>pocos</em> y 5 para el caso <em>muchos</em>.</p>
 <p>Sin dudas podríamos haber elegido otros números, pero es importante que los tests sean simples y fáciles de comprender. Por esta razón, vamos a preferir siempre utilizar valores que nos resulten fáciles de razonar para representar a cada escenario.</p>

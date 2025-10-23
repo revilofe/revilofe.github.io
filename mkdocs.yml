@@ -194,6 +194,13 @@ nav:
           - '1.3.-Git Github': 'section4/u01/teoria/DAW-U1.3.-GitGitHub.md'
           - '1.4.-Github Action': 'section4/u01/teoria/DAW-U1.4.-GitHubAction.md'
           - 'Práctica 1.1: GH Action para documentación': 'section4/u01/practica/DAW-U1.-Practica001.md'
+      - 'U2: Contenedores Docker':
+          - 'section4/u02/index.md'
+          - '2.1.-Introducción a Docker': 'section4/u02/teoria/DAW-U2.1.-IntroduccionDocker.md'
+          - '2.2.-Imágenes Docker': 'section4/u02/teoria/DAW-U2.2.-ImagenesDocker.md'
+          - '2.3.-Almacenamiento y Redes': 'section4/u02/teoria/DAW-U2.3.-AlmacenamientoRedes.md'
+          - '2.4.-Docker Compose': 'section4/u02/teoria/DAW-U2.4.-DockerCompose.md'
+          - '2.5.-Creación de Imágenes': 'section4/u02/teoria/DAW-U2.5.-CreacionImagenes.md'
   - 'Blog': 'blog.md'
   - 'Tags': 'tags.md'
   - 'Acerca de': 'about.md'

@@ -35,11 +35,38 @@ sectionX/
 
 Contiene presentaciones en formato Reveal.js (HTML + Markdown) que complementan los contenidos de `docs/`.
 
+**Estructura organizativa:**
+
+Las slides están organizadas en subdirectorios por módulo:
+
+```
+slides/
+├── section1-pr/           # Programación
+│   ├── assets/            # Recursos (imágenes) específicos del módulo
+│   ├── PR-*.html          # Presentaciones HTML
+│   └── PR-*.md            # Fuentes Markdown
+├── section2-is/           # Incidentes de Seguridad
+│   ├── assets/
+│   ├── IS-*.html
+│   └── IS-*.md
+├── section3-ed/           # Entornos de Desarrollo
+│   ├── assets/
+│   ├── ED-*.html
+│   └── ED-*.md
+├── section4-daw/          # Despliegue de Aplicaciones Web
+│   ├── assets/
+│   ├── DAW-*.html
+│   └── DAW-*.md
+├── dist/                  # Recursos compartidos de Reveal.js
+├── plugin/                # Plugins de Reveal.js
+└── css/                   # Estilos compartidos
+```
+
 **Nomenclatura de archivos:**
-- section1: `PR-UX.Y.-NombreDescriptivo`
-- section2: `IS-UX.Y.-NombreDescriptivo`
-- section3: `ED-UX.Y.-NombreDescriptivo`
-- section4: `DAW-UX.Y.-NombreDescriptivo`
+- section1-pr: `PR-UX.Y.-NombreDescriptivo`
+- section2-is: `IS-UX.Y.-NombreDescriptivo`
+- section3-ed: `ED-UX.Y.-NombreDescriptivo`
+- section4-daw: `DAW-UX.Y.-NombreDescriptivo`
 
 Donde:
 - `X` = número de unidad
@@ -50,8 +77,16 @@ Cada tema tiene dos archivos:
 - `.md` (fuente en Markdown)
 - `.html` (presentación Reveal.js generada)
 
+**Rutas en archivos HTML:**
+
+Los archivos HTML dentro de los subdirectorios de módulos utilizan rutas relativas a la carpeta padre:
+- `href="../dist/..."` para recursos de Reveal.js
+- `href="../plugin/..."` para plugins
+- `href="../custom.css"` para CSS personalizado
+- Las referencias a assets dentro del mismo módulo usan rutas relativas: `assets/imagen.png`
+
 **Formato de las slides**
-Este GPT está diseñado para asistir a profesores en la creación de presentaciones de diapositivas para sobre contendios, que normalmente serán de asignaturas de informática. Generará slides siguiendo una estructura de markdown precisa (MUY IMPORTANTE SEGUIR LA NOTACIÓN MARKDOWN).
+A continuación explicamos el proceso de creación de presentaciones de diapositivas sobre contendios, que normalmente serán de los módulos de informática. Generará slides siguiendo una estructura de markdown precisa (MUY IMPORTANTE SEGUIR LA NOTACIÓN MARKDOWN).
 
 sigue concienzudamente estas reglas:
 
@@ -208,7 +243,7 @@ Un ejemplo sería el siguiente:
 
 Como  has visto en el ejemplo:   
 * --- se utiliza para separar secciones 
-* 2 lineas en blanco para separar las slides.
+* 2 lineas en blanco para separar las slides dentro de una sección. 
 
 
 La forma en la que trabajaras para generar las slides, será la siguiente:
@@ -221,12 +256,24 @@ La forma en la que trabajaras para generar las slides, será la siguiente:
 **Configuración de las presentaciones:**
 
 Todas las presentaciones HTML incluyen:
-- `custom.css`: CSS personalizado que fuerza la visualización de la barra de progreso y los números de diapositiva
+- `custom.css`: CSS personalizado que fuerza la visualización de la barra de progreso y los números de diapositiva (ubicado en `slides/custom.css`)
 - Configuración en `Reveal.initialize()`:
   - `margin: 0.1` - Margen del 10% alrededor del contenido
   - `progress: true` - Barra de progreso visible
   - `slideNumber: 'c/t'` - Número de diapositiva actual/total
   - `showSlideNumber: 'all'` - Mostrar en todas las diapositivas
+
+**Referencias a las slides desde `docs/`:**
+
+Las referencias a presentaciones desde la documentación usan URLs absolutas:
+- `https://revilofe.github.io/slides/section1-pr/PR-UX.Y.-NombreArchivo.html`
+- `https://revilofe.github.io/slides/section2-is/IS-UX.Y.-NombreArchivo.html`
+- `https://revilofe.github.io/slides/section3-ed/ED-UX.Y.-NombreArchivo.html`
+- `https://revilofe.github.io/slides/section4-daw/DAW-UX.Y.-NombreArchivo.html`
+
+**Gestión de assets:**
+
+Cada módulo tiene su propia carpeta `assets/` con las imágenes específicas del módulo. Los archivos compartidos entre módulos (como logos) se duplican en cada carpeta assets correspondiente para mantener la independencia de cada módulo.
 
 ### 1.3. Otros directorios
 
@@ -249,6 +296,7 @@ La documentación está dirigida a **alumnos y alumnas** de formación profesion
 Los archivos de teoría (`teoria/`) deben seguir esta estructura:
 
 ```markdown
+
 ---
 title: "UD X - X.Y Título del tema"
 description: Breve descripción
@@ -273,6 +321,31 @@ tags:
 
 [Explicación clara del concepto]
 
+Es un texto de explicativo de como generar la documentación siguiendo este patrón:
+- Ser claro y concisos.
+    - Usar listas para organizar ideas, pero no abusar de ellas.
+        - Asegurarse de que cada punto aporta valor.
+        - Dividir el contenido en secciones lógicas.
+    - Incluir definiciones cuando sea necesario.
+- Incluir ejemplos visuales.
+- Usar subtítulos para organizar la información.
+
+Tambien se pueden incluir listas de numeradas:
+1. Primer punto importante
+2. Segundo punto relevante
+   
+    - Y anidar las viñetas si es necesario
+    
+3. Tercer punto clave
+
+
+- Se pueden incluir citas en bloque para resaltar definiciones o ideas clave:
+> La programación es el proceso de crear un conjunto de instrucciones que le dicen a una computadora cómo
+
+Se pueden incluir bloques de código para ilustrar ejemplos prácticos:
+
+También es importante incluir imágenes o diagramas para ilustrar conceptos complejos.
+
 [Ejemplos si procede]
 
 <figure markdown>   
@@ -280,10 +353,16 @@ tags:
   <figcaption>Descripción de la imagen</figcaption>   
 </figure>
 
+#### 1.1. Subconcepto o ejemplo práctico
+
+[Explicación detallada del subconcepto]
+
+
 ### 2. Segundo concepto
 
 [Continuar con estructura similar]
 ```
+
 
 ### 2.3. Estructura de prácticas
 
@@ -331,6 +410,8 @@ tags:
 
 [Ejercicios propuestos para los alumnos y alumnas]
 ```
+
+Los archivos de práctica (`practica/otrosRecursos)/`) pueden incluir ficheros adicionales necesarios para completar la práctica, como plantillas, datos de ejemplo, etc., asi como el ejercicio resuelto. Se generará un fichero con el mismo nombre y la extensión -solución.md, que contendrá la solución al ejercicio propuesto.
 
 ### 2.4. Convenciones de estilo
 

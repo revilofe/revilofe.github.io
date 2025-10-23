@@ -25,10 +25,10 @@ Todo el contenido está supeditado a mejora, de hecho está en construcción, y 
 
 ## Presentaciones
 
-* [ED-U1.1 - Software y Hardware](https://revilofe.github.io/slides/ED-U1.1.-Software-Hardware.html)
-* [ED-U1.2 - Código Fuente, Objeto y Ejecutable](https://revilofe.github.io/slides/ED-U1.2.-CodigoFuenteObjetoEjecutable.html)
-* [ED-U3.1 - Pruebas](https://revilofe.github.io/slides/ED-U3.1.-Pruebas.html)
-* [ED-U3.2.1 - Kotest](https://revilofe.github.io/slides/ED-U3.2.1.-Kotest.html)
+* [ED-U1.1 - Software y Hardware](https://revilofe.github.io/slides/section3-ed/ED-U1.1.-Software-Hardware.html)
+* [ED-U1.2 - Código Fuente, Objeto y Ejecutable](https://revilofe.github.io/slides/section3-ed/ED-U1.2.-CodigoFuenteObjetoEjecutable.html)
+* [ED-U3.1 - Pruebas](https://revilofe.github.io/slides/section3-ed/ED-U3.1.-Pruebas.html)
+* [ED-U3.2.1 - Kotest](https://revilofe.github.io/slides/section3-ed/ED-U3.2.1.-Kotest.html)
 
 ## Información
 

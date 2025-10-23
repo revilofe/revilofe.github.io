@@ -48,66 +48,66 @@ Aquí tienes acceso directo a todas las presentaciones disponibles, organizadas 
 ### Programación (PR)
 
 #### Unidad 0 - Presentación
-* [PR-U0.1.1 - Presentación](https://revilofe.github.io/slides/PR-U0.1.1.-Presentacion.html)
+* [PR-U0.1.1 - Presentación](https://revilofe.github.io/slides/section1-pr/PR-U0.1.1.-Presentacion.html)
 
 #### Unidad 1 - Mi primer programa
-* [PR-U1.1 - Un Programa Informático](https://revilofe.github.io/slides/PR-U1.1.-UnProgramaInformatico.html)
-* [PR-U1.1.1 - Pseudocódigo](https://revilofe.github.io/slides/PR-U1.1.1.-Pseudocodigo.html)
-* [PR-U1.2 - Práctica con un Lenguaje](https://revilofe.github.io/slides/PR-U1.2.PracticaConUnLenguajes.html)
+* [PR-U1.1 - Un Programa Informático](https://revilofe.github.io/slides/section1-pr/PR-U1.1.-UnProgramaInformatico.html)
+* [PR-U1.1.1 - Pseudocódigo](https://revilofe.github.io/slides/section1-pr/PR-U1.1.1.-Pseudocodigo.html)
+* [PR-U1.2 - Práctica con un Lenguaje](https://revilofe.github.io/slides/section1-pr/PR-U1.2.PracticaConUnLenguajes.html)
 
 #### Unidad 2 - Estructuras de control
-* [PR-U2.1 - Condicionales](https://revilofe.github.io/slides/PR-U2.1.-Condicionales.html)
-* [PR-U2.2 - Iterativas](https://revilofe.github.io/slides/PR-U2.2.-Iterativas.html)
-* [PR-U2.3 - Excepciones](https://revilofe.github.io/slides/PR-U2.3.-Excepciones.html)
-* [PR-U2.4 - Depurar](https://revilofe.github.io/slides/PR-U2.4.-Depurar.html)
-* [PR-U2.5 - Documentar](https://revilofe.github.io/slides/PR-U2.5.-Documentar.html)
+* [PR-U2.1 - Condicionales](https://revilofe.github.io/slides/section1-pr/PR-U2.1.-Condicionales.html)
+* [PR-U2.2 - Iterativas](https://revilofe.github.io/slides/section1-pr/PR-U2.2.-Iterativas.html)
+* [PR-U2.3 - Excepciones](https://revilofe.github.io/slides/section1-pr/PR-U2.3.-Excepciones.html)
+* [PR-U2.4 - Depurar](https://revilofe.github.io/slides/section1-pr/PR-U2.4.-Depurar.html)
+* [PR-U2.5 - Documentar](https://revilofe.github.io/slides/section1-pr/PR-U2.5.-Documentar.html)
 
 #### Unidad 3 - Estructuras de datos
-* [PR-U3.0 - Cadenas](https://revilofe.github.io/slides/PR-U3.0.-Cadenas.html)
-* [PR-U3.1 - Listas](https://revilofe.github.io/slides/PR-U3.1.-Listas.html)
-* [PR-U3.2 - Tuplas](https://revilofe.github.io/slides/PR-U3.2.-Tuplas.html)
-* [PR-U3.3 - Diccionarios](https://revilofe.github.io/slides/PR-U3.3.-Diccionarios.html)
-* [PR-U3.4 - Conjuntos](https://revilofe.github.io/slides/PR-U3.4.-Conjuntos.html)
-* [PR-U3.5 - Funciones](https://revilofe.github.io/slides/PR-U3.5.-Funciones.html)
+* [PR-U3.0 - Cadenas](https://revilofe.github.io/slides/section1-pr/PR-U3.0.-Cadenas.html)
+* [PR-U3.1 - Listas](https://revilofe.github.io/slides/section1-pr/PR-U3.1.-Listas.html)
+* [PR-U3.2 - Tuplas](https://revilofe.github.io/slides/section1-pr/PR-U3.2.-Tuplas.html)
+* [PR-U3.3 - Diccionarios](https://revilofe.github.io/slides/section1-pr/PR-U3.3.-Diccionarios.html)
+* [PR-U3.4 - Conjuntos](https://revilofe.github.io/slides/section1-pr/PR-U3.4.-Conjuntos.html)
+* [PR-U3.5 - Funciones](https://revilofe.github.io/slides/section1-pr/PR-U3.5.-Funciones.html)
 
 #### Unidad 4 - Kotlin
-* [PR-U4.1 - Kotlin Básico](https://revilofe.github.io/slides/PR-U4.1.-KotlinBasico.html)
+* [PR-U4.1 - Kotlin Básico](https://revilofe.github.io/slides/section1-pr/PR-U4.1.-KotlinBasico.html)
 
 #### Unidad 7 - Gestión de archivos
-* [PR-U7.3 - Gestión de Archivos Clase File](https://revilofe.github.io/slides/PR-U7.3.-GestionArchivosClaseFile.html)
+* [PR-U7.3 - Gestión de Archivos Clase File](https://revilofe.github.io/slides/section1-pr/PR-U7.3.-GestionArchivosClaseFile.html)
 
 ### Entornos de Desarrollo (ED)
 
-* [ED-U1.1 - Software y Hardware](https://revilofe.github.io/slides/ED-U1.1.-Software-Hardware.html)
-* [ED-U1.2 - Código Fuente, Objeto y Ejecutable](https://revilofe.github.io/slides/ED-U1.2.-CodigoFuenteObjetoEjecutable.html)
-* [ED-U3.1 - Pruebas](https://revilofe.github.io/slides/ED-U3.1.-Pruebas.html)
-* [ED-U3.2.1 - Kotest](https://revilofe.github.io/slides/ED-U3.2.1.-Kotest.html)
+* [ED-U1.1 - Software y Hardware](https://revilofe.github.io/slides/section3-ed/ED-U1.1.-Software-Hardware.html)
+* [ED-U1.2 - Código Fuente, Objeto y Ejecutable](https://revilofe.github.io/slides/section3-ed/ED-U1.2.-CodigoFuenteObjetoEjecutable.html)
+* [ED-U3.1 - Pruebas](https://revilofe.github.io/slides/section3-ed/ED-U3.1.-Pruebas.html)
+* [ED-U3.2.1 - Kotest](https://revilofe.github.io/slides/section3-ed/ED-U3.2.1.-Kotest.html)
 
 ### Incidentes de Seguridad (IS)
 
 #### Unidad 0 - Presentación
-* [IS-U0.1.1 - Presentación](https://revilofe.github.io/slides/IS-U0.1.1.-Presentacion.html)
+* [IS-U0.1.1 - Presentación](https://revilofe.github.io/slides/section2-is/IS-U0.1.1.-Presentacion.html)
 
 #### Unidad 1 - Planes de prevención y concienciación
-* [IS-U1.1.1 - Principios Generales](https://revilofe.github.io/slides/IS-U1.1.1.-PrincipiosGenerales.html)
-* [IS-U1.2.1 - Plan Director de Seguridad](https://revilofe.github.io/slides/IS-U1.2.1.-PlanDirectorDeSeguridad.html)
-* [IS-U1.2.2 - Análisis de Riesgos](https://revilofe.github.io/slides/IS-U1.2.2.-AnalisiDeRiesgos.html)
-* [IS-U1.3.1 - Protección del Puesto de Trabajo](https://revilofe.github.io/slides/IS-U1.3.1.-ProteccionDelPuestoDeTrabajo.html)
-* [IS-U1.4.1 - Plan de Concienciación](https://revilofe.github.io/slides/IS-U1.4.1.-PlanDeConcienciacion.html)
+* [IS-U1.1.1 - Principios Generales](https://revilofe.github.io/slides/section2-is/IS-U1.1.1.-PrincipiosGenerales.html)
+* [IS-U1.2.1 - Plan Director de Seguridad](https://revilofe.github.io/slides/section2-is/IS-U1.2.1.-PlanDirectorDeSeguridad.html)
+* [IS-U1.2.2 - Análisis de Riesgos](https://revilofe.github.io/slides/section2-is/IS-U1.2.2.-AnalisiDeRiesgos.html)
+* [IS-U1.3.1 - Protección del Puesto de Trabajo](https://revilofe.github.io/slides/section2-is/IS-U1.3.1.-ProteccionDelPuestoDeTrabajo.html)
+* [IS-U1.4.1 - Plan de Concienciación](https://revilofe.github.io/slides/section2-is/IS-U1.4.1.-PlanDeConcienciacion.html)
 
 #### Unidad 2 - Análisis de incidentes
-* [IS-U2.1.1 - Taxonomía de Incidentes](https://revilofe.github.io/slides/IS-U2.1.1.-TaxonomiaDeIncidentes.html)
-* [IS-U2.2 - SOC](https://revilofe.github.io/slides/IS-U2.2.-SOC.html)
-* [IS-U2.2.1 - Detección de Incidentes](https://revilofe.github.io/slides/IS-U2.2.1.-DeteccionDeIncidentes.html)
+* [IS-U2.1.1 - Taxonomía de Incidentes](https://revilofe.github.io/slides/section2-is/IS-U2.1.1.-TaxonomiaDeIncidentes.html)
+* [IS-U2.2 - SOC](https://revilofe.github.io/slides/section2-is/IS-U2.2.-SOC.html)
+* [IS-U2.2.1 - Detección de Incidentes](https://revilofe.github.io/slides/section2-is/IS-U2.2.1.-DeteccionDeIncidentes.html)
 
 #### Unidad 3 - Investigación de incidentes
-* [IS-U3.1.1 - Recopilación de Evidencias](https://revilofe.github.io/slides/IS-U3.1.1.-RecopilacionDeEvidencias.html)
+* [IS-U3.1.1 - Recopilación de Evidencias](https://revilofe.github.io/slides/section2-is/IS-U3.1.1.-RecopilacionDeEvidencias.html)
 
 ### Despliegue de Aplicaciones Web (DAW)
 
-* [DAW-U1.1 - DevOps](https://revilofe.github.io/slides/DAW-U1.1.-DevOps.html)
-* [DAW-U1.2 - Documentación](https://revilofe.github.io/slides/DAW-U1.2.-Documentacion.html)
-* [DAW-U1.3 - Git y GitHub](https://revilofe.github.io/slides/DAW-U1.3.-GitGitHub.html)
-* [DAW-U1.4 - GitHub Actions](https://revilofe.github.io/slides/DAW-U1.4.-GitHubAction.html)
-* [DAW-U2.1 - Docker](https://revilofe.github.io/slides/DAW-U2.1.-Docker.html)
+* [DAW-U1.1 - DevOps](https://revilofe.github.io/slides/section4-daw/DAW-U1.1.-DevOps.html)
+* [DAW-U1.2 - Documentación](https://revilofe.github.io/slides/section4-daw/DAW-U1.2.-Documentacion.html)
+* [DAW-U1.3 - Git y GitHub](https://revilofe.github.io/slides/section4-daw/DAW-U1.3.-GitGitHub.html)
+* [DAW-U1.4 - GitHub Actions](https://revilofe.github.io/slides/section4-daw/DAW-U1.4.-GitHubAction.html)
+* [DAW-U2.1 - Docker](https://revilofe.github.io/slides/section4-daw/DAW-U2.1.-Docker.html)
 

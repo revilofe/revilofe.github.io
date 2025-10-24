@@ -5616,15 +5616,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#10-archivo-env" class="md-nav__link">
-    <span class="md-ellipsis">
-      10. Archivo .env
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#resumen" class="md-nav__link">
     <span class="md-ellipsis">
       Resumen
@@ -6204,15 +6195,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-archivo-env" class="md-nav__link">
-    <span class="md-ellipsis">
-      10. Archivo .env
-    </span>
-  </a>
   
 </li>
         
@@ -7422,6 +7404,23 @@
 <a id="__codelineno-95-27" name="__codelineno-95-27" href="#__codelineno-95-27"></a><span class="w">  </span><span class="nt">grafana_data</span><span class="p">:</span>
 </code></pre></div>
 <h3 id="9-buenas-practicas-explicadas">9. Buenas prácticas (explicadas)<a class="headerlink" href="#9-buenas-practicas-explicadas" title="Permanent link">&para;</a></h3>
+<p>Es importante seguir buenas prácticas para mantener tus archivos <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose limpios, seguros y eficientes.</p>
+<div class="admonition success">
+<p class="admonition-title">Checklist de buenas prácticas</p>
+</div>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Variables sensibles en .env</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> .env en .gitignore</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Versiones específicas de imágenes</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Nombres de servicios descriptivos</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Healthchecks en servicios críticos</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Límites de recursos definidos</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Configuración de logging</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Múltiples archivos para entornos</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Comentarios explicativos</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> README con instrucciones</li>
+</ul>
+<p>A continuación, se explican algunas de estas prácticas con ejemplos.</p>
 <h4 id="91-gestion-de-secretos">9.1. Gestión de secretos<a class="headerlink" href="#91-gestion-de-secretos" title="Permanent link">&para;</a></h4>
 <p><strong>❌ MAL:</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-96-1" name="__codelineno-96-1" href="#__codelineno-96-1"></a><span class="nt">services</span><span class="p">:</span>
@@ -7648,44 +7647,27 @@
 <a id="__codelineno-116-20" name="__codelineno-116-20" href="#__codelineno-116-20"></a>
 <a id="__codelineno-116-21" name="__codelineno-116-21" href="#__codelineno-116-21"></a><span class="k">4.</span> Acceder a http://localhost:8080
 <a id="__codelineno-116-22" name="__codelineno-116-22" href="#__codelineno-116-22"></a>
-<a id="__codelineno-116-23" name="__codelineno-116-23" href="#__codelineno-116-23"></a><span class="gu">## Comandos útiles</span>
-<a id="__codelineno-116-24" name="__codelineno-116-24" href="#__codelineno-116-24"></a>
-<a id="__codelineno-116-25" name="__codelineno-116-25" href="#__codelineno-116-25"></a><span class="k">-</span><span class="w"> </span>Ver logs: <span class="sb">`docker compose logs -f`</span>
-<a id="__codelineno-116-26" name="__codelineno-116-26" href="#__codelineno-116-26"></a><span class="k">-</span><span class="w"> </span>Detener: <span class="sb">`docker compose stop`</span>
-<a id="__codelineno-116-27" name="__codelineno-116-27" href="#__codelineno-116-27"></a><span class="k">-</span><span class="w"> </span>Limpiar todo: <span class="sb">`docker compose down -v`</span>
-</code></pre></div></p>
-<div class="admonition success">
-<p class="admonition-title">Checklist de buenas prácticas</p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Variables sensibles en .env</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> .env en .gitignore</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Versiones específicas de imágenes</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Nombres de servicios descriptivos</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Healthchecks en servicios críticos</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Límites de recursos definidos</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Configuración de logging</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Múltiples archivos para entornos</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Comentarios explicativos</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> README con instrucciones</li>
-</ul>
-</div>
-<h3 id="10-archivo-env">10. Archivo .env<a class="headerlink" href="#10-archivo-env" title="Permanent link">&para;</a></h3>
-<p>Usar archivo <code>.env</code> para variables de entorno:</p>
-<p><strong>.env:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-117-1" name="__codelineno-117-1" href="#__codelineno-117-1"></a>DB_PASSWORD=secreto
-<a id="__codelineno-117-2" name="__codelineno-117-2" href="#__codelineno-117-2"></a>DB_USER=usuario
-<a id="__codelineno-117-3" name="__codelineno-117-3" href="#__codelineno-117-3"></a>APP_PORT=8080
+<a id="__codelineno-116-23" name="__codelineno-116-23" href="#__codelineno-116-23"></a>
+<a id="__codelineno-116-24" name="__codelineno-116-24" href="#__codelineno-116-24"></a><span class="gu">#### 9.12. Archivo .env</span>
+<a id="__codelineno-116-25" name="__codelineno-116-25" href="#__codelineno-116-25"></a>
+<a id="__codelineno-116-26" name="__codelineno-116-26" href="#__codelineno-116-26"></a>Usar archivo <span class="sb">`.env`</span> para variables de entorno:
+<a id="__codelineno-116-27" name="__codelineno-116-27" href="#__codelineno-116-27"></a>
+<a id="__codelineno-116-28" name="__codelineno-116-28" href="#__codelineno-116-28"></a><span class="gs">**.env:**</span>
+<a id="__codelineno-116-29" name="__codelineno-116-29" href="#__codelineno-116-29"></a>```env
+<a id="__codelineno-116-30" name="__codelineno-116-30" href="#__codelineno-116-30"></a>DB_PASSWORD=secreto
+<a id="__codelineno-116-31" name="__codelineno-116-31" href="#__codelineno-116-31"></a>DB_USER=usuario
+<a id="__codelineno-116-32" name="__codelineno-116-32" href="#__codelineno-116-32"></a>APP_PORT=8080
 </code></pre></div></p>
 <p><strong>docker-compose.yml:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-118-1" name="__codelineno-118-1" href="#__codelineno-118-1"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-118-2" name="__codelineno-118-2" href="#__codelineno-118-2"></a><span class="w">  </span><span class="nt">db</span><span class="p">:</span>
-<a id="__codelineno-118-3" name="__codelineno-118-3" href="#__codelineno-118-3"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<a id="__codelineno-118-4" name="__codelineno-118-4" href="#__codelineno-118-4"></a><span class="w">      </span><span class="nt">MYSQL_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${DB_PASSWORD}</span>
-<a id="__codelineno-118-5" name="__codelineno-118-5" href="#__codelineno-118-5"></a><span class="w">      </span><span class="nt">MYSQL_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${DB_USER}</span>
-<a id="__codelineno-118-6" name="__codelineno-118-6" href="#__codelineno-118-6"></a>
-<a id="__codelineno-118-7" name="__codelineno-118-7" href="#__codelineno-118-7"></a><span class="w">  </span><span class="nt">web</span><span class="p">:</span>
-<a id="__codelineno-118-8" name="__codelineno-118-8" href="#__codelineno-118-8"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-<a id="__codelineno-118-9" name="__codelineno-118-9" href="#__codelineno-118-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;${APP_PORT}:80&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-117-1" name="__codelineno-117-1" href="#__codelineno-117-1"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-117-2" name="__codelineno-117-2" href="#__codelineno-117-2"></a><span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<a id="__codelineno-117-3" name="__codelineno-117-3" href="#__codelineno-117-3"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-117-4" name="__codelineno-117-4" href="#__codelineno-117-4"></a><span class="w">      </span><span class="nt">MYSQL_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${DB_PASSWORD}</span>
+<a id="__codelineno-117-5" name="__codelineno-117-5" href="#__codelineno-117-5"></a><span class="w">      </span><span class="nt">MYSQL_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${DB_USER}</span>
+<a id="__codelineno-117-6" name="__codelineno-117-6" href="#__codelineno-117-6"></a>
+<a id="__codelineno-117-7" name="__codelineno-117-7" href="#__codelineno-117-7"></a><span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<a id="__codelineno-117-8" name="__codelineno-117-8" href="#__codelineno-117-8"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-117-9" name="__codelineno-117-9" href="#__codelineno-117-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;${APP_PORT}:80&quot;</span>
 </code></pre></div></p>
 <h3 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">&para;</a></h3>
 <p>En esta sección hemos aprendido:</p>

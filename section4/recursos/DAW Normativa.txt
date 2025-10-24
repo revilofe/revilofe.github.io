@@ -1,0 +1,193 @@
+El módulo profesional 0614. Despliegue de aplicaciones web queda redactado como sigue:
+
+Módulo profesional: Despliegue de aplicaciones web.
+Equivalencia en créditos ECTS: 5.
+Código: 0614.
+
+
+**Resultados de aprendizaje y criterios de evaluación.**
+
+1. Implanta arquitecturas web analizando y aplicando criterios de funcionalidad.
+Criterios de evaluación:
+a) Se han analizado aspectos generales de arquitecturas web, sus características, ventajas e inconvenientes.
+b) Se han descrito los fundamentos y protocolos en los que se basa el funcionamiento de un servidor web.
+c) Se ha realizado la instalación y configuración básica de servidores web.
+d) Se ha realizado la instalación y configuración básica de servidores de aplicaciones.
+e) Se ha realizado la instalación y configuración básica de tecnologías de virtualización de servidores en la nube y en contenedores.
+f) Se han realizado pruebas de funcionamiento de los servidores web y de aplicaciones. y de tecnologías de virtualización en la nube y en contenedores.
+g) Se ha analizado la estructura y recursos que componen una aplicación web.
+h) Se han descrito los requerimientos del proceso de implantación de una aplicación web.
+i) Se han documentado los procesos de instalación y configuración realizados sobre los servidores web, de aplicaciones. y sobre tecnologías de virtualización en la nube y en contenedores.
+
+
+2. Implanta aplicaciones web en servidores web, evaluando y aplicando criterios de configuración para su funcionamiento seguro.
+Criterios de evaluación:
+a) Se han reconocido los parámetros de administración más importantes del servidor web
+b) Se ha ampliado la funcionalidad del servidor mediante la activación y configuración de módulos.
+c) Se han creado y configurado sitios virtuales.
+d) Se han configurado los mecanismos de autenticación y control de acceso del servidor.
+e) Se han obtenido e instalado certificados digitales.
+f) Se han establecido mecanismos para asegurar las comunicaciones entre el cliente y el servidor.
+g) Se ha elaborado documentación relativa a la configuración, administración segura y recomendaciones de uso del servidor.
+h) Se han realizado los ajustes necesarios para la implantación de aplicaciones en el servidor web.
+i) Se han utilizado tecnologías de virtualización en el despliegue de servidores web en la nube y en contenedores.
+j) Se han instalado, configurado y utilizado conjuntos de herramientas de gestión de logs, permitiendo su monitorización, consolidación y análisis en tiempo real.
+
+
+3. Implanta aplicaciones web en servidores de aplicaciones, evaluando y aplicando criterios de configuración para su funcionamiento seguro.
+Criterios de evaluación:
+a) Se han descrito los componentes y el funcionamiento de los servicios proporcionados por el servidor de aplicaciones.
+b) Se han identificado los principales archivos de configuración y de bibliotecas compartidas.
+c) Se ha configurado el servidor de aplicaciones para cooperar con el servidor web.
+d) Se han configurado y activado los mecanismos de seguridad del servidor de aplicaciones.
+e) Se han configurado y utilizado los componentes web del servidor de aplicaciones.
+f) Se han realizado los ajustes necesarios para el despliegue de aplicaciones sobre el servidor.
+g) Se han realizado pruebas de funcionamiento y rendimiento de la aplicación web desplegada.
+h) Se ha elaborado documentación relativa a la administración y recomendaciones de uso del servidor de aplicaciones.
+i) Se han utilizado tecnologías de virtualización en el despliegue de servidores de aplicaciones en la nube y en contenedores.
+
+
+4. Administra servidores de transferencia de archivos, evaluando y aplicando criterios de configuración que garanticen la disponibilidad del servicio.
+Criterios de evaluación:
+a) Se han instalado y configurado servidores de transferencia de archivos.
+b) Se han creado usuarios y grupos para el acceso remoto al servidor.
+c) Se ha comprobado el acceso al servidor, tanto en modo activo como en modo pasivo.
+d) Se han realizado pruebas con clientes en línea de comandos y clientes en modo gráfico.
+e) Se ha utilizado el protocolo seguro de transferencia de archivos.
+f) Se han configurado y utilizado servicios de transferencia de archivos integrados en servidores web.
+g) Se ha elaborado documentación relativa a la configuración y administración del servicio de transferencia de archivos.
+h) Se han utilizado tecnologías de virtualización en el despliegue de servidores de transferencia de archivos en la nube y en contenedores.
+
+
+5. Verifica la ejecución de aplicaciones web comprobando los parámetros de configuración de servicios de red.
+Criterios de evaluación:
+a) Se ha descrito la estructura, nomenclatura y funcionalidad de los sistemas de nombres jerárquicos.
+b) Se han identificado las necesidades de configuración del servidor de nombres en función de los requerimientos de ejecución de las aplicaciones web desplegadas.
+c) Se han identificado la función, elementos y estructuras lógicas del servicio de directorio.
+d) Se ha analizado la configuración y personalización del servicio de directorio.
+e) Se ha analizado la capacidad del servicio de directorio como mecanismo de autenticación centralizada de los usuarios en una red.
+f) Se han especificado los parámetros de configuración en el servicio de directorios adecuados para el proceso de validación de usuarios de la aplicación web.
+g) Se ha elaborado documentación relativa a las adaptaciones realizadas en los servicios de red.
+h) Se han utilizado tecnologías de virtualización en el despliegue de servidores de directorios en la nube y en contenedores.
+
+
+6. Elabora la documentación de la aplicación web evaluando y seleccionando herramientas de generación de documentación, control de versiones y de integración continua.
+Criterios de evaluación:
+a) Se han identificado diferentes herramientas de generación de documentación.
+b) Se han documentado los componentes software utilizando los generadores específicos de las plataformas.
+c) Se han utilizado diferentes formatos para la documentación.
+d) Se han utilizado herramientas colaborativas para la elaboración y mantenimiento de la documentación.
+e) Se ha instalado, configurado y utilizado un sistema de control de versiones.
+f) Se ha garantizado la accesibilidad y seguridad de la información y código almacenada por el sistema de control de versiones.
+g) Se ha documentado la instalación, configuración y uso del sistema de control de versiones utilizado.
+h) Se han utilizado herramientas para la integración continua del código.
+
+
+Duración: 50 horas.
+
+**Contenidos básicos:**
+
+Implantación de arquitecturas web:
+− Arquitecturas web. Modelos.
+− Servidores web y de aplicaciones. Instalación y configuración básica.
+− Tecnologías de virtualización de servidores en la nube y en contenedores.
+
+Instalación y configuración básica.
+− Estructura y recursos que componen una aplicación web.
+− Documentación de los procesos realizados.
+
+Administración de servidores web:
+− Configuración avanzada del servidor web.
+− Módulos: instalación, configuración y uso.
+− Hosts virtuales. Creación, configuración y utilización.
+− Autenticación y control de acceso.
+− El protocolo HTTPS.
+− Certificados. Servidores de certificados.
+− Documentación.
+− Despliegue de aplicaciones sobre servidores web.
+− Despliegue de servidores web mediante tecnologías de virtualización en la nube y en contenedores.
+− Conjuntos de herramientas de gestión de logs. Instalación, configuración y utilización, para la ayuda a la toma de decisiones: Big Data.
+
+Administración de servidores de aplicaciones:
+− Arquitectura y configuración básica del servidor de aplicaciones.
+− Administrar aplicaciones web.
+− Autenticación de usuarios. Dominios de seguridad para la autenticación.
+− Administración de sesiones.
+− Configurar el servidor de aplicaciones para cooperar con servidores web.
+− Despliegue de aplicaciones en el servidor de aplicaciones.
+− Seguridad en el servidor de aplicaciones.
+− Documentación.
+− Despliegue de servidores de aplicaciones mediante tecnologías de virtualización en la nube y en contenedores.
+
+Instalación y administración de servidores de transferencia de archivos:
+− Configuración del servicio de transferencia de archivos. Permisos y cuotas.
+− Tipos de usuarios y accesos al servicio.
+− Modos de conexión del cliente.
+− Protocolo seguro de transferencia de archivos.
+− Utilización de comandos y de herramientas gráficas.
+− Utilización del servicio de transferencia de archivos en el proceso de despliegue de la aplicación web.
+− Documentación.
+− Despliegue de servidores de transferencia de archivos mediante tecnologías de virtualización en la nube y en contenedores.
+
+Servicios de red implicados en el despliegue de una aplicación web:
+− Resolutores de nombres. Proceso de resolución de un nombre de dominio.
+− Parámetros de configuración y registros del servidor de nombres afectados en el despliegue.
+− Servicio de directorios: características y funcionalidad.
+− Archivos básicos de configuración.
+− Autenticación de usuarios en el servicio de directorios.
+− Adaptación de la configuración del servidor de directorios para el despliegue de la aplicación.
+− Documentación.
+− Despliegue de servidores de directorios mediante tecnologías de virtualización en la nube y en contenedores.
+
+Documentación, sistemas de control de versiones y de integración continua:
+− Herramientas colaborativas para la generación de documentación. Instalación, configuración y USO.
+− Creación y utilización de plantillas.
+− Instalación, configuración y uso de sistemas de control de versiones.
+− Operaciones avanzadas.
+− Seguridad de los sistemas de control de versiones.
+− Instalación, configuración y uso de sistemas de integración continua del código. Monitorización continua de las métricas de calidad de la aplicación.
+
+
+
+Orientaciones pedagógicas.
+Este módulo profesional contiene la formación necesaria para desempeñar la función de despliegue de aplicaciones web en un servidor.
+El despliegue de aplicaciones web incluye aspectos como:
+− Los procesos de implantación de aplicaciones web en servidores desplegados mediante el uso de tecnologías de virtualización en la nube y en contenedores.
+− La identificación de los parámetros de configuración de los servicios de red implicados en el despliegue seguro de aplicaciones web.
+− Los procesos de instalación, configuración y uso de herramientas de control de versiones. y de integración continua.
+− La elaboración de documentación relativa a la aplicación web utilizando herramientas de generación de documentación.
+− La evaluación de los recursos y requerimientos técnicos necesarios para la implantación de la aplicación web.
+− La utilización de conjuntos de herramientas de gestión de logs para la ayuda a la toma de decisiones: Big Data.
+
+Las actividades profesionales asociadas a esta función se aplican en:
+− El despliegue, mantenimiento y actualización de aplicaciones web sobre servidores.
+La formación del módulo contribuye a alcanzar los objetivos generales c), d), o), p) y r) del ciclo formativo, 
+
+c) Instalar módulos analizando su estructura y funcionalidad para gestionar servidores en distintos ámbitos de implantación.
+d) Ajustar parámetros analizando la configuración para gestionar servidores en distintos ámbitos de implantación.
+o) Utilizar herramientas específicas, cumpliendo los estándares establecidos, para elaborar y mantener la documentación de los procesos.
+p) Establecer procedimientos, verificando su funcionalidad, para desplegar y distribuir aplicaciones.
+r) Analizar y utilizar los recursos y oportunidades de aprendizaje relacionadas con la evolución científica, tecnológica y organizativa del sector y las tecnologías de la información y la comunicación, para mantener el espíritu de actualización y adaptarse a nuevas situaciones laborales y personales.
+
+y las competencias profesionales, personales y sociales a), b), c), j), n), ñ) y q) del título.
+
+a) Configurar y explotar sistemas informáticos, adaptando la configuración lógica del sistema según las necesidades de uso y los criterios establecidos.
+b) Aplicar técnicas y procedimientos relacionados con la seguridad en sistemas, servicios y aplicaciones, cumpliendo el plan de seguridad.
+c) Gestionar servidores en distintos ámbitos de implantación adaptando su configuración en cada caso para permitir el despliegue de aplicaciones web.
+j) Desarrollar e integrar componentes software en el entorno del servidor web, empleando herramientas y lenguajes específicos, para cumplir las especificaciones de la aplicación.
+n) Elaborar y mantener la documentación de los procesos de desarrollo, utilizando herramientas de generación de documentación y control de versiones.
+ñ) Desplegar y distribuir aplicaciones web en distintos ámbitos de implantación, verificando su comportamiento y realizando modificaciones.
+q) Resolver situaciones, problemas o contingencias con iniciativa y autonomía en el ámbito de su competencia, con creatividad, innovación y espíritu de mejora en el trabajo personal y en el de los miembros del equipo.
+
+
+
+Las líneas de actuación en el proceso de enseñanza-aprendizaje que permiten alcanzar los objetivos del módulo versarán sobre:
+− La instalación y configuración básica de servidores web y de aplicaciones.
+− La instalación y configuración básica de tecnologías de virtualización de servidores en la nube y en contenedores.
+− La implantación de aplicaciones web sobre servidores desplegados mediante el uso de tecnologías de virtualización en la nube y en contenedores.
+− La instalación y configuración de servicios de red implicados en el proceso de implantación.
+− La instalación, configuración y uso de sistemas de control de versiones. y de integración continua.
+− La utilización de sistemas operativos libres y propietarios.
+− La instalación y configuración de conjuntos de herramientas de gestión de logs, para su recogida, transformación, búsqueda, análisis y visualización en tiempo real.
+
+

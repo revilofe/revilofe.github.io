@@ -875,22 +875,28 @@ Una **amenaza** es cualquier evento o acción potencialmente **perjudicial** que
 
 #### 5.4. Riesgos
 
-El **riesgo** es la probabilidad de que se produzca un incidente de seguridad, materializándose una amenaza y causando pérdidas o daños.
+Aunque hablaremos de los riesgos más adelante, hacemos una pequeña introdución. El **riesgo** es la probabilidad de que se produzca un incidente de seguridad, materializándose una amenaza y causando pérdidas o daños.
 
-**El riesgo es la probabilidad de que una amenaza se materialice por el impacto que provocaría la explotación de una vulnerabilidad.**
+> El riesgo es la **probabilidad de que una amenaza se materialice** por el **impacto que provocaría la explotación de una vulnerabilidad**.
+<figure markdown>
+  ![](assets/IS-U111-Riesgo.png)
+  <figcaption>Componentes del riesgo</figcaption>
+</figure>
+
 
 ##### 5.4.1. Componentes del riesgo
 
 El riesgo depende de los siguientes factores:
 
+Donde:
+
+* **Probabilidad**: La probabilidad de que la amenaza se materialice aprovechando una vulnerabilidad.
+* **Impacto**: Es la magnitud del daño que causaría si la amenaza se materializa.
+
+
 ```
 RIESGO = PROBABILIDAD de que la amenaza se materialice × IMPACTO del daño causado
 ```
-
-Donde:
-
-* **Probabilidad**: Es la posibilidad de que una amenaza aproveche una vulnerabilidad
-* **Impacto**: Es la magnitud del daño que causaría si la amenaza se materializa
 
 <figure markdown>
   ![](assets/IS-U111-PrincipiosGenerales20.png)
@@ -899,15 +905,18 @@ Donde:
 
 ##### 5.4.2. Análisis de riesgos
 
-Podemos **identificar** los **activos críticos** de los sistemas de información que pueden suponer un **riesgo**, realizando un **análisis** de riesgos.
+Para gestionar los riesgos de manera efectiva, es fundamental realizar un **análisis de riesgos**. Este proceso nos permite **identificar**, **evaluar** y **priorizar** los riesgos asociados a los activos de una organización. En el siguiente punto veremos cómo llevar a cabo este análisis.
+
+
+De forma breve, podriamos **identificar** los **activos críticos** de los sistemas de información que pueden suponer un **riesgo**, y realizar sobre ellos un **análisis** de riesgos.
 
 **Este análisis nos llevará a obtener una imagen rigurosa de los riesgos a los que se encuentra expuesta una organización.**
 
 Con el **análisis** del riesgo averiguamos **la magnitud y la gravedad de las consecuencias del riesgo** a la que está expuesta la organización.
 
-Para ello tendremos que definir un **umbral** que determine los riesgos asumibles de los que no lo son.
+Una vez tenemos identificados los riesgos, tendremos que definir un **umbral** que determine los riesgos asumibles de los que no lo son.
 
-##### 5.4.3. Ejemplos prácticos de evaluación de riesgos
+##### 5.4.3. Ejemplos de evaluación de riesgos
 
 **Ejemplo 1: Servidor web sin actualizar**
 
@@ -995,11 +1004,14 @@ Compartir o **transferir** el riesgo con terceros a través de seguros, contrato
 
 * **Ejemplo**: Una pequeña empresa acepta el riesgo de no tener redundancia en un sistema no crítico porque el coste del sistema duplicado es muy alto en relación al impacto.
 
-**Ejemplo práctico de tratamiento de riesgo:**
+**Ejemplo de tratamiento de riesgo:**
 
-Una empresa de retail online identifica el siguiente riesgo:
+Una empresa de retail, que opera una tienda online, se prepara para un periodo de rebajas importante. Identifica el siguiente riesgo: 
 
-* **Riesgo**: Ataque DDoS que deje inaccesible la web durante las rebajas
+* **Activo**: Página web de comercio electrónico
+* **Amenaza**: Ataque DDoS durante periodo de rebajas
+* **Vulnerabilidad**: Infraestructura actual sin protección DDoS
+* **RIESGO**: Ataque DDoS que deje inaccesible la web durante las rebajas
 * **Probabilidad**: Media
 * **Impacto**: Alto (pérdida de ventas estimada: 50.000€/día)
 * **Evaluación inicial**: Riesgo ALTO

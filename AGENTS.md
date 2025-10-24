@@ -19,6 +19,9 @@ Contiene la documentación principal en formato MkDocs Material. Está organizad
 ```
 sectionX/
 ├── index.md                    # Descripción del módulo, contenidos y planificación
+├── recursos                    # Recursos genéricos para el módulo (Normativa, libros de texto, otros documentos, plantillas, guías, etc.)
+│   ├── MODULO Normativa.txt    # Normativa del módulo, con los Resultados de aprendizaje y sus criterios de evaluación
+│   └── ...                     # Otros archivos que pueden servir para generar documentación, prácticas, etc. Como el libro de texto del módulo
 └── uXX/                        # Unidades didácticas (u01, u02, u03...)
     ├── index.md                # Descripción de la unidad, contenidos y planificación
     ├── teoria/                 # Contenidos teóricos

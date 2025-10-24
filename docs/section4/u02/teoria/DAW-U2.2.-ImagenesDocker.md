@@ -63,6 +63,10 @@ nginx:latest              # Nginx última versión (por defecto)
 
 ### 3. Gestión de imágenes
 
+La gestión de imágenes Docker se realiza principalmente mediante la línea de comandos con el comando `docker images` y otros subcomandos relacionados.
+
+!!! note No siempre es necesario usar el modificador `images` para gestionar imágenes. Muchos comandos como `docker pull`, `docker rmi`, etc., operan directamente sobre imágenes sin necesidad de especificarlo.
+
 #### 3.1. Comandos principales
 
 **Ver imágenes locales:**

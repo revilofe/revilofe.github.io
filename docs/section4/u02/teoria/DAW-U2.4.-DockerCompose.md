@@ -875,6 +875,7 @@ $ docker compose config --quiet
 - Si está correcto, no muestra nada
 - Útil en CI/CD para validar antes de desplegar
 
+
 ### 5. Definición de servicios (opciones explicadas)
 
 Esta sección explica todas las opciones disponibles para configurar servicios.
@@ -1418,6 +1419,23 @@ volumes:
 
 ### 9. Buenas prácticas (explicadas)
 
+Es importante seguir buenas prácticas para mantener tus archivos Docker Compose limpios, seguros y eficientes.
+
+!!!success "Checklist de buenas prácticas"
+
+- [ ] Variables sensibles en .env
+- [ ] .env en .gitignore
+- [ ] Versiones específicas de imágenes
+- [ ] Nombres de servicios descriptivos
+- [ ] Healthchecks en servicios críticos
+- [ ] Límites de recursos definidos
+- [ ] Configuración de logging
+- [ ] Múltiples archivos para entornos
+- [ ] Comentarios explicativos
+- [ ] README con instrucciones
+
+A continuación, se explican algunas de estas prácticas con ejemplos.
+
 #### 9.1. Gestión de secretos
 
 **❌ MAL:**
@@ -1484,6 +1502,7 @@ services:
 - Tus compañeros pueden tener versiones diferentes
 - Dificulta reproducir bugs
 - Puede romper tu aplicación sin aviso
+
 
 #### 9.3. Nombres descriptivos
 
@@ -1705,26 +1724,8 @@ Incluye instrucciones claras:
 
 4. Acceder a http://localhost:8080
 
-## Comandos útiles
 
-- Ver logs: `docker compose logs -f`
-- Detener: `docker compose stop`
-- Limpiar todo: `docker compose down -v`
-```
-
-!!! success "Checklist de buenas prácticas"
-    - [ ] Variables sensibles en .env
-    - [ ] .env en .gitignore
-    - [ ] Versiones específicas de imágenes
-    - [ ] Nombres de servicios descriptivos
-    - [ ] Healthchecks en servicios críticos
-    - [ ] Límites de recursos definidos
-    - [ ] Configuración de logging
-    - [ ] Múltiples archivos para entornos
-    - [ ] Comentarios explicativos
-    - [ ] README con instrucciones
-
-### 10. Archivo .env
+#### 9.12. Archivo .env
 
 Usar archivo `.env` para variables de entorno:
 

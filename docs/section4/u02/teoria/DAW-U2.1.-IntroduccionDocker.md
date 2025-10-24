@@ -652,6 +652,10 @@ $ docker stats contenedor1
 7. **Matar** (`docker kill`): Detiene un contenedor inmediatamente
 8. **Eliminar** (`docker rm`): Elimina un contenedor detenido
 
+
+
+
+
 ### Resumen
 
 En esta sección hemos aprendido:

@@ -5294,9 +5294,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-wordpress-con-mysql" class="md-nav__link">
+  <a href="#31-wordpress-con-mysql-paso-a-paso" class="md-nav__link">
     <span class="md-ellipsis">
-      3.1. WordPress con MySQL
+      3.1. WordPress con MySQL (Paso a paso)
     </span>
   </a>
   
@@ -5633,9 +5633,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-wordpress-con-mysql" class="md-nav__link">
+  <a href="#31-wordpress-con-mysql-paso-a-paso" class="md-nav__link">
     <span class="md-ellipsis">
-      3.1. WordPress con MySQL
+      3.1. WordPress con MySQL (Paso a paso)
     </span>
   </a>
   
@@ -5768,31 +5768,109 @@
 <li>Fáciles de respaldar y migrar</li>
 <li>Funcionan en Linux y Windows</li>
 </ul>
-<p><strong>Comandos básicos:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Crear un volumen</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>mi_volumen
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Listar volúmenes</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>ls
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Inspeccionar un volumen</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>inspect<span class="w"> </span>mi_volumen
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Eliminar un volumen</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>rm<span class="w"> </span>mi_volumen
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># Eliminar volúmenes no utilizados</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>prune
+<p><strong>Comandos básicos explicados:</strong></p>
+<p><strong>Crear un volumen:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>mi_volumen
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>mi_volumen
+</code></pre></div>
+<ul>
+<li>Crea un volumen gestionado por <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr></li>
+<li>Se almacena en <code>/var/lib/docker/volumes/</code> (Linux)</li>
+<li><abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> gestiona automáticamente permisos y persistencia</li>
+</ul>
+<p><strong>Listar volúmenes:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>ls
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>DRIVER<span class="w">    </span>VOLUME<span class="w"> </span>NAME
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">local</span><span class="w">     </span>mi_volumen
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">local</span><span class="w">     </span>mysql_data
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">local</span><span class="w">     </span>wp_files
+</code></pre></div>
+<ul>
+<li><code>DRIVER</code>: Controlador de almacenamiento (normalmente <code>local</code>)</li>
+<li><code>VOLUME NAME</code>: Nombre del volumen</li>
+</ul>
+<p><strong>Inspeccionar un volumen:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>inspect<span class="w"> </span>mi_volumen
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="o">[</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="o">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="s2">&quot;CreatedAt&quot;</span>:<span class="w"> </span><span class="s2">&quot;2024-01-23T17:00:00Z&quot;</span>,
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="s2">&quot;Driver&quot;</span>:<span class="w"> </span><span class="s2">&quot;local&quot;</span>,
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="s2">&quot;Labels&quot;</span>:<span class="w"> </span><span class="o">{}</span>,
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="s2">&quot;Mountpoint&quot;</span>:<span class="w"> </span><span class="s2">&quot;/var/lib/docker/volumes/mi_volumen/_data&quot;</span>,
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="s2">&quot;Name&quot;</span>:<span class="w"> </span><span class="s2">&quot;mi_volumen&quot;</span>,
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="s2">&quot;Options&quot;</span>:<span class="w"> </span><span class="o">{}</span>,
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="s2">&quot;Scope&quot;</span>:<span class="w"> </span><span class="s2">&quot;local&quot;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="o">]</span>
+</code></pre></div>
+<p><strong>Información relevante:</strong></p>
+<ul>
+<li><code>Mountpoint</code>: Ruta física donde <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> almacena los datos</li>
+<li><code>Driver</code>: Tipo de almacenamiento (local, nfs, etc.)</li>
+<li><code>Scope</code>: Alcance (local = solo en este host)</li>
+</ul>
+<p><strong>Eliminar un volumen:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>rm<span class="w"> </span>mi_volumen
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>mi_volumen
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">No se puede eliminar si está en uso</p>
+<p>Si un contenedor usa el volumen, debes detenerlo primero.</p>
+</div>
+<p><strong>Eliminar volúmenes no utilizados:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>prune
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>WARNING!<span class="w"> </span>This<span class="w"> </span>will<span class="w"> </span>remove<span class="w"> </span>all<span class="w"> </span><span class="nb">local</span><span class="w"> </span>volumes<span class="w"> </span>not<span class="w"> </span>used<span class="w"> </span>by<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>container.
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Are<span class="w"> </span>you<span class="w"> </span>sure<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span><span class="k">continue</span>?<span class="w"> </span><span class="o">[</span>y/N<span class="o">]</span><span class="w"> </span>y
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Deleted<span class="w"> </span>Volumes:
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>volumen_antiguo
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>volumen_temporal
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>Total<span class="w"> </span>reclaimed<span class="w"> </span>space:<span class="w"> </span><span class="m">1</span>.2GB
 </code></pre></div>
 <p><strong>Usar volúmenes en contenedores:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Montar volumen en /datos del contenedor</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>app<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span>-v<span class="w"> </span>mi_volumen:/datos<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span>ubuntu
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># Verificar montaje</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>$<span class="w"> </span>docker<span class="w"> </span>inspect<span class="w"> </span>app
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>app<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span>-v<span class="w"> </span>mi_volumen:/datos<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span>ubuntu<span class="w"> </span>sleep<span class="w"> </span>infinity
 </code></pre></div>
+<p><strong>Explicación del montaje:</strong></p>
+<ul>
+<li><code>-v mi_volumen:/datos</code>: Sintaxis es <code>volumen:ruta_en_contenedor</code></li>
+<li><code>mi_volumen</code>: Volumen de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> (si no existe, se crea automáticamente)</li>
+<li><code>/datos</code>: Directorio dentro del contenedor donde se montará</li>
+<li>Cualquier dato guardado en <code>/datos</code> persistirá en el volumen</li>
+</ul>
+<p><strong>Verificar el montaje:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span>docker<span class="w"> </span>inspect<span class="w"> </span>app<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-A<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="s2">&quot;Mounts&quot;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="s2">&quot;Mounts&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="o">{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">        </span><span class="s2">&quot;Type&quot;</span>:<span class="w"> </span><span class="s2">&quot;volume&quot;</span>,
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">        </span><span class="s2">&quot;Name&quot;</span>:<span class="w"> </span><span class="s2">&quot;mi_volumen&quot;</span>,
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">        </span><span class="s2">&quot;Source&quot;</span>:<span class="w"> </span><span class="s2">&quot;/var/lib/docker/volumes/mi_volumen/_data&quot;</span>,
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">        </span><span class="s2">&quot;Destination&quot;</span>:<span class="w"> </span><span class="s2">&quot;/datos&quot;</span>,
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="s2">&quot;Driver&quot;</span>:<span class="w"> </span><span class="s2">&quot;local&quot;</span>,
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="s2">&quot;Mode&quot;</span>:<span class="w"> </span><span class="s2">&quot;z&quot;</span>,
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="s2">&quot;RW&quot;</span>:<span class="w"> </span>true,
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">        </span><span class="s2">&quot;Propagation&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="o">]</span>,
+</code></pre></div>
+<p><strong>Probar la persistencia:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Escribir datos en el volumen</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>$<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;echo &#39;datos importantes&#39; &gt; /datos/archivo.txt&quot;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># Eliminar el contenedor</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>$<span class="w"> </span>docker<span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>app
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># Crear nuevo contenedor con el mismo volumen</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>app2<span class="w"> </span>-v<span class="w"> </span>mi_volumen:/datos<span class="w"> </span>ubuntu<span class="w"> </span>sleep<span class="w"> </span>infinity
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="c1"># Verificar que los datos persisten</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>$<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>app2<span class="w"> </span>cat<span class="w"> </span>/datos/archivo.txt
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>datos<span class="w"> </span>importantes
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Los datos sobreviven</p>
+<p>Aunque elimines todos los contenedores, los datos en el volumen permanecen hasta que elimines el volumen explícitamente.</p>
+</div>
 <h4 id="13-bind-mounts">1.3. Bind mounts<a class="headerlink" href="#13-bind-mounts" title="Permanent link">&para;</a></h4>
 <p>Los bind mounts vinculan un directorio del host con un directorio del contenedor.</p>
 <p><strong>Ventajas:</strong>
@@ -5803,37 +5881,37 @@
 - Dependen de la estructura del host
 - Menos portables que volúmenes</p>
 <p><strong>Uso:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Montar directorio del host</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>web<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span>-v<span class="w"> </span>/home/usuario/web:/usr/share/nginx/html<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span>nginx
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># Sintaxis alternativa con --mount</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>web<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/usuario/web,target<span class="o">=</span>/usr/share/nginx/html<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span>nginx
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Montar directorio del host</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>web<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span>-v<span class="w"> </span>/home/usuario/web:/usr/share/nginx/html<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span>nginx
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c1"># Sintaxis alternativa con --mount</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>web<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">  </span>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/home/usuario/web,target<span class="o">=</span>/usr/share/nginx/html<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">  </span>nginx
 </code></pre></div>
 <h4 id="14-ejemplo-base-de-datos-con-volumen">1.4. Ejemplo: Base de datos con volumen<a class="headerlink" href="#14-ejemplo-base-de-datos-con-volumen" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Crear volumen para MySQL</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>mysql_data
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Ejecutar MySQL con volumen persistente</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span>--name<span class="w"> </span>mysql_db<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>secreto<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_DATABASE</span><span class="o">=</span>miapp<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span>-v<span class="w"> </span>mysql_data:/var/lib/mysql<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span>mysql:8.0
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="c1"># Los datos persisten aunque eliminemos el contenedor</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>$<span class="w"> </span>docker<span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>mysql_db
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="c1"># Al crear nuevo contenedor con el mismo volumen, los datos siguen ahí</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">  </span>--name<span class="w"> </span>mysql_db_nuevo<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>secreto<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">  </span>-v<span class="w"> </span>mysql_data:/var/lib/mysql<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">  </span>mysql:8.0
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Crear volumen para MySQL</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>mysql_data
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># Ejecutar MySQL con volumen persistente</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span>--name<span class="w"> </span>mysql_db<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>secreto<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_DATABASE</span><span class="o">=</span>miapp<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">  </span>-v<span class="w"> </span>mysql_data:/var/lib/mysql<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">  </span>mysql:8.0
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="c1"># Los datos persisten aunque eliminemos el contenedor</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>$<span class="w"> </span>docker<span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>mysql_db
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="c1"># Al crear nuevo contenedor con el mismo volumen, los datos siguen ahí</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">  </span>--name<span class="w"> </span>mysql_db_nuevo<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>secreto<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">  </span>-v<span class="w"> </span>mysql_data:/var/lib/mysql<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="w">  </span>mysql:8.0
 </code></pre></div>
 <h3 id="2-redes-en-docker">2. Redes en <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr><a class="headerlink" href="#2-redes-en-docker" title="Permanent link">&para;</a></h3>
 <p><abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> proporciona diferentes tipos de redes para la comunicación entre contenedores.</p>
@@ -5847,15 +5925,15 @@
 </ol>
 <h4 id="22-red-bridge-predeterminada">2.2. Red bridge (predeterminada)<a class="headerlink" href="#22-red-bridge-predeterminada" title="Permanent link">&para;</a></h4>
 <p>Todos los contenedores se conectan a la red bridge por defecto.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Ver redes disponibles</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>ls
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>NETWORK<span class="w"> </span>ID<span class="w">     </span>NAME<span class="w">      </span>DRIVER<span class="w">    </span>SCOPE
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>a1b2c3d4e5f6<span class="w">   </span>bridge<span class="w">    </span>bridge<span class="w">    </span><span class="nb">local</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>1234567890ab<span class="w">   </span>host<span class="w">      </span>host<span class="w">      </span><span class="nb">local</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>fedcba098765<span class="w">   </span>none<span class="w">      </span>null<span class="w">      </span><span class="nb">local</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># Inspeccionar la red bridge</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>inspect<span class="w"> </span>bridge
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Ver redes disponibles</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>ls
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>NETWORK<span class="w"> </span>ID<span class="w">     </span>NAME<span class="w">      </span>DRIVER<span class="w">    </span>SCOPE
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>a1b2c3d4e5f6<span class="w">   </span>bridge<span class="w">    </span>bridge<span class="w">    </span><span class="nb">local</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>1234567890ab<span class="w">   </span>host<span class="w">      </span>host<span class="w">      </span><span class="nb">local</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>fedcba098765<span class="w">   </span>none<span class="w">      </span>null<span class="w">      </span><span class="nb">local</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="c1"># Inspeccionar la red bridge</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>inspect<span class="w"> </span>bridge
 </code></pre></div>
 <p><strong>Características de la red bridge predeterminada:</strong></p>
 <ul>
@@ -5872,97 +5950,253 @@
 <li>Conexión/desconexión dinámica de contenedores</li>
 <li>Configuración personalizada</li>
 </ul>
-<p><strong>Comandos:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Crear red personalizada</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>mi_red
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Crear red con configuración específica</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span>--driver<span class="w"> </span>bridge<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span>--subnet<span class="w"> </span><span class="m">172</span>.20.0.0/16<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span>--gateway<span class="w"> </span><span class="m">172</span>.20.0.1<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">  </span>mi_red_custom
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="c1"># Conectar contenedor a la red</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>app<span class="w"> </span>--network<span class="w"> </span>mi_red<span class="w"> </span>nginx
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="c1"># Conectar contenedor existente a una red</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>connect<span class="w"> </span>mi_red<span class="w"> </span>contenedor1
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="c1"># Desconectar de una red</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>disconnect<span class="w"> </span>mi_red<span class="w"> </span>contenedor1
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="c1"># Eliminar red</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>rm<span class="w"> </span>mi_red
+<p><strong>Comandos explicados:</strong></p>
+<p><strong>Crear red personalizada (simple):</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>mi_red
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6
 </code></pre></div>
+<ul>
+<li>Crea una red bridge con configuración automática</li>
+<li><abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> asigna automáticamente una subred (ej: 172.18.0.0/16)</li>
+<li>Los contenedores en esta red pueden comunicarse por nombre</li>
+</ul>
+<p><strong>Crear red con configuración específica:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span>--driver<span class="w"> </span>bridge<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span>--subnet<span class="w"> </span><span class="m">172</span>.20.0.0/16<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span>--gateway<span class="w"> </span><span class="m">172</span>.20.0.1<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">  </span>mi_red_custom
+</code></pre></div>
+<p><strong>Explicación de cada parámetro:</strong></p>
+<ul>
+<li><code>--driver bridge</code>: Tipo de red (bridge para un solo host)</li>
+<li><code>--subnet 172.20.0.0/16</code>: Rango de IPs disponibles</li>
+<li><code>/16</code> = 65,536 direcciones <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> (172.20.0.0 a 172.20.255.255)</li>
+<li><code>--gateway 172.20.0.1</code>: Puerta de enlace (<abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> del host <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr>)</li>
+</ul>
+<p><strong>¿Qué significa cada valor?</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>172.20.0.0/16 → Rango de red
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>172.20.0.1    → Gateway (conexión a internet/host)
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>172.20.0.2+   → IPs disponibles para contenedores
+</code></pre></div>
+<p><strong>Conectar contenedor nuevo a la red:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>app<span class="w"> </span>--network<span class="w"> </span>mi_red<span class="w"> </span>nginx
+</code></pre></div>
+<ul>
+<li>El contenedor se conecta a <code>mi_red</code> desde el inicio</li>
+<li>Obtiene automáticamente una <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> de la red (ej: 172.20.0.2)</li>
+<li>Puede resolver otros contenedores por nombre</li>
+</ul>
+<p><strong>Conectar contenedor existente:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>connect<span class="w"> </span>mi_red<span class="w"> </span>contenedor1
+</code></pre></div>
+<p><strong>¿Qué hace esto?</strong></p>
+<ol>
+<li>Añade una segunda interfaz de red al contenedor</li>
+<li>Ahora el contenedor está en DOS redes simultáneamente</li>
+<li>Puede comunicarse con contenedores de ambas redes</li>
+</ol>
+<p><strong>Ejemplo práctico:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Contenedor en red predeterminada</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>web<span class="w"> </span>nginx
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1"># Conectar a red personalizada</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>connect<span class="w"> </span>mi_red<span class="w"> </span>web
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="c1"># Verificar (tiene dos IPs)</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>$<span class="w"> </span>docker<span class="w"> </span>inspect<span class="w"> </span>web<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>IPAddress
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="s2">&quot;IPAddress&quot;</span>:<span class="w"> </span><span class="s2">&quot;172.17.0.2&quot;</span>,<span class="w">  </span><span class="c1"># Red bridge default</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="s2">&quot;IPAddress&quot;</span>:<span class="w"> </span><span class="s2">&quot;172.20.0.2&quot;</span>,<span class="w">  </span><span class="c1"># mi_red</span>
+</code></pre></div>
+<p><strong>Desconectar de una red:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>disconnect<span class="w"> </span>mi_red<span class="w"> </span>contenedor1
+</code></pre></div>
+<ul>
+<li>Elimina la interfaz de red de esa red específica</li>
+<li>El contenedor sigue funcionando en sus otras redes</li>
+</ul>
+<p><strong>Eliminar red:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>rm<span class="w"> </span>mi_red
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>mi_red
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Solo redes sin contenedores</p>
+<p>No puedes eliminar una red si todavía tiene contenedores conectados.</p>
+</div>
+<p><strong>Limpieza de redes sin uso:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>prune
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>WARNING!<span class="w"> </span>This<span class="w"> </span>will<span class="w"> </span>remove<span class="w"> </span>all<span class="w"> </span>custom<span class="w"> </span>networks<span class="w"> </span>not<span class="w"> </span>used<span class="w"> </span>by<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span>one<span class="w"> </span>container.
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>Are<span class="w"> </span>you<span class="w"> </span>sure<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span><span class="k">continue</span>?<span class="w"> </span><span class="o">[</span>y/N<span class="o">]</span><span class="w"> </span>y
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>Deleted<span class="w"> </span>Networks:
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>red_antigua
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>red_test
+</code></pre></div>
+<p><strong>Inspeccionar una red:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>inspect<span class="w"> </span>mi_red
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="o">[</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="o">{</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">        </span><span class="s2">&quot;Name&quot;</span>:<span class="w"> </span><span class="s2">&quot;mi_red&quot;</span>,
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">        </span><span class="s2">&quot;Id&quot;</span>:<span class="w"> </span><span class="s2">&quot;a1b2c3d4e5f6&quot;</span>,
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">        </span><span class="s2">&quot;Driver&quot;</span>:<span class="w"> </span><span class="s2">&quot;bridge&quot;</span>,
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">        </span><span class="s2">&quot;Scope&quot;</span>:<span class="w"> </span><span class="s2">&quot;local&quot;</span>,
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">        </span><span class="s2">&quot;IPAM&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">            </span><span class="s2">&quot;Config&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">                </span><span class="o">{</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="w">                    </span><span class="s2">&quot;Subnet&quot;</span>:<span class="w"> </span><span class="s2">&quot;172.20.0.0/16&quot;</span>,
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">                    </span><span class="s2">&quot;Gateway&quot;</span>:<span class="w"> </span><span class="s2">&quot;172.20.0.1&quot;</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="w">                </span><span class="o">}</span>
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="w">            </span><span class="o">]</span>
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="w">        </span><span class="o">}</span>,
+<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a><span class="w">        </span><span class="s2">&quot;Containers&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a><span class="w">            </span><span class="s2">&quot;abc123&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a><span class="w">                </span><span class="s2">&quot;Name&quot;</span>:<span class="w"> </span><span class="s2">&quot;app&quot;</span>,
+<a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a><span class="w">                </span><span class="s2">&quot;IPv4Address&quot;</span>:<span class="w"> </span><span class="s2">&quot;172.20.0.2/16&quot;</span>
+<a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-20-21" name="__codelineno-20-21" href="#__codelineno-20-21"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-20-22" name="__codelineno-20-22" href="#__codelineno-20-22"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-20-23" name="__codelineno-20-23" href="#__codelineno-20-23"></a><span class="o">]</span>
+</code></pre></div>
+<p><strong>Información útil:</strong></p>
+<ul>
+<li><code>Containers</code>: Qué contenedores están conectados</li>
+<li><code>IPv4Address</code>: <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> asignada a cada contenedor</li>
+<li><code>IPAM</code>: Configuración de direccionamiento <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr></li>
+</ul>
 <h4 id="24-comunicacion-entre-contenedores">2.4. Comunicación entre contenedores<a class="headerlink" href="#24-comunicacion-entre-contenedores" title="Permanent link">&para;</a></h4>
 <p><strong>En red personalizada (recomendado):</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Crear red</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>app_network
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Contenedor 1: Base de datos</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span>--name<span class="w"> </span>db<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span>--network<span class="w"> </span>app_network<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>secreto<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">  </span>mysql:8.0
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="c1"># Contenedor 2: Aplicación</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">  </span>--name<span class="w"> </span>app<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">  </span>--network<span class="w"> </span>app_network<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">  </span>mi_aplicacion
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="c1"># La aplicación puede conectarse a la BD usando &#39;db&#39; como hostname</span>
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="c1"># Ejemplo: mysql://db:3306/midb</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># Crear red</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>app_network
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="c1"># Contenedor 1: Base de datos</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">  </span>--name<span class="w"> </span>db<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w">  </span>--network<span class="w"> </span>app_network<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>secreto<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="w">  </span>mysql:8.0
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="c1"># Contenedor 2: Aplicación</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="w">  </span>--name<span class="w"> </span>app<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="w">  </span>--network<span class="w"> </span>app_network<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="w">  </span>mi_aplicacion
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>
+<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a><span class="c1"># La aplicación puede conectarse a la BD usando &#39;db&#39; como hostname</span>
+<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="c1"># Ejemplo: mysql://db:3306/midb</span>
 </code></pre></div>
 <h3 id="3-ejemplos-practicos">3. Ejemplos prácticos<a class="headerlink" href="#3-ejemplos-practicos" title="Permanent link">&para;</a></h3>
-<h4 id="31-wordpress-con-mysql">3.1. WordPress con MySQL<a class="headerlink" href="#31-wordpress-con-mysql" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Crear red y volúmenes</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>wordpress_net
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>wp_db
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>wp_files
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1"># MySQL</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">  </span>--name<span class="w"> </span>wordpress_db<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">  </span>--network<span class="w"> </span>wordpress_net<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">  </span>-v<span class="w"> </span>wp_db:/var/lib/mysql<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>secreto<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_DATABASE</span><span class="o">=</span>wordpress<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_USER</span><span class="o">=</span>wpuser<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_PASSWORD</span><span class="o">=</span>wppass<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">  </span>mysql:8.0
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="c1"># WordPress</span>
-<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">  </span>--name<span class="w"> </span>wordpress<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">  </span>--network<span class="w"> </span>wordpress_net<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">  </span>-v<span class="w"> </span>wp_files:/var/www/html<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">WORDPRESS_DB_HOST</span><span class="o">=</span>wordpress_db<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">WORDPRESS_DB_NAME</span><span class="o">=</span>wordpress<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">WORDPRESS_DB_USER</span><span class="o">=</span>wpuser<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">WORDPRESS_DB_PASSWORD</span><span class="o">=</span>wppass<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="w">  </span>wordpress
+<h4 id="31-wordpress-con-mysql-paso-a-paso">3.1. WordPress con MySQL (Paso a paso)<a class="headerlink" href="#31-wordpress-con-mysql-paso-a-paso" title="Permanent link">&para;</a></h4>
+<p>Este ejemplo completo muestra cómo desplegar WordPress conectado a MySQL con datos persistentes.</p>
+<p><strong>Paso 1: Crear la infraestructura</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1"># Crear red privada para que WordPress y MySQL se comuniquen</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>wordpress_net
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>wordpress_net
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="c1"># Crear volúmenes para datos persistentes</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>wp_db<span class="w">        </span><span class="c1"># Para la base de datos</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>wp_db
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>wp_files<span class="w">     </span><span class="c1"># Para archivos de WordPress</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>wp_files
 </code></pre></div>
+<p><strong>Paso 2: Lanzar MySQL</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">  </span>--name<span class="w"> </span>wordpress_db<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">  </span>--network<span class="w"> </span>wordpress_net<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">  </span>-v<span class="w"> </span>wp_db:/var/lib/mysql<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>secreto<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_DATABASE</span><span class="o">=</span>wordpress<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_USER</span><span class="o">=</span>wpuser<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_PASSWORD</span><span class="o">=</span>wppass<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">  </span>mysql:8.0
+</code></pre></div>
+<p><strong>Explicación línea por línea:</strong></p>
+<ul>
+<li><code>--name wordpress_db</code>: Nombre que usará WordPress para conectarse</li>
+<li><code>--network wordpress_net</code>: Conectar a nuestra red privada</li>
+<li><code>-v wp_db:/var/lib/mysql</code>: Persistir base de datos en volumen</li>
+<li><code>-e MYSQL_ROOT_PASSWORD</code>: Contraseña del administrador de MySQL</li>
+<li><code>-e MYSQL_DATABASE=wordpress</code>: Crear BD "wordpress" automáticamente</li>
+<li><code>-e MYSQL_USER=wpuser</code>: Crear usuario "wpuser"</li>
+<li><code>-e MYSQL_PASSWORD=wppass</code>: Contraseña del usuario</li>
+<li><code>mysql:8.0</code>: Usar MySQL versión 8.0</li>
+</ul>
+<p><strong>Verificar que MySQL está funcionando:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>$<span class="w"> </span>docker<span class="w"> </span>logs<span class="w"> </span>wordpress_db<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;ready for connections&quot;</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="m">2024</span>-01-23<span class="w"> </span><span class="m">17</span>:00:00<span class="w"> </span><span class="o">[</span>Note<span class="o">]</span><span class="w"> </span>mysqld:<span class="w"> </span>ready<span class="w"> </span><span class="k">for</span><span class="w"> </span>connections.
+</code></pre></div>
+<p><strong>Paso 3: Lanzar WordPress</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">  </span>--name<span class="w"> </span>wordpress<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">  </span>--network<span class="w"> </span>wordpress_net<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w">  </span>-v<span class="w"> </span>wp_files:/var/www/html<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">WORDPRESS_DB_HOST</span><span class="o">=</span>wordpress_db<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">WORDPRESS_DB_NAME</span><span class="o">=</span>wordpress<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">WORDPRESS_DB_USER</span><span class="o">=</span>wpuser<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">WORDPRESS_DB_PASSWORD</span><span class="o">=</span>wppass<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a><span class="w">  </span>wordpress
+</code></pre></div>
+<p><strong>Explicación línea por línea:</strong></p>
+<ul>
+<li><code>--name wordpress</code>: Nombre del contenedor</li>
+<li><code>--network wordpress_net</code>: Misma red que MySQL (pueden comunicarse)</li>
+<li><code>-p 8080:80</code>: Accesible desde navegador en puerto 8080</li>
+<li><code>-v wp_files:/var/www/html</code>: Persistir archivos de WordPress</li>
+<li><code>-e WORDPRESS_DB_HOST=wordpress_db</code>: <strong>Nombre del contenedor MySQL</strong></li>
+<li>¡<abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> resuelve este nombre automáticamente a la <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> de MySQL!</li>
+<li><code>-e WORDPRESS_DB_NAME=wordpress</code>: Nombre de la base de datos</li>
+<li><code>-e WORDPRESS_DB_USER/PASSWORD</code>: Credenciales de MySQL</li>
+</ul>
+<p><strong>¿Cómo se conectan WordPress y MySQL?</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>WordPress contenedor (172.20.0.3)
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>      ↓
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>Busca: wordpress_db (nombre)
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>      ↓
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>DNS de Docker resuelve: wordpress_db = 172.20.0.2
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>      ↓
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>WordPress conecta a: 172.20.0.2:3306
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>      ↓
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>MySQL contenedor (172.20.0.2)
+</code></pre></div>
+<p><strong>Paso 4: Acceder a WordPress</strong></p>
+<p>Abre tu navegador: <code>http://localhost:8080</code></p>
+<p>Verás el instalador de WordPress. Completa la instalación.</p>
+<p><strong>Paso 5: Verificar persistencia</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c1"># Detener y eliminar los contenedores</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>$<span class="w"> </span>docker<span class="w"> </span>stop<span class="w"> </span>wordpress<span class="w"> </span>wordpress_db
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>$<span class="w"> </span>docker<span class="w"> </span>rm<span class="w"> </span>wordpress<span class="w"> </span>wordpress_db
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="c1"># Volver a crearlos con los mismos comandos</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>...<span class="w">  </span><span class="c1"># (repite los comandos anteriores)</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="c1"># ¡Tu WordPress sigue funcionando con todos tus datos!</span>
+</code></pre></div>
+<p><strong>¿Por qué persiste?</strong></p>
+<ul>
+<li>Los archivos de WordPress están en el volumen <code>wp_files</code></li>
+<li>La base de datos está en el volumen <code>wp_db</code></li>
+<li>Los volúmenes no se eliminan con los contenedores</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Backup fácil</p>
+<p>Para hacer backup, solo necesitas respaldar los volúmenes <code>wp_db</code> y <code>wp_files</code>.</p>
+</div>
 <h4 id="32-aplicacion-web-con-nginx-y-tomcat">3.2. Aplicación web con Nginx y Tomcat<a class="headerlink" href="#32-aplicacion-web-con-nginx-y-tomcat" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Crear red</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>web_network
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Tomcat (backend)</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span>--name<span class="w"> </span>tomcat<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span>--network<span class="w"> </span>web_network<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">  </span>tomcat:9.0
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="c1"># Nginx (proxy inverso)</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">  </span>--name<span class="w"> </span>nginx<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">  </span>--network<span class="w"> </span>web_network<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">80</span>:80<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">  </span>-v<span class="w"> </span>/ruta/nginx.conf:/etc/nginx/nginx.conf:ro<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">  </span>nginx
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="c1"># Crear red</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>$<span class="w"> </span>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>web_network
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="c1"># Tomcat (backend)</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="w">  </span>--name<span class="w"> </span>tomcat<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="w">  </span>--network<span class="w"> </span>web_network<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a><span class="w">  </span>tomcat:9.0
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a><span class="c1"># Nginx (proxy inverso)</span>
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a><span class="w">  </span>--name<span class="w"> </span>nginx<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a><span class="w">  </span>--network<span class="w"> </span>web_network<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">80</span>:80<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a><span class="w">  </span>-v<span class="w"> </span>/ruta/nginx.conf:/etc/nginx/nginx.conf:ro<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-28-16" name="__codelineno-28-16" href="#__codelineno-28-16"></a><span class="w">  </span>nginx
 </code></pre></div>
 <h3 id="4-buenas-practicas">4. Buenas prácticas<a class="headerlink" href="#4-buenas-practicas" title="Permanent link">&para;</a></h3>
 <ol>
@@ -5972,8 +6206,8 @@
 <li><strong>Aislar aplicaciones</strong> en redes diferentes</li>
 <li><strong>Limpiar recursos</strong> no utilizados regularmente</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Limpieza general</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>$<span class="w"> </span>docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-a<span class="w"> </span>--volumes
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c1"># Limpieza general</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>$<span class="w"> </span>docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-a<span class="w"> </span>--volumes
 </code></pre></div>
 <h3 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">&para;</a></h3>
 <p>En esta sección hemos aprendido:</p>

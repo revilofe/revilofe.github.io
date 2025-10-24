@@ -5874,27 +5874,103 @@
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>nginx<span class="w">         </span><span class="m">1</span>.21<span class="w">      </span>ad4c705f24d3<span class="w">   </span><span class="m">2</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">    </span>133MB
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>mysql<span class="w">         </span><span class="m">8</span>.0<span class="w">       </span>3218b38490ce<span class="w">   </span><span class="m">3</span><span class="w"> </span>weeks<span class="w"> </span>ago<span class="w">    </span>516MB
 </code></pre></div>
-<p><strong>Descargar una imagen:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>ubuntu:22.04
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="m">22</span>.04:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>library/ubuntu
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Digest:<span class="w"> </span>sha256:...
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Status:<span class="w"> </span>Downloaded<span class="w"> </span>newer<span class="w"> </span>image<span class="w"> </span><span class="k">for</span><span class="w"> </span>ubuntu:22.04
+<p><strong>Interpretación de cada columna:</strong></p>
+<ul>
+<li><code>REPOSITORY</code>: Nombre de la imagen (sin el tag)</li>
+<li><code>TAG</code>: Versión o variante (latest, 22.04, 8.0, alpine, etc.)</li>
+<li><code>IMAGE ID</code>: Identificador único (hash). Dos imágenes con mismo ID son idénticas</li>
+<li><code>CREATED</code>: Cuándo se construyó la imagen (NO cuándo la descargaste tú)</li>
+<li><code>SIZE</code>: Espacio que ocupa en disco</li>
+</ul>
+<p><strong>Comandos adicionales útiles:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Ver solo los IDs</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$<span class="w"> </span>docker<span class="w"> </span>images<span class="w"> </span>-q
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Filtrar por nombre</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>$<span class="w"> </span>docker<span class="w"> </span>images<span class="w"> </span>ubuntu
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># Mostrar imágenes intermedias (normalmente ocultas)</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>$<span class="w"> </span>docker<span class="w"> </span>images<span class="w"> </span>-a
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1"># Formato personalizado</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>$<span class="w"> </span>docker<span class="w"> </span>images<span class="w"> </span>--format<span class="w"> </span><span class="s2">&quot;table {{.Repository}}\t{{.Tag}}\t{{.Size}}&quot;</span>
 </code></pre></div>
+<p><strong>Descargar una imagen:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>ubuntu:22.04
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="m">22</span>.04:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>library/ubuntu
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Digest:<span class="w"> </span>sha256:...
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Status:<span class="w"> </span>Downloaded<span class="w"> </span>newer<span class="w"> </span>image<span class="w"> </span><span class="k">for</span><span class="w"> </span>ubuntu:22.04
+</code></pre></div>
+<p><strong>¿Qué sucede al hacer pull?</strong></p>
+<ol>
+<li><abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> contacta con <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Hub</li>
+<li>Verifica si tienes la última versión</li>
+<li>Descarga solo las capas que te faltan (optimización)</li>
+<li>Verifica la integridad con el Digest (checksum)</li>
+<li>Almacena la imagen en tu registro local</li>
+</ol>
+<p><strong>Descargar sin especificar tag:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>nginx
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1"># Equivale a:</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>$<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>nginx:latest
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">latest no significa 'la más reciente'</p>
+<p><code>latest</code> es solo una etiqueta por defecto. No se actualiza automáticamente. Si quieres la última versión, debes hacer <code>docker pull</code> de nuevo.</p>
+</div>
 <p><strong>Buscar imágenes en <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Hub:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>docker<span class="w"> </span>search<span class="w"> </span>nginx
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>NAME<span class="w">                      </span>DESCRIPTION<span class="w">                     </span>STARS<span class="w">     </span>OFFICIAL
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>nginx<span class="w">                     </span>Official<span class="w"> </span>build<span class="w"> </span>of<span class="w"> </span>Nginx<span class="w">         </span><span class="m">15000</span><span class="w">     </span><span class="o">[</span>OK<span class="o">]</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>jwilder/nginx-proxy<span class="w">       </span>Automated<span class="w"> </span>Nginx<span class="w"> </span>reverse...<span class="w">      </span><span class="m">2000</span><span class="w">      </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span>docker<span class="w"> </span>search<span class="w"> </span>nginx
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>NAME<span class="w">                      </span>DESCRIPTION<span class="w">                     </span>STARS<span class="w">     </span>OFFICIAL
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>nginx<span class="w">                     </span>Official<span class="w"> </span>build<span class="w"> </span>of<span class="w"> </span>Nginx<span class="w">         </span><span class="m">15000</span><span class="w">     </span><span class="o">[</span>OK<span class="o">]</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>jwilder/nginx-proxy<span class="w">       </span>Automated<span class="w"> </span>Nginx<span class="w"> </span>reverse...<span class="w">      </span><span class="m">2000</span><span class="w">      </span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>nginx/nginx-ingress<span class="w">       </span>NGINX<span class="w"> </span>Ingress<span class="w"> </span>Controller<span class="w">        </span><span class="m">500</span>
+</code></pre></div>
+<p><strong>Explicación de las columnas:</strong></p>
+<ul>
+<li><code>NAME</code>: Nombre completo de la imagen (usuario/nombre)</li>
+<li><code>DESCRIPTION</code>: Descripción breve</li>
+<li><code>STARS</code>: Número de estrellas (popularidad)</li>
+<li><code>OFFICIAL</code>: [OK] indica que es una imagen oficial</li>
+</ul>
+<p><strong>Buscar con filtros:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Solo imágenes oficiales</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>$<span class="w"> </span>docker<span class="w"> </span>search<span class="w"> </span>--filter<span class="w"> </span>is-official<span class="o">=</span><span class="nb">true</span><span class="w"> </span>nginx
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># Mínimo de estrellas</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>$<span class="w"> </span>docker<span class="w"> </span>search<span class="w"> </span>--filter<span class="w"> </span><span class="nv">stars</span><span class="o">=</span><span class="m">100</span><span class="w"> </span>nginx
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># Limitar resultados</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>$<span class="w"> </span>docker<span class="w"> </span>search<span class="w"> </span>--limit<span class="w"> </span><span class="m">5</span><span class="w"> </span>nginx
 </code></pre></div>
 <p><strong>Eliminar una imagen:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>docker<span class="w"> </span>rmi<span class="w"> </span>ubuntu:22.04
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$<span class="w"> </span>docker<span class="w"> </span>rmi<span class="w"> </span>ubuntu:22.04
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Untagged:<span class="w"> </span>ubuntu:22.04
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Untagged:<span class="w"> </span>ubuntu@sha256:...
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>Deleted:<span class="w"> </span>sha256:f63181f19b2f...
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>Deleted:<span class="w"> </span>sha256:abc123def456...
 </code></pre></div>
+<p><strong>¿Por qué dice "Untagged" y "Deleted"?</strong></p>
+<ul>
+<li><code>Untagged</code>: Elimina la etiqueta (nombre) de la imagen</li>
+<li><code>Deleted</code>: Elimina las capas físicas del disco</li>
+<li>Si otra imagen usa las mismas capas, solo se elimina el tag</li>
+</ul>
+<p><strong>Eliminar por IMAGE ID:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$<span class="w"> </span>docker<span class="w"> </span>rmi<span class="w"> </span>f63181f19b2f
+</code></pre></div>
+<p><strong>Eliminar varias imágenes:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$<span class="w"> </span>docker<span class="w"> </span>rmi<span class="w"> </span>ubuntu:22.04<span class="w"> </span>nginx:1.21<span class="w"> </span>mysql:8.0
+</code></pre></div>
+<p><strong>Forzar eliminación:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$<span class="w"> </span>docker<span class="w"> </span>rmi<span class="w"> </span>-f<span class="w"> </span>ubuntu:22.04
+</code></pre></div>
+<p>Esto es necesario si hay contenedores (aunque estén parados) creados desde esa imagen.</p>
 <div class="admonition warning">
 <p class="admonition-title">Restricción</p>
 <p>No se puede eliminar una imagen si existen contenedores (aunque estén detenidos) creados a partir de ella.</p>
 </div>
 <p><strong>Inspeccionar una imagen:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span>docker<span class="w"> </span>inspect<span class="w"> </span>ubuntu:latest
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>$<span class="w"> </span>docker<span class="w"> </span>inspect<span class="w"> </span>ubuntu:latest
 </code></pre></div>
 <p>Muestra información detallada:
 - ID y checksum de la imagen
@@ -5913,56 +5989,134 @@
 <h4 id="41-ventajas-del-sistema-de-capas">4.1. Ventajas del sistema de capas<a class="headerlink" href="#41-ventajas-del-sistema-de-capas" title="Permanent link">&para;</a></h4>
 <p><strong>Reutilización:</strong> Si varias imágenes comparten capas comunes (como el SO base), esas capas se almacenan una sola vez.</p>
 <p><strong>Ejemplo:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ubuntu:20.04<span class="w">          </span>├──<span class="w"> </span>Capa<span class="w"> </span>base<span class="w"> </span>Ubuntu
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">                      </span>└──<span class="w"> </span>Total:<span class="w"> </span><span class="m">72</span><span class="w"> </span>MB
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>nginx:latest<span class="w">          </span>├──<span class="w"> </span>Capa<span class="w"> </span>base<span class="w"> </span>Ubuntu<span class="w"> </span><span class="o">(</span>compartida<span class="o">)</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">                      </span>├──<span class="w"> </span>Capa<span class="w"> </span>instalación<span class="w"> </span>Nginx<span class="w">  </span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">                      </span>└──<span class="w"> </span>Total<span class="w"> </span>único:<span class="w"> </span>+60<span class="w"> </span>MB
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>ubuntu:20.04<span class="w">          </span>├──<span class="w"> </span>Capa<span class="w"> </span>base<span class="w"> </span>Ubuntu
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">                      </span>└──<span class="w"> </span>Total:<span class="w"> </span><span class="m">72</span><span class="w"> </span>MB
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>nginx:latest<span class="w">          </span>├──<span class="w"> </span>Capa<span class="w"> </span>base<span class="w"> </span>Ubuntu<span class="w"> </span><span class="o">(</span>compartida<span class="o">)</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">                      </span>├──<span class="w"> </span>Capa<span class="w"> </span>instalación<span class="w"> </span>Nginx<span class="w">  </span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">                      </span>└──<span class="w"> </span>Total<span class="w"> </span>único:<span class="w"> </span>+60<span class="w"> </span>MB
 </code></pre></div>
 <h4 id="42-capas-en-contenedores">4.2. Capas en contenedores<a class="headerlink" href="#42-capas-en-contenedores" title="Permanent link">&para;</a></h4>
 <p>Cuando se crea un contenedor desde una imagen:</p>
 <ol>
-<li>Todas las capas de la imagen son <strong>solo lectura</strong></li>
-<li>Se añade una <strong>capa superior de escritura</strong></li>
-<li>Los cambios del contenedor se almacenan en esta capa superior</li>
+<li>Todas las capas de la imagen son <strong>solo lectura</strong> (inmutables)</li>
+<li>Se añade una <strong>capa superior de escritura</strong> (thin read-write layer)</li>
+<li>Los cambios del contenedor se almacenan SOLO en esta capa superior</li>
 </ol>
-<figure>
-<p><img alt="Contenedor con capas" src="assets/DAW-U2.2-contenedor-capas.png" /></p>
-<figcaption>Capa de escritura en contenedores</figcaption>
-</figure>
-<p><strong>Copy-on-Write (CoW):</strong></p>
-<ul>
-<li>El contenedor no modifica archivos de las capas de imagen</li>
-<li>Crea una copia del archivo en su capa superior</li>
-<li>Los accesos posteriores usan la copia de la capa superior</li>
-</ul>
+<p><strong>Ejemplo visual:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>┌──────────────────────────┐
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>│  Capa de escritura       │ ← Aquí van TODOS los cambios del contenedor
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>│  (Read-Write Layer)      │    (archivos nuevos, modificados, eliminados)
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>├──────────────────────────┤
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>│  Capa 3: Aplicación      │ ↑
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>├──────────────────────────┤ │ 
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>│  Capa 2: Dependencias    │ │ Solo lectura
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>├──────────────────────────┤ │ (compartidas entre contenedores)
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>│  Capa 1: Sistema Base    │ ↓
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>└──────────────────────────┘
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>     IMAGEN DOCKER
+</code></pre></div>
+<p><strong>Copy-on-Write (CoW): ¿Cómo funciona?</strong></p>
+<p>Imagina que quieres editar el archivo <code>/etc/nginx/nginx.conf</code> dentro de un contenedor:</p>
+<ol>
+<li><strong>Lectura inicial</strong>: El archivo existe en una capa de solo lectura de la imagen</li>
+<li><strong>Modificación</strong>: Cuando intentas modificarlo:</li>
+<li><abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> COPIA el archivo completo a la capa de escritura</li>
+<li>Editas la copia en la capa de escritura</li>
+<li>El original en la imagen permanece intacto</li>
+<li><strong>Lecturas posteriores</strong>: <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> lee automáticamente la versión de la capa superior</li>
+</ol>
+<p><strong>Ejemplo práctico:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># Crear contenedor</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--name<span class="w"> </span><span class="nb">test</span><span class="w"> </span>ubuntu<span class="w"> </span>bash
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="c1"># Dentro del contenedor, modificar un archivo del sistema</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>root@abc123:/#<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Prueba&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/hosts
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>root@abc123:/#<span class="w"> </span><span class="nb">exit</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="c1"># Ver el tamaño</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>$<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w"> </span>-s
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>CONTAINER<span class="w"> </span>ID<span class="w">   </span>IMAGE<span class="w">    </span>SIZE
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>abc123def456<span class="w">   </span>ubuntu<span class="w">   </span>45B<span class="w"> </span><span class="o">(</span>virtual<span class="w"> </span><span class="m">72</span>.9MB<span class="o">)</span>
+</code></pre></div>
+<p>Los 45B son el tamaño de los cambios (el texto añadido a /etc/hosts).</p>
+<p><strong>¿Qué pasa al eliminar archivos en un contenedor?</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>root@abc123:/#<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/log/*
+</code></pre></div>
+<p><abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> NO elimina los archivos de las capas de imagen. En su lugar:
+- Crea un "archivo de eliminación" (whiteout file) en la capa de escritura
+- Este archivo oculta los archivos de las capas inferiores
+- Los archivos originales siguen en la imagen, ocupando espacio</p>
+<div class="admonition warning">
+<p class="admonition-title">Importante</p>
+<p>Por esto es crucial construir imágenes ligeras desde el inicio. Eliminar archivos en un contenedor NO reduce el tamaño de la imagen.</p>
+</div>
 <h4 id="43-verificar-tamano-de-contenedores">4.3. Verificar tamaño de contenedores<a class="headerlink" href="#43-verificar-tamano-de-contenedores" title="Permanent link">&para;</a></h4>
-<p>Ver tamaño de imagen:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$<span class="w"> </span>docker<span class="w"> </span>images
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>REPOSITORY<span class="w">    </span>TAG<span class="w">       </span>IMAGE<span class="w"> </span>ID<span class="w">       </span>CREATED<span class="w">      </span>SIZE
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>ubuntu<span class="w">        </span>latest<span class="w">    </span>f63181f19b2f<span class="w">   </span><span class="m">7</span><span class="w"> </span>days<span class="w"> </span>ago<span class="w">   </span><span class="m">72</span>.9MB
+<p><strong>Ver tamaño de imagen:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$<span class="w"> </span>docker<span class="w"> </span>images
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>REPOSITORY<span class="w">    </span>TAG<span class="w">       </span>IMAGE<span class="w"> </span>ID<span class="w">       </span>CREATED<span class="w">      </span>SIZE
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>ubuntu<span class="w">        </span>latest<span class="w">    </span>f63181f19b2f<span class="w">   </span><span class="m">7</span><span class="w"> </span>days<span class="w"> </span>ago<span class="w">   </span><span class="m">72</span>.9MB
 </code></pre></div>
-<p>Ver tamaño de contenedor con la opción <code>-s</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w"> </span>-s
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>CONTAINER<span class="w"> </span>ID<span class="w">   </span>IMAGE<span class="w">    </span>COMMAND<span class="w">      </span>CREATED<span class="w">    </span>STATUS<span class="w">    </span>SIZE
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>a2d1ce6990d8<span class="w">   </span>ubuntu<span class="w">   </span><span class="s2">&quot;/bin/bash&quot;</span><span class="w">  </span><span class="m">1</span><span class="w"> </span>min<span class="w"> </span>ago<span class="w">  </span>Exited<span class="w">    </span>0B<span class="w"> </span><span class="o">(</span>virtual<span class="w"> </span><span class="m">72</span>.9MB<span class="o">)</span>
+<p>Esto muestra el tamaño total de todas las capas de la imagen.</p>
+<p><strong>Ver tamaño de contenedor con la opción <code>-s</code>:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>$<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w"> </span>-s
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>CONTAINER<span class="w"> </span>ID<span class="w">   </span>IMAGE<span class="w">    </span>COMMAND<span class="w">      </span>CREATED<span class="w">    </span>STATUS<span class="w">    </span>SIZE
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>a2d1ce6990d8<span class="w">   </span>ubuntu<span class="w">   </span><span class="s2">&quot;/bin/bash&quot;</span><span class="w">  </span><span class="m">1</span><span class="w"> </span>min<span class="w"> </span>ago<span class="w">  </span>Exited<span class="w">    </span>0B<span class="w"> </span><span class="o">(</span>virtual<span class="w"> </span><span class="m">72</span>.9MB<span class="o">)</span>
 </code></pre></div>
+<p><strong>Interpretación de SIZE:</strong></p>
 <ul>
-<li><strong>SIZE</strong>: Tamaño de la capa de escritura del contenedor (0B inicialmente)</li>
-<li><strong>VIRTUAL SIZE</strong>: Tamaño total incluyendo capas compartidas con la imagen</li>
+<li><strong>0B</strong>: Tamaño de la capa de escritura (cambios únicos del contenedor)</li>
+<li><strong>virtual 72.9MB</strong>: Tamaño total = capa de escritura + imagen base</li>
 </ul>
-<p>Si creamos un archivo en el contenedor:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$<span class="w"> </span>docker<span class="w"> </span>start<span class="w"> </span>contenedor1
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>$<span class="w"> </span>docker<span class="w"> </span>attach<span class="w"> </span>contenedor1
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>root@a2d1ce6990d8:/#<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;datos&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>archivo.txt
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>root@a2d1ce6990d8:/#<span class="w"> </span><span class="nb">exit</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>$<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w"> </span>-s
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>CONTAINER<span class="w"> </span>ID<span class="w">   </span>IMAGE<span class="w">    </span>SIZE
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>a2d1ce6990d8<span class="w">   </span>ubuntu<span class="w">   </span>52B<span class="w"> </span><span class="o">(</span>virtual<span class="w"> </span><span class="m">72</span>.9MB<span class="o">)</span>
+<p><strong>¿Por qué es 0B?</strong></p>
+<p>Porque NO hemos hecho ningún cambio. La capa de escritura está vacía.</p>
+<p><strong>Experimento: Crear un archivo en el contenedor</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>$<span class="w"> </span>docker<span class="w"> </span>start<span class="w"> </span>contenedor1
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>$<span class="w"> </span>docker<span class="w"> </span>attach<span class="w"> </span>contenedor1
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>root@a2d1ce6990d8:/#<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;datos de prueba&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>archivo.txt
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>root@a2d1ce6990d8:/#<span class="w"> </span><span class="nb">exit</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>$<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w"> </span>-s
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>CONTAINER<span class="w"> </span>ID<span class="w">   </span>IMAGE<span class="w">    </span>SIZE
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>a2d1ce6990d8<span class="w">   </span>ubuntu<span class="w">   </span>52B<span class="w"> </span><span class="o">(</span>virtual<span class="w"> </span><span class="m">72</span>.9MB<span class="o">)</span>
 </code></pre></div>
-<p>El tamaño del contenedor aumenta con los cambios realizados.</p>
+<p>Ahora el tamaño es <strong>52B</strong> porque hemos creado un archivo que ocupa 52 bytes.</p>
+<p><strong>Crear un archivo grande:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>$<span class="w"> </span>docker<span class="w"> </span>attach<span class="w"> </span>contenedor1
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>root@a2d1ce6990d8:/#<span class="w"> </span>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/zero<span class="w"> </span><span class="nv">of</span><span class="o">=</span>archivo_grande<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>1M<span class="w"> </span><span class="nv">count</span><span class="o">=</span><span class="m">100</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="c1"># Esto crea un archivo de 100MB</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>root@a2d1ce6990d8:/#<span class="w"> </span><span class="nb">exit</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>$<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w"> </span>-s
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>CONTAINER<span class="w"> </span>ID<span class="w">   </span>IMAGE<span class="w">    </span>SIZE
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>a2d1ce6990d8<span class="w">   </span>ubuntu<span class="w">   </span>100MB<span class="w"> </span><span class="o">(</span>virtual<span class="w"> </span><span class="m">172</span>.9MB<span class="o">)</span>
+</code></pre></div>
+<p>Observa:
+- SIZE: 100MB (nuestra capa de escritura)
+- virtual: 172.9MB (100MB + 72.9MB de la imagen)</p>
+<p><strong>Conclusión importante:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Espacio usado por contenedor = Espacio único de capa escritura
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>Espacio compartido = Capas de la imagen (compartidas con todos los contenedores)
+</code></pre></div>
+<p>Si creas 10 contenedores desde ubuntu:
+- Imagen ubuntu: 72.9MB (compartida)
+- Cada contenedor: solo ocupa lo que modifique</p>
+<p><strong>Ejemplo real:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>cont1<span class="w"> </span>ubuntu<span class="w"> </span>sleep<span class="w"> </span><span class="m">1000</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>cont2<span class="w"> </span>ubuntu<span class="w"> </span>sleep<span class="w"> </span><span class="m">1000</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>cont3<span class="w"> </span>ubuntu<span class="w"> </span>sleep<span class="w"> </span><span class="m">1000</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>$<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-s
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>CONTAINER<span class="w"> </span>ID<span class="w">   </span>IMAGE<span class="w">    </span>SIZE
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>abc123<span class="w">         </span>ubuntu<span class="w">   </span>0B<span class="w"> </span><span class="o">(</span>virtual<span class="w"> </span><span class="m">72</span>.9MB<span class="o">)</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>def456<span class="w">         </span>ubuntu<span class="w">   </span>0B<span class="w"> </span><span class="o">(</span>virtual<span class="w"> </span><span class="m">72</span>.9MB<span class="o">)</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>ghi789<span class="w">         </span>ubuntu<span class="w">   </span>0B<span class="w"> </span><span class="o">(</span>virtual<span class="w"> </span><span class="m">72</span>.9MB<span class="o">)</span>
+</code></pre></div>
+<p>3 contenedores, pero solo ocupan 72.9MB en total (no 218.7MB) porque comparten las capas de imagen.</p>
+<div class="admonition tip">
+<p class="admonition-title">Eficiencia de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr></p>
+<p>Esta es una de las grandes ventajas de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr>: puedes tener decenas de contenedores ocupando mucho menos espacio que máquinas virtuales equivalentes.</p>
+</div>
 <h3 id="5-creacion-de-contenedores-desde-imagenes">5. Creación de contenedores desde imágenes<a class="headerlink" href="#5-creacion-de-contenedores-desde-imagenes" title="Permanent link">&para;</a></h3>
 <h4 id="51-proceso-de-creacion">5.1. Proceso de creación<a class="headerlink" href="#51-proceso-de-creacion" title="Permanent link">&para;</a></h4>
 <p>Cuando ejecutamos <code>docker run</code>:</p>
@@ -5974,37 +6128,37 @@
 <li>Ejecuta el comando especificado</li>
 </ol>
 <h4 id="52-ejemplo-practico-mediawiki">5.2. Ejemplo práctico: MediaWiki<a class="headerlink" href="#52-ejemplo-practico-mediawiki" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Descargar imagen de MediaWiki</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>$<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>mediawiki
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># Crear contenedor con MediaWiki</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">  </span>--name<span class="w"> </span>mi_wiki<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">  </span>mediawiki
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="c1"># Acceder en navegador</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="c1"># http://localhost:8080</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># Descargar imagen de MediaWiki</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>$<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>mediawiki
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="c1"># Crear contenedor con MediaWiki</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">  </span>--name<span class="w"> </span>mi_wiki<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">  </span>mediawiki
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="c1"># Acceder en navegador</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="c1"># http://localhost:8080</span>
 </code></pre></div>
 <h3 id="6-etiquetas-y-versiones">6. Etiquetas y versiones<a class="headerlink" href="#6-etiquetas-y-versiones" title="Permanent link">&para;</a></h3>
 <h4 id="61-trabajar-con-etiquetas">6.1. Trabajar con etiquetas<a class="headerlink" href="#61-trabajar-con-etiquetas" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Descargar versión específica</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>$<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>ubuntu:20.04
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>$<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>ubuntu:22.04
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="c1"># La etiqueta &#39;latest&#39; es la predeterminada</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>$<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>nginx
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>$<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>nginx:latest<span class="w">  </span><span class="c1"># Equivalente</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1"># Descargar versión específica</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>$<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>ubuntu:20.04
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>$<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>ubuntu:22.04
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="c1"># La etiqueta &#39;latest&#39; es la predeterminada</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>$<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>nginx
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>$<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>nginx:latest<span class="w">  </span><span class="c1"># Equivalente</span>
 </code></pre></div>
 <h4 id="62-etiquetar-imagenes-locales">6.2. Etiquetar imágenes locales<a class="headerlink" href="#62-etiquetar-imagenes-locales" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Crear una nueva etiqueta para una imagen</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>$<span class="w"> </span>docker<span class="w"> </span>tag<span class="w"> </span>ubuntu:22.04<span class="w"> </span>mi-ubuntu:dev
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># Ver resultado</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>$<span class="w"> </span>docker<span class="w"> </span>images
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>REPOSITORY<span class="w">    </span>TAG<span class="w">       </span>IMAGE<span class="w"> </span>ID
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>ubuntu<span class="w">        </span><span class="m">22</span>.04<span class="w">     </span>f63181f19b2f
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>mi-ubuntu<span class="w">     </span>dev<span class="w">       </span>f63181f19b2f<span class="w">  </span><span class="c1"># Mismo ID</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="c1"># Crear una nueva etiqueta para una imagen</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>$<span class="w"> </span>docker<span class="w"> </span>tag<span class="w"> </span>ubuntu:22.04<span class="w"> </span>mi-ubuntu:dev
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="c1"># Ver resultado</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>$<span class="w"> </span>docker<span class="w"> </span>images
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>REPOSITORY<span class="w">    </span>TAG<span class="w">       </span>IMAGE<span class="w"> </span>ID
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>ubuntu<span class="w">        </span><span class="m">22</span>.04<span class="w">     </span>f63181f19b2f
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>mi-ubuntu<span class="w">     </span>dev<span class="w">       </span>f63181f19b2f<span class="w">  </span><span class="c1"># Mismo ID</span>
 </code></pre></div>
 <h3 id="7-buenas-practicas-con-imagenes">7. Buenas prácticas con imágenes<a class="headerlink" href="#7-buenas-practicas-con-imagenes" title="Permanent link">&para;</a></h3>
 <ol>
@@ -6015,14 +6169,14 @@
 <li><strong>Revisar el tamaño</strong> de las imágenes antes de usarlas</li>
 </ol>
 <h4 id="71-limpieza-de-imagenes">7.1. Limpieza de imágenes<a class="headerlink" href="#71-limpieza-de-imagenes" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Eliminar imágenes sin usar</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>$<span class="w"> </span>docker<span class="w"> </span>image<span class="w"> </span>prune
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1"># Eliminar todas las imágenes no usadas por contenedores</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>$<span class="w"> </span>docker<span class="w"> </span>image<span class="w"> </span>prune<span class="w"> </span>-a
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="c1"># Ver espacio usado por Docker</span>
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>$<span class="w"> </span>docker<span class="w"> </span>system<span class="w"> </span>df
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1"># Eliminar imágenes sin usar</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>$<span class="w"> </span>docker<span class="w"> </span>image<span class="w"> </span>prune
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="c1"># Eliminar todas las imágenes no usadas por contenedores</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>$<span class="w"> </span>docker<span class="w"> </span>image<span class="w"> </span>prune<span class="w"> </span>-a
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="c1"># Ver espacio usado por Docker</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>$<span class="w"> </span>docker<span class="w"> </span>system<span class="w"> </span>df
 </code></pre></div>
 <h3 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">&para;</a></h3>
 <p>En esta sección hemos aprendido:</p>

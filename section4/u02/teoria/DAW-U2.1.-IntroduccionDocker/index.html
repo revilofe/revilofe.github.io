@@ -5229,6 +5229,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="4. Ejecución simple de contenedores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-ver-contenedores-existentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Ver contenedores existentes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-ver-imagenes-descargadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Ver imágenes descargadas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -5677,6 +5701,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="4. Ejecución simple de contenedores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-ver-contenedores-existentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Ver contenedores existentes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-ver-imagenes-descargadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Ver imágenes descargadas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -5924,111 +5972,415 @@
 <a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>Hello<span class="w"> </span>from<span class="w"> </span>Docker!
 <a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>This<span class="w"> </span>message<span class="w"> </span>shows<span class="w"> </span>that<span class="w"> </span>your<span class="w"> </span>installation<span class="w"> </span>appears<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>working<span class="w"> </span>correctly.
 </code></pre></div>
-<p><strong>¿Qué ha sucedido?</strong></p>
+<p><strong>Explicación del comando:</strong></p>
+<ul>
+<li><code>docker run</code>: Comando para crear y ejecutar un contenedor</li>
+<li><code>hello-world</code>: Nombre de la imagen a utilizar</li>
+</ul>
+<p><strong>¿Qué ha sucedido? Análisis paso a paso:</strong></p>
 <ol>
-<li>El cliente <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> contacta con el demonio <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr></li>
-<li>El demonio descarga la imagen "hello-world" de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Hub</li>
-<li>El demonio crea un nuevo contenedor a partir de esa imagen</li>
-<li>El contenedor ejecuta el programa que produce la salida</li>
-<li>El demonio envía la salida al cliente <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr></li>
+<li><strong>Búsqueda local</strong>: <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> busca la imagen <code>hello-world</code> en tu ordenador</li>
+<li><strong>Descarga</strong>: Al no encontrarla, la descarga automáticamente de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Hub (el registro público oficial)</li>
+<li><strong>Extracción</strong>: Descomprime las capas de la imagen (<code>Pull complete</code>)</li>
+<li><strong>Creación</strong>: Crea un nuevo contenedor a partir de esa imagen</li>
+<li><strong>Ejecución</strong>: El contenedor ejecuta el programa predefinido que muestra el mensaje</li>
+<li><strong>Salida</strong>: El demonio <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> envía la salida al terminal</li>
+<li><strong>Finalización</strong>: El contenedor se detiene automáticamente al terminar su tarea</li>
 </ol>
+<div class="admonition tip">
+<p class="admonition-title">Consejo</p>
+<p>La primera vez que ejecutas una imagen tarda más porque debe descargarla. Las siguientes ejecuciones serán instantáneas ya que la imagen está en tu ordenador.</p>
+</div>
 <h3 id="4-ejecucion-simple-de-contenedores">4. Ejecución simple de contenedores<a class="headerlink" href="#4-ejecucion-simple-de-contenedores" title="Permanent link">&para;</a></h3>
-<p>Vamos a crear un contenedor ejecutando un comando simple:</p>
+<p>Vamos a crear un contenedor ejecutando un comando personalizado:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>ubuntu<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;Hello world&#39;</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Unable<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span><span class="s1">&#39;ubuntu:latest&#39;</span><span class="w"> </span>locally
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>latest:<span class="w"> </span>Pulling<span class="w"> </span>from<span class="w"> </span>library/ubuntu
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>Status:<span class="w"> </span>Downloaded<span class="w"> </span>newer<span class="w"> </span>image<span class="w"> </span><span class="k">for</span><span class="w"> </span>ubuntu:latest
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Hello<span class="w"> </span>world
 </code></pre></div>
-<p>El contenedor ejecuta el comando y se detiene automáticamente. Para ver los contenedores (incluidos los detenidos):</p>
+<p><strong>Análisis del comando:</strong></p>
+<ul>
+<li><code>docker run</code>: Crea y ejecuta un contenedor</li>
+<li><code>ubuntu</code>: Imagen base del sistema operativo Ubuntu</li>
+<li><code>echo 'Hello world'</code>: Comando que queremos ejecutar dentro del contenedor</li>
+</ul>
+<p><strong>¿Qué hace este comando?</strong></p>
+<ol>
+<li>Descarga la imagen de Ubuntu (solo la primera vez)</li>
+<li>Crea un contenedor basado en Ubuntu</li>
+<li>Ejecuta el comando <code>echo 'Hello world'</code> dentro del contenedor</li>
+<li>Muestra el resultado en tu terminal</li>
+<li>El contenedor se detiene automáticamente al finalizar</li>
+</ol>
+<h4 id="41-ver-contenedores-existentes">4.1. Ver contenedores existentes<a class="headerlink" href="#41-ver-contenedores-existentes" title="Permanent link">&para;</a></h4>
+<p>Para ver los contenedores (incluidos los detenidos):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-a
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>CONTAINER<span class="w"> </span>ID<span class="w">   </span>IMAGE<span class="w">     </span>COMMAND<span class="w">              </span>CREATED<span class="w">          </span>STATUS<span class="w">                      </span>PORTS<span class="w">     </span>NAMES
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>3bbf39d0ec26<span class="w">   </span>ubuntu<span class="w">    </span><span class="s2">&quot;echo &#39;Hello wo…&quot;</span><span class="w">    </span><span class="m">31</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">   </span>Exited<span class="w"> </span><span class="o">(</span><span class="m">0</span><span class="o">)</span><span class="w"> </span><span class="m">29</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">             </span>wizardly_edison
 </code></pre></div>
-<p>Para ver las imágenes descargadas:</p>
+<p><strong>Explicación de las columnas:</strong></p>
+<ul>
+<li><code>CONTAINER ID</code>: Identificador único del contenedor (primeros caracteres)</li>
+<li><code>IMAGE</code>: Imagen utilizada para crear el contenedor</li>
+<li><code>COMMAND</code>: Comando ejecutado en el contenedor</li>
+<li><code>CREATED</code>: Hace cuánto se creó el contenedor</li>
+<li><code>STATUS</code>: Estado actual (<code>Exited (0)</code> significa terminado correctamente)</li>
+<li><code>PORTS</code>: Puertos mapeados (ninguno en este caso)</li>
+<li><code>NAMES</code>: Nombre asignado automáticamente por <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Opciones de docker ps</p>
+<ul>
+<li><code>docker ps</code>: Solo muestra contenedores en ejecución</li>
+<li><code>docker ps -a</code>: Muestra todos los contenedores (incluidos detenidos)</li>
+<li><code>docker ps -q</code>: Solo muestra los IDs de los contenedores</li>
+</ul>
+</div>
+<h4 id="42-ver-imagenes-descargadas">4.2. Ver imágenes descargadas<a class="headerlink" href="#42-ver-imagenes-descargadas" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$<span class="w"> </span>docker<span class="w"> </span>images
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>REPOSITORY<span class="w">    </span>TAG<span class="w">       </span>IMAGE<span class="w"> </span>ID<span class="w">       </span>CREATED<span class="w">        </span>SIZE
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>ubuntu<span class="w">        </span>latest<span class="w">    </span>f63181f19b2f<span class="w">   </span><span class="m">7</span><span class="w"> </span>days<span class="w"> </span>ago<span class="w">     </span><span class="m">72</span>.9MB
 <a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>hello-world<span class="w">   </span>latest<span class="w">    </span>bf756fb1ae65<span class="w">   </span><span class="m">13</span><span class="w"> </span>months<span class="w"> </span>ago<span class="w">  </span><span class="m">13</span>.3kB
 </code></pre></div>
+<p><strong>Explicación de las columnas:</strong></p>
+<ul>
+<li><code>REPOSITORY</code>: Nombre de la imagen</li>
+<li><code>TAG</code>: Etiqueta de versión (<code>latest</code> = última versión)</li>
+<li><code>IMAGE ID</code>: Identificador único de la imagen</li>
+<li><code>CREATED</code>: Cuándo se creó la imagen (no cuándo la descargaste)</li>
+<li><code>SIZE</code>: Tamaño en disco de la imagen</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Buena práctica</p>
+<p>Observa la diferencia de tamaño: <code>hello-world</code> ocupa solo 13.3kB mientras que <code>ubuntu</code> ocupa 72.9MB. Esto demuestra la eficiencia de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> para crear imágenes ligeras.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Nota importante</p>
 <p>Un contenedor ejecuta un proceso y cuando termina la ejecución, el contenedor se para.</p>
 </div>
 <h3 id="5-contenedores-interactivos">5. Contenedores interactivos<a class="headerlink" href="#5-contenedores-interactivos" title="Permanent link">&para;</a></h3>
-<p>Podemos crear contenedores con los que interactuar mediante una terminal:</p>
+<p>Ahora vamos a crear un contenedor con el que podamos interactuar mediante una terminal, como si estuviéramos dentro de un ordenador Ubuntu:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--name<span class="w"> </span>contenedor1<span class="w"> </span>ubuntu<span class="w"> </span>bash
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>root@2bfa404bace0:/#
 </code></pre></div>
-<p><strong>Opciones utilizadas:</strong></p>
+<p><strong>Análisis detallado del comando:</strong></p>
 <ul>
-<li><code>-i</code>: Modo interactivo (mantiene STDIN abierto)</li>
-<li><code>-t</code>: Asigna un pseudo-terminal</li>
-<li><code>--name</code>: Asigna un nombre al contenedor</li>
-<li><code>bash</code>: Comando a ejecutar (shell bash)</li>
+<li><code>docker run</code>: Crear y ejecutar un contenedor</li>
+<li><code>-i</code>: <strong>Interactive</strong> - Mantiene abierta la entrada estándar (STDIN) para que puedas escribir comandos</li>
+<li><code>-t</code>: <strong>TTY</strong> - Asigna un pseudo-terminal para tener una interfaz de línea de comandos</li>
+<li><code>--name contenedor1</code>: Asigna el nombre "contenedor1" (en lugar de uno aleatorio como "wizardly_edison")</li>
+<li><code>ubuntu</code>: Imagen base a utilizar</li>
+<li><code>bash</code>: Ejecuta el intérprete de comandos bash</li>
 </ul>
+<p><strong>¿Qué significa el prompt <code>root@2bfa404bace0:/#</code>?</strong></p>
+<ul>
+<li><code>root</code>: Eres el usuario root (administrador) dentro del contenedor</li>
+<li><code>2bfa404bace0</code>: ID del contenedor (primeros caracteres)</li>
+<li><code>/</code>: Estás en el directorio raíz del sistema</li>
+<li><code>#</code>: Símbolo que indica que eres root (si fueras usuario normal sería <code>$</code>)</li>
+</ul>
+<p><strong>Prueba estos comandos dentro del contenedor:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>root@2bfa404bace0:/#<span class="w"> </span>whoami
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>root
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>root@2bfa404bace0:/#<span class="w"> </span><span class="nb">pwd</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>/
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>root@2bfa404bace0:/#<span class="w"> </span>ls
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>bin<span class="w">  </span>boot<span class="w">  </span>dev<span class="w">  </span>etc<span class="w">  </span>home<span class="w">  </span>lib<span class="w">  </span>media<span class="w">  </span>mnt<span class="w">  </span>opt<span class="w">  </span>proc<span class="w">  </span>root<span class="w">  </span>run<span class="w">  </span>sbin<span class="w">  </span>srv<span class="w">  </span>sys<span class="w">  </span>tmp<span class="w">  </span>usr<span class="w">  </span>var
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>root@2bfa404bace0:/#<span class="w"> </span>cat<span class="w"> </span>/etc/os-release
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="nv">NAME</span><span class="o">=</span><span class="s2">&quot;Ubuntu&quot;</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="nv">VERSION</span><span class="o">=</span><span class="s2">&quot;22.04.3 LTS (Jammy Jellyfish)&quot;</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>...
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Importante</p>
+<p>Estás dentro de un sistema Ubuntu completamente aislado. Los archivos de tu ordenador NO están accesibles aquí. Es como tener un mini-ordenador dentro de tu ordenador.</p>
+</div>
 <h4 id="51-gestionar-contenedores-interactivos">5.1. Gestionar contenedores interactivos<a class="headerlink" href="#51-gestionar-contenedores-interactivos" title="Permanent link">&para;</a></h4>
+<p><strong>Salir del contenedor:</strong></p>
+<p>Para salir del contenedor sin detenerlo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>root@2bfa404bace0:/#<span class="w"> </span><span class="nb">exit</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="c1"># O presiona Ctrl+D</span>
+</code></pre></div>
+<p>Esto detiene el contenedor. Verás que vuelves a tu terminal normal.</p>
 <p><strong>Iniciar un contenedor detenido:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>$<span class="w"> </span>docker<span class="w"> </span>start<span class="w"> </span>contenedor1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$<span class="w"> </span>docker<span class="w"> </span>start<span class="w"> </span>contenedor1
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>contenedor1
 </code></pre></div>
-<p><strong>Conectarse a un contenedor en ejecución:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$<span class="w"> </span>docker<span class="w"> </span>attach<span class="w"> </span>contenedor1
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>root@2bfa404bace0:/#
-</code></pre></div>
-<p><strong>Ejecutar comandos en un contenedor en ejecución:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>contenedor1<span class="w"> </span>ls<span class="w"> </span>-al
-</code></pre></div>
-<p><strong>Reiniciar un contenedor:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$<span class="w"> </span>docker<span class="w"> </span>restart<span class="w"> </span>contenedor1
-</code></pre></div>
-<h3 id="6-contenedores-en-segundo-plano-demonio">6. Contenedores en segundo plano (demonio)<a class="headerlink" href="#6-contenedores-en-segundo-plano-demonio" title="Permanent link">&para;</a></h3>
-<p>Para crear contenedores que se ejecuten en segundo plano, usamos la opción <code>-d</code> (detached):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>servidor_web<span class="w"> </span>nginx
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>a9dbf94c1f43...
-</code></pre></div>
-<p>Para ver los logs del contenedor:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>$<span class="w"> </span>docker<span class="w"> </span>logs<span class="w"> </span>servidor_web
-</code></pre></div>
-<p>Para detener el contenedor:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>$<span class="w"> </span>docker<span class="w"> </span>stop<span class="w"> </span>servidor_web
-</code></pre></div>
-<h3 id="7-servidor-web-con-contenedor">7. Servidor web con contenedor<a class="headerlink" href="#7-servidor-web-con-contenedor" title="Permanent link">&para;</a></h3>
-<p>Podemos ejecutar un servidor web Nginx y mapear sus puertos:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>mi_nginx<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span>nginx
-</code></pre></div>
-<p><strong>Opciones:</strong></p>
 <ul>
-<li><code>-p 8080:80</code>: Mapea el puerto 80 del contenedor al puerto 8080 del host</li>
+<li><code>docker start</code>: Inicia un contenedor que está detenido</li>
+<li><code>contenedor1</code>: Nombre del contenedor a iniciar</li>
+<li>El contenedor ahora está ejecutándose en segundo plano</li>
 </ul>
-<p>Ahora puedes acceder al servidor en: <code>http://localhost:8080</code></p>
-<h3 id="8-configuracion-con-variables-de-entorno">8. Configuración con variables de entorno<a class="headerlink" href="#8-configuracion-con-variables-de-entorno" title="Permanent link">&para;</a></h3>
-<p>Muchos contenedores permiten configuración mediante variables de entorno:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>mi_mysql<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>secreto<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_DATABASE</span><span class="o">=</span>midb<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">  </span>mysql:5.7
+<p><strong>Conectarse a un contenedor en ejecución:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$<span class="w"> </span>docker<span class="w"> </span>attach<span class="w"> </span>contenedor1
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>root@2bfa404bace0:/#
 </code></pre></div>
-<p><strong>Opción <code>-e</code></strong>: Define variables de entorno en el contenedor</p>
+<ul>
+<li><code>docker attach</code>: Te conecta a la terminal de un contenedor que ya está ejecutándose</li>
+<li>Ahora puedes interactuar con el contenedor como antes</li>
+<li>Para salir sin detener el contenedor: presiona <code>Ctrl+P</code> seguido de <code>Ctrl+Q</code></li>
+</ul>
+<p><strong>Ejecutar comandos en un contenedor sin conectarte:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>contenedor1<span class="w"> </span>ls<span class="w"> </span>-al
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>total<span class="w"> </span><span class="m">56</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>drwxr-xr-x<span class="w">   </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Oct<span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">17</span>:00<span class="w"> </span>.
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>drwxr-xr-x<span class="w">   </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Oct<span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">17</span>:00<span class="w"> </span>..
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>drwxr-xr-x<span class="w">   </span><span class="m">2</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">4096</span><span class="w"> </span>Sep<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">00</span>:00<span class="w"> </span>bin
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>...
+</code></pre></div>
+<p><strong>Explicación de docker exec:</strong></p>
+<ul>
+<li><code>docker exec</code>: Ejecuta un comando en un contenedor que YA está ejecutándose</li>
+<li><code>contenedor1</code>: Nombre del contenedor</li>
+<li><code>ls -al</code>: Comando a ejecutar (lista archivos con detalles)</li>
+<li>La salida aparece en tu terminal, pero el comando se ejecuta DENTRO del contenedor</li>
+</ul>
+<p><strong>Ejemplo interactivo con exec:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>$<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>contenedor1<span class="w"> </span>bash
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>root@2bfa404bace0:/#
+</code></pre></div>
+<p>Esto abre una nueva sesión bash en el contenedor. Si sales con <code>exit</code>, el contenedor seguirá ejecutándose.</p>
+<p><strong>Reiniciar un contenedor:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>$<span class="w"> </span>docker<span class="w"> </span>restart<span class="w"> </span>contenedor1
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>contenedor1
+</code></pre></div>
+<ul>
+<li>Equivalente a hacer <code>docker stop</code> seguido de <code>docker start</code></li>
+<li>Útil cuando necesitas "reiniciar" el contenedor para aplicar cambios</li>
+</ul>
+<h3 id="6-contenedores-en-segundo-plano-demonio">6. Contenedores en segundo plano (demonio)<a class="headerlink" href="#6-contenedores-en-segundo-plano-demonio" title="Permanent link">&para;</a></h3>
+<p>Los servicios como servidores web o bases de datos deben ejecutarse continuamente en segundo plano. Para esto usamos la opción <code>-d</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>servidor_web<span class="w"> </span>nginx
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>a9dbf94c1f43d2e8f1a0b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6
+</code></pre></div>
+<p><strong>Explicación del comando:</strong></p>
+<ul>
+<li><code>-d</code>: <strong>Detached mode</strong> - El contenedor se ejecuta en segundo plano</li>
+<li><code>--name servidor_web</code>: Asignamos un nombre descriptivo</li>
+<li><code>nginx</code>: Imagen del servidor web Nginx</li>
+<li>El comando devuelve el ID completo del contenedor y vuelve a tu terminal</li>
+</ul>
+<p><strong>Verificar que está ejecutándose:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>$<span class="w"> </span>docker<span class="w"> </span>ps
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>CONTAINER<span class="w"> </span>ID<span class="w">   </span>IMAGE<span class="w">   </span>COMMAND<span class="w">                  </span>CREATED<span class="w">         </span>STATUS<span class="w">         </span>PORTS<span class="w">     </span>NAMES
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>a9dbf94c1f43<span class="w">   </span>nginx<span class="w">   </span><span class="s2">&quot;/docker-entrypoint.…&quot;</span><span class="w">   </span><span class="m">5</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">4</span><span class="w"> </span>seconds<span class="w">   </span><span class="m">80</span>/tcp<span class="w">    </span>servidor_web
+</code></pre></div>
+<p>Observa que <code>STATUS</code> indica <code>Up 4 seconds</code> - está activo.</p>
+<p><strong>Ver los logs del contenedor:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>$<span class="w"> </span>docker<span class="w"> </span>logs<span class="w"> </span>servidor_web
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>/docker-entrypoint.sh:<span class="w"> </span>/docker-entrypoint.d/<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>empty...
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>...
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="m">2024</span>/01/23<span class="w"> </span><span class="m">17</span>:00:00<span class="w"> </span><span class="o">[</span>notice<span class="o">]</span><span class="w"> </span><span class="m">1</span><span class="c1">#1: nginx/1.25.3</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="m">2024</span>/01/23<span class="w"> </span><span class="m">17</span>:00:00<span class="w"> </span><span class="o">[</span>notice<span class="o">]</span><span class="w"> </span><span class="m">1</span><span class="c1">#1: start worker processes</span>
+</code></pre></div>
+<p><strong>Opciones útiles de logs:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># Ver logs en tiempo real (como tail -f)</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>$<span class="w"> </span>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>servidor_web
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="c1"># Ver solo las últimas 50 líneas</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>$<span class="w"> </span>docker<span class="w"> </span>logs<span class="w"> </span>--tail<span class="w"> </span><span class="m">50</span><span class="w"> </span>servidor_web
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="c1"># Ver logs con marcas de tiempo</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>$<span class="w"> </span>docker<span class="w"> </span>logs<span class="w"> </span>-t<span class="w"> </span>servidor_web
+</code></pre></div>
+<p><strong>Detener el contenedor:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>$<span class="w"> </span>docker<span class="w"> </span>stop<span class="w"> </span>servidor_web
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>servidor_web
+</code></pre></div>
+<ul>
+<li>Envía una señal SIGTERM al proceso principal</li>
+<li>Espera 10 segundos a que termine limpiamente</li>
+<li>Si no termina, envía SIGKILL para forzar el cierre</li>
+</ul>
+<p><strong>Detener inmediatamente (no recomendado):</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>$<span class="w"> </span>docker<span class="w"> </span><span class="nb">kill</span><span class="w"> </span>servidor_web
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Buena práctica</p>
+<p>Usa siempre <code>docker stop</code> en lugar de <code>docker kill</code> para permitir que el servicio se cierre correctamente (guardar datos, cerrar conexiones, etc.).</p>
+</div>
+<h3 id="7-servidor-web-con-contenedor">7. Servidor web con contenedor<a class="headerlink" href="#7-servidor-web-con-contenedor" title="Permanent link">&para;</a></h3>
+<p>Vamos a ejecutar un servidor web Nginx y hacerlo accesible desde nuestro navegador:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>mi_nginx<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span>nginx
+</code></pre></div>
+<p><strong>Análisis detallado del comando:</strong></p>
+<ul>
+<li><code>docker run -d</code>: Ejecutar en segundo plano</li>
+<li><code>--name mi_nginx</code>: Nombre del contenedor</li>
+<li><code>-p 8080:80</code>: <strong>Port mapping</strong> - Mapeo de puertos</li>
+<li><code>8080</code>: Puerto en TU ordenador (host)</li>
+<li><code>80</code>: Puerto dentro del contenedor (donde escucha Nginx)</li>
+<li>Significado: "Las peticiones al puerto 8080 de mi ordenador se redirigen al puerto 80 del contenedor"</li>
+<li><code>nginx</code>: Imagen del servidor web Nginx</li>
+</ul>
+<p><strong>¿Cómo funciona el mapeo de puertos?</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Tu navegador → localhost:8080 → Docker → Contenedor:80 → Nginx
+</code></pre></div>
+<ol>
+<li>Abres <code>http://localhost:8080</code> en tu navegador</li>
+<li>Tu ordenador envía la petición al puerto 8080</li>
+<li><abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> intercepta esa petición</li>
+<li><abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> la redirige al puerto 80 del contenedor</li>
+<li>Nginx dentro del contenedor responde</li>
+<li>La respuesta vuelve por el mismo camino</li>
+</ol>
+<p><strong>Probar el servidor:</strong></p>
+<p>Abre tu navegador y ve a: <code>http://localhost:8080</code></p>
+<p>Deberías ver la página de bienvenida de Nginx que dice "Welcome to nginx!"</p>
+<p><strong>Ver qué puertos están mapeados:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>$<span class="w"> </span>docker<span class="w"> </span>ps
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>CONTAINER<span class="w"> </span>ID<span class="w">   </span>IMAGE<span class="w">   </span>COMMAND<span class="w">                  </span>PORTS<span class="w">                  </span>NAMES
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>abc123def456<span class="w">   </span>nginx<span class="w">   </span><span class="s2">&quot;/docker-entrypoint.…&quot;</span><span class="w">   </span><span class="m">0</span>.0.0.0:8080-&gt;80/tcp<span class="w">   </span>mi_nginx
+</code></pre></div>
+<p>La columna <code>PORTS</code> muestra <code>0.0.0.0:8080-&gt;80/tcp</code>:
+- <code>0.0.0.0</code>: Escucha en todas las interfaces de red
+- <code>8080-&gt;80</code>: Puerto host → puerto contenedor
+- <code>tcp</code>: Protocolo <abbr title="Protocol Control de Transmisión. Es un protocolo que se utiliza para establecer y gestionar conexiones entre dispositivos en una red. El TCP garantiza la entrega de los datos, el control de flujo, la detección de errores, etc.">TCP</abbr></p>
+<p><strong>Mapear múltiples puertos:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>mi_nginx_ssl<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span>-p<span class="w"> </span><span class="m">8443</span>:443<span class="w"> </span>nginx
+</code></pre></div>
+<p>Esto mapea tanto <abbr title="Protocolo de Transferencia de Hipertexto. Es un protocolo que se utiliza para transferir información entre un cliente y un servidor a través de una red. El HTTP permite a los usuarios acceder a sitios web, enviar y recibir datos, etc.">HTTP</abbr> (puerto 80) como <abbr title="Protocolo de Transferencia de Hipertexto Seguro. Es una versión segura del protocolo HTTP que se utiliza para transferir información de forma cifrada entre un cliente y un servidor a través de una red. El HTTPS protege la privacidad y la integridad de los datos.">HTTPS</abbr> (puerto 443).</p>
+<div class="admonition warning">
+<p class="admonition-title">Conflicto de puertos</p>
+<p>Si el puerto 8080 ya está en uso en tu ordenador, verás un error. Cambia a otro puerto libre, por ejemplo <code>-p 9090:80</code>.</p>
+</div>
+<h3 id="8-configuracion-con-variables-de-entorno">8. Configuración con variables de entorno<a class="headerlink" href="#8-configuracion-con-variables-de-entorno" title="Permanent link">&para;</a></h3>
+<p>Las variables de entorno son el método estándar para configurar contenedores. Permiten personalizar el comportamiento sin modificar la imagen.</p>
+<p><strong>Ejemplo: Base de datos MySQL</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>mi_mysql<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>secreto<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_DATABASE</span><span class="o">=</span>midb<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_USER</span><span class="o">=</span>usuario<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">MYSQL_PASSWORD</span><span class="o">=</span>pass123<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="w">  </span>mysql:5.7
+</code></pre></div>
+<p><strong>Explicación línea por línea:</strong></p>
+<ol>
+<li><code>docker run -d --name mi_mysql</code>: Crear contenedor MySQL en segundo plano</li>
+<li><code>-e MYSQL_ROOT_PASSWORD=secreto</code>: Define la contraseña del usuario root</li>
+<li>Variable obligatoria para MySQL</li>
+<li>Sin ella, el contenedor no iniciará</li>
+<li><code>-e MYSQL_DATABASE=midb</code>: Crea automáticamente una base de datos llamada "midb"</li>
+<li><code>-e MYSQL_USER=usuario</code>: Crea un usuario llamado "usuario"</li>
+<li><code>-e MYSQL_PASSWORD=pass123</code>: Contraseña para ese usuario</li>
+<li><code>mysql:5.7</code>: Imagen de MySQL versión 5.7</li>
+</ol>
+<p><strong>¿Cómo sabe MySQL qué hacer con estas variables?</strong></p>
+<p>Cada imagen <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> define qué variables de entorno acepta. La imagen <code>mysql</code> está programada para:
+- Leer estas variables al iniciar
+- Configurar el servidor MySQL según los valores
+- Ejecutar scripts de inicialización automáticos</p>
+<p><strong>Ver variables de entorno de un contenedor:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>$<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>mi_mysql<span class="w"> </span>env
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="nv">PATH</span><span class="o">=</span>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="nv">HOSTNAME</span><span class="o">=</span>abc123def456
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>secreto
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="nv">MYSQL_DATABASE</span><span class="o">=</span>midb
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="nv">MYSQL_USER</span><span class="o">=</span>usuario
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a><span class="nv">MYSQL_PASSWORD</span><span class="o">=</span>pass123
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>...
+</code></pre></div>
+<p><strong>Conectarse a la base de datos:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>$<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>mi_mysql<span class="w"> </span>mysql<span class="w"> </span>-u<span class="w"> </span>usuario<span class="w"> </span>-ppass123<span class="w"> </span>midb
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>mysql&gt;<span class="w"> </span>SHOW<span class="w"> </span>DATABASES<span class="p">;</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>+--------------------+
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="p">|</span><span class="w"> </span>Database<span class="w">           </span><span class="p">|</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>+--------------------+
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="p">|</span><span class="w"> </span>information_schema<span class="w"> </span><span class="p">|</span>
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="p">|</span><span class="w"> </span>midb<span class="w">              </span><span class="p">|</span>
+<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>+--------------------+
+<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>mysql&gt;<span class="w"> </span><span class="nb">exit</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Seguridad</p>
+<p>NO pongas contraseñas reales en la línea de comandos. Usa archivos de variables de entorno (<code>.env</code>) o secrets de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr>. Veremos esto más adelante.</p>
+</div>
+<p><strong>Ejemplo: Variables de entorno para desarrollo vs producción</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="c1"># Desarrollo</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>app_dev<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">APP_ENV</span><span class="o">=</span>development<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">DEBUG</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">LOG_LEVEL</span><span class="o">=</span>debug<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="w">  </span>mi_aplicacion
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>
+<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a><span class="c1"># Producción</span>
+<a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>app_prod<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">APP_ENV</span><span class="o">=</span>production<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">DEBUG</span><span class="o">=</span><span class="nb">false</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">LOG_LEVEL</span><span class="o">=</span>warning<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a><span class="w">  </span>mi_aplicacion
+</code></pre></div>
+<p>La misma imagen se comporta diferente según las variables de entorno.</p>
 <h3 id="9-comandos-basicos-de-gestion">9. Comandos básicos de gestión<a class="headerlink" href="#9-comandos-basicos-de-gestion" title="Permanent link">&para;</a></h3>
 <h4 id="91-listar-contenedores">9.1. Listar contenedores<a class="headerlink" href="#91-listar-contenedores" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1"># Contenedores en ejecución</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>$<span class="w"> </span>docker<span class="w"> </span>ps
-<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
-<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="c1"># Todos los contenedores</span>
-<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>$<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-a
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="c1"># Contenedores en ejecución</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>$<span class="w"> </span>docker<span class="w"> </span>ps
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="c1"># Todos los contenedores</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>$<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-a
 </code></pre></div>
 <h4 id="92-eliminar-contenedores">9.2. Eliminar contenedores<a class="headerlink" href="#92-eliminar-contenedores" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># Por ID</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>$<span class="w"> </span>docker<span class="w"> </span>rm<span class="w"> </span>372ca4634d53
-<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>
-<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="c1"># Por nombre</span>
-<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>$<span class="w"> </span>docker<span class="w"> </span>rm<span class="w"> </span>elastic_johnson
-<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>
-<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="c1"># Forzar eliminación de contenedor en ejecución</span>
-<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>$<span class="w"> </span>docker<span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>mi_contenedor
+<p><strong>Eliminar un contenedor detenido:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="c1"># Por ID (puedes usar solo los primeros caracteres)</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>$<span class="w"> </span>docker<span class="w"> </span>rm<span class="w"> </span>372ca4634d53
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="c1"># o simplemente</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>$<span class="w"> </span>docker<span class="w"> </span>rm<span class="w"> </span><span class="m">372</span>
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>
+<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a><span class="c1"># Por nombre</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>$<span class="w"> </span>docker<span class="w"> </span>rm<span class="w"> </span>elastic_johnson
+<a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>elastic_johnson
 </code></pre></div>
+<p><strong>Intentar eliminar un contenedor en ejecución:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>$<span class="w"> </span>docker<span class="w"> </span>rm<span class="w"> </span>mi_nginx
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>Error<span class="w"> </span>response<span class="w"> </span>from<span class="w"> </span>daemon:<span class="w"> </span>You<span class="w"> </span>cannot<span class="w"> </span>remove<span class="w"> </span>a<span class="w"> </span>running<span class="w"> </span>container<span class="w"> </span>abc123.<span class="w"> </span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>Stop<span class="w"> </span>the<span class="w"> </span>container<span class="w"> </span>before<span class="w"> </span>attempting<span class="w"> </span>removal<span class="w"> </span>or<span class="w"> </span>force<span class="w"> </span>remove
+</code></pre></div>
+<p><abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> no te deja eliminar contenedores en ejecución por seguridad.</p>
+<p><strong>Opciones para eliminar un contenedor en ejecución:</strong></p>
+<p>Opción 1: Detenerlo primero (recomendado)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>$<span class="w"> </span>docker<span class="w"> </span>stop<span class="w"> </span>mi_nginx
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>$<span class="w"> </span>docker<span class="w"> </span>rm<span class="w"> </span>mi_nginx
+</code></pre></div></p>
+<p>Opción 2: Forzar eliminación
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>$<span class="w"> </span>docker<span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>mi_nginx
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>mi_nginx
+</code></pre></div></p>
+<ul>
+<li><code>-f</code>: <strong>Force</strong> - Fuerza la eliminación</li>
+<li>Envía SIGKILL al proceso (terminación inmediata)</li>
+<li>Úsalo solo cuando sea necesario</li>
+</ul>
+<p><strong>Eliminar varios contenedores a la vez:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>$<span class="w"> </span>docker<span class="w"> </span>rm<span class="w"> </span>contenedor1<span class="w"> </span>contenedor2<span class="w"> </span>contenedor3
+</code></pre></div>
+<p><strong>Eliminar todos los contenedores detenidos:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>$<span class="w"> </span>docker<span class="w"> </span>container<span class="w"> </span>prune
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>WARNING!<span class="w"> </span>This<span class="w"> </span>will<span class="w"> </span>remove<span class="w"> </span>all<span class="w"> </span>stopped<span class="w"> </span>containers.
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>Are<span class="w"> </span>you<span class="w"> </span>sure<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span><span class="k">continue</span>?<span class="w"> </span><span class="o">[</span>y/N<span class="o">]</span><span class="w"> </span>y
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>Deleted<span class="w"> </span>Containers:
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>abc123def456...
+<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>def456ghi789...
+<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a>Total<span class="w"> </span>reclaimed<span class="w"> </span>space:<span class="w"> </span><span class="m">1</span>.5MB
+</code></pre></div>
+<p><strong>Eliminar contenedor automáticamente al salir:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>ubuntu<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hola&quot;</span>
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>Hola
+</code></pre></div>
+<ul>
+<li><code>--rm</code>: Elimina el contenedor automáticamente cuando termina</li>
+<li>Útil para contenedores temporales o de prueba</li>
+<li>No necesitas hacer <code>docker rm</code> después</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Limpieza recomendada</p>
+<p>Ejecuta periódicamente <code>docker container prune</code> para eliminar contenedores detenidos que ya no necesitas y liberar espacio.</p>
+</div>
 <h4 id="93-inspeccionar-contenedores">9.3. Inspeccionar contenedores<a class="headerlink" href="#93-inspeccionar-contenedores" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>$<span class="w"> </span>docker<span class="w"> </span>inspect<span class="w"> </span>contenedor1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>$<span class="w"> </span>docker<span class="w"> </span>inspect<span class="w"> </span>contenedor1
 </code></pre></div>
 <p>Muestra información detallada en formato JSON sobre:</p>
 <ul>
@@ -6040,7 +6392,7 @@
 <li>Estado del contenedor</li>
 </ul>
 <h4 id="94-ver-estadisticas-de-recursos">9.4. Ver estadísticas de recursos<a class="headerlink" href="#94-ver-estadisticas-de-recursos" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>$<span class="w"> </span>docker<span class="w"> </span>stats<span class="w"> </span>contenedor1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>$<span class="w"> </span>docker<span class="w"> </span>stats<span class="w"> </span>contenedor1
 </code></pre></div>
 <h3 id="10-ciclo-de-vida-de-un-contenedor">10. Ciclo de vida de un contenedor<a class="headerlink" href="#10-ciclo-de-vida-de-un-contenedor" title="Permanent link">&para;</a></h3>
 <ol>

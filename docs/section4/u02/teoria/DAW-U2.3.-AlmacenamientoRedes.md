@@ -42,36 +42,129 @@ Los volúmenes son el mecanismo preferido para persistir datos. Son gestionados 
 - Fáciles de respaldar y migrar
 - Funcionan en Linux y Windows
 
-**Comandos básicos:**
+**Comandos básicos explicados:**
+
+**Crear un volumen:**
 
 ```bash
-# Crear un volumen
 $ docker volume create mi_volumen
+mi_volumen
+```
 
-# Listar volúmenes
+- Crea un volumen gestionado por Docker
+- Se almacena en `/var/lib/docker/volumes/` (Linux)
+- Docker gestiona automáticamente permisos y persistencia
+
+**Listar volúmenes:**
+
+```bash
 $ docker volume ls
+DRIVER    VOLUME NAME
+local     mi_volumen
+local     mysql_data
+local     wp_files
+```
 
-# Inspeccionar un volumen
+- `DRIVER`: Controlador de almacenamiento (normalmente `local`)
+- `VOLUME NAME`: Nombre del volumen
+
+**Inspeccionar un volumen:**
+
+```bash
 $ docker volume inspect mi_volumen
+[
+    {
+        "CreatedAt": "2024-01-23T17:00:00Z",
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/mi_volumen/_data",
+        "Name": "mi_volumen",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+```
 
-# Eliminar un volumen
+**Información relevante:**
+
+- `Mountpoint`: Ruta física donde Docker almacena los datos
+- `Driver`: Tipo de almacenamiento (local, nfs, etc.)
+- `Scope`: Alcance (local = solo en este host)
+
+**Eliminar un volumen:**
+
+```bash
 $ docker volume rm mi_volumen
+mi_volumen
+```
 
-# Eliminar volúmenes no utilizados
+!!! warning "No se puede eliminar si está en uso"
+    Si un contenedor usa el volumen, debes detenerlo primero.
+
+**Eliminar volúmenes no utilizados:**
+
+```bash
 $ docker volume prune
+WARNING! This will remove all local volumes not used by at least one container.
+Are you sure you want to continue? [y/N] y
+Deleted Volumes:
+volumen_antiguo
+volumen_temporal
+Total reclaimed space: 1.2GB
 ```
 
 **Usar volúmenes en contenedores:**
 
 ```bash
-# Montar volumen en /datos del contenedor
 $ docker run -d --name app \
   -v mi_volumen:/datos \
-  ubuntu
-
-# Verificar montaje
-$ docker inspect app
+  ubuntu sleep infinity
 ```
+
+**Explicación del montaje:**
+
+- `-v mi_volumen:/datos`: Sintaxis es `volumen:ruta_en_contenedor`
+- `mi_volumen`: Volumen de Docker (si no existe, se crea automáticamente)
+- `/datos`: Directorio dentro del contenedor donde se montará
+- Cualquier dato guardado en `/datos` persistirá en el volumen
+
+**Verificar el montaje:**
+
+```bash
+$ docker inspect app | grep -A 10 "Mounts"
+"Mounts": [
+    {
+        "Type": "volume",
+        "Name": "mi_volumen",
+        "Source": "/var/lib/docker/volumes/mi_volumen/_data",
+        "Destination": "/datos",
+        "Driver": "local",
+        "Mode": "z",
+        "RW": true,
+        "Propagation": ""
+    }
+],
+```
+
+**Probar la persistencia:**
+
+```bash
+# Escribir datos en el volumen
+$ docker exec app sh -c "echo 'datos importantes' > /datos/archivo.txt"
+
+# Eliminar el contenedor
+$ docker rm -f app
+
+# Crear nuevo contenedor con el mismo volumen
+$ docker run -d --name app2 -v mi_volumen:/datos ubuntu sleep infinity
+
+# Verificar que los datos persisten
+$ docker exec app2 cat /datos/archivo.txt
+datos importantes
+```
+
+!!! tip "Los datos sobreviven"
+    Aunque elimines todos los contenedores, los datos en el volumen permanecen hasta que elimines el volumen explícitamente.
 
 #### 1.3. Bind mounts
 
@@ -170,31 +263,144 @@ Es recomendable crear redes personalizadas para mejor control y seguridad.
 - Conexión/desconexión dinámica de contenedores
 - Configuración personalizada
 
-**Comandos:**
+**Comandos explicados:**
+
+**Crear red personalizada (simple):**
 
 ```bash
-# Crear red personalizada
 $ docker network create mi_red
+a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6
+```
 
-# Crear red con configuración específica
+- Crea una red bridge con configuración automática
+- Docker asigna automáticamente una subred (ej: 172.18.0.0/16)
+- Los contenedores en esta red pueden comunicarse por nombre
+
+**Crear red con configuración específica:**
+
+```bash
 $ docker network create \
   --driver bridge \
   --subnet 172.20.0.0/16 \
   --gateway 172.20.0.1 \
   mi_red_custom
-
-# Conectar contenedor a la red
-$ docker run -d --name app --network mi_red nginx
-
-# Conectar contenedor existente a una red
-$ docker network connect mi_red contenedor1
-
-# Desconectar de una red
-$ docker network disconnect mi_red contenedor1
-
-# Eliminar red
-$ docker network rm mi_red
 ```
+
+**Explicación de cada parámetro:**
+
+- `--driver bridge`: Tipo de red (bridge para un solo host)
+- `--subnet 172.20.0.0/16`: Rango de IPs disponibles
+  - `/16` = 65,536 direcciones IP (172.20.0.0 a 172.20.255.255)
+- `--gateway 172.20.0.1`: Puerta de enlace (IP del host Docker)
+
+**¿Qué significa cada valor?**
+
+```
+172.20.0.0/16 → Rango de red
+172.20.0.1    → Gateway (conexión a internet/host)
+172.20.0.2+   → IPs disponibles para contenedores
+```
+
+**Conectar contenedor nuevo a la red:**
+
+```bash
+$ docker run -d --name app --network mi_red nginx
+```
+
+- El contenedor se conecta a `mi_red` desde el inicio
+- Obtiene automáticamente una IP de la red (ej: 172.20.0.2)
+- Puede resolver otros contenedores por nombre
+
+**Conectar contenedor existente:**
+
+```bash
+$ docker network connect mi_red contenedor1
+```
+
+**¿Qué hace esto?**
+
+1. Añade una segunda interfaz de red al contenedor
+2. Ahora el contenedor está en DOS redes simultáneamente
+3. Puede comunicarse con contenedores de ambas redes
+
+**Ejemplo práctico:**
+
+```bash
+# Contenedor en red predeterminada
+$ docker run -d --name web nginx
+
+# Conectar a red personalizada
+$ docker network connect mi_red web
+
+# Verificar (tiene dos IPs)
+$ docker inspect web | grep IPAddress
+"IPAddress": "172.17.0.2",  # Red bridge default
+"IPAddress": "172.20.0.2",  # mi_red
+```
+
+**Desconectar de una red:**
+
+```bash
+$ docker network disconnect mi_red contenedor1
+```
+
+- Elimina la interfaz de red de esa red específica
+- El contenedor sigue funcionando en sus otras redes
+
+**Eliminar red:**
+
+```bash
+$ docker network rm mi_red
+mi_red
+```
+
+!!! warning "Solo redes sin contenedores"
+    No puedes eliminar una red si todavía tiene contenedores conectados.
+
+**Limpieza de redes sin uso:**
+
+```bash
+$ docker network prune
+WARNING! This will remove all custom networks not used by at least one container.
+Are you sure you want to continue? [y/N] y
+Deleted Networks:
+red_antigua
+red_test
+```
+
+**Inspeccionar una red:**
+
+```bash
+$ docker network inspect mi_red
+[
+    {
+        "Name": "mi_red",
+        "Id": "a1b2c3d4e5f6",
+        "Driver": "bridge",
+        "Scope": "local",
+        "IPAM": {
+            "Config": [
+                {
+                    "Subnet": "172.20.0.0/16",
+                    "Gateway": "172.20.0.1"
+                }
+            ]
+        },
+        "Containers": {
+            "abc123": {
+                "Name": "app",
+                "IPv4Address": "172.20.0.2/16"
+            }
+        }
+    }
+]
+```
+
+**Información útil:**
+
+- `Containers`: Qué contenedores están conectados
+- `IPv4Address`: IP asignada a cada contenedor
+- `IPAM`: Configuración de direccionamiento IP
 
 #### 2.4. Comunicación entre contenedores
 
@@ -223,15 +429,27 @@ $ docker run -d \
 
 ### 3. Ejemplos prácticos
 
-#### 3.1. WordPress con MySQL
+#### 3.1. WordPress con MySQL (Paso a paso)
+
+Este ejemplo completo muestra cómo desplegar WordPress conectado a MySQL con datos persistentes.
+
+**Paso 1: Crear la infraestructura**
 
 ```bash
-# Crear red y volúmenes
+# Crear red privada para que WordPress y MySQL se comuniquen
 $ docker network create wordpress_net
-$ docker volume create wp_db
-$ docker volume create wp_files
+wordpress_net
 
-# MySQL
+# Crear volúmenes para datos persistentes
+$ docker volume create wp_db        # Para la base de datos
+wp_db
+$ docker volume create wp_files     # Para archivos de WordPress
+wp_files
+```
+
+**Paso 2: Lanzar MySQL**
+
+```bash
 $ docker run -d \
   --name wordpress_db \
   --network wordpress_net \
@@ -241,8 +459,29 @@ $ docker run -d \
   -e MYSQL_USER=wpuser \
   -e MYSQL_PASSWORD=wppass \
   mysql:8.0
+```
 
-# WordPress
+**Explicación línea por línea:**
+
+- `--name wordpress_db`: Nombre que usará WordPress para conectarse
+- `--network wordpress_net`: Conectar a nuestra red privada
+- `-v wp_db:/var/lib/mysql`: Persistir base de datos en volumen
+- `-e MYSQL_ROOT_PASSWORD`: Contraseña del administrador de MySQL
+- `-e MYSQL_DATABASE=wordpress`: Crear BD "wordpress" automáticamente
+- `-e MYSQL_USER=wpuser`: Crear usuario "wpuser"
+- `-e MYSQL_PASSWORD=wppass`: Contraseña del usuario
+- `mysql:8.0`: Usar MySQL versión 8.0
+
+**Verificar que MySQL está funcionando:**
+
+```bash
+$ docker logs wordpress_db | grep "ready for connections"
+2024-01-23 17:00:00 [Note] mysqld: ready for connections.
+```
+
+**Paso 3: Lanzar WordPress**
+
+```bash
 $ docker run -d \
   --name wordpress \
   --network wordpress_net \
@@ -254,6 +493,59 @@ $ docker run -d \
   -e WORDPRESS_DB_PASSWORD=wppass \
   wordpress
 ```
+
+**Explicación línea por línea:**
+
+- `--name wordpress`: Nombre del contenedor
+- `--network wordpress_net`: Misma red que MySQL (pueden comunicarse)
+- `-p 8080:80`: Accesible desde navegador en puerto 8080
+- `-v wp_files:/var/www/html`: Persistir archivos de WordPress
+- `-e WORDPRESS_DB_HOST=wordpress_db`: **Nombre del contenedor MySQL**
+  - ¡Docker resuelve este nombre automáticamente a la IP de MySQL!
+- `-e WORDPRESS_DB_NAME=wordpress`: Nombre de la base de datos
+- `-e WORDPRESS_DB_USER/PASSWORD`: Credenciales de MySQL
+
+**¿Cómo se conectan WordPress y MySQL?**
+
+```
+WordPress contenedor (172.20.0.3)
+      ↓
+Busca: wordpress_db (nombre)
+      ↓
+DNS de Docker resuelve: wordpress_db = 172.20.0.2
+      ↓
+WordPress conecta a: 172.20.0.2:3306
+      ↓
+MySQL contenedor (172.20.0.2)
+```
+
+**Paso 4: Acceder a WordPress**
+
+Abre tu navegador: `http://localhost:8080`
+
+Verás el instalador de WordPress. Completa la instalación.
+
+**Paso 5: Verificar persistencia**
+
+```bash
+# Detener y eliminar los contenedores
+$ docker stop wordpress wordpress_db
+$ docker rm wordpress wordpress_db
+
+# Volver a crearlos con los mismos comandos
+$ docker run -d ...  # (repite los comandos anteriores)
+
+# ¡Tu WordPress sigue funcionando con todos tus datos!
+```
+
+**¿Por qué persiste?**
+
+- Los archivos de WordPress están en el volumen `wp_files`
+- La base de datos está en el volumen `wp_db`
+- Los volúmenes no se eliminan con los contenedores
+
+!!! tip "Backup fácil"
+    Para hacer backup, solo necesitas respaldar los volúmenes `wp_db` y `wp_files`.
 
 #### 3.2. Aplicación web con Nginx y Tomcat
 

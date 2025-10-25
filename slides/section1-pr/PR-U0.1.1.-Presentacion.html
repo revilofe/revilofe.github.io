@@ -17,10 +17,6 @@
 		
 		<!-- Custom CSS for progress bar and slide numbers -->
 		<link rel="stylesheet" href="../custom.css">
-		
-		<!-- Plugins CSS -->
-		<link rel="stylesheet" href="../node_modules/reveal.js-menu/menu.css">
-		<link rel="stylesheet" href="../node_modules/reveal.js-pointer/dist/pointer.css">
 	</head>
 	<body>
 		<input type="button" value="Volver" name="volver" onclick="history.back()" />
@@ -44,10 +40,6 @@
 		<script src="../plugin/highlight/highlight.js"></script>
 		<script src="../plugin/zoom/zoom.js"></script>
 		<script src="../plugin/search/search.js"></script>
-		
-		<!-- Plugins adicionales -->
-		<script src="../node_modules/reveal.js-menu/menu.js"></script>
-		<script src="../node_modules/reveal.js-pointer/dist/pointer.js"></script>
 		
 		<script>
 			// More info about initialization & config:
@@ -87,24 +79,13 @@
 				// center: false,
 				
 				
-				// Configuración Menu
-				menu: {
-					side: 'left',
-					width: 'normal',
-					numbers: false,
-					openButton: true,
-					keyboard: true
-				},
-
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ 
 					RevealMarkdown, 
 					RevealHighlight, 
 					RevealNotes,
 					RevealZoom,
-					RevealSearch,
-					RevealPointer,
-					RevealMenu
+					RevealSearch
 				]
 			});
 		</script>

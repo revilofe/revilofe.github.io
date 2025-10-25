@@ -1,6 +1,6 @@
 {
   "name": "reveal.js",
-  "version": "4.3.1",
+  "version": "5.2.1",
   "description": "The HTML Presentation Framework",
   "homepage": "https://revealjs.com",
   "subdomain": "revealjs",
@@ -41,7 +41,7 @@
     "core-js": "^3.12.1",
     "fitty": "^2.3.0",
     "glob": "^7.1.7",
-    "gulp": "^5.0.0",
+    "gulp": "^5.0.1",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-connect": "^5.7.0",
@@ -96,5 +96,13 @@
       "no-eq-null": 2,
       "no-unused-expressions": 0
     }
+  },
+  "dependencies": {
+    "reveal.js": "^5.2.1",
+    "reveal.js-animate": "^1.1.1",
+    "reveal.js-chalkboard": "^1.0.0",
+    "reveal.js-menu": "^2.1.0",
+    "reveal.js-mermaid-plugin": "^11.6.0",
+    "reveal.js-pointer": "^0.1.4"
   }
 }

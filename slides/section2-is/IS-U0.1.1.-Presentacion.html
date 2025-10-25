@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>IS-U0.1.1 - Presentación</title>
+
+		<link rel="stylesheet" href="../dist/reset.css">
+		<link rel="stylesheet" href="../dist/reveal.css">
+		
+		<!-- Aquí se elige el tema css -->
+		<link rel="stylesheet" href="../dist/theme/simple.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../plugin/highlight/monokai.css">
+		
+		<!-- Custom CSS for progress bar and slide numbers -->
+		<link rel="stylesheet" href="../custom.css">
+	</head>
+	<body>
+		<input type="button" value="Volver" name="volver" onclick="history.back()" />
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown="IS-U0.1.1.-Presentacion.md"
+         		data-separator-vertical="^\n\n"
+         		data-separator-notes="^Note:"
+         		data-charset="UTF-8">
+    		<!--
+        		Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
+        		For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
+    		-->
+				</section>
+			</div>
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/notes/notes.js"></script>
+		<script src="../plugin/markdown/markdown.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// The "normal" size of the presentation, aspect ratio will
+  				// be preserved when the presentation is scaled to fit different
+  				// resolutions. Can be specified using percentage units.
+  				width: 960,
+  				height: 700,
+  				// Factor of the display size that should remain empty around
+  				// the content
+				margin: 0.1,
+  				// Bounds for smallest/largest possible scale to apply to content
+  				minScale: 0.2,
+  				maxScale: 2.0,
+				
+				// slides numbers
+				slideNumber: 'c/t',
+				showSlideNumber: 'all',
+				
+				// Display a presentation progress bar
+  				progress: true,
+
+				
+				// By default, reveal.js will assume that it should cover the full browser viewport. 
+				// If you want to embed your presentation within a smaller portion of a web page, 
+				// or show multiple presentations on the same page, you can use the embedded config option.
+				// embedded: false,
+				
+				
+				// Slides are vertically centered on the screen based on how much content they contain. 
+				// To disable this and leave slides fixed at their configured height set center to false.
+				// center: false,
+
+				// Generate table of contents
+				// toc: true,
+
+				// logo: './assets/logo-iesra.png',
+
+				//Code
+
+				//code-line-numbers: true,
+				//code-copy: true,
+
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+
+
+			});
+		</script>
+	</body>
+</html>

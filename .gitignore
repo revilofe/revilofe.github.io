@@ -1,2 +1,4 @@
 .idea/*
 .idea/workspace.xml
+slides/node_modules
+slides/node_modules/*

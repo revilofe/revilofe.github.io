@@ -56,7 +56,7 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 # Horarios
 
 
-## Horario del 2025/2026!!
+## Horario del curso 2025/2026
 
 Horario (5 horas semanales)
 
@@ -71,10 +71,15 @@ Horario (5 horas semanales)
 | 13:30 - 14:30 |        |    |        |    |  |
 <!-- .element.table: style="font-size:50%;" -->
 
+**Lunes:** 08:00 - 10:00 (2 horas)  
+**Miércoles:** 08:00 - 11:00 (3 horas)
 
-## Planificación. Actualizar al 25/26!!
+
+## Planificación del curso
 
 ![](./assets/IS-U011-Presentacion1.png)
+
+**Consulta siempre la programación didáctica actualizada:**
 
 _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i-xNGtTAMcRiCgj/view?usp=sharing)_
 
@@ -82,16 +87,16 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 # Contenidos
 
 
-## Contenido. Actualizar al 25/26!!
+## Contenidos del módulo
 
-|                                               Unidades didácticas                                               | Descripción unidad                                      | Sesiones | RA | Criterios |                          |
-| :-----------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------- | :--------: | :---: | :---------: | :------------------------: |
-|                                                        UD1                                                        | Desarrollo de planes de prevención y concienciación    |    24    | RA1 |  a)..e)  | 1er trimestre (72 horas) |
-|                                                        UD2                                                        | Analiza incidentes de ciberseguridad                     |    36    | RA2 |  a)..e)  |                          |
-|                                                        UD3                                                        | Investiga incidentes de ciberseguridad                   |    12    | RA3 |   a),b)   |                          |
-|                                                        UD3                                                        | Investiga incidentes de ciberseguridad                   |    18    | RA3 |  c)..e)  | 2o  trimestre (72 horas) |
-|                                                        UD4                                                        | Implementa medidas de ciberseguridad en redes y sistemas |    42    | RA4 |  a)..f)  |                          |
-|                                                        UD5                                                        | Documenta y notifica incidentes de ciberseguridad        |    12    | RA5 |  a)..e)  |                          |
+|  Unidades didácticas  | Descripción unidad                                      | Sesiones | RA | Criterios |  Trimestre  |
+| :---------------------: | :--------------------------------------------------------- | :--------: | :---: | :---------: | :------------------------: |
+|          UD1          | Desarrollo de planes de prevención y concienciación    |    24    | RA1 |  a)..e)  | 1er trimestre (72 horas) |
+|          UD2          | Analiza incidentes de ciberseguridad                     |    36    | RA2 |  a)..e)  |                          |
+|          UD3          | Investiga incidentes de ciberseguridad                   |    12    | RA3 |   a),b)   |                          |
+|          UD3          | Investiga incidentes de ciberseguridad (continuación)   |    18    | RA3 |  c)..e)  | 2º trimestre (72 horas) |
+|          UD4          | Implementa medidas de ciberseguridad en redes y sistemas |    42    | RA4 |  a)..f)  |                          |
+|          UD5          | Documenta y notifica incidentes de ciberseguridad        |    12    | RA5 |  a)..e)  |                          |
 <!-- .element.table: style="font-size:50%;" -->
 
 _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i-xNGtTAMcRiCgj/view?usp=sharing)_
@@ -101,98 +106,135 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 
 
 ## Evaluación I
-* Se supera el módulo con una calificación mayor o igual a 5.
-* La nota se obtiene haciendo la media ponderada de los resultados de aprendizaje (RA).
-* Un RA no superado, implica no superar el módulo.
+* Se supera el módulo con una calificación **mayor o igual a 5**.
+* La nota se obtiene haciendo la **media ponderada** de los resultados de aprendizaje (RA).
+* **Un RA no superado implica no superar el módulo**.
 
 
 ## Evaluación II
-* Los calificación de los RA se obtienen de la media ponderada de la calificación de los criterios de evaluación (CE).
-* Los CE se evalúan y califican a través del trabajo en clases y la realización de prácticas y pruebas especificas.
+* La calificación de los RA se obtiene de la **media ponderada** de los criterios de evaluación (CE).
+* Los CE se evalúan y califican a través de:
+  * Trabajo en clase
+  * Realización de prácticas
+  * Pruebas específicas
 
 ![](./assets/IS-U011-Presentacion2.png)
 
 
 ## Evaluación III
-* Hay 2 Evaluaciones Parciales
-  * Enero
-  * Mayo
-* 1 Evaluación Final
-  * Junio
+* **2 Evaluaciones Parciales:**
+  * 1ª Evaluación: Enero
+  * 2ª Evaluación: Mayo
+* **1 Evaluación Final:**
+  * Evaluación Final: Junio
 
 
 ## Recuperación
-* La recuperación de los RA pendientes se realiza durante el mes de junio.
-* Consistirá en un conjunto de prácticas y/o pruebas sobre los criterios de evaluación relacionados con el resultado de aprendizaje no superado.
+* La recuperación de los RA pendientes se realiza **durante el mes de junio**.
+* Consistirá en:
+  * Conjunto de prácticas y/o pruebas específicas
+  * Sobre los criterios de evaluación del RA no superado
 
 ---
 # Metodología y comunicación
 
 
-## Metodología I.
-Por unidad:
-* Explicar contenidos relacionados con criterios de evaluación asociados al RA con el que se está trabajando. Vuestros apuntes son importantes.
-* Trabajar los contenidos en grupo e individualmente, guiados por diapositivas, materiales de la red y discusión en grupo.
+## Metodología I
+Por cada unidad didáctica:
+* Explicación de contenidos relacionados con los criterios de evaluación del RA correspondiente.
+* **Vuestros apuntes son importantes.**
+* Trabajo en grupo e individual:
+  * Guiados por diapositivas
+  * Materiales de internet
+  * Discusión grupal
 
 
-## Metodología II.
-Por unidad:
-* Exámenes tipo test sobre lo trabajado en clase.   
-* Realización de ejercicios en los que aplicar los contenidos.
-* Puesta en práctica con trabajos y ejercicios que se **tendrán que defender en clase**.
+## Metodología II
+Por cada unidad didáctica:
+* Exámenes tipo test sobre los contenidos trabajados
+* Realización de ejercicios prácticos
+* Trabajos y ejercicios que **SE DEBERÁN DEFENDER EN CLASE**
+
+Note: La defensa oral de los trabajos es obligatoria y forma parte de la evaluación.
 
 
-## Comunicación.
-* Comunicación **oficial, preferida y obligada**: Asistiendo al aula y hablando directamente con el profesor.
-* Otros medios secundarios **opcionales**: Correo electrónico y Moodle.
+## Comunicación
+* **Comunicación oficial, preferida y obligada:**
+  * Presencial en el aula
+  * Hablar directamente con el profesor
+  
+* **Medios secundarios (opcionales):**
+  * Correo electrónico
+  * Plataforma Moodle
 
  ![](./assets/IS-U011-Presentacion3.png) <!-- .element height="25%" width="25%" -->
 
-**ATENCIÓN!!!:** ***TEN EN CUENTA QUE ESTAS EN UNA FORMACIÓN PRESENCIAL.***
+**⚠️ ATENCIÓN:** Estás en una **FORMACIÓN PRESENCIAL**
 
 ---
 # Recomendaciones y aclaraciones
 
 
-## Recomendaciones.
-* Recomendaciones al alumnado:
-  * Leer y entender la programación del módulo.
-  * Poner foto actualizada en moodle.
-  * Añadir correo electrónico correcto en moodle.
+## Recomendaciones
+Recomendaciones al alumnado:
+* Leer y entender la **programación didáctica del módulo**
+* Configurar tu perfil en Moodle:
+  * Foto actualizada
+  * Correo electrónico correcto (@g.educaand.es)
 
 
-## Aclaraciones I.
-* Formación presencial, por tanto la comunicación presencial.
-* Como regla general:
-  - Los ejercicios individuales se corregirán en clase delante del profesor. Defendiendo el trabajo.
-  - Los ejercicios en grupo se podrán presentar en grupo o un componente del grupo de forma aleatoria. El método será elegido por el profesor.
+## Aclaraciones I
+* **Formación presencial** → Comunicación presencial
+* **Regla general de corrección:**
+  * Ejercicios individuales: Corrección en clase delante del profesor (defensa obligatoria)
+  * Ejercicios en grupo: Presentación grupal O por un componente aleatorio del grupo (el profesor decide el método)
 
 
-## Aclaraciones II.
-* Causas para no corregir una prueba (ejercicio, práctica, examen)
-  - No se cumple las condiciones de entrega.
-  - Se ha detectado la posibilidad de copiado de todo o parte de la prueba. Esto incluye textos (total o parcial) de internet y/o sin hacer referencia a la fuente.
-  - Se entrega fuera de plazo (aunque sean unos segundos).
-  - En caso de código, no compila.
+## Aclaraciones II
+**Causas para NO corregir una prueba:**
+* No se cumplen las condiciones de entrega
+* Posible plagio o copiado (total o parcial):
+  * De otros compañeros
+  * De internet sin citar la fuente
+* **Entrega fuera de plazo** (aunque sean segundos)
+* En caso de código: **no compila**
+
+**⚠️ OJO con ChatGPT, Copilot, etc.:**
+* Asegúrate de **entender lo que haces**
+* Debes ser capaz de **defender y explicar** tu código
 
 
-## Aclaraciones II.
-* OJO con Chat GPT, Copilot, etc. -> Asegurate de saber que haces.
+## Aclaraciones III
+**Si la entrega es mediante Git:**
+
+El archivo **README.md** debe incluir:
+* Instrucciones para compilar y ejecutar
+* Descripción de la aplicación
+* Autoría
+* Referencias y fuentes consultadas
 
 
-## Aclaraciones III.
-* Causas para no corregir una prueba (ejercicio, práctica, examen)
-  - Si la entrega es el git, añadir en el README.md instrucciones para compilar y ejecutar el código, descripción de la aplicación, autoría y referencias.
+## Aclaraciones IV
+**Custodia de trabajos y materiales:**
+* Es **responsabilidad del alumnado** guardar y custodiar:
+  * Trabajos realizados
+  * Documentos
+  * Cualquier material de prácticas
+* **NO es responsabilidad del profesorado** la pérdida de material
+
+**Soluciones recomendadas:**
+* Google Drive, GitHub, GitLab, Bitbucket, etc.
 
 
-## Aclaraciones IV.
-* Es responsabilidad del alumnado la custodia y guarda de los trabajos, documentos, y cualquier otro material que realice durante las prácticas o en clase, por tanto, tendrán que asegurarse que quedan a salvo siempre que abandonen el aula, no siendo responsabilidad del profesorado la perdida de este material.
-* Cloud google, github, gitlab, bitbucket, etc.
+## Aclaraciones V
+**Fechas de entrega:**
+* Tendrán una fecha **clara y fija**
+* **NO se podrá cambiar bajo ninguna circunstancia**
+* Excepciones: Solo a criterio del profesor y debidamente justificadas
 
-
-## Aclaraciones V.
-* En cuando a las fechas de entrega de prácticas/trabajos/ejercicios, tendrán una fecha de entrega clara, **que no se podrá cambiar bajo ninguna circunstancia**. Quedando a elección del profesor posibles excepciones justificadas.
-* La entrega consiste en: subida a la plataforma (por defecto) en fecha + defensa en clase.
+**La entrega completa consiste en:**
+1. Subida a la plataforma en fecha
+2. **Defensa en clase** (obligatorio)
 
 ---
 # Dudas
@@ -210,12 +252,14 @@ Por unidad:
 
 
 ## Primeros pasos
-1. Identificar tu **email: correo electrónico**: xxx@g.educaand.es
-2. Acceder a moodle. Configurar tu usuario con email y foto.
-   
-
-## Primeros pasos
-3. Rellenar los formularios que hay en la moodle. Sirven para entornos.
-4. Darte de alta en github.com con tu email, solicitan acceso PRO por ser estudiante.
+**Tareas inmediatas:**
+1. Identificar tu **email corporativo**: xxx@g.educaand.es
+2. Acceder a Moodle y configurar tu perfil:
+   * Email corporativo
+   * Foto actualizada
+3. Rellenar los formularios de Moodle
+4. Darte de alta en **GitHub.com**:
+   * Usa tu email corporativo
+   * Solicita acceso GitHub Student (cuenta PRO gratuita)
 
 

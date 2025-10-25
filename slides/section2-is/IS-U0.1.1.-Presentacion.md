@@ -199,12 +199,14 @@ Recomendaciones al alumnado:
 * **Entrega fuera de plazo** (aunque sean segundos)
 * En caso de código: **no compila**
 
+
+## Aclaraciones III
 **⚠️ OJO con ChatGPT, Copilot, etc.:**
 * Asegúrate de **entender lo que haces**
 * Debes ser capaz de **defender y explicar** tu código
 
 
-## Aclaraciones III
+## Aclaraciones IV
 **Si la entrega es mediante Git:**
 
 El archivo **README.md** debe incluir:
@@ -214,23 +216,24 @@ El archivo **README.md** debe incluir:
 * Referencias y fuentes consultadas
 
 
-## Aclaraciones IV
+## Aclaraciones V
 **Custodia de trabajos y materiales:**
 * Es **responsabilidad del alumnado** guardar y custodiar:
-  * Trabajos realizados
-  * Documentos
-  * Cualquier material de prácticas
+    * Trabajos realizados
+    * Documentos
+    * Cualquier material de prácticas
 * **NO es responsabilidad del profesorado** la pérdida de material
 
 **Soluciones recomendadas:**
-* Google Drive, GitHub, GitLab, Bitbucket, etc.
+  * Google Drive, GitHub, GitLab, Bitbucket, etc.
 
 
-## Aclaraciones V
+## Aclaraciones VI
 **Fechas de entrega:**
 * Tendrán una fecha **clara y fija**
 * **NO se podrá cambiar bajo ninguna circunstancia**
 * Excepciones: Solo a criterio del profesor y debidamente justificadas
+* **NO SE RECIBIRÁ ENTREGAS POR CORREO ELECTRÓNICO**
 
 **La entrega completa consiste en:**
 1. Subida a la plataforma en fecha

@@ -445,7 +445,7 @@ Crear preguntas en formato GIFT siguiendo el ejemplo, con un enfoque en la clari
 Otro ejemplo:
 ```gift
 ::CE 1.4 – Transpiladores para la web::
-Quieres ejecutar lógica de negocio del cliente en el navegador, pero el equipo escribe en TypeScript/Kotlin. ¿Qué estrategia encaja?
+Quieres ejecutar lógica de negocio del cliente en el navegador, pero el equipo escribe en TypeScript/Kotlin. ¿Qué estrategia encaja según tu conocimiento?
 {
  =Transpilar a JavaScript para que el navegador lo ejecute. #Correcto: La transpilación es una técnica que nos permite convertir código escrito en un lenguaje a otro lenguaje, en este caso a JavaScript, que es el lenguaje nativo de los navegadores web. 
  ~%-33.3333%Compilar a .exe y subir el binario al servidor web. #Incorrecto: el navegador no ejecuta .exe por seguridad. Aunque con WebAssembly podríamos ejecutar código nativo, no es el caso de .exe.
@@ -460,7 +460,8 @@ IMPORTANTE Y OBLIGATORIO seguir las siguientes reglas al generar los archivos GI
 - Proporcionar respuestas o retroalimentaciones formativo y completo, evitando retroalimentación genérica.
 - Habra un formato gif por cada archivo *.md contenido en la carpeta teoria.
 - De las posibles respuestas a la pregunta generada, las respuestas incorrectas tienen que ser repuestas que puedan parecer correctas, ya que si no es así, se podrá responder por descarte de las respuestas incorrectas.
-- Las preguntas deben estar relacionadas con el contenido del archivo teoria al que acompañan. Esto es importante, ya que no se trata de generar preguntas aleatorias, sino preguntas que evalúen el conocimiento adquirido en el tema tratado en el archivo teoria. Pregutnas con respuestas que no tengan relación con el contenido del archivo teoria no serán aceptadas. En el feedback de las respuestas, se debe explicar claramente por qué la respuesta correcta es correcta y por qué las respuestas incorrectas no lo son, haciendo referencia a los conceptos clave del tema tratado en el archivo teoria.
+- Las preguntas deben estar relacionadas con el contenido del archivo teoria al que acompañan. Esto es importante, ya que no se trata de generar preguntas aleatorias, sino preguntas que evalúen el conocimiento adquirido en el tema tratado en el archivo teoria. Preguntas con respuestas que no tengan relación con el contenido del archivo teoria no serán aceptadas. En el feedback de las respuestas, se debe explicar claramente por qué la respuesta correcta es correcta y por qué las respuestas incorrectas no lo son, haciendo referencia a los conceptos clave del tema tratado en el archivo teoria.
+- Las preguntas tienen que plantear situaciones prácticas o ejemplos relacionados con el contenido del archivo teoria, de forma que se evalúe no solo el conocimiento teórico, sino también la capacidad de aplicar ese conocimiento en situaciones prácticas. No hacer referencia en las preguntas a "según la unidad vista", "segun lo visto en el texto", "según lo que dice la unidad"; etc, sinó a los conceptos y ejemplos tratados en el archivo teoria.
 - Cada archivo GIFT contendrá al menos 10 preguntas de opción múltiple relacionadas con el contenido del archivo teoria al que acompañan.
 - Las preguntas tienen que cubrir los conceptos clave del tema tratado en el archivo teoria.
 - Las preguntas tienen que ser basadas en supuestos prácticos o ejemplos del contenido del archivo teoria, de forma que ademas de evaluar el conocimiento teórico, se evalúe la capacidad de aplicar ese conocimiento en situaciones prácticas.

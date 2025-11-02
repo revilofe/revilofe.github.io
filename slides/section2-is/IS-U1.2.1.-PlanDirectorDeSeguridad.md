@@ -310,8 +310,6 @@ Note: El mapeo de procesos críticos es un BIA (Business Impact Analysis) ligero
 
 Note: Ser realista sobre recursos es fundamental para el éxito del PDS. Un plan ambicioso sin presupuesto ni personal es papel mojado. Si solo tenéis un técnico IT a media jornada, no planifiquéis desplegar un SOC completo. Valorad opciones de externalización: servicios gestionados de seguridad (MSSP), SOC as a Service, auditorías externas. Las restricciones tecnológicas son comunes: sistemas industriales antiguos que no pueden actualizarse, aplicaciones legacy sin autenticación fuerte. Documentad estas restricciones y estableced planes B o compensaciones (aislar sistemas antiguos en redes separadas, monitorización adicional...).
 
-
-
 ---
 
 ## 6. Fase 3: Definir proyectos e iniciativas
@@ -490,7 +488,6 @@ Note: La matriz impacto-esfuerzo es visual e intuitiva para comunicar prioridade
 * **Milestones visibles** para seguimiento.
 
 Note: Un cronograma irreal condena al PDS al fracaso. Sed conservadores: multiplicad las estimaciones iniciales por 1.5 o 2. Considerad vacaciones, bajas, otros proyectos concurrentes. No planifiquéis proyectos críticos en temporadas de negocio intenso. Estableced milestones intermedios que permitan celebrar avances y detectar retrasos temprano. Un buen cronograma tiene buffers entre proyectos. Usad herramientas de gestión de proyectos (Gantt, Kanban) para visualizar dependencias y carga de trabajo.
-
 
 ---
 

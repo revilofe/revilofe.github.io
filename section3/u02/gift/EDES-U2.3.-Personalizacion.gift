@@ -1,0 +1,92 @@
+// EDES-U2.3 - Personalización y automatización del entorno
+// Banco de preguntas sobre ajustes de IDE y tareas automatizadas
+// CE 2.c - Adaptación del entorno de desarrollo a las necesidades del proyecto
+
+::CE 2.c – Mitigar fatiga visual en despliegues nocturnos::
+El equipo de soporte rota turnos nocturnos y pide reducir la fatiga visual sin perder foco. ¿Qué cambio sugiere la unidad aplicar en VS Code?
+{
+=Seleccionar un tema oscuro desde Archivo > Preferencias > Tema de color (Ctrl+K Ctrl+T). #Correcto: Se menciona el cambio de tema como una personalización rápida para mejorar comodidad. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Desactivar el editor y usar sólo terminal para evitar colores. #Incorrecto: El texto recomienda ajustar el tema, no abandonar el editor. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1'.
+~%-33.3333%Modificar el código fuente de VS Code para forzar modo oscuro. #Incorrecto: No hay que modificar el fuente; existen opciones en configuración. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1'.
+~%-33.3333%Bajar el brillo del monitor desde hardware y no tocar el IDE. #Incorrecto: Aunque ajustar hardware ayuda, la unidad se centra en configuraciones del IDE. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1'.
+}
+
+::CE 2.c – Onboarding con necesidades visuales específicas::
+Una nueva compañera necesita fuente más grande y personalizar atajos para adaptarse a su teclado. ¿Qué pasos cubre la unidad?
+{
+=Cambiar font size desde Configuración y reasignar atajos en Preferencias > Atajos o Ctrl+K Ctrl+S. #Correcto: Se detalla cómo ajustar tamaño de fuente y keybindings en VS Code. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1.'.
+~%-33.3333%Instalar un IDE distinto porque VS Code no permite personalizar nada. #Incorrecto: Se explica cómo personalizar fuente y atajos en VS Code. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1.'.
+~%-33.3333%Modificar manualmente todos los archivos .json del proyecto. #Incorrecto: Los ajustes se realizan desde la interfaz de configuración. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1.'.
+~%-33.3333%Restringir los atajos para que sean iguales para toda la plantilla. #Incorrecto: La unidad anima a personalizar atajos según preferencia. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1.'.
+}
+
+::CE 2.c – Homogeneizar atajos entre IDEs::
+Integrantes acostumbrados a Visual Studio se incorporan a IntelliJ IDEA. ¿Cómo pueden mantener su productividad?
+{
+=Seleccionando el keymap de Visual Studio en File > Settings > Keymap y ajustando lo necesario. #Correcto: Se describe cómo elegir mapas de teclas predefinidos o modificarlos. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.2. Personalización de JetBrains'.
+~%-33.3333%Apagar los atajos y usar únicamente menús contextuales. #Incorrecto: La unidad propone adaptar los atajos, no eliminarlos. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.2.'.
+~%-33.3333%Instalar VS Code para todo el equipo y abandonar IntelliJ. #Incorrecto: Se trata de adaptar el IDE actual, no cambiar de herramienta. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.2.'.
+~%-33.3333%Editar los binarios del IDE para remapear teclas. #Incorrecto: El remapeo se hace desde la configuración, no modificando binarios. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.2.'.
+}
+
+::CE 2.c – Evitar errores de formato recurrentes::
+El repositorio se llena de commits con estilos distintos en Python. ¿Qué automatización propone la unidad para PyCharm?
+{
+=Configurar File Watchers o External Tools que ejecuten autopep8/pylint al guardar. #Correcto: Se explican ambas opciones para asegurar estilo y linting en PyCharm. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2. Automatización en JetBrains'.
+~%-33.3333%Revisar estilo manualmente al final de cada sprint. #Incorrecto: La unidad promueve automatizar para prevenir inconsistencias tempranas. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.'.
+~%-33.3333%Desactivar el guardado automático y confiar en revisiones de terceros. #Incorrecto: Se busca automatizar, no retrasar controles. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.'.
+~%-33.3333%Crear una tarea cron externa sin integración con el IDE. #Incorrecto: Las soluciones propuestas se configuran dentro del IDE. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.'.
+}
+
+::CE 2.c – Ejecución rápida de scripts en VS Code::
+Una compañía de consultoría crea prototipos Python a diario y quiere ejecutarlos con un atajo único. ¿Qué solución describe la unidad?
+{
+=Definir una task en tasks.json que llame a python3 sobre el archivo activo y asociarla a un atajo. #Correcto: Se proporciona un ejemplo de tasks.json y la vinculación a teclas. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.1. Crear una tarea de ejecución automática'.
+~%-33.3333%Modificar launch.json para cada script individual. #Incorrecto: La tarea general evita modificar launch.json repetidamente. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.1.'.
+~%-33.3333%Usar siempre terminal externa para ejecutar manualmente con python. #Incorrecto: La automatización busca evitar ejecuciones manuales. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.1.'.
+~%-33.3333%Instalar un IDE distinto que compile automáticamente. #Incorrecto: VS Code puede automatizar ejecuciones mediante tasks sin cambiar de herramienta. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.1.'.
+}
+
+::CE 2.c – Feedback de pruebas en VS Code::
+Un equipo de QA quiere detectar roturas con pytest al momento. ¿Qué workflow alinea la unidad?
+{
+=Instalar la extensión de pytest y configurar una task que se dispare tras cambios relevantes. #Correcto: Se menciona usar extensiones y tasks para lanzar pruebas automáticamente. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.2. Automatización de pruebas'.
+~%-33.3333%Ejecutar pytest únicamente en el servidor CI al final del día. #Incorrecto: La unidad promueve feedback temprano en el IDE. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.2.'.
+~%-33.3333%Escribir un script bash que cierre el IDE si hay tests fallados. #Incorrecto: El enfoque es recibir resultados, no cerrar herramientas. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.2.'.
+~%-33.3333%Renunciar a pytest por ser incompatible con automatización. #Incorrecto: Precisamente se explica cómo integrarlo en VS Code. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.2.'.
+}
+
+::CE 2.c – Cobertura continua en JetBrains::
+Una startup quiere que los tests Kotlin se ejecuten en segundo plano mientras se programa. ¿Qué recomienda el material?
+{
+=Instalar un plugin de Continuous Testing (como el citado) para lanzar pruebas automáticamente al guardar. #Correcto: Se sugiere usar plugins como Continuous Testing dentro de JetBrains. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.1. Ejecución automática de pruebas'.
+~%-33.3333%Esperar a que el pipeline CI detecte errores horas después. #Incorrecto: La idea es reaccionar antes mediante ejecución continua. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.1.'.
+~%-33.3333%Reescribir la suite de tests en shell scripts. #Incorrecto: El texto recomienda usar las capacidades del IDE, no reemplazarlas por scripts. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.1.'.
+~%-33.3333%Desactivar los tests en local para acelerar la compilación. #Incorrecto: Se pretende ejecutarlos con frecuencia, no desactivarlos. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.1.'.
+}
+
+::CE 2.c – Preparativos antes de ejecutar un microservicio::
+Antes de lanzar un microservicio en local, el equipo necesita borrar caches temporales y arrancar un contenedor auxiliar. ¿Cómo se automatiza en JetBrains?
+{
+=Añadiendo tareas “Before launch” en la configuración de ejecución para ejecutar scripts previos. #Correcto: La unidad explica cómo usar Before Launch para tareas preparatorias. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.2. Configuración de tareas previas a la ejecución'.
+~%-33.3333%Modificar el código del microservicio para que haga el trabajo al inicio. #Incorrecto: Se busca hacerlo desde el IDE, no incrustarlo en el código. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.2.'.
+~%-33.3333%Cerrar el IDE y lanzar todo manualmente desde terminal. #Incorrecto: El objetivo es automatizar dentro del flujo de ejecución. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.2.'.
+~%-33.3333%Eliminar las caches manualmente después de cada prueba. #Incorrecto: Las tareas “Before launch” evitan trabajo manual repetido. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.2.'.
+}
+
+::CE 2.c – Documentación viva del entorno::
+El equipo escribe una guía de estilos internos. ¿Qué debe incluir para que otras personas repliquen el entorno según la unidad?
+{
+=Una recopilación de temas, fuentes, atajos personalizados y scripts/tareas automatizadas usados. #Correcto: La personalización y automatización forman parte del entorno que conviene documentar. Consulta `EDES-U2.3.-Personalizacion.md`, secciones '2' y '3'.
+~%-33.3333%Solo una lista de dependencias del proyecto sin detalles del IDE. #Incorrecto: El documento enfatiza el impacto de personalización/automatización, que también debe registrarse. Consulta `EDES-U2.3.-Personalizacion.md`, secciones '2' y '3'.
+~%-33.3333%Recomendaciones genéricas sin referenciar configuraciones concretas. #Incorrecto: Para replicar el entorno se necesitan detalles específicos de configuración. Consulta `EDES-U2.3.-Personalizacion.md`, secciones '2' y '3'.
+~%-33.3333%Notas sobre hardware obligatorio, sin mencionar el software. #Incorrecto: El foco está en ajustes de software dentro del IDE. Consulta `EDES-U2.3.-Personalizacion.md`, secciones '2' y '3'.
+}
+
+::CE 2.c – Mantenerse actualizado::
+La documentación de la unidad incluye enlaces externos. ¿Para qué se recomienda consultarlos?
+{
+=Para verificar instrucciones al día sobre personalización y automatización en las versiones actuales del IDE. #Correcto: Se anima a revisar la documentación oficial debido a posibles cambios. Consulta `EDES-U2.3.-Personalizacion.md`, sección '4. Enlaces y recursos de interés'.
+~%-33.3333%Para descargar configuraciones cerradas que no se puedan modificar. #Incorrecto: Los enlaces sirven para aprender a configurar, no para bloquear ajustes. Consulta `EDES-U2.3.-Personalizacion.md`, sección '4'.
+~%-33.3333%Para sustituir el IDE por herramientas ajenas a las vistas. #Incorrecto: Los enlaces amplían la información sobre los IDEs ya descritos. Consulta `EDES-U2.3.-Personalizacion.md`, sección '4'.
+~%-33.3333%Para aplicar automáticamente cualquier cambio sin revisión. #Incorrecto: La documentación orienta, pero es la persona quien decide qué ajustes aplicar. Consulta `EDES-U2.3.-Personalizacion.md`, sección '4'.

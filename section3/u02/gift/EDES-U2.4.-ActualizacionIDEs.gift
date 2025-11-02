@@ -1,0 +1,92 @@
+// EDES-U2.4 - Actualización de IDEs
+// Banco de preguntas sobre mantenimiento del entorno
+// CE 2.d - Configuración de actualizaciones en IDEs
+
+::CE 2.d – Riesgo de vulnerabilidades::
+Un auditor detecta una vulnerabilidad crítica en una versión antigua del IDE. ¿Qué argumento ofrece la unidad para justificar la actualización inmediata?
+{
+=Actualizar aporta parches de seguridad además de nuevas funciones y correcciones de errores. #Correcto: Se enumeran las mejoras de seguridad como motivo clave para actualizar. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2. ¿Por qué es importante actualizar tu IDE?'.
+~%-33.3333%La prioridad es mantener la versión actual para evitar cambios de interfaz. #Incorrecto: Se anima a actualizar para beneficiarse de mejoras, incluida seguridad. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2'.
+~%-33.3333%Las vulnerabilidades sólo afectan a IDEs de pago. #Incorrecto: El texto no diferencia; cualquier IDE puede verse afectado. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2'.
+~%-33.3333%La seguridad depende exclusivamente del sistema operativo, no del IDE. #Incorrecto: Se afirma que las actualizaciones del IDE también corrigen vulnerabilidades propias. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2'.
+}
+
+::CE 2.d – Políticas internas en JetBrains::
+La empresa requiere que IntelliJ IDEA busque nuevas versiones semanalmente. ¿Qué ajuste describe la unidad?
+{
+=Activar las comprobaciones automáticas en File > Settings > Appearance & Behavior > System Settings > Updates. #Correcto: Se especifica esa ruta para configurar búsquedas de actualización. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1. Configuración de actualizaciones automáticas del IDE'.
+~%-33.3333%Modificar manualmente el archivo idea.exe para forzar notificaciones. #Incorrecto: Las opciones se gestionan desde el panel de configuración. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1'.
+~%-33.3333%Instalar un plugin de terceros para comprobar versiones. #Incorrecto: El IDE ya incorpora ese control en la sección Updates. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1'.
+~%-33.3333%Borrar la carpeta de configuración para que se regenere sola. #Incorrecto: No es necesario; basta con habilitar la opción en Settings. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1'.
+}
+
+::CE 2.d – Decidir canal de actualización::
+Una startup quiere probar funciones nuevas de JetBrains pero puede asumir algún fallo. ¿Qué propone la unidad?
+{
+=Elegir el canal Early Access Program (EAP) sabiendo que prioriza novedades sobre estabilidad. #Correcto: Se explican los canales Release y EAP y sus implicaciones. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1.'.
+~%-33.3333%Forzar canal Release para recibir las novedades antes que nadie. #Incorrecto: Release prioriza estabilidad, no novedades tempranas. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1.'.
+~%-33.3333%Instalar simultáneamente todas las versiones para comparar. #Incorrecto: La unidad no sugiere mantener múltiples instalaciones, sino elegir un canal. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1.'.
+~%-33.3333%Editar el registro del sistema operativo para desbloquear funciones ocultas. #Incorrecto: Los canales se seleccionan desde la configuración del IDE. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1.'.
+}
+
+::CE 2.d – Mantenimiento de plugins JetBrains::
+Durante una revisión se detectan plugins obsoletos en PyCharm. ¿Qué práctica recomienda el texto?
+{
+=Revisar File > Settings > Plugins, pestaña Installed, y aplicar las actualizaciones disponibles. #Correcto: Se indica allí cómo gestionar y actualizar plugins. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.2. Actualización de plugins'.
+~%-33.3333%Esperar a la próxima versión del IDE porque los plugins se actualizan solos. #Incorrecto: Se recomienda comprobar y actualizar plugins desde el gestor. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.2.'.
+~%-33.3333%Eliminar todos los plugins para evitar avisos repetidos. #Incorrecto: La solución es actualizarlos, no desinstalarlos indiscriminadamente. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.2.'.
+~%-33.3333%Recompilar los plugins a mano con Maven. #Incorrecto: El IDE gestiona las actualizaciones sin necesidad de recompilaciones manuales. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.2.'.
+}
+
+::CE 2.d – Uso de JetBrains Toolbox::
+Un equipo centraliza instalaciones con JetBrains Toolbox. ¿Cómo se sigue manteniendo el control de plugins?
+{
+=Toolbox actualiza IDEs, pero cada IDE conserva el gestor de plugins para instalarlos o actualizarlos. #Correcto: Se explica que Toolbox convive con la gestión interna de plugins. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1.' y '3.2.'.
+~%-33.3333%Los plugins se bloquean y Toolbox no permite cambios. #Incorrecto: Toolbox no bloquea el uso del panel de plugins. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, secciones '3.1.' y '3.2.'.
+~%-33.3333%Se necesita un script externo para actualizar plugins. #Incorrecto: El panel de plugins sigue disponible. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, secciones '3.1.' y '3.2.'.
+~%-33.3333%Es obligatorio instalar de nuevo el IDE para cada plugin nuevo. #Incorrecto: Los plugins se gestionan sin reinstalar el IDE completo. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, secciones '3.1.' y '3.2.'.
+}
+
+::CE 2.d – Política de VS Code en cloud privado::
+Un equipo con VS Code desconectado de internet quiere decidir cuándo actualizar. ¿Qué acción sugiere la unidad?
+{
+=Cambiar “Update: Mode” a Manual desde la configuración y ejecutar Ayuda > Buscar actualizaciones cuando proceda. #Correcto: Se menciona esta opción para controlar cuándo aplicar nuevas versiones. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1. Configuración de actualizaciones automáticas del editor'.
+~%-33.3333%Eliminar las carpetas de usuario cada semana para reiniciar la versión. #Incorrecto: La unidad describe el ajuste Update: Mode, no borrados periódicos. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1.'.
+~%-33.3333%Duplicar el ejecutable del IDE y alternar versiones manualmente. #Incorrecto: La configuración permite controlar actualizaciones sin duplicar ejecutables. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1.'.
+~%-33.3333%Instalar Visual Studio Enterprise para gestionar VS Code. #Incorrecto: Las opciones de VS Code son suficientes. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1.'.
+}
+
+::CE 2.d – Gestión de extensiones en VS Code::
+Un desarrollador nota que una extensión crítica no se actualiza sola. ¿Qué recomienda el documento?
+{
+=Verificar que “Extensions: Auto Update” esté habilitado y, si procede, actualizar manualmente desde el panel de extensiones. #Correcto: Se describe la opción de auto update y la actualización desde el panel. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.2. Actualización de extensiones'.
+~%-33.3333%Desinstalar la extensión para que VS Code vuelva a instalarla al arrancar. #Incorrecto: No es necesario desinstalar, se puede actualizar directamente. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.2.'.
+~%-33.3333%Esperar a que el sistema operativo lance un parche. #Incorrecto: La unidad explica cómo gestionar las extensiones dentro de VS Code. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.2.'.
+~%-33.3333%Modificar la extensión manualmente para elevar el número de versión. #Incorrecto: Las actualizaciones se obtienen desde el Marketplace o mediante auto update. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.2.'.
+}
+
+::CE 2.d – Control semanal de versiones::
+El responsable de DevOps quiere un informe semanal de versiones instaladas en VS Code y JetBrains. ¿Qué fuentes describe la unidad para extraer la información?
+{
+=Usar el menú Ayuda > Buscar actualizaciones (VS Code) y la sección Updates (JetBrains) junto al gestor de plugins. #Correcto: Ambos apartados proporcionan datos sobre versiones y plugins disponibles. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, secciones '3.1.', '3.2.' y '4.1.'.
+~%-33.3333%Consultar un registro en la nube que se actualiza sin intervención. #Incorrecto: Se mencionan menús dentro del IDE, no registros externos automáticos. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, secciones '3.1.', '3.2.' y '4.1.'.
+~%-33.3333%Clonar el repositorio del IDE para revisar commits recientes. #Incorrecto: La unidad propone revisar las opciones de actualización dentro del propio IDE. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, secciones '3.1.', '3.2.' y '4.1.'.
+~%-33.3333%Ejecutar scripts que borren caches y las reconstruyan. #Incorrecto: Los informes se obtienen desde los menús de actualización, no borrando caches. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, secciones '3.1.', '3.2.' y '4.1.'.
+}
+
+::CE 2.d – Impacto en compatibilidad con frameworks::
+Tras actualizar VS Code, un equipo observa mejoras en la extensión de Python relacionadas con nuevos frameworks. ¿Qué lección refleja esto según el texto?
+{
+=Las actualizaciones aportan compatibilidad con nuevas tecnologías y evitan quedarse atrás. #Correcto: La unidad menciona explícitamente la compatibilidad como motivo para actualizar. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2. ¿Por qué es importante actualizar tu IDE?'.
+~%-33.3333%Las actualizaciones sólo cambian el aspecto visual sin tocar funcionalidades. #Incorrecto: Se listan mejoras de compatibilidad, seguridad y rendimiento. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2'.
+~%-33.3333%Es mejor bloquear extensiones para mantener versiones viejas estables. #Incorrecto: Se anima a actualizar para aprovechar mejoras. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2'.
+~%-33.3333%Solo las versiones pagas incluyen compatibilidad con frameworks. #Incorrecto: La compatibilidad depende de actualizaciones, no del coste. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2'.
+}
+
+::CE 2.d – Consultar recursos oficiales::
+Antes de planificar un cambio mayor, el equipo busca instrucciones actuales. ¿Qué propone la unidad?
+{
+=Revisar la documentación oficial enlazada de JetBrains y Visual Studio Code para confirmar procedimientos vigentes. #Correcto: Se proporcionan enlaces directos a documentación oficial para mantenerse al día. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '5. Recursos adicionales'.
+~%-33.3333%Acudir a foros no moderados con información no verificada. #Incorrecto: Se recomienda la documentación oficial como fuente fiable. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '5'.
+~%-33.3333%Basarse en apuntes de cursos antiguos sin confirmarlos. #Incorrecto: El texto sugiere verificar instrucciones actualizadas. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '5'.
+~%-33.3333%Desestimar la documentación porque las interfaces no cambian. #Incorrecto: Precisamente se aconseja revisarla por posibles cambios. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '5'.

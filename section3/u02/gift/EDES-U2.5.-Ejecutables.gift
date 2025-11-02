@@ -1,0 +1,92 @@
+// EDES-U2.5 - Ejecutables en IDEs
+// Banco de preguntas sobre generación y ejecución de programas
+// CE 2.e - Creación de ejecutables en distintos lenguajes e IDEs
+
+::CE 2.e – Reducir contexto en mantenimiento::
+Una empresa mantiene módulos Kotlin y Java del mismo servicio en IntelliJ IDEA. ¿Qué ventaja práctica proporciona hacerlo desde un único IDE según la unidad?
+{
+=Permite compilar y ejecutar ambos lenguajes sin cambiar de herramienta, reutilizando configuraciones y flujos. #Correcto: El texto muestra cómo IntelliJ gestiona proyectos Kotlin y Java en paralelo. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2. Generación de ejecutables a partir de código fuente en distintos lenguajes en un mismo IDE'.
+~%-33.3333%Forzar a separar los equipos porque el IDE sólo soporta un lenguaje a la vez. #Incorrecto: Se recalca que un mismo IDE soporta varios lenguajes. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2'.
+~%-33.3333%Reescribir el código Kotlin a Java para simplificar la ejecución. #Incorrecto: El ejemplo demuestra que Kotlin y Java conviven en IntelliJ. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2'.
+~%-33.3333%Compilar manualmente desde terminal para cada lenguaje. #Incorrecto: El IDE ejecuta los proyectos desde la interfaz (Shift+F10). Consulta `EDES-U2.5.-Ejecutables.md`, sección '2'.
+}
+
+::CE 2.e – Tutoría a nuevo integrante Kotlin::
+Un compañero nuevo no sabe cómo validar localmente un algoritmo Kotlin en IntelliJ IDEA. ¿Qué pasos conceptuales refleja la unidad?
+{
+=Crear el proyecto Kotlin/JVM, añadir el archivo con la lógica y ejecutar desde el IDE para ver la salida. #Correcto: La sección explica cómo crear el proyecto, escribir el código y ejecutarlo con Run. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+~%-33.3333%Instalar un plug-in externo para compilar Kotlin porque IntelliJ no lo admite de serie. #Incorrecto: IntelliJ soporta Kotlin de forma nativa. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2.'.
+~%-33.3333%Escribir el código en un archivo .java y traducirlo luego. #Incorrecto: Se trabaja directamente con Kotlin en IntelliJ. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2.'.
+~%-33.3333%Ejecutar scripts externos que transformen el código antes de compilar. #Incorrecto: No es necesario usar scripts; el IDE lo ejecuta directamente. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2.'.
+}
+
+::CE 2.e – Comparar Kotlin y Java en producción::
+El equipo quiere demostrar a negocio que la migración a Kotlin no obliga a cambiar de entorno. ¿Qué evidencia proporciona el ejemplo?
+{
+=Ambos programas muestran exactamente la misma salida (cuenta atrás y “¡Despegue!”) ejecutados desde el mismo IDE. #Correcto: La unidad subraya que los dos lenguajes producen igual resultado en IntelliJ. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2.' y '2.3.'.
+~%-33.3333%Los resultados difieren y Kotlin produce errores por defecto. #Incorrecto: Se muestra que los resultados son idénticos. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2.' y '2.3.'.
+~%-33.3333%El IDE obliga a configurar dos consolas distintas para cada lenguaje. #Incorrecto: El mismo IDE ejecuta ambos sin duplicidad. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2.' y '2.3.'.
+~%-33.3333%La migración requiere abandonar IntelliJ y usar herramientas separadas. #Incorrecto: Precisamente se demuestra la convivencia en el mismo IDE. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2.' y '2.3.'.
+}
+
+::CE 2.e – Sprint de experimentación Python::
+El equipo de datos trabaja con PyCharm y VS Code. ¿Qué práctica, alineada con la unidad, asegura que un script se comporte igual en ambos IDE?
+{
+=Usar el mismo script `main.py` y ejecutarlo desde cada IDE con sus respectivas funciones Run para comparar salidas. #Correcto: Se ejemplifica que el mismo código produce idéntica salida en PyCharm y VS Code. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '3.2.' y '3.3.'.
+~%-33.3333%Crear variantes del script adaptadas a cada IDE. #Incorrecto: El texto muestra que el mismo archivo funciona en ambos entornos. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '3.2.' y '3.3.'.
+~%-33.3333%Compilar el script en C para ejecutarlo sin IDE. #Incorrecto: El ejemplo se centra en Python, ejecutado desde los IDEs. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '3.2.' y '3.3.'.
+~%-33.3333%Renunciar a VS Code porque no permite ejecutar Python con extensión oficial. #Incorrecto: La unidad explica cómo instalar la extensión de Python en VS Code. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3.'.
+}
+
+::CE 2.e – Sesión de pairing remoto::
+Un desarrollador con PyCharm y otro con VS Code depuran un comportamiento extraño en un script Python compartido. ¿Qué consejo ofrece el texto?
+{
+=Asegurarse de tener la extensión de Python en VS Code y usar las funciones Run/Debug equivalentes para observar el mismo resultado. #Correcto: El documento detalla la ejecución en ambos IDEs con la extensión oficial. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3.'.
+~%-33.3333%Forzar a ambos a usar el mismo IDE para que los resultados sean comparables. #Incorrecto: Se muestra que distintos IDEs logran igual salida si están bien configurados. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '3.2.' y '3.3.'.
+~%-33.3333%Desactivar la salida estándar para evitar comparaciones. #Incorrecto: La meta es comparar salidas idénticas. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '3.2.' y '3.3.'.
+~%-33.3333%Convertir el script a Kotlin para usar IntelliJ. #Incorrecto: El ejemplo habla explícitamente de Python en PyCharm y VS Code. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '3.2.' y '3.3.'.
+}
+
+::CE 2.e – Demo corporativa::
+La dirección quiere ver que el proceso de generar ejecutables es reproducible en distintos entornos. ¿Qué narrativa basada en la unidad resultaría convincente?
+{
+=Mostrar el mismo algoritmo de cuenta atrás funcionando en IntelliJ (Kotlin/Java) y en PyCharm/VS Code (Python), destacando la portabilidad del flujo. #Correcto: Las secciones demuestran ejecución equivalente en varios IDEs y lenguajes. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+~%-33.3333%Argumentar que cada lenguaje necesita un equipo especializado y herramientas distintas. #Incorrecto: Se evidencia que se puede trabajar con distintos lenguajes desde los mismos IDEs. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+~%-33.3333%Ocultar las diferencias y decir que sólo se usa un lenguaje en toda la empresa. #Incorrecto: La unidad anima a mostrar la convivencia de lenguajes/IDEs. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+~%-33.3333%Migrar el repositorio a C++ para evitar configuraciones cruzadas. #Incorrecto: El contenido se centra en Kotlin, Java y Python. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+}
+
+::CE 2.e – Integración continua local::
+Antes de integrar cambios, un equipo quiere validar tanto el módulo Java como el Kotlin en una máquina de desarrollo. ¿Cómo ayuda IntelliJ según la unidad?
+{
+=Permite definir configuraciones de ejecución independientes para cada lenguaje dentro del mismo proyecto y ejecutarlas consecutivamente. #Correcto: Se explica cómo ejecutar archivos Kotlin y Java desde el mismo IDE. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2'.
+~%-33.3333%Obliga a cerrar y abrir el IDE entre lenguajes para evitar conflictos de compilación. #Incorrecto: La unidad muestra la ejecución consecutiva en el mismo IDE. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2'.
+~%-33.3333%Requiere duplicar el repositorio: uno para Kotlin y otro para Java. #Incorrecto: El texto describe un único proyecto con ambos lenguajes. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2'.
+~%-33.3333%Genera ejecutables sin permitir su ejecución directa en el IDE. #Incorrecto: Se ejecuta directamente usando Run. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2'.
+}
+
+::CE 2.e – Formación cruzada::
+Un plan de formación rotativa quiere mostrar a la plantilla cómo portar algoritmos entre lenguajes. ¿Qué secuencia de la unidad puede usarse?
+{
+=Implementar la misma cuenta atrás en Kotlin y Java dentro de IntelliJ, y luego reescribirla en Python para ejecutarla en PyCharm/VS Code. #Correcto: Se presentan estos ejemplos para ilustrar la ejecución en diversos lenguajes y entornos. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2.', '2.3.' y '3'.
+~%-33.3333%Elegir un solo lenguaje y desincentivar el aprendizaje de otros. #Incorrecto: La unidad fomenta experimentar con distintos lenguajes. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+~%-33.3333%Compilar los algoritmos a binarios y ocultar el código fuente. #Incorrecto: El objetivo es mostrar el código y la ejecución en el IDE. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+~%-33.3333%Usar exclusivamente scripts shell para demostrar versatilidad. #Incorrecto: El foco son lenguajes y IDEs mencionados. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+}
+
+::CE 2.e – Soporte remoto en producción::
+Una incidencia requiere validar un bug en un script Python desde un portátil sin PyCharm instalado. ¿Qué solución basada en la unidad se puede aplicar?
+{
+=Instalar VS Code, añadir la extensión oficial de Python y ejecutar el mismo `main.py` para replicar la incidencia. #Correcto: Se muestra cómo VS Code, con su extensión, ejecuta el mismo script que PyCharm. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3.'.
+~%-33.3333%Reescribir el script en Java para ejecutarlo en cualquier IDE. #Incorrecto: La unidad enseña que VS Code puede ejecutar Python con la extensión apropiada. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3.'.
+~%-33.3333%Esperar a tener acceso a PyCharm porque VS Code no sirve en urgencias. #Incorrecto: VS Code con extensión de Python es suficiente para validar el script. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3.'.
+~%-33.3333%Ejecutar el script sin extensión y confiar en el resultado parcial. #Incorrecto: Se recomienda instalar la extensión para soporte completo. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3.'.
+}
+
+::CE 2.e – Clases de refuerzo::
+El profesorado quiere que el alumnado entienda la importancia de IDEs multiplataforma. ¿Qué experiencia propone la unidad que pueden replicar?
+{
+=Comparar un mismo programa de cuenta atrás ejecutado en IntelliJ (distintos lenguajes) y en PyCharm/VS Code, resaltando las herramientas disponibles. #Correcto: El documento ofrece estos ejemplos como demostración práctica. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+~%-33.3333%Obligar a cada alumna a usar un único IDE durante todo el curso. #Incorrecto: La unidad anima a experimentar con múltiples entornos. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+~%-33.3333%Ejecutar scripts desde terminal para no depender de IDEs. #Incorrecto: El foco está en las capacidades del IDE. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+~%-33.3333%Ocultar las diferencias para que crean que todos los IDEs son iguales. #Incorrecto: La intención es evidenciar las funciones de cada entorno. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.

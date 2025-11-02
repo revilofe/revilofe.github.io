@@ -1,0 +1,557 @@
+// EDES-U2.1 - IDEs
+// Banco de preguntas sobre entornos de desarrollo integrado
+// CE 2.a - Características y componentes de los IDEs
+
+::CE 2.a – Selección para microequipo mixto::
+Un equipo pequeño va a mantener un servicio con partes en Kotlin y Python y quiere minimizar los cambios de herramienta durante las incidencias nocturnas. ¿Qué deberían priorizar al escoger IDE según la unidad?
+{
+=Un IDE que integre editor avanzado, depuración y soporte multi-lenguaje/extensiones en una misma interfaz. #Correcto: La unidad resalta que los IDEs modernos reúnen editor, depurador y compatibilidad con varios lenguajes mediante extensiones, lo que evita saltar entre herramientas. Consulta `EDES-U2.1.-IDEs.md`, secciones '2. Los Entornos de Desarrollo Integrado (IDEs)' y '3. Componentes de un IDE'.
+~%-33.3333%Elegir un editor ligero sin autocompletado para forzar revisiones manuales de código. #Incorrecto: Quitar capacidades aumentaría el esfuerzo y contradice la idea de integrar funcionalidades. Consulta `EDES-U2.1.-IDEs.md`, secciones '2' y '3'.
+~%-33.3333%Trabajar con un IDE por lenguaje para separar responsabilidades. #Incorrecto: La ventaja descrita es usar herramientas que soporten múltiples lenguajes en la misma interfaz. Consulta `EDES-U2.1.-IDEs.md`, secciones '2' y '3'.
+~%-33.3333%Optar por terminal pura y scripts ad-hoc para evitar sobrecarga visual. #Incorrecto: Se promueven IDEs que concentran funcionalidades y reducen pasos manuales. Consulta `EDES-U2.1.-IDEs.md`, secciones '2' y '3'.
+}
+
+::CE 2.a – Control de versiones integrado::
+Tu empresa rota personal junior por diferentes proyectos y quiere reducir errores al usar Git. ¿Qué componente de los IDEs puede ayudar según la teoría?
+{
+=Paneles integrados que permiten clonar, hacer commits y revisar cambios sin salir del IDE. #Correcto: El texto subraya la integración con control de versiones para gestionar Git desde el propio entorno. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Bloquear el acceso a Git para que todo se gestione por correo electrónico. #Incorrecto: La unidad defiende integrar Git, no restringirlo. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Crear un repositorio distinto por desarrollador para evitar conflictos. #Incorrecto: Esa medida no aprovecha la integración de versiones descrita. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Obligar a usar clientes de terceros aunque el IDE los duplique. #Incorrecto: La ventaja es centralizar operaciones en el IDE, no multiplicar herramientas. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+}
+
+::CE 2.a – Respuesta ante bugs emergentes::
+Durante una guardia detectas un bug crítico y necesitas aislarlo con rapidez. ¿Qué característica del IDE facilita esa reacción según la unidad?
+{
+=La depuración integrada con breakpoints, ejecución paso a paso y observación de variables. #Correcto: El documento destaca estas funciones como parte esencial de los IDEs. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Compilar todo el proyecto a mano para generar logs temporales. #Incorrecto: La depuración integrada evita procesos manuales extensos. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Exportar el proyecto a un editor de texto plano para entender el código. #Incorrecto: El IDE ya ofrece herramientas diseñadas para diagnóstico. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Desactivar el resaltado de sintaxis para no distraerse con colores. #Incorrecto: El resaltado es una ventaja, no un obstáculo. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+}
+
+::CE 2.a – Encuentro con nuevo framework::
+Te asignan una funcionalidad que requiere un framework desconocido por el equipo. ¿Cómo aprovecha un IDE esta situación según la teoría?
+{
+=Permite añadir soporte mediante extensiones o módulos que incorporan plantillas y ayudas específicas. #Correcto: Se remarca la extensibilidad para frameworks como Spring o Django. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1. ¿Qué es un IDE?' y '3. Componentes de un IDE'.
+~%-33.3333%Exige reescribir el framework para adaptarlo al lenguaje del IDE. #Incorrecto: El IDE se adapta al framework mediante extensiones, no al revés. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1' y '3'.
+~%-33.3333%Impide trabajar con frameworks fuera de la lista soportada de fábrica. #Incorrecto: Precisamente se destaca la instalación de soporte adicional. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1' y '3'.
+~%-33.3333%Recomienda abandonar el IDE y trabajar solo con scripts CLI. #Incorrecto: El enfoque es enriquecer el IDE, no prescindir de él. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1' y '3'.
+}
+
+::CE 2.a – Formación de personal nuevo::
+Una academia quiere que su alumnado experimente con distintos lenguajes usando un único entorno. ¿Qué tipo de IDE cita la unidad como adecuado?
+{
+=IDEs de propósito general como Visual Studio Code o IntelliJ IDEA que soportan múltiples tecnologías. #Correcto: Ambos se mencionan como herramientas versátiles en la clasificación de IDEs. Consulta `EDES-U2.1.-IDEs.md`, sección '4.1. IDEs de propósito general'.
+~%-33.3333%IDEs móviles como Android Studio para cualquier lenguaje. #Incorrecto: Los IDEs móviles se reservan para Android o iOS. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4. IDEs móviles'.
+~%-33.3333%IDEs específicos como PyCharm para cubrir todos los lenguajes. #Incorrecto: PyCharm se describe como especializado en Python. Consulta `EDES-U2.1.-IDEs.md`, sección '4.2. IDEs específicos de lenguaje'.
+~%-33.3333%Editores sin extensiones, pues así se obliga a aprender herramientas externas. #Incorrecto: El objetivo es exponer al alumnado a entornos integrados. Consulta `EDES-U2.1.-IDEs.md`, sección '4. Tipos de IDEs'.
+}
+
+::CE 2.a – Desarrollo de interfaces gráficas::
+Una compañera necesita construir rápidamente prototipos con interfaz gráfica. ¿Qué aporta un IDE en este caso según la unidad?
+{
+=Herramientas visuales que permiten diseñar interfaces sin salir del editor. #Correcto: Se menciona la creación de interfaces gráficas como función de algunos IDEs. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1. ¿Qué es un IDE?'.
+~%-33.3333%Un bloqueo que evita utilizar librerías gráficas para proteger el código base. #Incorrecto: Los IDEs añaden capacidades, no limitaciones, para desarrollar interfaces. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1'.
+~%-33.3333%Un modo de solo texto que deshabilita cualquier vista gráfica. #Incorrecto: El objetivo es ofrecer herramientas visuales, no eliminarlas. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1'.
+~%-33.3333%La obligación de exportar el proyecto a un software de diseño externo. #Incorrecto: El IDE busca integrar, no delegar, estas tareas. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1'.
+}
+
+::CE 2.a – Gestión de dependencias en proyectos compartidos::
+Al importar un proyecto existente, la mitad del equipo tarda horas en configurarlo. ¿Qué funcionalidad del IDE reduce ese tiempo?
+{
+=La capacidad de importar/exportar proyectos con configuraciones y dependencias definidas. #Correcto: El texto remarca que los IDEs facilitan mover proyectos completos entre entornos. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1. ¿Qué es un IDE?'.
+~%-33.3333%Obligar a recrear el proyecto desde cero para detectar problemas. #Incorrecto: El IDE intenta evitar trabajo duplicado mediante importación directa. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1'.
+~%-33.3333%Eliminar cualquier configuración previa para comenzar en blanco. #Incorrecto: Se aprovechan configuraciones existentes al importar. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1'.
+~%-33.3333%Convertir automáticamente todos los scripts en código binario ineditable. #Incorrecto: Importar no transforma scripts en binarios; mantiene el proyecto accesible. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1'.
+}
+
+::CE 2.a – Automatización de calidad::
+El director técnico pide informes rápidos de pruebas unitarias tras cada commit. ¿Qué destaca la unidad que ofrecen los IDEs?
+{
+=Integración con herramientas de pruebas automatizadas como JUnit o pytest desde la interfaz. #Correcto: Se citan ejemplos de integración de frameworks de prueba en el IDE. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Deshabilitar el soporte de testing para obligar al uso de scripts externos. #Incorrecto: La idea es facilitar las pruebas desde el IDE, no impedirlas. Consulta `EDES-U2.1.-IDEs.md`, sección '3'.
+~%-33.3333%Registrar commits sin ejecutar tests para ahorrar tiempo. #Incorrecto: Los IDEs pueden automatizar tests, no omitirlos. Consulta `EDES-U2.1.-IDEs.md`, sección '3'.
+~%-33.3333%Generar pruebas aleatorias sin relación con el código. #Incorrecto: Los IDEs integran frameworks que ejecutan pruebas definidas, no aleatorias. Consulta `EDES-U2.1.-IDEs.md`, sección '3'.
+}
+
+::CE 2.a – Necesidad de extensibilidad::
+Una startup cambia de stack cada trimestre. ¿Cómo ayuda la extensibilidad de un IDE según la unidad?
+{
+=Permite añadir soporte incremental a nuevos lenguajes o herramientas instalando extensiones cuando se necesitan. #Correcto: La extensibilidad es señalada como clave para adaptar el IDE a nuevas tecnologías. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1' y '3'.
+~%-33.3333%Requiere recompilar el IDE por cada lenguaje adicional. #Incorrecto: Se instalan extensiones sin recompilar el IDE. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1' y '3'.
+~%-33.3333%Impide añadir más de un lenguaje por política de estabilidad. #Incorrecto: Justo se resalta la compatibilidad multi-lenguaje. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1' y '3'.
+~%-33.3333%Solo permite extensiones oficiales del fabricante, restringiendo a un stack fijo. #Incorrecto: Se mencionan extensiones de terceros para frameworks variados. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1' y '3'.
+}
+
+::CE 2.a – Caso de IDE específico::
+Un laboratorio desarrolla únicamente para iOS y no prevé ampliar el stack. ¿Qué opción encaja mejor con la clasificación del texto?
+{
+=Elegir un IDE específico de la plataforma como Xcode para aprovechar herramientas nativas. #Correcto: Xcode se menciona como IDE especializado para iOS/macOS. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4. IDEs móviles'.
+~%-33.3333%Usar un IDE generalista para no depender de herramientas oficiales. #Incorrecto: Cuando la plataforma está clara, el texto sugiere IDEs específicos. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4'.
+~%-33.3333%Instalar un editor minimalista y escribir todo en ensamblador. #Incorrecto: No se propone abandonar los IDEs cuando se pueden aprovechar herramientas dedicadas. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4'.
+~%-33.3333%Migrar los proyectos a Android Studio para beneficiarse del ecosistema Android. #Incorrecto: Android Studio está orientado a Android, no a iOS. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4'.
+
+// EDES-U2.2 - Módulos y extensiones
+// Banco de preguntas sobre gestión de plugins en IDEs
+// CE 2.b - Instalación, configuración y mantenimiento de extensiones
+
+::CE 2.b – Preparar entorno para sprint::
+Un equipo planea un sprint centrado en análisis estático para Python. Quiere evitar olvidos manuales. ¿Qué combinación describe mejor el enfoque recomendado en la unidad?
+{
+=Instalar extensiones de linting/formateo (Pylint, AutoPEP8) y dejarlas configuradas en el IDE para todos los miembros. #Correcto: El texto explica cómo añadir y configurar estas extensiones en VS Code para mantener calidad automática. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3. Instalación de linting y formateadores de código'.
+~%-33.3333%Requerir que cada persona ejecute scripts de linting desde consola sin extensiones. #Incorrecto: La unidad propone aprovechar extensiones para automatizar la verificación. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3'.
+~%-33.3333%Bloquear AutoPEP8 porque modifica el código sin control humano. #Incorrecto: Se sugiere configurarlo para asegurar estilo consistente. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3'.
+~%-33.3333%Crear un repositorio diferente con el código ya formateado. #Incorrecto: El objetivo es integrar el formateo en el mismo entorno de trabajo. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3'.
+}
+
+::CE 2.b – Diagnóstico de advertencias repetidas::
+Una desarrolladora comenta que ignora las advertencias porque aparecen solo al lanzar la terminal externa. ¿Qué ajuste de la unidad podría ayudar?
+{
+=Configurar AutoPEP8 y Pylint como File Watchers o External Tools en PyCharm para ejecutarlos automáticamente. #Correcto: Se describe cómo vincular estas herramientas a acciones automáticas para recibir feedback inmediato. Consulta `EDES-U2.2.-Modulos.md`, secciones '4.3.2.' y '4.3.4.'.
+~%-33.3333%Eliminar los linters del proyecto para no distraerse. #Incorrecto: La idea es integrarlos mejor, no eliminarlos. Consulta `EDES-U2.2.-Modulos.md`, secciones '4.3.2.' y '4.3.4.'.
+~%-33.3333%Desactivar el guardado automático para impedir la ejecución de herramientas. #Incorrecto: El método propuesto es automatizar al guardar, no impedirlo. Consulta `EDES-U2.2.-Modulos.md`, secciones '4.3.2.' y '4.3.4.'.
+~%-33.3333%Ejecutar los linters sólo al final del sprint para ahorrar tiempo. #Incorrecto: Se busca feedback continuo mediante automatización. Consulta `EDES-U2.2.-Modulos.md`, secciones '4.3.2.' y '4.3.4.'.
+}
+
+::CE 2.b – Nuevo lenguaje en proyecto establecido::
+El área de datos decide añadir scripts Kotlin al repositorio principal gestionado con IntelliJ. ¿Qué acción agiliza la transición?
+{
+=Agregar un módulo específico para Kotlin desde Project Structure y cargar las plantillas necesarias. #Correcto: Se detalla cómo añadir módulos en IntelliJ IDEA para nuevos lenguajes. Consulta `EDES-U2.2.-Modulos.md`, sección '4.2. Instalación de módulos en IntelliJ IDEA'.
+~%-33.3333%Crear un proyecto nuevo separado para Kotlin para evitar conflictos. #Incorrecto: La unidad muestra cómo ampliar el proyecto actual mediante módulos. Consulta `EDES-U2.2.-Modulos.md`, sección '4.2'.
+~%-33.3333%Reescribir el código en Java porque IntelliJ no admite Kotlin. #Incorrecto: IntelliJ soporta módulos para distintos lenguajes. Consulta `EDES-U2.2.-Modulos.md`, sección '4.2'.
+~%-33.3333%Editar manualmente los archivos .iml para añadir soporte experimental. #Incorrecto: El cambio se hace desde la interfaz de Project Structure. Consulta `EDES-U2.2.-Modulos.md`, sección '4.2'.
+}
+
+::CE 2.b – Prototipo con VS Code en hackathon::
+Un grupo instala VS Code desde cero para un hackathon de APIs REST. Necesitan productividad rápida. ¿Qué recomienda el texto?
+{
+=Abrir el Marketplace, instalar extensiones del lenguaje objetivo y configurar solo las que aporten valor al proyecto. #Correcto: Se insiste en acceder al Marketplace y añadir extensiones específicas según las necesidades. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '3.2.'.
+~%-33.3333%Desinstalar todas las extensiones para garantizar rendimiento máximo. #Incorrecto: El enfoque es personalizar con las extensiones adecuadas, no eliminarlas. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '3.2.'.
+~%-33.3333%Trabajar sin extensiones porque VS Code trae todo lo necesario. #Incorrecto: La unidad muestra que VS Code necesita extensiones para cubrir distintos escenarios. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '3.2.'.
+~%-33.3333%Instalar un IDE diferente por cada lenguaje para evitar mezclas. #Incorrecto: Se promueve adaptar VS Code con extensiones, no multiplicar IDEs. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '3.2.'.
+}
+
+::CE 2.b – Auditoría de calidad en PyCharm::
+El área de QA quiere que cada push a rama principal pase por Pylint con parámetros homogéneos. ¿Qué facilita PyCharm según la unidad?
+{
+=Definir External Tools con rutas al intérprete del proyecto para asegurar que todos usan la misma instalación. #Correcto: Se explica cómo configurar External Tools apuntando al intérprete activo para AutoPEP8/Pylint. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.2.'.
+~%-33.3333%Obligar a cada persona a ejecutar scripts manuales sin soporte del IDE. #Incorrecto: La unidad propone usar herramientas integradas para homogeneizar procesos. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.2.'.
+~%-33.3333%Configurar un watcher que sólo informe en tiempo de ejecución, nunca al guardar. #Incorrecto: Los File Watchers pueden ejecutarse al guardar para detectar problemas antes. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.4.'.
+~%-33.3333%Mover la ejecución de Pylint a un servidor externo sin feedback local. #Incorrecto: El objetivo es recibir resultados inmediatos en el IDE. Consulta `EDES-U2.2.-Modulos.md`, secciones '4.3.2.' y '4.3.4.'.
+}
+
+::CE 2.b – Moderar sobrecarga de extensiones::
+Una desarrolladora nota que VS Code tarda más tras instalar muchas extensiones. ¿Qué estrategia menciona la unidad para mantener el entorno ágil?
+{
+=Activar sólo las extensiones imprescindibles para el proyecto y desinstalar las que ya no aportan valor. #Correcto: El texto sugiere gestionar las extensiones desde el Marketplace, incluyendo su desinstalación. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.1.'.
+~%-33.3333%Borrar la carpeta del proyecto para reiniciar el IDE desde cero. #Incorrecto: El problema no está en el proyecto, sino en la gestión de extensiones. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.1.'.
+~%-33.3333%Editar el ejecutable de VS Code para eliminar módulos core. #Incorrecto: No se recomienda manipular el ejecutable; se gestionan extensiones desde la interfaz. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.1.'.
+~%-33.3333%Desactivar el Marketplace para impedir nuevas instalaciones. #Incorrecto: La unidad propone una gestión consciente, no bloquear el Marketplace. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.1.'.
+}
+
+::CE 2.b – Migración a JetBrains Toolbox::
+La empresa adopta JetBrains Toolbox para mantener IDEs. ¿Qué ventaja mantiene el equipo respecto a plugins?
+{
+=Aunque Toolbox gestione versiones, cada IDE conserva el panel de Plugins para instalar, actualizar o desactivar complementos. #Correcto: Se indica que, incluso con Toolbox, los plugins se administran desde File > Settings > Plugins. Consulta `EDES-U2.2.-Modulos.md`, sección '5.3. Gestión de módulos y plugins en JetBrains'.
+~%-33.3333%Los plugins se vuelven incompatibles y deben eliminarse. #Incorrecto: Toolbox no invalida los plugins; siguen gestionándose en el IDE. Consulta `EDES-U2.2.-Modulos.md`, sección '5.3.'.
+~%-33.3333%Las actualizaciones sólo se aplican si se compila el plugin manualmente. #Incorrecto: Se pueden actualizar desde la pestaña Installed sin recompilar. Consulta `EDES-U2.2.-Modulos.md`, sección '5.3.'.
+~%-33.3333%Los IDEs pierden acceso al marketplace propio. #Incorrecto: Toolbox convive con el sistema de plugins interno. Consulta `EDES-U2.2.-Modulos.md`, sección '5.3.'.
+}
+
+::CE 2.b – Seguridad operativa::
+En una auditoría se detecta que varias extensiones están obsoletas. ¿Qué proceso describe la unidad para mantenerlas al día?
+{
+=Revisar regularmente la sección Installed del gestor de plugins/extensiones y aplicar las actualizaciones disponibles. #Correcto: Se recomienda revisar e instalar actualizaciones desde el gestor correspondiente. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.3.'.
+~%-33.3333%Ignorar las alertas porque VS Code y JetBrains se actualizan sin intervención. #Incorrecto: El texto sugiere comprobaciones manuales además de automatismos. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.3.'.
+~%-33.3333%Reescribir las extensiones para abarcar las mejoras deseadas. #Incorrecto: No es necesario reimplementarlas; basta con actualizarlas. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.3.'.
+~%-33.3333%Desactivar todas las extensiones para evitar accesos a internet. #Incorrecto: El riesgo se mitiga manteniéndolas al día, no desactivándolas indiscriminadamente. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.3.'.
+}
+
+::CE 2.b – Cascada de proyectos legado::
+Mantienes microservicios con configuraciones muy distintas. ¿Cómo ayuda la documentación oficial enlazada?
+{
+=Ofrece guías actualizadas para configurar extensiones y plugins según la versión del IDE. #Correcto: Se incluyen enlaces a documentación oficial para seguir las prácticas más recientes. Consulta `EDES-U2.2.-Modulos.md`, sección '6. Enlaces y recursos de interés'.
+~%-33.3333%Indica que todas las extensiones funcionan igual en cualquier versión sin ajustes. #Incorrecto: La documentación aconseja comprobar instrucciones actualizadas. Consulta `EDES-U2.2.-Modulos.md`, sección '6'.
+~%-33.3333%Sugiere usar siempre versiones beta de extensiones para adelantarse. #Incorrecto: No se recomienda usar betas sin necesidad; se aboga por seguir guías oficiales. Consulta `EDES-U2.2.-Modulos.md`, sección '6'.
+~%-33.3333%Propone migrar todo a un IDE único con soporte cerrado. #Incorrecto: La documentación sirve para gestionar extensiones existentes, no para forzar migraciones. Consulta `EDES-U2.2.-Modulos.md`, sección '6'.
+}
+
+::CE 2.b – Refinar onboarding::
+Una nueva incorporación pregunta cómo replicar el entorno de la empresa en su portátil. ¿Qué elementos debe documentar el equipo según la unidad?
+{
+=Las extensiones/módulos instalados, su configuración (por ejemplo File Watchers) y dónde encontrarlos en el IDE. #Correcto: La gestión de módulos/extensiones y sus parámetros forma parte del entorno personalizado descrito. Consulta `EDES-U2.2.-Modulos.md`, secciones '3', '4' y '5'.
+~%-33.3333%Únicamente la ruta del repositorio y ningún complemento opcional. #Incorrecto: Las extensiones y su configuración son esenciales para reproducir el entorno. Consulta `EDES-U2.2.-Modulos.md`, secciones '3', '4' y '5'.
+~%-33.3333%La recomendación de no usar IDEs sino un editor básico para empezar. #Incorrecto: Se busca aprovechar los IDEs y su extensibilidad, no evitarlos. Consulta `EDES-U2.2.-Modulos.md`, secciones '3', '4' y '5'.
+~%-33.3333%Una checklist de atajos de teclado sin relación con extensiones. #Incorrecto: Los atajos son útiles, pero la unidad enfatiza personalización mediante módulos/extensiones. Consulta `EDES-U2.2.-Modulos.md`, secciones '3', '4' y '5'.
+
+// EDES-U2.3 - Personalización y automatización del entorno
+// Banco de preguntas sobre ajustes de IDE y tareas automatizadas
+// CE 2.c - Adaptación del entorno de desarrollo a las necesidades del proyecto
+
+::CE 2.c – Mitigar fatiga visual en despliegues nocturnos::
+El equipo de soporte rota turnos nocturnos y pide reducir la fatiga visual sin perder foco. ¿Qué cambio sugiere la unidad aplicar en VS Code?
+{
+=Seleccionar un tema oscuro desde Archivo > Preferencias > Tema de color (Ctrl+K Ctrl+T). #Correcto: Se menciona el cambio de tema como una personalización rápida para mejorar comodidad. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Desactivar el editor y usar sólo terminal para evitar colores. #Incorrecto: El texto recomienda ajustar el tema, no abandonar el editor. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1'.
+~%-33.3333%Modificar el código fuente de VS Code para forzar modo oscuro. #Incorrecto: No hay que modificar el fuente; existen opciones en configuración. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1'.
+~%-33.3333%Bajar el brillo del monitor desde hardware y no tocar el IDE. #Incorrecto: Aunque ajustar hardware ayuda, la unidad se centra en configuraciones del IDE. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1'.
+}
+
+::CE 2.c – Onboarding con necesidades visuales específicas::
+Una nueva compañera necesita fuente más grande y personalizar atajos para adaptarse a su teclado. ¿Qué pasos cubre la unidad?
+{
+=Cambiar font size desde Configuración y reasignar atajos en Preferencias > Atajos o Ctrl+K Ctrl+S. #Correcto: Se detalla cómo ajustar tamaño de fuente y keybindings en VS Code. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1.'.
+~%-33.3333%Instalar un IDE distinto porque VS Code no permite personalizar nada. #Incorrecto: Se explica cómo personalizar fuente y atajos en VS Code. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1.'.
+~%-33.3333%Modificar manualmente todos los archivos .json del proyecto. #Incorrecto: Los ajustes se realizan desde la interfaz de configuración. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1.'.
+~%-33.3333%Restringir los atajos para que sean iguales para toda la plantilla. #Incorrecto: La unidad anima a personalizar atajos según preferencia. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1.'.
+}
+
+::CE 2.c – Homogeneizar atajos entre IDEs::
+Integrantes acostumbrados a Visual Studio se incorporan a IntelliJ IDEA. ¿Cómo pueden mantener su productividad?
+{
+=Seleccionando el keymap de Visual Studio en File > Settings > Keymap y ajustando lo necesario. #Correcto: Se describe cómo elegir mapas de teclas predefinidos o modificarlos. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.2. Personalización de JetBrains'.
+~%-33.3333%Apagar los atajos y usar únicamente menús contextuales. #Incorrecto: La unidad propone adaptar los atajos, no eliminarlos. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.2.'.
+~%-33.3333%Instalar VS Code para todo el equipo y abandonar IntelliJ. #Incorrecto: Se trata de adaptar el IDE actual, no cambiar de herramienta. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.2.'.
+~%-33.3333%Editar los binarios del IDE para remapear teclas. #Incorrecto: El remapeo se hace desde la configuración, no modificando binarios. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.2.'.
+}
+
+::CE 2.c – Evitar errores de formato recurrentes::
+El repositorio se llena de commits con estilos distintos en Python. ¿Qué automatización propone la unidad para PyCharm?
+{
+=Configurar File Watchers o External Tools que ejecuten autopep8/pylint al guardar. #Correcto: Se explican ambas opciones para asegurar estilo y linting en PyCharm. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2. Automatización en JetBrains'.
+~%-33.3333%Revisar estilo manualmente al final de cada sprint. #Incorrecto: La unidad promueve automatizar para prevenir inconsistencias tempranas. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.'.
+~%-33.3333%Desactivar el guardado automático y confiar en revisiones de terceros. #Incorrecto: Se busca automatizar, no retrasar controles. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.'.
+~%-33.3333%Crear una tarea cron externa sin integración con el IDE. #Incorrecto: Las soluciones propuestas se configuran dentro del IDE. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.'.
+}
+
+::CE 2.c – Ejecución rápida de scripts en VS Code::
+Una compañía de consultoría crea prototipos Python a diario y quiere ejecutarlos con un atajo único. ¿Qué solución describe la unidad?
+{
+=Definir una task en tasks.json que llame a python3 sobre el archivo activo y asociarla a un atajo. #Correcto: Se proporciona un ejemplo de tasks.json y la vinculación a teclas. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.1. Crear una tarea de ejecución automática'.
+~%-33.3333%Modificar launch.json para cada script individual. #Incorrecto: La tarea general evita modificar launch.json repetidamente. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.1.'.
+~%-33.3333%Usar siempre terminal externa para ejecutar manualmente con python. #Incorrecto: La automatización busca evitar ejecuciones manuales. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.1.'.
+~%-33.3333%Instalar un IDE distinto que compile automáticamente. #Incorrecto: VS Code puede automatizar ejecuciones mediante tasks sin cambiar de herramienta. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.1.'.
+}
+
+::CE 2.c – Feedback de pruebas en VS Code::
+Un equipo de QA quiere detectar roturas con pytest al momento. ¿Qué workflow alinea la unidad?
+{
+=Instalar la extensión de pytest y configurar una task que se dispare tras cambios relevantes. #Correcto: Se menciona usar extensiones y tasks para lanzar pruebas automáticamente. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.2. Automatización de pruebas'.
+~%-33.3333%Ejecutar pytest únicamente en el servidor CI al final del día. #Incorrecto: La unidad promueve feedback temprano en el IDE. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.2.'.
+~%-33.3333%Escribir un script bash que cierre el IDE si hay tests fallados. #Incorrecto: El enfoque es recibir resultados, no cerrar herramientas. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.2.'.
+~%-33.3333%Renunciar a pytest por ser incompatible con automatización. #Incorrecto: Precisamente se explica cómo integrarlo en VS Code. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.2.'.
+}
+
+::CE 2.c – Cobertura continua en JetBrains::
+Una startup quiere que los tests Kotlin se ejecuten en segundo plano mientras se programa. ¿Qué recomienda el material?
+{
+=Instalar un plugin de Continuous Testing (como el citado) para lanzar pruebas automáticamente al guardar. #Correcto: Se sugiere usar plugins como Continuous Testing dentro de JetBrains. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.1. Ejecución automática de pruebas'.
+~%-33.3333%Esperar a que el pipeline CI detecte errores horas después. #Incorrecto: La idea es reaccionar antes mediante ejecución continua. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.1.'.
+~%-33.3333%Reescribir la suite de tests en shell scripts. #Incorrecto: El texto recomienda usar las capacidades del IDE, no reemplazarlas por scripts. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.1.'.
+~%-33.3333%Desactivar los tests en local para acelerar la compilación. #Incorrecto: Se pretende ejecutarlos con frecuencia, no desactivarlos. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.1.'.
+}
+
+::CE 2.c – Preparativos antes de ejecutar un microservicio::
+Antes de lanzar un microservicio en local, el equipo necesita borrar caches temporales y arrancar un contenedor auxiliar. ¿Cómo se automatiza en JetBrains?
+{
+=Añadiendo tareas “Before launch” en la configuración de ejecución para ejecutar scripts previos. #Correcto: La unidad explica cómo usar Before Launch para tareas preparatorias. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.2. Configuración de tareas previas a la ejecución'.
+~%-33.3333%Modificar el código del microservicio para que haga el trabajo al inicio. #Incorrecto: Se busca hacerlo desde el IDE, no incrustarlo en el código. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.2.'.
+~%-33.3333%Cerrar el IDE y lanzar todo manualmente desde terminal. #Incorrecto: El objetivo es automatizar dentro del flujo de ejecución. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.2.'.
+~%-33.3333%Eliminar las caches manualmente después de cada prueba. #Incorrecto: Las tareas “Before launch” evitan trabajo manual repetido. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.2.'.
+}
+
+::CE 2.c – Documentación viva del entorno::
+El equipo escribe una guía de estilos internos. ¿Qué debe incluir para que otras personas repliquen el entorno según la unidad?
+{
+=Una recopilación de temas, fuentes, atajos personalizados y scripts/tareas automatizadas usados. #Correcto: La personalización y automatización forman parte del entorno que conviene documentar. Consulta `EDES-U2.3.-Personalizacion.md`, secciones '2' y '3'.
+~%-33.3333%Solo una lista de dependencias del proyecto sin detalles del IDE. #Incorrecto: El documento enfatiza el impacto de personalización/automatización, que también debe registrarse. Consulta `EDES-U2.3.-Personalizacion.md`, secciones '2' y '3'.
+~%-33.3333%Recomendaciones genéricas sin referenciar configuraciones concretas. #Incorrecto: Para replicar el entorno se necesitan detalles específicos de configuración. Consulta `EDES-U2.3.-Personalizacion.md`, secciones '2' y '3'.
+~%-33.3333%Notas sobre hardware obligatorio, sin mencionar el software. #Incorrecto: El foco está en ajustes de software dentro del IDE. Consulta `EDES-U2.3.-Personalizacion.md`, secciones '2' y '3'.
+}
+
+::CE 2.c – Mantenerse actualizado::
+La documentación de la unidad incluye enlaces externos. ¿Para qué se recomienda consultarlos?
+{
+=Para verificar instrucciones al día sobre personalización y automatización en las versiones actuales del IDE. #Correcto: Se anima a revisar la documentación oficial debido a posibles cambios. Consulta `EDES-U2.3.-Personalizacion.md`, sección '4. Enlaces y recursos de interés'.
+~%-33.3333%Para descargar configuraciones cerradas que no se puedan modificar. #Incorrecto: Los enlaces sirven para aprender a configurar, no para bloquear ajustes. Consulta `EDES-U2.3.-Personalizacion.md`, sección '4'.
+~%-33.3333%Para sustituir el IDE por herramientas ajenas a las vistas. #Incorrecto: Los enlaces amplían la información sobre los IDEs ya descritos. Consulta `EDES-U2.3.-Personalizacion.md`, sección '4'.
+~%-33.3333%Para aplicar automáticamente cualquier cambio sin revisión. #Incorrecto: La documentación orienta, pero es la persona quien decide qué ajustes aplicar. Consulta `EDES-U2.3.-Personalizacion.md`, sección '4'.
+
+// EDES-U2.4 - Actualización de IDEs
+// Banco de preguntas sobre mantenimiento del entorno
+// CE 2.d - Configuración de actualizaciones en IDEs
+
+::CE 2.d – Riesgo de vulnerabilidades::
+Un auditor detecta una vulnerabilidad crítica en una versión antigua del IDE. ¿Qué argumento ofrece la unidad para justificar la actualización inmediata?
+{
+=Actualizar aporta parches de seguridad además de nuevas funciones y correcciones de errores. #Correcto: Se enumeran las mejoras de seguridad como motivo clave para actualizar. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2. ¿Por qué es importante actualizar tu IDE?'.
+~%-33.3333%La prioridad es mantener la versión actual para evitar cambios de interfaz. #Incorrecto: Se anima a actualizar para beneficiarse de mejoras, incluida seguridad. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2'.
+~%-33.3333%Las vulnerabilidades sólo afectan a IDEs de pago. #Incorrecto: El texto no diferencia; cualquier IDE puede verse afectado. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2'.
+~%-33.3333%La seguridad depende exclusivamente del sistema operativo, no del IDE. #Incorrecto: Se afirma que las actualizaciones del IDE también corrigen vulnerabilidades propias. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2'.
+}
+
+::CE 2.d – Políticas internas en JetBrains::
+La empresa requiere que IntelliJ IDEA busque nuevas versiones semanalmente. ¿Qué ajuste describe la unidad?
+{
+=Activar las comprobaciones automáticas en File > Settings > Appearance & Behavior > System Settings > Updates. #Correcto: Se especifica esa ruta para configurar búsquedas de actualización. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1. Configuración de actualizaciones automáticas del IDE'.
+~%-33.3333%Modificar manualmente el archivo idea.exe para forzar notificaciones. #Incorrecto: Las opciones se gestionan desde el panel de configuración. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1'.
+~%-33.3333%Instalar un plugin de terceros para comprobar versiones. #Incorrecto: El IDE ya incorpora ese control en la sección Updates. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1'.
+~%-33.3333%Borrar la carpeta de configuración para que se regenere sola. #Incorrecto: No es necesario; basta con habilitar la opción en Settings. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1'.
+}
+
+::CE 2.d – Decidir canal de actualización::
+Una startup quiere probar funciones nuevas de JetBrains pero puede asumir algún fallo. ¿Qué propone la unidad?
+{
+=Elegir el canal Early Access Program (EAP) sabiendo que prioriza novedades sobre estabilidad. #Correcto: Se explican los canales Release y EAP y sus implicaciones. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1.'.
+~%-33.3333%Forzar canal Release para recibir las novedades antes que nadie. #Incorrecto: Release prioriza estabilidad, no novedades tempranas. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1.'.
+~%-33.3333%Instalar simultáneamente todas las versiones para comparar. #Incorrecto: La unidad no sugiere mantener múltiples instalaciones, sino elegir un canal. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1.'.
+~%-33.3333%Editar el registro del sistema operativo para desbloquear funciones ocultas. #Incorrecto: Los canales se seleccionan desde la configuración del IDE. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1.'.
+}
+
+::CE 2.d – Mantenimiento de plugins JetBrains::
+Durante una revisión se detectan plugins obsoletos en PyCharm. ¿Qué práctica recomienda el texto?
+{
+=Revisar File > Settings > Plugins, pestaña Installed, y aplicar las actualizaciones disponibles. #Correcto: Se indica allí cómo gestionar y actualizar plugins. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.2. Actualización de plugins'.
+~%-33.3333%Esperar a la próxima versión del IDE porque los plugins se actualizan solos. #Incorrecto: Se recomienda comprobar y actualizar plugins desde el gestor. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.2.'.
+~%-33.3333%Eliminar todos los plugins para evitar avisos repetidos. #Incorrecto: La solución es actualizarlos, no desinstalarlos indiscriminadamente. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.2.'.
+~%-33.3333%Recompilar los plugins a mano con Maven. #Incorrecto: El IDE gestiona las actualizaciones sin necesidad de recompilaciones manuales. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.2.'.
+}
+
+::CE 2.d – Uso de JetBrains Toolbox::
+Un equipo centraliza instalaciones con JetBrains Toolbox. ¿Cómo se sigue manteniendo el control de plugins?
+{
+=Toolbox actualiza IDEs, pero cada IDE conserva el gestor de plugins para instalarlos o actualizarlos. #Correcto: Se explica que Toolbox convive con la gestión interna de plugins. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1.' y '3.2.'.
+~%-33.3333%Los plugins se bloquean y Toolbox no permite cambios. #Incorrecto: Toolbox no bloquea el uso del panel de plugins. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, secciones '3.1.' y '3.2.'.
+~%-33.3333%Se necesita un script externo para actualizar plugins. #Incorrecto: El panel de plugins sigue disponible. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, secciones '3.1.' y '3.2.'.
+~%-33.3333%Es obligatorio instalar de nuevo el IDE para cada plugin nuevo. #Incorrecto: Los plugins se gestionan sin reinstalar el IDE completo. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, secciones '3.1.' y '3.2.'.
+}
+
+::CE 2.d – Política de VS Code en cloud privado::
+Un equipo con VS Code desconectado de internet quiere decidir cuándo actualizar. ¿Qué acción sugiere la unidad?
+{
+=Cambiar “Update: Mode” a Manual desde la configuración y ejecutar Ayuda > Buscar actualizaciones cuando proceda. #Correcto: Se menciona esta opción para controlar cuándo aplicar nuevas versiones. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1. Configuración de actualizaciones automáticas del editor'.
+~%-33.3333%Eliminar las carpetas de usuario cada semana para reiniciar la versión. #Incorrecto: La unidad describe el ajuste Update: Mode, no borrados periódicos. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1.'.
+~%-33.3333%Duplicar el ejecutable del IDE y alternar versiones manualmente. #Incorrecto: La configuración permite controlar actualizaciones sin duplicar ejecutables. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1.'.
+~%-33.3333%Instalar Visual Studio Enterprise para gestionar VS Code. #Incorrecto: Las opciones de VS Code son suficientes. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1.'.
+}
+
+::CE 2.d – Gestión de extensiones en VS Code::
+Un desarrollador nota que una extensión crítica no se actualiza sola. ¿Qué recomienda el documento?
+{
+=Verificar que “Extensions: Auto Update” esté habilitado y, si procede, actualizar manualmente desde el panel de extensiones. #Correcto: Se describe la opción de auto update y la actualización desde el panel. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.2. Actualización de extensiones'.
+~%-33.3333%Desinstalar la extensión para que VS Code vuelva a instalarla al arrancar. #Incorrecto: No es necesario desinstalar, se puede actualizar directamente. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.2.'.
+~%-33.3333%Esperar a que el sistema operativo lance un parche. #Incorrecto: La unidad explica cómo gestionar las extensiones dentro de VS Code. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.2.'.
+~%-33.3333%Modificar la extensión manualmente para elevar el número de versión. #Incorrecto: Las actualizaciones se obtienen desde el Marketplace o mediante auto update. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.2.'.
+}
+
+::CE 2.d – Control semanal de versiones::
+El responsable de DevOps quiere un informe semanal de versiones instaladas en VS Code y JetBrains. ¿Qué fuentes describe la unidad para extraer la información?
+{
+=Usar el menú Ayuda > Buscar actualizaciones (VS Code) y la sección Updates (JetBrains) junto al gestor de plugins. #Correcto: Ambos apartados proporcionan datos sobre versiones y plugins disponibles. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, secciones '3.1.', '3.2.' y '4.1.'.
+~%-33.3333%Consultar un registro en la nube que se actualiza sin intervención. #Incorrecto: Se mencionan menús dentro del IDE, no registros externos automáticos. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, secciones '3.1.', '3.2.' y '4.1.'.
+~%-33.3333%Clonar el repositorio del IDE para revisar commits recientes. #Incorrecto: La unidad propone revisar las opciones de actualización dentro del propio IDE. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, secciones '3.1.', '3.2.' y '4.1.'.
+~%-33.3333%Ejecutar scripts que borren caches y las reconstruyan. #Incorrecto: Los informes se obtienen desde los menús de actualización, no borrando caches. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, secciones '3.1.', '3.2.' y '4.1.'.
+}
+
+::CE 2.d – Impacto en compatibilidad con frameworks::
+Tras actualizar VS Code, un equipo observa mejoras en la extensión de Python relacionadas con nuevos frameworks. ¿Qué lección refleja esto según el texto?
+{
+=Las actualizaciones aportan compatibilidad con nuevas tecnologías y evitan quedarse atrás. #Correcto: La unidad menciona explícitamente la compatibilidad como motivo para actualizar. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2. ¿Por qué es importante actualizar tu IDE?'.
+~%-33.3333%Las actualizaciones sólo cambian el aspecto visual sin tocar funcionalidades. #Incorrecto: Se listan mejoras de compatibilidad, seguridad y rendimiento. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2'.
+~%-33.3333%Es mejor bloquear extensiones para mantener versiones viejas estables. #Incorrecto: Se anima a actualizar para aprovechar mejoras. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2'.
+~%-33.3333%Solo las versiones pagas incluyen compatibilidad con frameworks. #Incorrecto: La compatibilidad depende de actualizaciones, no del coste. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2'.
+}
+
+::CE 2.d – Consultar recursos oficiales::
+Antes de planificar un cambio mayor, el equipo busca instrucciones actuales. ¿Qué propone la unidad?
+{
+=Revisar la documentación oficial enlazada de JetBrains y Visual Studio Code para confirmar procedimientos vigentes. #Correcto: Se proporcionan enlaces directos a documentación oficial para mantenerse al día. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '5. Recursos adicionales'.
+~%-33.3333%Acudir a foros no moderados con información no verificada. #Incorrecto: Se recomienda la documentación oficial como fuente fiable. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '5'.
+~%-33.3333%Basarse en apuntes de cursos antiguos sin confirmarlos. #Incorrecto: El texto sugiere verificar instrucciones actualizadas. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '5'.
+~%-33.3333%Desestimar la documentación porque las interfaces no cambian. #Incorrecto: Precisamente se aconseja revisarla por posibles cambios. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '5'.
+
+// EDES-U2.5 - Ejecutables en IDEs
+// Banco de preguntas sobre generación y ejecución de programas
+// CE 2.e - Creación de ejecutables en distintos lenguajes e IDEs
+
+::CE 2.e – Reducir contexto en mantenimiento::
+Una empresa mantiene módulos Kotlin y Java del mismo servicio en IntelliJ IDEA. ¿Qué ventaja práctica proporciona hacerlo desde un único IDE según la unidad?
+{
+=Permite compilar y ejecutar ambos lenguajes sin cambiar de herramienta, reutilizando configuraciones y flujos. #Correcto: El texto muestra cómo IntelliJ gestiona proyectos Kotlin y Java en paralelo. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2. Generación de ejecutables a partir de código fuente en distintos lenguajes en un mismo IDE'.
+~%-33.3333%Forzar a separar los equipos porque el IDE sólo soporta un lenguaje a la vez. #Incorrecto: Se recalca que un mismo IDE soporta varios lenguajes. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2'.
+~%-33.3333%Reescribir el código Kotlin a Java para simplificar la ejecución. #Incorrecto: El ejemplo demuestra que Kotlin y Java conviven en IntelliJ. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2'.
+~%-33.3333%Compilar manualmente desde terminal para cada lenguaje. #Incorrecto: El IDE ejecuta los proyectos desde la interfaz (Shift+F10). Consulta `EDES-U2.5.-Ejecutables.md`, sección '2'.
+}
+
+::CE 2.e – Tutoría a nuevo integrante Kotlin::
+Un compañero nuevo no sabe cómo validar localmente un algoritmo Kotlin en IntelliJ IDEA. ¿Qué pasos conceptuales refleja la unidad?
+{
+=Crear el proyecto Kotlin/JVM, añadir el archivo con la lógica y ejecutar desde el IDE para ver la salida. #Correcto: La sección explica cómo crear el proyecto, escribir el código y ejecutarlo con Run. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+~%-33.3333%Instalar un plug-in externo para compilar Kotlin porque IntelliJ no lo admite de serie. #Incorrecto: IntelliJ soporta Kotlin de forma nativa. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2.'.
+~%-33.3333%Escribir el código en un archivo .java y traducirlo luego. #Incorrecto: Se trabaja directamente con Kotlin en IntelliJ. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2.'.
+~%-33.3333%Ejecutar scripts externos que transformen el código antes de compilar. #Incorrecto: No es necesario usar scripts; el IDE lo ejecuta directamente. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2.'.
+}
+
+::CE 2.e – Comparar Kotlin y Java en producción::
+El equipo quiere demostrar a negocio que la migración a Kotlin no obliga a cambiar de entorno. ¿Qué evidencia proporciona el ejemplo?
+{
+=Ambos programas muestran exactamente la misma salida (cuenta atrás y “¡Despegue!”) ejecutados desde el mismo IDE. #Correcto: La unidad subraya que los dos lenguajes producen igual resultado en IntelliJ. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2.' y '2.3.'.
+~%-33.3333%Los resultados difieren y Kotlin produce errores por defecto. #Incorrecto: Se muestra que los resultados son idénticos. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2.' y '2.3.'.
+~%-33.3333%El IDE obliga a configurar dos consolas distintas para cada lenguaje. #Incorrecto: El mismo IDE ejecuta ambos sin duplicidad. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2.' y '2.3.'.
+~%-33.3333%La migración requiere abandonar IntelliJ y usar herramientas separadas. #Incorrecto: Precisamente se demuestra la convivencia en el mismo IDE. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2.' y '2.3.'.
+}
+
+::CE 2.e – Sprint de experimentación Python::
+El equipo de datos trabaja con PyCharm y VS Code. ¿Qué práctica, alineada con la unidad, asegura que un script se comporte igual en ambos IDE?
+{
+=Usar el mismo script `main.py` y ejecutarlo desde cada IDE con sus respectivas funciones Run para comparar salidas. #Correcto: Se ejemplifica que el mismo código produce idéntica salida en PyCharm y VS Code. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '3.2.' y '3.3.'.
+~%-33.3333%Crear variantes del script adaptadas a cada IDE. #Incorrecto: El texto muestra que el mismo archivo funciona en ambos entornos. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '3.2.' y '3.3.'.
+~%-33.3333%Compilar el script en C para ejecutarlo sin IDE. #Incorrecto: El ejemplo se centra en Python, ejecutado desde los IDEs. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '3.2.' y '3.3.'.
+~%-33.3333%Renunciar a VS Code porque no permite ejecutar Python con extensión oficial. #Incorrecto: La unidad explica cómo instalar la extensión de Python en VS Code. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3.'.
+}
+
+::CE 2.e – Sesión de pairing remoto::
+Un desarrollador con PyCharm y otro con VS Code depuran un comportamiento extraño en un script Python compartido. ¿Qué consejo ofrece el texto?
+{
+=Asegurarse de tener la extensión de Python en VS Code y usar las funciones Run/Debug equivalentes para observar el mismo resultado. #Correcto: El documento detalla la ejecución en ambos IDEs con la extensión oficial. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3.'.
+~%-33.3333%Forzar a ambos a usar el mismo IDE para que los resultados sean comparables. #Incorrecto: Se muestra que distintos IDEs logran igual salida si están bien configurados. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '3.2.' y '3.3.'.
+~%-33.3333%Desactivar la salida estándar para evitar comparaciones. #Incorrecto: La meta es comparar salidas idénticas. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '3.2.' y '3.3.'.
+~%-33.3333%Convertir el script a Kotlin para usar IntelliJ. #Incorrecto: El ejemplo habla explícitamente de Python en PyCharm y VS Code. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '3.2.' y '3.3.'.
+}
+
+::CE 2.e – Demo corporativa::
+La dirección quiere ver que el proceso de generar ejecutables es reproducible en distintos entornos. ¿Qué narrativa basada en la unidad resultaría convincente?
+{
+=Mostrar el mismo algoritmo de cuenta atrás funcionando en IntelliJ (Kotlin/Java) y en PyCharm/VS Code (Python), destacando la portabilidad del flujo. #Correcto: Las secciones demuestran ejecución equivalente en varios IDEs y lenguajes. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+~%-33.3333%Argumentar que cada lenguaje necesita un equipo especializado y herramientas distintas. #Incorrecto: Se evidencia que se puede trabajar con distintos lenguajes desde los mismos IDEs. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+~%-33.3333%Ocultar las diferencias y decir que sólo se usa un lenguaje en toda la empresa. #Incorrecto: La unidad anima a mostrar la convivencia de lenguajes/IDEs. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+~%-33.3333%Migrar el repositorio a C++ para evitar configuraciones cruzadas. #Incorrecto: El contenido se centra en Kotlin, Java y Python. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+}
+
+::CE 2.e – Integración continua local::
+Antes de integrar cambios, un equipo quiere validar tanto el módulo Java como el Kotlin en una máquina de desarrollo. ¿Cómo ayuda IntelliJ según la unidad?
+{
+=Permite definir configuraciones de ejecución independientes para cada lenguaje dentro del mismo proyecto y ejecutarlas consecutivamente. #Correcto: Se explica cómo ejecutar archivos Kotlin y Java desde el mismo IDE. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2'.
+~%-33.3333%Obliga a cerrar y abrir el IDE entre lenguajes para evitar conflictos de compilación. #Incorrecto: La unidad muestra la ejecución consecutiva en el mismo IDE. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2'.
+~%-33.3333%Requiere duplicar el repositorio: uno para Kotlin y otro para Java. #Incorrecto: El texto describe un único proyecto con ambos lenguajes. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2'.
+~%-33.3333%Genera ejecutables sin permitir su ejecución directa en el IDE. #Incorrecto: Se ejecuta directamente usando Run. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2'.
+}
+
+::CE 2.e – Formación cruzada::
+Un plan de formación rotativa quiere mostrar a la plantilla cómo portar algoritmos entre lenguajes. ¿Qué secuencia de la unidad puede usarse?
+{
+=Implementar la misma cuenta atrás en Kotlin y Java dentro de IntelliJ, y luego reescribirla en Python para ejecutarla en PyCharm/VS Code. #Correcto: Se presentan estos ejemplos para ilustrar la ejecución en diversos lenguajes y entornos. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2.', '2.3.' y '3'.
+~%-33.3333%Elegir un solo lenguaje y desincentivar el aprendizaje de otros. #Incorrecto: La unidad fomenta experimentar con distintos lenguajes. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+~%-33.3333%Compilar los algoritmos a binarios y ocultar el código fuente. #Incorrecto: El objetivo es mostrar el código y la ejecución en el IDE. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+~%-33.3333%Usar exclusivamente scripts shell para demostrar versatilidad. #Incorrecto: El foco son lenguajes y IDEs mencionados. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+}
+
+::CE 2.e – Soporte remoto en producción::
+Una incidencia requiere validar un bug en un script Python desde un portátil sin PyCharm instalado. ¿Qué solución basada en la unidad se puede aplicar?
+{
+=Instalar VS Code, añadir la extensión oficial de Python y ejecutar el mismo `main.py` para replicar la incidencia. #Correcto: Se muestra cómo VS Code, con su extensión, ejecuta el mismo script que PyCharm. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3.'.
+~%-33.3333%Reescribir el script en Java para ejecutarlo en cualquier IDE. #Incorrecto: La unidad enseña que VS Code puede ejecutar Python con la extensión apropiada. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3.'.
+~%-33.3333%Esperar a tener acceso a PyCharm porque VS Code no sirve en urgencias. #Incorrecto: VS Code con extensión de Python es suficiente para validar el script. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3.'.
+~%-33.3333%Ejecutar el script sin extensión y confiar en el resultado parcial. #Incorrecto: Se recomienda instalar la extensión para soporte completo. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3.'.
+}
+
+::CE 2.e – Clases de refuerzo::
+El profesorado quiere que el alumnado entienda la importancia de IDEs multiplataforma. ¿Qué experiencia propone la unidad que pueden replicar?
+{
+=Comparar un mismo programa de cuenta atrás ejecutado en IntelliJ (distintos lenguajes) y en PyCharm/VS Code, resaltando las herramientas disponibles. #Correcto: El documento ofrece estos ejemplos como demostración práctica. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+~%-33.3333%Obligar a cada alumna a usar un único IDE durante todo el curso. #Incorrecto: La unidad anima a experimentar con múltiples entornos. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+~%-33.3333%Ejecutar scripts desde terminal para no depender de IDEs. #Incorrecto: El foco está en las capacidades del IDE. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+~%-33.3333%Ocultar las diferencias para que crean que todos los IDEs son iguales. #Incorrecto: La intención es evidenciar las funciones de cada entorno. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2' y '3'.
+
+// EDES-U2.6 - Evaluación de los IDEs
+// Banco de preguntas sobre comparación de entornos de desarrollo
+// CE 2.f - Análisis crítico de IDEs según necesidades del proyecto
+
+::CE 2.f – Proyecto web con Python y QA exigente::
+Una empresa desarrolla un portal Django grande con pipelines de calidad estrictos. ¿Cuál de los IDEs descritos responde mejor a esta necesidad?
+{
+=PyCharm, porque ofrece soporte avanzado para Python y frameworks web, además de refactorización y depuración especializada. #Correcto: La unidad destaca PyCharm para proyectos Python con herramientas nativas como soporte Django. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
+~%-33.3333%IntelliJ IDEA, ya que no soporta Python de forma nativa. #Incorrecto: IntelliJ se enfoca en Kotlin/Java; para Python el texto recomienda PyCharm. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1.'.
+~%-33.3333%Visual Studio Code, porque carece de extensiones específicas y obliga a herramientas externas. #Incorrecto: VS Code necesita extensiones; PyCharm ya trae utilidades orientadas a Django. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1.'.
+~%-33.3333%Un editor sin autocompletado para evitar depender del IDE. #Incorrecto: La unidad promueve IDEs con apoyo fuerte para frameworks. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1.'.
+}
+
+::CE 2.f – Aplicación multiplataforma Kotlin::
+Una startup desarrolla microservicios en Kotlin y busca integraciones con Gradle y análisis avanzado. ¿Qué IDE encaja según la comparación?
+{
+=IntelliJ IDEA, porque aporta soporte nativo para Kotlin y herramientas como Gradle/Maven y análisis estático. #Correcto: La sección dedicada a IntelliJ subraya estas capacidades. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2. IntelliJ IDEA (Kotlin)'.
+~%-33.3333%PyCharm, dado que trae plantillas específicas para Kotlin. #Incorrecto: PyCharm se especializa en Python; IntelliJ se orienta a Kotlin/Java. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2.'.
+~%-33.3333%Visual Studio Code, porque su ligereza sustituye la integración con Gradle. #Incorrecto: VS Code puede ampliarse, pero no ofrece de serie la integración profunda con Gradle/Maven descrita. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2.'.
+~%-33.3333%Un editor minimalista para evitar sobrecarga de herramientas. #Incorrecto: La unidad valora las funciones de IntelliJ para proyectos Kotlin complejos. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2.'.
+}
+
+::CE 2.f – y PyCharm vs VS Code para scripting rápido::
+Un equipo de prototipos Python valora rapidez de arranque y flexibilidad para mezclar tecnologías. ¿Qué diagnóstico da la unidad?
+{
+=Visual Studio Code, por su ligereza y extensibilidad, cuando se requiere un editor rápido para múltiples lenguajes. #Correcto: Se señala que VS Code es ligero y extensible para escenarios mixtos. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3. Visual Studio Code (Python)'.
+~%-33.3333%PyCharm, porque arranca más rápido y consume menos recursos. #Incorrecto: Se menciona que PyCharm puede ser más pesado frente a VS Code. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3.'.
+~%-33.3333%IntelliJ IDEA, ya que carece de extensiones y eso simplifica la configuración. #Incorrecto: IntelliJ se orienta a Kotlin/Java; no es el enfoque ligero que se describe. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3.'.
+~%-33.3333%Rechazar IDEs y programar solo con bloc de notas. #Incorrecto: El texto compara IDEs y destaca cuál se adapta mejor al caso. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3.'.
+}
+
+::CE 2.f – Equipo remoto con repositorios complejos::
+Una consultora trabaja con personal remoto y múltiples ramas. Necesitan evitar errores de merges. ¿Qué característica común de los IDEs apoya este flujo?
+{
+=Integración con sistemas de control de versiones como Git para gestionar ramas, commits y revisiones desde el IDE. #Correcto: Se indica que todos los IDEs analizados integran Git. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.3. Control de versiones integrado'.
+~%-33.3333%Ausencia de control de versiones para obligar a usar correos manuales. #Incorrecto: Se resalta la integración con Git, no su ausencia. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.3.'.
+~%-33.3333%Compatibilidad con un único repositorio central que se bloquea al primer cambio. #Incorrecto: El texto habla de colaboración mediante herramientas de versión, no de bloqueos. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.3.'.
+~%-33.3333%La necesidad de cerrar el IDE para lanzar comandos de Git. #Incorrecto: La integración evita salir del IDE. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.3.'.
+}
+
+::CE 2.f – Depuración de incidentes complejos::
+Durante una guardia, hay que inspeccionar el flujo de una API. ¿Qué recurso comparten los IDEs para afrontar este escenario según la unidad?
+{
+=Depuradores integrados que permiten breakpoints y seguimiento paso a paso con inspección de variables. #Correcto: La depuración se describe como característica común relevante. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2. Depurador integrado'.
+~%-33.3333%Ejecutar el código sin detenerlo para evitar bloqueos. #Incorrecto: El texto apuesta por usar el depurador integrado. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2.'.
+~%-33.3333%Generar logs y leerlos en otro programa porque el IDE no ayuda. #Incorrecto: Se indica que los IDEs ofrecen depuración dentro de la propia herramienta. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2.'.
+~%-33.3333%Reescribir el módulo en otro lenguaje para cazar el bug. #Incorrecto: La unidad no propone reescrituras para depurar. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2.'.
+}
+
+::CE 2.f – Decidir IDE para data scientists::
+Un grupo de data scientists combina Python, notebooks y scripts ad-hoc. Buscan un entorno ligero que puedan ampliar caso a caso. ¿Qué sugiere el análisis?
+{
+=Visual Studio Code, por su terminal integrada, rapidez y extensiones adaptables a distintos lenguajes. #Correcto: Se menciona que VS Code es ligero y extensible, adecuado para escenarios variados. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3.'.
+~%-33.3333%IntelliJ IDEA, porque se centra en Kotlin y no admite scripts. #Incorrecto: IntelliJ está pensado para proyectos Kotlin/Java, no scripts ligeros. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2.'.
+~%-33.3333%PyCharm, ya que obliga a una estructura rígida de proyectos. #Incorrecto: PyCharm es más pesado; la unidad recomienda VS Code para rapidez y flexibilidad. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3.'.
+~%-33.3333%Un editor sin extensiones para evitar decisiones adicionales. #Incorrecto: El texto valora la extensibilidad de VS Code para estos casos. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3.'.
+}
+
+::CE 2.f – Comparativa de rendimiento::
+Un cliente pregunta por qué distintas herramientas tardan en abrirse. ¿Qué tablas o conclusiones aporta la unidad?
+{
+=Muestra que VS Code es más ligero y rápido, mientras PyCharm e IntelliJ ofrecen más funciones a costa de mayor carga. #Correcto: La tabla resume estas diferencias de rendimiento. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4. Comparación de rendimiento y características'.
+~%-33.3333%Asegura que los tres IDEs consumen la misma memoria y tiempo. #Incorrecto: La comparación destaca diferencias en peso y rapidez. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4'.
+~%-33.3333%Afirma que PyCharm siempre es más rápido que VS Code. #Incorrecto: Se indica que VS Code es el más ligero. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4'.
+~%-33.3333%Concluye que IntelliJ es el más ligero porque soporta menos plugins. #Incorrecto: Se menciona que IntelliJ es robusto y no necesariamente el más ligero. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4'.
+}
+
+::CE 2.f – Plan estratégico de herramientas::
+La CTO quiere definir una guía: IDE para backend Kotlin, IDE para Python con requisitos complejos, y alternativa flexible. ¿Qué combinación se alinea con el análisis?
+{
+=IntelliJ IDEA para Kotlin, PyCharm para Python empresarial, VS Code como opción flexible y ligera. #Correcto: Cada apartado del documento atribuye esas fortalezas a los respectivos IDEs. Consulta `EDES-U2.6.-Evaluacion.md`, secciones '3.1.', '3.2.' y '3.3.'.
+~%-33.3333%VS Code para Kotlin, PyCharm para scripts y IntelliJ como editor de texto. #Incorrecto: No coincide con las ventajas descritas. Consulta `EDES-U2.6.-Evaluacion.md`, secciones '3.1.', '3.2.' y '3.3.'.
+~%-33.3333%Un único IDE universal, dado que todos ofrecen idénticas funciones. #Incorrecto: La unidad muestra que cada IDE tiene puntos fuertes distintos. Consulta `EDES-U2.6.-Evaluacion.md`, secciones '3.1.', '3.2.' y '3.3.'.
+~%-33.3333%Decidir en función del sistema operativo, ignorando requisitos técnicos. #Incorrecto: El análisis se enfoca en lenguaje y necesidades, no en SO. Consulta `EDES-U2.6.-Evaluacion.md`, secciones '3.1.', '3.2.' y '3.3.'.
+}
+
+::CE 2.f – Cultura DevOps en evolución::
+Tu compañía adopta prácticas DevOps y busca IDEs que faciliten automatizaciones y pruebas. ¿Qué componente compartido respalda esta estrategia?
+{
+=Soporte para extensiones/plugins que añaden herramientas como linters, pruebas y analizadores. #Correcto: Se destaca que los IDEs admiten extensiones para ampliar flujos DevOps. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.4. Soporte para extensiones o plugins'.
+~%-33.3333%La ausencia de extensiones para mantener los proyectos bajo control. #Incorrecto: La unidad valora la extensibilidad. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.4.'.
+~%-33.3333%Un modo bloqueado que impide instalar nuevas herramientas. #Incorrecto: La capacidad de extensión es considerada una ventaja. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.4.'.
+~%-33.3333%El uso exclusivo de scripts personalizados fuera del IDE. #Incorrecto: Las extensiones permiten integrar estas herramientas en el IDE. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.4.'.
+}
+
+::CE 2.f – Decisión basada en lenguaje principal::
+Un líder técnico resume: “El IDE que elijamos debe depender del lenguaje y tipo de proyecto”. ¿Está alineado con la conclusión del tema?
+{
+=Sí, la unidad recalca que la elección del IDE depende del lenguaje, necesidades de calidad y tipo de proyecto. #Correcto: La conclusión afirma que la selección responde al contexto. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5. Conclusión'.
+~%-33.3333%No, se recomienda un único IDE para todo tipo de proyectos. #Incorrecto: Se insiste en elegir la herramienta según el caso. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5'.
+~%-33.3333%No, la conclusión alienta a rotar IDEs sin considerar el contexto. #Incorrecto: Precisamente se evalúan pros y contras por contexto. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5'.
+~%-33.3333%No, afirma que sólo se debe usar un editor plano. #Incorrecto: La conclusión compara IDEs, no sugiere abandonar herramientas. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5'.

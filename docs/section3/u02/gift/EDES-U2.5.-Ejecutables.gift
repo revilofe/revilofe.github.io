@@ -1,0 +1,93 @@
+// EDES-U2.5 - Ejecutables en IDEs
+// Banco de preguntas sobre generación y ejecución de programas
+// CE 2.e - Creación de ejecutables en distintos lenguajes e IDEs
+
+::CE 2.e – Objetivo de la actividad en IntelliJ IDEA::
+¿Qué demuestra la práctica de Kotlin y Java en IntelliJ IDEA?
+{
+=Que el mismo IDE puede compilar y ejecutar proyectos en distintos lenguajes en paralelo. #Correcto: Se busca evidenciar que IntelliJ gestiona código Kotlin y Java en un solo entorno. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2. Generación de ejecutables a partir de código fuente en distintos lenguajes en un mismo IDE'.
+~%-33.3333%Que Kotlin y Java requieren siempre IDEs diferentes para ejecutarse. #Incorrecto: Justo se muestra que IntelliJ maneja ambos lenguajes. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2. Generación de ejecutables a partir de código fuente en distintos lenguajes en un mismo IDE'.
+~%-33.3333%Que solo Kotlin puede ejecutarse dentro de IntelliJ IDEA. #Incorrecto: La unidad explica la ejecución de proyectos Kotlin y Java. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2. Generación de ejecutables a partir de código fuente en distintos lenguajes en un mismo IDE'.
+~%-33.3333%Que hay que compilar manualmente con javac fuera del IDE. #Incorrecto: La ejecución se realiza desde el propio IntelliJ IDEA con Shift+F10. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.3. Crear y ejecutar el programa en Java en IntelliJ IDEA'.
+}
+
+::CE 2.e – Creación del proyecto Kotlin::
+¿Cuál es el primer paso para el ejemplo en Kotlin?
+{
+=Crear un proyecto nuevo en IntelliJ IDEA seleccionando Kotlin/JVM y nombrarlo (p.e. CuentaAtrasKotlin). #Correcto: Se detallan estos pasos antes de escribir el código Kotlin. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+~%-33.3333%Crear un archivo .kt en cualquier editor y pegarlo sin proyecto. #Incorrecto: Se crea un proyecto Kotlin en IntelliJ para gestionar dependencias y ejecución. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+~%-33.3333%Instalar un plugin externo porque IntelliJ no soporta Kotlin por defecto. #Incorrecto: IntelliJ IDEA incluye soporte nativo para Kotlin. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+~%-33.3333%Modificar launch.json como si fuera Visual Studio Code. #Incorrecto: En IntelliJ se usa el asistente de proyectos, no launch.json. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+}
+
+::CE 2.e – Código de la cuenta atrás::
+¿Qué instrucción Kotlin realiza la cuenta regresiva?
+{
+=Un bucle for (i in 10 downTo 0) que imprime i y al final “¡Despegue!”. #Correcto: El código ejemplo utiliza downTo para iterar de 10 a 0. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+~%-33.3333%Un while infinito que resta 1 sin condición de parada. #Incorrecto: El ejemplo presenta un bucle for con límites definidos. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+~%-33.3333%Una función recursiva que nunca imprime “¡Despegue!”. #Incorrecto: Se imprime explícitamente “¡Despegue!” tras el bucle. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+~%-33.3333%El uso de break al principio del programa. #Incorrecto: No se usa break; se recorre con el for. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+}
+
+::CE 2.e – Ejecución en IntelliJ IDEA::
+¿Cómo se ejecuta el programa Kotlin o Java desde el IDE?
+{
+=Seleccionando el archivo y pulsando Run o el atajo Shift+F10 para ver la salida en consola. #Correcto: Se indica esta forma de ejecución tanto para Kotlin como para Java. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2' y '2.3'.
+~%-33.3333%Ejecutando `kotlinc` o `javac` obligatoriamente desde terminal. #Incorrecto: La unidad muestra la ejecución dentro del IDE sin comandos externos. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2' y '2.3'.
+~%-33.3333%Compilando primero en Visual Studio Code y luego importando el binario. #Incorrecto: Todo el flujo ocurre dentro de IntelliJ IDEA. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2' y '2.3'.
+~%-33.3333%Creando una configuración Maven obligatoria para lanzar la aplicación. #Incorrecto: Se ejecuta el archivo directamente sin configuración Maven en el ejemplo. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2' y '2.3'.
+}
+
+::CE 2.e – Comparación de resultados Kotlin/Java::
+¿Qué salida se obtiene en ambos lenguajes?
+{
+=Los números del 10 al 0 cada uno en una línea y al final “¡Despegue!”. #Correcto: Se muestra el mismo comportamiento para Kotlin y Java. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2' y '2.3'.
+~%-33.3333%Una cuenta ascendente y un mensaje distinto en cada lenguaje. #Incorrecto: La cuenta es descendente con idéntico mensaje. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2' y '2.3'.
+~%-33.3333%Solo números pares porque el bucle salta los impares. #Incorrecto: Se imprimen todos los números del 10 al 0. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2' y '2.3'.
+~%-33.3333%Una excepción en Kotlin y ejecución correcta en Java. #Incorrecto: Ambos ejemplos terminan correctamente mostrando la cuenta atrás. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2' y '2.3'.
+}
+
+::CE 2.e – Propósito de la actividad en Python::
+¿Para qué se ejecuta el mismo script Python en PyCharm y VS Code?
+{
+=Para comparar cómo distintos IDEs gestionan el mismo código y obtener igual resultado. #Correcto: Se busca experimentar con un mismo programa en dos entornos diferentes. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3. Generación de ejecutables con diferentes IDEs a partir del mismo código fuente'.
+~%-33.3333%Para demostrar que PyCharm no soporta scripts Python simples. #Incorrecto: Se ejecuta con éxito en PyCharm. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.2. Crear y ejecutar el programa en PyCharm'.
+~%-33.3333%Para obligar a migrar todo el proyecto a Visual Studio. #Incorrecto: El objetivo es comparar, no cambiar de IDE de forma obligatoria. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3. Generación de ejecutables con diferentes IDEs a partir del mismo código fuente'.
+~%-33.3333%Para que uno de los IDEs genere bytecode diferente. #Incorrecto: Ambos ejecutan el mismo script mostrando idéntica salida. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '3.2' y '3.3'.
+}
+
+::CE 2.e – Ejecución en PyCharm::
+¿Cómo se lanza el script cuenta atrás en PyCharm?
+{
+=Clic derecho en main.py y elegir Run 'main' o usar Shift+F10. #Correcto: Es el procedimiento descrito para ejecutar el script desde PyCharm. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.2. Crear y ejecutar el programa en PyCharm'.
+~%-33.3333%Editar run.py para generar un ejecutable EXE. #Incorrecto: Solo se ejecuta el script, no se genera EXE en este ejemplo. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.2. Crear y ejecutar el programa en PyCharm'.
+~%-33.3333%Usar Ctrl+Alt+Supr para lanzar la consola de Python. #Incorrecto: Se usa el menú contextual o el atajo Shift+F10 dentro del IDE. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.2. Crear y ejecutar el programa en PyCharm'.
+~%-33.3333%Convertir el proyecto a módulo Java antes de ejecutar. #Incorrecto: Se trata de un proyecto Python sin conversión. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.2. Crear y ejecutar el programa en PyCharm'.
+}
+
+::CE 2.e – Extensión en VS Code para Python::
+¿Qué paso previo requiere VS Code antes de ejecutar el script?
+{
+=Instalar la extensión oficial de Python desde el panel de extensiones. #Correcto: Se indica buscar “Python” y añadir la extensión antes de ejecutar. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3. Crear y ejecutar el programa en Visual Studio Code'.
+~%-33.3333%Modificar launch.json para importar Kotlin. #Incorrecto: Launch.json se usa para configuraciones de depuración, no para añadir Kotlin. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3. Crear y ejecutar el programa en Visual Studio Code'.
+~%-33.3333%Ejecutar pip install vscode para habilitar la extensión. #Incorrecto: Las extensiones se instalan desde el marketplace de VS Code. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3. Crear y ejecutar el programa en Visual Studio Code'.
+~%-33.3333%Crear un contenedor Docker obligatorio. #Incorrecto: El ejemplo no requiere contenedores, solo la extensión. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3. Crear y ejecutar el programa en Visual Studio Code'.
+}
+
+::CE 2.e – Ejecución en VS Code::
+Una vez instalado todo, ¿cómo se ejecuta el script en VS Code?
+{
+=Con el botón Ejecutar o el atajo Ctrl+F5 para lanzarlo en la terminal integrada. #Correcto: Ese es el método descrito para ejecutar el script desde VS Code. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3. Crear y ejecutar el programa en Visual Studio Code'.
+~%-33.3333%Utilizando F1 para compilar a bytecode JVM. #Incorrecto: Se ejecuta en Python, no se compila a JVM. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3. Crear y ejecutar el programa en Visual Studio Code'.
+~%-33.3333%Abriendo una terminal externa y escribiendo `java Main`. #Incorrecto: Se lanza desde la terminal integrada con Python, no con java. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3. Crear y ejecutar el programa en Visual Studio Code'.
+~%-33.3333%Generando un binario C++ mediante cmake. #Incorrecto: El ejemplo se centra en Python, no en C++. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3. Crear y ejecutar el programa en Visual Studio Code'.
+}
+
+::CE 2.e – Conclusión práctica::
+¿Qué enseñanza final extrae la unidad?
+{
+=Que es posible gestionar un mismo código en distintos lenguajes e IDEs sin cambiar de flujo. #Correcto: Las conclusiones destacan la flexibilidad para trabajar con varios lenguajes y entornos. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.4. Conclusión' y '3.4. Conclusión'.
+~%-33.3333%Que solo IntelliJ IDEA permite ejecutar proyectos multiplataforma. #Incorrecto: Se muestran también VS Code y PyCharm trabajando con el mismo script. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.4. Conclusión' y '3.4. Conclusión'.
+~%-33.3333%Que cada IDE genera salidas distintas para el mismo código. #Incorrecto: El resultado es idéntico en todos los casos. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.4. Conclusión' y '3.4. Conclusión'.
+~%-33.3333%Que los IDEs impiden probar diferentes lenguajes en un solo proyecto. #Incorrecto: Precisamente se muestra lo contrario como ventaja. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.4. Conclusión' y '3.4. Conclusión'.
+}

@@ -1,0 +1,562 @@
+// EDES-U2.1 - IDEs
+// Banco de preguntas sobre entornos de desarrollo integrado
+// CE 2.a - Características y componentes de los IDEs
+
+::CE 2.a – Ubicación de los IDE dentro de CASE::
+¿En qué categoría CASE se sitúan los IDEs según la unidad?
+{
+=Lower CASE, porque apoyan el desarrollo, pruebas y mantenimiento del software. #Correcto: Los IDEs se presentan como herramientas Lower CASE al asistir las fases finales del ciclo de vida. Consulta `EDES-U2.1.-IDEs.md`, sección '1. Introducción'.
+~%-33.3333%Upper CASE, porque ayudan en la planificación y el análisis de requisitos. #Incorrecto: Upper CASE se centra en las fases tempranas de planificación y análisis, no en el desarrollo asistido. Consulta `EDES-U2.1.-IDEs.md`, sección '1. Introducción'.
+~%-33.3333%Middle CASE, porque modelan diagramas y estructuras de datos. #Incorrecto: Middle CASE apoya análisis y diseño; los IDEs actúan después, durante la construcción. Consulta `EDES-U2.1.-IDEs.md`, sección '1. Introducción'.
+~%-33.3333%No pertenecen a ninguna categoría CASE ya que son herramientas independientes. #Incorrecto: La unidad los ubica explícitamente como herramientas Lower CASE dentro de CASE. Consulta `EDES-U2.1.-IDEs.md`, sección '1. Introducción'.
+}
+
+::CE 2.a – Funcionalidades básicas de un IDE::
+Estás valorando IDEs para un proyecto. ¿Qué conjunto describe mejor sus funcionalidades clave?
+{
+=Editor avanzado, integración con compiladores/intérpretes y herramientas de depuración. #Correcto: El bloque de componentes destaca editor, compilación y depuración integrados como núcleo del IDE. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Solo editor de texto y resaltado de sintaxis sin integración adicional. #Incorrecto: Un IDE va más allá del editor aislado e integra compiladores, depuradores y otras utilidades. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Únicamente motor de bases de datos y diseñador de interfaces. #Incorrecto: Aunque algunos IDEs incluyen estas capacidades, no son el núcleo descrito en la unidad. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Generador de ejecutables y gestor de incidencias sin editor. #Incorrecto: El IDE se apoya en un editor central y suma herramientas; un gestor de incidencias no forma parte esencial. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+}
+
+::CE 2.a – Soporte multi-lenguaje::
+Tu equipo trabaja en Python, Kotlin y JavaScript. ¿Qué ventaja ofrece un IDE moderno?
+{
+=Soporte para múltiples lenguajes en la misma interfaz mediante extensiones o módulos. #Correcto: La unidad recalca que los IDEs modernos soportan varios lenguajes desde una única plataforma. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
+~%-33.3333%Cada lenguaje obliga a usar un IDE distinto sin posibilidad de combinar. #Incorrecto: Se destaca precisamente la capacidad multi-lenguaje de los IDEs actuales. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
+~%-33.3333%Solo permiten alternar lenguajes si se recompila el IDE desde cero. #Incorrecto: Basta con activar soporte o instalar extensiones; no se recompila el IDE. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
+~%-33.3333%El IDE impide trabajar con frameworks cuando hay más de un lenguaje. #Incorrecto: Se menciona la integración con frameworks incluso en entornos multi-lenguaje. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
+}
+
+::CE 2.a – Control de versiones integrado::
+Necesitas colaborar usando Git sin abandonar el IDE. ¿Qué opción describe la ayuda del IDE?
+{
+=Integra control de versiones para clonar, hacer commits y gestionar ramas desde la interfaz. #Correcto: La integración con control de versiones es uno de los componentes destacados. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Abre una terminal externa para que el alumnado ejecute Git manualmente. #Incorrecto: Aunque pueda abrir terminales, la característica es la integración directa en la interfaz. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Solo permite exportar parches sin sincronizar ramas desde el IDE. #Incorrecto: Se menciona gestión de repositorios completa, no solo exportar parches. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Impide el uso de Git porque entra en conflicto con el autocompletado. #Incorrecto: La unidad resalta la convivencia entre autocompletado y control de versiones. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+}
+
+::CE 2.a – Frameworks y extensiones::
+Quieres añadir soporte para Django y React en tu IDE. ¿Qué estrategia propone la unidad?
+{
+=Instalar extensiones o módulos que añaden frameworks y herramientas específicas. #Correcto: Se explica que los IDEs permiten extenderse con soporte para frameworks populares. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
+~%-33.3333%Modificar el código fuente del IDE para compilar las librerías manualmente. #Incorrecto: No se requiere tocar el código del IDE; basta con instalar extensiones. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
+~%-33.3333%Reescribir los frameworks para ajustarlos al lenguaje propio del IDE. #Incorrecto: Los frameworks existentes se integran mediante plugins, no reescribiéndolos. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
+~%-33.3333%Cambiar de IDE por cada framework porque no se pueden combinar. #Incorrecto: La extensibilidad evita cambiar de entorno para cada tecnología. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
+}
+
+::CE 2.a – Selección de IDE generalista::
+Necesitas un IDE versátil para proyectos de distinta naturaleza. ¿Qué alternativa sugiere la unidad?
+{
+=Visual Studio Code o IntelliJ IDEA como IDEs de propósito general extensibles. #Correcto: Ambos se listan dentro de los IDEs de propósito general con amplio soporte. Consulta `EDES-U2.1.-IDEs.md`, sección '4. Tipos de IDEs'.
+~%-33.3333%PyCharm, porque solo funciona con Python y evita distracciones. #Incorrecto: PyCharm se presenta como IDE específico de lenguaje, no generalista. Consulta `EDES-U2.1.-IDEs.md`, sección '4. Tipos de IDEs'.
+~%-33.3333%Xcode, dado que es el único que soporta todos los lenguajes. #Incorrecto: Xcode es específico para ecosistema Apple, no multipropósito. Consulta `EDES-U2.1.-IDEs.md`, sección '4. Tipos de IDEs'.
+~%-33.3333%Fleet, porque únicamente permite proyectos colaborativos en tiempo real. #Incorrecto: Fleet es una opción moderna, pero se presenta como alternativa ligera, no exclusiva de colaboración. Consulta `EDES-U2.1.-IDEs.md`, sección '4. Tipos de IDEs'.
+}
+
+::CE 2.a – Caso práctico de integración de pruebas::
+Quieres ejecutar tests de pytest sin salir del IDE. ¿Qué apoyo ofrecen los IDEs?
+{
+=Integración con herramientas de pruebas como pytest o JUnit desde el propio entorno. #Correcto: Se describe la capacidad de integrar frameworks de pruebas directamente. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Solicitar a otra persona que ejecute los tests en una máquina externa. #Incorrecto: El objetivo es automatizar pruebas dentro del propio IDE. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Ejecutar pruebas manualmente en consola porque el IDE no las reconoce. #Incorrecto: Se remarca que los IDEs integran esas herramientas para evitar ejecuciones manuales constantes. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Desactivar el autocompletado para liberar recursos antes de probar. #Incorrecto: No es necesario desactivar funcionalidades; las pruebas corren integradas. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+}
+
+::CE 2.a – Comparativa de IDEs móviles::
+Debes programar una app de iOS y otra de Android. ¿Qué combinación sugiere la teoría?
+{
+=Xcode para iOS y Android Studio para Android como IDEs móviles especializados. #Correcto: Ambos se mencionan como IDEs móviles principales de sus plataformas. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4. IDEs móviles'.
+~%-33.3333%Sublime Text para ambas plataformas porque es más ligero. #Incorrecto: Sublime se cita como editor web, no pensado para flujos móviles completos. Consulta `EDES-U2.1.-IDEs.md`, sección '4.3. IDEs para desarrollo web'.
+~%-33.3333%Fleet para iOS y Visual Studio Code para Android exclusivamente. #Incorrecto: La unidad no los recomienda como IDE móvil principal para iOS/Android. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4. IDEs móviles'.
+~%-33.3333%PyCharm porque incluye simuladores móviles avanzados. #Incorrecto: PyCharm se orienta al ecosistema Python, no a desarrollo móvil nativo. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4. IDEs móviles'.
+}
+
+::CE 2.a – Importación y exportación de proyectos::
+Necesitas compartir un proyecto con otra persona. ¿Qué facilita el IDE según la unidad?
+{
+=Funciones para importar y exportar proyectos, facilitando la colaboración entre entornos. #Correcto: Se incluye como característica clave para trabajar en equipo y mover proyectos. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
+~%-33.3333%Solo admite proyectos creados en la misma máquina y versión del IDE. #Incorrecto: Precisamente se enfatiza la capacidad de intercambio de proyectos. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
+~%-33.3333%Exporta únicamente archivos binarios sin preservar la estructura. #Incorrecto: Los IDEs mantienen estructura y configuración al exportar o importar. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
+~%-33.3333%Impide compartir proyectos para evitar conflictos de configuración. #Incorrecto: El objetivo es justamente habilitar la colaboración y el traslado. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
+}
+
+::CE 2.a – Ventaja de la extensibilidad::
+Tu proyecto requiere soporte para Docker y análisis con ESLint. ¿Qué acción recomienda la unidad?
+{
+=Instalar extensiones específicas para Docker y ESLint adaptando el IDE a tus necesidades. #Correcto: Se destaca la extensibilidad para añadir soporte como Docker o ESLint con pocos clics. Consulta `EDES-U2.1.-IDEs.md`, secciones '2. Los Entornos de Desarrollo Integrado (IDEs)' y '3. Componentes de un IDE'.
+~%-33.3333%Buscar otro IDE que traiga esas herramientas de serie sin posibilidad de añadirlas. #Incorrecto: La extensibilidad permite sumar funcionalidades sin cambiar de IDE. Consulta `EDES-U2.1.-IDEs.md`, secciones '2. Los Entornos de Desarrollo Integrado (IDEs)' y '3. Componentes de un IDE'.
+~%-33.3333%Renunciar a Docker porque los IDEs no gestionan contenedores. #Incorrecto: El documento menciona integrar extensiones para nuevas tecnologías, incluyendo Docker. Consulta `EDES-U2.1.-IDEs.md`, secciones '2. Los Entornos de Desarrollo Integrado (IDEs)' y '3. Componentes de un IDE'.
+~%-33.3333%Configurar ESLint manualmente ejecutando scripts externos sin integración. #Incorrecto: La idea es aprovechar extensiones que integran linters en el IDE. Consulta `EDES-U2.1.-IDEs.md`, secciones '2. Los Entornos de Desarrollo Integrado (IDEs)' y '3. Componentes de un IDE'.
+}
+
+// EDES-U2.2 - Módulos y extensiones
+// Banco de preguntas sobre gestión de plugins en IDEs
+// CE 2.b - Instalación, configuración y mantenimiento de extensiones
+
+::CE 2.b – Finalidad de módulos y extensiones::
+¿Cuál es el objetivo principal de añadir módulos o extensiones al IDE?
+{
+=Personalizar el entorno sumando soporte para lenguajes, herramientas o procesos específicos. #Correcto: La unidad define módulos/extensiones como complementos que amplían el IDE según las necesidades. Consulta `EDES-U2.2.-Modulos.md`, sección '2. ¿Qué son los módulos y las extensiones?'.
+~%-33.3333%Actualizar automáticamente el sistema operativo sin intervención del IDE. #Incorrecto: Las extensiones actúan sobre el IDE, no sobre el sistema operativo. Consulta `EDES-U2.2.-Modulos.md`, sección '2. ¿Qué son los módulos y las extensiones?'.
+~%-33.3333%Eliminar funciones del IDE para hacerlo más ligero de forma permanente. #Incorrecto: Se instalan para añadir capacidades, no para quitar funcionalidades esenciales. Consulta `EDES-U2.2.-Modulos.md`, sección '2. ¿Qué son los módulos y las extensiones?'.
+~%-33.3333%Convertir un IDE en editor de texto sin autocompletado ni depuración. #Incorrecto: Buscan enriquecer el IDE con más herramientas, no degradarlo. Consulta `EDES-U2.2.-Modulos.md`, sección '2. ¿Qué son los módulos y las extensiones?'.
+}
+
+::CE 2.b – Procedimiento Marketplace VS Code::
+Quieres instalar soporte Python en VS Code. ¿Qué pasos describe la unidad?
+{
+=Abrir el Marketplace, buscar “Python” y pulsar Instalar en la extensión oficial. #Correcto: Se explica el flujo desde el marketplace hasta la instalación de la extensión de Microsoft. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3. Instalación de una extensión'.
+~%-33.3333%Descargar un archivo ejecutable externo y reemplazar el binario de VS Code. #Incorrecto: La instalación se hace desde el marketplace interno, sin reemplazar binarios. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3. Instalación de una extensión'.
+~%-33.3333%Modificar manualmente el fichero settings.json con el código de la extensión. #Incorrecto: No se pega código; basta con instalar desde el marketplace. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3. Instalación de una extensión'.
+~%-33.3333%Instalar Visual Studio completo porque VS Code no admite extensiones. #Incorrecto: El texto resalta la extensibilidad de VS Code mediante extensiones. Consulta `EDES-U2.2.-Modulos.md`, sección '3. Instalación de extensiones en Visual Studio Code'.
+}
+
+::CE 2.b – Linter y formateador en VS Code::
+Tu código Python muestra estilo inconsistente. ¿Qué recomienda la unidad?
+{
+=Instalar extensiones como Pylint y AutoPEP8 y configurarlas desde la sección de extensiones. #Correcto: Pylint y AutoPEP8 se citan como ejemplo de linter y formateador para VS Code. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3. Instalación de linting y formateadores de código'.
+~%-33.3333%Cambiar de IDE porque VS Code carece de herramientas de linting. #Incorrecto: Se explica cómo dotarlo de linting mediante extensiones específicas. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3. Instalación de linting y formateadores de código'.
+~%-33.3333%Editar cada archivo a mano para respetar PEP 8 sin herramientas auxiliares. #Incorrecto: Justo se busca evitar trabajo manual empleando extensiones de formateo. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3. Instalación de linting y formateadores de código'.
+~%-33.3333%Eliminar el autocompletado para que el intérprete corrija el estilo automáticamente. #Incorrecto: El autocompletado no aplica formatos; las extensiones sí lo hacen. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3. Instalación de linting y formateadores de código'.
+}
+
+::CE 2.b – Definición de módulo en JetBrains::
+¿Cómo describe la unidad un módulo dentro de los IDEs JetBrains?
+{
+=Conjunto de archivos y configuraciones que añaden soporte a un lenguaje o framework al proyecto. #Correcto: Los módulos de JetBrains se explican como paquetes que amplían capacidades del proyecto. Consulta `EDES-U2.2.-Modulos.md`, sección '4.1. ¿Qué es un módulo en JetBrains?'.
+~%-33.3333%Archivo ejecutable que reemplaza al núcleo del IDE en cada actualización. #Incorrecto: Los módulos no sustituyen el núcleo; son componentes del proyecto. Consulta `EDES-U2.2.-Modulos.md`, sección '4.1. ¿Qué es un módulo en JetBrains?'.
+~%-33.3333%Solo una carpeta vacía usada como copia de seguridad del proyecto. #Incorrecto: Se trata de soporte funcional, no de un contenedor vacío. Consulta `EDES-U2.2.-Modulos.md`, sección '4.1. ¿Qué es un módulo en JetBrains?'.
+~%-33.3333%Documento PDF con la guía de estilo del equipo. #Incorrecto: Los módulos son configuraciones funcionales, no documentación. Consulta `EDES-U2.2.-Modulos.md`, sección '4.1. ¿Qué es un módulo en JetBrains?'.
+}
+
+::CE 2.b – Añadir módulo en IntelliJ IDEA::
+Necesitas sumar soporte Spring a un proyecto. ¿Cuál es el proceso indicado?
+{
+=Abrir Project Structure, acceder a Modules y añadir el módulo elegido con el asistente. #Correcto: Se detalla el camino File > Project Structure > Modules > + para agregar soporte. Consulta `EDES-U2.2.-Modulos.md`, sección '4.2. Instalación de módulos en IntelliJ IDEA'.
+~%-33.3333%Editar la base de datos del IDE para registrar el framework manualmente. #Incorrecto: No se manipulan bases de datos internas; se usa el menú de módulos. Consulta `EDES-U2.2.-Modulos.md`, sección '4.2. Instalación de módulos en IntelliJ IDEA'.
+~%-33.3333%Instalar un plugin de VS Code porque IntelliJ IDEA no soporta módulos. #Incorrecto: IntelliJ IDEA sí soporta módulos y se configura desde su menú propio. Consulta `EDES-U2.2.-Modulos.md`, sección '4.2. Instalación de módulos en IntelliJ IDEA'.
+~%-33.3333%Reinstalar el IDE con un instalador específico de Spring. #Incorrecto: Basta con añadir el módulo dentro del IDE ya instalado. Consulta `EDES-U2.2.-Modulos.md`, sección '4.2. Instalación de módulos en IntelliJ IDEA'.
+}
+
+::CE 2.b – Plugins en JetBrains::
+¿Cómo se instalan plugins adicionales en PyCharm según la unidad?
+{
+=Desde File > Settings > Plugins, buscar el plugin deseado, instalar y reiniciar el IDE. #Correcto: Es el procedimiento estándar descrito para ampliar PyCharm. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3. Instalación de plugins en JetBrains (PyCharm)'.
+~%-33.3333%Copiando los archivos del plugin en la carpeta /tmp del sistema operativo. #Incorrecto: La instalación se realiza desde el gestor de plugins del IDE. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3. Instalación de plugins en JetBrains (PyCharm)'.
+~%-33.3333%Compilando el plugin con Maven antes de cada inicio del IDE. #Incorrecto: Los plugins se instalan desde el repositorio oficial sin compilar manualmente. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3. Instalación de plugins en JetBrains (PyCharm)'.
+~%-33.3333%Habilitando la opción “Plugins desactivados” para cargarlos automáticamente. #Incorrecto: Primero deben instalarse y luego activarse si procede. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3. Instalación de plugins en JetBrains (PyCharm)'.
+}
+
+::CE 2.b – Automatización con File Watchers::
+Quieres ejecutar autopep8 al guardar en PyCharm. ¿Qué configuración propone la unidad?
+{
+=Crear un File Watcher con programa `$PyInterpreterDirectory$/autopep8` y activar auto-save. #Correcto: Se indica el File Watcher con AutoPEP8 y parámetros concretos. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.4. File Watcher – autopep8'.
+~%-33.3333%Configurar un breakpoint en main.py y pulsar F5 tras cada edición. #Incorrecto: La automatización se consigue con File Watchers, no con depuración manual. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.4. File Watcher – autopep8'.
+~%-33.3333%Ejecutar `pip uninstall autopep8` para que PyCharm lo aplique automáticamente. #Incorrecto: Hay que instalar la herramienta y configurarla, no desinstalarla. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.1. Instalar las herramientas en el intérprete del proyecto'.
+~%-33.3333%Crear un proyecto nuevo cada vez que se quiera formatear un archivo. #Incorrecto: El objetivo del File Watcher es automatizar sin recrear proyectos. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.4. File Watcher – autopep8'.
+}
+
+::CE 2.b – Automatización con External Tools::
+¿Para qué sirve registrar AutoPEP8 como External Tool en PyCharm?
+{
+=Permite lanzar el formateador desde Tools > External Tools sobre el archivo activo. #Correcto: La unidad muestra cómo añadir AutoPEP8 como herramienta externa para invocarla cuando se necesite. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.2. External Tool – autopep8'.
+~%-33.3333%Obliga a ejecutar AutoPEP8 en todos los proyectos al abrir PyCharm. #Incorrecto: Se lanza de forma manual cuando el alumnado lo necesita. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.2. External Tool – autopep8'.
+~%-33.3333%Desactiva el intérprete del proyecto para utilizar un entorno global. #Incorrecto: Sigue usando el intérprete configurado; no lo desactiva. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.2. External Tool – autopep8'.
+~%-33.3333%Impide combinar AutoPEP8 con otros formateadores. #Incorrecto: Es una herramienta más; pueden coexistir otros formateadores. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.2. External Tool – autopep8'.
+}
+
+::CE 2.b – Desinstalar extensiones en VS Code::
+Has dejado de usar una extensión. ¿Cuál es el procedimiento explicado?
+{
+=Abrir el panel de extensiones, localizarla y pulsar el icono de la papelera para eliminarla. #Correcto: La desinstalación se realiza desde el panel con el botón de papelera. Consulta `EDES-U2.2.-Modulos.md`, sección '5.1. Desinstalación en Visual Studio Code'.
+~%-33.3333%Modificar settings.json para borrar la sección de la extensión manualmente. #Incorrecto: No hace falta editar settings; se usa el botón de desinstalar. Consulta `EDES-U2.2.-Modulos.md`, sección '5.1. Desinstalación en Visual Studio Code'.
+~%-33.3333%Desinstalar el propio VS Code y reinstalarlo sin esa extensión. #Incorrecto: Basta con eliminar la extensión desde el panel, sin reinstalar el IDE. Consulta `EDES-U2.2.-Modulos.md`, sección '5.1. Desinstalación en Visual Studio Code'.
+~%-33.3333%Esperar a que el marketplace la marque como obsoleta para que desaparezca. #Incorrecto: El usuario debe desinstalarla si ya no la necesita. Consulta `EDES-U2.2.-Modulos.md`, sección '5.1. Desinstalación en Visual Studio Code'.
+}
+
+::CE 2.b – Actualizar plugins de JetBrains::
+Tu plugin de Kotest en PyCharm muestra una actualización. ¿Qué debes hacer?
+{
+=Abrir Settings > Plugins, revisar la pestaña Installed y pulsar actualizar en el plugin. #Correcto: Se describe la gestión de plugins desde ese menú para actualizar o desactivar. Consulta `EDES-U2.2.-Modulos.md`, sección '5.3. Gestión de módulos y plugins en JetBrains'.
+~%-33.3333%Eliminar el plugin y volver a instalarlo manualmente desde un archivo zip. #Incorrecto: La unidad propone actualizar desde la sección Installed sin reinstalar manualmente. Consulta `EDES-U2.2.-Modulos.md`, sección '5.3. Gestión de módulos y plugins en JetBrains'.
+~%-33.3333%Copiar los archivos del plugin a la carpeta bin del IDE y reiniciar. #Incorrecto: Las actualizaciones se gestionan desde el panel de plugins, no copiando archivos. Consulta `EDES-U2.2.-Modulos.md`, sección '5.3. Gestión de módulos y plugins en JetBrains'.
+~%-33.3333%Ignorar la actualización porque los plugins no afectan al rendimiento. #Incorrecto: Se recomienda mantenerlos actualizados para añadir mejoras y corregir errores. Consulta `EDES-U2.2.-Modulos.md`, sección '5.3. Gestión de módulos y plugins en JetBrains'.
+}
+
+// EDES-U2.3 - Personalización y automatización del entorno
+// Banco de preguntas sobre ajustes de IDE y tareas automatizadas
+// CE 2.c - Adaptación del entorno de desarrollo a las necesidades del proyecto
+
+::CE 2.c – Objetivo de personalizar el IDE::
+¿Qué persigue la personalización del entorno según la unidad?
+{
+=Ajustar apariencia, atajos y comportamiento para trabajar con mayor comodidad y eficiencia. #Correcto: Se resalta que personalizar mejora la productividad y adapta el IDE a cada persona. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2. Personalización del entorno'.
+~%-33.3333%Reducir el número de herramientas disponibles para no distraerse. #Incorrecto: La personalización busca adaptar, no necesariamente reducir funcionalidades. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2. Personalización del entorno'.
+~%-33.3333%Impedir que el IDE reciba actualizaciones automáticas. #Incorrecto: Las actualizaciones se tratan en otro punto; personalizar no las bloquea. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2. Personalización del entorno'.
+~%-33.3333%Transformar el IDE en un bloc de notas sin autocompletado. #Incorrecto: Se pretende potenciar capacidades, no eliminarlas. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2. Personalización del entorno'.
+}
+
+::CE 2.c – Cambio de tema en VS Code::
+Necesitas un tema oscuro en Visual Studio Code. ¿Qué pasos da la unidad?
+{
+=Archivo > Preferencias > Tema de color (Ctrl+K Ctrl+T) y elegir un tema como Dark+. #Correcto: Se indican menú y atajo para cambiar el tema rápidamente. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Modificar manualmente el archivo package.json del proyecto. #Incorrecto: El cambio se hace desde la configuración del editor, no en el proyecto. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Reinstalar VS Code con el tema deseado integrado. #Incorrecto: No hace falta reinstalar; basta con seleccionar el tema disponible. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Editar el registro de Windows para aplicar el modo oscuro. #Incorrecto: El cambio se realiza dentro del IDE sin tocar el sistema operativo. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+}
+
+::CE 2.c – Ajuste de fuente en VS Code::
+Si quieres aumentar el tamaño de letra en VS Code, ¿qué debes hacer?
+{
+=Abrir Preferencias > Configuración, buscar “font size” y setear el valor deseado. #Correcto: Se explica cómo modificar el tamaño de fuente desde la configuración. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Modificar con sed el binario del programa para ampliar la fuente. #Incorrecto: Basta con cambiar la configuración; no se edita el binario. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Crear una extensión propia porque el IDE no permite ese cambio. #Incorrecto: El ajuste de fuente es configurable sin programar extensiones. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Usar solo el atajo Ctrl+R para recargar la interfaz. #Incorrecto: Ctrl+R no modifica el tamaño de fuente; hay que cambiarlo en la configuración. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+}
+
+::CE 2.c – Personalización de atajos VS Code::
+Quieres asignar Ctrl+Alt+F al formateo. ¿Dónde se configura?
+{
+=En Archivo > Preferencias > Atajos de teclado o con Ctrl+K Ctrl+S, buscando la acción. #Correcto: La unidad indica utilizar el editor de atajos para remapear combinaciones. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Modificar el archivo launch.json del proyecto. #Incorrecto: launch.json se usa para ejecuciones, no para atajos. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Agregar una variable de entorno en la terminal integrada. #Incorrecto: Los atajos se gestionan desde el apartado de teclado, no por variables. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Ejecutar un script Python que reasigne teclas. #Incorrecto: No se requiere scripting; se cambia en la interfaz de atajos. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+}
+
+::CE 2.c – Keymaps en JetBrains::
+Te apañas con atajos de Visual Studio. ¿Qué sugiere la unidad en JetBrains?
+{
+=Seleccionar el esquema de teclas deseado en File > Settings > Keymap y personalizar si hace falta. #Correcto: Se propone elegir un keymap predefinido o adaptar atajos desde ese menú. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.2. Personalización de JetBrains'.
+~%-33.3333%Instalar un plugin externo porque JetBrains no permite cambiar atajos. #Incorrecto: El propio menú Keymap habilita la personalización sin plugins extra. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.2. Personalización de JetBrains'.
+~%-33.3333%Editar el archivo Main.java para reconfigurar los atajos dentro del código. #Incorrecto: Los atajos se gestionan desde la configuración del IDE, no en el código. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.2. Personalización de JetBrains'.
+~%-33.3333%Usar solo el keymap por defecto porque no se puede modificar. #Incorrecto: La unidad destaca la posibilidad de elegir esquemas o crear propios. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.2. Personalización de JetBrains'.
+}
+
+::CE 2.c – Automatización con tasks en VS Code::
+Quieres ejecutar el fichero Python activo con una tecla. ¿Qué configuración propone el texto?
+{
+=Crear una task en tasks.json con comando python3 y asignarla a un atajo como Ctrl+S. #Correcto: Se muestra un ejemplo de tasks.json que ejecuta el archivo y cómo asociarla a un atajo. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.1. Crear una tarea de ejecución automática'.
+~%-33.3333%Modificar settings.json para que VS Code ejecute scripts aleatorios. #Incorrecto: La automatización se hace definiendo tasks específicas, no scripts aleatorios. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.1. Crear una tarea de ejecución automática'.
+~%-33.3333%Usar únicamente la consola externa porque VS Code no lanza scripts. #Incorrecto: La unidad enseña a automatizar directamente desde VS Code. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.1. Crear una tarea de ejecución automática'.
+~%-33.3333%Ejecutar python3 cada vez manualmente sin configurar nada. #Incorrecto: Justo se explica cómo evitar ejecuciones manuales mediante tasks. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.1. Crear una tarea de ejecución automática'.
+}
+
+::CE 2.c – Automatizar pruebas en VS Code::
+El equipo usa pytest y quiere ejecutarlo al guardar. ¿Qué indica la unidad?
+{
+=Instalar la extensión correspondiente y configurar una task que invoque pytest tras cada cambio. #Correcto: Se describe la configuración de pytest mediante extensiones y tasks automáticas. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.2. Automatización de pruebas'.
+~%-33.3333%Reescribir pytest para que funcione sin tasks ni extensiones. #Incorrecto: No hace falta modificar pytest; se integra mediante extensions y tasks. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.2. Automatización de pruebas'.
+~%-33.3333%Renunciar a la automatización porque VS Code no soporta pruebas. #Incorrecto: Se muestra cómo automatizar la ejecución de pytest desde VS Code. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.2. Automatización de pruebas'.
+~%-33.3333%Ejecutar pytest solo cuando se cierre el IDE. #Incorrecto: La idea es lanzarlo tras los cambios, no al salir. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.2. Automatización de pruebas'.
+}
+
+::CE 2.c – Continuous Testing en JetBrains::
+Necesitas que las pruebas se ejecuten al guardar en IntelliJ. ¿Qué recomienda el material?
+{
+=Instalar el plugin Continuous Testing y activarlo para que lance tests automáticamente. #Correcto: El texto sugiere ese plugin para ejecutar pruebas tras cada cambio. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.1. Ejecución automática de pruebas'.
+~%-33.3333%Borrar el directorio de tests para que el IDE no los ejecute. #Incorrecto: La automatización se logra con el plugin, no eliminando pruebas. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.1. Ejecución automática de pruebas'.
+~%-33.3333%Modificar el build.gradle para impedir ejecuciones automáticas. #Incorrecto: Se busca habilitar ejecución continua, no bloquearla. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.1. Ejecución automática de pruebas'.
+~%-33.3333%Ejecutar manualmente Shift+F10 en cada archivo tras los cambios. #Incorrecto: El objetivo es evitar ejecución manual configurando el plugin. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.1. Ejecución automática de pruebas'.
+}
+
+::CE 2.c – Before Launch Tasks en JetBrains::
+¿Para qué sirven las tareas “Before launch” descritas?
+{
+=Ejecutar acciones previas como limpiar temporales o reiniciar servicios antes de lanzar el proyecto. #Correcto: Se detalla cómo configurarlas desde Run > Edit Configurations para preparar la ejecución. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.2. Configuración de tareas previas a la ejecución'.
+~%-33.3333%Desactivar la ejecución del proyecto y mostrar un mensaje de error. #Incorrecto: Su propósito es automatizar tareas previas, no bloquear la ejecución. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.2. Configuración de tareas previas a la ejecución'.
+~%-33.3333%Instalar automáticamente versiones nuevas del IDE. #Incorrecto: Las tareas Before launch se centran en pasos del proyecto, no en actualizaciones. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.2. Configuración de tareas previas a la ejecución'.
+~%-33.3333%Registrar commits en Git antes de cada ejecución. #Incorrecto: Aunque podrían ejecutar scripts, no es el uso descrito en la unidad. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.2. Configuración de tareas previas a la ejecución'.
+}
+
+::CE 2.c – Recursos para seguir aprendiendo::
+¿Dónde sugiere la unidad ampliar información sobre personalización?
+{
+=En los enlaces a la documentación oficial de Visual Studio Code y JetBrains. #Correcto: Se proporcionan enlaces en la sección final para profundizar. Consulta `EDES-U2.3.-Personalizacion.md`, sección '4. Enlaces y recursos de interés'.
+~%-33.3333%En un archivo README externo que hay que descargar desde GitHub. #Incorrecto: Se remite a documentación oficial enlazada, no a repositorios externos no citados. Consulta `EDES-U2.3.-Personalizacion.md`, sección '4. Enlaces y recursos de interés'.
+~%-33.3333%Solo en foros de usuarios porque la documentación está obsoleta. #Incorrecto: Se recomienda explícitamente acudir a la documentación oficial. Consulta `EDES-U2.3.-Personalizacion.md`, sección '4. Enlaces y recursos de interés'.
+~%-33.3333%En manuales impresos del fabricante que se envían por correo. #Incorrecto: Se mencionan recursos online, no manuales impresos. Consulta `EDES-U2.3.-Personalizacion.md`, sección '4. Enlaces y recursos de interés'.
+}
+
+// EDES-U2.4 - Actualización de IDEs
+// Banco de preguntas sobre mantenimiento del entorno
+// CE 2.d - Configuración de actualizaciones en IDEs
+
+::CE 2.d – Motivos para actualizar el IDE::
+¿Por qué insiste la unidad en mantener el IDE actualizado?
+{
+=Para obtener nuevas funciones, correcciones de errores, mejoras de seguridad y compatibilidad. #Correcto: Se enumeran estas cuatro razones como beneficios clave de actualizar. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2. ¿Por qué es importante actualizar tu IDE?'.
+~%-33.3333%Para desactivar plugins y evitar que el IDE ejecute proyectos antiguos. #Incorrecto: La actualización busca mejorar el IDE, no desactivar funcionalidades. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2. ¿Por qué es importante actualizar tu IDE?'.
+~%-33.3333%Porque sin actualizar se pierde la licencia del lenguaje. #Incorrecto: La unidad no relaciona actualizaciones con licencias de lenguaje. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2. ¿Por qué es importante actualizar tu IDE?'.
+~%-33.3333%Para borrar automáticamente todos los proyectos almacenados. #Incorrecto: Actualizar no implica eliminar proyectos según el texto. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '2. ¿Por qué es importante actualizar tu IDE?'.
+}
+
+::CE 2.d – Configuración en JetBrains::
+Quieres activar la búsqueda de nuevas versiones en IntelliJ IDEA. ¿Qué ruta indica la unidad?
+{
+=File > Settings > Appearance & Behavior > System Settings > Updates y marcar las casillas. #Correcto: Se especifica esa ruta para configurar actualizaciones automáticas del IDE y plugins. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1. Configuración de actualizaciones automáticas del IDE'.
+~%-33.3333%Editar el archivo idea.properties dentro de instalación/bin. #Incorrecto: El ajuste se hace desde el menú de configuración, no editando archivos. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1. Configuración de actualizaciones automáticas del IDE'.
+~%-33.3333%Reinstalar JetBrains Toolbox cada vez que haya una nueva versión. #Incorrecto: Aunque Toolbox ayuda, también se puede configurar directamente en el IDE. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1. Configuración de actualizaciones automáticas del IDE'.
+~%-33.3333%Cambiar de canal de actualizaciones manipulando el registro de Windows. #Incorrecto: Los canales se eligen desde el propio panel de actualizaciones. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1. Configuración de actualizaciones automáticas del IDE'.
+}
+
+::CE 2.d – Canales de actualización JetBrains::
+¿Qué diferencia hay entre Release y EAP según el texto?
+{
+=Release ofrece versiones estables y EAP acceso anticipado con novedades menos probadas. #Correcto: Se explica que Release es estable mientras EAP incluye funciones nuevas con más riesgo. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1. Configuración de actualizaciones automáticas del IDE'.
+~%-33.3333%Release es para estudiantes y EAP solo para docentes certificados. #Incorrecto: La distinción es por estabilidad, no por perfil de usuario. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1. Configuración de actualizaciones automáticas del IDE'.
+~%-33.3333%EAP significa “Edición Próxima” y mantiene la misma estabilidad que Release. #Incorrecto: Se advierte que EAP puede ser menos estable al incluir novedades. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1. Configuración de actualizaciones automáticas del IDE'.
+~%-33.3333%Solo existe el canal Release; EAP es un concepto obsoleto. #Incorrecto: La unidad menciona ambos canales como opciones disponibles. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1. Configuración de actualizaciones automáticas del IDE'.
+}
+
+::CE 2.d – Actualizar plugins JetBrains::
+Recibes un aviso de actualización de plugin en PyCharm. ¿Qué indica la unidad?
+{
+=Ir a File > Settings > Plugins, pestaña Installed, y pulsar actualizar en el plugin. #Correcto: Se describe ese procedimiento para mantener plugins al día. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.2. Actualización de plugins'.
+~%-33.3333%Copiar el .jar del plugin en la carpeta lib y reiniciar el IDE. #Incorrecto: Las actualizaciones se gestionan desde el gestor interno, no copiando archivos manualmente. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.2. Actualización de plugins'.
+~%-33.3333%Desinstalar el plugin y esperar a que el IDE lo reinstale solo. #Incorrecto: Es más eficiente actualizar desde la pestaña Installed sin desinstalar. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.2. Actualización de plugins'.
+~%-33.3333%Ignorar la notificación porque los plugins se actualizan con el sistema operativo. #Incorrecto: La unidad resalta la importancia de actualizarlos desde el IDE. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.2. Actualización de plugins'.
+}
+
+::CE 2.d – Configuración de VS Code Update Mode::
+¿Cómo se activa la actualización automática del editor en VS Code?
+{
+=En Configuración, buscar “Update: Mode” y dejarlo en Default para actualizaciones automáticas. #Correcto: Se comenta que el modo Default activa las actualizaciones del editor. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1. Configuración de actualizaciones automáticas del editor'.
+~%-33.3333%Instalar Visual Studio Enterprise para que actualice VS Code. #Incorrecto: No hace falta otro producto; se configura en la propia aplicación. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1. Configuración de actualizaciones automáticas del editor'.
+~%-33.3333%Editar el fichero settings.json y borrar todas las claves update. #Incorrecto: El método recomendado es usar el ajuste Update: Mode. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1. Configuración de actualizaciones automáticas del editor'.
+~%-33.3333%Deshabilitar las extensiones para que el editor se actualice solo. #Incorrecto: Las extensiones no controlan la actualización del editor, el modo sí. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1. Configuración de actualizaciones automáticas del editor'.
+}
+
+::CE 2.d – Buscar actualizaciones manualmente en VS Code::
+¿Qué opción permite comprobar nuevas versiones bajo demanda?
+{
+=Ayuda > Buscar actualizaciones para descargar e instalar si hay nuevas versiones. #Correcto: Se detalla esa ruta para verificar manualmente las actualizaciones. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1. Configuración de actualizaciones automáticas del editor'.
+~%-33.3333%Archivo > Abrir carpeta y seleccionar la carpeta de descargas. #Incorrecto: Esa opción abre proyectos, no busca actualizaciones. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1. Configuración de actualizaciones automáticas del editor'.
+~%-33.3333%Terminal > Nueva terminal, ejecutar `code --self-update`. #Incorrecto: El texto propone usar el menú Ayuda, no comandos especiales. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1. Configuración de actualizaciones automáticas del editor'.
+~%-33.3333%Extensiones > Actualizar editor, botón situado al final de la lista. #Incorrecto: La sección de extensiones gestiona plugins, no el editor en sí. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1. Configuración de actualizaciones automáticas del editor'.
+}
+
+::CE 2.d – Auto-update de extensiones VS Code::
+¿Cómo se garantiza que las extensiones se actualicen solas?
+{
+=Comprobar que “Extensions: Auto Update” está habilitado en la configuración. #Correcto: La unidad indica que esa opción viene activada y conviene verificarlo. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.2. Actualización de extensiones'.
+~%-33.3333%Desinstalar todas las extensiones para evitar versiones antiguas. #Incorrecto: La idea es mantenerlas actualizadas, no eliminarlas. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.2. Actualización de extensiones'.
+~%-33.3333%Editar manualmente cada extensión para cambiar el número de versión. #Incorrecto: Las versiones se gestionan con la opción de auto update, no en código. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.2. Actualización de extensiones'.
+~%-33.3333%Esperar a que el sistema operativo envíe las nuevas versiones. #Incorrecto: Es VS Code quien controla esa actualización mediante la opción indicada. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.2. Actualización de extensiones'.
+}
+
+::CE 2.d – Ejemplo práctico actualización Python VS Code::
+Estás por iniciar un proyecto Python y quieres el editor al día. ¿Qué sugiere el material?
+{
+=Forzar la búsqueda de actualizaciones desde Ayuda > Buscar actualizaciones antes de empezar. #Correcto: Se menciona esta práctica como ejemplo de asegurarse de usar la última versión. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1. Configuración de actualizaciones automáticas del editor'.
+~%-33.3333%Instalar otro IDE porque VS Code no se actualiza. #Incorrecto: VS Code sí permite actualizarse desde su menú. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1. Configuración de actualizaciones automáticas del editor'.
+~%-33.3333%Desactivar internet para trabajar con la versión actual sin cambios. #Incorrecto: Se promueve actualizar, no trabajar aislado. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1. Configuración de actualizaciones automáticas del editor'.
+~%-33.3333%Eliminar la carpeta .vscode para limpiar la configuración. #Incorrecto: La recomendación es verificar actualizaciones, no borrar configuración. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '4.1. Configuración de actualizaciones automáticas del editor'.
+}
+
+::CE 2.d – Role de JetBrains Toolbox::
+¿Qué ventaja aporta JetBrains Toolbox mencionada?
+{
+=Gestiona y mantiene actualizados todos los IDEs de JetBrains desde una aplicación central. #Correcto: Se menciona como alternativa para automatizar las actualizaciones de la suite JetBrains. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1. Configuración de actualizaciones automáticas del IDE'.
+~%-33.3333%Sirve para instalar extensiones de VS Code automáticamente. #Incorrecto: Toolbox se centra en productos JetBrains, no en VS Code. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1. Configuración de actualizaciones automáticas del IDE'.
+~%-33.3333%Desinstala los IDEs anteriores sin avisar para liberar espacio. #Incorrecto: La unidad no indica que Toolbox elimine IDEs sin confirmación. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1. Configuración de actualizaciones automáticas del IDE'.
+~%-33.3333%Solo muestra noticias, no tiene funciones de actualización. #Incorrecto: Se destaca precisamente su rol para actualizar IDEs. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '3.1. Configuración de actualizaciones automáticas del IDE'.
+}
+
+::CE 2.d – Recursos oficiales::
+¿Dónde recomienda la unidad consultar cambios recientes?
+{
+=En la documentación oficial enlazada de JetBrains y Visual Studio Code. #Correcto: Se proporcionan enlaces para revisar instrucciones actualizadas. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '5. Recursos adicionales'.
+~%-33.3333%En blogs anónimos sin relación con los fabricantes. #Incorrecto: Se sugiere acudir a las fuentes oficiales, no a blogs no verificados. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '5. Recursos adicionales'.
+~%-33.3333%En un archivo PDF incluido en la práctica de la unidad 1. #Incorrecto: Los recursos se ubican en la sección final de esta unidad, no en materiales previos. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '5. Recursos adicionales'.
+~%-33.3333%En manuales impresos que se envían al terminar el módulo. #Incorrecto: Se mencionan enlaces web, no manuales impresos. Consulta `EDES-U2.4.-ActualizacionIDEs.md`, sección '5. Recursos adicionales'.
+}
+
+// EDES-U2.5 - Ejecutables en IDEs
+// Banco de preguntas sobre generación y ejecución de programas
+// CE 2.e - Creación de ejecutables en distintos lenguajes e IDEs
+
+::CE 2.e – Objetivo de la actividad en IntelliJ IDEA::
+¿Qué demuestra la práctica de Kotlin y Java en IntelliJ IDEA?
+{
+=Que el mismo IDE puede compilar y ejecutar proyectos en distintos lenguajes en paralelo. #Correcto: Se busca evidenciar que IntelliJ gestiona código Kotlin y Java en un solo entorno. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2. Generación de ejecutables a partir de código fuente en distintos lenguajes en un mismo IDE'.
+~%-33.3333%Que Kotlin y Java requieren siempre IDEs diferentes para ejecutarse. #Incorrecto: Justo se muestra que IntelliJ maneja ambos lenguajes. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2. Generación de ejecutables a partir de código fuente en distintos lenguajes en un mismo IDE'.
+~%-33.3333%Que solo Kotlin puede ejecutarse dentro de IntelliJ IDEA. #Incorrecto: La unidad explica la ejecución de proyectos Kotlin y Java. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2. Generación de ejecutables a partir de código fuente en distintos lenguajes en un mismo IDE'.
+~%-33.3333%Que hay que compilar manualmente con javac fuera del IDE. #Incorrecto: La ejecución se realiza desde el propio IntelliJ IDEA con Shift+F10. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.3. Crear y ejecutar el programa en Java en IntelliJ IDEA'.
+}
+
+::CE 2.e – Creación del proyecto Kotlin::
+¿Cuál es el primer paso para el ejemplo en Kotlin?
+{
+=Crear un proyecto nuevo en IntelliJ IDEA seleccionando Kotlin/JVM y nombrarlo (p.e. CuentaAtrasKotlin). #Correcto: Se detallan estos pasos antes de escribir el código Kotlin. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+~%-33.3333%Crear un archivo .kt en cualquier editor y pegarlo sin proyecto. #Incorrecto: Se crea un proyecto Kotlin en IntelliJ para gestionar dependencias y ejecución. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+~%-33.3333%Instalar un plugin externo porque IntelliJ no soporta Kotlin por defecto. #Incorrecto: IntelliJ IDEA incluye soporte nativo para Kotlin. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+~%-33.3333%Modificar launch.json como si fuera Visual Studio Code. #Incorrecto: En IntelliJ se usa el asistente de proyectos, no launch.json. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+}
+
+::CE 2.e – Código de la cuenta atrás::
+¿Qué instrucción Kotlin realiza la cuenta regresiva?
+{
+=Un bucle for (i in 10 downTo 0) que imprime i y al final “¡Despegue!”. #Correcto: El código ejemplo utiliza downTo para iterar de 10 a 0. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+~%-33.3333%Un while infinito que resta 1 sin condición de parada. #Incorrecto: El ejemplo presenta un bucle for con límites definidos. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+~%-33.3333%Una función recursiva que nunca imprime “¡Despegue!”. #Incorrecto: Se imprime explícitamente “¡Despegue!” tras el bucle. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+~%-33.3333%El uso de break al principio del programa. #Incorrecto: No se usa break; se recorre con el for. Consulta `EDES-U2.5.-Ejecutables.md`, sección '2.2. Crear y ejecutar el programa en Kotlin en IntelliJ IDEA'.
+}
+
+::CE 2.e – Ejecución en IntelliJ IDEA::
+¿Cómo se ejecuta el programa Kotlin o Java desde el IDE?
+{
+=Seleccionando el archivo y pulsando Run o el atajo Shift+F10 para ver la salida en consola. #Correcto: Se indica esta forma de ejecución tanto para Kotlin como para Java. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2' y '2.3'.
+~%-33.3333%Ejecutando `kotlinc` o `javac` obligatoriamente desde terminal. #Incorrecto: La unidad muestra la ejecución dentro del IDE sin comandos externos. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2' y '2.3'.
+~%-33.3333%Compilando primero en Visual Studio Code y luego importando el binario. #Incorrecto: Todo el flujo ocurre dentro de IntelliJ IDEA. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2' y '2.3'.
+~%-33.3333%Creando una configuración Maven obligatoria para lanzar la aplicación. #Incorrecto: Se ejecuta el archivo directamente sin configuración Maven en el ejemplo. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2' y '2.3'.
+}
+
+::CE 2.e – Comparación de resultados Kotlin/Java::
+¿Qué salida se obtiene en ambos lenguajes?
+{
+=Los números del 10 al 0 cada uno en una línea y al final “¡Despegue!”. #Correcto: Se muestra el mismo comportamiento para Kotlin y Java. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2' y '2.3'.
+~%-33.3333%Una cuenta ascendente y un mensaje distinto en cada lenguaje. #Incorrecto: La cuenta es descendente con idéntico mensaje. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2' y '2.3'.
+~%-33.3333%Solo números pares porque el bucle salta los impares. #Incorrecto: Se imprimen todos los números del 10 al 0. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2' y '2.3'.
+~%-33.3333%Una excepción en Kotlin y ejecución correcta en Java. #Incorrecto: Ambos ejemplos terminan correctamente mostrando la cuenta atrás. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.2' y '2.3'.
+}
+
+::CE 2.e – Propósito de la actividad en Python::
+¿Para qué se ejecuta el mismo script Python en PyCharm y VS Code?
+{
+=Para comparar cómo distintos IDEs gestionan el mismo código y obtener igual resultado. #Correcto: Se busca experimentar con un mismo programa en dos entornos diferentes. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3. Generación de ejecutables con diferentes IDEs a partir del mismo código fuente'.
+~%-33.3333%Para demostrar que PyCharm no soporta scripts Python simples. #Incorrecto: Se ejecuta con éxito en PyCharm. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.2. Crear y ejecutar el programa en PyCharm'.
+~%-33.3333%Para obligar a migrar todo el proyecto a Visual Studio. #Incorrecto: El objetivo es comparar, no cambiar de IDE de forma obligatoria. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3. Generación de ejecutables con diferentes IDEs a partir del mismo código fuente'.
+~%-33.3333%Para que uno de los IDEs genere bytecode diferente. #Incorrecto: Ambos ejecutan el mismo script mostrando idéntica salida. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '3.2' y '3.3'.
+}
+
+::CE 2.e – Ejecución en PyCharm::
+¿Cómo se lanza el script cuenta atrás en PyCharm?
+{
+=Clic derecho en main.py y elegir Run 'main' o usar Shift+F10. #Correcto: Es el procedimiento descrito para ejecutar el script desde PyCharm. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.2. Crear y ejecutar el programa en PyCharm'.
+~%-33.3333%Editar run.py para generar un ejecutable EXE. #Incorrecto: Solo se ejecuta el script, no se genera EXE en este ejemplo. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.2. Crear y ejecutar el programa en PyCharm'.
+~%-33.3333%Usar Ctrl+Alt+Supr para lanzar la consola de Python. #Incorrecto: Se usa el menú contextual o el atajo Shift+F10 dentro del IDE. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.2. Crear y ejecutar el programa en PyCharm'.
+~%-33.3333%Convertir el proyecto a módulo Java antes de ejecutar. #Incorrecto: Se trata de un proyecto Python sin conversión. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.2. Crear y ejecutar el programa en PyCharm'.
+}
+
+::CE 2.e – Extensión en VS Code para Python::
+¿Qué paso previo requiere VS Code antes de ejecutar el script?
+{
+=Instalar la extensión oficial de Python desde el panel de extensiones. #Correcto: Se indica buscar “Python” y añadir la extensión antes de ejecutar. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3. Crear y ejecutar el programa en Visual Studio Code'.
+~%-33.3333%Modificar launch.json para importar Kotlin. #Incorrecto: Launch.json se usa para configuraciones de depuración, no para añadir Kotlin. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3. Crear y ejecutar el programa en Visual Studio Code'.
+~%-33.3333%Ejecutar pip install vscode para habilitar la extensión. #Incorrecto: Las extensiones se instalan desde el marketplace de VS Code. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3. Crear y ejecutar el programa en Visual Studio Code'.
+~%-33.3333%Crear un contenedor Docker obligatorio. #Incorrecto: El ejemplo no requiere contenedores, solo la extensión. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3. Crear y ejecutar el programa en Visual Studio Code'.
+}
+
+::CE 2.e – Ejecución en VS Code::
+Una vez instalado todo, ¿cómo se ejecuta el script en VS Code?
+{
+=Con el botón Ejecutar o el atajo Ctrl+F5 para lanzarlo en la terminal integrada. #Correcto: Ese es el método descrito para ejecutar el script desde VS Code. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3. Crear y ejecutar el programa en Visual Studio Code'.
+~%-33.3333%Utilizando F1 para compilar a bytecode JVM. #Incorrecto: Se ejecuta en Python, no se compila a JVM. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3. Crear y ejecutar el programa en Visual Studio Code'.
+~%-33.3333%Abriendo una terminal externa y escribiendo `java Main`. #Incorrecto: Se lanza desde la terminal integrada con Python, no con java. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3. Crear y ejecutar el programa en Visual Studio Code'.
+~%-33.3333%Generando un binario C++ mediante cmake. #Incorrecto: El ejemplo se centra en Python, no en C++. Consulta `EDES-U2.5.-Ejecutables.md`, sección '3.3. Crear y ejecutar el programa en Visual Studio Code'.
+}
+
+::CE 2.e – Conclusión práctica::
+¿Qué enseñanza final extrae la unidad?
+{
+=Que es posible gestionar un mismo código en distintos lenguajes e IDEs sin cambiar de flujo. #Correcto: Las conclusiones destacan la flexibilidad para trabajar con varios lenguajes y entornos. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.4. Conclusión' y '3.4. Conclusión'.
+~%-33.3333%Que solo IntelliJ IDEA permite ejecutar proyectos multiplataforma. #Incorrecto: Se muestran también VS Code y PyCharm trabajando con el mismo script. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.4. Conclusión' y '3.4. Conclusión'.
+~%-33.3333%Que cada IDE genera salidas distintas para el mismo código. #Incorrecto: El resultado es idéntico en todos los casos. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.4. Conclusión' y '3.4. Conclusión'.
+~%-33.3333%Que los IDEs impiden probar diferentes lenguajes en un solo proyecto. #Incorrecto: Precisamente se muestra lo contrario como ventaja. Consulta `EDES-U2.5.-Ejecutables.md`, secciones '2.4. Conclusión' y '3.4. Conclusión'.
+}
+
+// EDES-U2.6 - Evaluación de los IDEs
+// Banco de preguntas sobre comparación de entornos de desarrollo
+// CE 2.f - Análisis crítico de IDEs según necesidades del proyecto
+
+::CE 2.f – Característica común de IDEs::
+¿Cuál es una característica compartida por PyCharm, IntelliJ IDEA y VS Code?
+{
+=Editor con resaltado de sintaxis, autocompletado e identación automática. #Correcto: La unidad enumera estas funciones como comunes a los tres IDEs. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2. Características comunes de los IDEs'.
+~%-33.3333%Carecer de depurador para centrarse en escritura rápida. #Incorrecto: Todos incluyen depuradores integrados. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2. Características comunes de los IDEs'.
+~%-33.3333%Prohibir el uso de Git para evitar conflictos. #Incorrecto: Se menciona la integración con control de versiones, especialmente Git. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2. Características comunes de los IDEs'.
+~%-33.3333%No admitir extensiones ni plugins de terceros. #Incorrecto: El soporte de extensiones/plugins es otra característica común señalada. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2. Características comunes de los IDEs'.
+}
+
+::CE 2.f – Depurador integrado::
+¿Qué utilidad aporta el depurador según la comparación?
+{
+=Permite establecer breakpoints y ejecutar paso a paso observando variables. #Correcto: El depurador se describe con esas capacidades en los IDEs comparados. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2. Depurador integrado'.
+~%-33.3333%Restringe la compilación para evitar errores en tiempo de ejecución. #Incorrecto: No se menciona que bloquee la compilación; ayuda a analizar el flujo. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2. Depurador integrado'.
+~%-33.3333%Sirve únicamente para generar informes PDF automáticos. #Incorrecto: El depurador no genera informes; analiza la ejecución. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2. Depurador integrado'.
+~%-33.3333%Solo funciona con proyectos Kotlin según la unidad. #Incorrecto: Se indica que está disponible para los lenguajes que cada IDE soporta. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2. Depurador integrado'.
+}
+
+::CE 2.f – Control de versiones::
+¿Qué rol juega Git en los IDEs analizados?
+{
+=Se integra para clonar repositorios, hacer commits y gestionar ramas desde el IDE. #Correcto: El texto remarca la integración de control de versiones como función clave. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.3. Control de versiones integrado'.
+~%-33.3333%Solo se usa para generar documentación HTML de los cambios. #Incorrecto: Se emplea para operaciones tradicionales de Git, no para documentación. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.3. Control de versiones integrado'.
+~%-33.3333%Es incompatible con PyCharm, por lo que se debe usar otro cliente. #Incorrecto: PyCharm soporta Git integrado según la comparación. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.3. Control de versiones integrado'.
+~%-33.3333%Obliga a abandonar el IDE y trabajar en terminal externa. #Incorrecto: La integración evita salir del IDE para gestionar Git. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.3. Control de versiones integrado'.
+}
+
+::CE 2.f – Diferencia clave de PyCharm::
+¿Qué destaca la unidad de PyCharm?
+{
+=Soporte avanzado para Python y frameworks como Django, con refactorización inteligente. #Correcto: Son características señaladas como puntos fuertes de PyCharm. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
+~%-33.3333%Incompatibilidad con cualquier framework web. #Incorrecto: Se menciona integración con frameworks como Django o Flask. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
+~%-33.3333%Velocidad superior a VS Code porque es más ligero. #Incorrecto: Se menciona que PyCharm puede ser más pesado que un editor como VS Code. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
+~%-33.3333%Carencia total de herramientas de refactorización. #Incorrecto: Precisamente se destaca la refactorización inteligente. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
+}
+
+::CE 2.f – Ventaja de IntelliJ IDEA::
+¿Qué punto fuerte se señala para Kotlin en IntelliJ IDEA?
+{
+=Soporte nativo para Kotlin con integración con Gradle/Maven y análisis de código. #Correcto: La unidad subraya esas capacidades como diferencia de IntelliJ IDEA. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2. IntelliJ IDEA (Kotlin)'.
+~%-33.3333%Necesidad de plugins externos para ejecutar código Kotlin. #Incorrecto: El soporte para Kotlin es nativo sin plugins extras. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2. IntelliJ IDEA (Kotlin)'.
+~%-33.3333%Ausencia de integración con herramientas de construcción como Gradle. #Incorrecto: Se menciona precisamente la integración con Gradle y Maven. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2. IntelliJ IDEA (Kotlin)'.
+~%-33.3333%Ser más ligero que cualquier otro IDE del mercado. #Incorrecto: No se afirma tal cosa; se enfoca en la potencia, no en ser el más ligero. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2. IntelliJ IDEA (Kotlin)'.
+}
+
+::CE 2.f – Perfil de Visual Studio Code::
+¿Cómo define la unidad a VS Code?
+{
+=Un editor ligero y extensible que, con extensiones, actúa como IDE para varios lenguajes. #Correcto: Se explica que VS Code se transforma mediante extensiones como la de Python. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3. Visual Studio Code (Python)'.
+~%-33.3333%Un IDE exclusivo de Python sin soporte para otros lenguajes. #Incorrecto: VS Code soporta múltiples lenguajes gracias a extensiones. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3. Visual Studio Code (Python)'.
+~%-33.3333%Una herramienta que no puede ejecutar scripts desde la terminal integrada. #Incorrecto: Se destaca la terminal integrada como una de sus ventajas. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3. Visual Studio Code (Python)'.
+~%-33.3333%Un editor que sustituye automáticamente a PyCharm en todos los casos. #Incorrecto: Se analiza como alternativa ligera, no como sustituto obligatorio. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3. Visual Studio Code (Python)'.
+}
+
+::CE 2.f – Elección para Python web::
+Si desarrollas una app con Django, ¿qué IDE se sugiere como más completo?
+{
+=PyCharm por su soporte específico para frameworks Python y herramientas integradas. #Correcto: PyCharm se valora por su integración nativa con frameworks como Django. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
+~%-33.3333%Visual Studio Code, porque carece de extensiones para Python. #Incorrecto: VS Code sí tiene extensiones, pero PyCharm ofrece soporte especializado. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
+~%-33.3333%IntelliJ IDEA solo si el proyecto se migra a Kotlin. #Incorrecto: Para Python web, PyCharm es la opción destacada. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
+~%-33.3333%Ningún IDE; se recomienda usar únicamente terminal y bloc de notas. #Incorrecto: Se promueve elegir un IDE con herramientas adecuadas, como PyCharm. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
+}
+
+::CE 2.f – Comparación de rendimiento::
+¿Qué dice la tabla comparativa sobre la velocidad?
+{
+=VS Code es más ligero y rápido, mientras PyCharm e IntelliJ pueden ser más pesados. #Correcto: La tabla resalta la ligereza de VS Code frente a IDEs completos. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4. Comparación de rendimiento y características'.
+~%-33.3333%PyCharm es el más rápido porque no soporta plugins. #Incorrecto: PyCharm soporta muchos plugins y no se califica como el más rápido. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4. Comparación de rendimiento y características'.
+~%-33.3333%IntelliJ IDEA siempre carga más rápido que VS Code. #Incorrecto: Se indica que VS Code suele ser más ligero y veloz. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4. Comparación de rendimiento y características'.
+~%-33.3333%Todos tienen el mismo rendimiento independientemente del proyecto. #Incorrecto: Se comparan diferencias de rendimiento según la herramienta. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4. Comparación de rendimiento y características'.
+}
+
+::CE 2.f – Criterio de selección::
+¿Qué factor resalta la conclusión para elegir un IDE?
+{
+=Depende del lenguaje, tipo de proyecto y necesidades del equipo para maximizar productividad. #Correcto: Se subraya que la elección responde a contexto, lenguaje y tipo de desarrollo. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5. Conclusión'.
+~%-33.3333%Siempre se debe elegir IntelliJ IDEA por ser el más completo. #Incorrecto: No hay un IDE universal; depende del uso. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5. Conclusión'.
+~%-33.3333%Se recomienda alternar cada día de la semana entre los tres IDEs. #Incorrecto: No se sugiere rotar sin motivo; se elige según necesidades. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5. Conclusión'.
+~%-33.3333%Hay que usar exclusivamente IDEs de JetBrains sin valorar otras opciones. #Incorrecto: La conclusión evalúa varias herramientas, incluyendo VS Code. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5. Conclusión'.
+}
+
+::CE 2.f – Integración de extensiones/plugins::
+¿Qué ventaja general ofrecen extensiones y plugins según la comparación?
+{
+=Permiten adaptar cada IDE a nuevos lenguajes, herramientas o flujos de trabajo específicos. #Correcto: Se destaca la extensibilidad como factor clave en los tres entornos. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.4. Soporte para extensiones o plugins'.
+~%-33.3333%Bloquean la ejecución del IDE hasta que finalice una actualización. #Incorrecto: La unidad no relaciona extensiones con bloqueos. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.4. Soporte para extensiones o plugins'.
+~%-33.3333%Impedir que el alumnado use frameworks externos. #Incorrecto: Las extensiones precisamente habilitan frameworks y herramientas adicionales. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.4. Soporte para extensiones o plugins'.
+~%-33.3333%Eliminar la necesidad de aprender comandos git o pytest. #Incorrecto: Aunque ayudan, no reemplazan el conocimiento de las herramientas. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.4. Soporte para extensiones o plugins'.

@@ -1,0 +1,93 @@
+// EDES-U2.3 - Personalización y automatización del entorno
+// Banco de preguntas sobre ajustes de IDE y tareas automatizadas
+// CE 2.c - Adaptación del entorno de desarrollo a las necesidades del proyecto
+
+::CE 2.c – Objetivo de personalizar el IDE::
+¿Qué persigue la personalización del entorno según la unidad?
+{
+=Ajustar apariencia, atajos y comportamiento para trabajar con mayor comodidad y eficiencia. #Correcto: Se resalta que personalizar mejora la productividad y adapta el IDE a cada persona. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2. Personalización del entorno'.
+~%-33.3333%Reducir el número de herramientas disponibles para no distraerse. #Incorrecto: La personalización busca adaptar, no necesariamente reducir funcionalidades. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2. Personalización del entorno'.
+~%-33.3333%Impedir que el IDE reciba actualizaciones automáticas. #Incorrecto: Las actualizaciones se tratan en otro punto; personalizar no las bloquea. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2. Personalización del entorno'.
+~%-33.3333%Transformar el IDE en un bloc de notas sin autocompletado. #Incorrecto: Se pretende potenciar capacidades, no eliminarlas. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2. Personalización del entorno'.
+}
+
+::CE 2.c – Cambio de tema en VS Code::
+Necesitas un tema oscuro en Visual Studio Code. ¿Qué pasos da la unidad?
+{
+=Archivo > Preferencias > Tema de color (Ctrl+K Ctrl+T) y elegir un tema como Dark+. #Correcto: Se indican menú y atajo para cambiar el tema rápidamente. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Modificar manualmente el archivo package.json del proyecto. #Incorrecto: El cambio se hace desde la configuración del editor, no en el proyecto. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Reinstalar VS Code con el tema deseado integrado. #Incorrecto: No hace falta reinstalar; basta con seleccionar el tema disponible. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Editar el registro de Windows para aplicar el modo oscuro. #Incorrecto: El cambio se realiza dentro del IDE sin tocar el sistema operativo. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+}
+
+::CE 2.c – Ajuste de fuente en VS Code::
+Si quieres aumentar el tamaño de letra en VS Code, ¿qué debes hacer?
+{
+=Abrir Preferencias > Configuración, buscar “font size” y setear el valor deseado. #Correcto: Se explica cómo modificar el tamaño de fuente desde la configuración. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Modificar con sed el binario del programa para ampliar la fuente. #Incorrecto: Basta con cambiar la configuración; no se edita el binario. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Crear una extensión propia porque el IDE no permite ese cambio. #Incorrecto: El ajuste de fuente es configurable sin programar extensiones. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Usar solo el atajo Ctrl+R para recargar la interfaz. #Incorrecto: Ctrl+R no modifica el tamaño de fuente; hay que cambiarlo en la configuración. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+}
+
+::CE 2.c – Personalización de atajos VS Code::
+Quieres asignar Ctrl+Alt+F al formateo. ¿Dónde se configura?
+{
+=En Archivo > Preferencias > Atajos de teclado o con Ctrl+K Ctrl+S, buscando la acción. #Correcto: La unidad indica utilizar el editor de atajos para remapear combinaciones. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Modificar el archivo launch.json del proyecto. #Incorrecto: launch.json se usa para ejecuciones, no para atajos. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Agregar una variable de entorno en la terminal integrada. #Incorrecto: Los atajos se gestionan desde el apartado de teclado, no por variables. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+~%-33.3333%Ejecutar un script Python que reasigne teclas. #Incorrecto: No se requiere scripting; se cambia en la interfaz de atajos. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.1. Personalización de Visual Studio Code'.
+}
+
+::CE 2.c – Keymaps en JetBrains::
+Te apañas con atajos de Visual Studio. ¿Qué sugiere la unidad en JetBrains?
+{
+=Seleccionar el esquema de teclas deseado en File > Settings > Keymap y personalizar si hace falta. #Correcto: Se propone elegir un keymap predefinido o adaptar atajos desde ese menú. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.2. Personalización de JetBrains'.
+~%-33.3333%Instalar un plugin externo porque JetBrains no permite cambiar atajos. #Incorrecto: El propio menú Keymap habilita la personalización sin plugins extra. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.2. Personalización de JetBrains'.
+~%-33.3333%Editar el archivo Main.java para reconfigurar los atajos dentro del código. #Incorrecto: Los atajos se gestionan desde la configuración del IDE, no en el código. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.2. Personalización de JetBrains'.
+~%-33.3333%Usar solo el keymap por defecto porque no se puede modificar. #Incorrecto: La unidad destaca la posibilidad de elegir esquemas o crear propios. Consulta `EDES-U2.3.-Personalizacion.md`, sección '2.2. Personalización de JetBrains'.
+}
+
+::CE 2.c – Automatización con tasks en VS Code::
+Quieres ejecutar el fichero Python activo con una tecla. ¿Qué configuración propone el texto?
+{
+=Crear una task en tasks.json con comando python3 y asignarla a un atajo como Ctrl+S. #Correcto: Se muestra un ejemplo de tasks.json que ejecuta el archivo y cómo asociarla a un atajo. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.1. Crear una tarea de ejecución automática'.
+~%-33.3333%Modificar settings.json para que VS Code ejecute scripts aleatorios. #Incorrecto: La automatización se hace definiendo tasks específicas, no scripts aleatorios. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.1. Crear una tarea de ejecución automática'.
+~%-33.3333%Usar únicamente la consola externa porque VS Code no lanza scripts. #Incorrecto: La unidad enseña a automatizar directamente desde VS Code. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.1. Crear una tarea de ejecución automática'.
+~%-33.3333%Ejecutar python3 cada vez manualmente sin configurar nada. #Incorrecto: Justo se explica cómo evitar ejecuciones manuales mediante tasks. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.1. Crear una tarea de ejecución automática'.
+}
+
+::CE 2.c – Automatizar pruebas en VS Code::
+El equipo usa pytest y quiere ejecutarlo al guardar. ¿Qué indica la unidad?
+{
+=Instalar la extensión correspondiente y configurar una task que invoque pytest tras cada cambio. #Correcto: Se describe la configuración de pytest mediante extensiones y tasks automáticas. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.2. Automatización de pruebas'.
+~%-33.3333%Reescribir pytest para que funcione sin tasks ni extensiones. #Incorrecto: No hace falta modificar pytest; se integra mediante extensions y tasks. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.2. Automatización de pruebas'.
+~%-33.3333%Renunciar a la automatización porque VS Code no soporta pruebas. #Incorrecto: Se muestra cómo automatizar la ejecución de pytest desde VS Code. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.2. Automatización de pruebas'.
+~%-33.3333%Ejecutar pytest solo cuando se cierre el IDE. #Incorrecto: La idea es lanzarlo tras los cambios, no al salir. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.1.2. Automatización de pruebas'.
+}
+
+::CE 2.c – Continuous Testing en JetBrains::
+Necesitas que las pruebas se ejecuten al guardar en IntelliJ. ¿Qué recomienda el material?
+{
+=Instalar el plugin Continuous Testing y activarlo para que lance tests automáticamente. #Correcto: El texto sugiere ese plugin para ejecutar pruebas tras cada cambio. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.1. Ejecución automática de pruebas'.
+~%-33.3333%Borrar el directorio de tests para que el IDE no los ejecute. #Incorrecto: La automatización se logra con el plugin, no eliminando pruebas. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.1. Ejecución automática de pruebas'.
+~%-33.3333%Modificar el build.gradle para impedir ejecuciones automáticas. #Incorrecto: Se busca habilitar ejecución continua, no bloquearla. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.1. Ejecución automática de pruebas'.
+~%-33.3333%Ejecutar manualmente Shift+F10 en cada archivo tras los cambios. #Incorrecto: El objetivo es evitar ejecución manual configurando el plugin. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.1. Ejecución automática de pruebas'.
+}
+
+::CE 2.c – Before Launch Tasks en JetBrains::
+¿Para qué sirven las tareas “Before launch” descritas?
+{
+=Ejecutar acciones previas como limpiar temporales o reiniciar servicios antes de lanzar el proyecto. #Correcto: Se detalla cómo configurarlas desde Run > Edit Configurations para preparar la ejecución. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.2. Configuración de tareas previas a la ejecución'.
+~%-33.3333%Desactivar la ejecución del proyecto y mostrar un mensaje de error. #Incorrecto: Su propósito es automatizar tareas previas, no bloquear la ejecución. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.2. Configuración de tareas previas a la ejecución'.
+~%-33.3333%Instalar automáticamente versiones nuevas del IDE. #Incorrecto: Las tareas Before launch se centran en pasos del proyecto, no en actualizaciones. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.2. Configuración de tareas previas a la ejecución'.
+~%-33.3333%Registrar commits en Git antes de cada ejecución. #Incorrecto: Aunque podrían ejecutar scripts, no es el uso descrito en la unidad. Consulta `EDES-U2.3.-Personalizacion.md`, sección '3.2.2. Configuración de tareas previas a la ejecución'.
+}
+
+::CE 2.c – Recursos para seguir aprendiendo::
+¿Dónde sugiere la unidad ampliar información sobre personalización?
+{
+=En los enlaces a la documentación oficial de Visual Studio Code y JetBrains. #Correcto: Se proporcionan enlaces en la sección final para profundizar. Consulta `EDES-U2.3.-Personalizacion.md`, sección '4. Enlaces y recursos de interés'.
+~%-33.3333%En un archivo README externo que hay que descargar desde GitHub. #Incorrecto: Se remite a documentación oficial enlazada, no a repositorios externos no citados. Consulta `EDES-U2.3.-Personalizacion.md`, sección '4. Enlaces y recursos de interés'.
+~%-33.3333%Solo en foros de usuarios porque la documentación está obsoleta. #Incorrecto: Se recomienda explícitamente acudir a la documentación oficial. Consulta `EDES-U2.3.-Personalizacion.md`, sección '4. Enlaces y recursos de interés'.
+~%-33.3333%En manuales impresos del fabricante que se envían por correo. #Incorrecto: Se mencionan recursos online, no manuales impresos. Consulta `EDES-U2.3.-Personalizacion.md`, sección '4. Enlaces y recursos de interés'.
+}

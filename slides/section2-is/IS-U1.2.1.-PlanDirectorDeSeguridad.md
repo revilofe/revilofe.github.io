@@ -141,7 +141,6 @@ Note: La tentación de ir rápido y saltarse pasos es grande, especialmente cuan
 
 Note: Esta imagen representa visualmente cómo las seis fases forman un ciclo continuo. Observad que tras la fase 6 (puesta en marcha), la flecha vuelve a la fase 1, indicando que el proceso se reinicia. Esto refuerza el concepto de mejora continua. En cada iteración del ciclo, la organización alcanza un nivel superior de madurez en seguridad. Es como una espiral ascendente: se repiten las fases pero cada vez desde una posición más avanzada.
 
-
 ---
 
 ## 4. Fase 1: Conocer la situación actual

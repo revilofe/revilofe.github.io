@@ -133,188 +133,179 @@ En Fortnite, presionas las teclas WASD para moverte, la CPU calcula la nueva pos
 // Banco de preguntas sobre código fuente, objeto y ejecutable
 // CE 1.c - Diferencia entre código fuente, objeto y ejecutable
 
-::CE 1.c – Definición de código fuente::
-Escribes un programa en C con instrucciones legibles por personas. ¿Cómo describe la unidad el código fuente?
+::CE 1.c – Diagnóstico en un pipeline roto::
+En la integración continua aparece un error: “archivo .c no compilado, se esperaba .o”. ¿Qué acción describe mejor el paso pendiente?
 {
-=Como el conjunto de instrucciones en un lenguaje de programación legible que actúa como plano inicial del programa. #Correcto: El código fuente es el primer paso que escribe la persona desarrolladora utilizando lenguajes como C o Python. Es legible para humanos y sirve como plano del software. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
-~%-33.3333%Como el binario final que la CPU ejecuta directamente sin más pasos. #Incorrecto: El binario final corresponde al código ejecutable, no al código fuente. El código fuente todavía debe traducirse para que la máquina lo entienda. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
-~%-33.3333%Como la documentación que acompaña a un programa para explicar su uso. #Incorrecto: La documentación puede acompañar al software, pero no es código fuente. El código fuente son instrucciones ejecutables escritas en un lenguaje de programación. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
-~%-33.3333%Como el conjunto de ficheros de configuración del sistema operativo. #Incorrecto: Los ficheros de configuración son datos para el sistema, no el código fuente del programa que estamos desarrollando. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
+=Ejecutar el compilador para traducir el código fuente legible (.c) a código objeto (.o) antes de enlazar. #Correcto: El compilador transforma el código fuente en código objeto, paso previo indispensable al enlazado. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
+~%-33.3333%Modificar el código ejecutable para que acepte archivos .c sin cambios. #Incorrecto: El ejecutable se genera al final; no se edita para leer código fuente. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, secciones '2' y '3'.
+~%-33.3333%Renombrar el archivo .c a .o sin compilarlo para ahorrar tiempo. #Incorrecto: Cambiar el nombre no produce código objeto válido. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2'.
+~%-33.3333%Eliminar el archivo .c porque el ejecutable ya no lo necesita. #Incorrecto: Sin el código fuente no se puede recompilar ni mantener el proyecto. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
 }
 
-::CE 1.c – Herramienta que genera código objeto::
-Tras escribir un archivo `hola.c`, ejecutas `gcc -c hola.c`. ¿Qué herramienta se describe en la unidad y qué obtiene?
+::CE 1.c – Revisión de dependencias compartidas::
+Un equipo con varios módulos comparte utilidades en C. Tras recompilar un módulo, el enlazador informa “undefined reference”. ¿Qué paso debe verificar el equipo?
 {
-=El compilador, que traduce el código fuente a código objeto listo para ser enlazado. #Correcto: El compilador analiza el código fuente y genera código objeto, una versión más cercana al lenguaje máquina pero aún sin enlazar. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
-~%-33.3333%El enlazador, que fusiona directamente el código fuente con bibliotecas externas. #Incorrecto: El enlazador actúa después del compilador. Primero se necesita generar el código objeto con el compilador. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
-~%-33.3333%El intérprete, que ejecuta línea a línea el código fuente sin generar ficheros intermedios. #Incorrecto: En esta unidad se describe un proceso compilado. Un intérprete no produce código objeto como paso intermedio. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
-~%-33.3333%El depurador, que transforma el código para poder analizarlo. #Incorrecto: El depurador ayuda a revisar la ejecución, pero no traduce código fuente a código objeto. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
+=Que todos los ficheros objeto generados y las bibliotecas se pasen al enlazador para resolver referencias. #Correcto: El enlazador une los objetos y bibliotecas, resolviendo símbolos entre módulos. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
+~%-33.3333%Que el fichero fuente tenga comentarios suficientes para que el compilador genere el ejecutable. #Incorrecto: Los comentarios no afectan a la resolución de símbolos. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, secciones '1' y '5'.
+~%-33.3333%Que el archivo ejecutable contenga copias del código fuente para encontrar las funciones. #Incorrecto: El ejecutable no almacena el código fuente, sólo instrucciones máquina. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '3. ¿Qué es el Código Ejecutable?'.
+~%-33.3333%Que las extensiones de los archivos sean .exe aunque aún estén en código fuente. #Incorrecto: La extensión no sustituye las fases de compilación y enlace. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, secciones '2' y '5'.
 }
 
-::CE 1.c – Finalidad del código objeto::
-Después de compilar varios módulos obtienes varios ficheros objeto. ¿Qué papel se les asigna en la unidad?
+::CE 1.c – Migración de equipo nuevo::
+Una nueva incorporación encarga documentar qué generan los distintos pasos del build. ¿Cómo resumirías el rol del código objeto en esa guía?
 {
-=Ser piezas intermedias que contienen instrucciones casi en lenguaje máquina listas para enlazarse con otros módulos y bibliotecas. #Correcto: El código objeto aproxima el programa al lenguaje de la máquina, pero aún necesita unirse con el resto de módulos y bibliotecas mediante el enlazador. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
-~%-33.3333%Ser el ejecutable definitivo que puede ejecutarse sin más pasos. #Incorrecto: El ejecutable se obtiene tras enlazar todos los objetos y bibliotecas necesarias. Los objetos por sí mismos no son ejecutables completos. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
-~%-33.3333%Ser ficheros de configuración que indican cómo compilar el programa. #Incorrecto: Los objetos contienen instrucciones traducidas, no configuraciones de compilación. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
-~%-33.3333%Ser copias exactas del código fuente guardadas en otro formato de texto. #Incorrecto: El código objeto no es texto legible ni copia del código fuente; ya contiene instrucciones cercanas al lenguaje máquina. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
+=Es el resultado intermedio que contiene instrucciones casi en lenguaje máquina, listo para enlazarse con otros objetos y bibliotecas. #Correcto: El código objeto es una etapa intermedia previa al ejecutable. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
+~%-33.3333%Es el manual de usuario del programa traducido a binario. #Incorrecto: El código objeto no es documentación ni guía de usuario. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2'.
+~%-33.3333%Es el ejecutable final que ya puede distribuirse a clientes. #Incorrecto: El ejecutable se obtiene tras enlazar todos los objetos. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '3. ¿Qué es el Código Ejecutable?'.
+~%-33.3333%Es el código fuente con comentarios eliminados para ahorrar espacio. #Incorrecto: El código objeto es binario; no es texto fuente modificado. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2'.
 }
 
-::CE 1.c – Rol del enlazador::
-Tras compilar todos tus módulos, ejecutas el enlazador. ¿Qué función cumple esta fase durante el proceso?
+::CE 1.c – Preparar versiones por sistema operativo::
+Tu empresa necesita entregar la misma aplicación en Windows y Linux. ¿Cómo explica la unidad la diferencia entre los ejecutables resultantes?
 {
-=Une todos los ficheros objeto y las bibliotecas necesarias para generar un único código ejecutable. #Correcto: El enlazador resuelve referencias entre módulos y bibliotecas para producir un ejecutable completo que el sistema operativo puede cargar. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
-~%-33.3333%Traduce el código fuente de alto nivel a código objeto. #Incorrecto: Esa es tarea del compilador. El enlazador actúa después, tomando los objetos ya generados. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
-~%-33.3333%Optimiza el código ejecutable para que sea más legible por las personas. #Incorrecto: El enlazador no mejora la legibilidad humana, su objetivo es generar un binario ejecutable para la máquina. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
-~%-33.3333%Convierte automáticamente el ejecutable en código fuente para su documentación. #Incorrecto: El enlazador no revierte el proceso; trabaja en sentido hacia el ejecutable final. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
+=Cada sistema usa un formato de ejecutable distinto (PE en Windows, ELF en Linux), aunque partan del mismo código fuente. #Correcto: El código ejecutable depende del formato del sistema operativo destino. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '3. ¿Qué es el Código Ejecutable?'.
+~%-33.3333%Ambos sistemas comparten exactamente el mismo binario porque el código fuente es idéntico. #Incorrecto: Necesitan formatos diferentes según el SO. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '3'.
+~%-33.3333%El ejecutable de Linux incluye el código fuente para que Windows pueda convertirlo. #Incorrecto: Los ejecutables contienen instrucciones máquina, no código fuente para otros sistemas. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '3'.
+~%-33.3333%El ejecutable de Windows se construye a partir de los archivos objeto de Linux. #Incorrecto: Cada plataforma requiere sus propios objetos y enlazado. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '3'.
 }
 
-::CE 1.c – Características del código ejecutable::
-Generas el archivo final de tu programa. ¿Qué propiedad destaca la unidad sobre el código ejecutable?
+::CE 1.c – Explicar la receta a personas nuevas::
+En una sesión de onboarding usas la analogía de la receta. ¿Qué parte del proceso representarías como “las piezas cortadas listas para montar”?
 {
-=Contiene instrucciones en lenguaje máquina que el sistema operativo puede cargar y la CPU ejecutar directamente. #Correcto: El código ejecutable es el resultado final del proceso y está en el formato que entiende el procesador. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '3. ¿Qué es el Código Ejecutable?'.
-~%-33.3333%Es un archivo de texto legible que sirve como documentación del programa. #Incorrecto: El ejecutable no es legible por personas; está en lenguaje máquina binario. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '3. ¿Qué es el Código Ejecutable?'.
-~%-33.3333%Solo puede ejecutarse si se recompila cada vez que se usa. #Incorrecto: Una vez generado, el ejecutable se puede ejecutar tantas veces como se quiera sin recompilar. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '3. ¿Qué es el Código Ejecutable?'.
-~%-33.3333%Es independiente del sistema operativo y se ejecuta igual en cualquier plataforma sin cambios. #Incorrecto: El ejecutable está adaptado al sistema operativo y a la arquitectura para la que se compiló. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '3. ¿Qué es el Código Ejecutable?'.
+=El código objeto, porque es el resultado intermedio que aún necesita ensamblarse para formar el ejecutable. #Correcto: En la analogía, el código objeto equivale a las piezas preparadas pero sin ensamblar. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '4. Ejemplo Visual: El Proceso de Traducción de Código'.
+~%-33.3333%El código fuente, porque ya está listo para servir al cliente final. #Incorrecto: El código fuente es el plano inicial, no el resultado montado. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '4'.
+~%-33.3333%El ejecutable, porque representa la receta escrita en lenguaje natural. #Incorrecto: El ejecutable es la comida servida; la receta es el código fuente. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '4'.
+~%-33.3333%El manual de usuario, porque explica cómo comer el plato. #Incorrecto: El manual no forma parte del proceso de traducción. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '4'.
 }
 
-::CE 1.c – Orden de las etapas::
-Selecciona el orden correcto de las etapas descritas en la unidad para crear un programa en C listo para ejecutarse.
+::CE 1.c – Orden correcto en una checklist de despliegue::
+Un compañero propone compilar después de ejecutar el programa “para ahorrar tiempo”. ¿Cómo justificas el orden correcto de fases?
 {
-=Escribir código fuente -> Compilar a código objeto -> Enlazar objetos y bibliotecas -> Ejecutar el binario. #Correcto: La unidad detalla que primero se redacta el código fuente, luego se compila a objeto, después se enlaza y finalmente se ejecuta el programa resultante. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
-~%-33.3333%Escribir código fuente -> Ejecutar directamente -> Compilar -> Enlazar. #Incorrecto: No se puede ejecutar directamente el código fuente; primero debe compilarse y enlazarse. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
-~%-33.3333%Ejecutar el binario -> Enlazar -> Compilar -> Escribir código fuente. #Incorrecto: El proceso no puede comenzar ejecutando un binario que aún no existe; el orden debe respetar las fases de desarrollo. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
-~%-33.3333%Compilar -> Escribir código fuente -> Enlazar -> Ejecutar. #Incorrecto: Primero se escribe el código, después se compila. No se puede compilar algo que todavía no existe. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
+=Se debe escribir el código fuente, compilar a objeto, enlazar para generar el ejecutable y entonces ejecutarlo. #Correcto: La unidad detalla este orden lógico de transformación hasta la ejecución. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
+~%-33.3333%Es mejor ejecutar primero para comprobar el resultado y luego compilar si algo falla. #Incorrecto: Sin compilación no existe ejecutable que ejecutar. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5'.
+~%-33.3333%Hay que enlazar antes de compilar para tener los binarios listos. #Incorrecto: El enlazador opera sobre archivos objeto ya compilados. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5'.
+~%-33.3333%El orden depende del gusto de cada desarrollador; no afecta al resultado. #Incorrecto: Saltarse fases impide obtener ejecutables válidos. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5'.
 }
 
-::CE 1.c – Ejemplo visual de la receta::
-En el ejemplo visual de la unidad se compara el proceso con traducir una receta para un robot. ¿Qué representa el código ejecutable en esa analogía?
+::CE 1.c – Justificar la compilación en un equipo mixto::
+Alguien quiere ejecutar directamente los .c en un servidor de producción sin pasar por la compilación “para ir más rápido”. ¿Qué argumento ofrece la teoría?
 {
-=La versión totalmente detallada en el lenguaje que entiende el robot, lista para ejecutarse. #Correcto: El código ejecutable equivale a las instrucciones definitivas que el robot puede seguir sin más traducciones. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '4. Ejemplo Visual: El Proceso de Traducción de Código'.
-~%-33.3333%La receta original escrita en tu idioma antes de traducirla. #Incorrecto: Esa receta inicial representa el código fuente, no el ejecutable final. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '4. Ejemplo Visual: El Proceso de Traducción de Código'.
-~%-33.3333%El listado de ingredientes sin pasos de preparación. #Incorrecto: Un listado de ingredientes sería información incompleta, similar a datos de entrada, no al código ejecutable completo. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '4. Ejemplo Visual: El Proceso de Traducción de Código'.
-~%-33.3333%Las notas personales del chef sobre cómo mejorar la receta. #Incorrecto: Las notas personales no forman parte del flujo código fuente -> objeto -> ejecutable descrito en la unidad. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '4. Ejemplo Visual: El Proceso de Traducción de Código'.
+=Los ordenadores sólo entienden lenguaje máquina, por lo que el código fuente debe compilarse antes de ejecutarse. #Correcto: El código fuente es legible por personas, no por la CPU. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
+~%-33.3333%Si el programa es pequeño, el servidor puede interpretarlo sin problema. #Incorrecto: C no se interpreta; debe compilarse. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1'.
+~%-33.3333%El compilador es opcional; basta con renombrar el archivo a .exe. #Incorrecto: Cambiar la extensión no convierte el código en ejecutable. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1'.
+~%-33.3333%El enlazador puede traducir el código fuente durante la ejecución. #Incorrecto: El enlazador opera sobre código objeto ya compilado. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5'.
 }
 
-::CE 1.c – Necesidad de compilar el código fuente::
-¿Por qué insiste la unidad en que el código fuente debe transformarse antes de ejecutarse?
+::CE 1.c – Auditoría de procesos de build::
+La responsable de calidad quiere saber por qué se revisa el enlazado en cada versión. ¿Qué beneficio puedes exponer?
 {
-=Porque los ordenadores solo entienden lenguaje máquina y el código fuente está pensado para ser legible por personas. #Correcto: La unidad recuerda que el código fuente es legible para humanos y debe traducirse a código que la CPU pueda interpretar. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
-~%-33.3333%Porque compilar permite que el programa funcione sin usar memoria RAM. #Incorrecto: La compilación no elimina la necesidad de memoria RAM durante la ejecución. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
-~%-33.3333%Porque el código fuente se pierde automáticamente si no se compila cada minuto. #Incorrecto: El código fuente no desaparece; la compilación se hace para generar ejecutables, no para conservarlo. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
-~%-33.3333%Porque al compilar el código se convierte en documentación para el equipo. #Incorrecto: La documentación no es el objetivo de la compilación; se compila para obtener código ejecutable. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
+=El enlazado garantiza que todos los objetos y bibliotecas se integren correctamente, evitando llamadas a funciones inexistentes. #Correcto: El enlazador es la etapa que resuelve referencias y forma el ejecutable completo. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
+~%-33.3333%El enlazado genera documentación sobre el diseño del software. #Incorrecto: El enlazador no produce documentación; crea ejecutables. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5'.
+~%-33.3333%El enlazado elimina la necesidad de compilar en futuras versiones. #Incorrecto: Cada cambio requiere recompilar para obtener nuevos objetos. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5'.
+~%-33.3333%El enlazado modifica el código fuente para adaptarlo a otros lenguajes. #Incorrecto: El enlazador trabaja sobre objetos, no sobre el código fuente. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5'.
 }
 
-::CE 1.c – Importancia del enlazado::
-Si omites la etapa de enlazado después de tener los objetos, ¿qué ocurre según la unidad?
+::CE 1.c – Formación para nuevos mantenedores::
+Cuando explicas el flujo de build a personal junior, ¿por qué remarcas conocer las fases (fuente, objeto, ejecutable)?
 {
-=No obtienes un ejecutable completo porque las referencias entre módulos y bibliotecas quedan sin resolver. #Correcto: El enlazado es imprescindible para combinar los objetos y producir el ejecutable final. Sin esa fase, el programa no se puede ejecutar. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
-~%-33.3333%El programa se ejecuta igualmente porque el código objeto es suficiente. #Incorrecto: El código objeto necesita enlazarse para resolver dependencias y formar el ejecutable final. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
-~%-33.3333%Solo se pierden los comentarios del código fuente, pero el binario se genera. #Incorrecto: El enlazado no tiene que ver con comentarios; sin enlazar no hay binario ejecutable. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
-~%-33.3333%Obtienes un archivo ejecutable, pero sin icono ni nombre descriptivo. #Incorrecto: La ausencia de enlazado impide obtener el ejecutable; no se trata de detalles estéticos del archivo. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
-}
-
-::CE 1.c – Utilidad de conocer las fases::
-¿Qué ventaja señala la conclusión de la unidad sobre entender las etapas de código fuente, objeto y ejecutable?
-{
-=Permite trabajar mejor con compiladores y enlazadores para crear aplicaciones funcionales de forma consciente. #Correcto: La conclusión destaca que comprender las etapas ayuda a usar adecuadamente las herramientas y a saber qué ocurre en cada paso. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección 'Conclusión'.
-~%-33.3333%Evita tener que utilizar cualquier herramienta de desarrollo. #Incorrecto: Conocer las fases no elimina la necesidad de usar herramientas; precisamente ayuda a utilizarlas mejor. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección 'Conclusión'.
-~%-33.3333%Garantiza que el programa nunca tendrá errores. #Incorrecto: Comprender las fases no garantiza la ausencia de errores, aunque facilita su análisis. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección 'Conclusión'.
-~%-33.3333%Permite saltarse la fase de pruebas porque el código ya está traducido. #Incorrecto: Las pruebas siguen siendo necesarias; entender las fases no elimina el proceso de verificación y pruebas. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección 'Conclusión'.
+=Porque ayuda a localizar problemas y usar mejor compiladores y enlazadores, comprendiendo qué ocurre en cada etapa. #Correcto: La conclusión del tema insiste en que conocer las fases permite diagnósticos y uso efectivo de herramientas. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección 'Conclusión'.
+~%-33.3333%Porque así se puede saltar fases sin arriesgar la calidad del software. #Incorrecto: Conocer las fases no implica que puedan omitirse. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección 'Conclusión'.
+~%-33.3333%Porque evita la necesidad de documentar el proceso de build. #Incorrecto: La comprensión no sustituye la documentación. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección 'Conclusión'.
+~%-33.3333%Porque permite ejecutar directamente el código fuente en cualquier máquina. #Incorrecto: Las máquinas necesitan el código ejecutable. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección 'Conclusión'.
 }
 
 // EDES-U1.3 - CodigoIntermedio
 // Banco de preguntas sobre código intermedio y máquinas virtuales
 // CE 1.d - Generación de código intermedio
 
-::CE 1.d – Definición de código intermedio::
-Compilas un programa en Java y obtienes archivos `.class`. ¿Cómo define la unidad ese código intermedio?
+::CE 1.d – Entrega multiplataforma sin sorpresas::
+El equipo de release quiere enviar la misma aplicación Java a clientes en Windows, Linux y macOS. ¿Qué estrategia minimiza retrabajos?
 {
-=Como un conjunto de instrucciones independientes de la plataforma que necesita una máquina virtual para ejecutarse. #Correcto: El código intermedio no está ligado a una arquitectura física; es interpretado o compilado por la JVM o la CLR según la plataforma. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
-~%-33.3333%Como el ejecutable final que el sistema operativo carga directamente. #Incorrecto: El ejecutable final se obtiene tras la interpretación o compilación JIT del código intermedio; no es el mismo archivo. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
-~%-33.3333%Como el código fuente tal y como lo escribió la persona desarrolladora. #Incorrecto: El código fuente es el paso anterior; el código intermedio es generado a partir de él. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
-~%-33.3333%Como un documento de diseño que orienta la implementación final. #Incorrecto: El código intermedio no es documentación, son instrucciones reales listas para ejecutarse en una VM. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
+=Distribuir el mismo bytecode `.class/.jar` y pedir a cada cliente que ejecute con la JVM de su plataforma. #Correcto: El código intermedio es independiente de la arquitectura y cada JVM lo convierte a instrucciones nativas. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+~%-33.3333%Compilar el código fuente a ejecutables nativos distintos para cada sistema operativo en cada entrega. #Incorrecto: Eso eliminaría la ventaja de la portabilidad del bytecode descrita en la unidad. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3'.
+~%-33.3333%Enviar el código fuente y que el cliente lo compile con cualquier editor de texto. #Incorrecto: El cliente necesitaría herramientas de compilación y perderíamos control del proceso. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
+~%-33.3333%Convertir el bytecode a HTML para que se ejecute directamente en el navegador. #Incorrecto: Los navegadores no ejecutan bytecode Java sin una JVM o plugin específico. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3'.
 }
 
-::CE 1.d – Papel de la máquina virtual::
-¿Qué papel asigna la unidad a la máquina virtual (JVM o CLR) dentro del proceso?
+::CE 1.d – Colaboración con operaciones::
+Operaciones pregunta qué instalar en servidores donde sólo se ejecutarán aplicaciones Java ya compiladas. ¿Qué debes recomendar?
 {
-=Traducir o compilar el código intermedio a instrucciones específicas de la arquitectura donde se ejecuta. #Correcto: La máquina virtual actúa como intérprete/compilador que convierte el bytecode en código máquina para cada plataforma. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
-~%-33.3333%Guardar el código fuente original para permitir volver atrás en el proyecto. #Incorrecto: La máquina virtual no gestiona versiones del código fuente; se centra en ejecutar el bytecode. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
-~%-33.3333%Elegir automáticamente el lenguaje de programación más eficiente para el proyecto. #Incorrecto: La VM no cambia de lenguaje; ejecuta el código intermedio generado por el compilador del lenguaje elegido. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
-~%-33.3333%Convertir el código intermedio en documentación para el equipo funcional. #Incorrecto: La VM no genera documentación, transforma bytecode en instrucciones ejecutables. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
+=Instalar el JRE/JVM porque sólo necesitan ejecutar bytecode, no compilar. #Correcto: El JDK es necesario para desarrollar/compilar, mientras que el JRE basta para ejecutar. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección 'JDK vs JRE en desarrollo'.
+~%-33.3333%Instalar únicamente el compilador `javac` para convertir bytecode a código fuente. #Incorrecto: El compilador transforma código fuente a bytecode; no sirve para ejecutar. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección 'JDK vs JRE en desarrollo'.
+~%-33.3333%Eliminar la JVM y ejecutar los `.class` con el sistema operativo directamente. #Incorrecto: Sin JVM no se puede interpretar/compilar el bytecode. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
+~%-33.3333%Reemplazar el bytecode por scripts Bash para evitar dependencias. #Incorrecto: No se podrían ejecutar las aplicaciones Java y se perdería funcionalidad. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1'.
 }
 
-::CE 1.d – Flujo de trabajo en Java::
-Según la unidad, ¿cuál es la secuencia correcta para desarrollar y ejecutar un programa en Java?
+::CE 1.d – Latencia tras reinicio::
+Después de reiniciar un microservicio Java, las métricas muestran más latencia durante los primeros minutos. ¿Cómo lo explicas?
 {
-=Escribir código fuente -> Compilar con `javac` a bytecode -> Ejecutar con `java` en la JVM. #Correcto: La unidad detalla que primero se crea el archivo `.java`, luego se compila a `.class` y finalmente la JVM lo ejecuta. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
-~%-33.3333%Escribir bytecode -> Interpretarlo con la JVM -> Generar código fuente automáticamente. #Incorrecto: El bytecode se genera a partir del código fuente; no se escribe manualmente. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
-~%-33.3333%Escribir código fuente -> Ejecutar directamente el `.java` -> Compilar si hay errores. #Incorrecto: El `.java` no se ejecuta directamente; debe compilarse primero. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
-~%-33.3333%Compilar con `javac` -> Enlazar bibliotecas nativas -> Crear un ejecutable `.exe` portátil. #Incorrecto: El proceso estándar produce bytecode `.class` que se ejecuta en la JVM, no un `.exe` nativo. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
+=La JVM está en fase de warm-up: comienza interpretando y luego compila JIT los hotspots para optimizar. #Correcto: La unidad describe el proceso JIT y cómo mejora el rendimiento tras recopilar perfiles. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+~%-33.3333%El bytecode se corrompe y necesita regenerarse manualmente tras cada reinicio. #Incorrecto: No hace falta regenerar bytecode; el warm-up es un comportamiento normal de la JVM. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3'.
+~%-33.3333%El sistema operativo impide ejecutar bytecode hasta que pase una hora. #Incorrecto: La latencia inicial se debe al proceso de optimización JIT, no a una restricción del SO. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3'.
+~%-33.3333%Las clases Java se recompilan a código fuente para verificar errores. #Incorrecto: No se recompilan a código fuente; la JVM optimiza el bytecode en tiempo de ejecución. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3'.
 }
 
-::CE 1.d – Ventaja de portabilidad::
-Tu equipo quiere distribuir una aplicación Java en Windows, Linux y macOS. ¿Qué ventaja resalta la unidad sobre el código intermedio?
+::CE 1.d – Auditoría de seguridad::
+Seguridad quiere saber cómo evita la JVM que un bytecode malicioso dañe el servidor. ¿Qué argumento ofrece la teoría?
 {
-=Que el mismo bytecode puede ejecutarse en cualquier plataforma que tenga instalada la máquina virtual correspondiente. #Correcto: Es el famoso "Write Once, Run Anywhere"; solo se requiere la JVM adecuada en cada sistema. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
-~%-33.3333%Que el bytecode se convierte automáticamente en ejecutables nativos distintos para cada sistema. #Incorrecto: No se generan ejecutables nativos separados; se usa el mismo bytecode y cada JVM lo interpreta o compila. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
-~%-33.3333%Que el bytecode se adapta a la interfaz gráfica de cada sistema sin intervención. #Incorrecto: La portabilidad no implica adaptar interfaces automáticamente; eso depende del programa, no del bytecode. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
-~%-33.3333%Que la máquina virtual reescribe el código fuente en el idioma local de cada país. #Incorrecto: La VM no traduce idiomas; solo ejecuta bytecode. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+=La máquina virtual verifica el bytecode antes de ejecutarlo, comprobando el uso correcto de tipos y accesos. #Correcto: Las JVM realizan verificación para proteger el sistema. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+~%-33.3333%La JVM convierte todo el bytecode en comentarios para que no se ejecute. #Incorrecto: La JVM ejecuta el bytecode, no lo convierte en comentarios. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3'.
+~%-33.3333%El bytecode se ejecuta directamente sin comprobaciones porque siempre es seguro. #Incorrecto: Sin la verificación se perdería la capa de seguridad mencionada. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3'.
+~%-33.3333%La verificación se realiza una vez en el compilador y nunca en la JVM. #Incorrecto: El compilador genera bytecode, pero la verificación ocurre en la máquina virtual antes de la ejecución. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3'.
 }
 
-::CE 1.d – Seguridad en máquinas virtuales::
-¿Qué aporta la máquina virtual a nivel de seguridad según la unidad?
+::CE 1.d – Soporte ARM vs x86::
+Un cliente con servidores ARM pregunta si puede ejecutar vuestra aplicación compilada en x86. ¿Qué respondes?
 {
-=Verifica y controla el acceso del código intermedio al sistema operativo y al hardware. #Correcto: La VM añade una capa de seguridad que evita que bytecode malicioso acceda libremente a recursos del sistema. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
-~%-33.3333%Permite que el código intermedio modifique directamente la BIOS para ganar rendimiento. #Incorrecto: La VM limita el acceso al hardware, no lo amplía de forma directa. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
-~%-33.3333%Reemplaza automáticamente el antivirus del sistema operativo. #Incorrecto: La VM no sustituye herramientas de seguridad tradicionales; complementa la protección. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
-~%-33.3333%Impide que se instalen actualizaciones del sistema para evitar riesgos. #Incorrecto: La VM no gestiona las actualizaciones del sistema operativo. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+=Sí, mientras disponga de una JVM para ARM, porque la JVM traducirá el mismo bytecode a instrucciones de su arquitectura. #Correcto: El bytecode es independiente de la arquitectura; la JVM se encarga de la traducción. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+~%-33.3333%No, porque el bytecode incluye instrucciones x86 y fallará en ARM. #Incorrecto: El bytecode no está ligado a una arquitectura específica. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3'.
+~%-33.3333%Sí, pero primero debe recompilar el código fuente con `javac` en la máquina ARM. #Incorrecto: No es necesario recompilar; basta con tener la JVM adecuada. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3'.
+~%-33.3333%Sólo funcionará si convierte el bytecode a C y lo recompila de nuevo. #Incorrecto: No hace falta convertir a otro lenguaje; el bytecode ya es portable. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3'.
 }
 
-::CE 1.d – Compilación JIT::
-Durante la ejecución, la JVM activa la compilación Just-In-Time (JIT). ¿Qué beneficio destaca la unidad?
+::CE 1.d – Pipeline de desarrollo compartido::
+Un nuevo desarrollador cree que puede ejecutar el `.java` directamente porque “es lo mismo que el `.class`”. ¿Cómo aclares el flujo?
 {
-=Optimizar el rendimiento convirtiendo las partes más usadas del bytecode en código nativo en tiempo de ejecución. #Correcto: La JIT analiza el comportamiento real y convierte los puntos calientes en instrucciones nativas optimizadas. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
-~%-33.3333%Permitir que el bytecode se ejecute sin máquina virtual. #Incorrecto: La JIT sigue necesitando la JVM; simplemente compila fragmentos a código nativo. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
-~%-33.3333%Convertir automáticamente el programa en código fuente de C para depurarlo. #Incorrecto: La JIT no traduce a otros lenguajes de alto nivel; produce código nativo temporal. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
-~%-33.3333%Reducir el tamaño del bytecode eliminando clases y métodos. #Incorrecto: La JIT optimiza la ejecución, no modifica el tamaño del bytecode almacenado. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+=El `.java` es código fuente legible; debe compilarse con `javac` para generar el `.class`, que luego ejecuta la JVM. #Correcto: La unidad describe la secuencia fuente → bytecode → ejecución en la JVM. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
+~%-33.3333%El `.java` se abre con un navegador y se ejecuta sin pasos previos. #Incorrecto: El código fuente no se ejecuta en navegadores ni sin compilación. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4'.
+~%-33.3333%El `.class` sólo contiene comentarios y no sirve para ejecutar. #Incorrecto: El `.class` es precisamente el bytecode ejecutable por la JVM. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4'.
+~%-33.3333%Compilar el `.java` genera directamente un `.exe` que ya no necesita JVM. #Incorrecto: El proceso estándar genera bytecode `.class`, no ejecutables nativos. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4'.
 }
 
-::CE 1.d – Resultado de `javac`::
-Compilas `Suma.java` siguiendo el ejemplo de la unidad. ¿Qué archivo obtienes tras ejecutar `javac Suma.java`?
+::CE 1.d – Debate sobre eliminar la JVM::
+Un responsable propone “compilar todo a nativo” para evitar instalar JVM en producción. ¿Qué pierden?
 {
-=El archivo `Suma.class`, que contiene el bytecode portable del programa. #Correcto: El compilador genera un `.class` con bytecode listo para que la JVM lo ejecute. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
-~%-33.3333%Un archivo `Suma.exe` nativo para Windows. #Incorrecto: El proceso estándar genera `.class`, no ejecutables nativos. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
-~%-33.3333%Un archivo `Suma.pyc` compatible con Python. #Incorrecto: El compilador de Java no genera archivos para Python. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
-~%-33.3333%Un documento `Suma.txt` con un resumen de la ejecución. #Incorrecto: El compilador no produce documentos de texto con resúmenes; genera bytecode. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
+=Portabilidad y facilidad de despliegue, ya que habría que compilar y mantener ejecutables distintos por plataforma. #Correcto: Sin código intermedio se perdería la ventaja de “Write Once, Run Anywhere”. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '5. ¿Qué Ocurre si No Usamos Código Intermedio?'.
+~%-33.3333%La posibilidad de usar estructuras de control en el lenguaje fuente. #Incorrecto: La decisión sobre código intermedio no afecta a la sintaxis del lenguaje. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '5'.
+~%-33.3333%El acceso al código fuente, que quedaría inaccesible. #Incorrecto: El código fuente seguiría existiendo; lo que cambia es la estrategia de despliegue. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '5'.
+~%-33.3333%La capacidad de escribir código Java o Kotlin, que dejarían de compilar. #Incorrecto: El problema es la portabilidad, no la posibilidad de escribir en esos lenguajes. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '5'.
 }
 
-::CE 1.d – Si no se usara código intermedio::
-¿Qué desventaja menciona la unidad si un lenguaje no generara código intermedio?
+::CE 1.d – Ejecutar bytecode en navegadores::
+Una persona propone cargar directamente archivos `.class` en el navegador sin plugins. ¿Cómo respondes?
 {
-=Que habría que compilar versiones distintas del programa para cada sistema operativo y arquitectura. #Correcto: Sin código intermedio perderíamos la portabilidad y tendríamos que mantener binarios específicos por plataforma. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '5. ¿Qué Ocurre si No Usamos Código Intermedio?'.
-~%-33.3333%Que el programa sería automáticamente más rápido en todos los sistemas. #Incorrecto: La velocidad no aumenta solo por eliminar el código intermedio; al contrario, se pierde portabilidad. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '5. ¿Qué Ocurre si No Usamos Código Intermedio?'.
-~%-33.3333%Que ya no sería necesario probar el software en varias plataformas. #Incorrecto: Sin código intermedio habría que probar cada versión nativa, lo que complica aún más el proceso. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '5. ¿Qué Ocurre si No Usamos Código Intermedio?'.
-~%-33.3333%Que el código fuente se convertiría en documentación técnica. #Incorrecto: El código fuente seguiría siendo código; lo que cambia es la portabilidad. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '5. ¿Qué Ocurre si No Usamos Código Intermedio?'.
+=Explicas que el bytecode necesita una máquina virtual (JVM o similar); los navegadores no ejecutan `.class` sin esa capa. #Correcto: Se enfatiza que el código intermedio requiere una VM para traducirlo a instrucciones reales. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
+~%-33.3333%Indicas que basta renombrar el `.class` a `.js` para que el navegador lo interprete. #Incorrecto: Renombrar no cambia el contenido; los navegadores no entienden bytecode Java. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1'.
+~%-33.3333%Sugieres incrustar el `.class` en una etiqueta `<iframe>` para ejecutarlo. #Incorrecto: Sin una VM embebida no se ejecutará. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1'.
+~%-33.3333%Comentaste que los navegadores modernos incluyen JVM integrada por defecto. #Incorrecto: La mayoría de navegadores no incluyen JVM integrada; requieren plugins o tecnologías alternativas. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1'.
 }
 
-::CE 1.d – Ejecución en diferentes arquitecturas::
-Compilas tu aplicación Java en un Mac ARM y quieres ejecutarla en un servidor Linux x86-64. ¿Qué ocurrirá?
+::CE 1.d – Formación de equipo sobre ventajas del bytecode::
+En una sesión interna preguntas por qué Java es útil en entornos heterogéneos. ¿Qué ejemplo práctico extraerías?
 {
-=Funcionará si el servidor tiene JVM, porque el bytecode es independiente de la arquitectura y la JVM lo traduce a la CPU disponible. #Correcto: La portabilidad es posible gracias a que cada JVM convierte el bytecode a instrucciones nativas de su plataforma. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
-~%-33.3333%Fallará porque el bytecode está compilado para ARM y no puede ejecutarse en x86-64. #Incorrecto: El bytecode no está ligado a una arquitectura concreta; la JVM maneja la traducción. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
-~%-33.3333%Requerirá recompilar el `.java` en el servidor Linux antes de ejecutarse. #Incorrecto: No es necesario recompilar si ya tienes el bytecode; basta con tener la JVM. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
-~%-33.3333%Solo funcionará si instalas un emulador de ARM en el servidor Linux. #Incorrecto: No se necesita emulación de CPU; la JVM se encarga de traducir el bytecode. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+=El mismo `.jar` se prueba en Windows del equipo de QA y en Linux del equipo de DevOps sin recompilar, gracias a la JVM. #Correcto: La portabilidad entre plataformas es uno de los beneficios descritos. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+~%-33.3333%Cada equipo necesita recompilar el código fuente con su propio compilador nativo. #Incorrecto: El bytecode evita recompilaciones por plataforma. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3'.
+~%-33.3333%Solo funciona si ambos equipos tienen la misma versión de sistema operativo. #Incorrecto: La JVM se encarga de las diferencias de SO. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3'.
+~%-33.3333%Es necesario actualizar el lenguaje fuente cada vez que se cambia de plataforma. #Incorrecto: El lenguaje fuente permanece igual; lo que cambia es la JVM instalada. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3'.
 }
 
-::CE 1.d – Conclusión de la unidad::
-Según la conclusión, ¿por qué es importante comprender la generación de código intermedio?
+::CE 1.d – Conclusión para documentación técnica::
+Antes de cerrar la guía de arquitectura, quieres recordar por qué entender el pipeline fuente → bytecode → VM es clave. ¿Qué mensaje recuerdas?
 {
-=Porque permite crear software portable y entender cómo las máquinas virtuales equilibran portabilidad, seguridad y rendimiento. #Correcto: La unidad remarca que dominar estas fases ayuda a aprovechar la portabilidad y las optimizaciones de la VM. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '7. Conclusión'.
-~%-33.3333%Porque elimina la necesidad de conocer el lenguaje de alto nivel. #Incorrecto: Entender el código intermedio no sustituye aprender el lenguaje fuente. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '7. Conclusión'.
-~%-33.3333%Porque permite generar código ejecutable sin máquinas virtuales. #Incorrecto: La conclusión destaca la importancia de las máquinas virtuales, no su eliminación. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '7. Conclusión'.
-~%-33.3333%Porque garantiza que el programa no necesitará mantenimiento futuro. #Incorrecto: Comprender el proceso no elimina la necesidad de mantenimiento; simplemente facilita el desarrollo. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '7. Conclusión'.
+=Conocer las fases ayuda a usar correctamente compiladores/JVM, diagnosticar problemas y valorar la portabilidad del enfoque. #Correcto: La conclusión resalta que comprender el proceso completo permite aprovechar sus ventajas. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '7. Conclusión'.
+~%-33.3333%Saberlo permite ejecutar bytecode sin ninguna máquina virtual. #Incorrecto: El bytecode siempre requiere una VM. Consulta `EDES-U1.3.-CodigoIntermedio.md`, secciones '1' y '7'.
+~%-33.3333%La conclusión anima a reemplazar el bytecode por ejecutables nativos en todos los casos. #Incorrecto: La unidad defiende el código intermedio por sus beneficios. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '7'.
+~%-33.3333%Comprenderlo evita la necesidad de documentar los procesos de despliegue. #Incorrecto: Entender las fases no elimina la documentación; la complementa. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '7'.
 }
 
 // EDES-U1.4 - Traductores
@@ -480,7 +471,7 @@ Necesitas escribir un driver de dispositivo que manipule registros de hardware. 
 }
 
 ::CE 1.e – Multiparadigma (Python)::
-Python permite combinar programación imperativa, orientada a objetos y funcional. ¿Qué ventaja ofrece esa flexibilidad según la unidad?
+Python permite combinar programación imperativa, orientada a objetos y funcional. ¿Qué ventaja ofrece esa flexibilidad?
 {
 =Permite elegir el estilo más adecuado para cada tarea: orientación a objetos para modelar entidades, imperativo para flujos de control y funcional para procesar datos. #Correcto: La unidad destaca que lenguajes como Python permiten aplicar varios paradigmas en un mismo proyecto, dando más herramientas según el problema. Consulta `EDES-U1.5.-Lenguajes.md`, secciones '2.3. Según el Paradigma de Programación' y '3. Características de los Lenguajes de Programación más Comunes'.
 ~%-33.3333%Obliga a escribir el programa completo usando un solo paradigma y limita la creatividad. #Incorrecto: Justo al contrario, el multiparadigma abre opciones en vez de restringirlas. Consulta `EDES-U1.5.-Lenguajes.md`, secciones '2.3. Según el Paradigma de Programación' y '3. Características de los Lenguajes de Programación más Comunes'.
@@ -599,8 +590,6 @@ Tu proyecto Java tiene 50,000 líneas de código. El líder técnico quiere un r
 ~%-33.3333%GDB puede analizar el código fuente y generar reportes de calidad automáticamente. #Incorrecto\: GDB es DEBUGGER, NO analizador de calidad\: • GDB\: Depura programas EN EJECUCIÓN (breakpoints, inspección de variables, stack traces). • GDB NO analiza calidad de código (no detecta code smells, duplicación, vulnerabilidades). • Para calidad de código\: Análisis ESTÁTICO (sin ejecutar)\: SonarQube, ESLint, Pylint, Clang-Tidy. • Para debugging\: Análisis DINÁMICO (ejecutando)\: GDB, LLDB, Visual Studio Debugger. • Son herramientas complementarias pero DIFERENTES\: GDB encuentra bugs en ejecución; SonarQube encuentra problemas potenciales en código fuente sin ejecutar. Consulta `EDES-U1.6.-FuncionalidadesHerramientas.md`, sección '2.8. Herramientas para Pruebas y Calidad de Código'.
 ~%-33.3333%Maven es la herramienta apropiada porque puede detectar todos los code smells durante la compilación. #Incorrecto\: Maven es BUILD TOOL, NO analizador de calidad\: • Maven\: Gestiona dependencias, compila, ejecuta tests, empaqueta (JAR/WAR). • Maven NO analiza calidad de código por sí mismo (puede compilar código con code smells sin quejarse). • Maven INTEGRA con SonarQube\: Usas plugin maven-sonar-plugin para ejecutar análisis, pero el ANÁLISIS lo hace SonarQube. • Comando\: mvn sonar\:sonar → Maven llama a SonarQube, pero SonarQube hace el análisis. • Para calidad\: SonarQube (o CheckStyle, PMD, SpotBugs integrados en Maven). Maven es el orquestador; SonarQube es el analizador. Consulta `EDES-U1.6.-FuncionalidadesHerramientas.md`, sección '2.8. Herramientas para Pruebas y Calidad de Código'.
 ~%-33.3333%Git puede generar métricas de calidad basándose en el historial de commits y cambios. #Incorrecto\: Git NO analiza calidad de código\: • Git\: Control de versiones (commits, branches, diffs). NO analiza calidad. • Git puede generar MÉTRICAS DE PROCESO\: Quién commitea más, frecuencia de cambios, áreas de código que cambian frecuentemente. • Git NO detecta\: Code smells, bugs, vulnerabilidades, duplicación (requiere análisis del CONTENIDO del código, no solo cambios). • Para análisis de calidad\: SonarQube (analiza AST, flujo de control, patrones). • Para métricas de proceso\: Git stats (git log --stat, herramientas como GitStats). Son complementarias\: Git track. Consulta `EDES-U1.6.-FuncionalidadesHerramientas.md`, sección '2.8. Herramientas para Pruebas y Calidad de Código'.
-
-a cambios; SonarQube evalúa calidad.
 }
 
 ::CE 1.f – Pruebas de carga con JMeter::

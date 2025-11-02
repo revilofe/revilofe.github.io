@@ -39,7 +39,7 @@ Necesitas escribir un driver de dispositivo que manipule registros de hardware. 
 }
 
 ::CE 1.e – Multiparadigma (Python)::
-Python permite combinar programación imperativa, orientada a objetos y funcional. ¿Qué ventaja ofrece esa flexibilidad según la unidad?
+Python permite combinar programación imperativa, orientada a objetos y funcional. ¿Qué ventaja ofrece esa flexibilidad?
 {
 =Permite elegir el estilo más adecuado para cada tarea: orientación a objetos para modelar entidades, imperativo para flujos de control y funcional para procesar datos. #Correcto: La unidad destaca que lenguajes como Python permiten aplicar varios paradigmas en un mismo proyecto, dando más herramientas según el problema. Consulta `EDES-U1.5.-Lenguajes.md`, secciones '2.3. Según el Paradigma de Programación' y '3. Características de los Lenguajes de Programación más Comunes'.
 ~%-33.3333%Obliga a escribir el programa completo usando un solo paradigma y limita la creatividad. #Incorrecto: Justo al contrario, el multiparadigma abre opciones en vez de restringirlas. Consulta `EDES-U1.5.-Lenguajes.md`, secciones '2.3. Según el Paradigma de Programación' y '3. Características de los Lenguajes de Programación más Comunes'.

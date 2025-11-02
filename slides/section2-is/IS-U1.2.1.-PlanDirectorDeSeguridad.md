@@ -315,7 +315,7 @@ Note: Aprender de los errores comunes de otras organizaciones puede ahorrar tiem
 * Debe alinearse con estrategia de negocio.
 * Es un proceso continuo de mejora.
 
-Note: El Plan Director de Seguridad no es un lujo, es una necesidad para cualquier organización que dependa de tecnología.
+Note: El Plan Director de Seguridad no es un lujo, es una necesidad para cualquier organización que dependa de tecnología. Resume que proteger información es proteger el negocio y que el PDS convierte la seguridad en un proceso medible y mejorable.
 
 
 ### 10.2. Próximos pasos
@@ -326,7 +326,143 @@ Note: El Plan Director de Seguridad no es un lujo, es una necesidad para cualqui
 4. Proponer proyectos prioritarios.
 5. Obtener compromiso de la dirección.
 
-Note: El mejor momento para empezar con un PDS fue ayer. El segundo mejor momento es ahora.
+Note: El mejor momento para empezar con un PDS fue ayer. El segundo mejor momento es ahora. Insiste en empezar pequeño (alcance acotado) y crecer por iteraciones, con quick wins iniciales.
+
+---
+
+## 11. Modelo de madurez y SoA
+
+
+### 11.1. Declaración de Aplicabilidad (SoA)
+
+* Lista de controles aplicables (ISO/IEC 27002).
+* Estado: implantado, en curso o pendiente.
+* Justificación de no aplicabilidad.
+* Fuente: evaluación de cumplimiento.
+
+Note: La SoA es el inventario oficial de controles de seguridad. Sirve para saber qué controles existen, su estado y por qué algunos no aplican. Se apoya en entrevistas, checklists y evidencias.
+
+
+### 11.2. Escala de madurez (CMM)
+
+* 0 Inexistente: no se realiza el control.
+* 1 Inicial: sin proceso ni responsables.
+* 2 Repetible: método informal personal.
+* 3 Definido: procedimiento documentado.
+* 4 Administrado: aprobado y gestionado.
+* 5 Optimizado: medido con KPIs.
+
+Note: Usad la escala para ubicar cada control y fijar objetivos. Evitad saltos irreales (de 0 a 5). Marcad metas de medio plazo alcanzables y la visión a largo plazo.
+
+---
+
+## 12. Análisis de riesgos en el PDS
+
+
+### 12.1. Etapas (I)
+
+* Identificar activos y su valor.
+* Identificar amenazas relevantes.
+* Identificar vulnerabilidades clave.
+* Calcular riesgo intrínseco.
+
+Note: Apoyaos en el inventario y en fuentes como históricos de incidentes. El riesgo intrínseco es el riesgo "en bruto" antes de controles específicos.
+
+
+### 12.2. Etapas (II)
+
+* Estimar probabilidad e impacto.
+* Valorar controles existentes.
+* Estimar riesgo residual.
+* Decidir tratamiento del riesgo.
+
+Note: Usad escalas simples (p.e. 1-5) para probabilidad e impacto si no hay datos. El riesgo residual guía qué iniciativas entrarían en el PDS.
+
+
+### 12.3. Nivel aceptable y tratamiento
+
+* Fijar umbral de riesgo aceptable.
+* Tratar riesgos: mitigar, transferir.
+* Evitar o aceptar, justificado.
+* Documentar decisión y dueños.
+
+Note: El umbral separa lo que se trata de lo que se asume. Toda aceptación debe estar firmada por dirección. Mitigar implica nuevos controles; transferir, seguros/proveedores.
+
+---
+
+## 13. Iniciativas tipo del PDS
+
+
+### 13.1. Organizativas y legales
+
+* Política de seguridad y SoA.
+* Plan anual de concienciación.
+* Gestión de incidentes formal.
+* Adecuación RGPD y contratos.
+
+Note: Estas iniciativas cambian hábitos y fijan el marco de trabajo. Son la base sobre la que las medidas técnicas se sostienen.
+
+
+### 13.2. Técnicas y continuidad
+
+* Segmentación de red e IDS/IPS.
+* MFA en accesos críticos.
+* Política robusta de copias.
+* Plan de continuidad TIC (BIA).
+
+Note: Priorizad medidas que mitiguen riesgos críticos identificados. Asegurad pruebas de restauración y simulacros de continuidad.
+
+---
+
+## 14. KPIs y reporting
+
+
+### 14.1. Indicadores de seguimiento
+
+* % controles implantados vs plan.
+* Tiempo medio de respuesta (MTTR).
+* % restauraciones exitosas.
+* Cumplimiento de SLAs clave.
+
+Note: Elegid pocos indicadores útiles para dirección. Reportad mensualmente y revisad acciones si los KPIs no mejoran.
+
+---
+
+## 15. Entregables del PDS
+
+
+### 15.1. Documentación mínima
+
+* Inventario de activos y dueños.
+* SoA y evaluación de madurez.
+* Registro de riesgos y tratamientos.
+* Catálogo y cronograma del plan.
+
+Note: Estos entregables permiten auditar el avance y sostener decisiones. Sin ellos, el PDS queda en declaraciones sin trazabilidad.
+
+---
+
+## 16. Caso práctico
+
+
+### 16.1. Editorial con e-commerce (I)
+
+* Web sufre DDoS y sin IDS.
+* Copias sin pruebas de restore.
+* Contraseñas débiles y sin MFA.
+* Inventario de activos desactualizado.
+
+Note: Caso inspirado en pymes reales. Identifica carencias frecuentes y conecta con riesgos: disponibilidad, integridad y confidencialidad.
+
+
+### 16.2. Editorial con e-commerce (II)
+
+* Quick wins: pruebas de restore, MFA.
+* Proyecto: segmentación e IDS/IPS.
+* Proyecto: gestión de incidentes.
+* Comité y KPIs mensuales.
+
+Note: Muestra cómo traducir el análisis a acciones y seguimiento. Insiste en quick wins para generar tracción y en proyectos estructurales para madurar.
 
 ---
 

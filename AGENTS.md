@@ -460,7 +460,7 @@ IMPORTANTE Y OBLIGATORIO seguir las siguientes reglas al generar los archivos GI
 - Proporcionar respuestas o retroalimentaciones formativo y completo, evitando retroalimentación genérica.
 - Habra un formato gif por cada archivo *.md contenido en la carpeta teoria.
 - De las posibles respuestas a la pregunta generada, las respuestas incorrectas tienen que ser repuestas que puedan parecer correctas, ya que si no es así, se podrá responder por descarte de las respuestas incorrectas.
-- Las preguntas deben estar relacionadas con el contenido del archivo teoria al que acompañan.
+- Las preguntas deben estar relacionadas con el contenido del archivo teoria al que acompañan. Esto es importante, ya que no se trata de generar preguntas aleatorias, sino preguntas que evalúen el conocimiento adquirido en el tema tratado en el archivo teoria. Pregutnas con respuestas que no tengan relación con el contenido del archivo teoria no serán aceptadas. En el feedback de las respuestas, se debe explicar claramente por qué la respuesta correcta es correcta y por qué las respuestas incorrectas no lo son, haciendo referencia a los conceptos clave del tema tratado en el archivo teoria.
 - Cada archivo GIFT contendrá al menos 10 preguntas de opción múltiple relacionadas con el contenido del archivo teoria al que acompañan.
 - Las preguntas tienen que cubrir los conceptos clave del tema tratado en el archivo teoria.
 - Las preguntas tienen que ser basadas en supuestos prácticos o ejemplos del contenido del archivo teoria, de forma que ademas de evaluar el conocimiento teórico, se evalúe la capacidad de aplicar ese conocimiento en situaciones prácticas.

@@ -318,7 +318,8 @@ de seguridad. INCIBE sugiere agruparlas en tres bloques:
 Cada iniciativa debe describirse con los siguientes elementos: objetivo, alcance, responsables,
 recursos internos/externos, coste estimado, duración y dependencias.
 
-Ejemplo de formato:
+Ejemplo de formato:    
+
 | ID  | Nombre del proyecto                  | Objetivo                                      | Alcance                | Responsable        | Recursos necesarios         | Coste estimado | Duración estimada | Dependencias               |
 |-----|-------------------------------------|-----------------------------------------------|------------------------|--------------------|-----------------------------|----------------|-------------------|----------------------------|
 | 01  | Política de seguridad de la información | Definir marco normativo y compromisos de la dirección | Toda la organización    | Responsable de Seguridad | Consultoría externa, tiempo del Responsable de Seguridad | 3.000 €        | 2 meses          | Aprobación de la dirección | |

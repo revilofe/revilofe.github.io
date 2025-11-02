@@ -850,6 +850,8 @@ Note: La elección del tratamiento depende del coste-beneficio. EJEMPLOS CONCRET
 
 ### 12.3. Riesgo residual y umbral aceptable
 
+Tened en cuenta:
+
 * **Riesgo residual**: riesgo que permanece después de aplicar controles.
 * **Umbral aceptable**: nivel de riesgo que la organización está dispuesta a asumir.
 * **Brecha de seguridad**: diferencia entre riesgo residual y umbral aceptable.
@@ -866,6 +868,8 @@ Note: El umbral no es arbitrario: se establece considerando apetito de riesgo de
 
 ### 13.1. Factores críticos de éxito
 
+Fijáos en estos factores:
+
 * **Apoyo visible de dirección**: sin patrocinio real, el plan fracasa.
 * **Comunicación continua**: informar a toda la plantilla refuerza cultura de seguridad.
 * **Coordinación entre áreas**: seguridad es transversal (RR.HH., Legal, Compras, IT, Dirección).
@@ -877,6 +881,8 @@ Note: Estos factores son las lecciones de décadas de PDS exitosos y fracasados.
 
 
 ### 13.2. Errores comunes que evitar
+
+Evitar estos errores:
 
 * **Solo enfoque tecnológico**: ignorar personas y procesos condena al fracaso.
 * **Desalineación con negocio**: proyectos de seguridad que no entiende ni apoya el negocio.
@@ -890,6 +896,8 @@ Note: Estos errores son extraordinariamente comunes. EJEMPLOS REALES: 1) "Solo e
 
 
 ### 13.3. Recomendaciones prácticas
+
+Aplicad estas recomendaciones:
 
 * **Empezad pequeño**: alcance acotado en primer ciclo, ampliar después.
 * **Celebrad victorias**: comunicad cada hito completado.
@@ -919,6 +927,8 @@ Note: El PDS transforma la seguridad de reactiva a proactiva, de caótica a orde
 
 
 ### 14.2. Beneficios tangibles del PDS
+
+Beneficios claros para la organización:
 
 * **Reducción medible del riesgo** y exposición a amenazas.
 * **Cumplimiento normativo** (RGPD, ENS...) reduciendo multas.
@@ -952,6 +962,8 @@ Note: La mejor forma de aprender PDS es haciéndolo. Este ejercicio simula el pr
 
 ### Referencias principales
 
+Recursos clave para profundizar en el PDS:
+
 * **INCIBE** - [Guía del Plan Director de Seguridad](https://www.incibe.es)
 * **ISO/IEC 27001:2022** - Sistemas de Gestión de Seguridad de la Información
 * **ISO/IEC 27002:2022** - Código de buenas prácticas para controles de seguridad
@@ -963,6 +975,8 @@ Note: Estos son los recursos de referencia para profundizar. La guía de INCIBE 
 
 
 ### Recursos adicionales
+
+Recursos útiles para justificar inversiones y mantenerse actualizado:
 
 * **Verizon Data Breach Investigations Report (DBIR)** - Estadísticas anuales de brechas
 * **IBM Cost of a Data Breach Report** - Análisis de costes de incidentes

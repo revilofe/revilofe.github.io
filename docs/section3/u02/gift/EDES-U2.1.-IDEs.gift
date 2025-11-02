@@ -12,7 +12,7 @@ Un equipo pequeño va a mantener un servicio con partes en Kotlin y Python y qui
 }
 
 ::CE 2.a – Control de versiones integrado::
-Tu empresa rota personal junior por diferentes proyectos y quiere reducir errores al usar Git. ¿Qué componente de los IDEs puede ayudar según la teoría?
+Tu empresa rota personal junior por diferentes proyectos y quiere reducir errores al usar Git. ¿Qué componente de los IDEs puede ayudar?
 {
 =Paneles integrados que permiten clonar, hacer commits y revisar cambios sin salir del IDE. #Correcto: El texto subraya la integración con control de versiones para gestionar Git desde el propio entorno. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
 ~%-33.3333%Bloquear el acceso a Git para que todo se gestione por correo electrónico. #Incorrecto: La unidad defiende integrar Git, no restringirlo. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
@@ -21,7 +21,7 @@ Tu empresa rota personal junior por diferentes proyectos y quiere reducir errore
 }
 
 ::CE 2.a – Respuesta ante bugs emergentes::
-Durante una guardia detectas un bug crítico y necesitas aislarlo con rapidez. ¿Qué característica del IDE facilita esa reacción según la unidad?
+Durante una guardia detectas un bug crítico y necesitas aislarlo con rapidez. ¿Qué característica del IDE facilita esa reacción?
 {
 =La depuración integrada con breakpoints, ejecución paso a paso y observación de variables. #Correcto: El documento destaca estas funciones como parte esencial de los IDEs. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
 ~%-33.3333%Compilar todo el proyecto a mano para generar logs temporales. #Incorrecto: La depuración integrada evita procesos manuales extensos. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
@@ -30,7 +30,7 @@ Durante una guardia detectas un bug crítico y necesitas aislarlo con rapidez. �
 }
 
 ::CE 2.a – Encuentro con nuevo framework::
-Te asignan una funcionalidad que requiere un framework desconocido por el equipo. ¿Cómo aprovecha un IDE esta situación según la teoría?
+Te asignan una funcionalidad que requiere un framework desconocido por el equipo. ¿Cómo aprovecha un IDE esta situación?
 {
 =Permite añadir soporte mediante extensiones o módulos que incorporan plantillas y ayudas específicas. #Correcto: Se remarca la extensibilidad para frameworks como Spring o Django. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1. ¿Qué es un IDE?' y '3. Componentes de un IDE'.
 ~%-33.3333%Exige reescribir el framework para adaptarlo al lenguaje del IDE. #Incorrecto: El IDE se adapta al framework mediante extensiones, no al revés. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1' y '3'.
@@ -39,7 +39,7 @@ Te asignan una funcionalidad que requiere un framework desconocido por el equipo
 }
 
 ::CE 2.a – Formación de personal nuevo::
-Una academia quiere que su alumnado experimente con distintos lenguajes usando un único entorno. ¿Qué tipo de IDE cita la unidad como adecuado?
+Una academia quiere que su alumnado experimente con distintos lenguajes usando un único entorno. ¿Qué tipo de IDE podría ser adecuado?
 {
 =IDEs de propósito general como Visual Studio Code o IntelliJ IDEA que soportan múltiples tecnologías. #Correcto: Ambos se mencionan como herramientas versátiles en la clasificación de IDEs. Consulta `EDES-U2.1.-IDEs.md`, sección '4.1. IDEs de propósito general'.
 ~%-33.3333%IDEs móviles como Android Studio para cualquier lenguaje. #Incorrecto: Los IDEs móviles se reservan para Android o iOS. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4. IDEs móviles'.
@@ -48,7 +48,7 @@ Una academia quiere que su alumnado experimente con distintos lenguajes usando u
 }
 
 ::CE 2.a – Desarrollo de interfaces gráficas::
-Una compañera necesita construir rápidamente prototipos con interfaz gráfica. ¿Qué aporta un IDE en este caso según la unidad?
+Una compañera necesita construir rápidamente prototipos con interfaz gráfica. ¿Qué aporta un IDE en este caso?
 {
 =Herramientas visuales que permiten diseñar interfaces sin salir del editor. #Correcto: Se menciona la creación de interfaces gráficas como función de algunos IDEs. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1. ¿Qué es un IDE?'.
 ~%-33.3333%Un bloqueo que evita utilizar librerías gráficas para proteger el código base. #Incorrecto: Los IDEs añaden capacidades, no limitaciones, para desarrollar interfaces. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1'.
@@ -90,3 +90,4 @@ Un laboratorio desarrolla únicamente para iOS y no prevé ampliar el stack. ¿Q
 ~%-33.3333%Usar un IDE generalista para no depender de herramientas oficiales. #Incorrecto: Cuando la plataforma está clara, el texto sugiere IDEs específicos. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4'.
 ~%-33.3333%Instalar un editor minimalista y escribir todo en ensamblador. #Incorrecto: No se propone abandonar los IDEs cuando se pueden aprovechar herramientas dedicadas. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4'.
 ~%-33.3333%Migrar los proyectos a Android Studio para beneficiarse del ecosistema Android. #Incorrecto: Android Studio está orientado a Android, no a iOS. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4'.
+}

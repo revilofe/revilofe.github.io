@@ -21,7 +21,7 @@ Una startup desarrolla microservicios en Kotlin y busca integraciones con Gradle
 }
 
 ::CE 2.f – y PyCharm vs VS Code para scripting rápido::
-Un equipo de prototipos Python valora rapidez de arranque y flexibilidad para mezclar tecnologías. ¿Qué diagnóstico da la unidad?
+Un equipo de prototipos Python valora rapidez de arranque y flexibilidad para mezclar tecnologías. ¿Qué diagnóstico das tu según tu conocimiento?
 {
 =Visual Studio Code, por su ligereza y extensibilidad, cuando se requiere un editor rápido para múltiples lenguajes. #Correcto: Se señala que VS Code es ligero y extensible para escenarios mixtos. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3. Visual Studio Code (Python)'.
 ~%-33.3333%PyCharm, porque arranca más rápido y consume menos recursos. #Incorrecto: Se menciona que PyCharm puede ser más pesado frente a VS Code. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3.'.
@@ -39,7 +39,7 @@ Una consultora trabaja con personal remoto y múltiples ramas. Necesitan evitar 
 }
 
 ::CE 2.f – Depuración de incidentes complejos::
-Durante una guardia, hay que inspeccionar el flujo de una API. ¿Qué recurso comparten los IDEs para afrontar este escenario según la unidad?
+Durante una guardia, hay que inspeccionar el flujo de una API. ¿Qué recurso comparten los IDEs para afrontar este escenario?
 {
 =Depuradores integrados que permiten breakpoints y seguimiento paso a paso con inspección de variables. #Correcto: La depuración se describe como característica común relevante. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2. Depurador integrado'.
 ~%-33.3333%Ejecutar el código sin detenerlo para evitar bloqueos. #Incorrecto: El texto apuesta por usar el depurador integrado. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2.'.
@@ -57,7 +57,7 @@ Un grupo de data scientists combina Python, notebooks y scripts ad-hoc. Buscan u
 }
 
 ::CE 2.f – Comparativa de rendimiento::
-Un cliente pregunta por qué distintas herramientas tardan en abrirse. ¿Qué tablas o conclusiones aporta la unidad?
+Un cliente pregunta por qué distintas herramientas tardan en abrirse. ¿Que propuesta le darias según tu conocimiento ?
 {
 =Muestra que VS Code es más ligero y rápido, mientras PyCharm e IntelliJ ofrecen más funciones a costa de mayor carga. #Correcto: La tabla resume estas diferencias de rendimiento. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4. Comparación de rendimiento y características'.
 ~%-33.3333%Asegura que los tres IDEs consumen la misma memoria y tiempo. #Incorrecto: La comparación destaca diferencias en peso y rapidez. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4'.
@@ -84,9 +84,10 @@ Tu compañía adopta prácticas DevOps y busca IDEs que faciliten automatizacion
 }
 
 ::CE 2.f – Decisión basada en lenguaje principal::
-Un líder técnico resume: “El IDE que elijamos debe depender del lenguaje y tipo de proyecto”. ¿Está alineado con la conclusión del tema?
+Un líder técnico resume: “El IDE que elijamos debe depender del lenguaje y tipo de proyecto”. ¿Ves lógica esta conclusión?
 {
 =Sí, la unidad recalca que la elección del IDE depende del lenguaje, necesidades de calidad y tipo de proyecto. #Correcto: La conclusión afirma que la selección responde al contexto. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5. Conclusión'.
 ~%-33.3333%No, se recomienda un único IDE para todo tipo de proyectos. #Incorrecto: Se insiste en elegir la herramienta según el caso. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5'.
 ~%-33.3333%No, la conclusión alienta a rotar IDEs sin considerar el contexto. #Incorrecto: Precisamente se evalúan pros y contras por contexto. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5'.
 ~%-33.3333%No, afirma que sólo se debe usar un editor plano. #Incorrecto: La conclusión compara IDEs, no sugiere abandonar herramientas. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5'.
+}

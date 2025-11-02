@@ -39,7 +39,7 @@ Un grupo instala VS Code desde cero para un hackathon de APIs REST. Necesitan pr
 }
 
 ::CE 2.b – Auditoría de calidad en PyCharm::
-El área de QA quiere que cada push a rama principal pase por Pylint con parámetros homogéneos. ¿Qué facilita PyCharm según la unidad?
+El área de QA quiere que cada push a rama principal pase por Pylint con parámetros homogéneos. ¿Qué facilita un IDE como PyCharm?
 {
 =Definir External Tools con rutas al intérprete del proyecto para asegurar que todos usan la misma instalación. #Correcto: Se explica cómo configurar External Tools apuntando al intérprete activo para AutoPEP8/Pylint. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.2.'.
 ~%-33.3333%Obligar a cada persona a ejecutar scripts manuales sin soporte del IDE. #Incorrecto: La unidad propone usar herramientas integradas para homogeneizar procesos. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.2.'.
@@ -48,7 +48,7 @@ El área de QA quiere que cada push a rama principal pase por Pylint con paráme
 }
 
 ::CE 2.b – Moderar sobrecarga de extensiones::
-Una desarrolladora nota que VS Code tarda más tras instalar muchas extensiones. ¿Qué estrategia menciona la unidad para mantener el entorno ágil?
+Una desarrolladora nota que VS Code tarda más tras instalar muchas extensiones. ¿Qué estrategia puedes seguir para mantener un entorno ágil?
 {
 =Activar sólo las extensiones imprescindibles para el proyecto y desinstalar las que ya no aportan valor. #Correcto: El texto sugiere gestionar las extensiones desde el Marketplace, incluyendo su desinstalación. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.1.'.
 ~%-33.3333%Borrar la carpeta del proyecto para reiniciar el IDE desde cero. #Incorrecto: El problema no está en el proyecto, sino en la gestión de extensiones. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.1.'.
@@ -66,7 +66,7 @@ La empresa adopta JetBrains Toolbox para mantener IDEs. ¿Qué ventaja mantiene 
 }
 
 ::CE 2.b – Seguridad operativa::
-En una auditoría se detecta que varias extensiones están obsoletas. ¿Qué proceso describe la unidad para mantenerlas al día?
+En una auditoría se detecta que varias extensiones están obsoletas. ¿Qué proceso puedes seguir para mantenerlas al día?
 {
 =Revisar regularmente la sección Installed del gestor de plugins/extensiones y aplicar las actualizaciones disponibles. #Correcto: Se recomienda revisar e instalar actualizaciones desde el gestor correspondiente. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.3.'.
 ~%-33.3333%Ignorar las alertas porque VS Code y JetBrains se actualizan sin intervención. #Incorrecto: El texto sugiere comprobaciones manuales además de automatismos. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.3.'.
@@ -84,9 +84,10 @@ Mantienes microservicios con configuraciones muy distintas. ¿Cómo ayuda la doc
 }
 
 ::CE 2.b – Refinar onboarding::
-Una nueva incorporación pregunta cómo replicar el entorno de la empresa en su portátil. ¿Qué elementos debe documentar el equipo según la unidad?
+Una nueva incorporación pregunta cómo replicar el entorno de la empresa en su portátil. ¿Qué elementos debería documentar el equipo?
 {
 =Las extensiones/módulos instalados, su configuración (por ejemplo File Watchers) y dónde encontrarlos en el IDE. #Correcto: La gestión de módulos/extensiones y sus parámetros forma parte del entorno personalizado descrito. Consulta `EDES-U2.2.-Modulos.md`, secciones '3', '4' y '5'.
 ~%-33.3333%Únicamente la ruta del repositorio y ningún complemento opcional. #Incorrecto: Las extensiones y su configuración son esenciales para reproducir el entorno. Consulta `EDES-U2.2.-Modulos.md`, secciones '3', '4' y '5'.
 ~%-33.3333%La recomendación de no usar IDEs sino un editor básico para empezar. #Incorrecto: Se busca aprovechar los IDEs y su extensibilidad, no evitarlos. Consulta `EDES-U2.2.-Modulos.md`, secciones '3', '4' y '5'.
 ~%-33.3333%Una checklist de atajos de teclado sin relación con extensiones. #Incorrecto: Los atajos son útiles, pero la unidad enfatiza personalización mediante módulos/extensiones. Consulta `EDES-U2.2.-Modulos.md`, secciones '3', '4' y '5'.
+}

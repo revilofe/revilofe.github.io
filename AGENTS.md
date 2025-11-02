@@ -24,6 +24,9 @@ sectionX/
 │   └── ...                     # Otros archivos que pueden servir para generar documentación, prácticas, etc. Como el libro de texto del módulo
 └── uXX/                        # Unidades didácticas (u01, u02, u03...)
     ├── index.md                # Descripción de la unidad, contenidos y planificación
+    ├── gift/                   # Preguntas en formato GIFT para cuestionarios, exámenes, etc. Habrá un archivo GIFT por cada archivo teoria de la unidad
+    │   ├── MODULO-UX.Y.-Tema.gift
+    │   └── ...                  # Otros archivos GIFT para la unidad
     ├── teoria/                 # Contenidos teóricos
     │   ├── MODULO-UX.Y.-Tema.md
     │   ├── assets/             # Imágenes y recursos multimedia
@@ -416,7 +419,57 @@ tags:
 
 Los archivos de práctica (`practica/otrosRecursos)/`) pueden incluir ficheros adicionales necesarios para completar la práctica, como plantillas, datos de ejemplo, etc., asi como el ejercicio resuelto. Se generará un fichero con el mismo nombre y la extensión -solución.md, que contendrá la solución al ejercicio propuesto.
 
-### 2.4. Convenciones de estilo
+### 2.4. Generación de preguntas formato Gift
+
+Las preguntas para cuestionarios se generarán en formato GIFT, siguiendo estas pautas:
+
+Se utilizarán para exámenes y pruebas. Escribe español de España y su estilo es relajado y amistoso. Está programado para:
+
+Lo siguiente es la descripción básica del formato GIFT para preguntas de opción múltiple (cuatro opciones y solo una correcta):
+
+- El titulo de la pregunta irá encerrado entre doble dos puntos (::), un ejemplo seria: "::Agrupación::título".
+- Las posibles respuestas se encierran entre llaves {}.
+- Las respuestas incorrectas iran prefijadas de la tilde (~), y la correcta del signo igual (=).
+- Las respuestas incorrectas restan -33.3333 puntos, y se refleja después del símbolo tilde (~) encerrado entre el simbolo porcentaje (%), por ejemplo: ~%-33.3333%Madrid #Incorrecta, Madrid es capital de España.
+- La retroalimentación debe ir después de la respuestas, precedida del símbolo almohadilla (#), y debe clarificar al alumno porque es o no es correcta la respuesta. Por ejemplo: ~%-33.3333%Madrid #Incorrecta, Madrid es capital de España.
+
+Crear preguntas en formato GIFT siguiendo el ejemplo, con un enfoque en la claridad y la retroalimentación educativa. Aquí tienes un ejemplo del formato de opción múltiple GIFT tal y como me gustaría que las generaras:
+```gift
+::RA_X.CE_Y. Conoce las capitales de Europa::¿Capital de Francia? {
+=París #Correcto, París es la capital de Francia desde que se estableció la capitalidad en el siglo X.
+~%-33.3333%Madrid #Incorrecto, Madrid es capital de España.
+~%-33.3333%Roma #Incorrecto, Roma es la capital de Italia
+~%-33.3333%Lóndres #Incorrecto, Lóndres es la capital de Inglaterra.
+}
+```
+Otro ejemplo:
+```gift
+::CE 1.4 – Transpiladores para la web::
+Quieres ejecutar lógica de negocio del cliente en el navegador, pero el equipo escribe en TypeScript/Kotlin. ¿Qué estrategia encaja?
+{
+ =Transpilar a JavaScript para que el navegador lo ejecute. #Correcto: La transpilación es una técnica que nos permite convertir código escrito en un lenguaje a otro lenguaje, en este caso a JavaScript, que es el lenguaje nativo de los navegadores web. 
+ ~%-33.3333%Compilar a .exe y subir el binario al servidor web. #Incorrecto: el navegador no ejecuta .exe por seguridad. Aunque con WebAssembly podríamos ejecutar código nativo, no es el caso de .exe.
+ ~%-33.3333%Generar bytecode JVM y traspilarlo al formato que permita cargarlo directamente en el navegador. #Incorrecto: los navegadores no tienen una JVM nativa, ni podemos traspilar bytecode JVM a JavaScript de forma directa, por lo que esta opción no es viable.
+ ~%-33.3333%Interpretar Python en el cliente sin motor JS. #Incorrecto: Python no es un lenguaje nativo de los navegadores web, por lo que no se puede interpretar directamente en el cliente sin un motor JS.
+}
+```
+
+IMPORTANTE Y OBLIGATORIO seguir las siguientes reglas al generar los archivos GIFT:
+- Las normas específicas del formato GIFT.
+- Evitar un tono demasiado formal o complicado.
+- Proporcionar respuestas o retroalimentaciones formativo y completo, evitando retroalimentación genérica.
+- Habra un formato gif por cada archivo *.md contenido en la carpeta teoria.
+- De las posibles respuestas a la pregunta generada, las respuestas incorrectas tienen que ser repuestas que puedan parecer correctas, ya que si no es así, se podrá responder por descarte de las respuestas incorrectas.
+- Las preguntas deben estar relacionadas con el contenido del archivo teoria al que acompañan.
+- Cada archivo GIFT contendrá al menos 10 preguntas de opción múltiple relacionadas con el contenido del archivo teoria al que acompañan.
+- Las preguntas tienen que cubrir los conceptos clave del tema tratado en el archivo teoria.
+- Las preguntas tienen que ser basadas en supuestos prácticos o ejemplos del contenido del archivo teoria, de forma que ademas de evaluar el conocimiento teórico, se evalúe la capacidad de aplicar ese conocimiento en situaciones prácticas.
+- El nombre del archivo GIFT será el mismo que el del archivo teoria al que acompaña, pero con la extensión .gift. Por ejemplo: MODULO-UX.Y.-Tema.gift.
+- Además, dentro de gift, tendremos un archivo que contendrá todas las preguntas de la unidad, con el nombre MODULO-UX.gift
+- El archivo GIFT se ubicará en la carpeta gifts/ al mismo nivel que la carpeta teoria/ del módulo correspondiente.
+- Si te encuentras archivos con extensión *.gift los revisarás y corregirás, corrigiendo y adaptando las preguntas para que cumplan las especificaciones, y trasladando las preguntas ya corregidas al fichero adecuado. Una vez procesados los archivos que no cumplen las especificaciones y procesadas las preguntas, se eliminarán.
+
+### 2.5. Convenciones de estilo
 
 **Elementos de Markdown:**
 
@@ -454,7 +507,7 @@ Los archivos de práctica (`practica/otrosRecursos)/`) pueden incluir ficheros a
 - Evitar tecnicismos innecesarios
 - Incluir glosario de términos técnicos cuando sea necesario
 
-### 2.5. Metadatos obligatorios
+### 2.6. Metadatos obligatorios
 
 Todos los documentos deben incluir el bloque YAML al inicio con:
 

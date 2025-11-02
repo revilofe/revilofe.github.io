@@ -1,0 +1,93 @@
+// EDES-U1.3 - CodigoIntermedio
+// Banco de preguntas sobre código intermedio y máquinas virtuales
+// CE 1.d - Generación de código intermedio
+
+::CE 1.d – Definición de código intermedio::
+Compilas un programa en Java y obtienes archivos `.class`. ¿Cómo define la unidad ese código intermedio?
+{
+=Como un conjunto de instrucciones independientes de la plataforma que necesita una máquina virtual para ejecutarse. #Correcto: El código intermedio no está ligado a una arquitectura física; es interpretado o compilado por la JVM o la CLR según la plataforma. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
+~%-33.3333%Como el ejecutable final que el sistema operativo carga directamente. #Incorrecto: El ejecutable final se obtiene tras la interpretación o compilación JIT del código intermedio; no es el mismo archivo. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
+~%-33.3333%Como el código fuente tal y como lo escribió la persona desarrolladora. #Incorrecto: El código fuente es el paso anterior; el código intermedio es generado a partir de él. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
+~%-33.3333%Como un documento de diseño que orienta la implementación final. #Incorrecto: El código intermedio no es documentación, son instrucciones reales listas para ejecutarse en una VM. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
+}
+
+::CE 1.d – Papel de la máquina virtual::
+¿Qué papel asigna la unidad a la máquina virtual (JVM o CLR) dentro del proceso?
+{
+=Traducir o compilar el código intermedio a instrucciones específicas de la arquitectura donde se ejecuta. #Correcto: La máquina virtual actúa como intérprete/compilador que convierte el bytecode en código máquina para cada plataforma. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
+~%-33.3333%Guardar el código fuente original para permitir volver atrás en el proyecto. #Incorrecto: La máquina virtual no gestiona versiones del código fuente; se centra en ejecutar el bytecode. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
+~%-33.3333%Elegir automáticamente el lenguaje de programación más eficiente para el proyecto. #Incorrecto: La VM no cambia de lenguaje; ejecuta el código intermedio generado por el compilador del lenguaje elegido. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
+~%-33.3333%Convertir el código intermedio en documentación para el equipo funcional. #Incorrecto: La VM no genera documentación, transforma bytecode en instrucciones ejecutables. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '1. ¿Qué es el Código Intermedio?'.
+}
+
+::CE 1.d – Flujo de trabajo en Java::
+Según la unidad, ¿cuál es la secuencia correcta para desarrollar y ejecutar un programa en Java?
+{
+=Escribir código fuente -> Compilar con `javac` a bytecode -> Ejecutar con `java` en la JVM. #Correcto: La unidad detalla que primero se crea el archivo `.java`, luego se compila a `.class` y finalmente la JVM lo ejecuta. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
+~%-33.3333%Escribir bytecode -> Interpretarlo con la JVM -> Generar código fuente automáticamente. #Incorrecto: El bytecode se genera a partir del código fuente; no se escribe manualmente. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
+~%-33.3333%Escribir código fuente -> Ejecutar directamente el `.java` -> Compilar si hay errores. #Incorrecto: El `.java` no se ejecuta directamente; debe compilarse primero. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
+~%-33.3333%Compilar con `javac` -> Enlazar bibliotecas nativas -> Crear un ejecutable `.exe` portátil. #Incorrecto: El proceso estándar produce bytecode `.class` que se ejecuta en la JVM, no un `.exe` nativo. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
+}
+
+::CE 1.d – Ventaja de portabilidad::
+Tu equipo quiere distribuir una aplicación Java en Windows, Linux y macOS. ¿Qué ventaja resalta la unidad sobre el código intermedio?
+{
+=Que el mismo bytecode puede ejecutarse en cualquier plataforma que tenga instalada la máquina virtual correspondiente. #Correcto: Es el famoso "Write Once, Run Anywhere"; solo se requiere la JVM adecuada en cada sistema. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+~%-33.3333%Que el bytecode se convierte automáticamente en ejecutables nativos distintos para cada sistema. #Incorrecto: No se generan ejecutables nativos separados; se usa el mismo bytecode y cada JVM lo interpreta o compila. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+~%-33.3333%Que el bytecode se adapta a la interfaz gráfica de cada sistema sin intervención. #Incorrecto: La portabilidad no implica adaptar interfaces automáticamente; eso depende del programa, no del bytecode. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+~%-33.3333%Que la máquina virtual reescribe el código fuente en el idioma local de cada país. #Incorrecto: La VM no traduce idiomas; solo ejecuta bytecode. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+}
+
+::CE 1.d – Seguridad en máquinas virtuales::
+¿Qué aporta la máquina virtual a nivel de seguridad según la unidad?
+{
+=Verifica y controla el acceso del código intermedio al sistema operativo y al hardware. #Correcto: La VM añade una capa de seguridad que evita que bytecode malicioso acceda libremente a recursos del sistema. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+~%-33.3333%Permite que el código intermedio modifique directamente la BIOS para ganar rendimiento. #Incorrecto: La VM limita el acceso al hardware, no lo amplía de forma directa. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+~%-33.3333%Reemplaza automáticamente el antivirus del sistema operativo. #Incorrecto: La VM no sustituye herramientas de seguridad tradicionales; complementa la protección. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+~%-33.3333%Impide que se instalen actualizaciones del sistema para evitar riesgos. #Incorrecto: La VM no gestiona las actualizaciones del sistema operativo. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+}
+
+::CE 1.d – Compilación JIT::
+Durante la ejecución, la JVM activa la compilación Just-In-Time (JIT). ¿Qué beneficio destaca la unidad?
+{
+=Optimizar el rendimiento convirtiendo las partes más usadas del bytecode en código nativo en tiempo de ejecución. #Correcto: La JIT analiza el comportamiento real y convierte los puntos calientes en instrucciones nativas optimizadas. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+~%-33.3333%Permitir que el bytecode se ejecute sin máquina virtual. #Incorrecto: La JIT sigue necesitando la JVM; simplemente compila fragmentos a código nativo. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+~%-33.3333%Convertir automáticamente el programa en código fuente de C para depurarlo. #Incorrecto: La JIT no traduce a otros lenguajes de alto nivel; produce código nativo temporal. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+~%-33.3333%Reducir el tamaño del bytecode eliminando clases y métodos. #Incorrecto: La JIT optimiza la ejecución, no modifica el tamaño del bytecode almacenado. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+}
+
+::CE 1.d – Resultado de `javac`::
+Compilas `Suma.java` siguiendo el ejemplo de la unidad. ¿Qué archivo obtienes tras ejecutar `javac Suma.java`?
+{
+=El archivo `Suma.class`, que contiene el bytecode portable del programa. #Correcto: El compilador genera un `.class` con bytecode listo para que la JVM lo ejecute. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
+~%-33.3333%Un archivo `Suma.exe` nativo para Windows. #Incorrecto: El proceso estándar genera `.class`, no ejecutables nativos. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
+~%-33.3333%Un archivo `Suma.pyc` compatible con Python. #Incorrecto: El compilador de Java no genera archivos para Python. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
+~%-33.3333%Un documento `Suma.txt` con un resumen de la ejecución. #Incorrecto: El compilador no produce documentos de texto con resúmenes; genera bytecode. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '4. Ejemplo Completo: Java y la JVM'.
+}
+
+::CE 1.d – Si no se usara código intermedio::
+¿Qué desventaja menciona la unidad si un lenguaje no generara código intermedio?
+{
+=Que habría que compilar versiones distintas del programa para cada sistema operativo y arquitectura. #Correcto: Sin código intermedio perderíamos la portabilidad y tendríamos que mantener binarios específicos por plataforma. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '5. ¿Qué Ocurre si No Usamos Código Intermedio?'.
+~%-33.3333%Que el programa sería automáticamente más rápido en todos los sistemas. #Incorrecto: La velocidad no aumenta solo por eliminar el código intermedio; al contrario, se pierde portabilidad. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '5. ¿Qué Ocurre si No Usamos Código Intermedio?'.
+~%-33.3333%Que ya no sería necesario probar el software en varias plataformas. #Incorrecto: Sin código intermedio habría que probar cada versión nativa, lo que complica aún más el proceso. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '5. ¿Qué Ocurre si No Usamos Código Intermedio?'.
+~%-33.3333%Que el código fuente se convertiría en documentación técnica. #Incorrecto: El código fuente seguiría siendo código; lo que cambia es la portabilidad. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '5. ¿Qué Ocurre si No Usamos Código Intermedio?'.
+}
+
+::CE 1.d – Ejecución en diferentes arquitecturas::
+Compilas tu aplicación Java en un Mac ARM y quieres ejecutarla en un servidor Linux x86-64. ¿Qué ocurrirá?
+{
+=Funcionará si el servidor tiene JVM, porque el bytecode es independiente de la arquitectura y la JVM lo traduce a la CPU disponible. #Correcto: La portabilidad es posible gracias a que cada JVM convierte el bytecode a instrucciones nativas de su plataforma. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+~%-33.3333%Fallará porque el bytecode está compilado para ARM y no puede ejecutarse en x86-64. #Incorrecto: El bytecode no está ligado a una arquitectura concreta; la JVM maneja la traducción. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+~%-33.3333%Requerirá recompilar el `.java` en el servidor Linux antes de ejecutarse. #Incorrecto: No es necesario recompilar si ya tienes el bytecode; basta con tener la JVM. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+~%-33.3333%Solo funcionará si instalas un emulador de ARM en el servidor Linux. #Incorrecto: No se necesita emulación de CPU; la JVM se encarga de traducir el bytecode. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '3. ¿Por Qué Usar Código Intermedio?'.
+}
+
+::CE 1.d – Conclusión de la unidad::
+Según la conclusión, ¿por qué es importante comprender la generación de código intermedio?
+{
+=Porque permite crear software portable y entender cómo las máquinas virtuales equilibran portabilidad, seguridad y rendimiento. #Correcto: La unidad remarca que dominar estas fases ayuda a aprovechar la portabilidad y las optimizaciones de la VM. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '7. Conclusión'.
+~%-33.3333%Porque elimina la necesidad de conocer el lenguaje de alto nivel. #Incorrecto: Entender el código intermedio no sustituye aprender el lenguaje fuente. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '7. Conclusión'.
+~%-33.3333%Porque permite generar código ejecutable sin máquinas virtuales. #Incorrecto: La conclusión destaca la importancia de las máquinas virtuales, no su eliminación. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '7. Conclusión'.
+~%-33.3333%Porque garantiza que el programa no necesitará mantenimiento futuro. #Incorrecto: Comprender el proceso no elimina la necesidad de mantenimiento; simplemente facilita el desarrollo. Consulta `EDES-U1.3.-CodigoIntermedio.md`, sección '7. Conclusión'.
+}

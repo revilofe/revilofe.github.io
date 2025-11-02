@@ -1,0 +1,93 @@
+// EDES-U1.2 - CodigoFuenteObjetoEjecutable
+// Banco de preguntas sobre código fuente, objeto y ejecutable
+// CE 1.c - Diferencia entre código fuente, objeto y ejecutable
+
+::CE 1.c – Definición de código fuente::
+Escribes un programa en C con instrucciones legibles por personas. ¿Cómo describe la unidad el código fuente?
+{
+=Como el conjunto de instrucciones en un lenguaje de programación legible que actúa como plano inicial del programa. #Correcto: El código fuente es el primer paso que escribe la persona desarrolladora utilizando lenguajes como C o Python. Es legible para humanos y sirve como plano del software. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
+~%-33.3333%Como el binario final que la CPU ejecuta directamente sin más pasos. #Incorrecto: El binario final corresponde al código ejecutable, no al código fuente. El código fuente todavía debe traducirse para que la máquina lo entienda. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
+~%-33.3333%Como la documentación que acompaña a un programa para explicar su uso. #Incorrecto: La documentación puede acompañar al software, pero no es código fuente. El código fuente son instrucciones ejecutables escritas en un lenguaje de programación. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
+~%-33.3333%Como el conjunto de ficheros de configuración del sistema operativo. #Incorrecto: Los ficheros de configuración son datos para el sistema, no el código fuente del programa que estamos desarrollando. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
+}
+
+::CE 1.c – Herramienta que genera código objeto::
+Tras escribir un archivo `hola.c`, ejecutas `gcc -c hola.c`. ¿Qué herramienta se describe en la unidad y qué obtiene?
+{
+=El compilador, que traduce el código fuente a código objeto listo para ser enlazado. #Correcto: El compilador analiza el código fuente y genera código objeto, una versión más cercana al lenguaje máquina pero aún sin enlazar. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
+~%-33.3333%El enlazador, que fusiona directamente el código fuente con bibliotecas externas. #Incorrecto: El enlazador actúa después del compilador. Primero se necesita generar el código objeto con el compilador. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
+~%-33.3333%El intérprete, que ejecuta línea a línea el código fuente sin generar ficheros intermedios. #Incorrecto: En esta unidad se describe un proceso compilado. Un intérprete no produce código objeto como paso intermedio. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
+~%-33.3333%El depurador, que transforma el código para poder analizarlo. #Incorrecto: El depurador ayuda a revisar la ejecución, pero no traduce código fuente a código objeto. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
+}
+
+::CE 1.c – Finalidad del código objeto::
+Después de compilar varios módulos obtienes varios ficheros objeto. ¿Qué papel se les asigna en la unidad?
+{
+=Ser piezas intermedias que contienen instrucciones casi en lenguaje máquina listas para enlazarse con otros módulos y bibliotecas. #Correcto: El código objeto aproxima el programa al lenguaje de la máquina, pero aún necesita unirse con el resto de módulos y bibliotecas mediante el enlazador. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
+~%-33.3333%Ser el ejecutable definitivo que puede ejecutarse sin más pasos. #Incorrecto: El ejecutable se obtiene tras enlazar todos los objetos y bibliotecas necesarias. Los objetos por sí mismos no son ejecutables completos. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
+~%-33.3333%Ser ficheros de configuración que indican cómo compilar el programa. #Incorrecto: Los objetos contienen instrucciones traducidas, no configuraciones de compilación. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
+~%-33.3333%Ser copias exactas del código fuente guardadas en otro formato de texto. #Incorrecto: El código objeto no es texto legible ni copia del código fuente; ya contiene instrucciones cercanas al lenguaje máquina. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '2. ¿Qué es el Código Objeto?'.
+}
+
+::CE 1.c – Rol del enlazador::
+Tras compilar todos tus módulos, ejecutas el enlazador. ¿Qué función cumple esta fase durante el proceso?
+{
+=Une todos los ficheros objeto y las bibliotecas necesarias para generar un único código ejecutable. #Correcto: El enlazador resuelve referencias entre módulos y bibliotecas para producir un ejecutable completo que el sistema operativo puede cargar. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
+~%-33.3333%Traduce el código fuente de alto nivel a código objeto. #Incorrecto: Esa es tarea del compilador. El enlazador actúa después, tomando los objetos ya generados. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
+~%-33.3333%Optimiza el código ejecutable para que sea más legible por las personas. #Incorrecto: El enlazador no mejora la legibilidad humana, su objetivo es generar un binario ejecutable para la máquina. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
+~%-33.3333%Convierte automáticamente el ejecutable en código fuente para su documentación. #Incorrecto: El enlazador no revierte el proceso; trabaja en sentido hacia el ejecutable final. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
+}
+
+::CE 1.c – Características del código ejecutable::
+Generas el archivo final de tu programa. ¿Qué propiedad destaca la unidad sobre el código ejecutable?
+{
+=Contiene instrucciones en lenguaje máquina que el sistema operativo puede cargar y la CPU ejecutar directamente. #Correcto: El código ejecutable es el resultado final del proceso y está en el formato que entiende el procesador. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '3. ¿Qué es el Código Ejecutable?'.
+~%-33.3333%Es un archivo de texto legible que sirve como documentación del programa. #Incorrecto: El ejecutable no es legible por personas; está en lenguaje máquina binario. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '3. ¿Qué es el Código Ejecutable?'.
+~%-33.3333%Solo puede ejecutarse si se recompila cada vez que se usa. #Incorrecto: Una vez generado, el ejecutable se puede ejecutar tantas veces como se quiera sin recompilar. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '3. ¿Qué es el Código Ejecutable?'.
+~%-33.3333%Es independiente del sistema operativo y se ejecuta igual en cualquier plataforma sin cambios. #Incorrecto: El ejecutable está adaptado al sistema operativo y a la arquitectura para la que se compiló. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '3. ¿Qué es el Código Ejecutable?'.
+}
+
+::CE 1.c – Orden de las etapas::
+Selecciona el orden correcto de las etapas descritas en la unidad para crear un programa en C listo para ejecutarse.
+{
+=Escribir código fuente -> Compilar a código objeto -> Enlazar objetos y bibliotecas -> Ejecutar el binario. #Correcto: La unidad detalla que primero se redacta el código fuente, luego se compila a objeto, después se enlaza y finalmente se ejecuta el programa resultante. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
+~%-33.3333%Escribir código fuente -> Ejecutar directamente -> Compilar -> Enlazar. #Incorrecto: No se puede ejecutar directamente el código fuente; primero debe compilarse y enlazarse. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
+~%-33.3333%Ejecutar el binario -> Enlazar -> Compilar -> Escribir código fuente. #Incorrecto: El proceso no puede comenzar ejecutando un binario que aún no existe; el orden debe respetar las fases de desarrollo. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
+~%-33.3333%Compilar -> Escribir código fuente -> Enlazar -> Ejecutar. #Incorrecto: Primero se escribe el código, después se compila. No se puede compilar algo que todavía no existe. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
+}
+
+::CE 1.c – Ejemplo visual de la receta::
+En el ejemplo visual de la unidad se compara el proceso con traducir una receta para un robot. ¿Qué representa el código ejecutable en esa analogía?
+{
+=La versión totalmente detallada en el lenguaje que entiende el robot, lista para ejecutarse. #Correcto: El código ejecutable equivale a las instrucciones definitivas que el robot puede seguir sin más traducciones. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '4. Ejemplo Visual: El Proceso de Traducción de Código'.
+~%-33.3333%La receta original escrita en tu idioma antes de traducirla. #Incorrecto: Esa receta inicial representa el código fuente, no el ejecutable final. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '4. Ejemplo Visual: El Proceso de Traducción de Código'.
+~%-33.3333%El listado de ingredientes sin pasos de preparación. #Incorrecto: Un listado de ingredientes sería información incompleta, similar a datos de entrada, no al código ejecutable completo. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '4. Ejemplo Visual: El Proceso de Traducción de Código'.
+~%-33.3333%Las notas personales del chef sobre cómo mejorar la receta. #Incorrecto: Las notas personales no forman parte del flujo código fuente -> objeto -> ejecutable descrito en la unidad. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '4. Ejemplo Visual: El Proceso de Traducción de Código'.
+}
+
+::CE 1.c – Necesidad de compilar el código fuente::
+¿Por qué insiste la unidad en que el código fuente debe transformarse antes de ejecutarse?
+{
+=Porque los ordenadores solo entienden lenguaje máquina y el código fuente está pensado para ser legible por personas. #Correcto: La unidad recuerda que el código fuente es legible para humanos y debe traducirse a código que la CPU pueda interpretar. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
+~%-33.3333%Porque compilar permite que el programa funcione sin usar memoria RAM. #Incorrecto: La compilación no elimina la necesidad de memoria RAM durante la ejecución. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
+~%-33.3333%Porque el código fuente se pierde automáticamente si no se compila cada minuto. #Incorrecto: El código fuente no desaparece; la compilación se hace para generar ejecutables, no para conservarlo. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
+~%-33.3333%Porque al compilar el código se convierte en documentación para el equipo. #Incorrecto: La documentación no es el objetivo de la compilación; se compila para obtener código ejecutable. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '1. ¿Qué es el Código Fuente?'.
+}
+
+::CE 1.c – Importancia del enlazado::
+Si omites la etapa de enlazado después de tener los objetos, ¿qué ocurre según la unidad?
+{
+=No obtienes un ejecutable completo porque las referencias entre módulos y bibliotecas quedan sin resolver. #Correcto: El enlazado es imprescindible para combinar los objetos y producir el ejecutable final. Sin esa fase, el programa no se puede ejecutar. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
+~%-33.3333%El programa se ejecuta igualmente porque el código objeto es suficiente. #Incorrecto: El código objeto necesita enlazarse para resolver dependencias y formar el ejecutable final. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
+~%-33.3333%Solo se pierden los comentarios del código fuente, pero el binario se genera. #Incorrecto: El enlazado no tiene que ver con comentarios; sin enlazar no hay binario ejecutable. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
+~%-33.3333%Obtienes un archivo ejecutable, pero sin icono ni nombre descriptivo. #Incorrecto: La ausencia de enlazado impide obtener el ejecutable; no se trata de detalles estéticos del archivo. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección '5. Proceso de Conversión: Compilación y Ejecución'.
+}
+
+::CE 1.c – Utilidad de conocer las fases::
+¿Qué ventaja señala la conclusión de la unidad sobre entender las etapas de código fuente, objeto y ejecutable?
+{
+=Permite trabajar mejor con compiladores y enlazadores para crear aplicaciones funcionales de forma consciente. #Correcto: La conclusión destaca que comprender las etapas ayuda a usar adecuadamente las herramientas y a saber qué ocurre en cada paso. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección 'Conclusión'.
+~%-33.3333%Evita tener que utilizar cualquier herramienta de desarrollo. #Incorrecto: Conocer las fases no elimina la necesidad de usar herramientas; precisamente ayuda a utilizarlas mejor. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección 'Conclusión'.
+~%-33.3333%Garantiza que el programa nunca tendrá errores. #Incorrecto: Comprender las fases no garantiza la ausencia de errores, aunque facilita su análisis. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección 'Conclusión'.
+~%-33.3333%Permite saltarse la fase de pruebas porque el código ya está traducido. #Incorrecto: Las pruebas siguen siendo necesarias; entender las fases no elimina el proceso de verificación y pruebas. Consulta `EDES-U1.2.-CodigoFuenteObjetoEjecutable.md`, sección 'Conclusión'.
+}

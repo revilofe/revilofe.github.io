@@ -2,92 +2,91 @@
 // Banco de preguntas sobre gestión de plugins en IDEs
 // CE 2.b - Instalación, configuración y mantenimiento de extensiones
 
-::CE 2.b – Finalidad de módulos y extensiones::
-¿Cuál es el objetivo principal de añadir módulos o extensiones al IDE?
+::CE 2.b – Preparar entorno para sprint::
+Un equipo planea un sprint centrado en análisis estático para Python. Quiere evitar olvidos manuales. ¿Qué combinación describe mejor el enfoque recomendado en la unidad?
 {
-=Personalizar el entorno sumando soporte para lenguajes, herramientas o procesos específicos. #Correcto: La unidad define módulos/extensiones como complementos que amplían el IDE según las necesidades. Consulta `EDES-U2.2.-Modulos.md`, sección '2. ¿Qué son los módulos y las extensiones?'.
-~%-33.3333%Actualizar automáticamente el sistema operativo sin intervención del IDE. #Incorrecto: Las extensiones actúan sobre el IDE, no sobre el sistema operativo. Consulta `EDES-U2.2.-Modulos.md`, sección '2. ¿Qué son los módulos y las extensiones?'.
-~%-33.3333%Eliminar funciones del IDE para hacerlo más ligero de forma permanente. #Incorrecto: Se instalan para añadir capacidades, no para quitar funcionalidades esenciales. Consulta `EDES-U2.2.-Modulos.md`, sección '2. ¿Qué son los módulos y las extensiones?'.
-~%-33.3333%Convertir un IDE en editor de texto sin autocompletado ni depuración. #Incorrecto: Buscan enriquecer el IDE con más herramientas, no degradarlo. Consulta `EDES-U2.2.-Modulos.md`, sección '2. ¿Qué son los módulos y las extensiones?'.
+=Instalar extensiones de linting/formateo (Pylint, AutoPEP8) y dejarlas configuradas en el IDE para todos los miembros. #Correcto: El texto explica cómo añadir y configurar estas extensiones en VS Code para mantener calidad automática. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3. Instalación de linting y formateadores de código'.
+~%-33.3333%Requerir que cada persona ejecute scripts de linting desde consola sin extensiones. #Incorrecto: La unidad propone aprovechar extensiones para automatizar la verificación. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3'.
+~%-33.3333%Bloquear AutoPEP8 porque modifica el código sin control humano. #Incorrecto: Se sugiere configurarlo para asegurar estilo consistente. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3'.
+~%-33.3333%Crear un repositorio diferente con el código ya formateado. #Incorrecto: El objetivo es integrar el formateo en el mismo entorno de trabajo. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3'.
 }
 
-::CE 2.b – Procedimiento Marketplace VS Code::
-Quieres instalar soporte Python en VS Code. ¿Qué pasos describe la unidad?
+::CE 2.b – Diagnóstico de advertencias repetidas::
+Una desarrolladora comenta que ignora las advertencias porque aparecen solo al lanzar la terminal externa. ¿Qué ajuste de la unidad podría ayudar?
 {
-=Abrir el Marketplace, buscar “Python” y pulsar Instalar en la extensión oficial. #Correcto: Se explica el flujo desde el marketplace hasta la instalación de la extensión de Microsoft. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3. Instalación de una extensión'.
-~%-33.3333%Descargar un archivo ejecutable externo y reemplazar el binario de VS Code. #Incorrecto: La instalación se hace desde el marketplace interno, sin reemplazar binarios. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3. Instalación de una extensión'.
-~%-33.3333%Modificar manualmente el fichero settings.json con el código de la extensión. #Incorrecto: No se pega código; basta con instalar desde el marketplace. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3. Instalación de una extensión'.
-~%-33.3333%Instalar Visual Studio completo porque VS Code no admite extensiones. #Incorrecto: El texto resalta la extensibilidad de VS Code mediante extensiones. Consulta `EDES-U2.2.-Modulos.md`, sección '3. Instalación de extensiones en Visual Studio Code'.
+=Configurar AutoPEP8 y Pylint como File Watchers o External Tools en PyCharm para ejecutarlos automáticamente. #Correcto: Se describe cómo vincular estas herramientas a acciones automáticas para recibir feedback inmediato. Consulta `EDES-U2.2.-Modulos.md`, secciones '4.3.2.' y '4.3.4.'.
+~%-33.3333%Eliminar los linters del proyecto para no distraerse. #Incorrecto: La idea es integrarlos mejor, no eliminarlos. Consulta `EDES-U2.2.-Modulos.md`, secciones '4.3.2.' y '4.3.4.'.
+~%-33.3333%Desactivar el guardado automático para impedir la ejecución de herramientas. #Incorrecto: El método propuesto es automatizar al guardar, no impedirlo. Consulta `EDES-U2.2.-Modulos.md`, secciones '4.3.2.' y '4.3.4.'.
+~%-33.3333%Ejecutar los linters sólo al final del sprint para ahorrar tiempo. #Incorrecto: Se busca feedback continuo mediante automatización. Consulta `EDES-U2.2.-Modulos.md`, secciones '4.3.2.' y '4.3.4.'.
 }
 
-::CE 2.b – Linter y formateador en VS Code::
-Tu código Python muestra estilo inconsistente. ¿Qué recomienda la unidad?
+::CE 2.b – Nuevo lenguaje en proyecto establecido::
+El área de datos decide añadir scripts Kotlin al repositorio principal gestionado con IntelliJ. ¿Qué acción agiliza la transición?
 {
-=Instalar extensiones como Pylint y AutoPEP8 y configurarlas desde la sección de extensiones. #Correcto: Pylint y AutoPEP8 se citan como ejemplo de linter y formateador para VS Code. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3. Instalación de linting y formateadores de código'.
-~%-33.3333%Cambiar de IDE porque VS Code carece de herramientas de linting. #Incorrecto: Se explica cómo dotarlo de linting mediante extensiones específicas. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3. Instalación de linting y formateadores de código'.
-~%-33.3333%Editar cada archivo a mano para respetar PEP 8 sin herramientas auxiliares. #Incorrecto: Justo se busca evitar trabajo manual empleando extensiones de formateo. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3. Instalación de linting y formateadores de código'.
-~%-33.3333%Eliminar el autocompletado para que el intérprete corrija el estilo automáticamente. #Incorrecto: El autocompletado no aplica formatos; las extensiones sí lo hacen. Consulta `EDES-U2.2.-Modulos.md`, sección '3.3. Instalación de linting y formateadores de código'.
+=Agregar un módulo específico para Kotlin desde Project Structure y cargar las plantillas necesarias. #Correcto: Se detalla cómo añadir módulos en IntelliJ IDEA para nuevos lenguajes. Consulta `EDES-U2.2.-Modulos.md`, sección '4.2. Instalación de módulos en IntelliJ IDEA'.
+~%-33.3333%Crear un proyecto nuevo separado para Kotlin para evitar conflictos. #Incorrecto: La unidad muestra cómo ampliar el proyecto actual mediante módulos. Consulta `EDES-U2.2.-Modulos.md`, sección '4.2'.
+~%-33.3333%Reescribir el código en Java porque IntelliJ no admite Kotlin. #Incorrecto: IntelliJ soporta módulos para distintos lenguajes. Consulta `EDES-U2.2.-Modulos.md`, sección '4.2'.
+~%-33.3333%Editar manualmente los archivos .iml para añadir soporte experimental. #Incorrecto: El cambio se hace desde la interfaz de Project Structure. Consulta `EDES-U2.2.-Modulos.md`, sección '4.2'.
 }
 
-::CE 2.b – Definición de módulo en JetBrains::
-¿Cómo describe la unidad un módulo dentro de los IDEs JetBrains?
+::CE 2.b – Prototipo con VS Code en hackathon::
+Un grupo instala VS Code desde cero para un hackathon de APIs REST. Necesitan productividad rápida. ¿Qué recomienda el texto?
 {
-=Conjunto de archivos y configuraciones que añaden soporte a un lenguaje o framework al proyecto. #Correcto: Los módulos de JetBrains se explican como paquetes que amplían capacidades del proyecto. Consulta `EDES-U2.2.-Modulos.md`, sección '4.1. ¿Qué es un módulo en JetBrains?'.
-~%-33.3333%Archivo ejecutable que reemplaza al núcleo del IDE en cada actualización. #Incorrecto: Los módulos no sustituyen el núcleo; son componentes del proyecto. Consulta `EDES-U2.2.-Modulos.md`, sección '4.1. ¿Qué es un módulo en JetBrains?'.
-~%-33.3333%Solo una carpeta vacía usada como copia de seguridad del proyecto. #Incorrecto: Se trata de soporte funcional, no de un contenedor vacío. Consulta `EDES-U2.2.-Modulos.md`, sección '4.1. ¿Qué es un módulo en JetBrains?'.
-~%-33.3333%Documento PDF con la guía de estilo del equipo. #Incorrecto: Los módulos son configuraciones funcionales, no documentación. Consulta `EDES-U2.2.-Modulos.md`, sección '4.1. ¿Qué es un módulo en JetBrains?'.
+=Abrir el Marketplace, instalar extensiones del lenguaje objetivo y configurar solo las que aporten valor al proyecto. #Correcto: Se insiste en acceder al Marketplace y añadir extensiones específicas según las necesidades. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '3.2.'.
+~%-33.3333%Desinstalar todas las extensiones para garantizar rendimiento máximo. #Incorrecto: El enfoque es personalizar con las extensiones adecuadas, no eliminarlas. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '3.2.'.
+~%-33.3333%Trabajar sin extensiones porque VS Code trae todo lo necesario. #Incorrecto: La unidad muestra que VS Code necesita extensiones para cubrir distintos escenarios. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '3.2.'.
+~%-33.3333%Instalar un IDE diferente por cada lenguaje para evitar mezclas. #Incorrecto: Se promueve adaptar VS Code con extensiones, no multiplicar IDEs. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '3.2.'.
 }
 
-::CE 2.b – Añadir módulo en IntelliJ IDEA::
-Necesitas sumar soporte Spring a un proyecto. ¿Cuál es el proceso indicado?
+::CE 2.b – Auditoría de calidad en PyCharm::
+El área de QA quiere que cada push a rama principal pase por Pylint con parámetros homogéneos. ¿Qué facilita PyCharm según la unidad?
 {
-=Abrir Project Structure, acceder a Modules y añadir el módulo elegido con el asistente. #Correcto: Se detalla el camino File > Project Structure > Modules > + para agregar soporte. Consulta `EDES-U2.2.-Modulos.md`, sección '4.2. Instalación de módulos en IntelliJ IDEA'.
-~%-33.3333%Editar la base de datos del IDE para registrar el framework manualmente. #Incorrecto: No se manipulan bases de datos internas; se usa el menú de módulos. Consulta `EDES-U2.2.-Modulos.md`, sección '4.2. Instalación de módulos en IntelliJ IDEA'.
-~%-33.3333%Instalar un plugin de VS Code porque IntelliJ IDEA no soporta módulos. #Incorrecto: IntelliJ IDEA sí soporta módulos y se configura desde su menú propio. Consulta `EDES-U2.2.-Modulos.md`, sección '4.2. Instalación de módulos en IntelliJ IDEA'.
-~%-33.3333%Reinstalar el IDE con un instalador específico de Spring. #Incorrecto: Basta con añadir el módulo dentro del IDE ya instalado. Consulta `EDES-U2.2.-Modulos.md`, sección '4.2. Instalación de módulos en IntelliJ IDEA'.
+=Definir External Tools con rutas al intérprete del proyecto para asegurar que todos usan la misma instalación. #Correcto: Se explica cómo configurar External Tools apuntando al intérprete activo para AutoPEP8/Pylint. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.2.'.
+~%-33.3333%Obligar a cada persona a ejecutar scripts manuales sin soporte del IDE. #Incorrecto: La unidad propone usar herramientas integradas para homogeneizar procesos. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.2.'.
+~%-33.3333%Configurar un watcher que sólo informe en tiempo de ejecución, nunca al guardar. #Incorrecto: Los File Watchers pueden ejecutarse al guardar para detectar problemas antes. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.4.'.
+~%-33.3333%Mover la ejecución de Pylint a un servidor externo sin feedback local. #Incorrecto: El objetivo es recibir resultados inmediatos en el IDE. Consulta `EDES-U2.2.-Modulos.md`, secciones '4.3.2.' y '4.3.4.'.
 }
 
-::CE 2.b – Plugins en JetBrains::
-¿Cómo se instalan plugins adicionales en PyCharm según la unidad?
+::CE 2.b – Moderar sobrecarga de extensiones::
+Una desarrolladora nota que VS Code tarda más tras instalar muchas extensiones. ¿Qué estrategia menciona la unidad para mantener el entorno ágil?
 {
-=Desde File > Settings > Plugins, buscar el plugin deseado, instalar y reiniciar el IDE. #Correcto: Es el procedimiento estándar descrito para ampliar PyCharm. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3. Instalación de plugins en JetBrains (PyCharm)'.
-~%-33.3333%Copiando los archivos del plugin en la carpeta /tmp del sistema operativo. #Incorrecto: La instalación se realiza desde el gestor de plugins del IDE. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3. Instalación de plugins en JetBrains (PyCharm)'.
-~%-33.3333%Compilando el plugin con Maven antes de cada inicio del IDE. #Incorrecto: Los plugins se instalan desde el repositorio oficial sin compilar manualmente. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3. Instalación de plugins en JetBrains (PyCharm)'.
-~%-33.3333%Habilitando la opción “Plugins desactivados” para cargarlos automáticamente. #Incorrecto: Primero deben instalarse y luego activarse si procede. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3. Instalación de plugins en JetBrains (PyCharm)'.
+=Activar sólo las extensiones imprescindibles para el proyecto y desinstalar las que ya no aportan valor. #Correcto: El texto sugiere gestionar las extensiones desde el Marketplace, incluyendo su desinstalación. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.1.'.
+~%-33.3333%Borrar la carpeta del proyecto para reiniciar el IDE desde cero. #Incorrecto: El problema no está en el proyecto, sino en la gestión de extensiones. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.1.'.
+~%-33.3333%Editar el ejecutable de VS Code para eliminar módulos core. #Incorrecto: No se recomienda manipular el ejecutable; se gestionan extensiones desde la interfaz. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.1.'.
+~%-33.3333%Desactivar el Marketplace para impedir nuevas instalaciones. #Incorrecto: La unidad propone una gestión consciente, no bloquear el Marketplace. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.1.'.
 }
 
-::CE 2.b – Automatización con File Watchers::
-Quieres ejecutar autopep8 al guardar en PyCharm. ¿Qué configuración propone la unidad?
+::CE 2.b – Migración a JetBrains Toolbox::
+La empresa adopta JetBrains Toolbox para mantener IDEs. ¿Qué ventaja mantiene el equipo respecto a plugins?
 {
-=Crear un File Watcher con programa `$PyInterpreterDirectory$/autopep8` y activar auto-save. #Correcto: Se indica el File Watcher con AutoPEP8 y parámetros concretos. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.4. File Watcher – autopep8'.
-~%-33.3333%Configurar un breakpoint en main.py y pulsar F5 tras cada edición. #Incorrecto: La automatización se consigue con File Watchers, no con depuración manual. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.4. File Watcher – autopep8'.
-~%-33.3333%Ejecutar `pip uninstall autopep8` para que PyCharm lo aplique automáticamente. #Incorrecto: Hay que instalar la herramienta y configurarla, no desinstalarla. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.1. Instalar las herramientas en el intérprete del proyecto'.
-~%-33.3333%Crear un proyecto nuevo cada vez que se quiera formatear un archivo. #Incorrecto: El objetivo del File Watcher es automatizar sin recrear proyectos. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.4. File Watcher – autopep8'.
+=Aunque Toolbox gestione versiones, cada IDE conserva el panel de Plugins para instalar, actualizar o desactivar complementos. #Correcto: Se indica que, incluso con Toolbox, los plugins se administran desde File > Settings > Plugins. Consulta `EDES-U2.2.-Modulos.md`, sección '5.3. Gestión de módulos y plugins en JetBrains'.
+~%-33.3333%Los plugins se vuelven incompatibles y deben eliminarse. #Incorrecto: Toolbox no invalida los plugins; siguen gestionándose en el IDE. Consulta `EDES-U2.2.-Modulos.md`, sección '5.3.'.
+~%-33.3333%Las actualizaciones sólo se aplican si se compila el plugin manualmente. #Incorrecto: Se pueden actualizar desde la pestaña Installed sin recompilar. Consulta `EDES-U2.2.-Modulos.md`, sección '5.3.'.
+~%-33.3333%Los IDEs pierden acceso al marketplace propio. #Incorrecto: Toolbox convive con el sistema de plugins interno. Consulta `EDES-U2.2.-Modulos.md`, sección '5.3.'.
 }
 
-::CE 2.b – Automatización con External Tools::
-¿Para qué sirve registrar AutoPEP8 como External Tool en PyCharm?
+::CE 2.b – Seguridad operativa::
+En una auditoría se detecta que varias extensiones están obsoletas. ¿Qué proceso describe la unidad para mantenerlas al día?
 {
-=Permite lanzar el formateador desde Tools > External Tools sobre el archivo activo. #Correcto: La unidad muestra cómo añadir AutoPEP8 como herramienta externa para invocarla cuando se necesite. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.2. External Tool – autopep8'.
-~%-33.3333%Obliga a ejecutar AutoPEP8 en todos los proyectos al abrir PyCharm. #Incorrecto: Se lanza de forma manual cuando el alumnado lo necesita. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.2. External Tool – autopep8'.
-~%-33.3333%Desactiva el intérprete del proyecto para utilizar un entorno global. #Incorrecto: Sigue usando el intérprete configurado; no lo desactiva. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.2. External Tool – autopep8'.
-~%-33.3333%Impide combinar AutoPEP8 con otros formateadores. #Incorrecto: Es una herramienta más; pueden coexistir otros formateadores. Consulta `EDES-U2.2.-Modulos.md`, sección '4.3.2. External Tool – autopep8'.
+=Revisar regularmente la sección Installed del gestor de plugins/extensiones y aplicar las actualizaciones disponibles. #Correcto: Se recomienda revisar e instalar actualizaciones desde el gestor correspondiente. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.3.'.
+~%-33.3333%Ignorar las alertas porque VS Code y JetBrains se actualizan sin intervención. #Incorrecto: El texto sugiere comprobaciones manuales además de automatismos. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.3.'.
+~%-33.3333%Reescribir las extensiones para abarcar las mejoras deseadas. #Incorrecto: No es necesario reimplementarlas; basta con actualizarlas. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.3.'.
+~%-33.3333%Desactivar todas las extensiones para evitar accesos a internet. #Incorrecto: El riesgo se mitiga manteniéndolas al día, no desactivándolas indiscriminadamente. Consulta `EDES-U2.2.-Modulos.md`, secciones '3.1.' y '5.3.'.
 }
 
-::CE 2.b – Desinstalar extensiones en VS Code::
-Has dejado de usar una extensión. ¿Cuál es el procedimiento explicado?
+::CE 2.b – Cascada de proyectos legado::
+Mantienes microservicios con configuraciones muy distintas. ¿Cómo ayuda la documentación oficial enlazada?
 {
-=Abrir el panel de extensiones, localizarla y pulsar el icono de la papelera para eliminarla. #Correcto: La desinstalación se realiza desde el panel con el botón de papelera. Consulta `EDES-U2.2.-Modulos.md`, sección '5.1. Desinstalación en Visual Studio Code'.
-~%-33.3333%Modificar settings.json para borrar la sección de la extensión manualmente. #Incorrecto: No hace falta editar settings; se usa el botón de desinstalar. Consulta `EDES-U2.2.-Modulos.md`, sección '5.1. Desinstalación en Visual Studio Code'.
-~%-33.3333%Desinstalar el propio VS Code y reinstalarlo sin esa extensión. #Incorrecto: Basta con eliminar la extensión desde el panel, sin reinstalar el IDE. Consulta `EDES-U2.2.-Modulos.md`, sección '5.1. Desinstalación en Visual Studio Code'.
-~%-33.3333%Esperar a que el marketplace la marque como obsoleta para que desaparezca. #Incorrecto: El usuario debe desinstalarla si ya no la necesita. Consulta `EDES-U2.2.-Modulos.md`, sección '5.1. Desinstalación en Visual Studio Code'.
+=Ofrece guías actualizadas para configurar extensiones y plugins según la versión del IDE. #Correcto: Se incluyen enlaces a documentación oficial para seguir las prácticas más recientes. Consulta `EDES-U2.2.-Modulos.md`, sección '6. Enlaces y recursos de interés'.
+~%-33.3333%Indica que todas las extensiones funcionan igual en cualquier versión sin ajustes. #Incorrecto: La documentación aconseja comprobar instrucciones actualizadas. Consulta `EDES-U2.2.-Modulos.md`, sección '6'.
+~%-33.3333%Sugiere usar siempre versiones beta de extensiones para adelantarse. #Incorrecto: No se recomienda usar betas sin necesidad; se aboga por seguir guías oficiales. Consulta `EDES-U2.2.-Modulos.md`, sección '6'.
+~%-33.3333%Propone migrar todo a un IDE único con soporte cerrado. #Incorrecto: La documentación sirve para gestionar extensiones existentes, no para forzar migraciones. Consulta `EDES-U2.2.-Modulos.md`, sección '6'.
 }
 
-::CE 2.b – Actualizar plugins de JetBrains::
-Tu plugin de Kotest en PyCharm muestra una actualización. ¿Qué debes hacer?
+::CE 2.b – Refinar onboarding::
+Una nueva incorporación pregunta cómo replicar el entorno de la empresa en su portátil. ¿Qué elementos debe documentar el equipo según la unidad?
 {
-=Abrir Settings > Plugins, revisar la pestaña Installed y pulsar actualizar en el plugin. #Correcto: Se describe la gestión de plugins desde ese menú para actualizar o desactivar. Consulta `EDES-U2.2.-Modulos.md`, sección '5.3. Gestión de módulos y plugins en JetBrains'.
-~%-33.3333%Eliminar el plugin y volver a instalarlo manualmente desde un archivo zip. #Incorrecto: La unidad propone actualizar desde la sección Installed sin reinstalar manualmente. Consulta `EDES-U2.2.-Modulos.md`, sección '5.3. Gestión de módulos y plugins en JetBrains'.
-~%-33.3333%Copiar los archivos del plugin a la carpeta bin del IDE y reiniciar. #Incorrecto: Las actualizaciones se gestionan desde el panel de plugins, no copiando archivos. Consulta `EDES-U2.2.-Modulos.md`, sección '5.3. Gestión de módulos y plugins en JetBrains'.
-~%-33.3333%Ignorar la actualización porque los plugins no afectan al rendimiento. #Incorrecto: Se recomienda mantenerlos actualizados para añadir mejoras y corregir errores. Consulta `EDES-U2.2.-Modulos.md`, sección '5.3. Gestión de módulos y plugins en JetBrains'.
-}
+=Las extensiones/módulos instalados, su configuración (por ejemplo File Watchers) y dónde encontrarlos en el IDE. #Correcto: La gestión de módulos/extensiones y sus parámetros forma parte del entorno personalizado descrito. Consulta `EDES-U2.2.-Modulos.md`, secciones '3', '4' y '5'.
+~%-33.3333%Únicamente la ruta del repositorio y ningún complemento opcional. #Incorrecto: Las extensiones y su configuración son esenciales para reproducir el entorno. Consulta `EDES-U2.2.-Modulos.md`, secciones '3', '4' y '5'.
+~%-33.3333%La recomendación de no usar IDEs sino un editor básico para empezar. #Incorrecto: Se busca aprovechar los IDEs y su extensibilidad, no evitarlos. Consulta `EDES-U2.2.-Modulos.md`, secciones '3', '4' y '5'.
+~%-33.3333%Una checklist de atajos de teclado sin relación con extensiones. #Incorrecto: Los atajos son útiles, pero la unidad enfatiza personalización mediante módulos/extensiones. Consulta `EDES-U2.2.-Modulos.md`, secciones '3', '4' y '5'.

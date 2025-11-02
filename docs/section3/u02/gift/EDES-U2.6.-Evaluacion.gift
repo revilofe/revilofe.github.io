@@ -2,91 +2,91 @@
 // Banco de preguntas sobre comparación de entornos de desarrollo
 // CE 2.f - Análisis crítico de IDEs según necesidades del proyecto
 
-::CE 2.f – Característica común de IDEs::
-¿Cuál es una característica compartida por PyCharm, IntelliJ IDEA y VS Code?
+::CE 2.f – Proyecto web con Python y QA exigente::
+Una empresa desarrolla un portal Django grande con pipelines de calidad estrictos. ¿Cuál de los IDEs descritos responde mejor a esta necesidad?
 {
-=Editor con resaltado de sintaxis, autocompletado e identación automática. #Correcto: La unidad enumera estas funciones como comunes a los tres IDEs. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2. Características comunes de los IDEs'.
-~%-33.3333%Carecer de depurador para centrarse en escritura rápida. #Incorrecto: Todos incluyen depuradores integrados. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2. Características comunes de los IDEs'.
-~%-33.3333%Prohibir el uso de Git para evitar conflictos. #Incorrecto: Se menciona la integración con control de versiones, especialmente Git. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2. Características comunes de los IDEs'.
-~%-33.3333%No admitir extensiones ni plugins de terceros. #Incorrecto: El soporte de extensiones/plugins es otra característica común señalada. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2. Características comunes de los IDEs'.
+=PyCharm, porque ofrece soporte avanzado para Python y frameworks web, además de refactorización y depuración especializada. #Correcto: La unidad destaca PyCharm para proyectos Python con herramientas nativas como soporte Django. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
+~%-33.3333%IntelliJ IDEA, ya que no soporta Python de forma nativa. #Incorrecto: IntelliJ se enfoca en Kotlin/Java; para Python el texto recomienda PyCharm. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1.'.
+~%-33.3333%Visual Studio Code, porque carece de extensiones específicas y obliga a herramientas externas. #Incorrecto: VS Code necesita extensiones; PyCharm ya trae utilidades orientadas a Django. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1.'.
+~%-33.3333%Un editor sin autocompletado para evitar depender del IDE. #Incorrecto: La unidad promueve IDEs con apoyo fuerte para frameworks. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1.'.
 }
 
-::CE 2.f – Depurador integrado::
-¿Qué utilidad aporta el depurador según la comparación?
+::CE 2.f – Aplicación multiplataforma Kotlin::
+Una startup desarrolla microservicios en Kotlin y busca integraciones con Gradle y análisis avanzado. ¿Qué IDE encaja según la comparación?
 {
-=Permite establecer breakpoints y ejecutar paso a paso observando variables. #Correcto: El depurador se describe con esas capacidades en los IDEs comparados. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2. Depurador integrado'.
-~%-33.3333%Restringe la compilación para evitar errores en tiempo de ejecución. #Incorrecto: No se menciona que bloquee la compilación; ayuda a analizar el flujo. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2. Depurador integrado'.
-~%-33.3333%Sirve únicamente para generar informes PDF automáticos. #Incorrecto: El depurador no genera informes; analiza la ejecución. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2. Depurador integrado'.
-~%-33.3333%Solo funciona con proyectos Kotlin según la unidad. #Incorrecto: Se indica que está disponible para los lenguajes que cada IDE soporta. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2. Depurador integrado'.
+=IntelliJ IDEA, porque aporta soporte nativo para Kotlin y herramientas como Gradle/Maven y análisis estático. #Correcto: La sección dedicada a IntelliJ subraya estas capacidades. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2. IntelliJ IDEA (Kotlin)'.
+~%-33.3333%PyCharm, dado que trae plantillas específicas para Kotlin. #Incorrecto: PyCharm se especializa en Python; IntelliJ se orienta a Kotlin/Java. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2.'.
+~%-33.3333%Visual Studio Code, porque su ligereza sustituye la integración con Gradle. #Incorrecto: VS Code puede ampliarse, pero no ofrece de serie la integración profunda con Gradle/Maven descrita. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2.'.
+~%-33.3333%Un editor minimalista para evitar sobrecarga de herramientas. #Incorrecto: La unidad valora las funciones de IntelliJ para proyectos Kotlin complejos. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2.'.
 }
 
-::CE 2.f – Control de versiones::
-¿Qué rol juega Git en los IDEs analizados?
+::CE 2.f – y PyCharm vs VS Code para scripting rápido::
+Un equipo de prototipos Python valora rapidez de arranque y flexibilidad para mezclar tecnologías. ¿Qué diagnóstico da la unidad?
 {
-=Se integra para clonar repositorios, hacer commits y gestionar ramas desde el IDE. #Correcto: El texto remarca la integración de control de versiones como función clave. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.3. Control de versiones integrado'.
-~%-33.3333%Solo se usa para generar documentación HTML de los cambios. #Incorrecto: Se emplea para operaciones tradicionales de Git, no para documentación. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.3. Control de versiones integrado'.
-~%-33.3333%Es incompatible con PyCharm, por lo que se debe usar otro cliente. #Incorrecto: PyCharm soporta Git integrado según la comparación. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.3. Control de versiones integrado'.
-~%-33.3333%Obliga a abandonar el IDE y trabajar en terminal externa. #Incorrecto: La integración evita salir del IDE para gestionar Git. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.3. Control de versiones integrado'.
+=Visual Studio Code, por su ligereza y extensibilidad, cuando se requiere un editor rápido para múltiples lenguajes. #Correcto: Se señala que VS Code es ligero y extensible para escenarios mixtos. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3. Visual Studio Code (Python)'.
+~%-33.3333%PyCharm, porque arranca más rápido y consume menos recursos. #Incorrecto: Se menciona que PyCharm puede ser más pesado frente a VS Code. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3.'.
+~%-33.3333%IntelliJ IDEA, ya que carece de extensiones y eso simplifica la configuración. #Incorrecto: IntelliJ se orienta a Kotlin/Java; no es el enfoque ligero que se describe. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3.'.
+~%-33.3333%Rechazar IDEs y programar solo con bloc de notas. #Incorrecto: El texto compara IDEs y destaca cuál se adapta mejor al caso. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3.'.
 }
 
-::CE 2.f – Diferencia clave de PyCharm::
-¿Qué destaca la unidad de PyCharm?
+::CE 2.f – Equipo remoto con repositorios complejos::
+Una consultora trabaja con personal remoto y múltiples ramas. Necesitan evitar errores de merges. ¿Qué característica común de los IDEs apoya este flujo?
 {
-=Soporte avanzado para Python y frameworks como Django, con refactorización inteligente. #Correcto: Son características señaladas como puntos fuertes de PyCharm. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
-~%-33.3333%Incompatibilidad con cualquier framework web. #Incorrecto: Se menciona integración con frameworks como Django o Flask. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
-~%-33.3333%Velocidad superior a VS Code porque es más ligero. #Incorrecto: Se menciona que PyCharm puede ser más pesado que un editor como VS Code. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
-~%-33.3333%Carencia total de herramientas de refactorización. #Incorrecto: Precisamente se destaca la refactorización inteligente. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
+=Integración con sistemas de control de versiones como Git para gestionar ramas, commits y revisiones desde el IDE. #Correcto: Se indica que todos los IDEs analizados integran Git. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.3. Control de versiones integrado'.
+~%-33.3333%Ausencia de control de versiones para obligar a usar correos manuales. #Incorrecto: Se resalta la integración con Git, no su ausencia. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.3.'.
+~%-33.3333%Compatibilidad con un único repositorio central que se bloquea al primer cambio. #Incorrecto: El texto habla de colaboración mediante herramientas de versión, no de bloqueos. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.3.'.
+~%-33.3333%La necesidad de cerrar el IDE para lanzar comandos de Git. #Incorrecto: La integración evita salir del IDE. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.3.'.
 }
 
-::CE 2.f – Ventaja de IntelliJ IDEA::
-¿Qué punto fuerte se señala para Kotlin en IntelliJ IDEA?
+::CE 2.f – Depuración de incidentes complejos::
+Durante una guardia, hay que inspeccionar el flujo de una API. ¿Qué recurso comparten los IDEs para afrontar este escenario según la unidad?
 {
-=Soporte nativo para Kotlin con integración con Gradle/Maven y análisis de código. #Correcto: La unidad subraya esas capacidades como diferencia de IntelliJ IDEA. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2. IntelliJ IDEA (Kotlin)'.
-~%-33.3333%Necesidad de plugins externos para ejecutar código Kotlin. #Incorrecto: El soporte para Kotlin es nativo sin plugins extras. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2. IntelliJ IDEA (Kotlin)'.
-~%-33.3333%Ausencia de integración con herramientas de construcción como Gradle. #Incorrecto: Se menciona precisamente la integración con Gradle y Maven. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2. IntelliJ IDEA (Kotlin)'.
-~%-33.3333%Ser más ligero que cualquier otro IDE del mercado. #Incorrecto: No se afirma tal cosa; se enfoca en la potencia, no en ser el más ligero. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2. IntelliJ IDEA (Kotlin)'.
+=Depuradores integrados que permiten breakpoints y seguimiento paso a paso con inspección de variables. #Correcto: La depuración se describe como característica común relevante. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2. Depurador integrado'.
+~%-33.3333%Ejecutar el código sin detenerlo para evitar bloqueos. #Incorrecto: El texto apuesta por usar el depurador integrado. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2.'.
+~%-33.3333%Generar logs y leerlos en otro programa porque el IDE no ayuda. #Incorrecto: Se indica que los IDEs ofrecen depuración dentro de la propia herramienta. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2.'.
+~%-33.3333%Reescribir el módulo en otro lenguaje para cazar el bug. #Incorrecto: La unidad no propone reescrituras para depurar. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.2.'.
 }
 
-::CE 2.f – Perfil de Visual Studio Code::
-¿Cómo define la unidad a VS Code?
+::CE 2.f – Decidir IDE para data scientists::
+Un grupo de data scientists combina Python, notebooks y scripts ad-hoc. Buscan un entorno ligero que puedan ampliar caso a caso. ¿Qué sugiere el análisis?
 {
-=Un editor ligero y extensible que, con extensiones, actúa como IDE para varios lenguajes. #Correcto: Se explica que VS Code se transforma mediante extensiones como la de Python. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3. Visual Studio Code (Python)'.
-~%-33.3333%Un IDE exclusivo de Python sin soporte para otros lenguajes. #Incorrecto: VS Code soporta múltiples lenguajes gracias a extensiones. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3. Visual Studio Code (Python)'.
-~%-33.3333%Una herramienta que no puede ejecutar scripts desde la terminal integrada. #Incorrecto: Se destaca la terminal integrada como una de sus ventajas. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3. Visual Studio Code (Python)'.
-~%-33.3333%Un editor que sustituye automáticamente a PyCharm en todos los casos. #Incorrecto: Se analiza como alternativa ligera, no como sustituto obligatorio. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3. Visual Studio Code (Python)'.
+=Visual Studio Code, por su terminal integrada, rapidez y extensiones adaptables a distintos lenguajes. #Correcto: Se menciona que VS Code es ligero y extensible, adecuado para escenarios variados. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3.'.
+~%-33.3333%IntelliJ IDEA, porque se centra en Kotlin y no admite scripts. #Incorrecto: IntelliJ está pensado para proyectos Kotlin/Java, no scripts ligeros. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.2.'.
+~%-33.3333%PyCharm, ya que obliga a una estructura rígida de proyectos. #Incorrecto: PyCharm es más pesado; la unidad recomienda VS Code para rapidez y flexibilidad. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3.'.
+~%-33.3333%Un editor sin extensiones para evitar decisiones adicionales. #Incorrecto: El texto valora la extensibilidad de VS Code para estos casos. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.3.'.
 }
 
-::CE 2.f – Elección para Python web::
-Si desarrollas una app con Django, ¿qué IDE se sugiere como más completo?
+::CE 2.f – Comparativa de rendimiento::
+Un cliente pregunta por qué distintas herramientas tardan en abrirse. ¿Qué tablas o conclusiones aporta la unidad?
 {
-=PyCharm por su soporte específico para frameworks Python y herramientas integradas. #Correcto: PyCharm se valora por su integración nativa con frameworks como Django. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
-~%-33.3333%Visual Studio Code, porque carece de extensiones para Python. #Incorrecto: VS Code sí tiene extensiones, pero PyCharm ofrece soporte especializado. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
-~%-33.3333%IntelliJ IDEA solo si el proyecto se migra a Kotlin. #Incorrecto: Para Python web, PyCharm es la opción destacada. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
-~%-33.3333%Ningún IDE; se recomienda usar únicamente terminal y bloc de notas. #Incorrecto: Se promueve elegir un IDE con herramientas adecuadas, como PyCharm. Consulta `EDES-U2.6.-Evaluacion.md`, sección '3.1. PyCharm (Python)'.
+=Muestra que VS Code es más ligero y rápido, mientras PyCharm e IntelliJ ofrecen más funciones a costa de mayor carga. #Correcto: La tabla resume estas diferencias de rendimiento. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4. Comparación de rendimiento y características'.
+~%-33.3333%Asegura que los tres IDEs consumen la misma memoria y tiempo. #Incorrecto: La comparación destaca diferencias en peso y rapidez. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4'.
+~%-33.3333%Afirma que PyCharm siempre es más rápido que VS Code. #Incorrecto: Se indica que VS Code es el más ligero. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4'.
+~%-33.3333%Concluye que IntelliJ es el más ligero porque soporta menos plugins. #Incorrecto: Se menciona que IntelliJ es robusto y no necesariamente el más ligero. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4'.
 }
 
-::CE 2.f – Comparación de rendimiento::
-¿Qué dice la tabla comparativa sobre la velocidad?
+::CE 2.f – Plan estratégico de herramientas::
+La CTO quiere definir una guía: IDE para backend Kotlin, IDE para Python con requisitos complejos, y alternativa flexible. ¿Qué combinación se alinea con el análisis?
 {
-=VS Code es más ligero y rápido, mientras PyCharm e IntelliJ pueden ser más pesados. #Correcto: La tabla resalta la ligereza de VS Code frente a IDEs completos. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4. Comparación de rendimiento y características'.
-~%-33.3333%PyCharm es el más rápido porque no soporta plugins. #Incorrecto: PyCharm soporta muchos plugins y no se califica como el más rápido. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4. Comparación de rendimiento y características'.
-~%-33.3333%IntelliJ IDEA siempre carga más rápido que VS Code. #Incorrecto: Se indica que VS Code suele ser más ligero y veloz. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4. Comparación de rendimiento y características'.
-~%-33.3333%Todos tienen el mismo rendimiento independientemente del proyecto. #Incorrecto: Se comparan diferencias de rendimiento según la herramienta. Consulta `EDES-U2.6.-Evaluacion.md`, sección '4. Comparación de rendimiento y características'.
+=IntelliJ IDEA para Kotlin, PyCharm para Python empresarial, VS Code como opción flexible y ligera. #Correcto: Cada apartado del documento atribuye esas fortalezas a los respectivos IDEs. Consulta `EDES-U2.6.-Evaluacion.md`, secciones '3.1.', '3.2.' y '3.3.'.
+~%-33.3333%VS Code para Kotlin, PyCharm para scripts y IntelliJ como editor de texto. #Incorrecto: No coincide con las ventajas descritas. Consulta `EDES-U2.6.-Evaluacion.md`, secciones '3.1.', '3.2.' y '3.3.'.
+~%-33.3333%Un único IDE universal, dado que todos ofrecen idénticas funciones. #Incorrecto: La unidad muestra que cada IDE tiene puntos fuertes distintos. Consulta `EDES-U2.6.-Evaluacion.md`, secciones '3.1.', '3.2.' y '3.3.'.
+~%-33.3333%Decidir en función del sistema operativo, ignorando requisitos técnicos. #Incorrecto: El análisis se enfoca en lenguaje y necesidades, no en SO. Consulta `EDES-U2.6.-Evaluacion.md`, secciones '3.1.', '3.2.' y '3.3.'.
 }
 
-::CE 2.f – Criterio de selección::
-¿Qué factor resalta la conclusión para elegir un IDE?
+::CE 2.f – Cultura DevOps en evolución::
+Tu compañía adopta prácticas DevOps y busca IDEs que faciliten automatizaciones y pruebas. ¿Qué componente compartido respalda esta estrategia?
 {
-=Depende del lenguaje, tipo de proyecto y necesidades del equipo para maximizar productividad. #Correcto: Se subraya que la elección responde a contexto, lenguaje y tipo de desarrollo. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5. Conclusión'.
-~%-33.3333%Siempre se debe elegir IntelliJ IDEA por ser el más completo. #Incorrecto: No hay un IDE universal; depende del uso. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5. Conclusión'.
-~%-33.3333%Se recomienda alternar cada día de la semana entre los tres IDEs. #Incorrecto: No se sugiere rotar sin motivo; se elige según necesidades. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5. Conclusión'.
-~%-33.3333%Hay que usar exclusivamente IDEs de JetBrains sin valorar otras opciones. #Incorrecto: La conclusión evalúa varias herramientas, incluyendo VS Code. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5. Conclusión'.
+=Soporte para extensiones/plugins que añaden herramientas como linters, pruebas y analizadores. #Correcto: Se destaca que los IDEs admiten extensiones para ampliar flujos DevOps. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.4. Soporte para extensiones o plugins'.
+~%-33.3333%La ausencia de extensiones para mantener los proyectos bajo control. #Incorrecto: La unidad valora la extensibilidad. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.4.'.
+~%-33.3333%Un modo bloqueado que impide instalar nuevas herramientas. #Incorrecto: La capacidad de extensión es considerada una ventaja. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.4.'.
+~%-33.3333%El uso exclusivo de scripts personalizados fuera del IDE. #Incorrecto: Las extensiones permiten integrar estas herramientas en el IDE. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.4.'.
 }
 
-::CE 2.f – Integración de extensiones/plugins::
-¿Qué ventaja general ofrecen extensiones y plugins según la comparación?
+::CE 2.f – Decisión basada en lenguaje principal::
+Un líder técnico resume: “El IDE que elijamos debe depender del lenguaje y tipo de proyecto”. ¿Está alineado con la conclusión del tema?
 {
-=Permiten adaptar cada IDE a nuevos lenguajes, herramientas o flujos de trabajo específicos. #Correcto: Se destaca la extensibilidad como factor clave en los tres entornos. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.4. Soporte para extensiones o plugins'.
-~%-33.3333%Bloquean la ejecución del IDE hasta que finalice una actualización. #Incorrecto: La unidad no relaciona extensiones con bloqueos. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.4. Soporte para extensiones o plugins'.
-~%-33.3333%Impedir que el alumnado use frameworks externos. #Incorrecto: Las extensiones precisamente habilitan frameworks y herramientas adicionales. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.4. Soporte para extensiones o plugins'.
-~%-33.3333%Eliminar la necesidad de aprender comandos git o pytest. #Incorrecto: Aunque ayudan, no reemplazan el conocimiento de las herramientas. Consulta `EDES-U2.6.-Evaluacion.md`, sección '2.4. Soporte para extensiones o plugins'.
+=Sí, la unidad recalca que la elección del IDE depende del lenguaje, necesidades de calidad y tipo de proyecto. #Correcto: La conclusión afirma que la selección responde al contexto. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5. Conclusión'.
+~%-33.3333%No, se recomienda un único IDE para todo tipo de proyectos. #Incorrecto: Se insiste en elegir la herramienta según el caso. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5'.
+~%-33.3333%No, la conclusión alienta a rotar IDEs sin considerar el contexto. #Incorrecto: Precisamente se evalúan pros y contras por contexto. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5'.
+~%-33.3333%No, afirma que sólo se debe usar un editor plano. #Incorrecto: La conclusión compara IDEs, no sugiere abandonar herramientas. Consulta `EDES-U2.6.-Evaluacion.md`, sección '5'.

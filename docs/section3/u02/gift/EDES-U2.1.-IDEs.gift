@@ -2,92 +2,91 @@
 // Banco de preguntas sobre entornos de desarrollo integrado
 // CE 2.a - Características y componentes de los IDEs
 
-::CE 2.a – Ubicación de los IDE dentro de CASE::
-¿En qué categoría CASE se sitúan los IDEs según la unidad?
+::CE 2.a – Selección para microequipo mixto::
+Un equipo pequeño va a mantener un servicio con partes en Kotlin y Python y quiere minimizar los cambios de herramienta durante las incidencias nocturnas. ¿Qué deberían priorizar al escoger IDE según la unidad?
 {
-=Lower CASE, porque apoyan el desarrollo, pruebas y mantenimiento del software. #Correcto: Los IDEs se presentan como herramientas Lower CASE al asistir las fases finales del ciclo de vida. Consulta `EDES-U2.1.-IDEs.md`, sección '1. Introducción'.
-~%-33.3333%Upper CASE, porque ayudan en la planificación y el análisis de requisitos. #Incorrecto: Upper CASE se centra en las fases tempranas de planificación y análisis, no en el desarrollo asistido. Consulta `EDES-U2.1.-IDEs.md`, sección '1. Introducción'.
-~%-33.3333%Middle CASE, porque modelan diagramas y estructuras de datos. #Incorrecto: Middle CASE apoya análisis y diseño; los IDEs actúan después, durante la construcción. Consulta `EDES-U2.1.-IDEs.md`, sección '1. Introducción'.
-~%-33.3333%No pertenecen a ninguna categoría CASE ya que son herramientas independientes. #Incorrecto: La unidad los ubica explícitamente como herramientas Lower CASE dentro de CASE. Consulta `EDES-U2.1.-IDEs.md`, sección '1. Introducción'.
-}
-
-::CE 2.a – Funcionalidades básicas de un IDE::
-Estás valorando IDEs para un proyecto. ¿Qué conjunto describe mejor sus funcionalidades clave?
-{
-=Editor avanzado, integración con compiladores/intérpretes y herramientas de depuración. #Correcto: El bloque de componentes destaca editor, compilación y depuración integrados como núcleo del IDE. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
-~%-33.3333%Solo editor de texto y resaltado de sintaxis sin integración adicional. #Incorrecto: Un IDE va más allá del editor aislado e integra compiladores, depuradores y otras utilidades. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
-~%-33.3333%Únicamente motor de bases de datos y diseñador de interfaces. #Incorrecto: Aunque algunos IDEs incluyen estas capacidades, no son el núcleo descrito en la unidad. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
-~%-33.3333%Generador de ejecutables y gestor de incidencias sin editor. #Incorrecto: El IDE se apoya en un editor central y suma herramientas; un gestor de incidencias no forma parte esencial. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
-}
-
-::CE 2.a – Soporte multi-lenguaje::
-Tu equipo trabaja en Python, Kotlin y JavaScript. ¿Qué ventaja ofrece un IDE moderno?
-{
-=Soporte para múltiples lenguajes en la misma interfaz mediante extensiones o módulos. #Correcto: La unidad recalca que los IDEs modernos soportan varios lenguajes desde una única plataforma. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
-~%-33.3333%Cada lenguaje obliga a usar un IDE distinto sin posibilidad de combinar. #Incorrecto: Se destaca precisamente la capacidad multi-lenguaje de los IDEs actuales. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
-~%-33.3333%Solo permiten alternar lenguajes si se recompila el IDE desde cero. #Incorrecto: Basta con activar soporte o instalar extensiones; no se recompila el IDE. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
-~%-33.3333%El IDE impide trabajar con frameworks cuando hay más de un lenguaje. #Incorrecto: Se menciona la integración con frameworks incluso en entornos multi-lenguaje. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
+=Un IDE que integre editor avanzado, depuración y soporte multi-lenguaje/extensiones en una misma interfaz. #Correcto: La unidad resalta que los IDEs modernos reúnen editor, depurador y compatibilidad con varios lenguajes mediante extensiones, lo que evita saltar entre herramientas. Consulta `EDES-U2.1.-IDEs.md`, secciones '2. Los Entornos de Desarrollo Integrado (IDEs)' y '3. Componentes de un IDE'.
+~%-33.3333%Elegir un editor ligero sin autocompletado para forzar revisiones manuales de código. #Incorrecto: Quitar capacidades aumentaría el esfuerzo y contradice la idea de integrar funcionalidades. Consulta `EDES-U2.1.-IDEs.md`, secciones '2' y '3'.
+~%-33.3333%Trabajar con un IDE por lenguaje para separar responsabilidades. #Incorrecto: La ventaja descrita es usar herramientas que soporten múltiples lenguajes en la misma interfaz. Consulta `EDES-U2.1.-IDEs.md`, secciones '2' y '3'.
+~%-33.3333%Optar por terminal pura y scripts ad-hoc para evitar sobrecarga visual. #Incorrecto: Se promueven IDEs que concentran funcionalidades y reducen pasos manuales. Consulta `EDES-U2.1.-IDEs.md`, secciones '2' y '3'.
 }
 
 ::CE 2.a – Control de versiones integrado::
-Necesitas colaborar usando Git sin abandonar el IDE. ¿Qué opción describe la ayuda del IDE?
+Tu empresa rota personal junior por diferentes proyectos y quiere reducir errores al usar Git. ¿Qué componente de los IDEs puede ayudar según la teoría?
 {
-=Integra control de versiones para clonar, hacer commits y gestionar ramas desde la interfaz. #Correcto: La integración con control de versiones es uno de los componentes destacados. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
-~%-33.3333%Abre una terminal externa para que el alumnado ejecute Git manualmente. #Incorrecto: Aunque pueda abrir terminales, la característica es la integración directa en la interfaz. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
-~%-33.3333%Solo permite exportar parches sin sincronizar ramas desde el IDE. #Incorrecto: Se menciona gestión de repositorios completa, no solo exportar parches. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
-~%-33.3333%Impide el uso de Git porque entra en conflicto con el autocompletado. #Incorrecto: La unidad resalta la convivencia entre autocompletado y control de versiones. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+=Paneles integrados que permiten clonar, hacer commits y revisar cambios sin salir del IDE. #Correcto: El texto subraya la integración con control de versiones para gestionar Git desde el propio entorno. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Bloquear el acceso a Git para que todo se gestione por correo electrónico. #Incorrecto: La unidad defiende integrar Git, no restringirlo. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Crear un repositorio distinto por desarrollador para evitar conflictos. #Incorrecto: Esa medida no aprovecha la integración de versiones descrita. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Obligar a usar clientes de terceros aunque el IDE los duplique. #Incorrecto: La ventaja es centralizar operaciones en el IDE, no multiplicar herramientas. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
 }
 
-::CE 2.a – Frameworks y extensiones::
-Quieres añadir soporte para Django y React en tu IDE. ¿Qué estrategia propone la unidad?
+::CE 2.a – Respuesta ante bugs emergentes::
+Durante una guardia detectas un bug crítico y necesitas aislarlo con rapidez. ¿Qué característica del IDE facilita esa reacción según la unidad?
 {
-=Instalar extensiones o módulos que añaden frameworks y herramientas específicas. #Correcto: Se explica que los IDEs permiten extenderse con soporte para frameworks populares. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
-~%-33.3333%Modificar el código fuente del IDE para compilar las librerías manualmente. #Incorrecto: No se requiere tocar el código del IDE; basta con instalar extensiones. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
-~%-33.3333%Reescribir los frameworks para ajustarlos al lenguaje propio del IDE. #Incorrecto: Los frameworks existentes se integran mediante plugins, no reescribiéndolos. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
-~%-33.3333%Cambiar de IDE por cada framework porque no se pueden combinar. #Incorrecto: La extensibilidad evita cambiar de entorno para cada tecnología. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
+=La depuración integrada con breakpoints, ejecución paso a paso y observación de variables. #Correcto: El documento destaca estas funciones como parte esencial de los IDEs. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Compilar todo el proyecto a mano para generar logs temporales. #Incorrecto: La depuración integrada evita procesos manuales extensos. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Exportar el proyecto a un editor de texto plano para entender el código. #Incorrecto: El IDE ya ofrece herramientas diseñadas para diagnóstico. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Desactivar el resaltado de sintaxis para no distraerse con colores. #Incorrecto: El resaltado es una ventaja, no un obstáculo. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
 }
 
-::CE 2.a – Selección de IDE generalista::
-Necesitas un IDE versátil para proyectos de distinta naturaleza. ¿Qué alternativa sugiere la unidad?
+::CE 2.a – Encuentro con nuevo framework::
+Te asignan una funcionalidad que requiere un framework desconocido por el equipo. ¿Cómo aprovecha un IDE esta situación según la teoría?
 {
-=Visual Studio Code o IntelliJ IDEA como IDEs de propósito general extensibles. #Correcto: Ambos se listan dentro de los IDEs de propósito general con amplio soporte. Consulta `EDES-U2.1.-IDEs.md`, sección '4. Tipos de IDEs'.
-~%-33.3333%PyCharm, porque solo funciona con Python y evita distracciones. #Incorrecto: PyCharm se presenta como IDE específico de lenguaje, no generalista. Consulta `EDES-U2.1.-IDEs.md`, sección '4. Tipos de IDEs'.
-~%-33.3333%Xcode, dado que es el único que soporta todos los lenguajes. #Incorrecto: Xcode es específico para ecosistema Apple, no multipropósito. Consulta `EDES-U2.1.-IDEs.md`, sección '4. Tipos de IDEs'.
-~%-33.3333%Fleet, porque únicamente permite proyectos colaborativos en tiempo real. #Incorrecto: Fleet es una opción moderna, pero se presenta como alternativa ligera, no exclusiva de colaboración. Consulta `EDES-U2.1.-IDEs.md`, sección '4. Tipos de IDEs'.
+=Permite añadir soporte mediante extensiones o módulos que incorporan plantillas y ayudas específicas. #Correcto: Se remarca la extensibilidad para frameworks como Spring o Django. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1. ¿Qué es un IDE?' y '3. Componentes de un IDE'.
+~%-33.3333%Exige reescribir el framework para adaptarlo al lenguaje del IDE. #Incorrecto: El IDE se adapta al framework mediante extensiones, no al revés. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1' y '3'.
+~%-33.3333%Impide trabajar con frameworks fuera de la lista soportada de fábrica. #Incorrecto: Precisamente se destaca la instalación de soporte adicional. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1' y '3'.
+~%-33.3333%Recomienda abandonar el IDE y trabajar solo con scripts CLI. #Incorrecto: El enfoque es enriquecer el IDE, no prescindir de él. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1' y '3'.
 }
 
-::CE 2.a – Caso práctico de integración de pruebas::
-Quieres ejecutar tests de pytest sin salir del IDE. ¿Qué apoyo ofrecen los IDEs?
+::CE 2.a – Formación de personal nuevo::
+Una academia quiere que su alumnado experimente con distintos lenguajes usando un único entorno. ¿Qué tipo de IDE cita la unidad como adecuado?
 {
-=Integración con herramientas de pruebas como pytest o JUnit desde el propio entorno. #Correcto: Se describe la capacidad de integrar frameworks de pruebas directamente. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
-~%-33.3333%Solicitar a otra persona que ejecute los tests en una máquina externa. #Incorrecto: El objetivo es automatizar pruebas dentro del propio IDE. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
-~%-33.3333%Ejecutar pruebas manualmente en consola porque el IDE no las reconoce. #Incorrecto: Se remarca que los IDEs integran esas herramientas para evitar ejecuciones manuales constantes. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
-~%-33.3333%Desactivar el autocompletado para liberar recursos antes de probar. #Incorrecto: No es necesario desactivar funcionalidades; las pruebas corren integradas. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+=IDEs de propósito general como Visual Studio Code o IntelliJ IDEA que soportan múltiples tecnologías. #Correcto: Ambos se mencionan como herramientas versátiles en la clasificación de IDEs. Consulta `EDES-U2.1.-IDEs.md`, sección '4.1. IDEs de propósito general'.
+~%-33.3333%IDEs móviles como Android Studio para cualquier lenguaje. #Incorrecto: Los IDEs móviles se reservan para Android o iOS. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4. IDEs móviles'.
+~%-33.3333%IDEs específicos como PyCharm para cubrir todos los lenguajes. #Incorrecto: PyCharm se describe como especializado en Python. Consulta `EDES-U2.1.-IDEs.md`, sección '4.2. IDEs específicos de lenguaje'.
+~%-33.3333%Editores sin extensiones, pues así se obliga a aprender herramientas externas. #Incorrecto: El objetivo es exponer al alumnado a entornos integrados. Consulta `EDES-U2.1.-IDEs.md`, sección '4. Tipos de IDEs'.
 }
 
-::CE 2.a – Comparativa de IDEs móviles::
-Debes programar una app de iOS y otra de Android. ¿Qué combinación sugiere la teoría?
+::CE 2.a – Desarrollo de interfaces gráficas::
+Una compañera necesita construir rápidamente prototipos con interfaz gráfica. ¿Qué aporta un IDE en este caso según la unidad?
 {
-=Xcode para iOS y Android Studio para Android como IDEs móviles especializados. #Correcto: Ambos se mencionan como IDEs móviles principales de sus plataformas. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4. IDEs móviles'.
-~%-33.3333%Sublime Text para ambas plataformas porque es más ligero. #Incorrecto: Sublime se cita como editor web, no pensado para flujos móviles completos. Consulta `EDES-U2.1.-IDEs.md`, sección '4.3. IDEs para desarrollo web'.
-~%-33.3333%Fleet para iOS y Visual Studio Code para Android exclusivamente. #Incorrecto: La unidad no los recomienda como IDE móvil principal para iOS/Android. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4. IDEs móviles'.
-~%-33.3333%PyCharm porque incluye simuladores móviles avanzados. #Incorrecto: PyCharm se orienta al ecosistema Python, no a desarrollo móvil nativo. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4. IDEs móviles'.
+=Herramientas visuales que permiten diseñar interfaces sin salir del editor. #Correcto: Se menciona la creación de interfaces gráficas como función de algunos IDEs. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1. ¿Qué es un IDE?'.
+~%-33.3333%Un bloqueo que evita utilizar librerías gráficas para proteger el código base. #Incorrecto: Los IDEs añaden capacidades, no limitaciones, para desarrollar interfaces. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1'.
+~%-33.3333%Un modo de solo texto que deshabilita cualquier vista gráfica. #Incorrecto: El objetivo es ofrecer herramientas visuales, no eliminarlas. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1'.
+~%-33.3333%La obligación de exportar el proyecto a un software de diseño externo. #Incorrecto: El IDE busca integrar, no delegar, estas tareas. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1'.
 }
 
-::CE 2.a – Importación y exportación de proyectos::
-Necesitas compartir un proyecto con otra persona. ¿Qué facilita el IDE según la unidad?
+::CE 2.a – Gestión de dependencias en proyectos compartidos::
+Al importar un proyecto existente, la mitad del equipo tarda horas en configurarlo. ¿Qué funcionalidad del IDE reduce ese tiempo?
 {
-=Funciones para importar y exportar proyectos, facilitando la colaboración entre entornos. #Correcto: Se incluye como característica clave para trabajar en equipo y mover proyectos. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
-~%-33.3333%Solo admite proyectos creados en la misma máquina y versión del IDE. #Incorrecto: Precisamente se enfatiza la capacidad de intercambio de proyectos. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
-~%-33.3333%Exporta únicamente archivos binarios sin preservar la estructura. #Incorrecto: Los IDEs mantienen estructura y configuración al exportar o importar. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
-~%-33.3333%Impide compartir proyectos para evitar conflictos de configuración. #Incorrecto: El objetivo es justamente habilitar la colaboración y el traslado. Consulta `EDES-U2.1.-IDEs.md`, sección '2. Los Entornos de Desarrollo Integrado (IDEs)'.
+=La capacidad de importar/exportar proyectos con configuraciones y dependencias definidas. #Correcto: El texto remarca que los IDEs facilitan mover proyectos completos entre entornos. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1. ¿Qué es un IDE?'.
+~%-33.3333%Obligar a recrear el proyecto desde cero para detectar problemas. #Incorrecto: El IDE intenta evitar trabajo duplicado mediante importación directa. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1'.
+~%-33.3333%Eliminar cualquier configuración previa para comenzar en blanco. #Incorrecto: Se aprovechan configuraciones existentes al importar. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1'.
+~%-33.3333%Convertir automáticamente todos los scripts en código binario ineditable. #Incorrecto: Importar no transforma scripts en binarios; mantiene el proyecto accesible. Consulta `EDES-U2.1.-IDEs.md`, sección '2.1'.
 }
 
-::CE 2.a – Ventaja de la extensibilidad::
-Tu proyecto requiere soporte para Docker y análisis con ESLint. ¿Qué acción recomienda la unidad?
+::CE 2.a – Automatización de calidad::
+El director técnico pide informes rápidos de pruebas unitarias tras cada commit. ¿Qué destaca la unidad que ofrecen los IDEs?
 {
-=Instalar extensiones específicas para Docker y ESLint adaptando el IDE a tus necesidades. #Correcto: Se destaca la extensibilidad para añadir soporte como Docker o ESLint con pocos clics. Consulta `EDES-U2.1.-IDEs.md`, secciones '2. Los Entornos de Desarrollo Integrado (IDEs)' y '3. Componentes de un IDE'.
-~%-33.3333%Buscar otro IDE que traiga esas herramientas de serie sin posibilidad de añadirlas. #Incorrecto: La extensibilidad permite sumar funcionalidades sin cambiar de IDE. Consulta `EDES-U2.1.-IDEs.md`, secciones '2. Los Entornos de Desarrollo Integrado (IDEs)' y '3. Componentes de un IDE'.
-~%-33.3333%Renunciar a Docker porque los IDEs no gestionan contenedores. #Incorrecto: El documento menciona integrar extensiones para nuevas tecnologías, incluyendo Docker. Consulta `EDES-U2.1.-IDEs.md`, secciones '2. Los Entornos de Desarrollo Integrado (IDEs)' y '3. Componentes de un IDE'.
-~%-33.3333%Configurar ESLint manualmente ejecutando scripts externos sin integración. #Incorrecto: La idea es aprovechar extensiones que integran linters en el IDE. Consulta `EDES-U2.1.-IDEs.md`, secciones '2. Los Entornos de Desarrollo Integrado (IDEs)' y '3. Componentes de un IDE'.
+=Integración con herramientas de pruebas automatizadas como JUnit o pytest desde la interfaz. #Correcto: Se citan ejemplos de integración de frameworks de prueba en el IDE. Consulta `EDES-U2.1.-IDEs.md`, sección '3. Componentes de un IDE'.
+~%-33.3333%Deshabilitar el soporte de testing para obligar al uso de scripts externos. #Incorrecto: La idea es facilitar las pruebas desde el IDE, no impedirlas. Consulta `EDES-U2.1.-IDEs.md`, sección '3'.
+~%-33.3333%Registrar commits sin ejecutar tests para ahorrar tiempo. #Incorrecto: Los IDEs pueden automatizar tests, no omitirlos. Consulta `EDES-U2.1.-IDEs.md`, sección '3'.
+~%-33.3333%Generar pruebas aleatorias sin relación con el código. #Incorrecto: Los IDEs integran frameworks que ejecutan pruebas definidas, no aleatorias. Consulta `EDES-U2.1.-IDEs.md`, sección '3'.
 }
+
+::CE 2.a – Necesidad de extensibilidad::
+Una startup cambia de stack cada trimestre. ¿Cómo ayuda la extensibilidad de un IDE según la unidad?
+{
+=Permite añadir soporte incremental a nuevos lenguajes o herramientas instalando extensiones cuando se necesitan. #Correcto: La extensibilidad es señalada como clave para adaptar el IDE a nuevas tecnologías. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1' y '3'.
+~%-33.3333%Requiere recompilar el IDE por cada lenguaje adicional. #Incorrecto: Se instalan extensiones sin recompilar el IDE. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1' y '3'.
+~%-33.3333%Impide añadir más de un lenguaje por política de estabilidad. #Incorrecto: Justo se resalta la compatibilidad multi-lenguaje. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1' y '3'.
+~%-33.3333%Solo permite extensiones oficiales del fabricante, restringiendo a un stack fijo. #Incorrecto: Se mencionan extensiones de terceros para frameworks variados. Consulta `EDES-U2.1.-IDEs.md`, secciones '2.1' y '3'.
+}
+
+::CE 2.a – Caso de IDE específico::
+Un laboratorio desarrolla únicamente para iOS y no prevé ampliar el stack. ¿Qué opción encaja mejor con la clasificación del texto?
+{
+=Elegir un IDE específico de la plataforma como Xcode para aprovechar herramientas nativas. #Correcto: Xcode se menciona como IDE especializado para iOS/macOS. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4. IDEs móviles'.
+~%-33.3333%Usar un IDE generalista para no depender de herramientas oficiales. #Incorrecto: Cuando la plataforma está clara, el texto sugiere IDEs específicos. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4'.
+~%-33.3333%Instalar un editor minimalista y escribir todo en ensamblador. #Incorrecto: No se propone abandonar los IDEs cuando se pueden aprovechar herramientas dedicadas. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4'.
+~%-33.3333%Migrar los proyectos a Android Studio para beneficiarse del ecosistema Android. #Incorrecto: Android Studio está orientado a Android, no a iOS. Consulta `EDES-U2.1.-IDEs.md`, sección '4.4'.

@@ -1,12 +1,12 @@
 ---
-title: "UD 3 - P1: Git/Github básico"
+title: "UD 4 - P1: Git/Github básico"
 description: Git/Github
 summary: Git/Github
 authors:
     - Eduardo Fdez
 date: 2022-10-23
 icon:   
-permalink: /edes/unidad3/p3.1
+permalink: /edes/unidad4/p4.1
 categories:
     - EDES
 tags:
@@ -14,7 +14,7 @@ tags:
     - git 
     - github
 ---
-## Relación 3.1.1: Repositorios local y remoto, directorio de trabajo... 
+## Relación 4.1.1: Repositorios local y remoto, directorio de trabajo... 
 
 ### Objetivos
  * Crear repositorios en Github

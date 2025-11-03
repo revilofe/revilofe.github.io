@@ -1,18 +1,18 @@
 ---
-title: "UD 3 - Herramientas Git/Github"
-description: Entornos de desarrollo integrado
-summary: Entornos de desarrollo integrado
+title: "UD 5 - UML: Diagramas estáticos"
+description: UML: Diagramas estáticos
+summary: UML: Diagramas estáticos
 authors:
     - Eduardo Fdez
 date: 2022-10-23
 icon:   
-permalink: /edes/unidad1
+permalink: /edes/unidad5
 categories:
     - EDES
 tags:
     - EDES
-    - Tools
-    - CASE
+    - UML
+
 
 # Relacionado con la tabla de contenidos
 toc: true

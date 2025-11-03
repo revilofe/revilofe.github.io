@@ -1,5 +1,5 @@
 ---
-title: "UD 3 - P1: Git/Github básico"
+title: "UD 5 - P1: Git/Github básico"
 description: Git/Github
 summary: Git/Github
 authors:
@@ -14,7 +14,7 @@ tags:
     - git 
     - github
 ---
-## Relación 3.1.1: Repositorios local y remoto, directorio de trabajo... 
+## Relación 5.1.1: Repositorios local y remoto, directorio de trabajo... 
 
 ### Objetivos
  * Crear repositorios en Github

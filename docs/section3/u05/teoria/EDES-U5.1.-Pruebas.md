@@ -1,5 +1,5 @@
 ---
-title: "UD 3 - 3.1 Pruebas"
+title: "UD 5 - 5.1 Pruebas"
 description: Pruebas
 summary: Pruebas
 authors:
@@ -15,7 +15,7 @@ tags:
   - test
   - Pruebas
 ---
-## 3.1. Pruebas
+## 5.1. Pruebas
 
 Se pretente estudiar algunas técnicas de verificación y pruebas de programas, se comenzará por los principios básicos, ciclo de vida y niveles y tipos de pruebas, posteriormente profundizaremos en algunas técnicas de prueba más usadas para terminar comentado algunas de las herramientas usadas para las pruebas.
 

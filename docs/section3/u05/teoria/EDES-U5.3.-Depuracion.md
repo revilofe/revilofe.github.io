@@ -1,5 +1,5 @@
 ---
-title: "UD 3 - 3.3 Depuración"
+title: "UD 5 - 5.3 Depuración"
 description: Depuración
 summary: Depuración
 authors:
@@ -14,7 +14,7 @@ tags:
   - Software
   - Debug
 ---
-## 3.3. Depuración
+## 5.3. Depuración
 
 ### 1. Introducción a la Depuración
 

@@ -1,5 +1,5 @@
 ---
-title: "UD 3 - Diseño y Realización de Pruebas"
+title: "UD 5 - Diseño y Realización de Pruebas"
 description: Verifica el funcionamiento de programas diseñando y realizando pruebas 
 summary: Verifica el funcionamiento de programas diseñando y realizando pruebas 
 authors:
@@ -56,7 +56,7 @@ La unidad pertenece al bloque 2 Pruebas y Calidad.
 
 * UD3: Diseño y Realización de Pruebas
 
-En la unidad 3, veremos:
+En esta unidad veremos:
 
 * Tipos de pruebas, funcionales, estructurales, regresión.
 * Procedimientos y casos de prueba.

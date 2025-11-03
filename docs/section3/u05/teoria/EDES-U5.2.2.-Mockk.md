@@ -1,5 +1,5 @@
 ---
-title: "UD 3 - 3.4 Mockk"
+title: "UD 5 - 5.2.2 Mockk"
 description: Mockk
 summary: Mockk
 authors:
@@ -15,7 +15,7 @@ tags:
   - Mock
 ---
 
-## 3.2.2. MockK: una biblioteca burlona para Kotlin
+## 5.2.2. MockK: una biblioteca burlona para Kotlin
 
 ### 1. Información general
 

@@ -877,34 +877,6 @@
          <lastmod>2025-11-03</lastmod>
     </url>
     <url>
-         <loc>https://revilofe.github.io/section3/u03/practica/EDES-U3.-Practica001/</loc>
-         <lastmod>2025-11-03</lastmod>
-    </url>
-    <url>
-         <loc>https://revilofe.github.io/section3/u03/teoria/EDES-U3.1.-Pruebas/</loc>
-         <lastmod>2025-11-03</lastmod>
-    </url>
-    <url>
-         <loc>https://revilofe.github.io/section3/u03/teoria/EDES-U3.2.-TestUnidadYTDD/</loc>
-         <lastmod>2025-11-03</lastmod>
-    </url>
-    <url>
-         <loc>https://revilofe.github.io/section3/u03/teoria/EDES-U3.2.1.-Kotest/</loc>
-         <lastmod>2025-11-03</lastmod>
-    </url>
-    <url>
-         <loc>https://revilofe.github.io/section3/u03/teoria/EDES-U3.2.2.-Mockk/</loc>
-         <lastmod>2025-11-03</lastmod>
-    </url>
-    <url>
-         <loc>https://revilofe.github.io/section3/u03/teoria/EDES-U3.3.-Depuracion/</loc>
-         <lastmod>2025-11-03</lastmod>
-    </url>
-    <url>
-         <loc>https://revilofe.github.io/section3/u03/teoria/EDES-U3.3.1.-LoggingCode/</loc>
-         <lastmod>2025-11-03</lastmod>
-    </url>
-    <url>
          <loc>https://revilofe.github.io/section3/u04/</loc>
          <lastmod>2025-11-03</lastmod>
     </url>
@@ -953,11 +925,43 @@
          <lastmod>2025-11-03</lastmod>
     </url>
     <url>
-         <loc>https://revilofe.github.io/section3/u05/teoria/EDES-U5.1.-UML/</loc>
+         <loc>https://revilofe.github.io/section3/u05/teoria/EDES-U5.1.-Pruebas/</loc>
          <lastmod>2025-11-03</lastmod>
     </url>
     <url>
-         <loc>https://revilofe.github.io/section3/u05/teoria/EDES-U5.1.-UML_DiagramaClases/</loc>
+         <loc>https://revilofe.github.io/section3/u05/teoria/EDES-U5.2.-TestUnidadYTDD/</loc>
+         <lastmod>2025-11-03</lastmod>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u05/teoria/EDES-U5.2.1.-Kotest/</loc>
+         <lastmod>2025-11-03</lastmod>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u05/teoria/EDES-U5.2.2.-Mockk/</loc>
+         <lastmod>2025-11-03</lastmod>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u05/teoria/EDES-U5.3.-Depuracion/</loc>
+         <lastmod>2025-11-03</lastmod>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u05/teoria/EDES-U5.3.1.-LoggingCode/</loc>
+         <lastmod>2025-11-03</lastmod>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u05.back/</loc>
+         <lastmod>2025-11-03</lastmod>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u05.back/practica/EDES-U5.-Practica001/</loc>
+         <lastmod>2025-11-03</lastmod>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u05.back/teoria/EDES-U5.1.-UML/</loc>
+         <lastmod>2025-11-03</lastmod>
+    </url>
+    <url>
+         <loc>https://revilofe.github.io/section3/u05.back/teoria/EDES-U5.1.-UML_DiagramaClases/</loc>
          <lastmod>2025-11-03</lastmod>
     </url>
     <url>

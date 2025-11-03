@@ -42,32 +42,33 @@ En los siguientes enlaces se encuentran los contenidos, resultados de aprendizaj
 ### Relación de unidades y resultados de aprendizaje
 
 | Unidad | UD 1 | UD 2 | UD 3 | UD 4 | UD 5 | UD 6 |
-| ------ | ---- | ---- | ---- | ---- | ---- | ---- |
+| ------ | ---- | ---- |------|------|------|------|
 | RA 1   | X    |      |      |      |      |      |
 | RA 2   |      | X    |      |      |      |      |
-| RA 3   |      |      |  X   |      |      |      |
-| RA 4   |      |      |      |  X   |      |      |
-| RA 5   |      |      |      |      |  X   |      |
-| RA 6   |      |      |      |      |      | X    |
+| RA 3   |      |      |      |      |      | X    |
+| RA 4   |      |      |      |      | X    |      |
+| RA 5   |      |      | X    |      |      |      |
+| RA 6   |      |      |      | X    |      |      |
 
 ### Relación de unidades y fechas
 
 El curso tiene un total de 24 semanas (720 horas). La relación propuesta entre unidades y semanas es la siguiente:
 
 | Unidad | Semanas        |
-| ------ | -------------- |
-| 1      | Semana 1 - 2   |
-| 2      | Semana 2 - 7   |
-| 3      | Semana  -   |
-| 4      | Semana  -  |
-| 5      | Semana  -  |
-| 6      | Semana  -  |
+| ------ |----------------|
+| 1      | Semana 1 - 5   |
+| 2      | Semana 6 - 8   |
+| 3      | Semana 9 - 14  |
+| 4      | Semana 14 - 18 |
+| 5      | Semana 18 - 26 |
+| 6      | Semana 26 - 30 |
 
 ## Materiales
 
 ### Fuentes
 - [Rafael del Rio](https://rafaeldelrio.github.io/): Utilizado para la estructura de la página de presentación del módulo.
-- [José Antonio Muñoz Jiménez](https://github.com/jamj2000): Utilizado en parte del contenido del módulo.
+- [José Antonio Muñoz Jiménez](https://github.com/jamj2000): Consultado y utilizado en algunos puntos del módulo.
+- [Jose Luis González](https://github.com/joseluisgs): Consultado y utilizado en algunos puntos del módulo.
 
 ### Bibliografía
 
@@ -91,14 +92,15 @@ El curso tiene un total de 24 semanas (720 horas). La relación propuesta entre 
 * [Python Documentation Generator, Sphinx](https://www.sphinx-doc.org/en/master/)
 * [UML, guía digital](https://www.ionos)es/digitalguide/paginas-web/desarrollo-web/uml-lenguaje-unificado-de-modelado-orientado-a-objetos/)
 * [eduScurm, ¡Colaboración que te da alas!](https://www.eduscrum.nl/es/)
+* [Creación de diagramas con PlantUML](https://plantuml.com/)
 
 ### Recursos
 * Plataforma de e-learning: Moodle,
 * Paquete ofimático: LibreOffice
-* Sistema operativo: Windows 10 y Linux (Ubuntu u otra distribución similar)
+* Sistema operativo: Windows 10 o Linux (Ubuntu u otra distribución similar)
 * Entornos integrados de desarrollo y Editores: Visual Studio Code, IntelliJ, PyCharm, Sublime.
 * Sistema de control de versiones: git, github
-* Programas para el diseño de diagramas UML (DIA, UMLet, online LucidChart,…)
+* Programas para el diseño de diagramas UML (Recomendado: plantUml, DIA, UMLet, online LucidChart)
 
 
 ## Contenido

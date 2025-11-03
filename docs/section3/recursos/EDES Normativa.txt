@@ -1,0 +1,264 @@
+A continuación se da información referente al titulo de Desarrollo de apicaciones Web como contexto para entrar en profundidad en el modulo de ENTORNOS DE DESARROLLO, uno de los módulos que se trata en este titulo y concretamente en el que estoy interesado:
+
+
+Perfil profesional del título: Desarrollo de Aplicaciones Web.
+
+El perfil profesional del título de Técnico Superior en Desarrollo de Aplicaciones Web queda determinado por su competencia general, sus competencias profesionales, personales y sociales, y por la relación de cualificaciones y, en su caso, unidades de competencia del Catálogo Nacional de Cualificaciones Profesionales incluidas en el título
+
+
+Competencia general.
+La competencia general de este título consiste en desarrollar, implantar, y mantener aplicaciones web, con independencia del modelo empleado y utilizando tecnologías específicas, garantizando el acceso a los datos de forma segura y cumpliendo los criterios de accesibilidad, usabilidad y calidad exigidas en los estándares establecidos.
+
+
+Las competencias profesionales, personales y sociales de este título son las que se relacionan a continuación:
+
+a) Configurar y explotar sistemas informáticos, adaptando la configuración lógica del sistema según las necesidades de uso y los criterios establecidos.
+b) Aplicar técnicas y procedimientos relacionados con la seguridad en sistemas, servicios y aplicaciones, cumpliendo el plan de seguridad.
+c) Gestionar servidores en distintos ámbitos de implantación adaptando su configuración en cada caso para permitir el despliegue de aplicaciones web.
+d) Gestionar bases de datos, interpretando su diseño lógico y verificando integridad, consistencia, seguridad y accesibilidad de los datos.
+e) Desarrollar aplicaciones web con acceso a bases de datos utilizando lenguajes, objetos de acceso y herramientas de mapeo adecuados a las especificaciones.
+f) Integrar contenidos en la lógica de una aplicación web, desarrollando componentes de acceso a datos adecuados a las especificaciones.
+g) Desarrollar interfaces en aplicaciones web de acuerdo con un manual de estilo, utilizando lenguajes de marcas y estándares web.
+h) Desarrollar componentes multimedia para su integración en aplicaciones web, empleando herramientas específicas y siguiendo las especificaciones establecidas.
+i) Integrar componentes multimedia en la interface de una aplicación web, realizando el análisis de interactividad, accesibilidad y usabilidad de la aplicación.
+j) Desarrollar e integrar componentes software en el entorno del servidor web, empleando herramientas y lenguajes específicos, para cumplir las especificaciones de la aplicación.
+k) Desarrollar servicios para integrar sus funciones en otras aplicaciones web, asegurando su funcionalidad.
+l) Integrar servicios y contenidos distribuidos en aplicaciones web, asegurando su funcionalidad.
+m) Completar planes de pruebas verificando el funcionamiento de los componentes software desarrollados, según las especificaciones.
+n) Elaborar y mantener la documentación de los procesos de desarrollo, utilizando herramientas de generación de documentación y control de versiones.
+ñ) Desplegar y distribuir aplicaciones web en distintos ámbitos de implantación, verificando su comportamiento y realizando modificaciones.
+o) Gestionar y/o realizar el mantenimiento de los recursos de su área en función de las cargas de trabajo y el plan de mantenimiento.
+p) Adaptarse a las nuevas situaciones laborales, manteniendo actualizados los conocimientos científicos, técnicos y tecnológicos relativos a su entorno profesional, gestionando su formación y los recursos existentes en el aprendizaje a lo largo de la vida y utilizando las tecnologías de la información y la comunicación.
+q) Resolver situaciones, problemas o contingencias con iniciativa y autonomía en el ámbito de su competencia, con creatividad, innovación y espíritu de mejora en el trabajo personal y en el de los miembros del equipo. 
+r) Organizar y coordinar equipos de trabajo, supervisando el desarrollo del mismo, con responsabilidad, manteniendo relaciones fluidas y asumiendo el liderazgo, así como, aportando soluciones a los conflictos grupales que se presentan.
+s) Comunicarse con sus iguales, superiores, clientes y personas bajo su responsabilidad utilizando vías eficaces de comunicación, transmitiendo la información o conocimientos adecuados, y respetando la autonomía y competencia de las personas que intervienen en el ámbito de su trabajo.
+t) Generar entornos seguros en el desarrollo de su trabajo y el de su equipo, supervisando y aplicando los procedimientos de prevención de riesgos laborales y ambientales de acuerdo con lo establecido por la normativa y los objetivos de la empresa.
+u) Supervisar y aplicar procedimientos de gestión de calidad, de accesibilidad universal y de diseño para todos, en las actividades profesionales incluidas en los procesos de producción o prestación de servicios.
+v) Realizar la gestión básica para la creación y funcionamiento de una pequeña empresa y tener iniciativa en su actividad profesional con sentido de la responsabilidad social.
+w) Ejercer sus derechos y cumplir con las obligaciones derivadas de su actividad profesional, de acuerdo con lo establecido en la legislación vigente, participando activamente en la vida económica, social y cultural.»
+
+
+Relación de cualificaciones y unidades de competencia del Catálogo Nacional de Cualificaciones Profesionales incluidas en el título
+
+1. Cualificación profesional completa:
+Desarrollo de aplicaciones con tecnologías Web IFC154_3 (Real Decreto 1087/2005, de 16 de septiembre, actualizada en Orden PRE/1636/2015 de 23 de julio), que comprende las siguientes unidades de competencia:
+UC0491_3 Desarrollar elementos software en el entorno cliente.
+UC0492_3 Desarrollar elementos software en el entorno servidor.
+UC0493_3 Implementar, verificar y documentar aplicaciones web en entornos internet, intranet y extranet.
+
+2. Cualificaciones profesionales incompletas:
+
+a) Programación en lenguajes estructurados de aplicaciones de gestión
+IFC155_3 (Real Decreto 1087/2005, de 16 de septiembre, actualizada por Orden PRE/1636/2015, de 23 de julio, actualizada por Orden PCI/479/2019 de 12 de abril, actualizada por Real Decreto 150/2022, de 22 de febrero):
+UC0223_3 Configurar y explotar sistemas informáticos.
+UC0226_3 Programar bases de datos relacionales.
+
+b) Programación con lenguajes orientados a objetos y bases de datos
+relacionales IFC080_3 (Real Decreto 295/2004, de 20 de febrero, modificada parcialmente por Orden PRE/1636/2015 de 23 de julio, modificada parcialmente por orden PCI/479/2019 de 12 de abril, actualizada por Orden EFP/1208/2021, de 2 de noviembre, actualizada por Real Decreto 150/2022, de 22 de febrero):
+UC0223_3 Configurar y explotar sistemas informáticos.
+UC0226_3 Programar bases de datos relacionales.»
+
+
+
+Entorno profesional.
+
+1. Las personas con este perfil profesional ejercen su actividad en empresas o entidades públicas o privadas tanto por cuenta ajena como propia, desempeñando su trabajo en el área de desarrollo de aplicaciones informáticas relacionadas con entornos Web (intranet, extranet e internet).
+
+Las ocupaciones y puestos de trabajo más relevantes son:
+- Programador Web.
+- Programador Multimedia.
+- Desarrollador de aplicaciones en entornos Web.
+
+Prospectiva del título en el sector o sectores.
+
+Las administraciones educativas tendrán en cuenta, al desarrollar el currículo correspondiente, las siguientes consideraciones:
+
+Prospectiva del título en el sector o sectores.
+a) Teniendo en cuenta que nos dirigimos hacia una sociedad del conocimiento y en la que la voluntad de aplicarlo se dirige a generar más conocimiento, obliga a realizar un elevado esfuerzo de sistematización y organización de la información, y poder compartir esta de forma adecuada.
+b) En esta línea, es fundamental el desarrollo de plataformas multidisciplinares y la definición del modelo para compartir y organizar de forma segura la información contenida en las mismas.
+c) La formación adquiere cada vez más importancia en sociedades altamente desarrolladas, y los rápidos avances y cambios tecnológicos del sector hacen que se demanden profesionales con una actitud favorable hacia la autoformación.
+d) El perfil profesional de este título evoluciona hacia una mayor integración de los sistemas de gestión e intercambio de información basados en tecnologías web, siendo preciso que cada vez sean más estables y seguros. Para este perfil adquiere especial importancia asegurar la integridad, consistencia y accesibilidad de los datos.
+e) Asegurar la funcionalidad y rentabilidad del sistema informático, sirviendo de apoyo al resto de departamentos de una organización, es un aspecto cada vez más relevante para este perfil profesional.
+f) Aspectos tales como el intercambio masivo de información, «mashup» de datos, la incorporación de inteligencia a los datos o construcción de nuevos servicios, entre otros; están cambiando la filosofía del sector a una orientación al usuario y no hacia contenidos.
+g) Las tecnologías implicadas en el desarrollo y la rápida evolución de estas apuntan a profesionales donde la constante actualización es una de las características fundamentales de este perfil.
+h) Las tareas de tratamiento y transferencia de datos e información deberán realizarse conforme a la normativa legal que regula tales aspectos.
+i) La tele-operación, asistencia técnica remota, asistencia «on line» y los telecentros se configuran como un elemento imprescindible en la respuesta a la demanda de asistencia técnica.
+j) El empleo comercial de aplicaciones web es actualmente una realidad imparable, lo que hace aumentar rápidamente el número de transacciones realizadas por este medio. Esto origina un mayor volumen en la información transferida, y obliga al aseguramiento de los sistemas, de las transacciones a la custodia de datos.
+
+
+Objetivos generales.
+
+Los objetivos generales de este ciclo formativo son los siguientes:
+
+a) Ajustar la configuración lógica analizando las necesidades y criterios establecidos para configurar y explotar sistemas informáticos.
+b) Identificar las necesidades de seguridad verificando el plan preestablecido para aplicar técnicas y procedimientos relacionados.
+c) Instalar módulos analizando su estructura y funcionalidad para gestionar servidores en distintos ámbitos de implantación.
+d) Ajustar parámetros analizando la configuración para gestionar servidores en distintos ámbitos de implantación.
+e) Interpretar el diseño lógico, verificando los parámetros establecidos para gestionar bases de datos.
+f) Seleccionar lenguajes, objetos y herramientas, interpretando las especificaciones para desarrollar aplicaciones web con acceso a bases de datos.
+g) Utilizar lenguajes, objetos y herramientas, interpretando las especificaciones para desarrollar aplicaciones web con acceso a bases de datos.
+h) Generar componentes de acceso a datos, cumpliendo las especificaciones, para integrar contenidos en la lógica de una aplicación web.
+i) Utilizar lenguajes de marcas y estándares web, asumiendo el manual de estilo, para desarrollar interfaces en aplicaciones web.
+j) Emplear herramientas y lenguajes específicos, siguiendo las especificaciones, para desarrollar componentes multimedia.
+k) Evaluar la interactividad, accesibilidad y usabilidad de un interfaz, verificando los criterios preestablecidos, para Integrar componentes multimedia en el interfaz de una aplicación.
+l) Utilizar herramientas y lenguajes específicos, cumpliendo las especificaciones, para desarrollar e integrar componentes software en el entorno del servidor web.
+m) Emplear herramientas específicas, integrando la funcionalidad entre aplicaciones, para desarrollar servicios empleables en aplicaciones web.
+n) Evaluar servicios distribuidos ya desarrollados, verificando sus prestaciones y funcionalidad, para integrar servicios distribuidos en una aplicación web.
+ñ) Verificar los componentes de software desarrollados, analizando las especificaciones, para completar el plan de pruebas.
+o) Utilizar herramientas específicas, cumpliendo los estándares establecidos, para elaborar y mantener la documentación de los procesos.
+p) Establecer procedimientos, verificando su funcionalidad, para desplegar y distribuir aplicaciones.
+q) Programar y realizar actividades para gestionar el mantenimiento de los recursos informáticos.
+r) Analizar y utilizar los recursos y oportunidades de aprendizaje relacionadas con la evolución científica, tecnológica y organizativa del sector y las tecnologías de la información y la comunicación, para mantener el espíritu de actualización y adaptarse a nuevas situaciones laborales y personales.
+s) Desarrollar la creatividad y el espíritu de innovación para responder a los retos que se presentan en los procesos y organización de trabajo y de la vida personal.
+t) Tomar decisiones de forma fundamentada analizando las variables implicadas, integrando saberes de distinto ámbito y aceptando los riesgos y la posibilidad de equivocación en las mismas, para afrontar y resolver distintas situaciones, problemas o contingencias.
+u) Desarrollar técnicas de liderazgo, motivación, supervisión y comunicación en contextos de trabajo en grupo para facilitar la organización y coordinación de equipos de trabajo.
+v) Aplicar estrategias y técnicas de comunicación adaptándose a los contenidos que se van a transmitir, la finalidad y a las características de los receptores, para asegurar la eficacia en los procesos de comunicación.
+w) Evaluar situaciones de prevención de riesgos laborales y de protección ambiental, proponiendo y aplicando medidas de prevención personales y colectivas, de acuerdo a la normativa aplicable en los procesos del trabajo, para garantizar entornos seguros.
+x) Identificar y proponer las acciones profesionales necesarias para dar respuesta a la accesibilidad universal y al diseño para todos.
+y) Identificar y aplicar parámetros de calidad en los trabajos y actividades realizados en el proceso de aprendizaje para valorar la cultura de la evaluación y de la calidad y ser capaces de supervisar y mejorar procedimientos de gestión de calidad.
+z) Utilizar procedimientos relacionados con la cultura emprendedora, empresarial y de iniciativa profesional, para realizar la gestión básica de una pequeña empresa o emprender un trabajo.
+aa) Reconocer sus derechos y deberes como agente activo en la sociedad, teniendo en cuenta el marco legal que regula las condiciones sociales y laborales para participar como ciudadano democrático.»
+
+
+MODULO DE PROGRAMACIÓN:
+
+Resultados de aprendizaje y sus criterios de evaluación del Módulo de ENTORNOS DE DESARROLLO:
+
+1. Reconoce los elementos y herramientas que intervienen en el desarrollo de un programa informático, analizando sus características y las fases en las que actúan hasta llegar a su puesta en funcionamiento.
+Criterios de evaluación:
+a) Se ha reconocido la relación de los programas con los componentes del sistema informático: memoria, procesador, periféricos, entre otros.
+b) Se han identificado las fases de desarrollo de una aplicación informática.
+c) Se han diferenciado los conceptos de código fuente, objeto y ejecutable.
+d) Se han reconocido las características de la generación de código intermedio para su ejecución en máquinas virtuales.
+e) Se han clasificado los lenguajes de programación, identificando sus características.
+f) Se ha evaluado la funcionalidad ofrecida por las herramientas utilizadas en el desarrollo de software.
+g) Se han identificado las características y escenarios de uso de las metodologías ágiles de desarrollo de software.
+
+2. Evalúa entornos integrados de desarrollo analizando sus características para editar código fuente y generar ejecutables.
+Criterios de evaluación:
+a) Se han instalado entornos de desarrollo, propietarios y libres.
+b) Se han añadido y eliminado módulos en el entorno de desarrollo.
+c) Se ha personalizado y automatizado el entorno de desarrollo.
+d) Se ha configurado el sistema de actualización del entorno de desarrollo.
+e) Se han generado ejecutables a partir de código fuente de diferentes lenguajes en un mismo entorno de desarrollo.
+f) Se han generado ejecutables a partir de un mismo código fuente con varios entornos de desarrollo.
+g) Se han identificado las características comunes y específicas de diversos entornos de desarrollo.
+
+3. Verifica el funcionamiento de programas diseñando y realizando pruebas.
+Criterios de evaluación:
+a) Se han identificado los diferentes tipos de pruebas.
+b) Se han definido casos de prueba.
+c) Se han identificado las herramientas de depuración y prueba de aplicaciones ofrecidas por el entorno de desarrollo.
+d) Se han utilizado herramientas de depuración para definir puntos de ruptura y seguimiento.
+e) Se han utilizado las herramientas de depuración para examinar y modificar el comportamiento de un programa en tiempo de ejecución.
+f) Se han efectuado pruebas unitarias de clases y funciones.
+g) Se han implementado pruebas automáticas.
+h) Se han documentado las incidencias detectadas.
+i) Se han utilizado dobles de prueba para aislar los componentes durante las pruebas.
+
+4. Optimiza código empleando las herramientas disponibles en el entorno de desarrollo.
+Criterios de evaluación:
+a) Se han identificado los patrones de refactorización más usuales.
+b) Se han elaborado las pruebas asociadas a la refactorización.
+c) Se ha revisado el código fuente usando un analizador de código.
+d) Se han identificado las posibilidades de configuración de un analizador de código.
+e) Se han aplicado patrones de refactorización con las herramientas que proporciona el entorno de desarrollo.
+f) Se ha realizado el control de versiones integrado en el entorno de desarrollo.
+g) Se han utilizado herramientas del entorno de desarrollo para documentar las clases.
+h) Se han utilizado repositorios remotos para el desarrollo de código colaborativo.
+i) Se han utilizado herramientas para la integración continua del código.
+
+5. Genera diagramas de clases valorando su importancia en el desarrollo de aplicaciones y empleando herramientas específicas.
+Criterios de evaluación:
+a) Se han identificado los conceptos básicos de la programación orientada a objetos.
+b) Se han utilizado herramientas para la elaboración de diagramas de clases.
+c) Se ha interpretado el significado de diagramas de clases.
+d) Se han trazado diagramas de clases a partir de las especificaciones de las mismas.
+e) Se ha generado código a partir de un diagrama de clases.
+f) Se ha generado un diagrama de clases mediante ingeniería inversa.
+
+6. Genera diagramas de comportamiento valorando su importancia en el desarrollo de aplicaciones y empleando herramientas específicas.
+a) Se han identificado los distintos tipos de diagramas de comportamiento.
+b) Se ha reconocido el significado de los diagramas de casos de uso.
+c) Se han interpretado diagramas de interacción.
+d) Se han elaborado diagramas de interacción sencillos.
+e) Se ha interpretado el significado de diagramas de actividades.
+f) Se han elaborado diagramas de actividades sencillos.
+g) Se han interpretado diagramas de estados.
+h) Se han planteado diagramas de estados sencillos.
+
+
+Contenidos básicos:
+
+Desarrollo de software:
+− Concepto de programa informático.
+− Código fuente, código objeto y código ejecutable; tecnologías de virtualización.
+− Tipos de lenguajes de programación. Paradigmas.
+− Características de los lenguajes más difundidos.
+− Proceso de obtención de código ejecutable a partir del código fuente; herramientas implicadas.
+− Fases del desarrollo de una aplicación: análisis, diseño, codificación, pruebas, documentación, explotación y mantenimiento, entre otras.
+− Metodologías ágiles. Técnicas. Características.
+
+Instalación y uso de entornos de desarrollo:
+− Funciones de un entorno de desarrollo.
+− Instalación de un entorno de desarrollo.
+− Uso básico de un entorno de desarrollo.
+− Personalización del entorno de desarrollo: temas, estilos de codificación, módulos y extensiones, entre otros.
+− Edición de programas.
+− Generación de ejecutables en distintos entornos.
+− Herramientas y automatización.
+
+Diseño y realización de pruebas:
+− Planificación de Pruebas.
+− Tipos de pruebas: Funcionales, estructurales, regresión, entre otras.
+− Procedimientos y casos de prueba.
+− Pruebas de Código: Cubrimiento, valores límite, clases de equivalencia, entre otras.
+− Pruebas unitarias; herramientas de automatización.
+− Documentación de las incidencias.
+− Dobles de prueba. Tipos. Características.
+
+Optimización y documentación:
+− Refactorización. Concepto. Limitaciones. Patrones de refactorización más usuales. Refactorización y pruebas. Herramientas de ayuda a la refactorización.
+− Analizadores de código.
+− Control de versiones. Estructura de las herramientas de control de versiones. Repositorio. Herramientas de control de versiones. Uso integrado en el entorno de desarrollo.
+− Repositorios remotos.
+− Documentación. Uso de comentarios. Alternativas.
+− Integración continua. Herramientas.
+
+Elaboración de diagramas de clases:
+− Clases. Atributos, métodos y visibilidad.
+− Objetos. Instanciación.
+− Relaciones. Asociación, navegabilidad y multiplicidad. Herencia, composición, agregación. Realización y dependencia.
+− Notación de los diagramas de clases.
+− Herramientas.
+− Generación automática de código. Ingeniería inversa.
+
+
+Elaboración de diagramas de comportamiento:
+− Tipos. Campo de aplicación.
+− Diagrama de casos de uso. Actores, escenario, relación de comunicación.
+− Diagrama de secuencia. Línea de vida de un objeto, activación, envío de mensajes.
+− Diagrama de comunicación. Objetos, mensajes.
+− Diagrama de actividad. Diagrama de estados.
+
+
+Orientaciones pedagógicas.
+Este módulo profesional contiene parte de la formación necesaria para desempeñar la función de desarrollador de aplicaciones.
+La función de desarrollador de aplicaciones incluye aspectos como:
+− La utilización de las herramientas software disponibles.
+− La elaboración de documentación interna y técnica de la aplicación.
+− El diseño, elaboración y ejecución de pruebas.
+− La optimización de código.
+Las actividades profesionales asociadas a esta función se aplican en el desarrollo de aplicaciones.
+
+La formación del módulo contribuye a alcanzar los objetivos generales d), e), h), i), j) y r) del ciclo formativo y las competencias profesionales, personales y sociales d), e), i), j), r), t), v) y w) del título.
+
+Las líneas de actuación en el proceso de enseñanza-aprendizaje que permiten alcanzar los objetivos del módulo están relacionados con:
+− La interpretación de documentación técnica.
+− La instalación, configuración y personalización de diversos entornos de desarrollo.
+− La utilización de distintos entornos de desarrollo para la edición y prueba de aplicaciones.
+− La utilización de herramientas de depuración, optimización y documentación de aplicaciones.
+− La generación de diagramas técnicos.
+− La elaboración de documentación interna de la aplicación.
+− La utilización de sistemas de control de versiones.
+

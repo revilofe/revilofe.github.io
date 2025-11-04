@@ -19,6 +19,13 @@ tags:
 
 ## 3.1 Introducción a UML (Unified Modeling Language)
 
+<figure markdown="span">
+  ![UML](assets/UML.png)
+  <figcaption>UML</figcaption>
+</figure>
+
+
+
 ### 1. Introducción
 
 El **Lenguaje Unificado de Modelado** o **UML** («Unified Modeling Language») es un lenguaje estandarizado de modelado. Está especialmente desarrollado para ayudar, a todos los intervinientes en el desarrollo y modelado de un sistema o un producto software, a describir, diseñar, especificar, visualizar, construir y documentar todos los artefactos que lo componen, sirviéndose de varios tipos de diagramas.

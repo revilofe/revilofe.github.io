@@ -110,830 +110,2389 @@ Construir un sistema que sea fácil de mantener y adaptar a futuros requisitos. 
 
 **El equilibrio**: La clave es encontrar un equilibrio entre estos dos objetivos. No puede ser tan simple que sea rígido e imposible de mantener. Pero tampoco puede ser tan complejo que sea difícil de entender y construir.
 
-### 4. Proceso Iterativo de Identificación
 
-En la práctica, es **improbable que construya correctamente un modelo de clases la primera vez**. La colección de clases en su modelo de diseño es una de las cosas que probablemente cambiará a lo largo de las iteraciones de desarrollo.
+### 4. Proceso Iterativo de Identificación: El Ciclo del Diseño
 
-#### 4.1. Patrón común de desarrollo
+La identificación de clases no es un proceso lineal de "una sola pasada". Es un **proceso iterativo** que requiere múltiples refinamientos hasta alcanzar un modelo satisfactorio.
 
-1. **Primera iteración**: Identificar las clases más importantes de los objetos del dominio
-   - Aquellas que pertenecen de manera obvia al problema
-   - Sustantivos principales del enunciado
+#### 4.1. ¿Por qué es iterativo?
 
-2. **Segunda iteración**: Añadir clases que se introducen para resolver el problema
-   - Más difíciles de identificar
-   - Controladores, gestores, servicios
+**Razones fundamentales**:
 
-3. **Iteraciones posteriores**: Refinar y ajustar
-   - Eliminar redundancias
-   - Mejorar relaciones
-   - Ajustar responsabilidades
+1. **Aprendizaje progresivo**: A medida que profundizas en el dominio, descubres nuevas clases o descartas las innecesarias
+2. **Requisitos evolutivos**: Los requisitos se aclaran y refinan durante el proceso
+3. **Descubrimiento de relaciones**: Las relaciones entre clases emergen gradualmente
+4. **Validación continua**: Cada iteración valida y corrige el modelo anterior
 
-### 5. Técnica de Identificación de Nombres
+!!! warning "Error común"
+    Muchos principiantes intentan crear el modelo perfecto en el primer intento. Esto es imposible y contraproducente. Acepta que tu primer modelo será imperfecto y que mejorará con cada iteración.
 
-La técnica más común y efectiva para identificar clases es el **análisis de sustantivos**. Es una técnica pragmática y fácil de aplicar que funciona bien en la práctica. La idea es simple: los sustantivos en la descripción del problema frecuentemente corresponden a entidades del dominio, que a su vez se convierten en clases.
+#### 4.2. Las Fases del Proceso Iterativo
 
-Sin embargo, no todos los sustantivos se convierten en clases, y ese es el verdadero desafío de esta técnica. Procede en dos etapas fundamentales:
+**Fase 1: Identificación Inicial (Divergencia)**
 
-#### 5.1. Etapa 1: Identificar clases candidatas
+**Objetivo**: Generar un conjunto amplio de candidatos a clases sin ser demasiado crítico
 
-En esta etapa, eres liberal y no descartas nada. El objetivo es capturar todas las posibilidades, incluso si algunas resultan no siendo clases.
+**Actividades**:
+- Análisis de sustantivos en los requisitos
+- Brainstorming con el equipo
+- Investigación del dominio
+- Consulta con expertos del dominio
 
-##### 5.1.1. Estrategias principales
+**Duración**: 30-60 minutos para proyectos pequeños
 
-1. **Análisis de documentos textuales**
-   - Obtener descripción clara del problema (requisitos, casos de uso, historias de usuario, conversaciones con clientes)
-   - La documentación puede ser formal (requisitos oficiales) o informal (notas, conversaciones)
-   - Las entrevistas con usuarios y stakeholders son especialmente valiosas
-   - Leer cuidadosamente toda la documentación disponible
+**Resultado esperado**: Lista extensa de 20-50 candidatos a clases (incluye muchos falsos positivos, está bien)
 
-2. **Extracción de sustantivos**
-   - Extraer **todos** los sustantivos de la descripción, sin discriminar
-   - Los sustantivos son candidatos potenciales a clases de objetos
-   - Hacer una lista completa sin descartar nada al principio
-   - Incluir tanto sustantivos explícitos como implícitos (aquellos que podrías inferir del contexto)
+**Ejemplo**:
+Para un sistema de biblioteca, podrías identificar: Libro, Copia, Usuario, Préstamo, Bibliotecario, Estantería, Editorial, Autor, Catálogo, FichaBibliográfica, CodigoDewey, MultaPorRetraso, etc.
 
-3. **Identificación de candidatos**
-   - Listar todos los sustantivos encontrados
-   - Incluir tanto entidades físicas (Cliente, Producto) como conceptuales (Pedido, Transacción)
-   - No juzgar en esta etapa; eso viene después
+**Fase 2: Filtrado y Refinamiento (Convergencia)**
 
-##### 5.1.2. Ejemplo práctico
+**Objetivo**: Eliminar candidatos inapropiados y consolidar los válidos
 
-**Enunciado**: "En un sistema de reservaciones que vende boletos para funciones en varios teatros, los clientes pueden reservar asientos. Cada función está en un teatro específico y tiene una hora de inicio, duración y aforo máximo. Los boletos tienen un precio que varía según la ubicación del asiento. El sistema genera reportes de ocupación."
+**Actividades**:
+- Aplicar criterios de descarte (ver sección 5.3)
+- Agrupar conceptos similares
+- Identificar atributos vs clases
+- Detectar redundancias
 
-**Sustantivos encontrados (clases candidatas)**:
-- Sistema de Reservaciones ← Metalenguaje, probablemente no sea clase
-- Boletos ← ✓ Sí, es una entidad importante
-- Función ← ✓ Sí, es una entidad importante
-- Teatro ← ✓ Sí, es una entidad importante
-- Clientes ← ✓ Sí, es una entidad importante
-- Asientos ← ✓ Sí, es una entidad importante
-- Hora de inicio ← ← Probablemente sea atributo de Función
-- Duración ← Probablemente sea atributo de Función
-- Aforo máximo ← Probablemente sea atributo de Teatro o Función
-- Precio ← ← Probablemente sea atributo de Boleto
-- Ubicación del asiento ← Probablemente sea parte de Asiento
-- Reportes ← ¿Clase o resultado de una operación?
-- Ocupación ← Probablemente sea atributo calculado
+**Duración**: 60-90 minutos
 
-**Resultado de esta etapa**: Una larga lista sin filtrar
+**Resultado esperado**: Lista reducida de 10-20 clases sólidas
 
-##### 5.1.3. Reglas iniciales
+**Ejemplo continuado**:
+Después del filtrado para la biblioteca:
+- ✅ Mantener: Libro, Copia, Usuario, Préstamo
+- ❌ Descartar: Bibliotecario (es un rol de Usuario), Estantería (detalle físico irrelevante)
+- ❌ Descartar: FichaBibliográfica (es solo una representación de Libro)
+- 🔄 Convertir: MultaPorRetraso → atributo calculado de Préstamo
 
-- Considérelos en forma **singular**: "Boleto" en lugar de "Boletos"
-- **No incluya frases** que contengan "o" como candidatas (son alternativas, no clases)
-  - ❌ "Cliente o Administrador" → ✓ "Cliente", ✓ "Administrador"
-- Durante esta etapa, **no diferenciar** entre clases y atributos todavía
-- No preocuparse si la lista tiene redundancias; las eliminaremos después
+**Fase 3: Identificación de Relaciones**
 
-#### 5.2. Etapa 2: Descartar candidatas inapropiadas
+**Objetivo**: Establecer cómo las clases colaboran entre sí
 
-Esta es la etapa más crítica y donde se requiere más criterio. Hay que analizar **cada candidata** y determinar honestamente si realmente debe ser una clase. Esta es donde los buenos diseñadores se diferencian de los mediocres: en la capacidad de hacer juicios correctos sobre qué mereceSer una clase.
+**Actividades**:
+- Identificar asociaciones entre clases
+- Determinar multiplicidad
+- Establecer herencia si aplica
+- Definir dependencias
 
-##### 5.2.1. Razones para descartar una clase candidata
+**Duración**: 45-60 minutos
 
-**1. Redundante**
-
-Cuando a la misma clase conceptual se le ha dado más de un nombre en la descripción, o cuando es una especialización trivial de otra clase.
-
-**Ejemplo**: 
-- "Préstamo de estudiante" y "Préstamo de trabajador" (el tipo de persona es un detalle, no un concepto diferente)
-- "Usuario registrado" y "Cliente" (son lo mismo desde diferentes perspectivas)
-
-**Pregunta clave**: ¿Realmente son conceptos diferentes en el dominio, o es la misma cosa con diferentes adjetivos?
-
-**Acción**: Probablemente solo difieren en valores de atributos. Elija un nombre que abarque todas las descripciones.
-
----
-
-**2. Impreciso**
-
-Cuando no se puede indicar de forma clara y no ambigua lo que significa un nombre. La ambigüedad sugiere que el concepto no está bien definido.
-
-**Ejemplo**: 
-- "Cuenta" (¿Cuenta bancaria? ¿Cuenta de usuario? ¿Cuenta de ahorros? ¿Cuenta de email?)
-- "Registro" (demasiado genérico; ¿registro de qué?)
-- "Datos" (tan vago que es inútil)
-
-**Pregunta clave**: ¿Todos los interesados entienden exactamente lo mismo cuando dicen este nombre?
-
-**Acción**: Eliminar la ambigüedad antes de considerarla clase. Renombrar a algo específico como "CuentaBancaria", "CuentaUsuario", "RegistroAcceso".
-
----
-
-**3. Un evento u operación**
-
-Cuando el nombre hace referencia a algo que **se hace** para, por o en el sistema; es decir, cuando es un verbo disfrazado de sustantivo.
-
-**Ejemplo**: 
-- "Reserva de asiento" (la acción es reservar, no crear una clase separada)
-- "Compra de boleto" (el acto de comprar)
-- "Validación" (una acción, no una entidad)
-
-**Pregunta clave**: ¿La instancia del evento u operación tiene estado, comportamiento e identidad que persista en el tiempo?
-
-**Conceptos fundamentales**:
-- **Estado**: Todos los datos (atributos) que encapsula un objeto en un momento determinado
-- **Comportamiento**: La manera como actúa y reacciona un objeto (sus métodos)
-- **Identidad**: A los objetos se les hace referencia por un nombre único o identificador
-
-**Regla de decisión**: 
-- Si solo representa una acción momentánea sin persistencia → Probablemente sea un **método**, no una clase
-  - Ejemplo: "validar email" es un método de la clase Usuario
-- Si tiene datos que persisten y un ciclo de vida → Puede ser una clase
-  - Ejemplo: "Reserva" con fecha, asiento, cliente, estado → Es una clase porque persiste y tiene lógica
-
----
-
-**4. Metalenguaje**
-
-Cuando el nombre forma parte de la manera en que se definen o habla sobre las cosas, pero no es parte del dominio del problema.
-
-**Ejemplo**: 
-- "Requisitos" (son parte de cómo se especifica el sistema, no parte del dominio)
-- "Sistema" (es metalenguaje; todo es parte del sistema)
-- "Modelo" (es como referimos al diseño, no es una entidad del dominio)
-- "Diagrama" (es una herramienta de modelado, no una clase del sistema)
-
-**Pregunta clave**: ¿Es esto una cosa del mundo real/dominio, o es cómo hablamos sobre el sistema?
-
-**Acción**: Eliminar estos términos de la lista de candidatas.
-
----
-
-**5. Fuera del alcance del sistema**
-
-Cuando el nombre es relevante para describir cómo funciona el sistema pero no hace referencia a algo **que el sistema gestiona** o con lo que el sistema interactúa directamente.
-
-**Ejemplo**: 
-- "Usuario del sistema" (la persona que usa el sistema desde afuera)
-- "Administrador del sistema" (rol externo al dominio del problema)
-- "Cliente externo" (alguien fuera del sistema)
-
-**Pregunta clave**: ¿El sistema necesita recordar y gestionar información sobre esto? ¿O solo es el "actuar" que usa el sistema?
-
-**Decisión**: 
-- Si el sistema **gestiona información** sobre estos → Sí es una clase
-  - Ejemplo: En un sistema de tienda, Cliente sí es una clase porque guardamos información sobre clientes
-- Si solo **interactúan** con el sistema → No es una clase interna, es un actor externo
-  - Ejemplo: El "usuario del sistema" que está usando un cajero automático quizás se represente como una clase, o quizás solo sea una interacción
-
----
-
-**6. Un atributo**
-
-Cuando está claro que un nombre hace referencia a algo **sencillo sin comportamiento interesante**, que es más bien una propiedad de otra clase.
-
-**Ejemplo**: 
-- "Color" (es una propiedad de Producto, no una clase propia)
-- "Tamaño" (es una propiedad de Prenda, no una clase)
-- "Precio" (es una propiedad de Producto)
-- "Nombre" (es una propiedad de Persona)
-- "Fecha" (es una propiedad de Evento)
-
-**Pregunta clave**: ¿Este concepto tiene comportamiento propio? ¿O es simplemente un valor que caracteriza a otro objeto?
-
-**Acción**: Estos serán atributos de otras clases, no clases por sí mismos.
-
-**Excepción importante**: Si el atributo tiene comportamiento complejo o múltiples propiedades propias, puede ser una clase:
-- Ejemplo: "Dirección" con calle, ciudad, código postal, país, y métodos para validar y formatear
-- Ejemplo: "Dinero" con cantidad y moneda, y métodos para conversiones y operaciones
-- Estos son "value objects" que merecen ser clases en sí mismos
-
----
-
-#### 5.3. Identificación de clases relevantes
-
-A partir de las clases candidatas se deben seleccionar las clases relevantes tomando en cuenta:
-
-1. **Relevancia al problema**: Todas las clases deben tener sentido en el área de la aplicación.
-
-2. **Eliminar redundancias**: Se deben eliminar clases redundantes, si expresan la misma información.
-
-3. **Agrupar características**: Se agrupan las características que definen a un sustantivo.
-
-4. **Considerar clases implícitas**: Añadir clases que no se mencionan explícitamente pero son necesarias por conocimiento del dominio.
-
-#### 5.4. Buena práctica: Dos listas
-
-Si se duda si mantener una clase, una buena práctica es mantener **dos listas**:
-
-1. **Lista de candidatos firmes**: Clases de las que se está seguro
-   - Tienen responsabilidades claras
-   - Aparecen frecuentemente en los requisitos
-   - Son conceptos centrales del dominio
-
-2. **Lista de candidatos dudosos**: Clases que tienen que ser definidas todavía
-   - Pueden ser útiles pero no está claro
-   - Requieren más análisis
-   - Podrían convertirse en atributos o métodos
-
-!!! tip "Ventaja"
-    Evita perder información mientras se está distinguiendo las cosas seguras de las que están por fijar.
-
-### 6. Fuentes de Clases
-
-Los objetos y su división en clases a menudo derivan de las siguientes fuentes:
-
-#### 6.1. Cosas tangibles o "del mundo real"
-
-**Ejemplos**: Avión, auto, televisor, computador, libro, producto
-
-**Características**:
-- Fáciles de identificar
-- Corresponden a objetos físicos
-- Suelen ser sustantivos concretos
-
-#### 6.2. Roles o Papeles
-
-**Ejemplos**: Gerente, cliente, vendedor, profesor, estudiante, usuario
-
-**Características**:
-- Representan personas con un rol específico
-- Pueden tener comportamientos asociados al rol
-- Importante definir qué hace ese rol en el sistema
-
-#### 6.3. Organizaciones
-
-**Ejemplos**: Universidad, empresa, departamento, equipo
-
-**Características**:
-- Agrupan otros objetos
-- Tienen estructura jerárquica
-- Pueden tener responsabilidades colectivas
-
-#### 6.4. Interacciones
-
-**Ejemplos**: Transacción, matrícula, contrato, pedido, reserva
-
-**Características**:
-- Representan relaciones entre otras clases
-- Suelen tener fecha/hora
-- Almacenan información sobre la interacción
-
-#### 6.5. Eventos o incidencias
-
-**Ejemplos**: Vuelo, accidente, suceso, notificación
-
-**Características**:
-- Ocurren en un momento específico
-- Pueden tener consecuencias en el sistema
-- Menos comunes que las otras categorías
-
-!!! note "Nota importante"
-    Las categorías 1 y 2 (tangibles y roles) son fuentes mucho más comunes que las últimas.
-
-### 7. Errores Comunes al Identificar Clases
-
-#### 7.1. Error: La clase "System"
-
-**Descripción**: Crear una clase que representa el sistema en su totalidad, a menudo llamada `[Cualquier_cosa]System`, que implementa todo el comportamiento interesante del sistema.
+**Resultado esperado**: Diagrama con clases conectadas
 
 **Ejemplo**:
 ```
-┌─────────────────────┐
-│  BibliotecaSystem   │
-├─────────────────────┤
-│ - libros            │
-│ - usuarios          │
-│ - prestamos         │
-├─────────────────────┤
-│ + prestarLibro()    │
-│ + devolverLibro()   │
-│ + buscarLibro()     │
-│ + registrarUsuario()│
-└─────────────────────┘
+Usuario 1 ─────── * Préstamo
+Préstamo * ─────── 1 Copia
+Copia * ─────── 1 Libro
 ```
 
-**¿Por qué está mal?**
-- Concentra toda la lógica en una sola clase
-- Viola el principio de responsabilidad única
-- Difícil de mantener y extender
-- Tiene presunciones sobre cómo será utilizado el sistema
+**Fase 4: Enriquecimiento (Añadir Detalles)**
 
-**Solución correcta**: Distribuir responsabilidades entre múltiples clases:
-- `Libro` con sus atributos y métodos propios
-- `Usuario` con su información
-- `Prestamo` como clase de interacción
-- `Biblioteca` como contenedor, si es necesario
+**Objetivo**: Agregar atributos y métodos a las clases
 
-#### 7.2. Error: Clases demasiado genéricas
+**Actividades**:
+- Identificar atributos de cada clase
+- Definir métodos principales
+- Establecer visibilidad (public, private, protected)
+- Agregar tipos de datos
 
-**Ejemplos**: "Objeto", "Item", "Cosa", "Elemento"
+**Duración**: 60-120 minutos
 
-**Problema**: No aportan significado al modelo
+**Resultado esperado**: Diagrama de clases completo con atributos y métodos
 
-**Solución**: Usar nombres específicos del dominio
+**Fase 5: Validación y Revisión**
 
-#### 7.3. Error: Clases que son solo datos
+**Objetivo**: Verificar que el modelo cumple los requisitos
 
-**Descripción**: Clases sin comportamiento, solo con getters y setters
+**Actividades**:
+- Recorrer casos de uso con el modelo
+- Verificar que todas las funcionalidades están cubiertas
+- Revisar principios de diseño (cohesión, acoplamiento)
+- Obtener feedback de stakeholders
 
-**Problema**: Violan el principio de encapsulamiento
+**Duración**: 30-45 minutos
 
-**Solución**: Añadir lógica de negocio relevante a cada clase
+**Resultado esperado**: Modelo validado listo para implementación
 
-#### 7.4. Error: Incluir detalles de implementación prematuramente
+#### 4.3. Número de Iteraciones
 
-**Ejemplos**: "ArrayList", "HashMap", "Database"
+**¿Cuántas iteraciones son normales?**
 
-**Problema**: Mezclar diseño con implementación
+- **Proyectos pequeños**: 2-3 iteraciones
+- **Proyectos medianos**: 3-5 iteraciones
+- **Proyectos grandes**: 5-10+ iteraciones
 
-**Solución**: Enfocarse en el dominio del problema, no en la tecnología
+!!! tip "Consejo práctico"
+    No intentes perfeccionar cada detalle en las primeras iteraciones. Es mejor tener un modelo "suficientemente bueno" rápidamente y refinarlo después, que buscar la perfección desde el inicio.
 
-### 8. Cómo Identificar Relaciones entre Clases
+#### 4.4. Criterios para Detener las Iteraciones
 
-Una vez identificadas las clases, el siguiente paso es determinar cómo se relacionan.
+¿Cuándo sabes que tu modelo está "suficientemente bueno"?
 
-#### 8.1. Preguntas clave para identificar relaciones
+**Indicadores de que puedes detenerte**:
 
-**Para Asociación**:
-- ¿Una clase necesita conocer o usar otra clase?
-- ¿Hay una conexión lógica entre ellas?
+✅ Todos los requisitos funcionales están cubiertos
+✅ No hay clases obviamente faltantes
+✅ No hay clases claramente redundantes
+✅ Las relaciones tienen sentido
+✅ Los nombres son claros y consistentes
+✅ El equipo está de acuerdo con el modelo
+✅ Los expertos del dominio validan el modelo
 
-**Para Agregación**:
-- ¿Una clase "tiene" objetos de otra clase?
-- ¿Las partes pueden existir sin el todo?
+**Indicadores de que necesitas más iteraciones**:
 
-**Para Composición**:
-- ¿Una clase es "parte integral" de otra?
-- ¿Las partes desaparecen si el todo desaparece?
+❌ Hay funcionalidades sin clase responsable
+❌ Hay clases "sospechosamente" vacías (sin responsabilidades claras)
+❌ Las relaciones son confusas o contradictorias
+❌ El modelo tiene más de 50 clases (probablemente sobre-diseñado)
+❌ Los stakeholders no entienden el modelo
 
-**Para Herencia**:
-- ¿Una clase "es un tipo de" otra clase?
-- ¿Comparte características y comportamiento?
+### 5. Técnica de Identificación de Nombres: El Método Fundamental
 
-**Para Dependencia**:
-- ¿Una clase usa temporalmente otra?
-- ¿La usa solo como parámetro o variable local?
+La **técnica de análisis de sustantivos** (Noun Extraction) es el método más utilizado para identificar clases candidatas a partir de documentos de requisitos.
 
-#### 8.2. Análisis de verbos para relaciones
+#### 5.1. Fundamentos del Método
 
-Al igual que los sustantivos identifican clases, los **verbos** en los requisitos ayudan a identificar:
+**Principio básico**: En lenguaje natural, los sustantivos suelen representar conceptos (clases) del dominio, mientras que los verbos representan acciones (métodos).
 
-1. **Métodos**: Acciones que realiza una clase
-   - "El usuario **envía** un mensaje" → método `enviar()` en clase Usuario
+**Base lingüística**:
+- **Sustantivos** → Potenciales clases u objetos
+- **Verbos** → Potenciales métodos o relaciones
+- **Adjetivos** → Potenciales atributos o estados
+- **Adverbios** → Restricciones o calificadores
+
+**¿Por qué funciona este método?**
+
+Porque el lenguaje humano refleja naturalmente la estructura conceptual del dominio. Cuando un experto del dominio describe un sistema, usa sustantivos para referirse a las entidades importantes y verbos para describir lo que hacen.
+
+#### 5.2. Proceso Paso a Paso
+
+**Paso 1: Preparar el texto**
+
+Obtén una descripción textual de los requisitos del sistema. Puede ser:
+- Documento de requisitos formal
+- Historias de usuario
+- Transcripción de entrevistas
+- Descripción del problema
+
+**Ejemplo de texto inicial**:
+
+> "Una biblioteca necesita un sistema para gestionar préstamos de libros. Los usuarios se registran proporcionando su nombre, dirección y número de identificación. Cada libro tiene un título, autor, ISBN y puede tener múltiples copias físicas. Un usuario puede tomar prestada una copia durante 14 días. El bibliotecario debe poder ver qué copias están disponibles y cuáles prestadas. Si un usuario devuelve tarde, se le cobra una multa de 0.50€ por día."
+
+**Paso 2: Identificar todos los sustantivos**
+
+Subraya o marca todos los sustantivos:
+
+> "Una **biblioteca** necesita un **sistema** para gestionar **préstamos** de **libros**. Los **usuarios** se registran proporcionando su **nombre**, **dirección** y **número de identificación**. Cada **libro** tiene un **título**, **autor**, **ISBN** y puede tener múltiples **copias físicas**. Un **usuario** puede tomar prestada una **copia** durante 14 **días**. El **bibliotecario** debe poder ver qué **copias** están **disponibles** y cuáles **prestadas**. Si un **usuario** devuelve tarde, se le cobra una **multa** de 0.50€ por **día**."
+
+**Paso 3: Crear lista de candidatos**
+
+Lista completa de sustantivos únicos:
+
+1. Biblioteca
+2. Sistema
+3. Préstamo
+4. Libro
+5. Usuario
+6. Nombre
+7. Dirección
+8. Número de identificación
+9. Título
+10. Autor
+11. ISBN
+12. Copia (física)
+13. Día
+14. Bibliotecario
+15. Disponible (estado)
+16. Prestada (estado)
+17. Multa
+
+**Paso 4: Aplicar filtros de descarte**
+
+Ahora aplicamos criterios sistemáticos para eliminar candidatos inapropiados.
+
+#### 5.3. Criterios de Descarte: ¿Qué NO es una clase?
+
+**Criterio 1: Redundancia**
+
+❌ **Descartar**: Conceptos que son sinónimos o representan lo mismo
+
+En nuestro ejemplo:
+- "Usuario" y "Bibliotecario": El bibliotecario es un tipo de usuario (rol). Solución: Una clase Usuario con atributo `rol` o `esEmpleado`
+
+**Criterio 2: Atributos disfrazados**
+
+❌ **Descartar**: Conceptos que son propiedades simples de otra entidad, no entidades independientes
+
+En nuestro ejemplo:
+- ❌ "Nombre": Es un atributo de Usuario, no una clase
+- ❌ "Dirección": Es un atributo de Usuario
+- ❌ "Número de identificación": Es un atributo de Usuario
+- ❌ "Título": Es un atributo de Libro
+- ❌ "Autor": **¡CUIDADO!** Podría ser clase si necesitamos gestionar información de autores
+- ❌ "ISBN": Es un atributo de Libro
+- ❌ "Día": Es un valor primitivo (número o fecha)
+
+**¿Cuándo un concepto debe ser atributo vs clase?**
+
+Regla general:
+- **Atributo**: Si solo necesitas el valor (ej: nombre = "Juan")
+- **Clase**: Si necesitas múltiples propiedades o comportamientos del concepto
+
+**Ejemplo**: 
+- Si "Autor" solo es un string con el nombre → Atributo
+- Si "Autor" tiene biografía, nacionalidad, otros libros, fechas → Clase
+
+**Criterio 3: Valores o estados**
+
+❌ **Descartar**: Estados o valores que son propiedades, no objetos
+
+En nuestro ejemplo:
+- ❌ "Disponible": Es un estado de Copia (atributo booleano `disponible`)
+- ❌ "Prestada": También es un estado de Copia
+
+**Criterio 4: Detalles de implementación o infraestructura**
+
+❌ **Descartar**: Conceptos técnicos que no son del dominio del problema
+
+En nuestro ejemplo:
+- ❌ "Sistema": Es demasiado genérico, no es una entidad del dominio
+
+**Criterio 5: Entidades externas fuera del alcance**
+
+❌ **Descartar**: Conceptos que existen pero están fuera del alcance del sistema
+
+En nuestro ejemplo:
+- ❌ "Biblioteca" (el edificio físico): Si el sistema solo gestiona préstamos, el edificio no es relevante
+
+**Criterio 6: Operaciones o servicios**
+
+❌ **Descartar**: Verbos nominalizados que representan acciones, no entidades
+
+Por ejemplo: "Gestión", "Procesamiento", "Validación" suelen ser servicios, no clases del dominio
+
+**Paso 5: Lista refinada de clases candidatas**
+
+Después del filtrado:
+
+✅ **Clases válidas**:
+1. ✅ Libro - Entidad del dominio con múltiples propiedades
+2. ✅ Copia - Representación física de un libro específico
+3. ✅ Usuario - Persona que usa el sistema
+4. ✅ Préstamo - Transacción importante del dominio
+5. ✅ Multa - Concepto con lógica de negocio (cálculo, pago)
+
+**Análisis de decisiones**:
+
+**¿Por qué Copia Y Libro?**
+- Copia: Instancia física específica (puede estar prestada, dañada, tiene número de serie)
+- Libro: Concepto abstracto del libro (título, ISBN, autor)
+- Relación: Un Libro tiene múltiples Copias
+
+**¿Por qué Préstamo es una clase?**
+- Representa una transacción importante
+- Tiene atributos: fechaPréstamo, fechaDevoluciónEsperada, fechaDevoluciónReal
+- Tiene comportamiento: calcularDíasRetraso(), estáVencido()
+
+**¿Por qué Multa es una clase y no un atributo de Préstamo?**
+- Puede ser discutible. Ambas opciones son válidas:
+  - Como clase: Si las multas tienen ciclo de vida independiente (pueden pagarse después, tener historial)
+  - Como atributo calculado: Si solo es un monto que se calcula al devolver
+
+En este caso, para simplicidad, Multa podría ser un método `calcularMulta()` en Préstamo.
+
+**Lista final**:
+1. Libro
+2. Copia
+3. Usuario
+4. Préstamo
+
+¡De 17 candidatos iniciales, quedamos con 4 clases sólidas!
+
+#### 5.4. Reglas Prácticas para Identificar Clases
+
+**Regla 1: "El test del sustantivo concreto"**
+
+¿Puedes señalar ejemplos concretos de este concepto?
+- ✅ "Ese libro" → Sí, es una clase
+- ✅ "Esa persona" → Sí, es una clase
+- ❌ "Ese nombre" → No, es un dato simple
+
+**Regla 2: "El test de las múltiples propiedades"**
+
+¿Este concepto tiene más de 2-3 propiedades relevantes?
+- ✅ Libro: título, autor, ISBN, editorial, año → Sí, es una clase
+- ❌ Título: solo es un string → No, es un atributo
+
+**Regla 3: "El test del comportamiento"**
+
+¿Este concepto tiene comportamiento (métodos) significativo?
+- ✅ Préstamo: calcularRetraso(), devolver(), renovar() → Sí, es una clase
+- ❌ ISBN: no tiene comportamiento → No, es un atributo
+
+**Regla 4: "El test de la independencia"**
+
+¿Este concepto puede existir independientemente?
+- ✅ Usuario: puede existir sin préstamos → Probablemente una clase
+- ❌ Dirección: no tiene sentido sin un Usuario → Probablemente un atributo
+
+!!! tip "Consejo de experto"
+    Cuando dudes si algo debería ser una clase o un atributo, empieza haciéndolo atributo. Es más fácil convertir un atributo en clase después (refactoring) que simplificar una clase innecesaria.
+
+
+### 6. Fuentes de Clases: Más Allá de los Sustantivos
+
+Aunque el análisis de sustantivos es la técnica principal, existen otras fuentes valiosas para identificar clases.
+
+#### 6.1. Categorías de Objetos según su Origen
+
+Las clases que identificamos suelen caer en estas categorías generales:
+
+**1. Cosas Tangibles o "del Mundo Real"**
+
+**Descripción**: Objetos físicos que existen en el mundo real
+
+**Ejemplos**:
+- Sistema de transporte: Autobús, Camión, Bicicleta
+- Sistema médico: Bisturí, Camilla, Máquina de rayos X
+- Sistema manufacturero: Máquina, Herramienta, Producto físico
+
+**Cuándo son clases**: Cuando necesitas rastrear propiedades físicas o ubicación
+
+**Ejemplo detallado - Sistema de flota de vehículos**:
+```kotlin
+class Vehiculo(
+    val matricula: String,
+    val modelo: String,
+    val año: Int,
+    var kilometraje: Int,
+    var ubicacionActual: Coordenadas
+) {
+    fun registrarMantenimiento(tipo: String, costo: Double)
+    fun calcularDepreciacion(): Double
+}
+```
+
+**2. Roles o Papeles**
+
+**Descripción**: Las funciones que las personas desempeñan en el sistema
+
+**Ejemplos**:
+- Sistema educativo: Estudiante, Profesor, Administrativo
+- Sistema hospital: Paciente, Médico, Enfermero
+- Sistema empresarial: Gerente, Empleado, Cliente
+
+**Característica clave**: Una misma persona puede tener múltiples roles
+
+**Ejemplo**:
+```kotlin
+// Opción A: Roles como clases separadas (si tienen comportamientos muy diferentes)
+abstract class Persona(val nombre: String, val dni: String)
+class Estudiante(nombre: String, dni: String, val matricula: String) : Persona(nombre, dni)
+class Profesor(nombre: String, dni: String, val departamento: String) : Persona(nombre, dni)
+
+// Opción B: Rol como atributo (si el comportamiento es similar)
+class Usuario(
+    val nombre: String,
+    val dni: String,
+    val roles: MutableList<Rol>  // Un usuario puede tener múltiples roles
+)
+enum class Rol { ESTUDIANTE, PROFESOR, ADMINISTRATIVO }
+```
+
+**¿Cuál elegir?** Depende de si los roles tienen comportamiento significativamente diferente.
+
+**3. Organizaciones**
+
+**Descripción**: Grupos, departamentos, empresas
+
+**Ejemplos**:
+- Universidad, Facultad, Departamento
+- Empresa, Sucursal, Área
+- Hospital, Servicio, Unidad
+
+**Ejemplo - Sistema universitario**:
+```kotlin
+class Universidad(val nombre: String, val rector: Persona) {
+    private val facultades: MutableList<Facultad> = mutableListOf()
+    fun agregarFacultad(facultad: Facultad)
+}
+
+class Facultad(
+    val nombre: String,
+    val decano: Profesor,
+    val universidad: Universidad
+) {
+    private val departamentos: MutableList<Departamento> = mutableListOf()
+}
+```
+
+**4. Interacciones y Transacciones**
+
+**Descripción**: Eventos o transacciones que ocurren entre entidades
+
+**Ejemplos**:
+- Comercio: Venta, Compra, Devolución
+- Finanzas: Transferencia, Pago, Depósito
+- Educación: Matrícula, Calificación, Asistencia
+
+**Por qué son clases**: Representan momentos importantes con datos asociados
+
+**Ejemplo - Sistema de ventas**:
+```kotlin
+class Venta(
+    val numero: String,
+    val fecha: LocalDateTime,
+    val cliente: Cliente,
+    val vendedor: Empleado,
+    val items: List<ItemVenta>,
+    var estado: EstadoVenta
+) {
+    fun calcularTotal(): Double = items.sumOf { it.subtotal }
+    fun aplicarDescuento(porcentaje: Double)
+    fun procesar(): Boolean
+    fun cancelar(motivo: String)
+}
+
+enum class EstadoVenta { PENDIENTE, PROCESADA, CANCELADA, DEVUELTA }
+```
+
+**5. Eventos o Incidencias**
+
+**Descripción**: Sucesos que ocurren y necesitan ser registrados
+
+**Ejemplos**:
+- Sistema de vuelos: Vuelo, Retraso, Cancelación
+- Sistema de seguridad: Incidente, Alerta, Acceso
+- Sistema de salud: Cita, Emergencia, Alta
+
+**Diferencia con Transacciones**: Los eventos suelen ser menos estructurados y más orientados a registro/logging
+
+**Ejemplo - Sistema de aeropuerto**:
+```kotlin
+class Vuelo(
+    val numero: String,
+    val origen: Aeropuerto,
+    val destino: Aeropuerto,
+    var horaSalidaProgramada: LocalDateTime,
+    var horaSalidaReal: LocalDateTime?,
+    var estado: EstadoVuelo
+) {
+    private val incidentes: MutableList<Incidente> = mutableListOf()
+    
+    fun reportarRetraso(minutos: Int, motivo: String) {
+        incidentes.add(Incidente(tipo = TipoIncidente.RETRASO, descripcion = motivo))
+        estado = EstadoVuelo.RETRASADO
+    }
+}
+
+class Incidente(
+    val timestamp: LocalDateTime = LocalDateTime.now(),
+    val tipo: TipoIncidente,
+    val descripcion: String
+)
+```
+
+#### 6.2. Otras Fuentes para Identificar Clases
+
+**Fuente 1: Diagramas existentes**
+
+Si estás trabajando en un sistema existente:
+- Diagramas E-R de la base de datos actual
+- Diagramas de arquitectura
+- Documentación técnica previa
+
+**Fuente 2: Interfaces de usuario (wireframes, mockups)**
+
+Los elementos visuales a menudo revelan clases:
+- Formulario de "Registro de Cliente" → Clase Cliente
+- Tabla de "Productos" → Clase Producto
+- Pantalla de "Detalle de Pedido" → Clase Pedido
+
+**Fuente 3: Casos de uso**
+
+Cada caso de uso involucra actores y entidades:
+- "Cliente realiza un pedido" → Cliente, Pedido
+- "Sistema genera factura" → Factura
+- "Administrador aprueba solicitud" → Administrador, Solicitud
+
+**Fuente 4: Glosario del dominio**
+
+Muchas organizaciones tienen glosarios de términos del negocio:
+- Términos técnicos específicos del dominio
+- Jerga del sector
+- Conceptos legales o regulatorios
+
+**Ejemplo - Dominio bancario**:
+- CDT (Certificado de Depósito a Término)
+- SEPA (Single Euro Payments Area)
+- Swift Code
+
+Estos términos especializados suelen ser clases importantes.
+
+**Fuente 5: Expertos del dominio**
+
+Las entrevistas con usuarios o expertos revelan:
+- Conceptos que no aparecen en documentación formal
+- Reglas de negocio no escritas
+- Excepciones y casos especiales
+
+!!! tip "Mejora práctica"
+    Crea una lista de "Conceptos del Dominio" mientras entrevistas a expertos. Pregunta específicamente: "¿Qué conceptos son más importantes en tu trabajo diario?"
+
+#### 6.3. Patrones Comunes de Clases
+
+Con la experiencia, empezarás a reconocer patrones de clases que aparecen frecuentemente:
+
+**Patrón 1: Entidad-Detalle**
+
+- Entidad principal: Factura, Pedido, Orden
+- Detalle: ItemFactura, ItemPedido, LineaOrden
+
+**Patrón 2: Contenedor-Contenido**
+
+- Contenedor: Carrito, Paquete, Contenedor
+- Contenido: Producto, Artículo, Item
+
+**Patrón 3: Maestro-Transacción**
+
+- Maestro: Cliente, Producto, Cuenta
+- Transacción: Venta, Movimiento, Operación
+
+**Patrón 4: Catálogo-Instancia**
+
+- Catálogo: TipoProducto, Plantilla, Modelo
+- Instancia: Producto, Documento, Artículo
+
+Reconocer estos patrones acelera la identificación de clases.
+
+### 7. Errores Comunes al Identificar Clases y Cómo Evitarlos
+
+Aprender de los errores comunes te ahorrará tiempo y frustración.
+
+#### 7.1. Error 1: Sobre-diseño (Too Many Classes)
+
+**Descripción**: Crear demasiadas clases, especialmente clases que podrían ser atributos
+
+**Síntomas**:
+- Clases con solo 1-2 atributos simples
+- Clases que nunca tienen más de una instancia
+- Jerarquías de herencia muy profundas (>3 niveles)
+
+**Ejemplo del error**:
+```kotlin
+// ❌ MAL: Sobre-diseño
+class Nombre(val primer: String, val segundo: String)
+class Apellido(val paterno: String, val materno: String)
+class Persona(val nombre: Nombre, val apellido: Apellido)
+
+// ✅ MEJOR: Simplificado
+class Persona(
+    val nombre: String,
+    val apellidoPaterno: String,
+    val apellidoMaterno: String
+)
+```
+
+**Cómo evitarlo**:
+- Aplicar regla: "Si tiene menos de 3 propiedades Y no tiene comportamiento → Atributo"
+- Preguntarse: "¿Realmente necesito gestionar esto independientemente?"
+
+#### 7.2. Error 2: Sub-diseño (Missing Classes)
+
+**Descripción**: No identificar clases importantes, dejando funcionalidad sin hogar
+
+**Síntomas**:
+- Métodos muy largos con mucha lógica
+- Clases "Dios" con decenas de métodos
+- Código difícil de entender o mantener
+
+**Ejemplo del error**:
+```kotlin
+// ❌ MAL: Falta clase Préstamo
+class Biblioteca {
+    fun prestarLibro(usuario: Usuario, libro: Libro, dias: Int) {
+        // 50 líneas de lógica aquí...
+        // validar usuario, verificar disponibilidad,
+        // registrar fecha, calcular fecha devolución,
+        // actualizar inventario, enviar notificación...
+    }
+}
+
+// ✅ MEJOR: Con clase Préstamo
+class Prestamo(
+    val usuario: Usuario,
+    val copia: Copia,
+    val fechaPrestamo: LocalDate,
+    val diasPrestamo: Int
+) {
+    fun calcularFechaDevolucion(): LocalDate
+    fun estaVencido(): Boolean
+    fun devolver()
+}
+```
+
+**Cómo evitarlo**:
+- Si un método tiene >20 líneas, probablemente falta una clase
+- Buscar "verbos importantes" que podrían ser clases (Préstamo, Reserva, Pedido)
+
+#### 7.3. Error 3: Confundir Clases con Atributos
+
+**Descripción**: Hacer clases de conceptos que deberían ser atributos simples
+
+**Regla general**:
+- **Atributo**: Valor simple sin comportamiento
+- **Clase**: Múltiples propiedades O comportamiento complejo
+
+**Ejemplos correctos e incorrectos**:
+
+```kotlin
+// ❌ MAL: Email no necesita ser clase aquí
+class Email(val direccion: String)
+class Usuario(val email: Email)
+
+// ✅ MEJOR: Email como String
+class Usuario(val email: String)
+
+// ✅ PERO: Email como clase si tiene validación compleja
+class Email(val direccion: String) {
+    init {
+        require(direccion.matches(Regex("^[^@]+@[^@]+\\.[^@]+$"))) { "Email inválido" }
+    }
+    fun dominio(): String = direccion.substringAfter("@")
+    fun esEmpresarial(): Boolean = dominio().endsWith(".com") || dominio().endsWith(".org")
+}
+```
+
+**Criterio de decisión**:
+- Sin comportamiento → Atributo
+- Con validación/comportamiento → Clase
+
+#### 7.4. Error 4: Modelar Detalles de Implementación
+
+**Descripción**: Incluir clases técnicas en el modelo conceptual
+
+**Ejemplo del error**:
+```kotlin
+// ❌ MAL: Clases técnicas en modelo de dominio
+class DatabaseConnection
+class JSONParser
+class HTTPClient
+class LoggerService
+
+// En un diagrama de clases de dominio no deberían aparecer
+```
+
+**Por qué está mal**: El diagrama de clases de dominio debe representar conceptos del negocio, no detalles técnicos.
+
+**Solución**: 
+- Modelo de dominio: Solo clases del negocio
+- Diagrama de arquitectura: Clases técnicas aparte
+
+#### 7.5. Error 5: Usar Nombres Genéricos o Vagos
+
+**Descripción**: Clases con nombres como "Gestor", "Manejador", "Datos"
+
+**Ejemplos de nombres malos**:
+- ❌ GestorDatos
+- ❌ ManejadorUsuarios
+- ❌ ProcesadorInformacion
+- ❌ ObjetoGeneral
+
+**Por qué está mal**: No comunican responsabilidad clara
+
+**Ejemplos de nombres buenos**:
+- ✅ RepositorioUsuarios (almacenamiento)
+- ✅ ValidadorCredenciales (validación)
+- ✅ ServicioAutenticacion (lógica de negocio)
+- ✅ CalculadoraPrecios (cálculo específico)
+
+**Regla de oro**: Si necesitas usar "Gestor" o "Manejador", probablemente no has entendido bien la responsabilidad.
+
+#### 7.6. Error 6: Ignorar la Multiplicidad
+
+**Descripción**: No pensar en cuántas instancias existirán de cada clase
+
+**Preguntas importantes**:
+- ¿Cuántos X puede tener Y?
+- ¿X puede existir sin Y?
+- ¿La relación es uno-a-uno, uno-a-muchos, muchos-a-muchos?
+
+**Ejemplo**:
+```
+// ❌ MAL: No especificar multiplicidad
+Usuario ──── Préstamo
+
+// ✅ BIEN: Especificar
+Usuario 1 ────── * Préstamo
+(Un usuario puede tener muchos préstamos)
+```
+
+#### 7.7. Error 7: No Validar con Escenarios Reales
+
+**Descripción**: Crear modelo sin verificar que funciona para casos reales
+
+**Cómo evitarlo**:
+Recorre el modelo con ejemplos concretos:
+
+**Ejemplo - Sistema de biblioteca**:
+- "Ana presta el libro 'Don Quijote' el 1 de febrero"
+  - ¿Tengo clase Usuario para Ana? ✅
+  - ¿Tengo clase Libro para Don Quijote? ✅
+  - ¿Tengo clase Préstamo para registrar la transacción? ✅
+  - ¿Puedo calcular cuándo debe devolverlo? ✅
+
+Si no puedes "recorrer" tus casos de uso con el modelo, falta algo.
+
+!!! warning "Consejo de prevención"
+    El 80% de estos errores se evitan con revisión por pares. Pide a un compañero que revise tu modelo antes de implementar.
+
+
+### 8. Cómo Identificar Relaciones entre Clases: Conectando el Modelo
+
+Las clases no existen aisladas - colaboran para cumplir los requisitos del sistema. Identificar las relaciones correctamente es tan importante como identificar las clases mismas.
+
+#### 8.1. Tipos de Relaciones y Cuándo Usar Cada Una
+
+Ya conoces los tipos de relaciones de secciones anteriores. Aquí nos enfocamos en **cómo identificarlas** en los requisitos.
+
+**Herencia (Generalización): "Es un"**
+
+**Cómo identificarla en el texto**:
+- Palabras clave: "es un tipo de", "es una clase de", "se categoriza como"
+- Ejemplo: "Un **profesor** es un tipo de **empleado**"
+- Ejemplo: "Existen dos tipos de **cuenta**: **CuentaAhorro** y **CuentaCorriente**"
+
+**Proceso de identificación**:
+1. Busca clasificaciones o taxonomías
+2. Identifica superclase (concepto general)
+3. Identifica subclases (conceptos específicos)
+4. Verifica que subclases comparten características de la superclase
+
+**Ejemplo**:
+```
+"En la universidad hay diferentes tipos de personal: profesores, administrativos y personal de mantenimiento. Todos tienen nombre, DNI y fecha de contratación."
+
+Análisis:
+- Superclase: Personal (o Empleado)
+- Subclases: Profesor, Administrativo, PersonalMantenimiento
+- Atributos compartidos: nombre, DNI, fechaContratación
+```
+
+Diagrama:
+```
+          ┌──────────┐
+          │ Empleado │
+          └────△─────┘
+               │
+       ┌───────┼───────┐
+       │       │       │
+┌──────┴───┐ ┌┴──────┐ ┌┴─────────────┐
+│ Profesor │ │ Admin │ │ Mantenimiento│
+└──────────┘ └───────┘ └──────────────┘
+```
+
+**Composición: "Es parte de" (dependencia fuerte)**
+
+**Cómo identificarla**:
+- Palabras clave: "consiste en", "contiene", "está compuesto de"
+- Característica: La parte NO puede existir sin el todo
+- Ejemplo: "Un **coche** tiene un **motor**. Si destruyes el coche, el motor deja de tener sentido en el sistema."
+
+**Regla práctica**: Pregúntate "¿Tiene sentido que la parte exista sin el todo?"
+- ✅ Composición: Motor sin Coche → No tiene sentido
+- ❌ No composición: Empleado sin Empresa → Sí tiene sentido (puede cambiar de empresa)
+
+**Ejemplo**:
+```
+"Una factura contiene varias líneas de factura. Cada línea especifica un producto, cantidad y precio."
+
+Análisis:
+- Todo: Factura
+- Parte: LineaFactura
+- Justificación: Una LineaFactura sin Factura no tiene sentido
+```
+
+Diagrama:
+```
+┌─────────┐        ┌──────────────┐
+│ Factura │♦──────*│ LineaFactura │
+└─────────┘        └──────────────┘
+```
+
+**Agregación: "Tiene un" (dependencia débil)**
+
+**Cómo identificarla**:
+- Palabras clave: "tiene", "contiene", "incluye"
+- Característica: La parte PUEDE existir independientemente del todo
+- Ejemplo: "Un **departamento** tiene **empleados**. Los empleados pueden cambiar de departamento."
+
+**Ejemplo**:
+```
+"Un equipo de fútbol tiene jugadores. Los jugadores pueden ser transferidos a otros equipos."
+
+Análisis:
+- Todo: Equipo
+- Parte: Jugador
+- Justificación: Jugador puede existir sin Equipo específico
+```
+
+Diagrama:
+```
+┌────────┐        ┌──────────┐
+│ Equipo │◇──────*│ Jugador  │
+└────────┘        └──────────┘
+```
+
+**Asociación: Relación general**
+
+**Cómo identificarla**:
+- Es la relación por defecto si no es herencia, composición o agregación
+- Palabras clave: "está relacionado con", "tiene relación con"
+- Ejemplo: "Un **cliente** hace **pedidos**"
+
+**Dependencia: Uso temporal**
+
+**Cómo identificarla**:
+- La clase usa a otra temporalmente (como parámetro, variable local)
+- No mantiene referencia permanente
+- Ejemplo: "El **calculador de impuestos** usa la información del **producto** para calcular el impuesto"
+
+#### 8.2. Identificar Multiplicidad
+
+La **multiplicidad** especifica cuántas instancias de una clase pueden estar asociadas con instancias de otra.
+
+**Preguntas para identificar multiplicidad**:
+
+Para la relación "Cliente ─── Pedido":
+
+1. **De Cliente a Pedido**: "¿Cuántos pedidos puede tener un cliente?"
+   - Respuesta: Cero o muchos (`0..*` o `*`)
    
-2. **Relaciones**: Conexiones entre clases
-   - "El profesor **imparte** cursos" → relación entre Profesor y Curso
+2. **De Pedido a Cliente**: "¿Cuántos clientes puede tener un pedido?"
+   - Respuesta: Exactamente uno (`1`)
 
-#### 8.3. Ejemplo práctico de identificación de relaciones
-
-**Enunciado**: "Un cliente compra productos de diferentes categorías. Cada producto tiene un precio y un stock. El cliente añade productos a su carrito de compras antes de finalizar la orden."
-
-**Relaciones identificadas**:
-
-1. **Cliente - CarritoCompras**: Composición (1:1)
-   - El carrito pertenece al cliente y desaparece con él
-
-2. **CarritoCompras - Producto**: Asociación (1:*)
-   - El carrito contiene múltiples productos
-
-3. **Producto - Categoria**: Asociación (1:1 o *:1)
-   - Un producto pertenece a una categoría
-
-4. **Cliente - Orden**: Asociación (1:*)
-   - Un cliente puede tener múltiples órdenes
-
-### 9. Buenas Prácticas para Crear Diagramas de Clases
-
-#### 9.1. Principios de diseño
-
-**1. Principio de Responsabilidad Única (SRP)**
-
-Cada clase debe tener una única razón para cambiar.
-
-**Ejemplo correcto**:
+Resultado:
 ```
-Clase Usuario
-- Atributos de usuario
-- Métodos de gestión de usuario
-
-Clase AutenticacionService
-- Validar credenciales
-- Gestionar sesiones
+Cliente 1 ────── * Pedido
 ```
 
-**Ejemplo incorrecto**: Una clase `Usuario` que también maneja autenticación, persistencia en base de datos y envío de emails.
+**Técnica de identificación sistemática**:
 
-**2. Principio Abierto/Cerrado (OCP)**
+**Paso 1**: Para cada relación, formula las preguntas en ambas direcciones
 
-Las clases deben estar abiertas para extensión pero cerradas para modificación.
+**Paso 2**: Usa esta tabla de decisión:
 
-**Técnica**: Usar herencia e interfaces para añadir funcionalidad sin modificar código existente.
+| Situación | Multiplicidad | Notación |
+|-----------|---------------|----------|
+| Exactamente uno | uno | `1` |
+| Cero o uno (opcional) | cero o uno | `0..1` |
+| Uno o más (al menos uno) | uno a muchos | `1..*` |
+| Cero o más | cero a muchos | `*` o `0..*` |
+| Rango específico | rango | `2..5` |
 
-**3. Principio de Sustitución de Liskov (LSP)**
+**Ejemplo completo - Sistema universitario**:
 
-Las subclases deben ser sustituibles por sus clases base.
-
-**Ejemplo**: Si tienes una clase `Ave`, y creas `Pinguino` que hereda de `Ave`, pero no puede implementar `volar()`, entonces la jerarquía está mal diseñada.
-
-**4. Principio de Segregación de Interfaces (ISP)**
-
-Es mejor tener múltiples interfaces específicas que una interfaz general grande.
-
-**5. Principio de Inversión de Dependencias (DIP)**
-
-Depender de abstracciones, no de implementaciones concretas.
-
-#### 9.2. Cohesión y acoplamiento
-
-**Alta Cohesión**
-
-Las responsabilidades de una clase están fuertemente relacionadas.
-
-**Ejemplo de alta cohesión**:
 ```
-Clase Libro
-- titulo
-- autor
-- isbn
-- obtenerTitulo()
-- obtenerAutor()
+"Un estudiante puede matricularse en varias asignaturas (mínimo 1, máximo 8). Una asignatura tiene entre 5 y 50 estudiantes."
 ```
+
+Análisis:
+- Estudiante → Asignatura: 1 a 8 estudiantes por asignatura
+- Asignatura → Estudiante: 5 a 50 estudiantes por asignatura
+
+Diagrama:
+```
+┌───────────┐ 1..8    5..50 ┌────────────┐
+│ Estudiante│───────────────│ Asignatura │
+└───────────┘   matricula   └────────────┘
+```
+
+#### 8.3. Navegabilidad: Direccionalidad de las Relaciones
+
+La **navegabilidad** indica qué clase "conoce" a la otra.
+
+**Tipos de navegabilidad**:
+
+**1. Bidireccional (ambas direcciones)**
+```
+Usuario ←→ Pedido
+```
+- Usuario conoce sus Pedidos
+- Pedido conoce su Usuario
+
+**2. Unidireccional (una dirección)**
+```
+Usuario → Pedido
+```
+- Usuario conoce sus Pedidos
+- Pedido NO conoce su Usuario (no lo necesita)
+
+**3. No navegable**
+```
+Usuario ─ Pedido
+```
+- Ninguno tiene referencia directa al otro
+- Pueden estar conectados por una tercera clase
+
+**¿Cómo decidir la navegabilidad?**
+
+Pregunta clave: "¿Necesito acceder desde A a B? ¿Y desde B a A?"
+
+**Ejemplo**:
+```kotlin
+// Bidireccional
+class Usuario(val nombre: String) {
+    val pedidos: MutableList<Pedido> = mutableListOf()
+}
+
+class Pedido(val numero: String, val usuario: Usuario)
+
+// Unidireccional (solo Usuario → Pedido)
+class Usuario(val nombre: String) {
+    val pedidos: MutableList<Pedido> = mutableListOf()
+}
+
+class Pedido(val numero: String)  // No tiene referencia a Usuario
+```
+
+**Recomendación**: Comienza con unidireccional (menor acoplamiento). Añade bidireccionalidad solo si realmente la necesitas.
+
+#### 8.4. Relaciones Muchos a Muchos: El Caso Especial
+
+Las relaciones **muchos a muchos** (`* ─── *`) son comunes pero requieren atención especial.
+
+**Problema**: En implementación, necesitan una clase intermedia (tabla de unión)
+
+**Ejemplo - Matriculación**:
+```
+"Un estudiante se matricula en varias asignaturas. Una asignatura tiene varios estudiantes."
+```
+
+**Modelado simple** (conceptual):
+```
+Estudiante * ─────── * Asignatura
+```
+
+**Modelado detallado** (con clase de asociación):
+```
+┌───────────┐ 1      * ┌─────────────┐
+│ Estudiante│─────────│ Matricula   │
+└───────────┘         │─────────────│
+                      │ - fecha     │
+                      │ - semestre  │
+                      └──────┬──────┘
+                             │
+                            *│
+                      ┌──────┴──────┐
+                      │ Asignatura  │
+                      └─────────────┘
+```
+
+**¿Cuándo crear clase intermedia?**
+
+✅ **Crea clase intermedia si**:
+- La relación tiene atributos propios (fecha, calificación, etc.)
+- La relación tiene comportamiento propio (métodos)
+- Necesitas almacenar información histórica
+
+❌ **No creates clase intermedia si**:
+- La relación es pura sin información adicional
+- Puedes usar listas simples en ambas clases
+
+**Ejemplo en código**:
+
+```kotlin
+// Sin clase intermedia (relación pura)
+class Estudiante(val nombre: String) {
+    val asignaturas: MutableList<Asignatura> = mutableListOf()
+}
+
+class Asignatura(val nombre: String) {
+    val estudiantes: MutableList<Estudiante> = mutableListOf()
+}
+
+// Con clase intermedia (con información adicional)
+class Estudiante(val nombre: String)
+
+class Asignatura(val nombre: String)
+
+class Matricula(
+    val estudiante: Estudiante,
+    val asignatura: Asignatura,
+    val fecha: LocalDate,
+    val semestre: String,
+    var calificacion: Double? = null
+) {
+    fun aprobo(): Boolean = (calificacion ?: 0.0) >= 5.0
+}
+```
+
+#### 8.5. Proceso Paso a Paso para Identificar Relaciones
+
+**Paso 1: Listar todas las clases**
+
+Ejemplo: Usuario, Producto, Carrito, Pedido, ItemPedido
+
+**Paso 2: Para cada par de clases, pregúntate**:
+- "¿Existe una relación lógica entre estas dos clases?"
+- "¿Una necesita conocer a la otra para funcionar?"
+
+**Paso 3: Para cada relación identificada**:
+- ¿Qué tipo de relación es? (herencia, composición, asociación, etc.)
+- ¿Cuál es la multiplicidad?
+- ¿Es navegable? ¿En qué dirección?
+
+**Paso 4: Documentar**:
+- Dibuja la relación en el diagrama
+- Añade multiplicidad
+- Opcionalmente, añade nombre a la relación
+
+**Ejemplo completo - E-Commerce**:
+
+```
+Clases: Usuario, Carrito, Producto, Pedido
+
+Análisis:
+1. Usuario - Carrito: 
+   - Relación: Composición (♦)
+   - Multiplicidad: 1 Usuario tiene 1 Carrito
+   - Navegabilidad: Usuario → Carrito
+   
+2. Carrito - Producto:
+   - Relación: Agregación (◇) o Asociación con clase intermedia
+   - Multiplicidad: 1 Carrito tiene * Productos
+   - Mejor: Crear ItemCarrito intermedio
+   
+3. Usuario - Pedido:
+   - Relación: Asociación
+   - Multiplicidad: 1 Usuario realiza * Pedidos
+   - Navegabilidad: Bidireccional
+
+4. Pedido - Producto:
+   - Relación: Asociación con clase intermedia (ItemPedido)
+   - Multiplicidad: 1 Pedido tiene * ItemPedido, 1 Producto en * ItemPedido
+```
+
+Diagrama resultante:
+```
+       ┌─────────┐
+       │ Usuario │
+       └────┬────┘
+            │1
+            │tiene
+           ♦│
+       ┌────┴────────┐
+       │  Carrito    │
+       └─────┬───────┘
+             │1
+             │contiene
+             │
+            *│
+       ┌─────┴──────────┐
+       │  ItemCarrito   │
+       └────────────────┘
+             │*
+             │referencia
+             │1
+       ┌─────┴──────────┐
+       │   Producto     │
+       └────────────────┘
+```
+
+!!! tip "Consejo práctico"
+    No intentes identificar todas las relaciones de golpe. Hazlo iterativamente:
+    1. Primeras relaciones obvias
+    2. Refinamiento y relaciones secundarias
+    3. Validación con casos de uso
+
+
+### 9. Buenas Prácticas para Crear Diagramas de Clases Efectivos
+
+Crear un buen diagrama de clases va más allá de la notación correcta. Requiere aplicar principios de diseño que resulten en sistemas mantenibles.
+
+#### 9.1. Principio de Responsabilidad Única (SRP - Single Responsibility Principle)
+
+**Definición**: Una clase debe tener una, y solo una, razón para cambiar. En otras palabras, cada clase debe tener una única responsabilidad bien definida.
+
+**¿Por qué es importante?**
+- Facilita el mantenimiento: Cambios en un aspecto no afectan otros
+- Mejora la comprensión: Es más fácil entender qué hace una clase
+- Reduce acoplamiento: Menos dependencias entre clases
+- Facilita testing: Más fácil probar una responsabilidad única
+
+**Señales de violación del SRP**:
+- Clase con más de 10-15 métodos públicos
+- Nombre de clase con "Y" o "Gestor" (ej: "GestorUsuariosYPermisos")
+- Clase que cambia por múltiples razones diferentes
+- Métodos que no están relacionados entre sí
+
+**Ejemplo de violación**:
+
+```kotlin
+// ❌ MAL: Clase con múltiples responsabilidades
+class Usuario(
+    val nombre: String,
+    var email: String,
+    var password: String
+) {
+    // Responsabilidad 1: Gestión de usuario
+    fun cambiarEmail(nuevoEmail: String) {
+        email = nuevoEmail
+    }
+    
+    // Responsabilidad 2: Autenticación
+    fun validarPassword(pass: String): Boolean {
+        return password == pass
+    }
+    
+    // Responsabilidad 3: Envío de emails
+    fun enviarEmailBienvenida() {
+        // Lógica de envío de email
+        println("Enviando email a $email")
+    }
+    
+    // Responsabilidad 4: Persistencia
+    fun guardarEnBaseDatos() {
+        // Lógica de guardado
+        println("Guardando usuario en BD")
+    }
+    
+    // Responsabilidad 5: Logging
+    fun registrarAccion(accion: String) {
+        println("Usuario $nombre realizó: $accion")
+    }
+}
+```
+
+**Problemas de este diseño**:
+- Si cambia la forma de enviar emails, hay que modificar Usuario
+- Si cambia la base de datos, hay que modificar Usuario
+- Si cambia el sistema de logging, hay que modificar Usuario
+- La clase tiene demasiadas razones para cambiar
+
+**Solución aplicando SRP**:
+
+```kotlin
+// ✅ BIEN: Responsabilidades separadas
+
+// Responsabilidad 1: Representar un usuario (entidad del dominio)
+class Usuario(
+    val id: Int,
+    var nombre: String,
+    var email: String
+) {
+    fun cambiarEmail(nuevoEmail: String) {
+        email = nuevoEmail
+    }
+}
+
+// Responsabilidad 2: Autenticación
+class ServicioAutenticacion {
+    fun validarCredenciales(email: String, password: String): Boolean {
+        // Lógica de validación
+        return true
+    }
+    
+    fun cambiarPassword(usuario: Usuario, nuevaPassword: String) {
+        // Lógica de cambio de contraseña
+    }
+}
+
+// Responsabilidad 3: Comunicación
+class ServicioEmail {
+    fun enviarBienvenida(usuario: Usuario) {
+        println("Enviando email de bienvenida a ${usuario.email}")
+    }
+    
+    fun enviarRecuperacionPassword(usuario: Usuario) {
+        println("Enviando email de recuperación a ${usuario.email}")
+    }
+}
+
+// Responsabilidad 4: Persistencia
+class RepositorioUsuarios {
+    private val usuarios = mutableListOf<Usuario>()
+    
+    fun guardar(usuario: Usuario) {
+        usuarios.add(usuario)
+    }
+    
+    fun buscarPorEmail(email: String): Usuario? {
+        return usuarios.find { it.email == email }
+    }
+}
+
+// Responsabilidad 5: Auditoría
+class ServicioAuditoria {
+    fun registrarAccion(usuario: Usuario, accion: String) {
+        println("[${java.time.LocalDateTime.now()}] Usuario ${usuario.nombre}: $accion")
+    }
+}
+```
+
+**Beneficios del diseño refactorizado**:
+- Cada clase tiene una responsabilidad clara
+- Cambios en email no afectan a autenticación
+- Cambios en BD no afectan a logging
+- Más fácil de testear (puedes mockear cada servicio)
+- Más fácil de extender (nuevo tipo de notificación = nueva clase)
+
+**Diagrama comparativo**:
+
+```
+❌ ANTES:
+┌─────────────────────────┐
+│       Usuario           │
+│─────────────────────────│
+│ - nombre                │
+│ - email                 │
+│ - password              │
+│─────────────────────────│
+│ + cambiarEmail()        │
+│ + validarPassword()     │
+│ + enviarEmailBienvenida()│
+│ + guardarEnBaseDatos()  │
+│ + registrarAccion()     │
+└─────────────────────────┘
+
+✅ DESPUÉS:
+┌──────────┐     usa    ┌───────────────────┐
+│ Usuario  │────────────│ ServicioAuth      │
+└──────────┘            └───────────────────┘
+     │ usa
+     ├────────────────────┐
+     │                    │
+┌────┴──────────┐  ┌──────┴──────────────┐
+│ServicioEmail  │  │ RepositorioUsuarios │
+└───────────────┘  └─────────────────────┘
+     │
+     │ usa
+┌────┴──────────────┐
+│ServicioAuditoria  │
+└───────────────────┘
+```
+
+#### 9.2. Alta Cohesión
+
+**Definición**: Los elementos dentro de una clase deben estar fuertemente relacionados entre sí. Una clase cohesiva hace una cosa y la hace bien.
+
+**Medidas de cohesión**:
+- **Cohesión funcional** (mejor): Todos los métodos trabajan hacia un objetivo común
+- **Cohesión secuencial**: Los métodos se ejecutan en secuencia
+- **Cohesión comunicacional**: Los métodos usan los mismos datos
+- **Cohesión temporal**: Los métodos se ejecutan al mismo tiempo
+- **Cohesión lógica** (peor): Los métodos solo están agrupados por ser similares
 
 **Ejemplo de baja cohesión**:
-```
-Clase Utilidades
-- validarEmail()
-- calcularFactorial()
-- conectarBaseDatos()
-- enviarEmail()
-```
 
-**Bajo Acoplamiento** 
-
-Las clases tienen pocas dependencias entre sí.
-
-**Técnicas para reducir acoplamiento**:
-
-- Usar interfaces
-- Inyección de dependencias
-- Patrones de diseño (Factory, Strategy, Observer)
-
-#### 9.3. Nomenclatura efectiva
-
-**Nombres de clases**:
-
-- Sustantivos en singular
-- Descriptivos y específicos
-- PascalCase: `CarritoCompras`, `OrdenDeCompra`
-
-**Evitar**:
-
-- Nombres genéricos: `Gestor`, `Manager`, `Handler` (a menos que sean realmente necesarios)
-- Abreviaturas confusas
-- Nombres muy largos
-
-**Nombres de atributos**:
-
-- Sustantivos descriptivos
-- camelCase: `nombreCompleto`, `fechaNacimiento`
-- Evitar prefijos innecesarios: `strNombre` incorrecto, `nombre` correcto
-
-**Nombres de métodos**:
-
-- Verbos que describen la acción
-- camelCase: `calcularTotal()`, `enviarEmail()`
-- Getters/Setters: `getNombre()`, `setNombre()`
-
-#### 9.4. Organización visual del diagrama
-
-**1. Distribución espacial**
-
-- **Herencia**: Clases padre arriba, hijas abajo
-- **Composición/Agregación**: Contenedor a la izquierda, contenido a la derecha
-- **Asociaciones**: Minimizar cruces de líneas
-
-**2. Agrupación lógica**
-
-- Agrupar clases relacionadas cerca unas de otras
-- Usar colores o regiones para separar módulos
-- Capas: Presentación, Lógica de Negocio, Datos
-
-**3. Niveles de abstracción**
-
-- **Diagrama de alto nivel**: Solo nombres de clases
-- **Diagrama detallado**: Con atributos y métodos principales
-- **Diagrama completo**: Todos los detalles
-
-**Ejemplo de progresión**:
-
-**Nivel 1 - Alto nivel**:
-```
-┌──────────┐     ┌──────────┐
-│ Cliente  │────→│ Pedido   │
-└──────────┘     └──────────┘
+```kotlin
+// ❌ MAL: Baja cohesión
+class UtilidadesVarias {
+    fun calcularIVA(precio: Double): Double {
+        return precio * 0.21
+    }
+    
+    fun validarEmail(email: String): Boolean {
+        return email.contains("@")
+    }
+    
+    fun formatearFecha(fecha: LocalDate): String {
+        return fecha.toString()
+    }
+    
+    fun conectarBaseDatos(): Connection {
+        // Lógica de conexión
+        return mockConnection()
+    }
+}
 ```
 
-**Nivel 2 - Medio**:
+**Problema**: Los métodos no están relacionados entre sí. No hay un concepto unificador.
+
+**Ejemplo de alta cohesión**:
+
+```kotlin
+// ✅ BIEN: Alta cohesión
+class CalculadoraPrecios {
+    private val tasaIVA = 0.21
+    
+    fun calcularIVA(precioBase: Double): Double {
+        return precioBase * tasaIVA
+    }
+    
+    fun calcularPrecioFinal(precioBase: Double): Double {
+        return precioBase + calcularIVA(precioBase)
+    }
+    
+    fun calcularDescuento(precio: Double, porcentaje: Double): Double {
+        return precio * (porcentaje / 100.0)
+    }
+    
+    fun calcularPrecioConDescuento(
+        precioBase: Double, 
+        porcentajeDescuento: Double
+    ): Double {
+        val descuento = calcularDescuento(precioBase, porcentajeDescuento)
+        val precioConDescuento = precioBase - descuento
+        return calcularPrecioFinal(precioConDescuento)
+    }
+}
 ```
-┌──────────────┐     ┌────────────────┐
-│   Cliente    │     │    Pedido      │
-├──────────────┤     ├────────────────┤
-│ - nombre     │────→│ - fecha        │
-│ - email      │     │ - total        │
-└──────────────┘     └────────────────┘
+
+**Por qué es cohesiva**: Todos los métodos están relacionados con el cálculo de precios.
+
+#### 9.3. Bajo Acoplamiento
+
+**Definición**: Las clases deben depender lo menos posible de otras clases. Cada dependencia es un "cable" que conecta dos clases - menos cables = más flexibilidad.
+
+**Tipos de acoplamiento (de peor a mejor)**:
+1. **Acoplamiento de contenido**: Una clase modifica datos internos de otra (muy malo)
+2. **Acoplamiento común**: Clases comparten datos globales (malo)
+3. **Acoplamiento de control**: Una clase controla el flujo de otra (malo)
+4. **Acoplamiento de datos**: Clases comparten datos mediante parámetros (aceptable)
+5. **Acoplamiento de mensaje**: Clases se comunican solo mediante interfaces (bueno)
+6. **Sin acoplamiento**: Clases independientes (ideal, pero poco práctico)
+
+**Señales de alto acoplamiento**:
+- Clases que usan muchos métodos de otras clases
+- Cambios en una clase requieren cambios en muchas otras
+- Clases que conocen detalles internos de otras
+- Jerarquías de dependencia profundas
+
+**Ejemplo de alto acoplamiento**:
+
+```kotlin
+// ❌ MAL: Alto acoplamiento
+class Pedido(val cliente: Cliente) {
+    fun procesarPago() {
+        // Accede directamente a detalles internos del cliente
+        if (cliente.tarjetaCredito.saldo > calcularTotal()) {
+            cliente.tarjetaCredito.saldo -= calcularTotal()
+            cliente.historialCompras.add(this)
+            cliente.puntosFidelidad += calcularPuntos()
+        }
+    }
+    
+    private fun calcularTotal(): Double = 100.0
+    private fun calcularPuntos(): Int = 10
+}
+
+class Cliente(
+    val tarjetaCredito: TarjetaCredito,
+    val historialCompras: MutableList<Pedido>,
+    var puntosFidelidad: Int
+)
 ```
 
-**Nivel 3 - Detallado**: Con todos los métodos
+**Problemas**:
+- Pedido conoce la estructura interna de Cliente
+- Pedido conoce la estructura de TarjetaCredito
+- Si cambias Cliente, probablemente debes cambiar Pedido
 
-#### 9.5. División de diagramas grandes
+**Ejemplo de bajo acoplamiento**:
 
-**Estrategias**:
+```kotlin
+// ✅ BIEN: Bajo acoplamiento usando interfaces
+interface ProcesadorPagos {
+    fun procesarPago(monto: Double): Boolean
+}
 
-1. **Por módulos funcionales**
-   - Diagrama de gestión de usuarios
-   - Diagrama de gestión de productos
-   - Diagrama de gestión de pedidos
+interface GestorPuntos {
+    fun agregarPuntos(puntos: Int)
+}
 
-2. **Por capas**
-   - Diagrama de capa de presentación
-   - Diagrama de capa de lógica de negocio
-   - Diagrama de capa de acceso a datos
+class Pedido(
+    private val procesadorPagos: ProcesadorPagos,
+    private val gestorPuntos: GestorPuntos
+) {
+    fun procesarPago() {
+        val exito = procesadorPagos.procesarPago(calcularTotal())
+        if (exito) {
+            gestorPuntos.agregarPuntos(calcularPuntos())
+        }
+    }
+    
+    private fun calcularTotal(): Double = 100.0
+    private fun calcularPuntos(): Int = 10
+}
 
-3. **Por paquetes**
-   - Cada paquete tiene su propio diagrama
-   - Un diagrama general muestra las relaciones entre paquetes
-
-#### 9.6. Uso efectivo de colores
-
-**Convención sugerida**:
-
-- 🔵 **Azul**: Clases del dominio (entidades principales)
-- 🟢 **Verde**: Servicios y controladores
-- 🟡 **Amarillo**: Utilidades y helpers
-- 🔴 **Rojo**: Excepciones y errores
-- 🟣 **Morado**: Interfaces
-- 🟠 **Naranja**: Clases abstractas
+class Cliente : ProcesadorPagos, GestorPuntos {
+    private val tarjetaCredito: TarjetaCredito = TarjetaCredito()
+    private var puntosFidelidad: Int = 0
+    
+    override fun procesarPago(monto: Double): Boolean {
+        return tarjetaCredito.cobrar(monto)
+    }
+    
+    override fun agregarPuntos(puntos: Int) {
+        puntosFidelidad += puntos
+    }
+}
+```
 
 **Beneficios**:
-- Identificación rápida del tipo de clase
-- Mejor comprensión visual
-- Facilita la navegación en diagramas complejos
+- Pedido no conoce detalles internos de Cliente
+- Puedes cambiar la implementación de Cliente sin afectar Pedido
+- Puedes probar Pedido con mocks de las interfaces
+- Más flexible: podrías usar diferentes procesadores de pago
+
+**Estrategias para reducir acoplamiento**:
+1. **Usar interfaces** en vez de clases concretas
+2. **Inyección de dependencias** en vez de crear objetos dentro de la clase
+3. **Ley de Demeter** ("no hables con extraños")
+4. **Ocultamiento de información** (encapsulación fuerte)
+
+#### 9.4. Ley de Demeter (Principio del Mínimo Conocimiento)
+
+**Definición**: Un objeto solo debería llamar métodos de:
+- Sí mismo
+- Sus parámetros
+- Objetos que crea
+- Sus componentes directos
+
+**No debería llamar** métodos de objetos retornados por otros métodos.
+
+**Violación clásica**:
+
+```kotlin
+// ❌ MAL: Violación de Ley de Demeter
+class Pedido(val cliente: Cliente) {
+    fun obtenerCiudadCliente(): String {
+        // Encadenamiento excesivo
+        return cliente.getDireccion().getCiudad().getNombre()
+    }
+}
+```
+
+**Problemas**:
+- Pedido conoce 3 niveles de la estructura de Cliente
+- Si cambias cualquier nivel intermedio, Pedido se rompe
+
+**Solución**:
+
+```kotlin
+// ✅ BIEN: Respeta Ley de Demeter
+class Cliente {
+    private val direccion: Direccion = Direccion()
+    
+    // Método de conveniencia que oculta la estructura interna
+    fun obtenerCiudad(): String {
+        return direccion.obtenerNombreCiudad()
+    }
+}
+
+class Pedido(val cliente: Cliente) {
+    fun obtenerCiudadCliente(): String {
+        // Solo un nivel de acceso
+        return cliente.obtenerCiudad()
+    }
+}
+```
+
+#### 9.5. Encapsulamiento Efectivo
+
+**Principios de encapsulamiento**:
+
+1. **Ocultar datos**: Atributos privados, acceso mediante métodos
+2. **Ocultar implementación**: No exponer detalles internos
+3. **Exponer comportamiento**: Interfaces públicas claras
+
+**Ejemplo de mal encapsulamiento**:
+
+```kotlin
+// ❌ MAL: Expone demasiado
+class CuentaBancaria {
+    var saldo: Double = 0.0  // Público - cualquiera puede modificar
+    var movimientos: MutableList<Double> = mutableListOf()  // Mutable y público
+}
+
+// Uso problemático
+val cuenta = CuentaBancaria()
+cuenta.saldo = 1000000.0  // ¡Fraude! Modificación directa
+cuenta.movimientos.clear()  // ¡Borró el historial!
+```
+
+**Ejemplo de buen encapsulamiento**:
+
+```kotlin
+// ✅ BIEN: Encapsulamiento apropiado
+class CuentaBancaria(private var saldo: Double = 0.0) {
+    private val movimientos: MutableList<Movimiento> = mutableListOf()
+    
+    // Acceso controlado al saldo
+    fun obtenerSaldo(): Double = saldo
+    
+    // Modificación controlada con validación
+    fun depositar(monto: Double) {
+        require(monto > 0) { "El monto debe ser positivo" }
+        saldo += monto
+        movimientos.add(Movimiento(tipo = "DEPOSITO", monto = monto))
+    }
+    
+    fun retirar(monto: Double): Boolean {
+        require(monto > 0) { "El monto debe ser positivo" }
+        return if (saldo >= monto) {
+            saldo -= monto
+            movimientos.add(Movimiento(tipo = "RETIRO", monto = monto))
+            true
+        } else {
+            false
+        }
+    }
+    
+    // Vista de solo lectura del historial
+    fun obtenerHistorial(): List<Movimiento> = movimientos.toList()
+}
+
+data class Movimiento(
+    val tipo: String,
+    val monto: Double,
+    val fecha: LocalDateTime = LocalDateTime.now()
+)
+```
+
+**Beneficios**:
+- No se puede modificar el saldo directamente
+- Validaciones aseguran integridad de datos
+- Historial inmutable desde el exterior
+- Cambios internos no afectan a clientes de la clase
+
+#### 9.6. Favorecer Composición sobre Herencia
+
+**Regla general**: Usa composición (tener un) en vez de herencia (ser un) cuando sea posible.
+
+**¿Por qué?**
+- Mayor flexibilidad
+- Menor acoplamiento
+- Evita jerarquías frágiles
+- Más fácil de cambiar en runtime
+
+**Ejemplo de abuso de herencia**:
+
+```kotlin
+// ❌ CUESTIONABLE: Herencia para reutilizar código
+class ArrayList {
+    fun add(elemento: Any) { }
+    fun remove(elemento: Any) { }
+    fun size(): Int = 0
+}
+
+class Pila : ArrayList() {
+    fun push(elemento: Any) = add(elemento)
+    fun pop(): Any? {
+        if (size() > 0) {
+            val elem = get(size() - 1)
+            remove(elem)
+            return elem
+        }
+        return null
+    }
+}
+```
+
+**Problema**: Pila expone métodos de ArrayList que no deberían estar disponibles (add, remove directos)
+
+**Mejor con composición**:
+
+```kotlin
+// ✅ MEJOR: Composición
+class Pila {
+    private val elementos = mutableListOf<Any>()
+    
+    fun push(elemento: Any) {
+        elementos.add(elemento)
+    }
+    
+    fun pop(): Any? {
+        return if (elementos.isNotEmpty()) {
+            elementos.removeAt(elementos.size - 1)
+        } else {
+            null
+        }
+    }
+    
+    fun size(): Int = elementos.size
+    
+    fun isEmpty(): Boolean = elementos.isEmpty()
+}
+```
+
+**Cuándo sí usar herencia**:
+- Hay una relación "es-un" genuina
+- La subclase ES un tipo más específico de la superclase
+- Polimorfismo es esencial
+- Ejemplo: Perro ES un Animal
+
+**Cuándo usar composición**:
+- Relación "tiene-un" o "usa-un"
+- Quieres reutilizar código pero no hay relación "es-un"
+- Necesitas cambiar comportamiento en runtime
+- Ejemplo: Coche TIENE un Motor
+
 
 ### 10. Proceso Completo: Ejemplo Paso a Paso
 
-Veamos un ejemplo completo del proceso de identificación de clases para un **Sistema de Gestión de Biblioteca**.
+Para consolidar todos los conceptos, vamos a realizar un análisis completo desde cero de un sistema real.
 
-#### 10.1. Paso 1: Análisis del enunciado
+#### 10.1. Enunciado del Problema: Sistema de Gestión de Gimnasio
 
-**Enunciado**:
+**Descripción del sistema**:
 
-"La biblioteca necesita un sistema para gestionar sus libros y préstamos. Los usuarios pueden registrarse proporcionando su nombre, dirección y teléfono. Cada libro tiene un título, autor, ISBN y una o más copias físicas. Los usuarios registrados pueden solicitar el préstamo de una copia disponible por un período de 14 días. El bibliotecario puede extender el período de préstamo si no hay reservas pendientes. El sistema debe registrar la fecha de préstamo y devolución."
+> "Un gimnasio necesita un sistema para gestionar sus operaciones. Los clientes se registran proporcionando nombre, teléfono y fecha de nacimiento. Cada cliente puede contratar diferentes tipos de membresías: mensual, trimestral o anual. Las membresías tienen un precio y fecha de inicio y vencimiento.
+>
+> El gimnasio ofrece clases grupales como yoga, spinning y pilates. Cada clase tiene un instructor asignado, un horario específico (día y hora), capacidad máxima y sala donde se imparte. Los clientes pueden reservar plazas en las clases, pero no pueden exceder la capacidad máxima.
+>
+> Los instructores son empleados del gimnasio con nombre, especialidad y horarios de disponibilidad. Un instructor puede impartir múltiples clases, pero no puede tener dos clases al mismo tiempo.
+>
+> El gimnasio tiene diferentes salas (Sala A, B, C) con capacidades diferentes. El sistema debe registrar la asistencia de clientes a las clases para generar estadísticas."
 
-#### 10.2. Paso 2: Extraer sustantivos
+#### 10.2. Paso 1: Análisis de Sustantivos
 
-**Sustantivos encontrados**:
-- Biblioteca
-- Sistema
-- Libros
-- Préstamos
-- Usuarios
-- Nombre
-- Dirección
-- Teléfono
-- Título
-- Autor
-- ISBN
-- Copias físicas
-- Período
-- Días
-- Bibliotecario
-- Reservas
-- Fecha de préstamo
-- Fecha de devolución
+**Sustantivos identificados** (marcados en el texto):
 
-#### 10.3. Paso 3: Analizar cada candidato
+1. Gimnasio
+2. Sistema
+3. Operaciones
+4. Clientes
+5. Nombre
+6. Teléfono
+7. Fecha de nacimiento
+8. Tipos de membresías
+9. Membresía
+10. Mensual, trimestral, anual (tipos)
+11. Precio
+12. Fecha de inicio
+13. Fecha de vencimiento
+14. Clases grupales
+15. Yoga, spinning, pilates (tipos)
+16. Instructor
+17. Horario
+18. Día
+19. Hora
+20. Capacidad máxima
+21. Sala
+22. Reserva
+23. Plaza
+24. Empleados
+25. Especialidad
+26. Horarios de disponibilidad
+27. Salas (A, B, C)
+28. Capacidades
+29. Asistencia
+30. Estadísticas
 
-| Candidato        | ¿Clase?   | Razón                                    |
-|------------------|-----------|------------------------------------------|
-| Biblioteca       | ❌ No      | Contenedor general, puede ser opcional   |
-| Sistema          | ❌ No      | Metalenguaje                             |
-| Libros           | ✅ Sí      | Entidad principal del dominio            |
-| Préstamos        | ✅ Sí      | Interacción importante con estado        |
-| Usuarios         | ✅ Sí      | Rol principal                            |
-| Nombre           | ❌ No      | Atributo de Usuario                      |
-| Dirección        | ⚠️ Quizás | Podría ser clase si es compleja          |
-| Teléfono         | ❌ No      | Atributo de Usuario                      |
-| Título           | ❌ No      | Atributo de Libro                        |
-| Autor            | ⚠️ Quizás | Podría ser clase si almacenamos más info |
-| ISBN             | ❌ No      | Atributo de Libro                        |
-| Copias físicas   | ✅ Sí      | Importante distinguir libro de copia     |
-| Período          | ❌ No      | Atributo calculado                       |
-| Días             | ❌ No      | Valor numérico                           |
-| Bibliotecario    | ✅ Sí      | Rol con permisos especiales              |
-| Reservas         | ✅ Sí      | Funcionalidad importante                 |
-| Fecha préstamo   | ❌ No      | Atributo de Préstamo                     |
-| Fecha devolución | ❌ No      | Atributo de Préstamo                     |
+#### 10.3. Paso 2: Filtrado de Candidatos
 
-#### 10.4. Paso 4: Clases finales
+Aplicamos los criterios de descarte:
 
-**Clases firmes**:
-1. `Libro` - Información del libro
-2. `CopiaLibro` - Ejemplar físico específico
-3. `Usuario` - Usuario registrado
-4. `Bibliotecario` - Usuario con permisos especiales (¿herencia de Usuario?)
-5. `Prestamo` - Registro de préstamo
-6. `Reserva` - Registro de reserva
+**Descartar por ser demasiado genéricos**:
+- ❌ Sistema: Demasiado genérico
+- ❌ Operaciones: No es una entidad concreta
+- ❌ Estadísticas: Es un resultado, no una entidad
 
-**Clases opcionales para considerar**:
-- `Autor` - Si necesitamos más información sobre autores
-- `Direccion` - Si la dirección es compleja (calle, ciudad, código postal, país)
+**Descartar por ser atributos**:
+- ❌ Nombre: Atributo de Cliente
+- ❌ Teléfono: Atributo de Cliente
+- ❌ Fecha de nacimiento: Atributo de Cliente
+- ❌ Precio: Atributo de Membresía
+- ❌ Fecha de inicio: Atributo de Membresía
+- ❌ Fecha de vencimiento: Atributo de Membresía
+- ❌ Horario, Día, Hora: Atributos de Clase
+- ❌ Capacidad máxima: Atributo de Clase/Sala
+- ❌ Especialidad: Atributo de Instructor
 
-#### 10.5. Paso 5: Identificar relaciones
+**Descartar por redundancia**:
+- ❌ Empleados: Instructor ES un empleado (usar solo Instructor)
+- ❌ Plaza: Es la misma entidad que Reserva
 
-1. `Libro` **1:*** `CopiaLibro` (Composición)
-   - Un libro tiene múltiples copias
-   
-2. `Usuario` **1:*** `Prestamo` (Asociación)
-   - Un usuario puede tener múltiples préstamos
+**Considerar tipos como enums o subclases**:
+- 🔄 Tipos de membresías (mensual, trimestral, anual): Enum o atributo
+- 🔄 Tipos de clases (yoga, spinning, pilates): Atributo o catálogo
 
-3. `CopiaLibro` **1:*** `Prestamo` (Asociación)
-   - Una copia puede estar en múltiples préstamos (en diferentes momentos)
+**Clases candidatas finales**:
+1. ✅ **Cliente**: Entidad principal del dominio
+2. ✅ **Membresía**: Representa contrato de servicio
+3. ✅ **Clase**: Actividad grupal que se ofrece
+4. ✅ **Instructor**: Persona que imparte clases
+5. ✅ **Sala**: Espacio físico donde ocurren las clases
+6. ✅ **Reserva**: Asociación entre Cliente y Clase
+7. ✅ **Asistencia**: Registro de que un cliente asistió a una clase
+8. ⚠️ **Gimnasio**: Podría ser la clase principal del sistema
 
-4. `Bibliotecario` **es un** `Usuario` (Herencia)
-   - Bibliotecario hereda de Usuario con permisos adicionales
+#### 10.4. Paso 3: Definir Responsabilidades
 
-5. `Usuario` **1:*** `Reserva` (Asociación)
-   - Un usuario puede hacer múltiples reservas
+**Cliente**:
+- Responsabilidad: Representar un miembro del gimnasio
+- Atributos: id, nombre, teléfono, fechaNacimiento
+- Métodos: obtenerEdad(), tieneMembresiActiva()
 
-6. `Libro` **1:*** `Reserva` (Asociación)
-   - Un libro puede tener múltiples reservas
+**Membresía**:
+- Responsabilidad: Gestionar el contrato de servicio
+- Atributos: id, tipo, precio, fechaInicio, fechaVencimiento, cliente
+- Métodos: estaVigente(), renovar(), calcularPrecio()
 
-#### 10.6. Paso 6: Definir atributos y métodos
+**Clase**:
+- Responsabilidad: Representar una actividad programada
+- Atributos: id, nombre, instructor, sala, horario, capacidadMaxima
+- Métodos: tieneEspacioDisponible(), obtenerNumeroReservas()
 
-**Clase Usuario**:
+**Instructor**:
+- Responsabilidad: Persona que imparte clases
+- Atributos: id, nombre, especialidad
+- Métodos: puedeImpartir(clase), tieneDisponibilidad(horario)
+
+**Sala**:
+- Responsabilidad: Espacio físico
+- Atributos: id, nombre, capacidad
+- Métodos: estaDisponible(horario)
+
+**Reserva**:
+- Responsabilidad: Asociar cliente con clase
+- Atributos: id, cliente, clase, fechaReserva
+- Métodos: cancelar(), confirmar()
+
+**Asistencia**:
+- Responsabilidad: Registrar asistencia real
+- Atributos: id, reserva, fechaAsistencia, asistio
+- Métodos: marcarAsistencia()
+
+#### 10.5. Paso 4: Identificar Relaciones
+
+**Cliente - Membresía**:
+- Tipo: Composición (♦) o Asociación fuerte
+- Multiplicidad: 1 Cliente tiene 0..1 Membresía activa (puede tener historial de varias)
+- Navegabilidad: Cliente → Membresía
+
+**Cliente - Reserva**:
+- Tipo: Agregación (◇)
+- Multiplicidad: 1 Cliente tiene * Reservas
+- Navegabilidad: Bidireccional
+
+**Clase - Reserva**:
+- Tipo: Agregación (◇)
+- Multiplicidad: 1 Clase tiene * Reservas
+- Navegabilidad: Bidireccional
+
+**Clase - Instructor**:
+- Tipo: Asociación
+- Multiplicidad: * Clases tienen 1 Instructor, 1 Instructor imparte * Clases
+- Navegabilidad: Bidireccional
+
+**Clase - Sala**:
+- Tipo: Asociación
+- Multiplicidad: * Clases se imparten en 1 Sala, 1 Sala tiene * Clases
+- Navegabilidad: Clase → Sala
+
+**Reserva - Asistencia**:
+- Tipo: Composición (♦)
+- Multiplicidad: 1 Reserva tiene 0..1 Asistencia
+- Navegabilidad: Reserva → Asistencia
+
+#### 10.6. Paso 5: Diagrama UML Resultante
+
 ```
-+ nombre: String
-+ direccion: String
-+ telefono: String
-+ email: String
-+ fechaRegistro: Date
-+ prestarLibro(copia: CopiaLibro): Prestamo
-+ reservarLibro(libro: Libro): Reserva
+┌─────────────┐ 1          0..1 ┌──────────────┐
+│   Cliente   │♦───────────────│  Membresía   │
+│─────────────│  tiene         │──────────────│
+│ - id        │                │ - id         │
+│ - nombre    │                │ - tipo       │
+│ - telefono  │                │ - precio     │
+│ - fechaNac  │                │ - fechaIni   │
+│─────────────│                │ - fechaVenc  │
+│+ getEdad()  │                │──────────────│
+│+ tieneMembr│                │+ estaVigente│
+└─────────────┘                └──────────────┘
+       │1
+       │
+       │ realiza
+       │
+      *│
+┌──────┴──────┐              ┌──────────────┐
+│   Reserva   │*          1  │    Clase     │
+│─────────────│──────────────│──────────────│
+│ - id        │ para         │ - id         │
+│ - fechaRes  │              │ - nombre     │
+│─────────────│              │ - horario    │
+│+ cancelar() │              │ - capacidad  │
+└─────────────┘              │──────────────│
+       │1                    │+ hayEspacio()│
+       │                     └───────┬──────┘
+       │ tiene                       │1
+       │                             │ imparte
+       │0..1                         │*
+┌──────┴──────┐              ┌───────┴──────┐
+│  Asistencia │              │  Instructor  │
+│─────────────│              │──────────────│
+│ - id        │              │ - id         │
+│ - asistio   │              │ - nombre     │
+│ - fecha     │              │ - especial   │
+│─────────────│              │──────────────│
+│+ marcar()   │              │+ puedImp()   │
+└─────────────┘              └──────────────┘
+                                     
+                                ┌──────────┐
+                                │   Sala   │
+                            1  *│──────────│
+                      ┌─────────│ - id     │
+                      │se imp en│ - nombre │
+                      │         │ - capac  │
+                      │         │──────────│
+                      │         │+ estaDisp│
+                      │         └──────────┘
+┌─────────────────────┘
+│ Clase
+└─────────────────────
 ```
 
-**Clase Libro**:
+#### 10.7. Paso 6: Implementación en Kotlin
+
+```kotlin
+// Enums para tipos
+enum class TipoMembresia(val meses: Int, val precio: Double) {
+    MENSUAL(1, 50.0),
+    TRIMESTRAL(3, 130.0),
+    ANUAL(12, 480.0)
+}
+
+enum class TipoClase {
+    YOGA, SPINNING, PILATES, CROSSFIT
+}
+
+// Entidades principales
+data class Cliente(
+    val id: Int,
+    var nombre: String,
+    var telefono: String,
+    val fechaNacimiento: LocalDate
+) {
+    private var membresiaActual: Membresia? = null
+    private val reservas: MutableList<Reserva> = mutableListOf()
+    
+    fun obtenerEdad(): Int {
+        return Period.between(fechaNacimiento, LocalDate.now()).years
+    }
+    
+    fun tieneMembresiActiva(): Boolean {
+        return membresiaActual?.estaVigente() ?: false
+    }
+    
+    fun contratarMembresia(tipo: TipoMembresia): Membresia {
+        val nuevaMembresia = Membresia(
+            id = generarId(),
+            tipo = tipo,
+            cliente = this
+        )
+        membresiaActual = nuevaMembresia
+        return nuevaMembresia
+    }
+    
+    fun reservarClase(clase: Clase): Reserva? {
+        if (!tieneMembresiActiva()) {
+            println("Debe tener membresía activa para reservar")
+            return null
+        }
+        
+        if (!clase.hayEspacioDisponible()) {
+            println("Clase llena")
+            return null
+        }
+        
+        val reserva = Reserva(
+            id = generarId(),
+            cliente = this,
+            clase = clase
+        )
+        reservas.add(reserva)
+        return reserva
+    }
+}
+
+data class Membresia(
+    val id: Int,
+    val tipo: TipoMembresia,
+    val cliente: Cliente,
+    val fechaInicio: LocalDate = LocalDate.now()
+) {
+    val fechaVencimiento: LocalDate = fechaInicio.plusMonths(tipo.meses.toLong())
+    val precio: Double = tipo.precio
+    
+    fun estaVigente(): Boolean {
+        return LocalDate.now().isBefore(fechaVencimiento) || 
+               LocalDate.now().isEqual(fechaVencimiento)
+    }
+    
+    fun diasRestantes(): Long {
+        return ChronoUnit.DAYS.between(LocalDate.now(), fechaVencimiento)
+    }
+    
+    fun renovar(): Membresia {
+        return Membresia(
+            id = generarId(),
+            tipo = tipo,
+            cliente = cliente,
+            fechaInicio = fechaVencimiento.plusDays(1)
+        )
+    }
+}
+
+data class Instructor(
+    val id: Int,
+    var nombre: String,
+    var especialidad: String
+) {
+    private val clases: MutableList<Clase> = mutableListOf()
+    
+    fun agregarClase(clase: Clase) {
+        clases.add(clase)
+    }
+    
+    fun obtenerClases(): List<Clase> = clases.toList()
+    
+    fun tieneDisponibilidad(horario: LocalDateTime): Boolean {
+        return clases.none { 
+            it.horario == horario 
+        }
+    }
+}
+
+data class Sala(
+    val id: Int,
+    val nombre: String,
+    val capacidad: Int
+) {
+    fun estaDisponible(horario: LocalDateTime): Boolean {
+        // Lógica para verificar disponibilidad
+        return true
+    }
+}
+
+data class Clase(
+    val id: Int,
+    val tipo: TipoClase,
+    val instructor: Instructor,
+    val sala: Sala,
+    val horario: LocalDateTime,
+    val capacidadMaxima: Int = sala.capacidad
+) {
+    private val reservas: MutableList<Reserva> = mutableListOf()
+    
+    init {
+        instructor.agregarClase(this)
+    }
+    
+    fun hayEspacioDisponible(): Boolean {
+        return reservas.size < capacidadMaxima
+    }
+    
+    fun obtenerNumeroReservas(): Int = reservas.size
+    
+    fun agregarReserva(reserva: Reserva) {
+        if (hayEspacioDisponible()) {
+            reservas.add(reserva)
+        }
+    }
+    
+    fun obtenerPorcentajeOcupacion(): Double {
+        return (reservas.size.toDouble() / capacidadMaxima) * 100
+    }
+}
+
+data class Reserva(
+    val id: Int,
+    val cliente: Cliente,
+    val clase: Clase,
+    val fechaReserva: LocalDateTime = LocalDateTime.now()
+) {
+    private var asistencia: Asistencia? = null
+    var estado: EstadoReserva = EstadoReserva.CONFIRMADA
+    
+    init {
+        clase.agregarReserva(this)
+    }
+    
+    fun cancelar() {
+        estado = EstadoReserva.CANCELADA
+    }
+    
+    fun marcarAsistencia() {
+        asistencia = Asistencia(
+            id = generarId(),
+            reserva = this,
+            asistio = true
+        )
+    }
+}
+
+enum class EstadoReserva {
+    CONFIRMADA, CANCELADA, COMPLETADA
+}
+
+data class Asistencia(
+    val id: Int,
+    val reserva: Reserva,
+    val fechaAsistencia: LocalDateTime = LocalDateTime.now(),
+    var asistio: Boolean = false
+)
+
+// Función auxiliar para generar IDs
+private var contadorId = 1
+fun generarId(): Int = contadorId++
 ```
-+ isbn: String
-+ titulo: String
-+ autor: String
-+ editorial: String
-+ anioPublicacion: Int
-+ obtenerCopiasDisponibles(): List<CopiaLibro>
-+ estaDisponible(): Boolean
+
+#### 10.8. Paso 7: Validación con Casos de Uso
+
+**Caso de Uso 1**: Cliente reserva una clase
+
+```kotlin
+// Crear entidades
+val cliente = Cliente(1, "Ana García", "123456789", LocalDate.of(1990, 5, 15))
+val instructor = Instructor(1, "Carlos López", "Yoga")
+val sala = Sala(1, "Sala A", 20)
+val clase = Clase(
+    id = 1,
+    tipo = TipoClase.YOGA,
+    instructor = instructor,
+    sala = sala,
+    horario = LocalDateTime.now().plusDays(1)
+)
+
+// Cliente contrata membresía
+val membresia = cliente.contratarMembresia(TipoMembresia.MENSUAL)
+println("Membresía vigente: ${membresia.estaVigente()}")
+
+// Cliente reserva clase
+val reserva = cliente.reservarClase(clase)
+println("Reserva exitosa: ${reserva != null}")
+println("Espacios ocupados: ${clase.obtenerNumeroReservas()}/${clase.capacidadMaxima}")
 ```
 
-**Clase Prestamo**:
-```
-+ fechaPrestamo: Date
-+ fechaDevolucionPrevista: Date
-+ fechaDevolucionReal: Date?
-+ usuario: Usuario
-+ copia: CopiaLibro
-+ extenderPeriodo(dias: Int): Boolean
-+ marcarDevuelto(): void
-+ estaVencido(): Boolean
+**Resultado**: ✅ El modelo permite este flujo completo
+
+**Caso de Uso 2**: Marcar asistencia
+
+```kotlin
+// El día de la clase
+reserva?.marcarAsistencia()
+println("Asistencia registrada")
 ```
 
-### 11. Validación del Modelo de Clases
+**Resultado**: ✅ El modelo soporta este caso
 
-Una vez creado el modelo, es importante validarlo:
+#### 10.9. Lecciones del Ejemplo
 
-#### 11.1. Preguntas de validación
+**Decisiones de diseño clave**:
 
-**Para cada clase**:
-- ¿Tiene una responsabilidad clara?
-- ¿Tiene sentido en el dominio del problema?
-- ¿Es necesaria para cumplir los requisitos?
-- ¿Puede existir independientemente?
+1. **Reserva como clase separada**: Permite almacenar información adicional (fecha de reserva, estado)
+2. **Asistencia como clase separada**: Diferencia entre reservar y asistir
+3. **Membresía vinculada a Cliente**: Facilita verificar estado de membresía
+4. **Enum para tipos**: Evita duplicación y errores de escritura
 
-**Para el modelo completo**:
-- ¿Cubre todos los requisitos funcionales?
-- ¿Es extensible para futuros requisitos?
-- ¿Hay clases redundantes?
-- ¿Las relaciones tienen sentido?
+**Alternativas consideradas**:
 
-#### 11.2. Técnicas de validación
+- ¿Gimnasio como clase?: Decidimos no incluirla porque no agrega valor en este alcance
+- ¿TipoClase como clase vs Enum?: Enum es suficiente; sería clase si tuviera atributos propios
 
-**1. Walkthrough de escenarios**
+### 11. Validación del Modelo de Clases: ¿Es Correcto?
 
-Recorrer casos de uso con el diagrama:
-- "Un usuario quiere tomar prestado un libro"
-- ¿Qué clases se involucran?
-- ¿Tienen los métodos necesarios?
+Un modelo puede ser sintácticamente correcto pero semánticamente incorrecto. La validación asegura que realmente funciona.
 
-**2. Revisión por pares**
+#### 11.1. Técnicas de Validación
 
-- Presentar el diagrama a otros desarrolladores
-- Explicar las decisiones de diseño
-- Recibir feedback
+**1. Recorrido de Casos de Uso (CRC Cards - Class Responsibility Collaboration)**
 
-**3. Prototipado**
+Para cada caso de uso:
+- Identifica qué clase es responsable de cada paso
+- Verifica que cada responsabilidad esté asignada
+- Confirma que las colaboraciones existen
 
-- Implementar las clases principales
-- Verificar que el diseño funciona en la práctica
-- Ajustar según necesidad
+**Ejemplo**:
+```
+Caso: "Cliente reserva una clase"
+1. Cliente inicia la reserva → Responsable: Cliente
+2. Verificar membresía activa → Responsable: Cliente
+3. Verificar espacio disponible → Responsable: Clase
+4. Crear reserva → Responsable: Sistema (o Clase Gimnasio)
+5. Registrar reserva → Responsable: Reserva
 
-### 12. Checklist Final
+✅ Todas las responsabilidades están cubiertas
+```
 
-Antes de finalizar tu diagrama de clases, verifica:
+**2. Verificación de Completitud**
 
-**Identificación de Clases**
+Preguntas de verificación:
+- ¿Todos los requisitos funcionales tienen clases responsables?
+- ¿Todas las entidades del dominio están representadas?
+- ¿Hay casos de uso que no pueden realizarse con el modelo actual?
 
-- [ ] He analizado todos los sustantivos del enunciado
-- [ ] He descartado candidatos inapropiados
-- [ ] Cada clase tiene una responsabilidad clara
+**3. Verificación de Consistencia**
+
+- ¿Hay contradicciones en las relaciones?
+- ¿Las multiplicidades tienen sentido?
+- ¿Los nombres son consistentes?
+
+**4. Prueba de Escalabilidad Mental**
+
+Imagina escenarios extremos:
+- "¿Qué pasa si hay 10,000 clientes?"
+- "¿Qué pasa si un cliente cancela una reserva?"
+- "¿Cómo se maneja la renovación automática de membresías?"
+
+Si no puedes responder estas preguntas con tu modelo, probablemente falta algo.
+
+#### 11.2. Checklist de Validación
+
+**Estructura**:
+- [ ] Cada clase tiene un nombre descriptivo
+- [ ] Cada clase tiene responsabilidades claras
 - [ ] No hay clases redundantes
-- [ ] Los nombres son descriptivos y específicos
+- [ ] No hay clases "Dios" (con demasiadas responsabilidades)
 
-**Relaciones**
+**Relaciones**:
+- [ ] Todas las relaciones tienen multiplicidad definida
+- [ ] Las relaciones tienen el tipo correcto
+- [ ] No hay dependencias circulares problemáticas
+- [ ] Las navegabilidades están bien definidas
 
-- [ ] He identificado todas las relaciones necesarias
-- [ ] La multiplicidad está correctamente especificada
-- [ ] He elegido el tipo de relación apropiado
-- [ ] No hay relaciones innecesarias
-
-**Atributos y Métodos**
-
-- [ ] Cada clase tiene los atributos necesarios
-- [ ] Los métodos reflejan las responsabilidades
-- [ ] La visibilidad está correctamente definida
-- [ ] No hay atributos que deberían ser clases
-
-**Principios de Diseño**
-
+**Principios de Diseño**:
 - [ ] Alta cohesión en cada clase
 - [ ] Bajo acoplamiento entre clases
-- [ ] Responsabilidad única por clase
+- [ ] Responsabilidad única respetada
 - [ ] Buen encapsulamiento
 
-**Representación Visual**
+**Completitud**:
+- [ ] Todos los casos de uso están cubiertos
+- [ ] Todos los requisitos funcionales están representados
+- [ ] No hay funcionalidad "huérfana" sin clase responsable
 
+### 12. Checklist Final antes de Implementar
+
+Usa esta lista de verificación antes de comenzar la implementación:
+
+#### Identificación de Clases
+- [ ] He analizado todos los sustantivos del enunciado
+- [ ] He descartado candidatos inapropiados usando criterios sistemáticos
+- [ ] Cada clase tiene una responsabilidad clara y única
+- [ ] No hay clases redundantes o duplicadas
+- [ ] Los nombres son descriptivos, específicos y del dominio
+
+#### Relaciones
+- [ ] He identificado todas las relaciones necesarias entre clases
+- [ ] La multiplicidad está correctamente especificada en ambos extremos
+- [ ] He elegido el tipo de relación apropiado (asociación, agregación, composición, herencia)
+- [ ] No hay relaciones innecesarias
+- [ ] Las relaciones muchos-a-muchos tienen clase intermedia si es necesario
+
+#### Atributos y Métodos
+- [ ] Cada clase tiene los atributos necesarios para cumplir su responsabilidad
+- [ ] Los métodos reflejan las responsabilidades de la clase
+- [ ] La visibilidad (public, private, protected) está correctamente definida
+- [ ] No hay atributos que deberían ser clases
+- [ ] Los tipos de datos son apropiados
+
+#### Principios de Diseño
+- [ ] Alta cohesión: Los miembros de cada clase están relacionados
+- [ ] Bajo acoplamiento: Pocas dependencias entre clases
+- [ ] Responsabilidad única: Cada clase hace una cosa
+- [ ] Buen encapsulamiento: Datos privados, comportamiento público
+
+#### Representación Visual
 - [ ] El diagrama es claro y legible
 - [ ] Las líneas no se cruzan excesivamente
-- [ ] Hay una organización lógica
-- [ ] Uso efectivo de colores (si aplica)
+- [ ] Hay una organización lógica y espaciado apropiado
+- [ ] Uso efectivo de colores o agrupaciones (si aplica)
 
-### 13. Conclusiones
+#### Validación
+- [ ] He recorrido casos de uso con el modelo
+- [ ] El modelo cubre todos los requisitos funcionales
+- [ ] He validado con stakeholders o expertos del dominio
+- [ ] He considerado escenarios edge-case
 
-- La identificación de clases es un **proceso iterativo** y fundamental en el diseño OO
-- La **técnica de análisis de sustantivos** es una herramienta poderosa pero requiere criterio
-- Es importante distinguir entre **clases, atributos y métodos**
-- Un buen modelo busca **alta cohesión** y **bajo acoplamiento**
-- Las **buenas prácticas** ayudan a crear sistemas mantenibles y escalables
-- La **validación** del modelo es tan importante como su creación
-- No existe un modelo "perfecto", pero sí modelos **buenos y malos**
-- La experiencia mejora la capacidad de identificar clases correctamente
+### 13. Conclusiones: Dominando la Identificación de Clases
 
-### 14. Ejercicios Prácticos
+La identificación de clases es tanto **arte como ciencia**. No existe una única solución correcta, pero sí existen soluciones mejores y peores.
 
-Para practicar la identificación de clases, intenta analizar estos enunciados:
+#### 13.1. Puntos Clave para Recordar
 
-#### Ejercicio 1: Sistema de Reserva de Vuelos
+**Sobre el Proceso**:
+- La identificación de clases es **iterativa**, no lineal
+- Empieza simple y refina gradualmente
+- No busques la perfección en la primera iteración
+- Valida temprano y frecuentemente
 
-"Los clientes pueden buscar vuelos por origen, destino y fecha. Cada vuelo tiene un número, origen, destino, hora de salida y llegada. Los clientes pueden reservar asientos en clase turista o ejecutiva. Cada reserva debe confirmarse mediante pago con tarjeta de crédito."
+**Sobre la Técnica**:
+- El análisis de sustantivos es una herramienta, no una receta mágica
+- Requiere criterio y experiencia para filtrar candidatos
+- Los verbos revelan métodos y relaciones
+- El contexto del dominio es crucial
 
-**Tarea**: Identifica clases, relaciones, atributos y métodos.
+**Sobre el Diseño**:
+- Prioriza simplicidad sobre completitud prematura
+- Alta cohesión y bajo acoplamiento son tus guías
+- Responsabilidad única evita clases "Dios"
+- Favorece composición sobre herencia cuando sea dudoso
 
-#### Ejercicio 2: Sistema de Clínica Veterinaria
+**Sobre la Práctica**:
+- La experiencia mejora tu capacidad de identificar clases
+- Estudia modelos existentes de sistemas similares
+- Aprende de tus errores y refactoriza cuando sea necesario
+- No temas descartar y empezar de nuevo si el modelo no funciona
 
-"La clínica atiende mascotas cuyos dueños están registrados en el sistema. Cada mascota tiene un historial médico con visitas, tratamientos y vacunas. Los veterinarios pueden prescribir medicamentos y agendar citas de seguimiento."
+#### 13.2. El Viaje Continuo
 
-**Tarea**: Crea un diagrama de clases completo.
+No esperes dominar la identificación de clases inmediatamente. Es una habilidad que se desarrolla con:
+- **Práctica deliberada**: Analiza múltiples enunciados
+- **Estudio de casos**: Aprende de sistemas reales
+- **Revisión por pares**: Otros ven lo que tú no ves
+- **Refactorización**: Mejora modelos existentes
 
-#### Ejercicio 3: Red Social Simple
+#### 13.3. Próximos Pasos
 
-"Los usuarios pueden crear perfiles, publicar mensajes, seguir a otros usuarios y dar 'me gusta' a publicaciones. Las publicaciones pueden contener texto, imágenes o ambos. Los usuarios reciben notificaciones de nuevas actividades."
+Una vez que domines la identificación de clases, profundiza en:
 
-**Tarea**: Identifica las clases y sus relaciones, prestando especial atención a las relaciones de muchos a muchos.
+1. **Patrones de diseño**: Soluciones probadas a problemas recurrentes
+   - Creacionales: Factory, Builder, Singleton
+   - Estructurales: Adapter, Decorator, Facade
+   - Comportamiento: Strategy, Observer, Command
 
-### 15. Recursos y Referencias
+2. **Refactorización**: Mejorar diseños existentes sin cambiar funcionalidad
+   - Extract Method, Extract Class
+   - Move Method, Move Field
+   - Simplify Conditional Expressions
 
-#### Libros recomendados
-- **"UML Distilled"** - Martin Fowler (identificación práctica de clases)
-- **"Applying UML and Patterns"** - Craig Larman (análisis orientado a objetos)
-- **"Object-Oriented Analysis and Design"** - Grady Booch
-- **"Domain-Driven Design"** - Eric Evans (modelado del dominio)
+3. **Arquitectura de software**: Organización de alto nivel
+   - Arquitectura en capas
+   - Arquitectura hexagonal
+   - Microservicios
+   - Domain-Driven Design (DDD)
 
-#### Sitios web útiles
-- [Sitio oficial UML - OMG](https://www.uml.org/)
-- [Refactoring Guru - Design Patterns](https://refactoring.guru/)
-- [Martin Fowler's Blog](https://martinfowler.com/)
+4. **Principios SOLID**: Fundamentos del diseño OO profesional
+   - Single Responsibility
+   - Open/Closed
+   - Liskov Substitution
+   - Interface Segregation
+   - Dependency Inversion
 
-#### Herramientas
-- **Draw.io / diagrams.net**: Para crear diagramas
-- **PlantUML**: Para diagramas como código
-- **Visual Paradigm**: Herramienta profesional
-- **Lucidchart**: Herramienta online colaborativa
+### 14. Ejercicios Prácticos Guiados
 
-### 16. Siguiente Paso
+Practica con estos ejercicios progresivos:
 
-Una vez que domines la identificación de clases, el siguiente paso es estudiar:
+#### Ejercicio 1: Sistema de Reserva de Vuelos (Nivel Básico)
 
-- **Patrones de diseño**: Soluciones probadas a problemas comunes
-- **Refactorización**: Cómo mejorar diseños existentes
-- **Arquitectura de software**: Organización de alto nivel del sistema
-- **Principios SOLID**: Fundamentos del buen diseño OO
+**Enunciado**:
+> "Los clientes pueden buscar vuelos por origen, destino y fecha. Cada vuelo tiene un número, origen, destino, hora de salida y llegada. Los clientes pueden reservar asientos en clase turista o ejecutiva. Cada reserva debe confirmarse mediante pago con tarjeta de crédito."
+
+**Tareas**:
+1. Identifica candidatos a clases (lista completa de sustantivos)
+2. Aplica filtros de descarte
+3. Define 4-6 clases principales
+4. Identifica relaciones y multiplicidad
+5. Crea diagrama UML
+6. Implementa en Kotlin (opcional)
+
+**Pistas**:
+- ¿Es "Cliente" diferente de "Pasajero"?
+- ¿"Asiento" debería ser una clase?
+- ¿Cómo manejas "clase turista" vs "clase ejecutiva"?
+
+#### Ejercicio 2: Sistema de Clínica Veterinaria (Nivel Intermedio)
+
+**Enunciado**:
+> "La clínica atiende mascotas cuyos dueños están registrados en el sistema. Cada mascota tiene un historial médico con visitas, tratamientos y vacunas. Los veterinarios pueden prescribir medicamentos y agendar citas de seguimiento."
+
+**Tareas**:
+1. Identifica clases (incluyendo clases no mencionadas explícitamente)
+2. Define relaciones complejas (ej: veterinario-mascota-dueño)
+3. Identifica relaciones muchos-a-muchos
+4. Crea diagrama completo con atributos y métodos
+5. Implementa casos de uso: "Agendar cita" y "Registrar visita"
+
+**Desafíos adicionales**:
+- ¿Cómo representas el historial médico?
+- ¿Una visita es una clase o solo un atributo?
+- ¿Cómo relacionas tratamiento con medicamento?
+
+#### Ejercicio 3: Red Social Simple (Nivel Avanzado)
+
+**Enunciado**:
+> "Los usuarios pueden crear perfiles, publicar mensajes, seguir a otros usuarios y dar 'me gusta' a publicaciones. Las publicaciones pueden contener texto, imágenes o ambos. Los usuarios reciben notificaciones de nuevas actividades."
+
+**Tareas**:
+1. Identifica todas las clases (mínimo 8)
+2. Modela relaciones muchos-a-muchos correctamente
+3. Identifica patrones (ej: patrón Observer para notificaciones)
+4. Crea diagrama UML completo
+5. Implementa sistema básico funcional
+
+**Desafíos adicionales**:
+- ¿Cómo manejas "seguir" (relación Usuario-Usuario)?
+- ¿"Me gusta" es una clase o solo un contador?
+- ¿Cómo se generan las notificaciones?
+- ¿Publicación es clase abstracta con subclases TextoPublicacion e ImagenPublicacion?
+
+### 15. Recursos y Referencias Ampliados
+
+#### 15.1. Libros Fundamentales
+
+**Para principiantes**:
+- **"UML Distilled" - Martin Fowler**: Guía concisa y práctica (150 páginas, muy accesible)
+- **"Head First Object-Oriented Analysis & Design"**: Aprendizaje visual con humor
+
+**Para nivel intermedio**:
+- **"Applying UML and Patterns" - Craig Larman**: Análisis OO con casos de estudio completos
+- **"Object-Oriented Software Engineering" - Ivar Jacobson**: Enfoque basado en casos de uso
+
+**Para nivel avanzado**:
+- **"Domain-Driven Design" - Eric Evans**: Modelado del dominio para sistemas complejos
+- **"Patterns of Enterprise Application Architecture" - Martin Fowler**: Patrones de diseño empresarial
+
+#### 15.2. Recursos Online
+
+**Tutoriales interactivos**:
+- [Visual Paradigm UML Tutorials](https://www.visual-paradigm.com/tutorials/): Tutoriales paso a paso
+- [UMLet Tutorial](https://www.umlet.com/): Herramienta simple para aprender
+
+**Videos educativos**:
+- [Derek Banas - UML Class Diagrams](https://www.youtube.com/watch?v=3cmzqZzwNDM)
+- [freeCodeCamp - Object Oriented Design](https://www.youtube.com/watch?v=fJW65Wo7IHI)
+
+**Ejercicios prácticos**:
+- [Refactoring Guru - UML Exercises](https://refactoring.guru/es/design-patterns)
+- [Object-Oriented Design Exercises](https://github.com/topics/oop-exercises)
+
+#### 15.3. Herramientas Recomendadas
+
+**Para aprender**:
+- **Draw.io**: Gratuito, simple, sin instalación
+- **PlantUML**: Texto a diagrama, perfecto para versionado
+
+**Para proyectos profesionales**:
+- **Visual Paradigm Community Edition**: Completo y gratuito
+- **StarUML**: Buena relación calidad-precio
+
+#### 15.4. Comunidades
+
+- **Stack Overflow**: Tag `uml`, `class-diagram`, `oop-design`
+- **Reddit**: r/learnprogramming, r/softwareengineering
+- **Discord**: Servidores de Kotlin, Java, Software Architecture
+
+### 16. Reflexión Final: El Arte del Buen Diseño
+
+El buen diseño orientado a objetos no se aprende leyendo - se aprende **haciendo, errando y refactorizando**.
+
+**Recuerda siempre**:
+
+> "Todo el mundo puede crear código que una computadora entienda. Los buenos programadores escriben código que los humanos puedan entender." - Martin Fowler
+
+La identificación de clases es el primer paso para crear ese código comprensible. No busques la perfección - busca la claridad, la simplicidad y la mantenibilidad.
+
+**Última recomendación**: Comienza tu próximo proyecto dibujando el diagrama de clases ANTES de escribir código. Verás la diferencia.
+
+¡Adelante, y feliz modelado! 🚀
+
+---
+
+**Fin del documento**
+

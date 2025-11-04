@@ -34,7 +34,11 @@ UML nos permite representar visualmente los diferentes aspectos de un sistema so
 
 UML del inglés **Unified Modeling Language** (Lenguaje Unificado de Modelado) es un lenguaje de modelado visual estándar utilizado en ingeniería de software para especificar, visualizar, construir y documentar los artefactos de un sistema software. 
 
-En esencia, UML es **un lenguaje visual que nos permite comunicar ideas complejas sobre sistemas software de una manera que todos los implicados en el proyecto pueden entender**, independientemente de su rol. No es un lenguaje de programación, sino un medio de comunicación que trasciende los lenguajes de programación específicos.
+En esencia, UML es **un lenguaje visual que nos permite comunicar ideas complejas sobre sistemas software de una manera que todos los implicados en el proyecto pueden entender**, independientemente de su rol. 
+
+!!! warning "Atención"
+UML NO es un lenguaje de programación, sino un **medio de comunicación** que trasciende los lenguajes de programación específicos.
+
 
 UML permite:
 
@@ -47,11 +51,16 @@ UML permite:
 
 #### 2.2. ¿Qué es modelar?
 
+Puesto que UML es un lenguaje de modelado, es crucial entender qué significa **modelar** en el contexto del desarrollo de software.
+
 **Modelar** consiste en crear una representación abstracta y simplificada de la realidad que queremos construir, destacando los aspectos más importantes e ignorando los detalles irrelevantes. En el contexto del software, modelar significa diseñar la estructura y el comportamiento de una aplicación antes de implementarla.
 
 **Analogía con el mundo real**: De la misma forma que un arquitecto dibuja y diseña planos detallados sobre el edificio que va a construir (especificando cimientos, estructura, dimensiones, materiales), un analista de software crea distintos diagramas UML que sirven de base para la posterior construcción/mantenimiento del sistema. El arquitecto no comienza a construir directamente; primero hace planos. Del mismo modo, en software, es prudente diseñar primero.
 
 La razón es simple pero poderosa: **los cambios en los planos son más baratos y rápidos que los cambios una vez la construcción ha comenzado**. Una pequeña corrección en un diagrama puede ahorrar semanas de recodificación y refactorización.
+
+!!! tip "Consejo"
+En un modelado, destaca los aspectos más importantes e ignora los detalles irrelevantes
 
 ##### 2.2.1. Propósito del modelado
 

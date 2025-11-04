@@ -26,7 +26,9 @@ El **diagrama de clases** es uno de los diagramas incluidos en UML 2.5 clasifica
 !!! note "Punto clave"
     Este diagrama NO incluye la forma en que se comportan los elementos a lo largo de la ejecución. Esa función la cumplen los diagramas de comportamiento (diagrama de secuencia, casos de uso, etc.).
 
-#### 1.1. Características principales
+#### 1.1. Aspectos principales
+
+Los aspectos principales del diagrama de clases son:
 
 - **Orientado a objetos**: Define las clases que se utilizarán en la fase de construcción
 - **Vista estática**: Muestra la estructura, no el comportamiento dinámico
@@ -50,7 +52,9 @@ El diagrama de clases se puede equiparar, salvando las distancias, al famoso **d
 - Representan datos y su interacción
 - Tienen una utilidad similar en sus respectivos contextos
 
-ten en cuenta lo que ya sabes sobre diagramas E/R para entender mejor los diagramas de clases.
+!!! note "Punto clave"
+Ten en cuenta lo que ya sabes sobre diagramas E/R para entender mejor los diagramas de clases.
+
 
 #### 1.4. Objetivo de estos diagrams según la fase
 
@@ -2148,6 +2152,7 @@ Se lee: "Un Usuario realiza 0 o muchas Órdenes" y "Una Orden pertenece a exacta
 Antes de finalizar tu diagrama, verifica:
 
 **Estructura**:
+
 - [ ] ¿Cada clase tiene un nombre significativo y único?
 - [ ] ¿Los atributos tienen visibilidad y tipo especificados?
 - [ ] ¿Los métodos tienen parámetros y tipo de retorno?
@@ -2155,18 +2160,21 @@ Antes de finalizar tu diagrama, verifica:
 - [ ] ¿Las clases abstractas están en cursiva?
 
 **Relaciones**:
+
 - [ ] ¿Cada relación tiene su tipo correcto?
 - [ ] ¿La multiplicidad está indicada en ambos extremos?
 - [ ] ¿Los roles están nombrados cuando es necesario?
 - [ ] ¿Las direcciones de navegación son correctas?
 
 **Claridad**:
+
 - [ ] ¿El diagrama cabe en una página/pantalla sin scroll?
 - [ ] ¿Las líneas se cruzan lo mínimo posible?
 - [ ] ¿Hay espacio suficiente entre elementos?
 - [ ] ¿Se usan colores de forma consistente?
 
 **Contenido**:
+
 - [ ] ¿Están todas las clases importantes?
 - [ ] ¿Hay clases innecesarias?
 - [ ] ¿El nivel de detalle es consistente?
@@ -2193,16 +2201,19 @@ Los diagramas de clases son mucho más que simples dibujos técnicos. Son la **h
 A lo largo de este documento has aprendido:
 
 1. **Fundamentos**: 
+
    - Los diagramas de clases representan la estructura estática de un sistema
    - Son la base para la implementación del código
    - Utilizan notación UML estándar reconocida mundialmente
 
 2. **Elementos**:
+
    - **Clases**: Tres compartimentos (nombre, atributos, métodos)
    - **Relaciones**: Seis tipos con diferentes niveles de acoplamiento
    - **Interfaces**: Contratos de comportamiento
 
 3. **Relaciones**:
+
    - Herencia (es-un): Para especialización
    - Composición (parte-de): Relación fuerte de todo-parte
    - Agregación (tiene-un): Relación débil de contención
@@ -2211,6 +2222,7 @@ A lo largo de este documento has aprendido:
    - Implementación: Realización de interfaz
 
 4. **Mejores prácticas**:
+
    - Responsabilidad única por clase
    - Dividir diagramas complejos
    - Usar colores estratégicamente
@@ -2219,29 +2231,29 @@ A lo largo de este documento has aprendido:
 
 #### 10.2. Importancia en el Desarrollo de Software
 
-**Comunicación**: 
-Los diagramas de clases facilitan la comunicación entre:
+**Comunicación**: Los diagramas de clases facilitan la comunicación entre:
+
 - Analistas y desarrolladores
 - Desarrolladores experimentados y juniors
 - Equipos distribuidos geográficamente
 - Stakeholders técnicos y no técnicos
 
-**Diseño**:
-Permiten:
+**Diseño**: Permiten:
+
 - Planificar la arquitectura antes de codificar
 - Identificar problemas de diseño tempranamente
 - Explorar alternativas de diseño rápidamente
 - Validar que el diseño cumple los requisitos
 
-**Documentación**:
-Sirven como:
+**Documentación**: Sirven como:
+
 - Referencia permanente del sistema
 - Guía para nuevos desarrolladores
 - Base para el mantenimiento futuro
 - Documentación que "no miente" (si se mantiene actualizada)
 
-**Implementación**:
-Facilitan:
+**Implementación**: Facilitan:
+
 - Generación de código desde diagramas
 - Ingeniería inversa desde código existente
 - Refactorización guiada
@@ -2261,21 +2273,25 @@ Al dominar los diagramas de clases, has desarrollado:
 Para seguir mejorando tus habilidades:
 
 1. **Practica regularmente**: 
+
    - Diseña diagramas para proyectos personales
    - Revisa código existente y crea diagramas retrospectivos
    - Participa en sesiones de diseño colaborativas
 
 2. **Estudia patrones de diseño**:
+
    - Gang of Four (GoF) patterns
    - Arquitecturas por capas
    - Domain-Driven Design (DDD)
 
 3. **Aprende otros diagramas UML**:
+
    - Diagramas de secuencia (comportamiento)
    - Diagramas de casos de uso (requisitos)
    - Diagramas de componentes (arquitectura)
 
 4. **Refactoriza diagramas existentes**:
+
    - Identifica clases con múltiples responsabilidades
    - Busca oportunidades de aplicar patrones
    - Mejora la claridad y organización
@@ -2285,6 +2301,7 @@ Para seguir mejorando tus habilidades:
 Los diagramas de clases son una habilidad que trasciende tecnologías y lenguajes de programación. Un buen diseño de clases es independiente de si se implementa en Java, Kotlin, Python o C#. Los principios de diseño orientado a objetos permanecen constantes.
 
 La inversión en tiempo que dedicas a aprender y practicar diagramas de clases se traducirá en:
+
 - **Código más mantenible**: Sistemas mejor estructurados
 - **Menos bugs**: Diseños validados antes de implementar
 - **Mayor productividad**: Menos tiempo refactorizando
@@ -2303,10 +2320,12 @@ La inversión en tiempo que dedicas a aprender y practicar diagramas de clases s
 #### 11.2. Libros Recomendados
 
 **Para principiantes**:
+
 - **"UML Distilled"** - Martin Fowler: Guía concisa y práctica de UML
 - **"Head First Object-Oriented Analysis & Design"** - Brett McLaughlin: Aprendizaje visual
 
 **Para nivel avanzado**:
+
 - **"Applying UML and Patterns"** - Craig Larman: Enfoque práctico con casos de estudio
 - **"Domain-Driven Design"** - Eric Evans: Modelado del dominio
 - **"Object-Oriented Software Engineering"** - Ivar Jacobson: Clásico de OO
@@ -2314,16 +2333,19 @@ La inversión en tiempo que dedicas a aprender y practicar diagramas de clases s
 #### 11.3. Herramientas
 
 **Online**:
+
 - [Draw.io / Diagrams.net](https://app.diagrams.net/): Gratuito, sin registro
 - [Lucidchart](https://www.lucidchart.com/): Colaborativo, freemium
 - [PlantUML Online](https://www.plantuml.com/plantuml/): Diagramas desde texto
 
 **Escritorio**:
+
 - [Visual Paradigm](https://www.visual-paradigm.com/): Community Edition gratuita
 - [StarUML](https://staruml.io/): Open source, $89 licencia
 - [Enterprise Architect](https://sparxsystems.com/): Estándar de la industria
 
 **IDEs**:
+
 - IntelliJ IDEA: Plugin UML nativo
 - Eclipse + Papyrus: Gratuito, completo
 - Visual Studio: Class Designer integrado
@@ -2331,15 +2353,18 @@ La inversión en tiempo que dedicas a aprender y practicar diagramas de clases s
 #### 11.4. Recursos de Aprendizaje
 
 **Tutoriales online**:
+
 - [Diagramas UML](https://diagramasuml.com/): Tutoriales en español
 - [UML Tutorial - Guru99](https://www.guru99.com/uml-tutorial.html): Completo y bien explicado
 - [Refactoring Guru - UML](https://refactoring.guru/es/uml): Con foco en patrones
 
 **Videos**:
+
 - [YouTube: Derek Banas - UML Class Diagram](https://www.youtube.com/watch?v=3cmzqZzwNDM): Tutorial completo
 - [YouTube: freeCodeCamp - UML](https://www.youtube.com/results?search_query=uml+class+diagram+tutorial): Varios tutoriales
 
 **Práctica**:
+
 - [Exercism](https://exercism.org/): Practica diseño OO con ejercicios
 - [CodeWars](https://www.codewars.com/): Desafíos de programación
 - [GitHub](https://github.com/): Busca proyectos open source y estudia sus diagramas
@@ -2354,16 +2379,15 @@ La inversión en tiempo que dedicas a aprender y practicar diagramas de clases s
 
 - **Stack Overflow**: Tag `uml` y `class-diagram` para preguntas específicas
 - **Reddit**: 
-  - r/learnjava
-  - r/kotlin
-  - r/softwareengineering
+
+    - r/learnjava
+    - r/kotlin
+    - r/softwareengineering
+  
 - **Discord**: Kotlin Language (servidor oficial)
 - **LinkedIn Groups**: UML Modeling, Software Architecture
 
 !!! note "Nota final"
     La mejor forma de aprender es practicando. No te limites a leer - crea tus propios diagramas, experimenta con diferentes diseños, y solicita feedback de desarrolladores más experimentados. ¡Adelante!
 
----
-
-**Fin del documento EDES-U3.2.-DiagramaClases.md**
 

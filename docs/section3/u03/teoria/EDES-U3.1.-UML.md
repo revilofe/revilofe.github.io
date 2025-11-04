@@ -27,11 +27,11 @@ El **Lenguaje Unificado de Modelado** o **UML** («Unified Modeling Language») 
 
 ### 2. ¿Qué es UML?
 
-UML nos 
+UML nos permite representar visualmente los diferentes aspectos de un sistema software mediante diagramas.
 
 #### 2.1. Definición
 
-UML es un lenguaje de modelado visual que permite:
+UML del inglés **Unified Modeling Language** (Lenguaje Unificado de Modelado) es un lenguaje de modelado visual estándar utilizado en ingeniería de software para especificar, visualizar, construir y documentar los artefactos de un sistema software. UML permite:
 
 - **Describir** sistemas software
 - **Diseñar** la arquitectura de aplicaciones

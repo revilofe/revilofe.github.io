@@ -32,13 +32,29 @@ El **diagrama de clases** es uno de los diagramas incluidos en UML 2.5 clasifica
 - **Modelo lógico**: Similar al diagrama Entidad-Relación (E/R) en bases de datos
 - **Fundamental**: Es uno de los diagramas más importantes y utilizados en UML
 
-#### 1.2. Comparación con otros modelos
+#### 1.2. ¿Qué describe el diagrama de clases?
+
+El diagrama de clases describe:
+
+- Los tipos de objetos que hay en el sistema
+- Las diversas clases de relaciones estáticas que existen entre ellos
+- Los atributos y operaciones (métodos) de una clase
+- Las restricciones según la forma en que se conecten los objetos
+
+#### 1.3. Comparación con otros modelos
 
 El diagrama de clases se puede equiparar, salvando las distancias, al famoso **diagrama de modelo Entidad-Relación (E/R)** (no recogido en UML). Ambos diagramas:
 
 - Muestran el modelo lógico de los datos de un sistema
 - Representan datos y su interacción
 - Tienen una utilidad similar en sus respectivos contextos
+
+#### 1.4. Objetivo según la fase
+
+Los diagramas de clases pueden ser desarrollados en diferentes fases del ciclo de vida del software:
+
+- **Durante el análisis del sistema**: El diagrama se desarrolla buscando una solución ideal
+- **Durante el diseño**: Se usa el mismo diagrama y se modifica para satisfacer los detalles de las implementaciones
 
 ### 2. Elementos del Diagrama de Clases
 
@@ -54,17 +70,33 @@ Las **clases** son el elemento principal del diagrama y representan una clase de
 
 ##### 2.1.1. ¿Qué representa una clase?
 
+Una clase describe un conjunto de objetos con un rol o roles equivalentes en un sistema. Representa:
+
 - Conceptos o entidades del «negocio»
 - Define un grupo de objetos que comparten características, condiciones y significado
 - Ejemplo: Animal, Persona, Mensaje, Expediente, Usuario, Producto...
 
-##### 2.1.2. ¿Cómo identificar clases?
+##### 2.1.2. Objetos y clases
 
-> 💡 **Técnica rápida**: Busca los **sustantivos** que aparecen en el enunciado, en la idea de negocio o en el tema concreto.
+Un **objeto** es:
 
-⚠️ **Importante**: Es fundamental identificar correctamente estas clases. Si no se hace bien, habrá problemas en etapas posteriores, obligando a rehacer el análisis y perdiendo trabajo.
+- La pieza básica de la POO (Programación Orientada a Objetos)
+- Representa un objeto del mundo real, por ejemplo: un automóvil, un estudiante, una cuenta bancaria
+- Cada objeto es especializado y solo se encarga de su tarea
+- Pueden ser entidades físicas y conceptuales
+- Se comunican con otros objetos pasándose mensajes
 
-#### 2.2. Estructura de una Clase
+Los objetos y su división en clases a menudo derivan de:
+
+1. **Cosas tangibles o "del mundo real"**: Avión, auto, televisor, computador, etc.
+2. **Roles o Papeles**: Gerente, cliente, vendedor, profesor, etc.
+3. **Organizaciones**: Universidad, empresa, departamento, etc.
+4. **Interacciones**: Transacción, matrícula, contrato, etc.
+5. **Eventos o incidencias**: Vuelo, accidente, suceso, etc.
+
+> **Nota**: Estas categorías se solapan, y las dos primeras son fuentes de objetos y de clases mucho más comunes que las dos últimas.
+
+### 3. Estructura de una Clase
 
 Una clase está compuesta por **tres elementos**:
 
@@ -72,7 +104,7 @@ Una clase está compuesta por **tres elementos**:
 2. **Atributos**
 3. **Métodos/Funciones**
 
-##### 2.2.1. Representación gráfica
+#### 3.1. Representación gráfica
 
 La clase se representa con una **caja dividida en tres zonas** mediante líneas horizontales:
 
@@ -88,7 +120,7 @@ La clase se representa con una **caja dividida en tres zonas** mediante líneas 
 └─────────────────────────┘
 ```
 
-#### 2.3. Zona 1: Nombre de la Clase
+#### 3.2. Zona 1: Nombre de la Clase
 
 La primera zona contiene el **nombre de la clase**, y se escribe siguiendo estas reglas:
 
@@ -96,9 +128,11 @@ La primera zona contiene el **nombre de la clase**, y se escribe siguiendo estas
 - **Clases abstractas**: El nombre se escribe en *cursiva*
 - Convenio: Primera letra en mayúscula (PascalCase)
 
-#### 2.4. Zona 2: Atributos
+#### 3.3. Zona 2: Atributos
 
-En la segunda zona se escriben los **atributos** de la clase, uno por línea. El formato puede ser:
+En la segunda zona se escriben los **atributos** de la clase, uno por línea. 
+
+##### 3.3.1. Formato de atributos
 
 * **Formato oficial:**
 
@@ -125,9 +159,50 @@ En la segunda zona se escriben los **atributos** de la clase, uno por línea. El
 - activo : Boolean
 ```
 
-#### 2.5. Zona 3: Métodos
+##### 3.3.2. Tipos de Atributos
 
-En la tercera zona se escriben los **métodos** o funciones de la clase, también uno por línea. El formato puede ser:
+**Atributos de clase**
+
+Son aquellos que representan valores comunes a todas las instancias de una clase. Pueden tener un valor inicial.
+
+**Ejemplos en Kotlin:**
+```kotlin
+companion object {
+    private var promedioEdades: Double = 0.0
+    private var numeroAlumnos: Int = 0
+}
+```
+
+**Atributos de instancia**
+
+Son aquellos que representan valores propios de un solo objeto que lo diferencia de otros elementos de su misma clase.
+
+**Ejemplos en Kotlin:**
+```kotlin
+private var nombre: String = ""
+private var numeroPuertas: Int = 4
+```
+
+**Constantes**
+
+Representan valores inmutables en tiempo y espacio. En Kotlin se definen con `const val` o `val`.
+
+**Ejemplos en Kotlin:**
+```kotlin
+const val MAX: Int = 20
+
+companion object {
+    const val PI: Double = 3.1415
+}
+```
+
+> **Convención**: El nombre de las constantes debe escribirse totalmente en mayúsculas.
+
+#### 3.4. Zona 3: Métodos
+
+En la tercera zona se escriben los **métodos** o funciones de la clase, también uno por línea.
+
+##### 3.4.1. Formato de métodos
 
 * **Formato oficial:**
 
@@ -148,7 +223,33 @@ En la tercera zona se escriben los **métodos** o funciones de la clase, tambié
 + calcularDescuento(precio: Double) : Double
 ```
 
-#### 2.6. Visibilidad
+##### 3.4.2. Tipos de Métodos
+
+**Métodos de clase**
+
+Son acciones que no requieren de un objeto específico para su realización. Los métodos de clase solo tienen acceso a los atributos de clase.
+
+**Ejemplo en Kotlin:**
+```kotlin
+companion object {
+    fun sumar(x: Int, y: Int): Int {
+        return x + y
+    }
+}
+```
+
+**Métodos de instancia**
+
+Son acciones que requieren de un objeto específico. Los métodos de instancia tienen acceso a todos los miembros de la clase.
+
+**Ejemplo en Kotlin:**
+```kotlin
+fun getNombre(): String {
+    return nombre
+}
+```
+
+#### 3.5. Visibilidad
 
 Tanto los atributos como los métodos incluyen un símbolo que indica su **visibilidad**:
 
@@ -164,28 +265,7 @@ Tanto los atributos como los métodos incluyen un símbolo que indica su **visib
 
 > **Nota**: Los tres primeros (`+`, `-`, `#`) son los más comunes y universales.
 
-#### 2.7. Ejemplo Completo de Clase
-
-![Ejemplo de clase completa](assets/clase-completa.png)
-
-```
-┌──────────────────────────────────────┐
-│            Producto                  │
-├──────────────────────────────────────┤
-│ - idProducto : Int                   │
-│ - nombre : String                    │
-│ - precio : Double                    │
-│ - stock : Int                        │
-├──────────────────────────────────────┤
-│ + Producto(nombre, precio)           │
-│ + getNombre() : String               │
-│ + setPrecio(precio: Double) : Unit   │
-│ + hayStock() : Boolean               │
-│ + calcularDescuento(porcentaje: Double) : Double │
-└──────────────────────────────────────┘
-```
-
-#### 2.8. Miembros Estáticos
+#### 3.6. Miembros Estáticos
 
 Los **atributos o métodos estáticos** se representan **subrayando** su nombre.
 
@@ -217,7 +297,92 @@ class Contador {
 }
 ```
 
-### 3. Relaciones
+#### 3.7. Ejemplo Completo de Clase
+
+![Ejemplo de clase completa](assets/clase-completa.png)
+
+**Ejemplo: Clase Producto**
+
+```
+┌──────────────────────────────────────┐
+│            Producto                  │
+├──────────────────────────────────────┤
+│ - idProducto : Int                   │
+│ - nombre : String                    │
+│ - precio : Double                    │
+│ - stock : Int                        │
+├──────────────────────────────────────┤
+│ + Producto(nombre, precio)           │
+│ + getNombre() : String               │
+│ + setPrecio(precio: Double) : Unit   │
+│ + hayStock() : Boolean               │
+│ + calcularDescuento(porcentaje: Double) : Double │
+└──────────────────────────────────────┘
+```
+
+**Ejemplo: Clase Libro**
+
+![Ejemplo de clase Libro](assets/ejemplo-clase-libro.svg)
+
+```
+┌────────────────────────────────────────┐
+│                 Libro                  │
+├────────────────────────────────────────┤
+│ - autor : String                       │
+│ - titulo : String                      │
+│ - cantidadLibros : Int                 │
+├────────────────────────────────────────┤
+│ + Libro()                              │
+│ + Libro(autor: String, titulo: String) │
+│ + setAutor(autor: String) : Unit       │
+│ + getAutor() : String                  │
+│ + setTitulo(titulo: String) : Unit     │
+│ + getTitulo() : String                 │
+│ + getNumeroEjemplares() : Int          │
+│ + toString() : String                  │
+└────────────────────────────────────────┘
+```
+
+**Implementación en Kotlin:**
+
+```kotlin
+class Libro {
+    private var autor: String
+    private var titulo: String
+    
+    companion object {
+        private var cantidadLibros: Int = 0
+        
+        fun getCantidadLibros(): Int = cantidadLibros
+    }
+    
+    constructor() : this("NA", "NT")
+    
+    constructor(autor: String, titulo: String) {
+        this.autor = autor
+        this.titulo = titulo
+        cantidadLibros++
+    }
+    
+    fun setAutor(autor: String) {
+        this.autor = autor
+    }
+    
+    fun getAutor(): String = autor
+    
+    fun setTitulo(titulo: String) {
+        this.titulo = titulo
+    }
+    
+    fun getTitulo(): String = titulo
+    
+    override fun toString(): String {
+        return "Datos de libro: $titulo\n$autor"
+    }
+}
+```
+
+### 4. Relaciones entre Clases
 
 Una **relación** identifica una **dependencia** entre clases. Puede ser:
 
@@ -227,12 +392,13 @@ Una **relación** identifica una **dependencia** entre clases. Puede ser:
 Las relaciones se representan con **líneas** que unen las clases. El tipo de línea varía según el tipo de relación.
 
 ![Tipos de relaciones](assets/tipos-relaciones.jpg)
+![Relaciones](assets/relaciones.png)
 
-#### 3.1. Propiedades de las Relaciones
+#### 4.1. Propiedades de las Relaciones
 
 Cada relación puede tener las siguientes propiedades:
 
-##### 3.1.1. Multiplicidad (Cardinalidad)
+##### 4.1.1. Multiplicidad (Cardinalidad)
 
 Indica el **número de elementos** de una clase que participan en una relación.
 
@@ -240,32 +406,49 @@ Indica el **número de elementos** de una clase que participan en una relación.
 
 | Notación     | Significado                       |
 |--------------|-----------------------------------|
-| `1`          | Exactamente uno                   |
+| `1`          | Exactamente uno (uno y solo uno)  |
 | `0..1`       | Cero o uno                        |
-| `*` o `0..*` | Cero o muchos                     |
+| `*` o `0..*` | Cero o muchos (muchos)            |
 | `1..*`       | Uno o muchos (al menos uno)       |
 | `n`          | Exactamente n (número específico) |
 | `m..n`       | Desde m hasta n                   |
 
-##### 3.1.2. Nombre de la Asociación
+##### 4.1.2. Nombre de la Asociación
 
 Se puede escribir una indicación que ayuda a entender la relación. Suelen utilizarse **verbos**.
 
 **Ejemplo**: "Una empresa **contrata** a n empleados"
 
-##### 3.1.3.  C. Rol
+##### 4.1.3. Rol
 
-Indica el papel que juega cada clase en la relación.
+Indica el papel que juega cada clase en la relación. Es decir, describe la semántica que tiene la relación en el sentido indicado.
 
-### 4. Tipos de Relaciones
+**Ejemplo de notación:**
 
-#### 4.1. Asociación
+```
+┌─────────┐   Se imparte   ┌─────────┐
+│  Curso  │1 ───────────→ *│  Clase  │
+└─────────┘+curso   +clases└─────────┘
+```
+
+En el ejemplo anterior:
+
+* El rol de la clase `Curso` es `curso`, y el rol de la clase `Clase` es `clases`. 
+* La multiplicidad indica que un `curso` puede impartir muchas `clases`, pero cada `clase` pertenece a un solo `curso`.
+
+### 5. Tipos de Relaciones
+
+#### 5.1. Asociación
 
 **Definición**: Representa una dependencia semántica. Es el tipo de relación más común y general.
 
 **Representación**: Línea continua simple que une las clases.
 
 ![Relación de asociación](assets/relacion-asociacion.png)
+
+##### 5.1.1. Asociación Binaria
+
+Una asociación binaria conecta dos clases. Se representa con una línea sólida entre las dos clases.
 
 **Ejemplo**: "Una mascota pertenece a una persona"
 
@@ -290,7 +473,92 @@ class Persona(val nombre: String) {
 class Mascota(val nombre: String, val dueno: Persona)
 ```
 
-#### 4.2. Agregación
+**Otro ejemplo**: "Una matrícula consta de cursos"
+
+```
+┌────────────┐  Consta De   ┌─────────┐
+│ Matricula  │1 ─────────→ *│  Curso  │
+└────────────┘              └─────────┘
+  -matricula                  -cursos
+```
+
+**Implementación en Kotlin:**
+
+```kotlin
+class Matricula(n: Int) {
+    private val cursos: Array<Curso?> = arrayOfNulls(n)
+    
+    // ... resto de métodos
+}
+
+class Curso(private val matricula: Matricula) {
+    // ... resto de métodos
+}
+```
+
+##### 5.1.2. Asociación Reflexiva
+
+Una clase se relaciona consigo misma.
+
+**Diagrama:**
+
+```
+┌──────────────┐
+│  Trabajador  │
+└──────────────┘
+  ↑           ↓
+  │           │ Supervisor De
+  │           │
+-jefe 0..1  0..* -subordinado
+```
+
+**Implementación en Kotlin:**
+
+```kotlin
+class Trabajador(
+    private val jefe: Trabajador?,
+    n: Int
+) {
+    private val subordinados: Array<Trabajador?> = arrayOfNulls(n)
+    
+    // ... resto de métodos
+}
+```
+
+##### 5.1.3. Asociación N-aria
+
+Involucra más de dos clases.
+
+**Diagrama:**
+
+```
+┌──────────┐  Contenido En    ┌──────────────┐
+│ Articulo │1 ─────────────→ *│ OrdenCompra  │
+└──────────┘                  └──────────────┘
+  -articulo                     -ordenC
+                                   │
+                                ┌──┴────┐
+                                │ItemOC │
+                                └───────┘
+```
+
+**Implementación en Kotlin:**
+
+```kotlin
+class Articulo {
+    // ... atributos y métodos
+}
+
+class OrdenCompra {
+    private val items: Array<ItemOC?> = arrayOfNulls(100)
+    
+    inner class ItemOC(private val articulo: Articulo) {
+        // ... métodos de ItemOC
+    }
+}
+```
+
+#### 5.2. Agregación
 
 **Definición**: Representa una relación jerárquica donde un objeto es parte de otro, pero **puede existir independientemente**.
 
@@ -298,7 +566,7 @@ class Mascota(val nombre: String, val dueno: Persona)
 
 ![Relación de agregación](assets/relacion-agregacion.png)
 
-**Ejemplo**: "Las mesas están formadas por tablas de madera y tornillos"
+**Ejemplo 1**: "Las mesas están formadas por tablas de madera y tornillos"
 
 ```
 ┌──────────┐         ┌──────────┐
@@ -308,6 +576,15 @@ class Mascota(val nombre: String, val dueno: Persona)
 ```
 
 > **Nota**: El tornillo puede formar parte de más objetos (silla, estantería...), por lo que tiene existencia independiente.
+
+**Ejemplo 2**: "Un automóvil es accesorio de una radio"
+
+```
+┌───────────┐  Es Accesorio De    ┌────────┐
+│ Automovil │◇──────────────────→ │ Radio  │
+└───────────┘                     └────────┘
+  -automovil 1     0..1 -radio
+```
 
 **En Kotlin**:
 
@@ -319,9 +596,20 @@ class Mesa {
 class Tornillo(val tipo: String) {
     // Puede existir sin estar en una mesa
 }
+
+// Otro ejemplo
+class Automovil(private val radio: Radio?) {
+    // ... resto de métodos
+}
+
+class Radio {
+    // ... atributos y métodos
+}
 ```
 
-#### 4.3. Composición
+> **Nota**: En la agregación, la radio puede existir independientemente del automóvil.
+
+#### 5.3. Composición
 
 **Definición**: Representa una relación jerárquica donde las partes **NO pueden existir sin el todo**. Es una forma más fuerte de agregación.
 
@@ -360,9 +648,9 @@ class Automovil {
 | ◇ Rombo vacío                                 | ♦ Rombo relleno                                |
 | Las partes pueden existir independientemente  | Las partes NO existen sin el todo              |
 | Relación débil                                | Relación fuerte                                |
-| Ejemplo: Mesa-Tornillo                        | Ejemplo: Automóvil-Motor                       |
+| Ejemplo: Mesa-Tornillo, Automóvil-Radio       | Ejemplo: Automóvil-Motor                       |
 
-#### 4.4. Herencia (Generalización/Especialización)
+#### 5.4. Herencia (Generalización/Especialización)
 
 **Definición**: Representa una relación de tipo "es un". La clase hija hereda características de la clase padre.
 
@@ -383,6 +671,21 @@ class Automovil {
        └─────────┘
 ```
 
+**Otro ejemplo**: "Un libro es una publicación"
+
+```
+         ┌──────────────┐
+         │ Publicacion  │
+         └──────────────┘
+                △
+                │ Generalización
+                │
+         ┌──────┴──────┐
+         │    Libro    │
+         └─────────────┘
+       Especialización
+```
+
 **En Kotlin**:
 
 ```kotlin
@@ -397,9 +700,24 @@ class Perro(nombre: String) : Animal(nombre) {
         println("Guau!")
     }
 }
+
+// Otro ejemplo
+open class Publicacion {
+    // ... atributos y métodos base
+}
+
+class Libro : Publicacion() {
+    // ... atributos y métodos específicos
+    
+    init {
+        // Llama al constructor de la superclase
+    }
+}
 ```
 
-#### 4.5. Dependencia
+> **Principio**: La subclase hereda todos los atributos y métodos de la superclase.
+
+#### 5.5. Dependencia
 
 **Definición**: Indica que una clase **usa** temporalmente otra clase. Es la relación más débil.
 
@@ -414,6 +732,12 @@ class Perro(nombre: String) : Animal(nombre) {
 │  Calculadora│- - - →│  Math        │
 └─────────────┘       └──────────────┘
       usa
+
+┌───────────┐       ┌────────────────────────────┐
+│ Potencia  │- - - →│         Math               │
+└───────────┘       ├────────────────────────────┤
+                    │ pow(a:Double, b:Double)    │
+                    └────────────────────────────┘
 ```
 
 **En Kotlin**:
@@ -426,6 +750,19 @@ class Calculadora {
         return base.pow(exponente)  // Usa Math temporalmente
     }
 }
+
+// Otro ejemplo
+class Potencia {
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            val x = 5.0
+            val y = 2.0
+            val z = x.pow(y)
+            println("El cuadrado de 5 es: $z")
+        }
+    }
+}
 ```
 
 **Características**:
@@ -434,7 +771,9 @@ class Calculadora {
 - Uso temporal o puntual
 - Puede ser por parámetro, variable local, etc.
 
-#### 4.6. Implementación (Realización)
+> **Nota**: La dependencia es más débil que otras relaciones. La clase simplemente usa la funcionalidad de otra, pero no mantiene una referencia permanente.
+
+#### 5.6. Implementación (Realización)
 
 **Definición**: Representa que una clase **implementa** una interfaz o clase abstracta.
 
@@ -474,130 +813,24 @@ class Avion : IVolador {
 }
 ```
 
-#### 4.7. Resumen de Relaciones
+#### 5.7. Resumen de Relaciones
 
-| Relación           | Símbolo  | Descripción                    | Ejemplo            |
-|--------------------|----------|--------------------------------|--------------------|
-| **Asociación**     | `───`    | Relación general               | Persona - Mascota  |
-| **Agregación**     | `◇───`   | "Tiene un" (independiente)     | Mesa - Tornillo    |
-| **Composición**    | `♦───`   | "Es parte de" (dependiente)    | Coche - Motor      |
-| **Herencia**       | `───▷`   | "Es un"                        | Perro - Animal     |
-| **Dependencia**    | `- - →`  | Uso temporal                   | Calculadora - Math |
-| **Implementación** | `- - ▷`  | Implementa interfaz            | Avion - IVolador   |
-
-
-### 5. Consejos y Mejores Prácticas
-
-Para crear diagramas de clases efectivos, es importante seguir ciertas recomendaciones:
-
-#### 5.1. División de Diagramas
-
-**Recomendado**: Dividir diagramas grandes en otros más pequeños que se puedan vincular.
-
-**Evitar**: Crear diagramas gigantes e incoherentes.
-
-**Razón**: Los diagramas tienden a volverse incoherentes a medida que crecen.
-
-#### 5.2. Niveles de Detalle
-
-Lo ideal en cuanto a los niveles de detalle es:
-
-- **Vista de alto nivel**: Usar notación simple de clases
-- **Vista detallada**: Crear diagramas separados según necesidad
-- **Vinculación**: Los diagramas detallados pueden vincularse a los de alto nivel
-
-#### 5.3. Claridad Visual
-
-**Hacer**:
-
-- Evitar que las líneas se crucen (en la medida de lo posible)
-- Usar colores para agrupar módulos comunes
-- Mantener una distribución ordenada
-
-**Evitar**:
-
-- Líneas que se superponen excesivamente
-- Diagramas abarrotados
-- Mezclar demasiados conceptos en un solo diagrama
-
-#### 5.4. Uso de Color
-
-Usar **diferentes colores** para diferentes grupos de clases:
-
-- 🔵 **Azul**: Clases de modelo/dominio
-- 🟢 **Verde**: Clases de servicios
-- 🟡 **Amarillo**: Clases de utilidades
-- 🔴 **Rojo**: Clases de excepciones
-
-Esto ayuda al lector a diferenciar entre los diversos grupos.
+| Relación           | Símbolo  | Fuerza       | Descripción                            | Ejemplo                 |
+|--------------------|----------|--------------|----------------------------------------|-------------------------|
+| **Dependencia**    | `- - →`  | Muy débil    | Uso temporal                           | Calculadora - Math      |
+| **Asociación**     | `───`    | Débil        | Relación general                       | Persona - Mascota       |
+| **Agregación**     | `◇───`   | Media        | "Tiene un" (independiente)             | Mesa - Tornillo         |
+| **Composición**    | `♦───`   | Fuerte       | "Es parte de" (dependiente)            | Coche - Motor           |
+| **Herencia**       | `───▷`   | Muy fuerte   | "Es un"                                | Perro - Animal          |
+| **Implementación** | `- - ▷`  | Muy fuerte   | Implementa interfaz                    | Avion - IVolador        |
 
 ### 6. Ejemplos Completos de Diagramas de Clases
 
-#### 6.1. Clínica Veterinaria
-
-![Diagrama de clases clínica veterinaria](assets/ejemplo-veterinaria.jpg)
-
-**Clases principales**:
-
-- Cliente
-- Mascota
-- Veterinario
-- Cita
-- Tratamiento
-
-#### 6.2. Zoológico
-
-![Diagrama de clases zoológico](assets/ejemplo-zoologico.png)
-
-**Clases principales**:
-
-- Animal
-- Hábitat
-- Cuidador
-- Visitante
-- Recinto
-
-#### 6.3. Tienda
-
-![Diagrama de clases de una tienda](assets/ejemplo-tienda.png)
-
-**Clases principales**:
-
-- Producto
-- Cliente
-- Pedido
-- Categoría
-- Pago
-
-#### 6.4. Gestión de Biblioteca
-
-![Diagrama de clases gestión de biblioteca](assets/ejemplo-biblioteca.png)
-
-**Clases principales**:
-
-- Libro
-- Usuario
-- Préstamo
-- Autor
-- Editorial
-
-#### 6.5. Centro Educativo
-
-![Diagrama de clases centro educativo](assets/ejemplo-centro-educativo.png)
-
-**Clases principales**:
-
-- Estudiante
-- Profesor
-- Curso
-- Matrícula
-- Calificación
-
-### 7. Ejemplo Detallado: Tienda Online
+#### 6.1. Sistema de Tienda Online
 
 A continuación, un ejemplo detallado de las clases con sus atributos para un sistema de **tienda online**:
 
-#### 7.1. Clase Usuario
+##### 6.1.1. Clase Usuario
 
 ```kotlin
 class Usuario(
@@ -623,7 +856,7 @@ class Usuario(
 - `direccion`: Dirección de envío
 - `metodoDePago`: Método de pago preferido
 
-#### 7.2. Clase Producto
+##### 6.1.2. Clase Producto
 
 ```kotlin
 class Producto(
@@ -653,7 +886,7 @@ class Producto(
 - `precio`: Precio del producto
 - `stock`: Cantidad disponible en inventario
 
-#### 7.3. Clase Carrito de Compras
+##### 6.1.3. Clase Carrito de Compras
 
 ```kotlin
 class CarritoCompras(
@@ -689,7 +922,7 @@ data class ProductoCarrito(val producto: Producto, val cantidad: Int)
 - `subtotal`: Monto total antes de impuestos
 - `impuestos`: Monto total de impuestos
 
-#### 7.4. Clase Orden de Compra
+##### 6.1.4. Clase Orden de Compra
 
 ```kotlin
 class OrdenCompra(
@@ -727,7 +960,7 @@ class OrdenCompra(
 - `envio`: Costo de envío
 - `total`: Monto total final
 
-#### 7.5. Clase Categoría
+##### 6.1.5. Clase Categoría
 
 ```kotlin
 class Categoria(
@@ -749,7 +982,7 @@ class Categoria(
 - `idCategoria`: Identificador único de la categoría
 - `nombre`: Nombre de la categoría
 
-#### 7.6. Clase Comentarios
+##### 6.1.6. Clase Comentarios
 
 ```kotlin
 class Comentario(
@@ -775,7 +1008,7 @@ class Comentario(
 - `fecha`: Fecha de creación
 - `calificacion`: Puntuación del 1 al 5
 
-#### 7.7. Diagrama de Clases Simplificado
+##### 6.1.7. Diagrama de Clases Simplificado
 
 ```
 ┌─────────────┐       ┌──────────────┐       ┌────────────────┐
@@ -794,6 +1027,113 @@ class Comentario(
                                               │   Categoria    │
                                               └────────────────┘
 ```
+
+#### 6.2. Otros Ejemplos de Sistemas
+
+##### 6.2.1. Clínica Veterinaria
+
+![Diagrama de clases clínica veterinaria](assets/ejemplo-veterinaria.jpg)
+
+**Clases principales**:
+
+- Cliente
+- Mascota
+- Veterinario
+- Cita
+- Tratamiento
+
+##### 6.2.2. Zoológico
+
+![Diagrama de clases zoológico](assets/ejemplo-zoologico.png)
+
+**Clases principales**:
+
+- Animal
+- Hábitat
+- Cuidador
+- Visitante
+- Recinto
+
+##### 6.2.3. Tienda
+
+![Diagrama de clases de una tienda](assets/ejemplo-tienda.png)
+
+**Clases principales**:
+
+- Producto
+- Cliente
+- Pedido
+- Categoría
+- Pago
+
+##### 6.2.4. Gestión de Biblioteca
+
+![Diagrama de clases gestión de biblioteca](assets/ejemplo-biblioteca.png)
+
+**Clases principales**:
+
+- Libro
+- Usuario
+- Préstamo
+- Autor
+- Editorial
+
+##### 6.2.5. Centro Educativo
+
+![Diagrama de clases centro educativo](assets/ejemplo-centro-educativo.png)
+
+**Clases principales**:
+
+- Estudiante
+- Profesor
+- Curso
+- Matrícula
+- Calificación
+
+### 7. Mejores Prácticas en Diagramas de Clases
+
+Para crear diagramas de clases efectivos, es importante seguir ciertas recomendaciones:
+
+#### 7.1. División de Diagramas
+
+**Recomendado**: Dividir diagramas grandes en otros más pequeños que se puedan vincular.
+
+**Evitar**: Crear diagramas gigantes e incoherentes.
+
+**Razón**: Los diagramas tienden a volverse incoherentes a medida que crecen.
+
+#### 7.2. Niveles de Detalle
+
+Lo ideal en cuanto a los niveles de detalle es:
+
+- **Vista de alto nivel**: Usar notación simple de clases
+- **Vista detallada**: Crear diagramas separados según necesidad
+- **Vinculación**: Los diagramas detallados pueden vincularse a los de alto nivel
+
+#### 7.3. Claridad Visual
+
+**Hacer**:
+
+- Evitar que las líneas se crucen (en la medida de lo posible)
+- Usar colores para agrupar módulos comunes
+- Mantener una distribución ordenada
+
+**Evitar**:
+
+- Líneas que se superponen excesivamente
+- Diagramas abarrotados
+- Mezclar demasiados conceptos en un solo diagrama
+
+#### 7.4. Uso de Color
+
+Usar **diferentes colores** para diferentes grupos de clases:
+
+- 🔵 **Azul**: Clases de modelo/dominio
+- 🟢 **Verde**: Clases de servicios
+- 🟡 **Amarillo**: Clases de utilidades
+- 🔴 **Rojo**: Clases de excepciones
+
+Esto ayuda al lector a diferenciar entre los diversos grupos.
 
 ### 8. Herramientas para Crear Diagramas de Clases
 
@@ -828,8 +1168,42 @@ Existen otras herramientas declarativas que permiten generar diagramas de clases
 - **Mermaid**: Diagramas en markdown
 - **IntelliJ IDEA**: Genera diagramas desde código Kotlin/Java
 
-### 9. Conclusiones
+### 9. Puntos Clave para Recordar
 
+Los siguientes puntos son esenciales para trabajar con diagramas de clases:
+
+**Sobre la notación**:    
+
+- Una clase se representa con una caja de tres compartimentos
+- Los atributos llevan visibilidad (+, -, #) y tipo
+- Los métodos especifican parámetros y tipo de retorno
+- Los miembros estáticos se subrayan
+- Las clases abstractas se escriben en *cursiva*
+
+**Sobre las relaciones**:    
+
+- Asociación (`───`): Relación general
+- Agregación (`◇───`): Partes independientes
+- Composición (`♦───`): Partes dependientes
+- Herencia (`───▷`): Relación "es un"
+- Dependencia (`- - →`): Uso temporal
+- Implementación (`- - ▷`): Realiza interfaz
+
+**Sobre multiplicidad**:
+
+- `1`: Exactamente uno
+- `0..1`: Opcional
+- `*`: Cero o muchos
+- `1..*`: Al menos uno
+
+**Mejores prácticas**:
+
+- Dividir diagramas grandes en módulos
+- Evitar cruzar líneas innecesariamente
+- Usar colores para agrupar conceptos
+- Mantener consistencia en la notación
+
+### 10. Conclusiones
 
 - El diagrama de clases es **fundamental** en el diseño orientado a objetos
 - Representa la **estructura estática** del sistema
@@ -838,26 +1212,7 @@ Existen otras herramientas declarativas que permiten generar diagramas de clases
 - Facilita la **comunicación** entre analistas, desarrolladores y clientes
 - Sirve como **documentación** del sistema
 - Es la base para la **implementación** del código
-
-### 10. Puntos Clave para Recordar
-
-Los siguientes puntos son esenciales para crear diagramas de clases efectivos:
-
-**Hacer**:    
-
-- Identificar clases a partir de sustantivos
-- Usar la visibilidad apropiada (+, -, #)
-- Elegir el tipo de relación correcto
-- Mantener diagramas simples y claros
-- Dividir diagramas grandes en módulos
-
-**Evitar**:    
-
-- Crear diagramas demasiado complejos
-- Mezclar aspectos estáticos y dinámicos
-- Olvidar la multiplicidad en las relaciones
-- Cruzar líneas innecesariamente
-- Incluir detalles de implementación prematuros
+- Dominar la notación UML es esencial para cualquier desarrollador
 
 ### 11. Recursos y Referencias
 
@@ -865,3 +1220,4 @@ Los siguientes puntos son esenciales para crear diagramas de clases efectivos:
 - [Diagramas UML](https://diagramasuml.com/)
 - [PlantUML](https://plantuml.com/)
 - [Draw.io](https://app.diagrams.net/)
+- [Kotlin Programming Language](https://kotlinlang.org/)

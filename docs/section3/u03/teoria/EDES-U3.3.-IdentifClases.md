@@ -1,7 +1,7 @@
 ---
 title: "UD 3 - 3.3 Identificación de Clases"
 description: Identificación de Clases en UML
-summary: Técnicas y métodos para identificar clases a partir de requisitos
+summary: Técnicas, métodos y buenas prácticas para identificar clases a partir de requisitos
 authors:
     - Eduardo Fdez
 date: 2025-11-03
@@ -14,46 +14,31 @@ tags:
     - UML
     - Identificación de Clases
     - Análisis
+    - Buenas Prácticas
     
 ---
 
-## 3.3 Identificación de Clases
+## 3.3 Identificación de Clases y Buenas Prácticas
 
 ### 1. Introducción
 
-Los **diagramas de clases de UML** se utilizan para documentar la estructura estática del sistema; esto es, qué clases hay y cómo están relacionadas. La técnica del diagrama de clase se ha vuelto fundamental en los métodos orientados a objetos.
+La **identificación de clases** es uno de los pasos más importantes y desafiantes en el diseño orientado a objetos. Un buen modelo de clases es la base para un sistema bien estructurado, mantenible y escalable.
 
-El diagrama de clase describe:
-- Los tipos de objetos que hay en el sistema
-- Las diversas clases de relaciones estáticas que existen entre ellos
-- Los atributos y operaciones (métodos) de una clase
-- Las restricciones según la forma en que se conecten los objetos
+> 💡 **Principio fundamental**: "Cada comportamiento que requiera el sistema debe ser proporcionado por los objetos de las clases que elijamos"
 
-### 2. Clases y Objetos
+Este documento se centra en **cómo identificar clases**, **cómo relacionarlas** y las **buenas prácticas** para crear diagramas de clases efectivos.
 
-#### 2.1. ¿Qué es un objeto?
+### 2. Fundamentos de la Identificación
 
-Un **objeto** es:
+#### 2.1. ¿Qué buscamos al identificar clases?
 
-- La pieza básica de la POO (Programación Orientada a Objetos)
-- Representa un objeto del mundo real, por ejemplo: un automóvil, un estudiante, una cuenta bancaria
-- Cada objeto es especializado y solo se encarga de su tarea
-- Pueden ser entidades físicas y conceptuales, por ejemplo: un libro, una cuenta bancaria
-- Se comunican con otros objetos pasándose mensajes, por ejemplo: "retirar dinero", "consultar saldo"
+Al identificar clases, buscamos representar:
 
-#### 2.2. ¿Qué son las clases?
+1. **Entidades del dominio**: Objetos que existen en el mundo real o conceptual del problema
+2. **Responsabilidades**: Qué debe hacer cada clase en el sistema
+3. **Colaboraciones**: Cómo las clases trabajan juntas para cumplir los requisitos
 
-Una **clase** describe un conjunto de objetos con un rol o roles equivalentes en un sistema. Los objetos y su división en clases a menudo derivan de una de las siguientes fuentes:
-
-1. **Cosas tangibles o "del mundo real"**: Avión, auto, televisor, computador, etc.
-2. **Roles o Papeles**: Gerente, cliente, vendedor, profesor, etc.
-3. **Organizaciones**: Universidad, empresa, departamento, etc.
-4. **Interacciones**: Transacción, matrícula, contrato, etc.
-5. **Eventos o incidencias**: Vuelo, accidente, suceso, etc.
-
-> **Nota importante**: Estas categorías se solapan, y las dos primeras son fuentes de objetos y de clases mucho más comunes que las dos últimas.
-
-#### 2.3. Consideraciones importantes
+#### 2.2. Consideraciones importantes
 
 Es importante recordar que los objetos son realmente cosas dentro de un programa de computador. Cuando hablamos sobre "libros" y "copias", por ejemplo, realmente nos referimos a la representación de estas cosas dentro de nuestro sistema.
 
@@ -61,591 +46,798 @@ Las consecuencias de esto son que hay que tener cuidado:
 
 - **No almacenar información** que es definitivamente irrelevante para nuestro sistema
 - **No perder la visión** del hecho de que ¡los objetos son el sistema!
+- **Mantener el enfoque** en lo que el sistema necesita, no en todo lo que existe en el mundo real
 
-Por otra parte, existen algunos errores comunes al identificar clases y objetos: la clase "System". Consiste en crear una clase que representa el sistema en su totalidad, es decir inventarse una clase, a menudo llamada `[Cualquier_cosa]System`, que implementa todo el comportamiento interesante del sistema. 
+### 3. Objetivos de un Buen Modelo de Clases
 
-**¿Por qué está mal?** Porque tales diseños son muy difíciles de mantener: tienden a tener presunciones sobre cómo será utilizado el sistema. En Orientación a Objetos, todo el negocio es el sistema; ¡este es el tema!
+La construcción de un modelo de clases incluye dos objetivos fundamentales:
 
-### 3. Identificación de Objetos y Clases
+#### 3.1. Objetivo 1: Construcción eficiente
 
-#### 3.1. Objetivos
+**Construir, lo más rápido y barato posible, un sistema que satisfaga nuestros requisitos actuales.**
 
-La construcción de un modelo de clases incluye la identificación de las clases que deberían existir en nuestro sistema. Hay dos objetivos fundamentales:
+> **Principio**: "Cada comportamiento que requiera el sistema debe ser proporcionado por los objetos de las clases que elijamos"
 
-* **Objetivo 1:** Construcción eficiente
+**Estrategias**:
+- Identificar las clases mínimas necesarias
+- Enfocarse en los requisitos actuales
+- Evitar sobre-ingeniería prematura
 
-    Construir, lo más rápido y barato posible, un sistema que satisfaga nuestros requisitos actuales.
+#### 3.2. Objetivo 2: Mantenibilidad
 
-    > **Principio**: "Cada comportamiento que requiera el sistema debe ser proporcionado por los objetos de las clases que elijamos"
+**Construir un sistema que sea fácil de mantener y adaptar a futuros requisitos.**
 
-* **Objetivo 2:** Mantenibilidad
+> **Principio**: "Un buen modelo de clases está formado por módulos encapsulados, con acoplamiento débil (pocas dependencias entre módulos) y cohesión fuerte"
 
-    Construir un sistema que sea fácil de mantener y adaptar a futuros requisitos.
+**Características clave**:
+- **Alta cohesión**: Cada clase tiene una responsabilidad clara y bien definida
+- **Bajo acoplamiento**: Las clases tienen pocas dependencias entre sí
+- **Encapsulamiento**: Los detalles internos están ocultos
 
-    > **Principio**: "Un buen modelo de clases está formado por módulos encapsulados, con acoplamiento débil (pocas dependencias entre módulos) y cohesión fuerte"
+### 4. Proceso Iterativo de Identificación
 
-#### 3.2. Proceso iterativo
+En la práctica, es **improbable que construya correctamente un modelo de clases la primera vez**. La colección de clases en su modelo de diseño es una de las cosas que probablemente cambiará a lo largo de las iteraciones de desarrollo.
 
-En la práctica, es improbable que construya correctamente un modelo de clases la primera vez. La colección de clases en su modelo de diseño es una de las cosas que probablemente cambiará a lo largo de las iteraciones de desarrollo.
+#### 4.1. Patrón común de desarrollo
 
-**Patrón común**:
+1. **Primera iteración**: Identificar las clases más importantes de los objetos del dominio
+   - Aquellas que pertenecen de manera obvia al problema
+   - Sustantivos principales del enunciado
 
-1. Primero identificará las clases más importantes de los objetos del dominio (aquellas que pertenecen de manera obvia al problema)
-2. Luego las clases que se introducen para resolver el problema (más difíciles de identificar)
+2. **Segunda iteración**: Añadir clases que se introducen para resolver el problema
+   - Más difíciles de identificar
+   - Controladores, gestores, servicios
 
-### 4. Técnica: Identificación de Nombres
+3. **Iteraciones posteriores**: Refinar y ajustar
+   - Eliminar redundancias
+   - Mejorar relaciones
+   - Ajustar responsabilidades
 
-#### 4.1. Identificación de clases candidatas
+### 5. Técnica de Identificación de Nombres
 
-Esta técnica procede en dos etapas fundamentales:
+La técnica más común y efectiva para identificar clases es el **análisis de sustantivos**. Procede en dos etapas fundamentales:
 
-##### 4.1.1. Etapa 1: Identificar clases candidatas
+#### 5.1. Etapa 1: Identificar clases candidatas
 
-**Estrategias principales**:
+##### 5.1.1. Estrategias principales
 
-1. **Análisis de documentos textuales**: Se obtiene principalmente de algún documento textual que describa el sistema
-2. **Extracción de sustantivos**: Se extraen todos los sustantivos de la descripción del problema o de algún otro documento similar
-3. **Identificación de candidatos**: Los sustantivos en la descripción del problema son los posibles candidatos a clases de objetos
+1. **Análisis de documentos textuales**
+   - Obtener descripción del problema (requisitos, casos de uso, historias de usuario)
+   - Puede ser documentación formal o informal
+   - Entrevistas con usuarios y stakeholders
 
-**Ejemplo**: En un sistema de reservaciones que vende boletos para funciones en varios teatros, las clases candidatas serían:
+2. **Extracción de sustantivos**
+   - Extraer todos los sustantivos de la descripción
+   - Los sustantivos son candidatos a clases de objetos
+   - Hacer una lista completa sin descartar nada al principio
+
+3. **Identificación de candidatos**
+   - Listar todos los sustantivos encontrados
+   - Incluir tanto entidades físicas como conceptuales
+
+##### 5.1.2. Ejemplo práctico
+
+**Enunciado**: "En un sistema de reservaciones que vende boletos para funciones en varios teatros..."
+
+**Sustantivos encontrados (clases candidatas)**:
 - Sistema de Reservaciones
 - Boletos
 - Función
 - Teatro
+- Venta
+- Cliente (implícito)
 
-**Reglas**:
-- Considérelos en forma singular
-- No incluya frases que contengan "o" como candidatas
+##### 5.1.3. Reglas iniciales
 
-##### 4.1.2. Etapa 2: Descartar candidatas inapropiadas
+- Considérelos en forma **singular**: "Boleto" en lugar de "Boletos"
+- **No incluya frases** que contengan "o" como candidatas (son alternativas, no clases)
+- Durante esta etapa, **no diferenciar** entre clases y atributos todavía
 
-Durante esta etapa, se debe identificar entidades físicas al igual que entidades conceptuales. **No se debe tratar de diferenciar entre clases y características de las clases durante esta etapa.**
+#### 5.2. Etapa 2: Descartar candidatas inapropiadas
 
-Descarte las candidatas que son inapropiadas por cualquier razón, renombrando las clases restantes si es necesario.
+Esta es la etapa más crítica. Hay que analizar cada candidata y determinar si realmente debe ser una clase.
 
-##### 4.1.3. Razones para descartar una clase candidata:
+##### 5.2.1. Razones para descartar una clase candidata
 
-Las siguientes son algunas razones comunes para descartar una clase candidata:
+**1. Redundante**
 
-1. **Redundante:** Cuando a la misma clase se le ha dado más de un nombre.
+Cuando a la misma clase se le ha dado más de un nombre.
 
-    **Ejemplo**: "préstamo" y "préstamo a corto plazo" 
-   
-    **Acción**: Probablemente solo difieren en valores de atributos. Elija un nombre que abarque todas las descripciones.
+**Ejemplo**: 
+- "préstamo" y "préstamo a corto plazo"
+- "usuario" y "cliente"
 
-2. **Impreciso:** Cuando no se puede indicar de forma no ambigua lo que significa un nombre.
+**Acción**: Probablemente solo difieren en valores de atributos. Elija un nombre que abarque todas las descripciones.
 
-    **Ejemplo**: "Cuenta" (¿Cuenta bancaria, cuenta de usuario, cuenta de ahorros?)
+**2. Impreciso**
 
-    **Acción**: Eliminar la ambigüedad antes de considerarla clase.
+Cuando no se puede indicar de forma no ambigua lo que significa un nombre.
 
-3. **Un evento u operación:** Cuando el nombre hace referencia a algo que se hace para, por o en el sistema.
+**Ejemplo**: 
+- "Cuenta" (¿Cuenta bancaria? ¿Cuenta de usuario? ¿Cuenta de ahorros?)
+- "Registro" (demasiado genérico)
 
-    **Ejemplo**: "Reserva de asiento", "Compra de boleto"
+**Acción**: Eliminar la ambigüedad antes de considerarla clase. Renombrar a algo específico como "CuentaBancaria" o "RegistroAcceso".
 
-    **Pregunta clave**: ¿La instancia del evento u operación tiene estado, comportamiento e identidad?
+**3. Un evento u operación**
 
-    **Conceptos fundamentales**:
-        - **Estado**: Todos los datos (atributos) que encapsula un objeto en un momento determinado
-        - **Comportamiento**: La manera como actúa y reacciona un objeto, en función de sus cambios de estado y el paso de mensajes
-        - **Identidad**: A los objetos se les hace referencia por un nombre (el valor de una variable en un programa cliente)
+Cuando el nombre hace referencia a algo que **se hace** para, por o en el sistema.
 
-4. **Metalenguaje:** Cuando el nombre forma parte de la manera en que se definen las cosas.
+**Ejemplo**: 
+- "Reserva de asiento"
+- "Compra de boleto"
+- "Validación"
 
-    **Ejemplo**: Los nombres "requisitos" y "sistema" se utilizan como parte del lenguaje de modelado, en vez de representar objetos en el dominio del problema.
+**Pregunta clave**: ¿La instancia del evento u operación tiene estado, comportamiento e identidad?
 
-5. **Fuera del alcance del sistema:** Cuando el nombre es relevante para describir cómo funciona el sistema pero no hace referencia a algo interno del sistema.
+**Conceptos fundamentales**:
+- **Estado**: Todos los datos (atributos) que encapsula un objeto en un momento determinado
+- **Comportamiento**: La manera como actúa y reacciona un objeto
+- **Identidad**: A los objetos se les hace referencia por un nombre
 
-    **Ejemplo**: "Usuario del sistema", "Administrador del sistema"
+**Decisión**: 
+- Si solo representa una acción momentánea → Probablemente sea un **método**, no una clase
+- Si tiene datos que persisten → Puede ser una clase (ej: "Reserva" con fecha, asiento, cliente)
 
-6. **Un atributo:** Cuando está claro que un nombre hace referencia a algo sencillo, sin un comportamiento interesante, que es un atributo de otra clase.
+**4. Metalenguaje**
 
-    **Ejemplo**: "Color", "Tamaño", "Precio"
+Cuando el nombre forma parte de la manera en que se definen las cosas, no del dominio del problema.
 
+**Ejemplo**: 
+- "requisitos"
+- "sistema"
+- "modelo"
+- "diagrama"
 
-#### 4.2. Identificación de clases relevantes
+**Acción**: Eliminar estos términos de la lista de candidatas.
 
-A partir de las clases candidatas se deben seleccionar las clases relevantes tomando en cuenta las siguientes consideraciones:
+**5. Fuera del alcance del sistema**
 
-1. **Relevancia al problema**: Todas las clases deben tener sentido en el área de la aplicación. La relevancia al problema debe ser el único criterio para la selección.
+Cuando el nombre es relevante para describir cómo funciona el sistema pero no hace referencia a algo **interno** del sistema.
 
-2. **Eliminar redundancias**: Se deben eliminar clases redundantes, si estas expresan la misma información. La clase más descriptiva debe ser guardada.
+**Ejemplo**: 
+- "Usuario del sistema" (la persona que usa el sistema)
+- "Administrador del sistema" (rol externo)
+- "Cliente externo"
+
+**Decisión**: 
+- Si el sistema **gestiona información** sobre estos → Sí es una clase
+- Si solo **interactúan** con el sistema → No es una clase interna
+
+**6. Un atributo**
+
+Cuando está claro que un nombre hace referencia a algo **sencillo**, sin un comportamiento interesante, que es un atributo de otra clase.
+
+**Ejemplo**: 
+- "Color"
+- "Tamaño"
+- "Precio"
+- "Nombre"
+- "Fecha"
+
+**Acción**: Estos serán atributos de otras clases, no clases por sí mismos.
+
+**Excepción**: Si el atributo tiene comportamiento complejo o múltiples propiedades propias, puede ser una clase (ej: "Dirección" con calle, ciudad, código postal, país).
+
+#### 5.3. Identificación de clases relevantes
+
+A partir de las clases candidatas se deben seleccionar las clases relevantes tomando en cuenta:
+
+1. **Relevancia al problema**: Todas las clases deben tener sentido en el área de la aplicación.
+
+2. **Eliminar redundancias**: Se deben eliminar clases redundantes, si expresan la misma información.
 
 3. **Agrupar características**: Se agrupan las características que definen a un sustantivo.
 
-4. **Considerar clases implícitas**: Dado que no todas las clases se describen de manera explícita, siendo algunas implícitas en la aplicación, será necesario añadir clases que pueden ser identificadas por nuestro conocimiento del área.
+4. **Considerar clases implícitas**: Añadir clases que no se mencionan explícitamente pero son necesarias por conocimiento del dominio.
 
-#### 4.3. Buena práctica: Dos listas
+#### 5.4. Buena práctica: Dos listas
 
-Si se duda si mantener una clase, una buena práctica es mantener dos listas:
+Si se duda si mantener una clase, una buena práctica es mantener **dos listas**:
 
 1. **Lista de candidatos firmes**: Clases de las que se está seguro
+   - Tienen responsabilidades claras
+   - Aparecen frecuentemente en los requisitos
+   - Son conceptos centrales del dominio
+
 2. **Lista de candidatos dudosos**: Clases que tienen que ser definidas todavía
+   - Pueden ser útiles pero no está claro
+   - Requieren más análisis
+   - Podrían convertirse en atributos o métodos
 
-Esto evita perder información mientras se está distinguiendo las cosas seguras de las que están por fijar.
+**Ventaja**: Evita perder información mientras se está distinguiendo las cosas seguras de las que están por fijar.
 
-### 5. Representación Gráfica en UML
+### 6. Fuentes de Clases
 
-#### 5.1. Notación de clase
+Los objetos y su división en clases a menudo derivan de las siguientes fuentes:
 
-Una clase se representa con una figura rectangular dividida en tres partes:
+#### 6.1. Cosas tangibles o "del mundo real"
 
+**Ejemplos**: Avión, auto, televisor, computador, libro, producto
+
+**Características**:
+- Fáciles de identificar
+- Corresponden a objetos físicos
+- Suelen ser sustantivos concretos
+
+#### 6.2. Roles o Papeles
+
+**Ejemplos**: Gerente, cliente, vendedor, profesor, estudiante, usuario
+
+**Características**:
+- Representan personas con un rol específico
+- Pueden tener comportamientos asociados al rol
+- Importante definir qué hace ese rol en el sistema
+
+#### 6.3. Organizaciones
+
+**Ejemplos**: Universidad, empresa, departamento, equipo
+
+**Características**:
+- Agrupan otros objetos
+- Tienen estructura jerárquica
+- Pueden tener responsabilidades colectivas
+
+#### 6.4. Interacciones
+
+**Ejemplos**: Transacción, matrícula, contrato, pedido, reserva
+
+**Características**:
+- Representan relaciones entre otras clases
+- Suelen tener fecha/hora
+- Almacenan información sobre la interacción
+
+#### 6.5. Eventos o incidencias
+
+**Ejemplos**: Vuelo, accidente, suceso, notificación
+
+**Características**:
+- Ocurren en un momento específico
+- Pueden tener consecuencias en el sistema
+- Menos comunes que las otras categorías
+
+> **Nota importante**: Las categorías 1 y 2 (tangibles y roles) son fuentes mucho más comunes que las últimas.
+
+### 7. Errores Comunes al Identificar Clases
+
+#### 7.1. Error: La clase "System"
+
+**Descripción**: Crear una clase que representa el sistema en su totalidad, a menudo llamada `[Cualquier_cosa]System`, que implementa todo el comportamiento interesante del sistema.
+
+**Ejemplo**:
 ```
-┌─────────────────────────┐
-│     Nombre de Clase     │  ← Parte superior
-├─────────────────────────┤
-│     Atributos           │  ← Parte media
-├─────────────────────────┤
-│     Métodos             │  ← Parte inferior
-└─────────────────────────┘
-```
-
-1. **Parte superior:** Nombre de la clase
-
-    Ejemplo: `Libro`
-
-2. **Parte media:** Atributos, señalando alcance, nombre y tipo.
-
-    Ejemplo: `+ autor : String`
-
-3. **Parte inferior:** Métodos, señalando lista de argumentos y tipo de retorno.
-
-    Ejemplo: `+ setAutor(autor: String) : Unit`
-
-#### 5.2. Ejemplo completo: Clase Libro
-
-**Diagrama UML:**
-
-![Ejemplo de clase Libro](assets/ejemplo-clase-libro.svg)
-
-**Representación textual:**
-
-```
-┌────────────────────────────────────────┐
-│                 Libro                  │
-├────────────────────────────────────────┤
-│ - autor : String                       │
-│ - titulo : String                      │
-│ - cantidadLibros : Int                 │
-├────────────────────────────────────────┤
-│ + Libro()                              │
-│ + Libro(autor: String, titulo: String) │
-│ + setAutor(autor: String) : Unit       │
-│ + getAutor() : String                  │
-│ + setTitulo(titulo: String) : Unit     │
-│ + getTitulo() : String                 │
-│ + getNumeroEjemplares() : Int          │
-│ + toString() : String                  │
-└────────────────────────────────────────┘
-```
-
-**Implementación en Kotlin:**
-
-```kotlin
-class Libro {
-    private var autor: String
-    private var titulo: String
-    
-    companion object {
-        private var cantidadLibros: Int = 0
-        
-        fun getCantidadLibros(): Int = cantidadLibros
-    }
-    
-    constructor() : this("NA", "NT")
-    
-    constructor(autor: String, titulo: String) {
-        this.autor = autor
-        this.titulo = titulo
-        cantidadLibros++
-    }
-    
-    fun setAutor(autor: String) {
-        this.autor = autor
-    }
-    
-    fun getAutor(): String = autor
-    
-    fun setTitulo(titulo: String) {
-        this.titulo = titulo
-    }
-    
-    fun getTitulo(): String = titulo
-    
-    override fun toString(): String {
-        return "Datos de libro: $titulo\n$autor"
-    }
-}
+┌─────────────────────┐
+│  BibliotecaSystem   │
+├─────────────────────┤
+│ - libros            │
+│ - usuarios          │
+│ - prestamos         │
+├─────────────────────┤
+│ + prestarLibro()    │
+│ + devolverLibro()   │
+│ + buscarLibro()     │
+│ + registrarUsuario()│
+└─────────────────────┘
 ```
 
-### 6. Atributos y Métodos
+**¿Por qué está mal?**
+- Concentra toda la lógica en una sola clase
+- Viola el principio de responsabilidad única
+- Difícil de mantener y extender
+- Tiene presunciones sobre cómo será utilizado el sistema
 
-El sistema que se construye consistirá en una colección de objetos que interactúan para completar los requisitos del sistema. Es necesario identificar los atributos y los métodos que cada clase debería tener.
+**Solución correcta**: Distribuir responsabilidades entre múltiples clases:
+- `Libro` con sus atributos y métodos propios
+- `Usuario` con su información
+- `Prestamo` como clase de interacción
+- `Biblioteca` como contenedor, si es necesario
 
-#### 6.1. Tipos de Atributos
+#### 7.2. Error: Clases demasiado genéricas
 
-##### 6.1.1. Atributos de clase
-Son aquellos que representan valores comunes a todas las instancias de una clase. Pueden tener un valor inicial.
+**Ejemplos**: "Objeto", "Item", "Cosa", "Elemento"
 
-**Ejemplos en Kotlin:**
-```kotlin
-companion object {
-    private var promedioEdades: Double = 0.0
-    private var numeroAlumnos: Int = 0
-}
+**Problema**: No aportan significado al modelo
+
+**Solución**: Usar nombres específicos del dominio
+
+#### 7.3. Error: Clases que son solo datos
+
+**Descripción**: Clases sin comportamiento, solo con getters y setters
+
+**Problema**: Violan el principio de encapsulamiento
+
+**Solución**: Añadir lógica de negocio relevante a cada clase
+
+#### 7.4. Error: Incluir detalles de implementación prematuramente
+
+**Ejemplos**: "ArrayList", "HashMap", "Database"
+
+**Problema**: Mezclar diseño con implementación
+
+**Solución**: Enfocarse en el dominio del problema, no en la tecnología
+
+### 8. Cómo Identificar Relaciones entre Clases
+
+Una vez identificadas las clases, el siguiente paso es determinar cómo se relacionan.
+
+#### 8.1. Preguntas clave para identificar relaciones
+
+**Para Asociación**:
+- ¿Una clase necesita conocer o usar otra clase?
+- ¿Hay una conexión lógica entre ellas?
+
+**Para Agregación**:
+- ¿Una clase "tiene" objetos de otra clase?
+- ¿Las partes pueden existir sin el todo?
+
+**Para Composición**:
+- ¿Una clase es "parte integral" de otra?
+- ¿Las partes desaparecen si el todo desaparece?
+
+**Para Herencia**:
+- ¿Una clase "es un tipo de" otra clase?
+- ¿Comparte características y comportamiento?
+
+**Para Dependencia**:
+- ¿Una clase usa temporalmente otra?
+- ¿La usa solo como parámetro o variable local?
+
+#### 8.2. Análisis de verbos para relaciones
+
+Al igual que los sustantivos identifican clases, los **verbos** en los requisitos ayudan a identificar:
+
+1. **Métodos**: Acciones que realiza una clase
+   - "El usuario **envía** un mensaje" → método `enviar()` en clase Usuario
+   
+2. **Relaciones**: Conexiones entre clases
+   - "El profesor **imparte** cursos" → relación entre Profesor y Curso
+
+#### 8.3. Ejemplo práctico de identificación de relaciones
+
+**Enunciado**: "Un cliente compra productos de diferentes categorías. Cada producto tiene un precio y un stock. El cliente añade productos a su carrito de compras antes de finalizar la orden."
+
+**Relaciones identificadas**:
+
+1. **Cliente - CarritoCompras**: Composición (1:1)
+   - El carrito pertenece al cliente y desaparece con él
+
+2. **CarritoCompras - Producto**: Asociación (1:*)
+   - El carrito contiene múltiples productos
+
+3. **Producto - Categoria**: Asociación (1:1 o *:1)
+   - Un producto pertenece a una categoría
+
+4. **Cliente - Orden**: Asociación (1:*)
+   - Un cliente puede tener múltiples órdenes
+
+### 9. Buenas Prácticas para Crear Diagramas de Clases
+
+#### 9.1. Principios de diseño
+
+**1. Principio de Responsabilidad Única (SRP)**
+
+Cada clase debe tener una única razón para cambiar.
+
+**Ejemplo correcto**:
+```
+Clase Usuario
+- Atributos de usuario
+- Métodos de gestión de usuario
+
+Clase AutenticacionService
+- Validar credenciales
+- Gestionar sesiones
 ```
 
-##### 6.1.2. Atributos de instancia
-Son aquellos que representan valores propios de un solo objeto que lo diferencia de otros elementos de su misma clase. Pueden tener un valor por defecto.
+**Ejemplo incorrecto**: Una clase `Usuario` que también maneja autenticación, persistencia en base de datos y envío de emails.
 
-**Ejemplos en Kotlin:**
-```kotlin
-private var nombre: String = ""
-private var numeroPuertas: Int = 4
+**2. Principio Abierto/Cerrado (OCP)**
+
+Las clases deben estar abiertas para extensión pero cerradas para modificación.
+
+**Técnica**: Usar herencia e interfaces para añadir funcionalidad sin modificar código existente.
+
+**3. Principio de Sustitución de Liskov (LSP)**
+
+Las subclases deben ser sustituibles por sus clases base.
+
+**Ejemplo**: Si tienes una clase `Ave`, y creas `Pinguino` que hereda de `Ave`, pero no puede implementar `volar()`, entonces la jerarquía está mal diseñada.
+
+**4. Principio de Segregación de Interfaces (ISP)**
+
+Es mejor tener múltiples interfaces específicas que una interfaz general grande.
+
+**5. Principio de Inversión de Dependencias (DIP)**
+
+Depender de abstracciones, no de implementaciones concretas.
+
+#### 9.2. Cohesión y acoplamiento
+
+**Alta Cohesión** ✅
+
+Las responsabilidades de una clase están fuertemente relacionadas.
+
+**Ejemplo de alta cohesión**:
+```
+Clase Libro
+- titulo
+- autor
+- isbn
+- obtenerTitulo()
+- obtenerAutor()
 ```
 
-##### 6.1.3. Constantes
-Representan valores inmutables en tiempo y espacio. En Kotlin se definen con `const val` o `val`.
-
-**Ejemplos en Kotlin:**
-```kotlin
-const val MAX: Int = 20
-
-companion object {
-    const val PI: Double = 3.1415
-}
+**Ejemplo de baja cohesión** ❌:
+```
+Clase Utilidades
+- validarEmail()
+- calcularFactorial()
+- conectarBaseDatos()
+- enviarEmail()
 ```
 
-> **Convención**: El nombre de las constantes debe escribirse totalmente en mayúsculas.
+**Bajo Acoplamiento** ✅
 
-#### 6.2. Tipos de Métodos
+Las clases tienen pocas dependencias entre sí.
 
-##### 6.2.1. Métodos de clase
-Son acciones que no requieren de un objeto específico para su realización. Los métodos de clase solo tienen acceso a los atributos de clase.
+**Técnicas para reducir acoplamiento**:
+- Usar interfaces
+- Inyección de dependencias
+- Patrones de diseño (Factory, Strategy, Observer)
 
-**Ejemplo en Kotlin:**
-```kotlin
-companion object {
-    fun sumar(x: Int, y: Int): Int {
-        return x + y
-    }
-}
+#### 9.3. Nomenclatura efectiva
+
+**Nombres de clases**:
+- Sustantivos en singular
+- Descriptivos y específicos
+- PascalCase: `CarritoCompras`, `OrdenDeCompra`
+
+**Evitar**:
+- Nombres genéricos: `Gestor`, `Manager`, `Handler` (a menos que sean realmente necesarios)
+- Abreviaturas confusas
+- Nombres muy largos
+
+**Nombres de atributos**:
+- Sustantivos descriptivos
+- camelCase: `nombreCompleto`, `fechaNacimiento`
+- Evitar prefijos innecesarios: `strNombre` ❌, `nombre` ✅
+
+**Nombres de métodos**:
+- Verbos que describen la acción
+- camelCase: `calcularTotal()`, `enviarEmail()`
+- Getters/Setters: `getNombre()`, `setNombre()`
+
+#### 9.4. Organización visual del diagrama
+
+**1. Distribución espacial**
+
+- **Herencia**: Clases padre arriba, hijas abajo
+- **Composición/Agregación**: Contenedor a la izquierda, contenido a la derecha
+- **Asociaciones**: Minimizar cruces de líneas
+
+**2. Agrupación lógica**
+
+- Agrupar clases relacionadas cerca unas de otras
+- Usar colores o regiones para separar módulos
+- Capas: Presentación, Lógica de Negocio, Datos
+
+**3. Niveles de abstracción**
+
+- **Diagrama de alto nivel**: Solo nombres de clases
+- **Diagrama detallado**: Con atributos y métodos principales
+- **Diagrama completo**: Todos los detalles
+
+**Ejemplo de progresión**:
+
+**Nivel 1 - Alto nivel**:
+```
+┌──────────┐     ┌──────────┐
+│ Cliente  │────→│ Pedido   │
+└──────────┘     └──────────┘
 ```
 
-##### 6.2.2. Métodos de instancia
-Son acciones que requieren de un objeto específico. Los métodos de instancia tienen acceso a todos los miembros de la clase, tanto atributos de clase como atributos de instancia.
-
-**Ejemplo en Kotlin:**
-```kotlin
-fun getNombre(): String {
-    return nombre
-}
+**Nivel 2 - Medio**:
+```
+┌──────────────┐     ┌────────────────┐
+│   Cliente    │     │    Pedido      │
+├──────────────┤     ├────────────────┤
+│ - nombre     │────→│ - fecha        │
+│ - email      │     │ - total        │
+└──────────────┘     └────────────────┘
 ```
 
-### 7. Diagrama de Clases
+**Nivel 3 - Detallado**: Con todos los métodos
 
-El **Diagrama de Clases** es el diagrama principal de análisis y diseño de un sistema. En él se especifica la estructura de clases del sistema, con relaciones entre clases y estructuras de herencia.
+#### 9.5. División de diagramas grandes
 
-#### 7.1. Objetivo según la fase
+**Estrategias**:
 
-Los diagramas de clases pueden ser desarrollados en diferentes fases del ciclo de vida del software:
+1. **Por módulos funcionales**
+   - Diagrama de gestión de usuarios
+   - Diagrama de gestión de productos
+   - Diagrama de gestión de pedidos
 
-- **Durante el análisis del sistema**: El diagrama se desarrolla buscando una solución ideal
-- **Durante el diseño**: Se usa el mismo diagrama y se modifica para satisfacer los detalles de las implementaciones
+2. **Por capas**
+   - Diagrama de capa de presentación
+   - Diagrama de capa de lógica de negocio
+   - Diagrama de capa de acceso a datos
 
-#### 7.2. Conceptos: Rol y Multiplicidad
+3. **Por paquetes**
+   - Cada paquete tiene su propio diagrama
+   - Un diagrama general muestra las relaciones entre paquetes
 
-Unos de los aspectos más importantes de una relación entre clases son el **rol** y la **multiplicidad**. Estos conceptos se representan en los extremos de la línea que une las clases relacionadas, y se describen a continuación:
+#### 9.6. Uso efectivo de colores
 
-* **Rol:** Indica el papel que juega una clase en la relación. Es decir, describe la semántica que tiene la relación en el sentido indicado.
-* **Multiplicidad:** Indica cuántas instancias de una clase pueden estar asociadas con una instancia de otra clase en la relación. Es decir, define la cardinalidad de la relación.
+**Convención sugerida**:
 
-| Notación | Significado                 |
-|----------|-----------------------------|
-| `1`      | Uno y solo uno              |
-| `0..1`   | Cero o uno                  |
-| `M..N`   | Desde M hasta N             |
-| `*`      | Muchos                      |
-| `n`      | Exactamente n               |
-| `0..*`   | Cero o muchos               |
-| `1..*`   | Uno o muchos (al menos uno) |
+- 🔵 **Azul**: Clases del dominio (entidades principales)
+- 🟢 **Verde**: Servicios y controladores
+- 🟡 **Amarillo**: Utilidades y helpers
+- 🔴 **Rojo**: Excepciones y errores
+- 🟣 **Morado**: Interfaces
+- 🟠 **Naranja**: Clases abstractas
 
-**Ejemplo de notación:**
+**Beneficios**:
+- Identificación rápida del tipo de clase
+- Mejor comprensión visual
+- Facilita la navegación en diagramas complejos
 
+### 10. Proceso Completo: Ejemplo Paso a Paso
+
+Veamos un ejemplo completo del proceso de identificación de clases para un **Sistema de Gestión de Biblioteca**.
+
+#### 10.1. Paso 1: Análisis del enunciado
+
+**Enunciado**:
+
+"La biblioteca necesita un sistema para gestionar sus libros y préstamos. Los usuarios pueden registrarse proporcionando su nombre, dirección y teléfono. Cada libro tiene un título, autor, ISBN y una o más copias físicas. Los usuarios registrados pueden solicitar el préstamo de una copia disponible por un período de 14 días. El bibliotecario puede extender el período de préstamo si no hay reservas pendientes. El sistema debe registrar la fecha de préstamo y devolución."
+
+#### 10.2. Paso 2: Extraer sustantivos
+
+**Sustantivos encontrados**:
+- Biblioteca
+- Sistema
+- Libros
+- Préstamos
+- Usuarios
+- Nombre
+- Dirección
+- Teléfono
+- Título
+- Autor
+- ISBN
+- Copias físicas
+- Período
+- Días
+- Bibliotecario
+- Reservas
+- Fecha de préstamo
+- Fecha de devolución
+
+#### 10.3. Paso 3: Analizar cada candidato
+
+| Candidato | ¿Clase? | Razón |
+|-----------|---------|-------|
+| Biblioteca | ❌ No | Contenedor general, puede ser opcional |
+| Sistema | ❌ No | Metalenguaje |
+| Libros | ✅ Sí | Entidad principal del dominio |
+| Préstamos | ✅ Sí | Interacción importante con estado |
+| Usuarios | ✅ Sí | Rol principal |
+| Nombre | ❌ No | Atributo de Usuario |
+| Dirección | ⚠️ Quizás | Podría ser clase si es compleja |
+| Teléfono | ❌ No | Atributo de Usuario |
+| Título | ❌ No | Atributo de Libro |
+| Autor | ⚠️ Quizás | Podría ser clase si almacenamos más info |
+| ISBN | ❌ No | Atributo de Libro |
+| Copias físicas | ✅ Sí | Importante distinguir libro de copia |
+| Período | ❌ No | Atributo calculado |
+| Días | ❌ No | Valor numérico |
+| Bibliotecario | ✅ Sí | Rol con permisos especiales |
+| Reservas | ✅ Sí | Funcionalidad importante |
+| Fecha préstamo | ❌ No | Atributo de Préstamo |
+| Fecha devolución | ❌ No | Atributo de Préstamo |
+
+#### 10.4. Paso 4: Clases finales
+
+**Clases firmes**:
+1. `Libro` - Información del libro
+2. `CopiaLibro` - Ejemplar físico específico
+3. `Usuario` - Usuario registrado
+4. `Bibliotecario` - Usuario con permisos especiales (¿herencia de Usuario?)
+5. `Prestamo` - Registro de préstamo
+6. `Reserva` - Registro de reserva
+
+**Clases opcionales para considerar**:
+- `Autor` - Si necesitamos más información sobre autores
+- `Direccion` - Si la dirección es compleja (calle, ciudad, código postal, país)
+
+#### 10.5. Paso 5: Identificar relaciones
+
+1. `Libro` **1:*** `CopiaLibro` (Composición)
+   - Un libro tiene múltiples copias
+   
+2. `Usuario` **1:*** `Prestamo` (Asociación)
+   - Un usuario puede tener múltiples préstamos
+
+3. `CopiaLibro` **1:*** `Prestamo` (Asociación)
+   - Una copia puede estar en múltiples préstamos (en diferentes momentos)
+
+4. `Bibliotecario` **es un** `Usuario` (Herencia)
+   - Bibliotecario hereda de Usuario con permisos adicionales
+
+5. `Usuario` **1:*** `Reserva` (Asociación)
+   - Un usuario puede hacer múltiples reservas
+
+6. `Libro` **1:*** `Reserva` (Asociación)
+   - Un libro puede tener múltiples reservas
+
+#### 10.6. Paso 6: Definir atributos y métodos
+
+**Clase Usuario**:
 ```
-┌─────────┐   Se imparte   ┌─────────┐
-│  Curso  │1 ───────────→ *│  Clase  │
-└─────────┘+curso   +clases└─────────┘
-
-```
-
-En el ejemplo anterior:
-
-* El rol de la clase `Curso` es `curso`, y el rol de la clase `Clase` es `clases`. 
-* La multiplicidad indica que un `curso` puede impartir muchas `clases`, pero cada `clase` pertenece a un solo `curso`.
-
-### 8. Relaciones entre Clases
-
-Una **relación** en un diagrama de clases se representa mediante una línea que une dos o más clases. Las relaciones más comunes pueden ser:
-
-![Relaciones](assets/relaciones.png)
-
-- Asociación (binaria, reflexiva, n-aria)
-- Agregación
-- Composición
-- Generalización/Especialización
-- Dependencia
-
-
-#### 8.1. Asociación Binaria
-
-Una asociación binaria conecta dos clases. Se representa con una línea sólida entre las dos clases.
-
-
-**Diagrama:**
-
-```
-┌────────────┐  Consta De   ┌─────────┐
-│ Matricula  │1 ─────────→ *│  Curso  │
-└────────────┘              └─────────┘
-  -matricula                  -cursos
-```
-
-**Implementación en Kotlin:**
-
-```kotlin
-class Matricula(n: Int) {
-    private val cursos: Array<Curso?> = arrayOfNulls(n)
-    
-    // ... resto de métodos
-}
-
-class Curso(private val matricula: Matricula) {
-    
-    // ... resto de métodos
-}
-```
-
-#### 8.2. Asociación Reflexiva
-
-Una clase se relaciona consigo misma.
-
-**Diagrama:**
-
-```
-┌──────────────┐
-│  Trabajador  │
-└──────────────┘
-  ↑           ↓
-  │           │ Supervisor De
-  │           │
--jefe 0..1  0..* -subordinado
-```
-
-**Implementación en Kotlin:**
-
-```kotlin
-class Trabajador(
-    private val jefe: Trabajador?,
-    n: Int
-) {
-    private val subordinados: Array<Trabajador?> = arrayOfNulls(n)
-    
-    // ... resto de métodos
-}
-```
-
-#### 8.3. Asociación N-aria
-
-Involucra más de dos clases.
-
-**Diagrama:**
-
-```
-┌──────────┐  Contenido En    ┌──────────────┐
-│ Articulo │1 ─────────────→ *│ OrdenCompra  │
-└──────────┘                  └──────────────┘
-  -articulo                     -ordenC
-                                   │
-                                ┌──┴────┐
-                                │ItemOC │
-                                └───────┘
-```
-
-**Implementación en Kotlin:**
-
-```kotlin
-class Articulo {
-    // ... atributos y métodos
-}
-
-class OrdenCompra {
-    private val items: Array<ItemOC?> = arrayOfNulls(100)
-    
-    inner class ItemOC(private val articulo: Articulo) {
-        // ... métodos de ItemOC
-    }
-}
++ nombre: String
++ direccion: String
++ telefono: String
++ email: String
++ fechaRegistro: Date
++ prestarLibro(copia: CopiaLibro): Prestamo
++ reservarLibro(libro: Libro): Reserva
 ```
 
-#### 8.4. Asociación de Agregación
-
-Representa una relación de "tiene un" donde las partes pueden existir independientemente del todo. Se representa con un **rombo vacío**.
-
-**Diagrama:**
-
+**Clase Libro**:
 ```
-┌───────────┐  Es Accesorio De    ┌────────┐
-│ Automovil │◇──────────────────→ │ Radio  │
-└───────────┘                     └────────┘
-  -automovil 1     0..1 -radio
++ isbn: String
++ titulo: String
++ autor: String
++ editorial: String
++ anioPublicacion: Int
++ obtenerCopiasDisponibles(): List<CopiaLibro>
++ estaDisponible(): Boolean
 ```
 
-**Implementación en Kotlin:**
-
-```kotlin
-class Automovil(private val radio: Radio?) {
-    // ... resto de métodos
-}
-
-class Radio {
-    // ... atributos y métodos
-}
+**Clase Prestamo**:
+```
++ fechaPrestamo: Date
++ fechaDevolucionPrevista: Date
++ fechaDevolucionReal: Date?
++ usuario: Usuario
++ copia: CopiaLibro
++ extenderPeriodo(dias: Int): Boolean
++ marcarDevuelto(): void
++ estaVencido(): Boolean
 ```
 
-> **Nota**: En la agregación, la radio puede existir independientemente del automóvil.
+### 11. Validación del Modelo de Clases
 
-#### 8.5. Asociación de Composición
+Una vez creado el modelo, es importante validarlo:
 
-Representa una relación de "es parte de" donde las partes NO pueden existir sin el todo. Se representa con un **rombo relleno**.
+#### 11.1. Preguntas de validación
 
-**Diagrama:**
+**Para cada clase**:
+- ¿Tiene una responsabilidad clara?
+- ¿Tiene sentido en el dominio del problema?
+- ¿Es necesaria para cumplir los requisitos?
+- ¿Puede existir independientemente?
 
-```
-┌───────────┐  Es Parte De   ┌────────┐
-│ Automovil │♦──────────────→│ Motor  │
-└───────────┘                └────────┘
-  -automovil 1    0 -motor
-```
+**Para el modelo completo**:
+- ¿Cubre todos los requisitos funcionales?
+- ¿Es extensible para futuros requisitos?
+- ¿Hay clases redundantes?
+- ¿Las relaciones tienen sentido?
 
-**Implementación en Kotlin:**
+#### 11.2. Técnicas de validación
 
-```kotlin
-class Automovil {
-    private val motor: Motor = Motor()
-    
-    // Motor como clase interna (inner class)
-    inner class Motor {
-        // ... métodos de Motor
-    }
-    
-    // ... resto de métodos
-}
-```
+**1. Walkthrough de escenarios**
 
-> **Nota**: En la composición, el motor es parte integral del automóvil y no puede existir sin él.
+Recorrer casos de uso con el diagrama:
+- "Un usuario quiere tomar prestado un libro"
+- ¿Qué clases se involucran?
+- ¿Tienen los métodos necesarios?
 
-#### 8.6. Asociación de Generalización/Especialización (Herencia)
+**2. Revisión por pares**
 
-Representa una relación de "es un tipo de". Se representa con una **flecha con triángulo vacío** apuntando a la superclase.
+- Presentar el diagrama a otros desarrolladores
+- Explicar las decisiones de diseño
+- Recibir feedback
 
-**Diagrama:**
+**3. Prototipado**
 
-```
-         ┌──────────────┐
-         │ Publicacion  │
-         └──────────────┘
-                △
-                │ Generalización
-                │
-         ┌──────┴──────┐
-         │    Libro    │
-         └─────────────┘
-       Especialización
-```
+- Implementar las clases principales
+- Verificar que el diseño funciona en la práctica
+- Ajustar según necesidad
 
-**Implementación en Kotlin:**
+### 12. Checklist Final
 
-```kotlin
-open class Publicacion {
-    // ... atributos y métodos base
-}
+Antes de finalizar tu diagrama de clases, verifica:
 
-class Libro : Publicacion() {
-    // ... atributos y métodos específicos
-    
-    init {
-        // Llama al constructor de la superclase
-    }
-}
-```
+**Identificación de Clases** ✅
+- [ ] He analizado todos los sustantivos del enunciado
+- [ ] He descartado candidatos inapropiados
+- [ ] Cada clase tiene una responsabilidad clara
+- [ ] No hay clases redundantes
+- [ ] Los nombres son descriptivos y específicos
 
-> **Principio**: La subclase hereda todos los atributos y métodos de la superclase.
+**Relaciones** ✅
+- [ ] He identificado todas las relaciones necesarias
+- [ ] La multiplicidad está correctamente especificada
+- [ ] He elegido el tipo de relación apropiado
+- [ ] No hay relaciones innecesarias
 
-#### 8.7. Asociación de Dependencia
+**Atributos y Métodos** ✅
+- [ ] Cada clase tiene los atributos necesarios
+- [ ] Los métodos reflejan las responsabilidades
+- [ ] La visibilidad está correctamente definida
+- [ ] No hay atributos que deberían ser clases
 
-Indica que una clase usa o depende de otra clase. Se representa con una **flecha discontinua**.
+**Principios de Diseño** ✅
+- [ ] Alta cohesión en cada clase
+- [ ] Bajo acoplamiento entre clases
+- [ ] Responsabilidad única por clase
+- [ ] Buen encapsulamiento
 
-**Diagrama:**
+**Representación Visual** ✅
+- [ ] El diagrama es claro y legible
+- [ ] Las líneas no se cruzan excesivamente
+- [ ] Hay una organización lógica
+- [ ] Uso efectivo de colores (si aplica)
 
-```
-┌───────────┐       ┌────────────────────────────┐
-│ Potencia  │- - - →│         Math               │
-└───────────┘       ├────────────────────────────┤
-                    │ pow(a:Double, b:Double)    │
-                    └────────────────────────────┘
-```
+### 13. Conclusiones
 
-**Implementación en Kotlin:**
+- La identificación de clases es un **proceso iterativo** y fundamental en el diseño OO
+- La **técnica de análisis de sustantivos** es una herramienta poderosa pero requiere criterio
+- Es importante distinguir entre **clases, atributos y métodos**
+- Un buen modelo busca **alta cohesión** y **bajo acoplamiento**
+- Las **buenas prácticas** ayudan a crear sistemas mantenibles y escalables
+- La **validación** del modelo es tan importante como su creación
+- No existe un modelo "perfecto", pero sí modelos **buenos y malos**
+- La experiencia mejora la capacidad de identificar clases correctamente
 
-```kotlin
-import kotlin.math.pow
+### 14. Ejercicios Prácticos
 
-class Potencia {
-    companion object {
-        @JvmStatic
-        fun main(args: Array<String>) {
-            val x = 5.0
-            val y = 2.0
-            val z = x.pow(y)
-            println("El cuadrado de 5 es: $z")
-        }
-    }
-}
-```
+Para practicar la identificación de clases, intenta analizar estos enunciados:
 
-> **Nota**: La dependencia es más débil que otras relaciones. La clase `Potencia` simplemente usa la funcionalidad de `Math`, pero no mantiene una referencia permanente.
+#### Ejercicio 1: Sistema de Reserva de Vuelos
 
-#### 8.8. Comparación de Tipos de Relaciones
+"Los clientes pueden buscar vuelos por origen, destino y fecha. Cada vuelo tiene un número, origen, destino, hora de salida y llegada. Los clientes pueden reservar asientos en clase turista o ejecutiva. Cada reserva debe confirmarse mediante pago con tarjeta de crédito."
 
-| Tipo de Relación | Símbolo     | Fuerza     | Descripción                           |
-|------------------|-------------|------------|---------------------------------------|
-| **Dependencia**  | `- - - →`   | Muy débil  | Una clase usa temporalmente otra      |
-| **Asociación**   | `───→`      | Débil      | Relación estructural entre clases     |
-| **Agregación**   | `◇───→`     | Media      | "Tiene un" - partes independientes    |
-| **Composición**  | `♦───→`     | Fuerte     | "Es parte de" - partes dependientes   |
-| **Herencia**     | `───▷`      | Muy fuerte | "Es un tipo de" - relación padre-hijo |
+**Tarea**: Identifica clases, relaciones, atributos y métodos.
 
-### 9. Conclusiones
+#### Ejercicio 2: Sistema de Clínica Veterinaria
 
-- La identificación de clases es un **proceso iterativo** y fundamental en el diseño orientado a objetos
-- Es importante distinguir entre objetos del dominio y objetos de implementación
-- La **técnica de identificación de nombres** es una herramienta útil, pero requiere refinamiento
-- Los diagramas de clases UML son esenciales para documentar la estructura del sistema
-- Las relaciones entre clases deben elegirse cuidadosamente según el tipo de dependencia
-- Un buen diseño busca **alta cohesión** y **bajo acoplamiento**
+"La clínica atiende mascotas cuyos dueños están registrados en el sistema. Cada mascota tiene un historial médico con visitas, tratamientos y vacunas. Los veterinarios pueden prescribir medicamentos y agendar citas de seguimiento."
 
-### 10. Recursos y Referencias
+**Tarea**: Crea un diagrama de clases completo.
 
-#### Documentación oficial
-- [Sitio oficial de UML - OMG](https://www.uml.org/)
-- [Diagramas UML](https://diagramasuml.com/)
+#### Ejercicio 3: Red Social Simple
 
-#### Lenguajes de programación
-- [Kotlin Programming Language](https://kotlinlang.org/)
-- [Java Platform Documentation](https://docs.oracle.com/en/java/)
+"Los usuarios pueden crear perfiles, publicar mensajes, seguir a otros usuarios y dar 'me gusta' a publicaciones. Las publicaciones pueden contener texto, imágenes o ambos. Los usuarios reciben notificaciones de nuevas actividades."
+
+**Tarea**: Identifica las clases y sus relaciones, prestando especial atención a las relaciones de muchos a muchos.
+
+### 15. Recursos y Referencias
 
 #### Libros recomendados
-- **UML Distilled** - Martin Fowler
-- **Applying UML and Patterns** - Craig Larman
-- **Clean Code** - Robert C. Martin
+- **"UML Distilled"** - Martin Fowler (identificación práctica de clases)
+- **"Applying UML and Patterns"** - Craig Larman (análisis orientado a objetos)
+- **"Object-Oriented Analysis and Design"** - Grady Booch
+- **"Domain-Driven Design"** - Eric Evans (modelado del dominio)
+
+#### Sitios web útiles
+- [Sitio oficial UML - OMG](https://www.uml.org/)
+- [Refactoring Guru - Design Patterns](https://refactoring.guru/)
+- [Martin Fowler's Blog](https://martinfowler.com/)
+
+#### Herramientas
+- **Draw.io / diagrams.net**: Para crear diagramas
+- **PlantUML**: Para diagramas como código
+- **Visual Paradigm**: Herramienta profesional
+- **Lucidchart**: Herramienta online colaborativa
+
+### 16. Siguiente Paso
+
+Una vez que domines la identificación de clases, el siguiente paso es estudiar:
+
+- **Patrones de diseño**: Soluciones probadas a problemas comunes
+- **Refactorización**: Cómo mejorar diseños existentes
+- **Arquitectura de software**: Organización de alto nivel del sistema
+- **Principios SOLID**: Fundamentos del buen diseño OO

@@ -470,12 +470,18 @@ IMPORTANTE Y OBLIGATORIO seguir las siguientes reglas al generar los archivos GI
 - El archivo GIFT se ubicará en la carpeta gifts/ al mismo nivel que la carpeta teoria/ del módulo correspondiente.
 - Si te encuentras archivos con extensión *.gift los revisarás y corregirás, corrigiendo y adaptando las preguntas para que cumplan las especificaciones, y trasladando las preguntas ya corregidas al fichero adecuado. Una vez procesados los archivos que no cumplen las especificaciones y procesadas las preguntas, se eliminarán.
 
-### 2.5. Convenciones de estilo
+### 2.5. Convenciones de estilo en los documentos generados 
 
 **Elementos de Markdown:**
 
-- Usar `###` para secciones principales, `####` para subsecciones
+- Usar `### X. ` para secciones principales X, `#### X.Y. ` para subsecciones X.Y, `##### X.Y.Z. ` para subsubsecciones X.Y.Z, y asi sucesivamente.
 - Incluir imágenes con `<figure markdown>` y `<figcaption>`
+    ```
+    <figure markdown="span">
+      ![Image title](https://dummyimage.com/600x400/){ width="300" }
+      <figcaption>Image caption</figcaption>
+    </figure>
+    ```
 - Usar admonitions para notas importantes:
   ```markdown
   !!! note "Nota"

@@ -566,8 +566,6 @@ FIN DEL COMENTARIO -->
 
 Una **interfaz** es un concepto fundamental en la programación orientada a objetos que define un **contrato** que las clases pueden (o deben) implementar. No es una clase concreta con implementación, sino una especificación de qué debe hacer una clase sin especificar cómo lo hace.
 
-En la relación implementación ya hemos visto un ejemplo básico de interfaz. Ahora profundizaremos más en el concepto, su representación en UML y ejemplos prácticos.
-
 #### 4.1. ¿Qué es una interfaz y por qué es importante?
 
 **Definición**: Una interfaz define un conjunto de métodos (operaciones) que una clase debe implementar, sin proporcionar la implementación de estos métodos. Es como un contrato que dice "si implementas esta interfaz, te comprometes a proporcionar estos comportamientos".
@@ -589,6 +587,12 @@ Una interfaz se representa con una caja similar a una clase, pero con dos difere
 
 1. Se añade el estereotipo `<<interface>>` encima del nombre
 2. No tiene atributos (solo métodos)
+
+
+!!! note "Nota"
+    En kotlin, las interfaces pueden tener tanto código como atributos. Sin embargo, en UML se representan sin atributos para mantener la claridad del contrato. Aunque puede tener alguna anotación adicional si es necesario que indique información adicional
+
+**Cuando usar interfaces**: Las interfaces son ideales cuando quieres definir un comportamiento común que puede ser compartido por clases no relacionadas en la jerarquía de herencia.
 
 **Representación básica**:
 
@@ -619,7 +623,37 @@ Una interfaz se representa con una caja similar a una clase, pero con dos difere
 
 Imagina un sistema de comercio electrónico que acepta múltiples formas de pago. En vez de que cada clase dependa de implementaciones específicas, definimos una interfaz:
 
-**Interfaz IProcesadorPago**:
+**Interfaz IProcesadorPago**: Cuyo objetivo es definir los métodos que cualquier procesador de pagos debe implementar.
+
+La representación UML la que se muestra a continuación. Durante la explicación de las relaciones entre clases volveremos a hablar y explicar el detalle la relación de implementación entre interfaces y clases.
+
+**En el diagrama de clases**:
+
+```
+        ┌───────────────────────┐
+        │    <<interface>>      │
+        │   IProcesadorPago     │
+        ├───────────────────────┤
+        │ + procesarPago()      │
+        │ + reembolsar()        │
+        │ + verificarFondos()   │
+        └───────────────────────┘
+                    △
+                    ┆
+        ┌───────────┴───────────┐
+        ┆                       ┆
+┌───────┴───────┐     ┌─────────┴─────────┐
+│ProcesadorTarj │     │ ProcesadorPayPal  │
+│     eta       │     │                   │
+└───────────────┘     └───────────────────┘
+```
+
+La representación en plantUML:
+
+[![](https://img.plantuml.biz/plantuml/svg/pLBBJiD03BplL_XO1EG3LWXLW2fnYrJu07VZLaQxwyZhHEBrxpGX0XfUrnvtTcpFsBCiXcfTYivnDj8j1eBRMYLGmKQqnft0imCuXVOT7A55acpYuKQwJQGJ3rSYaJ2FH2LA6ubxwf-qdfIt751NaXiflt9VdGiHIu5FLNUe3sGu2Zk7t2LIcJ0FQrFEk_4dzFsNzr5PgF6nnZWve8GSZqlfceljPGtponG09OpyX7ejgLLSj1zU_3mnPp3lVv_PXkRpQ5syLDKFX_N0gOsKA1l-LpDjyg3aG7rLNNwBj8Uke7DBoiqG_ZS0)](https://editor.plantuml.com/uml/pLBBJiD03BplL_XO1EG3LWXLW2fnYrJu07VZLaQxwyZhHEBrxpGX0XfUrnvtTcpFsBCiXcfTYivnDj8j1eBRMYLGmKQqnft0imCuXVOT7A55acpYuKQwJQGJ3rSYaJ2FH2LA6ubxwf-qdfIt751NaXiflt9VdGiHIu5FLNUe3sGu2Zk7t2LIcJ0FQrFEk_4dzFsNzr5PgF6nnZWve8GSZqlfceljPGtponG09OpyX7ejgLLSj1zU_3mnPp3lVv_PXkRpQ5syLDKFX_N0gOsKA1l-LpDjyg3aG7rLNNwBj8Uke7DBoiqG_ZS0).{center}
+
+
+**En Kotlin**:
 
 ```kotlin
 interface IProcesadorPago {
@@ -691,26 +725,7 @@ class SistemaPagos {
 }
 ```
 
-**En el diagrama de clases**:
 
-```
-          ┌───────────────────────┐
-          │    <<interface>>      │
-          │  IProcesadorPago      │
-          ├───────────────────────┤
-          │ + procesarPago()      │
-          │ + reembolsar()        │
-          │ + verificarFondos()   │
-          └───────────────────────┘
-                    △
-                    ┆
-        ┌───────────┴───────────┐
-        ┆                       ┆
-┌───────┴───────┐     ┌─────────┴─────────┐
-│ProcesadorTarj │     │ ProcesadorPayPal  │
-│     eta       │     │                   │
-└───────────────┘     └───────────────────┘
-```
 
 #### 4.4. Interfaces vs Clases Abstractas
 
@@ -724,7 +739,26 @@ Es común confundir interfaces con clases abstractas. Aquí está la diferencia:
 | **Propósito**         | Definir contrato de comportamiento                    | Proporcionar implementación base común         |
 | **Uso**               | "Puede hacer"                                         | "Es un tipo de"                                |
 
-**Ejemplo en Kotlin**:
+**Ejemplo**: Uso de Interfaz y Clase Abstracta juntos
+
+Vamos a ver cómo una clase puede combinar herencia de una clase abstracta y la implementación de una o más interfaces.
+
+Representa en PlantUML lo siguiente:
+
+- **`IVolador`** es una interfaz (solo define métodos sin implementación).
+- **`Animal`** es una clase abstracta que:
+
+    - Tiene un atributo `nombre`.
+    - Define un método abstracto `hacerSonido()` (marcado con `{abstract}`).
+    - Tiene un método concreto `dormir()` con implementación.
+  
+- **`Pajaro`** hereda de `Animal` (línea sólida con triángulo) e implementa `IVolador` (línea discontinua con triángulo).
+
+Vamos a ilustrar la diferencia entre interfaces (solo contrato) y clases abstractas (contrato + implementación parcial):
+
+[![](https://img.plantuml.biz/plantuml/svg/TP1D3e9038NtFKMN6WC782nmwSw4wBumeuoP7zEfRe2xEofWZ77PzlLxhwsY4ClDMG3ZHVE9MesxOx2a0cCFY1kyfufNwm8FtWYC0DH4OMe5MqinujORHtOI--0QrWNMmiQVNwr-re_O9JpNmHiL5k1JaioS-V9ue_Tq8GuJ-j_oJxufK3basKmeiDEi5S5oMpda-MTgtDLgfxqGGAMzIXzv0000)](https://editor.plantuml.com/uml/TP1D3e9038NtFKMN6WC782nmwSw4wBumeuoP7zEfRe2xEofWZ77PzlLxhwsY4ClDMG3ZHVE9MesxOx2a0cCFY1kyfufNwm8FtWYC0DH4OMe5MqinujORHtOI--0QrWNMmiQVNwr-re_O9JpNmHiL5k1JaioS-V9ue_Tq8GuJ-j_oJxufK3basKmeiDEi5S5oMpda-MTgtDLgfxqGGAMzIXzv0000).{center}
+
+**En Kotlin**:
 
 ```kotlin
 // Interfaz: Define QUÉ debe hacer
@@ -756,8 +790,8 @@ class Pajaro(nombre: String) : Animal(nombre), IVolador {
 ```
 
 !!! tip "Cuándo usar interfaz vs clase abstracta"
-- **Usa interfaz** cuando quieras definir un contrato de comportamiento que múltiples clases no relacionadas puedan implementar
-- **Usa clase abstracta** cuando quieras proporcionar implementación común a clases relacionadas jerárquicamente
+    - **Usa interfaz** cuando quieras definir un contrato de comportamiento que múltiples clases no relacionadas puedan implementar
+    - **Usa clase abstracta** cuando quieras proporcionar implementación común a clases relacionadas jerárquicamente
 
 
 ### 5. Relaciones entre Clases e Interfaces
@@ -1518,15 +1552,308 @@ A destacar:
 
 
 
-### 6. Ejemplos Completos de Diagramas de Clases
+
+### 6. Mejores Prácticas en Diagramas de Clases
+
+Crear un buen diagrama de clases no es solo conocer la notación UML - es entender cuándo, cómo y por qué usarla. Estas prácticas te ayudarán a crear diagramas efectivos y útiles.
+
+#### 6.1. Principio de Responsabilidad Única (SRP)
+
+**Definición**: Cada clase debe tener una única responsabilidad o razón para cambiar.
+
+**Error común**: Clases que hacen "demasiado"
+
+```kotlin
+// ❌ MAL: Clase con múltiples responsabilidades
+class Usuario {
+    // Gestión de usuario
+    fun login()
+    fun logout()
+    fun cambiarPassword()
+    
+    // Gestión de permisos
+    fun tienePermiso(recurso: String): Boolean
+    fun agregarPermiso(recurso: String)
+    
+    // Notificaciones
+    fun enviarEmail(mensaje: String)
+    fun enviarSMS(mensaje: String)
+    
+    // Persistencia
+    fun guardarEnBaseDatos()
+    fun cargarDesdeBaseDatos()
+}
+```
+
+**Mejor enfoque**: Separar responsabilidades
+
+```kotlin
+// ✅ BIEN: Cada clase tiene una responsabilidad
+class Usuario(
+    val id: Int,
+    var nombre: String,
+    var email: String
+) {
+    fun cambiarPassword(nuevaPassword: String) {
+        // Solo gestión de usuario
+    }
+}
+
+class GestorPermisos {
+    fun tienePermiso(usuario: Usuario, recurso: String): Boolean {
+        // Solo gestión de permisos
+    }
+}
+
+class ServicioNotificaciones {
+    fun enviarEmail(usuario: Usuario, mensaje: String) {
+        // Solo notificaciones
+    }
+}
+
+class RepositorioUsuario {
+    fun guardar(usuario: Usuario) {
+        // Solo persistencia
+    }
+}
+```
+
+**En el diagrama**:
+
+```
+┌──────────┐     usa    ┌─────────────────┐
+│ Usuario  │────────────│ GestorPermisos  │
+└──────────┘            └─────────────────┘
+     │
+     │ usa
+     │
+  ┌──┴───────────────────┐
+  │ServicioNotificaciones│
+  └──────────────────────┘
+```
+
+#### 6.2. Gestión de Complejidad: Divide y Vencerás
+
+**Problema**: Diagramas con 50+ clases son ilegibles
+
+**Solución**: Crear múltiples diagramas organizados por:
+
+1. **Módulos o paquetes**
+   - Diagrama de "Vista General" (alto nivel)
+   - Diagramas detallados por módulo
+
+2. **Capas de arquitectura**
+   - Diagrama de capa de presentación
+   - Diagrama de capa de negocio
+   - Diagrama de capa de datos
+
+3. **Casos de uso o funcionalidades**
+   - Diagrama del módulo de "Autenticación"
+   - Diagrama del módulo de "Carrito de Compras"
+   - Diagrama del módulo de "Pagos"
+
+**Ejemplo de organización**:
+
+```
+Sistema de E-Commerce (Vista General)
+     │
+     ├─ Módulo Usuarios
+     │    └─ Diagrama detallado: Usuario, Autenticación, Permisos
+     │
+     ├─ Módulo Productos
+     │    └─ Diagrama detallado: Producto, Categoría, Inventario
+     │
+     ├─ Módulo Ventas
+     │    └─ Diagrama detallado: Carrito, Orden, Pago
+     │
+     └─ Módulo Envíos
+          └─ Diagrama detallado: Dirección, Transportista, Seguimiento
+```
+
+!!! tip "Regla práctica"
+    Si tu diagrama no cabe cómodamente en una hoja A4 o pantalla sin hacer zoom, probablemente necesita dividirse.
+
+#### 6.3. Claridad Visual: La estética importa
+
+Un buen diagrama no solo es correcto técnicamente, sino también visualmente claro.
+
+**Hacer**:
+
+**Evitar cruces de líneas**
+
+- Reorganiza las clases para minimizar líneas cruzadas
+- Usa colores o estilos diferentes para diferentes tipos de relaciones
+
+**Agrupar clases relacionadas**
+
+- Clases del mismo módulo/paquete cerca unas de otras
+- Usa cuadros de color para delimitar grupos
+
+**Distribución equilibrada**
+
+- No amontonar todo en una esquina
+- Dejar espacio en blanco (whitespace)
+
+**Evitar**:
+
+**Diagramas abarrotados**: Espacio insuficiente entre elementos
+**Líneas superpuestas**: Dificultan seguir las relaciones
+**Mezclar niveles de detalle**: No mezclar diagramas de alto nivel con detalles de implementación
+
+**Ejemplo de buena vs mala distribución**:
+
+```
+MAL: Amontonado
+┌─────┐┌─────┐┌─────┐
+│  A  ││  B  ││  C  │
+└─────┘└─────┘└─────┘
+┌─────┐┌─────┐
+│  D  ││  E  │
+└─────┘└─────┘
+
+BIEN: Espaciado
+┌─────┐         ┌─────┐
+│  A  │─────────│  B  │
+└─────┘         └─────┘
+   │               │
+   │               │
+┌──┴───┐        ┌──┴───┐
+│  D   │        │  C   │
+└──────┘        └──────┘
+                   │
+               ┌───┴───┐
+               │   E   │
+               └───────┘
+```
+
+#### 6.4. Uso Estratégico del Color
+
+Los colores mejoran significativamente la legibilidad cuando se usan con propósito.
+
+**Esquema recomendado**:
+
+- 🔵 **Azul**: Clases del dominio/modelo (entidades del negocio)
+- 🟢 **Verde**: Clases de servicios/lógica de negocio
+- 🟡 **Amarillo**: Clases de utilidades/helpers
+- 🔴 **Rojo**: Clases de excepciones/errores
+- 🟣 **Púrpura**: Interfaces
+- ⚫ **Gris**: Clases del framework o librerías externas
+
+**Ejemplo**:
+
+```
+     ┌────────────────┐
+     │  <<interface>> │  (Púrpura)
+     │  IRepositorio  │
+     └────────────────┘
+            △
+            │
+     ┌──────┴────────┐
+     │  (Verde)      │
+     │ ServicioUser  │
+     └───────────────┘
+            │ usa
+     ┌──────┴────────┐
+     │  (Azul)       │
+     │   Usuario     │
+     └───────────────┘
+```
+
+!!! warning "Precaución con colores"
+    - No uses demasiados colores (máximo 5-6)
+    - Asegúrate de que funciona en impresión blanco y negro
+    - Incluye una leyenda explicando qué significa cada color
+
+#### 6.5. Nombrado Consistente y Significativo
+
+**Convenciones de nombres**:
+
+1. **Clases**: PascalCase, sustantivos singulares
+
+    - `Usuario`, `CarritoCompras`, `OrdenDePago`
+    - `usuario`, `Carritos`, `crearOrden`
+
+2. **Interfaces**: Prefijo `I` o sufijo descriptivo
+
+    - `IRepositorio`, `IProcesador`, `Serializable`
+    - `InterfazRepositorio`, `ImpRepositorio`
+
+3. **Métodos**: camelCase, verbos
+
+    - `calcularTotal()`, `enviarEmail()`, `esValido()`
+    - `CalcularTotal()`, `total()`, `validacion()`
+
+4. **Atributos**: camelCase, sustantivos
+
+    - `nombre`, `fechaCreacion`, `precioUnitario`
+    - `Nombre`, `fecha_creacion`, `precio$unitario`
+
+**Nombres descriptivos vs genéricos**:
+
+```kotlin
+// Nombres genéricos
+class Gestor {
+    fun procesar(datos: Any): Any
+}
+
+// Nombres descriptivos
+class GestorFacturas {
+    fun procesarFactura(factura: Factura): ResultadoProceso
+}
+```
+
+#### 6.6. Documentación del Diagrama
+
+Un buen diagrama incluye:
+
+1. **Título**: Qué representa el diagrama
+2. **Versión/Fecha**: Cuándo se creó o actualizó
+3. **Autor**: Quién lo creó
+4. **Leyenda**: Explicación de símbolos no estándar o colores
+5. **Notas**: Decisiones de diseño importantes
+6. **Nivel de detalle**: ¿Es conceptual, lógico o físico?
+
+**Ejemplo de encabezado**:
+
+```
+┌────────────────────────────────────────────────────────┐
+│ Sistema de E-Commerce - Módulo de Ventas               │
+│ Versión: 2.1                    Fecha: 2024-03-15      │
+│ Autor: Equipo de Arquitectura                          │
+│ Nivel: Diseño Lógico (con detalles de implementación)  │
+└────────────────────────────────────────────────────────┘
+
+Leyenda:
+  🔵 Clases del dominio
+  🟢 Servicios
+  🟡 Utilidades
+```
+
+#### 6.7. Iteración y Refinamiento
+
+**Los diagramas evolucionan**. No intentes crear el diagrama perfecto en el primer intento.
+
+**Proceso iterativo recomendado**:
+
+1. **Boceto inicial** (5-10 min): Clases principales, relaciones básicas
+2. **Primera revisión** (30 min): Añadir atributos y métodos clave
+3. **Segunda revisión** (1 hora): Refinar relaciones, multiplicidad
+4. **Validación** (con equipo): ¿Falta algo? ¿Hay algo innecesario?
+5. **Refinamiento final**: Claridad visual, documentación
+
+!!! tip "Consejo práctico"
+    Usa pizarra o papel para los primeros bocetos. Las herramientas digitales vienen después, cuando la estructura esté más clara.
+
+
+### 7. Ejemplos Completos de Diagramas de Clases
 
 Los ejemplos son fundamentales para entender cómo aplicar la teoría en práctica. A continuación, presentamos tres ejemplos completos de diferentes dominios, cada uno con su diagrama UML y código Kotlin correspondiente.
 
-#### 6.1. Sistema de Biblioteca
+#### 7.1. Sistema de Biblioteca
 
 Este ejemplo modela una biblioteca con libros, usuarios, préstamos y multas.
 
-##### 6.1.1. Diagrama UML
+##### 7.1.1. Diagrama UML
 
 ```
 ┌─────────────────┐                    ┌─────────────────┐
@@ -1557,7 +1884,7 @@ Este ejemplo modela una biblioteca con libros, usuarios, préstamos y multas.
                                        └─────────────────┘
 ```
 
-##### 6.1.2. Implementación en Kotlin
+##### 7.1.2. Implementación en Kotlin
 
 ```kotlin
 data class Libro(
@@ -1649,11 +1976,11 @@ class Biblioteca(
 - **Agregación (◇)**: Un Usuario tiene Préstamos. Si eliminamos al usuario, los préstamos históricos podrían seguir existiendo
 - **Asociación**: Libro y Préstamo están asociados
 
-#### 6.2. Sistema de Gestión Universitaria
+#### 7.2. Sistema de Gestión Universitaria
 
 Este ejemplo modela estudiantes, cursos, profesores y matrículas.
 
-##### 6.2.1. Diagrama UML
+##### 7.2.1. Diagrama UML
 
 ```
 ┌──────────────┐                ┌──────────────┐
@@ -1681,7 +2008,7 @@ Este ejemplo modela estudiantes, cursos, profesores y matrículas.
         se matricula en └───────────────┘
 ```
 
-##### 6.2.2. Implementación en Kotlin
+##### 7.2.2. Implementación en Kotlin
 
 ```kotlin
 abstract class Persona(
@@ -1761,11 +2088,11 @@ class Matricula(
 - **Asociación**: Estudiante se matricula en Curso a través de Matricula
 - **Asociación**: Profesor imparte Curso
 
-#### 6.3. Sistema de Comercio Electrónico
+#### 7.3. Sistema de Comercio Electrónico
 
 Sistema completo de tienda online con usuarios, productos, carritos y órdenes.
 
-##### 6.3.1. Diagrama UML
+##### 7.3.1. Diagrama UML
 
 ```
 ┌──────────────┐                    ┌──────────────┐
@@ -1805,7 +2132,7 @@ Sistema completo de tienda online con usuarios, productos, carritos y órdenes.
                                             └─────────────┘
 ```
 
-##### 6.3.2. Implementación en Kotlin (simplificada)
+##### 7.3.2. Implementación en Kotlin (simplificada)
 
 ```kotlin
 class Usuario(
@@ -1935,299 +2262,9 @@ class Orden(
 - **Agregación**: Carrito contiene ItemCarrito, que referencia Producto
 
 !!! note "Punto importante"
-    Estos ejemplos muestran cómo los diagramas UML se traducen directamente a código. La estructura del diagrama guía la implementación, estableciendo las relaciones entre clases, los atributos y métodos necesarios.
+Estos ejemplos muestran cómo los diagramas UML se traducen directamente a código. La estructura del diagrama guía la implementación, estableciendo las relaciones entre clases, los atributos y métodos necesarios.
 
 
-### 7. Mejores Prácticas en Diagramas de Clases
-
-Crear un buen diagrama de clases no es solo conocer la notación UML - es entender cuándo, cómo y por qué usarla. Estas prácticas te ayudarán a crear diagramas efectivos y útiles.
-
-#### 7.1. Principio de Responsabilidad Única (SRP)
-
-**Definición**: Cada clase debe tener una única responsabilidad o razón para cambiar.
-
-**Error común**: Clases que hacen "demasiado"
-
-```kotlin
-// ❌ MAL: Clase con múltiples responsabilidades
-class Usuario {
-    // Gestión de usuario
-    fun login()
-    fun logout()
-    fun cambiarPassword()
-    
-    // Gestión de permisos
-    fun tienePermiso(recurso: String): Boolean
-    fun agregarPermiso(recurso: String)
-    
-    // Notificaciones
-    fun enviarEmail(mensaje: String)
-    fun enviarSMS(mensaje: String)
-    
-    // Persistencia
-    fun guardarEnBaseDatos()
-    fun cargarDesdeBaseDatos()
-}
-```
-
-**Mejor enfoque**: Separar responsabilidades
-
-```kotlin
-// ✅ BIEN: Cada clase tiene una responsabilidad
-class Usuario(
-    val id: Int,
-    var nombre: String,
-    var email: String
-) {
-    fun cambiarPassword(nuevaPassword: String) {
-        // Solo gestión de usuario
-    }
-}
-
-class GestorPermisos {
-    fun tienePermiso(usuario: Usuario, recurso: String): Boolean {
-        // Solo gestión de permisos
-    }
-}
-
-class ServicioNotificaciones {
-    fun enviarEmail(usuario: Usuario, mensaje: String) {
-        // Solo notificaciones
-    }
-}
-
-class RepositorioUsuario {
-    fun guardar(usuario: Usuario) {
-        // Solo persistencia
-    }
-}
-```
-
-**En el diagrama**:
-
-```
-┌──────────┐     usa    ┌─────────────────┐
-│ Usuario  │────────────│ GestorPermisos  │
-└──────────┘            └─────────────────┘
-     │
-     │ usa
-     │
-  ┌──┴───────────────────┐
-  │ServicioNotificaciones│
-  └──────────────────────┘
-```
-
-#### 7.2. Gestión de Complejidad: Divide y Vencerás
-
-**Problema**: Diagramas con 50+ clases son ilegibles
-
-**Solución**: Crear múltiples diagramas organizados por:
-
-1. **Módulos o paquetes**
-   - Diagrama de "Vista General" (alto nivel)
-   - Diagramas detallados por módulo
-
-2. **Capas de arquitectura**
-   - Diagrama de capa de presentación
-   - Diagrama de capa de negocio
-   - Diagrama de capa de datos
-
-3. **Casos de uso o funcionalidades**
-   - Diagrama del módulo de "Autenticación"
-   - Diagrama del módulo de "Carrito de Compras"
-   - Diagrama del módulo de "Pagos"
-
-**Ejemplo de organización**:
-
-```
-Sistema de E-Commerce (Vista General)
-     │
-     ├─ Módulo Usuarios
-     │    └─ Diagrama detallado: Usuario, Autenticación, Permisos
-     │
-     ├─ Módulo Productos
-     │    └─ Diagrama detallado: Producto, Categoría, Inventario
-     │
-     ├─ Módulo Ventas
-     │    └─ Diagrama detallado: Carrito, Orden, Pago
-     │
-     └─ Módulo Envíos
-          └─ Diagrama detallado: Dirección, Transportista, Seguimiento
-```
-
-!!! tip "Regla práctica"
-    Si tu diagrama no cabe cómodamente en una hoja A4 o pantalla sin hacer zoom, probablemente necesita dividirse.
-
-#### 7.3. Claridad Visual: La estética importa
-
-Un buen diagrama no solo es correcto técnicamente, sino también visualmente claro.
-
-**Hacer**:
-
-**Evitar cruces de líneas**
-
-- Reorganiza las clases para minimizar líneas cruzadas
-- Usa colores o estilos diferentes para diferentes tipos de relaciones
-
-**Agrupar clases relacionadas**
-
-- Clases del mismo módulo/paquete cerca unas de otras
-- Usa cuadros de color para delimitar grupos
-
-**Distribución equilibrada**
-
-- No amontonar todo en una esquina
-- Dejar espacio en blanco (whitespace)
-
-**Evitar**:
-
-**Diagramas abarrotados**: Espacio insuficiente entre elementos
-**Líneas superpuestas**: Dificultan seguir las relaciones
-**Mezclar niveles de detalle**: No mezclar diagramas de alto nivel con detalles de implementación
-
-**Ejemplo de buena vs mala distribución**:
-
-```
-MAL: Amontonado
-┌─────┐┌─────┐┌─────┐
-│  A  ││  B  ││  C  │
-└─────┘└─────┘└─────┘
-┌─────┐┌─────┐
-│  D  ││  E  │
-└─────┘└─────┘
-
-BIEN: Espaciado
-┌─────┐         ┌─────┐
-│  A  │─────────│  B  │
-└─────┘         └─────┘
-   │               │
-   │               │
-┌──┴───┐        ┌──┴───┐
-│  D   │        │  C   │
-└──────┘        └──────┘
-                   │
-               ┌───┴───┐
-               │   E   │
-               └───────┘
-```
-
-#### 7.4. Uso Estratégico del Color
-
-Los colores mejoran significativamente la legibilidad cuando se usan con propósito.
-
-**Esquema recomendado**:
-
-- 🔵 **Azul**: Clases del dominio/modelo (entidades del negocio)
-- 🟢 **Verde**: Clases de servicios/lógica de negocio
-- 🟡 **Amarillo**: Clases de utilidades/helpers
-- 🔴 **Rojo**: Clases de excepciones/errores
-- 🟣 **Púrpura**: Interfaces
-- ⚫ **Gris**: Clases del framework o librerías externas
-
-**Ejemplo**:
-
-```
-     ┌────────────────┐
-     │  <<interface>> │  (Púrpura)
-     │  IRepositorio  │
-     └────────────────┘
-            △
-            │
-     ┌──────┴────────┐
-     │  (Verde)      │
-     │ ServicioUser  │
-     └───────────────┘
-            │ usa
-     ┌──────┴────────┐
-     │  (Azul)       │
-     │   Usuario     │
-     └───────────────┘
-```
-
-!!! warning "Precaución con colores"
-    - No uses demasiados colores (máximo 5-6)
-    - Asegúrate de que funciona en impresión blanco y negro
-    - Incluye una leyenda explicando qué significa cada color
-
-#### 7.5. Nombrado Consistente y Significativo
-
-**Convenciones de nombres**:
-
-1. **Clases**: PascalCase, sustantivos singulares
-
-    - `Usuario`, `CarritoCompras`, `OrdenDePago`
-    - `usuario`, `Carritos`, `crearOrden`
-
-2. **Interfaces**: Prefijo `I` o sufijo descriptivo
-
-    - `IRepositorio`, `IProcesador`, `Serializable`
-    - `InterfazRepositorio`, `ImpRepositorio`
-
-3. **Métodos**: camelCase, verbos
-
-    - `calcularTotal()`, `enviarEmail()`, `esValido()`
-    - `CalcularTotal()`, `total()`, `validacion()`
-
-4. **Atributos**: camelCase, sustantivos
-
-    - `nombre`, `fechaCreacion`, `precioUnitario`
-    - `Nombre`, `fecha_creacion`, `precio$unitario`
-
-**Nombres descriptivos vs genéricos**:
-
-```kotlin
-// Nombres genéricos
-class Gestor {
-    fun procesar(datos: Any): Any
-}
-
-// Nombres descriptivos
-class GestorFacturas {
-    fun procesarFactura(factura: Factura): ResultadoProceso
-}
-```
-
-#### 7.6. Documentación del Diagrama
-
-Un buen diagrama incluye:
-
-1. **Título**: Qué representa el diagrama
-2. **Versión/Fecha**: Cuándo se creó o actualizó
-3. **Autor**: Quién lo creó
-4. **Leyenda**: Explicación de símbolos no estándar o colores
-5. **Notas**: Decisiones de diseño importantes
-6. **Nivel de detalle**: ¿Es conceptual, lógico o físico?
-
-**Ejemplo de encabezado**:
-
-```
-┌────────────────────────────────────────────────────────┐
-│ Sistema de E-Commerce - Módulo de Ventas               │
-│ Versión: 2.1                    Fecha: 2024-03-15      │
-│ Autor: Equipo de Arquitectura                          │
-│ Nivel: Diseño Lógico (con detalles de implementación)  │
-└────────────────────────────────────────────────────────┘
-
-Leyenda:
-  🔵 Clases del dominio
-  🟢 Servicios
-  🟡 Utilidades
-```
-
-#### 7.7. Iteración y Refinamiento
-
-**Los diagramas evolucionan**. No intentes crear el diagrama perfecto en el primer intento.
-
-**Proceso iterativo recomendado**:
-
-1. **Boceto inicial** (5-10 min): Clases principales, relaciones básicas
-2. **Primera revisión** (30 min): Añadir atributos y métodos clave
-3. **Segunda revisión** (1 hora): Refinar relaciones, multiplicidad
-4. **Validación** (con equipo): ¿Falta algo? ¿Hay algo innecesario?
-5. **Refinamiento final**: Claridad visual, documentación
-
-!!! tip "Consejo práctico"
-    Usa pizarra o papel para los primeros bocetos. Las herramientas digitales vienen después, cuando la estructura esté más clara.
 
 ### 8. Herramientas para Crear Diagramas de Clases
 

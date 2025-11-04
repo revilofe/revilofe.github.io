@@ -263,7 +263,7 @@ markdown_extensions:
   - meta
   - abbr #Tooltips
   - attr_list #Tooltips & This configuration adds the ability to align images, add captions to images (rendering them as figures), and mark large images for lazy-loading.
-  - md_in_html # https://squidfunk.github.io/mkdocs-material/reference/images/
+  - md_in_html # https://squidfunk.github.io/mkdocs-material/reference/images/ y https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
   - admonition
   - def_list
   - footnotes
@@ -297,7 +297,8 @@ markdown_extensions:
       alternate_style: true #The Tabbed extension allows the usage of content tabs, a simple way to group related content and code blocks under accessible tabs.
   - pymdownx.tasklist:
       custom_checkbox: true #The Tasklist extension allows for the usage of GitHub Flavored Markdown inspired task lists, following the same syntactical conventions.
-
+# Additional extensions for images. date: 2025/11/04
+  - pymdownx.blocks.caption # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#caption y https://facelessuser.github.io/pymdown-extensions/extensions/blocks/plugins/caption/
 
 plugins:
   - tags:

@@ -22,26 +22,52 @@ tags:
 
 ### Introducción
 
-En el desarrollo de software, dos conceptos fundamentales que determinan la calidad del diseño son el **acoplamiento** y la **cohesión**. Estos principios nos ayudan a crear sistemas más mantenibles, comprensibles y flexibles.
+En el desarrollo de software, dos conceptos fundamentales que determinan la **calidad, mantenibilidad y flexibilidad** del diseño son el **acoplamiento** y la **cohesión**. Estos principios no son opcionales en un buen diseño: son los pilares sobre los que se construyen sistemas que perduran en el tiempo, que pueden adaptarse a nuevos requisitos, y que no se convierten en "código espagueti" imposible de mantener.
+
+Imagina que estás construyendo un sistema con múltiples módulos que interactúan entre sí. Si cada módulo está fuertemente acoplado a los otros (es decir, si un cambio en un módulo requiere cambios en cascada en todos los demás), entonces tu sistema es **frágil y difícil de mantener**. Por otro lado, si cada módulo tiene baja cohesión (es decir, si sus funciones están desconectadas y sin propósito común), entonces es **difícil de entender** qué hace realmente cada módulo.
+
+El equilibrio ideal es: **bajo acoplamiento** (módulos independientes) y **alta cohesión** (cada módulo tiene un propósito claro y unificado).
 
 !!! note "Principio clave"
     Un buen diseño de software debe buscar **bajo acoplamiento** y **alta cohesión**.
 
 **Objetivos de un buen diseño**:
-- **Bajo acoplamiento**: Minimizar las dependencias entre módulos
-- **Alta cohesión**: Maximizar la relación entre los elementos dentro de un mismo módulo
+- **Bajo acoplamiento**: Minimizar las dependencias entre módulos para que puedan evolucionar independientemente
+- **Alta cohesión**: Maximizar la relación entre los elementos dentro de un mismo módulo para que tengan un propósito común
+- **Mantenibilidad**: El código debe ser fácil de entender y modificar
+- **Flexibilidad**: El sistema debe adaptarse a nuevos requisitos sin refactorización masiva
 
 ## 1. Cohesión
 
 ### 1.1. ¿Qué es la cohesión?
 
-La **cohesión** es una medida que indica cuán relacionados están los elementos dentro de un mismo módulo, clase o componente. Una alta cohesión significa que los elementos del módulo están fuertemente relacionados y trabajan juntos para cumplir un propósito específico y bien definido.
+La **cohesión** es una medida que indica **cuán relacionados y enfocados están los elementos dentro de un mismo módulo, clase o componente**. Una alta cohesión significa que:
+
+- Los elementos del módulo están **fuertemente relacionados** en su propósito
+- Todos trabajan **hacia un objetivo común**
+- La clase o módulo tiene **una responsabilidad clara y única**
+- Cambiar la lógica de una parte **afecta naturalmente** a las otras partes, porque todas están relacionadas
+
+**Analogía del mundo real**: Imagina un equipo de fútbol. Cada jugador tiene su posición:
+- Los defensas trabajan juntos para defender (alta cohesión defensiva)
+- Los atacantes trabajan juntos para anotar (alta cohesión ofensiva)
+- Todo el equipo trabaja junto para ganar (cohesión del equipo)
+
+Por el contrario, si mezclas tareas completamente no relacionadas en un mismo módulo (como tener un método para calcular impuestos, otro para enviar emails, y otro para ordenar arrays), entonces tienes **baja cohesión**.
 
 ### 1.2. Tipos de cohesión
 
-La cohesión se puede clasificar en diferentes niveles, **ordenados de menor a mayor calidad**:
+La cohesión se puede clasificar en diferentes niveles, **ordenados de menor a mayor calidad**. Entender estos niveles te ayudará a identificar y mejorar la cohesión en tu código:
 
-| Nivel  | Tipo                    | Calidad       |
+| Nivel  | Tipo                    | Calidad       | Descripción                                      |
+|--------|-------------------------|---------------|--------------------------------------------------|
+| 1      | Cohesión coincidental   | ❌ La peor     | Elementos agrupados sin ninguna relación lógica |
+| 2      | Cohesión lógica         | 🔴 Muy baja   | Elementos relacionados por tipo, pero no función |
+| 3      | Cohesión temporal       | 🟠 Baja       | Elementos ejecutados en el mismo momento        |
+| 4      | Cohesión procedimental  | 🟡 Media-baja | Elementos que siguen una secuencia              |
+| 5      | Cohesión comunicacional | 🟢 Media      | Elementos que comparten datos de entrada/salida |
+| 6      | Cohesión secuencial     | 🔵 Alta       | Salida de uno es entrada del siguiente          |
+| 7      | Cohesión funcional      | ✅ La mejor    | Todos enfocados en una única función            |
 |--------|-------------------------|---------------|
 | 1      | Cohesión coincidental   | ❌ La peor     |
 | 2      | Cohesión lógica         | 🔴 Muy baja   |

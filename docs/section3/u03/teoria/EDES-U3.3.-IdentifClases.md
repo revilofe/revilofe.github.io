@@ -22,61 +22,93 @@ tags:
 
 ### 1. Introducción
 
-La **identificación de clases** es uno de los pasos más importantes y desafiantes en el diseño orientado a objetos. Un buen modelo de clases es la base para un sistema bien estructurado, mantenible y escalable.
+La **identificación de clases** es uno de los pasos más importantes y desafiantes en el diseño orientado a objetos. De hecho, es el paso que diferencia a los buenos diseñadores de los mediocres. Un buen modelo de clases es la base para un sistema bien estructurado, mantenible y escalable, mientras que un mal modelo puede condenar a un proyecto a ser un desastre de mantenimiento.
 
 !!! note "Principio fundamental"
-    Cada comportamiento que requiera el sistema debe ser proporcionado por los objetos de las clases que elijamos
+    Cada comportamiento que requiera el sistema debe ser proporcionado por los objetos de las clases que elijamos. Si olvidas una clase importante, algunos comportamientos no estarán representados. Si creas clases innecesarias, tu modelo se vuelve confuso y difícil de mantener.
 
 Este documento se centra en **cómo identificar clases**, **cómo relacionarlas** y las **buenas prácticas** para crear diagramas de clases efectivos.
+
+**¿Por qué es tan importante?** Porque la fase de identificación de clases:
+- Define la **arquitectura conceptual** de tu sistema
+- Determina cómo será de **fácil o difícil** mantener el código después
+- Establece las bases para la **escalabilidad** futura
+- Facilita o complica la **colaboración** entre desarrolladores
+- Afecta el **desempeño** y la **eficiencia** del sistema resultante
+
+### 2. Fundamentos de la Identificación
 
 ### 2. Fundamentos de la Identificación
 
 #### 2.1. ¿Qué buscamos al identificar clases?
 
-Al identificar clases, buscamos representar:
+Al identificar clases, buscamos responder estas preguntas fundamentales:
 
-1. **Entidades del dominio**: Objetos que existen en el mundo real o conceptual del problema
-2. **Responsabilidades**: Qué debe hacer cada clase en el sistema
-3. **Colaboraciones**: Cómo las clases trabajan juntas para cumplir los requisitos
+1. **¿Qué entidades existen en nuestro dominio?** - ¿Cuáles son los objetos conceptuales o físicos relevantes?
+   - Ejemplos: Cliente, Producto, Pedido, Empresa
+   
+2. **¿Qué responsabilidades tiene cada entidad?** - ¿Qué debe saber hacer cada objeto?
+   - Ejemplos: Un Cliente debe poder realizar una compra, una Factura debe poder calcular su total
+
+3. **¿Cómo colaboran las entidades para cumplir los requisitos?** - ¿Cómo trabajan juntas?
+   - Ejemplos: Un Cliente crea un Pedido que contiene Productos
+
+Buscamos representar:
+
+1. **Entidades del dominio**: Objetos que existen en el mundo real o conceptual del problema. Son los más fáciles de identificar.
+
+2. **Responsabilidades claras**: Qué debe hacer cada clase en el sistema. Cada clase debe tener una razón clara de ser.
+
+3. **Colaboraciones** entre clases: Cómo las clases trabajan juntas para cumplir los requisitos del sistema. Una clase no debería actuar en aislamiento.
 
 #### 2.2. Consideraciones importantes
 
-Es importante recordar que los objetos son realmente cosas dentro de un programa de computador. Cuando hablamos sobre "libros" y "copias", por ejemplo, realmente nos referimos a la representación de estas cosas dentro de nuestro sistema.
+Es importante recordar que los objetos son realmente cosas dentro de un programa de computador. Cuando hablamos sobre "libros" y "copias", por ejemplo, realmente nos referimos a la **representación digital de estas cosas dentro de nuestro sistema**, no a los libros y copias físicas en el mundo real.
 
-Las consecuencias de esto son que hay que tener cuidado:
+Las consecuencias de esto son que hay que tener cuidado con la siguiente pregunta: **¿qué información de la realidad es realmente importante para nuestro sistema?**
 
-- **No almacenar información** que es definitivamente irrelevante para nuestro sistema
-- **No perder la visión** del hecho de que ¡los objetos son el sistema!
-- **Mantener el enfoque** en lo que el sistema necesita, no en todo lo que existe en el mundo real
+Es crucial:
+
+- **No almacenar información** que es definitivamente irrelevante para nuestro sistema (ej: el color del cartel de una tienda)
+- **No perder la visión** del hecho de que ¡los objetos son el sistema! Trabajan dentro del programa, no son el mundo real
+- **Mantener el enfoque** en lo que el sistema necesita, no en todo lo que existe en el mundo real (ej: un sistema de biblioteca quizás no necesita la información de empleados de mantenimiento)
+
+**La clave**: Modelar el dominio del problema desde la perspectiva del sistema, no modelar la realidad en su totalidad.
 
 ### 3. Objetivos de un Buen Modelo de Clases
 
-La construcción de un modelo de clases incluye dos objetivos fundamentales:
+Cuando diseñas un modelo de clases, en realidad estás persiguiendo **dos objetivos que a menudo están en tensión**:
 
-**Objetivo 1:** Construcción eficiente
+**Objetivo 1: Construcción Eficiente**
 
 Construir, lo más rápido y barato posible, un sistema que satisfaga nuestros requisitos actuales.
 
 !!! tip "Principio"
     Cada comportamiento que requiera el sistema debe ser proporcionado por los objetos de las clases que elijamos
 
-Estrategias:
+**Estrategias**:
 
-- Identificar las clases mínimas necesarias: La solución más simple que funcione.
-- Enfocarse en los requisitos actuales: No anticipar necesidades futuras innecesarias.
-- Evitar sobre-ingeniería prematura: No añadir complejidad sin justificación.
+- **Identificar las clases mínimas necesarias**: La solución más simple que funcione. No sobre-diseñes.
+- **Enfocarse en los requisitos actuales**: No anticipar necesidades futuras imaginarias. Solo diseña para lo que sabes que necesitas hoy.
+- **Evitar sobre-ingeniería prematura**: No añadas complejidad sin justificación presente. La complejidad es una deuda técnica.
 
-**Objetivo 2:** Mantenibilidad
+**¿Por qué esto importa?** Porque cada clase adicional innecesaria incrementa la complejidad del sistema, ralentiza el desarrollo, y aumenta la probabilidad de errores. Es tentador crear "clases generales" que "podrían ser útiles en el futuro", pero a menudo resultan siendo innecesarias o inútiles cuando ese futuro llega.
 
-Construir un sistema que sea fácil de mantener y adaptar a futuros requisitos.
+**Objetivo 2: Mantenibilidad**
+
+Construir un sistema que sea fácil de mantener y adaptar a futuros requisitos. Este es el objetivo a largo plazo.
 
 !!! tip "Principio"
     Un buen modelo de clases está formado por módulos encapsulados, con acoplamiento débil (pocas dependencias entre módulos) y cohesión fuerte
 
-Características clave:
-- Alta cohesión*: Cada clase tiene una responsabilidad clara y bien definida
-- Bajo acoplamiento: Las clases tienen pocas dependencias entre sí
-- Encapsulamiento: Los detalles internos están ocultos
+**Características clave**:
+- **Alta cohesión**: Cada clase tiene una responsabilidad clara y bien definida. Si necesitas cambiar algo, sabes exactamente dónde mirar.
+- **Bajo acoplamiento**: Las clases tienen pocas dependencias entre sí. Un cambio en una clase no causa un efecto dominó en todas las demás.
+- **Encapsulamiento**: Los detalles internos están ocultos. Otras clases interactúan con la interfaz pública, no con los detalles internos.
+
+**¿Por qué esto importa?** Porque con el tiempo, el código pasa más tiempo siendo mantenido que siendo escrito inicialmente. Un sistema con buena cohesión y bajo acoplamiento es más fácil de entender, más fácil de modificar, y más fácil de extender.
+
+**El equilibrio**: La clave es encontrar un equilibrio entre estos dos objetivos. No puede ser tan simple que sea rígido e imposible de mantener. Pero tampoco puede ser tan complejo que sea difícil de entender y construir.
 
 ### 4. Proceso Iterativo de Identificación
 
@@ -99,129 +131,177 @@ En la práctica, es **improbable que construya correctamente un modelo de clases
 
 ### 5. Técnica de Identificación de Nombres
 
-La técnica más común y efectiva para identificar clases es el **análisis de sustantivos**. Procede en dos etapas fundamentales:
+La técnica más común y efectiva para identificar clases es el **análisis de sustantivos**. Es una técnica pragmática y fácil de aplicar que funciona bien en la práctica. La idea es simple: los sustantivos en la descripción del problema frecuentemente corresponden a entidades del dominio, que a su vez se convierten en clases.
+
+Sin embargo, no todos los sustantivos se convierten en clases, y ese es el verdadero desafío de esta técnica. Procede en dos etapas fundamentales:
 
 #### 5.1. Etapa 1: Identificar clases candidatas
+
+En esta etapa, eres liberal y no descartas nada. El objetivo es capturar todas las posibilidades, incluso si algunas resultan no siendo clases.
 
 ##### 5.1.1. Estrategias principales
 
 1. **Análisis de documentos textuales**
-   - Obtener descripción del problema (requisitos, casos de uso, historias de usuario)
-   - Puede ser documentación formal o informal
-   - Entrevistas con usuarios y stakeholders
+   - Obtener descripción clara del problema (requisitos, casos de uso, historias de usuario, conversaciones con clientes)
+   - La documentación puede ser formal (requisitos oficiales) o informal (notas, conversaciones)
+   - Las entrevistas con usuarios y stakeholders son especialmente valiosas
+   - Leer cuidadosamente toda la documentación disponible
 
 2. **Extracción de sustantivos**
-   - Extraer todos los sustantivos de la descripción
-   - Los sustantivos son candidatos a clases de objetos
+   - Extraer **todos** los sustantivos de la descripción, sin discriminar
+   - Los sustantivos son candidatos potenciales a clases de objetos
    - Hacer una lista completa sin descartar nada al principio
+   - Incluir tanto sustantivos explícitos como implícitos (aquellos que podrías inferir del contexto)
 
 3. **Identificación de candidatos**
    - Listar todos los sustantivos encontrados
-   - Incluir tanto entidades físicas como conceptuales
+   - Incluir tanto entidades físicas (Cliente, Producto) como conceptuales (Pedido, Transacción)
+   - No juzgar en esta etapa; eso viene después
 
 ##### 5.1.2. Ejemplo práctico
 
-**Enunciado**: "En un sistema de reservaciones que vende boletos para funciones en varios teatros..."
+**Enunciado**: "En un sistema de reservaciones que vende boletos para funciones en varios teatros, los clientes pueden reservar asientos. Cada función está en un teatro específico y tiene una hora de inicio, duración y aforo máximo. Los boletos tienen un precio que varía según la ubicación del asiento. El sistema genera reportes de ocupación."
 
 **Sustantivos encontrados (clases candidatas)**:
-- Sistema de Reservaciones
-- Boletos
-- Función
-- Teatro
-- Venta
-- Cliente (implícito)
+- Sistema de Reservaciones ← Metalenguaje, probablemente no sea clase
+- Boletos ← ✓ Sí, es una entidad importante
+- Función ← ✓ Sí, es una entidad importante
+- Teatro ← ✓ Sí, es una entidad importante
+- Clientes ← ✓ Sí, es una entidad importante
+- Asientos ← ✓ Sí, es una entidad importante
+- Hora de inicio ← ← Probablemente sea atributo de Función
+- Duración ← Probablemente sea atributo de Función
+- Aforo máximo ← Probablemente sea atributo de Teatro o Función
+- Precio ← ← Probablemente sea atributo de Boleto
+- Ubicación del asiento ← Probablemente sea parte de Asiento
+- Reportes ← ¿Clase o resultado de una operación?
+- Ocupación ← Probablemente sea atributo calculado
+
+**Resultado de esta etapa**: Una larga lista sin filtrar
 
 ##### 5.1.3. Reglas iniciales
 
 - Considérelos en forma **singular**: "Boleto" en lugar de "Boletos"
 - **No incluya frases** que contengan "o" como candidatas (son alternativas, no clases)
+  - ❌ "Cliente o Administrador" → ✓ "Cliente", ✓ "Administrador"
 - Durante esta etapa, **no diferenciar** entre clases y atributos todavía
+- No preocuparse si la lista tiene redundancias; las eliminaremos después
 
 #### 5.2. Etapa 2: Descartar candidatas inapropiadas
 
-Esta es la etapa más crítica. Hay que analizar cada candidata y determinar si realmente debe ser una clase.
+Esta es la etapa más crítica y donde se requiere más criterio. Hay que analizar **cada candidata** y determinar honestamente si realmente debe ser una clase. Esta es donde los buenos diseñadores se diferencian de los mediocres: en la capacidad de hacer juicios correctos sobre qué mereceSer una clase.
 
 ##### 5.2.1. Razones para descartar una clase candidata
 
 **1. Redundante**
 
-Cuando a la misma clase se le ha dado más de un nombre.
+Cuando a la misma clase conceptual se le ha dado más de un nombre en la descripción, o cuando es una especialización trivial de otra clase.
 
 **Ejemplo**: 
-- "préstamo" y "préstamo a corto plazo"
-- "usuario" y "cliente"
+- "Préstamo de estudiante" y "Préstamo de trabajador" (el tipo de persona es un detalle, no un concepto diferente)
+- "Usuario registrado" y "Cliente" (son lo mismo desde diferentes perspectivas)
+
+**Pregunta clave**: ¿Realmente son conceptos diferentes en el dominio, o es la misma cosa con diferentes adjetivos?
 
 **Acción**: Probablemente solo difieren en valores de atributos. Elija un nombre que abarque todas las descripciones.
 
+---
+
 **2. Impreciso**
 
-Cuando no se puede indicar de forma no ambigua lo que significa un nombre.
+Cuando no se puede indicar de forma clara y no ambigua lo que significa un nombre. La ambigüedad sugiere que el concepto no está bien definido.
 
 **Ejemplo**: 
-- "Cuenta" (¿Cuenta bancaria? ¿Cuenta de usuario? ¿Cuenta de ahorros?)
-- "Registro" (demasiado genérico)
+- "Cuenta" (¿Cuenta bancaria? ¿Cuenta de usuario? ¿Cuenta de ahorros? ¿Cuenta de email?)
+- "Registro" (demasiado genérico; ¿registro de qué?)
+- "Datos" (tan vago que es inútil)
 
-**Acción**: Eliminar la ambigüedad antes de considerarla clase. Renombrar a algo específico como "CuentaBancaria" o "RegistroAcceso".
+**Pregunta clave**: ¿Todos los interesados entienden exactamente lo mismo cuando dicen este nombre?
+
+**Acción**: Eliminar la ambigüedad antes de considerarla clase. Renombrar a algo específico como "CuentaBancaria", "CuentaUsuario", "RegistroAcceso".
+
+---
 
 **3. Un evento u operación**
 
-Cuando el nombre hace referencia a algo que **se hace** para, por o en el sistema.
+Cuando el nombre hace referencia a algo que **se hace** para, por o en el sistema; es decir, cuando es un verbo disfrazado de sustantivo.
 
 **Ejemplo**: 
-- "Reserva de asiento"
-- "Compra de boleto"
-- "Validación"
+- "Reserva de asiento" (la acción es reservar, no crear una clase separada)
+- "Compra de boleto" (el acto de comprar)
+- "Validación" (una acción, no una entidad)
 
-**Pregunta clave**: ¿La instancia del evento u operación tiene estado, comportamiento e identidad?
+**Pregunta clave**: ¿La instancia del evento u operación tiene estado, comportamiento e identidad que persista en el tiempo?
 
 **Conceptos fundamentales**:
 - **Estado**: Todos los datos (atributos) que encapsula un objeto en un momento determinado
-- **Comportamiento**: La manera como actúa y reacciona un objeto
-- **Identidad**: A los objetos se les hace referencia por un nombre
+- **Comportamiento**: La manera como actúa y reacciona un objeto (sus métodos)
+- **Identidad**: A los objetos se les hace referencia por un nombre único o identificador
 
-**Decisión**: 
-- Si solo representa una acción momentánea → Probablemente sea un **método**, no una clase
-- Si tiene datos que persisten → Puede ser una clase (ej: "Reserva" con fecha, asiento, cliente)
+**Regla de decisión**: 
+- Si solo representa una acción momentánea sin persistencia → Probablemente sea un **método**, no una clase
+  - Ejemplo: "validar email" es un método de la clase Usuario
+- Si tiene datos que persisten y un ciclo de vida → Puede ser una clase
+  - Ejemplo: "Reserva" con fecha, asiento, cliente, estado → Es una clase porque persiste y tiene lógica
+
+---
 
 **4. Metalenguaje**
 
-Cuando el nombre forma parte de la manera en que se definen las cosas, no del dominio del problema.
+Cuando el nombre forma parte de la manera en que se definen o habla sobre las cosas, pero no es parte del dominio del problema.
 
 **Ejemplo**: 
-- "requisitos"
-- "sistema"
-- "modelo"
-- "diagrama"
+- "Requisitos" (son parte de cómo se especifica el sistema, no parte del dominio)
+- "Sistema" (es metalenguaje; todo es parte del sistema)
+- "Modelo" (es como referimos al diseño, no es una entidad del dominio)
+- "Diagrama" (es una herramienta de modelado, no una clase del sistema)
+
+**Pregunta clave**: ¿Es esto una cosa del mundo real/dominio, o es cómo hablamos sobre el sistema?
 
 **Acción**: Eliminar estos términos de la lista de candidatas.
 
+---
+
 **5. Fuera del alcance del sistema**
 
-Cuando el nombre es relevante para describir cómo funciona el sistema pero no hace referencia a algo **interno** del sistema.
+Cuando el nombre es relevante para describir cómo funciona el sistema pero no hace referencia a algo **que el sistema gestiona** o con lo que el sistema interactúa directamente.
 
 **Ejemplo**: 
-- "Usuario del sistema" (la persona que usa el sistema)
-- "Administrador del sistema" (rol externo)
-- "Cliente externo"
+- "Usuario del sistema" (la persona que usa el sistema desde afuera)
+- "Administrador del sistema" (rol externo al dominio del problema)
+- "Cliente externo" (alguien fuera del sistema)
+
+**Pregunta clave**: ¿El sistema necesita recordar y gestionar información sobre esto? ¿O solo es el "actuar" que usa el sistema?
 
 **Decisión**: 
 - Si el sistema **gestiona información** sobre estos → Sí es una clase
-- Si solo **interactúan** con el sistema → No es una clase interna
+  - Ejemplo: En un sistema de tienda, Cliente sí es una clase porque guardamos información sobre clientes
+- Si solo **interactúan** con el sistema → No es una clase interna, es un actor externo
+  - Ejemplo: El "usuario del sistema" que está usando un cajero automático quizás se represente como una clase, o quizás solo sea una interacción
+
+---
 
 **6. Un atributo**
 
-Cuando está claro que un nombre hace referencia a algo **sencillo**, sin un comportamiento interesante, que es un atributo de otra clase.
+Cuando está claro que un nombre hace referencia a algo **sencillo sin comportamiento interesante**, que es más bien una propiedad de otra clase.
 
 **Ejemplo**: 
-- "Color"
-- "Tamaño"
-- "Precio"
-- "Nombre"
-- "Fecha"
+- "Color" (es una propiedad de Producto, no una clase propia)
+- "Tamaño" (es una propiedad de Prenda, no una clase)
+- "Precio" (es una propiedad de Producto)
+- "Nombre" (es una propiedad de Persona)
+- "Fecha" (es una propiedad de Evento)
+
+**Pregunta clave**: ¿Este concepto tiene comportamiento propio? ¿O es simplemente un valor que caracteriza a otro objeto?
 
 **Acción**: Estos serán atributos de otras clases, no clases por sí mismos.
 
-**Excepción**: Si el atributo tiene comportamiento complejo o múltiples propiedades propias, puede ser una clase (ej: "Dirección" con calle, ciudad, código postal, país).
+**Excepción importante**: Si el atributo tiene comportamiento complejo o múltiples propiedades propias, puede ser una clase:
+- Ejemplo: "Dirección" con calle, ciudad, código postal, país, y métodos para validar y formatear
+- Ejemplo: "Dinero" con cantidad y moneda, y métodos para conversiones y operaciones
+- Estos son "value objects" que merecen ser clases en sí mismos
+
+---
 
 #### 5.3. Identificación de clases relevantes
 

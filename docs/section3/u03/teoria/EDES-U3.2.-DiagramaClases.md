@@ -61,13 +61,15 @@ Los diagramas de clases pueden ser desarrollados en diferentes fases del ciclo d
 
 ### 2. Elementos del Diagrama de Clases
 
-El diagrama UML de clases está formado por tres elementos principales:
+El diagrama UML de clases está formado por tres elementos principales que trabajan conjuntamente para representar la estructura de un sistema orientado a objetos:
 
-1. **Clases:** Representan los objetos del mundo real
-2. **Relacione:** Representan las asociaciones entre las clases, como se interrelacionan
-3. **Interfaces:** Representan contratos que las clases pueden implementar, definiendo un conjunto de métodos sin implementación
+1. **Clases**: Representan los objetos y conceptos del mundo real que existirán en nuestro sistema. Son los "actores" principales.
 
-Cada uno de estos elementos se verán en esta unidad.
+2. **Relaciones**: Representan las asociaciones y dependencias entre las clases, mostrando cómo se interrelacionan e interactúan. Sin las relaciones, las clases estarían aisladas y no formarían un sistema coherente.
+
+3. **Interfaces**: Representan contratos que las clases pueden implementar, definiendo un conjunto de métodos sin implementación. Las interfaces establecen expectativas sobre qué debe hacer una clase, sin especificar cómo debe hacerlo.
+
+Cada uno de estos elementos será examinado en detalle a lo largo de esta unidad. La comprensión profunda de cada uno es fundamental para crear diagramas de clases efectivos.
 
 ### 3. Clases
 
@@ -118,17 +120,28 @@ La clase se representa con una **caja dividida en tres zonas** mediante líneas 
 └─────────────────────────┘
 ```
 
-##### 3.2.1. Zona 1: Nombre de la Clase
+#### 3.2.1. Zona 1: Nombre de la Clase
 
-La primera zona contiene el **nombre de la clase**, y se escribe siguiendo estas reglas:
+La primera zona contiene el **nombre de la clase**, que es el identificador único y fundamental de la clase. El nombre debe ser representativo de lo que la clase modela en el dominio del problema.
+
+**Reglas para escribir nombres de clases**:
 
 - Se escribe en la primera zona de la caja
-- **Clases abstractas**: El nombre se escribe en *cursiva*
-- Convenio: Primera letra en mayúscula (PascalCase)
+- **Clases abstractas**: El nombre se escribe en *cursiva* para indicar que no pueden instanciarse directamente
+- Convenio: Primera letra en mayúscula (**PascalCase**)
+  - ✅ Correcto: `Usuario`, `CarritoCompras`, `OrdenDePago`
+  - ❌ Incorrecto: `usuario`, `CarritoCompra` (inconsistencia), `user` (en inglés)
+- Los nombres deben ser **sustantivos singulares**, no verbos ni formas plurales
+  - ✅ Correcto: `Libro`
+  - ❌ Incorrecto: `Libros` (plural), `CrearLibro` (verbo)
+
+**Por qué PascalCase**: Esta convención de nombres ayuda a diferenciar visualmente los nombres de clases del resto del código, mejorando la legibilidad de los diagramas.
 
 ##### 3.2.2. Zona 2: Atributos
 
-En la segunda zona se escriben los **atributos** de la clase, uno por línea. Y tienen el siguiente formato:
+En la segunda zona se escriben los **atributos** de la clase, uno por línea. Los atributos representan el **estado** de un objeto, es decir, la información que el objeto "recuerda" en todo momento. Por ejemplo, un objeto `Cliente` tiene atributos como `nombre`, `email` y `fechaRegistro` que lo caracterizan.
+
+El formato completo de un atributo es:
 
 * **Formato oficial:**
 
@@ -136,7 +149,14 @@ En la segunda zona se escriben los **atributos** de la clase, uno por línea. Y 
     visibilidad nombre_atributo : tipo = valor-inicial { propiedades }
     ```
 
-* **Formato simplificado (común):**
+    Donde:
+    - `visibilidad`: Indica quién puede acceder al atributo (+, -, #, ~, /)
+    - `nombre_atributo`: Nombre descriptivo del atributo en camelCase
+    - `tipo`: Tipo de dato (String, Int, Double, Date, etc.)
+    - `valor-inicial`: (Opcional) Valor con el que se inicializa el atributo
+    - `{propiedades}`: (Opcional) Propiedades adicionales como `{readOnly}` o `{unique}`
+
+* **Formato simplificado (común en diagramas):**
 
     ```
     nombre_atributo : tipo
@@ -148,12 +168,21 @@ En la segunda zona se escriben los **atributos** de la clase, uno por línea. Y 
     nombre_atributo
     ```
 
-**Ejemplo**:
+**Ejemplos prácticos**:
 ```
 - nombre : String
 - edad : Int = 0
 - activo : Boolean
+- fechaRegistro : Date
+# coordenadas : List<Double>
++ ID : Int {unique}
 ```
+
+En el ejemplo anterior:
+- `nombre` es privado y de tipo String
+- `edad` es privado, Int, e inicializa a 0
+- `coordenadas` es protegida (accesible por subclases)
+- `ID` es público y debe ser único
 
 ###### 3.2.2.1 Tipos de Atributos
 
@@ -197,7 +226,9 @@ companion object {
 
 ##### 3.2.3. Zona 3: Métodos
 
-En la tercera zona se escriben los **métodos** o funciones de la clase, también uno por línea. Y tienen el siguiente formato:
+En la tercera zona se escriben los **métodos** o funciones de la clase, también uno por línea. Los métodos representan el **comportamiento** o **responsabilidades** de la clase, es decir, las acciones que un objeto puede realizar.
+
+El formato completo de un método es:
 
 * **Formato oficial:**
 
@@ -205,18 +236,41 @@ En la tercera zona se escriben los **métodos** o funciones de la clase, tambié
     visibilidad nombre_funcion(parametros) : tipo-devuelto { propiedades }
     ```
 
-* **Formato simplificado (común):**
+    Donde:
+    - `visibilidad`: Indica quién puede llamar al método (+, -, #, ~, /)
+    - `nombre_funcion`: Nombre del método en camelCase, típicamente un verbo o frase con verbo
+    - `parametros`: Lista de parámetros formales con sus tipos (nombre: Tipo)
+    - `tipo-devuelto`: Tipo de dato que devuelve el método (o Unit si no devuelve nada)
+    - `{propiedades}`: (Opcional) Propiedades como `{abstract}` o `{final}`
+
+* **Formato simplificado (común en diagramas):**
 
     ```
     nombre_funcion(parametros) : tipo-devuelto
     ```
 
-**Ejemplo**:
+**Ejemplos prácticos**:
 ```
 + getNombre() : String
 + setEdad(edad: Int) : Unit
-+ calcularDescuento(precio: Double) : Double
++ calcularDescuento(precio: Double, porcentaje: Double) : Double
+# validarEmail(email: String) : Boolean
+- procesarDatos() : void
++ esMayorDeEdad(edad: Int) : Boolean
 ```
+
+En los ejemplos anteriores:
+- `getNombre()` es público, no toma parámetros y devuelve String
+- `setEdad()` es público, toma un Int y no devuelve nada (Unit)
+- `calcularDescuento()` toma dos Doubles y devuelve un Double
+- `validarEmail()` es protegida, toma String y devuelve Boolean
+- `procesarDatos()` es privada y no devuelve nada
+
+**Convenciones de nomenclatura para métodos**:
+- Getters (obtener valores): `getNombreAtributo()`
+- Setters (establecer valores): `setNombreAtributo(valor)`
+- Validación: `validar...()`, `es...()`, `tiene...()`, `puede...()`
+- Acciones: `crear...()`, `actualizar...()`, `eliminar...()`, `procesar...()`
 
 ###### 3.2.3.1 Tipos de Métodos
 
@@ -408,35 +462,52 @@ Las relaciones se representan con **líneas** que unen las clases. El tipo de l�
 
 #### 4.1. Propiedades de las Relaciones
 
-Cada relación puede tener las siguientes propiedades:
+Cuando representamos relaciones en un diagrama de clases, necesitamos expresar varios atributos que caracterizan esa relación. Estos atributos nos permiten comunicar de manera precisa y completa cómo dos clases se relacionan, respondiendo preguntas como: ¿cuántos objetos de una clase se relacionan con objetos de otra? ¿Cuál es el significado de esa relación? ¿Qué papel juega cada clase?
 
 ##### 4.1.1. Multiplicidad (Cardinalidad)
 
-Indica el **número de elementos** de una clase que participan en una relación.
+Indica el **número de elementos** de una clase que participan en una relación. Es la propiedad más fundamental de una relación, ya que determina si la relación es de uno-a-uno, uno-a-muchos, etc.
+
+**¿Por qué es importante?** La multiplicidad nos ayuda a entender las restricciones del dominio del problema. Por ejemplo:
+- Un cliente debe tener **al menos una** dirección de entrega
+- Un cliente puede tener **múltiples** órdenes de compra
+- Un producto pertenece a **exactamente una** categoría
 
 <figure markdown="span">
   ![Notación de multiplicidad](assets/multiplicidad-notacion.gif)
   <figcaption>Notación de multiplicidad en relaciones</figcaption>
 </figure>
 
-| Notación     | Significado                       |
-|--------------|-----------------------------------|
-| `1`          | Exactamente uno (uno y solo uno)  |
-| `0..1`       | Cero o uno                        |
-| `*` o `0..*` | Cero o muchos (muchos)            |
-| `1..*`       | Uno o muchos (al menos uno)       |
-| `n`          | Exactamente n (número específico) |
-| `m..n`       | Desde m hasta n                   |
+| Notación     | Significado                       | Ejemplo práctico                           |
+|--------------|-----------------------------------|--------------------------------------------|
+| `1`          | Exactamente uno (uno y solo uno)  | Cada persona tiene exactamente un DNI      |
+| `0..1`       | Cero o uno                        | Un cliente puede tener cero o un descuento |
+| `*` o `0..*` | Cero o muchos (muchos)            | Un usuario puede tener cero o más órdenes  |
+| `1..*`       | Uno o muchos (al menos uno)       | Un equipo tiene al menos un miembro        |
+| `n`          | Exactamente n (número específico) | Un dado tiene exactamente 6 caras          |
+| `m..n`       | Desde m hasta n                   | Un automóvil tiene entre 2 y 10 ruedas     |
 
 ##### 4.1.2. Nombre de la Asociación
 
-Se puede escribir una indicación que ayuda a entender la relación. Suelen utilizarse **verbos**.
+Se puede escribir una indicación que ayuda a entender el significado de la relación. Suelen utilizarse **verbos** para describir la naturaleza de la relación.
 
-**Ejemplo**: "Una empresa **contrata** a n empleados"
+**¿Por qué es importante?** El nombre aclara la semántica de la relación, respondiendo la pregunta "¿qué significa esta conexión entre las clases?". Sin el nombre, podría haber ambigüedad.
+
+**Ejemplos**:
+- "Una empresa **contrata** a n empleados"
+- "Un profesor **imparte** m clases"
+- "Un cliente **realiza** múltiples pedidos"
+
+El verbo debe leerse en la dirección de la flecha o relación. Si la relación no tiene dirección clara, se puede leer en ambas direcciones con verbos apropiados.
 
 ##### 4.1.3. Rol
 
-Indica el papel que juega cada clase en la relación. Es decir, describe la semántica que tiene la relación en el sentido indicado.
+Indica el papel que juega cada clase en la relación. Es decir, describe la semántica específica que tiene la relación desde el punto de vista de cada clase. El rol nos ayuda a entender la "función" que una clase juega en relación con otra.
+
+**¿Cuándo es importante?** El rol es especialmente útil cuando:
+- La relación podría ser ambigua sin él
+- Una clase se relaciona consigo misma (relaciones reflexivas)
+- La misma clase participa en múltiples relaciones de diferentes tipos
 
 **Ejemplo de notación:**
 
@@ -448,16 +519,36 @@ Indica el papel que juega cada clase en la relación. Es decir, describe la sem�
 
 En el ejemplo anterior:
 
-* El rol de la clase `Curso` es `curso`, y el rol de la clase `Clase` es `clases`. 
-* La multiplicidad indica que un `curso` puede impartir muchas `clases`, pero cada `clase` pertenece a un solo `curso`.
+* El rol de la clase `Curso` es `+curso`, indicando que cada `Clase` pertenece a un `Curso`
+* El rol de la clase `Clase` es `+clases`, indicando que un `Curso` puede impartir múltiples `Clases`
+* La multiplicidad indica que:
+  - Un `curso` puede impartir **muchas** `clases` (1 a *)
+  - Cada `clase` pertenece a **un solo** `curso` (1 a 1 desde el lado de Clase)
+
+**Otro ejemplo**: Relación reflexiva de Trabajador-Jefe
+
+```
+        ┌──────────────┐
+        │  Trabajador  │
+        └──────────────┘
+          ↑           ↓
+          │           │ Supervisa
+          │           │
+    -jefe │          │ -subordinados
+    0..1  │          │ 0..*
+```
+
+Aquí, los roles `jefe` y `subordinados` clarifican la naturaleza de la relación reflexiva, indicando que un trabajador puede ser jefe de múltiples subordinados, pero cada subordinado tiene como máximo un jefe.
 
 #### 4.2. Tipos de Relaciones
 
 ##### 4.2.1. Asociación
 
-**Definición**: Representa una dependencia semántica. Es el tipo de relación más común y general.
+**Definición**: Representa una dependencia semántica donde dos o más clases están conectadas mediante una relación lógica del dominio del problema. Es el tipo de relación más común y general, y establece que dos clases están relacionadas pero sin implicar herencia, composición o agregación.
 
-**Representación**: Línea continua simple que une las clases.
+**Cuándo usarla**: Usa asociación cuando dos clases necesitan "conocerse" mutuamente o una clase necesita acceder a instancias de otra, pero no hay una relación más específica (herencia, composición, agregación).
+
+**Representación**: Línea continua simple que une las clases, opcionalmente con una flecha que indica dirección de navegación.
 
 <figure markdown="span">
   ![Relación de asociación](assets/relacion-asociacion.png)
@@ -466,9 +557,9 @@ En el ejemplo anterior:
 
 ###### 4.2.1.1. Asociación Binaria
 
-Una asociación binaria conecta dos clases. Se representa con una línea sólida entre las dos clases.
+Una asociación binaria conecta dos clases. Es la forma más común de asociación.
 
-**Ejemplo**: "Una mascota pertenece a una persona"
+**Ejemplo 1**: "Una mascota pertenece a una persona"
 
 ```
 ┌──────────┐           ┌──────────┐
@@ -477,7 +568,12 @@ Una asociación binaria conecta dos clases. Se representa con una línea sólida
     tiene
 ```
 
-**En Kotlin**:
+En este ejemplo:
+- Una `Persona` puede tener **múltiples** mascotas (multiplicidad 1 a *)
+- Cada `Mascota` pertenece a **una sola** persona (multiplicidad * a 1)
+- La palabra "tiene" describe el significado de la relación
+
+**En Kotlin (bidireccional)**:
 
 ```kotlin
 class Persona(val nombre: String) {
@@ -485,13 +581,18 @@ class Persona(val nombre: String) {
     
     fun agregarMascota(mascota: Mascota) {
         mascotas.add(mascota)
+        mascota.dueno = this  // Mantener consistencia bidireccional
     }
+    
+    fun getMascotas(): List<Mascota> = mascotas.toList()
 }
 
-class Mascota(val nombre: String, val dueno: Persona)
+class Mascota(val nombre: String) {
+    var dueno: Persona? = null
+}
 ```
 
-**Otro ejemplo**: "Una matrícula consta de cursos"
+**Ejemplo 2**: "Una matrícula consta de cursos"
 
 ```
 ┌────────────┐  Consta De   ┌─────────┐
@@ -500,17 +601,26 @@ class Mascota(val nombre: String, val dueno: Persona)
   -matricula                  -cursos
 ```
 
-**Implementación en Kotlin:**
+En este ejemplo, la asociación es **unidireccional**: `Matricula` conoce sus cursos, pero `Curso` no necesita conocer sus matrículas.
+
+**En Kotlin (unidireccional)**:
 
 ```kotlin
-class Matricula(n: Int) {
+class Matricula(val estudianteID: Int, n: Int) {
     private val cursos: Array<Curso?> = arrayOfNulls(n)
+    private var cantidad = 0
     
-    // ... resto de métodos
+    fun agregarCurso(curso: Curso) {
+        if (cantidad < cursos.size) {
+            cursos[cantidad++] = curso
+        }
+    }
+    
+    fun getCursos(): List<Curso> = cursos.filterNotNull()
 }
 
-class Curso(private val matricula: Matricula) {
-    // ... resto de métodos
+class Curso(val codigoAsignatura: String, val nombre: String) {
+    // Este no conoce sus matrículas
 }
 ```
 

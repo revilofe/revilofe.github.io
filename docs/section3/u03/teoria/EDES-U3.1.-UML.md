@@ -281,51 +281,51 @@ UML se compone de **14 tipos de diagramas** divididos en dos grandes categorías
 
 ##### 7.2.1. Diagramas Estructurales (7 tipos) - "¿De qué está hecho el sistema?"
 
-Estos diagramas responden la pregunta fundamental: **¿Cuál es la arquitectura y estructura del sistema?** Muestran los elementos estáticos del sistema - las clases, componentes, nodos y cómo están relacionados.
+Estos diagramas responden la pregunta fundamental: **¿Cuál es la arquitectura y estructura del sistema?**. Estos diagramas muestran los **elementos estáticos del sistema**: las clases, componentes, nodos y cómo están relacionados.
 
 **Cuándo usarlos**: Cuando necesitas entender qué componentes tiene el sistema, cómo se organizan y cómo se comunican entre ellos.
 
 1. **Diagrama de Clases**
 
-   - Propósito: Mostrar la estructura de las clases, sus atributos, métodos y relaciones
-   - Uso: Es el diagrama más usado. Proporciona la base para la implementación
-   - Audiencia: Desarrolladores, arquitectos
+    - Propósito: Mostrar la estructura de las clases, sus atributos, métodos y relaciones
+    - Uso: Es el diagrama más usado. Proporciona la base para la implementación
+    - Audiencia: Desarrolladores, arquitectos
 
 2. **Diagrama de Objetos**
 
-   - Propósito: Mostrar instancias específicas de clases en un momento particular
-   - Uso: Útil para comprender ejemplos concretos de cómo funcionan las clases
-   - Audiencia: Desarrolladores, testers
+    - Propósito: Mostrar instancias específicas de clases en un momento particular
+    - Uso: Útil para comprender ejemplos concretos de cómo funcionan las clases
+    - Audiencia: Desarrolladores, testers
 
 3. **Diagrama de Componentes**
 
-   - Propósito: Mostrar cómo el sistema está dividido en componentes de alto nivel y sus dependencias
-   - Uso: Especialmente en sistemas grandes, para mostrar la organización arquitectónica
-   - Audiencia: Arquitectos, líderes técnicos
+    - Propósito: Mostrar cómo el sistema está dividido en componentes de alto nivel y sus dependencias
+    - Uso: Especialmente en sistemas grandes, para mostrar la organización arquitectónica
+    - Audiencia: Arquitectos, líderes técnicos
 
 4. **Diagrama de Despliegue**
 
-   - Propósito: Mostrar cómo se despliegan los componentes en hardware físico o virtual
-   - Uso: Crucial en operaciones, DevOps, para entender la infraestructura
-   - Audiencia: Arquitectos, DevOps, operations
+    - Propósito: Mostrar cómo se despliegan los componentes en hardware físico o virtual
+    - Uso: Crucial en operaciones, DevOps, para entender la infraestructura
+    - Audiencia: Arquitectos, DevOps, operations
 
 5. **Diagrama de Paquetes**
 
-   - Propósito: Organizar clases y otros elementos en paquetes (grupos lógicos)
-   - Uso: En sistemas muy grandes para entender la organización de alto nivel
-   - Audiencia: Arquitectos
+    - Propósito: Organizar clases y otros elementos en paquetes (grupos lógicos)
+    - Uso: En sistemas muy grandes para entender la organización de alto nivel
+    - Audiencia: Arquitectos
 
 6. **Diagrama de Estructura Compuesta**
 
-   - Propósito: Mostrar la estructura interna de un clasificador (clase) compleja
-   - Uso: Para entender las partes internas de un componente
-   - Audiencia: Arquitectos (menos común)
+    - Propósito: Mostrar la estructura interna de un clasificador (clase) compleja
+    - Uso: Para entender las partes internas de un componente
+    - Audiencia: Arquitectos (menos común)
 
 7. **Diagrama de Perfil**
 
-   - Propósito: Extender UML con conceptos específicos de un dominio
-   - Uso: Para dominio específicos (telecomunicaciones, finanzas, etc.)
-   - Audiencia: Especialistas en dominios
+    - Propósito: Extender UML con conceptos específicos de un dominio
+    - Uso: Para dominio específicos (telecomunicaciones, finanzas, etc.)
+    - Audiencia: Especialistas en dominios
 
 ##### 7.2.2. Diagramas de Comportamiento (7 tipos) - "¿Qué hace el sistema y cómo?"
 
@@ -335,51 +335,46 @@ Estos diagramas responden la pregunta: **¿Cuál es el comportamiento del sistem
 
 1. **Diagrama de Casos de Uso** (Comportamiento)
 
-   - Propósito: Mostrar los requisitos del sistema desde la perspectiva del usuario
-   - Uso: Especificar qué debe hacer el sistema sin entrar en detalles de cómo
-   - Audiencia: Analistas de negocio, stakeholders no técnicos, desarrolladores
+    - Propósito: Mostrar los requisitos del sistema desde la perspectiva del usuario
+    - Uso: Especificar qué debe hacer el sistema sin entrar en detalles de cómo
+    - Audiencia: Analistas de negocio, stakeholders no técnicos, desarrolladores
 
 2. **Diagrama de Secuencia** (Interacción)
 
-   - Propósito: Mostrar cómo los objetos interactúan entre sí en una secuencia temporal
-   - Uso: Ideal para entender flujos complejos, llamadas entre sistemas
-   - Audiencia: Desarrolladores, testers
+    - Propósito: Mostrar cómo los objetos interactúan entre sí en una secuencia temporal
+    - Uso: Ideal para entender flujos complejos, llamadas entre sistemas
+    - Audiencia: Desarrolladores, testers
 
 3. **Diagrama de Comunicación** (Interacción)
 
-   - Propósito: Similar al de secuencia, pero enfatizando las relaciones y las conexiones
-   - Uso: Alternativa al diagrama de secuencia para interacciones más simples
-   - Audiencia: Desarrolladores
+    - Propósito: Similar al de secuencia, pero enfatizando las relaciones y las conexiones
+    - Uso: Alternativa al diagrama de secuencia para interacciones más simples
+    - Audiencia: Desarrolladores
 
 4. **Diagrama de Máquinas de Estado**
 
-   - Propósito: Mostrar los estados posibles de un objeto y las transiciones entre ellos
-   - Uso: Esencial para objetos con comportamiento complejo basado en estados
-   - Audiencia: Desarrolladores (especialmente en sistemas embebidos o tiempo real)
+    - Propósito: Mostrar los estados posibles de un objeto y las transiciones entre ellos
+    - Uso: Esencial para objetos con comportamiento complejo basado en estados
+    - Audiencia: Desarrolladores (especialmente en sistemas embebidos o tiempo real)
 
 5. **Diagrama de Actividades** (Comportamiento)
 
-   - Propósito: Mostrar el flujo de trabajo o proceso como un diagrama similar a un flowchart
-   - Uso: Para modelar procesos de negocio o flujos lógicos complejos
-   - Audiencia: Analistas de negocio, desarrolladores
+    - Propósito: Mostrar el flujo de trabajo o proceso como un diagrama similar a un flowchart
+    - Uso: Para modelar procesos de negocio o flujos lógicos complejos
+    - Audiencia: Analistas de negocio, desarrolladores
 
 6. **Diagrama de Temporización** (Interacción)
 
-   - Propósito: Mostrar el comportamiento de objetos a lo largo del tiempo, especialmente en sistemas con restricciones de tiempo
-   - Uso: Sistemas embebidos, sistemas de tiempo real
-   - Audiencia: Especialistas en sistemas embebidos
+    - Propósito: Mostrar el comportamiento de objetos a lo largo del tiempo, especialmente en sistemas con restricciones de tiempo
+    - Uso: Sistemas embebidos, sistemas de tiempo real
+    - Audiencia: Especialistas en sistemas embebidos
 
 7. **Diagrama de Interacción General (Interaction Overview)** (Interacción)
 
-   - Propósito: Proporcionar una visión general de la interacción combinando otros diagramas
-   - Uso: Para ver la "gran imagen" de cómo múltiples interacciones se conectan
-   - Audiencia: Arquitectos (menos común)
-   
-7. **Diagrama de Perfiles**
+    - Propósito: Proporcionar una visión general de la interacción combinando otros diagramas
+    - Uso: Para ver la "gran imagen" de cómo múltiples interacciones se conectan
+    - Audiencia: Arquitectos (menos común)
 
-   - Propósito: Extender UML con conceptos específicos de un dominio
-   - Uso: Para dominio específicos (telecomunicaciones, finanzas, etc.)
-   - Audiencia: Especialistas en dominios
 
 ### 8. Historia de UML: De la crisis a la estandarización
 

@@ -37,7 +37,7 @@ UML del inglés **Unified Modeling Language** (Lenguaje Unificado de Modelado) e
 En esencia, UML es **un lenguaje visual que nos permite comunicar ideas complejas sobre sistemas software de una manera que todos los implicados en el proyecto pueden entender**, independientemente de su rol. 
 
 !!! warning "Atención"
-UML NO es un lenguaje de programación, sino un **medio de comunicación** que trasciende los lenguajes de programación específicos.
+    UML NO es un lenguaje de programación, sino un **medio de comunicación** que trasciende los lenguajes de programación específicos.
 
 
 UML permite:
@@ -60,7 +60,7 @@ Puesto que UML es un lenguaje de modelado, es crucial entender qué significa **
 La razón es simple pero poderosa: **los cambios en los planos son más baratos y rápidos que los cambios una vez la construcción ha comenzado**. Una pequeña corrección en un diagrama puede ahorrar semanas de recodificación y refactorización.
 
 !!! tip "Consejo"
-En un modelado, destaca los aspectos más importantes e ignora los detalles irrelevantes
+    En un modelado, destaca los aspectos más importantes e ignora los detalles irrelevantes
 
 ##### 2.2.1. Propósito del modelado
 

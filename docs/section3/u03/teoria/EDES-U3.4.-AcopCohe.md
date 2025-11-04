@@ -1,4 +1,3 @@
----
 title: "UD 3 - 3.4 Acoplamiento y Cohesión"
 description: Acoplamiento y Cohesión en el Diseño de Software
 summary: Principios de diseño de software - Alta cohesión y bajo acoplamiento
@@ -16,26 +15,26 @@ tags:
     - Cohesión
     - Principios SOLID
     
----
 
 ## 3.4 Acoplamiento y Cohesión en el Diseño de Software
 
-### Introducción
+### 1. Introducción
 
 En el desarrollo de software, dos conceptos fundamentales que determinan la **calidad, mantenibilidad y flexibilidad** del diseño son el **acoplamiento** y la **cohesión**. Estos principios no son opcionales en un buen diseño: son los pilares sobre los que se construyen sistemas que perduran en el tiempo, que pueden adaptarse a nuevos requisitos, y que no se convierten en "código espagueti" imposible de mantener.
 
-#### El problema del código espagueti
+#### 1.1. El problema del código espagueti
 
 Imagina que estás construyendo un sistema con múltiples módulos que interactúan entre sí. Si cada módulo está fuertemente acoplado a los otros (es decir, si un cambio en un módulo requiere cambios en cascada en todos los demás), entonces tu sistema es **frágil y difícil de mantener**. Por otro lado, si cada módulo tiene baja cohesión (es decir, si sus funciones están desconectadas y sin propósito común), entonces es **difícil de entender** qué hace realmente cada módulo.
 
 **Escenario real**: Imagina que te toca mantener un sistema donde:
+
 - Cambiar el formato de una fecha en la base de datos requiere modificar 47 clases diferentes
 - Una clase llamada `Usuario` también se encarga de enviar emails, validar contraseñas, generar PDFs y conectarse a Twitter
 - No puedes probar un módulo sin arrancar toda la aplicación, incluyendo la base de datos y servicios externos
 
 Estos son síntomas claros de **alto acoplamiento** y **baja cohesión**.
 
-#### El equilibrio ideal
+#### 1.2. El equilibrio ideal
 
 El equilibrio ideal es: **bajo acoplamiento** (módulos independientes) y **alta cohesión** (cada módulo tiene un propósito claro y unificado).
 
@@ -51,18 +50,18 @@ El equilibrio ideal es: **bajo acoplamiento** (módulos independientes) y **alta
 - **Testeabilidad**: Cada módulo debe poder probarse de forma aislada
 - **Reusabilidad**: Los módulos bien diseñados pueden reutilizarse en otros contextos
 
-#### Beneficios tangibles
+#### 1.3. Beneficios tangibles
 
 Cuando aplicas correctamente estos principios, obtienes:
 
-✅ **Menos bugs**: Cambios localizados = menos efectos colaterales  
-✅ **Desarrollo más rápido**: Entender y modificar código es más fácil  
-✅ **Testing más simple**: Puedes probar módulos de forma independiente  
-✅ **Trabajo en equipo más eficiente**: Diferentes desarrolladores pueden trabajar en módulos diferentes sin conflictos  
-✅ **Menor deuda técnica**: El código no se degrada con el tiempo  
-✅ **Costes de mantenimiento reducidos**: Menos tiempo debuggeando, más tiempo agregando valor  
+**Menos bugs**: Cambios localizados = menos efectos colaterales  
+**Desarrollo más rápido**: Entender y modificar código es más fácil  
+**Testing más simple**: Puedes probar módulos de forma independiente  
+**Trabajo en equipo más eficiente**: Diferentes desarrolladores pueden trabajar en módulos diferentes sin conflictos  
+**Menor deuda técnica**: El código no se degrada con el tiempo  
+**Costes de mantenimiento reducidos**: Menos tiempo debuggeando, más tiempo agregando valor  
 
-#### Estructura del documento
+#### 1.3. Estructura del documento
 
 En este documento exploraremos en profundidad:
 
@@ -76,15 +75,14 @@ En este documento exploraremos en profundidad:
 
 Comenzaremos con la cohesión, el principio que muchos consideran el más importante de los dos.
 
----
 
-## 1. Cohesión: El Pegamento que une un módulo
+### 2. Cohesión: El Pegamento que une un módulo
 
-### 1.1. ¿Qué es la cohesión?
+#### 2.1. ¿Qué es la cohesión?
 
 La **cohesión** es una medida que indica **cuán relacionados y enfocados están los elementos dentro de un mismo módulo, clase o componente**. En términos simples: ¿los elementos de esta clase trabajan juntos hacia un objetivo común, o cada uno hace lo suyo?
 
-#### Definición formal
+##### 2.1.1. Definición formal
 
 **Cohesión** = Grado en que las responsabilidades de un módulo están relacionadas entre sí.
 
@@ -103,11 +101,12 @@ Una baja cohesión indica:
 - Es difícil darle un **nombre descriptivo** sin usar "Y" o "Manager"
 - Cambios en una parte **no deberían afectar** a otras partes (porque no están relacionadas)
 
-#### Analogías del mundo real
+##### 2.1.2. Analogías del mundo real
 
 **Analogía 1 - Equipo de fútbol**: 
 
 Imagina un equipo de fútbol bien organizado:
+
 - Los **defensas** trabajan juntos para defender (alta cohesión defensiva)
 - Los **atacantes** trabajan juntos para anotar (alta cohesión ofensiva)
 - Todo el **equipo** trabaja junto para ganar (cohesión del equipo completo)
@@ -124,7 +123,7 @@ Imagina un equipo de fútbol bien organizado:
 - **Alta cohesión**: El chef se enfoca en cocinar, el camarero en servir, el cajero en cobrar
 - **Baja cohesión**: El chef también repara el aire acondicionado, hace la contabilidad y limpia el baño
 
-#### ¿Por qué importa la cohesión?
+##### 2.1.3. ¿Por qué importa la cohesión?
 
 La cohesión es crucial porque:
 
@@ -137,22 +136,22 @@ La cohesión es crucial porque:
 !!! tip "Regla práctica"
     Si no puedes describir qué hace tu clase en una frase simple sin usar "Y", probablemente tiene baja cohesión.
 
-#### Señales de baja cohesión
+##### 2.1.4. Señales de baja cohesión
 
 Identifica problemas de cohesión cuando:
 
-- ❌ La clase tiene más de 10-15 métodos públicos
-- ❌ El nombre de la clase incluye "Manager", "Handler", "Util", "Helper"
-- ❌ La clase cambia frecuentemente por razones no relacionadas
-- ❌ Los métodos de la clase usan diferentes subconjuntos de atributos
-- ❌ Hay métodos estáticos que no usan ningún atributo de instancia
-- ❌ Cuesta trabajo decidir dónde agregar nueva funcionalidad
+- La clase tiene más de 10-15 métodos públicos
+- El nombre de la clase incluye "Manager", "Handler", "Util", "Helper"
+- La clase cambia frecuentemente por razones no relacionadas
+- Los métodos de la clase usan diferentes subconjuntos de atributos
+- Hay métodos estáticos que no usan ningún atributo de instancia
+- Cuesta trabajo decidir dónde agregar nueva funcionalidad
 
-#### Ejemplo introductorio
+##### 2.1.5. Ejemplo introductorio
 
 Veamos un ejemplo concreto para ilustrar la diferencia:
 
-**❌ BAJA COHESIÓN** - Clase que hace de todo:
+**BAJA COHESIÓN** - Clase que hace de todo:
 
 ```kotlin
 class Usuario(
@@ -193,13 +192,14 @@ class Usuario(
 ```
 
 **Problemas**:
+
 - La clase tiene 6 responsabilidades diferentes
 - Si cambia el sistema de email, hay que modificar Usuario
 - Si cambia la base de datos, hay que modificar Usuario
 - Si cambia el formato de PDF, hay que modificar Usuario
 - No se puede probar la validación de password sin tener lógica de email
 
-**✅ ALTA COHESIÓN** - Responsabilidades separadas:
+**ALTA COHESIÓN** - Responsabilidades separadas:
 
 ```kotlin
 // Solo datos y validación básica del dominio
@@ -257,6 +257,7 @@ class ServicioAuditoria {
 ```
 
 **Beneficios**:
+
 - Cada clase tiene una responsabilidad única y clara
 - Cambios en email no afectan a persistencia
 - Se puede testear cada servicio independientemente
@@ -266,11 +267,11 @@ class ServicioAuditoria {
 En las siguientes secciones, exploraremos los diferentes tipos de cohesión y cómo identificarlos en tu código.
 
 
-### 1.2. Tipos de cohesión: De la peor a la mejor
+#### 2.2. Tipos de cohesión: De la peor a la mejor
 
 La cohesión se puede clasificar en diferentes niveles, **ordenados de menor a mayor calidad**. Entender estos niveles te ayudará a identificar y mejorar la cohesión en tu código. Piensa en esta clasificación como una escala de calidad donde debes aspirar a los niveles superiores.
 
-#### Tabla resumen de tipos de cohesión
+##### 2.2.1. Tabla resumen de tipos de cohesión
 
 | Nivel | Tipo                    | Calidad      | Descripción breve                                | Esfuerzo de mantenimiento |
 |-------|-------------------------|--------------|--------------------------------------------------|---------------------------|
@@ -280,18 +281,18 @@ La cohesión se puede clasificar en diferentes niveles, **ordenados de menor a m
 | 4     | Cohesión procedimental  | 🟡 Media-baja| Elementos que siguen una secuencia              | Medio-alto                |
 | 5     | Cohesión comunicacional | 🟢 Media     | Elementos que comparten datos de entrada/salida | Medio                     |
 | 6     | Cohesión secuencial     | 🔵 Alta      | Salida de uno es entrada del siguiente          | Bajo                      |
-| 7     | Cohesión funcional      | ✅ La mejor   | Todos enfocados en una única función            | Muy bajo                  |
+| 7     | Cohesión funcional      | La mejor   | Todos enfocados en una única función            | Muy bajo                  |
 
 !!! warning "Objetivo de diseño"
     Siempre debemos aspirar a **cohesión funcional** (nivel 7) o, como mínimo, a **cohesión secuencial** (nivel 6). Los niveles 1-4 indican serios problemas de diseño.
 
----
 
-#### 1.2.1. Cohesión Coincidental (Nivel 1 - ❌ La peor)
+##### 2.2.2. Cohesión Coincidental (Nivel 1 - ❌ La peor)
 
 **Definición**: Los elementos están agrupados sin ninguna relación aparente. Es como meter cosas al azar en una caja simplemente porque hay espacio.
 
 **Características**:
+
 - No hay razón lógica para que los elementos estén juntos
 - Cambios en un elemento no afectan a otros
 - Difícil de entender, mantener y reutilizar
@@ -341,12 +342,13 @@ val lista = utils.ordenarArray(listOf(3, 1, 2))
 ```
 
 **Problemas identificados**:
+
 - No puedes describir qué hace la clase en una frase
 - Agregar nueva funcionalidad es arbitrario (¿va aquí o en otra clase?)
 - Testing es difícil (muchos mocks diferentes)
 - Imposible de documentar coherentemente
 
-**✅ Solución - Separar por dominios**:
+**Solución - Separar por dominios**:
 
 ```kotlin
 // Alta cohesión - cada clase tiene un propósito claro
@@ -399,24 +401,26 @@ class GeneradorIdentificadores {
 ```
 
 **Beneficios de la refactorización**:
+
 - Cada clase tiene un propósito claro
 - Fácil de localizar funcionalidad
 - Testing más simple (mocks específicos)
 - Fácil de documentar
 
 **Cuándo se produce**:
+
 - Prisas en el desarrollo ("lo pongo donde sea")
 - Falta de planificación
 - Código legacy sin refactorizar
 - Clases "cajón de sastre"
 
----
 
-#### 1.2.2. Cohesión Lógica (Nivel 2 - 🔴 Muy baja)
+##### 2.2.2. Cohesión Lógica (Nivel 2 - 🔴 Muy baja)
 
 **Definición**: Los elementos están relacionados porque realizan actividades del mismo **tipo**, aunque no necesariamente están relacionadas funcionalmente. Es como agrupar todas las operaciones de "entrada/salida" juntas, aunque trabajen con conceptos completamente diferentes.
 
 **Características**:
+
 - Elementos agrupados por categoría lógica, no por colaboración
 - Normalmente controlados por un parámetro que selecciona la operación
 - Estructura típica: `if/else` o `when` para decidir qué hacer
@@ -457,6 +461,7 @@ val ordenado = ops.ejecutar("ORDENAR", listOf(3, 1, 2))
 ```
 
 **Problemas**:
+
 - Método "ejecutar" es demasiado genérico
 - Difícil de extender (agregar nueva operación requiere modificar la clase)
 - Viola el Principio de Abierto/Cerrado
@@ -501,7 +506,7 @@ class ManejadorEventos {
 }
 ```
 
-**✅ Solución - Separar por responsabilidad funcional**:
+**Solución - Separar por responsabilidad funcional**:
 
 ```kotlin
 // Cohesión funcional - Operaciones matemáticas separadas
@@ -573,18 +578,19 @@ class DispatcherEventos {
 ```
 
 **Beneficios**:
+
 - Cada manejador tiene cohesión funcional
 - Fácil de extender (nuevo evento = nueva clase)
 - Testing simple (una clase a la vez)
 - Respeta Open/Closed Principle
 
----
 
-#### 1.2.3. Cohesión Temporal (Nivel 3 - 🟠 Baja)
+##### 2.2.3. Cohesión Temporal (Nivel 3 - 🟠 Baja)
 
 **Definición**: Los elementos están agrupados porque se ejecutan en el **mismo momento** o durante la misma **fase del programa**, pero no están relacionados funcionalmente.
 
 **Características**:
+
 - Elementos ejecutados juntos por timing, no por relación lógica
 - Típico en métodos de inicialización o limpieza
 - Agrupa tareas que "casualmente" ocurren juntas
@@ -635,6 +641,7 @@ class Aplicacion {
 ```
 
 **Problemas**:
+
 - Si falla uno, fallan todos
 - No puedes inicializar solo una parte
 - Difícil de testear (necesitas todo el contexto)
@@ -667,7 +674,7 @@ class SistemaVentas {
 }
 ```
 
-**✅ Solución - Separar por responsabilidad funcional**:
+**Solución - Separar por responsabilidad funcional**:
 
 ```kotlin
 // Alta cohesión - Cada inicializador tiene su responsabilidad
@@ -746,6 +753,7 @@ fun main() {
 ```
 
 **Beneficios**:
+
 - Cada inicializador puede testearse independientemente
 - Puedes inicializar componentes selectivamente
 - Fácil de extender (nuevo inicializador = nueva clase)
@@ -753,18 +761,19 @@ fun main() {
 - Orden de inicialización explícito y configurable
 
 **Cuándo es aceptable**:
+
 - En scripts de setup muy simples
 - Cuando realmente TODAS las operaciones deben ocurrir juntas
 - Como punto de entrada que delega a componentes especializados
 
 
----
 
-#### 1.2.4. Cohesión Procedimental (Nivel 4 - 🟡 Media-baja)
+##### 2.2.4. Cohesión Procedimental (Nivel 4 - 🟡 Media-baja)
 
 **Definición**: Los elementos están relacionados porque siguen una **secuencia específica de pasos** en un proceso, pero cada paso puede trabajar con datos diferentes y no estar funcionalmente relacionado.
 
 **Características**:
+
 - Elementos ejecutados en orden específico
 - Cada paso puede trabajar con datos diferentes
 - La relación es de "flujo de control", no de "propósito común"
@@ -851,6 +860,7 @@ data class ItemPedido(val productoId: String, val cantidad: Int, val precio: Dou
 ```
 
 **Problemas**:
+
 - Mezcla responsabilidades: validación, cálculo, comunicación, persistencia
 - Difícil de testear (necesitas mockear muchas cosas)
 - Difícil de reutilizar pasos individuales
@@ -899,7 +909,7 @@ class GeneradorReporte {
 data class Venta(val id: String, val monto: Double)
 ```
 
-**✅ Solución - Separar por dominios y usar composición**:
+**Solución - Separar por dominios y usar composición**:
 
 ```kotlin
 // Alta cohesión - Cada componente tiene una responsabilidad clara
@@ -1125,15 +1135,15 @@ fun main() {
 ```
 
 **Beneficios de la refactorización**:
+
 - Cada clase tiene cohesión funcional
 - Testing independiente de cada componente
 - Fácil de reutilizar (por ejemplo, CalculadoraPrecios en otros contextos)
 - Cambios localizados (cambiar cálculo de precios no afecta validación)
 - Respeta SRP y Open/Closed Principle
 
----
 
-#### 1.2.5. Cohesión Comunicacional (Nivel 5 - 🟢 Media)
+##### 2.2.5. Cohesión Comunicacional (Nivel 5 - 🟢 Media)
 
 **Definición**: Los elementos están relacionados porque trabajan con el **mismo conjunto de datos** (misma entrada y/o salida), aunque realizan operaciones diferentes sobre esos datos.
 
@@ -1194,12 +1204,13 @@ class ProcesadorArchivo {
 ```
 
 **Problemas**:
+
 - `procesarArchivo` hace demasiadas cosas no relacionadas
 - Difícil de extender (agregar nueva operación requiere modificar la clase)
 - No puedes usar una operación sin las otras
 - Testing complejo
 
-**✅ Solución - Separar operaciones en clases especializadas**:
+**Solución - Separar operaciones en clases especializadas**:
 
 ```kotlin
 // Alta cohesión - Cada analizador tiene su propósito específico
@@ -1323,14 +1334,14 @@ fun main() {
 ```
 
 **Beneficios**:
+
 - Cada clase es independiente y reutilizable
 - Testing simple (una funcionalidad a la vez)
 - Fácil de extender (nuevo análisis = nueva clase)
 - Puedes componer análisis según necesites
 
----
 
-#### 1.2.6. Cohesión Secuencial (Nivel 6 - 🔵 Alta)
+##### 2.2.6. Cohesión Secuencial (Nivel 6 - 🔵 Alta)
 
 **Definición**: Los elementos están relacionados porque la **salida de uno es la entrada del siguiente**, formando una cadena de procesamiento donde los datos fluyen naturalmente de un paso al otro.
 
@@ -1343,7 +1354,7 @@ fun main() {
 **Ejemplo**: Pipeline de procesamiento de imágenes
 
 ```kotlin
-// ✅ COHESIÓN SECUENCIAL - Transformaciones encadenadas
+// COHESIÓN SECUENCIAL - Transformaciones encadenadas
 class ProcesadorImagen {
     private val ruta: String
     
@@ -1414,7 +1425,7 @@ fun main() {
 **Ejemplo mejorado con patrón Builder/Pipeline**:
 
 ```kotlin
-// ✅ COHESIÓN SECUENCIAL - Pipeline funcional
+// COHESIÓN SECUENCIAL - Pipeline funcional
 class PipelineImagen(private val rutaOrigen: String) {
     private var imagen: ByteArray = byteArrayOf()
     private var ancho: Int = 0
@@ -1469,7 +1480,7 @@ fun main() {
 **Otro ejemplo**: Procesamiento de texto
 
 ```kotlin
-// ✅ COHESIÓN SECUENCIAL - Transformaciones de texto
+// COHESIÓN SECUENCIAL - Transformaciones de texto
 class ProcesadorTexto(private val textoOriginal: String) {
     fun eliminarEspaciosExtras(): ProcesadorTexto {
         val textoLimpio = textoOriginal.replace(Regex("\\s+"), " ").trim()
@@ -1509,18 +1520,19 @@ fun main() {
 ```
 
 **Beneficios de la cohesión secuencial**:
+
 - Flujo de datos claro y predecible
 - Fácil de entender (entrada → procesamiento → salida)
 - Fácil de testear cada transformación
 - Composable (puedes agregar/quitar pasos)
 
----
 
-#### 1.2.7. Cohesión Funcional (Nivel 7 - ✅ La mejor)
+##### 2.2.7. Cohesión Funcional (Nivel 7 - La mejor)
 
 **Definición**: **Todos los elementos del módulo contribuyen a una única tarea o función bien definida**. Es el nivel más alto de cohesión y el objetivo que debemos buscar.
 
 **Características**:
+
 - Una sola responsabilidad bien definida
 - Todos los elementos colaboran hacia un único objetivo
 - El nombre de la clase describe perfectamente su propósito
@@ -1529,7 +1541,7 @@ fun main() {
 **Ejemplo**: Clase con cohesión funcional perfecta
 
 ```kotlin
-// ✅ COHESIÓN FUNCIONAL - Responsabilidad única y clara
+// COHESIÓN FUNCIONAL - Responsabilidad única y clara
 class ValidadorEmail {
     private val patronEmail = Regex("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$")
     
@@ -1562,16 +1574,17 @@ sealed class ResultadoValidacion {
 ```
 
 **Análisis**:
-- ✅ Una responsabilidad: validar emails
-- ✅ Todos los métodos están relacionados con emails
-- ✅ Nombre descriptivo y claro
-- ✅ Fácil de testear
-- ✅ Reutilizable en cualquier contexto
+
+- Una responsabilidad: validar emails
+- Todos los métodos están relacionados con emails
+- Nombre descriptivo y claro
+- Fácil de testear
+- Reutilizable en cualquier contexto
 
 **Más ejemplos de cohesión funcional**:
 
 ```kotlin
-// ✅ COHESIÓN FUNCIONAL - Calculadora de fechas
+// COHESIÓN FUNCIONAL - Calculadora de fechas
 class CalculadorFechas {
     fun agregarDias(fecha: java.time.LocalDate, dias: Int): java.time.LocalDate {
         return fecha.plusDays(dias.toLong())
@@ -1596,7 +1609,7 @@ class CalculadorFechas {
     }
 }
 
-// ✅ COHESIÓN FUNCIONAL - Formateador de números
+// COHESIÓN FUNCIONAL - Formateador de números
 class FormateadorNumeros(private val locale: java.util.Locale = java.util.Locale("es", "ES")) {
     fun formatearDecimal(numero: Double, decimales: Int = 2): String {
         return String.format(locale, "%.${decimales}f", numero)
@@ -1611,7 +1624,7 @@ class FormateadorNumeros(private val locale: java.util.Locale = java.util.Locale
     }
 }
 
-// ✅ COHESIÓN FUNCIONAL - Generador de IDs
+// COHESIÓN FUNCIONAL - Generador de IDs
 class GeneradorIdentificadores {
     fun generarUUID(): String {
         return java.util.UUID.randomUUID().toString()
@@ -1634,21 +1647,21 @@ class GeneradorIdentificadores {
 
 **Indicadores de cohesión funcional**:
 
-- ✅ Puedes describir la clase en una frase sin usar "Y"
-- ✅ Todos los métodos usan la mayoría de los atributos
-- ✅ Cambios en un método probablemente afecten a otros (porque están relacionados)
-- ✅ No hay métodos "huérfanos" que no encajan
-- ✅ El nombre de la clase es un sustantivo específico (no "Manager", "Handler", "Util")
+- Puedes describir la clase en una frase sin usar "Y"
+- Todos los métodos usan la mayoría de los atributos
+- Cambios en un método probablemente afecten a otros (porque están relacionados)
+- No hay métodos "huérfanos" que no encajan
+- El nombre de la clase es un sustantivo específico (no "Manager", "Handler", "Util")
 
 !!! tip "Regla de oro"
     Si una clase tiene cohesión funcional, respeta automáticamente el Principio de Responsabilidad Única (SRP).
 
 
-### 1.3. Cómo mejorar la cohesión
+#### 2.3. Cómo mejorar la cohesión
 
 Ahora que conoces los tipos de cohesión, veamos estrategias prácticas para mejorar la cohesión en tu código existente.
 
-#### 1.3.1. Identificar señales de baja cohesión
+##### 2.3.1. Identificar señales de baja cohesión
 
 **Checklist de diagnóstico**:
 
@@ -1662,7 +1675,7 @@ Ahora que conoces los tipos de cohesión, veamos estrategias prácticas para mej
 
 Si respondiste "sí" a 3 o más preguntas, tu clase tiene problemas de cohesión.
 
-#### 1.3.2. Técnicas de refactorización
+##### 2.3.2. Técnicas de refactorización
 
 **Técnica 1: Extract Class**
 
@@ -1798,15 +1811,14 @@ class ServicioEmailReportes {
 }
 ```
 
----
 
-## 2. Acoplamiento: La dependencia entre módulos
+### 3. Acoplamiento: La dependencia entre módulos
 
-### 2.1. ¿Qué es el acoplamiento?
+#### 3.1. ¿Qué es el acoplamiento?
 
 El **acoplamiento** es una medida del **grado de interdependencia entre módulos**. Indica cuánto conoce un módulo sobre la estructura interna de otro módulo y cuánto depende de él.
 
-#### Definición formal
+##### 3.1.1. Definición formal
 
 **Acoplamiento** = Grado de dependencia que un módulo tiene respecto a otros módulos.
 
@@ -1823,7 +1835,7 @@ El **acoplamiento** es una medida del **grado de interdependencia entre módulos
 - Fácil de reutilizar y testear
 - Sistema robusto y flexible
 
-#### Analogías del mundo real
+##### 3.1.2.  Analogías del mundo real
 
 **Analogía 1 - Componentes de computadora**:
 - **Bajo acoplamiento**: USB (puedes conectar cualquier dispositivo USB a cualquier puerto USB)
@@ -1837,7 +1849,7 @@ El **acoplamiento** es una medida del **grado de interdependencia entre módulos
 - **Bajo acoplamiento**: Cocina solo conoce el pedido (no sabe quién lo pidió ni cómo pagará)
 - **Alto acoplamiento**: Chef que también toma pedidos, cobra y limpia mesas
 
-#### ¿Por qué importa el acoplamiento?
+##### 3.1.3.  ¿Por qué importa el acoplamiento?
 
 El acoplamiento es crítico porque:
 
@@ -1850,7 +1862,7 @@ El acoplamiento es crítico porque:
 !!! warning "Acoplamiento inevitable"
     Es imposible tener acoplamiento cero (los módulos deben comunicarse). El objetivo es minimizarlo y hacerlo explícito.
 
-#### Señales de alto acoplamiento
+##### 3.1.4.  Señales de alto acoplamiento
 
 Identifica problemas cuando:
 
@@ -1861,7 +1873,7 @@ Identifica problemas cuando:
 - ❌ Cambios en la base de datos rompen la UI
 - ❌ No puedes reutilizar un módulo sin arrastrar medio proyecto
 
-#### Ejemplo introductorio
+##### 3.1.5.  Ejemplo introductorio
 
 ```kotlin
 // ❌ ALTO ACOPLAMIENTO - Dependencias directas y rígidas
@@ -1904,7 +1916,7 @@ class LoggerArchivo {
 - Conoce detalles de implementación (hosts, puertos, rutas)
 
 ```kotlin
-// ✅ BAJO ACOPLAMIENTO - Dependencias mediante interfaces
+// BAJO ACOPLAMIENTO - Dependencias mediante interfaces
 interface RepositorioPedidos {
     fun guardar(pedido: Pedido)
 }
@@ -1972,11 +1984,11 @@ fun main() {
 En las siguientes secciones exploraremos los diferentes tipos de acoplamiento y estrategias para reducirlo.
 
 
-### 2.2. Tipos de acoplamiento: De peor a mejor
+#### 3.2. Tipos de acoplamiento: De peor a mejor
 
 El acoplamiento, al igual que la cohesión, se clasifica en diferentes niveles. Conocer estos tipos te ayudará a identificar y reducir el acoplamiento en tu código.
 
-#### Tabla resumen de tipos de acoplamiento
+##### 3.2.1. Tabla resumen de tipos de acoplamiento
 
 | Nivel | Tipo                    | Calidad     | Descripción breve                                    |
 |-------|-------------------------|-------------|------------------------------------------------------|
@@ -1986,11 +1998,11 @@ El acoplamiento, al igual que la cohesión, se clasifica en diferentes niveles. 
 | 4     | Acoplamiento de control | 🟡 Regular  | Un módulo controla el flujo de otro con flags        |
 | 5     | Acoplamiento de estampado | 🟢 Aceptable | Módulos comparten estructura de datos compleja      |
 | 6     | Acoplamiento de datos   | 🔵 Bueno    | Módulos comparten solo datos simples                |
-| 7     | Acoplamiento de mensaje | ✅ La mejor | Comunicación solo por paso de mensajes/interfaces    |
+| 7     | Acoplamiento de mensaje | La mejor | Comunicación solo por paso de mensajes/interfaces    |
 
----
 
-#### 2.2.1. Acoplamiento de Contenido (Nivel 1 - ❌ La peor)
+
+##### 3.2.2. Acoplamiento de Contenido (Nivel 1 - ❌ La peor)
 
 **Definición**: Un módulo **modifica o accede directamente al interior de otro módulo**, incluyendo sus variables privadas, flujo de control interno, o datos locales.
 
@@ -2067,10 +2079,10 @@ data class Producto(var nombre: String, var precio: Double)
 - Imposible de mantener o refactorizar
 - Bugs difíciles de rastrear
 
-**✅ Solución - Respetar encapsulación y usar API pública**:
+**Solución - Respetar encapsulación y usar API pública**:
 
 ```kotlin
-// ✅ BAJO ACOPLAMIENTO - Solo API pública
+// BAJO ACOPLAMIENTO - Solo API pública
 class Usuario(private var saldo: Double) {
     fun depositar(monto: Double): Boolean {
         return if (monto > 0) {
@@ -2118,9 +2130,8 @@ data class Producto(val nombre: String, private var precio: Double) {
 }
 ```
 
----
 
-#### 2.2.2. Acoplamiento Común (Nivel 2 - 🔴 Muy malo)
+##### 3.2.3. Acoplamiento Común (Nivel 2 - 🔴 Muy malo)
 
 **Definición**: Dos o más módulos **comparten datos globales**. Cualquiera puede leer y modificar estos datos, creando dependencias ocultas.
 
@@ -2224,10 +2235,10 @@ class ServicioProductos {
 }
 ```
 
-**✅ Solución - Inyección de dependencias**:
+**Solución - Inyección de dependencias**:
 
 ```kotlin
-// ✅ BAJO ACOPLAMIENTO - Configuración inyectada
+// BAJO ACOPLAMIENTO - Configuración inyectada
 data class Configuracion(
     val nombreUsuario: String,
     val idioma: String,
@@ -2305,9 +2316,8 @@ fun main() {
 - Sin efectos colaterales ocultos
 - Concurrencia segura
 
----
 
-#### 2.2.3. Acoplamiento Externo (Nivel 3 - 🟠 Malo)
+##### 3.2.4. Acoplamiento Externo (Nivel 3 - 🟠 Malo)
 
 **Definición**: Módulos dependen de un **formato, protocolo o convención externa** compartida (formato de archivo, estructura de BD, protocolo de comunicación).
 
@@ -2358,10 +2368,10 @@ class ExportadorUsuarios {
 - No hay punto único de responsabilidad
 - Difícil mantener consistencia
 
-**✅ Solución - Encapsular el formato en una abstracción**:
+**Solución - Encapsular el formato en una abstracción**:
 
 ```kotlin
-// ✅ BAJO ACOPLAMIENTO - Formato encapsulado
+// BAJO ACOPLAMIENTO - Formato encapsulado
 interface FormatoUsuario {
     fun parsear(contenido: String): List<Usuario>
     fun serializar(usuarios: List<Usuario>): String
@@ -2433,9 +2443,8 @@ fun main() {
 - Fácil agregar nuevos formatos (XML, YAML, etc.)
 - Gestor desacoplado del formato específico
 
----
 
-#### 2.2.4. Acoplamiento de Control (Nivel 4 - 🟡 Regular)
+##### 3.2.5. Acoplamiento de Control (Nivel 4 - 🟡 Regular)
 
 **Definición**: Un módulo **controla el comportamiento de otro** pasando flags o parámetros de control que determinan qué hace el módulo llamado.
 
@@ -2487,10 +2496,10 @@ fun main() {
 - Métodos difíciles de leer (`true`, `false` no descriptivos)
 - Difícil de extender (nuevo comportamiento = nuevo flag)
 
-**✅ Solución - Polimorfismo o clases especializadas**:
+**Solución - Polimorfismo o clases especializadas**:
 
 ```kotlin
-// ✅ BAJO ACOPLAMIENTO - Polimorfismo y composición
+// BAJO ACOPLAMIENTO - Polimorfismo y composición
 interface ConfiguracionEmail {
     fun aplicar(builder: EmailBuilder)
 }
@@ -2579,9 +2588,8 @@ fun main() {
 - Sin flags booleanos confusos
 
 
----
 
-#### 2.2.5. Acoplamiento de Estampado/Stamp (Nivel 5 - 🟢 Aceptable)
+##### 3.2.6. Acoplamiento de Estampado/Stamp (Nivel 5 - 🟢 Aceptable)
 
 **Definición**: Los módulos comparten una **estructura de datos compleja**, pero cada módulo solo usa parte de ella.
 
@@ -2650,10 +2658,10 @@ class ValidadorInventario {
 - Cambios en Pedido pueden afectar a clases que no usan esos cambios
 - No está claro qué campos usa realmente cada clase
 
-**✅ Solución - Pasar solo lo necesario**:
+**Solución - Pasar solo lo necesario**:
 
 ```kotlin
-// ✅ BAJO ACOPLAMIENTO - Solo datos necesarios
+// BAJO ACOPLAMIENTO - Solo datos necesarios
 class CalculadoraEnvio {
     fun calcularCosto(direccion: Direccion): Double {
         return when (direccion.ciudad) {
@@ -2714,9 +2722,8 @@ fun main() {
 - Cambios en Pedido no afectan a estas clases
 - Más fácil de testear (menos datos que preparar)
 
----
 
-#### 2.2.6. Acoplamiento de Datos (Nivel 6 - 🔵 Bueno)
+##### 3.2.7. Acoplamiento de Datos (Nivel 6 - 🔵 Bueno)
 
 **Definición**: Los módulos se comunican solo mediante **parámetros de datos simples** (primitivos, strings, listas simples).
 
@@ -2729,7 +2736,7 @@ fun main() {
 **Ejemplo**:
 
 ```kotlin
-// ✅ ACOPLAMIENTO DE DATOS - Parámetros simples
+// ACOPLAMIENTO DE DATOS - Parámetros simples
 class Calculadora {
     fun sumar(a: Int, b: Int): Int = a + b
     
@@ -2761,9 +2768,8 @@ class FormateadorFecha {
 - Reutilizable en cualquier contexto
 - Testing trivial
 
----
 
-#### 2.2.7. Acoplamiento de Mensaje (Nivel 7 - ✅ La mejor)
+##### 3.2.8. Acoplamiento de Mensaje (Nivel 7 - La mejor)
 
 **Definición**: La comunicación se realiza únicamente mediante **paso de mensajes** o a través de **interfaces**, sin conocer implementaciones concretas.
 
@@ -2776,7 +2782,7 @@ class FormateadorFecha {
 **Ejemplo perfecto**:
 
 ```kotlin
-// ✅ ACOPLAMIENTO DE MENSAJE - Solo interfaces
+// ACOPLAMIENTO DE MENSAJE - Solo interfaces
 interface RepositorioUsuarios {
     fun guardar(usuario: Usuario)
     fun buscarPorEmail(email: String): Usuario?
@@ -2880,11 +2886,12 @@ fun main() {
 - Testing con mocks trivial
 - Máxima flexibilidad y extensibilidad
 
----
 
-### 2.3. Estrategias para reducir el acoplamiento
+#### 3.3. Estrategias para reducir el acoplamiento
 
-#### 2.3.1. Inyección de Dependencias (DI)
+Para lograr un bajo acoplamiento, puedes aplicar varias estrategias y patrones de diseño. Aquí te presento algunas de las más efectivas
+
+##### 3.3.1. Inyección de Dependencias (DI)
 
 No crees tus dependencias, recíbelas desde fuera:
 
@@ -2898,7 +2905,7 @@ class Servicio {
     }
 }
 
-// ✅ Con DI - Bajo acoplamiento
+// Con DI - Bajo acoplamiento
 class Servicio(private val repositorio: Repositorio) {  // Interfaz
     fun hacer() {
         repositorio.guardar()
@@ -2906,7 +2913,7 @@ class Servicio(private val repositorio: Repositorio) {  // Interfaz
 }
 ```
 
-#### 2.3.2. Principio de Inversión de Dependencias (DIP)
+##### 3.3.2. Principio de Inversión de Dependencias (DIP)
 
 Depende de abstracciones, no de concreciones:
 
@@ -2918,7 +2925,7 @@ class Notificador {
     }
 }
 
-// ✅ Depende de abstracción
+// Depende de abstracción
 interface ServicioEmail {
     fun enviar(mensaje: String)
 }
@@ -2930,7 +2937,7 @@ class Notificador(private val servicioEmail: ServicioEmail) {
 }
 ```
 
-#### 2.3.3. Ley de Demeter (Principle of Least Knowledge)
+##### 3.3.3. Ley de Demeter (Principle of Least Knowledge)
 
 No hables con extraños, solo con amigos directos:
 
@@ -2943,7 +2950,7 @@ class Cliente {
     }
 }
 
-// ✅ Respeta Ley de Demeter
+// Respeta Ley de Demeter
 class Pedido {
     fun calcularTotal(): Double {
         return carrito.calcularTotal()
@@ -2958,7 +2965,7 @@ class Cliente {
 }
 ```
 
-#### 2.3.4. Facade Pattern
+##### 3.3.4. Facade Pattern
 
 Simplifica interfaces complejas:
 
@@ -2968,7 +2975,7 @@ class SubsistemaA { fun operacion1() {} }
 class SubsistemaB { fun operacion2() {} }
 class SubsistemaC { fun operacion3() {} }
 
-// ✅ Facade simplifica el acceso
+// Facade simplifica el acceso
 class FachadeSistema {
     private val subsistemaA = SubsistemaA()
     private val subsistemaB = SubsistemaB()
@@ -2989,20 +2996,19 @@ class Cliente(private val fachada: FachadeSistema) {
 }
 ```
 
----
 
-## 3. La relación entre Cohesión y Acoplamiento
+### 4. La relación entre Cohesión y Acoplamiento
 
-### 3.1. Matriz de calidad del diseño
+#### 4.1. Matriz de calidad del diseño
 
 La calidad del diseño depende de la combinación de cohesión y acoplamiento:
 
-| Cohesión \ Acoplamiento | **Bajo Acoplamiento** | **Alto Acoplamiento** |
-|-------------------------|----------------------|----------------------|
-| **Alta Cohesión**       | ✅ **EXCELENTE**<br/>Módulos independientes con propósito claro<br/>Fácil mantener, testear, reutilizar | ⚠️ **BUENO**<br/>Módulos cohesivos pero dependientes<br/>Mantener es viable pero complejo |
-| **Baja Cohesión**       | ⚠️ **REGULAR**<br/>Módulos independientes pero confusos<br/>Difícil entender qué hacen | ❌ **MALO**<br/>Módulos confusos y dependientes<br/>Código espagueti, imposible mantener |
+| Cohesión \ Acoplamiento  | **Bajo Acoplamiento**                                                                                  | **Alto Acoplamiento**                                                                     |
+|--------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| **Alta Cohesión**        | **EXCELENTE**<br/>Módulos independientes con propósito claro<br/>Fácil mantener, testear, reutilizar | ⚠️ **BUENO**<br/>Módulos cohesivos pero dependientes<br/>Mantener es viable pero complejo |
+| **Baja Cohesión**        | ⚠️ **REGULAR**<br/>Módulos independientes pero confusos<br/>Difícil entender qué hacen                 | ❌ **MALO**<br/>Módulos confusos y dependientes<br/>Código espagueti, imposible mantener   |
 
-### 3.2. Trade-offs y decisiones
+#### 4.2. Trade-offs y decisiones
 
 **¿Cuándo es aceptable tener algo de acoplamiento?**
 
@@ -3019,11 +3025,12 @@ La calidad del diseño depende de la combinación de cohesión y acoplamiento:
 !!! tip "Regla práctica"
     Prioriza siempre la alta cohesión sobre el bajo acoplamiento. Es mejor tener módulos cohesivos ligeramente acoplados que módulos desacoplados pero confusos.
 
----
 
-## 4. Principios de Diseño Relacionados
+### 5. Principios de Diseño Relacionados
 
-### 4.1. Principio de Responsabilidad Única (SRP)
+Tantos la cohesión como el acoplamiento están influenciados por varios principios de diseño de software. Aquí exploramos algunos de los más relevantes.
+
+#### 5.1. Principio de Responsabilidad Única (SRP)
 
 **Definición**: Una clase debe tener una sola razón para cambiar.
 
@@ -3032,14 +3039,14 @@ La calidad del diseño depende de la combinación de cohesión y acoplamiento:
 **Ejemplo**:
 
 ```kotlin
-// ✅ SRP + Alta Cohesión
+// SRP + Alta Cohesión
 class ValidadorEmail {
     fun esValido(email: String): Boolean = email.contains("@")
     fun extraerDominio(email: String): String? = email.substringAfter("@", "")
 }
 ```
 
-### 4.2. Principio de Inversión de Dependencias (DIP)
+#### 5.2. Principio de Inversión de Dependencias (DIP)
 
 **Definición**: Depender de abstracciones, no de concreciones.
 
@@ -3048,7 +3055,7 @@ class ValidadorEmail {
 **Ejemplo**:
 
 ```kotlin
-// ✅ DIP + Bajo Acoplamiento
+// DIP + Bajo Acoplamiento
 interface Repositorio {
     fun guardar(dato: Any)
 }
@@ -3060,7 +3067,7 @@ class Servicio(private val repositorio: Repositorio) {  // Depende de abstracci�
 }
 ```
 
-### 4.3. Principio de Segregación de Interfaces (ISP)
+#### 5.3. Principio de Segregación de Interfaces (ISP)
 
 **Definición**: Los clientes no deben depender de interfaces que no usan.
 
@@ -3082,7 +3089,7 @@ class Robot : Trabajador {
     override fun dormir() { /* No aplica */ }  // ❌
 }
 
-// ✅ Interfaces segregadas
+// Interfaces segregadas
 interface Trabajador {
     fun trabajar()
 }
@@ -3103,13 +3110,12 @@ class Humano : Trabajador, SerVivo {
 }
 ```
 
----
 
-## 5. Métricas y Medición
+### 6. Métricas y Medición
 
-### 5.1. Métricas de Cohesión
+#### 6.1. Métricas de Cohesión
 
-#### LCOM (Lack of Cohesion of Methods)
+##### 6.1.1. LCOM (Lack of Cohesion of Methods)
 
 **Definición**: Mide cuántos métodos de una clase NO comparten atributos.
 
@@ -3120,14 +3126,15 @@ LCOM = (Pares de métodos que NO comparten atributos) -
 ```
 
 **Interpretación**:
-- **LCOM = 0**: ✅ Perfecta cohesión (todos los métodos usan todos los atributos)
-- **LCOM bajo (< 50)**: 🟢 Buena cohesión
-- **LCOM alto (> 100)**: ❌ Baja cohesión (considerar dividir la clase)
+
+- **LCOM = 0**: Perfecta cohesión (todos los métodos usan todos los atributos)
+- **LCOM bajo (< 50)**: Buena cohesión
+- **LCOM alto (> 100)**: Baja cohesión (considerar dividir la clase)
 
 **Ejemplo**:
 
 ```kotlin
-// ✅ LCOM bajo - Alta cohesión
+// LCOM bajo - Alta cohesión
 class Rectangulo(
     private var ancho: Double,
     private var alto: Double
@@ -3156,33 +3163,39 @@ class Utilidades(
 }
 ```
 
-### 5.2. Métricas de Acoplamiento
+#### 6.2. Métricas de Acoplamiento
 
-#### Acoplamiento Aferente (Ca)
+Las métricas de acoplamiento miden las dependencias entre clases o módulos.
+
+##### 6.2.1.  Acoplamiento Aferente (Ca)
 
 **Definición**: Número de clases externas que **dependen de** esta clase.
 
 **Interpretación**:
-- **Ca alto**: Clase estable, muchas otras dependen de ella
-- **Ca bajo**: Clase volátil, pocas dependen de ella
 
-#### Acoplamiento Eferente (Ce)
+- **Ca alto**: Clase estable, muchas otras dependen de ella. Por lo tanto, menos propensa a cambios. Esto es bueno para clases de bajo nivel (utilidades, frameworks).
+- **Ca bajo**: Clase volátil, pocas dependen de ella. Por lo tanto, más propensa a cambios. Esto es aceptable para clases de alto nivel (coordinadores).
+
+##### 6.2.2.  Acoplamiento Eferente (Ce)
 
 **Definición**: Número de clases externas de las que **depende** esta clase.
 
 **Interpretación**:
+
 - **Ce alto**: Clase dependiente, usa muchas otras
 - **Ce bajo**: Clase independiente
 
-#### Inestabilidad (I)
+##### 6.2.3.  Inestabilidad (I)
 
 **Fórmula**: `I = Ce / (Ca + Ce)`
 
 **Interpretación**:
+
 - **I = 0**: Clase máximamente estable (muchas dependen de ella, depende de pocas)
 - **I = 1**: Clase máximamente inestable (pocas dependen de ella, depende de muchas)
 
 **Objetivo**:
+
 - Clases de bajo nivel (utilidades, frameworks): I cercano a 0
 - Clases de alto nivel (coordinadores): I puede ser mayor
 
@@ -3192,17 +3205,18 @@ class Utilidades(
 Clase A:
 - Ca = 5 (5 clases la usan)
 - Ce = 1 (usa 1 clase)
-- I = 1 / (5 + 1) = 0.16 → Muy estable ✅
+- I = 1 / (5 + 1) = 0.16 → Muy estable
 
 Clase B:
 - Ca = 1 (1 clase la usa)
 - Ce = 10 (usa 10 clases)
-- I = 10 / (1 + 10) = 0.91 → Muy inestable ⚠️
+- I = 10 / (1 + 10) = 0.91 → Muy inestable
 ```
 
-### 5.3. Herramientas de análisis
+#### 6.3. Herramientas de análisis
 
 **Para Kotlin/Java**:
+
 - **SonarQube**: Análisis continuo de calidad, reporta LCOM, complejidad, acoplamiento
 - **IntelliJ IDEA**: Inspecciones integradas, análisis de dependencias
 - **Detekt**: Linter para Kotlin, detecta code smells
@@ -3220,11 +3234,10 @@ Clase B:
 # IntelliJ - Analyze → Inspect Code
 ```
 
----
 
-## 6. Casos Prácticos de Refactorización
+### 7. Casos Prácticos de Refactorización
 
-### 6.1. Caso: Sistema de Pedidos
+#### 7.1. Caso: Sistema de Pedidos
 
 **Antes - Alto acoplamiento y baja cohesión**:
 
@@ -3277,7 +3290,7 @@ class SistemaVentas {
 **Después - Bajo acoplamiento y alta cohesión**:
 
 ```kotlin
-// ✅ Responsabilidades separadas
+// Responsabilidades separadas
 
 // 1. Entidades del dominio
 data class Cliente(val id: Int, val nombre: String, val email: String)
@@ -3375,103 +3388,94 @@ class ServicioPedidos(
 ```
 
 **Beneficios**:
+
 - **Alta cohesión**: Cada clase tiene una responsabilidad única
 - **Bajo acoplamiento**: Dependencias mediante interfaces
 - **Testeable**: Cada componente puede testearse independientemente
 - **Mantenible**: Cambios localizados
 - **Extensible**: Fácil agregar nuevas funcionalidades
 
----
 
-## 7. Conclusiones
+### 8. Conclusiones
 
-### Resumen de conceptos clave
+#### 8.1. Resumen de conceptos clave
 
-✅ **Cohesión**: Qué tan relacionados están los elementos dentro de un módulo
+**Cohesión**: Qué tan relacionados están los elementos dentro de un módulo
+
 - **Objetivo**: Alta cohesión funcional
 - **Técnica**: Una responsabilidad por clase (SRP)
 - **Beneficio**: Código claro y fácil de mantener
 
-✅ **Acoplamiento**: Qué tan interdependientes son los módulos
+**Acoplamiento**: Qué tan interdependientes son los módulos
+
 - **Objetivo**: Bajo acoplamiento de mensaje
 - **Técnica**: Depender de abstracciones (DIP)
 - **Beneficio**: Código flexible y testeatable
 
-✅ **Balance ideal**: Alta cohesión + Bajo acoplamiento = Código excelente
+**Balance ideal**: Alta cohesión + Bajo acoplamiento = Código excelente
 
-### Checklist de diseño
+#### 8.2. Checklist de diseño
 
 Usa este checklist al diseñar o revisar código:
 
 **Cohesión**:
+
 - [ ] ¿La clase tiene un nombre descriptivo sin "Y"?
 - [ ] ¿Todos los métodos están relacionados con el propósito de la clase?
 - [ ] ¿Hay una razón única para que la clase cambie?
 - [ ] ¿Los métodos comparten los mismos atributos?
 
 **Acoplamiento**:
+
 - [ ] ¿Las dependencias son interfaces, no clases concretas?
 - [ ] ¿Las dependencias se inyectan, no se crean?
 - [ ] ¿Se pasan solo los datos necesarios?
 - [ ] ¿Se puede testear la clase sin instanciar medio proyecto?
 
-### Próximos pasos
 
-Para profundizar en estos conceptos:
+### 9. Recursos y Referencias
 
-1. **Estudia los principios SOLID** en detalle
-2. **Aprende patrones de diseño** (Strategy, Factory, Observer, etc.)
-3. **Practica refactorización** en código real
-4. **Usa herramientas de análisis** (SonarQube, Detekt)
-5. **Lee código de calidad** (proyectos open source bien diseñados)
-
----
-
-## 8. Recursos y Referencias
-
-### Libros fundamentales
+#### 9.1. Libros fundamentales
 
 - **[Refactoring: Improving the Design of Existing Code](https://refactoring.com/)** - Martin Fowler
-  - Catálogo completo de refactorizaciones para mejorar diseño
+
+    - Catálogo completo de refactorizaciones para mejorar diseño
   
 - **[Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)** - Robert C. Martin
-  - Principios de arquitectura limpia y desacoplada
+
+    - Principios de arquitectura limpia y desacoplada
   
 - **[Clean Code](https://www.oreilly.com/library/view/clean-code-a/9780136083238/)** - Robert C. Martin
-  - Manual definitivo sobre código limpio y mantenible
+
+    - Manual definitivo sobre código limpio y mantenible
 
 - **[Design Patterns: Elements of Reusable Object-Oriented Software](https://en.wikipedia.org/wiki/Design_Patterns)** - Gang of Four
-  - Patrones clásicos para bajo acoplamiento
 
-### Artículos esenciales
+    - Patrones clásicos para bajo acoplamiento
+
+#### 9.2.  Artículos esenciales
 
 - [SOLID Principles](https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
 - [Coupling and Cohesion](https://martinfowler.com/bliki/CouplingAndCohesion.html) - Martin Fowler
 - [Cohesion and Coupling](https://www.baeldung.com/cs/cohesion-vs-coupling) - Baeldung
 
-### Herramientas recomendadas
+#### 9.3. Herramientas recomendadas
 
 **Análisis de código**:
+
 - [SonarQube](https://www.sonarqube.org/) - Análisis continuo de calidad
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/) - Inspecciones integradas
 - [Detekt](https://detekt.dev/) - Linter para Kotlin
 - [PMD](https://pmd.github.io/) - Detector de code smells
 
 **Visualización**:
+
 - [Structure101](https://structure101.com/) - Visualización de dependencias
 - [JDepend](https://github.com/clarkware/jdepend) - Métricas de acoplamiento
 
-### Comunidades y foros
+#### 9.4. Comunidades y foros
 
 - [Stack Overflow - design-patterns](https://stackoverflow.com/questions/tagged/design-patterns)
 - [Reddit - r/programming](https://www.reddit.com/r/programming/)
 - [Software Engineering Stack Exchange](https://softwareengineering.stackexchange.com/)
-
----
-
-**Próximos temas del curso**:
-- Principios SOLID en profundidad
-- Patrones de Diseño
-- Arquitectura de Software
-- Refactorización avanzada
 

@@ -1,3 +1,4 @@
+---
 title: "UD 3 - 3.4 Acoplamiento y Cohesión"
 description: Acoplamiento y Cohesión en el Diseño de Software
 summary: Principios de diseño de software - Alta cohesión y bajo acoplamiento
@@ -14,7 +15,9 @@ tags:
     - Acoplamiento
     - Cohesión
     - Principios SOLID
-    
+
+---
+
 
 ## 3.4 Acoplamiento y Cohesión en el Diseño de Software
 

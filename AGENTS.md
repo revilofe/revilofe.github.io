@@ -475,6 +475,8 @@ IMPORTANTE Y OBLIGATORIO seguir las siguientes reglas al generar los archivos GI
 **Elementos de Markdown:**
 
 - Usar `### X. ` para secciones principales X, `#### X.Y. ` para subsecciones X.Y, `##### X.Y.Z. ` para subsubsecciones X.Y.Z, y asi sucesivamente.
+- No usar "---" para separar bloques.
+- No usar emoticonos en el texto.
 - Incluir imágenes con `<figure markdown>` y `<figcaption>`
     ```
     <figure markdown="span">
@@ -513,6 +515,10 @@ IMPORTANTE Y OBLIGATORIO seguir las siguientes reglas al generar los archivos GI
 - Usar segunda persona del plural cuando sea apropiado ("debéis", "podéis")
 - Evitar tecnicismos innecesarios
 - Incluir glosario de términos técnicos cuando sea necesario
+- Usar ejemplos prácticos y casos de uso reales
+- Enlazar y encadenar cada uno de los conceptos explicados con otros conceptos relacionados ya explicados en otros temas o unidades del mismo módulo, o de otros módulos, para facilitar la comprensión y el aprendizaje significativo.
+- Dar una introducción clara y que enlace cada punto tratado con el siguiente punto a tratar, para facilitar la comprensión y el aprendizaje significativo. 
+- Evitar que hay puntos que quedan como una simple lista de cosas sin una introducción clara y sin un cierre que enlace con el siguiente punto a tratar.
 
 ### 2.6. Metadatos obligatorios
 

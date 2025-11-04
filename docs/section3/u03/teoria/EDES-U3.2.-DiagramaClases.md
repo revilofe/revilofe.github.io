@@ -53,8 +53,7 @@ El diagrama de clases se puede equiparar, salvando las distancias, al famoso **d
 - Tienen una utilidad similar en sus respectivos contextos
 
 !!! note "Punto clave"
-Ten en cuenta lo que ya sabes sobre diagramas E/R para entender mejor los diagramas de clases.
-
+    Ten en cuenta lo que ya sabes sobre diagramas E/R para entender mejor los diagramas de clases.
 
 #### 1.4. Objetivo de estos diagrams según la fase
 
@@ -133,11 +132,14 @@ La primera zona contiene el **nombre de la clase**, que es el identificador úni
 - Se escribe en la primera zona de la caja
 - **Clases abstractas**: El nombre se escribe en *cursiva* para indicar que no pueden instanciarse directamente
 - Convenio: Primera letra en mayúscula (**PascalCase**)
-  - ✅ Correcto: `Usuario`, `CarritoCompras`, `OrdenDePago`
-  - ❌ Incorrecto: `usuario`, `CarritoCompra` (inconsistencia), `user` (en inglés)
+
+    - Correcto: `Usuario`, `CarritoCompras`, `OrdenDePago`
+    - Incorrecto: `usuario`, `CarritoCompra` (inconsistencia), `user` (en inglés)
+
 - Los nombres deben ser **sustantivos singulares**, no verbos ni formas plurales
-  - ✅ Correcto: `Libro`
-  - ❌ Incorrecto: `Libros` (plural), `CrearLibro` (verbo)
+
+    - Correcto: `Libro`
+    - Incorrecto: `Libros` (plural), `CrearLibro` (verbo)
 
 **Por qué PascalCase**: Esta convención de nombres ayuda a diferenciar visualmente los nombres de clases del resto del código, mejorando la legibilidad de los diagramas.
 
@@ -154,6 +156,7 @@ El formato completo de un atributo es:
     ```
 
     Donde:
+
     - `visibilidad`: Indica quién puede acceder al atributo (+, -, #, ~, /)
     - `nombre_atributo`: Nombre descriptivo del atributo en camelCase
     - `tipo`: Tipo de dato (String, Int, Double, Date, etc.)
@@ -173,6 +176,7 @@ El formato completo de un atributo es:
     ```
 
 **Ejemplos prácticos**:
+
 ```
 - nombre : String
 - edad : Int = 0
@@ -183,6 +187,7 @@ El formato completo de un atributo es:
 ```
 
 En el ejemplo anterior:
+
 - `nombre` es privado y de tipo String
 - `edad` es privado, Int, e inicializa a 0
 - `coordenadas` es protegida (accesible por subclases)
@@ -241,6 +246,7 @@ El formato completo de un método es:
     ```
 
     Donde:
+
     - `visibilidad`: Indica quién puede llamar al método (+, -, #, ~, /)
     - `nombre_funcion`: Nombre del método en camelCase, típicamente un verbo o frase con verbo
     - `parametros`: Lista de parámetros formales con sus tipos (nombre: Tipo)
@@ -254,6 +260,7 @@ El formato completo de un método es:
     ```
 
 **Ejemplos prácticos**:
+
 ```
 + getNombre() : String
 + setEdad(edad: Int) : Unit
@@ -264,6 +271,7 @@ El formato completo de un método es:
 ```
 
 En los ejemplos anteriores:
+
 - `getNombre()` es público, no toma parámetros y devuelve String
 - `setEdad()` es público, toma un Int y no devuelve nada (Unit)
 - `calcularDescuento()` toma dos Doubles y devuelve un Double
@@ -271,6 +279,7 @@ En los ejemplos anteriores:
 - `procesarDatos()` es privada y no devuelve nada
 
 **Convenciones de nomenclatura para métodos**:
+
 - Getters (obtener valores): `getNombreAtributo()`
 - Setters (establecer valores): `setNombreAtributo(valor)`
 - Validación: `validar...()`, `es...()`, `tiene...()`, `puede...()`
@@ -498,6 +507,7 @@ Se puede escribir una indicación que ayuda a entender el significado de la rela
 **¿Por qué es importante?** El nombre aclara la semántica de la relación, respondiendo la pregunta "¿qué significa esta conexión entre las clases?". Sin el nombre, podría haber ambigüedad.
 
 **Ejemplos**:
+
 - "Una empresa **contrata** a n empleados"
 - "Un profesor **imparte** m clases"
 - "Un cliente **realiza** múltiples pedidos"
@@ -509,6 +519,7 @@ El verbo debe leerse en la dirección de la flecha o relación. Si la relación 
 Indica el papel que juega cada clase en la relación. Es decir, describe la semántica específica que tiene la relación desde el punto de vista de cada clase. El rol nos ayuda a entender la "función" que una clase juega en relación con otra.
 
 **¿Cuándo es importante?** El rol es especialmente útil cuando:
+
 - La relación podría ser ambigua sin él
 - Una clase se relaciona consigo misma (relaciones reflexivas)
 - La misma clase participa en múltiples relaciones de diferentes tipos
@@ -526,8 +537,9 @@ En el ejemplo anterior:
 * El rol de la clase `Curso` es `+curso`, indicando que cada `Clase` pertenece a un `Curso`
 * El rol de la clase `Clase` es `+clases`, indicando que un `Curso` puede impartir múltiples `Clases`
 * La multiplicidad indica que:
-  - Un `curso` puede impartir **muchas** `clases` (1 a *)
-  - Cada `clase` pertenece a **un solo** `curso` (1 a 1 desde el lado de Clase)
+
+    - Un `curso` puede impartir **muchas** `clases` (1 a *)
+    - Cada `clase` pertenece a **un solo** `curso` (1 a 1 desde el lado de Clase)
 
 **Otro ejemplo**: Relación reflexiva de Trabajador-Jefe
 
@@ -573,6 +585,7 @@ Una asociación binaria conecta dos clases. Es la forma más común de asociaci�
 ```
 
 En este ejemplo:
+
 - Una `Persona` puede tener **múltiples** mascotas (multiplicidad 1 a *)
 - Cada `Mascota` pertenece a **una sola** persona (multiplicidad * a 1)
 - La palabra "tiene" describe el significado de la relación
@@ -1120,7 +1133,7 @@ class SistemaPagos {
         ┌───────────┴───────────┐
         ┆                       ┆
 ┌───────┴───────┐     ┌─────────┴─────────┐
-│ProcesadorTarj│     │ ProcesadorPayPal  │
+│ProcesadorTarj │     │ ProcesadorPayPal  │
 │     eta       │     │                   │
 └───────────────┘     └───────────────────┘
 ```
@@ -1129,13 +1142,13 @@ class SistemaPagos {
 
 Es común confundir interfaces con clases abstractas. Aquí está la diferencia:
 
-| Característica | Interfaz | Clase Abstracta |
-|----------------|----------|-----------------|
-| **Implementación** | Solo firma de métodos | Puede tener métodos implementados |
-| **Atributos** | No puede tener | Sí puede tener |
+| **Característica**    | **Interfaz**                                          | **Clase Abstracta**                            |
+|-----------------------|-------------------------------------------------------|------------------------------------------------|
+| **Implementación**    | Solo firma de métodos                                 | Puede tener métodos implementados              |
+| **Atributos**         | No puede tener                                        | Sí puede tener                                 |
 | **Herencia múltiple** | Sí (una clase puede implementar múltiples interfaces) | No (una clase solo puede heredar de una clase) |
-| **Propósito** | Definir contrato de comportamiento | Proporcionar implementación base común |
-| **Uso** | "Puede hacer" | "Es un tipo de" |
+| **Propósito**         | Definir contrato de comportamiento                    | Proporcionar implementación base común         |
+| **Uso**               | "Puede hacer"                                         | "Es un tipo de"                                |
 
 **Ejemplo en Kotlin**:
 
@@ -1185,7 +1198,7 @@ Este ejemplo modela una biblioteca con libros, usuarios, préstamos y multas.
 ```
 ┌─────────────────┐                    ┌─────────────────┐
 │    Biblioteca   │1                  *│      Libro      │
-│─────────────────│◆──────────────────│─────────────────│
+│─────────────────│◆───────────────────│─────────────────│
 │ - nombre        │   contiene         │ - isbn          │
 │ - direccion     │                    │ - titulo        │
 │─────────────────│                    │ - autor         │
@@ -1323,15 +1336,15 @@ Este ejemplo modela estudiantes, cursos, profesores y matrículas.
        │                               │
     ┌──┴──┐                    ┌───────┴────────┐
     │     │                    │                │
-┌───┴──┐ ┌┴────────┐          *│              1│
-│Estud.│ │Profesor │    ┌──────┴────────┐      │
-│──────│ │─────────│    │   Matricula   │──────┘
+┌───┴──┐ ┌┴────────┐          *│               1│
+│Estud.│ │Profesor │    ┌──────┴────────┐       │
+│──────│ │─────────│    │   Matricula   │───────┘
 │- mat │ │- depto  │    │───────────────│ imparte
-│──────│ │─────────│    │ - fecha       │
-│      │ │+ ense   │   *│ - semestre    │
+│──────│ │─────────│    │- fecha        │
+│      │ │+ ense   │   *│- semestre     │
 └──────┘ └─────────┘    │───────────────│
     *│                  │               │1
-     └──────────────────┤ + calcularNot()│
+     └──────────────────┤+ calcularNot()│
         se matricula en └───────────────┘
 ```
 
@@ -1718,28 +1731,31 @@ Un buen diagrama no solo es correcto técnicamente, sino también visualmente cl
 
 **Hacer**:
 
-✅ **Evitar cruces de líneas**
+**Evitar cruces de líneas**
+
 - Reorganiza las clases para minimizar líneas cruzadas
 - Usa colores o estilos diferentes para diferentes tipos de relaciones
 
-✅ **Agrupar clases relacionadas**
+**Agrupar clases relacionadas**
+
 - Clases del mismo módulo/paquete cerca unas de otras
 - Usa cuadros de color para delimitar grupos
 
-✅ **Distribución equilibrada**
+**Distribución equilibrada**
+
 - No amontonar todo en una esquina
 - Dejar espacio en blanco (whitespace)
 
 **Evitar**:
 
-❌ **Diagramas abarrotados**: Espacio insuficiente entre elementos
-❌ **Líneas superpuestas**: Dificultan seguir las relaciones
-❌ **Mezclar niveles de detalle**: No mezclar diagramas de alto nivel con detalles de implementación
+**Diagramas abarrotados**: Espacio insuficiente entre elementos
+**Líneas superpuestas**: Dificultan seguir las relaciones
+**Mezclar niveles de detalle**: No mezclar diagramas de alto nivel con detalles de implementación
 
 **Ejemplo de buena vs mala distribución**:
 
 ```
-❌ MAL: Amontonado
+MAL: Amontonado
 ┌─────┐┌─────┐┌─────┐
 │  A  ││  B  ││  C  │
 └─────┘└─────┘└─────┘
@@ -1747,7 +1763,7 @@ Un buen diagrama no solo es correcto técnicamente, sino también visualmente cl
 │  D  ││  E  │
 └─────┘└─────┘
 
-✅ BIEN: Espaciado
+BIEN: Espaciado
 ┌─────┐         ┌─────┐
 │  A  │─────────│  B  │
 └─────┘         └─────┘
@@ -1805,30 +1821,34 @@ Los colores mejoran significativamente la legibilidad cuando se usan con propós
 **Convenciones de nombres**:
 
 1. **Clases**: PascalCase, sustantivos singulares
-   - ✅ `Usuario`, `CarritoCompras`, `OrdenDePago`
-   - ❌ `usuario`, `Carritos`, `crearOrden`
+
+    - `Usuario`, `CarritoCompras`, `OrdenDePago`
+    - `usuario`, `Carritos`, `crearOrden`
 
 2. **Interfaces**: Prefijo `I` o sufijo descriptivo
-   - ✅ `IRepositorio`, `IProcesador`, `Serializable`
-   - ❌ `InterfazRepositorio`, `ImpRepositorio`
+
+    - `IRepositorio`, `IProcesador`, `Serializable`
+    - `InterfazRepositorio`, `ImpRepositorio`
 
 3. **Métodos**: camelCase, verbos
-   - ✅ `calcularTotal()`, `enviarEmail()`, `esValido()`
-   - ❌ `CalcularTotal()`, `total()`, `validacion()`
+
+    - `calcularTotal()`, `enviarEmail()`, `esValido()`
+    - `CalcularTotal()`, `total()`, `validacion()`
 
 4. **Atributos**: camelCase, sustantivos
-   - ✅ `nombre`, `fechaCreacion`, `precioUnitario`
-   - ❌ `Nombre`, `fecha_creacion`, `precio$unitario`
+
+    - `nombre`, `fechaCreacion`, `precioUnitario`
+    - `Nombre`, `fecha_creacion`, `precio$unitario`
 
 **Nombres descriptivos vs genéricos**:
 
 ```kotlin
-// ❌ Nombres genéricos
+// Nombres genéricos
 class Gestor {
     fun procesar(datos: Any): Any
 }
 
-// ✅ Nombres descriptivos
+// Nombres descriptivos
 class GestorFacturas {
     fun procesarFactura(factura: Factura): ResultadoProceso
 }
@@ -1883,38 +1903,53 @@ La elección de herramienta afecta tu productividad y la calidad del resultado. 
 #### 8.1. Herramientas Online (En la nube)
 
 **Draw.io / Diagrams.net**
+
 - **Precio**: Gratuito
 - **Ventajas**:
-  - No requiere instalación ni registro
-  - Integración con Google Drive, OneDrive
-  - Exporta a múltiples formatos (PNG, SVG, PDF)
-  - Muy flexible, no solo UML
+
+    - No requiere instalación ni registro
+    - Integración con Google Drive, OneDrive
+    - Exporta a múltiples formatos (PNG, SVG, PDF)
+    - Muy flexible, no solo UML
+
 - **Desventajas**:
-  - No valida UML (puedes crear diagramas incorrectos)
-  - Sin generación automática desde código
+
+    - No valida UML (puedes crear diagramas incorrectos)
+    - Sin generación automática desde código
+  
 - **Cuándo usar**: Proyectos pequeños, bocetos rápidos, equipos sin presupuesto
 
 **Lucidchart**
+
 - **Precio**: Freemium (planes desde $7.95/mes)
 - **Ventajas**:
-  - Colaboración en tiempo real
-  - Plantillas predefinidas excelentes
-  - Integración con Confluence, Google Workspace
-  - Historial de versiones
+
+    - Colaboración en tiempo real
+    - Plantillas predefinidas excelentes
+    - Integración con Confluence, Google Workspace
+    - Historial de versiones
+
 - **Desventajas**:
-  - Límite de documentos en versión gratuita
-  - Requiere conexión a internet
+
+    - Límite de documentos en versión gratuita
+    - Requiere conexión a internet
+  
 - **Cuándo usar**: Equipos distribuidos, presentaciones profesionales
 
 **PlantUML Online**
+
 - **Precio**: Gratuito
 - **Ventajas**:
-  - Basado en texto (fácil de versionar en Git)
-  - Generación automática del layout
-  - Sintaxis simple y rápida
+
+    - Basado en texto (fácil de versionar en Git)
+    - Generación automática del layout
+    - Sintaxis simple y rápida
+
 - **Desventajas**:
-  - Control limitado sobre posicionamiento
-  - Curva de aprendizaje para la sintaxis
+
+    - Control limitado sobre posicionamiento
+    - Curva de aprendizaje para la sintaxis
+  
 - **Cuándo usar**: Documentación en código, CI/CD, desarrolladores técnicos
 
 **Ejemplo PlantUML**:
@@ -1939,103 +1974,146 @@ Usuario "1" -- "*" Orden: realiza
 #### 8.2. Herramientas de Escritorio (Instalables)
 
 **Visual Paradigm**
+
 - **Precio**: Community Edition gratuita, Professional desde $99
 - **Ventajas**:
-  - Muy completo, soporte para todos los diagramas UML
-  - Generación de código bidireccional (Java, C++, C#, Python)
-  - Ingeniería inversa desde código existente
-  - Validación de UML
+
+    - Muy completo, soporte para todos los diagramas UML
+    - Generación de código bidireccional (Java, C++, C#, Python)
+    - Ingeniería inversa desde código existente
+    - Validación de UML
+
 - **Desventajas**:
-  - Interfaz puede ser abrumadora para principiantes
-  - Versión gratuita con limitaciones
+
+    - Interfaz puede ser abrumadora para principiantes
+    - Versión gratuita con limitaciones
+  
 - **Cuándo usar**: Proyectos profesionales grandes, necesidad de generación de código
 
 **StarUML**
+
 - **Precio**: $89 licencia perpetua (o gratuito con limitaciones)
 - **Ventajas**:
-  - Interfaz moderna e intuitiva
-  - Soporte para extensiones
-  - Generación de código (Java, C++, C#, Python)
+
+    - Interfaz moderna e intuitiva
+    - Soporte para extensiones
+    - Generación de código (Java, C++, C#, Python)
+
 - **Desventajas**:
-  - Sin colaboración en tiempo real
-  - Comunidad más pequeña que otras herramientas
+
+    - Sin colaboración en tiempo real
+    - Comunidad más pequeña que otras herramientas
+  
 - **Cuándo usar**: Desarrolladores individuales, proyectos medianos
 
 **Enterprise Architect (Sparx)**
+
 - **Precio**: Desde €130 por usuario
 - **Ventajas**:
-  - Estándar de la industria
-  - Soporte completo de UML 2.5
-  - Gestión de requisitos, trazabilidad
-  - Trabajo en equipo con repositorio compartido
+
+    - Estándar de la industria
+    - Soporte completo de UML 2.5
+    - Gestión de requisitos, trazabilidad
+    - Trabajo en equipo con repositorio compartido
+  
 - **Desventajas**:
-  - Curva de aprendizaje pronunciada
-  - Interfaz anticuada
-  - Caro para equipos pequeños
+
+    - Curva de aprendizaje pronunciada
+    - Interfaz anticuada
+    - Caro para equipos pequeños
+  
 - **Cuándo usar**: Empresas grandes, proyectos complejos, cumplimiento de estándares
 
 **Umbrello (Linux)**
+
 - **Precio**: Gratuito (open source)
 - **Ventajas**:
-  - Integrado en ecosistema KDE
-  - Ligero y rápido
-  - Generación de código
+
+    - Integrado en ecosistema KDE
+    - Ligero y rápido
+    - Generación de código
+
 - **Desventajas**:
-  - Menos features que alternativas comerciales
-  - Solo para Linux
+
+    - Menos features que alternativas comerciales
+    - Solo para Linux
+
 - **Cuándo usar**: Usuarios de Linux, proyectos open source
 
 #### 8.3. Integradas en IDEs (Para desarrolladores)
 
 **IntelliJ IDEA (JetBrains)**
+
 - **Características**:
-  - Plugin nativo de diagramas UML
-  - Generación desde código Kotlin/Java existente
-  - Navegación código ↔ diagrama
-  - Refactoring visual
+
+    - Plugin nativo de diagramas UML
+    - Generación desde código Kotlin/Java existente
+    - Navegación código ↔ diagrama
+    - Refactoring visual
+
 - **Ventajas**:
-  - Siempre sincronizado con el código
-  - No requiere herramienta adicional
+
+    - Siempre sincronizado con el código
+    - No requiere herramienta adicional
+
 - **Desventajas**:
-  - Solo disponible en versión Professional (de pago)
-  - Menos opciones de formato que herramientas dedicadas
+
+    - Solo disponible en versión Professional (de pago)
+    - Menos opciones de formato que herramientas dedicadas
+
 - **Cuándo usar**: Desarrollo diario en Kotlin/Java
 
 **Eclipse + Papyrus**
+
 - **Características**:
-  - Plugin gratuito Papyrus para UML 2.5
-  - Soporte completo de diagramas
-  - Generación de código Java
+
+    - Plugin gratuito Papyrus para UML 2.5
+    - Soporte completo de diagramas
+    - Generación de código Java
+
 - **Ventajas**:
-  - Gratuito y open source
-  - Muy completo
+
+    - Gratuito y open source
+    - Muy completo
+
 - **Desventajas**:
-  - Configuración compleja
-  - Rendimiento puede ser lento
+
+    - Configuración compleja
+    - Rendimiento puede ser lento
+
 - **Cuándo usar**: Proyectos Java con Eclipse
 
 **Visual Studio + Class Designer**
+
 - **Características**:
-  - Class Designer nativo en Visual Studio
-  - Generación desde código C#/VB.NET
-  - Sincronización bidireccional
-- **Ventajas**:
-  - Integrado nativamente
-  - Visual Studio Community es gratuito
+
+    - Class Designer nativo en Visual Studio
+    - Generación desde código C#/VB.NET
+    - Sincronización bidireccional
+
+- **Ventajas**: 
+
+    - Integrado nativamente
+    - Visual Studio Community es gratuito
+
 - **Desventajas**:
-  - Solo diagramas de clases (no otros UML)
-  - Solo para .NET
+
+    - Solo diagramas de clases (no otros UML)
+    - Solo para .NET
+
 - **Cuándo usar**: Desarrollo .NET
 
 #### 8.4. Generación Automática desde Código
 
 **PlantUML (modo local)**
+
 - **Instalación**: `brew install plantuml` (Mac) o descarga JAR
 - **Uso**: Crea archivo `.puml` y genera PNG/SVG
 - **Integración**: Plugins para VSCode, IntelliJ, Eclipse
 - **Ventaja**: Versionable en Git junto al código
 
 **Mermaid**
+
 - **Uso**: Sintaxis Markdown para diagramas
 - **Integración**: GitHub, GitLab, Notion
 - **Ejemplo**:
@@ -2054,22 +2132,23 @@ classDiagram
 ```
 
 **IntelliJ IDEA Diagram Generator**
+
 - **Uso**: Click derecho en clase → "Diagrams" → "Show Diagram"
 - **Ventaja**: Genera automáticamente desde código existente
 - **Limitación**: Solo para código Kotlin/Java en el proyecto
 
 #### 8.5. Recomendaciones por Contexto
 
-| Contexto | Herramienta Recomendada | Alternativa |
-|----------|-------------------------|-------------|
-| **Aprendizaje UML** | Draw.io | Lucidchart (Free) |
-| **Bocetos rápidos** | Pizarra/Papel | Draw.io |
-| **Proyecto pequeño** | Draw.io, PlantUML | StarUML |
-| **Equipo distribuido** | Lucidchart | Miro + Draw.io |
-| **Proyecto profesional** | Visual Paradigm | Enterprise Architect |
-| **Documentación en código** | PlantUML | Mermaid |
-| **Desarrollo diario** | IDE integrado | PlantUML |
-| **Presentaciones** | Lucidchart | PowerPoint + Draw.io |
+| Contexto                    | Herramienta Recomendada  | Alternativa          |
+|-----------------------------|--------------------------|----------------------|
+| **Aprendizaje UML**         | Draw.io                  | Lucidchart (Free)    |
+| **Bocetos rápidos**         | Pizarra/Papel            | Draw.io              |
+| **Proyecto pequeño**        | Draw.io, PlantUML        | StarUML              |
+| **Equipo distribuido**      | Lucidchart               | Miro + Draw.io       |
+| **Proyecto profesional**    | Visual Paradigm          | Enterprise Architect |
+| **Documentación en código** | PlantUML                 | Mermaid              |
+| **Desarrollo diario**       | IDE integrado            | PlantUML             |
+| **Presentaciones**          | Lucidchart               | PowerPoint + Draw.io |
 
 !!! tip "Consejo final"
     Comienza simple (Draw.io o papel). A medida que tu proyecto crece y necesitas features avanzadas (generación de código, colaboración, versionado), entonces invierte en herramientas más robustas.
@@ -2095,26 +2174,28 @@ Estos son los conceptos fundamentales que debes dominar sobre diagramas de clase
 ```
 
 **Visibilidad**:
+
 - `+` public: Accesible desde cualquier lugar
 - `-` private: Solo dentro de la clase
 - `#` protected: Clase y subclases
 - `~` package: Dentro del mismo paquete
 
 **Elementos especiales**:
+
 - *Cursiva*: Clase abstracta o método abstracto
 - <u>Subrayado</u>: Miembro estático
 - `<<stereotype>>`: Estereotipo (interface, abstract, etc.)
 
 #### 9.2. Sobre las Relaciones: Guía Rápida
 
-| Relación | Símbolo | Cuándo usar | Ejemplo | Fuerza |
-|----------|---------|-------------|---------|--------|
-| **Dependencia** | `- - →` | Uso temporal | Calculadora usa Math | Muy débil |
-| **Asociación** | `───` | Conexión general | Persona tiene Mascota | Débil |
-| **Agregación** | `◇───` | "Tiene un" (independiente) | Equipo tiene Jugador | Media |
-| **Composición** | `♦───` | "Parte de" (dependiente) | Coche tiene Motor | Fuerte |
-| **Herencia** | `───▷` | "Es un" | Perro es Animal | Muy fuerte |
-| **Implementación** | `- - ▷` | Implementa interfaz | Avion implementa IVolador | Muy fuerte |
+| Relación           | Símbolo  | Cuándo usar                | Ejemplo                   | Fuerza     |
+|--------------------|----------|----------------------------|---------------------------|------------|
+| **Dependencia**    | `- - →`  | Uso temporal               | Calculadora usa Math      | Muy débil  |
+| **Asociación**     | `───`    | Conexión general           | Persona tiene Mascota     | Débil      |
+| **Agregación**     | `◇───`   | "Tiene un" (independiente) | Equipo tiene Jugador      | Media      |
+| **Composición**    | `♦───`   | "Parte de" (dependiente)   | Coche tiene Motor         | Fuerte     |
+| **Herencia**       | `───▷`   | "Es un"                    | Perro es Animal           | Muy fuerte |
+| **Implementación** | `- - ▷`  | Implementa interfaz        | Avion implementa IVolador | Muy fuerte |
 
 **Regla mnemotécnica para relaciones**:
 
@@ -2129,7 +2210,7 @@ Estos son los conceptos fundamentales que debes dominar sobre diagramas de clase
 
 ```
 A ───────────────── B
-  1              *
+   1             *
 ```
 
 | Notación     | Significado                 | Ejemplo                                     |
@@ -2142,6 +2223,7 @@ A ───────────────── B
 | `m..n`       | Rango específico            | Un coche tiene entre 2 y 10 ruedas          |
 
 **Cómo leer**: 
+
 ```
 Usuario  1 ─────── * Orden
 ```

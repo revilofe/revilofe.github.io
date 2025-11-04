@@ -71,14 +71,15 @@ El modelado es vital en todo tipo de proyectos, pero cobra especial importancia 
 **Con UML**, todos los equipos entienden exactamente cómo se estructura el sistema, qué componentes existen, cómo se comunican y cuáles son sus responsabilidades.
 
 **Beneficios concretos del modelado**:
-- ✅ Permite diseñar para la **escalabilidad** desde el inicio, identificando puntos de crecimiento
-- ✅ Garantiza la **seguridad** del sistema al identificar vulnerabilidades en la fase de diseño
-- ✅ Verifica la correcta **ejecución** antes de implementar, evitando cambios costosos
-- ✅ Los cambios son **menos costosos** en fase de diseño que durante o después de la implementación
-- ✅ Facilita la **comunicación** entre el equipo, reduciendo malentendidos
-- ✅ Permite **reutilización** de componentes bien diseñados en proyectos futuros
-- ✅ Mejora la **calidad** general del software, resultando en menos defectos
-- ✅ Reduce el **tiempo de mantenimiento** posterior
+
+- Permite diseñar para la **escalabilidad** desde el inicio, identificando puntos de crecimiento
+- Garantiza la **seguridad** del sistema al identificar vulnerabilidades en la fase de diseño
+- Verifica la correcta **ejecución** antes de implementar, evitando cambios costosos
+- Los cambios son **menos costosos** en fase de diseño que durante o después de la implementación
+- Facilita la **comunicación** entre el equipo, reduciendo malentendidos
+- Permite **reutilización** de componentes bien diseñados en proyectos futuros
+- Mejora la **calidad** general del software, resultando en menos defectos
+- Reduce el **tiempo de mantenimiento** posterior
 
 !!! warning "Importante"
     Utilizando diagramas UML se consigue visualizar y verificar los diseños de sistemas de software antes de que la implementación del código haga que los cambios sean difíciles y demasiado costosos.
@@ -141,6 +142,7 @@ Este es uno de los puntos clave: UML crea un **lenguaje común** que trasciende 
 **Ejemplo de cómo funciona en la práctica**:
 
 Imagina una reunión de proyecto con:
+
 - El arquitecto técnico que habla SQL y patrones de diseño
 - El especialista en bases de datos que habla de índices y normalización
 - El analista de negocios que habla de procesos y requisitos
@@ -168,6 +170,7 @@ La adopción de UML como lenguaje conlleva una serie de ventajas y desventajas q
 **Lenguaje estandarizado y reconocido mundialmente**
 
 UML es mantenido por la **OMG** (Object Management Group), una organización internacional de estándares. Esto significa que:
+
 - Si trabajas en una empresa en Madrid, otra en Tokio y otra en Nueva York, todos entienden UML de la misma manera
 - No hay ambigüedad en la notación: un símbolo específico siempre significa lo mismo
 - Los nuevos miembros del equipo pueden entender rápidamente los diagramas existentes
@@ -175,6 +178,7 @@ UML es mantenido por la **OMG** (Object Management Group), una organización int
 **Facilita la comunicación entre equipos multidisciplinares**
 
 Como mencionamos antes, UML crea un lenguaje común. Pero la importancia no puede subestimarse:
+
 - Reduce el tiempo dedicado a explicaciones y aclaraciones
 - Reduce los malentendidos que surgen de explicaciones verbales
 - Un diagrama bien hecho es más rápido de entender que un documento de 20 páginas
@@ -183,6 +187,7 @@ Como mencionamos antes, UML crea un lenguaje común. Pero la importancia no pued
 **Independencia de la plataforma y lenguaje de programación**
 
 Ya lo mencionamos, pero el impacto es profundo:
+
 - Tu inversión en diseño no se vuelve obsoleta cuando cambias de tecnología
 - Puedes experimentar con diferentes tecnologías sin refactorizar todo el análisis
 - El "conocimiento del dominio" capturado en el modelo perdura
@@ -190,6 +195,7 @@ Ya lo mencionamos, pero el impacto es profundo:
 **Amplia variedad de diagramas para diferentes perspectivas**
 
 Con 14 tipos de diagramas, UML ofrece vistas desde múltiples ángulos:
+
 - Algunos equipos necesitan ver la estructura (diagramas estructurales)
 - Otros necesitan ver el flujo (diagramas de comportamiento)
 - Puedes elegir exactamente lo que necesitas ver en cada momento
@@ -197,6 +203,7 @@ Con 14 tipos de diagramas, UML ofrece vistas desde múltiples ángulos:
 **Reduce costos al detectar errores en fase de diseño**
 
 Este es probablemente el beneficio económico más importante:
+
 - Un error detectado en el diseño cuesta corregir horas
 - El mismo error descubierto durante la implementación cuesta días
 - El mismo error descubierto en producción cuesta semanas y dinero en reputación
@@ -208,6 +215,7 @@ UML te permite detectar errores **antes** de invertir recursos en código.
 **Lenguaje muy amplio**
 
 UML es extenso. Completo, sí, pero también extenso:
+
 - La especificación oficial tiene más de 600 páginas
 - Hay 14 tipos de diagramas diferentes
 - Cada diagrama tiene su propia notación y reglas
@@ -217,6 +225,7 @@ UML es extenso. Completo, sí, pero también extenso:
 **Curva de aprendizaje**
 
 Para usar UML efectivamente, requiere:
+
 - Tiempo para aprender los conceptos básicos (~ 1-2 semanas)
 - Tiempo para aprender los diagramas específicos que tu equipo usa (~1-2 semanas más por diagrama)
 - Práctica para desarrollar intuición sobre qué diagrama usar en cada situación
@@ -226,6 +235,7 @@ Para usar UML efectivamente, requiere:
 **Puede ser excesivo para proyectos pequeños**
 
 Para un proyecto trivial (menos de 10 clases), crear diagramas UML completos puede ser "overkill":
+
 - El tiempo gastado en documentación puede superar el tiempo ahorrado
 - La comunicación informal es a menudo suficiente para equipos pequeños
 
@@ -241,6 +251,7 @@ Los diagramas de UML son **representaciones gráficas** que muestran de forma pa
 #### 7.1. ¿Por qué múltiples diagramas?
 
 Imagina que quieres entender una casa. Podrías obtener:
+
 - **Plano de planta**: Muestra la distribución de habitaciones y espacios
 - **Plano eléctrico**: Muestra dónde están los cables, enchufes, circuitos
 - **Plano de tuberías**: Muestra dónde van el agua y las desagües
@@ -249,6 +260,7 @@ Imagina que quieres entender una casa. Podrías obtener:
 Cada plano es importante. Ninguno es "el verdadero plano de la casa". Todos juntos dan una visión completa.
 
 **Lo mismo ocurre con UML**:
+
 - Algunos diagramas muestran la **estructura** (de qué está hecho el sistema)
 - Otros muestran el **comportamiento** (qué hace el sistema y cómo)
 - Algunos se enfocam en **interacciones** entre componentes
@@ -265,36 +277,43 @@ Estos diagramas responden la pregunta fundamental: **¿Cuál es la arquitectura 
 **Cuándo usarlos**: Cuando necesitas entender qué componentes tiene el sistema, cómo se organizan y cómo se comunican entre ellos.
 
 1. **Diagrama de Clases**
+
    - Propósito: Mostrar la estructura de las clases, sus atributos, métodos y relaciones
    - Uso: Es el diagrama más usado. Proporciona la base para la implementación
    - Audiencia: Desarrolladores, arquitectos
 
 2. **Diagrama de Objetos**
+
    - Propósito: Mostrar instancias específicas de clases en un momento particular
    - Uso: Útil para comprender ejemplos concretos de cómo funcionan las clases
    - Audiencia: Desarrolladores, testers
 
 3. **Diagrama de Componentes**
+
    - Propósito: Mostrar cómo el sistema está dividido en componentes de alto nivel y sus dependencias
    - Uso: Especialmente en sistemas grandes, para mostrar la organización arquitectónica
    - Audiencia: Arquitectos, líderes técnicos
 
 4. **Diagrama de Despliegue**
+
    - Propósito: Mostrar cómo se despliegan los componentes en hardware físico o virtual
    - Uso: Crucial en operaciones, DevOps, para entender la infraestructura
    - Audiencia: Arquitectos, DevOps, operations
 
 5. **Diagrama de Paquetes**
+
    - Propósito: Organizar clases y otros elementos en paquetes (grupos lógicos)
    - Uso: En sistemas muy grandes para entender la organización de alto nivel
    - Audiencia: Arquitectos
 
 6. **Diagrama de Estructura Compuesta**
+
    - Propósito: Mostrar la estructura interna de un clasificador (clase) compleja
    - Uso: Para entender las partes internas de un componente
    - Audiencia: Arquitectos (menos común)
 
 7. **Diagrama de Perfil**
+
    - Propósito: Extender UML con conceptos específicos de un dominio
    - Uso: Para dominio específicos (telecomunicaciones, finanzas, etc.)
    - Audiencia: Especialistas en dominios
@@ -305,61 +324,53 @@ Estos diagramas responden la pregunta: **¿Cuál es el comportamiento del sistem
 
 **Cuándo usarlos**: Cuando necesitas entender qué hace el sistema, cómo responde a eventos, cuál es el flujo de un proceso.
 
-1. **Diagrama de Casos de Uso**
+1. **Diagrama de Casos de Uso** (Comportamiento)
+
    - Propósito: Mostrar los requisitos del sistema desde la perspectiva del usuario
    - Uso: Especificar qué debe hacer el sistema sin entrar en detalles de cómo
    - Audiencia: Analistas de negocio, stakeholders no técnicos, desarrolladores
 
-2. **Diagrama de Secuencia**
+2. **Diagrama de Secuencia** (Interacción)
+
    - Propósito: Mostrar cómo los objetos interactúan entre sí en una secuencia temporal
    - Uso: Ideal para entender flujos complejos, llamadas entre sistemas
    - Audiencia: Desarrolladores, testers
 
-3. **Diagrama de Comunicación**
+3. **Diagrama de Comunicación** (Interacción)
+
    - Propósito: Similar al de secuencia, pero enfatizando las relaciones y las conexiones
    - Uso: Alternativa al diagrama de secuencia para interacciones más simples
    - Audiencia: Desarrolladores
 
 4. **Diagrama de Máquinas de Estado**
+
    - Propósito: Mostrar los estados posibles de un objeto y las transiciones entre ellos
    - Uso: Esencial para objetos con comportamiento complejo basado en estados
    - Audiencia: Desarrolladores (especialmente en sistemas embebidos o tiempo real)
 
-5. **Diagrama de Actividades**
+5. **Diagrama de Actividades** (Comportamiento)
+
    - Propósito: Mostrar el flujo de trabajo o proceso como un diagrama similar a un flowchart
    - Uso: Para modelar procesos de negocio o flujos lógicos complejos
    - Audiencia: Analistas de negocio, desarrolladores
 
-6. **Diagrama de Temporización**
+6. **Diagrama de Temporización** (Interacción)
+
    - Propósito: Mostrar el comportamiento de objetos a lo largo del tiempo, especialmente en sistemas con restricciones de tiempo
    - Uso: Sistemas embebidos, sistemas de tiempo real
    - Audiencia: Especialistas en sistemas embebidos
 
-7. **Diagrama de Interacción General (Interaction Overview)**
+7. **Diagrama de Interacción General (Interaction Overview)** (Interacción)
+
    - Propósito: Proporcionar una visión general de la interacción combinando otros diagramas
    - Uso: Para ver la "gran imagen" de cómo múltiples interacciones se conectan
    - Audiencia: Arquitectos (menos común)
+   
 7. **Diagrama de Perfiles**
 
-#### 7.2.1. Diagramas de Comportamiento (7 tipos)
-Representan aspectos dinámicos del sistema, es decir, cómo se comporta el sistema en tiempo de ejecución:
-
-**Diagramas de comportamiento básicos:**    
-
-1. **Diagrama de Casos de Uso**
-2. **Diagrama de Actividades**
-
-**Diagramas de Interacción (subcategoría):**   
-
-3. **Diagrama de Secuencia**
-4. **Diagrama de Comunicación**
-5. **Diagrama de Tiempos**
-6. **Diagrama de Interacción General**
-
-**Diagrama de estados:**    
-
-7. **Diagrama de Estados**
-
+   - Propósito: Extender UML con conceptos específicos de un dominio
+   - Uso: Para dominio específicos (telecomunicaciones, finanzas, etc.)
+   - Audiencia: Especialistas en dominios
 
 ### 8. Historia de UML: De la crisis a la estandarización
 
@@ -370,12 +381,14 @@ Para entender realmente por qué UML existe y por qué es importante, necesitamo
 En los primeros tiempos de la informática, la industria del software enfrentaba un problema fundamental: **no había acuerdo sobre cómo modelar sistemas**. Cada equipo usaba su propio enfoque:
 
 **Métodos estructurados de ese entonces**:
+
 - **Diagramas de flujo de datos**: Mostraban cómo fluían los datos
 - **Método de Jackson**: Se enfocaba en estructuras de datos
 - **Diagramas HIPO**: Mostraban la jerarquía de módulos
 - **Diagramas de estructura**: Mostraban relaciones entre módulos
 
 **El problema fundamental**: Estos métodos dividían el sistema en dos realidades separadas que no se conectaban:
+
 - **Lado de datos**: Estructuras de datos
 - **Lado de procedimientos**: Algoritmos y procesos
 
@@ -386,6 +399,7 @@ Era como tener dos mapas completamente diferentes de la misma ciudad, y nadie sa
 La programación orientada a objetos (POO) cambió todo. La idea revolucionaria fue simple pero profunda: **unir datos y comportamiento en el mismo concepto - el objeto**.
 
 **Impacto**:
+
 - Ya no había separación artificial entre datos y procedimientos
 - Un objeto encapsulaba ambos
 
@@ -405,6 +419,7 @@ En 1994, algo extraordinario sucedió: Los tres líderes - Booch, Rumbaugh e Jac
 **El resultado**: **UML 1.0** (publicado en 1997)
 
 **Qué consiguieron**:
+
 - Combinaron las mejores ideas de cada notación
 - Eliminaron redundancias
 - Crearon un estándar reconocido por toda la industria
@@ -415,6 +430,7 @@ En 1994, algo extraordinario sucedió: Los tres líderes - Booch, Rumbaugh e Jac
 **1997**: OMG (Object Management Group) adopta UML como estándar oficial
 
 **Desde entonces**: 
+
 - **UML 2.0** (2004): Mayor precisión, más diagramas, mejor especificación
 - **UML 2.5** y versiones posteriores: Refinamientos continuos
 - **Hoy**: UML es el estándar de facto mundial para modelado de sistemas software
@@ -437,24 +453,28 @@ Aunque recomendamos usar UML como primera opción, hay casos donde otras herrami
 #### 9.2. Alternativas principales
 
 **ArchiMate**
+
 - Propósito: Modelado de arquitectura empresarial
 - Fortalezas: Mejor para arquitectura de negocio y TI
 - Debilidades: No es general; específico para arquitectura
 - Cuándo usar: Cuando necesitas diseñar la arquitectura de una empresa completa
 
 **SysML (Systems Modeling Language)**
+
 - Propósito: Modelado de sistemas complejos (especialmente ingeniería de sistemas)
 - Fortalezas: Extensor de UML para requisitos, análisis de hardware-software
 - Debilidades: Más complejo que UML
 - Cuándo usar: En proyectos de ingeniería de sistemas, IoT, sistemas embebidos complejos
 
 **Diagramas informales/Sketching**
+
 - Propósito: Comunicación rápida sin formalismo
 - Fortalezas: Muy rápido, agradable, fácil de iterar
 - Debilidades: No normalizado, ambigüedad, no reutilizable
 - Cuándo usar: En sesiones de brainstorming, primeras ideas, equipos pequeños
 
 **C4 Model**
+
 - Propósito: Modelado de arquitectura de software simplificado
 - Fortalezas: Muy simple, enfoque jerárquico claro (Context, Container, Component, Code)
 - Debilidades: No cubre todos los aspectos como UML
@@ -475,10 +495,11 @@ Conocer UML es necesario, pero no es suficiente. Necesitas también entender có
 **Pregunta clave**: ¿Este diagrama ayuda a alguien a entender mejor el sistema? Si la respuesta es no, no lo hagas.
 
 **Ejemplo**:
-- ✅ Sí, modela: La arquitectura general de componentes
-- ✅ Sí, modela: Un flujo complejo que es difícil de entender leyendo código
-- ❌ No, no modeles: Cada getter y setter trivial
-- ❌ No, no modeles: Un proceso que es obvio leyendo el código
+
+- Sí, modela: La arquitectura general de componentes
+- Sí, modela: Un flujo complejo que es difícil de entender leyendo código
+- No, no modeles: Cada getter y setter trivial
+- No, no modeles: Un proceso que es obvio leyendo el código
 
 #### 10.2. La simplicidad es sofisticación
 
@@ -487,6 +508,7 @@ Conocer UML es necesario, pero no es suficiente. Necesitas también entender có
 **Realidad**: Los mejores diagramas UML son **los más simples que comunican la idea**. La sofisticación no es complicación; es la capacidad de capturar la esencia de algo complejo de forma simple.
 
 **Estrategia**:
+
 - Omite detalles que no añaden valor
 - Usa solo la notación que necesitas
 - Si un diagrama no cabe en una página, probablemente sea demasiado complejo
@@ -496,11 +518,13 @@ Conocer UML es necesario, pero no es suficiente. Necesitas también entender có
 **El problema eterno de la documentación**: Los diagramas quedan obsoletos
 
 **Razones**:
+
 - El código evoluciona, los diagramas no
 - Los desarrolladores no tienen tiempo de actualizar diagramas
 - Nadie revisa que los diagramas coincidan con el código
 
 **Soluciones prácticas**:
+
 - Usa herramientas que generen diagramas desde código
 - Actualiza diagramas solo cuando hay cambios arquitectónicos significativos
 - Para cambios pequeños, actualiza el código, no el diagrama
@@ -509,6 +533,7 @@ Conocer UML es necesario, pero no es suficiente. Necesitas también entender có
 #### 10.4. Documentación acompañante
 
 Los diagramas no son autoexplicativos. Acompáñalos con:
+
 - **Descripción textual**: Qué muestra el diagrama y por qué es importante
 - **Notas explicativas**: En el mismo diagrama, para conceptos no obvios
 - **Decisiones de diseño**: Por qué elegiste esta arquitectura vs otras opciones
@@ -524,6 +549,7 @@ Existen muchas herramientas disponibles para crear diagramas UML. La elección d
 #### 11.1. Herramientas comerciales (Profesionales/Empresariales)
 
 **Enterprise Architect (Sparx Systems)**
+
 - Características: Completo, soporte para todo tipo de diagramas, generación de código bidireccional
 - Precio: Licencia de pago (~ €300-500 por usuario)
 - Cuándo usar: Empresas con proyectos grandes, equipos distribuidas, necesidad de integración completa
@@ -531,12 +557,14 @@ Existen muchas herramientas disponibles para crear diagramas UML. La elección d
 - Desventaja: Curva de aprendizaje, caro
 
 **Visual Paradigm**
+
 - Características: Interfaz intuitiva, soporte completo UML, generación de código
 - Precio: Desde gratuito (versión Community) hasta versiones profesionales (pagadas)
 - Cuándo usar: Empresas medianas, equipos que valoran facilidad de uso
 - Ventaja: Buen balance entre potencia y usabilidad
 
 **IBM Rational Software Architect**
+
 - Características: Estándar de facto durante años, muy completo, integración con Eclipse
 - Precio: Muy caro, licencias empresariales
 - Cuándo usar: Grandes corporaciones con presupuesto importante
@@ -546,84 +574,110 @@ Existen muchas herramientas disponibles para crear diagramas UML. La elección d
 #### 11.2. Herramientas de código abierto (Gratuitas)
 
 **PlantUML**
+
 - Características: Basado en texto (Markdown-like), genera diagramas desde código
 - Precio: Gratuito
 - Ventajas: 
-  - Muy simple para programadores
-  - Versionable en Git (es texto plano)
-  - Excelente para documentación integrada en código
-  - Se puede incluir en CI/CD
+
+    - Muy simple para programadores
+    - Versionable en Git (es texto plano)
+    - Excelente para documentación integrada en código
+    - Se puede incluir en CI/CD
+
 - Desventajas: 
-  - Curva de aprendizaje para no técnicos
-  - Edición visual limitada
-  - Requiere herramienta de renderizado
+    - Curva de aprendizaje para no técnicos
+    - Edición visual limitada
+    - Requiere herramienta de renderizado
+
 - Cuándo usar: Equipos técnicas, documentación en código, CI/CD
 
 **StarUML**
+
 - Características: Interfaz visual moderna, soporte para muchos diagramas
 - Precio: Gratuito (con donaciones opcionales)
 - Ventajas: 
-  - Visual e intuitivo
-  - Interfaz moderna
-  - Soporte para extensiones
+
+    - Visual e intuitivo
+    - Interfaz moderna
+    - Soporte para extensiones
+
 - Desventajas: 
-  - Menos robusto que opciones comerciales
-  - Comunidad más pequeña
+
+    - Menos robusto que opciones comerciales
+    - Comunidad más pequeña
+
 - Cuándo usar: Aprendizaje, proyectos pequeños, prototipos
 
 **Umbrello**
+
 - Características: Parte del proyecto KDE, integración con Linux
 - Precio: Gratuito
 - Ventajas: 
-  - Ligero
-  - Buena integración con Linux
-  - Soporte OOP nativo
+
+    - Ligero
+    - Buena integración con Linux
+    - Soporte OOP nativo
+
 - Desventajas: 
-  - Menos features que otras
-  - Comunidad menos activa
+    - Menos features que otras
+    - Comunidad menos activa
+
 - Cuándo usar: Usuarios de Linux, proyectos pequeños
 
 #### 11.3. Herramientas online / En la nube (Híbridas)
 
 **Lucidchart**
+
 - Características: Completo, colaborativo en tiempo real, integración con múltiples apps
 - Precio: Freemium (planes pagos accesibles)
-- Ventajas:
-  - Colaboración en tiempo real
-  - Accesible desde cualquier lugar
-  - Buena integración con herramientas empresariales
-  - Historial de cambios
+- Ventajas: 
+
+    - Colaboración en tiempo real
+    - Accesible desde cualquier lugar
+    - Buena integración con herramientas empresariales
+    - Historial de cambios
+
 - Desventajas:
-  - Requiere conexión a internet
-  - Costo en escala
+
+    - Requiere conexión a internet
+    - Costo en escala
+
 - Cuándo usar: Equipos remotas, presentaciones, empresas medianas
 
 **Draw.io (Ahora parte de Diagrams.net)**
+
 - Características: Gratuito, basado en web, muy flexible para cualquier tipo de diagrama
 - Precio: Gratuito (con versión premium optativa)
 - Ventajas:
-  - Gratis
-  - No requiere crear cuenta
-  - Muy flexible
-  - Descarga local posible
+
+    - Gratis
+    - No requiere crear cuenta
+    - Muy flexible 
+    - Descarga local posible
+
 - Desventajas:
-  - No es especializado en UML
-  - Menos automático que herramientas dedicadas
+
+    - No es especializado en UML
+    - Menos automático que herramientas dedicadas
+
 - Cuándo usar: Rápido prototipado, equipos pequeñas, presupuesto cero
 
 #### 11.4. Integradas en IDEs (Para desarrolladores)
 
 **IntelliJ IDEA (JetBrains)**
+
 - Características: Plugin de UML nativo, generación desde código existente
 - Precio: Comunidad Edition gratuita, Professional de pago
 - Cuándo usar: Desarrolladores Java/Kotlin que quieren diagramas rápidos
 
 **Eclipse con Papyrus**
+
 - Características: Plugin Papyrus para UML, soporte completo
 - Precio: Gratuito
 - Cuándo usar: Desarrolladores Java que usan Eclipse
 
 **Visual Studio con Class Designer**
+
 - Características: Class Designer nativo, generación desde código C#/VB.NET
 - Precio: Visual Studio Community gratuito
 - Cuándo usar: Desarrolladores .NET
@@ -650,18 +704,21 @@ Uno de los conflictos clásicos en metodologías ágiles es: "¿documentación e
 UML puede ser muy útil en ágil si se usa pragmáticamente. Los principios clave son:
 
 **Pragmatismo**:
+
 - Crea solo los diagramas que aporten valor inmediato
 - Evita la sobre-documentación exhaustiva
 - Un diagrama debe ser "vivo" - actualizado cuando hay cambios
 - Si un diagrama no se actualiza regularmente, probablemente no sea necesario
 
 **Colaboración**:
+
 - Usa diagramas para comunicar dentro del equipo
 - Dibuja en la pizarra en vez de en herramientas complejas durante el diseño
 - Cuando ya no sirva para comunicar, descártalo
 - Los diagramas son herramientas de comunicación, no artefactos finales
 
 **Incrementalidad**:
+
 - Actualiza diagramas de forma incremental conforme el proyecto avanza
 - No intentes crear toda la arquitectura antes de escribir código
 - Diagramas y código evolucionan juntos
@@ -670,37 +727,44 @@ UML puede ser muy útil en ágil si se usa pragmáticamente. Los principios clav
 
 Hay momentos específicos donde UML aporta valor en ágil:
 
-**Sprint Planning** ⏱️
+**Sprint Planning** 
+
 - Diagramas de casos de uso y actividades para entender los requisitos del sprint
 - Duración: 30 minutos de diseño en pizarra
 - Propósito: Todos entienden qué se va a hacer
 
-**Diseño técnico** 🏗️
+**Diseño técnico** 
+
 - Diagramas de clases y secuencia para refinar cómo se implementarán las características
 - Duración: 1-2 horas en la fase de desarrollo
 - Propósito: Evitar decisiones de arquitectura pobres antes de codificar
 
-**Integración de componentes** 🔗
+**Integración de componentes**
+
 - Diagramas de componentes cuando múltiples equipos necesitan coordinar
 - Duración: Actualización cuando hay cambios de interfaz
 - Propósito: Documentar contratos entre componentes
 
-**Análisis de problemas** 🔍
+**Análisis de problemas**
+
 - Diagramas de secuencia para entender bugs complejos
 - Duración: 30 minutos mientras se investiga
 - Propósito: Comunicar la causa raíz con otros desarrolladores
 
-**Documentación de decisiones arquitectónicas** 📋
+**Documentación de decisiones arquitectónicas**
+
 - Diagramas de arquitectura para decisiones importantes que van al ADR (Architecture Decision Record)
 - Duración: Una sola vez, cuando se toma la decisión
 - Propósito: Futuras personas del equipo entiendan por qué se hizo así
 
 #### 12.3. Lo que NO debes hacer en Ágil
 
-❌ **No crees un diagrama completo** al inicio del proyecto esperando que se mantenga
-❌ **No documentes cada clase** - es excesivo  
-❌ **No uses UML si interfiere** con la velocidad del equipo
-❌ **No esperes** que el diagrama reemplace la comunicación
+En un entorno ágil:
+
+* **No crees un diagrama completo** al inicio del proyecto esperando que se mantenga
+* **No documentes cada clase** - es excesivo  
+* **No uses UML si interfiere** con la velocidad del equipo
+* **No esperes** que el diagrama reemplace la comunicación
 
 ### 13. Conclusiones y Puntos Clave
 
@@ -708,18 +772,17 @@ UML es una herramienta poderosa para el modelado de sistemas de software. Su efe
 
 **Puntos clave a recordar**:
 
-- ✅ UML es el **estándar internacional** para el modelado de sistemas software
-- ✅ Proporciona una **notación visual común** que todos pueden entender
-- ✅ Facilita la **comunicación** entre equipos técnicos y no técnicos, reduciendo malentendidos
-- ✅ Permite **detectar errores de diseño** antes de la implementación, ahorrando recursos
-- ✅ Es **independiente** de tecnologías y plataformas específicas
-- ✅ Su uso debe ser **pragmático**, no dogmático - usa lo que necesitas
-- ✅ Existen **alternativas** para necesidades específicas, pero UML sigue siendo el más versátil
-- ✅ **La clave**: Modela para comunicar, no para documentar
+- UML es el **estándar internacional** para el modelado de sistemas software
+- Proporciona una **notación visual común** que todos pueden entender
+- Facilita la **comunicación** entre equipos técnicos y no técnicos, reduciendo malentendidos
+- Permite **detectar errores de diseño** antes de la implementación, ahorrando recursos
+- Es **independiente** de tecnologías y plataformas específicas
+- Su uso debe ser **pragmático**, no dogmático - usa lo que necesitas
+- Existen **alternativas** para necesidades específicas, pero UML sigue siendo el más versátil
+- **La clave**: Modela para comunicar, no para documentar
 
-**Reflexión final**:
+**Reflexión final**: El valor real de UML no está en los diagramas en sí, sino en el **pensamiento y comunicación** que habilita. Un equipo que usa UML efectivamente tendrá:
 
-El valor real de UML no está en los diagramas en sí, sino en el **pensamiento y comunicación** que habilita. Un equipo que usa UML efectivamente tendrá:
 - Menos malentendidos
 - Mejor arquitectura
 - Código más mantenible

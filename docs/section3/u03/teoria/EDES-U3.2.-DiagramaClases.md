@@ -972,451 +972,1398 @@ class Avion : IVolador {
 | **Herencia**       | `───▷`   | Muy fuerte   | "Es un"                                | Perro - Animal          |
 | **Implementación** | `- - ▷`  | Muy fuerte   | Implementa interfaz                    | Avion - IVolador        |
 
-### 6. Interfaces
-Una **interfaz** define un contrato que las clases pueden implementar. Es una forma de asegurar que ciertas clases proporcionen métodos específicos.
-#### 6.1. Representación de una Interfaz
-Una interfaz se representa con una caja similar a una clase, pero con la etiqueta `<<interface>>` encima del nombre.
+
+### 5. Interfaces: Contratos de comportamiento
+
+Una **interfaz** es un concepto fundamental en la programación orientada a objetos que define un **contrato** que las clases pueden (o deben) implementar. No es una clase concreta con implementación, sino una especificación de qué debe hacer una clase sin especificar cómo lo hace.
+
+#### 5.1. ¿Qué es una interfaz y por qué es importante?
+
+**Definición**: Una interfaz define un conjunto de métodos (operaciones) que una clase debe implementar, sin proporcionar la implementación de estos métodos. Es como un contrato que dice "si implementas esta interfaz, te comprometes a proporcionar estos comportamientos".
+
+**¿Por qué son importantes las interfaces?**
+
+1. **Polimorfismo**: Permiten tratar objetos de diferentes clases de forma uniforme si implementan la misma interfaz
+2. **Desacoplamiento**: Reducen la dependencia entre componentes del sistema
+3. **Extensibilidad**: Facilitan agregar nuevas funcionalidades sin modificar código existente
+4. **Contratos claros**: Documentan qué comportamiento se espera
+
+**Analogía del mundo real**: 
+
+Imagina que tienes un enchufe eléctrico (interfaz). El enchufe especifica: "cualquier dispositivo que quiera conectarse debe tener estas características: 2 pines, voltaje X, etc.". No le importa si es una lámpara, un televisor o una computadora (clases concretas), simplemente especifica el contrato que deben cumplir.
+
+#### 5.2. Representación de una Interfaz en UML
+
+Una interfaz se representa con una caja similar a una clase, pero con dos diferencias clave:
+
+1. Se añade el estereotipo `<<interface>>` encima del nombre
+2. No tiene atributos (solo métodos)
+
+**Representación básica**:
 
 ```
 ┌─────────────────────────┐
 │     <<interface>>       │
-│     NombreInterfaz      │
+│    NombreInterfaz       │
 ├─────────────────────────┤
-│    Métodos              │
+│    + metodo1()          │
+│    + metodo2()          │
 └─────────────────────────┘
 ```
-#### 6.2. Ejemplo de Interfaz
+
+**Ejemplo real**:
 
 ```
 ┌─────────────────────────┐
 │     <<interface>>       │
 │       IVolador          │
 ├─────────────────────────┤
-│ + volar() : Unit       │
-│ + aterrizar() : Unit   │
+│ + volar() : Unit        │
+│ + aterrizar() : Unit    │
+│ + getAltitud() : Double │
 └─────────────────────────┘
 ```
-**Implementación en Kotlin:**
+
+#### 5.3. Ejemplo práctico: Sistema de pagos
+
+Imagina un sistema de comercio electrónico que acepta múltiples formas de pago. En vez de que cada clase dependa de implementaciones específicas, definimos una interfaz:
+
+**Interfaz IProcesadorPago**:
 
 ```kotlin
-interface IVolador {
-    fun volar()
-    fun aterrizar()
+interface IProcesadorPago {
+    fun procesarPago(monto: Double): Boolean
+    fun reembolsar(monto: Double): Boolean
+    fun verificarFondos(monto: Double): Boolean
 }
 ```
 
-Las clases que implementan esta interfaz deben proporcionar la implementación de los métodos `volar` y `aterrizar`.
+**Implementaciones concretas**:
 
+```kotlin
+// Implementación para tarjeta de crédito
+class ProcesadorTarjeta : IProcesadorPago {
+    private var numeroTarjeta: String = ""
+    private var cvv: String = ""
+    
+    override fun procesarPago(monto: Double): Boolean {
+        // Lógica específica para tarjeta de crédito
+        println("Procesando pago de $$monto con tarjeta $numeroTarjeta")
+        return true
+    }
+    
+    override fun reembolsar(monto: Double): Boolean {
+        println("Reembolsando $$monto a tarjeta $numeroTarjeta")
+        return true
+    }
+    
+    override fun verificarFondos(monto: Double): Boolean {
+        // Verificar con banco
+        return true
+    }
+}
+
+// Implementación para PayPal
+class ProcesadorPayPal : IProcesadorPago {
+    private var email: String = ""
+    
+    override fun procesarPago(monto: Double): Boolean {
+        // Lógica específica para PayPal
+        println("Procesando pago de $$monto con PayPal ($email)")
+        return true
+    }
+    
+    override fun reembolsar(monto: Double): Boolean {
+        println("Reembolsando $$monto a PayPal ($email)")
+        return true
+    }
+    
+    override fun verificarFondos(monto: Double): Boolean {
+        // Verificar con PayPal
+        return true
+    }
+}
+```
+
+**Ventaja**: Ahora el sistema de pagos puede trabajar con cualquier procesador sin conocer los detalles:
+
+```kotlin
+class SistemaPagos {
+    fun realizarCompra(procesador: IProcesadorPago, monto: Double) {
+        if (procesador.verificarFondos(monto)) {
+            procesador.procesarPago(monto)
+            println("Compra completada")
+        } else {
+            println("Fondos insuficientes")
+        }
+    }
+}
+```
+
+**En el diagrama de clases**:
+
+```
+          ┌───────────────────────┐
+          │    <<interface>>      │
+          │  IProcesadorPago      │
+          ├───────────────────────┤
+          │ + procesarPago()      │
+          │ + reembolsar()        │
+          │ + verificarFondos()   │
+          └───────────────────────┘
+                    △
+                    ┆
+        ┌───────────┴───────────┐
+        ┆                       ┆
+┌───────┴───────┐     ┌─────────┴─────────┐
+│ProcesadorTarj│     │ ProcesadorPayPal  │
+│     eta       │     │                   │
+└───────────────┘     └───────────────────┘
+```
+
+#### 5.4. Interfaces vs Clases Abstractas
+
+Es común confundir interfaces con clases abstractas. Aquí está la diferencia:
+
+| Característica | Interfaz | Clase Abstracta |
+|----------------|----------|-----------------|
+| **Implementación** | Solo firma de métodos | Puede tener métodos implementados |
+| **Atributos** | No puede tener | Sí puede tener |
+| **Herencia múltiple** | Sí (una clase puede implementar múltiples interfaces) | No (una clase solo puede heredar de una clase) |
+| **Propósito** | Definir contrato de comportamiento | Proporcionar implementación base común |
+| **Uso** | "Puede hacer" | "Es un tipo de" |
+
+**Ejemplo en Kotlin**:
+
+```kotlin
+// Interfaz: Define QUÉ debe hacer
+interface IVolador {
+    fun volar()  // Sin implementación
+}
+
+// Clase abstracta: Define QUÉ y CÓMO (parcialmente)
+abstract class Animal(val nombre: String) {
+    // Tiene atributos
+    abstract fun hacerSonido()  // Sin implementación
+    
+    // Puede tener métodos con implementación
+    fun dormir() {
+        println("$nombre está durmiendo")
+    }
+}
+
+// Una clase puede heredar de una clase abstracta E implementar interfaces
+class Pajaro(nombre: String) : Animal(nombre), IVolador {
+    override fun hacerSonido() {
+        println("$nombre hace: pío pío")
+    }
+    
+    override fun volar() {
+        println("$nombre está volando")
+    }
+}
+```
+
+!!! tip "Cuándo usar interfaz vs clase abstracta"
+    - **Usa interfaz** cuando quieras definir un contrato de comportamiento que múltiples clases no relacionadas puedan implementar
+    - **Usa clase abstracta** cuando quieras proporcionar implementación común a clases relacionadas jerárquicamente
 
 ### 6. Ejemplos Completos de Diagramas de Clases
 
-#### 6.1. Sistema de Tienda Online
+Los ejemplos son fundamentales para entender cómo aplicar la teoría en práctica. A continuación, presentamos tres ejemplos completos de diferentes dominios, cada uno con su diagrama UML y código Kotlin correspondiente.
 
-A continuación, un ejemplo detallado de las clases con sus atributos para un sistema de **tienda online**:
+#### 6.1. Sistema de Biblioteca
 
-##### 6.1.1. Clase Usuario
+Este ejemplo modela una biblioteca con libros, usuarios, préstamos y multas.
+
+##### 6.1.1. Diagrama UML
+
+```
+┌─────────────────┐                    ┌─────────────────┐
+│    Biblioteca   │1                  *│      Libro      │
+│─────────────────│◆──────────────────│─────────────────│
+│ - nombre        │   contiene         │ - isbn          │
+│ - direccion     │                    │ - titulo        │
+│─────────────────│                    │ - autor         │
+│ + buscarLibro() │                    │ - disponible    │
+└─────────────────┘                    │─────────────────│
+                                       │ + prestar()     │
+┌─────────────────┐                    │ + devolver()    │
+│    Usuario      │                    └─────────────────┘
+│─────────────────│                           △
+│ - id            │                           │
+│ - nombre        │                           │ presta
+│ - email         │1                         *│
+│─────────────────│◇───────────────────────── │
+│ + prestarLibro()│   tiene                   │
+│ + devolverLibro │                    ┌──────┴──────────┐
+└─────────────────┘                    │    Prestamo     │
+        │                              │─────────────────│
+        │ genera                       │ - fechaPrestamo │
+        │                              │ - fechaDevol    │
+        │1                            *│ - estado        │
+        │                              │─────────────────│
+        └──────────────────────────────│ + calcularMult()│
+                                       └─────────────────┘
+```
+
+##### 6.1.2. Implementación en Kotlin
 
 ```kotlin
-class Usuario(
-    val idUsuario: Int,
-    var nombre: String,
-    var correoElectronico: String,
-    private var contraseña: String,
-    var direccion: String,
-    var metodoDePago: String
+data class Libro(
+    val isbn: String,
+    val titulo: String,
+    val autor: String,
+    var disponible: Boolean = true
 ) {
-    fun validarCredenciales(pass: String): Boolean {
-        return contraseña == pass
+    fun prestar(): Boolean {
+        return if (disponible) {
+            disponible = false
+            true
+        } else {
+            false
+        }
+    }
+    
+    fun devolver() {
+        disponible = true
+    }
+}
+
+class Usuario(
+    val id: Int,
+    var nombre: String,
+    var email: String
+) {
+    private val prestamos: MutableList<Prestamo> = mutableListOf()
+    
+    fun prestarLibro(libro: Libro): Prestamo? {
+        return if (libro.prestar()) {
+            val prestamo = Prestamo(this, libro)
+            prestamos.add(prestamo)
+            prestamo
+        } else {
+            null
+        }
+    }
+    
+    fun devolverLibro(prestamo: Prestamo) {
+        prestamo.libro.devolver()
+        prestamos.remove(prestamo)
+    }
+}
+
+class Prestamo(
+    val usuario: Usuario,
+    val libro: Libro,
+    val fechaPrestamo: LocalDate = LocalDate.now()
+) {
+    var fechaDevolucion: LocalDate? = null
+    var estado: String = "ACTIVO"
+    
+    fun calcularMulta(): Double {
+        val diasMaximos = 14
+        val fechaLimite = fechaPrestamo.plusDays(diasMaximos.toLong())
+        val hoy = LocalDate.now()
+        
+        return if (hoy.isAfter(fechaLimite)) {
+            val diasRetraso = ChronoUnit.DAYS.between(fechaLimite, hoy)
+            diasRetraso * 0.50  // 0.50€ por día
+        } else {
+            0.0
+        }
+    }
+}
+
+class Biblioteca(
+    val nombre: String,
+    val direccion: String
+) {
+    private val libros: MutableList<Libro> = mutableListOf()
+    
+    fun agregarLibro(libro: Libro) {
+        libros.add(libro)
+    }
+    
+    fun buscarLibro(titulo: String): List<Libro> {
+        return libros.filter { 
+            it.titulo.contains(titulo, ignoreCase = true) 
+        }
     }
 }
 ```
 
-**Atributos**:
+**Explicación del ejemplo**:
 
-- `idUsuario`: Identificador único del usuario
-- `nombre`: Nombre completo del usuario
-- `correoElectronico`: Dirección de correo electrónico
-- `contraseña`: Contraseña del usuario (privada)
-- `direccion`: Dirección de envío
-- `metodoDePago`: Método de pago preferido
+- **Composición (♦)**: La Biblioteca contiene Libros. Si se elimina la biblioteca, conceptualmente los libros "desaparecen" del sistema
+- **Agregación (◇)**: Un Usuario tiene Préstamos. Si eliminamos al usuario, los préstamos históricos podrían seguir existiendo
+- **Asociación**: Libro y Préstamo están asociados
 
-##### 6.1.2. Clase Producto
+#### 6.2. Sistema de Gestión Universitaria
+
+Este ejemplo modela estudiantes, cursos, profesores y matrículas.
+
+##### 6.2.1. Diagrama UML
+
+```
+┌──────────────┐                ┌──────────────┐
+│   Persona    │                │    Curso     │
+│──────────────│                │──────────────│
+│ - dni        │                │ - codigo     │
+│ - nombre     │                │ - nombre     │
+│ - apellido   │                │ - creditos   │
+│──────────────│                │──────────────│
+│ + getDatos() │                │ + getInfo()  │
+└──────────────┘                └──────────────┘
+       △                               △
+       │                               │
+    ┌──┴──┐                    ┌───────┴────────┐
+    │     │                    │                │
+┌───┴──┐ ┌┴────────┐          *│              1│
+│Estud.│ │Profesor │    ┌──────┴────────┐      │
+│──────│ │─────────│    │   Matricula   │──────┘
+│- mat │ │- depto  │    │───────────────│ imparte
+│──────│ │─────────│    │ - fecha       │
+│      │ │+ ense   │   *│ - semestre    │
+└──────┘ └─────────┘    │───────────────│
+    *│                  │               │1
+     └──────────────────┤ + calcularNot()│
+        se matricula en └───────────────┘
+```
+
+##### 6.2.2. Implementación en Kotlin
 
 ```kotlin
-class Producto(
-    val idProducto: Int,
+abstract class Persona(
+    val dni: String,
     var nombre: String,
-    var descripcion: String,
+    var apellido: String
+) {
+    fun getDatos(): String {
+        return "$nombre $apellido (DNI: $dni)"
+    }
+}
+
+class Estudiante(
+    dni: String,
+    nombre: String,
+    apellido: String,
+    val matricula: String
+) : Persona(dni, nombre, apellido) {
+    private val matriculas: MutableList<Matricula> = mutableListOf()
+    
+    fun matricularseEn(curso: Curso): Matricula {
+        val matricula = Matricula(this, curso)
+        matriculas.add(matricula)
+        return matricula
+    }
+}
+
+class Profesor(
+    dni: String,
+    nombre: String,
+    apellido: String,
+    val departamento: String
+) : Persona(dni, nombre, apellido) {
+    private val cursosImpartidos: MutableList<Curso> = mutableListOf()
+    
+    fun enseñar(curso: Curso) {
+        cursosImpartidos.add(curso)
+    }
+}
+
+class Curso(
+    val codigo: String,
+    val nombre: String,
+    val creditos: Int,
+    val profesor: Profesor
+) {
+    fun getInfo(): String {
+        return "$nombre ($codigo) - $creditos créditos - Prof: ${profesor.getDatos()}"
+    }
+}
+
+class Matricula(
+    val estudiante: Estudiante,
+    val curso: Curso,
+    val fecha: LocalDate = LocalDate.now(),
+    var semestre: String = "2024-1"
+) {
+    private val notas: MutableMap<String, Double> = mutableMapOf()
+    
+    fun agregarNota(evaluacion: String, nota: Double) {
+        notas[evaluacion] = nota
+    }
+    
+    fun calcularNotaFinal(): Double {
+        return if (notas.isNotEmpty()) {
+            notas.values.average()
+        } else {
+            0.0
+        }
+    }
+}
+```
+
+**Explicación del ejemplo**:
+
+- **Herencia (▷)**: Estudiante y Profesor heredan de Persona
+- **Asociación**: Estudiante se matricula en Curso a través de Matricula
+- **Asociación**: Profesor imparte Curso
+
+#### 6.3. Sistema de Comercio Electrónico
+
+Sistema completo de tienda online con usuarios, productos, carritos y órdenes.
+
+##### 6.3.1. Diagrama UML
+
+```
+┌──────────────┐                    ┌──────────────┐
+│   Usuario    │1                  1│   Carrito    │
+│──────────────│◆───────────────────│──────────────│
+│ - id         │   tiene            │ - id         │
+│ - nombre     │                    │ - total      │
+│ - email      │                    │──────────────│
+│──────────────│                    │ + agregar()  │
+│ + login()    │                    │ + calcular() │
+│ + comprar()  │                    └──────────────┘
+└──────────────┘                           │
+       │                                  *│ contiene
+       │                                   │
+       │1 realiza                   ┌──────┴──────────┐
+       │                            │  ItemCarrito    │
+       │                           *│─────────────────│
+       │                            │ - cantidad      │
+       └────────────────────────┐   │ - subtotal      │
+                               1│   └─────────────────┘
+                         ┌──────┴──────────┐     │
+                         │     Orden       │     │*
+                         │─────────────────│     │
+                         │ - numero        │     │
+                         │ - fecha         │     │1
+                         │ - estado        │     │
+                         │─────────────────│     │
+                         │ + procesar()    │┌────┴────────┐
+                         │ + cancelar()    ││  Producto   │
+                         └─────────────────┘│─────────────│
+                                            │ - id        │
+                                            │ - nombre    │
+                                            │ - precio    │
+                                            │ - stock     │
+                                            │─────────────│
+                                            │ + hayStock()│
+                                            └─────────────┘
+```
+
+##### 6.3.2. Implementación en Kotlin (simplificada)
+
+```kotlin
+class Usuario(
+    val id: Int,
+    var nombre: String,
+    var email: String
+) {
+    val carrito: Carrito = Carrito(this)
+    private val ordenes: MutableList<Orden> = mutableListOf()
+    
+    fun login(password: String): Boolean {
+        // Lógica de autenticación
+        return true
+    }
+    
+    fun comprar(): Orden? {
+        val orden = carrito.crearOrden()
+        if (orden != null) {
+            ordenes.add(orden)
+            carrito.vaciar()
+        }
+        return orden
+    }
+}
+
+class Producto(
+    val id: Int,
+    var nombre: String,
     var precio: Double,
     var stock: Int
 ) {
-    fun hayStock(): Boolean {
-        return stock > 0
+    fun hayStock(cantidad: Int = 1): Boolean {
+        return stock >= cantidad
     }
     
     fun reducirStock(cantidad: Int) {
-        if (cantidad <= stock) {
+        if (hayStock(cantidad)) {
             stock -= cantidad
         }
     }
 }
-```
 
-**Atributos**:
-
-- `idProducto`: Identificador único del producto
-- `nombre`: Nombre del producto
-- `descripcion`: Descripción detallada
-- `precio`: Precio del producto
-- `stock`: Cantidad disponible en inventario
-
-##### 6.1.3. Clase Carrito de Compras
-
-```kotlin
-class CarritoCompras(
-    val idCarrito: Int,
-    val usuario: Usuario
+class ItemCarrito(
+    val producto: Producto,
+    var cantidad: Int
 ) {
-    private val productos: MutableList<ProductoCarrito> = mutableListOf()
-    var subtotal: Double = 0.0
-        private set
-    var impuestos: Double = 0.0
-        private set
+    val subtotal: Double
+        get() = producto.precio * cantidad
+}
+
+class Carrito(val usuario: Usuario) {
+    private val items: MutableList<ItemCarrito> = mutableListOf()
+    val total: Double
+        get() = items.sumOf { it.subtotal }
     
     fun agregarProducto(producto: Producto, cantidad: Int) {
-        productos.add(ProductoCarrito(producto, cantidad))
-        calcularSubtotal()
-    }
-    
-    private fun calcularSubtotal() {
-        subtotal = productos.sumOf { it.producto.precio * it.cantidad }
-        impuestos = subtotal * 0.21  // IVA del 21%
-    }
-    
-    fun getTotal(): Double = subtotal + impuestos
-}
-
-data class ProductoCarrito(val producto: Producto, val cantidad: Int)
-```
-
-**Atributos**:
-
-- `idCarrito`: Identificador único del carrito
-- `productos`: Lista de productos añadidos
-- `subtotal`: Monto total antes de impuestos
-- `impuestos`: Monto total de impuestos
-
-##### 6.1.4. Clase Orden de Compra
-
-```kotlin
-class OrdenCompra(
-    val idOrden: Int,
-    val usuario: Usuario,
-    productos: List<ProductoCarrito>
-) {
-    private val productos: List<ProductoCarrito> = productos.toList()
-    var subtotal: Double = 0.0
-        private set
-    var impuestos: Double = 0.0
-        private set
-    var envio: Double = 0.0
-    var total: Double = 0.0
-        private set
-    
-    init {
-        calcularTotales()
-    }
-    
-    private fun calcularTotales() {
-        subtotal = productos.sumOf { it.producto.precio * it.cantidad }
-        impuestos = subtotal * 0.21
-        total = subtotal + impuestos + envio
-    }
-}
-```
-
-**Atributos**:
-
-- `idOrden`: Identificador único de la orden
-- `productos`: Lista de productos comprados
-- `subtotal`: Monto antes de impuestos y envío
-- `impuestos`: Monto de impuestos
-- `envio`: Costo de envío
-- `total`: Monto total final
-
-##### 6.1.5. Clase Categoría
-
-```kotlin
-class Categoria(
-    val idCategoria: Int,
-    var nombre: String
-) {
-    private val productos: MutableList<Producto> = mutableListOf()
-    
-    fun agregarProducto(producto: Producto) {
-        productos.add(producto)
-    }
-    
-    fun getProductos(): List<Producto> = productos.toList()
-}
-```
-
-**Atributos**:
-
-- `idCategoria`: Identificador único de la categoría
-- `nombre`: Nombre de la categoría
-
-##### 6.1.6. Clase Comentarios
-
-```kotlin
-class Comentario(
-    val idComentario: Int,
-    val producto: Producto,
-    val usuario: Usuario,
-    var comentario: String,
-    val fecha: Date
-) {
-    var calificacion: Int = 0
-        set(value) {
-            field = if (value in 1..5) value else 0
+        val itemExistente = items.find { it.producto.id == producto.id }
+        if (itemExistente != null) {
+            itemExistente.cantidad += cantidad
+        } else {
+            items.add(ItemCarrito(producto, cantidad))
         }
+    }
+    
+    fun calcularTotal(): Double = total
+    
+    fun crearOrden(): Orden? {
+        return if (items.isNotEmpty()) {
+            Orden(usuario, items.toList())
+        } else {
+            null
+        }
+    }
+    
+    fun vaciar() {
+        items.clear()
+    }
+}
+
+class Orden(
+    val usuario: Usuario,
+    items: List<ItemCarrito>,
+    val numero: String = generarNumeroOrden(),
+    val fecha: LocalDateTime = LocalDateTime.now()
+) {
+    var estado: String = "PENDIENTE"
+    private val items: List<ItemCarrito> = items.toList()
+    
+    val total: Double = items.sumOf { it.subtotal }
+    
+    fun procesar(): Boolean {
+        // Verificar stock
+        val todosDisponibles = items.all { 
+            it.producto.hayStock(it.cantidad) 
+        }
+        
+        return if (todosDisponibles) {
+            // Reducir stock
+            items.forEach { 
+                it.producto.reducirStock(it.cantidad) 
+            }
+            estado = "PROCESADA"
+            true
+        } else {
+            estado = "CANCELADA"
+            false
+        }
+    }
+    
+    fun cancelar() {
+        estado = "CANCELADA"
+    }
+    
+    companion object {
+        private var contador = 0
+        fun generarNumeroOrden(): String {
+            return "ORD-${++contador}"
+        }
+    }
 }
 ```
 
-**Atributos**:
+**Explicación del ejemplo**:
 
-- `idComentario`: Identificador único del comentario
-- `producto`: Referencia al producto
-- `usuario`: Usuario que escribió el comentario
-- `comentario`: Contenido del comentario
-- `fecha`: Fecha de creación
-- `calificacion`: Puntuación del 1 al 5
+- **Composición (♦)**: Usuario tiene Carrito (composición fuerte)
+- **Asociación**: Usuario realiza Orden
+- **Agregación**: Carrito contiene ItemCarrito, que referencia Producto
 
-##### 6.1.7. Diagrama de Clases Simplificado
+!!! note "Punto importante"
+    Estos ejemplos muestran cómo los diagramas UML se traducen directamente a código. La estructura del diagrama guía la implementación, estableciendo las relaciones entre clases, los atributos y métodos necesarios.
 
-```
-┌─────────────┐       ┌──────────────┐       ┌────────────────┐
-│   Usuario   │1────* │CarritoCompras│1────* │ProductoCarrito │
-└─────────────┘       └──────────────┘       └────────────────┘
-       │1                                              │*
-       │                                               │
-       │1                                              │
-┌─────────────┐                              ┌────────────────┐
-│OrdenCompra  │*────────────────────────────*│   Producto     │
-└─────────────┘                              └────────────────┘
-                                                      │*
-                                                      │
-                                                      │*
-                                              ┌────────────────┐
-                                              │   Categoria    │
-                                              └────────────────┘
-```
-
-#### 6.2. Otros Ejemplos de Sistemas
-
-##### 6.2.1. Clínica Veterinaria
-
-<figure markdown="span">
-  ![Diagrama de clases clínica veterinaria](assets/ejemplo-veterinaria.jpg)
-  <figcaption>Diagrama de clases para sistema de clínica veterinaria</figcaption>
-</figure>
-
-**Clases principales**:
-
-- Cliente
-- Mascota
-- Veterinario
-- Cita
-- Tratamiento
-
-##### 6.2.2. Zoológico
-
-<figure markdown="span">
-  ![Diagrama de clases zoológico](assets/ejemplo-zoologico.png)
-  <figcaption>Diagrama de clases para sistema de zoológico</figcaption>
-</figure>
-
-**Clases principales**:
-
-- Animal
-- Hábitat
-- Cuidador
-- Visitante
-- Recinto
-
-##### 6.2.3. Tienda
-
-<figure markdown="span">
-  ![Diagrama de clases de una tienda](assets/ejemplo-tienda.png)
-  <figcaption>Diagrama de clases para sistema de tienda</figcaption>
-</figure>
-
-**Clases principales**:
-
-- Producto
-- Cliente
-- Pedido
-- Categoría
-- Pago
-
-##### 6.2.4. Gestión de Biblioteca
-
-<figure markdown="span">
-  ![Diagrama de clases gestión de biblioteca](assets/ejemplo-biblioteca.png)
-  <figcaption>Diagrama de clases para sistema de biblioteca</figcaption>
-</figure>
-
-**Clases principales**:
-
-- Libro
-- Usuario
-- Préstamo
-- Autor
-- Editorial
-
-##### 6.2.5. Centro Educativo
-
-<figure markdown="span">
-  ![Diagrama de clases centro educativo](assets/ejemplo-centro-educativo.png)
-  <figcaption>Diagrama de clases para sistema de centro educativo</figcaption>
-</figure>
-
-**Clases principales**:
-
-- Estudiante
-- Profesor
-- Curso
-- Matrícula
-- Calificación
 
 ### 7. Mejores Prácticas en Diagramas de Clases
 
-Para crear diagramas de clases efectivos, es importante seguir ciertas recomendaciones:
+Crear un buen diagrama de clases no es solo conocer la notación UML - es entender cuándo, cómo y por qué usarla. Estas prácticas te ayudarán a crear diagramas efectivos y útiles.
 
-#### 7.1. División de Diagramas
+#### 7.1. Principio de Responsabilidad Única (SRP)
 
-**Recomendado**: Dividir diagramas grandes en otros más pequeños que se puedan vincular.
+**Definición**: Cada clase debe tener una única responsabilidad o razón para cambiar.
 
-**Evitar**: Crear diagramas gigantes e incoherentes.
+**Error común**: Clases que hacen "demasiado"
 
-**Razón**: Los diagramas tienden a volverse incoherentes a medida que crecen.
+```kotlin
+// ❌ MAL: Clase con múltiples responsabilidades
+class Usuario {
+    // Gestión de usuario
+    fun login()
+    fun logout()
+    fun cambiarPassword()
+    
+    // Gestión de permisos
+    fun tienePermiso(recurso: String): Boolean
+    fun agregarPermiso(recurso: String)
+    
+    // Notificaciones
+    fun enviarEmail(mensaje: String)
+    fun enviarSMS(mensaje: String)
+    
+    // Persistencia
+    fun guardarEnBaseDatos()
+    fun cargarDesdeBaseDatos()
+}
+```
 
-#### 7.2. Niveles de Detalle
+**Mejor enfoque**: Separar responsabilidades
 
-Lo ideal en cuanto a los niveles de detalle es:
+```kotlin
+// ✅ BIEN: Cada clase tiene una responsabilidad
+class Usuario(
+    val id: Int,
+    var nombre: String,
+    var email: String
+) {
+    fun cambiarPassword(nuevaPassword: String) {
+        // Solo gestión de usuario
+    }
+}
 
-- **Vista de alto nivel**: Usar notación simple de clases
-- **Vista detallada**: Crear diagramas separados según necesidad
-- **Vinculación**: Los diagramas detallados pueden vincularse a los de alto nivel
+class GestorPermisos {
+    fun tienePermiso(usuario: Usuario, recurso: String): Boolean {
+        // Solo gestión de permisos
+    }
+}
 
-#### 7.3. Claridad Visual
+class ServicioNotificaciones {
+    fun enviarEmail(usuario: Usuario, mensaje: String) {
+        // Solo notificaciones
+    }
+}
+
+class RepositorioUsuario {
+    fun guardar(usuario: Usuario) {
+        // Solo persistencia
+    }
+}
+```
+
+**En el diagrama**:
+
+```
+┌──────────┐     usa    ┌─────────────────┐
+│ Usuario  │────────────│ GestorPermisos  │
+└──────────┘            └─────────────────┘
+     │
+     │ usa
+     │
+  ┌──┴───────────────────┐
+  │ServicioNotificaciones│
+  └──────────────────────┘
+```
+
+#### 7.2. Gestión de Complejidad: Divide y Vencerás
+
+**Problema**: Diagramas con 50+ clases son ilegibles
+
+**Solución**: Crear múltiples diagramas organizados por:
+
+1. **Módulos o paquetes**
+   - Diagrama de "Vista General" (alto nivel)
+   - Diagramas detallados por módulo
+
+2. **Capas de arquitectura**
+   - Diagrama de capa de presentación
+   - Diagrama de capa de negocio
+   - Diagrama de capa de datos
+
+3. **Casos de uso o funcionalidades**
+   - Diagrama del módulo de "Autenticación"
+   - Diagrama del módulo de "Carrito de Compras"
+   - Diagrama del módulo de "Pagos"
+
+**Ejemplo de organización**:
+
+```
+Sistema de E-Commerce (Vista General)
+     │
+     ├─ Módulo Usuarios
+     │    └─ Diagrama detallado: Usuario, Autenticación, Permisos
+     │
+     ├─ Módulo Productos
+     │    └─ Diagrama detallado: Producto, Categoría, Inventario
+     │
+     ├─ Módulo Ventas
+     │    └─ Diagrama detallado: Carrito, Orden, Pago
+     │
+     └─ Módulo Envíos
+          └─ Diagrama detallado: Dirección, Transportista, Seguimiento
+```
+
+!!! tip "Regla práctica"
+    Si tu diagrama no cabe cómodamente en una hoja A4 o pantalla sin hacer zoom, probablemente necesita dividirse.
+
+#### 7.3. Claridad Visual: La estética importa
+
+Un buen diagrama no solo es correcto técnicamente, sino también visualmente claro.
 
 **Hacer**:
 
-- Evitar que las líneas se crucen (en la medida de lo posible)
-- Usar colores para agrupar módulos comunes
-- Mantener una distribución ordenada
+✅ **Evitar cruces de líneas**
+- Reorganiza las clases para minimizar líneas cruzadas
+- Usa colores o estilos diferentes para diferentes tipos de relaciones
+
+✅ **Agrupar clases relacionadas**
+- Clases del mismo módulo/paquete cerca unas de otras
+- Usa cuadros de color para delimitar grupos
+
+✅ **Distribución equilibrada**
+- No amontonar todo en una esquina
+- Dejar espacio en blanco (whitespace)
 
 **Evitar**:
 
-- Líneas que se superponen excesivamente
-- Diagramas abarrotados
-- Mezclar demasiados conceptos en un solo diagrama
+❌ **Diagramas abarrotados**: Espacio insuficiente entre elementos
+❌ **Líneas superpuestas**: Dificultan seguir las relaciones
+❌ **Mezclar niveles de detalle**: No mezclar diagramas de alto nivel con detalles de implementación
 
-#### 7.4. Uso de Color
+**Ejemplo de buena vs mala distribución**:
 
-Usar **diferentes colores** para diferentes grupos de clases:
+```
+❌ MAL: Amontonado
+┌─────┐┌─────┐┌─────┐
+│  A  ││  B  ││  C  │
+└─────┘└─────┘└─────┘
+┌─────┐┌─────┐
+│  D  ││  E  │
+└─────┘└─────┘
 
-- 🔵 **Azul**: Clases de modelo/dominio
-- 🟢 **Verde**: Clases de servicios
-- 🟡 **Amarillo**: Clases de utilidades
-- 🔴 **Rojo**: Clases de excepciones
+✅ BIEN: Espaciado
+┌─────┐         ┌─────┐
+│  A  │─────────│  B  │
+└─────┘         └─────┘
+   │               │
+   │               │
+┌──┴───┐        ┌──┴───┐
+│  D   │        │  C   │
+└──────┘        └──────┘
+                   │
+               ┌───┴───┐
+               │   E   │
+               └───────┘
+```
 
-Esto ayuda al lector a diferenciar entre los diversos grupos.
+#### 7.4. Uso Estratégico del Color
+
+Los colores mejoran significativamente la legibilidad cuando se usan con propósito.
+
+**Esquema recomendado**:
+
+- 🔵 **Azul**: Clases del dominio/modelo (entidades del negocio)
+- 🟢 **Verde**: Clases de servicios/lógica de negocio
+- 🟡 **Amarillo**: Clases de utilidades/helpers
+- 🔴 **Rojo**: Clases de excepciones/errores
+- 🟣 **Púrpura**: Interfaces
+- ⚫ **Gris**: Clases del framework o librerías externas
+
+**Ejemplo**:
+
+```
+     ┌────────────────┐
+     │  <<interface>> │  (Púrpura)
+     │  IRepositorio  │
+     └────────────────┘
+            △
+            │
+     ┌──────┴────────┐
+     │  (Verde)      │
+     │ ServicioUser  │
+     └───────────────┘
+            │ usa
+     ┌──────┴────────┐
+     │  (Azul)       │
+     │   Usuario     │
+     └───────────────┘
+```
+
+!!! warning "Precaución con colores"
+    - No uses demasiados colores (máximo 5-6)
+    - Asegúrate de que funciona en impresión blanco y negro
+    - Incluye una leyenda explicando qué significa cada color
+
+#### 7.5. Nombrado Consistente y Significativo
+
+**Convenciones de nombres**:
+
+1. **Clases**: PascalCase, sustantivos singulares
+   - ✅ `Usuario`, `CarritoCompras`, `OrdenDePago`
+   - ❌ `usuario`, `Carritos`, `crearOrden`
+
+2. **Interfaces**: Prefijo `I` o sufijo descriptivo
+   - ✅ `IRepositorio`, `IProcesador`, `Serializable`
+   - ❌ `InterfazRepositorio`, `ImpRepositorio`
+
+3. **Métodos**: camelCase, verbos
+   - ✅ `calcularTotal()`, `enviarEmail()`, `esValido()`
+   - ❌ `CalcularTotal()`, `total()`, `validacion()`
+
+4. **Atributos**: camelCase, sustantivos
+   - ✅ `nombre`, `fechaCreacion`, `precioUnitario`
+   - ❌ `Nombre`, `fecha_creacion`, `precio$unitario`
+
+**Nombres descriptivos vs genéricos**:
+
+```kotlin
+// ❌ Nombres genéricos
+class Gestor {
+    fun procesar(datos: Any): Any
+}
+
+// ✅ Nombres descriptivos
+class GestorFacturas {
+    fun procesarFactura(factura: Factura): ResultadoProceso
+}
+```
+
+#### 7.6. Documentación del Diagrama
+
+Un buen diagrama incluye:
+
+1. **Título**: Qué representa el diagrama
+2. **Versión/Fecha**: Cuándo se creó o actualizó
+3. **Autor**: Quién lo creó
+4. **Leyenda**: Explicación de símbolos no estándar o colores
+5. **Notas**: Decisiones de diseño importantes
+6. **Nivel de detalle**: ¿Es conceptual, lógico o físico?
+
+**Ejemplo de encabezado**:
+
+```
+┌────────────────────────────────────────────────────────┐
+│ Sistema de E-Commerce - Módulo de Ventas               │
+│ Versión: 2.1                    Fecha: 2024-03-15      │
+│ Autor: Equipo de Arquitectura                          │
+│ Nivel: Diseño Lógico (con detalles de implementación)  │
+└────────────────────────────────────────────────────────┘
+
+Leyenda:
+  🔵 Clases del dominio
+  🟢 Servicios
+  🟡 Utilidades
+```
+
+#### 7.7. Iteración y Refinamiento
+
+**Los diagramas evolucionan**. No intentes crear el diagrama perfecto en el primer intento.
+
+**Proceso iterativo recomendado**:
+
+1. **Boceto inicial** (5-10 min): Clases principales, relaciones básicas
+2. **Primera revisión** (30 min): Añadir atributos y métodos clave
+3. **Segunda revisión** (1 hora): Refinar relaciones, multiplicidad
+4. **Validación** (con equipo): ¿Falta algo? ¿Hay algo innecesario?
+5. **Refinamiento final**: Claridad visual, documentación
+
+!!! tip "Consejo práctico"
+    Usa pizarra o papel para los primeros bocetos. Las herramientas digitales vienen después, cuando la estructura esté más clara.
 
 ### 8. Herramientas para Crear Diagramas de Clases
 
-Existen diversas herramientas para crear diagramas de clases UML, tanto online como de escritorio. El uso de estas herramientas facilita la creación, edición y mantenimiento de los diagramas, pero a la vez también es posible dibujarlos a manos, siendo algo mas rápido para bocetos iniciales.
+La elección de herramienta afecta tu productividad y la calidad del resultado. No existe una herramienta perfecta para todos los casos.
 
-Existen otras herramientas declarativas que permiten generar diagramas de clases a partir del código fuente, lo que puede ser útil para documentación automática y que al final nos ahorra tiempo. Una de ellas es PlantUML, que permite crear diagramas a partir de un lenguaje de texto sencillo.
+#### 8.1. Herramientas Online (En la nube)
 
-#### 8.1. Herramientas Online
+**Draw.io / Diagrams.net**
+- **Precio**: Gratuito
+- **Ventajas**:
+  - No requiere instalación ni registro
+  - Integración con Google Drive, OneDrive
+  - Exporta a múltiples formatos (PNG, SVG, PDF)
+  - Muy flexible, no solo UML
+- **Desventajas**:
+  - No valida UML (puedes crear diagramas incorrectos)
+  - Sin generación automática desde código
+- **Cuándo usar**: Proyectos pequeños, bocetos rápidos, equipos sin presupuesto
 
-- **Draw.io** (diagrams.net): Gratuito, sin registro
-- **Lucidchart**: Versión gratuita limitada
-- **Creately**: Plantillas predefinidas
-- **PlantUML Online**: Diagramas mediante texto
+**Lucidchart**
+- **Precio**: Freemium (planes desde $7.95/mes)
+- **Ventajas**:
+  - Colaboración en tiempo real
+  - Plantillas predefinidas excelentes
+  - Integración con Confluence, Google Workspace
+  - Historial de versiones
+- **Desventajas**:
+  - Límite de documentos en versión gratuita
+  - Requiere conexión a internet
+- **Cuándo usar**: Equipos distribuidos, presentaciones profesionales
 
-#### 8.2. Herramientas de Escritorio
+**PlantUML Online**
+- **Precio**: Gratuito
+- **Ventajas**:
+  - Basado en texto (fácil de versionar en Git)
+  - Generación automática del layout
+  - Sintaxis simple y rápida
+- **Desventajas**:
+  - Control limitado sobre posicionamiento
+  - Curva de aprendizaje para la sintaxis
+- **Cuándo usar**: Documentación en código, CI/CD, desarrolladores técnicos
 
-- **Visual Paradigm**: Profesional, versión community gratuita
-- **StarUML**: Open source
-- **Enterprise Architect**: Profesional de pago
-- **Umbrello**: Para Linux, open source
+**Ejemplo PlantUML**:
 
-#### 8.3. Integradas en IDEs
+```plantuml
+@startuml
+class Usuario {
+  -id: Int
+  -nombre: String
+  +login()
+}
 
-- **IntelliJ IDEA**: Plugin de diagramas UML
-- **Eclipse**: Papyrus UML
-- **Visual Studio**: Class Designer
-- **NetBeans**: UML plugin
+class Orden {
+  -numero: String
+  -fecha: Date
+}
 
-#### 8.4. Generación desde Código
+Usuario "1" -- "*" Orden: realiza
+@enduml
+```
 
-- **PlantUML**: Genera diagramas desde texto
-- **Mermaid**: Diagramas en markdown
-- **IntelliJ IDEA**: Genera diagramas desde código Kotlin/Java
+#### 8.2. Herramientas de Escritorio (Instalables)
 
-### 9. Puntos Clave para Recordar
+**Visual Paradigm**
+- **Precio**: Community Edition gratuita, Professional desde $99
+- **Ventajas**:
+  - Muy completo, soporte para todos los diagramas UML
+  - Generación de código bidireccional (Java, C++, C#, Python)
+  - Ingeniería inversa desde código existente
+  - Validación de UML
+- **Desventajas**:
+  - Interfaz puede ser abrumadora para principiantes
+  - Versión gratuita con limitaciones
+- **Cuándo usar**: Proyectos profesionales grandes, necesidad de generación de código
 
-Los siguientes puntos son esenciales para trabajar con diagramas de clases:
+**StarUML**
+- **Precio**: $89 licencia perpetua (o gratuito con limitaciones)
+- **Ventajas**:
+  - Interfaz moderna e intuitiva
+  - Soporte para extensiones
+  - Generación de código (Java, C++, C#, Python)
+- **Desventajas**:
+  - Sin colaboración en tiempo real
+  - Comunidad más pequeña que otras herramientas
+- **Cuándo usar**: Desarrolladores individuales, proyectos medianos
 
-**Sobre la notación**:    
+**Enterprise Architect (Sparx)**
+- **Precio**: Desde €130 por usuario
+- **Ventajas**:
+  - Estándar de la industria
+  - Soporte completo de UML 2.5
+  - Gestión de requisitos, trazabilidad
+  - Trabajo en equipo con repositorio compartido
+- **Desventajas**:
+  - Curva de aprendizaje pronunciada
+  - Interfaz anticuada
+  - Caro para equipos pequeños
+- **Cuándo usar**: Empresas grandes, proyectos complejos, cumplimiento de estándares
 
-- Una clase se representa con una caja de tres compartimentos
-- Los atributos llevan visibilidad (+, -, #) y tipo
-- Los métodos especifican parámetros y tipo de retorno
-- Los miembros estáticos se subrayan
-- Las clases abstractas se escriben en *cursiva*
+**Umbrello (Linux)**
+- **Precio**: Gratuito (open source)
+- **Ventajas**:
+  - Integrado en ecosistema KDE
+  - Ligero y rápido
+  - Generación de código
+- **Desventajas**:
+  - Menos features que alternativas comerciales
+  - Solo para Linux
+- **Cuándo usar**: Usuarios de Linux, proyectos open source
 
-**Sobre las relaciones**:    
+#### 8.3. Integradas en IDEs (Para desarrolladores)
 
-- Asociación (`───`): Relación general
-- Agregación (`◇───`): Partes independientes
-- Composición (`♦───`): Partes dependientes
-- Herencia (`───▷`): Relación "es un"
-- Dependencia (`- - →`): Uso temporal
-- Implementación (`- - ▷`): Realiza interfaz
+**IntelliJ IDEA (JetBrains)**
+- **Características**:
+  - Plugin nativo de diagramas UML
+  - Generación desde código Kotlin/Java existente
+  - Navegación código ↔ diagrama
+  - Refactoring visual
+- **Ventajas**:
+  - Siempre sincronizado con el código
+  - No requiere herramienta adicional
+- **Desventajas**:
+  - Solo disponible en versión Professional (de pago)
+  - Menos opciones de formato que herramientas dedicadas
+- **Cuándo usar**: Desarrollo diario en Kotlin/Java
 
-**Sobre multiplicidad**:
+**Eclipse + Papyrus**
+- **Características**:
+  - Plugin gratuito Papyrus para UML 2.5
+  - Soporte completo de diagramas
+  - Generación de código Java
+- **Ventajas**:
+  - Gratuito y open source
+  - Muy completo
+- **Desventajas**:
+  - Configuración compleja
+  - Rendimiento puede ser lento
+- **Cuándo usar**: Proyectos Java con Eclipse
 
-- `1`: Exactamente uno
-- `0..1`: Opcional
-- `*`: Cero o muchos
-- `1..*`: Al menos uno
+**Visual Studio + Class Designer**
+- **Características**:
+  - Class Designer nativo en Visual Studio
+  - Generación desde código C#/VB.NET
+  - Sincronización bidireccional
+- **Ventajas**:
+  - Integrado nativamente
+  - Visual Studio Community es gratuito
+- **Desventajas**:
+  - Solo diagramas de clases (no otros UML)
+  - Solo para .NET
+- **Cuándo usar**: Desarrollo .NET
 
-**Mejores prácticas**:
+#### 8.4. Generación Automática desde Código
 
-- Dividir diagramas grandes en módulos
-- Evitar cruzar líneas innecesariamente
-- Usar colores para agrupar conceptos
-- Mantener consistencia en la notación
+**PlantUML (modo local)**
+- **Instalación**: `brew install plantuml` (Mac) o descarga JAR
+- **Uso**: Crea archivo `.puml` y genera PNG/SVG
+- **Integración**: Plugins para VSCode, IntelliJ, Eclipse
+- **Ventaja**: Versionable en Git junto al código
 
-### 10. Conclusiones
+**Mermaid**
+- **Uso**: Sintaxis Markdown para diagramas
+- **Integración**: GitHub, GitLab, Notion
+- **Ejemplo**:
 
-- El diagrama de clases es **fundamental** en el diseño orientado a objetos
-- Representa la **estructura estática** del sistema
-- Es el diagrama más utilizado en el desarrollo de software
-- Permite visualizar clases, atributos, métodos y relaciones
-- Facilita la **comunicación** entre analistas, desarrolladores y clientes
-- Sirve como **documentación** del sistema
-- Es la base para la **implementación** del código
-- Dominar la notación UML es esencial para cualquier desarrollador
+```mermaid
+classDiagram
+    Usuario "1" -- "*" Orden
+    class Usuario{
+        +String nombre
+        +login()
+    }
+    class Orden{
+        +Date fecha
+        +procesar()
+    }
+```
+
+**IntelliJ IDEA Diagram Generator**
+- **Uso**: Click derecho en clase → "Diagrams" → "Show Diagram"
+- **Ventaja**: Genera automáticamente desde código existente
+- **Limitación**: Solo para código Kotlin/Java en el proyecto
+
+#### 8.5. Recomendaciones por Contexto
+
+| Contexto | Herramienta Recomendada | Alternativa |
+|----------|-------------------------|-------------|
+| **Aprendizaje UML** | Draw.io | Lucidchart (Free) |
+| **Bocetos rápidos** | Pizarra/Papel | Draw.io |
+| **Proyecto pequeño** | Draw.io, PlantUML | StarUML |
+| **Equipo distribuido** | Lucidchart | Miro + Draw.io |
+| **Proyecto profesional** | Visual Paradigm | Enterprise Architect |
+| **Documentación en código** | PlantUML | Mermaid |
+| **Desarrollo diario** | IDE integrado | PlantUML |
+| **Presentaciones** | Lucidchart | PowerPoint + Draw.io |
+
+!!! tip "Consejo final"
+    Comienza simple (Draw.io o papel). A medida que tu proyecto crece y necesitas features avanzadas (generación de código, colaboración, versionado), entonces invierte en herramientas más robustas.
+
+
+### 9. Puntos Clave para Recordar: Resumen Ejecutivo
+
+Estos son los conceptos fundamentales que debes dominar sobre diagramas de clases. Revisa esta sección antes de crear cualquier diagrama.
+
+#### 9.1. Sobre la Notación Básica
+
+**Estructura de una clase**:
+```
+┌─────────────────────┐
+│   NombreClase       │ ← PascalCase, sustantivo singular
+├─────────────────────┤
+│ - atributo: Tipo    │ ← Visibilidad + nombre + tipo
+│ # otroAtrib: Tipo   │
+├─────────────────────┤
+│ + metodo(): Tipo    │ ← Visibilidad + nombre + parámetros + retorno
+│ - privado(): Unit   │
+└─────────────────────┘
+```
+
+**Visibilidad**:
+- `+` public: Accesible desde cualquier lugar
+- `-` private: Solo dentro de la clase
+- `#` protected: Clase y subclases
+- `~` package: Dentro del mismo paquete
+
+**Elementos especiales**:
+- *Cursiva*: Clase abstracta o método abstracto
+- <u>Subrayado</u>: Miembro estático
+- `<<stereotype>>`: Estereotipo (interface, abstract, etc.)
+
+#### 9.2. Sobre las Relaciones: Guía Rápida
+
+| Relación | Símbolo | Cuándo usar | Ejemplo | Fuerza |
+|----------|---------|-------------|---------|--------|
+| **Dependencia** | `- - →` | Uso temporal | Calculadora usa Math | Muy débil |
+| **Asociación** | `───` | Conexión general | Persona tiene Mascota | Débil |
+| **Agregación** | `◇───` | "Tiene un" (independiente) | Equipo tiene Jugador | Media |
+| **Composición** | `♦───` | "Parte de" (dependiente) | Coche tiene Motor | Fuerte |
+| **Herencia** | `───▷` | "Es un" | Perro es Animal | Muy fuerte |
+| **Implementación** | `- - ▷` | Implementa interfaz | Avion implementa IVolador | Muy fuerte |
+
+**Regla mnemotécnica para relaciones**:
+
+- **Flecha sólida (───▷)**: Herencia ("es un")
+- **Flecha discontinua (- - ▷)**: Implementación de interfaz
+- **Rombo vacío (◇)**: Agregación ("tiene un", independiente)
+- **Rombo lleno (♦)**: Composición ("parte de", dependiente)
+- **Línea simple (───)**: Asociación (general)
+- **Línea discontinua (- - →)**: Dependencia (uso temporal)
+
+#### 9.3. Sobre Multiplicidad
+
+```
+A ───────────────── B
+  1              *
+```
+
+| Notación     | Significado                 | Ejemplo                                     |
+|--------------|-----------------------------|---------------------------------------------|
+| `1`          | Exactamente uno             | Cada persona tiene exactamente un DNI       |
+| `0..1`       | Cero o uno (opcional)       | Un cliente puede tener 0 o 1 carrito activo |
+| `*` o `0..*` | Cero o muchos               | Un usuario puede tener 0 o más órdenes      |
+| `1..*`       | Uno o muchos (al menos uno) | Un equipo tiene al menos 1 jugador          |
+| `n`          | Exactamente n               | Un dado tiene exactamente 6 caras           |
+| `m..n`       | Rango específico            | Un coche tiene entre 2 y 10 ruedas          |
+
+**Cómo leer**: 
+```
+Usuario  1 ─────── * Orden
+```
+Se lee: "Un Usuario realiza 0 o muchas Órdenes" y "Una Orden pertenece a exactamente 1 Usuario"
+
+#### 9.4. Mejores Prácticas: Checklist
+
+Antes de finalizar tu diagrama, verifica:
+
+**Estructura**:
+- [ ] ¿Cada clase tiene un nombre significativo y único?
+- [ ] ¿Los atributos tienen visibilidad y tipo especificados?
+- [ ] ¿Los métodos tienen parámetros y tipo de retorno?
+- [ ] ¿Los miembros estáticos están subrayados?
+- [ ] ¿Las clases abstractas están en cursiva?
+
+**Relaciones**:
+- [ ] ¿Cada relación tiene su tipo correcto?
+- [ ] ¿La multiplicidad está indicada en ambos extremos?
+- [ ] ¿Los roles están nombrados cuando es necesario?
+- [ ] ¿Las direcciones de navegación son correctas?
+
+**Claridad**:
+- [ ] ¿El diagrama cabe en una página/pantalla sin scroll?
+- [ ] ¿Las líneas se cruzan lo mínimo posible?
+- [ ] ¿Hay espacio suficiente entre elementos?
+- [ ] ¿Se usan colores de forma consistente?
+
+**Contenido**:
+- [ ] ¿Están todas las clases importantes?
+- [ ] ¿Hay clases innecesarias?
+- [ ] ¿El nivel de detalle es consistente?
+- [ ] ¿Hay documentación/leyenda?
+
+#### 9.5. Errores Comunes a Evitar
+
+| Error                         | Problema                              | Solución                             |
+|-------------------------------|---------------------------------------|--------------------------------------|
+| **Sobrecarga de información** | Diagrama con 50+ clases               | Dividir en módulos                   |
+| **Falta de multiplicidad**    | Relaciones sin `1`, `*`, etc.         | Siempre especificar multiplicidad    |
+| **Relación incorrecta**       | Usar asociación en vez de composición | Entender diferencia entre relaciones |
+| **Nombres genéricos**         | Clases como "Gestor", "Manager"       | Usar nombres descriptivos            |
+| **Mezclar niveles**           | Clases de dominio con clases UI       | Separar por capas                    |
+| **Sin visibilidad**           | Atributos/métodos sin `+`, `-`, etc.  | Siempre especificar visibilidad      |
+| **Dependencias circulares**   | A depende de B que depende de A       | Refactorizar para romper ciclo       |
+
+### 10. Conclusiones: El Valor de los Diagramas de Clases
+
+Los diagramas de clases son mucho más que simples dibujos técnicos. Son la **herramienta fundamental** para comunicar, diseñar y documentar sistemas orientados a objetos.
+
+#### 10.1. Recapitulación de Conceptos Clave
+
+A lo largo de este documento has aprendido:
+
+1. **Fundamentos**: 
+   - Los diagramas de clases representan la estructura estática de un sistema
+   - Son la base para la implementación del código
+   - Utilizan notación UML estándar reconocida mundialmente
+
+2. **Elementos**:
+   - **Clases**: Tres compartimentos (nombre, atributos, métodos)
+   - **Relaciones**: Seis tipos con diferentes niveles de acoplamiento
+   - **Interfaces**: Contratos de comportamiento
+
+3. **Relaciones**:
+   - Herencia (es-un): Para especialización
+   - Composición (parte-de): Relación fuerte de todo-parte
+   - Agregación (tiene-un): Relación débil de contención
+   - Asociación: Conexión general
+   - Dependencia: Uso temporal
+   - Implementación: Realización de interfaz
+
+4. **Mejores prácticas**:
+   - Responsabilidad única por clase
+   - Dividir diagramas complejos
+   - Usar colores estratégicamente
+   - Mantener claridad visual
+   - Documentar decisiones importantes
+
+#### 10.2. Importancia en el Desarrollo de Software
+
+**Comunicación**: 
+Los diagramas de clases facilitan la comunicación entre:
+- Analistas y desarrolladores
+- Desarrolladores experimentados y juniors
+- Equipos distribuidos geográficamente
+- Stakeholders técnicos y no técnicos
+
+**Diseño**:
+Permiten:
+- Planificar la arquitectura antes de codificar
+- Identificar problemas de diseño tempranamente
+- Explorar alternativas de diseño rápidamente
+- Validar que el diseño cumple los requisitos
+
+**Documentación**:
+Sirven como:
+- Referencia permanente del sistema
+- Guía para nuevos desarrolladores
+- Base para el mantenimiento futuro
+- Documentación que "no miente" (si se mantiene actualizada)
+
+**Implementación**:
+Facilitan:
+- Generación de código desde diagramas
+- Ingeniería inversa desde código existente
+- Refactorización guiada
+- Detección de code smells
+
+#### 10.3. Habilidades que has Desarrollado
+
+Al dominar los diagramas de clases, has desarrollado:
+
+- **Pensamiento abstracto**: Capacidad de modelar conceptos del mundo real
+- **Diseño orientado a objetos**: Aplicar principios SOLID y patrones
+- **Comunicación técnica**: Expresar ideas complejas visualmente
+- **Análisis de sistemas**: Descomponer problemas en componentes manejables
+
+#### 10.4. Próximos Pasos
+
+Para seguir mejorando tus habilidades:
+
+1. **Practica regularmente**: 
+   - Diseña diagramas para proyectos personales
+   - Revisa código existente y crea diagramas retrospectivos
+   - Participa en sesiones de diseño colaborativas
+
+2. **Estudia patrones de diseño**:
+   - Gang of Four (GoF) patterns
+   - Arquitecturas por capas
+   - Domain-Driven Design (DDD)
+
+3. **Aprende otros diagramas UML**:
+   - Diagramas de secuencia (comportamiento)
+   - Diagramas de casos de uso (requisitos)
+   - Diagramas de componentes (arquitectura)
+
+4. **Refactoriza diagramas existentes**:
+   - Identifica clases con múltiples responsabilidades
+   - Busca oportunidades de aplicar patrones
+   - Mejora la claridad y organización
+
+#### 10.5. Reflexión Final
+
+Los diagramas de clases son una habilidad que trasciende tecnologías y lenguajes de programación. Un buen diseño de clases es independiente de si se implementa en Java, Kotlin, Python o C#. Los principios de diseño orientado a objetos permanecen constantes.
+
+La inversión en tiempo que dedicas a aprender y practicar diagramas de clases se traducirá en:
+- **Código más mantenible**: Sistemas mejor estructurados
+- **Menos bugs**: Diseños validados antes de implementar
+- **Mayor productividad**: Menos tiempo refactorizando
+- **Mejor colaboración**: Comunicación más efectiva en equipos
+
+!!! tip "Consejo final"
+    Los mejores desarrolladores no son necesariamente los que escriben más código, sino los que diseñan mejor antes de escribir. Los diagramas de clases son tu herramienta para diseñar mejor.
 
 ### 11. Recursos y Referencias
 
-- [Sitio oficial UML - OMG](https://www.uml.org/)
-- [Diagramas UML](https://diagramasuml.com/)
-- [PlantUML](https://plantuml.com/)
-- [Draw.io](https://app.diagrams.net/)
-- [Kotlin Programming Language](https://kotlinlang.org/)
+#### 11.1. Especificaciones y Estándares
+
+- **[OMG UML Specification](https://www.uml.org/)**: Especificación oficial de UML 2.5
+- **[UML Class Diagram Tutorial](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-class-diagram/)**: Guía completa de Visual Paradigm
+
+#### 11.2. Libros Recomendados
+
+**Para principiantes**:
+- **"UML Distilled"** - Martin Fowler: Guía concisa y práctica de UML
+- **"Head First Object-Oriented Analysis & Design"** - Brett McLaughlin: Aprendizaje visual
+
+**Para nivel avanzado**:
+- **"Applying UML and Patterns"** - Craig Larman: Enfoque práctico con casos de estudio
+- **"Domain-Driven Design"** - Eric Evans: Modelado del dominio
+- **"Object-Oriented Software Engineering"** - Ivar Jacobson: Clásico de OO
+
+#### 11.3. Herramientas
+
+**Online**:
+- [Draw.io / Diagrams.net](https://app.diagrams.net/): Gratuito, sin registro
+- [Lucidchart](https://www.lucidchart.com/): Colaborativo, freemium
+- [PlantUML Online](https://www.plantuml.com/plantuml/): Diagramas desde texto
+
+**Escritorio**:
+- [Visual Paradigm](https://www.visual-paradigm.com/): Community Edition gratuita
+- [StarUML](https://staruml.io/): Open source, $89 licencia
+- [Enterprise Architect](https://sparxsystems.com/): Estándar de la industria
+
+**IDEs**:
+- IntelliJ IDEA: Plugin UML nativo
+- Eclipse + Papyrus: Gratuito, completo
+- Visual Studio: Class Designer integrado
+
+#### 11.4. Recursos de Aprendizaje
+
+**Tutoriales online**:
+- [Diagramas UML](https://diagramasuml.com/): Tutoriales en español
+- [UML Tutorial - Guru99](https://www.guru99.com/uml-tutorial.html): Completo y bien explicado
+- [Refactoring Guru - UML](https://refactoring.guru/es/uml): Con foco en patrones
+
+**Videos**:
+- [YouTube: Derek Banas - UML Class Diagram](https://www.youtube.com/watch?v=3cmzqZzwNDM): Tutorial completo
+- [YouTube: freeCodeCamp - UML](https://www.youtube.com/results?search_query=uml+class+diagram+tutorial): Varios tutoriales
+
+**Práctica**:
+- [Exercism](https://exercism.org/): Practica diseño OO con ejercicios
+- [CodeWars](https://www.codewars.com/): Desafíos de programación
+- [GitHub](https://github.com/): Busca proyectos open source y estudia sus diagramas
+
+#### 11.5. Documentación de Kotlin
+
+- [Kotlin Programming Language](https://kotlinlang.org/): Documentación oficial
+- [Kotlin for Java Developers](https://kotlinlang.org/docs/java-to-kotlin-interop.html): Transición desde Java
+- [Kotlin Koans](https://play.kotlinlang.org/koans/): Ejercicios interactivos
+
+#### 11.6. Comunidades y Foros
+
+- **Stack Overflow**: Tag `uml` y `class-diagram` para preguntas específicas
+- **Reddit**: 
+  - r/learnjava
+  - r/kotlin
+  - r/softwareengineering
+- **Discord**: Kotlin Language (servidor oficial)
+- **LinkedIn Groups**: UML Modeling, Software Architecture
+
+!!! note "Nota final"
+    La mejor forma de aprender es practicando. No te limites a leer - crea tus propios diagramas, experimenta con diferentes diseños, y solicita feedback de desarrolladores más experimentados. ¡Adelante!
+
+---
+
+**Fin del documento EDES-U3.2.-DiagramaClases.md**
+

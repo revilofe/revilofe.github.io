@@ -7346,8 +7346,8 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Punto clave</p>
-</div>
 <p>Ten en cuenta lo que ya sabes sobre diagramas E/R para entender mejor los diagramas de clases.</p>
+</div>
 <h4 id="14-objetivo-de-estos-diagrams-segun-la-fase">1.4. Objetivo de estos diagrams según la fase<a class="headerlink" href="#14-objetivo-de-estos-diagrams-segun-la-fase" title="Permanent link">&para;</a></h4>
 <p>Los diagramas de clases pueden ser desarrollados en diferentes fases del ciclo de vida del software:</p>
 <ul>
@@ -7414,12 +7414,20 @@
 <ul>
 <li>Se escribe en la primera zona de la caja</li>
 <li><strong>Clases abstractas</strong>: El nombre se escribe en <em>cursiva</em> para indicar que no pueden instanciarse directamente</li>
-<li>Convenio: Primera letra en mayúscula (<strong>PascalCase</strong>)</li>
-<li>✅ Correcto: <code>Usuario</code>, <code>CarritoCompras</code>, <code>OrdenDePago</code></li>
-<li>❌ Incorrecto: <code>usuario</code>, <code>CarritoCompra</code> (inconsistencia), <code>user</code> (en inglés)</li>
-<li>Los nombres deben ser <strong>sustantivos singulares</strong>, no verbos ni formas plurales</li>
-<li>✅ Correcto: <code>Libro</code></li>
-<li>❌ Incorrecto: <code>Libros</code> (plural), <code>CrearLibro</code> (verbo)</li>
+<li>
+<p>Convenio: Primera letra en mayúscula (<strong>PascalCase</strong>)</p>
+<ul>
+<li>Correcto: <code>Usuario</code>, <code>CarritoCompras</code>, <code>OrdenDePago</code></li>
+<li>Incorrecto: <code>usuario</code>, <code>CarritoCompra</code> (inconsistencia), <code>user</code> (en inglés)</li>
+</ul>
+</li>
+<li>
+<p>Los nombres deben ser <strong>sustantivos singulares</strong>, no verbos ni formas plurales</p>
+<ul>
+<li>Correcto: <code>Libro</code></li>
+<li>Incorrecto: <code>Libros</code> (plural), <code>CrearLibro</code> (verbo)</li>
+</ul>
+</li>
 </ul>
 <p><strong>Por qué PascalCase</strong>: Esta convención de nombres ayuda a diferenciar visualmente los nombres de clases del resto del código, mejorando la legibilidad de los diagramas.</p>
 <h5 id="322-zona-2-atributos">3.2.2. Zona 2: Atributos<a class="headerlink" href="#322-zona-2-atributos" title="Permanent link">&para;</a></h5>
@@ -7430,12 +7438,14 @@
 <p><strong>Formato oficial:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>visibilidad nombre_atributo : tipo = valor-inicial { propiedades }
 </code></pre></div>
-<p>Donde:
-- <code>visibilidad</code>: Indica quién puede acceder al atributo (+, -, #, ~, /)
-- <code>nombre_atributo</code>: Nombre descriptivo del atributo en camelCase
-- <code>tipo</code>: Tipo de dato (String, Int, Double, Date, etc.)
-- <code>valor-inicial</code>: (Opcional) Valor con el que se inicializa el atributo
-- <code>{propiedades}</code>: (Opcional) Propiedades adicionales como <code>{readOnly}</code> o <code>{unique}</code></p>
+<p>Donde:</p>
+<ul>
+<li><code>visibilidad</code>: Indica quién puede acceder al atributo (+, -, #, ~, /)</li>
+<li><code>nombre_atributo</code>: Nombre descriptivo del atributo en camelCase</li>
+<li><code>tipo</code>: Tipo de dato (String, Int, Double, Date, etc.)</li>
+<li><code>valor-inicial</code>: (Opcional) Valor con el que se inicializa el atributo</li>
+<li><code>{propiedades}</code>: (Opcional) Propiedades adicionales como <code>{readOnly}</code> o <code>{unique}</code></li>
+</ul>
 </li>
 <li>
 <p><strong>Formato simplificado (común en diagramas):</strong></p>
@@ -7446,19 +7456,21 @@
 </code></pre></div>
 </li>
 </ul>
-<p><strong>Ejemplos prácticos</strong>:
+<p><strong>Ejemplos prácticos</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>- nombre : String
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>- edad : Int = 0
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>- activo : Boolean
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>- fechaRegistro : Date
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a># coordenadas : List&lt;Double&gt;
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>+ ID : Int {unique}
-</code></pre></div></p>
-<p>En el ejemplo anterior:
-- <code>nombre</code> es privado y de tipo String
-- <code>edad</code> es privado, Int, e inicializa a 0
-- <code>coordenadas</code> es protegida (accesible por subclases)
-- <code>ID</code> es público y debe ser único</p>
+</code></pre></div>
+<p>En el ejemplo anterior:</p>
+<ul>
+<li><code>nombre</code> es privado y de tipo String</li>
+<li><code>edad</code> es privado, Int, e inicializa a 0</li>
+<li><code>coordenadas</code> es protegida (accesible por subclases)</li>
+<li><code>ID</code> es público y debe ser único</li>
+</ul>
 <h6 id="3221-tipos-de-atributos">3.2.2.1 Tipos de Atributos<a class="headerlink" href="#3221-tipos-de-atributos" title="Permanent link">&para;</a></h6>
 <p><strong>Atributos de clase o estáticos</strong></p>
 <p>Son aquellos que representan valores comunes a todas las instancias de una clase. Pueden tener un valor inicial.</p>
@@ -7495,12 +7507,14 @@
 <p><strong>Formato oficial:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>visibilidad nombre_funcion(parametros) : tipo-devuelto { propiedades }
 </code></pre></div>
-<p>Donde:
-- <code>visibilidad</code>: Indica quién puede llamar al método (+, -, #, ~, /)
-- <code>nombre_funcion</code>: Nombre del método en camelCase, típicamente un verbo o frase con verbo
-- <code>parametros</code>: Lista de parámetros formales con sus tipos (nombre: Tipo)
-- <code>tipo-devuelto</code>: Tipo de dato que devuelve el método (o Unit si no devuelve nada)
-- <code>{propiedades}</code>: (Opcional) Propiedades como <code>{abstract}</code> o <code>{final}</code></p>
+<p>Donde:</p>
+<ul>
+<li><code>visibilidad</code>: Indica quién puede llamar al método (+, -, #, ~, /)</li>
+<li><code>nombre_funcion</code>: Nombre del método en camelCase, típicamente un verbo o frase con verbo</li>
+<li><code>parametros</code>: Lista de parámetros formales con sus tipos (nombre: Tipo)</li>
+<li><code>tipo-devuelto</code>: Tipo de dato que devuelve el método (o Unit si no devuelve nada)</li>
+<li><code>{propiedades}</code>: (Opcional) Propiedades como <code>{abstract}</code> o <code>{final}</code></li>
+</ul>
 </li>
 <li>
 <p><strong>Formato simplificado (común en diagramas):</strong></p>
@@ -7508,25 +7522,29 @@
 </code></pre></div>
 </li>
 </ul>
-<p><strong>Ejemplos prácticos</strong>:
+<p><strong>Ejemplos prácticos</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>+ getNombre() : String
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>+ setEdad(edad: Int) : Unit
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>+ calcularDescuento(precio: Double, porcentaje: Double) : Double
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a># validarEmail(email: String) : Boolean
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>- procesarDatos() : void
 <a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>+ esMayorDeEdad(edad: Int) : Boolean
-</code></pre></div></p>
-<p>En los ejemplos anteriores:
-- <code>getNombre()</code> es público, no toma parámetros y devuelve String
-- <code>setEdad()</code> es público, toma un Int y no devuelve nada (Unit)
-- <code>calcularDescuento()</code> toma dos Doubles y devuelve un Double
-- <code>validarEmail()</code> es protegida, toma String y devuelve Boolean
-- <code>procesarDatos()</code> es privada y no devuelve nada</p>
-<p><strong>Convenciones de nomenclatura para métodos</strong>:
-- Getters (obtener valores): <code>getNombreAtributo()</code>
-- Setters (establecer valores): <code>setNombreAtributo(valor)</code>
-- Validación: <code>validar...()</code>, <code>es...()</code>, <code>tiene...()</code>, <code>puede...()</code>
-- Acciones: <code>crear...()</code>, <code>actualizar...()</code>, <code>eliminar...()</code>, <code>procesar...()</code></p>
+</code></pre></div>
+<p>En los ejemplos anteriores:</p>
+<ul>
+<li><code>getNombre()</code> es público, no toma parámetros y devuelve String</li>
+<li><code>setEdad()</code> es público, toma un Int y no devuelve nada (Unit)</li>
+<li><code>calcularDescuento()</code> toma dos Doubles y devuelve un Double</li>
+<li><code>validarEmail()</code> es protegida, toma String y devuelve Boolean</li>
+<li><code>procesarDatos()</code> es privada y no devuelve nada</li>
+</ul>
+<p><strong>Convenciones de nomenclatura para métodos</strong>:</p>
+<ul>
+<li>Getters (obtener valores): <code>getNombreAtributo()</code></li>
+<li>Setters (establecer valores): <code>setNombreAtributo(valor)</code></li>
+<li>Validación: <code>validar...()</code>, <code>es...()</code>, <code>tiene...()</code>, <code>puede...()</code></li>
+<li>Acciones: <code>crear...()</code>, <code>actualizar...()</code>, <code>eliminar...()</code>, <code>procesar...()</code></li>
+</ul>
 <h6 id="3231-tipos-de-metodos">3.2.3.1 Tipos de Métodos<a class="headerlink" href="#3231-tipos-de-metodos" title="Permanent link">&para;</a></h6>
 <p><strong>Métodos de clase o estáticos</strong></p>
 <p>Son acciones que no requieren de un objeto específico para su realización. Los métodos de clase solo tienen acceso a los atributos de clase.</p>
@@ -7771,17 +7789,21 @@
 <h5 id="412-nombre-de-la-asociacion">4.1.2. Nombre de la Asociación<a class="headerlink" href="#412-nombre-de-la-asociacion" title="Permanent link">&para;</a></h5>
 <p>Se puede escribir una indicación que ayuda a entender el significado de la relación. Suelen utilizarse <strong>verbos</strong> para describir la naturaleza de la relación.</p>
 <p><strong>¿Por qué es importante?</strong> El nombre aclara la semántica de la relación, respondiendo la pregunta "¿qué significa esta conexión entre las clases?". Sin el nombre, podría haber ambigüedad.</p>
-<p><strong>Ejemplos</strong>:
-- "Una empresa <strong>contrata</strong> a n empleados"
-- "Un profesor <strong>imparte</strong> m clases"
-- "Un cliente <strong>realiza</strong> múltiples pedidos"</p>
+<p><strong>Ejemplos</strong>:</p>
+<ul>
+<li>"Una empresa <strong>contrata</strong> a n empleados"</li>
+<li>"Un profesor <strong>imparte</strong> m clases"</li>
+<li>"Un cliente <strong>realiza</strong> múltiples pedidos"</li>
+</ul>
 <p>El verbo debe leerse en la dirección de la flecha o relación. Si la relación no tiene dirección clara, se puede leer en ambas direcciones con verbos apropiados.</p>
 <h5 id="413-rol">4.1.3. Rol<a class="headerlink" href="#413-rol" title="Permanent link">&para;</a></h5>
 <p>Indica el papel que juega cada clase en la relación. Es decir, describe la semántica específica que tiene la relación desde el punto de vista de cada clase. El rol nos ayuda a entender la "función" que una clase juega en relación con otra.</p>
-<p><strong>¿Cuándo es importante?</strong> El rol es especialmente útil cuando:
-- La relación podría ser ambigua sin él
-- Una clase se relaciona consigo misma (relaciones reflexivas)
-- La misma clase participa en múltiples relaciones de diferentes tipos</p>
+<p><strong>¿Cuándo es importante?</strong> El rol es especialmente útil cuando:</p>
+<ul>
+<li>La relación podría ser ambigua sin él</li>
+<li>Una clase se relaciona consigo misma (relaciones reflexivas)</li>
+<li>La misma clase participa en múltiples relaciones de diferentes tipos</li>
+</ul>
 <p><strong>Ejemplo de notación:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>┌─────────┐   Se imparte   ┌─────────┐
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>│  Curso  │1 ───────────→ *│  Clase  │
@@ -7791,9 +7813,13 @@
 <ul>
 <li>El rol de la clase <code>Curso</code> es <code>+curso</code>, indicando que cada <code>Clase</code> pertenece a un <code>Curso</code></li>
 <li>El rol de la clase <code>Clase</code> es <code>+clases</code>, indicando que un <code>Curso</code> puede impartir múltiples <code>Clases</code></li>
-<li>La multiplicidad indica que:</li>
+<li>
+<p>La multiplicidad indica que:</p>
+<ul>
 <li>Un <code>curso</code> puede impartir <strong>muchas</strong> <code>clases</code> (1 a *)</li>
 <li>Cada <code>clase</code> pertenece a <strong>un solo</strong> <code>curso</code> (1 a 1 desde el lado de Clase)</li>
+</ul>
+</li>
 </ul>
 <p><strong>Otro ejemplo</strong>: Relación reflexiva de Trabajador-Jefe</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>        ┌──────────────┐
@@ -7824,10 +7850,12 @@
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>└──────────┘           └──────────┘
 <a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>    tiene
 </code></pre></div>
-<p>En este ejemplo:
-- Una <code>Persona</code> puede tener <strong>múltiples</strong> mascotas (multiplicidad 1 a <em>)
-- Cada <code>Mascota</code> pertenece a **una sola*</em> persona (multiplicidad * a 1)
-- La palabra "tiene" describe el significado de la relación</p>
+<p>En este ejemplo:</p>
+<ul>
+<li>Una <code>Persona</code> puede tener <strong>múltiples</strong> mascotas (multiplicidad 1 a *)</li>
+<li>Cada <code>Mascota</code> pertenece a <strong>una sola</strong> persona (multiplicidad * a 1)</li>
+<li>La palabra "tiene" describe el significado de la relación</li>
+</ul>
 <p><strong>En Kotlin (bidireccional)</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Persona</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">mascotas</span><span class="p">:</span><span class="w"> </span><span class="n">MutableList</span><span class="o">&lt;</span><span class="n">Mascota</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="p">()</span>
@@ -8336,7 +8364,7 @@
 <a id="__codelineno-45-11" name="__codelineno-45-11" href="#__codelineno-45-11"></a>        ┌───────────┴───────────┐
 <a id="__codelineno-45-12" name="__codelineno-45-12" href="#__codelineno-45-12"></a>        ┆                       ┆
 <a id="__codelineno-45-13" name="__codelineno-45-13" href="#__codelineno-45-13"></a>┌───────┴───────┐     ┌─────────┴─────────┐
-<a id="__codelineno-45-14" name="__codelineno-45-14" href="#__codelineno-45-14"></a>│ProcesadorTarj│     │ ProcesadorPayPal  │
+<a id="__codelineno-45-14" name="__codelineno-45-14" href="#__codelineno-45-14"></a>│ProcesadorTarj │     │ ProcesadorPayPal  │
 <a id="__codelineno-45-15" name="__codelineno-45-15" href="#__codelineno-45-15"></a>│     eta       │     │                   │
 <a id="__codelineno-45-16" name="__codelineno-45-16" href="#__codelineno-45-16"></a>└───────────────┘     └───────────────────┘
 </code></pre></div>
@@ -8345,9 +8373,9 @@
 <table>
 <thead>
 <tr>
-<th>Característica</th>
-<th>Interfaz</th>
-<th>Clase Abstracta</th>
+<th><strong>Característica</strong></th>
+<th><strong>Interfaz</strong></th>
+<th><strong>Clase Abstracta</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -8420,7 +8448,7 @@
 <h5 id="611-diagrama-uml">6.1.1. Diagrama <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr><a class="headerlink" href="#611-diagrama-uml" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>┌─────────────────┐                    ┌─────────────────┐
 <a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>│    Biblioteca   │1                  *│      Libro      │
-<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>│─────────────────│◆──────────────────│─────────────────│
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>│─────────────────│◆───────────────────│─────────────────│
 <a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a>│ - nombre        │   contiene         │ - isbn          │
 <a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a>│ - direccion     │                    │ - titulo        │
 <a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a>│─────────────────│                    │ - autor         │
@@ -8550,15 +8578,15 @@
 <a id="__codelineno-49-11" name="__codelineno-49-11" href="#__codelineno-49-11"></a>       │                               │
 <a id="__codelineno-49-12" name="__codelineno-49-12" href="#__codelineno-49-12"></a>    ┌──┴──┐                    ┌───────┴────────┐
 <a id="__codelineno-49-13" name="__codelineno-49-13" href="#__codelineno-49-13"></a>    │     │                    │                │
-<a id="__codelineno-49-14" name="__codelineno-49-14" href="#__codelineno-49-14"></a>┌───┴──┐ ┌┴────────┐          *│              1│
-<a id="__codelineno-49-15" name="__codelineno-49-15" href="#__codelineno-49-15"></a>│Estud.│ │Profesor │    ┌──────┴────────┐      │
-<a id="__codelineno-49-16" name="__codelineno-49-16" href="#__codelineno-49-16"></a>│──────│ │─────────│    │   Matricula   │──────┘
+<a id="__codelineno-49-14" name="__codelineno-49-14" href="#__codelineno-49-14"></a>┌───┴──┐ ┌┴────────┐          *│               1│
+<a id="__codelineno-49-15" name="__codelineno-49-15" href="#__codelineno-49-15"></a>│Estud.│ │Profesor │    ┌──────┴────────┐       │
+<a id="__codelineno-49-16" name="__codelineno-49-16" href="#__codelineno-49-16"></a>│──────│ │─────────│    │   Matricula   │───────┘
 <a id="__codelineno-49-17" name="__codelineno-49-17" href="#__codelineno-49-17"></a>│- mat │ │- depto  │    │───────────────│ imparte
-<a id="__codelineno-49-18" name="__codelineno-49-18" href="#__codelineno-49-18"></a>│──────│ │─────────│    │ - fecha       │
-<a id="__codelineno-49-19" name="__codelineno-49-19" href="#__codelineno-49-19"></a>│      │ │+ ense   │   *│ - semestre    │
+<a id="__codelineno-49-18" name="__codelineno-49-18" href="#__codelineno-49-18"></a>│──────│ │─────────│    │- fecha        │
+<a id="__codelineno-49-19" name="__codelineno-49-19" href="#__codelineno-49-19"></a>│      │ │+ ense   │   *│- semestre     │
 <a id="__codelineno-49-20" name="__codelineno-49-20" href="#__codelineno-49-20"></a>└──────┘ └─────────┘    │───────────────│
 <a id="__codelineno-49-21" name="__codelineno-49-21" href="#__codelineno-49-21"></a>    *│                  │               │1
-<a id="__codelineno-49-22" name="__codelineno-49-22" href="#__codelineno-49-22"></a>     └──────────────────┤ + calcularNot()│
+<a id="__codelineno-49-22" name="__codelineno-49-22" href="#__codelineno-49-22"></a>     └──────────────────┤+ calcularNot()│
 <a id="__codelineno-49-23" name="__codelineno-49-23" href="#__codelineno-49-23"></a>        se matricula en └───────────────┘
 </code></pre></div>
 <h5 id="622-implementacion-en-kotlin">6.2.2. Implementación en Kotlin<a class="headerlink" href="#622-implementacion-en-kotlin" title="Permanent link">&para;</a></h5>
@@ -8919,21 +8947,27 @@
 <h4 id="73-claridad-visual-la-estetica-importa">7.3. Claridad Visual: La estética importa<a class="headerlink" href="#73-claridad-visual-la-estetica-importa" title="Permanent link">&para;</a></h4>
 <p>Un buen diagrama no solo es correcto técnicamente, sino también visualmente claro.</p>
 <p><strong>Hacer</strong>:</p>
-<p>✅ <strong>Evitar cruces de líneas</strong>
-- Reorganiza las clases para minimizar líneas cruzadas
-- Usa colores o estilos diferentes para diferentes tipos de relaciones</p>
-<p>✅ <strong>Agrupar clases relacionadas</strong>
-- Clases del mismo módulo/paquete cerca unas de otras
-- Usa cuadros de color para delimitar grupos</p>
-<p>✅ <strong>Distribución equilibrada</strong>
-- No amontonar todo en una esquina
-- Dejar espacio en blanco (whitespace)</p>
+<p><strong>Evitar cruces de líneas</strong></p>
+<ul>
+<li>Reorganiza las clases para minimizar líneas cruzadas</li>
+<li>Usa colores o estilos diferentes para diferentes tipos de relaciones</li>
+</ul>
+<p><strong>Agrupar clases relacionadas</strong></p>
+<ul>
+<li>Clases del mismo módulo/paquete cerca unas de otras</li>
+<li>Usa cuadros de color para delimitar grupos</li>
+</ul>
+<p><strong>Distribución equilibrada</strong></p>
+<ul>
+<li>No amontonar todo en una esquina</li>
+<li>Dejar espacio en blanco (whitespace)</li>
+</ul>
 <p><strong>Evitar</strong>:</p>
-<p>❌ <strong>Diagramas abarrotados</strong>: Espacio insuficiente entre elementos
-❌ <strong>Líneas superpuestas</strong>: Dificultan seguir las relaciones
-❌ <strong>Mezclar niveles de detalle</strong>: No mezclar diagramas de alto nivel con detalles de implementación</p>
+<p><strong>Diagramas abarrotados</strong>: Espacio insuficiente entre elementos
+<strong>Líneas superpuestas</strong>: Dificultan seguir las relaciones
+<strong>Mezclar niveles de detalle</strong>: No mezclar diagramas de alto nivel con detalles de implementación</p>
 <p><strong>Ejemplo de buena vs mala distribución</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>❌ MAL: Amontonado
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>MAL: Amontonado
 <a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>┌─────┐┌─────┐┌─────┐
 <a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a>│  A  ││  B  ││  C  │
 <a id="__codelineno-57-4" name="__codelineno-57-4" href="#__codelineno-57-4"></a>└─────┘└─────┘└─────┘
@@ -8941,7 +8975,7 @@
 <a id="__codelineno-57-6" name="__codelineno-57-6" href="#__codelineno-57-6"></a>│  D  ││  E  │
 <a id="__codelineno-57-7" name="__codelineno-57-7" href="#__codelineno-57-7"></a>└─────┘└─────┘
 <a id="__codelineno-57-8" name="__codelineno-57-8" href="#__codelineno-57-8"></a>
-<a id="__codelineno-57-9" name="__codelineno-57-9" href="#__codelineno-57-9"></a>✅ BIEN: Espaciado
+<a id="__codelineno-57-9" name="__codelineno-57-9" href="#__codelineno-57-9"></a>BIEN: Espaciado
 <a id="__codelineno-57-10" name="__codelineno-57-10" href="#__codelineno-57-10"></a>┌─────┐         ┌─────┐
 <a id="__codelineno-57-11" name="__codelineno-57-11" href="#__codelineno-57-11"></a>│  A  │─────────│  B  │
 <a id="__codelineno-57-12" name="__codelineno-57-12" href="#__codelineno-57-12"></a>└─────┘         └─────┘
@@ -8994,38 +9028,42 @@
 <h4 id="75-nombrado-consistente-y-significativo">7.5. Nombrado Consistente y Significativo<a class="headerlink" href="#75-nombrado-consistente-y-significativo" title="Permanent link">&para;</a></h4>
 <p><strong>Convenciones de nombres</strong>:</p>
 <ol>
-<li><strong>Clases</strong>: PascalCase, sustantivos singulares</li>
-<li>✅ <code>Usuario</code>, <code>CarritoCompras</code>, <code>OrdenDePago</code></li>
 <li>
-<p>❌ <code>usuario</code>, <code>Carritos</code>, <code>crearOrden</code></p>
+<p><strong>Clases</strong>: PascalCase, sustantivos singulares</p>
+<ul>
+<li><code>Usuario</code>, <code>CarritoCompras</code>, <code>OrdenDePago</code></li>
+<li><code>usuario</code>, <code>Carritos</code>, <code>crearOrden</code></li>
+</ul>
 </li>
 <li>
 <p><strong>Interfaces</strong>: Prefijo <code>I</code> o sufijo descriptivo</p>
-</li>
-<li>✅ <code>IRepositorio</code>, <code>IProcesador</code>, <code>Serializable</code></li>
-<li>
-<p>❌ <code>InterfazRepositorio</code>, <code>ImpRepositorio</code></p>
+<ul>
+<li><code>IRepositorio</code>, <code>IProcesador</code>, <code>Serializable</code></li>
+<li><code>InterfazRepositorio</code>, <code>ImpRepositorio</code></li>
+</ul>
 </li>
 <li>
 <p><strong>Métodos</strong>: camelCase, verbos</p>
-</li>
-<li>✅ <code>calcularTotal()</code>, <code>enviarEmail()</code>, <code>esValido()</code></li>
-<li>
-<p>❌ <code>CalcularTotal()</code>, <code>total()</code>, <code>validacion()</code></p>
+<ul>
+<li><code>calcularTotal()</code>, <code>enviarEmail()</code>, <code>esValido()</code></li>
+<li><code>CalcularTotal()</code>, <code>total()</code>, <code>validacion()</code></li>
+</ul>
 </li>
 <li>
 <p><strong>Atributos</strong>: camelCase, sustantivos</p>
+<ul>
+<li><code>nombre</code>, <code>fechaCreacion</code>, <code>precioUnitario</code></li>
+<li><code>Nombre</code>, <code>fecha_creacion</code>, <code>precio$unitario</code></li>
+</ul>
 </li>
-<li>✅ <code>nombre</code>, <code>fechaCreacion</code>, <code>precioUnitario</code></li>
-<li>❌ <code>Nombre</code>, <code>fecha_creacion</code>, <code>precio$unitario</code></li>
 </ol>
 <p><strong>Nombres descriptivos vs genéricos</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="c1">// ❌ Nombres genéricos</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="c1">// Nombres genéricos</span>
 <a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Gestor</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">procesar</span><span class="p">(</span><span class="n">datos</span><span class="p">:</span><span class="w"> </span><span class="kt">Any</span><span class="p">):</span><span class="w"> </span><span class="kt">Any</span>
 <a id="__codelineno-59-4" name="__codelineno-59-4" href="#__codelineno-59-4"></a><span class="p">}</span>
 <a id="__codelineno-59-5" name="__codelineno-59-5" href="#__codelineno-59-5"></a>
-<a id="__codelineno-59-6" name="__codelineno-59-6" href="#__codelineno-59-6"></a><span class="c1">// ✅ Nombres descriptivos</span>
+<a id="__codelineno-59-6" name="__codelineno-59-6" href="#__codelineno-59-6"></a><span class="c1">// Nombres descriptivos</span>
 <a id="__codelineno-59-7" name="__codelineno-59-7" href="#__codelineno-59-7"></a><span class="kd">class</span><span class="w"> </span><span class="nc">GestorFacturas</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-59-8" name="__codelineno-59-8" href="#__codelineno-59-8"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">procesarFactura</span><span class="p">(</span><span class="n">factura</span><span class="p">:</span><span class="w"> </span><span class="n">Factura</span><span class="p">):</span><span class="w"> </span><span class="n">ResultadoProceso</span>
 <a id="__codelineno-59-9" name="__codelineno-59-9" href="#__codelineno-59-9"></a><span class="p">}</span>
@@ -9070,38 +9108,74 @@
 <h3 id="8-herramientas-para-crear-diagramas-de-clases">8. Herramientas para Crear Diagramas de Clases<a class="headerlink" href="#8-herramientas-para-crear-diagramas-de-clases" title="Permanent link">&para;</a></h3>
 <p>La elección de herramienta afecta tu productividad y la calidad del resultado. No existe una herramienta perfecta para todos los casos.</p>
 <h4 id="81-herramientas-online-en-la-nube">8.1. Herramientas Online (En la nube)<a class="headerlink" href="#81-herramientas-online-en-la-nube" title="Permanent link">&para;</a></h4>
-<p><strong>Draw.io / Diagrams.net</strong>
-- <strong>Precio</strong>: Gratuito
-- <strong>Ventajas</strong>:
-  - No requiere instalación ni registro
-  - Integración con Google Drive, OneDrive
-  - Exporta a múltiples formatos (PNG, SVG, PDF)
-  - Muy flexible, no solo <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr>
-- <strong>Desventajas</strong>:
-  - No valida <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> (puedes crear diagramas incorrectos)
-  - Sin generación automática desde código
-- <strong>Cuándo usar</strong>: Proyectos pequeños, bocetos rápidos, equipos sin presupuesto</p>
-<p><strong>Lucidchart</strong>
-- <strong>Precio</strong>: Freemium (planes desde $7.95/mes)
-- <strong>Ventajas</strong>:
-  - Colaboración en tiempo real
-  - Plantillas predefinidas excelentes
-  - Integración con Confluence, Google Workspace
-  - Historial de versiones
-- <strong>Desventajas</strong>:
-  - Límite de documentos en versión gratuita
-  - Requiere conexión a internet
-- <strong>Cuándo usar</strong>: Equipos distribuidos, presentaciones profesionales</p>
-<p><strong>PlantUML Online</strong>
-- <strong>Precio</strong>: Gratuito
-- <strong>Ventajas</strong>:
-  - Basado en texto (fácil de versionar en <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr>)
-  - Generación automática del layout
-  - Sintaxis simple y rápida
-- <strong>Desventajas</strong>:
-  - Control limitado sobre posicionamiento
-  - Curva de aprendizaje para la sintaxis
-- <strong>Cuándo usar</strong>: Documentación en código, <abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr>, desarrolladores técnicos</p>
+<p><strong>Draw.io / Diagrams.net</strong></p>
+<ul>
+<li><strong>Precio</strong>: Gratuito</li>
+<li>
+<p><strong>Ventajas</strong>:</p>
+<ul>
+<li>No requiere instalación ni registro</li>
+<li>Integración con Google Drive, OneDrive</li>
+<li>Exporta a múltiples formatos (PNG, SVG, PDF)</li>
+<li>Muy flexible, no solo <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr></li>
+</ul>
+</li>
+<li>
+<p><strong>Desventajas</strong>:</p>
+<ul>
+<li>No valida <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> (puedes crear diagramas incorrectos)</li>
+<li>Sin generación automática desde código</li>
+</ul>
+</li>
+<li>
+<p><strong>Cuándo usar</strong>: Proyectos pequeños, bocetos rápidos, equipos sin presupuesto</p>
+</li>
+</ul>
+<p><strong>Lucidchart</strong></p>
+<ul>
+<li><strong>Precio</strong>: Freemium (planes desde $7.95/mes)</li>
+<li>
+<p><strong>Ventajas</strong>:</p>
+<ul>
+<li>Colaboración en tiempo real</li>
+<li>Plantillas predefinidas excelentes</li>
+<li>Integración con Confluence, Google Workspace</li>
+<li>Historial de versiones</li>
+</ul>
+</li>
+<li>
+<p><strong>Desventajas</strong>:</p>
+<ul>
+<li>Límite de documentos en versión gratuita</li>
+<li>Requiere conexión a internet</li>
+</ul>
+</li>
+<li>
+<p><strong>Cuándo usar</strong>: Equipos distribuidos, presentaciones profesionales</p>
+</li>
+</ul>
+<p><strong>PlantUML Online</strong></p>
+<ul>
+<li><strong>Precio</strong>: Gratuito</li>
+<li>
+<p><strong>Ventajas</strong>:</p>
+<ul>
+<li>Basado en texto (fácil de versionar en <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr>)</li>
+<li>Generación automática del layout</li>
+<li>Sintaxis simple y rápida</li>
+</ul>
+</li>
+<li>
+<p><strong>Desventajas</strong>:</p>
+<ul>
+<li>Control limitado sobre posicionamiento</li>
+<li>Curva de aprendizaje para la sintaxis</li>
+</ul>
+</li>
+<li>
+<p><strong>Cuándo usar</strong>: Documentación en código, <abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr>, desarrolladores técnicos</p>
+</li>
+</ul>
 <p><strong>Ejemplo PlantUML</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>@startuml
 <a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>class Usuario {
@@ -9119,97 +9193,197 @@
 <a id="__codelineno-61-14" name="__codelineno-61-14" href="#__codelineno-61-14"></a>@enduml
 </code></pre></div>
 <h4 id="82-herramientas-de-escritorio-instalables">8.2. Herramientas de Escritorio (Instalables)<a class="headerlink" href="#82-herramientas-de-escritorio-instalables" title="Permanent link">&para;</a></h4>
-<p><strong>Visual Paradigm</strong>
-- <strong>Precio</strong>: Community Edition gratuita, Professional desde $99
-- <strong>Ventajas</strong>:
-  - Muy completo, soporte para todos los diagramas <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr>
-  - Generación de código bidireccional (Java, C++, C#, Python)
-  - Ingeniería inversa desde código existente
-  - Validación de <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr>
-- <strong>Desventajas</strong>:
-  - Interfaz puede ser abrumadora para principiantes
-  - Versión gratuita con limitaciones
-- <strong>Cuándo usar</strong>: Proyectos profesionales grandes, necesidad de generación de código</p>
-<p><strong>StarUML</strong>
-- <strong>Precio</strong>: $89 licencia perpetua (o gratuito con limitaciones)
-- <strong>Ventajas</strong>:
-  - Interfaz moderna e intuitiva
-  - Soporte para extensiones
-  - Generación de código (Java, C++, C#, Python)
-- <strong>Desventajas</strong>:
-  - Sin colaboración en tiempo real
-  - Comunidad más pequeña que otras herramientas
-- <strong>Cuándo usar</strong>: Desarrolladores individuales, proyectos medianos</p>
-<p><strong>Enterprise Architect (Sparx)</strong>
-- <strong>Precio</strong>: Desde €130 por usuario
-- <strong>Ventajas</strong>:
-  - Estándar de la industria
-  - Soporte completo de <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> 2.5
-  - Gestión de requisitos, trazabilidad
-  - Trabajo en equipo con repositorio compartido
-- <strong>Desventajas</strong>:
-  - Curva de aprendizaje pronunciada
-  - Interfaz anticuada
-  - Caro para equipos pequeños
-- <strong>Cuándo usar</strong>: Empresas grandes, proyectos complejos, cumplimiento de estándares</p>
-<p><strong>Umbrello (Linux)</strong>
-- <strong>Precio</strong>: Gratuito (open source)
-- <strong>Ventajas</strong>:
-  - Integrado en ecosistema KDE
-  - Ligero y rápido
-  - Generación de código
-- <strong>Desventajas</strong>:
-  - Menos features que alternativas comerciales
-  - Solo para Linux
-- <strong>Cuándo usar</strong>: Usuarios de Linux, proyectos open source</p>
+<p><strong>Visual Paradigm</strong></p>
+<ul>
+<li><strong>Precio</strong>: Community Edition gratuita, Professional desde $99</li>
+<li>
+<p><strong>Ventajas</strong>:</p>
+<ul>
+<li>Muy completo, soporte para todos los diagramas <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr></li>
+<li>Generación de código bidireccional (Java, C++, C#, Python)</li>
+<li>Ingeniería inversa desde código existente</li>
+<li>Validación de <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr></li>
+</ul>
+</li>
+<li>
+<p><strong>Desventajas</strong>:</p>
+<ul>
+<li>Interfaz puede ser abrumadora para principiantes</li>
+<li>Versión gratuita con limitaciones</li>
+</ul>
+</li>
+<li>
+<p><strong>Cuándo usar</strong>: Proyectos profesionales grandes, necesidad de generación de código</p>
+</li>
+</ul>
+<p><strong>StarUML</strong></p>
+<ul>
+<li><strong>Precio</strong>: $89 licencia perpetua (o gratuito con limitaciones)</li>
+<li>
+<p><strong>Ventajas</strong>:</p>
+<ul>
+<li>Interfaz moderna e intuitiva</li>
+<li>Soporte para extensiones</li>
+<li>Generación de código (Java, C++, C#, Python)</li>
+</ul>
+</li>
+<li>
+<p><strong>Desventajas</strong>:</p>
+<ul>
+<li>Sin colaboración en tiempo real</li>
+<li>Comunidad más pequeña que otras herramientas</li>
+</ul>
+</li>
+<li>
+<p><strong>Cuándo usar</strong>: Desarrolladores individuales, proyectos medianos</p>
+</li>
+</ul>
+<p><strong>Enterprise Architect (Sparx)</strong></p>
+<ul>
+<li><strong>Precio</strong>: Desde €130 por usuario</li>
+<li>
+<p><strong>Ventajas</strong>:</p>
+<ul>
+<li>Estándar de la industria</li>
+<li>Soporte completo de <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> 2.5</li>
+<li>Gestión de requisitos, trazabilidad</li>
+<li>Trabajo en equipo con repositorio compartido</li>
+</ul>
+</li>
+<li>
+<p><strong>Desventajas</strong>:</p>
+<ul>
+<li>Curva de aprendizaje pronunciada</li>
+<li>Interfaz anticuada</li>
+<li>Caro para equipos pequeños</li>
+</ul>
+</li>
+<li>
+<p><strong>Cuándo usar</strong>: Empresas grandes, proyectos complejos, cumplimiento de estándares</p>
+</li>
+</ul>
+<p><strong>Umbrello (Linux)</strong></p>
+<ul>
+<li><strong>Precio</strong>: Gratuito (open source)</li>
+<li>
+<p><strong>Ventajas</strong>:</p>
+<ul>
+<li>Integrado en ecosistema KDE</li>
+<li>Ligero y rápido</li>
+<li>Generación de código</li>
+</ul>
+</li>
+<li>
+<p><strong>Desventajas</strong>:</p>
+<ul>
+<li>Menos features que alternativas comerciales</li>
+<li>Solo para Linux</li>
+</ul>
+</li>
+<li>
+<p><strong>Cuándo usar</strong>: Usuarios de Linux, proyectos open source</p>
+</li>
+</ul>
 <h4 id="83-integradas-en-ides-para-desarrolladores">8.3. Integradas en IDEs (Para desarrolladores)<a class="headerlink" href="#83-integradas-en-ides-para-desarrolladores" title="Permanent link">&para;</a></h4>
-<p><strong>IntelliJ IDEA (JetBrains)</strong>
-- <strong>Características</strong>:
-  - Plugin nativo de diagramas <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr>
-  - Generación desde código Kotlin/Java existente
-  - Navegación código ↔ diagrama
-  - <abbr title="Proceso de reestructuración del código fuente de un programa sin cambiar su comportamiento externo. El objetivo del refactoring es mejorar la legibilidad, la mantenibilidad y la eficiencia del código, eliminando duplicidades, simplificando la lógica, etc.">Refactoring</abbr> visual
-- <strong>Ventajas</strong>:
-  - Siempre sincronizado con el código
-  - No requiere herramienta adicional
-- <strong>Desventajas</strong>:
-  - Solo disponible en versión Professional (de pago)
-  - Menos opciones de formato que herramientas dedicadas
-- <strong>Cuándo usar</strong>: Desarrollo diario en Kotlin/Java</p>
-<p><strong>Eclipse + Papyrus</strong>
-- <strong>Características</strong>:
-  - Plugin gratuito Papyrus para <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> 2.5
-  - Soporte completo de diagramas
-  - Generación de código Java
-- <strong>Ventajas</strong>:
-  - Gratuito y open source
-  - Muy completo
-- <strong>Desventajas</strong>:
-  - Configuración compleja
-  - Rendimiento puede ser lento
-- <strong>Cuándo usar</strong>: Proyectos Java con Eclipse</p>
-<p><strong>Visual Studio + Class Designer</strong>
-- <strong>Características</strong>:
-  - Class Designer nativo en Visual Studio
-  - Generación desde código C#/VB.NET
-  - Sincronización bidireccional
-- <strong>Ventajas</strong>:
-  - Integrado nativamente
-  - Visual Studio Community es gratuito
-- <strong>Desventajas</strong>:
-  - Solo diagramas de clases (no otros <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr>)
-  - Solo para .NET
-- <strong>Cuándo usar</strong>: Desarrollo .NET</p>
+<p><strong>IntelliJ IDEA (JetBrains)</strong></p>
+<ul>
+<li>
+<p><strong>Características</strong>:</p>
+<ul>
+<li>Plugin nativo de diagramas <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr></li>
+<li>Generación desde código Kotlin/Java existente</li>
+<li>Navegación código ↔ diagrama</li>
+<li><abbr title="Proceso de reestructuración del código fuente de un programa sin cambiar su comportamiento externo. El objetivo del refactoring es mejorar la legibilidad, la mantenibilidad y la eficiencia del código, eliminando duplicidades, simplificando la lógica, etc.">Refactoring</abbr> visual</li>
+</ul>
+</li>
+<li>
+<p><strong>Ventajas</strong>:</p>
+<ul>
+<li>Siempre sincronizado con el código</li>
+<li>No requiere herramienta adicional</li>
+</ul>
+</li>
+<li>
+<p><strong>Desventajas</strong>:</p>
+<ul>
+<li>Solo disponible en versión Professional (de pago)</li>
+<li>Menos opciones de formato que herramientas dedicadas</li>
+</ul>
+</li>
+<li>
+<p><strong>Cuándo usar</strong>: Desarrollo diario en Kotlin/Java</p>
+</li>
+</ul>
+<p><strong>Eclipse + Papyrus</strong></p>
+<ul>
+<li>
+<p><strong>Características</strong>:</p>
+<ul>
+<li>Plugin gratuito Papyrus para <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr> 2.5</li>
+<li>Soporte completo de diagramas</li>
+<li>Generación de código Java</li>
+</ul>
+</li>
+<li>
+<p><strong>Ventajas</strong>:</p>
+<ul>
+<li>Gratuito y open source</li>
+<li>Muy completo</li>
+</ul>
+</li>
+<li>
+<p><strong>Desventajas</strong>:</p>
+<ul>
+<li>Configuración compleja</li>
+<li>Rendimiento puede ser lento</li>
+</ul>
+</li>
+<li>
+<p><strong>Cuándo usar</strong>: Proyectos Java con Eclipse</p>
+</li>
+</ul>
+<p><strong>Visual Studio + Class Designer</strong></p>
+<ul>
+<li>
+<p><strong>Características</strong>:</p>
+<ul>
+<li>Class Designer nativo en Visual Studio</li>
+<li>Generación desde código C#/VB.NET</li>
+<li>Sincronización bidireccional</li>
+</ul>
+</li>
+<li>
+<p><strong>Ventajas</strong>: </p>
+<ul>
+<li>Integrado nativamente</li>
+<li>Visual Studio Community es gratuito</li>
+</ul>
+</li>
+<li>
+<p><strong>Desventajas</strong>:</p>
+<ul>
+<li>Solo diagramas de clases (no otros <abbr title="Lenguaje de Modelado Unificado. Es un lenguaje estándar de modelado de software que se utiliza para visualizar, especificar, construir y documentar los sistemas de software. En UML, los desarrolladores pueden representar los componentes, las estructuras, los comportamientos, etc., de un sistema.">UML</abbr>)</li>
+<li>Solo para .NET</li>
+</ul>
+</li>
+<li>
+<p><strong>Cuándo usar</strong>: Desarrollo .NET</p>
+</li>
+</ul>
 <h4 id="84-generacion-automatica-desde-codigo">8.4. Generación Automática desde Código<a class="headerlink" href="#84-generacion-automatica-desde-codigo" title="Permanent link">&para;</a></h4>
-<p><strong>PlantUML (modo local)</strong>
-- <strong>Instalación</strong>: <code>brew install plantuml</code> (Mac) o descarga <abbr title="Archivo Java. Es un archivo que contiene clases Java y recursos, como imágenes, sonidos, etc. Los archivos JAR se utilizan para distribuir y ejecutar aplicaciones Java.">JAR</abbr>
-- <strong>Uso</strong>: Crea archivo <code>.puml</code> y genera PNG/SVG
-- <strong>Integración</strong>: Plugins para VSCode, IntelliJ, Eclipse
-- <strong>Ventaja</strong>: Versionable en <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> junto al código</p>
-<p><strong>Mermaid</strong>
-- <strong>Uso</strong>: Sintaxis Markdown para diagramas
-- <strong>Integración</strong>: <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr>, GitLab, Notion
-- <strong>Ejemplo</strong>:</p>
+<p><strong>PlantUML (modo local)</strong></p>
+<ul>
+<li><strong>Instalación</strong>: <code>brew install plantuml</code> (Mac) o descarga <abbr title="Archivo Java. Es un archivo que contiene clases Java y recursos, como imágenes, sonidos, etc. Los archivos JAR se utilizan para distribuir y ejecutar aplicaciones Java.">JAR</abbr></li>
+<li><strong>Uso</strong>: Crea archivo <code>.puml</code> y genera PNG/SVG</li>
+<li><strong>Integración</strong>: Plugins para VSCode, IntelliJ, Eclipse</li>
+<li><strong>Ventaja</strong>: Versionable en <abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> junto al código</li>
+</ul>
+<p><strong>Mermaid</strong></p>
+<ul>
+<li><strong>Uso</strong>: Sintaxis Markdown para diagramas</li>
+<li><strong>Integración</strong>: <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr>, GitLab, Notion</li>
+<li><strong>Ejemplo</strong>:</li>
+</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>classDiagram
 <a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>    Usuario &quot;1&quot; -- &quot;*&quot; Orden
 <a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a>    class Usuario{
@@ -9221,10 +9395,12 @@
 <a id="__codelineno-62-9" name="__codelineno-62-9" href="#__codelineno-62-9"></a>        +procesar()
 <a id="__codelineno-62-10" name="__codelineno-62-10" href="#__codelineno-62-10"></a>    }
 </code></pre></div>
-<p><strong>IntelliJ IDEA Diagram Generator</strong>
-- <strong>Uso</strong>: Click derecho en clase → "Diagrams" → "Show Diagram"
-- <strong>Ventaja</strong>: Genera automáticamente desde código existente
-- <strong>Limitación</strong>: Solo para código Kotlin/Java en el proyecto</p>
+<p><strong>IntelliJ IDEA Diagram Generator</strong></p>
+<ul>
+<li><strong>Uso</strong>: Click derecho en clase → "Diagrams" → "Show Diagram"</li>
+<li><strong>Ventaja</strong>: Genera automáticamente desde código existente</li>
+<li><strong>Limitación</strong>: Solo para código Kotlin/Java en el proyecto</li>
+</ul>
 <h4 id="85-recomendaciones-por-contexto">8.5. Recomendaciones por Contexto<a class="headerlink" href="#85-recomendaciones-por-contexto" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9295,15 +9471,19 @@
 <a id="__codelineno-63-8" name="__codelineno-63-8" href="#__codelineno-63-8"></a>│ - privado(): Unit   │
 <a id="__codelineno-63-9" name="__codelineno-63-9" href="#__codelineno-63-9"></a>└─────────────────────┘
 </code></pre></div></p>
-<p><strong>Visibilidad</strong>:
-- <code>+</code> public: Accesible desde cualquier lugar
-- <code>-</code> private: Solo dentro de la clase
-- <code>#</code> protected: Clase y subclases
-- <code>~</code> package: Dentro del mismo paquete</p>
-<p><strong>Elementos especiales</strong>:
-- <em>Cursiva</em>: Clase abstracta o método abstracto
-- <u>Subrayado</u>: Miembro estático
-- <code>&lt;&lt;stereotype&gt;&gt;</code>: Estereotipo (interface, abstract, etc.)</p>
+<p><strong>Visibilidad</strong>:</p>
+<ul>
+<li><code>+</code> public: Accesible desde cualquier lugar</li>
+<li><code>-</code> private: Solo dentro de la clase</li>
+<li><code>#</code> protected: Clase y subclases</li>
+<li><code>~</code> package: Dentro del mismo paquete</li>
+</ul>
+<p><strong>Elementos especiales</strong>:</p>
+<ul>
+<li><em>Cursiva</em>: Clase abstracta o método abstracto</li>
+<li><u>Subrayado</u>: Miembro estático</li>
+<li><code>&lt;&lt;stereotype&gt;&gt;</code>: Estereotipo (interface, abstract, etc.)</li>
+</ul>
 <h4 id="92-sobre-las-relaciones-guia-rapida">9.2. Sobre las Relaciones: Guía Rápida<a class="headerlink" href="#92-sobre-las-relaciones-guia-rapida" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9371,7 +9551,7 @@
 </ul>
 <h4 id="93-sobre-multiplicidad">9.3. Sobre Multiplicidad<a class="headerlink" href="#93-sobre-multiplicidad" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>A ───────────────── B
-<a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a>  1              *
+<a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a>   1             *
 </code></pre></div>
 <table>
 <thead>
@@ -9414,8 +9594,8 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Cómo leer</strong>: 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>Usuario  1 ─────── * Orden
+<p><strong>Cómo leer</strong>: </p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>Usuario  1 ─────── * Orden
 </code></pre></div>
 Se lee: "Un Usuario realiza 0 o muchas Órdenes" y "Una Orden pertenece a exactamente 1 Usuario"</p>
 <h4 id="94-mejores-practicas-checklist">9.4. Mejores Prácticas: Checklist<a class="headerlink" href="#94-mejores-practicas-checklist" title="Permanent link">&para;</a></h4>

@@ -53,7 +53,7 @@ El diagrama de clases se puede equiparar, salvando las distancias, al famoso **d
 - Tienen una utilidad similar en sus respectivos contextos
 
 !!! note "Punto clave"
-    Ten en cuenta lo que ya sabes sobre diagramas E/R para entender mejor los diagramas de clases.
+    Este diagrama de clases es similiar al diagrama E/R, por tanto ten presente lo que ya sabes sobre el para entender mejor los diagramas de clases.
 
 #### 1.4. Objetivo de estos diagrams según la fase
 
@@ -83,12 +83,14 @@ Las **clases** son el elemento principal del diagrama y representan una clase de
 Una clase describe un conjunto de objetos con responsabilidades y características comunes dentro de un sistema. En el dominio del «negocio» puede representar conceptos como Paciente, Doctor, Cita o Expediente Médico. A la vez, agrupa objetos que comparten atributos y comportamientos; por ejemplo, todos los objetos de la clase Coche comparten propiedades y operaciones comunes.
 
 En un sistema software, una clase:
+
 - Es la pieza básica de la POO.
 - Representa objetos del mundo real o conceptos del dominio (p.ej., automóvil, estudiante, cuenta bancaria).
 - Define atributos y comportamientos comunes a sus instancias.
 - Favorece objetos especializados con responsabilidad única y comunicación mediante mensajes.
 
 Los objetos y su clasificación en clases suelen derivar de:
+
 1. **Cosas tangibles o "del mundo real"**: Avión, auto, televisor, computador, etc.
 2. **Roles o Papeles**: Gerente, cliente, vendedor, profesor, etc.
 3. **Organizaciones**: Universidad, empresa, departamento, etc.
@@ -102,9 +104,9 @@ Los objetos y su clasificación en clases suelen derivar de:
 
 Una clase está compuesta por **tres elementos**:
 
-1. **Nombre de la clase**
-2. **Atributos**
-3. **Métodos/Funciones**
+1. **Nombre de la clase**: Identificador único de la clase, que representa el concepto o entidad que modela.
+2. **Atributos**: Características o propiedades que describen el estado de los objetos de la clase. 
+3. **Métodos/Funciones**: Comportamientos o acciones que los objetos de la clase pueden realizar.
 
 La clase se representa con una **caja dividida en tres zonas** mediante líneas horizontales, y cada elemento dentro de una zona:
 
@@ -122,6 +124,26 @@ La clase se representa con una **caja dividida en tres zonas** mediante líneas 
 │    Métodos              │  ← 3ª zona: Métodos
 └─────────────────────────┘
 ```
+
+Esta clase se representa en kotlin de la siguiente manera:
+
+```kotlin   
+class NombreDeClase {
+    // Atributos
+    private var atributo1: Tipo
+    private var atributo2: Tipo
+
+    // Métodos
+    fun metodo1(parametros): TipoDevuelto {
+        // Implementación
+    }
+
+    fun metodo2(parametros): TipoDevuelto {
+        // Implementación
+    }
+}
+``` 
+
 
 #### 3.2.1. Zona 1: Nombre de la Clase
 
@@ -141,7 +163,8 @@ La primera zona contiene el **nombre de la clase**, que es el identificador úni
     - Correcto: `Libro`
     - Incorrecto: `Libros` (plural), `CrearLibro` (verbo)
 
-**Por qué PascalCase**: Esta convención de nombres ayuda a diferenciar visualmente los nombres de clases del resto del código, mejorando la legibilidad de los diagramas.
+!!! note "Punto clave"
+    **Por qué PascalCase**: Esta convención de nombres ayuda a diferenciar visualmente los nombres de clases del resto del código, mejorando la legibilidad de los diagramas.
 
 ##### 3.2.2. Zona 2: Atributos
 
@@ -195,11 +218,13 @@ En el ejemplo anterior:
 
 ###### 3.2.2.1 Tipos de Atributos
 
+Existen varios tipos de atributos según su naturaleza y función dentro de la clase:
+
 **Atributos de clase o estáticos**
 
-Son aquellos que representan valores comunes a todas las instancias de una clase. Pueden tener un valor inicial.
+Son aquellos que representan valores comunes a todas las instancias (Objetos) de una clase. Todos los objetos comparten el mismo valor para este atributo, por tanto cualquier cambio en un atributo de clase afecta a todas las instancias.
 
-**Ejemplos en Kotlin:**
+**Ejemplos en Kotlin:** Se representan dentro del bloque `companion object`
 ```kotlin
 companion object {
     private var promedioEdades: Double = 0.0
@@ -219,7 +244,7 @@ private var numeroPuertas: Int = 4
 
 **Constantes**
 
-Representan valores inmutables en tiempo y espacio. En Kotlin se definen con `const val` o `val`.
+Representan valores inmutables en tiempo y espacio. En Kotlin se definen con `const val` o `val`, la diferencia es que `const val` es una constante de tiempo de compilación (constante real), mientras que `val` es inmutable pero puede ser asignada en tiempo de ejecución.
 
 **Ejemplos en Kotlin:**
 ```kotlin
@@ -285,11 +310,15 @@ En los ejemplos anteriores:
 - Validación: `validar...()`, `es...()`, `tiene...()`, `puede...()`
 - Acciones: `crear...()`, `actualizar...()`, `eliminar...()`, `procesar...()`
 
+!!! note "Punto clave"
+    Veremos que en kotlin, los getters y setters se generan automáticamente al definir propiedades, y por tanto no es necesario definirlos explícitamente. En java sí es necesario definirlos.
+
+
 ###### 3.2.3.1 Tipos de Métodos
 
 **Métodos de clase o estáticos**
 
-Son acciones que no requieren de un objeto específico para su realización. Los métodos de clase solo tienen acceso a los atributos de clase.
+Son acciones que **no requieren de un objeto** específico para su realización. Los métodos de clase solo tienen acceso a los atributos de clase.
 
 **Ejemplo en Kotlin:**
 ```kotlin
@@ -302,7 +331,7 @@ companion object {
 
 **Métodos de instancia**
 
-Son acciones que requieren de un objeto específico. Los métodos de instancia tienen acceso a todos los miembros de la clase.
+Son acciones que requieren de un objeto específico. Los métodos de instancia tienen acceso a todos los miembros de la clase ya sean estáticos o de instancia.
 
 **Ejemplo en Kotlin:**
 ```kotlin
@@ -335,36 +364,114 @@ Tanto los atributos como los métodos incluyen un símbolo que indica su **visib
 
 Los **atributos o métodos estáticos** se representan **subrayando** su nombre.
 
-**Definición**: Una característica estática es **compartida por toda la clase** y **no se instancia para cada objeto**.
+**Definición**: Una característica estática (o de clase) **pertecece a la clase** y **no se instancia para cada objeto**. Todos los objetos estarían accediendo al mismo miembro estático.
 
-**Ejemplo**:
-```
-┌──────────────────────────────────────┐
-│            Contador                  │
-├──────────────────────────────────────┤
-│ - <u>numeroInstancias : Int</u>      │  ← Estático (subrayado)
-│ - id : Int                           │  ← No estático
-├──────────────────────────────────────┤
-│ + <u>getNumeroInstancias() : Int</u> │  ← Estático (subrayado)
-│ + getId() : Int                      │  ← No estático
-└──────────────────────────────────────┘
-```
+
+
+[![](https://img.plantuml.biz/plantuml/svg/fPCzRiCm38LtduAZZI8Ny9GYNGi4AD2TbHI7W4qQafmbo64wTkuHVB5IZTlAgOC6g0P1F-3to4Tf7IBwE7HjOLeC0JPYzWwE1S0TTEWDGWrFqHCty3DMAq0zUncY00ku4CVNI4QWxCK3iJBP45PdYbZNoWBcPefYZhhHkvFoUWbaIFXPMkJeSd1Ep716kbwB92kGo2r2gjLLS-x0PD4-q2Jx7-vKTuWU_KPuHytWCULSLZCVbDkDRr7ifG7IknGmlZDODpSqozXyeVrM_1OfbBrEtmf9wo1aPpfNHQRKJqN1egvwQlOHP7T-47Nz-HPK_dwfOuLZ2odiIl15otBCpOmbEnNqkE3VNwXVlcMS1SXQL-c3V000)](https://editor.plantuml.com/uml/fPCzRiCm38LtduAZZI8Ny9GYNGi4AD2TbHI7W4qQafmbo64wTkuHVB5IZTlAgOC6g0P1F-3to4Tf7IBwE7HjOLeC0JPYzWwE1S0TTEWDGWrFqHCty3DMAq0zUncY00ku4CVNI4QWxCK3iJBP45PdYbZNoWBcPefYZhhHkvFoUWbaIFXPMkJeSd1Ep716kbwB92kGo2r2gjLLS-x0PD4-q2Jx7-vKTuWU_KPuHytWCULSLZCVbDkDRr7ifG7IknGmlZDODpSqozXyeVrM_1OfbBrEtmf9wo1aPpfNHQRKJqN1egvwQlOHP7T-47Nz-HPK_dwfOuLZ2odiIl15otBCpOmbEnNqkE3VNwXVlcMS1SXQL-c3V000)
 
 En Kotlin:
 ```kotlin
-class Contador {
-    private val id: Int = ++numeroInstancias
-    
+class Coche(val marca: String, val modelo: String) {
+
+    // Método no estático que muestra la configuración del coche (acceso a propiedades de instancia y estáticas)
+    fun mostrarConfiguracion(): String {
+        return "Coche: $marca $modelo, Volante: ${posicionVolante}, Unidad de distancia: ${unidadDistancia}"
+    }
+
     companion object {
-        private var numeroInstancias: Int = 0
-        
-        fun getNumeroInstancias(): Int = numeroInstancias
+        // Atributos estáticos, compartidos por toda la clase
+        var posicionVolante: String = "Izquierda"
+        var unidadDistancia: String = "Kilómetros"
+
+        // Método estático que configura la clase según el país
+        fun configurarPorPais(pais: String) {
+            when (pais.lowercase()) {
+                "españa" -> {
+                    posicionVolante = "Izquierda"
+                    unidadDistancia = "Kilómetros"
+                }
+                "eeuu", "estados unidos" -> {
+                    posicionVolante = "Derecha"
+                    unidadDistancia = "Millas"
+                }
+                "japón" -> {
+                    posicionVolante = "Derecha"
+                    unidadDistancia = "Kilómetros"
+                }
+                else -> {
+                    posicionVolante = "Izquierda"
+                    unidadDistancia = "Kilómetros"
+                }
+            }
+        }
     }
 }
 ```
 
 #### 3.5. Ejemplo Completo de Clase
 
+
+[![](https://img.plantuml.biz/plantuml/svg/ZPDDJiCm44RtFSNiQ0HSeAiYXDW0GYeNCFPG6JcUo9wmgNgOBbbm0RQv66FdfsdQecPd9VFylfd9Ch8AN9TkffsA4PxiUo3Op01kGTLC0HQmuc3z6ewUAtWDL5aqoe11i5vONbkrw2eDEd29bsbikNPq7dUUnirFBjtp1BYHrsprLiXQURPIbjsZt60zJu0OkTd9vqBJDNfMmCJAfOjSMwK3AaCneQ_RBioBuyY3wps9NwXrobdbh1yeXr5rxa6VzgQBtv-BAKEJXqg5PbSYYqxcHEIx13b45HBmYwmv8RL2PamkxG0oPDr3YdycEOOyde28oLlsdqzZd7GPctJ3wrqwp4KoOvSzPXXyvhtK9GPw-CIoSYfWpEHs_YFES_FDP6XO0mdWczzKETs3xCdKkbtSivv_kBSboNYLw2iMy7QsH6_Id_O7)](https://editor.plantuml.com/uml/ZPDDJiCm44RtFSNiQ0HSeAiYXDW0GYeNCFPG6JcUo9wmgNgOBbbm0RQv66FdfsdQecPd9VFylfd9Ch8AN9TkffsA4PxiUo3Op01kGTLC0HQmuc3z6ewUAtWDL5aqoe11i5vONbkrw2eDEd29bsbikNPq7dUUnirFBjtp1BYHrsprLiXQURPIbjsZt60zJu0OkTd9vqBJDNfMmCJAfOjSMwK3AaCneQ_RBioBuyY3wps9NwXrobdbh1yeXr5rxa6VzgQBtv-BAKEJXqg5PbSYYqxcHEIx13b45HBmYwmv8RL2PamkxG0oPDr3YdycEOOyde28oLlsdqzZd7GPctJ3wrqwp4KoOvSzPXXyvhtK9GPw-CIoSYfWpEHs_YFES_FDP6XO0mdWczzKETs3xCdKkbtSivv_kBSboNYLw2iMy7QsH6_Id_O7){.center}
+
+
+El diagrama anterior incluye:
+
+- Atributos privados de instancia: `autor` y `titulo`.
+- Atributo estático privado: `cantidadLibros` (contador global).
+- Constructores para crear objetos.
+- Getters y setters para manejar las propiedades de instancia (aunque en Kotlin no suelen ser necesarios).
+- Método estático para obtener el número total de libros.
+- Método `toString()` para representar el objeto.
+
+El método y atributo estático pertenecen a la clase, no a instancias. En plantUML se marcan con `{static}` para diferenciar al nivel de diagrama.
+
+La traducción a Kotlin se realiza de la siguiente manera:
+
+```kotlin
+class Libro {
+    // Propiedades privadas de instancia
+    private var autor: String
+    private var titulo: String
+
+    companion object {
+        // Contador estático, compartido por todas las instancias
+        private var cantidadLibros: Int = 0
+
+        // Método estático para obtener número total de instancias creadas
+        fun getNumeroEjemplares(): Int = cantidadLibros
+    }
+
+    // Constructor por defecto (llama al secundario con valores por defecto)
+    constructor() : this("NA", "NT")
+
+    // Constructor que inicializa propiedades e incrementa el contador global
+    constructor(autor: String, titulo: String) {
+        this.autor = autor
+        this.titulo = titulo
+        cantidadLibros++
+    }
+
+    // Getters y setters explícitos (para fines didácticos, aunque se recomienda usar propiedades)
+    fun setAutor(autor: String) { this.autor = autor }
+    fun getAutor(): String = autor
+
+    fun setTitulo(titulo: String) { this.titulo = titulo }
+    fun getTitulo(): String = titulo
+
+    // Método para mostrar información del libro
+    override fun toString(): String = "Datos de libro: $titulo\n$autor"
+}
+```
+
+Como comentamos ya, en Kotlin, los getters y setters explícitos no son necesarios porque el lenguaje genera acceso automáticamente para las propiedades `var`.
+
+Aquí se incluyen para facilitar la transición desde lenguajes que requieren métodos explícitos y para que resulte mas sencillo entender mejor el encapsulamiento y control de acceso.
+
+La distinción clara entre miembros estáticos (`companion object`) y miembros de instancia se mantiene y queda reflejada tanto en UML como en el código Kotlin.
+
+
+<!-- FIN DEL COMENTARIO. ESPOSIBLE QUE SE PUEDA BORRAR
 <figure markdown="span">
   ![Ejemplo de clase completa](assets/clase-completa.png)
   <figcaption>Ejemplo de clase completa con todos sus elementos</figcaption>
@@ -453,548 +560,15 @@ class Libro {
     }
 }
 ```
+FIN DEL COMENTARIO -->
 
-### 4. Relaciones entre Clases
-
-Una **relación** identifica una **dependencia** entre clases. Puede ser:
-
-- Entre dos o más clases (más común)
-- De una clase hacia sí misma - **dependencia reflexiva** (menos común)
-
-Las relaciones se representan con **líneas** que unen las clases. El tipo de línea varía según el tipo de relación.
-
-<figure markdown="span">
-  ![Tipos de relaciones](assets/tipos-relaciones.jpg)
-  <figcaption>Tipos de relaciones en UML</figcaption>
-</figure>
-
-<figure markdown="span">
-  ![Relaciones](assets/relaciones.png)
-  <figcaption>Representación gráfica de relaciones</figcaption>
-</figure>
-
-#### 4.1. Propiedades de las Relaciones
-
-Cuando representamos relaciones en un diagrama de clases, necesitamos expresar varios atributos que caracterizan esa relación. Estos atributos nos permiten comunicar de manera precisa y completa cómo dos clases se relacionan, respondiendo preguntas como: ¿cuántos objetos de una clase se relacionan con objetos de otra? ¿Cuál es el significado de esa relación? ¿Qué papel juega cada clase?
-
-##### 4.1.1. Multiplicidad (Cardinalidad)
-
-Indica el **número de elementos** de una clase que participan en una relación. Es la propiedad más fundamental de una relación, ya que determina si la relación es de uno-a-uno, uno-a-muchos, etc.
-
-**¿Por qué es importante?** La multiplicidad nos ayuda a entender las restricciones del dominio del problema. Por ejemplo:
-- Un cliente debe tener **al menos una** dirección de entrega
-- Un cliente puede tener **múltiples** órdenes de compra
-- Un producto pertenece a **exactamente una** categoría
-
-<figure markdown="span">
-  ![Notación de multiplicidad](assets/multiplicidad-notacion.gif)
-  <figcaption>Notación de multiplicidad en relaciones</figcaption>
-</figure>
-
-| Notación     | Significado                       | Ejemplo práctico                           |
-|--------------|-----------------------------------|--------------------------------------------|
-| `1`          | Exactamente uno (uno y solo uno)  | Cada persona tiene exactamente un DNI      |
-| `0..1`       | Cero o uno                        | Un cliente puede tener cero o un descuento |
-| `*` o `0..*` | Cero o muchos (muchos)            | Un usuario puede tener cero o más órdenes  |
-| `1..*`       | Uno o muchos (al menos uno)       | Un equipo tiene al menos un miembro        |
-| `n`          | Exactamente n (número específico) | Un dado tiene exactamente 6 caras          |
-| `m..n`       | Desde m hasta n                   | Un automóvil tiene entre 2 y 10 ruedas     |
-
-##### 4.1.2. Nombre de la Asociación
-
-Se puede escribir una indicación que ayuda a entender el significado de la relación. Suelen utilizarse **verbos** para describir la naturaleza de la relación.
-
-**¿Por qué es importante?** El nombre aclara la semántica de la relación, respondiendo la pregunta "¿qué significa esta conexión entre las clases?". Sin el nombre, podría haber ambigüedad.
-
-**Ejemplos**:
-
-- "Una empresa **contrata** a n empleados"
-- "Un profesor **imparte** m clases"
-- "Un cliente **realiza** múltiples pedidos"
-
-El verbo debe leerse en la dirección de la flecha o relación. Si la relación no tiene dirección clara, se puede leer en ambas direcciones con verbos apropiados.
-
-##### 4.1.3. Rol
-
-Indica el papel que juega cada clase en la relación. Es decir, describe la semántica específica que tiene la relación desde el punto de vista de cada clase. El rol nos ayuda a entender la "función" que una clase juega en relación con otra.
-
-**¿Cuándo es importante?** El rol es especialmente útil cuando:
-
-- La relación podría ser ambigua sin él
-- Una clase se relaciona consigo misma (relaciones reflexivas)
-- La misma clase participa en múltiples relaciones de diferentes tipos
-
-**Ejemplo de notación:**
-
-```
-┌─────────┐   Se imparte   ┌─────────┐
-│  Curso  │1 ───────────→ *│  Clase  │
-└─────────┘+curso   +clases└─────────┘
-```
-
-En el ejemplo anterior:
-
-* El rol de la clase `Curso` es `+curso`, indicando que cada `Clase` pertenece a un `Curso`
-* El rol de la clase `Clase` es `+clases`, indicando que un `Curso` puede impartir múltiples `Clases`
-* La multiplicidad indica que:
-
-    - Un `curso` puede impartir **muchas** `clases` (1 a *)
-    - Cada `clase` pertenece a **un solo** `curso` (1 a 1 desde el lado de Clase)
-
-**Otro ejemplo**: Relación reflexiva de Trabajador-Jefe
-
-```
-        ┌──────────────┐
-        │  Trabajador  │
-        └──────────────┘
-          ↑           ↓
-          │           │ Supervisa
-          │           │
-    -jefe │          │ -subordinados
-    0..1  │          │ 0..*
-```
-
-Aquí, los roles `jefe` y `subordinados` clarifican la naturaleza de la relación reflexiva, indicando que un trabajador puede ser jefe de múltiples subordinados, pero cada subordinado tiene como máximo un jefe.
-
-#### 4.2. Tipos de Relaciones
-
-##### 4.2.1. Asociación
-
-**Definición**: Representa una dependencia semántica donde dos o más clases están conectadas mediante una relación lógica del dominio del problema. Es el tipo de relación más común y general, y establece que dos clases están relacionadas pero sin implicar herencia, composición o agregación.
-
-**Cuándo usarla**: Usa asociación cuando dos clases necesitan "conocerse" mutuamente o una clase necesita acceder a instancias de otra, pero no hay una relación más específica (herencia, composición, agregación).
-
-**Representación**: Línea continua simple que une las clases, opcionalmente con una flecha que indica dirección de navegación.
-
-<figure markdown="span">
-  ![Relación de asociación](assets/relacion-asociacion.png)
-  <figcaption>Ejemplo de relación de asociación</figcaption>
-</figure>
-
-###### 4.2.1.1. Asociación Binaria
-
-Una asociación binaria conecta dos clases. Es la forma más común de asociación.
-
-**Ejemplo 1**: "Una mascota pertenece a una persona"
-
-```
-┌──────────┐           ┌──────────┐
-│ Persona  │1 ────── * │ Mascota  │
-└──────────┘           └──────────┘
-    tiene
-```
-
-En este ejemplo:
-
-- Una `Persona` puede tener **múltiples** mascotas (multiplicidad 1 a *)
-- Cada `Mascota` pertenece a **una sola** persona (multiplicidad * a 1)
-- La palabra "tiene" describe el significado de la relación
-
-**En Kotlin (bidireccional)**:
-
-```kotlin
-class Persona(val nombre: String) {
-    private val mascotas: MutableList<Mascota> = mutableListOf()
-    
-    fun agregarMascota(mascota: Mascota) {
-        mascotas.add(mascota)
-        mascota.dueno = this  // Mantener consistencia bidireccional
-    }
-    
-    fun getMascotas(): List<Mascota> = mascotas.toList()
-}
-
-class Mascota(val nombre: String) {
-    var dueno: Persona? = null
-}
-```
-
-**Ejemplo 2**: "Una matrícula consta de cursos"
-
-```
-┌────────────┐  Consta De   ┌─────────┐
-│ Matricula  │1 ─────────→ *│  Curso  │
-└────────────┘              └─────────┘
-  -matricula                  -cursos
-```
-
-En este ejemplo, la asociación es **unidireccional**: `Matricula` conoce sus cursos, pero `Curso` no necesita conocer sus matrículas.
-
-**En Kotlin (unidireccional)**:
-
-```kotlin
-class Matricula(val estudianteID: Int, n: Int) {
-    private val cursos: Array<Curso?> = arrayOfNulls(n)
-    private var cantidad = 0
-    
-    fun agregarCurso(curso: Curso) {
-        if (cantidad < cursos.size) {
-            cursos[cantidad++] = curso
-        }
-    }
-    
-    fun getCursos(): List<Curso> = cursos.filterNotNull()
-}
-
-class Curso(val codigoAsignatura: String, val nombre: String) {
-    // Este no conoce sus matrículas
-}
-```
-
-###### 4.2.1.2. Asociación Reflexiva
-
-Una clase se relaciona consigo misma.
-
-**Diagrama:**
-
-```
-┌──────────────┐
-│  Trabajador  │
-└──────────────┘
-  ↑           ↓
-  │           │ Supervisor De
-  │           │
--jefe 0..1  0..* -subordinado
-```
-
-**Implementación en Kotlin:**
-
-```kotlin
-class Trabajador(
-    private val jefe: Trabajador?,
-    n: Int
-) {
-    private val subordinados: Array<Trabajador?> = arrayOfNulls(n)
-    
-    // ... resto de métodos
-}
-```
-
-###### 4.2.1.3. Asociación N-aria
-
-Involucra más de dos clases.
-
-**Diagrama:**
-
-```
-┌──────────┐  Contenido En    ┌──────────────┐
-│ Articulo │1 ─────────────→ *│ OrdenCompra  │
-└──────────┘                  └──────────────┘
-  -articulo                     -ordenC
-                                   │
-                                ┌──┴────┐
-                                │ItemOC │
-                                └───────┘
-```
-
-**Implementación en Kotlin:**
-
-```kotlin
-class Articulo {
-    // ... atributos y métodos
-}
-
-class OrdenCompra {
-    private val items: Array<ItemOC?> = arrayOfNulls(100)
-    
-    inner class ItemOC(private val articulo: Articulo) {
-        // ... métodos de ItemOC
-    }
-}
-```
-
-##### 4.2.3. Agregación
-
-**Definición**: Representa una relación jerárquica donde un objeto es parte de otro, pero **puede existir independientemente**.
-
-**Representación**: Línea con un **rombo vacío** en la clase contenedora.
-
-<figure markdown="span">
-  ![Relación de agregación](assets/relacion-agregacion.png)
-  <figcaption>Ejemplo de relación de agregación</figcaption>
-</figure>
-
-**Ejemplo 1**: "Las mesas están formadas por tablas de madera y tornillos"
-
-```
-┌──────────┐         ┌──────────┐
-│   Mesa   │◇──────  │ Tornillo │
-└──────────┘         └──────────┘
-   contiene
-```
-
-!!! note "Nota"
-    El tornillo puede formar parte de más objetos (silla, estantería...), por lo que tiene existencia independiente.
-
-**Ejemplo 2**: "Un automóvil es accesorio de una radio"
-
-```
-┌───────────┐  Es Accesorio De    ┌────────┐
-│ Automovil │◇──────────────────→ │ Radio  │
-└───────────┘                     └────────┘
-  -automovil 1     0..1 -radio
-```
-
-**En Kotlin**:
-
-```kotlin
-class Mesa {
-    private val tornillos: List<Tornillo> = listOf()
-}
-
-class Tornillo(val tipo: String) {
-    // Puede existir sin estar en una mesa
-}
-
-// Otro ejemplo
-class Automovil(private val radio: Radio?) {
-    // ... resto de métodos
-}
-
-class Radio {
-    // ... atributos y métodos
-}
-```
-
-!!! note "Nota"
-    En la agregación, la radio puede existir independientemente del automóvil.
-
-##### 4.2.4. Composición
-
-**Definición**: Representa una relación jerárquica donde las partes **NO pueden existir sin el todo**. Es una forma más fuerte de agregación.
-
-**Representación**: Línea con un **rombo relleno** en la clase contenedora.
-
-<figure markdown="span">
-  ![Relación de composición](assets/relacion-composicion.png)
-  <figcaption>Ejemplo de relación de composición</figcaption>
-</figure>
-
-**Ejemplo**: "Un automóvil está compuesto por un motor"
-
-```
-┌────────────┐       ┌────────┐
-│ Automovil  │♦────  │ Motor  │
-└────────────┘       └────────┘
-   contiene
-```
-
-!!! note "Nota"
-    El motor es parte integral del automóvil. Si se destruye el automóvil, el motor también deja de existir en este contexto.
-
-**En Kotlin**:
-
-```kotlin
-class Automovil {
-    private val motor: Motor = Motor()  // Creado dentro
-    
-    inner class Motor {
-        // Motor como clase interna
-        // No puede existir sin el Automovil
-    }
-}
-```
-
-**Diferencia clave entre Agregación y Composición**:
-
-| Agregación                                    | Composición                                    |
-|-----------------------------------------------|------------------------------------------------|
-| ◇ Rombo vacío                                 | ♦ Rombo relleno                                |
-| Las partes pueden existir independientemente  | Las partes NO existen sin el todo              |
-| Relación débil                                | Relación fuerte                                |
-| Ejemplo: Mesa-Tornillo, Automóvil-Radio       | Ejemplo: Automóvil-Motor                       |
-
-##### 4.2.5. Herencia (Generalización/Especialización)
-
-**Definición**: Representa una relación de tipo "es un". La clase hija hereda características de la clase padre.
-
-**Representación**: Línea con un **triángulo vacío** apuntando a la superclase.
-
-<figure markdown="span">
-  ![Relación de herencia](assets/relacion-herencia.png)
-  <figcaption>Ejemplo de relación de herencia</figcaption>
-</figure>
-
-**Ejemplo**: "Un perro es un animal"
-
-```
-       ┌──────────┐
-       │  Animal  │
-       └──────────┘
-            △
-            │
-       ┌────┴────┐
-       │  Perro  │
-       └─────────┘
-```
-
-**Otro ejemplo**: "Un libro es una publicación"
-
-```
-         ┌──────────────┐
-         │ Publicacion  │
-         └──────────────┘
-                △
-                │ Generalización
-                │
-         ┌──────┴──────┐
-         │    Libro    │
-         └─────────────┘
-       Especialización
-```
-
-**En Kotlin**:
-
-```kotlin
-open class Animal(val nombre: String) {
-    open fun hacerSonido() {
-        println("Sonido de animal")
-    }
-}
-
-class Perro(nombre: String) : Animal(nombre) {
-    override fun hacerSonido() {
-        println("Guau!")
-    }
-}
-
-// Otro ejemplo
-open class Publicacion {
-    // ... atributos y métodos base
-}
-
-class Libro : Publicacion() {
-    // ... atributos y métodos específicos
-    
-    init {
-        // Llama al constructor de la superclase
-    }
-}
-```
-
-!!! tip "Principio"
-    La subclase hereda todos los atributos y métodos de la superclase.
-
-##### 4.2.6. Dependencia
-
-**Definición**: Indica que una clase **usa** temporalmente otra clase. Es la relación más débil.
-
-**Representación**: Línea **discontinua con flecha**.
-
-<figure markdown="span">
-  ![Relación de dependencia](assets/relacion-dependencia.png)
-  <figcaption>Ejemplo de relación de dependencia</figcaption>
-</figure>
-
-**Ejemplo**: "Una clase usa un servicio externo"
-
-```
-┌─────────────┐       ┌──────────────┐
-│  Calculadora│- - - →│  Math        │
-└─────────────┘       └──────────────┘
-      usa
-
-┌───────────┐       ┌────────────────────────────┐
-│ Potencia  │- - - →│         Math               │
-└───────────┘       ├────────────────────────────┤
-                    │ pow(a:Double, b:Double)    │
-                    └────────────────────────────┘
-```
-
-**En Kotlin**:
-
-```kotlin
-import kotlin.math.pow
-
-class Calculadora {
-    fun calcularPotencia(base: Double, exponente: Double): Double {
-        return base.pow(exponente)  // Usa Math temporalmente
-    }
-}
-
-// Otro ejemplo
-class Potencia {
-    companion object {
-        @JvmStatic
-        fun main(args: Array<String>) {
-            val x = 5.0
-            val y = 2.0
-            val z = x.pow(y)
-            println("El cuadrado de 5 es: $z")
-        }
-    }
-}
-```
-
-**Características**:
-
-- No mantiene una referencia permanente
-- Uso temporal o puntual
-- Puede ser por parámetro, variable local, etc.
-
-!!! note "Nota"
-    La dependencia es más débil que otras relaciones. La clase simplemente usa la funcionalidad de otra, pero no mantiene una referencia permanente.
-
-##### 4.2.7. Implementación (Realización)
-
-**Definición**: Representa que una clase **implementa** una interfaz o clase abstracta.
-
-**Representación**: Línea **discontinua con triángulo vacío**.
-
-<figure markdown="span">
-  ![Relación de implementación](assets/relacion-implementacion.png)
-  <figcaption>Ejemplo de relación de implementación</figcaption>
-</figure>
-
-**Ejemplo**: "Una clase implementa una interfaz"
-
-```
-       ┌───────────────┐
-       │<<interface>>  │
-       │  IVolador     │
-       └───────────────┘
-            △
-            ┆
-       ┌────┴────┐
-       │  Avion  │
-       └─────────┘
-```
-
-**En Kotlin**:
-```kotlin
-interface IVolador {
-    fun volar()
-    fun aterrizar()
-}
-
-class Avion : IVolador {
-    override fun volar() {
-        println("El avión está volando")
-    }
-    
-    override fun aterrizar() {
-        println("El avión está aterrizando")
-    }
-}
-```
-
-#### 4.3. Resumen de Relaciones
-
-| Relación           | Símbolo  | Fuerza       | Descripción                            | Ejemplo                 |
-|--------------------|----------|--------------|----------------------------------------|-------------------------|
-| **Dependencia**    | `- - →`  | Muy débil    | Uso temporal                           | Calculadora - Math      |
-| **Asociación**     | `───`    | Débil        | Relación general                       | Persona - Mascota       |
-| **Agregación**     | `◇───`   | Media        | "Tiene un" (independiente)             | Mesa - Tornillo         |
-| **Composición**    | `♦───`   | Fuerte       | "Es parte de" (dependiente)            | Coche - Motor           |
-| **Herencia**       | `───▷`   | Muy fuerte   | "Es un"                                | Perro - Animal          |
-| **Implementación** | `- - ▷`  | Muy fuerte   | Implementa interfaz                    | Avion - IVolador        |
-
-
-### 5. Interfaces: Contratos de comportamiento
+### 4. Interfaces: Contratos de comportamiento
 
 Una **interfaz** es un concepto fundamental en la programación orientada a objetos que define un **contrato** que las clases pueden (o deben) implementar. No es una clase concreta con implementación, sino una especificación de qué debe hacer una clase sin especificar cómo lo hace.
 
-#### 5.1. ¿Qué es una interfaz y por qué es importante?
+En la relación implementación ya hemos visto un ejemplo básico de interfaz. Ahora profundizaremos más en el concepto, su representación en UML y ejemplos prácticos.
+
+#### 4.1. ¿Qué es una interfaz y por qué es importante?
 
 **Definición**: Una interfaz define un conjunto de métodos (operaciones) que una clase debe implementar, sin proporcionar la implementación de estos métodos. Es como un contrato que dice "si implementas esta interfaz, te comprometes a proporcionar estos comportamientos".
 
@@ -1005,11 +579,11 @@ Una **interfaz** es un concepto fundamental en la programación orientada a obje
 3. **Extensibilidad**: Facilitan agregar nuevas funcionalidades sin modificar código existente
 4. **Contratos claros**: Documentan qué comportamiento se espera
 
-**Analogía del mundo real**: 
+**Analogía del mundo real**:
 
 Imagina que tienes un enchufe eléctrico (interfaz). El enchufe especifica: "cualquier dispositivo que quiera conectarse debe tener estas características: 2 pines, voltaje X, etc.". No le importa si es una lámpara, un televisor o una computadora (clases concretas), simplemente especifica el contrato que deben cumplir.
 
-#### 5.2. Representación de una Interfaz en UML
+#### 4.2. Representación de una Interfaz en UML
 
 Una interfaz se representa con una caja similar a una clase, pero con dos diferencias clave:
 
@@ -1041,7 +615,7 @@ Una interfaz se representa con una caja similar a una clase, pero con dos difere
 └─────────────────────────┘
 ```
 
-#### 5.3. Ejemplo práctico: Sistema de pagos
+#### 4.3. Ejemplo práctico: Sistema de pagos
 
 Imagina un sistema de comercio electrónico que acepta múltiples formas de pago. En vez de que cada clase dependa de implementaciones específicas, definimos una interfaz:
 
@@ -1138,7 +712,7 @@ class SistemaPagos {
 └───────────────┘     └───────────────────┘
 ```
 
-#### 5.4. Interfaces vs Clases Abstractas
+#### 4.4. Interfaces vs Clases Abstractas
 
 Es común confundir interfaces con clases abstractas. Aquí está la diferencia:
 
@@ -1182,8 +756,767 @@ class Pajaro(nombre: String) : Animal(nombre), IVolador {
 ```
 
 !!! tip "Cuándo usar interfaz vs clase abstracta"
-    - **Usa interfaz** cuando quieras definir un contrato de comportamiento que múltiples clases no relacionadas puedan implementar
-    - **Usa clase abstracta** cuando quieras proporcionar implementación común a clases relacionadas jerárquicamente
+- **Usa interfaz** cuando quieras definir un contrato de comportamiento que múltiples clases no relacionadas puedan implementar
+- **Usa clase abstracta** cuando quieras proporcionar implementación común a clases relacionadas jerárquicamente
+
+
+### 5. Relaciones entre Clases e Interfaces
+
+Una **relación** identifica una **dependencia** entre clases. Puede ser:
+
+- Entre dos o más clases (más común)
+- De una clase hacia sí misma - **dependencia reflexiva** (menos común)
+
+Las relaciones se representan con **líneas** que unen las clases. El tipo de línea varía según el tipo de relación.
+
+<figure markdown="span">
+  ![Relaciones](assets/relaciones.png)
+  <figcaption>Representación gráfica de relaciones</figcaption>
+</figure>
+
+
+En plantUML sería:
+
+[![](https://img.plantuml.biz/plantuml/svg/ROz12i9034NtESMdIwM2swuAtg1ktPHfrC5ffioaA_5K7i6BcMb54Do4d_p7Jz9cxPFEOw30PuL697-vAWQVsAcFGkH2dpCESyeHTtgGH6K3fmPT3AZXYaDVpYh_vugJYTQaQd-IxI8hrBMrkzt69YjKVM8Q71b-dEn4jWrBOXG4BpSGq77edNyzvOTZ6L18ejPaUUqD)](https://editor.plantuml.com/uml/ROz12i9034NtESMdIwM2swuAtg1ktPHfrC5ffioaA_5K7i6BcMb54Do4d_p7Jz9cxPFEOw30PuL697-vAWQVsAcFGkH2dpCESyeHTtgGH6K3fmPT3AZXYaDVpYh_vugJYTQaQd-IxI8hrBMrkzt69YjKVM8Q71b-dEn4jWrBOXG4BpSGq77edNyzvOTZ6L18ejPaUUqD ){.center}
+
+#### 5.1. Propiedades de las Relaciones
+
+Cuando representamos relaciones en un diagrama de clases, necesitamos expresar varios atributos que caracterizan esa relación. Estos atributos nos permiten comunicar de manera precisa y completa cómo dos clases se relacionan, respondiendo preguntas como: ¿cuántos objetos de una clase se relacionan con objetos de otra? ¿Cuál es el significado de esa relación? ¿Qué papel juega cada clase?
+
+##### 5.1.1. Multiplicidad (Cardinalidad)
+
+Indica el **número de elementos** de una clase que participan en una relación. Es la propiedad más fundamental de una relación, ya que determina si la relación es de uno-a-uno, uno-a-muchos, etc.
+
+**¿Por qué es importante?** La multiplicidad nos ayuda a entender las restricciones del dominio del problema. Por ejemplo:
+
+- Un cliente debe tener **al menos una** dirección de entrega
+- Un cliente puede tener **múltiples** órdenes de compra
+- Un producto pertenece a **exactamente una** categoría
+
+En el ejemplo anterior hemos visto que la multiplicidad se representa mediante **números o rangos** escritos cerca de las líneas de relación, en ambos extremos.
+
+La multiplicidad en la relación entre las clases `Curso` y `Clase` describe cuántas instancias de cada una pueden asociarse entre sí en el contexto del modelo.
+
+- En el extremo de Curso, la multiplicidad es **1**. Esto significa que **cada `Clase` se imparte en exactamente un `Curso`**.
+- En el extremo de Clase, la multiplicidad es **1..***. Esto significa que **un `Curso` puede tener asociadas una o más `Clase`** (es obligatorio que haya al menos una Clase para un Curso, pero puede haber muchas)
+
+Esto se traduce en que:
+
+- **Un Curso está compuesto por una o más Clase.**
+- **Cada Clase pertenece a un solo Curso.**
+
+Este tipo de multiplicidad se conoce como “uno a muchos” (**1 a varios**), y en UML se representa con la notación **1..*** en el extremo correspondiente. Es clave para indicar las restricciones de la relación en el modelo de datos y en la implementación del sistema.
+
+En la siguiente tabla se resumen las notaciones más comunes para expresar la multiplicidad:
+
+| Notación     | Significado                       | Ejemplo práctico                           |
+|--------------|-----------------------------------|--------------------------------------------|
+| `1`          | Exactamente uno (uno y solo uno)  | Cada persona tiene exactamente un DNI      |
+| `0..1`       | Cero o uno                        | Un cliente puede tener cero o un descuento |
+| `*` o `0..*` | Cero o muchos (muchos)            | Un usuario puede tener cero o más órdenes  |
+| `1..*`       | Uno o muchos (al menos uno)       | Un equipo tiene al menos un miembro        |
+| `n`          | Exactamente n (número específico) | Un dado tiene exactamente 6 caras          |
+| `m..n`       | Desde m hasta n                   | Un automóvil tiene entre 2 y 10 ruedas     |
+
+La traducción a Kotlin de la multiplicidad se refleja en la forma en que se definen las propiedades y colecciones dentro de las clases. Por ejemplo:
+
+La relación entre Curso y Clase (uno a muchos — un curso tiene varias clases, cada clase pertenece a un curso) se traduce en Kotlin utilizando composición con listas y una referencia inversa.
+
+Aquí tienes una traducción fiel en código Kotlin:
+
+```kotlin
+// Clase principal: Curso
+class Curso(val nombre: String) {
+    // Un curso tiene una o más clases asociadas
+    val clases: MutableList<Clase> = mutableListOf()
+
+    fun agregarClase(clase: Clase) {
+        clases.add(clase)
+    }
+}
+
+// Clase secundaria: Clase
+class Clase(val nombre: String, val curso: Curso) {
+    // Cada clase pertenece a un solo curso
+}
+
+fun main() {
+    // Ejemplo de uso:
+    val cursoMatematicas = Curso("Matemáticas")
+    val claseA = Clase("A", cursoMatematicas)
+    val claseB = Clase("B", cursoMatematicas)
+
+    cursoMatematicas.agregarClase(claseA)
+    cursoMatematicas.agregarClase(claseB)
+
+    println("Curso: ${cursoMatematicas.nombre}")
+    cursoMatematicas.clases.forEach { println(" - Clase: ${it.nombre}") }
+}
+```
+
+- La clase Curso contiene una lista de objetos Clase representando la multiplicidad 1..* (uno a muchos).
+- Cada objeto Clase tiene una referencia a su Curso (representa el "1" del otro extremo de la relación).
+- El método `agregarClase` mantiene la composición entre las clases, asegurando integridad referencial en el modelo.
+
+
+
+##### 5.1.2. Nombre de la Asociación
+
+Se puede escribir una indicación que ayuda a entender el significado de la relación. Suelen utilizarse **verbos** para describir la naturaleza de la relación.
+
+**¿Por qué es importante?** El nombre aclara la semántica de la relación, respondiendo la pregunta "¿qué significa esta conexión entre las clases?". Sin el nombre, podría haber ambigüedad.
+
+**Ejemplos**:
+
+- "Una empresa **contrata** a n empleados"
+- "Un profesor **imparte** m clases"
+- "Un cliente **realiza** múltiples pedidos"
+
+El verbo debe leerse en la dirección de la flecha o relación. Si la relación no tiene dirección clara, se puede leer en ambas direcciones con verbos apropiados.
+
+##### 5.1.3. Rol
+
+Indica el papel que juega cada clase en la relación. Es decir, describe la semántica específica que tiene la relación desde el punto de vista de cada clase. El rol nos ayuda a entender la "función" que una clase juega en relación con otra.
+
+**¿Cuándo es importante?** El rol es especialmente útil cuando:
+
+- La relación podría ser ambigua sin él
+- Una clase se relaciona consigo misma (relaciones reflexivas)
+- La misma clase participa en múltiples relaciones de diferentes tipos
+
+A tener en cuenta a la hora de representar el rol:
+
+- Aparece cerca del extremo de la línea de relación, junto a la multiplicidad y en la parte de la clase a la que se refiere.
+- Se escribe con un nombre descriptivo, típicamente un sustantivo o frase nominal, ya que posiblemente se convertira en el nombre de una propiedad en la clase opuesta a la que se refiere.
+- Puede incluir un signo `+` o `-` para indicar si el rol es "visible" o "oculto" desde la perspectiva de la clase. Marca la visibilidad.
+- Puede ser opcional si la relación es clara sin él
+
+
+**Ejemplo de notación:**
+
+```
+┌─────────┐   Se imparte   ┌─────────┐
+│  Curso  │1 ───────────→ *│  Clase  │
+└─────────┘+curso   +clases└─────────┘
+```
+
+En el ejemplo anterior:
+
+* El rol de la clase `Curso` es `+curso`, indicando que cada `Clase` pertenece a un `Curso`
+* El rol de la clase `Clase` es `+clases`, indicando que un `Curso` puede impartir múltiples `Clases`
+* La multiplicidad indica que:
+
+    - Un `curso` puede impartir **muchas** `clases` (1 a *)
+    - Cada `clase` pertenece a **un solo** `curso` (1 a 1 desde el lado de Clase)
+
+**Otro ejemplo**: Relación reflexiva de Trabajador-Jefe
+
+```
+        ┌──────────────┐
+        │  Trabajador  │
+        └──────────────┘
+          ↑           ↓
+          │           │ Supervisa
+          │           │
+    -jefe │           │ +subordinados
+    0..1  │           │ 0..*
+          └───────────┘
+```
+
+Aquí, los roles `jefe` y `subordinados` clarifican la naturaleza de la relación reflexiva, indicando que un trabajador puede ser jefe de múltiples subordinados, pero cada subordinado tiene como máximo un jefe. El signo + en subordinados (Rol:+subordinados), nos indica que es jefe quien ve a su lista de subordinados. 
+
+#### 5.2. Tipos de Relaciones
+
+##### 5.2.1. Asociación
+
+**Definición**: Representa una dependencia semántica donde dos o más clases están conectadas mediante una relación lógica del dominio del problema. Es el tipo de relación más común y general, y establece que dos clases están relacionadas pero sin implicar herencia, composición o agregación.
+
+**Cuándo usarla**: Usa asociación cuando dos clases necesitan "conocerse" mutuamente o una clase necesita acceder a instancias de otra, pero no hay una relación más específica (herencia, composición, agregación).
+
+**Representación**: Línea continua simple que une las clases, opcionalmente con una flecha que indica dirección de navegación.
+
+
+<figure markdown="span">
+  ![Relación de asociación](assets/relacion-asociacion.png)
+  <figcaption>Ejemplo de relación de asociación: Reflexiva</figcaption>
+</figure>
+
+###### 5.2.1.1. Asociación Binaria
+
+Una asociación binaria conecta dos clases. Es la forma más común de asociación.
+
+
+**Ejemplo 1**: "Una empresa contrata a varios empleados"
+
+<figure markdown="span">
+  ![Relación de implementación](assets/relacion-implementacion.png)
+  <figcaption>Ejemplo de reación: Asociación binaria</figcaption>
+</figure>
+
+
+La imagen anterior representa una **relación de asociación binaria simple** entre las clases `Empresa` y `Empleado`, en el contexto de un diagrama de clases.
+
+Los elementos que nos podemos encontrar son:
+
+- **Tipo de relación:** Asociación (línea simple que conecta ambas clases).
+- **Nombre de la relación:** "Contrata" indica que una Empresa contrata a Empleados.
+- **Multiplicidad:**
+
+    - Del lado de `Empresa`: **1** (cada empleado trabaja para una empresa).
+    - Del lado de `Empleado`: **n** (una empresa puede contratar muchos empleados).
+
+Esta relación representa que:
+
+- Una empresa puede contratar **varios empleados** (multiplicidad `n` o `*`).
+- Cada empleado trabaja en **una sola empresa** (multiplicidad `1`).
+
+A continuación vemos como representarlo en https://editor.plantuml.com/uml
+```plantuml
+@startuml
+left to right direction
+
+class Empresa {
+}
+
+class Empleado {
+}
+
+Empresa "1" -- "n" Empleado : Contrata >
+@enduml
+```
+
+**En Kotlin**:
+
+```kotlin
+class Empresa(val nombre: String) {
+    val empleados: MutableList<Empleado> = mutableListOf()
+
+    fun contratarEmpleado(empleado: Empleado) {
+        empleados.add(empleado)
+        empleado.empresa = this
+    }
+}
+
+class Empleado(val nombre: String) {
+    var empresa: Empresa? = null
+}
+
+fun main() {
+    val empresa = Empresa("Tech Solutions")
+    val empleado1 = Empleado("Ana")
+    val empleado2 = Empleado("Luis")
+
+    empresa.contratarEmpleado(empleado1)
+    empresa.contratarEmpleado(empleado2)
+
+    println("Empleados de ${empresa.nombre}:")
+    empresa.empleados.forEach { println("  - ${it.nombre}") }
+}
+```
+
+A destacar que:
+
+- La clase `Empresa` mantiene una lista de `Empleado` (multiplicidad `1` a `n`).
+- Cada `Empleado` tiene una referencia a una `Empresa` (multiplicidad `n` a `1`).
+- El método `contratarEmpleado` establece la relación bidireccional entre ambas clases.
+- Esta implementación refleja la asociación "Contrata" del diagrama UML, mostrando cómo una empresa puede tener múltiples empleados y cada empleado pertenece a una empresa.
+
+
+**Ejemplo 2**: "Una mascota pertenece a una persona"
+
+```
+┌──────────┐           ┌──────────┐
+│ Persona  │1 ────── * │ Mascota  │
+└──────────┘   tiene   └──────────┘
+  -persona                 +mascotas
+```
+
+En este ejemplo:
+
+- Una `Persona` puede tener **múltiples** mascotas (multiplicidad 1 a *). 
+- Cada `Mascota` pertenece a **una sola** persona (multiplicidad * a 1).
+- La palabra "tiene" describe el significado de la relación
+
+**En Kotlin (bidireccional)**:
+
+```kotlin
+class Persona(val nombre: String) {
+    private val mascotas: MutableList<Mascota> = mutableListOf()
+    
+    fun agregarMascota(mascota: Mascota) {
+        mascotas.add(mascota)
+        mascota.dueno = this  // Mantener consistencia bidireccional
+    }
+    
+    fun getMascotas(): List<Mascota> = mascotas.toList()
+}
+
+class Mascota(val nombre: String) {
+    var dueno: Persona? = null
+}
+```
+
+**Ejemplo 3**: "Una matrícula consta de cursos"
+
+```
+┌────────────┐  Consta De   ┌─────────┐
+│ Matricula  │1 ─────────→ *│  Curso  │
+└────────────┘              └─────────┘
+  -matricula                  -cursos
+```
+
+En este ejemplo, la asociación es **unidireccional**: `Matricula` conoce sus cursos, pero `Curso` no necesita conocer sus matrículas.
+
+**En Kotlin (unidireccional)**:
+
+```kotlin
+class Matricula(val estudianteID: Int, n: Int) {
+    private val cursos: Array<Curso?> = arrayOfNulls(n)
+    private var cantidad = 0
+    
+    fun agregarCurso(curso: Curso) {
+        if (cantidad < cursos.size) {
+            cursos[cantidad++] = curso
+        }
+    }
+    
+    fun getCursos(): List<Curso> = cursos.filterNotNull()
+}
+
+class Curso(val codigoAsignatura: String, val nombre: String) {
+    // Este no conoce sus matrículas
+}
+```
+
+###### 5.2.1.2. Asociación Reflexiva
+
+Una clase se relaciona consigo misma.
+
+**Ejemplo**: "Un trabajar supervisa otros trabajadores"
+
+```
+    ┌──────────────┐
+    │  Trabajador  │
+    └──────────────┘
+      ↑           ↓
+      │           │ Supervisor de
+      │           │
+-jefe │           │ -subordinados
+ 0..1 │           │     0..*
+      └───────────┘
+```
+
+**Implementación en Kotlin:**
+
+```kotlin
+class Trabajador(
+    private val jefe: Trabajador?,
+    n: Int
+) {
+    private val subordinados: Array<Trabajador?> = arrayOfNulls(n)
+    
+    // ... resto de métodos
+}
+```
+
+###### 5.2.1.3. Asociación N-aria
+
+Involucra más de dos clases.
+
+**Ejemplo 1**: "Un articulo está contenido en una orden de compra mediante un ítem de orden de compra"
+
+```
+┌──────────┐  Contenido En    ┌──────────────┐
+│ Articulo │1 ─────────────→ *│ OrdenCompra  │
+└──────────┘                  └──────────────┘
+  -articulo                     -ordenC
+                                   │
+                                ┌──┴────┐
+                                │ItemOC │
+                                └───────┘
+```
+
+**Implementación en Kotlin:**
+
+```kotlin
+class Articulo {
+    // ... atributos y métodos
+}
+
+class OrdenCompra {
+    private val items: Array<ItemOC?> = arrayOfNulls(100)
+    
+    inner class ItemOC(private val articulo: Articulo) {
+        // ... métodos de ItemOC
+    }
+}
+```
+
+##### 5.2.3. Agregación
+
+**Definición**: Representa una relación jerárquica donde un objeto es parte de otro, pero **puede existir independientemente**.
+
+**Cuándo usarla**: Usa agregación cuando una clase "contiene" otra, pero la parte puede existir sin el todo.
+
+**Representación**: Línea con un **rombo vacío** en la clase contenedora.
+
+
+<figure markdown="span">
+  ![Relación de agregación](assets/relacion-agregacion.png)
+  <figcaption>Ejemplo de relación de agregación</figcaption>
+</figure>
+
+**Ejemplo 1**: "Las mesas están formadas por tablas de madera y tornillos"
+
+```
+┌──────────┐           ┌──────────┐
+│   Mesa   │◇──────────│ Tornillo │
+└──────────┘ contiene  └──────────┘
+   
+```
+
+<figure markdown="span">
+  ![Relación de composición](assets/relacion-composicion.png)
+  <figcaption>Ejemplo de relación de agregación</figcaption>
+</figure>
+
+
+!!! note "Nota"
+    El tornillo puede formar parte de más objetos (silla, estantería...), por lo que tiene existencia independiente.
+
+
+**En Kotlin**:
+
+```kotlin
+class Mesa {
+    private val tornillos: List<Tornillo> = listOf()
+}
+
+class Tornillo(val tipo: String) {
+    // Puede existir sin estar en una mesa
+}
+
+// Otro ejemplo
+class Automovil(private val radio: Radio?) {
+    // ... resto de métodos
+}
+
+class Radio {
+    // ... atributos y métodos
+}
+```
+
+
+**Ejemplo 2**: "Un automóvil es accesorio de una radio"
+
+[![](https://img.plantuml.biz/plantuml/svg/JOwn2W8n44JxVCMILkxGzWevqI_mMfibMS-5P1ToUpRYlsk4gDCDytZCk1WMMtDoYQu6fb1ulXb4BXICLPmB2PS53gjfrZidU3Y03MIDb7I0oGhBx9wDEsDaFPuQXINWF_JJ-Dr5i3KFdsZNWT_s_NigrUE_kW62YZ49LMxlHf9ONxy0)](https://editor.plantuml.com/uml/JOwn2W8n44JxVCMILkxGzWevqI_mMfibMS-5P1ToUpRYlsk4gDCDytZCk1WMMtDoYQu6fb1ulXb4BXICLPmB2PS53gjfrZidU3Y03MIDb7I0oGhBx9wDEsDaFPuQXINWF_JJ-Dr5i3KFdsZNWT_s_NigrUE_kW62YZ49LMxlHf9ONxy0).{center}
+
+!!! note "Nota"
+    En la agregación, la radio puede existir independientemente del automóvil.
+
+Si nos lo llevamos a Kotlin :
+
+```kotlin
+class Automovil(val modelo: String) {
+    var radioCD: RadioCD? = null  // Un automóvil puede tener o no un RadioCD
+
+    fun instalarRadio(radio: RadioCD) {
+        radioCD = radio
+    }
+}
+
+class RadioCD(val marca: String)
+
+fun main() {
+    val auto = Automovil("Sedán")
+    val radio = RadioCD("Sony")
+
+    auto.instalarRadio(radio)
+
+    println("Auto modelo: ${auto.modelo} tiene Radio: ${auto.radioCD?.marca}")
+}
+```
+
+- En esta implementación, `Automovil` **agrega** un objeto `RadioCD` opcional (`radioCD` puede ser nulo).
+- Se mantiene la independencia de la instancia `RadioCD`; existe fuera del contexto del automóvil.
+- El método `instalarRadio` permite asignar el radio al automóvil, reflejando la relación de agregación débil y opcional.
+
+
+
+##### 5.2.4. Composición
+
+**Definición**: Representa una relación jerárquica donde las partes **NO pueden existir sin el todo**. Es una forma más fuerte de agregación.
+
+**Cuándo usarla**: Usa composición cuando una clase "contiene" otra, y la parte no puede existir sin el todo.
+
+**Representación**: Línea con un **rombo relleno** en la clase contenedora.
+
+**Ejemplo**: "Un automóvil está compuesto por un motor"
+
+```
+┌────────────┐       ┌────────┐
+│ Automovil  │♦────  │ Motor  │
+└────────────┘       └────────┘
+   contiene
+```
+
+
+[![](https://img.plantuml.biz/plantuml/svg/LOun3i8m40JxUyNA9IW5RGeK7a15InFPHpZ9laFs9GtYxmGf255jCpFQeVbOVIwPCjySRgWotHr9AaSNKwAOnzPmcjsABPBn962FOecpzRXu5PtezUNEvbOtnkNnH_mQuH2mwxfrhre-HjZ47j7KXPLnf84rhTVU)](https://editor.plantuml.com/uml/LOun3i8m40JxUyNA9IW5RGeK7a15InFPHpZ9laFs9GtYxmGf255jCpFQeVbOVIwPCjySRgWotHr9AaSNKwAOnzPmcjsABPBn962FOecpzRXu5PtezUNEvbOtnkNnH_mQuH2mwxfrhre-HjZ47j7KXPLnf84rhTVU).{center}
+
+!!! note "Nota"
+    El motor es parte integral del automóvil. Si se destruye el automóvil, el motor también deja de existir en este contexto. Es posible que en el contexto de un desguace el motor pueda reutilizarse, y darle sentido sin el vehículo, pero en el modelo de dominio de un sistema para un concesionario, el motor no tiene existencia independiente.
+
+**En Kotlin**:
+
+```kotlin
+class Automovil(val modelo: String) {
+    val motor: Motor = Motor("V8")  // Motor ligado al ciclo de vida del automóvil
+
+    inner class Motor(val tipo: String) {
+        fun motorInfo() = "Motor tipo: $tipo del automóvil $modelo"
+    }
+
+    fun mostrarDatos() {
+        println("Automóvil modelo: $modelo con ${motor.motorInfo()}")
+    }
+}
+
+fun main() {
+    val auto = Automovil("Deportivo")
+    auto.mostrarDatos()
+}
+
+```
+
+Se he usado una inner class para `Motor` dentro de `Automovil` porque es una forma natural en Kotlin de reflejar que el motor es parte inseparable del automóvil, pero no es estrictamente necesario.
+
+La inner class permite que el motor tenga acceso a las propiedades del automóvil, reforzando la idea de dependencia fuerte propia de la composición.
+
+Sin embargo, la composición también puede modelarse con dos clases separadas si se prefiere. Lo importante es que la instancia del motor exista y se gestione junto con el automóvil, manteniendo la relación de vida conjunta que define la composición.
+
+Así que, aunque la inner class es un buen recurso idiomático para la composición en Kotlin, lo fundamental es la semántica de la relación y la dependencia, no tanto la forma concreta de definir las clases.
+
+
+**Diferencia clave entre Agregación y Composición**:
+
+| Agregación                                    | Composición                                    |
+|-----------------------------------------------|------------------------------------------------|
+| ◇ Rombo vacío                                 | ♦ Rombo relleno                                |
+| Las partes pueden existir independientemente  | Las partes NO existen sin el todo              |
+| Relación débil                                | Relación fuerte                                |
+| Ejemplo: Mesa-Tornillo, Automóvil-Radio       | Ejemplo: Automóvil-Motor                       |
+
+
+##### 5.2.5. Herencia (Generalización/Especialización)
+
+**Definición**: Representa una relación de tipo "es un". La clase hija hereda características de la clase padre.
+
+**Cuándo usarla**: Usa herencia cuando una clase es una especialización de otra y comparte atributos y comportamientos comunes.
+
+**Representación**: Línea con un **triángulo vacío** apuntando a la superclase.
+
+<figure markdown="span">
+  ![Relación de herencia](assets/relacion-herencia.png)
+  <figcaption>Ejemplo de relación de herencia</figcaption>
+</figure>
+
+**Ejemplo 1**: "Un libro es una publicación"
+
+```
+       ┌──────────────┐
+       │ Publicacion  │
+       └──────────────┘
+              △
+              │ Generalización
+              │
+       ┌──────┴──────┐
+       │    Libro    │
+       └─────────────┘
+       Especialización
+```
+
+**En Kotlin**:
+```
+open class Publicacion {
+    // ... atributos y métodos base
+}
+
+class Libro : Publicacion() {
+    // ... atributos y métodos específicos
+    
+    init {
+        // Llama al constructor de la superclase
+    }
+}
+```
+
+**Ejemplo 2**: "Un perro es un animal"
+
+<figure markdown="span">
+  ![Relación de dependencia](assets/relacion-dependencia.png)
+  <figcaption>Ejemplo de relación de dependencia</figcaption>
+</figure>
+
+Una representación en plantUML sería:
+
+[![](https://img.plantuml.biz/plantuml/svg/LSv12eCm48NX_PpYBPMI2uGkz0Q5uW567IIGJ60IDxRUlIsa2xSFFju_bCfMznI9biYbODIGEE95W8FcD9juFAi5tRxJ3KjEObtlCMceTFxPGynoKyO7NqparVY2silzxLoZ7bAmAz4WklvwFW00)](https://editor.plantuml.com/uml/LSv12eCm48NX_PpYBPMI2uGkz0Q5uW567IIGJ60IDxRUlIsa2xSFFju_bCfMznI9biYbODIGEE95W8FcD9juFAi5tRxJ3KjEObtlCMceTFxPGynoKyO7NqparVY2silzxLoZ7bAmAz4WklvwFW00).{center}
+
+
+**En Kotlin**:
+
+```kotlin
+open class Animal(private val nombre: String) {
+
+    fun comer() {
+        println("$nombre está comiendo.")
+    }
+}
+
+class Perro(private val raza: String, nombre: String) : Animal(nombre) {
+
+    fun ladrar() {
+        println("El perro de raza $raza ladra.")
+    }
+}
+
+fun main() {
+    val miPerro = Perro("Labrador", "Max")
+    miPerro.comer()
+    miPerro.ladrar()
+}
+```
+
+Lo mas destacable es que:
+
+- `Animal` es una clase abierta (`open`) para permitir herencia.
+- `nombre` y `raza` son propiedades privadas. A efectos didácticos, se mantienen privadas para ilustrar el encapsulamiento.
+- La clase `Perro` hereda de `Animal` (relación "es un").
+- Los métodos `comer` y `ladrar` son públicos y accesibles.
+
+
+!!! tip "Principio"
+    La subclase hereda todos los atributos y métodos de la superclase. El objeto miPerro puede usar tanto los métodos de Perro como los heredados de Animal.
+
+##### 5.2.6. Dependencia
+
+**Definición**: Indica que una clase **usa** temporalmente otra clase. Es la relación más débil.
+
+**Cuándo usarla**: Usa dependencia cuando una clase necesita utilizar otra clase de forma puntual, sin mantener una referencia permanente. Hay que tener cuidado de no confundirla con asociación. La principal diferencia es que en la dependencia, la clase que usa no mantiene una referencia a la clase usada. Esta relacción se puede dar en muchos contextos, por tanto solo tendremos que representarla cuando queramos destacar que una clase usa a otra de forma puntual.
+
+**Representación**: Línea **discontinua con flecha**.
+
+
+**Ejemplo**: "Una clase usa un servicio externo"
+
+```
+┌─────────────┐       ┌──────────────┐
+│  Calculadora│- - - →│  Math        │
+└─────────────┘       └──────────────┘
+      usa
+
+┌───────────┐       ┌────────────────────────────┐
+│ Potencia  │- - - →│         Math               │
+└───────────┘       ├────────────────────────────┤
+                    │ pow(a:Double, b:Double)    │
+                    └────────────────────────────┘
+```
+
+**En Kotlin**:
+
+```kotlin
+import kotlin.math.pow
+
+class Calculadora {
+    fun calcularPotencia(base: Double, exponente: Double): Double {
+        return base.pow(exponente)  // Usa Math temporalmente
+    }
+}
+
+// Otro ejemplo
+class Potencia {
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            val x = 5.0
+            val y = 2.0
+            val z = x.pow(y)
+            println("El cuadrado de 5 es: $z")
+        }
+    }
+}
+```
+
+**Características**:
+
+- No mantiene una referencia permanente
+- Uso temporal o puntual
+- Puede ser por parámetro, variable local, etc.
+
+!!! note "Nota"
+    La dependencia es más débil que otras relaciones. La clase simplemente usa la funcionalidad de otra, pero no mantiene una referencia permanente.
+
+##### 5.2.7. Implementación (Realización)
+
+**Definición**: Representa que una clase **implementa** una interfaz o clase abstracta.
+
+**Cuándo usarla**: Usa implementación cuando una clase concreta proporciona la funcionalidad definida por una interfaz o clase abstracta.
+
+**Representación**: Línea **discontinua con triángulo vacío**.
+
+
+**Ejemplo**: "Una clase implementa una interfaz"
+
+```
+    ┌───────────────┐
+    │ <<interface>> │
+    │    IVolador   │
+    └───────────────┘
+            △
+            ┆
+       ┌────┴────┐
+       │  Avion  │
+       └─────────┘
+```
+
+**En Kotlin**:
+```kotlin
+interface IVolador {
+    fun volar()
+    fun aterrizar()
+}
+
+class Avion : IVolador {
+    override fun volar() {
+        println("El avión está volando")
+    }
+    
+    override fun aterrizar() {
+        println("El avión está aterrizando")
+    }
+}
+```
+
+A destacar:
+
+- IVolador es una interfaz que define los métodos `volar` y `aterrizar`. 
+- La clase `Avion` implementa la interfaz `IVolador`, proporcionando las implementaciones concretas de los métodos `volar` y `aterrizar`.
+- La relación de implementación indica que `Avion` cumple con el contrato definido por `IVolador`.
+- Esto permite que `Avion` pueda ser tratado como un `IVolador`, facilitando el polimorfismo y la flexibilidad en el diseño del sistema.
+- La implementación es una relación fuerte, ya que la clase concreta debe proporcionar todas las funcionalidades definidas en la interfaz.
+ 
+
+#### 5.3. Resumen de Relaciones
+
+| Relación           | Símbolo  | Fuerza       | Descripción                            | Ejemplo                 |
+|--------------------|----------|--------------|----------------------------------------|-------------------------|
+| **Dependencia**    | `- - →`  | Muy débil    | Uso temporal                           | Calculadora - Math      |
+| **Asociación**     | `───`    | Débil        | Relación general                       | Persona - Mascota       |
+| **Agregación**     | `◇───`   | Media        | "Tiene un" (independiente)             | Mesa - Tornillo         |
+| **Composición**    | `♦───`   | Fuerte       | "Es parte de" (dependiente)            | Coche - Motor           |
+| **Herencia**       | `───▷`   | Muy fuerte   | "Es un"                                | Perro - Animal          |
+| **Implementación** | `- - ▷`  | Muy fuerte   | Implementa interfaz                    | Avion - IVolador        |
+
+
 
 ### 6. Ejemplos Completos de Diagramas de Clases
 

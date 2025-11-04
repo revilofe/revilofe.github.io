@@ -1,0 +1,29 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .class-box { fill: #fffacd; stroke: #000; stroke-width: 2; }
+    .text { font-family: monospace; font-size: 12px; }
+    .title { font-weight: bold; font-size: 14px; }
+  </style>
+  
+  <!-- Class box -->
+  <rect class="class-box" x="50" y="20" width="300" height="260"/>
+  
+  <!-- Lines dividing sections -->
+  <line x1="50" y1="60" x2="350" y2="60" stroke="#000" stroke-width="2"/>
+  <line x1="50" y1="140" x2="350" y2="140" stroke="#000" stroke-width="2"/>
+  
+  <!-- Title -->
+  <text class="text title" x="170" y="45">Libro</text>
+  
+  <!-- Attributes -->
+  <text class="text" x="60" y="80">- autor : String</text>
+  <text class="text" x="60" y="100">- titulo : String</text>
+  <text class="text" x="60" y="120">- cantidadLibros : Int</text>
+  
+  <!-- Methods -->
+  <text class="text" x="60" y="160">+ Libro()</text>
+  <text class="text" x="60" y="180">+ Libro(autor, titulo)</text>
+  <text class="text" x="60" y="200">+ setAutor(...) : Unit</text>
+  <text class="text" x="60" y="220">+ getAutor() : String</text>
+  <text class="text" x="60" y="240">+ toString() : String</text>
+</svg>

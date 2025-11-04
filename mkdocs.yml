@@ -137,6 +137,12 @@ nav:
          - '2.6.-Evaluación de IDEs': 'section3/u02/teoria/EDES-U2.6.-Evaluacion.md'
          - 'Práctica 2.2: Evaluación IDEs': 'section3/u02/practica/EDES-U2.-Practica002.md'
 #        - 'Práctica 2.1: Herramientas de desarrollo': 'section3/u02/practica/EDES-U2.-Practica001.md'
+    - 'U3: Diseño y diagramas de clases':
+         - 'section3/u03/index.md'
+         - '3.1.-Introducción a UML': 'section3/u03/teoria/EDES-U3.1.-UML.md'
+         - '3.2.-Diagrama de clases': 'section3/u03/teoria/EDES-U3.2.-DiagramaClases.md'
+         - '3.3.-Identificación de clases': 'section3/u03/teoria/EDES-U3.3.-IdentifClases.md'
+         - '3.4.-Acoplamiento y cohesión': 'section3/u03/teoria/EDES-U3.4.-AcopCohe.md'
     - 'U4: SCV, refactorización y documentación':
         - 'section3/u04/index.md'
         - '4.1.-Sistemas de control de versiones': 'section3/u04/teoria/EDES-U4.1.-Git_Github.md'

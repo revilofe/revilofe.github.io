@@ -21,9 +21,10 @@ tags:
 
 ### 1. Introducción
 
-El **Lenguaje Unificado de Modelado** o **UML** («Unified Modeling Language») es un lenguaje estandarizado de modelado. Está especialmente desarrollado para ayudar a todos los intervinientes en el desarrollo y modelado de un sistema o un producto software a describir, diseñar, especificar, visualizar, construir y documentar todos los artefactos que lo componen, sirviéndose de varios tipos de diagramas.
+El **Lenguaje Unificado de Modelado** o **UML** («Unified Modeling Language») es un lenguaje estandarizado de modelado. Está especialmente desarrollado para ayudar, a todos los intervinientes en el desarrollo y modelado de un sistema o un producto software, a describir, diseñar, especificar, visualizar, construir y documentar todos los artefactos que lo componen, sirviéndose de varios tipos de diagramas.
 
-> 💡 **Una imagen vale más que mil palabras** - Principio fundamental de UML
+!!! note "Principio fundamental de UML"
+    Una imagen vale más que mil palabras
 
 ### 2. ¿Qué es UML?
 
@@ -61,7 +62,8 @@ El modelado es vital en todo tipo de proyectos, pero cobra especial importancia 
 - ✅ Los cambios son **menos costosos** en fase de diseño
 - ✅ Facilita la **comunicación** entre el equipo
 
-> **Importante**: Utilizando diagramas UML se consigue visualizar y verificar los diseños de sistemas de software antes de que la implementación del código haga que los cambios sean difíciles y demasiado costosos.
+!!! warning "Importante"
+    Utilizando diagramas UML se consigue visualizar y verificar los diseños de sistemas de software antes de que la implementación del código haga que los cambios sean difíciles y demasiado costosos.
 
 ### 4. ¿Por qué usar UML?
 
@@ -109,7 +111,8 @@ Las desventajas de UML suelen estar relacionadas con su complejidad y la curva d
 - **Curva de aprendizaje**: Requiere tiempo para dominar todos los diagramas
 - **Puede ser excesivo**: Para proyectos pequeños puede resultar innecesariamente complejo
 
-> **Nota**: Los analistas tienden a utilizar los diagramas de forma sencilla, consiguiendo que sean entendidos fácilmente por cualquier persona que acceda a ellos.
+!!! note "Nota"
+    Los analistas tienden a utilizar los diagramas de forma sencilla, consiguiendo que sean entendidos fácilmente por cualquier persona que acceda a ellos.
 
 ### 7. Diagramas de UML
 
@@ -230,7 +233,8 @@ UML posteriormente evolucionó a través de varias versiones, siendo la versión
 | 2003       | 2.0      | Especificación final adoptada por OMG |
 | Actualidad | 2.5.x    | Versiones actuales                    |
 
-> **Nota histórica**: Lo que es sobresaliente y nuevo en UML no es su contenido, sino su **estandarización** a un solo lenguaje unificado con un significado definido formalmente.
+!!! note "Nota histórica"
+    Lo que es sobresaliente y nuevo en UML no es su contenido, sino su **estandarización** a un solo lenguaje unificado con un significado definido formalmente.
 
 ### 9. Alternativas a UML
 
@@ -314,7 +318,8 @@ Si bien UML es el estándar más utilizado y reconocido, existen alternativas pa
 | **Flowchart** | Algoritmos simples       | Más simple        | Baja         |
 | **DSL**       | Dominio específico       | Independiente     | Variable     |
 
-> **Conclusión**: UML sigue siendo el estándar predominante y ampliamente aceptado para el modelado de sistemas de software debido a su versatilidad y amplia gama de diagramas para representar diferentes aspectos de un sistema.
+!!! tip "Conclusión"
+    UML sigue siendo el estándar predominante y ampliamente aceptado para el modelado de sistemas de software debido a su versatilidad y amplia gama de diagramas para representar diferentes aspectos de un sistema.
 
 ### 10. Mejores prácticas al usar UML
 Aunque UML es una herramienta poderosa, su efectividad depende de cómo se utilice. Aquí hay algunas mejores prácticas para aprovechar al máximo UML en tus proyectos:

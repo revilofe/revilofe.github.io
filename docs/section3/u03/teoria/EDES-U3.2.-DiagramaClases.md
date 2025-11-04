@@ -23,7 +23,8 @@ tags:
 
 El **diagrama de clases** es uno de los diagramas incluidos en UML 2.5 clasificado dentro de los **diagramas de estructura** y, como tal, se utiliza para representar los elementos que componen un sistema de información desde un punto de vista **estático**.
 
-> 📌 **Punto clave**: Este diagrama NO incluye la forma en que se comportan los elementos a lo largo de la ejecución. Esa función la cumplen los diagramas de comportamiento (diagrama de secuencia, casos de uso, etc.).
+!!! note "Punto clave"
+    Este diagrama NO incluye la forma en que se comportan los elementos a lo largo de la ejecución. Esa función la cumplen los diagramas de comportamiento (diagrama de secuencia, casos de uso, etc.).
 
 #### 1.1. Características principales
 
@@ -94,7 +95,8 @@ Los objetos y su división en clases a menudo derivan de:
 4. **Interacciones**: Transacción, matrícula, contrato, etc.
 5. **Eventos o incidencias**: Vuelo, accidente, suceso, etc.
 
-> **Nota**: Estas categorías se solapan, y las dos primeras son fuentes de objetos y de clases mucho más comunes que las dos últimas.
+!!! note "Nota"
+    Estas categorías se solapan, y las dos primeras son fuentes de objetos y de clases mucho más comunes que las dos últimas.
 
 ### 3. Estructura de una Clase
 
@@ -108,7 +110,10 @@ Una clase está compuesta por **tres elementos**:
 
 La clase se representa con una **caja dividida en tres zonas** mediante líneas horizontales:
 
-![Estructura de una clase simple](assets/clase-simple.png)
+<figure markdown="span">
+  ![Estructura de una clase simple](assets/clase-simple.png)
+  <figcaption>Estructura de una clase simple</figcaption>
+</figure>
 
 ```
 ┌─────────────────────────┐
@@ -196,7 +201,8 @@ companion object {
 }
 ```
 
-> **Convención**: El nombre de las constantes debe escribirse totalmente en mayúsculas.
+!!! tip "Convención"
+    El nombre de las constantes debe escribirse totalmente en mayúsculas.
 
 #### 3.4. Zona 3: Métodos
 
@@ -253,7 +259,10 @@ fun getNombre(): String {
 
 Tanto los atributos como los métodos incluyen un símbolo que indica su **visibilidad**:
 
-![Símbolos de visibilidad](assets/visibilidad-simbolos.gif)
+<figure markdown="span">
+  ![Símbolos de visibilidad](assets/visibilidad-simbolos.gif)
+  <figcaption>Símbolos de visibilidad en UML</figcaption>
+</figure>
 
 | Símbolo  | Visibilidad   | Descripción                                                  |
 |----------|---------------|--------------------------------------------------------------|
@@ -263,7 +272,8 @@ Tanto los atributos como los métodos incluyen un símbolo que indica su **visib
 | `~`      | **Paquete**   | Accesible desde clases del mismo paquete (menos común)       |
 | `/`      | **Derivado**  | Atributo calculado a partir de otros (menos común)           |
 
-> **Nota**: Los tres primeros (`+`, `-`, `#`) son los más comunes y universales.
+!!! note "Nota"
+    Los tres primeros (`+`, `-`, `#`) son los más comunes y universales.
 
 #### 3.6. Miembros Estáticos
 
@@ -299,7 +309,10 @@ class Contador {
 
 #### 3.7. Ejemplo Completo de Clase
 
-![Ejemplo de clase completa](assets/clase-completa.png)
+<figure markdown="span">
+  ![Ejemplo de clase completa](assets/clase-completa.png)
+  <figcaption>Ejemplo de clase completa con todos sus elementos</figcaption>
+</figure>
 
 **Ejemplo: Clase Producto**
 
@@ -322,7 +335,10 @@ class Contador {
 
 **Ejemplo: Clase Libro**
 
-![Ejemplo de clase Libro](assets/ejemplo-clase-libro.svg)
+<figure markdown="span">
+  ![Ejemplo de clase Libro](assets/ejemplo-clase-libro.svg)
+  <figcaption>Diagrama de clase Libro con atributos y métodos</figcaption>
+</figure>
 
 ```
 ┌────────────────────────────────────────┐
@@ -391,8 +407,15 @@ Una **relación** identifica una **dependencia** entre clases. Puede ser:
 
 Las relaciones se representan con **líneas** que unen las clases. El tipo de línea varía según el tipo de relación.
 
-![Tipos de relaciones](assets/tipos-relaciones.jpg)
-![Relaciones](assets/relaciones.png)
+<figure markdown="span">
+  ![Tipos de relaciones](assets/tipos-relaciones.jpg)
+  <figcaption>Tipos de relaciones en UML</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Relaciones](assets/relaciones.png)
+  <figcaption>Representación gráfica de relaciones</figcaption>
+</figure>
 
 #### 4.1. Propiedades de las Relaciones
 
@@ -402,7 +425,10 @@ Cada relación puede tener las siguientes propiedades:
 
 Indica el **número de elementos** de una clase que participan en una relación.
 
-![Notación de multiplicidad](assets/multiplicidad-notacion.gif)
+<figure markdown="span">
+  ![Notación de multiplicidad](assets/multiplicidad-notacion.gif)
+  <figcaption>Notación de multiplicidad en relaciones</figcaption>
+</figure>
 
 | Notación     | Significado                       |
 |--------------|-----------------------------------|
@@ -444,7 +470,10 @@ En el ejemplo anterior:
 
 **Representación**: Línea continua simple que une las clases.
 
-![Relación de asociación](assets/relacion-asociacion.png)
+<figure markdown="span">
+  ![Relación de asociación](assets/relacion-asociacion.png)
+  <figcaption>Ejemplo de relación de asociación</figcaption>
+</figure>
 
 ##### 5.1.1. Asociación Binaria
 
@@ -564,7 +593,10 @@ class OrdenCompra {
 
 **Representación**: Línea con un **rombo vacío** en la clase contenedora.
 
-![Relación de agregación](assets/relacion-agregacion.png)
+<figure markdown="span">
+  ![Relación de agregación](assets/relacion-agregacion.png)
+  <figcaption>Ejemplo de relación de agregación</figcaption>
+</figure>
 
 **Ejemplo 1**: "Las mesas están formadas por tablas de madera y tornillos"
 
@@ -575,7 +607,8 @@ class OrdenCompra {
    contiene
 ```
 
-> **Nota**: El tornillo puede formar parte de más objetos (silla, estantería...), por lo que tiene existencia independiente.
+!!! note "Nota"
+    El tornillo puede formar parte de más objetos (silla, estantería...), por lo que tiene existencia independiente.
 
 **Ejemplo 2**: "Un automóvil es accesorio de una radio"
 
@@ -607,7 +640,8 @@ class Radio {
 }
 ```
 
-> **Nota**: En la agregación, la radio puede existir independientemente del automóvil.
+!!! note "Nota"
+    En la agregación, la radio puede existir independientemente del automóvil.
 
 #### 5.3. Composición
 
@@ -615,7 +649,10 @@ class Radio {
 
 **Representación**: Línea con un **rombo relleno** en la clase contenedora.
 
-![Relación de composición](assets/relacion-composicion.png)
+<figure markdown="span">
+  ![Relación de composición](assets/relacion-composicion.png)
+  <figcaption>Ejemplo de relación de composición</figcaption>
+</figure>
 
 **Ejemplo**: "Un automóvil está compuesto por un motor"
 
@@ -626,7 +663,8 @@ class Radio {
    contiene
 ```
 
-> **Nota**: El motor es parte integral del automóvil. Si se destruye el automóvil, el motor también deja de existir en este contexto.
+!!! note "Nota"
+    El motor es parte integral del automóvil. Si se destruye el automóvil, el motor también deja de existir en este contexto.
 
 **En Kotlin**:
 
@@ -656,7 +694,10 @@ class Automovil {
 
 **Representación**: Línea con un **triángulo vacío** apuntando a la superclase.
 
-![Relación de herencia](assets/relacion-herencia.png)
+<figure markdown="span">
+  ![Relación de herencia](assets/relacion-herencia.png)
+  <figcaption>Ejemplo de relación de herencia</figcaption>
+</figure>
 
 **Ejemplo**: "Un perro es un animal"
 
@@ -715,7 +756,8 @@ class Libro : Publicacion() {
 }
 ```
 
-> **Principio**: La subclase hereda todos los atributos y métodos de la superclase.
+!!! tip "Principio"
+    La subclase hereda todos los atributos y métodos de la superclase.
 
 #### 5.5. Dependencia
 
@@ -723,7 +765,10 @@ class Libro : Publicacion() {
 
 **Representación**: Línea **discontinua con flecha**.
 
-![Relación de dependencia](assets/relacion-dependencia.png)
+<figure markdown="span">
+  ![Relación de dependencia](assets/relacion-dependencia.png)
+  <figcaption>Ejemplo de relación de dependencia</figcaption>
+</figure>
 
 **Ejemplo**: "Una clase usa un servicio externo"
 
@@ -771,7 +816,8 @@ class Potencia {
 - Uso temporal o puntual
 - Puede ser por parámetro, variable local, etc.
 
-> **Nota**: La dependencia es más débil que otras relaciones. La clase simplemente usa la funcionalidad de otra, pero no mantiene una referencia permanente.
+!!! note "Nota"
+    La dependencia es más débil que otras relaciones. La clase simplemente usa la funcionalidad de otra, pero no mantiene una referencia permanente.
 
 #### 5.6. Implementación (Realización)
 
@@ -779,7 +825,10 @@ class Potencia {
 
 **Representación**: Línea **discontinua con triángulo vacío**.
 
-![Relación de implementación](assets/relacion-implementacion.png)
+<figure markdown="span">
+  ![Relación de implementación](assets/relacion-implementacion.png)
+  <figcaption>Ejemplo de relación de implementación</figcaption>
+</figure>
 
 **Ejemplo**: "Una clase implementa una interfaz"
 
@@ -1032,7 +1081,10 @@ class Comentario(
 
 ##### 6.2.1. Clínica Veterinaria
 
-![Diagrama de clases clínica veterinaria](assets/ejemplo-veterinaria.jpg)
+<figure markdown="span">
+  ![Diagrama de clases clínica veterinaria](assets/ejemplo-veterinaria.jpg)
+  <figcaption>Diagrama de clases para sistema de clínica veterinaria</figcaption>
+</figure>
 
 **Clases principales**:
 
@@ -1044,7 +1096,10 @@ class Comentario(
 
 ##### 6.2.2. Zoológico
 
-![Diagrama de clases zoológico](assets/ejemplo-zoologico.png)
+<figure markdown="span">
+  ![Diagrama de clases zoológico](assets/ejemplo-zoologico.png)
+  <figcaption>Diagrama de clases para sistema de zoológico</figcaption>
+</figure>
 
 **Clases principales**:
 
@@ -1056,7 +1111,10 @@ class Comentario(
 
 ##### 6.2.3. Tienda
 
-![Diagrama de clases de una tienda](assets/ejemplo-tienda.png)
+<figure markdown="span">
+  ![Diagrama de clases de una tienda](assets/ejemplo-tienda.png)
+  <figcaption>Diagrama de clases para sistema de tienda</figcaption>
+</figure>
 
 **Clases principales**:
 
@@ -1068,7 +1126,10 @@ class Comentario(
 
 ##### 6.2.4. Gestión de Biblioteca
 
-![Diagrama de clases gestión de biblioteca](assets/ejemplo-biblioteca.png)
+<figure markdown="span">
+  ![Diagrama de clases gestión de biblioteca](assets/ejemplo-biblioteca.png)
+  <figcaption>Diagrama de clases para sistema de biblioteca</figcaption>
+</figure>
 
 **Clases principales**:
 
@@ -1080,7 +1141,10 @@ class Comentario(
 
 ##### 6.2.5. Centro Educativo
 
-![Diagrama de clases centro educativo](assets/ejemplo-centro-educativo.png)
+<figure markdown="span">
+  ![Diagrama de clases centro educativo](assets/ejemplo-centro-educativo.png)
+  <figcaption>Diagrama de clases para sistema de centro educativo</figcaption>
+</figure>
 
 **Clases principales**:
 

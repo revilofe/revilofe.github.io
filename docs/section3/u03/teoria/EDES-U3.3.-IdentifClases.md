@@ -24,7 +24,8 @@ tags:
 
 La **identificación de clases** es uno de los pasos más importantes y desafiantes en el diseño orientado a objetos. Un buen modelo de clases es la base para un sistema bien estructurado, mantenible y escalable.
 
-> 💡 **Principio fundamental**: "Cada comportamiento que requiera el sistema debe ser proporcionado por los objetos de las clases que elijamos"
+!!! note "Principio fundamental"
+    Cada comportamiento que requiera el sistema debe ser proporcionado por los objetos de las clases que elijamos
 
 Este documento se centra en **cómo identificar clases**, **cómo relacionarlas** y las **buenas prácticas** para crear diagramas de clases efectivos.
 
@@ -56,7 +57,8 @@ La construcción de un modelo de clases incluye dos objetivos fundamentales:
 
 **Construir, lo más rápido y barato posible, un sistema que satisfaga nuestros requisitos actuales.**
 
-> **Principio**: "Cada comportamiento que requiera el sistema debe ser proporcionado por los objetos de las clases que elijamos"
+!!! tip "Principio"
+    Cada comportamiento que requiera el sistema debe ser proporcionado por los objetos de las clases que elijamos
 
 **Estrategias**:
 - Identificar las clases mínimas necesarias
@@ -67,7 +69,8 @@ La construcción de un modelo de clases incluye dos objetivos fundamentales:
 
 **Construir un sistema que sea fácil de mantener y adaptar a futuros requisitos.**
 
-> **Principio**: "Un buen modelo de clases está formado por módulos encapsulados, con acoplamiento débil (pocas dependencias entre módulos) y cohesión fuerte"
+!!! tip "Principio"
+    Un buen modelo de clases está formado por módulos encapsulados, con acoplamiento débil (pocas dependencias entre módulos) y cohesión fuerte
 
 **Características clave**:
 - **Alta cohesión**: Cada clase tiene una responsabilidad clara y bien definida
@@ -245,7 +248,8 @@ Si se duda si mantener una clase, una buena práctica es mantener **dos listas**
    - Requieren más análisis
    - Podrían convertirse en atributos o métodos
 
-**Ventaja**: Evita perder información mientras se está distinguiendo las cosas seguras de las que están por fijar.
+!!! tip "Ventaja"
+    Evita perder información mientras se está distinguiendo las cosas seguras de las que están por fijar.
 
 ### 6. Fuentes de Clases
 
@@ -296,7 +300,8 @@ Los objetos y su división en clases a menudo derivan de las siguientes fuentes:
 - Pueden tener consecuencias en el sistema
 - Menos comunes que las otras categorías
 
-> **Nota importante**: Las categorías 1 y 2 (tangibles y roles) son fuentes mucho más comunes que las últimas.
+!!! note "Nota importante"
+    Las categorías 1 y 2 (tangibles y roles) son fuentes mucho más comunes que las últimas.
 
 ### 7. Errores Comunes al Identificar Clases
 

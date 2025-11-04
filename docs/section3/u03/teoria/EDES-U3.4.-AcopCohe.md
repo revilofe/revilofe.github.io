@@ -24,7 +24,8 @@ tags:
 
 En el desarrollo de software, dos conceptos fundamentales que determinan la calidad del diseño son el **acoplamiento** y la **cohesión**. Estos principios nos ayudan a crear sistemas más mantenibles, comprensibles y flexibles.
 
-> 💡 **Principio clave**: Un buen diseño de software debe buscar **bajo acoplamiento** y **alta cohesión**.
+!!! note "Principio clave"
+    Un buen diseño de software debe buscar **bajo acoplamiento** y **alta cohesión**.
 
 **Objetivos de un buen diseño**:
 - **Bajo acoplamiento**: Minimizar las dependencias entre módulos

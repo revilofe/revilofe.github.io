@@ -53,29 +53,30 @@ Las consecuencias de esto son que hay que tener cuidado:
 
 La construcción de un modelo de clases incluye dos objetivos fundamentales:
 
-#### 3.1. Objetivo 1: Construcción eficiente
+**Objetivo 1:** Construcción eficiente
 
-**Construir, lo más rápido y barato posible, un sistema que satisfaga nuestros requisitos actuales.**
+Construir, lo más rápido y barato posible, un sistema que satisfaga nuestros requisitos actuales.
 
 !!! tip "Principio"
     Cada comportamiento que requiera el sistema debe ser proporcionado por los objetos de las clases que elijamos
 
-**Estrategias**:
-- Identificar las clases mínimas necesarias
-- Enfocarse en los requisitos actuales
-- Evitar sobre-ingeniería prematura
+Estrategias:
 
-#### 3.2. Objetivo 2: Mantenibilidad
+- Identificar las clases mínimas necesarias: La solución más simple que funcione.
+- Enfocarse en los requisitos actuales: No anticipar necesidades futuras innecesarias.
+- Evitar sobre-ingeniería prematura: No añadir complejidad sin justificación.
 
-**Construir un sistema que sea fácil de mantener y adaptar a futuros requisitos.**
+**Objetivo 2:** Mantenibilidad
+
+Construir un sistema que sea fácil de mantener y adaptar a futuros requisitos.
 
 !!! tip "Principio"
     Un buen modelo de clases está formado por módulos encapsulados, con acoplamiento débil (pocas dependencias entre módulos) y cohesión fuerte
 
-**Características clave**:
-- **Alta cohesión**: Cada clase tiene una responsabilidad clara y bien definida
-- **Bajo acoplamiento**: Las clases tienen pocas dependencias entre sí
-- **Encapsulamiento**: Los detalles internos están ocultos
+Características clave:
+- Alta cohesión*: Cada clase tiene una responsabilidad clara y bien definida
+- Bajo acoplamiento: Las clases tienen pocas dependencias entre sí
+- Encapsulamiento: Los detalles internos están ocultos
 
 ### 4. Proceso Iterativo de Identificación
 
@@ -458,7 +459,7 @@ Depender de abstracciones, no de implementaciones concretas.
 
 #### 9.2. Cohesión y acoplamiento
 
-**Alta Cohesión** ✅
+**Alta Cohesión**
 
 Las responsabilidades de una clase están fuertemente relacionadas.
 
@@ -472,7 +473,7 @@ Clase Libro
 - obtenerAutor()
 ```
 
-**Ejemplo de baja cohesión** ❌:
+**Ejemplo de baja cohesión**:
 ```
 Clase Utilidades
 - validarEmail()
@@ -481,11 +482,12 @@ Clase Utilidades
 - enviarEmail()
 ```
 
-**Bajo Acoplamiento** ✅
+**Bajo Acoplamiento** 
 
 Las clases tienen pocas dependencias entre sí.
 
 **Técnicas para reducir acoplamiento**:
+
 - Usar interfaces
 - Inyección de dependencias
 - Patrones de diseño (Factory, Strategy, Observer)
@@ -493,21 +495,25 @@ Las clases tienen pocas dependencias entre sí.
 #### 9.3. Nomenclatura efectiva
 
 **Nombres de clases**:
+
 - Sustantivos en singular
 - Descriptivos y específicos
 - PascalCase: `CarritoCompras`, `OrdenDeCompra`
 
 **Evitar**:
+
 - Nombres genéricos: `Gestor`, `Manager`, `Handler` (a menos que sean realmente necesarios)
 - Abreviaturas confusas
 - Nombres muy largos
 
 **Nombres de atributos**:
+
 - Sustantivos descriptivos
 - camelCase: `nombreCompleto`, `fechaNacimiento`
-- Evitar prefijos innecesarios: `strNombre` ❌, `nombre` ✅
+- Evitar prefijos innecesarios: `strNombre` incorrecto, `nombre` correcto
 
 **Nombres de métodos**:
+
 - Verbos que describen la acción
 - camelCase: `calcularTotal()`, `enviarEmail()`
 - Getters/Setters: `getNombre()`, `setNombre()`
@@ -621,26 +627,26 @@ Veamos un ejemplo completo del proceso de identificación de clases para un **Si
 
 #### 10.3. Paso 3: Analizar cada candidato
 
-| Candidato | ¿Clase? | Razón |
-|-----------|---------|-------|
-| Biblioteca | ❌ No | Contenedor general, puede ser opcional |
-| Sistema | ❌ No | Metalenguaje |
-| Libros | ✅ Sí | Entidad principal del dominio |
-| Préstamos | ✅ Sí | Interacción importante con estado |
-| Usuarios | ✅ Sí | Rol principal |
-| Nombre | ❌ No | Atributo de Usuario |
-| Dirección | ⚠️ Quizás | Podría ser clase si es compleja |
-| Teléfono | ❌ No | Atributo de Usuario |
-| Título | ❌ No | Atributo de Libro |
-| Autor | ⚠️ Quizás | Podría ser clase si almacenamos más info |
-| ISBN | ❌ No | Atributo de Libro |
-| Copias físicas | ✅ Sí | Importante distinguir libro de copia |
-| Período | ❌ No | Atributo calculado |
-| Días | ❌ No | Valor numérico |
-| Bibliotecario | ✅ Sí | Rol con permisos especiales |
-| Reservas | ✅ Sí | Funcionalidad importante |
-| Fecha préstamo | ❌ No | Atributo de Préstamo |
-| Fecha devolución | ❌ No | Atributo de Préstamo |
+| Candidato        | ¿Clase?   | Razón                                    |
+|------------------|-----------|------------------------------------------|
+| Biblioteca       | ❌ No      | Contenedor general, puede ser opcional   |
+| Sistema          | ❌ No      | Metalenguaje                             |
+| Libros           | ✅ Sí      | Entidad principal del dominio            |
+| Préstamos        | ✅ Sí      | Interacción importante con estado        |
+| Usuarios         | ✅ Sí      | Rol principal                            |
+| Nombre           | ❌ No      | Atributo de Usuario                      |
+| Dirección        | ⚠️ Quizás | Podría ser clase si es compleja          |
+| Teléfono         | ❌ No      | Atributo de Usuario                      |
+| Título           | ❌ No      | Atributo de Libro                        |
+| Autor            | ⚠️ Quizás | Podría ser clase si almacenamos más info |
+| ISBN             | ❌ No      | Atributo de Libro                        |
+| Copias físicas   | ✅ Sí      | Importante distinguir libro de copia     |
+| Período          | ❌ No      | Atributo calculado                       |
+| Días             | ❌ No      | Valor numérico                           |
+| Bibliotecario    | ✅ Sí      | Rol con permisos especiales              |
+| Reservas         | ✅ Sí      | Funcionalidad importante                 |
+| Fecha préstamo   | ❌ No      | Atributo de Préstamo                     |
+| Fecha devolución | ❌ No      | Atributo de Préstamo                     |
 
 #### 10.4. Paso 4: Clases finales
 
@@ -755,32 +761,37 @@ Recorrer casos de uso con el diagrama:
 
 Antes de finalizar tu diagrama de clases, verifica:
 
-**Identificación de Clases** ✅
+**Identificación de Clases**
+
 - [ ] He analizado todos los sustantivos del enunciado
 - [ ] He descartado candidatos inapropiados
 - [ ] Cada clase tiene una responsabilidad clara
 - [ ] No hay clases redundantes
 - [ ] Los nombres son descriptivos y específicos
 
-**Relaciones** ✅
+**Relaciones**
+
 - [ ] He identificado todas las relaciones necesarias
 - [ ] La multiplicidad está correctamente especificada
 - [ ] He elegido el tipo de relación apropiado
 - [ ] No hay relaciones innecesarias
 
-**Atributos y Métodos** ✅
+**Atributos y Métodos**
+
 - [ ] Cada clase tiene los atributos necesarios
 - [ ] Los métodos reflejan las responsabilidades
 - [ ] La visibilidad está correctamente definida
 - [ ] No hay atributos que deberían ser clases
 
-**Principios de Diseño** ✅
+**Principios de Diseño**
+
 - [ ] Alta cohesión en cada clase
 - [ ] Bajo acoplamiento entre clases
 - [ ] Responsabilidad única por clase
 - [ ] Buen encapsulamiento
 
-**Representación Visual** ✅
+**Representación Visual**
+
 - [ ] El diagrama es claro y legible
 - [ ] Las líneas no se cruzan excesivamente
 - [ ] Hay una organización lógica

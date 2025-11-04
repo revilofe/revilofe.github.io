@@ -37,9 +37,9 @@ El **diagrama de clases** es uno de los diagramas incluidos en UML 2.5 clasifica
 
 El diagrama de clases describe:
 
-- Los tipos de objetos que hay en el sistema
-- Las diversas clases de relaciones estáticas que existen entre ellos
-- Los atributos y operaciones (métodos) de una clase
+- Los tipos de objetos (clases) que hay en el sistema
+- Las diversas tipos de relaciones estáticas que existen entre las clases
+- Los atributos y operaciones (métodos, funciones) de una clase
 - Las restricciones según la forma en que se conecten los objetos
 
 #### 1.3. Comparación con otros modelos
@@ -50,45 +50,40 @@ El diagrama de clases se puede equiparar, salvando las distancias, al famoso **d
 - Representan datos y su interacción
 - Tienen una utilidad similar en sus respectivos contextos
 
-#### 1.4. Objetivo según la fase
+ten en cuenta lo que ya sabes sobre diagramas E/R para entender mejor los diagramas de clases.
+
+#### 1.4. Objetivo de estos diagrams según la fase
 
 Los diagramas de clases pueden ser desarrollados en diferentes fases del ciclo de vida del software:
 
-- **Durante el análisis del sistema**: El diagrama se desarrolla buscando una solución ideal
-- **Durante el diseño**: Se usa el mismo diagrama y se modifica para satisfacer los detalles de las implementaciones
+- **Durante el análisis del sistema**: El diagrama se desarrolla buscando el modelado del dominio del problema en el mundo real, para entender los requisitos y posteriormente diseñar la solución técnica
+- **Durante el diseño**: Se usa el mismo diagrama, pero se modifica para satisfacer los detalles de las implementaciones, tecnologías y restricciones del sistema
 
 ### 2. Elementos del Diagrama de Clases
 
 El diagrama UML de clases está formado por tres elementos principales:
 
-1. **Clases**
-2. **Relaciones**
-3. **Interfaces**
+1. **Clases:** Representan los objetos del mundo real
+2. **Relacione:** Representan las asociaciones entre las clases, como se interrelacionan
+3. **Interfaces:** Representan contratos que las clases pueden implementar, definiendo un conjunto de métodos sin implementación
 
-#### 2.1. Clases
+Cada uno de estos elementos se verán en esta unidad.
+
+### 3. Clases
 
 Las **clases** son el elemento principal del diagrama y representan una clase dentro del paradigma de la orientación a objetos.
 
-##### 2.1.1. ¿Qué representa una clase?
+#### 3.1 ¿Qué representa una clase?
 
-Una clase describe un conjunto de objetos con un rol o roles equivalentes en un sistema. Representa:
+Una clase describe un conjunto de objetos con responsabilidades y características comunes dentro de un sistema. En el dominio del «negocio» puede representar conceptos como Paciente, Doctor, Cita o Expediente Médico. A la vez, agrupa objetos que comparten atributos y comportamientos; por ejemplo, todos los objetos de la clase Coche comparten propiedades y operaciones comunes.
 
-- Conceptos o entidades del «negocio»
-- Define un grupo de objetos que comparten características, condiciones y significado
-- Ejemplo: Animal, Persona, Mensaje, Expediente, Usuario, Producto...
+En un sistema software, una clase:
+- Es la pieza básica de la POO.
+- Representa objetos del mundo real o conceptos del dominio (p.ej., automóvil, estudiante, cuenta bancaria).
+- Define atributos y comportamientos comunes a sus instancias.
+- Favorece objetos especializados con responsabilidad única y comunicación mediante mensajes.
 
-##### 2.1.2. Objetos y clases
-
-Un **objeto** es:
-
-- La pieza básica de la POO (Programación Orientada a Objetos)
-- Representa un objeto del mundo real, por ejemplo: un automóvil, un estudiante, una cuenta bancaria
-- Cada objeto es especializado y solo se encarga de su tarea
-- Pueden ser entidades físicas y conceptuales
-- Se comunican con otros objetos pasándose mensajes
-
-Los objetos y su división en clases a menudo derivan de:
-
+Los objetos y su clasificación en clases suelen derivar de:
 1. **Cosas tangibles o "del mundo real"**: Avión, auto, televisor, computador, etc.
 2. **Roles o Papeles**: Gerente, cliente, vendedor, profesor, etc.
 3. **Organizaciones**: Universidad, empresa, departamento, etc.
@@ -96,9 +91,9 @@ Los objetos y su división en clases a menudo derivan de:
 5. **Eventos o incidencias**: Vuelo, accidente, suceso, etc.
 
 !!! note "Nota"
-    Estas categorías se solapan, y las dos primeras son fuentes de objetos y de clases mucho más comunes que las dos últimas.
+    Estas categorías se solapan, y las dos primeras son fuentes de objetos y de clases mucho más comunes que las últimas.
 
-### 3. Estructura de una Clase
+#### 3.2. ¿Como se representa?
 
 Una clase está compuesta por **tres elementos**:
 
@@ -106,9 +101,7 @@ Una clase está compuesta por **tres elementos**:
 2. **Atributos**
 3. **Métodos/Funciones**
 
-#### 3.1. Representación gráfica
-
-La clase se representa con una **caja dividida en tres zonas** mediante líneas horizontales:
+La clase se representa con una **caja dividida en tres zonas** mediante líneas horizontales, y cada elemento dentro de una zona:
 
 <figure markdown="span">
   ![Estructura de una clase simple](assets/clase-simple.png)
@@ -125,7 +118,7 @@ La clase se representa con una **caja dividida en tres zonas** mediante líneas 
 └─────────────────────────┘
 ```
 
-#### 3.2. Zona 1: Nombre de la Clase
+##### 3.2.1. Zona 1: Nombre de la Clase
 
 La primera zona contiene el **nombre de la clase**, y se escribe siguiendo estas reglas:
 
@@ -133,11 +126,9 @@ La primera zona contiene el **nombre de la clase**, y se escribe siguiendo estas
 - **Clases abstractas**: El nombre se escribe en *cursiva*
 - Convenio: Primera letra en mayúscula (PascalCase)
 
-#### 3.3. Zona 2: Atributos
+##### 3.2.2. Zona 2: Atributos
 
-En la segunda zona se escriben los **atributos** de la clase, uno por línea. 
-
-##### 3.3.1. Formato de atributos
+En la segunda zona se escriben los **atributos** de la clase, uno por línea. Y tienen el siguiente formato:
 
 * **Formato oficial:**
 
@@ -164,9 +155,9 @@ En la segunda zona se escriben los **atributos** de la clase, uno por línea.
 - activo : Boolean
 ```
 
-##### 3.3.2. Tipos de Atributos
+###### 3.2.2.1 Tipos de Atributos
 
-**Atributos de clase**
+**Atributos de clase o estáticos**
 
 Son aquellos que representan valores comunes a todas las instancias de una clase. Pueden tener un valor inicial.
 
@@ -204,11 +195,9 @@ companion object {
 !!! tip "Convención"
     El nombre de las constantes debe escribirse totalmente en mayúsculas.
 
-#### 3.4. Zona 3: Métodos
+##### 3.2.3. Zona 3: Métodos
 
-En la tercera zona se escriben los **métodos** o funciones de la clase, también uno por línea.
-
-##### 3.4.1. Formato de métodos
+En la tercera zona se escriben los **métodos** o funciones de la clase, también uno por línea. Y tienen el siguiente formato:
 
 * **Formato oficial:**
 
@@ -229,9 +218,9 @@ En la tercera zona se escriben los **métodos** o funciones de la clase, tambié
 + calcularDescuento(precio: Double) : Double
 ```
 
-##### 3.4.2. Tipos de Métodos
+###### 3.2.3.1 Tipos de Métodos
 
-**Métodos de clase**
+**Métodos de clase o estáticos**
 
 Son acciones que no requieren de un objeto específico para su realización. Los métodos de clase solo tienen acceso a los atributos de clase.
 
@@ -255,7 +244,7 @@ fun getNombre(): String {
 }
 ```
 
-#### 3.5. Visibilidad
+#### 3.3. Visibilidad
 
 Tanto los atributos como los métodos incluyen un símbolo que indica su **visibilidad**:
 
@@ -275,7 +264,7 @@ Tanto los atributos como los métodos incluyen un símbolo que indica su **visib
 !!! note "Nota"
     Los tres primeros (`+`, `-`, `#`) son los más comunes y universales.
 
-#### 3.6. Miembros Estáticos
+#### 3.4. Miembros Estáticos
 
 Los **atributos o métodos estáticos** se representan **subrayando** su nombre.
 
@@ -307,7 +296,7 @@ class Contador {
 }
 ```
 
-#### 3.7. Ejemplo Completo de Clase
+#### 3.5. Ejemplo Completo de Clase
 
 <figure markdown="span">
   ![Ejemplo de clase completa](assets/clase-completa.png)
@@ -462,9 +451,9 @@ En el ejemplo anterior:
 * El rol de la clase `Curso` es `curso`, y el rol de la clase `Clase` es `clases`. 
 * La multiplicidad indica que un `curso` puede impartir muchas `clases`, pero cada `clase` pertenece a un solo `curso`.
 
-### 5. Tipos de Relaciones
+#### 4.2. Tipos de Relaciones
 
-#### 5.1. Asociación
+##### 4.2.1. Asociación
 
 **Definición**: Representa una dependencia semántica. Es el tipo de relación más común y general.
 
@@ -475,7 +464,7 @@ En el ejemplo anterior:
   <figcaption>Ejemplo de relación de asociación</figcaption>
 </figure>
 
-##### 5.1.1. Asociación Binaria
+###### 4.2.1.1. Asociación Binaria
 
 Una asociación binaria conecta dos clases. Se representa con una línea sólida entre las dos clases.
 
@@ -525,7 +514,7 @@ class Curso(private val matricula: Matricula) {
 }
 ```
 
-##### 5.1.2. Asociación Reflexiva
+###### 4.2.1.2. Asociación Reflexiva
 
 Una clase se relaciona consigo misma.
 
@@ -554,7 +543,7 @@ class Trabajador(
 }
 ```
 
-##### 5.1.3. Asociación N-aria
+###### 4.2.1.3. Asociación N-aria
 
 Involucra más de dos clases.
 
@@ -587,7 +576,7 @@ class OrdenCompra {
 }
 ```
 
-#### 5.2. Agregación
+##### 4.2.3. Agregación
 
 **Definición**: Representa una relación jerárquica donde un objeto es parte de otro, pero **puede existir independientemente**.
 
@@ -643,7 +632,7 @@ class Radio {
 !!! note "Nota"
     En la agregación, la radio puede existir independientemente del automóvil.
 
-#### 5.3. Composición
+##### 4.2.4. Composición
 
 **Definición**: Representa una relación jerárquica donde las partes **NO pueden existir sin el todo**. Es una forma más fuerte de agregación.
 
@@ -688,7 +677,7 @@ class Automovil {
 | Relación débil                                | Relación fuerte                                |
 | Ejemplo: Mesa-Tornillo, Automóvil-Radio       | Ejemplo: Automóvil-Motor                       |
 
-#### 5.4. Herencia (Generalización/Especialización)
+##### 4.2.5. Herencia (Generalización/Especialización)
 
 **Definición**: Representa una relación de tipo "es un". La clase hija hereda características de la clase padre.
 
@@ -759,7 +748,7 @@ class Libro : Publicacion() {
 !!! tip "Principio"
     La subclase hereda todos los atributos y métodos de la superclase.
 
-#### 5.5. Dependencia
+##### 4.2.6. Dependencia
 
 **Definición**: Indica que una clase **usa** temporalmente otra clase. Es la relación más débil.
 
@@ -819,7 +808,7 @@ class Potencia {
 !!! note "Nota"
     La dependencia es más débil que otras relaciones. La clase simplemente usa la funcionalidad de otra, pero no mantiene una referencia permanente.
 
-#### 5.6. Implementación (Realización)
+##### 4.2.7. Implementación (Realización)
 
 **Definición**: Representa que una clase **implementa** una interfaz o clase abstracta.
 
@@ -862,7 +851,7 @@ class Avion : IVolador {
 }
 ```
 
-#### 5.7. Resumen de Relaciones
+#### 4.3. Resumen de Relaciones
 
 | Relación           | Símbolo  | Fuerza       | Descripción                            | Ejemplo                 |
 |--------------------|----------|--------------|----------------------------------------|-------------------------|
@@ -872,6 +861,42 @@ class Avion : IVolador {
 | **Composición**    | `♦───`   | Fuerte       | "Es parte de" (dependiente)            | Coche - Motor           |
 | **Herencia**       | `───▷`   | Muy fuerte   | "Es un"                                | Perro - Animal          |
 | **Implementación** | `- - ▷`  | Muy fuerte   | Implementa interfaz                    | Avion - IVolador        |
+
+### 6. Interfaces
+Una **interfaz** define un contrato que las clases pueden implementar. Es una forma de asegurar que ciertas clases proporcionen métodos específicos.
+#### 6.1. Representación de una Interfaz
+Una interfaz se representa con una caja similar a una clase, pero con la etiqueta `<<interface>>` encima del nombre.
+
+```
+┌─────────────────────────┐
+│     <<interface>>       │
+│     NombreInterfaz      │
+├─────────────────────────┤
+│    Métodos              │
+└─────────────────────────┘
+```
+#### 6.2. Ejemplo de Interfaz
+
+```
+┌─────────────────────────┐
+│     <<interface>>       │
+│       IVolador          │
+├─────────────────────────┤
+│ + volar() : Unit       │
+│ + aterrizar() : Unit   │
+└─────────────────────────┘
+```
+**Implementación en Kotlin:**
+
+```kotlin
+interface IVolador {
+    fun volar()
+    fun aterrizar()
+}
+```
+
+Las clases que implementan esta interfaz deben proporcionar la implementación de los métodos `volar` y `aterrizar`.
+
 
 ### 6. Ejemplos Completos de Diagramas de Clases
 

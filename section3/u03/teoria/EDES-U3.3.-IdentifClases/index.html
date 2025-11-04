@@ -3773,6 +3773,15 @@
     </span>
   </a>
   
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fundamentos-de-la-identificacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Fundamentos de la Identificación
+    </span>
+  </a>
+  
     <nav class="md-nav" aria-label="2. Fundamentos de la Identificación">
       <ul class="md-nav__list">
         
@@ -3805,30 +3814,6 @@
       3. Objetivos de un Buen Modelo de Clases
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="3. Objetivos de un Buen Modelo de Clases">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-objetivo-1-construccion-eficiente" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1. Objetivo 1: Construcción eficiente
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-objetivo-2-mantenibilidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2. Objetivo 2: Mantenibilidad
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -6211,6 +6196,15 @@
     </span>
   </a>
   
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fundamentos-de-la-identificacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Fundamentos de la Identificación
+    </span>
+  </a>
+  
     <nav class="md-nav" aria-label="2. Fundamentos de la Identificación">
       <ul class="md-nav__list">
         
@@ -6243,30 +6237,6 @@
       3. Objetivos de un Buen Modelo de Clases
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="3. Objetivos de un Buen Modelo de Clases">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-objetivo-1-construccion-eficiente" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1. Objetivo 1: Construcción eficiente
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-objetivo-2-mantenibilidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2. Objetivo 2: Mantenibilidad
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -6905,50 +6875,87 @@
 
 <h2 id="33-identificacion-de-clases-y-buenas-practicas">3.3 Identificación de Clases y Buenas Prácticas<a class="headerlink" href="#33-identificacion-de-clases-y-buenas-practicas" title="Permanent link">&para;</a></h2>
 <h3 id="1-introduccion">1. Introducción<a class="headerlink" href="#1-introduccion" title="Permanent link">&para;</a></h3>
-<p>La <strong>identificación de clases</strong> es uno de los pasos más importantes y desafiantes en el diseño orientado a objetos. Un buen modelo de clases es la base para un sistema bien estructurado, mantenible y escalable.</p>
+<p>La <strong>identificación de clases</strong> es uno de los pasos más importantes y desafiantes en el diseño orientado a objetos. De hecho, es el paso que diferencia a los buenos diseñadores de los mediocres. Un buen modelo de clases es la base para un sistema bien estructurado, mantenible y escalable, mientras que un mal modelo puede condenar a un proyecto a ser un desastre de mantenimiento.</p>
 <div class="admonition note">
 <p class="admonition-title">Principio fundamental</p>
-<p>Cada comportamiento que requiera el sistema debe ser proporcionado por los objetos de las clases que elijamos</p>
+<p>Cada comportamiento que requiera el sistema debe ser proporcionado por los objetos de las clases que elijamos. Si olvidas una clase importante, algunos comportamientos no estarán representados. Si creas clases innecesarias, tu modelo se vuelve confuso y difícil de mantener.</p>
 </div>
 <p>Este documento se centra en <strong>cómo identificar clases</strong>, <strong>cómo relacionarlas</strong> y las <strong>buenas prácticas</strong> para crear diagramas de clases efectivos.</p>
+<p><strong>¿Por qué es tan importante?</strong> Porque la fase de identificación de clases:
+- Define la <strong>arquitectura conceptual</strong> de tu sistema
+- Determina cómo será de <strong>fácil o difícil</strong> mantener el código después
+- Establece las bases para la <strong>escalabilidad</strong> futura
+- Facilita o complica la <strong>colaboración</strong> entre desarrolladores
+- Afecta el <strong>desempeño</strong> y la <strong>eficiencia</strong> del sistema resultante</p>
 <h3 id="2-fundamentos-de-la-identificacion">2. Fundamentos de la Identificación<a class="headerlink" href="#2-fundamentos-de-la-identificacion" title="Permanent link">&para;</a></h3>
+<h3 id="2-fundamentos-de-la-identificacion_1">2. Fundamentos de la Identificación<a class="headerlink" href="#2-fundamentos-de-la-identificacion_1" title="Permanent link">&para;</a></h3>
 <h4 id="21-que-buscamos-al-identificar-clases">2.1. ¿Qué buscamos al identificar clases?<a class="headerlink" href="#21-que-buscamos-al-identificar-clases" title="Permanent link">&para;</a></h4>
-<p>Al identificar clases, buscamos representar:</p>
+<p>Al identificar clases, buscamos responder estas preguntas fundamentales:</p>
 <ol>
-<li><strong>Entidades del dominio</strong>: Objetos que existen en el mundo real o conceptual del problema</li>
-<li><strong>Responsabilidades</strong>: Qué debe hacer cada clase en el sistema</li>
-<li><strong>Colaboraciones</strong>: Cómo las clases trabajan juntas para cumplir los requisitos</li>
+<li><strong>¿Qué entidades existen en nuestro dominio?</strong> - ¿Cuáles son los objetos conceptuales o físicos relevantes?</li>
+<li>
+<p>Ejemplos: Cliente, Producto, Pedido, Empresa</p>
+</li>
+<li>
+<p><strong>¿Qué responsabilidades tiene cada entidad?</strong> - ¿Qué debe saber hacer cada objeto?</p>
+</li>
+<li>
+<p>Ejemplos: Un Cliente debe poder realizar una compra, una Factura debe poder calcular su total</p>
+</li>
+<li>
+<p><strong>¿Cómo colaboran las entidades para cumplir los requisitos?</strong> - ¿Cómo trabajan juntas?</p>
+</li>
+<li>Ejemplos: Un Cliente crea un Pedido que contiene Productos</li>
+</ol>
+<p>Buscamos representar:</p>
+<ol>
+<li>
+<p><strong>Entidades del dominio</strong>: Objetos que existen en el mundo real o conceptual del problema. Son los más fáciles de identificar.</p>
+</li>
+<li>
+<p><strong>Responsabilidades claras</strong>: Qué debe hacer cada clase en el sistema. Cada clase debe tener una razón clara de ser.</p>
+</li>
+<li>
+<p><strong>Colaboraciones</strong> entre clases: Cómo las clases trabajan juntas para cumplir los requisitos del sistema. Una clase no debería actuar en aislamiento.</p>
+</li>
 </ol>
 <h4 id="22-consideraciones-importantes">2.2. Consideraciones importantes<a class="headerlink" href="#22-consideraciones-importantes" title="Permanent link">&para;</a></h4>
-<p>Es importante recordar que los objetos son realmente cosas dentro de un programa de computador. Cuando hablamos sobre "libros" y "copias", por ejemplo, realmente nos referimos a la representación de estas cosas dentro de nuestro sistema.</p>
-<p>Las consecuencias de esto son que hay que tener cuidado:</p>
+<p>Es importante recordar que los objetos son realmente cosas dentro de un programa de computador. Cuando hablamos sobre "libros" y "copias", por ejemplo, realmente nos referimos a la <strong>representación digital de estas cosas dentro de nuestro sistema</strong>, no a los libros y copias físicas en el mundo real.</p>
+<p>Las consecuencias de esto son que hay que tener cuidado con la siguiente pregunta: <strong>¿qué información de la realidad es realmente importante para nuestro sistema?</strong></p>
+<p>Es crucial:</p>
 <ul>
-<li><strong>No almacenar información</strong> que es definitivamente irrelevante para nuestro sistema</li>
-<li><strong>No perder la visión</strong> del hecho de que ¡los objetos son el sistema!</li>
-<li><strong>Mantener el enfoque</strong> en lo que el sistema necesita, no en todo lo que existe en el mundo real</li>
+<li><strong>No almacenar información</strong> que es definitivamente irrelevante para nuestro sistema (ej: el color del cartel de una tienda)</li>
+<li><strong>No perder la visión</strong> del hecho de que ¡los objetos son el sistema! Trabajan dentro del programa, no son el mundo real</li>
+<li><strong>Mantener el enfoque</strong> en lo que el sistema necesita, no en todo lo que existe en el mundo real (ej: un sistema de biblioteca quizás no necesita la información de empleados de mantenimiento)</li>
 </ul>
+<p><strong>La clave</strong>: Modelar el dominio del problema desde la perspectiva del sistema, no modelar la realidad en su totalidad.</p>
 <h3 id="3-objetivos-de-un-buen-modelo-de-clases">3. Objetivos de un Buen Modelo de Clases<a class="headerlink" href="#3-objetivos-de-un-buen-modelo-de-clases" title="Permanent link">&para;</a></h3>
-<p>La construcción de un modelo de clases incluye dos objetivos fundamentales:</p>
-<h4 id="31-objetivo-1-construccion-eficiente">3.1. Objetivo 1: Construcción eficiente<a class="headerlink" href="#31-objetivo-1-construccion-eficiente" title="Permanent link">&para;</a></h4>
-<p><strong>Construir, lo más rápido y barato posible, un sistema que satisfaga nuestros requisitos actuales.</strong></p>
+<p>Cuando diseñas un modelo de clases, en realidad estás persiguiendo <strong>dos objetivos que a menudo están en tensión</strong>:</p>
+<p><strong>Objetivo 1: Construcción Eficiente</strong></p>
+<p>Construir, lo más rápido y barato posible, un sistema que satisfaga nuestros requisitos actuales.</p>
 <div class="admonition tip">
 <p class="admonition-title">Principio</p>
 <p>Cada comportamiento que requiera el sistema debe ser proporcionado por los objetos de las clases que elijamos</p>
 </div>
-<p><strong>Estrategias</strong>:
-- Identificar las clases mínimas necesarias
-- Enfocarse en los requisitos actuales
-- Evitar sobre-ingeniería prematura</p>
-<h4 id="32-objetivo-2-mantenibilidad">3.2. Objetivo 2: Mantenibilidad<a class="headerlink" href="#32-objetivo-2-mantenibilidad" title="Permanent link">&para;</a></h4>
-<p><strong>Construir un sistema que sea fácil de mantener y adaptar a futuros requisitos.</strong></p>
+<p><strong>Estrategias</strong>:</p>
+<ul>
+<li><strong>Identificar las clases mínimas necesarias</strong>: La solución más simple que funcione. No sobre-diseñes.</li>
+<li><strong>Enfocarse en los requisitos actuales</strong>: No anticipar necesidades futuras imaginarias. Solo diseña para lo que sabes que necesitas hoy.</li>
+<li><strong>Evitar sobre-ingeniería prematura</strong>: No añadas complejidad sin justificación presente. La complejidad es una deuda técnica.</li>
+</ul>
+<p><strong>¿Por qué esto importa?</strong> Porque cada clase adicional innecesaria incrementa la complejidad del sistema, ralentiza el desarrollo, y aumenta la probabilidad de errores. Es tentador crear "clases generales" que "podrían ser útiles en el futuro", pero a menudo resultan siendo innecesarias o inútiles cuando ese futuro llega.</p>
+<p><strong>Objetivo 2: Mantenibilidad</strong></p>
+<p>Construir un sistema que sea fácil de mantener y adaptar a futuros requisitos. Este es el objetivo a largo plazo.</p>
 <div class="admonition tip">
 <p class="admonition-title">Principio</p>
 <p>Un buen modelo de clases está formado por módulos encapsulados, con acoplamiento débil (pocas dependencias entre módulos) y cohesión fuerte</p>
 </div>
 <p><strong>Características clave</strong>:
-- <strong>Alta cohesión</strong>: Cada clase tiene una responsabilidad clara y bien definida
-- <strong>Bajo acoplamiento</strong>: Las clases tienen pocas dependencias entre sí
-- <strong>Encapsulamiento</strong>: Los detalles internos están ocultos</p>
+- <strong>Alta cohesión</strong>: Cada clase tiene una responsabilidad clara y bien definida. Si necesitas cambiar algo, sabes exactamente dónde mirar.
+- <strong>Bajo acoplamiento</strong>: Las clases tienen pocas dependencias entre sí. Un cambio en una clase no causa un efecto dominó en todas las demás.
+- <strong>Encapsulamiento</strong>: Los detalles internos están ocultos. Otras clases interactúan con la interfaz pública, no con los detalles internos.</p>
+<p><strong>¿Por qué esto importa?</strong> Porque con el tiempo, el código pasa más tiempo siendo mantenido que siendo escrito inicialmente. Un sistema con buena cohesión y bajo acoplamiento es más fácil de entender, más fácil de modificar, y más fácil de extender.</p>
+<p><strong>El equilibrio</strong>: La clave es encontrar un equilibrio entre estos dos objetivos. No puede ser tan simple que sea rígido e imposible de mantener. Pero tampoco puede ser tan complejo que sea difícil de entender y construir.</p>
 <h3 id="4-proceso-iterativo-de-identificacion">4. Proceso Iterativo de Identificación<a class="headerlink" href="#4-proceso-iterativo-de-identificacion" title="Permanent link">&para;</a></h3>
 <p>En la práctica, es <strong>improbable que construya correctamente un modelo de clases la primera vez</strong>. La colección de clases en su modelo de diseño es una de las cosas que probablemente cambiará a lo largo de las iteraciones de desarrollo.</p>
 <h4 id="41-patron-comun-de-desarrollo">4.1. Patrón común de desarrollo<a class="headerlink" href="#41-patron-comun-de-desarrollo" title="Permanent link">&para;</a></h4>
@@ -6973,101 +6980,135 @@
 <li>Ajustar responsabilidades</li>
 </ol>
 <h3 id="5-tecnica-de-identificacion-de-nombres">5. Técnica de Identificación de Nombres<a class="headerlink" href="#5-tecnica-de-identificacion-de-nombres" title="Permanent link">&para;</a></h3>
-<p>La técnica más común y efectiva para identificar clases es el <strong>análisis de sustantivos</strong>. Procede en dos etapas fundamentales:</p>
+<p>La técnica más común y efectiva para identificar clases es el <strong>análisis de sustantivos</strong>. Es una técnica pragmática y fácil de aplicar que funciona bien en la práctica. La idea es simple: los sustantivos en la descripción del problema frecuentemente corresponden a entidades del dominio, que a su vez se convierten en clases.</p>
+<p>Sin embargo, no todos los sustantivos se convierten en clases, y ese es el verdadero desafío de esta técnica. Procede en dos etapas fundamentales:</p>
 <h4 id="51-etapa-1-identificar-clases-candidatas">5.1. Etapa 1: Identificar clases candidatas<a class="headerlink" href="#51-etapa-1-identificar-clases-candidatas" title="Permanent link">&para;</a></h4>
+<p>En esta etapa, eres liberal y no descartas nada. El objetivo es capturar todas las posibilidades, incluso si algunas resultan no siendo clases.</p>
 <h5 id="511-estrategias-principales">5.1.1. Estrategias principales<a class="headerlink" href="#511-estrategias-principales" title="Permanent link">&para;</a></h5>
 <ol>
 <li><strong>Análisis de documentos textuales</strong></li>
-<li>Obtener descripción del problema (requisitos, casos de uso, historias de usuario)</li>
-<li>Puede ser documentación formal o informal</li>
+<li>Obtener descripción clara del problema (requisitos, casos de uso, historias de usuario, conversaciones con clientes)</li>
+<li>La documentación puede ser formal (requisitos oficiales) o informal (notas, conversaciones)</li>
+<li>Las entrevistas con usuarios y stakeholders son especialmente valiosas</li>
 <li>
-<p>Entrevistas con usuarios y stakeholders</p>
+<p>Leer cuidadosamente toda la documentación disponible</p>
 </li>
 <li>
 <p><strong>Extracción de sustantivos</strong></p>
 </li>
-<li>Extraer todos los sustantivos de la descripción</li>
-<li>Los sustantivos son candidatos a clases de objetos</li>
+<li>Extraer <strong>todos</strong> los sustantivos de la descripción, sin discriminar</li>
+<li>Los sustantivos son candidatos potenciales a clases de objetos</li>
+<li>Hacer una lista completa sin descartar nada al principio</li>
 <li>
-<p>Hacer una lista completa sin descartar nada al principio</p>
+<p>Incluir tanto sustantivos explícitos como implícitos (aquellos que podrías inferir del contexto)</p>
 </li>
 <li>
 <p><strong>Identificación de candidatos</strong></p>
 </li>
 <li>Listar todos los sustantivos encontrados</li>
-<li>Incluir tanto entidades físicas como conceptuales</li>
+<li>Incluir tanto entidades físicas (Cliente, Producto) como conceptuales (Pedido, Transacción)</li>
+<li>No juzgar en esta etapa; eso viene después</li>
 </ol>
 <h5 id="512-ejemplo-practico">5.1.2. Ejemplo práctico<a class="headerlink" href="#512-ejemplo-practico" title="Permanent link">&para;</a></h5>
-<p><strong>Enunciado</strong>: "En un sistema de reservaciones que vende boletos para funciones en varios teatros..."</p>
+<p><strong>Enunciado</strong>: "En un sistema de reservaciones que vende boletos para funciones en varios teatros, los clientes pueden reservar asientos. Cada función está en un teatro específico y tiene una hora de inicio, duración y aforo máximo. Los boletos tienen un precio que varía según la ubicación del asiento. El sistema genera reportes de ocupación."</p>
 <p><strong>Sustantivos encontrados (clases candidatas)</strong>:
-- Sistema de Reservaciones
-- Boletos
-- Función
-- Teatro
-- Venta
-- Cliente (implícito)</p>
+- Sistema de Reservaciones ← Metalenguaje, probablemente no sea clase
+- Boletos ← ✓ Sí, es una entidad importante
+- Función ← ✓ Sí, es una entidad importante
+- Teatro ← ✓ Sí, es una entidad importante
+- Clientes ← ✓ Sí, es una entidad importante
+- Asientos ← ✓ Sí, es una entidad importante
+- Hora de inicio ← ← Probablemente sea atributo de Función
+- Duración ← Probablemente sea atributo de Función
+- Aforo máximo ← Probablemente sea atributo de Teatro o Función
+- Precio ← ← Probablemente sea atributo de Boleto
+- Ubicación del asiento ← Probablemente sea parte de Asiento
+- Reportes ← ¿Clase o resultado de una operación?
+- Ocupación ← Probablemente sea atributo calculado</p>
+<p><strong>Resultado de esta etapa</strong>: Una larga lista sin filtrar</p>
 <h5 id="513-reglas-iniciales">5.1.3. Reglas iniciales<a class="headerlink" href="#513-reglas-iniciales" title="Permanent link">&para;</a></h5>
 <ul>
 <li>Considérelos en forma <strong>singular</strong>: "Boleto" en lugar de "Boletos"</li>
 <li><strong>No incluya frases</strong> que contengan "o" como candidatas (son alternativas, no clases)</li>
+<li>❌ "Cliente o Administrador" → ✓ "Cliente", ✓ "Administrador"</li>
 <li>Durante esta etapa, <strong>no diferenciar</strong> entre clases y atributos todavía</li>
+<li>No preocuparse si la lista tiene redundancias; las eliminaremos después</li>
 </ul>
 <h4 id="52-etapa-2-descartar-candidatas-inapropiadas">5.2. Etapa 2: Descartar candidatas inapropiadas<a class="headerlink" href="#52-etapa-2-descartar-candidatas-inapropiadas" title="Permanent link">&para;</a></h4>
-<p>Esta es la etapa más crítica. Hay que analizar cada candidata y determinar si realmente debe ser una clase.</p>
+<p>Esta es la etapa más crítica y donde se requiere más criterio. Hay que analizar <strong>cada candidata</strong> y determinar honestamente si realmente debe ser una clase. Esta es donde los buenos diseñadores se diferencian de los mediocres: en la capacidad de hacer juicios correctos sobre qué mereceSer una clase.</p>
 <h5 id="521-razones-para-descartar-una-clase-candidata">5.2.1. Razones para descartar una clase candidata<a class="headerlink" href="#521-razones-para-descartar-una-clase-candidata" title="Permanent link">&para;</a></h5>
 <p><strong>1. Redundante</strong></p>
-<p>Cuando a la misma clase se le ha dado más de un nombre.</p>
+<p>Cuando a la misma clase conceptual se le ha dado más de un nombre en la descripción, o cuando es una especialización trivial de otra clase.</p>
 <p><strong>Ejemplo</strong>: 
-- "préstamo" y "préstamo a corto plazo"
-- "usuario" y "cliente"</p>
+- "Préstamo de estudiante" y "Préstamo de trabajador" (el tipo de persona es un detalle, no un concepto diferente)
+- "Usuario registrado" y "Cliente" (son lo mismo desde diferentes perspectivas)</p>
+<p><strong>Pregunta clave</strong>: ¿Realmente son conceptos diferentes en el dominio, o es la misma cosa con diferentes adjetivos?</p>
 <p><strong>Acción</strong>: Probablemente solo difieren en valores de atributos. Elija un nombre que abarque todas las descripciones.</p>
+<hr />
 <p><strong>2. Impreciso</strong></p>
-<p>Cuando no se puede indicar de forma no ambigua lo que significa un nombre.</p>
+<p>Cuando no se puede indicar de forma clara y no ambigua lo que significa un nombre. La ambigüedad sugiere que el concepto no está bien definido.</p>
 <p><strong>Ejemplo</strong>: 
-- "Cuenta" (¿Cuenta bancaria? ¿Cuenta de usuario? ¿Cuenta de ahorros?)
-- "Registro" (demasiado genérico)</p>
-<p><strong>Acción</strong>: Eliminar la ambigüedad antes de considerarla clase. Renombrar a algo específico como "CuentaBancaria" o "RegistroAcceso".</p>
+- "Cuenta" (¿Cuenta bancaria? ¿Cuenta de usuario? ¿Cuenta de ahorros? ¿Cuenta de email?)
+- "Registro" (demasiado genérico; ¿registro de qué?)
+- "Datos" (tan vago que es inútil)</p>
+<p><strong>Pregunta clave</strong>: ¿Todos los interesados entienden exactamente lo mismo cuando dicen este nombre?</p>
+<p><strong>Acción</strong>: Eliminar la ambigüedad antes de considerarla clase. Renombrar a algo específico como "CuentaBancaria", "CuentaUsuario", "RegistroAcceso".</p>
+<hr />
 <p><strong>3. Un evento u operación</strong></p>
-<p>Cuando el nombre hace referencia a algo que <strong>se hace</strong> para, por o en el sistema.</p>
+<p>Cuando el nombre hace referencia a algo que <strong>se hace</strong> para, por o en el sistema; es decir, cuando es un verbo disfrazado de sustantivo.</p>
 <p><strong>Ejemplo</strong>: 
-- "Reserva de asiento"
-- "Compra de boleto"
-- "Validación"</p>
-<p><strong>Pregunta clave</strong>: ¿La instancia del evento u operación tiene estado, comportamiento e identidad?</p>
+- "Reserva de asiento" (la acción es reservar, no crear una clase separada)
+- "Compra de boleto" (el acto de comprar)
+- "Validación" (una acción, no una entidad)</p>
+<p><strong>Pregunta clave</strong>: ¿La instancia del evento u operación tiene estado, comportamiento e identidad que persista en el tiempo?</p>
 <p><strong>Conceptos fundamentales</strong>:
 - <strong>Estado</strong>: Todos los datos (atributos) que encapsula un objeto en un momento determinado
-- <strong>Comportamiento</strong>: La manera como actúa y reacciona un objeto
-- <strong>Identidad</strong>: A los objetos se les hace referencia por un nombre</p>
-<p><strong>Decisión</strong>: 
-- Si solo representa una acción momentánea → Probablemente sea un <strong>método</strong>, no una clase
-- Si tiene datos que persisten → Puede ser una clase (ej: "Reserva" con fecha, asiento, cliente)</p>
+- <strong>Comportamiento</strong>: La manera como actúa y reacciona un objeto (sus métodos)
+- <strong>Identidad</strong>: A los objetos se les hace referencia por un nombre único o identificador</p>
+<p><strong>Regla de decisión</strong>: 
+- Si solo representa una acción momentánea sin persistencia → Probablemente sea un <strong>método</strong>, no una clase
+  - Ejemplo: "validar email" es un método de la clase Usuario
+- Si tiene datos que persisten y un ciclo de vida → Puede ser una clase
+  - Ejemplo: "Reserva" con fecha, asiento, cliente, estado → Es una clase porque persiste y tiene lógica</p>
+<hr />
 <p><strong>4. Metalenguaje</strong></p>
-<p>Cuando el nombre forma parte de la manera en que se definen las cosas, no del dominio del problema.</p>
+<p>Cuando el nombre forma parte de la manera en que se definen o habla sobre las cosas, pero no es parte del dominio del problema.</p>
 <p><strong>Ejemplo</strong>: 
-- "requisitos"
-- "sistema"
-- "modelo"
-- "diagrama"</p>
+- "Requisitos" (son parte de cómo se especifica el sistema, no parte del dominio)
+- "Sistema" (es metalenguaje; todo es parte del sistema)
+- "Modelo" (es como referimos al diseño, no es una entidad del dominio)
+- "Diagrama" (es una herramienta de modelado, no una clase del sistema)</p>
+<p><strong>Pregunta clave</strong>: ¿Es esto una cosa del mundo real/dominio, o es cómo hablamos sobre el sistema?</p>
 <p><strong>Acción</strong>: Eliminar estos términos de la lista de candidatas.</p>
+<hr />
 <p><strong>5. Fuera del alcance del sistema</strong></p>
-<p>Cuando el nombre es relevante para describir cómo funciona el sistema pero no hace referencia a algo <strong>interno</strong> del sistema.</p>
+<p>Cuando el nombre es relevante para describir cómo funciona el sistema pero no hace referencia a algo <strong>que el sistema gestiona</strong> o con lo que el sistema interactúa directamente.</p>
 <p><strong>Ejemplo</strong>: 
-- "Usuario del sistema" (la persona que usa el sistema)
-- "Administrador del sistema" (rol externo)
-- "Cliente externo"</p>
+- "Usuario del sistema" (la persona que usa el sistema desde afuera)
+- "Administrador del sistema" (rol externo al dominio del problema)
+- "Cliente externo" (alguien fuera del sistema)</p>
+<p><strong>Pregunta clave</strong>: ¿El sistema necesita recordar y gestionar información sobre esto? ¿O solo es el "actuar" que usa el sistema?</p>
 <p><strong>Decisión</strong>: 
 - Si el sistema <strong>gestiona información</strong> sobre estos → Sí es una clase
-- Si solo <strong>interactúan</strong> con el sistema → No es una clase interna</p>
+  - Ejemplo: En un sistema de tienda, Cliente sí es una clase porque guardamos información sobre clientes
+- Si solo <strong>interactúan</strong> con el sistema → No es una clase interna, es un actor externo
+  - Ejemplo: El "usuario del sistema" que está usando un cajero automático quizás se represente como una clase, o quizás solo sea una interacción</p>
+<hr />
 <p><strong>6. Un atributo</strong></p>
-<p>Cuando está claro que un nombre hace referencia a algo <strong>sencillo</strong>, sin un comportamiento interesante, que es un atributo de otra clase.</p>
+<p>Cuando está claro que un nombre hace referencia a algo <strong>sencillo sin comportamiento interesante</strong>, que es más bien una propiedad de otra clase.</p>
 <p><strong>Ejemplo</strong>: 
-- "Color"
-- "Tamaño"
-- "Precio"
-- "Nombre"
-- "Fecha"</p>
+- "Color" (es una propiedad de Producto, no una clase propia)
+- "Tamaño" (es una propiedad de Prenda, no una clase)
+- "Precio" (es una propiedad de Producto)
+- "Nombre" (es una propiedad de Persona)
+- "Fecha" (es una propiedad de Evento)</p>
+<p><strong>Pregunta clave</strong>: ¿Este concepto tiene comportamiento propio? ¿O es simplemente un valor que caracteriza a otro objeto?</p>
 <p><strong>Acción</strong>: Estos serán atributos de otras clases, no clases por sí mismos.</p>
-<p><strong>Excepción</strong>: Si el atributo tiene comportamiento complejo o múltiples propiedades propias, puede ser una clase (ej: "Dirección" con calle, ciudad, código postal, país).</p>
+<p><strong>Excepción importante</strong>: Si el atributo tiene comportamiento complejo o múltiples propiedades propias, puede ser una clase:
+- Ejemplo: "Dirección" con calle, ciudad, código postal, país, y métodos para validar y formatear
+- Ejemplo: "Dinero" con cantidad y moneda, y métodos para conversiones y operaciones
+- Estos son "value objects" que merecen ser clases en sí mismos</p>
+<hr />
 <h4 id="53-identificacion-de-clases-relevantes">5.3. Identificación de clases relevantes<a class="headerlink" href="#53-identificacion-de-clases-relevantes" title="Permanent link">&para;</a></h4>
 <p>A partir de las clases candidatas se deben seleccionar las clases relevantes tomando en cuenta:</p>
 <ol>
@@ -7259,7 +7300,7 @@
 <p><strong>5. Principio de Inversión de Dependencias (DIP)</strong></p>
 <p>Depender de abstracciones, no de implementaciones concretas.</p>
 <h4 id="92-cohesion-y-acoplamiento">9.2. Cohesión y acoplamiento<a class="headerlink" href="#92-cohesion-y-acoplamiento" title="Permanent link">&para;</a></h4>
-<p><strong>Alta Cohesión</strong> ✅</p>
+<p><strong>Alta Cohesión</strong></p>
 <p>Las responsabilidades de una clase están fuertemente relacionadas.</p>
 <p><strong>Ejemplo de alta cohesión</strong>:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Clase Libro
@@ -7269,36 +7310,46 @@
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>- obtenerTitulo()
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>- obtenerAutor()
 </code></pre></div></p>
-<p><strong>Ejemplo de baja cohesión</strong> ❌:
+<p><strong>Ejemplo de baja cohesión</strong>:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Clase Utilidades
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>- validarEmail()
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>- calcularFactorial()
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>- conectarBaseDatos()
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>- enviarEmail()
 </code></pre></div></p>
-<p><strong>Bajo Acoplamiento</strong> ✅</p>
+<p><strong>Bajo Acoplamiento</strong> </p>
 <p>Las clases tienen pocas dependencias entre sí.</p>
-<p><strong>Técnicas para reducir acoplamiento</strong>:
-- Usar interfaces
-- Inyección de dependencias
-- Patrones de diseño (Factory, Strategy, Observer)</p>
+<p><strong>Técnicas para reducir acoplamiento</strong>:</p>
+<ul>
+<li>Usar interfaces</li>
+<li>Inyección de dependencias</li>
+<li>Patrones de diseño (Factory, Strategy, Observer)</li>
+</ul>
 <h4 id="93-nomenclatura-efectiva">9.3. Nomenclatura efectiva<a class="headerlink" href="#93-nomenclatura-efectiva" title="Permanent link">&para;</a></h4>
-<p><strong>Nombres de clases</strong>:
-- Sustantivos en singular
-- Descriptivos y específicos
-- PascalCase: <code>CarritoCompras</code>, <code>OrdenDeCompra</code></p>
-<p><strong>Evitar</strong>:
-- Nombres genéricos: <code>Gestor</code>, <code>Manager</code>, <code>Handler</code> (a menos que sean realmente necesarios)
-- Abreviaturas confusas
-- Nombres muy largos</p>
-<p><strong>Nombres de atributos</strong>:
-- Sustantivos descriptivos
-- camelCase: <code>nombreCompleto</code>, <code>fechaNacimiento</code>
-- Evitar prefijos innecesarios: <code>strNombre</code> ❌, <code>nombre</code> ✅</p>
-<p><strong>Nombres de métodos</strong>:
-- Verbos que describen la acción
-- camelCase: <code>calcularTotal()</code>, <code>enviarEmail()</code>
-- Getters/Setters: <code>getNombre()</code>, <code>setNombre()</code></p>
+<p><strong>Nombres de clases</strong>:</p>
+<ul>
+<li>Sustantivos en singular</li>
+<li>Descriptivos y específicos</li>
+<li>PascalCase: <code>CarritoCompras</code>, <code>OrdenDeCompra</code></li>
+</ul>
+<p><strong>Evitar</strong>:</p>
+<ul>
+<li>Nombres genéricos: <code>Gestor</code>, <code>Manager</code>, <code>Handler</code> (a menos que sean realmente necesarios)</li>
+<li>Abreviaturas confusas</li>
+<li>Nombres muy largos</li>
+</ul>
+<p><strong>Nombres de atributos</strong>:</p>
+<ul>
+<li>Sustantivos descriptivos</li>
+<li>camelCase: <code>nombreCompleto</code>, <code>fechaNacimiento</code></li>
+<li>Evitar prefijos innecesarios: <code>strNombre</code> incorrecto, <code>nombre</code> correcto</li>
+</ul>
+<p><strong>Nombres de métodos</strong>:</p>
+<ul>
+<li>Verbos que describen la acción</li>
+<li>camelCase: <code>calcularTotal()</code>, <code>enviarEmail()</code></li>
+<li>Getters/Setters: <code>getNombre()</code>, <code>setNombre()</code></li>
+</ul>
 <h4 id="94-organizacion-visual-del-diagrama">9.4. Organización visual del diagrama<a class="headerlink" href="#94-organizacion-visual-del-diagrama" title="Permanent link">&para;</a></h4>
 <p><strong>1. Distribución espacial</strong></p>
 <ul>
@@ -7605,32 +7656,42 @@
 </ul>
 <h3 id="12-checklist-final">12. Checklist Final<a class="headerlink" href="#12-checklist-final" title="Permanent link">&para;</a></h3>
 <p>Antes de finalizar tu diagrama de clases, verifica:</p>
-<p><strong>Identificación de Clases</strong> ✅
-- [ ] He analizado todos los sustantivos del enunciado
-- [ ] He descartado candidatos inapropiados
-- [ ] Cada clase tiene una responsabilidad clara
-- [ ] No hay clases redundantes
-- [ ] Los nombres son descriptivos y específicos</p>
-<p><strong>Relaciones</strong> ✅
-- [ ] He identificado todas las relaciones necesarias
-- [ ] La multiplicidad está correctamente especificada
-- [ ] He elegido el tipo de relación apropiado
-- [ ] No hay relaciones innecesarias</p>
-<p><strong>Atributos y Métodos</strong> ✅
-- [ ] Cada clase tiene los atributos necesarios
-- [ ] Los métodos reflejan las responsabilidades
-- [ ] La visibilidad está correctamente definida
-- [ ] No hay atributos que deberían ser clases</p>
-<p><strong>Principios de Diseño</strong> ✅
-- [ ] Alta cohesión en cada clase
-- [ ] Bajo acoplamiento entre clases
-- [ ] Responsabilidad única por clase
-- [ ] Buen encapsulamiento</p>
-<p><strong>Representación Visual</strong> ✅
-- [ ] El diagrama es claro y legible
-- [ ] Las líneas no se cruzan excesivamente
-- [ ] Hay una organización lógica
-- [ ] Uso efectivo de colores (si aplica)</p>
+<p><strong>Identificación de Clases</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He analizado todos los sustantivos del enunciado</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He descartado candidatos inapropiados</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cada clase tiene una responsabilidad clara</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> No hay clases redundantes</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Los nombres son descriptivos y específicos</li>
+</ul>
+<p><strong>Relaciones</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He identificado todas las relaciones necesarias</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> La multiplicidad está correctamente especificada</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> He elegido el tipo de relación apropiado</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> No hay relaciones innecesarias</li>
+</ul>
+<p><strong>Atributos y Métodos</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cada clase tiene los atributos necesarios</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Los métodos reflejan las responsabilidades</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> La visibilidad está correctamente definida</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> No hay atributos que deberían ser clases</li>
+</ul>
+<p><strong>Principios de Diseño</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Alta cohesión en cada clase</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Bajo acoplamiento entre clases</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Responsabilidad única por clase</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Buen encapsulamiento</li>
+</ul>
+<p><strong>Representación Visual</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> El diagrama es claro y legible</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Las líneas no se cruzan excesivamente</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Hay una organización lógica</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Uso efectivo de colores (si aplica)</li>
+</ul>
 <h3 id="13-conclusiones">13. Conclusiones<a class="headerlink" href="#13-conclusiones" title="Permanent link">&para;</a></h3>
 <ul>
 <li>La identificación de clases es un <strong>proceso iterativo</strong> y fundamental en el diseño OO</li>

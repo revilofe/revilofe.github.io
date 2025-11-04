@@ -6653,25 +6653,41 @@
 
 <h2 id="34-acoplamiento-y-cohesion-en-el-diseno-de-software">3.4 Acoplamiento y Cohesión en el Diseño de Software<a class="headerlink" href="#34-acoplamiento-y-cohesion-en-el-diseno-de-software" title="Permanent link">&para;</a></h2>
 <h3 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h3>
-<p>En el desarrollo de software, dos conceptos fundamentales que determinan la calidad del diseño son el <strong>acoplamiento</strong> y la <strong>cohesión</strong>. Estos principios nos ayudan a crear sistemas más mantenibles, comprensibles y flexibles.</p>
+<p>En el desarrollo de software, dos conceptos fundamentales que determinan la <strong>calidad, mantenibilidad y flexibilidad</strong> del diseño son el <strong>acoplamiento</strong> y la <strong>cohesión</strong>. Estos principios no son opcionales en un buen diseño: son los pilares sobre los que se construyen sistemas que perduran en el tiempo, que pueden adaptarse a nuevos requisitos, y que no se convierten en "código espagueti" imposible de mantener.</p>
+<p>Imagina que estás construyendo un sistema con múltiples módulos que interactúan entre sí. Si cada módulo está fuertemente acoplado a los otros (es decir, si un cambio en un módulo requiere cambios en cascada en todos los demás), entonces tu sistema es <strong>frágil y difícil de mantener</strong>. Por otro lado, si cada módulo tiene baja cohesión (es decir, si sus funciones están desconectadas y sin propósito común), entonces es <strong>difícil de entender</strong> qué hace realmente cada módulo.</p>
+<p>El equilibrio ideal es: <strong>bajo acoplamiento</strong> (módulos independientes) y <strong>alta cohesión</strong> (cada módulo tiene un propósito claro y unificado).</p>
 <div class="admonition note">
 <p class="admonition-title">Principio clave</p>
 <p>Un buen diseño de software debe buscar <strong>bajo acoplamiento</strong> y <strong>alta cohesión</strong>.</p>
 </div>
 <p><strong>Objetivos de un buen diseño</strong>:
-- <strong>Bajo acoplamiento</strong>: Minimizar las dependencias entre módulos
-- <strong>Alta cohesión</strong>: Maximizar la relación entre los elementos dentro de un mismo módulo</p>
+- <strong>Bajo acoplamiento</strong>: Minimizar las dependencias entre módulos para que puedan evolucionar independientemente
+- <strong>Alta cohesión</strong>: Maximizar la relación entre los elementos dentro de un mismo módulo para que tengan un propósito común
+- <strong>Mantenibilidad</strong>: El código debe ser fácil de entender y modificar
+- <strong>Flexibilidad</strong>: El sistema debe adaptarse a nuevos requisitos sin refactorización masiva</p>
 <h2 id="1-cohesion">1. Cohesión<a class="headerlink" href="#1-cohesion" title="Permanent link">&para;</a></h2>
 <h3 id="11-que-es-la-cohesion">1.1. ¿Qué es la cohesión?<a class="headerlink" href="#11-que-es-la-cohesion" title="Permanent link">&para;</a></h3>
-<p>La <strong>cohesión</strong> es una medida que indica cuán relacionados están los elementos dentro de un mismo módulo, clase o componente. Una alta cohesión significa que los elementos del módulo están fuertemente relacionados y trabajan juntos para cumplir un propósito específico y bien definido.</p>
+<p>La <strong>cohesión</strong> es una medida que indica <strong>cuán relacionados y enfocados están los elementos dentro de un mismo módulo, clase o componente</strong>. Una alta cohesión significa que:</p>
+<ul>
+<li>Los elementos del módulo están <strong>fuertemente relacionados</strong> en su propósito</li>
+<li>Todos trabajan <strong>hacia un objetivo común</strong></li>
+<li>La clase o módulo tiene <strong>una responsabilidad clara y única</strong></li>
+<li>Cambiar la lógica de una parte <strong>afecta naturalmente</strong> a las otras partes, porque todas están relacionadas</li>
+</ul>
+<p><strong>Analogía del mundo real</strong>: Imagina un equipo de fútbol. Cada jugador tiene su posición:
+- Los defensas trabajan juntos para defender (alta cohesión defensiva)
+- Los atacantes trabajan juntos para anotar (alta cohesión ofensiva)
+- Todo el equipo trabaja junto para ganar (cohesión del equipo)</p>
+<p>Por el contrario, si mezclas tareas completamente no relacionadas en un mismo módulo (como tener un método para calcular impuestos, otro para enviar emails, y otro para ordenar arrays), entonces tienes <strong>baja cohesión</strong>.</p>
 <h3 id="12-tipos-de-cohesion">1.2. Tipos de cohesión<a class="headerlink" href="#12-tipos-de-cohesion" title="Permanent link">&para;</a></h3>
-<p>La cohesión se puede clasificar en diferentes niveles, <strong>ordenados de menor a mayor calidad</strong>:</p>
+<p>La cohesión se puede clasificar en diferentes niveles, <strong>ordenados de menor a mayor calidad</strong>. Entender estos niveles te ayudará a identificar y mejorar la cohesión en tu código:</p>
 <table>
 <thead>
 <tr>
 <th>Nivel</th>
 <th>Tipo</th>
 <th>Calidad</th>
+<th>Descripción</th>
 </tr>
 </thead>
 <tbody>
@@ -6679,36 +6695,91 @@
 <td>1</td>
 <td>Cohesión coincidental</td>
 <td>❌ La peor</td>
+<td>Elementos agrupados sin ninguna relación lógica</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Cohesión lógica</td>
 <td>🔴 Muy baja</td>
+<td>Elementos relacionados por tipo, pero no función</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Cohesión temporal</td>
 <td>🟠 Baja</td>
+<td>Elementos ejecutados en el mismo momento</td>
 </tr>
 <tr>
 <td>4</td>
 <td>Cohesión procedimental</td>
 <td>🟡 Media-baja</td>
+<td>Elementos que siguen una secuencia</td>
 </tr>
 <tr>
 <td>5</td>
 <td>Cohesión comunicacional</td>
 <td>🟢 Media</td>
+<td>Elementos que comparten datos de entrada/salida</td>
 </tr>
 <tr>
 <td>6</td>
 <td>Cohesión secuencial</td>
 <td>🔵 Alta</td>
+<td>Salida de uno es entrada del siguiente</td>
 </tr>
 <tr>
 <td>7</td>
 <td>Cohesión funcional</td>
 <td>✅ La mejor</td>
+<td>Todos enfocados en una única función</td>
+</tr>
+<tr>
+<td>--------</td>
+<td>-------------------------</td>
+<td>---------------</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Cohesión coincidental</td>
+<td>❌ La peor</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Cohesión lógica</td>
+<td>🔴 Muy baja</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Cohesión temporal</td>
+<td>🟠 Baja</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Cohesión procedimental</td>
+<td>🟡 Media-baja</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Cohesión comunicacional</td>
+<td>🟢 Media</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Cohesión secuencial</td>
+<td>🔵 Alta</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Cohesión funcional</td>
+<td>✅ La mejor</td>
+<td></td>
 </tr>
 </tbody>
 </table>

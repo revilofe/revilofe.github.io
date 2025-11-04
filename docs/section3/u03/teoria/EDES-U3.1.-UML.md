@@ -105,7 +105,7 @@ Los modelos o diagramas de UML nos ayudan a trabajar a un **mayor nivel de abstr
 
 **¿Qué significa abstracción?** Significa ignorar deliberadamente los detalles que no importan para el problema en cuestión, y enfocarse en lo que sí importa. Por ejemplo, cuando diseñamos un sistema de tienda online, podemos abstraer "cómo funciona el navegador web" y simplemente decir "hay un cliente que accede al sistema".
 
-**Independencia tecnológica**
+#### 4.1. Independencia tecnológica
 
 Una de las características más poderosas de UML es que es **completamente independiente de la tecnología específica que uses**:
 
@@ -152,10 +152,10 @@ Este es uno de los puntos clave: UML crea un **lenguaje común** que trasciende 
 
 Imagina una reunión de proyecto con:
 
-- El arquitecto técnico que habla SQL y patrones de diseño
-- El especialista en bases de datos que habla de índices y normalización
+- El arquitecto técnico que habla patrones de diseño
+- El especialista en bases de datos que habla de índices y normalización y SQL
 - El analista de negocios que habla de procesos y requisitos
-- El tester que habla de casos de prueba
+- El tester que habla de casos de prueba y calidad
 
 Sin UML, cada uno hablaría su propio lenguaje y habría confusiones constantes. **Con UML**, todos pueden mirar el mismo diagrama de clases y comprender qué se está representando, adaptando la interpretación a su dominio específico:
 

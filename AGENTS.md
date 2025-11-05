@@ -94,7 +94,7 @@ Los archivos HTML dentro de los subdirectorios de módulos utilizan rutas relati
 **Formato de las slides**
 A continuación explicamos el proceso de creación de presentaciones de diapositivas sobre contendios, que normalmente serán de los módulos de informática. Generará slides siguiendo una estructura de markdown precisa (MUY IMPORTANTE SEGUIR LA NOTACIÓN MARKDOWN).
 
-sigue concienzudamente estas reglas:
+Sigue concienzudamente estas REGLAS para GENERAR LAS SLIDES:
 
 - El contenido a generar son un conjunto de slides, formadas por  grupos de slides denominadas  <<secciones>>, y dentro de cada sección hay varias slides relacionadas con la sección. 
 - Las secciones comienzan con títulos de nivel dos  (##).
@@ -106,11 +106,14 @@ sigue concienzudamente estas reglas:
 - Una slide de un mismo grupo (misma sección) se separarán con 2 lineas en blanco de la siguiente slide, y se distinguirán por títulos sin números de slide. IMPORTANTE: No te olvides nunca las 2 lineas en blanco para separar las slides de un grupo de lides o seccion.
 - Una slide con contenido es: una lista de máximo siete viñetas, con tamaño de linea limitadas a 80 caracteres máximo. 
 - Una slide con contenido tambien pueden contener código fuente en un determinado lenguaje de programación, en cuyo caso el codigo fuente incluirá comentarios sobre aclaraciones del código de ejemplo. 
-- Cuando se esá tratando un concepto o un área concreta de un punto de unidad, puede quedarse corto con solo una slide con contenido, en cuyo caso se podra generar una segunda, tercera, etc. slide con el mismo titulo e identificandolas con el mismo titulo pero con número romanos I, II, III, etc.  
+- Cuando se esá tratando un concepto o un área concreta de un punto de unidad, puede quedarse corto con solo una slide con contenido, en cuyo caso se podra generar una segunda, tercera, etc. slide con el mismo titulo e identificandolas con el mismo titulo pero con número romanos I, II, III, etc.
+- Al generar las slides a partir de un documento, utiliza la misma enumeración de los puntos que la que viene en el documento. Es decir , si el documento tiene un punto 1.1, 1.2, 1.3, etc., las slides generadas tendrán los mismos títulos y numeración.
+- Si un punto tiene subpuntos, estos se tratarán en slides independientes dentro de la misma sección, con el mismo título y numeración que el punto, pero añadiendo el subpunto. Por ejemplo, si el punto es 1.3 y tiene subpuntos 1.3.1, 1.3.2, etc., cada subpunto se tratará en una slide independiente, con el título 1.3.1, 1.3.2, etc.
+- Si un punto tiene subpuntos, y estos a su vez tienen subpuntos, estos se tratarán en slides independientes dentro de la misma sección, con el mismo título y numeración que el subpunto, pero añadiendo el subpunto. Por ejemplo, si el punto es 1.3.1 y tiene subpuntos.
 - Al final de TODAS las slides, se crearán notas para el presentador, mas extensas y en las que se describirá el contenido de cada uno de los puntos de las slide o información adicional que no cabe en la  slide.
-- Las notas vendrán identificadas y precedidas por la palabra "Note:"
+- Las notas vendrán identificadas y precedidas por la palabra "Note:" y serán super completas y detalladas, para que el profesor pueda explicar todo el contenido de la slide sin dejar nada sin cubrir.
 - Las notas deben contener todos los comentarios necesarios que el profesor debe hacer para que ningún contenido se deje sin cubrir sobre el punto tratado en en la slide.
-- Todas las interacciones y contenido proporcionado estarán en español.
+- Todas las interacciones y contenido proporcionado estarán en español de España, con un tono relajado y amistoso, pero sin perder la formalidad necesaria para un entorno educativo.
 
 IMPORTANTE:
 - SIEMPRE genera el resultado en markdown.
@@ -119,6 +122,7 @@ IMPORTANTE:
 - RESPETA las separaciones de slides (2 lineas en blanco ) y secciones (---), tal como se indica.
 
 Un ejemplo sería el siguiente:
+
             """""""
             ## U4.1 - Kotlin Básico    
 
@@ -132,10 +136,10 @@ Un ejemplo sería el siguiente:
 
             ---
 
-            ## Introducción
+            ## 1. Introducción
 
 
-            ### Kotlin
+            ### 1.1. Kotlin
 
             * Kotlin: un lenguaje de programación moderno y versátil.
             * Desarrollado por JetBrains, lanzado en 2011.
@@ -144,7 +148,7 @@ Un ejemplo sería el siguiente:
             Note: Presenta Kotlin, su origen y su popularidad, especialmente en el desarrollo de Android y su interoperabilidad con Java.
 
 
-            ### Características de Kotlin
+            ### 1.1. Características de Kotlin
 
             * Sintaxis concisa y expresiva.
             * Seguridad de tipos nulos integrada.
@@ -153,7 +157,7 @@ Un ejemplo sería el siguiente:
             Note: Resalta las características clave de Kotlin, como la sintaxis concisa, la seguridad de tipos nulos y el soporte para paradigmas de programación.
 
 
-            ### Configuración del Entorno de Kotlin
+            ### 1.2. Configuración del Entorno de Kotlin
 
             * Kotlin puede ser usado con IntelliJ IDEA, Android Studio, o cualquier editor de texto.
             * Compilador de Kotlin disponible para línea de comandos.
@@ -162,7 +166,7 @@ Un ejemplo sería el siguiente:
             Note: Ofrece opciones para configurar el entorno de desarrollo para Kotlin, incluyendo IDE's y herramientas en línea.
 
 
-            ### Estructura Básica de un Programa en Kotlin
+            ### 1.3. Estructura Básica de un Programa en Kotlin
 
             * Todo programa en Kotlin comienza con la función `main`.
             * `main` es el punto de entrada del programa.
@@ -176,7 +180,7 @@ Un ejemplo sería el siguiente:
             Note: Explica la estructura básica de un programa en Kotlin, destacando la función `main` como punto de entrada.
 
 
-            ### Ejemplo de Programa en Kotlin
+            ### 1.4. Ejemplo de Programa en Kotlin
 
             * Un programa simple que imprime un mensaje.
             * Uso de `println` para mostrar salida en consola.
@@ -194,7 +198,7 @@ Un ejemplo sería el siguiente:
             Note: Muestra un ejemplo de programa que declara una variable y la imprime. Ideal para entender la declaración de variables y la salida estándar.
 
 
-            ### Compilación y Ejecución
+            ### 1.5. Compilación y Ejecución
 
             * Kotlin se compila a bytecode de Java, ejecutable en la JVM.
             * Uso del comando `kotlinc` para compilar.
@@ -204,10 +208,10 @@ Un ejemplo sería el siguiente:
 
             ---
 
-            ## Variables en Kotlin
+            ## 2. Variables en Kotlin
 
 
-            ### Introducción
+            ### 2.1. Introducción
 
             * Kotlin maneja dos tipos de variables: `val` y `var`.
             * `val` para valores inmutables, `var` para mutables.
@@ -217,9 +221,9 @@ Un ejemplo sería el siguiente:
 
 
 
-            ### Variables Inmutables: `val`
+            ### 2.2. Variables Inmutables: `val` I
 
-            * `val` se usa para declarar una constante.
+            * `val` se usa para declarar una variable no mutable.
             * Una vez asignado, su valor no puede cambiar.
 
             ```Kotlin
@@ -230,8 +234,20 @@ Un ejemplo sería el siguiente:
             Note: Explica el uso de `val` para inmutalbes. La diferencia con constantes, es que las constantes siempre tienen valor, mientras las inmutables pueden no estar asignadas, y una vez se asignas no cambiarán de valor. Muestra ejemplos con y sin especificación de tipo.
 
 
+           ### 2.2. Variables Inmutables: `val` II
 
-            ### Variables Mutables: `var`
+            * `const val` se puede usar para definir una constante.
+            * Su valor se define en tiempo de compilación, su valor no puede cambiar.
+
+            ```Kotlin
+                // Definición de una constante
+                const val PREFIJO = "tde_"
+            ```
+
+            Note: Explica el uso de `val` para inmutalbes. La diferencia con constantes, es que las constantes siempre tienen valor, mientras las inmutables pueden no estar asignadas, y una vez se asignas no cambiarán de valor. Muestra ejemplos con y sin especificación de tipo.
+
+
+            ### 2.3. Variables Mutables: `var`
 
             * `var` permite cambiar el valor de la variable.
             * Útil cuando se necesita modificar el valor.
@@ -246,7 +262,7 @@ Un ejemplo sería el siguiente:
 
             ---
             """""""
-
+    
 Como  has visto en el ejemplo:   
 * --- se utiliza para separar secciones 
 * 2 lineas en blanco para separar las slides dentro de una sección. 

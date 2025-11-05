@@ -16,7 +16,6 @@ tags:
     - riesgos
     - plan director de seguridad
 ---
-
 ## 2.1. Plan director de seguridad
 
 El Plan Director de Seguridad (PDS) es la hoja de ruta que organiza de manera ordenada
@@ -45,8 +44,19 @@ Si las respuestas son dudosas, es el momento de diseñar un Plan Director de Seg
 
 ### 2. Concepto y objetivos del Plan Director de Seguridad
 
-Un PDS consiste en definir y priorizar un conjunto de proyectos de seguridad de la
-información con el fin de reducir los riesgos a niveles aceptables. Para que sea eficaz:
+Un PDS es un documento que establece un conjunto estructurado de políticas, objetivos, controles y procedimientos de seguridad que una organización debe implementar para proteger sus activos digitales y físicos. Este plan se basa en una evaluación de la situación actual de seguridad, la identificación de riesgos y el establecimiento de medidas concretas para mitigar dichos riesgos de acuerdo con la estrategia de negocio.
+
+!!! note "Nota"
+EL PDS consiste en definir y priorizar un conjunto de proyectos de seguridad de la información con el fin de reducir los riesgos a niveles aceptables.
+
+El PDS permite a la organización:
+
+* Definir y priorizar objetivos de seguridad alineados con su misión y visión.
+* Identificar amenazas y vulnerabilidades en sus sistemas y procesos.
+* Planificar acciones correctivas y preventivas a través de proyectos y medidas específicas.
+* Alinear sus estrategias de seguridad con normativas y estándares internacionales, como ISO 27001, RGPD, PCI-DSS, entre otros.
+
+Para que sea eficaz, el PDS:
 
 1. Debe **alinearse con la estrategia** general y tecnológica de la empresa.
 2. Requiere un **alcance claro** (qué procesos, departamentos o sistemas están incluidos).
@@ -61,12 +71,12 @@ para incorporar cambios en la organización, nuevas amenazas o lecciones aprendi
 
 El ciclo propuesto por INCIBE comprende seis fases, que abordaremos en detalle:
 
-1. Conocer la situación actual de la organización.
-2. Entender la estrategia de la organización.
-3. Definir proyectos e iniciativas.
-4. Clasificar y priorizar los proyectos.
-5. Obtener la aprobación de la dirección.
-6. Poner en marcha el plan y establecer la mejora continua.
+1. **Conocer la situación** actual de la organización.
+2. **Entender la estrategia** de la organización.
+3. **Definir proyectos** e iniciativas.o MAGERIT v3,
+4. Clasificar y **priorizar los proyectos**.
+5. **Obtener la aprobación** de la dirección.
+6. **Poner en marcha** el plan y establecer la mejora continua.
 
 Cada fase se apoya en la anterior. Si la fotografía inicial es deficiente, las decisiones
 posteriores quedarán desalineadas y el plan perderá credibilidad.
@@ -80,17 +90,14 @@ Una cosa a tener en cuenta al terminar el ciclo es que el PDS es un proceso iter
 última fase consiste en volver a la primera para iniciar un nuevo ciclo, aprovechando
 la experiencia adquirida y adaptándose a los cambios en el entorno.
 
-
 ### 4. Fase 1. Conocer la situación actual de la organización
 
+![](assets/IS-U121-PlanDirectorDeSeguridad18.png)
+
 En estas primeras etapas se recopila información para entender cómo se gestiona la seguridad
-actualmente. 
-
-<figure markdown>
-  ![](assets/IS-U121-PlanDirectorDeSeguridad18.png)
-  <figcaption>Fase 1</figcaption>
-</figure>
-
+actualmente. Intentamos obtener una imagen clara y detallada del estado de seguridad, identificando las prácticas,
+controles y medidas existentes y determinando su eficacia. Conocer la situación actual nos permite entender tanto las
+fortalezas como las vulnerabilidades en seguridad, y establece una base sólida para definir estrategias, priorizar recursos y planificar mejoras.
 
 Esta fase recoge la mayor parte del trabajo. Se trata de obtener una visión honesta y
 documentada del **estado de la seguridad en aspectos organizativos, técnicos, físicos y
@@ -98,30 +105,35 @@ legales**. La dirección debe respaldarla para garantizar que los departamentos 
 
 #### 4.1. Actividades previas
 
-Las primeras tareas se centran en preparar el terreno:
+Durante el análisis de la situación actual, es importante realizar ciertas actividades preliminares que nos ayudarán a establecer un marco adecuado para el desarrollo del Plan Director de Seguridad. Estas actividades previas aseguran que el alcance y las responsabilidades estén claros, y que la organización esté preparada para un análisis profundo y estructurado. A continuación, exploraremos cada una de estas actividades.
 
 ##### 4.1.1. Definir el alcance
 
-Antes de empezar es necesario acotar el terreno de juego. Podemos centrarnos en toda
-la empresa o iniciar el plan en un área crítica (por ejemplo, el proceso de facturación,
-el departamento de TI o la plataforma de comercio electrónico). Determinar el alcance
-condiciona el esfuerzo, los recursos y los tiempos.
+Definir el alcance consiste en definir qué partes de la organización serán analizadas y protegidas en el PDS. Esto incluye departamentos, activos (recursos de valor como datos, sistemas y procesos) y los procesos que se consideran críticos para el negocio.
+
+Podemos centrarnos en toda la empresa o iniciar el plan en un área crítica (por ejemplo, el proceso de facturación,
+el departamento de TI o la plataforma de comercio electrónico). Determinar el alcance condiciona el esfuerzo, los recursos y los tiempos.
 
 Lo recomendable es determinar aquellos activos y procesos de negocio críticos, aquellos sin los que la empresa no puede
 subsistir, y utilizar éstos como alcance del PDS. De esta manera, la ejecución del PDS tendrá un impacto más positivo sobre la seguridad de la información de la organización
 
-**Ejemplo práctico**: una pyme industrial decide iniciar el PDS con los procesos de compras,
+**Ejemplo**: una pyme industrial decide iniciar el PDS con los procesos de compras,
 almacén y facturación porque dependen de un ERP cuyos fallos afectan a la continuidad del negocio.
 
+**Ejemplo**: Imaginemos que una empresa tiene tres departamentos principales: ventas, finanzas y recursos humanos. Cada uno maneja diferentes tipos de información, como datos de clientes en ventas, datos financieros en el departamento de finanzas y datos de empleados en recursos humanos. Definir el alcance significa decidir si el plan incluirá la protección de todos estos departamentos o solo algunos. En este caso, el PDS podría enfocarse primero en el área de finanzas, que maneja datos críticos y que, en caso de una brecha de seguridad, podría generar mayores impactos económicos.
 
 Si el proceso más crítico de nuestra empresa está relacionado con el proceso de facturación, podemos limitar
 el alcance a éste: sistemas y equipos implicados, personal, aplicaciones necesarias, riesgos específicos, etc.
 Aunque las mejoras serán específicas dentro de este proceso, nos permitirá profundizar en el resultado y
 partir de un punto para extenderlo a otros departamentos o procesos.
 
+**Objetivo**: Definir el alcance nos ayuda a establecer límites claros y priorizar los recursos y esfuerzos en las áreas de mayor riesgo o criticidad.
+
 ##### 4.1.2. Identificar responsables de los activos
 
-Los activos de información incluyen personas, procesos, datos, aplicaciones, equipos,
+Es fundamental identificar los activos que queremos proteger (por ejemplo, bases de datos, sistemas de correo electrónico, documentos sensibles, etc.) y definir quién es el responsable de su gestión y protección.
+
+Los activos incluyen personas, procesos, datos, aplicaciones, equipos,
 instalaciones y servicios. Para gestionarlos conviene asignar responsabilidades:
 
 - Responsable de Seguridad: coordina el plan y hace seguimiento de las medidas.
@@ -131,24 +143,24 @@ instalaciones y servicios. Para gestionarlos conviene asignar responsabilidades:
 En empresas pequeñas una misma persona puede asumir varios roles, pero deben quedar
 documentados para saber quién toma decisiones y quién valida los controles.
 
+**Ejemplo**: En una empresa, un servidor que contiene datos de clientes es un activo crítico. La persona responsable de este servidor podría ser el administrador de sistemas o el jefe de TI. Este responsable debe estar al tanto de las medidas de seguridad que protegen el servidor, como el acceso restringido, la instalación de antivirus y la realización de copias de seguridad.
+
+**Objetivo**: Tener claridad sobre quiénes son los responsables de cada activo ayuda a asignar las tareas de seguridad adecuadamente y asegura que siempre haya alguien a cargo de su protección.
+
 ##### 4.1.3. Realizar una valoración inicial
 
-> **controles**: medidas de todo tipo (técnico, legal u organizativo) que se implementan para contrarrestar los riesgos de seguridad.
+Realizar una valoración preliminar consiste en evaluar el estado actual de la seguridad en la organización, identificando qué controles de seguridad ya están implementados, cómo se aplican y cuáles son necesarios según la normativa y las buenas prácticas.
 
-Consiste en identificar qué controles existen y cómo se aplican. La guía propone apoyarse
-en la norma ISO/IEC 27002:2017 para seleccionar controles relevantes. No se trata de
-aplicar toda la norma sino de elegir los apartados que realmente afecten al alcance. 
+!!! note "Nota"
+**Controles**: Medidas de todo tipo (técnico, legal u organizativo) que se implementan para contrarrestar los riesgos de seguridad.
 
-<figure markdown>
-  ![](assets/IS-U121-PlanDirectorDeSeguridad9.png)
-  <figcaption>iso 27002</figcaption>
-</figure>
-
-Por ejemplo:
+Para realizar este trabajo podemos apoyarnos en la norma ISO/IEC 27002:2017 para seleccionar controles relevantes.  No se trata de aplicar toda la norma sino de elegir los apartados que **realmente afecten al alcance**. Por ejemplo:
 
 - Si nuestra empresa no desarrolla aplicaciones, no tendremos que valorar aquellos controles de esta norma que hagan referencia al desarrollo seguro de aplicaciones.
 - Si nuestra empresa no proporciona un servicio de comercio electrónico, no será necesario que apliquemos los controles relacionados con la transacción de datos personales en la compra-venta online.
 - Por el contrario, sí será necesario aplicar medidas o controles relacionados con las copias de seguridad o el proceso de altas y bajas de personal, ya que éstos serán de aplicación en cualquier organización.
+
+**Ejemplo**: Supongamos que una empresa ya cuenta con antivirus y cortafuegos, pero no tiene una política de contraseñas seguras o un sistema de control de accesos. La valoración inicial revelará estas deficiencias, indicando áreas donde se requieren mejoras. Como parte de esta valoración, se podría usar la ISO 27002, que ofrece un marco de controles de seguridad para diferentes aspectos, desde el control de acceso hasta la protección de datos.
 
 El resultado se refleja en un “Documento de Selección de Controles” o *Declaración de
 Aplicabilidad (SoA)*, donde se indica si cada control está implantado, en curso o pendiente.
@@ -163,12 +175,186 @@ en CMM, en el se parte de una escala de seis niveles:
 - Nivel 4 – Administrado: hay procedimientos aprobados y seguimiento regular.
 - Nivel 5 – Optimizado: el control se mide con indicadores y se mejora continuamente.
 
-
 <figure markdown>
   ![](assets/IS-U121-PlanDirectorDeSeguridad11.png)
   <figcaption>Niveles de madurez</figcaption>
 </figure>
 
+**Objetivo**: Esta valoración inicial proporciona una visión general del estado actual de la seguridad y ayuda a determinar qué controles adicionales son necesarios.
+
+###### 4.1.3.1 ISO/IEC 27002
+
+
+La ISO/IEC 27002 es un estándar internacional que proporciona directrices sobre controles específicos para la gestión de la seguridad de la información. Forma parte de la familia de normas ISO/IEC 27000, la cual está diseñada para ayudar a las organizaciones a establecer, implementar, mantener y mejorar un Sistema de Gestión de Seguridad de la Información (SGSI). A continuación, se detalla en qué consiste, su utilidad y cómo puede emplearse en el desarrollo de un Plan Director de Seguridad (PDS).
+
+**¿Qué es la ISO 27002?**
+
+La ISO/IEC 27002 es una guía de mejores prácticas que detalla controles específicos de seguridad de la información y cómo deben ser aplicados para proteger la confidencialidad, integridad y disponibilidad de la información. No es una norma de certificación (a diferencia de la ISO/IEC 27001, que establece los requisitos para un SGSI), sino una norma de referencia que define más de cien controles de seguridad clasificados en distintas categorías, tales como:
+
+* Políticas de seguridad de la información
+* Organización de la seguridad de la información
+* Seguridad de los recursos humanos
+* Gestión de activos
+* Control de accesos
+* Criptografía
+* Seguridad física y ambiental
+* Seguridad de las comunicaciones
+* Adquisición, desarrollo y mantenimiento de sistemas de información
+* Relación con proveedores
+* Gestión de incidentes de seguridad de la información
+* Continuidad del negocio
+* Cumplimiento
+
+¿Para qué sirve la ISO 27002?
+
+La ISO 27002 es útil para que las organizaciones tengan una referencia práctica y detallada de los controles de seguridad necesarios para proteger sus activos de información. Sirve para:
+
+1. Desarrollar políticas y procedimientos de seguridad que sean completos y efectivos.
+2. Alinear la seguridad de la información con las mejores prácticas internacionales, lo que es fundamental para organizaciones que buscan estandarizar y profesionalizar su enfoque de seguridad.
+3. Facilitar el cumplimiento normativo: Ayuda a cumplir con leyes y regulaciones que exigen una gestión de la seguridad estructurada (por ejemplo, RGPD en Europa).
+4. Orientar la implementación de controles específicos: Proporciona detalles sobre cómo implementar cada control, asegurando que no queden lagunas en la protección de los activos críticos de la organización.
+
+¿Cómo puedo usar la ISO 27002 en el Proceso de un Plan Director de Seguridad?
+
+La ISO 27002 puede ser una guía fundamental en casi todas las fases del desarrollo del PDS. A continuación, se detalla cómo utilizarla en cada una de estas fases:
+
+1. Situación Actual
+
+* Valoración Inicial: Al analizar la situación actual de seguridad (1.1 c), la ISO 27002 ofrece un marco de referencia para evaluar qué controles ya existen en la organización y cuáles faltan. Por ejemplo, se puede revisar si existen controles adecuados en gestión de accesos, protección de datos en tránsito y en reposo, o control de dispositivos móviles.
+* Análisis de Cumplimiento (1.1 d): La norma proporciona una lista de controles necesarios para cumplir con normativas de seguridad reconocidas. Durante el análisis de cumplimiento, se puede comparar cada control con las pautas de ISO 27002 para asegurarse de que se alinean con las mejores prácticas.
+
+2. Comprensión de la Estrategia Empresarial
+
+* Alineación con Estrategias TIC: La ISO 27002 ayuda a definir controles adecuados que respalden las estrategias de centralización, externalización y digitalización de servicios TIC, estableciendo medidas de seguridad específicas para proveedores y tecnologías en la nube, por ejemplo.
+
+3. Definición de Proyectos e Iniciativas
+
+* Iniciativas de Mejora: La ISO 27002 proporciona ideas concretas de proyectos e iniciativas, como la implementación de controles de acceso o la gestión de dispositivos móviles, que pueden adoptarse o adaptarse según las necesidades de la organización.
+* Gestión de Riesgos Críticos: La norma detalla controles específicos para gestionar riesgos críticos (por ejemplo, gestión de incidentes de seguridad o continuidad de negocio), lo que permite que los proyectos se desarrollen con una base sólida.
+
+4. Clasificación y Priorización de Proyectos
+
+* Criterios de Priorización: Con la ISO 27002, es posible identificar qué controles son esenciales para cumplir con normativas o proteger activos críticos, ayudando a clasificar y priorizar los proyectos del PDS en función de su importancia y urgencia.
+
+5. Aprobación del Plan Director de Seguridad
+
+* Justificación de Iniciativas: La ISO 27002 puede respaldar cada iniciativa en términos de conformidad con las mejores prácticas internacionales, lo que facilita la aprobación del PDS por la dirección al demostrar que los proyectos propuestos cumplen con estándares de alto nivel.
+
+6. Implementación del Plan
+
+* Guía para la Implementación: Durante la implementación de cada proyecto, la ISO 27002 proporciona pautas sobre cómo aplicar controles específicos. Por ejemplo, si se está implementando un control de acceso, la norma detalla requisitos y sugerencias para asegurar que el acceso a la información sea apropiado y seguro.
+* Validación de Controles: La ISO 27002 también puede usarse para validar que los controles implementados cumplen con los estándares esperados en términos de eficacia y formalización.
+
+Ejemplo de Uso Práctico de la ISO 27002 en el PDS
+
+Imaginemos que en el análisis inicial de seguridad se detecta que la organización no cuenta con una política de gestión de accesos. La ISO 27002 especifica controles relacionados con la gestión de accesos que incluyen:
+
+* Establecimiento de una política de control de acceso (por ejemplo, restringir accesos según el rol del usuario).
+* Asignación de permisos de acceso mínimos necesarios para cada usuario.
+* Implementación de autenticación multifactor para accesos remotos.
+
+A partir de estas pautas, la organización puede desarrollar un proyecto específico dentro del PDS que incluya:
+
+1. Desarrollar la política de gestión de accesos en línea con ISO 27002.
+2. Implementar autenticación multifactor (MFA) como se recomienda en la norma.
+3. Establecer revisiones periódicas de permisos para asegurar que los accesos estén actualizados y alineados con las funciones actuales de cada empleado.
+
+Conclusión
+
+La ISO 27002 es una herramienta esencial en el desarrollo de un Plan Director de Seguridad, ya que proporciona una guía práctica sobre cómo aplicar controles de seguridad a nivel organizativo y técnico. Su uso en cada fase del PDS garantiza que el plan esté basado en mejores prácticas internacionales, mejorando así la efectividad y consistencia de las medidas de seguridad implementadas. Además, al seguir esta norma, la organización se asegura de estar mejor preparada para cumplir con normativas y enfrentar los desafíos de seguridad de manera estructurada y profesional.
+
+—
+
+Vamos a ver un ejemplo práctico de cómo una empresa de venta online podría utilizar la ISO/IEC 27002:2013 para estructurar y mejorar su seguridad en varios aspectos clave.
+
+Supongamos que esta empresa de venta online, eCommerce Plus, quiere mejorar su seguridad para proteger los datos de sus clientes y cumplir con normativas de protección de datos. eCommerce Plus almacena datos sensibles de sus clientes, como direcciones, números de tarjeta de crédito (a través de un tercero), historiales de compra y preferencias de productos.
+
+Uso de la ISO 27002:2013 en eCommerce Plus
+
+A continuación, se detallan algunas áreas de la ISO 27002:2013 que eCommerce Plus podría implementar para fortalecer su seguridad.
+
+1. Control de Acceso (Sección 9 de ISO 27002)
+
+Objetivo: Asegurar que solo el personal autorizado pueda acceder a datos sensibles de clientes y sistemas críticos.
+
+* Aplicación Práctica: eCommerce Plus establece una política de control de acceso basada en los principios de "necesidad de saber" y "mínimo privilegio". Esto significa que cada empleado solo tiene acceso a los datos y sistemas que necesita para su función.
+* Controles Recomendados:
+  * Implementar autenticación multifactor (MFA) para acceder a sistemas críticos (por ejemplo, al sistema de gestión de inventarios y al backend de la tienda online).
+  * Utilizar roles y permisos para segmentar el acceso a información en función del rol del empleado (por ejemplo, el equipo de atención al cliente tiene acceso a historiales de pedidos, pero no a la información de pago).
+
+2. Cifrado de Datos (Sección 10 de ISO 27002)
+
+Objetivo: Proteger la confidencialidad de los datos sensibles almacenados y transmitidos.
+
+* Aplicación Práctica: eCommerce Plus implementa el cifrado en las áreas de mayor riesgo:
+  * Cifrado de la base de datos donde se almacenan los datos personales de los clientes.
+  * Cifrado de las comunicaciones entre el cliente y el servidor mediante HTTPS, asegurando que los datos personales y de pago estén protegidos durante la transmisión.
+* Controles Recomendados:
+* Utilizar un cifrado fuerte (por ejemplo, AES-256) para proteger los datos almacenados.
+* Garantizar que los certificados SSL/TLS estén actualizados y renovados regularmente.
+
+3. Seguridad de las Comunicaciones (Sección 13 de ISO 27002)
+
+Objetivo: Proteger la información cuando se transmite a través de redes.
+
+* Aplicación Práctica: eCommerce Plus usa conexiones seguras y establece políticas para asegurar que toda la comunicación que implique datos sensibles se realice a través de redes protegidas:
+  * Todas las interacciones con los clientes, incluyendo confirmaciones de pedidos y comunicaciones de soporte, están protegidas con HTTPS.
+  * Cualquier comunicación interna que contenga datos sensibles (por ejemplo, información de transacciones, pedidos o información de clientes) también se realiza a través de canales cifrados y seguros.
+* Controles Recomendados:
+* Configurar y mantener VPNs seguras para conexiones remotas de empleados.
+* Implementar firewalls para proteger la red de posibles intrusiones.
+
+4. Gestión de Incidentes de Seguridad de la Información (Sección 16 de ISO 27002)
+
+Objetivo: Asegurarse de que los incidentes de seguridad de la información se gestionen de manera oportuna y eficiente.
+
+* Aplicación Práctica: eCommerce Plus implementa un protocolo de gestión de incidentes que incluye:
+  * Un procedimiento para detectar y responder a incidentes de seguridad, como intentos de acceso no autorizado o anomalías en los sistemas de pago.
+  * Un sistema de alertas automáticas que notifica al equipo de seguridad cuando se detectan comportamientos sospechosos, como múltiples intentos fallidos de inicio de sesión.
+* Controles Recomendados:
+* Establecer un equipo de respuesta a incidentes con roles y responsabilidades definidos para cada tipo de incidente.
+* Documentar y analizar cada incidente para aprender de ellos y mejorar la prevención.
+
+5. Relación con Proveedores (Sección 15 de ISO 27002)
+
+Objetivo: Asegurar que los terceros que procesan datos de la empresa cumplan con estándares de seguridad.
+
+* Aplicación Práctica: eCommerce Plus trabaja con un proveedor de procesamiento de pagos que maneja los datos de tarjetas de crédito. La empresa se asegura de que este proveedor cumpla con el estándar PCI-DSS, que regula la seguridad de los datos de tarjetas de pago.
+  * eCommerce Plus establece un acuerdo de nivel de servicio (SLA) en el que el proveedor se compromete a cumplir con los requisitos de seguridad establecidos por la normativa.
+  * Se realizan auditorías periódicas o se solicitan certificaciones actualizadas del proveedor para verificar su cumplimiento.
+* Controles Recomendados:
+* Definir claramente los requisitos de seguridad para los proveedores y los datos que pueden procesar.
+* Mantener una lista actualizada de proveedores críticos y realizar evaluaciones periódicas de su cumplimiento.
+
+6. Cumplimiento con Normativas (Sección 18 de ISO 27002)
+
+Objetivo: Asegurarse de que eCommerce Plus cumpla con las leyes y regulaciones, como el Reglamento General de Protección de Datos (RGPD).
+
+* Aplicación Práctica: eCommerce Plus implementa una política de privacidad y establece procedimientos claros para manejar los datos personales de los clientes, cumpliendo con los requisitos del RGPD. Esto incluye:
+  * Obtener el consentimiento explícito de los clientes para almacenar y procesar sus datos.
+  * Ofrecer una opción para que los clientes soliciten la eliminación de sus datos de los sistemas de la empresa.
+  * Notificar a las autoridades y a los clientes en caso de una brecha de seguridad que comprometa los datos personales.
+* Controles Recomendados:
+* Mantener un registro de actividades de procesamiento de datos personales.
+* Designar un Responsable de Protección de Datos (DPO) para asegurar el cumplimiento de las normativas de privacidad.
+
+Resumen del Uso de ISO 27002 en eCommerce Plus
+
+La ISO 27002:2013 proporciona una guía integral para eCommerce Plus en la implementación de controles de seguridad, permitiéndole abordar las necesidades específicas de protección de datos y cumplimiento normativo. Al aplicar estos controles, eCommerce Plus logra una estructura de seguridad robusta que:
+
+* Protege los datos sensibles de clientes y transacciones.
+* Minimiza riesgos como el acceso no autorizado y las brechas de seguridad.
+* Cumple con regulaciones clave como el RGPD y PCI-DSS.
+* Establece políticas y procedimientos que fortalecen la confianza de los clientes.
+
+En cada una de las fases del PDS, la ISO 27002:2013 permite que eCommerce Plus seleccione los controles necesarios para proteger su información y servicios en línea de acuerdo con mejores prácticas internacionales, mejorando así su resiliencia y reputación en el mercado online.
+
+**
+
+<figure markdown>
+  ![](assets/IS-U121-PlanDirectorDeSeguridad9.png)
+  <figcaption>iso 27002</figcaption>
+</figure>
 
 ##### 4.1.4. Analizar el cumplimiento
 
@@ -183,7 +369,6 @@ Esta actividad combina entrevistas, revisión documental y visitas a instalacion
 4. Recoged pruebas y evidencias (fotografías, registros, informes) y registrad incidencias/problemas detectadas.
 5. Analizar resultados y asignad puntuaciones de 0 a 5 en cada control para poder representar los resultados en gráficos radar.
 6. Solicitad a la dirección un comunicado que refuerce la importancia del proyecto para asegurar la colaboración.
-
 
 ##### 4.1.5. Establecer objetivos de mejora
 
@@ -202,12 +387,10 @@ Entonces, se fijan objetivos realistas. Es útil dibujar un gráfico con tres cu
 Así se visualiza qué dominios requieren más esfuerzo: seguridad física, control de acceso,
 gestión de incidentes, copias de seguridad, criptografía, etc.
 
-
 <figure markdown>
   ![](assets/IS-U121-PlanDirectorDeSeguridad14.png)
   <figcaption>Objetivos de mejora</figcaption>
 </figure>
-
 
 #### 4.2. Análisis técnico de seguridad
 
@@ -243,8 +426,6 @@ lo describe en varias etapas que conectan con el proceso visto anteriormente.
   <figcaption>Análisis de riesgos</figcaption>
 </figure>
 
-
-
 1. **Identificación de activos**: ¿qué servicios, aplicaciones, datos y recursos resultan críticos?
 2. **Identificación de amenazas y vulnerabilidades**: ataques externos, errores internos, desastres físicos, fallos eléctricos, etc. Y vulnerabilidades técnicas u organizativas como falta de parches, configuraciones débiles, ausencia de formación o procedimientos inadecuados.
 3. **Valoración de consecuencias y probabilidad**: se estima el impacto (económico, reputacional, legal)
@@ -262,8 +443,6 @@ El proceso se puede representar como un flujo:
   ![](assets/IS-U121-PlanDirectorDeSeguridad20.png)
   <figcaption>Evolución de los riesgos</figcaption>
 </figure>
-
-
 
 ##### 4.3.1. Estrategias de tratamiento
 
@@ -285,7 +464,6 @@ información se revisará en las fases posteriores.
   ![](assets/IS-U121-PlanDirectorDeSeguridad28.png)
   <figcaption>Fase 2</figcaption>
 </figure>
-
 
 El PDS solo tendrá sentido si está alineado con la dirección estratégica. En esta fase:
 
@@ -318,13 +496,14 @@ de seguridad. INCIBE sugiere agruparlas en tres bloques:
 Cada iniciativa debe describirse con los siguientes elementos: objetivo, alcance, responsables,
 recursos internos/externos, coste estimado, duración y dependencias.
 
-Ejemplo de formato:    
+Ejemplo de formato:
 
-| ID  | Nombre del proyecto                  | Objetivo                                      | Alcance                | Responsable        | Recursos necesarios         | Coste estimado | Duración estimada | Dependencias               |
-|-----|-------------------------------------|-----------------------------------------------|------------------------|--------------------|-----------------------------|----------------|-------------------|----------------------------|
-| 01  | Política de seguridad de la información | Definir marco normativo y compromisos de la dirección | Toda la organización    | Responsable de Seguridad | Consultoría externa, tiempo del Responsable de Seguridad | 3.000 €        | 2 meses          | Aprobación de la dirección | |
-| 02  | Plan de concienciación                 | Mejorar cultura de seguridad entre empleados   | Toda la organización    | Responsable de RR.HH. | Empresa de formación, materiales de campaña | 5.000 €        | 4 meses          | Coordinación con RR.HH.    |
-| ... | ...                                 | ...                                           | ...                    | ...                | ...                         | ...            | ...               |  
+
+| ID  | Nombre del proyecto                       | Objetivo                                               | Alcance               | Responsable              | Recursos necesarios                                       | Coste estimado | Duración estimada | Dependencias                 |
+| --- | ----------------------------------------- | ------------------------------------------------------ | --------------------- | ------------------------ | --------------------------------------------------------- | -------------- | ------------------ | ---------------------------- |
+| 01  | Política de seguridad de la información | Definir marco normativo y compromisos de la dirección | Toda la organización | Responsable de Seguridad | Consultoría externa, tiempo del Responsable de Seguridad | 3.000 €       | 2 meses            | Aprobación de la dirección |
+| 02  | Plan de concienciación                   | Mejorar cultura de seguridad entre empleados           | Toda la organización | Responsable de RR.HH.    | Empresa de formación, materiales de campaña             | 5.000 €       | 4 meses            | Coordinación con RR.HH.     |
+| ... | ...                                       | ...                                                    | ...                   | ...                      | ...                                                       | ...            | ...                |                              |
 
 Ejemplos de proyectos definidos en esta fase se muestran a continuación:
 
@@ -332,18 +511,19 @@ Ejemplos de proyectos definidos en esta fase se muestran a continuación:
 
 A modo de ejemplo, la guía propone un catálogo inicial con diez proyectos comunes en muchas organizaciones:
 
-| ID  | Proyecto                               | Descripción ampliada                                                                                                                                                                                  |
-|-----|----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 01  | Política de seguridad de la información | Documento marco que define principios, compromisos de la dirección, uso aceptable de recursos, tratamiento de datos personales y régimen sancionador interno. Debe comunicarse y revisarse anualmente. |
-| 02  | Plan de concienciación                 | Programa formativo que combine sesiones presenciales, campañas de correo, cartelería y simulacros de phishing, contando con indicadores de seguimiento.                                               |
-| 03  | Gestión de incidentes                  | Procedimientos claros para identificar, registrar, analizar y cerrar incidentes, con un canal de notificación 24/7 y métricas de tiempo de respuesta.                                                 |
-| 04  | Adecuación al RGPD                     | Inventario de tratamientos, análisis de legitimación, contratos con encargados, formación específica y revisión de medidas técnicas y organizativas.                                                  |
-| 05  | Coordinación RR. HH. – TIC             | Circuitos ágiles para altas y bajas de personal, control de accesos físicos y lógicos, retirada de credenciales y devolución de dispositivos.                                                         |
-| 06  | Plan de continuidad TIC                | Análisis de impacto en el negocio (BIA), estrategias de recuperación, procedimientos, pruebas regulares y revisión post-ejercicio.                                                                    |
-| 07  | Seguridad en la red corporativa        | Segmentación, VLAN, firewalls internos, IDS/IPS, monitorización de tráfico y gestión de parches, especialmente en servicios expuestos.                                                                |
-| 08  | Política de copias de seguridad        | Clasificación de la información, periodicidad de copias, almacenamiento fuera de línea, pruebas de restauración y registros de resultados.                                                            |
-| 09  | Clasificación de la información        | Esquema de etiquetado (pública, interna, confidencial) con procedimientos de acceso, cifrado, destrucción y tratamiento por proveedores.                                                              |
-| 10  | Gestión de proveedores TIC             | Revisión de contratos, establecimiento de acuerdos de nivel de servicio (SLA) y cláusulas de seguridad, auditorías a proveedores críticos.                                                            |
+
+| ID | Proyecto                                  | Descripción ampliada                                                                                                                                                                                    |
+| -- | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 01 | Política de seguridad de la información | Documento marco que define principios, compromisos de la dirección, uso aceptable de recursos, tratamiento de datos personales y régimen sancionador interno. Debe comunicarse y revisarse anualmente. |
+| 02 | Plan de concienciación                   | Programa formativo que combine sesiones presenciales, campañas de correo, cartelería y simulacros de phishing, contando con indicadores de seguimiento.                                                |
+| 03 | Gestión de incidentes                    | Procedimientos claros para identificar, registrar, analizar y cerrar incidentes, con un canal de notificación 24/7 y métricas de tiempo de respuesta.                                                  |
+| 04 | Adecuación al RGPD                       | Inventario de tratamientos, análisis de legitimación, contratos con encargados, formación específica y revisión de medidas técnicas y organizativas.                                               |
+| 05 | Coordinación RR. HH. – TIC              | Circuitos ágiles para altas y bajas de personal, control de accesos físicos y lógicos, retirada de credenciales y devolución de dispositivos.                                                        |
+| 06 | Plan de continuidad TIC                   | Análisis de impacto en el negocio (BIA), estrategias de recuperación, procedimientos, pruebas regulares y revisión post-ejercicio.                                                                    |
+| 07 | Seguridad en la red corporativa           | Segmentación, VLAN, firewalls internos, IDS/IPS, monitorización de tráfico y gestión de parches, especialmente en servicios expuestos.                                                               |
+| 08 | Política de copias de seguridad          | Clasificación de la información, periodicidad de copias, almacenamiento fuera de línea, pruebas de restauración y registros de resultados.                                                           |
+| 09 | Clasificación de la información         | Esquema de etiquetado (pública, interna, confidencial) con procedimientos de acceso, cifrado, destrucción y tratamiento por proveedores.                                                               |
+| 10 | Gestión de proveedores TIC               | Revisión de contratos, establecimiento de acuerdos de nivel de servicio (SLA) y cláusulas de seguridad, auditorías a proveedores críticos.                                                           |
 
 Estos proyectos son orientativos; cada organización los adaptará a sus necesidades y recursos.
 
@@ -373,7 +553,6 @@ La aprobación del PDS por parte de la dirección es crucial para asegurar recur
   <figcaption>Fase 5</figcaption>
 </figure>
 
-
 Con el catálogo priorizado se prepara un dossier ejecutivo para la dirección. Debe incluir:
 
 - Resumen del análisis de situación (fortalezas, debilidades, riesgos críticos).
@@ -391,7 +570,6 @@ reforzar el compromiso colectivo.
   ![](assets/IS-U121-PlanDirectorDeSeguridad38.png)
   <figcaption>Fase 6</figcaption>
 </figure>
-
 
 El éxito del PDS depende de su ejecución. INCIBE recomienda:
 
@@ -462,10 +640,10 @@ Algunas recomendaciones para maximizar el éxito del PDS:
 * [¿Qué es el Plan Director de Seguridad?](https://ayudaleyprotecciondatos.es/2020/10/30/plan-director-de-seguridad/#Que_es_el_Plan_Director_de_Seguridad "¿Qué es el Plan Director de Seguridad?")
 * [Objetivos generales de un Plan Director de Seguridad](https://ayudaleyprotecciondatos.es/2020/10/30/plan-director-de-seguridad/#Objetivos_generales_de_un_Plan_Director_de_Seguridad "Objetivos generales de un Plan Director de Seguridad")
 * [Cómo implantar un Plan Director de Seguridad en una empresa. Pasos a seguir](https://ayudaleyprotecciondatos.es/2020/10/30/plan-director-de-seguridad/#Como_implantar_un_Plan_Director_de_Seguridad_en_una_empresa_Pasos_a_seguir "Cómo implantar un Plan Director de Seguridad en una empresa. Pasos a seguir")
-    * [Definición de la política de seguridad de la empresa](https://ayudaleyprotecciondatos.es/2020/10/30/plan-director-de-seguridad/#Definicion_de_la_politica_de_seguridad_de_la_empresa "Definición de la política de seguridad de la empresa")
-    * [Conocimiento de la estrategia de la empresa](https://ayudaleyprotecciondatos.es/2020/10/30/plan-director-de-seguridad/#Conocimiento_de_la_estrategia_de_la_empresa "Conocimiento de la estrategia de la empresa")
-    * [Definir los proyectos e iniciativas](https://ayudaleyprotecciondatos.es/2020/10/30/plan-director-de-seguridad/#Definir_los_proyectos_e_iniciativas "Definir los proyectos e iniciativas")
-    * [Clasificar y priorizar los proyectos a realizar](https://ayudaleyprotecciondatos.es/2020/10/30/plan-director-de-seguridad/#Clasificar_y_priorizar_los_proyectos_a_realizar "Clasificar y priorizar los proyectos a realizar")
-    * [Aprobación](https://ayudaleyprotecciondatos.es/2020/10/30/plan-director-de-seguridad/#Aprobacion "Aprobación")
-    * [Puesta en marcha del plan](https://ayudaleyprotecciondatos.es/2020/10/30/plan-director-de-seguridad/#Puesta_en_marcha_del_plan "Puesta en marcha del plan")
+  * [Definición de la política de seguridad de la empresa](https://ayudaleyprotecciondatos.es/2020/10/30/plan-director-de-seguridad/#Definicion_de_la_politica_de_seguridad_de_la_empresa "Definición de la política de seguridad de la empresa")
+  * [Conocimiento de la estrategia de la empresa](https://ayudaleyprotecciondatos.es/2020/10/30/plan-director-de-seguridad/#Conocimiento_de_la_estrategia_de_la_empresa "Conocimiento de la estrategia de la empresa")
+  * [Definir los proyectos e iniciativas](https://ayudaleyprotecciondatos.es/2020/10/30/plan-director-de-seguridad/#Definir_los_proyectos_e_iniciativas "Definir los proyectos e iniciativas")
+  * [Clasificar y priorizar los proyectos a realizar](https://ayudaleyprotecciondatos.es/2020/10/30/plan-director-de-seguridad/#Clasificar_y_priorizar_los_proyectos_a_realizar "Clasificar y priorizar los proyectos a realizar")
+  * [Aprobación](https://ayudaleyprotecciondatos.es/2020/10/30/plan-director-de-seguridad/#Aprobacion "Aprobación")
+  * [Puesta en marcha del plan](https://ayudaleyprotecciondatos.es/2020/10/30/plan-director-de-seguridad/#Puesta_en_marcha_del_plan "Puesta en marcha del plan")
 * [Ejemplos](https://ayudaleyprotecciondatos.es/2020/10/30/plan-director-de-seguridad/#Ejemplos "Ejemplos")

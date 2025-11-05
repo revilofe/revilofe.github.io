@@ -6149,8 +6149,8 @@ Si las respuestas son dudosas, es el momento de diseñar un Plan Director de Seg
 <p>Un PDS es un documento que establece un conjunto estructurado de políticas, objetivos, controles y procedimientos de seguridad que una organización debe implementar para proteger sus activos digitales y físicos. Este plan se basa en una evaluación de la situación actual de seguridad, la identificación de riesgos y el establecimiento de medidas concretas para mitigar dichos riesgos de acuerdo con la estrategia de negocio.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-</div>
 <p>EL PDS consiste en definir y priorizar un conjunto de proyectos de seguridad de la información con el fin de reducir los riesgos a niveles aceptables.</p>
+</div>
 <p>El PDS permite a la organización:</p>
 <ul>
 <li>Definir y priorizar objetivos de seguridad alineados con su misión y visión.</li>
@@ -6230,9 +6230,9 @@ documentados para saber quién toma decisiones y quién valida los controles.</p
 <p>Realizar una valoración preliminar consiste en evaluar el estado actual de la seguridad en la organización, identificando qué controles de seguridad ya están implementados, cómo se aplican y cuáles son necesarios según la normativa y las buenas prácticas.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-</div>
 <p><strong>Controles</strong>: Medidas de todo tipo (técnico, legal u organizativo) que se implementan para contrarrestar los riesgos de seguridad.</p>
-<p>Para realizar este trabajo podemos apoyarnos en la norma <abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr>/IEC 27002:2017 para seleccionar controles relevantes.  No se trata de aplicar toda la norma sino de elegir los apartados que <strong>realmente afecten al alcance</strong>. Por ejemplo:</p>
+</div>
+<p>Para realizar este trabajo podemos apoyarnos en la norma <abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr>/IEC 27002:2017 para seleccionar controles relevantes.  No se trata de aplicar toda la norma, sino de elegir los apartados que <strong>realmente afecten al alcance</strong>. Por ejemplo:</p>
 <ul>
 <li>Si nuestra empresa no desarrolla aplicaciones, no tendremos que valorar aquellos controles de esta norma que hagan referencia al desarrollo seguro de aplicaciones.</li>
 <li>Si nuestra empresa no proporciona un servicio de comercio electrónico, no será necesario que apliquemos los controles relacionados con la transacción de datos personales en la compra-venta online.</li>
@@ -6241,27 +6241,17 @@ documentados para saber quién toma decisiones y quién valida los controles.</p
 <p><strong>Ejemplo</strong>: Supongamos que una empresa ya cuenta con <abbr title="Programa informático que se utiliza para detectar y eliminar virus y otros programas maliciosos de un sistema. Los antivirus suelen utilizar bases de datos de firmas para identificar y eliminar el malware.">antivirus</abbr> y cortafuegos, pero no tiene una política de contraseñas seguras o un sistema de control de accesos. La valoración inicial revelará estas deficiencias, indicando áreas donde se requieren mejoras. Como parte de esta valoración, se podría usar la <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr>, que ofrece un marco de controles de seguridad para diferentes aspectos, desde el control de acceso hasta la protección de datos.</p>
 <p>El resultado se refleja en un “Documento de Selección de Controles” o <em>Declaración de
 Aplicabilidad (SoA)</em>, donde se indica si cada control está implantado, en curso o pendiente.</p>
-<p>Para medir el grado de implantación se recomienda usar un modelo de madurez inspirado
-en CMM, en el se parte de una escala de seis niveles:</p>
-<ul>
-<li>Nivel 0 – Inexistente: no hay evidencia del control (ej. no se hacen copias de seguridad).</li>
-<li>Nivel 1 – Inicial: se realiza ocasionalmente sin procedimientos ni responsables claros (ej. copias de seguridad manuales sin proceimiento, planificación).</li>
-<li>Nivel 2 – Repetible: se sigue un método informal dependiente de la experiencia personal (ej. copias de seguridad regulares pero sin verificación ni pruebas de restauración).</li>
-<li>Nivel 3 – Definido: el control está documentado, aunque no siempre aprobado formalmente (ej. procedimiento documentado de copias de seguridad con roles definidos, pero no ha sido aprobado por la dirección).</li>
-<li>Nivel 4 – Administrado: hay procedimientos aprobados y seguimiento regular.</li>
-<li>Nivel 5 – Optimizado: el control se mide con indicadores y se mejora continuamente.</li>
-</ul>
-<figure>
-<p><img alt="" src="../assets/IS-U121-PlanDirectorDeSeguridad11.png" />
-  </p>
-<figcaption>Niveles de madurez</figcaption>
-</figure>
 <p><strong>Objetivo</strong>: Esta valoración inicial proporciona una visión general del estado actual de la seguridad y ayuda a determinar qué controles adicionales son necesarios.</p>
 <h6 id="4131-isoiec-27002">4.1.3.1 <abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr>/IEC 27002<a class="headerlink" href="#4131-isoiec-27002" title="Permanent link">&para;</a></h6>
-<p>La <abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr>/IEC 27002 es un estándar internacional que proporciona directrices sobre controles específicos para la gestión de la seguridad de la información. Forma parte de la familia de normas <abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr>/IEC 27000, la cual está diseñada para ayudar a las organizaciones a establecer, implementar, mantener y mejorar un Sistema de Gestión de Seguridad de la Información (SGSI). A continuación, se detalla en qué consiste, su utilidad y cómo puede emplearse en el desarrollo de un Plan Director de Seguridad (PDS).</p>
+<p>La <abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr>/IEC 27002 es un estándar internacional que proporciona directrices sobre controles específicos para la gestión de la seguridad de la información. Forma parte de la familia de normas <abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr>/IEC 27000, la cual está diseñada para ayudar a las organizaciones a establecer, implementar, mantener y mejorar un Sistema de Gestión de Seguridad de la Información (<abbr title="Sistema de Gestión de Seguridad de la Información, un marco de políticas y procedimientos para proteger la confidencialidad, integridad y disponibilidad de la información en una organización. Este sistema ayuda a las empresas a gestionar y mitigar los riesgos de seguridad a través de un enfoque sistemático que incluye la evaluación de riesgos, la implementación de controles de seguridad y la auditoría continua.">SGSI</abbr>). A continuación, se detalla en qué consiste, su utilidad y cómo puede emplearse en el desarrollo de un Plan Director de Seguridad (PDS).</p>
+<figure>
+<p><img alt="" src="../assets/IS-U121-PlanDirectorDeSeguridad9.png" />
+  </p>
+<figcaption>iso 27002</figcaption>
+</figure>
 <p><strong>¿Qué es la <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr>?</strong></p>
-<p>La <abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr>/IEC 27002 es una guía de mejores prácticas que detalla controles específicos de seguridad de la información y cómo deben ser aplicados para proteger la confidencialidad, integridad y disponibilidad de la información. No es una norma de certificación (a diferencia de la <abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr>/IEC 27001, que establece los requisitos para un SGSI), sino una norma de referencia que define más de cien controles de seguridad clasificados en distintas categorías, tales como:</p>
-<ul>
+<p>La <abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr>/IEC 27002 es una guía de mejores prácticas que detalla controles específicos de seguridad de la información y cómo deben ser aplicados para proteger la confidencialidad, integridad y disponibilidad de la información. No es una norma de certificación (a diferencia de la <abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr>/IEC 27001, que establece los requisitos para un <abbr title="Sistema de Gestión de Seguridad de la Información, un marco de políticas y procedimientos para proteger la confidencialidad, integridad y disponibilidad de la información en una organización. Este sistema ayuda a las empresas a gestionar y mitigar los riesgos de seguridad a través de un enfoque sistemático que incluye la evaluación de riesgos, la implementación de controles de seguridad y la auditoría continua.">SGSI</abbr>), sino una norma de referencia que define más de cien controles de seguridad clasificados en 14 dominios, tales como:</p>
+<ol>
 <li>Políticas de seguridad de la información</li>
 <li>Organización de la seguridad de la información</li>
 <li>Seguridad de los recursos humanos</li>
@@ -6269,14 +6259,15 @@ en CMM, en el se parte de una escala de seis niveles:</p>
 <li>Control de accesos</li>
 <li>Criptografía</li>
 <li>Seguridad física y ambiental</li>
+<li>Seguridad de las operaciones</li>
 <li>Seguridad de las comunicaciones</li>
 <li>Adquisición, desarrollo y mantenimiento de sistemas de información</li>
 <li>Relación con proveedores</li>
 <li>Gestión de incidentes de seguridad de la información</li>
 <li>Continuidad del negocio</li>
 <li>Cumplimiento</li>
-</ul>
-<p>¿Para qué sirve la <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr>?</p>
+</ol>
+<p><strong>¿Para qué sirve la <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr>?</strong></p>
 <p>La <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr> es útil para que las organizaciones tengan una referencia práctica y detallada de los controles de seguridad necesarios para proteger sus activos de información. Sirve para:</p>
 <ol>
 <li>Desarrollar políticas y procedimientos de seguridad que sean completos y efectivos.</li>
@@ -6291,10 +6282,10 @@ en CMM, en el se parte de una escala de seis niveles:</p>
 <p>Situación Actual</p>
 </li>
 <li>
-<p>Valoración Inicial: Al analizar la situación actual de seguridad (1.1 c), la <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr> ofrece un marco de referencia para evaluar qué controles ya existen en la organización y cuáles faltan. Por ejemplo, se puede revisar si existen controles adecuados en gestión de accesos, protección de datos en tránsito y en reposo, o control de dispositivos móviles.</p>
+<p>Valoración Inicial: Al analizar la situación actual de seguridad, la <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr> ofrece un marco de referencia para evaluar qué controles ya existen en la organización y cuáles faltan. Por ejemplo, se puede revisar si existen controles adecuados en gestión de accesos, protección de datos en tránsito y en reposo, o control de dispositivos móviles.</p>
 </li>
 <li>
-<p>Análisis de Cumplimiento (1.1 d): La norma proporciona una lista de controles necesarios para cumplir con normativas de seguridad reconocidas. Durante el análisis de cumplimiento, se puede comparar cada control con las pautas de <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr> para asegurarse de que se alinean con las mejores prácticas.</p>
+<p>Análisis de Cumplimiento de normativa: La norma proporciona una lista de controles necesarios para cumplir con normativas de seguridad reconocidas. Durante el análisis de cumplimiento, se puede comparar cada control con las pautas de <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr> para asegurarse de que se alinean con las mejores prácticas.</p>
 </li>
 <li>
 <p>Comprensión de la Estrategia Empresarial</p>
@@ -6331,10 +6322,10 @@ en CMM, en el se parte de una escala de seis niveles:</p>
 </li>
 <li>Validación de Controles: La <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr> también puede usarse para validar que los controles implementados cumplen con los estándares esperados en términos de eficacia y formalización.</li>
 </ol>
-<p>Ejemplo de Uso Práctico de la <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr> en el PDS</p>
+<p><strong>Ejemplo de Uso Práctico de la <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr> en el PDS</strong></p>
 <p>Imaginemos que en el análisis inicial de seguridad se detecta que la organización no cuenta con una política de gestión de accesos. La <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr> especifica controles relacionados con la gestión de accesos que incluyen:</p>
 <ul>
-<li>Establecimiento de una política de control de acceso (por ejemplo, restringir accesos según el rol del usuario).</li>
+<li>Establecimiento de una política de control de acceso (por ejemplo, restringir accesos según el rol del usuario, según horarios).</li>
 <li>Asignación de permisos de acceso mínimos necesarios para cada usuario.</li>
 <li>Implementación de autenticación multifactor para accesos remotos.</li>
 </ul>
@@ -6344,9 +6335,7 @@ en CMM, en el se parte de una escala de seis niveles:</p>
 <li>Implementar autenticación multifactor (<abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr>) como se recomienda en la norma.</li>
 <li>Establecer revisiones periódicas de permisos para asegurar que los accesos estén actualizados y alineados con las funciones actuales de cada empleado.</li>
 </ol>
-<p>Conclusión</p>
-<p>La <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr> es una herramienta esencial en el desarrollo de un Plan Director de Seguridad, ya que proporciona una guía práctica sobre cómo aplicar controles de seguridad a nivel organizativo y técnico. Su uso en cada fase del PDS garantiza que el plan esté basado en mejores prácticas internacionales, mejorando así la efectividad y consistencia de las medidas de seguridad implementadas. Además, al seguir esta norma, la organización se asegura de estar mejor preparada para cumplir con normativas y enfrentar los desafíos de seguridad de manera estructurada y profesional.</p>
-<p>—</p>
+<p><strong>Ejemplo de Uso Práctico de la <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr> en el PDS</strong></p>
 <p>Vamos a ver un ejemplo práctico de cómo una empresa de venta online podría utilizar la <abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr>/IEC 27002:2013 para estructurar y mejorar su seguridad en varios aspectos clave.</p>
 <p>Supongamos que esta empresa de venta online, eCommerce Plus, quiere mejorar su seguridad para proteger los datos de sus clientes y cumplir con normativas de protección de datos. eCommerce Plus almacena datos sensibles de sus clientes, como direcciones, números de tarjeta de crédito (a través de un tercero), historiales de compra y preferencias de productos.</p>
 <p>Uso de la <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr>:2013 en eCommerce Plus</p>
@@ -6357,8 +6346,12 @@ en CMM, en el se parte de una escala de seis niveles:</p>
 <p>Objetivo: Asegurar que solo el personal autorizado pueda acceder a datos sensibles de clientes y sistemas críticos.</p>
 <ul>
 <li>Aplicación Práctica: eCommerce Plus establece una política de control de acceso basada en los principios de "necesidad de saber" y "mínimo privilegio". Esto significa que cada empleado solo tiene acceso a los datos y sistemas que necesita para su función.</li>
-<li>Controles Recomendados:</li>
-<li>Implementar autenticación multifactor (<abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr>) para acceder a sistemas críticos (por ejemplo, al sistema de gestión de inventarios y al backend de la tienda online).</li>
+<li>
+<p>Controles Recomendados:</p>
+</li>
+<li>
+<p>Implementar autenticación multifactor (<abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr>) para acceder a sistemas críticos (por ejemplo, al sistema de gestión de inventarios y al backend de la tienda online).</p>
+</li>
 <li>
 <p>Utilizar roles y permisos para segmentar el acceso a información en función del rol del empleado (por ejemplo, el equipo de atención al cliente tiene acceso a historiales de pedidos, pero no a la información de pago).</p>
 </li>
@@ -6368,11 +6361,19 @@ en CMM, en el se parte de una escala de seis niveles:</p>
 </ul>
 <p>Objetivo: Proteger la confidencialidad de los datos sensibles almacenados y transmitidos.</p>
 <ul>
-<li>Aplicación Práctica: eCommerce Plus implementa el cifrado en las áreas de mayor riesgo:</li>
-<li>Cifrado de la base de datos donde se almacenan los datos personales de los clientes.</li>
+<li>
+<p>Aplicación Práctica: eCommerce Plus implementa el cifrado en las áreas de mayor riesgo:</p>
+</li>
+<li>
+<p>Cifrado de la base de datos donde se almacenan los datos personales de los clientes.</p>
+</li>
 <li>Cifrado de las comunicaciones entre el cliente y el servidor mediante <abbr title="Protocolo de Transferencia de Hipertexto Seguro. Es una versión segura del protocolo HTTP que se utiliza para transferir información de forma cifrada entre un cliente y un servidor a través de una red. El HTTPS protege la privacidad y la integridad de los datos.">HTTPS</abbr>, asegurando que los datos personales y de pago estén protegidos durante la transmisión.</li>
-<li>Controles Recomendados:</li>
-<li>Utilizar un cifrado fuerte (por ejemplo, <abbr title="Estándar de Cifrado Avanzado (Advanced Encryption Standard). Es un algoritmo de cifrado simétrico que se utiliza para proteger la información confidencial. El AES es uno de los algoritmos de cifrado más seguros y ampliamente utilizados en la actualidad.">AES</abbr>-256) para proteger los datos almacenados.</li>
+<li>
+<p>Controles Recomendados:</p>
+</li>
+<li>
+<p>Utilizar un cifrado fuerte (por ejemplo, <abbr title="Estándar de Cifrado Avanzado (Advanced Encryption Standard). Es un algoritmo de cifrado simétrico que se utiliza para proteger la información confidencial. El AES es uno de los algoritmos de cifrado más seguros y ampliamente utilizados en la actualidad.">AES</abbr>-256) para proteger los datos almacenados.</p>
+</li>
 <li>
 <p>Garantizar que los certificados SSL/<abbr title="Seguridad de la Capa de Transporte. Es un sistema de seguridad que se utiliza para cifrar la comunicación entre un cliente y un servidor a través de una red. El TLS protege la privacidad y la integridad de los datos, autentica a los usuarios y protege contra los ataques de intermediarios.">TLS</abbr> estén actualizados y renovados regularmente.</p>
 </li>
@@ -6382,11 +6383,19 @@ en CMM, en el se parte de una escala de seis niveles:</p>
 </ul>
 <p>Objetivo: Proteger la información cuando se transmite a través de redes.</p>
 <ul>
-<li>Aplicación Práctica: eCommerce Plus usa conexiones seguras y establece políticas para asegurar que toda la comunicación que implique datos sensibles se realice a través de redes protegidas:</li>
-<li>Todas las interacciones con los clientes, incluyendo confirmaciones de pedidos y comunicaciones de soporte, están protegidas con <abbr title="Protocolo de Transferencia de Hipertexto Seguro. Es una versión segura del protocolo HTTP que se utiliza para transferir información de forma cifrada entre un cliente y un servidor a través de una red. El HTTPS protege la privacidad y la integridad de los datos.">HTTPS</abbr>.</li>
+<li>
+<p>Aplicación Práctica: eCommerce Plus usa conexiones seguras y establece políticas para asegurar que toda la comunicación que implique datos sensibles se realice a través de redes protegidas:</p>
+</li>
+<li>
+<p>Todas las interacciones con los clientes, incluyendo confirmaciones de pedidos y comunicaciones de soporte, están protegidas con <abbr title="Protocolo de Transferencia de Hipertexto Seguro. Es una versión segura del protocolo HTTP que se utiliza para transferir información de forma cifrada entre un cliente y un servidor a través de una red. El HTTPS protege la privacidad y la integridad de los datos.">HTTPS</abbr>.</p>
+</li>
 <li>Cualquier comunicación interna que contenga datos sensibles (por ejemplo, información de transacciones, pedidos o información de clientes) también se realiza a través de canales cifrados y seguros.</li>
-<li>Controles Recomendados:</li>
-<li>Configurar y mantener VPNs seguras para conexiones remotas de empleados.</li>
+<li>
+<p>Controles Recomendados:</p>
+</li>
+<li>
+<p>Configurar y mantener VPNs seguras para conexiones remotas de empleados.</p>
+</li>
 <li>
 <p>Implementar firewalls para proteger la red de posibles intrusiones.</p>
 </li>
@@ -6396,11 +6405,19 @@ en CMM, en el se parte de una escala de seis niveles:</p>
 </ul>
 <p>Objetivo: Asegurarse de que los incidentes de seguridad de la información se gestionen de manera oportuna y eficiente.</p>
 <ul>
-<li>Aplicación Práctica: eCommerce Plus implementa un protocolo de gestión de incidentes que incluye:</li>
-<li>Un procedimiento para detectar y responder a incidentes de seguridad, como intentos de acceso no autorizado o anomalías en los sistemas de pago.</li>
+<li>
+<p>Aplicación Práctica: eCommerce Plus implementa un protocolo de gestión de incidentes que incluye:</p>
+</li>
+<li>
+<p>Un procedimiento para detectar y responder a incidentes de seguridad, como intentos de acceso no autorizado o anomalías en los sistemas de pago.</p>
+</li>
 <li>Un sistema de alertas automáticas que notifica al equipo de seguridad cuando se detectan comportamientos sospechosos, como múltiples intentos fallidos de inicio de sesión.</li>
-<li>Controles Recomendados:</li>
-<li>Establecer un equipo de respuesta a incidentes con roles y responsabilidades definidos para cada tipo de incidente.</li>
+<li>
+<p>Controles Recomendados:</p>
+</li>
+<li>
+<p>Establecer un equipo de respuesta a incidentes con roles y responsabilidades definidos para cada tipo de incidente.</p>
+</li>
 <li>
 <p>Documentar y analizar cada incidente para aprender de ellos y mejorar la prevención.</p>
 </li>
@@ -6410,11 +6427,19 @@ en CMM, en el se parte de una escala de seis niveles:</p>
 </ul>
 <p>Objetivo: Asegurar que los terceros que procesan datos de la empresa cumplan con estándares de seguridad.</p>
 <ul>
-<li>Aplicación Práctica: eCommerce Plus trabaja con un proveedor de procesamiento de pagos que maneja los datos de tarjetas de crédito. La empresa se asegura de que este proveedor cumpla con el estándar PCI-DSS, que regula la seguridad de los datos de tarjetas de pago.</li>
-<li>eCommerce Plus establece un acuerdo de nivel de servicio (SLA) en el que el proveedor se compromete a cumplir con los requisitos de seguridad establecidos por la normativa.</li>
+<li>
+<p>Aplicación Práctica: eCommerce Plus trabaja con un proveedor de procesamiento de pagos que maneja los datos de tarjetas de crédito. La empresa se asegura de que este proveedor cumpla con el estándar PCI-DSS, que regula la seguridad de los datos de tarjetas de pago.</p>
+</li>
+<li>
+<p>eCommerce Plus establece un acuerdo de nivel de servicio (SLA) en el que el proveedor se compromete a cumplir con los requisitos de seguridad establecidos por la normativa.</p>
+</li>
 <li>Se realizan auditorías periódicas o se solicitan certificaciones actualizadas del proveedor para verificar su cumplimiento.</li>
-<li>Controles Recomendados:</li>
-<li>Definir claramente los requisitos de seguridad para los proveedores y los datos que pueden procesar.</li>
+<li>
+<p>Controles Recomendados:</p>
+</li>
+<li>
+<p>Definir claramente los requisitos de seguridad para los proveedores y los datos que pueden procesar.</p>
+</li>
 <li>
 <p>Mantener una lista actualizada de proveedores críticos y realizar evaluaciones periódicas de su cumplimiento.</p>
 </li>
@@ -6424,16 +6449,23 @@ en CMM, en el se parte de una escala de seis niveles:</p>
 </ul>
 <p>Objetivo: Asegurarse de que eCommerce Plus cumpla con las leyes y regulaciones, como el Reglamento General de Protección de Datos (<abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El RGPD garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">RGPD</abbr>).</p>
 <ul>
-<li>Aplicación Práctica: eCommerce Plus implementa una política de privacidad y establece procedimientos claros para manejar los datos personales de los clientes, cumpliendo con los requisitos del <abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El RGPD garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">RGPD</abbr>. Esto incluye:</li>
-<li>Obtener el consentimiento explícito de los clientes para almacenar y procesar sus datos.</li>
+<li>
+<p>Aplicación Práctica: eCommerce Plus implementa una política de privacidad y establece procedimientos claros para manejar los datos personales de los clientes, cumpliendo con los requisitos del <abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El RGPD garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">RGPD</abbr>. Esto incluye:</p>
+</li>
+<li>
+<p>Obtener el consentimiento explícito de los clientes para almacenar y procesar sus datos.</p>
+</li>
 <li>Ofrecer una opción para que los clientes soliciten la eliminación de sus datos de los sistemas de la empresa.</li>
 <li>Notificar a las autoridades y a los clientes en caso de una brecha de seguridad que comprometa los datos personales.</li>
-<li>Controles Recomendados:</li>
-<li>Mantener un registro de actividades de procesamiento de datos personales.</li>
+<li>
+<p>Controles Recomendados:</p>
+</li>
+<li>
+<p>Mantener un registro de actividades de procesamiento de datos personales.</p>
+</li>
 <li>Designar un Responsable de Protección de Datos (DPO) para asegurar el cumplimiento de las normativas de privacidad.</li>
 </ul>
-<p>Resumen del Uso de <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr> en eCommerce Plus</p>
-<p>La <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr>:2013 proporciona una guía integral para eCommerce Plus en la implementación de controles de seguridad, permitiéndole abordar las necesidades específicas de protección de datos y cumplimiento normativo. Al aplicar estos controles, eCommerce Plus logra una estructura de seguridad robusta que:</p>
+<p>Como conclusion final despuesd e este ejemplo podemos decir que la <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr>:2013 proporciona una guía integral para eCommerce Plus en la implementación de controles de seguridad, permitiéndole abordar las necesidades específicas de protección de datos y cumplimiento normativo. Al aplicar estos controles, eCommerce Plus logra una estructura de seguridad robusta que:</p>
 <ul>
 <li>Protege los datos sensibles de clientes y transacciones.</li>
 <li>Minimiza riesgos como el acceso no autorizado y las brechas de seguridad.</li>
@@ -6441,15 +6473,65 @@ en CMM, en el se parte de una escala de seis niveles:</p>
 <li>Establece políticas y procedimientos que fortalecen la confianza de los clientes.</li>
 </ul>
 <p>En cada una de las fases del PDS, la <abbr title="Norma internacional que proporciona directrices y recomendaciones para la gestión de la seguridad de la información. La ISO 27002 aborda aspectos como la política de seguridad, la gestión de activos, el control de acceso, la seguridad de la red, la gestión de incidentes, etc.">ISO 27002</abbr>:2013 permite que eCommerce Plus seleccione los controles necesarios para proteger su información y servicios en línea de acuerdo con mejores prácticas internacionales, mejorando así su resiliencia y reputación en el mercado online.</p>
-<p>**</p>
-<figure>
-<p><img alt="" src="../assets/IS-U121-PlanDirectorDeSeguridad9.png" />
-  </p>
-<figcaption>iso 27002</figcaption>
-</figure>
 <h5 id="414-analizar-el-cumplimiento">4.1.4. Analizar el cumplimiento<a class="headerlink" href="#414-analizar-el-cumplimiento" title="Permanent link">&para;</a></h5>
 <p>Una vez seleccionados los controles, se evalúa su implantación real y su valoración de madurez mediante una auditoría de cumplimiento.</p>
-<p>Esta actividad combina entrevistas, revisión documental y visitas a instalaciones:</p>
+<p>Para evaluar el nivel de madurez de los controles de seguridad en una organización, podemos utilizar un modelo estructurado en niveles de consecución que mide qué tan formalizados y eficaces son los controles. Este modelo de madurez se clasifica en seis niveles:</p>
+<p>Tabla de madurez (0–5) con porcentaje y un ejemplo aplicado al control <strong>“Copia de seguridad de la información” (<abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr>/IEC 27002)</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Nivel</th>
+<th style="text-align: center;">% cumplimiento</th>
+<th>Descripción de madurez</th>
+<th>Ejemplo (<abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr>/IEC 27002 – Copia de seguridad de la información)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0 – Inexistente</td>
+<td style="text-align: center;">0%</td>
+<td>El control no se ha implementado ni existe procedimiento o intención.</td>
+<td>No se realizan copias de seguridad ni hay política o responsable asignado.</td>
+</tr>
+<tr>
+<td style="text-align: right;">1 – Inicial</td>
+<td style="text-align: center;">20%</td>
+<td>El control existe de forma rudimentaria, sin gestión formal; depende de acciones individuales.</td>
+<td>Copias manuales y esporádicas hechas por usuarios; sin calendario, sin registro y sin responsable.</td>
+</tr>
+<tr>
+<td style="text-align: right;">2 – Repetible</td>
+<td style="text-align: center;">40%</td>
+<td>El control se aplica de forma informal y sin proceso documentado; se repite con cierta constancia.</td>
+<td>Copias programadas (p. ej., diarias) pero sin verificación automática ni pruebas de restauración; registros incompletos.</td>
+</tr>
+<tr>
+<td style="text-align: right;">3 – Definido</td>
+<td style="text-align: center;">60%</td>
+<td>Proceso documentado y aplicado según procedimiento; aún sin aprobación oficial.</td>
+<td>Procedimiento escrito con roles, calendarios y retenciones definidas; evidencias de ejecución; falta aprobación formal de dirección/seguridad.</td>
+</tr>
+<tr>
+<td style="text-align: right;">4 – Administrado</td>
+<td style="text-align: center;">80%</td>
+<td>Proceso documentado,<strong>aprobado</strong> y supervisado regularmente por responsables.</td>
+<td>Política y procedimiento aprobados; verificación automática de copias; restauraciones de prueba periódicas (p. ej., trimestrales) y reporting.</td>
+</tr>
+<tr>
+<td style="text-align: right;">5 – Optimizado</td>
+<td style="text-align: center;">100%</td>
+<td>Eficacia medida con indicadores y mejora continua; el control se revisa y optimiza.</td>
+<td>KPIs (tasa de éxito, <abbr title="Tiempo Medio para responder. Es el tiempo medio que tarda una organización en responder a un incidente de seguridad en sus sistemas o redes. El MTTR es un indicador clave de rendimiento que ayuda a las organizaciones a evaluar su capacidad para responder a las amenazas de seguridad.">MTTR</abbr> de restauración), RTO/RPO definidos y revisados; automatización (copias inmutables/3-2-1), simulacros de DR con lecciones aprendidas y plan de mejora continua.</td>
+</tr>
+</tbody>
+</table>
+<p>Cada uno de estos niveles representa un grado de desarrollo y formalización del control en cuestión, desde la falta completa de implementación hasta su total optimización, con revisiones y mejoras continuas.</p>
+<figure>
+<p><img alt="" src="../assets/IS-U121-PlanDirectorDeSeguridad11.png" />
+  </p>
+<figcaption>Niveles de madurez</figcaption>
+</figure>
+<p>Esta actividad combina la realización de entrevistas, revisión documental y visitas a instalaciones, etc:</p>
 <ol>
 <li>Preparad cuestionarios y checklists basados en los controles seleccionados.</li>
 <li>Reuníos con responsables de todas las áreas implicadas (TI, RR. HH., Jurídico, Administración,
@@ -6459,29 +6541,44 @@ en CMM, en el se parte de una escala de seis niveles:</p>
 <li>Analizar resultados y asignad puntuaciones de 0 a 5 en cada control para poder representar los resultados en gráficos radar.</li>
 <li>Solicitad a la dirección un comunicado que refuerce la importancia del proyecto para asegurar la colaboración.</li>
 </ol>
+<p><strong>Ejemplo</strong>: Supongamos que el departamento de TI tiene políticas para la protección de datos y el control de acceso, pero al revisarlas descubrimos que el departamento de ventas no está cumpliendo con estas políticas al dejar sesiones de usuario abiertas o al compartir contraseñas. Esta actividad ayuda a identificar áreas donde los procedimientos de seguridad no se cumplen y a educar a los departamentos para mejorar su adherencia.</p>
+<p>**Ejemplo*: Modelo de Madurez para el Control de "Gestión de Contraseñas"</p>
+<p>Supongamos que queremos evaluar el nivel de madurez en la Gestión de Contraseñas de una organización, un control de seguridad que incluye políticas de uso de contraseñas seguras, cambios periódicos de las mismas y su complejidad mínima.
+Ejemplo de Evaluación de Madurez:</p>
+<ol>
+<li>Inexistente (0%): La organización no tiene ninguna política o control respecto al uso de contraseñas. Los empleados utilizan contraseñas simples o fácilmente adivinables y pueden no cambiarlas nunca. No existe un control para verificar el tipo o la calidad de las contraseñas.</li>
+<li>Inicial (20%): Hay una recomendación no formal para utilizar contraseñas "fuertes", pero no se realiza seguimiento ni control sobre el cumplimiento. Depende completamente de que los empleados elijan contraseñas adecuadas sin un proceso obligatorio o pautas definidas.</li>
+<li>Repetible (40%): Existen instrucciones informales para usar contraseñas complejas y cambiarlas cada cierto tiempo, aunque no están documentadas ni son obligatorias. Los empleados pueden recibir indicaciones orales o por correo, pero no existe un proceso centralizado para garantizar el cumplimiento.</li>
+<li>Definido (60%): La organización tiene una política documentada que describe la longitud mínima, complejidad y frecuencia de cambio de contraseñas. Sin embargo, la política aún no ha sido aprobada oficialmente por la dirección, y su aplicación no se monitorea de manera continua.</li>
+<li>Administrado (80%): La política de contraseñas está documentada, aprobada y es formalmente parte de las políticas de la organización. Los sistemas de TI están configurados para requerir contraseñas complejas y solicitar su cambio cada tres meses. Existe una revisión periódica del cumplimiento, y los responsables de TI pueden hacer seguimiento para asegurarse de que los empleados cumplan con las pautas.</li>
+<li>Optimizado (100%): La política de contraseñas no solo es obligatoria y está implementada en todos los sistemas de la organización, sino que se realizan auditorías periódicas para medir su cumplimiento y efectividad. Se aplican indicadores de rendimiento (KPI) para evaluar su eficacia, y el control se revisa y ajusta regularmente para adaptarse a amenazas emergentes, como el aumento de ataques de fuerza bruta o de phishing. La organización cuenta también con autenticación multifactor (<abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr>) para mejorar aún más la seguridad en el acceso.``</li>
+</ol>
+<p><strong>Objetivo</strong>: El análisis de cumplimiento asegura que los controles de seguridad sean realmente aplicados en todos los departamentos y permite ajustar la capacitación o los procesos donde sea necesario.</p>
 <h5 id="415-establecer-objetivos-de-mejora">4.1.5. Establecer objetivos de mejora<a class="headerlink" href="#415-establecer-objetivos-de-mejora" title="Permanent link">&para;</a></h5>
-<p>Con los resultados del análisis de madurez se definen objetivos realistas de mejora. La
-guía propone agrupar los controles en dominios temáticos (políticas, organización, RR. HH.,
-seguridad física, comunicaciones, operaciones, control de acceso, adquisición de sistemas,
-desarrollo, gestión de incidentes, continuidad, cumplimiento legal) y representar los
-resultados en un gráfico radar.</p>
-<p>Entonces, se fijan objetivos realistas. Es útil dibujar un gráfico con tres curvas:</p>
+<p>Con los resultados del análisis de madurez se definen objetivos realistas de mejora. Agruparemos los controles en dominios temáticos (políticas, organización, RR. HH., seguridad física, comunicaciones, operaciones, control de acceso, adquisición de sistemas, desarrollo, gestión de incidentes, continuidad, cumplimiento legal) y representar los resultados en un gráfico radar. Se puede tener presente el cumplimiento de otras normativas como el <abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El RGPD garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">RGPD</abbr>, ENS, PCI-DSS o <abbr title="Norma internacional que establece los requisitos para un sistema de gestión de la seguridad de la información. La ISO 27001 proporciona un marco de trabajo para identificar, evaluar y gestionar los riesgos de seguridad de la información, con el objetivo de proteger los activos de una organización.">ISO 27001</abbr>, a la hora de definir los objetivos.</p>
+<p>Entonces, partiendo de los datos que ya teniamos, se fijan objetivos realistas. Es útil dibujar un gráfico con tres curvas según los dominios:</p>
 <ul>
 <li>Línea roja: grado de cumplimiento actual.</li>
 <li>Línea amarilla: objetivo de cumplimiento a medio plazo (por ejemplo, 12 meses).</li>
 <li>Línea verde: nivel óptimo de cumplimiento a largo plazo.</li>
 </ul>
-<p>Así se visualiza qué dominios requieren más esfuerzo: seguridad física, control de acceso,
-gestión de incidentes, copias de seguridad, criptografía, etc.</p>
+<p>Así se visualiza qué dominios requieren más esfuerzo: seguridad física, control de acceso, gestión de incidentes, copias de seguridad, criptografía, etc.</p>
 <figure>
 <p><img alt="" src="../assets/IS-U121-PlanDirectorDeSeguridad14.png" />
   </p>
 <figcaption>Objetivos de mejora</figcaption>
 </figure>
+<p><strong>Ejemplo</strong>: Si el análisis revela que la seguridad física y la gestión de incidentes tienen puntuaciones bajas (por ejemplo, 2 y 1 respectivamente), podemos establecer objetivos específicos para mejorar estos dominios en los próximos 12 meses, como implementar controles de acceso físico más estrictos y desarrollar un plan de respuesta a incidentes.</p>
+<p><strong>Ejemplo</strong>: Una empresa de servicios financieros puede establecer como objetivo "garantizar la seguridad y confidencialidad de los datos de los clientes y cumplir con la normativa <abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El RGPD garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">RGPD</abbr>." Este objetivo puede incluir la mejora de políticas de protección de datos, la implementación de controles de acceso y la capacitación en ciberseguridad para el personal.</p>
+<p><strong>Objetivo</strong>: Establecer objetivos de ciberseguridad claros permite enfocar el esfuerzo en las áreas que necesitan más atención y asegura que el PDS esté alineado con las metas y los valores de la empresa.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Las mejoras en controles para salvar la distancia entre estado actual y objetivo se transformarán en proyectos tecnologicos dentro del PDS.</p>
+</div>
 <h4 id="42-analisis-tecnico-de-seguridad">4.2. Análisis técnico de seguridad<a class="headerlink" href="#42-analisis-tecnico-de-seguridad" title="Permanent link">&para;</a></h4>
-<p>Las tareas anteriores se centran en aspectos organizativos y de gestión, y son esenciales
-para entender el contexto. Sin embargo, es necesario complementar esa visión con un
-análisis técnico que identifique vulnerabilidades en sistemas, redes y aplicaciones.</p>
+<p>Las tareas anteriores se centran en aspectos <strong>organizativos y de gestión</strong>, y son esenciales
+para entender el contexto. Sin embargo, es necesario <strong>complementar esa visión con un
+análisis técnico</strong> que identifique vulnerabilidades en sistemas, redes y aplicaciones.</p>
 <p>Por tanto, paralelamente a las tareas anteriores se deben realizar auditorías técnicas:</p>
 <ul>
 <li>Verificar la segmentación de la red y la correcta ubicación de los sistemas expuestos a Internet.</li>
@@ -6498,9 +6595,14 @@ de pruebas a realizar y el método de trabajo que se utilizará.</p>
 de vista de un atacante externo y la posible amenaza interna. Todos los hallazgos deben
 documentarse con su evidencia y se clasifican según criticidad para integrarlos más tarde
 en el catálogo de iniciativas.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Las brechas encontradas aqui se trasnformarán en proyectos tecnologicos dentro del PDS.</p>
+</div>
+<p><strong>Ejemplo</strong>: Una auditoría técnica puede revelar que un servidor web expuesto a Internet tiene una versión desactualizada de su software, lo que lo hace vulnerable a ataques conocidos. Esta vulnerabilidad debe ser corregida como parte del PDS.</p>
+<p><strong>Objetivo</strong>: El análisis técnico identifica vulnerabilidades específicas que pueden ser explotadas por atacantes, proporcionando una base sólida para definir medidas correctivas en el PDS. </p>
 <h4 id="43-analisis-de-riesgos-en-el-contexto-del-pds">4.3. Análisis de riesgos en el contexto del PDS<a class="headerlink" href="#43-analisis-de-riesgos-en-el-contexto-del-pds" title="Permanent link">&para;</a></h4>
-<p>El análisis de riesgos es el puente entre la situación actual y las acciones futuras. <abbr title="Instituto Nacional de Ciberseguridad de España. Es un organismo de ciberseguridad que se encarga de proteger la información y los sistemas críticos de España. El INCIBE puede colaborar con otros organismos de ciberseguridad, como el CCN-CERT, el CNPIC, el CNP, etc.">INCIBE</abbr>
-lo describe en varias etapas que conectan con el proceso visto anteriormente.</p>
+<p>El análisis de riesgos es el puente entre la situación actual y las acciones futuras. Este análisis se concibe como varias etapas que conectan con el proceso visto anteriormente.</p>
 <figure>
 <p><img alt="" src="../assets/IS-U121-PlanDirectorDeSeguridad17.png" />
   </p>
@@ -6537,12 +6639,14 @@ aceptable:</p>
 </ul>
 <p>Es fundamental documentar quién adopta cada decisión y con qué argumentos, porque esa
 información se revisará en las fases posteriores.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Los riesgos que se decida mitigar se transformarán en proyectos tecnologicos dentro del PDS.</p>
+</div>
 <h3 id="5-fase-2-conocer-la-estrategia-de-la-organizacion">5. Fase 2. Conocer la estrategia de la organización<a class="headerlink" href="#5-fase-2-conocer-la-estrategia-de-la-organizacion" title="Permanent link">&para;</a></h3>
-<figure>
-<p><img alt="" src="../assets/IS-U121-PlanDirectorDeSeguridad28.png" />
-  </p>
-<figcaption>Fase 2</figcaption>
-</figure>
+<p><img alt="" src="../assets/IS-U121-PlanDirectorDeSeguridad28.png" /></p>
+<p>Entender la Estrategia Empresarial es un paso clave en el desarrollo de un Plan Director de Seguridad (PDS). El propósito de esta fase es asegurarse de que la estrategia de seguridad esté completamente alineada con los objetivos y planes generales de la organización. Dado que los objetivos empresariales pueden impactar significativamente en la seguridad, adaptar el PDS a estos objetivos permite que la seguridad se convierta en un facilitador del negocio y no en una barrera.
+La comprensión de la estrategia empresarial ayuda a que las decisiones en materia de seguridad sean coherentes con los intereses de la organización, permitiendo una integración natural y efectiva de las medidas de protección. </p>
 <p>El PDS solo tendrá sentido si está alineado con la dirección estratégica. En esta fase:</p>
 <ul>
 <li>Se revisan planes corporativos: expansión geográfica, fusiones, nuevas líneas de negocio,
@@ -6553,23 +6657,21 @@ información se revisará en las fases posteriores.</p>
 <li>Se organiza una reunión con los responsables de los departamentos implicados y con la dirección
   para validar los supuestos y obtener una visión global.</li>
 </ul>
-<p>Este análisis permite <strong>anticipar inversiones y evitar proyectos</strong> que quedarán obsoletos en poco tiempo.</p>
 <p>Una buena práctica será analizar la estrategica de la organización con los responsables de los departamentos implicados y con la dirección, para hacer partícipes a todas las áreas y obtener una visión objetiva y global de la organización.</p>
+<p>Este análisis permite <strong>anticipar inversiones y evitar proyectos</strong> que quedarán obsoletos en poco tiempo. Nos permitirá priorizar iniciativas que apoyen la estrategia y descartar aquellas que no aporten valor.</p>
+<p><strong>Ejemplo</strong>: Si una empresa planea expandirse a nuevos mercados internacionales, el PDS debe considerar los requisitos de seguridad y cumplimiento específicos de esos mercados, como regulaciones de protección de datos o normativas sectoriales, asi como proteger aquellos activos críticos que soportarán la expansión.</p>
+<p><strong>Objetivo</strong>: Garantizar que el PDS esté alineado con la estrategia empresarial y los planes futuros, asegurando su relevancia y efectividad a largo plazo.</p>
 <h3 id="6-fase-3-definir-proyectos-e-iniciativas">6. Fase 3. Definir proyectos e iniciativas<a class="headerlink" href="#6-fase-3-definir-proyectos-e-iniciativas" title="Permanent link">&para;</a></h3>
-<figure>
-<p><img alt="" src="../assets/IS-U121-PlanDirectorDeSeguridad29.png" />
-  </p>
-<figcaption>Fase 3</figcaption>
-</figure>
-<p>Con la información recopilada se definen las acciones necesarias para alcanzar los objetivos
-de seguridad. <abbr title="Instituto Nacional de Ciberseguridad de España. Es un organismo de ciberseguridad que se encarga de proteger la información y los sistemas críticos de España. El INCIBE puede colaborar con otros organismos de ciberseguridad, como el CCN-CERT, el CNPIC, el CNP, etc.">INCIBE</abbr> sugiere agruparlas en tres bloques:</p>
+<p><img alt="" src="../assets/IS-U121-PlanDirectorDeSeguridad29.png" /></p>
+<p>La Definición de Proyectos e Iniciativas es una fase crítica en el desarrollo de un Plan Director de Seguridad (PDS) porque convierte los análisis previos en acciones concretas. En esta etapa, las áreas de mejora, los riesgos identificados y las necesidades de seguridad de la organización se transforman en proyectos y actividades específicos. Estos proyectos tienen como objetivo mejorar la postura de seguridad de la organización y abordar las brechas y vulnerabilidades detectadas.
+Es importante que los proyectos estén bien definidos, con objetivos claros y que cuenten con una planificación adecuada de recursos y tiempos. A continuación, revisamos los pasos clave de esta fase con ejemplos prácticos.</p>
+<p>Con la información recopilada se definen las acciones necesarias para alcanzar los objetivos de seguridad. Es conveniente agruparlas en tres bloques:</p>
 <ol>
 <li>Iniciativas para mejorar <strong>métodos de trabajo y cumplimiento normativo</strong>.</li>
 <li>Iniciativas <strong>técnicas y físicas que corrigen deficiencias</strong> detectadas en auditorías.</li>
 <li>Iniciativas orientadas a <strong>tratar riesgos que superan el nivel aceptable</strong>.</li>
 </ol>
-<p>Cada iniciativa debe describirse con los siguientes elementos: objetivo, alcance, responsables,
-recursos internos/externos, coste estimado, duración y dependencias.</p>
+<p>Cada iniciativa debe describirse con los siguientes elementos: objetivo, alcance, responsables, recursos internos/externos, coste estimado, duración y dependencias.</p>
 <p>Ejemplo de formato:</p>
 <table>
 <thead>
@@ -6621,7 +6723,7 @@ recursos internos/externos, coste estimado, duración y dependencias.</p>
 </tr>
 </tbody>
 </table>
-<p>Ejemplos de proyectos definidos en esta fase se muestran a continuación:</p>
+<p><strong>Ejemplo</strong> de proyectos definidos en esta fase se muestran a continuación:</p>
 <h4 id="61-iniciativas-tipo">6.1. Iniciativas tipo<a class="headerlink" href="#61-iniciativas-tipo" title="Permanent link">&para;</a></h4>
 <p>A modo de ejemplo, la guía propone un catálogo inicial con diez proyectos comunes en muchas organizaciones:</p>
 <table>
@@ -6686,12 +6788,10 @@ recursos internos/externos, coste estimado, duración y dependencias.</p>
 </tbody>
 </table>
 <p>Estos proyectos son orientativos; cada organización los adaptará a sus necesidades y recursos.</p>
+<p><strong>Objetivo</strong>: Definir un catálogo claro y detallado de proyectos que aborden las áreas de mejora identificadas, tanto a nivel normativo, organizativo y metodos de trabajo, como técnico y de gestión de riesgos. Facilitando su posterior priorización y ejecución.</p>
 <h3 id="7-fase-4-clasificar-y-priorizar-los-proyectos">7. Fase 4. Clasificar y priorizar los proyectos<a class="headerlink" href="#7-fase-4-clasificar-y-priorizar-los-proyectos" title="Permanent link">&para;</a></h3>
-<figure>
-<p><img alt="" src="../assets/IS-U121-PlanDirectorDeSeguridad36.png" />
-  </p>
-<figcaption>Fase 4</figcaption>
-</figure>
+<p><img alt="" src="../assets/IS-U121-PlanDirectorDeSeguridad36.png" /></p>
+<p>La Clasificación y Priorización de Proyectos es una fase fundamental en el Plan Director de Seguridad (PDS) ya que, en ella, se organiza el orden de implementación de los proyectos de seguridad de acuerdo con su importancia, impacto, urgencia y costo. Dado que las organizaciones suelen tener recursos limitados, esta priorización es clave para que los proyectos más críticos se aborden primero, logrando mejoras en la postura de seguridad de manera eficiente y estratégica.</p>
 <p>Una vez definido el catálogo de iniciativas, es necesario priorizarlo. Algunas recomendaciones:</p>
 <ul>
 <li><strong>Agrupar proyectos</strong> por origen (cumplimiento, auditoría técnica, riesgos) o por tipo (organizativo,
@@ -6702,14 +6802,125 @@ recursos internos/externos, coste estimado, duración y dependencias.</p>
   de equipos).</li>
 <li><strong>Ajustar la carga de trabajo</strong> al tamaño del equipo disponible para evitar la saturación.</li>
 </ul>
+<p><strong>Ejemplo</strong>: Supongamos que una organización tiene los siguientes proyectos en su catálogo:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Proyecto</th>
+<th>Esfuerzo (1-5)</th>
+<th>Impacto (1-5)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>Política de seguridad</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>02</td>
+<td>Plan de concienciación</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr>
+<td>03</td>
+<td>Gestión de incidentes</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>04</td>
+<td>Adecuación al <abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El RGPD garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">RGPD</abbr></td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>05</td>
+<td>Seguridad en la red corporativa</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>06</td>
+<td>Plan de continuidad TIC</td>
+<td>5</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>Al aplicar la matriz esfuerzo/impacto, los proyectos se pueden clasificar de la siguiente manera:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Proyecto</th>
+<th>Esfuerzo (1-5)</th>
+<th>Impacto (1-5)</th>
+<th>Prioridad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>Política de seguridad</td>
+<td>2</td>
+<td>4</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>02</td>
+<td>Plan de concienciación</td>
+<td>3</td>
+<td>5</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>03</td>
+<td>Gestión de incidentes</td>
+<td>4</td>
+<td>3</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>04</td>
+<td>Adecuación al <abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El RGPD garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">RGPD</abbr></td>
+<td>5</td>
+<td>5</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>05</td>
+<td>Seguridad en la red corporativa</td>
+<td>4</td>
+<td>4</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>06</td>
+<td>Plan de continuidad TIC</td>
+<td>5</td>
+<td>4</td>
+<td>Media</td>
+</tr>
+</tbody>
+</table>
+<p>Con esta clasificación, la organización puede decidir abordar primero los proyectos de alta prioridad (Política de seguridad, Plan de concienciación y Adecuación al <abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El RGPD garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">RGPD</abbr>) antes de pasar a los proyectos de prioridad media.</p>
+<p><strong>Objetivo</strong>: Crear un plan de acción realista y efectivo que maximice el impacto de las inversiones en seguridad, asegurando que los recursos se utilicen de manera óptima para proteger los activos críticos de la organización.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Una forma común de agrupar los controles de seguridad es por categorías temáticas. Una de las referencias más utilizadas para la clasificación “canónica” de controles es la de <abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr>/IEC 27001:2022 (Anexo A), que agrupa todo en cuatro temas:  <br />
+* <strong>Organizacionales</strong> (gobierno, riesgos, cumplimiento legal/contractual, terceros, continuidad, etc.)
+* <strong>Personas</strong> (RR. HH., formación y concienciación, alta/baja de personal, funciones y responsabilidades)
+* <strong>Físicos</strong> (accesos a instalaciones, zonas seguras, CCTV, protección ambiental/energética)
+* <strong>Tecnológicos</strong> (<abbr title="Gestión de Identidad y Acceso. Es un sistema de seguridad que se utiliza para gestionar y controlar el acceso de los usuarios a los recursos de una organización. El IAM puede autenticar a los usuarios, autorizar sus acciones, auditar sus actividades, etc.">IAM</abbr>, hardening, redes, <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr>/antimalware, cifrado, registros, backups, <abbr title="Integración de prácticas de seguridad en el ciclo de vida del desarrollo de software y las operaciones de TI. DevSecOps busca incorporar la seguridad desde el inicio del desarrollo, automatizando pruebas de seguridad y promoviendo una cultura de colaboración entre desarrolladores, operadores y equipos de seguridad.">DevSecOps</abbr>)</p>
+</div>
 <h3 id="8-fase-5-aprobar-el-plan-director-de-seguridad">8. Fase 5. Aprobar el Plan Director de Seguridad<a class="headerlink" href="#8-fase-5-aprobar-el-plan-director-de-seguridad" title="Permanent link">&para;</a></h3>
-<p>La aprobación del PDS por parte de la dirección es crucial para asegurar recursos, legitimidad y compromiso. La aprobación formaliza el plan y permite iniciar su ejecución.</p>
-<figure>
-<p><img alt="" src="../assets/IS-U121-PlanDirectorDeSeguridad37.png" />
-  </p>
-<figcaption>Fase 5</figcaption>
-</figure>
-<p>Con el catálogo priorizado se prepara un dossier ejecutivo para la dirección. Debe incluir:</p>
+<p><img alt="" src="../assets/IS-U121-PlanDirectorDeSeguridad37.png" /></p>
+<p>La Aprobación del Plan Director de Seguridad (PDS) es clave para que el PDS esté bien visto y se lleve a cabo finalmente, ya que formaliza y valida todo el trabajo realizado en las fases previas. La aprobación implica que la alta dirección de la organización revisa y acepta el plan, comprometiéndose a asignar los recursos necesarios y a apoyar la implementación de los proyectos e iniciativas de seguridad. Esta validación es fundamental para garantizar que el PDS no solo exista en papel, sino que se ejecute de manera efectiva y alineada con los objetivos estratégicos de la organización.</p>
+<p>Con el catálogo de proyectos ya priorizados, se prepara un dossier ejecutivo para la dirección. Debe incluir:</p>
 <ul>
 <li>Resumen del análisis de situación (fortalezas, debilidades, riesgos críticos).</li>
 <li>Lista priorizada de iniciativas con su coste estimado y calendario.</li>
@@ -6719,13 +6930,12 @@ recursos internos/externos, coste estimado, duración y dependencias.</p>
 <p>La aprobación puede requerir ajustes de alcance o de plazos. Es habitual repetir el ciclo de revisión
 hasta lograr un consenso. Una vez aprobado, la dirección debe comunicarlo a todas las personas para
 reforzar el compromiso colectivo.</p>
+<p><strong>Ejemplo</strong>: Una empresa de servicios financieros presenta su PDS a la junta directiva, destacando cómo el plan aborda las vulnerabilidades críticas identificadas en auditorías previas y cómo se alinea con los objetivos de cumplimiento normativo. La dirección aprueba el plan, comprometiéndose a asignar un presupuesto anual para su ejecución y a revisar el progreso trimestralmente. </p>
+<p><strong>Objetivo</strong>: Obtener el compromiso formal de la alta dirección para asegurar que el PDS cuente con los recursos y el apoyo necesarios para su implementación exitosa.</p>
 <h3 id="9-fase-6-puesta-en-marcha-y-mejora-continua">9. Fase 6. Puesta en marcha y mejora continua<a class="headerlink" href="#9-fase-6-puesta-en-marcha-y-mejora-continua" title="Permanent link">&para;</a></h3>
-<figure>
-<p><img alt="" src="../assets/IS-U121-PlanDirectorDeSeguridad38.png" />
-  </p>
-<figcaption>Fase 6</figcaption>
-</figure>
-<p>El éxito del PDS depende de su ejecución. <abbr title="Instituto Nacional de Ciberseguridad de España. Es un organismo de ciberseguridad que se encarga de proteger la información y los sistemas críticos de España. El INCIBE puede colaborar con otros organismos de ciberseguridad, como el CCN-CERT, el CNPIC, el CNP, etc.">INCIBE</abbr> recomienda:</p>
+<p><img alt="" src="../assets/IS-U121-PlanDirectorDeSeguridad38.png" /></p>
+<p>La Implementación del Plan Director de Seguridad (PDS) es la fase en la que se ejecutan los proyectos e iniciativas de seguridad definidos y aprobados en las etapas previas. Esta fase implica poner en práctica las políticas, procedimientos y controles que protegerán a la organización frente a riesgos de seguridad. La implementación debe seguir una metodología de proyectos, con responsabilidades y plazos bien definidos, asegurando que cada iniciativa se ejecute de forma coordinada y controlada.</p>
+<p>El éxito del PDS depende de su ejecución. Para realizar una buena ejecución, se recomienda:</p>
 <ul>
 <li>Organizar una <strong>presentación inicial</strong> con todas las personas involucradas para explicar objetivos y responsabilidades.</li>
 <li><strong>Nombrar responsables o coordinadores</strong> de cada proyecto y dotarlos de recursos (humanos, económicos, técnicos).</li>
@@ -6737,6 +6947,8 @@ reforzar el compromiso colectivo.</p>
 </ul>
 <p>Al finalizar el ciclo se inicia de nuevo la fase 1, aprovechando los datos del seguimiento para mejorar
 la siguiente iteración.</p>
+<p><strong>Ejemplo</strong>: Una empresa de comercio electrónico implementa su PDS comenzando con la actualización de su política de seguridad y la capacitación del personal en concienciación sobre ciberseguridad. Se establece un comité de gestión que se reúne mensualmente para revisar el progreso de los proyectos, resolver problemas y ajustar el plan según sea necesario. Al final del primer ciclo, la empresa ha mejorado significativamente su postura de seguridad y está lista para iniciar la siguiente iteración del PDS.</p>
+<p><strong>Objetivo</strong>: Asegurar que las iniciativas de seguridad se implementen de manera efectiva y que el PDS se mantenga relevante a través de un proceso continuo de revisión y mejora.</p>
 <h3 id="10-caso-practico-ilustrativo">10. Caso práctico ilustrativo<a class="headerlink" href="#10-caso-practico-ilustrativo" title="Permanent link">&para;</a></h3>
 <p>Imaginemos una editorial que combina tienda en línea y logística de libros físicos:</p>
 <figure>

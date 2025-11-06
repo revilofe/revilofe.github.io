@@ -145,7 +145,7 @@ class NombreDeClase {
 ``` 
 
 
-#### 3.2.1. Zona 1: Nombre de la Clase
+##### 3.2.1. Zona 1: Nombre de la Clase
 
 La primera zona contiene el **nombre de la clase**, que es el identificador único y fundamental de la clase. El nombre debe ser representativo de lo que la clase modela en el dominio del problema.
 

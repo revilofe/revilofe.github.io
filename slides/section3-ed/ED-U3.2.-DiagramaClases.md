@@ -21,6 +21,7 @@
 
 ## 1. Introducción
 
+
 ### 1.1. ¿Qué es el diagrama de clases?
 
 * Diagrama incluido en UML 2.5
@@ -69,6 +70,7 @@ Note: El mismo diagrama de clases se usa en dos fases diferentes con objetivos d
 
 ## 2. Elementos del Diagrama de Clases
 
+
 ### 2.1. Elementos principales
 
 * **Clases**: Objetos y conceptos del mundo real
@@ -83,18 +85,34 @@ Note: Estos tres elementos son los pilares del diagrama. Las clases son los "act
 
 ## 3. Clases
 
-### 3.1. ¿Qué representa una clase?
 
-* Conjunto de objetos con características comunes
-* Agrupa responsabilidades similares
-* Ejemplos: Paciente, Doctor, Coche, CuentaBancaria
+### 3.1. ¿Qué representa una clase? I
+
+* Conjunto de objetos con características comunes. Ejemplo: todos los coches.
+* Agrupa responsabilidades similares. Ejemplo: todas las operaciones bancarias.
+* Juega un rol en el dominio del problema. Ejemplo: un paciente en un sistema hospitalario.
+* Ejemplos: Coche, Paciente, CuentaBancaria
 * Pieza básica de la POO
 * Favorece especialización y comunicación por mensajes
 
-Note: Una clase es una plantilla o molde para crear objetos. Representa conceptos del dominio del problema.
+Note: Una clase es una plantilla o molde para crear objetos. Representa conceptos del dominio del problema. La POO se basa en clases para organizar el código y modelar el mundo real. 
 
 
-### 3.2. Estructura de una clase
+### 3.1. ¿Qué representa una clase? II 
+Origen de las Clases
+
+Las clases pueden originarse de:
+
+1. **Cosas tangibles**: Avión, auto, televisor, computador
+2. **Roles o papeles**: Gerente, cliente, vendedor, profesor
+3. **Organizaciones**: Universidad, empresa, departamento
+4. **Interacciones**: Transacción, matrícula, contrato
+5. **Eventos**: Vuelo, accidente, reunión
+
+Note: Identificar clases es una habilidad fundamental en el diseño OO. La mayoría provienen de sustantivos en los requisitos. Las cosas tangibles y roles son las fuentes más comunes. Las interacciones y eventos son menos obvios pero igualmente importantes. Un "Pedido" es una interacción, un "Vuelo" es un evento.
+
+
+### 3.2. Estructura de una clase I
 
 ```
 ┌─────────────────────────┐
@@ -113,83 +131,273 @@ Note: Una clase es una plantilla o molde para crear objetos. Representa concepto
 Note: La clase se representa con una caja dividida en tres zonas mediante líneas horizontales.
 
 
-### 3.3. Ejemplo: Clase Persona
+### 3.2. Estructura de una clase II
+**Nombre de clase**:
+- Los nombres de clase siguen la convención **PascalCase** (cada palabra inicia con mayúscula, sin espacios ni guiones bajos).
+- Debe ser un sustantivo que represente el concepto o entidad.
+- Ejemplos: `CuentaBancaria`, `Empleado`, `Producto`.
+- Debe ser único dentro del paquete o módulo.
+- Evitar abreviaciones confusas o nombres genéricos como `Clase1`.
+- Debe reflejar claramente el propósito de la clase.
+
+Note: El nombre de la clase es crucial para la claridad del diagrama. Debe ser descriptivo y seguir las convenciones de nomenclatura. La claridad en el nombre facilita la comprensión del modelo. 
+
+
+### 3.2. Estructura de una clase III
+**Atributos**:
+- Representan las propiedades o características de la clase.
+- Cada atributo tiene un nombre, tipo de dato y visibilidad.
+- Formato: `+ nombreAtributo: TipoDato`
+- Ejemplos: `- fechaNacimiento: Date`, `+ nombre: String`.
+- Pueden tener valores predeterminados.
+- Se recomienda usar nombres descriptivos y evitar abreviaciones.
+- Deben reflejar claramente la información que almacenan.
+
+Note: Los atributos definen el estado de los objetos de la clase. La visibilidad indica quién puede acceder a ellos. Es importante elegir nombres claros y tipos adecuados para facilitar el mantenimiento del código.
+
+
+### 3.2. Estructura de una clase IV
+**Métodos**:
+- Representan las operaciones o comportamientos de la clase.
+- Cada método tiene un nombre, parámetros, tipo de retorno y visibilidad.
+- Formato: `+ nombreMetodo(param1: Tipo1, param2: Tipo2): TipoRetorno`
+- Ejemplos: `+ calcularEdad(): Int`, `- jubilar(): Unit`.
+- Pueden tener parámetros opcionales y valores predeterminados.
+- Se recomienda usar nombres descriptivos y evitar abreviaciones.
+- Deben reflejar claramente la acción que realizan.
+- **Constructores**: Sin tipo de retorno y **Métodos abstractos**: En cursiva
+
+Note: Los métodos definen lo que los objetos de la clase pueden hacer. La visibilidad indica quién puede invocarlos. Es crucial elegir nombres claros y definir correctamente los parámetros y tipos de retorno para facilitar la comprensión y uso del código. Existen otros tipos especiales de métodos como los constructores y los métodos abstractos que tienen reglas específicas. Los constructores inicializan objetos y no tienen tipo de retorno. Los métodos abstractos se declaran en clases abstractas y no tienen implementación.
+
+
+### 3.3. Ejemplo: Clase Persona I
 
 ```plantuml
 @startuml
 class Persona {
   - nombre: String
-  - edad: Int
+  - fechaNacimiento: Date
+  - estado: String
   + getNombre(): String
-  + setEdad(edad: Int): Unit
-  + cumplirAnios(): Unit
+  + calcularEdad(): Int
+  + jubilar(): Unit
 }
 @enduml
 ```
 
-[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/JP2nJiGm38RtF4LbPwW5HLKnHQ0fNc0jMkZhZJI9MRmYxhzwq8Y91IxzvvkRuCLpAQR31dV0u3_fxlnw8Pb0Pw4ioAhKk4jdW2dG5JG4BmN8bUNQ7hNkDnkzqhtsX_N0FxN7tqMdG7OyqqwF88hHAHH_Bp_6Rm00)
-
-**En Kotlin:**
-```kotlin
-class Persona(private var nombre: String, private var edad: Int) {
-    fun getNombre(): String = nombre
-    fun setEdad(edad: Int) { this.edad = edad }
-    fun cumplirAnios() { edad++ }
-}
-```
+[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
 
 Note: Este ejemplo muestra una clase simple con atributos privados y métodos públicos. La visibilidad se indica con + (público) y - (privado).
 
 
+### 3.3. Ejemplo: Clase Persona II
+
+**Implementación en Kotlin:**
+
+```kotlin
+class Persona(private var nombre: String, private var edad: Int, private var estado: String = "activo") {
+    fun getNombre(): String = nombre
+    fun setEdad(edad: Int) { this.edad = edad }
+    fun calcularEdad(): Int = edad
+    fun jubilar() {
+        estado = "jubilado"
+    }
+}
+
+fun main() {
+    val persona = Persona("Juan", 65)
+    println("Nombre: ${persona.getNombre()}, Edad: ${persona.calcularEdad()}")
+    persona.jubilar()
+}
+```
+
+Note: Los atributos privados (-) se declaran en el constructor con 'private var'. Los métodos públicos (+) son funciones sin modificador. La visibilidad del diagrama UML se traduce directamente a modificadores de acceso en Kotlin.
+
+
 ### 3.4. Visibilidad
+Los miembros de una clase (atributos, métodos) pueden tener diferentes niveles de visibilidad:
 
 * **+ público**: Accesible desde cualquier lugar
 * **- privado**: Solo accesible dentro de la clase
 * **# protegido**: Accesible en la clase y subclases
 * **~ paquete**: Accesible en el mismo paquete
-* Principio de encapsulación
+* Principio de encapsulación: ocultar detalles internos
 
-Note: La visibilidad controla quién puede acceder a atributos y métodos. El encapsulamiento recomienda atributos privados con métodos públicos.
+Note: La visibilidad controla quién puede acceder a atributos y métodos. El encapsulamiento recomienda atributos privados con métodos públicos. Reduce acoplamiento y mejora mantenimiento. Normalmente no está permitido acceder directamente a atributos privados desde fuera de la clase.
 
 
-### 3.5. Atributos estáticos
+### 3.5. Miembros estáticos I
+**Atributos estáticos**: Existen atributos que pertenecen a la clase en sí, no a instancias individuales:
 
 * Se subrayan en el diagrama
 * Compartidos por todas las instancias
 * Pertenecen a la clase, no a objetos individuales
-* Ejemplo: contador de instancias
+* Ejemplo: posicionVolante
 
-```
-- cantidadLibros: Int  (estático, subrayado)
-```
-
-Note: Los atributos de clase pertenecen a la clase misma, no a cada objeto. Por ejemplo, un contador de instancias creadas.
+Note: Los atributos de clase pertenecen a la clase misma, no a cada objeto. Por ejemplo, la posición del volante es la misma para todos los coches de un sistema, implantado en un Pais. Se accede a ellos usando el nombre de la clase.
 
 
-### 3.6. Métodos estáticos
+### 3.5. Miembros estáticos II
+**Métodos estáticos**: Existen métodos que pertenecen a la clase en sí, no a instancias individuales
 
 * Subrayados en el diagrama
 * Pertenecen a la clase, no a instancias
-* Ejemplo: `crear(): Persona`
-* **Constructores**: Sin tipo de retorno
-* **Métodos abstractos**: En cursiva
+* Ejemplo: `configurarPorPais(): Unit`
 
 Note: Los métodos de clase se pueden invocar sin crear un objeto. Los constructores inicializan objetos nuevos.
 
 
-### 3.7. Clases abstractas
+### 3.5. Ejemplo: Miembros estáticos I
+```plantuml
+@startuml
+class Coche {
+  + marca : String           -- atributo no estático (por instancia)
+  + modelo : String          -- atributo no estático (por instancia)
 
-* No se pueden instanciar directamente
-* Sirven como plantillas para otras clases
-* Nombre en **cursiva**
-* Pueden tener métodos abstractos (sin implementación)
-* Ejemplo: Figura, Animal, Vehículo
+  {static} + posicionVolante : String   -- atributo estático (compartido por la clase)
+  {static} + unidadDistancia : String   -- atributo estático (compartido por la clase)
 
-Note: Las clases abstractas representan conceptos generales que no tienen sentido por sí solos. No creas objetos de tipo "Figura", sino "Círculo" o "Cuadrado".
+  + mostrarConfiguracion() : String    -- método no estático (operación de instancia)
+  {static} + configurarPorPais(pais : String) : void  -- método estático (operación de clase)
+}
+
+note right of Coche::marca
+  Atributo no estático
+end note
+
+note right of Coche::posicionVolante
+  Atributo estático
+end note
+
+note right of Coche::mostrarConfiguracion
+  Método no estático
+end note
+
+note right of Coche::configurarPorPais
+  Método estático
+end note
+@enduml
+
+```
+
+[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
+
+Note: En este ejemplo, `posicionVolante` y `unidadDistancia` son atributos estáticos, compartidos por todos los coches. `configurarPorPais` es un método estático que afecta a la configuración global de la clase Coche. Los atributos y métodos no estáticos pertenecen a instancias individuales.
+
+
+### 3.5. Ejemplo: Miembros estáticos II
+**Implementación en Kotlin:**
+
+```kotlin
+class Coche(val marca: String, val modelo: String) {
+
+    // Método no estático que muestra la configuración del coche (acceso a propiedades de instancia y estáticas)
+    fun mostrarConfiguracion(): String {
+        return "Coche: $marca $modelo, Volante: ${posicionVolante}, Unidad de distancia: ${unidadDistancia}"
+    }
+
+    companion object {
+        // Atributos estáticos, compartidos por toda la clase
+        var posicionVolante: String = "Izquierda"
+        var unidadDistancia: String = "Kilómetros"
+
+        // Método estático que configura la clase según el país
+        fun configurarPorPais(pais: String) {
+            when (pais.lowercase()) {
+                "españa" -> {
+                    posicionVolante = "Izquierda"
+                    unidadDistancia = "Kilómetros"
+                }
+                "eeuu", "estados unidos" -> {
+                    posicionVolante = "Derecha"
+                    unidadDistancia = "Millas"
+                }
+                "japón" -> {
+                    posicionVolante = "Derecha"
+                    unidadDistancia = "Kilómetros"
+                }
+                else -> {
+                    posicionVolante = "Izquierda"
+                    unidadDistancia = "Kilómetros"
+                }
+            }
+        }
+    }
+}
+```
+
+Note: En Kotlin, los miembros estáticos se implementan dentro de un `companion object`. Los atributos `posicionVolante` y `unidadDistancia` son compartidos por todos los objetos de la clase Coche. El método `configurarPorPais` es estático y afecta a estos atributos compartidos. El método `mostrarConfiguracion` es un método de instancia que puede acceder tanto a atributos de instancia como a los estáticos.
+
+### 3.6. Atributos derivados 
+
+* Se calculan a partir de otros atributos
+* Se marcan con barra diagonal `/`
+* No se almacenan directamente
+* Ejemplo: `/edad` derivado de `fechaNacimiento`
+* Reducen redundancia de datos
+
+Note: Los atributos derivados ahorran espacio y evitan inconsistencias. La edad cambia cada año, así que almacenarla sería problemático. Mejor calcularla cuando se necesite a partir de la fecha de nacimiento. En UML se marca con / para indicar que es derivado.
+
+### 3.7. Ejemplo: Atributo Derivado I
+
+```plantuml
+@startuml
+class Persona {
+  -nombre: String
+  -fechaNacimiento: Date
+  -/edad: Int
+  +getNombre(): String
+  +getFechaNacimiento(): Date
+  +getEdad(): Int
+}
+
+note right of Persona
+  /edad se calcula
+  desde fechaNacimiento
+  no se almacena
+end note
+@enduml
+```
+
+[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
+
+Note: En Kotlin, los atributos derivados se implementan como propiedades calculadas (custom getter). No ocupan memoria para almacenamiento, se calculan cada vez que se acceden. Esto garantiza que la edad siempre esté actualizada sin necesidad de mantener manualmente el valor.
+
+
+### 3.7. Ejemplo: Atributo Derivado II
+
+**Implementación en Kotlin:**
+
+```kotlin
+import java.time.LocalDate
+import java.time.Period
+
+class Persona(
+    val nombre: String, 
+    val fechaNacimiento: LocalDate
+) {
+    // Atributo derivado - se calcula, no se almacena
+    val edad: Int
+        get() = Period.between(fechaNacimiento, LocalDate.now()).years
+    
+    fun getNombre() = nombre
+    fun getFechaNacimiento() = fechaNacimiento
+    fun getEdad() = edad  // Siempre actualizado
+}
+
+fun main() {
+    val persona = Persona("Juan", LocalDate.of(1990, 5, 15))
+    println("${persona.nombre} tiene ${persona.edad} años")
+    // La edad se calcula cada vez que se accede
+}
+```
+
+Note: El atributo derivado /edad se implementa con un custom getter (get() = ...). No ocupa memoria, se calcula cada vez. Period.between() calcula automáticamente los años transcurridos. Esto garantiza que la edad siempre esté actualizada sin almacenarla.
 
 ---
 
 ## 4. Interfaces: Contratos de comportamiento
+
 
 ### 4.1. ¿Qué es una interfaz?
 
@@ -214,7 +422,7 @@ Note: Una interfaz es un contrato que dice "si implementas esta interfaz, debes 
 Note: La más común es el rectángulo con el estereotipo <<interface>> arriba del nombre.
 
 
-### 4.3. Ejemplo: Interfaz IVolador
+### 4.3. Ejemplo: Interfaz IVolador I
 
 ```plantuml
 @startuml
@@ -226,9 +434,15 @@ interface IVolador {
 @enduml
 ```
 
-[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/JOun2iCm30NtVOglS1F7gwINQXrWCJ44g58TtYiX_txwQ2w96-_yzxvVrD6W3dEyGH4WwIKiTfaG5w5M8QxKJaUhbBL7MR1ZaMLOw5EeDK_pdsqbr-TdhTnlrUG_)
+[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
 
-**En Kotlin:**
+Note: Este ejemplo muestra una interfaz simple con tres métodos públicos que deben ser implementados por cualquier clase que la use.
+
+
+### 4.3. Ejemplo: Interfaz IVolador II
+
+**Implementación en Kotlin:**
+
 ```kotlin
 interface IVolador {
     fun volar()
@@ -237,10 +451,23 @@ interface IVolador {
 }
 ```
 
-Note: Este ejemplo muestra una interfaz simple con tres métodos públicos que deben ser implementados por cualquier clase que la use.
+Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducción directa: clases → class, atributos → propiedades, métodos → funciones, relaciones → referencias/colecciones.
 
 
-### 4.4. Diferencias con clases abstractas I
+
+### 4.4. Clases abstractas
+
+* No se pueden instanciar directamente
+* Sirven como plantillas para otras clases
+* Nombre en **cursiva**
+* Pueden tener métodos abstractos (sin implementación)
+* Ejemplo: Figura, Animal, Vehículo
+
+Note: Las clases abstractas representan conceptos generales que no tienen sentido por sí solos. No creas objetos de tipo "Figura", sino "Círculo" o "Cuadrado".
+
+
+
+### 4.5. Diferencias con clases abstractas I
 
 * **Interfaces**:
     - Solo métodos abstractos (sin implementación)
@@ -251,7 +478,7 @@ Note: Este ejemplo muestra una interfaz simple con tres métodos públicos que d
 Note: La diferencia clave es que las interfaces son contratos puros sin implementación. Java y Kotlin permiten implementar múltiples interfaces.
 
 
-### 4.5. Diferencias con clases abstractas II
+### 4.6. Diferencias con clases abstractas II
 
 * **Clases abstractas**:
     - Pueden tener métodos implementados
@@ -265,9 +492,10 @@ Note: Las clases abstractas pueden proporcionar implementación parcial, no solo
 
 ## 5. Relaciones entre Clases e Interfaces
 
+
 ### 5.1. Tipos de relaciones
 
-* **Asociación**: Conexión entre clases
+* **Asociación (Reflexiva, Binaria, N-aria)**: Conexión entre clases 
 * **Agregación**: Relación "tiene un" (partes independientes)
 * **Composición**: Relación "es parte de" (partes dependientes)
 * **Herencia**: Relación "es un tipo de"
@@ -288,7 +516,7 @@ Note: Las relaciones son tan importantes como las clases mismas. Cada tipo de re
 Note: La asociación es la relación más general. Indica que dos clases están conectadas de alguna forma.
 
 
-### 5.3. Ejemplo de Asociación
+### 5.3. Ejemplo de Asociación I
 
 ```plantuml
 @startuml
@@ -299,9 +527,15 @@ Empresa "1" -- "n" Empleado : Contrata >
 @enduml
 ```
 
-[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/SoWkIImgAStDuN9MAinFBL5GKiXCJbLmIr5OICrB0Pa00000)
+[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
 
-**En Kotlin:**
+Note: Una empresa contrata múltiples empleados. La multiplicidad indica "1 a n".
+
+
+### 5.3. Ejemplo de Asociación II
+
+**Implementación en Kotlin:**
+
 ```kotlin
 class Empresa(val nombre: String) {
     val empleados: MutableList<Empleado> = mutableListOf()
@@ -317,10 +551,107 @@ class Empleado(val nombre: String) {
 }
 ```
 
-Note: Una empresa contrata múltiples empleados. La multiplicidad indica "1 a n".
+Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducción directa: clases → class, atributos → propiedades, métodos → funciones, relaciones → referencias/colecciones.
 
 
-### 5.4. Multiplicidad (Cardinalidad)
+### 5.4. Tipos de Asociación
+3 tipos principales de asociación:
+- Asociación Binaria: entre dos clases. Mas común
+- Asociación Reflexiva: una clase se relaciona consigo misma
+- Asociación N-aria: entre tres o más clases
+
+Note: Estos tres tipos cubren la mayoría de los casos de asociación en diagramas de clases. Cada uno tiene su propia notación y uso específico.
+
+
+#### 5.4.1. Asociación Binaria
+
+* Conecta **dos clases**
+* Es la forma más común de asociación
+* Puede ser unidireccional o bidireccional
+* Ejemplo: Persona - Mascota, Empresa - Empleado
+
+Note: La asociación binaria es el tipo más frecuente. Conecta exactamente dos clases. La bidireccionalidad significa que ambas clases se conocen mutuamente, mientras que en unidireccional solo una clase conoce a la otra.
+
+
+#### 5.4.2. Asociación Reflexiva
+
+* Una clase se relaciona **consigo misma**
+* Útil para jerarquías y relaciones entre objetos del mismo tipo
+* Ejemplo: Empleado supervisa a otros Empleados
+* Necesita roles claros para distinguir los extremos
+
+Note: Las asociaciones reflexivas son comunes en estructuras jerárquicas. Un empleado puede ser jefe de otros empleados. Los roles (como "jefe" y "subordinado") son esenciales para clarificar la naturaleza de la relación.
+
+
+#### 5.4.3. Asociación N-aria
+
+* Involucra **más de dos clases** (3 o más)
+* Menos común que la binaria
+* Se representa con un rombo conectando todas las clases
+* Ejemplo: Estudiante - Curso - Profesor (matrícula)
+
+Note: Las asociaciones n-arias son raras pero útiles cuando necesitas relacionar tres o más clases simultáneamente. Por ejemplo, la matrícula de un estudiante involucra al estudiante, el curso y potencialmente un período académico.
+
+
+### 5.4.4. Ejemplo: Asociación Reflexiva I
+
+```plantuml
+@startuml
+class Trabajador {
+  -nombre: String
+  -puesto: String
+  +getSupervisor(): Trabajador
+  +getSubordinados(): List<Trabajador>
+}
+
+Trabajador "0..1" -- "0..*" Trabajador : supervisa >
+note right of Trabajador
+  jefe (0..1) supervisa
+  subordinados (0..*)
+end note
+@enduml
+```
+
+[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
+
+Note: En este ejemplo, un Trabajador puede supervisar a otros Trabajadores. La multiplicidad 0..1 en "jefe" indica que un empleado puede tener cero o un supervisor. La multiplicidad 0..* en "subordinados" indica que puede supervisar a ninguno o varios empleados.
+
+
+### 5.4.4. Ejemplo: Asociación Reflexiva II
+
+**Implementación en Kotlin:**
+
+```kotlin
+class Trabajador(val nombre: String, val puesto: String) {
+    private var jefe: Trabajador? = null
+    private val subordinados: MutableList<Trabajador> = mutableListOf()
+    
+    fun setSupervisor(supervisor: Trabajador) {
+        this.jefe = supervisor
+        supervisor.subordinados.add(this)
+    }
+    
+    fun getSupervisor(): Trabajador? = jefe
+    fun getSubordinados(): List<Trabajador> = subordinados.toList()
+}
+
+fun main() {
+    val gerente = Trabajador("María", "Gerente")
+    val empleado1 = Trabajador("Juan", "Desarrollador")
+    val empleado2 = Trabajador("Ana", "Diseñadora")
+    
+    empleado1.setSupervisor(gerente)
+    empleado2.setSupervisor(gerente)
+    
+    println("${gerente.nombre} supervisa a:")
+    gerente.getSubordinados().forEach { println("  - ${it.nombre}") }
+}
+```
+
+Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducción directa: clases → class, atributos → propiedades, métodos → funciones, relaciones → referencias/colecciones.
+
+
+### 5.5. Multiplicidad (Cardinalidad)
 
 | Notación     | Significado                       |
 |--------------|-----------------------------------|
@@ -334,7 +665,155 @@ Note: Una empresa contrata múltiples empleados. La multiplicidad indica "1 a n"
 Note: La multiplicidad indica cuántos objetos participan en una relación. Es fundamental para entender las restricciones del dominio.
 
 
-### 5.5. Agregación
+### 5.6. Navegabilidad
+
+* Indica la **dirección** del conocimiento entre clases
+* Flecha apunta a la clase conocida
+* Sin flechas: navegabilidad bidireccional (ambas se conocen)
+* Con flecha: navegabilidad unidireccional (solo una conoce a la otra)
+* Importante para la implementación
+
+Note: La navegabilidad es crucial en el diseño. Si Cliente → Pedido, el cliente conoce sus pedidos pero el pedido podría no conocer al cliente. Esto se traduce directamente en el código: Cliente tendría una lista de Pedidos, pero Pedido no tendría referencia a Cliente.
+
+
+### 5.7. Ejemplo: Navegabilidad I
+
+```plantuml
+@startuml
+class Cliente {
+  -id: Int
+  -nombre: String
+  +getPedidos(): List<Pedido>
+}
+
+class Pedido {
+  -numero: String
+  -fecha: Date
+  -total: Double
+}
+
+Cliente "1" --> "*" Pedido : realiza >
+
+note right of Cliente
+  Cliente conoce
+  sus Pedidos
+end note
+
+note right of Pedido
+  Pedido NO conoce
+  a su Cliente
+end note
+@enduml
+```
+
+[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
+
+
+### 5.7. Ejemplo: Navegabilidad II
+
+**En Kotlin (unidireccional):**
+```kotlin
+import java.time.LocalDate
+
+class Pedido(val numero: String, val fecha: LocalDate, var total: Double) {
+    // Pedido NO tiene referencia a Cliente
+}
+
+class Cliente(val id: Int, val nombre: String) {
+    private val pedidos: MutableList<Pedido> = mutableListOf()
+    
+    fun realizarPedido(pedido: Pedido) {
+        pedidos.add(pedido)
+    }
+    
+    fun getPedidos(): List<Pedido> = pedidos.toList()
+}
+
+fun main() {
+    val cliente = Cliente(1, "Juan Pérez")
+    val pedido1 = Pedido("P001", LocalDate.now(), 150.0)
+    val pedido2 = Pedido("P002", LocalDate.now(), 230.0)
+    
+    cliente.realizarPedido(pedido1)
+    cliente.realizarPedido(pedido2)
+    
+    println("Pedidos de ${cliente.nombre}:")
+    cliente.getPedidos().forEach { println("  - ${it.numero}: ${it.total}€") }
+}
+```
+
+Note: Este es un ejemplo de asociación unidireccional. Cliente tiene una colección de Pedidos y puede acceder a ellos, pero Pedido no tiene forma de saber a qué Cliente pertenece. Esto reduce el acoplamiento y simplifica el código cuando no necesitas navegación inversa.
+
+
+### 5.8. Roles en Asociaciones
+
+* Etiquetas que describen el **papel** de cada clase
+* Se colocan cerca del extremo de la línea de relación
+* Útiles cuando la relación no es obvia
+* Especialmente importantes en asociaciones reflexivas
+* Pueden incluir visibilidad (+, -)
+
+Note: Los roles clarifican el significado de cada extremo de la relación. En una asociación Persona-Persona, los roles "esposo" y "esposa" o "padre" e "hijo" aclaran la naturaleza específica de la relación. En asociaciones reflexivas son prácticamente obligatorios.
+
+
+### 5.9. Ejemplo: Roles en Asociaciones I
+
+```plantuml
+@startuml
+class Persona {
+  -nombre: String
+  -edad: Int
+}
+
+Persona "1" -- "0..1" Persona : casado con >
+note left: rol: esposo
+note right: rol: esposa
+
+Persona "0..2" -- "*" Persona : tiene >
+note left: rol: padre/madre
+note right: rol: hijo/hija
+@enduml
+```
+
+[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
+
+Note: Los roles se traducen directamente a nombres de propiedades en el código. "conyuge", "hijos" y "padres" son roles que clarifican las relaciones entre objetos Persona. Esto hace el código mucho más legible que usar nombres genéricos como "relacionados".
+
+
+### 5.9. Ejemplo: Roles en Asociaciones II
+
+**Implementación en Kotlin:**
+
+```kotlin
+class Persona(val nombre: String, var edad: Int) {
+    // Rol: esposo/esposa
+    var conyuge: Persona? = null
+    
+    // Rol: padre/madre
+    private val hijos: MutableList<Persona> = mutableListOf()
+    
+    // Rol: hijo/hija
+    private val padres: MutableList<Persona> = mutableListOf()
+    
+    fun casarseCon(pareja: Persona) {
+        this.conyuge = pareja
+        pareja.conyuge = this
+    }
+    
+    fun agregarHijo(hijo: Persona) {
+        hijos.add(hijo)
+        hijo.padres.add(this)
+    }
+    
+    fun getHijos(): List<Persona> = hijos.toList()
+    fun getPadres(): List<Persona> = padres.toList()
+}
+```
+
+Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducción directa: clases → class, atributos → propiedades, métodos → funciones, relaciones → referencias/colecciones.
+
+
+### 5.10. Agregación
 
 * Relación "tiene un" o "contiene"
 * Partes pueden existir independientemente del todo
@@ -345,7 +824,7 @@ Note: La multiplicidad indica cuántos objetos participan en una relación. Es f
 Note: La agregación indica que un objeto está formado por otros, pero las partes tienen vida propia.
 
 
-### 5.6. Ejemplo de Agregación
+### 5.11. Ejemplo de Agregación I
 
 ```plantuml
 @startuml
@@ -359,9 +838,15 @@ Automovil "1" o-- "0..1" RadioCD : tiene >
 @enduml
 ```
 
-[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/SoWkIImgAStDuKhEIImkLd1DJgNY8YA0KmkIIw9A30dIImfAIYxAB4bDJ4vLi5Am0d2i0000)
+[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
 
-**En Kotlin:**
+Note: El radio puede existir sin el automóvil. La relación es débil - agregación.
+
+
+### 5.11. Ejemplo de Agregación II
+
+**Implementación en Kotlin:**
+
 ```kotlin
 class Automovil(val modelo: String) {
     var radioCD: RadioCD? = null  // Puede o no tener radio
@@ -374,10 +859,10 @@ class Automovil(val modelo: String) {
 class RadioCD(val marca: String)
 ```
 
-Note: El radio puede existir sin el automóvil. La relación es débil - agregación.
+Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducción directa: clases → class, atributos → propiedades, métodos → funciones, relaciones → referencias/colecciones.
 
 
-### 5.7. Composición
+### 5.12. Composición
 
 * Relación "es parte de" más fuerte
 * Partes NO existen independientemente del todo
@@ -388,7 +873,7 @@ Note: El radio puede existir sin el automóvil. La relación es débil - agregac
 Note: La composición es la relación más fuerte de contenencia. Las partes nacen y mueren con el todo.
 
 
-### 5.8. Ejemplo de Composición
+### 5.13. Ejemplo de Composición I
 
 ```plantuml
 @startuml
@@ -402,9 +887,15 @@ Automovil "1" *-- "1" Motor : tiene >
 @enduml
 ```
 
-[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/SoWkIImgAStDuKhEIImkLd1DJgNY8YA0Kmk AIw9A30dIIqfAIYxAB4bDJ4t9JCqhKGXEBl000)
+[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
 
-**En Kotlin:**
+Note: El motor no puede existir sin el automóvil. La relación es fuerte - composición.
+
+
+### 5.13. Ejemplo de Composición II
+
+**Implementación en Kotlin:**
+
 ```kotlin
 class Automovil(val modelo: String) {
     val motor: Motor = Motor("V8")  // Motor creado con el automóvil
@@ -415,10 +906,10 @@ class Automovil(val modelo: String) {
 }
 ```
 
-Note: El motor no puede existir sin el automóvil. La relación es fuerte - composición.
+Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducción directa: clases → class, atributos → propiedades, métodos → funciones, relaciones → referencias/colecciones.
 
 
-### 5.9. Herencia (Generalización)
+### 5.14. Herencia (Generalización)
 
 * Relación "es un tipo de"
 * Representa especialización/generalización
@@ -429,7 +920,7 @@ Note: El motor no puede existir sin el automóvil. La relación es fuerte - comp
 Note: La herencia es fundamental en POO. Indica que una clase (subclase) hereda atributos y métodos de otra (superclase).
 
 
-### 5.10. Ejemplo de Herencia
+### 5.15. Ejemplo de Herencia I
 
 ```plantuml
 @startuml
@@ -445,9 +936,15 @@ Animal <|-- Perro
 @enduml
 ```
 
-[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/SoWkIImgAStDuKhEIImkLd2jICmjo2_EBInAJCv9pCzBB4bDI2nMS0e0)
+[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
 
-**En Kotlin:**
+Note: Perro hereda de Animal. La flecha apunta hacia la superclase (Animal).
+
+
+### 5.15. Ejemplo de Herencia II
+
+**Implementación en Kotlin:**
+
 ```kotlin
 abstract class Animal(val nombre: String) {
     abstract fun hacerSonido()
@@ -461,10 +958,10 @@ class Perro(nombre: String, val raza: String) : Animal(nombre) {
 }
 ```
 
-Note: Perro hereda de Animal. La flecha apunta hacia la superclase (Animal).
+Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducción directa: clases → class, atributos → propiedades, métodos → funciones, relaciones → referencias/colecciones.
 
 
-### 5.11. Dependencia
+### 5.16. Dependencia
 
 * Relación de uso temporal
 * Una clase usa otra pero no la contiene
@@ -475,7 +972,7 @@ Note: Perro hereda de Animal. La flecha apunta hacia la superclase (Animal).
 Note: La dependencia es la relación más débil. Indica que una clase usa temporalmente otra, típicamente como parámetro de método.
 
 
-### 5.12. Implementación (Realización)
+### 5.17. Implementación (Realización)
 
 * Clase implementa una interfaz
 * La clase proporciona implementación concreta
@@ -486,7 +983,7 @@ Note: La dependencia es la relación más débil. Indica que una clase usa tempo
 Note: Esta relación indica que una clase concreta implementa todos los métodos definidos en una interfaz.
 
 
-### 5.13. Ejemplo de Implementación
+### 5.18. Ejemplo de Implementación
 
 ```plantuml
 @startuml
@@ -503,9 +1000,15 @@ IVolador <|.. Avion
 @enduml
 ```
 
-[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/NOz12i8m44NtFSMebRv05TI5Wep5K8u24MX9aXIwtjlqKT91EJ_V_oR-OwSVg0S0IaQq0-4b4l92cJnSsArKajU6P8vG_iD7WKMBbQ3Vz--e0wCrlNqGVm00)
+[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
 
-**En Kotlin:**
+Note: Avion implementa IVolador proporcionando código concreto para los métodos volar() y aterrizar().
+
+
+### 5.18. Ejemplo de Implementación II
+
+**Implementación en Kotlin:**
+
 ```kotlin
 interface IVolador {
     fun volar()
@@ -523,10 +1026,10 @@ class Avion(val modelo: String) : IVolador {
 }
 ```
 
-Note: Avion implementa IVolador proporcionando código concreto para los métodos volar() y aterrizar().
+Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducción directa: clases → class, atributos → propiedades, métodos → funciones, relaciones → referencias/colecciones.
 
 
-### 5.14. Resumen de Relaciones
+### 5.19. Resumen de Relaciones
 
 | Relación           | Símbolo  | Fuerza       |
 |--------------------|----------|--------------|
@@ -539,9 +1042,21 @@ Note: Avion implementa IVolador proporcionando código concreto para los método
 
 Note: Este cuadro resume los tipos de relaciones ordenados por fuerza de acoplamiento.
 
+
+### 5.20. Propiedades de las Relaciones: Resumen
+
+* **Multiplicidad**: Cuántos objetos participan (1, 0..1, *, 1..*)
+* **Nombre**: Describe la relación (verbo)
+* **Roles**: Papel de cada clase en la relación
+* **Navegabilidad**: Dirección del conocimiento (→, ↔)
+* **Visibilidad**: De los roles (+, -, #)
+
+Note: Estas propiedades son fundamentales para documentar completamente una relación. La multiplicidad define restricciones de cardinalidad, el nombre clarifica el significado, los roles especifican papeles, la navegabilidad indica dependencias de código, y la visibilidad controla el acceso a las referencias.
+
 ---
 
 ## 6. Mejores Prácticas en Diagramas de Clases
+
 
 ### 6.1. Responsabilidad Única (SRP)
 
@@ -597,27 +1112,68 @@ Note: Los colores mejoran significativamente la legibilidad cuando se usan con p
 ### 6.5. Nombrado Consistente
 
 **Clases**: PascalCase, sustantivos singulares
-
 - ✅ `Usuario`, `CarritoCompras`
 - ❌ `usuario`, `Carritos`
 
 **Métodos**: camelCase, verbos
-
 - ✅ `calcularTotal()`, `esValido()`
 - ❌ `CalcularTotal()`, `validacion()`
 
 **Atributos**: camelCase, sustantivos
-
 - ✅ `nombre`, `fechaCreacion`
 - ❌ `Nombre`, `fecha_creacion`
 
 Note: Las convenciones de nombres mejoran la legibilidad y profesionalismo del diagrama.
 
+
+### 6.6. Validación con Casos de Uso
+
+* Recorre mentalmente los casos de uso sobre el diagrama
+* Verifica que el diseño soporta todos los requisitos
+* Pregunta: ¿Puede realizarse esta operación?
+* Identifica clases o relaciones faltantes
+* Busca responsabilidades mal asignadas
+
+Note: Un buen diagrama debe poder "ejecutar" todos los casos de uso del sistema. Por ejemplo, si hay un caso de uso "Cliente realiza pedido", traza el camino: ¿Cliente tiene acceso a Carrito? ¿Carrito puede crear Pedido? ¿Pedido puede acceder a Productos? Si falta alguna relación, el diseño es incompleto.
+
+
+### 6.7. Errores Comunes
+
+
+#### Error 1: Atributos en lugar de Relaciones
+
+* ❌ Incorrecto: `Pedido { cliente: Cliente }`
+* ✅ Correcto: `Cliente "1" -- "*" Pedido`
+* Los tipos complejos deben ser relaciones, no atributos
+
+Note: Un error de principiantes es poner clases como atributos. Si algo es una clase, debe ser una relación. Los atributos son para tipos primitivos (String, Int, Boolean, Date). Las conexiones entre clases se representan con líneas de relación.
+
+
+#### Error 2: Confundir Agregación y Composición
+
+* Pregunta clave: ¿La parte existe sin el todo?
+* Si SÍ → Agregación (◇)
+* Si NO → Composición (♦)
+* Ejemplo: Motor en Coche = Composición
+
+Note: La distinción puede ser sutil pero es importante. Un jugador puede cambiar de equipo (agregación). Un motor de coche no tiene sentido sin el coche (composición). Piensa en el ciclo de vida: ¿se destruye la parte cuando se destruye el todo?
+
+
+#### Error 3: Clases "Dios"
+
+* Una clase que hace demasiado
+* Viola el Principio de Responsabilidad Única
+* Difícil de mantener y testear
+* Solución: Dividir en clases más pequeñas
+
+Note: Si una clase tiene 20 métodos y 15 atributos, probablemente hace demasiado. GestorSistema que maneja usuarios, productos, pedidos, inventario y facturación debería ser UserManager, ProductManager, OrderManager, etc. Cada clase debe tener una responsabilidad clara y única.
+
 ---
 
 ## 7. Ejemplos Completos de Diagramas de Clases
 
-### 7.1. Sistema de Biblioteca
+
+### 7.1. Sistema de Biblioteca I
 
 ```plantuml
 @startuml
@@ -653,12 +1209,13 @@ Prestamo "*" -- "1" Libro
 @enduml
 ```
 
-[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/ZP51QiCm44Ntd89dHfUGj1g1TmfuKIXOcgPYUg6kSl0aqYUTxoYjrWqBpjttytpzpBVpE2yiGR3a5c2LKX3vu8A8Wq2N3AuWO9X4GH3hXX8G2pTcF0dYT-WEPYfHHaD4EB2P8aE9oI8C1y3kgK0e8i0y4gEOg9Bp0vO86VuN0C6eHOp0Pq1IG6BWmgq1q0p6A0y4dP0ByiBi0wm2h0_G80_O3Y_W50_u5 Y_W70_u7Y_W90_G9Y_WA0_GB0__0W00)
+[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
 
 
-### 7.1. (continuación) - Código Kotlin
+### 7.1. Sistema de Biblioteca II
 
-**En Kotlin:**
+**Implementación en Kotlin:**
+
 ```kotlin
 data class Libro(val isbn: String, val titulo: String, 
                  val autor: String, var disponible: Boolean = true) {
@@ -689,10 +1246,10 @@ class Biblioteca(val nombre: String, val direccion: String) {
 }
 ```
 
-Note: Este ejemplo muestra una biblioteca con libros, usuarios, préstamos y relaciones de composición, asociación y agregación.
+Note: Este ejemplo muestra una biblioteca con libros, usuarios, préstamos y relaciones de composición, asociación y agregación. Código Kotlin que implementa el diagrama UML anterior. Observa la traducción directa: clases → class, atributos → propiedades, métodos → funciones, relaciones → referencias/colecciones.
 
 
-### 7.2. Sistema Universitario
+### 7.2. Sistema Universitario I
 
 ```plantuml
 @startuml
@@ -729,12 +1286,13 @@ Profesor "1" -- "*" Curso : imparte
 @enduml
 ```
 
-[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/bP9TQiCm48NlzodU8SYF61XbQT58CGGXPLA5cXjDcMcQyq6MxzqMM4pWqJQ-l_VdysFG6tMaHY26nBd68W5Gn4K9PW8n4LPBXq8PW9B4rHM9KH4GY9GCafxD20DY3GK5Q0Y9P4XGE5Y1PKPQ2HI5e0Pa1Pi1y3g8G8C5e0Ba1u4hK0hm3u4pg2hq2w5h82_m3O_W4Y_m5Y_W6Y_m7Y_W8Y_m9Y_W0Y_G0__000)
+[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
 
 
-### 7.2. (continuación) - Código Kotlin
+### 7.2. Sistema Universitario II
 
-**En Kotlin:**
+**Implementación en Kotlin:**
+
 ```kotlin
 abstract class Persona(val dni: String, var nombre: String, 
                        var apellido: String) {
@@ -766,11 +1324,10 @@ class Matricula(val estudiante: Estudiante, val curso: Curso,
     fun calcularNotaFinal() = notas.values.average()
 }
 ```
+Note: Sistema que modela estudiantes, cursos, profesores y matrículas con herencia de Persona. Código Kotlin que implementa el diagrama UML anterior. Observa la traducción directa: clases → class, atributos → propiedades, métodos → funciones, relaciones → referencias/colecciones.
 
-Note: Sistema que modela estudiantes, cursos, profesores y matrículas con herencia de Persona.
 
-
-### 7.3. Sistema de E-Commerce
+### 7.3. Sistema de E-Commerce I
 
 ```plantuml
 @startuml
@@ -812,12 +1369,17 @@ Usuario "1" -- "*" Orden : realiza
 @enduml
 ```
 
-[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/bLHDRzim3Bxl5u8zHJI5bO1XjTgYgf60CJPAYXqQ9I8QzUQIRdNRz-WlIhOKWAaZ2R_tUpRt-VpRbKbCH1aGkH0WGf3WeQKGH2WGf3WeQKGH3WeQKGH4WeQKG H5WeQKGH6WGf3WGf30__G0)
+[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
 
 
-### 7.3. (continuación) - Código Kotlin
+### 7.3. Sistema de E-Commerce II
 
-**En Kotlin:**
+Note: Sistema completo de tienda online con usuarios, productos, carritos y órdenes.
+
+
+
+**Implementación en Kotlin:**
+
 ```kotlin
 class Producto(val id: Int, var nombre: String, 
                var precio: Double, var stock: Int) {
@@ -855,11 +1417,12 @@ class Orden(val usuario: Usuario, items: List<ItemCarrito>) {
 }
 ```
 
-Note: Sistema completo de tienda online con usuarios, productos, carritos y órdenes.
+Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducción directa: clases → class, atributos → propiedades, métodos → funciones, relaciones → referencias/colecciones.
 
 ---
 
 ## 8. Herramientas para Crear Diagramas de Clases
+
 
 ### 8.1. Herramientas Online
 
@@ -894,7 +1457,7 @@ Note: Las herramientas de escritorio ofrecen funcionalidades avanzadas como gene
 Note: Los IDEs modernos incluyen herramientas UML integradas. IntelliJ IDEA puede generar diagramas de clases desde código existente automáticamente.
 
 
-### 8.4. PlantUML - Ejemplo
+### 8.4. PlantUML - Ejemplo I
 
 ```plantuml
 @startuml
@@ -913,9 +1476,15 @@ Persona <|-- Estudiante
 @enduml
 ```
 
-[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/JP4nJiGm48Nt_8gh7uW8HT_w0mj5Q5aH3A5IPijIslOjhlztq8Y91IxzvzlyI-v8MKCI92MP0f7eqVqh3JcEwfKe8Eay0dW0e3TW6CW1pU49nqKS3Ku8zUNQ7FNkDtlzqhp-D_50FxN7tqadm7dyqqrV88hHP7R_d95_83S00)
+[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
 
-**En Kotlin:**
+Note: PlantUML permite crear diagramas mediante código texto. Facilita control de versiones con git y automatización en CI/CD.
+
+
+### 8.4. PlantUML - Ejemplo II
+
+**Implementación en Kotlin:**
+
 ```kotlin
 open class Persona(private var nombre: String, private var edad: Int) {
     fun obtenerNombre() = nombre
@@ -927,7 +1496,63 @@ class Estudiante(nombre: String, edad: Int,
     : Persona(nombre, edad)
 ```
 
-Note: PlantUML permite crear diagramas mediante código texto. Facilita control de versiones con git y automatización en CI/CD.
+Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducción directa: clases → class, atributos → propiedades, métodos → funciones, relaciones → referencias/colecciones.
+
+---
+
+## 9. Puntos Clave: Resumen Rápido
+
+
+### 9.1. Notación Esencial
+
+* Clases: 3 zonas (Nombre, Atributos, Métodos)
+* Visibilidad: + público, - privado, # protegido
+* Subrayado: miembros estáticos
+* Cursiva: clases/métodos abstractos
+* / atributo derivado
+
+Note: Esta es la notación básica que debes dominar. El 90% de los diagramas usan solo estos elementos. Enfócate primero en estos antes de explorar notaciones más avanzadas.
+
+
+### 9.2. Relaciones: Cuándo usar cada una
+
+* **Herencia (▷)**: "Es un" - Perro es Animal
+* **Implementación (- -▷)**: Implementa contrato - Avion implementa IVolador
+* **Composición (♦)**: Parte de, vida dependiente - Motor en Coche
+* **Agregación (◇)**: Tiene, vida independiente - Jugador en Equipo
+* **Asociación (─)**: Conexión general - Cliente realiza Pedido
+* **Dependencia (- - →)**: Uso temporal - Servicio usa Logger
+
+Note: Usa este orden para decidir: primero pregúntate si es herencia, luego implementación, después composición/agregación, luego asociación, y finalmente dependencia. Cada tipo tiene un significado específico que se traduce directamente al código.
+
+
+### 9.3. Checklist Antes de Finalizar
+
+✅ Nombres significativos en todas las clases  
+✅ Multiplicidad especificada en todas las relaciones  
+✅ Tipos de datos en atributos y métodos  
+✅ Visibilidad en todos los miembros  
+✅ Roles nombrados cuando es necesario  
+✅ Sin cruces innecesarios de líneas  
+✅ Tamaño adecuado (no más de 15 clases por diagrama)  
+
+Note: Usa este checklist antes de dar un diagrama por terminado. Un diagrama profesional debe cumplir todos estos puntos. Si tienes más de 15 clases, considera dividir en varios diagramas o crear un diagrama de alto nivel con agrupaciones.
+
+
+### 9.4. Del Diagrama al Código
+
+El proceso típico es:
+
+1. **Clases** → Crear clases Kotlin
+2. **Atributos** → Propiedades con visibilidad
+3. **Métodos** → Funciones con implementación
+4. **Herencia** → `: SuperClase()`
+5. **Implementación** → `: Interfaz`
+6. **Composición** → inner class o inicialización
+7. **Agregación** → Propiedad nullable
+8. **Asociación** → Referencia o colección
+
+Note: Cada elemento del diagrama tiene una traducción directa a código. Herencia usa dos puntos y nombre de superclase. Implementación también usa dos puntos. Composición crea objetos dentro de la clase. Agregación usa propiedades nullables. Las asociaciones son referencias o colecciones.
 
 ---
 

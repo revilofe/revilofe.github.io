@@ -81,6 +81,11 @@ Note: El mismo diagrama de clases se usa en dos fases diferentes con objetivos d
 
 Note: Estos tres elementos son los pilares del diagrama. Las clases son los "actores principales", las relaciones muestran cómo interactúan, y las interfaces definen contratos de comportamiento.
 
+
+### 2.2. Herramientas para crear diagramas de clases
+Vamos a usar esta herramienta:
+![plantuml: https://editor.plantuml.com/uml](https://editor.plantuml.com/uml)
+
 ---
 
 ## 3. Clases
@@ -1078,6 +1083,7 @@ Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducc
 
 * Relación de uso temporal
 * Una clase usa otra pero no la contiene
+* Casos típicos son: parámetros de método, variables locales, creación, etc.
 * Representada con flecha discontinua (- - →)
 * Cambios en una clase pueden afectar a la otra
 * Ejemplo: Servicio - - → BaseDatos
@@ -1085,7 +1091,53 @@ Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducc
 Note: La dependencia es la relación más débil. Indica que una clase usa temporalmente otra, típicamente como parámetro de método.
 
 
-### 5.17. Implementación (Realización)
+### 5.17. Ejemplo de Dependencia I
+
+```plantuml
+@startuml
+class PedidoService {
+  +confirmar(): void
+}
+class EmailService {
+  +enviarConfirmacion(): void
+}
+
+PedidoService ..> EmailService : <<call>>
+@enduml
+```
+[![](https://img.plantuml.biz/plantuml/svg/LOun2iCm301tlK9ZIo4F2C44GlT2NY1a5GIo3NBg9VJl8P0Xtk-Ec-j6llsI0HlLYX-96iigtfG5Tq1ySSbVzKJ-U8xOYaRuN_0xaLh7IcvAlbm6Qyat2VhuC8I-CE8qCPc50BFaU4uT)](https://editor.plantuml.com/uml/LOun2iCm301tlK9ZIo4F2C44GlT2NY1a5GIo3NBg9VJl8P0Xtk-Ec-j6llsI0HlLYX-96iigtfG5Tq1ySSbVzKJ-U8xOYaRuN_0xaLh7IcvAlbm6Qyat2VhuC8I-CE8qCPc50BFaU4uT)
+
+Note: En este ejemplo, PedidoService depende de EmailService para enviar confirmaciones. La relación es débil y temporal. Es una dependencia típica donde un servicio utiliza otro para realizar una tarea específica, por tanto dependencia por uso.
+
+
+### 5.17. Ejemplo de Dependencia II
+
+**Implementación en Kotlin:**
+```Kotlin
+class PedidoService {
+    fun confirmar(emailService: EmailService) {
+        // Llama a una operación de EmailService (dependencia por llamada)
+        emailService.enviarConfirmacion()
+    }
+}
+
+class EmailService {
+    fun enviarConfirmacion() {
+        println("Enviando email de confirmación…")
+    }
+}
+
+// Uso
+fun main() {
+    val servicio = PedidoService()
+    servicio.confirmar(EmailService())
+}
+```
+
+Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducción directa: clases → class, atributos → propiedades, métodos → funciones, relaciones → referencias/colecciones. La dependencia se refleja en el parámetro del método confirmar() que recibe un EmailService para enviar la confirmación.
+
+
+### 5.18. Implementación (Realización)
 
 * Clase implementa una interfaz
 * La clase proporciona implementación concreta
@@ -1096,7 +1148,7 @@ Note: La dependencia es la relación más débil. Indica que una clase usa tempo
 Note: Esta relación indica que una clase concreta implementa todos los métodos definidos en una interfaz.
 
 
-### 5.18. Ejemplo de Implementación
+### 5.19. Ejemplo de Implementación I
 
 ```plantuml
 @startuml
@@ -1118,7 +1170,7 @@ IVolador <|.. Avion
 Note: Avion implementa IVolador proporcionando código concreto para los métodos volar() y aterrizar().
 
 
-### 5.18. Ejemplo de Implementación II
+### 5.19. Ejemplo de Implementación II
 
 **Implementación en Kotlin:**
 
@@ -1142,7 +1194,7 @@ class Avion(val modelo: String) : IVolador {
 Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducción directa: clases → class, atributos → propiedades, métodos → funciones, relaciones → referencias/colecciones.
 
 
-### 5.19. Resumen de Relaciones
+### 5.20. Resumen de Relaciones
 
 | Relación           | Símbolo  | Fuerza       |
 |--------------------|----------|--------------|
@@ -1156,7 +1208,7 @@ Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducc
 Note: Este cuadro resume los tipos de relaciones ordenados por fuerza de acoplamiento.
 
 
-### 5.20. Propiedades de las Relaciones: Resumen
+### 5.21. Propiedades de las Relaciones: Resumen
 
 * **Multiplicidad**: Cuántos objetos participan (1, 0..1, *, 1..*)
 * **Nombre**: Describe la relación (verbo)

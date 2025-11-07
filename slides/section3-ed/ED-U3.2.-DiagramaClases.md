@@ -162,11 +162,18 @@ Note: Los atributos definen el estado de los objetos de la clase. La visibilidad
 
 
 ### 3.2. Estructura de una clase IV
-**Métodos**:
+**Métodos**: I
 - Representan las operaciones o comportamientos de la clase.
 - Cada método tiene un nombre, parámetros, tipo de retorno y visibilidad.
 - Formato: `+ nombreMetodo(param1: Tipo1, param2: Tipo2): TipoRetorno`
 - Ejemplos: `+ calcularEdad(): Int`, `- jubilar(): Unit`.
+
+Note: Los métodos definen lo que los objetos de la clase pueden hacer. La visibilidad indica quién puede invocarlos. Es crucial elegir nombres claros y definir correctamente los parámetros y tipos de retorno para facilitar la comprensión y uso del código. Existen otros tipos especiales de métodos como los constructores y los métodos abstractos que tienen reglas específicas. Los constructores inicializan objetos y no tienen tipo de retorno. Los métodos abstractos se declaran en clases abstractas y no tienen implementación.
+
+
+### 3.2. Estructura de una clase V
+**Métodos**: II
+
 - Pueden tener parámetros opcionales y valores predeterminados.
 - Se recomienda usar nombres descriptivos y evitar abreviaciones.
 - Deben reflejar claramente la acción que realizan.
@@ -444,6 +451,7 @@ interface IVolador {
 [Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
 
 Note: Este ejemplo muestra una interfaz simple con tres métodos públicos que deben ser implementados por cualquier clase que la use. Interfaz = contrato sin estado. Los tres métodos son públicos (+) y obligan a cualquier clase implementadora a proporcionar comportamiento. 
+
 
 ### 4.3. Ejemplo: Interfaz IVolador II
 

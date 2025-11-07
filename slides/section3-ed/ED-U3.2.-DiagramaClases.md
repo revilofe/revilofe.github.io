@@ -328,6 +328,7 @@ class Coche(val marca: String, val modelo: String) {
 
 Note: En Kotlin, los miembros estáticos se implementan dentro de un `companion object`. Los atributos `posicionVolante` y `unidadDistancia` son compartidos por todos los objetos de la clase Coche. El método `configurarPorPais` es estático y afecta a estos atributos compartidos. El método `mostrarConfiguracion` es un método de instancia que puede acceder tanto a atributos de instancia como a los estáticos.
 
+
 ### 3.6. Atributos derivados 
 
 * Se calculan a partir de otros atributos
@@ -337,6 +338,7 @@ Note: En Kotlin, los miembros estáticos se implementan dentro de un `companion 
 * Reducen redundancia de datos
 
 Note: Los atributos derivados ahorran espacio y evitan inconsistencias. La edad cambia cada año, así que almacenarla sería problemático. Mejor calcularla cuando se necesite a partir de la fecha de nacimiento. En UML se marca con / para indicar que es derivado.
+
 
 ### 3.7. Ejemplo: Atributo Derivado I
 
@@ -436,8 +438,7 @@ interface IVolador {
 
 [Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
 
-Note: Este ejemplo muestra una interfaz simple con tres métodos públicos que deben ser implementados por cualquier clase que la use.
-
+Note: Este ejemplo muestra una interfaz simple con tres métodos públicos que deben ser implementados por cualquier clase que la use. Interfaz = contrato sin estado. Los tres métodos son públicos (+) y obligan a cualquier clase implementadora a proporcionar comportamiento. 
 
 ### 4.3. Ejemplo: Interfaz IVolador II
 
@@ -451,8 +452,7 @@ interface IVolador {
 }
 ```
 
-Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducción directa: clases → class, atributos → propiedades, métodos → funciones, relaciones → referencias/colecciones.
-
+Note: Código Kotlin que implementa el diagrama UML anterior. Traducción directa del contrato UML: interface con tres funciones. En Kotlin puedes omitir : Unit en procedimientos (volar, aterrizar). Recuerda que en Kotlin las interfaces pueden tener implementaciones por defecto, útiles para lógica común (p. ej., normalizar límites de altitud).
 
 
 ### 4.4. Clases abstractas
@@ -466,8 +466,121 @@ Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducc
 Note: Las clases abstractas representan conceptos generales que no tienen sentido por sí solos. No creas objetos de tipo "Figura", sino "Círculo" o "Cuadrado".
 
 
+### 4.5. Ejemplo: Clases abstractas I
 
-### 4.5. Diferencias con clases abstractas I
+```plantuml
+@startuml
+' Clase abstracta Figura
+abstract class Figura {
+  - id: int
+  # color: String
+  + x: int
+  + y: int
+
+  {abstract} + area(): double
+  {abstract} + perimetro(): double
+  {abstract} + dibujar(): void
+
+  + mover(dx: int, dy: int): void
+}
+@enduml
+
+```
+
+[![](https://img.plantuml.biz/plantuml/svg/TOz12i8m44NtESK75rRK2tHL4Bo09vWsGucaZKmcHIczkwar6y7Tv_t7VAQ9Ig9fy6QFYwV8e3QgKAU4g-kJa2a0NUxZbs8sm1dErd2Zvhn35toG6ZSLD_QP7F4ivH6lBUOybtjBnYHCrQ663Qdr_Di-MDp0Ak6_ObsRxYIhC0LdpMTi21DBPRVv4-msNfJ5D3pQzUKt)](https://editor.plantuml.com/uml/TOz12i8m44NtESK75rRK2tHL4Bo09vWsGucaZKmcHIczkwar6y7Tv_t7VAQ9Ig9fy6QFYwV8e3QgKAU4g-kJa2a0NUxZbs8sm1dErd2Zvhn35toG6ZSLD_QP7F4ivH6lBUOybtjBnYHCrQ663Qdr_Di-MDp0Ak6_ObsRxYIhC0LdpMTi21DBPRVv4-msNfJ5D3pQzUKt)
+
+Note: En el ejemplo representamos una clase abstracta Figura, en la que indicamos como que comportamiento tendrá la clase pero no indicamos como lo hará. Los metodos area, perimetro y dibujar son abstractos, mientras que mover tiene implementación.
+
+
+### 4.5. Ejemplo: Clases abstractas II
+
+**Implementación en Kotlin:**
+
+```kotlin
+// Figura abstracta
+abstract class Figura(
+  private val id: Int,         // UML: - id
+  protected var color: String, // UML: # color
+  var x: Int,                  // UML: + x
+  var y: Int                   // UML: + y
+) {
+  abstract fun area(): Double
+  abstract fun perimetro(): Double
+  abstract fun dibujar()
+
+  open fun mover(dx: Int, dy: Int) {
+    x += dx
+    y += dy
+  }
+
+  override fun toString(): String =
+    "Figura(id=$id, color=$color, x=$x, y=$y)"
+}
+
+// Circulo concreto
+class Circulo(
+  id: Int,
+  color: String,
+  x: Int,
+  y: Int,
+  private val radio: Double     // UML: - radio
+) : Figura(id, color, x, y) {
+
+  init {
+    require(radio > 0) { "El radio debe ser > 0." }
+  }
+
+  override fun area(): Double = Math.PI * radio * radio
+  override fun perimetro(): Double = 2 * Math.PI * radio
+
+  override fun dibujar() {
+    println("Dibujando Círculo en ($x,$y), radio=$radio, color=$color")
+  }
+}
+
+// Rectangulo concreto
+class Rectangulo(
+  id: Int,
+  color: String,
+  x: Int,
+  y: Int,
+  private val ancho: Double,    // UML: - ancho
+  private val alto: Double      // UML: - alto
+) : Figura(id, color, x, y) {
+
+  init {
+    require(ancho > 0 && alto > 0) { "Ancho y alto deben ser > 0." }
+  }
+
+  override fun area(): Double = ancho * alto
+  override fun perimetro(): Double = 2 * (ancho + alto)
+
+  override fun dibujar() {
+    println("Dibujando Rectángulo en ($x,$y), ${ancho}x${alto}, color=$color")
+  }
+}
+
+// --- Ejemplo de uso rápido ---
+fun main() {
+  val c = Circulo(id = 1, color = "rojo", x = 10, y = 5, radio = 2.5)
+  println("Área círculo: ${c.area()}")
+  println("Perímetro círculo: ${c.perimetro()}")
+  c.mover(3, -2)
+  c.dibujar()
+
+  val r = Rectangulo(id = 2, color = "azul", x = 0, y = 0, ancho = 4.0, alto = 2.0)
+  println("Área rectángulo: ${r.area()}")
+  println("Perímetro rectángulo: ${r.perimetro()}")
+  r.mover(-1, 4)
+  r.dibujar()
+}
+
+```
+
+Note: Implementación en Kotlin del UML de Figura. Traducción directa: {abstract}→abstract; +/#/-/~→public/protected/private/internal; atributos→propiedades (val/var); operaciones→funciones; generalización→herencia (:); asociaciones→referencias/colecciones (multiplicidad 1→objeto, 0..*→List); invariantes del modelo→require(...).
+
+
+### 4.6. Diferencias con clases abstractas I
 
 * **Interfaces**:
     - Solo métodos abstractos (sin implementación)
@@ -478,7 +591,7 @@ Note: Las clases abstractas representan conceptos generales que no tienen sentid
 Note: La diferencia clave es que las interfaces son contratos puros sin implementación. Java y Kotlin permiten implementar múltiples interfaces.
 
 
-### 4.6. Diferencias con clases abstractas II
+### 4.7. Diferencias con clases abstractas II
 
 * **Clases abstractas**:
     - Pueden tener métodos implementados
@@ -490,7 +603,7 @@ Note: Las clases abstractas pueden proporcionar implementación parcial, no solo
 
 ---
 
-## 5. Relaciones entre Clases e Interfaces
+## 5. Relaciones entre Clases/Interfaces
 
 
 ### 5.1. Tipos de relaciones
@@ -529,7 +642,7 @@ Empresa "1" -- "n" Empleado : Contrata >
 
 [Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
 
-Note: Una empresa contrata múltiples empleados. La multiplicidad indica "1 a n".
+Note: Asociación binaria en la que una empresa contrata múltiples empleados. La multiplicidad indica "1 a n". La flecha indica que Empresa conoce a Empleado, pero no necesariamente al revés.
 
 
 ### 5.3. Ejemplo de Asociación II
@@ -556,11 +669,11 @@ Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducc
 
 ### 5.4. Tipos de Asociación
 3 tipos principales de asociación:
-- Asociación Binaria: entre dos clases. Mas común
-- Asociación Reflexiva: una clase se relaciona consigo misma
-- Asociación N-aria: entre tres o más clases
+- **Binaria**: entre dos clases. Mas común
+- **Reflexiva**: una clase se relaciona consigo misma
+- **N-aria**: entre tres o más clases
 
-Note: Estos tres tipos cubren la mayoría de los casos de asociación en diagramas de clases. Cada uno tiene su propia notación y uso específico.
+Note: Estos tres tipos cubren la mayoría de los casos de asociación en diagramas de clases. 
 
 
 #### 5.4.1. Asociación Binaria
@@ -651,7 +764,7 @@ fun main() {
 Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducción directa: clases → class, atributos → propiedades, métodos → funciones, relaciones → referencias/colecciones.
 
 
-### 5.5. Multiplicidad (Cardinalidad)
+### 5.5. Multiplicidad
 
 | Notación     | Significado                       |
 |--------------|-----------------------------------|
@@ -662,7 +775,7 @@ Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducc
 | `n`          | Exactamente n (número específico) |
 | `m..n`       | Desde m hasta n                   |
 
-Note: La multiplicidad indica cuántos objetos participan en una relación. Es fundamental para entender las restricciones del dominio.
+Note: La multiplicidad indica cuántos objetos participan en una relación. Es fundamental para entender las restricciones del dominio. 
 
 
 ### 5.6. Navegabilidad

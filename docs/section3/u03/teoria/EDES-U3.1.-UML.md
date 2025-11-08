@@ -112,7 +112,7 @@ Los modelos o diagramas de UML nos ayudan a trabajar a un **mayor nivel de abstr
 
 **¿Qué significa abstracción?** Significa ignorar deliberadamente los detalles que no importan para el problema en cuestión, y enfocarse en lo que sí importa. Por ejemplo, cuando diseñamos un sistema de tienda online, podemos abstraer "cómo funciona el navegador web" y simplemente decir "hay un cliente que accede al sistema".
 
-#### 4.1. Independencia tecnológica
+#### 4.2. Independencia tecnológica
 
 Una de las características más poderosas de UML es que es **completamente independiente de la tecnología específica que uses**:
 

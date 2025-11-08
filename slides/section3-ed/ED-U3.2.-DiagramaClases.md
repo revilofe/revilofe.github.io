@@ -196,8 +196,7 @@ class Persona {
 }
 @enduml
 ```
-
-[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
+[![](https://img.plantuml.biz/plantuml/svg/LSun3i8m30NGFQVmI8MuGASECB1KI8W3k8ufHeaZ9Sw4k3jf9hg-__NrfsAOhSRWA60fSEDSaY9y7C09DCKbymXtow9hfoVJ2sSaYS9gQOGp6lU4svHFV-KZh6npdpWCEoSCL0FcYqU_HLUrxk-wIEED7YhclcvYzUtT3m00)](https://editor.plantuml.com/uml/LSun3i8m30NGFQVmI8MuGASECB1KI8W3k8ufHeaZ9Sw4k3jf9hg-__NrfsAOhSRWA60fSEDSaY9y7C09DCKbymXtow9hfoVJ2sSaYS9gQOGp6lU4svHFV-KZh6npdpWCEoSCL0FcYqU_HLUrxk-wIEED7YhclcvYzUtT3m00)
 
 Note: Este ejemplo muestra una clase simple con atributos privados y métodos públicos. La visibilidad se indica con + (público) y - (privado).
 

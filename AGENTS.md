@@ -245,13 +245,14 @@ A continuación explicamos el proceso de creación de presentaciones de diaposit
 Sigue concienzudamente estas REGLAS para GENERAR LAS SLIDES:
 
 - El contenido a generar son un conjunto de slides, formadas por grupos de slides denominadas  <<secciones>>, y dentro de cada sección hay varias slides relacionadas con la sección.
+- El título principal de las slides será de nivel 1 (#).
 - Las secciones comienzan con títulos de nivel dos  (##).
 - Las secciones contienen distintas slides que hablan sobre conceptos o contenido relacionado con el titulo de la sección.
 - El comienzo de un grupo de slides o sección, puede ser una sola slide con el titulo de la sección, sin ningún contenido mas.
 - Cada grupo de slides o sección se delimitará con una línea horizontal (---).
 - Usa --- solo para separar grupos de slides o sección
 - Cada slide de una sección ,en la que se tratará temas relacionados con la sección, continuará con títulos de nivel tres (###).
-- Una slide de un mismo grupo (misma sección) se separarán con 2 lineas en blanco de la siguiente slide, y se distinguirán por títulos sin números de slide. IMPORTANTE: No te olvides nunca las 2 lineas en blanco para separar las slides de un grupo de lides o seccion.
+- Una slide de un mismo grupo (misma sección) se separarán con 2 lineas en blanco de la siguiente slide. IMPORTANTE: No te olvides nunca las 2 lineas en blanco para separar las slides de un grupo de lides o seccion.
 - Una slide con contenido es: una lista de máximo siete viñetas, con tamaño de linea limitadas a 80 caracteres máximo.
 - Una slide con contenido tambien pueden contener código fuente en un determinado lenguaje de programación, en cuyo caso el codigo fuente incluirá comentarios sobre aclaraciones del código de ejemplo. Siempre que sea posible, introducelo.
 - Cuando se esá tratando un concepto o un área concreta de un punto de unidad, puede quedarse corto con solo una slide con contenido, en cuyo caso se podra generar una segunda, tercera, etc. slide con el mismo titulo e identificandolas con el mismo titulo pero con número romanos I, II, III, etc.
@@ -273,7 +274,7 @@ IMPORTANTE:
 Un ejemplo sería el siguiente:
 
             """""""
-            ## U4.1 - Kotlin Básico    
+            # U4.1 - Kotlin Básico    
 
             ---
 

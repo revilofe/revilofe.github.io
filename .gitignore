@@ -5,3 +5,4 @@ slides/node_modules/*
 /*.launch.sh
 /logs/*
 /.serena/*
+/.gemini/*

@@ -84,6 +84,10 @@ Aquí tienes acceso directo a todas las presentaciones disponibles, organizadas 
 * [ED-U1.1 - Software y Hardware](https://revilofe.github.io/slides/section3-ed/ED-U1.1.-Software-Hardware.html)
 * [ED-U1.2 - Código Fuente, Objeto y Ejecutable](https://revilofe.github.io/slides/section3-ed/ED-U1.2.-CodigoFuenteObjetoEjecutable.html)
 
+#### Unidad 3 - Diseño y Diagramas de Clases
+
+* [ED-U3.3 - Identificación de Clases](https://revilofe.github.io/slides/section3-ed/ED-U3.3.-IdentifClases.html)
+
 #### Unidad 5 - Pruebas y Calidad
 
 * [ED-U5.1 - Pruebas](https://revilofe.github.io/slides/section3-ed/ED-U5.1.-Pruebas.html)

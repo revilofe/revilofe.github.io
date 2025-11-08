@@ -256,6 +256,9 @@ Los estudiantes deberán demostrar su comprensión de:
 
 #### Documentación de la unidad:
 - **3.1.-Introducción a UML**: Fundamentos, historia, tipos de diagramas
+
+    - [Ver slides](https://revilofe.github.io/slides/section3-ed/ED-U3.1.-UML.html)
+
 - **3.2.-Diagrama de clases**: Notación, elementos, relaciones
 
      - [Ver slides](https://revilofe.github.io/slides/section3-ed/ED-U3.2.-DiagramaClases.html)

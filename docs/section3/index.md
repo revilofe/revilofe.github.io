@@ -32,6 +32,7 @@ Todo el contenido está supeditado a mejora, de hecho está en construcción, y 
 
 #### Unidad 3 - Diseño y Diagramas de Clases
 
+* [ED-U3.1 - UML](https://revilofe.github.io/slides/section3-ed/ED-U3.1.-UML.html)
 * [ED-U3.2 - Diagrama de Clases](https://revilofe.github.io/slides/section3-ed/ED-U3.2.-DiagramaClases.html)
 * [ED-U3.3 - Identificación de Clases](https://revilofe.github.io/slides/section3-ed/ED-U3.3.-IdentifClases.html)
 

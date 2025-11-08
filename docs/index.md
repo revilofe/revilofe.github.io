@@ -86,6 +86,8 @@ Aquí tienes acceso directo a todas las presentaciones disponibles, organizadas 
 
 #### Unidad 3 - Diseño y Diagramas de Clases
 
+* [ED-U3.1 - Identificación de Clases](https://revilofe.github.io/slides/section3-ed/ED-U3.1.-UML.html)
+* [ED-U3.2 - Identificación de Clases](https://revilofe.github.io/slides/section3-ed/ED-U3.2.-DiagramaClases.html)
 * [ED-U3.3 - Identificación de Clases](https://revilofe.github.io/slides/section3-ed/ED-U3.3.-IdentifClases.html)
 
 #### Unidad 5 - Pruebas y Calidad

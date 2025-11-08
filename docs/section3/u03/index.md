@@ -30,6 +30,7 @@ toc_icon: "file-code"
 Esta unidad está alineada con la normativa del curso **"Entornos de Desarrollo"** del ciclo formativo de **Desarrollo de Aplicaciones Web**, teniendo como base el **Resultado de Aprendizaje (RA) 5** y sus **Criterios de Evaluación (CE)**. El objetivo principal es que los estudiantes generen diagramas de clases valorando su importancia en el desarrollo de aplicaciones y empleando herramientas específicas.
 
 **Referencias normativas**:
+
 - [Real Decreto 686/2010, de 20 de mayo](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2010-9269) - Título de Técnico Superior en Desarrollo de Aplicaciones Web
 - [Orden de 16 de junio de 2011](https://www.todofp.es/dam/jcr:c198771c-775e-469b-936f-5f5ef6af165a/andtsdesarrollo-aplicaciones-web-pdf.pdf) - Currículo del ciclo formativo
 
@@ -40,6 +41,7 @@ Esta unidad está alineada con la normativa del curso **"Entornos de Desarrollo"
 - **RA 5**: **Genera diagramas de clases valorando su importancia en el desarrollo de aplicaciones y empleando herramientas específicas**.
 
 Este resultado de aprendizaje se enfoca en proporcionar al estudiante las competencias necesarias para:
+
 - Comprender los fundamentos de la programación orientada a objetos
 - Utilizar UML como lenguaje de modelado estándar
 - Elaborar e interpretar diagramas de clases
@@ -81,9 +83,9 @@ En esta unidad se trabajarán los siguientes **criterios de evaluación** relaci
 
 En esta sección se describen los contenidos que se impartirán en la Unidad 3, teniendo en cuenta la normativa del curso y los criterios de evaluación.
 
-- La unidad pertenece al **Bloque 5: Elaboración de diagramas de clases**.
+- La unidad pertenece al **Bloque 3: Elaboración de diagramas:**.
 
-**U3: Diseño y Diagramas de Clases**
+    * **U3: Diseño y Diagramas de Clases**
 
 Durante la **Unidad 3**, trabajaremos los siguientes contenidos:
 
@@ -100,6 +102,7 @@ Durante la **Unidad 3**, trabajaremos los siguientes contenidos:
 #### 4.2. Diagrama de Clases (CE 5.b, 5.c, 5.d)
 
 **Elementos fundamentales**:
+
 - Clases: estructura (nombre, atributos, métodos)
 - Visibilidad (+, -, #, ~)
 - Atributos: tipos, valores iniciales, atributos estáticos
@@ -107,6 +110,7 @@ Durante la **Unidad 3**, trabajaremos los siguientes contenidos:
 - Clases abstractas e interfaces
 
 **Tipos de relaciones**:
+
 - Asociación: binaria, reflexiva, n-aria
 - Agregación (◇): relación "tiene un" (partes independientes)
 - Composición (♦): relación "es parte de" (partes dependientes)
@@ -115,6 +119,7 @@ Durante la **Unidad 3**, trabajaremos los siguientes contenidos:
 - Implementación (- - ▷): realización de interfaces
 
 **Conceptos adicionales**:
+
 - Multiplicidad y cardinalidad (1, 0..1, *, 1..*)
 - Roles en las relaciones
 - Navegabilidad
@@ -125,63 +130,31 @@ Durante la **Unidad 3**, trabajaremos los siguientes contenidos:
 - Análisis de sustantivos en requisitos
 - Identificación de clases candidatas
 - Descarte de candidatas inapropiadas:
-  - Clases redundantes
-  - Nombres imprecisos
-  - Eventos u operaciones
-  - Metalenguaje
-  - Fuera del alcance
-  - Atributos simples
+
+    - Clases redundantes
+    - Nombres imprecisos
+    - Eventos u operaciones
+    - Metalenguaje
+    - Fuera del alcance
+    - Atributos simples
 
 **Proceso de selección**:
+
 - Relevancia al problema
 - Eliminación de redundancias
 - Agrupación de características
 - Consideración de clases implícitas
 
 **Representación UML**:
+
 - Notación gráfica estándar
 - Ejemplos prácticos en Kotlin
 
 #### 4.4. Acoplamiento y Cohesión (CE 5.a, 5.d)
 
 **Cohesión** (7 niveles de menor a mayor calidad):
-1. Cohesión coincidental (la peor)
-2. Cohesión lógica
-3. Cohesión temporal
-4. Cohesión procedimental
-5. Cohesión comunicacional
-6. Cohesión secuencial
-7. Cohesión funcional (la mejor)
-
 **Acoplamiento** (5 tipos de mayor a menor):
-1. Acoplamiento de contenido (el peor)
-2. Acoplamiento común
-3. Acoplamiento externo
-4. Acoplamiento de control
-5. Acoplamiento de datos (el mejor)
-
 **Principios de diseño**:
-- Alta cohesión: módulos con propósito único y bien definido
-- Bajo acoplamiento: minimizar dependencias entre módulos
-- Métricas: LCOM, Ca, Ce, Inestabilidad (I)
-- Estrategias de refactorización
-
-#### 4.5. Herramientas de Modelado (CE 5.b, 5.e, 5.f)
-
-**Herramientas de diagramación**:
-- **Online**: Draw.io, Lucidchart, PlantUML Online
-- **Desktop**: Visual Paradigm, StarUML, Enterprise Architect
-- **Integradas en IDEs**: IntelliJ IDEA, Eclipse, Visual Studio
-
-**Generación de código** (Forward Engineering):
-- Generación automática desde diagramas
-- Configuración de plantillas
-- Mantenimiento de sincronización
-
-**Ingeniería inversa** (Reverse Engineering):
-- Extracción de diagramas desde código Kotlin/Java
-- Herramientas de análisis estático
-- Actualización de modelos
 
 ---
 
@@ -231,12 +204,14 @@ Para evaluar la adquisición de los criterios de evaluación, se propondrán las
 Al final de la unidad, se realizará una **prueba de evaluación** que incluirá:
 
 **Parte teórica** (40%):
+
 - Conceptos fundamentales de UML y POO
 - Tipos de relaciones en diagramas de clases
 - Principios de cohesión y acoplamiento
 - Interpretación de notación UML
 
 **Parte práctica** (60%):
+
 - Elaboración de diagrama de clases a partir de requisitos
 - Identificación de errores en diagramas existentes
 - Análisis de código para determinar niveles de cohesión y acoplamiento
@@ -244,6 +219,7 @@ Al final de la unidad, se realizará una **prueba de evaluación** que incluirá
 - Preguntas de opción múltiple sobre herramientas y mejores prácticas
 
 Los estudiantes deberán demostrar su comprensión de:
+
 - Los conceptos básicos de la programación orientada a objetos
 - La notación UML para diagramas de clases
 - Las técnicas de identificación de clases
@@ -255,13 +231,14 @@ Los estudiantes deberán demostrar su comprensión de:
 ### 7. Recursos y Materiales
 
 #### Documentación de la unidad:
+
 - **3.1.-Introducción a UML**: Fundamentos, historia, tipos de diagramas
 
     - [Ver slides](https://revilofe.github.io/slides/section3-ed/ED-U3.1.-UML.html)
 
 - **3.2.-Diagrama de clases**: Notación, elementos, relaciones
 
-     - [Ver slides](https://revilofe.github.io/slides/section3-ed/ED-U3.2.-DiagramaClases.html)
+    - [Ver slides](https://revilofe.github.io/slides/section3-ed/ED-U3.2.-DiagramaClases.html)
 
 - **3.3.-Identificación de clases**: Técnicas y ejemplos prácticos
 
@@ -307,13 +284,15 @@ Los estudiantes deberán demostrar su comprensión de:
 ### 9. Conexión con Otras Unidades
 
 **Unidades previas**:
+
 - **U1**: Fundamentos del desarrollo de software → Base conceptual
 - **U2**: Entornos de desarrollo integrado → Herramientas de modelado en IDEs
 
 **Unidades posteriores**:
-- **U4**: Control de versiones y documentación → Documentar diseños
+
+- **U4**: Diagramas de comportamiento → Complemento al diseño estático
 - **U5**: Pruebas y depuración → Diseñar para facilitar pruebas
-- **U6**: Diagramas de comportamiento → Complemento al diseño estático
+- **U6**: Control de versiones y documentación → Documentar diseños
 
 ---
 

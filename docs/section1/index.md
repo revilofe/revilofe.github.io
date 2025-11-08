@@ -42,6 +42,7 @@ Módulo de programación, 1 DAW.
 * [PR-U3.3 - Diccionarios](https://revilofe.github.io/slides/section1-pr/PR-U3.3.-Diccionarios.html)
 * [PR-U3.4 - Conjuntos](https://revilofe.github.io/slides/section1-pr/PR-U3.4.-Conjuntos.html)
 * [PR-U3.5 - Funciones](https://revilofe.github.io/slides/section1-pr/PR-U3.5.-Funciones.html)
+* [PR-U3.10 - Iteradores](https://revilofe.github.io/slides/section1-pr/PR-U3.10.-Iteradores.html)
 
 ### Unidad 4 - Kotlin
 * [PR-U4.1 - Kotlin Básico](https://revilofe.github.io/slides/section1-pr/PR-U4.1.-KotlinBasico.html)

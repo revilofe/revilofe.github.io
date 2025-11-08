@@ -1,22 +1,3 @@
----
-title: "UD 3 - 3.3 Identificación de Clases"
-description: Identificación de Clases en UML
-summary: Técnicas, métodos y buenas prácticas para identificar clases a partir de requisitos
-authors:
-    - Eduardo Fdez
-date: 2025-11-08
-icon:
-permalink: /slides/section3-ed/ED-U3.3.-IdentifClases.html
-categories:
-    - EDES
-tags:
-    - EDES
-    - UML
-    - Identificación de Clases
-    - Análisis
-    - Buenas Prácticas
----
-
 # U3.3 - Identificación de Clases y Buenas Prácticas
 
 ---

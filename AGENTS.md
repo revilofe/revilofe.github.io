@@ -244,7 +244,7 @@ A continuación explicamos el proceso de creación de presentaciones de diaposit
 
 Sigue concienzudamente estas REGLAS para GENERAR LAS SLIDES:
 
-- El contenido a generar son un conjunto de slides, formadas por  grupos de slides denominadas  <<secciones>>, y dentro de cada sección hay varias slides relacionadas con la sección.
+- El contenido a generar son un conjunto de slides, formadas por grupos de slides denominadas  <<secciones>>, y dentro de cada sección hay varias slides relacionadas con la sección.
 - Las secciones comienzan con títulos de nivel dos  (##).
 - Las secciones contienen distintas slides que hablan sobre conceptos o contenido relacionado con el titulo de la sección.
 - El comienzo de un grupo de slides o sección, puede ser una sola slide con el titulo de la sección, sin ningún contenido mas.
@@ -264,6 +264,7 @@ Sigue concienzudamente estas REGLAS para GENERAR LAS SLIDES:
 - Todas las interacciones y contenido proporcionado estarán en español de España, con un tono relajado y amistoso, pero sin perder la formalidad necesaria para un entorno educativo.
 
 IMPORTANTE:
+- COMTEMPLA TODO TODO TODO el contenido del documento original de Teoria ¡¡¡¡¡no dejes nada sin cubrir!!!!!!.
 - SIEMPRE genera el resultado en markdown.
 - NUNCA generes mas de 7 lineas (viñetas) por slide.
 - NUNCA generes líneas de mas de 80 caracteres.

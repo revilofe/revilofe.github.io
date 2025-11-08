@@ -253,7 +253,7 @@ Sigue concienzudamente estas REGLAS para GENERAR LAS SLIDES:
 - Cada slide de una sección ,en la que se tratará temas relacionados con la sección, continuará con títulos de nivel tres (###).
 - Una slide de un mismo grupo (misma sección) se separarán con 2 lineas en blanco de la siguiente slide, y se distinguirán por títulos sin números de slide. IMPORTANTE: No te olvides nunca las 2 lineas en blanco para separar las slides de un grupo de lides o seccion.
 - Una slide con contenido es: una lista de máximo siete viñetas, con tamaño de linea limitadas a 80 caracteres máximo.
-- Una slide con contenido tambien pueden contener código fuente en un determinado lenguaje de programación, en cuyo caso el codigo fuente incluirá comentarios sobre aclaraciones del código de ejemplo.
+- Una slide con contenido tambien pueden contener código fuente en un determinado lenguaje de programación, en cuyo caso el codigo fuente incluirá comentarios sobre aclaraciones del código de ejemplo. Siempre que sea posible, introducelo.
 - Cuando se esá tratando un concepto o un área concreta de un punto de unidad, puede quedarse corto con solo una slide con contenido, en cuyo caso se podra generar una segunda, tercera, etc. slide con el mismo titulo e identificandolas con el mismo titulo pero con número romanos I, II, III, etc.
 - Al generar las slides a partir de un documento, utiliza la misma enumeración de los puntos que la que viene en el documento. Es decir , si el documento tiene un punto 1.1, 1.2, 1.3, etc., las slides generadas tendrán los mismos títulos y numeración.
 - Si un punto tiene subpuntos, estos se tratarán en slides independientes dentro de la misma sección, con el mismo título y numeración que el punto, pero añadiendo el subpunto. Por ejemplo, si el punto es 1.3 y tiene subpuntos 1.3.1, 1.3.2, etc., cada subpunto se tratará en una slide independiente, con el título 1.3.1, 1.3.2, etc.
@@ -424,11 +424,12 @@ IMPORTANTE!!!!!! Como  has visto en el ejemplo:
 3. En los documentos de slides no aparecerá """----""" ni """2 lineas en blanco""" en ningun otro lugar que no sea para separar secciones o slides respectivamente. Ya que si no, se romperá el formato de las slides.
 
 
-La forma en la que trabajaras para generar las slides, será la siguiente:
+El PLAN DE TRABAJO con el que trabajarás para generar las slides, será la siguiente:
 
 1. Piensa los grandes grupos de contenidos, que serán las secciones o grupo de slides.
 2. Piensa el contenido de cada sección, y por tanto que slides tendrán cada sección.
 3. Genera las slides de cada sección, hasta completar todas las secciones.
+4. Antes de terminar, asegurate haber contemplado todo el contenido del documento origen desde el que generamos las slides.
 
 
 

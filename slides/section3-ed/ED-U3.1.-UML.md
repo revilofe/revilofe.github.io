@@ -7,21 +7,23 @@
 
 ---
 
-## Índice
+## Índice I
 
-* 1. Introducción a UML
-* 2. ¿Qué es UML?
-* 3. Importancia en el Ciclo de Vida del Software
-* 4. ¿Por qué usar UML?
-* 5. Características de UML
-* 6. Ventajas y Desventajas
-* 7. Diagramas UML
-* 8. Historia de UML
-* 9. Alternativas a UML
-* 10. Principios de buen modelado
-* 11. Herramientas de modelado
-* 12. UML en Desarrollo Ágil
-* 13. Conclusiones
+1. Introducción a UML
+2. Importancia en el Ciclo de Vida
+3. ¿Por qué usar UML?
+4. Características de UML
+5. Ventajas y Desventajas
+6. Diagramas UML
+## Índice I
+
+8. Historia de UML
+9. Alternativas a UML
+10. Principios de Buen Modelado
+11. Herramientas de Modelado UML
+12. UML en el Desarrollo Ágil
+13. Conclusiones
+14. Recursos y Referencias
 
 ---
 
@@ -197,6 +199,16 @@ Note: Los diagramas estructurales son como una radiografía del sistema. Nos ens
 * **Diagrama de Máquina de Estados**: Ciclo de vida de un objeto.
 
 Note: Si los diagramas estructurales son la anatomía, los de comportamiento son la fisiología. Muestran el sistema en acción. El de Casos de Uso es vital para entender qué quiere el cliente. El de Secuencia es perfecto para desenredar flujos complejos. El de Actividades es ideal para modelar procesos de negocio.
+
+---
+
+### 7 . Diagramas UML en la Práctica
+
+Antes de continuar veamos algunos ejemplos prácticos de diagramas UML comunes.
+
+#### [Diagrmas en PlantUML](https://plantuml.com/es/)
+
+Note: PlantUML es una herramienta fantástica para crear diagramas UML a partir de texto. Permite versionar los diagramas junto con el código y es muy fácil de integrar en documentación técnica. Aquí tenéis algunos ejemplos básicos de cómo se ven los diagramas en PlantUML.
 
 ---
 

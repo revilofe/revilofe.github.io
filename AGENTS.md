@@ -103,6 +103,15 @@ Todas las presentaciones HTML incluyen:
 
 **Referencias a las slides desde `docs/`:**
 
+Cada vez que añada una nueva slide o presentación, deberá actualizar las referencias en la documentación. Suponiendo que añadimos el punto Y de la unidad X de la sectionZ, lo normal es que quede enlaza en los distintos index.md afectados:
+- doc/index.md (índice principal del repositorio)
+- docs/sectionZ/index.md (índice del módulo)
+- docs/sectionZ/uXX/index.md (índice de la unidad)
+- docs/sectionZ/uXX/teoria/MODULO-UX.Y.-Tema.md (al final del documento de teoría correspondiente)
+- docs/sectionZ/uXX/practica/MODULO-UX.-PracticaYYY.md (al final del documento de práctica correspondiente)
+
+
+
 Las referencias a presentaciones desde la documentación usan URLs absolutas:
 - `https://revilofe.github.io/slides/section1-pr/PR-UX.Y.-NombreArchivo.html`
 - `https://revilofe.github.io/slides/section2-is/IS-UX.Y.-NombreArchivo.html`

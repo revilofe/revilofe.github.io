@@ -1,0 +1,69 @@
+::RA_6.CE_d. ¿Qué es un objeto iterable en Python?::{
+=Un objeto que puede devolver sus elementos uno por uno. #Correcto, un iterable es cualquier objeto que se puede recorrer, como listas, tuplas o cadenas.
+~%-33.3333%Un objeto que solo puede ser una lista. #Incorrecto, aunque las listas son iterables, no son el único tipo. Tuplas, diccionarios y otros también lo son.
+~%-33.3333%Un objeto que implementa únicamente el método __next__(). #Incorrecto, un iterable debe implementar __iter__(), que devuelve un iterador. El iterador es el que implementa __next__().
+~%-33.3333%Un objeto que no se puede usar en un bucle for. #Incorrecto, la principal característica de un iterable es que se puede usar en un bucle for.
+}
+
+::RA_6.CE_d. ¿Qué método debe implementar un objeto para ser considerado un iterador?::{
+=Los métodos __iter__() y __next__(). #Correcto, este es el protocolo del iterador. __iter__() devuelve el propio iterador y __next__() el siguiente elemento.
+~%-33.3333%Solo el método __iter__(). #Incorrecto, __iter__() es para objetos iterables. Un iterador necesita también __next__() para devolver los elementos.
+~%-33.3333%Solo el método __next__(). #Incorrecto, necesita también __iter__() para ser compatible con herramientas como el bucle for.
+~%-33.3333%El método start(). #Incorrecto, no existe un método start() en el protocolo del iterador.
+}
+
+::RA_6.CE_d. ¿Qué excepción se lanza cuando un iterador no tiene más elementos que devolver?::{
+=StopIteration #Correcto, esta excepción le indica al bucle for (o al código que lo maneje) que la iteración ha finalizado.
+~%-33.3333%IndexError #Incorrecto, IndexError se lanza cuando se intenta acceder a un índice de secuencia que no existe.
+~%-33.3333%KeyError #Incorrecto, KeyError se lanza cuando se busca una clave en un diccionario y no se encuentra.
+~%-33.3333%EndOfIterator #Incorrecto, no es una excepción estándar de Python para iteradores.
+}
+
+::RA_6.CE_d. ¿Cómo obtiene un bucle for el iterador de una lista?::{
+=Llamando a la función iter() sobre la lista. #Correcto, el bucle for invoca internamente a iter(mi_lista) para obtener el objeto iterador.
+~%-33.3333%Accediendo directamente a una propiedad .iterator. #Incorrecto, no existe tal propiedad en las listas.
+~%-33.3333%Creando una copia de la lista. #Incorrecto, el bucle no necesita una copia, trabaja sobre un iterador del objeto original.
+~%-33.3333%Usando el método get_iterator(). #Incorrecto, el método estándar es la función `iter()`.
+}
+
+::RA_6.CE_d. ¿Cuál es una de las principales ventajas de los iteradores?::{
+=Son eficientes en el uso de memoria porque son "perezosos" (lazy). #Correcto, los iteradores generan valores bajo demanda, sin necesidad de cargar toda la secuencia en memoria.
+~%-33.3333%Son más rápidos que los bucles for. #Incorrecto, los bucles for usan iteradores internamente, por lo que la velocidad es comparable. La ventaja principal es la memoria.
+~%-33.3333%Solo funcionan con listas. #Incorrecto, funcionan con cualquier tipo de objeto iterable.
+~%-33.3333%Almacenan todos los elementos en una caché para un acceso rápido. #Incorrecto, lo contrario es cierto. No almacenan los elementos, los generan al momento.
+}
+
+::RA_6.CE_d. Si tienes un iterador `mi_iterador`, ¿cómo obtienes el siguiente elemento?::{
+=Usando `next(mi_iterador)`. #Correcto, la función `next()` es la forma estándar de solicitar el siguiente elemento a un iterador.
+~%-33.3333%Usando `mi_iterador.next()`. #Incorrecto, aunque en Python 2 era un método, en Python 3 se usa la función global `next()`.
+~%-33.3333%Usando `mi_iterador[0]`. #Incorrecto, los iteradores no soportan acceso por índice.
+~%-33.3333%Usando un bucle for. #Incorrecto, un bucle for consume el iterador completo, no solo el siguiente elemento.
+}
+
+::RA_6.CE_d. ¿Cuál de los siguientes objetos NO es un iterable?::{
+=Un número entero (int). #Correcto, un entero es un valor único y no se puede iterar sobre él.
+~%-33.3333%Una cadena de texto (str). #Incorrecto, las cadenas son iterables y devuelven sus caracteres uno por uno.
+~%-33.3333%Un diccionario (dict). #Incorrecto, los diccionarios son iterables (por defecto, sobre sus claves).
+~%-33.3333%Un conjunto (set). #Incorrecto, los conjuntos son iterables.
+}
+
+::RA_6.CE_d. ¿Qué hace el método `__iter__()` en un objeto iterador?::{
+=Devuelve el propio objeto iterador. #Correcto, esto permite que los iteradores se puedan usar en contextos donde se espera un iterable.
+~%-33.3333%Devuelve el primer elemento de la secuencia. #Incorrecto, para eso está `next()`.
+~%-33.3333%Reinicia el iterador al principio de la secuencia. #Incorrecto, los iteradores estándar son de un solo uso. Para reiniciar, se debe crear un nuevo iterador.
+~%-33.3333%Devuelve la lista completa de elementos. #Incorrecto, eso iría en contra de la evaluación "perezosa" y la eficiencia de memoria.
+}
+
+::RA_6.CE_d. En un escenario con un archivo de 10 GB de datos, ¿por qué sería preferible usar un iterador para procesarlo línea por línea?::{
+=Porque no carga todo el archivo en la memoria RAM a la vez. #Correcto, un iterador leerá el archivo línea por línea, manteniendo el uso de memoria bajo y constante.
+~%-33.3333%Porque es la única forma de leer archivos en Python. #Incorrecto, se puede usar `read()` o `readlines()`, pero cargarían todo el archivo en memoria.
+~%-33.3333%Porque los iteradores tienen una velocidad de lectura superior. #Incorrecto, la velocidad de lectura del disco es la misma. La ventaja es la eficiencia de memoria.
+~%-33.3333%Porque los iteradores pueden procesar el archivo en paralelo automáticamente. #Incorrecto, la iteración es un proceso secuencial por defecto.
+}
+
+::RA_6.CE_d. ¿Qué pasa si llamas a `iter()` sobre un objeto que ya es un iterador?::{
+=Devuelve el mismo iterador. #Correcto, gracias a que los iteradores implementan `__iter__()` devolviéndose a sí mismos, son compatibles con contextos que esperan un iterable.
+~%-33.3333%Lanza una excepción `TypeError`. #Incorrecto, es una operación válida.
+~%-33.3333%Crea un nuevo iterador desde el principio. #Incorrecto, no se reinicia.
+~%-33.3333%Devuelve `None`. #Incorrecto, devuelve el propio iterador.
+}

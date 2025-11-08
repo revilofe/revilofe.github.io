@@ -91,28 +91,144 @@ Los archivos HTML dentro de los subdirectorios de módulos utilizan rutas relati
 - `href="../custom.css"` para CSS personalizado
 - Las referencias a assets dentro del mismo módulo usan rutas relativas: `assets/imagen.png`
 
+**Configuración de las presentaciones:**
+
+Todas las presentaciones HTML incluyen:
+- `custom.css`: CSS personalizado que fuerza la visualización de la barra de progreso y los números de diapositiva (ubicado en `slides/custom.css`)
+- Configuración en `Reveal.initialize()`:
+  - `margin: 0.1` - Margen del 10% alrededor del contenido
+  - `progress: true` - Barra de progreso visible
+  - `slideNumber: 'c/t'` - Número de diapositiva actual/total
+  - `showSlideNumber: 'all'` - Mostrar en todas las diapositivas
+
+**Referencias a las slides desde `docs/`:**
+
+Las referencias a presentaciones desde la documentación usan URLs absolutas:
+- `https://revilofe.github.io/slides/section1-pr/PR-UX.Y.-NombreArchivo.html`
+- `https://revilofe.github.io/slides/section2-is/IS-UX.Y.-NombreArchivo.html`
+- `https://revilofe.github.io/slides/section3-ed/ED-UX.Y.-NombreArchivo.html`
+- `https://revilofe.github.io/slides/section4-daw/DAW-UX.Y.-NombreArchivo.html`
+
+**Gestión de assets:**
+
+Cada módulo tiene su propia carpeta `assets/` con las imágenes específicas del módulo. Los archivos compartidos entre módulos (como logos) se duplican en cada carpeta assets correspondiente para mantener la independencia de cada módulo.
+
+### 1.3. Otros directorios
+
+- **includes/**: Archivos reutilizables (abreviaturas, snippets)
+- **mkdocs.yml**: Configuración del sitio MkDocs
+
+## 2. Patrón de Documentación
+
+### 2.1. Público objetivo
+
+La documentación está dirigida a **alumnos y alumnas** de formación profesional. Debe ser:
+
+- **Didáctica**: Explicar conceptos de forma progresiva
+- **Clara**: Usar lenguaje sencillo y directo
+- **Práctica**: Incluir ejemplos y ejercicios
+- **Inclusiva**: Usar lenguaje no sexista (alumnos y alumnas, estudiantes)
+
+### 2.2. Estructura de documentos teóricos
+
+Los archivos de teoría (`teoria/`) deben seguir esta estructura:
+
+```markdown
+
+---
+title: "UD X - X.Y Título del tema"
+description: Breve descripción
+summary: Resumen corto
+authors:
+    - Eduardo Fdez
+date: YYYY-MM-DD
+icon: 
+permalink: /modulo/unidadX/X.Y
+categories:
+    - MODULO
+tags:
+    - Tag1
+    - Tag2
+---
+
+## X.Y. Título del tema
+
+[Introducción al tema que explique el contexto y objetivo]
+
+### 1. Primer concepto
+
+[Explicación clara del concepto]
+
+Es un texto de explicativo de como generar la documentación siguiendo este patrón:
+- Ser claro y concisos.
+    - Usar listas para organizar ideas, pero no abusar de ellas.
+        - Asegurarse de que cada punto aporta valor.
+        - Dividir el contenido en secciones lógicas.
+    - Incluir definiciones cuando sea necesario.
+- Incluir ejemplos visuales.
+- Usar subtítulos para organizar la información.
+
+Tambien se pueden incluir listas de numeradas:
+1. Primer punto importante
+2. Segundo punto relevante
+   
+    - Y anidar las viñetas si es necesario
+    
+3. Tercer punto clave
+
+
+- Se pueden incluir citas en bloque para resaltar definiciones o ideas clave:
+> La programación es el proceso de crear un conjunto de instrucciones que le dicen a una computadora cómo
+
+Se pueden incluir bloques de código para ilustrar ejemplos prácticos:
+
+También es importante incluir imágenes o diagramas para ilustrar conceptos complejos.
+
+[Ejemplos si procede]
+
+<figure markdown>   
+  ![](assets/nombre-imagen.png)   
+  <figcaption>Descripción de la imagen</figcaption>   
+</figure>
+
+#### 1.1. Subconcepto o ejemplo práctico
+
+[Explicación detallada del subconcepto]
+
+
+### 2. Segundo concepto
+
+[Continuar con estructura similar]
+```
+
+
+### 2.3. Etructura de las Slides
+
+Los archivos de slides (`slides/`) se explican a continuación:
+
+
 **Formato de las slides**
-A continuación explicamos el proceso de creación de presentaciones de diapositivas sobre contendios, que normalmente serán de los módulos de informática. Generará slides siguiendo una estructura de markdown precisa (MUY IMPORTANTE SEGUIR LA NOTACIÓN MARKDOWN).
+A continuación explicamos el proceso de creación de presentaciones de diapositivas sobre contenidos, que normalmente serán de los módulos de informática. Generará slides siguiendo una estructura de markdown precisa (MUY IMPORTANTE SEGUIR LA NOTACIÓN MARKDOWN).
 
 Sigue concienzudamente estas REGLAS para GENERAR LAS SLIDES:
 
-- El contenido a generar son un conjunto de slides, formadas por  grupos de slides denominadas  <<secciones>>, y dentro de cada sección hay varias slides relacionadas con la sección. 
+- El contenido a generar son un conjunto de slides, formadas por  grupos de slides denominadas  <<secciones>>, y dentro de cada sección hay varias slides relacionadas con la sección.
 - Las secciones comienzan con títulos de nivel dos  (##).
 - Las secciones contienen distintas slides que hablan sobre conceptos o contenido relacionado con el titulo de la sección.
 - El comienzo de un grupo de slides o sección, puede ser una sola slide con el titulo de la sección, sin ningún contenido mas.
-- Cada grupo de slides o sección se delimitará con una línea horizontal (---). 
-- Usa --- solo para separar grupos de slides o sección  
+- Cada grupo de slides o sección se delimitará con una línea horizontal (---).
+- Usa --- solo para separar grupos de slides o sección
 - Cada slide de una sección ,en la que se tratará temas relacionados con la sección, continuará con títulos de nivel tres (###).
 - Una slide de un mismo grupo (misma sección) se separarán con 2 lineas en blanco de la siguiente slide, y se distinguirán por títulos sin números de slide. IMPORTANTE: No te olvides nunca las 2 lineas en blanco para separar las slides de un grupo de lides o seccion.
-- Una slide con contenido es: una lista de máximo siete viñetas, con tamaño de linea limitadas a 80 caracteres máximo. 
-- Una slide con contenido tambien pueden contener código fuente en un determinado lenguaje de programación, en cuyo caso el codigo fuente incluirá comentarios sobre aclaraciones del código de ejemplo. 
+- Una slide con contenido es: una lista de máximo siete viñetas, con tamaño de linea limitadas a 80 caracteres máximo.
+- Una slide con contenido tambien pueden contener código fuente en un determinado lenguaje de programación, en cuyo caso el codigo fuente incluirá comentarios sobre aclaraciones del código de ejemplo.
 - Cuando se esá tratando un concepto o un área concreta de un punto de unidad, puede quedarse corto con solo una slide con contenido, en cuyo caso se podra generar una segunda, tercera, etc. slide con el mismo titulo e identificandolas con el mismo titulo pero con número romanos I, II, III, etc.
 - Al generar las slides a partir de un documento, utiliza la misma enumeración de los puntos que la que viene en el documento. Es decir , si el documento tiene un punto 1.1, 1.2, 1.3, etc., las slides generadas tendrán los mismos títulos y numeración.
 - Si un punto tiene subpuntos, estos se tratarán en slides independientes dentro de la misma sección, con el mismo título y numeración que el punto, pero añadiendo el subpunto. Por ejemplo, si el punto es 1.3 y tiene subpuntos 1.3.1, 1.3.2, etc., cada subpunto se tratará en una slide independiente, con el título 1.3.1, 1.3.2, etc.
 - Si un punto tiene subpuntos, y estos a su vez tienen subpuntos, estos se tratarán en slides independientes dentro de la misma sección, con el mismo título y numeración que el subpunto, pero añadiendo el subpunto. Por ejemplo, si el punto es 1.3.1 y tiene subpuntos.
 - Al final de TODAS las slides, se crearán notas para el presentador, mas extensas y en las que se describirá el contenido de cada uno de los puntos de las slide o información adicional que no cabe en la  slide.
 - Las notas vendrán identificadas y precedidas por la palabra "Note:" y serán super completas y detalladas, para que el profesor pueda explicar todo el contenido de la slide sin dejar nada sin cubrir.
-- Las notas deben contener todos los comentarios necesarios que el profesor debe hacer para que ningún contenido se deje sin cubrir sobre el punto tratado en en la slide.
+- Las notas deben contener todos los comentarios necesarios que el profesor debe hacer para que ningún contenido se deje sin cubrir sobre el punto tratado en en la slide. Por tanto, es imporante que en las notas se expliquen todos los conceptos que aparecen en la slide, y se den ejemplos si es necesario.
 - Todas las interacciones y contenido proporcionado estarán en español de España, con un tono relajado y amistoso, pero sin perder la formalidad necesaria para un entorno educativo.
 
 IMPORTANTE:
@@ -258,135 +374,26 @@ Un ejemplo sería el siguiente:
                 edad = 31
             ```
 
-            Note: Detalla el uso de `var` para variables que pueden cambiar. Muestra un ejemplo de cómo se puede modificar el valor.
+            Note: Detalla el uso de `var` para variables que pueden cambiar. Muestra un ejemplo de cómo se puede modificar el valor. 
 
             ---
             """""""
-    
-Como  has visto en el ejemplo:   
-* --- se utiliza para separar secciones 
-* 2 lineas en blanco para separar las slides dentro de una sección. 
+
+Como  has visto en el ejemplo:
+1. Siempre usar """---""" para separar secciones
+2. Siempre usar """2 lineas en blanco""" para separar las slides dentro de una sección.
 
 
 La forma en la que trabajaras para generar las slides, será la siguiente:
 
 1. Piensa los grandes grupos de contenidos, que serán las secciones o grupo de slides.
-2. Piensa el contenido de cada sección, y por tanto que slides tendrán cada sección. 
+2. Piensa el contenido de cada sección, y por tanto que slides tendrán cada sección.
 3. Genera las slides de cada sección, hasta completar todas las secciones.
 
 
-**Configuración de las presentaciones:**
-
-Todas las presentaciones HTML incluyen:
-- `custom.css`: CSS personalizado que fuerza la visualización de la barra de progreso y los números de diapositiva (ubicado en `slides/custom.css`)
-- Configuración en `Reveal.initialize()`:
-  - `margin: 0.1` - Margen del 10% alrededor del contenido
-  - `progress: true` - Barra de progreso visible
-  - `slideNumber: 'c/t'` - Número de diapositiva actual/total
-  - `showSlideNumber: 'all'` - Mostrar en todas las diapositivas
-
-**Referencias a las slides desde `docs/`:**
-
-Las referencias a presentaciones desde la documentación usan URLs absolutas:
-- `https://revilofe.github.io/slides/section1-pr/PR-UX.Y.-NombreArchivo.html`
-- `https://revilofe.github.io/slides/section2-is/IS-UX.Y.-NombreArchivo.html`
-- `https://revilofe.github.io/slides/section3-ed/ED-UX.Y.-NombreArchivo.html`
-- `https://revilofe.github.io/slides/section4-daw/DAW-UX.Y.-NombreArchivo.html`
-
-**Gestión de assets:**
-
-Cada módulo tiene su propia carpeta `assets/` con las imágenes específicas del módulo. Los archivos compartidos entre módulos (como logos) se duplican en cada carpeta assets correspondiente para mantener la independencia de cada módulo.
-
-### 1.3. Otros directorios
-
-- **includes/**: Archivos reutilizables (abreviaturas, snippets)
-- **mkdocs.yml**: Configuración del sitio MkDocs
-
-## 2. Patrón de Documentación
-
-### 2.1. Público objetivo
-
-La documentación está dirigida a **alumnos y alumnas** de formación profesional. Debe ser:
-
-- **Didáctica**: Explicar conceptos de forma progresiva
-- **Clara**: Usar lenguaje sencillo y directo
-- **Práctica**: Incluir ejemplos y ejercicios
-- **Inclusiva**: Usar lenguaje no sexista (alumnos y alumnas, estudiantes)
-
-### 2.2. Estructura de documentos teóricos
-
-Los archivos de teoría (`teoria/`) deben seguir esta estructura:
-
-```markdown
-
----
-title: "UD X - X.Y Título del tema"
-description: Breve descripción
-summary: Resumen corto
-authors:
-    - Eduardo Fdez
-date: YYYY-MM-DD
-icon: 
-permalink: /modulo/unidadX/X.Y
-categories:
-    - MODULO
-tags:
-    - Tag1
-    - Tag2
----
-
-## X.Y. Título del tema
-
-[Introducción al tema que explique el contexto y objetivo]
-
-### 1. Primer concepto
-
-[Explicación clara del concepto]
-
-Es un texto de explicativo de como generar la documentación siguiendo este patrón:
-- Ser claro y concisos.
-    - Usar listas para organizar ideas, pero no abusar de ellas.
-        - Asegurarse de que cada punto aporta valor.
-        - Dividir el contenido en secciones lógicas.
-    - Incluir definiciones cuando sea necesario.
-- Incluir ejemplos visuales.
-- Usar subtítulos para organizar la información.
-
-Tambien se pueden incluir listas de numeradas:
-1. Primer punto importante
-2. Segundo punto relevante
-   
-    - Y anidar las viñetas si es necesario
-    
-3. Tercer punto clave
 
 
-- Se pueden incluir citas en bloque para resaltar definiciones o ideas clave:
-> La programación es el proceso de crear un conjunto de instrucciones que le dicen a una computadora cómo
-
-Se pueden incluir bloques de código para ilustrar ejemplos prácticos:
-
-También es importante incluir imágenes o diagramas para ilustrar conceptos complejos.
-
-[Ejemplos si procede]
-
-<figure markdown>   
-  ![](assets/nombre-imagen.png)   
-  <figcaption>Descripción de la imagen</figcaption>   
-</figure>
-
-#### 1.1. Subconcepto o ejemplo práctico
-
-[Explicación detallada del subconcepto]
-
-
-### 2. Segundo concepto
-
-[Continuar con estructura similar]
-```
-
-
-### 2.3. Estructura de prácticas
+### 2.4. Estructura de prácticas
 
 Los archivos de práctica (`practica/`) deben incluir:
 

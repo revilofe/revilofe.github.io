@@ -442,7 +442,7 @@ tags:
 
 Los archivos de práctica (`practica/otrosRecursos)/`) pueden incluir ficheros adicionales necesarios para completar la práctica, como plantillas, datos de ejemplo, etc., asi como el ejercicio resuelto. Se generará un fichero con el mismo nombre y la extensión -solución.md, que contendrá la solución al ejercicio propuesto.
 
-### 2.4. Generación de preguntas formato Gift
+### 2.5. Generación de preguntas formato Gift
 
 Las preguntas para cuestionarios se generarán en formato GIFT, siguiendo estas pautas:
 
@@ -493,7 +493,7 @@ IMPORTANTE Y OBLIGATORIO seguir las siguientes reglas al generar los archivos GI
 - El archivo GIFT se ubicará en la carpeta gifts/ al mismo nivel que la carpeta teoria/ del módulo correspondiente.
 - Si te encuentras archivos con extensión *.gift los revisarás y corregirás, corrigiendo y adaptando las preguntas para que cumplan las especificaciones, y trasladando las preguntas ya corregidas al fichero adecuado. Una vez procesados los archivos que no cumplen las especificaciones y procesadas las preguntas, se eliminarán.
 
-### 2.5. Convenciones de estilo en los documentos generados 
+### 2.6. Convenciones de estilo en los documentos de TEORIA generados 
 
 **Elementos de Markdown:**
 
@@ -543,7 +543,7 @@ IMPORTANTE Y OBLIGATORIO seguir las siguientes reglas al generar los archivos GI
 - Dar una introducción clara y que enlace cada punto tratado con el siguiente punto a tratar, para facilitar la comprensión y el aprendizaje significativo. 
 - Evitar que hay puntos que quedan como una simple lista de cosas sin una introducción clara y sin un cierre que enlace con el siguiente punto a tratar.
 
-### 2.6. Metadatos obligatorios
+### 2.7. Metadatos obligatorios en TEORIA
 
 Todos los documentos deben incluir el bloque YAML al inicio con:
 

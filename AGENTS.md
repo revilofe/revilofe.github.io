@@ -159,48 +159,71 @@ tags:
 
 [Explicación clara del concepto]
 
-Es un texto de explicativo de como generar la documentación siguiendo este patrón:
-- Ser claro y concisos.
-    - Usar listas para organizar ideas, pero no abusar de ellas.
-        - Asegurarse de que cada punto aporta valor.
-        - Dividir el contenido en secciones lógicas.
-    - Incluir definiciones cuando sea necesario.
-- Incluir ejemplos visuales.
-- Usar subtítulos para organizar la información.
-
-Tambien se pueden incluir listas de numeradas:
-1. Primer punto importante
-2. Segundo punto relevante
-   
-    - Y anidar las viñetas si es necesario
-    
-3. Tercer punto clave
-
-
-- Se pueden incluir citas en bloque para resaltar definiciones o ideas clave:
-> La programación es el proceso de crear un conjunto de instrucciones que le dicen a una computadora cómo
-
-Se pueden incluir bloques de código para ilustrar ejemplos prácticos:
-
-También es importante incluir imágenes o diagramas para ilustrar conceptos complejos.
-
-[Ejemplos si procede]
-
-<figure markdown>   
-  ![](assets/nombre-imagen.png)   
-  <figcaption>Descripción de la imagen</figcaption>   
-</figure>
-
 #### 1.1. Subconcepto o ejemplo práctico
 
 [Explicación detallada del subconcepto]
 
-
 ### 2. Segundo concepto
 
 [Continuar con estructura similar]
+
 ```
 
+Ademas:
+
+- Es un texto que representa un patrón a seguir, y ademas es explicativo de como generar la documentación siguiendo este patrón, y MUY IMPORTANTE respetando los saltos de línea y numero de espacios de indentación. (4 espacios):
+
+```markdown
+
+Aconsejamos una lista de cosas, deben seguirse para generar documentos claros y didácticos:
+
+- Ser claro y concisos.
+  
+    - Como es otro bloque de identación, 4 espacios mas. y una linea en blanco antes y despues del bloque identado.
+    - La identación será de 4 espacios.
+    - Usar listas para organizar ideas, pero no abusar de ellas.
+  
+        - Como es otro bloque de identación, 4 espacios mas. y una linea en blanco antes y despues del bloque.
+        - Asegurarse de que cada punto aporta valor.
+        - Dividir el contenido en secciones lógicas.
+        
+    - Incluir definiciones cuando sea necesario.
+    
+- Incluir ejemplos visuales.
+- Usar subtítulos para organizar la información.
+```
+
+- Tambien se pueden incluir listas de numeradas, en este formato y y IMPORTANTE respetando los saltos de línea y numero de espacios de indentación. (4 espacios):
+
+```markdown
+
+A continuación un listado: 
+
+1. Primer punto importante
+2. Segundo punto relevante
+   
+    - Como es otro bloque de identación, 4 espacios mas. y una linea en blanco antes y despues del bloque identado.
+    - Y anidar las viñetas si es necesario
+    
+3. Tercer punto clave
+```
+   
+- Se pueden incluir citas en bloque para resaltar definiciones o ideas clave:
+```markdown
+
+> La programación es el proceso de crear un conjunto de instrucciones que le dicen a una computadora cómo
+```
+- Se pueden incluir bloques de código para ilustrar ejemplos prácticos:
+- También es importante incluir imágenes o diagramas para ilustrar conceptos complejos.
+
+[Ejemplos si procede]
+
+```markdown
+<figure markdown>   
+  ![](assets/nombre-imagen.png)   
+  <figcaption>Descripción de la imagen</figcaption>   
+</figure>
+```
 
 ### 2.3. Etructura de las Slides
 
@@ -266,8 +289,14 @@ Un ejemplo sería el siguiente:
 
             ### 1.1. Características de Kotlin
 
+            A continuación, las características principales de Kotlin:
+
             * Sintaxis concisa y expresiva.
             * Seguridad de tipos nulos integrada.
+
+                * operador `?` para manejar valores nulos.
+                * Evita errores comunes de null pointer exceptions.
+
             * Soporta programación funcional y orientada a objetos.
 
             Note: Resalta las características clave de Kotlin, como la sintaxis concisa, la seguridad de tipos nulos y el soporte para paradigmas de programación.

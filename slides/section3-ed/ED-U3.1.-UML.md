@@ -200,10 +200,128 @@ Note: Si los diagramas estructurales son la anatomía, los de comportamiento son
 
 ---
 
-## 7. Conclusiones
+## 8. Historia de UML
 
 
-### 7.1. Puntos Clave
+### 8.1. La Era de la Confusión
+
+* Años 60-70: "Crisis del Software", sin acuerdo sobre cómo modelar.
+* Múltiples métodos estructurados no compatibles entre sí.
+* Problema: División entre datos y procedimientos.
+
+Note: En los inicios de la informática, cada equipo inventaba su propia forma de diseñar software. Esto creaba una gran confusión, ya que los modelos no eran portables ni comprensibles para otros. El principal problema era que los datos y la lógica del programa se trataban como dos mundos separados.
+
+
+### 8.2. Revolución Orientada a Objetos
+
+* Años 80: La Programación Orientada a Objetos (POO) une datos y comportamiento.
+* Surge un nuevo problema: cada experto crea su propia notación para modelar objetos.
+* Booch, Rumbaugh (OMT), Jacobson (OOSE) son los más populares, pero incompatibles.
+
+Note:
+La POO fue una revolución al unificar datos y comportamiento en "objetos". Sin embargo, esto trasladó el problema: ahora existían múltiples formas de dibujar y modelar esos objetos. Tres de las más importantes eran las de Grady Booch, James Rumbaugh e Ivar Jacobson. Aunque eran potentes, eran incompatibles entre sí.
+
+
+### 8.3. El Nacimiento de UML
+
+* 1994: Booch, Rumbaugh y Jacobson ("los tres amigos") se unen en Rational Software.
+* Objetivo: Crear un único lenguaje unificado.
+* 1997: Se publica UML 1.0, combinando las mejores ideas de sus métodos.
+* 1997: La OMG (Object Management Group) lo adopta como estándar.
+
+Note: La industria se dio cuenta de que esta "guerra de métodos" no era sostenible. En un movimiento histórico, los tres principales visionarios decidieron colaborar para unificar sus propuestas. El resultado fue UML, el Lenguaje Unificado de Modelado, que fue rápidamente adoptado como un estándar por la industria a través de la OMG.
+
+---
+
+## 9. Alternativas a UML
+
+
+### 9.1. ¿Existen otras opciones?
+
+* UML es el estándar dominante, pero no es la única herramienta.
+* En proyectos muy pequeños, puede ser excesivo.
+* Para dominios muy específicos, pueden existir lenguajes mejor adaptados.
+
+Note: Aunque UML es el rey, no siempre es la herramienta perfecta para cada situación. Es importante conocer algunas alternativas para poder elegir la mejor opción según el contexto del proyecto.
+
+
+### 9.2. Alternativas Principales
+
+* **ArchiMate**: Para modelado de arquitectura empresarial completa.
+* **SysML**: Extensión de UML para ingeniería de sistemas (hardware + software).
+* **Diagramas informales (Sketching)**: Para brainstorming y comunicación rápida.
+* **C4 Model**: Enfoque jerárquico simplificado para arquitectura de software.
+
+Note: ArchiMate es ideal si necesitas modelar toda la empresa, no solo el software. SysML es para sistemas complejos como en automoción o aeroespacial. Los bocetos en pizarra son geniales para ideas rápidas. Y el modelo C4 es una alternativa moderna y más simple para documentar arquitectura de software.
+
+---
+
+## 10. Principios de Buen Modelado
+
+
+### 10.1. Claves para un Modelado Efectivo
+
+* **No modeles todo**: Céntrate en los aspectos complejos o importantes.
+* **La simplicidad es sofisticación**: Los mejores diagramas son los más simples.
+* **Mantener sincronía con el código**: Usa herramientas o actualiza en cambios clave.
+* **Acompaña con documentación**: Los diagramas no siempre son autoexplicativos.
+
+Note: Saber UML no es suficiente; hay que saber usarlo bien. No intentes dibujarlo todo, solo lo que aporte valor. Un diagrama que no cabe en una página es una mala señal. Mantén los diagramas vivos y sincronizados con el código, y añade pequeñas notas que expliquen las decisiones de diseño importantes.
+
+---
+
+## 11. Herramientas de Modelado UML
+
+
+### 11.1. Tipos de Herramientas
+
+* **Comerciales**: Enterprise Architect, Visual Paradigm. Potentes pero de pago.
+* **Código Abierto**: PlantUML, StarUML. Gratuitas y muy capaces.
+* **Online / En la nube**: Lucidchart, Draw.io. Colaborativas y accesibles.
+* **Integradas en IDEs**: Plugins en IntelliJ, Eclipse, Visual Studio.
+
+Note: Hay una herramienta para cada necesidad y presupuesto. Las comerciales son muy potentes para grandes empresas. Las de código abierto como PlantUML (basada en texto) son fantásticas para desarrolladores. Las herramientas online son ideales para equipos remotos. Y los plugins de los IDEs son muy cómodos para generar diagramas rápidos desde el código.
+
+
+### 11.2. Recomendaciones
+
+* **Para aprender**: Draw.io o PlantUML son un buen punto de partida.
+* **Proyectos pequeños**: StarUML o PlantUML.
+* **Equipos medianos**: Visual Paradigm Community.
+* **Grandes empresas**: Enterprise Architect o licencias profesionales.
+
+Note: Mi recomendación personal: si eres programador, aprende PlantUML. Es texto, se versiona con Git y se integra en la documentación. Para diagramas rápidos y colaborativos, Draw.io es imbatible. Para un entorno más profesional, Visual Paradigm ofrece un buen equilibrio.
+
+---
+
+## 12. UML en el Desarrollo Ágil
+
+
+### 12.1. ¿UML y Ágil son compatibles?
+
+* **Creencia incorrecta**: "Ágil = sin documentación = sin UML".
+* **Realidad**: Ágil busca "documentación útil y just-in-time".
+* UML en ágil debe ser pragmático, colaborativo e incremental.
+* El diagrama es una herramienta de comunicación, no un artefacto final.
+
+Note: Existe un mito de que en las metodologías ágiles no se documenta, pero no es cierto. Lo que se evita es la documentación inútil. UML puede ser muy ágil si se usa para facilitar conversaciones y no como un requisito burocrático. Un diagrama en una pizarra que se borra después de la reunión es un uso perfectamente válido de UML en un entorno ágil.
+
+
+### 12.2. ¿Cuándo usar UML en Ágil?
+
+* **Sprint Planning**: Para aclarar requisitos con Casos de Uso.
+* **Diseño técnico**: Diagramas de Clases o Secuencia para refinar una historia.
+* **Análisis de problemas**: Para entender bugs complejos.
+* **Documentar decisiones de arquitectura** importantes (ADRs).
+
+Note: En un sprint, UML es útil en momentos concretos. Al planificar, para asegurar que todo el equipo entiende la tarea. Durante el desarrollo, para pensar en una solución técnica antes de codificar. Para investigar un bug difícil. O para registrar una decisión de arquitectura importante que afectará al futuro del proyecto.
+
+---
+
+## 13. Conclusiones
+
+
+### 13.1. Puntos Clave
 
 * UML es el estándar para modelado visual de software.
 * Facilita la comunicación y reduce errores y costos.
@@ -212,6 +330,25 @@ Note: Si los diagramas estructurales son la anatomía, los de comportamiento son
 * El valor real está en el pensamiento y la comunicación que habilita.
 
 Note: Para concluir, UML es mucho más que una simple notación. Es una herramienta de pensamiento y comunicación. Usado correctamente, lleva a mejores arquitecturas, código más mantenible y equipos más alineados. La clave es ser práctico y centrarse en el valor que aporta cada diagrama.
+
+---
+
+## 14. Recursos y Referencias
+
+
+### 14.1. Libros y Enlaces
+
+* **Libros**:
+    * "UML Distilled" de Martin Fowler (guía práctica).
+    * "Applying UML and Patterns" de Craig Larman.
+* **Herramientas y tutoriales**:
+    * [PlantUML](https://plantuml.com/) (diagramas desde texto).
+    * [Draw.io](https://draw.io/) (editor online gratuito).
+    * [DiagramasUML.com](https://diagramasuml.com/) (tutoriales en español).
+* **Especificación oficial**: [OMG UML](https://www.uml.org/).
+
+Note:
+Si queréis profundizar, el libro "UML Distilled" de Martin Fowler es la mejor guía de referencia: corta, clara y al grano. Para practicar, os recomiendo empezar con PlantUML o Draw.io. Y para cualquier duda, la especificación oficial de la OMG es la fuente de la verdad, aunque es muy densa.
 
 ---
 

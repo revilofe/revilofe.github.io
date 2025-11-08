@@ -15,7 +15,12 @@
 4. Características de UML
 5. Ventajas y Desventajas
 6. Diagramas UML
-## Índice I
+7. Diagramas UML en la Práctica
+
+Note: Presentamos el índice de la presentación. Comenzaremos con una introducción a UML, su importancia en el ciclo de vida del software, por qué usarlo, sus características principales, ventajas y desventajas, los tipos de diagramas UML y algunos ejemplos prácticos.
+
+
+## Índice II
 
 8. Historia de UML
 9. Alternativas a UML
@@ -24,6 +29,8 @@
 12. UML en el Desarrollo Ágil
 13. Conclusiones
 14. Recursos y Referencias
+
+Note: Continuando con el índice, también repasaremos la historia de UML, algunas alternativas que existen, principios para un buen modelado, herramientas populares para crear diagramas UML, cómo se integra UML en metodologías ágiles y finalmente concluiremos con puntos clave y recursos adicionales para profundizar en el tema.
 
 ---
 
@@ -202,7 +209,7 @@ Note: Si los diagramas estructurales son la anatomía, los de comportamiento son
 
 ---
 
-### 7 . Diagramas UML en la Práctica
+## 7. Diagramas UML en la Práctica
 
 Antes de continuar veamos algunos ejemplos prácticos de diagramas UML comunes.
 

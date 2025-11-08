@@ -59,6 +59,7 @@ nav:
         - '* Práctica 3.5: XML': 'section1/u03/practica/PROG-U3.-Practica005.md'
         - '3.8.-Ampliación I': 'section1/u03/teoria/PROG-U3.8.-OtrosAmpliacion1.md'
         - '3.9.-Ampliación II': 'section1/u03/teoria/PROG-U3.9.-OtrosAmpliacion2.md'
+        - '3.10.-Iteradores': 'section1/u03/teoria/PROG-U3.10.-Iteradores.md'
     - 'U4: Kotlin: POO y estructuras de datos':
         - 'section1/u04/index.md'
         - '4.1.-Kotlin: Básico': 'section1/u04/teoria/PROG-U4.1.-kotlin.md'

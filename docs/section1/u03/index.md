@@ -68,3 +68,4 @@ En la Unidad 3, veremos:
 * Conjuntos
 * String
 * Expresiones regulares
+* Iteradores

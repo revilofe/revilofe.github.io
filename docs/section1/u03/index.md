@@ -44,15 +44,16 @@ RA 6. Escribe programas que manipulen información seleccionando y utilizando ti
 
 En esta sección se relaciona la unidad con los criterios de evaluación concretos, del resultado de aprendizaje a trabajar en esta unidad, teniendo en cuenta [la normativa del curso](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-4963).
 
-* a) Se han escrito programas que utilicen arrays
+* a) Se han escrito programas que utilicen matrices (arrays).
 * b) Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.
 * c) Se han utilizado listas para almacenar y procesar información.
 * d) Se han utilizado iteradores para recorrer los elementos de las listas.
-* e) Se han reconocido las características y ventajas de cada una de la colecciones de datos disponibles.
+* e) Se han reconocido las características y ventajas de cada una de las colecciones de datos disponibles.
 * (NO) f) Se han creado clases y métodos genéricos.
-* g) Se han utilizado expresiones regulares en la búsqueda de patrones en cadenas de texto.
-* (NO) h) Se han identificado las clases relacionadas con el tratamiento de documentos XML.
-* (NO) i) Se han realizado programas que realicen manipulaciones sobre documentos XML.
+* (NO) g) Se han utilizado expresiones regulares en la búsqueda de patrones en cadenas de texto.
+* (NO) h) Se han identificado las clases relacionadas con el tratamiento de documentos escritos en diferentes lenguajes de intercambio de datos.
+* (NO) i) Se han realizado programas que realicen manipulaciones sobre documentos escritos en diferentes lenguajes de intercambio de datos.
+j) Se han utilizado operaciones agregadas para el manejo de información almacenada en colecciones.
 
 ### Contenidos
 

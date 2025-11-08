@@ -1,0 +1,336 @@
+A continuación se da información referente al titulo de Desarrollo de apicaciones Web como contexto para entrar en profundidad en el modulo de PROGRAMACIÓN, uno de los módulos que se trata en este titulo y concretamente en el que estoy interesado:
+
+
+Perfil profesional del título: Desarrollo de Aplicaciones Web.
+
+El perfil profesional del título de Técnico Superior en Desarrollo de Aplicaciones Web queda determinado por su competencia general, sus competencias profesionales, personales y sociales, y por la relación de cualificaciones y, en su caso, unidades de competencia del Catálogo Nacional de Cualificaciones Profesionales incluidas en el título
+
+
+Competencia general.
+La competencia general de este título consiste en desarrollar, implantar, y mantener aplicaciones web, con independencia del modelo empleado y utilizando tecnologías específicas, garantizando el acceso a los datos de forma segura y cumpliendo los criterios de accesibilidad, usabilidad y calidad exigidas en los estándares establecidos.
+
+
+Las competencias profesionales, personales y sociales de este título son las que se relacionan a continuación:
+
+a) Configurar y explotar sistemas informáticos, adaptando la configuración lógica del sistema según las necesidades de uso y los criterios establecidos.
+b) Aplicar técnicas y procedimientos relacionados con la seguridad en sistemas, servicios y aplicaciones, cumpliendo el plan de seguridad.
+c) Gestionar servidores en distintos ámbitos de implantación adaptando su configuración en cada caso para permitir el despliegue de aplicaciones web.
+d) Gestionar bases de datos, interpretando su diseño lógico y verificando integridad, consistencia, seguridad y accesibilidad de los datos.
+e) Desarrollar aplicaciones web con acceso a bases de datos utilizando lenguajes, objetos de acceso y herramientas de mapeo adecuados a las especificaciones.
+f) Integrar contenidos en la lógica de una aplicación web, desarrollando componentes de acceso a datos adecuados a las especificaciones.
+g) Desarrollar interfaces en aplicaciones web de acuerdo con un manual de estilo, utilizando lenguajes de marcas y estándares web.
+h) Desarrollar componentes multimedia para su integración en aplicaciones web, empleando herramientas específicas y siguiendo las especificaciones establecidas.
+i) Integrar componentes multimedia en la interface de una aplicación web, realizando el análisis de interactividad, accesibilidad y usabilidad de la aplicación.
+j) Desarrollar e integrar componentes software en el entorno del servidor web, empleando herramientas y lenguajes específicos, para cumplir las especificaciones de la aplicación.
+k) Desarrollar servicios para integrar sus funciones en otras aplicaciones web, asegurando su funcionalidad.
+l) Integrar servicios y contenidos distribuidos en aplicaciones web, asegurando su funcionalidad.
+m) Completar planes de pruebas verificando el funcionamiento de los componentes software desarrollados, según las especificaciones.
+n) Elaborar y mantener la documentación de los procesos de desarrollo, utilizando herramientas de generación de documentación y control de versiones.
+ñ) Desplegar y distribuir aplicaciones web en distintos ámbitos de implantación, verificando su comportamiento y realizando modificaciones.
+o) Gestionar y/o realizar el mantenimiento de los recursos de su área en función de las cargas de trabajo y el plan de mantenimiento.
+p) Adaptarse a las nuevas situaciones laborales, manteniendo actualizados los conocimientos científicos, técnicos y tecnológicos relativos a su entorno profesional, gestionando su formación y los recursos existentes en el aprendizaje a lo largo de la vida y utilizando las tecnologías de la información y la comunicación.
+q) Resolver situaciones, problemas o contingencias con iniciativa y autonomía en el ámbito de su competencia, con creatividad, innovación y espíritu de mejora en el trabajo personal y en el de los miembros del equipo. 
+r) Organizar y coordinar equipos de trabajo, supervisando el desarrollo del mismo, con responsabilidad, manteniendo relaciones fluidas y asumiendo el liderazgo, así como, aportando soluciones a los conflictos grupales que se presentan.
+s) Comunicarse con sus iguales, superiores, clientes y personas bajo su responsabilidad utilizando vías eficaces de comunicación, transmitiendo la información o conocimientos adecuados, y respetando la autonomía y competencia de las personas que intervienen en el ámbito de su trabajo.
+t) Generar entornos seguros en el desarrollo de su trabajo y el de su equipo, supervisando y aplicando los procedimientos de prevención de riesgos laborales y ambientales de acuerdo con lo establecido por la normativa y los objetivos de la empresa.
+u) Supervisar y aplicar procedimientos de gestión de calidad, de accesibilidad universal y de diseño para todos, en las actividades profesionales incluidas en los procesos de producción o prestación de servicios.
+v) Realizar la gestión básica para la creación y funcionamiento de una pequeña empresa y tener iniciativa en su actividad profesional con sentido de la responsabilidad social.
+w) Ejercer sus derechos y cumplir con las obligaciones derivadas de su actividad profesional, de acuerdo con lo establecido en la legislación vigente, participando activamente en la vida económica, social y cultural.»
+
+
+Relación de cualificaciones y unidades de competencia del Catálogo Nacional de Cualificaciones Profesionales incluidas en el título
+
+1. Cualificación profesional completa:
+Desarrollo de aplicaciones con tecnologías Web IFC154_3 (Real Decreto 1087/2005, de 16 de septiembre, actualizada en Orden PRE/1636/2015 de 23 de julio), que comprende las siguientes unidades de competencia:
+UC0491_3 Desarrollar elementos software en el entorno cliente.
+UC0492_3 Desarrollar elementos software en el entorno servidor.
+UC0493_3 Implementar, verificar y documentar aplicaciones web en entornos internet, intranet y extranet.
+
+2. Cualificaciones profesionales incompletas:
+
+a) Programación en lenguajes estructurados de aplicaciones de gestión
+IFC155_3 (Real Decreto 1087/2005, de 16 de septiembre, actualizada por Orden PRE/1636/2015, de 23 de julio, actualizada por Orden PCI/479/2019 de 12 de abril, actualizada por Real Decreto 150/2022, de 22 de febrero):
+UC0223_3 Configurar y explotar sistemas informáticos.
+UC0226_3 Programar bases de datos relacionales.
+
+b) Programación con lenguajes orientados a objetos y bases de datos
+relacionales IFC080_3 (Real Decreto 295/2004, de 20 de febrero, modificada parcialmente por Orden PRE/1636/2015 de 23 de julio, modificada parcialmente por orden PCI/479/2019 de 12 de abril, actualizada por Orden EFP/1208/2021, de 2 de noviembre, actualizada por Real Decreto 150/2022, de 22 de febrero):
+UC0223_3 Configurar y explotar sistemas informáticos.
+UC0226_3 Programar bases de datos relacionales.»
+
+
+
+Entorno profesional.
+
+1. Las personas con este perfil profesional ejercen su actividad en empresas o entidades públicas o privadas tanto por cuenta ajena como propia, desempeñando su trabajo en el área de desarrollo de aplicaciones informáticas relacionadas con entornos Web (intranet, extranet e internet).
+
+Las ocupaciones y puestos de trabajo más relevantes son:
+- Programador Web.
+- Programador Multimedia.
+- Desarrollador de aplicaciones en entornos Web.
+
+Prospectiva del título en el sector o sectores.
+
+Las administraciones educativas tendrán en cuenta, al desarrollar el currículo correspondiente, las siguientes consideraciones:
+
+Prospectiva del título en el sector o sectores.
+a) Teniendo en cuenta que nos dirigimos hacia una sociedad del conocimiento y en la que la voluntad de aplicarlo se dirige a generar más conocimiento, obliga a realizar un elevado esfuerzo de sistematización y organización de la información, y poder compartir esta de forma adecuada.
+b) En esta línea, es fundamental el desarrollo de plataformas multidisciplinares y la definición del modelo para compartir y organizar de forma segura la información contenida en las mismas.
+c) La formación adquiere cada vez más importancia en sociedades altamente desarrolladas, y los rápidos avances y cambios tecnológicos del sector hacen que se demanden profesionales con una actitud favorable hacia la autoformación.
+d) El perfil profesional de este título evoluciona hacia una mayor integración de los sistemas de gestión e intercambio de información basados en tecnologías web, siendo preciso que cada vez sean más estables y seguros. Para este perfil adquiere especial importancia asegurar la integridad, consistencia y accesibilidad de los datos.
+e) Asegurar la funcionalidad y rentabilidad del sistema informático, sirviendo de apoyo al resto de departamentos de una organización, es un aspecto cada vez más relevante para este perfil profesional.
+f) Aspectos tales como el intercambio masivo de información, «mashup» de datos, la incorporación de inteligencia a los datos o construcción de nuevos servicios, entre otros; están cambiando la filosofía del sector a una orientación al usuario y no hacia contenidos.
+g) Las tecnologías implicadas en el desarrollo y la rápida evolución de estas apuntan a profesionales donde la constante actualización es una de las características fundamentales de este perfil.
+h) Las tareas de tratamiento y transferencia de datos e información deberán realizarse conforme a la normativa legal que regula tales aspectos.
+i) La tele-operación, asistencia técnica remota, asistencia «on line» y los telecentros se configuran como un elemento imprescindible en la respuesta a la demanda de asistencia técnica.
+j) El empleo comercial de aplicaciones web es actualmente una realidad imparable, lo que hace aumentar rápidamente el número de transacciones realizadas por este medio. Esto origina un mayor volumen en la información transferida, y obliga al aseguramiento de los sistemas, de las transacciones a la custodia de datos.
+
+
+Objetivos generales.
+
+Los objetivos generales de este ciclo formativo son los siguientes:
+
+a) Ajustar la configuración lógica analizando las necesidades y criterios establecidos para configurar y explotar sistemas informáticos.
+b) Identificar las necesidades de seguridad verificando el plan preestablecido para aplicar técnicas y procedimientos relacionados.
+c) Instalar módulos analizando su estructura y funcionalidad para gestionar servidores en distintos ámbitos de implantación.
+d) Ajustar parámetros analizando la configuración para gestionar servidores en distintos ámbitos de implantación.
+e) Interpretar el diseño lógico, verificando los parámetros establecidos para gestionar bases de datos.
+f) Seleccionar lenguajes, objetos y herramientas, interpretando las especificaciones para desarrollar aplicaciones web con acceso a bases de datos.
+g) Utilizar lenguajes, objetos y herramientas, interpretando las especificaciones para desarrollar aplicaciones web con acceso a bases de datos.
+h) Generar componentes de acceso a datos, cumpliendo las especificaciones, para integrar contenidos en la lógica de una aplicación web.
+i) Utilizar lenguajes de marcas y estándares web, asumiendo el manual de estilo, para desarrollar interfaces en aplicaciones web.
+j) Emplear herramientas y lenguajes específicos, siguiendo las especificaciones, para desarrollar componentes multimedia.
+k) Evaluar la interactividad, accesibilidad y usabilidad de un interfaz, verificando los criterios preestablecidos, para Integrar componentes multimedia en el interfaz de una aplicación.
+l) Utilizar herramientas y lenguajes específicos, cumpliendo las especificaciones, para desarrollar e integrar componentes software en el entorno del servidor web.
+m) Emplear herramientas específicas, integrando la funcionalidad entre aplicaciones, para desarrollar servicios empleables en aplicaciones web.
+n) Evaluar servicios distribuidos ya desarrollados, verificando sus prestaciones y funcionalidad, para integrar servicios distribuidos en una aplicación web.
+ñ) Verificar los componentes de software desarrollados, analizando las especificaciones, para completar el plan de pruebas.
+o) Utilizar herramientas específicas, cumpliendo los estándares establecidos, para elaborar y mantener la documentación de los procesos.
+p) Establecer procedimientos, verificando su funcionalidad, para desplegar y distribuir aplicaciones.
+q) Programar y realizar actividades para gestionar el mantenimiento de los recursos informáticos.
+r) Analizar y utilizar los recursos y oportunidades de aprendizaje relacionadas con la evolución científica, tecnológica y organizativa del sector y las tecnologías de la información y la comunicación, para mantener el espíritu de actualización y adaptarse a nuevas situaciones laborales y personales.
+s) Desarrollar la creatividad y el espíritu de innovación para responder a los retos que se presentan en los procesos y organización de trabajo y de la vida personal.
+t) Tomar decisiones de forma fundamentada analizando las variables implicadas, integrando saberes de distinto ámbito y aceptando los riesgos y la posibilidad de equivocación en las mismas, para afrontar y resolver distintas situaciones, problemas o contingencias.
+u) Desarrollar técnicas de liderazgo, motivación, supervisión y comunicación en contextos de trabajo en grupo para facilitar la organización y coordinación de equipos de trabajo.
+v) Aplicar estrategias y técnicas de comunicación adaptándose a los contenidos que se van a transmitir, la finalidad y a las características de los receptores, para asegurar la eficacia en los procesos de comunicación.
+w) Evaluar situaciones de prevención de riesgos laborales y de protección ambiental, proponiendo y aplicando medidas de prevención personales y colectivas, de acuerdo a la normativa aplicable en los procesos del trabajo, para garantizar entornos seguros.
+x) Identificar y proponer las acciones profesionales necesarias para dar respuesta a la accesibilidad universal y al diseño para todos.
+y) Identificar y aplicar parámetros de calidad en los trabajos y actividades realizados en el proceso de aprendizaje para valorar la cultura de la evaluación y de la calidad y ser capaces de supervisar y mejorar procedimientos de gestión de calidad.
+z) Utilizar procedimientos relacionados con la cultura emprendedora, empresarial y de iniciativa profesional, para realizar la gestión básica de una pequeña empresa o emprender un trabajo.
+aa) Reconocer sus derechos y deberes como agente activo en la sociedad, teniendo en cuenta el marco legal que regula las condiciones sociales y laborales para participar como ciudadano democrático.»
+
+
+MODULO DE PROGRAMACIÓN:
+
+Resultados de aprendizaje y sus criterios de evaluación del Módulo de PROGRAMACIÓN:
+
+1. Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.
+Criterios de evaluación:
+a) Se han identificado los bloques que componen la estructura de un programa informático.
+b) Se han creado proyectos de desarrollo de aplicaciones.
+c) Se han utilizado entornos integrados de desarrollo.
+d) Se han identificado los distintos tipos de variables y la utilidad específica de cada uno.
+e) Se ha modificado el código de un programa para crear y utilizar variables.
+f) Se han creado y utilizado constantes y literales.
+g) Se han clasificado, reconocido y utilizado en expresiones los operadores del lenguaje.
+h) Se ha comprobado el funcionamiento de las conversiones de tipo explícitas e implícitas.
+i) Se han introducido comentarios en el código.
+
+2. Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.
+Criterios de evaluación:
+a) Se han identificado los fundamentos de la programación orientada a objetos.
+b) Se han escrito programas simples.
+c) Se han instanciado objetos a partir de clases predefinidas.
+d) Se han utilizado métodos y propiedades de los objetos.
+e) Se han escrito llamadas a métodos estáticos.
+f) Se han utilizado parámetros en la llamada a métodos.
+g) Se han incorporado y utilizado librerías de objetos.
+h) Se han utilizado constructores.
+i) Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples.
+
+3. Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.
+Criterios de evaluación:
+a) Se ha escrito y probado código que haga uso de estructuras de selección.
+b) Se han utilizado estructuras de repetición.
+c) Se han reconocido las posibilidades de las sentencias de salto.
+d) Se ha escrito código utilizando control de excepciones.
+e) Se han creado programas ejecutables utilizando diferentes estructuras de control.
+f) Se han probado y depurado los programas.
+g) Se ha comentado y documentado el código.
+h) Se han creado excepciones.
+i) Se han utilizado aserciones para la detección y corrección de errores durante la fase de desarrollo.
+
+4. Desarrolla programas organizados en clases analizando y aplicando los principios de la programación orientada a objetos.
+Criterios de evaluación:
+a) Se ha reconocido la sintaxis, estructura y componentes típicos de una clase.
+b) Se han definido clases.
+c) Se han definido propiedades y métodos.
+d) Se han creado constructores.
+e) Se han desarrollado programas que instancien y utilicen objetos de las clases creadas anteriormente.
+f) Se han utilizado mecanismos para controlar la visibilidad de las clases y de sus miembros.
+g) Se han definido y utilizado clases heredadas.
+h) Se han creado y utilizado métodos estáticos.
+i) Se han creado y utilizado conjuntos y librerías de clases.
+
+5. Realiza operaciones de entrada y salida de información, utilizando procedimientos específicos del lenguaje y librerías de clases.
+Criterios de evaluación:
+a) Se ha utilizado la consola para realizar operaciones de entrada y salida de información.
+b) Se han aplicado formatos en la visualización de la información.
+c) Se han reconocido las posibilidades de entrada / salida del lenguaje y las librerías asociadas.
+d) Se han utilizado ficheros para almacenar y recuperar información.
+e) Se han creado programas que utilicen diversos métodos de acceso al contenido de los ficheros.
+f) Se han utilizado las herramientas del entorno de desarrollo para crear interfaces gráficos de usuario simples.
+g) Se han programado controladores de eventos.
+h) Se han escrito programas que utilicen interfaces gráficos para la entrada y salida de información.
+
+6. Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.
+Criterios de evaluación:
+a) Se han escrito programas que utilicen matrices (arrays).
+b) Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.
+c) Se han utilizado listas para almacenar y procesar información.
+d) Se han utilizado iteradores para recorrer los elementos de las listas.
+e) Se han reconocido las características y ventajas de cada una de las colecciones de datos disponibles.
+f) Se han creado clases y métodos genéricos.
+g) Se han utilizado expresiones regulares en la búsqueda de patrones en cadenas de texto.
+h) Se han identificado las clases relacionadas con el tratamiento de documentos escritos en diferentes lenguajes de intercambio de datos.
+i) Se han realizado programas que realicen manipulaciones sobre documentos escritos en diferentes lenguajes de intercambio de datos.
+j) Se han utilizado operaciones agregadas para el manejo de información almacenada en colecciones.
+
+7. Desarrolla programas aplicando características avanzadas de los lenguajes orientados a objetos y del entorno de programación.
+Criterios de evaluación:
+a) Se han identificado los conceptos de herencia, superclase y subclase.
+b) Se han utilizado modificadores para bloquear y forzar la herencia de clases y métodos.
+c) Se ha reconocido la incidencia de los constructores en la herencia.
+d) Se han creado clases heredadas que sobrescriben la implementación de métodos de la superclase.
+e) Se han diseñado y aplicado jerarquías de clases.
+f) Se han probado y depurado las jerarquías de clases.
+g) Se han realizado programas que implementen y utilicen jerarquías de clases.
+h) Se ha comentado y documentado el código.
+i) Se han identificado y evaluado los escenarios de uso de interfaces.
+j) Se han identificado y evaluado los escenarios de utilización de la herencia y la composición.
+
+8. Utiliza bases de datos orientadas a objetos, analizando sus características y aplicando técnicas para mantener la persistencia de la información.
+Criterios de evaluación:
+a) Se han identificado las características de las bases de datos orientadas a objetos.
+b) Se ha analizado su aplicación en el desarrollo de aplicaciones mediante lenguajes orientados a objetos.
+c) Se han instalado sistemas gestores de bases de datos orientados a objetos.
+d) Se han clasificado y analizado los distintos métodos soportados por los sistemas gestores para la gestión de la información almacenada.
+e) Se han creado bases de datos y las estructuras necesarias para el almacenamiento de objetos.
+f) Se han programado aplicaciones que almacenen objetos en las bases de datos creadas.
+g) Se han realizado programas para recuperar, actualizar y eliminar objetos de las bases de datos.
+h) Se han realizado programas para almacenar y gestionar tipos de datos estructurados, compuestos y relacionados.
+
+9. Gestiona información almacenada en bases de datos manteniendo la integridad y consistencia de los datos.
+Criterios de evaluación:
+a) Se han identificado las características y métodos de acceso a sistemas gestores de bases de datos.
+b) Se han programado conexiones con bases de datos.
+c) Se ha escrito código para almacenar información en bases de datos.
+d) Se han creado programas para recuperar y mostrar información almacenada en bases de datos.
+e) Se han efectuado borrados y modificaciones sobre la información almacenada.
+f) Se han creado aplicaciones que muestren la información almacenada en bases de datos.
+g) Se han creado aplicaciones para gestionar la información presente en bases de datos
+
+Contenidos básicos:
+
+Identificación de los elementos de un programa informático:
+− Estructura y bloques fundamentales.
+− Variables.
+− Tipos de datos.
+− Literales.
+− Constantes.
+− Operadores y expresiones.
+− Conversiones de tipo.
+− Comentarios.
+
+Utilización de objetos:
+− Características de los objetos.
+− Instanciación de objetos.
+− Utilización de métodos. Parámetros.
+− Utilización de propiedades.
+− Utilización de métodos estáticos.
+− Constructores.
+− Destrucción de objetos y liberación de memoria.
+
+Uso de estructuras de control:
+− Estructuras de selección.
+− Estructuras de repetición.
+− Estructuras de salto.
+− Control de excepciones.
+− Aserciones.
+− Prueba, depuración y documentación de la aplicación.
+
+Desarrollo de clases:
+− Concepto de clase.
+− Estructura y miembros de una clase. Visibilidad.
+− Creación de propiedades.
+− Creación de métodos.
+− Creación de constructores.
+− Utilización de clases y objetos.
+− Utilización de clases heredadas.
+
+Lectura y escritura de información:
+− Flujos. Tipos: bytes y caracteres. Clases relacionadas.
+− Ficheros de datos. Registros.
+− Apertura y cierre de ficheros. Modos de acceso. Escritura y lectura de información en ficheros.
+− Utilización de los sistemas de ficheros.
+− Creación y eliminación de ficheros y directorios.
+− Entrada desde teclado. Salida a pantalla. Formatos de visualización.
+− Interfaces gráficas.
+− Concepto de evento.
+− Creación de controladores de eventos.
+
+Aplicación de las estructuras de almacenamiento:
+− Estructuras estáticas y dinámicas.
+− Creación de matrices (arrays).
+− Matrices (arrays) multidimensionales.
+− Genericidad.
+− Cadenas de caracteres. Expresiones regulares.
+− Colecciones: Listas, Conjuntos y Diccionarios.
+− Operaciones agregadas: filtrado, reducción y recolección.
+
+Utilización avanzada de clases:
+− Composición de clases.
+− Herencia y polimorfismo.
+− Jerarquía de clases: Superclases y subclases.
+− Clases y métodos abstractos y finales.
+− Interfaces.
+− Sobreescritura de métodos.
+− Constructores y herencia.
+
+Mantenimiento de la persistencia de los objetos:
+− Bases de datos orientadas a objetos.
+− Características de las bases de datos orientadas a objetos.
+− Instalación del gestor de bases de datos.
+− Creación de bases de datos.
+− Mecanismos de consulta.
+− El lenguaje de consultas: sintaxis, expresiones, operadores.
+− Recuperación, modificación y borrado de información.
+− Tipos de datos objeto; atributos y métodos.
+− Tipos de datos colección.
+
+Gestión de bases de datos:
+− Acceso a bases de datos. Estándares. Características.
+− Establecimiento de conexiones.
+− Almacenamiento, recuperación, actualización y eliminación de información en bases de datos.
+
+
+Orientaciones pedagógicas.
+Este módulo profesional contiene parte de la formación necesaria para desempeñar la función de programación de aplicaciones de propósito general en lenguajes orientados a objetos.
+
+La función de programación de aplicaciones de propósito general en lenguajes orientados a objetos incluye aspectos como:
+− El desarrollo de programas organizados en clases aplicando los principios de la programación orientada a objetos.
+− La utilización de interfaces para la interacción de la aplicación con el usuario.
+− La identificación, análisis e integración de librerías para incorporar funcionalidades específicas a los programas desarrollados.
+− El almacenamiento y recuperación de información en sistemas gestores de bases de datos.
+
+Las actividades profesionales asociadas a esta función se aplican en el desarrollo y la adaptación de programas informáticos de propósito general en lenguajes orientados a objetos.
+
+La formación del módulo contribuye a alcanzar los objetivos generales f), g), j) y q) del ciclo formativo y las competencias profesionales, personales y sociales e), f), y j) del título.
+
+Las líneas de actuación en el proceso de enseñanza-aprendizaje que permiten alcanzar los objetivos del módulo versarán sobre:
+− La interpretación y aplicación de los principios de la programación orientada a objetos.
+− La evaluación, selección y utilización de herramientas y lenguajes deprogramación orientados a objetos.
+− La utilización de las características específicas de lenguajes y entornos de programación en el desarrollo de aplicaciones informáticas.
+− La identificación de las funcionalidades aportadas por los sistemas gestores de bases de datos y su incorporación a las aplicaciones desarrolladas.
+− La prueba, depuración y documentación de las aplicaciones desarrolladas.
+

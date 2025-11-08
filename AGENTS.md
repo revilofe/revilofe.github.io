@@ -379,9 +379,10 @@ Un ejemplo sería el siguiente:
             ---
             """""""
 
-Como  has visto en el ejemplo:
-1. Siempre usar """---""" para separar secciones
-2. Siempre usar """2 lineas en blanco""" para separar las slides dentro de una sección.
+IMPORTANTE!!!!!! Como  has visto en el ejemplo:
+1. SIEMPRE usar """---""" para separar secciones de los documentos de slides.
+2. SIEMPRE usar """2 lineas en blanco""" para separar las slides dentro de una sección de los documentos de slides.
+3. En los documentos de slides no aparecerá """----""" ni """2 lineas en blanco""" en ningun otro lugar que no sea para separar secciones o slides respectivamente. Ya que si no, se romperá el formato de las slides.
 
 
 La forma en la que trabajaras para generar las slides, será la siguiente:

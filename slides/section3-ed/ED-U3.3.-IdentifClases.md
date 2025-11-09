@@ -6,13 +6,17 @@
 
 ---
 
-## Índice
+## Índice I
 
 - 1. Introducción
 - 2. Fundamentos de la Identificación
 - 3. Objetivos de un Buen Modelo de Clases
 - 4. Proceso Iterativo de Identificación
 - 5. Técnica de Identificación de Nombres
+
+
+## Índice II
+
 - 6. Fuentes de Clases
 - 7. Errores Comunes al Identificar Clases
 - 8. Cómo Identificar Relaciones entre Clases
@@ -584,7 +588,6 @@ Note: Se establecen las conexiones entre las clases, definiendo el tipo de relac
 * **Reserva - Asistencia**: Composición (1 Reserva tiene 0..1 Asistencia).
 
 Note: Continuamos identificando las relaciones restantes, asegurando que todas las clases estén conectadas lógicamente.
-
 
 ---
 

@@ -53,12 +53,17 @@ La unidad se encuentra dentro del Bloque 3 de Programación orientada a objetos.
 
 * U4: Programación orientada a objetos. 
 
-En la Unidad 3, veremos:   
+En la Unidad 4, veremos:   
 - Características de POO. 
 - Componentes de clases y objetos.   
 - Constructores e instanciación de objetos.   
 - Utilización de métodos y propiedades.   
 - Utilización de métodos estáticos.   
 - Librerías de objetos.   
-- Entornos de desarrollo para programación orientada a objetos.    
+- Entornos de desarrollo para programación orientada a objetos.
+
+## Teoría
+
+* [4.1. Kotlin](teoria/PROG-U4.1.-kotlin.md)
+    * [Presentación](https://revilofe.github.io/slides/section1-pr/PR-U4.1.-kotlin.html)
 

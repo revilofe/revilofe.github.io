@@ -1073,6 +1073,8 @@ Note: Puedes asignar la función devuelta a una variable y reutilizarla. El tipo
 
 ### Tipos función I
 
+Definir tipos de función:
+
 ```kotlin
 fun executor(action: () -> Unit) {
     action()
@@ -1099,6 +1101,8 @@ Note: Los tipos función pueden tener cualquier número de parámetros (incluso 
 
 ### Asignar funciones a variables
 
+Funciones como valores:
+
 ```kotlin
 // Con lambda
 val saySomething: (String) -> Unit = { x -> println(x) }
@@ -1118,6 +1122,8 @@ Note: Puedes asignar funciones a variables de dos formas. Primera: con un lambda
 
 ### Lambdas I
 
+Funciones anónimas inline:
+
 ```kotlin
 // Lambda con dos parámetros
 val sum: (Int, Int) -> Int = { x, y -> x + y }
@@ -1136,6 +1142,8 @@ Note: Un lambda es una función literal: una función anónima que no se declara
 
 ### Lambdas II: parámetro it
 
+Parámetro implícito para lambdas de un solo argumento:
+
 ```kotlin
 // Lambda con un parámetro
 val isNegative: (Int) -> Boolean = { x -> x < 0 }
@@ -1152,6 +1160,8 @@ Note: Cuando un lambda tiene un solo parámetro, puedes omitir su declaración y
 
 ### Lambdas III: fuera de paréntesis
 
+Sintaxis trailing lambda:
+
 ```kotlin
 // Lambda dentro de paréntesis
 val upperCaseLetters = "Hello World".filter({ it.isUpperCase() })
@@ -1167,6 +1177,8 @@ Note: Cuando el último parámetro de una función es un lambda, puedes sacarlo 
 
 
 ### Lambdas IV: función como parámetro
+
+Pasar lambdas a funciones:
 
 ```kotlin
 // High-order function que acepta lambda
@@ -1185,6 +1197,8 @@ Note: Cuando defines una función que acepta un lambda, especificas el tipo func
 
 
 ### Parámetros no utilizados
+
+Usar guión bajo para parámetros ignorados:
 
 ```kotlin
 val unusedSecondParam: (String, Int) -> Boolean = { s, _ ->
@@ -1205,6 +1219,8 @@ Note: Cuando un parámetro de un lambda no se usa, puedes indicarlo con guión b
 
 
 ### Funciones anónimas
+
+Alternativa a lambdas con sintaxis fun:
 
 ```kotlin
 // Función anónima con expresión
@@ -1228,6 +1244,8 @@ Note: Una función anónima es como una función normal pero sin nombre. Se decl
 
 ### Closures
 
+Capturar variables del ámbito exterior:
+
 ```kotlin
 fun printFilteredNamesByLength(length: Int) {
     val names = arrayListOf("Adam", "Andrew", "Chike", "Kechi")
@@ -1248,6 +1266,8 @@ Note: Un closure es un lambda o función anónima que "captura" variables del á
 
 
 ### Funciones locales o anidadas
+
+Funciones dentro de otras funciones:
 
 ```kotlin
 fun printCircumferenceAndArea(radius: Double): Unit {
@@ -1273,6 +1293,8 @@ Note: Las funciones locales o nested functions son funciones declaradas dentro d
 
 
 ### Funciones infix
+
+Llamar funciones sin punto ni paréntesis:
 
 ```kotlin
 class Student {
@@ -1301,6 +1323,8 @@ Note: Las funciones marcadas con `infix` pueden llamarse sin punto ni paréntesi
 
 
 ### Inline functions
+
+Optimizar lambdas evitando overhead:
 
 ```kotlin
 inline fun repeat(times: Int, action: (Int) -> Unit) {

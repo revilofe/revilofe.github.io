@@ -1019,6 +1019,10 @@ Con este mecanismo, nuestro código se ha optimizado significativamente, no más
 * [Apuntes de kotlin](https://github.com/alxgcrz/_kotlin_)
 * [Kotlinlang](https://kotlinlang.org)
 
+## Presentación
+
+* [Presentación de la unidad](https://revilofe.github.io/slides/section1-pr/PR-U4.1.-kotlin.html)
+
 ## License
 
 [![Licencia de Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)](http://creativecommons.org/licenses/by-sa/4.0/)

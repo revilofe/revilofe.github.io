@@ -71,8 +71,8 @@ Aquí tienes acceso directo a todas las presentaciones disponibles, organizadas 
 * [PR-U3.5 - Funciones](https://revilofe.github.io/slides/section1-pr/PR-U3.5.-Funciones.html)
 * [PR-U3.10 - Iteradores](https://revilofe.github.io/slides/section1-pr/PR-U3.10.-Iteradores.html)
 
-#### Unidad 4 - Kotlin
-* [PR-U4.1 - Kotlin Básico](https://revilofe.github.io/slides/section1-pr/PR-U4.1.-KotlinBasico.html)
+#### Unidad 4 - Programación Orientada a Objetos con Kotlin
+* [PR-U4.1 - Kotlin](https://revilofe.github.io/slides/section1-pr/PR-U4.1.-kotlin.html)
 
 #### Unidad 7 - Gestión de archivos
 * [PR-U7.3 - Gestión de Archivos Clase File](https://revilofe.github.io/slides/section1-pr/PR-U7.3.-GestionArchivosClaseFile.html)

@@ -157,7 +157,6 @@ Note: La validación es crucial. Un modelo debe ser probado contra los requisito
 * **Adjetivos** → Potenciales atributos o estados.
 * El lenguaje humano refleja la estructura conceptual.
 
-
 Note: Esta técnica aprovecha cómo las personas describen el mundo. Los sustantivos son los "actores" o "cosas" del sistema, mientras que los verbos son las "acciones" que realizan.
 
 
@@ -169,7 +168,6 @@ Note: Esta técnica aprovecha cómo las personas describen el mundo. Los sustant
 
 * **Paso 2: Identificar todos los sustantivos**
     * Subrayar o marcar cada sustantivo.
-
 
 Note: La calidad del texto de origen es fundamental. Un texto claro y conciso facilita mucho la identificación inicial.
 
@@ -184,7 +182,6 @@ Note: La calidad del texto de origen es fundamental. Un texto claro y conciso fa
     * Eliminar candidatos inapropiados.
     * Usar criterios sistemáticos.
 
-
 Note: La lista inicial será larga y contendrá muchos elementos que no serán clases. El filtrado es donde se aplica el conocimiento de diseño.
 
 
@@ -197,7 +194,6 @@ Note: La lista inicial será larga y contendrá muchos elementos que no serán c
 * **Criterio 2: Atributos disfrazados**
     * Propiedades simples de otra entidad.
     * Ej: "Nombre", "Dirección" (atributos de Usuario).
-
 
 Note: Es común confundir roles con clases o atributos con clases. Un rol puede ser un atributo o una subclase, dependiendo de su complejidad.
 
@@ -212,7 +208,6 @@ Note: Es común confundir roles con clases o atributos con clases. Un rol puede 
     * Conceptos técnicos no del dominio del problema.
     * Ej: "Sistema" (demasiado genérico).
 
-
 Note: El modelo de clases debe centrarse en el dominio del problema, no en la implementación técnica. Los estados suelen ser atributos booleanos o enums.
 
 
@@ -225,7 +220,6 @@ Note: El modelo de clases debe centrarse en el dominio del problema, no en la im
 * **Criterio 6: Operaciones o servicios**
     * Verbos nominalizados que representan acciones.
     * Ej: "Gestión", "Procesamiento" (suelen ser servicios).
-
 
 Note: Mantener el enfoque en el alcance del sistema es crucial para evitar clases innecesarias. Las operaciones son métodos, no clases.
 
@@ -240,7 +234,6 @@ Note: Mantener el enfoque en el alcance del sistema es crucial para evitar clase
     * ¿Tiene comportamiento significativo? (Ej: Préstamo).
 * **Regla 4: "El test de la independencia"**
     * ¿Puede existir independientemente? (Ej: Usuario).
-
 
 Note: Estas reglas actúan como un filtro rápido para validar si un candidato es una clase o no. Si dudas, empieza como atributo; es más fácil refactorizar.
 
@@ -260,7 +253,6 @@ Note: Estas reglas actúan como un filtro rápido para validar si un candidato e
     * Funciones que las personas desempeñan.
     * Ej: Estudiante, Profesor, Paciente.
     * Pueden ser clases o atributos/enums.
-
 
 Note: Las clases pueden surgir de diversas fuentes. Las cosas tangibles son las más obvias, mientras que los roles requieren un análisis más profundo para decidir si son clases o atributos.
 
@@ -424,7 +416,6 @@ Note: La asociación es la relación más flexible y se usa cuando no encaja en 
 * **Identificación**: Una clase usa otra temporalmente.
 * **Casos**: Parámetros de método, variables locales.
 * **Ejemplo**: Calculador de impuestos usa información de Producto.
-
 
 Note: La dependencia es la relación más débil, indicando un uso puntual sin mantener una referencia permanente.
 

@@ -53,7 +53,25 @@ Note: A diferencia del iterable (que es el contenedor), el iterador es el objeto
 Note: El bucle `for` abstrae toda la complejidad del manejo de iteradores. No tenemos que llamar a `iter()` o `next()` manualmente ni capturar la excepción `StopIteration`. Python lo hace todo por nosotros, lo que resulta en un código más limpio y legible.
 
 
-### 2.2. Uso explícito de iteradores
+### 2.2. Uso de Centinelas
+
+*   Permite iterar con `while` sin `while True` ni `break`.
+*   Se usa un valor **centinela** con `next()`.
+*   `next(iterador, centinela)` devuelve el centinela al final.
+
+```python
+# iterador = iter([10, 20])
+centinela = object()
+elemento = next(iterador, centinela)
+while elemento is not centinela:
+    print(elemento)
+    elemento = next(iterador, centinela)
+```
+
+Note: El valor centinela es un objeto único que se devuelve cuando el iterador se agota, en lugar de lanzar `StopIteration`. Esto permite que el bucle `while` termine de forma natural al comparar el elemento con el centinela. Es una técnica elegante para evitar bloques `try/except` en bucles `while`.
+
+
+### 2.3. Uso explícito de iteradores
 
 *   Podemos controlar la iteración manualmente.
 *   `iter(iterable)`: Obtiene el iterador.

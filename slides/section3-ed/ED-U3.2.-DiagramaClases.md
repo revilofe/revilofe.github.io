@@ -84,11 +84,12 @@ Note: Estos tres elementos son los pilares del diagrama. Las clases son los "act
 
 ### 2.2. Herramientas para crear diagramas de clases
 Vamos a usar esta herramienta:
-![plantuml: https://editor.plantuml.com/uml](https://editor.plantuml.com/uml)
-
+[plantuml: https://editor.plantuml.com/uml](https://editor.plantuml.com/uml)
+[plantuml: Diagrama de clases](https://plantuml.com/es/class-diagram)
 ---
 
 ## 3. Clases
+[![](https://img.plantuml.biz/plantuml/svg/RP9HYiGW38RVSuemJxjtAAKtALcROOHgIanXvlPJqMeBcoU_FyRyHgTafBQ75UWlcP8ph75oJxYLKa9yt8K7K8nYP5vYhMmCpgjR6LiKXfzVl4MHv_GIjVaf6g3swZio_w_EoLXP48UXhEopyJZ2GaRNWiQmU0eIbtPCPHZ6kwsgNtrnD6-VlgNm8U_XMfaP-EruwsF1nk3ZOVH9xfnCOmXyDzqODXKJ9-lPucHGTgBzCbWO-YoAtFb8wTuVEgSomyHnoJ_X2m00)](https://editor.plantuml.com/uml/RP9HYiGW38RVSuemJxjtAAKtALcROOHgIanXvlPJqMeBcoU_FyRyHgTafBQ75UWlcP8ph75oJxYLKa9yt8K7K8nYP5vYhMmCpgjR6LiKXfzVl4MHv_GIjVaf6g3swZio_w_EoLXP48UXhEopyJZ2GaRNWiQmU0eIbtPCPHZ6kwsgNtrnD6-VlgNm8U_XMfaP-EruwsF1nk3ZOVH9xfnCOmXyDzqODXKJ9-lPucHGTgBzCbWO-YoAtFb8wTuVEgSomyHnoJ_X2m00)
 
 
 ### 3.1. ¿Qué representa una clase? I
@@ -654,7 +655,7 @@ Note: Las clases abstractas pueden proporcionar implementación parcial, no solo
 ---
 
 ## 5. Relaciones entre Clases/Interfaces
-
+[![](https://img.plantuml.biz/plantuml/svg/SoWkIImgAStDuNBEIImkDZ1KiAdHrLM0S8oWWiOAMd0n4wYOgK8-NCmCAcQkeAS75RA02bagm5GP6d0vfEQbWAm20000)](https://editor.plantuml.com/uml/SoWkIImgAStDuNBEIImkDZ1KiAdHrLM0S8oWWiOAMd0n4wYOgK8-NCmCAcQkeAS75RA02bagm5GP6d0vfEQbWAm20000)
 
 ### 5.1. Tipos de relaciones
 

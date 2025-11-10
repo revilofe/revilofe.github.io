@@ -225,7 +225,7 @@ fun main() {
 Note: Los atributos privados (-) se declaran en el constructor con 'private var'. Los métodos públicos (+) son funciones sin modificador. La visibilidad del diagrama UML se traduce directamente a modificadores de acceso en Kotlin.
 
 
-### 3.4. Visibilidad
+### 3.4. Visibilidad I
 Los miembros de una clase (atributos, métodos) pueden tener diferentes niveles de visibilidad:
 
 * **+ público**: Accesible desde cualquier lugar
@@ -235,6 +235,22 @@ Los miembros de una clase (atributos, métodos) pueden tener diferentes niveles 
 * Principio de encapsulación: ocultar detalles internos
 
 Note: La visibilidad controla quién puede acceder a atributos y métodos. El encapsulamiento recomienda atributos privados con métodos públicos. Reduce acoplamiento y mejora mantenimiento. Normalmente no está permitido acceder directamente a atributos privados desde fuera de la clase.
+
+
+### 3.4. Visibilidad II
+* Privado (-): 
+    * Los atributos nombre, fechaNacimiento y estado están marcados como privados. 
+    * Esto implica que solo son accesibles desde dentro de la propia clase, siguiendo el principio de encapsulamiento. 
+    * Es una buena práctica para proteger la integridad del estado del objeto.
+
+* Público (+)
+    * Los métodos getNombre(), calcularEdad() y jubilar() son públicos. 
+    * Esto significa que pueden ser invocados desde cualquier parte del programa que tenga acceso a una instancia de Persona. 
+    * Son la interfaz pública del objeto.
+
+[![](https://img.plantuml.biz/plantuml/svg/LSun3i8m30NGFQVmI8MuGASECB1KI8W3k8ufHeaZ9Sw4k3jf9hg-__NrfsAOhSRWA60fSEDSaY9y7C09DCKbymXtow9hfoVJ2sSaYS9gQOGp6lU4svHFV-KZh6npdpWCEoSCL0FcYqU_HLUrxk-wIEED7YhclcvYzUtT3m00)](https://editor.plantuml.com/uml/LSun3i8m30NGFQVmI8MuGASECB1KI8W3k8ufHeaZ9Sw4k3jf9hg-__NrfsAOhSRWA60fSEDSaY9y7C09DCKbymXtow9hfoVJ2sSaYS9gQOGp6lU4svHFV-KZh6npdpWCEoSCL0FcYqU_HLUrxk-wIEED7YhclcvYzUtT3m00)
+
+Note: Este diseño promueve un estilo orientado a objetos robusto, donde el acceso al estado está estrictamente controlado a través de métodos públicos, asegurando así coherencia y seguridad.  No hay miembros protegidos (#) en esta clase, pero vale la pena recordar que permiten el acceso desde clases hijas y desde el mismo paquete, siendo útiles en escenarios de herencia.
 
 
 ### 3.5. Miembros estáticos I
@@ -297,6 +313,13 @@ Note: En este ejemplo, `posicionVolante` y `unidadDistancia` son atributos está
 
 
 ### 3.5. Ejemplo: Miembros estáticos II
+
+[![](https://img.plantuml.biz/plantuml/svg/fPCzRiCm38LtduAZZI8Ny9GYNGi4AD2TbHI7W4qQafmbo64wTkuHVB5IZTlAgOC6g0P1F-3to4Tf7IBwE7HjOLeC0JPYzWwE1S0TTEWDGWrFqHCty3DMAq0zUncY00ku4CVNI4QWxCK3iJBP45PdYbZNoWBcPefYZhhHkvFoUWbaIFXPMkJeSd1Ep716kbwB92kGo2r2gjLLS-x0PD4-q2Jx7-vKTuWU_KPuHytWCULSLZCVbDkDRr7ifG7IknGmlZDODpSqozXyeVrM_1OfbBrEtmf9wo1aPpfNHQRKJqN1egvwQlOHP7T-47Nz-HPK_dwfOuLZ2odiIl15otBCpOmbEnNqkE3VNwXVlcMS1SXQL-c3V000)](https://editor.plantuml.com/uml/fPCzRiCm38LtduAZZI8Ny9GYNGi4AD2TbHI7W4qQafmbo64wTkuHVB5IZTlAgOC6g0P1F-3to4Tf7IBwE7HjOLeC0JPYzWwE1S0TTEWDGWrFqHCty3DMAq0zUncY00ku4CVNI4QWxCK3iJBP45PdYbZNoWBcPefYZhhHkvFoUWbaIFXPMkJeSd1Ep716kbwB92kGo2r2gjLLS-x0PD4-q2Jx7-vKTuWU_KPuHytWCULSLZCVbDkDRr7ifG7IknGmlZDODpSqozXyeVrM_1OfbBrEtmf9wo1aPpfNHQRKJqN1egvwQlOHP7T-47Nz-HPK_dwfOuLZ2odiIl15otBCpOmbEnNqkE3VNwXVlcMS1SXQL-c3V000)
+
+Note: En este ejemplo, `posicionVolante` y `unidadDistancia` son atributos estáticos, estan subrayados. `configurarPorPais` es un método estático y tambien se ve subrayado. 
+
+
+### 3.5. Ejemplo: Miembros estáticos III
 **Implementación en Kotlin:**
 
 ```kotlin
@@ -379,6 +402,13 @@ Note: En Kotlin, los atributos derivados se implementan como propiedades calcula
 
 ### 3.7. Ejemplo: Atributo Derivado II
 
+[![](https://img.plantuml.biz/plantuml/svg/NO-n2W8n38RtFaL6HSJzfXjKS3a4do2skRj2cqARcyHtDpaKrAtz_lnVqxu9LbboSZvXQt2bsWeZF1p0dak-L-hW9ZNoP6GaF-E0FkP8BAM38mfPSA20eOCBYzvs4ycmTZVRhxRXyw_0yhV2qfDA39dcwHmN8QXncWNA-5bDHzV7e15uJ7v9XWArGF2tdd8kDeSfeoVj4WSmg-lrfBz-0G00)](https://editor.plantuml.com/uml/NO-n2W8n38RtFaL6HSJzfXjKS3a4do2skRj2cqARcyHtDpaKrAtz_lnVqxu9LbboSZvXQt2bsWeZF1p0dak-L-hW9ZNoP6GaF-E0FkP8BAM38mfPSA20eOCBYzvs4ycmTZVRhxRXyw_0yhV2qfDA39dcwHmN8QXncWNA-5bDHzV7e15uJ7v9XWArGF2tdd8kDeSfeoVj4WSmg-lrfBz-0G00)
+
+Note: Representación. /Edad es un atributo que se obtiene a partir del atributo fechaNacimiento. Por tanto, no se debe poder modificar, y se calcula cada vez que se llama. Tenerlo en cuenta al pasarlo a código. 
+
+
+### 3.7. Ejemplo: Atributo Derivado III
+
 **Implementación en Kotlin:**
 
 ```kotlin
@@ -395,13 +425,11 @@ class Persona(
     
     fun getNombre() = nombre
     fun getFechaNacimiento() = fechaNacimiento
-    fun getEdad() = edad  // Siempre actualizado
 }
 
 fun main() {
     val persona = Persona("Juan", LocalDate.of(1990, 5, 15))
-    println("${persona.nombre} tiene ${persona.edad} años")
-    // La edad se calcula cada vez que se accede
+    println("${persona.nombre} tiene ${persona.edad} años")  // La edad se calcula cada vez que se accede
 }
 ```
 
@@ -451,8 +479,13 @@ interface IVolador {
 
 Note: Este ejemplo muestra una interfaz simple con tres métodos públicos que deben ser implementados por cualquier clase que la use. Interfaz = contrato sin estado. Los tres métodos son públicos (+) y obligan a cualquier clase implementadora a proporcionar comportamiento. 
 
-
 ### 4.3. Ejemplo: Interfaz IVolador II
+[![](https://img.plantuml.biz/plantuml/svg/SoWkIImgAStDuShCAqajIajCJbNm3ClFIKp9BrAevb9Gq5Oe0_AAD3Ij54BpCal08eb0bKMPLMYYwQabZZabcIMbAI1Xb_pIf9nKhbekXzIy5A3v0000)](https://editor.plantuml.com/uml/SoWkIImgAStDuShCAqajIajCJbNm3ClFIKp9BrAevb9Gq5Oe0_AAD3Ij54BpCal08eb0bKMPLMYYwQabZZabcIMbAI1Xb_pIf9nKhbekXzIy5A3v0000)
+
+Note: La representación, en vez del rectángulo con <<interface>> aparece una I en un circulo. 
+
+
+### 4.3. Ejemplo: Interfaz IVolador III
 
 **Implementación en Kotlin:**
 
@@ -499,12 +532,17 @@ abstract class Figura {
 
 ```
 
-[![](https://img.plantuml.biz/plantuml/svg/TOz12i8m44NtESK75rRK2tHL4Bo09vWsGucaZKmcHIczkwar6y7Tv_t7VAQ9Ig9fy6QFYwV8e3QgKAU4g-kJa2a0NUxZbs8sm1dErd2Zvhn35toG6ZSLD_QP7F4ivH6lBUOybtjBnYHCrQ663Qdr_Di-MDp0Ak6_ObsRxYIhC0LdpMTi21DBPRVv4-msNfJ5D3pQzUKt)](https://editor.plantuml.com/uml/TOz12i8m44NtESK75rRK2tHL4Bo09vWsGucaZKmcHIczkwar6y7Tv_t7VAQ9Ig9fy6QFYwV8e3QgKAU4g-kJa2a0NUxZbs8sm1dErd2Zvhn35toG6ZSLD_QP7F4ivH6lBUOybtjBnYHCrQ663Qdr_Di-MDp0Ak6_ObsRxYIhC0LdpMTi21DBPRVv4-msNfJ5D3pQzUKt)
-
 Note: En el ejemplo representamos una clase abstracta Figura, en la que indicamos como que comportamiento tendrá la clase pero no indicamos como lo hará. Los metodos area, perimetro y dibujar son abstractos, mientras que mover tiene implementación.
 
 
 ### 4.5. Ejemplo: Clases abstractas II
+
+[![](https://img.plantuml.biz/plantuml/svg/TOz12i8m44NtESK75rRK2tHL4Bo09vWsGucaZKmcHIczkwar6y7Tv_t7VAQ9Ig9fy6QFYwV8e3QgKAU4g-kJa2a0NUxZbs8sm1dErd2Zvhn35toG6ZSLD_QP7F4ivH6lBUOybtjBnYHCrQ663Qdr_Di-MDp0Ak6_ObsRxYIhC0LdpMTi21DBPRVv4-msNfJ5D3pQzUKt)](https://editor.plantuml.com/uml/TOz12i8m44NtESK75rRK2tHL4Bo09vWsGucaZKmcHIczkwar6y7Tv_t7VAQ9Ig9fy6QFYwV8e3QgKAU4g-kJa2a0NUxZbs8sm1dErd2Zvhn35toG6ZSLD_QP7F4ivH6lBUOybtjBnYHCrQ663Qdr_Di-MDp0Ak6_ObsRxYIhC0LdpMTi21DBPRVv4-msNfJ5D3pQzUKt)
+
+Note: En este caso, se representa con una A, indicando que es una clase abstracta. También se representan en cursiva los métodos que son abstractos.
+
+
+### 4.5. Ejemplo: Clases abstractas III
 
 **Implementación en Kotlin:**
 
@@ -658,6 +696,14 @@ Note: Asociación binaria en la que una empresa contrata múltiples empleados. L
 
 
 ### 5.3. Ejemplo de Asociación II
+- La empresa contrata 1 o n empleados. 
+- Un empleado es contratado por una empresa.
+[![](https://img.plantuml.biz/plantuml/svg/HOqx2e0m40NxdEAnVGfR2mc81rdCge5yPBFUNmlHScQA2TrOxIhPPTaCrg1fFmmngQoMMdLhvjwnb5EbyqzPE3RtQj10y1vKwMiOCRTgoiQON90QdyiD)](https://editor.plantuml.com/uml/HOqx2e0m40NxdEAnVGfR2mc81rdCge5yPBFUNmlHScQA2TrOxIhPPTaCrg1fFmmngQoMMdLhvjwnb5EbyqzPE3RtQj10y1vKwMiOCRTgoiQON90QdyiD)
+
+Note: La empresa contrata 1 o n empleados. Un empleado es contratado por una empresa.
+
+
+### 5.3. Ejemplo de Asociación III
 
 **Implementación en Kotlin:**
 
@@ -743,6 +789,14 @@ Note: En este ejemplo, un Trabajador puede supervisar a otros Trabajadores. La m
 
 
 ### 5.4.4. Ejemplo: Asociación Reflexiva II
+- Un trabajador puedo o no ser superfisado por otro trabajador.
+- Un trabajador puede supervisar a 0 o muchos trabajadores.
+[![](https://img.plantuml.biz/plantuml/svg/LL113e8m4Bpt5HjEW87ebHZY0xpX1ueiM08jsLsy6FzkIupKssHcTcQo5nPDiiwJka-Q6MwaMptgpX6y541XtTmILj086Ji4PbcHnKNCOK1frWNfQTXHcbLHo4zk7NN6Ueg3uMfOphkhLc-bekRaM9Qd18fYGtaIhwg0lrqQQcMT890P7WAk_-yTiKT8GrAsdtYUeosRdcSARGSXIbqyyi_u0000)](https://editor.plantuml.com/uml/LL113e8m4Bpt5HjEW87ebHZY0xpX1ueiM08jsLsy6FzkIupKssHcTcQo5nPDiiwJka-Q6MwaMptgpX6y541XtTmILj086Ji4PbcHnKNCOK1frWNfQTXHcbLHo4zk7NN6Ueg3uMfOphkhLc-bekRaM9Qd18fYGtaIhwg0lrqQQcMT890P7WAk_-yTiKT8GrAsdtYUeosRdcSARGSXIbqyyi_u0000)
+
+Note: En este ejemplo, un Trabajador puede supervisar a otros Trabajadores. La multiplicidad 0..1 en "jefe" indica que un empleado puede tener cero o un supervisor. La multiplicidad 0..* en "subordinados" indica que puede supervisar a ninguno o varios empleados.
+
+
+### 5.4.4. Ejemplo: Asociación Reflexiva III
 
 **Implementación en Kotlin:**
 
@@ -833,8 +887,19 @@ end note
 
 [Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
 
+Note: El cliente navega hacia el pedido
+
 
 ### 5.7. Ejemplo: Navegabilidad II
+- El cliente puede tener muchos pedidos.
+- El pedido pertenece a un solo cliente.
+- El cliente ve los pedidos, pero el pedido no tiene porque ver el cliente.
+[![](https://img.plantuml.biz/plantuml/svg/NP3F2i8m3CRlVOgmat_emMkHCT2B82hu1DsMpKBNG9jT5D_TbgrJlENxak-Nj5LWxNaSh6Yi3W4Erg1ZX9S0aAPLS7ASIaT3xL71dRrnVNIsFV8DMzDIMAqLd4tW_QHByHOpRJ8cc1i7zFH3a1qs3wtWg1cJP69jewInjfWO-PPYLu2K9HIR8XCLUDJMF3MKGZYAGzxq3mRgyWiYCUSRSjGa8upvf23GjP22__6f7uVdJPVhDwyZOU4lW2fMyGC_)](https://editor.plantuml.com/uml/NP3F2i8m3CRlVOgmat_emMkHCT2B82hu1DsMpKBNG9jT5D_TbgrJlENxak-Nj5LWxNaSh6Yi3W4Erg1ZX9S0aAPLS7ASIaT3xL71dRrnVNIsFV8DMzDIMAqLd4tW_QHByHOpRJ8cc1i7zFH3a1qs3wtWg1cJP69jewInjfWO-PPYLu2K9HIR8XCLUDJMF3MKGZYAGzxq3mRgyWiYCUSRSjGa8upvf23GjP22__6f7uVdJPVhDwyZOU4lW2fMyGC_)
+
+Note: El cliente navega hacia el pedido
+
+
+### 5.7. Ejemplo: Navegabilidad III
 
 **En Kotlin (unidireccional):**
 ```kotlin

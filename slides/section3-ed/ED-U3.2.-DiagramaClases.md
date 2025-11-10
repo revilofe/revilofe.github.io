@@ -249,8 +249,6 @@ Note: La visibilidad controla quién puede acceder a atributos y métodos. El en
     * Esto significa que pueden ser invocados desde cualquier parte del programa que tenga acceso a una instancia de Persona. 
     * Son la interfaz pública del objeto.
 
-[![](https://img.plantuml.biz/plantuml/svg/LSun3i8m30NGFQVmI8MuGASECB1KI8W3k8ufHeaZ9Sw4k3jf9hg-__NrfsAOhSRWA60fSEDSaY9y7C09DCKbymXtow9hfoVJ2sSaYS9gQOGp6lU4svHFV-KZh6npdpWCEoSCL0FcYqU_HLUrxk-wIEED7YhclcvYzUtT3m00)](https://editor.plantuml.com/uml/LSun3i8m30NGFQVmI8MuGASECB1KI8W3k8ufHeaZ9Sw4k3jf9hg-__NrfsAOhSRWA60fSEDSaY9y7C09DCKbymXtow9hfoVJ2sSaYS9gQOGp6lU4svHFV-KZh6npdpWCEoSCL0FcYqU_HLUrxk-wIEED7YhclcvYzUtT3m00)
-
 Note: Este diseño promueve un estilo orientado a objetos robusto, donde el acceso al estado está estrictamente controlado a través de métodos públicos, asegurando así coherencia y seguridad.  No hay miembros protegidos (#) en esta clase, pero vale la pena recordar que permiten el acceso desde clases hijas y desde el mismo paquete, siendo útiles en escenarios de herencia.
 
 
@@ -475,18 +473,12 @@ interface IVolador {
 }
 @enduml
 ```
-
-[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
-
-Note: Este ejemplo muestra una interfaz simple con tres métodos públicos que deben ser implementados por cualquier clase que la use. Interfaz = contrato sin estado. Los tres métodos son públicos (+) y obligan a cualquier clase implementadora a proporcionar comportamiento. 
-
-### 4.3. Ejemplo: Interfaz IVolador II
 [![](https://img.plantuml.biz/plantuml/svg/SoWkIImgAStDuShCAqajIajCJbNm3ClFIKp9BrAevb9Gq5Oe0_AAD3Ij54BpCal08eb0bKMPLMYYwQabZZabcIMbAI1Xb_pIf9nKhbekXzIy5A3v0000)](https://editor.plantuml.com/uml/SoWkIImgAStDuShCAqajIajCJbNm3ClFIKp9BrAevb9Gq5Oe0_AAD3Ij54BpCal08eb0bKMPLMYYwQabZZabcIMbAI1Xb_pIf9nKhbekXzIy5A3v0000)
 
-Note: La representación, en vez del rectángulo con <<interface>> aparece una I en un circulo. 
+Note: Este ejemplo muestra una interfaz simple con tres métodos públicos que deben ser implementados por cualquier clase que la use. Interfaz = contrato sin estado. Los tres métodos son públicos (+) y obligan a cualquier clase implementadora a proporcionar comportamiento. La representación, en vez del rectángulo con <<interface>> aparece una I en un circulo. 
 
 
-### 4.3. Ejemplo: Interfaz IVolador III
+### 4.3. Ejemplo: Interfaz IVolador II
 
 **Implementación en Kotlin:**
 
@@ -690,21 +682,14 @@ class Empleado
 Empresa "1" -- "n" Empleado : Contrata >
 @enduml
 ```
-
-[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
-
-Note: Asociación binaria en la que una empresa contrata múltiples empleados. La multiplicidad indica "1 a n". La flecha indica que Empresa conoce a Empleado, pero no necesariamente al revés.
-
-
-### 5.3. Ejemplo de Asociación II
 - La empresa contrata 1 o n empleados. 
 - Un empleado es contratado por una empresa.
 [![](https://img.plantuml.biz/plantuml/svg/HOqx2e0m40NxdEAnVGfR2mc81rdCge5yPBFUNmlHScQA2TrOxIhPPTaCrg1fFmmngQoMMdLhvjwnb5EbyqzPE3RtQj10y1vKwMiOCRTgoiQON90QdyiD)](https://editor.plantuml.com/uml/HOqx2e0m40NxdEAnVGfR2mc81rdCge5yPBFUNmlHScQA2TrOxIhPPTaCrg1fFmmngQoMMdLhvjwnb5EbyqzPE3RtQj10y1vKwMiOCRTgoiQON90QdyiD)
 
-Note: La empresa contrata 1 o n empleados. Un empleado es contratado por una empresa.
+Note: Asociación binaria en la que una empresa contrata múltiples empleados. La multiplicidad indica "1 a n". La flecha indica que Empresa conoce a Empleado, pero no necesariamente al revés. La empresa contrata 1 o n empleados. Un empleado es contratado por una empresa.
 
 
-### 5.3. Ejemplo de Asociación III
+### 5.3. Ejemplo de Asociación II
 
 **Implementación en Kotlin:**
 
@@ -1269,14 +1254,14 @@ Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducc
 
 ### 5.20. Resumen de Relaciones
 
-| Relación           | Símbolo  | Fuerza       |
-|--------------------|----------|--------------|
-| **Dependencia**    | `- - →`  | Muy débil    |
-| **Asociación**     | `───`    | Débil        |
-| **Agregación**     | `◇───`   | Media        |
-| **Composición**    | `♦───`   | Fuerte       |
-| **Herencia**       | `───▷`   | Muy fuerte   |
-| **Implementación** | `- - ▷`  | Muy fuerte   |
+| Relación           | Símbolo   | Fuerza       |
+|--------------------|-----------|--------------|
+| **Dependencia**    | `- - →`   | Muy débil    |
+| **Asociación**     | `─────`   | Débil        |
+| **Agregación**     | `◇────`   | Media        |
+| **Composición**    | `♦────`   | Fuerte       |
+| **Herencia**       | `────▷`   | Muy fuerte   |
+| **Implementación** | `- - ▷`   | Muy fuerte   |
 
 Note: Este cuadro resume los tipos de relaciones ordenados por fuerza de acoplamiento.
 

@@ -394,19 +394,12 @@ end note
 @enduml
 ```
 
-[Ver/Editar en PlantUML](https://www.plantuml.com/plantuml/uml/)
+[![](https://img.plantuml.biz/plantuml/svg/NO-n2W8n38RtFaL6HSJzfXjKS3a4do2skRj2cqARcyHtDpaKrAtz_lnVqxu9LbboSZvXQt2bsWeZF1p0dak-L-hW9ZNoP6GaF-E0FkP8BAM38mfPSA20eOCBYzvs4ycmTZVRhxRXyw_0yhV2qfDA39dcwHmN8QXncWNA-5bDHzV7e15uJ7v9XWArGF2tdd8kDeSfeoVj4WSmg-lrfBz-0G00)](https://editor.plantuml.com/uml/NO-n2W8n38RtFaL6HSJzfXjKS3a4do2skRj2cqARcyHtDpaKrAtz_lnVqxu9LbboSZvXQt2bsWeZF1p0dak-L-hW9ZNoP6GaF-E0FkP8BAM38mfPSA20eOCBYzvs4ycmTZVRhxRXyw_0yhV2qfDA39dcwHmN8QXncWNA-5bDHzV7e15uJ7v9XWArGF2tdd8kDeSfeoVj4WSmg-lrfBz-0G00)
 
-Note: En Kotlin, los atributos derivados se implementan como propiedades calculadas (custom getter). No ocupan memoria para almacenamiento, se calculan cada vez que se acceden. Esto garantiza que la edad siempre esté actualizada sin necesidad de mantener manualmente el valor.
+Note: En Kotlin, los atributos derivados se implementan como propiedades calculadas (custom getter). No ocupan memoria para almacenamiento, se calculan cada vez que se acceden. Esto garantiza que la edad siempre esté actualizada sin necesidad de mantener manualmente el valor. Representación. /Edad es un atributo que se obtiene a partir del atributo fechaNacimiento. Por tanto, no se debe poder modificar, y se calcula cada vez que se llama. Tenerlo en cuenta al pasarlo a código. 
 
 
 ### 3.7. Ejemplo: Atributo Derivado II
-
-[![](https://img.plantuml.biz/plantuml/svg/NO-n2W8n38RtFaL6HSJzfXjKS3a4do2skRj2cqARcyHtDpaKrAtz_lnVqxu9LbboSZvXQt2bsWeZF1p0dak-L-hW9ZNoP6GaF-E0FkP8BAM38mfPSA20eOCBYzvs4ycmTZVRhxRXyw_0yhV2qfDA39dcwHmN8QXncWNA-5bDHzV7e15uJ7v9XWArGF2tdd8kDeSfeoVj4WSmg-lrfBz-0G00)](https://editor.plantuml.com/uml/NO-n2W8n38RtFaL6HSJzfXjKS3a4do2skRj2cqARcyHtDpaKrAtz_lnVqxu9LbboSZvXQt2bsWeZF1p0dak-L-hW9ZNoP6GaF-E0FkP8BAM38mfPSA20eOCBYzvs4ycmTZVRhxRXyw_0yhV2qfDA39dcwHmN8QXncWNA-5bDHzV7e15uJ7v9XWArGF2tdd8kDeSfeoVj4WSmg-lrfBz-0G00)
-
-Note: Representación. /Edad es un atributo que se obtiene a partir del atributo fechaNacimiento. Por tanto, no se debe poder modificar, y se calcula cada vez que se llama. Tenerlo en cuenta al pasarlo a código. 
-
-
-### 3.7. Ejemplo: Atributo Derivado III
 
 **Implementación en Kotlin:**
 
@@ -525,17 +518,12 @@ abstract class Figura {
 
 ```
 
-Note: En el ejemplo representamos una clase abstracta Figura, en la que indicamos como que comportamiento tendrá la clase pero no indicamos como lo hará. Los metodos area, perimetro y dibujar son abstractos, mientras que mover tiene implementación.
+[![](https://img.plantuml.biz/plantuml/svg/TOz12i8m44NtESK75rRK2tHL4Bo09vWsGucaZKmcHIczkwar6y7Tv_t7VAQ9Ig9fy6QFYwV8e3QgKAU4g-kJa2a0NUxZbs8sm1dErd2Zvhn35toG6ZSLD_QP7F4ivH6lBUOybtjBnYHCrQ663Qdr_Di-MDp0Ak6_ObsRxYIhC0LdpMTi21DBPRVv4-msNfJ5D3pQzUKt)](https://editor.plantuml.com/uml/TOz12i8m44NtESK75rRK2tHL4Bo09vWsGucaZKmcHIczkwar6y7Tv_t7VAQ9Ig9fy6QFYwV8e3QgKAU4g-kJa2a0NUxZbs8sm1dErd2Zvhn35toG6ZSLD_QP7F4ivH6lBUOybtjBnYHCrQ663Qdr_Di-MDp0Ak6_ObsRxYIhC0LdpMTi21DBPRVv4-msNfJ5D3pQzUKt)
+
+Note: En el ejemplo representamos una clase abstracta Figura, en la que indicamos como que comportamiento tendrá la clase pero no indicamos como lo hará. Los metodos area, perimetro y dibujar son abstractos, mientras que mover tiene implementación. En este caso, se representa con una A, indicando que es una clase abstracta. También se representan en cursiva los métodos que son abstractos.
 
 
 ### 4.5. Ejemplo: Clases abstractas II
-
-[![](https://img.plantuml.biz/plantuml/svg/TOz12i8m44NtESK75rRK2tHL4Bo09vWsGucaZKmcHIczkwar6y7Tv_t7VAQ9Ig9fy6QFYwV8e3QgKAU4g-kJa2a0NUxZbs8sm1dErd2Zvhn35toG6ZSLD_QP7F4ivH6lBUOybtjBnYHCrQ663Qdr_Di-MDp0Ak6_ObsRxYIhC0LdpMTi21DBPRVv4-msNfJ5D3pQzUKt)](https://editor.plantuml.com/uml/TOz12i8m44NtESK75rRK2tHL4Bo09vWsGucaZKmcHIczkwar6y7Tv_t7VAQ9Ig9fy6QFYwV8e3QgKAU4g-kJa2a0NUxZbs8sm1dErd2Zvhn35toG6ZSLD_QP7F4ivH6lBUOybtjBnYHCrQ663Qdr_Di-MDp0Ak6_ObsRxYIhC0LdpMTi21DBPRVv4-msNfJ5D3pQzUKt)
-
-Note: En este caso, se representa con una A, indicando que es una clase abstracta. También se representan en cursiva los métodos que son abstractos.
-
-
-### 4.5. Ejemplo: Clases abstractas III
 
 **Implementación en Kotlin:**
 
@@ -648,6 +636,8 @@ Note: Las clases abstractas pueden proporcionar implementación parcial, no solo
 
 ## 5. Relaciones entre Clases/Interfaces
 [![](https://img.plantuml.biz/plantuml/svg/SoWkIImgAStDuNBEIImkDZ1KiAdHrLM0S8oWWiOAMd0n4wYOgK8-NCmCAcQkeAS75RA02bagm5GP6d0vfEQbWAm20000)](https://editor.plantuml.com/uml/SoWkIImgAStDuNBEIImkDZ1KiAdHrLM0S8oWWiOAMd0n4wYOgK8-NCmCAcQkeAS75RA02bagm5GP6d0vfEQbWAm20000)
+[![](https://img.plantuml.biz/plantuml/svg/SoWkIImgAStDuNBEIImkDZHKiAdHqrE0S8oWWiOAkhfsK34Jg9YfWfuUJCmCAcOE5Ak12Lf01IqLR7HrjI22HWPS3gbvAI3h0000)](https://editor.plantuml.com/uml/SoWkIImgAStDuNBEIImkDZHKiAdHqrE0S8oWWiOAkhfsK34Jg9YfWfuUJCmCAcOE5Ak12Lf01IqLR7HrjI22HWPS3gbvAI3h0000)
+
 
 ### 5.1. Tipos de relaciones
 
@@ -1262,6 +1252,8 @@ Note: Código Kotlin que implementa el diagrama UML anterior. Observa la traducc
 | **Composición**    | `♦────`   | Fuerte       |
 | **Herencia**       | `────▷`   | Muy fuerte   |
 | **Implementación** | `- - ▷`   | Muy fuerte   |
+
+[![](https://img.plantuml.biz/plantuml/svg/SoWkIImgAStDuNBEIImkDZ1KiAdHrLM0S8oWWiOAMd0n4wYOgK8-NCmCAcQkeAS75RA02bagm5GP6d0vfEQbWAm20000)](https://editor.plantuml.com/uml/SoWkIImgAStDuNBEIImkDZ1KiAdHrLM0S8oWWiOAMd0n4wYOgK8-NCmCAcQkeAS75RA02bagm5GP6d0vfEQbWAm20000)
 
 Note: Este cuadro resume los tipos de relaciones ordenados por fuerza de acoplamiento.
 

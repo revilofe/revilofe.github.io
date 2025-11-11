@@ -16,40 +16,6 @@ toc_icon: "file-code"
 
 Módulo de programación, 1 DAW.
 
-## Presentaciones
-
-### Unidad 0 - Presentación del módulo
-* [PR-U0.1.1 - Presentación](https://revilofe.github.io/slides/section1-pr/PR-U0.1.1.-Presentacion.html)
-  * Formulario 1: [Como soy](https://forms.gle/HjjPbyUWF9njHkBM8)
-  * Formulario 2: [Conocimientos previos](https://forms.gle/HDqysZSEuv27F56e8)
-
-### Unidad 1 - Mi primer programa
-* [PR-U1.1 - Un Programa Informático](https://revilofe.github.io/slides/section1-pr/PR-U1.1.-UnProgramaInformatico.html)
-* [PR-U1.1.1 - Pseudocódigo](https://revilofe.github.io/slides/section1-pr/PR-U1.1.1.-Pseudocodigo.html)
-* [PR-U1.2 - Práctica con un Lenguaje](https://revilofe.github.io/slides/section1-pr/PR-U1.2.PracticaConUnLenguajes.html)
-
-### Unidad 2 - Estructuras de control
-* [PR-U2.1 - Condicionales](https://revilofe.github.io/slides/section1-pr/PR-U2.1.-Condicionales.html)
-* [PR-U2.2 - Iterativas](https://revilofe.github.io/slides/section1-pr/PR-U2.2.-Iterativas.html)
-* [PR-U2.3 - Excepciones](https://revilofe.github.io/slides/section1-pr/PR-U2.3.-Excepciones.html)
-* [PR-U2.4 - Depurar](https://revilofe.github.io/slides/section1-pr/PR-U2.4.-Depurar.html)
-* [PR-U2.5 - Documentar](https://revilofe.github.io/slides/section1-pr/PR-U2.5.-Documentar.html)
-
-### Unidad 3 - Estructuras de datos
-* [PR-U3.0 - Cadenas](https://revilofe.github.io/slides/section1-pr/PR-U3.0.-Cadenas.html)
-* [PR-U3.1 - Estructuras de Datos](https://revilofe.github.io/slides/section1-pr/PR-U3.1.-EstDatosAbs.html)
-* [PR-U3.1 - Listas](https://revilofe.github.io/slides/section1-pr/PR-U3.1.-Listas.html)
-* [PR-U3.2 - Tuplas](https://revilofe.github.io/slides/section1-pr/PR-U3.2.-Tuplas.html)
-* [PR-U3.3 - Diccionarios](https://revilofe.github.io/slides/section1-pr/PR-U3.3.-Diccionarios.html)
-* [PR-U3.4 - Conjuntos](https://revilofe.github.io/slides/section1-pr/PR-U3.4.-Conjuntos.html)
-* [PR-U3.5 - Funciones](https://revilofe.github.io/slides/section1-pr/PR-U3.5.-Funciones.html)
-* [PR-U3.10 - Iteradores](https://revilofe.github.io/slides/section1-pr/PR-U3.10.-Iteradores.html)
-
-### Unidad 4 - Programación Orientada a Objetos con Kotlin
-* [PR-U4.1 - Kotlin](https://revilofe.github.io/slides/section1-pr/PR-U4.1.-kotlin.html)
-
-### Unidad 7 - Gestión de archivos
-* [PR-U7.3 - Gestión de Archivos Clase File](https://revilofe.github.io/slides/section1-pr/PR-U7.3.-GestionArchivosClaseFile.html)
 
 Se describe el módulo profesional de programación. Esta información se divide en:
 
@@ -82,14 +48,14 @@ En los siguientes enlaces se encuentran los contenidos, resultados de aprendizaj
 
 El curso tiene un total de 24 semanas (720 horas). La relación propuesta entre unidades y semanas es la siguiente:
 
-| Unidad | Semanas        |
-| ------ | -------------- |
-| 1      | Semana 1 - 2   |
-| 2      | Semana 2 - 7   |
-| 3      | Semana  -   |
-| 4      | Semana  -  |
-| 5      | Semana  -  |
-| 6      | Semana  -  |
+| Unidad | Semanas         |
+| ------ |-----------------|
+| 1      | Semana 1 - 2    |
+| 2      | Semana 2 - 7    |
+| 3      | Semana  -       |
+| 4      | Semana  -       |
+| 5      | Semana  -       |
+| 6      | Semana  -       |
 
 ## Materiales
 
@@ -139,3 +105,37 @@ Típicamente se intenta tener los siguientes apartados en cada uno de los módul
 - Prácticas evaluables.
 - Exámenes
 
+## Presentaciones
+
+### Unidad 0 - Presentación del módulo
+* [PR-U0.1.1 - Presentación](https://revilofe.github.io/slides/section1-pr/PR-U0.1.1.-Presentacion.html)
+  * Formulario 1: [Como soy](https://forms.gle/HjjPbyUWF9njHkBM8)
+  * Formulario 2: [Conocimientos previos](https://forms.gle/HDqysZSEuv27F56e8)
+
+### Unidad 1 - Mi primer programa
+* [PR-U1.1 - Un Programa Informático](https://revilofe.github.io/slides/section1-pr/PR-U1.1.-UnProgramaInformatico.html)
+* [PR-U1.1.1 - Pseudocódigo](https://revilofe.github.io/slides/section1-pr/PR-U1.1.1.-Pseudocodigo.html)
+* [PR-U1.2 - Práctica con un Lenguaje](https://revilofe.github.io/slides/section1-pr/PR-U1.2.PracticaConUnLenguajes.html)
+
+### Unidad 2 - Estructuras de control
+* [PR-U2.1 - Condicionales](https://revilofe.github.io/slides/section1-pr/PR-U2.1.-Condicionales.html)
+* [PR-U2.2 - Iterativas](https://revilofe.github.io/slides/section1-pr/PR-U2.2.-Iterativas.html)
+* [PR-U2.3 - Excepciones](https://revilofe.github.io/slides/section1-pr/PR-U2.3.-Excepciones.html)
+* [PR-U2.4 - Depurar](https://revilofe.github.io/slides/section1-pr/PR-U2.4.-Depurar.html)
+* [PR-U2.5 - Documentar](https://revilofe.github.io/slides/section1-pr/PR-U2.5.-Documentar.html)
+
+### Unidad 3 - Estructuras de datos
+* [PR-U3.0 - Cadenas](https://revilofe.github.io/slides/section1-pr/PR-U3.0.-Cadenas.html)
+* [PR-U3.1 - Estructuras de Datos](https://revilofe.github.io/slides/section1-pr/PR-U3.1.-EstDatosAbs.html)
+* [PR-U3.1 - Listas](https://revilofe.github.io/slides/section1-pr/PR-U3.1.-Listas.html)
+* [PR-U3.2 - Tuplas](https://revilofe.github.io/slides/section1-pr/PR-U3.2.-Tuplas.html)
+* [PR-U3.3 - Diccionarios](https://revilofe.github.io/slides/section1-pr/PR-U3.3.-Diccionarios.html)
+* [PR-U3.4 - Conjuntos](https://revilofe.github.io/slides/section1-pr/PR-U3.4.-Conjuntos.html)
+* [PR-U3.5 - Funciones](https://revilofe.github.io/slides/section1-pr/PR-U3.5.-Funciones.html)
+* [PR-U3.10 - Iteradores](https://revilofe.github.io/slides/section1-pr/PR-U3.10.-Iteradores.html)
+
+### Unidad 4 - Programación Orientada a Objetos con Kotlin
+* [PR-U4.1 - Kotlin](https://revilofe.github.io/slides/section1-pr/PR-U4.1.-kotlin.html)
+
+### Unidad 7 - Gestión de archivos
+* [PR-U7.3 - Gestión de Archivos Clase File](https://revilofe.github.io/slides/section1-pr/PR-U7.3.-GestionArchivosClaseFile.html)

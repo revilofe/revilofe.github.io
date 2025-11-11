@@ -21,17 +21,6 @@ toc_icon: "file-code"
 #  - footer
 ---
 
-## Presentaciones de la Unidad 3
-
-* [PR-U3.0 - Cadenas](https://revilofe.github.io/slides/section1-pr/PR-U3.0.-Cadenas.html)
-* [PR-U3.1 - Estructuras de Datos](https://revilofe.github.io/slides/section1-pr/PR-U3.1.-EstDatosAbs.html)
-* [PR-U3.1 - Listas](https://revilofe.github.io/slides/section1-pr/PR-U3.1.-Listas.html)
-* [PR-U3.2 - Tuplas](https://revilofe.github.io/slides/section1-pr/PR-U3.2.-Tuplas.html)
-* [PR-U3.3 - Diccionarios](https://revilofe.github.io/slides/section1-pr/PR-U3.3.-Diccionarios.html)
-* [PR-U3.4 - Conjuntos](https://revilofe.github.io/slides/section1-pr/PR-U3.4.-Conjuntos.html)
-* [PR-U3.5 - Funciones](https://revilofe.github.io/slides/section1-pr/PR-U3.5.-Funciones.html)
-* [PR-U3.10 - Iteradores](https://revilofe.github.io/slides/section1-pr/PR-U3.10.-Iteradores.html)
-
 Cada unidad contendrá una serie de contenidos, resultados de aprendizaje (desglosados en criterios de evaluación), una práctica o prácticas para evaluar la adquisición de dichos criterios de evaluación y una prueba específica para evaluar la asimilación de contenido.
 
 ## Normativa que respalda la unidad
@@ -71,3 +60,15 @@ En la Unidad 3, veremos:
 * String
 * Expresiones regulares
 * Iteradores
+
+
+## Presentaciones de la Unidad 3
+
+* [PR-U3.0 - Cadenas](https://revilofe.github.io/slides/section1-pr/PR-U3.0.-Cadenas.html)
+* [PR-U3.1 - Estructuras de Datos](https://revilofe.github.io/slides/section1-pr/PR-U3.1.-EstDatosAbs.html)
+* [PR-U3.1 - Listas](https://revilofe.github.io/slides/section1-pr/PR-U3.1.-Listas.html)
+* [PR-U3.2 - Tuplas](https://revilofe.github.io/slides/section1-pr/PR-U3.2.-Tuplas.html)
+* [PR-U3.3 - Diccionarios](https://revilofe.github.io/slides/section1-pr/PR-U3.3.-Diccionarios.html)
+* [PR-U3.4 - Conjuntos](https://revilofe.github.io/slides/section1-pr/PR-U3.4.-Conjuntos.html)
+* [PR-U3.5 - Funciones](https://revilofe.github.io/slides/section1-pr/PR-U3.5.-Funciones.html)
+* [PR-U3.10 - Iteradores](https://revilofe.github.io/slides/section1-pr/PR-U3.10.-Iteradores.html)

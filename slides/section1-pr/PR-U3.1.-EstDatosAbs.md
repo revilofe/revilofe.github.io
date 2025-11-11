@@ -156,11 +156,6 @@ Note: En listas enlazadas, cada nodo conoce la dirección del siguiente. Esto pe
 
 ### Listas doblemente enlazadas
 
-<figure>
-  <img src="../../docs/section1/u03/teoria/assets/PROG-U3.1.-ListaEnlazada.png" alt="Lista doblemente enlazada" width="70%"/>
-  <figcaption>Estructura de datos: Lista doblemente enlazada</figcaption>
-</figure>
-
 * Dos enlaces por nodo
 * Enlace al anterior y al siguiente
 * Navegación bidireccional
@@ -181,11 +176,6 @@ Note: Las pilas son fundamentales en programación. Se usan en llamadas a funcio
 
 
 ### Ejemplo de pila
-
-<figure>
-  <img src="../../docs/section1/u03/teoria/assets/PROG-U3.1.-Pila.png" alt="Pila" width="50%"/>
-  <figcaption>Estructura de datos: Pila</figcaption>
-</figure>
 
 ```
 push(3) -> [3]
@@ -237,11 +227,6 @@ Note: Los árboles son perfectos para representar jerarquías: estructura de car
 
 ### Ejemplo de árbol
 
-<figure>
-  <img src="../../docs/section1/u03/teoria/assets/PROG-U3.1.-Arbol.png" alt="Árbol" width="60%"/>
-  <figcaption>Estructura de datos: Árbol</figcaption>
-</figure>
-
 * Nodo raíz
 * Nodos internos
 * Nodos hoja (sin hijos)
@@ -262,11 +247,6 @@ Note: Los grafos son la estructura más general y poderosa. Modelan cualquier ti
 
 
 ### Ejemplo de grafo
-
-<figure>
-  <img src="../../docs/section1/u03/teoria/assets/PROG-U3.1.-Grafo.png" alt="Grafo" width="60%"/>
-  <figcaption>Estructura de datos: Grafo</figcaption>
-</figure>
 
 * Nodos conectados por aristas
 * Relaciones entre elementos
@@ -320,3 +300,7 @@ Note: Este es solo el comienzo. En las siguientes lecciones veremos implementaci
 Las estructuras de datos son herramientas esenciales que nos permiten organizar y manipular información de manera eficiente, siendo la base para construir soluciones elegantes a problemas complejos.
 
 Note: Recuerda que no hay una estructura "mejor" que otra, sino estructuras más adecuadas para cada problema. La clave está en entender las características de cada una y saber cuándo aplicarlas. Con práctica, elegir la estructura correcta se vuelve intuitivo.
+
+---
+
+## ¿Preguntas?

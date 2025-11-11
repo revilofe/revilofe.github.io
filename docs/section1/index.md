@@ -37,6 +37,7 @@ Módulo de programación, 1 DAW.
 
 ### Unidad 3 - Estructuras de datos
 * [PR-U3.0 - Cadenas](https://revilofe.github.io/slides/section1-pr/PR-U3.0.-Cadenas.html)
+* [PR-U3.1 - Estructuras de Datos](https://revilofe.github.io/slides/section1-pr/PR-U3.1.-EstDatosAbs.html)
 * [PR-U3.1 - Listas](https://revilofe.github.io/slides/section1-pr/PR-U3.1.-Listas.html)
 * [PR-U3.2 - Tuplas](https://revilofe.github.io/slides/section1-pr/PR-U3.2.-Tuplas.html)
 * [PR-U3.3 - Diccionarios](https://revilofe.github.io/slides/section1-pr/PR-U3.3.-Diccionarios.html)

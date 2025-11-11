@@ -28,7 +28,11 @@ En Python estas estructuras vienen definidas en la [biblioteca estándar de Pyth
 
 En el ámbito de la informática, las **estructuras de datos** son aquellas que nos permiten, como desarrolladores, organizar la información de manera eficiente, y en definitiva diseñar la solución correcta para un determinado problema.
 
-Ya sean las más utilizadas comúnmente - como las  **variables**,  **arrays**, **conjuntos ** o  **clases** - o las diseñadas para un propósito específico - **árboles**,  **grafos**,  **tablas**, etc., una **estructura de datos ** nos permite trabajar en un alto nivel de abstracción almacenando información para luego acceder a ella, modificarla y manipularla.
+Estructuras:
+- Utilizadas comúnmente como las  **variables**,  **arrays**, **conjuntos** o  **clases** 
+- Diseñadas para un propósito específico **árboles**,  **grafos**,  **tablas**, etc., 
+
+Una **estructura de datos** nos permite trabajar en un alto nivel de abstracción almacenando información para luego acceder a ella, modificarla y manipularla.
 
 #### 1.2. ¿Cuáles son los tipos de estructuras de datos?
 
@@ -608,6 +612,11 @@ No olvides que la mayoría de métodos de listas modifican el argumento y regres
    Podemos pensar en las dos sentencias `continue` (seguro que encuetnras otra forma que no sea con `continue`) que se usan para solo procesar las líneas que son “interesantes” en nuestro proceso. Una línea que no tenga palabras “no es interesante” para nosotros así que saltamos a la siguiente línea. Una línea que no tenga “From” como su primera palabra tampoco nos interesa así que la saltamos.
 
    El programa modificado se ejecuta con éxito, así que quizás es correcto. Nuestra sentencia guardián se asegura de que `palabras[0]` nunca falle, pero quizá no sea suficiente. Cuando estamos programando, siempre debemos pensar, “¿qué podría salir mal?”
+
+## Presentaciones
+
+* [PR-U3.1 - Estructuras de Datos](https://revilofe.github.io/slides/section1-pr/PR-U3.1.-EstDatosAbs.html)
+* [PR-U3.1 - Listas](https://revilofe.github.io/slides/section1-pr/PR-U3.1.-Listas.html)
 
 ## Fuente
 * [Pagina de Juan Jose Lozano Gomez sobre Python](https://j2logo.com/)

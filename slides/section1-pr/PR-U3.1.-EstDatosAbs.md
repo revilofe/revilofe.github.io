@@ -12,6 +12,8 @@
 
 ## Introducción
 
+[Estructuras de datos en python](https://docs.python.org/3/tutorial/datastructures.html)
+
 
 ### ¿Qué son las estructuras de datos?
 

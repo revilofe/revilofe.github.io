@@ -619,8 +619,10 @@ No olvides que la mayoría de métodos de listas modifican el argumento y regres
 * [PR-U3.1 - Listas](https://revilofe.github.io/slides/section1-pr/PR-U3.1.-Listas.html)
 
 ## Fuente
+* [Estructuras de datos](https://docs.python.org/3/tutorial/datastructures.html)
 * [Pagina de Juan Jose Lozano Gomez sobre Python](https://j2logo.com/)
 * [Estructuras de datos](https://blog.soyhenry.com/que-es-una-estructura-de-datos-en-programacion/)
 * [Python para todos](https://es.py4e.com/)
 * [Aprende con Alf](ttps://aprendeconalf.es)
+* [w3schools - Python - Lists](https://www.w3schools.com/python/python_lists.asp)
 

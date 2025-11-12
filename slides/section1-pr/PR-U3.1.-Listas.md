@@ -12,6 +12,8 @@
 
 ## Introducción
 
+[w3schools - Python - Lists](https://www.w3schools.com/python/python_lists.asp)
+
 
 ### ¿Qué son las listas?
 

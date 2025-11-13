@@ -77,27 +77,19 @@ Cliente → Nginx (puerto 80) → Tomcat (puerto 8080) → Aplicación Java
     - Utilizar cualquier aplicación WAR simple que tengas disponible
     - Crear una aplicación Java básica y empaquetarla como WAR
 
-3. Crea un archivo de configuración de Nginx llamado `default.conf` con el contenido básico:
+3. Investiga la estructura básica de un archivo de configuración de Nginx para proxy inverso.
 
-```nginx
-server {
-    listen       80;
-    listen  [::]:80;
-    server_name  localhost;
-
-    location / {
-        root   /usr/share/nginx/html;
-        proxy_pass http://NOMBRE_CONTENEDOR_TOMCAT:8080/NOMBRE_APLICACION/;
-    }
+4. Crea un archivo de configuración de Nginx llamado `default.conf` que debe incluir:
+   
+    - Servidor que escucha en el puerto 80
+    - Configuración de `location /` con proxy_pass
+    - El proxy_pass debe apuntar al contenedor de Tomcat (puerto 8080)
+    - Debe incluir el nombre de la aplicación en la ruta
+    - Gestión de páginas de error (500, 502, 503, 504)
     
-    error_page   500 502 503 504  /50x.html;
-    location = /50x.html {
-        root   /usr/share/nginx/html;
-    }
-}
-```
+    **Nota:** Usa placeholders (como NOMBRE_CONTENEDOR_TOMCAT y NOMBRE_APLICACION) que luego sustituirás por los valores reales.
 
-4. Verifica que tienes ambos archivos:
+5. Verifica que tienes ambos archivos:
    
     - `sample.war` (o el nombre de tu aplicación WAR)
     - `default.conf`
@@ -207,21 +199,20 @@ server {
 
 #### Tarea 5.1: Modificación de la configuración de Nginx
 
-1. Modifica el archivo `default.conf` para añadir cabeceras adicionales al proxy:
+1. Investiga qué cabeceras HTTP adicionales puede configurar un proxy inverso para mejorar la funcionalidad.
 
-```nginx
-location / {
-    proxy_pass http://aplicacionjava:8080/sample/;
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto $scheme;
-}
-```
+2. Modifica el archivo `default.conf` para añadir dentro de `location /`:
+   
+    - Cabecera `Host` con el valor del host original
+    - Cabecera `X-Real-IP` con la IP real del cliente
+    - Cabecera `X-Forwarded-For` con las IPs de proxies intermedios
+    - Cabecera `X-Forwarded-Proto` con el protocolo usado
+    
+    **Pista:** Investiga las directivas `proxy_set_header` de Nginx y las variables disponibles.
 
-2. Recarga la configuración de Nginx sin detener el contenedor.
+3. Investiga qué comando permite recargar la configuración de Nginx sin detener el contenedor.
 
-3. Verifica que los cambios se han aplicado correctamente.
+4. Aplica los cambios y verifica que funcionan correctamente.
 
 #### Tarea 5.2: Acceso directo a Tomcat
 

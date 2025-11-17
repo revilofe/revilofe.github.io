@@ -194,6 +194,54 @@ Las medidas de seguridad también pueden clasificarse según el alcance o el tip
 !!! note "Nota"
     Por lo general, las medidas orientadas a las personas (PER) están complementadas por medidas de procesos (PRO) y tecnología (TEC), asegurando que se implemente una protección completa y eficaz en toda la organización. Por ejemplo, una capacitación sobre ciberseguridad (PER) puede ir acompañada de un procedimiento de auditoría de accesos (PRO) y el uso de autenticación multifactor (TEC) en sistemas críticos.
 
+##### 1.4.3. Ejemplo
+
+Basándose en los elementos del puesto de trabajo y la estructura jerárquica de seguridad (Política, Normativa, Procedimiento y Medidas), se desarrolla un ejemplo completo utilizando el riesgo asociado al **Acceso Remoto** a la red corporativa.
+
+
+
+| Componente                         | Definición y Contexto                                                                                                                                                                                                                                         | Referencia(s) |
+|:-----------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------|
+| **Elemento del Puesto de Trabajo** | **Dispositivos de Hardware** (como *laptops* o *smartphones*) y la **Comunicación y Acceso a la Red** (uso de VPN y conexiones a internet).                                                                                                                   |               |
+| **Riesgo Identificado**            | **Acceso Remoto No Seguro** o **Intercepción de Datos Sensibles durante la Comunicación**. El riesgo existe cuando los empleados acceden a sistemas y datos de la organización fuera de las instalaciones seguras, o si usan equipos sin protección adecuada. |               |
+
+La estructura de Seguridad Asociada es la siguiente:
+
+**1. Política (Declaración de Intenciones)**
+
+La **Política** es la declaración general que define la intención y el compromiso de la organización.
+
+*   **Declaración:** **Garantizar la seguridad de la información** cuando los empleados acceden de forma remota a los sistemas y datos de la organización. El objetivo es proteger la información y crear **conciencia** sobre la importancia de cumplir esta política.
+*   **Alcance:** Aplica a **todo el personal o proveedor** que requiera acceder remotamente a sistemas e información de la organización, así como a los dispositivos utilizados para tal fin.
+
+**2. Normativa (Reglas y Requisitos)**
+
+La **Normativa** traduce la política en reglas concretas, estableciendo el **qué** se debe hacer para mantener la seguridad.
+
+*   **Comunicaciones Seguras:** Se debe utilizar **comunicaciones seguras** para el acceso remoto, como el uso obligatorio de una **VPN** (Red Privada Virtual) aprobada por el departamento de TI para todos los accesos remotos.
+*   **Encriptación de Equipos:** Los equipos utilizados para el acceso remoto deben estar **encriptados**. No se permite almacenar información confidencial en dispositivos que no estén cifrados.
+*   **Autenticación:** En los casos que sea posible, se debe utilizar un **segundo factor de autenticación (MFA)** para el acceso a las redes seguras (VPN).
+*   **Registro:** El acceso remoto a redes seguras debe quedar **registrado** con al menos detalles de Usuario, dispositivo, fecha y hora.
+
+**3. Procedimiento (Pasos Detallados)**
+
+El **Procedimiento** detalla los pasos específicos, respondiendo al **cómo** cumplir con la normativa.
+
+*   **Configuración del Acceso Remoto:** Instrucciones detalladas para que los empleados configuren y utilicen la **VPN** aprobada en dispositivos de trabajo.
+*   **Activación de Cifrado de Disco:** Pasos detallados para activar el **cifrado de disco** en diferentes plataformas (p. ej., Windows BitLocker, MacOS FileVault) y verificar su estado.
+*   **Revisión y Auditoría:** Procedimiento para realizar una **revisión periódica** de las condiciones de uso del acceso remoto y de los usuarios que hacen uso de este, que contemple la revisión de los puntos de la normativa.
+*   **Proceso de Asignación de Acceso:** Pasos para que el equipo de TI otorgue, revise o revoque permisos de acceso a aplicaciones, asegurando que se mantenga el **principio de mínimo privilegio**.
+
+**4. Medidas Asociadas (Controles y Clasificación)**
+
+Las **Medidas** son los controles específicos implementados, clasificados por su complejidad (Básico/Avanzado) y alcance (Procesos/Tecnología/Personas).
+
+| Medida (Control)                           | Nivel / Alcance                         | Justificación                                                                                                                                                    | Referencia(s) |
+|:-------------------------------------------|:----------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------|
+| **Uso de Autenticación Multifactor (MFA)** | **Básico (B)** / **Tecnología (TEC)**   | Protege el acceso a la red segura para verificar la identidad del usuario, aumentando la protección.                                                             |               |
+| **Cifrado de equipos portátiles**          | **Avanzado (A)** / **Tecnología (TEC)** | Asegura que, si un dispositivo es robado o perdido, los datos permanecen ilegibles y seguros.                                                                    |               |
+| **Registro de acceso remoto**              | **Básico (B)** / **Procesos (PRO)**     | La obligación de registrar los detalles de Usuario, dispositivo, fecha y hora en el acceso remoto facilita la auditoría y la detección de actividades inusuales. |               |
+| **Concienciación sobre redes Wi-Fi**       | **Básico (B)** / **Personas (PER)**     | Pautas para evitar la conexión a redes Wi-Fi públicas o inseguras sin las medidas de protección adecuadas, ya que esto puede exponer los datos.                  |               |
 
 #### 1.5. Estándares a aplicar
 

@@ -191,7 +191,7 @@ Las medidas de seguridad también pueden clasificarse según el alcance o el tip
       - **Política de escritorio limpio**: Los empleados deben asegurarse de no dejar documentos o dispositivos con información sensible desatendidos en sus escritorios al finalizar su jornada laboral o al ausentarse.     
       - **Capacitación en seguridad de la información**: Todos los empleados reciben capacitación anual sobre buenas prácticas de seguridad y cómo identificar amenazas comunes, como el phishing.     
 
-!!! note: "Nota"
+!!! note "Nota"
     Por lo general, las medidas orientadas a las personas (PER) están complementadas por medidas de procesos (PRO) y tecnología (TEC), asegurando que se implemente una protección completa y eficaz en toda la organización. Por ejemplo, una capacitación sobre ciberseguridad (PER) puede ir acompañada de un procedimiento de auditoría de accesos (PRO) y el uso de autenticación multifactor (TEC) en sistemas críticos.
 
 

@@ -75,6 +75,18 @@ Al implementar una normativa de protección del puesto de trabajo, la organizaci
 
 #### 1.3. Políticas, normativas y procedimientos
 
+La siguiente información ha sido obtenida del Esquema Nacional de Seguridad, que puede ser encontrado en la siguiente fuente:
+
+https://www.ccn-cert.cni.es/series-ccn-stic/800-guia-esquema-nacional-de-seguridad/505-ccn-stic-804-medidas-de-implantancion-del-ens/file.html
+
+> La politica de protección del puesto de trabajo es un conjunto o serie de documentos, que detallan la forma de enfrentarse a un problema. Cada uno de estos documentos expone una política de seguridad respecto a un asunto concreto.
+
+Una forma en la que se pueden desarrollar las políticas es emplear un documento por cada una a implementar dentro de la política de protección del puesto de trabajo. De esta manera es más sencillo realizar modificaciones, controlar las versiones, etc...
+
+Deberán describir respecto al elemento o aspecto que se refiera, el uso correcto de equipos, servicios, instalaciones, etc. Asi como lo que está permitido. De la misma forma qué se considerará uso indebido o inadecuado y qué no está permitido.
+
+Además, se deberá describir las responsabilidad del personal respecto al cumplimiento o violación de estas políticas: derechos, deberes, medidas disciplinarias.
+
 Relacionados con la normativa de protección del puesto de trabajo, es importante entender la diferencia entre políticas, normativas y procedimientos, ya que cada uno juega un papel distinto en la estructura de seguridad de una organización.
 
 ##### 1.3.1. Política (Declaración de Intenciones)
@@ -89,6 +101,7 @@ Una **política** es una declaración general que define la intención y los pri
 
 !!! note "Nota"
     La política es la visión o intención general, como un "norte" o línea guía que orienta las decisiones sobre seguridad.
+
 
 ##### 1.3.2. Normativa (Qué)
 
@@ -296,6 +309,8 @@ Las medidas de seguridad se pueden clasificar en:
 * **Correctivas**: Aquellas que buscan corregir los incidentes de seguridad una vez que han ocurrido, y restaurar la operatividad normal de los sistemas.
 
 En el caso de la protección del puesto de trabajo, **las medidas de seguridad preventivas son las más comunes**, ya que buscan evitar que los incidentes de seguridad ocurran en primer lugar.
+
+Además, hay que tener en cuenta que además de los riesgos tecnológicos, también existen riesgos asociados al factor humano, como la falta de concienciación o formación en seguridad, que pueden llevar a errores o comportamientos inseguros por parte de los empleados.
 
 A continuación, desglosaremos estos elementos componentes del puesto de trabajo y mostraremos cómo cada uno se relaciona con los distintos escenarios de riesgo y con la necesidad de establecer políticas, normativas y procedimientos claros.
 

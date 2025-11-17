@@ -39,12 +39,12 @@ En el entorno de seguridad informática, el puesto de trabajo es mucho más que 
 
 Algunos ejemplos de un puesto de trabajo pueden incluir:
 
-* Dispositivos hardware: Computadoras de escritorio, laptops, tabletas y teléfonos inteligentes que usa el empleado.
-* Software: Aplicaciones necesarias para realizar tareas, desde procesadores de texto hasta herramientas especializadas.
-* Comunicación y acceso a la red: Conexiones a internet, VPNs (Redes Privadas Virtuales) para trabajar de forma remota, y acceso a servidores internos de la organización.
-* Instalaciones físicas: Dependencías físicas de la empresa, como oficinas, salas de reuniones o áreas de trabajo compartidas.
-* Acceso a datos: Permisos para ver, editar o compartir documentos, bases de datos o aplicaciones internas que contienen información valiosa o sensible.
-* Personal: El propio empleado, sus hábitos de trabajo y su conocimiento de las políticas de seguridad.
+* **Dispositivos hardware**: Computadoras de escritorio, laptops, tabletas y teléfonos inteligentes que usa el empleado.
+* **Software**: Aplicaciones necesarias para realizar tareas, desde procesadores de texto hasta herramientas especializadas.
+* Comunicación y acceso a la red**: Conexiones a internet, VPNs (Redes Privadas Virtuales) para trabajar de forma remota, y acceso a servidores internos de la organización.
+* **Instalaciones físicas**: Dependencías físicas de la empresa, como oficinas, salas de reuniones o áreas de trabajo compartidas.
+* **Acceso a datos**: Permisos para ver, editar o compartir documentos, bases de datos o aplicaciones internas que contienen información valiosa o sensible.
+* **Personal**: El propio empleado, sus hábitos de trabajo y su conocimiento de las políticas de seguridad.
 
 !!! note "Nota"
     Cada uno de estos elementos, si no se protege correctamente, puede ser una vía de ataque o de fuga de información, por lo que la protección del puesto de trabajo es esencial para reducir riesgos de seguridad.
@@ -59,6 +59,9 @@ Por ejemplo, una normativa de protección del puesto de trabajo incluirá mayori
 * **Medidas de seguridad física y digital**: Uso de cerraduras físicas en escritorios, contraseñas complejas, y autenticación multifactor (MFA).
 * **Procedimientos de actualización y parches**: Asegurarse de que todo el software esté al día con las últimas actualizaciones de seguridad.
 * **Buenas prácticas de uso diario**: Como bloquear la pantalla al ausentarse, evitar conexiones a redes públicas no seguras, y mantener la información confidencial fuera del alcance de terceros.
+
+!!! note "Nota"
+    La normativa de protección del puesto de trabajo es esencial para establecer un marco claro que guíe a los empleados en la protección de los activos de la organización, reduciendo así el riesgo de incidentes de seguridad. La normativa de protección del puesto de trabajo tiene en cuenta las amenazas y posibles vulnerabilidades para definir pautas de caracter preventivo que protejan los elementos del puesto de trabajo.
 
 ##### 1.2.1. ¿Por qué necesitamos una normativa de protección del puesto de trabajo?
 
@@ -79,7 +82,9 @@ Relacionados con la normativa de protección del puesto de trabajo, es important
 Una **política** es una declaración general que define la intención y los principios de una organización respecto a un tema específico. En seguridad, una política marca el rumbo y establece el **marco de referencia** que guía las acciones para proteger los activos.
 
 * **Ejemplo:** Imagina que una empresa crea una **política de seguridad de la información** que dice: "La empresa XYZ se compromete a proteger la confidencialidad, integridad y disponibilidad de toda la información almacenada y procesada en sus sistemas, de acuerdo con los principios de seguridad y las normativas legales".
-  * **En la práctica**: Esta política no da detalles específicos ni instrucciones concretas sobre cómo proteger la información, sino que establece el compromiso general de la empresa hacia la seguridad.
+
+* **En la práctica**: Esta política no da detalles específicos ni instrucciones concretas sobre cómo proteger la información, sino que establece el compromiso general de la empresa hacia la seguridad.
+
 * **Importancia de la política:** Sirve como "declaración de intenciones" para la organización. Define las bases sobre las cuales se desarrollarán normativas y procedimientos más detallados.
 
 !!! note "Nota"
@@ -90,10 +95,12 @@ Una **política** es una declaración general que define la intención y los pri
 Una **normativa** traduce la política en **reglas y requisitos más concretos** que deben cumplirse para seguir esa política. Es decir, establece **qué** se debe hacer o cumplir para mantener la seguridad, y a veces **quién** es responsable de llevarlo a cabo.
 
 * **Ejemplo:** Siguiendo la política de seguridad de la información, una normativa específica puede ser la **normativa de protección del puesto de trabajo**. Esta normativa podría incluir medidas como:
+
     * "Todo empleado debe bloquear su pantalla al ausentarse del escritorio".   
     * "Se requiere que todas las contraseñas de usuario tengan al menos 10 caracteres e incluyan letras, números y símbolos".   
     * "Los empleados deben realizar un curso básico de seguridad informática cada seis meses".   
-  * **En la práctica**: La normativa detalla requisitos claros en base a medidas que los empleados y los sistemas deben cumplir. No describe cómo hacerlo (ese es el trabajo del procedimiento), sino que define las condiciones que deben cumplirse.
+
+* **En la práctica**: La normativa detalla requisitos claros en base a medidas que los empleados y los sistemas deben cumplir. No describe cómo hacerlo (ese es el trabajo del procedimiento), sino que define las condiciones que deben cumplirse.
 * **Importancia de la normativa:** Proporciona una capa de control y dirección más concreta que la política, ayudando a mantener una estructura de cumplimiento y a reducir riesgos.
 
 !!! note "Nota"
@@ -104,10 +111,12 @@ Una **normativa** traduce la política en **reglas y requisitos más concretos**
 Un **procedimiento** detalla los **pasos específicos** que deben seguirse para cumplir con la normativa y, por ende, con la política. Responde a la pregunta de **cómo** hacer algo. Los procedimientos suelen ser detallados y prácticos, y pueden incluir capturas de pantalla, ejemplos o listas paso a paso.
 
 * **Ejemplo:** Si la normativa de protección del puesto de trabajo exige "bloquear la pantalla al ausentarse", el procedimiento explicará cómo hacerlo en diferentes sistemas operativos:
+
     * **Windows:** “Presiona `Win + L` para bloquear la pantalla”.   
     * **MacOS:** “Presiona `Control + Command + Q` o configura el bloqueo automático desde Preferencias del Sistema”.   
     * **Linux:** “Configura el bloqueo de pantalla en las preferencias o presiona `Super + L`”.   
-  * **En la práctica**: Este procedimiento ofrece las instrucciones detalladas de cómo cada usuario puede cumplir con el requisito de la normativa.   
+
+* **En la práctica**: Este procedimiento ofrece las instrucciones detalladas de cómo cada usuario puede cumplir con el requisito de la normativa.   
 * **Importancia del procedimiento:** Los procedimientos eliminan la ambigüedad sobre cómo realizar una tarea específica. Son muy útiles para nuevos empleados, para procesos de auditoría y para asegurar que todos los empleados tengan claridad sobre las acciones que deben seguir.
 
 !!! note "Nota"

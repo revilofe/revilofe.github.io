@@ -81,6 +81,7 @@ Note: La normativa establece reglas claras que todos deben seguir para garantiza
 
 Note: La normativa se desarrolla en documentos específicos para cada área crítica del puesto de trabajo (uso de contraseñas, acceso remoto, instalación software, etc). Cada normativa debe ser clara y concisa, describiendo comportamientos correctos e incorrectos. Además, debe responsabilizar a los empleados por su cumplimiento, estableciendo consecuencias claras en caso de violaciones (advertencias, sanciones disciplinarias). Esto asegura que todos entienden sus obligaciones y las consecuencias de no cumplirlas.
 
+
 ### 2.1. ¿Qué es una normativa? III
 
 **Ejemplo práctico de normativa:**

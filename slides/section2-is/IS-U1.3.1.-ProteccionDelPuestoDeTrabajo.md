@@ -90,7 +90,7 @@ Note: Traduciendo normativa a medidas concretas: restricciones de acceso aplican
 2. **Normativa específica**: Reglas para áreas concretas (puesto de trabajo).
 3. **Procedimientos**: Pasos detallados para cumplir normativa.
 
-Note: Es como una pirámide: arriba la filosofía general, abajo los pasos concretos a seguir.
+Note: La jerarquía normativa funciona como una pirámide donde cada nivel añade concreción: la Política establece el compromiso organizativo general (visión y valores), la Normativa traduce ese compromiso en reglas específicas medibles para áreas concretas (qué debe hacerse), y los Procedimientos detallan los pasos técnicos exactos (cómo hacerlo). Esta estructura permite que directivos definan estrategia, responsables de seguridad establezcan reglas, y personal técnico las implemente.
 
 
 ### 2.3. Ejemplo de jerarquía
@@ -101,18 +101,32 @@ Note: Es como una pirámide: arriba la filosofía general, abajo los pasos concr
 * **Normativa**: "Todos los empleados deben bloquear sus equipos al ausentarse".
 * **Procedimiento**: "Para bloquear: Win + L en Windows, Ctrl + Cmd + Q en macOS, Super + L en Linux".
 
-Note: Observad cómo cada nivel añade especificidad. La política es abstracta, el procedimiento es ejecutable.
+Note: Este ejemplo ilustra perfectamente cómo cada nivel aumenta en especificidad y ejecutabilidad: la Política es aspiracional y abstracta (compromiso con altos estándares), la Normativa establece una obligación concreta y medible (bloquear equipos al ausentarse), y el Procedimiento proporciona instrucciones técnicas precisas para cumplirla (atajos de teclado específicos por sistema operativo). De esta forma, ningún empleado puede alegar desconocimiento de qué hacer ni cómo hacerlo.
 
 
-### 2.4. Tipos de medidas por audiencia
+### 2.4. Tipos de medidas por audiencia I
 
-**Clasificación según destinatario:**
+Las medidas preventivas que la normativa requiere se clasifican:
+
+**Según complejidad:**
+
+1. **Básico (B)**: Sencillo y asequible (ej. Bloqueo de pantalla por inactividad)
+2. **Avanzado (A)**: Requiere más recursos y conocimientos (ej. Cifrado de disco completo como BitLocker)
+
+Note: Clasificar medidas por complejidad permite priorizar correctamente: las medidas Básicas (B) son rápidas de implementar, tienen bajo coste y alto impacto (bloqueo automático protege inmediatamente contra acceso físico no autorizado), mientras las medidas Avanzadas (A) requieren más tiempo, recursos y conocimiento técnico especializado (cifrado de disco necesita planificación, gestión de claves, posible impacto en rendimiento). Implementar primero las básicas proporciona protección inmediata mientras se planifican las avanzadas. 
+
+
+### 2.4. Tipos de medidas por audiencia II
+
+Las medidas preventivas que la normativa requiere se clasifican:
+
+**Según destinatario:**
 
 1. **Procesos (PRO)**: Para gestores, medidas organizativas.
 2. **Tecnología (TEC)**: Para personal técnico, medidas especializadas.
 3. **Personas (PER)**: Para todos, medidas simples y comprensibles.
 
-Note: No todas las medidas son para todos. Adaptad el mensaje y la complejidad a la audiencia.
+Note: Clasificar medidas por audiencia objetivo asegura efectividad: las medidas de Procesos (PRO) requieren visión organizativa y capacidad de decisión gerencial (aprobar políticas, asignar presupuesto), las medidas de Tecnología (TEC) necesitan conocimiento técnico especializado para implementarlas correctamente (configurar firewalls, cifrado), y las medidas de Personas (PER) deben ser simples y claras porque aplican a toda la organización sin importar conocimiento técnico. Adaptar el mensaje a la audiencia maximiza cumplimiento y efectividad. 
 
 
 ### 2.5. Medidas de proceso (PRO)
@@ -126,7 +140,7 @@ Note: No todas las medidas son para todos. Adaptad el mensaje y la complejidad a
 
 **Ejemplo:** Procedimiento de alta/baja de usuarios con checklist de permisos a revisar.
 
-Note: Las medidas PRO son el pegamento organizativo. Sin ellas, las medidas técnicas y de personas no funcionan coordinadamente.
+Note: Las medidas de Proceso (PRO) son el pegamento que mantiene unida la seguridad organizativa: sin políticas claras aprobadas por dirección, cada departamento actúa independientemente creando incoherencias; sin procedimientos de auditoría, nadie verifica si las medidas se cumplen realmente; sin gestión adecuada de roles y permisos, empleados acumulan accesos innecesarios; sin supervisión, la normativa queda en papel. Un ejemplo práctico: en altas/bajas de usuarios, un checklist PRO asegura revisar todos los accesos sistemáticamente evitando cuentas huérfanas.
 
 
 ### 2.6. Medidas de tecnología (TEC)
@@ -141,7 +155,7 @@ Note: Las medidas PRO son el pegamento organizativo. Sin ellas, las medidas téc
 
 **Ejemplo:** Configurar firewall para bloquear tráfico no autorizado al puerto 3389 (RDP).
 
-Note: Las medidas TEC requieren conocimientos especializados. No intentéis implementarlas sin formación adecuada.
+Note: Las medidas de Tecnología (TEC) son controles técnicos que requieren conocimiento especializado para implementarse correctamente: firewalls e IDS/IPS detectan y bloquean ataques de red, copias de seguridad permiten recuperación ante ransomware o fallos, gestión de parches cierra vulnerabilidades conocidas antes de que sean explotadas, cifrado protege datos en reposo, y MFA añade capa adicional de autenticación. El ejemplo del firewall bloqueando RDP (puerto 3389) previene ataques de fuerza bruta externos al escritorio remoto, un vector común de compromiso.
 
 
 ### 2.7. Medidas de personas (PER)
@@ -156,7 +170,7 @@ Note: Las medidas TEC requieren conocimientos especializados. No intentéis impl
 
 **Ejemplo:** Al finalizar jornada, guardar documentos sensibles en cajón con llave.
 
-Note: Las medidas PER son las que más impacto tienen porque afectan a toda la organización. Si todos las cumplen, la seguridad mejora exponencialmente.
+Note: Las medidas de Personas (PER) son las más críticas porque aplican a toda la organización y su cumplimiento depende de concienciación individual: escritorio limpio evita que visitantes vean información confidencial, bloquear pantalla previene acceso físico no autorizado (el 90% de incidentes internos empiezan aquí), no compartir contraseñas mantiene responsabilidad individual, reportar incidentes permite respuesta temprana, y capacitación anual actualiza conocimiento sobre amenazas. Si todos cumplen estas medidas básicas, la superficie de ataque se reduce exponencialmente con mínimo coste.
 
 ---
 

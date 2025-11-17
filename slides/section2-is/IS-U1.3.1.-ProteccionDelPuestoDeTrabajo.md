@@ -56,7 +56,7 @@ Note: El 90% de los ciberataques exitosos empiezan en el puesto de trabajo del u
 ## 2. Políticas y normativas
 
 
-### 2.1. ¿Qué es una normativa?
+### 2.1. ¿Qué es una normativa? I
 
 **Normativa**: Conjunto de reglas y requisitos específicos para garantizar un ambiente de trabajo seguro.
 
@@ -70,6 +70,18 @@ Note: La normativa establece reglas claras que todos deben seguir para garantiza
 
 
 ### 2.1. ¿Qué es una normativa? II
+
+**Desarrollo**:
+ 
+* Emplear un documento por cada política de protección del puesto de trabajo, centrado en un aspecto.
+* Describir lo que es correcto.
+* Describir lo que es incorrecto.
+* Responsabilizar a los empleados respecto al cumplimiento, violaciones y sanciones.
+* Fomentar el conocimiento y la adherencia a las normas.
+
+Note: La normativa se desarrolla en documentos específicos para cada área crítica del puesto de trabajo (uso de contraseñas, acceso remoto, instalación software, etc). Cada normativa debe ser clara y concisa, describiendo comportamientos correctos e incorrectos. Además, debe responsabilizar a los empleados por su cumplimiento, estableciendo consecuencias claras en caso de violaciones (advertencias, sanciones disciplinarias). Esto asegura que todos entienden sus obligaciones y las consecuencias de no cumplirlas.
+
+### 2.1. ¿Qué es una normativa? III
 
 **Ejemplo práctico de normativa:**
 
@@ -86,7 +98,7 @@ Note: Traduciendo normativa a medidas concretas: restricciones de acceso aplican
 
 **Niveles de detalle creciente:**
 
-1. **Política de Seguridad**: Compromiso general de la organización.
+1. **Política de Seguridad**: Compromiso general de la organización sobre seguridad.
 2. **Normativa específica**: Reglas para áreas concretas (puesto de trabajo).
 3. **Procedimientos**: Pasos detallados para cumplir normativa.
 

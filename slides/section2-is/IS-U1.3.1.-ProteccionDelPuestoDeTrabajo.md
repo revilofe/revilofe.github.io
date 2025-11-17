@@ -22,7 +22,7 @@
 * **Remoto**: Laptop desde casa o café.
 * **Híbrido**: Combinación de ambos.
 
-Note: El puesto de trabajo moderno ha evolucionado significativamente con la digitalización y el teletrabajo. Ya no se limita a un escritorio físico con un PC en la oficina. Puede ser cualquier ubicación con conexión a internet desde la cual el empleado accede a los recursos corporativos: una laptop en casa, una tablet en un café, o un smartphone en movimiento. Esta flexibilidad aumenta la productividad pero también amplía la superficie de ataque, ya que cada ubicación y dispositivo representa un potencial punto de entrada para amenazas. Por ello, la protección del puesto debe adaptarse a esta realidad distribuida y móvil.
+Note: El puesto de trabajo ya no es solo un escritorio físico—puede ser remoto (laptop desde casa), híbrido (combinación), o móvil (smartphone, tablet en café). Esta flexibilidad aumenta productividad pero también amplía la superficie de ataque: cada ubicación y dispositivo es un potencial punto de entrada. La protección debe adaptarse a esta realidad distribuida.
 
 
 ### 1.2. Elementos del puesto de trabajo
@@ -36,7 +36,7 @@ Note: El puesto de trabajo moderno ha evolucionado significativamente con la dig
 * **Acceso a datos**: Permisos sobre información.
 * **Personal**: El empleado y sus hábitos de trabajo.
 
-Note: Cada uno de estos seis elementos representa un vector potencial de ataque o vulnerabilidad. Los dispositivos hardware pueden ser robados o infectados; el software puede tener vulnerabilidades o ser malicioso; las comunicaciones pueden ser interceptadas; las instalaciones físicas pueden permitir accesos no autorizados; los permisos de datos pueden estar mal configurados; y el personal puede cometer errores o ser víctima de ingeniería social. Como alumnos y alumnas debéis comprender que la seguridad del puesto de trabajo requiere proteger simultáneamente todos estos elementos de forma coordinada, ya que el fallo en uno solo de ellos puede comprometer la seguridad global del sistema.
+Note: Cada elemento del puesto representa un vector de ataque: hardware puede ser robado/infectado, software tiene vulnerabilidades, comunicaciones pueden interceptarse, instalaciones permiten accesos físicos no autorizados, permisos pueden estar mal configurados, y personal comete errores o cae en ingeniería social. Proteger el puesto requiere asegurar simultáneamente todos estos elementos.
 
 
 ### 1.3. Criticidad del puesto de trabajo
@@ -66,7 +66,7 @@ Note: El 90% de los ciberataques exitosos empiezan en el puesto de trabajo del u
 * Minimizar riesgos y vulnerabilidades.
 * Establecer responsabilidades claras.
 
-Note: Una normativa en el contexto del puesto de trabajo es comparable al código de circulación en el tráfico vial: establece reglas claras que todos deben seguir para garantizar un entorno seguro. Sin una normativa bien definida, cada empleado seguiría sus propios criterios, lo que generaría inconsistencias y vulnerabilidades de seguridad. La normativa debe cubrir aspectos como el control de acceso físico y lógico, uso de dispositivos, instalación de software, gestión de contraseñas, políticas de escritorio limpio, y procedimientos ante incidentes. Es fundamental que sea clara, específica, alcanzable y comunicada efectivamente a todo el personal para asegurar su cumplimiento.
+Note: La normativa establece reglas claras que todos deben seguir para garantizar seguridad, como el código de circulación en tráfico. Define cómo gestionar acceso físico/lógico, uso de dispositivos, instalación de software, gestión de contraseñas, políticas de escritorio limpio, y procedimientos ante incidentes. Sin normativa clara, cada empleado sigue sus propios criterios creando vulnerabilidades.
 
 
 ### 2.1. ¿Qué es una normativa? II
@@ -79,7 +79,7 @@ Note: Una normativa en el contexto del puesto de trabajo es comparable al códig
 * **Actualizaciones**: Software actualizado con últimos parches.
 * **Buenas prácticas**: Bloquear pantalla, evitar redes públicas.
 
-Note: Veamos un ejemplo concreto de cómo se traduce una normativa en medidas específicas. Las restricciones de acceso impl ican que cada empleado solo debe poder acceder a los datos necesarios para su función, aplicando el principio de mínimo privilegio. La seguridad física incluye medidas como cajones con llave para documentos sensibles, control de acceso con tarjetas a ciertas áreas, mientras que la digital requiere contraseñas de al menos 12 caracteres con complejidad (mayúsculas, minúsculas, números, símbolos) y autenticación multifactor para sistemas críticos. Las actualizaciones deben aplicarse en un plazo máximo de 48 horas para parches críticos. Las buenas prácticas diarias incluyen bloquear la pantalla con Win+L al ausentarse, usar VPN en redes públicas, y reportar cualquier actividad sospechosa inmediatamente a IT.
+Note: Traduciendo normativa a medidas concretas: restricciones de acceso aplican principio de mínimo privilegio (acceder solo a datos necesarios para tu función), seguridad física incluye cajones con llave y control de acceso con tarjetas, seguridad digital requiere contraseñas 12+ caracteres con complejidad y MFA para sistemas críticos, actualizaciones críticas en 48h máximo, y buenas prácticas como bloquear pantalla al ausentarse (Win+L) y usar VPN en redes públicas.
 
 
 ### 2.2. Jerarquía normativa
@@ -173,7 +173,7 @@ Note: Las medidas PER son las que más impacto tienen porque afectan a toda la o
 * Impresoras y escáneres
 * Cualquier dispositivo físico de acceso a información
 
-Note: Los dispositivos hardware son los componentes físicos que los empleados utilizan para acceder a los sistemas y datos corporativos. Son críticos porque almacenan información localmente y pueden ser robados, perdidos o comprometidos. A continuación veremos los cuatro escenarios de riesgo más comunes asociados a estos dispositivos y las medidas completas (Política, Normativa y Procedimiento) para mitigar cada uno. Es importante entender que la protección hardware requiere una combinación de medidas físicas (cerraduras, control de acceso) y lógicas (cifrado, autenticación).
+Note: Los dispositivos hardware (PCs, laptops, tablets, smartphones, USBs, impresoras) son los componentes físicos que empleados usan para acceder a sistemas y datos corporativos. Son críticos porque almacenan información localmente y pueden ser robados, perdidos o comprometidos. Veremos los cuatro escenarios de riesgo más comunes y medidas completas (Política, Normativa, Procedimiento) para cada uno.
 
 
 ### 2bis.1.1. Pérdida o Robo de Dispositivos
@@ -185,7 +185,7 @@ Note: Los dispositivos hardware son los componentes físicos que los empleados u
   credenciales comprometidas, pérdida de propiedad intelectual.
 * **Impacto**: ALTO - Puede afectar cumplimiento legal (GDPR).
 
-Note: Este es uno de los escenarios más comunes y graves. Cada año se pierden o roban millones de dispositivos corporativos. Si el dispositivo no está protegido con cifrado, cualquier persona con acceso físico puede extraer todos los datos simplemente conectando el disco a otro ordenador o arrancando desde un USB. Las consecuencias van desde la exposición de datos personales de clientes (violación GDPR con multas de hasta 20M€) hasta el robo de propiedad intelectual valorada en millones. Los empleados que trabajan en movilidad (aeropuertos, cafeterías, transporte público) son especialmente vulnerables. Este escenario es prevenible con las medidas adecuadas.
+Note: Escenario muy común—millones de dispositivos se pierden/roban cada año. Sin cifrado, cualquiera puede extraer todos los datos conectando el disco a otro PC o arrancando desde USB. Consecuencias: exposición de datos personales (violación GDPR, multas hasta 20M€), robo de propiedad intelectual. Empleados en movilidad (aeropuertos, cafeterías, transporte) son especialmente vulnerables. Es prevenible con medidas adecuadas.
 
 
 ### 2bis.1.1. Pérdida o Robo de Dispositivos II
@@ -200,7 +200,7 @@ medidas que garanticen seguridad ante pérdida o robo.
 * Bloqueo automático tras 5 minutos de inactividad.
 * Cifrado de disco completo en todos los dispositivos.
 
-Note: La Política establece el compromiso organizativo general de proteger los dispositivos. La Normativa concreta ese compromiso en tres reglas específicas y medibles. La autenticación segura con contraseña compleja más MFA (algo que sabes + algo que tienes) asegura que aunque roben el dispositivo, no puedan acceder sin las credenciales. El bloqueo automático protege en caso de descuido momentáneo. El cifrado de disco completo (BitLocker en Windows, FileVault en macOS) es la medida técnica clave: cifra todos los datos del disco con AES-256, haciendo que sin la contraseña correcta el disco sea completamente ilegible. Sin cifrado, los datos son vulnerables; con cifrado, el dispositivo robado es un pisapapeles inútil para el ladrón.
+Note: La Política establece el compromiso organizativo, la Normativa lo concreta en reglas específicas medibles: autenticación segura (contraseña compleja + MFA: algo que sabes + algo que tienes) impide acceso aunque roben el dispositivo, bloqueo automático protege ante descuido momentáneo, cifrado de disco completo (BitLocker/FileVault con AES-256) hace el disco completamente ilegible sin contraseña correcta. Sin cifrado los datos son vulnerables; con cifrado el dispositivo robado es inútil para el ladrón.
 
 
 ### 2bis.1.1. Pérdida o Robo de Dispositivos III
@@ -214,7 +214,7 @@ Note: La Política establece el compromiso organizativo general de proteger los 
 3. **Verificar cifrado**: Comprobar estado en configuración.
 4. **Reportar pérdida**: Llamar a IT inmediatamente al 900-XXX-XXX.
 
-Note: El Procedimiento proporciona los pasos ejecutables concretos. Para el bloqueo automático en Windows, ir a Configuración, Cuentas, Opciones de inicio de sesión, y en "Requerir inicio de sesión" seleccionar "Cuando el PC se reactive desde el modo de suspensión" y configurar el protector de pantalla en 5 minutos. Para cifrado en Windows Pro/Enterprise, buscar "BitLocker" en el Panel de Control, seleccionar "Activar BitLocker" en cada unidad, elegir "Usar contraseña para desbloquear", y guardar la clave de recuperación en ubicación segura (nunca en el propio dispositivo). En macOS, ir a Preferencias del Sistema, Seguridad y Privacidad, FileVault, "Activar FileVault". Verificar que aparece "FileVault está activado" o "BitLocker activado". Ante pérdida o robo, reportar en menos de 1 hora para que IT pueda ejecutar borrado remoto si el dispositivo se conecta.
+Note: Procedimiento con pasos ejecutables concretos: bloqueo automático en Windows (Configuración > Cuentas > Opciones inicio > "Requerir inicio" cuando PC reactive + protector 5min), cifrado con BitLocker (Panel Control > activar en cada unidad > usar contraseña > guardar clave recuperación en ubicación segura nunca en el mismo dispositivo), en macOS FileVault (Preferencias Sistema > Seguridad > FileVault > Activar). Verificar estado activo. Ante pérdida/robo reportar en <1h para IT ejecute borrado remoto.
 
 
 ### 2bis.1.2. Acceso No Autorizado
@@ -226,7 +226,7 @@ Note: El Procedimiento proporciona los pasos ejecutables concretos. Para el bloq
   robo de credenciales en memoria.
 * **Impacto**: MEDIO-ALTO - Compromiso de sesión activa.
 
-Note: Este escenario ocurre cuando un empleado deja su puesto desbloqueado y alguien (un compañero curioso, un visitante, personal de limpieza, o un atacante) accede físicamente al equipo. Con sesión activa, el atacante tiene acceso inmediato a todo lo que el usuario legítimo puede hacer: leer emails, acceder a sistemas, copiar archivos, instalar keyloggers, o incluso enviar emails suplantando al usuario. Los ataques internos son más comunes de lo que se piensa (empleados descontentos, competidores disfrazados en eventos). Muchas brechas empiezan con un "solo me ausento un minuto" que se convierte en 15 minutos y permite a alguien introducir un USB malicioso o robar datos. La prevención es simple: bloquear siempre, sin excepciones.
+Note: Ocurre cuando empleado deja puesto desbloqueado y alguien (compañero curioso, visitante, limpieza, atacante) accede físicamente. Con sesión activa, acceso inmediato a todo: leer emails, sistemas, copiar archivos, instalar keyloggers, enviar emails suplantando usuario. Ataques internos son comunes (empleados descontentos, competidores infiltrados). Muchas brechas empiezan con "solo me ausento un minuto" que permite introducir USB malicioso o robar datos. Prevención simple: bloquear siempre.
 
 
 ### 2bis.1.2. Acceso No Autorizado II
@@ -241,7 +241,7 @@ confidencialidad ante accesos no autorizados.
 * Contraseñas seguras (12+ caracteres, complejidad).
 * Autenticación biométrica cuando sea posible.
 
-Note: La Política mantiene el compromiso general, la Normativa lo concreta. El bloqueo automático actúa como red de seguridad cuando el usuario olvida bloquear manualmente—el sistema lo hace automáticamente. Las contraseñas seguras de mínimo 12 caracteres con mayúsculas, minúsculas, números y símbolos especiales son mucho más resistentes a ataques de fuerza bruta (un espacio de búsqueda de 10^21 combinaciones vs 10^9 de contraseñas simples). La autenticación biométrica (huella dactilar, reconocimiento facial con Windows Hello o Touch ID) añade comodidad sin sacrificar seguridad, ya que es difícil de suplantar y el usuario no puede "olvidarla" o escribirla en un post-it.
+Note: Política mantiene compromiso, Normativa lo concreta: bloqueo automático 5-10min actúa como red de seguridad cuando usuario olvida bloquear manualmente, contraseñas 12+ caracteres con complejidad son mucho más resistentes a fuerza bruta (espacio búsqueda 10^21 vs 10^9 simples), autenticación biométrica (huella, facial con Windows Hello/Touch ID) añade comodidad sin sacrificar seguridad—difícil suplantar y usuario no puede "olvidarla" o escribirla en post-it.
 
 
 ### 2bis.1.2. Acceso No Autorizado III
@@ -255,7 +255,7 @@ Note: La Política mantiene el compromiso general, la Normativa lo concreta. El 
 3. **Bloquear manualmente**: Win+L (Windows), Ctrl+Cmd+Q (macOS),
    Super+L (Linux). SIEMPRE al ausentarse.
 
-Note: Para crear contraseñas seguras y memorables, usar técnica de passphrase: "Mi-Hija-Cumple-15-En-Julio!" es mucho más fuerte y memorable que "P@ssw0rd". Mejor aún, usar un gestor de contraseñas corporativo (Bitwarden, 1Password, LastPass) que genera y almacena contraseñas únicas ultra-seguras para cada sistema. Para Windows Hello, ir a Configuración, Cuentas, Opciones de inicio de sesión, configurar PIN primero, luego Reconocimiento facial o Huella dactilar (requiere hardware compatible). En macOS, Preferencias, Touch ID, añadir huella. El bloqueo manual debe volverse un reflejo automático: "Me levanto = Win+L". Entrenar este hábito con práctica deliberada. En oficinas abiertas es especialmente crítico—un segundo de descuido puede comprometer años de seguridad.
+Note: Contraseñas seguras: usar passphrase tipo "Mi-Hija-Cumple-15-En-Julio!" más fuerte y memorable que "P@ssw0rd", o mejor gestor corporativo (Bitwarden, 1Password) que genera y almacena únicas ultra-seguras. Windows Hello: Configuración > Cuentas > Opciones inicio > configurar PIN primero luego facial/huella (requiere hardware compatible). macOS: Preferencias > Touch ID > añadir huella. Bloqueo manual debe ser reflejo automático: "Me levanto = Win+L". Crítico en oficinas abiertas.
 
 
 ### 2bis.1.3. Falta de Cifrado
@@ -267,7 +267,7 @@ Note: Para crear contraseñas seguras y memorables, usar técnica de passphrase:
   en caso de robo o acceso físico no autorizado.
 * **Impacto**: CRÍTICO - Pérdida total de confidencialidad.
 
-Note: Sin cifrado, las contraseñas de acceso al sistema operativo son trivialmente eludibles. Un atacante puede simplemente arrancar el dispositivo desde un USB live, montar el disco duro, y copiar todos los archivos sin que el sistema operativo proteja nada. O puede extraer físicamente el disco y conectarlo a otro ordenador. En 5-10 minutos tiene acceso completo a TODOS los datos: documentos, emails descargados, historial de navegación, contraseñas guardadas en navegadores, claves SSH, tokens de autenticación en caché. El cifrado de disco completo es por ello IMPRESCINDIBLE en cualquier dispositivo que salga de instalaciones seguras o contenga datos sensibles. Es la diferencia entre una brecha masiva de datos y un dispositivo inútil para el atacante.
+Note: Sin cifrado, contraseñas del SO son trivialmente eludibles: atacante arranca desde USB live, monta disco, copia todos los archivos sin protección. O extrae disco y lo conecta a otro PC. En 5-10min acceso completo a TODO: documentos, emails, historial, contraseñas guardadas, claves SSH, tokens autenticación. Cifrado disco completo es IMPRESCINDIBLE en cualquier dispositivo que salga de instalaciones seguras o contenga datos sensibles. Diferencia entre brecha masiva y dispositivo inútil para atacante.
 
 
 ### 2bis.1.3. Falta de Cifrado II
@@ -282,7 +282,7 @@ para proteger confidencialidad ante acceso físico.
 * Prohibido almacenar información confidencial en dispositivos
   sin cifrar o personales no autorizados.
 
-Note: La Política es clara: proteger mediante cifrado. La Normativa la hace ejecutable: cifrado de disco completo (FDE - Full Disk Encryption) es obligatorio sin excepciones. Esto significa que desde el momento en que el dispositivo arranca, hasta el último byte del disco está cifrado con algoritmo robusto (AES-256). Sin la clave de cifrado (derivada de la contraseña o del TPM), los datos son basura aleatoria indescifrable. La segunda norma es crítica: prohibir almacenar datos confidenciales en dispositivos sin protección—esto incluye USBs personales, discos externos sin cifrar, o el portátil personal del empleado. Si se necesita trabajar en dispositivo personal, debe cumplir mismos estándares (cifrado, antivirus, actualizaciones) que los corporativos.
+Note: Política clara: proteger mediante cifrado. Normativa ejecutable: FDE (Full Disk Encryption) obligatorio sin excepciones—desde arranque hasta último byte cifrado con AES-256. Sin clave de cifrado (derivada de contraseña o TPM), datos son basura indescifrable. Segunda norma crítica: prohibir almacenar datos confidenciales en dispositivos sin protección (USBs personales, discos externos sin cifrar, laptop personal). Si se trabaja en dispositivo personal, debe cumplir mismos estándares (cifrado, antivirus, actualizaciones) que corporativos.
 
 
 ### 2bis.1.3. Falta de Cifrado III
@@ -296,7 +296,7 @@ Note: La Política es clara: proteger mediante cifrado. La Normativa la hace eje
 3. **Verificar**: Comprobar que indica "Cifrado activado".
 4. **Excepciones**: Reportar a IT si no puede activarse.
 
-Note: En Windows, BitLocker requiere edición Pro o Enterprise (Home no lo incluye por defecto, considerar upgrade). Buscar "Administrar BitLocker" en el menú inicio, seleccionar la unidad del sistema (C:), "Activar BitLocker", elegir "Introducir contraseña" para desbloquear, crear contraseña segura (12+ caracteres), CRÍTICO: guardar la clave de recuperación en ubicación segura externa (OneDrive corporativo, USB guardado en caja fuerte, impreso en ubicación segura)—esta clave es la única manera de recuperar datos si olvidas la contraseña. El proceso de cifrado inicial puede tardar horas dependiendo del tamaño del disco; se puede usar el PC mientras cifra en segundo plano. En macOS, FileVault es más sencillo: Preferencias del Sistema, Seguridad y Privacidad, pestaña FileVault, clic en candado para autenticar, "Activar FileVault", elegir si permitir recuperación con cuenta iCloud o crear clave de recuperación local (recomendado para entornos corporativos). Verificar que el estado cambia a "FileVault está activado". Si hay problemas técnicos (hardware incompatible, falta módulo TPM), reportar inmediatamente a IT para solución alternativa o cifrado software.
+Note: Windows BitLocker requiere Pro/Enterprise (Home no incluido, considerar upgrade). Buscar "Administrar BitLocker", activar en C:, introducir contraseña, CRÍTICO: guardar clave recuperación en ubicación segura externa (OneDrive corporativo, USB en caja fuerte, impreso seguro)—única manera de recuperar datos si olvidas contraseña. Cifrado inicial puede tardar horas; PC usable mientras cifra en segundo plano. macOS FileVault más sencillo: Preferencias > Seguridad > FileVault > Activar, elegir recuperación iCloud o clave local (recomendado corporativo). Si problemas técnicos reportar IT inmediatamente.
 
 
 ### 2bis.1.4. Infección de Malware
@@ -308,7 +308,7 @@ Note: En Windows, BitLocker requiere edición Pro o Enterprise (Home no lo inclu
   encripta datos (ransomware), se propaga en red.
 * **Impacto**: MUY ALTO - Puede comprometer toda la red corporativa.
 
-Note: El malware en dispositivos hardware puede llegar por múltiples vías: emails de phishing con adjuntos maliciosos, descargas de internet desde sitios comprometidos, memorias USB infectadas (ataque USB drop), exploit kits que aprovechan vulnerabilidades del navegador, o incluso pre-instalado en hardware comprometido en la cadena de suministro. Una vez instalado, el malware puede hacer prácticamente cualquier cosa: keyloggers capturan todo lo que tecleas (contraseñas incluidas), infostealers roban archivos y credenciales, RATs (Remote Access Trojans) dan control total del PC al atacante, ransomware cifra todos los archivos y exige pago, cryptominers usan tus recursos para minar criptomonedas, botnets convierten tu PC en parte de una red de ataque. Peor aún, malware sofisticado puede propagarse lateralmente por la red interna infectando otros dispositivos. La defensa requiere múltiples capas.
+Note: Malware llega por múltiples vías: emails phishing con adjuntos maliciosos, descargas de sitios comprometidos, USBs infectadas (ataque USB drop), exploit kits en navegadores, o pre-instalado en hardware comprometido. Una vez instalado hace cualquier cosa: keyloggers capturan todo (contraseñas incluidas), infostealers roban archivos/credenciales, RATs dan control total al atacante, ransomware cifra archivos y exige pago, cryptominers usan recursos, botnets convierten PC en parte de red de ataque. Peor: puede propagarse lateralmente por red interna. Defensa requiere múltiples capas.
 
 
 ### 2bis.1.4. Infección de Malware II
@@ -323,7 +323,7 @@ en profundidad y prevención proactiva.
 * Prohibida instalación de software no autorizado por IT.
 * Escaneo obligatorio de medios extraíbles antes de uso.
 
-Note: La Política habla de "defensa en profundidad"—múltiples capas de seguridad. La Normativa define tres capas concretas. Primera: antivirus y firewall—el antivirus detecta y bloquea malware conocido mediante firmas y comportamiento heurístico, el firewall bloquea conexiones de red no autorizadas. Deben actualizarse diariamente (las firmas de malware se actualizan constantemente). Segunda: control de software—solo se permite instalar software autorizado y verificado por IT, eliminando la vía de infección por "descargas de internet". Los usuarios no deben tener permisos de administrador local (principio de mínimo privilegio) para que no puedan instalar software. Tercera: control de medios extraíbles—las memorias USB son vector común de malware, por lo que deben escanearse obligatoriamente antes de abrir cualquier archivo, o mejor aún, deshabilitar puertos USB por política para usuarios que no los necesiten legítimamente.
+Note: Política habla de "defensa en profundidad"—múltiples capas. Normativa define tres concretas: Primera capa antivirus/firewall—detecta malware conocido mediante firmas y heurístico, firewall bloquea conexiones no autorizadas, actualización diaria. Segunda capa control software—solo instalar autorizado verificado por IT, usuarios sin permisos admin (mínimo privilegio) para que no puedan instalar. Tercera capa control medios extraíbles—USBs son vector común, escanear obligatorio antes de abrir archivos, o mejor deshabilitar puertos USB por política para usuarios que no necesitan.
 
 
 ### 2bis.1.4. Infección de Malware III
@@ -339,7 +339,7 @@ Note: La Política habla de "defensa en profundidad"—múltiples capas de segur
 4. **Navegación segura**: No descargar de fuentes desconocidas,
    no clic en enlaces sospechosos, reportar emails phishing.
 
-Note: Para instalar antivirus corporativo (Symantec, McAfee, Sophos, Windows Defender ATP, etc.), seguir las instrucciones específicas del departamento IT—generalmente se despliega centralmente via GPO o script, el usuario solo debe ejecutar el instalador. Verificar que aparece icono del antivirus en la barra de tareas y que indica "Protegido" o "Actualizado". Para activar firewall en Windows, buscar "Firewall de Windows Defender", asegurar que está "Activado" en redes de dominio, privadas y públicas—bloquear todo el tráfico entrante por defecto excepto aplicaciones específicamente permitidas. En macOS, Preferencias del Sistema, Seguridad y Privacidad, Firewall, "Activar Firewall", "Opciones de Firewall", "Bloquear todas las conexiones entrantes" salvo aplicaciones firmadas. Configurar Windows Update o macOS Software Update en automático para recibir parches inmediatamente. Lo más importante: formar al usuario en navegación segura—no abrir adjuntos de emails inesperados aunque parezcan legítimos (verificar con el remitente por otro canal), no instalar extensiones de navegador desconocidas, usar solo tiendas oficiales (Microsoft Store, Mac App Store) si necesitan software. Si ven email sospechoso, NUNCA hacer clic, reportar inmediatamente al botón "Reportar Phishing" o reenviar a abuse@empresa.com.
+Note: Instalar antivirus corporativo (Symantec, McAfee, Sophos, Defender ATP): seguir instrucciones IT, generalmente se despliega vía GPO/script, verificar icono en barra tareas indica "Protegido". Firewall Windows: buscar "Firewall Defender", activado en redes dominio/privadas/públicas, bloquear tráfico entrante por defecto. macOS: Preferencias > Seguridad > Firewall > Activar > "Bloquear todas entrantes" salvo apps firmadas. Configurar updates automáticos. Navegación segura: no abrir adjuntos inesperados (verificar remitente por otro canal), no extensiones navegador desconocidas, usar tiendas oficiales. Email sospechoso: NUNCA clic, reportar inmediatamente.
 
 ---
 
@@ -353,7 +353,7 @@ Note: Para instalar antivirus corporativo (Symantec, McAfee, Sophos, Windows Def
 * Navegadores web y extensiones
 * Software especializado por departamento
 
-Note: El software y las aplicaciones son las herramientas que los empleados usan diariamente para realizar su trabajo. Desde procesadores de texto hasta complejos sistemas ERP, todo software que procesa o almacena datos corporativos es un activo crítico de seguridad. El software puede tener vulnerabilidades explotables, puede ser malicioso si se instala de fuentes no confiables, puede tener configuraciones inseguras por defecto, o puede ser usado de formas no previstas que comprometan la seguridad. Además, el software desactualizado es una de las vías más comunes de compromiso—los atacantes buscan activamente sistemas sin parchar para explotar vulnerabilidades públicamente conocidas.
+Note: Software y aplicaciones son herramientas diarias para trabajar—desde procesadores texto hasta sistemas ERP complejos. Todo software que procesa/almacena datos corporativos es activo crítico de seguridad. Puede tener vulnerabilidades explotables, ser malicioso si instalado de fuentes no confiables, tener configuraciones inseguras por defecto, o usarse de formas no previstas que comprometan seguridad. Software desactualizado es vía común de compromiso—atacantes buscan activamente sistemas sin parchar para explotar vulnerabilidades públicamente conocidas.
 
 
 ### 2bis.2.1. Software No Autorizado
@@ -367,7 +367,7 @@ Note: El software y las aplicaciones son las herramientas que los empleados usan
 * **Procedimiento**: Consultar lista software autorizado en intranet,
   solicitar nuevos via ticket IT justificando necesidad.
 
-Note: El software no autorizado es peligroso porque no ha pasado por el proceso de verificación de seguridad de IT—puede contener vulnerabilidades conocidas, puede ser una versión troyanizada con malware, puede violar licencias y exponer a la empresa a riesgos legales, o puede tener configuraciones inseguras. El procedimiento requiere que los empleados primero consulten el catálogo de software aprobado disponible en la intranet corporativa o portal de autoservicio. Si necesitan software no disponible, deben abrir un ticket justificando la necesidad de negocio. IT evaluará el software (seguridad, licencias, compatibilidad, coste de mantenimiento) antes de aprobarlo. Una vez aprobado, IT lo instalará centralmente o proporcionará installer autorizado. Esto protege a la organización y al usuario—si el software causa problemas, IT puede dar soporte; si no está autorizado, el usuario asume la responsabilidad.
+Note: Software no autorizado es peligroso porque no pasó verificación seguridad IT—puede contener vulnerabilidades conocidas, ser versión troyanizada con malware, violar licencias (riesgo legal), o tener configuraciones inseguras. Procedimiento: consultar catálogo software aprobado en intranet/portal autoservicio. Si necesitan software no disponible, abrir ticket justificando necesidad negocio. IT evalúa (seguridad, licencias, compatibilidad, coste mantenimiento) antes aprobar. Una vez aprobado, IT instala centralmente o proporciona installer autorizado. Protege organización y usuario—IT puede dar soporte; si no autorizado, usuario asume responsabilidad.
 
 
 ### 2bis.2.2. Software Desactualizado
@@ -381,7 +381,7 @@ Note: El software no autorizado es peligroso porque no ha pasado por el proceso 
 * **Procedimiento**: Activar Windows Update / macOS Update en automático.
   IT despliega parches críticos centralmente.
 
-Note: El software desactualizado es objetivo prioritario para atacantes—cuando se publica un parche de seguridad, los atacantes hacen ingeniería inversa para descubrir la vulnerabilidad y crear exploits. Los sistemas sin actualizar quedan extremadamente vulnerables. WannaCry en 2017 explotó una vulnerabilidad de Windows para la que Microsoft había publicado parche dos meses antes—organizaciones que no actualizaron sufrieron ransomware masivo. El procedimiento requiere activar actualizaciones automáticas en todos los dispositivos. En Windows: Configuración, Actualización y Seguridad, Windows Update, "Opciones avanzadas", activar todas las opciones de actualización automática. En macOS: Preferencias, Actualización de Software, marcar todas las casillas de actualización automática. Para software crítico empresarial (SAP, Oracle, etc.), IT despliega parches centralmente vía herramientas de gestión (WSUS, SCCM, Intune). Los parches críticos de seguridad deben aplicarse en ventana de 48-72 horas máximo.
+Note: Software desactualizado es objetivo prioritario atacantes—cuando se publica parche, hacen ingeniería inversa para descubrir vulnerabilidad y crear exploits. Sistemas sin actualizar extremadamente vulnerables. WannaCry 2017 explotó vulnerabilidad Windows parcheada dos meses antes—quienes no actualizaron sufrieron ransomware masivo. Procedimiento: activar updates automáticas todos dispositivos. Windows: Configuración > Actualización > Opciones avanzadas > activar todas automáticas. macOS: Preferencias > Actualización Software > marcar todas casillas. Software crítico empresarial (SAP, Oracle): IT despliega parches vía WSUS/SCCM/Intune. Parches críticos en 48-72h máximo.
 
 
 ### 2bis.2.3. Permisos Excesivos en Aplicaciones
@@ -395,7 +395,7 @@ Note: El software desactualizado es objetivo prioritario para atacantes—cuando
 * **Procedimiento**: IT asigna permisos basados en función. Usuarios
   solicitan accesos adicionales justificando necesidad.
 
-Note: Los permisos excesivos en aplicaciones son peligrosos—si un usuario tiene más acceso del necesario para su función, aumenta el riesgo en caso de compromiso de su cuenta (accidental o malicioso). Por ejemplo, un empleado de ventas no necesita permisos de administrador en el CRM, ni un desarrollador junior necesita acceso a datos de producción. El procedimiento implementa el principio de mínimo privilegio: cuando un empleado nuevo se incorpora, IT configura sus permisos basándose estrictamente en su rol y función. Si necesita accesos adicionales, debe justificarlos (por ejemplo, "necesito acceso temporal a módulo de finanzas para generar reporte X para el proyecto Y"). IT aprueba accesos excepcionales por tiempo limitado. Trimestralmente, IT audita los permisos de todos los usuarios, revocando permisos no utilizados o que ya no son necesarios (por ejemplo, si un empleado cambió de departamento). Esto minimiza la superficie de ataque.
+Note: Permisos excesivos son peligrosos—si usuario tiene más acceso del necesario, aumenta riesgo si su cuenta se compromete (accidental/malicioso). Ejemplo: empleado ventas no necesita permisos admin en CRM, desarrollador junior no necesita acceso producción. Procedimiento implementa mínimo privilegio: cuando empleado nuevo se incorpora, IT configura permisos basados estrictamente en rol/función. Si necesita accesos adicionales, justificar ("necesito acceso temporal finanzas para reporte X proyecto Y"). IT aprueba excepcionales por tiempo limitado. Trimestralmente IT audita permisos todos usuarios, revocando no utilizados o ya innecesarios (cambio departamento). Minimiza superficie ataque.
 
 
 ### 2bis.2.4. Fugas via Aplicaciones en la Nube
@@ -410,7 +410,7 @@ Note: Los permisos excesivos en aplicaciones son peligrosos—si un usuario tien
   Google Workspace empresarial, o apps aprobadas. Verificar
   configuración de compartición antes de subir archivos.
 
-Note: Las aplicaciones en la nube (SaaS) son cómodas pero riesgosas si no se gestionan bien. Dropbox personal, Google Drive personal, WeTransfer, etc., no tienen los controles de seguridad corporativos—pueden estar accesibles desde cualquier dispositivo, pueden tener enlaces compartidos configurados inadvertidamente como públicos, pueden no cifrar en tránsito o en reposo, y están fuera del control de IT. El procedimiento establece que solo se deben usar servicios cloud aprobados corporativamente (OneDrive for Business, SharePoint Online, Google Workspace con dominio empresarial, Box Enterprise, etc.). Estos servicios tienen controles administrativos centralizados, DLP (Data Loss Prevention), auditoría de accesos, y cumplimiento normativo. Antes de subir un archivo sensible, el usuario debe verificar la configuración de compartición: ¿quién tiene acceso? ¿es solo interno? ¿requiere autenticación? ¿tiene fecha de expiración? Configurar siempre en "Solo personas de la organización" y nunca "Cualquiera con el enlace" para datos confidenciales.
+Note: Apps cloud (SaaS) son cómodas pero riesgosas si no gestionadas bien. Dropbox personal, Drive personal, WeTransfer no tienen controles seguridad corporativos—accesibles desde cualquier dispositivo, enlaces compartidos inadvertidamente públicos, pueden no cifrar en tránsito/reposo, fuera control IT. Procedimiento: usar solo servicios cloud aprobados corporativamente (OneDrive Business, SharePoint Online, Google Workspace empresarial, Box Enterprise). Tienen controles admin centralizados, DLP, auditoría accesos, cumplimiento normativo. Antes subir archivo sensible verificar configuración compartición: ¿quién acceso? ¿solo interno? ¿requiere autenticación? ¿fecha expiración? Configurar siempre "Solo personas organización" nunca "Cualquiera con enlace" para confidenciales.
 
 
 ### 2bis.3. Comunicación y Acceso a Red
@@ -423,7 +423,7 @@ Note: Las aplicaciones en la nube (SaaS) son cómodas pero riesgosas si no se ge
 * Internet general y navegación web
 * Aplicaciones en la nube (SaaS)
 
-Note: La comunicación y el acceso a la red son esenciales para que los empleados trabajen, pero también representan uno de los mayores riesgos de seguridad. Cada conexión de red es un potencial vector de ataque: redes WiFi públicas sin cifrar permiten interceptación de tráfico (man-in-the-middle), conexiones directas a internet sin VPN exponen la IP real de la organización, navegadores con configuraciones inseguras filtran información, y aplicaciones que comunican sin cifrado envían datos en claro. La seguridad de red requiere autenticación fuerte, cifrado de tráfico, segmentación de redes, y políticas de uso aceptable claras.
+Note: Comunicación y acceso red esenciales para trabajar pero también mayores riesgos seguridad. Cada conexión red es potencial vector ataque: WiFi públicas sin cifrar permiten interceptación tráfico (man-in-the-middle), conexiones directas internet sin VPN exponen IP real organización, navegadores con configuraciones inseguras filtran información, apps que comunican sin cifrado envían datos en claro. Seguridad red requiere autenticación fuerte, cifrado tráfico, segmentación redes, políticas uso aceptable claras.
 
 
 ### 2bis.3.1. Redes WiFi Públicas Inseguras
@@ -438,7 +438,7 @@ Note: La comunicación y el acceso a la red son esenciales para que los empleado
 * **Procedimiento**: Instalar cliente VPN corporativo, conectar antes
   de acceder a cualquier recurso empresarial. En WiFi público: VPN ON.
 
-Note: Las redes WiFi públicas son extremadamente inseguras porque cualquier persona conectada a la misma red puede interceptar el tráfico de otros (ataques de tipo sniffing con Wireshark, Ettercap, etc.). Peor aún, los atacantes crean redes WiFi maliciosas con nombres similares a redes legítimas ("Starbucks Free WiFi", "Airport_Guest") para que los usuarios se conecten y capturar todo su tráfico. Sin cifrado, contraseñas, cookies de sesión, emails, archivos descargados—todo viaja en claro. La VPN (Virtual Private Network) cifra todo el tráfico del dispositivo dentro de un túnel seguro hasta el servidor VPN corporativo, haciendo que sea indescifrable para interceptores. El procedimiento requiere instalar el cliente VPN corporativo (Cisco AnyConnect, GlobalProtect, OpenVPN, etc.) según instrucciones de IT, autenticarse con credenciales corporativas (generalmente usuario + contraseña + MFA), y SIEMPRE activar la VPN ANTES de acceder a email, intranet, aplicaciones corporativas, etc., cuando se esté en red no confiable. Regla simple: "WiFi público = VPN ON, sin excepciones".
+Note: WiFi públicas extremadamente inseguras porque cualquiera conectado misma red puede interceptar tráfico otros (sniffing con Wireshark, Ettercap). Atacantes crean redes WiFi maliciosas con nombres similares legítimas ("Starbucks Free WiFi") para capturar todo tráfico. Sin cifrado, contraseñas/cookies/emails viajan en claro. VPN (Virtual Private Network) cifra todo tráfico dispositivo en túnel seguro hasta servidor VPN corporativo, indescifrable para interceptores. Procedimiento: instalar cliente VPN corporativo (Cisco AnyConnect, GlobalProtect, OpenVPN) según IT, autenticar (usuario+contraseña+MFA), SIEMPRE activar VPN ANTES acceder email/intranet/apps en red no confiable. Regla simple: "WiFi público = VPN ON".
 
 
 ### 2bis.3.2. Acceso No Autorizado a Red Corporativa
@@ -452,7 +452,7 @@ Note: Las redes WiFi públicas son extremadamente inseguras porque cualquier per
 * **Procedimiento**: IT registra dispositivos corporativos en NAC
   (Network Access Control). Usuarios activan MFA en portales de acceso.
 
-Note: El acceso no autorizado a la red corporativa puede ocurrir de varias formas: atacantes que logran credenciales válidas (phishing), dispositivos personales comprometidos que se conectan, visitantes que se conectan a WiFi corporativa sin autorización, o incluso atacantes físicos que conectan cable Ethernet en puertos desprotegidos. La autenticación multifactor (MFA) es la defensa principal—incluso si roban la contraseña, no pueden acceder sin el segundo factor (código SMS, push notification, token hardware FIDO2). El NAC (Network Access Control) con soluciones como Cisco ISE, ForeScout, o Microsoft NAP verifica que los dispositivos que intentan conectarse estén registrados, cumplan políticas de seguridad (antivirus actualizado, cifrado activo, parches instalados), y pertenezcan a usuarios autorizados. Si un dispositivo no cumple, se le deniega acceso o se le coloca en red cuarentena con acceso limitado. IT debe registrar cada dispositivo corporativo en el NAC con su MAC address y certificado. Para WiFi corporativa, usar WPA2-Enterprise o WPA3-Enterprise con autenticación RADIUS, nunca WPA2-PSK con contraseña compartida.
+Note: Acceso no autorizado red puede ocurrir: atacantes logran credenciales válidas (phishing), dispositivos personales comprometidos conectan, visitantes WiFi corporativa sin autorización, atacantes físicos conectan ethernet en puertos desprotegidos. MFA defensa principal—incluso si roban contraseña, no acceden sin segundo factor (código SMS, push notification, token FIDO2). NAC (Network Access Control - Cisco ISE, ForeScout, Microsoft NAP) verifica dispositivos: registrados, cumplen políticas (antivirus actualizado, cifrado activo, parches), pertenecen usuarios autorizados. Si no cumple, denegar acceso o red cuarentena. IT registra cada dispositivo corporativo en NAC con MAC/certificado. WiFi corporativa: WPA2/WPA3-Enterprise con RADIUS, nunca WPA2-PSK compartida.
 
 
 ### 2bis.3.3. Intercepción de Datos en Tránsito
@@ -466,7 +466,7 @@ Note: El acceso no autorizado a la red corporativa puede ocurrir de varias forma
 * **Procedimiento**: Verificar HTTPS (candado) en navegador. Para emails
   sensibles, usar cifrado S/MIME en Outlook o cifrado PGP.
 
-Note: Los datos en tránsito (moviéndose por la red) son vulnerables si no están cifrados. HTTP sin S transmite en texto claro, permitiendo que cualquier router intermedio o atacante en la red capture credenciales, datos personales, etc. HTTPS cifra la comunicación con TLS, protegiendo la confidencialidad. El usuario debe verificar siempre el candado verde en el navegador antes de introducir información sensible—si no hay candado, la conexión no es segura. Para emails altamente confidenciales (informes financieros, información legal, datos personales masivos), el cifrado del transporte (TLS entre servidores de email) no es suficiente—se necesita cifrado end-to-end donde solo emisor y receptor pueden descifrar. S/MIME (Secure/Multipurpose Internet Mail Extensions) usa certificados digitales para firmar y cifrar emails en Outlook—IT debe proporcionar certificado S/MIME al usuario e instalar en Outlook. Alternativamente, PGP (Pretty Good Privacy) con plugins como Mailvelope para webmail. El procedimiento para enviar email cifrado con S/MIME en Outlook: componer email, Opciones, Cifrar, Cifrar con S/MIME, enviar—solo el destinatario con certificado correspondiente podrá descifrarlo.
+Note: Datos en tránsito (moviéndose por red) vulnerables si no cifrados. HTTP sin S transmite texto claro, cualquier router/atacante captura credenciales/datos. HTTPS cifra con TLS protegiendo confidencialidad. Usuario verificar siempre candado verde navegador antes introducir info sensible—sin candado, conexión no segura. Para emails confidenciales (informes financieros, info legal, datos personales masivos), cifrado transporte TLS no suficiente—necesita cifrado end-to-end donde solo emisor/receptor descifran. S/MIME usa certificados digitales firmar/cifrar emails Outlook—IT proporciona certificado, instalar en Outlook. Para enviar email cifrado S/MIME: componer, Opciones > Cifrar > Cifrar S/MIME > enviar—solo destinatario con certificado podrá descifrar. Alternativa: PGP con Mailvelope para webmail.
 
 
 ### 2bis.3.4. Fugas via Aplicaciones Cloud No Seguras
@@ -480,7 +480,7 @@ Note: Los datos en tránsito (moviéndose por la red) son vulnerables si no est�
 * **Procedimiento**: Usar apps corporativas (OneDrive, SharePoint).
   Al compartir, verificar: ¿Quién accede? ¿Autenticación requerida?
 
-Note: Los servicios cloud (SaaS) tienen configuraciones de compartición muy flexibles que pueden generar exposiciones accidentales. Ejemplos reales: buckets S3 de AWS configurados como públicos exponiendo millones de registros, enlaces de Google Drive/OneDrive con "cualquiera con el enlace" indexados por Google y accesibles públicamente, presentaciones confidenciales en Slideshare públicas. El procedimiento requiere usar exclusivamente servicios cloud aprobados corporativamente que IT puede gestionar centralmente. Al compartir un archivo en OneDrive/SharePoint: clic derecho, Compartir, establecer "Personas específicas" (no "Cualquiera"), introducir emails de destinatarios, establecer "Pueden ver" (no "Pueden editar" salvo necesario), marcar "Bloquear descarga" si es muy sensible, establecer fecha de expiración. IT debe configurar DLP (Data Loss Prevention) en Microsoft 365 / Google Workspace para que detecte automáticamente cuando se intenta compartir externamente contenido sensible (números de tarjetas, DNIs, etc.) y bloquee o alerte.
+Note: Servicios cloud (SaaS) tienen configuraciones compartición flexibles que generan exposiciones accidentales. Ejemplos reales: buckets S3 AWS públicos exponiendo millones registros, enlaces Drive/OneDrive "cualquiera con enlace" indexados por Google accesibles públicamente, presentaciones confidenciales Slideshare públicas. Procedimiento: usar exclusivamente servicios cloud aprobados corporativamente que IT gestiona centralmente. Al compartir OneDrive/SharePoint: clic derecho > Compartir > "Personas específicas" (no "Cualquiera") > introducir emails > "Pueden ver" (no editar salvo necesario) > marcar "Bloquear descarga" si muy sensible > fecha expiración. IT configurar DLP en Microsoft 365/Workspace detectar automáticamente compartir externamente contenido sensible (tarjetas, DNIs) y bloquear/alertar.
 
 ---
 
@@ -494,7 +494,7 @@ Note: Los servicios cloud (SaaS) tienen configuraciones de compartición muy fle
 * Áreas de recepción y zonas públicas
 * Instalaciones de almacenamiento (archivos, bóvedas)
 
-Note: Las instalaciones físicas son a menudo el eslabón olvidado de la seguridad—nos enfocamos en firewalls y antivirus pero descuidamos puertas, ventanas y personas. La seguridad física es crítica porque el acceso físico generalmente equivale a compromiso total—alguien con acceso físico a un dispositivo puede bypasear la mayoría de controles lógicos. Las instalaciones deben protegerse con múltiples capas: perímetro exterior (vallas, guardias), acceso a edificio (puertas con tarjeta, recepcionista), acceso a áreas sensibles (control biométrico, doble autenticación), y protección de activos individuales (cajones con llave, destructoras de papel). También incluye aspectos menos obvios como visitantes no acompañados, personal de limpieza con acceso nocturno, técnicos de mantenimiento, o "tailgating" (colarse detrás de alguien autorizado).
+Note: Instalaciones físicas son eslabón olvidado seguridad—enfoque en firewalls/antivirus pero descuidamos puertas/ventanas/personas. Seguridad física crítica porque acceso físico generalmente = compromiso total—alguien con acceso físico puede bypasear mayoría controles lógicos. Proteger con múltiples capas: perímetro exterior (vallas, guardias), acceso edificio (puertas tarjeta, recepcionista), áreas sensibles (control biométrico, doble autenticación), protección activos individuales (cajones llave, destructoras papel). Incluye visitantes no acompañados, personal limpieza acceso nocturno, técnicos mantenimiento, "tailgating" (colarse tras alguien autorizado).
 
 
 ### 2bis.4.1. Acceso No Autorizado a Áreas Restringidas
@@ -509,7 +509,7 @@ Note: Las instalaciones físicas son a menudo el eslabón olvidado de la segurid
   críticas (datacenter), autenticación adicional (PIN+huella). Reportar
   personas no identificadas a seguridad inmediatamente.
 
-Note: Las áreas restringidas como centros de datos, salas de servidores, oficinas ejecutivas, o archivos confidenciales deben tener control de acceso estricto. El sistema de control de acceso (típicamente tarjetas RFID + lector) registra quién entra, cuándo, y a dónde—estos logs son auditables. Para áreas más críticas, se requiere autenticación de dos factores físicos: tarjeta (algo que tienes) + PIN o huella dactilar (algo que sabes/eres). Esto previene que alguien que robe o encuentre una tarjeta pueda acceder. El procedimiento para empleados: presentar tarjeta en lector, esperar tono/luz verde, abrir puerta, cerrar tras de sí asegurando que queda cerrada (no dejarla abierta para "el siguiente"). NUNCA permitir "tailgating"—si alguien intenta seguirte sin tarjeta propia, cortésmente indicar que debe usar su propia tarjeta (incluso si parece compañero). Si ves a alguien sin identificación visible en área restringida, acércate cortésmente ("¿Puedo ayudarte? ¿Llevas tu tarjeta de visitante?") y si es sospechoso, llamar a seguridad. En datacenters, normalmente hay cámaras grabando 24/7 y se requiere  registro en bitácora física además del electrónico.
+Note: Áreas restringidas (datacenters, salas servidores, oficinas ejecutivas, archivos confidenciales) requieren control acceso estricto. Sistema control (tarjetas RFID + lector) registra quién/cuándo/dónde—logs auditables. Áreas críticas: autenticación 2 factores físicos tarjeta (algo tienes) + PIN/huella (algo sabes/eres). Previene que quien robe tarjeta pueda acceder. Procedimiento: presentar tarjeta, esperar tono verde, abrir, cerrar tras de sí. NUNCA permitir "tailgating"—si alguien intenta seguir sin tarjeta, indicar cortésmente que use propia. Persona sin identificación en área restringida: acercarse cortésmente ("¿Llevas tarjeta visitante?"), si sospechoso llamar seguridad. Datacenters: cámaras 24/7 + registro bitácora física.
 
 
 ### 2bis.4.2. Exposición de Información en Espacios Compartidos
@@ -524,7 +524,7 @@ Note: Las áreas restringidas como centros de datos, salas de servidores, oficin
   con llave, bloquear PC, apagar monitor. Usar filtros de privacidad
   en laptops en espacios públicos.
 
-Note: La política de escritorio limpio (Clean Desk Policy) es simple pero efectiva. Muchas brechas empiezan con documentos o post-its con contraseñas dejados visibles. En espacios de open office, cualquiera que pase puede ver tu pantalla o leer documentos en tu escritorio. En salas de reuniones, los documentos olvidados tras la reunión pueden ser vistos por el siguiente grupo. El procedimiento requiere disciplina diaria: al finalizar el día (o al ausentarse por tiempo prolongado), revisar escritorio, guardar todos los papeles en cajones que se cierran con llave (IT debe proporcionar armarios/cajones con cerradura), bloquear el PC con Win+L, y si el monitor es visible desde áreas de paso o ventanas, apagarlo. Para trabajo en espacios públicos (cafeterías, aeropuertos, trenes), usar filtros de privacidad 3M en pantallas de laptop—estos filtros hacen que la pantalla solo sea legible frontalmente, viéndose negra desde ángulos laterales, previniendo "shoulder surfing" (mirones por encima del hombro). Nunca dejar laptop sin supervisión en público, ni siquiera para ir al baño—empacar y llevar o pedir a compañero de confianza que vigile.
+Note: Política escritorio limpio (Clean Desk) simple pero efectiva. Muchas brechas empiezan con documentos/post-its contraseñas dejados visibles. Open office: cualquiera puede ver tu pantalla/documentos. Salas reuniones: documentos olvidados vistos por siguiente grupo. Procedimiento requiere disciplina diaria: al finalizar día (o ausentarse tiempo prolongado), revisar escritorio, guardar papeles en cajones con llave, bloquear PC Win+L, apagar monitor si visible desde paso/ventanas. Espacios públicos (cafeterías, aeropuertos): usar filtros privacidad 3M en laptops—pantalla solo legible frontalmente, negra desde ángulos laterales, previene "shoulder surfing". Nunca dejar laptop sin supervisión público ni para baño—empacar o pedir compañero confianza vigile.
 
 
 ### 2bis.4.3. Pérdida o Robo de Dispositivos en Instalaciones
@@ -538,7 +538,7 @@ Note: La política de escritorio limpio (Clean Desk Policy) es simple pero efect
 * **Procedimiento**: Guardar laptop en cajón con llave al salir. En
   espacios abiertos, usar cable Kensington para anclar laptop a escritorio.
 
-Note: Aunque las instalaciones tengan seguridad, los robos internos ocurren—empleados deshonestos, contratistas, visitan tes, o robos oportunistas cuando alguien deja la puerta abierta. Los laptops son especialmente vulnerables porque son portátiles, valiosos y fáciles de revender. El procedimiento establece dos niveles de protección. Primero, almacenamiento seguro: al finalizar jornada, guardar laptop en cajón o armario con llave. Segundo, anclaje físico: los laptops tienen ranura Kensington que permite conectar un cable de seguridad de acero que se ancla a un punto fijo (escritorio, pata de mesa)—esto no previene robo determinado (pueden cortar el cable con herramientas) pero previene robo oportunista. Las empresas deben proporcionar estos cables. Para dispositivos móviles (tablets, teléfonos), no dejarlos cargando desatendidos en salas de reuniones. El cifrado de disco completo (mencionado en sección hardware) es la última línea de defensa—si roban el dispositivo físico, al menos los datos están protegidos.
+Note: Aunque instalaciones tengan seguridad, robos internos ocurren—empleados deshonestos, contratistas, visitantes, robos oportunistas cuando puerta abierta. Laptops especialmente vulnerables: portátiles, valiosos, fácil reventa. Procedimiento dos niveles protección: Primero almacenamiento seguro: al finalizar jornada guardar laptop cajón/armario llave. Segundo anclaje físico: laptops tienen ranura Kensington para cable seguridad acero anclado punto fijo (escritorio, mesa)—no previene robo determinado (cortar cable con herramientas) pero previene robo oportunista. Dispositivos móviles (tablets, teléfonos): no dejar cargando desatendidos salas reuniones. Cifrado disco completo última línea defensa—si roban dispositivo, datos protegidos.
 
 
 ### 2bis.4.4. Gestión Insegura de Residuos Confidenciales
@@ -552,7 +552,7 @@ Note: Aunque las instalaciones tengan seguridad, los robos internos ocurren—em
 * **Procedimiento**: Usar trituradoras de papel (cross-cut) en cada
   planta. Para dispositivos: entregar a IT para destrucción certificada.
 
-Note: El "dumpster diving" (bucear en basureros) es técnica real de recopilación de información—los atacantes físicamente revisan la basura de empresas buscando documentos descartados, diagramas de red, listados de empleados, org charts, credenciales anotadas, reportes financieros, contratos con proveedores, etc. Ocurre más de lo que pensáis—organizaciones han sufrido brechas simplemente porque alguien tiró a la basura documentos sin triturar. El procedimiento requiere trituradoras de papel estilo cross-cut (corte transversal, convierte papel en confeti ilegible) en cada planta, preferiblemente cerca de impresoras. Las trituradoras strip-cut (corte en tiras) son insuficientes—las tiras pueden reconstruirse. Para documentos MUY sensibles, considerar trituradoras P-4 o superiores (cortes más pequeños) según DIN 66399. Los empleados deben triturar cualquier documento confidencial antes de desecharlo, incluyendo borradores impresos, copias defectuosas, notas de reuniones, post-its con información sensible. Para medios digitales (discos duros, USBs, CDs con información), NO tirarlos a basura normal—entregar a IT que los destruirá físicamente (perforación de discos, pulverización magnética, o incineración) y proporcionará certificado de destrucción.
+Note: "Dumpster diving" (bucear basureros) técnica real recopilación información—atacantes revisan físicamente basura empresas buscando documentos descartados: diagramas red, listados empleados, org charts, credenciales anotadas, reportes financieros, contratos proveedores. Organizaciones han sufrido brechas por tirar documentos sin triturar. Procedimiento: trituradoras papel cross-cut (corte transversal, convierte en confeti ilegible) cada planta cerca impresoras. Trituradoras strip-cut (tiras) insuficientes—tiras reconstruibles. Documentos MUY sensibles: trituradoras P-4+ (cortes menores) según DIN 66399. Triturar cualquier documento confidencial: borradores, copias defectuosas, notas reuniones, post-its información sensible. Medios digitales (discos, USBs, CDs): NO basura normal—entregar IT destrucción física (perforación, pulverización magnética, incineración) + certificado destrucción.
 
 
 ### 2bis.5. Acceso a Datos
@@ -565,7 +565,7 @@ Note: El "dumpster diving" (bucear en basureros) es técnica real de recopilaci�
 * Aplicaciones internas con datos sensibles
 * Información personal (clientes, empleados)
 
-Note: La gestión de acceso a datos es fundamental para proteger la confidencialidad e integridad de la información. El principio rector es "mínimo privilegio"—cada persona debe tener acceso únicamente a los datos necesarios para su función, nada más. Esto minimiza el radio de impacto en caso de compromiso de una cuenta o de un empleado deshonesto (insider threat). El acceso a datos debe gestionarse mediante roles (RBAC - Role-Based Access Control) en lugar de permisos individuales ad-hoc—es mucho más escalable y auditable asignar a un empleado el rol "Ventas EMEA" que darle permisos individuales a 50 carpetas. Los accesos deben revisarse periódicamente (trimestralmente o al menos anualmente) porque las necesidades cambian: empleados cambian de departamento, proyectos finalizan, colaboradores externos terminan contratos, pero los permisos frecuentemente quedan asignados indefinidamente generando "privilege creep" (acumulación de privilegios).
+Note: Gestión acceso datos fundamental para proteger confidencialidad/integridad información. Principio rector "mínimo privilegio"—cada persona acceso únicamente datos necesarios su función, nada más. Minimiza radio impacto caso compromiso cuenta o empleado deshonesto (insider threat). Acceso gestionado mediante roles RBAC (Role-Based Access Control) en vez permisos individuales ad-hoc—más escalable/auditable asignar rol "Ventas EMEA" que permisos individuales 50 carpetas. Accesos revisarse periódicamente (trimestral/anual mínimo) porque necesidades cambian: empleados cambian departamento, proyectos finalizan, colaboradores externos terminan contratos, pero permisos quedan indefinidamente generando "privilege creep" (acumulación privilegios).
 
 
 ### 2bis.5.1. Permisos Excesivos o Inadecuados
@@ -919,7 +919,7 @@ Note: La pandemia COVID-19 en 2020 forzó una transformación masiva y súbita a
 * **Cifrado de disco** completo obligatorio.
 * **Soporte remoto** IT disponible.
 
-Note: El trabajo remoto NO debe ser excusa para comprometer la seguridad—debe protegerse con el mismo rigor que el trabajo presencial, solo que requiere controles adaptados a la realidad distribuida. Las medidas enumeradas recrean efectivamente un "perímetro virtual" o arquitectura "Zero Trust" alrededor de cada trabajador remoto, compensando la pérdida del perímetro físico corporativo tradicional. La VPN obligatoria cifra todo el tráfico entre dispositivo remoto y red corporativa dentro de un túnel seguro AES-256, creando una conexión privada virtual a través de internet público—esto hace irrelevante si la red WiFi doméstica o de cafetería es insegura porque todo el tráfico viaja cifrado end-to-end. La verificación de seguridad WiFi doméstica mediante checklist ayuda a usuarios a endurecer su red local: cambiar contraseña default del router (admin/admin es común y peligroso), activar WPA3 o mínimo WPA2-Personal con contraseña fuerte, deshabilitar WPS que es vulnerable a ataques de PIN, actualizar firmware del router regularmente, cambiar SSID a algo no identificable con la dirección, ocultar SSID broadcast opcionalmente. La separación de red doméstica creando VLAN o red de invitados dedicada solo para trabajo mantiene dispositivos laborales aislados de otros dispositivos domésticos potencialmente comprometidos como IoT smart TVs cámaras consolas de juego que raramente se actualizan. Cifrado de disco completo es aún MÁS crítico en remoto donde riesgo físico de robo del laptop es significativamente mayor que en oficina controlada. Soporte remoto IT debe estar disponible vía múltiples canales chat teléfono email y herramientas de escritorio remoto para resolver problemas técnicos sin requerir presencia física.
+Note: El trabajo remoto requiere crear un "perímetro virtual" con VPN obligatoria (cifra todo el tráfico end-to-end), verificación de seguridad WiFi doméstica (cambiar contraseña default del router, activar WPA2/WPA3, deshabilitar WPS), y separación de red doméstica creando VLAN o red de invitados solo para trabajo. Cifrado de disco es aún MÁS crítico en remoto donde el riesgo de robo físico es mayor. IT debe proporcionar soporte remoto multicanal.
 
 
 ### 5.3. BYOD (Bring Your Own Device)
@@ -935,7 +935,7 @@ Note: El trabajo remoto NO debe ser excusa para comprometer la seguridad—debe 
 * Mezcla uso personal/profesional.
 * Dificultad en borrado remoto.
 
-Note: BYOD (Bring Your Own Device) donde empleados usan sus smartphones tablets o laptops personales para acceder a recursos corporativos es extremadamente tentador económicamente para organizaciones porque elimina CAPEX significativo de compra provisioning mantenimiento y reemplazo de hardware corporativo—puede ahorrar 500-1500€ por empleado. Los empleados también lo aprecian porque significa usar un solo dispositivo familiar para todo trabajo y personal sin cargar múltiples teléfonos. Sin embargo BYOD introduce complejidades de seguridad masivas que frecuentemente superan los beneficios económicos. La organización tiene control muy limitado sobre dispositivo que legalmente no posee—no puede forzar políticas de seguridad estrictas sin consentimiento explícito del propietario lo cual crea fricción, no puede inspeccionar completamente su estado de seguridad o contenido sin violar privacidad, no puede prevenir que instalen apps potencialmente maliciosas o juegos con permisos excesivos en su uso personal que podrían comprometer también datos corporativos. La mezcla inevitable de datos corporativos y personales fotos videos contactos en mismo dispositivo crea problemas legales de privacidad complejos—si hay investigación de incidente ¿puede la organización acceder a fotos personales del empleado? ¿Cómo se protegen datos GDPR si están mezclados con datos personales? La dificultad de ejecutar borrado remoto corporativo sin borrar también datos personales cuando empleado deja empresa o dispositivo se compromete es técnicamente compleja y legalmente problemática. Por estas razones muchas organizaciones maduras en seguridad simplemente prohíben BYOD completamente y proporcionan dispositivos corporativos dedicados donde tienen control total—más caro upfront pero más simple seguro y gestionable long-term.
+Note: BYOD ahorra 500-1500€ por empleado en hardware pero introduce complejidades masivas: control limitado (no puedes forzar políticas sin consentimiento del propietario), mezcla datos personales/corporativos (problemas legales de privacidad GDPR), dificultad de borrado remoto selectivo sin afectar datos personales. Muchas organizaciones maduras en seguridad simplemente lo prohíben y proporcionan dispositivos corporativos dedicados—más caro upfront pero más simple y seguro long-term.
 
 
 ### 5.4. Política BYOD
@@ -948,7 +948,7 @@ Note: BYOD (Bring Your Own Device) donde empleados usan sus smartphones tablets 
 * Sistema operativo **actualizado**.
 * **Aceptación** de borrado remoto en caso de pérdida.
 
-Note: MDM permite gestionar remotamente el dispositivo. La containerización separa datos personales de corporativos.
+Note: Si se permite BYOD, MDM es obligatorio no opcional. La containerización es clave: crea un "contenedor" cifrado separado donde viven apps y datos corporativos completamente aislados de lo personal mediante separación a nivel de kernel. El usuario ve iconos con badge corporativo que al abrirse entran al contenedor con sus propias políticas (contraseña más fuerte, MFA). Crítico: el empleado debe aceptar por escrito el borrado remoto selectivo del contenedor si pierde el dispositivo o deja la empresa.
 
 
 ### 5.5. Gestión de dispositivos móviles (MDM)
@@ -961,7 +961,7 @@ Note: MDM permite gestionar remotamente el dispositivo. La containerización sep
 * **Borrado remoto** (wipe) si se pierde dispositivo.
 * **Geolocalización** de dispositivos corporativos.
 
-Note: MDM es esencial para BYOD y trabajo remoto. Herramientas populares: Microsoft Intune, VMware Workspace ONE, MobileIron.
+Note: MDM es fundamental para gestionar flotas de dispositivos centralizada y remotamente—sin él, gestionar más de 10-20 dispositivos es imposible. Capacidades clave: inventario automático (todos los dispositivos con detalles completos), aplicación remota de políticas (desplegar configuraciones a cientos simultáneamente), actualización remota de configuraciones (cambiar políticas on-the-fly), borrado remoto si se pierde/roba (protege datos aunque dispositivo esté en manos equivocadas), y geolocalización GPS (recuperar robados, debe estar en política por privacidad). Herramientas: Microsoft Intune, VMware Workspace ONE, MobileIron/Ivanti.
 
 ---
 
@@ -978,7 +978,7 @@ Note: MDM es esencial para BYOD y trabajo remoto. Herramientas populares: Micros
 * **Cuarentena** de archivos sospechosos.
 * Reportar detecciones a consola central.
 
-Note: El antivirus no es suficiente por sí solo, pero sigue siendo necesario. Es la primera línea de defensa contra amenazas conocidas.
+Note: El antivirus es necesario pero no suficiente. Combina detección por firmas (malware conocido) con análisis heurístico (comportamientos sospechosos). Las soluciones modernas EDR (Endpoint Detection & Response) añaden capacidades de investigación y respuesta automatizada, pero no protegen contra phishing o ingeniería social—por eso necesitamos defensa en profundidad con múltiples capas.
 
 
 ### 6.2. Firewall personal
@@ -990,7 +990,7 @@ Note: El antivirus no es suficiente por sí solo, pero sigue siendo necesario. E
 * Permitir solo **aplicaciones autorizadas**.
 * Perfil **público** activado en redes no confiables.
 
-Note: El firewall de Windows/macOS es suficiente para la mayoría de usuarios. La clave es configurarlo correctamente y no deshabilitarlo.
+Note: El firewall nativo de Windows/macOS es suficiente para la mayoría—la clave es configurarlo bien y NUNCA deshabilitarlo "temporalmente". Debe bloquear conexiones entrantes no solicitadas por defecto. El perfil público en redes WiFi no confiables aplica reglas más restrictivas bloqueando servicios como compartición de archivos que son seguros en red corporativa pero peligrosos en cafeterías o aeropuertos.
 
 
 ### 6.3. Cifrado de disco completo
@@ -1002,7 +1002,7 @@ Note: El firewall de Windows/macOS es suficiente para la mayoría de usuarios. L
 * Transparente para el usuario.
 * Clave de recuperación en custodia de IT.
 
-Note: Sin cifrado, cualquiera puede extraer el disco y leer todos los datos. Con cifrado, el disco robado es inútil sin la contraseña.
+Note: Sin cifrado, cualquiera puede extraer el disco y leer TODOS los datos en minutos sin necesitar contraseña—solo arrancar desde USB o conectar disco a otro PC. Con cifrado completo (BitLocker/FileVault), el disco robado es basura matemáticamente indescifrable. Es transparente al usuario después del arranque y crítico: la clave de recuperación debe custodiarse por IT porque si se pierde y olvidas la contraseña, los datos son irrecuperables incluso para ti.
 
 
 ### 6.4. Actualizaciones de seguridad
@@ -1014,7 +1014,7 @@ Note: Sin cifrado, cualquiera puede extraer el disco y leer todos los datos. Con
 * Parches de **seguridad** prioritarios (deploy en 48h).
 * **Testing** previo en entorno controlado.
 
-Note: Los exploits suelen aparecer días después de que se publique un parche. La ventana de vulnerabilidad debe minimizarse.
+Note: Los exploits aparecen días u horas después de publicarse un parche—los atacantes hacen ingeniería inversa para descubrir la vulnerabilidad. WannaCry en 2017 explotó una vulnerabilidad parcheada dos meses antes—quien no actualizó sufrió ransomware devastador. Los parches críticos deben desplegarse en 48-72h máximo. El testing previo es necesario en grandes organizaciones pero no puede retrasar tanto que amplifique la ventana de vulnerabilidad.
 
 
 ### 6.5. Control de puertos USB
@@ -1026,7 +1026,7 @@ Note: Los exploits suelen aparecer días después de que se publique un parche. 
 * **Alertas** ante conexión de dispositivos no autorizados.
 * **Cifrado** obligatorio en USBs corporativos.
 
-Note: El control técnico es más efectivo que solo la política. Los usuarios pueden olvidar o ignorar, el sistema nunca.
+Note: El control técnico via GPO o software es más efectivo que confiar en que usuarios cumplan la política—los humanos olvidan o ignoran, los sistemas nunca. Deshabilitar puertos USB completamente o usar whitelist por hardware ID previene ataques USB drop (dejar USBs infectados con etiquetas curiosas en parkings, 45-60% los conectan) y exfiltración trivial de datos. Stuxnet se propagó así en instalaciones air-gapped.
 
 
 ### 6.6. Application whitelisting
@@ -1038,7 +1038,7 @@ Note: El control técnico es más efectivo que solo la política. Los usuarios p
 * Herramientas: AppLocker (Windows), Gatekeeper (macOS).
 * Actualización dinámica de whitelist.
 
-Note: El enfoque de lista blanca es más seguro que lista negra. En lugar de bloquear lo malo conocido, solo permites lo bueno conocido.
+Note: Application whitelisting (lista blanca) es más seguro que lista negra—en vez de bloquear malware conocido (infinito), solo permites software conocido y confiable (finito y controlable). AppLocker en Windows Enterprise o Gatekeeper en macOS permiten ejecutar solo aplicaciones firmadas digitalmente y aprobadas. Reduce drásticamente superficie de ataque bloqueando malware, herramientas de hacking, y software no autorizado aunque sea legítimo.
 
 
 ### 6.7. Backup del puesto de trabajo
@@ -1051,7 +1051,7 @@ Note: El enfoque de lista blanca es más seguro que lista negra. En lugar de blo
 * **Exclusión** de software (reinstalable).
 * Test de **restauración** trimestral.
 
-Note: Los usuarios pierden datos por mil razones: fallos hardware, borrados accidentales, ransomware. El backup es el salvavidas.
+Note: Los usuarios pierden datos por mil razones: fallos de hardware (discos fallan sin aviso), borrados accidentales, ransomware que cifra todo. El backup automático nocturno a servidor central o nube es el único salvavidas real. Debe incluir carpetas de usuario (Documentos, Escritorio, Descargas) pero no software reinstalable. Crítico: test de restauración trimestral—un backup no verificado es un backup que podría no funcionar cuando lo necesites desesperadamente.
 
 ---
 
@@ -1067,7 +1067,7 @@ Note: Los usuarios pierden datos por mil razones: fallos hardware, borrados acci
 * Usuario concienciado sigue **políticas**.
 * Usuario comprometido = organización comprometida.
 
-Note: Podéis tener la mejor tecnología del mundo, pero un usuario que cae en phishing lo invalida todo. La formación es crítica.
+Note: La tecnología más avanzada (firewalls, EDR, DLP) es inútil si un usuario cae en phishing y entrega sus credenciales. El 90% de brechas exitosas empiezan con ingeniería social. Un usuario formado detecta emails sospechosos, verifica remitentes extraños, no hace clic en enlaces dudosos, usa contraseñas seguras únicas, activa MFA voluntariamente, y reporta incidentes inmediatamente. La formación convierte usuarios de eslabón más débil a primera línea de defensa activa.
 
 
 ### 7.2. Programa de concienciación
@@ -1080,7 +1080,7 @@ Note: Podéis tener la mejor tecnología del mundo, pero un usuario que cae en p
 * **Newsletters** de seguridad mensuales.
 * **Carteles** recordatorios en oficinas.
 
-Note: La concienciación debe ser continua. La memoria se desvanece y las amenazas evolucionan constantemente.
+Note: La concienciación debe ser continua y repetitiva porque la memoria humana se desvanece y las amenazas evolucionan constantemente—el phishing de 2020 es muy diferente al de 2024 (ahora usan IA generativa para crear emails perfectos). La formación inicial en onboarding crea base, anual refuerza conocimientos con amenazas actualizadas, simulacros proporcionan práctica real, newsletters mensuales mantienen seguridad top-of-mind, y carteles físicos recordatorios refuerzan buenas prácticas diarias. Múltiples touchpoints repetidos crean hábitos de seguridad sostenidos.
 
 
 ### 7.3. Temas de formación
@@ -1093,7 +1093,7 @@ Note: La concienciación debe ser continua. La memoria se desvanece y las amenaz
 * **Ingeniería social** y cómo defenderse.
 * Qué hacer ante un **incidente** sospechoso.
 
-Note: Estos temas cubren los vectores de ataque más comunes. Adaptad el contenido a las amenazas específicas de vuestra organización.
+Note: Estos cinco temas cubren los vectores de ataque más comunes que explotan el factor humano. Phishing/spear-phishing son vector #1 (emails engañosos, verificar remitente/enlaces/urgencia artificial). Contraseñas seguras únicas con gestor previenen reutilización. MFA bloquea 99.9% ataques automatizados. Ingeniería social va más allá de phishing: vishing (llamadas telefónicas), pretexting (inventar escenarios), tailgating físico. Qué hacer ante incidente: no apagar equipo, desconectar red si seguro, reportar inmediatamente IT/Seguridad con detalles. Personalizar contenido a amenazas específicas del sector (healthcare sufre mucho ransomware, finanzas sufre BEC Business Email Compromise).
 
 
 ### 7.4. Simulacros de phishing
@@ -1106,7 +1106,7 @@ Note: Estos temas cubren los vectores de ataque más comunes. Adaptad el conteni
 * Sin **penalizaciones**, enfoque educativo.
 * **Métricas** de mejora trimestral.
 
-Note: Los simulacros son la mejor forma de medir efectividad de la formación. Los usuarios aprenden más de sus errores en simulacro que de teoría.
+Note: Los simulacros de phishing son la mejor forma de medir efectividad real de formación—proveen práctica realista en entorno seguro controlado. Herramientas como KnowBe4, Cofense, o Proofpoint simulan emails maliciosos personalizados. Los usuarios que hacen clic van a página explicativa de por qué era phishing (señales que debieron detectar) y reciben formación focalizada inmediata—aprender del error propio es más efectivo que teoría abstracta. Crítico: enfoque 100% educativo sin penalizaciones, el objetivo es mejorar no castigar. Métricas trimestrales (% clic) muestran mejora—organizaciones maduras logran <5% tasa de clic vs 30-40% iniciales.
 
 ---
 
@@ -1122,7 +1122,7 @@ Note: Los simulacros son la mejor forma de medir efectividad de la formación. L
 * Responder **rápidamente** a incidentes.
 * **Evidencia** para investigaciones.
 
-Note: La monitorización no es espionaje, es protección. Debe hacerse con transparencia y dentro del marco legal.
+Note: La monitorización verifica que políticas definidas se cumplen realmente, detecta comportamientos anómalos que indican compromiso (usuario accediendo datos inusuales, login desde geolocalización imposible, descarga masiva de archivos), permite respuesta rápida a incidentes (alertas en tiempo real), y proporciona evidencia forense para investigaciones posteriores. NO es espionaje ni vigilancia abusiva si se hace transparentemente informando a empleados, proporcionalmente monitorizando solo lo necesario para seguridad, y dentro del marco legal LOPDGDD artículo 87. Debe documentarse en AUP firmado por empleados.
 
 
 ### 8.2. Qué monitorizar
@@ -1135,7 +1135,7 @@ Note: La monitorización no es espionaje, es protección. Debe hacerse con trans
 * **Tráfico** de red anómalo.
 * Acceso a **recursos** sensibles.
 
-Note: No monitorizéis todo o crearéis demasiado ruido. Centraos en eventos de seguridad relevantes.
+Note: No intentéis monitorizar TODO o generaréis ruido abrumador que ahoga señales importantes (alert fatigue—analistas ignoran alertas por volumen excesivo). Centraos en eventos de seguridad relevantes: logs de autenticación para detectar brute-force o credential stuffing (múltiples fallos seguidos) o accesos desde ubicaciones sospechosas, instalación de software para detectar malware o herramientas hacking no autorizadas, conexión USB para detectar exfiltración de datos, tráfico de red anómalo hacia dominios maliciosos conocidos o volumen inusual, y accesos a recursos sensibles (carpetas confidenciales, bases de datos críticas) para detectar escalada de privilegios o curiosidad no legítima.
 
 
 ### 8.3. Herramientas de monitorización
@@ -1147,7 +1147,7 @@ Note: No monitorizéis todo o crearéis demasiado ruido. Centraos en eventos de 
 * **DLP**: Data Loss Prevention.
 * **NAC**: Network Access Control.
 
-Note: Estas herramientas generan alertas que analistas deben investigar. No son "instalar y olvidar", requieren gestión activa.
+Note: SIEM (Security Information and Event Management como Splunk, QRadar, Azure Sentinel) agrega logs de múltiples fuentes y correlaciona eventos para detectar patrones de ataque complejos. EDR (Endpoint Detection & Response como CrowdStrike, SentinelOne) monitoriza comportamiento de endpoints detectando malware avanzado y permitiendo respuesta remota. DLP (Data Loss Prevention como Symantec, McAfee) previene que datos sensibles salgan de organización por email USB o cloud. NAC (Network Access Control como Cisco ISE) verifica que dispositivos cumplan políticas antes de permitir acceso a red. Ninguna es "instalar y olvidar"—requieren tuning continuo y analistas que investiguen alertas activamente, por eso el coste real incluye personal especializado no solo licencias software.
 
 
 ### 8.4. Aspectos legales de la monitorización
@@ -1159,7 +1159,7 @@ Note: Estas herramientas generan alertas que analistas deben investigar. No son 
 * **LOPDGDD** Artículo 87: Uso de dispositivos digitales.
 * **Estatuto de Trabajadores**: Límites a vigilancia.
 
-Note: La monitorización sin información previa a los empleados puede ser ilegal. Consultad con el departamento legal antes de implementar.
+Note: La monitorización sin informar previamente a empleados puede ser ilegal en España. LOPDGDD artículo 87 regula uso de dispositivos digitales en trabajo: empleadores pueden acceder a contenidos derivados del uso para controlar cumplimiento de obligaciones laborales pero respetando dignidad y privacidad, deben informar previamente a trabajadores, y monitorizar solo lo proporcional y necesario para el fin legítimo. El Estatuto de Trabajadores limita vigilancia (art. 20.3): debe respetar dignidad del trabajador y ser proporcional. Recomendación: documentar la monitorización en AUP firmado por empleados, limitar a datos técnicos de seguridad no contenido de comunicaciones privadas, y consultar con legal antes de implementar cualquier sistema de monitorización para asegurar conformidad.
 
 
 ### 8.5. Auditorías de cumplimiento
@@ -1171,7 +1171,7 @@ Note: La monitorización sin información previa a los empleados puede ser ilega
 * Revisión **anual** completa de políticas.
 * Pentesting **anual** de puestos de trabajo.
 
-Note: Las auditorías descubren el gap entre políticas definidas y realidad implementada. Son esenciales para mejora continua.
+Note: Las auditorías periódicas descubren el inevitable gap entre políticas definidas en papel y realidad implementada en campo—lo que está documentado vs lo que realmente ocurre. Auditoría trimestral de configuraciones verifica que sistemas mantienen configuraciones de seguridad (cifrado activo, firewall encendido, parches aplicados). Verificación semestral de controles técnicos testea efectividad de controles (¿el DLP realmente bloquea exfiltración? ¿NAC realmente previene dispositivos no conformes?). Revisión anual completa de políticas actualiza documentación reflejando cambios tecnológicos organizativos y amenazas emergentes. Pentesting anual de puestos simula atacante real intentando comprometer endpoints identificando vulnerabilidades antes que atacantes reales. Auditorías son esenciales para mejora continua ciclo PDCA Plan-Do-Check-Act.
 
 ---
 
@@ -1188,7 +1188,7 @@ Note: Las auditorías descubren el gap entre políticas definidas y realidad imp
 * **Acceso no autorizado** a cuenta.
 * **Fuga** de información.
 
-Note: Cada organización debe tener procedimientos documentados para responder a estos incidentes comunes.
+Note: Estos cinco incidentes representan >80% de casos en puestos de trabajo. Malware detectado (antivirus alerta, comportamiento extraño del sistema). Phishing exitoso (usuario hizo clic en enlace, descargó adjunto, proporcionó credenciales). Pérdida/robo de dispositivo (laptop robada en coche, móvil olvidado en taxi). Acceso no autorizado a cuenta (alguien conoce tu contraseña, sesión secuestrada). Fuga de información (datos sensibles compartidos inadvertidamente, email al destinatario equivocado). Cada organización debe tener procedimientos documentados formales por escrito accesibles para empleados especificando exactamente qué hacer en cada escenario—no improvisar durante crisis.
 
 
 ### 9.2. Procedimiento de reporte
@@ -1201,7 +1201,7 @@ Note: Cada organización debe tener procedimientos documentados para responder a
 4. **Documentar** qué observó y cuándo.
 5. **No investigar** por cuenta propia.
 
-Note: La velocidad de reporte es crítica. Cada minuto cuenta en contención de un incidente. Los usuarios deben saber exactamente a quién llamar.
+Note: La velocidad de reporte es crítica—cada minuto cuenta en contención porque malware se propaga, atacantes exfiltran más datos, o daño se amplifica. Los usuarios deben saber exactamente a quién llamar (número directo IT/Seguridad, email abuse@empresa, portal interno) y qué información proporcionar (qué observaron, cuándo exactamente, qué hicieron antes del incidente). Regla de oro: NO apagar equipo (borra evidencias en RAM), desconectar ethernet/WiFi si seguro para prevenir propagación lateral, NO investigar por cuenta propia ni "probar cosas" que pueden empeorar situación, documentar todo inmediatamente mientras memoria es fresca.
 
 
 ### 9.3. Respuesta a malware
@@ -1215,7 +1215,7 @@ Note: La velocidad de reporte es crítica. Cada minuto cuenta en contención de 
 5. **Restaurar** desde backup si necesario.
 6. **Analizar** causa raíz.
 
-Note: La respuesta debe ser rápida pero metodológica. Borrar evidencias puede impedir entender cómo ocurrió el compromiso.
+Note: La respuesta debe ser rápida pero metodológica siguiendo procedimiento formal no pánico improvisado. Aislar el equipo afectado física (desconectar cables) y lógicamente (bloquear en red por MAC/IP) previene propagación lateral. Identificar tipo de malware (ransomware, trojan, rootkit) mediante análisis con herramientas forenses permite respuesta específica. Eliminar amenaza con antivirus especializado o herramientas de remediación. Verificar que no hubo movimiento lateral inspeccionando logs de red y otros endpoints. Restaurar desde backup verificado limpio si sistema muy comprometido. Analizar causa raíz (¿email phishing? ¿USB infectado? ¿vulnerabilidad sin parchar?) para prevenir recurrencia. Crítico: no borrar evidencias prematuramente—preservar para análisis forense e identificar cómo ocurrió compromiso.
 
 
 ### 9.4. Respuesta a pérdida de dispositivo
@@ -1229,7 +1229,7 @@ Note: La respuesta debe ser rápida pero metodológica. Borrar evidencias puede 
 5. **Denuncia** policial si es robo.
 6. **Lecciones aprendidas** del incidente.
 
-Note: El borrado remoto solo funciona si el dispositivo se conecta a internet. Por eso el cifrado de disco es tan importante como backup.
+Note: El borrado remoto solo funciona si dispositivo se conecta a internet después de robo—por eso el cifrado de disco es la primera y más importante línea de defensa (protege incluso si borrado remoto falla). El usuario debe reportar pérdida/robo inmediatamente (minutos no horas) para minimizar ventana de exposición. IT ejecuta wipe remoto vía MDM que borra datos corporativos próxima vez que dispositivo se encienda y conecte. Cambiar INMEDIATAMENTE todas las contraseñas a las que dispositivo tenía acceso (email, VPN, sistemas corporativos) porque podrían estar guardadas o en sesión activa. Revisar logs de actividad de cuenta buscando accesos sospechosos antes/después de pérdida. Denunciar a policía si es robo con número de serie del dispositivo para registro oficial. Hacer post-mortem identificando cómo mejorar prevención (¿cable Kensington? ¿más concienciación sobre no dejar laptops en coches visibles?).
 
 ---
 
@@ -1244,7 +1244,7 @@ Note: El borrado remoto solo funciona si el dispositivo se conecta a internet. P
 * **Protección técnica**: Múltiples capas de defensa.
 * **Formación**: Usuario concienciado es mejor defensa.
 
-Note: La protección del puesto de trabajo no es una medida, es un conjunto de controles técnicos, organizativos y humanos trabajando juntos.
+Note: La protección del puesto de trabajo NO es una medida única silver bullet sino un sistema integrado de controles técnicos (antivirus, firewall, cifrado, MDM), organizativos (políticas, procedimientos, auditorías), y humanos (formación, concienciación, cultura de seguridad) trabajando sinérgicamente. Cada control complementa y refuerza los demás. Las políticas definen el qué, los controles técnicos lo hacen ejecutable y auditable, y la formación asegura que las personas entiendan el por qué y el cómo. Es arquitectura de seguridad holística no checklist de tecnologías a comprar.
 
 
 ### 10.2. Defensa en profundidad
@@ -1258,7 +1258,7 @@ Note: La protección del puesto de trabajo no es una medida, es un conjunto de c
 5. Monitorización.
 6. Respuesta a incidentes.
 
-Note: Si una capa falla, las demás siguen protegiendo. Esta es la esencia de defensa en profundidad (defense in depth).
+Note: Si una capa falla, las demás siguen protegiendo—esta es la esencia de defensa en profundidad o defense in depth, concepto militar aplicado a ciberseguridad. Ejemplo: usuario cae en phishing proporcionando contraseña (falla capa 1 concienciación) → MFA bloquea acceso sin segundo factor (capa 2) → si MFA también comprometida, monitorización detecta login desde geolocalización anómala (capa 5) → respuesta a incidentes contiene daño (capa 6). Ninguna capa es perfecta 100% pero combinadas crean seguridad robusta resiliente. No confiar en una sola tecnología o control—redundancia es fortaleza no desperdicio.
 
 
 ### 10.3. Responsabilidad compartida
@@ -1270,7 +1270,7 @@ Note: Si una capa falla, las demás siguen protegiendo. Esta es la esencia de de
 * **Usuarios**: Seguir políticas y reportar incidentes.
 * **RRHH**: Formar y gestionar incumplimientos.
 
-Note: Un solo eslabón débil compromete toda la cadena. La seguridad requiere compromiso de toda la organización.
+Note: La seguridad NO es responsabilidad exclusiva del departamento IT o de Seguridad—requiere compromiso y colaboración activa de toda la organización a todos los niveles. Un solo eslabón débil (usuario que cae en phishing, director que exige excepción a políticas, IT que posterga parches) puede comprometer toda la cadena. Dirección debe aprobar políticas formalmente, asignar presupuesto adecuado, y dar ejemplo cumpliendo ellos primero. IT/Seguridad implementan y mantienen controles técnicos pero no pueden estar en cada escritorio. Usuarios son primera línea: siguen políticas, reportan incidentes, mantienen vigilancia. RRHH gestiona ciclo de vida del empleado (formación onboarding, refuerzo anual, medidas disciplinarias ante incumplimientos graves). La seguridad es cultura organizativa no proyecto de IT.
 
 ---
 

@@ -113,7 +113,7 @@ Un **procedimiento** detalla los **pasos específicos** que deben seguirse para 
 !!! note "Nota"
     Los procedimientos son guías prácticas y detalladas sobre **cómo** realizar acciones específicas para cumplir con la normativa.
 
-##### 1.3.4. Medidas de Seguridad
+##### 1.3.4. Ejemplo 
 
 Cada nivel aporta un grado de especificidad creciente y va dirigido a distintos aspectos de la estructura organizativa de seguridad.
 
@@ -122,13 +122,17 @@ Cada nivel aporta un grado de especificidad creciente y va dirigido a distintos 
 * **Procedimiento de Bloqueo de Pantalla**: "Para bloquear la pantalla, usa `Win + L` en Windows, `Control + Command + Q` en MacOS, y `Super + L` en Linux".
 
 
-##### 1.3.5. Medidas de Seguridad
+#### 1.4. Medidas de Seguridad
+
+Para que esta estrategia defensiva de politicas, normativas y procedimientos funcione, se deben aplicar **medidas de seguridad** específicas. Estas medidas son el corazón de la protección de la información dentro del marco que define la estrategia de seguridad del puesto de usuario de una organización.
+
+En el contexto de la seguridad del puesto de trabajo, estas medidas son pautas y requisitos específicos establecidos por la normativa para mitigar los riesgos identificados en los distintos elementos del puesto (hardware, software, personal, etc.)
 
 Para implementar una protección efectiva en cualquier organización, es importante entender cómo se clasifican las medidas de seguridad en función de su **nivel de complejidad** y su **alcance**. Este enfoque permite aplicar controles de manera eficiente, adaptándolos a las necesidades específicas de cada área y personal.
 
 Un enfoque equilibrado y bien estructurado, donde medidas básicas y avanzadas se combinen a través de procesos, tecnología y personas, contribuye a la creación de un entorno de trabajo seguro y eficiente.
 
-###### Niveles de Complejidad de las Medidas de Seguridad
+##### 1.4.1. Niveles de Complejidad de las Medidas de Seguridad
 
 Las medidas de seguridad pueden clasificarse en dos niveles de complejidad, que determinan el esfuerzo y los recursos necesarios para su implementación:
 
@@ -137,7 +141,8 @@ Las medidas de seguridad pueden clasificarse en dos niveles de complejidad, que 
     - Las medidas de nivel básico requieren pocos recursos y suelen aplicarse mediante funcionalidades ya incorporadas en herramientas y aplicaciones comunes.       
     - Son ideales para proteger datos y activos sin necesidad de configuraciones avanzadas o personal altamente especializado.      
 
-    **Ejemplo de medida básica (B)**:     
+    **Ejemplo de medida básica (B)**:
+
         - **Bloqueo de pantalla**: Configurar el bloqueo automático de los dispositivos tras un breve periodo de inactividad. Esta funcionalidad está incluida en la mayoría de sistemas operativos (Windows, MacOS) y no requiere un esfuerzo adicional considerable.     
         - **Política de escritorio limpio**: Consiste en pedir a los empleados que mantengan sus escritorios libres de documentos o dispositivos con información sensible cuando no están presentes. Esta medida es fácil de implementar y solo requiere concienciación del personal.      
 
@@ -146,40 +151,45 @@ Las medidas de seguridad pueden clasificarse en dos niveles de complejidad, que 
     - Las medidas avanzadas suelen involucrar configuraciones complejas y, a veces, herramientas adicionales de seguridad. También pueden incluir mecanismos de recuperación ante fallos, como sistemas de respaldo y restauración.    
     - Son esenciales en áreas de alto riesgo o donde la protección de datos críticos es una prioridad.    
 
-    **Ejemplo de medida avanzada (A)**:     
+    **Ejemplo de medida avanzada (A)**:
+
         - **Cifrado de disco completo**: En sistemas que almacenan datos confidenciales, se configura el cifrado de disco completo (como BitLocker en Windows o FileVault en MacOS) para proteger la información ante un posible robo o pérdida del dispositivo.     
         - **Política de copias de seguridad**: Aplicar una política de copias de seguridad automatizada, que incluya la configuración de respaldos regulares y la verificación de la integridad de las copias de seguridad. Esto implica conocimientos técnicos y una configuración detallada.     
 
-###### Alcance de las Medidas de Seguridad
+##### 1.4.2. Alcance de las Medidas de Seguridad
+
 
 Las medidas de seguridad también pueden clasificarse según el alcance o el tipo de destinatario al que se aplican, en tres grandes categorías: **Procesos (PRO)**, **Tecnología (TEC)** y **Personas (PER)**.
 
 1. **Procesos (PRO)**: Las medidas de procesos son aquellas que aplican principalmente a la dirección o al personal de gestión. Estas medidas aseguran que se establezcan procedimientos y políticas claras para proteger la información en toda la organización.
 
     **Ejemplo de medida de proceso (PRO)**:     
+
         - **Procedimiento de verificación de pagos**: Antes de aprobar el pago de una factura, el equipo de gestión debe validar los datos del proveedor. Esta medida implica la creación de un proceso seguro que controle el flujo de pagos para evitar fraudes.     
         - **Revisión de permisos de acceso**: La dirección revisa periódicamente los permisos de acceso del personal para asegurarse de que cada empleado tenga solo los permisos necesarios para su rol, limitando así el riesgo de acceso no autorizado a información sensible.    
 
 2. **Tecnología (TEC)**: Las medidas tecnológicas están dirigidas al personal técnico y requieren conocimientos avanzados. Estas medidas implican el uso de herramientas, configuraciones especializadas o sistemas de seguridad que protegen la infraestructura y los datos.
 
     **Ejemplo de medida de tecnología (TEC)**:     
+
         - **Implementación de un firewall**: El equipo de TI instala y configura un firewall para controlar el tráfico de red y evitar accesos no autorizados a la red corporativa. Esto requiere conocimientos técnicos para su configuración y monitoreo.     
         - **Política de copias de seguridad**: Se establece un sistema de copias de seguridad periódicas, que el equipo de TI gestiona y verifica para asegurar la recuperación de datos en caso de fallos o incidentes.         
 
 3. **Personas (PER)**: Estas medidas están orientadas a todo el personal de la organización y suelen ser sencillas de aplicar. A través de estas, los empleados se conciencian sobre buenas prácticas de seguridad y sobre cómo contribuir a la protección de la información.
 
     **Ejemplo de medida para personas (PER)**:     
+
         - **Política de escritorio limpio**: Los empleados deben asegurarse de no dejar documentos o dispositivos con información sensible desatendidos en sus escritorios al finalizar su jornada laboral o al ausentarse.     
         - **Capacitación en seguridad de la información**: Todos los empleados reciben capacitación anual sobre buenas prácticas de seguridad y cómo identificar amenazas comunes, como el phishing.     
 
 > Por lo general, las medidas orientadas a las personas (PER) están complementadas por medidas de procesos (PRO) y tecnología (TEC), asegurando que se implemente una protección completa y eficaz en toda la organización. Por ejemplo, una capacitación sobre ciberseguridad (PER) puede ir acompañada de un procedimiento de auditoría de accesos (PRO) y el uso de autenticación multifactor (TEC) en sistemas críticos.
 
 
-#### 1.4. Estándares a aplicar
+#### 1.5. Estándares a aplicar
 
 Cuando hablamos de normativas de protección del puesto de trabajo, es importante tener en cuenta que existen diferentes estándares y regulaciones que pueden influir en la definición de estas normativas, por tanto, las compañías deben conocerlas. Algunas de las normativas más comunes en el ámbito de la seguridad de la información son:
 
-##### 1.4.1. ISO/IEC 27001: Estandarización en la Seguridad del Puesto de Trabajo
+##### 1.5.1. ISO/IEC 27001: Estandarización en la Seguridad del Puesto de Trabajo
 
 La **ISO/IEC 27001** es el estándar internacional para la **gestión de la seguridad de la información**, aplicable a todos los aspectos de la seguridad en la organización, incluidos los puestos de trabajo.
 
@@ -191,7 +201,7 @@ La **ISO/IEC 27001** es el estándar internacional para la **gestión de la segu
 
 **Ejemplo práctico**: Siguiendo ISO 27001, puedes establecer una política que obligue a los usuarios a bloquear sus pantallas al dejar su escritorio o que requiera autenticación multifactor en los dispositivos de trabajo.
 
-##### 1.4.2. GDPR (General Data Protection Regulation): Protección de Datos Personales en el Puesto de Trabajo
+##### 1.5.2. GDPR (General Data Protection Regulation): Protección de Datos Personales en el Puesto de Trabajo
 
 El **GDPR** es la regulación de protección de datos de la Unión Europea, centrada en proteger la **privacidad y los datos personales** de los ciudadanos.
 
@@ -203,7 +213,7 @@ El **GDPR** es la regulación de protección de datos de la Unión Europea, cent
 
 **Ejemplo práctico**: Puedes desarrollar políticas para asegurar que los empleados manejen los datos personales de forma segura, como el uso obligatorio de conexiones VPN para acceder remotamente a los sistemas de la empresa, cumpliendo así con el GDPR.
 
-##### 1.4.3. **LOPDGDD (Ley Orgánica de Protección de Datos y Garantía de Derechos Digitales)**: Cumplimiento en España para el Puesto de Trabajo
+##### 1.5.3. **LOPDGDD (Ley Orgánica de Protección de Datos y Garantía de Derechos Digitales)**: Cumplimiento en España para el Puesto de Trabajo
 
 La **LOPDGDD** es la ley española que complementa al GDPR y que regula el tratamiento de los datos personales en España, incorporando derechos y regulaciones adicionales.
 

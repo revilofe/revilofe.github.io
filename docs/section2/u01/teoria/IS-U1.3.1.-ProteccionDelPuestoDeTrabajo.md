@@ -35,7 +35,7 @@ Ejemplo de puesto de usuario: Una asistente administrativa que trabaja en las in
 
 ##### 1.1.1 Elementos de un puesto de trabajo
 
-En el entorno de seguridad informática, el puesto de trabajo es mucho más que el lugar físico donde una persona se sienta a trabajar. Representa el **conjunto de elementos que un empleado utiliza para realizar sus tareas**. Algunos son: dispositivos, software, acceso a redes, instalaciones físicas, acceso a datos y el propio empleado.
+En el entorno de seguridad informática, el puesto de trabajo es mucho más que el lugar físico donde una persona se sienta a trabajar. Representa el **conjunto de elementos que un empleado utiliza para realizar sus tareas**. 
 
 Algunos ejemplos de un puesto de trabajo pueden incluir:
 
@@ -46,7 +46,8 @@ Algunos ejemplos de un puesto de trabajo pueden incluir:
 * Acceso a datos: Permisos para ver, editar o compartir documentos, bases de datos o aplicaciones internas que contienen información valiosa o sensible.
 * Personal: El propio empleado, sus hábitos de trabajo y su conocimiento de las políticas de seguridad.
 
-Cada uno de estos elementos, si no se protege correctamente, puede ser una vía de ataque o de fuga de información, por lo que la protección del puesto de trabajo es esencial para reducir riesgos de seguridad.
+!!! note "Nota"
+    Cada uno de estos elementos, si no se protege correctamente, puede ser una vía de ataque o de fuga de información, por lo que la protección del puesto de trabajo es esencial para reducir riesgos de seguridad.
 
 #### 1.2. ¿Qué es una normativa y por qué es importante?
 
@@ -81,7 +82,8 @@ Una **política** es una declaración general que define la intención y los pri
   * **En la práctica**: Esta política no da detalles específicos ni instrucciones concretas sobre cómo proteger la información, sino que establece el compromiso general de la empresa hacia la seguridad.
 * **Importancia de la política:** Sirve como "declaración de intenciones" para la organización. Define las bases sobre las cuales se desarrollarán normativas y procedimientos más detallados.
 
-Por tanto, la política es la visión o intención general, como un "norte" o línea guía que orienta las decisiones sobre seguridad.
+!!! note "Nota"
+    La política es la visión o intención general, como un "norte" o línea guía que orienta las decisiones sobre seguridad.
 
 ##### 1.3.2. Normativa (Qué)
 
@@ -94,7 +96,8 @@ Una **normativa** traduce la política en **reglas y requisitos más concretos**
   * **En la práctica**: La normativa detalla requisitos claros en base a medidas que los empleados y los sistemas deben cumplir. No describe cómo hacerlo (ese es el trabajo del procedimiento), sino que define las condiciones que deben cumplirse.
 * **Importancia de la normativa:** Proporciona una capa de control y dirección más concreta que la política, ayudando a mantener una estructura de cumplimiento y a reducir riesgos.
 
-Por tanto, la normativa establece medidas específicas y requisitos que deben cumplirse para estar alineados con la política de seguridad.
+!!! note "Nota"
+    La normativa establece medidas específicas y requisitos que deben cumplirse para estar alineados con la política de seguridad.
 
 ##### 1.3.3. Procedimiento (Cómo)
 
@@ -107,9 +110,19 @@ Un **procedimiento** detalla los **pasos específicos** que deben seguirse para 
   * **En la práctica**: Este procedimiento ofrece las instrucciones detalladas de cómo cada usuario puede cumplir con el requisito de la normativa.   
 * **Importancia del procedimiento:** Los procedimientos eliminan la ambigüedad sobre cómo realizar una tarea específica. Son muy útiles para nuevos empleados, para procesos de auditoría y para asegurar que todos los empleados tengan claridad sobre las acciones que deben seguir.
 
-Por lo tanto, los procedimientos son guías prácticas y detalladas sobre **cómo** realizar acciones específicas para cumplir con la normativa.
+!!! note "Nota"
+    Los procedimientos son guías prácticas y detalladas sobre **cómo** realizar acciones específicas para cumplir con la normativa.
 
 ##### 1.3.4. Medidas de Seguridad
+
+Cada nivel aporta un grado de especificidad creciente y va dirigido a distintos aspectos de la estructura organizativa de seguridad.
+
+* **Política de Seguridad de la Información**: "XYZ se compromete a proteger la información de acuerdo con altos estándares de seguridad".
+* **Normativa de Protección del Puesto de Trabajo**: "Todos los empleados deben bloquear sus equipos al ausentarse".
+* **Procedimiento de Bloqueo de Pantalla**: "Para bloquear la pantalla, usa `Win + L` en Windows, `Control + Command + Q` en MacOS, y `Super + L` en Linux".
+
+
+##### 1.3.5. Medidas de Seguridad
 
 Para implementar una protección efectiva en cualquier organización, es importante entender cómo se clasifican las medidas de seguridad en función de su **nivel de complejidad** y su **alcance**. Este enfoque permite aplicar controles de manera eficiente, adaptándolos a las necesidades específicas de cada área y personal.
 
@@ -152,6 +165,7 @@ Las medidas de seguridad también pueden clasificarse según el alcance o el tip
     **Ejemplo de medida de tecnología (TEC)**:     
         - **Implementación de un firewall**: El equipo de TI instala y configura un firewall para controlar el tráfico de red y evitar accesos no autorizados a la red corporativa. Esto requiere conocimientos técnicos para su configuración y monitoreo.     
         - **Política de copias de seguridad**: Se establece un sistema de copias de seguridad periódicas, que el equipo de TI gestiona y verifica para asegurar la recuperación de datos en caso de fallos o incidentes.         
+
 3. **Personas (PER)**: Estas medidas están orientadas a todo el personal de la organización y suelen ser sencillas de aplicar. A través de estas, los empleados se conciencian sobre buenas prácticas de seguridad y sobre cómo contribuir a la protección de la información.
 
     **Ejemplo de medida para personas (PER)**:     
@@ -160,13 +174,6 @@ Las medidas de seguridad también pueden clasificarse según el alcance o el tip
 
 > Por lo general, las medidas orientadas a las personas (PER) están complementadas por medidas de procesos (PRO) y tecnología (TEC), asegurando que se implemente una protección completa y eficaz en toda la organización. Por ejemplo, una capacitación sobre ciberseguridad (PER) puede ir acompañada de un procedimiento de auditoría de accesos (PRO) y el uso de autenticación multifactor (TEC) en sistemas críticos.
 
-##### 1.3.5. Ejemplo Completo:
-
-Cada nivel aporta un grado de especificidad creciente y va dirigido a distintos aspectos de la estructura organizativa de seguridad.
-
-* **Política de Seguridad de la Información**: "XYZ se compromete a proteger la información de acuerdo con altos estándares de seguridad".
-* **Normativa de Protección del Puesto de Trabajo**: "Todos los empleados deben bloquear sus equipos al ausentarse".
-* **Procedimiento de Bloqueo de Pantalla**: "Para bloquear la pantalla, usa `Win + L` en Windows, `Control + Command + Q` en MacOS, y `Super + L` en Linux".
 
 #### 1.4. Estándares a aplicar
 
@@ -748,3 +755,8 @@ Para un supuesto práctico, los estudiantes pueden seguir estos pasos para aplic
 - [https://www.incibe.es/sites/default/files/contenidos/dosieres/metad_proteccion_del_puesto_de_trabajo.pdf](https://www.incibe.es/sites/default/files/contenidos/dosieres/metad_proteccion_del_puesto_de_trabajo.pdf)
 - [https://www.incibe.es/empresas/herramientas/politicas](https://www.incibe.es/empresas/herramientas/politicas)
 - [https://files.incibe.es/incibe/politicas/politicas-pyme.zip](https://files.incibe.es/incibe/politicas/politicas-pyme.zip)
+
+## Presentación
+
+* [IS-U1.3.1 - Protección del Puesto de Trabajo](https://revilofe.github.io/slides/section2-is/IS-U1.3.1.-ProteccionDelPuestoDeTrabajo.html)
+

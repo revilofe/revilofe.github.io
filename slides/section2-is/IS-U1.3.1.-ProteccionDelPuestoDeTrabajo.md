@@ -119,6 +119,20 @@ Note: Este ejemplo ilustra perfectamente cómo cada nivel aumenta en especificid
 
 ### 2.4. Tipos de medidas por audiencia I
 
+Contexto seguridad del puesto de trabajo: 
+**Elementos del puesto + Riesgos = Medidas preventivas necesarias.**
+
+* Estas medidas son las pautas y controles que la normativa requiere para mitigar riesgos asociados al puesto de trabajo.
+* Se clasifican según diferentes criterios para facilitar su implementación y seguimiento.
+* Estos criterios incluyen complejidad y destinatarios.
+* La clasificación ayuda a priorizar y asignar responsabilidades adecuadamente.
+* Las medidas preventivas son esenciales para mantener la seguridad del puesto de trabajo y proteger la información corporativa.
+
+Note: Las medidas preventivas son controles específicos que la normativa establece para mitigar riesgos en el puesto de trabajo. Clasificarlas según complejidad (Básico vs Avanzado) permite priorizar implementación rápida y efectiva. Clasificarlas según destinatario (Procesos, Tecnología, Personas) asegura que cada grupo reciba medidas adaptadas a su rol y capacidades, maximizando cumplimiento y efectividad. Esta estructura facilita gestión y seguimiento continuo de la seguridad del puesto.
+
+
+### 2.4. Tipos de medidas por audiencia II
+
 Las medidas preventivas que la normativa requiere se clasifican:
 
 **Según complejidad:**
@@ -129,7 +143,7 @@ Las medidas preventivas que la normativa requiere se clasifican:
 Note: Clasificar medidas por complejidad permite priorizar correctamente: las medidas Básicas (B) son rápidas de implementar, tienen bajo coste y alto impacto (bloqueo automático protege inmediatamente contra acceso físico no autorizado), mientras las medidas Avanzadas (A) requieren más tiempo, recursos y conocimiento técnico especializado (cifrado de disco necesita planificación, gestión de claves, posible impacto en rendimiento). Implementar primero las básicas proporciona protección inmediata mientras se planifican las avanzadas. 
 
 
-### 2.4. Tipos de medidas por audiencia II
+### 2.4. Tipos de medidas por audiencia III
 
 Las medidas preventivas que la normativa requiere se clasifican:
 

@@ -153,28 +153,12 @@ Documenta todos los comandos Docker que has utilizado para:
 - Verificar el estado de contenedores y redes
 - Inspeccionar la configuración de red de los contenedores
 
----
-
-### 🔹 Parte 4 (opcional): Despliegue con Docker Compose
-
-Si ya has visto Docker Compose en clase o quieres investigar por tu cuenta:
-
-1. Crea un archivo `docker-compose.yml` que defina toda la infraestructura de la aplicación Guestbook.
-
-2. El archivo debe incluir:
-   
-    - Definición de la red
-    - Configuración del servicio Redis con volumen
-    - Configuración del servicio Guestbook con mapeo de puertos
-    - Variables de entorno necesarias
-
-3. Despliega la aplicación completa con un solo comando.
 
 ---
 
 ## Entregables
 
-1. **Documentación en formato Markdown o PDF** que incluya:
+1. **Documentación en formato Markdown** que incluya:
    
     - Comandos utilizados en cada tarea con una breve explicación
     - Capturas de pantalla que demuestren:
@@ -184,8 +168,6 @@ Si ya has visto Docker Compose en clase o quieres investigar por tu cuenta:
         - La inspección de la red Docker
     - Respuestas a las preguntas de análisis de la Parte 3
     - Prueba de la persistencia de datos (Tarea 1.4)
-
-2. **(Opcional)** Archivo `docker-compose.yml` funcional si realizas la Parte 4.
 
 ---
 
@@ -214,9 +196,3 @@ Las publicadas en la plataforma Moodle del curso.
 - Networking en Docker: [https://docs.docker.com/network/](https://docs.docker.com/network/)
 - Volúmenes en Docker: [https://docs.docker.com/storage/volumes/](https://docs.docker.com/storage/volumes/)
 - Variables de entorno: [https://docs.docker.com/engine/reference/commandline/run/#env](https://docs.docker.com/engine/reference/commandline/run/#env)
-
----
-
-### Presentación de la práctica
-
-[:fontawesome-solid-file-pdf: Descargar presentación](https://revilofe.github.io/slides/section4-daw/DAW-U2.1.-Guestbook.html){ .md-button }

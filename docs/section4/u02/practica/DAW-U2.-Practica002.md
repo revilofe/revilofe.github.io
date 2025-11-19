@@ -184,10 +184,6 @@ Responde a las siguientes preguntas en tu documentación:
     - ¿Qué ventajas de seguridad ofrece esta configuración?
     - ¿En qué casos sería necesario exponer el backend?
 
-5. **Escalabilidad:**
-   
-    - ¿Cómo podrías escalar esta aplicación para soportar más usuarios?
-    - ¿Podrías ejecutar múltiples instancias del backend? ¿Y del frontend?
 
 #### Tarea 4.2: Comandos utilizados
 
@@ -213,27 +209,11 @@ Documenta todos los comandos Docker que has utilizado para:
 
 4. Documenta las respuestas obtenidas y el formato de los datos (probablemente JSON).
 
-#### Tarea 5.2: Docker Compose
-
-Si ya conoces Docker Compose:
-
-1. Crea un archivo `docker-compose.yml` que defina toda la arquitectura de la aplicación Temperaturas.
-
-2. El archivo debe incluir:
-   
-    - Definición de la red
-    - Configuración de ambos microservicios
-    - Mapeo de puertos
-    - Variables de entorno necesarias
-    - Dependencias entre servicios
-
-3. Despliega la aplicación completa con un solo comando.
-
 ---
 
 ## Entregables
 
-1. **Documentación en formato Markdown o PDF** que incluya:
+1. **Documentación en formato Markdown** que incluya:
    
     - Comandos utilizados en cada tarea con explicación
     - Capturas de pantalla que demuestren:
@@ -247,7 +227,6 @@ Si ya conoces Docker Compose:
 
 2. **(Opcional)** Documentación de la exploración de la API si realizas la Parte 5.1.
 
-3. **(Opcional)** Archivo `docker-compose.yml` funcional si realizas la Parte 5.2.
 
 ---
 
@@ -280,8 +259,3 @@ Las publicadas en la plataforma Moodle del curso.
 - API REST: [https://restfulapi.net/](https://restfulapi.net/)
 - Docker Compose: [https://docs.docker.com/compose/](https://docs.docker.com/compose/)
 
----
-
-### Presentación de la práctica
-
-[:fontawesome-solid-file-pdf: Descargar presentación](https://revilofe.github.io/slides/section4-daw/DAW-U2.2.-Temperaturas.html){ .md-button }

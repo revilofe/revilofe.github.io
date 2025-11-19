@@ -97,29 +97,6 @@ server {
 
 1. Crea el archivo `docker-compose.yml`:
 
-```yaml
-version: '3.1'
-
-services:
-  aplicacionjava:
-    container_name: tomcat
-    image: tomcat:9.0
-    restart: always
-    volumes:
-      - ./sample.war:/usr/local/tomcat/webapps/sample.war:ro
-      
-  proxy:
-    container_name: nginx
-    image: nginx
-    restart: always
-    ports:
-      - 80:80
-    volumes:
-      - ./default.conf:/etc/nginx/conf.d/default.conf:ro
-    depends_on:
-      - aplicacionjava
-```
-
 2. Analiza la configuración:
    
     - ¿Por qué se usan bind mounts en lugar de volúmenes?
@@ -318,27 +295,7 @@ services:
 
 #### Tarea 4.3: Red personalizada
 
-1. Añade una red explícita:
-
-```yaml
-services:
-  aplicacionjava:
-    # ... configuración anterior
-    networks:
-      - tomcat_net
-      
-  proxy:
-    # ... configuración anterior
-    networks:
-      - tomcat_net
-
-networks:
-  tomcat_net:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 172.28.0.0/16
-```
+1. Añade una red explícita `tomcat_net`, `subnet: 172.28.0.0/16` y conecta ambos servicios:
 
 2. Verifica la configuración de red.
 
@@ -378,11 +335,11 @@ docker compose exec proxy nginx -s reload
 
 Responde en tu documentación:
 
-1. **Bind mounts vs. volúmenes:**
-   
-    - ¿Por qué esta práctica usa bind mounts y no volúmenes?
-    - ¿Qué ventajas tienen los bind mounts para archivos de configuración?
-    - ¿Cuándo usarías volúmenes en lugar de bind mounts?
+1. **Comparación con práctica anterior:**
+    
+    - ¿Cuántos comandos necesitabas en la Práctica 2.4?
+    - ¿Qué ventajas ofrece Docker Compose?
+    - ¿Es más fácil versionar la configuración?
 
 2. **Montajes de solo lectura (`:ro`):**
    
@@ -402,23 +359,18 @@ Responde en tu documentación:
     - ¿Qué pasa si Tomcat no está listo cuando Nginx arranca?
     - ¿Cómo mejorarías esto con healthchecks?
 
-5. **Comparación con práctica anterior:**
-   
-    - ¿Cuántos comandos necesitabas en la Práctica 2.4?
-    - ¿Qué ventajas ofrece Docker Compose?
-    - ¿Es más fácil versionar la configuración?
 
 #### Tarea 6.2: Tabla comparativa
 
-| Aspecto | Gestión manual | Docker Compose |
-|---------|----------------|----------------|
-| Creación de red | | |
-| Montaje de archivos | | |
-| Despliegue de app WAR | | |
-| Configuración de Nginx | | |
-| Actualización de app | | |
-| Modificación de config | | |
-| Reproducibilidad | | |
+| Aspecto                | Gestión manual  | Docker Compose  |
+|------------------------|-----------------|-----------------|
+| Creación de red        |                 |                 |
+| Montaje de archivos    |                 |                 |
+| Despliegue de app WAR  |                 |                 |
+| Configuración de Nginx |                 |                 |
+| Actualización de app   |                 |                 |
+| Modificación de config |                 |                 |
+| Reproducibilidad       |                 |                 |
 
 ---
 
@@ -477,9 +429,3 @@ Las publicadas en la plataforma Moodle del curso.
 - Nginx en Docker: [https://hub.docker.com/_/nginx](https://hub.docker.com/_/nginx)
 - Configuración de Nginx: [https://nginx.org/en/docs/](https://nginx.org/en/docs/)
 - Repositorio con ejemplos: [https://github.com/josedom24/curso_docker_ies](https://github.com/josedom24/curso_docker_ies)
-
----
-
-### Presentación de la práctica
-
-[:fontawesome-solid-file-pdf: Descargar presentación](https://revilofe.github.io/slides/section4-daw/DAW-U2.8.-TomcatCompose.html){ .md-button }

@@ -278,40 +278,9 @@ Documenta todos los comandos Docker utilizados para:
 
 ---
 
-### 🔹 Parte 6 (opcional): Docker Compose
-
-#### Tarea 6.1: Archivo docker-compose.yml
-
-1. Crea un archivo `docker-compose.yml` que defina toda la infraestructura de WordPress.
-
-2. El archivo debe incluir:
-   
-    - Definición de la red
-    - Servicio de MariaDB con volumen y variables de entorno
-    - Servicio de WordPress con volumen, mapeo de puertos y variables de entorno
-    - Dependencia explícita de WordPress respecto a MariaDB
-    - Reinicio automático de los servicios
-
-3. Despliega la aplicación completa con Docker Compose.
-
-4. Verifica que todo funciona correctamente.
-
-#### Tarea 6.2: Gestión con Docker Compose
-
-1. Practica los comandos básicos de Docker Compose:
-   
-    - Iniciar servicios
-    - Detener servicios
-    - Ver logs
-    - Escalar servicios (si es posible)
-
-2. Documenta las ventajas de usar Docker Compose vs. comandos individuales de Docker.
-
----
-
 ## Entregables
 
-1. **Documentación en formato Markdown o PDF** que incluya:
+1. **Documentación en formato Markdown** que incluya:
    
     - Todos los comandos utilizados en cada tarea
     - Capturas de pantalla que demuestren:
@@ -324,8 +293,6 @@ Documenta todos los comandos Docker utilizados para:
         - Conexión a la base de datos y exploración de tablas
     - Respuestas detalladas a todas las preguntas de análisis
     - Comparación con las prácticas anteriores (Guestbook y Temperaturas)
-
-2. **(Opcional)** Archivo `docker-compose.yml` funcional y documentación de su uso.
 
 ---
 
@@ -359,8 +326,3 @@ Las publicadas en la plataforma Moodle del curso.
 - Docker Compose: [https://docs.docker.com/compose/](https://docs.docker.com/compose/)
 - Variables de entorno en Docker: [https://docs.docker.com/engine/reference/commandline/run/#env](https://docs.docker.com/engine/reference/commandline/run/#env)
 
----
-
-### Presentación de la práctica
-
-[:fontawesome-solid-file-pdf: Descargar presentación](https://revilofe.github.io/slides/section4-daw/DAW-U2.3.-WordPress.html){ .md-button }

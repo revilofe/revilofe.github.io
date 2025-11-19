@@ -358,16 +358,16 @@ Responde a las siguientes preguntas en tu documentación:
 
 Crea una tabla comparativa entre la gestión manual (Práctica 2.1) y Docker Compose:
 
-| Aspecto | Gestión Manual | Docker Compose |
-|---------|----------------|----------------|
-| Creación de red | | |
-| Despliegue | | |
-| Variables de entorno | | |
-| Gestión de volúmenes | | |
-| Inicio/detención | | |
-| Escalabilidad | | |
-| Reproducibilidad | | |
-| Documentación | | |
+| Aspecto              | Gestión Manual  | Docker Compose  |
+|----------------------|-----------------|-----------------|
+| Creación de red      |                 |                 |
+| Despliegue           |                 |                 |
+| Variables de entorno |                 |                 |
+| Gestión de volúmenes |                 |                 |
+| Inicio/detención     |                 |                 |
+| Escalabilidad        |                 |                 |
+| Reproducibilidad     |                 |                 |
+| Documentación        |                 |                 |
 
 ---
 
@@ -408,7 +408,7 @@ services:
 
 ## Entregables
 
-1. **Documentación en formato Markdown o PDF** que incluya:
+1. **Documentación en formato Markdown** que incluya:
    
     - Archivo `docker-compose.yml` final completo y comentado
     - Todos los comandos de Docker Compose utilizados
@@ -457,9 +457,3 @@ Las publicadas en la plataforma Moodle del curso.
 - Volúmenes en Docker: [https://docs.docker.com/storage/volumes/](https://docs.docker.com/storage/volumes/)
 - Redes en Docker Compose: [https://docs.docker.com/compose/networking/](https://docs.docker.com/compose/networking/)
 - Repositorio con ejemplos: [https://github.com/josedom24/curso_docker_ies](https://github.com/josedom24/curso_docker_ies)
-
----
-
-### Presentación de la práctica
-
-[:fontawesome-solid-file-pdf: Descargar presentación](https://revilofe.github.io/slides/section4-daw/DAW-U2.5.-DockerCompose.html){ .md-button }

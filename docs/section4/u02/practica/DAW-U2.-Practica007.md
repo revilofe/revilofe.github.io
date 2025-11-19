@@ -66,43 +66,6 @@ Esta es la aplicación más compleja que has desplegado hasta ahora, con:
 
 2. Crea el archivo `docker-compose.yml` para usar **volúmenes Docker**:
 
-```yaml
-version: '3.1'
-
-services:
-  wordpress:
-    container_name: servidor_wp
-    image: wordpress
-    restart: always
-    environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: user_wp
-      WORDPRESS_DB_PASSWORD: asdasd
-      WORDPRESS_DB_NAME: bd_wp
-    ports:
-      - 80:80
-    volumes:
-      - wordpress_data:/var/www/html/wp-content
-    depends_on:
-      - db
-      
-  db:
-    container_name: servidor_mysql
-    image: mariadb
-    restart: always
-    environment:
-      MYSQL_DATABASE: bd_wp
-      MYSQL_USER: user_wp
-      MYSQL_PASSWORD: asdasd
-      MYSQL_ROOT_PASSWORD: asdasd
-    volumes:
-      - mariadb_data:/var/lib/mysql
-
-volumes:
-  wordpress_data:
-  mariadb_data:
-```
-
 3. Analiza la configuración:
    
     - ¿Por qué hay dos volúmenes diferentes?
@@ -164,7 +127,7 @@ volumes:
 
 #### Tarea 2.1: Archivo docker-compose.yml con bind mount
 
-1. Crea un nuevo directorio: `~/wordpress_bind`.
+1. Crea un nuevo directorio: `~/wordpress_bind` y accede.
 
 2. Crea los directorios para los datos:
 
@@ -173,40 +136,6 @@ mkdir -p wordpress mysql
 ```
 
 3. Crea un `docker-compose.yml` usando **bind mounts**:
-
-```yaml
-version: '3.1'
-
-services:
-  wordpress:
-    container_name: servidor_wp
-    image: wordpress
-    restart: always
-    environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: user_wp
-      WORDPRESS_DB_PASSWORD: asdasd
-      WORDPRESS_DB_NAME: bd_wp
-    ports:
-      - 80:80
-    volumes:
-      - ./wordpress:/var/www/html/wp-content
-    depends_on:
-      - db
-      
-  db:
-    container_name: servidor_mysql
-    image: mariadb
-    restart: always
-    environment:
-      MYSQL_DATABASE: bd_wp
-      MYSQL_USER: user_wp
-      MYSQL_PASSWORD: asdasd
-      MYSQL_ROOT_PASSWORD: asdasd
-    volumes:
-      - ./mysql:/var/lib/mysql
-
-```
 
 4. Despliega y configura WordPress de nuevo.
 
@@ -218,13 +147,13 @@ services:
 
 3. Compara con los volúmenes Docker:
    
-    | Aspecto | Volúmenes Docker | Bind Mounts |
-    |---------|------------------|-------------|
-    | Ubicación | | |
-    | Visibilidad desde host | | |
-    | Portabilidad | | |
-    | Backups | | |
-    | Permisos | | |
+    | Aspecto                | Volúmenes Docker  | Bind Mounts  |
+    |------------------------|-------------------|--------------|
+    | Ubicación              |                   |              |
+    | Visibilidad desde host |                   |              |
+    | Portabilidad           |                   |              |
+    | Backups                |                   |              |
+    | Permisos               |                   |              |
 
 ---
 
@@ -232,68 +161,25 @@ services:
 
 #### Tarea 3.1: Variables de entorno desde archivo
 
-1. Crea un archivo `.env`:
+1. Crea un archivo `.env` con las siguientes variables:
 
-```env
-# Database configuration
-MYSQL_ROOT_PASSWORD=mi_password_root_seguro
-MYSQL_DATABASE=bd_wp
-MYSQL_USER=user_wp
-MYSQL_PASSWORD=mi_password_seguro
+    - MYSQL_ROOT_PASSWORD
+    - MYSQL_DATABASE
+    - MYSQL_USER
+    - MYSQL_PASSWORD
+    - WP_DB_HOST
+    - WP_DB_USER
+    - WP_DB_PASSWORD
+    - WP_DB_NAME
+    - WP_PORT
 
-# WordPress configuration
-WP_DB_HOST=db
-WP_DB_USER=user_wp
-WP_DB_PASSWORD=mi_password_seguro
-WP_DB_NAME=bd_wp
-
-# Ports
-WP_PORT=80
-```
-
-2. Modifica el `docker-compose.yml`:
-
-```yaml
-services:
-  wordpress:
-    environment:
-      WORDPRESS_DB_HOST: ${WP_DB_HOST}
-      WORDPRESS_DB_USER: ${WP_DB_USER}
-      WORDPRESS_DB_PASSWORD: ${WP_DB_PASSWORD}
-      WORDPRESS_DB_NAME: ${WP_DB_NAME}
-    ports:
-      - "${WP_PORT}:80"
-      
-  db:
-    environment:
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-```
+2. Modifica el `docker-compose.yml` para usar las variables del archivo `.env`:
 
 3. Despliega y verifica que funciona.
 
 #### Tarea 3.2: Configuración de red personalizada
 
-1. Añade una red personalizada:
-
-```yaml
-services:
-  wordpress:
-    # ... configuración anterior
-    networks:
-      - wordpress_net
-      
-  db:
-    # ... configuración anterior
-    networks:
-      - wordpress_net
-
-networks:
-  wordpress_net:
-    driver: bridge
-```
+1. Añade una red personalizada llamada `wordpress_net`, y modifica el archivo `docker-compose.yml` para conectar ambos servicios a esta red:
 
 2. Verifica la configuración de red con Docker Compose.
 
@@ -301,34 +187,18 @@ networks:
 
 1. Añade healthchecks y límites:
 
-```yaml
-services:
-  wordpress:
-    # ... configuración anterior
-    deploy:
-      resources:
-        limits:
-          cpus: '1'
-          memory: 512M
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      
-  db:
-    # ... configuración anterior
-    deploy:
-      resources:
-        limits:
-          cpus: '0.5'
-          memory: 512M
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      interval: 30s
-      timeout: 3s
-      retries: 3
-```
+    - cpus: 1 para WordPress
+    - cpus: 0.5 para MariaDB
+    - memoria: 512M para ambos
+    - test: curl -f http://localhost para WordPress
+    - interval: 30s
+    - timeout: 10s
+    - retries: 3
+    - test: mysqladmin ping -h localhost para MariaDB
+    - interval: 30s
+    - timeout: 3s
+    - retries: 3
+
 
 2. Verifica el estado de salud de los servicios.
 
@@ -444,7 +314,7 @@ Describe cómo usarías cada enfoque en estos escenarios:
 
 ## Entregables
 
-1. **Documentación en formato Markdown o PDF** con:
+1. **Documentación en formato Markdown** con:
    
     - Ambos archivos `docker-compose.yml` (volúmenes y bind mounts)
     - Archivo `.env` con variables de entorno
@@ -495,8 +365,3 @@ Las publicadas en la plataforma Moodle del curso.
 - MariaDB en Docker: [https://hub.docker.com/_/mariadb](https://hub.docker.com/_/mariadb)
 - Backups de volúmenes: [https://docs.docker.com/storage/volumes/#back-up-restore-or-migrate-data-volumes](https://docs.docker.com/storage/volumes/#back-up-restore-or-migrate-data-volumes)
 
----
-
-### Presentación de la práctica
-
-[:fontawesome-solid-file-pdf: Descargar presentación](https://revilofe.github.io/slides/section4-daw/DAW-U2.7.-WordPressCompose.html){ .md-button }

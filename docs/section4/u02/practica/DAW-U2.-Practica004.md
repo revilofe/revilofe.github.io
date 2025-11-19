@@ -293,25 +293,6 @@ Documenta todos los comandos Docker utilizados para:
 
 ---
 
-### 🔹 Parte 7 (opcional): Docker Compose
-
-#### Tarea 7.1: Conversión a Docker Compose
-
-1. Crea un archivo `docker-compose.yml` que defina toda la infraestructura.
-
-2. El archivo debe incluir:
-   
-    - Definición de la red
-    - Servicio de Tomcat con bind mount
-    - Servicio de Nginx con bind mount y mapeo de puertos
-    - Dependencia de Nginx respecto a Tomcat
-
-3. Despliega la aplicación completa con Docker Compose.
-
-4. Verifica que todo funciona correctamente.
-
----
-
 ## Entregables
 
 1. **Documentación en formato Markdown o PDF** que incluya:
@@ -333,7 +314,7 @@ Documenta todos los comandos Docker utilizados para:
 2. **Archivos de configuración:**
    
     - `default.conf` - Configuración de Nginx
-    - (Opcional) `docker-compose.yml` si realizas la Parte 7
+
 
 ---
 

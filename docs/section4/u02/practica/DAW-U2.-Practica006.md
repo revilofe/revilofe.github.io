@@ -66,20 +66,20 @@ Aprender a:
 version: '3.1'
 
 services:
-  frontend:
-    container_name: temperaturas-frontend
-    image: iesgn/temperaturas_frontend
+  ???????????:
+    ....
+    ....
     restart: always
     ports:
-      - 8081:3000
+      - 8081:?????
     environment:
       TEMP_SERVER: temperaturas-backend:5000
     depends_on:
       - backend
       
-  backend:
-    container_name: temperaturas-backend
-    image: iesgn/temperaturas_backend
+  ???????????:
+    ....
+    ....
     restart: always
 ```
 
@@ -189,10 +189,10 @@ frontend:
 #### Tarea 4.1: Límites de recursos
 
 1. Añade límites de recursos a los servicios:
-
+   
 ```yaml
 services:
-  frontend:
+  ???????????:
     # ... resto de configuración
     deploy:
       resources:
@@ -203,7 +203,7 @@ services:
           cpus: '0.25'
           memory: 64M
           
-  backend:
+  ???????????:
     # ... resto de configuración
     deploy:
       resources:
@@ -220,8 +220,8 @@ services:
 1. Añade healthchecks a los servicios:
 
 ```yaml
-backend:
-  image: iesgn/temperaturas_backend
+???????????:
+  ....
   healthcheck:
     test: ["CMD", "curl", "-f", "http://localhost:5000"]
     interval: 30s
@@ -246,10 +246,10 @@ BACKEND_PORT=5000
 
 ```yaml
 services:
-  frontend:
+  ???????????:
     ports:
       - "${FRONTEND_PORT}:3000"
-    environment:
+    ???????????:
       TEMP_SERVER: ${BACKEND_HOST}:${BACKEND_PORT}
 ```
 
@@ -263,12 +263,12 @@ services:
 
 Responde en tu documentación:
 
-1. **Aplicaciones sin estado:**
+1. **Comparación con práctica anterior:**
+    
+    - ¿Qué comandos de la Práctica 2.2 sustituye Docker Compose?
+    - ¿Es más fácil gestionar esta aplicación con Compose?
+    - ¿Qué ventajas adicionales obtienes?
    
-    - ¿Por qué es más fácil escalar aplicaciones sin estado?
-    - ¿Qué ventajas tiene no necesitar volúmenes?
-    - Compara con Guestbook (que sí tiene estado).
-
 2. **Dependencias entre servicios:**
    
     - ¿Qué diferencia hay entre `depends_on` y `links`?
@@ -287,30 +287,26 @@ Responde en tu documentación:
     - ¿Cómo se distribuirían las peticiones con múltiples backends?
     - ¿Necesitarías un balanceador de carga?
 
-5. **Comparación con práctica anterior:**
-   
-    - ¿Qué comandos de la Práctica 2.2 sustituye Docker Compose?
-    - ¿Es más fácil gestionar esta aplicación con Compose?
-    - ¿Qué ventajas adicionales obtienes?
+
 
 #### Tarea 5.2: Tabla comparativa
 
 Crea una tabla comparando:
 
-| Aspecto | Temperaturas manual | Temperaturas Compose |
-|---------|---------------------|----------------------|
-| Comandos para desplegar | | |
-| Gestión de red | | |
-| Variables de entorno | | |
-| Escalado | | |
-| Orden de inicio | | |
-| Logs | | |
+| Aspecto                 | Temperaturas manual  | Temperaturas Compose  |
+|-------------------------|----------------------|-----------------------|
+| Comandos para desplegar |                      |                       |
+| Gestión de red          |                      |                       |
+| Variables de entorno    |                      |                       |
+| Escalado                |                      |                       |
+| Orden de inicio         |                      |                       |
+| Logs                    |                      |                       |
 
 ---
 
 ## Entregables
 
-1. **Documentación en formato Markdown o PDF** con:
+1. **Documentación en formato Markdown** con:
    
     - Archivo `docker-compose.yml` completo y comentado
     - Todos los comandos Docker Compose utilizados
@@ -358,8 +354,3 @@ Las publicadas en la plataforma Moodle del curso.
 - Escalado: [https://docs.docker.com/compose/reference/scale/](https://docs.docker.com/compose/reference/scale/)
 - Repositorio con ejemplos: [https://github.com/josedom24/curso_docker_ies](https://github.com/josedom24/curso_docker_ies)
 
----
-
-### Presentación de la práctica
-
-[:fontawesome-solid-file-pdf: Descargar presentación](https://revilofe.github.io/slides/section4-daw/DAW-U2.6.-TemperaturasCompose.html){ .md-button }

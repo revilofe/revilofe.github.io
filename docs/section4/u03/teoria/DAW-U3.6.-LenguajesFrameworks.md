@@ -695,6 +695,7 @@ Este conocimiento es fundamental para elegir el stack tecnológico adecuado y de
 
 ## Referencias y bibliografía
 
+- [Jose Luis González](https://github.com/joseluisgs). *Despliegue de aplicaciones Web - 2025 2026*. [https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026](https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026)
 - Apache Software Foundation. (2024). *Apache HTTP Server Documentation*
 - Microsoft. (2024). *ASP.NET Core Documentation*
 - Linux Foundation. (2024). *Linux Server Administration*

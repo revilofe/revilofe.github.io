@@ -839,6 +839,7 @@ Este conocimiento es fundamental para desplegar y administrar aplicaciones web e
 
 ## Referencias y bibliografía
 
+- [Jose Luis González](https://github.com/joseluisgs). *Despliegue de aplicaciones Web - 2025 2026*. [https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026](https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026)
 - Apache Software Foundation. (2024). *Apache HTTP Server Documentation*. [https://httpd.apache.org/docs/](https://httpd.apache.org/docs/)
 - NGINX Inc. (2024). *NGINX Documentation*. [https://nginx.org/en/docs/](https://nginx.org/en/docs/)
 - Apache Tomcat. (2024). *Tomcat Documentation*. [https://tomcat.apache.org/](https://tomcat.apache.org/)

@@ -919,6 +919,7 @@ Las páginas web dinámicas son la columna vertebral de la web moderna. Sin ella
 
 ## Referencias y bibliografía
 
+- [Jose Luis González](https://github.com/joseluisgs). *Despliegue de aplicaciones Web - 2025 2026*. [https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026](https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026)
 - Mozilla Developer Network. (2024). *Server-side website programming*
 - W3C. (2024). *Dynamic web content*
 - Laravel Documentation. (2024). [https://laravel.com/docs](https://laravel.com/docs)

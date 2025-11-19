@@ -537,6 +537,8 @@ Estos fundamentos son esenciales para comprender las arquitecturas web que estud
 
 ## Referencias y bibliografía
 
+- [Jose Luis González](https://github.com/joseluisgs). *Despliegue de aplicaciones Web - 2025 2026*. [https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026](https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026)
+- Duckett, J. (2014). *HTML and CSS: Design and Build Websites
 - Mozilla Developer Network (MDN). (2024). *Web Development*. [https://developer.mozilla.org](https://developer.mozilla.org)
 - W3C. (2024). *Web Architecture*. [https://www.w3.org/standards/webarch/](https://www.w3.org/standards/webarch/)
 - Fielding, R. T. (2000). *Architectural Styles and the Design of Network-based Software Architectures*. Doctoral dissertation, University of California, Irvine.

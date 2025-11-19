@@ -787,6 +787,7 @@ El conocimiento de APIs y servicios web es fundamental para cualquier desarrolla
 
 ## Referencias y bibliografía
 
+- [Jose Luis González](https://github.com/joseluisgs). *Despliegue de aplicaciones Web - 2025 2026*. [https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026](https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026)
 - Fielding, R. T. (2000). *REST: Architectural Styles and the Design of Network-based Software Architectures*
 - Facebook. (2024). *GraphQL Specification*. [https://spec.graphql.org/](https://spec.graphql.org/)
 - IETF. (2015). *RFC 7519: JSON Web Token (JWT)*

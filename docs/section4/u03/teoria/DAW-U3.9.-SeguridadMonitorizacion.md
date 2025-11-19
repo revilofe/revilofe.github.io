@@ -836,6 +836,7 @@ Con este conocimiento, estáis preparados para desplegar y mantener aplicaciones
 
 ## Referencias y bibliografía
 
+- [Jose Luis González](https://github.com/joseluisgs). *Despliegue de aplicaciones Web - 2025 2026*. [https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026](https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026)
 - OWASP. (2024). *OWASP Top 10*. [https://owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/)
 - Apache Software Foundation. (2024). *Apache Security Tips*. [https://httpd.apache.org/docs/2.4/misc/security_tips.html](https://httpd.apache.org/docs/2.4/misc/security_tips.html)
 - Mozilla. (2024). *Web Security Guidelines*. [https://infosec.mozilla.org/guidelines/web_security](https://infosec.mozilla.org/guidelines/web_security)

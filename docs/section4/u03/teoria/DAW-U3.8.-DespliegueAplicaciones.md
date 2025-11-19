@@ -837,6 +837,7 @@ Este conocimiento os prepara para desplegar aplicaciones web modernas a escala p
 
 ## Referencias y bibliografía
 
+- [Jose Luis González](https://github.com/joseluisgs). *Despliegue de aplicaciones Web - 2025 2026*. [https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026](https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026)
 - Docker Inc. (2024). *Docker Documentation*. [https://docs.docker.com/](https://docs.docker.com/)
 - Kubernetes. (2024). *Kubernetes Documentation*. [https://kubernetes.io/docs/](https://kubernetes.io/docs/)
 - Amazon Web Services. (2024). *AWS Documentation*. [https://docs.aws.amazon.com/](https://docs.aws.amazon.com/)

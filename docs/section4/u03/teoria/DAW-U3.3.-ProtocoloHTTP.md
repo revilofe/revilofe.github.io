@@ -1073,6 +1073,7 @@ HTTP y HTTPS son los cimientos sobre los que se construyen las aplicaciones web 
 
 ## Referencias y bibliografía
 
+- [Jose Luis González](https://github.com/joseluisgs). *Despliegue de aplicaciones Web - 2025 2026*. [https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026](https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026)
 - Fielding, R., et al. (2022). *RFC 9110: HTTP Semantics*. IETF.
 - Mozilla Developer Network. (2024). *HTTP Documentation*. [https://developer.mozilla.org/en-US/docs/Web/HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)
 - Let's Encrypt. (2024). *How It Works*. [https://letsencrypt.org/how-it-works/](https://letsencrypt.org/how-it-works/)

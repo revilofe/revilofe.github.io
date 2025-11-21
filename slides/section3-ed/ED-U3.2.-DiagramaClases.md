@@ -244,6 +244,10 @@ Note: La visibilidad controla quién puede acceder a atributos y métodos. El en
     * Esto implica que solo son accesibles desde dentro de la propia clase, siguiendo el principio de encapsulamiento. 
     * Es una buena práctica para proteger la integridad del estado del objeto.
 
+Note: Este diseño promueve un estilo orientado a objetos robusto, donde el acceso al estado está estrictamente controlado a través de métodos públicos, asegurando así coherencia y seguridad.  No hay miembros protegidos (#) en esta clase, pero vale la pena recordar que permiten el acceso desde clases hijas y desde el mismo paquete, siendo útiles en escenarios de herencia.
+
+
+### 3.4. Visibilidad III
 * Público (+)
     * Los métodos getNombre(), calcularEdad() y jubilar() son públicos. 
     * Esto significa que pueden ser invocados desde cualquier parte del programa que tenga acceso a una instancia de Persona. 

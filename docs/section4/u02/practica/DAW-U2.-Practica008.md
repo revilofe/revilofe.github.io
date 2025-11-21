@@ -59,7 +59,12 @@ Aprender a:
 
 1. Crea el directorio del proyecto: `~/tomcat_compose`.
 
-2. Dentro del directorio, crea la siguiente estructura:
+2. Investiga qué archivos necesitas para este despliegue:
+   
+    - Un archivo WAR de una aplicación Java (puedes descargarlo del repositorio del curso o usar uno propio)
+    - Un archivo de configuración de Nginx para el proxy inverso
+
+3. Dentro del directorio, crea la siguiente estructura:
 
 ```
 tomcat_compose/
@@ -80,7 +85,7 @@ server {
     listen       80;
     listen  [::]:80;
     server_name  localhost;
-
+   
     location / {
         root   /usr/share/nginx/html;
         proxy_pass http://aplicacionjava:8080/sample/;
@@ -95,14 +100,31 @@ server {
 
 #### Tarea 1.2: Creación del docker-compose.yml
 
-1. Crea el archivo `docker-compose.yml`:
+1. Investiga la documentación de Docker Compose sobre bind mounts.
 
-2. Analiza la configuración:
+2. Crea un archivo `docker-compose.yml` que defina:
    
-    - ¿Por qué se usan bind mounts en lugar de volúmenes?
-    - ¿Qué significa `:ro` al final de los volúmenes?
+    **Servicio de Tomcat:**
+    - Imagen: `tomcat:9.0`
+    - Bind mount del archivo WAR al directorio de despliegue de Tomcat (`/usr/local/tomcat/webapps/`)
+    - Montaje en modo solo lectura (`:ro`)
+    - NO mapear puertos al host (acceso solo interno)
+    - Política de reinicio
+    
+    **Servicio de Nginx (proxy):**
+    - Imagen: `nginx`
+    - Puerto 80 del host mapeado al puerto 80 del contenedor
+    - Bind mount del archivo de configuración a la ubicación correcta en Nginx
+    - Montaje en modo solo lectura (`:ro`)
+    - Dependencia del servicio de Tomcat
+    - Política de reinicio
+
+3. Analiza y responde:
+   
+    - ¿Por qué se usan bind mounts en lugar de volúmenes Docker?
+    - ¿Qué significa `:ro` y por qué es importante?
     - ¿Por qué Nginx depende de Tomcat?
-    - ¿Por qué Tomcat no expone puertos?
+    - ¿Por qué Tomcat no expone puertos al host?
 
 ---
 
@@ -183,55 +205,30 @@ server {
 
 #### Tarea 3.2: Múltiples aplicaciones WAR
 
-1. Si tienes múltiples archivos WAR, modifica el `docker-compose.yml`:
+1. Si tienes acceso a múltiples archivos WAR, modifica tu `docker-compose.yml`:
+   
+    - Añade bind mounts adicionales para cada archivo WAR
+    - Investiga cómo montar múltiples archivos en el mismo servicio
 
-```yaml
-services:
-  aplicacionjava:
-    volumes:
-      - ./sample.war:/usr/local/tomcat/webapps/sample.war:ro
-      - ./otra-app.war:/usr/local/tomcat/webapps/otra.war:ro
-```
+2. Modifica el archivo `default.conf` de Nginx para configurar diferentes rutas:
+   
+    - Cada aplicación debe ser accesible en una ruta diferente
+    - Por ejemplo: `/app1/` → aplicacion1.war, `/app2/` → aplicacion2.war
+    - Investiga la directiva `location` de Nginx
 
-2. Configura Nginx para acceder a ambas aplicaciones en diferentes rutas:
-
-```nginx
-location /sample/ {
-    proxy_pass http://aplicacionjava:8080/sample/;
-}
-
-location /otra/ {
-    proxy_pass http://aplicacionjava:8080/otra/;
-}
-```
-
-3. Verifica el acceso a ambas aplicaciones.
+3. Verifica el acceso a todas las aplicaciones desde diferentes URLs.
 
 #### Tarea 3.3: Variables de entorno y customización
 
-1. Crea un archivo `.env`:
+1. Crea un archivo `.env` con variables para:
+   
+    - Puerto de Nginx
+    - Versión de Tomcat a usar
+    - Nombre del archivo WAR
 
-```env
-NGINX_PORT=80
-TOMCAT_VERSION=9.0
-APP_WAR=sample.war
-```
+2. Modifica tu `docker-compose.yml` para usar estas variables con la sintaxis `${VARIABLE}`.
 
-2. Modifica el `docker-compose.yml`:
-
-```yaml
-services:
-  aplicacionjava:
-    image: tomcat:${TOMCAT_VERSION}
-    volumes:
-      - ./${APP_WAR}:/usr/local/tomcat/webapps/sample.war:ro
-      
-  proxy:
-    ports:
-      - "${NGINX_PORT}:80"
-```
-
-3. Prueba cambiando valores en `.env` y verificando que funcionan.
+3. Prueba cambiando valores en `.env` (por ejemplo, cambiar la versión de Tomcat) y verifica que los cambios se aplican correctamente.
 
 ---
 
@@ -239,65 +236,61 @@ services:
 
 #### Tarea 4.1: Healthchecks
 
-1. Añade healthchecks a los servicios:
+1. Investiga cómo configurar healthchecks en Docker Compose.
 
-```yaml
-services:
-  aplicacionjava:
-    # ... configuración anterior
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/sample/"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 60s
-      
-  proxy:
-    # ... configuración anterior
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost/"]
-      interval: 30s
-      timeout: 3s
-      retries: 3
-```
+2. Añade healthchecks a ambos servicios:
+   
+    **Para Tomcat:**
+    - Verifica la disponibilidad de la aplicación en el puerto 8080
+    - Intervalo de 30 segundos
+    - Timeout de 10 segundos
+    - 3 reintentos
+    - Periodo de inicio de 60 segundos (Tomcat puede tardar en iniciar)
+    
+    **Para Nginx:**
+    - Verifica la disponibilidad del puerto 80
+    - Intervalo de 30 segundos
+    - Timeout de 3 segundos
+    - 3 reintentos
 
-2. Verifica el estado de salud de los servicios.
+3. Investiga el comando para ver el estado de salud de los servicios.
 
-3. Detén Tomcat y observa cómo afecta al healthcheck de Nginx.
+4. Detén Tomcat y observa cómo afecta al healthcheck de Nginx.
 
 #### Tarea 4.2: Límites de recursos
 
-1. Añade límites de recursos:
+1. Investiga cómo establecer límites de recursos en Docker Compose.
 
-```yaml
-services:
-  aplicacionjava:
-    # ... configuración anterior
-    deploy:
-      resources:
-        limits:
-          cpus: '1'
-          memory: 512M
-        reservations:
-          cpus: '0.5'
-          memory: 256M
-          
-  proxy:
-    # ... configuración anterior
-    deploy:
-      resources:
-        limits:
-          cpus: '0.5'
-          memory: 128M
-```
+2. Añade a tu archivo `docker-compose.yml`:
+   
+    **Para Tomcat:**
+    - Límite de CPU: 1
+    - Límite de memoria: 512M
+    - Reserva de CPU: 0.5
+    - Reserva de memoria: 256M
+    
+    **Para Nginx:**
+    - Límite de CPU: 0.5
+    - Límite de memoria: 128M
 
-2. Verifica el consumo de recursos.
+3. Investiga comandos Docker para verificar el consumo de recursos de los contenedores.
+
+4. Verifica que los límites se están aplicando correctamente.
 
 #### Tarea 4.3: Red personalizada
 
-1. Añade una red explícita `tomcat_net`, `subnet: 172.28.0.0/16` y conecta ambos servicios:
+1. Investiga cómo definir redes personalizadas con configuración IPAM en Docker Compose.
 
-2. Verifica la configuración de red.
+2. Añade una red personalizada a tu archivo `docker-compose.yml`:
+   
+    - Tipo: bridge
+    - Nombre descriptivo (ej: tomcat_net)
+    - Configuración IPAM con subred personalizada (ej: 172.28.0.0/16)
+    - Conecta ambos servicios a esta red
+
+3. Investiga comandos Docker para inspeccionar la configuración de red.
+
+4. Verifica que la red está correctamente configurada y que los servicios están conectados.
 
 ---
 
@@ -317,15 +310,17 @@ services:
 
 #### Tarea 5.2: Configuración sin downtime
 
-1. Modifica la configuración de Nginx.
+1. Realiza una modificación en el archivo `default.conf` (puede ser un cambio en un comentario o en alguna configuración).
 
-2. Recarga Nginx sin detener el servicio:
+2. Investiga qué comando de Docker Compose permite ejecutar comandos dentro de un contenedor en ejecución.
 
-```bash
-docker compose exec proxy nginx -s reload
-```
+3. Investiga qué señal debe enviarse a Nginx para recargar su configuración sin detener el servicio.
 
-3. Verifica que no hubo downtime.
+4. Ejecuta el comando para recargar Nginx sin downtime.
+
+5. Verifica que el cambio se ha aplicado y que no hubo interrupción del servicio.
+
+**Reflexión:** ¿Por qué es importante poder actualizar configuraciones sin downtime en producción?
 
 ---
 

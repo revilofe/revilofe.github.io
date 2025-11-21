@@ -64,13 +64,36 @@ Esta es la aplicación más compleja que has desplegado hasta ahora, con:
 
 1. Crea un directorio: `~/wordpress_compose`.
 
-2. Crea el archivo `docker-compose.yml` para usar **volúmenes Docker**:
+2. Investiga en la documentación de Docker Hub las imágenes de WordPress y MariaDB para identificar:
+   
+    - Variables de entorno necesarias para WordPress
+    - Variables de entorno necesarias para MariaDB
+    - Puertos que utilizan
+    - Directorios para persistencia de datos
 
-3. Analiza la configuración:
+3. Crea un archivo `docker-compose.yml` que defina:
+   
+    **Servicio de WordPress:**
+    - Imagen: `wordpress`
+    - Puerto 80 del host mapeado al puerto del contenedor
+    - Variables de entorno necesarias para conexión a base de datos
+    - Volumen Docker para el contenido de WordPress (`/var/www/html/wp-content`)
+    - Dependencia del servicio de base de datos
+    - Política de reinicio automático
+    
+    **Servicio de MariaDB:**
+    - Imagen: `mariadb`
+    - Variables de entorno para configuración inicial (base de datos, usuario, contraseñas)
+    - Volumen Docker para los datos de la base de datos (`/var/lib/mysql`)
+    - Política de reinicio automático
+    
+    **Volúmenes:** Define dos volúmenes Docker (uno para WordPress, otro para MariaDB)
+
+4. Analiza y responde:
    
     - ¿Por qué hay dos volúmenes diferentes?
     - ¿Qué datos almacena cada volumen?
-    - ¿Por qué WordPress usa `db` como hostname de la base de datos?
+    - ¿Por qué WordPress usa el nombre del servicio de base de datos como hostname?
 
 #### Tarea 1.2: Despliegue y configuración
 
@@ -127,17 +150,21 @@ Esta es la aplicación más compleja que has desplegado hasta ahora, con:
 
 #### Tarea 2.1: Archivo docker-compose.yml con bind mount
 
-1. Crea un nuevo directorio: `~/wordpress_bind` y accede.
+1. Crea un nuevo directorio: `~/wordpress_bind`.
 
-2. Crea los directorios para los datos:
+2. Crea los directorios necesarios para los bind mounts:
+   
+    - Directorio para datos de WordPress
+    - Directorio para datos de MySQL/MariaDB
 
-```bash
-mkdir -p wordpress mysql
-```
+3. Crea un nuevo archivo `docker-compose.yml` que use **bind mounts** en lugar de volúmenes Docker:
+   
+    - Investiga la sintaxis para bind mounts en Docker Compose
+    - Usa rutas relativas (`./directorio`) para montar desde el host
+    - Mantén la misma estructura de servicios que en la Parte 1
+    - Cambia solo la definición de volúmenes por bind mounts
 
-3. Crea un `docker-compose.yml` usando **bind mounts**:
-
-4. Despliega y configura WordPress de nuevo.
+4. Despliega la aplicación y configura WordPress nuevamente.
 
 #### Tarea 2.2: Comparación de enfoques
 
@@ -161,46 +188,67 @@ mkdir -p wordpress mysql
 
 #### Tarea 3.1: Variables de entorno desde archivo
 
-1. Crea un archivo `.env` con las siguientes variables:
+1. Investiga cómo usar archivos `.env` con Docker Compose.
 
-    - MYSQL_ROOT_PASSWORD
-    - MYSQL_DATABASE
-    - MYSQL_USER
-    - MYSQL_PASSWORD
-    - WP_DB_HOST
-    - WP_DB_USER
-    - WP_DB_PASSWORD
-    - WP_DB_NAME
-    - WP_PORT
+2. Crea un archivo `.env` que contenga todas las variables de configuración:
+   
+    - Contraseña root de MySQL
+    - Nombre de la base de datos
+    - Usuario de la base de datos
+    - Contraseña del usuario
+    - Variables correspondientes para WordPress
+    - Puerto de WordPress
 
-2. Modifica el `docker-compose.yml` para usar las variables del archivo `.env`:
+3. Modifica tu `docker-compose.yml` para usar variables del archivo `.env` con la sintaxis `${VARIABLE}`.
 
-3. Despliega y verifica que funciona.
+4. Despliega y verifica que funciona correctamente.
+
+5. Reflexiona sobre las ventajas de seguridad de este enfoque.
 
 #### Tarea 3.2: Configuración de red personalizada
 
-1. Añade una red personalizada llamada `wordpress_net`, y modifica el archivo `docker-compose.yml` para conectar ambos servicios a esta red:
+1. Investiga en la documentación cómo definir redes personalizadas en Docker Compose.
 
-2. Verifica la configuración de red con Docker Compose.
+2. Modifica tu archivo `docker-compose.yml` para incluir:
+   
+    - Definición de una red personalizada tipo bridge
+    - Conecta ambos servicios a esta red
+    - Usa un nombre descriptivo para la red
+
+3. Verifica la configuración de red usando comandos de Docker Compose e inspección de red.
 
 #### Tarea 3.3: Healthchecks y límites de recursos
 
-1. Añade healthchecks y límites:
+1. Investiga la sintaxis de healthchecks y límites de recursos en Docker Compose.
+
+2. Añade a tu archivo `docker-compose.yml`:
+   
+    **Para WordPress:**
+    - Healthcheck que verifique la disponibilidad del puerto 80
+    - Límites: 1 CPU y 512MB de memoria
 
     - cpus: 1 para WordPress
-    - cpus: 0.5 para MariaDB
     - memoria: 512M para ambos
     - test: curl -f http://localhost para WordPress
     - interval: 30s
     - timeout: 10s
     - retries: 3
+    
+    **Para MariaDB:**
+    - Healthcheck que verifique la disponibilidad de MySQL
+    - Límites: 0.5 CPU y 512MB de memoria
+
+    - cpus: 0.5 para MariaDB
+    - memoria: 512M para ambos
     - test: mysqladmin ping -h localhost para MariaDB
     - interval: 30s
     - timeout: 3s
     - retries: 3
 
 
-2. Verifica el estado de salud de los servicios.
+3. Investiga qué comando usar para verificar el estado de salud de los servicios.
+
+4. Verifica que los healthchecks funcionan correctamente.
 
 ---
 
@@ -208,61 +256,57 @@ mkdir -p wordpress mysql
 
 #### Tarea 4.1: Backup con volúmenes Docker
 
-1. Realiza un backup de los volúmenes:
+1. Investiga estrategias para realizar backups de volúmenes Docker.
 
-```bash
-# Crear directorio de backups
-mkdir -p backups
+2. Crea un directorio para backups.
 
-# Backup de WordPress
-docker run --rm \
-  -v wordpress_compose_wordpress_data:/data \
-  -v $(pwd)/backups:/backup \
-  alpine tar czf /backup/wordpress_backup.tar.gz -C /data .
+3. Investiga y ejecuta comandos para:
+   
+    - Crear un backup del volumen de WordPress usando un contenedor temporal
+    - Crear un backup del volumen de MariaDB usando un contenedor temporal
+    - Comprimir los datos en archivos tar.gz
+    - Almacenar los backups en el directorio del host
 
-# Backup de MariaDB
-docker run --rm \
-  -v wordpress_compose_mariadb_data:/data \
-  -v $(pwd)/backups:/backup \
-  alpine tar czf /backup/mysql_backup.tar.gz -C /data .
-```
+4. Verifica que los archivos de backup se han creado correctamente.
 
-2. Verifica que los archivos de backup existen.
+**Pista:** Necesitarás usar contenedores temporales que monten el volumen y un directorio de backup.
 
 #### Tarea 4.2: Restauración desde backup
 
-1. Elimina el escenario incluyendo volúmenes.
+1. Elimina el escenario completo incluyendo los volúmenes.
 
-2. Recrea los volúmenes vacíos.
+2. Vuelve a crear el escenario (se crearán volúmenes vacíos).
 
-3. Restaura los datos:
+3. Investiga y ejecuta comandos para restaurar los datos desde los backups:
+   
+    - Usa contenedores temporales para descomprimir y restaurar datos
+    - Restaura el volumen de WordPress
+    - Restaura el volumen de MariaDB
 
-```bash
-# Restaurar WordPress
-docker run --rm \
-  -v wordpress_compose_wordpress_data:/data \
-  -v $(pwd)/backups:/backup \
-  alpine sh -c "cd /data && tar xzf /backup/wordpress_backup.tar.gz"
+4. Arranca el escenario con Docker Compose.
 
-# Restaurar MariaDB
-docker run --rm \
-  -v wordpress_compose_mariadb_data:/data \
-  -v $(pwd)/backups:/backup \
-  alpine sh -c "cd /data && tar xzf /backup/mysql_backup.tar.gz"
-```
+5. Verifica que todos los datos se han restaurado correctamente (contenido, configuración, base de datos).
 
-4. Arranca el escenario y verifica que los datos se han restaurado.
+**Reflexión:** ¿Por qué es importante probar regularmente los procesos de restauración?
 
 #### Tarea 4.3: Backup con bind mounts
 
-1. Para bind mounts, el backup es más simple:
+1. Para el escenario con bind mounts, el backup es más directo.
 
-```bash
-tar czf wordpress_backup.tar.gz wordpress/
-tar czf mysql_backup.tar.gz mysql/
-```
+2. Investiga qué comandos del sistema operativo puedes usar para:
+   
+    - Crear copias de seguridad de directorios completos
+    - Comprimir los directorios en archivos tar.gz
+    - Verificar la integridad de los backups
 
-2. Compara la facilidad de backup entre ambos enfoques.
+3. Realiza backups de ambos directorios (wordpress y mysql).
+
+4. Compara las ventajas y desventajas del backup con bind mounts vs. volúmenes Docker:
+   
+    - Facilidad de ejecución
+    - Necesidad de comandos Docker
+    - Visibilidad de los datos
+    - Portabilidad
 
 ---
 

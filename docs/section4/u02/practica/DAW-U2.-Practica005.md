@@ -83,40 +83,36 @@ Identifica:
 
 1. Crea un directorio para esta práctica, por ejemplo `~/guestbook_compose`.
 
-2. Crea un archivo llamado `docker-compose.yml` con la siguiente estructura base:
+2. Investiga la estructura de un archivo `docker-compose.yml` consultando la documentación oficial.
 
-```yaml
-version: '3.1'
-
-services:
-  app:
-    container_name: guestbook
-    image: iesgn/guestbook
-    restart: always
-    environment:
-      REDIS_SERVER: redis
-    ports:
-      - 8080:5000
-      
-  db:
-    container_name: redis
-    image: redis
-    restart: always
-    command: redis-server --appendonly yes
-    volumes:
-      - redis:/data
-
-volumes:
-  redis:
-```
-
-3. Analiza cada sección del archivo:
+3. Crea un archivo `docker-compose.yml` que defina:
    
-    - `version`: Versión del formato de Docker Compose
-    - `services`: Define los contenedores de la aplicación
-    - `volumes`: Define los volúmenes Docker
-    - `restart`: Política de reinicio automático
-    - `command`: Comando a ejecutar en el contenedor
+    - **Versión del formato:** Investiga qué versión de Docker Compose usar (mínimo 3.1)
+    - **Dos servicios:**
+        - Servicio para la aplicación Guestbook (imagen `iesgn/guestbook`)
+        - Servicio para la base de datos Redis (imagen `redis`)
+    
+    - **Para el servicio de Guestbook:**
+        - Nombre del contenedor
+        - Puerto del host mapeado al puerto 5000 del contenedor
+        - Variable de entorno que indica el servidor Redis
+        - Política de reinicio automático
+    
+    - **Para el servicio de Redis:**
+        - Nombre del contenedor
+        - Comando para ejecutar Redis con persistencia (modo append-only)
+        - Volumen Docker para almacenar datos en `/data`
+        - Política de reinicio automático
+    
+    - **Volúmenes:** Define el volumen Docker necesario
+
+4. Consulta la documentación de Docker Compose para entender:
+   
+    - La sintaxis YAML correcta
+    - Cómo definir servicios
+    - Cómo configurar volúmenes
+    - Cómo establecer variables de entorno
+    - Políticas de reinicio disponibles
 
 #### Tarea 1.3: Comprensión de las diferencias
 
@@ -136,47 +132,53 @@ Compara el archivo `docker-compose.yml` con los comandos de la Práctica 2.1:
 
 #### Tarea 2.1: Despliegue del escenario
 
-1. Desde el directorio donde está el archivo `docker-compose.yml`, ejecuta el comando para crear y arrancar el escenario en segundo plano.
+1. Investiga qué comando de Docker Compose sirve para crear y arrancar servicios en segundo plano.
 
-2. Observa la salida del comando. ¿Qué recursos se crean automáticamente?
+2. Ejecuta el comando desde el directorio donde está el archivo `docker-compose.yml`.
 
-3. Verifica los contenedores en ejecución usando el comando específico de Docker Compose.
+3. Observa la salida del comando. ¿Qué recursos se crean automáticamente?
 
-4. Accede a la aplicación desde tu navegador (http://localhost:8080).
+4. Investiga y ejecuta el comando para listar los contenedores gestionados por Docker Compose.
 
-5. Añade varios mensajes en el libro de visitas.
+5. Accede a la aplicación desde tu navegador en el puerto que configuraste.
+
+6. Añade varios mensajes en el libro de visitas.
 
 #### Tarea 2.2: Gestión del ciclo de vida
 
 1. **Ver logs:**
    
-    - Visualiza los logs de todos los servicios
-    - Visualiza solo los logs del servicio `app`
-    - Visualiza solo los logs del servicio `db`
+    - Investiga el comando para ver logs de todos los servicios
+    - Investiga cómo ver logs de un servicio específico
+    - Visualiza los logs del servicio de aplicación
+    - Visualiza los logs del servicio de base de datos
 
 2. **Detener servicios:**
    
-    - Detén todos los servicios sin eliminarlos
+    - Investiga el comando para detener servicios sin eliminarlos
+    - Detén todos los servicios
     - Verifica el estado de los contenedores
-    - Accede a la aplicación (debería estar inaccesible)
+    - Intenta acceder a la aplicación (debería estar inaccesible)
 
 3. **Reiniciar servicios:**
    
+    - Investiga el comando para arrancar servicios detenidos
     - Arranca nuevamente los servicios
     - Verifica que los datos persisten
 
 4. **Escalar servicios (opcional):**
    
-    - Intenta escalar el servicio `app` a 3 instancias
-    - Observa qué problemas aparecen (conflicto de puertos)
+    - Investiga el comando para escalar servicios
+    - Intenta escalar el servicio de aplicación a 3 instancias
+    - Observa qué problemas aparecen y analiza por qué
 
 #### Tarea 2.3: Eliminación del escenario
 
 1. **Eliminar sin volúmenes:**
    
-    - Elimina el escenario pero mantén los volúmenes
-    - Verifica qué recursos se eliminan
-    - Comprueba que el volumen sigue existiendo
+    - Investiga el comando para eliminar el escenario manteniendo los volúmenes
+    - Ejecuta el comando y observa qué recursos se eliminan
+    - Verifica con comandos Docker que el volumen sigue existiendo
 
 2. **Recrear y verificar persistencia:**
    
@@ -185,10 +187,10 @@ Compara el archivo `docker-compose.yml` con los comandos de la Práctica 2.1:
 
 3. **Eliminar con volúmenes:**
    
-    - Elimina el escenario incluyendo los volúmenes
-    - Verifica que el volumen también se ha eliminado
+    - Investiga el comando para eliminar el escenario incluyendo volúmenes
+    - Ejecuta el comando y verifica que el volumen también se ha eliminado
     - Recrea el escenario
-    - Comprueba que el libro de visitas está vacío
+    - Comprueba que el libro de visitas está vacío (instalación nueva)
 
 ---
 
@@ -198,78 +200,43 @@ Compara el archivo `docker-compose.yml` con los comandos de la Práctica 2.1:
 
 1. Modifica el archivo `docker-compose.yml` para que la aplicación sea accesible en el puerto 9090 del host.
 
-2. Recrea el escenario aplicando los cambios.
+2. Investiga qué comando recrear el escenario aplicando los cambios sin perder datos.
 
-3. Accede a la aplicación en el nuevo puerto.
+3. Accede a la aplicación en el nuevo puerto y verifica que funciona.
 
 #### Tarea 3.2: Configuración avanzada
 
-1. Añade las siguientes configuraciones al servicio `app`:
+1. Investiga en la documentación de Docker Compose cómo añadir:
    
-    - Límites de recursos (memoria: 256MB, CPU: 0.5)
-    - Red personalizada explícita
+    - Límites de recursos (CPU y memoria)
+    - Redes personalizadas explícitas
 
-2. Ejemplo de configuración avanzada:
-
-```yaml
-services:
-  app:
-    container_name: guestbook
-    image: iesgn/guestbook
-    restart: always
-    environment:
-      REDIS_SERVER: redis
-    ports:
-      - 8080:5000
-    deploy:
-      resources:
-        limits:
-          cpus: '0.5'
-          memory: 256M
-    networks:
-      - guestbook_net
-      
-  db:
-    container_name: redis
-    image: redis
-    restart: always
-    command: redis-server --appendonly yes
-    volumes:
-      - redis:/data
-    networks:
-      - guestbook_net
-
-volumes:
-  redis:
-
-networks:
-  guestbook_net:
-    driver: bridge
-```
+2. Modifica tu archivo `docker-compose.yml` para incluir:
+   
+    - **Límites de recursos** para el servicio de aplicación:
+        - Límite de memoria: 256MB
+        - Límite de CPU: 0.5
+    
+    - **Red personalizada:**
+        - Crea una red tipo bridge con nombre personalizado
+        - Conecta ambos servicios a esta red
 
 3. Aplica los cambios y verifica que el escenario funciona correctamente.
 
 #### Tarea 3.3: Variables de entorno desde archivo
 
-1. Crea un archivo `.env` con variables de entorno:
+1. Investiga cómo Docker Compose utiliza archivos `.env` para variables de entorno.
 
-```env
-GUESTBOOK_PORT=8080
-REDIS_CONTAINER=redis
-```
+2. Crea un archivo `.env` que contenga:
+   
+    - Variable para el puerto de la aplicación Guestbook
+    - Variable para el nombre del contenedor/servicio de Redis
 
-2. Modifica el `docker-compose.yml` para usar estas variables:
+3. Modifica tu `docker-compose.yml` para usar estas variables con la sintaxis `${NOMBRE_VARIABLE}`.
 
-```yaml
-services:
-  app:
-    environment:
-      REDIS_SERVER: ${REDIS_CONTAINER}
-    ports:
-      - ${GUESTBOOK_PORT}:5000
-```
+4. Despliega y verifica que funciona con las variables del archivo `.env`.
 
-3. Despliega y verifica que funciona con las variables del archivo `.env`.
+5. Prueba a cambiar los valores en `.env` y verifica que se aplican correctamente.
 
 ---
 
@@ -277,24 +244,24 @@ services:
 
 #### Tarea 4.1: Comandos esenciales
 
-Practica y documenta los siguientes comandos de Docker Compose:
+Investiga, practica y documenta los comandos de Docker Compose para:
 
 1. **Crear y arrancar:**
    
-    - Arrancar en primer plano
-    - Arrancar en segundo plano
-    - Forzar recreación de contenedores
+    - Arrancar en primer plano (ver la salida directamente)
+    - Arrancar en segundo plano (modo daemon)
+    - Forzar recreación de contenedores aunque no hayan cambiado
 
 2. **Información:**
    
     - Ver estado de servicios
-    - Ver procesos en ejecución
-    - Ver configuración final (con variables resueltas)
+    - Ver procesos en ejecución dentro de los contenedores
+    - Ver la configuración final con variables de entorno resueltas
 
 3. **Gestión:**
    
-    - Detener servicios
-    - Arrancar servicios detenidos
+    - Detener servicios sin eliminarlos
+    - Arrancar servicios que están detenidos
     - Reiniciar servicios
     - Pausar y despausar servicios
 
@@ -302,13 +269,13 @@ Practica y documenta los siguientes comandos de Docker Compose:
    
     - Ver logs de todos los servicios
     - Ver logs de un servicio específico
-    - Seguir logs en tiempo real
+    - Seguir logs en tiempo real (modo follow)
 
 5. **Limpieza:**
    
-    - Eliminar escenario sin volúmenes
-    - Eliminar escenario con volúmenes
-    - Eliminar imágenes no utilizadas
+    - Eliminar escenario manteniendo volúmenes
+    - Eliminar escenario incluyendo volúmenes
+    - Eliminar imágenes que ya no se utilizan
 
 ---
 
@@ -375,34 +342,34 @@ Crea una tabla comparativa entre la gestión manual (Práctica 2.1) y Docker Com
 
 #### Tarea 6.1: Múltiples entornos
 
-1. Crea archivos `docker-compose.yml` para diferentes entornos:
+1. Investiga cómo Docker Compose permite usar múltiples archivos para diferentes entornos.
+
+2. Crea archivos para diferentes entornos:
    
-    - `docker-compose.yml` - Configuración base
-    - `docker-compose.dev.yml` - Override para desarrollo
-    - `docker-compose.prod.yml` - Override para producción
+    - `docker-compose.yml` - Configuración base común
+    - `docker-compose.dev.yml` - Configuración específica de desarrollo (ej: puertos diferentes, logging verbose)
+    - `docker-compose.prod.yml` - Configuración específica de producción (ej: límites de recursos, restart policies)
 
-2. Practica el uso de múltiples archivos:
+3. Investiga la sintaxis del comando para usar múltiples archivos simultáneamente.
 
-```bash
-docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
-```
+4. Prueba a desplegar con diferentes combinaciones de archivos.
 
 #### Tarea 6.2: Healthchecks
 
-1. Añade healthchecks a los servicios:
+1. Investiga qué son los healthchecks en Docker Compose y para qué sirven.
 
-```yaml
-services:
-  db:
-    image: redis
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 30s
-      timeout: 3s
-      retries: 3
-```
+2. Investiga la sintaxis de healthchecks en el archivo `docker-compose.yml`:
+   
+    - Comando de test
+    - Intervalo entre comprobaciones
+    - Timeout
+    - Número de reintentos
 
-2. Verifica el estado de salud de los servicios.
+3. Añade un healthcheck al servicio de Redis que verifique su disponibilidad.
+
+4. Investiga el comando para ver el estado de salud de los servicios.
+
+5. Verifica que el healthcheck funciona correctamente.
 
 ---
 

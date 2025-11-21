@@ -60,7 +60,20 @@ Aprender a:
 
 1. Crea un directorio para esta práctica: `~/temperaturas_compose`.
 
-2. Crea el archivo `docker-compose.yml` con la siguiente estructura:
+2. Investiga la documentación de Docker Compose para crear un archivo `docker-compose.yml` que incluya:
+   
+    **Servicio Frontend:**
+    - Imagen: `iesgn/temperaturas_frontend`
+    - Puerto del host mapeado al puerto 3000 del contenedor
+    - Variable de entorno que indica dónde se encuentra el backend (nombre:puerto)
+    - Dependencia explícita del servicio backend
+    - Política de reinicio
+    
+    **Servicio Backend:**
+    - Imagen: `iesgn/temperaturas_backend`
+    - Política de reinicio
+    - NO exponer puertos al host (comunicación interna)
+
 
 ```yaml
 version: '3.1'
@@ -83,28 +96,28 @@ services:
     restart: always
 ```
 
-3. Analiza la estructura del archivo:
+
+3. Analiza y responde:
    
-    - ¿Por qué el frontend tiene `depends_on: - backend`?
-    - ¿Qué indica la variable `TEMP_SERVER`?
+    - ¿Por qué el frontend tiene una dependencia del backend?
+    - ¿Qué indica la variable de entorno del servidor backend?
     - ¿Por qué el backend no expone puertos al host?
 
 #### Tarea 1.2: Comprensión de dependencias
 
-1. Investiga qué hace la directiva `depends_on`:
+1. Investiga en la documentación oficial qué hace la directiva `depends_on`:
    
     - ¿Garantiza que el backend esté completamente iniciado antes que el frontend?
-    - ¿Solo controla el orden de inicio?
-    - ¿Qué limitaciones tiene?
+    - ¿Solo controla el orden de inicio de contenedores?
+    - ¿Qué limitaciones tiene esta directiva?
 
-2. Modifica el archivo para usar el nombre del servicio en lugar del contenedor:
+2. Experimenta con diferentes configuraciones:
    
-    ```yaml
-    environment:
-      TEMP_SERVER: backend:5000
-    ```
+    - Prueba usando el nombre del contenedor en la variable de entorno
+    - Prueba usando el nombre del servicio en la variable de entorno
+    - Verifica que ambas configuraciones funcionan correctamente
 
-3. Verifica que ambas configuraciones funcionan correctamente.
+3. Reflexiona sobre cuál es mejor práctica y por qué.
 
 ---
 
@@ -152,35 +165,35 @@ services:
 
 #### Tarea 3.1: Escalado del backend
 
-1. Escala el servicio backend a 3 instancias.
+1. Investiga el comando de Docker Compose para escalar servicios.
 
-2. Verifica que las tres instancias están en ejecución.
+2. Escala el servicio backend a 3 instancias.
 
-3. Realiza varias búsquedas en la aplicación.
+3. Verifica que las tres instancias están en ejecución.
 
-4. ¿Las peticiones se distribuyen entre las instancias? ¿Por qué?
+4. Realiza varias búsquedas en la aplicación.
+
+5. Investiga y responde:
+   
+    - ¿Las peticiones se distribuyen entre las instancias?
+    - ¿Por qué sí o por qué no?
+    - ¿Qué mecanismo de Docker gestiona esto?
 
 #### Tarea 3.2: Escalado del frontend
 
-1. Intenta escalar el frontend a 2 instancias.
+1. Intenta escalar el frontend a 2 instancias usando el comando de escalado.
 
-2. ¿Qué problema aparece? (conflicto de puertos)
+2. Observa y documenta qué problema aparece.
 
-3. Modifica el `docker-compose.yml` para permitir el escalado del frontend:
+3. Investiga cómo permitir el escalado del frontend modificando el mapeo de puertos en el archivo `docker-compose.yml`:
+   
+    - Investiga cómo especificar un rango de puertos
+    - Modifica la configuración del servicio frontend
+    - Asegúrate de no especificar nombres de contenedor fijos
 
-```yaml
-frontend:
-  image: iesgn/temperaturas_frontend
-  restart: always
-  ports:
-    - "8081-8083:3000"
-  environment:
-    TEMP_SERVER: backend:5000
-  depends_on:
-    - backend
-```
+4. Escala el frontend a múltiples instancias y verifica que funciona.
 
-4. Escala el frontend y verifica que funciona.
+5. Identifica en qué puertos del host quedó cada instancia.
 
 ---
 
@@ -188,61 +201,48 @@ frontend:
 
 #### Tarea 4.1: Límites de recursos
 
-1. Añade límites de recursos a los servicios:
-   
-```yaml
-services:
-  ???????????:
-    # ... resto de configuración
-    deploy:
-      resources:
-        limits:
-          cpus: '0.5'
-          memory: 128M
-        reservations:
-          cpus: '0.25'
-          memory: 64M
-          
-  ???????????:
-    # ... resto de configuración
-    deploy:
-      resources:
-        limits:
-          cpus: '0.5'
-          memory: 128M
-      replicas: 2
-```
+1. Investiga en la documentación de Docker Compose cómo establecer límites de recursos.
 
-2. Despliega y verifica el consumo de recursos.
+2. Añade a tu archivo `docker-compose.yml`:
+   
+    **Para el servicio frontend:**
+    - Límite de CPU: 0.5
+    - Límite de memoria: 128M
+    - Reserva de CPU: 0.25
+    - Reserva de memoria: 64M
+    
+    **Para el servicio backend:**
+    - Límite de CPU: 0.5
+    - Límite de memoria: 128M
+    - Configuración para 2 réplicas
+
+3. Despliega con los cambios y verifica el consumo de recursos usando comandos Docker.
 
 #### Tarea 4.2: Healthchecks
 
-1. Añade healthchecks a los servicios:
+1. Investiga la sintaxis de healthchecks en Docker Compose.
 
-```yaml
-???????????:
-  ....
-  healthcheck:
-    test: ["CMD", "curl", "-f", "http://localhost:5000"]
-    interval: 30s
-    timeout: 3s
-    retries: 3
-    start_period: 40s
-```
+2. Añade un healthcheck al servicio backend que:
+   
+    - Verifique la disponibilidad del puerto 5000
+    - Se ejecute cada 30 segundos
+    - Tenga un timeout de 3 segundos
+    - Permita 3 reintentos
+    - Espere 40 segundos antes del primer check (start_period)
 
-2. Verifica el estado de salud de los servicios.
+3. Verifica el estado de salud con comandos de Docker Compose.
+
+4. Detén el backend y observa cómo cambia el estado de salud.
 
 #### Tarea 4.3: Variables de entorno desde archivo
 
-1. Crea un archivo `.env`:
+1. Crea un archivo `.env` con las siguientes variables:
+   
+    - Puerto para el frontend
+    - Hostname del backend
+    - Puerto del backend
 
-```env
-FRONTEND_PORT=8081
-BACKEND_HOST=backend
-BACKEND_PORT=5000
-```
-
-2. Modifica el `docker-compose.yml`:
+2. Modifica tu `docker-compose.yml` para utilizar estas variables con la sintaxis `${VARIABLE}`.
 
 ```yaml
 services:
@@ -253,7 +253,9 @@ services:
       TEMP_SERVER: ${BACKEND_HOST}:${BACKEND_PORT}
 ```
 
-3. Verifica que funciona con las variables del archivo `.env`.
+3. Despliega y verifica que funciona correctamente con las variables del archivo `.env`.
+
+4. Experimenta cambiando valores en `.env` sin modificar el `docker-compose.yml`.
 
 ---
 

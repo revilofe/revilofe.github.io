@@ -598,6 +598,16 @@ Todos los documentos deben incluir el bloque YAML al inicio con:
 - `categories`: Categoría del módulo
 - `tags`: Etiquetas relevantes
 
+
+### 2.8. Normativa sobre el módulo
+
+Todos los módulos deben incluir en la carpeta `recursos/` un archivo llamado:
+MODULO Normativa.txt, en donde MODULO es el nombre del módulo correspondiente, y que contendrá la normativa oficial del módulo, con los Resultados de aprendizaje y sus criterios de evaluación. Este archivo servirá de referencia para generar la documentación, prácticas, cuestionarios, exámenes, etc.
+
+Ej: Para el módulo de programación, "docs/section1/recursos/PRO Normativa.txt"
+
+Lo normal esque tanto la teoría, como la practica haga referencia a los Resultados de aprendizaje y sus criterios de evaluación, por lo que es importante que este archivo esté siempre actualizado y disponible.
+
 ## 3. Flujo de trabajo para crear contenido
 
 1. **Identificar el módulo y unidad** donde se creará el contenido

@@ -6968,7 +6968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DAW-U2.-Practica009.md" class="md-nav__link">
+      <a href="../DAW-U2.-Practica009/" class="md-nav__link">
         
   
   
@@ -6996,7 +6996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DAW-U2.-Practica010.md" class="md-nav__link">
+      <a href="../DAW-U2.-Practica010/" class="md-nav__link">
         
   
   
@@ -7024,7 +7024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DAW-U2.-Practica011.md" class="md-nav__link">
+      <a href="../DAW-U2.-Practica011/" class="md-nav__link">
         
   
   
@@ -7052,7 +7052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DAW-U2.-Practica012.md" class="md-nav__link">
+      <a href="../DAW-U2.-Practica012/" class="md-nav__link">
         
   
   
@@ -7080,7 +7080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DAW-U2.-Proyecto-Final.md" class="md-nav__link">
+      <a href="../DAW-U2.-Proyecto-Final/" class="md-nav__link">
         
   
   
@@ -8067,6 +8067,13 @@
 <p>Crea el directorio del proyecto: <code>~/tomcat_compose</code>.</p>
 </li>
 <li>
+<p>Investiga qué archivos necesitas para este despliegue:</p>
+<ul>
+<li>Un archivo <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr> de una aplicación Java (puedes descargarlo del repositorio del curso o usar uno propio)</li>
+<li>Un archivo de configuración de Nginx para el proxy inverso</li>
+</ul>
+</li>
+<li>
 <p>Dentro del directorio, crea la siguiente estructura:</p>
 </li>
 </ol>
@@ -8106,15 +8113,31 @@
 <h4 id="tarea-12-creacion-del-docker-composeyml">Tarea 1.2: Creación del docker-compose.yml<a class="headerlink" href="#tarea-12-creacion-del-docker-composeyml" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
-<p>Crea el archivo <code>docker-compose.yml</code>:</p>
+<p>Investiga la documentación de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose sobre bind mounts.</p>
 </li>
 <li>
-<p>Analiza la configuración:</p>
+<p>Crea un archivo <code>docker-compose.yml</code> que defina:</p>
+<p><strong>Servicio de Tomcat:</strong>
+- Imagen: <code>tomcat:9.0</code>
+- Bind mount del archivo <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr> al directorio de despliegue de Tomcat (<code>/usr/local/tomcat/webapps/</code>)
+- Montaje en modo solo lectura (<code>:ro</code>)
+- NO mapear puertos al host (acceso solo interno)
+- Política de reinicio</p>
+<p><strong>Servicio de Nginx (proxy):</strong>
+- Imagen: <code>nginx</code>
+- Puerto 80 del host mapeado al puerto 80 del contenedor
+- Bind mount del archivo de configuración a la ubicación correcta en Nginx
+- Montaje en modo solo lectura (<code>:ro</code>)
+- Dependencia del servicio de Tomcat
+- Política de reinicio</p>
+</li>
+<li>
+<p>Analiza y responde:</p>
 <ul>
-<li>¿Por qué se usan bind mounts en lugar de volúmenes?</li>
-<li>¿Qué significa <code>:ro</code> al final de los volúmenes?</li>
+<li>¿Por qué se usan bind mounts en lugar de volúmenes <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr>?</li>
+<li>¿Qué significa <code>:ro</code> y por qué es importante?</li>
 <li>¿Por qué Nginx depende de Tomcat?</li>
-<li>¿Por qué Tomcat no expone puertos?</li>
+<li>¿Por qué Tomcat no expone puertos al host?</li>
 </ul>
 </li>
 </ol>
@@ -8212,79 +8235,65 @@
 </ol>
 <h4 id="tarea-32-multiples-aplicaciones-war">Tarea 3.2: Múltiples aplicaciones <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr><a class="headerlink" href="#tarea-32-multiples-aplicaciones-war" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Si tienes múltiples archivos <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr>, modifica el <code>docker-compose.yml</code>:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">aplicacionjava</span><span class="p">:</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./sample.war:/usr/local/tomcat/webapps/sample.war:ro</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./otra-app.war:/usr/local/tomcat/webapps/otra.war:ro</span>
-</code></pre></div>
-<ol>
-<li>Configura Nginx para acceder a ambas aplicaciones en diferentes rutas:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">location</span><span class="w"> </span><span class="s">/sample/</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://aplicacionjava:8080/sample/</span><span class="p">;</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">}</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">location</span><span class="w"> </span><span class="s">/otra/</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://aplicacionjava:8080/otra/</span><span class="p">;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
-</code></pre></div>
-<ol>
-<li>Verifica el acceso a ambas aplicaciones.</li>
+<li>
+<p>Si tienes acceso a múltiples archivos <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr>, modifica tu <code>docker-compose.yml</code>:</p>
+<ul>
+<li>Añade bind mounts adicionales para cada archivo <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr></li>
+<li>Investiga cómo montar múltiples archivos en el mismo servicio</li>
+</ul>
+</li>
+<li>
+<p>Modifica el archivo <code>default.conf</code> de Nginx para configurar diferentes rutas:</p>
+<ul>
+<li>Cada aplicación debe ser accesible en una ruta diferente</li>
+<li>Por ejemplo: <code>/app1/</code> → aplicacion1.war, <code>/app2/</code> → aplicacion2.war</li>
+<li>Investiga la directiva <code>location</code> de Nginx</li>
+</ul>
+</li>
+<li>
+<p>Verifica el acceso a todas las aplicaciones desde diferentes URLs.</p>
+</li>
 </ol>
 <h4 id="tarea-33-variables-de-entorno-y-customizacion">Tarea 3.3: Variables de entorno y customización<a class="headerlink" href="#tarea-33-variables-de-entorno-y-customizacion" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Crea un archivo <code>.env</code>:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>NGINX_PORT=80
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>TOMCAT_VERSION=9.0
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>APP_WAR=sample.war
-</code></pre></div>
-<ol>
-<li>Modifica el <code>docker-compose.yml</code>:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">aplicacionjava</span><span class="p">:</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tomcat:${TOMCAT_VERSION}</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./${APP_WAR}:/usr/local/tomcat/webapps/sample.war:ro</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="nt">proxy</span><span class="p">:</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;${NGINX_PORT}:80&quot;</span>
-</code></pre></div>
-<ol>
-<li>Prueba cambiando valores en <code>.env</code> y verificando que funcionan.</li>
+<li>
+<p>Crea un archivo <code>.env</code> con variables para:</p>
+<ul>
+<li>Puerto de Nginx</li>
+<li>Versión de Tomcat a usar</li>
+<li>Nombre del archivo <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr></li>
+</ul>
+</li>
+<li>
+<p>Modifica tu <code>docker-compose.yml</code> para usar estas variables con la sintaxis <code>${VARIABLE}</code>.</p>
+</li>
+<li>
+<p>Prueba cambiando valores en <code>.env</code> (por ejemplo, cambiar la versión de Tomcat) y verifica que los cambios se aplican correctamente.</p>
+</li>
 </ol>
 <hr />
 <h3 id="parte-4-gestion-avanzada">🔹 Parte 4: Gestión avanzada<a class="headerlink" href="#parte-4-gestion-avanzada" title="Permanent link">&para;</a></h3>
 <h4 id="tarea-41-healthchecks">Tarea 4.1: Healthchecks<a class="headerlink" href="#tarea-41-healthchecks" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Añade healthchecks a los servicios:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">aplicacionjava</span><span class="p">:</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="c1"># ... configuración anterior</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;curl&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;-f&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;http://localhost:8080/sample/&quot;</span><span class="p p-Indicator">]</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30s</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">      </span><span class="nt">start_period</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60s</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">  </span><span class="nt">proxy</span><span class="p">:</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="c1"># ... configuración anterior</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;curl&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;-f&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;http://localhost/&quot;</span><span class="p p-Indicator">]</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30s</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
-</code></pre></div>
-<ol>
 <li>
-<p>Verifica el estado de salud de los servicios.</p>
+<p>Investiga cómo configurar healthchecks en <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose.</p>
+</li>
+<li>
+<p>Añade healthchecks a ambos servicios:</p>
+<p><strong>Para Tomcat:</strong>
+- Verifica la disponibilidad de la aplicación en el puerto 8080
+- Intervalo de 30 segundos
+- Timeout de 10 segundos
+- 3 reintentos
+- Periodo de inicio de 60 segundos (Tomcat puede tardar en iniciar)</p>
+<p><strong>Para Nginx:</strong>
+- Verifica la disponibilidad del puerto 80
+- Intervalo de 30 segundos
+- Timeout de 3 segundos
+- 3 reintentos</p>
+</li>
+<li>
+<p>Investiga el comando para ver el estado de salud de los servicios.</p>
 </li>
 <li>
 <p>Detén Tomcat y observa cómo afecta al healthcheck de Nginx.</p>
@@ -8292,38 +8301,46 @@
 </ol>
 <h4 id="tarea-42-limites-de-recursos">Tarea 4.2: Límites de recursos<a class="headerlink" href="#tarea-42-limites-de-recursos" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Añade límites de recursos:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nt">aplicacionjava</span><span class="p">:</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="c1"># ... configuración anterior</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nt">deploy</span><span class="p">:</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">      </span><span class="nt">resources</span><span class="p">:</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">        </span><span class="nt">limits</span><span class="p">:</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">          </span><span class="nt">cpus</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">          </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">512M</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">        </span><span class="nt">reservations</span><span class="p">:</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">          </span><span class="nt">cpus</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0.5&#39;</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">          </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">256M</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">  </span><span class="nt">proxy</span><span class="p">:</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="c1"># ... configuración anterior</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="nt">deploy</span><span class="p">:</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">      </span><span class="nt">resources</span><span class="p">:</span>
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">        </span><span class="nt">limits</span><span class="p">:</span>
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">          </span><span class="nt">cpus</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0.5&#39;</span>
-<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">          </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128M</span>
-</code></pre></div>
-<ol>
-<li>Verifica el consumo de recursos.</li>
+<li>
+<p>Investiga cómo establecer límites de recursos en <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose.</p>
+</li>
+<li>
+<p>Añade a tu archivo <code>docker-compose.yml</code>:</p>
+<p><strong>Para Tomcat:</strong>
+- Límite de CPU: 1
+- Límite de memoria: 512M
+- Reserva de CPU: 0.5
+- Reserva de memoria: 256M</p>
+<p><strong>Para Nginx:</strong>
+- Límite de CPU: 0.5
+- Límite de memoria: 128M</p>
+</li>
+<li>
+<p>Investiga comandos <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> para verificar el consumo de recursos de los contenedores.</p>
+</li>
+<li>
+<p>Verifica que los límites se están aplicando correctamente.</p>
+</li>
 </ol>
 <h4 id="tarea-43-red-personalizada">Tarea 4.3: Red personalizada<a class="headerlink" href="#tarea-43-red-personalizada" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
-<p>Añade una red explícita <code>tomcat_net</code>, <code>subnet: 172.28.0.0/16</code> y conecta ambos servicios:</p>
+<p>Investiga cómo definir redes personalizadas con configuración IPAM en <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose.</p>
 </li>
 <li>
-<p>Verifica la configuración de red.</p>
+<p>Añade una red personalizada a tu archivo <code>docker-compose.yml</code>:</p>
+<ul>
+<li>Tipo: bridge</li>
+<li>Nombre descriptivo (ej: tomcat_net)</li>
+<li>Configuración IPAM con subred personalizada (ej: 172.28.0.0/16)</li>
+<li>Conecta ambos servicios a esta red</li>
+</ul>
+</li>
+<li>
+<p>Investiga comandos <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> para inspeccionar la configuración de red.</p>
+</li>
+<li>
+<p>Verifica que la red está correctamente configurada y que los servicios están conectados.</p>
 </li>
 </ol>
 <hr />
@@ -8349,17 +8366,22 @@
 <h4 id="tarea-52-configuracion-sin-downtime">Tarea 5.2: Configuración sin downtime<a class="headerlink" href="#tarea-52-configuracion-sin-downtime" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
-<p>Modifica la configuración de Nginx.</p>
+<p>Realiza una modificación en el archivo <code>default.conf</code> (puede ser un cambio en un comentario o en alguna configuración).</p>
 </li>
 <li>
-<p>Recarga Nginx sin detener el servicio:</p>
+<p>Investiga qué comando de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose permite ejecutar comandos dentro de un contenedor en ejecución.</p>
+</li>
+<li>
+<p>Investiga qué señal debe enviarse a Nginx para recargar su configuración sin detener el servicio.</p>
+</li>
+<li>
+<p>Ejecuta el comando para recargar Nginx sin downtime.</p>
+</li>
+<li>
+<p>Verifica que el cambio se ha aplicado y que no hubo interrupción del servicio.</p>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>proxy<span class="w"> </span>nginx<span class="w"> </span>-s<span class="w"> </span>reload
-</code></pre></div>
-<ol>
-<li>Verifica que no hubo downtime.</li>
-</ol>
+<p><strong>Reflexión:</strong> ¿Por qué es importante poder actualizar configuraciones sin downtime en producción?</p>
 <hr />
 <h3 id="parte-6-analisis-y-documentacion">🔹 Parte 6: Análisis y documentación<a class="headerlink" href="#parte-6-analisis-y-documentacion" title="Permanent link">&para;</a></h3>
 <h4 id="tarea-61-preguntas-de-analisis">Tarea 6.1: Preguntas de análisis<a class="headerlink" href="#tarea-61-preguntas-de-analisis" title="Permanent link">&para;</a></h4>

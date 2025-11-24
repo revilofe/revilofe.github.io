@@ -6957,7 +6957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DAW-U2.-Practica009.md" class="md-nav__link">
+      <a href="../DAW-U2.-Practica009/" class="md-nav__link">
         
   
   
@@ -6985,7 +6985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DAW-U2.-Practica010.md" class="md-nav__link">
+      <a href="../DAW-U2.-Practica010/" class="md-nav__link">
         
   
   
@@ -7013,7 +7013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DAW-U2.-Practica011.md" class="md-nav__link">
+      <a href="../DAW-U2.-Practica011/" class="md-nav__link">
         
   
   
@@ -7041,7 +7041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DAW-U2.-Practica012.md" class="md-nav__link">
+      <a href="../DAW-U2.-Practica012/" class="md-nav__link">
         
   
   
@@ -7069,7 +7069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DAW-U2.-Proyecto-Final.md" class="md-nav__link">
+      <a href="../DAW-U2.-Proyecto-Final/" class="md-nav__link">
         
   
   
@@ -8056,41 +8056,50 @@
 <p>Crea un directorio para esta práctica, por ejemplo <code>~/guestbook_compose</code>.</p>
 </li>
 <li>
-<p>Crea un archivo llamado <code>docker-compose.yml</code> con la siguiente estructura base:</p>
+<p>Investiga la estructura de un archivo <code>docker-compose.yml</code> consultando la documentación oficial.</p>
 </li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.1&#39;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">app</span><span class="p">:</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guestbook</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iesgn/guestbook</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">REDIS_SERVER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:5000</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="nt">db</span><span class="p">:</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis-server --appendonly yes</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis:/data</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="nt">volumes</span><span class="p">:</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="nt">redis</span><span class="p">:</span>
-</code></pre></div>
-<ol>
 <li>
-<p>Analiza cada sección del archivo:</p>
+<p>Crea un archivo <code>docker-compose.yml</code> que defina:</p>
 <ul>
-<li><code>version</code>: Versión del formato de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose</li>
-<li><code>services</code>: Define los contenedores de la aplicación</li>
-<li><code>volumes</code>: Define los volúmenes <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr></li>
-<li><code>restart</code>: Política de reinicio automático</li>
-<li><code>command</code>: Comando a ejecutar en el contenedor</li>
+<li><strong>Versión del formato:</strong> Investiga qué versión de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose usar (mínimo 3.1)</li>
+<li>
+<p><strong>Dos servicios:</strong></p>
+<ul>
+<li>Servicio para la aplicación Guestbook (imagen <code>iesgn/guestbook</code>)</li>
+<li>Servicio para la base de datos Redis (imagen <code>redis</code>)</li>
+</ul>
+</li>
+<li>
+<p><strong>Para el servicio de Guestbook:</strong></p>
+<ul>
+<li>Nombre del contenedor</li>
+<li>Puerto del host mapeado al puerto 5000 del contenedor</li>
+<li>Variable de entorno que indica el servidor Redis</li>
+<li>Política de reinicio automático</li>
+</ul>
+</li>
+<li>
+<p><strong>Para el servicio de Redis:</strong></p>
+<ul>
+<li>Nombre del contenedor</li>
+<li>Comando para ejecutar Redis con persistencia (modo append-only)</li>
+<li>Volumen <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> para almacenar datos en <code>/data</code></li>
+<li>Política de reinicio automático</li>
+</ul>
+</li>
+<li>
+<p><strong>Volúmenes:</strong> Define el volumen <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> necesario</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Consulta la documentación de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose para entender:</p>
+<ul>
+<li>La sintaxis YAML correcta</li>
+<li>Cómo definir servicios</li>
+<li>Cómo configurar volúmenes</li>
+<li>Cómo establecer variables de entorno</li>
+<li>Políticas de reinicio disponibles</li>
 </ul>
 </li>
 </ol>
@@ -8115,16 +8124,19 @@
 <h4 id="tarea-21-despliegue-del-escenario">Tarea 2.1: Despliegue del escenario<a class="headerlink" href="#tarea-21-despliegue-del-escenario" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
-<p>Desde el directorio donde está el archivo <code>docker-compose.yml</code>, ejecuta el comando para crear y arrancar el escenario en segundo plano.</p>
+<p>Investiga qué comando de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose sirve para crear y arrancar servicios en segundo plano.</p>
+</li>
+<li>
+<p>Ejecuta el comando desde el directorio donde está el archivo <code>docker-compose.yml</code>.</p>
 </li>
 <li>
 <p>Observa la salida del comando. ¿Qué recursos se crean automáticamente?</p>
 </li>
 <li>
-<p>Verifica los contenedores en ejecución usando el comando específico de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose.</p>
+<p>Investiga y ejecuta el comando para listar los contenedores gestionados por <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose.</p>
 </li>
 <li>
-<p>Accede a la aplicación desde tu navegador (http://localhost:8080).</p>
+<p>Accede a la aplicación desde tu navegador en el puerto que configuraste.</p>
 </li>
 <li>
 <p>Añade varios mensajes en el libro de visitas.</p>
@@ -8135,22 +8147,25 @@
 <li>
 <p><strong>Ver logs:</strong></p>
 <ul>
-<li>Visualiza los logs de todos los servicios</li>
-<li>Visualiza solo los logs del servicio <code>app</code></li>
-<li>Visualiza solo los logs del servicio <code>db</code></li>
+<li>Investiga el comando para ver logs de todos los servicios</li>
+<li>Investiga cómo ver logs de un servicio específico</li>
+<li>Visualiza los logs del servicio de aplicación</li>
+<li>Visualiza los logs del servicio de base de datos</li>
 </ul>
 </li>
 <li>
 <p><strong>Detener servicios:</strong></p>
 <ul>
-<li>Detén todos los servicios sin eliminarlos</li>
+<li>Investiga el comando para detener servicios sin eliminarlos</li>
+<li>Detén todos los servicios</li>
 <li>Verifica el estado de los contenedores</li>
-<li>Accede a la aplicación (debería estar inaccesible)</li>
+<li>Intenta acceder a la aplicación (debería estar inaccesible)</li>
 </ul>
 </li>
 <li>
 <p><strong>Reiniciar servicios:</strong></p>
 <ul>
+<li>Investiga el comando para arrancar servicios detenidos</li>
 <li>Arranca nuevamente los servicios</li>
 <li>Verifica que los datos persisten</li>
 </ul>
@@ -8158,8 +8173,9 @@
 <li>
 <p><strong>Escalar servicios (opcional):</strong></p>
 <ul>
-<li>Intenta escalar el servicio <code>app</code> a 3 instancias</li>
-<li>Observa qué problemas aparecen (conflicto de puertos)</li>
+<li>Investiga el comando para escalar servicios</li>
+<li>Intenta escalar el servicio de aplicación a 3 instancias</li>
+<li>Observa qué problemas aparecen y analiza por qué</li>
 </ul>
 </li>
 </ol>
@@ -8168,9 +8184,9 @@
 <li>
 <p><strong>Eliminar sin volúmenes:</strong></p>
 <ul>
-<li>Elimina el escenario pero mantén los volúmenes</li>
-<li>Verifica qué recursos se eliminan</li>
-<li>Comprueba que el volumen sigue existiendo</li>
+<li>Investiga el comando para eliminar el escenario manteniendo los volúmenes</li>
+<li>Ejecuta el comando y observa qué recursos se eliminan</li>
+<li>Verifica con comandos <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> que el volumen sigue existiendo</li>
 </ul>
 </li>
 <li>
@@ -8183,10 +8199,10 @@
 <li>
 <p><strong>Eliminar con volúmenes:</strong></p>
 <ul>
-<li>Elimina el escenario incluyendo los volúmenes</li>
-<li>Verifica que el volumen también se ha eliminado</li>
+<li>Investiga el comando para eliminar el escenario incluyendo volúmenes</li>
+<li>Ejecuta el comando y verifica que el volumen también se ha eliminado</li>
 <li>Recrea el escenario</li>
-<li>Comprueba que el libro de visitas está vacío</li>
+<li>Comprueba que el libro de visitas está vacío (instalación nueva)</li>
 </ul>
 </li>
 </ol>
@@ -8198,108 +8214,92 @@
 <p>Modifica el archivo <code>docker-compose.yml</code> para que la aplicación sea accesible en el puerto 9090 del host.</p>
 </li>
 <li>
-<p>Recrea el escenario aplicando los cambios.</p>
+<p>Investiga qué comando recrear el escenario aplicando los cambios sin perder datos.</p>
 </li>
 <li>
-<p>Accede a la aplicación en el nuevo puerto.</p>
+<p>Accede a la aplicación en el nuevo puerto y verifica que funciona.</p>
 </li>
 </ol>
 <h4 id="tarea-32-configuracion-avanzada">Tarea 3.2: Configuración avanzada<a class="headerlink" href="#tarea-32-configuracion-avanzada" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
-<p>Añade las siguientes configuraciones al servicio <code>app</code>:</p>
+<p>Investiga en la documentación de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose cómo añadir:</p>
 <ul>
-<li>Límites de recursos (memoria: 256MB, CPU: 0.5)</li>
-<li>Red personalizada explícita</li>
+<li>Límites de recursos (CPU y memoria)</li>
+<li>Redes personalizadas explícitas</li>
 </ul>
 </li>
 <li>
-<p>Ejemplo de configuración avanzada:</p>
+<p>Modifica tu archivo <code>docker-compose.yml</code> para incluir:</p>
+<ul>
+<li>
+<p><strong>Límites de recursos</strong> para el servicio de aplicación:</p>
+<ul>
+<li>Límite de memoria: 256MB</li>
+<li>Límite de CPU: 0.5</li>
+</ul>
 </li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">app</span><span class="p">:</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guestbook</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iesgn/guestbook</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="nt">REDIS_SERVER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:5000</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nt">deploy</span><span class="p">:</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">      </span><span class="nt">resources</span><span class="p">:</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="nt">limits</span><span class="p">:</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">          </span><span class="nt">cpus</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0.5&#39;</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">          </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">256M</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guestbook_net</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">  </span><span class="nt">db</span><span class="p">:</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis-server --appendonly yes</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis:/data</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guestbook_net</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="nt">volumes</span><span class="p">:</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">  </span><span class="nt">redis</span><span class="p">:</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="nt">networks</span><span class="p">:</span>
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">  </span><span class="nt">guestbook_net</span><span class="p">:</span>
-<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span>
-</code></pre></div>
-<ol>
-<li>Aplica los cambios y verifica que el escenario funciona correctamente.</li>
+<li>
+<p><strong>Red personalizada:</strong></p>
+<ul>
+<li>Crea una red tipo bridge con nombre personalizado</li>
+<li>Conecta ambos servicios a esta red</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Aplica los cambios y verifica que el escenario funciona correctamente.</p>
+</li>
 </ol>
 <h4 id="tarea-33-variables-de-entorno-desde-archivo">Tarea 3.3: Variables de entorno desde archivo<a class="headerlink" href="#tarea-33-variables-de-entorno-desde-archivo" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Crea un archivo <code>.env</code> con variables de entorno:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>GUESTBOOK_PORT=8080
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>REDIS_CONTAINER=redis
-</code></pre></div>
-<ol>
-<li>Modifica el <code>docker-compose.yml</code> para usar estas variables:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">app</span><span class="p">:</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">      </span><span class="nt">REDIS_SERVER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${REDIS_CONTAINER}</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${GUESTBOOK_PORT}:5000</span>
-</code></pre></div>
-<ol>
-<li>Despliega y verifica que funciona con las variables del archivo <code>.env</code>.</li>
+<li>
+<p>Investiga cómo <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose utiliza archivos <code>.env</code> para variables de entorno.</p>
+</li>
+<li>
+<p>Crea un archivo <code>.env</code> que contenga:</p>
+<ul>
+<li>Variable para el puerto de la aplicación Guestbook</li>
+<li>Variable para el nombre del contenedor/servicio de Redis</li>
+</ul>
+</li>
+<li>
+<p>Modifica tu <code>docker-compose.yml</code> para usar estas variables con la sintaxis <code>${NOMBRE_VARIABLE}</code>.</p>
+</li>
+<li>
+<p>Despliega y verifica que funciona con las variables del archivo <code>.env</code>.</p>
+</li>
+<li>
+<p>Prueba a cambiar los valores en <code>.env</code> y verifica que se aplican correctamente.</p>
+</li>
 </ol>
 <hr />
 <h3 id="parte-4-comandos-de-docker-compose">🔹 Parte 4: Comandos de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose<a class="headerlink" href="#parte-4-comandos-de-docker-compose" title="Permanent link">&para;</a></h3>
 <h4 id="tarea-41-comandos-esenciales">Tarea 4.1: Comandos esenciales<a class="headerlink" href="#tarea-41-comandos-esenciales" title="Permanent link">&para;</a></h4>
-<p>Practica y documenta los siguientes comandos de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose:</p>
+<p>Investiga, practica y documenta los comandos de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose para:</p>
 <ol>
 <li>
 <p><strong>Crear y arrancar:</strong></p>
 <ul>
-<li>Arrancar en primer plano</li>
-<li>Arrancar en segundo plano</li>
-<li>Forzar recreación de contenedores</li>
+<li>Arrancar en primer plano (ver la salida directamente)</li>
+<li>Arrancar en segundo plano (modo daemon)</li>
+<li>Forzar recreación de contenedores aunque no hayan cambiado</li>
 </ul>
 </li>
 <li>
 <p><strong>Información:</strong></p>
 <ul>
 <li>Ver estado de servicios</li>
-<li>Ver procesos en ejecución</li>
-<li>Ver configuración final (con variables resueltas)</li>
+<li>Ver procesos en ejecución dentro de los contenedores</li>
+<li>Ver la configuración final con variables de entorno resueltas</li>
 </ul>
 </li>
 <li>
 <p><strong>Gestión:</strong></p>
 <ul>
-<li>Detener servicios</li>
-<li>Arrancar servicios detenidos</li>
+<li>Detener servicios sin eliminarlos</li>
+<li>Arrancar servicios que están detenidos</li>
 <li>Reiniciar servicios</li>
 <li>Pausar y despausar servicios</li>
 </ul>
@@ -8309,15 +8309,15 @@
 <ul>
 <li>Ver logs de todos los servicios</li>
 <li>Ver logs de un servicio específico</li>
-<li>Seguir logs en tiempo real</li>
+<li>Seguir logs en tiempo real (modo follow)</li>
 </ul>
 </li>
 <li>
 <p><strong>Limpieza:</strong></p>
 <ul>
-<li>Eliminar escenario sin volúmenes</li>
-<li>Eliminar escenario con volúmenes</li>
-<li>Eliminar imágenes no utilizadas</li>
+<li>Eliminar escenario manteniendo volúmenes</li>
+<li>Eliminar escenario incluyendo volúmenes</li>
+<li>Eliminar imágenes que ya no se utilizan</li>
 </ul>
 </li>
 </ol>
@@ -8433,34 +8433,46 @@
 <h4 id="tarea-61-multiples-entornos">Tarea 6.1: Múltiples entornos<a class="headerlink" href="#tarea-61-multiples-entornos" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
-<p>Crea archivos <code>docker-compose.yml</code> para diferentes entornos:</p>
+<p>Investiga cómo <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose permite usar múltiples archivos para diferentes entornos.</p>
+</li>
+<li>
+<p>Crea archivos para diferentes entornos:</p>
 <ul>
-<li><code>docker-compose.yml</code> - Configuración base</li>
-<li><code>docker-compose.dev.yml</code> - Override para desarrollo</li>
-<li><code>docker-compose.prod.yml</code> - Override para producción</li>
+<li><code>docker-compose.yml</code> - Configuración base común</li>
+<li><code>docker-compose.dev.yml</code> - Configuración específica de desarrollo (ej: puertos diferentes, logging verbose)</li>
+<li><code>docker-compose.prod.yml</code> - Configuración específica de producción (ej: límites de recursos, restart policies)</li>
 </ul>
 </li>
 <li>
-<p>Practica el uso de múltiples archivos:</p>
+<p>Investiga la sintaxis del comando para usar múltiples archivos simultáneamente.</p>
+</li>
+<li>
+<p>Prueba a desplegar con diferentes combinaciones de archivos.</p>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>-f<span class="w"> </span>docker-compose.dev.yml<span class="w"> </span>up<span class="w"> </span>-d
-</code></pre></div>
 <h4 id="tarea-62-healthchecks">Tarea 6.2: Healthchecks<a class="headerlink" href="#tarea-62-healthchecks" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Añade healthchecks a los servicios:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">db</span><span class="p">:</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;redis-cli&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;ping&quot;</span><span class="p p-Indicator">]</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30s</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
-</code></pre></div>
-<ol>
-<li>Verifica el estado de salud de los servicios.</li>
+<li>
+<p>Investiga qué son los healthchecks en <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose y para qué sirven.</p>
+</li>
+<li>
+<p>Investiga la sintaxis de healthchecks en el archivo <code>docker-compose.yml</code>:</p>
+<ul>
+<li>Comando de test</li>
+<li>Intervalo entre comprobaciones</li>
+<li>Timeout</li>
+<li>Número de reintentos</li>
+</ul>
+</li>
+<li>
+<p>Añade un healthcheck al servicio de Redis que verifique su disponibilidad.</p>
+</li>
+<li>
+<p>Investiga el comando para ver el estado de salud de los servicios.</p>
+</li>
+<li>
+<p>Verifica que el healthcheck funciona correctamente.</p>
+</li>
 </ol>
 <hr />
 <h2 id="entregables">Entregables<a class="headerlink" href="#entregables" title="Permanent link">&para;</a></h2>

@@ -186,7 +186,8 @@ nav:
       - '2.2.3.-Implantación de un SIEM': 'section2/u02/teoria/IS-U2.2.3.-SIEM-Implantacion.md'
       - '2.2.4.-Evolución de SIEM': 'section2/u02/teoria/IS-U2.2.4.-SIEM-Evolucion.md'
       - '2.3.1.-Fuentes Abiertas. OSINT': 'section2/u02/teoria/IS-U2.3.1.-FuentesAbiertas-OSINT.md'
-      - '2.5.-Cómo escribir informes técnicos': 'section2/u02/teoria/IS-U2.5-ComoEscribirInformesTecnicos.md'
+      - '2.4.1.-Documentación de Incidentes': 'section2/u02/teoria/IS-U2.4.1.-DocumentacionDeIncidentes.md'
+      - '2.4.2.-Cómo escribir informes técnicos': 'section2/u02/teoria/IS-U2.4.2.-ComoEscribirInformesTecnicos.md'
     - 'U3: Investigación de incidentes':
       - 'section2/u03/index.md'
       - '3.1.1.-Recopilación de evidencias': 'section2/u03/teoria/IS-U3.1.1.-RecopilacionDeEvidencias.md'

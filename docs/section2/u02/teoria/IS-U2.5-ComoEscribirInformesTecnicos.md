@@ -55,6 +55,8 @@ Es obligatorio dar el mérito correspondiente a Lenny Zeltser ([@LennyZeltser](h
 
 ### 1.1. Consejos estratégicos
 
+Orientados a la estrategia general de creación del informe.
+
 #### 1.1.1. Determina los objetivos del informe
 
 Lo primero que debes hacer cuando escribes un informe técnico es determinar su función: qué es lo que queremos conseguir con el mismo, cuáles son los objetivos a alcanzar.
@@ -113,6 +115,8 @@ Todo informe realizado debe aportar algo que ayude a resolver el problema presen
     Identifica el valor aportado en tu documento y dale visibilidad.
 
 ### 1.2. Consejos de estructura
+
+Orientados a la estructura del informe.
 
 #### 1.2.1. Define una estructura base
 
@@ -225,6 +229,8 @@ A veces es complicado, pero si lo consigues serás adorado por ello.
     Haz que tu informe sea fácilmente divisible.
 
 ### 1.3. Consejos de redacción
+
+Orientados a la redacción del informe. Consejos prácticos para mejorar la calidad del texto.
 
 #### 1.3.1. El corrector ortográfico no cuesta dinero
 
@@ -393,6 +399,8 @@ Si ya sabes redactar correctamente un informe, y quieres pasar al siguiente nive
 
 ### 1.4. Consejos “espirituales”
 
+Orientados a mejorar la calidad del informe a través de técnicas de revisión y mejora continua.
+
 #### 1.4.1. Segundas y terceras lecturas nunca fueron malas
 
 Cuando se está redactando un informe hay dos situaciones que se presentan con cierta frecuencia: las interrupciones (estás un día entero con un informe, pero te llaman o interrumpen cada 10 minutos) y el “entrar en zona” (te puedes pegar 2-3h escribiendo sin parar y te marcas 40 páginas de un tirón).
@@ -467,6 +475,8 @@ Los incidentes de seguridad son un caso muy interesante de informe técnico, ya 
 Os mostramos a continuación unos consejos (adicionales a los ya vistos en anteriormente) para que vuestros informes de incidentes de seguridad salgan “niquelados”.
 
 ### 2.2. Consejos para informes de incidentes de seguridad
+
+En este apartado os damos una serie de consejos específicos para la redacción de informes de incidentes de seguridad.
 
 #### 2.2.1. Conoce tus tipos de informe
 

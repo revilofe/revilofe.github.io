@@ -42,7 +42,7 @@ Los volúmenes son el mecanismo preferido para persistir datos. Son gestionados 
 - Fáciles de respaldar y migrar
 - Funcionan en Linux y Windows
 
-**Comandos básicos explicados:**
+##### 1.2.1. Comandos básicos explicados 
 
 **Crear un volumen:**
 
@@ -65,6 +65,8 @@ local     mysql_data
 local     wp_files
 ```
 
+Información relevante:
+
 - `DRIVER`: Controlador de almacenamiento (normalmente `local`)
 - `VOLUME NAME`: Nombre del volumen
 
@@ -85,7 +87,7 @@ $ docker volume inspect mi_volumen
 ]
 ```
 
-**Información relevante:**
+Información relevante:
 
 - `Mountpoint`: Ruta física donde Docker almacena los datos
 - `Driver`: Tipo de almacenamiento (local, nfs, etc.)
@@ -121,7 +123,7 @@ $ docker run -d --name app \
   ubuntu sleep infinity
 ```
 
-**Explicación del montaje:**
+Explicación del montaje:
 
 - `-v mi_volumen:/datos`: Sintaxis es `volumen:ruta_en_contenedor`
 - `mi_volumen`: Volumen de Docker (si no existe, se crea automáticamente)
@@ -171,11 +173,13 @@ datos importantes
 Los bind mounts vinculan un directorio del host con un directorio del contenedor.
 
 **Ventajas:**
+
 - Acceso directo a archivos del host
 - Útil para desarrollo
 - Compartir configuraciones
 
 **Desventajas:**
+
 - Dependen de la estructura del host
 - Menos portables que volúmenes
 
@@ -224,11 +228,11 @@ Docker proporciona diferentes tipos de redes para la comunicación entre contene
 
 #### 2.1. Tipos de redes
 
-1. **bridge** (predeterminada): Red privada interna
-2. **host**: Usa la red del host directamente
-3. **none**: Sin conectividad de red
-4. **overlay**: Para Docker Swarm (múltiples hosts)
-5. **macvlan**: Asigna MAC address al contenedor
+1. **bridge** (predeterminada): Red privada interna, aislada entre contenedores en el mismo host. 
+2. **host**: Usa la red del host directamente, sin aislamiento. Tiene acceso completo a la red del host.
+3. **none**: Sin conectividad de red. Útil para contenedores que no necesitan red.
+4. **overlay**: Para Docker Swarm (múltiples hosts). Permite comunicación entre contenedores en diferentes hosts.
+5. **macvlan**: Asigna MAC address al contenedor. Permite que los contenedores aparezcan como dispositivos físicos en la red.
 
 #### 2.2. Red bridge (predeterminada)
 
@@ -263,7 +267,7 @@ Es recomendable crear redes personalizadas para mejor control y seguridad.
 - Conexión/desconexión dinámica de contenedores
 - Configuración personalizada
 
-**Comandos explicados:**
+##### 2.3.1. Comandos basicos explicados
 
 **Crear red personalizada (simple):**
 
@@ -271,6 +275,8 @@ Es recomendable crear redes personalizadas para mejor control y seguridad.
 $ docker network create mi_red
 a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6
 ```
+
+Información relevante:
 
 - Crea una red bridge con configuración automática
 - Docker asigna automáticamente una subred (ej: 172.18.0.0/16)
@@ -286,14 +292,14 @@ $ docker network create \
   mi_red_custom
 ```
 
-**Explicación de cada parámetro:**
+Información relevante:
 
 - `--driver bridge`: Tipo de red (bridge para un solo host)
 - `--subnet 172.20.0.0/16`: Rango de IPs disponibles
   - `/16` = 65,536 direcciones IP (172.20.0.0 a 172.20.255.255)
 - `--gateway 172.20.0.1`: Puerta de enlace (IP del host Docker)
 
-**¿Qué significa cada valor?**
+¿Qué significa cada valor?
 
 ```
 172.20.0.0/16 → Rango de red
@@ -307,6 +313,8 @@ $ docker network create \
 $ docker run -d --name app --network mi_red nginx
 ```
 
+Información relevante:
+
 - El contenedor se conecta a `mi_red` desde el inicio
 - Obtiene automáticamente una IP de la red (ej: 172.20.0.2)
 - Puede resolver otros contenedores por nombre
@@ -317,13 +325,13 @@ $ docker run -d --name app --network mi_red nginx
 $ docker network connect mi_red contenedor1
 ```
 
-**¿Qué hace esto?**
+¿Qué hace esto?
 
 1. Añade una segunda interfaz de red al contenedor
 2. Ahora el contenedor está en DOS redes simultáneamente
 3. Puede comunicarse con contenedores de ambas redes
 
-**Ejemplo práctico:**
+Ejemplo práctico:
 
 ```bash
 # Contenedor en red predeterminada
@@ -344,8 +352,11 @@ $ docker inspect web | grep IPAddress
 $ docker network disconnect mi_red contenedor1
 ```
 
+Información relevante:
+
 - Elimina la interfaz de red de esa red específica
 - El contenedor sigue funcionando en sus otras redes
+
 
 **Eliminar red:**
 
@@ -396,7 +407,7 @@ $ docker network inspect mi_red
 ]
 ```
 
-**Información útil:**
+Información relevante:
 
 - `Containers`: Qué contenedores están conectados
 - `IPv4Address`: IP asignada a cada contenedor
@@ -405,6 +416,8 @@ $ docker network inspect mi_red
 #### 2.4. Comunicación entre contenedores
 
 **En red personalizada (recomendado):**
+
+En las redes definidas por el usuario, los contenedores pueden comunicarse usando sus nombres como hostnames.
 
 ```bash
 # Crear red
@@ -570,6 +583,8 @@ $ docker run -d \
 
 ### 4. Buenas prácticas
 
+A la hora de gestionar almacenamiento y redes en Docker, ten en cuenta las siguientes recomendaciones:
+
 1. **Usar volúmenes** para datos persistentes
 2. **Crear redes personalizadas** por aplicación
 3. **Nombrar volúmenes y redes** descriptivamente
@@ -581,7 +596,7 @@ $ docker run -d \
 $ docker system prune -a --volumes
 ```
 
-### Resumen
+### 5. Resumen
 
 En esta sección hemos aprendido:
 

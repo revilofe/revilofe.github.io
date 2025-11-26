@@ -55,6 +55,8 @@ El archivo `docker-compose.yml` es el corazón de Docker Compose. Define toda tu
 
 #### 3.1. Estructura básica
 
+Esta es la estructura mínima de un archivo `docker-compose.yml`:
+
 ```yaml
 version: '3.8'  # Versión de docker-compose (opcional en v2)
 
@@ -351,22 +353,22 @@ networks:
 
 ```
 ┌─────────────────────────────────────────┐
-│    Red: wordpress_net (172.18.0.0/16)  │
-│                                          │
-│  ┌──────────────┐    ┌──────────────┐  │
-│  │  wordpress   │    │     db       │  │
-│  │  (Apache)    │───▶│   (MySQL)    │  │
-│  │  172.18.0.3  │    │  172.18.0.2  │  │
-│  │  Puerto 8080 │    │  Puerto 3306 │  │
-│  └──────┬───────┘    └──────┬───────┘  │
+│    Red: wordpress_net (172.18.0.0/16)   │
+│                                         │
+│  ┌──────────────┐    ┌──────────────┐   │
+│  │  wordpress   │    │     db       │   │
+│  │  (Apache)    │───▶│   (MySQL)    │   │
+│  │  172.18.0.3  │    │  172.18.0.2  │   │
+│  │  Puerto 8080 │    │  Puerto 3306 │   │
+│  └──────┬───────┘    └──────┬───────┘   │
 │         │                   │           │
-│    ┌────▼────┐         ┌───▼─────┐     │
-│    │ wp_data │         │ db_data │     │
-│    └─────────┘         └─────────┘     │
+│    ┌────▼────┐         ┌────▼────┐      │
+│    │ wp_data │         │ db_data │      │
+│    └─────────┘         └─────────┘      │
 └─────────────────────────────────────────┘
-         ▲
-         │ Puerto 8080
-    [Tu navegador]
+                    ▲
+                    │ Puerto 8080
+              [Tu navegador]
 ```
 
 ### 4. El comando docker compose

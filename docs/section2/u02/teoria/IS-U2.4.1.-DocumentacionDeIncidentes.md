@@ -143,53 +143,280 @@ Documentar sistemáticamente los incidentes permite:
 !!! quote "Principio fundamental"
     "Un incidente no documentado es un incidente del que no se puede aprender. Una organización que no aprende de sus incidentes está condenada a repetirlos."
 
+Con esta comprensión de **por qué** la documentación es tan crítica y estratégica, estamos preparados para abordar la siguiente pregunta fundamental: **¿qué información concreta debemos registrar?**
+
 ## 4. ¿Qué debemos documentar?
 
-Para que la documentación sea útil, debe ser detallada y precisa. A continuación, se presenta un listado de los elementos clave que se deben registrar, basados en la "Guía Nacional de Notificación y Gestión de Ciberincidentes".
+Ahora que entendemos el **contexto** (la gestión integral de incidentes en la sección 2) y la **motivación** (por qué documentar es estratégico en la sección 3), llegamos a la pregunta central: **¿qué información concreta debemos registrar?**
+
+Para que la documentación sea útil, debe ser **detallada, precisa y estructurada**. A continuación, se presenta un listado exhaustivo de los elementos clave que se deben registrar, basados en la "Guía Nacional de Notificación y Gestión de Ciberincidentes" de INCIBE-CERT.
+
+!!! tip "Documentación desde el minuto uno"
+    La documentación debe comenzar desde el momento de la detección del incidente, no al final. Registra cada acción, decisión y descubrimiento en tiempo real. Tu "yo del futuro" (y tus compañeros) te lo agradecerán.
 
 ### 4.1. Información General del Incidente
 
--   **Asunto**: Una descripción breve y clara. (Ej: "Incidente de ransomware en el servidor de ficheros").
--   **Identificación del afectado**: Nombre de la organización o particular.
--   **Sector estratégico**: Si aplica (energía, financiero, sanidad, etc.).
--   **Fechas y horas clave**:
-    -   **Del incidente**: ¿Cuándo ocurrió?
-    -   **De la detección**: ¿Cuándo nos dimos cuenta?
--   **Descripción detallada**: Una narración completa de lo sucedido, incluyendo el `origen` si se conoce (phishing, malware, explotación de vulnerabilidad, etc.).
+Esta sección establece el **contexto básico** del incidente:
+
+-   **Asunto**: Una descripción breve y clara que identifique el incidente de forma única
+    
+    -   Ejemplo: "Incidente de ransomware WannaCry en servidor de ficheros PROD-FS-01"
+    -   Ejemplo: "Campaña de phishing dirigida al departamento de contabilidad"
+    
+-   **OSE/PSD**: Denominación del Operador de Servicios Esenciales o Proveedor de Servicios Digitales que notifica (si aplica según normativa NIS)
+    
+-   **Identificación del afectado**: Nombre completo de la organización o particular afectado
+    
+-   **Sector estratégico**: Si aplica según directiva NIS
+    
+    -   Energía, transporte, financiero, sanidad, suministro de agua, infraestructuras digitales, etc.
+    
+-   **Fechas y horas clave** (con la **mayor precisión posible**):
+    
+    -   **Fecha y hora del incidente**: ¿Cuándo ocurrió realmente? (puede determinarse después mediante análisis forense)
+    -   **Fecha y hora de detección**: ¿Cuándo nos dimos cuenta?
+    -   La diferencia entre ambas es el "dwell time" o tiempo de permanencia del atacante sin ser detectado
+    
+-   **Descripción detallada**: Una narración completa y cronológica de lo sucedido
+    
+    -   ¿Qué se ha observado?
+    -   ¿Cómo se ha detectado? (alerta del SIEM, usuario reportando, análisis proactivo...)
+    -   ¿Qué sistemas están afectados?
+    
+-   **Origen del incidente** (si se conoce o se sospecha):
+    
+    -   Apertura de fichero adjunto malicioso
+    -   Conexión de dispositivo USB infectado
+    -   Acceso a página web comprometida
+    -   Explotación de vulnerabilidad conocida/0-day
+    -   Credenciales comprometidas
+    -   Ataque de fuerza bruta exitoso
+
+<figure markdown>
+  ![Información general del incidente](assets/IS-U241-DocumentacionDeIncidentes7.png)
+  <figcaption>Campos de información general a documentar</figcaption>
+</figure>
 
 ### 4.2. Clasificación y Valoración
 
--   **Taxonomía**: Clasificar el incidente según una taxonomía estándar (ej. malware, DoS, phishing, fuga de información).
--   **Nivel de Peligrosidad**: Se refiere a la **amenaza** en sí misma. ¿Es un malware muy sofisticado? ¿Un ataque DDoS masivo? Se valora la capacidad intrínseca de la amenaza para causar daño.
--   **Nivel de Impacto**: Se refiere a las **consecuencias** reales o potenciales en la organización. ¿Se han perdido datos sensibles? ¿Se ha interrumpido un servicio crítico? ¿Hay daño reputacional?
--   **Impacto transfronterizo**: Indicar si el incidente afecta a otros estados miembros de la UE.
+Esta sección es crucial para **priorizar la respuesta** y **asignar recursos** adecuadamente:
 
-!!! note "Peligrosidad vs. Impacto"
-    Es crucial no confundir estos dos términos. Un malware muy **peligroso** (una nueva cepa de ransomware) puede tener un **impacto** bajo si se detecta y contiene a tiempo en un solo equipo no crítico. Por el contrario, un ataque poco sofisticado (baja **peligrosidad**) puede tener un **impacto** muy alto si afecta a un sistema vital para la empresa.
+-   **Taxonomía (Clasificación)**: Clasificar el incidente según la taxonomía estándar vista en el punto 2.1.1
+    
+    -   Contenido Abusivo (spam, contenido dañino, etc.)
+    -   Código Dañino (virus, gusano, troyano, spyware, etc.)
+    -   Recopilación de información (escaneo, análisis de paquetes, ingeniería social, etc.)
+    -   Intento de intrusión (explotación de vulnerabilidades, inicio de sesión no autorizado, etc.)
+    -   Intrusión (compromiso de cuenta, aplicación, sistema...)
+    -   Disponibilidad (DoS, DDoS, sabotaje, interrupción...)
+    -   Seguridad de la información (acceso no autorizado, modificación, fuga de datos...)
+    -   Fraude (uso no autorizado de recursos, phishing, suplantación de identidad...)
+    -   Vulnerable (sistema con vulnerabilidad conocida no parcheada)
+    -   Otros (cualquier incidente que no encaje en las categorías anteriores)
+    
+-   **Nivel de Peligrosidad**: Evaluación de la **amenaza en sí misma**
+    
+    -   Se basa en las **características intrínsecas** de la amenaza
+    -   ¿Es un malware muy sofisticado y destructivo?
+    -   ¿Es un APT (Advanced Persistent Threat) con gran capacidad?
+    -   ¿Es un ataque DDoS masivo con capacidad de saturar la infraestructura?
+    -   Niveles según guía INCIBE: **Crítico, Alto, Medio, Bajo**
+    
+-   **Nivel de Impacto**: Evaluación de las **consecuencias reales o potenciales**
+    
+    -   Se evalúa el daño causado o que podría causar a la organización
+    -   ¿Se han perdido datos sensibles?
+    -   ¿Se ha interrumpido un servicio crítico?
+    -   ¿Hay daño reputacional?
+    -   ¿Hay pérdidas económicas?
+    -   ¿Afecta al cumplimiento normativo?
+    -   Niveles según guía INCIBE: **Crítico, Alto, Medio, Bajo**
+    
+-   **Impacto transfronterizo**: Indicar si el incidente afecta a otros estados miembros de la UE (relevante para directiva NIS)
+
+<figure markdown>
+  ![Clasificación y valoración](assets/IS-U241-DocumentacionDeIncidentes13.png)
+  <figcaption>Clasificación según taxonomía de incidentes</figcaption>
+</figure>
+
+<figure markdown>
+  ![Peligrosidad](assets/IS-U241-DocumentacionDeIncidentes15.png)
+  <figcaption>Criterios para determinar el nivel de peligrosidad</figcaption>
+</figure>
+
+<figure markdown>
+  ![Impacto](assets/IS-U241-DocumentacionDeIncidentes16.png)
+  <figcaption>Criterios para determinar el nivel de impacto</figcaption>
+</figure>
+
+!!! note "Peligrosidad vs. Impacto: diferencia fundamental"
+    Es crucial no confundir estos dos conceptos:
+    
+    -   **PELIGROSIDAD**: Capacidad potencial de la amenaza de causar daño (características del ataque)
+    -   **IMPACTO**: Daño real o potencial causado a la organización (consecuencias del incidente)
+    
+    **Ejemplo 1**: Un ransomware muy sofisticado (PELIGROSIDAD ALTA) detectado y aislado en un equipo de pruebas tiene un IMPACTO BAJO.
+    
+    **Ejemplo 2**: Un ataque de phishing básico (PELIGROSIDAD MEDIA) que compromete credenciales del CEO y provoca una transferencia fraudulenta de 500.000€ tiene un IMPACTO CRÍTICO.
 
 ### 4.3. Detalles Técnicos
 
--   **Recursos tecnológicos afectados**: Listado de IPs, sistemas operativos, aplicaciones, versiones, etc.
--   **Indicadores de Compromiso (IOCs)**: Hashes de ficheros, dominios y IPs maliciosas, URLs de phishing, etc.
--   **Indicadores de Ataque (IACs)**: Tácticas y técnicas utilizadas por los atacantes, a menudo mapeadas con el framework MITRE ATT&CK.
+Esta información es esencial para el **análisis técnico** y la **mejora de defensas**:
+
+-   **Recursos tecnológicos afectados**: Inventario detallado de activos comprometidos
+    
+    -   Direcciones IP (internas y públicas)
+    -   Nombres de host/FQDN
+    -   Sistemas operativos y versiones
+    -   Aplicaciones afectadas y versiones
+    -   Bases de datos comprometidas
+    -   Servicios interrumpidos
+    
+-   **Indicadores de Compromiso (IOCs)**: Elementos técnicos que identifican el ataque
+    
+    -   Hashes de ficheros maliciosos (MD5, SHA1, SHA256)
+    -   Dominios maliciosos contactados
+    -   IPs de comando y control (C&C)
+    -   URLs de phishing o descarga de malware
+    -   Claves de registro modificadas
+    -   Nombres de ficheros característicos
+    -   Patrones en nombres de procesos
+    
+-   **Indicadores de Ataque (IoAs)**: Tácticas y técnicas empleadas
+    
+    -   Mapeado según framework **MITRE ATT&CK**
+    -   Ejemplo: "T1566.001 - Phishing: Spearphishing Attachment"
+    -   Ejemplo: "T1486 - Data Encrypted for Impact"
+    -   Ejemplo: "T1059 - Command and Scripting Interpreter"
+
+<figure markdown>
+  ![Detalles técnicos](assets/IS-U241-DocumentacionDeIncidentes8.png)
+  <figcaption>Información técnica esencial a documentar</figcaption>
+</figure>
 
 ### 4.4. Gestión y Respuesta
 
--   **Plan de acción y contramedidas**: ¿Qué se ha hecho hasta ahora? Ej: "Se ha aislado el servidor afectado de la red", "Se han bloqueado las IPs de los atacantes en el firewall". Es importante detallar cada paso.
--   **Herramientas utilizadas**: Software y hardware empleado. Ej. SIEM, EDR, herramientas forenses.
--   **Colaboraciones**: Equipos internos (sistemas, legal) o externos (proveedores, INCIBE-CERT) que han participado en la gestión del incidente. Ej: "Colaboración con el equipo de respuesta a incidentes del proveedor X".
--   **Línea temporal de acciones**: Un registro cronológico detallado de todas las acciones realizadas por el equipo de respuesta. Ej: "10:15 - Detección del incidente", "10:30 - Aislamiento del sistema afectado", etc.
--   **Medios necesarios para la resolución**: Esfuerzo empleado, medido en jornadas-persona (JP). Ej: "5 JP del equipo de seguridad", "2 JP del equipo de sistemas".
+Esta sección documenta **cómo se ha gestionado** el incidente, información crítica para las lecciones aprendidas:
+
+-   **Plan de acción y contramedidas**: Descripción detallada de las acciones tomadas
+    
+    -   "10:15 - Aislamiento del servidor PROD-FS-01 de la red"
+    -   "10:30 - Bloqueo de IPs maliciosas en firewall perimetral"
+    -   "11:00 - Captura de memoria RAM del servidor para análisis forense"
+    -   "11:30 - Despliegue de reglas YARA para detectar variantes del malware"
+    -   "14:00 - Restauración desde backup de hace 24h tras verificar integridad"
+    
+-   **Herramientas utilizadas**: Software y hardware empleado en la respuesta
+    
+    -   SIEM (Splunk, ELK, QRadar...)
+    -   EDR (CrowdStrike, SentinelOne, Microsoft Defender...)
+    -   Herramientas forenses (FTK, Autopsy, Volatility, Wireshark...)
+    -   Sandboxes de análisis (Cuckoo, Any.Run, Joe Sandbox...)
+    
+-   **Colaboraciones**: Equipos y organizaciones que han participado
+    
+    -   Equipos internos: sistemas, networking, legal, comunicación
+    -   Externos: INCIBE-CERT, fabricantes (Microsoft, Cisco...), proveedores de servicios
+    -   Ejemplo: "Colaboración con el equipo de Threat Intelligence de CrowdStrike para análisis del malware"
+    
+-   **Línea temporal de acciones**: Cronología **precisa** de toda la respuesta
+    
+    -   Fecha y hora de cada acción significativa
+    -   Quién realizó la acción
+    -   Resultado de la acción
+    -   Esta timeline es **fundamental** para el análisis post-incidente
+    
+-   **Medios necesarios para la resolución**: Recursos consumidos
+    
+    -   Jornadas-Persona (JP) empleadas: "5 JP del equipo SOC, 2 JP del equipo de sistemas"
+    -   Horas extra, fines de semana trabajados
+    -   Ayuda externa contratada
+
+<figure markdown>
+  ![Gestión del incidente](assets/IS-U241-DocumentacionDeIncidentes9.png)
+  <figcaption>Documentación del plan de acción y contramedidas</figcaption>
+</figure>
+
+!!! tip "La importancia de la timeline"
+    Una línea temporal detallada no solo ayuda a entender qué ocurrió, sino también a identificar:
+    
+    -   Cuellos de botella en la respuesta
+    -   Tiempos de reacción mejorables
+    -   Dependencias críticas
+    -   Efectividad de las contramedidas
 
 ### 4.5. Consecuencias y Análisis Post-Incidente
 
--   **Afectación**: ¿Quién ha sido el afectado final? (la empresa, clientes, particulares).
--   **Impacto económico estimado**: Costes directos (horas de trabajo, sustitución de equipos) e indirectos (pérdida de negocio, multas).
--   **Extensión geográfica**: Local, autonómico, nacional, supranacional.
--   **Daños reputacionales**: Afectación a la imagen y confianza en la organización.
--   **Regulación afectada**: ¿Implica al ENS, RGPD, directiva NIS, Ley PIC?
--   **Actuación de FFCCSE**: ¿Se ha requerido la intervención de las Fuerzas y Cuerpos de Seguridad del Estado?
--   **Adjuntos**: Evidencias como capturas de pantalla, logs, correos electrónicos, etc.
+Esta sección documenta el **impacto real** del incidente en la organización:
+
+-   **Afectación**: Identificación de los afectados finales
+    
+    -   La propia empresa (sistemas, datos, reputación)
+    -   Clientes (datos personales expuestos, servicios interrumpidos)
+    -   Particulares (empleados, terceros)
+    -   Otras organizaciones (proveedores, partners)
+    
+-   **Impacto económico estimado**: Cuantificación de costes
+    
+    -   **Costes directos**:
+        -   Horas de trabajo del equipo de respuesta
+        -   Servicios externos contratados
+        -   Sustitución o reparación de equipos
+        -   Costes de notificación a afectados
+    -   **Costes indirectos**:
+        -   Pérdida de negocio durante la interrupción
+        -   Oportunidades de negocio perdidas
+        -   Posibles multas regulatorias (RGPD, ENS...)
+        -   Daño reputacional (pérdida de clientes)
+        -   Incremento de primas de seguros
+    
+-   **Extensión geográfica**: Alcance del incidente
+    
+    -   Local (una oficina, un centro de datos)
+    -   Autonómico (varias oficinas en la misma región)
+    -   Nacional (toda la organización en España)
+    -   Supranacional (afecta a operaciones en otros países)
+    
+-   **Daños reputacionales**: Afectación a la imagen corporativa
+    
+    -   ¿Ha salido en medios de comunicación?
+    -   ¿Se ha perdido confianza de clientes o partners?
+    -   ¿Ha habido críticas en redes sociales?
+    -   ¿Afecta a la cotización bursátil? (si es empresa cotizada)
+    
+-   **Regulación afectada**: Marco normativo que aplica al incidente
+    
+    -   **ENS** (Esquema Nacional de Seguridad)
+    -   **RGPD** (Reglamento General de Protección de Datos)
+    -   **Directiva NIS** / Ley PIC
+    -   **Otras** normativas sectoriales (PCI-DSS para sector financiero, HIPAA para sanitario...)
+    
+-   **Actuación de FFCCSE**: Intervención de autoridades
+    
+    -   ¿Se ha requerido la intervención de Policía Nacional o Guardia Civil (GDT)?
+    -   ¿Se ha presentado denuncia?
+    -   ¿Hay investigación judicial abierta?
+    
+-   **Adjuntos y evidencias**: Material complementario
+    
+    -   Capturas de pantalla de alertas y sistemas afectados
+    -   Logs relevantes (sanitizados para proteger información sensible)
+    -   Correos electrónicos de phishing (con cabeceras completas)
+    -   Muestras de malware (en formato seguro)
+    -   Informes de análisis forense
+    -   Comunicaciones con afectados y autoridades
+
+<figure markdown>
+  ![Consecuencias del incidente](assets/IS-U241-DocumentacionDeIncidentes10.png)
+  <figcaption>Documentación de impacto económico y afectación</figcaption>
+</figure>
+
+<figure markdown>
+  ![Regulación y evidencias](assets/IS-U241-DocumentacionDeIncidentes11.png)
+  <figcaption>Regulación afectada y necesidad de actuación de FFCCSE</figcaption>
+</figure>
+
+Con todas estas secciones completadas (4.1 a 4.5), tenemos documentado el **qué ocurrió, cómo respondimos y cuáles fueron las consecuencias**. Pero hay un aspecto crítico que no podemos ignorar y que condiciona **cómo** obtenemos y manejamos toda esta información: el **marco legal**.
 
 !!! quote "Máxima fundamental"
     "En caso de duda sobre la legalidad de una acción durante la respuesta al incidente, consulta con el departamento legal ANTES de actuar. Es mejor perder algo de tiempo que perder evidencias válidas o incurrir en responsabilidades legales."

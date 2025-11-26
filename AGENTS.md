@@ -151,7 +151,7 @@ summary: Resumen corto
 authors:
     - Eduardo Fdez
 date: YYYY-MM-DD
-icon: 
+icon: "material/file-document-outline"
 permalink: /modulo/unidadX/X.Y
 categories:
     - MODULO
@@ -447,7 +447,7 @@ description: Descripción detallada
 authors:
     - Eduardo Fdez
 date: YYYY-MM-DD
-icon: 
+icon: "material/file-document-edit"
 permalink: /modulo/unidadX/pY
 categories:
     - MODULO
@@ -484,56 +484,60 @@ tags:
 
 Los archivos de práctica (`practica/otrosRecursos)/`) pueden incluir ficheros adicionales necesarios para completar la práctica, como plantillas, datos de ejemplo, etc., asi como el ejercicio resuelto. Se generará un fichero con el mismo nombre y la extensión -solución.md, que contendrá la solución al ejercicio propuesto.
 
-### 2.5. Generación de preguntas formato Gift
+### 2.5. Generación de preguntas tipo test en formato Gift, para evaluar la teoría
 
 Las preguntas para cuestionarios se generarán en formato GIFT, siguiendo estas pautas:
 
-Se utilizarán para exámenes y pruebas. Escribe español de España y su estilo es relajado y amistoso. Está programado para:
+Este tipo de preguntas se utilizarán para examinar la parte teorica. Deben redactarse en español de España y con un estilo relajado y amistoso, pero sin perder la formalidad necesaria para un entorno educativo.
 
 Lo siguiente es la descripción básica del formato GIFT para preguntas de opción múltiple (cuatro opciones y solo una correcta):
 
-- El titulo de la pregunta irá encerrado entre doble dos puntos (::), un ejemplo seria: "::Agrupación::título".
+- Lo primero que nos encontramos es el agrupador de la pregunta que irá encerrado entre doble dos puntos (::).  A continuación irá la pregunta. Un ejemplo sería: "::Agrupación::Pregunta". La agrupación suele ser el Resultado de aprendizaje y el criterio de evaluación al que pertenece la pregunta, con una estructura similar a la siguiente: "RA_X.CE_Y. Descripción corta del RA y CE".
+- A continuación, se escribe la pregunta, que será lo más descriptiva posible.  Aunque no tiene por qué ser una pregunta, puede plantear  una situación práctica o ejemplo relacionado con el contenido del archivo teoria al que acompaña.
 - Las posibles respuestas se encierran entre llaves {}.
 - Las respuestas incorrectas iran prefijadas de la tilde (~), y la correcta del signo igual (=).
-- Las respuestas incorrectas restan -33.3333 puntos, y se refleja después del símbolo tilde (~) encerrado entre el simbolo porcentaje (%), por ejemplo: ~%-33.3333%Madrid #Incorrecta, Madrid es capital de España.
-- La retroalimentación debe ir después de la respuestas, precedida del símbolo almohadilla (#), y debe clarificar al alumno porque es o no es correcta la respuesta. Por ejemplo: ~%-33.3333%Madrid #Incorrecta, Madrid es capital de España.
+- Las respuestas incorrectas restan -33.3333 puntos, y se refleja después del símbolo tilde (~) encerrando entre el simbolo porcentaje (%) el porcentaje que resta, y a continuación la respuesta erronea. Por ejemplo: ~%-33.3333%Madrid #Incorrecta, Madrid es capital de España.
+- La retroalimentación debe ir después de la respuesta, precedida del símbolo almohadilla (#), y debe clarificar al alumno porque es o no es correcta la respuesta. Por ejemplo: ~%-33.3333%Madrid #Incorrecta, Madrid es capital de España.
 
-Crear preguntas en formato GIFT siguiendo el ejemplo, con un enfoque en la claridad y la retroalimentación educativa. Aquí tienes un ejemplo del formato de opción múltiple GIFT tal y como me gustaría que las generaras:
+Aquí tienes un ejemplo completo de la sintaxis siguiendo las pautas:
+
 ```gift
-::RA_X.CE_Y. Conoce las capitales de Europa::¿Capital de Francia? {
+::RA_X.CE_Y. Conoce las capitales de Europa::
+¿Capital de Francia? {
 =París #Correcto, París es la capital de Francia desde que se estableció la capitalidad en el siglo X.
 ~%-33.3333%Madrid #Incorrecto, Madrid es capital de España.
 ~%-33.3333%Roma #Incorrecto, Roma es la capital de Italia
 ~%-33.3333%Lóndres #Incorrecto, Lóndres es la capital de Inglaterra.
 }
 ```
-Otro ejemplo:
+Ahora te presento un ejemplo de como quiero que generes las preguntas en formato GIFT. Las preguntas tienen que estar planteadas con un enfoque en la claridad y la retroalimentación educativa. Preguntas con un estilo práctico y relacionada con el contenido del archivo teoria al que acompaña, es decir, basadas en un supuestos prácticos del mundo real sobre la base del contenido del archivo teoria al que acompaña:
+
 ```gift
 ::CE 1.4 – Transpiladores para la web::
-Quieres ejecutar lógica de negocio del cliente en el navegador, pero el equipo escribe en TypeScript/Kotlin. ¿Qué estrategia encaja según tu conocimiento?
+Quieres ejecutar lógica de negocio del cliente en el navegador, pero el equipo escribe en TypeScript. ¿Qué estrategia encaja según tu conocimiento?
 {
  =Transpilar a JavaScript para que el navegador lo ejecute. #Correcto: La transpilación es una técnica que nos permite convertir código escrito en un lenguaje a otro lenguaje, en este caso a JavaScript, que es el lenguaje nativo de los navegadores web. 
  ~%-33.3333%Compilar a .exe y subir el binario al servidor web. #Incorrecto: el navegador no ejecuta .exe por seguridad. Aunque con WebAssembly podríamos ejecutar código nativo, no es el caso de .exe.
  ~%-33.3333%Generar bytecode JVM y traspilarlo al formato que permita cargarlo directamente en el navegador. #Incorrecto: los navegadores no tienen una JVM nativa, ni podemos traspilar bytecode JVM a JavaScript de forma directa, por lo que esta opción no es viable.
- ~%-33.3333%Interpretar Python en el cliente sin motor JS. #Incorrecto: Python no es un lenguaje nativo de los navegadores web, por lo que no se puede interpretar directamente en el cliente sin un motor JS.
+ ~%-33.3333%Interpretar TypeScript directamente en el motor JS del cliente. #Incorrecto: Los navegadores no interpretan TypeScript de forma nativa, por lo que es necesario transpilarlo a JavaScript antes de su ejecución.
 }
 ```
 
+Además de las anteriores, también puede haber un porcentaje de preguntas basadas en definiciones o conceptos clave del tema tratado en el archivo teoria al que acompaña, pero siempre intentando que las respuestas incorrectas sean respuestas que puedan parecer correctas, para evitar que se pueda responder correctamente por descarte de las respuestas incorrectas.
+
 IMPORTANTE Y OBLIGATORIO seguir las siguientes reglas al generar los archivos GIFT:
 - Las normas específicas del formato GIFT.
+- Cualquier caracter usado en el formato GIFT que pueda generar conflicto, como los símbolos de porcentaje (%), tilde (~), igual (=), almohadilla (#), llaves ({, }), o dos puntos (::), deben ser escapados con una barra invertida (\) para evitar errores de interpretación.
 - Evitar un tono demasiado formal o complicado.
-- Proporcionar respuestas o retroalimentaciones formativo y completo, evitando retroalimentación genérica.
-- Habra un formato gif por cada archivo *.md contenido en la carpeta teoria.
-- De las posibles respuestas a la pregunta generada, las respuestas incorrectas tienen que ser repuestas que puedan parecer correctas, ya que si no es así, se podrá responder por descarte de las respuestas incorrectas.
+- Proporcionar respuestas o retroalimentaciones formativas y completas, evitando retroalimentación genérica.
+- IMPORTANTE: De las posibles respuestas a la pregunta generada, las respuestas incorrectas tienen que ser repuestas que puedan parecer correctas, ya que si no es así, se podrá responder correctamente por descarte de las respuestas incorrectas.
 - Las preguntas deben estar relacionadas con el contenido del archivo teoria al que acompañan. Esto es importante, ya que no se trata de generar preguntas aleatorias, sino preguntas que evalúen el conocimiento adquirido en el tema tratado en el archivo teoria. Preguntas con respuestas que no tengan relación con el contenido del archivo teoria no serán aceptadas. En el feedback de las respuestas, se debe explicar claramente por qué la respuesta correcta es correcta y por qué las respuestas incorrectas no lo son, haciendo referencia a los conceptos clave del tema tratado en el archivo teoria.
-- Las preguntas tienen que plantear situaciones prácticas o ejemplos relacionados con el contenido del archivo teoria, de forma que se evalúe no solo el conocimiento teórico, sino también la capacidad de aplicar ese conocimiento en situaciones prácticas. No hacer referencia en las preguntas a "según la unidad vista", "segun lo visto en el texto", "según lo que dice la unidad"; etc, sinó a los conceptos y ejemplos tratados en el archivo teoria.
-- Cada archivo GIFT contendrá al menos 10 preguntas de opción múltiple relacionadas con el contenido del archivo teoria al que acompañan.
+- Las preguntas tienen que plantear situaciones prácticas o ejemplos relacionados con el contenido del archivo teoria, de forma que se evalúe no solo el conocimiento teórico, sino también la capacidad de aplicar ese conocimiento en situaciones prácticas. No hacer referencia en las preguntas a "según la unidad vista", "según lo visto en el texto", "según lo que dice la unidad"; etc., sinó a los conceptos y ejemplos tratados en el archivo teoria.
+- Cada archivo GIFT contendrá al menos 15 preguntas de opción múltiple relacionadas con el contenido del archivo teoria al que acompañan.
 - Las preguntas tienen que cubrir los conceptos clave del tema tratado en el archivo teoria.
-- Las preguntas tienen que ser basadas en supuestos prácticos o ejemplos del contenido del archivo teoria, de forma que ademas de evaluar el conocimiento teórico, se evalúe la capacidad de aplicar ese conocimiento en situaciones prácticas.
-- El nombre del archivo GIFT será el mismo que el del archivo teoria al que acompaña, pero con la extensión .gift. Por ejemplo: MODULO-UX.Y.-Tema.gift.
-- Además, dentro de gift, tendremos un archivo que contendrá todas las preguntas de la unidad, con el nombre MODULO-UX.gift
+- Las preguntas tienen que ser basadas en supuestos prácticos o ejemplos del contenido del archivo teoria, de forma que además de evaluar el conocimiento teórico, se evalúe la capacidad de aplicar ese conocimiento en situaciones prácticas.
+- En la carpeta sectionZ/u0X/gift habrá un archivo formato gift con nombre MODULO-UX.Y.-Tema.gift por cada archivo MODULO-UX.Y.-Tema.md contenido en la carpeta sectionZ/u0X/teoria/ . Por tanto el nombre del archivo GIFT será el mismo que el del archivo teoria al que acompaña, pero con la extensión .gift. Por ejemplo: MODULO-UX.Y.-Tema.gift.
 - El archivo GIFT se ubicará en la carpeta gifts/ al mismo nivel que la carpeta teoria/ del módulo correspondiente.
-- Si te encuentras archivos con extensión *.gift los revisarás y corregirás, corrigiendo y adaptando las preguntas para que cumplan las especificaciones, y trasladando las preguntas ya corregidas al fichero adecuado. Una vez procesados los archivos que no cumplen las especificaciones y procesadas las preguntas, se eliminarán.
 
 ### 2.6. Convenciones de estilo en los documentos de TEORIA generados 
 
@@ -549,7 +553,7 @@ IMPORTANTE Y OBLIGATORIO seguir las siguientes reglas al generar los archivos GI
       <figcaption>Image caption</figcaption>
     </figure>
     ```
-- Usar admonitions para notas importantes:
+- Usar admonitions para alertas de puntos importantes durante los desarrollos del tema:
   ```markdown
   !!! note "Nota"
       Texto de la nota
@@ -559,6 +563,31 @@ IMPORTANTE Y OBLIGATORIO seguir las siguientes reglas al generar los archivos GI
   
   !!! tip "Consejo"
       Texto de consejo
+  
+  !!! quote "Cita"
+      "Texto de la cita"
+  
+  !!! success "Indicador de madurez"
+      Texto exitoso
+  
+  !!! example "Ejemplo"
+      Texto del ejemplo
+
+  !!! info "Información"
+      Texto informativo
+  
+  !!! danger "Peligro"
+      Texto de peligro
+  
+  !!! question "Pregunta"
+      Texto de la pregunta
+  
+  !!! abstract "Resumen"
+      Texto del resumen
+  
+  !!! definition "Definición"
+      Texto de la definición
+  
   ```
 
 **Código:**

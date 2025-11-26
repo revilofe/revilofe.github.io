@@ -202,6 +202,296 @@ Ambos modelos trabajan en conjunto para proporcionar una experiencia completa:
   <figcaption>Flujo de comunicación en una aplicación web: el navegador (cliente) realiza peticiones al servidor, que procesa la información y devuelve respuestas. El diagrama muestra cómo interactúan las diferentes capas de la aplicación.</figcaption>
 </figure>
 
+!!! info "Responsabilidades compartidas: cliente vs servidor"
+    Voy a explicarla como si estuviéramos montando una app web paso a paso, usando la imagen anterior como mapa.
+    **0. Visión general**
+    
+    La imagen se titula **“Anatomía de una App Web moderna”** y muestra las piezas típicas:
+    
+    * **FrontEnd** → lo que ve el usuario.
+
+        * **BackEnd** → la lógica y las reglas de negocio.
+        * **Base de datos** → la memoria de la aplicación.
+        * **CI/CD** → la automatización para construir, testear y desplegar.
+        * **Alojamiento / Cloud** → dónde vive todo eso (los servidores).
+    
+    Y todo ello conectado principalmente a través de una **API**.
+    
+    Te lo cuento siguiendo un flujo lógico:
+    👨‍💻 desarrollador → CI/CD → nube → usuario → FrontEnd → API → BackEnd → Base de datos → respuesta.
+    
+      
+    **1. FrontEnd – “Lo que ves”**
+    
+    Bloque verde de la izquierda.
+    
+    Es la parte de la aplicación que se ejecuta en el **navegador del usuario**:
+    
+    * Tecnologías básicas:
+        
+        * **HTML** → estructura del contenido.
+        * **CSS** → estilos, colores, maquetación.
+        * **JavaScript** → interactividad, llamadas a APIs, etc.
+    
+    * Frameworks de FrontEnd (los iconos de la imagen):
+        
+        * **Angular**
+        * **React**
+        * **Vue**
+    
+    Estos frameworks ayudan a:
+    
+    * Organizar la interfaz en **componentes**.
+
+        * Gestionar **rutas**, **estados**, formularios, validaciones…
+        * Consumir la **API** del backend (peticiones HTTP/JSON).
+    
+    💡 Idea clave:
+    El FrontEnd **no suele guardar datos importantes** ni tener la lógica “seria” de negocio.
+    Su misión es:
+    
+    1. Mostrar información de forma agradable.
+    2. Enviar peticiones al BackEnd por la API.
+    3. Representar lo que venga del servidor.
+    
+    **2. BackEnd – “La lógica"**
+    
+    Bloque azul de la derecha.
+    
+    Es el código que se ejecuta en el **servidor**:
+    
+    * Lenguajes típicos de backend que aparecen:
+        
+        * **Node.js**
+        * **Python**
+        * **Java**
+        * **Go**
+        * **C# / .NET**
+    
+    * Frameworks que se ven en los logos:
+        
+        * Para Node.js → **Express (ex)**, **Nest**, etc.
+        * Para Python → **Django**, **Flask**, …
+        * Para C# → **.NET Core**
+        * Para Go → frameworks ligeros (por ejemplo **Fiber**).
+    
+    Funciones del BackEnd:
+    
+    1. **Exponer una API** (normalmente REST o GraphQL):
+        
+        * Endpoints tipo `GET /api/usuarios`, `POST /api/login`, etc.
+
+    2. **Aplicar reglas de negocio**:
+       
+        * “Un usuario no puede comprar si no está autenticado”.
+        * “No puedes aplicar este descuento si ya se ha usado”.
+
+    3. **Hablar con la base de datos**:
+        
+        * Leer, insertar, actualizar y borrar registros.
+
+    4. **Gestionar seguridad**:
+      
+        * Autenticación, autorización, control de permisos.
+
+    5. **Integrarse con otros servicios**:
+     
+        * Pasarelas de pago, servicios de correo, colas de mensajes, etc.
+    
+    💡 Idea clave:
+    El BackEnd es el “cerebro” de la app.
+    El FrontEnd le pregunta *“¿Puedo hacer esto?”* y el BackEnd decide **cómo** y **si** se hace.
+
+    **3. Base de datos – “La memoria"****
+    
+    Bloque amarillo de la parte derecha inferior.
+    
+    Es donde se guardan los datos **persistentes**:
+    
+    * Tipos:
+        
+        * **SQL** (relacionales): tablas, filas, columnas, claves.
+        * **NoSQL** (documentos, key-value, grafos, etc.).
+    
+    * Motores que aparecen:
+        
+        * Relacionales: **Oracle**, **MySQL**, **PostgreSQL**, **SQL Server**…
+        * NoSQL (iconos tipo MongoDB, etc.).
+    
+    Funciones:
+    
+    * Guardar:
+        
+        * usuarios, pedidos, productos, posts, logs…
+    * Permitir consultas:
+        
+        * “Dame todos los pedidos del usuario X”.
+
+    * Mantener la integridad:
+        
+        * claves primarias, foráneas, restricciones, etc.
+    
+    En la imagen, las flechas muestran que **el BackEnd habla con la base de datos** (el FrontEnd nunca la toca directamente).
+    
+    💡 Idea clave: 
+    Base de datos = **memoria a largo plazo** de la app.
+    Si apagas el servidor pero la BD sigue, los datos permanecen.
+     
+    **4. La API – El pegamento entre FrontEnd y BackEnd**
+    
+    En el centro, las líneas de puntos indican la **API**.
+    
+    La API define **cómo se comunican** FrontEnd y BackEnd:
+    
+    * Formato habitual:
+
+        * Peticiones **HTTP** con respuestas en **JSON**.
+
+    * Ejemplos:
+        
+        * `GET /api/productos`
+        * `POST /api/usuarios`
+        * `PUT /api/pedidos/123`
+    
+    Flujo típico en ejecución:
+    
+    1. El usuario hace clic en un botón en el FrontEnd.
+    2. El FrontEnd manda una petición a la **API del BackEnd**.
+    3. El BackEnd procesa, consulta la BD si hace falta y devuelve un JSON.
+    4. El FrontEnd actualiza la interfaz con esa información.
+    
+    💡 La API actúa como **contrato**:
+    > “Si me llamas así, con estos parámetros, te devolveré esto”.
+     
+    **5. CI/CD – “La automatización”**
+    
+    Bloque circular gris de abajo a la izquierda.
+    
+    **CI/CD** = Integración Continua / Despliegue Continuo.
+    
+    Su misión es **automatizar el ciclo de vida del código** desde que el desarrollador hace un commit hasta que el código llega a producción.
+    
+    En la imagen se ve el flujo:
+    
+    1. **Commit**
+        
+        * El desarrollador sube código al repositorio (GitHub, GitLab, etc.).
+
+    2. **Build**
+        
+        * Se compila el proyecto, se generan artefactos (por ejemplo, un `.jar`, una imagen Docker…).
+
+    3. **Test**
+        
+        * Se ejecutan tests automáticos (unitarios, integración, etc.).
+
+    4. **Artifact**
+        
+        * Se guarda el resultado listo para desplegar (en un registry, repositorio de artefactos…).
+
+    5. **Deploy**
+        
+        * Se despliega automáticamente al entorno correspondiente (staging, producción…).
+
+    6. **Monitoring**
+        
+        * Se monitoriza la app: logs, métricas, alertas.
+    
+    Herramientas que aparecen como iconos:
+    
+    * **Jenkins**
+
+        * **GitLab CI**
+        * **AWS CodePipeline**
+        * **Argo**, etc.
+    
+    💡 Idea clave:
+    CI/CD es el “**cinturón de montaje**” de tu aplicación.
+    Te evita hacer deploys a mano y minimiza errores humanos.
+    
+    **6. Alojamiento / Cloud Service Provider – “El hogar”**
+    
+    En la parte inferior, los logos de:
+    
+    * **AWS**
+
+        * **Google Cloud**
+        * **Azure**
+        * **IBM Cloud**
+        * **Oracle Cloud**
+        * **Alibaba Cloud**
+    
+    Estos proveedores ofrecen:
+    
+    * Máquinas virtuales, contenedores, Kubernetes…
+    * Bases de datos gestionadas.
+    * Balanceadores de carga.
+    * Almacenamiento, CDN, etc.
+    
+    En la imagen se da a entender que:
+    
+    * Tu **FrontEnd**, tu **BackEnd** y tu **Base de datos** viven en alguno de estos proveedores de nube.
+    * El pipeline de **CI/CD** despliega directamente ahí.
+    
+   
+    **7. Poniéndolo todo junto: flujo completo**
+    
+    Imagina ahora el flujo end-to-end usando todos los bloques:
+    
+    1. 👨‍💻 **Desarrollo y CI/CD**
+        
+        * Tú desarrollas FrontEnd y BackEnd en tu equipo.
+        * Haces un **commit**.
+        * El pipeline de **CI/CD**:
+            
+            * construye el código,
+            * ejecuta tests,
+            * genera artefactos,
+            * despliega FrontEnd + BackEnd + cambios de BD en la **nube** (AWS, Azure, etc.).
+    
+    2. ☁️ **Infraestructura en la nube**
+        
+        * El FrontEnd se sirve, por ejemplo, desde un bucket estático o un servidor web.
+        * El BackEnd corre en contenedores, VMs o funciones serverless.
+        * La Base de datos está en un servicio gestionado.
+    
+    3. 🌐 **Uso por parte del usuario**
+        
+        * El usuario abre el navegador y carga el **FrontEnd**.
+        * El FrontEnd (HTML, CSS, JS) se muestra en pantalla.
+        * Cuando el usuario interactúa:
+            
+            1. El FrontEnd llama a la **API**.
+            2. La API llega al **BackEnd**.
+            3. El BackEnd aplica reglas de negocio y consulta la **Base de datos**.
+            4. El BackEnd devuelve un JSON al FrontEnd.
+            5. El FrontEnd actualiza la vista.
+    
+    4. 🔁 **Ciclo continuo**
+        
+        * Encuentras un bug o quieres una nueva funcionalidad.
+        * Modificas código → commit → CI/CD → nuevo deploy.
+        * El usuario recibe la versión actualizada, casi sin darse cuenta.
+    
+    
+    **8. Resumen rápido “para llevar”**
+    
+    * **FrontEnd**: lo que ve el usuario (HTML + CSS + JS, Angular/React/Vue).
+    * **BackEnd**: la lógica y la API (Node, Python, Java, Django, .NET…).
+    * **Base de datos**: la memoria (SQL/NoSQL: Oracle, MySQL, PostgreSQL, Mongo…).
+    * **API**: el contrato entre FrontEnd y BackEnd.
+    * **CI/CD**: la cadena de montaje que lleva tu código desde el commit hasta producción.
+    * **Cloud**: la casa donde viven todas estas piezas.
+    
+    Si piensas en la app como una ciudad:
+    
+    * FrontEnd sería la fachada y las calles,
+    * BackEnd la administración y las normas,
+    * Base de datos el archivo municipal,
+    * CI/CD las obras públicas que actualizan la ciudad sin cortarte siempre la calle,
+    * y la nube… el terreno sobre el que está construida.
+
+
 **Ejemplo práctico: formulario de login**
 
 Veamos cómo se reparten las responsabilidades en un caso real:
@@ -447,17 +737,19 @@ Las **PWA** son aplicaciones web que incorporan características de aplicaciones
 
 #### 4.4. Tabla comparativa
 
-| Aspecto | Página Web | Aplicación Web | PWA |
-|:--------|:-----------|:---------------|:----|
-| **Objetivo** | Informar | Proporcionar funcionalidad | Combinar lo mejor de ambas |
-| **Interactividad** | Baja | Alta | Alta |
-| **Complejidad** | Baja | Alta | Media-Alta |
-| **Recarga de página** | Completa | Parcial/Ninguna | Parcial/Ninguna |
-| **Estado de sesión** | Mínimo | Complejo | Complejo |
-| **Offline** | No | Limitado | Sí |
-| **Instalable** | No | No | Sí |
-| **Experiencia** | Documento | Aplicación | App nativa |
-| **Ejemplos** | Blog, web corporativa | Gmail, Trello | Twitter Lite, Pinterest |
+| Aspecto               | Página Web            | Aplicación Web             | PWA                        |
+|:----------------------|:----------------------|:---------------------------|:---------------------------|
+| **Objetivo**          | Informar              | Proporcionar funcionalidad | Combinar lo mejor de ambas |
+| **Interactividad**    | Baja                  | Alta                       | Alta                       |
+| **Complejidad**       | Baja                  | Alta                       | Media-Alta                 |
+| **Recarga de página** | Completa              | Parcial/Ninguna            | Parcial/Ninguna            |
+| **Estado de sesión**  | Mínimo                | Complejo                   | Complejo                   |
+| **Offline**           | No                    | Limitado                   | Sí                         |
+| **Instalable**        | No                    | No                         | Sí                         |
+| **Experiencia**       | Documento             | Aplicación                 | App nativa                 |
+| **Ejemplos**          | Blog, web corporativa | Gmail, Trello              | Twitter Lite, Pinterest    |
+
+
 
 ### 5. Clics en la web: ¿Qué sucede realmente?
 
@@ -470,67 +762,201 @@ Para comprender mejor todo lo que hemos visto, analicemos paso a paso qué ocurr
 
 **Flujo completo de una petición web:**
 
-1. **El usuario hace clic** en un botón o enlace en el navegador
+Te explico la imagen anterior como si estuviéramos en clase delante de la pizarra, siguiendo el dibujo de izquierda a derecha y de arriba abajo.
 
-2. **JavaScript captura el evento** (si es una aplicación moderna)
-    
-    - Puede validar datos antes de enviar
-    - Puede mostrar indicadores de carga
-    - Previene la recarga de página en SPAs
-    
-3. **Se construye la petición HTTP**
-    
-    - Define el método (GET, POST, PUT, DELETE)
-    - Incluye headers (autenticación, tipo de contenido)
-    - Añade los datos si es necesario (body)
-    
-4. **La petición viaja por Internet** hasta el servidor
+**1. Escribes la URL en el navegador**
 
-5. **El servidor web recibe la petición**
+* Tú tecleas, por ejemplo, `http://google.com` o `https://www.example.com`.
+* El **navegador** entiende:
     
-    - Puede ser Apache, Nginx, Node.js, etc.
-    - Verifica que la petición sea válida
-    
-6. **El servidor de aplicaciones procesa la petición**
-    
-    - Ejecuta el código correspondiente
-    - Valida datos y permisos
-    - Accede a la base de datos si es necesario
-    - Ejecuta la lógica de negocio
-    
-7. **Se genera la respuesta**
-    
-    - Puede ser HTML completo (páginas tradicionales)
-    - Puede ser JSON con datos (aplicaciones modernas)
-    - Incluye un código de estado (200, 404, 500, etc.)
-    
-8. **La respuesta viaja de vuelta al cliente**
+    * Protocolo: HTTP/HTTPS
+    * Nombre de dominio: `google.com`
+    * (Y si lo hubiera, puerto y ruta: `/login`, etc.)
 
-9. **El navegador recibe y procesa la respuesta**
+Antes de hablar con nadie en Internet, el navegador necesita saber **a qué dirección IP** tiene que ir.
+
+**2. Búsqueda de la IP: resolución DNS + cachés**
+
+En la imagen, esa parte es el bloque “DNS” y la columna **Cache → Browser → OS → Router → ISP**.
+
+1. **Cachés DNS**
+   El objetivo es evitar hacer trabajo extra.
+   El navegador pregunta, en este orden:
     
-    - Si es HTML, renderiza la nueva página
-    - Si es JSON, JavaScript actualiza solo partes de la página
-    - Ejecuta cualquier JavaScript incluido
+    * ¿Lo tengo en la **caché del propio navegador**?
+    * ¿Lo tiene la **caché del sistema operativo**?
+    * ¿Lo tiene el **router**?
+    * ¿Lo tiene el **ISP**?
+   
+2. Si alguna de esas capas tiene la IP guardada, tenemos un **cache hit** ✅ y se termina la búsqueda ahí.
+3. Si **nadie** lo sabe (**cache hit failed** ❌), entra en juego el **servidor DNS** “de verdad”:
     
-10. **El usuario ve el resultado**
+    * Pregunta primero a un **root name server** (los de la parte superior izquierda: saben dónde están los `.com`, `.org`, etc.).
+    * Luego a un **Top Level Domain server** (el que lleva `.com` por ejemplo).
+    * Luego a un **servidor autoritativo** del dominio (`example.com` en el dibujo).
+    * Finalmente, uno de ellos responde: *“`example.com` es la IP 8.9.0.1”* (la que se ve en la imagen).
+
+4. Esa IP se devuelve hacia atrás y se va copiando en las cachés intermedias para que la próxima vez vaya más rápido.
+
+Resultado de esta fase: Ya sabemos que `example.com` = `8.9.0.1`.
+
+**3. Establecer la conexión TCP (3-way handshake)**
+
+Parte central del diagrama: “Initiate TCP Connection” y los mensajes **SYN / SYN-ACK / ACK**.
+
+Antes de enviar HTTP, el navegador necesita abrir una **conexión TCP** con el servidor:
+
+1. **SYN**: el **cliente** (tu navegador) manda un paquete a `8.9.0.1` diciendo “quiero hablar contigo”.
+2. **SYN-ACK**: el **servidor** responde “vale, he recibido tu petición y también quiero hablar”.
+3. **ACK**: el cliente confirma “perfecto, ya estamos sincronizados”.
+
+Con eso se crea el **canal fiable** entre cliente y servidor.
+(Si fuera HTTPS, aquí además vendría el **handshake TLS** para cifrar la comunicación, aunque en la imagen no lo detallen.)
+
+**4. Enviar la petición HTTP**
+
+Una vez abierta la conexión TCP, pasamos al bloque “HTTP Request”.
+
+El navegador envía algo del estilo:
+
+```http
+GET / HTTP/1.1
+Host: www.example.com
+User-Agent: ...
+Accept-Language: ...
+...
+```
+
+Es decir:
+
+* Método (`GET`, `POST`, …)
+* Ruta (`/`, `/login`, …)
+* Cabeceras (idioma, tipo de contenido, cookies, etc.)
+
+**5. El servidor procesa y responde**
+
+En la parte derecha se ve “Server Response” y los códigos 1xx, 2xx, 3xx, 4xx, 5xx.
+
+El servidor:
+
+1. Recibe la petición HTTP.
+2. Ejecuta la lógica necesaria (leer de BD, plantillas, etc.).
+3. Genera una **respuesta HTTP**, por ejemplo:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: ...
+
+<html>...</html>
+```
+
+Los códigos se agrupan como indica el esquema:
+
+* **1xx** – Información
+* **2xx** – Éxito (200 OK, 201 Created…)
+* **3xx** – Redirecciones (301, 302…)
+* **4xx** – Errores del cliente (404 Not Found, 403 Forbidden…)
+* **5xx** – Errores del servidor (500, 503…)
+
+El cuerpo de la respuesta suele ser **HTML**, y a menudo dentro de ese HTML hay referencias a **CSS** y **JavaScript** y otros recursos.
+
+
+**6. El navegador recibe HTML + CSS + JS**
+
+Parte inferior izquierda: cuadro “HTML + CSS + JS” y las flechas a los parsers.
+
+El navegador ya tiene:
+
+* Un **documento HTML**.
+* Uno o varios **CSS** enlazados.
+* Uno o varios ficheros **JavaScript** enlazados.
+
+Ahora empieza el “trabajo sucio” del navegador: **interpretar y pintar**.
+
+
+**7. Parsing y construcción de estructuras internas**
+
+El navegador transforma el texto en estructuras de datos:
+
+1. **Parsear HTML → DOM Tree**
+    
+    * Pasa el HTML por un **tokenizer** (analizador léxico).
+    * Con esos tokens construye el **DOM Tree** (árbol de nodos: `<html>`, `<body>`, `<div>`, etc.).
+
+2. **Parsear CSS → CSSOM Tree**
+    
+    * Cada hoja de estilos se parsea (otro tokenizer).
+    * Se genera el **CSSOM Tree**, que representa todas las reglas de estilos.
+
+En paralelo:
+
+3. **JavaScript**
+    
+    * Se “load & evaluate”: se carga el JS y se ejecuta.
+    * El JS puede **modificar el DOM** y el **CSSOM** (añadir nodos, cambiar estilos, etc.), por eso en la imagen sale el ciclo entre JavaScript y los árboles.
+
+**8. Render tree, layout y painting**
+
+Parte central inferior: “Render Tree → Layout → Painting”.
+
+Una vez que tiene DOM + CSSOM, el navegador:
+
+1. **Crea el Render Tree**
+    
+    * Combina DOM y CSSOM para deducir qué elementos se deben **dibujar** y con qué estilo (color, fuente, etc.).
+    * Elementos como `<head>` que no se pintan, se excluyen.
+
+2. **Layout (reflow)**
+    
+    * Calcula **posiciones y tamaños** de cada elemento en la página:
+        
+        * coordenadas X/Y,
+        * anchuras, alturas,
+        * márgenes, paddings…
+    
+3. **Painting**
+    
+    * Finalmente **pinta** los píxeles en la pantalla:
+        
+        * fondos, bordes, texto, imágenes, sombras…
+
+Todo esto lo hace el **Render Engine** del navegador, coordinado con:
+
+* **User Interface** (la ventana, pestañas, barra de direcciones…),
+* **Browser Engine** (coordina las partes),
+* **Networking** (las descargas),
+* **JS Engine** (ejecuta tu JavaScript).
+
+
+**9. Página mostrada al usuario**
+
+Al final de todo el recorrido (parte inferior “Web Page Successfully Loaded”):
+
+* La conexión TCP sigue abierta un tiempo por si hay más peticiones (reutilización).
+* El navegador puede seguir pidiendo recursos (imágenes, más JS o CSS, fuentes…).
+* JavaScript puede seguir modificando el DOM, provocando nuevos layouts y repaints.
+
+Pero desde tu punto de vista como usuario, lo que ves es sencillo:
+
+* Has escrito una URL en el navegador…
+* Y ha aparecido una página web “como por arte de magia”.
+
+Solo que, como ves, la “magia” tiene bastantes pasos por debajo.
 
 !!! note "Diferencias entre páginas y aplicaciones"
-    En una **página web tradicional**, todo el proceso resulta en una recarga completa de la página. En una **aplicación web moderna** (SPA), solo se actualiza la parte necesaria, haciendo la experiencia mucho más fluida y rápida.
+En una **página web tradicional**, todo el proceso resulta en una recarga completa de la página. En una **aplicación web moderna** (SPA), solo se actualiza la parte necesaria, haciendo la experiencia mucho más fluida y rápida.
 
-## Resumen de la unidad
+
+### 6. Resumen de la unidad
 
 En esta unidad hemos aprendido:
 
 1. **El desarrollo web moderno** se enfoca tanto en la funcionalidad como en el despliegue eficiente de aplicaciones.
-
 2. **El código se ejecuta en dos lugares**: cliente (navegador) y servidor, cada uno con responsabilidades específicas.
-
 3. **Frontend** es lo que el usuario ve e interactúa, mientras que **Backend** es donde reside la lógica de negocio y los datos.
-
 4. **Un Backend universal** puede servir a múltiples tipos de clientes (web, móvil, escritorio).
-
 5. **Páginas web** son principalmente informativas, mientras que **aplicaciones web** proporcionan funcionalidad compleja y experiencias interactivas.
-
 6. **Cada clic** en la web desencadena un flujo complejo de comunicaciones entre cliente y servidor.
 
 Estos fundamentos son esenciales para comprender las arquitecturas web que estudiaremos en las siguientes secciones y para entender cómo desplegar aplicaciones correctamente.

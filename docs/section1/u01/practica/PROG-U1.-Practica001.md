@@ -5,7 +5,7 @@ description: Mi primer programa
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: "material/simple-task"
+icon: ":simple-task:"
 permalink: /prog/unidad1/p1.1
 categories:
     - PROG
@@ -14,7 +14,7 @@ tags:
     - Ejercicios
 ---
 
-## P1.1 - Mi primer programa - Windows
+## P1.1 - Mi primer programa - Windows OS
 
 A continuación, ofrecemos una guía paso a paso para aquellos usuarios principiantes interesados en aprender Python con Windows.
 

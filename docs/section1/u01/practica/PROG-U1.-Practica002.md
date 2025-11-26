@@ -1,6 +1,6 @@
 ---
 title: "UD 1 - P2: Usando Python"
-summary: description: Usando Python
+summary: Usando Python
 description: Usando Python
 authors:
     - Eduardo Fdez

@@ -1,7 +1,7 @@
 ---
 title: "UD 4 - 4.2 kotlin: Colecciones"
-description: kotlin: Colecciones
-summary: kotlin: Colecciones
+description: kotlin - Colecciones
+summary: kotlin - Colecciones
 authors:
     - Eduardo Fdez
 date: 2022-11-14

@@ -1,7 +1,7 @@
 ---
 title: "UD 1 - 1.4 Realización de pruebas con Pytest"
 description: Realización de pruebas con Pytest
-summary: description: Realización de pruebas con Pytest
+summary: Realización de pruebas con Pytest
 authors:
     - Eduardo Fdez
 date: 2023-09-30

@@ -1,7 +1,7 @@
 ---
-title: "UD 4 - 4.4 kotlin: Resumen"
-description: kotlin: Resumen
-summary: kotlin: Resumen
+title: "UD 4 - 4.4 kotlin - Resumen"
+description: kotlin - Resumen
+summary: kotlin - Resumen
 authors:
     - Eduardo Fdez
 date: 2022-11-14

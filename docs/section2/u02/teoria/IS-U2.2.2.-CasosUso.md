@@ -1,7 +1,7 @@
 ---
 title: "UD 2 - 2.2.2 Casos de Uso"
-description: SOC: Servicios y herramientas
-summary: SOC: Servicios y herramientas
+description: Casos de uso
+summary: Casos de uso
 authors:
     - Eduardo Fdez
 date: 2025-01-04

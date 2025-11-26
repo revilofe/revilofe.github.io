@@ -1,6 +1,6 @@
 ---
 title: "UD 1 - 1.3 Git y GitHub"
-description: Git y GitHub: qué son, para qué sirven y cómo usarlos en proyectos de desarrollo de software.
+description: Git y GitHub - qué son, para qué sirven y cómo usarlos en proyectos de desarrollo de software.
 summary: Git es un sistema de control de versiones distribuido que permite gestionar cambios en el código fuente. GitHub es una plataforma basada en Git que facilita la colaboración y gestión de proyectos.
 authors:
     - Eduardo Fdez

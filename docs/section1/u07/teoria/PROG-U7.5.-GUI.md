@@ -1,7 +1,7 @@
 ---
-title: "UD 7 - 7.5 Interfaces de usuario: Compose"
-description: Interfaces de usuario: Compose
-summary: Interfaces de usuario: Compose
+title: "UD 7 - 7.5 Interfaces de usuario - Compose"
+description: Interfaces de usuario - Compose
+summary: Interfaces de usuario - Compose
 authors:
     - Eduardo Fdez
 date: 2023-03-13

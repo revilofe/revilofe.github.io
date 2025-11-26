@@ -1,5 +1,5 @@
 ---
-title: title: "UD 2 - 2.3.1 Fuentes Abiertas. OSINT."
+title: "UD 2 - 2.3.1 Fuentes Abiertas. OSINT."
 description: Fuentes Abiertas. OSINT
 summary: Fuentes Abiertas. OSINT
 authors:

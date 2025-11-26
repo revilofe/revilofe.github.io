@@ -1,7 +1,7 @@
 ---
 title: "UD 2 - 2.2.3 Implementación de SIEM"
-description: SOC: Servicios y herramientas
-summary: SOC: Servicios y herramientas
+description: Implementación de SIEM
+summary: Implementación de SIEM
 authors:
     - Eduardo Fdez
 date: 2025-01-04

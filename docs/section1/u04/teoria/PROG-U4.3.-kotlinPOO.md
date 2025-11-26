@@ -1,7 +1,7 @@
 ---
-title: "UD 4 - 4.3 kotlin: POO"
-description: kotlin: POO
-summary: kotlin: POO
+title: "UD 4 - 4.3 kotlin - POO"
+description: kotlin - POO
+summary: kotlin - POO
 authors:
     - Eduardo Fdez
 date: 2022-11-14

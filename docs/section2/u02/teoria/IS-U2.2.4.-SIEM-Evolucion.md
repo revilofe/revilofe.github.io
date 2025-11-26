@@ -1,7 +1,7 @@
 ---
 title: "UD 2 - 2.2.4 Evolución de SIEM. SOAR."
-description: SOC: Servicios y herramientas
-summary: SOC: Servicios y herramientas
+description: Evolución de SIEM. SOAR
+summary: Evolución de SIEM. SOAR
 authors:
     - Eduardo Fdez
 date: 2025-01-04

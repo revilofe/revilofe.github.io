@@ -24,18 +24,23 @@ sectionX/
 │   └── ...                     # Otros archivos que pueden servir para generar documentación, prácticas, etc. Como el libro de texto del módulo
 └── uXX/                        # Unidades didácticas (u01, u02, u03...)
     ├── index.md                # Descripción de la unidad, contenidos y planificación
-    ├── gift/                   # Preguntas en formato GIFT para cuestionarios, exámenes, etc. Habrá un archivo GIFT por cada archivo teoria de la unidad
-    │   ├── MODULO-UX.Y.-Tema.gift
+    ├── gift/                   # [OPCIONAL] Preguntas en formato GIFT para cuestionarios, exámenes, etc.
+    │   ├── MODULO-UX.Y.-Tema.gift  # Habrá un archivo GIFT por cada archivo teoria de la unidad
     │   └── ...                  # Otros archivos GIFT para la unidad
     ├── teoria/                 # Contenidos teóricos
     │   ├── MODULO-UX.Y.-Tema.md
     │   ├── assets/             # Imágenes y recursos multimedia
     │   └── OtrosRecursos/      # Archivos adicionales (PDFs, plantillas, etc.)
-    └── practica/               # Prácticas y ejercicios
+    └── practica/               # Prácticas y ejercicios (singular en section1, 3, 4; "practicas" en section2)
         ├── MODULO-UX.-PracticaYYY.md
         ├── assets/             # Imágenes y recursos multimedia
         └── OtrosRecursos/      # Archivos adicionales necesarios
 ```
+
+!!! note "Nota sobre nomenclatura de carpetas"
+    **Inconsistencia actual**: La mayoría de módulos usan `practica/` (singular), pero section2 usa `practicas/` (plural).
+    
+    **Recomendación**: Usar `practica/` (singular) de forma consistente en todos los módulos.
 
 ### 1.2. Carpeta `slides/`
 
@@ -234,17 +239,16 @@ A continuación un listado:
 </figure>
 ```
 
-### 2.3. Etructura de las Slides
+### 2.3. Estructura de las Slides
 
 Los archivos de slides (`slides/`) se explican a continuación:
 
-
-**Formato de las slides**
+#### 2.3.1. Formato de las slides**
 A continuación explicamos el proceso de creación de presentaciones de diapositivas sobre contenidos, que normalmente serán de los módulos de informática. Generará slides siguiendo una estructura de markdown precisa (MUY IMPORTANTE SEGUIR LA NOTACIÓN MARKDOWN).
 
 Sigue concienzudamente estas REGLAS para GENERAR LAS SLIDES:
 
-- El contenido a generar son un conjunto de slides, formadas por grupos de slides denominadas  <<secciones>>, y dentro de cada sección hay varias slides relacionadas con la sección.
+- El contenido a generar son un conjunto de slides, formadas por grupos de slides denominadas  "secciones", y dentro de cada sección hay varias slides relacionadas con la sección.
 - El título principal de las slides será de nivel 1 (#).
 - Las secciones comienzan con títulos de nivel dos  (##).
 - Las secciones contienen distintas slides que hablan sobre conceptos o contenido relacionado con el titulo de la sección.
@@ -261,7 +265,7 @@ Sigue concienzudamente estas REGLAS para GENERAR LAS SLIDES:
 - Si un punto tiene subpuntos, y estos a su vez tienen subpuntos, estos se tratarán en slides independientes dentro de la misma sección, con el mismo título y numeración que el subpunto, pero añadiendo el subpunto. Por ejemplo, si el punto es 1.3.1 y tiene subpuntos.
 - Al final de TODAS las slides, se crearán notas para el presentador, mas extensas y en las que se describirá el contenido de cada uno de los puntos de las slide o información adicional que no cabe en la  slide.
 - Las notas vendrán identificadas y precedidas por la palabra "Note: " y a continuación el texto, Ej: "Note: Esto es una nota extensa que continuará....." y serán super completas y detalladas, para que el profesor pueda explicar todo el contenido de la slide sin dejar nada sin cubrir.
-- Las notas deben contener todos los comentarios necesarios que el profesor debe hacer para que ningún contenido se deje sin cubrir sobre el punto tratado en en la slide. Por tanto, es imporante que en las notas se expliquen todos los conceptos que aparecen en la slide, y se den ejemplos si es necesario.
+- Las notas deben contener todos los comentarios necesarios que el profesor debe hacer para que ningún contenido se deje sin cubrir sobre el punto tratado en en la slide. Por tanto, es importante que en las notas se expliquen todos los conceptos que aparecen en la slide, y se den ejemplos si es necesario.
 - Todas las interacciones y contenido proporcionado estarán en español de España, con un tono relajado y amistoso, pero sin perder la formalidad necesaria para un entorno educativo.
 
 IMPORTANTE:
@@ -273,153 +277,154 @@ IMPORTANTE:
 
 Un ejemplo sería el siguiente:
 
-            """""""
-            # U4.1 - Kotlin Básico    
+"""""""
+# U4.1 - Kotlin Básico    
 
-            ---
+---
 
-            ![Logo Alberti](assets/logo-iesra.png) <!-- .element height="50%" width="50%" -->
+![Logo Alberti](assets/logo-iesra.png) <!-- .element height="50%" width="50%" -->
 
-            ---
+---
 
-            ## Indice
+## Indice
 
-            ---
+---
 
-            ## 1. Introducción
-
-
-            ### 1.1. Kotlin
-
-            * Kotlin: un lenguaje de programación moderno y versátil.
-            * Desarrollado por JetBrains, lanzado en 2011.
-            * Interoperable con Java, popular en desarrollo Android.
-
-            Note: Presenta Kotlin, su origen y su popularidad, especialmente en el desarrollo de Android y su interoperabilidad con Java.
+## 1. Introducción
 
 
-            ### 1.1. Características de Kotlin
+### 1.1. Kotlin
 
-            A continuación, las características principales de Kotlin:
+* Kotlin: un lenguaje de programación moderno y versátil.
+* Desarrollado por JetBrains, lanzado en 2011.
+* Interoperable con Java, popular en desarrollo Android.
 
-            * Sintaxis concisa y expresiva.
-            * Seguridad de tipos nulos integrada.
-
-                * operador `?` para manejar valores nulos.
-                * Evita errores comunes de null pointer exceptions.
-
-            * Soporta programación funcional y orientada a objetos.
-
-            Note: Resalta las características clave de Kotlin, como la sintaxis concisa, la seguridad de tipos nulos y el soporte para paradigmas de programación.
+Note: Presenta Kotlin, su origen y su popularidad, especialmente en el desarrollo de Android y su interoperabilidad con Java.
 
 
-            ### 1.2. Configuración del Entorno de Kotlin
+### 1.1. Características de Kotlin
 
-            * Kotlin puede ser usado con IntelliJ IDEA, Android Studio, o cualquier editor de texto.
-            * Compilador de Kotlin disponible para línea de comandos.
-            * Kotlin Playground: para experimentar en línea.
+A continuación, las características principales de Kotlin:
 
-            Note: Ofrece opciones para configurar el entorno de desarrollo para Kotlin, incluyendo IDE's y herramientas en línea.
+* Sintaxis concisa y expresiva.
+* Seguridad de tipos nulos integrada.
 
+    * operador `?` para manejar valores nulos.
+    * Evita errores comunes de null pointer exceptions.
 
-            ### 1.3. Estructura Básica de un Programa en Kotlin
+* Soporta programación funcional y orientada a objetos.
 
-            * Todo programa en Kotlin comienza con la función `main`.
-            * `main` es el punto de entrada del programa.
-
-            ```Kotlin
-                //Programa "hola mundo" en Kotlin
-                fun main() {
-                    println("Hola, Kotlin!")
-                }
-            ```
-            Note: Explica la estructura básica de un programa en Kotlin, destacando la función `main` como punto de entrada.
+Note: Resalta las características clave de Kotlin, como la sintaxis concisa, la seguridad de tipos nulos y el soporte para paradigmas de programación.
 
 
-            ### 1.4. Ejemplo de Programa en Kotlin
+### 1.2. Configuración del Entorno de Kotlin
 
-            * Un programa simple que imprime un mensaje.
-            * Uso de `println` para mostrar salida en consola.
+* Kotlin puede ser usado con IntelliJ IDEA, Android Studio, o cualquier editor de texto.
+* Compilador de Kotlin disponible para línea de comandos.
+* Kotlin Playground: para experimentar en línea.
 
-            ```Kotlin
-                //Programa "hola mundo" en Kotlin. Uso de una variable
-
-                fun main() {
-                    
-                    val saludo = "Bienvenidos a Kotlin"
-                    println(saludo)
-                }
-            ```
-
-            Note: Muestra un ejemplo de programa que declara una variable y la imprime. Ideal para entender la declaración de variables y la salida estándar.
+Note: Ofrece opciones para configurar el entorno de desarrollo para Kotlin, incluyendo IDE's y herramientas en línea.
 
 
-            ### 1.5. Compilación y Ejecución
+### 1.3. Estructura Básica de un Programa en Kotlin
 
-            * Kotlin se compila a bytecode de Java, ejecutable en la JVM.
-            * Uso del comando `kotlinc` para compilar.
-            * Ejecución a través de la JVM o herramientas de Kotlin.
+* Todo programa en Kotlin comienza con la función `main`.
+* `main` es el punto de entrada del programa.
 
-            Note: Detalla cómo compilar y ejecutar programas en Kotlin, explicando la relación con la JVM.
-
-            ---
-
-            ## 2. Variables en Kotlin
-
-
-            ### 2.1. Introducción
-
-            * Kotlin maneja dos tipos de variables: `val` y `var`.
-            * `val` para valores inmutables, `var` para mutables.
-            * Fuerte inferencia de tipos.
-
-            Note: Introduce los conceptos básicos de variables en Kotlin. Explica la diferencia entre `val` (inmutable) y `var` (mutable). No tiene porque tener tipo explicito, pero siempre tendra un tipo implicito. 
+```Kotlin
+    //Programa "hola mundo" en Kotlin
+    fun main() {
+        println("Hola, Kotlin!")
+    }
+```
+Note: Explica la estructura básica de un programa en Kotlin, destacando la función `main` como punto de entrada.
 
 
+### 1.4. Ejemplo de Programa en Kotlin
 
-            ### 2.2. Variables Inmutables: `val` I
+* Un programa simple que imprime un mensaje.
+* Uso de `println` para mostrar salida en consola.
 
-            * `val` se usa para declarar una variable no mutable.
-            * Una vez asignado, su valor no puede cambiar.
+```Kotlin
+    //Programa "hola mundo" en Kotlin. Uso de una variable
 
-            ```Kotlin
-                // Definición de una variable no mutable
-                val saludo = "Hola Mundo"
-            ```
+    fun main() {
+        
+        val saludo = "Bienvenidos a Kotlin"
+        println(saludo)
+    }
+```
 
-            Note: Explica el uso de `val` para inmutalbes. La diferencia con constantes, es que las constantes siempre tienen valor, mientras las inmutables pueden no estar asignadas, y una vez se asignas no cambiarán de valor. Muestra ejemplos con y sin especificación de tipo.
-
-
-           ### 2.2. Variables Inmutables: `val` II
-
-            * `const val` se puede usar para definir una constante.
-            * Su valor se define en tiempo de compilación, su valor no puede cambiar.
-
-            ```Kotlin
-                // Definición de una constante
-                const val PREFIJO = "tde_"
-            ```
-
-            Note: Explica el uso de `val` para inmutalbes. La diferencia con constantes, es que las constantes siempre tienen valor, mientras las inmutables pueden no estar asignadas, y una vez se asignas no cambiarán de valor. Muestra ejemplos con y sin especificación de tipo.
+Note: Muestra un ejemplo de programa que declara una variable y la imprime. Ideal para entender la declaración de variables y la salida estándar.
 
 
-            ### 2.3. Variables Mutables: `var`
+### 1.5. Compilación y Ejecución
 
-            * `var` permite cambiar el valor de la variable.
-            * Útil cuando se necesita modificar el valor.
+* Kotlin se compila a bytecode de Java, ejecutable en la JVM.
+* Uso del comando `kotlinc` para compilar.
+* Ejecución a través de la JVM o herramientas de Kotlin.
 
-            ```Kotlin
-                // Definición de una variable mutable
-                var edad = 30
-                edad = 31
-            ```
+Note: Detalla cómo compilar y ejecutar programas en Kotlin, explicando la relación con la JVM.
 
-            Note: Detalla el uso de `var` para variables que pueden cambiar. Muestra un ejemplo de cómo se puede modificar el valor. 
+---
 
-            ---
-            """""""
+## 2. Variables en Kotlin
+
+
+### 2.1. Introducción
+
+* Kotlin maneja dos tipos de variables: `val` y `var`.
+* `val` para valores inmutables, `var` para mutables.
+* Fuerte inferencia de tipos.
+
+Note: Introduce los conceptos básicos de variables en Kotlin. Explica la diferencia entre `val` (inmutable) y `var` (mutable). No tiene porque tener tipo explicito, pero siempre tendra un tipo implicito. 
+
+
+
+### 2.2. Variables Inmutables: `val` I
+
+* `val` se usa para declarar una variable no mutable.
+* Una vez asignado, su valor no puede cambiar.
+
+```Kotlin
+    // Definición de una variable no mutable
+    val saludo = "Hola Mundo"
+```
+
+Note: Explica el uso de `val` para inmutalbes. La diferencia con constantes, es que las constantes siempre tienen valor, mientras las inmutables pueden no estar asignadas, y una vez se asignas no cambiarán de valor. Muestra ejemplos con y sin especificación de tipo.
+
+
+### 2.2. Variables Inmutables: `val` II
+
+* `const val` se puede usar para definir una constante.
+* Su valor se define en tiempo de compilación, su valor no puede cambiar.
+
+```Kotlin
+    // Definición de una constante
+    const val PREFIJO = "tde_"
+```
+
+Note: Explica el uso de `val` para inmutalbes. La diferencia con constantes, es que las constantes siempre tienen valor, mientras las inmutables pueden no estar asignadas, y una vez se asignas no cambiarán de valor. Muestra ejemplos con y sin especificación de tipo.
+
+
+### 2.3. Variables Mutables: `var`
+
+* `var` permite cambiar el valor de la variable.
+* Útil cuando se necesita modificar el valor.
+
+```Kotlin
+    // Definición de una variable mutable
+    var edad = 30
+    edad = 31
+```
+
+Note: Detalla el uso de `var` para variables que pueden cambiar. Muestra un ejemplo de cómo se puede modificar el valor. 
+
+---
+"""""""
 
 IMPORTANTE!!!!!! Como  has visto en el ejemplo:
+
 1. SIEMPRE usar """---""" para separar secciones de los documentos de slides.
 2. SIEMPRE usar """2 lineas en blanco""" para separar las slides dentro de una sección de los documentos de slides.
 3. En los documentos de slides no aparecerá """----""" ni """2 lineas en blanco""" en ningun otro lugar que no sea para separar secciones o slides respectivamente. Ya que si no, se romperá el formato de las slides.
@@ -431,8 +436,6 @@ El PLAN DE TRABAJO con el que trabajarás para generar las slides, será la sigu
 2. Piensa el contenido de cada sección, y por tanto que slides tendrán cada sección.
 3. Genera las slides de cada sección, hasta completar todas las secciones.
 4. Antes de terminar, asegurate haber contemplado todo el contenido del documento origen desde el que generamos las slides.
-
-
 
 
 ### 2.4. Estructura de prácticas
@@ -614,18 +617,84 @@ IMPORTANTE Y OBLIGATORIO seguir las siguientes reglas al generar los archivos GI
 - Dar una introducción clara y que enlace cada punto tratado con el siguiente punto a tratar, para facilitar la comprensión y el aprendizaje significativo. 
 - Evitar que hay puntos que quedan como una simple lista de cosas sin una introducción clara y sin un cierre que enlace con el siguiente punto a tratar.
 
-### 2.7. Metadatos obligatorios en TEORIA
+### 2.7. Metadatos obligatorios
 
-Todos los documentos deben incluir el bloque YAML al inicio con:
+#### 2.7.1. Metadatos en documentos de TEORÍA
 
-- `title`: Título completo
-- `description`: Descripción SEO
-- `summary`: Resumen breve
-- `authors`: Autor(es)
-- `date`: Fecha de creación/modificación
+Todos los documentos de teoría deben incluir el bloque YAML al inicio con:
+
+- `title`: Título completo del documento
+- `description`: Descripción para SEO (recomendado: 150-160 caracteres)
+- `summary`: Resumen breve del contenido
+- `authors`: Autor(es) del documento
+- `date`: Fecha de creación/última modificación (formato YYYY-MM-DD)
+- `icon`: **Icono del documento** → `"material/file-document-outline"`
+- `permalink`: URL amigable para el documento
+- `categories`: Categoría del módulo
+- `tags`: Etiquetas relevantes para búsqueda y clasificación
+
+**Ejemplo de metadatos completos para teoría:**
+
+```yaml
+---
+title: "UD 2 - 2.4.1 Documentación de incidentes"
+description: "Aprende qué documentar en un incidente de seguridad y por qué es crucial"
+summary: "Guía completa sobre gestión y documentación de incidentes de seguridad"
+authors:
+    - Eduardo Fdez
+date: 2025-11-25
+icon: "material/file-document-outline"
+permalink: /is/unidad-2/2.4.1-documentacion-de-incidentes
+categories:
+    - "Incidentes de seguridad"
+tags:
+    - "Incidentes"
+    - "Documentación"
+    - "Seguridad"
+---
+```
+
+#### 2.7.2. Metadatos en documentos de PRÁCTICA
+
+Todos los documentos de práctica deben incluir el bloque YAML al inicio con:
+
+- `title`: Título de la práctica
+- `description`: Descripción breve de la práctica
+- `summary`: Resumen de los objetivos
+- `authors`: Autor(es) del documento
+- `date`: Fecha de creación/última modificación
+- `icon`: **Icono de práctica** → `"material/file-document-edit"`
 - `permalink`: URL amigable
 - `categories`: Categoría del módulo
 - `tags`: Etiquetas relevantes
+
+**Ejemplo de metadatos completos para práctica:**
+
+```yaml
+---
+title: "UD 2 - P1: Taxonomía"
+description: "Práctica sobre taxonomía de incidentes de seguridad"
+summary: "Clasificación práctica de incidentes según taxonomía"
+authors:
+    - Eduardo Fdez
+date: 2023-12-11
+icon: "material/file-document-edit"
+permalink: /is/unidad2/p2.1
+categories:
+    - IS
+tags:
+    - Incidentes
+    - Taxonomía
+---
+```
+
+!!! warning "Importante: Campo icon obligatorio"
+    El campo `icon` es **obligatorio** en todos los documentos:
+    
+    - **Teoría**: `icon: "material/file-document-outline"`
+    - **Práctica**: `icon: "material/file-document-edit"`
+    
+    Este campo permite la correcta visualización de iconos en MkDocs Material.
 
 
 ### 2.8. Normativa sobre el módulo
@@ -663,4 +732,115 @@ Al crear o modificar documentación, recordar:
 3. **Refuerzo**: Incluir ejercicios al final de cada tema
 4. **Visual**: Usar diagramas e imágenes para clarificar conceptos
 5. **Retroalimentación**: Proporcionar soluciones o pistas para los ejercicios
-6. **Motivación**: Explicar por qué es importante cada concepto  
+6. **Motivación**: Explicar por qué es importante cada concepto
+
+## 6. Lista de verificación de estructura
+
+Para verificar que un nuevo contenido cumple con la estructura y estándares del repositorio, usa esta checklist:
+
+### 6.1. Verificación de módulo completo
+
+- [ ] Existe `docs/sectionX/index.md` con descripción del módulo
+- [ ] Existe `docs/sectionX/recursos/MODULO Normativa.txt` con los RA y CE
+- [ ] Todas las unidades tienen su carpeta `uXX/`
+
+### 6.2. Verificación de unidad
+
+- [ ] Existe `docs/sectionX/uXX/index.md` con planificación de la unidad
+- [ ] Existe carpeta `teoria/` con documentos de contenido
+- [ ] Existe carpeta `practica/` (o `practicas/`) con ejercicios
+- [ ] [Opcional] Existe carpeta `gift/` con cuestionarios
+
+### 6.3. Verificación de documentos de teoría
+
+- [ ] Nomenclatura correcta: `MODULO-UX.Y.-NombreDescriptivo.md`
+- [ ] Metadatos YAML completos al inicio del archivo
+- [ ] Campo `icon: "material/file-document-outline"` presente
+- [ ] Estructura con títulos jerárquicos (##, ###, ####)
+- [ ] Enlaces entre conceptos relacionados
+- [ ] Uso de admonitions para resaltar información importante
+- [ ] Imágenes en carpeta `assets/` con referencias correctas
+- [ ] Lenguaje inclusivo y didáctico
+- [ ] Enlace a slide correspondiente (si existe)
+
+### 6.4. Verificación de documentos de práctica
+
+- [ ] Nomenclatura correcta: `MODULO-UX.-PracticaYYY.md` (sin punto Y)
+- [ ] Metadatos YAML completos al inicio del archivo
+- [ ] Campo `icon: "material/file-document-edit"` presente
+- [ ] Descripción clara de objetivos
+- [ ] Instrucciones paso a paso
+- [ ] Criterios de evaluación definidos
+- [ ] Recursos necesarios listados
+- [ ] Tiempo estimado indicado
+
+### 6.5. Verificación de slides
+
+- [ ] Archivo `.md` fuente en `slides/sectionX-XX/`
+- [ ] Archivo `.html` generado correspondiente
+- [ ] Nomenclatura correcta: `MODULO-UX.Y.-NombreDescriptivo`
+- [ ] Rutas relativas correctas (`../dist/`, `../plugin/`, `../custom.css`)
+- [ ] Configuración de Reveal.js completa
+- [ ] Assets en carpeta `assets/` del módulo
+- [ ] Referencias a la slide desde documentos de teoría actualizadas
+
+### 6.6. Verificación de integración
+
+- [ ] Nuevo contenido añadido a `mkdocs.yml` en sección `nav`
+- [ ] Enlaces internos funcionan correctamente
+- [ ] Enlaces a slides usan URLs absolutas
+- [ ] Imágenes se visualizan correctamente
+- [ ] `mkdocs serve` funciona sin errores
+- [ ] `mkdocs build` genera el sitio sin warnings críticos
+
+### 6.7. Comandos de verificación rápida
+
+```bash
+# Verificar metadatos con icon en teoría
+grep -r '^icon: "material/file-document-outline"' docs/sectionX/*/teoria/*.md
+
+# Verificar metadatos con icon en práctica
+grep -r '^icon: "material/file-document-edit"' docs/sectionX/*/practica*/*.md
+
+# Verificar estructura de una unidad
+ls -la docs/sectionX/uXX/
+
+# Verificar slides de un módulo
+ls slides/sectionX-XX/
+
+# Probar el sitio localmente
+mkdocs serve
+```
+
+## 7. Nomenclatura y convenciones adicionales
+
+### 7.1. Nomenclatura de archivos de práctica
+
+**Importante**: Los archivos de práctica NO incluyen el punto Y (tema), solo la unidad X:
+
+- ✅ Correcto: `IS-U2.-Practica001.md` (Incidentes, Unidad 2, Práctica 1)
+- ❌ Incorrecto: `IS-U2.1.-Practica001.md` (no se usa punto de tema)
+
+**Formato**: `MODULO-UX.-PracticaYYY.md`
+- `MODULO` = Prefijo del módulo (IS, PR, EDES, DAW)
+- `X` = Número de unidad
+- `YYY` = Número de práctica con ceros a la izquierda (001, 002, ...)
+
+### 7.2. Consistencia en carpetas
+
+| Elemento                    | Convención                | Ejemplo                                   |
+|-----------------------------|---------------------------|-------------------------------------------|
+| Carpeta de teoría           | `teoria/`                 | `docs/section2/u02/teoria/`               |
+| Carpeta de práctica         | `practica/` (recomendado) | `docs/section1/u01/practica/`             |
+| Carpeta de assets           | `assets/`                 | `docs/section2/u02/teoria/assets/`        |
+| Carpeta de recursos         | `OtrosRecursos/`          | `docs/section2/u02/teoria/OtrosRecursos/` |
+| Carpeta GIFT                | `gift/` (opcional)        | `docs/section2/u02/gift/`                 |
+
+
+### 7.2. Nomenclatura de archivos de slides
+
+| Elemento                        | Convención              | Ejemplo                                   |
+|---------------------------------|-------------------------|-------------------------------------------|
+| Carpeta de slides del modulo ZZ | `sectionX-ZZ/`          | `slides/section2-is/`                     |
+| Carpeta de assets de slides     | `sectionX-ZZ/assets/`   | `slides/section2-is/assets`               |
+

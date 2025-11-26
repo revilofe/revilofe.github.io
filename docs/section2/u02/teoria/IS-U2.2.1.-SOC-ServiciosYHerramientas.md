@@ -5,7 +5,7 @@ summary: Servicios y herramientas en un SOC
 authors:
     - Eduardo Fdez
 date: 2025-01-04
-icon: 
+icon: "material/file-document-outline"
 permalink: /is/unidad2/2.2.1
 categories:
     - IS

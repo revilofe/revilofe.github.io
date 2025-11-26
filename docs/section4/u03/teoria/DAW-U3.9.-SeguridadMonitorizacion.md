@@ -5,7 +5,7 @@ summary: Autenticación HTTP Basic y Digest, control de acceso por IP, configura
 authors:
     - Eduardo Fdez
 date: 2025-11-19
-icon: 
+icon: "material/file-document-outline"
 permalink: /daw/unidad3/3.9
 categories:
     - DAW

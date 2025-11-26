@@ -5,7 +5,7 @@ summary: Funcionamiento de servidores web, instalación y configuración de Apac
 authors:
     - Eduardo Fdez
 date: 2025-11-19
-icon: 
+icon: "material/file-document-outline"
 permalink: /daw/unidad3/3.7
 categories:
     - DAW

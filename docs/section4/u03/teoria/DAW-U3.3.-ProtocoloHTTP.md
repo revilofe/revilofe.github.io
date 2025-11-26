@@ -5,7 +5,7 @@ summary: Características del protocolo HTTP, formato de peticiones y respuestas
 authors:
     - Eduardo Fdez
 date: 2025-11-19
-icon: 
+icon: "material/file-document-outline"
 permalink: /daw/unidad3/3.3
 categories:
     - DAW

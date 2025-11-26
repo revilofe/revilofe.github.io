@@ -5,7 +5,7 @@ summary: Desarrollo web actual, modelos de ejecución cliente-servidor, componen
 authors:
     - Eduardo Fdez
 date: 2025-11-19
-icon: 
+icon: "material/file-document-outline"
 permalink: /daw/unidad3/3.1
 categories:
     - DAW

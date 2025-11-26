@@ -5,7 +5,7 @@ summary: POO
 authors:
     - Eduardo Fdez
 date: 2024-01-10
-icon: 
+icon: "material/file-document-outline"
 permalink: /prog/unidad4/4.3
 categories:
     - PROG

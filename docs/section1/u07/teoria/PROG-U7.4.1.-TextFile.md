@@ -6,7 +6,7 @@ summary: Text File
 authors:
   - Eduardo Fdez
 date: 2024-03-28
-icon:   
+icon: "material/file-document-outline"
 permalink: /prog/unidad7/7.4.1
 categories:
   - PROG

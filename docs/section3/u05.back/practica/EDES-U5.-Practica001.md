@@ -5,7 +5,7 @@ summary: Git/Github
 authors:
     - Eduardo Fdez
 date: 2022-10-23
-icon:   
+icon: "material/file-document-edit"
 permalink: /edes/unidad4/p4.1
 categories:
     - EDES

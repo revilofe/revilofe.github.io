@@ -5,7 +5,7 @@ summary: Git es un sistema de control de versiones distribuido que permite gesti
 authors:
     - Eduardo Fdez
 date: 2025-09-24
-icon:   
+icon: "material/file-document-outline"
 permalink: /deaw/unidad1/1.3
 categories:
     - DAW

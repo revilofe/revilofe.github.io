@@ -5,7 +5,7 @@ summary: Aplica Scrum
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon:   
+icon: "material/file-document-edit"
 permalink: /edes/unidad1/p1.2
 categories:
     - EDES

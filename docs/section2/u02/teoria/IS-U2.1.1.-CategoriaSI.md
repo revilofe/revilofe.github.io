@@ -5,7 +5,7 @@ summary: Taxonomía de incidentes
 authors:
     - Eduardo Fdez
 date: 2024-10-21
-icon: 
+icon: "material/file-document-outline"
 permalink: /is/unidad1/2.1.1
 categories:
     - IS

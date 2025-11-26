@@ -5,7 +5,7 @@ summary: "Actividad práctica para crear imágenes Docker con PHP y desplegar ap
 authors:
     - Eduardo Fdez
 date: 2025-01-13
-icon: 
+icon: "material/file-document-edit"
 permalink: /daw/unidad2/p2.10
 categories:
     - DAW

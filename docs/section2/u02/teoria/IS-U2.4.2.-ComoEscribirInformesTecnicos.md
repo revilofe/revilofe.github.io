@@ -5,7 +5,7 @@ summary: "Esta guía detallada ofrece consejos prácticos para la elaboración d
 authors:
     - Eduardo Fdez
 date: 2025-11-25
-icon: "material/file-document-edit-outline"
+icon: "material/file-document-outline"
 permalink: /is/unidad-2/2.5-como-escribir-informes-tecnicos
 categories:
     - "Incidentes de seguridad"

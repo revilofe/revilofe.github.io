@@ -5,7 +5,7 @@ summary: "Actividad práctica para desplegar una aplicación web con base de dat
 authors:
     - Eduardo Fdez
 date: 2025-01-12
-icon: 
+icon: "material/file-document-edit"
 permalink: /daw/unidad2/p2.1
 categories:
     - DAW

@@ -5,7 +5,7 @@ summary: Conceptos de servicios web y APIs, diferencias con páginas dinámicas,
 authors:
     - Eduardo Fdez
 date: 2025-11-19
-icon: 
+icon: "material/file-document-outline"
 permalink: /daw/unidad3/3.4
 categories:
     - DAW

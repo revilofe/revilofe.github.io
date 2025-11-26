@@ -5,7 +5,7 @@ summary: Ampliación 2
 authors:
   - Diego Cano
 date: 2023-11-15
-icon:
+icon: "material/file-document-outline"
 permalink: /prog/unidad3/3.9
 categories:
   - PROG

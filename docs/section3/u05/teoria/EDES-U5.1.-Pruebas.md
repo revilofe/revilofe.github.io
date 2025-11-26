@@ -5,7 +5,7 @@ summary: Pruebas
 authors:
   - Eduardo Fdez
 date: 2023-01-15
-icon:   
+icon: "material/file-document-outline"
 permalink: /edes/unidad3/3.1
 categories:
   - EDES

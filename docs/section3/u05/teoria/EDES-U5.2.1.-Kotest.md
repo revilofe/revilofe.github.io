@@ -5,7 +5,7 @@ summary: Kotest
 authors:
   - Eduardo Fdez
 date: 2023-01-15
-icon:   
+icon: "material/file-document-outline"
 permalink: /edes/unidad3/3.3
 categories:
   - EDES

@@ -5,7 +5,7 @@ description: JSON
 authors:
     - Diego Cano
 date: 2024-10-24
-icon: 
+icon: "material/file-document-edit"
 permalink: /prog/unidad3/p3.4
 categories:
     - PROG

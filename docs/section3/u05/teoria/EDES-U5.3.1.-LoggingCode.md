@@ -5,7 +5,7 @@ summary: Logging Code
 authors:
   - Eduardo Fdez
 date: 2024-04-16
-icon:   
+icon: "material/file-document-outline"
 permalink: /edes/unidad3/3.3.1
 categories:
   - EDES

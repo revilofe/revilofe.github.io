@@ -5,7 +5,7 @@ summary: Análisis de riesgos
 authors:
     - Eduardo Fdez
 date: 2024-10-21
-icon: 
+icon: "material/file-document-outline"
 permalink: /is/unidad1/1.2.2
 categories:
     - IS

@@ -5,7 +5,7 @@ summary: Qué son las GitHub Actions, cómo se estructuran los workflows y cómo
 authors:
     - Eduardo Fdez
 date: 2025-09-24
-icon:   
+icon: "material/file-document-outline"
 permalink: /deaw/unidad1/1.4
 categories:
     - DAW

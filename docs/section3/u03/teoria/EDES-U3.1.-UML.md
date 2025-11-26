@@ -5,7 +5,7 @@ summary: Lenguaje Unificado de Modelado - Fundamentos, historia y tipos de diagr
 authors:
     - Eduardo Fdez
 date: 2025-11-03
-icon:   
+icon: "material/file-document-outline"
 permalink: /edes/unidad3/3.1
 categories:
     - EDES

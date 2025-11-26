@@ -5,7 +5,7 @@ summary: Docker Compose, docker-compose.yml, orquestación
 authors:
     - Eduardo Fdez
 date: 2025-01-23
-icon: 
+icon: "material/file-document-outline"
 permalink: /daw/unidad2/2.4
 categories:
     - DAW

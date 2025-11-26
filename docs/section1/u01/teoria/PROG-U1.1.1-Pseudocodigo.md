@@ -6,7 +6,7 @@ authors:
     - Diego Cano
     - Eduardo Fdez
 date: 2023-09-20
-icon: 
+icon: "material/file-document-outline"
 permalink: /prog/unidad1/1.1.1
 categories:
     - PROG

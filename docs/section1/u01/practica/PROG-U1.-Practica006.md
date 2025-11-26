@@ -5,7 +5,7 @@ description: Mis primeras pruebas unitarias
 authors:
     - Diego Cano
 date: 2023-09-29
-icon: 
+icon: "material/file-document-edit"
 permalink: /prog/unidad1/p1.6
 categories:
     - PROG

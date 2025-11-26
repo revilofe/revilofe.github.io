@@ -5,7 +5,7 @@ summary: Visibilidad en miembros de clases
 authors:
     - Eduardo Fdez
 date: 2024-01-31
-icon:   
+icon: "material/file-document-outline"
 permalink: /prog/unidad5/5.2
 categories:
     - PROG

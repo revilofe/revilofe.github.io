@@ -5,7 +5,7 @@ summary: Recopilación y almacenamiento de evidencias
 authors:
     - Eduardo Fdez
 date: 2024-02-13
-icon: 
+icon: "material/file-document-outline"
 permalink: /is/unidad3/3.1
 categories:
     - IS

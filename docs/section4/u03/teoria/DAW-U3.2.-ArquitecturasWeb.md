@@ -5,7 +5,7 @@ summary: Aspectos generales y evolución de las arquitecturas web, modelos de ar
 authors:
     - Eduardo Fdez
 date: 2025-11-19
-icon: 
+icon: "material/file-document-outline"
 permalink: /daw/unidad3/3.1
 categories:
     - DAW

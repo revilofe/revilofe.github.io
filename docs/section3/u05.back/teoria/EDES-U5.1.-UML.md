@@ -5,7 +5,7 @@ summary: Conoce qué es UML, sus características principales, tipos de diagrama
 authors:
     - Eduardo Fdez
 date: 2024-11-27
-icon: 
+icon: "material/file-document-outline"
 permalink: /prog/unidad5/5.1
 categories:
     - EDES

@@ -5,7 +5,7 @@ summary: Introducción al perfil DevOps, sus funciones y conceptos asociados com
 authors:
     - Eduardo Fdez
 date: 2025-09-24
-icon:   
+icon: "material/file-document-outline"
 permalink: /deaw/unidad1/1.1
 categories:
     - DAW

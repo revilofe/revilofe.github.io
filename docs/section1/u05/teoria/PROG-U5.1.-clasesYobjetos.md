@@ -5,7 +5,7 @@ summary: Revisión de las clases/objetos
 authors:
     - Eduardo Fdez
 date: 2024-01-31
-icon:   
+icon: "material/file-document-outline"
 permalink: /prog/unidad5/5.1
 categories:
     - PROG

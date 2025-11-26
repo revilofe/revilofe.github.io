@@ -5,7 +5,7 @@ description: Herencia, interfaces, clases abstractas
 authors:
     - Eduardo Fdez
 date: 2024-02-23
-icon: 
+icon: "material/file-document-edit"
 permalink: /prog/unidad5/p5.1
 categories:
     - PROG

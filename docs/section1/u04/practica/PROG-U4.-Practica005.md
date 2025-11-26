@@ -5,7 +5,7 @@ description: Ejercicios básicos de POO IV
 authors:
     - Diego Cano
 date: 2024-01-16
-icon: 
+icon: "material/file-document-edit"
 permalink: /prog/unidad4/p4.4
 categories:
     - PROG

@@ -5,7 +5,7 @@ summary: Un programa informático
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: 
+icon: "material/file-document-outline"
 permalink: /prog/unidad1/1.1
 categories:
     - PROG

@@ -5,7 +5,7 @@ description: Ejercicios básicos kotlin
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: 
+icon: "material/file-document-edit"
 permalink: /prog/unidad4/p4.1
 categories:
     - PROG

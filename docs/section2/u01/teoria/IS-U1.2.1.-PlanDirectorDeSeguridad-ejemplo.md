@@ -5,7 +5,7 @@ summary: Plan director de seguridad - Ejemplo
 authors:
     - Eduardo Fdez
 date: 2023-10-23
-icon:
+icon: "material/file-document-outline"
 permalink: /is/unidad1/2.1
 categories:
     - IS

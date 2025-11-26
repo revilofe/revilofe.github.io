@@ -5,7 +5,7 @@ summary: Principios de diseño de software - Alta cohesión y bajo acoplamiento
 authors:
     - Eduardo Fdez
 date: 2024-11-03
-icon:   
+icon: "material/file-document-outline"
 permalink: /edes/unidad3/3.4
 categories:
     - EDES

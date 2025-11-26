@@ -5,7 +5,7 @@ summary: Entornos de desarrollo integrado
 authors:
     - Eduardo Fdez
 date: 2024-10-21
-icon:   
+icon: "material/file-document-outline"
 permalink: /edes/unidad2/2.1
 categories:
     - EDES

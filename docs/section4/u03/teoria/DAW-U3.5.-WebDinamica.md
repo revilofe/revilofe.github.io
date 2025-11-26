@@ -5,7 +5,7 @@ summary: Diferencias entre páginas estáticas y dinámicas, funcionamiento de w
 authors:
     - Eduardo Fdez
 date: 2025-11-19
-icon: 
+icon: "material/file-document-outline"
 permalink: /daw/unidad3/3.5
 categories:
     - DAW

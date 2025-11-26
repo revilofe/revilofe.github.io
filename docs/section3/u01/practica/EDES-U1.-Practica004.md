@@ -5,7 +5,7 @@ summary: Relación software y hardware
 authors:
     - Eduardo Fdez
 date: 2022-10-06
-icon:   
+icon: "material/file-document-edit"
 permalink: /edes/unidad1/p1.4
 categories:
     - EDES

@@ -5,7 +5,7 @@ summary: Docker, instalación, contenedores, comandos básicos
 authors:
     - Eduardo Fdez
 date: 2025-01-23
-icon: 
+icon: "material/file-document-outline"
 permalink: /daw/unidad2/2.1
 categories:
     - DAW

@@ -5,7 +5,7 @@ description: Listas
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: 
+icon: "material/file-document-edit"
 permalink: /prog/unidad2/p3.1
 categories:
     - PROG

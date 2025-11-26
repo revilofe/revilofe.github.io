@@ -5,7 +5,7 @@ summary: "Proyecto final que integra todos los conceptos aprendidos: Docker, Doc
 authors:
     - Eduardo Fdez
 date: 2025-01-13
-icon: 
+icon: "material/file-document-edit"
 permalink: /daw/unidad2/proyecto-final
 categories:
     - DAW

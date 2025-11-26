@@ -5,7 +5,7 @@ summary: Elementos, notación y relaciones en diagramas de clases UML
 authors:
     - Eduardo Fdez
 date: 2025-11-03
-icon:   
+icon: "material/file-document-outline"
 permalink: /edes/unidad3/3.2
 categories:
     - EDES

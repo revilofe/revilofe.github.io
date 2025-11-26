@@ -5,7 +5,7 @@ summary: Docker Hub, gestión de imágenes, capas, registros
 authors:
     - Eduardo Fdez
 date: 2025-01-23
-icon: 
+icon: "material/file-document-outline"
 permalink: /daw/unidad2/2.2
 categories:
     - DAW

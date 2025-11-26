@@ -5,7 +5,7 @@ description: Práctica en grupos I
 authors:
     - Diego Cano
 date: 2025-01-26
-icon: 
+icon: "material/file-document-edit"
 permalink: /prog/unidad4/p4.7
 categories:
     - PROG

@@ -5,7 +5,7 @@ summary: JSON
 authors:
     - Diego Cano
 date: 2024-11-24
-icon: 
+icon: "material/file-document-outline"
 permalink: /prog/unidad3/3.5
 categories:
     - PROG

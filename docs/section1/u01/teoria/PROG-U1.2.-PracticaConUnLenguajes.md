@@ -5,7 +5,7 @@ summary: Practica con un lenguaje
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: 
+icon: "material/file-document-outline"
 permalink: /prog/unidad1/1.2
 categories:
     - PROG

@@ -5,7 +5,7 @@ description: Actividad práctica para trabajar con H2 y SQL desde Kotlin.
 authors:
     - Eduardo Fdez by Alejandro Navarrete
 date: 2025-04-04
-icon: 
+icon: "material/file-document-edit"
 permalink: /prog/unidad6/p1
 categories:
     - PROG

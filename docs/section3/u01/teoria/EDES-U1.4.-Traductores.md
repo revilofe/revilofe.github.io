@@ -5,7 +5,7 @@ summary: Traductores
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon:   
+icon: "material/file-document-outline"
 permalink: /edes/unidad1/1.4
 categories:
     - EDES

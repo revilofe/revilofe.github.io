@@ -5,7 +5,7 @@ summary: Normativa de protección del puesto de trabajo
 authors:
 - Eduardo Fdez
 date: 2024-11-12
-icon:
+icon: "material/file-document-outline"
 permalink: /is/unidad1/1.3.1
 categories:
 - IS

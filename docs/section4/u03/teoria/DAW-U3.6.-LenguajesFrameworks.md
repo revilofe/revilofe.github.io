@@ -5,7 +5,7 @@ summary: Tipos de ejecución de lenguajes servidor, plataformas LAMP/WISA, tecno
 authors:
     - Eduardo Fdez
 date: 2025-11-19
-icon: 
+icon: "material/file-document-outline"
 permalink: /daw/unidad3/3.6
 categories:
     - DAW

@@ -6,7 +6,7 @@ summary: Manejo de archivos
 authors:
   - Eduardo Fdez
 date: 2022-02-24
-icon:   
+icon: "material/file-document-outline"
 permalink: /prog/unidad7/7.3
 categories:
   - PROG

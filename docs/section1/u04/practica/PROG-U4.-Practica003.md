@@ -5,7 +5,7 @@ description: Ejercicios básicos de POO II
 authors:
     - Diego Cano
 date: 2024-01-16
-icon: 
+icon: "material/file-document-edit"
 permalink: /prog/unidad4/p4.2
 categories:
     - PROG

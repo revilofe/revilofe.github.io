@@ -5,7 +5,7 @@ summary: kotlin
 authors:
     - Diego Cano
 date: 2024-02-12
-icon:   
+icon: "material/file-document-outline"
 permalink: /prog/unidad6/6.1
 categories:
     - PROG

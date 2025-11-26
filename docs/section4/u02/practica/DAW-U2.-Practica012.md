@@ -5,7 +5,7 @@ summary: "Actividad práctica para crear imágenes Docker que despliegan aplicac
 authors:
     - Eduardo Fdez
 date: 2025-01-13
-icon: 
+icon: "material/file-document-edit"
 permalink: /daw/unidad2/p2.12
 categories:
     - DAW

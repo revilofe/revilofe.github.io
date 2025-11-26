@@ -5,7 +5,7 @@ summary: "Actividad práctica para desplegar aplicación Java con Tomcat y Nginx
 authors:
     - Eduardo Fdez
 date: 2025-01-12
-icon: 
+icon: "material/file-document-edit"
 permalink: /daw/unidad2/p2.8
 categories:
     - DAW

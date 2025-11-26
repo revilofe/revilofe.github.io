@@ -5,7 +5,7 @@ summary: Relación entre software y hardware
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon:   
+icon: "material/file-document-outline"
 permalink: /edes/unidad1/1.1
 categories:
     - EDES

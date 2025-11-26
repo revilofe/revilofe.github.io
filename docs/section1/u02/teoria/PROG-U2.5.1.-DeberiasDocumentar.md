@@ -5,7 +5,7 @@ summary: Deberías documentar tu código
 authors:
   - Eduardo Fdez
 date: 2023-10-30 
-icon:
+icon: "material/file-document-outline"
 permalink: /prog/unidad2/2.5.1
 categories:
   - PROG

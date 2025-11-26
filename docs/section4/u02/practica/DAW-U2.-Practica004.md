@@ -5,7 +5,7 @@ summary: "Actividad práctica para desplegar una aplicación Java en Tomcat util
 authors:
     - Eduardo Fdez
 date: 2025-01-12
-icon: 
+icon: "material/file-document-edit"
 permalink: /daw/unidad2/p2.4
 categories:
     - DAW

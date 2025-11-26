@@ -5,7 +5,7 @@ summary: kotlin
 authors:
     - Eduardo Fdez
 date: 2024-01-08
-icon: 
+icon: "material/file-document-outline"
 permalink: /prog/unidad4/4.1.1
 categories:
     - PROG

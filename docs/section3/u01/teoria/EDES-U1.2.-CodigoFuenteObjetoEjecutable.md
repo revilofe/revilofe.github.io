@@ -5,7 +5,7 @@ summary: 1.2 Codigo Fuente, Ojeto y Ejecutable
 authors:
     - Eduardo Fdez
 date: 2024-10-07
-icon:   
+icon: "material/file-document-outline"
 permalink: /edes/unidad1/1.2
 categories:
     - EDES

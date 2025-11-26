@@ -5,7 +5,7 @@ summary: Plan de concienciación
 authors:
     - Eduardo Fdez
 date: 2024-02-13
-icon: 
+icon: "material/file-document-outline"
 permalink: /is/unidad1/1.4
 categories:
     - IS

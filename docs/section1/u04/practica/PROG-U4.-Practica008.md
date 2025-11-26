@@ -5,7 +5,7 @@ description: Práctica en grupos II
 authors:
     - Diego Cano
 date: 2025-01-27
-icon: 
+icon: "material/file-document-edit"
 permalink: /prog/unidad4/p4.8
 categories:
     - PROG

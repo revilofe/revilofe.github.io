@@ -5,7 +5,7 @@ summary: Técnicas, métodos y buenas prácticas para identificar clases a parti
 authors:
     - Eduardo Fdez
 date: 2025-11-03
-icon:   
+icon: "material/file-document-outline"
 permalink: /edes/unidad3/3.3
 categories:
     - EDES

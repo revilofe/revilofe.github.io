@@ -5,7 +5,7 @@ summary: Pasos, roles, entregables y métricas para un Plan Director de Segurida
 authors:
     - Eduardo Fdez
 date: 2025-11-02
-icon:
+icon: "material/file-document-outline"
 permalink: /is/unidad1/2.1/plan-director
 categories:
     - IS

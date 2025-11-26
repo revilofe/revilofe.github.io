@@ -5,7 +5,7 @@ summary: Fuentes Abiertas. OSINT
 authors:
     - Eduardo Fdez
 date: 2025-02-11
-icon:
+icon: "material/file-document-outline"
 permalink: /is/unidad2/2.3.1
 categories:
     - IS

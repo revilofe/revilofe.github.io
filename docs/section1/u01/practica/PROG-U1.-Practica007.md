@@ -5,7 +5,7 @@ description: Generar y usar clave SSH con Git y GitHub
 authors:
     - Diego Cano
 date: 2024-09-25
-icon: 
+icon: "material/file-document-edit"
 permalink: /prog/unidad1/p1.7
 categories:
     - PROG

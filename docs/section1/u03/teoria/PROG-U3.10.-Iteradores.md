@@ -5,7 +5,7 @@ summary: "Uso de iteradores y objetos iterables para recorrer secuencias como li
 authors:
     - Eduardo Fdez
 date: 2025-11-08
-icon: 
+icon: "material/file-document-outline"
 permalink: /prog/unidad3/3.10
 categories:
     - PROG

@@ -5,7 +5,7 @@ summary: Funciones
 authors:
     - Eduardo Fdez
 date: 2022-10-24
-icon: 
+icon: "material/file-document-outline"
 permalink: /prog/unidad3/3.5
 categories:
     - PROG

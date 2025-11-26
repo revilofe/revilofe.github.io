@@ -5,7 +5,7 @@ summary: Reflexión y discusión
 authors:
     - Eduardo Fdez
 date: 2024-10-07
-icon:   
+icon: "material/file-document-edit"
 permalink: /edes/unidad1/p1.10
 categories:
     - EDES

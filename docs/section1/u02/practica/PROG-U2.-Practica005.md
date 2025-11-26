@@ -5,7 +5,7 @@ description: 30 ejercicios progresivos del mundo real para practicar U01 y U02
 authors:
     - Eduardo Fdez
 date: 2025-10-25
-icon: 
+icon: "material/file-document-edit"
 permalink: /prog/unidad2/p2.5
 categories:
     - PROG

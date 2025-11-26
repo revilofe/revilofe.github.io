@@ -5,7 +5,7 @@ summary: "Actividad práctica para desplegar WordPress con MariaDB utilizando re
 authors:
     - Eduardo Fdez
 date: 2025-01-12
-icon: 
+icon: "material/file-document-edit"
 permalink: /daw/unidad2/p2.3
 categories:
     - DAW

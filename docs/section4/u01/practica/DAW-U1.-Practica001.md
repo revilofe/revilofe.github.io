@@ -5,7 +5,7 @@ summary: "Actividad práctica para automatizar tests y documentación multi-form
 authors:
   - Eduardo Fdez
 date: 2025-10-02
-icon:
+icon: "material/file-document-edit"
 permalink: /deaw/unidad6/p1.1
 categories:
   - DAWeb

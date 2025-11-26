@@ -5,7 +5,7 @@ summary: Conceptos de despliegue web, escalabilidad y balanceo de carga, contene
 authors:
     - Eduardo Fdez
 date: 2025-11-19
-icon: 
+icon: "material/file-document-outline"
 permalink: /daw/unidad3/3.8
 categories:
     - DAW

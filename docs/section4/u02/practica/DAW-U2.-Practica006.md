@@ -5,7 +5,7 @@ summary: "Actividad práctica para desplegar la aplicación de microservicios Te
 authors:
     - Eduardo Fdez
 date: 2025-01-12
-icon: 
+icon: "material/file-document-edit"
 permalink: /daw/unidad2/p2.6
 categories:
     - DAW

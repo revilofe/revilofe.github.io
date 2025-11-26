@@ -5,7 +5,7 @@ summary: Persistencia de datos, volúmenes Docker, bind mount, redes
 authors:
     - Eduardo Fdez
 date: 2025-01-23
-icon: 
+icon: "material/file-document-outline"
 permalink: /daw/unidad2/2.3
 categories:
     - DAW

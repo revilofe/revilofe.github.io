@@ -5,7 +5,7 @@ summary: Evaluación de IDEs
 authors:
     - Eduardo Fdez
 date: 2024-10-28
-icon:   
+icon: "material/file-document-edit"
 permalink: /edes/unidad2/p2.2
 categories:
     - EDES

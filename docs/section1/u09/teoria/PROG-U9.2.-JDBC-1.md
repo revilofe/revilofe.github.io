@@ -5,7 +5,7 @@ summary: JDBC y Kotlin
 authors:
   - Eduardo Fdez
 date: 2022-04-11
-icon:   
+icon: "material/file-document-outline"
 permalink: /prog/unidad9/9.2
 categories:
   - PROG

@@ -5,7 +5,7 @@ summary: 1.3 Código intermedio
 authors:
     - Eduardo Fdez
 date: 2024-10-07
-icon:   
+icon: "material/file-document-outline"
 permalink: /edes/unidad1/1.3
 categories:
     - EDES

@@ -5,7 +5,7 @@ summary: Consola y teclado expansión
 authors:
     - Eduardo Fdez
 date: 2024-03-29
-icon:   
+icon: "material/file-document-outline"
 permalink: /prog/unidad7/7.2.1
 categories:
     - PROG

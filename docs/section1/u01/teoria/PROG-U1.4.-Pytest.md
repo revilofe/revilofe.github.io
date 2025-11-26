@@ -5,7 +5,7 @@ summary: description: Realización de pruebas con Pytest
 authors:
     - Eduardo Fdez
 date: 2023-09-30
-icon: 
+icon: "material/file-document-outline"
 permalink: /prog/unidad1/1.4
 categories:
     - PROG

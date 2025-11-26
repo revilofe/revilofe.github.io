@@ -1,11 +1,11 @@
 ---
-title: "UD 1 - P1: Mi primer programa - Windows"
+title: "UD 1 - P1: Mi primer programa - Windows OS"
 summary: Mi primer programa
 description: Mi primer programa
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: 
+icon: "material/simple-task"
 permalink: /prog/unidad1/p1.1
 categories:
     - PROG

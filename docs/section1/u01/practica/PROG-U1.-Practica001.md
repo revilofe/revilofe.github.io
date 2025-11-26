@@ -5,7 +5,7 @@ description: Mi primer programa
 authors:
     - Eduardo Fdez
 date: 2022-09-18
-icon: ":simple-task:"
+icon: "material/file-document-edit"
 permalink: /prog/unidad1/p1.1
 categories:
     - PROG

@@ -350,154 +350,155 @@ IMPORTANTE:
 - NUNCA generes mas de 7 lineas (viñetas) por slide.
 - NUNCA generes líneas de mas de 80 caracteres.
 - RESPETA las separaciones de slides (2 lineas en blanco ) y secciones (---), tal como se indica.
+- SIEMPRE, para cada SLIDE genera las notas para el presentador, precedidas por "Note: " y en la misma linea. Estas notas estarán separadas del contenido de la slide por SOLO UNA LINEA EN BLANCO. Las slides tienen que explicar TODO el contenido de la slide. Tiene que explicar la idea principal de la slide, y desarrolarla un poco, teniendo en cuenta que el presentador tiene que poder leerla.
 
 Un ejemplo sería el siguiente:
 
-"""""""
-# U4.1 - Kotlin Básico    
-
----
-
-![Logo Alberti](assets/logo-iesra.png) <!-- .element height="50%" width="50%" -->
-
----
-
-## Indice
-
----
-
-## 1. Introducción
-
-
-### 1.1. Kotlin
-
-* Kotlin: un lenguaje de programación moderno y versátil.
-* Desarrollado por JetBrains, lanzado en 2011.
-* Interoperable con Java, popular en desarrollo Android.
-
-Note: Presenta Kotlin, su origen y su popularidad, especialmente en el desarrollo de Android y su interoperabilidad con Java.
-
-
-### 1.1. Características de Kotlin
-
-A continuación, las características principales de Kotlin:
-
-* Sintaxis concisa y expresiva.
-* Seguridad de tipos nulos integrada.
-
-    * operador `?` para manejar valores nulos.
-    * Evita errores comunes de null pointer exceptions.
-
-* Soporta programación funcional y orientada a objetos.
-
-Note: Resalta las características clave de Kotlin, como la sintaxis concisa, la seguridad de tipos nulos y el soporte para paradigmas de programación.
-
-
-### 1.2. Configuración del Entorno de Kotlin
-
-* Kotlin puede ser usado con IntelliJ IDEA, Android Studio, o cualquier editor de texto.
-* Compilador de Kotlin disponible para línea de comandos.
-* Kotlin Playground: para experimentar en línea.
-
-Note: Ofrece opciones para configurar el entorno de desarrollo para Kotlin, incluyendo IDE's y herramientas en línea.
-
-
-### 1.3. Estructura Básica de un Programa en Kotlin
-
-* Todo programa en Kotlin comienza con la función `main`.
-* `main` es el punto de entrada del programa.
-
-```Kotlin
-    //Programa "hola mundo" en Kotlin
-    fun main() {
-        println("Hola, Kotlin!")
-    }
-```
-Note: Explica la estructura básica de un programa en Kotlin, destacando la función `main` como punto de entrada.
-
-
-### 1.4. Ejemplo de Programa en Kotlin
-
-* Un programa simple que imprime un mensaje.
-* Uso de `println` para mostrar salida en consola.
-
-```Kotlin
-    //Programa "hola mundo" en Kotlin. Uso de una variable
-
-    fun main() {
+        """""""
+        # U4.1 - Kotlin Básico    
         
-        val saludo = "Bienvenidos a Kotlin"
-        println(saludo)
-    }
-```
-
-Note: Muestra un ejemplo de programa que declara una variable y la imprime. Ideal para entender la declaración de variables y la salida estándar.
-
-
-### 1.5. Compilación y Ejecución
-
-* Kotlin se compila a bytecode de Java, ejecutable en la JVM.
-* Uso del comando `kotlinc` para compilar.
-* Ejecución a través de la JVM o herramientas de Kotlin.
-
-Note: Detalla cómo compilar y ejecutar programas en Kotlin, explicando la relación con la JVM.
-
----
-
-## 2. Variables en Kotlin
-
-
-### 2.1. Introducción
-
-* Kotlin maneja dos tipos de variables: `val` y `var`.
-* `val` para valores inmutables, `var` para mutables.
-* Fuerte inferencia de tipos.
-
-Note: Introduce los conceptos básicos de variables en Kotlin. Explica la diferencia entre `val` (inmutable) y `var` (mutable). No tiene porque tener tipo explicito, pero siempre tendra un tipo implicito. 
-
-
-
-### 2.2. Variables Inmutables: `val` I
-
-* `val` se usa para declarar una variable no mutable.
-* Una vez asignado, su valor no puede cambiar.
-
-```Kotlin
-    // Definición de una variable no mutable
-    val saludo = "Hola Mundo"
-```
-
-Note: Explica el uso de `val` para inmutalbes. La diferencia con constantes, es que las constantes siempre tienen valor, mientras las inmutables pueden no estar asignadas, y una vez se asignas no cambiarán de valor. Muestra ejemplos con y sin especificación de tipo.
-
-
-### 2.2. Variables Inmutables: `val` II
-
-* `const val` se puede usar para definir una constante.
-* Su valor se define en tiempo de compilación, su valor no puede cambiar.
-
-```Kotlin
-    // Definición de una constante
-    const val PREFIJO = "tde_"
-```
-
-Note: Explica el uso de `val` para inmutalbes. La diferencia con constantes, es que las constantes siempre tienen valor, mientras las inmutables pueden no estar asignadas, y una vez se asignas no cambiarán de valor. Muestra ejemplos con y sin especificación de tipo.
-
-
-### 2.3. Variables Mutables: `var`
-
-* `var` permite cambiar el valor de la variable.
-* Útil cuando se necesita modificar el valor.
-
-```Kotlin
-    // Definición de una variable mutable
-    var edad = 30
-    edad = 31
-```
-
-Note: Detalla el uso de `var` para variables que pueden cambiar. Muestra un ejemplo de cómo se puede modificar el valor. 
-
----
-"""""""
+        ---
+        
+        ![Logo Alberti](assets/logo-iesra.png) <!-- .element height="50%" width="50%" -->
+        
+        ---
+        
+        ## Indice
+        
+        ---
+        
+        ## 1. Introducción
+        
+        
+        ### 1.1. Kotlin
+        
+        * Kotlin: un lenguaje de programación moderno y versátil.
+          * Desarrollado por JetBrains, lanzado en 2011.
+          * Interoperable con Java, popular en desarrollo Android.
+        
+        Note: Presenta Kotlin, su origen y su popularidad, especialmente en el desarrollo de Android y su interoperabilidad con Java.
+        
+        
+        ### 1.1. Características de Kotlin
+        
+        A continuación, las características principales de Kotlin:
+        
+        * Sintaxis concisa y expresiva.
+          * Seguridad de tipos nulos integrada.
+        
+              * operador `?` para manejar valores nulos.
+              * Evita errores comunes de null pointer exceptions.
+        
+          * Soporta programación funcional y orientada a objetos.
+        
+        Note: Resalta las características clave de Kotlin, como la sintaxis concisa, la seguridad de tipos nulos y el soporte para paradigmas de programación.
+        
+        
+        ### 1.2. Configuración del Entorno de Kotlin
+        
+        * Kotlin puede ser usado con IntelliJ IDEA, Android Studio, o cualquier editor de texto.
+          * Compilador de Kotlin disponible para línea de comandos.
+          * Kotlin Playground: para experimentar en línea.
+        
+        Note: Ofrece opciones para configurar el entorno de desarrollo para Kotlin, incluyendo IDE's y herramientas en línea.
+        
+        
+        ### 1.3. Estructura Básica de un Programa en Kotlin
+        
+        * Todo programa en Kotlin comienza con la función `main`.
+          * `main` es el punto de entrada del programa.
+        
+        ```Kotlin
+            //Programa "hola mundo" en Kotlin
+            fun main() {
+                println("Hola, Kotlin!")
+            }
+        ```
+        Note: Explica la estructura básica de un programa en Kotlin, destacando la función `main` como punto de entrada.
+        
+        
+        ### 1.4. Ejemplo de Programa en Kotlin
+        
+        * Un programa simple que imprime un mensaje.
+          * Uso de `println` para mostrar salida en consola.
+        
+        ```Kotlin
+            //Programa "hola mundo" en Kotlin. Uso de una variable
+        
+            fun main() {
+                
+                val saludo = "Bienvenidos a Kotlin"
+                println(saludo)
+            }
+        ```
+        
+        Note: Muestra un ejemplo de programa que declara una variable y la imprime. Ideal para entender la declaración de variables y la salida estándar.
+        
+        
+        ### 1.5. Compilación y Ejecución
+        
+        * Kotlin se compila a bytecode de Java, ejecutable en la JVM.
+          * Uso del comando `kotlinc` para compilar.
+          * Ejecución a través de la JVM o herramientas de Kotlin.
+        
+        Note: Detalla cómo compilar y ejecutar programas en Kotlin, explicando la relación con la JVM.
+        
+        ---
+        
+        ## 2. Variables en Kotlin
+        
+        
+        ### 2.1. Introducción
+        
+        * Kotlin maneja dos tipos de variables: `val` y `var`.
+          * `val` para valores inmutables, `var` para mutables.
+          * Fuerte inferencia de tipos.
+        
+        Note: Introduce los conceptos básicos de variables en Kotlin. Explica la diferencia entre `val` (inmutable) y `var` (mutable). No tiene porque tener tipo explicito, pero siempre tendra un tipo implicito. 
+        
+        
+        
+        ### 2.2. Variables Inmutables: `val` I
+        
+        * `val` se usa para declarar una variable no mutable.
+          * Una vez asignado, su valor no puede cambiar.
+        
+        ```Kotlin
+            // Definición de una variable no mutable
+            val saludo = "Hola Mundo"
+        ```
+        
+        Note: Explica el uso de `val` para inmutalbes. La diferencia con constantes, es que las constantes siempre tienen valor, mientras las inmutables pueden no estar asignadas, y una vez se asignas no cambiarán de valor. Muestra ejemplos con y sin especificación de tipo.
+        
+        
+        ### 2.2. Variables Inmutables: `val` II
+        
+        * `const val` se puede usar para definir una constante.
+          * Su valor se define en tiempo de compilación, su valor no puede cambiar.
+        
+        ```Kotlin
+            // Definición de una constante
+            const val PREFIJO = "tde_"
+        ```
+        
+        Note: Explica el uso de `val` para inmutalbes. La diferencia con constantes, es que las constantes siempre tienen valor, mientras las inmutables pueden no estar asignadas, y una vez se asignas no cambiarán de valor. Muestra ejemplos con y sin especificación de tipo.
+        
+        
+        ### 2.3. Variables Mutables: `var`
+        
+        * `var` permite cambiar el valor de la variable.
+          * Útil cuando se necesita modificar el valor.
+        
+        ```Kotlin
+            // Definición de una variable mutable
+            var edad = 30
+            edad = 31
+        ```
+        
+        Note: Detalla el uso de `var` para variables que pueden cambiar. Muestra un ejemplo de cómo se puede modificar el valor. 
+        
+        ---
+        """""""
 
 IMPORTANTE!!!!!! Como  has visto en el ejemplo:
 

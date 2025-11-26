@@ -830,6 +830,8 @@
         
   
   
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h4v-1.91L12.09 18H6v-2h8.09l2-2H6v-2h12.09L20 10.09V8l-6-6zm7 1.5L18.5 9H13zm7.15 9.5a.55.55 0 0 0-.4.16l-1.02 1.02 2.09 2.08 1.02-1.01c.21-.22.21-.58 0-.79l-1.3-1.3a.54.54 0 0 0-.39-.16m-2.01 1.77L12 20.92V23h2.08l6.15-6.15z"/></svg>
+  
   <span class="md-ellipsis">
     
   
@@ -917,6 +919,8 @@
       <a href="../../../../section1/u01/teoria/PROG-U1.4.-Pytest/" class="md-nav__link">
         
   
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -2218,6 +2222,8 @@
       <a href="../../../../section1/u04/teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
         
   
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -8721,6 +8727,7 @@
 <h3 id="3-el-archivo-docker-composeyml">3. El archivo docker-compose.yml<a class="headerlink" href="#3-el-archivo-docker-composeyml" title="Permanent link">&para;</a></h3>
 <p>El archivo <code>docker-compose.yml</code> es el corazón de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> Compose. Define toda tu aplicación en un formato legible y versionable.</p>
 <h4 id="31-estructura-basica">3.1. Estructura básica<a class="headerlink" href="#31-estructura-basica" title="Permanent link">&para;</a></h4>
+<p>Esta es la estructura mínima de un archivo <code>docker-compose.yml</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.8&#39;</span><span class="w">  </span><span class="c1"># Versión de docker-compose (opcional en v2)</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">services</span><span class="p">:</span>
@@ -8968,22 +8975,22 @@
 </ul>
 <p><strong>Resumen visual:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>┌─────────────────────────────────────────┐
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>│    Red: wordpress_net (172.18.0.0/16)  │
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>│                                          │
-<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>│  ┌──────────────┐    ┌──────────────┐  │
-<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>│  │  wordpress   │    │     db       │  │
-<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>│  │  (Apache)    │───▶│   (MySQL)    │  │
-<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>│  │  172.18.0.3  │    │  172.18.0.2  │  │
-<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>│  │  Puerto 8080 │    │  Puerto 3306 │  │
-<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>│  └──────┬───────┘    └──────┬───────┘  │
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>│    Red: wordpress_net (172.18.0.0/16)   │
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>│                                         │
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>│  ┌──────────────┐    ┌──────────────┐   │
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>│  │  wordpress   │    │     db       │   │
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>│  │  (Apache)    │───▶│   (MySQL)    │   │
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>│  │  172.18.0.3  │    │  172.18.0.2  │   │
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>│  │  Puerto 8080 │    │  Puerto 3306 │   │
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>│  └──────┬───────┘    └──────┬───────┘   │
 <a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>│         │                   │           │
-<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>│    ┌────▼────┐         ┌───▼─────┐     │
-<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>│    │ wp_data │         │ db_data │     │
-<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>│    └─────────┘         └─────────┘     │
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>│    ┌────▼────┐         ┌────▼────┐      │
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>│    │ wp_data │         │ db_data │      │
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>│    └─────────┘         └─────────┘      │
 <a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>└─────────────────────────────────────────┘
-<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>         ▲
-<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>         │ Puerto 8080
-<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>    [Tu navegador]
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>                    ▲
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>                    │ Puerto 8080
+<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>              [Tu navegador]
 </code></pre></div>
 <h3 id="4-el-comando-docker-compose">4. El comando docker compose<a class="headerlink" href="#4-el-comando-docker-compose" title="Permanent link">&para;</a></h3>
 <h4 id="41-comandos-principales-explicados">4.1. Comandos principales (explicados)<a class="headerlink" href="#41-comandos-principales-explicados" title="Permanent link">&para;</a></h4>

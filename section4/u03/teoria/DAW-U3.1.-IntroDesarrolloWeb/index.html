@@ -830,6 +830,8 @@
         
   
   
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h4v-1.91L12.09 18H6v-2h8.09l2-2H6v-2h12.09L20 10.09V8l-6-6zm7 1.5L18.5 9H13zm7.15 9.5a.55.55 0 0 0-.4.16l-1.02 1.02 2.09 2.08 1.02-1.01c.21-.22.21-.58 0-.79l-1.3-1.3a.54.54 0 0 0-.39-.16m-2.01 1.77L12 20.92V23h2.08l6.15-6.15z"/></svg>
+  
   <span class="md-ellipsis">
     
   
@@ -917,6 +919,8 @@
       <a href="../../../../section1/u01/teoria/PROG-U1.4.-Pytest/" class="md-nav__link">
         
   
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -2218,6 +2222,8 @@
       <a href="../../../../section1/u04/teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
         
   
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -7426,19 +7432,19 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resumen-de-la-unidad" class="md-nav__link">
+          <li class="md-nav__item">
+  <a href="#6-resumen-de-la-unidad" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Resumen de la unidad
+        6. Resumen de la unidad
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -8058,19 +8064,19 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resumen-de-la-unidad" class="md-nav__link">
+          <li class="md-nav__item">
+  <a href="#6-resumen-de-la-unidad" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Resumen de la unidad
+        6. Resumen de la unidad
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -8371,6 +8377,353 @@
 <br />
 <figcaption>Flujo de comunicación en una aplicación web: el navegador (cliente) realiza peticiones al servidor, que procesa la información y devuelve respuestas. El diagrama muestra cómo interactúan las diferentes capas de la aplicación.</figcaption>
 </figure>
+<div class="admonition info">
+<p class="admonition-title">Responsabilidades compartidas: cliente vs servidor</p>
+<p>Voy a explicarla como si estuviéramos montando una app web paso a paso, usando la imagen anterior como mapa.
+<strong>0. Visión general</strong></p>
+<p>La imagen se titula <strong>“Anatomía de una App Web moderna”</strong> y muestra las piezas típicas:</p>
+<ul>
+<li>
+<p><strong>FrontEnd</strong> → lo que ve el usuario.</p>
+<ul>
+<li><strong>BackEnd</strong> → la lógica y las reglas de negocio.</li>
+<li><strong>Base de datos</strong> → la memoria de la aplicación.</li>
+<li><strong><abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr></strong> → la automatización para construir, testear y desplegar.</li>
+<li><strong>Alojamiento / Cloud</strong> → dónde vive todo eso (los servidores).</li>
+</ul>
+</li>
+</ul>
+<p>Y todo ello conectado principalmente a través de una <strong><abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr></strong>.</p>
+<p>Te lo cuento siguiendo un flujo lógico:
+👨‍💻 desarrollador → <abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr> → nube → usuario → FrontEnd → <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> → BackEnd → Base de datos → respuesta.</p>
+<p><strong>1. FrontEnd – “Lo que ves”</strong></p>
+<p>Bloque verde de la izquierda.</p>
+<p>Es la parte de la aplicación que se ejecuta en el <strong>navegador del usuario</strong>:</p>
+<ul>
+<li>
+<p>Tecnologías básicas:</p>
+<ul>
+<li><strong><abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr></strong> → estructura del contenido.</li>
+<li><strong>CSS</strong> → estilos, colores, maquetación.</li>
+<li><strong>JavaScript</strong> → interactividad, llamadas a APIs, etc.</li>
+</ul>
+</li>
+<li>
+<p>Frameworks de FrontEnd (los iconos de la imagen):</p>
+<ul>
+<li><strong>Angular</strong></li>
+<li><strong>React</strong></li>
+<li><strong>Vue</strong></li>
+</ul>
+</li>
+</ul>
+<p>Estos frameworks ayudan a:</p>
+<ul>
+<li>
+<p>Organizar la interfaz en <strong>componentes</strong>.</p>
+<ul>
+<li>Gestionar <strong>rutas</strong>, <strong>estados</strong>, formularios, validaciones…</li>
+<li>Consumir la <strong><abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr></strong> del backend (peticiones <abbr title="Protocolo de Transferencia de Hipertexto. Es un protocolo que se utiliza para transferir información entre un cliente y un servidor a través de una red. El HTTP permite a los usuarios acceder a sitios web, enviar y recibir datos, etc.">HTTP</abbr>/JSON).</li>
+</ul>
+</li>
+</ul>
+<p>💡 Idea clave:
+El FrontEnd <strong>no suele guardar datos importantes</strong> ni tener la lógica “seria” de negocio.
+Su misión es:</p>
+<ol>
+<li>Mostrar información de forma agradable.</li>
+<li>Enviar peticiones al BackEnd por la <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr>.</li>
+<li>Representar lo que venga del servidor.</li>
+</ol>
+<p><strong>2. BackEnd – “La lógica"</strong></p>
+<p>Bloque azul de la derecha.</p>
+<p>Es el código que se ejecuta en el <strong>servidor</strong>:</p>
+<ul>
+<li>
+<p>Lenguajes típicos de backend que aparecen:</p>
+<ul>
+<li><strong>Node.js</strong></li>
+<li><strong>Python</strong></li>
+<li><strong>Java</strong></li>
+<li><strong>Go</strong></li>
+<li><strong>C# / .NET</strong></li>
+</ul>
+</li>
+<li>
+<p>Frameworks que se ven en los logos:</p>
+<ul>
+<li>Para Node.js → <strong>Express (ex)</strong>, <strong>Nest</strong>, etc.</li>
+<li>Para Python → <strong>Django</strong>, <strong>Flask</strong>, …</li>
+<li>Para C# → <strong>.NET Core</strong></li>
+<li>Para Go → frameworks ligeros (por ejemplo <strong>Fiber</strong>).</li>
+</ul>
+</li>
+</ul>
+<p>Funciones del BackEnd:</p>
+<ol>
+<li>
+<p><strong>Exponer una <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr></strong> (normalmente <abbr title="Transferencia de Estado Representacional. Estilo arquitectónico de diseño de API que se basa en la representación de recursos y la transferencia de datos a través de HTTP. En REST, las API se diseñan de forma que sean simples, escalables y fáciles de usar.">REST</abbr> o <abbr title="Lenguaje de consulta de datos que se utiliza para definir y consultar API de forma eficiente. En GraphQL, los desarrolladores pueden especificar los datos que necesitan y recibirlos en una única consulta, lo que reduce la cantidad de datos transferidos y mejora el rendimiento de las aplicaciones.">GraphQL</abbr>):</p>
+<ul>
+<li>Endpoints tipo <code>GET /api/usuarios</code>, <code>POST /api/login</code>, etc.</li>
+</ul>
+</li>
+<li>
+<p><strong>Aplicar reglas de negocio</strong>:</p>
+<ul>
+<li>“Un usuario no puede comprar si no está autenticado”.</li>
+<li>“No puedes aplicar este descuento si ya se ha usado”.</li>
+</ul>
+</li>
+<li>
+<p><strong>Hablar con la base de datos</strong>:</p>
+<ul>
+<li>Leer, insertar, actualizar y borrar registros.</li>
+</ul>
+</li>
+<li>
+<p><strong>Gestionar seguridad</strong>:</p>
+<ul>
+<li>Autenticación, autorización, control de permisos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Integrarse con otros servicios</strong>:</p>
+<ul>
+<li>Pasarelas de pago, servicios de correo, colas de mensajes, etc.</li>
+</ul>
+</li>
+</ol>
+<p>💡 Idea clave:
+El BackEnd es el “cerebro” de la app.
+El FrontEnd le pregunta <em>“¿Puedo hacer esto?”</em> y el BackEnd decide <strong>cómo</strong> y <strong>si</strong> se hace.</p>
+<p><strong>3. Base de datos – “La memoria"**</strong></p>
+<p>Bloque amarillo de la parte derecha inferior.</p>
+<p>Es donde se guardan los datos <strong>persistentes</strong>:</p>
+<ul>
+<li>
+<p>Tipos:</p>
+<ul>
+<li><strong><abbr title="Lenguaje de Consulta Estructurado. Es un lenguaje de programación que se utiliza para gestionar y manipular bases de datos relacionales. El SQL permite a los usuarios crear, leer, actualizar y eliminar datos de las bases de datos, así como definir y modificar la estructura de las tablas.">SQL</abbr></strong> (relacionales): tablas, filas, columnas, claves.</li>
+<li><strong>NoSQL</strong> (documentos, key-value, grafos, etc.).</li>
+</ul>
+</li>
+<li>
+<p>Motores que aparecen:</p>
+<ul>
+<li>Relacionales: <strong>Oracle</strong>, <strong>MySQL</strong>, <strong>PostgreSQL</strong>, <strong><abbr title="Lenguaje de Consulta Estructurado. Es un lenguaje de programación que se utiliza para gestionar y manipular bases de datos relacionales. El SQL permite a los usuarios crear, leer, actualizar y eliminar datos de las bases de datos, así como definir y modificar la estructura de las tablas.">SQL</abbr> Server</strong>…</li>
+<li>NoSQL (iconos tipo MongoDB, etc.).</li>
+</ul>
+</li>
+</ul>
+<p>Funciones:</p>
+<ul>
+<li>
+<p>Guardar:</p>
+<ul>
+<li>usuarios, pedidos, productos, posts, logs…</li>
+</ul>
+</li>
+<li>
+<p>Permitir consultas:</p>
+<ul>
+<li>“Dame todos los pedidos del usuario X”.</li>
+</ul>
+</li>
+<li>
+<p>Mantener la integridad:</p>
+<ul>
+<li>claves primarias, foráneas, restricciones, etc.</li>
+</ul>
+</li>
+</ul>
+<p>En la imagen, las flechas muestran que <strong>el BackEnd habla con la base de datos</strong> (el FrontEnd nunca la toca directamente).</p>
+<p>💡 Idea clave: 
+Base de datos = <strong>memoria a largo plazo</strong> de la app.
+Si apagas el servidor pero la BD sigue, los datos permanecen.</p>
+<p><strong>4. La <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> – El pegamento entre FrontEnd y BackEnd</strong></p>
+<p>En el centro, las líneas de puntos indican la <strong><abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr></strong>.</p>
+<p>La <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> define <strong>cómo se comunican</strong> FrontEnd y BackEnd:</p>
+<ul>
+<li>
+<p>Formato habitual:</p>
+<ul>
+<li>Peticiones <strong><abbr title="Protocolo de Transferencia de Hipertexto. Es un protocolo que se utiliza para transferir información entre un cliente y un servidor a través de una red. El HTTP permite a los usuarios acceder a sitios web, enviar y recibir datos, etc.">HTTP</abbr></strong> con respuestas en <strong>JSON</strong>.</li>
+</ul>
+</li>
+<li>
+<p>Ejemplos:</p>
+<ul>
+<li><code>GET /api/productos</code></li>
+<li><code>POST /api/usuarios</code></li>
+<li><code>PUT /api/pedidos/123</code></li>
+</ul>
+</li>
+</ul>
+<p>Flujo típico en ejecución:</p>
+<ol>
+<li>El usuario hace clic en un botón en el FrontEnd.</li>
+<li>El FrontEnd manda una petición a la <strong><abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> del BackEnd</strong>.</li>
+<li>El BackEnd procesa, consulta la BD si hace falta y devuelve un JSON.</li>
+<li>El FrontEnd actualiza la interfaz con esa información.</li>
+</ol>
+<p>💡 La <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> actúa como <strong>contrato</strong>:</p>
+<blockquote>
+<p>“Si me llamas así, con estos parámetros, te devolveré esto”.</p>
+</blockquote>
+<p><strong>5. <abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr> – “La automatización”</strong></p>
+<p>Bloque circular gris de abajo a la izquierda.</p>
+<p><strong><abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr></strong> = Integración Continua / Despliegue Continuo.</p>
+<p>Su misión es <strong>automatizar el ciclo de vida del código</strong> desde que el desarrollador hace un commit hasta que el código llega a producción.</p>
+<p>En la imagen se ve el flujo:</p>
+<ol>
+<li>
+<p><strong>Commit</strong></p>
+<ul>
+<li>El desarrollador sube código al repositorio (<abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr>, GitLab, etc.).</li>
+</ul>
+</li>
+<li>
+<p><strong>Build</strong></p>
+<ul>
+<li>Se compila el proyecto, se generan artefactos (por ejemplo, un <code>.jar</code>, una imagen <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr>…).</li>
+</ul>
+</li>
+<li>
+<p><strong>Test</strong></p>
+<ul>
+<li>Se ejecutan tests automáticos (unitarios, integración, etc.).</li>
+</ul>
+</li>
+<li>
+<p><strong>Artifact</strong></p>
+<ul>
+<li>Se guarda el resultado listo para desplegar (en un registry, repositorio de artefactos…).</li>
+</ul>
+</li>
+<li>
+<p><strong>Deploy</strong></p>
+<ul>
+<li>Se despliega automáticamente al entorno correspondiente (staging, producción…).</li>
+</ul>
+</li>
+<li>
+<p><strong>Monitoring</strong></p>
+<ul>
+<li>Se monitoriza la app: logs, métricas, alertas.</li>
+</ul>
+</li>
+</ol>
+<p>Herramientas que aparecen como iconos:</p>
+<ul>
+<li>
+<p><strong><abbr title="Herramienta de integración continua que permite a los desarrolladores automatizar la construcción, las pruebas y el despliegue de aplicaciones. Jenkins se integra con una amplia variedad de herramientas y servicios, y permite crear pipelines de CI/CD personalizados.">Jenkins</abbr></strong></p>
+<ul>
+<li><strong>GitLab <abbr title="Integración Continua (*Continuous Integration*). Práctica de desarrollo de software que consiste en integrar de forma frecuente el código de todos los programadores en un repositorio común. Cada vez que alguien hace un cambio, el sistema lanza pruebas automáticas para comprobar que todo funciona y finalmente se integra el código si pasa las pruebas.">CI</abbr></strong></li>
+<li><strong><abbr title="Amazon Web Services. Plataforma de servicios en la nube que ofrece a los desarrolladores una amplia gama de servicios de infraestructura, almacenamiento, bases de datos, análisis, IA, etc. En AWS, los desarrolladores pueden desplegar aplicaciones de forma escalable y segura.">AWS</abbr> CodePipeline</strong></li>
+<li><strong>Argo</strong>, etc.</li>
+</ul>
+</li>
+</ul>
+<p>💡 Idea clave:
+<abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr> es el “<strong>cinturón de montaje</strong>” de tu aplicación.
+Te evita hacer deploys a mano y minimiza errores humanos.</p>
+<p><strong>6. Alojamiento / Cloud Service Provider – “El hogar”</strong></p>
+<p>En la parte inferior, los logos de:</p>
+<ul>
+<li>
+<p><strong><abbr title="Amazon Web Services. Plataforma de servicios en la nube que ofrece a los desarrolladores una amplia gama de servicios de infraestructura, almacenamiento, bases de datos, análisis, IA, etc. En AWS, los desarrolladores pueden desplegar aplicaciones de forma escalable y segura.">AWS</abbr></strong></p>
+<ul>
+<li><strong>Google Cloud</strong></li>
+<li><strong><abbr title="Microsoft Azure. Plataforma de servicios en la nube que ofrece una amplia gama de servicios, como almacenamiento, bases de datos, computación, análisis, inteligencia artificial, etc. Azure permite a las empresas escalar sus aplicaciones y servicios de forma flexible y eficiente.">Azure</abbr></strong></li>
+<li><strong>IBM Cloud</strong></li>
+<li><strong>Oracle Cloud</strong></li>
+<li><strong>Alibaba Cloud</strong></li>
+</ul>
+</li>
+</ul>
+<p>Estos proveedores ofrecen:</p>
+<ul>
+<li>Máquinas virtuales, contenedores, <abbr title="Sistema de orquestación de contenedores que automatiza la implementación, el escalado y la gestión de aplicaciones en contenedores. Kubernetes facilita la administración de aplicaciones distribuidas y mejora la eficiencia operativa.">Kubernetes</abbr>…</li>
+<li>Bases de datos gestionadas.</li>
+<li>Balanceadores de carga.</li>
+<li>Almacenamiento, CDN, etc.</li>
+</ul>
+<p>En la imagen se da a entender que:</p>
+<ul>
+<li>Tu <strong>FrontEnd</strong>, tu <strong>BackEnd</strong> y tu <strong>Base de datos</strong> viven en alguno de estos proveedores de nube.</li>
+<li>El pipeline de <strong><abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr></strong> despliega directamente ahí.</li>
+</ul>
+<p><strong>7. Poniéndolo todo junto: flujo completo</strong></p>
+<p>Imagina ahora el flujo end-to-end usando todos los bloques:</p>
+<ol>
+<li>
+<p>👨‍💻 <strong>Desarrollo y <abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr></strong></p>
+<ul>
+<li>Tú desarrollas FrontEnd y BackEnd en tu equipo.</li>
+<li>Haces un <strong>commit</strong>.</li>
+<li>
+<p>El pipeline de <strong><abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr></strong>:</p>
+<ul>
+<li>construye el código,</li>
+<li>ejecuta tests,</li>
+<li>genera artefactos,</li>
+<li>despliega FrontEnd + BackEnd + cambios de BD en la <strong>nube</strong> (<abbr title="Amazon Web Services. Plataforma de servicios en la nube que ofrece a los desarrolladores una amplia gama de servicios de infraestructura, almacenamiento, bases de datos, análisis, IA, etc. En AWS, los desarrolladores pueden desplegar aplicaciones de forma escalable y segura.">AWS</abbr>, <abbr title="Microsoft Azure. Plataforma de servicios en la nube que ofrece una amplia gama de servicios, como almacenamiento, bases de datos, computación, análisis, inteligencia artificial, etc. Azure permite a las empresas escalar sus aplicaciones y servicios de forma flexible y eficiente.">Azure</abbr>, etc.).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>☁️ <strong>Infraestructura en la nube</strong></p>
+<ul>
+<li>El FrontEnd se sirve, por ejemplo, desde un bucket estático o un servidor web.</li>
+<li>El BackEnd corre en contenedores, VMs o funciones serverless.</li>
+<li>La Base de datos está en un servicio gestionado.</li>
+</ul>
+</li>
+<li>
+<p>🌐 <strong>Uso por parte del usuario</strong></p>
+<ul>
+<li>El usuario abre el navegador y carga el <strong>FrontEnd</strong>.</li>
+<li>El FrontEnd (<abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr>, CSS, JS) se muestra en pantalla.</li>
+<li>
+<p>Cuando el usuario interactúa:</p>
+<ol>
+<li>El FrontEnd llama a la <strong><abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr></strong>.</li>
+<li>La <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> llega al <strong>BackEnd</strong>.</li>
+<li>El BackEnd aplica reglas de negocio y consulta la <strong>Base de datos</strong>.</li>
+<li>El BackEnd devuelve un JSON al FrontEnd.</li>
+<li>El FrontEnd actualiza la vista.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>🔁 <strong>Ciclo continuo</strong></p>
+<ul>
+<li>Encuentras un bug o quieres una nueva funcionalidad.</li>
+<li>Modificas código → commit → <abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr> → nuevo deploy.</li>
+<li>El usuario recibe la versión actualizada, casi sin darse cuenta.</li>
+</ul>
+</li>
+</ol>
+<p><strong>8. Resumen rápido “para llevar”</strong></p>
+<ul>
+<li><strong>FrontEnd</strong>: lo que ve el usuario (<abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> + CSS + JS, Angular/React/Vue).</li>
+<li><strong>BackEnd</strong>: la lógica y la <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> (Node, Python, Java, Django, .NET…).</li>
+<li><strong>Base de datos</strong>: la memoria (<abbr title="Lenguaje de Consulta Estructurado. Es un lenguaje de programación que se utiliza para gestionar y manipular bases de datos relacionales. El SQL permite a los usuarios crear, leer, actualizar y eliminar datos de las bases de datos, así como definir y modificar la estructura de las tablas.">SQL</abbr>/NoSQL: Oracle, MySQL, PostgreSQL, Mongo…).</li>
+<li><strong><abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr></strong>: el contrato entre FrontEnd y BackEnd.</li>
+<li><strong><abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr></strong>: la cadena de montaje que lleva tu código desde el commit hasta producción.</li>
+<li><strong>Cloud</strong>: la casa donde viven todas estas piezas.</li>
+</ul>
+<p>Si piensas en la app como una ciudad:</p>
+<ul>
+<li>FrontEnd sería la fachada y las calles,</li>
+<li>BackEnd la administración y las normas,</li>
+<li>Base de datos el archivo municipal,</li>
+<li><abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr> las obras públicas que actualizan la ciudad sin cortarte siempre la calle,</li>
+<li>y la nube… el terreno sobre el que está construida.</li>
+</ul>
+</div>
 <p><strong>Ejemplo práctico: formulario de login</strong></p>
 <p>Veamos cómo se reparten las responsabilidades en un caso real:</p>
 <p><strong>En el cliente (navegador):</strong>
@@ -8683,93 +9036,205 @@
 <figcaption>Representación animada de lo que ocurre cuando un usuario hace clic en una aplicación web: desde la interacción en el navegador hasta el procesamiento en el servidor y la respuesta de vuelta</figcaption>
 </figure>
 <p><strong>Flujo completo de una petición web:</strong></p>
+<p>Te explico la imagen anterior como si estuviéramos en clase delante de la pizarra, siguiendo el dibujo de izquierda a derecha y de arriba abajo.</p>
+<p><strong>1. Escribes la URL en el navegador</strong></p>
+<ul>
+<li>Tú tecleas, por ejemplo, <code>http://google.com</code> o <code>https://www.example.com</code>.</li>
+<li>
+<p>El <strong>navegador</strong> entiende:</p>
+<ul>
+<li>Protocolo: <abbr title="Protocolo de Transferencia de Hipertexto. Es un protocolo que se utiliza para transferir información entre un cliente y un servidor a través de una red. El HTTP permite a los usuarios acceder a sitios web, enviar y recibir datos, etc.">HTTP</abbr>/<abbr title="Protocolo de Transferencia de Hipertexto Seguro. Es una versión segura del protocolo HTTP que se utiliza para transferir información de forma cifrada entre un cliente y un servidor a través de una red. El HTTPS protege la privacidad y la integridad de los datos.">HTTPS</abbr></li>
+<li>Nombre de dominio: <code>google.com</code></li>
+<li>(Y si lo hubiera, puerto y ruta: <code>/login</code>, etc.)</li>
+</ul>
+</li>
+</ul>
+<p>Antes de hablar con nadie en Internet, el navegador necesita saber <strong>a qué dirección <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr></strong> tiene que ir.</p>
+<p><strong>2. Búsqueda de la <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr>: resolución <abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr> + cachés</strong></p>
+<p>En la imagen, esa parte es el bloque “<abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr>” y la columna <strong>Cache → Browser → OS → Router → ISP</strong>.</p>
 <ol>
 <li>
-<p><strong>El usuario hace clic</strong> en un botón o enlace en el navegador</p>
-</li>
-<li>
-<p><strong>JavaScript captura el evento</strong> (si es una aplicación moderna)</p>
+<p><strong>Cachés <abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr></strong>
+   El objetivo es evitar hacer trabajo extra.
+   El navegador pregunta, en este orden:</p>
 <ul>
-<li>Puede validar datos antes de enviar</li>
-<li>Puede mostrar indicadores de carga</li>
-<li>Previene la recarga de página en SPAs</li>
+<li>¿Lo tengo en la <strong>caché del propio navegador</strong>?</li>
+<li>¿Lo tiene la <strong>caché del sistema operativo</strong>?</li>
+<li>¿Lo tiene el <strong>router</strong>?</li>
+<li>¿Lo tiene el <strong>ISP</strong>?</li>
 </ul>
 </li>
 <li>
-<p><strong>Se construye la petición <abbr title="Protocolo de Transferencia de Hipertexto. Es un protocolo que se utiliza para transferir información entre un cliente y un servidor a través de una red. El HTTP permite a los usuarios acceder a sitios web, enviar y recibir datos, etc.">HTTP</abbr></strong></p>
+<p>Si alguna de esas capas tiene la <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> guardada, tenemos un <strong>cache hit</strong> ✅ y se termina la búsqueda ahí.</p>
+</li>
+<li>
+<p>Si <strong>nadie</strong> lo sabe (<strong>cache hit failed</strong> ❌), entra en juego el <strong>servidor <abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr></strong> “de verdad”:</p>
 <ul>
-<li>Define el método (GET, POST, PUT, DELETE)</li>
-<li>Incluye headers (autenticación, tipo de contenido)</li>
-<li>Añade los datos si es necesario (body)</li>
+<li>Pregunta primero a un <strong>root name server</strong> (los de la parte superior izquierda: saben dónde están los <code>.com</code>, <code>.org</code>, etc.).</li>
+<li>Luego a un <strong>Top Level Domain server</strong> (el que lleva <code>.com</code> por ejemplo).</li>
+<li>Luego a un <strong>servidor autoritativo</strong> del dominio (<code>example.com</code> en el dibujo).</li>
+<li>Finalmente, uno de ellos responde: <em>“<code>example.com</code> es la <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> 8.9.0.1”</em> (la que se ve en la imagen).</li>
 </ul>
 </li>
 <li>
-<p><strong>La petición viaja por Internet</strong> hasta el servidor</p>
-</li>
-<li>
-<p><strong>El servidor web recibe la petición</strong></p>
-<ul>
-<li>Puede ser Apache, Nginx, Node.js, etc.</li>
-<li>Verifica que la petición sea válida</li>
-</ul>
-</li>
-<li>
-<p><strong>El servidor de aplicaciones procesa la petición</strong></p>
-<ul>
-<li>Ejecuta el código correspondiente</li>
-<li>Valida datos y permisos</li>
-<li>Accede a la base de datos si es necesario</li>
-<li>Ejecuta la lógica de negocio</li>
-</ul>
-</li>
-<li>
-<p><strong>Se genera la respuesta</strong></p>
-<ul>
-<li>Puede ser <abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> completo (páginas tradicionales)</li>
-<li>Puede ser JSON con datos (aplicaciones modernas)</li>
-<li>Incluye un código de estado (200, 404, 500, etc.)</li>
-</ul>
-</li>
-<li>
-<p><strong>La respuesta viaja de vuelta al cliente</strong></p>
-</li>
-<li>
-<p><strong>El navegador recibe y procesa la respuesta</strong></p>
-<ul>
-<li>Si es <abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr>, renderiza la nueva página</li>
-<li>Si es JSON, JavaScript actualiza solo partes de la página</li>
-<li>Ejecuta cualquier JavaScript incluido</li>
-</ul>
-</li>
-<li>
-<p><strong>El usuario ve el resultado</strong></p>
+<p>Esa <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> se devuelve hacia atrás y se va copiando en las cachés intermedias para que la próxima vez vaya más rápido.</p>
 </li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Diferencias entre páginas y aplicaciones</p>
-<p>En una <strong>página web tradicional</strong>, todo el proceso resulta en una recarga completa de la página. En una <strong>aplicación web moderna</strong> (SPA), solo se actualiza la parte necesaria, haciendo la experiencia mucho más fluida y rápida.</p>
-</div>
-<h2 id="resumen-de-la-unidad">Resumen de la unidad<a class="headerlink" href="#resumen-de-la-unidad" title="Permanent link">&para;</a></h2>
-<p>En esta unidad hemos aprendido:</p>
+<p>Resultado de esta fase: Ya sabemos que <code>example.com</code> = <code>8.9.0.1</code>.</p>
+<p><strong>3. Establecer la conexión <abbr title="Protocol Control de Transmisión. Es un protocolo que se utiliza para establecer y gestionar conexiones entre dispositivos en una red. El TCP garantiza la entrega de los datos, el control de flujo, la detección de errores, etc.">TCP</abbr> (3-way handshake)</strong></p>
+<p>Parte central del diagrama: “Initiate <abbr title="Protocol Control de Transmisión. Es un protocolo que se utiliza para establecer y gestionar conexiones entre dispositivos en una red. El TCP garantiza la entrega de los datos, el control de flujo, la detección de errores, etc.">TCP</abbr> Connection” y los mensajes <strong>SYN / SYN-ACK / ACK</strong>.</p>
+<p>Antes de enviar <abbr title="Protocolo de Transferencia de Hipertexto. Es un protocolo que se utiliza para transferir información entre un cliente y un servidor a través de una red. El HTTP permite a los usuarios acceder a sitios web, enviar y recibir datos, etc.">HTTP</abbr>, el navegador necesita abrir una <strong>conexión <abbr title="Protocol Control de Transmisión. Es un protocolo que se utiliza para establecer y gestionar conexiones entre dispositivos en una red. El TCP garantiza la entrega de los datos, el control de flujo, la detección de errores, etc.">TCP</abbr></strong> con el servidor:</p>
+<ol>
+<li><strong>SYN</strong>: el <strong>cliente</strong> (tu navegador) manda un paquete a <code>8.9.0.1</code> diciendo “quiero hablar contigo”.</li>
+<li><strong>SYN-ACK</strong>: el <strong>servidor</strong> responde “vale, he recibido tu petición y también quiero hablar”.</li>
+<li><strong>ACK</strong>: el cliente confirma “perfecto, ya estamos sincronizados”.</li>
+</ol>
+<p>Con eso se crea el <strong>canal fiable</strong> entre cliente y servidor.
+(Si fuera <abbr title="Protocolo de Transferencia de Hipertexto Seguro. Es una versión segura del protocolo HTTP que se utiliza para transferir información de forma cifrada entre un cliente y un servidor a través de una red. El HTTPS protege la privacidad y la integridad de los datos.">HTTPS</abbr>, aquí además vendría el <strong>handshake <abbr title="Seguridad de la Capa de Transporte. Es un sistema de seguridad que se utiliza para cifrar la comunicación entre un cliente y un servidor a través de una red. El TLS protege la privacidad y la integridad de los datos, autentica a los usuarios y protege contra los ataques de intermediarios.">TLS</abbr></strong> para cifrar la comunicación, aunque en la imagen no lo detallen.)</p>
+<p><strong>4. Enviar la petición <abbr title="Protocolo de Transferencia de Hipertexto. Es un protocolo que se utiliza para transferir información entre un cliente y un servidor a través de una red. El HTTP permite a los usuarios acceder a sitios web, enviar y recibir datos, etc.">HTTP</abbr></strong></p>
+<p>Una vez abierta la conexión <abbr title="Protocol Control de Transmisión. Es un protocolo que se utiliza para establecer y gestionar conexiones entre dispositivos en una red. El TCP garantiza la entrega de los datos, el control de flujo, la detección de errores, etc.">TCP</abbr>, pasamos al bloque “<abbr title="Protocolo de Transferencia de Hipertexto. Es un protocolo que se utiliza para transferir información entre un cliente y un servidor a través de una red. El HTTP permite a los usuarios acceder a sitios web, enviar y recibir datos, etc.">HTTP</abbr> Request”.</p>
+<p>El navegador envía algo del estilo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">GET</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="na">Host</span><span class="o">:</span> <span class="l">www.example.com</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="na">User-Agent</span><span class="o">:</span> <span class="l">...</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="na">Accept-Language</span><span class="o">:</span> <span class="l">...</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="err">...</span>
+</code></pre></div>
+<p>Es decir:</p>
+<ul>
+<li>Método (<code>GET</code>, <code>POST</code>, …)</li>
+<li>Ruta (<code>/</code>, <code>/login</code>, …)</li>
+<li>Cabeceras (idioma, tipo de contenido, cookies, etc.)</li>
+</ul>
+<p><strong>5. El servidor procesa y responde</strong></p>
+<p>En la parte derecha se ve “Server Response” y los códigos 1xx, 2xx, 3xx, 4xx, 5xx.</p>
+<p>El servidor:</p>
+<ol>
+<li>Recibe la petición <abbr title="Protocolo de Transferencia de Hipertexto. Es un protocolo que se utiliza para transferir información entre un cliente y un servidor a través de una red. El HTTP permite a los usuarios acceder a sitios web, enviar y recibir datos, etc.">HTTP</abbr>.</li>
+<li>Ejecuta la lógica necesaria (leer de BD, plantillas, etc.).</li>
+<li>Genera una <strong>respuesta <abbr title="Protocolo de Transferencia de Hipertexto. Es un protocolo que se utiliza para transferir información entre un cliente y un servidor a través de una red. El HTTP permite a los usuarios acceder a sitios web, enviar y recibir datos, etc.">HTTP</abbr></strong>, por ejemplo:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/html; charset=utf-8</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="na">Content-Length</span><span class="o">:</span> <span class="l">...</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Los códigos se agrupan como indica el esquema:</p>
+<ul>
+<li><strong>1xx</strong> – Información</li>
+<li><strong>2xx</strong> – Éxito (200 OK, 201 Created…)</li>
+<li><strong>3xx</strong> – Redirecciones (301, 302…)</li>
+<li><strong>4xx</strong> – Errores del cliente (404 Not Found, 403 Forbidden…)</li>
+<li><strong>5xx</strong> – Errores del servidor (500, 503…)</li>
+</ul>
+<p>El cuerpo de la respuesta suele ser <strong><abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr></strong>, y a menudo dentro de ese <abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> hay referencias a <strong>CSS</strong> y <strong>JavaScript</strong> y otros recursos.</p>
+<p><strong>6. El navegador recibe <abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> + CSS + JS</strong></p>
+<p>Parte inferior izquierda: cuadro “<abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> + CSS + JS” y las flechas a los parsers.</p>
+<p>El navegador ya tiene:</p>
+<ul>
+<li>Un <strong>documento <abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr></strong>.</li>
+<li>Uno o varios <strong>CSS</strong> enlazados.</li>
+<li>Uno o varios ficheros <strong>JavaScript</strong> enlazados.</li>
+</ul>
+<p>Ahora empieza el “trabajo sucio” del navegador: <strong>interpretar y pintar</strong>.</p>
+<p><strong>7. Parsing y construcción de estructuras internas</strong></p>
+<p>El navegador transforma el texto en estructuras de datos:</p>
 <ol>
 <li>
-<p><strong>El desarrollo web moderno</strong> se enfoca tanto en la funcionalidad como en el despliegue eficiente de aplicaciones.</p>
+<p><strong>Parsear <abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> → DOM Tree</strong></p>
+<ul>
+<li>Pasa el <abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> por un <strong>tokenizer</strong> (analizador léxico).</li>
+<li>Con esos tokens construye el <strong>DOM Tree</strong> (árbol de nodos: <code>&lt;html&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;div&gt;</code>, etc.).</li>
+</ul>
 </li>
 <li>
-<p><strong>El código se ejecuta en dos lugares</strong>: cliente (navegador) y servidor, cada uno con responsabilidades específicas.</p>
+<p><strong>Parsear CSS → CSSOM Tree</strong></p>
+<ul>
+<li>Cada hoja de estilos se parsea (otro tokenizer).</li>
+<li>Se genera el <strong>CSSOM Tree</strong>, que representa todas las reglas de estilos.</li>
+</ul>
+</li>
+</ol>
+<p>En paralelo:</p>
+<ol>
+<li>
+<p><strong>JavaScript</strong></p>
+<ul>
+<li>Se “load &amp; evaluate”: se carga el JS y se ejecuta.</li>
+<li>El JS puede <strong>modificar el DOM</strong> y el <strong>CSSOM</strong> (añadir nodos, cambiar estilos, etc.), por eso en la imagen sale el ciclo entre JavaScript y los árboles.</li>
+</ul>
+</li>
+</ol>
+<p><strong>8. Render tree, layout y painting</strong></p>
+<p>Parte central inferior: “Render Tree → Layout → Painting”.</p>
+<p>Una vez que tiene DOM + CSSOM, el navegador:</p>
+<ol>
+<li>
+<p><strong>Crea el Render Tree</strong></p>
+<ul>
+<li>Combina DOM y CSSOM para deducir qué elementos se deben <strong>dibujar</strong> y con qué estilo (color, fuente, etc.).</li>
+<li>Elementos como <code>&lt;head&gt;</code> que no se pintan, se excluyen.</li>
+</ul>
 </li>
 <li>
-<p><strong>Frontend</strong> es lo que el usuario ve e interactúa, mientras que <strong>Backend</strong> es donde reside la lógica de negocio y los datos.</p>
+<p><strong>Layout (reflow)</strong></p>
+<ul>
+<li>
+<p>Calcula <strong>posiciones y tamaños</strong> de cada elemento en la página:</p>
+<ul>
+<li>coordenadas X/Y,</li>
+<li>anchuras, alturas,</li>
+<li>márgenes, paddings…</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<p><strong>Un Backend universal</strong> puede servir a múltiples tipos de clientes (web, móvil, escritorio).</p>
-</li>
+<p><strong>Painting</strong></p>
+<ul>
 <li>
-<p><strong>Páginas web</strong> son principalmente informativas, mientras que <strong>aplicaciones web</strong> proporcionan funcionalidad compleja y experiencias interactivas.</p>
+<p>Finalmente <strong>pinta</strong> los píxeles en la pantalla:</p>
+<ul>
+<li>fondos, bordes, texto, imágenes, sombras…</li>
+</ul>
 </li>
-<li>
-<p><strong>Cada clic</strong> en la web desencadena un flujo complejo de comunicaciones entre cliente y servidor.</p>
+</ul>
 </li>
+</ol>
+<p>Todo esto lo hace el <strong>Render Engine</strong> del navegador, coordinado con:</p>
+<ul>
+<li><strong>User Interface</strong> (la ventana, pestañas, barra de direcciones…),</li>
+<li><strong>Browser Engine</strong> (coordina las partes),</li>
+<li><strong>Networking</strong> (las descargas),</li>
+<li><strong>JS Engine</strong> (ejecuta tu JavaScript).</li>
+</ul>
+<p><strong>9. Página mostrada al usuario</strong></p>
+<p>Al final de todo el recorrido (parte inferior “Web Page Successfully Loaded”):</p>
+<ul>
+<li>La conexión <abbr title="Protocol Control de Transmisión. Es un protocolo que se utiliza para establecer y gestionar conexiones entre dispositivos en una red. El TCP garantiza la entrega de los datos, el control de flujo, la detección de errores, etc.">TCP</abbr> sigue abierta un tiempo por si hay más peticiones (reutilización).</li>
+<li>El navegador puede seguir pidiendo recursos (imágenes, más JS o CSS, fuentes…).</li>
+<li>JavaScript puede seguir modificando el DOM, provocando nuevos layouts y repaints.</li>
+</ul>
+<p>Pero desde tu punto de vista como usuario, lo que ves es sencillo:</p>
+<ul>
+<li>Has escrito una URL en el navegador…</li>
+<li>Y ha aparecido una página web “como por arte de magia”.</li>
+</ul>
+<p>Solo que, como ves, la “magia” tiene bastantes pasos por debajo.</p>
+<div class="admonition note">
+<p class="admonition-title">Diferencias entre páginas y aplicaciones</p>
+</div>
+<p>En una <strong>página web tradicional</strong>, todo el proceso resulta en una recarga completa de la página. En una <strong>aplicación web moderna</strong> (SPA), solo se actualiza la parte necesaria, haciendo la experiencia mucho más fluida y rápida.</p>
+<h3 id="6-resumen-de-la-unidad">6. Resumen de la unidad<a class="headerlink" href="#6-resumen-de-la-unidad" title="Permanent link">&para;</a></h3>
+<p>En esta unidad hemos aprendido:</p>
+<ol>
+<li><strong>El desarrollo web moderno</strong> se enfoca tanto en la funcionalidad como en el despliegue eficiente de aplicaciones.</li>
+<li><strong>El código se ejecuta en dos lugares</strong>: cliente (navegador) y servidor, cada uno con responsabilidades específicas.</li>
+<li><strong>Frontend</strong> es lo que el usuario ve e interactúa, mientras que <strong>Backend</strong> es donde reside la lógica de negocio y los datos.</li>
+<li><strong>Un Backend universal</strong> puede servir a múltiples tipos de clientes (web, móvil, escritorio).</li>
+<li><strong>Páginas web</strong> son principalmente informativas, mientras que <strong>aplicaciones web</strong> proporcionan funcionalidad compleja y experiencias interactivas.</li>
+<li><strong>Cada clic</strong> en la web desencadena un flujo complejo de comunicaciones entre cliente y servidor.</li>
 </ol>
 <p>Estos fundamentos son esenciales para comprender las arquitecturas web que estudiaremos en las siguientes secciones y para entender cómo desplegar aplicaciones correctamente.</p>
 <h2 id="referencias-y-bibliografia">Referencias y bibliografía<a class="headerlink" href="#referencias-y-bibliografia" title="Permanent link">&para;</a></h2>

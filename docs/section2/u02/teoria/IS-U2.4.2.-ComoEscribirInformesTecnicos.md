@@ -140,25 +140,32 @@ Puede parecer una tontería, pero una técnica muy efectiva para evaluar libros 
 
 !!! example "Ejemplo (auditoria de seguridad)"
     1. *Resumen ejecutivo*  
-    2. *Objeto y alcance*  
-       * *Sistemas a auditar*  
-       * *Sistemas expresamente fuera del alcance*  
-    3. *Antecedentes y consideraciones preliminares*  
-       * *Personal de contacto de cada entidad*  
-       * *Reglas particulares de la auditoría*  
-       * *Fechas de realización de la auditoría*  
-    4. *Resultados de la auditoría*  
-       * *Sistema A: vulnerabilidades graves y muy graves*  
-       * *Sistema A: vulnerabilidades medias*  
-       * *Sistema A: vulnerabilidades leves*  
-       * *Sistema B: vulnerabilidades graves y muy graves*  
-       * *Sistema B: vulnerabilidades medias*  
-       * *Sistema B: vulnerabilidades leves*  
+    2. *Objeto y alcance*   
+
+        * *Sistemas a auditar*  
+        * *Sistemas expresamente fuera del alcance*
+
+    3. *Antecedentes y consideraciones preliminares*
+
+        *Personal de contacto de cada entidad*  
+        * *Reglas particulares de la auditoría*  
+        * *Fechas de realización de la auditoría*
+
+    4. *Resultados de la auditoría*
+
+        *Sistema A: vulnerabilidades graves y muy graves*  
+        * *Sistema A: vulnerabilidades medias*  
+        * *Sistema A: vulnerabilidades leves*  
+        * *Sistema B: vulnerabilidades graves y muy graves*  
+        * *Sistema B: vulnerabilidades medias*  
+        * *Sistema B: vulnerabilidades leves*
+
     5. *Conclusiones*  
     6. *Anexo A: Listado de vulnerabilidades detallado*  
-    7. *Anexo B: Evidencias de los análisis realizados*  
-       * *Sistema A*  
-       * *Sistema B*
+    7. *Anexo B: Evidencias de los análisis realizados*
+
+        * *Sistema A*  
+        * *Sistema B*
 
 !!! tip "Consejo"
     Crea un índice completo para tu documento. Haz que sea claro y limpio.

@@ -108,20 +108,96 @@ Todas las presentaciones HTML incluyen:
 
 **Referencias a las slides desde `docs/`:**
 
-Cada vez que añada una nueva slide o presentación, deberá actualizar las referencias en la documentación. Suponiendo que añadimos el punto Y de la unidad X de la sectionZ, lo normal es que quede enlaza en los distintos index.md afectados:
-- doc/index.md (índice principal del repositorio)
-- docs/sectionZ/index.md (índice del módulo)
-- docs/sectionZ/uXX/index.md (índice de la unidad)
-- docs/sectionZ/uXX/teoria/MODULO-UX.Y.-Tema.md (al final del documento de teoría correspondiente)
-- docs/sectionZ/uXX/practica/MODULO-UX.-PracticaYYY.md (al final del documento de práctica correspondiente)
+Cada vez que se añada una nueva slide o presentación, se debe seguir un **proceso estándar** de enlazado en **4 ubicaciones obligatorias**. Este proceso garantiza que los usuarios puedan acceder a las presentaciones desde múltiples puntos de navegación.
 
+#### Proceso de enlazado de slides (4 pasos obligatorios):
 
+Suponiendo que añadimos la presentación del punto Y de la unidad X de la sectionZ (ejemplo: DAW-U3.1.-IntroDesarrolloWeb):
 
-Las referencias a presentaciones desde la documentación usan URLs absolutas:
+**1. Documento de teoría** (`docs/sectionZ/uXX/teoria/MODULO-UX.Y.-Tema.md`)
+
+Añadir una nueva sección "## Presentación" al final del documento, después de "Referencias y bibliografía" y antes de "Recursos adicionales":
+
+```markdown
+## Referencias y bibliografía
+
+[... contenido existente ...]
+
+## Presentación
+
+Puedes acceder a la presentación de esta unidad aquí:
+
+[Presentación MODULO-UX.Y - Título](https://revilofe.github.io/slides/sectionZ-XX/MODULO-UX.Y.-NombreArchivo.html)
+
+## Recursos adicionales
+
+[... contenido existente ...]
+```
+
+**2. Index de la unidad** (`docs/sectionZ/uXX/index.md`)
+
+Actualizar la sección "### Presentaciones" añadiendo el enlace:
+
+```markdown
+### Presentaciones
+
+- [MODULO-UX.Y - Título Descriptivo](https://revilofe.github.io/slides/sectionZ-XX/MODULO-UX.Y.-NombreArchivo.html)
+```
+
+Si la sección dice "*Por definir*", reemplazar ese texto por el enlace.
+
+**3. Index del módulo** (`docs/sectionZ/index.md`)
+
+Añadir el enlace a la lista de presentaciones en la sección "## Contenido" → "- Presentaciones":
+
+```markdown
+- Presentaciones.
+
+    * [MODULO-U1.1 - Título](https://revilofe.github.io/slides/sectionZ-XX/MODULO-U1.1.-Archivo.html)
+    * [MODULO-U1.2 - Título](https://revilofe.github.io/slides/sectionZ-XX/MODULO-U1.2.-Archivo.html)
+    * [MODULO-UX.Y - Título](https://revilofe.github.io/slides/sectionZ-XX/MODULO-UX.Y.-NombreArchivo.html)  ← NUEVO
+```
+
+**4. Index principal del repositorio** (`docs/index.md`)
+
+Añadir el enlace en la sección correspondiente al módulo. Se recomienda organizar por unidades:
+
+```markdown
+## Presentaciones
+
+### Módulo Correspondiente (MODULO)
+
+#### Unidad X - Título de la Unidad
+* [MODULO-UX.1 - Título](https://revilofe.github.io/slides/sectionZ-XX/MODULO-UX.1.-Archivo.html)
+* [MODULO-UX.Y - Título](https://revilofe.github.io/slides/sectionZ-XX/MODULO-UX.Y.-NombreArchivo.html)  ← NUEVO
+```
+
+#### Formato de URLs:
+
+Las referencias a presentaciones desde la documentación **siempre usan URLs absolutas**:
+
 - `https://revilofe.github.io/slides/section1-pr/PR-UX.Y.-NombreArchivo.html`
 - `https://revilofe.github.io/slides/section2-is/IS-UX.Y.-NombreArchivo.html`
 - `https://revilofe.github.io/slides/section3-ed/ED-UX.Y.-NombreArchivo.html`
 - `https://revilofe.github.io/slides/section4-daw/DAW-UX.Y.-NombreArchivo.html`
+
+#### Puntos de acceso resultantes:
+
+Tras completar el proceso, los usuarios pueden acceder a la presentación desde:
+
+1. **Leyendo la teoría** → Sección "Presentación" al final del documento
+2. **Navegando por la unidad** → Index de la unidad, sección "Presentaciones"
+3. **Explorando el módulo** → Index del módulo, lista de presentaciones
+4. **Desde la página principal** → Index principal, sección del módulo correspondiente
+
+#### Ejemplo completo:
+
+Para la presentación `DAW-U3.1.-IntroDesarrolloWeb.html`:
+
+- ✅ `docs/section4/u03/teoria/DAW-U3.1.-IntroDesarrolloWeb.md` → Sección "## Presentación"
+- ✅ `docs/section4/u03/index.md` → Sección "### Presentaciones"
+- ✅ `docs/section4/index.md` → Lista "- Presentaciones"
+- ✅ `docs/index.md` → Sección "### Despliegue de Aplicaciones Web (DAW)" → "#### Unidad 3"
 
 **Gestión de assets:**
 
@@ -708,6 +784,8 @@ Lo normal esque tanto la teoría, como la practica haga referencia a los Resulta
 
 ## 3. Flujo de trabajo para crear contenido
 
+### 3.1. Flujo para crear documentos de teoría o práctica
+
 1. **Identificar el módulo y unidad** donde se creará el contenido
 2. **Determinar el tipo**: ¿teoría o práctica?
 3. **Crear el archivo** con la nomenclatura correcta: `MODULO-UX.Y.-Tema.md`
@@ -716,6 +794,56 @@ Lo normal esque tanto la teoría, como la practica haga referencia a los Resulta
 6. **Agregar assets** en la carpeta `assets/` si es necesario
 7. **Actualizar `mkdocs.yml`** para incluir el nuevo contenido en la navegación
 8. **Revisar** que el lenguaje sea inclusivo y didáctico
+
+### 3.2. Flujo para crear presentaciones (slides)
+
+Cuando se crea una nueva presentación Reveal.js para complementar un documento de teoría:
+
+1. **Crear archivos de la presentación**:
+   - Archivo fuente `.md` en `slides/sectionX-XX/MODULO-UX.Y.-NombreDescriptivo.md`
+   - Archivo HTML `.html` en `slides/sectionX-XX/MODULO-UX.Y.-NombreDescriptivo.html`
+   - Assets necesarios en `slides/sectionX-XX/assets/`
+
+2. **Verificar configuración**:
+   - Rutas relativas correctas en HTML (`../dist/`, `../plugin/`, `../custom.css`)
+   - Configuración Reveal.js completa (margin, progress, slideNumber, etc.)
+   - Separadores correctos en Markdown (`---` para secciones, doble línea para slides)
+
+3. **Enlazar la presentación en 4 ubicaciones** (proceso obligatorio):
+
+   **a) Documento de teoría** (`docs/sectionX/uXX/teoria/MODULO-UX.Y.-Tema.md`):
+   ```markdown
+   ## Referencias y bibliografía
+   [... contenido ...]
+   
+   ## Presentación
+   Puedes acceder a la presentación de esta unidad aquí:
+   [Presentación MODULO-UX.Y - Título](https://revilofe.github.io/slides/sectionX-XX/MODULO-UX.Y.-Archivo.html)
+   ```
+
+   **b) Index de la unidad** (`docs/sectionX/uXX/index.md`):
+   ```markdown
+   ### Presentaciones
+   - [MODULO-UX.Y - Título](https://revilofe.github.io/slides/sectionX-XX/MODULO-UX.Y.-Archivo.html)
+   ```
+
+   **c) Index del módulo** (`docs/sectionX/index.md`):
+   ```markdown
+   - Presentaciones.
+       * [MODULO-UX.Y - Título](https://revilofe.github.io/slides/sectionX-XX/MODULO-UX.Y.-Archivo.html)
+   ```
+
+   **d) Index principal** (`docs/index.md`):
+   ```markdown
+   ### Nombre del Módulo (MODULO)
+   #### Unidad X - Título de la Unidad
+   * [MODULO-UX.Y - Título](https://revilofe.github.io/slides/sectionX-XX/MODULO-UX.Y.-Archivo.html)
+   ```
+
+4. **Verificar accesibilidad**:
+   - Probar que la presentación se visualiza correctamente
+   - Verificar que todos los 4 enlaces funcionan
+   - Comprobar que las rutas a assets son correctas
 
 ## 4. Herramientas y comandos útiles
 
@@ -782,7 +910,13 @@ Para verificar que un nuevo contenido cumple con la estructura y estándares del
 - [ ] Rutas relativas correctas (`../dist/`, `../plugin/`, `../custom.css`)
 - [ ] Configuración de Reveal.js completa
 - [ ] Assets en carpeta `assets/` del módulo
-- [ ] Referencias a la slide desde documentos de teoría actualizadas
+- [ ] **Enlazado en 4 ubicaciones obligatorias:**
+  - [ ] Documento de teoría: Sección "## Presentación" añadida
+  - [ ] Index de la unidad: Sección "### Presentaciones" actualizada
+  - [ ] Index del módulo: Lista de presentaciones actualizada
+  - [ ] Index principal: Sección del módulo actualizada
+- [ ] URLs absolutas usadas en todos los enlaces
+- [ ] Formato de URL correcto: `https://revilofe.github.io/slides/sectionX-XX/MODULO-UX.Y.-Archivo.html`
 
 ### 6.6. Verificación de integración
 

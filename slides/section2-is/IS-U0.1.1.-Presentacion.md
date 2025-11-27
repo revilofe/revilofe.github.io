@@ -36,13 +36,13 @@ La formación del módulo contribuye a alcanzar los objetivos generales a), b), 
 
 ## Objetivos RA
 
-|  RA  | LOGRO               | *OBJETO*                                                  | *ACCIONES EN EL CONTEXTO DE APRENDIZAJE*                                                    |
-| :----: | :-------------------- | :---------------------------------------------------------- | :-------------------------------------------------------------------------------------------- |
-| RA 1 | Desarrolla          | planes de prevención y concienciación en ciberseguridad | estableciendo normas y medidas de protección                                               |
-| RA 2 | Analiza             | incidentes de ciberseguridad                              | utilizando herramientas, mecanismos de detección y alertas de seguridad                    |
-| RA 3 | Investiga           | incidentes de ciberseguridad                              | analizando los riesgos implicados y definiendo las posibles medidas a adoptar               |
-| RA 4 | Implementa          | medidas de ciberseguridad en redes y sistemas             | respondiendo a los incidentes detectados y aplicando las técnicas de protección adecuadas |
-| RA 5 | Detecta y documenta | incidentes de ciberseguridad                              | siguiendo procedimientos de actuación establecidos.                                        |
+|   RA    | LOGRO                  | *OBJETO*                                                     | *ACCIONES EN EL CONTEXTO DE APRENDIZAJE*                                                       |
+|:-------:|:-----------------------|:-------------------------------------------------------------|:-----------------------------------------------------------------------------------------------|
+|  RA 1   | Desarrolla             | planes de prevención y concienciación en ciberseguridad      | estableciendo normas y medidas de protección                                                   |
+|  RA 2   | Analiza                | incidentes de ciberseguridad                                 | utilizando herramientas, mecanismos de detección y alertas de seguridad                        |
+|  RA 3   | Investiga              | incidentes de ciberseguridad                                 | analizando los riesgos implicados y definiendo las posibles medidas a adoptar                  |
+|  RA 4   | Implementa             | medidas de ciberseguridad en redes y sistemas                | respondiendo a los incidentes detectados y aplicando las técnicas de protección adecuadas      |
+|  RA 5   | Detecta y documenta    | incidentes de ciberseguridad                                 | siguiendo procedimientos de actuación establecidos.                                            |
 <!-- .element.table: style="font-size:50%;" -->
 
 
@@ -60,15 +60,15 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 
 Horario (5 horas semanales)
 
-|     HORA     |   L    | M  |   X    | J | V |
-| :-------------: |:------:|:--:|:------:| :--: | :-: |
-| 08:00 - 09:00 |   IS   |  |   IS   |  |  |
-| 09:00 - 10:00 |   IS   |  |   IS   |  |  |
-| 10:00 - 11:00 |        |    |   IS   |  |  |
-| 11:00 - 11:30 | Recreo | Recreo   | Recreo | Recreo   | Recreo |
-| 11:30 - 12:30 |        |    |        |    |  |
-| 12:30 - 13:30 |        |    |        |    |  |
-| 13:30 - 14:30 |        |    |        |    |  |
+|       HORA        |    L     |    M    |    X     |   J    |   V    |
+|:-----------------:|:--------:|:-------:|:--------:|:------:|:------:|
+|   08:00 - 09:00   |    IS    |         |    IS    |        |        |
+|   09:00 - 10:00   |    IS    |         |    IS    |        |        |
+|   10:00 - 11:00   |          |         |    IS    |        |        |
+|   11:00 - 11:30   |  Recreo  | Recreo  |  Recreo  | Recreo | Recreo |
+|   11:30 - 12:30   |          |         |          |        |        |
+|   12:30 - 13:30   |          |         |          |        |        |
+|   13:30 - 14:30   |          |         |          |        |        |
 <!-- .element.table: style="font-size:50%;" -->
 
 **Lunes:** 08:00 - 10:00 (2 horas)  
@@ -89,14 +89,14 @@ _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i
 
 ## Contenidos del módulo
 
-|  Unidades didácticas  | Descripción unidad                                      | Sesiones | RA | Criterios |  Trimestre  |
-| :---------------------: | :--------------------------------------------------------- | :--------: | :---: | :---------: | :------------------------: |
-|          UD1          | Desarrollo de planes de prevención y concienciación    |    24    | RA1 |  a)..e)  | 1er trimestre (72 horas) |
-|          UD2          | Analiza incidentes de ciberseguridad                     |    36    | RA2 |  a)..e)  |                          |
-|          UD3          | Investiga incidentes de ciberseguridad                   |    12    | RA3 |   a),b)   |                          |
-|          UD3          | Investiga incidentes de ciberseguridad (continuación)   |    18    | RA3 |  c)..e)  | 2º trimestre (72 horas) |
-|          UD4          | Implementa medidas de ciberseguridad en redes y sistemas |    42    | RA4 |  a)..f)  |                          |
-|          UD5          | Documenta y notifica incidentes de ciberseguridad        |    12    | RA5 |  a)..e)  |                          |
+|   Unidades didácticas    | Descripción unidad                                          |  Sesiones   |   RA   |  Criterios   |          Trimestre          |
+|:------------------------:|:------------------------------------------------------------|:-----------:|:------:|:------------:|:---------------------------:|
+|           UD1            | Desarrollo de planes de prevención y concienciación         |     24      |  RA1   |    a)..e)    |  1er trimestre (72 horas)   |
+|           UD2            | Analiza incidentes de ciberseguridad                        |     36      |  RA2   |    a)..e)    |                             |
+|           UD3            | Investiga incidentes de ciberseguridad                      |     12      |  RA3   |    a),b)     |                             |
+|           UD3            | Investiga incidentes de ciberseguridad (continuación)       |     18      |  RA3   |    c)..e)    |   2º trimestre (72 horas)   |
+|           UD4            | Implementa medidas de ciberseguridad en redes y sistemas    |     42      |  RA4   |    a)..f)    |                             |
+|           UD5            | Documenta y notifica incidentes de ciberseguridad           |     12      |  RA5   |    a)..e)    |                             |
 <!-- .element.table: style="font-size:50%;" -->
 
 _[Programación didáctica ](https://drive.google.com/file/d/1_NBHFvUpToCpRCow8i-xNGtTAMcRiCgj/view?usp=sharing)_

@@ -85,6 +85,7 @@ Note: La centralización es clave: cuando actualizamos el servidor, todos los cl
 | Congestión de tráfico | Balanceadores de carga, CDN     |
 | Fallo del servidor    | Clusters, alta disponibilidad   |
 | Costes de hardware    | Virtualización, cloud computing |
+<!-- .element.table: style="font-size:75%;" -->
 
 Note: Ninguna arquitectura es perfecta. El modelo cliente-servidor tiene desventajas, pero todas tienen solución. La congestión se mitiga con balanceadores de carga y CDNs. Los fallos del servidor se previenen con clusters y redundancia. Los costes se optimizan con virtualización y cloud. Muchas de estas técnicas las habéis visto en unidades anteriores con Docker y CI/CD.
 
@@ -345,12 +346,12 @@ Note: Serverless es perfecto para cargas de trabajo intermitentes o impredecible
 
 Note: Serverless es perfecto para cargas de trabajo intermitentes o impredecibles. Si tenéis un servicio que se usa esporádicamente, serverless es ideal: solo pagáis cuando se usa. No os preocupáis de servidores, parches, escalado. Pero tiene desventajas: quedáis atados al proveedor, hay latencia inicial en funciones que llevan tiempo sin ejecutarse, y si el uso es muy alto y constante, puede salir más caro que servidores dedicados. Es ideal para microservicios específicos, no para aplicaciones enteras.
 
-
 ---
 
 ## 4.5. Comparativa de Arquitecturas
 
 Nota: Ahora que hemos visto las principales arquitecturas web, es hora de compararlas. Cada una tiene sus pros y contras. No hay una arquitectura "mejor": la elección depende del contexto del proyecto, el equipo, los requisitos de escalabilidad, y los recursos disponibles. Veamos una tabla resumen y cuándo elegir cada una.
+
 
 ### Tabla Resumen
 
@@ -360,6 +361,7 @@ Nota: Ahora que hemos visto las principales arquitecturas web, es hora de compar
 | Escalabilidad | 🔴 Limitada | 🟡 Buena    | 🟢 Excelente    | 🟢 Automática |
 | Mantenimiento | 🔴 Complejo | 🟡 Moderado | 🟢 Ágil         | 🟢 Mínimo     |
 | Coste         | 🟢 Bajo     | 🟡 Moderado | 🔴 Alto         | 🟡 Variable   |
+<!-- .element.table: style="font-size:75%;" -->
 
 Note: Esta tabla resume las diferencias clave. Los monolitos son simples pero escalan mal. Las capas mejoran la organización pero siguen siendo monolitos. Los microservicios ofrecen máxima flexibilidad pero alta complejidad. Serverless minimiza operaciones pero puede ser costoso con mucho uso. No hay una arquitectura "mejor": la elección depende del tamaño del proyecto, del equipo, de los requisitos de escalabilidad, y de los recursos disponibles.
 

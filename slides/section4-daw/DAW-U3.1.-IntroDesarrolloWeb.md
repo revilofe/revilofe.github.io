@@ -274,6 +274,7 @@ Note: Las **PWA** son el futuro de las aplicaciones web. Combinan lo mejor de we
 | **Interacción**   | Baja            | Alta            |
 | **Actualización** | Página completa | Parcial (SPA)   |
 | **Complejidad**   | Baja-Media      | Media-Alta      |
+<!-- .element.table: style="font-size:75%;" -->
 
 Note: La diferencia fundamental está en el **objetivo**: si quieres **informar** (blog, portfolio, documentación), una página web tradicional es perfecta, más simple, más barata, más fácil de mantener. Si necesitas **funcionalidad compleja** (edición, colaboración, transacciones), necesitas una aplicación web. La **interacción** marca la diferencia: páginas web tienen interacción básica (leer, navegar), aplicaciones web tienen interacción continua (editar, arrastrar, notificaciones en tiempo real). Las **actualizaciones** también: páginas web recargan completamente en cada navegación, aplicaciones web actualizan solo lo necesario creando experiencia fluida. Y la **complejidad de desarrollo** es proporcional: páginas web son más rápidas y baratas de desarrollar, aplicaciones web requieren más inversión inicial pero ofrecen mucho más valor.
 

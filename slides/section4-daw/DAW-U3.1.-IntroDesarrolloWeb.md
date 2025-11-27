@@ -2,6 +2,10 @@
 
 ---
 
+![Logo Alberti](assets/logo-iesra.png) <!-- .element height="50%" width="50%" -->
+
+---
+
 ## Índice
 
 1. El desarrollo web actual

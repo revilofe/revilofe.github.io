@@ -925,6 +925,12 @@ Las páginas web dinámicas son la columna vertebral de la web moderna. Sin ella
 - Laravel Documentation. (2024). [https://laravel.com/docs](https://laravel.com/docs)
 - Django Documentation. (2024). [https://docs.djangoproject.com/](https://docs.djangoproject.com/)
 
+## Presentación
+
+Puedes acceder a la presentación de esta unidad aquí:
+
+[Presentación DAW-U3.5 - Funcionamiento de una Web Dinámica](https://revilofe.github.io/slides/section4-daw/DAW-U3.5.-WebDinamica.html)
+
 ## Recursos adicionales
 
 - [PHP.net](https://www.php.net/) - Documentación oficial de PHP

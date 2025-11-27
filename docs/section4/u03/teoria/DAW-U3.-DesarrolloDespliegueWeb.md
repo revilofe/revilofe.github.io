@@ -77,68 +77,126 @@ HTTP es un protocolo de **capa de aplicación** que define cómo se estructuran 
 
 #### 1.3. Características principales
 
-HTTP tiene características que lo hacen ideal para la web:
+HTTP posee un conjunto de características que lo han convertido en la columna vertebral de la web moderna. Estas características no son casuales; cada una fue diseñada para resolver problemas específicos de la comunicación en Internet y, juntas, crean un protocolo sorprendentemente flexible y poderoso.
 
-**Sencillo**
+**Sencillo: la elegancia de la simplicidad**
 
-- Es un protocolo en modo texto legible por humanos
-- Fácil de entender y depurar
-- Se puede probar directamente con herramientas simples como `curl` o `telnet`
+Una de las razones por las que HTTP ha tenido tanto éxito es su **simplicidad fundamental**. A diferencia de otros protocolos de red complejos y binarios, HTTP utiliza texto plano que podemos leer y escribir directamente. Imaginad poder "ver" realmente lo que vuestro navegador está enviando al servidor, no como bytes incomprensibles, sino como texto que podéis leer. Esto significa que:
+
+- **Es legible por humanos**: Podéis abrir una conexión HTTP y ver exactamente qué se está enviando. Cada petición es simplemente texto que describe lo que queremos hacer: "Dame este recurso", "Envía estos datos", etc.
+    
+- **Fácil de depurar**: Cuando algo falla (y en desarrollo web, las cosas fallan constantemente), no necesitáis herramientas especializadas complejas. Con un simple navegador en modo desarrollador o con `curl` en la terminal, podéis ver exactamente qué está pasando, qué se envió y qué se recibió.
+    
+- **Bajo umbral de entrada**: Para aprender HTTP, no necesitáis entender complejos protocolos binarios ni documentación críptica. Podéis hacer peticiones HTTP manualmente y ver las respuestas inmediatamente, aprendiendo de forma práctica.
+
+Por ejemplo, podéis abrir una terminal ahora mismo y hacer una petición HTTP completa con una simple línea:
 
 ```bash
 # Ejemplo de petición HTTP manual con curl
+# Esto os mostrará toda la conversación HTTP
 curl -v http://www.ejemplo.com
 ```
 
-**Extensible**
+Esta simplicidad no significa que sea limitado; al contrario, significa que es **accesible y potente al mismo tiempo**. Es como tener una herramienta que cualquiera puede entender, pero que los expertos pueden usar para construir aplicaciones increíblemente sofisticadas.
 
-- Se pueden añadir cabeceras personalizadas
-- Permite enviar metadatos adicionales más allá de los estándares
-- Facilita la evolución del protocolo sin romper compatibilidad
+**Extensible: preparado para evolucionar**
 
-**Sin estado (Stateless)**
+Cuando Tim Berners-Lee diseñó HTTP en 1989, no podía imaginar las necesidades de las aplicaciones web de 2025. Sin embargo, HTTP sigue siendo relevante porque fue diseñado para **evolucionar sin romperse**. Esta extensibilidad se manifiesta de varias formas:
 
-- Cada petición es independiente de las anteriores
-- El servidor no guarda información sobre peticiones previas
-- Simplifica el diseño del servidor y mejora la escalabilidad
+- **Se pueden añadir cabeceras personalizadas**: Si tu aplicación necesita enviar información adicional que no estaba prevista en el estándar original, simplemente añades una cabecera. Por ejemplo, `X-User-Session: abc123` o `X-API-Version: 2.0`. El protocolo no se rompe; simplemente transporta la información adicional.
+    
+- **Permite enviar metadatos más allá de los estándares**: Cada empresa, cada framework, cada aplicación puede añadir sus propias cabeceras sin necesidad de cambiar el protocolo base. Google puede añadir cabeceras para Analytics, tu aplicación puede añadir cabeceras para autenticación personalizada, y todo funciona sin conflictos.
+    
+- **Facilita la evolución del protocolo sin romper compatibilidad**: HTTP ha evolucionado de HTTP/1.0 a HTTP/1.1, HTTP/2, y HTTP/3, pero un servidor HTTP/3 moderno todavía puede comunicarse con un cliente HTTP/1.1 antiguo. Esta retrocompatibilidad es crucial para la web.
+
+Esta extensibilidad es la razón por la que HTTP ha sobrevivido más de 30 años y seguirá siendo relevante en el futuro.
+
+**Sin estado (Stateless): simplicidad que escala**
+
+Esta es quizás la característica más contraintuitiva pero más importante de HTTP. En un protocolo **stateless** (sin estado), cada petición es como empezar de cero:
+
+- **Cada petición es independiente de las anteriores**: Cuando hacéis una segunda petición, el servidor no "recuerda" la primera. Es como hablar con alguien que tiene amnesia total entre cada frase que le decís.
+    
+- **El servidor no guarda información sobre peticiones previas**: No hay memoria de sesión, no hay contexto mantenido. Cada petición debe contener toda la información necesaria para ser procesada.
+    
+- **Simplifica el diseño del servidor y mejora la escalabilidad**: Esto suena como una limitación, pero es en realidad una **ventaja enorme**. Si el servidor no necesita recordar el estado de cada cliente, puede manejar millones de peticiones sin quedarse sin memoria. Puede reiniciarse sin perder "contexto", y múltiples servidores pueden trabajar juntos sin necesidad de sincronizar estados complejos.
+
+Pensad en la diferencia: un servidor con estado es como un camarero que debe recordar todo lo que cada cliente ha pedido durante toda la comida. Un servidor sin estado es como una máquina expendedora: cada interacción es independiente, simple y rápida.
 
 !!! warning "El problema del estado"
     Que HTTP sea stateless presenta un desafío: ¿cómo mantener la sesión de un usuario (por ejemplo, en un carrito de compra)? La solución son las **cookies** y las **sesiones**, que estudiaremos en detalle más adelante.
 
 #### 1.4. Ventajas del protocolo HTTP
 
-HTTP ofrece múltiples ventajas que lo han convertido en el protocolo estándar de Internet:
+HTTP ofrece múltiples ventajas que lo han convertido en el protocolo estándar de Internet. Estas ventajas no son accidentales; son el resultado de décadas de evolución y refinamiento del protocolo. Veamos cómo cada característica se traduce en beneficios concretos para desarrolladores y usuarios.
 
-**Control de caché**
+**Control de caché: velocidad sin sacrificar frescura**
 
-- Permite especificar cómo y cuándo se almacenan temporalmente los recursos
-- Mejora significativamente la velocidad de carga
-- Reduce el consumo de ancho de banda
-- Las cabeceras `Cache-Control` y `Expires` controlan este comportamiento
+Imaginad que cada vez que visitáis YouTube, tuvierais que descargar de nuevo todo el código JavaScript, todas las imágenes del logo, todos los estilos CSS... La web sería insoportablemente lenta. HTTP soluciona esto elegantemente con su sistema de **control de caché**:
 
-**Autenticación**
+- **Permite especificar cómo y cuándo se almacenan temporalmente los recursos**: Los servidores pueden decir "este logo no cambia nunca, guárdalo durante un año" o "estos datos son muy dinámicos, pide actualizaciones cada minuto". Esta flexibilidad es crucial.
+    
+- **Mejora significativamente la velocidad de carga**: La primera visita a un sitio puede tardar 3 segundos, pero las visitas posteriores toman solo 0.5 segundos porque el navegador ya tiene la mayoría de los recursos guardados localmente.
+    
+- **Reduce el consumo de ancho de banda**: Si un millón de usuarios visitan tu sitio, sin caché descargarían los mismos archivos estáticos un millón de veces. Con caché, solo los descargan una vez. Esto ahorra dinero en servidores y es mejor para el medio ambiente (menos consumo energético).
+    
+- **Las cabeceras `Cache-Control` y `Expires` controlan este comportamiento**: Los desarrolladores tienen control fino sobre qué se cachea, por cuánto tiempo y bajo qué condiciones. Por ejemplo: `Cache-Control: max-age=31536000` significa "guarda esto durante un año".
 
-- Soporta varios mecanismos de autenticación (Basic, Digest, Bearer)
-- Permite verificar la identidad de los usuarios
-- Protege recursos sensibles
+Este sistema de caché es una de las razones por las que la web puede funcionar a escala global. Sin él, simplemente no sería práctico.
 
-**Uso de proxies**
+**Autenticación: protegiendo lo que es privado**
 
-- Facilita el uso transparente de servidores intermediarios
-- Permite filtrado, caché compartida, balanceo de carga
-- Mejora la seguridad y el rendimiento
+No todo en Internet debe ser público. Necesitamos formas de verificar que "eres quien dices ser" antes de mostrar información sensible. HTTP integra esta capacidad desde su diseño:
 
-**Mantenimiento de sesiones**
+- **Soporta varios mecanismos de autenticación**: Desde el simple **HTTP Basic** (usuario y contraseña en Base64) hasta sistemas más sofisticados como **Digest** (con hash de la contraseña) o **Bearer tokens** (tokens JWT modernos). Cada uno ofrece diferentes niveles de seguridad según las necesidades.
+    
+- **Permite verificar la identidad de los usuarios**: Antes de mostrar tu correo electrónico, tu historial médico o tus datos bancarios, el servidor puede exigir que demuestres quién eres. Esta verificación sucede en cada petición HTTP mediante cabeceras de autorización.
+    
+- **Protege recursos sensibles**: Combinado con HTTPS, podéis crear sistemas seguros donde solo los usuarios autorizados accedan a información privada. Esto es fundamental para cualquier aplicación que maneje datos personales o sensibles.
 
-- Aunque HTTP es stateless, soporta cookies
-- Las cookies permiten mantener el estado entre peticiones
-- Esencial para aplicaciones web modernas
+La autenticación HTTP es la base sobre la que se construyen todos los sistemas de login, APIs privadas y zonas protegidas de las aplicaciones web modernas.
 
-**Negociación de contenido**
+**Uso de proxies: el poder de los intermediarios**
 
-- El cliente puede indicar qué formatos acepta
-- El servidor puede responder en el formato más adecuado
-- Facilita la internacionalización y la adaptación a dispositivos
+En la conversación HTTP entre cliente y servidor, a veces es útil tener "intermediarios" que intercepten y procesen las peticiones. Estos intermediarios se llaman **proxies**, y HTTP los soporta nativamente:
+
+- **Facilita el uso transparente de servidores intermediarios**: El cliente puede estar hablando con un proxy sin siquiera saberlo. El proxy puede estar en la oficina, en un CDN (Content Delivery Network), o en cualquier punto intermedio de Internet.
+    
+- **Permite filtrado, caché compartida y balanceo de carga**: 
+    - **Filtrado**: Una empresa puede bloquear acceso a ciertos sitios
+    - **Caché compartida**: Miles de usuarios pueden compartir una caché común, multiplicando los beneficios
+    - **Balanceo de carga**: Un proxy puede distribuir peticiones entre múltiples servidores, evitando que uno se sobrecargue
+    
+- **Mejora la seguridad y el rendimiento**: Los proxies pueden inspeccionar tráfico malicioso, comprimir contenido, o servir contenido desde ubicaciones geográficamente cercanas al usuario (eso es lo que hace Cloudflare, por ejemplo).
+
+Este soporte de proxies es lo que permite a servicios como Cloudflare, Akamai o Fastly hacer la web más rápida y segura para todos.
+
+**Mantenimiento de sesiones: recordar en un mundo sin memoria**
+
+Recordáis que HTTP es stateless (sin estado)? Entonces, ¿cómo es posible que cuando añadís algo al carrito de Amazon, siga ahí cuando vais a otra página? La respuesta son las **cookies**:
+
+- **Aunque HTTP es stateless, soporta cookies**: Las cookies son pequeños trozos de información que el servidor envía al cliente diciendo "guarda esto y devuélvemelo en cada petición". Es como dar al camarero amnésico una tarjeta que dice "este es el pedido de esta mesa".
+    
+- **Las cookies permiten mantener el estado entre peticiones**: El servidor puede generar un identificador único de sesión, enviarlo como cookie, y luego usar ese identificador para recuperar datos de sesión guardados en su base de datos. Así, aunque HTTP no tenga memoria, podemos simularla.
+    
+- **Esencial para aplicaciones web modernas**: Sin cookies, no existirían los carritos de compra persistentes, los sistemas de login que te mantienen autenticado, o cualquier tipo de personalización. Prácticamente toda aplicación web moderna depende de esto.
+
+Las cookies han evolucionado mucho: de simples strings a sofisticados sistemas con flags de seguridad (`Secure`, `HttpOnly`, `SameSite`) que protegen contra diversos ataques.
+
+**Negociación de contenido: la misma información, diferentes formatos**
+
+¿Qué pasa cuando un navegador español visita un sitio en inglés? ¿O cuando un navegador moderno visita un sitio que también debe soportar navegadores antiguos? HTTP permite **negociar** qué formato de contenido usar:
+
+- **El cliente puede indicar qué formatos acepta**: Mediante cabeceras como `Accept-Language: es-ES, en;q=0.9` el navegador dice "prefiero español, pero acepto inglés si no hay español". O `Accept: application/json, text/html` para decir qué tipos de contenido puede procesar.
+    
+- **El servidor puede responder en el formato más adecuado**: El servidor analiza estas preferencias y responde con el mejor formato disponible. Esto permite que el mismo endpoint sirva JSON a aplicaciones móviles y HTML a navegadores.
+    
+- **Facilita la internacionalización y la adaptación a dispositivos**: Un mismo servidor puede servir:
+    - Contenido en diferentes idiomas según la preferencia del usuario
+    - Imágenes en diferentes resoluciones según el dispositivo
+    - Formatos de datos diferentes según las capacidades del cliente
+
+Esta negociación hace que la web sea verdaderamente universal, adaptándose automáticamente a las necesidades de cada usuario y dispositivo.
 
 <figure markdown="span">
   ![Protocolo HTTP](assets/http.png){ width="700" }
@@ -1992,6 +2050,105 @@ app.listen(3000, () => {
 | **C#**       | C#         | ASP.NET Core      | MVC                 | Integración Microsoft    | Entornos Windows           |
 
 
+
+
+Hasta ahora hemos explorado la diferencia fundamental entre contenido estático y dinámico, y las tecnologías que permiten generar páginas web dinámicas. Sin embargo, en el ecosistema web actual existe otra distinción crucial que debemos comprender: **la diferencia entre páginas web tradicionales, aplicaciones web y Progressive Web Apps**. Esta clasificación nos ayuda a entender mejor el espectro completo de experiencias que podemos crear en la web moderna.
+
+#### 2.15. Página Web tradicional
+
+Una **página web** es principalmente un documento de información que se visualiza en un navegador.
+
+**Características:**
+
+- **Contenido estático o poco dinámico**: El contenido cambia poco o nada
+- **Interacción limitada**: Principalmente lectura de información
+- **Navegación basada en páginas**: Cada clic carga una página nueva
+- **Recarga completa**: Cada acción recarga toda la página
+- **Enfoque en contenido**: Prioriza la presentación de información
+
+**Ejemplos típicos:**
+
+- Blogs personales
+- Sitios web corporativos informativos
+- Páginas de noticias simples
+- Portafolios
+- Documentación estática
+
+**Tecnologías típicas:**
+
+- HTML + CSS + JavaScript mínimo
+- Generadores de sitios estáticos (Jekyll, Hugo)
+- CMS simples (WordPress para blogs)
+
+#### 2.16. Aplicación Web (Web App)
+
+Una **aplicación web** es un software completo que se ejecuta en el navegador y proporciona funcionalidades complejas.
+
+**Características:**
+
+- **Contenido dinámico**: Cambia constantemente según las acciones del usuario
+- **Alta interactividad**: El usuario puede realizar muchas acciones
+- **Single Page Application (SPA)**: No recarga la página, solo actualiza partes
+- **Estado de sesión**: Mantiene información del usuario durante su uso
+- **Lógica compleja**: Realiza operaciones sofisticadas
+- **Experiencia similar a app nativa**: Se comporta como software de escritorio
+
+**Ejemplos típicos:**
+
+- Gmail (cliente de correo)
+- Google Maps (mapas interactivos)
+- Netflix (streaming de video)
+- Trello (gestión de proyectos)
+- Figma (diseño colaborativo)
+- Spotify Web (reproducción de música)
+
+**Tecnologías típicas:**
+
+- **Frontend**: React, Angular, Vue.js
+- **Backend**: Node.js, Python/Django, Java/Spring
+- **Base de datos**: PostgreSQL, MongoDB, MySQL
+- **APIs RESTful o GraphQL**
+- **WebSockets** para comunicación en tiempo real
+
+#### 2.17. Progressive Web Apps (PWA)
+
+Las **PWA** son aplicaciones web que incorporan características de aplicaciones nativas:
+
+- **Instalables**: Se pueden "instalar" en el dispositivo
+- **Funcionamiento offline**: Trabajan sin conexión gracias a Service Workers
+- **Notificaciones push**: Pueden enviar notificaciones al usuario
+- **Acceso a hardware**: Cámara, geolocalización, etc.
+- **Responsive**: Se adaptan a cualquier tamaño de pantalla
+- **Rápidas**: Carga optimizada y experiencia fluida
+
+**Ventajas de las PWA:**
+
+- No requieren instalación desde tiendas de apps
+- Actualizaciones automáticas
+- Menor consumo de recursos que apps nativas
+- Una sola base de código para todas las plataformas
+- Descubribles por motores de búsqueda
+
+!!! tip "El futuro son las aplicaciones web"
+    La tendencia actual es que cada vez más servicios se ofrecen como aplicaciones web en lugar de software tradicional. Esto facilita el acceso, las actualizaciones y reduce costes de desarrollo y mantenimiento.
+
+#### 2.18. Tabla comparativa
+
+| Aspecto               | Página Web            | Aplicación Web             | PWA                        |
+|:----------------------|:----------------------|:---------------------------|:---------------------------|
+| **Objetivo**          | Informar              | Proporcionar funcionalidad | Combinar lo mejor de ambas |
+| **Interactividad**    | Baja                  | Alta                       | Alta                       |
+| **Complejidad**       | Baja                  | Alta                       | Media-Alta                 |
+| **Recarga de página** | Completa              | Parcial/Ninguna            | Parcial/Ninguna            |
+| **Estado de sesión**  | Mínimo                | Complejo                   | Complejo                   |
+| **Offline**           | No                    | Limitado                   | Sí                         |
+| **Instalable**        | No                    | No                         | Sí                         |
+| **Experiencia**       | Documento             | Aplicación                 | App nativa                 |
+| **Ejemplos**          | Blog, web corporativa | Gmail, Trello              | Twitter Lite, Pinterest    |
+
+
+
+
 ---
 
 ## BLOQUE 2: COMPONENTES Y ARQUITECTURA
@@ -3049,37 +3206,101 @@ Tenemos el código, los servidores configurados. Ahora debemos **llevar todo a p
 
 #### 12.2. Escalabilidad vertical (Scale Up)
 
-Hacer más potente el servidor existente:
-- Más CPU
-- Más RAM
-- Discos más rápidos
+La escalabilidad vertical, o "scale up", es la estrategia más intuitiva cuando una aplicación necesita más recursos: **hacer más potente el servidor existente**. Es como cambiar el motor de un coche por uno más grande cuando necesitáis más velocidad.
 
-**Ventajas:** Simple
-**Desventajas:** Límite físico, punto único de fallo
+**¿En qué consiste?**
+
+Cuando vuestra aplicación se queda sin recursos, podéis mejorar el hardware del servidor:
+
+- **Más CPU**: Pasar de 4 núcleos a 8, 16 o incluso 64 núcleos. Esto permite procesar más peticiones simultáneamente y ejecutar cálculos más rápido.
+
+- **Más RAM**: Aumentar de 8GB a 32GB, 64GB o incluso 256GB. Esto permite mantener más datos en memoria (lo cual es muchísimo más rápido que acceder al disco), cachear más información y manejar más conexiones simultáneas.
+
+- **Discos más rápidos**: Cambiar de discos tradicionales HDD a SSD, o de SSD SATA a NVMe. Esto acelera dramáticamente la lectura/escritura de datos, las consultas a bases de datos, y la carga de archivos.
+
+**Ventajas de la escalabilidad vertical:**
+
+- **Simplicidad extrema**: No necesitáis cambiar nada en vuestro código. La aplicación sigue funcionando exactamente igual, solo que más rápida. No hay que preocuparse por distribuir datos o sincronizar múltiples servidores.
+
+- **Configuración mínima**: El mismo servidor, la misma IP, las mismas configuraciones. Solo cambiáis el hardware (o en cloud, seleccionáis una máquina más grande).
+
+- **Sin problemas de consistencia**: Como todo sigue en un solo servidor, no hay problemas de datos desincronizados o sesiones distribuidas.
+
+**Desventajas que debéis conocer:**
+
+- **Límite físico inevitable**: No podéis añadir CPUs infinitamente. Llega un punto donde simplemente no existen servidores más potentes, o son prohibitivamente caros (un servidor con 128 núcleos y 1TB de RAM puede costar más de 50.000€).
+
+- **Punto único de fallo**: Si ese único servidor se cae (fallo de hardware, error de software, mantenimiento), **toda vuestra aplicación se cae**. No hay redundancia.
+
+- **Tiempo de inactividad al escalar**: Para mejorar el hardware, normalmente necesitáis apagar el servidor, instalar el nuevo hardware, y reiniciarlo. Esto significa minutos u horas de inactividad.
+
+- **Coste no lineal**: Duplicar la potencia del servidor puede costar 3 o 4 veces más, no el doble.
+
+**Cuándo usar escalabilidad vertical:**
+
+- Aplicaciones pequeñas o medianas que aún no necesitan alta disponibilidad
+- Bases de datos que requieren toda la información en un solo lugar
+- Como primer paso antes de ir a horizontal (es más fácil de implementar)
 
 #### 12.3. Escalabilidad horizontal (Scale Out)
 
-Añadir más servidores:
+La escalabilidad horizontal, o "scale out", adopta un enfoque completamente diferente: en lugar de hacer un servidor más potente, **añadís más servidores trabajando en equipo**. Es como contratar más empleados en lugar de pedirle a uno solo que trabaje más rápido.
 
-**Balanceador de carga:**
-Distribuye peticiones entre múltiples servidores.
+**¿Cómo funciona?**
+
+En lugar de tener un superservidor, tenéis múltiples servidores "normales" trabajando juntos. Pero necesitáis un componente adicional crucial: el **balanceador de carga**.
+
+**El balanceador de carga: el director de orquesta**
+
+El balanceador de carga es un servidor especial que recibe todas las peticiones de los clientes y las distribuye inteligentemente entre los servidores disponibles:
 
 ```
-           Balanceador
+              Internet
+                 |
+           Balanceador de Carga
+           (decide a dónde va
+            cada petición)
               / | \
              /  |  \
-       Srv1  Srv2  Srv3
+           /    |    \
+       Srv1   Srv2   Srv3
+    (8GB RAM) (8GB) (8GB)
 ```
 
-**Ventajas:**
-- Sin límite teórico
-- Alta disponibilidad
-- Tolerancia a fallos
+Cuando un usuario hace una petición, el balanceador decide qué servidor está menos ocupado o es más apropiado, y envía la petición ahí. El usuario nunca sabe cuántos servidores hay detrás; para él, es transparente.
 
-**Desventajas:**
-- Más complejo
-- Sesiones compartidas
-- Coste mayor
+**Ventajas poderosas:**
+
+- **Sin límite teórico**: ¿Necesitáis el doble de capacidad? Añadís el doble de servidores. ¿Triple? Triple de servidores. Podéis escalar a cientos o miles de servidores si es necesario. Netflix, por ejemplo, usa miles de servidores.
+
+- **Alta disponibilidad (HA)**: Si un servidor se cae, los otros siguen funcionando. El balanceador simplemente deja de enviar peticiones al servidor caído. Los usuarios ni siquiera notan el problema.
+
+- **Tolerancia a fallos real**: Podéis actualizar los servidores uno por uno sin tiempo de inactividad. Actualizas Srv1 mientras Srv2 y Srv3 siguen funcionando, luego Srv2, luego Srv3. Despliegue sin caídas (zero-downtime deployment).
+
+- **Escalado elástico**: En cloud, podéis añadir servidores automáticamente cuando hay mucho tráfico (por ejemplo, el Black Friday) y quitarlos cuando baja. Solo pagáis por lo que usáis.
+
+**Desventajas y complejidades:**
+
+- **Arquitectura más compleja**: Vuestro código debe estar preparado para ejecutarse en múltiples máquinas. No podéis asumir que dos peticiones del mismo usuario llegarán al mismo servidor.
+
+- **Problema de sesiones compartidas**: Si un usuario inicia sesión en Srv1 y la siguiente petición va a Srv2, Srv2 no sabe que el usuario está logueado. Necesitáis soluciones como:
+    - **Sticky sessions**: El balanceador envía al mismo usuario siempre al mismo servidor
+    - **Sesiones en base de datos compartida**: Todos los servidores leen sesiones de Redis o una BD central
+    - **Tokens JWT**: El estado viaja en el token, no en el servidor
+
+- **Coste operacional mayor**: Más servidores significan más configuración, más monitorización, más complejidad en despliegues. Necesitáis herramientas de automatización (Ansible, Terraform, Kubernetes).
+
+- **Sincronización de datos**: Si tenéis archivos subidos por usuarios, cachés, o datos temporales, necesitáis aseguraros de que todos los servidores tengan acceso a los mismos datos (mediante sistemas de archivos compartidos como NFS o S3).
+
+**El escenario típico: horizontal + vertical**
+
+En la práctica, las empresas suelen combinar ambas estrategias:
+
+1. **Empiezas con un servidor decente** (escalabilidad vertical)
+2. **Cuando llegas al límite, añades más servidores** (escalabilidad horizontal)
+3. **Si cada servidor necesita más potencia, los mejoras** (vertical de nuevo)
+
+Es un enfoque híbrido que ofrece lo mejor de ambos mundos. Por ejemplo, tener 10 servidores de 16GB RAM cada uno, en lugar de 1 servidor de 160GB o 100 servidores de 1.6GB.
 
 ---
 

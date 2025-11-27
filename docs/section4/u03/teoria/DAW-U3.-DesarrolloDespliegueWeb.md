@@ -53,7 +53,8 @@ Cada sección construye sobre la anterior, creando un conocimiento sólido y com
 ## BLOQUE 1: FUNDAMENTOS DE LA WEB
 
 Antes de construir aplicaciones complejas, debemos entender perfectamente cómo se comunican y qué tipos de contenido pueden generar. Este primer bloque establece los cimientos sobre los que construiremos todo lo demás.
-#### 1.1. El Protocolo HTTP y HTTPS
+
+### 1. Protocolo HTTP/HTTPS y comunicación web
 
 En las unidades anteriores hemos aprendido sobre los componentes de una aplicación web y cómo se divide el código entre cliente y servidor. Pero, ¿cómo se comunican realmente estos dos componentes? La respuesta está en el **protocolo HTTP**, el lenguaje universal de la web.
 
@@ -63,7 +64,7 @@ Cada vez que escribís una URL en el navegador, hacéis clic en un enlace o envi
 
 El **Protocolo HTTP (HyperText Transfer Protocol)** es la base de la comunicación en la World Wide Web. Fue creado por Tim Berners-Lee en 1989 y se ha convertido en el estándar para la transferencia de información en Internet.
 
-#### 1.1. Definición y concepto
+#### 1.2. Definición y concepto
 
 HTTP es un protocolo de **capa de aplicación** que define cómo se estructuran y envían los mensajes entre clientes y servidores web. Es un protocolo **no orientado a la conexión**, lo que significa que cada petición entre cliente y servidor es independiente y no requiere mantener una conexión continua.
 
@@ -74,7 +75,7 @@ HTTP es un protocolo de **capa de aplicación** que define cómo se estructuran 
 - **Recursos**: Documentos, imágenes, datos que se intercambian
 - **Mensajes**: Peticiones (requests) y respuestas (responses)
 
-#### 1.2. Características principales
+#### 1.3. Características principales
 
 HTTP tiene características que lo hacen ideal para la web:
 
@@ -104,7 +105,7 @@ curl -v http://www.ejemplo.com
 !!! warning "El problema del estado"
     Que HTTP sea stateless presenta un desafío: ¿cómo mantener la sesión de un usuario (por ejemplo, en un carrito de compra)? La solución son las **cookies** y las **sesiones**, que estudiaremos en detalle más adelante.
 
-#### 1.3. Ventajas del protocolo HTTP
+#### 1.4. Ventajas del protocolo HTTP
 
 HTTP ofrece múltiples ventajas que lo han convertido en el protocolo estándar de Internet:
 
@@ -144,7 +145,7 @@ HTTP ofrece múltiples ventajas que lo han convertido en el protocolo estándar 
   <figcaption>Diagrama del protocolo HTTP mostrando el flujo de comunicación entre cliente y servidor: el cliente envía una petición (request) con método, URL y cabeceras; el servidor responde con un código de estado, cabeceras y el contenido solicitado</figcaption>
 </figure>
 
-#### 1.4. Importancia en arquitecturas modernas
+#### 1.5. Importancia en arquitecturas modernas
 
 HTTP es fundamental en las arquitecturas web actuales:
 
@@ -156,11 +157,11 @@ HTTP es fundamental en las arquitecturas web actuales:
 !!! tip "HTTP es universal"
     HTTP es tan universal que incluso aplicaciones que no son web (como aplicaciones móviles o de escritorio) suelen usar HTTP para comunicarse con sus servidores, aprovechando su simplicidad y las herramientas existentes.
 
-#### 1.2. Formato de peticiones y respuestas HTTP
+#### 1.6. Formato de peticiones y respuestas HTTP
 
 La interacción en la web se basa en un intercambio constante de **peticiones** (requests) y **respuestas** (responses) HTTP entre el navegador del cliente y el servidor. Entender su estructura es fundamental.
 
-#### 2.1. Estructura de una petición HTTP
+#### 1.7. Estructura de una petición HTTP
 
 Una petición HTTP del cliente tiene la siguiente estructura:
 
@@ -223,7 +224,7 @@ User-Agent: Mozilla/5.0
 }
 ```
 
-#### 2.2. Estructura de una respuesta HTTP
+#### 1.8. Estructura de una respuesta HTTP
 
 Una respuesta HTTP del servidor tiene una estructura similar:
 
@@ -293,11 +294,11 @@ Date: Wed, 19 Nov 2025 15:30:00 GMT
 !!! note "Herramientas de desarrollo"
     Todos los navegadores modernos incluyen herramientas de desarrollo (F12) donde podéis ver las peticiones y respuestas HTTP en la pestaña "Red" o "Network". Es fundamental aprender a usar estas herramientas para depurar aplicaciones web.
 
-#### 1.3. Cabeceras HTTP
+#### 1.9. Cabeceras HTTP
 
 Las cabeceras HTTP son líneas de metadatos que se envían tanto en las peticiones como en las respuestas. Proporcionan información crucial sobre la comunicación entre cliente y servidor.
 
-#### 3.1. Cabeceras de petición comunes
+#### 1.10. Cabeceras de petición comunes
 
 Estas cabeceras son enviadas por el cliente al servidor:
 
@@ -379,7 +380,7 @@ Envía cookies almacenadas previamente:
 Cookie: sessionid=abc123; preferencias=tema_oscuro
 ```
 
-#### 3.2. Cabeceras de respuesta comunes
+#### 1.11. Cabeceras de respuesta comunes
 
 Estas cabeceras son enviadas por el servidor al cliente:
 
@@ -456,7 +457,7 @@ Indica el idioma del contenido:
 Content-Language: es-ES
 ```
 
-#### 3.3. Tipos MIME más comunes
+#### 1.12. Tipos MIME más comunes
 
 Los tipos MIME (Multipurpose Internet Mail Extensions) identifican el formato del contenido:
 
@@ -476,7 +477,7 @@ Los tipos MIME (Multipurpose Internet Mail Extensions) identifican el formato de
 | `application/pdf`        | Documento PDF          |
 | `application/zip`        | Archivo comprimido ZIP |
 
-#### 1.4. Métodos HTTP (verbos HTTP)
+#### 1.13. Métodos HTTP (verbos HTTP)
 
 Los métodos HTTP, también llamados **verbos HTTP**, definen la acción que un cliente desea realizar sobre un recurso en el servidor. Son fundamentales para el diseño de APIs RESTful.
 
@@ -485,7 +486,7 @@ Los métodos HTTP, también llamados **verbos HTTP**, definen la acción que un 
   <figcaption>Representación visual de los principales métodos HTTP y sus acciones: GET para obtener, POST para crear, PUT para actualizar, DELETE para eliminar. Cada método tiene un propósito específico en la manipulación de recursos del servidor</figcaption>
 </figure>
 
-#### 4.1. GET - Obtener recursos
+#### 1.14. GET - Obtener recursos
 
 **Propósito**: Obtener o recuperar un recurso del servidor.
 
@@ -523,7 +524,7 @@ Host: api.ejemplo.com
 !!! warning "GET no debe modificar"
     Aunque técnicamente es posible, **nunca** se debe usar GET para operaciones que modifiquen el estado del servidor (crear, actualizar, borrar). Esto viola el principio de que GET es un método seguro.
 
-#### 4.2. POST - Crear recursos
+#### 1.15. POST - Crear recursos
 
 **Propósito**: Enviar datos al servidor, típicamente para crear un nuevo recurso.
 
@@ -572,7 +573,7 @@ Content-Type: application/json
 - Subir archivos: `POST /uploads`
 - Login: `POST /api/login`
 
-#### 4.3. PUT - Actualizar recursos
+#### 1.16. PUT - Actualizar recursos
 
 **Propósito**: Actualizar o reemplazar completamente un recurso existente.
 
@@ -601,7 +602,7 @@ Content-Type: application/json
 - **POST**: Crea un nuevo recurso (el servidor decide el ID)
 - **PUT**: Actualiza un recurso existente (el cliente especifica el ID)
 
-#### 4.4. PATCH - Actualización parcial
+#### 1.17. PATCH - Actualización parcial
 
 **Propósito**: Actualizar parcialmente un recurso.
 
@@ -625,7 +626,7 @@ Content-Type: application/json
 
 Con PUT habría que enviar todos los campos del usuario, con PATCH solo los que cambian.
 
-#### 4.5. DELETE - Eliminar recursos
+#### 1.18. DELETE - Eliminar recursos
 
 **Propósito**: Borrar un recurso del servidor.
 
@@ -658,7 +659,7 @@ Content-Type: application/json
 }
 ```
 
-#### 4.6. HEAD - Obtener metadatos
+#### 1.19. HEAD - Obtener metadatos
 
 **Propósito**: Solicitar las mismas cabeceras que GET, pero sin el cuerpo de la respuesta.
 
@@ -690,7 +691,7 @@ Last-Modified: Mon, 18 Nov 2025 10:00:00 GMT
 - Obtener el tamaño de un archivo antes de descargarlo
 - Verificar si un recurso ha sido modificado
 
-#### 4.7. OPTIONS - Opciones disponibles
+#### 1.20. OPTIONS - Opciones disponibles
 
 **Propósito**: Obtener los métodos HTTP soportados por un recurso.
 
@@ -710,7 +711,7 @@ Allow: GET, POST, PUT, DELETE, OPTIONS
 
 Es especialmente importante en **CORS** (Cross-Origin Resource Sharing).
 
-#### 4.8. Tabla resumen de métodos HTTP
+#### 1.21. Tabla resumen de métodos HTTP
 
 | Método      | Propósito            | Idempotente  | Seguro  | Con cuerpo  | Cacheable  |
 |:------------|:---------------------|:-------------|:--------|:------------|:-----------|
@@ -725,7 +726,7 @@ Es especialmente importante en **CORS** (Cross-Origin Resource Sharing).
 !!! tip "Diseño de APIs RESTful"
     El uso correcto de los métodos HTTP es fundamental para diseñar APIs RESTful bien estructuradas. Cada método tiene un propósito específico y debe usarse según su semántica.
 
-#### 1.5. Códigos de estado HTTP
+#### 1.22. Códigos de estado HTTP
 
 Después de cada petición, el servidor envía una respuesta que incluye un **código de estado HTTP**. Este código es un número de tres dígitos que indica el resultado de la petición.
 
@@ -734,7 +735,7 @@ Después de cada petición, el servidor envía una respuesta que incluye un **c�
   <figcaption>Clasificación de los códigos de estado HTTP organizados por familias: 1xx (Informativos), 2xx (Éxito), 3xx (Redirección), 4xx (Errores del cliente), 5xx (Errores del servidor). Cada familia indica un tipo diferente de resultado de la petición</figcaption>
 </figure>
 
-#### 5.1. Familia 1xx - Respuestas informativas
+#### 1.23. Familia 1xx - Respuestas informativas
 
 Indican que la petición ha sido recibida y el proceso continúa.
 
@@ -746,7 +747,7 @@ Indican que la petición ha sido recibida y el proceso continúa.
 
 **Uso poco común**: Raramente se encuentran estos códigos en aplicaciones web típicas.
 
-#### 5.2. Familia 2xx - Operaciones exitosas
+#### 1.24. Familia 2xx - Operaciones exitosas
 
 Indican que la acción del cliente fue recibida, entendida y aceptada correctamente.
 
@@ -775,7 +776,7 @@ Content-Type: application/json
 {"id": 789, "nombre": "Laptop", "precio": 899}
 ```
 
-#### 5.3. Familia 3xx - Redirecciones
+#### 1.25. Familia 3xx - Redirecciones
 
 El cliente necesita realizar una acción adicional para completar la petición.
 
@@ -796,7 +797,7 @@ Location: https://www.ejemplo.com/nueva-url
 
 El navegador automáticamente seguirá la redirección.
 
-#### 5.4. Familia 4xx - Errores del cliente
+#### 1.26. Familia 4xx - Errores del cliente
 
 La petición contiene un error o no puede ser completada debido a un problema del cliente.
 
@@ -850,7 +851,7 @@ Content-Type: application/json
     - **401 Unauthorized**: "No sé quién eres" - Necesitas autenticarte
     - **403 Forbidden**: "Sé quién eres, pero no puedes hacer esto" - No tienes permisos
 
-#### 5.5. Familia 5xx - Errores del servidor
+#### 1.27. Familia 5xx - Errores del servidor
 
 El servidor falló al completar una petición aparentemente válida. El problema está en el servidor, no en el cliente.
 
@@ -890,11 +891,11 @@ Content-Type: application/json
 !!! warning "Nunca exponer detalles técnicos"
     En producción, los errores 5xx **nunca deben revelar** detalles técnicos como trazas de stack, consultas SQL o rutas de archivos. Esto es un riesgo de seguridad. Guardad esos detalles en logs del servidor.
 
-#### 1.6. El protocolo HTTPS: seguridad en la web
+#### 1.28. El protocolo HTTPS: seguridad en la web
 
 **HTTPS (HyperText Transfer Protocol Secure)** es la versión segura del protocolo HTTP. En la web moderna, HTTPS no es opcional: es **esencial** para la seguridad y privacidad de los usuarios.
 
-#### 6.1. ¿Por qué es necesario HTTPS?
+#### 1.29. ¿Por qué es necesario HTTPS?
 
 HTTP transmite datos en **texto plano**, lo que significa que cualquiera que intercepte la comunicación puede leer todo:
 
@@ -914,7 +915,7 @@ HTTP transmite datos en **texto plano**, lo que significa que cualquiera que int
 !!! danger "HTTP está obsoleto"
     Los navegadores modernos marcan los sitios HTTP como "No seguros". Google penaliza en SEO a los sitios sin HTTPS. Algunas APIs (como geolocalización) solo funcionan en HTTPS.
 
-#### 6.2. ¿Cómo funciona HTTPS?
+#### 1.30. ¿Cómo funciona HTTPS?
 
 HTTPS = HTTP + SSL/TLS (cifrado)
 
@@ -943,7 +944,7 @@ HTTPS = HTTP + SSL/TLS (cifrado)
 
 6. **Comunicación cifrada**: Todos los datos se cifran con la clave de sesión
 
-#### 6.3. Certificados digitales
+#### 1.31. Certificados digitales
 
 Un **certificado digital** es un documento electrónico que vincula una clave pública a la identidad de un propietario (servidor web).
 
@@ -968,7 +969,7 @@ Son entidades de confianza que emiten y firman certificados:
 
 Los navegadores tienen una lista de CAs en las que confían. Si un certificado no está firmado por una CA confiable, el navegador mostrará una advertencia.
 
-#### 6.4. Tipos de certificados
+#### 1.32. Tipos de certificados
 
 **Por nivel de validación:**
 
@@ -996,7 +997,7 @@ Los navegadores tienen una lista de CAs en las que confían. Si un certificado n
 
 3. **Multi-domain (SAN)**: Para múltiples dominios diferentes
 
-#### 6.5. Let's Encrypt: certificados gratuitos
+#### 1.33. Let's Encrypt: certificados gratuitos
 
 **Let's Encrypt** es una Autoridad de Certificación sin ánimo de lucro que proporciona certificados SSL/TLS **gratuitos y automáticos**.
 
@@ -1020,7 +1021,7 @@ sudo certbot --apache -d www.ejemplo.com
 sudo certbot renew --dry-run
 ```
 
-#### 6.6. Impacto en el rendimiento
+#### 1.34. Impacto en el rendimiento
 
 El cifrado SSL/TLS requiere recursos computacionales adicionales:
 
@@ -1037,7 +1038,7 @@ El cifrado SSL/TLS requiere recursos computacionales adicionales:
 !!! tip "HTTPS es más rápido que HTTP"
     Paradójicamente, con HTTP/2 (que requiere HTTPS), los sitios HTTPS modernos son **más rápidos** que los HTTP, a pesar del cifrado. HTTP/2 multiplexea peticiones, comprime cabeceras y permite server push.
 
-#### 6.7. HTTPS en desarrollo
+#### 1.35. HTTPS en desarrollo
 
 Durante el desarrollo es útil usar HTTPS también:
 
@@ -1063,7 +1064,7 @@ Durante el desarrollo es útil usar HTTPS también:
     
 3. **Túneles**: ngrok, localtunnel para exponer localhost con HTTPS
 
-#### 6.8. Buenas prácticas HTTPS
+#### 1.36. Buenas prácticas HTTPS
 
 1. **Usar siempre HTTPS**: Para todo el sitio, no solo el login
 
@@ -1109,13 +1110,15 @@ HTTP y HTTPS son los cimientos sobre los que se construyen las aplicaciones web 
 
 ---
 
+### 2. Páginas web estáticas vs dinámicas
+
 Una vez que comprendemos cómo se comunican cliente y servidor mediante HTTP, surge una pregunta natural: **¿cómo se genera el contenido que viaja en esas respuestas HTTP?** No todo el contenido web se crea igual. Existe una diferencia fundamental entre el contenido que ya existe preformado y el contenido que se construye dinámicamente para cada petición. Esta distinción marca la diferencia entre la web estática de los años 90 y las aplicaciones web modernas que usamos hoy.
 
 #### 2.1. La evolución: de lo estático a lo dinámico
 
 Para comprender completamente las páginas web dinámicas, primero debemos entender de dónde venimos. La web no comenzó siendo dinámica; su evolución ha sido progresiva y responde a las crecientes necesidades de interactividad y personalización.
 
-#### 1.1. El inicio: páginas web estáticas
+#### 2.2. El inicio: páginas web estáticas
 
 En los primeros días de Internet (años 90), todas las páginas web eran **estáticas**. Tim Berners-Lee, cuando creó la primera página web en 1991, simplemente escribió un documento HTML que describía el proyecto World Wide Web. Ese archivo HTML se guardaba en un servidor y se enviaba exactamente igual a cualquier persona que lo solicitara.
 
@@ -1202,7 +1205,7 @@ Sin embargo, las páginas estáticas tienen limitaciones fundamentales que rápi
 
 Estas limitaciones llevaron a una pregunta inevitable: **¿cómo podemos hacer que las páginas se adapten a cada usuario y situación?** La respuesta fue el desarrollo de las páginas web dinámicas.
 
-#### 1.2. La revolución: páginas web dinámicas
+#### 2.3. La revolución: páginas web dinámicas
 
 A mediados de los años 90, surgió la necesidad de crear páginas que pudieran **cambiar su contenido** según diferentes factores: el usuario que las visita, la hora del día, datos almacenados en bases de datos, o las acciones del usuario.
 
@@ -1252,11 +1255,11 @@ $fechaActual = date('d \de F \de Y');
 
 Esta capacidad de generar contenido dinámicamente abrió las puertas a toda la web moderna que conocemos hoy: redes sociales, comercio electrónico, banca online, aplicaciones web complejas, y mucho más.
 
-#### 2.2. Cómo funciona una página web dinámica: el proceso completo
+#### 2.4. Cómo funciona una página web dinámica: el proceso completo
 
 Ahora que entendemos **por qué** necesitamos páginas dinámicas, profundicemos en **cómo** funcionan exactamente. El proceso es fascinante y es importante que lo comprendáis bien, ya que es la base de todo el desarrollo web backend.
 
-#### 2.1. Los actores del proceso
+#### 2.5. Los actores del proceso
 
 Antes de ver el flujo completo, identifiquemos a los participantes:
 
@@ -1286,7 +1289,7 @@ Antes de ver el flujo completo, identifiquemos a los participantes:
 - Almacena los scripts del servidor y recursos estáticos
 - El código dinámico lee archivos de plantillas, configuración, etc.
 
-#### 2.2. El flujo completo: paso a paso
+#### 2.6. El flujo completo: paso a paso
 
 Veamos qué sucede exactamente cuando un usuario solicita una página dinámica. Imaginemos que un usuario quiere ver su perfil en una red social:
 
@@ -1492,7 +1495,7 @@ El navegador:
 
 El usuario ve su página personalizada, ¡sin saber todo el proceso que acaba de ocurrir!
 
-#### 2.3. Diferencias clave en el tiempo de respuesta
+#### 2.7. Diferencias clave en el tiempo de respuesta
 
 Es importante entender que las páginas dinámicas son **más lentas** que las estáticas, pero esta "lentitud" es el precio de la funcionalidad:
 
@@ -1522,11 +1525,11 @@ Sin embargo, esta diferencia es **totalmente aceptable** porque:
     - Uso de CDN para recursos estáticos
     - Técnicas como lazy loading
 
-#### 2.3. Tecnologías de generación de páginas web dinámicas
+#### 2.8. Tecnologías de generación de páginas web dinámicas
 
 Ahora que comprendemos el proceso, exploremos las **tecnologías** que hacen posible la generación dinámica de contenido. A lo largo de la historia de la web, han surgido múltiples lenguajes y frameworks, cada uno con sus fortalezas y casos de uso ideales.
 
-#### 3.1. Panorama general de tecnologías
+#### 2.9. Panorama general de tecnologías
 
 El desarrollo web del lado del servidor ha evolucionado enormemente, pero todos los enfoques comparten el mismo objetivo fundamental: **ejecutar código en el servidor que genera HTML dinámicamente**.
 
@@ -1541,7 +1544,7 @@ Las principales familias de tecnologías son:
 
 Cada una de estas tecnologías representa una forma diferente de resolver el mismo problema, y la elección depende de múltiples factores: el equipo de desarrollo, los requisitos del proyecto, el ecosistema de librerías, y las preferencias personales.
 
-#### 3.2. PHP: el lenguaje que construyó la web
+#### 2.10. PHP: el lenguaje que construyó la web
 
 PHP (Hypertext Preprocessor) es, sin lugar a dudas, el lenguaje más ubicuo en el desarrollo web. A pesar de las críticas que a veces recibe, PHP sigue siendo el motor detrás de una parte masiva de Internet.
 
@@ -1655,7 +1658,7 @@ Laravel proporciona: ORM (Eloquent), sistema de plantillas (Blade), routing, aut
 - Rendimiento inferior a lenguajes compilados
 - Algunas prácticas antiguas persisten
 
-#### 3.3. Python: elegancia y versatilidad
+#### 2.11. Python: elegancia y versatilidad
 
 Python se ha convertido en uno de los lenguajes más queridos para desarrollo web, especialmente con frameworks como Django y Flask.
 
@@ -1769,7 +1772,7 @@ if __name__ == '__main__':
 - Rendimiento (aunque mejora con PyPy)
 - Global Interpreter Lock (GIL) limita concurrencia
 
-#### 3.4. Java: robustez empresarial
+#### 2.12. Java: robustez empresarial
 
 Java ha sido durante décadas la opción preferida para aplicaciones empresariales de gran escala.
 
@@ -1896,7 +1899,7 @@ public class PerfilController {
 - Curva de aprendizaje pronunciada
 - Configuración compleja (aunque Spring Boot mejora esto)
 
-#### 3.5. Node.js: JavaScript en todas partes
+#### 2.13. Node.js: JavaScript en todas partes
 
 Node.js revolucionó el desarrollo web al permitir usar JavaScript tanto en el frontend como en el backend.
 
@@ -1977,7 +1980,7 @@ app.listen(3000, () => {
 - JavaScript puede ser propenso a errores
 - Menos maduro para aplicaciones empresariales tradicionales
 
-#### 2.4. Tabla comparativa de tecnologías
+#### 2.14. Tabla comparativa de tecnologías
 
 | Tecnología   | Lenguaje   | Framework Popular | Paradigma           | Ventaja Principal        | Ideal Para                 |
 |:-------------|:-----------|:------------------|:--------------------|:-------------------------|:---------------------------|
@@ -2445,11 +2448,11 @@ Para verificar la longitud mínima de una contraseña:
 !!! tip "Separación de responsabilidades"
     Una buena práctica es que el cliente se encargue de la experiencia de usuario (validaciones de formato, feedback visual, interactividad) mientras que el servidor se encarga de la seguridad, la lógica de negocio crítica y el acceso a datos.
 
-#### 3.2. División de responsabilidades: Frontend, Backend y la división de responsabilidades
+#### 3.4. División de responsabilidades: Frontend, Backend y la división de responsabilidades
 
 Ahora que entendemos los modelos de ejecución, profundicemos en los componentes principales de una aplicación web y cómo se relacionan entre sí.
 
-#### 3.1. Frontend: la cara visible de la aplicación
+#### 3.5. Frontend: la cara visible de la aplicación
 
 El **Frontend** es todo lo que el usuario ve e interactúa directamente en su navegador. Es la interfaz de usuario (UI) y la experiencia de usuario (UX).
 
@@ -2481,7 +2484,7 @@ El **Frontend** es todo lo que el usuario ve e interactúa directamente en su na
 - **Vue.js**: Framework progresivo y flexible
 - **Svelte**: Compilador que genera código JavaScript optimizado
 
-#### 3.2. Backend: el cerebro de la aplicación
+#### 3.6. Backend: el cerebro de la aplicación
 
 El **Backend** es la parte que no ve el usuario. Es donde reside la lógica de negocio, se procesan los datos y se toman las decisiones importantes.
 
@@ -2514,7 +2517,7 @@ El **Backend** es la parte que no ve el usuario. Es donde reside la lógica de n
 - **Seguridad**: Proteger datos y prevenir ataques
 - **Integración**: Comunicarse con otros sistemas y servicios
 
-#### 3.3. La universalidad del Backend
+#### 3.7. La universalidad del Backend
 
 Una característica importante del Backend es su **universalidad**: puede servir a múltiples tipos de clientes simultáneamente.
 

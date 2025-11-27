@@ -801,3 +801,7 @@ El conocimiento de APIs y servicios web es fundamental para cualquier desarrolla
 - [JWT.io](https://jwt.io/) - Decodificador y documentación de JWT
 - [Netflix Tech Blog](https://netflixtechblog.com/) - Blog técnico de Netflix
 - [Postman](https://www.postman.com/) - Herramienta para probar APIs
+
+## Presentación
+
+- [DAW-U3.4 - Servicios Web y Comunicación con APIs](https://revilofe.github.io/slides/section4-daw/DAW-U3.4.-ServiciosWebAPIs.html)

@@ -163,12 +163,12 @@ En el contexto del desarrollo de aplicaciones web del lado del servidor (backend
 
 <figure markdown="span">
   ![Evolución de arquitecturas web](assets/arquitecturas_web.gif)
-  <figcaption>Evolución visual de las diferentes arquitecturas de software web</figcaption>
+  <figcaption>Evolución visual de diferentes arquitecturas de software</figcaption>
 </figure>
 
 #### 2.1. Arquitectura monolítica
 
-La arquitectura monolítica es el enfoque tradicional donde todos los componentes de una aplicación web se agrupan en un solo bloque. La lógica de negocio, la interfaz de usuario y la capa de acceso a datos se encuentran dentro de la misma aplicación.
+La arquitectura monolítica es el enfoque tradicional donde todos los componentes de una aplicación se agrupan en un solo bloque. La lógica de negocio, la interfaz de usuario y la capa de acceso a datos se encuentran dentro de la misma aplicación.
 
 **Características principales:**
 
@@ -638,7 +638,7 @@ Estructuras globales de las aplicaciones:
 !!! note "Profundización futura"
     En unidades posteriores, cuando trabajemos con frameworks específicos y desarrollemos proyectos, veremos estos patrones en acción. Por ahora, es importante entender que existen y cuál es su propósito general.
 
-## Resumen de la unidad
+### 5. Resumen de la unidad
 
 En esta unidad hemos aprendido los fundamentos de las arquitecturas web modernas:
 
@@ -662,6 +662,12 @@ Estos conocimientos son fundamentales para las próximas unidades, donde profund
 - Newman, S. (2021). *Building Microservices: Designing Fine-Grained Systems* (2nd ed.). O'Reilly Media.
 - Richardson, C. (2018). *Microservices Patterns*. Manning Publications.
 - Gamma, E., Helm, R., Johnson, R., & Vlissides, J. (1994). *Design Patterns: Elements of Reusable Object-Oriented Software*. Addison-Wesley.
+
+## Presentación
+
+Puedes acceder a la presentación de esta unidad aquí:
+
+[Presentación DAW-U3.2 - Arquitecturas Web y Fundamentos del Despliegue](https://revilofe.github.io/slides/section4-daw/DAW-U3.2.-ArquitecturasWeb.html)
 
 ## Recursos adicionales
 

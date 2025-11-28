@@ -337,28 +337,34 @@ NOTA: Aunque estamos utilizando `print()` dentro de las funciones que tratan con
 ##### **2.6.4. Explicación paso a paso**
 
 1. **Función `cargar_json`:**
-   - Lee el contenido del archivo JSON.
-   - Maneja excepciones como `FileNotFoundError` y `JSONDecodeError` para evitar fallos en caso de problemas con el archivo.
+
+    - Lee el contenido del archivo JSON.
+    - Maneja excepciones como `FileNotFoundError` y `JSONDecodeError` para evitar fallos en caso de problemas con el archivo.
 
 2. **Función `guardar_json`:**
-   - Guarda el objeto Python en el archivo JSON.
-   - Usa `json.dump` con `indent = 4` para que sea legible.
+
+    - Guarda el objeto Python en el archivo JSON.
+    - Usa `json.dump` con `indent = 4` para que sea legible.
 
 3. **Función `actualizar_usuario`:**
-   - Busca un usuario por su `id` y actualiza su edad si existe.
-   - Muestra un mensaje si no encuentra al usuario.
+
+    - Busca un usuario por su `id` y actualiza su edad si existe.
+    - Muestra un mensaje si no encuentra al usuario.
 
 4. **Función `insertar_usuario`:**
-   - Agrega un nuevo usuario al listado.
+
+    - Agrega un nuevo usuario al listado.
 
 5. **Función `eliminar_usuario`:**
-   - Elimina un usuario por su `id` si existe.
-   - Muestra un mensaje si no lo encuentra.
+
+    - Elimina un usuario por su `id` si existe.
+    - Muestra un mensaje si no lo encuentra.
 
 6. **Ejecución principal:**
-   - Carga el JSON inicial.
-   - Realiza las operaciones necesarias (actualizar, insertar, eliminar).
-   - Guarda los datos actualizados en el archivo.
+
+    - Carga el JSON inicial.
+    - Realiza las operaciones necesarias (actualizar, insertar, eliminar).
+    - Guarda los datos actualizados en el archivo.
 
 ##### **2.6.5. Resultado final (`datos.json`)**
 
@@ -394,11 +400,9 @@ La serialización es el proceso de convertir un objeto en memoria *(como una lis
 
 En el contexto de JSON, serializar un objeto significa convertirlo a una cadena en formato JSON para:
 
-   1. Almacenamiento persistente: Guardarlo en un archivo o base de datos.
-
-   2. Transmisión de datos: Enviarlo a través de una red, como en una API o un servicio web.
-
-   3. Compatibilidad: Interoperar con otros sistemas que usen JSON.
+1. Almacenamiento persistente: Guardarlo en un archivo o base de datos.
+2. Transmisión de datos: Enviarlo a través de una red, como en una API o un servicio web.
+3. Compatibilidad: Interoperar con otros sistemas que usen JSON.
 
 Deserialización, por el contrario, es el proceso inverso: convertir la representación JSON de vuelta a un objeto en memoria.
 
@@ -436,28 +440,23 @@ print(cadena_json)
 ```
 
 **¿Qué sucede aquí?**
+- El diccionario `datos` contiene:
 
-   - El diccionario `datos` contiene:
-      
-      * "evento": una cadena (str), que es serializable de manera directa.
-      
-      * "fecha": un objeto de tipo datetime, que no es serializable por defecto.
+    * "evento": una cadena (str), que es serializable de manera directa.
+    * "fecha": un objeto de tipo datetime, que no es serializable por defecto.
 
-   - La función `json.dumps()` intenta serializar cada valor del diccionario.
+- La función `json.dumps()` intenta serializar cada valor del diccionario. 
+
+    * Al llegar a "fecha", detecta que es un tipo datetime (no serializable directamente).
+    * Llama a la función proporcionada en el argumento default, que es `convertir`.
+
+- La función `convertir`:
    
-      * Al llegar a "fecha", detecta que es un tipo datetime (no serializable directamente).
-      
-      * Llama a la función proporcionada en el argumento default, que es `convertir`.
-
-   - La función `convertir`:
+    * Verifica si el objeto es de tipo datetime con `isinstance(obj, datetime)`.
+    * Si lo es, lo convierte al formato ISO 8601 utilizando el método `isoformat()`.
+    * Si no puede convertir el objeto, lanza un ***TypeError***.
    
-      * Verifica si el objeto es de tipo datetime con `isinstance(obj, datetime)`.
-      
-      * Si lo es, lo convierte al formato ISO 8601 utilizando el método `isoformat()`.
-
-      * Si no puede convertir el objeto, lanza un ***TypeError***.
-   
-   - Finalmente, `json.dumps()` crea la cadena JSON con el formato que podemos observar en ***Salida***.
+- Finalmente, `json.dumps()` crea la cadena JSON con el formato que podemos observar en ***Salida***.
 
 **Salida:**
 
@@ -469,9 +468,10 @@ print(cadena_json)
 ```
 
 **El argumento default**
-	- Sirve como un callback que json.dumps() llama cada vez que encuentra un objeto no serializable.
-	- Si no proporcionas este argumento y se encuentra un tipo no serializable, json.dumps() lanza una excepción TypeError.
-	- Útil para convertir tipos personalizados, como datetime, set, o incluso instancias de clases.
+
+- Sirve como un callback que json.dumps() llama cada vez que encuentra un objeto no serializable.
+- Si no proporcionas este argumento y se encuentra un tipo no serializable, json.dumps() lanza una excepción TypeError.
+- Útil para convertir tipos personalizados, como datetime, set, o incluso instancias de clases.
 
 ##### **2.8.3. Ordenar claves**
 
@@ -488,15 +488,19 @@ print(cadena_json)
 ```
 
 **¿Qué sucede aquí?:**
-	- `datos` es un diccionario que contiene:
-	    * "z": 1
-	    * "a": 2
-	    * "m": 3
-	- Cuando usamos el argumento `sort_keys = True`:
-	    * Python ordena las claves del diccionario alfabéticamente (a, m, z) antes de convertirlo a JSON.
-	    * Esto es útil cuando queremos garantizar un orden consistente de las claves en el JSON, especialmente en archivos o transmisiones donde el orden importa.
-	- El resultado es el que se muestra en ***Salida***.
-	- Sin `sort_keys = True`, el orden de las claves en el JSON seguiría el orden original del diccionario.
+- `datos` es un diccionario que contiene:
+
+    * "z": 1
+    * "a": 2
+    * "m": 3
+
+- Cuando usamos el argumento `sort_keys = True`:
+
+    * Python ordena las claves del diccionario alfabéticamente (a, m, z) antes de convertirlo a JSON.
+    * Esto es útil cuando queremos garantizar un orden consistente de las claves en el JSON, especialmente en archivos o transmisiones donde el orden importa.
+
+- El resultado es el que se muestra en ***Salida***.
+- Sin `sort_keys = True`, el orden de las claves en el JSON seguiría el orden original del diccionario.
 
 **Salida:**
 
@@ -509,15 +513,15 @@ print(cadena_json)
 ```
 
 **El argumento sort_keys**
-	- No afecta la estructura o contenido del JSON, solo su presentación.
-	- Es puramente estético o práctico, por ejemplo, para facilitar la lectura o las comparaciones en pruebas automatizadas.
+- No afecta la estructura o contenido del JSON, solo su presentación.
+- Es puramente estético o práctico, por ejemplo, para facilitar la lectura o las comparaciones en pruebas automatizadas.
 
 ##### **2.8.4. Conclusión - Opciones avanzadas**
 
 La serialización personalizada y la ordenación de claves son características avanzadas pero muy útiles del módulo json. Permiten:
-	1.	Adaptabilidad: Serializar tipos personalizados como datetime, o incluso tus propias clases.
-	2.	Consistencia: Ordenar las claves del JSON para garantizar un formato estándar, útil en pruebas, depuración o contratos API.
-	3.	Flexibilidad: Personalizar la salida del JSON para que cumpla con los requisitos específicos de tu aplicación.
+1.	Adaptabilidad: Serializar tipos personalizados como datetime, o incluso tus propias clases.
+2.	Consistencia: Ordenar las claves del JSON para garantizar un formato estándar, útil en pruebas, depuración o contratos API.
+3.	Flexibilidad: Personalizar la salida del JSON para que cumpla con los requisitos específicos de tu aplicación.
 
 Al dominar estas técnicas, podemos aprovechar al máximo el módulo json en proyectos de cualquier complejidad.
 

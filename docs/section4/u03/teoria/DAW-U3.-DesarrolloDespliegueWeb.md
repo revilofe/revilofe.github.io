@@ -48,7 +48,6 @@ Cada sección construye sobre la anterior, creando un conocimiento sólido y com
 !!! info "Un viaje práctico"
     A lo largo de este documento, utilizaremos ejemplos prácticos, diagramas explicativos y casos reales de empresas como Netflix, para que el conocimiento teórico se conecte siempre con la realidad profesional.
 
----
 
 ## BLOQUE 1: FUNDAMENTOS DE LA WEB
 
@@ -56,7 +55,7 @@ Antes de construir aplicaciones complejas, debemos entender perfectamente cómo 
 
 ### 1. Protocolo HTTP/HTTPS y comunicación web
 
-En las unidades anteriores hemos aprendido sobre los componentes de una aplicación web y cómo se divide el código entre cliente y servidor. Pero, ¿cómo se comunican realmente estos dos componentes? La respuesta está en el **protocolo HTTP**, el lenguaje universal de la web.
+Mas adelante hablaremos sobre los componentes de una aplicación web y cómo se divide el código entre cliente, un navegador comúnmente, y servidor. Pero, ¿cómo se comunican realmente estos dos componentes? La respuesta está en el **protocolo HTTP**, el lenguaje universal de la web.
 
 Cada vez que escribís una URL en el navegador, hacéis clic en un enlace o enviáis un formulario, estáis utilizando HTTP. Es el protocolo que hace posible que podáis leer esta página, ver vídeos en YouTube o comprar en Amazon. Entenderlo es fundamental para cualquier profesional del desarrollo y despliegue de aplicaciones web.
 
@@ -546,191 +545,943 @@ Los métodos HTTP, también llamados **verbos HTTP**, definen la acción que un 
 
 #### 1.14. GET - Obtener recursos
 
-**Propósito**: Obtener o recuperar un recurso del servidor.
+GET es el método HTTP más utilizado en toda la web. **Cada vez que escribís una URL en el navegador y pulsáis Enter, estáis haciendo una petición GET**. Es el método por excelencia para leer información, para consultar datos, para obtener recursos sin alterarlos.
 
-**Características:**
+**Propósito fundamental**: Solicitar y recibir datos del servidor **sin modificar absolutamente nada**. Es como mirar el escaparate de una tienda: podéis mirar todo lo que queráis, examinar los productos, pero nada cambia por el simple hecho de mirar.
 
-- **Idempotente**: Múltiples peticiones idénticas tienen el mismo efecto que una sola
-- **Seguro**: No modifica el estado del servidor
-- **Cacheable**: Las respuestas pueden ser cacheadas
-- **Sin cuerpo**: Los parámetros van en la URL (query string)
+**Características que lo definen:**
 
-**Ejemplos:**
+- **Seguro (Safe method)**: Esta es quizás su propiedad más importante. Un GET **nunca jamás** debe modificar el estado del servidor. No debe crear recursos, no debe actualizarlos, no debe borrarlos, no debe cambiar nada. Si vuestro GET tiene efectos secundarios (side effects), estáis violando HTTP y causando problemas graves. ¿Por qué? Porque navegadores y bots de búsqueda pre-cargan páginas mediante GET, y si un GET borra datos... desastre.
 
-```http
-GET /usuarios HTTP/1.1
-Host: api.ejemplo.com
-```
+- **Idempotente**: Hacer la misma petición GET una vez, diez veces, mil veces, produce exactamente el mismo resultado. `GET /usuarios/123` siempre devolverá el mismo usuario con id 123 (a menos que OTRO proceso lo haya modificado entre medias, pero el GET en sí no lo modifica). Esta propiedad permite reintentar peticiones sin miedo.
+
+- **Cacheable por naturaleza**: Como los GET no modifican nada y son idempotentes, los navegadores, los CDNs (Content Delivery Networks) y los proxies pueden guardar la respuesta en caché y reutilizarla durante horas, días o semanas. **Esto hace la web dramáticamente más rápida**. Cuando visitáis una página por segunda vez, muchos recursos se cargan instantáneamente desde la caché local.
+
+- **Sin cuerpo en la petición**: Los parámetros van en la URL como query parameters. Por ejemplo: `/buscar?q=kotlin&tipo=tutoriales&orden=recientes`. Esto tiene ventajas (podéis compartir la URL y cualquiera obtendrá el mismo resultado, los enlaces son "bookmarkables") pero también limitaciones (las URLs tienen un límite de ~2000 caracteres en muchos navegadores).
+
+**Ejemplo real de petición GET:**
 
 ```http
 GET /usuarios/123 HTTP/1.1
 Host: api.ejemplo.com
+Accept: application/json
+User-Agent: Mozilla/5.0
+Authorization: Bearer eyJhbGc...token...
+Cache-Control: no-cache
 ```
 
+Lo que le estamos diciendo al servidor es: "Dame la información del usuario con ID 123, prefiero recibirla en formato JSON, soy el navegador Mozilla/Firefox, aquí está mi token de autenticación para verificar que tengo permiso, y no uses caché, dame la versión más reciente".
+
+**Respuesta típica exitosa:**
+
 ```http
-GET /productos?categoria=electronica&precio_max=500 HTTP/1.1
+HTTP/1.1 200 OK
+Content-Type: application/json
+Cache-Control: max-age=3600
+ETag: "33a64df551425fcc"
+Content-Length: 156
+
+{
+    "id": 123,
+    "nombre": "Juan Pérez",
+    "email": "juan@ejemplo.com",
+    "rol": "estudiante",
+    "fecha_registro": "2023-09-15"
+}
+```
+
+El servidor responde: "Todo bien (200 OK), aquí está la información en JSON como pediste, puedes guardarla en caché durante 1 hora (3600 segundos), este es su identificador único (ETag) que puedes usar luego para verificar si ha cambiado, y el contenido pesa 156 bytes".
+
+**Usos típicos en aplicaciones reales:**
+
+- **Obtener una lista de recursos**: 
+  - `GET /productos` → devuelve todos los productos
+  - `GET /productos?categoria=libros&precio_max=30&orden=precio` → productos filtrados y ordenados
+  - `GET /usuarios?page=2&limit=20` → paginación (página 2, 20 elementos por página)
+
+- **Obtener un recurso específico**: 
+  - `GET /usuarios/123` → obtiene el usuario con ID 123
+  - `GET /posts/456/comentarios` → obtiene los comentarios del post 456
+  - `GET /cursos/DAW/alumnos` → obtiene los alumnos del curso DAW
+
+- **Búsquedas complejas**: 
+  - `GET /buscar?q=kotlin&idioma=es&dificultad=intermedio&orden=fecha`
+  - `GET /productos/buscar?texto=laptop&marca[]=dell&marca[]=hp&precio_min=400`
+
+- **APIs públicas sin autenticación**: 
+  - `GET /api/clima?ciudad=Madrid&dias=7`
+  - `GET /api/noticias?categoria=tecnologia&fecha=2025-11-27`
+
+**Ejemplos prácticos con diferentes query parameters:**
+
+```http
+# Obtener todos los usuarios
+GET /usuarios HTTP/1.1
+Host: api.ejemplo.com
+
+# Obtener un usuario específico
+GET /usuarios/123 HTTP/1.1
+Host: api.ejemplo.com
+
+# Búsqueda con múltiples filtros
+GET /productos?categoria=electronica&precio_max=500&disponible=true HTTP/1.1
+Host: api.ejemplo.com
+
+# Con paginación y ordenamiento
+GET /posts?page=3&per_page=10&sort=fecha&order=desc HTTP/1.1
 Host: api.ejemplo.com
 ```
 
-**Usos típicos:**
+**Errores comunes que DEBÉIS EVITAR:**
 
-- Listar recursos: `GET /productos`
-- Obtener un recurso específico: `GET /productos/42`
-- Búsquedas: `GET /buscar?q=laptop`
-- Cargar páginas web
+❌ **NUNCA hagáis esto**: 
+```http
+GET /eliminar-usuario?id=123
+GET /transferir-dinero?origen=123&destino=456&cantidad=1000
+GET /logout
+```
 
-!!! warning "GET no debe modificar"
-    Aunque técnicamente es posible, **nunca** se debe usar GET para operaciones que modifiquen el estado del servidor (crear, actualizar, borrar). Esto viola el principio de que GET es un método seguro.
+Estos GET tienen efectos secundarios graves (borran, transfieren, cierran sesión). Esto viola completamente el principio de seguridad de GET. Imaginad un bot de Google siguiendo ese enlace `/eliminar-usuario?id=123` y borrando usuarios...
+
+✅ **Correcto - usar los métodos apropiados**: 
+```http
+DELETE /usuarios/123          (para eliminar)
+POST /transferencias          (para transferir dinero)
+POST /logout                  (para cerrar sesión)
+```
+
+!!! warning "GET no debe modificar NUNCA"
+    Aunque técnicamente es posible programar un GET que modifique el servidor, **nunca jamás debéis hacerlo**. GET es un método **seguro** por definición. Violarlo causa problemas de seguridad, problemas con cachés, problemas con bots, y rompe las expectativas de todos los clientes HTTP. Si necesitáis modificar algo, usad POST, PUT, PATCH o DELETE.
 
 #### 1.15. POST - Crear recursos
 
-**Propósito**: Enviar datos al servidor, típicamente para crear un nuevo recurso.
+Si GET es para **leer**, POST es para **escribir**. POST es el método que usáis cada vez que enviáis un formulario web, subís una foto a Instagram, publicáis un tweet, o creáis cualquier contenido nuevo en Internet.
 
-**Características:**
+**Propósito fundamental**: Enviar datos al servidor para que procese, típicamente para **crear un nuevo recurso**. Es como llenar un formulario de registro y enviarlo: estáis pidiendo al servidor que cree una nueva cuenta con vuestros datos.
 
-- **No idempotente**: Múltiples peticiones crean múltiples recursos
-- **No seguro**: Modifica el estado del servidor
-- **No cacheable** por defecto
-- **Con cuerpo**: Los datos van en el cuerpo de la petición
+**Características que lo hacen único:**
 
-**Ejemplo:**
+- **NO idempotente**: Esta es la diferencia clave con PUT. Si hacéis la misma petición POST dos veces, crearéis DOS recursos diferentes. Si os registráis dos veces en una web con el mismo email, deberíais obtener dos cuentas o un error. Cada POST es potencialmente una acción nueva.
+
+- **NO seguro**: Por supuesto que no es seguro, ¡su propósito es modificar el servidor! Cada POST cambia el estado: crea un usuario, añade un producto, publica un comentario...
+
+- **NO cacheable por defecto**: Como cada POST puede hacer algo diferente, los navegadores no pueden guardar la respuesta en caché. Cada POST debe ejecutarse realmente.
+
+- **Con cuerpo (body)**: A diferencia de GET, los datos van en el cuerpo de la petición, no en la URL. Esto permite enviar cantidades masivas de datos (archivos de imagen, documentos, JSON complejo) sin las limitaciones de longitud de URL.
+
+- **El servidor decide el identificador**: Cuando creas un recurso con POST, típicamente el cliente no especifica el ID. El servidor genera un ID único y te lo devuelve. Por eso POST a menudo devuelve código `201 Created` con una cabecera `Location` indicando dónde quedó el nuevo recurso.
+
+**Ejemplo real de creación de usuario:**
 
 ```http
 POST /usuarios HTTP/1.1
 Host: api.ejemplo.com
 Content-Type: application/json
-Content-Length: 85
+Content-Length: 145
+Authorization: Bearer eyJhbGc...token...
 
 {
     "nombre": "María García",
     "email": "maria@ejemplo.com",
-    "rol": "estudiante"
+    "password": "contraseña_hasheada",
+    "rol": "estudiante",
+    "fecha_nacimiento": "2000-05-15"
 }
 ```
 
-**Respuesta típica:**
+Le estamos diciendo al servidor: "Crea un nuevo usuario con estos datos. Los datos están en JSON y ocupan 145 bytes. Aquí está mi token para verificar que tengo permiso para crear usuarios".
+
+**Respuesta típica exitosa (201 Created):**
 
 ```http
 HTTP/1.1 201 Created
 Location: /usuarios/456
 Content-Type: application/json
+Content-Length: 198
 
 {
     "id": 456,
     "nombre": "María García",
     "email": "maria@ejemplo.com",
     "rol": "estudiante",
-    "creado": "2025-11-19T15:30:00Z"
+    "fecha_nacimiento": "2000-05-15",
+    "fecha_registro": "2025-11-27T10:30:00Z",
+    "verificado": false
 }
 ```
 
-**Usos típicos:**
+El servidor responde: "Creado exitosamente (201), el nuevo usuario está en `/usuarios/456` (cabecera Location), aquí tienes todos los datos del usuario creado, incluido el ID que yo generé (456) y campos adicionales que yo añadí automáticamente (fecha_registro, verificado)".
 
-- Crear recursos: `POST /productos`
-- Enviar formularios: `POST /contacto`
-- Subir archivos: `POST /uploads`
-- Login: `POST /api/login`
+**Usos típicos en el mundo real:**
+
+- **Crear recursos nuevos**:
+  - `POST /productos` → crear un nuevo producto en el catálogo
+  - `POST /posts` → publicar un nuevo artículo en un blog
+  - `POST /comentarios` → añadir un comentario a una discusión
+  - `POST /pedidos` → crear un nuevo pedido de compra
+
+- **Enviar formularios HTML tradicionales**:
+  - `POST /contacto` → enviar mensaje de contacto
+  - `POST /registro` → registrar nuevo usuario
+  - `POST /login` → iniciar sesión (aunque esto no crea un recurso, es común usar POST)
+
+- **Subir archivos**:
+  - `POST /uploads` → subir imágenes, documentos, videos
+  - `POST /avatar` → cambiar foto de perfil
+  - Con `Content-Type: multipart/form-data` para archivos
+
+- **Operaciones complejas que no se mapean a CRUD simple**:
+  - `POST /busqueda-avanzada` → búsqueda compleja con muchos parámetros (cuando GET sería demasiado largo)
+  - `POST /calcular` → ejecutar un cálculo complejo con muchos inputs
+  - `POST /procesar-pago` → procesar una transacción
+
+**Ejemplo de POST para subir un archivo:**
+
+```http
+POST /uploads/avatar HTTP/1.1
+Host: api.ejemplo.com
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Length: 34532
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="archivo"; filename="perfil.jpg"
+Content-Type: image/jpeg
+
+[datos binarios de la imagen aquí]
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+```
+
+**Respuestas comunes de POST:**
+
+- **201 Created**: Recurso creado exitosamente
+  ```http
+  HTTP/1.1 201 Created
+  Location: /usuarios/789
+  ```
+
+- **200 OK**: Operación exitosa pero no se creó un recurso específico
+  ```http
+  HTTP/1.1 200 OK
+  Content-Type: application/json
+  {"mensaje": "Email enviado correctamente"}
+  ```
+
+- **400 Bad Request**: Los datos enviados son inválidos
+  ```http
+  HTTP/1.1 400 Bad Request
+  Content-Type: application/json
+  {"error": "El email ya está registrado"}
+  ```
+
+- **409 Conflict**: El recurso ya existe
+  ```http
+  HTTP/1.1 409 Conflict
+  {"error": "Ya existe un usuario con ese username"}
+  ```
+
+**Diferencia clave: POST vs GET**
+
+```
+GET:  Leer, seguro, idempotente, cacheable, parámetros en URL
+POST: Escribir, no seguro, NO idempotente, NO cacheable, datos en body
+```
+
+**Ejemplo práctico - formulario de contacto:**
+
+```html
+<!-- HTML -->
+<form action="/contacto" method="POST">
+    <input name="nombre" required>
+    <input name="email" type="email" required>
+    <textarea name="mensaje" required></textarea>
+    <button type="submit">Enviar</button>
+</form>
+```
+
+Cuando el usuario envía este formulario, el navegador automáticamente hace:
+
+```http
+POST /contacto HTTP/1.1
+Host: ejemplo.com
+Content-Type: application/x-www-form-urlencoded
+
+nombre=Juan+Perez&email=juan%40ejemplo.com&mensaje=Hola%2C+necesito+ayuda
+```
+
+**Importante sobre idempotencia:**
+
+```javascript
+// ❌ Problema: Si hay error de red y reintentamos...
+POST /transferencia
+{ "origen": 123, "destino": 456, "cantidad": 100 }
+
+// Se ejecuta 2 veces = se transfieren 200€ en lugar de 100€
+// Por eso muchas APIs usan "idempotency keys" para prevenir duplicados
+```
+
+**POST con idempotency key (patrón avanzado):**
+
+```http
+POST /transferencias HTTP/1.1
+Host: api.banco.com
+Idempotency-Key: 550e8400-e29b-41d4-a716-446655440000
+Content-Type: application/json
+
+{
+    "origen": "ES1234567890",
+    "destino": "ES0987654321",
+    "cantidad": 100.00
+}
+```
+
+El servidor guarda el `Idempotency-Key`, y si recibe el mismo key dos veces, solo procesa la transferencia una vez. Esto hace POST "virtualmente idempotente" para operaciones críticas.
 
 #### 1.16. PUT - Actualizar recursos
 
-**Propósito**: Actualizar o reemplazar completamente un recurso existente.
+PUT es el método para **actualizar o reemplazar completamente** un recurso que ya existe. A diferencia de POST (que crea), PUT **modifica** algo que ya está ahí.
 
-**Características:**
+**Propósito fundamental**: Reemplazar por completo un recurso existente con una nueva versión. Es como reescribir todo un documento de Word: el archivo sigue teniendo el mismo nombre, pero su contenido es completamente nuevo.
 
-- **Idempotente**: Múltiples peticiones idénticas tienen el mismo efecto
-- **No seguro**: Modifica el estado del servidor
-- **Reemplaza completamente**: Sustituye el recurso entero
+**Características que lo definen:**
 
-**Ejemplo:**
+- **Idempotente (¡clave!)**: Esta es la diferencia fundamental con POST. Si hacéis PUT del mismo recurso 5 veces, el resultado es **exactamente el mismo** que hacerlo una sola vez. El recurso queda en el mismo estado final. Esto permite reintentar PUT sin miedo a duplicar efectos.
+
+    ```
+    PUT /usuarios/456  (primera vez)  → usuario actualizado
+    PUT /usuarios/456  (segunda vez)  → usuario igual (sin cambios)
+    PUT /usuarios/456  (tercera vez)  → usuario igual (sin cambios)
+    ```
+
+- **NO seguro**: Por supuesto, PUT modifica el estado del servidor. Cambia datos existentes.
+
+- **Reemplaza completamente el recurso**: Esto es crucial de entender. PUT **no hace actualizaciones parciales**. Cuando hacéis PUT, enviáis el recurso COMPLETO. Todo lo que no enviéis se considera que debe eliminarse o establecerse a valores por defecto.
+
+- **El cliente especifica el ID**: A diferencia de POST donde el servidor genera el ID, con PUT vosotros decís exactamente QUÉ recurso queréis actualizar (`/usuarios/456`). Si ese recurso no existe, algunos servidores lo crean (comportamiento "upsert": update or insert), aunque esto no es estándar.
+
+**Ejemplo real de actualización completa:**
 
 ```http
 PUT /usuarios/456 HTTP/1.1
 Host: api.ejemplo.com
 Content-Type: application/json
+Authorization: Bearer eyJhbGc...token...
+Content-Length: 178
 
 {
     "nombre": "María García López",
     "email": "maria.garcia@ejemplo.com",
-    "rol": "profesor"
+    "rol": "profesor",
+    "fecha_nacimiento": "1985-03-20",
+    "departamento": "Informática",
+    "activo": true
 }
 ```
 
-**Diferencia con POST:**
+Le decimos al servidor: "El usuario 456 debe quedar EXACTAMENTE con estos datos. Todo el recurso se reemplaza con esta información."
 
-- **POST**: Crea un nuevo recurso (el servidor decide el ID)
-- **PUT**: Actualiza un recurso existente (el cliente especifica el ID)
+**Respuesta típica:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Last-Modified: Wed, 27 Nov 2025 15:45:00 GMT
+
+{
+    "id": 456,
+    "nombre": "María García López",
+    "email": "maria.garcia@ejemplo.com",
+    "rol": "profesor",
+    "fecha_nacimiento": "1985-03-20",
+    "departamento": "Informática",
+    "activo": true,
+    "actualizado": "2025-11-27T15:45:00Z"
+}
+```
+
+**⚠️ Peligro: PUT reemplaza TODO**
+
+Imaginad que el usuario 456 tenía estos datos:
+```json
+{
+    "id": 456,
+    "nombre": "María García",
+    "email": "maria@ejemplo.com",
+    "rol": "estudiante",
+    "telefono": "666777888",
+    "direccion": "Calle Mayor 5"
+}
+```
+
+Si hacéis este PUT:
+```http
+PUT /usuarios/456
+{
+    "nombre": "María García López",
+    "email": "maria.garcia@ejemplo.com"
+}
+```
+
+El resultado puede ser:
+```json
+{
+    "id": 456,
+    "nombre": "María García López",
+    "email": "maria.garcia@ejemplo.com",
+    "rol": null,
+    "telefono": null,
+    "direccion": null
+}
+```
+
+¡Perdisteis el teléfono y la dirección! Por eso PUT requiere enviar el recurso COMPLETO.
+
+**Diferencias clave: POST vs PUT**
+
+| Aspecto | POST | PUT |
+|---------|------|-----|
+| **Propósito** | Crear nuevo recurso | Actualizar recurso existente |
+| **Idempotencia** | ❌ NO (cada POST crea nuevo recurso) | ✅ SÍ (mismo resultado siempre) |
+| **URL** | No incluye ID (`POST /usuarios`) | Incluye ID específico (`PUT /usuarios/456`) |
+| **ID** | Servidor lo genera | Cliente lo especifica |
+| **Respuesta típica** | 201 Created + Location | 200 OK o 204 No Content |
+| **Reintentos seguros** | ❌ NO (crea duplicados) | ✅ SÍ (mismo resultado) |
+| **Actualización** | N/A (crea) | Reemplaza completamente |
+
+**Ejemplo comparativo:**
+
+```http
+# POST - Crear nuevo usuario (servidor genera ID)
+POST /usuarios
+{"nombre": "Ana", "email": "ana@ejemplo.com"}
+→ 201 Created, Location: /usuarios/789
+
+# POST repetido - crea OTRO usuario diferente
+POST /usuarios
+{"nombre": "Ana", "email": "ana@ejemplo.com"}
+→ 201 Created, Location: /usuarios/790  ← ¡Otro ID!
+
+# PUT - Actualizar usuario existente
+PUT /usuarios/456
+{"nombre": "María", "email": "maria@ejemplo.com", ...}
+→ 200 OK
+
+# PUT repetido - MISMO resultado
+PUT /usuarios/456
+{"nombre": "María", "email": "maria@ejemplo.com", ...}
+→ 200 OK  ← Usuario 456 sigue igual
+```
+
+**Usos típicos de PUT:**
+
+- **Actualizar perfil de usuario completo**:
+  ```http
+  PUT /usuarios/123
+  ```
+
+- **Reemplazar configuración**:
+  ```http
+  PUT /config/aplicacion
+  ```
+
+- **Actualizar recurso con todos sus campos**:
+  ```http
+  PUT /productos/SKU-12345
+  ```
+
+**Patrón "upsert" (update or insert):**
+
+Algunos servidores implementan PUT con comportamiento "upsert": si el recurso existe lo actualiza, si no existe lo crea.
+
+```http
+# Si /usuarios/999 NO existe
+PUT /usuarios/999
+{"nombre": "Luis", ...}
+→ 201 Created  (lo crea)
+
+# Si /usuarios/999 ya existe
+PUT /usuarios/999
+{"nombre": "Luis", ...}
+→ 200 OK  (lo actualiza)
+```
+
+Esto es útil cuando el cliente puede generar IDs únicos (por ejemplo UUIDs) y quiere asegurarse de que el recurso exista con esos datos exactos.
+
+**Cuándo usar PUT:**
+
+✅ Cuando conocéis el ID del recurso a actualizar
+✅ Cuando queréis reemplazar el recurso por completo
+✅ Cuando necesitáis idempotencia (reintentos seguros)
+✅ Cuando implementáis "upsert" con IDs del cliente
+
+❌ NO uséis PUT cuando solo queréis cambiar un campo → usar PATCH
+❌ NO uséis PUT para crear recursos sin ID conocido → usar POST
 
 #### 1.17. PATCH - Actualización parcial
 
-**Propósito**: Actualizar parcialmente un recurso.
+PATCH es el **hermano más inteligente de PUT**. Mientras PUT reemplaza TODO el recurso, PATCH solo modifica lo que necesita cambiar. Es como usar "corrector" en un documento en lugar de reescribirlo entero.
 
-**Características:**
+**Propósito fundamental**: Aplicar **modificaciones parciales** a un recurso. Solo enviáis los campos que queréis cambiar, el resto permanece intacto.
 
-- **No idempotente** necesariamente
-- **No seguro**: Modifica el estado del servidor
-- **Actualiza parcialmente**: Solo modifica los campos especificados
+**Características importantes:**
 
-**Ejemplo:**
+- **Potencialmente NO idempotente**: Depende de cómo se implemente. Si el PATCH dice "incrementa el contador en 1", ejecutarlo 3 veces lo incrementa 3 veces (NO idempotente). Si dice "establece el email a X", ejecutarlo 3 veces da el mismo resultado (idempotente). La especificación HTTP dice que PATCH "debería ser" idempotente, pero no lo garantiza.
+
+- **NO seguro**: Obviamente, modifica el estado del servidor.
+
+- **Actualiza solo campos especificados**: Esta es su ventaja principal. Solo los campos que enviáis se modifican. Todo lo demás se mantiene como estaba.
+
+- **Más eficiente**: Ahorra ancho de banda porque solo enviáis lo que cambia, no todo el recurso.
+
+**Ejemplo real de actualización parcial:**
 
 ```http
 PATCH /usuarios/456 HTTP/1.1
 Host: api.ejemplo.com
 Content-Type: application/json
+Authorization: Bearer eyJhbGc...token...
 
 {
     "email": "nuevo.email@ejemplo.com"
 }
 ```
 
-Con PUT habría que enviar todos los campos del usuario, con PATCH solo los que cambian.
+Le decimos al servidor: "Del usuario 456, solo cambia el email. Todo lo demás déjalo como está."
 
-#### 1.18. DELETE - Eliminar recursos
-
-**Propósito**: Borrar un recurso del servidor.
-
-**Características:**
-
-- **Idempotente**: Borrar varias veces tiene el mismo efecto
-- **No seguro**: Modifica el estado del servidor
-
-**Ejemplo:**
-
-```http
-DELETE /usuarios/456 HTTP/1.1
-Host: api.ejemplo.com
+**Estado ANTES del PATCH:**
+```json
+{
+    "id": 456,
+    "nombre": "María García",
+    "email": "maria@ejemplo.com",
+    "rol": "estudiante",
+    "telefono": "666777888",
+    "direccion": "Calle Mayor 5"
+}
 ```
+
+**Estado DESPUÉS del PATCH:**
+```json
+{
+    "id": 456,
+    "nombre": "María García",           ← Sin cambios
+    "email": "nuevo.email@ejemplo.com",  ← ✅ Cambiado
+    "rol": "estudiante",                 ← Sin cambios
+    "telefono": "666777888",             ← Sin cambios
+    "direccion": "Calle Mayor 5"         ← Sin cambios
+}
+```
+
+¡El teléfono y la dirección se mantuvieron! Esa es la diferencia con PUT.
 
 **Respuesta típica:**
-
-```http
-HTTP/1.1 204 No Content
-```
-
-O también:
 
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-    "mensaje": "Usuario eliminado correctamente"
+    "id": 456,
+    "nombre": "María García",
+    "email": "nuevo.email@ejemplo.com",
+    "rol": "estudiante",
+    "telefono": "666777888",
+    "direccion": "Calle Mayor 5",
+    "actualizado": "2025-11-27T16:00:00Z"
 }
 ```
 
-#### 1.19. HEAD - Obtener metadatos
+**Comparación PUT vs PATCH:**
 
-**Propósito**: Solicitar las mismas cabeceras que GET, pero sin el cuerpo de la respuesta.
+Supongamos que el usuario tiene:
+```json
+{
+    "id": 456,
+    "nombre": "María",
+    "email": "maria@ejemplo.com",
+    "telefono": "666777888",
+    "direccion": "Calle Mayor 5",
+    "rol": "estudiante"
+}
+```
 
-**Características:**
+**Con PUT (reemplazo completo):**
+```http
+PUT /usuarios/456
+{
+    "nombre": "María García",
+    "email": "maria.garcia@ejemplo.com"
+}
+```
+Resultado:
+```json
+{
+    "id": 456,
+    "nombre": "María García",
+    "email": "maria.garcia@ejemplo.com",
+    "telefono": null,    ← ❌ Perdido
+    "direccion": null,   ← ❌ Perdido
+    "rol": null          ← ❌ Perdido
+}
+```
 
-- **Idempotente** y **seguro**
-- Útil para verificar la existencia de un recurso
-- Útil para obtener metadatos sin descargar el contenido
+**Con PATCH (actualización parcial):**
+```http
+PATCH /usuarios/456
+{
+    "nombre": "María García",
+    "email": "maria.garcia@ejemplo.com"
+}
+```
+Resultado:
+```json
+{
+    "id": 456,
+    "nombre": "María García",
+    "email": "maria.garcia@ejemplo.com",
+    "telefono": "666777888",  ← ✅ Conservado
+    "direccion": "Calle Mayor 5",  ← ✅ Conservado
+    "rol": "estudiante"       ← ✅ Conservado
+}
+```
 
-**Ejemplo:**
+**Casos de uso perfectos para PATCH:**
+
+1. **Cambiar un solo campo**:
+   ```http
+   PATCH /usuarios/123
+   {"activo": false}
+   ```
+
+2. **Actualizar configuración parcial**:
+   ```http
+   PATCH /config/aplicacion
+   {"tema": "oscuro", "idioma": "es"}
+   ```
+
+3. **Modificar estado de un recurso**:
+   ```http
+   PATCH /pedidos/789
+   {"estado": "enviado", "fecha_envio": "2025-11-27"}
+   ```
+
+4. **Incrementar contador (cuidado: NO idempotente)**:
+   ```http
+   PATCH /articulos/123
+   {"visitas": {"$inc": 1}}  ← Sintaxis tipo MongoDB
+   ```
+
+**JSON Patch (RFC 6902):**
+
+Existe un estándar formal para PATCH llamado "JSON Patch" que usa operaciones explícitas:
 
 ```http
-HEAD /archivos/documento.pdf HTTP/1.1
+PATCH /usuarios/456 HTTP/1.1
+Content-Type: application/json-patch+json
+
+[
+    { "op": "replace", "path": "/email", "value": "nuevo@ejemplo.com" },
+    { "op": "add", "path": "/telefono", "value": "666777888" },
+    { "op": "remove", "path": "/direccion" }
+]
+```
+
+Operaciones disponibles:
+- `replace`: Reemplazar valor
+- `add`: Añadir nuevo campo
+- `remove`: Eliminar campo
+- `move`: Mover valor de un campo a otro
+- `copy`: Copiar valor
+- `test`: Verificar que un campo tiene cierto valor (útil para concurrencia)
+
+**JSON Merge Patch (RFC 7396) - más simple:**
+
+```http
+PATCH /usuarios/456 HTTP/1.1
+Content-Type: application/merge-patch+json
+
+{
+    "email": "nuevo@ejemplo.com",
+    "direccion": null  ← null significa "eliminar"
+}
+```
+
+**Problema de idempotencia con PATCH:**
+
+```http
+# ❌ NO idempotente - cada vez suma 10
+PATCH /cuentas/123
+{"saldo": {"incrementar": 10}}
+
+# Primera ejecución: saldo = 100 + 10 = 110
+# Segunda ejecución: saldo = 110 + 10 = 120  ← Diferente!
+# Tercera ejecución: saldo = 120 + 10 = 130  ← Diferente!
+```
+
+```http
+# ✅ Idempotente - siempre establece el mismo valor
+PATCH /cuentas/123
+{"email": "nuevo@ejemplo.com"}
+
+# Primera ejecución: email = "nuevo@ejemplo.com"
+# Segunda ejecución: email = "nuevo@ejemplo.com"  ← Igual
+# Tercera ejecución: email = "nuevo@ejemplo.com"  ← Igual
+```
+
+**Cuándo usar PATCH:**
+
+✅ Cuando solo necesitáis cambiar algunos campos
+✅ Para ahorrar ancho de banda (importantes en móviles)
+✅ Cuando no queréis obtener primero todo el recurso con GET
+✅ Para actualizaciones frecuentes de estado
+
+**Cuándo usar PUT en lugar de PATCH:**
+
+✅ Cuando queréis reemplazar el recurso completo
+✅ Cuando necesitáis garantía de idempotencia estricta
+✅ Cuando la API es más simple sin PATCH
+
+**Ejemplo práctico - cambiar solo el avatar:**
+
+```http
+PATCH /usuarios/123/perfil HTTP/1.1
+Content-Type: application/json
+
+{
+    "avatar_url": "https://cdn.ejemplo.com/avatares/nuevo-avatar.jpg"
+}
+```
+
+Con PUT habríais tenido que enviar nombre, email, biografía, fecha de nacimiento, y todos los demás campos aunque no cambien. Con PATCH solo enviáis el avatar.
+
+#### 1.18. DELETE - Eliminar recursos
+
+DELETE hace exactamente lo que su nombre indica: **borra** un recurso del servidor. Es la operación de "destrucción" de CRUD.
+
+**Propósito fundamental**: Eliminar permanentemente un recurso específico del servidor. Es como tirar un archivo a la papelera de reciclaje... pero sin opción de recuperarlo (a menos que tengáis backups).
+
+**Características importantes:**
+
+- **Idempotente**: Esta es una propiedad interesante de DELETE. Borrar un recurso una vez, dos veces o cien veces tiene el mismo efecto final: el recurso no existe. La primera vez lo borra, las siguientes veces el recurso ya no está (y eso es idempotente: el estado final es el mismo).
+
+    ```
+    DELETE /usuarios/456  (primera vez)  → 204 No Content (borrado)
+    DELETE /usuarios/456  (segunda vez)  → 404 Not Found (ya no existe)
+    DELETE /usuarios/456  (tercera vez)  → 404 Not Found (sigue sin existir)
+    ```
+    
+    Aunque la respuesta sea diferente (204 vs 404), el **estado del servidor** es idéntico: el usuario 456 no existe. Por tanto, es idempotente.
+
+- **NO seguro**: Obviamente, DELETE modifica (destructivamente) el estado del servidor.
+
+- **No tiene cuerpo en la petición**: Típicamente, solo especificáis QUÉ recurso eliminar en la URL. No enviáis datos adicionales (aunque técnicamente podríais).
+
+- **Puede devolver el recurso eliminado**: Algunos servidores devuelven información del recurso que acaban de borrar, para que tengáis constancia de qué se eliminó exactamente.
+
+**Ejemplo simple:**
+
+```http
+DELETE /usuarios/456 HTTP/1.1
+Host: api.ejemplo.com
+Authorization: Bearer eyJhbGc...token...
+```
+
+Le decimos al servidor: "Elimina el usuario con ID 456. Y por cierto, aquí está mi token para verificar que tengo permiso para borrar usuarios."
+
+**Respuesta típica - 204 No Content (preferida):**
+
+```http
+HTTP/1.1 204 No Content
+Date: Wed, 27 Nov 2025 16:30:00 GMT
+```
+
+El código 204 significa: "Operación exitosa, pero no hay contenido que devolver". Es la respuesta más común para DELETE.
+
+**Respuesta alternativa - 200 OK con confirmación:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "mensaje": "Usuario eliminado correctamente",
+    "id_eliminado": 456,
+    "eliminado_en": "2025-11-27T16:30:00Z"
+}
+```
+
+**Respuesta con el recurso eliminado:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "id": 456,
+    "nombre": "María García",
+    "email": "maria@ejemplo.com",
+    "eliminado": true,
+    "eliminado_en": "2025-11-27T16:30:00Z"
+}
+```
+
+Esto es útil para que el cliente tenga registro de qué datos exactamente se borraron, por si necesita mostrarlos ("Has eliminado a María García") o implementar un "deshacer".
+
+**Respuesta si el recurso no existe:**
+
+```http
+HTTP/1.1 404 Not Found
+Content-Type: application/json
+
+{
+    "error": "Usuario no encontrado",
+    "id_solicitado": 456
+}
+```
+
+**Soft Delete vs Hard Delete:**
+
+Muchas aplicaciones no borran realmente los datos, sino que los marcan como "eliminados":
+
+**Hard Delete (borrado físico):**
+```http
+DELETE /usuarios/456
+```
+→ El usuario desaparece de la base de datos. **Irrecuperable** (sin backups).
+
+**Soft Delete (borrado lógico):**
+```http
+DELETE /usuarios/456
+```
+→ El usuario sigue en la base de datos, pero con `eliminado: true` y `fecha_eliminacion: "2025-11-27"`. Invisible para la API normal, pero recuperable por administradores.
+
+Base de datos después de soft delete:
+```sql
+id  | nombre  | email              | eliminado | fecha_eliminacion
+456 | María   | maria@ejemplo.com  | true      | 2025-11-27 16:30:00
+```
+
+Ventajas del soft delete:
+- ✅ Recuperable en caso de error
+- ✅ Mantiene integridad referencial
+- ✅ Auditoría completa
+- ✅ Cumplimiento legal (GDPR permite recuperación en ciertos casos)
+
+**Casos de uso comunes:**
+
+1. **Eliminar un recurso específico**:
+   ```http
+   DELETE /productos/SKU-12345
+   DELETE /comentarios/789
+   DELETE /pedidos/101112
+   ```
+
+2. **Eliminar relación (unfollow, unlike)**:
+   ```http
+   DELETE /usuarios/123/seguidos/456  ← Dejar de seguir
+   DELETE /posts/789/likes/123        ← Quitar like
+   ```
+
+3. **Cerrar sesión (logout)**:
+   ```http
+   DELETE /sesiones/token-actual
+   ```
+
+4. **Eliminar archivo subido**:
+   ```http
+   DELETE /uploads/mi-documento.pdf
+   ```
+
+**Peligros y precauciones:**
+
+⚠️ **DELETE es permanente**: Una vez ejecutado (hard delete), no hay vuelta atrás sin backups.
+
+⚠️ **Requiere autenticación fuerte**: Nunca permitáis DELETE sin verificar permisos. Imaginad un DELETE sin autenticación:
+```http
+DELETE /usuarios/1  ← ¡Borramos al admin!
+DELETE /productos/  ← ¡Borramos TODO el catálogo!
+```
+
+⚠️ **Considerad confirmaciones**: Para operaciones críticas, podéis requerir confirmación explícita:
+```http
+DELETE /cuentas/123?confirmar=true
+```
+
+**Ejemplo práctico - eliminar comentario:**
+
+```http
+DELETE /posts/456/comentarios/789 HTTP/1.1
+Host: api.ejemplo.com
+Authorization: Bearer usuario-token-xyz
+```
+
+**Respuesta exitosa:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "mensaje": "Comentario eliminado",
+    "comentario": {
+        "id": 789,
+        "autor": "Juan",
+        "texto": "Comentario eliminado",
+        "post_id": 456
+    }
+}
+```
+
+**Idempotencia de DELETE en detalle:**
+
+```http
+# Primera petición DELETE
+DELETE /usuarios/456
+→ HTTP/1.1 204 No Content
+Estado del servidor: Usuario 456 NO EXISTE
+
+# Segunda petición DELETE (reintento)
+DELETE /usuarios/456
+→ HTTP/1.1 404 Not Found
+Estado del servidor: Usuario 456 NO EXISTE (igual que antes)
+
+# Tercera petición DELETE
+DELETE /usuarios/456
+→ HTTP/1.1 404 Not Found
+Estado del servidor: Usuario 456 NO EXISTE (igual que antes)
+```
+
+El **estado final del servidor es idéntico**: el usuario 456 no existe. Aunque las respuestas HTTP cambien (204 la primera, 404 las siguientes), el efecto sobre el servidor es el mismo. Por eso DELETE es idempotente.
+
+**Comparación: cuando NO usar DELETE:**
+
+❌ **NO usar DELETE para**:
+- Cerrar sesión temporalmente → usar POST /logout
+- Archivar recursos → usar PATCH {archivado: true}
+- Desactivar cuenta → usar PATCH {activa: false}
+
+✅ **SÍ usar DELETE para**:
+- Eliminar definitivamente un recurso
+- Borrar datos temporales caducados
+- Quitar asociaciones/relaciones
+- Limpiar caché o sesiones expiradas
+
+#### 1.19. HEAD - Obtener metadatos
+
+HEAD es como un GET "light": **obtiene toda la información sobre un recurso EXCEPTO el contenido real**. Es perfecto cuando solo queréis saber SOBRE el recurso, pero no descargarlo.
+
+**Propósito fundamental**: Solicitar las mismas cabeceras HTTP que devolvería un GET, pero sin descargar el cuerpo de la respuesta. Es como preguntar "¿qué tamaño tiene este archivo?" sin descargarlo.
+
+**Características importantes:**
+
+- **Idempotente**: Igual que GET, hacer HEAD múltiples veces no cambia nada.
+- **Seguro**: No modifica el estado del servidor, solo consulta metadatos.
+- **Sin cuerpo en la respuesta**: El servidor devuelve código de estado y todas las cabeceras, pero el cuerpo está vacío.
+- **Idéntico a GET (excepto el cuerpo)**: El servidor debe procesar HEAD exactamente como un GET, incluyendo ejecutar la misma lógica, pero sin enviar el contenido.
+
+**Ejemplo - verificar si un archivo existe:**
+
+```http
+HEAD /archivos/documento-importante.pdf HTTP/1.1
 Host: cdn.ejemplo.com
 ```
 
@@ -738,6 +1489,163 @@ Host: cdn.ejemplo.com
 
 ```http
 HTTP/1.1 200 OK
+Content-Type: application/pdf
+Content-Length: 2485760
+Last-Modified: Mon, 25 Nov 2025 14:30:00 GMT
+ETag: "33a64df551425fcc"
+Cache-Control: public, max-age=3600
+```
+
+¡Fijaos! El servidor nos dice:
+- ✅ El archivo existe (200 OK)
+- ✅ Es un PDF
+- ✅ Pesa 2.485.760 bytes (~2.4 MB)
+- ✅ Se modificó el 25 de noviembre
+- ✅ Tiene este ETag único
+- ✅ Se puede cachear durante 1 hora
+
+**Todo esto sin descargar los 2.4 MB del PDF**. Si hubiéramos usado GET, habríamos descargado el archivo completo solo para saber su tamaño.
+
+**Casos de uso prácticos:**
+
+**1. Verificar si un recurso existe (sin descargarlo):**
+
+```http
+HEAD /api/usuarios/123 HTTP/1.1
+Host: api.ejemplo.com
+```
+
+```http
+HTTP/1.1 200 OK  ← Existe
+```
+
+```http
+HTTP/1.1 404 Not Found  ← No existe
+```
+
+Útil para validar que un ID existe antes de hacer operaciones costosas.
+
+**2. Comprobar si un archivo cambió (sin descargarlo):**
+
+```javascript
+// Cliente web usando HEAD para verificar actualizaciones
+const response = await fetch('/datos.json', { method: 'HEAD' });
+const lastModified = response.headers.get('Last-Modified');
+
+if (lastModified !== localStorage.getItem('lastModified')) {
+    // El archivo cambió, descargarlo con GET
+    const data = await fetch('/datos.json').then(r => r.json());
+    localStorage.setItem('lastModified', lastModified);
+} else {
+    // El archivo no cambió, usar versión local
+    // AHORRAMOS una descarga completa
+}
+```
+
+**3. Verificar tamaño antes de descargar:**
+
+```http
+HEAD /videos/tutorial-completo.mp4 HTTP/1.1
+Host: cdn.ejemplo.com
+```
+
+```http
+HTTP/1.1 200 OK
+Content-Length: 524288000
+Content-Type: video/mp4
+```
+
+El video pesa 524 MB. El usuario puede decidir si quiere descargarlo según su conexión.
+
+**4. Verificar tipo de contenido:**
+
+```http
+HEAD /recurso/misterioso HTTP/1.1
+Host: api.ejemplo.com
+```
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+```
+
+Ahora sabemos que es JSON sin haberlo descargado.
+
+**5. Validar enlaces rotos en una web:**
+
+```python
+# Script que verifica 1000 enlaces
+for url in enlaces:
+    response = requests.head(url)
+    if response.status_code == 404:
+        print(f"Enlace roto: {url}")
+    # Mucho más rápido que GET porque no descarga contenido
+```
+
+**6. Comprobar si necesitamos revalidar caché:**
+
+```http
+HEAD /api/productos HTTP/1.1
+Host: api.ejemplo.com
+If-None-Match: "33a64df551425fcc"
+```
+
+```http
+HTTP/1.1 304 Not Modified
+ETag: "33a64df551425fcc"
+```
+
+El servidor dice: "No ha cambiado, usa tu caché local". Todo sin enviar la lista de productos.
+
+**Diferencia HEAD vs GET:**
+
+| Método | Descarga contenido | Uso típico | Ancho de banda |
+|--------|-------------------|------------|----------------|
+| GET | ✅ SÍ | Obtener datos | Alto |
+| HEAD | ❌ NO | Verificar metadatos | Mínimo |
+
+**Ejemplo comparativo:**
+
+```http
+# GET - descarga 2.5 MB
+GET /video.mp4
+→ HTTP/1.1 200 OK
+   Content-Length: 2500000
+   [2.5 MB de datos de video]
+
+# HEAD - descarga ~500 bytes (solo cabeceras)
+HEAD /video.mp4
+→ HTTP/1.1 200 OK
+   Content-Length: 2500000
+   [cuerpo vacío]
+```
+
+**Aplicación real - gestor de descargas:**
+
+```javascript
+// Antes de descargar, verificamos tamaño
+async function smartDownload(url) {
+    const headResponse = await fetch(url, { method: 'HEAD' });
+    const fileSize = headResponse.headers.get('Content-Length');
+    
+    if (fileSize > 100_000_000) { // 100 MB
+        const confirm = await askUser(`El archivo pesa ${fileSize} bytes. ¿Descargar?`);
+        if (!confirm) return;
+    }
+    
+    // Solo ahora descargamos realmente
+    const getResponse = await fetch(url);
+    return await getResponse.blob();
+}
+```
+
+**Limitaciones:**
+
+⚠️ El servidor DEBE implementar HEAD correctamente: procesarlo igual que GET pero sin cuerpo.
+
+⚠️ Algunos servidores mal configurados responden igual a HEAD y GET (enviando el cuerpo), perdiendo el beneficio.
+
+⚠️ HEAD no puede decirte el contenido: solo metadatos. Si necesitas el contenido, debes usar GET.
 Content-Type: application/pdf
 Content-Length: 2456789
 Last-Modified: Mon, 18 Nov 2025 10:00:00 GMT
@@ -751,23 +1659,271 @@ Last-Modified: Mon, 18 Nov 2025 10:00:00 GMT
 
 #### 1.20. OPTIONS - Opciones disponibles
 
-**Propósito**: Obtener los métodos HTTP soportados por un recurso.
+OPTIONS es el método "preguntón" de HTTP: **"¿Qué puedo hacer contigo?"**. Pregunta al servidor qué métodos HTTP acepta para un recurso específico.
 
-**Ejemplo:**
+**Propósito fundamental**: Descubrir las capacidades de comunicación de un recurso sin realizar ninguna acción. Es como llamar a un hotel y preguntar "¿qué servicios ofrecéis?" sin hacer reserva.
+
+**Características importantes:**
+
+- **Idempotente**: Preguntar múltiples veces no cambia nada.
+- **Seguro**: No modifica el estado del servidor, solo consulta capacidades.
+- **Fundamental para CORS**: Los navegadores usan OPTIONS automáticamente antes de peticiones "complejas" entre diferentes dominios.
+- **Documentación en vivo**: Un servidor puede usar OPTIONS para exponer qué métodos HTTP soporta cada endpoint.
+
+**Ejemplo básico:**
 
 ```http
 OPTIONS /api/usuarios HTTP/1.1
 Host: api.ejemplo.com
+Origin: https://mi-app.com
 ```
 
-**Respuesta:**
+**Respuesta típica:**
 
 ```http
 HTTP/1.1 200 OK
-Allow: GET, POST, PUT, DELETE, OPTIONS
+Allow: GET, POST, PUT, DELETE, OPTIONS, HEAD
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE
+Access-Control-Allow-Headers: Content-Type, Authorization
+Access-Control-Max-Age: 86400
 ```
 
-Es especialmente importante en **CORS** (Cross-Origin Resource Sharing).
+El servidor responde: "Para `/api/usuarios`, puedes usar GET, POST, PUT, DELETE, OPTIONS y HEAD. Además, acepto peticiones CORS de cualquier origen, con estos métodos, y puedes enviar las cabeceras Content-Type y Authorization. Esta respuesta es válida durante 24 horas."
+
+**Caso de uso principal: CORS (Cross-Origin Resource Sharing)**
+
+Cuando vuestra aplicación web en `https://mi-app.com` intenta hacer una petición a `https://api.ejemplo.com`, el navegador **automáticamente** envía primero un OPTIONS:
+
+**Secuencia CORS (preflight request):**
+
+```http
+# 1. Navegador envía automáticamente OPTIONS (preflight)
+OPTIONS /api/usuarios HTTP/1.1
+Host: api.ejemplo.com
+Origin: https://mi-app.com
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: Content-Type, Authorization
+```
+
+```http
+# 2. Servidor responde con permisos CORS
+HTTP/1.1 204 No Content
+Access-Control-Allow-Origin: https://mi-app.com
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE
+Access-Control-Allow-Headers: Content-Type, Authorization
+Access-Control-Max-Age: 3600
+```
+
+```http
+# 3. Si el OPTIONS fue exitoso, navegador envía la petición real
+POST /api/usuarios HTTP/1.1
+Host: api.ejemplo.com
+Origin: https://mi-app.com
+Content-Type: application/json
+Authorization: Bearer token...
+
+{"nombre": "Ana", "email": "ana@ejemplo.com"}
+```
+
+El navegador hace este baile OPTIONS → POST automáticamente. Vosotros solo veis el POST en vuestro código JavaScript.
+
+**¿Cuándo el navegador envía OPTIONS preflight?**
+
+El navegador NO envía preflight para peticiones "simples":
+- GET, HEAD, POST (con Content-Type application/x-www-form-urlencoded, multipart/form-data o text/plain)
+- Sin cabeceras custom
+
+El navegador SÍ envía preflight para peticiones "complejas":
+- ✅ Métodos PUT, DELETE, PATCH
+- ✅ POST con Content-Type: application/json
+- ✅ Cualquier petición con cabecera Authorization
+- ✅ Cabeceras custom (X-Custom-Header, etc.)
+
+**Ejemplo real - API que documenta sus capacidades:**
+
+```http
+OPTIONS /api/productos/SKU-123 HTTP/1.1
+Host: api.ejemplo.com
+```
+
+```http
+HTTP/1.1 200 OK
+Allow: GET, PUT, PATCH, DELETE
+Content-Type: application/json
+
+{
+    "endpoint": "/api/productos/SKU-123",
+    "metodos_soportados": [
+        {
+            "metodo": "GET",
+            "descripcion": "Obtener detalles del producto",
+            "requiere_autenticacion": false
+        },
+        {
+            "metodo": "PUT",
+            "descripcion": "Actualizar producto completo",
+            "requiere_autenticacion": true,
+            "roles_requeridos": ["admin", "editor"]
+        },
+        {
+            "metodo": "PATCH",
+            "descripcion": "Actualizar campos específicos",
+            "requiere_autenticacion": true,
+            "roles_requeridos": ["admin", "editor"]
+        },
+        {
+            "metodo": "DELETE",
+            "descripcion": "Eliminar producto",
+            "requiere_autenticacion": true,
+            "roles_requeridos": ["admin"]
+        }
+    ]
+}
+```
+
+Esto convierte OPTIONS en una forma de auto-documentación de la API.
+
+**OPTIONS para el recurso raíz:**
+
+```http
+OPTIONS * HTTP/1.1
+Host: api.ejemplo.com
+```
+
+```http
+HTTP/1.1 200 OK
+Allow: OPTIONS, GET
+Server: nginx/1.18.0
+```
+
+El `*` pregunta por las capacidades del servidor en general, no de un recurso específico.
+
+**Ejemplo práctico - cliente que detecta capacidades:**
+
+```javascript
+async function checkCapabilities(url) {
+    const response = await fetch(url, {
+        method: 'OPTIONS'
+    });
+    
+    const allowedMethods = response.headers.get('Allow');
+    console.log(`Métodos disponibles: ${allowedMethods}`);
+    
+    if (allowedMethods.includes('DELETE')) {
+        // Mostrar botón de eliminar
+        showDeleteButton();
+    }
+    
+    if (allowedMethods.includes('PUT')) {
+        // Habilitar edición
+        enableEditing();
+    }
+}
+```
+
+**Problema común: servidor que no implementa OPTIONS**
+
+```http
+OPTIONS /api/usuarios HTTP/1.1
+Host: api-mal-configurada.com
+Origin: https://mi-app.com
+```
+
+```http
+HTTP/1.1 405 Method Not Allowed
+```
+
+Error típico cuando el servidor no está configurado para CORS. La aplicación web falla porque el navegador bloquea la petición.
+
+**Solución: configurar el servidor para responder OPTIONS**
+
+**Node.js/Express:**
+```javascript
+app.options('/api/usuarios', (req, res) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    res.sendStatus(204);
+});
+
+// O para todas las rutas:
+app.use((req, res, next) => {
+    if (req.method === 'OPTIONS') {
+        res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+        return res.sendStatus(204);
+    }
+    next();
+});
+```
+
+**Nginx:**
+```nginx
+location /api/ {
+    if ($request_method = 'OPTIONS') {
+        add_header 'Access-Control-Allow-Origin' '*';
+        add_header 'Access-Control-Allow-Methods' 'GET, POST, PUT, DELETE, OPTIONS';
+        add_header 'Access-Control-Max-Age' 86400;
+        add_header 'Content-Length' 0;
+        return 204;
+    }
+}
+```
+
+**Apache:**
+```apache
+Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+Header always set Access-Control-Allow-Headers "Content-Type, Authorization"
+
+<If "%{REQUEST_METHOD} == 'OPTIONS'">
+    Header set Access-Control-Max-Age "86400"
+</If>
+```
+
+**Cabeceras CORS importantes en respuestas OPTIONS:**
+
+| Cabecera | Propósito | Ejemplo |
+|----------|-----------|---------|
+| `Access-Control-Allow-Origin` | Qué orígenes pueden acceder | `*` o `https://mi-app.com` |
+| `Access-Control-Allow-Methods` | Qué métodos HTTP están permitidos | `GET, POST, PUT, DELETE` |
+| `Access-Control-Allow-Headers` | Qué cabeceras puede enviar el cliente | `Content-Type, Authorization` |
+| `Access-Control-Max-Age` | Cuánto tiempo cachear esta respuesta OPTIONS | `86400` (24 horas en segundos) |
+| `Access-Control-Allow-Credentials` | Si permite cookies/autenticación | `true` |
+
+**Optimización: cachear la respuesta OPTIONS**
+
+Con `Access-Control-Max-Age: 86400`, le decís al navegador: "Guarda esta respuesta OPTIONS durante 24 horas. No me preguntes de nuevo durante ese tiempo."
+
+Esto reduce drásticamente las peticiones preflight innecesarias:
+
+```
+Sin Max-Age:
+OPTIONS /api/usuarios → espera respuesta
+POST /api/usuarios → espera respuesta
+OPTIONS /api/usuarios → espera respuesta (de nuevo!)
+PUT /api/usuarios → espera respuesta
+...cada petición necesita preflight
+
+Con Max-Age 86400:
+OPTIONS /api/usuarios → espera respuesta → guarda en caché 24h
+POST /api/usuarios → usa caché, no envía OPTIONS
+PUT /api/usuarios → usa caché, no envía OPTIONS  
+DELETE /api/usuarios → usa caché, no envía OPTIONS
+...mucho más rápido!
+```
+
+**Cuándo usar OPTIONS:**
+
+✅ Automáticamente (navegador lo hace por vosotros en CORS)
+✅ Para descubrir capacidades de una API
+✅ Para implementar auto-documentación de APIs
+✅ Debugging de problemas CORS
+
+**Cuándo NO necesitáis OPTIONS:**
+
+❌ Cuando frontend y backend están en el mismo dominio (no hay CORS)
+❌ Para peticiones simples GET (el navegador no envía preflight)
+❌ Si usáis un proxy que evita CORS
 
 #### 1.21. Tabla resumen de métodos HTTP
 
@@ -955,23 +2111,95 @@ Content-Type: application/json
 
 #### 1.29. ¿Por qué es necesario HTTPS?
 
-HTTP transmite datos en **texto plano**, lo que significa que cualquiera que intercepte la comunicación puede leer todo:
+Imaginad que enviáis una carta y que cualquier persona por la que pase esa carta (el cartero, la oficina de correos, cualquiera) pueda abrirla, leerla, modificarla y volver a cerrarla sin que os déis cuenta. **Eso es HTTP**. Todo viaja en texto plano, completamente legible.
 
-- Contraseñas
-- Números de tarjetas de crédito
-- Mensajes privados
-- Cookies de sesión
-- Cualquier dato enviado o recibido
+HTTP tradicional transmite datos **sin cifrar**, lo que significa que cualquiera que intercepte la comunicación entre vuestro navegador y el servidor puede leer absolutamente todo:
 
-**Amenazas sin HTTPS:**
+- **Contraseñas**: Cuando hacéis login, vuestra contraseña viaja en texto plano. Un atacante en vuestra WiFi del café puede verla.
+- **Números de tarjetas de crédito**: Al comprar online, los datos de pago son visibles para cualquier atacante intermedio.
+- **Mensajes privados**: Ese email confidencial o chat privado puede ser leído por terceros.
+- **Cookies de sesión**: Un atacante puede robar vuestra sesión y hacerse pasar por vosotros.
+- **Cualquier dato**: Formularios, búsquedas, información personal... todo visible.
 
-- **Eavesdropping (escucha)**: Un atacante puede leer toda la comunicación
-- **Man-in-the-Middle (MITM)**: Un atacante puede interceptar y modificar los datos
-- **Suplantación**: Un atacante puede hacerse pasar por el servidor
-- **Session hijacking**: Robo de cookies de sesión
+**Amenazas reales sin HTTPS:**
+
+1. **Eavesdropping (espionaje/escucha)**: 
+   
+   Un atacante en la misma red WiFi (aeropuerto, café, hotel) puede usar herramientas como Wireshark para capturar TODO vuestro tráfico HTTP. Ven cada petición, cada respuesta, cada dato que enviáis.
+
+   ```
+   Petición HTTP visible:
+   POST /login HTTP/1.1
+   username=maria@ejemplo.com&password=MiPassword123
+   
+   ↑ Un atacante ve esto exactamente así
+   ```
+
+2. **Man-in-the-Middle (MITM - ataque del hombre en el medio)**: 
+   
+   Un atacante se interpone entre vosotros y el servidor. No solo puede leer todo, sino **modificar** los datos en tránsito. Puede cambiar "transfiere 10€" por "transfiere 1000€", puede inyectar malware en la página, puede redirigiros a un sitio falso.
+
+   ```
+   Vosotros → [ATACANTE] → Servidor Real
+                 ↓
+             Lee y modifica todo
+   ```
+
+3. **Suplantación de identidad**: 
+   
+   Sin HTTPS no hay forma de verificar que realmente estáis hablando con `banco.com` y no con `banc0.com` (nota la "o" por un cero). Un atacante puede crear un servidor falso que se hace pasar por el legítimo.
+
+4. **Session Hijacking (secuestro de sesión)**: 
+   
+   Vuestro navegador envía cookies de sesión en cada petición. En HTTP, un atacante puede robar esa cookie y hacerse pasar por vosotros sin necesitar vuestra contraseña.
+
+   ```http
+   # Atacante captura esto:
+   GET /perfil HTTP/1.1
+   Cookie: session=abc123xyz789
+   
+   # Ahora el atacante puede usar esa cookie para acceder como vosotros
+   ```
+
+**Ejemplo real de ataque:**
+
+En 2011, una herramienta llamada "Firesheep" permitía a cualquiera en una WiFi pública secuestrar sesiones de Facebook, Twitter, Amazon, etc. en cuestión de segundos. Solo funcionaba contra HTTP. Esto forzó a muchos sitios a adoptar HTTPS.
+
+**Consecuencias de NO usar HTTPS en 2025:**
+
+1. **Navegadores te marcan como "No seguro"**: 
+   
+   Chrome, Firefox, Safari muestran una advertencia grande. Los usuarios huyen.
+   
+   <figure markdown="span">
+     ![](assets/http-no-seguro.png){ width="400" }
+     <figcaption>Advertencia que ven los usuarios en sitios HTTP</figcaption>
+   </figure>
+
+2. **Google penaliza tu SEO**: 
+   
+   HTTPS es un factor de ranking. Sitios HTTP aparecen más abajo en resultados de búsqueda.
+
+3. **Funcionalidades modernas bloqueadas**: 
+   
+   APIs del navegador como Geolocalización, Cámara, Micrófono, Service Workers (PWA), HTTP/2... **solo funcionan en HTTPS**.
+
+   ```javascript
+   // Esto falla en HTTP:
+   navigator.geolocation.getCurrentPosition(...)
+   // Error: geolocation only available in secure contexts (HTTPS)
+   ```
+
+4. **Pérdida de confianza**: 
+   
+   Los usuarios saben que sin el candado 🔒 en la barra de direcciones, el sitio no es seguro. No comprarán, no se registrarán.
+
+5. **Regulaciones legales**: 
+   
+   GDPR en Europa y otras regulaciones exigen proteger datos personales. HTTP sin cifrar puede ser ilegal para ciertos datos.
 
 !!! danger "HTTP está obsoleto"
-    Los navegadores modernos marcan los sitios HTTP como "No seguros". Google penaliza en SEO a los sitios sin HTTPS. Algunas APIs (como geolocalización) solo funcionan en HTTPS.
+    En 2025, **NO hay excusa** para usar HTTP. Certificados HTTPS son **gratuitos** (Let's Encrypt), fáciles de instalar (Certbot lo hace automáticamente) y necesarios para cualquier sitio moderno. Los navegadores activamente discriminan contra HTTP.
 
 #### 1.30. ¿Cómo funciona HTTPS?
 
@@ -1147,26 +2375,18 @@ Durante el desarrollo es útil usar HTTPS también:
 
 6. **Configurar correctamente**: Usar herramientas como [SSL Labs](https://www.ssllabs.com/ssltest/)
 
-## Resumen de la unidad
-
-En esta unidad hemos aprendido:
+Como conclusión, podemos decir que:
 
 1. **HTTP** es el protocolo fundamental de la web: sencillo, extensible y stateless.
-
 2. **Las peticiones y respuestas HTTP** tienen una estructura clara con línea de estado, cabeceras y cuerpo.
-
 3. **Las cabeceras HTTP** proporcionan metadatos esenciales sobre la comunicación.
-
 4. **Los métodos HTTP** (GET, POST, PUT, DELETE, etc.) definen las acciones sobre recursos.
-
 5. **Los códigos de estado** indican el resultado de una petición (2xx éxito, 4xx error cliente, 5xx error servidor).
-
 6. **HTTPS** es esencial para la seguridad, cifrando la comunicación mediante SSL/TLS y certificados digitales.
 
 HTTP y HTTPS son los cimientos sobre los que se construyen las aplicaciones web y las APIs modernas. Dominarlos es fundamental para cualquier desarrollador o ingeniero DevOps.
 
 
----
 
 ### 2. Páginas web estáticas vs dinámicas
 
@@ -2717,61 +3937,252 @@ Las **arquitecturas de software** definen cómo se estructura y organiza una apl
 
 La arquitectura monolítica es el enfoque tradicional donde todos los componentes de una aplicación se agrupan en un solo bloque. Es como un edificio donde todas las oficinas, servicios y departamentos están bajo un mismo techo sin divisiones reales.
 
+Imaginad una aplicación de comercio electrónico clásica: el código que gestiona el catálogo de productos, el carrito de compra, el procesamiento de pagos, la gestión de usuarios, y el sistema de envíos, todo está contenido en una única aplicación que se ejecuta como un proceso único.
+
 **Características:**
-- Código fuente único y unificado
-- Se despliega como una sola unidad
-- Todos los componentes comparten recursos
-- Base de datos única
+
+- **Código fuente único y unificado**: Todo el código vive en un mismo repositorio y proyecto. Los desarrolladores trabajan en la misma base de código, lo que simplifica la coordinación pero puede crear cuellos de botella cuando el equipo crece.
+    
+- **Se despliega como una sola unidad**: No podéis desplegar solo una parte de la aplicación. Si cambiáis una línea de código en cualquier módulo, debéis redesplegar la aplicación completa. Esto significa que un pequeño cambio en el módulo de facturación requiere redesplegar también los módulos de catálogo, usuarios, etc.
+    
+- **Todos los componentes comparten recursos**: La memoria, la CPU, las conexiones a base de datos... todo se comparte entre los módulos. Esto puede ser eficiente, pero también significa que si un módulo consume muchos recursos, afecta a todos los demás.
+    
+- **Base de datos única**: Típicamente, una aplicación monolítica usa una sola base de datos relacional que almacena todos los datos. Todas las tablas están en el mismo esquema, lo que facilita las consultas complejas que cruzan múltiples dominios, pero también crea un acoplamiento fuerte a nivel de datos.
 
 **Ventajas:**
-- Simple de desarrollar inicialmente
-- Fácil de probar (todo en un lugar)
-- Despliegue sencillo
-- Rendimiento interno óptimo (llamadas en memoria)
+
+- **Simple de desarrollar inicialmente**: Cuando empezáis un proyecto, no necesitáis configurar múltiples servicios, sistemas de mensajería, orquestadores ni gestión de redes complejas. Simplemente creáis un proyecto, definís vuestras rutas y empezáis a programar. Esto es ideal para startups, MVPs (Minimum Viable Products) o equipos pequeños que quieren validar una idea rápidamente.
+    
+- **Fácil de probar (todo en un lugar)**: Podéis levantar la aplicación completa en vuestro ordenador de desarrollo y probar el flujo completo de extremo a extremo sin necesidad de configurar docenas de servicios. Los tests de integración son más simples porque todo está en el mismo proceso.
+    
+- **Despliegue sencillo**: El proceso de despliegue es relativamente simple: generar un único artefacto (un WAR en Java, un directorio de archivos en PHP, un binario en Go) y copiarlo al servidor. No necesitáis coordinar el despliegue de 20 microservicios diferentes.
+    
+- **Rendimiento interno óptimo (llamadas en memoria)**: Cuando el módulo de carrito de compra necesita datos del módulo de productos, simplemente hace una llamada de función en memoria. No hay latencia de red, no hay serialización/deserialización de datos, no hay overhead de HTTP. Esto es significativamente más rápido que las llamadas entre microservicios.
 
 **Desventajas:**
-- Difícil de escalar selectivamente
-- Cambios requieren redesplegar todo
-- Acoplamiento alto entre componentes
-- Difícil de mantener a medida que crece
+
+- **Difícil de escalar selectivamente**: Si necesitáis más capacidad para el módulo de búsqueda de productos (porque es donde está el cuello de botella), no podéis escalar solo ese módulo. Debéis replicar la aplicación completa, incluyendo todos los módulos que tal vez no necesitan más recursos. Esto desperdicia recursos y aumenta costes.
+    
+- **Cambios requieren redesplegar todo**: Cada cambio, por pequeño que sea, requiere un redespliegue completo de la aplicación. Esto significa downtime (tiempo de inactividad) o procesos complejos de despliegue blue-green. Además, aumenta el riesgo: un bug en una parte pequeña del código puede tumbar toda la aplicación.
+    
+- **Acoplamiento alto entre componentes**: Los módulos tienden a depender fuertemente entre sí porque comparten el mismo espacio de memoria, las mismas estructuras de datos y la misma base de datos. Cambiar una tabla o un modelo de datos puede requerir modificar código en múltiples módulos. Con el tiempo, este acoplamiento se vuelve tan fuerte que modificar cualquier cosa se convierte en una tarea arriesgada y costosa.
+    
+- **Difícil de mantener a medida que crece**: Conforme la aplicación crece (más líneas de código, más desarrolladores, más funcionalidades), la complejidad aumenta exponencialmente. El tiempo de compilación se alarga, los tests tardan más, los nuevos desarrolladores tardan semanas en entender el código, y cualquier cambio puede tener efectos secundarios inesperados en partes distantes de la aplicación.
+
+**¿Cuándo usar arquitectura monolítica?**
+
+✅ **Usar monolito cuando:**
+- Estáis empezando un proyecto nuevo y no conocéis bien el dominio
+- Tenéis un equipo pequeño (menos de 10 desarrolladores)
+- La aplicación tiene requisitos simples y bien definidos
+- El tráfico es predecible y moderado
+- Queréis validar una idea rápidamente (MVP)
+
+❌ **Evitar monolito cuando:**
+- Necesitáis escalar componentes independientemente
+- Equipos grandes trabajando simultáneamente
+- Diferentes partes de la aplicación tienen requisitos tecnológicos muy distintos
+- Necesitáis alta disponibilidad (el monolito es un punto único de fallo)
 
 #### 4.2. Arquitectura de microservicios
 
-En contraposición al monolito, los **microservicios** dividen la aplicación en pequeños servicios independientes, cada uno enfocado en una función específica del negocio.
+En contraposición al monolito, los **microservicios** dividen la aplicación en pequeños servicios independientes, cada uno enfocado en una función específica del negocio. Si el monolito es un edificio único, los microservicios son un conjunto de pequeñas cabañas especializadas, cada una con su propósito específico, conectadas por caminos (APIs).
+
+Pensad en nuestra aplicación de comercio electrónico anterior: en lugar de ser un bloque único, ahora tendríamos:
+- **Servicio de Catálogo**: Gestiona productos, categorías, búsquedas
+- **Servicio de Usuarios**: Autenticación, perfiles, preferencias
+- **Servicio de Carrito**: Gestión del carrito de compra
+- **Servicio de Pagos**: Procesamiento de transacciones
+- **Servicio de Envíos**: Cálculo de costes, tracking
+- **Servicio de Notificaciones**: Emails, SMS, push notifications
+
+Cada uno de estos servicios es una aplicación independiente, con su propio código, su propia base de datos, y su propio ciclo de vida.
 
 **Principios fundamentales:**
-- Servicios pequeños y enfocados
-- Despliegue independiente
-- Comunicación vía APIs
-- Bases de datos descentralizadas
-- Fallos aislados
+
+- **Servicios pequeños y enfocados**: Cada microservicio tiene una responsabilidad clara y limitada. El "Servicio de Notificaciones" solo se encarga de enviar notificaciones, nada más. Esta especialización hace que el código sea más simple, más fácil de entender y más fácil de mantener. Un desarrollador nuevo puede entender completamente un microservicio en días, mientras que entender un monolito puede llevar meses.
+    
+- **Despliegue independiente**: Podéis actualizar el "Servicio de Pagos" a una nueva versión sin tocar ningún otro servicio. Si hay un bug en el servicio de notificaciones, lo corregís y desplegáis solo ese servicio, sin riesgo de afectar al resto de la plataforma. Esto permite ciclos de desarrollo más rápidos: diferentes equipos pueden desplegar cambios múltiples veces al día sin coordinarse.
+    
+- **Comunicación vía APIs**: Los microservicios no comparten memoria ni se llaman directamente. Se comunican exclusivamente a través de APIs bien definidas, típicamente HTTP/REST o gRPC. Esto crea fronteras claras y reduce el acoplamiento. El "Servicio de Carrito" no necesita conocer cómo funciona internamente el "Servicio de Productos", solo necesita conocer su API pública.
+    
+- **Bases de datos descentralizadas**: Cada microservicio tiene su propia base de datos. El "Servicio de Usuarios" puede usar PostgreSQL, el "Servicio de Catálogo" puede usar Elasticsearch para búsquedas rápidas, y el "Servicio de Sesiones" puede usar Redis. Esta independencia permite optimizar cada servicio con la tecnología más adecuada, pero también complica las consultas que cruzan múltiples dominios.
+    
+- **Fallos aislados**: Si el "Servicio de Recomendaciones" se cae, el resto de la aplicación sigue funcionando. Los usuarios pueden seguir comprando, aunque no vean recomendaciones personalizadas. Esto mejora la resiliencia global de la plataforma. En un monolito, un fallo en cualquier módulo puede tumbar toda la aplicación.
 
 **Ventajas:**
-- Escalabilidad granular
-- Agilidad en desarrollo
-- Tecnologías heterogéneas
-- Resiliencia mejorada
+
+- **Escalabilidad granular**: Si el "Servicio de Búsqueda" recibe 10 veces más tráfico que los demás, podéis escalar solo ese servicio, ejecutándolo en 10 instancias mientras el resto corre en 1 o 2 instancias. Esto optimiza el uso de recursos y reduce costes. Con un monolito, tendrías que replicar toda la aplicación 10 veces, desperdiciando recursos en los módulos que no necesitan ese escalado.
+    
+- **Agilidad en desarrollo**: Equipos diferentes pueden trabajar en microservicios diferentes sin pisarse. El equipo de pagos puede usar Java + Spring Boot, mientras el equipo de notificaciones usa Python + FastAPI, sin conflictos. Cada equipo puede tomar decisiones técnicas independientes y avanzar a su propio ritmo.
+    
+- **Tecnologías heterogéneas**: Podéis usar el lenguaje y framework más adecuado para cada problema. Un servicio de procesamiento de imágenes puede estar en Go por su rendimiento, un servicio de machine learning en Python por su ecosistema, y un servicio de tiempo real en Node.js por su naturaleza asíncrona. No estáis atados a una única tecnología.
+    
+- **Resiliencia mejorada**: Los fallos se contienen. Podéis implementar patrones como circuit breakers (cortocircuitos) que detectan cuando un servicio falla y evitan sobrecargarlo. Si el "Servicio de Recomendaciones" está caído, el sistema puede degradar graciosamente mostrando recomendaciones genéricas o simplemente no mostrando esa sección, pero el resto funciona perfectamente.
 
 **Desventajas:**
-- Complejidad operacional
-- Latencia de red
-- Gestión de transacciones distribuidas
-- Requiere DevOps maduro
+
+- **Complejidad operacional**: En lugar de gestionar 1 aplicación, ahora gestionáis 20, 50 o 100 servicios. Cada uno necesita monitorización, logs, métricas, alertas, balanceadores de carga, sistemas de descubrimiento de servicios, etc. Necesitáis herramientas como Kubernetes, service meshes (Istio), sistemas de logging centralizados (ELK), y sistemas de tracing distribuido (Jaeger). Esta infraestructura es compleja y requiere expertise especializado.
+    
+- **Latencia de red**: Cuando el "Servicio de Carrito" necesita información del "Servicio de Productos", debe hacer una llamada HTTP a través de la red. Esto añade latencia (milisegundos en lugar de nanosegundos de una llamada local en memoria). Si una operación requiere datos de 5 servicios diferentes, la latencia se acumula. Debéis diseñar cuidadosamente cómo minimizar estas llamadas en red.
+    
+- **Gestión de transacciones distribuidas**: En un monolito con una base de datos única, las transacciones ACID (Atomicidad, Consistencia, Aislamiento, Durabilidad) son triviales. En microservicios, si una operación de "crear pedido" involucra actualizar el inventario (Servicio de Catálogo), procesar el pago (Servicio de Pagos) y crear el envío (Servicio de Logística), ¿cómo aseguráis que o todo sucede o nada sucede? Necesitáis patrones como Sagas, Eventos de dominio y Compensación, que son conceptualmente complejos.
+    
+- **Requiere DevOps maduro**: Para tener éxito con microservicios, necesitáis automatización avanzada: CI/CD pipelines, infraestructura como código (Terraform), contenedores (Docker), orquestación (Kubernetes), observabilidad (métricas, logs, trazas), y cultura DevOps. Sin estas capacidades, los microservicios se convierten rápidamente en una pesadilla operacional.
 
 **Ejemplo: Netflix**
 
-Netflix es el caso de estudio por excelencia de microservicios exitosos. Su plataforma se compone de cientos de microservicios que gestionan diferentes aspectos: autenticación, recomendaciones, streaming, facturación, etc. Cada servicio puede actualizarse, desplegarse y escalarse independientemente.
+Netflix es el caso de estudio por excelencia de microservicios exitosos. Su plataforma se compone de más de **700 microservicios** que gestionan diferentes aspectos:
+
+- **Autenticación y usuarios**: Gestión de cuentas, perfiles, suscripciones
+- **Recomendaciones**: Algoritmos de ML que sugieren contenido personalizado
+- **Streaming**: Transcodificación, CDN, gestión de calidad adaptativa
+- **Facturación**: Procesamiento de pagos, renovaciones, upgrades
+- **A/B Testing**: Experimentación continua de features
+- **Búsqueda**: Indexación y búsqueda de contenido
+
+Cada servicio puede actualizarse, desplegarse y escalarse independientemente. Netflix despliega código a producción **miles de veces al día** sin interrumpir el servicio. Cuando un servicio falla (y en un sistema tan grande, siempre hay algo fallando), el resto sigue funcionando. Esta arquitectura les permite servir a **más de 230 millones de suscriptores** en todo el mundo con alta disponibilidad.
+
+Sin embargo, es importante notar que Netflix llegó a esta arquitectura después de años de evolución y crecimiento. No empezaron con 700 microservicios; comenzaron con un monolito y gradualmente lo descompusieron conforme sus necesidades lo requerían.
+
+**¿Cuándo usar microservicios?**
+
+✅ **Usar microservicios cuando:**
+- La aplicación es grande y compleja
+- Múltiples equipos (>20 desarrolladores) trabajando simultáneamente
+- Necesitáis escalar componentes independientemente
+- Diferentes partes requieren diferentes tecnologías
+- Alta disponibilidad es crítica
+- Tenéis capacidad DevOps madura
+
+❌ **Evitar microservicios cuando:**
+- Proyecto pequeño o MVP
+- Equipo pequeño (<10 personas)
+- Sin experiencia en sistemas distribuidos
+- Infraestructura o presupuesto limitado
+- No hay necesidad real de escalado independiente
 
 #### 4.3. Otras arquitecturas modernas
 
-**Arquitectura de capas:**
-Organiza el código en capas horizontales (presentación, lógica, datos), donde cada capa solo se comunica con la inmediatamente inferior.
+Además de monolitos y microservicios, existen otros paradigmas arquitectónicos que resuelven problemas específicos o combinan características de ambos enfoques.
 
-**Arquitectura serverless:**
-Elimina la gestión de servidores delegándola al proveedor cloud. El código se ejecuta en funciones individuales activadas por eventos.
+**Arquitectura de capas (Layered Architecture):**
 
-**Arquitectura event-driven:**
-Los componentes se comunican mediante eventos asíncronos, mejorando el desacoplamiento y la escalabilidad.
+Este es uno de los patrones más tradicionales y pedagógicos. Organiza el código en capas horizontales, donde cada capa solo se comunica con la inmediatamente inferior. Es como un pastel con capas bien definidas:
+
+- **Capa de Presentación (UI)**: HTML, CSS, JavaScript que interactúa con el usuario
+- **Capa de Aplicación (Controladores)**: Gestiona las peticiones, coordina las operaciones
+- **Capa de Lógica de Negocio (Servicios)**: Implementa las reglas del negocio
+- **Capa de Acceso a Datos (Repositorios)**: Interactúa con la base de datos
+- **Capa de Datos**: La base de datos en sí
+
+**Ventajas de la arquitectura de capas:**
+- Separación clara de responsabilidades
+- Fácil de entender para desarrolladores nuevos
+- Facilita el testing (podéis mockear capas inferiores)
+- Permite cambiar implementaciones de capas sin afectar las superiores
+
+**Desventajas:**
+- Puede llevar a código muy burocrático (demasiadas capas de indirección)
+- Dificulta ciertas optimizaciones de rendimiento
+- Tendencia a crear "god classes" en la capa de servicios
+
+**Arquitectura serverless (Functions as a Service - FaaS):**
+
+Serverless es un nombre engañoso: obviamente hay servidores, pero vosotros no los gestionáis. En lugar de desplegar y mantener servidores (o contenedores), escribís funciones individuales que el proveedor cloud ejecuta bajo demanda.
+
+**Ejemplo con AWS Lambda:**
+
+```javascript
+// Función Lambda que procesa pedidos
+exports.handler = async (event) => {
+    const pedido = JSON.parse(event.body);
+    
+    // Validar pedido
+    if (!validarPedido(pedido)) {
+        return { statusCode: 400, body: 'Pedido inválido' };
+    }
+    
+    // Guardar en DynamoDB
+    await guardarPedido(pedido);
+    
+    // Enviar a cola SQS para procesamiento
+    await enviarACola(pedido);
+    
+    return { statusCode: 200, body: 'Pedido recibido' };
+};
+```
+
+Esta función solo se ejecuta cuando llega una petición. AWS Lambda la levanta, la ejecuta, y la apaga. Solo pagáis por el tiempo de ejecución real (facturado en milisegundos).
+
+**Ventajas de serverless:**
+- **Coste por uso real**: Solo pagáis cuando el código se ejecuta. Perfecto para aplicaciones con tráfico irregular
+- **Escalado automático**: El proveedor escala automáticamente de 0 a miles de instancias según demanda
+- **Cero gestión de servidores**: No instaláis sistemas operativos, no aplicáis parches, no gestionáis infraestructura
+- **Ideal para workloads esporádicos**: Procesamiento de imágenes, webhooks, tareas programadas
+
+**Desventajas:**
+- **Cold starts**: La primera ejecución tras un período de inactividad es lenta (segundos)
+- **Límites de tiempo**: Las funciones tienen tiempo máximo de ejecución (15 minutos en AWS Lambda)
+- **Vendor lock-in**: Código acoplado al proveedor cloud específico
+- **Debugging complejo**: Difícil reproducir el entorno localmente
+- **Costes impredecibles**: Para tráfico muy alto constante, puede ser más caro que servidores tradicionales
+
+**Casos de uso ideales:**
+- Procesamiento de eventos (subida de imagen → generar thumbnails)
+- APIs con tráfico irregular
+- Tareas programadas (cron jobs)
+- Webhooks de terceros
+- Procesamiento batch
+
+**Arquitectura event-driven (orientada a eventos):**
+
+En lugar de llamadas síncronas directas entre componentes, los servicios se comunican mediante eventos asíncronos a través de un "bus de eventos" o sistema de mensajería (RabbitMQ, Apache Kafka, AWS EventBridge).
+
+**Ejemplo de flujo event-driven en un e-commerce:**
+
+1. **Usuario completa el pago** → Servicio de Pagos publica evento `PedidoCreado`
+2. **Servicio de Inventario** escucha `PedidoCreado` → Reserva stock → Publica `StockReservado`
+3. **Servicio de Logística** escucha `StockReservado` → Genera etiqueta de envío → Publica `EnvioPreparado`
+4. **Servicio de Notificaciones** escucha `EnvioPreparado` → Envía email al cliente
+5. **Servicio de Analytics** escucha todos los eventos → Actualiza dashboards en tiempo real
+
+Ningún servicio llama directamente a otro. Todos publican eventos cuando algo importante sucede y escuchan los eventos que les interesan.
+
+**Ventajas de event-driven:**
+- **Desacoplamiento máximo**: Los servicios no necesitan conocerse entre sí
+- **Escalabilidad excelente**: Fácil añadir nuevos consumidores de eventos sin modificar productores
+- **Resiliencia**: Si un consumidor está caído, los eventos se encolan y se procesan cuando se recupere
+- **Auditoría natural**: El log de eventos es una auditoría completa de todo lo que ha pasado
+- **Extensibilidad**: Añadir nuevas funcionalidades es solo añadir nuevos consumidores
+
+**Desventajas:**
+- **Complejidad conceptual**: Más difícil razonar sobre flujos asíncronos que llamadas directas
+- **Debugging complicado**: Seguir el rastro de un evento a través de múltiples servicios es complejo
+- **Consistencia eventual**: No hay garantía de que todos los servicios vean los cambios instantáneamente
+- **Requiere infraestructura robusta**: Necesitáis un sistema de mensajería confiable y escalable
+- **Mensajes duplicados o fuera de orden**: Debéis diseñar servicios idempotentes
+
+**Ejemplo real: Uber**
+
+Uber usa una arquitectura event-driven extensamente. Cuando un conductor acepta un viaje:
+- Servicio de Viajes publica `ViajeAceptado`
+- Servicio de Notificaciones envía push al pasajero
+- Servicio de Mapas inicia tracking en tiempo real
+- Servicio de Pagos reserva el método de pago
+- Servicio de Analytics registra la métrica
+
+Todo sucede en paralelo, asíncronamente, sin bloqueos.
+
+!!! tip "Arquitecturas híbridas"
+    En la realidad, muchas aplicaciones modernas combinan varios de estos paradigmas. Podéis tener:
+    - Partes monolíticas para funcionalidades simples y estables
+    - Microservicios para componentes que necesitan escalar independientemente
+    - Funciones serverless para tareas esporádicas
+    - Comunicación síncrona (HTTP/REST) para operaciones críticas de baja latencia
+    - Comunicación asíncrona (eventos) para operaciones de larga duración
+    
+    No hay arquitectura "perfecta" universal. La clave es entender los trade-offs y elegir la arquitectura que mejor se ajuste a vuestras necesidades específicas, capacidades de equipo y presupuesto.
 
 ---
 
@@ -2781,51 +4192,720 @@ Independientemente de la arquitectura general elegida, necesitamos patrones que 
 
 #### 5.1. El patrón MVC
 
-MVC separa la aplicación en tres componentes principales:
+MVC (Modelo-Vista-Controlador) es uno de los patrones de diseño más importantes y utilizados en el desarrollo web. Separa la aplicación en tres componentes principales con responsabilidades bien definidas. La idea central es: **separar la lógica de negocio de la presentación visual**, facilitando el mantenimiento, testing y escalabilidad del código.
+
+Imaginad que estáis construyendo una aplicación de gestión de tareas (to-do list). Sin MVC, todo el código estaría mezclado: consultas SQL en medio de HTML, validaciones mezcladas con renderizado, lógica de negocio dispersa por doquier. Con MVC, cada responsabilidad tiene su lugar.
 
 **Modelo (Model):**
-- Representa los datos y la lógica de negocio
-- Gestiona el acceso a la base de datos
-- Independiente de la presentación
+
+El **Modelo** es el cerebro de la aplicación. Representa los datos y contiene toda la lógica de negocio.
+
+**Responsabilidades:**
+- **Representa los datos del dominio**: En nuestra app de tareas, el Modelo `Tarea` representa qué es una tarea: tiene un título, una descripción, una fecha límite, un estado (pendiente/completada), etc.
+    
+- **Gestiona el acceso a la base de datos**: El Modelo sabe cómo guardarse en la base de datos, cómo recuperarse, cómo actualizarse. Encapsula todas las consultas SQL o interacciones con ORMs (Object-Relational Mappers).
+    
+- **Contiene la lógica de negocio**: Todas las reglas del negocio viven aquí. Por ejemplo, "una tarea no puede tener fecha límite en el pasado", "solo el creador puede eliminar una tarea", "cuando una tarea se completa, notificar a los colaboradores". Esta lógica está en el Modelo, no dispersa por el código.
+    
+- **Independiente de la presentación**: El Modelo **no sabe nada** sobre HTML, CSS, JSON, vistas, o cómo se mostrará al usuario. Esta independencia es crucial: podéis cambiar completamente la interfaz sin tocar el Modelo.
+
+**Ejemplo de Modelo en PHP:**
+
+```php
+class Tarea {
+    private $id;
+    private $titulo;
+    private $descripcion;
+    private $fechaLimite;
+    private $completada = false;
+    private $usuarioId;
+    
+    // Lógica de negocio
+    public function completar() {
+        if ($this->fechaLimite < new DateTime()) {
+            throw new Exception("No puedes completar una tarea vencida");
+        }
+        $this->completada = true;
+        $this->guardar();
+        $this->notificarColaboradores();
+    }
+    
+    // Acceso a datos
+    public function guardar() {
+        $db = Database::getConnection();
+        if ($this->id) {
+            // Actualizar
+            $stmt = $db->prepare("UPDATE tareas SET titulo=?, descripcion=?, fecha_limite=?, completada=? WHERE id=?");
+            $stmt->execute([$this->titulo, $this->descripcion, $this->fechaLimite, $this->completada, $this->id]);
+        } else {
+            // Insertar nuevo
+            $stmt = $db->prepare("INSERT INTO tareas (titulo, descripcion, fecha_limite, usuario_id) VALUES (?, ?, ?, ?)");
+            $stmt->execute([$this->titulo, $this->descripcion, $this->fechaLimite, $this->usuarioId]);
+            $this->id = $db->lastInsertId();
+        }
+    }
+    
+    public static function buscarPorUsuario($usuarioId) {
+        $db = Database::getConnection();
+        $stmt = $db->prepare("SELECT * FROM tareas WHERE usuario_id = ? ORDER BY fecha_limite");
+        $stmt->execute([$usuarioId]);
+        $tareas = [];
+        while ($row = $stmt->fetch()) {
+            $tareas[] = self::fromArray($row);
+        }
+        return $tareas;
+    }
+}
+```
+
+Todo lo relacionado con datos y lógica de negocio está encapsulado en el Modelo.
 
 **Vista (View):**
-- Presenta los datos al usuario
-- Renderiza la interfaz
-- No contiene lógica de negocio
+
+La **Vista** es la piel de la aplicación. Se encarga exclusivamente de la presentación visual.
+
+**Responsabilidades:**
+- **Presenta los datos al usuario**: Recibe datos del Controlador y los muestra. En nuestra app, la Vista toma una lista de tareas y genera el HTML para mostrarlas.
+    
+- **Renderiza la interfaz**: Contiene HTML, CSS, y la estructura visual. Decide cómo se ve cada elemento, los colores, la disposición.
+    
+- **NO contiene lógica de negocio**: La Vista **no decide** qué tareas mostrar, no valida datos, no hace consultas a la base de datos. Solo recibe datos y los presenta. La única "lógica" permitida son bucles para iterar datos y condicionales simples para mostrar/ocultar elementos.
+    
+- **Múltiples vistas para los mismos datos**: Podéis tener una Vista HTML para navegadores, una Vista JSON para APIs, una Vista XML para otros sistemas. Todas usan el mismo Modelo.
+
+**Ejemplo de Vista en PHP (usando plantillas):**
+
+```php
+<!-- vista_lista_tareas.php -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Mis Tareas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Mis Tareas</h1>
+    
+    <?php if (empty($tareas)): ?>
+        <p>No tienes tareas pendientes. ¡Disfruta tu tiempo libre!</p>
+    <?php else: ?>
+        <ul class="lista-tareas">
+            <?php foreach ($tareas as $tarea): ?>
+                <li class="<?= $tarea->estaCompletada() ? 'completada' : 'pendiente' ?>">
+                    <h3><?= htmlspecialchars($tarea->getTitulo()) ?></h3>
+                    <p><?= htmlspecialchars($tarea->getDescripcion()) ?></p>
+                    <span class="fecha">Fecha límite: <?= $tarea->getFechaLimite()->format('d/m/Y') ?></span>
+                    
+                    <?php if (!$tarea->estaCompletada()): ?>
+                        <a href="/tareas/completar/<?= $tarea->getId() ?>">Marcar como completada</a>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+</body>
+</html>
+```
+
+La Vista solo presenta datos. No decide qué tareas cargar, no las valida, no las guarda.
 
 **Controlador (Controller):**
-- Gestiona las peticiones del usuario
-- Coordina Modelo y Vista
-- Contiene la lógica de aplicación
 
-**Flujo típico:**
-1. Usuario interactúa con la Vista
-2. Vista notifica al Controlador
-3. Controlador procesa y solicita datos al Modelo
-4. Modelo ejecuta lógica y devuelve datos
-5. Controlador selecciona Vista apropiada
-6. Vista renderiza datos y muestra al usuario
+El **Controlador** es el director de orquesta. Coordina el Modelo y la Vista, gestionando el flujo de la aplicación.
+
+**Responsabilidades:**
+- **Gestiona las peticiones del usuario**: Cuando el usuario hace clic en "Completar tarea", el Controlador recibe esa petición.
+    
+- **Coordina Modelo y Vista**: El Controlador pide datos al Modelo y se los pasa a la Vista apropiada. Actúa como intermediario.
+    
+- **Contiene la lógica de aplicación** (no de negocio): Decide qué Modelo usar, qué Vista renderizar, qué hacer según las peticiones. Pero **no** contiene reglas de negocio (esas están en el Modelo).
+    
+- **Maneja el flujo de navegación**: Decide a qué página redirigir después de una acción, qué mensajes mostrar, etc.
+
+**Ejemplo de Controlador en PHP:**
+
+```php
+class TareasController {
+    
+    // Mostrar lista de tareas
+    public function index() {
+        // Obtener ID del usuario de la sesión
+        $usuarioId = $_SESSION['usuario_id'];
+        
+        // Pedir datos al Modelo
+        $tareas = Tarea::buscarPorUsuario($usuarioId);
+        
+        // Pasar datos a la Vista
+        require 'vistas/vista_lista_tareas.php';
+    }
+    
+    // Crear nueva tarea
+    public function crear() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Validar entrada
+            $titulo = $_POST['titulo'] ?? '';
+            $descripcion = $_POST['descripcion'] ?? '';
+            $fechaLimite = $_POST['fecha_limite'] ?? '';
+            
+            if (empty($titulo)) {
+                $_SESSION['error'] = 'El título es obligatorio';
+                header('Location: /tareas/nueva');
+                return;
+            }
+            
+            // Crear y guardar nueva tarea
+            $tarea = new Tarea();
+            $tarea->setTitulo($titulo);
+            $tarea->setDescripcion($descripcion);
+            $tarea->setFechaLimite(new DateTime($fechaLimite));
+            $tarea->setUsuarioId($_SESSION['usuario_id']);
+            
+            try {
+                $tarea->guardar();
+                $_SESSION['mensaje'] = 'Tarea creada con éxito';
+                header('Location: /tareas');
+            } catch (Exception $e) {
+                $_SESSION['error'] = $e->getMessage();
+                header('Location: /tareas/nueva');
+            }
+        } else {
+            // Mostrar formulario
+            require 'vistas/formulario_nueva_tarea.php';
+        }
+    }
+    
+    // Completar tarea
+    public function completar($id) {
+        $tarea = Tarea::buscarPorId($id);
+        
+        if (!$tarea) {
+            $_SESSION['error'] = 'Tarea no encontrada';
+            header('Location: /tareas');
+            return;
+        }
+        
+        // Verificar permisos
+        if ($tarea->getUsuarioId() != $_SESSION['usuario_id']) {
+            $_SESSION['error'] = 'No tienes permisos';
+            header('Location: /tareas');
+            return;
+        }
+        
+        try {
+            $tarea->completar();  // Lógica de negocio en el Modelo
+            $_SESSION['mensaje'] = 'Tarea completada';
+        } catch (Exception $e) {
+            $_SESSION['error'] = $e->getMessage();
+        }
+        
+        header('Location: /tareas');
+    }
+}
+```
+
+El Controlador orquesta todo: recibe la petición, usa el Modelo, elige la Vista.
+
+**Flujo típico en MVC:**
+
+Veamos el flujo completo cuando un usuario completa una tarea:
+
+1. **Usuario hace clic** en "Marcar como completada" → Genera petición GET `/tareas/completar/42`
+
+2. **El framework de routing** (parte del Controlador) interpreta la URL y llama a `TareasController::completar(42)`
+
+3. **Controlador recibe la petición**:
+   - Identifica que necesita la tarea con ID 42
+   - Pide al Modelo: `$tarea = Tarea::buscarPorId(42)`
+
+4. **Modelo ejecuta**:
+   - Hace consulta SQL: `SELECT * FROM tareas WHERE id = 42`
+   - Crea objeto `Tarea` con esos datos
+   - Devuelve el objeto al Controlador
+
+5. **Controlador valida permisos**:
+   - Verifica que el usuario actual sea el dueño
+   - Si no, muestra error y termina
+   - Si sí, llama a `$tarea->completar()`
+
+6. **Modelo ejecuta lógica de negocio**:
+   - Valida que la fecha límite no haya pasado
+   - Marca `completada = true`
+   - Ejecuta SQL: `UPDATE tareas SET completada = 1 WHERE id = 42`
+   - Notifica a colaboradores (lógica adicional)
+   - Devuelve éxito al Controlador
+
+7. **Controlador decide qué hacer**:
+   - Establece mensaje de éxito en sesión
+   - Redirige a `TareasController::index()`
+
+8. **Controlador solicita lista actualizada**:
+   - Pide al Modelo: `$tareas = Tarea::buscarPorUsuario($usuarioId)`
+   - Modelo devuelve array de tareas
+
+9. **Controlador selecciona Vista**:
+   - Carga `vista_lista_tareas.php`
+   - Pasa la variable `$tareas` a la Vista
+
+10. **Vista renderiza**:
+    - Recorre el array de tareas
+    - Genera HTML para cada una
+    - La tarea 42 ahora aparece con clase "completada"
+    - Envía el HTML al navegador
+
+11. **Usuario ve** la página actualizada con su tarea marcada como completada
+
+**Ventajas de MVC:**
+
+- **Separación de responsabilidades**: Cada componente tiene un propósito claro
+- **Facilita el testing**: Podéis testear el Modelo sin interfaz, testear Controladores sin base de datos real
+- **Trabajo en equipo**: Diseñadores pueden trabajar en Vistas, programadores en Modelos y Controladores
+- **Reutilización**: Un Modelo puede usarse desde múltiples Vistas (web, API, móvil)
+- **Mantenibilidad**: Cambios en una capa no afectan a las otras
+
+!!! warning "MVC mal implementado"
+    Muchas aplicaciones dicen usar MVC pero violan sus principios:
+    - **Controladores con lógica de negocio**: Esto hace que la lógica no sea reutilizable
+    - **Vistas con consultas SQL**: Esto acopla la presentación a la base de datos
+    - **Modelos anémicos**: Modelos que solo son contenedores de datos sin lógica
+    
+    Un MVC bien implementado respeta estrictamente las responsabilidades de cada capa.
 
 #### 5.2. Principios SOLID
 
-Los **principios SOLID** son cinco reglas fundamentales para diseño orientado a objetos de calidad:
+Los **principios SOLID** son cinco reglas fundamentales para diseño orientado a objetos de calidad, formuladas por Robert C. Martin (Uncle Bob). Aunque nacieron en el contexto de programación orientada a objetos, sus conceptos son aplicables a cualquier paradigma de programación. Estos principios no son reglas absolutas que debáis seguir ciegamente, sino guías que os ayudarán a escribir código más mantenible, flexible y robusto.
 
-**S - Single Responsibility (Responsabilidad Única)**
-Cada clase debe tener una única razón para cambiar. Una clase, una responsabilidad.
+Veámoslos uno por uno con ejemplos prácticos.
 
-**O - Open/Closed (Abierto/Cerrado)**
-Abierto para extensión, cerrado para modificación. Añadir funcionalidad sin cambiar código existente.
+**S - Single Responsibility Principle (Principio de Responsabilidad Única)**
 
-**L - Liskov Substitution (Sustitución de Liskov)**
-Los objetos de una clase derivada deben poder sustituir a los de la clase base sin alterar el comportamiento.
+> "Una clase debe tener una, y solo una, razón para cambiar"
 
-**I - Interface Segregation (Segregación de Interfaces)**
-Muchas interfaces específicas son mejores que una interfaz general. No forzar a implementar métodos innecesarios.
+Esto significa que cada clase debe tener **una única responsabilidad**, un único propósito en el sistema. Si una clase hace demasiadas cosas, cambios en diferentes áreas del sistema requerirán modificar esa clase, aumentando la probabilidad de introducir bugs.
 
-**D - Dependency Inversion (Inversión de Dependencias)**
-Depender de abstracciones, no de implementaciones concretas. Facilita el cambio y el testing.
+**❌ Violación de SRP:**
 
-Estos principios son especialmente relevantes en arquitecturas modernas y microservicios.
+```php
+class Usuario {
+    private $nombre;
+    private $email;
+    private $password;
+    
+    // Responsabilidad 1: Gestión de datos de usuario
+    public function setNombre($nombre) { ... }
+    public function getEmail() { ... }
+    
+    // Responsabilidad 2: Persistencia en base de datos
+    public function guardarEnBD() {
+        $db = new PDO(...);
+        $sql = "INSERT INTO usuarios ...";
+        // ... código SQL ...
+    }
+    
+    // Responsabilidad 3: Validación
+    public function validar() {
+        if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+            throw new Exception("Email inválido");
+        }
+        if (strlen($this->password) < 8) {
+            throw new Exception("Password débil");
+        }
+    }
+    
+    // Responsabilidad 4: Envío de emails
+    public function enviarEmailBienvenida() {
+        $mensaje = "Bienvenido " . $this->nombre;
+        mail($this->email, "Bienvenida", $mensaje);
+    }
+}
+```
+
+Esta clase tiene **cuatro responsabilidades diferentes**. Si cambia la forma de validar emails, debemos modificar esta clase. Si cambiamos el sistema de base de datos, modificamos esta clase. Si cambiamos el sistema de envío de emails, modificamos esta clase. ¡Demasiadas razones para cambiar!
+
+**✅ Respetando SRP:**
+
+```php
+// Responsabilidad 1: Representar datos de usuario
+class Usuario {
+    private $nombre;
+    private $email;
+    private $password;
+    
+    public function __construct($nombre, $email, $password) {
+        $this->nombre = $nombre;
+        $this->email = $email;
+        $this->password = $password;
+    }
+    
+    public function getNombre() { return $this->nombre; }
+    public function getEmail() { return $this->email; }
+    public function getPassword() { return $this->password; }
+}
+
+// Responsabilidad 2: Validación
+class ValidadorUsuario {
+    public function validar(Usuario $usuario) {
+        if (!filter_var($usuario->getEmail(), FILTER_VALIDATE_EMAIL)) {
+            throw new ValidationException("Email inválido");
+        }
+        if (strlen($usuario->getPassword()) < 8) {
+            throw new ValidationException("Password débil");
+        }
+    }
+}
+
+// Responsabilidad 3: Persistencia
+class RepositorioUsuario {
+    private $db;
+    
+    public function guardar(Usuario $usuario) {
+        $sql = "INSERT INTO usuarios (nombre, email, password) VALUES (?, ?, ?)";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute([
+            $usuario->getNombre(),
+            $usuario->getEmail(),
+            password_hash($usuario->getPassword(), PASSWORD_BCRYPT)
+        ]);
+    }
+}
+
+// Responsabilidad 4: Notificaciones
+class ServicioNotificaciones {
+    public function enviarBienvenida(Usuario $usuario) {
+        $mensaje = "Bienvenido " . $usuario->getNombre();
+        mail($usuario->getEmail(), "Bienvenida", $mensaje);
+    }
+}
+```
+
+Ahora cada clase tiene **una única responsabilidad**. Cambios en validación solo afectan a `ValidadorUsuario`, cambios en base de datos solo a `RepositorioUsuario`, etc.
+
+**O - Open/Closed Principle (Principio Abierto/Cerrado)**
+
+> "Las entidades de software deben estar abiertas para extensión, pero cerradas para modificación"
+
+Deberíais poder **añadir nueva funcionalidad sin modificar código existente**. Esto se logra mediante abstracciones (interfaces, clases abstractas) y polimorfismo.
+
+**❌ Violación de OCP:**
+
+```php
+class ProcesadorPagos {
+    public function procesar($tipo, $monto) {
+        if ($tipo === 'tarjeta') {
+            // Lógica para procesar tarjeta
+            echo "Procesando $monto con tarjeta";
+        } elseif ($tipo === 'paypal') {
+            // Lógica para procesar PayPal
+            echo "Procesando $monto con PayPal";
+        } elseif ($tipo === 'bitcoin') {  // Nueva funcionalidad
+            // Lógica para procesar Bitcoin
+            echo "Procesando $monto con Bitcoin";
+        }
+        // Cada nuevo método de pago requiere modificar esta clase
+    }
+}
+```
+
+Para añadir un nuevo método de pago (Bitcoin, Apple Pay, etc.), debéis **modificar** la clase `ProcesadorPagos`. Esto viola OCP y es arriesgado: podéis introducir bugs en métodos que ya funcionaban.
+
+**✅ Respetando OCP:**
+
+```php
+// Abstracción
+interface MetodoPago {
+    public function procesar($monto);
+}
+
+// Implementaciones concretas
+class PagoConTarjeta implements MetodoPago {
+    public function procesar($monto) {
+        echo "Procesando $monto con tarjeta de crédito";
+        // Lógica específica de tarjetas
+    }
+}
+
+class PagoConPayPal implements MetodoPago {
+    public function procesar($monto) {
+        echo "Procesando $monto con PayPal";
+        // Lógica específica de PayPal
+    }
+}
+
+// Nueva funcionalidad SIN modificar código existente
+class PagoConBitcoin implements MetodoPago {
+    public function procesar($monto) {
+        echo "Procesando $monto con Bitcoin";
+        // Lógica específica de Bitcoin
+    }
+}
+
+// Procesador usa la abstracción
+class ProcesadorPagos {
+    public function procesar(MetodoPago $metodoPago, $monto) {
+        $metodoPago->procesar($monto);
+    }
+}
+
+// Uso
+$procesador = new ProcesadorPagos();
+$procesador->procesar(new PagoConTarjeta(), 100);
+$procesador->procesar(new PagoConPayPal(), 50);
+$procesador->procesar(new PagoConBitcoin(), 0.005);  // Nueva sin cambiar ProcesadorPagos
+```
+
+Ahora podemos **añadir nuevos métodos de pago simplemente creando nuevas clases** que implementen `MetodoPago`. No necesitamos tocar `ProcesadorPagos`.
+
+**L - Liskov Substitution Principle (Principio de Sustitución de Liskov)**
+
+> "Los objetos de una clase derivada deben poder sustituir a los objetos de la clase base sin alterar el comportamiento del programa"
+
+Si tenéis una función que acepta un objeto de tipo `Animal`, debe funcionar correctamente con cualquier subclase de `Animal` (`Perro`, `Gato`, etc.) sin necesidad de conocer la subclase específica.
+
+**❌ Violación de LSP:**
+
+```php
+class Ave {
+    public function volar() {
+        echo "Volando...";
+    }
+}
+
+class Aguila extends Ave {
+    public function volar() {
+        echo "El águila vuela alto";
+    }
+}
+
+class Pinguino extends Ave {
+    public function volar() {
+        throw new Exception("Los pingüinos no pueden volar");
+    }
+}
+
+// Uso
+function hacerVolar(Ave $ave) {
+    $ave->volar();  // ¡Explota si es un pingüino!
+}
+
+hacerVolar(new Aguila());    // ✓ Funciona
+hacerVolar(new Pinguino());  // ✗ Lanza excepción
+```
+
+`Pinguino` es un `Ave`, pero no puede volar. Esto viola LSP porque `Pinguino` no puede sustituir a `Ave` sin romper el programa.
+
+**✅ Respetando LSP:**
+
+```php
+interface Ave {
+    public function comer();
+    public function moverse();
+}
+
+interface AveVoladora extends Ave {
+    public function volar();
+}
+
+class Aguila implements AveVoladora {
+    public function comer() { echo "Comiendo peces"; }
+    public function moverse() { $this->volar(); }
+    public function volar() { echo "Volando alto"; }
+}
+
+class Pinguino implements Ave {
+    public function comer() { echo "Comiendo pescado"; }
+    public function moverse() { echo "Nadando"; }
+    // NO implementa volar()
+}
+
+// Uso correcto
+function alimentar(Ave $ave) {
+    $ave->comer();  // Funciona con cualquier Ave
+}
+
+function hacerVolar(AveVoladora $ave) {
+    $ave->volar();  // Solo acepta aves que pueden volar
+}
+
+alimentar(new Aguila());     // ✓
+alimentar(new Pinguino());   // ✓
+hacerVolar(new Aguila());    // ✓
+// hacerVolar(new Pinguino()); // Error de compilación - Pinguino no es AveVoladora
+```
+
+Ahora el sistema de tipos previene errores. `Pinguino` no hereda comportamientos que no puede cumplir.
+
+**I - Interface Segregation Principle (Principio de Segregación de Interfaces)**
+
+> "Los clientes no deberían estar forzados a depender de interfaces que no usan"
+
+Es mejor tener **muchas interfaces pequeñas y específicas** que una interfaz grande y general. Esto evita que las clases implementen métodos que no necesitan.
+
+**❌ Violación de ISP:**
+
+```php
+interface Trabajador {
+    public function trabajar();
+    public function comer();
+    public function recibirSalario();
+    public function pedirVacaciones();
+}
+
+class Empleado implements Trabajador {
+    public function trabajar() { echo "Trabajando..."; }
+    public function comer() { echo "Comiendo..."; }
+    public function recibirSalario() { echo "Recibiendo salario"; }
+    public function pedirVacaciones() { echo "Solicitando vacaciones"; }
+}
+
+class Robot implements Trabajador {
+    public function trabajar() { echo "Robot trabajando 24/7"; }
+    
+    // Un robot no come, no recibe salario, no pide vacaciones
+    // Pero está FORZADO a implementar estos métodos
+    public function comer() { throw new Exception("Los robots no comen"); }
+    public function recibirSalario() { throw new Exception("Los robots no cobran"); }
+    public function pedirVacaciones() { throw new Exception("Los robots no descansan"); }
+}
+```
+
+`Robot` está forzado a implementar métodos que no tienen sentido para él. Esto viola ISP.
+
+**✅ Respetando ISP:**
+
+```php
+interface Trabajador {
+    public function trabajar();
+}
+
+interface Alimentable {
+    public function comer();
+}
+
+interface Asalariado {
+    public function recibirSalario();
+}
+
+interface ConDerecho aVacaciones {
+    public function pedirVacaciones();
+}
+
+class Empleado implements Trabajador, Alimentable, Asalariado, ConDerechoAVacaciones {
+    public function trabajar() { echo "Trabajando..."; }
+    public function comer() { echo "Comiendo..."; }
+    public function recibirSalario() { echo "Recibiendo salario"; }
+    public function pedirVacaciones() { echo "Solicitando vacaciones"; }
+}
+
+class Robot implements Trabajador {
+    public function trabajar() { echo "Robot trabajando 24/7"; }
+    // Solo implementa lo que necesita
+}
+```
+
+Ahora `Robot` solo implementa `Trabajador`, que es lo único que realmente hace. No está forzado a implementar métodos sin sentido.
+
+**D - Dependency Inversion Principle (Principio de Inversión de Dependencias)**
+
+> "Depender de abstracciones, no de implementaciones concretas. Los módulos de alto nivel no deben depender de módulos de bajo nivel, ambos deben depender de abstracciones"
+
+Este es quizás el principio más importante para sistemas desacoplados y testeables.
+
+**❌ Violación de DIP:**
+
+```php
+class MySQLDatabase {
+    public function guardar($datos) {
+        echo "Guardando en MySQL: $datos";
+    }
+}
+
+class ServicioUsuarios {
+    private $db;
+    
+    public function __construct() {
+        // Dependencia DIRECTA de MySQLDatabase
+        $this->db = new MySQLDatabase();
+    }
+    
+    public function crearUsuario($nombre) {
+        $this->db->guardar($nombre);
+    }
+}
+```
+
+`ServicioUsuarios` depende directamente de `MySQLDatabase`. Si queremos cambiar a PostgreSQL o MongoDB, debemos modificar `ServicioUsuarios`. Además, **no podemos testear** `ServicioUsuarios` sin una base de datos MySQL real.
+
+**✅ Respetando DIP:**
+
+```php
+// Abstracción
+interface Database {
+    public function guardar($datos);
+}
+
+// Implementaciones concretas
+class MySQLDatabase implements Database {
+    public function guardar($datos) {
+        echo "Guardando en MySQL: $datos";
+    }
+}
+
+class PostgreSQLDatabase implements Database {
+    public function guardar($datos) {
+        echo "Guardando en PostgreSQL: $datos";
+    }
+}
+
+class MongoDBDatabase implements Database {
+    public function guardar($datos) {
+        echo "Guardando en MongoDB: $datos";
+    }
+}
+
+// Servicio depende de la ABSTRACCIÓN
+class ServicioUsuarios {
+    private $db;
+    
+    public function __construct(Database $db) {
+        $this->db = $db;  // Inyección de dependencias
+    }
+    
+    public function crearUsuario($nombre) {
+        $this->db->guardar($nombre);
+    }
+}
+
+// Uso - la dependencia concreta se inyecta desde fuera
+$servicio = new ServicioUsuarios(new MySQLDatabase());
+$servicio->crearUsuario("Ana");
+
+// Cambiar de BD es trivial
+$servicio = new ServicioUsuarios(new PostgreSQLDatabase());
+
+// Para testing, inyectamos un mock
+class MockDatabase implements Database {
+    public function guardar($datos) {
+        // Mock que no hace nada real
+    }
+}
+$servicioTest = new ServicioUsuarios(new MockDatabase());
+```
+
+Ahora `ServicioUsuarios` **no conoce** la implementación concreta de la base de datos. Depende solo de la abstracción `Database`. Esto permite:
+- Cambiar de base de datos sin modificar `ServicioUsuarios`
+- Testear con mocks sin base de datos real
+- Reutilizar `ServicioUsuarios` en diferentes contextos
+
+**Resumen de SOLID:**
+
+| Principio                    | Qué logra                                | Técnica principal            |
+|:-----------------------------|:-----------------------------------------|:-----------------------------|
+| **S**ingle Responsibility    | Código más enfocado y mantenible         | Una clase, una responsabilidad |
+| **O**pen/Closed              | Extensibilidad sin riesgo                | Polimorfismo, interfaces     |
+| **L**iskov Substitution      | Herencia correcta y segura               | Contratos consistentes       |
+| **I**nterface Segregation    | Interfaces pequeñas y específicas        | Múltiples interfaces pequeñas |
+| **D**ependency Inversion     | Bajo acoplamiento, alta testabilidad    | Inyección de dependencias    |
+
+Estos principios son especialmente relevantes en arquitecturas modernas y microservicios, donde la mantenibilidad, testabilidad y flexibilidad son críticas.
 
 ---
 
@@ -3306,58 +5386,131 @@ Es un enfoque híbrido que ofrece lo mejor de ambos mundos. Por ejemplo, tener 1
 
 ### 13. Contenedores y orquestación
 
-Los **contenedores** revolucionaron el despliegue moderno.
+Si habéis trabajado en desarrollo, probablemente habéis oído la frase más frustrante del mundo: **"En mi máquina funciona"**. Un compañero os pasa su código, lo ejecutáis en vuestra máquina, y... error. ¿Por qué? Porque tiene Python 3.9 y vos tenéis 3.11. O usa una librería que no tenéis instalada. O su base de datos tiene configuraciones diferentes. Los **contenedores** nacieron para eliminar este problema de una vez por todas, y han revolucionado completamente cómo desplegamos aplicaciones modernas.
 
-#### 13.1. Docker
+#### 13.1. Docker: empaquetando la consistencia
 
-**¿Qué es un contenedor?**
-Paquete que incluye:
-- Aplicación
-- Dependencias
-- Runtime
-- Configuración
+**¿Qué es realmente un contenedor?**
 
-Todo lo necesario para ejecutar, aislado del sistema host.
+Pensad en un contenedor como una **cápsula autocontenida** que incluye absolutamente TODO lo que vuestra aplicación necesita para funcionar:
 
-**Ventajas:**
-- "Funciona en mi máquina" → funciona en todas
-- Portabilidad total
-- Despliegue consistente
-- Ligero (vs máquinas virtuales)
+- **La aplicación en sí**: Vuestro código, ya sea Python, Node.js, Java, PHP...
 
-**Dockerfile ejemplo:**
+- **Todas las dependencias**: Cada librería, cada paquete, cada módulo que vuestra aplicación necesita. Si usa Flask 2.0.1, el contenedor incluirá exactamente Flask 2.0.1, no otra versión.
+
+- **El runtime**: El intérprete de Python, el motor de Node.js, la JVM de Java... todo lo que ejecuta vuestro código.
+
+- **Configuración y sistema base**: Un sistema operativo Linux mínimo, variables de entorno, archivos de configuración.
+
+Todo esto empaquetado en una "imagen" que podéis mover a cualquier máquina, y funcionará exactamente igual. Es como tener un ordenador virtual súper liviano dedicado exclusivamente a vuestra aplicación.
+
+**Las ventajas que cambian todo:**
+
+- **"Funciona en mi máquina" → funciona en TODAS las máquinas**: Si funciona en vuestro portátil, funcionará igual en el servidor de producción, en el ordenador de vuestro compañero, en AWS, en Google Cloud, en cualquier lado. Esto elimina el 90% de los problemas de despliegue.
+
+- **Portabilidad total y real**: La misma imagen Docker puede ejecutarse en Windows, Mac, Linux, servidores físicos, máquinas virtuales, cualquier proveedor cloud. No importa dónde, funciona igual.
+
+- **Despliegue consistente**: No más scripts de instalación complejos que fallan a mitad. No más "instala esto, configura aquello, espera que funcione". Solo haces `docker run` y listo.
+
+- **Ligero comparado con máquinas virtuales**: Una máquina virtual completa puede ocupar varios GB y tardar minutos en arrancar. Un contenedor ocupa MB y arranca en segundos, porque comparte el kernel del sistema operativo host.
+
+**Un ejemplo real de Dockerfile:**
+
 ```dockerfile
+# Empezamos con una imagen base que ya tiene PHP 8.2 y Apache
 FROM php:8.2-apache
+
+# Copiamos nuestro código a la carpeta que Apache sirve
 COPY . /var/www/html/
+
+# Instalamos la extensión de MySQL que nuestra app necesita
 RUN docker-php-ext-install mysqli
+
+# Le decimos que la aplicación escucha en el puerto 80
 EXPOSE 80
 ```
 
-#### 13.2. Docker Compose
+Con estas 5 líneas simples, habéis creado una imagen que cualquiera puede ejecutar y tendrá exactamente el mismo entorno que vosotros. Es poderoso en su simplicidad.
 
-Para aplicaciones multi-contenedor:
+#### 13.2. Docker Compose: orquestando múltiples contenedores
+
+La mayoría de aplicaciones reales no son un solo contenedor. Tenéis el servidor web, vuestra aplicación, la base de datos, quizás Redis para caché, quizás un servidor de colas... **Docker Compose** os permite definir y gestionar todas estas piezas juntas con elegancia.
+
+**El poder de la declaración simple:**
+
+En lugar de ejecutar múltiples comandos `docker run` con cientos de parámetros, definís todo en un archivo YAML legible:
 
 ```yaml
 version: '3'
 services:
+  # Servidor web
   web:
     image: nginx
     ports:
-      - "80:80"
+      - "80:80"      # Puerto del host:Puerto del contenedor
+    volumes:
+      - ./config:/etc/nginx/conf.d
+  
+  # Aplicación PHP
   app:
     image: php:fpm
+    volumes:
+      - ./code:/var/www/html
+  
+  # Base de datos
   db:
     image: mysql:8
     environment:
       MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: miapp
+    volumes:
+      - db-data:/var/lib/mysql
+
+# Volúmenes persistentes
+volumes:
+  db-data:
 ```
 
-#### 13.3. Kubernetes
+Con un simple `docker-compose up`, los tres servicios arrancan, se conectan entre sí automáticamente, y vuestra aplicación está funcionando. Con `docker-compose down`, todo se detiene limpiamente. Es desarrollo y testing local simplificado al máximo.
 
-**Orquestación a gran escala:**
-- Gestiona cientos/miles de contenedores
-- Escalado automático
-- Auto-recuperación
+**Por qué esto es revolucionario:**
+
+- Cualquier desarrollador nuevo puede tener el entorno completo funcionando en 5 minutos
+- No hay que instalar MySQL, PHP, Nginx en vuestra máquina
+- Podéis tener 5 proyectos diferentes con versiones diferentes de MySQL sin conflictos
+- El entorno de desarrollo es idéntico al de producción
+
+#### 13.3. Kubernetes: cuando necesitáis escalar en serio
+
+Docker Compose es perfecto para desarrollo local o aplicaciones pequeñas. Pero ¿qué pasa cuando tenéis que gestionar cientos o miles de contenedores en decenas de servidores? Ahí entra **Kubernetes** (abreviado como K8s).
+
+**Orquestación a escala empresarial:**
+
+Kubernetes es como el director de orquesta que coordina miles de músicos (contenedores) para que toquen en armonía:
+
+- **Gestiona cientos o miles de contenedores**: K8s puede manejar un cluster de 1.000 servidores ejecutando 10.000 contenedores. Google usa Kubernetes para manejar billones de contenedores.
+
+- **Escalado automático**: Si el CPU sube del 70%, K8s automáticamente crea más réplicas de tu contenedor. Si baja del 30%, las elimina. Todo automático, todo el tiempo.
+
+- **Auto-recuperación (self-healing)**: Si un contenedor se cae, K8s lo detecta y automáticamente inicia uno nuevo. Si un servidor entero se cae, K8s mueve todos los contenedores de ese servidor a otros servidores sanos.
+
+- **Rolling updates (actualizaciones sin caídas)**: Podéis desplegar una nueva versión de vuestra aplicación sin downtime. K8s va actualizando contenedores uno por uno, verificando que funcionen antes de continuar con el siguiente.
+
+- **Service discovery automático**: Los contenedores no necesitan saber dónde están otros contenedores. K8s les proporciona nombres DNS automáticos que siempre funcionan.
+
+**Conceptos clave de Kubernetes:**
+
+- **Pod**: El contenedor (o grupo de contenedores) más pequeño que K8s gestiona. Es como el átomo de Kubernetes.
+
+- **Deployment**: Define cómo debe ejecutarse vuestra aplicación: qué imagen usar, cuántas réplicas querer, etc.
+
+- **Service**: Proporciona una dirección IP y nombre DNS estables para acceder a tus pods, aunque éstos se creen y destruyan constantemente.
+
+- **Ingress**: Gestiona el tráfico HTTP/HTTPS externo, actuando como un reverse proxy inteligente.
+
+**El precio de tanto poder:**
+
+Kubernetes es extraordinariamente potente, pero también es complejo. La curva de aprendizaje es pronunciada. Por eso existen servicios gestionados como **Google Kubernetes Engine** (GKE), **Amazon EKS**, o **Azure AKS** que os quitan gran parte de la complejidad operacional.
 - Rolling updates
 - Service discovery
 

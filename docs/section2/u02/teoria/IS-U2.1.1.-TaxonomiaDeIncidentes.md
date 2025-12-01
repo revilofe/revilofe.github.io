@@ -320,11 +320,14 @@ Esta relación pretende ser meramente orientativa pudiendo ser alterada en aquel
 * **Baja:** los incidentes de baja prioridad se atienden en serie por orden de llegada, mientras no requiera atención uno de prioridad superior. Un incidente de baja prioridad será cerrado automáticamente si no recibe atención por un tiempo prolongado. Ejemplos: incidentes aislados en grado de tentativa, donde el atacante no ha conseguido su propósito y no es probable que lo consiga.
 
 **Ejemplo de Uso:**
+
 1. **Caso:** Un ataque de ransomware (peligrosidad 5: Crítico) afecta sistemas críticos de una organización (impacto L5: Crítico).
-     - **Resultado:** Prioridad **Emergencia**.
+
+    - **Resultado:** Prioridad **Emergencia**.
 
 2. **Caso:** Un incidente de phishing dirigido a empleados de bajo nivel (peligrosidad 2: Medio) con impacto limitado en la organización (impacto L2: Medio).
-     - **Resultado:** Prioridad **Media**.
+
+    - **Resultado:** Prioridad **Media**.
 
 #### 3.4 Respuesta al incidente
 

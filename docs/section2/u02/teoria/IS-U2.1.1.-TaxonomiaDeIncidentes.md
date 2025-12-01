@@ -387,6 +387,12 @@ Tarea: Clasificar cada incidente según los criterios de taxonomía.
 
 Consulta la moodle.
 
+## Presentación
+
+Puedes acceder a la presentación de esta unidad aquí:
+
+[Presentación IS-U2.1.1 - Taxonomía de Incidentes](https://revilofe.github.io/slides/section2-is/IS-U2.1.1.-TaxonomiaDeIncidentes.html)
+
 ## Fuente
 * [Repositorio de trabajo de taxonomía de incidentes de seguridad](https://github.com/flosada/RSITaxonomy_ES/blob/master/humanv1.md)
 * [guía CCN-STIC 817](https://www.aec.es/wp-media/uploads/DPD-00266.SEG-GUI-004-CCN-STIC-817_Gestion_de_Ciberincidentes_ENS.pdf)

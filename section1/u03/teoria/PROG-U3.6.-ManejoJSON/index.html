@@ -9017,44 +9017,48 @@ En Python, se gestionan principalmente con el módulo integrado <code>json</code
 NOTA: Aunque estamos utilizando <code>print()</code> dentro de las funciones que tratan con las estructuras de datos, es recomendable que estas funciones devuelvan valores y que sea la función principal la que se encargue de mostrar los mensajes al usuario.  Para mostrar mensaje, en un programa real se recomienda usar un sistema de registro de errores más robusto, como el módulo <code>logging</code>.</p>
 <h5 id="264-explicacion-paso-a-paso"><strong>2.6.4. Explicación paso a paso</strong><a class="headerlink" href="#264-explicacion-paso-a-paso" title="Permanent link">&para;</a></h5>
 <ol>
-<li><strong>Función <code>cargar_json</code>:</strong></li>
-<li>Lee el contenido del archivo JSON.</li>
 <li>
-<p>Maneja excepciones como <code>FileNotFoundError</code> y <code>JSONDecodeError</code> para evitar fallos en caso de problemas con el archivo.</p>
+<p><strong>Función <code>cargar_json</code>:</strong></p>
+<ul>
+<li>Lee el contenido del archivo JSON.</li>
+<li>Maneja excepciones como <code>FileNotFoundError</code> y <code>JSONDecodeError</code> para evitar fallos en caso de problemas con el archivo.</li>
+</ul>
 </li>
 <li>
 <p><strong>Función <code>guardar_json</code>:</strong></p>
-</li>
+<ul>
 <li>Guarda el objeto Python en el archivo JSON.</li>
-<li>
-<p>Usa <code>json.dump</code> con <code>indent = 4</code> para que sea legible.</p>
+<li>Usa <code>json.dump</code> con <code>indent = 4</code> para que sea legible.</li>
+</ul>
 </li>
 <li>
 <p><strong>Función <code>actualizar_usuario</code>:</strong></p>
-</li>
+<ul>
 <li>Busca un usuario por su <code>id</code> y actualiza su edad si existe.</li>
-<li>
-<p>Muestra un mensaje si no encuentra al usuario.</p>
+<li>Muestra un mensaje si no encuentra al usuario.</li>
+</ul>
 </li>
 <li>
 <p><strong>Función <code>insertar_usuario</code>:</strong></p>
-</li>
-<li>
-<p>Agrega un nuevo usuario al listado.</p>
+<ul>
+<li>Agrega un nuevo usuario al listado.</li>
+</ul>
 </li>
 <li>
 <p><strong>Función <code>eliminar_usuario</code>:</strong></p>
-</li>
+<ul>
 <li>Elimina un usuario por su <code>id</code> si existe.</li>
-<li>
-<p>Muestra un mensaje si no lo encuentra.</p>
+<li>Muestra un mensaje si no lo encuentra.</li>
+</ul>
 </li>
 <li>
 <p><strong>Ejecución principal:</strong></p>
-</li>
+<ul>
 <li>Carga el JSON inicial.</li>
 <li>Realiza las operaciones necesarias (actualizar, insertar, eliminar).</li>
 <li>Guarda los datos actualizados en el archivo.</li>
+</ul>
+</li>
 </ol>
 <h5 id="265-resultado-final-datosjson"><strong>2.6.5. Resultado final (<code>datos.json</code>)</strong><a class="headerlink" href="#265-resultado-final-datosjson" title="Permanent link">&para;</a></h5>
 <p>Después de ejecutar el programa, el archivo <code>datos.json</code> tendrá el siguiente contenido:</p>
@@ -9083,15 +9087,9 @@ NOTA: Aunque estamos utilizando <code>print()</code> dentro de las funciones que
 <p>La serialización es el proceso de convertir un objeto en memoria <em>(como una lista, diccionario, o incluso objetos más complejos)</em> en un formato que pueda ser fácilmente almacenado o transmitido, como un archivo JSON, XML o binario. </p>
 <p>En el contexto de JSON, serializar un objeto significa convertirlo a una cadena en formato JSON para:</p>
 <ol>
-<li>
-<p>Almacenamiento persistente: Guardarlo en un archivo o base de datos.</p>
-</li>
-<li>
-<p>Transmisión de datos: Enviarlo a través de una red, como en una <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> o un servicio web.</p>
-</li>
-<li>
-<p>Compatibilidad: Interoperar con otros sistemas que usen JSON.</p>
-</li>
+<li>Almacenamiento persistente: Guardarlo en un archivo o base de datos.</li>
+<li>Transmisión de datos: Enviarlo a través de una red, como en una <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> o un servicio web.</li>
+<li>Compatibilidad: Interoperar con otros sistemas que usen JSON.</li>
 </ol>
 <p>Deserialización, por el contrario, es el proceso inverso: convertir la representación JSON de vuelta a un objeto en memoria.</p>
 <p><strong>¿Qué es un Objeto Serializable?</strong></p>
@@ -9119,42 +9117,25 @@ NOTA: Aunque estamos utilizando <code>print()</code> dentro de las funciones que
 <a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="n">cadena_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">datos</span><span class="p">,</span> <span class="n">default</span> <span class="o">=</span> <span class="n">convertir</span><span class="p">,</span> <span class="n">indent</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
 <a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="nb">print</span><span class="p">(</span><span class="n">cadena_json</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>¿Qué sucede aquí?</strong></p>
+<p><strong>¿Qué sucede aquí?</strong>
+- El diccionario <code>datos</code> contiene:</p>
+<div class="highlight"><pre><span></span><code>* &quot;evento&quot;: una cadena (str), que es serializable de manera directa.
+* &quot;fecha&quot;: un objeto de tipo datetime, que no es serializable por defecto.
+</code></pre></div>
 <ul>
 <li>
-<p>El diccionario <code>datos</code> contiene:</p>
+<p>La función <code>json.dumps()</code> intenta serializar cada valor del diccionario. </p>
 <ul>
-<li>
-<p>"evento": una cadena (str), que es serializable de manera directa.</p>
-</li>
-<li>
-<p>"fecha": un objeto de tipo datetime, que no es serializable por defecto.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>La función <code>json.dumps()</code> intenta serializar cada valor del diccionario.</p>
-<ul>
-<li>
-<p>Al llegar a "fecha", detecta que es un tipo datetime (no serializable directamente).</p>
-</li>
-<li>
-<p>Llama a la función proporcionada en el argumento default, que es <code>convertir</code>.</p>
-</li>
+<li>Al llegar a "fecha", detecta que es un tipo datetime (no serializable directamente).</li>
+<li>Llama a la función proporcionada en el argumento default, que es <code>convertir</code>.</li>
 </ul>
 </li>
 <li>
 <p>La función <code>convertir</code>:</p>
 <ul>
-<li>
-<p>Verifica si el objeto es de tipo datetime con <code>isinstance(obj, datetime)</code>.</p>
-</li>
-<li>
-<p>Si lo es, lo convierte al formato <abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr> 8601 utilizando el método <code>isoformat()</code>.</p>
-</li>
-<li>
-<p>Si no puede convertir el objeto, lanza un <strong><em>TypeError</em></strong>.</p>
-</li>
+<li>Verifica si el objeto es de tipo datetime con <code>isinstance(obj, datetime)</code>.</li>
+<li>Si lo es, lo convierte al formato <abbr title="International Organization for Standardization (Organización Internacional de Normalización). Es una organización que establece normas internacionales para la calidad, la seguridad, la eficiencia, etc., de los productos y servicios. La ISO publica normas en diversas áreas, como la gestión de la calidad, la seguridad de la información, la gestión ambiental, etc.">ISO</abbr> 8601 utilizando el método <code>isoformat()</code>.</li>
+<li>Si no puede convertir el objeto, lanza un <strong><em>TypeError</em></strong>.</li>
 </ul>
 </li>
 <li>
@@ -9167,10 +9148,12 @@ NOTA: Aunque estamos utilizando <code>print()</code> dentro de las funciones que
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="nt">&quot;fecha&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-11-22T12:34:56.789123&quot;</span>
 <a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">}</span>
 </code></pre></div>
-<p><strong>El argumento default</strong>
-    - Sirve como un callback que json.dumps() llama cada vez que encuentra un objeto no serializable.
-    - Si no proporcionas este argumento y se encuentra un tipo no serializable, json.dumps() lanza una excepción TypeError.
-    - Útil para convertir tipos personalizados, como datetime, set, o incluso instancias de clases.</p>
+<p><strong>El argumento default</strong></p>
+<ul>
+<li>Sirve como un callback que json.dumps() llama cada vez que encuentra un objeto no serializable.</li>
+<li>Si no proporcionas este argumento y se encuentra un tipo no serializable, json.dumps() lanza una excepción TypeError.</li>
+<li>Útil para convertir tipos personalizados, como datetime, set, o incluso instancias de clases.</li>
+</ul>
 <h5 id="283-ordenar-claves"><strong>2.8.3. Ordenar claves</strong><a class="headerlink" href="#283-ordenar-claves" title="Permanent link">&para;</a></h5>
 <p>Para ordenar las claves del JSON, usa el argumento <code>sort_keys</code>.</p>
 <p><strong>Ejemplo:</strong></p>
@@ -9181,15 +9164,24 @@ NOTA: Aunque estamos utilizando <code>print()</code> dentro de las funciones que
 <a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">cadena_json</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>¿Qué sucede aquí?:</strong>
-    - <code>datos</code> es un diccionario que contiene:
-        * "z": 1
-        * "a": 2
-        * "m": 3
-    - Cuando usamos el argumento <code>sort_keys = True</code>:
-        * Python ordena las claves del diccionario alfabéticamente (a, m, z) antes de convertirlo a JSON.
-        * Esto es útil cuando queremos garantizar un orden consistente de las claves en el JSON, especialmente en archivos o transmisiones donde el orden importa.
-    - El resultado es el que se muestra en <strong><em>Salida</em></strong>.
-    - Sin <code>sort_keys = True</code>, el orden de las claves en el JSON seguiría el orden original del diccionario.</p>
+- <code>datos</code> es un diccionario que contiene:</p>
+<div class="highlight"><pre><span></span><code>* &quot;z&quot;: 1
+* &quot;a&quot;: 2
+* &quot;m&quot;: 3
+</code></pre></div>
+<ul>
+<li>
+<p>Cuando usamos el argumento <code>sort_keys = True</code>:</p>
+<ul>
+<li>Python ordena las claves del diccionario alfabéticamente (a, m, z) antes de convertirlo a JSON.</li>
+<li>Esto es útil cuando queremos garantizar un orden consistente de las claves en el JSON, especialmente en archivos o transmisiones donde el orden importa.</li>
+</ul>
+</li>
+<li>
+<p>El resultado es el que se muestra en <strong><em>Salida</em></strong>.</p>
+</li>
+<li>Sin <code>sort_keys = True</code>, el orden de las claves en el JSON seguiría el orden original del diccionario.</li>
+</ul>
 <p><strong>Salida:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">{</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="nt">&quot;a&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
@@ -9198,13 +9190,13 @@ NOTA: Aunque estamos utilizando <code>print()</code> dentro de las funciones que
 <a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="p">}</span>
 </code></pre></div>
 <p><strong>El argumento sort_keys</strong>
-    - No afecta la estructura o contenido del JSON, solo su presentación.
-    - Es puramente estético o práctico, por ejemplo, para facilitar la lectura o las comparaciones en pruebas automatizadas.</p>
+- No afecta la estructura o contenido del JSON, solo su presentación.
+- Es puramente estético o práctico, por ejemplo, para facilitar la lectura o las comparaciones en pruebas automatizadas.</p>
 <h5 id="284-conclusion-opciones-avanzadas"><strong>2.8.4. Conclusión - Opciones avanzadas</strong><a class="headerlink" href="#284-conclusion-opciones-avanzadas" title="Permanent link">&para;</a></h5>
 <p>La serialización personalizada y la ordenación de claves son características avanzadas pero muy útiles del módulo json. Permiten:
-    1.  Adaptabilidad: Serializar tipos personalizados como datetime, o incluso tus propias clases.
-    2.  Consistencia: Ordenar las claves del JSON para garantizar un formato estándar, útil en pruebas, depuración o contratos <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr>.
-    3.  Flexibilidad: Personalizar la salida del JSON para que cumpla con los requisitos específicos de tu aplicación.</p>
+1.  Adaptabilidad: Serializar tipos personalizados como datetime, o incluso tus propias clases.
+2.  Consistencia: Ordenar las claves del JSON para garantizar un formato estándar, útil en pruebas, depuración o contratos <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr>.
+3.  Flexibilidad: Personalizar la salida del JSON para que cumpla con los requisitos específicos de tu aplicación.</p>
 <p>Al dominar estas técnicas, podemos aprovechar al máximo el módulo json en proyectos de cualquier complejidad.</p>
 <hr />
 <h3 id="3-json-en-kotlin">3. JSON en Kotlin<a class="headerlink" href="#3-json-en-kotlin" title="Permanent link">&para;</a></h3>

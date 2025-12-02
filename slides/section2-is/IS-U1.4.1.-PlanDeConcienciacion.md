@@ -4,723 +4,327 @@
 
 ![Logo Alberti](assets/logo-iesra.png) <!-- .element height="50%" width="50%" -->
 
+Note: Presentamos la unidad **U1.4.1 Plan de Formación y Concienciación**. Explicaremos qué es un plan de concienciación, cómo se diseña, qué contenidos debe tener y cómo se mide su efectividad. Esta unidad conecta directamente con la idea de crear una **cultura de seguridad** en la organización.
+
 ---
 
 ## Índice
+
+* 1. Introducción
+* 2. Inclusividad del plan
+* 3. Continuidad del plan
+* 4. Diseño del plan
+* 5. Metodologías de enseñanza
+* 6. Contenidos clave del plan
+* 7. Implementación
+* 8. Medición de efectividad
+* 9. Desafíos comunes
+* 10. Conclusión y próximos pasos
+
+Note: Explica brevemente el **recorrido de la unidad**. Indica que empezaremos por el concepto de plan de concienciación, veremos cómo hacerlo **inclusivo y continuo**, cómo diseñarlo y aplicarlo, qué **contenidos** incluir y cómo **medir si funciona**. Al final se verán desafíos típicos y próximos pasos para el alumnado.
 
 ---
 
 ## 1. Introducción
 
+Note: Introduce la idea general: la ciberseguridad no depende solo de la tecnología, sino también del **factor humano**. El objetivo del plan es que empleados y empleadas se conviertan en una **primera línea de defensa** y no en el eslabón débil.
+
 
 ### 1.1. ¿Qué es un Plan de Concienciación?
 
-**Plan de Formación y Concienciación**: Programa diseñado para capacitar a los empleados en ciberseguridad.
+* **Plan de Formación y Concienciación**: programa estructurado sobre ciberseguridad.
+* **Objetivo principal**: crear una fuerza laboral consciente y preparada.
+* **Alcance**: todo el personal de la organización.
 
-**Objetivo:** Crear fuerza laboral consciente y preparada ante amenazas.
-
-**Alcance:** Todos los niveles de la organización.
-
-Note: La tecnología sola no basta. El factor humano es crítico. Un empleado bien formado puede ser la mejor defensa o, si no lo está, el eslabón más débil.
+Note: Define con calma el concepto de **Plan de Formación y Concienciación** como un programa **planificado**, no una charla suelta. Destaca en voz alta los tres elementos clave: **programa estructurado**, **objetivo de crear personal preparado** y **alcance a toda la organización**.
 
 
 ### 1.2. Misión del plan
 
-**Capacitar a empleados para:**
-
-* **Identificar** amenazas potenciales (phishing, ingeniería social).
-* **Mitigar** riesgos tomando decisiones informadas.
-* **Responder** adecuadamente ante incidentes.
+* **Identificar** amenazas (phishing, ingeniería social, malware).
+* **Mitigar** riesgos con decisiones informadas.
+* **Responder** ante incidentes (avisar, aislar equipos, seguir procedimientos).
 * **Prevenir** compromisos de seguridad.
 
-Note: Como alumnos y alumnas, debéis entender que este plan no es "dar una charla y olvidarse". Es un programa continuo y estructurado.
+Note: Recalca que la misión del plan es que cada persona sepa **identificar, mitigar, responder y prevenir**. Subraya que no se trata solo de “saber teoría”, sino de **cambiar comportamientos** diarios.
 
 
 ### 1.3. Por qué es necesario
 
-**Estadísticas reveladoras:**
-
-* El **90%** de brechas de seguridad empiezan con un empleado.
-* El **phishing** es el vector de ataque inicial más común.
+* El **factor humano** está detrás de muchas brechas de seguridad.
+* El **phishing** es uno de los vectores más habituales.
 * La **ingeniería social** supera controles técnicos.
-* Un empleado formado reduce riesgo en un **70%**.
+* Un personal formado reduce de forma clara el riesgo.
 
-Note: Invertir en formación es más rentable que invertir solo en tecnología. Un firewall de 100.000€ no sirve si un usuario abre un email malicioso.
+Note: No hace falta dar muchas cifras, basta con la idea: la mayoría de incidentes empiezan por **errores humanos**. Insiste en que **invertir en concienciación** puede ser más eficaz que gastar solo en tecnología si los usuarios no saben qué hacer.
 
 ---
 
 ## 2. Inclusividad del plan
 
+Note: Explica que el plan debe ser **inclusivo**: llegar a **todo el personal**, adaptando contenidos al **rol** y al **nivel técnico**. No es lo mismo formar a un administrador de sistemas que a alguien de administración.
+
 
 ### 2.1. Formación para todos
 
-**Dos niveles principales:**
+* Dos niveles principales:
+  * **Formación técnica**: personal de IT y seguridad.
+  * **Formación básica**: resto del personal.
+* Ambas son necesarias para una **cobertura completa**.
 
-1. **Formación técnica**: Para personal especializado (IT, seguridad).
-2. **Formación básica**: Para el resto de empleados.
-
-**Ambas son esenciales** para cobertura completa.
-
-Note: No todos necesitan saber configurar un firewall, pero todos deben saber identificar un phishing. Adaptad el contenido a la audiencia.
+Note: Destaca que la **formación básica** es para todas las personas, sin tecnicismos. La **formación técnica** profundiza más. La idea clave es que **nadie se quede fuera** del plan.
 
 
-### 2.2. Formación técnica I
+### 2.2. Formación técnica
 
-**Dirigida a:** Administradores de sistemas, técnicos IT, equipo de seguridad.
+* Dirigida a: administradores de sistemas, técnicos IT, equipo de seguridad.
+* Temas típicos:
+  * Configuración segura de sistemas.
+  * Gestión de vulnerabilidades.
+  * Respuesta a incidentes.
+  * Análisis de logs y eventos.
 
-**Temas:**
-* Configuración segura de sistemas.
-* Gestión de vulnerabilidades.
-* Respuesta a incidentes.
-* Análisis forense básico.
-
-Note: El personal técnico es la segunda línea de defensa. Deben poder detectar y responder ante ataques que superen la primera línea (usuarios).
-
-
-### 2.3. Formación técnica II
-
-**Contenidos avanzados:**
-
-* Implementación de controles de seguridad.
-* Hardening de sistemas operativos.
-* Análisis de logs y eventos.
-* Threat hunting proactivo.
-* Gestión de SIEM y EDR.
-
-Note: Esta formación debe actualizarse constantemente. Las técnicas de ataque evolucionan, las defensas también deben hacerlo.
+Note: Señala que el personal técnico es la **segunda línea de defensa**. Debe saber detectar, investigar y responder cuando algo falla. No hace falta entrar al detalle técnico, solo que el alumnado entienda que el contenido es **más avanzado y específico**.
 
 
-### 2.4. Formación básica I
+### 2.3. Formación básica
 
-**Dirigida a:** Todo el personal no técnico.
+* Dirigida a: todo el personal no técnico.
+* Temas esenciales:
+  * Reconocer **phishing** y mensajes sospechosos.
+  * Crear **contraseñas seguras** y usar MFA.
+  * Proteger información sensible.
+  * Saber qué hacer ante un incidente.
 
-**Temas esenciales:**
-* Reconocimiento de phishing.
-* Creación de contraseñas seguras.
-* Uso de MFA.
-* Protección de información sensible.
-* Qué hacer ante un incidente sospechoso.
-
-Note: La formación básica debe ser comprensible sin conocimientos técnicos. Evitad jerga técnica, usad ejemplos del día a día.
+Note: Insiste en que la formación básica debe usar un **lenguaje sencillo**, sin jerga técnica. Los ejemplos deben ser del **día a día** (correo sospechoso, USB encontrado, Wi‑Fi pública, etc.). El mensaje clave es que **todo el mundo tiene un papel en la seguridad**.
 
 
-### 2.5. Formación básica II
+### 2.4. Concienciación general
 
-**Habilidades prácticas:**
+* Construir una **cultura de seguridad**.
+* Entender el impacto del **comportamiento individual**.
+* Asumir la **responsabilidad compartida**.
+* Ver la seguridad como **valor** de la organización.
 
-* Verificar remitentes de correos.
-* Identificar URLs sospechosas.
-* Manejar dispositivos de forma segura.
-* Reportar incidentes al equipo correcto.
-* Proteger información en lugares públicos.
-
-Note: La clave es que puedan aplicar lo aprendido inmediatamente. Cada sesión debe terminar con "qué haréis diferente mañana".
-
-
-### 2.6. Concienciación general
-
-**Cultura de seguridad organizacional:**
-
-* Comprender **importancia** de la seguridad.
-* Saber cómo su **comportamiento** afecta a la organización.
-* **Responsabilidad compartida** de todos.
-* Seguridad como **valor** corporativo.
-
-Note: La concienciación va más allá de técnicas. Se trata de cambiar mindset: de "seguridad es problema de IT" a "seguridad es responsabilidad de todos".
+Note: Recalca la idea de **cultura de seguridad**: pasar de “la seguridad es cosa de informática” a “**la seguridad es responsabilidad de todos**”. Anima al grupo a pensar en ejemplos donde una pequeña acción personal mejora (o empeora) la seguridad.
 
 ---
 
 ## 3. Continuidad del plan
 
+Note: Introduce la idea de que la formación y la concienciación deben ser **continuas y actualizadas**. No basta con un curso inicial; hay que **refrescar y adaptar**.
+
 
 ### 3.1. Por qué debe ser continuo
 
-**Razones para la repetición:**
+* Las amenazas **evolucionan** y cambian.
+* Las personas **olvidan** con el tiempo.
+* Se incorporan **nuevos empleados**.
+* Cambian tecnologías y **normativas**.
 
-* Las amenazas **evolucionan** constantemente.
-* Los humanos **olvidan** con el tiempo.
-* Nuevos empleados se **incorporan**.
-* Técnicas de ataque se **sofistican**.
-* Normativas **cambian**.
-
-Note: Un plan de concienciación "one-shot" es inútil. La memoria se desvanece y las amenazas cambian. La repetición es clave.
+Note: Explica que la ciberseguridad es un **entorno dinámico**. Lo que se enseña hoy puede quedarse corto en unos años. Por eso se necesitan **refrescos periódicos** y actualizaciones del plan.
 
 
-### 3.2. Frecuencia recomendada
+### 3.2. Ejemplo de calendario
 
-**Calendario típico:**
+* **Formación inicial**: al incorporarse a la empresa.
+* **Refrescos periódicos**: por ejemplo, una vez al año.
+* **Píldoras breves**: recordatorios mensuales.
+* **Simulacros**: campañas de phishing simuladas.
 
-* **Formación inicial**: Durante onboarding (2-4 horas).
-* **Formación anual**: Refuerzo completo (1-2 horas).
-* **Píldoras mensuales**: Temas específicos (15-30 min).
-* **Simulacros trimestrales**: Phishing tests.
-* **Comunicaciones semanales**: Newsletters, tips.
-
-Note: La formación masiva anual debe complementarse con recordatorios frecuentes. Los mensajes cortos y regulares son más efectivos que sesiones largas esporádicas.
-
-
-### 3.3. Actualización de contenidos
-
-**Mantener relevancia:**
-
-* Incorporar **nuevas amenazas** (ransomware, deepfakes).
-* Incluir **incidentes reales** de la organización o sector.
-* Adaptar a **cambios normativos** (nuevas leyes).
-* Actualizar según **resultados** de simulacros.
-
-Note: Un programa con ejemplos de hace 5 años no resuena. Usad casos actuales, incluso de la propia organización (anonimizados si es necesario).
+Note: No hace falta memorizar el calendario, sino entender la idea: combinar **formación más larga** con **recordatorios cortos** y **simulacros** ayuda a mantener la atención y el aprendizaje vivo.
 
 ---
 
-## 4. Diseño del plan I
+## 4. Diseño del plan
+
+Note: Ahora se pasa de “por qué” a “**cómo diseñar**” el plan. Explica que antes de decidir contenidos hay que **analizar necesidades**, roles y contexto de la organización.
 
 
 ### 4.1. Análisis de necesidades
 
-**Antes de diseñar, evaluar:**
+* Evaluar el **nivel actual** de conocimientos.
+* Revisar **incidentes previos**.
+* Analizar resultados de **simulacros** (si existen).
+* Detectar **brechas** de conocimiento.
 
-* **Nivel actual** de conocimiento del personal.
-* **Incidentes previos** en la organización.
-* **Resultados** de simulacros anteriores (si existen).
-* **Brechas** de conocimiento identificadas.
-
-Note: No asumáis que sabéis qué necesita el personal. Medid el nivel actual con encuestas o tests para diseñar formación efectiva.
+Note: Destaca que no se debe diseñar el plan “a ciegas”. Primero se hace una **evaluación inicial** (encuestas, tests, entrevistas) para saber **qué sabe** el personal y **qué falta**.
 
 
-### 4.2. Factores clave del diseño I
+### 4.2. Factores de diseño: roles y datos
 
-**Roles en la organización:**
+* **Roles** en la organización:
+  * Técnicos, administrativos, gerencia, personal remoto.
+* **Tipos de información**:
+  * Datos financieros, RR.HH., salud, clientes, etc.
 
-* Identificar **diferentes perfiles** de trabajo.
-* Personalizar contenido por **departamento**.
-* Considerar **nivel de privilegios** de cada rol.
-* Adaptar ejemplos a **tareas diarias** de cada grupo.
-
-Note: El departamento financiero necesita ejemplos de CEO fraud. El departamento IT necesita ejemplos de ataques técnicos. La relevancia aumenta el engagement.
+Note: Explica que los contenidos deben adaptarse según **qué hace cada grupo** y **qué información maneja**. No todos necesitan el mismo nivel de detalle, pero sí entender bien los riesgos de **sus propios datos**.
 
 
-### 4.3. Factores clave del diseño II
+### 4.3. Factores de diseño: servicios y políticas
 
-**Información manejada:**
+* **Servicios y herramientas** usadas:
+  * Correo, nube, VPN, redes sociales corporativas.
+* **Políticas** de la empresa:
+  * Trabajo remoto, BYOD, horarios y sedes.
 
-* Tipo de **datos** que procesa cada área.
-* Nivel de **sensibilidad** de la información.
-* **Normativas** aplicables (GDPR, HIPAA, PCI-DSS).
-* **Consecuencias** de compromiso de esa información.
-
-Note: Quien maneja datos de tarjetas de crédito debe conocer PCI-DSS. Quien maneja datos de salud debe conocer HIPAA. Adaptad a la realidad de cada área.
-
-
-### 4.4. Factores clave del diseño III
-
-**Servicios disponibles:**
-
-* **Aplicaciones** usadas (email, cloud, VPN).
-* **Dispositivos** permitidos (BYOD, corporativos).
-* **Acceso remoto** y sus riesgos.
-* **Herramientas** de colaboración (Slack, Teams, Drive).
-
-Note: Si la organización usa Office 365, la formación debe incluir seguridad en SharePoint y OneDrive. Enfocad en las herramientas reales que usan.
-
-
-### 4.5. Factores clave del diseño IV
-
-**Políticas de la empresa:**
-
-* **Trabajo remoto** vs presencial.
-* **BYOD** o solo dispositivos corporativos.
-* **Horarios** (turnos, disponibilidad 24/7).
-* **Ubicaciones** geográficas (normativas locales).
-
-Note: Una empresa con empleados en 10 países debe considerar normativas locales de cada uno. El GDPR en Europa, CCPA en California, etc.
-
-
-### 4.6. Características del negocio
-
-**Contexto organizacional:**
-
-* **Tamaño** de la empresa (ajustar escalabilidad).
-* **Sector** (healthcare, finanzas, retail tienen riesgos únicos).
-* **Madurez** en ciberseguridad (principiantes vs avanzados).
-* **Presupuesto** disponible.
-
-Note: Una startup de 20 personas tiene necesidades muy diferentes a una corporación de 20,000. Adaptad el programa a la realidad de vuestra organización.
+Note: Relaciona el diseño del plan con la **realidad tecnológica** y las **políticas internas**. Si la organización usa mucho la nube o permite dispositivos personales, esos temas deben aparecer sí o sí en la formación.
 
 ---
 
-## 5. Diseño del plan II
+## 5. Metodologías de enseñanza
+
+Note: En esta parte se presentan formas distintas de **impartir la formación**. El objetivo es que el alumnado vea que se puede combinar lo presencial, lo online y lo práctico para llegar mejor a la gente.
 
 
-### 5.1. Metodologías de enseñanza
+### 5.1. Enfoques formativos
 
-**Enfoques efectivos:**
+* **Presencial**: talleres y charlas interactivas.
+* **E-learning**: cursos online a tu ritmo.
+* **Microlearning**: píldoras de 5‑10 minutos.
+* **Gamificación**: juegos y retos.
+* **Simulaciones**: ejercicios prácticos.
 
-* **Presencial**: Talleres interactivos.
-* **E-learning**: Plataformas online asincrónicas.
-* **Microlearning**: Píldoras de 5-10 minutos.
-* **Gamificación**: Juegos y competiciones.
-* **Simulaciones**: Ejercicios prácticos.
-
-Note: La combinación de metodologías (blended learning) suele ser más efectiva que una sola. Personas aprenden de formas diferentes.
+Note: Explica que la combinación de métodos (**blended learning**) suele ser más efectiva. Cada persona aprende mejor con un formato distinto, y mezclar formatos aumenta la **participación**.
 
 
-### 5.2. Contenido presencial
+### 5.2. Simulaciones prácticas
 
-**Ventajas:**
+* **Simulacros de phishing**.
+* **Ejercicios de respuesta** a incidentes.
+* Casos reales o escenarios ficticios.
 
-* Interacción directa con formador.
-* Resolución de dudas en tiempo real.
-* Networking entre asistentes.
-* Mayor engagement.
-
-**Desventajas:**
-
-* Costoso en tiempo y recursos.
-* Difícil escalar a gran escala.
-* Requiere coordinación de agendas.
-
-Note: Lo presencial es ideal para formación inicial y temas complejos. Reservadlo para contenido de alto valor.
-
-
-### 5.3. Contenido e-learning
-
-**Ventajas:**
-
-* Escalable a toda la organización.
-* Cada uno a su ritmo.
-* Menor coste por persona.
-* Tracking automático de progreso.
-
-**Desventajas:**
-
-* Menor engagement.
-* Sin interacción directa.
-* Requiere autodisciplina.
-
-Note: E-learning es perfecto para formación anual obligatoria. Aseguraos de que sea interactivo, no solo "slides con audio".
-
-
-### 5.4. Microlearning
-
-**Aprendizaje en pequeñas dosis:**
-
-* Videos de **2-5 minutos**.
-* **Un concepto** por píldora.
-* Fácil de consumir durante **breaks**.
-* Alta **retención** de información.
-
-**Ejemplo:** Un video semanal sobre un tipo de phishing diferente.
-
-Note: El microlearning se adapta perfectamente a la era de atención limitada. Es más efectivo que sesiones de 2 horas.
-
-
-### 5.5. Gamificación
-
-**Aprender jugando:**
-
-* **Puntos** por completar módulos.
-* **Badges** por hitos alcanzados.
-* **Leaderboards** entre departamentos.
-* **Premios** para top performers.
-
-Note: La gamificación no es trivializar la seguridad, es hacer el aprendizaje más engaging. Competir por ser "Campeón de Seguridad" motiva más que obligar.
-
-
-### 5.6. Simulaciones prácticas
-
-**Hands-on learning:**
-
-* **Simulacros de phishing**: Emails falsos para identificar.
-* **Ejercicios de mesa**: Respuesta a incidentes simulados.
-* **Escape rooms** de ciberseguridad.
-* **CTF** (Capture The Flag) simplificados.
-
-Note: Las simulaciones son donde el aprendizaje se consolida. Ver un phishing en la formación vs recibirlo en tu inbox real son experiencias muy diferentes.
+Note: Destaca que las simulaciones son donde el aprendizaje se **consolida**. Ver un ejemplo en clase no es lo mismo que recibir un correo sospechoso “de verdad” (aunque sea simulado). La idea clave es **aprender haciendo**.
 
 ---
 
-## 6. Contenidos del plan
+## 6. Contenidos clave del plan
+
+Note: Ahora se resumen los **temas básicos** que un plan de formación y concienciación en ciberseguridad suele incluir para todo el personal.
 
 
-### 6.1. Phishing y spear-phishing I
+### 6.1. Temas básicos para todo el personal
 
-**Tema crítico número 1:**
+* **Contraseñas seguras** y gestores de contraseñas.
+* Reconocimiento de **phishing** y mensajes sospechosos.
+* **Uso seguro** de internet y descargas.
+* **Trabajo remoto** y Wi‑Fi públicas.
+* **Notificación de incidentes** y canales de reporte.
 
-* Qué es el phishing.
-* Diferencia entre phishing masivo y spear-phishing.
-* Señales de alerta (remitente, urgencia, enlaces).
-* Cómo verificar autenticidad de un email.
-
-Note: El phishing es la puerta de entrada del 90% de ataques. Este tema merece profundidad y práctica extensiva.
-
-
-### 6.2. Phishing y spear-phishing II
-
-**Señales de alerta:**
-
-* **Remitente** sospechoso o imitado.
-* **Urgencia** artificial ("actúa ahora o...").
-* **Errores** gramaticales u ortográficos.
-* **Enlaces** que no coinciden con destino.
-* **Archivos adjuntos** inesperados.
-
-Note: Enseñad a los alumnos y alumnas a hacer hover sobre enlaces (sin clic) para ver URL real. Esta simple técnica previene muchos ataques.
+Note: Relaciona esta lista con lo visto en el documento de teoría (epígrafe 3.1). Señala que estos contenidos son la **base común** para toda la plantilla, independientemente del puesto.
 
 
-### 6.3. Contraseñas seguras
+### 6.2. Profundización por roles
 
-**Gestión de credenciales:**
+* Equipo de **TI**: análisis forense, firewalls, detección de intrusos.
+* **RR.HH.**: tratamiento de datos personales según RGPD.
+* **Finanzas**: prevención de fraudes y protección de pagos.
 
-* Características de contraseña fuerte.
-* Por qué **no reutilizar** contraseñas.
-* Uso de **gestores de contraseñas**.
-* **Cambio** de contraseñas comprometidas.
-
-Note: La contraseña "Password123" sigue siendo demasiado común. Explicad que los atacantes usan diccionarios con millones de contraseñas comunes.
-
-
-### 6.4. Autenticación multifactor (MFA)
-
-**Segunda capa de defensa:**
-
-* Qué es MFA y cómo funciona.
-* Por qué es **efectivo** (reduce compromiso 99%).
-* Tipos de segundo factor (SMS, app, token).
-* Cómo activarlo en servicios corporativos.
-
-Note: MFA es una de las medidas más efectivas y fáciles de implementar. Haced demostración en vivo de cómo activarlo.
-
-
-### 6.5. Ingeniería social
-
-**Manipulación psicológica:**
-
-* Qué es la ingeniería social.
-* Técnicas comunes (pretexting, baiting, tailgating).
-* **Principios de influencia** explotados (autoridad, urgencia, escasez).
-* Cómo defenderse.
-
-Note: La ingeniería social explota psicología humana, no vulnerabilidades técnicas. Es más difícil de defender porque requiere cambiar comportamiento.
-
-
-### 6.6. Dispositivos móviles
-
-**Seguridad en smartphones:**
-
-* Riesgos de apps maliciosas.
-* Permisos de aplicaciones.
-* Uso de WiFi públicas.
-* **Cifrado** del dispositivo.
-* Qué hacer si se pierde.
-
-Note: Los móviles son ordenadores de bolsillo con acceso a todo. Muchos usuarios no los protegen adecuadamente.
-
-
-### 6.7. Trabajo remoto
-
-**Ciberseguridad desde casa:**
-
-* Uso de **VPN** obligatoria.
-* Seguridad de red WiFi doméstica.
-* Separación trabajo/personal.
-* Privacidad en videollamadas (fondos, ubicación).
-
-Note: El trabajo remoto expandió la superficie de ataque. La red doméstica suele ser mucho menos segura que la corporativa.
-
-
-### 6.8. Datos sensibles
-
-**Protección de información:**
-
-* Qué considera **información sensible** la organización.
-* **Clasificación** de datos (Público, Interno, Confidencial, Secreto).
-* Cómo **compartir** datos de forma segura.
-* **GDPR** y protección de datos personales.
-
-Note: Muchos empleados no saben qué información es sensible. Dadles ejemplos concretos de vuestro sector.
-
-
-### 6.9. Redes sociales
-
-**Riesgos en plataformas sociales:**
-
-* **Oversharing** de información corporativa.
-* Ataques de **phishing** via LinkedIn/Twitter.
-* **Ingeniería social** recabando información pública.
-* Políticas de uso de redes corporativas.
-
-Note: Un empleado publicando foto de su badge de acceso en Instagram es un problema real. Enseñad qué no compartir.
-
-
-### 6.10. Reportar incidentes
-
-**Procedimiento crítico:**
-
-* **Por qué** reportar es importante.
-* **Cómo** reportar (email, teléfono, portal).
-* **A quién** reportar (helpdesk, seguridad).
-* **Qué** información proporcionar.
-* **Sin miedo** a consecuencias (enfoque educativo).
-
-Note: Muchos incidentes se esconden por miedo a represalias. Enfatizad que reportar rápido ayuda, esconder empeora todo.
+Note: Explica que, una vez cubiertos los básicos, se puede **profundizar por grupos**. El objetivo es que cada rol reciba contenido **relevante** para su trabajo diario.
 
 ---
 
 ## 7. Implementación del plan
 
+Note: En esta parte se ve cómo **poner en marcha** el plan dentro de la organización: fases, comunicación e incentivos.
+
 
 ### 7.1. Fases de implementación
 
-**Rollout estructurado:**
+* **Piloto** con un grupo reducido.
+* **Ajustes** según resultados y feedback.
+* **Despliegue gradual** por departamentos.
+* **Despliegue completo** a toda la organización.
+* **Mantenimiento** y actualización periódica.
 
-1. **Piloto**: Grupo pequeño (20-50 personas).
-2. **Ajustes**: Basados en feedback del piloto.
-3. **Despliegue gradual**: Por departamentos.
-4. **Despliegue completo**: Toda la organización.
-5. **Mantenimiento**: Actualizaciones continuas.
-
-Note: No lancéis el plan a 5000 empleados sin piloto. El piloto os permitirá identificar y corregir problemas antes del despliegue masivo.
+Note: Comenta que empezar con un **piloto** ayuda a detectar problemas antes de llegar a toda la empresa. La palabra clave aquí es **iterar**: probar, ajustar y luego escalar.
 
 
-### 7.2. Comunicación del plan
+### 7.2. Comunicación e incentivos
 
-**Marketing interno:**
+* Apoyo visible de la **dirección**.
+* Campañas internas: correos, intranet, carteles.
+* **Reconocimiento** a la participación.
+* Tiempo de formación dentro del **horario laboral**.
 
-* **Anuncio** de dirección con apoyo visible.
-* **Carteles** en oficinas.
-* **Emails** de invitación personalizados.
-* **Intranet** con sección dedicada.
-* **Testimonios** de early adopters.
-
-Note: Tratad el lanzamiento como un producto. El marketing interno es tan importante como el contenido de la formación.
-
-
-### 7.3. Obligatoriedad vs voluntariedad
-
-**Debate común:**
-
-**Obligatorio:**
-* Garantiza 100% cobertura.
-* Cumplimiento regulatorio.
-* Tracking más sencillo.
-
-**Voluntario:**
-* Mayor engagement.
-* Menos resistencia.
-* Pero menor cobertura.
-
-**Recomendación:** Obligatorio para básico, voluntario para avanzado.
-
-Note: La formación básica de seguridad debe ser obligatoria, como los simulacros de incendio. La avanzada puede ser voluntaria para interesados.
-
-
-### 7.4. Incentivos
-
-**Motivar participación:**
-
-* **Reconocimiento** público (empleado del mes en seguridad).
-* **Certificados** de completación.
-* **Premios** para mejores scores.
-* **Gamificación** con leaderboards.
-* **Tiempo** laboral dedicado (no fuera de horario).
-
-Note: Si queréis que la gente participe activamente, no solo que "pase" la formación, necesitáis incentivos positivos.
+Note: Resalta que la comunicación es fundamental para que la gente se lo tome en serio. Un mensaje claro de la dirección y **incentivos positivos** ayudan a que la formación no se perciba como “otra obligación más” sino como algo **útil y valorado**.
 
 ---
 
 ## 8. Medición de efectividad
 
-
-### 8.1. KPIs del programa
-
-**Métricas clave:**
-
-* **Porcentaje** de completación de formación.
-* **Tasa de clic** en simulacros de phishing.
-* **Tiempo** de reporte de incidentes.
-* **Número** de incidentes prevenidos.
-* **Mejora** en tests de conocimiento.
-
-Note: Lo que no se mide, no se mejora. Definid KPIs desde el inicio y medidlos consistentemente.
+Note: Introduce la idea de que un buen plan debe **medirse**. Si no se mide, no se sabe si está funcionando ni dónde hay que mejorar.
 
 
-### 8.2. Tests de conocimiento
+### 8.1. Indicadores clave (KPIs)
 
-**Evaluación del aprendizaje:**
+* % de **completación** de los cursos.
+* Tasa de **clic** en simulacros de phishing.
+* Tiempo de **reporte** de incidentes.
+* **Número** y tipo de incidentes reales.
 
-* **Pre-test**: Antes de la formación (baseline).
-* **Post-test**: Inmediatamente después.
-* **Retention test**: 3-6 meses después.
-* **Formato**: Multiple choice, escenarios.
-
-Note: Los tests no son para "aprobar o suspender", son para medir efectividad del programa y identificar áreas de mejora.
+Note: Explica cada indicador con un ejemplo sencillo. Por ejemplo, si baja la tasa de clic en phishing simulado, significa que la gente **ha aprendido a detectar** mejor esos correos.
 
 
-### 8.3. Simulacros de phishing
+### 8.2. Evaluación y mejora continua
 
-**Prueba práctica más importante:**
+* **Pruebas de conocimiento** antes y después.
+* **Simulacros** periódicos.
+* **Encuestas** de satisfacción y utilidad.
+* Ajustes del plan según los **resultados**.
 
-* **Frecuencia**: Trimestral como mínimo.
-* **Variedad**: Diferentes tipos de phishing.
-* **Complejidad creciente**: Empezar fácil, aumentar dificultad.
-* **Feedback inmediato**: Formación micro al hacer clic.
-
-Note: Los simulacros son la mejor métrica de efectividad real. Miden comportamiento, no solo conocimiento teórico.
-
-
-### 8.4. Análisis de resultados
-
-**Interpretación de datos:**
-
-* Identificar **grupos** con bajo rendimiento.
-* Detectar **tipos** de phishing más efectivos.
-* Evaluar **mejora** trimestre a trimestre.
-* **Correlacionar** con incidentes reales.
-
-Note: Si el departamento financiero tiene 50% de tasa de clic, necesitan formación adicional específica. Los datos deben guiar acciones.
-
-
-### 8.5. Encuestas de satisfacción
-
-**Feedback cualitativo:**
-
-* **Relevancia** del contenido.
-* **Claridad** de explicaciones.
-* **Calidad** del formador.
-* **Sugerencias** de mejora.
-* **NPS** (Net Promoter Score).
-
-Note: Las métricas cuantitativas dicen qué está pasando, las encuestas dicen por qué. Ambas son necesarias para mejora continua.
+Note: Cierra la idea de ciclo: **planificar → formar → medir → mejorar**. Insiste en que la concienciación no es algo estático, sino un proceso de **mejora continua**.
 
 ---
 
 ## 9. Desafíos comunes
 
-
-### 9.1. Falta de tiempo
-
-**Objeción #1:** "No tengo tiempo para formación".
-
-**Soluciones:**
-* Microlearning de 5-10 minutos.
-* Formación durante horario laboral.
-* Contenido on-demand (cuando convenga).
-* Priorizar temas críticos primero.
-
-Note: Si decís que la seguridad es prioridad pero exigís formación fuera de horario, enviáis mensaje contradictorio. Dadles tiempo.
+Note: Aquí se presentan obstáculos habituales al implantar planes de concienciación y algunas soluciones que se comentan en la teoría.
 
 
-### 9.2. Baja motivación
+### 9.1. Falta de tiempo y motivación
 
-**Objeción #2:** "Esto es aburrido, no me aplica".
+* Objeciones típicas: “no tengo tiempo”, “esto no me afecta”.
+* Soluciones:
+  * **Microlearning** y flexibilidad horaria.
+  * Ejemplos **relevantes** y cercanos.
+  * Gamificación e incentivos.
 
-**Soluciones:**
-* Gamificación y competiciones.
-* Ejemplos relevantes de su sector.
-* Casos reales de la organización.
-* Demostración de impacto personal.
-
-Note: Si mostrás cómo un ataque puede vaciar su cuenta bancaria personal, el tema se vuelve relevante inmediatamente.
+Note: Anima a reflexionar sobre estas excusas. Resalta que adaptar formato y ejemplos ayuda a que el personal vea la **utilidad real** de la formación.
 
 
-### 9.3. Diversidad de audiencia
+### 9.2. Diversidad de perfiles y presupuesto
 
-**Desafío:** Niveles de conocimiento muy diferentes.
+* Diferentes **niveles de conocimiento** y roles.
+* Recursos económicos **limitados**.
+* Posibles soluciones:
+  * Niveles básico / intermedio / avanzado.
+  * Uso de **recursos gratuitos** (INCIBE, ENISA, etc.).
 
-**Soluciones:**
-* Formación por **niveles** (básico, intermedio, avanzado).
-* **Rutas** de aprendizaje personalizadas.
-* **Tests iniciales** para ubicar nivel.
-* Contenido **opcional** avanzado para interesados.
-
-Note: Un ingeniero de sistemas se aburrirá con formación básica de contraseñas. Un administrativo se perderá con formación técnica avanzada.
-
-
-### 9.4. Presupuesto limitado
-
-**Desafío:** "No hay dinero para esto".
-
-**Soluciones:**
-* Recursos **gratuitos** (INCIBE, SANS).
-* **Desarrollo interno** de contenido.
-* **Compartir** costes con otras organizaciones.
-* Empezar con **piloto** pequeño y demostrar ROI.
-
-Note: El coste de un programa de concienciación es órdenes de magnitud menor que el coste de una brecha de seguridad.
-
-
-### 9.5. Resistencia al cambio
-
-**Desafío:** "Siempre lo hemos hecho así".
-
-**Soluciones:**
-* **Apoyo visible** de dirección.
-* **Early adopters** como embajadores.
-* Comunicar **beneficios** claros.
-* Empezar con **cambios pequeños**.
-
-Note: El cambio cultural es el más difícil. Necesitáis paciencia, persistencia y celebrar pequeñas victorias.
+Note: Explica que la diversidad no es un problema, sino una realidad que pide **personalización**. Señala que hay muchos recursos **gratuitos** en organismos oficiales que pueden apoyar el plan sin gran coste.
 
 ---
 
-## 10. Conclusión
+## 10. Conclusión y próximos pasos
+
+Note: Último bloque. Sirve para **resumir** y conectar la teoría con posibles actividades prácticas o proyectos.
 
 
-### 10.1. Resumen de conceptos clave
+### 10.1. Ideas clave
 
-* **Concienciación**: Transformar usuarios en primera línea de defensa.
-* **Inclusividad**: Formación técnica y básica para todos.
-* **Continuidad**: Programa perpetuo, no evento único.
-* **Personalización**: Adaptar contenido a roles y necesidades.
-* **Medición**: KPIs para evaluar y mejorar constantemente.
+* La **concienciación** convierte al usuario en primera línea de defensa.
+* El plan debe ser **inclusivo** y llegar a todos los perfiles.
+* La formación debe ser **continua y actualizada**.
+* Los contenidos se adaptan a **roles y necesidades**.
+* Es esencial **medir y mejorar** el plan.
 
-Note: Un programa de concienciación efectivo puede reducir el riesgo de incidentes más que millones invertidos en tecnología sola.
-
-
-### 10.2. El usuario como defensor
-
-**Cambio de paradigma:**
-
-* De "el usuario es el problema" a "el usuario es la solución".
-* De "seguridad vs productividad" a "seguridad habilitando productividad".
-* De "obligación" a "cultura organizacional".
-
-Note: Cuando los empleados entienden que la seguridad les protege a ellos también (sus datos, su empleo), la actitud cambia radicalmente.
+Note: Repasa en voz alta cada idea clave, enlazándola con lo que se ha explicado. Es un buen momento para preguntar al grupo qué punto les ha parecido más importante o más sorprendente.
 
 
-### 10.3. ROI de la concienciación
+### 10.2. Rol del alumnado
 
-**Retorno de inversión:**
+* Entender la importancia de la **ciberseguridad** en organizaciones.
+* Ser capaces de **diseñar** un esquema básico de plan.
+* Proponer **acciones concretas** de formación y concienciación.
 
-* Reducción de incidentes (70% según estudios).
-* Menor tiempo de detección.
-* Reducción de costes de respuesta.
-* Cumplimiento normativo mejorado.
-* Reputación organizacional protegida.
-
-Note: Un programa de concienciación de 50K€ que previene un solo incidente de ransomware (coste medio 1M€) ya se ha pagado 20 veces.
-
-
-### 10.4. Próximos pasos para alumnos y alumnas
-
-Práctica recomendada:
-
-1. Diseñar programa piloto para pequeña organización.
-2. Crear píldora de microlearning sobre phishing.
-3. Configurar simulacro de phishing con herramientas gratuitas.
-4. Voluntariarse para dar taller de seguridad básica.
-5. Estudiar casos de éxito de programas de concienciación.
-
-Note: La mejor forma de aprender es haciéndolo. Ofreceros a dar una charla de seguridad a vuestra familia o amigos. Es práctica valiosa.
-
----
-
-## Bibliografía
-
-* [SANS Security Awareness](https://www.sans.org/security-awareness-training/) - Recursos y programas
-* [NIST SP 800-50](https://csrc.nist.gov/publications/detail/sp/800-50/final) - Building an Information Technology Security Awareness and Training Program
-* [ENISA - Guidelines for SMEs](https://www.enisa.europa.eu/publications/smesec-how-to-raise-information-security-awareness) - on Raising Awareness
-* [INCIBE - Concienciación](https://www.incibe.es/empresas/formacion/concienciacion) - Recursos gratuitos
-* [KnowBe4 Resources](https://www.knowbe4.com/resources) - Templates y herramientas
-
-Note: Estos recursos proporcionan frameworks, contenido y herramientas para diseñar vuestro propio programa. Muchos son gratuitos.
+Note: Cierra la unidad conectando con el papel del alumnado como futuros profesionales. Subraya que podrán participar en el diseño o mejora de estos planes y que es una **competencia muy valorada** en el mercado laboral.

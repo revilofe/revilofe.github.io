@@ -1,7 +1,7 @@
 ---
-title: "UD 1 - 4.1 Plan de concienciación"
-description: Plan de concienciación
-summary: Plan de concienciación
+title: "UD 1 - 4.1 Plan de concienciación. Ejemplo."
+description: Plan de concienciación. Ejemplo.
+summary: Plan de concienciación. Ejemplo.
 authors:
     - Eduardo Fdez
 date: 2024-02-13
@@ -54,7 +54,7 @@ Estará influido por los resultados del diagnóstico inicial.
 
 * **Resultado esperado**: Delimitación de qué áreas, roles y niveles de la organización están incluidos en el plan, especificando también cualquier exclusión.
 
-Es importante definir claramente el alcance para asegurar que los recursos se asignen adecuadamente y que todas las partes interesadas comprendan su participación en el plan. En este apartado se pueden incluir:
+    Es importante definir claramente el alcance para asegurar que los recursos se asignen adecuadamente y que todas las partes interesadas comprendan su participación en el plan. En este apartado se pueden incluir:
 
     * Departamentos o equipos específicos.
     * Niveles jerárquicos (empleados, gerentes, directivos).
@@ -64,15 +64,33 @@ Es importante definir claramente el alcance para asegurar que los recursos se as
 
 ### **2. Diagnóstico Inicial**
 
+El diagnóstico inicial es fundamental para diseñar un plan de formación y concienciación efectivo. Permite identificar las necesidades específicas de la organización, lagunas de conocimiento,  los riesgos a los que se enfrenta y segmentar a los empleados según sus roles y niveles de conocimiento.
+
 #### 2.1. **Evaluación de Necesidades Formativas**
 
-* **Resultado esperado**: Identificación de brechas en conocimientos, áreas críticas y prácticas actuales. Activos en riesto (documentación importante). Uso de formularios para encuestas y cuestionarios iniciales.     
-* **Formulario sugerido**: Preguntas como: "¿Sabes identificar un correo de phishing?" o "¿Cómo crearías una contraseña segura?".
+* **Resultado esperado**: Identificación de brechas en conocimientos, áreas críticas y prácticas actuales. Activos en riesgo (documentación importante). Uso de formularios para encuestas y cuestionarios iniciales.  Esta evaluación puedeincluir:
+
+    * Encuestas de autoevaluación.
+    * Entrevistas con responsables de departamentos.
+    * Análisis de incidentes previos.
+    Tambien nos permitirán conocer las percepciones y actitudes de los empleados hacia la ciberseguridad, asi como información necesaria para personalizar la formación según las necesidades específicas de cada grupo.
+  
+* **Formulario sugerido**: Preguntas como: "¿Sabes identificar un correo de phishing?" o "¿Cómo crearías una contraseña segura?", "¿Qué harías si sospechas que tu equipo está comprometido?", "¿Qué importancia le das a la ciberseguridad en tu día a día laboral?", "¿Has recibido alguna formación previa en ciberseguridad? Si es así, ¿qué temas se trataron?", "¿Con qué frecuencia actualizas tus contraseñas?", "¿Cuanto tiempo dedicas al uso del móvil?".
 
 #### 2.2. **Análisis de Riesgos y Amenazas**    
 
 * **Resultado esperado**: Identificación de las principales amenazas a las que se enfrenta la organización.     
 * **Herramientas**: Matrices de riesgos y ejemplos de amenazas reales relacionadas con roles específicos.     
+
+Ej: Tabla de riesgos: Amenazas reales relacionadas con roles
+
+
+| **Amenaza**        | **Descripción**                                       | **Roles afectados**  | **Impacto potencial**          | **Probab** | **Medidas actuales**                       |
+|--------------------|-------------------------------------------------------|----------------------|--------------------------------|------------|--------------------------------------------|
+| Phishing           | Correos electrónicos fraudulentos para robar datos    | Todos los empleados  | Robo de credenciales           | Alta       | Filtros de correo, formación básica        |
+| Malware            | Software malicioso que compromete sistemas            | Técnicos, gerentes   | Pérdida de datos, interrupción | Media      | Antivirus, actualizaciones regulares       |
+| Ingeniería social  | Engaño a empleados para obtener acceso no autorizado  | Todos los empleados  | Acceso no autorizado           | Baja       | Políticas de seguridad, formación avanzada |
+
 
 #### 2.3. **Segmentación de Empleados por Roles y Niveles**
 * **Resultado esperado**: Clasificación de empleados según sus responsabilidades y conocimientos previos.   
@@ -108,7 +126,11 @@ Es importante definir claramente el alcance para asegurar que los recursos se as
 
 #### 3.3. **Metodologías Formativas**
 
-* **Resultado esperado**: Selección de metodologías adecuadas para cada grupo, como talleres, simulaciones, módulos online y jornadas presenciales.
+* **Resultado esperado**: Selección de metodologías adecuadas para cada grupo, como talleres, simulaciones, módulos online y jornadas presenciales. La metedología debe ser interactiva y práctica para maximizar el aprendizaje y la retención de conocimientos. Pueden adaptarse al grupo objetivo y al contenido, por ejemplo:
+
+    * Talleres prácticos para técnicos.
+    * Simulaciones de phishing para administrativos.
+    * Módulos online para comerciales.
 
 
 ### **4. Ejecución del Plan**
@@ -152,14 +174,13 @@ Es importante definir claramente el alcance para asegurar que los recursos se as
 
 #### 5.3. **Revisión de Resultados**      
 
-* **Resultado esperado**: Informe consolidado con los resultados de las métricas y recomendaciones para mejorar.
-
+* **Resultado esperado**: Informe consolidado con los resultados de las métricas y recomendaciones para mejorar. Plan de acciones correctivas si es necesario.
 
 ### **6. Mejora Continua y Actualización**
 
 #### 6.1. **Revisión Periódica**
 
-* **Resultado esperado**: Plan para actualizar los contenidos y métodos según amenazas emergentes y resultados obtenidos. 
+* **Resultado esperado**: Plan para actualizar los contenidos y métodos según amenazas emergentes y resultados obtenidos. Aqui detallar la frecuencia de las revisiones (anual, semestral) y los responsables de llevarlas a cabo. Tambien detallaremos en que incidirán las revisiones (nuevas amenazas, cambios tecnológicos, feedback de empleados, etc.).
 
 #### 6.2. **Integración de Sugerencias**
 * **Resultado esperado**: Incorporación de comentarios y retroalimentación de los empleados para refinar el plan.

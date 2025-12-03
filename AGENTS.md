@@ -319,7 +319,7 @@ A continuación un listado:
 
 Los archivos de slides (`slides/`) se explican a continuación:
 
-#### 2.3.1. Formato de las slides**
+#### 2.3.1. Formato de las slides
 A continuación explicamos el proceso de creación de presentaciones de diapositivas sobre contenidos, que normalmente serán de los módulos de informática. Generará slides siguiendo una estructura de markdown precisa (MUY IMPORTANTE SEGUIR LA NOTACIÓN MARKDOWN).
 
 Sigue concienzudamente estas REGLAS para GENERAR LAS SLIDES:

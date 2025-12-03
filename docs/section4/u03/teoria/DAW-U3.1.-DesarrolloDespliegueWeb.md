@@ -63,7 +63,7 @@ Cada vez que escribís una URL en el navegador, hacéis clic en un enlace o envi
 
 El **Protocolo HTTP (HyperText Transfer Protocol)** es la base de la comunicación en la World Wide Web. Fue creado por Tim Berners-Lee en 1989 y se ha convertido en el estándar para la transferencia de información en Internet.
 
-#### 1.2. Definición y concepto
+##### 1.1.1. Definición y concepto
 
 HTTP es un protocolo de **capa de aplicación** que define cómo se estructuran y envían los mensajes entre clientes y servidores web. Es un protocolo **no orientado a la conexión**, lo que significa que cada petición entre cliente y servidor es independiente y no requiere mantener una conexión continua.
 
@@ -74,7 +74,7 @@ HTTP es un protocolo de **capa de aplicación** que define cómo se estructuran 
 - **Recursos**: Documentos, imágenes, datos que se intercambian
 - **Mensajes**: Peticiones (requests) y respuestas (responses)
 
-#### 1.3. Características principales
+##### 1.1.2. Características principales
 
 HTTP posee un conjunto de características que lo han convertido en la columna vertebral de la web moderna. Estas características no son casuales; cada una fue diseñada para resolver problemas específicos de la comunicación en Internet y, juntas, crean un protocolo sorprendentemente flexible y poderoso.
 
@@ -125,7 +125,7 @@ Pensad en la diferencia: un servidor con estado es como un camarero que debe rec
 !!! warning "El problema del estado"
     Que HTTP sea stateless presenta un desafío: ¿cómo mantener la sesión de un usuario (por ejemplo, en un carrito de compra)? La solución son las **cookies** y las **sesiones**, que estudiaremos en detalle más adelante.
 
-#### 1.4. Ventajas del protocolo HTTP
+##### 1.1.3. Ventajas del protocolo HTTP
 
 HTTP ofrece múltiples ventajas que lo han convertido en el protocolo estándar de Internet. Estas ventajas no son accidentales; son el resultado de décadas de evolución y refinamiento del protocolo. Veamos cómo cada característica se traduce en beneficios concretos para desarrolladores y usuarios.
 
@@ -202,7 +202,7 @@ Esta negociación hace que la web sea verdaderamente universal, adaptándose aut
   <figcaption>Diagrama del protocolo HTTP mostrando el flujo de comunicación entre cliente y servidor: el cliente envía una petición (request) con método, URL y cabeceras; el servidor responde con un código de estado, cabeceras y el contenido solicitado</figcaption>
 </figure>
 
-#### 1.5. Importancia en arquitecturas modernas
+#### 1.2. Importancia en arquitecturas modernas
 
 HTTP es fundamental en las arquitecturas web actuales:
 
@@ -214,11 +214,11 @@ HTTP es fundamental en las arquitecturas web actuales:
 !!! tip "HTTP es universal"
     HTTP es tan universal que incluso aplicaciones que no son web (como aplicaciones móviles o de escritorio) suelen usar HTTP para comunicarse con sus servidores, aprovechando su simplicidad y las herramientas existentes.
 
-#### 1.6. Formato de peticiones y respuestas HTTP
+#### 1.3. Formato de peticiones y respuestas HTTP
 
 La interacción en la web se basa en un intercambio constante de **peticiones** (requests) y **respuestas** (responses) HTTP entre el navegador del cliente y el servidor. Entender su estructura es fundamental.
 
-#### 1.7. Estructura de una petición HTTP
+##### 1.3.1. Estructura de una petición HTTP
 
 Una petición HTTP del cliente tiene la siguiente estructura:
 
@@ -281,7 +281,7 @@ User-Agent: Mozilla/5.0
 }
 ```
 
-#### 1.8. Estructura de una respuesta HTTP
+##### 1.3.2. Estructura de una respuesta HTTP
 
 Una respuesta HTTP del servidor tiene una estructura similar:
 
@@ -351,11 +351,11 @@ Date: Wed, 19 Nov 2025 15:30:00 GMT
 !!! note "Herramientas de desarrollo"
     Todos los navegadores modernos incluyen herramientas de desarrollo (F12) donde podéis ver las peticiones y respuestas HTTP en la pestaña "Red" o "Network". Es fundamental aprender a usar estas herramientas para depurar aplicaciones web.
 
-#### 1.9. Cabeceras HTTP
+#### 1.4. Cabeceras HTTP
 
 Las cabeceras HTTP son líneas de metadatos que se envían tanto en las peticiones como en las respuestas. Proporcionan información crucial sobre la comunicación entre cliente y servidor.
 
-#### 1.10. Cabeceras de petición comunes
+##### 1.4.1. Cabeceras de petición comunes
 
 Estas cabeceras son enviadas por el cliente al servidor:
 
@@ -437,7 +437,7 @@ Envía cookies almacenadas previamente:
 Cookie: sessionid=abc123; preferencias=tema_oscuro
 ```
 
-#### 1.11. Cabeceras de respuesta comunes
+##### 1.4.2. Cabeceras de respuesta comunes
 
 Estas cabeceras son enviadas por el servidor al cliente:
 
@@ -514,7 +514,7 @@ Indica el idioma del contenido:
 Content-Language: es-ES
 ```
 
-#### 1.12. Tipos MIME más comunes
+##### 1.4.3. Tipos MIME más comunes
 
 Los tipos MIME (Multipurpose Internet Mail Extensions) identifican el formato del contenido:
 
@@ -534,7 +534,7 @@ Los tipos MIME (Multipurpose Internet Mail Extensions) identifican el formato de
 | `application/pdf`        | Documento PDF          |
 | `application/zip`        | Archivo comprimido ZIP |
 
-#### 1.13. Métodos HTTP (verbos HTTP)
+#### 1.5. Métodos HTTP (verbos HTTP)
 
 Los métodos HTTP, también llamados **verbos HTTP**, definen la acción que un cliente desea realizar sobre un recurso en el servidor. Son fundamentales para el diseño de APIs RESTful.
 
@@ -543,7 +543,7 @@ Los métodos HTTP, también llamados **verbos HTTP**, definen la acción que un 
   <figcaption>Representación visual de los principales métodos HTTP y sus acciones: GET para obtener, POST para crear, PUT para actualizar, DELETE para eliminar. Cada método tiene un propósito específico en la manipulación de recursos del servidor</figcaption>
 </figure>
 
-#### 1.14. GET - Obtener recursos
+##### 1.5.1. GET - Obtener recursos
 
 GET es el método HTTP más utilizado en toda la web. **Cada vez que escribís una URL en el navegador y pulsáis Enter, estáis haciendo una petición GET**. Es el método por excelencia para leer información, para consultar datos, para obtener recursos sin alterarlos.
 
@@ -595,22 +595,22 @@ El servidor responde: "Todo bien (200 OK), aquí está la información en JSON c
 **Usos típicos en aplicaciones reales:**
 
 - **Obtener una lista de recursos**: 
-  - `GET /productos` → devuelve todos los productos
-  - `GET /productos?categoria=libros&precio_max=30&orden=precio` → productos filtrados y ordenados
-  - `GET /usuarios?page=2&limit=20` → paginación (página 2, 20 elementos por página)
 
-- **Obtener un recurso específico**: 
-  - `GET /usuarios/123` → obtiene el usuario con ID 123
-  - `GET /posts/456/comentarios` → obtiene los comentarios del post 456
-  - `GET /cursos/DAW/alumnos` → obtiene los alumnos del curso DAW
+    - `GET /productos` → devuelve todos los productos
+    - `GET /productos?categoria=libros&precio_max=30&orden=precio` → productos filtrados y ordenados
+    - `GET /usuarios?page=2&limit=20` → paginación (página 2, 20 elementos por página)
 
-- **Búsquedas complejas**: 
-  - `GET /buscar?q=kotlin&idioma=es&dificultad=intermedio&orden=fecha`
-  - `GET /productos/buscar?texto=laptop&marca[]=dell&marca[]=hp&precio_min=400`
+- **Obtener un recurso específico**:
 
-- **APIs públicas sin autenticación**: 
-  - `GET /api/clima?ciudad=Madrid&dias=7`
-  - `GET /api/noticias?categoria=tecnologia&fecha=2025-11-27`
+    - `GET /usuarios/123` → obtiene el usuario con ID 123
+    - `GET /posts/456/comentarios` → obtiene los comentarios del post 456
+    - `GET /cursos/DAW/alumnos` → obtiene los alumnos del curso DAW
+
+- **Búsquedas complejas**:
+
+    - `GET /buscar?q=kotlin&idioma=es&dificultad=intermedio&orden=fecha`
+    - `GET /productos/buscar?texto=laptop&marca[]=dell&marca[]=hp&precio_min=400`
+
 
 **Ejemplos prácticos con diferentes query parameters:**
 
@@ -634,7 +634,7 @@ Host: api.ejemplo.com
 
 **Errores comunes que DEBÉIS EVITAR:**
 
-❌ **NUNCA hagáis esto**: 
+NUNCA hagáis esto: 
 ```http
 GET /eliminar-usuario?id=123
 GET /transferir-dinero?origen=123&destino=456&cantidad=1000
@@ -643,7 +643,7 @@ GET /logout
 
 Estos GET tienen efectos secundarios graves (borran, transfieren, cierran sesión). Esto viola completamente el principio de seguridad de GET. Imaginad un bot de Google siguiendo ese enlace `/eliminar-usuario?id=123` y borrando usuarios...
 
-✅ **Correcto - usar los métodos apropiados**: 
+Correcto - usar los métodos apropiados: 
 ```http
 DELETE /usuarios/123          (para eliminar)
 POST /transferencias          (para transferir dinero)
@@ -653,7 +653,7 @@ POST /logout                  (para cerrar sesión)
 !!! warning "GET no debe modificar NUNCA"
     Aunque técnicamente es posible programar un GET que modifique el servidor, **nunca jamás debéis hacerlo**. GET es un método **seguro** por definición. Violarlo causa problemas de seguridad, problemas con cachés, problemas con bots, y rompe las expectativas de todos los clientes HTTP. Si necesitáis modificar algo, usad POST, PUT, PATCH o DELETE.
 
-#### 1.15. POST - Crear recursos
+##### 1.5.2. POST - Crear recursos
 
 Si GET es para **leer**, POST es para **escribir**. POST es el método que usáis cada vez que enviáis un formulario web, subís una foto a Instagram, publicáis un tweet, o creáis cualquier contenido nuevo en Internet.
 
@@ -715,25 +715,29 @@ El servidor responde: "Creado exitosamente (201), el nuevo usuario está en `/us
 **Usos típicos en el mundo real:**
 
 - **Crear recursos nuevos**:
-  - `POST /productos` → crear un nuevo producto en el catálogo
-  - `POST /posts` → publicar un nuevo artículo en un blog
-  - `POST /comentarios` → añadir un comentario a una discusión
-  - `POST /pedidos` → crear un nuevo pedido de compra
+
+    - `POST /productos` → crear un nuevo producto en el catálogo
+    - `POST /posts` → publicar un nuevo artículo en un blog
+    - `POST /comentarios` → añadir un comentario a una discusión
+    - `POST /pedidos` → crear un nuevo pedido de compra
 
 - **Enviar formularios HTML tradicionales**:
-  - `POST /contacto` → enviar mensaje de contacto
-  - `POST /registro` → registrar nuevo usuario
-  - `POST /login` → iniciar sesión (aunque esto no crea un recurso, es común usar POST)
+
+    - `POST /contacto` → enviar mensaje de contacto
+    - `POST /registro` → registrar nuevo usuario
+    - `POST /login` → iniciar sesión (aunque esto no crea un recurso, es común usar POST)
 
 - **Subir archivos**:
-  - `POST /uploads` → subir imágenes, documentos, videos
-  - `POST /avatar` → cambiar foto de perfil
-  - Con `Content-Type: multipart/form-data` para archivos
+
+    - `POST /uploads` → subir imágenes, documentos, videos
+    - `POST /avatar` → cambiar foto de perfil
+    - Con `Content-Type: multipart/form-data` para archivos
 
 - **Operaciones complejas que no se mapean a CRUD simple**:
-  - `POST /busqueda-avanzada` → búsqueda compleja con muchos parámetros (cuando GET sería demasiado largo)
-  - `POST /calcular` → ejecutar un cálculo complejo con muchos inputs
-  - `POST /procesar-pago` → procesar una transacción
+
+    - `POST /busqueda-avanzada` → búsqueda compleja con muchos parámetros (cuando GET sería demasiado largo)
+    - `POST /calcular` → ejecutar un cálculo complejo con muchos inputs
+    - `POST /procesar-pago` → procesar una transacción
 
 **Ejemplo de POST para subir un archivo:**
 
@@ -811,7 +815,7 @@ nombre=Juan+Perez&email=juan%40ejemplo.com&mensaje=Hola%2C+necesito+ayuda
 **Importante sobre idempotencia:**
 
 ```javascript
-// ❌ Problema: Si hay error de red y reintentamos...
+// Problema: Si hay error de red y reintentamos...
 POST /transferencia
 { "origen": 123, "destino": 456, "cantidad": 100 }
 
@@ -836,7 +840,7 @@ Content-Type: application/json
 
 El servidor guarda el `Idempotency-Key`, y si recibe el mismo key dos veces, solo procesa la transferencia una vez. Esto hace POST "virtualmente idempotente" para operaciones críticas.
 
-#### 1.16. PUT - Actualizar recursos
+##### 1.5.3. PUT - Actualizar recursos
 
 PUT es el método para **actualizar o reemplazar completamente** un recurso que ya existe. A diferencia de POST (que crea), PUT **modifica** algo que ya está ahí.
 
@@ -937,15 +941,15 @@ El resultado puede ser:
 
 **Diferencias clave: POST vs PUT**
 
-| Aspecto | POST | PUT |
-|---------|------|-----|
-| **Propósito** | Crear nuevo recurso | Actualizar recurso existente |
-| **Idempotencia** | ❌ NO (cada POST crea nuevo recurso) | ✅ SÍ (mismo resultado siempre) |
-| **URL** | No incluye ID (`POST /usuarios`) | Incluye ID específico (`PUT /usuarios/456`) |
-| **ID** | Servidor lo genera | Cliente lo especifica |
-| **Respuesta típica** | 201 Created + Location | 200 OK o 204 No Content |
-| **Reintentos seguros** | ❌ NO (crea duplicados) | ✅ SÍ (mismo resultado) |
-| **Actualización** | N/A (crea) | Reemplaza completamente |
+| Aspecto                 | POST                            | PUT                                          |
+|-------------------------|---------------------------------|----------------------------------------------|
+| **Propósito**           | Crear nuevo recurso             | Actualizar recurso existente                 |
+| **Idempotencia**        | NO (cada POST crea nuevo recurso) | SÍ (mismo resultado siempre)                 |
+| **URL**                 | No incluye ID (`POST /usuarios`) | Incluye ID específico (`PUT /usuarios/456`)  |
+| **ID**                  | Servidor lo genera              | Cliente lo especifica                        |
+| **Respuesta típica**    | 201 Created + Location          | 200 OK o 204 No Content                      |
+| **Reintentos seguros**  | NO (crea duplicados)            | SÍ (mismo resultado)                         |
+| **Actualización**       | N/A (crea)                      | Reemplaza completamente                      |
 
 **Ejemplo comparativo:**
 
@@ -1006,17 +1010,16 @@ PUT /usuarios/999
 
 Esto es útil cuando el cliente puede generar IDs únicos (por ejemplo UUIDs) y quiere asegurarse de que el recurso exista con esos datos exactos.
 
-**Cuándo usar PUT:**
+**Cuándo usar vs no usar PUT:**
 
-✅ Cuando conocéis el ID del recurso a actualizar
-✅ Cuando queréis reemplazar el recurso por completo
-✅ Cuando necesitáis idempotencia (reintentos seguros)
-✅ Cuando implementáis "upsert" con IDs del cliente
+- Cuando conocéis el ID del recurso a actualizar
+- Cuando queréis reemplazar el recurso por completo
+- Cuando necesitáis idempotencia (reintentos seguros)
+- Cuando implementáis "upsert" con IDs del cliente
+- NO uséis PUT cuando solo queréis cambiar un campo → usar PATCH
+- NO uséis PUT para crear recursos sin ID conocido → usar POST
 
-❌ NO uséis PUT cuando solo queréis cambiar un campo → usar PATCH
-❌ NO uséis PUT para crear recursos sin ID conocido → usar POST
-
-#### 1.17. PATCH - Actualización parcial
+##### 1.5.4. PATCH - Actualización parcial
 
 PATCH es el **hermano más inteligente de PUT**. Mientras PUT reemplaza TODO el recurso, PATCH solo modifica lo que necesita cambiar. Es como usar "corrector" en un documento en lugar de reescribirlo entero.
 
@@ -1063,8 +1066,8 @@ Le decimos al servidor: "Del usuario 456, solo cambia el email. Todo lo demás d
 ```json
 {
     "id": 456,
-    "nombre": "María García",           ← Sin cambios
-    "email": "nuevo.email@ejemplo.com",  ← ✅ Cambiado
+    "nombre": "María García",            ← Sin cambios
+    "email": "nuevo.email@ejemplo.com",  ← Cambiado!!!
     "rol": "estudiante",                 ← Sin cambios
     "telefono": "666777888",             ← Sin cambios
     "direccion": "Calle Mayor 5"         ← Sin cambios
@@ -1118,9 +1121,9 @@ Resultado:
     "id": 456,
     "nombre": "María García",
     "email": "maria.garcia@ejemplo.com",
-    "telefono": null,    ← ❌ Perdido
-    "direccion": null,   ← ❌ Perdido
-    "rol": null          ← ❌ Perdido
+    "telefono": null,    ← Perdido!!!
+    "direccion": null,   ← Perdido!!!
+    "rol": null          ← Perdido!!!
 }
 ```
 
@@ -1138,9 +1141,9 @@ Resultado:
     "id": 456,
     "nombre": "María García",
     "email": "maria.garcia@ejemplo.com",
-    "telefono": "666777888",  ← ✅ Conservado
-    "direccion": "Calle Mayor 5",  ← ✅ Conservado
-    "rol": "estudiante"       ← ✅ Conservado
+    "telefono": "666777888",       ← Conservado!!!
+    "direccion": "Calle Mayor 5",  ← Conservado!!!
+    "rol": "estudiante"            ← Conservado!!!
 }
 ```
 
@@ -1193,7 +1196,7 @@ Operaciones disponibles:
 - `copy`: Copiar valor
 - `test`: Verificar que un campo tiene cierto valor (útil para concurrencia)
 
-**JSON Merge Patch (RFC 7396) - más simple:**
+**JSON Merge Patch (RFC 7396) - más simple:** Este RFC define una forma más sencilla de hacer PATCH usando un objeto JSON normal:
 
 ```http
 PATCH /usuarios/456 HTTP/1.1
@@ -1201,14 +1204,20 @@ Content-Type: application/merge-patch+json
 
 {
     "email": "nuevo@ejemplo.com",
-    "direccion": null  ← null significa "eliminar"
+    "direccion": null               ← null significa "eliminar"
 }
 ```
 
-**Problema de idempotencia con PATCH:**
+Operaciones disponibles:
+- Si un campo está presente, se actualiza o añade.
+- Si un campo está presente con valor `null`, se elimina.
+- Si un campo no está presente, no se toca.
+
+
+**Problema de idempotencia con PATCH:** Tiene un problema potencial de idempotencia dependiendo de la operación:
 
 ```http
-# ❌ NO idempotente - cada vez suma 10
+# NO idempotente - cada vez suma 10
 PATCH /cuentas/123
 {"saldo": {"incrementar": 10}}
 
@@ -1218,7 +1227,7 @@ PATCH /cuentas/123
 ```
 
 ```http
-# ✅ Idempotente - siempre establece el mismo valor
+# Idempotente - siempre establece el mismo valor
 PATCH /cuentas/123
 {"email": "nuevo@ejemplo.com"}
 
@@ -1229,16 +1238,16 @@ PATCH /cuentas/123
 
 **Cuándo usar PATCH:**
 
-✅ Cuando solo necesitáis cambiar algunos campos
-✅ Para ahorrar ancho de banda (importantes en móviles)
-✅ Cuando no queréis obtener primero todo el recurso con GET
-✅ Para actualizaciones frecuentes de estado
+- Cuando solo necesitáis cambiar algunos campos
+- Para ahorrar ancho de banda (importantes en móviles)
+- Cuando no queréis obtener primero todo el recurso con GET
+- Para actualizaciones frecuentes de estado
 
 **Cuándo usar PUT en lugar de PATCH:**
 
-✅ Cuando queréis reemplazar el recurso completo
-✅ Cuando necesitáis garantía de idempotencia estricta
-✅ Cuando la API es más simple sin PATCH
+- Cuando queréis reemplazar el recurso completo
+- Cuando necesitáis garantía de idempotencia estricta
+- Cuando la API es más simple sin PATCH
 
 **Ejemplo práctico - cambiar solo el avatar:**
 
@@ -1253,7 +1262,7 @@ Content-Type: application/json
 
 Con PUT habríais tenido que enviar nombre, email, biografía, fecha de nacimiento, y todos los demás campos aunque no cambien. Con PATCH solo enviáis el avatar.
 
-#### 1.18. DELETE - Eliminar recursos
+##### 1.5.5. DELETE - Eliminar recursos
 
 DELETE hace exactamente lo que su nombre indica: **borra** un recurso del servidor. Es la operación de "destrucción" de CRUD.
 
@@ -1356,15 +1365,17 @@ DELETE /usuarios/456
 
 Base de datos después de soft delete:
 ```sql
-id  | nombre  | email              | eliminado | fecha_eliminacion
-456 | María   | maria@ejemplo.com  | true      | 2025-11-27 16:30:00
+| **id**  | **nombre**  | **email**              | **eliminado**    | **fecha_eliminacion** |
+|---------|-------------|------------------------|------------------|-----------------------|
+|      456| María       | maria@ejemplo.com      | true             |    2025-11-27 16:30:00|
+
 ```
 
 Ventajas del soft delete:
-- ✅ Recuperable en caso de error
-- ✅ Mantiene integridad referencial
-- ✅ Auditoría completa
-- ✅ Cumplimiento legal (GDPR permite recuperación en ciertos casos)
+- Recuperable en caso de error
+- Mantiene integridad referencial
+- Auditoría completa
+- Cumplimiento legal (GDPR permite recuperación en ciertos casos)
 
 **Casos de uso comunes:**
 
@@ -1393,15 +1404,13 @@ Ventajas del soft delete:
 
 **Peligros y precauciones:**
 
-⚠️ **DELETE es permanente**: Una vez ejecutado (hard delete), no hay vuelta atrás sin backups.
-
-⚠️ **Requiere autenticación fuerte**: Nunca permitáis DELETE sin verificar permisos. Imaginad un DELETE sin autenticación:
+-️ **DELETE es permanente**: Una vez ejecutado (hard delete), no hay vuelta atrás sin backups.
+-️ **Requiere autenticación fuerte**: Nunca permitáis DELETE sin verificar permisos. Imaginad un DELETE sin autenticación:
 ```http
 DELETE /usuarios/1  ← ¡Borramos al admin!
 DELETE /productos/  ← ¡Borramos TODO el catálogo!
 ```
-
-⚠️ **Considerad confirmaciones**: Para operaciones críticas, podéis requerir confirmación explícita:
+- **Considerad confirmaciones**: Para operaciones críticas, podéis requerir confirmación explícita:
 ```http
 DELETE /cuentas/123?confirmar=true
 ```
@@ -1454,18 +1463,18 @@ El **estado final del servidor es idéntico**: el usuario 456 no existe. Aunque 
 
 **Comparación: cuando NO usar DELETE:**
 
-❌ **NO usar DELETE para**:
+**NO usar DELETE para**:
 - Cerrar sesión temporalmente → usar POST /logout
 - Archivar recursos → usar PATCH {archivado: true}
 - Desactivar cuenta → usar PATCH {activa: false}
 
-✅ **SÍ usar DELETE para**:
+**SÍ usar DELETE para**:
 - Eliminar definitivamente un recurso
 - Borrar datos temporales caducados
 - Quitar asociaciones/relaciones
 - Limpiar caché o sesiones expiradas
 
-#### 1.19. HEAD - Obtener metadatos
+##### 1.5.6. HEAD - Obtener metadatos
 
 HEAD es como un GET "light": **obtiene toda la información sobre un recurso EXCEPTO el contenido real**. Es perfecto cuando solo queréis saber SOBRE el recurso, pero no descargarlo.
 
@@ -1497,12 +1506,12 @@ Cache-Control: public, max-age=3600
 ```
 
 ¡Fijaos! El servidor nos dice:
-- ✅ El archivo existe (200 OK)
-- ✅ Es un PDF
-- ✅ Pesa 2.485.760 bytes (~2.4 MB)
-- ✅ Se modificó el 25 de noviembre
-- ✅ Tiene este ETag único
-- ✅ Se puede cachear durante 1 hora
+- El archivo existe (200 OK)
+- Es un PDF
+- Pesa 2.485.760 bytes (~2.4 MB)
+- Se modificó el 25 de noviembre
+- Tiene este ETag único
+- Se puede cachear durante 1 hora
 
 **Todo esto sin descargar los 2.4 MB del PDF**. Si hubiéramos usado GET, habríamos descargado el archivo completo solo para saber su tamaño.
 
@@ -1599,10 +1608,10 @@ El servidor dice: "No ha cambiado, usa tu caché local". Todo sin enviar la list
 
 **Diferencia HEAD vs GET:**
 
-| Método | Descarga contenido | Uso típico | Ancho de banda |
-|--------|-------------------|------------|----------------|
-| GET | ✅ SÍ | Obtener datos | Alto |
-| HEAD | ❌ NO | Verificar metadatos | Mínimo |
+| Método | Descarga contenido | Uso típico          | Ancho de banda |
+|:------:|:------------------:|:--------------------|:--------------:|
+|  GET   |         SÍ         | Obtener datos       |      Alto      |
+|  HEAD  |         NO         | Verificar metadatos |     Mínimo     |
 
 **Ejemplo comparativo:**
 
@@ -1641,23 +1650,12 @@ async function smartDownload(url) {
 
 **Limitaciones:**
 
-⚠️ El servidor DEBE implementar HEAD correctamente: procesarlo igual que GET pero sin cuerpo.
+- El servidor DEBE implementar HEAD correctamente: procesarlo igual que GET pero sin cuerpo. 
+- Algunos servidores mal configurados responden igual a HEAD y GET (enviando el cuerpo), perdiendo el beneficio.
+- HEAD no puede decirte el contenido: solo metadatos. Si necesitas el contenido, debes usar GET.
 
-⚠️ Algunos servidores mal configurados responden igual a HEAD y GET (enviando el cuerpo), perdiendo el beneficio.
 
-⚠️ HEAD no puede decirte el contenido: solo metadatos. Si necesitas el contenido, debes usar GET.
-Content-Type: application/pdf
-Content-Length: 2456789
-Last-Modified: Mon, 18 Nov 2025 10:00:00 GMT
-```
-
-**Usos típicos:**
-
-- Verificar si un recurso existe sin descargarlo
-- Obtener el tamaño de un archivo antes de descargarlo
-- Verificar si un recurso ha sido modificado
-
-#### 1.20. OPTIONS - Opciones disponibles
+##### 1.5.7. OPTIONS - Opciones disponibles
 
 OPTIONS es el método "preguntón" de HTTP: **"¿Qué puedo hacer contigo?"**. Pregunta al servidor qué métodos HTTP acepta para un recurso específico.
 
@@ -1735,10 +1733,10 @@ El navegador NO envía preflight para peticiones "simples":
 - Sin cabeceras custom
 
 El navegador SÍ envía preflight para peticiones "complejas":
-- ✅ Métodos PUT, DELETE, PATCH
-- ✅ POST con Content-Type: application/json
-- ✅ Cualquier petición con cabecera Authorization
-- ✅ Cabeceras custom (X-Custom-Header, etc.)
+- Métodos PUT, DELETE, PATCH
+- POST con Content-Type: application/json
+- Cualquier petición con cabecera Authorization
+- Cabeceras custom (X-Custom-Header, etc.)
 
 **Ejemplo real - API que documenta sus capacidades:**
 
@@ -1882,13 +1880,13 @@ Header always set Access-Control-Allow-Headers "Content-Type, Authorization"
 
 **Cabeceras CORS importantes en respuestas OPTIONS:**
 
-| Cabecera | Propósito | Ejemplo |
-|----------|-----------|---------|
-| `Access-Control-Allow-Origin` | Qué orígenes pueden acceder | `*` o `https://mi-app.com` |
-| `Access-Control-Allow-Methods` | Qué métodos HTTP están permitidos | `GET, POST, PUT, DELETE` |
-| `Access-Control-Allow-Headers` | Qué cabeceras puede enviar el cliente | `Content-Type, Authorization` |
-| `Access-Control-Max-Age` | Cuánto tiempo cachear esta respuesta OPTIONS | `86400` (24 horas en segundos) |
-| `Access-Control-Allow-Credentials` | Si permite cookies/autenticación | `true` |
+| Cabecera                           | Propósito                                    | Ejemplo                        |
+|------------------------------------|----------------------------------------------|--------------------------------|
+| `Access-Control-Allow-Origin`      | Qué orígenes pueden acceder                  | `*` o `https://mi-app.com`     |
+| `Access-Control-Allow-Methods`     | Qué métodos HTTP están permitidos            | `GET, POST, PUT, DELETE`       |
+| `Access-Control-Allow-Headers`     | Qué cabeceras puede enviar el cliente        | `Content-Type, Authorization`  |
+| `Access-Control-Max-Age`           | Cuánto tiempo cachear esta respuesta OPTIONS | `86400` (24 horas en segundos) |
+| `Access-Control-Allow-Credentials` | Si permite cookies/autenticación             | `true`                         |
 
 **Optimización: cachear la respuesta OPTIONS**
 
@@ -1898,49 +1896,46 @@ Esto reduce drásticamente las peticiones preflight innecesarias:
 
 ```
 Sin Max-Age:
-OPTIONS /api/usuarios → espera respuesta
-POST /api/usuarios → espera respuesta
-OPTIONS /api/usuarios → espera respuesta (de nuevo!)
-PUT /api/usuarios → espera respuesta
+OPTIONS /api/usuarios       → espera respuesta
+POST /api/usuarios          → espera respuesta
+OPTIONS /api/usuarios       → espera respuesta (de nuevo!)
+PUT /api/usuarios           → espera respuesta
 ...cada petición necesita preflight
 
 Con Max-Age 86400:
-OPTIONS /api/usuarios → espera respuesta → guarda en caché 24h
-POST /api/usuarios → usa caché, no envía OPTIONS
-PUT /api/usuarios → usa caché, no envía OPTIONS  
-DELETE /api/usuarios → usa caché, no envía OPTIONS
+OPTIONS /api/usuarios       → espera respuesta → guarda en caché 24h
+POST /api/usuarios          → usa caché, no envía OPTIONS
+PUT /api/usuarios           → usa caché, no envía OPTIONS  
+DELETE /api/usuarios        → usa caché, no envía OPTIONS
 ...mucho más rápido!
 ```
 
-**Cuándo usar OPTIONS:**
+**Cuándo usar vs NO usar OPTIONS:**
 
-✅ Automáticamente (navegador lo hace por vosotros en CORS)
-✅ Para descubrir capacidades de una API
-✅ Para implementar auto-documentación de APIs
-✅ Debugging de problemas CORS
+- Automáticamente (navegador lo hace por vosotros en CORS)
+- Para descubrir capacidades de una API
+- Para implementar auto-documentación de APIs
+- Debugging de problemas CORS
+- No usar, cuando frontend y backend están en el mismo dominio (no hay CORS)
+- No usar, para peticiones simples GET (el navegador no envía preflight)
+- No usar, si usáis un proxy que evita CORS
 
-**Cuándo NO necesitáis OPTIONS:**
-
-❌ Cuando frontend y backend están en el mismo dominio (no hay CORS)
-❌ Para peticiones simples GET (el navegador no envía preflight)
-❌ Si usáis un proxy que evita CORS
-
-#### 1.21. Tabla resumen de métodos HTTP
+##### 1.5.8. Tabla resumen de métodos HTTP
 
 | Método      | Propósito            | Idempotente  | Seguro  | Con cuerpo  | Cacheable  |
-|:------------|:---------------------|:-------------|:--------|:------------|:-----------|
-| **GET**     | Obtener recurso      | ✓            | ✓       | No          | ✓          |
-| **POST**    | Crear recurso        | ✗            | ✗       | Sí          | ✗          |
-| **PUT**     | Actualizar completo  | ✓            | ✗       | Sí          | ✗          |
-| **PATCH**   | Actualizar parcial   | ✗            | ✗       | Sí          | ✗          |
-| **DELETE**  | Eliminar recurso     | ✓            | ✗       | No          | ✗          |
-| **HEAD**    | Obtener metadatos    | ✓            | ✓       | No          | ✓          |
-| **OPTIONS** | Opciones disponibles | ✓            | ✓       | No          | ✗          |
+|:------------|:---------------------|:------------:|:-------:|:-----------:|:----------:|
+| **GET**     | Obtener recurso      |      ✓       |    ✓    |     No      |     ✓      |
+| **POST**    | Crear recurso        |      ✗       |    ✗    |     Sí      |     ✗      |
+| **PUT**     | Actualizar completo  |      ✓       |    ✗    |     Sí      |     ✗      |
+| **PATCH**   | Actualizar parcial   |      ✗       |    ✗    |     Sí      |     ✗      |
+| **DELETE**  | Eliminar recurso     |      ✓       |    ✗    |     No      |     ✗      |
+| **HEAD**    | Obtener metadatos    |      ✓       |    ✓    |     No      |     ✓      |
+| **OPTIONS** | Opciones disponibles |      ✓       |    ✓    |     No      |     ✗      |
 
 !!! tip "Diseño de APIs RESTful"
     El uso correcto de los métodos HTTP es fundamental para diseñar APIs RESTful bien estructuradas. Cada método tiene un propósito específico y debe usarse según su semántica.
 
-#### 1.22. Códigos de estado HTTP
+#### 1.6. Códigos de estado HTTP
 
 Después de cada petición, el servidor envía una respuesta que incluye un **código de estado HTTP**. Este código es un número de tres dígitos que indica el resultado de la petición.
 
@@ -1949,19 +1944,19 @@ Después de cada petición, el servidor envía una respuesta que incluye un **c�
   <figcaption>Clasificación de los códigos de estado HTTP organizados por familias: 1xx (Informativos), 2xx (Éxito), 3xx (Redirección), 4xx (Errores del cliente), 5xx (Errores del servidor). Cada familia indica un tipo diferente de resultado de la petición</figcaption>
 </figure>
 
-#### 1.23. Familia 1xx - Respuestas informativas
+##### 1.6.1. Familia 1xx - Respuestas informativas
 
 Indican que la petición ha sido recibida y el proceso continúa.
 
 | Código  | Nombre              | Descripción                                            |
-|:--------|:--------------------|:-------------------------------------------------------|
+|:-------:|:--------------------|:-------------------------------------------------------|
 | **100** | Continue            | El cliente puede continuar con su petición             |
 | **101** | Switching Protocols | El servidor acepta cambiar de protocolo                |
 | **102** | Processing          | El servidor está procesando, pero aún no hay respuesta |
 
 **Uso poco común**: Raramente se encuentran estos códigos en aplicaciones web típicas.
 
-#### 1.24. Familia 2xx - Operaciones exitosas
+##### 1.6.1. Familia 2xx - Operaciones exitosas
 
 Indican que la acción del cliente fue recibida, entendida y aceptada correctamente.
 
@@ -1990,7 +1985,7 @@ Content-Type: application/json
 {"id": 789, "nombre": "Laptop", "precio": 899}
 ```
 
-#### 1.25. Familia 3xx - Redirecciones
+##### 1.6.1. Familia 3xx - Redirecciones
 
 El cliente necesita realizar una acción adicional para completar la petición.
 
@@ -2011,7 +2006,7 @@ Location: https://www.ejemplo.com/nueva-url
 
 El navegador automáticamente seguirá la redirección.
 
-#### 1.26. Familia 4xx - Errores del cliente
+##### 1.6.1. Familia 4xx - Errores del cliente
 
 La petición contiene un error o no puede ser completada debido a un problema del cliente.
 
@@ -2065,7 +2060,7 @@ Content-Type: application/json
     - **401 Unauthorized**: "No sé quién eres" - Necesitas autenticarte
     - **403 Forbidden**: "Sé quién eres, pero no puedes hacer esto" - No tienes permisos
 
-#### 1.27. Familia 5xx - Errores del servidor
+##### 1.6.1. Familia 5xx - Errores del servidor
 
 El servidor falló al completar una petición aparentemente válida. El problema está en el servidor, no en el cliente.
 
@@ -2105,11 +2100,11 @@ Content-Type: application/json
 !!! warning "Nunca exponer detalles técnicos"
     En producción, los errores 5xx **nunca deben revelar** detalles técnicos como trazas de stack, consultas SQL o rutas de archivos. Esto es un riesgo de seguridad. Guardad esos detalles en logs del servidor.
 
-#### 1.28. El protocolo HTTPS: seguridad en la web
+#### 1.7. El protocolo HTTPS: seguridad en la web
 
 **HTTPS (HyperText Transfer Protocol Secure)** es la versión segura del protocolo HTTP. En la web moderna, HTTPS no es opcional: es **esencial** para la seguridad y privacidad de los usuarios.
 
-#### 1.29. ¿Por qué es necesario HTTPS?
+##### 1.7.1. ¿Por qué es necesario HTTPS?
 
 Imaginad que enviáis una carta y que cualquier persona por la que pase esa carta (el cartero, la oficina de correos, cualquiera) pueda abrirla, leerla, modificarla y volver a cerrarla sin que os déis cuenta. **Eso es HTTP**. Todo viaja en texto plano, completamente legible.
 
@@ -2201,7 +2196,7 @@ En 2011, una herramienta llamada "Firesheep" permitía a cualquiera en una WiFi 
 !!! danger "HTTP está obsoleto"
     En 2025, **NO hay excusa** para usar HTTP. Certificados HTTPS son **gratuitos** (Let's Encrypt), fáciles de instalar (Certbot lo hace automáticamente) y necesarios para cualquier sitio moderno. Los navegadores activamente discriminan contra HTTP.
 
-#### 1.30. ¿Cómo funciona HTTPS?
+##### 1.7.1. ¿Cómo funciona HTTPS?
 
 HTTPS = HTTP + SSL/TLS (cifrado)
 
@@ -2230,7 +2225,7 @@ HTTPS = HTTP + SSL/TLS (cifrado)
 
 6. **Comunicación cifrada**: Todos los datos se cifran con la clave de sesión
 
-#### 1.31. Certificados digitales
+##### 1.7.1. Certificados digitales
 
 Un **certificado digital** es un documento electrónico que vincula una clave pública a la identidad de un propietario (servidor web).
 
@@ -2255,7 +2250,7 @@ Son entidades de confianza que emiten y firman certificados:
 
 Los navegadores tienen una lista de CAs en las que confían. Si un certificado no está firmado por una CA confiable, el navegador mostrará una advertencia.
 
-#### 1.32. Tipos de certificados
+##### 1.7.1. Tipos de certificados
 
 **Por nivel de validación:**
 
@@ -2283,7 +2278,7 @@ Los navegadores tienen una lista de CAs en las que confían. Si un certificado n
 
 3. **Multi-domain (SAN)**: Para múltiples dominios diferentes
 
-#### 1.33. Let's Encrypt: certificados gratuitos
+##### 1.7.1. Let's Encrypt: certificados gratuitos
 
 **Let's Encrypt** es una Autoridad de Certificación sin ánimo de lucro que proporciona certificados SSL/TLS **gratuitos y automáticos**.
 
@@ -2307,7 +2302,7 @@ sudo certbot --apache -d www.ejemplo.com
 sudo certbot renew --dry-run
 ```
 
-#### 1.34. Impacto en el rendimiento
+##### 1.7.1. Impacto en el rendimiento
 
 El cifrado SSL/TLS requiere recursos computacionales adicionales:
 
@@ -2324,7 +2319,7 @@ El cifrado SSL/TLS requiere recursos computacionales adicionales:
 !!! tip "HTTPS es más rápido que HTTP"
     Paradójicamente, con HTTP/2 (que requiere HTTPS), los sitios HTTPS modernos son **más rápidos** que los HTTP, a pesar del cifrado. HTTP/2 multiplexea peticiones, comprime cabeceras y permite server push.
 
-#### 1.35. HTTPS en desarrollo
+##### 1.7.1. HTTPS en desarrollo
 
 Durante el desarrollo es útil usar HTTPS también:
 
@@ -2350,7 +2345,7 @@ Durante el desarrollo es útil usar HTTPS también:
     
 3. **Túneles**: ngrok, localtunnel para exponer localhost con HTTPS
 
-#### 1.36. Buenas prácticas HTTPS
+##### 1.7.1. Buenas prácticas HTTPS
 
 1. **Usar siempre HTTPS**: Para todo el sitio, no solo el login
 
@@ -5038,30 +5033,46 @@ Con nuestra aplicación construida, necesitamos que se comunique con otras aplic
 
 ### 8. Servicios web y APIs
 
-Un **servicio web** es una API que permite a otra aplicación comunicarse remotamente para acceder a un servicio. Es la diferencia entre una aplicación aislada y una aplicación que puede integrarse con el mundo.
+Un **servicio web** es una aplicación accesible a través de la red (normalmente usando HTTP) que expone una interfaz para que otros clientes (navegadores, apps móviles, otros servicios, etc.) puedan utilizar sus funcionalidades.
+
+Cuando esa interfaz está pensada para que la consuman **otras aplicaciones** y devuelve datos estructurados (JSON, XML, etc.), hablamos de una **API web**.
+
+Podemos distinguir dos grandes tipos de componentes en la web:
+
+1. **Aplicaciones web orientadas a usuario**  
+
+    - Generan HTML (y recursos estáticos) para que el navegador los muestre al usuario.
+    - Suelen usar plantillas, frameworks MVC, etc.
+
+2. **Servicios web / APIs orientadas a aplicaciones**
+
+    - Devuelven datos estructurados (JSON, XML, etc.).
+    - Están pensados para ser consumidos por código: SPAs, apps móviles, otros servicios, integraciones…
 
 #### 8.1. Diferencia fundamental
 
-**Página web dinámica:**
-- Genera HTML para humanos
-- Incluye estilos y presentación
-- Se visualiza en navegador
+**Página web dinámica (aplicación web):**
+- Genera HTML para humanos.
+- Incluye estilos y presentación.
+- Se visualiza en el navegador.
 
-**Servicio web (API):**
-- Devuelve datos estructurados (JSON/XML)
-- Sin presentación ni estilos
-- Consumido por código, no por humanos
+**Servicio web / API:**
+- Devuelve datos estructurados (JSON/XML, u otros formatos).
+- No incluye presentación ni estilos.
+- Está pensado para ser consumido por código, no directamente por humanos.
 
-#### 8.2. Protocolos de API
+#### 8.2. Estilos y tecnologías de APIs web
+
+Existen varios estilos y tecnologías para construir APIs web. Los más comunes son:
 
 **REST (Representational State Transfer)**
 
-El más popular. Características:
-- Usa métodos HTTP estándar (GET, POST, PUT, DELETE)
-- URLs representan recursos
-- Sin estado (stateless)
-- Cacheable
-- Formato típico: JSON
+El estilo más extendido para APIs web. Características:
+- Usa métodos HTTP estándar (GET, POST, PUT, DELETE…).
+- Las URLs representan recursos.
+- Sin estado en el servidor respecto al cliente (stateless).
+- Se puede aprovechar la caché HTTP.
+- Formato típico de intercambio: JSON.
 
 Ejemplo:
 ```http
@@ -5070,23 +5081,26 @@ GET /api/usuarios/123
 
 POST /api/usuarios
 {"nombre": "Carlos", "email": "carlos@ejemplo.com"}
-→ Crea nuevo usuario
-```
+→ Crea un nuevo usuario
+````
 
 **GraphQL**
 
 Lenguaje de consulta para APIs. Características:
-- Cliente pide exactamente lo que necesita
-- Una sola petición para datos relacionados
-- Tipado fuerte
-- Sin sobre-fetching ni under-fetching
+
+* El cliente pide exactamente los campos que necesita.
+* Permite obtener datos relacionados en una sola petición.
+* Es fuertemente tipado.
+* Reduce problemas de sobrecarga de datos (over-fetching) o falta de datos (under-fetching).
 
 **WebSockets**
 
-Comunicación bidireccional en tiempo real:
-- Conexión persistente
-- Ideal para chat, gaming, dashboards en vivo
-- Baja latencia
+Tecnología para comunicación bidireccional en tiempo real sobre una conexión persistente:
+
+* Mantiene una conexión abierta entre cliente y servidor.
+* Ideal para chat, juegos online, dashboards en vivo, notificaciones en tiempo real, etc.
+* Baja latencia y comunicación en ambas direcciones.
+
 
 ---
 
@@ -5131,16 +5145,16 @@ header.payload.signature
 5. Servidor verifica JWT y extrae información del usuario
 
 **Ventajas:**
-- Stateless (sin sesiones en servidor)
-- Escalable
-- Portable
-- Autocontenido
+- Stateless (sin sesiones en servidor): No necesita almacenar estado
+- Escalable: Fácil de usar en microservicios
+- Portable: Se puede usar entre dominios
+- Autocontenido: Toda la información está en el token
 
 **Seguridad:**
-- Siempre HTTPS
-- Tiempo de expiración corto
-- No guardar datos sensibles en payload
-- El payload es visible (solo codificado, no encriptado)
+- Siempre HTTPS: Evita intercepciones
+- Tiempo de expiración corto: Limita validez del token
+- No guardar datos sensibles en payload: Ocultar información crítica
+- El payload es visible (solo codificado, no encriptado): no almacenar contraseñas u otros datos sensibles.
 
 ---
 

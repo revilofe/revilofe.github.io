@@ -19,7 +19,7 @@ tags:
 
 ## 4.1.1 Ejemplo de Plan de Formación y Concienciación en Ciberseguridad
 
-La formación y concienciación complementan las medidas técnicas de seguridad, permitiendo que los empleados sean un eslabón fuerte en la protección de la organización. Todas la medidas de seguridad, como cortafuegos, antivirus o sistemas de detección de intrusos, políticas de seguridad, etc., pueden ser inútiles si los empleados no están formados y concienciados en ciberseguridad.
+La formación y concienciación complementan las medidas técnicas de seguridad, permitiendo que los empleados sean un eslabón fuerte en la protección de la organización. Todas la medidas de seguridad, como cortafuegos, antivirus, sistemas de detección de intrusos, políticas de seguridad, etc., pueden ser inútiles si los empleados no están formados y concienciados en ciberseguridad.
 
 <figure markdown>
   ![](assets/CicloPlanFormacion.png)
@@ -42,11 +42,23 @@ No pretende ser un índice exhaustivo, sino una guía para estructurar un plan d
 
 #### 1.2. **Objetivos del Plan**
 
-* **Resultado esperado**: Definición de objetivos generales y específicos, como fomentar una cultura de seguridad, reducir incidentes y mejorar el cumplimiento normativo.
+* **Resultado esperado**: Definición de objetivos generales y específicos, como fomentar una cultura de seguridad, reducir incidentes y mejorar el cumplimiento normativo. Ejemplos de objetivos:
+
+    * Aumentar el conocimiento sobre amenazas comunes (phishing, malware, ingeniería social).
+    * Mejorar las prácticas de seguridad (uso de contraseñas seguras, actualizaciones de software).
+    * Fomentar la responsabilidad individual en la protección de la información.
+
+Estará influido por los resultados del diagnóstico inicial.
 
 #### 1.3. **Alcance del Plan**
 
 * **Resultado esperado**: Delimitación de qué áreas, roles y niveles de la organización están incluidos en el plan, especificando también cualquier exclusión.
+
+Es importante definir claramente el alcance para asegurar que los recursos se asignen adecuadamente y que todas las partes interesadas comprendan su participación en el plan. En este apartado se pueden incluir:
+
+    * Departamentos o equipos específicos.
+    * Niveles jerárquicos (empleados, gerentes, directivos).
+    * Tipos de formación (presencial, online, talleres prácticos).
 
 ---
 
@@ -66,11 +78,11 @@ No pretende ser un índice exhaustivo, sino una guía para estructurar un plan d
 * **Resultado esperado**: Clasificación de empleados según sus responsabilidades y conocimientos previos.   
 * **Tabla sugerida**:
 
-| **Rol**  | **Nivel de conocimientos** | **Principales riesgos**                        |
-| ---------------- | ---------------------------------- | ----------------------------------------------------- |
-| Técnico de TI | Avanzado                         | Gestión de vulnerabilidades, respuesta a incidentes |
-| Administrativo | Básico                          | Phishing, contraseñas débiles                      |
-| Gerente        | Intermedio                       | Toma de decisiones ante incidentes                  |
+| **Rol**           | **Nivel de conocimientos**          | **Principales riesgos**                                |
+|-------------------|-------------------------------------|--------------------------------------------------------|
+| Técnico de TI     | Avanzado                            | Gestión de vulnerabilidades, respuesta a incidentes    |
+| Administrativo    | Básico                              | Phishing, contraseñas débiles                          |
+| Gerente           | Intermedio                          | Toma de decisiones ante incidentes                     |
 
 
 ### **3. Diseño del Plan de Formación y Concienciación**
@@ -88,11 +100,11 @@ No pretende ser un índice exhaustivo, sino una guía para estructurar un plan d
 * **Resultado esperado**: Tabla que relacione cada grupo con los contenidos y materiales correspondientes.
 * **Tabla sugerida**:    
 
-| **Rol/Grupo** | **Contenidos**                | **Materiales**          |
-| --------------------- | ------------------------------------- | ------------------------------- |
-| Administrativos     | Phishing, políticas de mesa limpia | Infografías, simulaciones    |
-| Técnicos           | Gestión de incidentes, firewalls   | Talleres prácticos, manuales |
-| Comerciales         | Uso seguro de Wi-Fi, 2FA            | Guías digitales, videos      |
+| **Rol/Grupo**          | **Contenidos**                         | **Materiales**                   |
+|------------------------|----------------------------------------|----------------------------------|
+| Administrativos        | Phishing, políticas de mesa limpia     | Infografías, simulaciones        |
+| Técnicos               | Gestión de incidentes, firewalls       | Talleres prácticos, manuales     |
+| Comerciales            | Uso seguro de Wi-Fi, 2FA               | Guías digitales, videos          |
 
 #### 3.3. **Metodologías Formativas**
 
@@ -106,11 +118,11 @@ No pretende ser un índice exhaustivo, sino una guía para estructurar un plan d
 * **Resultado esperado**: Planificación detallada con las fechas y objetivos de cada actividad formativa.   
 * **Ejemplo de cronograma**:    
 
-| **Fecha**    | **Actividad**                      | **Objetivo**             |
-| -------------------- | ------------------------------------------ | -------------------------------- |
-| Enero (Semana 1)   | Evaluación inicial                      | Medir conocimientos actuales   |
-| Febrero (Semana 2) | Taller de phishing para administrativos  | Reconocer correos maliciosos   |
-| Marzo (Semana 3)   | Simulación de ransomware para técnicos | Evaluar respuesta a incidentes |
+| **Fecha**             | **Actividad**                               | **Objetivo**                      |
+|-----------------------|---------------------------------------------|-----------------------------------|
+| Enero (Semana 1)      | Evaluación inicial                          | Medir conocimientos actuales      |
+| Febrero (Semana 2)    | Taller de phishing para administrativos     | Reconocer correos maliciosos      |
+| Marzo (Semana 3)      | Simulación de ransomware para técnicos      | Evaluar respuesta a incidentes    |
 
 #### 4.2. **Distribución de Materiales**
 
@@ -240,11 +252,11 @@ No pretende ser un índice exhaustivo, sino una guía para estructurar un plan d
 - **Contenido esperado**: Tabla que relacione grupos con contenidos y materiales.
 - **Tabla sugerida**:  
 
-  | **Grupo**         | **Contenidos**                          | **Materiales**            |  
-  |-------------------|-----------------------------------------|---------------------------|  
-  | Alumnos           | Ciberbullying, uso del móvil           | Vídeos, juegos interactivos |  
-  | Profesores        | Protección de documentos               | Guías, talleres prácticos |  
-  | Familias          | Huella digital de los hijos            | Trípticos, presentaciones |
+  | **Grupo**         | **Contenidos**                           | **Materiales**              |  
+  |-------------------|------------------------------------------|-----------------------------|  
+  | Alumnos           | Ciberbullying, uso del móvil             | Vídeos, juegos interactivos |  
+  | Profesores        | Protección de documentos                 | Guías, talleres prácticos   |  
+  | Familias          | Huella digital de los hijos              | Trípticos, presentaciones   |
 
 #### 3.3. **Metodologías Formativas**
 
@@ -301,35 +313,43 @@ No pretende ser un índice exhaustivo, sino una guía para estructurar un plan d
 
 
 1. **Formularios de recogida de información y evaluación**:
+
     - Encuestas iniciales para identificar necesidades y preocupaciones.
     - Encuestas de satisfacción para evaluar la efectividad del plan.
 
 2. **Tablas resumenes de contenidos y materiales**:
+
     - Relación clara de qué se enseñará a cada grupo y qué materiales se utilizarán.
     -.  Cronograma detallado con fechas y actividades planificadas.
 
 3. **Enfocarse en ejemplos prácticos y cercanos**:
+
     - Alumnos: Vídeos sobre las consecuencias de compartir contraseñas o descargar software pirata.
     - Profesores: Taller sobre el uso seguro de dispositivos compartidos.
     - Familias: Charla sobre cómo supervisar el uso de redes sociales sin invadir la privacidad de los hijos.
 
 4. **Metodologías atractivas**:
+
     - Juegos para alumnos, como identificar amenazas en un entorno simulado.
     - Talleres interactivos para profesores, usando casos reales de pérdida de datos.
     - Sesiones informativas sencillas para familias, con ejemplos claros y aplicaciones prácticas.
 
 5. **Cronograma ajustado al calendario escolar**:
+
     - Integrar las actividades en reuniones de padres, sesiones de tutoría y días de formación del profesorado.
 
 6. **Materiales que cubran las necesidades de cada grupo**:
+
     - Guías para padres sobre control parental y configuración de dispositivos.
     - Infografías para alumnos sobre cómo proteger su información personal.
     - Presentaciones para profesores sobre buenas prácticas en ciberseguridad.
 
 7. **Informes de evaluación claros y concisos**:
+
     - Métricas clave para cada grupo, como tasa de participación y reducción de incidentes.
     - Análisis de resultados con recomendaciones para futuras acciones.
 
 8. **Plan de actualización y mejora continua**: 
+
     - Estrategias para mantener el plan relevante y efectivo, como encuestas periódicas y seguimiento de tendencias educativas.
     - Integración de sugerencias y feedback de los participantes para refinar el plan y adaptarlo a las necesidades cambiantes.

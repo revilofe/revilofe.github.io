@@ -1,0 +1,19 @@
+## PROMPT USADO CON CHAT GPT
+
+Tengo el siguiente texto:
+
+<<    aqui el texto >>
+
+Quiero que generes las slides y su contenido para presentar a los alumnos los conceptos presentados en el texto anterior.
+
+
+Teniendo en cuenta que soy profesor de un ciclo de formación profesional, y por tanto las slides van dirigidas a un conjunto de alumnos que están aprendiendo a programar.
+
+Para generar las slides, ten en cuenta las siguientes premisas:
+- Cada slides comienza solo con un título nivel 3 en markdown, es decir el titulo de la slide lo precede ###, que describe solo el epígrafe a tratar, sin indicar el numero de slide.
+- Cada grupo de slides estará separada del siguiente con una linea que contenga el texto  ---
+- El contenido de las slides debe crearse haciendo uso de viñetas por cada frase, y cada frase no debe ser mas larga de 80 caracteres.
+- Las slides no debe superar las 7 viñetas de altura.
+- Las slides que son parte del mismo grupo, se separan con dos saltos de linea. Es decir, si con una slide no es suficiente para abordar el contenido del epígrafe que se describe, la siguiente slide comenzará con el mismo título del epígrafe tratado en la slide anterior, y estara separada de la anterior con dos saltos de lineas.
+- En el codigo de los ejemplos, usa comentarios cortos con # a continuación de la sentencia, para indicar que hace o cual es la salida o resultado.
+- Procura que todas las slides tengan una nota,  para facilitar la presentación al presentador. Por ejemplo: Note: esto es una nota que explica la slide y ayuda al presentador.

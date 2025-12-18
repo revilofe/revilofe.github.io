@@ -2,6 +2,10 @@
 
 ---
 
+![Logo Alberti](assets/logo-iesra.png) <!-- .element height="50%" width="50%" -->
+
+---
+
 ## Índice
 
 ### 7 Bloques
@@ -15,7 +19,6 @@
 7. Seguridad y Monitorización
 
 Note: Esta unidad cubre el ciclo completo: desde HTTP hasta monitorización en producción. Cada bloque construye sobre el anterior formando comprensión integral del desarrollo web moderno.
-
 
 ---
 
@@ -47,10 +50,20 @@ Note: HTTP es el protocolo fundamental de la web. Su simplicidad textual facilit
 Note: Cada característica aporta valor específico. Sencillez facilita aprendizaje y debugging. Extensibilidad permite evolución sin romper compatibilidad. Stateless escala fácilmente. Caché acelera respuestas. Proxies añaden funcionalidad sin modificar endpoints.
 
 
+### 1.2. Características HTTP II
+
+Stateless marca la evolución de la web moderna. Para poder tener aplicaciones que tengan memoria entre peticiones, se usan mecanismos externos como cookies, tokens JWT o sesiones en el servidor:
+
+* **Cookies**: almacenan datos en cliente, enviados automáticamente en cada petición.
+* **Sesiones**: almacenan estado en servidor, identificadas por cookies y permiten mantener login y preferencias.
+
+Note: Es sencillo porque usa texto plano legible por humanos, facilitando debugging y desarrollo. Es extensible mediante cabeceras personalizadas que permiten añadir funcionalidades sin romper compatibilidad. Es stateless, lo que significa que cada petición es independiente, facilitando la escalabilidad horizontal. Es cacheable, permitiendo almacenar respuestas para mejorar el rendimiento y reducir la carga del servidor. Finalmente, es proxy-friendly, lo que permite el uso de intermediarios para funciones como balanceo de carga y seguridad sin afectar la comunicación entre cliente y servidor.
+
+
 ### 1.3. Estructura Petición HTTP
 
 ```
-GET /usuarios/123 HTTP/1.1
+GET /usuarios/123 HTTP/1.1 
 Host: api.ejemplo.com
 Accept: application/json
 Authorization: Bearer token...
@@ -276,8 +289,7 @@ Host: ejemplo.com
 Authorization: Bearer eyJhbGci...
 ```
 
-Note: DELETE requiere autenticación fuerte. Respuesta 204 No Content indica eliminación exitosa sin body. Si recurso ya no existe, 404 Not Found pero operación sigue siendo exitosa (idempotente).
-
+Note: DELETE requiere autenticación fuerte. La header Authorization incluye token. Petición elimina usuario 123. 
 
 ### 1.9. Métodos HTTP: DELETE II
 
@@ -286,7 +298,7 @@ Note: DELETE requiere autenticación fuerte. Respuesta 204 No Content indica eli
 HTTP/1.1 204 No Content
 ```
 
-Note: DELETE requiere autenticación fuerte. Respuesta 204 No Content indica eliminación exitosa sin body. Si recurso ya no existe, 404 Not Found pero operación sigue siendo exitosa (idempotente).
+Note: Respuesta 204 No Content indica eliminación exitosa sin body. "No Content" significa que no hay datos que devolver. Cliente asume recurso eliminado. 
 
 
 ### 1.9. Métodos HTTP: DELETE II
@@ -299,7 +311,7 @@ Content-Type: application/json
 {"error": "Usuario no encontrado"}
 ```
 
-Note: DELETE requiere autenticación fuerte. Respuesta 204 No Content indica eliminación exitosa sin body. Si recurso ya no existe, 404 Not Found pero operación sigue siendo exitosa (idempotente).
+Note: Si recurso ya no existe, 404 Not Found pero operación sigue siendo exitosa (idempotente). En el body se puede incluir mensaje informativo.
 
 
 ### 1.10. Métodos HTTP: HEAD y OPTIONS

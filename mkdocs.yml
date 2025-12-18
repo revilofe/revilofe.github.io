@@ -227,6 +227,7 @@ nav:
           - '🎯 PROYECTO FINAL: Sistema Blog con Microservicios': 'section4/u02/practica/DAW-U2.-Proyecto-Final.md'
       - 'U3: Arquitectura de Aplicaciones Web':
           - 'section4/u03/index.md'
+          - '3.1.-Desarrollo y Despliegue Web': 'section4/u03/teoria/DAW-U3.1.-DesarrolloDespliegueWeb.md'
           - '3.1.-Introducción al Desarrollo Web': 'section4/u03/teoria/DAW-U3.1.-IntroDesarrolloWeb.md'
           - '3.2.-Arquitecturas Web': 'section4/u03/teoria/DAW-U3.2.-ArquitecturasWeb.md'
           - '3.3.-Protocolo HTTP': 'section4/u03/teoria/DAW-U3.3.-ProtocoloHTTP.md'

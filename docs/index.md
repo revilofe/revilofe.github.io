@@ -125,11 +125,13 @@ Aquí tienes acceso directo a todas las presentaciones disponibles, organizadas 
 * [DAW-U1.2 - Documentación](https://revilofe.github.io/slides/section4-daw/DAW-U1.2.-Documentacion.html)
 * [DAW-U1.3 - Git y GitHub](https://revilofe.github.io/slides/section4-daw/DAW-U1.3.-GitGitHub.html)
 * [DAW-U1.4 - GitHub Actions](https://revilofe.github.io/slides/section4-daw/DAW-U1.4.-GitHubAction.html)
+* [DAW-U1.4.1 - Docker en GitHub Actions](https://revilofe.github.io/slides/section4-daw/DAW-U1.4.1.-DockerGitHubActions.html)
 
 #### Unidad 2 - Contenedores y Docker
 * [DAW-U2.1 - Docker](https://revilofe.github.io/slides/section4-daw/DAW-U2.1.-Docker.html)
 
 #### Unidad 3 - Arquitectura de Aplicaciones Web
+* [DAW-U3.1 - Desarrollo y Despliegue Web (COMPLETA)](https://revilofe.github.io/slides/section4-daw/DAW-U3.1.-DesarrolloDespliegueWeb.html)
 * [DAW-U3.1 - Introducción al Desarrollo Web](https://revilofe.github.io/slides/section4-daw/DAW-U3.1.-IntroDesarrolloWeb.html)
 * [DAW-U3.2 - Arquitecturas Web y Fundamentos del Despliegue](https://revilofe.github.io/slides/section4-daw/DAW-U3.2.-ArquitecturasWeb.html)
 * [DAW-U3.3 - El Protocolo HTTP y HTTPS](https://revilofe.github.io/slides/section4-daw/DAW-U3.3.-ProtocoloHTTP.html)

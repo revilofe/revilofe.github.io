@@ -1,0 +1,453 @@
+::RA_5.CE_a. Conceptos básicos de POO::
+Estás diseñando el modelo de datos para un sistema de biblioteca. Necesitas representar que cada libro tiene un ISBN, título y autor, y que puede ser prestado o devuelto. ¿Qué elemento UML describe mejor esta estructura en un diagrama de clases?
+{
+=Una clase con atributos privados (isbn, titulo, autor) y métodos públicos (prestar, devolver). #Correcto\: Una clase en UML encapsula tanto el estado (atributos) como el comportamiento (métodos) de los objetos del dominio. Los atributos privados protegen los datos y los métodos públicos exponen la funcionalidad necesaria para interactuar con la clase.
+~%-33.3333%Una interfaz que define las operaciones prestar() y devolver() sin atributos. #Incorrecto\: Las interfaces en UML definen contratos de comportamiento sin estado (atributos). En este caso necesitamos almacenar información del libro (ISBN, título, autor), por lo que una interfaz no es apropiada.
+~%-33.3333%Un diagrama de secuencia que muestra la interacción entre libro y usuario. #Incorrecto\: Los diagramas de secuencia son diagramas de comportamiento que muestran interacciones temporales entre objetos. Para representar la estructura estática (atributos y métodos) de un libro, necesitamos un diagrama de clases.
+~%-33.3333%Una asociación reflexiva que conecta la clase Libro consigo misma. #Incorrecto\: Una asociación reflexiva se usa cuando objetos de la misma clase se relacionan entre sí (por ejemplo, empleado-jefe). Un libro no se relaciona consigo mismo, sino que tiene atributos y comportamientos propios.
+}
+
+::RA_5.CE_b. Uso de herramientas para diagramas de clases::
+Tu equipo necesita colaborar en tiempo real en el diseño de un diagrama de clases para un sistema de comercio electrónico. ¿Qué herramienta sería más apropiada según las características del proyecto?
+{
+=Lucidchart, porque permite colaboración en tiempo real y se integra con herramientas de gestión de proyectos. #Correcto\: Lucidchart es una herramienta en la nube diseñada específicamente para colaboración en tiempo real. Permite que múltiples usuarios trabajen simultáneamente en el mismo diagrama, con historial de versiones y comentarios, ideal para equipos distribuidos.
+~%-33.3333%PlantUML, porque genera diagramas automáticamente desde archivos de texto. #Incorrecto\: Aunque PlantUML es excelente para versionar diagramas como código, no ofrece colaboración en tiempo real visual. Los miembros del equipo deben editar archivos de texto por separado y fusionar cambios, lo cual no facilita la colaboración sincrónica.
+~%-33.3333%IntelliJ IDEA con plugin UML, porque genera diagramas desde el código existente. #Incorrecto\: El plugin UML de IntelliJ es útil para generar diagramas desde código ya escrito, pero no está diseñado para colaboración en tiempo real. Cada desarrollador trabaja en su IDE local, sin sincronización inmediata de los cambios visuales.
+~%-33.3333%Microsoft Word con SmartArt, porque todos conocen la herramienta. #Incorrecto\: Word no es una herramienta especializada en UML y carece de funcionalidades esenciales como validación de notación, generación de código, o colaboración específica para diagramas técnicos. SmartArt es demasiado básico para modelado profesional.
+}
+
+::RA_5.CE_c. Interpretación de diagramas de clases::
+Observas este fragmento de diagrama\: "Usuario 1 ───── * Orden". ¿Qué información técnica puedes extraer de esta representación?
+{
+=Un usuario puede realizar múltiples órdenes, pero cada orden pertenece a un solo usuario. #Correcto\: La multiplicidad "1" junto a Usuario indica que cada orden está asociada a exactamente un usuario. La multiplicidad "*" (o "0..*") junto a Orden indica que un usuario puede tener cero o muchas órdenes. Esta es una relación uno-a-muchos típica en sistemas de comercio electrónico.
+~%-33.3333%Usuario y Orden son clases hermanas que heredan de una superclase común. #Incorrecto\: La línea simple (───) representa una asociación, no herencia. La herencia se representa con una línea terminada en triángulo vacío (───▷). Las multiplicidades 1 y * indican cardinalidad de asociación, no relaciones de herencia.
+~%-33.3333%La clase Usuario contiene la implementación completa de la clase Orden mediante composición. #Incorrecto\: La composición se representa con un rombo negro (♦). Una línea simple indica asociación, que es una relación más débil donde Orden puede existir independientemente de Usuario (aunque cada orden esté asociada a un usuario específico).
+~%-33.3333%Usuario usa temporalmente los servicios de Orden sin mantener una referencia permanente. #Incorrecto\: Eso sería una relación de dependencia, representada con línea discontinua y flecha (- - →). La línea sólida con multiplicidades indica una asociación permanente, donde Usuario mantiene referencias a sus órdenes y viceversa.
+}
+
+::RA_5.CE_d. Trazado de diagramas desde especificaciones::
+Te piden modelar un sistema universitario donde cada estudiante se matricula en varios cursos, y cada curso tiene exactamente un profesor asignado. ¿Qué relaciones y multiplicidades aplicarías?
+{
+=Estudiante "*" ───── "*" Curso (a través de Matricula) y Curso "1" ───── "1" Profesor. #Correcto\: La relación estudiante-curso es muchos-a-muchos (un estudiante puede cursar varias asignaturas y un curso tiene varios estudiantes), que se modela con una clase asociativa Matricula. La relación curso-profesor es uno-a-uno\: cada curso tiene exactamente un profesor asignado, aunque un profesor podría tener varios cursos (no especificado en el enunciado).
+~%-33.3333%Estudiante "1" ───── "*" Curso y Curso "*" ───── "1" Profesor mediante composición. #Incorrecto\: Un estudiante puede matricularse en múltiples cursos (no solo uno), por lo que la multiplicidad del lado de Estudiante debe ser "*" o "1..*", no "1". Además, la composición (♦) no es apropiada aquí porque los cursos pueden existir sin estudiantes específicos matriculados.
+~%-33.3333%Estudiante hereda de Curso, y Profesor implementa la interfaz IDocente. #Incorrecto\: La herencia (───▷) representa relaciones "es-un", pero un Estudiante no es un tipo de Curso. La matrícula es una asociación (relación "tiene" o "participa en"). Las interfaces no son relevantes en este escenario de modelado de relaciones entre entidades.
+~%-33.3333%Estudiante "1..*" ◇───── "1..*" Curso (agregación) y Curso depende temporalmente de Profesor. #Incorrecto\: La agregación (◇) sugiere que Estudiante "contiene" Curso, lo cual no refleja la realidad\: estudiantes y cursos son entidades independientes relacionadas por matrícula. Además, un curso tiene una asociación permanente con su profesor, no una dependencia temporal.
+}
+
+::RA_5.CE_c. Significado de notaciones UML::
+En un diagrama encuentras una clase con el método "calcularTotal()" subrayado. ¿Qué implica esto para la implementación en Kotlin?
+{
+=El método debe definirse dentro de un "companion object" porque es estático. #Correcto\: En UML, el subrayado indica que un miembro es estático (pertenece a la clase, no a instancias). En Kotlin, los miembros estáticos se definen en un "companion object", permitiendo llamar al método sin crear una instancia\: MiClase.calcularTotal().
+~%-33.3333%El método está marcado como "abstract" y debe implementarse en las subclases. #Incorrecto\: Los métodos abstractos se representan en UML con cursiva, no con subrayado. Un método abstracto no tiene implementación en la clase base y obliga a las subclases a proporcionar su propia implementación.
+~%-33.3333%El método es privado y solo accesible desde la misma clase. #Incorrecto\: La visibilidad se indica con símbolos (+, -, \#, ~), no con el formato de texto. El símbolo - indica privado, mientras que el subrayado específicamente marca miembros estáticos o de clase.
+~%-33.3333%El método ha sido marcado como obsoleto y no debería usarse. #Incorrecto\: UML no tiene notación estándar para elementos obsoletos mediante subrayado. La obsolescencia típicamente se documenta con notas o estereotipos como <<deprecated>>. El subrayado tiene un significado específico\: indica miembro estático.
+}
+
+::RA_5.CE_b. Relaciones en diagramas de clases::
+Estás modelando un sistema de vehículos donde un Coche tiene un Motor. Si el coche se destruye, el motor pierde sentido en ese contexto. ¿Qué tipo de relación representa mejor esta situación?
+{
+=Composición (♦), porque el Motor es parte integral del Coche y su ciclo de vida depende de él. #Correcto\: La composición representa la relación todo-parte más fuerte, donde las partes no pueden existir sin el todo. Si se destruye el Coche, el Motor también se destruye en este contexto de dominio (aunque físicamente podría reutilizarse, en el modelo conceptual está ligado al vehículo).
+~%-33.3333%Agregación (◇), porque el Motor puede ser compartido entre varios Coches. #Incorrecto\: La agregación representa una relación más débil donde la parte puede existir independientemente del todo. En el enunciado se especifica que el motor "pierde sentido" sin el coche, lo que indica una dependencia del ciclo de vida característica de la composición, no de la agregación.
+~%-33.3333%Asociación simple, porque Coche y Motor están relacionados pero son independientes. #Incorrecto\: Una asociación simple (línea sin rombo) no expresa la fuerte dependencia de ciclo de vida descrita en el enunciado. La asociación es apropiada cuando ambas clases pueden existir independientemente y simplemente se conocen o colaboran.
+~%-33.3333%Herencia (───▷), porque Motor es un tipo especializado de Componente del Coche. #Incorrecto\: La herencia representa relaciones "es-un" (Motor es un Componente), no relaciones "parte-de" (Motor es parte de Coche). Aunque podría existir una jerarquía Componente → Motor, eso no describe la relación estructural entre Coche y Motor.
+}
+
+::RA_5.CE_d. Diseño de clases con responsabilidades::
+Tu sistema tiene una clase Usuario que gestiona autenticación, envía emails, gestiona permisos y guarda datos en la base de datos. ¿Qué principio de diseño se está violando?
+{
+=El Principio de Responsabilidad Única (SRP), porque la clase tiene múltiples razones para cambiar. #Correcto\: El SRP establece que cada clase debe tener una única responsabilidad o razón para cambiar. Esta clase Usuario viola el principio porque mezcla\: (1) gestión de autenticación, (2) notificaciones, (3) autorización y (4) persistencia. Cambios en cualquiera de estas áreas requieren modificar la clase Usuario.
+~%-33.3333%El Principio de Sustitución de Liskov, porque Usuario no puede sustituirse por sus subclases. #Incorrecto\: El Principio de Sustitución de Liskov (LSP) se refiere a la correcta aplicación de herencia\: las subclases deben poder usarse donde se espera la superclase sin romper el comportamiento. El problema descrito no es de herencia, sino de cohesión\: la clase hace demasiadas cosas no relacionadas.
+~%-33.3333%El Principio de Segregación de Interfaces, porque Usuario implementa métodos que no necesita. #Incorrecto\: El ISP (Interface Segregation Principle) dice que ningún cliente debe depender de métodos que no usa. Este principio se aplica al diseño de interfaces, no al problema de una clase con múltiples responsabilidades no relacionadas.
+~%-33.3333%El Principio de Inversión de Dependencias, porque Usuario depende directamente de implementaciones concretas. #Incorrecto\: El DIP (Dependency Inversion Principle) sugiere depender de abstracciones, no de concreciones. Aunque puede ser un problema adicional, el enunciado claramente describe una violación del SRP\: una clase sobrecargada con responsabilidades no cohesivas.
+}
+
+::RA_5.CE_c. Diferencia entre agregación y composición::
+¿Cuál de los siguientes ejemplos representa correctamente una relación de agregación en lugar de composición?
+{
+=Equipo ◇───── Jugador, donde los jugadores pueden cambiar de equipo. #Correcto\: La agregación (◇) es apropiada porque los Jugadores pueden existir independientemente del Equipo. Un jugador puede cambiar de equipo, retirarse temporalmente, o existir sin pertenecer a ningún equipo. El equipo "tiene" jugadores, pero no los "contiene" de forma inseparable.
+~%-33.3333%Persona ♦───── Corazón, donde el corazón es vital para la persona. #Incorrecto\: Este es un ejemplo clásico de composición (♦), no agregación. El corazón es parte integral de la persona y no puede existir (funcionalmente) sin ella. La dependencia del ciclo de vida es total\: si la persona muere, el corazón también deja de funcionar.
+~%-33.3333%Documento ♦───── Párrafo, donde los párrafos forman el contenido del documento. #Incorrecto\: Esta es composición porque los Párrafos son partes constitutivas del Documento. Si se elimina el documento, los párrafos pierden su contexto y significado. No tiene sentido hablar de un "párrafo huérfano" fuera de su documento.
+~%-33.3333%Factura ♦───── LineaFactura, donde cada línea pertenece exclusivamente a una factura. #Incorrecto\: Las líneas de factura no tienen existencia independiente fuera de su factura. Son parte constitutiva del documento, creadas específicamente para esa factura. Si se elimina la factura, las líneas también se eliminan. Esto es composición, no agregación.
+}
+
+::RA_5.CE_b. Interfaces vs. Clases Abstractas::
+Necesitas definir un contrato que múltiples clases no relacionadas puedan implementar (por ejemplo, IVolador para Avion, Pajaro, Superman). ¿Qué opción es más apropiada?
+{
+=Una interfaz, porque permite que clases sin relación jerárquica cumplan el mismo contrato. #Correcto\: Las interfaces definen contratos de comportamiento sin imponer herencia. Avion, Pajaro y Superman no comparten una jerarquía común, pero todos pueden implementar IVolador. En Kotlin, una clase puede implementar múltiples interfaces, proporcionando flexibilidad que la herencia simple no permite.
+~%-33.3333%Una clase abstracta, porque puede proporcionar implementación parcial de métodos comunes. #Incorrecto\: Aunque las clases abstractas pueden tener implementación, solo permiten herencia simple. Avion, Pajaro y Superman probablemente heredan de otras clases base (Vehiculo, Animal, Persona). Usar una clase abstracta VueloAbstracto obligaría a romper estas jerarquías naturales.
+~%-33.3333%Una clase concreta con métodos estáticos que las demás clases puedan llamar. #Incorrecto\: Los métodos estáticos no permiten polimorfismo. No podrías tener una lista de List<IVolador> que incluya aviones, pájaros y superhéroes, ni aplicar el Principio de Sustitución de Liskov. Perderías los beneficios del diseño orientado a objetos.
+~%-33.3333%Herencia múltiple, implementando todos los comportamientos en una superclase común. #Incorrecto\: Kotlin no soporta herencia múltiple de clases (solo de interfaces). Además, forzar una superclase común para clases conceptualmente diferentes (Avion, Pajaro, Superman) violaría el principio de modelado\: estas clases no tienen una relación "es-un" natural entre sí.
+}
+
+::RA_5.CE_d. Multiplicidad en relaciones::
+En un sistema de gestión hospitalaria, ¿qué multiplicidad es correcta para la relación "Un paciente tiene citas médicas"?
+{
+=Paciente "1" ───── "0..*" Cita, porque un paciente puede tener cero o muchas citas. #Correcto\: Esta multiplicidad refleja la realidad\: cada Cita está asociada a exactamente un Paciente (multiplicidad "1"), pero un Paciente puede\: (a) no tener citas programadas (0), (b) tener varias citas (muchas). La notación "*" o "0..*" expresa "cero o muchas".
+~%-33.3333%Paciente "1" ───── "1..*" Cita, porque todo paciente debe tener al menos una cita. #Incorrecto\: Obligar la multiplicidad "1..*" (al menos una cita) es demasiado restrictivo. Un paciente puede registrarse en el sistema antes de tener citas programadas, o puede haber completado todas sus citas sin tener futuras. La multiplicidad "0..*" es más flexible y realista.
+~%-33.3333%Paciente "*" ───── "*" Cita, porque varios pacientes pueden compartir una cita. #Incorrecto\: Esto sugiere que una Cita puede tener múltiples pacientes, lo cual contradice el concepto de cita médica (típicamente individual). La multiplicidad "*" del lado de Paciente además sugiere que una cita podría existir sin paciente, lo cual no tiene sentido en este dominio.
+~%-33.3333%Paciente "1" ───── "1" Cita, porque cada cita corresponde a un solo paciente. #Incorrecto\: Aunque es cierto que cada Cita tiene un Paciente (multiplicidad "1" del lado de Paciente), restringir a "1" del lado de Cita significa que cada paciente tendría exactamente una cita. Esto no refleja la realidad\: un paciente puede tener múltiples citas a lo largo del tiempo.
+}
+
+::RA_5.CE_c. Visibilidad de atributos y métodos::
+Tienes un atributo "password" en la clase Usuario. Según las mejores prácticas de encapsulamiento, ¿cómo debería representarse en el diagrama de clases?
+{
+=Con visibilidad privada (- password\: String) y métodos públicos setter/getter si es necesario. #Correcto\: Los datos sensibles como contraseñas deben ser privados (-) para protegerlos del acceso directo. El encapsulamiento permite controlar cómo se accede y modifica el password (por ejemplo, validando longitud, hasheando antes de guardar). Los getters/setters públicos (+) proporcionan acceso controlado.
+~%-33.3333%Con visibilidad pública (+ password\: String) para facilitar el acceso desde otras clases. #Incorrecto\: Hacer un password público viola el principio de encapsulamiento y es un grave problema de seguridad. Cualquier clase podría leer o modificar la contraseña directamente sin validaciones, logging o control de acceso. Los datos sensibles siempre deben protegerse con visibilidad privada.
+~%-33.3333%Con visibilidad protegida (\# password\: String) para que las subclases puedan acceder. #Incorrecto\: Aunque la visibilidad protegida es más restrictiva que pública, sigue exponiendo el password a todas las subclases de Usuario. Esto amplía innecesariamente el alcance de acceso. Si una subclase necesita validar el password, debería usar un método protegido, no acceder directamente al atributo.
+~%-33.3333%Como atributo estático (password\: String subrayado) compartido por todas las instancias. #Incorrecto\: Un password estático significaría que todos los usuarios comparten la misma contraseña, lo cual es absurdo y peligroso. Cada instancia de Usuario debe tener su propio password (atributo de instancia). El subrayado indica miembro estático, no nivel de protección.
+}
+
+::RA_5.CE_d. Herencia vs. Composición::
+Tienes que modelar que un Empleado puede tener un Vehículo asignado (Coche o Moto). ¿Qué diseño es más adecuado?
+{
+=Crear una clase Vehiculo con subclases Coche y Moto, y una asociación Empleado ◇───── Vehiculo. #Correcto\: Este diseño usa herencia apropiadamente (Coche y Moto son tipos de Vehiculo) y agregación para la relación Empleado-Vehiculo (◇), porque el vehículo puede existir sin el empleado. Esto permite flexibilidad\: un empleado puede no tener vehículo, cambiar de vehículo, o compartirlo.
+~%-33.3333%Hacer que Empleado herede de Vehiculo para reutilizar código. #Incorrecto\: Un Empleado no es un tipo de Vehiculo, por lo que la herencia es inapropiada (violación de "es-un"). La relación correcta es de agregación\: un Empleado "tiene un" Vehiculo. Usar herencia aquí crearía un modelo conceptualmente incorrecto y confuso.
+~%-33.3333%Crear una composición fuerte Empleado ♦───── Vehiculo para garantizar que cada empleado tenga vehículo. #Incorrecto\: La composición (♦) implicaría que el Vehiculo no puede existir sin el Empleado, lo cual es falso\: los vehículos existen en el inventario de la empresa independientemente de sus asignaciones. Además, la composición no refleja que algunos empleados puedan no tener vehículo asignado.
+~%-33.3333%Usar una interfaz IConducible que tanto Empleado como Vehiculo implementen. #Incorrecto\: Este diseño confunde las responsabilidades\: los empleados conducen vehículos, no son conducibles ellos mismos. Una interfaz IConducible sería apropiada para diferentes tipos de vehículos, pero no establece la relación de propiedad/asignación entre Empleado y Vehiculo.
+}
+
+::RA_5.CE_b. Dependencia vs. Asociación::
+¿Cuándo deberías usar una relación de dependencia (- - →) en lugar de una asociación (───)?
+{
+=Cuando una clase usa temporalmente otra (por parámetro, variable local) sin mantener referencia permanente. #Correcto\: La dependencia indica uso puntual sin relación estructural permanente. Por ejemplo, un método calcularDescuento(producto\: Producto) usa Producto temporalmente como parámetro. La clase no guarda una referencia al producto después de la llamada.
+~%-33.3333%Cuando dos clases necesitan conocerse mutuamente de forma bidireccional. #Incorrecto\: El conocimiento mutuo bidireccional se representa con asociación bidireccional (──), no con dependencia. La dependencia es unidireccional y temporal\: una clase usa otra sin mantener una relación permanente.
+~%-33.3333%Cuando una clase contiene múltiples instancias de otra clase en una colección. #Incorrecto\: Contener instancias en una colección (List, Set, etc.) implica una relación estructural permanente, que se modela con asociación (───) o agregación (◇). La dependencia no es apropiada porque existe una referencia duradera, no uso temporal.
+~%-33.3333%Cuando quieres indicar que una clase hereda de otra clase base. #Incorrecto\: La herencia se representa con una línea sólida terminada en triángulo vacío (───▷), no con dependencia. La dependencia (línea discontinua con flecha simple) tiene un significado completamente diferente\: uso temporal sin relación de subtipado.
+}
+
+::RA_5.CE_d. Roles en relaciones::
+En un diagrama de clases ves "Trabajador -jefe 0..1 ───── 0..* +subordinados Trabajador". ¿Qué información transmiten los roles "jefe" y "subordinados"?
+{
+=Clarifican la semántica de la relación reflexiva\: cada trabajador puede tener un jefe y múltiples subordinados. #Correcto\: Los roles son especialmente importantes en relaciones reflexivas (una clase relacionada consigo misma). "jefe" (0..1) indica que un trabajador puede tener cero o un jefe. "subordinados" (0..*) indica que un trabajador puede supervisar cero o varios subordinados. Los signos - y + sugieren visibilidad de las propiedades resultantes.
+~%-33.3333%Indican que "jefe" es privado y "subordinados" es público en la implementación. #Incorrecto\: Aunque los símbolos - y + suelen indicar visibilidad en atributos, en el contexto de roles de asociación son descriptores opcionales. Lo fundamental es que "jefe" y "subordinados" clarifican la naturaleza de la relación\: quién supervisa a quién. La visibilidad se especifica principalmente en los compartimentos de la clase.
+~%-33.3333%Señalan que la clase Trabajador hereda de dos superclases\: Jefe y Subordinado. #Incorrecto\: Los roles no indican herencia. La línea que conecta dos extremos de la misma clase (Trabajador) es una asociación reflexiva, no herencia. Si fuera herencia, habría clases separadas Jefe y Subordinado con líneas terminadas en triángulos apuntando a Trabajador.
+~%-33.3333%Especifican los nombres de los métodos que se deben implementar en la clase Trabajador. #Incorrecto\: Los roles nombran las propiedades de navegación en la relación, no métodos. En código, probablemente se implementarían como propiedades\: "val jefe\: Trabajador?" y "val subordinados\: List<Trabajador>", no como métodos. Los métodos se representan en el tercer compartimento de la clase.
+}
+
+::RA_5.CE_c. Clases abstractas en UML::
+Ves una clase llamada "Vehiculo" escrita en *cursiva* en un diagrama. ¿Qué significa esto y cómo afecta la implementación?
+{
+=Es una clase abstracta que no puede instanciarse directamente y sirve como base para subclases. #Correcto\: La cursiva en UML indica que una clase es abstracta. En Kotlin, se declararía como "abstract class Vehiculo". No se pueden crear objetos de Vehiculo directamente (no puedes hacer "Vehiculo()"), solo de sus subclases concretas como Coche o Moto. Puede contener métodos abstractos que las subclases deben implementar.
+~%-33.3333%Es una interfaz que define métodos sin implementación. #Incorrecto\: Las interfaces se marcan con el estereotipo <<interface>> sobre el nombre, no con cursiva. Aunque tanto clases abstractas como interfaces pueden tener métodos sin implementación, una clase en cursiva específicamente indica clase abstracta, que puede tener atributos y métodos con implementación además de métodos abstractos.
+~%-33.3333%Es una clase obsoleta que no debería usarse en nuevas implementaciones. #Incorrecto\: UML no usa cursiva para marcar elementos obsoletos. La notación estándar para elementos deprecated es el estereotipo <<deprecated>> o notas explicativas. La cursiva tiene un significado específico y estándar\: indica que la clase es abstracta.
+~%-33.3333%Es una clase con todos sus métodos estáticos (de clase). #Incorrecto\: Los miembros estáticos se marcan con subrayado, no con cursiva. Una clase puede tener métodos estáticos sin ser abstracta. La cursiva exclusivamente señala que la clase es abstracta y no puede instanciarse directamente, independientemente de si tiene miembros estáticos.
+}
+
+::RA_5.CE_e. Generación de código desde diagrama::
+Si generas código Kotlin desde un diagrama que muestra "Pedido ♦───── LineaPedido", ¿qué estructura de código esperarías?
+{
+=Una inner class LineaPedido dentro de Pedido, o una propiedad val lineas\: List<LineaPedido> en Pedido. #Correcto\: La composición (♦) indica que LineaPedido es parte integral de Pedido. En Kotlin, esto se puede implementar con una inner class (que refuerza la dependencia del ciclo de vida) o con una lista de LineaPedido donde Pedido gestiona completamente el ciclo de vida de las líneas. Si se elimina el Pedido, las líneas también se eliminan.
+~%-33.3333%La clase LineaPedido hereda de Pedido usando la palabra clave "extends". #Incorrecto\: La composición (♦) no representa herencia, sino una relación parte-todo donde la parte no puede existir sin el todo. La herencia se representa con triángulo vacío (───▷). Además, Kotlin usa ":" para herencia, no "extends" (que es sintaxis de Java).
+~%-33.3333%Un companion object en LineaPedido con una referencia estática a Pedido. #Incorrecto\: La composición es una relación de instancia, no de clase. Cada instancia de Pedido contiene sus propias instancias de LineaPedido. Los companion objects contienen miembros estáticos compartidos por todas las instancias, lo cual no refleja la naturaleza de la composición.
+~%-33.3333%Una interfaz ILineaPedido que Pedido implementa para cumplir el contrato. #Incorrecto\: La composición indica relación de contención estructural, no implementación de interfaz. Pedido "contiene" o "está compuesto por" líneas de pedido, no "implementa" el comportamiento de LineaPedido. Las interfaces se representan con líneas discontinuas con triángulo (- - ▷).
+}
+
+###
+
+
+::RA_5.CE_a. Estructura de la clase::
+En un diagrama entregado solo aparece el nombre de la clase dentro de un único rectángulo. ¿Qué debería añadirse para cumplir la notación UML?
+{
+=Dividir la caja en tres compartimentos para nombre, atributos y métodos. #Correcto\: La notación estándar exige tres zonas horizontales diferenciadas para mostrar estado y comportamiento; sin ellas no se aprecia la estructura de la clase.
+~%-33.3333%Colocar una lista de métodos debajo del nombre sin separar zonas. #Incorrecto\: Sin compartimentos no se distinguen atributos de operaciones, rompiendo la lectura rápida del diagrama.
+~%-33.3333%Añadir un estereotipo <<interface>> aunque no haya métodos. #Incorrecto\: El estereotipo es para interfaces; aquí se necesita la estructura básica de clase con sus tres zonas.
+~%-33.3333%Dibujar la clase en cursiva para marcarla como abstracta. #Incorrecto\: La cursiva solo indica abstracción; no resuelve la ausencia de compartimentos para atributos y métodos.
+}
+
+::RA_5.CE_a. Convención de nombres de clases::
+Al revisar el modelo, encuentras clases llamadas "usuarios", "CrearPedido" y "carritoCompras". ¿Cuál es la corrección alineada con las reglas de UML?
+{
+=Renombrarlas como "Usuario", "Pedido" y "CarritoCompras" en PascalCase y singular. #Correcto\: La guía indica sustantivos singulares con PascalCase para mejorar claridad y coherencia visual en UML y código.
+~%-33.3333%Usar snake_case: "usuario", "crear_pedido", "carrito_compras". #Incorrecto\: snake_case no es la convención recomendada para clases y mezcla verbos con sustantivos.
+~%-33.3333%Mantener el plural para reflejar colecciones dentro del sistema. #Incorrecto\: El plural se reserva para colecciones, no para el nombre de la clase que representa el concepto.
+~%-33.3333%Añadir prefijo I a todas las clases para identificarlas rápido. #Incorrecto\: El prefijo I se reserva para interfaces; aplicarlo a clases rompe la semántica indicada.
+}
+
+::RA_5.CE_b. Notación de atributos::
+Quieres documentar que una propiedad privada edad de tipo Int empieza en 0. ¿Cuál es la notación UML correcta en la zona de atributos?
+{
+=- edad : Int \= 0 #Correcto\: El formato visibilidad nombre\:tipo \= valor inicial deja claro el acceso privado y la inicialización.
+~%-33.3333%+ edad(Int) #Incorrecto\: Esa notación corresponde a parámetros o métodos, no a atributos.
+~%-33.3333%edad \= 0 : Int #Incorrecto\: El orden difiere del esquema oficial y puede confundir la lectura.
+~%-33.3333%# edad : Int {abstract} #Incorrecto\: Un atributo no se marca como abstracto; esa propiedad aplica a operaciones.
+}
+
+::RA_5.CE_c. Atributos estáticos en Kotlin::
+Necesitas un contador global de instancias en la clase Sesion. ¿Cómo se refleja correctamente la propiedad estática según el paralelismo UML-Kotlin descrito?
+{
+=Declararla en un companion object, subrayando su nombre en UML. #Correcto\: El subrayado marca miembros de clase y en Kotlin se implementan dentro del companion object para compartir valor entre todas las instancias.
+~%-33.3333%Crear una var normal en el constructor primario. #Incorrecto\: Sería un atributo de instancia, cada objeto tendría su propio contador.
+~%-33.3333%Usar una constante top-level fuera de la clase. #Incorrecto\: Una constante global no pertenece a la clase ni se muestra como miembro estático en el diagrama.
+~%-33.3333%Poner la variable en cursiva dentro del compartimento de atributos. #Incorrecto\: La cursiva indica abstracción, no pertenencia a clase; el subrayado es el símbolo correcto.
+}
+
+::RA_5.CE_c. Métodos y tipo de retorno::
+En la zona de operaciones aparece "calcularTotal(precio\: Double, iva\: Double)". ¿Qué falta para que cumpla el formato visto?
+{
+=Indicar el tipo devuelto, por ejemplo ": Double" tras los parámetros. #Correcto\: El formato completo es nombre(parámetros) \: tipo; sin el tipo no se sabe si devuelve valor o es Unit.
+~%-33.3333%Anteponer el símbolo "-" para marcarlo público. #Incorrecto\: El símbolo "-" marca privado; además, la visibilidad se coloca antes del nombre, pero sigue faltando el tipo devuelto.
+~%-33.3333%Escribir los parámetros en snake_case para distinguirlos. #Incorrecto\: La convención de parámetros es camelCase; el problema real es la ausencia del tipo de retorno.
+~%-33.3333%Añadir llaves con propiedades {static}. #Incorrecto\: Las propiedades opcionales no sustituyen al tipo devuelto y podrían alterar el significado si no procede ser estático.
+}
+
+::RA_5.CE_a. Multiplicidad a código::
+Modelas Curso 1 ───── 1..* Clase. ¿Qué traducción a Kotlin respeta esa multiplicidad según el ejemplo dado?
+{
+=Curso mantiene una lista de Clase y cada Clase tiene referencia a un único Curso. #Correcto\: La lista refleja el 1..* y la referencia en Clase mantiene el 1, tal como se mostró en la conversión a código.
+~%-33.3333%Clase contiene una lista de Curso para registrar sus horarios. #Incorrecto\: Invertir la colección rompe la cardinalidad; una clase pertenece a un solo curso.
+~%-33.3333%Ambas clases usan una dependencia temporal sin guardar referencias. #Incorrecto\: La multiplicidad implica relación estructural, no un uso puntual como en dependencia.
+~%-33.3333%Solo se documenta en comentarios porque Kotlin no soporta multiplicidad. #Incorrecto\: Sí se representa mediante colecciones y referencias explícitas en las clases.
+}
+
+::RA_5.CE_b. Navegabilidad en asociaciones::
+En la relación Matricula ───> Curso la flecha solo apunta a Curso. ¿Qué implica esto para la implementación?
+{
+=La asociación es unidireccional: Matricula conoce Cursos, pero Curso no referencia Matriculas. #Correcto\: Así se explicó en el ejemplo, donde Curso no necesita almacenar sus matrículas para cumplir el requisito.
+~%-33.3333%Ambas clases deben tener listas recíprocas para mantener consistencia. #Incorrecto\: Eso sería una asociación bidireccional; el caso descrito elimina la referencia inversa.
+~%-33.3333%Se trata de una dependencia porque solo hay una flecha. #Incorrecto\: La flecha marca navegabilidad en asociación, no la convierte en dependencia discontinua.
+~%-33.3333%La multiplicidad se vuelve opcional y puede omitirse. #Incorrecto\: La flecha no elimina la necesidad de cardinalidades; siguen siendo parte de la relación.
+}
+
+::RA_5.CE_c. Roles en relaciones reflexivas::
+En una jerarquía de personal, el rol "+subordinados" aparece junto a la multiplicidad 0..*. ¿Qué indica este rol según la guía?
+{
+=Define la propiedad de navegación que tendrá cada jefe para acceder a su lista de subordinados. #Correcto\: El rol nombra la vista desde la clase opuesta y se convierte en la propiedad accesible en código.
+~%-33.3333%Obliga a que la lista sea pública aunque el resto de atributos sean privados. #Incorrecto\: El signo + en el rol es informativo en la relación; la visibilidad real se especifica en la clase.
+~%-33.3333%Se usa solo para relaciones de herencia entre superclases y subclases. #Incorrecto\: El rol se emplea en asociaciones, especialmente reflexivas, no en generalización.
+~%-33.3333%Marca que la relación es composición y destruye subordinados al borrar el jefe. #Incorrecto\: La composición se señala con rombo; el rol no altera el tipo de relación ni su ciclo de vida.
+}
+
+::RA_5.CE_d. Agregación en el contexto de vehículo y radio::
+En el ejemplo Automovil ◇──── RadioCD, ¿por qué se eligió agregación y no composición?
+{
+=Porque la RadioCD puede instalarse o existir fuera del automóvil sin perder sentido. #Correcto\: La guía destaca que la parte puede vivir independiente, característica clave de la agregación con rombo vacío.
+~%-33.3333%Porque ambos objetos se destruyen siempre al mismo tiempo. #Incorrecto\: Esa dependencia de ciclo de vida es propia de la composición, no de la agregación.
+~%-33.3333%Porque la RadioCD se define como inner class dentro de Automovil. #Incorrecto\: No es inner en el ejemplo; además, el rombo vacío ya comunica independencia.
+~%-33.3333%Porque la multiplicidad siempre es 0..1 en el extremo de la parte. #Incorrecto\: La multiplicidad puede variar; lo determinante es la posibilidad de existencia independiente.
+}
+
+::RA_5.CE_d. Composición en motor y automóvil::
+Si modelas Automovil ♦──── Motor, ¿qué decisión de implementación refuerza la dependencia fuerte descrita?
+{
+=Definir Motor como inner class o crearla siempre junto al Automovil. #Correcto\: Ambos enfoques aseguran que el motor vive y muere con el automóvil, reflejando la composición.
+~%-33.3333%Usar una interfaz IMotor para desacoplar las piezas. #Incorrecto\: Una interfaz no expresa la dependencia de ciclo de vida propia de la composición.
+~%-33.3333%Declarar la propiedad motor como nullable y sin inicializar. #Incorrecto\: Permitir null debilita la relación y no garantiza creación conjunta.
+~%-33.3333%Compartir el mismo Motor entre varios Automovil para ahorrar memoria. #Incorrecto\: Compartir partes contradice la composición, donde cada todo tiene sus partes exclusivas.
+}
+
+::RA_5.CE_b. Representación de interfaces::
+Un alumno dibuja una interfaz sin estereotipo y con atributos de estado. ¿Cuál es la corrección?
+{
+=Añadir <<interface>> y limitarse a operaciones, sin atributos de estado. #Correcto\: La interfaz es un contrato de métodos; el estereotipo y la ausencia de atributos lo clarifican en UML.
+~%-33.3333%Escribir el nombre en cursiva y subrayar los métodos. #Incorrecto\: La cursiva marca abstracción y el subrayado marca estáticos; ninguno identifica interfaz.
+~%-33.3333%Colocar los atributos en un bloque separado con rombo blanco. #Incorrecto\: El rombo pertenece a agregación; la interfaz no debe listar atributos de estado.
+~%-33.3333%Renombrar la interfaz con prefijo Abstract sin cambiar la notación. #Incorrecto\: El problema es la notación UML; el prefijo no sustituye al estereotipo ni al contrato sin atributos.
+}
+
+::RA_5.CE_c. Implementación vs clase abstracta::
+Necesitas que Pajaro herede comportamiento común de Animal y, además, cumpla un contrato de vuelo. ¿Qué relación doble se debe reflejar?
+{
+=Herencia sólida hacia Animal y realización discontinua hacia IVolador. #Correcto\: La guía muestra Pajaro extendiendo la clase abstracta y a la vez implementando la interfaz con línea discontinua y triángulo.
+~%-33.3333%Dos relaciones de herencia sólidas, una a Animal y otra a IVolador. #Incorrecto\: Una interfaz se implementa con realización; dibujar herencia sugiere jerarquía de clases.
+~%-33.3333%Solo la interfaz, porque así evita cualquier dependencia con Animal. #Incorrecto\: Se perdería la implementación común que aporta la clase abstracta.
+~%-33.3333%Una dependencia discontinua a ambas para mantener el acoplamiento bajo. #Incorrecto\: La dependencia no refleja obligatoriedad ni reutilización; la unidad exige herencia y realización.
+}
+
+::RA_5.CE_c. Visibilidad en atributos sensibles::
+Quieres mostrar la propiedad password de Usuario en el diagrama. ¿Qué símbolo de visibilidad usar y por qué?
+{
+=El signo "-" para marcarla privada y controlar acceso mediante métodos. #Correcto\: La tabla de visibilidades indica "-" como privado, idóneo para datos sensibles que requieren encapsulación.
+~%-33.3333%El signo "+" para simplificar el acceso desde cualquier clase. #Incorrecto\: Haría pública la contraseña, violando encapsulamiento y seguridad básica.
+~%-33.3333%El signo "\#" porque así la podrán usar las subclases. #Incorrecto\: Protegido amplía el alcance innecesariamente; no es la opción recomendada para un password.
+~%-33.3333%Sin símbolo, porque la visibilidad se deduce en la implementación. #Incorrecto\: La notación UML exige explicitarla; omitirla resta claridad al diseño.
+}
+
+::RA_5.CE_d. Dependencia frente a asociación::
+En el código de Calculadora se usa kotlin.math.pow dentro de un método sin guardar la referencia. ¿Cómo se modela esto correctamente en UML?
+{
+=Con una dependencia discontinua hacia Math/pow, indicando uso temporal. #Correcto\: La relación - - → refleja que se invoca puntualmente sin mantener referencia, tal como se explicó.
+~%-33.3333%Con una asociación sólida porque hay llamada directa a otro componente. #Incorrecto\: La asociación implica conocimiento estructural; aquí solo hay uso puntual.
+~%-33.3333%Como composición, ya que sin Math el método no funciona. #Incorrecto\: Composición trata de ciclo de vida de objetos, no de llamadas utilitarias.
+~%-33.3333%Mediante herencia para reutilizar los métodos matemáticos. #Incorrecto\: No se heredan utilidades; basta con la dependencia temporal que no añade acoplamiento fuerte.
+}
+
+::RA_5.CE_e. Gestión de complejidad en diagramas::
+Un diagrama único mezcla 60 clases de todos los módulos y es ilegible. ¿Qué recomienda la unidad?
+{
+=Dividirlo en vistas por módulos o capas (presentación, negocio, datos). #Correcto\: La sección de complejidad propone varios diagramas especializados en vez de uno masivo.
+~%-33.3333%Incrementar el tamaño de fuente y exportar en A0 para verlo entero. #Incorrecto\: El problema es la densidad y mezcla de niveles, no el tamaño del lienzo.
+~%-33.3333%Eliminar las multiplicidades para reducir ruido visual. #Incorrecto\: Quitar cardinalidades sacrifica información clave; la solución es segmentar.
+~%-33.3333%Pasar todo a pseudo-código y descartar la notación UML. #Incorrecto\: Se pierde la comunicación visual; la guía insiste en reorganizar, no abandonar UML.
+}
+
+::RA_5.CE_e. Uso de color en diagramas::
+Quieres añadir color para distinguir elementos. ¿Qué pauta propuesta mejora la legibilidad sin abusar?
+{
+=Asignar pocos colores con leyenda (dominio en azul, servicios en verde, interfaces en púrpura). #Correcto\: La unidad sugiere un esquema limitado con significado claro y una leyenda para interpretarlo.
+~%-33.3333%Colorear cada clase con un tono único para que no se repitan. #Incorrecto\: Demasiados colores dificultan la lectura y carecen de semántica.
+~%-33.3333%Usar solo rojo para todo para que resalte en impresión. #Incorrecto\: Un solo color no distingue roles y puede perder contraste en blanco y negro.
+~%-33.3333%Evitar la leyenda porque los colores se intuyen. #Incorrecto\: Sin leyenda no se comunica el significado; la guía pide explicitarlo.
+}
+
+
+####
+
+::RA_UML.01 Modelado temprano::
+¿Por qué es ventajoso detectar errores en un diagrama antes de codificar? {
+=Porque corregir el diseño en planos es mucho más barato que refactorizar código. #Correcto\: los cambios en modelos evitan costes altos en implementación o producción.
+~%-33.3333%Porque evita la necesidad de pruebas unitarias. #Incorrecto\: las pruebas siguen siendo necesarias.
+~%-33.3333%Porque obliga a reescribir toda la arquitectura. #Incorrecto\: el objetivo es minimizar retrabajo.
+~%-33.3333%Porque reemplaza la comunicación con el cliente. #Incorrecto\: el modelado no sustituye el diálogo con el cliente.
+}
+
+::RA_UML.02 Lenguaje común::
+¿Qué aporta UML a equipos con roles muy diferentes? {
+=Un lenguaje visual estándar que todos comprenden para discutir el sistema. #Correcto\: unifica comunicación entre perfiles técnicos y de negocio.
+~%-33.3333%Un DSL que solo entiende el arquitecto. #Incorrecto\: UML no es exclusivo de un rol.
+~%-33.3333%Un compilador de código multiplataforma. #Incorrecto\: UML no compila nada.
+~%-33.3333%Un reemplazo de la documentación funcional. #Incorrecto\: complementa, no sustituye requisitos.
+}
+
+::RA_UML.03 Independencia tecnológica::
+Un producto cambia de stack técnico. ¿Por qué el modelo UML sigue sirviendo? {
+=Porque describe la lógica del dominio sin depender de lenguajes o plataformas. #Correcto\: UML es neutral a tecnología.
+~%-33.3333%Porque incluye scripts de despliegue específicos. #Incorrecto\: UML no define scripts.
+~%-33.3333%Porque fuerza a usar Java. #Incorrecto\: no impone lenguajes.
+~%-33.3333%Porque bloquea migraciones. #Incorrecto\: su neutralidad facilita migrar.
+}
+
+::RA_UML.04 Diagramas estructurales::
+¿Qué pregunta responden los diagramas estructurales en UML? {
+=De qué está hecho el sistema: clases, componentes y relaciones estáticas. #Correcto\: muestran la arquitectura estática.
+~%-33.3333%Cómo fluyen los mensajes en el tiempo. #Incorrecto\: eso es de interacción/comportamiento.
+~%-33.3333%Qué hardware soporta el sistema operativo. #Incorrecto\: enfoque equivocado.
+~%-33.3333%Qué pruebas automatizadas existen. #Incorrecto\: no es su propósito.
+}
+
+::RA_UML.05 Diagramas de comportamiento::
+¿Cuál es la finalidad de los diagramas de comportamiento? {
+=Mostrar qué hace el sistema y cómo evoluciona su flujo de acciones. #Correcto\: describen comportamiento y procesos.
+~%-33.3333%Definir particiones de red. #Incorrecto\: no es su foco.
+~%-33.3333%Listar atributos de cada clase. #Incorrecto\: es aspecto estructural.
+~%-33.3333%Marcar dependencias de librerías. #Incorrecto\: no es su función.
+}
+
+::RA_UML.06 Selección de diagrama::
+Necesitas entender el flujo de un proceso de negocio. ¿Qué diagrama es adecuado? {
+=Diagrama de actividades. #Correcto\: muestra flujo de trabajo y decisiones.
+~%-33.3333%Diagrama de componentes. #Incorrecto\: muestra arquitectura estática.
+~%-33.3333%Diagrama de temporización. #Incorrecto\: se centra en restricciones de tiempo.
+~%-33.3333%Diagrama de paquetes. #Incorrecto\: organiza elementos, no flujos.
+}
+
+::RA_UML.07 Interacciones temporales::
+Se quiere reflejar mensajes entre objetos con orden temporal claro. ¿Qué diagrama usar? {
+=Diagrama de secuencia. #Correcto\: destaca el timeline de mensajes.
+~%-33.3333%Diagrama de comunicación. #Incorrecto\: prioriza relaciones, no el tiempo.
+~%-33.3333%Diagrama de casos de uso. #Incorrecto\: muestra requisitos de usuario.
+~%-33.3333%Diagrama de despliegue. #Incorrecto\: modela nodos e infraestructura.
+}
+
+::RA_UML.08 Caso de uso::
+¿Qué aporta un diagrama de casos de uso a interlocutores no técnicos? {
+=Una visión de requisitos desde la perspectiva del usuario. #Correcto\: describe qué debe hacer el sistema.
+~%-33.3333%La topología de red. #Incorrecto\: no trata infraestructura.
+~%-33.3333%El detalle de cada atributo de la base de datos. #Incorrecto\: no entra a ese nivel.
+~%-33.3333%El plan de pruebas automatizadas. #Incorrecto\: no es su objetivo.
+}
+
+::RA_UML.09 Alternativas a UML::
+¿Cuándo es razonable elegir C4 Model en vez de UML? {
+=Cuando se busca documentar arquitectura con una notación más simple y jerárquica. #Correcto\: C4 prioriza simplicidad en arquitectura.
+~%-33.3333%Cuando se necesita modelar hardware embebido. #Incorrecto\: UML y SysML son más adecuados.
+~%-33.3333%Cuando se requiere especificar procesos legales. #Incorrecto\: no es el foco de C4.
+~%-33.3333%Cuando se deben representar estados a bajo nivel. #Incorrecto\: C4 no cubre estados detallados.
+}
+
+::RA_UML.10 Uso en ágil::
+¿Cómo aplicar UML sin frenar un equipo ágil? {
+=Crear solo los diagramas que den claridad inmediata y actualizarlos al cambiar la arquitectura. #Correcto\: enfoque pragmático y just-in-time.
+~%-33.3333%Documentar cada clase antes de codificar. #Incorrecto\: es exceso de formalismo.
+~%-33.3333%Prohibir cualquier diagrama. #Incorrecto\: perdería valor de comunicación.
+~%-33.3333%Escribir un manual UML completo y no tocarlo. #Incorrecto\: quedaría obsoleto.
+}
+
+::RA_IDC.11 Objetivo del filtrado::
+Tras listar sustantivos de requisitos, ¿por qué filtrarlos? {
+=Para descartar sinónimos, atributos y estados y quedarte con clases relevantes. #Correcto\: reduce falsos positivos.
+~%-33.3333%Para decidir la base de datos física. #Incorrecto\: el filtrado va antes de diseño físico.
+~%-33.3333%Para definir roles de usuarios. #Incorrecto\: el propósito es depurar clases candidatas.
+~%-33.3333%Para eliminar todos los verbos. #Incorrecto\: los verbos guían métodos y relaciones.
+}
+
+::RA_IDC.12 Clase vs atributo::
+En un sistema de pedidos, “Dirección” solo guarda calle y número. ¿Cómo modelarla? {
+=Como atributo de Cliente/Pedido al no requerir comportamiento complejo. #Correcto\: es un dato simple.
+~%-33.3333%Como jerarquía de clases con herencia múltiple. #Incorrecto\: excesivo.
+~%-33.3333%Como transacción independiente. #Incorrecto\: no es una operación del dominio.
+~%-33.3333%Como nodo de despliegue. #Incorrecto\: nada que ver con infraestructura.
+}
+
+::RA_IDC.13 Préstamo en biblioteca::
+¿Por qué “Préstamo” suele ser clase en un sistema de biblioteca? {
+=Porque encapsula fechas, estado y comportamientos como calcular retraso o devolver. #Correcto\: tiene datos y lógica propios.
+~%-33.3333%Porque solo es un string. #Incorrecto\: tiene estructura y comportamiento.
+~%-33.3333%Porque es un atributo de Copia. #Incorrecto\: es una entidad transaccional.
+~%-33.3333%Porque no requiere persistencia. #Incorrecto\: normalmente se persiste.
+}
+
+::RA_IDC.14 Sub-diseño detectado::
+Un método enorme gestiona reservas sin una entidad propia. ¿Qué falta? {
+=Crear una clase de dominio que encapsule la transacción y su lógica. #Correcto\: reduce complejidad y centraliza responsabilidades.
+~%-33.3333%Convertir todo en métodos estáticos. #Incorrecto\: no soluciona la ausencia de entidad.
+~%-33.3333%Añadir más utilidades genéricas. #Incorrecto\: no aborda el problema de diseño.
+~%-33.3333%Forzar herencia múltiple. #Incorrecto\: no es la necesidad aquí.
+}
+
+::RA_IDC.15 Sobre-diseño evitado::
+¿Qué regla práctica ayuda a no crear clases innecesarias? {
+=Si tiene pocas propiedades y sin comportamiento, empieza como atributo. #Correcto\: es más fácil promover luego a clase.
+~%-33.3333%Crear siempre una clase por cada sustantivo. #Incorrecto\: conduce a sobre-diseño.
+~%-33.3333%Incluir herencia por defecto. #Incorrecto\: agrega complejidad sin motivo.
+~%-33.3333%Usar patrones singleton en todos los modelos. #Incorrecto\: no corresponde.
+}
+
+::RA_IDC.16 Validación del modelo::
+¿Qué indicador muestra que el modelo cubre requisitos? {
+=Cada funcionalidad tiene una clase responsable clara. #Correcto\: asegura cobertura funcional.
+~%-33.3333%El diagrama tiene más de 50 clases. #Incorrecto\: puede indicar exceso.
+~%-33.3333%No existen asociaciones. #Incorrecto\: sin relaciones el modelo queda incompleto.
+~%-33.3333%Todos los nombres son genéricos. #Incorrecto\: nombres vagos dificultan validación.
+}
+
+::RA_IDC.17 Iteración necesaria::
+¿Qué señal pide otra iteración de identificación? {
+=Persisten clases sospechosamente vacías o responsabilidades sin dueño. #Correcto\: hay huecos de diseño.
+~%-33.3333%Los nombres tienen menos de 5 caracteres. #Incorrecto\: longitud no es criterio.
+~%-33.3333%El diagrama cabe en una página. #Incorrecto\: el tamaño no define necesidad.
+~%-33.3333%Hay atributos privados. #Incorrecto\: no es motivo para iterar.
+}
+
+::RA_IDC.18 Roles y combinaciones::
+Una persona puede ser estudiante y becario simultáneamente. ¿Qué diseño es flexible? {
+=Clase Usuario con colección de roles para combinar comportamientos. #Correcto\: admite múltiples roles por persona.
+~%-33.3333%Subclase para cada combinación posible. #Incorrecto\: escala mal.
+~%-33.3333%Eliminar el rol de becario. #Incorrecto\: pierde requisito.
+~%-33.3333%Un booleano por rol en cada subclase. #Incorrecto\: complejidad y poca extensibilidad.
+}
+
+::RA_IDC.19 Patrones frecuentes::
+Cliente y Venta aparecen en un dominio de comercio. ¿Qué patrón sugieren? {
+=Maestro-Transacción: entidad principal con operaciones registradas. #Correcto\: patrón típico.
+~%-33.3333%Catálogo-Instancia. #Incorrecto\: no se describe catálogo.
+~%-33.3333%Contenedor-Contenido. #Incorrecto\: no es la relación destacada.
+~%-33.3333%Entidad-Detalle. #Incorrecto\: faltan líneas de detalle en el enunciado.
+}
+
+::RA_IDC.20 Fuente de clases::
+¿Dónde buscar conceptos si no hay requisitos extensos? {
+=En mockups o pantallas: tablas y formularios revelan entidades clave. #Correcto\: la UI sugiere clases del dominio.
+~%-33.3333%En logs de producción sin filtrado. #Incorrecto\: ruido y poca estructura inicial.
+~%-33.3333%Solo en el esquema físico de BD existente. #Incorrecto\: puede arrastrar problemas previos.
+~%-33.3333%En la lista de tecnologías del proyecto. #Incorrecto\: tecnología no define el dominio.
+}

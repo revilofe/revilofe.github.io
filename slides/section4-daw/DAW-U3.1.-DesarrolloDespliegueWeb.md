@@ -291,6 +291,7 @@ Authorization: Bearer eyJhbGci...
 
 Note: DELETE requiere autenticación fuerte. La header Authorization incluye token. Petición elimina usuario 123. 
 
+
 ### 1.9. Métodos HTTP: DELETE II
 
 **Ejemplo Respuesta (exitosa):**
@@ -604,14 +605,13 @@ Note: Proceso completo implica múltiples componentes. Servidor web (Apache, Ngi
 
 ### 1.15. Tecnologías Server-Side
 
-**PHP**: El más popular, LAMP stack
-**Python**: Django, Flask, elegante
-**Java**: Spring Boot, empresarial
-**Node.js**: JavaScript everywhere
-**Ruby**: Rails, productividad
+* **PHP**: El más popular, LAMP stack   
+* **Python**: Django, Flask, elegante   
+* **Java**: Spring Boot, empresarial   
+* **Node.js**: JavaScript everywhere  
+* **Ruby**: Rails, productividad  
 
 Note: Cada tecnología tiene fortalezas. PHP domina hosting compartido, fácil aprender. Python excelente para apps complejas. Java robusto para enterprise. Node.js mismo lenguaje frontend/backend. Ruby optimiza desarrollo rápido.
-
 
 ---
 
@@ -679,16 +679,21 @@ Note: No hay arquitectura única correcta. Monolito perfecto para comenzar, vali
 
 
 ### 2.5. Patrón MVC
+Componentes: 
+* **Modelo**: Datos y lógica negocio. Esta acargo de gestionar el acceso a la base de datos, las reglas de negocio y la lógica de la aplicación.
+* **Vista**: Presentación UI. Esta encargada de mostrar los datos al usuario y de manejar la interacción con él.
+* **Controlador**: Coordina Modelo-Vista. Esta recibe las peticiones del usuario, invoca el Modelo para procesar datos y selecciona la Vista adecuada para mostrar la respuesta.
 
-**Modelo**: Datos y lógica negocio
-**Vista**: Presentación UI
-**Controlador**: Coordina Modelo-Vista
+Note: MVC organiza código en tres componentes con roles claros. Modelo encapsula datos y reglas negocio. Vista solo presenta. Controlador orquesta. 
 
-Separa responsabilidades claramente
-Facilita mantenimiento y testing
-Trabajo en equipo eficiente
 
-Note: MVC organiza código en tres componentes con roles claros. Modelo encapsula datos y reglas negocio. Vista solo presenta. Controlador orquesta. Separación permite cambiar UI sin tocar lógica negocio, testear componentes aisladamente, equipos trabajar en paralelo.
+### 2.5. Patrón MVC II
+Características:
+- Separa responsabilidades claramente: Modelo, Vista, Controlador
+- Facilita mantenimiento y testing: componentes aislados
+- Trabajo en equipo eficiente: frontend/backend
+
+Note: La separación permite cambiar UI sin tocar lógica negocio, testear componentes aisladamente, equipos trabajar en paralelo.
 
 
 ### 2.6. Principios SOLID
@@ -702,7 +707,6 @@ Note: MVC organiza código en tres componentes con roles claros. Modelo encapsul
 Código mantenible y flexible
 
 Note: SOLID son cinco principios fundamentales para código de calidad. Una clase una responsabilidad. Abierto extensión cerrado modificación. Subtipos deben sustituir supertipo. Interfaces pequeñas específicas. Depender de abstracciones no implementaciones. Aplicar SOLID mejora mantenibilidad drásticamente.
-
 
 ---
 
@@ -751,7 +755,6 @@ Note: LAMP es el stack clásico que construyó la web. Totalmente gratuito, host
 * Estático + APIs
 
 Note: Stacks modernos optimizan para casos de uso específicos. MEAN/MERN unifica lenguaje frontend/backend. JAMstack maximiza velocidad sirviendo estático y consumiendo APIs. Elegir stack según requisitos proyecto y experiencia equipo.
-
 
 ---
 
@@ -958,7 +961,6 @@ Authorization: Bearer token_expirado
 
 Note: Login devuelve token JWT. Cliente almacena (localStorage, cookie httpOnly). Incluye en Authorization header con prefijo Bearer en peticiones protegidas. Servidor valida firma y expiración. Token expirado devuelve 401, cliente debe renovar o reautenticar.
 
-
 ---
 
 ## BLOQUE 5: Infraestructura
@@ -1018,7 +1020,6 @@ Note: SQL para datos estructurados, relaciones complejas, consistencia fuerte. N
 * Datos no estructurados
 
 Note: SQL para datos estructurados, relaciones complejas, consistencia fuerte. NoSQL para flexibilidad esquema, escala masiva, datos variados. Elegir según naturaleza datos y requisitos aplicación.
-
 
 ---
 
@@ -1186,10 +1187,10 @@ Note: Kubernetes orquesta contenedores a escala empresarial. Detecta fallos y re
 
 
 ### 6.7. Cloud Computing
-
-**IaaS**: Infraestructura (VMs, redes)
-**PaaS**: Plataforma (runtime gestionado)
-**SaaS**: Software (app completa)
+3 modelos principales:
+* **IaaS**: Infraestructura (VMs, redes)
+* **PaaS**: Plataforma (runtime gestionado)
+* **SaaS**: Software (app completa)
 
 **Proveedores**: AWS, Google Cloud, Azure
 
@@ -1213,7 +1214,6 @@ Note: Cloud ofrece recursos bajo demanda. IaaS para control total. PaaS para dep
 * Entregas frecuentes
 
 Note: CI/CD automatiza build, test y deploy. CI integra código continuamente ejecutando tests. CD despliega automáticamente tras validar. Reduce errores, acelera entregas, mejora calidad. Herramientas: GitHub Actions, GitLab CI, Jenkins.
-
 
 ---
 
@@ -1244,9 +1244,9 @@ Note: Seguridad debe diseñarse desde inicio. HTTPS ya no opcional. Autenticar u
 </Directory>
 ```
 
-Simple pero limitado
-Solo con HTTPS
-Para áreas administrativas
+- Simple pero limitado 
+- Solo con HTTPS
+- Para áreas administrativas
 
 Note: Basic Auth simple: usuario/contraseña. Credenciales en Base64, fácil interceptar. SOLO con HTTPS. Útil para proteger áreas admin simples. Para producción seria usar JWT, OAuth2.
 
@@ -1275,11 +1275,10 @@ Note: Logs registran todo lo que sucede. Access log para análisis tráfico. Err
     compress
 }
 ```
-
-Logs crecen indefinidamente
-Rotación periódica
-Comprimir antiguos
-Eliminar muy antiguos
+Logs crecen indefinidamente, llenan disco.
+- Rotación periódica
+- Comprimir antiguos
+- Eliminar muy antiguos
 
 Note: Sin rotación logs llenan disco. Configurar rotación automática: diaria, mantener últimos 14 días, comprimir. Balancea necesidad auditoría con espacio disponible.
 
@@ -1294,7 +1293,6 @@ Note: Sin rotación logs llenan disco. Configurar rotación automática: diaria,
 Observabilidad = Logs + Metrics + Traces
 
 Note: Herramientas profesionales cruciales en producción. Prometheus recolecta métricas. Grafana visualiza dashboards. ELK centraliza logs de múltiples servidores. Observabilidad completa requiere logs, métricas y trazas distribuidas.
-
 
 ---
 

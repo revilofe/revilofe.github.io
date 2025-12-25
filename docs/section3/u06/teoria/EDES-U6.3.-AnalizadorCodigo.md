@@ -1,12 +1,12 @@
 ---
-title: "UD 4 - 4.3 Análisis estático de código"
+title: "UD 6 - 6.3 Análisis estático de código"
 description: Análisis estático de código
 summary: Análisis estático de código
 authors:
     - Eduardo Fdez
 date: 2022-09-18
 icon: "material/file-document-outline"
-permalink: /edes/unidad4/4.3
+permalink: /edes/unidad6/4.3
 categories:
     - EDES
 tags:
@@ -15,7 +15,7 @@ tags:
     - ktlint
     - Detekt
 ---
-## 4.1. Análisis estático de código
+## 6.3. Análisis estático de código
 
 La relación entre las personas, los ordenadores y el código es bastante compleja. Aunque la mayoría de los códigos se desarrollan para ser ejecutados en ordenadores, su propósito no se limita a eso. También se desarrollan para ser leídos y comprendidos cuidadosamente, de hecho la mayoría de tu tiempo como programador lo dedicarás a leer código.
 
@@ -58,13 +58,13 @@ Checkstyle analiza el código fuente del proyecto en busca de errores y fallos, 
 
 Android Lint viene empaquetado por defecto con Android Studio. Esta herramienta comprueba los archivos fuente del proyecto para identificar posibles errores y optimizar la usabilidad, la corrección, la seguridad, la accesibilidad y la internacionalización.
 
-### 4. Linting en el análisis estático de código
+### 6. Linting en el análisis estático de código
 
 Te preguntarás, ¿qué demonios es el linting? Bueno, en pocas palabras, linting es el proceso de analizar el código en busca de errores potenciales. Veamos cómo puedes usar linting para diagnosticar errores. Los desarrolladores utilizan varias guías de estilo, como [Java Code Style](https://source.android.com/setup/contribute/code-style) y [Kotlin Style Guide](https://developer.android.com/kotlin/style-guide).
 
 En este caso, vamos a utilizar Ktlint o Detekt, un linter que es sinónimo de la plataforma Kotlin, ya que este formato ofrece simplicidad, extensibilidad y una comunidad de desarrolladores activa.
 
-#### 4.1. Uso de Ktlint
+#### 6.1. Uso de Ktlint
 
 * Añade al fichero `build.gradle` de tu proyecto la configuración de ktling:
 
@@ -94,7 +94,7 @@ ktlint {
 También existe un plugin no oficial que puedes instalar.
 En `File -> Settings -> Tools -> ktlint` podrás ver y trabajar en la configuración
 
-#### 4.2. Uso de Detekt
+#### 6.2. Uso de Detekt
 Instala el plugin [Detekt](https://github.com/detekt/detekt).
 En `File -> Settings -> Tools -> Detekt` podrás ver y trabajar en la configuración
 

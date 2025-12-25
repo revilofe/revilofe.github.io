@@ -1,12 +1,12 @@
 ---
-title: "UD 4 - P5: Git/Github Pull Request"
+title: "UD 6 - P5: Git/Github Pull Request"
 description: Git/Github
 summary: Git/Github
 authors:
     - Eduardo Fdez
 date: 2022-10-23
 icon: "material/file-document-edit"
-permalink: /edes/unidad4/p4.5
+permalink: /edes/unidad6/p4.5
 categories:
     - EDES
 tags:

@@ -1,12 +1,12 @@
 ---
-title: "UD 4 - 4.1 Sistemas de control de versiones"
-description: Sistemas de control de versiones
-summary: Sistemas de control de versiones
+title: "UD 6 - 6.2 Refactorización"
+description: Refactorización de código
+summary: Refactorización de código
 authors:
     - Eduardo Fdez
 date: 2022-09-18
 icon: "material/file-document-outline"
-permalink: /edes/unidad4/4.1
+permalink: /edes/unidad6/4.1
 categories:
     - EDES
 tags:
@@ -14,7 +14,7 @@ tags:
     - GIT
     - GitHub
 ---
-## 4.2. Malos olores y Refactorización
+## 6.2. Malos olores y Refactorización
 
 En el desarrollo de software, los "malos olores" y la refactorización son conceptos clave para mejorar la calidad del código y facilitar su mantenimiento a lo largo del tiempo. Los "malos olores" son señales de problemas en el diseño del código, como duplicación, métodos largos o clases grandes, que pueden dificultar la comprensión y modificación del código. La refactorización, por otro lado, es el proceso de reestructurar el código existente sin cambiar su comportamiento externo, con el objetivo de mejorar su legibilidad, estructura y eficiencia.
 

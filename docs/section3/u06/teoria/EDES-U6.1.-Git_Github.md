@@ -1,12 +1,12 @@
 ---
-title: "UD 4 - 4.1 Sistemas de control de versiones"
+title: "UD 6 - 6.1 Sistemas de control de versiones"
 description: Sistemas de control de versiones
 summary: Sistemas de control de versiones
 authors:
     - Eduardo Fdez
 date: 2022-09-18
 icon: "material/file-document-outline"
-permalink: /edes/unidad4/4.1
+permalink: /edes/unidad6/4.1
 categories:
     - EDES
 tags:
@@ -15,7 +15,7 @@ tags:
     - GitHub
 ---
 
-## 4.1. Sistemas de control de versiones: Git & GitHub
+## 6.1. Sistemas de control de versiones: Git & GitHub
 
 ### 1. Introducción
 Un sistema de control de versiones es una herramienta que permite llevar un registro de los cambios realizados en el código fuente de un proyecto. Esto es útil para poder volver a versiones anteriores del código, comparar cambios, ver quién ha modificado algo, etc.
@@ -121,7 +121,7 @@ Git tiene tres espacios de trabajo: el directorio de trabajo, el área de prepar
 * El repositorio es donde se almacenan los commits.    
 
 <figure markdown>
-   ![](./assets/EDES-U4.1.-Git_Github-1709740252464.png)
+   ![](./assets/EDES-U6.1.-Git_Github-1709740252464.png)
    <figcaption>FlujoGit</figcaption>
 </figure>
 
@@ -230,7 +230,7 @@ por tanto, git pull = git fetch + merge.
 
 
 <figure markdown>
-   ![](./assets/EDES-U4.1.-Git_Github-1709742195595.png)
+   ![](./assets/EDES-U6.1.-Git_Github-1709742195595.png)
    <figcaption>pull = fetch + merge</figcaption>
 </figure>
 
@@ -239,7 +239,7 @@ Otra característica importante en flujo el trabajo de Git son el uso de las ram
 
 
 <figure markdown>
-   ![](./assets/EDES-U4.1.-Git_Github-1709740343955.png)
+   ![](./assets/EDES-U6.1.-Git_Github-1709740343955.png)
    <figcaption>Gitflow-workflow</figcaption>
 </figure>
 
@@ -355,13 +355,13 @@ git pull <nombre> <rama>
 
 
 <figure markdown>
-   ![](./assets/EDES-U4.1.-Git_Github-1709741580452.png)
+   ![](./assets/EDES-U6.1.-Git_Github-1709741580452.png)
    <figcaption>Operaciones locales y remotas</figcaption>
 </figure>
 
 
 <figure markdown>
-   ![](./assets/EDES-U4.1.-Git_Github-1709741845784.png)
+   ![](./assets/EDES-U6.1.-Git_Github-1709741845784.png)
    <figcaption>Varios repos</figcaption>
 </figure>
 
@@ -418,13 +418,13 @@ Para crear un pull request, hay que hacer lo siguiente:
 
 4. Ir a la página del repositorio en GitHub y hacer clic en "New pull request".    
 
-    ![crear un pull request](./assets/EDES-U4.1.-Git_Github-1709743019371.png)
+    ![crear un pull request](./assets/EDES-U6.1.-Git_Github-1709743019371.png)
 
 5. Seleccionar la rama que se quiere fusionar con la rama principal.    
 6. Añadir un título y una descripción.    
 7. Hacer clic en "Create pull request".    
 
-    ![Create Pull request](./assets/EDES-U4.1.-Git_Github-1709743055290.png)
+    ![Create Pull request](./assets/EDES-U6.1.-Git_Github-1709743055290.png)
 
 9. Esperar a que alguien revise el pull request.    
 
@@ -459,7 +459,7 @@ Para crear un pull request, hay que hacer lo siguiente:
 Los gists son una forma de compartir pequeños fragmentos de código. Se pueden crear, editar, comentar, etc.
 
 
-### 4. Conclusiones
+### 6. Conclusiones
 Git y GitHub son herramientas muy útiles para el desarrollo de software. Permiten llevar un control de los cambios realizados en el código, trabajar en paralelo, colaborar con otros desarrolladores, etc.
     
 

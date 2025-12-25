@@ -1,12 +1,12 @@
 ---
-title: "UD 4 - P3: Git/Github Rebase I"
+title: "UD 6 - P3: Git/Github Rebase I"
 description: Git/Github
 summary: Git/Github
 authors:
     - Eduardo Fdez
 date: 2022-10-23
 icon: "material/file-document-edit"
-permalink: /edes/unidad4/p4.3
+permalink: /edes/unidad6/p4.3
 categories:
     - EDES
 tags:

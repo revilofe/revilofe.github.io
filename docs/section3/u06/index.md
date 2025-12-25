@@ -1,12 +1,12 @@
 ---
-title: "UD 3 - Herramientas Git/Github"
+title: "UD 6 - Herramientas Git/Github"
 description: Entornos de desarrollo integrado
 summary: Entornos de desarrollo integrado
 authors:
     - Eduardo Fdez
 date: 2022-10-23
 icon:   
-permalink: /edes/unidad1
+permalink: /edes/unidad6
 categories:
     - EDES
 tags:

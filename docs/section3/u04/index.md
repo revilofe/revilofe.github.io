@@ -105,7 +105,8 @@ La unidad está planificada para desarrollarse en **X sesiones** de 55 minutos:
 
 #### Teoría
 
-Por definir
+- [4.1.-Diagramas de Casos de Uso](teoria/EDES-U4.1.-DiagramaCasoUso.md)
+- [4.3.-Diagramas de Secuencia](teoria/EDES-U4.3.-DiagramaSecuencias.md)
 
 #### Prácticas
 

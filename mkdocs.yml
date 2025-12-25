@@ -144,6 +144,9 @@ nav:
          - '3.2.-Diagrama de clases': 'section3/u03/teoria/EDES-U3.2.-DiagramaClases.md'
          - '3.3.-Identificación de clases': 'section3/u03/teoria/EDES-U3.3.-IdentifClases.md'
          - '3.4.-Acoplamiento y cohesión': 'section3/u03/teoria/EDES-U3.4.-AcopCohe.md'
+    - 'U4: Diagramas de Comportamiento UML':
+        - 'section3/u04/index.md'
+        - '4.3.-Diagramas de Secuencia': 'section3/u04/teoria/EDES-U4.3.-DiagramaSecuencias.md'
     - 'U5: Pruebas y Depuración':
         - 'section3/u05/index.md'
         - '5.1.-Pruebas': 'section3/u05/teoria/EDES-U5.1.-Pruebas.md'

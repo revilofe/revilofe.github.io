@@ -144,6 +144,14 @@ nav:
          - '3.2.-Diagrama de clases': 'section3/u03/teoria/EDES-U3.2.-DiagramaClases.md'
          - '3.3.-Identificación de clases': 'section3/u03/teoria/EDES-U3.3.-IdentifClases.md'
          - '3.4.-Acoplamiento y cohesión': 'section3/u03/teoria/EDES-U3.4.-AcopCohe.md'
+    - 'U5: Pruebas y Depuración':
+        - 'section3/u05/index.md'
+        - '5.1.-Pruebas': 'section3/u05/teoria/EDES-U5.1.-Pruebas.md'
+        - '5.2.-Test unidad y TDD': 'section3/u05/teoria/EDES-U5.2.-TestUnidadYTDD.md'
+        - '5.2.1.-Kotest': 'section3/u05/teoria/EDES-U5.2.1.-Kotest.md'
+        - '5.2.2.-MockK': 'section3/u05/teoria/EDES-U5.2.2.-Mockk.md'
+        - '5.3.-Depuración': 'section3/u05/teoria/EDES-U5.3.-Depuracion.md'
+        - '5.3.1.-Logging': 'section3/u05/teoria/EDES-U5.3.1.-LoggingCode.md'
     - 'U6: SCV, refactorización y documentación':
         - 'section3/u06/index.md'
         - '6.1.-Sistemas de control de versiones': 'section3/u06/teoria/EDES-U6.1.-Git_Github.md'
@@ -155,14 +163,6 @@ nav:
         - 'Práctica 6.3: Git/Github rebase I': 'section3/u06/practica/EDES-U6.-Practica003.md'
         - 'Práctica 6.4: Git/Github rebase II': 'section3/u06/practica/EDES-U6.-Practica004.md'
         - 'Práctica 6.5: Git/Github Pull Request (PR)': 'section3/u06/practica/EDES-U6.-Practica005.md'
-    - 'U5: Pruebas y Depuración':
-        - 'section3/u05/index.md'
-        - '5.1.-Pruebas': 'section3/u05/teoria/EDES-U5.1.-Pruebas.md'
-        - '5.2.-Test unidad y TDD': 'section3/u05/teoria/EDES-U5.2.-TestUnidadYTDD.md'
-        - '5.2.1.-Kotest': 'section3/u05/teoria/EDES-U5.2.1.-Kotest.md'
-        - '5.2.2.-MockK': 'section3/u05/teoria/EDES-U5.2.2.-Mockk.md'
-        - '5.3.-Depuración': 'section3/u05/teoria/EDES-U5.3.-Depuracion.md'
-        - '5.3.1.-Logging': 'section3/u05/teoria/EDES-U5.3.1.-LoggingCode.md'
 
   ## ***********************
   ## INCIDENTES DE SEGURIDAD

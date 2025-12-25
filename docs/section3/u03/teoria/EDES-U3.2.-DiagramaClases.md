@@ -2654,32 +2654,32 @@ A lo largo de este documento has aprendido:
 
 1. **Fundamentos**: 
 
-   - Los diagramas de clases representan la estructura estática de un sistema
-   - Son la base para la implementación del código
-   - Utilizan notación UML estándar reconocida mundialmente
+    - Los diagramas de clases representan la estructura estática de un sistema
+    - Son la base para la implementación del código
+    - Utilizan notación UML estándar reconocida mundialmente
 
 2. **Elementos**:
 
-   - **Clases**: Tres compartimentos (nombre, atributos, métodos)
-   - **Relaciones**: Seis tipos con diferentes niveles de acoplamiento
-   - **Interfaces**: Contratos de comportamiento
+    - **Clases**: Tres compartimentos (nombre, atributos, métodos)
+    - **Relaciones**: Seis tipos con diferentes niveles de acoplamiento
+    - **Interfaces**: Contratos de comportamiento
 
 3. **Relaciones**:
 
-   - Herencia (es-un): Para especialización
-   - Composición (parte-de): Relación fuerte de todo-parte
-   - Agregación (tiene-un): Relación débil de contención
-   - Asociación: Conexión general
-   - Dependencia: Uso temporal
-   - Implementación: Realización de interfaz
+    - Herencia (es-un): Para especialización
+    - Composición (parte-de): Relación fuerte de todo-parte
+    - Agregación (tiene-un): Relación débil de contención
+    - Asociación: Conexión general
+    - Dependencia: Uso temporal
+    - Implementación: Realización de interfaz
 
 4. **Mejores prácticas**:
 
-   - Responsabilidad única por clase
-   - Dividir diagramas complejos
-   - Usar colores estratégicamente
-   - Mantener claridad visual
-   - Documentar decisiones importantes
+    - Responsabilidad única por clase
+    - Dividir diagramas complejos
+    - Usar colores estratégicamente
+    - Mantener claridad visual
+    - Documentar decisiones importantes
 
 #### 10.2. Importancia en el Desarrollo de Software
 
@@ -2726,27 +2726,27 @@ Para seguir mejorando tus habilidades:
 
 1. **Practica regularmente**: 
 
-   - Diseña diagramas para proyectos personales
-   - Revisa código existente y crea diagramas retrospectivos
-   - Participa en sesiones de diseño colaborativas
+    - Diseña diagramas para proyectos personales
+    - Revisa código existente y crea diagramas retrospectivos
+    - Participa en sesiones de diseño colaborativas
 
 2. **Estudia patrones de diseño**:
 
-   - Gang of Four (GoF) patterns
-   - Arquitecturas por capas
-   - Domain-Driven Design (DDD)
+    - Gang of Four (GoF) patterns
+    - Arquitecturas por capas
+    - Domain-Driven Design (DDD)
 
 3. **Aprende otros diagramas UML**:
 
-   - Diagramas de secuencia (comportamiento)
-   - Diagramas de casos de uso (requisitos)
-   - Diagramas de componentes (arquitectura)
+    - Diagramas de secuencia (comportamiento)
+    - Diagramas de casos de uso (requisitos)
+    - Diagramas de componentes (arquitectura)
 
 4. **Refactoriza diagramas existentes**:
 
-   - Identifica clases con múltiples responsabilidades
-   - Busca oportunidades de aplicar patrones
-   - Mejora la claridad y organización
+    - Identifica clases con múltiples responsabilidades
+    - Busca oportunidades de aplicar patrones
+    - Mejora la claridad y organización
 
 #### 10.5. Reflexión Final
 

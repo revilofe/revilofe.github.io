@@ -23,11 +23,13 @@ toc_icon: "file-code"
 
 ## 4.3. Diagramas de Secuencia
 
+### 1. Introducción
+
 El **diagrama de secuencia** es un tipo de diagrama de interacción contenido en UML 2.5. Su objetivo es representar el intercambio de mensajes entre los distintos objetos del sistema a través del tiempo para cumplir con la funcionalidad que se intenta modelar. Define, por tanto, el comportamiento dinámico del sistema de información.
 
 Normalmente es utilizado para definir cómo se realiza un caso de uso, por lo que es comúnmente utilizado junto al diagrama de casos de uso. También se suele construir para comprender mejor el diagrama de clases, ya que el diagrama de secuencia muestra cómo objetos de esas clases interactúan haciendo intercambio de mensajes.
 
-### 4.3.1. Beneficios de utilizar diagramas de secuencia
+### 2. Beneficios de utilizar diagramas de secuencia
 
 Los diagramas de secuencia aportan múltiples ventajas en el desarrollo de software:
 
@@ -37,7 +39,7 @@ Los diagramas de secuencia aportan múltiples ventajas en el desarrollo de softw
 
 - **Detección de inconsistencias**: Ayudan a identificar posibles problemas en el flujo de mensajes o en la lógica del proceso antes de la implementación.
 
-### 4.3.2. Aplicaciones comunes
+### 3. Aplicaciones comunes
 
 Los diagramas de secuencia se utilizan habitualmente en diversos contextos:
 
@@ -47,17 +49,17 @@ Los diagramas de secuencia se utilizan habitualmente en diversos contextos:
 
 - **Análisis de sistemas existentes**: Proporcionan una visión clara del comportamiento actual del sistema, útil para tareas de refactorización o mejora.
 
-### 4.3.3. Construcción del diagrama de secuencia
+### 4. Construcción del diagrama de secuencia
 
 El diagrama de secuencia está construido a partir de dos dimensiones:
 
-#### Dimensión horizontal
+#### 4.1. Dimensión horizontal
 
 Representa los objetos que participan en la secuencia, y que van intercambiando mensajes.
 
 - **Mensajes**: Flechas horizontales que muestran la comunicación entre objetos.
 
-#### Dimensión vertical
+#### 4.2. Dimensión vertical
 
 Representa la línea de tiempo sobre la que los elementos actúan. Va de arriba (menor tiempo) hacia abajo (mayor tiempo).
 
@@ -76,11 +78,11 @@ En esta línea de tiempo, se representan:
   <figcaption>Dimensiones del diagrama de secuencia: horizontal (objetos) y vertical (tiempo)</figcaption>
 </figure>
 
-### 4.3.4. Elementos del diagrama de secuencia
+### 5. Elementos del diagrama de secuencia
 
 El diagrama de secuencia está compuesto por dos elementos principales: **Objetos** y **Mensajes**.
 
-#### Actores
+#### 5.1. Actores
 
 Entidad externa que interactúa con el sistema. Representa un usuario, un sistema externo u otro componente que inicia o recibe acciones dentro del sistema.
 
@@ -92,7 +94,7 @@ Entidad externa que interactúa con el sistema. Representa un usuario, un sistem
 
 - **Puede ser humano o máquina**: Un actor puede ser un usuario humano, una API externa, una base de datos, etc.
 
-#### Objeto
+#### 5.2. Objeto
 
 Un objeto representa a un participante en la interacción. Un objeto puede ser una instancia de una clase, un módulo, un grupo de clases... en definitiva, un objeto es un componente software que tiene una funcionalidad específica. Dependerá del nivel de abstracción la representación de cada objeto.
 
@@ -116,11 +118,11 @@ Los objetos contienen el denominado **foco de control** (Barras de activación) 
   <figcaption>Foco de control o barra de activación</figcaption>
 </figure>
 
-#### Mensaje
+#### 5.3. Mensaje
 
 Se utiliza un mensaje en el diagrama de secuencia para representar el paso de un mensaje entre dos objetos o entre un objeto y sí mismo.
 
-##### Tipos de mensajes
+##### 5.3.1. Tipos de mensajes
 
 - **Simple**: Representa la transferencia de control de un objeto a otro sin que el remitente espere una respuesta inmediata. Se ilustra con una línea continua y una punta de flecha abierta.
 
@@ -166,11 +168,11 @@ Como hemos visto antes, un objeto puede ser creado a mitad de la interacción. E
   <figcaption>Notación de creación y destrucción de objetos</figcaption>
 </figure>
 
-### 4.3.5. Estereotipos de objeto
+### 6. Estereotipos de objeto
 
 En UML, los estereotipos de objeto ayudan a clasificar los diferentes tipos de participantes en un diagrama de secuencia. Los tres estereotipos más comunes son:
 
-#### Boundary (Interfaz o Límite)
+#### 6.1. Boundary (Interfaz o Límite)
 
 Representa la interfaz entre el usuario (o sistema externo) y la aplicación. Se encarga de manejar la interacción con los actores.
 
@@ -180,7 +182,7 @@ Representa la interfaz entre el usuario (o sistema externo) y la aplicación. Se
 - Formularios de entrada
 - API o servicios web expuestos a otros sistemas
 
-#### Control (Lógica de negocio)
+#### 6.2. Control (Lógica de negocio)
 
 Representa la lógica del sistema. Se encarga de coordinar el flujo entre la interfaz (boundary) y las entidades (datos).
 
@@ -189,7 +191,7 @@ Representa la lógica del sistema. Se encarga de coordinar el flujo entre la int
 - Un controlador en un patrón MVC
 - Un servicio que gestiona reglas de negocio
 
-#### Entity (Modelo de datos)
+#### 6.3. Entity (Modelo de datos)
 
 Representa los datos persistentes o entidades del sistema. Se encarga de almacenar y recuperar información.
 
@@ -222,11 +224,11 @@ Representa los datos persistentes o entidades del sistema. Se encarga de almacen
   <figcaption>Ejemplo de uso de estereotipos boundary, control y entity</figcaption>
 </figure>
 
-### 4.3.6. Bloques de control
+### 7. Bloques de control
 
 Los **Bloques de Control** en Diagramas de Secuencia UML permiten representar estructuras condicionales, alternativas y repeticiones dentro del flujo de un diagrama de secuencia.
 
-#### Tipos de Bloques de Control
+#### 7.1. Tipos de Bloques de Control
 
 - **Alternativa (alt)**: Representa una estructura de decisión con múltiples caminos (if-else).
 
@@ -236,7 +238,7 @@ Los **Bloques de Control** en Diagramas de Secuencia UML permiten representar es
 
 - **Paralelo (par)**: Indica que múltiples eventos pueden ocurrir en paralelo.
 
-#### Ejemplo: Autenticación de Usuario con Intentos Limitados
+#### 7.2. Ejemplo: Autenticación de Usuario con Intentos Limitados
 
 **Contexto:**
 
@@ -290,9 +292,9 @@ Esto podría representar la actualización de un contador de intentos o el almac
   <figcaption>Ejemplo de autenticación con bucle y alternativa</figcaption>
 </figure>
 
-### 4.3.7. Ejemplos de diagramas de secuencia
+### 8. Ejemplos de diagramas de secuencia
 
-#### Ejemplo 1: Contratar servicio
+#### 8.1. Ejemplo 1: Contratar servicio
 
 A continuación se muestra un ejemplo de un diagrama de secuencia de la funcionalidad "contratar servicio".
 
@@ -301,7 +303,7 @@ A continuación se muestra un ejemplo de un diagrama de secuencia de la funciona
   <figcaption>Ejemplo completo de diagrama de secuencia para contratar un servicio</figcaption>
 </figure>
 
-#### Ejemplo 2: Gestionar itinerario
+#### 8.2. Ejemplo 2: Gestionar itinerario
 
 Este es otro ejemplo, para un caso de uso "gestionar itinerario":
 

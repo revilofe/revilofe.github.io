@@ -393,11 +393,11 @@ No obstante, dependiendo del nivel de profundidad, el diagrama puede variar sign
 
 Vamos a ver un ejemplo completo de un diagrama de casos de uso para un sistema de tienda online.
 
-**Descripción del Sistema:**
+#### **Descripción del Sistema:**
 
 Una tienda online que permite a los usuarios buscar productos, añadirlos al carrito y realizar compras. Los administradores pueden gestionar productos, pedidos y usuarios.
 
-**Funcionalidades Principales:**
+#### **Funcionalidades Principales:**
 
 **Registrarse en la tienda:** Un nuevo usuario puede crear una cuenta proporcionando su correo electrónico y una contraseña.
 
@@ -431,12 +431,12 @@ Una tienda online que permite a los usuarios buscar productos, añadirlos al car
 
 **Administrar usuarios:** El administrador de la tienda puede ver y actualizar los datos de los usuarios registrados en la tienda.
 
-**Actores:**
+#### **Actores:**
 
 - **Usuario:** Cliente que navega y compra en la tienda.
 - **Administrador:** Gestiona productos, pedidos y usuarios.
 
-**Casos de Uso Principales:**
+#### **Casos de Uso Principales:**
 
 **Para el Usuario:**
 
@@ -455,14 +455,14 @@ Una tienda online que permite a los usuarios buscar productos, añadirlos al car
 - Administrar pedidos (actualizar estado de pedidos)
 - Administrar usuarios (gestionar clientes registrados)
 
-**Relaciones Clave:**
+#### **Relaciones Clave:**
 
-**<<include>>:**
+**include:**
 
 - Realizar compra → Incluye Realizar pagos
 - Gestionar cuenta → Incluye Cambiar contraseña y Cerrar sesión
 
-**<<extend>>:**
+**extend:**
 
 - Ver estado del pedido → extiende Ver historial de compras
 
@@ -486,7 +486,7 @@ Para crear diagramas de casos de uso, existen diversas herramientas que facilita
 - **Enterprise Architect:** Herramienta profesional completa para modelado de sistemas empresariales.
 
 !!! tip "Recomendación"
-Para estudiantes y proyectos pequeños, se recomienda comenzar con herramientas gratuitas como PlantUML o Draw.io. Para proyectos profesionales y empresariales, herramientas como Visual Paradigm o Enterprise Architect ofrecen funcionalidades más avanzadas.
+    Para estudiantes y proyectos pequeños, se recomienda comenzar con herramientas gratuitas como PlantUML o Draw.io. Para proyectos profesionales y empresariales, herramientas como Visual Paradigm o Enterprise Architect ofrecen funcionalidades más avanzadas.
 
 ## Referencias y bibliografía
 

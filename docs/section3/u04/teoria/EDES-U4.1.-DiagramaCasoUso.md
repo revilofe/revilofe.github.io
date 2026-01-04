@@ -20,7 +20,6 @@ toc: true
 toc_label: "Contenido"
 toc_icon: "file-code"
 ---
-
 ## 4.1. Diagramas de Casos de Uso
 
 ### 1. Introducción
@@ -31,28 +30,26 @@ En este documento se incluye información sobre cómo construir este diagrama.
 
 Lo primero es saber cuál es su finalidad. El diagrama de casos de uso, dependiendo de la profundidad que le demos, puede ser utilizado para muchos fines, entre ellos podemos encontrar los siguientes:
 
-- **Representar los requisitos funcionales.**
-
+- **Representar los requisitos funcionales.** Es decir, funcionalidades que va a tener nuestro sistema.
 - **Representar los actores que se comunican con el sistema.** Normalmente los actores del sistema son los usuarios y otros sistemas externos que se relacionan con el sistema. En el caso de los usuarios hay que entender el actor como un "perfil", pudiendo existir varios usuarios que actúan como el mismo actor.
-
-- **Representar las relaciones entre requisitos funcionales y actores.**
-
-- **Guiar el desarrollo del sistema.** Crear un punto de partida sobre el que empezar a desarrollar el sistema.
-
+- **Representar las relaciones entre requisitos funcionales y actores.** Que relación tienen funcionalidades con otras funcionalidades y con actores.
+- **Guiar el desarrollo del sistema.** Crear un punto de partida sobre el que empezar a desarrollar el sistema. Puedes elegir un grupo de funcionalidades básicas con las que comenzar el desarrollo.
 - **Comunicarse de forma precisa entre cliente y desarrollador.** Simplifica la forma en que todos los partícipes del desarrollo, incluyendo el cliente, perciben cómo el sistema funcionará y ofrecerá una visión general común del mismo.
 
 ### 2. Elementos de un diagrama de casos de uso
 
 Un diagrama de casos de uso está compuesto, principalmente, de 3 elementos: **Actores**, **Casos de uso** y **Relaciones**.
 
+Puedes consultar [la especificación de los casos de uso en plantuml](https://plantuml.com/es/use-case-diagram)
+
 #### 2.1. Actor
 
-Como ya hemos comentado en la presentación, un **actor** es algo o alguien externo al sistema que interactúa de forma directa con el sistema. Cuando decimos que interactúa nos referimos a que aporta información, recibe información, inicia una acción...
+Como ya hemos comentado en la presentación, un **actor** es algo o alguien **externo al sistema** que interactúa de forma directa con el sistema. Cuando decimos que interactúa nos referimos a que aporta información, recibe información, inicia una acción...
 
 Se representan con una imagen de un "muñeco de palo" con el nombre del actor debajo.
 
 <figure markdown>
-  ![Representación actor](assets/EDES-U4.1.-DiagramaCasoUso-img01.gif)
+  ![Representación actor](assets/EDES-U4.1.-DiagramaCasoUso-im01.png)
   <figcaption>Representación de un actor</figcaption>
 </figure>
 
@@ -61,7 +58,7 @@ Existen dos tipos de actores: Los **usuarios** y los **sistemas**.
 No hay que entender los usuarios como personas singulares, sino como **"perfiles o roles"** que identifican a un tipo de usuario, pero no al usuario en sí. Por ejemplo, en una aplicación de gestión de nóminas, un actor de este tipo podría ser "gestor de nóminas" que se encarga de emitir y firmar nóminas. Este rol podría ser tomado, por ejemplo, por cualquier individuo del personal de recursos humanos y, además, por el jefe de la empresa. Es un ejemplo muy sencillo, pero como puedes ver, un actor no representa a una única persona o a un único usuario.
 
 <figure markdown>
-  ![Ejemplo de actor](assets/EDES-U4.1.-DiagramaCasoUso-img02.gif)
+  ![Ejemplo de actor](assets/EDES-U4.1.-DiagramaCasoUso-im02.png)
   <figcaption>Ejemplo de actor en un diagrama</figcaption>
 </figure>
 
@@ -78,71 +75,92 @@ Formalmente hablando, un caso de uso es una clasificación de comportamiento que
 Se representan con una elipse que incluye en su interior el nombre del caso de uso.
 
 <figure markdown>
-  ![Representación de un caso de uso](assets/EDES-U4.1.-DiagramaCasoUso-img03.gif)
+  ![Representación de un caso de uso](./assets/EDES-U4.1.-DiagramaCasoUso-im03.png)
   <figcaption>Representación de un caso de uso</figcaption>
 </figure>
 
 Existen muchos ejemplos de casos de uso. Algunos podrían ser: **Crear pedido**, **Listar productos**, **Enviar correo**. Cualquier acción que realice la aplicación.
 
 !!! note "Nota importante sobre UML 2.5"
-    Las especificaciones anteriores a UML 2.5 requerían que un caso de uso sea invocado por un actor. En UML 2.5 esto se eliminó, lo que significa que podría haber algunas situaciones en las que la funcionalidad del sistema la inicie el propio sistema y, al mismo tiempo, brinde resultados útiles a un actor. Por ejemplo, el sistema podría notificar a un cliente que se envió la orden, programar la limpieza y el archivo de la información del usuario, solicitar información de otro sistema, etc.
+Las especificaciones anteriores a UML 2.5 requerían que un caso de uso sea invocado por un actor. En UML 2.5 esto se eliminó, lo que significa que podría haber algunas situaciones en las que la funcionalidad del sistema la inicie el propio sistema y, al mismo tiempo, brinde resultados útiles a un actor. Por ejemplo, el sistema podría notificar a un cliente que se envió la orden, programar la limpieza y el archivo de la información del usuario, solicitar información de otro sistema, etc.
 
-#### 3.3. Relaciones
+#### 2.3. Relaciones
 
 Las **relaciones** conectan los casos de uso con los actores o los casos de uso entre sí.
 
 Cuando conectan un actor con un caso de uso representa que ese actor interactúa de alguna manera con ese caso de uso y se representa con una línea continua con la identificación `<<communicates>>`.
 
+<figure markdown>
+  ![Ejemplo de actor](assets/EDES-U4.1.-DiagramaCasoUso-im04.png)
+  <figcaption>Una actor comunica con un caso de uso</figcaption>
+</figure>
+
 Cuando conectan casos de uso entre sí se pueden diferenciar dos tipos de relaciones: `<<include>>` y `<<extends>>`. En español a veces se usa la nomenclatura `<<usa>>` y `<<extiende>>`:
 
-##### 3.3.1 Relación include
+##### 2.3.1 Relación include
 
 `<<include>>`: Se utiliza para representar que un caso de uso utiliza siempre a otro caso de uso. Es decir, un caso de uso se ejecutará obligatoriamente (lo incluye, lo usa). Se representa con una flecha discontinua que va desde el caso de uso de origen al caso de uso que se incluye.
 
 <figure markdown>
-  ![Relación include entre dos casos de uso](assets/EDES-U4.1.-DiagramaCasoUso-img04.gif)
+  ![Relación include entre dos casos de uso](assets/EDES-U4.1.-DiagramaCasoUso-im05.png)
   <figcaption>Relación include entre dos casos de uso</figcaption>
 </figure>
 
 Un uso típico de este tipo de relaciones se produce cuando dos casos de uso comparten una funcionalidad. Esa funcionalidad es extraída de los dos y se crea un caso de uso nuevo que se relaciona con los anteriores con un include.
 
 <figure markdown>
-  ![Ejemplo de uso de include](assets/EDES-U4.1.-DiagramaCasoUso-img05.gif)
+  ![Ejemplo de uso de include](assets/EDES-U4.1.-DiagramaCasoUso-im06.png)
   <figcaption>Ejemplo de uso de include</figcaption>
 </figure>
 
 En este ejemplo, los casos de uso **emitir factura** y **enviar producto** ejecutarán ambos el caso de uso **autenticación**.
 
-##### 3.3.2. Relación extend
+##### 2.3.2. Relación extend
 
 `<<extend>>`: Este tipo de relaciones se utilizan cuando un caso de uso tiene un comportamiento opcional, reflejado en otro caso de uso. Es decir, un caso de uso puede ejecutar, normalmente dependiendo de alguna condición o flujo del programa, otro caso de uso. Se representa con una flecha discontinua que va desde el caso de uso opcional al original.
 
 <figure markdown>
-  ![Relación extend entre dos casos de uso](assets/EDES-U4.1.-DiagramaCasoUso-img06.gif)
+  ![Relación extend entre dos casos de uso](assets/EDES-U4.1.-DiagramaCasoUso-im07.png)
   <figcaption>Relación extend entre dos casos de uso</figcaption>
 </figure>
 
 Un ejemplo de esta relación podría ser la siguiente:
 
 <figure markdown>
-  ![Ejemplo de relaciones extend](assets/EDES-U4.1.-DiagramaCasoUso-img07.png)
+  ![Ejemplo de relaciones extend](assets/EDES-U4.1.-DiagramaCasoUso-im08.png)
   <figcaption>Ejemplo de relaciones extend</figcaption>
 </figure>
 
 En este supuesto el caso de uso **Hacer pedido** puede dar lugar (o no) a otros dos casos de uso: **Enviar notificación SMS** y **Enviar notificación email**. Se supone que, cuando un usuario hace un pedido, el sistema le permite elegir si quiere que se envíe una notificación de ese pedido por SMS o por email.
 
-##### 3.3.3. Relación de generalización
+##### 2.3.3. Relación de generalización
 
 **Generalización**: existe otra relación denominada generalización que consiste en hacer que un elemento herede el comportamiento de otro. Aunque se puede utilizar entre casos de uso, es más común utilizarlo entre actores, haciendo que uno de los actores tenga acceso a las funcionalidades de otro. Se representa con una flecha con la punta hueca que va desde el elemento que hereda al elemento heredado:
 
 <figure markdown>
-  ![Generalización entre dos actores](assets/EDES-U4.1.-DiagramaCasoUso-img08.png)
+  ![Generalización entre dos actores](assets/EDES-U4.1.-DiagramaCasoUso-im09.png)
   <figcaption>Generalización entre dos actores</figcaption>
 </figure>
 
-### 4. Identificación de actores y casos de uso
+### 3. Como dibujar un diagrama de casos de uso
 
-Para identificar actores y casos de uso se ha seguido como ejemplo la actividad propuesta para tal fin por la metodología de desarrollo RUP (Rational Unified Process).
+A la hora de dibujar un diagrama de casos de uso se recomienda que compruebes que has realizado previamente todas estas tareas, respondiendo a las preguntas que se listan a continuación:
+
+- Recopilar fuentes de información: ¿cómo se supone que debo saber eso?
+- Identificar actores potenciales: ¿qué usuarios utilizan los bienes y servicios del sistema empresarial?.
+- Identificar posibles casos de uso: ¿a qué bienes y servicios pueden recurrir los actores?
+- Conectar los casos de uso: ¿quién puede hacer uso de los bienes y servicios del sistema empresarial?
+- Describir actores: ¿a quién o qué representan los actores?
+- Buscar más casos de uso: ¿Qué más debe hacer el sistema?
+- Documentar casos de uso: ¿qué sucede exactamente en cada caso de uso?
+- Relacionar modelos entre casos de uso empresarial: ¿qué actividades se realizan repetidamente?
+- Verificar la vista, ¿todo es correcto?
+
+Los pasos se han escrito en este orden a propósito, ya que es la forma lógica de seguirlos. Sin embargo, este orden no es obligatorio, ya que en la práctica, los pasos individuales a menudo se superponen unos con otros.
+
+Para poder seguir los pasos de una forma óptima, es importante comprender el negocio/sistema para conseguir seguir cada paso individual. En algunos casos también es necesario consultar a los expertos o consultores del negocio. No tiene sentido aferrarse a la visión personal del analista, si este no tiene mucho conocimiento del área de negocio de la aplicación.
+
+Como soporte para responder a las preguntas anteriores, a continuación se propone unas pequeña guia para identificar actores y casos de uso, según la metodología de desarrollo RUP (Rational Unified Process).
 
 Se ha dividido la entrada en tres apartados:
 
@@ -150,7 +168,7 @@ Se ha dividido la entrada en tres apartados:
 2. Identificar casos de uso.
 3. Describir cómo interactúan los actores y los casos de uso.
 
-#### 4.1. Identificar actores
+#### 3.1. Identificar actores
 
 Encontrar actores es uno de los primeros pasos para definir los casos de uso del sistema. Cada tipo de fenómeno externo con el que el sistema debe interactuar está representado por un actor.
 
@@ -159,34 +177,86 @@ Como ya comentamos durante la explicación de qué es un diagrama de casos de us
 Las siguientes preguntas nos ayudarán a encontrar los actores que interactuarán con el sistema:
 
 - ¿Qué grupos de usuarios requieren ayuda del sistema para realizar sus tareas?
-
 - ¿Qué grupos de usuarios se necesitan para ejecutar las funciones principales más obvias del sistema?
-
 - ¿Qué grupos de usuarios están obligados a realizar funciones secundarias, como el mantenimiento y la administración del sistema?
-
 - ¿Con qué hardware externo debe interactuar el sistema?
-
 - ¿Con qué otros sistemas debe interactuar el sistema?
-
 - ¿Alguna entidad (usuario u otro sistema) necesita ser informado sobre los cambios que ocurren dentro del sistema?
 
 Estas preguntas nos pueden ayudar a encontrar actores. También podemos consultar el documento de requisitos funcionales del sistema, si existiese, para complementar la lista de actores identificados y casos de uso a los que daría lugar.
 
-#### 4.2. Identificar casos de uso
+Cualquier individuo, grupo o fenómeno que se ajuste a una o más de estas categorías es un candidato para un actor.
 
-Cuando se hayan identificado y descrito los actores, el modelo de casos de uso se realiza al identificar los casos de uso necesarios. Dado que los casos de uso son iniciados por los actores, una buena manera de identificar los casos de uso es considerar, para cada actor, de qué manera interactúa ese actor con el sistema, qué funcionalidad proporciona el sistema para ese actor.
+Para determinar si tiene los actores adecuados (humanos), puede intentar nombrar dos o tres personas que puedan actuar como actores, y luego ver si su conjunto de actores es suficiente para sus necesidades.
+Puede ser difícil al principio encontrar los actores más adecuados, y no es probable que los encuentres a todos de inmediato porque no están aun identificados todos los casos de uso. Posteriormente, es posible que sea necesario revisar el modelo original, porque al principio hay una tendencia a modelar demasiados actores.
 
-Para encontrar casos de uso, se deben tener en cuenta las siguientes preguntas:
+Tenga cuidado cuando cambie actores; los cambios que introduzca también pueden afectar los casos de uso. Recuerde que cualquier modificación a los actores constituye una alteración importante en las interfaces y el comportamiento del sistema.
 
-- ¿Qué funciones requiere un actor particular del sistema?
+El nombre del actor debe indicar claramente el papel del actor. Asegúrese de que habrá poco riesgo en una etapa futura de confundir el nombre de un actor con otro.
 
-- ¿El sistema almacena y recupera información? Si es así, ¿qué actores provocan esta necesidad?
+Defina a cada actor escribiendo una breve descripción que incluya el área de responsabilidad del actor y para lo que el actor necesita el sistema. Debido a que los actores representan cosas fuera del sistema, no es necesario que los describa en detalle.
 
-- ¿Se deben notificar al sistema los cambios externos? Si es así, ¿qué los notifica?
+#### 3.2. Identificar casos de uso
 
-- ¿El sistema debe notificar a los actores sobre los cambios internos?
+Cuando se completa el primer esquema de los actores, el siguiente paso es buscar los casos de uso del sistema. Los primeros casos de uso son muy preliminares, y sin duda tendrás que cambiarlos varias veces hasta que sean estables. Si la visión o los requisitos del sistema son deficientes, o si el análisis del sistema es impreciso, la funcionalidad del sistema no será clara. Por lo tanto, debes preguntarte constantemente si has encontrado los casos de uso correctos. Además, debes estar preparado para agregar, eliminar, combinar y dividir los casos de uso antes de llegar a una versión final. Obtendrás una mejor comprensión de los casos de uso una vez que los hayas descrito en detalle.
 
-#### 4.3. Describir cómo interactúan los actores y los casos de uso
+La mejor forma de encontrar casos de uso es considerar lo que cada actor requiere del sistema. Recuerde que el sistema existe solo para sus usuarios y, por lo tanto, debe basarse en las necesidades de los usuarios. Reconocerás muchas de las necesidades de los actores a través de los requisitos funcionales establecidos en el sistema. Para cada actor, sea humano o no, hay que hacer las siguientes preguntas:
+
+- ¿Cuáles son las tareas principales que el actor quiere que realice el sistema?
+- ¿El actor creará, almacenará, cambiará, eliminará o leerá datos en el sistema?
+- ¿El actor necesitará informar al sistema sobre cambios repentinos y externos?
+- ¿El actor necesita ser informado sobre ciertas ocurrencias en el sistema?
+- ¿El actor realizará un arranque o apagado del sistema?
+
+Las respuestas a estas preguntas representan los flujos de eventos que identifican casos de uso candidatos. No todos constituyen casos de uso separados; algunos pueden modelarse como variantes del mismo caso de uso. No siempre es fácil decir qué es una variante y qué es un caso de uso separado y distinto. Dependerá, en gran medida, del nivel de granularidad que queramos dar al esquema.
+
+Además de los requisitos, el modelo empresarial de su organización es una valiosa fuente de información para determinar los casos de uso. El modelo de empresa describe cómo se puede incorporar el sistema de información en las operaciones existentes y, por lo tanto, le da una buena idea del entorno del sistema.
+
+Un sistema puede tener varios modelos de casos de uso posibles. La mejor manera de encontrar el modelo «óptimo» es desarrollar dos o tres modelos, elegir el que prefiera y luego desarrollarlo más. Desarrollar varios modelos alternativos también lo ayuda a comprender mejor el sistema.
+
+Cuando haya delineado su primer modelo de caso de uso, debe verificar que el modelo de caso de uso aborde todos los requisitos funcionales. Examine cuidadosamente los requisitos para asegurarse de que todos los casos de uso cumplan con todos los requisitos.
+
+Cada caso de uso debe tener un nombre que indique lo que se logra mediante sus interacciones con el (los) actor (es). El nombre debe tener varias palabras para ser entendido. No hay dos casos de uso que puedan tener el mismo nombre.
+
+#### 3.3. Interacción entre los actores y los casos de uso
+
+Debido a que es importante mostrar cómo se relacionan los actores con el caso de uso, al encontrar un caso de uso, debe establecer qué actores interactuarán con él. Para hacer esto, debe definir una asociación de comunicaciones que sea navegable en la misma dirección que la transmisión de señal entre el actor y el caso de uso.
+Las transmisiones de señal generalmente van en ambas direcciones. Cuando este es el caso, debe permitir que las asociaciones de comunicaciones sean navegables en ambas direcciones. Defina, a lo sumo, una asociación de comunicación para cada par de actor y caso de uso.
+También es recomendable describir brevemente cada asociación de comunicación que defina.
+
+### 4. Documentación del os casos de uso
+
+#### 4.1. Requisitos funcionale vs No funcionales
+
+Es común en este tipo de diagramas describir cada caso de uso junto con la secuencia de pasos necesaria para completarlo y las posibles excepciones hasta definir todas las situaciones posibles. Esta descripción servirá de guía para el desarrollo, la profundidad de las situaciones que se traten dependerá de cada fase del proyecto o de cada situación en particular.
+
+Existen dos tipos de requisitos:
+
+- Requisitos funcionales: los relativos a aspectos relacionados con la funcionalidad que tiene que aportar el software.
+- Requisitos no funcionales: los relativos a otros aspectos, como pueden ser de tiempo de respuesta, seguridad, sistemas de despliegue y ejecución, etc.
+
+| **Caracteristicas**          | **Requisitos funcianales**                                                                    | **Requisitos no funcionales**                                                                             |
+|------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| **¿Qué describen?**          | Lo que el sistema debe hacer (funcionalidad y comportamiento).                                | Cómo debe funcionar el sistema (rendimiento, seguridad, usabilidad, etc.).                                |
+| Ejemplo en una tienda online | "El usuario debe poder registrarse en la tienda."                                             | "El sistema debe cargar la página en menos de 2 segundos."                                                |
+| **¿Son obligatorios?**       | Sí, son esenciales para que el sistema funcione.                                              | No siempre, pero mejoran la experiencia y eficiencia del sistema.                                         |
+| **¿Cómo se validan?**        | Se prueban mediante casos de uso y pruebas funcionales.                                       | Se prueban con métricas como tiempo de respuesta, seguridad y accesibilidad.                              |
+| Ejemplos generales           | Iniciar sesión; Procesar pagos; Agregar productos al carrito; Enviar notificaciones de pedido | Tiempo de respuesta < 3 segundos; Seguridad en transacciones; Diseño responsivo; Disponibilidad del 99.9% |
+
+
+Los requisitos funcionales se suelen representar mediante casos de uso, y suelen ser plasmados junto a la especificación del caso de uso.
+
+<figure markdown>
+  ![Generalización entre dos actores](assets/EDES-U4.1.-DiagramaCasoUso-im10.png)
+  <figcaption>Requisitos funcionales</figcaption>
+</figure>
+
+<figure markdown>
+  ![Generalización entre dos actores](assets/EDES-U4.1.-DiagramaCasoUso-im11.png)
+  <figcaption>Requisitos no funcionales</figcaption>
+</figure>
+
+#### 4.2. Especificación de casos de uso
 
 Una vez que se hayan identificado actores y casos de uso, es importante escribir al menos un breve resumen de cada uno. Es común que esta descripción se realice en formato de **especificación de casos de uso**.
 
@@ -196,21 +266,22 @@ El nivel de detalle de una especificación de casos de uso varía mucho. En algu
 
 Una especificación típica de un caso de uso incluye toda o parte de la siguiente información:
 
-- **Nombre del caso de uso**: Un nombre breve, descriptivo y único.
-
-- **Actores**: Los actores que participan en el caso de uso.
-
-- **Precondiciones**: Condiciones que deben cumplirse para que el caso de uso pueda iniciarse.
-
-- **Flujo principal**: Una descripción de paso a paso de lo que ocurre durante el caso de uso, centrada en la interacción entre el sistema y los actores.
-
-- **Flujos alternativos**: Variaciones del flujo principal debido a decisiones o excepciones.
-
-- **Postcondiciones**: Condiciones que serán verdaderas al finalizar el caso de uso.
-
-- **Requisitos especiales**: Requisitos no funcionales que se aplican al caso de uso (rendimiento, seguridad, etc.).
-
-### 4. Especificación de casos de uso
+- **Nombre del caso de uso**: Un nombre breve, descriptivo y único.   
+- **Versión**: Qué versión del documento es.   
+- **Autores**: Quién redacta el contenido.   
+- **Objetivos asociados**: Debe hacer referencia a los objetivos del software que están asociados a este requisito.   
+- **Requisitos asociados**: Debe hacer referencia a otros requisitos que están asociados a este requisito.  
+- **Requisitos especiales**: Requisitos no funcionales que se aplican al caso de uso (rendimiento, seguridad, etc.). 
+- **Descripción**: Descripción mas amplia del caso de uso. Este campo debe completarse de forma distinta en función de si el caso de uso es abstracto o concreto.    
+- **Actores**: Los actores que participan en el caso de uso.    
+- **Precondiciones**: Condiciones que deben cumplirse para que el caso de uso pueda iniciarse.    
+- **Flujo principal**: Una descripción de paso a paso de lo que ocurre durante el caso de uso, centrada en la interacción entre el sistema y los actores.    
+- **Flujos alternativos**: Variaciones del flujo principal debido a decisiones o excepciones.    
+- **Postcondiciones**: Condiciones que serán verdaderas al finalizar el caso de uso.    
+- Excepciones: Especifica el comportamiento del sistema en el caso de que se produzca alguna situación excepcional durante la realización de un paso determinado, lo que modifica el flujo «normal» del caso de uso.    
+- **Importancia**: La importancia que tiene este requisito.    
+- **Urgencia**: La urgencia que tiene este requisito.     
+- **Comentarios**: Cualquier comentario adicional.    
 
 A continuación se muestra un ejemplo de especificación de caso de uso:
 
@@ -220,10 +291,12 @@ A continuación se muestra un ejemplo de especificación de caso de uso:
 Este caso de uso describe el proceso mediante el cual un bibliotecario registra un préstamo de un libro a un socio.
 
 **Actores:**
+
 - Bibliotecario (Actor Principal)
 - Socio (Actor Secundario)
 
 **Precondiciones:**
+
 - El socio debe estar registrado en el sistema.
 - El libro debe estar disponible para préstamo.
 - El socio no debe tener más de 3 libros prestados simultáneamente.
@@ -268,13 +341,53 @@ Este caso de uso describe el proceso mediante el cual un bibliotecario registra 
 2. El caso de uso finaliza.
 
 **Postcondiciones:**
+
 - El préstamo queda registrado en el sistema.
 - El libro cambia su estado a "prestado".
 - Se ha establecido una fecha de devolución.
 
 **Requisitos Especiales:**
+
 - El sistema debe responder en menos de 2 segundos para cada operación.
 - Todas las operaciones deben quedar registradas en un log para auditoría.
+
+### 5. Ejemplos clinica veterinaria
+
+A modo de ejemplo se propone un ejercicio de un diagrama de casos de uso que consiste en el diseño de una aplicación que gestione los tramites a realizar en una clínica veterinaria en base a las siguientes premisas:
+
+La clínica veterinaria almacena datos de contacto de todos sus clientes como pueden ser: Nombre, Apellidos, DNI, Fecha de nacimiento, Teléfono o Email. Estos datos son introducidos y gestionados por los auxiliares, que ejercen las funciones administrativas.
+
+Además se almacena información de cada uno de las mascotas de las que es dueño cada cliente. Obviamente, cada cliente puede tener más de una mascota, pero cada mascota solo puede pertenecer a un único cliente. Se permite, además, cambiar el dueño de una mascota por otro.
+
+Al dar de alta un nuevo animal, se comprobará en el registro del REIAC (Red Española de Identificación de Animales de Compañía) si el animal está correctamente dado de alta. Este proceso unicamente se hará en animales que tengan la obligación de estar identificados.
+
+Cada vez que un veterinario realiza una consulta sobre un animal, esta queda almacenada incluyendo datos básicos como: Tiempo de consulta, Identificación de la persona que lo ha tratado, Animal tratado, Importe total, Resolución, Recetas… Para calcular el tiempo de la consulta el veterinario tendrá un botón en la aplicación donde pueda pulsar cuando comienza la consulta para calcular el tiempo a modo de cronómetro y otro botón para finalizar.
+
+En caso de que el animal se quede ingresado en la clínica, el cliente debe ser capaz de acceder al estado en tiempo real del animal. Además podrá comunicarse con una cámara que tendrá el animal colocada, donde podrá ver su situación actual. La gestión de estas cámaras no corresponde al sistema, sino que se utilizará una aplicación ya presente en el veterinario.
+
+Las recetas y otros documentos relacionados con el servicio se incluirán en un gestor de contenidos que ya está en funcionamiento en la clínica veterinaria.
+
+Una vez terminado el servicio, el cliente no tiene por qué realizar inmediatamente el pago, sino que puede identificarse posteriormente en la aplicación vía web y realizar el pago. Si el cliente tarda más de una semana se efectuará un recargo sobre el precio inicial.
+
+Además, el cliente debe ser capaz de obtener un histórico de todas las consultas que ha recibido cualquiera de sus mascotas.
+
+No obstante, dependiendo del nivel de profundidad, el diagrama puede variar significativamente descomponiendo, añadiendo, omitiendo o fusionando alguno de los casos de uso que se han expuesto.
+
+<figure markdown>
+  ![Ejemplo adicional 1](assets/EDES-U4.1.-DiagramaCasoUso-img14.jpg)
+  <figcaption>Ejemplo de diagrama de casos de uso - Sistema bancario</figcaption>
+</figure>
+
+<figure markdown>
+  ![Ejemplo adicional 2](assets/EDES-U4.1.-DiagramaCasoUso-img15.gif)
+  <figcaption>Ejemplo de diagrama de casos de uso con múltiples actores</figcaption>
+</figure>
+
+<figure markdown>
+  ![Ejemplo adicional 3](assets/EDES-U4.1.-DiagramaCasoUso-img16.gif)
+  <figcaption>Ejemplo de diagrama de casos de uso con relaciones complejas</figcaption>
+</figure>
+
 
 ### 5. Ejemplo completo: Sistema de tienda online
 
@@ -360,63 +473,20 @@ Una tienda online que permite a los usuarios buscar productos, añadirlos al car
 
 El diagrama representa de manera clara cómo los usuarios interactúan con la tienda online y cómo el administrador gestiona la plataforma.
 
-### 6. Otros ejemplos de diagramas de casos de uso
-
-A continuación se muestran otros ejemplos adicionales de diagramas de casos de uso que ilustran diferentes escenarios y tipos de sistemas:
-
-<figure markdown>
-  ![Ejemplo adicional 1](assets/EDES-U4.1.-DiagramaCasoUso-img10.jpg)
-  <figcaption>Ejemplo de diagrama de casos de uso - Sistema bancario</figcaption>
-</figure>
-
-<figure markdown>
-  ![Ejemplo adicional 2](assets/EDES-U4.1.-DiagramaCasoUso-img11.gif)
-  <figcaption>Ejemplo de diagrama de casos de uso con múltiples actores</figcaption>
-</figure>
-
-<figure markdown>
-  ![Ejemplo adicional 3](assets/EDES-U4.1.-DiagramaCasoUso-img12.gif)
-  <figcaption>Ejemplo de diagrama de casos de uso con relaciones complejas</figcaption>
-</figure>
-
-<figure markdown>
-  ![Ejemplo adicional 4](assets/EDES-U4.1.-DiagramaCasoUso-img13.gif)
-  <figcaption>Ejemplo de diagrama de casos de uso - Sistema de reservas</figcaption>
-</figure>
-
-<figure markdown>
-  ![Ejemplo adicional 5](assets/EDES-U4.1.-DiagramaCasoUso-img14.gif)
-  <figcaption>Ejemplo de diagrama de casos de uso - Sistema educativo</figcaption>
-</figure>
-
-<figure markdown>
-  ![Ejemplo adicional 6](assets/EDES-U4.1.-DiagramaCasoUso-img15.gif)
-  <figcaption>Ejemplo de diagrama de casos de uso - Sistema de gestión</figcaption>
-</figure>
-
-<figure markdown>
-  ![Ejemplo adicional 7](assets/EDES-U4.1.-DiagramaCasoUso-img16.gif)
-  <figcaption>Ejemplo de diagrama de casos de uso - Sistema hospitalario</figcaption>
-</figure>
 
 ### 7. Herramientas para crear diagramas de casos de uso
 
 Para crear diagramas de casos de uso, existen diversas herramientas que facilitan el proceso de modelado:
 
 - **PlantUML:** Permite crear diagramas mediante código, lo que facilita el versionado y la integración con sistemas de control de versiones.
-
 - **Draw.io:** Herramienta visual gratuita y online que permite crear diagramas de forma intuitiva.
-
 - **Visual Paradigm:** Suite completa de modelado UML con funcionalidades avanzadas para desarrollo profesional.
-
 - **StarUML:** Herramienta de modelado UML con soporte para múltiples tipos de diagramas.
-
 - **Lucidchart:** Herramienta colaborativa online que permite trabajar en equipo en tiempo real.
-
 - **Enterprise Architect:** Herramienta profesional completa para modelado de sistemas empresariales.
 
 !!! tip "Recomendación"
-    Para estudiantes y proyectos pequeños, se recomienda comenzar con herramientas gratuitas como PlantUML o Draw.io. Para proyectos profesionales y empresariales, herramientas como Visual Paradigm o Enterprise Architect ofrecen funcionalidades más avanzadas.
+Para estudiantes y proyectos pequeños, se recomienda comenzar con herramientas gratuitas como PlantUML o Draw.io. Para proyectos profesionales y empresariales, herramientas como Visual Paradigm o Enterprise Architect ofrecen funcionalidades más avanzadas.
 
 ## Referencias y bibliografía
 

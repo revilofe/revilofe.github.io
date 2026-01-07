@@ -22,12 +22,6 @@ tags:
 
 Antes de nada, recordar que ya hablamos de servidores web en la [unidad anterior](../../u03/teoria/DAW-U3.7.-ServidoresWeb/), así que si tenéis dudas sobre qué es un servidor web, su función, tipos, etc., podéis volver a esa unidad para refrescar conceptos.
 
-!!! info
-    **Requisitos previos:**
-    *   Tener una máquina virtual Debian (o similar) funcionando.
-    *   Tener acceso SSH a esa máquina virtual.
-    *   Tener conocimientos básicos de Linux (comandos de terminal, edición de archivos, permisos, etc.).
-
 !!! warning "Advertencia"
     Durante esta práctica, aprenderemos a instalar y configurar un servidor web Nginx, así como a transferir archivos mediante SFTP y a asegurar el servidor con HTTPS. Los puntos desde el 1 hasta 6 son de contexto previo, pero  luego tendrás que llevarlos a cabo durante los puntos 7 y 8, es decir, en estos dos últimos puntos pondrás en práctica todo lo visto en 1 hasta 6, y aprenderás a crear una infraestructura de servidor web. El punto 9 es una checklist de evaluación y evidencias.
 
@@ -39,27 +33,31 @@ Además de ser un servidor web tradicional (su origen), Nginx se ha convertido e
 
 #### 1.1 Servidor de Contenido Estático (Web Server)
 Este es el uso más básico y eficiente. Nginx es extremadamente rápido sirviendo archivos que no cambian (imágenes, HTML, CSS, JavaScript).
-*   **Por qué usarlo:** Consume mucha menos memoria que Apache para esta tarea.[7]
-*   **Ejemplo:** Alojar un blog estático (Hugo/Jekyll) o el frontend compilado de una aplicación React/Vue.
+
+* **Por qué usarlo:** Consume mucha menos memoria que Apache para esta tarea.    
+* **Ejemplo:** Alojar un blog estático (Hugo/Jekyll) o el frontend compilado de una aplicación React/Vue.    
 
 #### 1.2. Proxy Inverso (Reverse Proxy)
 Actúa como intermediario: recibe las peticiones de Internet y las pasa a tu aplicación real (Node.js, Python, Java) que suele estar en otro puerto interno.
-*   **Por qué usarlo:** Añade una capa de seguridad (oculta tu backend real), gestiona la compresión gzip y puede servir los archivos estáticos mientras tu aplicación se dedica solo a la lógica.[2][3]
-*   **Tu caso:** Es lo que harías para poner delante de tu contenedor SFTP o cualquier servicio web en tu servidor Linux.
+
+* **Por qué usarlo:** Añade una capa de seguridad (oculta tu backend real), gestiona la compresión gzip y puede servir los archivos estáticos mientras tu aplicación se dedica solo a la lógica.    
+* **Tu caso:** Es lo que harías para poner delante de tu contenedor SFTP o cualquier servicio web en tu servidor Linux.
 
 #### 1.3. Balanceador de Carga (Load Balancer)
-Si tienes mucho tráfico, puedes tener 3 servidores con la misma aplicación. Nginx recibe el tráfico y lo reparte entre ellos (round-robin, menos conexiones, ip-hash, etc.).[1][5]
-*   **Por qué usarlo:** Si un servidor se cae, Nginx deja de enviarle tráfico automáticamente y tus usuarios no notan nada.
+Si tienes mucho tráfico, puedes tener 3 servidores con la misma aplicación. Nginx recibe el tráfico y lo reparte entre ellos (round-robin, menos conexiones, ip-hash, etc.).    
+
+* **Por qué usarlo:** Si un servidor se cae, Nginx deja de enviarle tráfico automáticamente y tus usuarios no notan nada.
 
 #### 1.4. Terminación SSL/TLS (SSL Offloading)
-Nginx se encarga de cifrar y descifrar el tráfico HTTPS. Tu aplicación interna puede trabajar en HTTP simple (más rápido), ahorrándose el trabajo de criptografía.
-*   **Por qué usarlo:** Centralizas los certificados en un solo lugar en vez de configurarlos en cada microservicio.[1]
+Nginx se encarga de cifrar y descifrar el tráfico HTTPS. Tu aplicación interna puede trabajar en HTTP simple (más rápido), ahorrándose el trabajo de criptografía.    
+
+* **Por qué usarlo:** Centralizas los certificados en un solo lugar en vez de configurarlos en cada microservicio.
 
 #### 1.5. Caché de Contenido (Content Caching)
-Puede guardar en memoria o disco las respuestas de tu backend. Si 100 usuarios piden lo mismo, Nginx responde a 99 de ellos desde su caché sin molestar a tu base de datos.[7]
+Puede guardar en memoria o disco las respuestas de tu backend. Si 100 usuarios piden lo mismo, Nginx responde a 99 de ellos desde su caché sin molestar a tu base de datos.
 
 #### 1.6. Mail Proxy
-Aunque menos común hoy en día, Nginx nació también con capacidad para actuar como proxy de correo (IMAP/POP3/SMTP), redirigiendo tráfico de email a los servidores correctos.[7]
+Aunque menos común hoy en día, Nginx nació también con capacidad para actuar como proxy de correo (IMAP/POP3/SMTP), redirigiendo tráfico de email a los servidores correctos.
 
 #### 1.7 Tabla comparativa rápida
 | Caso de uso       | Función principal        | Beneficio clave                     |
@@ -193,11 +191,12 @@ http {
 ```
 
 Las directivas más importantes para el nginx.conf son:
-- `user`: Define el usuario bajo el cual se ejecuta NGINX.
-- `worker_processes`: Especifica el número de procesos worker (normalmente igual al número de CPU).
-- `events`: Configura las conexiones por worker.
-- `http`: Contiene la configuración global para el manejo de solicitudes HTTP, incluyendo tipos MIME, logs, optimizaciones de rendimiento y compresión Gzip.
-- `include`: Permite incluir otros archivos de configuración, como los sitios habilitados.
+
+- `user`: Define el usuario bajo el cual se ejecuta NGINX.   
+- `worker_processes`: Especifica el número de procesos worker (normalmente igual al número de CPU).    
+- `events`: Configura las conexiones por worker.   
+- `http`: Contiene la configuración global para el manejo de solicitudes HTTP, incluyendo tipos MIME, logs, optimizaciones de rendimiento y compresión Gzip.    
+- `include`: Permite incluir otros archivos de configuración, como los sitios habilitados.    
 
 Para más directivas y explicaciones, podéis consultar la [documentación oficial de Nginx](https://nginx.org/en/docs/).
 
@@ -237,16 +236,17 @@ server {
 }
 ```
 Algunas de las directivas que aparecen en la configuración de un server block son:
-- `listen`: Define los puertos y direcciones IP en los que el servidor escucha.
-- `server_name`: Especifica los nombres de dominio que el servidor manejará.
-- `root`: Define el directorio raíz desde donde se servirán los archivos.
-- `index`: Especifica los archivos predeterminados que se buscarán al acceder a un directorio.
-- `location`: Configura cómo manejar diferentes tipos de solicitudes o rutas específicas.
-- `access_log` y `error_log`: Permiten definir archivos de log específicos para el sitio.
-- `fastcgi_pass`: Configura la conexión a PHP-FPM para procesar archivos PHP.
-- `deny all`: Utilizado para denegar el acceso a ciertos archivos o directorios, como archivos ocultos.
-- `try_files`: Intenta servir archivos específicos y maneja errores 404 si no se encuentran.
-- `include`: Permite incluir configuraciones adicionales, como las relacionadas con FastCGI para PHP.
+
+- `listen`: Define los puertos y direcciones IP en los que el servidor escucha.   
+- `server_name`: Especifica los nombres de dominio que el servidor manejará.    
+- `root`: Define el directorio raíz desde donde se servirán los archivos.   
+- `index`: Especifica los archivos predeterminados que se buscarán al acceder a un directorio.    
+- `location`: Configura cómo manejar diferentes tipos de solicitudes o rutas específicas.    
+- `access_log` y `error_log`: Permiten definir archivos de log específicos para el sitio.    
+- `fastcgi_pass`: Configura la conexión a PHP-FPM para procesar archivos PHP.    
+- `deny all`: Utilizado para denegar el acceso a ciertos archivos o directorios, como archivos ocultos.    
+- `try_files`: Intenta servir archivos específicos y maneja errores 404 si no se encuentran.    
+- `include`: Permite incluir configuraciones adicionales, como las relacionadas con FastCGI para PHP.     
 
 Para más directivas y más detalles, podéis consultar la [documentación oficial de Nginx sobre Server Blocks](https://nginx.org/en/docs/http/server_names.html).
 
@@ -475,18 +475,21 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx-selfsigned.key
 
 **El Reto:**
 Modificad vuestro `docker-compose.yml` para:
-1.  Hacer que estos dos archivos de certificado estén disponibles **dentro** del contenedor de Nginx mediante volúmenes (bind mounts).
-2.  Abrir/Mapear el puerto **443** del contenedor a un puerto libre de vuestra máquina (por ejemplo, el `8443` o el `443` si no lo estáis usando).
+
+1.  Hacer que estos dos archivos de certificado estén disponibles **dentro** del contenedor de Nginx mediante volúmenes (bind mounts).    
+2.  Abrir/Mapear el puerto **443** del contenedor a un puerto libre de vuestra máquina (por ejemplo, el `8443` o el `443` si no lo estáis usando).    
 
 #### 8.2. Inyección de la configuración de Nginx
 
 La imagen oficial de Nginx viene con una configuración por defecto que no soporta SSL. No podemos entrar al contenedor a editarla con `nano` porque si reiniciamos el contenedor, los cambios se perderán.
 
 **La Tarea:**
-1.  Cread un archivo llamado `default.conf` en vuestra carpeta del proyecto (al lado del `docker-compose.yml`).
-2.  Buscad en internet cómo configurar un `server block` de Nginx para SSL (usando las directivas `listen 443 ssl`, `ssl_certificate`, etc.).
-3.  En esa configuración, las rutas a los certificados deben ser las **rutas internas del contenedor** donde los montasteis en el paso anterior.
-4.  Modificad el `docker-compose.yml` para montar vuestro archivo `default.conf` local sobre la configuración interna de Nginx (usualmente en `/etc/nginx/conf.d/default.conf`).
+
+1.  Cread un archivo llamado `default.conf` en vuestra carpeta del proyecto (al lado del `docker-compose.yml`).    
+2.  Buscad en internet cómo configurar un `server block` de Nginx para SSL (usando las directivas `listen 443 ssl`, `ssl_certificate`, etc.).    
+3.  En esa configuración, las rutas a los certificados deben ser las **rutas internas del contenedor** donde los montasteis en el paso anterior.    
+4.  Modificad el `docker-compose.yml` para montar vuestro archivo `default.conf` local sobre la configuración interna de Nginx (usualmente en `/etc/nginx/conf.d/default.conf`).    
+
 
 #### 8.3. Redirección HTTP a HTTPS
 
@@ -496,7 +499,7 @@ Fijáos que con el estado de la configuración actual, a vuestro sitio web se pu
 
 Configurad vuestro archivo `default.conf` para que tenga **dos bloques `server`**:
 
-1.  Uno que escuche en el puerto 80 y redirija todo el tráfico al puerto 443 (HTTPS).
+1.  Uno que escuche en el puerto 80 y redirija todo el tráfico al puerto 443 (HTTPS).     
 2.  Otro que escuche en el puerto 443 y sirva la web que tenéis en el volumen compartido.
 
 Realizad la búsqueda de información adecuada para conseguir esta redirección automática mediante los cambios necesarios en vuestros archivos de hosts virtuales.

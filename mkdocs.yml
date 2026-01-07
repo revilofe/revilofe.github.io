@@ -241,6 +241,9 @@ nav:
           - '3.7.-Servidores Web': 'section4/u03/teoria/DAW-U3.7.-ServidoresWeb.md'
           - '3.8.-Despliegue de Aplicaciones': 'section4/u03/teoria/DAW-U3.8.-DespliegueAplicaciones.md'
           - '3.9.-Seguridad y Monitorización': 'section4/u03/teoria/DAW-U3.9.-SeguridadMonitorizacion.md'
+      - 'U4: Servidores Web':
+          - 'section4/u04/index.md'
+          - '4.1.- Despliegue de una web statica': 'section4/u04/practica/DAW-U4.-Practica001.md'
   - 'Blog': 'blog.md'
   - 'Tags': 'tags.md'
   - 'Acerca de': 'about.md'

@@ -816,15 +816,17 @@ public class PerfilController {
 ```
 
 **Ventajas de Java:**
-- Rendimiento excelente
-- Tipado fuerte previene errores
-- Ideal para aplicaciones grandes
-- Ecosistema empresarial maduro
+
+- Rendimiento excelente   
+- Tipado fuerte previene errores    
+- Ideal para aplicaciones grandes     
+- Ecosistema empresarial maduro    
 
 **Desventajas:**
-- Verbosidad del código
-- Curva de aprendizaje pronunciada
-- Configuración compleja (aunque Spring Boot mejora esto)
+
+- Verbosidad del código    
+- Curva de aprendizaje pronunciada    
+- Configuración compleja (aunque Spring Boot mejora esto)    
 
 #### 3.5. Node.js: JavaScript en todas partes
 

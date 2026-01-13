@@ -8688,12 +8688,10 @@ Aquí, <code>nombre</code> tiene un getter personalizado que devuelve el nombre 
 <ol>
 <li>
 <p><strong>Clase <code>Persona</code></strong>:   </p>
-</li>
-<li>
-<p>Atributos: nombre, edad</p>
-</li>
-<li>
-<p>Métodos: presentarse</p>
+<ul>
+<li>Atributos: nombre, edad</li>
+<li>Métodos: presentarse</li>
+</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Persona</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">presentarse</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hola, mi nombre es </span><span class="si">$</span><span class="n">nombre</span><span class="s"> y tengo </span><span class="si">$</span><span class="n">edad</span><span class="s"> años.&quot;</span><span class="p">)</span>
@@ -8722,43 +8720,41 @@ Aquí, <code>nombre</code> tiene un getter personalizado que devuelve el nombre 
 </li>
 <li>
 <p><strong>Clase <code>Animal</code></strong>:</p>
-</li>
-<li>
-<p>Atributos: especie, nombre</p>
-</li>
+<ul>
+<li>Atributos: especie, nombre</li>
 <li>Métodos: emitirSonido</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1">//Definiendo la clase</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Animal</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">especie</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">emitirSonido</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Soy un </span><span class="si">$</span><span class="n">especie</span><span class="s"> y me llamo </span><span class="si">$</span><span class="n">nombre</span><span class="s">. ¡Hago un sonido característico!&quot;</span><span class="p">)</span>
 <a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="p">}</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="p">}</span><span class="w"> </span>
 <a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
 <a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="c1">// Uso de la clase para crear una instancia</span>
 <a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="kd">val</span><span class="w"> </span><span class="nv">perro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Animal</span><span class="p">(</span><span class="s">&quot;perro&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Firulais&quot;</span><span class="p">)</span>
 <a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="n">perro</span><span class="p">.</span><span class="na">emitirSonido</span><span class="p">()</span><span class="w"> </span><span class="c1">// Soy un perro y me llamo Firulais. ¡Hago un sonido característico!</span>
 </code></pre></div>
-<ol>
+</li>
 <li>
 <p><strong>Clase <code>Coche</code></strong>:</p>
-</li>
-<li>
-<p>Atributos: marca, modelo</p>
-</li>
+<ul>
+<li>Atributos: marca, modelo</li>
 <li>Métodos: describir</li>
-</ol>
+</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1">//Definiendo la clase</span>
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Coche</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">marca</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">modelo</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">describir</span><span class="p">(</span><span class="n">prefijo</span><span class="p">:</span><span class="kt">String</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
 <a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">       </span><span class="n">println</span><span class="p">(</span><span class="n">prefijo</span><span class="o">+</span><span class="s">&quot;Soy un coche de la marca </span><span class="si">$</span><span class="n">marca</span><span class="s"> y modelo </span><span class="si">$</span><span class="n">modelo</span><span class="s">.&quot;</span><span class="p">)</span>
 <a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="p">}</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="p">}</span><span class="w"> </span>
 <a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>
 <a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="c1">// Uso de la clase para crear una instancia</span>
 <a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="kd">val</span><span class="w"> </span><span class="nv">seatIbiza</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Coche</span><span class="p">(</span><span class="s">&quot;Seat&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Ibiza&quot;</span><span class="p">)</span>
 <a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="n">seatIbiza</span><span class="p">.</span><span class="na">describir</span><span class="p">()</span><span class="w"> </span><span class="c1">// Soy un coche de la marca Seat y modelo Ibiza.</span>
 </code></pre></div>
+</li>
+</ol>
 <p>En cada una de estas clases, los atributos son privados, encapsulando así la información dentro de la clase. Los métodos <code>presentarse</code>, <code>emitirSonido</code>, y <code>describir</code> permiten interactuar con estas clases, mostrando cómo los objetos (instancias) pueden usar sus métodos para realizar acciones específicas.</p>
 <p>Crear instancias como <code>juan</code>, <code>perro</code>, y <code>seatIbiza</code> de sus respectivas clases demuestra cómo las clases sirven como plantillas para crear objetos específicos con estados y comportamientos definidos.</p>
 <blockquote>

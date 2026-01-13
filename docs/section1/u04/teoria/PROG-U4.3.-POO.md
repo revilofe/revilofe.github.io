@@ -257,80 +257,78 @@ Mientras que un atributo es simplemente una variable dentro de una clase, una pr
 Vamos a crear ejemplos para las clases `Persona`, `Animal`, y `Coche`, así como para sus objetos o instancias específicas. Cada clase incluirá atributos (o campos) y métodos, y mostraré cómo se crean y utilizan las instancias de estas clases.
 
 1. **Clase `Persona`**:   
-   
 
-   - Atributos: nombre, edad
-   - Métodos: presentarse
+    - Atributos: nombre, edad
+    - Métodos: presentarse
 
-     ```kotlin
+    ```kotlin
 
-     class Persona(private val nombre: String, private val edad: Int) {
-         fun presentarse() {
-             println("Hola, mi nombre es $nombre y tengo $edad años.")
-         }
-     }
+    class Persona(private val nombre: String, private val edad: Int) {
+        fun presentarse() {
+            println("Hola, mi nombre es $nombre y tengo $edad años.")
+        }
+    }
 
-     // Creando una instancia
-     val juan = Persona("Juan", 30)
-     juan.presentarse() // "Hola, mi nombre es Juan y tengo 30 años."
-     ```
+    // Creando una instancia
+    val juan = Persona("Juan", 30)
+    juan.presentarse() // "Hola, mi nombre es Juan y tengo 30 años."
+    ```
 
-     ten en cuenta que es lo mismo que lo siguiente:
+    ten en cuenta que es lo mismo que lo siguiente:
 
-     ```kotlin
-     //Definiendo la clase
-     class Persona(nombreInicial: String, edadInicial: Int) {
-     private var nombre: String = nombreInicial
-     private var edad: Int = edadInicial
+    ```kotlin
+    //Definiendo la clase
+    class Persona(nombreInicial: String, edadInicial: Int) {
+    private var nombre: String = nombreInicial
+    private var edad: Int = edadInicial
 
-         fun presentarse() {
-             println("Hola, mi nombre es $nombre y tengo $edad años.")
-         }
-     }
+        fun presentarse() {
+            println("Hola, mi nombre es $nombre y tengo $edad años.")
+        }
+    }
 
-     // Uso de la clase para crear una instancia
-     val juan = Persona("Juan", 30)
-     juan.presentarse() // "Hola, mi nombre es Juan y tengo 30 años."
-     ```   
+    // Uso de la clase para crear una instancia
+    val juan = Persona("Juan", 30)
+    juan.presentarse() // "Hola, mi nombre es Juan y tengo 30 años."
+    ```   
    
 2. **Clase `Animal`**:
    
    
-   - Atributos: especie, nombre
-   - Métodos: emitirSonido
+    - Atributos: especie, nombre
+    - Métodos: emitirSonido
 
-   ```kotlin
-   //Definiendo la clase
-   class Animal(private val especie: String, private val nombre: String) {
-       fun emitirSonido() {
-           println("Soy un $especie y me llamo $nombre. ¡Hago un sonido característico!")
-       }
-   }
-
-   // Uso de la clase para crear una instancia
-   val perro = Animal("perro", "Firulais")
-   perro.emitirSonido() // Soy un perro y me llamo Firulais. ¡Hago un sonido característico!
-   ```   
+    ```kotlin
+    //Definiendo la clase
+    class Animal(private val especie: String, private val nombre: String) {
+        fun emitirSonido() {
+            println("Soy un $especie y me llamo $nombre. ¡Hago un sonido característico!")
+        }
+    } 
+ 
+    // Uso de la clase para crear una instancia
+    val perro = Animal("perro", "Firulais")
+    perro.emitirSonido() // Soy un perro y me llamo Firulais. ¡Hago un sonido característico!
+    ```   
 
 3. **Clase `Coche`**:
    
-   
-   - Atributos: marca, modelo
-   - Métodos: describir
+    - Atributos: marca, modelo
+    - Métodos: describir
 
 
-   ```kotlin
-   //Definiendo la clase
-   class Coche(private val marca: String, private val modelo: String) {
-       fun describir(prefijo:String  = "") { 
-          println(prefijo+"Soy un coche de la marca $marca y modelo $modelo.")
-       }
-   }
-
-   // Uso de la clase para crear una instancia
-   val seatIbiza = Coche("Seat", "Ibiza")
-   seatIbiza.describir() // Soy un coche de la marca Seat y modelo Ibiza.
-   ```
+    ```kotlin
+    //Definiendo la clase
+    class Coche(private val marca: String, private val modelo: String) {
+        fun describir(prefijo:String  = "") { 
+           println(prefijo+"Soy un coche de la marca $marca y modelo $modelo.")
+        }
+    } 
+ 
+    // Uso de la clase para crear una instancia
+    val seatIbiza = Coche("Seat", "Ibiza")
+    seatIbiza.describir() // Soy un coche de la marca Seat y modelo Ibiza.
+    ```
 
 En cada una de estas clases, los atributos son privados, encapsulando así la información dentro de la clase. Los métodos `presentarse`, `emitirSonido`, y `describir` permiten interactuar con estas clases, mostrando cómo los objetos (instancias) pueden usar sus métodos para realizar acciones específicas.
 

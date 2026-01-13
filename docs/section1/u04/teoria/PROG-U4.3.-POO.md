@@ -143,11 +143,11 @@ Aquí, `Persona` tiene un constructor primario con dos parámetros: `nombre` y `
 Se declara dentro del cuerpo de la clase y se utiliza para proporcionar funcionalidades adicionales o para permitir diferentes formas de instanciar un objeto.
 ```kotlin
 class Persona(val nombre: String) {
-  var edad: Int = 0
+    var edad: Int = 0
 
-  constructor(nombre: String, edad: Int) : this(nombre) {
-      this.edad = edad
-  }
+    constructor(nombre: String, edad: Int) : this(nombre) {
+        this.edad = edad
+    }
 }
 ```
 En el ejemplo anterior,  `Persona` tiene un constructor primario que solo toma un `nombre`, y un constructor secundario que toma tanto un `nombre` como una `edad`. Presta atención a como el constructor secundario delega en el constructor primario usando la palabra clave `this`.
@@ -178,14 +178,14 @@ Puedes personalizar cómo se accede y modifica una propiedad mediante la definic
 Ejemplo:
 ```kotlin
 class Persona(nombreInicial: String, edadInicial: Int) {
-var nombre: String = nombreInicial
-    get() = field.toUpperCase() // Personaliza el getter
-    set(value) {
-        field = value.capitalize()
-    }
+    var nombre: String = nombreInicial
+        get() = field.uppercase() // Personaliza el getter
+        set(value) {
+            field = value.capitalize()
+        }
 
-var edad: Int = edadInicial
-    private set // Solo getter público, setter privado
+    var edad: Int = edadInicial
+        private set // Solo getter público, setter privado
 }
 ```
 Aquí, `nombre` tiene un getter personalizado que devuelve el nombre en mayúsculas y un setter que capitaliza el valor asignado. `edad` tiene un setter privado, lo que significa que solo puede modificarse dentro de la clase `Persona`.
@@ -200,12 +200,12 @@ Dentro de los bloques `init` puedes usar la palabra `required` para validar las 
 
 ```kotlin
 class Persona(val nombre: String, val edad: Int) {
-  val nombreEnMayusculas = nombre.toUpperCase()
-  init {
-      require(nombre.trim().length > 0) { "Argumento nombre inválido." }
-      require(edad >= 0 && edad < 150) { "Argumento edad inválido." }
-      println("Se ha creado una nueva Persona llamada $nombre")
-  }
+    val nombreEnMayusculas = nombre.toUpperCase()
+    init {
+        require(nombre.trim().length > 0) { "Argumento nombre inválido." }
+        require(edad >= 0 && edad < 150) { "Argumento edad inválido." }
+        println("Se ha creado una nueva Persona llamada $nombre")
+    }
 }
 ```
 
@@ -257,80 +257,78 @@ Mientras que un atributo es simplemente una variable dentro de una clase, una pr
 Vamos a crear ejemplos para las clases `Persona`, `Animal`, y `Coche`, así como para sus objetos o instancias específicas. Cada clase incluirá atributos (o campos) y métodos, y mostraré cómo se crean y utilizan las instancias de estas clases.
 
 1. **Clase `Persona`**:   
-   
 
-   - Atributos: nombre, edad
-   - Métodos: presentarse
+    - Atributos: nombre, edad
+    - Métodos: presentarse
 
-     ```kotlin
+    ```kotlin
 
-     class Persona(private val nombre: String, private val edad: Int) {
-         fun presentarse() {
-             println("Hola, mi nombre es $nombre y tengo $edad años.")
-         }
-     }
+    class Persona(private val nombre: String, private val edad: Int) {
+        fun presentarse() {
+            println("Hola, mi nombre es $nombre y tengo $edad años.")
+        }
+    }
 
-     // Creando una instancia
-     val juan = Persona("Juan", 30)
-     juan.presentarse() // "Hola, mi nombre es Juan y tengo 30 años."
-     ```
+    // Creando una instancia
+    val juan = Persona("Juan", 30)
+    juan.presentarse() // "Hola, mi nombre es Juan y tengo 30 años."
+    ```
 
-     ten en cuenta que es lo mismo que lo siguiente:
+    ten en cuenta que es lo mismo que lo siguiente:
 
-     ```kotlin
-     //Definiendo la clase
-     class Persona(nombreInicial: String, edadInicial: Int) {
-     private var nombre: String = nombreInicial
-     private var edad: Int = edadInicial
+    ```kotlin
+    //Definiendo la clase
+    class Persona(nombreInicial: String, edadInicial: Int) {
+        private var nombre: String = nombreInicial
+        private var edad: Int = edadInicial
 
-         fun presentarse() {
-             println("Hola, mi nombre es $nombre y tengo $edad años.")
-         }
-     }
+        fun presentarse() {
+            println("Hola, mi nombre es $nombre y tengo $edad años.")
+        }
+    }
 
-     // Uso de la clase para crear una instancia
-     val juan = Persona("Juan", 30)
-     juan.presentarse() // "Hola, mi nombre es Juan y tengo 30 años."
-     ```   
+    // Uso de la clase para crear una instancia
+    val juan = Persona("Juan", 30)
+    juan.presentarse() // "Hola, mi nombre es Juan y tengo 30 años."
+    ```   
    
 2. **Clase `Animal`**:
    
    
-   - Atributos: especie, nombre
-   - Métodos: emitirSonido
+    - Atributos: especie, nombre
+    - Métodos: emitirSonido
 
-   ```kotlin
-   //Definiendo la clase
-   class Animal(private val especie: String, private val nombre: String) {
-       fun emitirSonido() {
-           println("Soy un $especie y me llamo $nombre. ¡Hago un sonido característico!")
-       }
-   }
-
-   // Uso de la clase para crear una instancia
-   val perro = Animal("perro", "Firulais")
-   perro.emitirSonido() // Soy un perro y me llamo Firulais. ¡Hago un sonido característico!
-   ```   
+    ```kotlin
+    //Definiendo la clase
+    class Animal(private val especie: String, private val nombre: String) {
+        fun emitirSonido() {
+            println("Soy un $especie y me llamo $nombre. ¡Hago un sonido característico!")
+        }
+    } 
+ 
+    // Uso de la clase para crear una instancia
+    val perro = Animal("perro", "Firulais")
+    perro.emitirSonido() // Soy un perro y me llamo Firulais. ¡Hago un sonido característico!
+    ```   
 
 3. **Clase `Coche`**:
    
-   
-   - Atributos: marca, modelo
-   - Métodos: describir
+    - Atributos: marca, modelo
+    - Métodos: describir
 
 
-   ```kotlin
-   //Definiendo la clase
-   class Coche(private val marca: String, private val modelo: String) {
-       fun describir(prefijo:String  = "") { 
-          println(prefijo+"Soy un coche de la marca $marca y modelo $modelo.")
-       }
-   }
-
-   // Uso de la clase para crear una instancia
-   val seatIbiza = Coche("Seat", "Ibiza")
-   seatIbiza.describir() // Soy un coche de la marca Seat y modelo Ibiza.
-   ```
+    ```kotlin
+    //Definiendo la clase
+    class Coche(private val marca: String, private val modelo: String) {
+        fun describir(prefijo:String  = "") { 
+           println(prefijo+"Soy un coche de la marca $marca y modelo $modelo.")
+        }
+    } 
+ 
+    // Uso de la clase para crear una instancia
+    val seatIbiza = Coche("Seat", "Ibiza")
+    seatIbiza.describir() // Soy un coche de la marca Seat y modelo Ibiza.
+    ```
 
 En cada una de estas clases, los atributos son privados, encapsulando así la información dentro de la clase. Los métodos `presentarse`, `emitirSonido`, y `describir` permiten interactuar con estas clases, mostrando cómo los objetos (instancias) pueden usar sus métodos para realizar acciones específicas.
 
@@ -386,9 +384,9 @@ También, como ejemplo del uso de `companion object`, podríamos añadir a la cl
 ```Kotlin
 class Coche(private val marca: String, private val modelo: String) {
     companion object {
-        var volanteALaDerecha: Boolean = true // Por defecto, para países con conducción a la izquierda
+        private var volanteALaDerecha: Boolean = true // Por defecto, para países con conducción a la izquierda
 
-        fun configurarConduccion(esConduccionALaDerecha: Boolean) {
+        fun configurarLadoDelVolante(esConduccionALaDerecha: Boolean) {
             volanteALaDerecha = esConduccionALaDerecha
         }
     }
@@ -400,7 +398,7 @@ class Coche(private val marca: String, private val modelo: String) {
 }
 ```
 
-Con este enfoque, puedes cambiar la configuración del volante para todos los coches según el país, utilizando el método `configurarConduccion` del `companion object`.
+Con este enfoque, puedes cambiar la configuración del volante para todos los coches según el país, utilizando el método `configurarLadoDelVolante` del `companion object`.
 
 ### 2.6 Ejemplos de clases y objetos propios del lenguaje
 
@@ -410,7 +408,7 @@ En Kotlin, todo es un objeto en el sentido de que podemos hacer uso de los méto
 
 #### 2.6.1. Clase: String
 
-* **Clase `String`**: Esta clase es una plantilla predefinida en el lenguaje de programación para representar secuencias de caracteres (texto). Tiene varios métodos que permiten manipular o consultar la cadena de texto, como `length()`, `toUpperCase()`, `substring()`, etc.
+* **Clase `String`**: Esta clase es una plantilla predefinida en el lenguaje de programación para representar secuencias de caracteres (texto). Tiene varios métodos que permiten manipular o consultar la cadena de texto, como `length`, `uppercase()`, `substring()`, etc.
 
 #### 2.6.2. Objeto/Instancia: Cadena de Texto
 

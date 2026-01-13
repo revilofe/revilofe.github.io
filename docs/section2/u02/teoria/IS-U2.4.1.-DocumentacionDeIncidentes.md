@@ -18,7 +18,13 @@ tags:
 
 # 2.4.1. Documentación de incidentes
 
-## 1. Introducción
+<figure markdown>
+  ![Gestión de incidentes](assets/IS-U241-DocumentacionDeIncidentes1.png)
+  <figcaption>Documentación de incidentes de seguridad</figcaption>
+</figure>
+
+
+### 1. Introducción
 
 El criterio de evaluación **e) del Resultado de Aprendizaje 2** establece que debemos ser capaces de realizar una **clasificación, valoración, documentación y seguimiento** de los incidentes detectados dentro de la organización. Este criterio no es casual: representa el núcleo de la gestión profesional de incidentes de ciberseguridad.
 
@@ -32,11 +38,11 @@ Pero detectar y clasificar un incidente es solo el comienzo. El verdadero valor 
 
 En este documento aprenderás no solo **qué documentar** y **por qué es crucial**, sino también a comprender la documentación como parte integral de un proceso más amplio: **la gestión de incidentes**. Dominar este proceso es lo que diferencia a un técnico reactivo de un profesional proactivo en ciberseguridad.
 
-## 2. La gestión de incidentes: marco general
+### 2. La gestión de incidentes: marco general
 
 Antes de profundizar en la documentación, necesitamos comprender que esta no es una actividad aislada, sino que forma parte de un proceso más amplio y estructurado: **la gestión de incidentes**.
 
-### 2.1. ¿Qué es un incidente de seguridad?
+#### 2.1. ¿Qué es un incidente de seguridad?
 
 Un **incidente de seguridad** es cualquier suceso que afecte a la **confidencialidad, integridad o disponibilidad** de los activos de información de la empresa. Ejemplos de incidentes incluyen:
 
@@ -46,9 +52,13 @@ Un **incidente de seguridad** es cualquier suceso que afecte a la **confidencial
 -   Modificación o destrucción de información
 -   Interrupción de servicios críticos
 
-### 2.2. ¿Qué es la gestión de incidentes?
+Un incidente **no es una incidencia**, que según ITIL (Information Technology Infrastructure Library) es un evento que no forma parte del funcionamiento estándar de un servicio y que causa, o puede causar, una interrupción o una reducción de la calidad del mismo.
 
-La **gestión de incidentes** consiste en establecer un **plan de acción** estructurado y sistemático para atender, resolver y aprender de los incidentes que se produzcan. No se trata solo de "apagar fuegos", sino de:
+La diferencia clave es que un **incidente de seguridad** tiene un **impacto negativo real o potencial** en la seguridad de la información, mientras que una incidencia puede ser cualquier evento que afecte al servicio, sin necesariamente comprometer la seguridad.
+
+#### 2.2. ¿Qué es la gestión de incidentes?
+
+La **gestión de incidentes** consiste en establecer un **plan de acción** estructurado y sistemático para atender, resolver y **aprender de los incidentes** que se produzcan. No se trata solo de "apagar fuegos", sino de:
 
 1.  **Atender los incidentes** de forma organizada y eficiente
 2.  **Resolver los incidentes** minimizando el impacto en la organización
@@ -58,12 +68,8 @@ La **gestión de incidentes** consiste en establecer un **plan de acción** estr
     -   Detectar **tendencias y patrones** antes de que se conviertan en problemas mayores
     -   Mejorar continuamente nuestras defensas y procedimientos
 
-<figure markdown>
-  ![Gestión de incidentes](assets/IS-U241-DocumentacionDeIncidentes1.png)
-  <figcaption>Proceso de gestión de incidentes de seguridad</figcaption>
-</figure>
 
-### 2.3. El ciclo de vida de un incidente
+#### 2.3. El ciclo de vida de un incidente
 
 Como vimos en la sección 2.1.1 (Taxonomía de Incidentes), la gestión de incidentes sigue un ciclo de vida bien definido:
 
@@ -74,17 +80,29 @@ Como vimos en la sección 2.1.1 (Taxonomía de Incidentes), la gestión de incid
 5.  **Recuperación** → Restaurar los sistemas y servicios a su estado operativo normal
 6.  **Lecciones aprendidas** → Analizar qué ocurrió, cómo se gestionó y qué podemos mejorar para el futuro
 
+<figure markdown>
+  ![Gestión de incidentes](assets/IS-U241-DocumentacionDeIncidentes-1.png)
+  <figcaption>Recomendación del Instituto SANS. 6 pasos para responder a un incidente.</figcaption>
+</figure>
+
+
 **La documentación es transversal a todas estas fases**, siendo especialmente crítica en identificación, respuesta y aprendizaje. Sin una documentación adecuada, el conocimiento se pierde, los errores se repiten y la organización no evoluciona.
 
-## 3. ¿Por qué es tan importante documentar?
+### 3. ¿Por qué es tan importante documentar?
 
 Ahora que comprendemos que la documentación forma parte de un proceso integral de gestión, podemos entender mejor por qué es tan crucial. La documentación de incidentes no es un mero trámite burocrático, sino una **herramienta estratégica** que aporta un valor incalculable a la organización en múltiples dimensiones:
 
-### 3.1. Generación de inteligencia de amenazas
+<figure markdown>
+  ![Importancia de la documentación](assets/IS-U241-DocumentacionDeIncidentes2.png)
+  <figcaption>Múltiples beneficios de una documentación exhaustiva</figcaption>
+</figure>
+
+
+#### 3.1. Generación de inteligencia de amenazas
 
 La información recopilada durante y después del incidente permite identificar:
 
--   **Indicadores de Compromiso (IOCs)**: Hashes de malware, IPs maliciosas, dominios de comando y control, etc.
+-   **Indicadores de Compromiso (IOC)**: Hashes de malware, IPs maliciosas, dominios de comando y control, etc.
 -   **Tácticas, Técnicas y Procedimientos (TTPs)** de los atacantes: Cómo operan, qué buscan, qué herramientas utilizan
 
 Esta inteligencia es crucial para:
@@ -93,7 +111,7 @@ Esta inteligencia es crucial para:
 -   **Anticipar futuros ataques** con características similares
 -   **Compartir información** con otras organizaciones y CERTs para mejorar la seguridad colectiva
 
-### 3.2. Lecciones aprendidas y mejora continua
+#### 3.2. Lecciones aprendidas y mejora continua
 
 Cada incidente es una oportunidad de aprendizaje. Documentar no solo lo que salió mal, sino también lo que funcionó bien durante la respuesta, permite:
 
@@ -101,7 +119,7 @@ Cada incidente es una oportunidad de aprendizaje. Documentar no solo lo que sali
 -   **Optimizar los planes de respuesta** basándose en experiencias reales
 -   **Evitar repetir errores** en futuros incidentes similares
 
-### 3.3. Análisis y parametrización de sistemas de seguridad
+#### 3.3. Análisis y parametrización de sistemas de seguridad
 
 Conocer la naturaleza exacta del incidente, sus características técnicas y los vectores de ataque utilizados es fundamental para:
 
@@ -109,7 +127,7 @@ Conocer la naturaleza exacta del incidente, sus características técnicas y los
 -   **Actualizar políticas de seguridad** basándose en amenazas reales
 -   **Priorizar inversiones** en seguridad de forma justificada
 
-### 3.4. Campañas de sensibilización efectivas
+#### 3.4. Campañas de sensibilización efectivas
 
 La documentación de incidentes reales proporciona material de gran valor para:
 
@@ -117,7 +135,7 @@ La documentación de incidentes reales proporciona material de gran valor para:
 -   Diseñar **formación dirigida** a las amenazas y vulnerabilidades específicas detectadas
 -   Demostrar a la dirección la **necesidad de inversión** en seguridad con datos concretos
 
-### 3.5. Cumplimiento normativo y legal
+#### 3.5. Cumplimiento normativo y legal
 
 Una documentación detallada y precisa es **indispensable** para:
 
@@ -126,7 +144,7 @@ Una documentación detallada y precisa es **indispensable** para:
 -   Proporcionar **evidencias válidas** en caso de procedimientos judiciales
 -   Demostrar **diligencia debida** ante auditorías y reguladores
 
-### 3.6. Conocimiento del adversario
+#### 3.6. Conocimiento del adversario
 
 Documentar sistemáticamente los incidentes permite:
 
@@ -135,26 +153,22 @@ Documentar sistemáticamente los incidentes permite:
 -   Detectar **campañas de ataque sostenidas** contra la organización
 -   Establecer **atribución** cuando sea posible
 
-<figure markdown>
-  ![Importancia de la documentación](assets/IS-U241-DocumentacionDeIncidentes2.png)
-  <figcaption>Múltiples beneficios de una documentación exhaustiva</figcaption>
-</figure>
 
 !!! quote "Principio fundamental"
     "Un incidente no documentado es un incidente del que no se puede aprender. Una organización que no aprende de sus incidentes está condenada a repetirlos."
 
 Con esta comprensión de **por qué** la documentación es tan crítica y estratégica, estamos preparados para abordar la siguiente pregunta fundamental: **¿qué información concreta debemos registrar?**
 
-## 4. ¿Qué debemos documentar?
+### 4. ¿Qué debemos documentar?
 
 Ahora que entendemos el **contexto** (la gestión integral de incidentes en la sección 2) y la **motivación** (por qué documentar es estratégico en la sección 3), llegamos a la pregunta central: **¿qué información concreta debemos registrar?**
 
 Para que la documentación sea útil, debe ser **detallada, precisa y estructurada**. A continuación, se presenta un listado exhaustivo de los elementos clave que se deben registrar, basados en la "Guía Nacional de Notificación y Gestión de Ciberincidentes" de INCIBE-CERT.
 
 !!! tip "Documentación desde el minuto uno"
-    La documentación debe comenzar desde el momento de la detección del incidente, no al final. Registra cada acción, decisión y descubrimiento en tiempo real. Tu "yo del futuro" (y tus compañeros) te lo agradecerán.
+    La documentación debe comenzar desde el momento de la detección del incidente, no al final. Registra cada acción, decisión y descubrimiento en tiempo real. Tú "yo del futuro" (y tus compañeros) te lo agradecerán.
 
-### 4.1. Información General del Incidente
+#### 4.1. Información General del Incidente
 
 Esta sección establece el **contexto básico** del incidente:
 
@@ -192,12 +206,8 @@ Esta sección establece el **contexto básico** del incidente:
     -   Credenciales comprometidas
     -   Ataque de fuerza bruta exitoso
 
-<figure markdown>
-  ![Información general del incidente](assets/IS-U241-DocumentacionDeIncidentes7.png)
-  <figcaption>Campos de información general a documentar</figcaption>
-</figure>
 
-### 4.2. Clasificación y Valoración
+#### 4.2. Clasificación y Valoración
 
 Esta sección es crucial para **priorizar la respuesta** y **asignar recursos** adecuadamente:
 
@@ -234,20 +244,6 @@ Esta sección es crucial para **priorizar la respuesta** y **asignar recursos** 
     
 -   **Impacto transfronterizo**: Indicar si el incidente afecta a otros estados miembros de la UE (relevante para directiva NIS)
 
-<figure markdown>
-  ![Clasificación y valoración](assets/IS-U241-DocumentacionDeIncidentes13.png)
-  <figcaption>Clasificación según taxonomía de incidentes</figcaption>
-</figure>
-
-<figure markdown>
-  ![Peligrosidad](assets/IS-U241-DocumentacionDeIncidentes15.png)
-  <figcaption>Criterios para determinar el nivel de peligrosidad</figcaption>
-</figure>
-
-<figure markdown>
-  ![Impacto](assets/IS-U241-DocumentacionDeIncidentes16.png)
-  <figcaption>Criterios para determinar el nivel de impacto</figcaption>
-</figure>
 
 !!! note "Peligrosidad vs. Impacto: diferencia fundamental"
     Es crucial no confundir estos dos conceptos:
@@ -259,7 +255,9 @@ Esta sección es crucial para **priorizar la respuesta** y **asignar recursos** 
     
     **Ejemplo 2**: Un ataque de phishing básico (PELIGROSIDAD MEDIA) que compromete credenciales del CEO y provoca una transferencia fraudulenta de 500.000€ tiene un IMPACTO CRÍTICO.
 
-### 4.3. Detalles Técnicos
+Para más información, puedes consultar la sección [2.1.1 sobre taxonomía de incidentes](https://revilofe.github.io/section2/u02/teoria/IS-U2.1.1.-TaxonomiaDeIncidentes/).
+
+#### 4.3. Detalles Técnicos
 
 Esta información es esencial para el **análisis técnico** y la **mejora de defensas**:
 
@@ -289,12 +287,8 @@ Esta información es esencial para el **análisis técnico** y la **mejora de de
     -   Ejemplo: "T1486 - Data Encrypted for Impact"
     -   Ejemplo: "T1059 - Command and Scripting Interpreter"
 
-<figure markdown>
-  ![Detalles técnicos](assets/IS-U241-DocumentacionDeIncidentes8.png)
-  <figcaption>Información técnica esencial a documentar</figcaption>
-</figure>
 
-### 4.4. Gestión y Respuesta
+#### 4.4. Gestión y Respuesta
 
 Esta sección documenta **cómo se ha gestionado** el incidente, información crítica para las lecciones aprendidas:
 
@@ -332,20 +326,14 @@ Esta sección documenta **cómo se ha gestionado** el incidente, información cr
     -   Horas extra, fines de semana trabajados
     -   Ayuda externa contratada
 
-<figure markdown>
-  ![Gestión del incidente](assets/IS-U241-DocumentacionDeIncidentes9.png)
-  <figcaption>Documentación del plan de acción y contramedidas</figcaption>
-</figure>
-
 !!! tip "La importancia de la timeline"
-    Una línea temporal detallada no solo ayuda a entender qué ocurrió, sino también a identificar:
-    
-    -   Cuellos de botella en la respuesta
-    -   Tiempos de reacción mejorables
-    -   Dependencias críticas
-    -   Efectividad de las contramedidas
+    Una línea temporal detallada no solo ayuda a entender qué ocurrió, sino también a identificar:    
+    - Cuellos de botella en la respuesta
+    - Tiempos de reacción mejorables
+    - Dependencias críticas
+    - Efectividad de las contramedidas
 
-### 4.5. Consecuencias y Análisis Post-Incidente
+#### 4.5. Consecuencias y Análisis Post-Incidente
 
 Esta sección documenta el **impacto real** del incidente en la organización:
 
@@ -359,11 +347,14 @@ Esta sección documenta el **impacto real** del incidente en la organización:
 -   **Impacto económico estimado**: Cuantificación de costes
     
     -   **Costes directos**:
+    
         -   Horas de trabajo del equipo de respuesta
         -   Servicios externos contratados
         -   Sustitución o reparación de equipos
         -   Costes de notificación a afectados
+    
     -   **Costes indirectos**:
+    
         -   Pérdida de negocio durante la interrupción
         -   Oportunidades de negocio perdidas
         -   Posibles multas regulatorias (RGPD, ENS...)
@@ -406,22 +397,12 @@ Esta sección documenta el **impacto real** del incidente en la organización:
     -   Informes de análisis forense
     -   Comunicaciones con afectados y autoridades
 
-<figure markdown>
-  ![Consecuencias del incidente](assets/IS-U241-DocumentacionDeIncidentes10.png)
-  <figcaption>Documentación de impacto económico y afectación</figcaption>
-</figure>
-
-<figure markdown>
-  ![Regulación y evidencias](assets/IS-U241-DocumentacionDeIncidentes11.png)
-  <figcaption>Regulación afectada y necesidad de actuación de FFCCSE</figcaption>
-</figure>
-
 Con todas estas secciones completadas (4.1 a 4.5), tenemos documentado el **qué ocurrió, cómo respondimos y cuáles fueron las consecuencias**. Pero hay un aspecto crítico que no podemos ignorar y que condiciona **cómo** obtenemos y manejamos toda esta información: el **marco legal**.
 
 !!! quote "Máxima fundamental"
     "En caso de duda sobre la legalidad de una acción durante la respuesta al incidente, consulta con el departamento legal ANTES de actuar. Es mejor perder algo de tiempo que perder evidencias válidas o incurrir en responsabilidades legales."
 
-## 5. Seguimiento de incidentes: más allá de la resolución
+### 5. Seguimiento de incidentes: más allá de la resolución
 
 Hasta ahora hemos visto qué documentar durante la **detección y respuesta** al incidente. Sin embargo, un error común es considerar que el trabajo termina cuando el incidente está "resuelto técnicamente". Nada más lejos de la realidad: el **seguimiento** es una fase crítica que cierra el ciclo de vida del incidente y prepara a la organización para el futuro.
 
@@ -431,16 +412,12 @@ El seguimiento garantiza tres objetivos fundamentales:
 2.  Que no hay **recurrencia** del problema (el atacante no ha dejado puertas traseras)
 3.  Que la organización **aprende y mejora** continuamente sus defensas
 
-<figure markdown>
-  ![Seguimiento de incidentes](assets/IS-U241-DocumentacionDeIncidentes3.png)
-  <figcaption>El seguimiento es esencial para conocer herramientas, estrategias y prevenir futuros incidentes</figcaption>
-</figure>
 
-### 5.1. Seguimiento durante la resolución
+#### 5.1. Seguimiento durante la resolución
 
 Mientras el incidente está siendo gestionado, es fundamental mantener un **seguimiento activo** que proporcione visibilidad del estado actual a todas las partes interesadas:
 
-#### 5.1.1. Información de estado a mantener
+##### 5.1.1. Información de estado a mantener
 
 -   **Estado actual del incidente**: ¿En qué fase estamos?
     
@@ -471,7 +448,7 @@ Mientras el incidente está siendo gestionado, es fundamental mantener un **segu
     -   "Bloqueado: Esperando aprobación de dirección para apagar el servidor de producción"
     -   "Bloqueado: Pendiente de respuesta del fabricante sobre el parche de emergencia"
 
-#### 5.1.2. Comunicación continua
+##### 5.1.2. Comunicación continua
 
 El seguimiento no sirve de nada si la información no fluye. Establece canales de comunicación claros:
 
@@ -498,15 +475,15 @@ El seguimiento no sirve de nada si la información no fluye. Establece canales d
     
     Incluso un sistema simple de **issues de GitHub/GitLab** puede ser efectivo para equipos pequeños.
 
-### 5.2. Seguimiento post-resolución
+#### 5.2. Seguimiento post-resolución
 
 Una vez que consideramos el incidente "resuelto" técnicamente, el seguimiento continúa con dos objetivos: **verificar** que realmente está resuelto y **cerrar formalmente** el incidente.
 
-#### 5.2.1. Verificación de la resolución
+##### 5.2.1. Verificación de la resolución
 
 No basta con que los síntomas hayan desaparecido; hay que confirmar que la amenaza está completamente erradicada:
 
-##### Monitorización intensiva post-incidente
+###### 5.2.1.1. Monitorización intensiva post-incidente
 
 -   Incrementar temporalmente el **nivel de monitorización** en los sistemas afectados
 -   Duración recomendada: mínimo **72 horas**, idealmente **1-2 semanas**
@@ -517,7 +494,7 @@ No basta con que los síntomas hayan desaparecido; hay que confirmar que la amen
     -   Intentos de comunicación con C&C conocidos
     -   Creación de cuentas o procesos sospechosos
 
-##### Verificación de IOCs
+###### 5.2.1.2. Verificación de IOCs
 
 -   Realizar **barridos completos** de la red con los IOCs identificados:
     
@@ -531,7 +508,7 @@ No basta con que los síntomas hayan desaparecido; hay que confirmar que la amen
     -   SIEM para analizar logs históricos
     -   Network monitoring para tráfico sospechoso
 
-##### Validación con usuarios
+###### 5.2.1.3. Validación con usuarios
 
 -   Confirmar con los usuarios de los sistemas afectados que todo funciona correctamente
 -   Verificar que no hay:
@@ -541,21 +518,16 @@ No basta con que los síntomas hayan desaparecido; hay que confirmar que la amen
     -   Degradación de rendimiento
     -   Problemas de acceso
 
-<figure markdown>
-  ![Verificación post-incidente](assets/IS-U241-DocumentacionDeIncidentes4.png)
-  <figcaption>Documentación detallada: herramientas, investigaciones y colaboraciones</figcaption>
-</figure>
-
-#### 5.2.2. Cierre formal del incidente
+##### 5.2.2. Cierre formal del incidente
 
 El incidente se cierra formalmente solo cuando se cumplen **todos** estos criterios:
 
-1.  ✅ La amenaza ha sido **erradicada** completamente (verificado mediante monitorización)
-2.  ✅ Los sistemas están **completamente recuperados** a estado operativo normal
-3.  ✅ Se ha generado el **informe final** del incidente (ver sección 6)
-4.  ✅ Se han documentado las **lecciones aprendidas** (ver sección 5.3)
-5.  ✅ Se han implementado o planificado las **mejoras** identificadas
-6.  ✅ Se han realizado todas las **notificaciones** obligatorias (INCIBE-CERT, AEPD, clientes...)
+1.  La amenaza ha sido **erradicada** completamente (verificado mediante monitorización)
+2.  Los sistemas están **completamente recuperados** a estado operativo normal
+3.  Se ha generado el **informe final** del incidente (ver sección 6)
+4.  Se han documentado las **lecciones aprendidas** (ver sección 5.3)
+5.  Se han implementado o planificado las **mejoras** identificadas
+6.  Se han realizado todas las **notificaciones** obligatorias (INCIBE-CERT, AEPD, clientes...)
 
 El cierre debe documentarse en el sistema de ticketing con:
 
@@ -564,20 +536,16 @@ El cierre debe documentarse en el sistema de ticketing con:
 -   Confirmación de verificación
 -   Enlace al informe final y lecciones aprendidas
 
-### 5.3. Lecciones aprendidas: el verdadero valor del incidente
+#### 5.3. Lecciones aprendidas: el verdadero valor del incidente
 
 Esta es posiblemente **la parte más valiosa** del proceso completo de gestión de incidentes. Cada incidente, por pequeño que sea, es una oportunidad de **aprendizaje y mejora** que no debe desperdiciarse.
 
-<figure markdown>
-  ![Lecciones aprendidas](assets/IS-U241-DocumentacionDeIncidentes5.png)
-  <figcaption>Conocer atacantes, estrategias y vulnerabilidades para prevenir futuros incidentes</figcaption>
-</figure>
 
-#### 5.3.1. Estructura del análisis de lecciones aprendidas
+##### 5.3.1. Estructura del análisis de lecciones aprendidas
 
-El análisis debe estructurarse en tres bloques fundamentales:
+El análisis debe estructurarse en tres bloques fundamentales, con el objetivo de **reforzar fortalezas, identificar debilidades y planificar mejoras**:
 
-##### ¿Qué salió bien? (Reforzar fortalezas)
+###### 5.3.1.1 ¿Qué salió bien? (Reforzar fortalezas)
 
 Identificar los **aciertos** durante la respuesta al incidente:
 
@@ -594,7 +562,7 @@ Identificar los **aciertos** durante la respuesta al incidente:
 
 > "La detección fue muy rápida (15 minutos desde el inicio del ataque) gracias a la regla SIEM SP-032 que detectó el comportamiento anómalo de tráfico saliente. Esta regla debe mantenerse y considerarse como modelo para otras similares."
 
-##### ¿Qué salió mal? (Identificar debilidades)
+###### 5.3.1.2. ¿Qué salió mal? (Identificar debilidades)
 
 Analizar **honestamente** los fallos y debilidades mostradas:
 
@@ -611,13 +579,13 @@ Analizar **honestamente** los fallos y debilidades mostradas:
 
 > "El proceso de obtención de aprobación para aislar el servidor crítico tomó 2 horas debido a la falta de un procedimiento claro de escalado en horario nocturno. Esto permitió que el ransomware se propagara a 3 servidores adicionales."
 
-##### ¿Qué podemos mejorar? (Plan de acción)
+###### 5.3.1.3. ¿Qué podemos mejorar? (Plan de acción)
 
 Esta es la parte más importante: convertir el aprendizaje en **acciones concretas** de mejora. Debe estructurarse en tres ámbitos:
 
-###### A) Prevención: ¿Cómo evitar que vuelva a ocurrir?
+**A) Prevención: ¿Cómo evitar que vuelva a ocurrir?**
 
-Acciones para reducir la probabilidad de incidentes similares:
+Algunas acciones para reducir la probabilidad de incidentes similares:
 
 -   **Actualización y parcheo**:
     
@@ -640,9 +608,9 @@ Acciones para reducir la probabilidad de incidentes similares:
     -   "Actualizar política de contraseñas: mínimo 12 caracteres + rotación cada 90 días para cuentas privilegiadas"
     -   "Establecer política de gestión de vulnerabilidades críticas: parchear en menos de 48h"
 
-###### B) Detección: ¿Cómo detectarlo más rápido la próxima vez?
+**B) Detección: ¿Cómo detectarlo más rápido la próxima vez?**
 
-Acciones para mejorar la capacidad de detección:
+Algunas acciones para mejorar la capacidad de detección:
 
 -   **Nuevas alertas y reglas**:
     
@@ -651,7 +619,7 @@ Acciones para mejorar la capacidad de detección:
     
 -   **Mejores IOCs y threat intelligence**:
     
-    -   "Suscribirse al feed de amenazas de [INCIBE-CERT](https://www.incibe-cert.es/)"
+    -   "Suscribirse al feed de amenazas de [INCIBE-CERT](https://www.incibe-cert.es/)", [CCN-CERT](https://www.ccn-cert.cni.es/), ...
     -   "Implementar integración de threat intelligence en el EDR"
     
 -   **Monitorización adicional**:
@@ -659,9 +627,9 @@ Acciones para mejorar la capacidad de detección:
     -   "Desplegar sensores de red en el segmento de servidores de BBDD"
     -   "Implementar log forwarding desde los sistemas OT al SIEM"
 
-###### C) Respuesta: ¿Cómo responder más eficazmente?
+**C) Respuesta: ¿Cómo responder más eficazmente?**
 
-Acciones para mejorar la eficacia y rapidez de la respuesta:
+Algunas acciones para mejorar la eficacia y rapidez de la respuesta:
 
 -   **Actualizar runbooks y playbooks**:
     
@@ -683,11 +651,11 @@ Acciones para mejorar la eficacia y rapidez de la respuesta:
     -   "Ampliar equipo SOC: contratar 2 analistas de nivel 2"
     -   "Contratar servicio gestionado de EDR (MDR)"
 
-#### 5.3.2. Sesión de "post-mortem" o "retrospectiva"
+##### 5.3.2. Sesión de "post-mortem" o "retrospectiva"
 
-La forma más efectiva de capturar las lecciones aprendidas es mediante una **reunión dedicada** con todo el equipo involucrado:
+La forma más efectiva de capturar las lecciones aprendidas es mediante una **reunión dedicada** con todo el equipo involucrado. El de esta reunión es analizar el incidente en profundidad, discutir abiertamente qué salió bien y qué no, y acordar un plan de mejora.
 
-##### Organización de la sesión
+###### 5.3.2.1. Organización de la sesión
 
 -   **Cuándo**: Entre 1-2 semanas después del cierre del incidente (cuando aún está fresco pero hay perspectiva)
 -   **Duración**: 1-2 horas (según criticidad del incidente)
@@ -700,7 +668,7 @@ La forma más efectiva de capturar las lecciones aprendidas es mediante una **re
     
 -   **Facilitador**: Persona neutral que guíe la sesión (puede ser el CISO o un consultor externo)
 
-##### Reglas fundamentales
+###### 5.3.2.2. Reglas fundamentales
 
 1.  **Sin culpables**: Enfoque en procesos y sistemas, no en personas
 2.  **Ambiente de confianza**: Lo que se dice en la sala, se queda en la sala (salvo mejoras identificadas)
@@ -708,7 +676,7 @@ La forma más efectiva de capturar las lecciones aprendidas es mediante una **re
 4.  **Accionable**: Cada problema identificado debe llevar a acciones concretas
 5.  **Documentado**: Alguien toma notas detalladas de la sesión
 
-##### Agenda típica
+###### 5.3.2.3. Agenda típica
 
 1.  **Cronología del incidente** (15-20 min)
     
@@ -748,17 +716,19 @@ La forma más efectiva de capturar las lecciones aprendidas es mediante una **re
     -   **¿Por qué?** "Porque no se había demostrado el riesgo con datos concretos"
     -   **Acción**: "Elaborar análisis de riesgos que justifique inversión en segmentación de red"
 
-#### 5.3.3. Actualización de documentación y sistemas
+##### 5.3.3. Actualización de documentación y sistemas
 
-Las lecciones aprendidas deben **materializarse** en cambios tangibles en la organización:
+Las lecciones aprendidas deben **materializarse** en cambios tangibles en la organización, reforzando sus defensas y capacidades. Algunas áreas clave a actualizar:
 
-##### Actualización de políticas de seguridad
+###### 5.3.3.1. Actualización de políticas de seguridad
+Las lecciones aprendidas pueden revelar la necesidad de reforzar las políticas existentes:
 
 -   Revisar y actualizar la **Política de Seguridad de la Información**
 -   Actualizar **políticas específicas** (gestión de accesos, copias de seguridad, etc.)
 -   Asegurar que las políticas reflejan los nuevos controles implementados
 
-##### Mejora de playbooks y runbooks
+###### 5.3.3.2. Mejora de playbooks y runbooks
+Las lecciones aprendidas deben traducirse en mejoras concretas en los procedimientos de respuesta:
 
 -   **Playbooks** (qué hacer ante cada tipo de incidente):
     
@@ -772,25 +742,28 @@ Las lecciones aprendidas deben **materializarse** en cambios tangibles en la org
     -   Ejemplo: "Runbook: Aislamiento de servidor Windows en emergencia"
     -   Ejemplo: "Runbook: Captura de memoria RAM para análisis forense"
 
-##### Casos de uso nuevos en el SIEM
+###### 5.3.3.3. Casos de uso nuevos en el SIEM
+El SIEM es una herramienta clave para la detección. Las lecciones aprendidas deben traducirse en mejoras concretas sobre su configuración:
 
 -   Implementar las **nuevas reglas de detección** identificadas
 -   Ajustar **umbrales de alertas** existentes que generaron falsos positivos/negativos
 -   Documentar la regla con referencia al incidente que motivó su creación
 
-##### Material para formación y concienciación
+###### 5.3.3.4. Material para formación y concienciación
+Las lecciones aprendidas son un recurso valioso para la formación continua:
 
 -   Crear **casos prácticos** basados en el incidente real (anonimizando si es necesario)
 -   Actualizar el **programa de concienciación** con las lecciones aprendidas
 -   Grabar **vídeos o presentaciones** sobre el incidente y su gestión (uso interno)
 
-##### Actualización de planes de respuesta a incidentes
+###### 5.3.3.5. Actualización de planes de respuesta a incidentes
+Las lecciones aprendidas pueden revelar debilidades en los planes existentes:
 
 -   Actualizar el **Plan de Respuesta a Incidentes** corporativo
 -   Actualizar el **Plan de Continuidad de Negocio** (BCP) si se identificaron debilidades
 -   Actualizar el **Plan de Recuperación ante Desastres** (DRP) si aplica
 
-#### 5.3.4. Seguimiento de mejoras implementadas
+##### 5.3.4. Seguimiento de mejoras implementadas
 
 Identificar mejoras es inútil si no se implementan. Establecer un **proceso de seguimiento**:
 
@@ -816,20 +789,15 @@ Identificar mejoras es inútil si no se implementan. Establecer un **proceso de 
 
 !!! success "Indicador de madurez"
     Una organización **madura en ciberseguridad** se distingue no por la ausencia de incidentes (imposible en el panorama actual de amenazas), sino por:
-    
     1.  Su capacidad de **detectarlos rápidamente**
     2.  Su efectividad al **responder y contenerlos**
-    3.  Su disciplina al **documentar y aprender** de cada uno
+    3.  Su disciplina al **documentar y aprender** de cada uno de ellos
     4.  Su compromiso de **implementar mejoras** identificadas
     
     El seguimiento y las lecciones aprendidas son el indicador más claro de esta madurez.
 
-<figure markdown>
-  ![Documentación completa](assets/IS-U241-DocumentacionDeIncidentes12.png)
-  <figcaption>Guía completa de documentación de incidentes</figcaption>
-</figure>
 
-## 6. ¿Cómo documentar un incidente? El arte de escribir informes técnicos
+### 6. ¿Cómo documentar un incidente? El arte de escribir informes técnicos
 
 Llegados a este punto, hemos recorrido un viaje completo por la gestión y documentación de incidentes:
 
@@ -840,7 +808,7 @@ Llegados a este punto, hemos recorrido un viaje completo por la gestión y docum
 
 Ahora llega el momento de abordar el **CÓMO**: ¿Cómo plasmar toda esa información en un **informe técnico** que sea claro, útil, profesional y efectivo?
 
-### 6.1. La importancia de saber comunicar
+#### 6.1. La importancia de saber comunicar
 
 Saber **qué** documentar es el primer paso. El segundo, y no menos importante, es saber **cómo** plasmarlo de forma que:
 
@@ -852,13 +820,13 @@ Saber **qué** documentar es el primer paso. El segundo, y no menos importante, 
 
 Un buen informe de incidente no es solo una colección de datos técnicos; es una **narración estructurada** que cuenta una historia: qué pasó, cómo lo detectamos, qué hicimos, cuál fue el resultado y qué aprendimos.
 
-### 6.2. Del contenido a la forma: enlace con la guía de redacción
+#### 6.2. Del contenido a la forma: enlace con la guía de redacción
 
 Documentar un incidente técnico de seguridad es un caso particular de **comunicación técnica profesional**, que tiene sus propias reglas, convenciones y mejores prácticas.
 
 Por ello, para aprender a redactar informes técnicos de calidad profesional, desde la **estructura** y el **lenguaje** hasta **consejos específicos** para incidentes de seguridad, te recomendamos consultar la siguiente guía detallada que complementa perfectamente este documento:
 
--   [**2.4.2 Cómo escribir informes técnicos**](IS-U2.4.2.-ComoEscribirInformesTecnicos.md)
+-   [**2.4.2 Cómo escribir informes técnicos**](https://revilofe.github.io/section2/u02/teoria/IS-U2.4.2.-ComoEscribirInformesTecnicos/)
 
 En esa guía encontrarás:
 
@@ -867,12 +835,12 @@ En esa guía encontrarás:
 -   **Consejos de redacción**: Estilo, lenguaje y técnicas de escritura profesional
 -   **Plantillas y ejemplos**: Para diferentes tipos de documentos
 
-!!! tip "Integración de ambos documentos"
+!!! info "Integración de ambos documentos"
     Este documento (2.4.1) te dice **QUÉ** documentar de un incidente.  
     El documento 2.4.2 te enseña **CÓMO** escribirlo profesionalmente.  
     Ambos son complementarios y necesarios para convertirte en un gestor de incidentes competente.
 
-## 7. Bibliografía
+### 7. Bibliografía
 
 Para profundizar en la documentación y gestión de incidentes de seguridad, consulta las siguientes fuentes oficiales:
 
@@ -884,7 +852,7 @@ Para profundizar en la documentación y gestión de incidentes de seguridad, con
     -   **Público objetivo**: OSE, PSD y todas las organizaciones en España
     -   **Actualización**: Revisa la versión más reciente (actualizada periódicamente)
     
--   [Guía de Gestión de Ciberincidentes para el Sector Privado](https://www.incibe-cert.es/sites/default/files/contenidos/guias/doc/incibe-cert_gestion_ciberincidentes_sector_privado.pdf)
+-   [Guía de Gestión de Ciberincidentes para el Sector Privado](https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe-cert_gestion_ciberincidentes_sector_privado.pdf)
     
     -   **Contenido**: Procedimientos detallados, plantillas, casos de uso
     -   **Público objetivo**: PYMES y grandes empresas del sector privado
@@ -912,15 +880,15 @@ Para profundizar en la documentación y gestión de incidentes de seguridad, con
     
     -   [www.enisa.europa.eu](https://www.enisa.europa.eu/)
 
-## 8. Actividad práctica
+### 8. Actividad práctica
 
 A continuación, se propone una actividad práctica para aplicar los conocimientos adquiridos en la documentación de incidentes de seguridad.
 
-### 8.1. Actividad práctica: Documentación completa de un incidente real
+#### 8.1. Actividad práctica: Documentación completa de un incidente real
 
 Para poner en práctica **todo** lo aprendido en este documento, realiza la siguiente actividad:
 
-#### 8.1.1. Descripción de la actividad
+##### 8.1.1. Descripción de la actividad
 
 1.  **Selección del incidente** (Opción A o B):
     
@@ -941,28 +909,38 @@ Para poner en práctica **todo** lo aprendido en este documento, realiza la sigu
     
     -   **Información general** del incidente (sección 4.1)
     -   **Clasificación y valoración** completa (sección 4.2)
+
         -   Taxonomía según INCIBE-CERT
         -   Nivel de peligrosidad (justificado)
         -   Nivel de impacto (justificado)
+
     -   **Detalles técnicos** disponibles (sección 4.3)
+    
         -   IOCs identificados
         -   TTPs mapeadas con MITRE ATT&CK (si es posible)
+    
     -   **Gestión y respuesta** (sección 4.4)
         -   Timeline de lo ocurrido (reconstruida)
         -   Acciones tomadas (o que se deberían haber tomado)
+    
     -   **Consecuencias** (sección 4.5)
+
         -   Impacto económico (estimado si no se conoce)
         -   Afectación
         -   Regulación aplicable
+    
     -   **Consideraciones legales** (sección 4.6)
+
         -   ¿Qué normativas se ven afectadas?
         -   ¿Se requiere notificación a autoridades?
         -   ¿Hay implicaciones penales?
+    
     -   **Lecciones aprendidas simuladas** (sección 5.3)
+
         -   Qué salió bien / qué salió mal (según información disponible)
         -   Propuestas de mejora en prevención, detección y respuesta
 
-#### 8.1.2. Formato del entregable
+##### 8.1.2. Formato del entregable
 
 -   **Documento**: Formato PDF
 -   **Extensión máxima**: 6-8 páginas (sin contar anexos)
@@ -975,7 +953,7 @@ Para poner en práctica **todo** lo aprendido en este documento, realiza la sigu
     
 -   **Estilo**: Profesional, siguiendo las recomendaciones de la guía 2.4.2
 
-#### 8.1.3. Criterios de evaluación
+##### 8.1.3. Criterios de evaluación
 
 La actividad se evaluará según los siguientes criterios:
 
@@ -990,7 +968,7 @@ La actividad se evaluará según los siguientes criterios:
 
 **Puntuación total**: 100 puntos
 
-#### 8.1.4. Consejos para realizar la actividad
+##### 8.1.4. Consejos para realizar la actividad
 
 1.  **Lee primero todo el documento** antes de empezar a redactar
 2.  **Crea una plantilla** con todas las secciones vacías como guía
@@ -1007,9 +985,9 @@ La actividad se evaluará según los siguientes criterios:
     -   Incidentes en infraestructuras críticas (energía, agua...)
     -   Cualquier incidente reciente documentado en INCIBE-CERT
 
-### 8.2. Recursos adicionales
+#### 8.2. Recursos adicionales
 
-#### 8.2.1. Herramientas útiles para documentación
+##### 8.2.1. Herramientas útiles para documentación
 
 -   **Sistemas de ticketing**:
     
@@ -1027,7 +1005,7 @@ La actividad se evaluará según los siguientes criterios:
     -   Cyber Kill Chain de Lockheed Martin
     -   Diamond Model of Intrusion Analysis
 
-#### 8.2.2. Comunidades y fuentes de aprendizaje continuo
+##### 8.2.2. Comunidades y fuentes de aprendizaje continuo
 
 -   **INCIBE-CERT**: Alertas, avisos y boletines de seguridad
 -   **CCN-CERT**: Para administraciones públicas
@@ -1045,5 +1023,3 @@ La actividad se evaluará según los siguientes criterios:
     -   Referencias para aprender el **cómo** redactar informes profesionales
     
     Recuerda: **Un incidente bien documentado es una lección aprendida; un incidente mal documentado es una oportunidad perdida**. La diferencia entre una organización madura en ciberseguridad y una reactiva se mide precisamente en cómo gestiona, documenta y aprende de sus incidentes.
-    
-    ¡Éxito en tu actividad y en tu carrera como gestor de incidentes de seguridad!

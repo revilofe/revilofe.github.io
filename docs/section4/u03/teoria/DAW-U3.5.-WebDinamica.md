@@ -40,10 +40,10 @@ Una página web estática es como un libro impreso: su contenido está fijado en
 
 **El proceso es extremadamente simple:**
 
-1. Un desarrollador crea un archivo `index.html` con todo el contenido
-2. El archivo se sube al servidor web
-3. Cuando un usuario solicita la página, el servidor simplemente lee el archivo del disco y lo envía
-4. Todos los usuarios reciben exactamente el mismo contenido
+1. Un desarrollador crea un archivo `index.html` con todo el contenido    
+2. El archivo se sube al servidor web    
+3. Cuando un usuario solicita la página, el servidor simplemente lee el archivo del disco y lo envía   
+4. Todos los usuarios reciben exactamente el mismo contenido   
 
 **Ejemplo de página estática simple:**
 
@@ -86,29 +86,29 @@ Una página web estática es como un libro impreso: su contenido está fijado en
 
 **Características de las páginas estáticas:**
 
-- **Contenido fijo**: El contenido es idéntico para todos los usuarios
-- **Velocidad excepcional**: No hay procesamiento, solo lectura y envío de archivos
-- **Simplicidad**: Fáciles de crear y desplegar
-- **Sin servidor de aplicaciones**: Solo se necesita un servidor web básico
-- **Mantenimiento manual**: Cada cambio requiere editar el HTML y volver a subir
+- **Contenido fijo**: El contenido es idéntico para todos los usuarios   
+- **Velocidad excepcional**: No hay procesamiento, solo lectura y envío de archivos   
+- **Simplicidad**: Fáciles de crear y desplegar   
+- **Sin servidor de aplicaciones**: Solo se necesita un servidor web básico   
+- **Mantenimiento manual**: Cada cambio requiere editar el HTML y volver a subir   
 
 **Ventajas que aún hoy las hacen valiosas:**
 
-- **Rendimiento óptimo**: Son las páginas más rápidas posibles
-- **Seguridad**: Sin código del servidor, sin vulnerabilidades de ejecución
-- **Coste mínimo**: Hosting muy económico (incluso gratuito en GitHub Pages)
-- **Escalabilidad perfecta**: Sirven millones de usuarios con recursos mínimos
-- **SEO excelente**: Fáciles de indexar por motores de búsqueda
+- **Rendimiento óptimo**: Son las páginas más rápidas posibles    
+- **Seguridad**: Sin código del servidor, sin vulnerabilidades de ejecución   
+- **Coste mínimo**: Hosting muy económico (incluso gratuito en GitHub Pages)   
+- **Escalabilidad perfecta**: Sirven millones de usuarios con recursos mínimos   
+- **SEO excelente**: Fáciles de indexar por motores de búsqueda   
 
 **Limitaciones que motivaron la evolución:**
 
 Sin embargo, las páginas estáticas tienen limitaciones fundamentales que rápidamente se hicieron evidentes:
 
-- **Sin personalización**: Todos ven lo mismo
-- **Sin interacción real**: No hay formularios funcionales, ni login, ni comentarios
-- **Actualización tediosa**: Cambiar el contenido requiere editar archivos manualmente
-- **Sin datos dinámicos**: No pueden mostrar información actualizada de bases de datos
-- **Funcionalidad limitada**: No pueden ser tiendas online, redes sociales, o aplicaciones complejas
+- **Sin personalización**: Todos ven lo mismo   
+- **Sin interacción real**: No hay formularios funcionales, ni login, ni comentarios   
+- **Actualización tediosa**: Cambiar el contenido requiere editar archivos manualmente   
+- **Sin datos dinámicos**: No pueden mostrar información actualizada de bases de datos   
+- **Funcionalidad limitada**: No pueden ser tiendas online, redes sociales, o aplicaciones complejas   
 
 <figure markdown="span">
   ![Estático vs Dinámico](assets/what-can-be-static-or-dynamic.webp){ width="700" }
@@ -131,11 +131,11 @@ Es como un chef que prepara cada plato al momento según las preferencias del cl
 
 Lo revolucionario de las páginas dinámicas no es solo que el contenido cambie, sino que **se genera mediante programación**. Esto significa que el servidor ejecuta código (PHP, Python, Java, etc.) que:
 
-1. Puede consultar bases de datos
-2. Puede realizar cálculos
-3. Puede tomar decisiones basadas en condiciones
-4. Puede personalizar el contenido para cada usuario
-5. Puede procesar datos enviados por formularios
+1. Puede consultar bases de datos   
+2. Puede realizar cálculos   
+3. Puede tomar decisiones basadas en condiciones   
+4. Puede personalizar el contenido para cada usuario   
+5. Puede procesar datos enviados por formularios   
 
 **Ejemplo conceptual de la diferencia:**
 
@@ -159,11 +159,11 @@ $fechaActual = date('d \de F \de Y');
 
 **Características fundamentales de las páginas dinámicas:**
 
-- **Contenido variable**: Diferente según usuario, hora, datos, etc.
-- **Interactividad real**: Formularios funcionales, login, comentarios, búsquedas
-- **Conexión con bases de datos**: Almacena y recupera información
-- **Lógica de negocio**: Puede tomar decisiones y ejecutar procesos complejos
-- **Actualización sencilla**: Cambiar datos en la BD actualiza automáticamente el sitio
+- **Contenido variable**: Diferente según usuario, hora, datos, etc.    
+- **Interactividad real**: Formularios funcionales, login, comentarios, búsquedas    
+- **Conexión con bases de datos**: Almacena y recupera información   
+- **Lógica de negocio**: Puede tomar decisiones y ejecutar procesos complejos   
+- **Actualización sencilla**: Cambiar datos en la BD actualiza automáticamente el sitio   
 
 Esta capacidad de generar contenido dinámicamente abrió las puertas a toda la web moderna que conocemos hoy: redes sociales, comercio electrónico, banca online, aplicaciones web complejas, y mucho más.
 
@@ -176,30 +176,35 @@ Ahora que entendemos **por qué** necesitamos páginas dinámicas, profundicemos
 Antes de ver el flujo completo, identifiquemos a los participantes:
 
 **1. Cliente (Navegador)**
-- El navegador del usuario que solicita la página
-- Envía peticiones HTTP
-- Recibe y renderiza el HTML final
+
+- El navegador del usuario que solicita la página   
+- Envía peticiones HTTP   
+- Recibe y renderiza el HTML final   
 
 **2. Servidor Web**
-- Software como Apache o Nginx
-- Recibe las peticiones HTTP
-- Decide si la petición es para contenido estático o dinámico
-- Sirve archivos estáticos directamente
-- Delega páginas dinámicas al módulo correspondiente
+
+- Software como Apache o Nginx   
+- Recibe las peticiones HTTP   
+- Decide si la petición es para contenido estático o dinámico   
+- Sirve archivos estáticos directamente   
+- Delega páginas dinámicas al módulo correspondiente    
 
 **3. Módulo de Ejecución / Servidor de Aplicaciones**
-- Ejecuta el código del lado del servidor
-- Puede ser un módulo integrado (mod_php) o externo (Tomcat, Gunicorn)
-- Procesa el código dinámico (PHP, Python, Java, etc.)
+
+- Ejecuta el código del lado del servidor   
+- Puede ser un módulo integrado (mod_php) o externo (Tomcat, Gunicorn)   
+- Procesa el código dinámico (PHP, Python, Java, etc.)   
 
 **4. Base de Datos**
-- Almacena la información de la aplicación
-- Responde a consultas del código dinámico
-- MySQL, PostgreSQL, MongoDB, etc.
+
+- Almacena la información de la aplicación   
+- Responde a consultas del código dinámico   
+- MySQL, PostgreSQL, MongoDB, etc.   
 
 **5. Sistema de Archivos**
-- Almacena los scripts del servidor y recursos estáticos
-- El código dinámico lee archivos de plantillas, configuración, etc.
+
+- Almacena los scripts del servidor y recursos estáticos   
+- El código dinámico lee archivos de plantillas, configuración, etc.   
 
 #### 2.2. El flujo completo: paso a paso
 
@@ -230,8 +235,9 @@ User-Agent: Mozilla/5.0 ...
 El servidor web (por ejemplo, Apache) recibe la petición en el puerto 80 (HTTP) o 443 (HTTPS). Analiza la URL solicitada: `/perfil/ana`
 
 El servidor web **toma una decisión**:
-- Si fuera `/imagen.jpg` → Archivo estático, lo sirve directamente
-- Si es `/perfil/ana` → Página dinámica, necesita procesamiento
+
+- Si fuera `/imagen.jpg` → Archivo estático, lo sirve directamente   
+- Si es `/perfil/ana` → Página dinámica, necesita procesamiento   
 
 Como es una página dinámica, el servidor web **no puede servirla directamente**. En su lugar, debe delegar la tarea.
 
@@ -239,10 +245,10 @@ Como es una página dinámica, el servidor web **no puede servirla directamente*
 
 El servidor web identifica qué tecnología debe manejar esta petición (basándose en la configuración y la extensión del archivo):
 
-- Si es PHP: Llama a `mod_php` o PHP-FPM
-- Si es Python: Llama a Gunicorn/uWSGI
-- Si es Java: Redirige a Tomcat
-- Si es Node.js: Redirige al proceso Node
+- Si es PHP: Llama a `mod_php` o PHP-FPM    
+- Si es Python: Llama a Gunicorn/uWSGI   
+- Si es Java: Redirige a Tomcat   
+- Si es Node.js: Redirige al proceso Node   
 
 El servidor web le dice al módulo: *"Ejecuta el script en /perfil/ana y dame el resultado"*
 
@@ -337,12 +343,13 @@ $posts = $stmt->fetchAll();
 **Lo que acaba de suceder es extraordinario:**
 
 El servidor ha **construido una página HTML única** para esta petición específica:
-- Verificó la sesión del usuario
-- Consultó la base de datos para obtener información de "ana"
-- Obtuvo sus publicaciones recientes
-- Generó HTML personalizado con toda esa información
-- Incluyó la fecha actual formateada
-- Aplicó lógica condicional (si no hay posts, muestra un mensaje diferente)
+
+- Verificó la sesión del usuario   
+- Consultó la base de datos para obtener información de "ana"   
+- Obtuvo sus publicaciones recientes   
+- Generó HTML personalizado con toda esa información   
+- Incluyó la fecha actual formateada   
+- Aplicó lógica condicional (si no hay posts, muestra un mensaje diferente)   
 
 **Paso 5: Consultas a la base de datos**
 
@@ -357,19 +364,21 @@ SELECT * FROM posts WHERE usuario_id = 42 ORDER BY fecha DESC LIMIT 10;
 ```
 
 La base de datos busca en sus tablas, recupera los datos y los devuelve al código PHP. Estas operaciones pueden tomar desde milisegundos hasta segundos, dependiendo de:
-- La complejidad de las consultas
-- El tamaño de las tablas
-- Los índices definidos
-- La carga del servidor de base de datos
+
+- La complejidad de las consultas   
+- El tamaño de las tablas   
+- Los índices definidos   
+- La carga del servidor de base de datos   
 
 **Paso 6: Generación del HTML final**
 
 El código PHP ha mezclado:
-- **HTML estático**: Estructura básica, estilos, navegación
-- **Datos de la base de datos**: Nombre, bio, publicaciones de Ana
-- **Lógica condicional**: Mostrar u ocultar elementos según condiciones
-- **Datos de sesión**: Identificar al usuario logueado
-- **Fecha actual**: Generada en el momento
+
+- **HTML estático**: Estructura básica, estilos, navegación    
+- **Datos de la base de datos**: Nombre, bio, publicaciones de Ana     
+- **Lógica condicional**: Mostrar u ocultar elementos según condiciones    
+- **Datos de sesión**: Identificar al usuario logueado    
+- **Fecha actual**: Generada en el momento   
 
 El resultado es un **documento HTML completo** listo para enviar al navegador.
 
@@ -398,12 +407,13 @@ Set-Cookie: session_id=abc123def456; Path=/; HttpOnly
 El navegador del usuario recibe esta respuesta HTTP. Para el navegador, **no hay diferencia** entre una página estática y una dinámica: ambas llegan como HTML.
 
 El navegador:
-1. Parsea el HTML
-2. Construye el DOM
-3. Descarga CSS y JavaScript referenciados
-4. Descarga imágenes
-5. Renderiza la página visualmente
-6. Ejecuta JavaScript del lado del cliente
+
+1. Parsea el HTML  
+2. Construye el DOM    
+3. Descarga CSS y JavaScript referenciados   
+4. Descarga imágenes    
+5. Renderiza la página visualmente    
+6. Ejecuta JavaScript del lado del cliente    
 
 El usuario ve su página personalizada, ¡sin saber todo el proceso que acaba de ocurrir!
 
@@ -424,10 +434,11 @@ Tiempo típico: 50-500 ms (o más si las consultas son complejas)
 ```
 
 Sin embargo, esta diferencia es **totalmente aceptable** porque:
-- Los usuarios esperan algo de delay para operaciones complejas
-- Se pueden aplicar técnicas de caché
-- El hardware moderno es muy rápido
-- La funcionalidad obtenida justifica ampliamente el coste
+
+- Los usuarios esperan algo de delay para operaciones complejas    
+- Se pueden aplicar técnicas de caché    
+- El hardware moderno es muy rápido    
+- La funcionalidad obtenida justifica ampliamente el coste    
 
 !!! note "Optimización es clave"
     Aunque las páginas dinámicas son más lentas, un buen desarrollador debe optimizar:
@@ -447,12 +458,12 @@ El desarrollo web del lado del servidor ha evolucionado enormemente, pero todos 
 
 Las principales familias de tecnologías son:
 
-**1. PHP**: El lenguaje más popular de la web, presente en WordPress, Facebook inicial, Wikipedia
-**2. Python**: Con frameworks como Django y Flask, usado por Instagram, Spotify
-**3. Java**: Robusto y empresarial, con JSP, Servlets, Spring Boot
-**4. JavaScript/Node.js**: JavaScript en el servidor, usado por Netflix, LinkedIn
-**5. Ruby**: Con Ruby on Rails, usado por GitHub, Shopify
-**6. C#/ASP.NET**: De Microsoft, popular en entornos empresariales Windows
+**1. PHP**: El lenguaje más popular de la web, presente en WordPress, Facebook inicial, Wikipedia   
+**2. Python**: Con frameworks como Django y Flask, usado por Instagram, Spotify   
+**3. Java**: Robusto y empresarial, con JSP, Servlets, Spring Boot 
+**4. JavaScript/Node.js**: JavaScript en el servidor, usado por Netflix, LinkedIn      
+**5. Ruby**: Con Ruby on Rails, usado por GitHub, Shopify    
+**6. C#/ASP.NET**: De Microsoft, popular en entornos empresariales Windows    
 
 Cada una de estas tecnologías representa una forma diferente de resolver el mismo problema, y la elección depende de múltiples factores: el equipo de desarrollo, los requisitos del proyecto, el ecosistema de librerías, y las preferencias personales.
 
@@ -559,16 +570,18 @@ Route::get('/perfil/{username}', function ($username) {
 Laravel proporciona: ORM (Eloquent), sistema de plantillas (Blade), routing, autenticación, y mucho más.
 
 **Ventajas de PHP:**
-- Hosting económico y universal
-- Curva de aprendizaje suave
-- Enorme ecosistema (WordPress, Laravel, Symfony)
-- Documentación exhaustiva
-- Gran comunidad
+
+- Hosting económico y universal   
+- Curva de aprendizaje suave   
+- Enorme ecosistema (WordPress, Laravel, Symfony)   
+- Documentación exhaustiva    
+- Gran comunidad   
 
 **Desventajas:**
-- Inconsistencias históricas en el lenguaje
-- Rendimiento inferior a lenguajes compilados
-- Algunas prácticas antiguas persisten
+
+- Inconsistencias históricas en el lenguaje    
+- Rendimiento inferior a lenguajes compilados    
+- Algunas prácticas antiguas persisten    
 
 #### 3.3. Python: elegancia y versatilidad
 
@@ -674,15 +687,17 @@ if __name__ == '__main__':
 ```
 
 **Ventajas de Python:**
-- Sintaxis limpia y legible
-- Excelente para aplicaciones complejas
-- Fuerte en machine learning e IA
-- Gran ecosistema científico
+
+- Sintaxis limpia y legible    
+- Excelente para aplicaciones complejas    
+- Fuerte en machine learning e IA    
+- Gran ecosistema científico    
 
 **Desventajas:**
-- Hosting menos común que PHP
-- Rendimiento (aunque mejora con PyPy)
-- Global Interpreter Lock (GIL) limita concurrencia
+
+- Hosting menos común que PHP    
+- Rendimiento (aunque mejora con PyPy)    
+- Global Interpreter Lock (GIL) limita concurrencia    
 
 #### 3.4. Java: robustez empresarial
 
@@ -801,15 +816,17 @@ public class PerfilController {
 ```
 
 **Ventajas de Java:**
-- Rendimiento excelente
-- Tipado fuerte previene errores
-- Ideal para aplicaciones grandes
-- Ecosistema empresarial maduro
+
+- Rendimiento excelente   
+- Tipado fuerte previene errores    
+- Ideal para aplicaciones grandes     
+- Ecosistema empresarial maduro    
 
 **Desventajas:**
-- Verbosidad del código
-- Curva de aprendizaje pronunciada
-- Configuración compleja (aunque Spring Boot mejora esto)
+
+- Verbosidad del código    
+- Curva de aprendizaje pronunciada    
+- Configuración compleja (aunque Spring Boot mejora esto)    
 
 #### 3.5. Node.js: JavaScript en todas partes
 
@@ -882,15 +899,17 @@ app.listen(3000, () => {
 ```
 
 **Ventajas de Node.js:**
-- Un solo lenguaje (JavaScript) para todo
-- Excelente para I/O intensivo
-- NPM: el mayor ecosistema de paquetes
-- Ideal para aplicaciones en tiempo real
+
+- Un solo lenguaje (JavaScript) para todo    
+- Excelente para I/O intensivo    
+- NPM: el mayor ecosistema de paquetes    
+- Ideal para aplicaciones en tiempo real   
 
 **Desventajas:**
-- Single-threaded (aunque asíncrono)
-- JavaScript puede ser propenso a errores
-- Menos maduro para aplicaciones empresariales tradicionales
+
+- Single-threaded (aunque asíncrono)   
+- JavaScript puede ser propenso a errores     
+- Menos maduro para aplicaciones empresariales tradicionales    
 
 ### 4. Tabla comparativa de tecnologías
 
@@ -919,11 +938,11 @@ Las páginas web dinámicas son la columna vertebral de la web moderna. Sin ella
 
 ## Referencias y bibliografía
 
-- [Jose Luis González](https://github.com/joseluisgs). *Despliegue de aplicaciones Web - 2025 2026*. [https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026](https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026)
-- Mozilla Developer Network. (2024). *Server-side website programming*
-- W3C. (2024). *Dynamic web content*
-- Laravel Documentation. (2024). [https://laravel.com/docs](https://laravel.com/docs)
-- Django Documentation. (2024). [https://docs.djangoproject.com/](https://docs.djangoproject.com/)
+- [Jose Luis González](https://github.com/joseluisgs). *Despliegue de aplicaciones Web - 2025 2026*. [https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026](https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026)     
+- Mozilla Developer Network. (2024). *Server-side website programming*      
+- W3C. (2024). *Dynamic web content*  
+- Laravel Documentation. (2024). [https://laravel.com/docs](https://laravel.com/docs)    
+- Django Documentation. (2024). [https://docs.djangoproject.com/](https://docs.djangoproject.com/)    
 
 ## Presentación
 

@@ -150,7 +150,7 @@ Incidentes que muestren signos evidentes de spam, contengan comentarios ofensivo
   * **Pornografía infantil, contenido sexual o violento inadecuado:** material que represente de manera visual contenido relacionado con pornografía infantil, apología de la violencia, etc.   
      **Ejemplo:** publicación de imágenes de menores de edad en situaciones de abuso.
   
-#####  3.2.2. Contenido dañino o malicioso
+##### 3.2.2. Contenido dañino o malicioso
 Problemas relacionados con virus, troyanos, gusanos, spyware, bots e inyección de código   
   
   * **Sistema infectado:** sistema infectado con malware.    
@@ -164,7 +164,7 @@ Problemas relacionados con virus, troyanos, gusanos, spyware, bots e inyección 
   * **Malware dominio DGA:** nombre de dominio generado mediante DGA (Algoritmo de Generación de Dominio), empleado por malware para contactar con un servidor de Mando y Control (C&C).     
      **Ejemplo:** malware que genera nombres de dominio de manera aleatoria para contactar con un servidor C&C.
 
-#####  3.2.3.  Obtención de información  
+##### 3.2.3. Obtención de información  
 Los escaneos como reporte más común. También se consideran dentro de esta clasificación aquellos relacionados con los usos de sniffers, ingeniería social o ataques de fuerza bruta.  
   
   * **Escaneo de redes (scanning):** envío de peticiones a un sistema para descubrir posibles debilidades, puertos abiertos. Se incluyen también procesos de comprobación o testeo para recopilar información de alojamientos, servicios y cuentas.     
@@ -174,7 +174,7 @@ Los escaneos como reporte más común. También se consideran dentro de esta cla
   * **Ingeniería social:** recopilación de información personal sin el uso de la tecnología. A través de engaños o uso de técnicas psicológicas para que revele información confidencial o realicen una acción que comprometa la seguridad      
      **Ejemplo:** convencer a un usuario para que revele su contraseña, o para que ejecute un archivo malicioso a través de mentiras, trucos, sobornos, amenazas.   
 
-#####  3.2.4.  Intento de intrusión  
+##### 3.2.4. Intento de intrusión  
 Intentos de acceso no autorizado a sistemas o servicios.
 
   * **Explotación de vulnerabilidades conocidas:** intento de compromiso de un sistema o de interrupción de un servicio mediante la explotación de vulnerabilidades con un identificador estandarizado (véase CVE).     
@@ -184,7 +184,7 @@ Intentos de acceso no autorizado a sistemas o servicios.
   * **Ataque desconocido:** ataque empleando exploit desconocido, Zero Day.     
      **Ejemplo:** ataque que emplea una vulnerabilidad no conocida por el fabricante del software.
 
-#####  3.2.5.  Intrusión 
+##### 3.2.5. Intrusión 
 Incidentes en los que se manifieste el claro acceso a cuentas privilegiadas, no privilegiadas, compromiso de aplicaciones y ataques de 0-day.  
   
   * **Compromiso de cuenta con privilegios:** compromiso de un sistema con privilegios de administración, de la cual el atacante ha adquirido sus credenciales.  
@@ -196,7 +196,7 @@ Incidentes en los que se manifieste el claro acceso a cuentas privilegiadas, no 
   * **Robo:** acceder físicamente y de forma fraudulenta a dependencias de una organización para sustraer equipos, documentación o acceder a información sensible.      
      **Ejemplo:** acceso no autorizado a Centro de Proceso de Datos y sustracción de equipo.  
 
-#####  3.2.6.  Disponibilidad
+##### 3.2.6. Disponibilidad
 Ataques de denegación de servicio, tales como DoS, DDoS y sabotajes.  
   
   * **DoS (Denegación de Servicio):** ataque a un sistema con el objeto de que los servicios que provee no estén disponibles para los usuarios legítimos.     
@@ -210,7 +210,7 @@ Ataques de denegación de servicio, tales como DoS, DDoS y sabotajes.
   * **Interrupciones:** interrupciones de los servicios por causas ajenas a la organización.      
      **Ejemplo:** desastre natural, como la caída de un rayo en una central eléctrica que provoca un corte de suministro eléctrico.  
 
-#####  3.2.7.  Compromiso de la información  
+##### 3.2.7. Compromiso de la información  
 Problemas relacionados con el acceso a información y/o modificación no autorizada.  
   
   * **Acceso no autorizado a información:** acceso no autorizado a información. Esto puede ocurrir deliberadamente haciendo uso de las credenciales obtenidas de forma fraudulenta o accidentalmente por fallos en la configuración de los sistemas.      
@@ -222,7 +222,7 @@ Problemas relacionados con el acceso a información y/o modificación no autoriz
   * **Fuga de información confidencial:** divulgación no autorizada de información confidencial. Esta información puede haber sido obtenida de forma fraudulenta o lícitamente pero no estar autorizada su divulgación.       
      **Ejemplos:** publicación de información confidencial en un sitio web o envío de información confidencial a terceros.
 
-#####  3.2.8.  Fraude  
+##### 3.2.8. Fraude  
 Reportes que tengan nexo con el uso no autorizado, derechos de autor, suplantación de identidad, phishing y robo de credenciales.  
   
   * **Uso no autorizado de recursos:** uso de recursos (redes, sistemas, aplicaciones o dispositivos) para propósitos inadecuados, incluyendo acciones con ánimo de lucro.     
@@ -234,7 +234,9 @@ Reportes que tengan nexo con el uso no autorizado, derechos de autor, suplantaci
   * **Phishing:** suplantación de otra entidad con la finalidad de convencer al usuario para que revele sus credenciales privadas, como contraseñas o números de tarjeta, información personal o financiera. Usando para ello técnicas de ingeniería social a través de correo electrónico, mensajes de texto o llamadas telefónicas.     
      **Ejemplo:** envío de correos electrónicos que parecen ser de una entidad bancaria solicitando al usuario que introduzca sus credenciales en una página web falsa.  
 
-#####  3.2.9.  Vulnerable    
+##### 3.2.9. Vulnerable    
+Vulnerabilidades en servicios accesibles públicamente que puedan ser explotadas por atacantes para comprometer la seguridad de los sistemas.
+
   * **Criptografía débil:** servicios accesibles públicamente que pueden presentar algoritmos o protocolos criptográficos de manera errónea, obsoletos o vulnerables, o cuando las claves de cifrado son débiles.       
      **Ejemplo:** servidores web susceptibles de ataques POODLE/FREAK; protocolo WEB para redes wifi o algoritmos hash MD5, ambos con vulnerabilidades conocidas.
   * **Amplificador DDoS:** servicios accesibles públicamente que puedan ser empleados para la reflexión o amplificación de ataques DDoS, forzando a un servidor a enviar grandes cantidades de datos a un tercero. 
@@ -246,7 +248,7 @@ Reportes que tengan nexo con el uso no autorizado, derechos de autor, suplantaci
   * **Sistema vulnerable:** sistema vulnerable a ciertos tipos de ataques, por ejemplo, por no haber sido actualizado con los últimos parches de seguridad. No tiene por qué haber sido comprometido, pero es susceptible de serlo.      
      **Ejemplo:** sistema operativo sin parchear, software desactualizado, configuración incorrecta de un sistema, o vulnerabilidad conocida en un software.
 
-#####  3.2.10.  Otros  
+##### 3.2.10. Otros  
 Aquellos incidentes que realicen consultas técnicas, mensajes informativos y peticiones judiciales. Reportes recibidos en el servicio gestionado por el CERT, pero que no se debe tomar acciones puesto que no pertenece a su ámbito de actuación. También se incluirán en esta clasificación aquellas quejas sobre las que no se reporten evidencias o éstas no sean contrastadas.  
   
   * **APT (Advanced Persistent Threats):** ataques dirigidos contra organizaciones concretas, sustentados en mecanismos muy sofisticados de ocultación, anonimato y persistencia. Esta amenaza habitualmente emplea técnicas de ingeniería social para conseguir sus objetivos junto con el uso de procedimientos de ataque conocidos o genuinos.  
@@ -295,6 +297,20 @@ En la [GUÍA NACIONAL DE NOTIFICACIÓN Y GESTIÓN DE CIBERINCIDENTES](https://ww
 
 
 Diferenciar entre peligrosidad e impacto es importante, ya que un incidente puede ser altamente peligroso, pero tener un impacto bajo si se detecta y se responde rápidamente. Por otro lado, un incidente de baja peligrosidad puede tener un impacto significativo si no se detecta a tiempo.
+
+**Escenarios:**
+
+* Alta Peligrosidad / Bajo Impacto	"El misil nuclear en el desierto"
+   Un grupo de ciberdelincuentes utiliza una vulnerabilidad Zero-day (desconocida y sin parche) muy sofisticada para infectar una impresora antigua en un almacén vacío que no está conectada a la red principal.	
+
+   * Peligrosidad: Muy alta (técnica avanzada, indetectable).
+   * Impacto: Bajo o nulo (no se roban datos, no se para la producción, nadie usa esa impresora).
+
+* Baja Peligrosidad / Alto Impacto	"El tropiezo con el cable"
+   Un empleado de limpieza desconecta por error el cable de alimentación del servidor principal de ventas durante el Black Friday para enchufar una aspiradora.	
+
+   * Peligrosidad: Muy baja (no hay hackers, ni virus, ni técnica compleja).
+   * Impacto: Crítico (pérdidas millonarias por ventas paradas y daño reputacional).
 
 #### 3.3 Prioridades
 

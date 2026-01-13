@@ -82,7 +82,7 @@ Se representan con una elipse que incluye en su interior el nombre del caso de u
 Existen muchos ejemplos de casos de uso. Algunos podrían ser: **Crear pedido**, **Listar productos**, **Enviar correo**. Cualquier acción que realice la aplicación.
 
 !!! note "Nota importante sobre UML 2.5"
-Las especificaciones anteriores a UML 2.5 requerían que un caso de uso sea invocado por un actor. En UML 2.5 esto se eliminó, lo que significa que podría haber algunas situaciones en las que la funcionalidad del sistema la inicie el propio sistema y, al mismo tiempo, brinde resultados útiles a un actor. Por ejemplo, el sistema podría notificar a un cliente que se envió la orden, programar la limpieza y el archivo de la información del usuario, solicitar información de otro sistema, etc.
+    Las especificaciones anteriores a UML 2.5 requerían que un caso de uso sea invocado por un actor. En UML 2.5 esto se eliminó, lo que significa que podría haber algunas situaciones en las que la funcionalidad del sistema la inicie el propio sistema y, al mismo tiempo, brinde resultados útiles a un actor. Por ejemplo, el sistema podría notificar a un cliente que se envió la orden, programar la limpieza y el archivo de la información del usuario, solicitar información de otro sistema, etc.
 
 #### 2.3. Relaciones
 
@@ -224,7 +224,7 @@ Debido a que es importante mostrar cómo se relacionan los actores con el caso d
 Las transmisiones de señal generalmente van en ambas direcciones. Cuando este es el caso, debe permitir que las asociaciones de comunicaciones sean navegables en ambas direcciones. Defina, a lo sumo, una asociación de comunicación para cada par de actor y caso de uso.
 También es recomendable describir brevemente cada asociación de comunicación que defina.
 
-### 4. Documentación del os casos de uso
+### 4. Documentación de los casos de uso
 
 #### 4.1. Requisitos funcionale vs No funcionales
 
@@ -351,7 +351,7 @@ Este caso de uso describe el proceso mediante el cual un bibliotecario registra 
 - El sistema debe responder en menos de 2 segundos para cada operación.
 - Todas las operaciones deben quedar registradas en un log para auditoría.
 
-### 5. Ejemplos clinica veterinaria
+### 5. Ejemplo: Clinica veterinaria
 
 A modo de ejemplo se propone un ejercicio de un diagrama de casos de uso que consiste en el diseño de una aplicación que gestione los tramites a realizar en una clínica veterinaria en base a las siguientes premisas:
 
@@ -374,30 +374,30 @@ Además, el cliente debe ser capaz de obtener un histórico de todas las consult
 No obstante, dependiendo del nivel de profundidad, el diagrama puede variar significativamente descomponiendo, añadiendo, omitiendo o fusionando alguno de los casos de uso que se han expuesto.
 
 <figure markdown>
-  ![Ejemplo adicional 1](assets/EDES-U4.1.-DiagramaCasoUso-img14.jpg)
-  <figcaption>Ejemplo de diagrama de casos de uso - Sistema bancario</figcaption>
+  ![Ejemplo parte 1](assets/EDES-U4.1.-DiagramaCasoUso-img14.gif)
+  <figcaption>Veterinaria 1</figcaption>
 </figure>
 
 <figure markdown>
-  ![Ejemplo adicional 2](assets/EDES-U4.1.-DiagramaCasoUso-img15.gif)
-  <figcaption>Ejemplo de diagrama de casos de uso con múltiples actores</figcaption>
+  ![Ejemplo parte 2](assets/EDES-U4.1.-DiagramaCasoUso-img15.gif)
+  <figcaption>Veterinaria 2</figcaption>
 </figure>
 
 <figure markdown>
-  ![Ejemplo adicional 3](assets/EDES-U4.1.-DiagramaCasoUso-img16.gif)
-  <figcaption>Ejemplo de diagrama de casos de uso con relaciones complejas</figcaption>
+  ![Ejemplo parte 3](assets/EDES-U4.1.-DiagramaCasoUso-img16.gif)
+  <figcaption>Veterinaria 3</figcaption>
 </figure>
 
 
-### 5. Ejemplo completo: Sistema de tienda online
+### 5. Ejemplo: Sistema de tienda online
 
 Vamos a ver un ejemplo completo de un diagrama de casos de uso para un sistema de tienda online.
 
-**Descripción del Sistema:**
+#### **Descripción del Sistema:**
 
 Una tienda online que permite a los usuarios buscar productos, añadirlos al carrito y realizar compras. Los administradores pueden gestionar productos, pedidos y usuarios.
 
-**Funcionalidades Principales:**
+#### **Funcionalidades Principales:**
 
 **Registrarse en la tienda:** Un nuevo usuario puede crear una cuenta proporcionando su correo electrónico y una contraseña.
 
@@ -431,12 +431,12 @@ Una tienda online que permite a los usuarios buscar productos, añadirlos al car
 
 **Administrar usuarios:** El administrador de la tienda puede ver y actualizar los datos de los usuarios registrados en la tienda.
 
-**Actores:**
+#### **Actores:**
 
 - **Usuario:** Cliente que navega y compra en la tienda.
 - **Administrador:** Gestiona productos, pedidos y usuarios.
 
-**Casos de Uso Principales:**
+#### **Casos de Uso Principales:**
 
 **Para el Usuario:**
 
@@ -455,19 +455,19 @@ Una tienda online que permite a los usuarios buscar productos, añadirlos al car
 - Administrar pedidos (actualizar estado de pedidos)
 - Administrar usuarios (gestionar clientes registrados)
 
-**Relaciones Clave:**
+#### **Relaciones Clave:**
 
-**<<include>>:**
+**include:**
 
 - Realizar compra → Incluye Realizar pagos
 - Gestionar cuenta → Incluye Cambiar contraseña y Cerrar sesión
 
-**<<extend>>:**
+**extend:**
 
 - Ver estado del pedido → extiende Ver historial de compras
 
 <figure markdown>
-  ![Diagrama de casos de uso completo - Tienda online](assets/EDES-U4.1.-DiagramaCasoUso-img09.png)
+  ![Diagrama de casos de uso completo - Tienda online](assets/EDES-U4.1.-DiagramaCasoUso-img17.png)
   <figcaption>Diagrama de casos de uso completo de un sistema de tienda online</figcaption>
 </figure>
 
@@ -486,7 +486,7 @@ Para crear diagramas de casos de uso, existen diversas herramientas que facilita
 - **Enterprise Architect:** Herramienta profesional completa para modelado de sistemas empresariales.
 
 !!! tip "Recomendación"
-Para estudiantes y proyectos pequeños, se recomienda comenzar con herramientas gratuitas como PlantUML o Draw.io. Para proyectos profesionales y empresariales, herramientas como Visual Paradigm o Enterprise Architect ofrecen funcionalidades más avanzadas.
+    Para estudiantes y proyectos pequeños, se recomienda comenzar con herramientas gratuitas como PlantUML o Draw.io. Para proyectos profesionales y empresariales, herramientas como Visual Paradigm o Enterprise Architect ofrecen funcionalidades más avanzadas.
 
 ## Referencias y bibliografía
 

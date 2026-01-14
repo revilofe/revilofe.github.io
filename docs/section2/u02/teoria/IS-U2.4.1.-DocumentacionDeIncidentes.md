@@ -880,6 +880,12 @@ Para profundizar en la documentación y gestión de incidentes de seguridad, con
     
     -   [www.enisa.europa.eu](https://www.enisa.europa.eu/)
 
+## Presentación
+
+Puedes acceder a la presentación de esta unidad aquí:
+
+[Presentación IS-U2.4.1 - Documentación de incidentes](https://revilofe.github.io/slides/section2-is/IS-U2.4.1.-DocumentacionDeIncidentes.html)
+
 ### 8. Actividad práctica
 
 A continuación, se propone una actividad práctica para aplicar los conocimientos adquiridos en la documentación de incidentes de seguridad.

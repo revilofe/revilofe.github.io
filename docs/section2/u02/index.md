@@ -28,6 +28,7 @@ toc_icon: "file-code"
 * [IS-U2.1.1 - Taxonomía de Incidentes](https://revilofe.github.io/slides/section2-is/IS-U2.1.1.-TaxonomiaDeIncidentes.html)
 * [IS-U2.2 - SOC](https://revilofe.github.io/slides/section2-is/IS-U2.2.-SOC.html)
 * [IS-U2.2.1 - Detección de Incidentes](https://revilofe.github.io/slides/section2-is/IS-U2.2.1.-DeteccionDeIncidentes.html)
+* [IS-U2.4.2 - Cómo escribir informes técnicos](https://revilofe.github.io/slides/section2-is/IS-U2.4.2.-ComoEscribirInformesTecnicos.html)
 
 ## 1. Normativa que Respalda la Unidad
 Esta unidad está alineada con la normativa del Curso de Especialización en Ciberseguridad en Entornos TI, teniendo como base el Resultado de Aprendizaje (RA) 2 y sus Criterios de Evaluación (CE) asociados. El objetivo principal es que los estudiantes aprendan a analizar incidentes de ciberseguridad, utilizando herramientas y mecanismos de detección y alerta.

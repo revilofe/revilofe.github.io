@@ -639,10 +639,16 @@ Podrás pensar que son herramientas para otro tipo de problemas, pero en realida
 
 En conclusión, saber escribir informes como es debido es algo que te va a costar tu tiempo, pero es algo que va a ser fundamental para tu futuro profesional … y bien usada, es una herramienta estupenda para ayudarte a resolver problemas.
 
-## Bibliografía, Webgrafía y fuentes
+## Referencias y bibliografía
 
 -   [Cómo escribir informes de incidentes de seguridad](https://www.securityartwork.es/2019/03/18/como-escribir-informes-de-incidentes-de-seguridad/)
 -   [Cómo escribir informes técnicos y no morir en el intento (I)](https://www.securityartwork.es/2019/02/18/como-escribir-informes-tecnicos-y-no-morir-en-el-intento-i/)
 -   [Cómo escribir informes técnicos y no morir en el intento (II)](https://www.securityartwork.es/2019/02/22/como-escribir-informes-tecnicos-y-no-morir-en-el-intento-ii/)
 -   [Cómo escribir informes técnicos y no morir en el intento (III)](https://www.securityartwork.es/2019/03/01/como-escribir-informes-tecnicos-y-no-morir-en-el-intento-iii/)
 -   [Cómo escribir informes técnicos y no morir en el intento (IV)](https://www.securityartwork.es/2019/03/08/como-escribir-informes-tecnicos-y-no-morir-en-el-intento-iv/)
+
+## Presentación
+
+Puedes acceder a la presentación de esta unidad aquí:
+
+[Presentación IS-U2.4.2 - Cómo escribir informes técnicos](https://revilofe.github.io/slides/section2-is/IS-U2.4.2.-ComoEscribirInformesTecnicos.html)

@@ -114,6 +114,7 @@ Aquí tienes acceso directo a todas las presentaciones disponibles, organizadas 
 * [IS-U2.1.1 - Taxonomía de Incidentes](https://revilofe.github.io/slides/section2-is/IS-U2.1.1.-TaxonomiaDeIncidentes.html)
 * [IS-U2.2 - SOC](https://revilofe.github.io/slides/section2-is/IS-U2.2.-SOC.html)
 * [IS-U2.2.1 - Detección de Incidentes](https://revilofe.github.io/slides/section2-is/IS-U2.2.1.-DeteccionDeIncidentes.html)
+* [IS-U2.4.2 - Cómo escribir informes técnicos](https://revilofe.github.io/slides/section2-is/IS-U2.4.2.-ComoEscribirInformesTecnicos.html)
 
 #### Unidad 3 - Investigación de incidentes
 * [IS-U3.1.1 - Recopilación de Evidencias](https://revilofe.github.io/slides/section2-is/IS-U3.1.1.-RecopilacionDeEvidencias.html)

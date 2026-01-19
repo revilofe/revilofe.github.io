@@ -1,0 +1,201 @@
+// IS-U2.4.1 - Documentación de incidentes
+// Banco de preguntas en formato GIFT (Incidentes de seguridad)
+
+::RA_2.CE_e. Incidente de seguridad vs incidencia::
+Se cae el servicio de correo 10 minutos por un reinicio programado. No hay evidencias de acceso no autorizado ni fuga de datos. ¿Cómo lo clasificarías?
+{
+=Como una incidencia del servicio, no necesariamente un incidente de seguridad. #Correcto\: Es una interrupción del servicio, pero no implica impacto en la seguridad de la información.
+~%-33.3333%Como un incidente de seguridad confirmado, porque cualquier caída es una brecha. #Incorrecto\: Una caída puede ser operativa; hace falta afectación a confidencialidad, integridad o disponibilidad por causa de seguridad.
+~%-33.3333%Como un incidente de seguridad solo si afecta a más de 30 minutos. #Incorrecto\: La duración no define por sí sola si es un incidente de seguridad.
+~%-33.3333%Como “no documentable”, porque fue planificado. #Incorrecto\: Las incidencias planificadas también se registran, aunque el tratamiento sea distinto.
+}
+
+::RA_2.CE_e. Definición práctica de incidente de seguridad::
+Un usuario reporta que su cuenta ha enviado correos que él no escribió. ¿Qué criterio encaja mejor para considerarlo incidente de seguridad?
+{
+=Puede afectar a la confidencialidad, integridad o disponibilidad de activos de información. #Correcto\: La suplantación puede implicar credenciales comprometidas y acceso no autorizado.
+~%-33.3333%Solo es incidente si hay un ransomware. #Incorrecto\: Hay muchos tipos de incidentes más allá de ransomware.
+~%-33.3333%Solo es incidente si lo confirma un juez. #Incorrecto\: La gestión de incidentes se inicia por evidencias técnicas, no por validación judicial.
+~%-33.3333%Solo es incidente si sale en prensa. #Incorrecto\: La relevancia mediática no define el incidente.
+}
+
+::RA_2.CE_e. Ciclo de vida y documentación transversal::
+Durante la respuesta a incidentes sigues las fases de preparación, identificación, contención, erradicación, recuperación y lecciones aprendidas. ¿Dónde encaja la documentación?
+{
+=Es transversal y debe hacerse durante todas las fases, no solo al final. #Correcto\: Documentar “en tiempo real” evita pérdida de datos y mejora trazabilidad.
+~%-33.3333%Solo en la fase de recuperación, cuando ya no hay presión. #Incorrecto\: Llegas tarde y olvidas acciones y decisiones clave.
+~%-33.3333%Solo en lecciones aprendidas, porque lo anterior es operativo. #Incorrecto\: Sin datos previos, las lecciones aprendidas se basan en memoria y opiniones.
+~%-33.3333%Solo en preparación, para tener plantillas y ya está. #Incorrecto\: Las plantillas ayudan, pero el contenido se genera durante el incidente.
+}
+
+::RA_2.CE_e. Documentación como inteligencia de amenazas::
+Tras un incidente, quieres mejorar la detección en el SIEM. ¿Qué salida de la documentación te ayuda más para crear reglas?
+{
+=IOCs y TTPs observadas, con contexto de cómo se detectaron y en qué sistemas aparecieron. #Correcto\: Permite construir detecciones y hunting basados en señales reales.
+~%-33.3333%Opiniones sobre la nacionalidad del atacante. #Incorrecto\: Sin evidencias es especulación y no mejora detecciones.
+~%-33.3333%Una lista de herramientas que “podrían haber servido”. #Incorrecto\: Lo importante es lo observado y verificable, no lo hipotético.
+~%-33.3333%Solo el coste total del incidente, porque el SIEM se configura con presupuestos. #Incorrecto\: El coste ayuda a decisiones, pero no crea reglas técnicas.
+}
+
+::RA_2.CE_e. Documentación y cumplimiento legal::
+Se sospecha fuga de datos personales. ¿Por qué una documentación precisa es crítica desde el primer momento?
+{
+=Porque puede ser necesaria para notificaciones, auditorías y para aportar evidencias válidas si hay procedimientos legales. #Correcto\: La trazabilidad y exactitud protegen a la organización.
+~%-33.3333%Porque sustituye a las medidas de contención y erradicación. #Incorrecto\: Documentar no reemplaza responder; son actividades complementarias.
+~%-33.3333%Porque evita automáticamente multas, aunque el incidente sea grave. #Incorrecto\: Ayuda a demostrar diligencia, pero no elimina responsabilidades por sí sola.
+~%-33.3333%Porque permite atribuir siempre al atacante sin duda. #Incorrecto\: La atribución suele ser limitada y no siempre posible.
+}
+
+::RA_2.CE_e. Fechas y horas clave y “dwell time”::
+Tienes “hora del incidente” y “hora de detección”. ¿Qué aprendizaje se obtiene de la diferencia entre ambas?
+{
+=Estimar el tiempo de permanencia del atacante sin ser detectado y mejorar detección. #Correcto\: Ayuda a medir eficacia del monitoreo y a priorizar mejoras.
+~%-33.3333%Calcular el número de máquinas infectadas con exactitud. #Incorrecto\: El tiempo no da por sí solo el alcance.
+~%-33.3333%Saber si el incidente es legalmente denunciable. #Incorrecto\: La obligación depende del tipo de datos y normativa aplicable, no de ese delta.
+~%-33.3333%Decidir automáticamente la atribución del incidente. #Incorrecto\: La atribución requiere evidencias adicionales.
+}
+
+::RA_2.CE_e. Origen del incidente: registro útil::
+Durante la investigación, ¿qué dato de “origen” es más accionable para prevenir recurrencias?
+{
+=El vector probable, por ejemplo explotación de vulnerabilidad sin parche o credenciales comprometidas. #Correcto\: Permite corregir causa raíz y reforzar controles.
+~%-33.3333%El nombre del analista que lo detectó. #Incorrecto\: Es relevante para trazabilidad, pero no describe el origen técnico.
+~%-33.3333%El día de la semana, sin más contexto. #Incorrecto\: Puede aportar patrones, pero no define el vector de entrada.
+~%-33.3333%El proveedor de internet de la empresa. #Incorrecto\: Rara vez es el “origen” del incidente.
+}
+
+::RA_2.CE_e. Taxonomía INCIBE: caso ransomware::
+Un servidor muestra archivos cifrados y una nota de rescate. ¿Qué clasificación encaja mejor en una taxonomía general?
+{
+=Código dañino, porque hay software malicioso ejecutándose y causando daño. #Correcto\: Ransomware es malware con impacto en disponibilidad e integridad.
+~%-33.3333%Recopilación de información, porque el atacante “observa” el sistema. #Incorrecto\: La acción principal es cifrado y extorsión, no reconnaissance.
+~%-33.3333%Contenido abusivo, porque hay un mensaje de rescate. #Incorrecto\: El mensaje es consecuencia, no la categoría principal.
+~%-33.3333%Vulnerable, porque siempre hay una vulnerabilidad implicada. #Incorrecto\: Puede haber vulnerabilidad, pero el incidente observado es ejecución de malware.
+}
+
+::RA_2.CE_e. Peligrosidad vs impacto: caso “laboratorio”::
+Detectas un malware sofisticado en un equipo de pruebas aislado y lo contienes en minutos. ¿Qué combinación es más razonable?
+{
+=Peligrosidad alta e impacto bajo. #Correcto\: La amenaza es capaz, pero las consecuencias reales en la organización son limitadas.
+~%-33.3333%Peligrosidad baja e impacto crítico. #Incorrecto\: Si es sofisticado, la peligrosidad no es baja.
+~%-33.3333%Peligrosidad crítica e impacto crítico siempre van juntos. #Incorrecto\: Son dimensiones distintas y pueden desacoplarse.
+~%-33.3333%No se puede valorar hasta tener atribución confirmada. #Incorrecto\: Puedes valorar con evidencias técnicas y efecto observado sin atribución.
+}
+
+::RA_2.CE_e. IOC vs IoA en una investigación::
+Encuentras una IP de C2 y, además, un patrón de ejecución de PowerShell anómalo. ¿Qué diferencia refleja mejor IOC e IoA?
+{
+=La IP es un IOC y el patrón de comportamiento es un IoA. #Correcto\: IOC identifica artefactos; IoA describe tácticas y técnicas observadas.
+~%-33.3333%La IP es un IoA y el comportamiento es un IOC. #Incorrecto\: Está invertido.
+~%-33.3333%Ambos son lo mismo, solo cambia el nombre. #Incorrecto\: Se usan para propósitos distintos y complementarios.
+~%-33.3333%IoA solo se usa en forense y IOC solo en legal. #Incorrecto\: Ambos se usan en detección, hunting y respuesta.
+}
+
+::RA_2.CE_e. Inventario de activos afectados::
+Durante un incidente hay confusión sobre qué servidores están comprometidos. ¿Qué información mínima ayuda más a evitar errores?
+{
+=Nombre de host, dirección IP y datos de sistema operativo o versión relevante. #Correcto\: Reduce ambigüedad y facilita contención y recuperación.
+~%-33.3333%Solo el nombre “del proyecto” interno del sistema. #Incorrecto\: Puede no ser suficiente para localizar el activo real.
+~%-33.3333%Solo el fabricante del hardware. #Incorrecto\: No identifica el activo en red ni su ubicación.
+~%-33.3333%Solo el nombre del administrador de guardia. #Incorrecto\: Es útil para coordinación, pero no identifica activos.
+}
+
+::RA_2.CE_e. Plan de acción y timeline en respuesta::
+En una revisión post-incidente, te piden justificar decisiones. ¿Qué práctica lo facilita más?
+{
+=Registrar cada acción con fecha y hora, responsable y resultado, y mantener una timeline clara. #Correcto\: Permite auditoría interna y aprendizaje.
+~%-33.3333%Resumir al final “se hicieron varias acciones” sin detalle, para ahorrar tiempo. #Incorrecto\: Se pierde trazabilidad y no se pueden evaluar cuellos de botella.
+~%-33.3333%Guardar solo capturas de pantalla, sin contexto. #Incorrecto\: Sin narrativa ni tiempos, las capturas no se interpretan bien.
+~%-33.3333%Esperar a cerrar el incidente y luego reconstruir todo “de memoria”. #Incorrecto\: Introduce errores y omisiones.
+}
+
+::RA_2.CE_e. Ticketing para seguimiento::
+Tu organización es pequeña y no tiene SOAR. ¿Qué opción puede ser válida para seguimiento, si se usa con disciplina?
+{
+=Un sistema de ticketing o issues, donde se registren tareas, responsables, estado y evidencias. #Correcto\: Lo importante es el proceso y la trazabilidad.
+~%-33.3333%Un chat sin histórico, porque es más rápido. #Incorrecto\: Sin histórico no hay seguimiento ni auditoría.
+~%-33.3333%Mensajes privados al técnico de guardia, para no “alarmar”. #Incorrecto\: Reduce coordinación y aumenta riesgo de fallos.
+~%-33.3333%Una hoja suelta en papel, sin copias ni control de cambios. #Incorrecto\: Es fácil perderla y no es escalable.
+}
+
+::RA_2.CE_e. Seguimiento durante la resolución::
+Mientras el incidente está en progreso, ¿qué conjunto de información ayuda más a mantener control operativo?
+{
+=Estado actual, acciones pendientes priorizadas, responsables, tiempos estimados y bloqueos. #Correcto\: Es la base de un seguimiento eficiente.
+~%-33.3333%Solo el impacto reputacional, porque lo demás es técnico. #Incorrecto\: Sin tareas y responsables no se gestiona el trabajo.
+~%-33.3333%Solo una lista de herramientas disponibles. #Incorrecto\: No describe progreso ni próximos pasos.
+~%-33.3333%Solo el número de tickets abiertos, sin detalle. #Incorrecto\: No permite actuar ni priorizar.
+}
+
+::RA_2.CE_e. Monitorización post-incidente::
+Tras dar por erradicado un malware, ¿qué práctica es más recomendable para confirmar que no hay recurrencia?
+{
+=Aumentar monitorización temporal y buscar activamente los IOCs durante varios días o semanas. #Correcto\: Verifica erradicación y detecta reinfecciones.
+~%-33.3333%Bajar la monitorización para reducir alertas y “descansar”. #Incorrecto\: Es justo cuando más conviene vigilar.
+~%-33.3333%Cerrar el incidente al reiniciar el sistema afectado. #Incorrecto\: Reiniciar no prueba erradicación ni ausencia de persistencia.
+~%-33.3333%Cambiar el nombre del host para que el atacante no lo encuentre. #Incorrecto\: No es una medida de verificación ni de seguridad real.
+}
+
+::RA_2.CE_e. Cierre formal del incidente::
+¿Cuál de estos criterios encaja mejor con un cierre formal bien hecho?
+{
+=Amenaza verificada como erradicada, sistemas recuperados, informe final, lecciones aprendidas y notificaciones realizadas si aplican. #Correcto\: Cierra el ciclo técnico y organizativo.
+~%-33.3333%Cerrar cuando “ya no hay alertas”, sin revisar logs ni evidencias. #Incorrecto\: Puede haber fallos silenciosos o persistencia.
+~%-33.3333%Cerrar cuando el equipo está cansado y necesita liberar agenda. #Incorrecto\: El cansancio no es un criterio de seguridad.
+~%-33.3333%Cerrar cuando Dirección lo pide, aunque falten evidencias. #Incorrecto\: La presión no sustituye a verificación.
+}
+
+::RA_2.CE_e. Lecciones aprendidas: estructura útil::
+En una retrospectiva, ¿qué estructura convierte mejor el aprendizaje en acciones?
+{
+=Qué salió bien, qué salió mal y qué podemos mejorar con un plan de acción. #Correcto\: Refuerza fortalezas y transforma fallos en mejoras concretas.
+~%-33.3333%Solo enumerar culpables y errores individuales. #Incorrecto\: Debe centrarse en procesos y sistemas, no en señalar personas.
+~%-33.3333%Hacer un resumen ejecutivo y dar por cerrado el tema. #Incorrecto\: Sin plan de acción no hay mejora continua.
+~%-33.3333%Hablar solo de herramientas nuevas a comprar. #Incorrecto\: A veces la mejora es proceso, configuración o formación, no solo tecnología.
+}
+
+::RA_2.CE_e. Técnica de los “5 porqués”::
+Tras un ransomware, se propagó lateralmente. ¿Qué cadena de razonamiento refleja mejor la idea de los “5 porqués”?
+{
+=Buscar la causa raíz pasando de síntomas a decisiones o controles faltantes, por ejemplo falta de segmentación y priorización. #Correcto\: La técnica empuja a encontrar causas sistémicas, no solo el último evento.
+~%-33.3333%Repetir “porque sí” hasta que alguien se canse y se cierre el tema. #Incorrecto\: No es un método de investigación, es evasión.
+~%-33.3333%Centrarse solo en el malware, ignorando red, accesos y procesos. #Incorrecto\: La propagación suele ser un problema de controles, no solo del malware.
+~%-33.3333%Concluir que la causa raíz siempre es “error humano”. #Incorrecto\: Puede haber errores, pero también faltas de control, diseño o procedimientos.
+}
+
+::RA_2.CE_e. Reglas de una sesión post-mortem::
+Quieres que la retrospectiva sea útil y segura psicológicamente. ¿Qué regla es más adecuada?
+{
+=Enfoque sin culpables, basado en hechos, con acciones concretas y seguimiento. #Correcto\: Favorece aprendizaje real y evita ocultar información.
+~%-33.3333%Prohibir hablar de fallos para mantener la moral. #Incorrecto\: Sin analizar fallos no hay mejora.
+~%-33.3333%Permitir solo a Dirección hablar para evitar discusiones. #Incorrecto\: Se pierde información técnica clave del equipo.
+~%-33.3333%Evitar documentación para que no quede rastro. #Incorrecto\: La transparencia y trazabilidad son claves de madurez.
+}
+
+::RA_2.CE_e. Materializar mejoras tras el incidente::
+Tras las lecciones aprendidas, ¿qué conjunto de cambios refleja mejor “pasar a la acción”?
+{
+=Actualizar playbooks y runbooks, ajustar reglas del SIEM y revisar políticas o formación necesarias. #Correcto\: Traducir aprendizaje en cambios operativos y preventivos.
+~%-33.3333%Guardar las notas en un cajón y confiar en la memoria del equipo. #Incorrecto\: La memoria falla y el equipo rota.
+~%-33.3333%Comprar una herramienta nueva y no cambiar procesos. #Incorrecto\: La tecnología sin proceso no resuelve causas raíz.
+~%-33.3333%Cambiar el nombre del incidente para que no se repita. #Incorrecto\: No es una mejora real.
+}
+
+::RA_2.CE_e. Métricas de mejora continua::
+Quieres medir si la organización madura en detección y respuesta. ¿Qué par de métricas es más representativo?
+{
+=MTTD y MTTR, para medir tiempo medio de detección y de respuesta. #Correcto\: Permiten ver si detectas antes y respondes más rápido.
+~%-33.3333%Número de páginas del informe y número de anexos. #Incorrecto\: No mide eficacia operativa.
+~%-33.3333%Número de reuniones y número de correos enviados. #Incorrecto\: No mide resultados de seguridad.
+~%-33.3333%Número de herramientas instaladas y número de licencias compradas. #Incorrecto\: No garantiza mejor seguridad.
+}
+
+::RA_2.CE_e. Listados de usuarios y equipos afectados::
+Para evitar formatear el equipo equivocado durante la recuperación, ¿qué práctica es más segura?
+{
+=Mantener listados separados de usuarios y equipos, y en equipos incluir nombre, IP y si es posible MAC. #Correcto\: Reduce errores operativos en entornos con DHCP o nombres similares.
+~%-33.3333%Usar solo el nombre “de la persona” afectada para identificar el equipo. #Incorrecto\: Puede usar varios dispositivos y no identifica el activo.
+~%-33.3333%Listar solo el rango de red completo, porque “así no se escapa ninguno”. #Incorrecto\: Es impreciso y no accionable.
+~%-33.3333%No listar equipos para proteger privacidad del informe. #Incorrecto\: Se puede controlar el acceso al informe, pero el listado es crítico para la respuesta.
+}
+

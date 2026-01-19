@@ -1,0 +1,201 @@
+// IS-U2.4.2 - Cómo escribir informes técnicos
+// Banco de preguntas en formato GIFT (Incidentes de seguridad)
+
+::RA_2.CE_e. Objetivo del informe en una línea::
+Estás redactando un informe tras el incidente PI-0023. ¿Qué objetivo está mejor formulado para guiar todo el documento?
+{
+=Definir la respuesta llevada a cabo respecto al incidente de seguridad PI-0023. #Correcto\: Es concreto, cabe en una línea y sirve como “regla” para decidir qué entra y qué no.
+~%-33.3333%Explicar todo lo que sabemos sobre ciberseguridad para que se vea el esfuerzo del equipo. #Incorrecto\: No define un objetivo medible ni alineado con una decisión o necesidad real.
+~%-33.3333%Escribir un documento lo más completo posible, aunque tenga 200 páginas, para que nadie se queje. #Incorrecto\: Confunde “calidad” con “peso”; no prioriza lo importante ni la audiencia.
+~%-33.3333%Hacer un informe técnico bonito con muchas capturas y anexos, sin importar el mensaje. #Incorrecto\: La forma ayuda, pero sin objetivo claro el contenido se vuelve ruido.
+}
+
+::RA_2.CE_e. Ajuste a la audiencia en un incidente::
+Tienes que informar de un incidente tanto a Dirección como al equipo SOC. ¿Qué enfoque es el más correcto?
+{
+=Crear un resumen ejecutivo sin jerga técnica y un apartado técnico detallado para el SOC. #Correcto\: Diferentes audiencias requieren niveles de detalle y lenguaje distintos.
+~%-33.3333%Usar el mismo texto técnico para todos, así nadie puede decir que falta información. #Incorrecto\: Dirección puede no entenderlo y se pierde el impacto del mensaje.
+~%-33.3333%Eliminar los detalles técnicos y centrarse solo en “sensaciones” para que sea más persuasivo. #Incorrecto\: Un informe debe basarse en hechos y evidencias, no en impresiones.
+~%-33.3333%Escribir solo para perfiles técnicos, porque “son los que lo van a ejecutar”. #Incorrecto\: Muchas decisiones (coste, plazos, riesgo) las toma personal no técnico.
+}
+
+::RA_2.CE_e. KISS y qué mover a anexos::
+En un informe de incidente, incluyes versiones exactas de la VPN, 20 páginas de logs completos y detalles de hardware que no afectan a la causa. ¿Qué harías para aplicar KISS?
+{
+=Dejar en el cuerpo lo esencial del incidente y mover la evidencia extensa y detalles no críticos a anexos. #Correcto\: Lo importante va al texto principal; lo verificable y largo, al anexo.
+~%-33.3333%Mantenerlo todo en el cuerpo del informe para que “se note” el trabajo realizado. #Incorrecto\: Saturar información reduce legibilidad y provoca fatiga cognitiva.
+~%-33.3333%Eliminar cualquier evidencia para que el informe sea corto y rápido de leer. #Incorrecto\: La evidencia sostiene conclusiones y aporta credibilidad.
+~%-33.3333%Poner los logs completos en el resumen ejecutivo para que Dirección vea la “prueba”. #Incorrecto\: El resumen ejecutivo debe evitar tecnicismos y centrarse en problema y solución.
+}
+
+::RA_2.CE_e. Aportar valor con el informe::
+Tras optimizar reglas YARA reduces falsos positivos un 20% y eliminas 100 reglas. ¿Dónde es más útil resaltar este valor?
+{
+=En el resumen ejecutivo y conclusiones, vinculándolo a decisiones y mejoras de seguridad. #Correcto\: El valor debe ser visible donde se toman decisiones y se resumen hallazgos.
+~%-33.3333%Solo en un anexo técnico, para que no “moleste” a la lectura principal. #Incorrecto\: Si es un logro relevante, debe verse en las secciones de mayor visibilidad.
+~%-33.3333%En la portada, sustituyendo el título por el porcentaje de mejora. #Incorrecto\: La portada no reemplaza el análisis; el valor debe contextualizarse.
+~%-33.3333%No mencionarlo, porque los números se interpretan solos. #Incorrecto\: Hay que explicar qué significa el número y por qué importa.
+}
+
+::RA_2.CE_e. Estructura base de un informe técnico::
+Vas a redactar un informe técnico general. ¿Qué estructura base es la más adecuada?
+{
+=Resumen ejecutivo, objeto y alcance, antecedentes, análisis, conclusiones, anexos. #Correcto\: Es una estructura robusta y reutilizable para muchos tipos de informe.
+~%-33.3333%Anexos, análisis, conclusiones, resumen ejecutivo, objeto y alcance. #Incorrecto\: Coloca lo accesorio al inicio y complica la lectura.
+~%-33.3333%Introducción, conclusiones, bibliografía, anexos, análisis. #Incorrecto\: Falta objeto y alcance, y el orden no guía al lector.
+~%-33.3333%Capturas, logs, comandos, y al final un párrafo resumen. #Incorrecto\: La evidencia sin narrativa ni estructura no comunica bien.
+}
+
+::RA_2.CE_e. Técnica de “completa el índice”: cuándo usarla::
+Tienes que escribir una auditoría de seguridad compleja. ¿Cuál es el mejor momento para construir un índice completo?
+{
+=Al principio, antes de redactar, para tener huecos claros que rellenar y ordenar el contenido. #Correcto\: Facilita la escritura y ayuda a quien lee a localizar información.
+~%-33.3333%Al final, cuando ya esté todo escrito, para “decorar” el documento. #Incorrecto\: El índice debe guiar la redacción, no ser un añadido tardío.
+~%-33.3333%Solo cuando el informe supere 100 páginas. #Incorrecto\: Un buen índice ayuda incluso en informes más cortos.
+~%-33.3333%Nunca, porque obliga a comprometerse con una estructura antes de tiempo. #Incorrecto\: Precisamente esa estructura evita divagar y añadir relleno.
+}
+
+::RA_2.CE_e. Resumen ejecutivo: contenido mínimo::
+Para un informe dirigido a personal no técnico, ¿qué elementos deben aparecer sí o sí en el resumen ejecutivo?
+{
+=Problema, solución propuesta y acciones tomadas o pendientes para alcanzarla. #Correcto\: Es un resumen “para jefes”, claro y orientado a decisión.
+~%-33.3333%Lista completa de IOCs, hashes y TTPs mapeadas con MITRE ATT&CK. #Incorrecto\: Eso es contenido técnico, mejor en secciones técnicas o anexos.
+~%-33.3333%Historial detallado del incidente con cada comando ejecutado. #Incorrecto\: El detalle exhaustivo se reserva para el cuerpo/anexos.
+~%-33.3333%Opiniones del analista sobre quién ha sido el atacante. #Incorrecto\: El resumen no debe incluir opiniones sin evidencia.
+}
+
+::RA_2.CE_e. Resumen ejecutivo: claridad “niño de 6 años”::
+Estás revisando un resumen ejecutivo. ¿Qué cambio mejora más la claridad para una audiencia no técnica?
+{
+=Sustituir jerga por lenguaje llano y explicar impacto con ejemplos comprensibles. #Correcto\: La claridad evita malentendidos y acelera decisiones.
+~%-33.3333%Añadir más acrónimos para que suene más profesional. #Incorrecto\: Más jerga reduce comprensión y credibilidad ante no técnicos.
+~%-33.3333%Eliminar el problema y dejar solo la solución, para ir al grano. #Incorrecto\: Sin problema no hay contexto ni criterio para evaluar la solución.
+~%-33.3333%Incluir la versión exacta de cada herramienta usada. #Incorrecto\: Es ruido si no afecta al mensaje.
+}
+
+::RA_2.CE_e. Anexos: “el trastero” del informe::
+¿Qué criterio encaja mejor para decidir si algo debe ir a anexos?
+{
+=Si no es esencial para entender el hilo principal, pero aporta verificabilidad o detalle adicional. #Correcto\: Mantienes legibilidad sin perder evidencia.
+~%-33.3333%Todo debe ir en anexos, y el cuerpo debe ser solo una página. #Incorrecto\: El cuerpo debe contar la historia y justificar conclusiones.
+~%-33.3333%Nada debe ir en anexos, porque “a nadie le interesan”. #Incorrecto\: Anexos son útiles para auditoría y revisión técnica.
+~%-33.3333%Solo van a anexos los gráficos, porque ocupan espacio. #Incorrecto\: Los gráficos suelen mejorar comprensión y a veces deben ir en el cuerpo.
+}
+
+::RA_2.CE_e. Técnica del recorte de evidencia::
+Tienes una salida de port scanning de 5 páginas y solo 4 líneas muestran el puerto vulnerable. ¿Qué es lo más recomendable?
+{
+=Incluir en el cuerpo solo el recorte relevante y dejar la salida completa como anexo. #Correcto\: Enfocas al lector en lo importante sin perder verificabilidad.
+~%-33.3333%Pegar las 5 páginas en el cuerpo del informe para que se vea completo. #Incorrecto\: Fatiga al lector y dificulta encontrar el dato clave.
+~%-33.3333%No incluir nada de la evidencia, solo la conclusión. #Incorrecto\: Sin evidencia, la conclusión pierde credibilidad.
+~%-33.3333%Resumirlo como “había muchos puertos”, sin indicar cuál ni por qué. #Incorrecto\: Falta precisión y se pierde trazabilidad.
+}
+
+::RA_2.CE_e. Convertir informes en plantilla::
+Tu equipo repite cada mes un informe de estado de seguridad. ¿Qué práctica ahorra más tiempo a medio plazo?
+{
+=Crear una plantilla con la estructura y estilos definidos para reutilizarla. #Correcto\: “Coger y rellenar” reduce errores y acelera redacción.
+~%-33.3333%Escribir cada informe desde cero para que no se parezcan entre sí. #Incorrecto\: La consistencia ayuda a comparar periodos y a leer más rápido.
+~%-33.3333%Copiar y pegar el informe anterior sin revisar, para ir más rápido. #Incorrecto\: Arrastras errores y puedes dejar información desactualizada.
+~%-33.3333%Cambiar la estructura cada vez para “mantener interés”. #Incorrecto\: En informes técnicos, la previsibilidad ayuda.
+}
+
+::RA_2.CE_e. Niveles de anidado en títulos::
+Te proponen una estructura con títulos del tipo 1.3.1.2.2.1.1. ¿Qué recomendación es la más adecuada?
+{
+=Limitar los subniveles a un máximo de 3 para mantener legibilidad. #Correcto\: Reduce confusión y facilita navegación.
+~%-33.3333%Aumentar aún más los subniveles para que quede “más académico”. #Incorrecto\: Una estructura excesiva es difícil de seguir.
+~%-33.3333%Eliminar todos los títulos y escribir en un bloque continuo. #Incorrecto\: Sin estructura, el informe se vuelve inusable.
+~%-33.3333%Usar subniveles solo si el documento supera 300 páginas. #Incorrecto\: El problema es la complejidad, no el número de páginas.
+}
+
+::RA_2.CE_e. Informe “recortable” para varias áreas::
+Un incidente afecta a redes, sistemas y seguridad, y cada equipo solo necesita su parte. ¿Qué enfoque ayuda más?
+{
+=Estructurar el informe en secciones claramente separables por áreas, como mini-informes. #Correcto\: Facilita repartir contenido sin perder coherencia.
+~%-33.3333%Mezclar todo cronológicamente sin separar áreas, para que “se vea el caos real”. #Incorrecto\: Se dificulta que cada equipo encuentre su trabajo.
+~%-33.3333%Redactar tres informes distintos sin relación entre sí. #Incorrecto\: Aumenta duplicidad y riesgo de inconsistencias.
+~%-33.3333%Enviar solo el anexo técnico a todos y que cada cual “se apañe”. #Incorrecto\: Falta narrativa y guía para interpretar evidencias.
+}
+
+::RA_2.CE_e. Corrector ortográfico y diccionario personal::
+Tu procesador marca como error términos como SIEM, PowerShell o YARA. ¿Qué práctica es más correcta?
+{
+=Pasar siempre el corrector y añadir al diccionario los términos técnicos válidos. #Correcto\: Evita faltas reales y mejora calidad sin “luchar” con el corrector.
+~%-33.3333%Desactivar el corrector para que no moleste. #Incorrecto\: Aumenta el riesgo de errores que dañan credibilidad.
+~%-33.3333%Ignorar las faltas, porque “en seguridad lo importante es lo técnico”. #Incorrecto\: La forma también comunica profesionalidad.
+~%-33.3333%Cambiar los términos técnicos por palabras genéricas para que no subrayen. #Incorrecto\: Pierdes precisión y claridad técnica.
+}
+
+::RA_2.CE_e. Frases largas en informe de incidente::
+Has escrito una frase de 7 líneas describiendo spear-phishing, macros, PowerShell, C2 y escalada. ¿Qué mejora es la más eficaz?
+{
+=Dividirla en varias frases cortas, cada una con una idea principal clara. #Correcto\: Aumenta legibilidad y reduce ambigüedad.
+~%-33.3333%Añadir más comas para que parezca más “técnico”. #Incorrecto\: Las comas no arreglan la sobrecarga cognitiva.
+~%-33.3333%Dejarla igual, porque en incidentes hay que ponerlo todo en una frase. #Incorrecto\: No hay beneficio en frases interminables.
+~%-33.3333%Sustituirla por una lista de herramientas sin contexto. #Incorrecto\: Pierdes la historia y la relación causa-efecto.
+}
+
+::RA_2.CE_e. Párrafos y “ladrillitos”::
+Tienes un bloque de texto de 12 líneas con varias ideas mezcladas (intrusión, persistencia, exfiltración, detección). ¿Qué harías?
+{
+=Separar en varios párrafos, agrupando cada idea o fase en su propio bloque. #Correcto\: El lector no se pierde y la historia se entiende mejor.
+~%-33.3333%Ponerlo todo en un solo párrafo para que “no haya huecos”. #Incorrecto\: Dificulta lectura y revisión.
+~%-33.3333%Convertirlo en una sola frase para “resumir”. #Incorrecto\: Empeora el problema de legibilidad.
+~%-33.3333%Quitar detalles y dejar solo una conclusión sin explicar el proceso. #Incorrecto\: El informe necesita narrativa y soporte.
+}
+
+::RA_2.CE_e. Voz pasiva o activa y consistencia::
+En un informe alternas “Revisé los logs” con “Se revisaron los logs”. ¿Qué es lo más correcto?
+{
+=Elegir un estilo (voz pasiva o tercera persona) y mantenerlo de forma consistente. #Correcto\: La consistencia mejora el tono profesional.
+~%-33.3333%Usar siempre primera persona para que quede claro quién lo hizo. #Incorrecto\: Suele sonar poco profesional en informes formales.
+~%-33.3333%Mezclar estilos para que el texto sea más variado. #Incorrecto\: La variación sin control da sensación de copia/pega.
+~%-33.3333%Eliminar los verbos para no tener que decidir el estilo. #Incorrecto\: Queda ambiguo y poco claro.
+}
+
+::RA_2.CE_e. Tipografía: una fuente y énfasis correcto::
+Quieres mejorar la lectura del informe. ¿Qué decisión es más adecuada?
+{
+=Usar una sola fuente en todo el documento y emplear negritas para palabras clave y cursivas para evidencias. #Correcto\: Facilita lectura y añade “anclas” visuales.
+~%-33.3333%Cambiar de fuente según el apartado para que sea más dinámico. #Incorrecto\: Da aspecto de pastiche y resta profesionalidad.
+~%-33.3333%Usar solo mayúsculas para resaltar todo lo importante. #Incorrecto\: Cansa y dificulta lectura.
+~%-33.3333%Evitar cualquier énfasis tipográfico para que nadie interprete “prioridades”. #Incorrecto\: Un énfasis bien usado guía la lectura.
+}
+
+::RA_2.CE_e. Terminología y acrónimos (ATL)::
+En un informe para un público mixto usas DDoS, IOC, C2 y RCE sin explicar. ¿Qué es lo mejor?
+{
+=Ajustar terminología a la audiencia y definir acrónimos la primera vez que aparezcan. #Correcto\: Evita malentendidos y reduce preguntas posteriores.
+~%-33.3333%Mantener acrónimos sin definir para que el informe sea más corto. #Incorrecto\: El coste de comprensión es mayor que el ahorro de palabras.
+~%-33.3333%Eliminar toda terminología técnica y usar solo metáforas. #Incorrecto\: Pierdes precisión y trazabilidad.
+~%-33.3333%Definir acrónimos solo en el último anexo, sin referencia en el cuerpo. #Incorrecto\: El lector se pierde durante la lectura.
+}
+
+::RA_2.CE_e. Gráficas para transmitir impacto::
+En una auditoría quieres que se entienda de un vistazo qué sistemas concentran vulnerabilidades críticas. ¿Qué recurso funciona mejor?
+{
+=Un gráfico tipo matriz o “heatmap” con sistemas en un eje y gravedad en otro (rojo/amarillo/verde). #Correcto\: Permite ver concentración de riesgo rápidamente.
+~%-33.3333%Un listado de 40 páginas con todas las vulnerabilidades sin clasificar. #Incorrecto\: No facilita comprensión rápida.
+~%-33.3333%Una captura de pantalla del escáner tal cual, sin explicar nada. #Incorrecto\: Falta contexto y síntesis.
+~%-33.3333%Un gráfico 3D decorativo sin relación con datos reales. #Incorrecto\: Confunde y no aporta valor.
+}
+
+::RA_2.CE_e. Tipos de informes en incidentes: detección::
+Acabas de confirmar un incidente y hay presión por informar rápido a responsables técnicos. ¿Qué caracteriza mejor al informe de detección?
+{
+=Resume en 2-3 párrafos lo que se sabe, sistemas afectados e impacto estimado, priorizando rapidez sobre exactitud. #Correcto\: Es para arrancar la respuesta con información inicial.
+~%-33.3333%Incluye atribución definitiva y análisis forense completo con pruebas judiciales. #Incorrecto\: Eso llega después, cuando haya más datos.
+~%-33.3333%Va dirigido a Dirección y evita cualquier dato técnico o de impacto. #Incorrecto\: En detección suelen ser receptores técnicos para actuar.
+~%-33.3333%Es un listado de IOCs sin contexto, porque lo demás “ya se verá”. #Incorrecto\: Hace falta contexto mínimo para coordinar acciones.
+}
+
+::RA_2.CE_e. Tipos de informes en incidentes: crisis::
+Durante un incidente grave, Dirección y Legal piden actualizaciones. ¿Qué enfoque encaja con un informe de crisis?
+{
+=Mensaje claro para no técnicos, cuidando la exactitud y el lenguaje, evitando especulación. #Correcto\: En crisis hay sensibilidad y consecuencias legales.
+~%-33.3333%Detalle técnico exhaustivo con comandos, hashes y trazas para demostrar profundidad. #Incorrecto\: No es la audiencia principal y puede confundir.
+~%-33.3333%Hipótesis sin evidencias, porque “hay que tranquilizar”. #Incorrecto\: La especulación puede empeorar la situación.
+~%-33.3333%Copiar el informe de detección sin actualizar, para ser consistentes. #Incorrecto\: En crisis se requiere información actual y revisada.
+}
+

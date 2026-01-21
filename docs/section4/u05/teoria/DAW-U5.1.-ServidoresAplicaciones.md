@@ -66,7 +66,7 @@ Esta terminología la usaremos durante la unidad:
 | Servidor web      | Sirve contenido estatico y gestiona peticiones HTTP.  |
 | Cliente web       | Navegador o app que solicita recursos.                |
 | HTTPS             | Protocolo seguro entre cliente y servidor.            |
-| JSON              | Formato de intercambio de datos entre servicios.      |
+| JSON              | Formato ligero para el intercambio de datos.          |
 | Logica de negocio | Reglas del dominio y procesamiento de datos.          |
 | Aplicacion        | Software que consume datos y los presenta al usuario. |
 
@@ -108,7 +108,7 @@ En servidores Java como Tomcat, estos elementos se agrupan en estructuras como *
 
 #### 2.6. Tendencias actuales
 
-El uso de servidores de aplicaciones sigue creciendo por dos razones principales:
+El uso de servidores de aplicaciones continua su expansion por dos razones principales:
 
 - La migracion a entornos cloud y contenedores.
 - La necesidad de aplicaciones distribuidas que se actualizan con frecuencia.
@@ -128,8 +128,9 @@ En un servidor JavaEE, el flujo tipico es este:
 3. Si es contenido estático, responde directamente.
 4. Si es contenido dinámico, reenvía la petición al servidor de aplicaciones.
 5. El servidor de aplicaciones convierte la petición en una solicitud de servlet.
-6. El servlet consulta la base de datos o ejecuta logica de negocio.
-7. La respuesta vuelve al servidor web, que la entrega al cliente.
+6. El servlet realiza consultas al servidor de base de datos o ejecuta logica de negocio.
+7. El servidor de aplicaciones envia la respuesta HTTP generada al servidor web.
+8. El servidor web entrega la respuesta al cliente.
 
 Este flujo permite **aislar la logica de negocio** del servidor web y mantener cada capa con responsabilidades claras. El servidor web optimiza la entrega de archivos, y el servidor de aplicaciones optimiza el procesamiento.
 
@@ -140,17 +141,18 @@ Este flujo permite **aislar la logica de negocio** del servidor web y mantener c
 
 #### 3.2. Servidor web vs servidor de aplicaciones
 
-| Aspecto             | Servidor de aplicaciones       | Servidor web              |
-|---------------------|--------------------------------|---------------------------|
-| Diseñado para       | HTTP y logica de negocio       | HTTP y contenido estatico |
-| Almacena            | Logica de negocio              | Archivos estaticos        |
-| Consumo de recursos | Alto                           | Bajo                      |
-| Soporta             | EJB, transacciones, clustering | Servlets, JSP, JSON       |
+| Aspecto             | Servidor de aplicaciones                             | Servidor web                              |
+|---------------------|------------------------------------------------------|-------------------------------------------|
+| Diseñado para       | Logica de negocio compleja y generacion dinamica     | Servir contenido estatico y HTTP rapido   |
+| Almacena            | Aplicaciones, logica y conexiones a base de datos    | Archivos estaticos (HTML, CSS, imagenes)  |
+| Consumo de recursos | Alto (runtime completo)                              | Bajo y optimizado para concurrencia       |
+| Soporta             | Servlets, JSP, EJB, transacciones, colas             | HTTP/HTTPS, proxy inverso, balanceo       |
 
 En escenarios reales se suele usar **ambos**: el servidor web como frontal y el servidor de aplicaciones como backend.
 
 !!! definition "Servlet"
-    Un **servlet** es un programa Java que se ejecuta en un servidor web y genera contenido dinámico. Es mas eficiente que CGI porque usa hilos y no procesos por petición.
+    Un **servlet** es un programa Java que se ejecuta en un **contenedor web** dentro del servidor de aplicaciones y genera contenido dinamico.
+    A diferencia de enfoques antiguos donde se iniciaba un proceso por peticion, los servlets usan hilos ligeros para atender multiples solicitudes.
 
 #### 3.3. Servicios comunes del servidor de aplicaciones
 
@@ -297,7 +299,7 @@ En entornos reales, el despliegue suele automatizarse con pipelines o con herram
 
 #### 6.5. Maven como herramienta de build
 
-Maven simplifica la compilacion, pruebas y despliegue de proyectos.
+Maven es una herramienta open-source cuyo lanzamiento estable 1.0 fue en 2004, creada para simplificar la compilacion, pruebas y despliegue de proyectos.
 
 <figure markdown>
   ![](../assets/maven-logo.png)
@@ -329,7 +331,7 @@ Maven utiliza un archivo `pom.xml` para definir dependencias y estructura del pr
 
 Node.js es un **entorno de ejecucion** para JavaScript en el servidor. No es un lenguaje ni un framework.
 
-Permite ejecutar JavaScript fuera del navegador y crear aplicaciones del lado servidor, algo muy util en APIs, microservicios y aplicaciones en tiempo real.
+Aunque dispone de modulos nativos como `http` y `fs` para manejar peticiones y servir archivos, en entornos profesionales se usan frameworks como Express (o alternativas como Fastify o NestJS) para simplificar el enrutado y los middlewares.
 
 <figure markdown>
   ![](../assets/nodejs-new-pantone-black.svg)
@@ -352,6 +354,8 @@ Se encarga del enrutado, la gestion de middlewares y la definicion de endpoints,
 npm es el gestor de paquetes por defecto en Node.js. Permite instalar dependencias, publicar paquetes y definir scripts.
 
 En un despliegue real, npm ayuda a fijar versiones, reproducir instalaciones y ejecutar tareas de build o pruebas.
+
+NPM convive con alternativas enfocadas en rendimiento y eficiencia como **Yarn**, **pnpm** o el runtime **Bun**.
 
 <figure markdown>
   ![](../assets/npm-logo.png)

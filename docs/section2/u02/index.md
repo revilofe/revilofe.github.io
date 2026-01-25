@@ -28,6 +28,7 @@ toc_icon: "file-code"
 * [IS-U2.1.1 - Taxonomía de Incidentes](https://revilofe.github.io/slides/section2-is/IS-U2.1.1.-TaxonomiaDeIncidentes.html)
 * [IS-U2.2 - SOC](https://revilofe.github.io/slides/section2-is/IS-U2.2.-SOC.html)
 * [IS-U2.2.1 - Detección de Incidentes](https://revilofe.github.io/slides/section2-is/IS-U2.2.1.-DeteccionDeIncidentes.html)
+* [IS-U2.3.1 - Fuentes Abiertas (OSINT)](https://revilofe.github.io/slides/section2-is/IS-U2.3.1.-FuentesAbiertas-OSINT.html)
 * [IS-U2.4.1 - Documentación de incidentes](https://revilofe.github.io/slides/section2-is/IS-U2.4.1.-DocumentacionDeIncidentes.html)
 * [IS-U2.4.2 - Cómo escribir informes técnicos](https://revilofe.github.io/slides/section2-is/IS-U2.4.2.-ComoEscribirInformesTecnicos.html)
 

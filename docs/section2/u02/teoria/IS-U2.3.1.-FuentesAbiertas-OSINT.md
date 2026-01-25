@@ -139,12 +139,12 @@ De forma resumida, el proceso OSINT suele incluir estas fases:
 #### 1.4. Actividades
 
 1. **Ejercicio 1: ¿Qué información hay sobre ti en Internet?**       
-   Pide a los alumnos que busquen su propio nombre en Google y redes sociales para analizar qué información pública existe sobre ellos.    
+   Busca tu nombre en Google y redes sociales para analizar qué información pública existe sobre ti.    
    Discusión: ¿Es peligroso? ¿Cómo podrían mejorar su privacidad?      
 2. **Ejercicio 2: Comparación de metodologías de inteligencia**    
-   Presenta a los alumnos varios casos ficticios y pídeles que clasifiquen si el método utilizado es OSINT, HUMINT, SIGINT, etc.    
+   Clasifica varios casos ficticios y decide si el método es OSINT, HUMINT, SIGINT, etc.    
 3. **Ejercicio 3: OSINT en la vida real**    
-   Divide a los alumnos en grupos y entrégales diferentes escenarios (ej. "Una empresa quiere saber qué información sensible está expuesta en Internet").    
+   Trabaja en grupo y analiza escenarios como: "Una empresa quiere saber qué información sensible está expuesta en Internet".    
    Deberán proponer estrategias de OSINT para recopilar información útil de forma ética y legal.   
 
 ### 2. Uso de OSINT en Ciberseguridad
@@ -221,13 +221,13 @@ su perfil de LinkedIn, pero no lo es entrar a su correo privado sin permiso.
 #### 2.5. Actividades
 
 1. **Ejercicio 1: OSINT en auditoría de seguridad**
-   Los alumnos deben buscar información pública sobre una empresa ficticia utilizando OSINT (Google Dorking, redes sociales, WHOIS).
+   Busca información pública sobre una empresa ficticia usando OSINT (Google Dorking, redes sociales, WHOIS).
    Reflexión: ¿Qué información expuesta podría ser peligrosa?
 2. **Ejercicio 2: Identificación de amenazas con OSINT**
-   Se da a los alumnos un caso de posible ataque a una empresa.
-   Deben investigar en fuentes OSINT para detectar si hay información filtrada en foros o la dark web.
+   Se te da un caso de posible ataque a una empresa.
+   Investiga en fuentes OSINT para detectar si hay información filtrada en foros o la dark web.
 3. **Ejercicio 3: Legalidad y ética en OSINT**
-   Se presentan varios escenarios y los alumnos deben decidir si la actividad es legal o ilegal.
+   Se presentan varios escenarios y debes decidir si la actividad es legal o ilegal.
 
 ### 3. Proceso de OSINT
 
@@ -379,15 +379,15 @@ El proceso OSINT es un ciclo estructurado que permite convertir datos dispersos 
 #### 3.8. Actividades
 
 1. **Ejercicio 1: Simulación de un Ciclo OSINT**
-   Dividir a los alumnos en grupos.
-   Cada grupo investiga un objetivo ficticio siguiendo las fases del ciclo OSINT.
-   Al final, presentan un informe con sus hallazgos y recomendaciones.
+   Trabaja en grupo.
+   Investiga un objetivo ficticio siguiendo las fases del ciclo OSINT.
+   Al final, presenta un informe con tus hallazgos y recomendaciones.
 2. **Ejercicio 2: Adquisición y Procesamiento de Datos**
-   Se les da a los alumnos un conjunto de datos de credenciales filtradas (ficticias).
-   Deben procesar y organizar la información para identificar patrones y riesgos.
+   Se te da un conjunto de datos de credenciales filtradas (ficticias).
+   Procesa y organiza la información para identificar patrones y riesgos.
 3. **Ejercicio 3: Creación de un Informe OSINT**
-   Cada alumno selecciona un tema de investigación OSINT (por ejemplo, análisis de redes sociales de una marca).
-   Deben realizar el proceso completo y elaborar un informe detallado con sus hallazgos.
+   Selecciona un tema de investigación OSINT (por ejemplo, análisis de redes sociales de una marca).
+   Realiza el proceso completo y elabora un informe detallado con tus hallazgos.
 
 ### 4. Técnicas de OSINT
 
@@ -558,19 +558,19 @@ Las técnicas OSINT permiten extraer información valiosa de fuentes abiertas de
 #### 4.8. Actividades
 
 1. **Ejercicio 1: Google Dorking**
-   Los alumnos deben usar operadores avanzados de Google para encontrar información pública de un sitio web (ficticio).
+   Usa operadores avanzados de Google para encontrar información pública de un sitio web (ficticio).
    Reflexión: ¿Qué riesgos implica que una empresa exponga archivos en Internet?
 2. **Ejercicio 2: Extracción de Metadatos**
    Se proporciona un conjunto de documentos (ficticios).
-   Los alumnos deben analizar los metadatos con **ExifTool** o **FOCA**.
+   Analiza los metadatos con **ExifTool** o **FOCA**.
 3. **Ejercicio 3: Análisis OSINT en Redes Sociales**
-   Cada alumno investiga un perfil público de una celebridad o empresa (sin invadir la privacidad).
+   Investiga un perfil público de una celebridad o empresa (sin invadir la privacidad).
    Discusión: ¿Qué información personal puede obtenerse legalmente de redes sociales?
 4. **Ejercicio 4: Identificación de Infraestructura**
-   Los alumnos usan **WHOIS** y **NSLookup** para analizar dominios.
+   Usa **WHOIS** y **NSLookup** para analizar dominios.
    Reflexión: ¿Cómo podrían los ciberdelincuentes utilizar esta información?
 5. **Ejercicio 5: Búsqueda Inversa de Imágenes**
-   Se presentan imágenes falsas y los alumnos deben verificar su autenticidad con Google Imágenes o TinEye.
+   Verifica la autenticidad de imágenes con Google Imágenes o TinEye.
 
 ### 5. Herramientas OSINT
 
@@ -717,29 +717,29 @@ Las herramientas OSINT permiten recopilar información de forma rápida y organi
 #### 5.9. Actividades
 
 1. **Ejercicio 1: Uso de Shodan**
-   Los alumnos buscan dispositivos conectados a Internet con Shodan y analizan su exposición.
+   Busca dispositivos conectados a Internet con Shodan y analiza su exposición.
 2. **Ejercicio 2: Análisis de redes sociales con Sherlock**
-   Se les asigna un nombre de usuario y deben rastrear en qué redes sociales está presente.
+   Se te asigna un nombre de usuario y debes rastrear en qué redes sociales está presente.
 3. **Ejercicio 3: Búsqueda de datos con Google Dorking**
-   Se les da un dominio y deben encontrar información oculta usando operadores de Google.
+   Se te da un dominio y debes encontrar información oculta usando operadores de Google.
 4. **Ejercicio 4: Extracción de metadatos con ExifTool**
-   Se proporciona un conjunto de imágenes y documentos para que extraigan sus metadatos.
+   Se proporciona un conjunto de imágenes y documentos para que extraigas sus metadatos.
 
 
 ### 6. Casos Prácticos y Actividades de OSINT
 
-Para que los alumnos comprendan y apliquen el conocimiento sobre **OSINT**, es fundamental trabajar con **casos prácticos y ejercicios** que simulen situaciones reales. En este apartado, se presentan seis ejercicios prácticos que permitirán a los estudiantes desarrollar sus habilidades en inteligencia de fuentes abiertas. Estos ejercicios pueden adaptarse a diferentes niveles de conocimiento y ser utilizados en cursos de ciberseguridad, análisis forense y prevención de amenazas.
+Para que puedas comprender y aplicar el conocimiento sobre **OSINT**, es fundamental trabajar con **casos prácticos y ejercicios** que simulen situaciones reales. En este apartado se presentan seis ejercicios prácticos para desarrollar tus habilidades en inteligencia de fuentes abiertas. Estos ejercicios pueden adaptarse a diferentes niveles de conocimiento y ser utilizados en cursos de ciberseguridad, análisis forense y prevención de amenazas.
 
 #### 6.1. Ejercicio: Uso de Google Dorking para encontrar información oculta
 
 **Objetivo:**
 
-Enseñar a los alumnos a utilizar **búsquedas avanzadas en Google** para encontrar información que no está fácilmente accesible.
+Aprender a utilizar **búsquedas avanzadas en Google** para encontrar información que no está fácilmente accesible.
 
 **Instrucciones:**
 
-* Explicar el concepto de **Google Dorking** y sus operadores.
-* Presentar una serie de búsquedas específicas con operadores avanzados:
+* Explica el concepto de **Google Dorking** y sus operadores.
+* Presenta una serie de búsquedas específicas con operadores avanzados:
 
    Encontrar archivos PDF en un dominio:
 
@@ -753,7 +753,7 @@ Enseñar a los alumnos a utilizar **búsquedas avanzadas en Google** para encont
 
    `intitle:"admin login" site:empresa.com`    
 
-* Pedir a los alumnos que realicen búsquedas sobre un dominio ficticio y **documenten sus hallazgos**.
+* Realiza búsquedas sobre un dominio ficticio y **documenta tus hallazgos**.
 
 **Resultados esperados:**
 
@@ -768,19 +768,19 @@ Enseñar cómo obtener información de un **dominio** mediante herramientas OSIN
 
 **Instrucciones:**
 
-* Explicar cómo funcionan **WHOIS** y las consultas **DNS**.
-* Pedir a los alumnos que usen **WHOIS** para investigar un dominio:
+* Explica cómo funcionan **WHOIS** y las consultas **DNS**.
+* Usa **WHOIS** para investigar un dominio:
 
    `whois google.com`   
 
-* Usar **nslookup** o **dig** para obtener registros DNS:
+* Usa **nslookup** o **dig** para obtener registros DNS:
 
    ```
    nslookup google.com
    dig google.com MX
    ```   
 
-* Analizar los resultados y responder:
+* Analiza los resultados y responde:
 
    ¿Quién registró el dominio?
    ¿Dónde están sus servidores?
@@ -799,13 +799,13 @@ Mostrar cómo se pueden encontrar **cámaras, routers y servidores** expuestos e
 
 **Instrucciones:**
 
-* Explicar qué es **Shodan** y cómo funciona.
-* Pedir a los alumnos que busquen dispositivos en España con ciertos puertos abiertos:
+* Explica qué es **Shodan** y cómo funciona.
+* Busca dispositivos en España con ciertos puertos abiertos:
 
    `country:ES port:3389`
    `product:"Webcam"`   
 
-* Analizar los resultados y responder:
+* Analiza los resultados y responde:
 
    ¿Cuántos dispositivos hay expuestos?
    ¿Qué riesgos de seguridad tienen?
@@ -823,14 +823,14 @@ Aprender a rastrear **nombres de usuario** en múltiples plataformas.
 
 **Instrucciones:**
 
-* Explicar cómo **los ciberdelincuentes usan OSINT** en redes sociales.
+* Explica cómo **los ciberdelincuentes usan OSINT** en redes sociales.
 * Instalar y ejecutar **Sherlock**:
 
    ```bash
    python3 sherlock.py usuario
    ```   
 
-* Elegir un usuario ficticio y analizar:
+* Elige un usuario ficticio y analiza:
    ¿En qué plataformas está presente?
    ¿Se puede obtener más información sobre él?
 
@@ -847,9 +847,9 @@ Mostrar cómo verificar la **autenticidad de imágenes** mediante herramientas O
 
 **Instrucciones:**
 
-* Explicar qué es la **búsqueda inversa de imágenes**.    
-* Proporcionar a los alumnos imágenes sospechosas.   
-* Usar **Google Images** o **TinEye** para rastrear su origen.   
+* Explica qué es la **búsqueda inversa de imágenes**.    
+* Trabaja con imágenes sospechosas.   
+* Usa **Google Images** o **TinEye** para rastrear su origen.   
 
 **Resultados esperados:**
 
@@ -864,14 +864,14 @@ Aplicar todas las técnicas aprendidas en un caso completo de investigación.
 
 **Instrucciones:**
 
-* Dividir a los alumnos en grupos y asignarles una empresa ficticia.    
-* Cada grupo deberá:    
+* Trabaja en grupo y toma una empresa ficticia como objetivo.    
+* Deberás:    
 
     - Encontrar información pública sobre la empresa (Google Dorking, WHOIS, Shodan).    
     - Analizar perfiles de empleados en redes sociales.    
     - Buscar posibles vulnerabilidades de seguridad.    
 
-* Presentar un **informe final** con:    
+* Presenta un **informe final** con:    
 
     - **Hallazgos clave**.   
     - **Riesgos detectados**.
@@ -959,13 +959,13 @@ El uso de OSINT implica un equilibrio entre la obtención de información y el r
 #### 7.4. Actividades
 
 1. **Ejercicio 1: Evaluación de casos éticos en OSINT**
-   Se presentan diferentes escenarios y los alumnos deben determinar si la actividad es legal y ética.
+   Se presentan diferentes escenarios y debes determinar si la actividad es legal y ética.
    **Ejemplo:** ¿Es correcto recolectar información de empleados en LinkedIn para un análisis de seguridad?
 2. **Ejercicio 2: Análisis de regulaciones sobre privacidad**
-   Cada grupo investiga una ley de privacidad (GDPR, CCPA, etc.).
-   Explican cómo afecta el uso de OSINT y presentan ejemplos de casos legales.
+   Investiga una ley de privacidad (GDPR, CCPA, etc.).
+   Explica cómo afecta el uso de OSINT y presenta ejemplos de casos legales.
 3. **Ejercicio 3: Uso ético de OSINT en un caso práctico**
-   Se asigna un caso ficticio donde los alumnos deben recopilar información con OSINT, asegurando que cumplen las normas legales y éticas.
+   Se asigna un caso ficticio donde debes recopilar información con OSINT, asegurando que cumples las normas legales y éticas.
 
 Como resumen, se presentan las **consideraciones éticas y legales** más importantes en el uso de OSINT:
 
@@ -976,7 +976,7 @@ Como resumen, se presentan las **consideraciones éticas y legales** más import
 | **Uso Responsable** | OSINT solo debe utilizarse con fines legítimos y éticos.           |
 | **Riesgos**         | Uso indebido puede llevar a sanciones legales o problemas éticos. |
 
-### 8. Recursos y lecturas recomendadas
+## Referencias y bibliografía
 
 Para ampliar conocimientos y ver ejemplos prácticos:
 
@@ -994,3 +994,13 @@ Lecturas recomendadas:
 !!! note "Derechos de autor"
     Utiliza las lecturas y recursos respetando sus licencias y condiciones de
     uso. Cita siempre las fuentes en informes o trabajos académicos.
+
+## Presentación
+
+Puedes acceder a la presentación de esta unidad aquí:
+
+[Presentación IS-U2.3.1 - Fuentes Abiertas (OSINT)](https://revilofe.github.io/slides/section2-is/IS-U2.3.1.-FuentesAbiertas-OSINT.html)
+
+## Recursos adicionales
+
+Por definir.

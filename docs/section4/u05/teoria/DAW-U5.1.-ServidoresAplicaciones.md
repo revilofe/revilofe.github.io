@@ -175,16 +175,20 @@ Separar servidor web y servidor de aplicaciones aporta ventajas claras:
 
 ### 4. Despliegue de aplicaciones web
 
+Después de entender el papel del servidor de aplicaciones, es clave dominar el **despliegue**: mover cambios entre entornos de trabajo hasta llegar a producción. Desplegar, de forma sencilla, sería realizar todos las operaciones necesarias para llevar una version de una aplicación desde un entorno de desarrollo hasta el entorno de producción. Tu ya has visto en la unidad 3 como desplegar aplicaciones web en servidores web, pero en esta unidad vamos a profundizar en el despliegue de aplicaciones web en servidores de aplicaciones, con foco en buenas prácticas y seguridad, alineado con el RA3. Tambien, en la unidad 1, viste como github actions puede ayudarte a automatizar el despliegue.
+
 #### 4.1. Que es el despliegue y que entornos existen
 
-El despliegue consiste en mover cambios entre entornos de trabajo. Los mas habituales son:
+El despliegue consiste en mover cambios entre entornos de trabajo. Los más habituales son:
 
 - Entorno local: donde cada persona desarrolla y prueba sus cambios.
 - Entorno de desarrollo: integra cambios de varios miembros del equipo.
-- Entorno de preproduccion: replica el entorno real para pruebas finales.
-- Entorno de produccion: el sistema que usan las personas usuarias.
+- Entorno de preproducción: replica el entorno real para pruebas finales.
+- Entorno de producción: el sistema que usan las personas usuarias.
 
-El flujo mas habitual es avanzar cambios de izquierda a derecha, hasta llegar a produccion.
+El flujo mas habitual es avanzar cambios de izquierda a derecha, hasta llegar a producción.
+
+Este modelo permite que el equipo valide los cambios en entornos cada vez mas cercanos al real. Si algo falla en un entorno intermedio, se corrige antes de impactar a las personas usuarias.
 
 <figure markdown>
   ![](../assets/deploy.png)
@@ -199,7 +203,9 @@ El flujo mas habitual es avanzar cambios de izquierda a derecha, hasta llegar a 
 4. **Despliegue** en producción.
 5. **Supervision** tras el lanzamiento.
 
-Cada paso reduce el riesgo. Si se detectan fallos en un entorno intermedio, se vuelve al desarrollo y se corrige antes de afectar a produccion.
+Cada paso reduce el riesgo. Si se detectan fallos en un entorno intermedio, se vuelve al desarrollo y se corrige antes de afectar a produccion. En despliegues grandes, la planificacion incluye ventanas de despliegue, criterios de aceptacion y un plan claro de rollback.
+
+Durante las pruebas es clave verificar que la aplicacion funciona en condiciones similares a produccion. Esto incluye datos de ejemplo, configuraciones reales y pruebas de rendimiento basicas para detectar cuellos de botella.
 
 #### 4.3. Tipos de despliegue
 
@@ -219,6 +225,19 @@ Cuando los cambios pasan por varios entornos, el equipo gana control y puede det
 #### 4.5. Supervisar y reaccionar
 
 Despues de desplegar hay que **supervisar**: revisar logs, estado del servicio y respuesta del sistema. Si algo falla, es clave tener preparado un plan de **rollback** y un protocolo claro de comunicacion.
+
+Un buen despliegue no termina cuando se publica el cambio, sino cuando se confirma que el servicio responde correctamente y no hay errores en los registros. En equipos profesionales, la monitorizacion continua forma parte del proceso de despliegue.
+
+#### 4.6. Buenas practicas especificas del proceso
+
+Ademas de los pasos basicos, hay recomendaciones concretas que ayudan a reducir incidencias:
+
+- Definir un horario de despliegue con baja actividad de usuarios.
+- Revisar diferencias entre desarrollo y produccion antes de publicar.
+- Establecer roles para decidir quien puede desplegar en entornos criticos.
+- Mantener un procedimiento claro para revertir cambios.
+
+Estas practicas convierten el despliegue en un proceso predecible y repetible, que es el objetivo principal del modulo.
 
 ### 5. Buenas prácticas de despliegue
 

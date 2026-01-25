@@ -8052,6 +8052,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#46-buenas-practicas-especificas-del-proceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6. Buenas practicas especificas del proceso
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8638,15 +8649,17 @@ A diferencia de enfoques antiguos donde se iniciaba un proceso por peticion, los
 <li>Permite balanceo y redundancia sin afectar al frontal.</li>
 </ul>
 <h3 id="4-despliegue-de-aplicaciones-web">4. Despliegue de aplicaciones web<a class="headerlink" href="#4-despliegue-de-aplicaciones-web" title="Permanent link">&para;</a></h3>
+<p>Después de entender el papel del servidor de aplicaciones, es clave dominar el <strong>despliegue</strong>: mover cambios entre entornos de trabajo hasta llegar a producción. Desplegar, de forma sencilla, sería realizar todos las operaciones necesarias para llevar una version de una aplicación desde un entorno de desarrollo hasta el entorno de producción. Tu ya has visto en la unidad 3 como desplegar aplicaciones web en servidores web, pero en esta unidad vamos a profundizar en el despliegue de aplicaciones web en servidores de aplicaciones, con foco en buenas prácticas y seguridad, alineado con el RA3. Tambien, en la unidad 1, viste como github actions puede ayudarte a automatizar el despliegue.</p>
 <h4 id="41-que-es-el-despliegue-y-que-entornos-existen">4.1. Que es el despliegue y que entornos existen<a class="headerlink" href="#41-que-es-el-despliegue-y-que-entornos-existen" title="Permanent link">&para;</a></h4>
-<p>El despliegue consiste en mover cambios entre entornos de trabajo. Los mas habituales son:</p>
+<p>El despliegue consiste en mover cambios entre entornos de trabajo. Los más habituales son:</p>
 <ul>
 <li>Entorno local: donde cada persona desarrolla y prueba sus cambios.</li>
 <li>Entorno de desarrollo: integra cambios de varios miembros del equipo.</li>
-<li>Entorno de preproduccion: replica el entorno real para pruebas finales.</li>
-<li>Entorno de produccion: el sistema que usan las personas usuarias.</li>
+<li>Entorno de preproducción: replica el entorno real para pruebas finales.</li>
+<li>Entorno de producción: el sistema que usan las personas usuarias.</li>
 </ul>
-<p>El flujo mas habitual es avanzar cambios de izquierda a derecha, hasta llegar a produccion.</p>
+<p>El flujo mas habitual es avanzar cambios de izquierda a derecha, hasta llegar a producción.</p>
+<p>Este modelo permite que el equipo valide los cambios en entornos cada vez mas cercanos al real. Si algo falla en un entorno intermedio, se corrige antes de impactar a las personas usuarias.</p>
 <figure>
 <p><img alt="" src="../assets/deploy.png" />
   </p>
@@ -8660,7 +8673,8 @@ A diferencia de enfoques antiguos donde se iniciaba un proceso por peticion, los
 <li><strong>Despliegue</strong> en producción.</li>
 <li><strong>Supervision</strong> tras el lanzamiento.</li>
 </ol>
-<p>Cada paso reduce el riesgo. Si se detectan fallos en un entorno intermedio, se vuelve al desarrollo y se corrige antes de afectar a produccion.</p>
+<p>Cada paso reduce el riesgo. Si se detectan fallos en un entorno intermedio, se vuelve al desarrollo y se corrige antes de afectar a produccion. En despliegues grandes, la planificacion incluye ventanas de despliegue, criterios de aceptacion y un plan claro de rollback.</p>
+<p>Durante las pruebas es clave verificar que la aplicacion funciona en condiciones similares a produccion. Esto incluye datos de ejemplo, configuraciones reales y pruebas de rendimiento basicas para detectar cuellos de botella.</p>
 <h4 id="43-tipos-de-despliegue">4.3. Tipos de despliegue<a class="headerlink" href="#43-tipos-de-despliegue" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Metadatos</strong>: cambios en código, plantillas o configuraciones.</li>
@@ -8676,6 +8690,16 @@ A diferencia de enfoques antiguos donde se iniciaba un proceso por peticion, los
 <p>Cuando los cambios pasan por varios entornos, el equipo gana control y puede detectar errores antes de que lleguen a las personas usuarias.</p>
 <h4 id="45-supervisar-y-reaccionar">4.5. Supervisar y reaccionar<a class="headerlink" href="#45-supervisar-y-reaccionar" title="Permanent link">&para;</a></h4>
 <p>Despues de desplegar hay que <strong>supervisar</strong>: revisar logs, estado del servicio y respuesta del sistema. Si algo falla, es clave tener preparado un plan de <strong>rollback</strong> y un protocolo claro de comunicacion.</p>
+<p>Un buen despliegue no termina cuando se publica el cambio, sino cuando se confirma que el servicio responde correctamente y no hay errores en los registros. En equipos profesionales, la monitorizacion continua forma parte del proceso de despliegue.</p>
+<h4 id="46-buenas-practicas-especificas-del-proceso">4.6. Buenas practicas especificas del proceso<a class="headerlink" href="#46-buenas-practicas-especificas-del-proceso" title="Permanent link">&para;</a></h4>
+<p>Ademas de los pasos basicos, hay recomendaciones concretas que ayudan a reducir incidencias:</p>
+<ul>
+<li>Definir un horario de despliegue con baja actividad de usuarios.</li>
+<li>Revisar diferencias entre desarrollo y produccion antes de publicar.</li>
+<li>Establecer roles para decidir quien puede desplegar en entornos criticos.</li>
+<li>Mantener un procedimiento claro para revertir cambios.</li>
+</ul>
+<p>Estas practicas convierten el despliegue en un proceso predecible y repetible, que es el objetivo principal del modulo.</p>
 <h3 id="5-buenas-practicas-de-despliegue">5. Buenas prácticas de despliegue<a class="headerlink" href="#5-buenas-practicas-de-despliegue" title="Permanent link">&para;</a></h3>
 <h4 id="51-usar-control-de-versiones-git">5.1. Usar control de versiones (<abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr>)<a class="headerlink" href="#51-usar-control-de-versiones-git" title="Permanent link">&para;</a></h4>
 <p><abbr title="Sistema de control de versiones distribuido que permite a los desarrolladores gestionar y colaborar en el desarrollo de software. En Git, los desarrolladores pueden realizar cambios en el código de forma independiente y fusionarlos con el código principal de forma segura.">Git</abbr> permite trabajar en equipo y recuperar versiones estables en caso de error. Sin control de versiones, el riesgo de conflictos aumenta de forma critica.</p>

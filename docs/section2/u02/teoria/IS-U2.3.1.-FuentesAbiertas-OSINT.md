@@ -882,10 +882,7 @@ Aplicar todas las técnicas aprendidas en un caso completo de investigación.
 * Capacidad para realizar **investigaciones OSINT completas**.
 * Desarrollo de habilidades en **ciberseguridad y análisis forense**.
 
-Las actividades prácticas son esenciales para entender **cómo funciona OSINT en el
-mundo real**. Estos ejercicios les permiten desarrollar una **mentalidad analítica**,
-fortalecer sus habilidades en **ciberseguridad** y comprender la **importancia de la
-privacidad en línea**. Un resumen de las actividades propuestas:
+Un resumen de las actividades propuestas:
 
 
 | **Ejercicio**                        | **Objetivo**                                        | **Herramientas utilizadas**  |

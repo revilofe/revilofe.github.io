@@ -247,6 +247,7 @@ nav:
       - 'U5: Servidores de aplicaciones':
           - 'section4/u05/index.md'
           - '5.1.-Servidores de aplicaciones': 'section4/u05/teoria/DAW-U5.1.-ServidoresAplicaciones.md'
+          - 'P5.1.-WildFly y Maven': 'section4/u05/practica/DAW-U5.-Practica001.md'
   - 'Blog': 'blog.md'
   - 'Tags': 'tags.md'
   - 'Acerca de': 'about.md'

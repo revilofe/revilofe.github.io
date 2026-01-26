@@ -251,47 +251,94 @@ Este modelo permite que el equipo valide los cambios en entornos cada vez mas ce
 
 #### 4.2. Pasos del proceso de despliegue
 
+El flujo del proceso de despliegue consta de **5 pasos**: **planificacion, desarrollo, pruebas, despliegue y supervision**.
+
+Antes de entrar en detalle, una nota importante: este flujo cubre los **aspectos fundamentales** y se presenta como una **simplificacion didactica**. No significa que sea la unica forma de desplegar, sino una base clara para comprender el proceso y poder adaptarlo a cada caso.
+
 1. **Planificación** del despliegue y sus reglas.
 2. **Desarrollo** en entornos locales o de desarrollo.
 3. **Pruebas** progresivas en entornos intermedios.
 4. **Despliegue** en producción.
 5. **Supervision** tras el lanzamiento.
 
-Cada paso reduce el riesgo. Si se detectan fallos en un entorno intermedio, se vuelve al desarrollo y se corrige antes de afectar a produccion. En despliegues grandes, la planificacion incluye ventanas de despliegue, criterios de aceptacion y un plan claro de rollback.
+##### 4.2.1. Planificación del despliegue
 
-Durante las pruebas es clave verificar que la aplicacion funciona en condiciones similares a produccion. Esto incluye datos de ejemplo, configuraciones reales y pruebas de rendimiento basicas para detectar cuellos de botella.
+Para que el proceso sea fluido, es clave contar con un **plan de despliegue** que se siga siempre. Esto ayuda a que todo se haga de la misma forma en cada cambio, especialmente cuando varias personas trabajan en el mismo proyecto.
+
+Un plan debe definir:
+
+- Cuando se pasa de local a desarrollo o preproduccion.
+- Horarios o ventanas en las que se permite desplegar a produccion.
+- Criterios de aceptacion y responsables del despliegue.
+
+En proyectos abiertos, un buen plan permite incluso preparar **release candidates** y dejar que la comunidad pruebe antes del lanzamiento. Ademas, cada cambio debe planificarse: poco para cambios pequeños y mas detalle para cambios grandes.
+
+##### 4.2.2. Desarrollo del cambio
+
+Con el plan definido, llega el desarrollo real. Para evitar conflictos y errores, el trabajo debe hacerse en **entornos locales o de desarrollo**.
+
+Una vez finalizado el cambio, se prepara para pasar a la siguiente fase y se integra en el flujo de despliegue previsto.
+
+##### 4.2.3. Pruebas progresivas
+
+Las pruebas son esenciales para evitar fallos en produccion. No se pueden hacer pruebas reales sin desplegar los cambios en entornos nuevos.
+
+Cuando el cambio funciona en local o desarrollo, se despliega al siguiente entorno y se vuelve a validar. El objetivo es llegar a **preproduccion**, un entorno muy parecido al real, donde se realiza el control de calidad final.
+
+Si se detectan errores en cualquier fase, el cambio vuelve a desarrollo, se corrige y se repite el ciclo.
+
+##### 4.2.4. Despliegue en entorno real
+
+Tras superar las pruebas, se despliega en produccion. En teoria es un paso seguro, pero siempre puede aparecer algun problema inesperado.
+
+Por eso es imprescindible que el despliegue se haga siguiendo el plan y con un criterio claro de vuelta atrás si algo falla.
+
+##### 4.2.5. Supervisión y monitorización
+
+Una vez en producción, toca **supervisar**. Hay que observar logs, comportamiento de usuarios y rendimiento del sistema para detectar incidencias.
+
+Un buen consejo es desplegar en momentos de baja actividad y con personal disponible para reaccionar. Asi se minimiza el impacto en usuarios y se puede corregir o revertir rápidamente si es necesario.
+
+Si hay que revertir cambios, se debe actuar con calma y seguir un proceso claro, igual de riguroso que el despliegue.
+
+Cada paso reduce el riesgo. Si se detectan fallos en un entorno intermedio, se vuelve al desarrollo y se corrige antes de afectar a producción. En despliegues grandes, la planificación incluye ventanas de despliegue, criterios de aceptación y un plan claro de rollback.
+
+Durante las pruebas es clave verificar que la aplicación funciona en condiciones similares a producción. Esto incluye datos de ejemplo, configuraciones reales y pruebas de rendimiento básicas para detectar cuellos de botella.
 
 #### 4.3. Tipos de despliegue
 
-- **Metadatos**: cambios en código, plantillas o configuraciones.
-- **Contenido**: textos, imágenes y recursos editables.
+- **Metadatos**: cambios en código, plantillas o configuraciones. Disponible para desarrolladores.
+- **Contenido**: textos, imágenes y recursos editables. Disponible para editores o administradores y no requiere conocimientos técnicos.
 
-Separar ambos tipos ayuda a minimizar riesgos. El contenido suele moverse con mas frecuencia y con menos impacto tecnico.
+Separar ambos tipos ayuda a minimizar riesgos. El contenido suele moverse con más frecuencia y con menos impacto técnico.
 
 #### 4.4. Ventajas de trabajar con multiples entornos
 
-- Reducción del riesgo en producción.
-- Ahorro de tiempo en pruebas.
-- Mejor gestion de contenidos sensibles al tiempo.
+- Reducción del riesgo en producción. Cuando tienes múltiples entornos, los errores catastróficos ocurren en un entorno seguro (Desarrollo o Pruebas) y nunca llegan al usuario final. Así debería de ser siempre.
+- Ahorro de tiempo en pruebas. Tener entornos separados permite paralizar el trabajo sin bloquearse mutuamente. Cada equipo puede trabajar en su entorno sin interferir con otros.
+- Mejor gestion de contenidos sensibles al tiempo. Prepara el lanzamiento antes de la fecha. En entornos como comercio electrónico o noticias, es vital probar cambios de contenido antes de publicarlos. Los entornos separados facilitan esta tarea.
 
 Cuando los cambios pasan por varios entornos, el equipo gana control y puede detectar errores antes de que lleguen a las personas usuarias.
 
 #### 4.5. Supervisar y reaccionar
 
-Despues de desplegar hay que **supervisar**: revisar logs, estado del servicio y respuesta del sistema. Si algo falla, es clave tener preparado un plan de **rollback** y un protocolo claro de comunicacion.
+Después de desplegar hay que **supervisar**: revisar logs, estado del servicio y respuesta del sistema. Si algo falla, es clave tener preparado un plan de **rollback** y un protocolo claro de comunicación.
 
-Un buen despliegue no termina cuando se publica el cambio, sino cuando se confirma que el servicio responde correctamente y no hay errores en los registros. En equipos profesionales, la monitorizacion continua forma parte del proceso de despliegue.
+Un buen despliegue no termina cuando se publica el cambio, sino cuando se confirma que el servicio responde correctamente y no hay errores en los registros. En equipos profesionales, la monitorización continua forma parte del proceso de despliegue.
 
-#### 4.6. Buenas practicas especificas del proceso
+!!! info "Importancia de la monitorización"
+    La monitorización post-despliegue es crucial para detectar problemas que no se ven en pruebas. Un buen sistema de alertas ayuda a reaccionar rápido y minimizar el impacto en usuarios.
 
-Ademas de los pasos basicos, hay recomendaciones concretas que ayudan a reducir incidencias:
+#### 4.6. Buenas prácticas específicas del proceso
 
-- Definir un horario de despliegue con baja actividad de usuarios.
-- Revisar diferencias entre desarrollo y produccion antes de publicar.
-- Establecer roles para decidir quien puede desplegar en entornos criticos.
+Además de los pasos básicos, hay recomendaciones concretas que ayudan a reducir incidencias:
+
+- Definir un horario de despliegue con baja actividad de usuarios. Elegir momentos tranquilos minimiza el impacto si algo falla. 
+- Revisar diferencias entre desarrollo y producción antes de publicar.
+- Establecer roles para decidir quien puede desplegar en entornos críticos.
 - Mantener un procedimiento claro para revertir cambios.
 
-Estas practicas convierten el despliegue en un proceso predecible y repetible, que es el objetivo principal del modulo.
+Estas prácticas convierten el despliegue en un proceso predecible y repetible, que es el objetivo principal del modulo.
 
 ### 5. Buenas prácticas de despliegue
 

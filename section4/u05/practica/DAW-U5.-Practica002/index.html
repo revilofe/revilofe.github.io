@@ -6,31 +6,37 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Práctica guiada con WildFly en Docker, build con Gradle y despliegue del WAR.">
+      
       
         <meta name="author" content="Eduardo Fdez">
       
       
-        <link rel="canonical" href="https://revilofe.github.io/section4/u01/practica/otrosRecursos/DAW-U1.4.-ActividadEntregar/">
+        <link rel="canonical" href="https://revilofe.github.io/section4/u05/practica/DAW-U5.-Practica002/">
       
       
+        <link rel="prev" href="../DAW-U5.-Practica001/">
+      
+      
+        <link rel="next" href="../../../../blog/">
       
       
         
       
       
-      <link rel="icon" href="../../../../../assets/favicon-96x96.png">
+      <link rel="icon" href="../../../../assets/favicon-96x96.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>3. ACTIVIDAD A ENTREGAR: Mejorando un Workflow con GitHub Actions - R Z O</title>
+        <title>UD 5 - P2: Despliegue de una API RESTful con Jakarta (Java) usando Gradle en WildFly (contenedor) - R Z O</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -62,7 +68,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -97,7 +103,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#3-actividad-a-entregar-mejorando-un-workflow-con-github-actions" class="md-skip">
+        <a href="#p52-despliegue-de-una-api-restful-con-jakarta-java-usando-gradle-en-wildfly-contenedor" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -117,9 +123,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="../../../../.." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
+    <a href="../../../.." title="R Z O" class="md-header__button md-logo" aria-label="R Z O" data-md-component="logo">
       
-  <img src="../../../../../assets/ms-icon-144x144.png" alt="logo">
+  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -136,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3. ACTIVIDAD A ENTREGAR: Mejorando un Workflow con GitHub Actions
+              UD 5 - P2: Despliegue de una API RESTful con Jakarta (Java) usando Gradle en WildFly (contenedor)
             
           </span>
         </div>
@@ -248,7 +254,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
   
@@ -269,7 +275,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../section1/" class="md-tabs__link">
+        <a href="../../../../section1/" class="md-tabs__link">
           
   
   
@@ -291,7 +297,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../section3/" class="md-tabs__link">
+        <a href="../../../../section3/" class="md-tabs__link">
           
   
   
@@ -313,7 +319,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../section2/" class="md-tabs__link">
+        <a href="../../../../section2/" class="md-tabs__link">
           
   
   
@@ -331,11 +337,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
           
   
   
@@ -355,7 +363,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../blog/" class="md-tabs__link">
+      <a href="../../../../blog/" class="md-tabs__link">
         
   
   
@@ -374,7 +382,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../tags/" class="md-tabs__link">
+      <a href="../../../../tags/" class="md-tabs__link">
         
   
   
@@ -393,7 +401,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../about/" class="md-tabs__link">
+      <a href="../../../../about/" class="md-tabs__link">
         
   
   
@@ -434,9 +442,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
+    <a href="../../../.." title="R Z O" class="md-nav__button md-logo" aria-label="R Z O" data-md-component="logo">
       
-  <img src="../../../../../assets/ms-icon-144x144.png" alt="logo">
+  <img src="../../../../assets/ms-icon-144x144.png" alt="logo">
 
     </a>
     R Z O
@@ -463,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   
@@ -531,7 +539,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section1/" class="md-nav__link ">
+            <a href="../../../../section1/" class="md-nav__link ">
               
   
   
@@ -624,7 +632,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section1/u01/" class="md-nav__link ">
+            <a href="../../../../section1/u01/" class="md-nav__link ">
               
   
   
@@ -668,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
+      <a href="../../../../section1/u01/teoria/PROG-U1.1.-UnProgramaInformatico/" class="md-nav__link">
         
   
   
@@ -698,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u01/teoria/PROG-U1.1.1-Pseudocodigo/" class="md-nav__link">
+      <a href="../../../../section1/u01/teoria/PROG-U1.1.1-Pseudocodigo/" class="md-nav__link">
         
   
   
@@ -728,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u01/practica/PROG-U1.-Practica001/" class="md-nav__link">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica001/" class="md-nav__link">
         
   
   
@@ -758,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
+      <a href="../../../../section1/u01/teoria/PROG-U1.2.-PracticaConUnLenguajes/" class="md-nav__link">
         
   
   
@@ -788,7 +796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u01/teoria/PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
+      <a href="../../../../section1/u01/teoria/PROG-U1.3.-TiposDeDatos/" class="md-nav__link">
         
   
   
@@ -818,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u01/practica/PROG-U1.-Practica002/" class="md-nav__link">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica002/" class="md-nav__link">
         
   
   
@@ -848,7 +856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u01/practica/PROG-U1.-Practica003/" class="md-nav__link">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica003/" class="md-nav__link">
         
   
   
@@ -878,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u01/practica/PROG-U1.-Practica004/" class="md-nav__link">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica004/" class="md-nav__link">
         
   
   
@@ -908,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u01/teoria/PROG-U1.4.-Pytest/" class="md-nav__link">
+      <a href="../../../../section1/u01/teoria/PROG-U1.4.-Pytest/" class="md-nav__link">
         
   
   
@@ -938,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u01/practica/PROG-U1.-Practica005/" class="md-nav__link">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica005/" class="md-nav__link">
         
   
   
@@ -968,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u01/practica/PROG-U1.-Practica006/" class="md-nav__link">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica006/" class="md-nav__link">
         
   
   
@@ -998,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u01/practica/PROG-U1.-Practica007/" class="md-nav__link">
+      <a href="../../../../section1/u01/practica/PROG-U1.-Practica007/" class="md-nav__link">
         
   
   
@@ -1081,7 +1089,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section1/u02/" class="md-nav__link ">
+            <a href="../../../../section1/u02/" class="md-nav__link ">
               
   
   
@@ -1125,7 +1133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
+      <a href="../../../../section1/u02/teoria/PROG-U2.1.-Condicionales/" class="md-nav__link">
         
   
   
@@ -1155,7 +1163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica001/" class="md-nav__link">
         
   
   
@@ -1185,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
+      <a href="../../../../section1/u02/teoria/PROG-U2.2.-Iterativas/" class="md-nav__link">
         
   
   
@@ -1215,7 +1223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica002/" class="md-nav__link">
         
   
   
@@ -1245,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
+      <a href="../../../../section1/u02/teoria/PROG-U2.3.-Excepciones/" class="md-nav__link">
         
   
   
@@ -1275,7 +1283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica003/" class="md-nav__link">
         
   
   
@@ -1305,7 +1313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
+      <a href="../../../../section1/u02/teoria/PROG-U2.4.-Depurar/" class="md-nav__link">
         
   
   
@@ -1335,7 +1343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
+      <a href="../../../../section1/u02/practica/PROG-U2.-Practica004/" class="md-nav__link">
         
   
   
@@ -1365,7 +1373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
+      <a href="../../../../section1/u02/teoria/PROG-U2.5.-Documentar/" class="md-nav__link">
         
   
   
@@ -1395,7 +1403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u02/teoria/PROG-U2.5.1.-DeberiasDocumentar/" class="md-nav__link">
+      <a href="../../../../section1/u02/teoria/PROG-U2.5.1.-DeberiasDocumentar/" class="md-nav__link">
         
   
   
@@ -1492,7 +1500,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section1/u03/" class="md-nav__link ">
+            <a href="../../../../section1/u03/" class="md-nav__link ">
               
   
   
@@ -1536,7 +1544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u03/teoria/PROG-U3.0.-Cadenas/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.0.-Cadenas/" class="md-nav__link">
         
   
   
@@ -1566,7 +1574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u03/practica/PROG-U3.-Practica000/" class="md-nav__link">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica000/" class="md-nav__link">
         
   
   
@@ -1596,7 +1604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u03/teoria/PROG-U3.1.-Listas/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.1.-Listas/" class="md-nav__link">
         
   
   
@@ -1626,7 +1634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u03/teoria/PROG-U3.2.-Tuplas/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.2.-Tuplas/" class="md-nav__link">
         
   
   
@@ -1656,7 +1664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u03/practica/PROG-U3.-Practica001/" class="md-nav__link">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica001/" class="md-nav__link">
         
   
   
@@ -1686,7 +1694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u03/teoria/PROG-U3.3.-Diccionarios/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.3.-Diccionarios/" class="md-nav__link">
         
   
   
@@ -1716,7 +1724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u03/practica/PROG-U3.-Practica002/" class="md-nav__link">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica002/" class="md-nav__link">
         
   
   
@@ -1746,7 +1754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u03/teoria/PROG-U3.4.-Conjuntos/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.4.-Conjuntos/" class="md-nav__link">
         
   
   
@@ -1776,7 +1784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u03/practica/PROG-U3.-Practica003/" class="md-nav__link">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica003/" class="md-nav__link">
         
   
   
@@ -1806,7 +1814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u03/teoria/PROG-U3.5.-Funciones/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.5.-Funciones/" class="md-nav__link">
         
   
   
@@ -1836,7 +1844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u03/teoria/PROG-U3.6.-ManejoJSON/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.6.-ManejoJSON/" class="md-nav__link">
         
   
   
@@ -1866,7 +1874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u03/practica/PROG-U3.-Practica004/" class="md-nav__link">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica004/" class="md-nav__link">
         
   
   
@@ -1896,7 +1904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u03/teoria/PROG-U3.7.-ManejoXML/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.7.-ManejoXML/" class="md-nav__link">
         
   
   
@@ -1926,7 +1934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u03/practica/PROG-U3.-Practica005/" class="md-nav__link">
+      <a href="../../../../section1/u03/practica/PROG-U3.-Practica005/" class="md-nav__link">
         
   
   
@@ -1956,7 +1964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u03/teoria/PROG-U3.8.-OtrosAmpliacion1/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.8.-OtrosAmpliacion1/" class="md-nav__link">
         
   
   
@@ -1986,7 +1994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u03/teoria/PROG-U3.9.-OtrosAmpliacion2/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.9.-OtrosAmpliacion2/" class="md-nav__link">
         
   
   
@@ -2016,7 +2024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u03/teoria/PROG-U3.10.-Iteradores/" class="md-nav__link">
+      <a href="../../../../section1/u03/teoria/PROG-U3.10.-Iteradores/" class="md-nav__link">
         
   
   
@@ -2107,7 +2115,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section1/u04/" class="md-nav__link ">
+            <a href="../../../../section1/u04/" class="md-nav__link ">
               
   
   
@@ -2151,7 +2159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u04/teoria/PROG-U4.1.-kotlin/" class="md-nav__link">
+      <a href="../../../../section1/u04/teoria/PROG-U4.1.-kotlin/" class="md-nav__link">
         
   
   
@@ -2181,7 +2189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u04/practica/PROG-U4.-Practica001/" class="md-nav__link">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica001/" class="md-nav__link">
         
   
   
@@ -2211,7 +2219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u04/teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
+      <a href="../../../../section1/u04/teoria/PROG-U4.2.-kotlinColeciones/" class="md-nav__link">
         
   
   
@@ -2241,7 +2249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u04/teoria/PROG-U4.2.1.-kotlin-aclaraciones/" class="md-nav__link">
+      <a href="../../../../section1/u04/teoria/PROG-U4.2.1.-kotlin-aclaraciones/" class="md-nav__link">
         
   
   
@@ -2271,7 +2279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u04/teoria/PROG-U4.3.-POO/" class="md-nav__link">
+      <a href="../../../../section1/u04/teoria/PROG-U4.3.-POO/" class="md-nav__link">
         
   
   
@@ -2301,7 +2309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u04/teoria/PROG-U4.3.-kotlinPOO/" class="md-nav__link">
+      <a href="../../../../section1/u04/teoria/PROG-U4.3.-kotlinPOO/" class="md-nav__link">
         
   
   
@@ -2331,7 +2339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u04/teoria/PROG-U4.4.-kotlinResumen/" class="md-nav__link">
+      <a href="../../../../section1/u04/teoria/PROG-U4.4.-kotlinResumen/" class="md-nav__link">
         
   
   
@@ -2361,7 +2369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u04/practica/PROG-U4.-Practica002/" class="md-nav__link">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica002/" class="md-nav__link">
         
   
   
@@ -2391,7 +2399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u04/practica/PROG-U4.-Practica003/" class="md-nav__link">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica003/" class="md-nav__link">
         
   
   
@@ -2421,7 +2429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u04/practica/PROG-U4.-Practica004/" class="md-nav__link">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica004/" class="md-nav__link">
         
   
   
@@ -2451,7 +2459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u04/practica/PROG-U4.-Practica005/" class="md-nav__link">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica005/" class="md-nav__link">
         
   
   
@@ -2481,7 +2489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u04/practica/PROG-U4.-Practica006/" class="md-nav__link">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica006/" class="md-nav__link">
         
   
   
@@ -2511,7 +2519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u04/practica/PROG-U4.-Practica007/" class="md-nav__link">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica007/" class="md-nav__link">
         
   
   
@@ -2541,7 +2549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u04/practica/PROG-U4.-Practica008/" class="md-nav__link">
+      <a href="../../../../section1/u04/practica/PROG-U4.-Practica008/" class="md-nav__link">
         
   
   
@@ -2612,7 +2620,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section1/u05/" class="md-nav__link ">
+            <a href="../../../../section1/u05/" class="md-nav__link ">
               
   
   
@@ -2656,7 +2664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u05/teoria/PROG-U5.1.-clasesYobjetos/" class="md-nav__link">
+      <a href="../../../../section1/u05/teoria/PROG-U5.1.-clasesYobjetos/" class="md-nav__link">
         
   
   
@@ -2686,7 +2694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u05/teoria/PROG-U5.2.-VisibilidadEnClases/" class="md-nav__link">
+      <a href="../../../../section1/u05/teoria/PROG-U5.2.-VisibilidadEnClases/" class="md-nav__link">
         
   
   
@@ -2716,7 +2724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u05/teoria/PROG-U5.3.-Herencia/" class="md-nav__link">
+      <a href="../../../../section1/u05/teoria/PROG-U5.3.-Herencia/" class="md-nav__link">
         
   
   
@@ -2746,7 +2754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u05/practica/PROG-U5.-Practica001/" class="md-nav__link">
+      <a href="../../../../section1/u05/practica/PROG-U5.-Practica001/" class="md-nav__link">
         
   
   
@@ -2817,7 +2825,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section1/u06/" class="md-nav__link ">
+            <a href="../../../../section1/u06/" class="md-nav__link ">
               
   
   
@@ -2861,7 +2869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u06/teoria/PROG-U6.1.-jerarquiaDeClases/" class="md-nav__link">
+      <a href="../../../../section1/u06/teoria/PROG-U6.1.-jerarquiaDeClases/" class="md-nav__link">
         
   
   
@@ -2891,7 +2899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u06/teoria/PROG-U6.2.-ejemploYActividad/" class="md-nav__link">
+      <a href="../../../../section1/u06/teoria/PROG-U6.2.-ejemploYActividad/" class="md-nav__link">
         
   
   
@@ -2921,7 +2929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u06/teoria/PROG-U6.3.-principiosSOLID/" class="md-nav__link">
+      <a href="../../../../section1/u06/teoria/PROG-U6.3.-principiosSOLID/" class="md-nav__link">
         
   
   
@@ -2951,7 +2959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u06/teoria/PROG-U6.4.-comentariosYDocumentacion/" class="md-nav__link">
+      <a href="../../../../section1/u06/teoria/PROG-U6.4.-comentariosYDocumentacion/" class="md-nav__link">
         
   
   
@@ -3028,7 +3036,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section1/u07/" class="md-nav__link ">
+            <a href="../../../../section1/u07/" class="md-nav__link ">
               
   
   
@@ -3072,7 +3080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
+      <a href="../../../../section1/u07/teoria/PROG-U7.1.-SistemaArchivos/" class="md-nav__link">
         
   
   
@@ -3102,7 +3110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
+      <a href="../../../../section1/u07/teoria/PROG-U7.2.-ConsolaTeclado/" class="md-nav__link">
         
   
   
@@ -3132,7 +3140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u07/teoria/PROG-U7.2.1.-ConsolaTecladoExpansion/" class="md-nav__link">
+      <a href="../../../../section1/u07/teoria/PROG-U7.2.1.-ConsolaTecladoExpansion/" class="md-nav__link">
         
   
   
@@ -3162,7 +3170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
+      <a href="../../../../section1/u07/teoria/PROG-U7.3.-File/" class="md-nav__link">
         
   
   
@@ -3192,7 +3200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
+      <a href="../../../../section1/u07/teoria/PROG-U7.4.-LecturaEscritura/" class="md-nav__link">
         
   
   
@@ -3222,7 +3230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u07/teoria/PROG-U7.4.1.-TextFile/" class="md-nav__link">
+      <a href="../../../../section1/u07/teoria/PROG-U7.4.1.-TextFile/" class="md-nav__link">
         
   
   
@@ -3252,7 +3260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
+      <a href="../../../../section1/u07/teoria/PROG-U7.5.-GUI/" class="md-nav__link">
         
   
   
@@ -3327,7 +3335,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section1/u09/" class="md-nav__link ">
+            <a href="../../../../section1/u09/" class="md-nav__link ">
               
   
   
@@ -3371,7 +3379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u09/teoria/PROG-U9.1.-AccesoBBDD/" class="md-nav__link">
+      <a href="../../../../section1/u09/teoria/PROG-U9.1.-AccesoBBDD/" class="md-nav__link">
         
   
   
@@ -3401,7 +3409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u09/teoria/PROG-U9.2.-JDBC-1/" class="md-nav__link">
+      <a href="../../../../section1/u09/teoria/PROG-U9.2.-JDBC-1/" class="md-nav__link">
         
   
   
@@ -3431,7 +3439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u09/teoria/PROG-U9.3.-JDBC-2/" class="md-nav__link">
+      <a href="../../../../section1/u09/teoria/PROG-U9.3.-JDBC-2/" class="md-nav__link">
         
   
   
@@ -3461,7 +3469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u09/teoria/PROG-U9.4.-DAO/" class="md-nav__link">
+      <a href="../../../../section1/u09/teoria/PROG-U9.4.-DAO/" class="md-nav__link">
         
   
   
@@ -3491,7 +3499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u09/teoria/PROG-U9.5.-OtrosAspectos/" class="md-nav__link">
+      <a href="../../../../section1/u09/teoria/PROG-U9.5.-OtrosAspectos/" class="md-nav__link">
         
   
   
@@ -3521,7 +3529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section1/u09/practica/PROG-U9.-Practica001/" class="md-nav__link">
+      <a href="../../../../section1/u09/practica/PROG-U9.-Practica001/" class="md-nav__link">
         
   
   
@@ -3603,7 +3611,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section3/" class="md-nav__link ">
+            <a href="../../../../section3/" class="md-nav__link ">
               
   
   
@@ -3692,7 +3700,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section3/u01/" class="md-nav__link ">
+            <a href="../../../../section3/u01/" class="md-nav__link ">
               
   
   
@@ -3736,7 +3744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.1.-Software-PC/" class="md-nav__link">
+      <a href="../../../../section3/u01/teoria/EDES-U1.1.-Software-PC/" class="md-nav__link">
         
   
   
@@ -3766,7 +3774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.2.-CodigoFuenteObjetoEjecutable/" class="md-nav__link">
+      <a href="../../../../section3/u01/teoria/EDES-U1.2.-CodigoFuenteObjetoEjecutable/" class="md-nav__link">
         
   
   
@@ -3796,7 +3804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.3.-CodigoIntermedio/" class="md-nav__link">
+      <a href="../../../../section3/u01/teoria/EDES-U1.3.-CodigoIntermedio/" class="md-nav__link">
         
   
   
@@ -3826,7 +3834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.4.-Traductores/" class="md-nav__link">
+      <a href="../../../../section3/u01/teoria/EDES-U1.4.-Traductores/" class="md-nav__link">
         
   
   
@@ -3856,7 +3864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.5.-Lenguajes/" class="md-nav__link">
+      <a href="../../../../section3/u01/teoria/EDES-U1.5.-Lenguajes/" class="md-nav__link">
         
   
   
@@ -3886,7 +3894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.6.-FuncionalidadesHerramientas/" class="md-nav__link">
+      <a href="../../../../section3/u01/teoria/EDES-U1.6.-FuncionalidadesHerramientas/" class="md-nav__link">
         
   
   
@@ -3916,7 +3924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/practica/EDES-U1.-Practica010/" class="md-nav__link">
+      <a href="../../../../section3/u01/practica/EDES-U1.-Practica010/" class="md-nav__link">
         
   
   
@@ -3946,7 +3954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/practica/EDES-U1.-Practica011/" class="md-nav__link">
+      <a href="../../../../section3/u01/practica/EDES-U1.-Practica011/" class="md-nav__link">
         
   
   
@@ -3976,7 +3984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/teoria/EDES-U1.7.-FasesDesarrollo/" class="md-nav__link">
+      <a href="../../../../section3/u01/teoria/EDES-U1.7.-FasesDesarrollo/" class="md-nav__link">
         
   
   
@@ -4006,7 +4014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u01/practica/EDES-U1.-Practica003/" class="md-nav__link">
+      <a href="../../../../section3/u01/practica/EDES-U1.-Practica003/" class="md-nav__link">
         
   
   
@@ -4083,7 +4091,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section3/u02/" class="md-nav__link ">
+            <a href="../../../../section3/u02/" class="md-nav__link ">
               
   
   
@@ -4127,7 +4135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u02/teoria/EDES-U2.1.-IDEs/" class="md-nav__link">
+      <a href="../../../../section3/u02/teoria/EDES-U2.1.-IDEs/" class="md-nav__link">
         
   
   
@@ -4157,7 +4165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u02/teoria/EDES-U2.2.-Modulos/" class="md-nav__link">
+      <a href="../../../../section3/u02/teoria/EDES-U2.2.-Modulos/" class="md-nav__link">
         
   
   
@@ -4187,7 +4195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u02/teoria/EDES-U2.3.-Personalizacion/" class="md-nav__link">
+      <a href="../../../../section3/u02/teoria/EDES-U2.3.-Personalizacion/" class="md-nav__link">
         
   
   
@@ -4217,7 +4225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u02/teoria/EDES-U2.4.-ActualizacionIDEs/" class="md-nav__link">
+      <a href="../../../../section3/u02/teoria/EDES-U2.4.-ActualizacionIDEs/" class="md-nav__link">
         
   
   
@@ -4247,7 +4255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u02/teoria/EDES-U2.5.-Ejecutables/" class="md-nav__link">
+      <a href="../../../../section3/u02/teoria/EDES-U2.5.-Ejecutables/" class="md-nav__link">
         
   
   
@@ -4277,7 +4285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u02/teoria/EDES-U2.6.-Evaluacion/" class="md-nav__link">
+      <a href="../../../../section3/u02/teoria/EDES-U2.6.-Evaluacion/" class="md-nav__link">
         
   
   
@@ -4307,7 +4315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u02/practica/EDES-U2.-Practica002/" class="md-nav__link">
+      <a href="../../../../section3/u02/practica/EDES-U2.-Practica002/" class="md-nav__link">
         
   
   
@@ -4378,7 +4386,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section3/u03/" class="md-nav__link ">
+            <a href="../../../../section3/u03/" class="md-nav__link ">
               
   
   
@@ -4422,7 +4430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u03/teoria/EDES-U3.1.-UML/" class="md-nav__link">
+      <a href="../../../../section3/u03/teoria/EDES-U3.1.-UML/" class="md-nav__link">
         
   
   
@@ -4452,7 +4460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u03/teoria/EDES-U3.2.-DiagramaClases/" class="md-nav__link">
+      <a href="../../../../section3/u03/teoria/EDES-U3.2.-DiagramaClases/" class="md-nav__link">
         
   
   
@@ -4482,7 +4490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u03/teoria/EDES-U3.3.-IdentifClases/" class="md-nav__link">
+      <a href="../../../../section3/u03/teoria/EDES-U3.3.-IdentifClases/" class="md-nav__link">
         
   
   
@@ -4512,7 +4520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u03/teoria/EDES-U3.4.-AcopCohe/" class="md-nav__link">
+      <a href="../../../../section3/u03/teoria/EDES-U3.4.-AcopCohe/" class="md-nav__link">
         
   
   
@@ -4579,7 +4587,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section3/u04/" class="md-nav__link ">
+            <a href="../../../../section3/u04/" class="md-nav__link ">
               
   
   
@@ -4623,7 +4631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u04/teoria/EDES-U4.1.-DiagramaCasoUso/" class="md-nav__link">
+      <a href="../../../../section3/u04/teoria/EDES-U4.1.-DiagramaCasoUso/" class="md-nav__link">
         
   
   
@@ -4653,7 +4661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u04/teoria/EDES-U4.3.-DiagramaSecuencias/" class="md-nav__link">
+      <a href="../../../../section3/u04/teoria/EDES-U4.3.-DiagramaSecuencias/" class="md-nav__link">
         
   
   
@@ -4728,7 +4736,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section3/u05/" class="md-nav__link ">
+            <a href="../../../../section3/u05/" class="md-nav__link ">
               
   
   
@@ -4772,7 +4780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u05/teoria/EDES-U5.1.-Pruebas/" class="md-nav__link">
+      <a href="../../../../section3/u05/teoria/EDES-U5.1.-Pruebas/" class="md-nav__link">
         
   
   
@@ -4802,7 +4810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u05/teoria/EDES-U5.2.-TestUnidadYTDD/" class="md-nav__link">
+      <a href="../../../../section3/u05/teoria/EDES-U5.2.-TestUnidadYTDD/" class="md-nav__link">
         
   
   
@@ -4832,7 +4840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u05/teoria/EDES-U5.2.1.-Kotest/" class="md-nav__link">
+      <a href="../../../../section3/u05/teoria/EDES-U5.2.1.-Kotest/" class="md-nav__link">
         
   
   
@@ -4862,7 +4870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u05/teoria/EDES-U5.2.2.-Mockk/" class="md-nav__link">
+      <a href="../../../../section3/u05/teoria/EDES-U5.2.2.-Mockk/" class="md-nav__link">
         
   
   
@@ -4892,7 +4900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u05/teoria/EDES-U5.3.-Depuracion/" class="md-nav__link">
+      <a href="../../../../section3/u05/teoria/EDES-U5.3.-Depuracion/" class="md-nav__link">
         
   
   
@@ -4922,7 +4930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u05/teoria/EDES-U5.3.1.-LoggingCode/" class="md-nav__link">
+      <a href="../../../../section3/u05/teoria/EDES-U5.3.1.-LoggingCode/" class="md-nav__link">
         
   
   
@@ -5003,7 +5011,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section3/u06/" class="md-nav__link ">
+            <a href="../../../../section3/u06/" class="md-nav__link ">
               
   
   
@@ -5047,7 +5055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u06/teoria/EDES-U6.1.-Git_Github/" class="md-nav__link">
+      <a href="../../../../section3/u06/teoria/EDES-U6.1.-Git_Github/" class="md-nav__link">
         
   
   
@@ -5077,7 +5085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u06/teoria/EDES-U6.2.-Refactorizacion/" class="md-nav__link">
+      <a href="../../../../section3/u06/teoria/EDES-U6.2.-Refactorizacion/" class="md-nav__link">
         
   
   
@@ -5107,7 +5115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u06/teoria/EDES-U6.3.-AnalizadorCodigo/" class="md-nav__link">
+      <a href="../../../../section3/u06/teoria/EDES-U6.3.-AnalizadorCodigo/" class="md-nav__link">
         
   
   
@@ -5137,7 +5145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u06/teoria/EDES-U6.4.-Documentacion/" class="md-nav__link">
+      <a href="../../../../section3/u06/teoria/EDES-U6.4.-Documentacion/" class="md-nav__link">
         
   
   
@@ -5167,7 +5175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u06/practica/EDES-U6.-Practica001/" class="md-nav__link">
+      <a href="../../../../section3/u06/practica/EDES-U6.-Practica001/" class="md-nav__link">
         
   
   
@@ -5197,7 +5205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u06/practica/EDES-U6.-Practica002/" class="md-nav__link">
+      <a href="../../../../section3/u06/practica/EDES-U6.-Practica002/" class="md-nav__link">
         
   
   
@@ -5227,7 +5235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u06/practica/EDES-U6.-Practica003/" class="md-nav__link">
+      <a href="../../../../section3/u06/practica/EDES-U6.-Practica003/" class="md-nav__link">
         
   
   
@@ -5257,7 +5265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u06/practica/EDES-U6.-Practica004/" class="md-nav__link">
+      <a href="../../../../section3/u06/practica/EDES-U6.-Practica004/" class="md-nav__link">
         
   
   
@@ -5287,7 +5295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section3/u06/practica/EDES-U6.-Practica005/" class="md-nav__link">
+      <a href="../../../../section3/u06/practica/EDES-U6.-Practica005/" class="md-nav__link">
         
   
   
@@ -5365,7 +5373,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section2/" class="md-nav__link ">
+            <a href="../../../../section2/" class="md-nav__link ">
               
   
   
@@ -5409,7 +5417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
+      <a href="../../../../section2/u00/recursos/IS-U0.-DinamicaPresentacion/" class="md-nav__link">
         
   
   
@@ -5474,7 +5482,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section2/u01/" class="md-nav__link ">
+            <a href="../../../../section2/u01/" class="md-nav__link ">
               
   
   
@@ -5518,7 +5526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
+      <a href="../../../../section2/u01/teoria/IS-U1.1.1.-PrincipiosGenerales/" class="md-nav__link">
         
   
   
@@ -5548,7 +5556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u01/teoria/IS-U1.2.1.-PlanDirectorDeSeguridad/" class="md-nav__link">
+      <a href="../../../../section2/u01/teoria/IS-U1.2.1.-PlanDirectorDeSeguridad/" class="md-nav__link">
         
   
   
@@ -5578,7 +5586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u01/teoria/IS-U1.2.2.-AnalisiDeRiesgos/" class="md-nav__link">
+      <a href="../../../../section2/u01/teoria/IS-U1.2.2.-AnalisiDeRiesgos/" class="md-nav__link">
         
   
   
@@ -5608,7 +5616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u01/teoria/IS-U1.3.1.-ProteccionDelPuestoDeTrabajo/" class="md-nav__link">
+      <a href="../../../../section2/u01/teoria/IS-U1.3.1.-ProteccionDelPuestoDeTrabajo/" class="md-nav__link">
         
   
   
@@ -5638,7 +5646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u01/teoria/IS-U1.4.1.-PlanDeConcienciacion/" class="md-nav__link">
+      <a href="../../../../section2/u01/teoria/IS-U1.4.1.-PlanDeConcienciacion/" class="md-nav__link">
         
   
   
@@ -5668,7 +5676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u01/teoria/IS-U1.4.1.-PlanDeConcienciacion-Eje/" class="md-nav__link">
+      <a href="../../../../section2/u01/teoria/IS-U1.4.1.-PlanDeConcienciacion-Eje/" class="md-nav__link">
         
   
   
@@ -5747,7 +5755,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section2/u02/" class="md-nav__link ">
+            <a href="../../../../section2/u02/" class="md-nav__link ">
               
   
   
@@ -5791,7 +5799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u02/teoria/IS-U2.1.1.-TaxonomiaDeIncidentes/" class="md-nav__link">
+      <a href="../../../../section2/u02/teoria/IS-U2.1.1.-TaxonomiaDeIncidentes/" class="md-nav__link">
         
   
   
@@ -5821,7 +5829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u02/teoria/IS-U2.2.1.-SOC-ServiciosYHerramientas/" class="md-nav__link">
+      <a href="../../../../section2/u02/teoria/IS-U2.2.1.-SOC-ServiciosYHerramientas/" class="md-nav__link">
         
   
   
@@ -5851,7 +5859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u02/teoria/IS-U2.2.2.-CasosUso/" class="md-nav__link">
+      <a href="../../../../section2/u02/teoria/IS-U2.2.2.-CasosUso/" class="md-nav__link">
         
   
   
@@ -5881,7 +5889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u02/teoria/IS-U2.2.3.-SIEM-Implantacion/" class="md-nav__link">
+      <a href="../../../../section2/u02/teoria/IS-U2.2.3.-SIEM-Implantacion/" class="md-nav__link">
         
   
   
@@ -5911,7 +5919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u02/teoria/IS-U2.2.4.-SIEM-Evolucion/" class="md-nav__link">
+      <a href="../../../../section2/u02/teoria/IS-U2.2.4.-SIEM-Evolucion/" class="md-nav__link">
         
   
   
@@ -5941,7 +5949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u02/teoria/IS-U2.3.1.-FuentesAbiertas-OSINT/" class="md-nav__link">
+      <a href="../../../../section2/u02/teoria/IS-U2.3.1.-FuentesAbiertas-OSINT/" class="md-nav__link">
         
   
   
@@ -5971,7 +5979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u02/teoria/IS-U2.4.1.-DocumentacionDeIncidentes/" class="md-nav__link">
+      <a href="../../../../section2/u02/teoria/IS-U2.4.1.-DocumentacionDeIncidentes/" class="md-nav__link">
         
   
   
@@ -6001,7 +6009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u02/teoria/IS-U2.4.2.-ComoEscribirInformesTecnicos/" class="md-nav__link">
+      <a href="../../../../section2/u02/teoria/IS-U2.4.2.-ComoEscribirInformesTecnicos/" class="md-nav__link">
         
   
   
@@ -6070,7 +6078,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../section2/u03/" class="md-nav__link ">
+            <a href="../../../../section2/u03/" class="md-nav__link ">
               
   
   
@@ -6114,7 +6122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u03/teoria/IS-U3.1.1.-RecopilacionDeEvidencias/" class="md-nav__link">
+      <a href="../../../../section2/u03/teoria/IS-U3.1.1.-RecopilacionDeEvidencias/" class="md-nav__link">
         
   
   
@@ -6144,7 +6152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u03/teoria/IS-U3.1.2.-Procedimiento/" class="md-nav__link">
+      <a href="../../../../section2/u03/teoria/IS-U3.1.2.-Procedimiento/" class="md-nav__link">
         
   
   
@@ -6174,7 +6182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../section2/u03/teoria/IS-U3.3.1.-MITRE/" class="md-nav__link">
+      <a href="../../../../section2/u03/teoria/IS-U3.3.1.-MITRE/" class="md-nav__link">
         
   
   
@@ -6216,6 +6224,8 @@
       
   
   
+    
+  
   
   
     
@@ -6239,22 +6249,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   
@@ -6272,13 +6283,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -6320,10 +6331,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -6333,7 +6347,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../../u01/" class="md-nav__link ">
               
   
   
@@ -6351,7 +6365,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -6377,7 +6391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../teoria/DAW-U1.1.-DevOps/" class="md-nav__link">
+      <a href="../../../u01/teoria/DAW-U1.1.-DevOps/" class="md-nav__link">
         
   
   
@@ -6407,7 +6421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../teoria/DAW-U1.2.-Documentacion/" class="md-nav__link">
+      <a href="../../../u01/teoria/DAW-U1.2.-Documentacion/" class="md-nav__link">
         
   
   
@@ -6437,7 +6451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../teoria/DAW-U1.3.-GitGitHub/" class="md-nav__link">
+      <a href="../../../u01/teoria/DAW-U1.3.-GitGitHub/" class="md-nav__link">
         
   
   
@@ -6467,7 +6481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../teoria/DAW-U1.4.-GitHubAction/" class="md-nav__link">
+      <a href="../../../u01/teoria/DAW-U1.4.-GitHubAction/" class="md-nav__link">
         
   
   
@@ -6497,7 +6511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DAW-U1.-Practica001/" class="md-nav__link">
+      <a href="../../../u01/practica/DAW-U1.-Practica001/" class="md-nav__link">
         
   
   
@@ -6583,10 +6597,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -6596,7 +6613,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u02/" class="md-nav__link ">
+            <a href="../../../u02/" class="md-nav__link ">
               
   
   
@@ -6614,7 +6631,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -6640,7 +6657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/teoria/DAW-U2.1.-IntroduccionDocker/" class="md-nav__link">
+      <a href="../../../u02/teoria/DAW-U2.1.-IntroduccionDocker/" class="md-nav__link">
         
   
   
@@ -6670,7 +6687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/teoria/DAW-U2.2.-ImagenesDocker/" class="md-nav__link">
+      <a href="../../../u02/teoria/DAW-U2.2.-ImagenesDocker/" class="md-nav__link">
         
   
   
@@ -6700,7 +6717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/teoria/DAW-U2.3.-AlmacenamientoRedes/" class="md-nav__link">
+      <a href="../../../u02/teoria/DAW-U2.3.-AlmacenamientoRedes/" class="md-nav__link">
         
   
   
@@ -6730,7 +6747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/DAW-U2.-Practica001/" class="md-nav__link">
+      <a href="../../../u02/practica/DAW-U2.-Practica001/" class="md-nav__link">
         
   
   
@@ -6760,7 +6777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/DAW-U2.-Practica002/" class="md-nav__link">
+      <a href="../../../u02/practica/DAW-U2.-Practica002/" class="md-nav__link">
         
   
   
@@ -6790,7 +6807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/DAW-U2.-Practica003/" class="md-nav__link">
+      <a href="../../../u02/practica/DAW-U2.-Practica003/" class="md-nav__link">
         
   
   
@@ -6820,7 +6837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/DAW-U2.-Practica004/" class="md-nav__link">
+      <a href="../../../u02/practica/DAW-U2.-Practica004/" class="md-nav__link">
         
   
   
@@ -6850,7 +6867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/teoria/DAW-U2.4.-DockerCompose/" class="md-nav__link">
+      <a href="../../../u02/teoria/DAW-U2.4.-DockerCompose/" class="md-nav__link">
         
   
   
@@ -6880,7 +6897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/DAW-U2.-Practica005/" class="md-nav__link">
+      <a href="../../../u02/practica/DAW-U2.-Practica005/" class="md-nav__link">
         
   
   
@@ -6910,7 +6927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/DAW-U2.-Practica006/" class="md-nav__link">
+      <a href="../../../u02/practica/DAW-U2.-Practica006/" class="md-nav__link">
         
   
   
@@ -6940,7 +6957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/DAW-U2.-Practica007/" class="md-nav__link">
+      <a href="../../../u02/practica/DAW-U2.-Practica007/" class="md-nav__link">
         
   
   
@@ -6970,7 +6987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/DAW-U2.-Practica008/" class="md-nav__link">
+      <a href="../../../u02/practica/DAW-U2.-Practica008/" class="md-nav__link">
         
   
   
@@ -7000,7 +7017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/teoria/DAW-U2.5.-CreacionImagenes/" class="md-nav__link">
+      <a href="../../../u02/teoria/DAW-U2.5.-CreacionImagenes/" class="md-nav__link">
         
   
   
@@ -7030,7 +7047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/DAW-U2.-Practica009/" class="md-nav__link">
+      <a href="../../../u02/practica/DAW-U2.-Practica009/" class="md-nav__link">
         
   
   
@@ -7060,7 +7077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/DAW-U2.-Practica010/" class="md-nav__link">
+      <a href="../../../u02/practica/DAW-U2.-Practica010/" class="md-nav__link">
         
   
   
@@ -7090,7 +7107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/DAW-U2.-Practica011/" class="md-nav__link">
+      <a href="../../../u02/practica/DAW-U2.-Practica011/" class="md-nav__link">
         
   
   
@@ -7120,7 +7137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/DAW-U2.-Practica012/" class="md-nav__link">
+      <a href="../../../u02/practica/DAW-U2.-Practica012/" class="md-nav__link">
         
   
   
@@ -7150,7 +7167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u02/practica/DAW-U2.-Proyecto-Final/" class="md-nav__link">
+      <a href="../../../u02/practica/DAW-U2.-Proyecto-Final/" class="md-nav__link">
         
   
   
@@ -7220,10 +7237,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -7233,7 +7253,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u03/" class="md-nav__link ">
+            <a href="../../../u03/" class="md-nav__link ">
               
   
   
@@ -7251,7 +7271,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5_4" id="__nav_5_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -7277,7 +7297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/DAW-U3.1.-DesarrolloDespliegueWeb/" class="md-nav__link">
+      <a href="../../../u03/teoria/DAW-U3.1.-DesarrolloDespliegueWeb/" class="md-nav__link">
         
   
   
@@ -7307,7 +7327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/DAW-U3.1.-IntroDesarrolloWeb/" class="md-nav__link">
+      <a href="../../../u03/teoria/DAW-U3.1.-IntroDesarrolloWeb/" class="md-nav__link">
         
   
   
@@ -7337,7 +7357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/DAW-U3.2.-ArquitecturasWeb/" class="md-nav__link">
+      <a href="../../../u03/teoria/DAW-U3.2.-ArquitecturasWeb/" class="md-nav__link">
         
   
   
@@ -7367,7 +7387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/DAW-U3.3.-ProtocoloHTTP/" class="md-nav__link">
+      <a href="../../../u03/teoria/DAW-U3.3.-ProtocoloHTTP/" class="md-nav__link">
         
   
   
@@ -7397,7 +7417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/DAW-U3.4.-ServiciosWebAPIs/" class="md-nav__link">
+      <a href="../../../u03/teoria/DAW-U3.4.-ServiciosWebAPIs/" class="md-nav__link">
         
   
   
@@ -7427,7 +7447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/DAW-U3.5.-WebDinamica/" class="md-nav__link">
+      <a href="../../../u03/teoria/DAW-U3.5.-WebDinamica/" class="md-nav__link">
         
   
   
@@ -7457,7 +7477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/DAW-U3.6.-LenguajesFrameworks/" class="md-nav__link">
+      <a href="../../../u03/teoria/DAW-U3.6.-LenguajesFrameworks/" class="md-nav__link">
         
   
   
@@ -7487,7 +7507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/DAW-U3.7.-ServidoresWeb/" class="md-nav__link">
+      <a href="../../../u03/teoria/DAW-U3.7.-ServidoresWeb/" class="md-nav__link">
         
   
   
@@ -7517,7 +7537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/DAW-U3.8.-DespliegueAplicaciones/" class="md-nav__link">
+      <a href="../../../u03/teoria/DAW-U3.8.-DespliegueAplicaciones/" class="md-nav__link">
         
   
   
@@ -7547,7 +7567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u03/teoria/DAW-U3.9.-SeguridadMonitorizacion/" class="md-nav__link">
+      <a href="../../../u03/teoria/DAW-U3.9.-SeguridadMonitorizacion/" class="md-nav__link">
         
   
   
@@ -7599,10 +7619,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -7612,7 +7635,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u04/" class="md-nav__link ">
+            <a href="../../../u04/" class="md-nav__link ">
               
   
   
@@ -7630,7 +7653,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5_5" id="__nav_5_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -7656,7 +7679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u04/practica/DAW-U4.-Practica001/" class="md-nav__link">
+      <a href="../../../u04/practica/DAW-U4.-Practica001/" class="md-nav__link">
         
   
   
@@ -7691,6 +7714,8 @@
                 
   
   
+    
+  
   
   
     
@@ -7712,20 +7737,21 @@
       
       
         
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
+          
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_6" >
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../u05/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -7743,13 +7769,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5_6" id="__nav_5_6_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -7769,7 +7795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u05/teoria/DAW-U5.1.-ServidoresAplicaciones/" class="md-nav__link">
+      <a href="../../teoria/DAW-U5.1.-ServidoresAplicaciones/" class="md-nav__link">
         
   
   
@@ -7799,7 +7825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../u05/practica/DAW-U5.-Practica001/" class="md-nav__link">
+      <a href="../DAW-U5.-Practica001/" class="md-nav__link">
         
   
   
@@ -7826,10 +7852,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../u05/practica/DAW-U5.-Practica002/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h4v-1.91L12.09 18H6v-2h8.09l2-2H6v-2h12.09L20 10.09V8l-6-6zm7 1.5L18.5 9H13zm7.15 9.5a.55.55 0 0 0-.4.16l-1.02 1.02 2.09 2.08 1.02-1.01c.21-.22.21-.58 0-.79l-1.3-1.3a.54.54 0 0 0-.39-.16m-2.01 1.77L12 20.92V23h2.08l6.15-6.15z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    P5.2.-WildFly en contenedor y Gradle
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -7847,6 +7900,231 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#p52-despliegue-de-una-api-restful-con-jakarta-java-usando-gradle-en-wildfly-contenedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P5.2 - Despliegue de una API RESTful con Jakarta (Java) usando Gradle en WildFly (contenedor)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="P5.2 - Despliegue de una API RESTful con Jakarta (Java) usando Gradle en WildFly (contenedor)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduccion-y-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción y contexto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción y contexto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-rest-en-pocas-lineas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. REST en pocas líneas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-jakarta-rest-en-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Jakarta REST en Java
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-wildfly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. WildFly
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Objetivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-pasos-a-seguir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Pasos a seguir
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Pasos a seguir">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-preparar-el-entorno-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Preparar el entorno Docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-crear-usuario-de-administracion-en-el-contenedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Crear usuario de administración en el contenedor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-preparar-el-proyecto-con-gradle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Preparar el proyecto con Gradle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#331-generar-el-wrapper-de-gradle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1. Generar el wrapper de Gradle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-build-del-war-con-gradle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Build del WAR con Gradle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-despliegue-en-wildfly-contenedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5. Despliegue en WildFly (contenedor)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-pruebas-de-la-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6. Pruebas de la API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-pruebas-con-curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7. Pruebas con curl
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Ejercicios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -7874,7 +8152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../blog/" class="md-nav__link">
+      <a href="../../../../blog/" class="md-nav__link">
         
   
   
@@ -7901,7 +8179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tags/" class="md-nav__link">
+      <a href="../../../../tags/" class="md-nav__link">
         
   
   
@@ -7928,7 +8206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../about/" class="md-nav__link">
+      <a href="../../../../about/" class="md-nav__link">
         
   
   
@@ -7967,8 +8245,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -7977,76 +8253,204 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivos-de-aprendizaje" class="md-nav__link">
+  <a href="#p52-despliegue-de-una-api-restful-con-jakarta-java-usando-gradle-en-wildfly-contenedor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎯 Objetivos de aprendizaje
+        P5.2 - Despliegue de una API RESTful con Jakarta (Java) usando Gradle en WildFly (contenedor)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="P5.2 - Despliegue de una API RESTful con Jakarta (Java) usando Gradle en WildFly (contenedor)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduccion-y-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción y contexto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción y contexto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-rest-en-pocas-lineas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. REST en pocas líneas
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#contexto" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#12-jakarta-rest-en-java" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📝 Contexto
+        1.2. Jakarta REST en Java
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#parte-1-workflow-basico" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#13-wildfly" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔹 Parte 1: Workflow básico
+        1.3. WildFly
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#parte-2-mejoras-obligatorias-nivel-basico" class="md-nav__link">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-objetivos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔹 Parte 2: Mejoras obligatorias (nivel básico)
+        2. Objetivos
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#parte-3-documentacion-y-preguntas" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#3-pasos-a-seguir" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔹 Parte 3: Documentación y Preguntas
+        3. Pasos a seguir
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Pasos a seguir">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-preparar-el-entorno-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Preparar el entorno Docker
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#parte-3-mejoras-opcionales-nivel-intermedio" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#32-crear-usuario-de-administracion-en-el-contenedor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔹 Parte 3: Mejoras opcionales (nivel intermedio)
+        3.2. Crear usuario de administración en el contenedor
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#entregables" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#33-preparar-el-proyecto-con-gradle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📑 Entregables
+        3.3. Preparar el proyecto con Gradle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#331-generar-el-wrapper-de-gradle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1. Generar el wrapper de Gradle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-build-del-war-con-gradle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Build del WAR con Gradle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-despliegue-en-wildfly-contenedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5. Despliegue en WildFly (contenedor)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-pruebas-de-la-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6. Pruebas de la API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-pruebas-con-curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7. Pruebas con curl
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Ejercicios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencias
       
     </span>
   </a>
@@ -8068,140 +8472,228 @@
                 
                   
 
+  <nav class="md-tags" >
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:docker" class="md-tag md-tag-icon">Docker</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:gradle" class="md-tag md-tag-icon">Gradle</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:jakarta-ee" class="md-tag md-tag-icon">Jakarta EE</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:rest" class="md-tag md-tag-icon">REST</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:wildfly" class="md-tag md-tag-icon">WildFly</a>
+      
+    
+  </nav>
+
 
   
   
 
 
-<h1 id="3-actividad-a-entregar-mejorando-un-workflow-con-github-actions">3. ACTIVIDAD A ENTREGAR: <em>Mejorando un Workflow con <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions</em><a class="headerlink" href="#3-actividad-a-entregar-mejorando-un-workflow-con-github-actions" title="Permanent link">&para;</a></h1>
-<p>La siguiente actividad está diseñada para que aprendais a usar <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions de forma práctica, empezando por un workflow básico y luego añadiendo mejoras progresivas, asi como incidir en las herramientas y proceso de documentación La idea es que podais avanzar a vuestro ritmo, alcanzando un nivel mínimo común pero con la posibilidad de explorar funcionalidades más avanzadas si lo desea.</p>
-<h3 id="objetivos-de-aprendizaje">🎯 Objetivos de aprendizaje<a class="headerlink" href="#objetivos-de-aprendizaje" title="Permanent link">&para;</a></h3>
-<p>Al completar esta actividad, los alumnos serán capaces de:
-1. Identificar las diferentes herramientas de generación de documentación.
-2. Documentar los componentes software utilizando los generadores específicos de las plataformas.
-3. Usar diferentes formatos para la documentación.
-4. Utilizar herramientas colaborativas para la elaboración y mantenimiento de la documentación.
-5. Instalar, configurar y usar un sistema de control de versiones.
-6. Garantizar la accesibilidad y seguridad de la documentación almacenada por el sistema de control de versiones.
-7. Implementar y utilizar herramientas para la integración continua del código (<abbr title="Integración Continua / Entrega Continua. Práctica de desarrollo de software que se basa en la automatización de los procesos de integración, pruebas y despliegue. En CI/CD, los cambios en el código se integran y despliegan de forma continua, lo que permite detectar y corregir errores rápidamente.">CI/CD</abbr>).</p>
-<hr />
-<h2 id="contexto">📝 Contexto<a class="headerlink" href="#contexto" title="Permanent link">&para;</a></h2>
-<p>Partiendos del <strong>repositorio base</strong> de la actividad de ejemplo, que contiene:</p>
+  <h1>P5.2.-WildFly en contenedor y Gradle</h1>
+
+<h2 id="p52-despliegue-de-una-api-restful-con-jakarta-java-usando-gradle-en-wildfly-contenedor">P5.2 - Despliegue de una <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> RESTful con Jakarta (Java) usando Gradle en WildFly (contenedor)<a class="headerlink" href="#p52-despliegue-de-una-api-restful-con-jakarta-java-usando-gradle-en-wildfly-contenedor" title="Permanent link">&para;</a></h2>
+<h3 id="1-introduccion-y-contexto">1. Introducción y contexto<a class="headerlink" href="#1-introduccion-y-contexto" title="Permanent link">&para;</a></h3>
+<p>En esta práctica vas a desplegar una <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> <abbr title="Transferencia de Estado Representacional. Estilo arquitectónico de diseño de API que se basa en la representación de recursos y la transferencia de datos a través de HTTP. En REST, las API se diseñan de forma que sean simples, escalables y fáciles de usar.">REST</abbr> con <strong>Jakarta EE</strong> sobre <strong>WildFly</strong> usando <strong>Gradle con Kotlin DSL</strong>, pero ejecutando el servidor en un contenedor <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr>. Esto permite un entorno reproducible, limpio y rápido de levantar.</p>
+<h4 id="11-rest-en-pocas-lineas">1.1. <abbr title="Transferencia de Estado Representacional. Estilo arquitectónico de diseño de API que se basa en la representación de recursos y la transferencia de datos a través de HTTP. En REST, las API se diseñan de forma que sean simples, escalables y fáciles de usar.">REST</abbr> en pocas líneas<a class="headerlink" href="#11-rest-en-pocas-lineas" title="Permanent link">&para;</a></h4>
+<p><abbr title="Transferencia de Estado Representacional. Estilo arquitectónico de diseño de API que se basa en la representación de recursos y la transferencia de datos a través de HTTP. En REST, las API se diseñan de forma que sean simples, escalables y fáciles de usar.">REST</abbr> (Representational State Transfer) es un estilo arquitectónico para diseñar servicios web. Usa métodos <abbr title="Protocolo de Transferencia de Hipertexto. Es un protocolo que se utiliza para transferir información entre un cliente y un servidor a través de una red. El HTTP permite a los usuarios acceder a sitios web, enviar y recibir datos, etc.">HTTP</abbr> (GET, POST, PUT, DELETE) para interactuar con recursos identificados por URLs. Es simple, ligero y muy común en APIs modernas.</p>
+<h4 id="12-jakarta-rest-en-java">1.2. Jakarta <abbr title="Transferencia de Estado Representacional. Estilo arquitectónico de diseño de API que se basa en la representación de recursos y la transferencia de datos a través de HTTP. En REST, las API se diseñan de forma que sean simples, escalables y fáciles de usar.">REST</abbr> en Java<a class="headerlink" href="#12-jakarta-rest-en-java" title="Permanent link">&para;</a></h4>
+<p>En el ecosistema Java, <abbr title="Transferencia de Estado Representacional. Estilo arquitectónico de diseño de API que se basa en la representación de recursos y la transferencia de datos a través de HTTP. En REST, las API se diseñan de forma que sean simples, escalables y fáciles de usar.">REST</abbr> se implementa con <strong>JAX-RS</strong> (ahora <strong>Jakarta RESTful Web Services</strong>). Se trabaja con anotaciones como <code>@GET</code>, <code>@POST</code> o <code>@Path</code> para exponer endpoints que devuelven JSON.</p>
+<h4 id="13-wildfly">1.3. WildFly<a class="headerlink" href="#13-wildfly" title="Permanent link">&para;</a></h4>
+<p>WildFly es un servidor de aplicaciones Jakarta EE (antes JBoss AS). Es ligero, modular y muy usado en entornos empresariales. En esta práctica lo ejecutaremos dentro de un contenedor <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr>.</p>
+<h3 id="2-objetivos">2. Objetivos<a class="headerlink" href="#2-objetivos" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Un programa sencillo (<code>main.py</code>).</li>
-<li>Un test unitario (<code>test_main.py</code>).</li>
-<li>Un script (<code>update_readme.py</code>) que ejecuta los tests y modifica el <code>README.md</code>.</li>
-<li>Un workflow básico (<code>ci.yml</code>) que ejecuta el script y hace commit automático con <code>git-auto-commit-action</code>.</li>
+<li>Levantar WildFly en un contenedor <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr>.</li>
+<li>Configurar un proyecto Jakarta RESTful con Gradle.</li>
+<li>Generar un <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr> y desplegarlo en WildFly dentro del contenedor.</li>
+<li>Probar la <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> con navegador y con <code>curl</code>.</li>
+<li>Revisar logs del servidor y evidenciar el despliegue.</li>
 </ul>
-<hr />
-<h2 id="parte-1-workflow-basico">🔹 Parte 1: Workflow básico<a class="headerlink" href="#parte-1-workflow-basico" title="Permanent link">&para;</a></h2>
+<h3 id="3-pasos-a-seguir">3. Pasos a seguir<a class="headerlink" href="#3-pasos-a-seguir" title="Permanent link">&para;</a></h3>
+<h4 id="31-preparar-el-entorno-docker">3.1. Preparar el entorno <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr><a class="headerlink" href="#31-preparar-el-entorno-docker" title="Permanent link">&para;</a></h4>
+<p>Asegúrate de tener <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> instalado y funcionando. Comprueba la versión:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>--version
+</code></pre></div>
+<p>Descarga la imagen oficial de WildFly:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>quay.io/wildfly/wildfly:latest
+</code></pre></div>
+<p>Levanta el contenedor exponiendo los puertos 8080 (aplicaciones) y 9990 (consola):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>wildfly<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span>-p<span class="w"> </span><span class="m">9990</span>:9990<span class="w"> </span>quay.io/wildfly/wildfly:latest
+</code></pre></div>
+<p>Comprueba que el contenedor está activo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>ps
+</code></pre></div>
+<h4 id="32-crear-usuario-de-administracion-en-el-contenedor">3.2. Crear usuario de administración en el contenedor<a class="headerlink" href="#32-crear-usuario-de-administracion-en-el-contenedor" title="Permanent link">&para;</a></h4>
+<p>Necesitas un usuario de gestión para acceder a la consola:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>wildfly<span class="w"> </span>/opt/jboss/wildfly/bin/add-user.sh
+</code></pre></div>
+<p>Selecciona usuario de gestión (Management User) y crea tu usuario y contraseña.</p>
+<p>Para reiniciar el contenedor si es necesario:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker<span class="w"> </span>restart<span class="w"> </span>wildfly
+</code></pre></div>
+<p>Accede a la consola web:</p>
+<p><code>http://localhost:9990</code></p>
+<h4 id="33-preparar-el-proyecto-con-gradle">3.3. Preparar el proyecto con Gradle<a class="headerlink" href="#33-preparar-el-proyecto-con-gradle" title="Permanent link">&para;</a></h4>
+<p>Usaremos un proyecto base con una <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> <abbr title="Transferencia de Estado Representacional. Estilo arquitectónico de diseño de API que se basa en la representación de recursos y la transferencia de datos a través de HTTP. En REST, las API se diseñan de forma que sean simples, escalables y fáciles de usar.">REST</abbr> sencilla:</p>
+<p>https://github.com/raul-profesor/practica-jakarta-wildfly</p>
+<p>Clona el repositorio. En este caso trabajaremos con Gradle y usaremos <strong>Kotlin DSL</strong>, por lo que debes tener un archivo <code>build.gradle.kts</code>.</p>
+<p>Ejemplo de configuración mínima para generar un <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr> con Jakarta EE:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">plugins</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">java</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="n">war</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">}</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;com.mycompany.myproject&quot;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0.0.1-SNAPSHOT&quot;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="n">repositories</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="n">mavenCentral</span><span class="p">()</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="p">}</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="c1">// Jakarta EE 10 API (Provided porque WildFly ya lo incluye)</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="n">compileOnly</span><span class="p">(</span><span class="s">&quot;jakarta.platform:jakarta.jakartaee-api:10.0.0&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="c1">// JUnit 5 para tests</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">    </span><span class="n">testImplementation</span><span class="p">(</span><span class="s">&quot;org.junit.jupiter:junit-jupiter:5.10.2&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="p">}</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="n">tasks</span><span class="p">.</span><span class="na">test</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">    </span><span class="n">useJUnitPlatform</span><span class="p">()</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="p">}</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="n">tasks</span><span class="p">.</span><span class="na">withType</span><span class="o">&lt;</span><span class="n">War</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="w">    </span><span class="n">archiveBaseName</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;modulename.backend&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="331-generar-el-wrapper-de-gradle">3.3.1. Generar el wrapper de Gradle<a class="headerlink" href="#331-generar-el-wrapper-de-gradle" title="Permanent link">&para;</a></h4>
+<p>Si el proyecto no incluye <code>gradlew</code>, necesitas crear el <strong>Gradle Wrapper</strong>. Para ello debes tener Gradle instalado en tu sistema.</p>
+<p>Comprueba si tienes Gradle:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>gradle<span class="w"> </span>--version
+</code></pre></div>
+<p>Si no lo tienes, en Debian puedes instalarlo con:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gradle
+</code></pre></div>
+<p>Una vez instalado, genera el wrapper desde la raíz del proyecto:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>gradle<span class="w"> </span>wrapper
+</code></pre></div>
+<p>Esto crea los archivos <code>gradlew</code>, <code>gradlew.bat</code> y la carpeta <code>gradle/wrapper/</code>.</p>
+<p>Después ya puedes usar el wrapper para evitar problemas de versión:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>./gradlew<span class="w"> </span>--version
+</code></pre></div>
+<h4 id="34-build-del-war-con-gradle">3.4. Build del <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr> con Gradle<a class="headerlink" href="#34-build-del-war-con-gradle" title="Permanent link">&para;</a></h4>
+<p>Genera el <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>./gradlew<span class="w"> </span>clean<span class="w"> </span>build
+</code></pre></div>
+<p>El archivo se genera en:</p>
+<p><code>build/libs/modulename.backend-0.0.1-SNAPSHOT.war</code></p>
+<h4 id="35-despliegue-en-wildfly-contenedor">3.5. Despliegue en WildFly (contenedor)<a class="headerlink" href="#35-despliegue-en-wildfly-contenedor" title="Permanent link">&para;</a></h4>
+<p>Hay dos formas sencillas de desplegar el <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr> en el contenedor. Usaremos la más directa: copiar al directorio <code>deployments</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>docker<span class="w"> </span>cp<span class="w"> </span>build/libs/modulename.backend-0.0.1-SNAPSHOT.war<span class="w"> </span>wildfly:/opt/jboss/wildfly/standalone/deployments/
+</code></pre></div>
+<p>Comprueba logs del contenedor:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>wildfly
+</code></pre></div>
+<p>Si todo va bien, verás que el <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr> se despliega automáticamente.</p>
+<h4 id="36-pruebas-de-la-api">3.6. Pruebas de la <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr><a class="headerlink" href="#36-pruebas-de-la-api" title="Permanent link">&para;</a></h4>
+<p>Prueba el endpoint <code>hello</code> en el navegador:</p>
+<p><code>http://localhost:8080/myproject/module/backend/api/myservice/hello</code></p>
+<figure>
+<p><img alt="" src="../assets/api1.png" />
+  </p>
+<figcaption>Respuesta del endpoint hello.</figcaption>
+</figure>
+<p>Comprueba <code>/pojo/list</code>:</p>
+<figure>
+<p><img alt="" src="../assets/api2.png" />
+  </p>
+<figcaption>Respuesta JSON del endpoint /pojo/list.</figcaption>
+</figure>
+<h4 id="37-pruebas-con-curl">3.7. Pruebas con curl<a class="headerlink" href="#37-pruebas-con-curl" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Crear nueva entrada:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>curl<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;id&quot;:&quot;2023&quot;, &quot;name&quot;:&quot;Despliegue&quot;}&#39;</span><span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8080/myproject/module/backend/api/myservice/pojo/new
+</code></pre></div>
+<ul>
+<li>Actualizar una entrada:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>curl<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;id&quot;:&quot;55&quot;, &quot;name&quot;:&quot;Raul&quot;}&#39;</span><span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span>http://localhost:8080/myproject/module/backend/api/myservice/pojo/update
+</code></pre></div>
+<ul>
+<li>Eliminar una entrada:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>DELETE<span class="w"> </span>http://localhost:8080/myproject/module/backend/api/myservice/pojo/remove?id<span class="o">=</span><span class="m">3</span>
+</code></pre></div>
+<h3 id="4-ejercicios">4. Ejercicios<a class="headerlink" href="#4-ejercicios" title="Permanent link">&para;</a></h3>
 <ol>
-<li>El alumno clona el repositorio base.</li>
-<li>Comprende el contenido del script y del workflow.</li>
-<li>
-<p>Ejecuta el workflow manualmente y comprueba que el <code>README.md</code> se actualiza con:</p>
-<ul>
-<li>✅ <em>Tests correctos</em></li>
-<li>❌ <em>Tests fallidos</em></li>
-</ul>
-</li>
+<li>Adjunta una captura de <code>docker ps</code> mostrando el contenedor <code>wildfly</code> activo.</li>
+<li>Adjunta evidencia de despliegue en logs (<code>docker logs -f wildfly</code>).</li>
+<li>Realiza llamadas a <code>/hello</code> y <code>/pojo/list</code> y adjunta evidencias.</li>
+<li>Responde a la tarea con las líneas de log correspondientes.</li>
 </ol>
-<p>Con esto aprenden el ciclo <strong>evento → ejecución → modificación → commit automático</strong>.</p>
-<hr />
-<h2 id="parte-2-mejoras-obligatorias-nivel-basico">🔹 Parte 2: Mejoras obligatorias (nivel básico)<a class="headerlink" href="#parte-2-mejoras-obligatorias-nivel-basico" title="Permanent link">&para;</a></h2>
-<p>Cada alumno debe implementar esta mejora:</p>
+<div class="admonition task">
+<p class="admonition-title">Task</p>
+<p>Muestra las entradas de los logs que se corresponden con estas peticiones.</p>
+</div>
+<h2 id="referencias">Referencias<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Generar la documentación en <abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr> y otro fomato adicional:</strong> volcandola posteriormente en un archivo <code>docs/report.html</code> o similar.</li>
+<li>https://www.wildfly.org/</li>
+<li>https://quay.io/repository/wildfly/wildfly</li>
+<li>https://docs.gradle.org/current/userguide/war_plugin.html</li>
 </ul>
-<h2 id="parte-3-documentacion-y-preguntas">🔹 Parte 3: Documentación y Preguntas<a class="headerlink" href="#parte-3-documentacion-y-preguntas" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p>(g) <strong>Actualizar el <code>README.md</code></strong> para que describa:</p>
-<ul>
-<li>(a) Las herramientas usadas para generar la documentación, y los comandos ejecutados para ello. (No olvidad esta documentación y markdown como herramienta de documentación).</li>
-<li>
-<p>(b) Ejemplos de código documentado (Enlaces), y de la generación &copy; en distintos formatos (al menos uno mas, p.ej. PDF, Markdown).</p>
-<ul>
-<li>La documentación que se va a generar y enlace a esta.</li>
-<li>Los distintos formatos generados y enlaces a los mismos.</li>
-</ul>
-</li>
-<li>
-<p>(g) El repositorio y como usarlo (clonarlo) para generar la documentación, el funcionamiento del workflow (d) Una explicación breve de su funcionamiento para que cualquier persona pueda entenderlo.</p>
-</li>
-<li>(e) Los comentarios de los commits en el sistema de control que evidencien la mejora implementada, deben ser claros y descriptivos.</li>
-<li>(f) Evidenciar de la configuración del acceso al sistema de control de versiones (<abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr>) a través de ssh.</li>
-</ul>
-<hr />
-</li>
-</ul>
-<p>Responde a las siguientes preguntas:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">CE</th>
-<th style="text-align: left;">Pregunta de Evaluación Asociada a la Actividad</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>a</strong></td>
-<td style="text-align: left;"><strong>Se han identificado diferentes herramientas de generación de documentación</strong>. ¿Qué herramienta o generador específico (ej., Javadoc, Doxygen) fue utilizado en el <em>workflow</em> para procesar el código y generar la documentación en la carpeta <code>/doc</code>?</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>b</strong></td>
-<td style="text-align: left;"><strong>Se han documentado los componentes software utilizando los generadores específicos de las plataformas</strong>. Muestre un fragmento del código fuente y señale los comentarios estructurados (ej. etiquetas <code>@param</code> o <code>@return</code>) que permitieron a la herramienta generar la documentación.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>c</strong></td>
-<td style="text-align: left;"><strong>Se han utilizado diferentes formatos para la documentación</strong>. ¿Qué segundo formato de documentación eligió, además de <abbr title="Hyper Text Markup Language (Lenguaje de Marcado de Hipertexto). Es un lenguaje de marcado que se utiliza para crear y estructurar páginas web. El HTML define la estructura y el contenido de las páginas web, utilizando etiquetas y atributos para dar formato y estilo al texto, las imágenes, los enlaces, etc.">HTML</abbr>? Describa la configuración o los comandos que incluyó en su <em>workflow</em> de <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions para producir ese formato adicional.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>d</strong></td>
-<td style="text-align: left;"><strong>Se han utilizado herramientas colaborativas para la elaboración y mantenimiento de la documentación</strong>. Describa de qué manera el uso de <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> facilita el mantenimiento de la documentación (específicamente la actualización del <code>README.md</code> y de los archivos en <code>/doc</code>) cuando colaboran múltiples programadores.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>e</strong></td>
-<td style="text-align: left;"><strong>Se ha instalado, configurado y utilizado un sistema de control de versiones</strong>. Muestre los mensajes de los <em>commits</em> que evidencian la implementación del nuevo <em>workflow</em>. ¿Fueron estos mensajes claros y descriptivos, como lo requiere el enunciado?</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>f</strong></td>
-<td style="text-align: left;"><strong>Se ha garantizado la accesibilidad y seguridad de la documentación almacenada por el sistema de control de versiones</strong>. ¿Qué medidas implementó o qué configuraciones del repositorio garantizan que solo el personal autorizado pueda acceder al código y la documentación generada?</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>g</strong></td>
-<td style="text-align: left;"><strong>Se ha documentado la instalación, configuración y uso del sistema de control de versiones utilizado</strong>. Señale en el <code>README.md</code> dónde documentó la explicación breve del funcionamiento del nuevo <em>workflow</em> y dónde se describen las herramientas y comandos utilizados para generar la documentación.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>h</strong></td>
-<td style="text-align: left;"><strong>Se han utilizado herramientas para la integración continua del código</strong>. Explique porqué se clasifica el <em>workflow</em> de <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Actions utilizado como una herramienta de Integración Continua (<abbr title="Integración Continua (*Continuous Integration*). Práctica de desarrollo de software que consiste en integrar de forma frecuente el código de todos los programadores en un repositorio común. Cada vez que alguien hace un cambio, el sistema lanza pruebas automáticas para comprobar que todo funciona y finalmente se integra el código si pasa las pruebas.">CI</abbr>). ¿Qué evento específico dispara automáticamente la generación y actualización de la documentación?</td>
-</tr>
-<tr>
-<td style="text-align: left;">---</td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-<h2 id="parte-3-mejoras-opcionales-nivel-intermedio">🔹 Parte 3: Mejoras opcionales (nivel intermedio)<a class="headerlink" href="#parte-3-mejoras-opcionales-nivel-intermedio" title="Permanent link">&para;</a></h2>
-<p>Los alumnos más avanzados pueden añadir:</p>
-<ul>
-<li><strong>Página de documentación con MKdocs en <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr> Pages</strong> con <code>peaceiris/actions-gh-pages</code>.</li>
-</ul>
-<p>Aquí experimentarás con <strong>automatización multiplataforma</strong> y <strong>despliegues automáticos</strong>.</p>
-<hr />
-<h2 id="entregables">📑 Entregables<a class="headerlink" href="#entregables" title="Permanent link">&para;</a></h2>
-<p>Cada alumno debe entregar:</p>
-<ol>
-<li>Enlace a su repositorio con el workflow funcionando.</li>
-<li>La documentación del README.md.</li>
-<li>Las respuestas a las preguntas.</li>
-</ol>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -8337,10 +8829,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.expand", "navigation.indexes", "navigation.top", "content.tooltips", "search.suggest", "search.highlight", "search.share", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": {"etiqueta": "etiqueta"}, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

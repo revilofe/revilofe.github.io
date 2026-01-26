@@ -30,6 +30,7 @@ En esta unidad trabajaremos el **RA3** del modulo, centrado en la implantacion d
 #### Practicas
 
 - [P5.1 - Despliegue de una API RESTful con Jakarta (Java) mediante Maven en WildFly](practica/DAW-U5.-Practica001.md)
+- [P5.2 - Despliegue de una API RESTful con Jakarta (Java) usando Gradle en WildFly (contenedor)](practica/DAW-U5.-Practica002.md)
 
 ### Recursos
 

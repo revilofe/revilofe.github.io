@@ -586,7 +586,7 @@ En la práctica, muchas organizaciones empiezan con CI y evolucionan a CD cuando
 
 La CI evita conflictos al integrar cambios a diario y validar con pruebas automatizadas. Así se detectan fallos temprano, antes de llegar a producción.
 
-#### 8.4. Distribución continua
+#### 8.4. Distribución continua (Continuous Delivery - CD)
 
 <figure markdown>
   ![](../assets/cd.png)
@@ -595,14 +595,14 @@ La CI evita conflictos al integrar cambios a diario y validar con pruebas automa
 
 La CD automatiza la entrega de artefactos listos para desplegar en producción. El equipo de operaciones puede desplegar cuando lo considere oportuno.
 
-#### 8.5. Implementación continua
+#### 8.5. Implementación continua (Continuous Deployment)
 
 <figure markdown>
   ![](../assets/cd2.png)
   <figcaption>Implementación continua.</figcaption>
 </figure>
 
-El despliegue continuo publica cambios automáticamente tras superar pruebas. Para que funcione, las pruebas deben ser completas y confiables.
+El despliegue continuo publica en producción cambios automáticamente tras superar pruebas. Para que funcione, las pruebas deben ser completas y confiables.
 
 ### 9. Evidencias habituales para evaluar el RA3
 
@@ -615,6 +615,10 @@ El despliegue continuo publica cambios automáticamente tras superar pruebas. Pa
 - Pruebas de funcionamiento y rendimiento básicas.
 - Documentación reproducible de la instalación y uso.
 - Despliegue en contenedor o nube si aplica.
+
+## Fuente
+
+- [Despliegue de aplicaciones web - Tema 3 - Servidores de aplicaciones](https://raul-profesor.github.io/Despliegue/ServAplic/)
 
 ## Referencias y bibliografía
 

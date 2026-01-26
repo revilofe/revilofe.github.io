@@ -90,34 +90,69 @@ Usaremos el mismo proyecto base que en la práctica anterior:
 
 https://github.com/raul-profesor/practica-jakarta-wildfly
 
-Clona el repositorio. En este caso trabajaremos con Gradle, por lo que debes tener un archivo `build.gradle`.
+Clona el repositorio. En este caso trabajaremos con Gradle y usaremos **Kotlin DSL**, por lo que debes tener un archivo `build.gradle.kts`.
 
 Ejemplo de configuración mínima para generar un WAR con Jakarta EE:
 
-```groovy
+```kotlin
 plugins {
-    id 'java'
-    id 'war'
+    java
+    war
 }
 
-group = 'com.mycompany.myproject'
-version = '0.0.1-SNAPSHOT'
+group = "com.mycompany.myproject"
+version = "0.0.1-SNAPSHOT"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    providedCompile 'jakarta.platform:jakarta.jakartaee-api:10.0.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    // Jakarta EE 10 API (Provided porque WildFly ya lo incluye)
+    compileOnly("jakarta.platform:jakarta.jakartaee-api:10.0.0")
+
+    // JUnit 5 para tests
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.2")
 }
 
-test {
+tasks.test {
     useJUnitPlatform()
 }
+
+
+tasks.withType<War> {
+    archiveBaseName.set("modulename.backend")
+}
+
+
 ```
 
-Si el proyecto ya trae `gradlew`, usa el wrapper para evitar problemas de versión:
+#### 3.3.1. Generar el wrapper de Gradle
+
+Si el proyecto no incluye `gradlew`, necesitas crear el **Gradle Wrapper**. Para ello debes tener Gradle instalado en tu sistema.
+
+Comprueba si tienes Gradle:
+
+```sh
+gradle --version
+```
+
+Si no lo tienes, en Debian puedes instalarlo con:
+
+```sh
+sudo apt update
+sudo apt install gradle
+```
+
+Una vez instalado, genera el wrapper desde la raíz del proyecto:
+
+```sh
+gradle wrapper
+```
+
+Esto crea los archivos `gradlew`, `gradlew.bat` y la carpeta `gradle/wrapper/`.
+
+Después ya puedes usar el wrapper para evitar problemas de versión:
 
 ```sh
 ./gradlew --version
@@ -194,7 +229,7 @@ curl -X DELETE http://localhost:8080/myproject/module/backend/api/myservice/pojo
 1. Adjunta una captura de `docker ps` mostrando el contenedor `wildfly` activo.
 2. Adjunta evidencia de despliegue en logs (`docker logs -f wildfly`).
 3. Realiza llamadas a `/hello` y `/pojo/list` y adjunta evidencias.
-4. Responde a la tarea con las lineas de log correspondientes.
+4. Responde a la tarea con las líneas de log correspondientes.
 
 !!! task
     Muestra las entradas de los logs que se corresponden con estas peticiones.

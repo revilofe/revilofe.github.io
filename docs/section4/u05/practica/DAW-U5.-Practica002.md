@@ -21,12 +21,19 @@ tags:
 
 ### 1. Introducción y contexto
 
-En esta práctica vamos a repetir el despliegue de una API REST, pero con dos cambios clave:
+En esta práctica vas a desplegar una API REST con **Jakarta EE** sobre **WildFly** usando **Gradle con Kotlin DSL**, pero ejecutando el servidor en un contenedor Docker. Esto permite un entorno reproducible, limpio y rápido de levantar.
 
-- El servidor WildFly se ejecuta en un contenedor Docker.
-- El proyecto se construye con **Gradle** en lugar de Maven.
+#### 1.1. REST en pocas líneas
 
-El objetivo es que puedas trabajar con un entorno reproducible y moderno, donde el servidor se levanta en segundos y la build es rápida y flexible.
+REST (Representational State Transfer) es un estilo arquitectónico para diseñar servicios web. Usa métodos HTTP (GET, POST, PUT, DELETE) para interactuar con recursos identificados por URLs. Es simple, ligero y muy común en APIs modernas.
+
+#### 1.2. Jakarta REST en Java
+
+En el ecosistema Java, REST se implementa con **JAX-RS** (ahora **Jakarta RESTful Web Services**). Se trabaja con anotaciones como `@GET`, `@POST` o `@Path` para exponer endpoints que devuelven JSON.
+
+#### 1.3. WildFly
+
+WildFly es un servidor de aplicaciones Jakarta EE (antes JBoss AS). Es ligero, modular y muy usado en entornos empresariales. En esta práctica lo ejecutaremos dentro de un contenedor Docker.
 
 ### 2. Objetivos
 
@@ -86,7 +93,7 @@ Accede a la consola web:
 
 #### 3.3. Preparar el proyecto con Gradle
 
-Usaremos el mismo proyecto base que en la práctica anterior:
+Usaremos un proyecto base con una API REST sencilla:
 
 https://github.com/raul-profesor/practica-jakarta-wildfly
 

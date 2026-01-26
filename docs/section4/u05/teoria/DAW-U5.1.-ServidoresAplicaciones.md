@@ -331,58 +331,76 @@ Un buen despliegue no termina cuando se publica el cambio, sino cuando se confir
 
 #### 4.6. Buenas prácticas específicas del proceso
 
-Además de los pasos básicos, hay recomendaciones concretas que ayudan a reducir incidencias:
+Además de los pasos básicos, hay recomendaciones concretas que ayudan a reducir incidencias. Las desarrollamos en detalle en el **punto 5**:
 
-- Definir un horario de despliegue con baja actividad de usuarios. Elegir momentos tranquilos minimiza el impacto si algo falla. 
-- Revisar diferencias entre desarrollo y producción antes de publicar.
-- Establecer roles para decidir quien puede desplegar en entornos críticos.
-- Mantener un procedimiento claro para revertir cambios.
+- Trabajar con control de versiones y ramas.
+- Probar en local antes de mover cambios.
+- Revisar diferencias antes de producción.
+- Definir roles y un plan de rollback.
+- Elegir la mejor franja de despliegue.
 
-Estas prácticas convierten el despliegue en un proceso predecible y repetible, que es el objetivo principal del modulo.
+Estas prácticas convierten el despliegue en un proceso predecible y repetible.
 
 ### 5. Buenas prácticas de despliegue
 
+Cuando se trabaja con entornos de despliegue, es importante, como se ha mencionado anteriormente, tener un plan y un proceso claro en el equipo. Para ampliar ese proceso, se recogen algunas mejores prácticas recomendadas.
+
+Se ha de tener en cuenta que las siguientes prácticas se refieren principalmente al desarrollo de software y de la web. En otros tipos de desarrollo puede haber otros factores a considerar en el flujo de trabajo.
+
 #### 5.1. Usar control de versiones (Git)
 
-Git permite trabajar en equipo y recuperar versiones estables en caso de error. Sin control de versiones, el riesgo de conflictos aumenta de forma critica.
+Esto puede parecer obvio, pero tener un sistema de control de versiones es inestimable para cualquier flujo de despliegue. Sin él, es probable que se produzcan errores si se trabaja en equipo.
 
-Un repositorio bien organizado facilita comparar cambios entre entornos y saber que version se ha desplegado en cada momento.
+Incluso si eres la única persona que trabaja en un proyecto, es muy recomendable utilizar Git en caso de que necesites volver a versiones anteriores o si alguien nuevo se une al equipo.
+
+Sin Git será difícil asegurar la consistencia en el flujo de trabajo de despliegue y puede llevar a que se cometan más errores por desplegar código inacabado o por no tener a todos los miembros del equipo trabajando en la misma versión.
 
 #### 5.2. Trabajar en ramas
 
-Separar funcionalidades en ramas evita interferencias entre tareas y facilita las pruebas previas a produccion.
+Como regla general, el equipo debería trabajar en ramas. Hacerlo permite trabajar en varias tareas al mismo tiempo sin que se afecten entre sí.
 
-Ademas, permite que distintos equipos prueben funcionalidades en paralelo sin romper el entorno principal.
+Un ejemplo es cuando se encuentra un error que debe ser corregido. Si un desarrollador está utilizando una rama para trabajar en una nueva característica, puede crear otra rama para el arreglo. De este modo, habrá dos ramas diferentes que no chocarán ni crearán posibles conflictos de fusión más adelante.
+
+Trabajar con ramas también ayuda al equipo en preproducción: tener los cambios en ramas separadas y fusionarlas permite a quienes prueban ver con claridad qué se ha empujado y qué deben validar.
 
 #### 5.3. Desarrollar en local antes de desplegar
 
-Trabajar en local acelera pruebas y reduce el numero de despliegues necesarios para validar un cambio.
+Aunque es posible trabajar directamente en un entorno de desarrollo, en la mayoría de los casos se ahorra mucho tiempo trabajando localmente. Al instalar el proyecto en local, se puede trabajar de forma más eficiente y acelerar las pruebas y la verificación del código.
 
-El objetivo es llegar al entorno de desarrollo con un cambio ya estable, no para "ver si funciona".
+No hay que confirmar, subir y desplegar constantemente un cambio antes de poder verificar si funciona. Cuando algo no funciona, hay que revertirlo, subirlo de nuevo y volver a desplegar.
+
+En lugar de eso, se puede ejecutar todo en local y, una vez que funcione, empujarlo directamente al entorno de preparación para una prueba más rigurosa.
 
 #### 5.4. Revisar diferencias antes de producir
 
-Comparar entorno de desarrollo y produccion antes de lanzar evita errores de ultima hora y despliegues fallidos.
+Una vez que el equipo de pruebas se ha asegurado de que todo funciona en el entorno de pruebas, es el momento de desplegar el código en el entorno real. Pero antes del despliegue final, es importante hacer una revisión de las diferencias entre el entorno actual en producción y el entorno de desarrollo o preproducción.
 
-Una revision final puede detectar cambios no documentados, configuraciones olvidadas o recursos faltantes.
+Incluso después de las pruebas exhaustivas y el control de calidad, las cosas pueden ir mal al llegar al entorno real. Una revisión final reduce la necesidad de correcciones urgentes o de una reversión completa.
 
 #### 5.5. Limitar permisos de despliegue
 
-En equipos grandes, es recomendable que solo perfiles senior puedan desplegar en produccion para reducir riesgos.
+Puede ser buena idea restringir quién puede desplegar en vivo. En equipos más grandes y con niveles de experiencia variados, es recomendable que solo perfiles senior desplieguen en producción.
 
-No se trata de frenar al equipo, sino de asegurar que el despliegue sigue un criterio comun y se revisa antes del paso a produccion.
+Esto asegura un mayor nivel de control sobre el flujo de releases y significa que al menos un par de ojos senior han revisado lo que llega al entorno real. En enfoques muy iterativos puede ralentizar un poco, pero suele compensar al evitar errores.
 
 #### 5.6. Gestionar errores y rollback
 
-Si algo falla en produccion, no hay que entrar en panico. Hay que evaluar si un rollback es viable y aplicar un plan de contingencia.
+Si algo falla en producción, no hay que entrar en pánico. Antes de aplicar hotfixes o revertir, hay que comprobar si un rollback realmente arreglaría el problema.
 
-No siempre el rollback arregla el problema. Antes hay que confirmar que la incidencia proviene del cambio desplegado.
+En algunas situaciones, los cambios son irreversibles o el fallo no se debe al despliegue. Si la parte rota no estaba en la nueva versión, un rollback no ayudará. Por eso es clave tener un plan claro y mantener la calma para actuar con criterio.
 
 #### 5.7. Escoger la mejor franja de despliegue
 
-El mejor momento suele ser cuando hay menos usuarios activos y el equipo esta disponible para reaccionar.
+En caso de que algo se rompa en producción, es importante encontrar el mejor momento para desplegar. Para decidirlo, conviene responder a dos preguntas:
 
-En muchos equipos se planifican despliegues con guardias rotativas, para asegurar respuesta rapida ante fallos.
+- ¿Cuándo hay menos usuarios activos?
+- ¿Cuándo hay alguien preparado para supervisar y solucionar problemas después del despliegue?
+
+Por lo general, se busca que el menor número de personas se vea afectado. Esto puede analizarse con herramientas de analítica para ver horas punta y horas de baja actividad, tanto por franja horaria como por días de la semana.
+
+Muchas veces la conclusión es desplegar de noche, pero eso solo es buena idea si hay equipo disponible para reaccionar. En lugar de eso, se debe encontrar un equilibrio entre el número de usuarios activos y la disponibilidad del equipo.
+
+Por este motivo, en muchas empresas se trabaja con guardias rotativas para asegurar disponibilidad y respuesta rápida.
 
 !!! warning "Sin un plan, el despliegue se convierte en improvisación"
     Define responsables, horario de despliegue y protocolo de rollback. Esto reduce el impacto de incidencias en producción.

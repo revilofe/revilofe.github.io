@@ -156,35 +156,89 @@ En escenarios reales se suele usar **ambos**: el servidor web como frontal y el 
 
 #### 3.3. Servicios comunes del servidor de aplicaciones
 
-- Contenedor web (servlets, JSP, frameworks).
-- Gestion de sesiones y autenticación.
-- Conectores y pools de conexiones.
-- Gestion de transacciones y mensajería.
-- Logs, diagnostico y monitorización.
+A continuación se presenta el conjunto **completo** de servicios que puede proporcionar un servidor de aplicaciones. Es cierto que, en entornos sencillos, esta lista suele reducirse a lo mínimo imprescindible para que la aplicación “arranque y responda”. Sin embargo, cuando esa simplificación recorta demasiado, se terminan omitiendo **servicios empresariales críticos** que marcan la diferencia entre un **servidor de aplicaciones real** (por ejemplo, WildFly) y un **mero contenedor de servlets** (como una instalación básica de Tomcat).
 
-Estos servicios evitan que la aplicacion tenga que reinventar aspectos basicos como la autenticacion o la gestion de conexiones.
+A continuación se muestra la **lista de referencia** de servicios comunes que conviene dominar si el objetivo es trabajar un temario con enfoque profesional.
 
-#### 3.4. Separacion de responsabilidades
+##### 3.3.1. Contenedor web (Servlets, JSP)
+
+Es el motor encargado de gestionar el ciclo de vida de los componentes web.
+
+Función: recibe peticiones HTTP, crea objetos `Request` y `Response`, e invoca el servlet o la pagina JSP correspondiente.
+
+Importancia: aísla al programador de escuchar en puertos y parsear HTTP manualmente, traduciendo peticiones a objetos del lenguaje.
+
+##### 3.3.2. Gestion de sesiones y autenticación
+
+El servidor ofrece mecanismos nativos para identificar usuarios y mantener su estado.
+
+Sesiones: guarda datos (por ejemplo, un carrito de la compra) asociados a un usuario mediante cookies (JSESSIONID) o reescritura de URL, sin gestionar memoria manualmente.
+
+Autenticación: proporciona **realms** para validar usuarios contra bases de datos, LDAP o ficheros planos, con seguridad declarativa (por ejemplo, en `web.xml`) en lugar de repetir logica de login.
+
+##### 3.3.3. Conectores y pools de conexiones
+
+Optimiza la comunicacion con sistemas externos, especialmente bases de datos.
+
+Pool de conexiones: abrir una conexion es costoso, por lo que el servidor mantiene una piscina de conexiones listas. La aplicacion pide una prestada y la devuelve al terminar.
+
+Beneficio: mejora rendimiento y evita saturar la base de datos.
+
+##### 3.3.4. Gestion de transacciones y mensajería
+
+Servicios críticos para la integridad de datos en entornos empresariales.
+
+Transacciones (JTA): agrupa operaciones en una unidad atomica. Si una falla, el servidor realiza rollback automatico.
+
+Mensajería (JMS): permite enviar mensajes a colas para procesamiento asincrono (por ejemplo, enviar un email) sin bloquear al usuario.
+
+##### 3.3.5. Logs, diagnostico y monitorización
+
+Herramientas para controlar la salud del servidor en produccion.
+
+Logs unificados: centraliza errores y eventos de todas las aplicaciones desplegadas.
+
+JMX (Java Management Extensions): permite ver uso de memoria, usuarios activos o reiniciar servicios en caliente.
+
+##### 3.3.6. Servicio de Nombres y Directorio (JNDI)
+
+Es una agenda interna para localizar recursos por nombre logico (por ejemplo, `jdbc/MiBaseDeDatos`) en lugar de direcciones IP y contraseñas en codigo.
+
+Esto facilita cambiar configuraciones sin recompilar ni modificar la aplicacion.
+
+##### 3.3.7. Alta Disponibilidad (Clustering)
+
+Permite que varios servidores trabajen como si fueran uno solo.
+
+Replicación de sesión: si un servidor cae, otro mantiene el estado y el usuario no pierde su trabajo.
+
+##### 3.3.8. Servicios Web y Remoting (SOAP/REST/RMI)
+
+Incluye mecanismos para exponer y consumir servicios remotos mediante API.
+
+Son claves para integraciones entre sistemas y arquitecturas distribuidas.
+
+#### 3.4. Separación de responsabilidades
 
 Separar servidor web y servidor de aplicaciones aporta ventajas claras:
 
-- El servidor web puede centrarse en **contenido estatico** y cache.
+- El servidor web puede centrarse en **contenido estático** y caché.
 - El servidor de aplicaciones puede escalar de forma independiente.
-- Se puede aplicar seguridad especifica a la capa de negocio.
+- Se puede aplicar seguridad específica a la capa de negocio.
 - Permite balanceo y redundancia sin afectar al frontal.
 
 ### 4. Despliegue de aplicaciones web
 
-Después de entender el papel del servidor de aplicaciones, es clave dominar el **despliegue**: mover cambios entre entornos de trabajo hasta llegar a producción. Desplegar, de forma sencilla, sería realizar todos las operaciones necesarias para llevar una version de una aplicación desde un entorno de desarrollo hasta el entorno de producción. Tu ya has visto en la unidad 3 como desplegar aplicaciones web en servidores web, pero en esta unidad vamos a profundizar en el despliegue de aplicaciones web en servidores de aplicaciones, con foco en buenas prácticas y seguridad, alineado con el RA3. Tambien, en la unidad 1, viste como github actions puede ayudarte a automatizar el despliegue.
+Después de entender el papel del servidor de aplicaciones, es clave dominar el **despliegue**: mover cambios entre entornos de trabajo hasta llegar a producción. Desplegar, de forma sencilla, sería realizar todas las operaciones necesarias para llevar una versión de una aplicación desde un entorno de desarrollo hasta el entorno de producción. Ya hemos visto en la unidad 3 como desplegar aplicaciones web en servidores web. También, en la unidad 1, vimos como github actions puede ayudarnos a automatizar el despliegue. En esta unidad vamos a profundizar en el despliegue de aplicaciones web en servidores de aplicaciones, con foco en buenas prácticas y seguridad. 
 
 #### 4.1. Que es el despliegue y que entornos existen
 
 El despliegue consiste en mover cambios entre entornos de trabajo. Los más habituales son:
 
-- Entorno local: donde cada persona desarrolla y prueba sus cambios.
-- Entorno de desarrollo: integra cambios de varios miembros del equipo.
-- Entorno de preproducción: replica el entorno real para pruebas finales.
-- Entorno de producción: el sistema que usan las personas usuarias.
+- **Entorno local**: donde cada persona desarrolla y prueba sus cambios.
+- **Entorno de desarrollo**: integra cambios de varios miembros del equipo.
+- **Entorno de preproducción**: replica el entorno real para pruebas finales.
+- **Entorno de producción**: el sistema que usan las personas usuarias.
 
 El flujo mas habitual es avanzar cambios de izquierda a derecha, hasta llegar a producción.
 

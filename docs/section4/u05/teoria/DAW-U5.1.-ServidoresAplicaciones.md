@@ -1,7 +1,7 @@
 ---
 title: "UD 5 - 5.1 Servidores de aplicaciones"
 description: Conceptos, arquitectura y despliegue en servidores de aplicaciones, con foco en RA3.
-summary: Servidores de aplicaciones, despliegue, JavaEE, Node.js, buenas practicas y CI/CD.
+summary: Servidores de aplicaciones, despliegue, JavaEE, Node.js, buenas prácticas y CI/CD.
 authors:
     - Eduardo Fdez
 date: 2025-02-01
@@ -19,74 +19,74 @@ tags:
 
 ## 5.1. Servidores de aplicaciones
 
-En la unidad 3 vimos la base de las arquitecturas web, el protocolo HTTP y los servidores web. En esta unidad damos un paso mas: trabajamos con **servidores de aplicaciones**, su papel en la arquitectura, su configuracion y el despliegue seguro de aplicaciones, alineado con el **RA3** del modulo.
+En la unidad 3 vimos la base de las arquitecturas web, el protocolo HTTP y los servidores web. En esta unidad damos un paso más: trabajamos con **servidores de aplicaciones**, su papel en la arquitectura, su configuración y el despliegue seguro de aplicaciones, alineado con el **RA3** del módulo.
 
-El objetivo es que el alumnado entienda **que hace un servidor de aplicaciones**, por que es necesario y como se integra con el servidor web y con la base de datos para ofrecer un servicio estable, seguro y escalable.
+El objetivo es que el alumnado entienda **qué hace un servidor de aplicaciones**, por qué es necesario y cómo se integra con el servidor web y con la base de datos para ofrecer un servicio estable, seguro y escalable.
 
-### 1. Resultado de aprendizaje y criterios de evaluacion (RA3)
+### 1. Resultado de aprendizaje y criterios de evaluación (RA3)
 
 El **RA3** establece que el alumnado debe ser capaz de implantar aplicaciones web en servidores de aplicaciones, configurarlas con seguridad y documentar el proceso.
 
-#### 1.1. Criterios de evaluacion asociados
+#### 1.1. Criterios de evaluación asociados
 
 - a) Describir componentes y funcionamiento de los servicios del servidor.
-- b) Identificar archivos principales de configuracion y bibliotecas compartidas.
-- c) Configurar cooperacion con el servidor web.
+- b) Identificar archivos principales de configuración y bibliotecas compartidas.
+- c) Configurar cooperación con el servidor web.
 - d) Activar mecanismos de seguridad del servidor de aplicaciones.
 - e) Configurar y usar componentes web del servidor de aplicaciones.
-- f) Ajustar parametros necesarios para el despliegue.
-- g) Probar funcionamiento y rendimiento de la aplicacion.
-- h) Elaborar documentacion de administracion y recomendaciones.
-- i) Usar virtualizacion, nube o contenedores en el despliegue.
+- f) Ajustar parámetros necesarios para el despliegue.
+- g) Probar funcionamiento y rendimiento de la aplicación.
+- h) Elaborar documentación de administración y recomendaciones.
+- i) Usar virtualización, nube o contenedores en el despliegue.
 
-!!! info "Relacion con la unidad 3"
-    En la unidad 3 ya tratamos servidores web, despliegue y seguridad basica. Aqui ampliamos esos conceptos con **servidores de aplicaciones** y un enfoque practico en **configuracion, seguridad y pruebas**.
+!!! info "Relación con la unidad 3"
+    En la unidad 3 ya tratamos servidores web, despliegue y seguridad básica. Aquí ampliamos esos conceptos con **servidores de aplicaciones** y un enfoque práctico en **configuración, seguridad y pruebas**.
 
 ### 2. Concepto y papel del servidor de aplicaciones
 
-#### 2.1. Definicion y ubicacion en la arquitectura
+#### 2.1. Definición y ubicación en la arquitectura
 
-Un servidor de aplicaciones es una plataforma software que permite **ejecutar aplicaciones web** y ofrecer servicios adicionales al servidor web, como gestion de sesiones, seguridad, transacciones, recursos compartidos y logs.
+Un servidor de aplicaciones es una plataforma software que permite **ejecutar aplicaciones web** y ofrecer servicios adicionales al servidor web, como gestión de sesiones, seguridad, transacciones, recursos compartidos y logs.
 
-Se puede ver como un **middleware**: un entorno que une la peticion del cliente con la logica de negocio y los datos, aportando servicios comunes que la aplicacion no deberia implementar una y otra vez.
+Se puede ver como un **middleware**: un entorno que une la petición del cliente con la lógica de negocio y los datos, aportando servicios comunes que la aplicación no debería implementar una y otra vez.
 
-Suele situarse entre el servidor web y el servidor de bases de datos, actuando como intermediario para procesar **logica de negocio** y peticiones dinamicas.
+Suele situarse entre el servidor web y el servidor de bases de datos, actuando como intermediario para procesar **lógica de negocio** y peticiones dinámicas.
 
 <figure markdown>
   ![](../assets/application-server1.webp)
-  <figcaption>Ubicacion del servidor de aplicaciones en una arquitectura clasica.</figcaption>
+  <figcaption>Ubicación del servidor de aplicaciones en una arquitectura clásica.</figcaption>
 </figure>
 
-#### 2.2. Terminologia basica
+#### 2.2. Terminología básica
 
 Esta terminología la usaremos durante la unidad:
 
-| Termino           | Descripcion                                           |
+| Término           | Descripción                                           |
 |-------------------|-------------------------------------------------------|
-| Servidor web      | Sirve contenido estatico y gestiona peticiones HTTP.  |
+| Servidor web      | Sirve contenido estático y gestiona peticiones HTTP.  |
 | Cliente web       | Navegador o app que solicita recursos.                |
 | HTTPS             | Protocolo seguro entre cliente y servidor.            |
 | JSON              | Formato ligero para el intercambio de datos.          |
-| Logica de negocio | Reglas del dominio y procesamiento de datos.          |
-| Aplicacion        | Software que consume datos y los presenta al usuario. |
+| Lógica de negocio | Reglas del dominio y procesamiento de datos.          |
+| Aplicación        | Software que consume datos y los presenta al usuario. |
 
-#### 2.3. Por que necesitamos servidores de aplicaciones
+#### 2.3. Por qué necesitamos servidores de aplicaciones
 
-Los servidores web son ligeros y eficientes para contenido estatico, pero **las peticiones dinamicas** requieren mas potencia y servicios avanzados. El servidor de aplicaciones aporta:
+Los servidores web son ligeros y eficientes para contenido estático, pero **las peticiones dinámicas** requieren más potencia y servicios avanzados. El servidor de aplicaciones aporta:
 
 - Ejecución de lógica de negocio.
-- Gestion de sesiones y usuarios.
+- Gestión de sesiones y usuarios.
 - Pools de conexiones y recursos compartidos.
-- Transacciones distribuidas y servicios de mensajeria.
-- Diagnostico, registros y seguridad avanzada.
+- Transacciones distribuidas y servicios de mensajería.
+- Diagnóstico, registros y seguridad avanzada.
 
 En otras palabras, mientras el servidor web se centra en **servir**, el servidor de aplicaciones se centra en **procesar**.
 
 #### 2.4. Optimización del tráfico y seguridad
 
-El servidor de aplicaciones mejora el rendimiento y reduce riesgos al separar el trafico dinamico del estatico. Tambien añade una capa extra de proteccion frente a ataques, ya que las peticiones llegan filtradas antes de tocar los datos sensibles.
+El servidor de aplicaciones mejora el rendimiento y reduce riesgos al separar el tráfico dinámico del estático. También añade una capa extra de protección frente a ataques, ya que las peticiones llegan filtradas antes de tocar los datos sensibles.
 
-Esta separacion permite aplicar controles mas estrictos en la capa de negocio sin penalizar la entrega de contenido estatico.
+Esta separación permite aplicar controles más estrictos en la capa de negocio sin penalizar la entrega de contenido estático.
 
 <figure markdown>
   ![](../assets/serv_apl.png)
@@ -99,40 +99,40 @@ Aunque cada producto tiene su propia arquitectura, suelen existir piezas comunes
 
 - **Contenedor web**: gestiona servlets, JSP o frameworks equivalentes.
 - **Conectores**: reciben las peticiones del servidor web o del cliente.
-- **Motor de aplicaciones**: ejecuta la logica de negocio.
+- **Motor de aplicaciones**: ejecuta la lógica de negocio.
 - **Gestor de sesiones**: mantiene el estado del usuario entre peticiones.
 - **Recursos compartidos**: pools de conexiones y colas de mensajes.
-- **Logs y diagnostico**: trazas de acceso y errores para auditoria.
+- **Logs y diagnóstico**: trazas de acceso y errores para auditoría.
 
 En servidores Java como Tomcat, estos elementos se agrupan en estructuras como **Service**, **Connector**, **Engine**, **Host** y **Context**. Comprender estas piezas es clave para el criterio a) del RA3.
 
 #### 2.6. Tendencias actuales
 
-El uso de servidores de aplicaciones continua su expansion por dos razones principales:
+El uso de servidores de aplicaciones continúa su expansión por dos razones principales:
 
-- La migracion a entornos cloud y contenedores.
+- La migración a entornos cloud y contenedores.
 - La necesidad de aplicaciones distribuidas que se actualizan con frecuencia.
 
-Esto implica que los administradores deben dominar despliegues reproducibles, automatizados y con buenas practicas de seguridad.
+Esto implica que los administradores deben dominar despliegues reproducibles, automatizados y con buenas prácticas de seguridad.
 
 ### 3. Funcionamiento general en una arquitectura web
 
-En esta sección vemos como interactúan el servidor web y el servidor de aplicaciones en una arquitectura web típica.
+En esta sección vemos cómo interactúan el servidor web y el servidor de aplicaciones en una arquitectura web típica.
 
 #### 3.1. Flujo de peticiones en un servidor Java
 
-En un servidor JavaEE, el flujo tipico es este:
+En un servidor JavaEE, el flujo típico es este:
 
 1. El cliente abre un navegador y solicita una página.
 2. El servidor web recibe la petición HTTP.
 3. Si es contenido estático, responde directamente.
 4. Si es contenido dinámico, reenvía la petición al servidor de aplicaciones.
 5. El servidor de aplicaciones convierte la petición en una solicitud de servlet.
-6. El servlet realiza consultas al servidor de base de datos o ejecuta logica de negocio.
-7. El servidor de aplicaciones envia la respuesta HTTP generada al servidor web.
+6. El servlet realiza consultas al servidor de base de datos o ejecuta lógica de negocio.
+7. El servidor de aplicaciones envía la respuesta HTTP generada al servidor web.
 8. El servidor web entrega la respuesta al cliente.
 
-Este flujo permite **aislar la logica de negocio** del servidor web y mantener cada capa con responsabilidades claras. El servidor web optimiza la entrega de archivos, y el servidor de aplicaciones optimiza el procesamiento.
+Este flujo permite **aislar la lógica de negocio** del servidor web y mantener cada capa con responsabilidades claras. El servidor web optimiza la entrega de archivos, y el servidor de aplicaciones optimiza el procesamiento.
 
 <figure markdown>
   ![](../assets/capas.webp)
@@ -143,16 +143,16 @@ Este flujo permite **aislar la logica de negocio** del servidor web y mantener c
 
 | Aspecto             | Servidor de aplicaciones                             | Servidor web                              |
 |---------------------|------------------------------------------------------|-------------------------------------------|
-| Diseñado para       | Logica de negocio compleja y generacion dinamica     | Servir contenido estatico y HTTP rapido   |
-| Almacena            | Aplicaciones, logica y conexiones a base de datos    | Archivos estaticos (HTML, CSS, imagenes)  |
+| Diseñado para       | Lógica de negocio compleja y generación dinámica     | Servir contenido estático y HTTP rápido   |
+| Almacena            | Aplicaciones, lógica y conexiones a base de datos    | Archivos estáticos (HTML, CSS, imágenes)  |
 | Consumo de recursos | Alto (runtime completo)                              | Bajo y optimizado para concurrencia       |
 | Soporta             | Servlets, JSP, EJB, transacciones, colas             | HTTP/HTTPS, proxy inverso, balanceo       |
 
 En escenarios reales se suele usar **ambos**: el servidor web como frontal y el servidor de aplicaciones como backend.
 
 !!! definition "Servlet"
-    Un **servlet** es un programa Java que se ejecuta en un **contenedor web** dentro del servidor de aplicaciones y genera contenido dinamico.
-    A diferencia de enfoques antiguos donde se iniciaba un proceso por peticion, los servlets usan hilos ligeros para atender multiples solicitudes.
+    Un **servlet** es un programa Java que se ejecuta en un **contenedor web** dentro del servidor de aplicaciones y genera contenido dinámico.
+    A diferencia de enfoques antiguos donde se iniciaba un proceso por petición, los servlets usan hilos ligeros para atender múltiples solicitudes.
 
 #### 3.3. Servicios comunes del servidor de aplicaciones
 
@@ -164,37 +164,37 @@ A continuación se muestra la **lista de referencia** de servicios comunes que c
 
 Es el motor encargado de gestionar el ciclo de vida de los componentes web.
 
-Función: recibe peticiones HTTP, crea objetos `Request` y `Response`, e invoca el servlet o la pagina JSP correspondiente.
+Función: recibe peticiones HTTP, crea objetos `Request` y `Response`, e invoca el servlet o la página JSP correspondiente.
 
 Importancia: aísla al programador de escuchar en puertos y parsear HTTP manualmente, traduciendo peticiones a objetos del lenguaje.
 
-##### 3.3.2. Gestion de sesiones y autenticación
+##### 3.3.2. Gestión de sesiones y autenticación
 
 El servidor ofrece mecanismos nativos para identificar usuarios y mantener su estado.
 
 Sesiones: guarda datos (por ejemplo, un carrito de la compra) asociados a un usuario mediante cookies (JSESSIONID) o reescritura de URL, sin gestionar memoria manualmente.
 
-Autenticación: proporciona **realms** para validar usuarios contra bases de datos, LDAP o ficheros planos, con seguridad declarativa (por ejemplo, en `web.xml`) en lugar de repetir logica de login.
+Autenticación: proporciona **realms** para validar usuarios contra bases de datos, LDAP o ficheros planos, con seguridad declarativa (por ejemplo, en `web.xml`) en lugar de repetir lógica de login.
 
 ##### 3.3.3. Conectores y pools de conexiones
 
-Optimiza la comunicacion con sistemas externos, especialmente bases de datos.
+Optimiza la comunicación con sistemas externos, especialmente bases de datos.
 
-Pool de conexiones: abrir una conexion es costoso, por lo que el servidor mantiene una piscina de conexiones listas. La aplicacion pide una prestada y la devuelve al terminar.
+Pool de conexiones: abrir una conexión es costoso, por lo que el servidor mantiene una piscina de conexiones listas. La aplicación pide una prestada y la devuelve al terminar.
 
 Beneficio: mejora rendimiento y evita saturar la base de datos.
 
-##### 3.3.4. Gestion de transacciones y mensajería
+##### 3.3.4. Gestión de transacciones y mensajería
 
 Servicios críticos para la integridad de datos en entornos empresariales.
 
-Transacciones (JTA): agrupa operaciones en una unidad atomica. Si una falla, el servidor realiza rollback automatico.
+Transacciones (JTA): agrupa operaciones en una unidad atómica. Si una falla, el servidor realiza rollback automático.
 
-Mensajería (JMS): permite enviar mensajes a colas para procesamiento asincrono (por ejemplo, enviar un email) sin bloquear al usuario.
+Mensajería (JMS): permite enviar mensajes a colas para procesamiento asíncrono (por ejemplo, enviar un email) sin bloquear al usuario.
 
-##### 3.3.5. Logs, diagnostico y monitorización
+##### 3.3.5. Logs, diagnóstico y monitorización
 
-Herramientas para controlar la salud del servidor en produccion.
+Herramientas para controlar la salud del servidor en producción.
 
 Logs unificados: centraliza errores y eventos de todas las aplicaciones desplegadas.
 
@@ -202,9 +202,9 @@ JMX (Java Management Extensions): permite ver uso de memoria, usuarios activos o
 
 ##### 3.3.6. Servicio de Nombres y Directorio (JNDI)
 
-Es una agenda interna para localizar recursos por nombre logico (por ejemplo, `jdbc/MiBaseDeDatos`) en lugar de direcciones IP y contraseñas en codigo.
+Es una agenda interna para localizar recursos por nombre lógico (por ejemplo, `jdbc/MiBaseDeDatos`) en lugar de direcciones IP y contraseñas en código.
 
-Esto facilita cambiar configuraciones sin recompilar ni modificar la aplicacion.
+Esto facilita cambiar configuraciones sin recompilar ni modificar la aplicación.
 
 ##### 3.3.7. Alta Disponibilidad (Clustering)
 
@@ -229,9 +229,9 @@ Separar servidor web y servidor de aplicaciones aporta ventajas claras:
 
 ### 4. Despliegue de aplicaciones web
 
-Después de entender el papel del servidor de aplicaciones, es clave dominar el **despliegue**: mover cambios entre entornos de trabajo hasta llegar a producción. Desplegar, de forma sencilla, sería realizar todas las operaciones necesarias para llevar una versión de una aplicación desde un entorno de desarrollo hasta el entorno de producción. Ya hemos visto en la unidad 3 como desplegar aplicaciones web en servidores web. También, en la unidad 1, vimos como github actions puede ayudarnos a automatizar el despliegue. En esta unidad vamos a profundizar en el despliegue de aplicaciones web en servidores de aplicaciones, con foco en buenas prácticas y seguridad. 
+Después de entender el papel del servidor de aplicaciones, es clave dominar el **despliegue**: mover cambios entre entornos de trabajo hasta llegar a producción. Desplegar, de forma sencilla, sería realizar todas las operaciones necesarias para llevar una versión de una aplicación desde un entorno de desarrollo hasta el entorno de producción. Ya hemos visto en la unidad 3 cómo desplegar aplicaciones web en servidores web. También, en la unidad 1, vimos cómo GitHub Actions puede ayudarnos a automatizar el despliegue. En esta unidad vamos a profundizar en el despliegue de aplicaciones web en servidores de aplicaciones, con foco en buenas prácticas y seguridad.
 
-#### 4.1. Que es el despliegue y que entornos existen
+#### 4.1. Qué es el despliegue y qué entornos existen
 
 El despliegue consiste en mover cambios entre entornos de trabajo. Los más habituales son:
 
@@ -240,9 +240,9 @@ El despliegue consiste en mover cambios entre entornos de trabajo. Los más habi
 - **Entorno de preproducción**: replica el entorno real para pruebas finales.
 - **Entorno de producción**: el sistema que usan las personas usuarias.
 
-El flujo mas habitual es avanzar cambios de izquierda a derecha, hasta llegar a producción.
+El flujo más habitual es avanzar cambios de izquierda a derecha, hasta llegar a producción.
 
-Este modelo permite que el equipo valide los cambios en entornos cada vez mas cercanos al real. Si algo falla en un entorno intermedio, se corrige antes de impactar a las personas usuarias.
+Este modelo permite que el equipo valide los cambios en entornos cada vez más cercanos al real. Si algo falla en un entorno intermedio, se corrige antes de impactar a las personas usuarias.
 
 <figure markdown>
   ![](../assets/deploy.png)
@@ -251,15 +251,15 @@ Este modelo permite que el equipo valide los cambios en entornos cada vez mas ce
 
 #### 4.2. Pasos del proceso de despliegue
 
-El flujo del proceso de despliegue consta de **5 pasos**: **planificacion, desarrollo, pruebas, despliegue y supervision**.
+El flujo del proceso de despliegue consta de **5 pasos**: **planificación, desarrollo, pruebas, despliegue y supervisión**.
 
-Antes de entrar en detalle, una nota importante: este flujo cubre los **aspectos fundamentales** y se presenta como una **simplificacion didactica**. No significa que sea la unica forma de desplegar, sino una base clara para comprender el proceso y poder adaptarlo a cada caso.
+Antes de entrar en detalle, una nota importante: este flujo cubre los **aspectos fundamentales** y se presenta como una **simplificación didáctica**. No significa que sea la única forma de desplegar, sino una base clara para comprender el proceso y poder adaptarlo a cada caso.
 
 1. **Planificación** del despliegue y sus reglas.
 2. **Desarrollo** en entornos locales o de desarrollo.
 3. **Pruebas** progresivas en entornos intermedios.
 4. **Despliegue** en producción.
-5. **Supervision** tras el lanzamiento.
+5. **Supervisión** tras el lanzamiento.
 
 ##### 4.2.1. Planificación del despliegue
 
@@ -267,11 +267,11 @@ Para que el proceso sea fluido, es clave contar con un **plan de despliegue** qu
 
 Un plan debe definir:
 
-- Cuando se pasa de local a desarrollo o preproduccion.
-- Horarios o ventanas en las que se permite desplegar a produccion.
-- Criterios de aceptacion y responsables del despliegue.
+- Cuando se pasa de local a desarrollo o preproducción.
+- Horarios o ventanas en las que se permite desplegar a producción.
+- Criterios de aceptación y responsables del despliegue.
 
-En proyectos abiertos, un buen plan permite incluso preparar **release candidates** y dejar que la comunidad pruebe antes del lanzamiento. Ademas, cada cambio debe planificarse: poco para cambios pequeños y mas detalle para cambios grandes.
+En proyectos abiertos, un buen plan permite incluso preparar **release candidates** y dejar que la comunidad pruebe antes del lanzamiento. Además, cada cambio debe planificarse: poco para cambios pequeños y más detalle para cambios grandes.
 
 ##### 4.2.2. Desarrollo del cambio
 
@@ -281,15 +281,15 @@ Una vez finalizado el cambio, se prepara para pasar a la siguiente fase y se int
 
 ##### 4.2.3. Pruebas progresivas
 
-Las pruebas son esenciales para evitar fallos en produccion. No se pueden hacer pruebas reales sin desplegar los cambios en entornos nuevos.
+Las pruebas son esenciales para evitar fallos en producción. No se pueden hacer pruebas reales sin desplegar los cambios en entornos nuevos.
 
-Cuando el cambio funciona en local o desarrollo, se despliega al siguiente entorno y se vuelve a validar. El objetivo es llegar a **preproduccion**, un entorno muy parecido al real, donde se realiza el control de calidad final.
+Cuando el cambio funciona en local o desarrollo, se despliega al siguiente entorno y se vuelve a validar. El objetivo es llegar a **preproducción**, un entorno muy parecido al real, donde se realiza el control de calidad final.
 
 Si se detectan errores en cualquier fase, el cambio vuelve a desarrollo, se corrige y se repite el ciclo.
 
 ##### 4.2.4. Despliegue en entorno real
 
-Tras superar las pruebas, se despliega en produccion. En teoria es un paso seguro, pero siempre puede aparecer algun problema inesperado.
+Tras superar las pruebas, se despliega en producción. En teoría es un paso seguro, pero siempre puede aparecer algún problema inesperado.
 
 Por eso es imprescindible que el despliegue se haga siguiendo el plan y con un criterio claro de vuelta atrás si algo falla.
 
@@ -297,7 +297,7 @@ Por eso es imprescindible que el despliegue se haga siguiendo el plan y con un c
 
 Una vez en producción, toca **supervisar**. Hay que observar logs, comportamiento de usuarios y rendimiento del sistema para detectar incidencias.
 
-Un buen consejo es desplegar en momentos de baja actividad y con personal disponible para reaccionar. Asi se minimiza el impacto en usuarios y se puede corregir o revertir rápidamente si es necesario.
+Un buen consejo es desplegar en momentos de baja actividad y con personal disponible para reaccionar. Así se minimiza el impacto en usuarios y se puede corregir o revertir rápidamente si es necesario.
 
 Si hay que revertir cambios, se debe actuar con calma y seguir un proceso claro, igual de riguroso que el despliegue.
 
@@ -312,11 +312,11 @@ Durante las pruebas es clave verificar que la aplicación funciona en condicione
 
 Separar ambos tipos ayuda a minimizar riesgos. El contenido suele moverse con más frecuencia y con menos impacto técnico.
 
-#### 4.4. Ventajas de trabajar con multiples entornos
+#### 4.4. Ventajas de trabajar con múltiples entornos
 
 - Reducción del riesgo en producción. Cuando tienes múltiples entornos, los errores catastróficos ocurren en un entorno seguro (Desarrollo o Pruebas) y nunca llegan al usuario final. Así debería de ser siempre.
 - Ahorro de tiempo en pruebas. Tener entornos separados permite paralizar el trabajo sin bloquearse mutuamente. Cada equipo puede trabajar en su entorno sin interferir con otros.
-- Mejor gestion de contenidos sensibles al tiempo. Prepara el lanzamiento antes de la fecha. En entornos como comercio electrónico o noticias, es vital probar cambios de contenido antes de publicarlos. Los entornos separados facilitan esta tarea.
+- Mejor gestión de contenidos sensibles al tiempo. Prepara el lanzamiento antes de la fecha. En entornos como comercio electrónico o noticias, es vital probar cambios de contenido antes de publicarlos. Los entornos separados facilitan esta tarea.
 
 Cuando los cambios pasan por varios entornos, el equipo gana control y puede detectar errores antes de que lleguen a las personas usuarias.
 
@@ -407,44 +407,54 @@ Por este motivo, en muchas empresas se trabaja con guardias rotativas para asegu
 
 ### 6. Despliegue de aplicaciones Java
 
+El despliegue de aplicaciones JavaEE en servidores de aplicaciones es un proceso habitual en entornos empresariales. En esta sección se describen los conceptos clave y los pasos para empaquetar y desplegar aplicaciones JavaEE.
+
 #### 6.1. Servlets y JSP
 
-En aplicaciones JavaEE, los servlets y las paginas JSP gestionan peticiones HTTP y generan contenido dinamico.
+En aplicaciones JavaEE, los servlets y las páginas JSP gestionan peticiones HTTP y generan contenido dinámico.
 
-Un servlet suele encargarse de la logica, mientras que una JSP se centra en la presentacion. En proyectos modernos, las JSP se sustituyen por frameworks, pero el concepto sigue siendo el mismo: **recibir una peticion, procesarla y devolver una respuesta**.
+Un servlet suele encargarse de la lógica, mientras que una JSP se centra en la presentación. En proyectos modernos, las JSP se sustituyen por frameworks, pero el concepto sigue siendo el mismo: **recibir una petición, procesarla y devolver una respuesta**.
 
-#### 6.2. Estructura basica de una aplicacion JavaEE
+!!! note "Servlet vs JSP"
+    Un servlet es un componente Java que maneja peticiones y respuestas HTTP, mientras que una JSP es una página que combina HTML con código Java para generar contenido dinámico. **Actualmente, las JSP se usan menos en favor de frameworks más modernos.**
 
-Una aplicacion web JavaEE suele contener:
+#### 6.2. Estructura básica de una aplicación JavaEE
 
-- Directorio raiz con paginas HTML o JSP.
+Una aplicación web JavaEE suele contener:
+
+- Directorio raíz con páginas HTML o JSP.
 - Directorio `WEB-INF` con configuración y clases.
 - Recursos (imágenes, CSS, JS) en la estructura necesaria.
 
-Cada aplicacion web se considera un **contexto** dentro del servidor. Este contexto define la ruta base con la que se accede a la aplicacion.
+Cada aplicación web se considera un **contexto** dentro del servidor. Este contexto define la ruta base con la que se accede a la aplicación.
 
 #### 6.3. Empaquetamiento en WAR
 
-El formato **WAR** es el estandar para distribuir aplicaciones web JavaEE. Se crea empaquetando el directorio de la aplicacion con la herramienta `jar`.
+El formato **WAR** es el estándar para distribuir aplicaciones web JavaEE. Se crea empaquetando el directorio de la aplicación con la herramienta `jar`.
 
-Un WAR contiene paginas, clases compiladas, librerias y archivos de configuracion, todo preparado para que el servidor lo despliegue de forma automatica.
+Un WAR contiene páginas, clases compiladas, librerías y archivos de configuración, todo preparado para que el servidor lo despliegue de forma automática.
 
 #### 6.4. Despliegue de WAR
 
-Los servidores JavaEE permiten desplegar un WAR desde consola de administracion o copiandolo en un directorio de despliegue.
+Los servidores JavaEE permiten desplegar un WAR desde consola de administración o copiándolo en un directorio de despliegue.
 
-En entornos reales, el despliegue suele automatizarse con pipelines o con herramientas del propio servidor, para asegurar que el proceso sea reproducible.
+En entornos reales, el despliegue suele automatizarse con pipelines (github actions) o con herramientas del propio servidor, para asegurar que el proceso sea reproducible.
 
-#### 6.5. Maven como herramienta de build
+#### 6.5. Herramientas de build: Maven y Gradle
 
-Maven es una herramienta open-source cuyo lanzamiento estable 1.0 fue en 2004, creada para simplificar la compilacion, pruebas y despliegue de proyectos.
+En el ecosistema Java, las dos herramientas más comunes para automatizar la compilación, pruebas, empaquetado y despliegue son **Maven** y **Gradle**. Ambas resuelven problemas similares, pero con enfoques distintos.
 
-<figure markdown>
-  ![](../assets/maven-logo.png)
-  <figcaption>Maven y sus ciclos de build.</figcaption>
-</figure>
+##### 6.5.1. Maven
 
-Ciclos habituales en Maven:
+Maven es una herramienta open-source creada en 2001 con el objetivo de simplificar los procesos de build. Antes de Maven, compilar y generar ejecutables requería entender manualmente dependencias, librerías y pasos de compilación, lo que podía llevar desde minutos hasta horas en proyectos complejos.
+
+Con Maven, la build de un proyecto se reduce a ejecutar un comando, por ejemplo:
+
+```bash
+mvn install
+```
+
+Maven es más que una herramienta de build: gestiona el ciclo completo del proyecto, desde validación de código hasta despliegue, incluyendo pruebas y generación de informes. Para ello, define ciclos de build con fases encadenadas. En el ciclo por defecto, las fases principales son:
 
 - validate
 - compile
@@ -455,39 +465,69 @@ Ciclos habituales en Maven:
 - install
 - deploy
 
-Ejemplo de ejecucion:
+Si ejecutas `mvn package`, Maven ejecutará de forma encadenada todas las fases anteriores. La configuración se define en `pom.xml` (Project Object Model), donde se declaran módulos y dependencias.
+
+Maven facilita la gestión de dependencias gracias a repositorios remotos como **Maven Central**, desde donde se descargan automáticamente librerías y versiones necesarias.
+
+Además, establece una estructura común de directorios, por ejemplo:
+
+- `src/main/java`
+- `src/main/resources`
+- `src/test/java`
+
+<figure markdown>
+  ![](../assets/maven-logo.png)
+  <figcaption>Maven y sus ciclos de build.</figcaption>
+</figure>
+
+##### 6.5.2. Gradle
+
+Gradle es una herramienta open-source más moderna (2007) que combina la gestión de dependencias de Maven con la flexibilidad de Ant. Su configuración se hace con un **DSL** (Groovy o Kotlin) en `build.gradle`, lo que permite escribir lógica y condiciones en la propia build.
+
+Una diferencia clave es el **Gradle Wrapper**, que permite ejecutar proyectos sin instalar Gradle en la máquina. El comando habitual es:
 
 ```bash
-mvn package
+./gradlew build
 ```
 
-Maven utiliza un archivo `pom.xml` para definir dependencias y estructura del proyecto.
+Gradle no depende de un ciclo de fases rígido. Funciona con un **grafo de tareas** (tasks) y dependencias entre ellas. Aun así, con el plugin Java incluye tareas estándar similares a Maven:
+
+- `compileJava`
+- `test`
+- `assemble`
+- `check`
+
+En dependencias, Gradle también usa repositorios como **Maven Central**, pero con una sintaxis más concisa y potente para gestionar conflictos de versiones.
+
+Uno de sus puntos fuertes es el rendimiento: aplica **compilación incremental**, evitando repetir tareas si no ha cambiado el código. En proyectos grandes esto puede acelerar el build de forma notable.
+
+Por defecto, Gradle respeta la misma estructura de directorios que Maven.
 
 ### 7. Despliegue de aplicaciones Node.js con Express
 
 #### 7.1. Node.js
 
-Node.js es un **entorno de ejecucion** para JavaScript en el servidor. No es un lenguaje ni un framework.
+Node.js es un **entorno de ejecución** para JavaScript en el servidor. No es un lenguaje ni un framework.
 
-Aunque dispone de modulos nativos como `http` y `fs` para manejar peticiones y servir archivos, en entornos profesionales se usan frameworks como Express (o alternativas como Fastify o NestJS) para simplificar el enrutado y los middlewares.
+Aunque dispone de módulos nativos como `http` y `fs` para manejar peticiones y servir archivos, en entornos profesionales se usan frameworks como Express (o alternativas como Fastify o NestJS) para simplificar el enrutado y los middlewares.
 
 <figure markdown>
   ![](../assets/nodejs-new-pantone-black.svg)
-  <figcaption>Node.js como entorno de ejecucion.</figcaption>
+  <figcaption>Node.js como entorno de ejecución.</figcaption>
 </figure>
 
 #### 7.2. Express
 
-Express es un framework ligero que simplifica la creacion de APIs y aplicaciones web en Node.js.
+Express es un framework ligero que simplifica la creación de APIs y aplicaciones web en Node.js.
 
-Se encarga del enrutado, la gestion de middlewares y la definicion de endpoints, dejando al desarrollador centrarse en la logica de negocio.
+Se encarga del enrutado, la gestión de middlewares y la definición de endpoints, dejando al desarrollador centrarse en la lógica de negocio.
 
 <figure markdown>
   ![](../assets/express-logo.png)
   <figcaption>Express como framework de Node.js.</figcaption>
 </figure>
 
-#### 7.3. npm y gestion de paquetes
+#### 7.3. npm y gestión de paquetes
 
 npm es el gestor de paquetes por defecto en Node.js. Permite instalar dependencias, publicar paquetes y definir scripts.
 
@@ -500,7 +540,7 @@ NPM convive con alternativas enfocadas en rendimiento y eficiencia como **Yarn**
   <figcaption>npm como gestor de paquetes.</figcaption>
 </figure>
 
-Un ejemplo de `package.json` con scripts seria:
+Un ejemplo de `package.json` con scripts sería:
 
 ```json
 {
@@ -520,7 +560,7 @@ Un ejemplo de `package.json` con scripts seria:
 
 #### 8.1. Concepto general
 
-CI/CD es un conjunto de practicas que automatizan integracion, pruebas, distribucion y despliegue.
+CI/CD es un conjunto de prácticas que automatizan integración, pruebas, distribución y despliegue.
 
 El objetivo es reducir errores humanos y entregar cambios de forma frecuente, segura y medible.
 
@@ -532,62 +572,62 @@ El objetivo es reducir errores humanos y entregar cambios de forma frecuente, se
 #### 8.2. Diferencias entre CI, CD y despliegue continuo
 
 - **CI**: integra cambios frecuentes y ejecuta pruebas automatizadas.
-- **CD**: distribuye artefactos listos para produccion.
-- **Despliegue continuo**: publica en produccion sin intervencion manual.
+- **CD**: distribuye artefactos listos para producción.
+- **Despliegue continuo**: publica en producción sin intervención manual.
 
-En la practica, muchas organizaciones empiezan con CI y evolucionan a CD cuando las pruebas y los procesos son fiables.
+En la práctica, muchas organizaciones empiezan con CI y evolucionan a CD cuando las pruebas y los procesos son fiables.
 
-#### 8.3. Integracion continua
+#### 8.3. Integración continua
 
 <figure markdown>
   ![](../assets/ci.png)
-  <figcaption>Integracion continua.</figcaption>
+  <figcaption>Integración continua.</figcaption>
 </figure>
 
-La CI evita conflictos al integrar cambios a diario y validar con pruebas automatizadas. Asi se detectan fallos temprano, antes de llegar a produccion.
+La CI evita conflictos al integrar cambios a diario y validar con pruebas automatizadas. Así se detectan fallos temprano, antes de llegar a producción.
 
-#### 8.4. Distribucion continua
+#### 8.4. Distribución continua
 
 <figure markdown>
   ![](../assets/cd.png)
-  <figcaption>Distribucion continua.</figcaption>
+  <figcaption>Distribución continua.</figcaption>
 </figure>
 
-La CD automatiza la entrega de artefactos listos para desplegar en produccion. El equipo de operaciones puede desplegar cuando lo considere oportuno.
+La CD automatiza la entrega de artefactos listos para desplegar en producción. El equipo de operaciones puede desplegar cuando lo considere oportuno.
 
-#### 8.5. Implementacion continua
+#### 8.5. Implementación continua
 
 <figure markdown>
   ![](../assets/cd2.png)
-  <figcaption>Implementacion continua.</figcaption>
+  <figcaption>Implementación continua.</figcaption>
 </figure>
 
-El despliegue continuo publica cambios automaticamente tras superar pruebas. Para que funcione, las pruebas deben ser completas y confiables.
+El despliegue continuo publica cambios automáticamente tras superar pruebas. Para que funcione, las pruebas deben ser completas y confiables.
 
 ### 9. Evidencias habituales para evaluar el RA3
 
 - Esquemas o explicaciones del servidor de aplicaciones.
-- Configuracion localizada y justificada (server.xml, context.xml, etc.).
-- Integracion con servidor web mediante proxy o reverse proxy.
+- Configuración localizada y justificada (server.xml, context.xml, etc.).
+- Integración con servidor web mediante proxy o reverse proxy.
 - Usuarios, roles y accesos configurados y probados.
-- Aplicacion desplegada y funcionando con logs correctos.
+- Aplicación desplegada y funcionando con logs correctos.
 - Ajustes aplicados (puertos, rutas, variables, permisos).
-- Pruebas de funcionamiento y rendimiento basicas.
-- Documentacion reproducible de la instalacion y uso.
+- Pruebas de funcionamiento y rendimiento básicas.
+- Documentación reproducible de la instalación y uso.
 - Despliegue en contenedor o nube si aplica.
 
-## Referencias y bibliografia
+## Referencias y bibliografía
 
 - [What is an application server? (I)](https://www.itpro.co.uk/strategy/29643/what-is-an-application-server)
 - [What is an application server? (II)](https://www.serverwatch.com/guides/application-server/)
 - [What is deployment in software and web development](https://umbraco.com/knowledge-base/deployment/)
-- [Simple y rapido. Entiende que es Maven en menos de 10 min.](https://www.javiergarzas.com/2014/06/maven-en-10-min.html)
+- [Simple y rápido. Entiende qué es Maven en menos de 10 min.](https://www.javiergarzas.com/2014/06/maven-en-10-min.html)
 - [Maven in 5 Minutes](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
 - [Apuntes JavaEE](http://www.jtech.ua.es/j2ee/restringido/cw/sesion01-apuntes.html)
-- [Que es Node.js y por que deberia usarlo](https://kinsta.com/es/base-de-conocimiento/que-es-node-js/)
-- [Que son la integracion y la distribucion continuas (CI/CD)](https://www.redhat.com/es/topics/devops/what-is-ci-cd)
+- [Qué es Node.js y por qué debería usarlo](https://kinsta.com/es/base-de-conocimiento/que-es-node-js/)
+- [Qué son la integración y la distribución continuas (CI/CD)](https://www.redhat.com/es/topics/devops/what-is-ci-cd)
 
 ## Recursos adicionales
 
-- Documentacion oficial de Apache Tomcat y WildFly.
-- Guias de despliegue de Node.js en produccion.
+- Documentación oficial de Apache Tomcat y WildFly.
+- Guías de despliegue de Node.js en producción.

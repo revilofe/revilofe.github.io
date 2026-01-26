@@ -187,6 +187,7 @@ Note: Se detalla el ciclo completo de OSINT. Mensaje para el profesor: aqui quer
 
 Note: Explica el modelo de **seis fases** y recalca que no es estrictamente lineal: es normal volver atras si una fuente no cuadra o aparece una pista nueva. Idea clave: cada fase produce un **resultado** que alimenta a la siguiente (y todo queda documentado).
 
+
 ### 3.2. Planificacion y direccion I
 
 * Definir objetivos claros
@@ -217,6 +218,7 @@ Note: Convierte la planificacion en algo operativo: **preguntas**, **keywords**,
 
 Note: Resalta errores tipicos para evitar investigaciones sin rumbo. Puedes usar un ejemplo: objetivo vago ("ver que hay") frente a objetivo concreto ("confirmar si hay correos del dominio X en filtraciones publicas").
 
+
 ### 3.3. Identificacion de fuentes I
 
 * Motores de busqueda
@@ -237,6 +239,7 @@ Note: Explica cada tipo de fuente y su utilidad. Destaca que una "fuente" no es 
 * Registrar URLs, capturas y fecha/hora de consulta
 
 Note: Propone una forma practica de trabajar: **matriz de fuentes** y **priorizacion**. Recalca la **triangulacion** (confirmar con 2 fuentes) y la necesidad de guardar evidencias con fecha para poder repetir la investigacion.
+
 
 ### 3.4. Adquisicion de informacion I
 
@@ -267,6 +270,7 @@ Note: Aqui el objetivo es que el alumnado trabaje como analista: evidencias y pa
 
 Note: Cada tecnica aporta un tipo de dato distinto. Recomienda combinar tecnicas (por ejemplo, dorks + WHOIS + redes) pero sin perder el foco del objetivo. Remarca que todo debe quedar documentado y dentro del **permiso**.
 
+
 ### 3.5. Procesamiento y organizacion I
 
 * Clasificar por relevancia
@@ -296,6 +300,7 @@ Note: Explica el "como": normalizar, deduplicar y etiquetar fiabilidad. Recalca 
 
 Note: Mantener un **registro** mejora la trazabilidad y el valor del informe. Puedes sugerir una plantilla minima: fuente, fecha, query, evidencia, fiabilidad, y nota de por que es relevante.
 
+
 ### 3.6. Analisis e interpretacion I
 
 * Identificar patrones y tendencias
@@ -323,6 +328,7 @@ Note: Guia al profesor para insistir en pensamiento critico: hipotesis, evidenci
 * Visualizacion con Maltego
 
 Note: La visualizacion ayuda a entender relaciones complejas (por ejemplo, un mismo correo apareciendo en varias filtraciones). Recalca que un grafo bonito no vale si no explica una conclusion clara y comprobable.
+
 
 ### 3.7. Difusion y aplicacion I
 

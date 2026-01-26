@@ -244,6 +244,9 @@ nav:
       - 'U4: Servidores Web':
           - 'section4/u04/index.md'
           - '4.1.- Despliegue de una web statica': 'section4/u04/practica/DAW-U4.-Practica001.md'
+      - 'U5: Servidores de aplicaciones':
+          - 'section4/u05/index.md'
+          - '5.1.-Servidores de aplicaciones': 'section4/u05/teoria/DAW-U5.1.-ServidoresAplicaciones.md'
   - 'Blog': 'blog.md'
   - 'Tags': 'tags.md'
   - 'Acerca de': 'about.md'

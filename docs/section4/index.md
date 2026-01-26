@@ -36,9 +36,9 @@ En los siguientes enlaces se encuentran los contenidos, resultados de aprendizaj
 | ------ | ---- | ---- | ---- | ---- | ---- | ---- |
 | RA 1   | X    |      |      |      |      |      |
 | RA 2   |      | X    |      |      |      |      |
-| RA 3   |      |      |  X   |      |      |      |
+| RA 3   |      |      |      |      |  X   |      |
 | RA 4   |      |      |      |  X   |      |      |
-| RA 5   |      |      |      |      |  X   |      |
+| RA 5   |      |      |      |      |      |      |
 | RA 6   |      |      |      |      |      | X    |
 
 ### Relación de unidades y fechas
@@ -75,7 +75,9 @@ Típicamente se intenta tener los siguientes apartados en cada uno de los módul
 - Teoría.
      1. [unidad 1](https://revilofe.github.io/section4-daw/u01/)
      2. [unidad 2](./u02/)
-     3. ...
+     3. [unidad 3](./u03/)
+     4. [unidad 4](./u04/)
+     5. [unidad 5](./u05/)
 
 - Presentaciones.
 

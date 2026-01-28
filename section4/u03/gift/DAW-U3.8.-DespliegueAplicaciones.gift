@@ -1,0 +1,45 @@
+::DAW-U3.8. Elegir entorno de despliegue::
+Has terminado una funcionalidad y quieres validarla en un entorno lo más parecido posible a producción sin afectar a usuarios reales. ¿Qué entorno es el más adecuado?
+{
+=Staging o preproducción. #Correcto\: **Staging** replica condiciones de producción para validar antes de publicar, reduciendo riesgos sin impactar a usuarios finales.
+~%-33.3333%Producción, porque así se prueba en real. #Incorrecto\: Probar directamente en producción aumenta el riesgo de caídas y errores visibles para usuarios.
+~%-33.3333%Desarrollo local, porque siempre es idéntico a producción. #Incorrecto\: El local rara vez replica red, balanceo, certificados, recursos y configuración real de producción.
+~%-33.3333% Pruebas, porque es donde se hacen tests unitarios. #Incorrecto\: El entorno de pruebas suele ser más básico y no replica producción como staging.
+}
+
+::DAW-U3.8. Vertical vs horizontal::
+Tu app se cae si una única máquina falla, y además necesitas absorber más carga. Quieres mejorar disponibilidad y capacidad. ¿Qué enfoque encaja mejor?
+{
+=Escalabilidad horizontal con varias instancias y un balanceador de carga. #Correcto\: Con **scale out** añades instancias y el **balanceador** reparte tráfico. También mejora disponibilidad al no depender de una sola máquina.
+~%-33.3333%Escalabilidad vertical, subiendo CPU y RAM de una única máquina. #Incorrecto\: Scale up puede aumentar capacidad, pero sigues con un punto único de fallo. La disponibilidad no mejora tanto como con varias instancias.
+~%-33.3333%Implementar un CDN para distribuir la carga. #Incorrecto\: Una CDN ayuda con contenido estático y reduce latencia, pero no resuelve la dependencia de una única máquina ni mejora disponibilidad del backend.
+~%-33.3333%Optimizar el código para que use menos recursos. #Incorrecto\: Optimizar es bueno, pero no resuelve la dependencia de una única máquina ni garantiza absorber picos de carga.
+}
+
+::DAW-U3.8. Qué resuelve Docker::
+En tu equipo funciona la app, pero en el servidor falla por versiones distintas de dependencias. Quieres empaquetar aplicación y dependencias para que se ejecute igual en cualquier máquina. ¿Qué herramienta encaja mejor?
+{
+=Docker, empaquetando todo en una imagen de contenedor. #Correcto\: Docker ayuda a resolver el clásico **funciona en mi máquina** empaquetando dependencias y configuración en una unidad portable (imagen/contendor).
+~%-33.3333%Virtualización, porque crea una máquina idéntica. #Incorrecto\: La virtualización crea máquinas completas, pero es más pesada y no resuelve el problema de dependencias específicas de la app.
+~%-33.3333%Empaquetar en un archivo WAR, porque incluye todo lo necesario. #Incorrecto\: Un WAR empaqueta una aplicación Java, pero no resuelve dependencias del sistema ni versiones de librerías externas.
+~%-33.3333%Contratar un VPS con la misma configuración que el equipo de desarrollo. #Incorrecto\: Aunque ayude, no garantiza que las versiones y configuraciones sean idénticas. Docker ofrece una solución más robusta y portable.
+}
+
+::DAW-U3.8. Compose vs Kubernetes::
+Tu proyecto tiene un frontend, un backend y una base de datos para desarrollo y pruebas. Quieres levantarlo de forma simple en una máquina o servidor pequeño. ¿Qué opción es más adecuada?
+{
+=Docker Compose, para orquestación simple de varios contenedores. #Correcto\: **Docker Compose** está pensado para definir y levantar varios servicios de forma sencilla, ideal para entornos pequeños o de desarrollo.
+~%-33.3333%Kubernetes siempre, permite escalar automáticamente. #Incorrecto\: Kubernetes es potente pero complejo, y suele ser excesivo para entornos pequeños o de desarrollo. Requiere más recursos y configuración.
+~%-33.3333%Un único contenedor con los servicios que se necesitan, incluyendo base de datos y logs. #Incorrecto\: Mezclar todo en un contenedor rompe separación de responsabilidades y dificulta escalado, persistencia y mantenimiento.
+~%-33.3333%Crear máquinas virtuales para cada servicio, para aislarlos mejor. #Incorrecto\: Las VMs son más pesadas y complejas de gestionar que contenedores. Docker Compose es más ágil para este caso.
+}
+
+::DAW-U3.8. Qué aporta CI/CD::
+Quieres que cada vez que se haga push a main se ejecuten tests, se construya la imagen y se despliegue automáticamente al servidor si todo va bien. ¿Qué concepto describe esto mejor?
+{
+=Un pipeline de CI/CD automatizado. #Correcto\: **CI/CD** automatiza integración (tests, build) y entrega/despliegue, reduciendo errores manuales y acelerando el time-to-market.
+~%-33.3333%Un pipeline de solo integración continua (CI). #Incorrecto\: CI cubre tests y build, pero no el despliegue automático. CD añade esa fase crucial de entrega/despliegue.
+~%-33.3333%Un pipeline de solo entrega continua (CD). #Incorrecto\: CD sin CI no garantiza que el código esté probado y listo para producción antes del despliegue.
+~%-33.3333%Un pipeline de despliegue manual. #Incorrecto\: El objetivo es automatizar el despliegue para reducir errores y acelerar el proceso, no hacerlo manualmente.
+}
+

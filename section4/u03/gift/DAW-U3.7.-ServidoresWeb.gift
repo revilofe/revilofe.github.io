@@ -1,0 +1,45 @@
+::DAW-U3.7. varios sitios::
+Tienes un servidor con una sola IP y quieres alojar dos webs con dominios distintos, cada una con su propio DocumentRoot. ¿Qué funcionalidad/configuración es la adecuada?
+{
+=Configurar Virtual Hosts (Apache) o Server Blocks (Nginx). #Correcto\: Los **Virtual Hosts** o **Server Blocks** permiten alojar múltiples sitios en un mismo servidor, diferenciando por nombre de dominio (Host) y asignando un DocumentRoot por sitio.
+~%-33.3333%Cambiar el DNS para que ambos dominios apunten a la misma IP. #Incorrecto\: Apuntar ambos dominios a la misma IP es necesario, pero no suficiente. El servidor debe distinguir entre ellos con Virtual Hosts o Server Blocks.
+~%-33.3333%Duplicar el servidor físico, porque no se pueden alojar varios sitios en uno. #Incorrecto\: Sí se puede. Precisamente los Virtual Hosts existen para este caso.
+~%-33.3333%Configurar un servidor proxy inverso para cada dominio. #Incorrecto\: Un proxy inverso puede usarse en algunos casos, pero no es necesario para alojar múltiples sitios en un mismo servidor web con Virtual Hosts o Server Blocks.
+}
+
+::DAW-U3.7. Elegir servidor web::
+Vas a servir muchísimos archivos estáticos y también actuar como reverse proxy hacia una aplicación. Buscas buen rendimiento con muchas conexiones concurrentes. ¿Qué opción suele encajar mejor?
+{
+=Nginx, por su eficiencia con conexiones concurrentes y su papel como reverse proxy. #Correcto\: **Nginx** destaca en servir estático y manejar muchas conexiones, y se usa a menudo como **reverse proxy** delante de apps.
+~%-33.3333%Apache, porque Nginx presenta servicio optimizado en contenido estático. #Incorrecto\: Nginx sirve contenido estático muy bien. Apache también puede hacerlo, pero el enunciado apunta a un caso típico donde Nginx encaja especialmente.
+~%-33.3333%Tomcat, porque es el servidor web más común para cualquier contenido. #Incorrecto\: Tomcat es un **servidor de aplicaciones** (especialmente para Java). No es el servidor web generalista típico para servir estático a gran escala.
+~%-33.3333%IIS, porque es el servidor web más usado en producción. #Incorrecto\: IIS es común en entornos Windows, pero no es el más usado globalmente ni el más eficiente para servir estático y actuar como reverse proxy en muchos casos.
+}
+
+::DAW-U3.7. Servir una app Python en producción::
+Tienes una app Python (por ejemplo, Flask o Django) ejecutándose con un servidor de aplicaciones como Gunicorn. ¿Qué configuración habitual se usa para exponerla por HTTP/HTTPS?
+{
+=Nginx como servidor web y reverse proxy hacia Gunicorn. #Correcto\: Un patrón común es **Nginx** al frente (TLS, estático, proxy) y un servidor WSGI como **Gunicorn** detrás ejecutando Python.
+~%-33.3333%Un servidor web como Apache o Nginx ejecutan el código Python directamente. #Incorrecto\: Los servidores web no ejecutan código Python directamente. Necesitan un runtime o servidor de aplicaciones (WSGI/ASGI) para eso.
+~%-33.3333%Apache con mod_php para ejecutar Python. #Incorrecto\: mod_php es para PHP, no para Python. Para Python se usan módulos como mod_wsgi en Apache, pero no mod_php.
+~%-33.3333%Los servidores web no pueden servir aplicaciones Python. #Incorrecto\: Los servidores web pueden servir aplicaciones Python mediante servidores de aplicaciones (WSGI/ASGI) y configuraciones adecuadas.
+}
+
+::DAW-U3.7. Qué aporta Tomcat::
+Tu aplicación Java se empaqueta como un archivo WAR y necesita ejecutarse en un servidor. ¿Qué componente encaja mejor para desplegarla?
+{
+=Un servidor de aplicaciones como Apache Tomcat. #Correcto\: **Tomcat** gestiona el ciclo de vida de aplicaciones Java web (servlets, JSP) y despliega artefactos como WAR.
+~%-33.3333%Un servidor web con un runtime Java instalado. #Incorrecto\: Un servidor web solo no gestiona aplicaciones Java web. Necesitas un servidor de aplicaciones como Tomcat para eso.
+~%-33.3333%Un contenedor Docker con Java instalado. #Incorrecto\: Un contenedor puede contener Tomcat, pero solo tener Java no es suficiente para ejecutar una aplicación WAR.
+~%-33.3333%Un servidor LAMP. #Incorrecto\: LAMP es un stack para PHP, no para aplicaciones Java. No es adecuado para desplegar WARs.
+}
+
+::DAW-U3.7. Para qué sirve DocumentRoot::
+Estás configurando un sitio en Apache y ves la directiva DocumentRoot. ¿Qué representa en un caso real?
+{
+=El directorio del sistema de archivos desde el que se sirven los archivos del sitio. #Correcto\: **DocumentRoot** indica la carpeta base del sitio. Cuando pides /index.html, el servidor lo busca dentro de ese directorio.
+~%-33.3333%La URL pública del sitio en Internet. #Incorrecto\: La URL se define por dominio y configuración (ServerName), no por DocumentRoot.
+~%-33.3333%La carpeta raiz en la que se guardan los documentos a descargar. #Incorrecto\: DocumentRoot es la carpeta desde la que se sirven los archivos, no una carpeta de descarga específica.
+~%-33.3333%La ubicación raíz en la que se situa el archivo de configuración del servidor. #Incorrecto\: DocumentRoot no es la ubicación del archivo de configuración, sino la carpeta base para servir archivos del sitio.
+}
+

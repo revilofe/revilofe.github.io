@@ -1,0 +1,45 @@
+::DAW-U3.5. Qué tipo de app necesitas::
+Estás construyendo una web con login, perfil de usuario y comentarios que cambian según quién entra. ¿Qué tipo de web necesitas principalmente?
+{
+=Una web dinámica, porque el contenido depende de usuario y datos en base de datos. #Correcto\: En una **web dinámica** el servidor ejecuta lógica, consulta datos y genera contenido que puede variar por usuario, sesión o estado de la aplicación.
+~%-33.3333%Una web estática, con javascript dińamico, HTML y CSS. #Incorrecto\: Aunque JavaScript puede añadir interactividad, una web estática no genera contenido personalizado en el servidor ni gestiona sesiones o datos dinámicos.
+~%-33.3333%Una app WPA. #Incorrecto\: Una PWA es una web avanzada, pero puede ser estática o dinámica. La clave aquí es que el contenido cambia según usuario y datos, lo que requiere lógica en servidor.
+~%-33.3333%Una app nativa. #Incorrecto\: Una app nativa es una aplicación instalada en el dispositivo, no una web. Aunque puede tener funcionalidades similares, no es el enfoque principal para una web con login y perfiles.
+}
+
+::DAW-U3.5. Quién decide si es estático o dinámico::
+Llega la petición /perfil/ana. El servidor tiene que decidir si sirve un archivo tal cual o si debe ejecutar código para generar el HTML. ¿Qué componente toma esa decisión en el flujo típico?
+{
+=El servidor web (por ejemplo, Apache o Nginx) según su configuración. #Correcto\: El **servidor web** recibe la petición y, según la ruta y configuración, decide si sirve contenido estático o si **delegará** a un módulo o servidor de aplicaciones.
+~%-33.3333%El navegador, porque interpreta la URL. #Incorrecto\: El navegador envía la petición, pero no decide si un recurso se genera dinámicamente. Eso ocurre en el servidor.
+~%-33.3333%El backend, porque es quien recibe la petición. #Incorrecto\: El backend puede generar contenido dinámico, pero la decisión inicial de si se sirve estático o dinámico la toma el servidor web.
+~%-33.3333%El proxy inverso, porque gestiona todas las peticiones. #Incorrecto\: El proxy inverso puede redirigir o balancear carga, pero la decisión de servir estático o dinámico la hace el servidor web o backend según configuración.
+}
+
+::DAW-U3.5. Por qué una dinámica puede tardar más::
+Una página de perfil tarda más que cargar una imagen estática. ¿Cuál es la causa más probable de esa diferencia?
+{
+=En la dinámica se ejecuta código y se consulta la base de datos antes de generar la respuesta. #Correcto\: En una web dinámica hay **procesamiento** (lógica, permisos, consultas) y eso añade tiempo frente a servir un archivo estático directamente.
+~%-33.3333%Las imágenes estáticas usan HTTP y las dinámicas no. #Incorrecto\: Ambas usan HTTP/HTTPS. La diferencia está en el procesamiento del servidor y acceso a datos, no en el protocolo.
+~%-33.3333%Las estáticas están cacheadas y las dinámicas no. #Incorrecto\: Aunque el cacheo puede acelerar estáticos, la diferencia principal suele ser el procesamiento necesario para generar contenido dinámico.
+~%-33.3333%El navegador tarda mas en renderizar las páginas dinámicas. #Incorrecto\: El renderizado en el navegador puede variar, pero la mayor diferencia de tiempo suele venir del servidor y la generación de la respuesta, no del cliente.
+}
+
+::DAW-U3.5. Dónde se ejecuta el código del servidor::
+Tu equipo usa PHP para generar un perfil de usuario. Un compañero dice que el navegador del usuario ejecuta el PHP cuando llega la respuesta. ¿Qué explicación es correcta?
+{
+=PHP se ejecuta en el servidor (servidor web mas runtime), y este devuelve HTML al navegador. #Correcto\: El código PHP se ejecuta en el **servidor** (módulo o runtime) y lo que viaja al cliente es la **respuesta** (normalmente HTML, CSS, JS), no el código PHP.
+~%-33.3333%El navegador ejecuta PHP si la extensión del archivo es .php. #Incorrecto\: Los navegadores no ejecutan PHP de forma nativa. Solo interpretan HTML, CSS y JavaScript.
+~%-33.3333%PHP se ejecuta a medias\: parte en el servidor y parte en el cliente, depende de las directivas que introduzcas. #Incorrecto\: El lenguaje PHP está pensado para ejecución en servidor. Lo que puede ejecutarse en cliente es JavaScript, no PHP.
+~%-33.3333%PHP se ejecuta en el servidor web nativamente, y este devuelve el HTML al navegador. #Incorrecto\: Apache necesita un módulo o runtime (como mod_php o PHP-FPM) para ejecutar PHP. No lo hace "nativamente" sin ese componente adicional.
+}
+
+::DAW-U3.5. Delegación al módulo correcto::
+Un servidor web recibe peticiones para distintas tecnologías. ¿Cuál de estas combinaciones refleja correctamente una delegación típica para ejecutar código dinámico?
+{
+=Nginx o Apache delegan a un runtime como PHP-FPM, Gunicorn o a un servidor como Tomcat. #Correcto\: El servidor web gestiona HTTP y delega la ejecución a módulos o servidores de aplicaciones según la tecnología (PHP, Python, Java, Node.js).
+~%-33.3333%El servidor web delega a la base de datos para ejecutar el código dinámico. #Incorrecto\: La base de datos almacena y consulta datos, pero no ejecuta código de aplicación o lógica de negocio.
+~%-33.3333%El servidor web delega a un CDN para ejecutar el código dinámico. #Incorrecto\: Una CDN distribuye contenido estático, no ejecuta código dinámico ni lógica de aplicación.
+~%-33.3333%Nginx o Apache delegan a un proxy inverso para ejecutar el código dinámico. #Incorrecto\: Un proxy inverso redirige peticiones, pero no ejecuta código dinámico. La ejecución la hace el runtime o servidor de aplicaciones.
+}
+

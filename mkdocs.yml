@@ -249,6 +249,7 @@ nav:
           - '5.1.-Servidores de aplicaciones': 'section4/u05/teoria/DAW-U5.1.-ServidoresAplicaciones.md'
           - 'P5.1.-WildFly y Maven': 'section4/u05/practica/DAW-U5.-Practica001.md'
           - 'P5.2.-WildFly en contenedor y Gradle': 'section4/u05/practica/DAW-U5.-Practica002.md'
+          - 'P5.3.-Informe RA3 (sobre P5.2)': 'section4/u05/practica/DAW-U5.-Practica003.md'
   - 'Blog': 'blog.md'
   - 'Tags': 'tags.md'
   - 'Acerca de': 'about.md'

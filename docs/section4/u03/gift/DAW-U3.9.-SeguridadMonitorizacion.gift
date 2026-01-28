@@ -1,0 +1,45 @@
+::DAW-U3.9. Basic y HTTPS::
+Quieres proteger /admin con autenticación HTTP Basic para un panel interno. ¿Qué requisito es clave para que no se filtren credenciales en tránsito?
+{
+=Usar HTTPS para cifrar la comunicación. #Correcto\: Basic envía credenciales en cada petición. Con **HTTPS** viajan cifradas mediante TLS, evitando que alguien en la red las capture.
+~%-33.3333%Usar HTTP sin cifrar, porque Basic ya cifra la contraseña. #Incorrecto\: Basic no cifra por sí mismo. Codifica en Base64, que es reversible. Sin HTTPS, cualquiera puede capturar y leer las credenciales.
+~%-33.3333%Cambiar el puerto a 8080 al 443 para que sea más seguro. #Incorrecto\: Cambiar el puerto no cifra ni protege credenciales. La seguridad se basa en TLS y control de acceso.
+~%-33.3333%Usar un firewall para bloquear accesos no autorizados. #Incorrecto\: Un firewall puede ayudar, pero no protege las credenciales en tránsito. La medida clave es usar HTTPS.
+}
+
+::DAW-U3.9. Control de acceso por IP::
+Tu equipo quiere que el panel /admin solo sea accesible desde la red de la oficina o a través de VPN. ¿Qué medida encaja mejor?
+{
+=Restringir por IP el acceso a /admin en el servidor web. #Correcto\: El **control por IP** permite limitar el acceso a zonas sensibles a rangos conocidos (oficina/VPN), añadiendo una capa extra de protección.
+~%-33.3333%Permitir acceso desde cualquier IP, pero cambiar el nombre de /admin. #Incorrecto\: La seguridad por ocultación no es suficiente. Un endpoint oculto se puede descubrir y seguiría expuesto.
+~%-33.3333%Mover /admin al frontend para que el servidor no lo vea. #Incorrecto\: Un panel de administración debe controlarse en servidor. Moverlo al cliente no elimina el riesgo, y además expone lógica sensible.
+~%-33.3333%Usar autenticación Basic sin restricciones de IP. #Incorrecto\: La autenticación es importante, pero sin control por IP el panel sigue siendo accesible desde cualquier lugar, aumentando el riesgo de ataques.
+}
+
+::DAW-U3.9. Proteger un directorio con .htaccess::
+En un hosting con Apache, quieres proteger una carpeta con autenticación y reglas de acceso sin tocar la configuración global del servidor. ¿Qué mecanismo se usa típicamente?
+{
+=Usar un archivo .htaccess en el directorio para definir reglas. #Correcto\: En Apache, **.htaccess** permite aplicar configuraciones por directorio (auth, restricciones) cuando está habilitado, útil en entornos compartidos.
+~%-33.3333%Configurar el archivo robots.txt para bloquear acceso al directorio. #Incorrecto\: robots.txt solo sugiere a buscadores que no indexen, pero no protege ni restringe acceso real.
+~%-33.3333%Configurar un firewall para bloquear accesos al directorio. #Incorrecto\: Un firewall puede bloquear IPs, pero no gestiona autenticación o reglas específicas por directorio como .htaccess.
+~%-33.3333%Mover el directorio fuera del DocumentRoot. #Incorrecto\: Moverlo fuera del DocumentRoot impide el acceso web, pero no es una solución práctica si necesitas que sea accesible con restricciones.
+}
+
+::DAW-U3.9. Revisión de logs::
+Observas en los logs muchas respuestas 401 repetidas desde la misma IP contra /login en poco tiempo. ¿Qué interpretación y acción encaja mejor?
+{
+=Probable intento de fuerza bruta, y conviene alertar y aplicar medidas como bloqueo temporal. #Correcto\: Repetidos **401** desde una misma IP suelen indicar intentos de adivinar credenciales. Se puede mitigar con rate limiting, bloqueos o herramientas tipo Fail2Ban.
+~%-33.3333%Acceso legítimo que falla, así que hay que revisar las credenciales. #Incorrecto\: Aunque puede ser un usuario legítimo, el patrón sugiere ataque. Revisar credenciales no es suficiente ni adecuado.
+~%-33.3333%Recurso no existente, así que hay que crear el endpoint /login. #Incorrecto\: El endpoint /login suele existir. El problema es el patrón de accesos fallidos, no la ausencia del recurso.
+~%-33.3333%Error del servidor, así que hay que revisar la configuración del servidor web. #Incorrecto\: Un 401 indica fallo de autenticación, no error del servidor (5xx). La configuración del servidor no es el problema aquí.
+}
+
+::DAW-U3.9. Por qué rotar logs::
+Tu servidor genera muchos logs. Quieres implementar buenas prácticas en la gestión de logs y mantener histórico de forma controlada. ¿Qué práctica encaja mejor?
+{
+=Rotación de logs con archivado y compresión, y eliminación programada. #Correcto\: La **rotación** gestiona crecimiento infinito\: rota, comprime, guarda un histórico acotado y elimina lo antiguo para proteger el disco.
+~%-33.3333%Enviar los logs por email al administrador cada día. #Incorrecto\: Enviar logs por email no es práctico ni seguro para grandes volúmenes. La gestión centralizada y rotación es más adecuada.
+~%-33.3333%Guardar todos los logs comprimidos indefinidamente. #Incorrecto\: Guardar todo indefinidamente consume espacio y complica búsquedas. Es mejor definir políticas de retención.
+~%-33.3333%Reducir el nivel de logging para minimizar el tamaño, puesto que ya está en producción y no es necessario un nivel alto de detalle. #Incorrecto\: Aunque reducir el nivel puede ayudar, es importante mantener logs útiles para auditoría y diagnóstico. La rotación es la práctica clave.
+}
+

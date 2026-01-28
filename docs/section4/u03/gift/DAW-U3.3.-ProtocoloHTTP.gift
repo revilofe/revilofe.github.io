@@ -1,0 +1,45 @@
+::DAW-U3.3. Elegir verbo http::
+En una API tienes el recurso usuario. Quieres actualizar solo el campo teléfono sin tocar el resto, y evitar enviar todo el objeto completo. ¿Qué método HTTP encaja mejor?
+{
+=PATCH, porque representa una actualización parcial del recurso. #Correcto\: **PATCH** se usa para **cambios parciales**. Si solo cambias un campo, evita reenviar toda la representación del recurso como harías con PUT.
+~%-33.3333%PUT, porque es para cambios pequeños. #Incorrecto\: **PUT** suele enviar una representación completa del recurso. Si envías solo una parte, dependiendo de la implementación podrías sobrescribir campos o dejar el recurso inconsistente.
+~%-33.3333%POST, porque estás posteando solo lo que quieres cambiar. #Incorrecto\: **POST** se usa para crear recursos o enviar datos para procesamiento, no es ideal para actualizaciones parciales.
+~%-33.3333%OPTIONS, porque permite cambiar los datos permitidos. #Incorrecto\: **OPTIONS** sirve para consultar capacidades del servidor o del recurso, no para modificar datos.
+}
+
+::DAW-U3.3. Diferencia entre códigos de error http::
+En tu API hay una ruta /admin. Un usuario sin iniciar sesión hace una petición y recibe un error. Otro usuario sí ha iniciado sesión, pero no tiene permisos de admin y recibe otro error. ¿Qué combinación es la más correcta?
+{
+=401 para no autenticado y 403 para autenticado sin permisos. #Correcto\: **401 Unauthorized** significa que el servidor no sabe quién eres o la autenticación es inválida. **403 Forbidden** significa que sabe quién eres, pero no tienes permisos suficientes.
+~%-33.3333%403 para no autenticado y 401 para sin permisos. #Incorrecto\: Está invertido. 403 implica que ya hay identidad conocida, pero se prohíbe el acceso por permisos.
+~%-33.3333%404 para ambos, para esconder la ruta. #Incorrecto\: Devolver 404 como estrategia de ocultación puede usarse en algunos casos, pero no describe el significado estándar de 401/403 ni es lo más correcto para el escenario planteado.
+~%-33.3333%500 para ambos, porque es un error del servidor, al no estár permitido. #Incorrecto\: 500 es un error interno. Aquí el servidor funciona correctamente, lo que falla es la autenticación o la autorización del cliente.
+}
+
+::DAW-U3.3. Respuestas mas rapidas a traves de cabeceras en un caso real::
+Sirves CSS y JavaScript versionados (por ejemplo, app.9f3a1.js). Quieres que el navegador los guarde y no los pida en cada carga durante un tiempo. ¿Qué cabecera de respuesta es la más relevante para este objetivo?
+{
+=Cache-Control con un max-age adecuado. #Correcto\: Con **Cache-Control** puedes indicar cuánto tiempo puede considerarse válido un recurso, reduciendo peticiones repetidas y mejorando tiempos de carga.
+~%-33.3333%Accept-Cache con max-time, para indicar que aceptas cachee durante un tiempo. #Incorrecto\: No existe la cabecera **Accept-Cache**. La correcta es **Cache-Control**.
+~%-33.3333%Save-Cache, con el tiempo durante el cual guardar el recurso. #Incorrecto\: No existe la cabecera **Save-Cache**. La correcta es **Cache-Control**.
+~%-33.3333%Content-Length, para indicar el tiempo del recurso cacheado. #Incorrecto\: **Content-Length** indica el tamaño del cuerpo, no el tiempo de cacheo.
+}
+
+::DAW-U3.3. Content negotiation en APIs::
+Tu frontend puede aceptar HTML o JSON. En una petición quieres expresar al servidor que prefieres JSON, pero podrías aceptar HTML. ¿Qué cabecera de petición se usa para indicar sl servidor lo que el cliente acepta?
+{
+=Accept. #Correcto\: **Accept** indica los tipos MIME que el cliente puede procesar (por ejemplo, application/json). El servidor elige qué devolver según esa preferencia.
+~%-33.3333%Content-Type. #Incorrecto\: **Content-Type** describe el tipo del cuerpo que estás enviando en la petición (por ejemplo, JSON en un POST), no lo que quieres recibir.
+~%-33.3333%Content-Accept. #Incorrecto\: No existe la cabecera **Content-Accept**. La correcta es **Accept**.
+~%-33.3333%Server-Accept. #Incorrecto\: No existe la cabecera **Server-Accept**. La correcta es **Accept**.
+}
+
+::DAW-U3.3. Código de estado al crear::
+En un endpoint POST /pedidos, creas un nuevo pedido correctamente y quieres reflejar que se ha creado un recurso nuevo. ¿Qué código de estado es el más apropiado?
+{
+=201 Created, con la ubicación del recurso. #Correcto\: **201** indica que el servidor ha creado un recurso como resultado de la petición. Suele acompañarse de la ubicación del nuevo recurso.
+~%-33.3333%200 OK, porque todo ha ido bien. #Incorrecto\: 200 puede usarse, pero 201 es más específico cuando se **crea** un recurso nuevo con POST.
+~%-33.3333%204 No Content, porque no necesitas devolver nada. #Incorrecto\: 204 significa que no hay cuerpo de respuesta. Puede ser válido en algunos casos, pero no expresa tan claramente la creación como 201.
+~%-33.3333%202 Accepted, porque la petición ha sido aceptada para procesamiento. #Incorrecto\: 202 indica que la petición ha sido aceptada pero no procesada aún. No es lo ideal cuando el recurso ya se ha creado.
+}
+

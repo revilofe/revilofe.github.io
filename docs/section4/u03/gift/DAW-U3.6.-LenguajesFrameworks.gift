@@ -1,0 +1,45 @@
+::DAW-U3.6. Tipo de lenguaje para iterar rápido::
+Estás montando un prototipo y necesitas iterar muy rápido. Quieres copiar los archivos al servidor y que funcione sin un paso de compilación complejo. ¿Qué tipo de lenguajes encaja mejor?
+{
+=Lenguajes de scripting o interpretados (por ejemplo, PHP o Python). #Correcto\: Los lenguajes **interpretados** permiten ciclos de desarrollo rápidos y despliegue simple copiando código fuente al servidor con el runtime adecuado.
+~%-33.3333%Lenguajes compilados a nativo, porque no requieren recompilar. #Incorrecto\: En lenguajes nativos, cada cambio requiere recompilar. Además, la integración y despliegue suelen ser más exigentes.
+~%-33.3333%Lenguajes que solo se ejecutan en el navegador. #Incorrecto\: Si hablamos de backend, necesitas ejecución en servidor para lógica de negocio, seguridad y acceso a datos.
+~%-33.3333%Un lenguaje no importa, porque el servidor web ejecuta cualquier cosa automáticamente según el módulo instalado. #Incorrecto\: La ejecución depende del modelo (intérprete, runtime, servidor de aplicaciones) y de la configuración del servidor web.
+}
+
+::DAW-U3.6. Microservicio eficiente con binario único::
+Vas a desplegar un microservicio que debe consumir poca memoria y arrancar rápido, y quieres empaquetarlo como un único ejecutable sin dependencias de runtime en producción. ¿Qué opción encaja mejor?
+{
+=Go o Rust compilado a código nativo con servidor HTTP integrado. #Correcto\: Lenguajes como **Go** o **Rust** pueden generar un **binario único** que incluye un servidor HTTP y es eficiente en recursos, ideal para microservicios.
+~%-33.3333%PHP en modo script en cada petición, porque siempre es más rápido. #Incorrecto\: PHP puede rendir bien con cachés, pero sigue siendo un modelo interpretado. No ofrece binario único y depende del runtime configurado.
+~%-33.3333%Una aplicación Java en un contenedor ligero, porque Java es muy eficiente. #Incorrecto\: Java requiere la JVM como runtime, lo que añade sobrecarga y no genera un binario único sin dependencias.
+~%-33.3333%Una aplicación WPA, ya que va empaquetada y lista para usar. #Incorrecto\: Una PWA es una aplicación web avanzada, no un microservicio backend. No se empaqueta como binario ni se ejecuta en servidor sin runtime.
+}
+
+::DAW-U3.6. Código intermedio en la práctica::
+Tu empresa quiere portabilidad entre sistemas y buen rendimiento, y acepta usar una máquina virtual o runtime (por ejemplo, JVM). ¿Qué tipo de ejecución describe esto mejor?
+{
+=Compilación a código intermedio (bytecode) y ejecución en una VM. #Correcto\: En este modelo (Java, .NET) el código se compila a **bytecode** y se ejecuta en una **máquina virtual**, equilibrando portabilidad y rendimiento.
+~%-33.3333%Ejecución por scripting, sin ningún tipo de compilación previa. #Incorrecto\: En scripting no hay bytecode como artefacto principal compilado por el desarrollador, aunque pueda existir caché de bytecode como optimización.
+~%-33.3333%Compilación nativa sin runtime, pero con portabilidad total automática. #Incorrecto\: Los binarios nativos dependen del sistema y arquitectura. La portabilidad total sin recompilar no es lo habitual.
+~%-33.3333%Ejecución en el navegador, porque es la única VM real. #Incorrecto\: La VM aquí se refiere a runtimes como JVM o CLR en servidor, no al motor del navegador.
+}
+
+::DAW-U3.6. Identificar el stack::
+Vas a desplegar una aplicación PHP tradicional. Te dicen que el entorno es LAMP. ¿Qué componentes describe LAMP?
+{
+=Linux, Apache, MySQL o MariaDB, PHP. #Correcto\: LAMP es un stack clásico\: **Linux** como SO, **Apache** como servidor web, **MySQL/MariaDB** como base de datos y **PHP** como lenguaje del lado servidor.
+~%-33.3333%Linux, Angular, MongoDB, Python. #Incorrecto\: Eso mezcla frontend y tecnologías distintas. Angular es frontend, y no corresponde al acrónimo LAMP.
+~%-33.3333%Linux, Apache, Mysql, PostgreSQL. #Incorrecto\: No es el acrónimo correcto. La M se refiere a MySQL o MariaDB, y la P final a PHP (o a veces Perl/Python en variantes, pero no en esta definición).
+~%-33.3333%Linux, Apache, MongoDB, PHP. #Incorrecto\: La M en LAMP se refiere a MySQL o MariaDB, no a MongoDB.
+}
+
+::DAW-U3.6. SSR vs CSR para SEO y primera carga::
+Tu web de contenidos, una web moderna y dinámica, depende mucho de SEO y quieres que la primera carga muestre contenido lo antes posible, incluso con JavaScript desactivado o lento. ¿Qué enfoque suele encajar mejor?
+{
+=SSR (renderizado del lado del servidor). #Correcto\: Con **SSR** el servidor entrega HTML ya renderizado, mejorando primera pintura y facilitando indexación, especialmente en escenarios de contenido.
+~%-33.3333%CSR, porque el servidor no debe devolver HTML. #Incorrecto\: En CSR el navegador construye gran parte de la vista con JavaScript, lo que puede perjudicar primera carga y SEO si no está bien gestionado.
+~%-33.3333%Usar solo JSON, porque los motores de búsqueda entienden JSON. #Incorrecto\: Los motores de búsqueda no indexan JSON como contenido web. Necesitan HTML renderizado para entender y clasificar páginas.
+~%-33.3333%Usar solo HTML estático, porque es lo mejor para SEO. #Incorrecto\: Aunque el HTML estático es bueno para SEO, no permite la dinámica necesaria para personalización y funcionalidades avanzadas en una web moderna.
+}
+

@@ -1,0 +1,44 @@
+::DAW-U3.4. Página dinámica vs API::
+Estás creando una app móvil con backend remoto y que necesita listar pedidos y mostrarlos en pantalla. No quieres HTML, solo datos para pintar la interfaz nativa. ¿Qué solución encaja mejor?
+{
+=Un servicio web (API) que devuelva datos, por ejemplo en JSON. #Correcto\: Un **servicio web** expone datos y operaciones para que distintos clientes consuman la información. La app móvil suele necesitar datos estructurados, no HTML.
+~%-33.3333%Una página web dinámica, porque ya ejecuta lógica en el servidor. #Incorrecto\: Una página dinámica suele generar HTML pensado para navegador. Para un cliente móvil nativo, es más adecuado un API que devuelva datos.
+~%-33.3333%Una solucion WPA, porque se adapta a cualquier dispositivo. #Incorrecto\: Una PWA es una web avanzada, pero sigue siendo HTML/CSS/JS para navegador. No es lo ideal para una app móvil nativa que espera datos.
+~%-33.3333%Usar una base de datos en local que cachee los pedidos, y desde donde recuperar los datos. #Incorrecto\: Aunque el cliente puede tener caché local, necesita un backend para obtener y sincronizar datos reales. La base de datos local no sustituye al servicio web.
+}
+
+::DAW-U3.4. Elegir protocolo para tiempo real::
+Te piden implementar un chat dentro de una aplicación web, con mensajes que deben aparecer en tiempo real sin refrescar. ¿Qué protocolo encaja mejor?
+{
+=WebSockets, porque mantiene un canal bidireccional en tiempo real. #Correcto\: **WebSockets** permite comunicación **bidireccional** persistente, ideal para chat, juegos o dashboards en vivo.
+~%-33.3333%REST, porque contiene los verbos necesarios para realizar la comunicación. #Incorrecto\: **REST** es un modelo de petición-respuesta, no está diseñado para comunicación en tiempo real ni bidireccional sin polling constante.
+~%-33.3333%GraphQL, porque siempre es más rápido que REST. #Incorrecto\: GraphQL es útil para consultas flexibles, pero no implica tiempo real por sí solo. Para tiempo real necesitas suscripciones u otro mecanismo, y WebSockets suele ser la base.
+~%-33.3333%FTP, porque permite transferir archivos entre cliente y servidor. #Incorrecto\: FTP no está pensado para mensajería en tiempo real ni para integración directa en aplicaciones web modernas.
+}
+
+::DAW-U3.4. Qué terminología elegir::
+Tienes una app web y una app móvil. Ambas necesitan datos relacionados (perfil, pedidos, recomendaciones), pero cada una requiere campos distintos. Quieres evitar overfetching y underfetching y dar flexibilidad a los clientes. ¿Qué opción encaja mejor?
+{
+=GraphQL, porque el cliente puede pedir exactamente los campos que necesita. #Correcto\: Con **GraphQL** el cliente define la consulta y pide solo los datos necesarios, lo que ayuda cuando hay múltiples clientes con necesidades diferentes.
+~%-33.3333%REST, con Options, porque puedes elegir que campos enviar. #Incorrecto\: REST no permite al cliente definir qué campos quiere en la respuesta. Options se usa para consultar capacidades, no para seleccionar campos.
+~%-33.3333%WebSockets, porque sustituye cualquier API, y puede ser usado por app web y movil. #Incorrecto\: WebSockets es para comunicación en tiempo real, no para estructurar consultas de datos. Puedes usarlo como transporte, pero no reemplaza el diseño de API. No resuelve overfetching/underfetching.
+~%-33.3333%Servir JSON, porque así el cliente recibe lo que quiere. #Incorrecto\: Servir JSON es un formato de datos, pero no define cómo se estructuran las consultas o respuestas. No resuelve el problema de overfetching/underfetching como lo hace GraphQL.
+}
+
+::DAW-U3.4. Verificación de JWT en producción::
+Tu frontend envía un token JWT en cada petición a /api/perfil. ¿Qué debe hacer el backend antes de confiar en ese token para autorizar el acceso?
+{
+=Verificar la firma y la expiración del token en cada petición. #Correcto\: Un JWT es **autocontenido**, pero el servidor debe **verificar** que no ha sido manipulado (firma) y que sigue siendo válido (exp). Sin eso, cualquiera podría falsificarlo.
+~%-33.3333%Decodificarlo y chequear el contenido del payload. #Incorrecto\: Decodificar un JWT es fácil, pero no garantiza que sea válido o no haya sido modificado. La verificación de la firma es esencial para confiar en su contenido.
+~%-33.3333%Guardar el JWT en una variable global del servidor para las siguientes peticiones. #Incorrecto\: Cada petición es independiente. Guardar en variable global no tiene sentido y no protege contra tokens falsificados.
+~%-33.3333%Guardar el JWT en una base de datos para futuras validaciones. #Incorrecto\: Los JWT están diseñados para ser verificados sin necesidad de almacenarlos. Guardarlos en BD va contra su propósito y añade complejidad innecesaria.}
+
+::DAW-U3.4. Sirve contenido desde nodos cercanos en un caso tipo Netflix::
+Tu plataforma de vídeo empieza a tener usuarios en distintos continentes y el streaming sufre latencia y cortes. Quieres acercar el contenido al usuario sin saturar tu servidor central. ¿Qué estrategia encaja mejor?
+{
+=Usar una CDN para distribuir contenido estático (vídeo) cerca del usuario. #Correcto\: Una **CDN** replica y sirve contenido desde nodos cercanos, reduciendo latencia y descargando al origen. Es la idea del enfoque tipo Open Connect.
+~%-33.3333%Cachear la información que se sirve caches intermedias. #Incorrecto\: Aunque cachear ayuda, una CDN es una solución más completa y optimizada para distribuir contenido multimedia a escala global.
+~%-33.3333%Cachear en el navegador del usuario. #Incorrecto\: El cacheo en el navegador es limitado y no resuelve la latencia global ni la carga en el servidor central.
+~%-33.3333%Usar un servidor proxy inverso en el servidor central. #Incorrecto\: Un proxy inverso ayuda en gestión de tráfico, pero no acerca el contenido al usuario ni reduce la latencia global como lo hace una CDN.
+}
+

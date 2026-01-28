@@ -1,0 +1,45 @@
+::DAW-U3.2. Elegir arquitectura para un MVP::
+Vas a construir un MVP para validar una idea con un equipo pequeño y un plazo muy ajustado. Aún no conoces bien la carga real ni los límites del producto. ¿Qué arquitectura suele encajar mejor como punto de partida?
+{
+=Arquitectura monolítica bien estructurada. #Correcto\: Para un MVP y equipo pequeño, un **monolito** suele ser más simple de desarrollar, desplegar y depurar. Si está bien organizado (capas claras y bajo acoplamiento), es una base razonable.
+~%-33.3333%Microservicios desde el día 1, aunque no haya límites claros. #Incorrecto\: Microservicios aportan escalado independiente, pero también añaden complejidad operativa (red, observabilidad, despliegues distribuidos) que suele penalizar en fases muy tempranas.
+~%-33.3333%Serverless para toda la aplicación, incluida la base de datos en el cliente. #Incorrecto\: Serverless puede ser útil para partes, pero no implica mover persistencia al cliente. Además, no elimina la necesidad de diseñar bien datos y seguridad.
+~%-33.3333%Una arquitectura distribuida con diversas tecnologías actuales. #Incorrecto\: En un MVP, mezclar muchas tecnologías suele aumentar el riesgo y el coste de mantenimiento sin aportar valor inmediato.
+}
+
+::DAW-U3.2. Escalar solo una parte::
+Tu aplicación tiene un módulo de generación de informes que consume mucha CPU y se usa masivamente solo a final de mes. El resto de la app tiene carga normal. ¿Qué enfoque arquitectónico ayuda mejor a escalar solo ese módulo sin escalarlo todo?
+{
+=Separar el módulo como servicio independiente para escalarlo de forma aislada. #Correcto\: En arquitecturas basadas en **servicios** o **microservicios**, puedes escalar de forma independiente el componente que lo necesita, sin sobredimensionar toda la aplicación.
+~%-33.3333%Centrase en la solución del problema, por ejemplo asignar mas RAM, sin tocar la arquitectura. #Incorrecto\: Eso sería escalabilidad vertical. Puede ayudar, pero sigues escalando todo el monolito, y no siempre resuelve picos puntuales ni mejora la disponibilidad.
+~%-33.3333%Cambiar a un diseño MVC, ya que los informes están centrados en la vista y permitirá separar la carga. #Incorrecto\: MVC organiza responsabilidades, pero no resuelve la necesidad de escalar solo un módulo específico como parece ser el caso.
+~%-33.3333%Mover el cálculo al navegador del usuario para ahorrar CPU del servidor, ya que es una funcionalidad asociada a la vista. #Incorrecto\: Puede ser peligroso y no siempre viable. Además, la generación de informes suele implicar acceso a datos y lógica que no debe exponerse al cliente.
+}
+
+::DAW-U3.2. Mitigar caída del servidor::
+Tu servicio no puede quedarse fuera de servicio por la caída de una única máquina. ¿Qué medida encaja mejor con la mitigación del fallo del servidor en cliente-servidor?
+{
+=Alta disponibilidad con cluster y failover automático. #Correcto\: Para evitar el punto único de fallo, se usan **clusters** con **redundancia** y mecanismos de **failover** que sustituyen una instancia caída por otra operativa.
+~%-33.3333%Aumentar el tiempo de espera del navegador para evitar caidas #Incorrecto\: Aumentar timeouts solo hace que el usuario espere más, pero no evita la caída del servidor ni recupera el servicio.
+~%-33.3333%Asignar mayor tamaños de cache, para evitar caidas y tener una respuesta mas rápida. #Incorrecto\: Cachear puede mejorar rendimiento, pero no mitiga la caída de un servidor. Si el servidor falla, la cache local no puede suplir toda la funcionalidad.
+~%-33.3333%Virtualizar la maquina, para facilitar la restauración instantanea. #Incorrecto\: La virtualización ayuda en gestión y despliegue, pero no elimina el riesgo de fallo. La alta disponibilidad requiere múltiples instancias activas o en espera.
+}
+
+::DAW-U3.2. Cuándo usar serverless::
+Tienes una funcionalidad que se ejecuta de forma esporádica (por ejemplo, generar miniaturas al subir imágenes), y quieres pagar solo cuando se ejecuta, sin administrar servidores. ¿Qué modelo encaja mejor?
+{
+=Serverless. #Correcto\: En **serverless** despliegas funciones que se ejecutan cuando hay eventos. Es útil con carga variable y reduce la gestión de infraestructura, pagando por uso.
+~%-33.3333%Monolito en una sola máquina, minimizando el número de máquinas. #Incorrecto\: Puede servir para empezar, pero no aporta pago por ejecución ni elimina la administración de servidores.
+~%-33.3333%Arquitectura de capas, pero con todas las capas en un único servidor. #Incorrecto\: No aborda la necesidad de ejecución bajo demanda ni el modelo de pago por uso.
+~%-33.3333%Software as a service, pagando por uso. #Incorrecto\: SaaS es un modelo de entrega de software completo, no una forma de ejecutar funciones bajo demanda.
+}
+
+::DAW-U3.2. Responsabilidad en MVC::
+En una app con patrón MVC, llega una petición para actualizar el perfil. Hay que validar datos, aplicar reglas de negocio y luego decidir qué respuesta devolver. ¿Qué componente suele coordinar ese flujo?
+{
+=El controlador. #Correcto\: En MVC, el **controlador** recibe la petición, coordina la interacción con el **modelo** (reglas y datos) y decide qué **vista** o respuesta se entrega al cliente.
+~%-33.3333%La vista, sabe la respuesta que dar, y decidira donde validar datos y aplicar reglas de negocio. #Incorrecto\: La vista se centra en presentar información. Puede incluir lógica de presentación, pero no debería orquestar reglas de negocio ni coordinar el flujo principal.
+~%-33.3333%El modelo, porque ademas de validar reglas de negocio, también pinta la interfaz. #Incorrecto\: El modelo gestiona datos y reglas de negocio, pero no se encarga de la presentación ni de coordinar el flujo de la aplicación.
+~%-33.3333%El conector, para conectar los distintos componentes vista y modelo. #Incorrecto\: El conector no es un componente estándar en MVC. La responsabilidad de coordinar el flujo recae en el controlador.
+}
+

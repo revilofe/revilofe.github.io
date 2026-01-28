@@ -1,0 +1,45 @@
+::DAW-U3.1. Escalabilidad en despliegue::
+Tu equipo va a lanzar una campaña que puede multiplicar por 10 el tráfico durante 2 horas. Quieres que la web aguante el pico sin caerse ni volverse inusable. ¿Qué objetivo del despliegue estás priorizando principalmente?
+{
+=Escalabilidad. #Correcto\: El objetivo de **escalabilidad** es poder **crecer** ante más carga, por ejemplo añadiendo recursos (vertical) o más instancias (horizontal) para soportar picos de tráfico.
+~%-33.3333%Accesibilidad. #Incorrecto\: La **accesibilidad** busca que esté disponible 24/7 y desde distintos dispositivos y ubicaciones, pero por sí sola no garantiza absorber un pico de carga sin degradación.
+~%-33.3333%Estabilidad. #Incorrecto\: La **estabilidad** se centra en funcionamiento consistente y minimizar caídas, pero el problema planteado es **absorber más carga**. Sin escalado, el sistema puede ser estable pero quedarse corto.
+~%-33.3333%Seguridad. #Incorrecto\: La **seguridad** protege datos y comunicaciones (HTTPS, auth, etc.). Es crucial, pero no resuelve el cuello de botella de capacidad durante un pico.
+}
+
+::DAW-U3.1. Validación peticiones::
+Estás implementando un formulario de registro. Se debe validar que el email tiene formato correcto. ¿Dónde debe estar la validación definitiva de permisos y reglas de negocio?
+{
+=En el backend. #Correcto\: El navegador es un entorno **no confiable**. La validación final de **autorización** y reglas de negocio debe hacerse en el **servidor**, porque el usuario puede modificar el frontend o enviar peticiones directas. Es decir, tu sistema debe impedir que alguien se registre con un rol de administrador manipulando el HTML o el JavaScript en el navegador
+~%-33.3333%En el frontend, porque es donde se introduce los datos. #Incorrecto\: El frontend mejora la experiencia (feedback rápido), pero no puede garantizar seguridad. Cualquiera puede saltarse esa validación enviando peticiones manuales.
+~%-33.3333%En el DNS, bloqueando peticiones sospechosas. #Incorrecto\: DNS resuelve nombres a IP. No aplica reglas de negocio ni permisos de registro.
+~%-33.3333%En el navegador, usando almacenamiento local para fijar el rol. #Incorrecto\: El almacenamiento del navegador también se puede manipular. Además, el rol debe ser decidido por el servidor, no por el cliente.
+}
+
+::DAW-U3.1. Backend y frontal::
+Una empresa quiere la misma funcionalidad para web, móvil y una futura app de escritorio. Quieren reutilizar lógica de negocio y evitar duplicar validaciones. ¿Qué enfoque encaja mejor con la idea de un backend universal?
+{
+=Exponer un backend con una API para que distintos clientes consuman la misma lógica. #Correcto\: Un **backend universal** centraliza lógica y datos, y puede servir a varios clientes (web, móvil, escritorio) mediante una **API** común.
+~%-33.3333%Reescribir la lógica completa en cada cliente para ir más rápido. #Incorrecto\: Duplicar lógica aumenta errores e inconsistencias. Además, reglas de negocio y permisos deben centralizarse y controlarse en el servidor.
+~%-33.3333%Usar lenguajes multiplataforma para reutilizar la implementación de la lógica de negocio. #Incorrecto\: Aunque sería una opción, no es lo ideal. La lógica de negocio debe estar en el backend para seguridad y consistencia, no en clientes.
+~%-33.3333%No es una opción posible, ya que son arquitecturas distintas. #Incorrecto\: se puede reutilizar la lógica de negocio realizando un diseño arquitectónico en el que esta parte esté desacoplada de la parte visual que si está acoplada al tipo de aplicación.
+}
+
+::DAW-U3.1. Elegir tipo de app encaja mejor en un caso real::
+Tu producto es una web de reparto que debe funcionar con mala cobertura. El usuario quiere poder abrirla como si fuera una app, que cargue rápido y que pueda hacer algunas acciones sin conexión. ¿Qué opción encaja mejor?
+{
+=Una PWA, porque puede ser instalable y ofrecer capacidades offline. #Correcto\: Una **PWA** combina la accesibilidad de la web con experiencia de app (instalable) y puede soportar **offline** mediante cacheado y service workers.
+~%-33.3333%Una página web tradicional, ya que permite almacenamiento en el navegador. #Incorrecto\: Una web tradicional suele ser principalmente informativa y con poca interactividad, y no está pensada para instalarse ni trabajar offline.
+~%-33.3333%Una app web estática, porque no necesita servidor. #Incorrecto\: Que sea estática no garantiza offline real ni experiencia instalable. Además, el caso implica funcionalidad y estado, no solo contenido.
+~%-33.3333%Una app nativa obligatoria, porque la web no puede funcionar offline. #Incorrecto\: La web moderna sí puede ofrecer offline parcial mediante PWA. Una app nativa puede ser una opción, pero no es la única ni la que mejor encaja con lo descrito.
+}
+
+::DAW-U3.1. Por qué la primera carga es más lenta::
+Un usuario entra por primera vez a un dominio y nota que tarda bastante, pero si refresca o vuelve a entrar minutos después, carga mucho más rápido sin que el servidor haya cambiado. ¿Qué explicación encaja mejor con el flujo real de una petición web?
+{
+=La primera vez hay resolución DNS y luego quedan cachés, reduciendo trabajo en visitas posteriores. #Correcto\: En la primera visita puede haber **cache miss** y se realiza resolución DNS consultando varias capas. Después, la IP y otros datos pueden quedar en **caché** (navegador, SO, router, ISP), acelerando accesos posteriores.
+~%-33.3333%El navegador omite TCP y envía HTTP directamente a cualquier IP aleatoria. #Incorrecto\: Antes de HTTP se establece una conexión fiable (TCP) y se necesita la IP correcta. Saltarse esto no es cómo funciona la web.
+~%-33.3333%La diferencia se debe a que el HTML ya ha sido renderizado en la primera consulta, por tanto este tiempo se gana en las siguientes respuestas. #Incorrecto\: El renderizado ocurre en el navegador tras recibir la respuesta, y se realiza en cada respuesta. No explica la diferencia de tiempo entre visitas.
+~%-33.3333%La segunda vez el servidor no procesa nada y siempre responde vacío. #Incorrecto\: Aunque haya cachés, el servidor no responde vacío por defecto. La mejora típica viene de cachés y reutilización de conexiones, no de respuestas vacías.
+}
+

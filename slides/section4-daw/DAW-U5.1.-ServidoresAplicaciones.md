@@ -768,7 +768,7 @@ alternativas a Express como Fastify o NestJS, según necesidades del equipo.
 - Simplifica rutas y middlewares
 - Permite centrarse en la lógica de negocio
 
-![Express](assets/express-logo.png) <!-- .element height="30%" -->
+![Express](assets/express-logo.png) <!-- .element height="20%" -->
 
 Note: Express reduce "trabajo repetitivo": define rutas, middlewares,
 controladores y estructura. Así el equipo se centra en la **lógica de negocio**
@@ -783,7 +783,7 @@ consistente, con logging, seguridad y validaciones en puntos centralizados.
 - Define scripts de build, lint, test y empaquetado
 - Alternativas: Yarn, pnpm, y runtime Bun
 
-![npm](assets/npm-logo.png) <!-- .element height="30%" -->
+![npm](assets/npm-logo.png) <!-- .element height="20%" -->
 
 Note: `npm` es clave para despliegues reproducibles: fija dependencias con
 lockfiles y permite automatizar tareas con scripts. Un `package.json` suele

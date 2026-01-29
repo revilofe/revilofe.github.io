@@ -223,7 +223,7 @@ aplicaciones, definiremos **servlet**, y revisaremos la lista de servicios
 comunes que diferencian un servidor "empresarial" de un contenedor mínimo.
 
 
-### 3.1. Flujo de peticiones en un servidor Java
+### 3.1. Servidor aplicaciones: Flujo 
 
 - Web recibe HTTP: estático responde; dinámico reenvía
 - Servidor de aplicaciones crea Request/Response y ejecuta servlet

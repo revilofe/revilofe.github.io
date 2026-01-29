@@ -750,11 +750,11 @@ Esto conecta con despliegue moderno y con proyectos fullstack.
 ### 7.1. Node.js
 
 - Entorno de ejecución de JavaScript en servidor
-- No es un lenguaje ni un framework
+- Node.js no es un lenguaje ni un framework
 - Módulos nativos: `http`, `fs`, etc.
 - En profesional: frameworks como Express, Fastify o NestJS
 
-![Node.js](assets/nodejs-new-pantone-black.svg) <!-- .element height="10%" -->
+![Node.js](assets/nodejs-new-pantone-black.svg) <!-- .element: height="10%" -->
 
 Note: Node.js permite ejecutar JavaScript fuera del navegador. Importante:
 no es un framework. Trae módulos para HTTP o ficheros, pero en proyectos

@@ -754,7 +754,7 @@ Esto conecta con despliegue moderno y con proyectos fullstack.
 - Módulos nativos: `http`, `fs`, etc.
 - En profesional: frameworks como Express, Fastify o NestJS
 
-![Node.js](assets/nodejs-new-pantone-black.svg) <!-- .element: height="10%" -->
+![Node.js](assets/nodejs-new-pantone-black.svg) <!-- .element: style="max-width: 10%;" -->
 
 Note: Node.js permite ejecutar JavaScript fuera del navegador. Importante:
 no es un framework. Trae módulos para HTTP o ficheros, pero en proyectos

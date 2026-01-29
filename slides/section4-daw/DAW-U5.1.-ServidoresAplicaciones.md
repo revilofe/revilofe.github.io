@@ -130,7 +130,7 @@ servicios comunes para que la aplicación no los reimplemente una y otra vez.
 - Aporta sesiones, seguridad, transacciones, recursos y logs
 - Suele ubicarse entre servidor web y base de datos
 
-![Arquitectura](assets/application-server1.webp) <!-- .element height="20%" -->
+![Arquitectura](assets/application-server1.webp) <!-- .element: style="max-width: 50%;" -->
 
 Note: Un servidor de aplicaciones es un entorno donde corre nuestra app y que
 añade servicios de infraestructura. Se coloca entre el servidor web y la base
@@ -176,7 +176,7 @@ pools de conexiones, transacciones y mejores herramientas de seguridad y logs.
 - Filtra peticiones antes de tocar datos sensibles
 - Permite controles más estrictos en la capa de negocio
 
-![Capa de control](assets/serv_apl.png) <!-- .element height="20%" -->
+![Capa de control](assets/serv_apl.png) <!-- .element: style="max-width: 50%;" -->
 
 Note: Al separar capas, protegemos mejor la parte sensible. El frontal puede
 hacer caché, limitar tasa y terminar TLS, y el servidor de aplicaciones puede
@@ -230,7 +230,7 @@ comunes que diferencian un servidor "empresarial" de un contenedor mínimo.
 - El servlet consulta datos o aplica lógica de negocio
 - La respuesta vuelve al servidor web y se entrega al cliente
 
-![Capas](assets/capas.webp) <!-- .element height="20%" -->
+![Capas](assets/capas.webp) <!-- .element: style="max-width: 50%;" -->
 
 Note: El flujo típico separa responsabilidades. El servidor web decide si
 responde con estático o si envía al backend. El servidor de aplicaciones
@@ -406,7 +406,7 @@ monitorización y el rollback son parte del despliegue, no algo opcional.
 - Preproducción: replica producción para validación
 - Producción: sistema real para personas usuarias
 
-![Entornos](assets/deploy.png) <!-- .element height="20%" -->
+![Entornos](assets/deploy.png) <!-- .element: style="max-width: 50%;" -->
 
 Note: El despliegue mueve cambios por entornos, normalmente de izquierda a
 derecha. La idea clave: validar en entornos cada vez más parecidos al real.
@@ -715,7 +715,7 @@ una u otra depende del proyecto, pero lo importante es entender conceptos.
 - Configuración en `pom.xml`
 - Dependencias desde repos (ej.: Maven Central)
 
-![Maven](assets/maven-logo.png)<!-- .element height="10%" -->
+![Maven](assets/maven-logo.png) <!-- .element: style="max-width: 30%;" -->
 
 Note: Maven simplifica builds complejas. Con un comando ejecuta fases en orden.
 Si hacemos `mvn package`, Maven ejecuta fases previas automáticamente. La
@@ -754,7 +754,7 @@ Esto conecta con despliegue moderno y con proyectos fullstack.
 - Módulos nativos: `http`, `fs`, etc.
 - En profesional: frameworks como Express, Fastify o NestJS
 
-![Node.js](assets/nodejs-new-pantone-black.svg) <!-- .element: style="max-width: 10%;" -->
+![Node.js](assets/nodejs-new-pantone-black.svg) <!-- .element: style="max-width: 30%;" -->
 
 Note: Node.js permite ejecutar JavaScript fuera del navegador. Importante:
 no es un framework. Trae módulos para HTTP o ficheros, pero en proyectos
@@ -768,7 +768,7 @@ alternativas a Express como Fastify o NestJS, según necesidades del equipo.
 - Simplifica rutas y middlewares
 - Permite centrarse en la lógica de negocio
 
-![Express](assets/express-logo.png) <!-- .element height="10%" -->
+![Express](assets/express-logo.png) <!-- .element: style="max-width: 30%;" -->
 
 Note: Express reduce "trabajo repetitivo": define rutas, middlewares,
 controladores y estructura. Así el equipo se centra en la **lógica de negocio**
@@ -783,7 +783,7 @@ consistente, con logging, seguridad y validaciones en puntos centralizados.
 - Define scripts de build, lint, test y empaquetado
 - Alternativas: Yarn, pnpm, y runtime Bun
 
-![npm](assets/npm-logo.png) <!-- .element height="10%" -->
+![npm](assets/npm-logo.png) <!-- .element: style="max-width: 30%;" -->
 
 Note: `npm` es clave para despliegues reproducibles: fija dependencias con
 lockfiles y permite automatizar tareas con scripts. Un `package.json` suele
@@ -806,7 +806,7 @@ para automatizar sin romper producción.
 - Reduce errores humanos
 - Entrega cambios frecuente, segura y medible
 
-![CI/CD](assets/ci-cd-flow-desktop.png) <!-- .element height="20%" -->
+![CI/CD](assets/ci-cd-flow-desktop.png) <!-- .element: style="max-width: 40%;" -->
 
 Note: CI/CD es un conjunto de prácticas, no una herramienta concreta. La idea
 es que cada cambio pase por una cadena automatizada: compilar, probar,
@@ -833,7 +833,7 @@ hacia CD cuando el proceso es fiable.
 - Ejecutar pruebas automatizadas en cada integración
 - Detectar fallos temprano, antes de producción
 
-![CI](assets/ci.png)<!-- .element height="10%" -->
+![CI](assets/ci.png)<!-- .element: style="max-width: 40%;" -->
 
 Note: La CI reduce conflictos y sorpresas. Integrar frecuentemente evita que
 una rama se quede descolgada semanas. Cada push ejecuta pruebas, linters y
@@ -847,7 +847,7 @@ práctica de calidad y de colaboración en equipo.
 - Listos para desplegar cuando operaciones lo decida
 - Reduce pasos manuales y errores en releases
 
-![CD](assets/cd.png) <!-- .element height="20%" -->
+![CD](assets/cd.png)<!-- .element: style="max-width: 40%;" -->
 
 Note: En CD, el objetivo es tener un artefacto listo: un WAR, una imagen
 Docker, un paquete, etc. No siempre se despliega automáticamente, pero el
@@ -861,7 +861,7 @@ release y reduce dependencia de pasos manuales que suelen introducir errores.
 - Requiere pruebas completas y confiables
 - Aporta velocidad, pero exige mucha madurez
 
-![Deploy](assets/cd2.png) <!-- .element height="20%" -->
+![Deploy](assets/cd2.png)<!-- .element: style="max-width: 40%;" -->
 
 Note: El despliegue continuo automatiza hasta producción. Su beneficio es
 rapidez, pero el requisito es duro: **pruebas fiables** y cobertura suficiente.

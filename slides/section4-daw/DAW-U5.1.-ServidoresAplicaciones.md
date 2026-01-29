@@ -715,7 +715,7 @@ una u otra depende del proyecto, pero lo importante es entender conceptos.
 - Configuración en `pom.xml`
 - Dependencias desde repos (ej.: Maven Central)
 
-![Maven](assets/maven-logo.png) <!-- .element height="20%" -->
+![Maven](assets/maven-logo.png)<!-- .element height="10%" -->
 
 Note: Maven simplifica builds complejas. Con un comando ejecuta fases en orden.
 Si hacemos `mvn package`, Maven ejecuta fases previas automáticamente. La
@@ -754,7 +754,7 @@ Esto conecta con despliegue moderno y con proyectos fullstack.
 - Módulos nativos: `http`, `fs`, etc.
 - En profesional: frameworks como Express, Fastify o NestJS
 
-![Node.js](assets/nodejs-new-pantone-black.svg) <!-- .element height="20%" -->
+![Node.js](assets/nodejs-new-pantone-black.svg) <!-- .element height="10%" -->
 
 Note: Node.js permite ejecutar JavaScript fuera del navegador. Importante:
 no es un framework. Trae módulos para HTTP o ficheros, pero en proyectos
@@ -768,7 +768,7 @@ alternativas a Express como Fastify o NestJS, según necesidades del equipo.
 - Simplifica rutas y middlewares
 - Permite centrarse en la lógica de negocio
 
-![Express](assets/express-logo.png) <!-- .element height="20%" -->
+![Express](assets/express-logo.png) <!-- .element height="10%" -->
 
 Note: Express reduce "trabajo repetitivo": define rutas, middlewares,
 controladores y estructura. Así el equipo se centra en la **lógica de negocio**
@@ -783,7 +783,7 @@ consistente, con logging, seguridad y validaciones en puntos centralizados.
 - Define scripts de build, lint, test y empaquetado
 - Alternativas: Yarn, pnpm, y runtime Bun
 
-![npm](assets/npm-logo.png) <!-- .element height="20%" -->
+![npm](assets/npm-logo.png) <!-- .element height="10%" -->
 
 Note: `npm` es clave para despliegues reproducibles: fija dependencias con
 lockfiles y permite automatizar tareas con scripts. Un `package.json` suele
@@ -833,7 +833,7 @@ hacia CD cuando el proceso es fiable.
 - Ejecutar pruebas automatizadas en cada integración
 - Detectar fallos temprano, antes de producción
 
-![CI](assets/ci.png) <!-- .element height="20%" -->
+![CI](assets/ci.png)<!-- .element height="10%" -->
 
 Note: La CI reduce conflictos y sorpresas. Integrar frecuentemente evita que
 una rama se quede descolgada semanas. Cada push ejecuta pruebas, linters y

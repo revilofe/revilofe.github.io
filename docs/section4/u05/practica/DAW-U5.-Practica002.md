@@ -81,17 +81,84 @@ docker exec -it wildfly /opt/jboss/wildfly/bin/add-user.sh
 
 Selecciona usuario de gestión (Management User) y crea tu usuario y contraseña.
 
+```
+What type of user do you wish to add?
+a) Management User (mgmt-users.properties)
+b) Application User (application-users.properties)
+(a):
+
+Enter the details of the new user to add.
+Using realm 'ManagementRealm' as discovered from the existing property files.
+Username : wildfly
+
+Password recommendations are listed below. To modify these restrictions edit the add-user.properties configuration file.
+ - The password should be different from the username
+ - The password should not be one of the following restricted values {root, admin, administrator}
+ - The password should contain at least 8 characters, 1 alphabetic character(s), 1 digit(s), 1 non-alphanumeric symbol(s)
+Password : 
+Re-enter Password : 
+What groups do you want this user to belong to? (Please enter a comma separated list, or leave blank for none)[  ]: 
+About to add user 'wildfly' for realm 'ManagementRealm'
+Is this correct yes/no? yes
+
+About to add user 'wildfly' for realm 'ManagementRealm'
+Is this correct yes/no? yes
+Added user 'wildfly' to file '/opt/jboss/wildfly/standalone/configuration/mgmt-users.properties'
+Added user 'wildfly' to file '/opt/jboss/wildfly/domain/configuration/mgmt-users.properties'
+Added user 'wildfly' with groups  to file '/opt/jboss/wildfly/standalone/configuration/mgmt-groups.properties'
+Added user 'wildfly' with groups  to file '/opt/jboss/wildfly/domain/configuration/mgmt-groups.properties'
+```
+
 Para reiniciar el contenedor si es necesario:
 
 ```sh
 docker restart wildfly
 ```
 
+#### 3.3. Acceder a la consola de administración del contenedor
+
+
 Accede a la consola web:
 
-`http://localhost:9990`
+`http://localhost:8080/console` o `http://localhost:9990`
 
-#### 3.3. Preparar el proyecto con Gradle
+pisiblemente, hayas obtenido el siguiente mensaje de error al intentar acceder a la consola de administración:
+
+!!! warning "Error de redirección en la consola de administración de WildFly"
+    Welcome to WildFly
+    Unable to redirect.
+    An automatic redirect to the Administration Console is not currently available. This is most likely due to the administration console being exposed over a network interface different from the one to which you are connected to.
+    
+    To access the Administration console you should contact the administrator responsible for this WildFly installation and ask them to provide you with the correct address.
+
+
+Es necesario añadir un parámetro extra al comando `docker run` para "abrir" la consola de administración a conexiones externas (fuera del contenedor).
+
+Por defecto, la consola de administración de WildFly solo escucha en `127.0.0.1` (localhost **dentro** del contenedor). Al intentar entrar desde tu navegador (que está fuera), WildFly rechaza la conexión o no sabe cómo redirigirte porque detecta que vienes de una IP externa.
+
+##### 3.3.1 Solución: Exponer la interfaz de administración
+
+Debes modificar el comando de arranque para incluir `-bmanagement 0.0.0.0`. Esto le dice a WildFly que acepte conexiones a la consola de gestión desde cualquier dirección IP.
+
+**Pasos para corregirlo ahora mismo:**
+
+1.  Borra el contenedor actual (si no lo has hecho ya):
+    ```bash
+    docker rm -f wildfly
+    ```
+
+2.  Lanza el contenedor con el comando corregido:
+    ```bash
+    docker run -d --name wildfly -p 8080:8080 -p 9990:9990 quay.io/wildfly/wildfly:latest /opt/jboss/wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
+    ```
+
+!!! Note "levantar el contenedor WildFly con acceso externo a la consola"
+    Los parámetros `-b 0.0.0.0` y `-bmanagement 0.0.0.0` son necesarios para poder acceder a la aplicación y a la consola desde fuera del contenedor Docker.
+
+Ahora deberás ejecutar el punto 3.2 para crear el usuario de administración, y después podrás acceder a la consola sin problemas.
+
+
+#### 3.4. Preparar el proyecto con Gradle
 
 Usaremos un proyecto base con una API REST sencilla:
 
@@ -134,7 +201,7 @@ tasks.withType<War> {
 
 ```
 
-#### 3.3.1. Generar el wrapper de Gradle
+##### 3.4.1. Generar el wrapper de Gradle
 
 Si el proyecto no incluye `gradlew`, necesitas crear el **Gradle Wrapper**. Para ello debes tener Gradle instalado en tu sistema.
 
@@ -151,7 +218,7 @@ sudo apt update
 sudo apt install gradle
 ```
 
-Una vez instalado, genera el wrapper desde la raíz del proyecto:
+Tanto si ya tenías instalado `gradle`, como si lo has instalado, genera el wrapper desde la raíz del proyecto ejecutando:
 
 ```sh
 gradle wrapper
@@ -165,7 +232,7 @@ Después ya puedes usar el wrapper para evitar problemas de versión:
 ./gradlew --version
 ```
 
-#### 3.4. Build del WAR con Gradle
+#### 3.5. Build del WAR con Gradle
 
 Genera el WAR:
 
@@ -177,7 +244,7 @@ El archivo se genera en:
 
 `build/libs/modulename.backend-0.0.1-SNAPSHOT.war`
 
-#### 3.5. Despliegue en WildFly (contenedor)
+#### 3.6. Despliegue en WildFly (contenedor)
 
 Hay dos formas sencillas de desplegar el WAR en el contenedor. Usaremos la más directa: copiar al directorio `deployments`.
 
@@ -193,7 +260,11 @@ docker logs -f wildfly
 
 Si todo va bien, verás que el WAR se despliega automáticamente.
 
-#### 3.6. Pruebas de la API
+#### 3.7. Pruebas de la API
+
+Siendo la siguiente URL base para la API desplegada:
+
+`http://localhost:8080/myproject/module/backend/api/myservice`
 
 Prueba el endpoint `hello` en el navegador:
 
@@ -206,26 +277,28 @@ Prueba el endpoint `hello` en el navegador:
 
 Comprueba `/pojo/list`:
 
+`http://localhost:8080/myproject/module/backend/api/myservice/pojo/list`
+
 <figure markdown>
   ![](assets/api2.png)
   <figcaption>Respuesta JSON del endpoint /pojo/list.</figcaption>
 </figure>
 
-#### 3.7. Pruebas con curl
+#### 3.8. Pruebas con curl
 
-- Crear nueva entrada:
+- Crear nueva entrada `/pojo/new`:
 
 ```sh
 curl -d '{"id":"2023", "name":"Despliegue"}' -H "Content-Type: application/json" -X POST http://localhost:8080/myproject/module/backend/api/myservice/pojo/new
 ```
 
-- Actualizar una entrada:
+- Actualizar una entrada `/pojo/update`:
 
 ```sh
 curl -d '{"id":"55", "name":"Raul"}' -H "Content-Type: application/json" -X PUT http://localhost:8080/myproject/module/backend/api/myservice/pojo/update
 ```
 
-- Eliminar una entrada:
+- Eliminar una entrada `/pojo/remove`:
 
 ```sh
 curl -X DELETE http://localhost:8080/myproject/module/backend/api/myservice/pojo/remove?id=3

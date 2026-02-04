@@ -112,8 +112,7 @@ server {
 
 Con esto:
 
-- El alumnado consumiría `http://ejemplo.local/api/...` en vez de conocer la
-  ruta completa de WildFly.
+- El alumnado consumiría `http://ejemplo.local/api/...` en vez de conocer la ruta completa de WildFly.
 - **9990 no se publica** al exterior; solo se usa internamente/por VPN.
 
 **Evidencias típicas**
@@ -134,9 +133,8 @@ Medidas que añadiría para producción (ejemplos):
 1. **No exponer 9990** a Internet (solo red interna/VPN).
 2. Forzar **HTTPS** (idealmente en el frontal Nginx) y redirigir HTTP->HTTPS.
 3. Gestionar credenciales con **secretos** (no en README ni en repositorio).
-4. Activar logging adecuado y centralizar logs para auditoría.
-5. Limitar permisos del contenedor y aplicar hardening (usuario no root,
-   filesystem de solo lectura cuando sea posible).
+4. Activar logging adecuado y centralizar logs para auditoría. Si no se guardan, se perderán una vez se apague el contenedor, y no se podrá investigar incidentes.
+5. Limitar permisos del contenedor y aplicar hardening (usuario no root, filesystem de solo lectura cuando sea posible, etc).
 
 **Evidencias típicas**
 
@@ -148,12 +146,9 @@ Medidas que añadiría para producción (ejemplos):
 
 **Respuesta posible**
 
-- Un **WAR** es un paquete que contiene la aplicación web: clases, recursos y
-  metadatos necesarios para que WildFly lo despliegue.
-- La app se publica bajo un **contexto** (ruta base) definido por el WAR y/o
-  configuración del servidor.
-- El servidor usa un **contenedor web** para atender las peticiones y ejecutar
-  los recursos REST.
+- Un **WAR** es un paquete que contiene la aplicación web: clases, recursos y metadatos necesarios para que WildFly lo despliegue.
+- La app se publica bajo un **contexto** (ruta base) definido por el WAR y/o configuración del servidor.
+- El servidor usa un **contenedor web** para atender las peticiones y ejecutar los recursos REST.
 
 Ejemplo de URL (de la práctica):
 
@@ -189,13 +184,13 @@ Si algo está mal:
 
 - Si 8080 no se publica, no hay acceso desde el host.
 - Si copio el WAR a otra ruta, WildFly no lo auto-despliega.
-- Si el WAR se llama distinto, el `docker cp` falla o despliego una versión
-  equivocada.
+- Si el WAR se llama distinto, el `docker cp` falla o despliego una versión equivocada.
 
 **Evidencias típicas**
 
 - Capturas de comandos ejecutados y su salida.
 - Nombre real del WAR en `build/libs/`.
+
 
 ### g) Pruebas de funcionamiento y rendimiento
 
@@ -223,6 +218,8 @@ Análisis básico:
 
 - Salida completa de `ab`/`hey`/`wrk`.
 - Logs durante la prueba.
+
+
 
 ### h) Documentación de administración y recomendaciones
 

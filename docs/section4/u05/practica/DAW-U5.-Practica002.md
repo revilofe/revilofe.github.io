@@ -95,7 +95,7 @@ Accede a la consola web:
 
 Usaremos un proyecto base con una API REST sencilla:
 
-https://github.com/raul-profesor/practica-jakarta-wildfly
+https://github.com/revilofe/2526_DAW_u5.2_jakarta-wildfly-gradle
 
 Clona el repositorio. En este caso trabajaremos con Gradle y usaremos **Kotlin DSL**, por lo que debes tener un archivo `build.gradle.kts`.
 

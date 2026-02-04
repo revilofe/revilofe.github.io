@@ -231,7 +231,7 @@ Accede a `http://IP-EC2:9990` y autentica con tu usuario.
 
 Está práctica se centra en despliegue, no en desarrollo. Usaremos un proyecto base:
 
-https://github.com/raul-profesor/practica-jakarta-wildfly
+https://github.com/revilofe/2526_DAW_u5.1_jakarta-wildfly-maven
 
 Clona el repositorio y revisa el `pom.xml`.
 

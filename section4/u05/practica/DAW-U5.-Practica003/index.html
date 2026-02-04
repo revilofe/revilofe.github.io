@@ -8067,10 +8067,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#c-cooperacion-con-el-servidor-web-proxy-reverse-proxy" class="md-nav__link">
+  <a href="#c-cooperacion-con-el-servidor-web-proxy-reverse-proxy-y-https" class="md-nav__link">
     <span class="md-ellipsis">
       
-        c) Cooperación con el servidor web (proxy / reverse proxy)
+        c) Cooperación con el servidor web (proxy / reverse proxy) y https
       
     </span>
   </a>
@@ -8403,10 +8403,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#c-cooperacion-con-el-servidor-web-proxy-reverse-proxy" class="md-nav__link">
+  <a href="#c-cooperacion-con-el-servidor-web-proxy-reverse-proxy-y-https" class="md-nav__link">
     <span class="md-ellipsis">
       
-        c) Cooperación con el servidor web (proxy / reverse proxy)
+        c) Cooperación con el servidor web (proxy / reverse proxy) y https
       
     </span>
   </a>
@@ -8577,21 +8577,18 @@
 
 <h2 id="p53-informe-ra3-sobre-el-despliegue-wildfly-contenedor-gradle">P5.3 - Informe RA3 sobre el despliegue (WildFly contenedor + Gradle)<a class="headerlink" href="#p53-informe-ra3-sobre-el-despliegue-wildfly-contenedor-gradle" title="Permanent link">&para;</a></h2>
 <h3 id="1-introduccion">1. Introducción<a class="headerlink" href="#1-introduccion" title="Permanent link">&para;</a></h3>
-<p>En la <strong>P5.2</strong> desplegaste una <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> RESTful de Jakarta EE en <strong>WildFly</strong> dentro de
-un <strong>contenedor <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr></strong>, generando el artefacto con <strong>Gradle</strong> y verificando el
-funcionamiento con navegador y <code>curl</code>.</p>
-<p>En esta práctica, vas a consolidar lo aprendido respondiendo a <strong>una pregunta
-por cada criterio de evaluación del RA3 (a-i)</strong>. La clave no es “contestar por
-contestar”, sino <strong>justificar</strong> con evidencias del despliegue que ya hiciste
+<p>En la <strong>P5.2</strong> desplegaste una <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> RESTful de Jakarta EE en <strong>WildFly</strong> dentro de un <strong>contenedor <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr></strong>, generando el artefacto con <strong>Gradle</strong> y verificando el funcionamiento con navegador y <code>curl</code>.</p>
+<p>En esta práctica, vas a consolidar lo aprendido respondiendo a varias preguntas. La clave no es “contestar por contestar”, sino <strong>justificar</strong> con evidencias del despliegue que ya hiciste
 en la P5.2.</p>
+<p>https://github.com/revilofe/2526_DAW_u5.3_jakarta-wildfly-gradle-otra</p>
 <h3 id="2-objetivos">2. Objetivos<a class="headerlink" href="#2-objetivos" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Relacionar tu despliegue de la P5.2 con los criterios del <strong>RA3</strong>.</li>
+<li>Consolidar los conocimientos vistos en la práctica P5.2.</li>
 <li>Explicar configuración, seguridad y pruebas con evidencias verificables.</li>
 <li>Documentar el proceso para que otra persona pueda reproducirlo.</li>
 </ul>
 <h3 id="3-entregables">3. Entregables<a class="headerlink" href="#3-entregables" title="Permanent link">&para;</a></h3>
-<p>Entrega un documento llamado <code>P5.3-informe-ra3.md</code> (o PDF) que incluya:</p>
+<p>Entrega un documento llamado <code>P5.3-informe-ra3.md</code> que incluya:</p>
 <ul>
 <li>Las respuestas a las <strong>9 preguntas</strong> (a-i).</li>
 <li>Evidencias (capturas, logs o salidas de comandos) junto a cada respuesta.</li>
@@ -8602,6 +8599,7 @@ en la P5.2.</p>
 <li><code>docker ps</code> y <code>docker logs</code></li>
 <li>Copia del comando <code>docker cp</code> del <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr> (o alternativa usada)</li>
 <li>URL(s) probadas y salida de <code>curl</code></li>
+<li>Ejecución de comando de prueba de rendimiento (ab/hey/wrk) y resultado</li>
 <li>Rutas internas del contenedor cuando apliquen</li>
 </ul>
 </div>
@@ -8615,9 +8613,9 @@ en la P5.2.</p>
 <li>Pruebas funcionales con navegador y con <code>curl</code>.</li>
 </ol>
 <h4 id="42-estructura-tu-informe">4.2. Estructura tu informe<a class="headerlink" href="#42-estructura-tu-informe" title="Permanent link">&para;</a></h4>
-<p>Ordena el informe en 9 apartados, uno por criterio:</p>
+<p>Ordena el informe en 9 apartados, uno por criterio, y en cada punto indica que has hecho para contestar al punto, y que evidencia aportas para justificarlo. Luego, adjunta lo hecho y la evidencia (comandos, logs, capturas, URLs, etc.) que lo respalde.</p>
 <ul>
-<li><strong>a)</strong> ...</li>
+<li><strong>a)</strong> Descripción de componentes y funcionamiento.</li>
 <li><strong>b)</strong> ...</li>
 <li><strong>c)</strong> ...</li>
 <li><strong>d)</strong> ...</li>
@@ -8628,42 +8626,56 @@ en la P5.2.</p>
 <li><strong>i)</strong> ...</li>
 </ul>
 <h3 id="5-ejercicios-1-pregunta-por-criterio">5. Ejercicios (1 pregunta por criterio)<a class="headerlink" href="#5-ejercicios-1-pregunta-por-criterio" title="Permanent link">&para;</a></h3>
-<p>Responde a <strong>una</strong> pregunta por criterio. Todas las respuestas deben referirse
-a tu despliegue de la <strong>P5.2</strong> (WildFly en contenedor + Gradle) y aportar
-evidencias.</p>
+<p>Responde a <strong>una</strong> pregunta por criterio. Todas las respuestas deben referirse al <a href="https://github.com/revilofe/2526_DAW_u5.3_jakarta-wildfly-gradle-otra">último despliegue planteado en la <strong>P5.2</strong> (WildFly en contenedor + Gradle)</a> y aportar evidencias.</p>
 <h4 id="a-componentes-y-funcionamiento-de-los-servicios-del-servidor">a) Componentes y funcionamiento de los servicios del servidor<a class="headerlink" href="#a-componentes-y-funcionamiento-de-los-servicios-del-servidor" title="Permanent link">&para;</a></h4>
-<p>Explica qué componentes/servicios intervienen en tu despliegue de P5.2 y qué
-papel tiene cada uno (como mínimo: contenedor <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr>, WildFly, aplicación <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr>,
-puertos 8080/9990 y endpoint <abbr title="Transferencia de Estado Representacional. Estilo arquitectónico de diseño de API que se basa en la representación de recursos y la transferencia de datos a través de HTTP. En REST, las API se diseñan de forma que sean simples, escalables y fáciles de usar.">REST</abbr>). Describe el flujo de una petición desde el
-cliente hasta tu endpoint.</p>
+<p>Explica qué componentes/servicios intervienen en tu despliegue de P5.2 y qué papel tiene cada uno (como mínimo: contenedor <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr>, WildFly, aplicación <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr>,puertos 8080/9990 y endpoint <abbr title="Transferencia de Estado Representacional. Estilo arquitectónico de diseño de API que se basa en la representación de recursos y la transferencia de datos a través de HTTP. En REST, las API se diseñan de forma que sean simples, escalables y fáciles de usar.">REST</abbr>). Ten en cuenta el punto c) sobre el servidor web frontal.</p>
+<p>Describe el flujo de una petición desde el cliente hasta tu endpoint.</p>
+<p><strong>Evidencias típicas</strong></p>
+<ul>
+<li><code>docker ps</code> mostrando el contenedor y los puertos publicados.</li>
+<li><code>docker logs -f wildfly</code> mostrando el despliegue y el acceso.</li>
+<li>Respuesta del endpoint (<code>curl</code>).</li>
+</ul>
 <h4 id="b-archivos-principales-de-configuracion-y-bibliotecas-compartidas">b) Archivos principales de configuración y bibliotecas compartidas<a class="headerlink" href="#b-archivos-principales-de-configuracion-y-bibliotecas-compartidas" title="Permanent link">&para;</a></h4>
-<p>Identifica dentro de WildFly (en el contenedor) el/los archivo(s) de
-configuración principal(es) que gobiernan el servidor y señala:</p>
+<p>Identifica dentro de WildFly (en el contenedor) el/los archivo(s) de configuración principal(es) que gobiernan el servidor y señala:</p>
 <ol>
 <li>Dónde están (ruta).</li>
 <li>Qué tipo de ajustes podrías tocar ahí para tu despliegue.</li>
 </ol>
-<p>Además, explica qué dependencias de tu proyecto se consideran “provided”
-porque el servidor ya las incluye, y qué ventaja tiene esto.</p>
-<h4 id="c-cooperacion-con-el-servidor-web-proxy-reverse-proxy">c) Cooperación con el servidor web (proxy / reverse proxy)<a class="headerlink" href="#c-cooperacion-con-el-servidor-web-proxy-reverse-proxy" title="Permanent link">&para;</a></h4>
-<p>En P5.2 accediste directamente a WildFly por <code>localhost:8080</code>. Imagina ahora un
-entorno real donde hay un <strong>servidor web frontal</strong> (por ejemplo, Nginx) delante
-de WildFly.</p>
+<p>Además, explica qué dependencias de tu proyecto se consideran “provided” porque el servidor ya las incluye, y qué ventaja tiene esto.</p>
+<p><strong>Evidencias típicas</strong></p>
+<ul>
+<li>Captura/salida de <code>docker exec -it wildfly ls .../standalone/configuration</code>.</li>
+<li>Fragmento del <code>build.gradle.kts</code> donde se ve <code>compileOnly</code>.</li>
+</ul>
+<h4 id="c-cooperacion-con-el-servidor-web-proxy-reverse-proxy-y-https">c) Cooperación con el servidor web (proxy / reverse proxy) y https<a class="headerlink" href="#c-cooperacion-con-el-servidor-web-proxy-reverse-proxy-y-https" title="Permanent link">&para;</a></h4>
+<p>En P5.2 accediste directamente a WildFly por <code>localhost:8080</code>. Imagina ahora un entorno real donde hay un <strong>servidor web frontal</strong> (por ejemplo, Nginx) delante de WildFly.</p>
 <p>Plantea una configuración de reverse proxy para tu despliegue de P5.2 que:</p>
 <ul>
 <li>Publique la <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> bajo una ruta clara (por ejemplo <code>/api/</code>).</li>
 <li>No exponga el puerto 9990 hacia fuera.</li>
 </ul>
-<p>Incluye un ejemplo de configuración (fragmento) y explica qué cambia respecto
-a tu despliegue actual.</p>
+<p>Incluye un ejemplo de configuración (fragmento) y explica qué cambia respecto a tu despliegue actual.</p>
+<p>Realiza una configuración de <abbr title="Seguridad de la Capa de Transporte. Es un sistema de seguridad que se utiliza para cifrar la comunicación entre un cliente y un servidor a través de una red. El TLS protege la privacidad y la integridad de los datos, autentica a los usuarios y protege contra los ataques de intermediarios.">TLS</abbr> (<abbr title="Protocolo de Transferencia de Hipertexto Seguro. Es una versión segura del protocolo HTTP que se utiliza para transferir información de forma cifrada entre un cliente y un servidor a través de una red. El HTTPS protege la privacidad y la integridad de los datos.">HTTPS</abbr>) en el servidor web frontal y explica qué ventajas aporta esto. ¿Cambiaría algo en tu aplicación o en la configuración de WildFly?</p>
+<p><strong>Evidencias típicas</strong></p>
+<ul>
+<li>Fragmento de <code>nginx.conf</code> o <code>sites-enabled</code>.</li>
+<li>Explicación de qué puertos publicarías en <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr> y cuáles no.</li>
+<li>Como has configurado <abbr title="Seguridad de la Capa de Transporte. Es un sistema de seguridad que se utiliza para cifrar la comunicación entre un cliente y un servidor a través de una red. El TLS protege la privacidad y la integridad de los datos, autentica a los usuarios y protege contra los ataques de intermediarios.">TLS</abbr> (certificados, etc.) y qué ventajas aporta.</li>
+</ul>
 <h4 id="d-mecanismos-de-seguridad-del-servidor-de-aplicaciones">d) Mecanismos de seguridad del servidor de aplicaciones<a class="headerlink" href="#d-mecanismos-de-seguridad-del-servidor-de-aplicaciones" title="Permanent link">&para;</a></h4>
-<p>Indica qué medidas de seguridad aplicaste en P5.2 y qué medidas añadirías para
-producción (mínimo 4), justificando cada una. Debes cubrir al menos:</p>
+<p>Indica qué medidas de seguridad aplicaste en P5.2 y qué medidas añadirías para producción (mínimo 4), justificando cada una. Debes cubrir al menos:</p>
 <ul>
 <li>Consola de administración (9990) y credenciales.</li>
 <li>Exposición de puertos.</li>
 <li>Gestión de secretos (usuarios/contraseñas).</li>
 <li>Registro y trazabilidad (logs).</li>
+</ul>
+<p><strong>Evidencias típicas</strong></p>
+<ul>
+<li>Captura de puertos expuestos.</li>
+<li>Captura de que la consola solo es accesible internamente.</li>
+<li>Ejemplo de política de secretos.</li>
 </ul>
 <h4 id="e-componentes-web-del-servidor-de-aplicaciones">e) Componentes web del servidor de aplicaciones<a class="headerlink" href="#e-componentes-web-del-servidor-de-aplicaciones" title="Permanent link">&para;</a></h4>
 <p>Explica cómo se “engancha” tu aplicación <abbr title="Transferencia de Estado Representacional. Estilo arquitectónico de diseño de API que se basa en la representación de recursos y la transferencia de datos a través de HTTP. En REST, las API se diseñan de forma que sean simples, escalables y fáciles de usar.">REST</abbr> a WildFly en P5.2:</p>
@@ -8672,11 +8684,14 @@ producción (mínimo 4), justificando cada una. Debes cubrir al menos:</p>
 <li>Qué significa el contexto/ruta base de la app.</li>
 <li>Qué parte del servidor se encarga de servir la <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> (contenedor web).</li>
 </ul>
-<p>Incluye una URL real de tu práctica y desglósala (host, puerto, contexto,
-ruta del recurso).</p>
+<p>Incluye una URL real de tu práctica y desglósala (host, puerto, contexto, ruta del recurso).</p>
+<p><strong>Evidencias típicas</strong></p>
+<ul>
+<li>URLs probadas en navegador/curl. </li>
+<li>Log del servidor mostrando el acceso.</li>
+</ul>
 <h4 id="f-parametros-necesarios-para-el-despliegue">f) Parámetros necesarios para el despliegue<a class="headerlink" href="#f-parametros-necesarios-para-el-despliegue" title="Permanent link">&para;</a></h4>
-<p>Enumera y justifica los parámetros que fueron necesarios en tu despliegue de
-P5.2 (mínimo 5), por ejemplo:</p>
+<p>Enumera y justifica los parámetros que fueron necesarios en tu despliegue de P5.2 (mínimo 5), por ejemplo:</p>
 <ul>
 <li>Parámetros de <code>docker run</code> (nombre, puertos, etc.).</li>
 <li>Nombre del <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr> y ruta de despliegue.</li>
@@ -8691,9 +8706,14 @@ P5.2 (mínimo 5), por ejemplo:</p>
 <li><code>hey</code></li>
 <li><code>wrk</code></li>
 </ul>
-<p>Incluye el comando utilizado, el endpoint probado y un breve análisis del
-resultado (latencia, peticiones/segundo o errores).</p>
+<p>Incluye el comando utilizado, el endpoint probado y un breve análisis del resultado (latencia, peticiones/segundo o errores).</p>
+<p><strong>Evidencias típicas</strong></p>
+<ul>
+<li>Salida completa de <code>ab</code>/<code>hey</code>/<code>wrk</code> y análisis.</li>
+<li>Logs durante la prueba.</li>
+</ul>
 <h4 id="h-documentacion-de-administracion-y-recomendaciones">h) Documentación de administración y recomendaciones<a class="headerlink" href="#h-documentacion-de-administracion-y-recomendaciones" title="Permanent link">&para;</a></h4>
+<p>RECOMIENDO, hacer antes el punto i) y luego redactar esta sección con lo aprendido.</p>
 <p>Redacta una mini-guía de administración para tu despliegue de P5.2 que incluya:</p>
 <ol>
 <li>Cómo levantar WildFly.</li>
@@ -8702,11 +8722,20 @@ resultado (latencia, peticiones/segundo o errores).</p>
 <li>Recomendaciones para evitar errores comunes.</li>
 </ol>
 <p>Debe ser reproducible para otra persona del equipo.</p>
+<p><strong>Evidencias típicas</strong></p>
+<p>Manual con instrucciones claras y paso a paso, acompañado de:
+- Ficheros <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr>: dockerfile y compose.
+- Arquitectura de desplieuge
+- Comandos clave (docker, despliegue, pruebas).
+- URLs de prueba.
+- Acceso a logs y endpoints.
+- Pruebas de funcionamiento.
+- Pruebas de rendimiento.
+- Recomendaciones de seguridad.</p>
 <h4 id="i-virtualizacion-nube-o-contenedores-en-el-despliegue">i) Virtualización, nube o contenedores en el despliegue<a class="headerlink" href="#i-virtualizacion-nube-o-contenedores-en-el-despliegue" title="Permanent link">&para;</a></h4>
-<p>Explica por qué el uso de contenedores en P5.2 mejora el despliegue y la
-reproducibilidad. Después, plantea dos mejoras orientadas a “producción”
-relacionadas con contenedores (por ejemplo, volúmenes, healthchecks,
-limitación de recursos, redes, etc.) y cómo las aplicarías.</p>
+<p>Realiza un despliegue haciendo uso de docker compose que auné todo. Servidor web (Nginx) + servidor de aplicaciones (WildFly) + tu aplicación <abbr title="Transferencia de Estado Representacional. Estilo arquitectónico de diseño de API que se basa en la representación de recursos y la transferencia de datos a través de HTTP. En REST, las API se diseñan de forma que sean simples, escalables y fáciles de usar.">REST</abbr>.</p>
+<p>Ten en cuenta volúmenes para logs, secretos, healthchecks y reinicio automático, limitación de recursos, redes, etc.</p>
+<p>Una mejora adicional, sería separar frontend y backend en contenedores distintos, con comunicación entre ellos, y no exponer el backend directamente al host.</p>
 
 
 

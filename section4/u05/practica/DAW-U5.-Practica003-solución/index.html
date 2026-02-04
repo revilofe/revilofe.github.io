@@ -8288,8 +8288,7 @@ en:</p>
 </code></pre></div>
 <p>Con esto:</p>
 <ul>
-<li>El alumnado consumiría <code>http://ejemplo.local/api/...</code> en vez de conocer la
-  ruta completa de WildFly.</li>
+<li>El alumnado consumiría <code>http://ejemplo.local/api/...</code> en vez de conocer la ruta completa de WildFly.</li>
 <li><strong>9990 no se publica</strong> al exterior; solo se usa internamente/por <abbr title="Red Privada Virtual. Es un sistema de seguridad que se utiliza para establecer una conexión segura entre un cliente y un servidor a través de una red pública. Las VPN cifran la comunicación, protegen la privacidad de los datos y permiten a los usuarios acceder a recursos de red de forma segura.">VPN</abbr>.</li>
 </ul>
 <p><strong>Evidencias típicas</strong></p>
@@ -8308,9 +8307,8 @@ en:</p>
 <li><strong>No exponer 9990</strong> a Internet (solo red interna/<abbr title="Red Privada Virtual. Es un sistema de seguridad que se utiliza para establecer una conexión segura entre un cliente y un servidor a través de una red pública. Las VPN cifran la comunicación, protegen la privacidad de los datos y permiten a los usuarios acceder a recursos de red de forma segura.">VPN</abbr>).</li>
 <li>Forzar <strong><abbr title="Protocolo de Transferencia de Hipertexto Seguro. Es una versión segura del protocolo HTTP que se utiliza para transferir información de forma cifrada entre un cliente y un servidor a través de una red. El HTTPS protege la privacidad y la integridad de los datos.">HTTPS</abbr></strong> (idealmente en el frontal Nginx) y redirigir <abbr title="Protocolo de Transferencia de Hipertexto. Es un protocolo que se utiliza para transferir información entre un cliente y un servidor a través de una red. El HTTP permite a los usuarios acceder a sitios web, enviar y recibir datos, etc.">HTTP</abbr>-&gt;<abbr title="Protocolo de Transferencia de Hipertexto Seguro. Es una versión segura del protocolo HTTP que se utiliza para transferir información de forma cifrada entre un cliente y un servidor a través de una red. El HTTPS protege la privacidad y la integridad de los datos.">HTTPS</abbr>.</li>
 <li>Gestionar credenciales con <strong>secretos</strong> (no en README ni en repositorio).</li>
-<li>Activar logging adecuado y centralizar logs para auditoría.</li>
-<li>Limitar permisos del contenedor y aplicar hardening (usuario no root,
-   filesystem de solo lectura cuando sea posible).</li>
+<li>Activar logging adecuado y centralizar logs para auditoría. Si no se guardan, se perderán una vez se apague el contenedor, y no se podrá investigar incidentes.</li>
+<li>Limitar permisos del contenedor y aplicar hardening (usuario no root, filesystem de solo lectura cuando sea posible, etc).</li>
 </ol>
 <p><strong>Evidencias típicas</strong></p>
 <ul>
@@ -8321,12 +8319,9 @@ en:</p>
 <h3 id="e-componentes-web-del-servidor-de-aplicaciones">e) Componentes web del servidor de aplicaciones<a class="headerlink" href="#e-componentes-web-del-servidor-de-aplicaciones" title="Permanent link">&para;</a></h3>
 <p><strong>Respuesta posible</strong></p>
 <ul>
-<li>Un <strong><abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr></strong> es un paquete que contiene la aplicación web: clases, recursos y
-  metadatos necesarios para que WildFly lo despliegue.</li>
-<li>La app se publica bajo un <strong>contexto</strong> (ruta base) definido por el <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr> y/o
-  configuración del servidor.</li>
-<li>El servidor usa un <strong>contenedor web</strong> para atender las peticiones y ejecutar
-  los recursos <abbr title="Transferencia de Estado Representacional. Estilo arquitectónico de diseño de API que se basa en la representación de recursos y la transferencia de datos a través de HTTP. En REST, las API se diseñan de forma que sean simples, escalables y fáciles de usar.">REST</abbr>.</li>
+<li>Un <strong><abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr></strong> es un paquete que contiene la aplicación web: clases, recursos y metadatos necesarios para que WildFly lo despliegue.</li>
+<li>La app se publica bajo un <strong>contexto</strong> (ruta base) definido por el <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr> y/o configuración del servidor.</li>
+<li>El servidor usa un <strong>contenedor web</strong> para atender las peticiones y ejecutar los recursos <abbr title="Transferencia de Estado Representacional. Estilo arquitectónico de diseño de API que se basa en la representación de recursos y la transferencia de datos a través de HTTP. En REST, las API se diseñan de forma que sean simples, escalables y fáciles de usar.">REST</abbr>.</li>
 </ul>
 <p>Ejemplo de URL (de la práctica):</p>
 <ul>
@@ -8360,8 +8355,7 @@ en:</p>
 <ul>
 <li>Si 8080 no se publica, no hay acceso desde el host.</li>
 <li>Si copio el <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr> a otra ruta, WildFly no lo auto-despliega.</li>
-<li>Si el <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr> se llama distinto, el <code>docker cp</code> falla o despliego una versión
-  equivocada.</li>
+<li>Si el <abbr title="Archivo Web de Java. Es un archivo que contiene una aplicación web Java. Los archivos WAR se utilizan para empaquetar y desplegar aplicaciones web Java en servidores de aplicaciones.">WAR</abbr> se llama distinto, el <code>docker cp</code> falla o despliego una versión equivocada.</li>
 </ul>
 <p><strong>Evidencias típicas</strong></p>
 <ul>

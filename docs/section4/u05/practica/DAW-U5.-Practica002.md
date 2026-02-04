@@ -585,7 +585,8 @@ Si fueras a desplegar este servidor en Internet, tendrías que aplicar medidas q
 
 ## Referencias
 
+- [Primer despliegue](https://github.com/revilofe/2526_DAW_u5.2_jakarta-wildfly-gradle)
+- [Segundo despliegue](https://github.com/revilofe/2526_DAW_u5.3_jakarta-wildfly-gradle-otra)
 - https://www.wildfly.org/
 - https://quay.io/repository/wildfly/wildfly
 - https://docs.gradle.org/current/userguide/war_plugin.html
-- https://github.com/revilofe/2526_DAW_u5.3_jakarta-wildfly-gradle-otra

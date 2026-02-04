@@ -410,67 +410,85 @@ curl -X DELETE http://localhost:8080/myproject/module/backend/api/myservice/pojo
 ```
 
 
-#### 3.9. Pruebas de Carga y Rendimiento (Criterio G)
+#### 3.9. Pruebas de Carga y Rendimiento 
 
 Para validar que nuestro despliegue no solo "funciona", sino que es capaz de soportar tráfico real, debemos realizar una prueba de carga (*Load Testing*). Esto responde directamente al criterio de evaluación **g)** del RA3.
 
 **¿Qué es el Load Testing?**
 
 Su objetivo es "bombardear" tu API con peticiones simultáneas para ver cómo aguanta el servidor:
-1.  **Rendimiento:** Cuántas peticiones por segundo es capaz de servir.
-2.  **Latencia:** Cuánto tarda en responder cada una.
-3.  **Estabilidad:** Si el servidor explota (errores 500) bajo presión.
+1. **Rendimiento:** Cuántas peticiones por segundo es capaz de servir.
+2. **Latencia:** Cuánto tarda en responder cada una.
+3. **Estabilidad:** Si el servidor explota (errores 500) bajo presión.
 
 Existen tres herramientas estándar para esto. **Solo necesitas usar UNA de ellas** para la práctica. Elige la que más te guste:
 
 ##### 3.9.1. Opción 1: `ab` (ApacheBench) - El clásico
 Viene instalado en casi todos los Linux/Mac y es muy estándar. Es antiguo, pero perfecto para pruebas rápidas y sencillas.
 
-*   **Instalación:**
+* **Instalación:**
+
     ```bash
     sudo apt install apache2-utils
     ```
-*   **Comando típico:**
+
+* **Comando típico:**
+
     ```bash
     ab -n 1000 -c 10 http://localhost:8080/modulename.backend-0.0.1-SNAPSHOT/api/myservice/hello
     ```
-    *   `-n 1000`: Lanza **1000 peticiones** en total.
-    *   `-c 10`: Mantiene **10 usuarios simultáneos** (concurrencia).
-*   **Qué mirar en el resultado:**
-    *   `Requests per second`: Cuanto más alto, mejor (ej: 2500 [#/sec]).
-    *   `Failed requests`: Debería ser 0.
+  
+    * `-n 1000`: Lanza **1000 peticiones** en total.
+    * `-c 10`: Mantiene **10 usuarios simultáneos** (concurrencia).
+  
+* **Qué mirar en el resultado:**
+
+    * `Requests per second`: Cuanto más alto, mejor (ej: 2500 [#/sec]).
+    * `Failed requests`: Debería ser 0.
 
 ##### 3.9.2. Opción 2: `hey` - La moderna
+
 Es la versión moderna de `ab`. Escrita en Go, soporta HTTP/2 y tiene una salida visual mucho más bonita y fácil de leer. **Recomendada si quieres algo visual.**
 
-*   **Instalación:**
-    *   Opción rápida (si tienes snap): `sudo snap install hey`
-    *   Opción manual: Descargar el binario desde su [GitHub](https://github.com/rakyll/hey).
-*   **Comando típico:**
+* **Instalación:**
+
+    * Opción rápida (si tienes snap): `sudo snap install hey`
+    * Opción manual: Descargar el binario desde su [GitHub](https://github.com/rakyll/hey).
+
+* **Comando típico:**
+ 
     ```bash
     hey -n 1000 -c 10 http://localhost:8080/modulename.backend-0.0.1-SNAPSHOT/api/myservice/hello
     ```
-*   **Qué mirar:**
-    *   Te muestra un histograma de barras con los tiempos de respuesta.
-    *   Busca `Status code distribution`: `[200] 1000 responses` (Todo OK).
+
+* **Qué mirar:**
+
+    * Te muestra un histograma de barras con los tiempos de respuesta.
+    * Busca `Status code distribution`: `[200] 1000 responses` (Todo OK).
 
 ##### 3.9.3. Opción 3: `wrk` - La bestia
+
 Usa scripts en Lua y multihilo real. Es capaz de generar cargas brutales que tumbarían a las otras herramientas antes que al servidor. Se usa para benchmarks profesionales de alto rendimiento.
 
-*   **Instalación:**
+* **Instalación:**
+
     ```bash
     sudo apt install wrk
     ```
-*   **Comando típico:**
+
+* **Comando típico:**
+
     ```bash
     wrk -t4 -c100 -d10s http://localhost:8080/modulename.backend-0.0.1-SNAPSHOT/api/myservice/hello
     ```
-    *   `-t4`: Usa 4 hilos de tu CPU.
-    *   `-d10s`: Machaca el servidor durante **10 segundos** sin parar (sin límite de peticiones totales).
-*   **Qué mirar:**
-    *   `Latency`: Tiempo medio de respuesta.
-    *   `Req/Sec`: Peticiones por segundo.
 
+    * `-t4`: Usa 4 hilos de tu CPU.
+    * `-d10s`: Machaca el servidor durante **10 segundos** sin parar (sin límite de peticiones totales).
+  
+* **Qué mirar:**
+
+    * `Latency`: Tiempo medio de respuesta.
+    * `Req/Sec`: Peticiones por segundo.
 
 ##### 3.9.4. Ejemplo de análisis real (Caso con `ab`)
 
@@ -548,25 +566,26 @@ Si fueras a desplegar este servidor en Internet, tendrías que aplicar medidas q
     * **Solo lectura:** Configura el sistema de archivos del contenedor como "read-only" siempre que sea posible. Esto impide que un atacante que logre entrar pueda descargar herramientas de hacking, modificar la configuración del servidor o instalar puertas traseras (*backdoors*).
 
 !!! security "Seguridad en Docker"
-Recuerda: Un contenedor seguro es aquel que tiene lo mínimo necesario para funcionar y nada más. Cuantos menos permisos, puertos y archivos modificables tenga, menor será el daño en caso de ataque.
+    Recuerda: Un contenedor seguro es aquel que tiene lo mínimo necesario para funcionar y nada más. Cuantos menos permisos, puertos y archivos modificables tenga, menor será el daño en caso de ataque.
 
 
 ### 4. Ejercicios
-
 
 1. Despliega la aplicación, siguiendo esta guía, desde el repositorio:
 
     https://github.com/revilofe/2526_DAW_u5.3_jakarta-wildfly-gradle-otra
     
-    Estudiala en profundidad y realiza los pasos necesarios para levantarla en tu entorno local (Docker + Gradle).
+    Estúdiala en profundidad y realiza los pasos necesarios para levantarla en tu entorno local (Docker + Gradle).
+
+    Ten en cuenta que puedes tener las dos aplicaciones en el mismo contenedor (cambiando el nombre del WAR y el contexto) o en contenedores separados.
 
 2. Adjunta una captura de `docker ps` mostrando el contenedor `wildfly` activo.
 3. Adjunta evidencia de despliegue en logs (`docker logs -f wildfly`).
 4. Realiza llamadas a la app y adjunta evidencias y sus respuestas (navegador y `curl`).
-
 
 ## Referencias
 
 - https://www.wildfly.org/
 - https://quay.io/repository/wildfly/wildfly
 - https://docs.gradle.org/current/userguide/war_plugin.html
+- https://github.com/revilofe/2526_DAW_u5.3_jakarta-wildfly-gradle-otra

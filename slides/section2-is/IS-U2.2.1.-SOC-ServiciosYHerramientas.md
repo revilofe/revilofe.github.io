@@ -104,8 +104,8 @@ iguales.
 Note: Repasa las 4 funciones y destaca en **negrita**: **supervisión continua**
 y **mejora continua**. Explica que prevenir no es “adivinar”, sino reducir
 exposición: hardening, reglas, y lecciones aprendidas. Se habla de amenazas, 
-porque el SOC no solo reacciona a incidentes confirmados, sino que también busca 
-señales de actividad maliciosa.
+porque el SOC no solo reacciona a incidentes confirmados, sino que también
+busca señales de actividad maliciosa.
 
 
 ### 1.2. Objetivos principales de un SOC
@@ -121,7 +121,14 @@ ayudar a **recuperar**. Da ejemplos rápidos: bloqueo de fuerza bruta, alerta de
 acceso inusual, aislamiento de servidor, restore de backup.
 
 
-### 1.3. SOC, CERT, CIRT y CSIRT (términos)
+### 1.3. Diferencias entre SOC, CERT, CIRT y CSIRT
+
+Note: Introduce el objetivo del apartado: aclarar términos que se confunden
+mucho. Explica que SOC suele referirse a **operación continua**, mientras que
+CERT/CSIRT/CIRT se asocian más a **respuesta a incidentes** y coordinación.
+
+
+### 1.3.1. Definición de términos
 
 * **SOC:** operaciones completas (supervisión, detección, respuesta)
 * **CERT:** respuesta a **emergencias** (DDoS, ransomware)
@@ -134,7 +141,7 @@ paraguas operativo. Remarca en **negrita**: **SOC = operación continua**,
 histórico con uso como marca.
 
 
-### 1.3. Relación y diferencias (ejemplo)
+### 1.3.2. Relación y diferencias clave
 
 * El SOC detecta y genera una **alerta**. El SIEM detecta, pero el SOC opera.
 * Respuesta investiga y coordina **contención** y **erradicación**
@@ -142,10 +149,20 @@ histórico con uso como marca.
 
 Note: Recorre el ejemplo como una historia: detección → investigación →
 contención → recuperación. Destaca en **negrita** que el valor está en el flujo
-completo y en cerrar el ciclo: mejorar reglas y procesos. Real mente no es el SOC quien detecta, ni quien responde sino que detecta el SIEM, y responde el equipo de IR, pero el SOC es el marco organizativo que hace que todo esto funcione.
+completo y en cerrar el ciclo: mejorar reglas y procesos. Realmente, no es el
+SOC quien “detecta” ni quien “responde”: detecta el SIEM y responde el equipo
+de IR. El SOC es el marco organizativo que hace que todo esto funcione.
 
 
-### 1.4. Importancia del SOC (amenazas crecientes)
+### 1.4. Importancia de los SOC en la ciberseguridad empresarial
+
+Note: Enmarca por qué las organizaciones invierten en SOC: el volumen y la
+complejidad de ataques suben, la superficie de ataque crece y el negocio no se
+puede permitir tiempos largos de detección. Conecta con **beneficios** y
+**relevancia estratégica**.
+
+
+### 1.4.1. Amenazas crecientes
 
 * Más frecuencia y sofisticación de ataques
 * Superficie de ataque en aumento
@@ -156,7 +173,7 @@ trabajo remoto, phishing avanzado. Marca en **negrita**: **reducir el impacto**
 depende de **detectar pronto**.
 
 
-### 1.4. Beneficios de contar con un SOC
+### 1.4.2. Beneficios de contar con un SOC
 
 * **Protección proactiva** (reglas y controles)
 * **Respuesta rápida** (menos tiempo de exposición)
@@ -168,7 +185,7 @@ Note: Explica cada beneficio con un ejemplo breve. Destaca en **negrita**:
 evidencias para auditorías. Conecta con continuidad de negocio.
 
 
-### 1.4. Relevancia estratégica
+### 1.4.3. Relevancia estratégica
 
 * Habilita **continuidad de negocio**
 * Reduce impacto reputacional y regulatorio
@@ -177,7 +194,7 @@ evidencias para auditorías. Conecta con continuidad de negocio.
 Note: Refuerza la idea de SOC como “habilitador”: permite operar en digital con
 menor riesgo. Marca en **negrita**: **continuidad**, **reputación** y
 **sanciones**. Pregunta al grupo: ¿qué le duele más a una empresa: caída del
-servicio, fuga de datos o multa? Todas son malas, pero la respuesta puede variar 
+servicio, fuga de datos o multa? Todas son malas, pero la respuesta puede variar
 según el sector y el contexto.
 
 ---
@@ -365,11 +382,12 @@ integraciones y en definir qué acciones son seguras de automatizar.
 ### 2.3.1.3. Threat Intelligence (funciones)
 
 * Recopila **IoC**: IP, URL, hashes
-* Analiza **TTP** de actores maliciosos
+* Analiza **TTP** de actores maliciosos.
 * Anticipa amenazas antes de impactar
 
-Note: Marca en **negrita**: **IoC** y **TTP**. Explica que TI no es “noticias”,
-es información accionable para reglas del SIEM, hunting y priorización.
+Note: Marca en **negrita**: **IoC** y **TTP: Tácticas, Técnicas y Procedimientos**.
+Explica que TI no es “noticias”, es información accionable para reglas del SIEM, 
+hunting y priorización.
 
 
 ### 2.3.1.3. Threat Intelligence (ejemplos)

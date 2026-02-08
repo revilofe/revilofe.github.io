@@ -18,14 +18,23 @@ tags:
 
 ## 2.2.2 Casos de Uso en un SOC
 
-En un mundo digital cada vez más complejo y peligroso, la seguridad cibernética se ha convertido en un pilar fundamental para la supervivencia de las organizaciones. Los Centros de Operaciones de Seguridad (SOC) modernos se erigen como la última línea de defensa contra las amenazas cibernéticas en constante evolución. Pero,
+En un mundo digital cada vez más complejo y peligroso, la seguridad cibernética se ha convertido en un pilar
+fundamental para la supervivencia de las organizaciones. Los Centros de Operaciones de Seguridad (SOC)
+modernos se erigen como una de las últimas líneas de defensa contra amenazas cibernéticas en constante
+evolución.
 
-> ¿Cómo pueden garantizar la detección y respuesta efectivas en un panorama en constante cambio?
+!!! question "Pregunta guía"
+    ¿Cómo puede un SOC garantizar la detección y la respuesta efectivas en un panorama en constante cambio?
 
+<figure markdown>   
+  ![](assets/IS-U2.2.2.-CasosUso-flujo-soc-siem.svg)   
+  <figcaption>Flujo típico de un caso de uso en un SOC: de los logs a la respuesta.</figcaption>   
+</figure>
 
-### 1. ¿Qué es caso de uso?
+### 1. ¿Qué es un caso de uso?
 
-Un caso de uso en el contexto de un servicio de Centro de Operaciones de Seguridad (SOC) moderno se refiere a un escenario específico en el que se describe cómo se utilizarán las capacidades del SOC para detectar, analizar y responder a amenazas de seguridad cibernética.    
+Un caso de uso, en el contexto de un SOC, se refiere a un escenario específico en el que se describe cómo
+se utilizarán sus capacidades para detectar, analizar y responder a amenazas de seguridad cibernética.
 
 Los casos de uso son guías detalladas que describen:
 - Las acciones.
@@ -56,10 +65,12 @@ Son esenciales para la operación eficiente y efectiva del SOC, ya que ayudan a 
 * **Monitorización Continua y Mejora:** Los casos de uso no son estáticos. Deben ser revisados y actualizados regularmente para mantenerse alineados con las amenazas emergentes y los cambios en la infraestructura de TI de la organización.     
 
 
-> Los casos de uso son herramientas esenciales para la detección y respuesta efectivas en un SOC moderno. Ayudan a los analistas a anticipar, prepararse y responder a amenazas de seguridad de manera coherente y organizada.
+!!! note "Idea clave"
+    Los casos de uso ayudan a estandarizar la detección y la respuesta en un SOC: permiten anticipar,
+    prepararse y actuar de forma coherente ante escenarios repetibles.
 
 
-### 3. 10 casos de uso que todo servicio SOC moderno debería tener 🛡️
+### 3. 10 casos de uso que todo servicio SOC moderno debería tener
 
 Les comparto 10 casos de uso que son fundamentales para un servicio de Centro de Operaciones de Seguridad (SOC) moderno en términos de detección y respuesta ante amenazas:
 
@@ -85,10 +96,13 @@ Les comparto 10 casos de uso que son fundamentales para un servicio de Centro de
 
 Cabe destacar que estos casos de uso son de referencia como línea base y que las necesidades de detección y respuesta pueden variar según la industria, el tamaño de la organización y las amenazas emergentes. Es esencial adaptar estos casos de uso a las circunstancias y requisitos específicos de cada SOC.
 
-[![MaGMa Use Case Framework (UCF)](https://media.licdn.com/dms/image/D4E12AQEXk2OUlzzj4w/article-inline_image-shrink_1000_1488/0/1692676567802?e=1710374400&v=beta&t=FnCOrHWq4a6VjFU7xR6mfd5xdtXUxQ3cndWF_tfelow)](https://www.betaalvereniging.nl/wp-content/uploads/FI-ISAC-Use-Case-Framework-Full-Documentation.pdf)
-MaGMa Use Case Framework (UCF)
+[MaGMa Use Case Framework (UCF)](https://www.betaalvereniging.nl/wp-content/uploads/FI-ISAC-Use-Case-Framework-Full-Documentation.pdf)
 
-> El marco de **casos de uso de MaGMa** (UCF) es un marco y una herramienta creada por la comunidad financiera holandesa para la **gestión y administración de casos de uso** que ayuda a las organizaciones a hacer operativa su estrategia de monitoreo de ciberseguridad.
+
+!!! info "Referencia útil: MaGMa Use Case Framework (UCF)"
+    El marco de **casos de uso de MaGMa** (UCF) es una guía creada por la comunidad financiera holandesa
+    para la **gestión y administración de casos de uso**. Su objetivo es ayudar a las organizaciones a hacer
+    operativa su estrategia de monitorización de ciberseguridad.
 
 Es importante señalar que la efectividad de la detección y respuesta en un SOC se basa en la **capacidad de recopilar, correlacionar y analizar adecuadamente estos registros/logs para identificar patrones** y comportamientos anómalos que indiquen posibles amenazas. **La integración de tecnologías de seguridad, como Sistemas de Información y Eventos de Seguridad (SIEM), es crucial para este propósito**.
 
@@ -114,7 +128,10 @@ Contar con casos de uso precisos de detección y respuesta es fundamental para c
 * **Cumplimiento y Reporte:** Los casos de uso bien definidos también pueden contribuir al cumplimiento de regulaciones y estándares de seguridad, al proporcionar un enfoque estructurado para la gestión de amenazas.    
 
 
-> Contar con casos de uso precisos de detección y respuesta es esencial para establecer un enfoque organizado y efectivo para la ciberseguridad y ayudan a las organizaciones a tener una comprensión profunda de sus riesgos y amenazas, permitiéndoles tomar medidas proactivas y mitigar eficazmente los incidentes de seguridad.
+!!! success "Conclusión"
+    Contar con casos de uso precisos de detección y respuesta ayuda a establecer un enfoque organizado y
+    efectivo de ciberseguridad. Además, permite comprender mejor riesgos y amenazas, tomar medidas
+    proactivas y mitigar incidentes con menos improvisación.
 
 ## Referencias    
 

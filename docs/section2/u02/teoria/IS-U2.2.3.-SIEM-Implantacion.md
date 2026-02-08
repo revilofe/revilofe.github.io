@@ -16,15 +16,25 @@ tags:
 
 ## 2.2.3 Las mejores prácticas para implementar una estrategia SIEM
 
-Al comenzar a implementar un SIEM, es importante plantearnos, qué es lo que deseamos que el SIEM logre para nuestro negocio en cuanto a ciberseguridad.
+Al comenzar a implementar un SIEM, es importante plantearnos qué es lo que deseamos que logre para
+nuestro negocio en cuanto a ciberseguridad.
 
+!!! question "Pregunta guía"
+    ¿Qué necesitas conseguir con el SIEM: cumplimiento, detección de amenazas, visibilidad, métricas, o
+    todo a la vez? Cuanto más claro sea el objetivo, más fácil será decidir fuentes, retención y casos de uso.
 
-![Las mejores prácticas para implementar una estrategia SIEM](https://ciberseguridad.blog/content/images/size/w1200/2021/03/Estrategia-Implantar-un-SIEM.jpg)
+<figure markdown>   
+  ![](./assets/IS-U2.2.3.-SIEM-Implantacion-fases.svg)   
+  <figcaption>Fases típicas de implantación de un SIEM.</figcaption>   
+</figure>
 
+La gestión de eventos de seguridad mediante un [SIEM](https://ciberseguridad.blog/por-que-las-herramientas-soar-revitalizaran-el-ecosistema-siem/)
+nos permite obtener análisis en tiempo real sobre las amenazas y alertas de seguridad en el negocio.
+Controla el almacenamiento, la manipulación, el análisis y la generación de informes de distintos datos de
+seguridad. Con ello, podemos correlacionar eventos y alertas y llevar la seguridad de la organización a un
+nivel superior.
 
-La gestión de eventos de seguridad mediante [SIEM](https://ciberseguridad.blog/por-que-las-herramientas-soar-revitalizaran-el-ecosistema-siem/)s nos permite obtener análisis en tiempo real sobre las amenazas y las alertas de seguridad en nuestro negocio. Controla el almacenamiento, la manipulación, el análisis y la generación de informes de diferentes datos de seguridad, nos permitirá correlacionar diferentes eventos y alertas, llevando así la seguridad de nuestra organización a otro nivel.
-
-### 1. SIEM y componentes.
+### 1. SIEM y componentes
 
 El SIEM juega un papel determinante en el [cumplimiento normativo](https://ciberseguridad.blog/balbix-la-plataforma-predictiva-de-riesgo-de-incumplimiento/) de nuestra entidad y por ello, debe ser una de las piezas claves en nuestra estrategia corporativa. Una solución de gestión de eventos e información de seguridad bien implementada nos permitirá ir un paso por delante de los ciberataques al proporcionar una vista centralizada de los eventos e información relacionados con la [**ciberseguridad**](https://ciberseguridad.blog/).
 
@@ -85,6 +95,10 @@ Comenzando con la fase de implementación, debe tener dos objetivos en mente:
 1. La demostración de que un sistema SIEM genera un retorno de la inversión
 2. Que debemos disponer de un modelo funcional y un runbook.
 
+!!! tip "Consejo"
+    Un piloto con pocas fuentes (pero representativas) suele ser más útil que intentar “meterlo todo” desde
+    el primer día. El objetivo del piloto es aprender: parsers, umbrales, reglas y flujo de trabajo.
+
 Durante la etapa de descubrimiento, debemos ejecutar el SIEM en un pequeño subconjunto de tecnologías que sean representativas de todos los dispositivos y políticas de nuestra organización. Cuando lleguemos a la etapa piloto, podremos aplicar las lecciones aprendidas de los datos recopilados durante el descubrimiento e implementar cualquier mejora que hayamos realizado en un subconjunto más grande de políticas y dispositivos.
 
 En la fase piloto, todas las suposiciones que hemos creado durante la fase de descubrimiento debemos probarlas minuciosamente, mientras nos ocupamos de un número creciente de dispositivos cubiertos. Una vez logrados los resultados de de nuestras pruebas de una forma satisfactoria, debemos tener todos los datos y la información que necesitamos para pasar a la fase de implementación controlada.
@@ -95,9 +109,15 @@ La implementación de SIEM no necesita realizarse en una fase rápida. Primero p
 
 La fase de implementación es cuando desarrollamos un flujo de trabajo de implementación que nos permita desarrollar la capacidad para la implementación completa, además de servir como etapa de prueba en un entorno de producción real. Durante esta fase, todos los procesos, procedimientos y operaciones deben describirse claramente en el **[runbook](https://es.wikipedia.org/wiki/Runbook?ref=ciberseguridad.blog)**.
 
-#### 2.3. Fase de mejora continua
+!!! definition "Runbook"
+    Un *runbook* es una guía operativa que describe, paso a paso, cómo actuar ante una alerta o incidente:
+    validación, evidencias a revisar, criterios de escalado, contención y comunicación.
 
-La implementación exitosas de un SIEM, no es algo único y ligado a la propia implementación, si no que debe estar en continuo desarrollo. Los actores maliciosos, nunca dejan de desarrollar métodos de ataque más sofisticados, por lo que debemos seguir evolucionando para estar un paso por delante de nuestros posibles enemigos.
+#### 2.4. Fase de mejora continua
+
+La implementación exitosa de un SIEM no es algo único y ligado a la propia implantación, sino que debe
+evolucionar de forma continua. Los actores maliciosos nunca dejan de desarrollar métodos de ataque más
+sofisticados, por lo que debemos seguir mejorando para ir un paso por delante.
 
 Después de la fase de desarrollo, y a medida que continuemos implementando nuestro sistema SIEM, obtendremos más datos sobre cómo funciona todo en producción. Debemos utilizar estos datos e información para ajustar nuestra implementación y desarrollar las políticas y los procesos de seguridad de nuestra organización. Esto significa que nuestras implementaciones de SIEM están en constante cambio, y este proceso nunca debería detenerse.
 
@@ -107,16 +127,35 @@ La mejor forma de implementar un SIEM es gradualmente. Un enfoque paso a paso no
 
 De una forma sencilla, desgajaremos, cuáles son las mejores prácticas para implementar un SIEM:
 
-1. **Tenga una visión clara de los casos de uso**: Antes de comenzar a revisar y evaluar las soluciones, debes conocer los casos de usos que implementarías, unidos y ligados a tu negocio y su estrategia de ciberseguridad
-2. **Prepárate para lo peor**. Piense siempre en los peores escenarios posibles para que puedas elegir directamente herramientas que puedan manejarlos, o si tienes ya elegidas dichas herramientas, como tratarias los mismos. Un caso de uso, siempre debe ir acompañado del tratamiento del mismo.
+1. **Ten una visión clara de los casos de uso**: Antes de revisar y evaluar soluciones, debes conocer los
+   casos de uso que quieres implementar, ligados a tu negocio y su estrategia de ciberseguridad.
+2. **Prepárate para lo peor**: Piensa en los peores escenarios posibles para elegir herramientas que puedan
+   manejarlos y, si ya están elegidas, definir cómo los tratarías. Un caso de uso debe ir acompañado de su
+   tratamiento.
 3. **Utiliza** los datos de reputación: Datos que provengan, tanto del exterior, como del interior de la red. Esto, nos permitirá controlar la reputación de nuestra propia organización y priorizar las alertas y casos de uso en su tratamiento y despliegue.
-4. **Asegúrate de que nuestras herramientas dispongan de la información más reciente sobre amenazas**: Siempre debemos estar actualizados, cuanto menor sea dicha periodicidad, mejor.
-5. **I3**: Iterar - Iterar - Iterar , este I3, es propio, pero si que creo que debemos pasar, al menos 3 veces, por una alerta o caso de uso, hasta afinarlo perfectamente y conseguir el resultado que nos gustaría.
+4. **Asegúrate de que las herramientas dispongan de la información más reciente sobre amenazas**: Siempre
+   debemos estar actualizados; cuanto menor sea la periodicidad, mejor.
+5. **I3**: Iterar - Iterar - Iterar. Este I3 es propio, pero sí creo que debemos pasar, al menos 3 veces, por
+   una alerta o caso de uso hasta afinarlo y conseguir el resultado deseado.
+
+<figure markdown>   
+  ![](./assets/IS-U2.2.3.-SIEM-Implantacion-siem-soar.svg)   
+  <figcaption>Relación SIEM–SOAR: de alertas a acciones.</figcaption>   
+</figure>
+
+Para llegar al *summum* de la monitorización ([**SOAR**](https://ciberseguridad.blog/por-que-las-herramientas-soar-revitalizaran-el-ecosistema-siem/)),
+tenemos que empezar con una lógica idéntica a la de los SIEM tradicionales. Por ello, tener claro cómo
+implementar un SIEM en sus distintas variedades es una metodología atemporal que nos ayudará en
+muchísimas implantaciones. Podremos dividir el trabajo en más o menos fases, según los gustos, pero todas
+ellas persiguen alinear el SIEM con la estrategia de ciberseguridad para ir un paso por delante.
+
+<figure markdown>   
+  ![](./assets/Implementar-SORA-SIEM.webp)   
+  <figcaption>Implantación de SIEM y SOAR</figcaption>   
+</figure>
 
 ![Implementar SORA - SIEM](https://ciberseguridad.blog/content/images/2021/03/Implementar-SORA---SIEM.png)
 
-Para llegar al summun de la monitorización ([**SOAR**](https://ciberseguridad.blog/por-que-las-herramientas-soar-revitalizaran-el-ecosistema-siem/)), que ya tratamos hace tiempo, tenemos que empezar con una lógica idéntica que los SIEM tradicionales, por ello, tener claro como implementar un SIEM en todas sus variedades, es una metodología atemporal que nos ayudará en muchísimas implementaciones. Podremos dividir en más o menos fases, según los gustos , pero todas ellas llevan a la alineación de nuestros SIEMs, con nuestra estrategia de ciberseguridad, de forma que intentemos ir un paso por delante de nuestros actores maliciosos. 
-
 ## Referencia
-- [Las Mejores prácticas para implemetar una estrategía SIEM](https://ciberseguridad.blog/las-mejores-practicas-para-implementar-una-estrategia-siem/)
+- [Las mejores prácticas para implementar una estrategia SIEM](https://ciberseguridad.blog/las-mejores-practicas-para-implementar-una-estrategia-siem/)
 - [Ruben.Ramiro](https://ciberseguridad.blog/author/ruben-ramiro/)

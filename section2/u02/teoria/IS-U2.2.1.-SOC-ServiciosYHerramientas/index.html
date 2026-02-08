@@ -18,7 +18,7 @@
         <link rel="prev" href="../IS-U2.1.1.-TaxonomiaDeIncidentes/">
       
       
-        <link rel="next" href="../IS-U2.2.2.-CasosUso/">
+        <link rel="next" href="../IS-U2.2.2.-Que%20es%20un%20SIEM/">
       
       
         
@@ -6642,6 +6642,96 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4_4" id="__nav_4_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2.2.-SIEM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2.2.2.-SIEM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IS-U2.2.2.-Que%20es%20un%20SIEM/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2.2.1.-Qué es un SIEM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../IS-U2.2.2.-CasosUso/" class="md-nav__link">
         
@@ -6652,7 +6742,7 @@
   <span class="md-ellipsis">
     
   
-    2.2.2.-SIEM & Casos de uso
+    2.2.2.2.-Casos de uso
   
 
     
@@ -6661,6 +6751,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -9741,9 +9839,9 @@ coordina acciones cuando aparece una amenaza.</p>
 <li><strong>Gerente del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>:</strong> Supervisa las operaciones y coordina la respuesta a incidentes importantes.
    <em>Ejemplo:</em> Coordinar la respuesta a un ataque de <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> que afecta a múltiples sistemas.</li>
 <li><strong>Analistas <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> (Niveles 1, 2, 3):</strong>
-   <strong>Nivel 1:</strong> Monitorea eventos y alerta sobre actividades sospechosas.
+   <strong>Nivel 1:</strong> Monitorea eventos y alerta sobre actividades sospechosas, filtrando falsos positivos.
    <em>Ejemplo:</em> Revisión de un intento de inicio de sesión desde ubicaciones inusuales.
-   <strong>Nivel 2:</strong> Investiga las alertas generadas por el Nivel 1 para determinar si son incidentes reales.
+   <strong>Nivel 2:</strong> Investiga las alertas generadas por el Nivel 1 para determinar si son incidentes reales. Escala incidentes confirmados al Nivel 3 si no puede resolverlos.
    <em>Ejemplo:</em> Analizar patrones de tráfico para confirmar si un ataque está en curso.
    <strong>Nivel 3:</strong> Maneja incidentes complejos y realiza análisis forenses.
    <em>Ejemplo:</em> Determinar cómo un atacante accedió a un sistema y prevenir futuros ataques.</li>
@@ -9770,13 +9868,19 @@ coordina acciones cuando aparece una amenaza.</p>
 <h5 id="221-procesos-en-un-soc">2.2.1. Procesos en un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr><a class="headerlink" href="#221-procesos-en-un-soc" title="Permanent link">&para;</a></h5>
 <p>Los procesos son fundamentales en un Centro de Operaciones de Seguridad (<abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>). Representan la base sobre la que las personas y las tecnologías trabajan en conjunto para proteger a una organización frente a amenazas cibernéticas. Un proceso bien definido no solo asegura eficiencia, sino que también garantiza consistencia y mejora continua en la respuesta a incidentes.</p>
 <ul>
-<li><strong>Monitoreo continuo:</strong> Supervisión 24/7 de eventos y alertas.</li>
+<li>
+<p><strong>Monitoreo continuo:</strong> Supervisión 24/7 de eventos y alertas.   <br />
+<em>Ejemplo:</em> Utilizar un <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> para correlacionar eventos de seguridad y detectar patrones sospechosos.</p>
+</li>
+<li>
+<p><strong>Generación de reportes y métricas:</strong> Evaluar la efectividad del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> y cumplir con requisitos regulatorios.   <br />
+<em>Ejemplo:</em> Producir un informe mensual que muestre el número de incidentes detectados y mitigados.</p>
+</li>
+<li>
+<p><strong>Gestión del conocimiento:</strong> Documentar y compartir lecciones aprendidas de incidentes pasados.   <br />
+<em>Ejemplo:</em> Crear una base de datos de incidentes que incluya detalles sobre cómo se detectaron y mitigaron.</p>
+</li>
 </ul>
-<p><em>Ejemplo:</em> Utilizar un <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> para correlacionar eventos de seguridad y detectar patrones sospechosos.
-- <strong>Generación de reportes y métricas:</strong> Evaluar la efectividad del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> y cumplir con requisitos regulatorios.</p>
-<p><em>Ejemplo:</em> Producir un informe mensual que muestre el número de incidentes detectados y mitigados.
-- <strong>Gestión del conocimiento:</strong> Documentar y compartir lecciones aprendidas de incidentes pasados.</p>
-<p><em>Ejemplo:</em> Crear una base de datos de incidentes que incluya detalles sobre cómo se detectaron y mitigaron.</p>
 <h5 id="222-importancia-de-la-estandarizacion-de-procesos">2.2.2. Importancia de la estandarización de procesos<a class="headerlink" href="#222-importancia-de-la-estandarizacion-de-procesos" title="Permanent link">&para;</a></h5>
 <p>La estandarización asegura que todos los analistas trabajen de manera consistente y que el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> opere según las mejores prácticas de la industria.</p>
 <p><img alt="Pasos en la respuesta a un incidente NIST CFS" src="../assets/IS-U2.2.1.-SOC-ServiciosYHerramientas-1736785655904.png" /></p>
@@ -9808,68 +9912,92 @@ coordina acciones cuando aparece una amenaza.</p>
 <p>El <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr> automatiza tareas de respuesta y orquesta las interacciones entre herramientas del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</p>
 <p><strong>Funciones clave:</strong></p>
 <ol>
-<li><strong>Automatización:</strong> Responde automáticamente a amenazas comunes.</li>
+<li>
+<p><strong>Automatización:</strong> Responde automáticamente a amenazas comunes.  <br />
+<em>Ejemplo:</em> Si un <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> detecta <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr>, el <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr> puede ejecutar un script que aísle automáticamente la máquina afectada.</p>
+</li>
+<li>
+<p><strong>Orquestación:</strong> Integra múltiples herramientas para que trabajen en conjunto.   <br />
+<em>Ejemplo:</em> Crear un flujo de trabajo que inicie un análisis forense cuando se detecta un incidente crítico.</p>
+</li>
 </ol>
-<p><em>Ejemplo:</em> Si un <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> detecta <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr>, el <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr> puede ejecutar un script que aísle automáticamente la máquina afectada. <br />
-2. <strong>Orquestación:</strong> Integra múltiples herramientas para que trabajen en conjunto.</p>
-<p><em>Ejemplo:</em> Crear un flujo de trabajo que inicie un análisis forense cuando se detecta un incidente crítico.
-3. <strong>Gestión de casos:</strong> Documenta incidentes, asigna tareas y realiza seguimientos.</p>
-<p><em>Ejemplo:</em> Crear un ticket para que un analista investigue un ataque phishing y asignar tareas para mitigar la amenaza.</p>
+<p>3**Gestión de casos:** Documenta incidentes, asigna tareas y realiza seguimientos.   <br />
+<em>Ejemplo:</em> Crear un ticket para que un analista investigue un ataque phishing y asignar tareas para mitigar la amenaza.</p>
 <p><strong>Beneficio adicional:</strong> Permite a los analistas centrarse en incidentes complejos, mientras automatiza las tareas repetitivas.</p>
 <p><strong>Ejemplo de herramientas <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr>:</strong> Palo Alto Networks Cortex XSOAR, IBM Resilient, Splunk Phantom, Siemplify, Swimlane, DFLabs IncMan, CyberSponse.</p>
 <h6 id="2313-herramientas-de-threat-intelligence">2.3.1.3. Herramientas de <abbr title="Información sobre las amenazas de seguridad que pueden afectar a una organización. La inteligencia de amenazas incluye datos sobre los actores de amenazas, las tácticas y técnicas de los atacantes, las vulnerabilidades de seguridad, etc.">Threat Intelligence</abbr><a class="headerlink" href="#2313-herramientas-de-threat-intelligence" title="Permanent link">&para;</a></h6>
 <p>Estas herramientas recopilan información sobre amenazas emergentes y la comparten con el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>. Identifican patrones de ataque, <abbr title="Indicadores de Compromiso. Son pistas o evidencias que indican la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoCs</abbr> y <abbr title="Tácticas, Técnicas y Procedimientos. Son patrones de comportamiento utilizados por los atacantes para llevar a cabo un ataque. Los TTPs pueden incluir tácticas de ataque, técnicas de evasión, procedimientos de explotación, etc.">TTPs</abbr> utilizados por actores maliciosos.</p>
 <p><strong>Funciones clave:</strong></p>
 <ol>
-<li><strong>Recopilación de <abbr title="Indicadores de Compromiso. Son pistas o evidencias que indican la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoCs</abbr> (Indicadores de Compromiso):</strong> Direcciones <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> maliciosas, URLs sospechosas, hashes de archivos.</li>
+<li>
+<p><strong>Recopilación de <abbr title="Indicadores de Compromiso. Son pistas o evidencias que indican la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoCs</abbr> (Indicadores de Compromiso):</strong> Direcciones <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> maliciosas, URLs sospechosas, hashes de archivos.  <br />
+<em>Ejemplo:</em> Identificar una dirección <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> utilizada por un grupo de hackers para lanzar ataques.</p>
+</li>
+<li>
+<p><strong>Análisis de <abbr title="Tácticas, Técnicas y Procedimientos. Son patrones de comportamiento utilizados por los atacantes para llevar a cabo un ataque. Los TTPs pueden incluir tácticas de ataque, técnicas de evasión, procedimientos de explotación, etc.">TTPs</abbr> (Tácticas, Técnicas y Procedimientos):</strong> Métodos comunes utilizados por actores maliciosos.  <br />
+<em>Ejemplo:</em> Identificar que un <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> específico utiliza un puerto poco común para comunicarse con su servidor de control y comando, y bloquear ese tráfico.</p>
+</li>
 </ol>
-<p><em>Ejemplo:</em> Identificar una dirección <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> utilizada por un grupo de hackers para lanzar ataques.
-2. <strong>Análisis de <abbr title="Tácticas, Técnicas y Procedimientos. Son patrones de comportamiento utilizados por los atacantes para llevar a cabo un ataque. Los TTPs pueden incluir tácticas de ataque, técnicas de evasión, procedimientos de explotación, etc.">TTPs</abbr> (Tácticas, Técnicas y Procedimientos):</strong> Métodos comunes utilizados por actores maliciosos.</p>
-<p><em>Ejemplo:</em> Identificar que un <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> específico utiliza un puerto poco común para comunicarse con su servidor de control y comando, y bloquear ese tráfico.</p>
 <p><strong>Beneficio adicional:</strong> Ayuda al <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> a anticiparse a nuevas amenazas antes de que impacten a la organización.</p>
 <p><strong>Ejemplo de herramientas de <abbr title="Información sobre las amenazas de seguridad que pueden afectar a una organización. La inteligencia de amenazas incluye datos sobre los actores de amenazas, las tácticas y técnicas de los atacantes, las vulnerabilidades de seguridad, etc.">Threat Intelligence</abbr>:</strong> Recorded Future, ThreatConnect, Anomali, FireEye iSIGHT, IBM X-Force Exchange, AlienVault OTX, VirusTotal, OpenCTI (Open Cyber <abbr title="Información sobre las amenazas de seguridad que pueden afectar a una organización. La inteligencia de amenazas incluye datos sobre los actores de amenazas, las tácticas y técnicas de los atacantes, las vulnerabilidades de seguridad, etc.">Threat Intelligence</abbr>)</p>
 <h6 id="2314-herramientas-de-monitoreo-de-red-y-endpoints">2.3.1.4. Herramientas de monitoreo de red y endpoints<a class="headerlink" href="#2314-herramientas-de-monitoreo-de-red-y-endpoints" title="Permanent link">&para;</a></h6>
 <p>Estas herramientas supervisan el tráfico de red y las actividades en dispositivos finales para detectar amenazas. Detectan comportamientos anómalos y responden a incidentes en tiempo real.</p>
 <p><strong>Tipo de herramientas:</strong></p>
 <ol>
-<li><strong><abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr> (Endpoint Detection and Response):</strong> Se enfoca en la seguridad de los dispositivos finales, como computadoras y servidores para detectar y responder a amenazas.</li>
+<li>
+<p><strong><abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr> (Endpoint Detection and Response):</strong> Se enfoca en la seguridad de los dispositivos finales, como computadoras y servidores para detectar y responder a amenazas.  <br />
+<em>Ejemplo:</em> Identificar un archivo sospechoso descargado en un portátil y bloquear su ejecución.</p>
+</li>
+<li>
+<p><strong>NDR (Network Detection and Response):</strong> Se enfoca en la seguridad de la red, monitorea el tráfico de red para identificar comportamientos anómalos.   <br />
+<em>Ejemplo:</em> Detectar una transferencia de datos inusualmente grande a un servidor externo.</p>
+</li>
 </ol>
-<p><em>Ejemplo:</em> Identificar un archivo sospechoso descargado en un portátil y bloquear su ejecución.
-2. <strong>NDR (Network Detection and Response):</strong> Se enfoca en la seguridad de la red, monitorea el tráfico de red para identificar comportamientos anómalos.</p>
-<p><em>Ejemplo:</em> Detectar una transferencia de datos inusualmente grande a un servidor externo.</p>
 <p><strong>Beneficio adicional:</strong> Proporcionan visibilidad en tiempo real de las actividades en la red y los dispositivos finales, enviando alertas cuando se detectan amenazas potenciales. Suministran logs y datos de tráfico para análisis forense.</p>
 <p><strong>Ejemplo de herramientas <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr>:</strong> CrowdStrike Falcon, Carbon Black, SentinelOne, Cylance, McAfee ENS, Microsoft Defender for Endpoint.</p>
 <h6 id="2315-herramientas-idsips">2.3.1.5. Herramientas <abbr title="Sistema de Detección de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas. Los IDS pueden detectar ataques de denegación de servicio, escaneos de puertos, intentos de intrusión, etc.">IDS</abbr>/<abbr title="Sistema de Prevención de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas, y toma medidas para prevenir o detener los ataques. Los IPS pueden bloquear el tráfico malicioso, rechazar las conexiones sospechosas, etc.">IPS</abbr><a class="headerlink" href="#2315-herramientas-idsips" title="Permanent link">&para;</a></h6>
 <p>Los sistemas de detección y prevención de intrusiones (<abbr title="Sistema de Detección de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas. Los IDS pueden detectar ataques de denegación de servicio, escaneos de puertos, intentos de intrusión, etc.">IDS</abbr>/<abbr title="Sistema de Prevención de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas, y toma medidas para prevenir o detener los ataques. Los IPS pueden bloquear el tráfico malicioso, rechazar las conexiones sospechosas, etc.">IPS</abbr>) monitorean y bloquean actividades maliciosas en la red.</p>
 <p><strong>Funciones clave:</strong></p>
 <ol>
-<li><strong>Detección:</strong> Identificar intentos de intrusión o comportamientos sospechosos.</li>
+<li>
+<p><strong>Detección:</strong> Identificar intentos de intrusión o comportamientos sospechosos.  <br />
+<em>Ejemplo:</em> Un <abbr title="Sistema de Detección de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas. Los IDS pueden detectar ataques de denegación de servicio, escaneos de puertos, intentos de intrusión, etc.">IDS</abbr> alerta sobre un escaneo de puertos en un servidor.</p>
+</li>
+<li>
+<p><strong>Prevención:</strong> Bloquear tráfico malicioso antes de que cause daño.  <br />
+<em>Ejemplo:</em> Un <abbr title="Sistema de Prevención de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas, y toma medidas para prevenir o detener los ataques. Los IPS pueden bloquear el tráfico malicioso, rechazar las conexiones sospechosas, etc.">IPS</abbr> detecta un escaneo de puertos inusual y bloquea la <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> del atacante.</p>
+</li>
 </ol>
-<p><em>Ejemplo:</em> Un <abbr title="Sistema de Detección de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas. Los IDS pueden detectar ataques de denegación de servicio, escaneos de puertos, intentos de intrusión, etc.">IDS</abbr> alerta sobre un escaneo de puertos en un servidor.
-2. <strong>Prevención:</strong> Bloquear tráfico malicioso antes de que cause daño.</p>
-<p><em>Ejemplo:</em> Un <abbr title="Sistema de Prevención de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas, y toma medidas para prevenir o detener los ataques. Los IPS pueden bloquear el tráfico malicioso, rechazar las conexiones sospechosas, etc.">IPS</abbr> detecta un escaneo de puertos inusual y bloquea la <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> del atacante.</p>
 <p><strong>Beneficio adicional:</strong> Protege la red contra ataques conocidos y desconocidos.</p>
 <p><strong>Ejemplo de herramientas <abbr title="Sistema de Detección de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas. Los IDS pueden detectar ataques de denegación de servicio, escaneos de puertos, intentos de intrusión, etc.">IDS</abbr>/<abbr title="Sistema de Prevención de Intrusiones. Es un sistema de seguridad que monitoriza y analiza el tráfico de red en busca de actividades sospechosas o maliciosas, y toma medidas para prevenir o detener los ataques. Los IPS pueden bloquear el tráfico malicioso, rechazar las conexiones sospechosas, etc.">IPS</abbr>:</strong> Snort, Suricata, Cisco Firepower, Palo Alto Networks, Fortinet, Check Point.</p>
 <h6 id="2316-sistemas-de-ticketing">2.3.1.6. Sistemas de ticketing<a class="headerlink" href="#2316-sistemas-de-ticketing" title="Permanent link">&para;</a></h6>
 <p>Los sistemas de ticketing gestionan y documentan los incidentes dentro del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>. Permiten asignar tareas, hacer seguimiento de la resolución y documentar las acciones tomadas.</p>
 <p><strong>Funciones clave:</strong></p>
 <ol>
-<li><strong>Registro de incidentes:</strong> Cada incidente se documenta con detalles como la fecha, la gravedad y las acciones tomadas.</li>
+<li>
+<p><strong>Registro de incidentes:</strong> Cada incidente se documenta con detalles como la fecha, la gravedad y las acciones tomadas.  <br />
+<em>Ejemplo:</em> Crear un ticket para un ataque de phishing detectado por el equipo de <abbr title="Información sobre las amenazas de seguridad que pueden afectar a una organización. La inteligencia de amenazas incluye datos sobre los actores de amenazas, las tácticas y técnicas de los atacantes, las vulnerabilidades de seguridad, etc.">Threat Intelligence</abbr>, cualificado por un analista y asignado a un especialista en respuesta a incidentes.</p>
+</li>
+<li>
+<p><strong>Colaboración:</strong> Permite asignar tareas a diferentes miembros del equipo.  <br />
+<em>Ejemplo:</em> Cuando se detecta un ataque phishing, se genera un ticket para que un analista investigue los correos afectados.</p>
+</li>
 </ol>
-<p><em>Ejemplo:</em> Crear un ticket para un ataque de phishing detectado por el equipo de <abbr title="Información sobre las amenazas de seguridad que pueden afectar a una organización. La inteligencia de amenazas incluye datos sobre los actores de amenazas, las tácticas y técnicas de los atacantes, las vulnerabilidades de seguridad, etc.">Threat Intelligence</abbr>, cualificado por un analista y asignado a un especialista en respuesta a incidentes.
-2. <strong>Colaboración:</strong> Permite asignar tareas a diferentes miembros del equipo.</p>
-<p><em>Ejemplo:</em> Cuando se detecta un ataque phishing, se genera un ticket para que un analista investigue los correos afectados.</p>
 <p><strong>Beneficio adicional:</strong> Facilita la comunicación y la colaboración entre los miembros del equipo, asegurando que los incidentes se gestionen de manera eficiente.</p>
 <p><strong>Ejemplo de herramientas de ticketing:</strong> TheHive, IBM Resilient, Splunk <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr> (anteriormente Phantom), Cortex XSOAR (de Palo Alto Networks), DFLabs IncMan <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr>, Siemplify, LogRhythm <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr>, ServiceNow Security Operations, FortiSOAR (Fortinet), MISP (Malware Information Sharing Platform), Jira, ServiceNow, Freshdesk, OTRS.</p>
 <h6 id="2317-tecnologias-de-analisis-forense">2.3.1.7. Tecnologías de análisis forense<a class="headerlink" href="#2317-tecnologias-de-analisis-forense" title="Permanent link">&para;</a></h6>
 <p>Estas herramientas permiten a los equipos analizar incidentes después de que han ocurrido para comprender cómo sucedieron.</p>
 <p><strong>Funciones clave:</strong></p>
 <ol>
-<li>Recuperar, salvaguardar las evidencias digitales de los sistemas afectados.</li>
+<li>
+<p>Recuperar, salvaguardar las evidencias digitales de los sistemas afectados.  <br />
+<em>Ejemplo:</em> Extraer registros, logs y archivos de un servidor comprometido y dejar una copia forense para análisis.</p>
+</li>
+<li>
+<p>Analizar las evidencias y reconstruir la secuencia de eventos que llevaron al incidente.   <br />
+<em>Ejemplo:</em> Analizar los logs de un servidor comprometido para determinar si el atacante usó una vulnerabilidad de software específica.</p>
+</li>
 </ol>
-<p><em>Ejemplo:</em> Extraer registros, logs y archivos de un servidor comprometido y dejar una copia forense para análisis.
-2. Analizar las evidencias y reconstruir la secuencia de eventos que llevaron al incidente.</p>
-<p><em>Ejemplo:</em> Analizar los logs de un servidor comprometido para determinar si el atacante usó una vulnerabilidad de software específica.</p>
 <p><strong>Beneficio adicional:</strong> Proporciona información valiosa para mejorar las defensas y prevenir futuros incidentes.</p>
 <p><strong>Ejemplo de herramientas de análisis forense:</strong> EnCase Forensic, FTK (Forensic Toolkit by AccessData), Autopsy, Volatility, SIFT (SANS Investigative Forensic Toolkit), OSForensics, X-Ways Forensics, Sleuth Kit, Cellebrite, Magnet AXIOM, BlackLight, Oxygen Forensic Detective, Axiom Cyber, Cyber Triage, etc.</p>
 <h5 id="232-integracion-de-tecnologias">2.3.2. Integración de tecnologías<a class="headerlink" href="#232-integracion-de-tecnologias" title="Permanent link">&para;</a></h5>
@@ -9894,13 +10022,19 @@ coordina acciones cuando aparece una amenaza.</p>
 termina saturando al equipo y hace más probable que se “escape” una alerta importante.</p>
 </div>
 <ol>
-<li><strong>Sobrecarga de alertas:</strong> Un <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> mal configurado puede generar demasiadas alertas, causando fatiga en los analistas.</li>
+<li>
+<p><strong>Sobrecarga de alertas:</strong> Un <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> mal configurado puede generar demasiadas alertas, causando fatiga en los analistas.   <br />
+<em>Solución:</em> Afinar las reglas de detección y usar inteligencia artificial para priorizar alertas.</p>
+</li>
+<li>
+<p><strong>Costo:</strong> Las herramientas avanzadas pueden ser costosas de implementar y mantener.   <br />
+<em>Solución:</em> Evaluar herramientas de código abierto o servicios en la nube.</p>
+</li>
+<li>
+<p><strong>Falta de habilidades:</strong> Requieren personal capacitado para su configuración y uso.    <br />
+<em>Solución:</em> Capacitar continuamente al equipo del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</p>
+</li>
 </ol>
-<p><em>Solución:</em> Afinar las reglas de detección y usar inteligencia artificial para priorizar alertas.
-2. <strong>Costo:</strong> Las herramientas avanzadas pueden ser costosas de implementar y mantener.</p>
-<p><em>Solución:</em> Evaluar herramientas de código abierto o servicios en la nube.
-3. <strong>Falta de habilidades:</strong> Requieren personal capacitado para su configuración y uso.</p>
-<p><em>Solución:</em> Capacitar continuamente al equipo del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</p>
 <p>Las tecnologías son el esqueleto que soporta las operaciones de un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>. Desde herramientas de monitoreo como el <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> hasta sistemas de automatización como el <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr>, cada tecnología juega un papel crítico en la detección y respuesta a amenazas. Sin embargo, su efectividad depende de una implementación adecuada, una integración robusta y una configuración que equilibre precisión y eficiencia.</p>
 <h4 id="24-servicios">2.4. Servicios<a class="headerlink" href="#24-servicios" title="Permanent link">&para;</a></h4>
 <p>Los servicios que ofrece un Centro de Operaciones de Seguridad (<abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>) son el resultado del trabajo conjunto de sus personas, procesos y tecnologías. Cada servicio aborda aspectos específicos de la ciberseguridad, desde la identificación temprana de amenazas hasta la recuperación posterior a un incidente. Estos servicios permiten a una organización no solo reaccionar a los incidentes, sino también anticiparse a ellos y aprender de cada evento para fortalecer sus defensas.</p>
@@ -9943,7 +10077,7 @@ termina saturando al equipo y hace más probable que se “escape” una alerta 
 </ol>
 <p><em>Ejemplo:</em> El <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> detecta múltiples intentos de acceso fallidos desde una <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> desconocida y genera una alerta.</p>
 <h4 id="2413-monitoring-triage">2.4.1.3. Monitoring &amp; Triage<a class="headerlink" href="#2413-monitoring-triage" title="Permanent link">&para;</a></h4>
-<p><strong>Monitoring &amp; Triage</strong> actúa como el primer nivel de análisis, revisando las alertas generadas por el <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> para determinar si representan incidentes reales o falsos positivos. Este servicio asegura que solo las amenazas verificadas sean escaladas, apoyados en playbooks, que ayudan a priorizar y clasificar los incidentes. Equivale a nivel 1, y suele requerir disponibilidad 24 horas y 7 días a la semana. Se basa en herramientas de ticketing para documentar y gestionar los incidentes, y en el <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr> para automatizar tareas.</p>
+<p><strong>Monitoring &amp; Triage</strong> actúa como el primer nivel de análisis, revisando las alertas generadas por el <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> para determinar si representan incidentes reales o falsos positivos. Este servicio asegura que solo las amenazas verificadas sean escaladas, apoyados en playbooks, que ayudan a priorizar y clasificar los incidentes. Equivale a <strong>nivel 1</strong>, y suele requerir disponibilidad 24 horas y 7 días a la semana. Se basa en herramientas de ticketing para documentar y gestionar los incidentes, y en el <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr> para automatizar tareas.</p>
 <p><img alt="Monitoring &amp; Triage" src="../assets/IS-U2.2.1.-SOC-ServiciosYHerramientas-1736796192187.png" /></p>
 <p><strong>Funciones principales:</strong></p>
 <ul>
@@ -9957,7 +10091,7 @@ termina saturando al equipo y hace más probable que se “escape” una alerta 
 </ol>
 <p><em>Ejemplo:</em> Monitoring &amp; Triage recibe una alerta de intentos de acceso desde una <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> sospechosa, confirma que es un ataque real y lo escala para su contención al segundo nivel, Incident Response.</p>
 <h4 id="2414-incident-response">2.4.1.4. Incident Response<a class="headerlink" href="#2414-incident-response" title="Permanent link">&para;</a></h4>
-<p><strong>Incident Response</strong> gestiona incidentes confirmados para contener y mitigar su impacto. Esto incluye acciones como aislar sistemas comprometidos, bloquear direcciones <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> maliciosas y coordinar la recuperación. Suele denominarse nivel 2 y nivel 3 y utilizan playbooks para la respuesta a incidentes. Se basan en la herramienta de ticketing para documentar y gestionar los incidentes, y en el <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr> para automatizar tareas.</p>
+<p><strong>Incident Response</strong> gestiona incidentes confirmados para contener y mitigar su impacto. Esto incluye acciones como aislar sistemas comprometidos, bloquear direcciones <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> maliciosas y coordinar la recuperación. Suele denominarse <strong>nivel 2 y nivel 3</strong> y utilizan playbooks para la respuesta a incidentes. Se basan en la herramienta de ticketing para documentar y gestionar los incidentes, y en el <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr> para automatizar tareas.</p>
 <p><img alt="Incident Response" src="../assets/IS-U2.2.1.-SOC-ServiciosYHerramientas-1736795652317.png" /></p>
 <p><strong>Funciones principales:</strong></p>
 <ul>
@@ -10028,12 +10162,18 @@ termina saturando al equipo y hace más probable que se “escape” una alerta 
 <p>Este flujo asegura que cada servicio funcione de manera independiente, pero interconectada, maximizando la eficacia del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> en su misión de proteger la organización frente a amenazas cibernéticas.</p>
 <h5 id="243-retos-en-la-prestacion-de-servicios">2.4.3. Retos en la prestación de servicios<a class="headerlink" href="#243-retos-en-la-prestacion-de-servicios" title="Permanent link">&para;</a></h5>
 <ol>
-<li><strong>Falta de integración:</strong> Si las herramientas y procesos no están alineados, los servicios pueden no ser efectivos.
-   <em>Solución:</em> Usar plataformas que centralicen la gestión y faciliten la colaboración.</li>
-<li><strong>Sobrecarga de alertas:</strong> Un exceso de alertas puede abrumar a los equipos de Monitoring &amp; Triage.
-   <em>Solución:</em> Afinar las reglas del <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> y priorizar alertas críticas.</li>
-<li><strong>Costos:</strong> Los servicios avanzados como <abbr title="Proceso de búsqueda proactiva de amenazas de seguridad en una red. Los cazadores de amenazas utilizan técnicas de análisis de datos, correlación de eventos y detección de anomalías para identificar y responder a las amenazas de seguridad.">Threat Hunting</abbr> y Purple Team pueden requerir inversiones significativas.
-   <em>Solución:</em> Comenzar con servicios esenciales e ir añadiendo capacidades conforme crece la madurez del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</li>
+<li>
+<p><strong>Falta de integración:</strong> Si las herramientas y procesos no están alineados, los servicios pueden no ser efectivos. <br />
+<em>Solución:</em> Usar plataformas que centralicen la gestión y faciliten la colaboración.</p>
+</li>
+<li>
+<p><strong>Sobrecarga de alertas:</strong> Un exceso de alertas puede abrumar a los equipos de Monitoring &amp; Triage.   <br />
+<em>Solución:</em> Afinar las reglas del <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> y priorizar alertas críticas.     </p>
+</li>
+<li>
+<p><strong>Costos:</strong> Los servicios avanzados como <abbr title="Proceso de búsqueda proactiva de amenazas de seguridad en una red. Los cazadores de amenazas utilizan técnicas de análisis de datos, correlación de eventos y detección de anomalías para identificar y responder a las amenazas de seguridad.">Threat Hunting</abbr> y Purple Team pueden requerir inversiones significativas.   <br />
+<em>Solución:</em> Comenzar con servicios esenciales e ir añadiendo capacidades conforme crece la madurez del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</p>
+</li>
 </ol>
 <p>Los servicios de un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> son necesarios para gestionar la ciberseguridad de manera proactiva y reactiva. Cada servicio cumple un papel único, pero su valor real radica en cómo interactúan para formar una defensa cohesiva contra amenazas. Un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> bien diseñado no solo responde a incidentes, sino que también aprende y mejora continuamente para anticiparse a los ataques futuros.</p>
 <p>Un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> eficaz requiere una integración armoniosa entre personas capacitadas, procesos definidos, tecnologías avanzadas y servicios bien implementados. Estos componentes trabajan juntos para proteger a las organizaciones frente a amenazas cibernéticas modernas.</p>
@@ -10106,29 +10246,47 @@ termina saturando al equipo y hace más probable que se “escape” una alerta 
 <p>La implementación de un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> requiere un enfoque estructurado que cubra múltiples áreas críticas. Estas fases son fundamentales para garantizar que el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> sea efectivo y sostenible.</p>
 <h5 id="331-negocio">3.3.1. Negocio<a class="headerlink" href="#331-negocio" title="Permanent link">&para;</a></h5>
 <ul>
-<li><strong>Definición de objetivos:</strong> Identificar qué se espera lograr con el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</li>
+<li>
+<p><strong>Definición de objetivos:</strong> Identificar qué se espera lograr con el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</p>
+<p><em>Ejemplo:</em> Proteger la confidencialidad de los datos de los clientes y cumplir con normativas como <abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El GDPR garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">GDPR</abbr>.</p>
+</li>
+<li>
+<p><strong>Gestión de costes:</strong> Determinar el presupuesto y planificar la inversión en tecnología y personal.</p>
+</li>
+<li>
+<p><strong>Documento de constitución:</strong> Formalizar la misión, alcance y estructura del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</p>
+</li>
 </ul>
-<p><em>Ejemplo:</em> Proteger la confidencialidad de los datos de los clientes y cumplir con normativas como <abbr title="Reglamento General de Protección de Datos de la Unión Europea. Es un reglamento que establece las normas para la protección de los datos personales de los ciudadanos de la Unión Europea. El GDPR garantiza la privacidad, la seguridad y el control de los datos personales de los ciudadanos.">GDPR</abbr>.
-- <strong>Gestión de costes:</strong> Determinar el presupuesto y planificar la inversión en tecnología y personal.
-- <strong>Documento de constitución:</strong> Formalizar la misión, alcance y estructura del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</p>
 <h5 id="332-personas">3.3.2. Personas<a class="headerlink" href="#332-personas" title="Permanent link">&para;</a></h5>
 <ul>
-<li><strong>Selección de roles:</strong> Identificar los roles necesarios, desde analistas hasta gerentes.</li>
+<li>
+<p><strong>Selección de roles:</strong> Identificar los roles necesarios, desde analistas hasta gerentes.</p>
+<p><em>Ejemplo:</em> Contratar analistas <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> con experiencia en herramientas <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> y <abbr title="Información sobre las amenazas de seguridad que pueden afectar a una organización. La inteligencia de amenazas incluye datos sobre los actores de amenazas, las tácticas y técnicas de los atacantes, las vulnerabilidades de seguridad, etc.">Threat Intelligence</abbr>.</p>
+</li>
+<li>
+<p><strong>Capacitación inicial:</strong> Asegurar que el equipo esté entrenado en los procesos y tecnologías del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</p>
+</li>
 </ul>
-<p><em>Ejemplo:</em> Contratar analistas <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> con experiencia en herramientas <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> y <abbr title="Información sobre las amenazas de seguridad que pueden afectar a una organización. La inteligencia de amenazas incluye datos sobre los actores de amenazas, las tácticas y técnicas de los atacantes, las vulnerabilidades de seguridad, etc.">Threat Intelligence</abbr>.
-- <strong>Capacitación inicial:</strong> Asegurar que el equipo esté entrenado en los procesos y tecnologías del <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</p>
 <h5 id="333-procesos">3.3.3. Procesos<a class="headerlink" href="#333-procesos" title="Permanent link">&para;</a></h5>
 <ul>
-<li><strong>Definición de flujos de trabajo:</strong> Crear procesos para gestionar incidentes, realizar análisis forenses y actualizar reglas de detección.</li>
+<li>
+<p><strong>Definición de flujos de trabajo:</strong> Crear procesos para gestionar incidentes, realizar análisis forenses y actualizar reglas de detección.</p>
+<p><em>Ejemplo:</em> Diseñar un proceso de respuesta a incidentes que incluya fases de detección, contención y recuperación.</p>
+</li>
+<li>
+<p><strong>Estandarización:</strong> Implementar marcos como <abbr title="National Institute of Standards and Technology (Instituto Nacional de Estándares y Tecnología). Es una agencia del gobierno de los Estados Unidos que establece normas y guías en diversas áreas, como la ciberseguridad, la tecnología, la ciencia, etc. El NIST publica normas, recomendaciones y guías para ayudar a las organizaciones a mejorar su seguridad y eficiencia.">NIST</abbr> CSF para estructurar las operaciones.</p>
+</li>
 </ul>
-<p><em>Ejemplo:</em> Diseñar un proceso de respuesta a incidentes que incluya fases de detección, contención y recuperación.
-- <strong>Estandarización:</strong> Implementar marcos como <abbr title="National Institute of Standards and Technology (Instituto Nacional de Estándares y Tecnología). Es una agencia del gobierno de los Estados Unidos que establece normas y guías en diversas áreas, como la ciberseguridad, la tecnología, la ciencia, etc. El NIST publica normas, recomendaciones y guías para ayudar a las organizaciones a mejorar su seguridad y eficiencia.">NIST</abbr> CSF para estructurar las operaciones.</p>
 <h5 id="334-tecnologias">3.3.4. Tecnologías<a class="headerlink" href="#334-tecnologias" title="Permanent link">&para;</a></h5>
 <ul>
-<li><strong>Selección de herramientas:</strong> Implementar tecnologías como <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>, <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr>, y <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr>.</li>
+<li>
+<p><strong>Selección de herramientas:</strong> Implementar tecnologías como <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>, <abbr title="Automatización y Orquestación de la Respuesta a Incidentes de Seguridad. Es un sistema de seguridad que automatiza y coordina la respuesta a los incidentes de seguridad en una red. Los SOARs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y ejecutar acciones de respuesta de forma automática.">SOAR</abbr>, y <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr>.</p>
+<p><em>Ejemplo:</em> Configurar un <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> para recopilar registros de toda la infraestructura tecnológica.</p>
+</li>
+<li>
+<p><strong>Integración:</strong> Asegurar que las herramientas trabajen en conjunto para maximizar la eficiencia.</p>
+</li>
 </ul>
-<p><em>Ejemplo:</em> Configurar un <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> para recopilar registros de toda la infraestructura tecnológica.
-- <strong>Integración:</strong> Asegurar que las herramientas trabajen en conjunto para maximizar la eficiencia.</p>
 <h5 id="335-servicios">3.3.5. Servicios<a class="headerlink" href="#335-servicios" title="Permanent link">&para;</a></h5>
 <ul>
 <li><strong>Definición de servicios iniciales:</strong> Comenzar con servicios básicos como monitoreo y respuesta a incidentes, y añadir otros como <abbr title="Proceso de búsqueda proactiva de amenazas de seguridad en una red. Los cazadores de amenazas utilizan técnicas de análisis de datos, correlación de eventos y detección de anomalías para identificar y responder a las amenazas de seguridad.">Threat Hunting</abbr> a medida que el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> madura.</li>

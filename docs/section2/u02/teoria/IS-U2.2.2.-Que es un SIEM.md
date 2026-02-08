@@ -410,7 +410,7 @@ En el siguiente ejemplo, puede ver el flujo del libro de jugadas de phishing que
 
 
 
-PD: Trabajas en LetsDefend individualmente, no como miembro de un equipo.
+> Trabajas en LetsDefend individualmente, no como miembro de un equipo.
 
 Después de tomar posesión de la alerta, verá que la alerta se ha reenviado al "Canal de investigación". Este canal tiene alertas en las que se está trabajando activamente. Haga clic en la alerta para obtener más detalles. Nuestro objetivo es determinar si esta alerta realmente contiene una situación dañina. En otras palabras, necesitamos determinar si es un falso positivo o un verdadero positivo. Para esto, podemos crear un registro en "Gestión de casos/Gestión de incidentes" haciendo clic en el botón "Crear caso" y luego siguiendo los pasos del libro de jugadas.
 
@@ -432,7 +432,7 @@ Después de completar los pasos del libro de jugadas, será redirigido nuevament
 
 Después de realizar las selecciones y explicaciones necesarias, puede cerrar la alerta y ver los resultados de su análisis.
 
-PD: en la vida real, es posible que no pueda verificar los resultados de su análisis todo el tiempo. A veces, puede trabajar con un analista senior y obtener ayuda al explicar los pasos que ha realizado, pero este no es un método sostenible. Por lo tanto, es una oportunidad para examinar los resultados del análisis de las alertas que ha cerrado en LetsDefend y aprender nuevos métodos.
+> En la vida real, es posible que no pueda verificar los resultados de su análisis todo el tiempo. A veces, puede trabajar con un analista senior y obtener ayuda al explicar los pasos que ha realizado, pero este no es un método sostenible. Por lo tanto, es una oportunidad para examinar los resultados del análisis de las alertas que ha cerrado en LetsDefend y aprender nuevos métodos.
 
 Una vez cerrada la alerta, se dirigirá al canal "Alertas cerradas" y podrá consultar sus respuestas aquí.
 

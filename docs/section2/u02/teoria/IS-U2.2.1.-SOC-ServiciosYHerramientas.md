@@ -63,19 +63,15 @@ de seguridad.
 El SOC tiene como objetivo proteger los activos críticos de la organización (datos, sistemas y reputación) mediante:
 
 1. **Prevención:** Implementar controles y configuraciones para evitar ataques.
-
    *Ejemplo:* Configurar firewalls para bloquear conexiones no autorizadas. Configurar IDS/IPS para detectar y bloquear ataques.
 
 2. **Detección:** Detectar actividades sospechosas que puedan ser indicativas de un incidente de seguridad.
-
    *Ejemplo:* Alertas del SIEM que detectan intentos de acceso inusuales, según reglas de detección configuradas.
 
 3. **Respuesta:** Actuar rápidamente para minimizar el impacto de los incidentes.
-
    *Ejemplo:* Aislar un servidor comprometido para evitar que un malware se propague y eliminar la amenaza.
 
 4. **Recuperación:** Restaurar los sistemas afectados y garantizar que vuelvan a operar normalmente.
-
    *Ejemplo:* Restaurar datos desde una copia de seguridad tras un ataque de ransomware.
 
 #### 1.3. Diferencias entre SOC, CERT, CIRT y CSIRT
@@ -108,7 +104,7 @@ CSIRT y CIRT son casi siempre casi equivalentes, referentes a respuesta de incid
 * El equipo de respuesta a incidentes investiga el incidente y coordina la respuesta: Contener el ataque, eliminar la amenaza.
 * Tras contener el ataque, el equipo de respuesta a incidentes continua con la recuperación de los sistemas afectados.
 
-**Analogía:** El SOC es como un hospital completo que incluye áreas de prevención, diagnóstico y tratamiento, mientras que un CERT/CIRT/CSIRT sería como la unidad de emergencias, que se activa solo cuando ocurre un evento crítico.
+Analogía: El SOC es como un hospital completo que incluye áreas de prevención, diagnóstico y tratamiento, mientras que un CERT/CIRT/CSIRT sería como la unidad de emergencias, que se activa solo cuando ocurre un evento crítico.
 
 #### 1.4. Importancia de los SOC en la ciberseguridad empresarial
 

@@ -24,26 +24,36 @@ tags:
 | RA2     | Analiza incidentes de ciberseguridad utilizando herramientas, mecanismos de detección y alertas de seguridad.                  |
 | CEb     | Se han establecido controles, herramientas y mecanismos de monitorización, identificación, detección y alerta de incidentes. |
 
-En el punto anterior hemos visto como clasificar y valorar los incidentes de ciberseguridad. En el proceso de detección y respuesta a incidentes de ciberseguridad, es fundamental contar con herramientas y servicios que nos ayuden a detectar y responder a estos incidentes. En este apartado vamos a ver las herramientas y servicios más comunes que se utilizan en un SOC para detectar y responder a incidentes de ciberseguridad.
+En el punto anterior hemos visto cómo clasificar y valorar los incidentes de ciberseguridad. En el proceso de detección y respuesta a incidentes de ciberseguridad, es fundamental contar con herramientas y servicios que nos ayuden a detectar y responder a estos incidentes. En este apartado vamos a ver las herramientas y servicios más comunes que se utilizan en un SOC para detectar y responder a incidentes de ciberseguridad.
 
 <figure markdown>
   ![](./assets/IS-U2.2.1.-SOC.png)
   <figcaption>Representación de un SOC</figcaption>
 </figure>
 
-### 1. Introducciíon
+<figure markdown>   
+  ![](./assets/IS-U2.2.1.-SOC-ServiciosYHerramientas-ecosistema-soc.svg)   
+  <figcaption>Mapa visual del ecosistema de un SOC (imagen generada).</figcaption>   
+</figure>
+
+### 1. Introducción
 
 Los Centros de Operaciones de Seguridad (SOC, por sus siglas en inglés) son el corazón operativo de la ciberseguridad en una organización. Antes de adentrarnos en sus componentes y servicios, es fundamental comprender qué es un SOC, qué objetivos persigue, cómo se diferencia de otras estructuras de seguridad y por qué es crucial en el entorno empresarial moderno.
 
 #### 1.1. ¿Qué es un SOC?
 
-Un SOC es un centro de operaciones centralizado compuesto por profesionales de ciberseguridad, procesos estandarizados y tecnologías avanzadas, diseñado para supervisar, detectar, responder y prevenir amenazas de seguridad.
+Un SOC es un centro de operaciones centralizado compuesto por profesionales de ciberseguridad, procesos
+estandarizados y tecnologías avanzadas, diseñado para supervisar, detectar, responder y prevenir amenazas
+de seguridad.
 
-**Analogía:** Imagina un SOC como un “centro de control aéreo” para la ciberseguridad. Así como los controladores de tráfico aéreo supervisan vuelos y responden a emergencias, los analistas del SOC vigilan el tráfico digital de una organización y reaccionan ante amenazas.
+!!! example "Analogía"
+    Imagina un SOC como un “centro de control aéreo” para la ciberseguridad. Igual que los controladores
+    supervisan vuelos y coordinan respuestas ante incidencias, el equipo del SOC vigila el tráfico digital y
+    coordina acciones cuando aparece una amenaza.
 
 **Funciones principales:**
 
-1. Supervisar continuamente la infraestructura tecnológica (redes, sistemas, aplicaciones), asi como la información de la organización. Estar preparados y actualizados, buscando amenazas y vulnerabilidades.
+1. Supervisar continuamente la infraestructura tecnológica (redes, sistemas, aplicaciones), así como la información de la organización. Estar preparados y actualizados, buscando amenazas y vulnerabilidades.
 2. Detectar amenazas o actividades sospechosas.
 3. Responder y mitigar incidentes de seguridad.
 4. Prevenir futuros ataques mediante el aprendizaje continuo y la mejora de defensas.
@@ -55,12 +65,15 @@ El SOC tiene como objetivo proteger los activos críticos de la organización (d
 1. **Prevención:** Implementar controles y configuraciones para evitar ataques.
 
    *Ejemplo:* Configurar firewalls para bloquear conexiones no autorizadas. Configurar IDS/IPS para detectar y bloquear ataques.
+
 2. **Detección:** Detectar actividades sospechosas que puedan ser indicativas de un incidente de seguridad.
 
    *Ejemplo:* Alertas del SIEM que detectan intentos de acceso inusuales, según reglas de detección configuradas.
+
 3. **Respuesta:** Actuar rápidamente para minimizar el impacto de los incidentes.
 
    *Ejemplo:* Aislar un servidor comprometido para evitar que un malware se propague y eliminar la amenaza.
+
 4. **Recuperación:** Restaurar los sistemas afectados y garantizar que vuelvan a operar normalmente.
 
    *Ejemplo:* Restaurar datos desde una copia de seguridad tras un ataque de ransomware.
@@ -361,6 +374,10 @@ La verdadera fuerza de un SOC reside en cómo se integran estas herramientas par
 
 Aunque las tecnologías son fundamentales, presentan desafíos:
 
+!!! warning "Atención: fatiga por alertas"
+    Un SIEM mal configurado puede generar demasiadas alertas (muchas de ellas falsos positivos). Esto
+    termina saturando al equipo y hace más probable que se “escape” una alerta importante.
+
 1. **Sobrecarga de alertas:** Un SIEM mal configurado puede generar demasiadas alertas, causando fatiga en los analistas.
 
    *Solución:* Afinar las reglas de detección y usar inteligencia artificial para priorizar alertas.
@@ -654,26 +671,22 @@ Un SOC eficaz requiere una integración armoniosa entre personas capacitadas, pr
 
 ## Anexo I
 
-**¿Qué es un Indicador de compromiso (IoC)?**
+!!! definition "Indicador de compromiso (IoC)"
+    Los indicadores de compromiso (IoC, por sus siglas en inglés) son piezas de información que pueden
+    utilizarse para detectar actividad maliciosa o sospechosa en una red o sistema. Pueden ser, por ejemplo,
+    URLs, direcciones IP, hashes de archivos o patrones de eventos en logs, y sirven para identificar
+    intrusiones en tiempo real o a posteriori.
 
-Los indicadores de compromiso (IoC, por sus siglas en inglés) son piezas de información que pueden ser utilizadas para detectar actividades maliciosas o sospechosas en una red o sistema. Estos indicadores pueden abarcar una amplia gama de datos, que van desde URL específicas, direcciones IP, hash de archivos, entre otros, y pueden ser utilizados para identificar intrusiones o ataques de ciberseguridad en tiempo real o después de que hayan ocurrido.
+!!! example "Ejemplos de IoC"
+    - **Direcciones IP sospechosas:** si aparecen conexiones a una IP usada para Command and Control (C2).
+    - **Hashes de archivos:** si un hash coincide con el de un malware conocido.
+    - **URLs y dominios:** dominios usados en campañas de phishing o para alojar malware.
+    - **Patrones en logs:** muchos intentos de login en poco tiempo (posible fuerza bruta).
 
-**Ejemplos de Indicadores de Compromiso (IoC)**
-
-A continuación se indican algunos ejemplos de indicadores de compromiso:
-
-* **Direcciones IP sospechosas:** Si se encuentran registros de conexión a una dirección IP concreta que ha sido utilizada por software malicioso para establecer un Command and Control, esto es un indicador de compromiso.
-* **Hashes de archivos maliciosos:** Los hashes de archivos pueden utilizarse para identificar software malicioso o archivos modificados o comprometidos. Por ejemplo, si un hash de archivo coincide con el hash de un software malicioso, esto es un indicador de compromiso.
-* **URLs y dominios maliciosos:** Las URLs y dominios son utilizados a menudo por los atacantes para alojar malware o llevar a cabo ataques de phishing. Los IoCs pueden incluir estas URL y dominios maliciosos para ayudar a identificar y bloquear estas amenazas.
-* **Patrón de eventos/logs:** Un patrón de eventos inusual en los registros de un sistema puede indicar una intrusión. Por ejemplo, si se se conoce que un software malicioso concreto realiza ataques de fuerza bruta sobre el login de los usuarios y se identifica en la infraestructura que un usuario intenta iniciar sesión en una cuenta varias veces en un corto periodo de tiempo, esto puede ser un indicador de que estamos comprometidos por el programa malicioso.
-
-**¿Qué es MISP?**
-
-MISP (Malware Information Sharing Platform) es una plataforma abierta que se utiliza para el intercambio, almacenamiento y correlación de indicadores de compromiso. MISP proporciona una estructura para que las organizaciones compartan información de amenazas de manera segura y eficiente.
-
-MISP permite a los equipos de seguridad recopilar, almacenar y compartir IoCs con otras organizaciones. Esto facilita una respuesta más rápida y eficiente a las amenazas, ya que las organizaciones pueden beneficiarse de la información proporcionada por otras entidades que han experimentado las mismas o similares amenazas.
-
-La plataforma MISP también proporciona una serie de características adicionales para apoyar la gestión de amenazas, incluyendo soporte para la taxonomía de amenazas, la capacidad de adjuntar contexto y atribución a los indicadores, y herramientas para la visualización de datos de amenazas.
+!!! definition "MISP (Malware Information Sharing Platform)"
+    MISP es una plataforma abierta para el intercambio, almacenamiento y correlación de IoCs. Permite que
+    organizaciones compartan inteligencia de amenazas de forma estructurada, mejorando la detección y la
+    respuesta. Además, facilita añadir contexto (atribución, taxonomías, referencias) y visualizar datos.
 
 ## Referencias
 

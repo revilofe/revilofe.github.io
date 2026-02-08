@@ -90,12 +90,12 @@ Para implementar este método, se requiere un software de agente de registro. Lo
 * mensaje1 = "nombre de usuario: User1"
 * mensaje2 = "cuenta: Administrador"
 
-**Ventajas del método:**
+###### 2.2.1.1. Ventajas del método
 
 * Es una aplicación probada y funcional por parte de los desarrolladores.
 * Tiene muchas características adicionales como análisis automático, encriptación, integridad de registro, etc.
 
-**Contras del método:**
+###### 2.2.1.2. Contras del método
 
 * A medida que se activan las funciones adicionales, aumenta el consumo de recursos. Eso requiere que se aumenten los recursos del sistema, como la CPU y la RAM, por lo que el costo aumenta.
 
@@ -105,7 +105,7 @@ Es un protocolo de red muy popular para transferencias de registros. Puede funci
 
 Puede hacer que sus agentes de registro transfieran registros con Syslog. Para esto, primero debe analizar sus registros en formato syslog.
 
-**Formato de registro del sistema:**
+###### 2.2.2.1. Formato de registro del sistema
 
 Marca de tiempo \- Dispositivo de origen \- Instalación \- Gravedad \- Número de mensaje \- Texto del mensaje
 
@@ -113,7 +113,7 @@ Marca de tiempo \- Dispositivo de origen \- Instalación \- Gravedad \- Número 
 
 Además, el tamaño máximo de paquete que se puede enviar con Syslog UDP es de 1024 bytes. Para TCP es de 4096 bytes.
 
-##### 2.2.4. **Agentes de terceros**
+##### 2.2.4. Agentes de terceros
 
 La mayoría de los productos SIEM tienen su propio software de agente. Los agentes de terceros tienen más capacidades que syslog debido a las funciones que admiten. Algunos agentes:
 
@@ -122,23 +122,25 @@ La mayoría de los productos SIEM tienen su propio software de agente. Los agent
 
 Estos agentes son fáciles de integrar en SIEM y tienen funciones de análisis.
 
-**Agentes de código abierto populares:**
+###### 2.2.4.1. Agentes de código abierto populares
 
 * Latidos https://www.elastic.co/beats/  
 * NXLog https://nxlog.co/
 
-##### 2.2.3. Sin agente (agentless)
+##### 2.2.5. Sin agente (agentless)
 
 A veces se prefiere el proceso de envío de registros sin agentes, ya que no hay costos de instalación y actualización. Por lo general, los registros se envían conectándose al destino con SSH o WMI. Para este método, se requieren el nombre de usuario y la contraseña del servidor de registro, por lo que existe el riesgo de que la contraseña sea robada. Más fácil de preparar y administrar que el método del agente. Sin embargo, tiene capacidades limitadas y las credenciales están envueltas en la red.
 
-##### 2.2.4. Recolección manual
+###### 2.2.5.1. Recolección manual
 
 A veces, hay registros que no puede recopilar con el software de agente existente. Por ejemplo, si no puede leer los registros de una aplicación basada en la nube con el agente, es posible que deba escribir su propio script.
 
 
-En definitiva,  hay varias formas de recopilar registros. Estos son, con agentes y sin agente. En los casos en que los agentes del mercado no sean suficientes, debe escribir sus propios guiones.
+En definitiva, hay varias formas de recopilar registros. Estos son, con agentes y sin agente. En los casos en que los agentes del mercado no sean suficientes, debe escribir sus propios guiones.
 
-[https://app.letsdefend.io/training/lesson\_detail/log-aggregation-and-parsing](https://app.letsdefend.io/training/lesson_detail/log-aggregation-and-parsing)
+!!! info "Fuente"
+    https://app.letsdefend.io/training/lesson_detail/log-aggregation-and-parsing
+
 
 ### 3. Agregación y análisis de registros
 
@@ -147,51 +149,49 @@ El primer lugar donde se envían los registros generados es el agregador de regi
 
 ![][image2]
 
-**Agregador EPS**
+#### 3.1. Agregador y EPS
 
-**¿Qué es EPS?**
+##### 3.1.1. ¿Qué es EPS?
 
 EPS es un evento por segundos. La fórmula es Eventos/Período de tiempo de segundos. Por ejemplo, si el sistema recibe 1000 registros en 5 segundos, EPS sería 1000/5 \= 200\. A medida que aumenta el valor de EPS, también aumenta el agregador y el área de almacenamiento que se debe utilizar.
 
-**Escalando el Agregador**
+##### 3.1.2. Escalado del agregador
 
 Se puede agregar más de un agregador para que los registros entrantes no carguen el mismo agregador cada vez. Y se puede proporcionar una selección secuencial o aleatoria.
 
 ![][image3]
 
-**Proceso del agregador de registros**
+##### 3.1.3. Proceso del agregador de registros
 
 El registro que llega al Agregador se procesa y luego se dirige al destino. Este proceso puede ser análisis, filtrado y enriquecimiento.
 
 ![][image4]
 
-**Modificación de registro**
+##### 3.1.4. Modificación de registros
 
 En algunos casos, debe editar el registro entrante. Por ejemplo, mientras que la información de fecha de la mayoría de los registros que recopila tiene el formato dd-mm-aaaa, si proviene de una sola fuente como mm-dd-aaaa, querrá convertir ese registro. Otro ejemplo, es posible que necesite convertir la información de hora entrante UTC \+ 2 a UTC \+ 1\.
 
-**Enriquecimiento de registro**
+##### 3.1.5. Enriquecimiento de registros
 
 El enriquecimiento se puede realizar para aumentar la eficiencia de los registros recopilados y ahorrar tiempo. Ejemplos de enriquecimientos:
 
-* Geolocalización  
-* DNS
+Por ejemplo agregar o eliminar información a registros de geolocalización y DNS
 
-* Agregar eliminar
-
-  **Geolocalización**
+###### 3.1.5.1. Geolocalización
 
 La geolocalización de la dirección IP especificada se puede encontrar y agregar al registro. Por lo tanto, la persona que ve el registro ahorra tiempo. También le permite analizar el comportamiento basado en la ubicación.
 
-**DNS**
+###### 3.1.5.2. DNS
 
 Con las consultas de DNS, se puede encontrar la dirección IP del dominio o se puede encontrar la dirección IP haciendo DNS inverso.
 
-[https://app.letsdefend.io/training/lesson\_detail/log-storage](https://app.letsdefend.io/training/lesson_detail/log-storage)
+!!! info "Fuente"
+    https://app.letsdefend.io/training/lesson_detail/log-storage
+
 
 ### 4. Almacenamiento de registros
 
-
-En nuestros artículos anteriores, hablamos sobre registros y agregadores de registros. El siguiente paso es almacenar los registros entrantes.
+Una vez que hemos enriquecido los registros, como vimos en el punto anterior, el siguiente paso es almacenar los registros entrantes.
 
 ![][image5]
 
@@ -203,7 +203,9 @@ Más información sobre el gusano, escriba una vez, lea muchas: https://en.wikip
 
 Puede comprender la diferencia presionando el botón "Buscar" en las 2 áreas de almacenamiento diferentes a continuación.
 
-[https://app.letsdefend.io/training/lesson\_detail/alerting](https://app.letsdefend.io/training/lesson_detail/alerting)
+!!! info "Fuente"
+    https://app.letsdefend.io/training/lesson_detail/alerting
+
 
 ### 5. Creación de alertas (alerting)
 
@@ -244,7 +246,9 @@ Este método asume que los comportamientos que ocurren constantemente son normal
 imagen: https://respond-software.com/  
 Buena publicación sobre el análisis de registros de cola larga: https://threatpost.com/long-tail-analysis-hope-cybercrime-battle/155992/ Puede detectar situaciones sospechosas y crear alertas utilizando estos 3 métodos.
 
-[https://app.letsdefend.io/training/lesson\_detail/introduction-to-incident-management](https://app.letsdefend.io/training/lesson_detail/introduction-to-incident-management)
+!!! info "Fuente"
+    https://app.letsdefend.io/training/lesson_detail/introduction-to-incident-management
+
 
 ### 6. Introducción a la gestión de incidentes
 
@@ -254,7 +258,9 @@ En nuestra capacitación anterior sobre SIEM 101, hablamos sobre cómo se recopi
 
 En la continuación de esta capacitación, explicaremos cómo funciona un Sistema de gestión de incidentes y por qué y cómo utilizar estos sistemas como analistas de SOC.
 
-[https://app.letsdefend.io/training/lesson\_detail/basic-definitions-about-incident-management](https://app.letsdefend.io/training/lesson_detail/basic-definitions-about-incident-management)
+!!! info "Fuente"
+    https://app.letsdefend.io/training/lesson_detail/basic-definitions-about-incident-management
+
 
 #### 6.1. Definiciones básicas sobre la gestión de incidentes
 
@@ -268,37 +274,43 @@ En este apartado te explicaremos los conceptos básicos que necesitas saber sobr
 
 * Falso positivo
 
-  **Alerta**
+##### 6.1.1. Alerta
 
   Hablamos sobre cómo se crea una alerta en el módulo de capacitación SIEM. Puede hacer clic en el enlace (https://app.letsdefend.io/training/lessons/siem-101) para acceder a la formación. Para recordar brevemente, se genera una alerta como resultado de la recopilación y el procesamiento de datos (análisis, enriquecimiento, etc.) en SIEM, como se ve en la imagen a continuación. Luego, iniciamos el proceso de análisis enviando las alarmas generadas al Sistema de Gestión de Incidencias.
 
 ![][image8]
 
-**Evento**
+##### 6.1.2. Evento
 
 Un evento es cualquier ocurrencia observable en un sistema o red. Simplemente, los eventos son actividades como un usuario que se conecta a un archivo compartido, un servidor que recibe una solicitud de una página web, un usuario que envía correo electrónico (e-mail), un firewall que bloquea un intento de conexión, etc.
 
-**Incidente**
+##### 6.1.3. Incidente
 
 La definición de un incidente de seguridad informática ha evolucionado con el tiempo. En el pasado, un incidente de seguridad informática se consideraba un evento adverso relacionado con la seguridad en el que se producía una pérdida de la confidencialidad de los datos, una interrupción de la integridad de los datos o del sistema, o una interrupción o denegación de disponibilidad.
 
 Desde entonces, han surgido muchos tipos nuevos de incidentes de seguridad informática, y esto requería una definición más amplia de "incidente". Generalmente, un incidente es una violación o amenaza inminente de violación de las políticas de seguridad informática, las políticas de uso aceptable o las prácticas de seguridad estándar. *Definiciones: Publicación especial NIST 800-61*
 
-**Alerta de verdadero positivo**
+##### 6.1.4. Alerta de verdadero positivo
 
 Si la situación que se va a detectar y la situación detectada (alerta desencadenada) son las mismas, se trata de una alerta de verdadero positivo. Por ejemplo, supongamos que se hizo una prueba de PCR para saber si es positivo para Covid19 y el resultado de la prueba fue positivo. Es Verdadero Positivo porque la condición que desea detectar (si tiene la enfermedad de Covid19) y la condición detectada (ser un paciente de Covid19) son las mismas. Esta es una verdadera alerta positiva.
 
 Supongamos que hay una regla para detectar ataques de inyección SQL y esta regla se ha activado debido a una solicitud que se realizó a la siguiente URL. La alerta es de hecho un "Verdadero positivo" ya que hubo un ataque de inyección SQL real.
 
+```text
 https://app.letsdefend.io/casemanagement/casedetail/115/src=' O 1=1
+```
 
-**Alerta de falso positivo**
+
+##### 6.1.5. Alerta de falso positivo
 
 En resumen, es una falsa alarma. Por ejemplo, hay una cámara de seguridad en tu casa y si la cámara te alerta por los movimientos de tu gato, es una alerta de falso positivo.
 
 Si observamos el ejemplo de URL a continuación, vemos la palabra clave "Unión" del parámetro SQL dentro de esta URL. Si se produce una alerta de inyección SQL para esta URL, será una alerta de falso positivo porque la palabra clave "Unión" se usa para mencionar un equipo deportivo aquí y no para un ataque de inyección SQL.
 
+```text
 https://www.google.com/search?q=FC+Union+Berlin
+```
+
 
 Para comprender mejor las definiciones, puede comparar los términos y definiciones en una sola tabla de la siguiente manera:
 
@@ -306,7 +318,9 @@ Para comprender mejor las definiciones, puede comparar los términos y definicio
 
 *img fuente:hacia la ciencia de los datos.com*
 
-[https://app.letsdefend.io/training/lesson\_detail/incident-management-systems-ims](https://app.letsdefend.io/training/lesson_detail/incident-management-systems-ims)
+!!! info "Fuente"
+    https://app.letsdefend.io/training/lesson_detail/incident-management-systems-ims
+
 
 #### 6.2. Sistemas de gestión de incidentes (IMS)
 
@@ -320,7 +334,7 @@ De manera similar, la "Gestión de casos" en LetsDefend se puede dar como un eje
 
 ![][image11]
 
-**¿Cómo funcionan los sistemas de gestión de incidentes (IMS)?**
+##### 6.2.1. ¿Cómo funciona un IMS?
 
 Para abrir un registro en la plataforma de Gestión de Incidencias, primero se debe proporcionar una entrada de datos aquí. Estos datos pueden provenir directamente del SIEM o de otros productos de seguridad. Una vez que se establece el flujo de datos, se crea un ticket/caso en el Sistema de gestión de incidentes.
 
@@ -340,9 +354,13 @@ Generalmente, como vemos en la imagen a continuación, los detalles de alerta de
 
 ![][image13]
 
-**PD:**Como mencionamos anteriormente, Incident Management System (IMS) es una de las plataformas en las que pasará la mayor parte de su tiempo como analista de SOC. Puede acortar significativamente su tiempo de investigación y deshacerse de sus tareas repetitivas si usa las plataformas IMS de manera efectiva. Por lo tanto, siempre debe llevar sus conocimientos y habilidades en las plataformas IMS al siguiente nivel.
+!!! note "Nota"
+    Como mencionamos anteriormente, Incident Management System (IMS) es una de las plataformas en las que pasará la mayor parte de su tiempo como analista de SOC. Puede acortar significativamente su tiempo de investigación y deshacerse de sus tareas repetitivas si usa las plataformas IMS de manera efectiva. Por lo tanto, siempre debe llevar sus conocimientos y habilidades en las plataformas IMS al siguiente nivel.
 
-[https://app.letsdefend.io/training/lesson\_detail/case-alert-naming](https://app.letsdefend.io/training/lesson_detail/case-alert-naming)
+
+!!! info "Fuente"
+    https://app.letsdefend.io/training/lesson_detail/case-alert-naming
+
 
 #### 6.3. Nombre del caso/alerta
 
@@ -363,7 +381,9 @@ Cuando observamos ejemplos del mundo real, vemos que el formato de nomenclatura 
 * Origen del evento  
 * Descripción
 
-[https://app.letsdefend.io/training/lesson\_detail/playbooks](https://app.letsdefend.io/training/lesson_detail/playbooks)
+!!! info "Fuente"
+    https://app.letsdefend.io/training/lesson_detail/playbooks
+
 
 #### 6.4. Playbooks (libros de jugadas)
 
@@ -372,7 +392,7 @@ Hay muchos tipos diferentes de alertas (ataques web, ransomware, malware, phishi
 
 Por ejemplo, cuando hace clic en el botón "Crear caso" para una alerta en la página de monitoreo de LetsDefend, se abre un ticket en "Administración de casos" y el sistema le asigna automáticamente un libro de jugadas. Para que pueda investigar la alerta con los pasos correctos siguiendo las instrucciones allí.
 
-**¿Por qué es importante el libro de jugadas?**
+##### 6.4.1. ¿Por qué son importantes los playbooks?
 
 Como analistas de SOC, es posible que no siempre sepamos exactamente qué hacer cuando manejamos alertas. Podemos llevar a cabo el proceso de investigación paso a paso, gracias a las instrucciones del Playbook. Los Playbooks brindarán orientación, especialmente a los analistas que acaban de comenzar sus carreras en el campo SOC.
 
@@ -382,16 +402,19 @@ Mencionamos que los libros de jugadas guían a los analistas. Aparte de eso, per
 
 En el siguiente ejemplo, puede ver el flujo del libro de jugadas de phishing que Microsoft ha publicado.
 
-[https://app.letsdefend.io/training/lesson\_detail/what-does-the-soc-analyst-do-when-an-alert-occurs](https://app.letsdefend.io/training/lesson_detail/what-does-the-soc-analyst-do-when-an-alert-occurs)
+!!! info "Fuente"
+    https://app.letsdefend.io/training/lesson_detail/what-does-the-soc-analyst-do-when-an-alert-occurs
+
 
 #### 6.5. Qué hace el analista SOC cuando ocurre una alerta
 
 
-En las secciones an
 
 PD: Trabajas en LetsDefend individualmente, no como miembro de un equipo.
 
-Después de tomar posesión de la alerta, verá que la alerta se ha reenviado al "Canal de investigación". Este canal tiene alertas en las que se está trabajando activamente. Haga clic en la alerta para obtener más detalles. Nuestro objetivo es determinar si esta alerta realmente contiene una situación dañina. En otras palabras, necesitamos determinar si es un falso positivo o un verdadero positivo. Para esto, podemos crear un registro en "Gestión de casos/Gestión de incidentes" haciendo clic en el botón "Crear caso" y luego siguiendo los pasos del libro de jugadas.teriores, hablamos sobre cómo se produce una alerta. Como analista de SOC, su principal tarea es detectar amenazas para su organización. Por lo general, realiza esta tarea analizando las alertas creadas en SIEM o en un entorno diferente.
+Después de tomar posesión de la alerta, verá que la alerta se ha reenviado al "Canal de investigación". Este canal tiene alertas en las que se está trabajando activamente. Haga clic en la alerta para obtener más detalles. Nuestro objetivo es determinar si esta alerta realmente contiene una situación dañina. En otras palabras, necesitamos determinar si es un falso positivo o un verdadero positivo. Para esto, podemos crear un registro en "Gestión de casos/Gestión de incidentes" haciendo clic en el botón "Crear caso" y luego siguiendo los pasos del libro de jugadas.
+
+En las secciones anteriores, hablamos sobre cómo se produce una alerta. Como analista de SOC, su principal tarea es detectar amenazas para su organización. Por lo general, realiza esta tarea analizando las alertas creadas en SIEM o en un entorno diferente.
 
 Las alertas que se producen no siempre indican un incidente real. A veces encontrará alertas de falsos positivos. De hecho, pasará la mayor parte de su tiempo lidiando con los falsos positivos, por lo que debe estar en comunicación constante con el equipo que crea las reglas SIEM y brindarles comentarios todo el tiempo. Como analista de SOC, debe profundizar en los detalles para comprender si una alerta es un falso positivo. No existe un método de análisis estándar, ya que puede haber diferentes tipos de alertas (web, malware, endpoint, etc.), y cada tipo tiene sus propios detalles específicos. Por lo tanto, es importante seguir los libros de jugadas en los sistemas de gestión de incidentes.
 
@@ -421,7 +444,7 @@ Puede acceder al recorrido oficial en el área "Nota del editor", o puede accede
 
 Aunque no importa qué alerta inicie dentro del entorno de simulación, en la vida real debe priorizar las alertas con valores de gravedad altos.
 
-Puede comenzar a trabajar en la alerta que ha elegido haciendo clic en el botón "Tomar posesión". La lógica del estándar de trabajo es que hay 10 alertas activas y usted está trabajando en la alerta con el número de EventID 63\. Dado que otros miembros del equipo saben que está trabajando en esta alerta, elegirán una de las 9 alertas restantes y seguirán trabajando. . Así, se asegura el trabajo en equipo para evitar la duplicación de trabajo.
+Puede comenzar a trabajar en la alerta que ha elegido haciendo clic en el botón "Tomar posesión". La lógica del estándar de trabajo es que hay 10 alertas activas y usted está trabajando en la alerta con el número de EventID 63\. Dado que otros miembros del equipo saben que está trabajando en esta alerta, elegirán una de las 9 alertas restantes y seguirán trabajando. Así, se asegura el trabajo en equipo para evitar la duplicación de trabajo.
 
 ![][image22]
 

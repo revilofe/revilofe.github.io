@@ -364,7 +364,6 @@ Generalmente, como vemos en la imagen a continuación, los detalles de alerta de
 
 #### 6.3. Nombre del caso/alerta
 
-
 Es importante que el ticket/caso/registros creados en el sistema de gestión de incidentes tengan un título significativo, ya que tener convenciones de nomenclatura unificadas ayudará en las consultas retrospectivas para encontrar rápidamente el registro relevante o extraer estadísticas fácilmente cuando se realiza una investigación. Por estas y otras razones, es necesario tener una idea del ticket/caso con solo mirar el título. Existen varios métodos para nombrar los tickets. El método de nomenclatura en LetsDefend "Gestión de casos" es el siguiente.
 
 EventID: {Número de ID de alerta} \- \[{Nombre de alerta}\]
@@ -385,12 +384,12 @@ Cuando observamos ejemplos del mundo real, vemos que el formato de nomenclatura 
     https://app.letsdefend.io/training/lesson_detail/playbooks
 
 
-#### 6.4. Playbooks (libros de jugadas)
+#### 6.4. Playbooks 
 
 
 Hay muchos tipos diferentes de alertas (ataques web, ransomware, malware, phishing, etc.) en el entorno SOC. Los métodos y enfoques para investigar estas alertas son diferentes entre sí. Los flujos de trabajo preparados para un análisis eficaz y coherente de las alertas creadas en SIEM o en una herramienta de seguridad diferente se denominan playbooks.
 
-Por ejemplo, cuando hace clic en el botón "Crear caso" para una alerta en la página de monitoreo de LetsDefend, se abre un ticket en "Administración de casos" y el sistema le asigna automáticamente un libro de jugadas. Para que pueda investigar la alerta con los pasos correctos siguiendo las instrucciones allí.
+Por ejemplo, cuando hace clic en el botón "Crear caso" para una alerta en la página de monitoreo de LetsDefend, se abre un ticket en "Administración de casos" y el sistema le asigna automáticamente un playbook. Para que pueda investigar la alerta con los pasos correctos siguiendo las instrucciones allí.
 
 ##### 6.4.1. ¿Por qué son importantes los playbooks?
 
@@ -398,9 +397,9 @@ Como analistas de SOC, es posible que no siempre sepamos exactamente qué hacer 
 
 ![][image16]
 
-Mencionamos que los libros de jugadas guían a los analistas. Aparte de eso, permite que el equipo realice análisis con ciertos estándares. Por ejemplo, verificar si hay acceso a sitios C2/direcciones IP es vital después de analizar el malware. Sin embargo, es posible que algunos analistas no verifiquen el acceso a C2 todo el tiempo, mientras que otros sí lo hacen. Esto conduce a la inconsistencia en los estándares de trabajo del equipo. Es importante que todos los analistas creen y sigan manuales de estrategias para garantizar el mismo nivel de estándares de análisis dentro del equipo.
+Mencionamos que los playbooks guían a los analistas. Aparte de eso, permite que el equipo realice análisis con ciertos estándares. Por ejemplo, verificar si hay acceso a sitios C2, direcciones IP es vital después de analizar el malware. Sin embargo, es posible que algunos analistas no verifiquen el acceso a C2 todo el tiempo, mientras que otros sí lo hacen. Esto conduce a la inconsistencia en los estándares de trabajo del equipo. Es importante que todos los analistas creen y sigan manuales de estrategias para garantizar el mismo nivel de estándares de análisis dentro del equipo.
 
-En el siguiente ejemplo, puede ver el flujo del libro de jugadas de phishing que Microsoft ha publicado.
+En el siguiente ejemplo, puede ver el flujo para un playbook de phishing que Microsoft ha publicado.
 
 !!! info "Fuente"
     https://app.letsdefend.io/training/lesson_detail/what-does-the-soc-analyst-do-when-an-alert-occurs
@@ -408,43 +407,41 @@ En el siguiente ejemplo, puede ver el flujo del libro de jugadas de phishing que
 
 #### 6.5. Qué hace el analista SOC cuando ocurre una alerta
 
-
-
 > Trabajas en LetsDefend individualmente, no como miembro de un equipo.
 
-Después de tomar posesión de la alerta, verá que la alerta se ha reenviado al "Canal de investigación". Este canal tiene alertas en las que se está trabajando activamente. Haga clic en la alerta para obtener más detalles. Nuestro objetivo es determinar si esta alerta realmente contiene una situación dañina. En otras palabras, necesitamos determinar si es un falso positivo o un verdadero positivo. Para esto, podemos crear un registro en "Gestión de casos/Gestión de incidentes" haciendo clic en el botón "Crear caso" y luego siguiendo los pasos del libro de jugadas.
+Después de asignarte una alerta, verás que la alerta se ha reenviado al "Canal de investigación". Este canal tiene alertas en las que se está trabajando activamente. Haga clic en la alerta para obtener más detalles. Nuestro objetivo es determinar si esta alerta realmente contiene una situación dañina. En otras palabras, necesitamos determinar si es un falso positivo o un verdadero positivo. Para esto, podemos crear un registro en "Gestión de casos/Gestión de incidentes" haciendo clic en el botón "Crear caso" y luego siguiendo los pasos del playbook.
 
-En las secciones anteriores, hablamos sobre cómo se produce una alerta. Como analista de SOC, su principal tarea es detectar amenazas para su organización. Por lo general, realiza esta tarea analizando las alertas creadas en SIEM o en un entorno diferente.
+En las secciones anteriores, hablamos sobre cómo se produce una alerta. Como analista de SOC, tu principal tarea es detectar amenazas para tu organización. Por lo general, realizas esta tarea analizando las alertas creadas en SIEM o en un entorno diferente.
 
-Las alertas que se producen no siempre indican un incidente real. A veces encontrará alertas de falsos positivos. De hecho, pasará la mayor parte de su tiempo lidiando con los falsos positivos, por lo que debe estar en comunicación constante con el equipo que crea las reglas SIEM y brindarles comentarios todo el tiempo. Como analista de SOC, debe profundizar en los detalles para comprender si una alerta es un falso positivo. No existe un método de análisis estándar, ya que puede haber diferentes tipos de alertas (web, malware, endpoint, etc.), y cada tipo tiene sus propios detalles específicos. Por lo tanto, es importante seguir los libros de jugadas en los sistemas de gestión de incidentes.
+Las alertas que se producen no siempre indican un incidente real. A veces encontrarás alertas de falsos positivos. De hecho, pasarás la mayor parte de tu tiempo lidiando con los falsos positivos, por lo que debes estar en comunicación constante con el equipo que crea las reglas SIEM y brindarles comentarios todo el tiempo. Como analista de SOC, debes profundizar en los detalles para comprender si una alerta es un falso positivo. No existe un método de análisis estándar, ya que puede haber diferentes tipos de alertas (web, malware, endpoint, etc.), y cada tipo tiene sus propios detalles específicos. Por lo tanto, es importante seguir los playbooks en los sistemas de gestión de incidentes.
 
-Demos un ejemplo sobre LetsDefend para una mejor comprensión. Como se ve en la imagen a continuación, hay muchas alertas en la página "Monitoreo". Como analistas debemos decidirnos y empezar por elegir una alerta.
+Como se ve en la imagen a continuación, hay muchas alertas en la página "Monitoreo". Como analistas debemos decidirnos y empezar por elegir una alerta.
 
 ![][image17]
 
-Playbook te ofrece los pasos a seguir. Después de cerrar la alerta, le ayuda a verificar los resultados de su análisis a través de algunas preguntas.
+El playbook te ofrece los pasos a seguir. Después de cerrar la alerta, le ayuda a verificar los resultados de su análisis a través de algunas preguntas.
 
 ![][image18]
 
-Después de completar los pasos del libro de jugadas, será redirigido nuevamente a la página de Monitoreo. Ahora que ha terminado con el análisis, ahora necesita tomar una decisión final. ¿Esta alerta es un falso positivo o un verdadero positivo?
+Después de completar los pasos del playbook, serás redirigido nuevamente a la página de Monitoreo. Ahora que has terminado con el análisis, necesitas tomar una decisión final. ¿Esta alerta es un falso positivo o un verdadero positivo?
 
 ![][image19]
 
-Después de realizar las selecciones y explicaciones necesarias, puede cerrar la alerta y ver los resultados de su análisis.
+Después de realizar las selecciones y explicaciones necesarias, puedes cerrar la alerta y ver los resultados de tu análisis.
 
-> En la vida real, es posible que no pueda verificar los resultados de su análisis todo el tiempo. A veces, puede trabajar con un analista senior y obtener ayuda al explicar los pasos que ha realizado, pero este no es un método sostenible. Por lo tanto, es una oportunidad para examinar los resultados del análisis de las alertas que ha cerrado en LetsDefend y aprender nuevos métodos.
+> En la vida real, es posible que no puedas verificar los resultados de su análisis todo el tiempo. A veces, puedes trabajar con un analista senior y obtener ayuda al explicar los pasos que ha realizado, pero este no es un método sostenible. Por lo tanto, es una oportunidad para examinar los resultados del análisis de las alertas que has cerrado en LetsDefend y aprender nuevos métodos.
 
-Una vez cerrada la alerta, se dirigirá al canal "Alertas cerradas" y podrá consultar sus respuestas aquí.
+Una vez cerrada la alerta, se dirigirá al canal "Alertas cerradas" y podrás consultar tus respuestas aquí.
 
 ![][image20]
 
-Puede acceder al recorrido oficial en el área "Nota del editor", o puede acceder a los métodos de solución creados por la comunidad en el área "Recorrido de la comunidad".
+Puedes acceder al recorrido oficial en el área "Nota del editor", o puedes acceder a los métodos de solución creados por la comunidad en el área "Recorrido de la comunidad".
 
 ![][image21]
 
-Aunque no importa qué alerta inicie dentro del entorno de simulación, en la vida real debe priorizar las alertas con valores de gravedad altos.
+Aunque no importa qué alerta inicies dentro del entorno de simulación, en la vida real debes priorizar las alertas con valores de gravedad altos.
 
-Puede comenzar a trabajar en la alerta que ha elegido haciendo clic en el botón "Tomar posesión". La lógica del estándar de trabajo es que hay 10 alertas activas y usted está trabajando en la alerta con el número de EventID 63\. Dado que otros miembros del equipo saben que está trabajando en esta alerta, elegirán una de las 9 alertas restantes y seguirán trabajando. Así, se asegura el trabajo en equipo para evitar la duplicación de trabajo.
+Puede comenzar a trabajar en la alerta que has elegido haciendo clic en el botón "Tomar posesión". La lógica del estándar de trabajo es que hay 10 alertas activas y tu estás trabajando en la alerta con el número de EventID 63. Dado que otros miembros del equipo saben que estás trabajando en esta alerta, elegirán una de las 9 alertas restantes y seguirán trabajando. Así, se asegura el trabajo en equipo para evitar la duplicación de trabajo.
 
 ![][image22]
 

@@ -87,13 +87,13 @@ En el mundo de la ciberseguridad, es común encontrar términos como SOC, CERT, 
 
 ##### 1.3.2. Relación y diferencias clave
 
-**Relación:** Un SOC generalmente abarca múltiples aspectos de las operaciones de seguridad, mientras que los CSIRT, CERT y CIRTS se enfocan específicamente en la respuesta a incidentes. El SOC normalmente incluirá además las funciones de CERT/CIRT/CSIRT como parte de sus operaciones.
+Un SOC generalmente abarca múltiples aspectos de las operaciones de seguridad, mientras que los CSIRT, CERT y CIRTS se enfocan específicamente en la respuesta a incidentes. El SOC normalmente incluirá además las funciones de CERT/CIRT/CSIRT como parte de sus operaciones.
 
 Los términos CERT, CIRT y CSIRT suelen utilizarse como sinónimos, aunque pueden tener diferencias sutiles en su alcance y enfoque. En general, estos equipos **se activan ante incidentes críticos** y trabajan para contener, investigar y mitigar los daños.
 
 CSIRT y CIRT son casi siempre casi equivalentes, referentes a respuesta de incidentes de seguridad informática. Respecto al término CERT, aunque muchas compañías lo usan de forma genérica, ha sido una marca registrada de *Carnegie Mellon University* desde 1997, y se enfoca más ampliamente en mejorar la respuesta a incidentes.
 
-**Diferencias:**
+Por tanto, las diferencias son:
 
 * **SOC:** Supervisión continua y gestión integral de las operaciones de seguridad.
 * **CERT/CIRT/CSIRT:** Actúan principalmente ante incidentes de ciberseguridad, para contener, eliminar y recuperarse de los mismos.
@@ -110,22 +110,25 @@ Analogía: El SOC es como un hospital completo que incluye áreas de prevención
 
 En un mundo cada vez más digitalizado, las organizaciones dependen de los SOC para protegerse contra un panorama de amenazas en constante evolución.
 
-*Ejemplo:* Imagina una tienda en línea que es víctima de un ataque de ransomware (secuestro de datos). Si no tiene un SOC que monitoree las actividades sospechosas y responda rápidamente, los atacantes podrían paralizar sus operaciones y exigir un rescate para liberar los datos.
+Imagina una tienda en línea que es víctima de un ataque de ransomware (secuestro de datos). Si no tiene un SOC que monitoree las actividades sospechosas y responda rápidamente, los atacantes podrían paralizar sus operaciones y exigir un rescate para liberar los datos.
 
-##### **1.4.1. Amenazas crecientes**
+##### 1.4.1. Amenazas crecientes
 
 Las organizaciones enfrentan un aumento en la frecuencia, sofisticación y diversidad de los ciberataques.
 
-*Ejemplo:* En 2023, los ataques de ransomware afectaron a miles de empresas, causando interrupciones y pérdidas millonarias. Un SOC puede ayudar a detectar y bloquear estos ataques antes de que causen daños irreparables.
+En 2023, los ataques de ransomware afectaron a miles de empresas, causando interrupciones y pérdidas millonarias. Un SOC puede ayudar a detectar y bloquear estos ataques antes de que causen daños irreparables.
 
 ##### 1.4.2. Beneficios de contar con un SOC
 
 1. **Protección proactiva:** Los SOC no solo reaccionan a amenazas, sino que también trabajan para prevenirlas.
-   *Ejemplo:* Un SOC implementa reglas en el SIEM para bloquear intentos de fuerza bruta antes de que comprometan un sistema.
-2. **Respuesta rápida:** Los SOC reducen el tiempo de respuesta a incidentes críticos.
+   *Ejemplo:* Un SOC implementa reglas en el SIEM para bloquear intentos de fuerza bruta antes de que comprometan un sistema, haciendo uso de su integración con herramientas SOAR para automatizar la respuesta a estas amenazas.
+
+2. **Respuesta rápida:** Los SOC reducen el tiempo de respuesta a incidentes críticos. Puesto que unos de sus objetivos es detectarlos, además implementar procesos y herramientas para responder rápidamente, lo que minimiza el impacto de los ataques.
    *Ejemplo:* Detectar y contener un ataque en minutos puede evitar una filtración masiva de datos.
+
 3. **Cumplimiento normativo:** Ayudan a las organizaciones a cumplir con regulaciones como GDPR, ISO 27001 o NIST CSF.
    *Ejemplo:* Generar reportes de incidentes detallados para auditorías regulatorias.
+
 4. **Confianza del cliente:** Un SOC demuestra el compromiso de la organización con la seguridad, fortaleciendo la confianza de clientes y socios.
    *Ejemplo:* Mostrar a los clientes que sus datos están protegidos y que la empresa está preparada para enfrentar amenazas.
 
@@ -687,3 +690,9 @@ Un SOC eficaz requiere una integración armoniosa entre personas capacitadas, pr
 ## Referencias
 
 - [Imágenes del curso de ciberseguirdad defensiva - Santiago Hernández Ramos](https://www.udemy.com/course/curso-completo-de-ciberseguridad-defensiva) 
+
+## Presentación
+
+Puedes acceder a la presentación de esta unidad aquí:
+
+[Presentación IS-U2.2.1 - SOC: Servicios y herramientas](https://revilofe.github.io/slides/section2-is/IS-U2.2.1.-SOC-ServiciosYHerramientas.html)

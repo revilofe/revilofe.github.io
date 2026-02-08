@@ -5975,6 +5975,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#como-gestionar-los-casos-de-uso-en-un-soc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como gestionar los casos de uso en un SOC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#4-conclusiones" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8191,6 +8202,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#como-gestionar-los-casos-de-uso-en-un-soc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como gestionar los casos de uso en un SOC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#4-conclusiones" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8342,48 +8364,136 @@ se utilizarán sus capacidades para detectar, analizar y responder a amenazas de
 prepararse y actuar de forma coherente ante escenarios repetibles.</p>
 </div>
 <h3 id="3-10-casos-de-uso-que-todo-servicio-soc-moderno-deberia-tener">3. 10 casos de uso que todo servicio <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> moderno debería tener<a class="headerlink" href="#3-10-casos-de-uso-que-todo-servicio-soc-moderno-deberia-tener" title="Permanent link">&para;</a></h3>
-<p>Les comparto 10 casos de uso que son fundamentales para un servicio de Centro de Operaciones de Seguridad (<abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>) moderno en términos de detección y respuesta ante amenazas:</p>
+<p>A continuación comparto 10 casos de uso que son fundamentales para un servicio de Centro de Operaciones de Seguridad (<abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>) moderno en términos de detección y respuesta ante amenazas:</p>
 <ol>
 <li>
-<p><strong><em>Detección de Malware Avanzado:</em></strong> Identificación de comportamientos y patrones de actividad sospechosa en endpoints y sistemas para detectar <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr> avanzado y ataques de día cero. Fuentes de registros/logs: Registros de endpoints, registros de sistemas, registros de cortafuegos, registros de servidores web, registros de aplicaciones.    </p>
+<p><strong><em>Detección de Malware Avanzado:</em></strong></p>
+<ul>
+<li>
+<p>Identificación de comportamientos y patrones de actividad sospechosa en endpoints y sistemas para detectar <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr> avanzado y ataques de día cero.</p>
 </li>
 <li>
-<p><strong><em>Detección de Actividad de Cuenta Comprometida:</em></strong> Monitoreo de comportamientos anómalos en las cuentas de usuario para identificar posibles compromisos de cuentas y actividades de intrusos. Fuentes de registros/logs: Registros de autenticación (inicios de sesión), registros de sistemas, registros de bases de datos, registros de aplicaciones, registros de directorios activos.    </p>
+<p>Fuentes de registros/logs: Registros de endpoints, registros de sistemas, registros de cortafuegos, registros de servidores web, registros de aplicaciones.    </p>
+</li>
+</ul>
 </li>
 <li>
-<p><strong><em>Detección de Movimiento Lateral:</em></strong> Identificación de movimientos inusuales y no autorizados dentro de la red, lo que podría indicar intentos de <abbr title="Técnica utilizada para obtener privilegios elevados en un sistema o una aplicación. Los atacantes pueden utilizar la escalada de privilegios para obtener acceso a recursos restringidos, modificar la configuración del sistema, etc.">escalada de privilegios</abbr> o propagación de amenazas. Fuentes de registros/logs: Registros de tráfico de red, registros de firewalls, registros de sistemas, registros de autenticación, registros de acceso a archivos.    </p>
+<p><strong><em>Detección de Actividad de Cuenta Comprometida:</em></strong></p>
+<ul>
+<li>
+<p>Monitoreo de comportamientos anómalos en las cuentas de usuario para identificar posibles compromisos de cuentas y actividades de intrusos.</p>
 </li>
 <li>
-<p><strong><em>Detección de <abbr title="Técnica de ingeniería social utilizada para engañar a los usuarios y obtener información confidencial, como contraseñas, números de tarjeta de crédito, etc. Los atacantes suelen enviar correos electrónicos o mensajes de texto que parecen provenir de una fuente legítima, como un banco o una empresa, y solicitan al usuario que haga clic en un enlace o proporcione información confidencial.">Phishing</abbr> y Ingeniería Social:</em></strong> Vigilancia de patrones de comunicación y URLs sospechosas para detectar intentos de phishing, suplantación de identidad y ataques de ingeniería social. Fuentes de registros/logs: Registros de correo electrónico (servidor de correo), registros de proxy web, registros de URLs visitadas, registros de autenticación.    </p>
+<p>Fuentes de registros/logs: Registros de autenticación (inicios de sesión), registros de sistemas, registros de bases de datos, registros de aplicaciones, registros de directorios activos.    </p>
+</li>
+</ul>
 </li>
 <li>
-<p><strong><em>Detección de Exfiltración de Datos:</em></strong> Monitoreo de tráfico de red y actividad de endpoints para detectar intentos de exfiltración de datos confidenciales fuera de la organización. Fuentes de registros/logs: Registros de tráfico de red, registros de servidores de archivos, registros de bases de datos, registros de sistemas.    </p>
+<p><strong><em>Detección de Movimiento Lateral:</em></strong> </p>
+<ul>
+<li>
+<p>Identificación de movimientos inusuales y no autorizados dentro de la red, lo que podría indicar intentos de <abbr title="Técnica utilizada para obtener privilegios elevados en un sistema o una aplicación. Los atacantes pueden utilizar la escalada de privilegios para obtener acceso a recursos restringidos, modificar la configuración del sistema, etc.">escalada de privilegios</abbr> o propagación de amenazas.</p>
 </li>
 <li>
-<p><strong><em>Detección de Ataques de Denegación de Servicio (<abbr title="Ataque de Denegación de Servicio Distribuido. Es un ataque en el que los atacantes intentan saturar los recursos de un sistema o una red para que deje de funcionar correctamente. Los ataques DDoS pueden ser utilizados para interrumpir los servicios, causar daños económicos, etc.">DDoS</abbr>):</em></strong> Identificación de patrones de tráfico inusuales que podrían indicar ataques <abbr title="Ataque de Denegación de Servicio Distribuido. Es un ataque en el que los atacantes intentan saturar los recursos de un sistema o una red para que deje de funcionar correctamente. Los ataques DDoS pueden ser utilizados para interrumpir los servicios, causar daños económicos, etc.">DDoS</abbr> dirigidos a servicios y aplicaciones. Fuentes de registros/logs: Registros de tráfico de red, registros de cortafuegos, registros de sistemas, registros de balanceadores de carga.     </p>
+<p>Fuentes de registros/logs: Registros de tráfico de red, registros de firewalls, registros de sistemas, registros de autenticación, registros de acceso a archivos.    </p>
+</li>
+</ul>
 </li>
 <li>
-<p><strong><em>Detección de Comportamiento Anómalo del Usuario:</em></strong> Monitorización de las actividades de los usuarios para detectar comportamientos anómalos, como accesos fuera de horario o a recursos no autorizados. Fuentes de registros/logs: Registros de autenticación (inicios de sesión), registros de sistemas, registros de aplicaciones, registros de directorios activos.    </p>
+<p><strong><em>Detección de <abbr title="Técnica de ingeniería social utilizada para engañar a los usuarios y obtener información confidencial, como contraseñas, números de tarjeta de crédito, etc. Los atacantes suelen enviar correos electrónicos o mensajes de texto que parecen provenir de una fuente legítima, como un banco o una empresa, y solicitan al usuario que haga clic en un enlace o proporcione información confidencial.">Phishing</abbr> y Ingeniería Social:</em></strong></p>
+<ul>
+<li>
+<p>Vigilancia de patrones de comunicación y URLs sospechosas para detectar intentos de phishing, suplantación de identidad y ataques de ingeniería social.</p>
 </li>
 <li>
-<p><strong><em>Detección de Vulnerabilidades y Exploits:</em></strong> Identificación de intentos de explotación de vulnerabilidades conocidas en sistemas y aplicaciones. Fuentes de registros/logs: Registros de sistemas, registros de aplicaciones, escaneos de vulnerabilidad, registros de bases de datos.    </p>
+<p>Fuentes de registros/logs: Registros de correo electrónico (servidor de correo), registros de proxy web, registros de URLs visitadas, registros de autenticación.    </p>
+</li>
+</ul>
 </li>
 <li>
-<p><strong><em>Detección de Ataques de Fuerza Bruta:</em></strong> Vigilancia de patrones de intentos repetitivos de inicio de sesión y acceso a recursos para identificar ataques de fuerza bruta. Fuentes de registros/logs: Registros de autenticación (intentos fallidos de inicio de sesión), registros de sistemas, registros de aplicaciones.    </p>
+<p><strong><em>Detección de Exfiltración de Datos:</em></strong></p>
+<ul>
+<li>
+<p>Monitoreo de tráfico de red y actividad de endpoints para detectar intentos de exfiltración de datos confidenciales fuera de la organización.</p>
 </li>
 <li>
-<p><strong><em>Detección de Ataques Internos y Fugas de Información:</em></strong> Seguimiento de actividades internas para detectar posibles acciones maliciosas de empleados y fugas de información sensible. Fuentes de registros/logs: Registros de acceso a archivos, registros de bases de datos, registros de sistemas, registros de correo electrónico.</p>
+<p>Fuentes de registros/logs: Registros de tráfico de red, registros de servidores de archivos, registros de bases de datos, registros de sistemas.    </p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><em>Detección de Ataques de Denegación de Servicio (<abbr title="Ataque de Denegación de Servicio Distribuido. Es un ataque en el que los atacantes intentan saturar los recursos de un sistema o una red para que deje de funcionar correctamente. Los ataques DDoS pueden ser utilizados para interrumpir los servicios, causar daños económicos, etc.">DDoS</abbr>):</em></strong></p>
+<ul>
+<li>
+<p>Identificación de patrones de tráfico inusuales que podrían indicar ataques <abbr title="Ataque de Denegación de Servicio Distribuido. Es un ataque en el que los atacantes intentan saturar los recursos de un sistema o una red para que deje de funcionar correctamente. Los ataques DDoS pueden ser utilizados para interrumpir los servicios, causar daños económicos, etc.">DDoS</abbr> dirigidos a servicios y aplicaciones.</p>
+</li>
+<li>
+<p>Fuentes de registros/logs: Registros de tráfico de red, registros de cortafuegos, registros de sistemas, registros de balanceadores de carga.     </p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><em>Detección de Comportamiento Anómalo del Usuario:</em></strong> </p>
+<ul>
+<li>
+<p>Monitorización de las actividades de los usuarios para detectar comportamientos anómalos, como accesos fuera de horario o a recursos no autorizados.</p>
+</li>
+<li>
+<p>Fuentes de registros/logs: Registros de autenticación (inicios de sesión), registros de sistemas, registros de aplicaciones, registros de directorios activos.    </p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><em>Detección de Vulnerabilidades y Exploits:</em></strong> </p>
+<ul>
+<li>
+<p>Identificación de intentos de explotación de vulnerabilidades conocidas en sistemas y aplicaciones.</p>
+</li>
+<li>
+<p>Fuentes de registros/logs: Registros de sistemas, registros de aplicaciones, escaneos de vulnerabilidad, registros de bases de datos.    </p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><em>Detección de Ataques de Fuerza Bruta:</em></strong></p>
+<ul>
+<li>
+<p>Vigilancia de patrones de intentos repetitivos de inicio de sesión y acceso a recursos para identificar ataques de fuerza bruta.</p>
+</li>
+<li>
+<p>Fuentes de registros/logs: Registros de autenticación (intentos fallidos de inicio de sesión), registros de sistemas, registros de aplicaciones.    </p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><em>Detección de Ataques Internos y Fugas de Información:</em></strong></p>
+<ul>
+<li>
+<p>Seguimiento de actividades internas para detectar posibles acciones maliciosas de empleados y fugas de información sensible.</p>
+</li>
+<li>
+<p>Fuentes de registros/logs: Registros de acceso a archivos, registros de bases de datos, registros de sistemas, registros de correo electrónico.</p>
+</li>
+</ul>
 </li>
 </ol>
 <p>Cabe destacar que estos casos de uso son de referencia como línea base y que las necesidades de detección y respuesta pueden variar según la industria, el tamaño de la organización y las amenazas emergentes. Es esencial adaptar estos casos de uso a las circunstancias y requisitos específicos de cada <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>.</p>
+<p>Es importante señalar que la efectividad de la detección y respuesta en un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> se basa en la <strong>capacidad de recopilar, correlacionar y analizar adecuadamente estos registros/logs para identificar patrones</strong> y comportamientos anómalos que indiquen posibles amenazas. <strong>La integración de tecnologías de seguridad, como Sistemas de Información y Eventos de Seguridad (<abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>), es totalmente necesario para este propósito</strong>.</p>
+<h3 id="como-gestionar-los-casos-de-uso-en-un-soc">Como gestionar los casos de uso en un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr><a class="headerlink" href="#como-gestionar-los-casos-de-uso-en-un-soc" title="Permanent link">&para;</a></h3>
+<p>Una vez comprendido que un <strong>caso de uso</strong> es el artefacto que permite transformar una amenaza teórica en una regla de detección operativa, es fundamental contar con una estructura que permita gestionarlos de manera escalable. Aquí es donde cobra relevancia los frameworks que nos ayudan a realizar este trabajo, como por ejemplo <strong>MaGMa Use Case Framework</strong>.</p>
+<p>Desarrollado originalmente por la comunidad financiera holandesa (<strong>FI-ISAC</strong>) a partir de las experiencias de <strong>ABN AMRO Bank</strong>, MaGMa es un acrónimo que representa los tres pilares de la gestión de monitorización: **M**anagement (Gestión), **G**rowth (Crecimiento) y **Ma**trics &amp; assessment (Métricas y evaluación).</p>
+<p>Este marco de trabajo aporta un modelo analítico que organiza los casos de uso en <strong>tres capas interconectadas</strong> para asegurar que la tecnología no trabaje de forma aislada:</p>
+<ul>
+<li><strong>Capa de Negocio:</strong> Conecta la monitorización con las necesidades reales de la empresa y los requisitos de cumplimiento.</li>
+<li><strong>Capa de <abbr title="Circunstancia desfavorable que puede ocurrir y que cuando sucede tiene consecuencias negativas sobre los activos provocando su indisponibilidad, funcionamiento incorrecto o pérdida de valor. Una amenaza puede tener causas naturales, ser accidental o intencionada. Si esta circunstancia desfavorable acontece a la vez que existe una vulnerabilidad o debilidad de los sistemas o aprovechando su existencia, puede derivar en un incidente de seguridad.">Amenaza</abbr>:</strong> Describe el <em>modus operandi</em> de los atacantes y los escenarios que el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> debe identificar.</li>
+<li><strong>Capa de Implementación:</strong> Define las reglas técnicas, las fuentes de registros (logs) y los mecanismos de detección específicos en el <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>.</li>
+</ul>
+<p>La implementación de MaGMa permite que un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> maduro deje de trabajar de manera reactiva o "ad-hoc" y comience a medir su <strong>madurez y capacidad de detección</strong> de forma cuantificable, identificando "puntos ciegos" y alineando cada alerta con los riesgos estratégicos de la organización.</p>
 <p><a href="https://www.betaalvereniging.nl/wp-content/uploads/FI-ISAC-Use-Case-Framework-Full-Documentation.pdf">MaGMa Use Case Framework (UCF)</a></p>
 <div class="admonition info">
 <p class="admonition-title">Referencia útil: MaGMa Use Case Framework (UCF)</p>
-<p>El marco de <strong>casos de uso de MaGMa</strong> (UCF) es una guía creada por la comunidad financiera holandesa
-para la <strong>gestión y administración de casos de uso</strong>. Su objetivo es ayudar a las organizaciones a hacer
-operativa su estrategia de monitorización de ciberseguridad.</p>
+<p>El marco de <strong>casos de uso de MaGMa</strong> (UCF) es una guía creada por la comunidad financiera holandesa para la <strong>gestión y administración de casos de uso</strong>. Su objetivo es ayudar a las organizaciones a hacer operativa su estrategia de monitorización de ciberseguridad.</p>
 </div>
-<p>Es importante señalar que la efectividad de la detección y respuesta en un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr> se basa en la <strong>capacidad de recopilar, correlacionar y analizar adecuadamente estos registros/logs para identificar patrones</strong> y comportamientos anómalos que indiquen posibles amenazas. <strong>La integración de tecnologías de seguridad, como Sistemas de Información y Eventos de Seguridad (<abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>), es crucial para este propósito</strong>.</p>
 <h3 id="4-conclusiones">4. Conclusiones<a class="headerlink" href="#4-conclusiones" title="Permanent link">&para;</a></h3>
 <p>Contar con casos de uso precisos de detección y respuesta es fundamental para cualquier organización madura en ciberseguridad debido a varios motivos clave:</p>
 <ul>
@@ -8414,8 +8524,7 @@ operativa su estrategia de monitorización de ciberseguridad.</p>
 </ul>
 <div class="admonition success">
 <p class="admonition-title">Conclusión</p>
-<p>Contar con casos de uso precisos de detección y respuesta ayuda a establecer un enfoque organizado y
-efectivo de ciberseguridad. Además, permite comprender mejor riesgos y amenazas, tomar medidas
+<p>Contar con casos de uso precisos de detección y respuesta ayuda a establecer un enfoque organizado y efectivo de ciberseguridad. Además, permite comprender mejor riesgos y amenazas, tomar medidas
 proactivas y mitigar incidentes con menos improvisación.</p>
 </div>
 <h2 id="referencias">Referencias<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>

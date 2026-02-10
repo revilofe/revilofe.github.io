@@ -1,407 +1,510 @@
-# Índice {#índice}
+---
+title: "UD 2 - P2: SIEM (ELK) e IDS (Snort)"
+summary: "Montaje de un SOC de laboratorio con ELK y Snort en contenedores."
+description: "Guía paso a paso para desplegar ELK, enviar logs con Filebeat y detectar eventos con Snort."
+authors:
+    - Eduardo Fdez
+date: 2026-02-10
+icon: "material/file-document-edit"
+permalink: /is/unidad2/p2.2
+categories:
+    - IS
+tags:
+    - SIEM
+    - ELK
+    - Elasticsearch
+    - Logstash
+    - Kibana
+    - Filebeat
+    - Snort
+    - Docker
+    - IDS
+---
 
-[**Índice**](#índice)	**[1](#índice)**
+## P2.2 - SIEM (ELK) e IDS (Snort)
 
-[**1\. Introducción**](#introducción)	**[2](#introducción)**
 
-[1.1 SIEM](#1.1-siem)	[2](#1.1-siem)
+### 1. Introducción
 
-[1.2 Datos e información](#1.2-datos-e-información)	[2](#1.2-datos-e-información)
+Los SIEM (Security Information and Event Management) son herramientas fundamentales en la gestión de la seguridad de la información. Permiten recopilar, analizar y visualizar datos de seguridad en tiempo real, facilitando la detección de amenazas y la respuesta a incidentes. En esta práctica, nos centraremos en el despliegue de un SIEM utilizando ELK Stack (Elasticsearch, Logstash y Kibana) y la integración de Snort como sistema de detección de intrusiones (IDS).
 
-[1.3 Infraestructura y PoC](#1.3-infraestructura-y-poc)	[2](#1.3-infraestructura-y-poc)
+#### 1.1 SIEM
 
-[**2\. Punto de partida:**](#punto-de-partida:)	**[4](#punto-de-partida:)**
+Hemos visto que un SOC, en definitiva, es el lugar desde donde se controla la seguridad de una serie de sistemas.
 
-[2.1 Elementos](#2.1-elementos)	[4](#2.1-elementos)
+Pero hay una pregunta clave: ¿cómo sabemos que todo está yendo bien? ¿cómo sabemos si alguien se ha saltado las restricciones impuestas y está atacando a la empresa? O incluso algo más simple: ¿cómo sabemos si el servidor está respondiendo a la carga de trabajo actual?
 
-[2.2 Instalación del entorno ELK](#2.2-instalación-del-entorno-elk)	[6](#2.2-instalación-del-entorno-elk)
+Un SIEM (Security Information and Event Management) es un sistema que nos permite recopilar datos, procesarlos, almacenarlos y visualizarlos. Estos datos pueden ser de distinta naturaleza, en función de los agentes de datos empleados.
 
-[2.3 Configuración](#2.3-configuración)	[7](#2.3-configuración)
+Uno de los primeros pasos para montar un SIEM de forma adecuada es generar una lista de activos de nuestra infraestructura que queremos monitorizar. A partir de ese listado se decide qué tipo de datos queremos generar y enviar desde cada activo al SIEM.
 
-[2.4 Otros comandos que puedes necesitar:](#2.4-otros-comandos-que-puedes-necesitar:)	[9](#2.4-otros-comandos-que-puedes-necesitar:)
+#### 1.2 Datos e información
 
-[2.4 Más sobre ELK Docker](#2.4-más-sobre-elk-docker)	[10](#2.4-más-sobre-elk-docker)
+Antes de avanzar, conviene distinguir entre datos e información. De los datos recogidos de los distintos sistemas (relacionados con el funcionamiento de los equipos), datos son, por ejemplo: el porcentaje de CPU usada, la cantidad de memoria libre, etc.
 
-[2.5 Agente de datos](#2.5-agente-de-datos)	[11](#2.5-agente-de-datos)
+Por sí solos, descontextualizados, no nos indican gran cosa. Es en el análisis realizado en el SIEM donde estos datos empiezan a generar valor.
 
-[2.6 Otras consideraciones sobre el agente de datos](#2.6-otras-consideraciones-sobre-el-agente-de-datos)	[12](#2.6-otras-consideraciones-sobre-el-agente-de-datos)
+#### 1.3 Infraestructura y PoC
 
-[**3\. Objetivo: Introducir en el contenedor 1, snort, para que actue como IDS.**](#objetivo:-introducir-en-el-contenedor-1,-snort,-para-que-actue-como-ids.)	**[14](#objetivo:-introducir-en-el-contenedor-1,-snort,-para-que-actue-como-ids.)**
+Para poder monitorizar con un SIEM necesitamos una infraestructura. Es decir, el SIEM se ubicará en un entorno (un sistema) y los activos que queremos monitorizar serán sistemas distintos.
 
-1. # Introducción {#introducción}
+Para realizar nuestro PoC (Proof of Concept) tenemos varias alternativas:
 
-## 1.1 SIEM {#1.1-siem}
-
-Hemos visto que un SOC, en definitiva, es la zona desde donde se controla la seguridad de una serie de sistemas. 
-
-Pero, una pregunta que debemos hacernos es, ¿cómo sabemos que todo está yendo bien? ¿cómo sabemos que nadie se acaba de saltar las restricciones impuestas y están atacando la empresa?, o incluso, algo más simple, ¿cómo sabemos que el servidor está dando respuesta a la carga de trabajo actual?
-
-Un SIEM (Security Information and Event System) es un sistema que nos permite obtener datos, procesarlos, almacenarlos y visualizarlos. Estos datos pueden ser de diversa naturaleza, como veremos posteriormente, en función de los agentes de datos empleados.
-
-Uno de los primeros pasos que debemos dar para montar un SIEM de forma adecuada es generar una lista de activos, de nuestra infraestructura, que queremos monitorizar. A partir de este listado se debe decidir qué tipo de datos queremos generar y enviar desde cada activo a nuestro SIEM.
-
-## 1.2 Datos e información {#1.2-datos-e-información}
-
-Antes de avanzar, sería interesante hacer una distinción entre datos e información. De los datos recogidos de los distintos sistemas, y relacionados con el funcionamiento de los equipos, datos son, por ejemplo, números del porcentaje de CPU usado, la cantidad de memoria sin uso, etcétera. Por sí solos, descontextualizados, no nos indican gran cosa. Es en el análisis realizado en el SIEM en donde estos empiezan a generar valor.
-
-## 1.3 Infraestructura y PoC {#1.3-infraestructura-y-poc}
-
-Para poder monitorizar con el SIEM, debemos tener en cuenta que necesitamos una infraestructura. Es decir, nuestro SIEM se debe localizar en un entorno, un sistema, y aquellos activos que queremos monitorizar, serán sistemas distintos.
-
-Para poder realizar nuestro PoC (Proof of Concept) por lo tanto, tenemos varias alternativas:
-
-* Emplear distintas máquinas virtuales.  
-* Emplear distintas máquinas físicas.  
-* Emplear servidores VPS para simular la infraestructura.  
+* Emplear distintas máquinas virtuales.
+* Emplear distintas máquinas físicas.
+* Emplear servidores VPS para simular la infraestructura.
 * Emplear contenedores.
 
-El objetivo principal de este trabajo es implementar una solución mediante herramientas de código abierto en un entorno basado en contenedores que permita monitorizar el tráfico de red no deseado, anomalías de seguridad y detección de intrusiones. Para ello, se procesarán, recopilaran y se presentará la información relevante mediante una interfaz gráfica fácilmente  
-comprensible por cualquier usuario con acceso.
+El objetivo principal de este trabajo es implementar una solución con herramientas de código abierto en un entorno basado en contenedores, que permita monitorizar tráfico de red no deseado, anomalías de seguridad y
+la detección de intrusiones.
 
-Con este fin, se utilizará Snort como software de detección de intrusiones y ELK stack, que será el encargado de recopilar los datos enviados por Snort, para analizarlos y visualizarlos en tiempo real. Ambas herramientas funcionarán sobre contenedores Docker para así aprovechar las numerosas ventajas que esta tecnología ofrece.
+Para ello, se procesará, recopilará y presentará la información relevante mediante una interfaz gráfica fácilmente comprensible por cualquier usuario con acceso.
 
-No vamos a realizar un curso de docker en este momento, ni se van a explicar las diferencias con respecto a una máquina virtual. Simplemente se expondrán y explicarán los comandos  
-necesarios para generar la infraestructura. El objetivo es montar nuestro SIEM y docker es una herramienta eficiente para lograrlo
+Con este fin se utilizará Snort como software de detección de intrusiones y ELK Stack, que será el
+encargado de recopilar los datos enviados por Snort, analizarlos y visualizarlos en tiempo real. Ambas herramientas funcionarán sobre contenedores Docker para aprovechar las ventajas que ofrece esta tecnología.
 
-2. # Punto de partida: {#punto-de-partida:}
+No vamos a realizar un curso de Docker en este momento, ni se explicarán las diferencias con respecto a una máquina virtual. Simplemente se expondrán y explicarán los comandos necesarios para generar la infraestructura. El objetivo es montar el SIEM y Docker es una herramienta eficiente para lograrlo.
+
+### 2. Punto de partida
 
 ![][image1]
 
-El contenedor 1: Simula el agente de datos, end point.  
-El contenedor 2: Simula el entorno SIEM del SOC, donde estará instalado ELK.
+* Contenedor 1: simula el agente de datos (endpoint).
+* Contenedor 2: simula el entorno SIEM del SOC, donde estará instalado ELK.
 
-## 2.1 Elementos {#2.1-elementos}
+#### 2.1. Elementos
 
-ELK es un conjunto de productos desarrollados por Elastic, diseñado para recibir datos desde cualquier tipo de fuente y formato, para transformarlos, realizar búsquedas, analizarlos e  
-incluso visualizarlo de forma gráfica en un dashboard. 
+ELK es un conjunto de productos desarrollados por Elastic, diseñado para recibir datos desde cualquier tipo de fuente y formato, transformarlos, realizar búsquedas, analizarlos e incluso visualizarlos de forma gráfica en un dashboard.
 
-Proporciona un marco de trabajo (framework) que nos permite que, una vez reciba datos, podamos visualizarlos de forma sencilla, sin conectarnos a la BD, sino a través del dashboard, podemos ver el estado de la base de datos.
+Proporciona un marco de trabajo (framework) que permite que, una vez reciba datos, podamos visualizarlos de forma sencilla. En lugar de conectarnos directamente a la base de datos, trabajaremos con el dashboard para
+ver el estado de la información.
 
-Es un conjunto de productos, no solo una única aplicación, es decir, son componentes configurables por separado. El stack está formado por Elasticsearch, Kibana y Logstash.
+ELK es un conjunto de productos (no una única aplicación), es decir, son componentes configurables por
+separado. El Stack está formado por Elasticsearch, Kibana y Logstash.
 
-A eso le tenemos que sumar distintos Beats que son los agentes que envían datos. El proceso natural de captura de datos es el que se muestra en la figura anterior
+Además, se emplean distintos Beats (agentes que envían datos). El proceso natural de captura de datos es:
 
-* Tenemos un generador de logs (datos).  
-* Un recolector de datos (beats).  
-* Un procesador de datos (logstash).  
-* Un almacén de datos (elasticsearch).  
-* Un visualizador de información (kibana).
+* Generador de logs (datos).
+* Recolector de datos (Beats).
+* Procesador de datos (Logstash).
+* Almacén de datos (Elasticsearch).
+* Visualizador de información (Kibana).
 
-**Elasticsearch**   
-Fundamentalmente, Elasticsearch es un motor de búsqueda en un entorno NoSQL, pero sin perder su naturaleza de base de datos distribuida.
+##### 2.1.1. Elasticsearch
 
-Elasticsearch es compatible con grupos de datos generados desde multitud de tipos de fuentes diferentes, inyectando todos esos datos en los diferentes nodos que componen su cluster de almacenaje, de ahí que permita una alta disponibilidad y una mayor tolerancia a fallos. 
+Fundamentalmente, Elasticsearch es un motor de búsqueda en un entorno NoSQL, pero sin perder su naturaleza
+de base de datos distribuida.
 
-**Logstash**  
-Es la herramienta encargada de realizar la recolección de eventos en tiempo real, análisis de formato y selección del tipo de almacenamiento, justo antes de su procesamiento por parte de Elasticsearch.
+Es compatible con datos generados desde multitud de fuentes, inyectándolos en los diferentes nodos que
+componen su cluster de almacenaje. De ahí que permita alta disponibilidad y una mayor tolerancia a fallos.
 
-![][image2]  
-Logstash actúa como un agregador: extrae datos de varias fuentes antes de enviarlos, generalmente a Elasticsearch, y aunque no es el único sistema compatible, en las soluciones para IDS suele ser necesario enriquecer/mejorar los registros, por ejemplo, agregando contexto a los mensajes originales, analizando los campos por separado, o filtrando bits de datos no deseados, y Logstash es el mejor. Sin embargo, esto también añade bastante complejidad al usuario, y es por ello que el propio ELK también permite utilizar otros agregadores más simples, como es el caso de Filebeat.
+##### 2.1.2. Logstash
 
-Precisamente, al pretender montar una demostración sencilla de integración de los elementos, más que obtener una solución IDS robusta, en este trabajo se ha decido inicialmente partir desde Filebeat para enviar los registros desde la fuente hasta Elasticsearch.
 
-**Beats**  
-Son una familia:  
-![][image3]Filebeat, y los otros miembros de la familia Beats, actúan como un agente ligero implementado en el host que envía los registros a Elasticsearch.
+Es la herramienta encargada de realizar la recolección de eventos en tiempo real, el análisis de formato y
+la selección del tipo de almacenamiento, justo antes de su procesamiento por parte de Elasticsearch.
 
-Filebeat es uno de los mejores remitentes de archivos de registro que existen en la actualidad: es liviano, admite el cifrado SSL y TLS, utiliza un buen mecanismo de recuperación  incorporado y es altamente confiable. En nuestro caso es la solución que se ha seleccionado para el envío de logs, al ser liviano y robusto y a que el sistema será implementado en entornos pequeños o medianos.
+![][image2]
 
-**Kibana**  
-Es una interfaz de usuario que permite la visualización de datos para su análisis posterior. En Kibana se puede consultar o leer información desde los índices de Elasticsearch para realizar búsquedas, visualizar y analizar los datos, además de navegar en ELK.
+Logstash actúa como agregador: extrae datos de varias fuentes antes de enviarlos (generalmente a
+Elasticsearch). En soluciones IDS suele ser necesario enriquecer/mejorar los registros, por ejemplo:
+agregando contexto a los mensajes originales, analizando campos por separado, o filtrando datos no
+deseados. Logstash es una de las opciones más potentes para esto.
 
-Pone a disposición del usuario diversos tipos de herramientas para visualizar los datos, tales como diagramas, histogramas, tablas, etc. Entre las principales funciones de esta herramienta están:  
-• Análisis de datos mediante la aplicación de diferentes métricas.  
-• Exposición de datos a través de diversos tipos de gráficas o diagramas  
-• Comprobación del estado de ELK  
-• Generación de reportes  
-• Exploración y descubrimiento de datos  
-• Creación de alertas  
-• Implementación de TLS como cifrado de comunicaciones.
+Sin embargo, también añade complejidad. Por eso, ELK permite usar otros agregadores más simples, como
+Filebeat.
 
-## 2.2 Instalación del entorno ELK {#2.2-instalación-del-entorno-elk}
+Precisamente, como buscamos una demostración sencilla de integración de elementos (más que una solución IDS
+robusta), en este trabajo se ha decidido partir de Filebeat para enviar los registros desde la fuente
+hasta Elasticsearch.
 
-El primer paso es instalar docker. Si estás usando cualquier distribución de linux, lo más sencillo es seguir su tutorial:  
-[https://docs.docker.com/engine/install/ubuntu/](https://docs.docker.com/engine/install/ubuntu/)
+##### 2.1.3. Beats
 
-Si te encuentras en Windows ve a la web oficial de docker y descarga el instalador:  
-[https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
+Son una familia de agentes:
 
-Para probar que funciona docker, simplemente tenemos que escribir algún comando, como por ejemplo: “docker help”.
+![][image3]
 
-Por defecto, si estás en linux, docker necesita permisos de sudo para ser ejecutado. Esta configuración se puede dejar de esta manera o cambiarla siguiendo el tutorial.  
-[https://docs.docker.com/engine/install/linux-postinstall/](https://docs.docker.com/engine/install/linux-postinstall/)
+Filebeat, y los otros miembros de la familia Beats, actúan como un agente ligero implementado en el host,
+que envia registros a Elasticsearch.
 
-Una vez instalado, si accedemos a la consola de comandos y escribimos para comprobar que docker funciona OK
+Filebeat es uno de los remitentes de logs más utilizados: es liviano, admite cifrado SSL/TLS, incorpora un
+buen mecanismo de recuperacion y es altamente confiable. En nuestro caso se ha seleccionado para el envio
+de logs por ser ligero y robusto, y porque el sistema se implementara en entornos pequeños o medianos.
 
-❯ docker run hello-world
 
-Debería funcionar y aparecer por consola una serie de mensajes que nos indican que docker está instalado con éxito en nuestro sistema.
+##### 2.1.3. Kibana
 
-Aquí se encuentran algunas cheatsheet con los comandos básicos: [The Ultimate Docker Cheat Sheet | dockerlabs](https://dockerlabs.collabnix.com/docker/cheatsheet/) y [https://www.docker.com/wp-content/uploads/2022/03/docker-cheat-sheet.pdf](https://www.docker.com/wp-content/uploads/2022/03/docker-cheat-sheet.pdf)
+Es una interfaz de usuario que permite la visualización de datos para su análisis posterior. En Kibana se
+puede consultar información desde indices de Elasticsearch para realizar búsquedas, visualizar y analizar
+datos, además de navegar por el Stack.
 
-La documentación de la imagen de docker que vamos a usar se encuentra aquí:
+Pone a disposicion del usuario diversas herramientas para visualizar datos (diagramas, histogramas,
+tablas, etc.). Entre las principales funciones estan:
 
-[https://elk-docker.readthedocs.io/](https://elk-docker.readthedocs.io/)
+* Analisis de datos aplicando distintas metricas.
+* Exposicion de datos con diferentes tipos de graficas o diagramas.
+* Comprobacion del estado de ELK.
+* Generacion de reportes.
+* Exploracion y descubrimiento de datos.
+* Creacion de alertas.
+* Implementacion de TLS como cifrado de comunicaciones.
 
-Para descargar la imagen en nuestro equipo necesitamos ejecutar el comando:
+#### 2.2. Instalación del entorno ELK
 
-❯ docker pull sebp/elk:7.16.3
+El primer paso es instalar Docker:
 
-Este comando lo que hace es descargar la imagen a nuestro equipo. Una imagen de docker puede ser comprendida como unas instrucciones para generar un contenedor.
+* En Linux, lo más sencillo es seguir el tutorial oficial: https://docs.docker.com/engine/install/ubuntu/
+* En Windows, descarga Docker Desktop desde: https://www.docker.com/products/docker-desktop
 
-## 2.3 Configuración  {#2.3-configuración}
+Para probar que Docker funciona, puedes ejecutar algún comando de ayuda, por ejemplo `docker help`, o bien:
+
+```bash
+docker run hello-world
+```
+
+Debería aparecer por consola una serie de mensajes que indican que Docker se ha instalado con éxito.
+
+Por defecto, si estas en Linux, Docker suele necesitar permisos de `sudo`. Esta configuración se puede
+mantener o cambiar siguiendo el tutorial:
+https://docs.docker.com/engine/install/linux-postinstall/
+
+Cheatsheets de comandos básicos:
+
+* The Ultimate Docker Cheat Sheet | dockerlabs: https://dockerlabs.collabnix.com/docker/cheatsheet/
+* PDF oficial: https://www.docker.com/wp-content/uploads/2022/03/docker-cheat-sheet.pdf
+
+La documentación de la imagen Docker que vamos a usar:
+
+* https://elk-docker.readthedocs.io/
+
+Para descargar la imagen en nuestro equipo:
+
+```bash
+docker pull sebp/elk:7.16.3
+```
+
+Este comando descarga la imagen al equipo. Una imagen de Docker puede entenderse como un conjunto de
+instrucciones para generar un contenedor.
+
+#### 2.3 Configuración
 
 ![][image4]
 
-Una buena práctica con docker es crear redes, propias y externas al resto de contenedores, si se van a emplear contenedores trabajando de forma conjunta. Para ello, ejecutamos los comandos para crear red
+Una buena práctica con Docker es crear redes propias (externas al resto de contenedores) si se van a
+emplear contenedores trabajando de forma conjunta. Para ello, creamos una red:
 
-❯ docker network create \-d bridge \--subnet 172.20.0.0/24 elk-red
+```bash
+docker network create -d bridge --subnet 172.20.0.0/24 elk-red
+```
 
-Creamos una red de tipo bridge por si necesitáramos conectarnos a internet a través del NAT del PC (lo cual, para un servidor web, es habitual).
+Creamos una red de tipo `bridge` por si necesitáramos conectarnos a Internet a través del NAT del PC (algo
+habitual, por ejemplo, en un servidor web).
 
-Una vez descargada la imagen, pasamos a ejecutar el contenedor mediante el siguiente comando:
+Una vez descargada la imagen, ejecutamos el contenedor:
 
-❯ docker run \-p 5601:5601 \-p 9200:9200 \-p 5044:5044 \-it \--name elk \--net elk-red \--ip 172.20.0.10 \-d sebp/elk:7.16.3
+```bash
+docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it \
+  --name elk --net elk-red --ip 172.20.0.10 -d sebp/elk:7.16.3
+```
 
-Este comando lo que hace es ejecutar la imagen, siguiendo los pasos descritos en ella, generando un contenedor al final de su ejecución. El objetivo de este módulo no es hacer una explicación pormenorizada de docker, pero sí al menos vamos a comprender algunos aspectos importantes.
+Este comando ejecuta la imagen y genera el contenedor. El objetivo de esta práctica no es explicar Docker
+en profundidad, pero si comprender aspectos importantes.
 
-Algunos de las opciones que podemos ver en este comando son:
+Algunas opciones del comando:
 
-\-p: sirve para conectar puertos internos del contenedor y puertos externos de la máquina anfitriona. Es decir, estaríamos mapeando los puertos 5601, el 9200 y el 5044\.
+* `-p`: mapea puertos internos del contenedor a puertos del host (5601, 9200 y 5044).
+* `--name`: asigna un nombre al contenedor para poder arrancarlo, pararlo, ver logs, etc.
+* `-it`: combina:
+    - `-i` (interactive), para mantener `stdin` abierto.
+    - `-t`, para crear un pseudo-terminal y comunicarnos con el contenedor.
 
-Cuando ejecutemos el contenedor podemos dirigirnos a :
+Cuando el contenedor este arrancado, puedes acceder a:
 
-* localhost:5601  
-* localhost:9200  
-* localhost:5044
+* `localhost:5601`
+* `localhost:9200`
+* `localhost:5044`
 
-El motivo de hacer una conexión (bind) de estos tres puertos es porque estamos ejecutando en la imagen tres servicios diferentes:
+Se exponen estos tres puertos porque la imagen ejecuta tres servicios:
 
-* elasticsearch, en el puerto 9200: Si accedemos al puerto 9200 podemos realizar consultas a la API de elasticsearch directamente.  
-* logstash, en el puerto 5044: El puerto 5044 es donde se encuentra logstash esperando inserciones para poder realizar su trabajo de middleware, previo a la inserción de datos en elasticsearch.  
-* kibana, en el puerto 5601: Si accedemos al puerto 5601 podemos ver la interfaz (el frontend) de kibana, el cual hace consultas a la API de elasticsearch. por ejemplo: http://\<tu-host\>:5601.
+* Elasticsearch (9200): permite consultas a su API.
+* Logstash (5044): puerto donde Logstash espera inserciones para actuar como middleware.
+* Kibana (5601): interfaz web (frontend) que consulta a Elasticsearch. Ejemplo: `http://<tu-host>:5601`.
 
-\--name: nos permite darle un nombre al contenedor que generamos. Nos permitirá en el futuro arrancar y parar el contenedor, así como acceder a sus logs, crear un shell...
+Si todo ha ido bien, ahora puedes acceder a `localhost:5601` y ver la interfaz gráfica de Kibana.
 
-Al igual que al crear una MV tenemos un .iso y un archivo .vdi al instalar la máquina virtual, aquí tendríamos algo similar con una imagen y un contenedor.
+Si ha ocurrido un error, la forma más fácil de verlo es revisar los logs:
 
-Con la imagen podemos generar multitud de contenedores, pero los cambios que hagamos en un contenedor persistirán únicamente en él.
+```bash
+sudo docker logs --follow NOMBRE_CONTENEDOR
+```
 
-\-it: es una combinación de dos parámetros:
+Con `--follow`, el comando se queda esperando y mostrando nuevos logs. Si solo quieres ver los logs
+actuales, omite ese parámetro.
 
-* \-i (interactive), para mantener el stdin abierto.  
-* \-t: genera un pseudo terminal para poder comunicarnos con el contenedor.
+Un problema habitual es quedarse sin memoria. En ese caso, puede aparecer algo como:
 
-Empleando ambos lo que logramos es tener un contenedor ejecutándose de manera permanente, al cual, además nos podemos conectar generando un shell si fuera necesario.
+```text
+max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+```
 
-Si todo ha ido bien, ahora podéis acceder a localhost:5600 y ver la interfaz gráfica de Kibana.
+Esto indica que la configuración del kernel `vm.max_map_count` debe establecerse al menos en `262144`.
+Para cambiarlo:
 
-Si no, es posible que haya ocurrido un error en la ejecución. La forma más fácil de ver el error es:
+```bash
+sudo sysctl -w vm.max_map_count=262145
+```
 
-❯ sudo docker logs \--follow NOMBRE\_CONTENEDOR
+Para persistir la corrección, añade esa configuración al final del archivo `/etc/sysctl.conf` (a veces
+también se usa `/etc/sysctl.d/99-sysctl.conf`), por ejemplo:
 
-con \--follow: este parámetro permite que se quede esperando más logs. En caso de que queramos ver los logs actuales sin esperar más, podemos omitirlo.
+```bash
+sudo pico /etc/sysctl.d/99-sysctl.conf
+```
 
-El problema más habitual que os ha podido dar es que se haya quedado sin memoria. Por defecto, la instalación de docker permite un máximo de memoria que es insuficiente para desplegar completamente ELK:
+Después, vuelve a ejecutar el contenedor.
 
-\[1\]: max virtual memory areas vm.max\_map\_count \[65530\] is too low, increase to at least \[262144\]
+#### 2.4 Otros comandos que puedes necesitar
 
-Este error simplemente indica que la configuración del kernel vm\_max\_map\_count debe establecerse en al menos 262144 para uso en producción.
+* Listar contenedores que estan corriendo:
 
-Para realizar ese cambio, podemos ejecutar
+    ```bash
+    docker container ls
+    ```
 
-❯ sudo sysctl \-w vm.max\_map\_count=262145
+* Listar todos los contenedores (incluyendo parados):
 
-Para persistir la corrección, añadir ese comando al final del archivo que se encuentra en /etc/sysctl.conf y otras veces en /etc/sysctl.d/99-sysctl.conf:
+    ```bash
+    docker container ls -a
+    ```
 
-❯ pico /etc/sysctl.d/99-sysctl.conf
+* Listar redes:
 
-Ahora solo tendríamos que ejecutar de nuevo el contenedor.
+    ```bash
+    docker network ls
+    ```
 
-## 2.4 Otros comandos que puedes necesitar: {#2.4-otros-comandos-que-puedes-necesitar:}
+* Parar y arrancar el contenedor `elk`:
 
-Listar contenedores que están corriendo
+    ```bash
+    docker stop elk
+    docker start elk
+    ```
 
-❯ docker container ls
+* Borrar el contenedor `elk`:
 
-Listar todos contenedores
+    ```bash
+    docker container rm elk
+    ```
 
-❯ docker container ls \-a
+* Ver logs del contenedor `elk`:
 
-Listar redes
+    ```bash
+    docker logs elk --follow
+    ```
 
-❯ docker network ls
+* Lanzar un bash interactivo dentro del contenedor `elk`:
 
-Parar y correr el contenedor elk
+    ```bash
+    docker exec -it elk bash
+    ```
 
-❯ docker stop elk
+* Inspeccionar el contenedor `elk`:
 
-❯ docker start elk
+    ```bash
+    docker container inspect elk
+    ```
 
-Borrar el contenedor elk
+#### 2.4.1 Mas sobre ELK Docker
 
-❯ docker container rm elk
-
-Ver los logs del contenedor elk
-
-❯ docker logs elk —follow
-
-Lanzar un bash interfactivo del contenedor elk
-
-❯ docker exec \-it elk bash
-
-Inspeccionar un contenedor del contenedor elk
-
-❯ docker container inspect elk
-
-## 2.4 Más sobre ELK Docker {#2.4-más-sobre-elk-docker}
-
-Es posible que ahora mismo consideres suficiente lo que ya sabes pero existen muchos aspectos de configuración que no hemos visto en esta unidad, como
+Es posible que ahora mismo consideres suficiente lo que ya sabes, pero existen muchos aspectos de configuración que no hemos visto en esta unidad:
 
 Plugins y configuración:
 
-[https://elk-docker.readthedocs.io/\#tweaking-the-image](https://elk-docker.readthedocs.io/#tweaking-the-image)
+* https://elk-docker.readthedocs.io/#tweaking-the-image
 
 Configuración de variables de entorno:
 
-[https://elk-docker.readthedocs.io/\#usage](https://elk-docker.readthedocs.io/#usage)
+* https://elk-docker.readthedocs.io/#usage
 
-Lógicamente se puede instalar el stack sin hacer uso de docker, como demuestran los siguientes enlaces:
+Lógicamente se puede instalar el Stack sin hacer uso de Docker, como demuestran los siguientes enlaces:
 
-[https://bitlaunch.io/blog/install-elasticsearch-on-ubuntu-20-04-lts/](https://bitlaunch.io/blog/install-elasticsearch-on-ubuntu-20-04-lts/)
+* https://bitlaunch.io/blog/install-elasticsearch-on-ubuntu-20-04-lts/
+* https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-20-04
+* https://www.rosehosting.com/blog/how-to-install-elk-stack-on-ubuntu-20-04
 
-[https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-20-04](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-20-04)
+#### 2.5 Agente de datos
 
-[https://www.rosehosting.com/blog/how-to-install-elk-stack-on-ubuntu-20-04](https://www.rosehosting.com/blog/how-to-install-elk-stack-on-ubuntu-20-04)
+Para simular una infraestructura, vamos a desplegar un contenedor que hará las funciones de servidor web.
+En este contenedor tendremos instalado Nginx (servidor web) y, como agente de datos, Filebeat.
 
-## 2.5 Agente de datos {#2.5-agente-de-datos}
-
-Para simular una infraestructura, vamos a desplegar un contenedor que hará las funciones de servidor web. En este contenedor tendremos instalado un nginx (servidor web) y como agente de datos, filebeat.
-
-Vamos a comenzar por el primero de los beats. Para instalar filebeat podemos realizarlo, de nuevo, de forma nativa o a través de docker.
-
-Pongo los siguientes dos enlaces de la documentación oficial.
+Vamos a comenzar por el primero de los Beats. Para instalar Filebeat podemos hacerlo de forma nativa o a
+traves de Docker. Documentación oficial:
 
 De forma nativa:
 
-[https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation-configuration.html](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation-configuration.html)
+* https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation-configuration.html
 
-Usando docker:
+Usando Docker:
 
-[https://www.elastic.co/guide/en/beats/filebeat/current/running-on-docker.html](https://www.elastic.co/guide/en/beats/filebeat/current/running-on-docker.html)
+* https://www.elastic.co/guide/en/beats/filebeat/current/running-on-docker.html
 
-En nuestro caso, para hacer esta prueba de concepto, podemos emplear el pequeño proyecto proporcionado por el repositorio:
+En nuestro caso, para esta prueba de concepto, podemos emplear el proyecto proporcionado por el repositorio:
 
-[https://github.com/spujadas/elk-docker](https://github.com/spujadas/elk-docker)
+* https://github.com/spujadas/elk-docker
 
-Dicho repositorio es del creador de la imagen que hemos usado anteriormente.  La imagen que vamos a usar es un simple servidor de nginx el cual está siendo monitorizado a través de filebeat.
+Ese repositorio es del creador de la imagen usada anteriormente. La imagen que vamos a usar es un servidor
+Nginx monitorizado con Filebeat.
 
-Para instalar la imagen, en primer lugar descargamos el zip del proyecto, lo extraemos y accedemos a la carpeta “nginx-filebeat” del mismo.
+Para instalar la imagen:
 
-El siguiente paso es acceder, a través de la línea de comandos a la carpeta “nginx-filebeat”.
+* Descarga el ZIP del proyecto (o clónalo), extraelo y accede a la carpeta `nginx-filebeat`.
+* Accede por línea de comandos a la carpeta `nginx-filebeat`.
 
-En esta carpeta, antes de continuar, modificaremos el archivo filebeat.yml, y donde pone elk:5044, sustituir elk por la ip que queremos que tenga el SIEM de elk. En el caso de nuestro ejemplo, la 172.20.0.10
+Antes de continuar, modifica el archivo `filebeat.yml`. Donde pone `elk:5044`, sustituye `elk` por la IP
+del SIEM de ELK. En el caso de nuestro ejemplo: `172.20.0.10`.
 
-Por defecto está configurado para que filebeat escuche los archivos de syslog y auth.log y los envíe. En la recepción (en nuestro SOC) se recibirán estos datos como parte de “filebeat-syslog”, como podemos ver en la configuración.
+Por defecto, Filebeat está configurado para escuchar los archivos `syslog` y `auth.log` y enviarlos. En la
+recepción (en el SOC) se recibirán como parte de `filebeat-syslog`.
 
-Además está escuchando los archivos de log de nginx. Estos se enviarán como “nginx-access”.
+Además, está escuchando los logs de Nginx. Estos se enviarán como `nginx-access`.
 
-Como vemos en la parte superior, estamos enviando esta información directamente a logstash. Es importante que posteriormente cambiemos donde pone “elk” por la IP de nuestro SOC.
+Como vemos en la parte superior, estamos enviando esta información directamente a Logstash. Es importante
+que cambiemos donde pone `elk` por la IP de nuestro SOC.
 
-El siguiente paso, es emplear el comando de docker para generar la imagen a partir de dicho dockerfile.
+El siguiente paso es generar la imagen a partir del `Dockerfile`:
 
-❯ docker build . \-t nginx-filebeat
+```bash
+docker build . -t nginx-filebeat
+```
 
-❯ docker run \-p 80:80 \-it \--name filebeat \--net elk-red \--d nginx-filebeat
+Y luego ejecutar el contenedor:
 
-donde:
+```bash
+docker run -p 80:80 -it --name filebeat --net elk-red -d nginx-filebeat
+```
 
-\-p: para exponer el puerto 80 al exterior
+Donde:
 
-\-it: porque vamos a necesitar que sea interactiva
+* `-p`: expone el puerto 80 al exterior.
+* `-it`: lo necesitamos interactivo.
+* `-d`: lo inicia en segundo plano y nos deja la consola libre.
+* `--name`: asigna un nombre al contenedor.
+* `--net`: indica la red a emplear.
 
-\-d: para que se inicie y nos deje la consola libre
+#### 2.6 Otras consideraciones sobre el agente de datos
 
-\--name: para asignarle un nombre
+Recuerda que, si queremos ver los logs que va generando el contenedor, podemos salir de la shell del
+contenedor y escribir:
 
-\--network: para indicarle la red que queremos que emplee.
+```bash
+docker logs --follow filebeat
+```
 
-## 2.6 Otras consideraciones sobre el agente de datos {#2.6-otras-consideraciones-sobre-el-agente-de-datos}
+Recuerda que en el archivo de configuración de Filebeat (`/etc/filebeat/filebeat.yml`) debes indicar la IP
+del SIEM. Si no la recuerdas, usa:
 
-Recuerda que si queremos ver los logs que va generando el contenedor, podemos salirnos de la shell del contenedor y escribir
+```bash
+docker network inspect elk-red
+```
 
-❯ docker logs \--folow filebeat
-
-Recuerda que en archivo de configuración de filebeat (/etc/filebeat/filebeat.yml) debes indicar la IP del SIEM. Si no la recuerdas, usa el siguiente comando:
-
-❯ docker network inspect elk-red
-
-En la imagen que tenemos sobre nuestra infraestructura, logstash está configurado con SSL por defecto. Dado que de inicio puede dar algún problema, y será una tarea opcional, vamos a deshabilitarlo para facilitar que todo funcione de forma correcta.
+En la imagen de nuestra infraestructura, Logstash está configurado con SSL por defecto. Dado que al
+principio puede dar algún problema, y será una tarea opcional, vamos a deshabilitarlo para facilitar que
+todo funcione correctamente.
 
 Modificamos el archivo:
 
-❯ docker exec \-it elk bash
-
-❯ vim /etc/logstash/conf.d/02-beats-input.conf
+```bash
+docker exec -it elk bash
+vim /etc/logstash/conf.d/02-beats-input.conf
+```
 
 ![][image5]
 
-Recuerda que cualquier cambio en la configuración, necesitará parar y reiniciar el contenedor.
+Recuerda que cualquier cambio en la configuración necesitará parar y reiniciar el contenedor.
 
-Por último podrás acceder a kibana ([http://172.19.0.3:5601](http://172.19.0.3:5601)) y crear tu propio cuadro de mandos.
+Por último, podrás acceder a Kibana (por ejemplo `http://172.19.0.3:5601`) y crear tu propio cuadro de
+mandos.
 
-| ¿Qué modificaciones serán necesarias para crear un pequeño cuadro de mando para la visualización de la información? |
-| :---- |
+> Pregunta: ¿qué modificaciones serán necesarias para crear un pequeño cuadro de mando para la visualización
+> de la información?
 
-3. # Objetivo: Introducir en el contenedor 1, snort, para que actue como IDS. {#objetivo:-introducir-en-el-contenedor-1,-snort,-para-que-actue-como-ids.}
+### 3. Objetivo: introducir Snort (IDS) en el contenedor 1
 
-**Se pretende partir de la situación de partida anterior y modificar el contenedor 1 para que contenga snort.**
+**Se pretende partir de la situacion anterior y modificar el contenedor 1 para que contenga Snort.**
 
-**Posteriormente configurar snort para detectar posibles eventos dentros del contenedor y que lance las alarmas oportunas para que las recoja filebeat y las envíe al stack ELK**  
+**Posteriormente se configurara Snort para detectar posibles eventos dentro del contenedor y lanzar las
+alarmas oportunas, de forma que Filebeat las recoja y las envie al Stack ELK.**
+
 ![][image6]
 
-Para la realización del proyecto se ha decidido utilizar **Snort** como IDS de referencia. Snort es el sistema de prevención de intrusiones (IPS) de código abierto más utilizado en el mundo. Utiliza una serie de reglas que ayudan a definir la actividad de red maliciosa y las usa para encontrar paquetes que coincidan con ellas y generar alertas para los usuarios. 
+Para la realización del proyecto se ha decidido utilizar **Snort** como IDS de referencia. Snort es uno de
+los IDS/IPS de código abierto más utilizados. Usa reglas que ayudan a definir actividad de red maliciosa y
+las emplea para encontrar paquetes que coincidan con ellas y generar alertas.
 
-Snort, además, es un sistema de detección de intrusiones en red (NIDS) basado en la detección de usos no permitidos en la red, analizando tráfico y capturando paquetes en tiempo real. Además, puede analizar protocolos, buscar contenidos y puede usarse para detectar multitud de ataques, por ejemplo: desbordamientos de búfer, escaneo de puertos e intentos de OS Fingerprinting (recopilación de datos para obtener información del sistema  
-operativo u otro software), entre muchos otros.   
+Snort, además, es un sistema de detección de intrusiones en red (NIDS) basado en la detección de usos no
+permitidos en la red, analizando tráfico y capturando paquetes en tiempo real. Puede analizar protocolos,
+buscar contenidos y detectar multitud de ataques, por ejemplo: desbordamientos de búfer, escaneo de puertos e
+intentos de OS Fingerprinting (recopilación de datos para obtener información del sistema operativo u otro
+software), entre muchos otros.
+
 Escenario que planteamos:
 
-* La máquina atacante, que será un Kali Linux en el que se utilizarán Ping e Hydra.   
-  * Se generan diccionarios con base en la información obtenida con ingeniería social: Se sabe que el usuario está compuesto por dos letras minúsculas, y su clave por una letra minúscula y un número.  
-  * Con base en las pistas de ingeniería social, se generarán dos diccionarios de usuarios y claves necesarios para el ataque. En caso de no aportar diccionarios, el ataque se efectuaría por Fuerza Bruta y se podría eternizar.  
-    ![][image7]  
-    ![][image8]  
-  * Se lanza una batería de ataques con diferentes herramientas y todos los diccionarios  
-    * Se conoce la dirección de la máquina a atacar, por lo que primero se comprobará con ping (ICMP) si la máquina está operativa.    
-    * Hecho esto, se atacará mediante Hydra y con protocolo ssh.
+* La máquina atacante será un Kali Linux, en el que se utilizarán Ping e Hydra.
+    - Se generan diccionarios con base en la información obtenida con ingeniería social: se sabe que el
+      usuario esta compuesto por dos letras minusculas, y su clave por una letra minuscula y un numero.
+    - Con base en esas pistas, se generarán diccionarios de usuarios y claves necesarios para el ataque. En
+      caso de no aportar diccionarios, el ataque se efectuaría por fuerza bruta y se podría eternizar.
+
+      ![][image7]
+      ![][image8]
+
+    - Se lanza una batería de ataques con diferentes herramientas y diccionarios.
+        - Se conoce la dirección de la máquina a atacar: primero se comprobará con ping (ICMP) si la máquina
+          está operativa.
+        - Después, se atacará mediante Hydra usando el protocolo SSH.
 
 ![][image9]
 
-* La máquina objetivo, que será el contenedor 1,  en el que instalaremos y configuraremos Snort para detectar y registrar los ataques.  
-  * Instalar:   
-    \> sudo apt install snort  
-  * Comprobar el estado y ejecutar:  
-    \> sudo systemctl status snort  
-    \> sudo systemctl start snort  
-  * Los logs de snort: /var/log/snort\_alerts.log  
-  * Configuración de regla, un ejemplo de una regla para detectar ICMP
+* La máquina objetivo será el contenedor 1, en el que instalaremos y configuraremos Snort para detectar y
+  registrar los ataques.
+    - Instalar:
 
-![][image10]  
-Grabaremos una regla para detectar tráfico ICMP (ping) en el fichero de configuración de  
-Snort: /etc/snort/rules/local.rules  
-\# Regla para detectar un ping (ICMP)  
-alert icmp any any \-\> $HOME\_NET any (msg:"¡Trafico ICMP\!"; sid:3000001;)
+      ```bash
+      sudo apt install snort
+      ```
 
-Tras rearrancar el snort, podremos comprobar la grabación de reglas en tiempo real mediante el comando “tail –f” sobre el fichero /var/log/snort\_alerts.log
+    - Comprobar el estado y arrancar el servicio:
+
+      ```bash
+      sudo systemctl status snort
+      sudo systemctl start snort
+      ```
+
+    - Logs de Snort: `/var/log/snort_alerts.log`
+    - Configuración de reglas: un ejemplo para detectar ICMP.
+
+![][image10]
+
+Grabaremos una regla para detectar tráfico ICMP (ping) en el fichero de configuración de Snort:
+`/etc/snort/rules/local.rules`
+
+```text
+# Regla para detectar un ping (ICMP)
+alert icmp any any -> $HOME_NET any (msg:"Trafico ICMP!"; sid:3000001;)
+```
+
+Tras reiniciar Snort, podremos comprobar la generación de alertas en tiempo real con `tail -f` sobre el
+fichero `/var/log/snort_alerts.log`.
 
 Regla para detectar SSH.
 
-Configurar la regla para SSH, tras grabar la regla, limpiaremos el fichero de log, rearrancaremos Snort, abriremos dos terminales y lanzaremos el ataque con Hydra.
+Configurar la regla para SSH. Tras grabar la regla, limpiaremos el fichero de log, reiniciaremos Snort,
+abriremos dos terminales y lanzaremos el ataque con Hydra.
 
 ![][image11]
 
-| ¿Qué modificaciones serán necesarias para conectar el filebeat? ¿Qué modificaciones serán necesarias para crear un pequeño cuadro de mando para la visualización de la información? |
-| :---- |
+> Pregunta: ¿qué modificaciones serán necesarias para conectar Filebeat? ¿qué modificaciones serán
+> necesarias para crear un pequeño cuadro de mando para la visualización de la información?
 
 [image1]: <data:image/png;base64,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>
 

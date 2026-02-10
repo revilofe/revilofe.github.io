@@ -8581,10 +8581,10 @@
 <p>Parte 2: Definir <code>sealed class</code></p>
 <p>Para gestionar los distintos tipos de usuarios, puedes usar una <code>sealed class</code>. Esto te permitirá tener una jerarquía de clases cerrada, lo cual es útil para cuando se conocen todos los posibles subtipos.</p>
 <ol>
-<li>Usuario</li>
-<li><code>sealed class Usuario</code><ul>
-<li>Clases que heredan de Usuario:</li>
-<li>Estudiante(id:<code>String</code>, nombre:<code>String</code>, carrera:<code>String</code>)</li>
+<li>
+<p>Usuario: <code>sealed class Usuario</code>. Clases que heredan de Usuario:</p>
+<ul>
+<li>Estudiante(id:<code>String</code>, nombre:<code>String</code>, carrera:<code>String</code>) </li>
 <li>Profesor(id:<code>String</code>, nombre:<code>String</code>, departamento:<code>String</code>)</li>
 <li>Visitante(id:<code>String</code>, nombre:<code>String</code>)</li>
 </ul>
@@ -8637,110 +8637,129 @@
 <p>Descripción: Crea una jerarquía de clases para representar diferentes tipos de vehículos. Cada vehículo tiene características comunes como la marca, el modelo y la capacidad de combustible, pero cada tipo tiene sus propias características y comportamientos.  </p>
 <p>Clases a implementar:  </p>
 <ol>
-<li>Clase Base <code>Vehiculo</code>  </li>
+<li>
+<p>Clase Base <code>Vehiculo</code>  </p>
+<ul>
 <li>Propiedades comunes: marca (<code>String</code>), modelo (<code>String</code>), capacidadCombustible (<code>Int</code>).</li>
 <li>Método <code>mostrarInformacion()</code>, que imprime la información del vehículo.</li>
-<li>
-<p>Método <code>calcularAutonomia()</code>, que retorna un valor Int (Suponemos que cada litro da para 10 km).  </p>
+<li>Método <code>calcularAutonomia()</code>, que retorna un valor Int (Suponemos que cada litro da para 10 km).  </li>
+</ul>
 </li>
 <li>
 <p>Clase Derivada <code>Automovil</code> (hereda de Vehiculo)  </p>
-</li>
+<ul>
 <li>Propiedad específica: tipo (<code>String</code>), como "sedán", "SUV", "deportivo", etc.</li>
-<li>
-<p>Implementa el método <code>calcularAutonomia()</code> (Suponemos que un automóvil puede hacer 100km más que el cálculo realizado en su clase base)</p>
+<li>Implementa el método <code>calcularAutonomia()</code> (Suponemos que un automóvil puede hacer 100km más que el cálculo realizado en su clase base)</li>
+</ul>
 </li>
 <li>
 <p>Clase Derivada <code>Motocicleta</code> (hereda de Vehiculo)  </p>
-</li>
+<ul>
 <li>Propiedad específica: cilindrada (<code>Int</code>).</li>
 <li>Implementa el método <code>calcularAutonomia()</code> (Suponemos que una moto puede hacer 40km menos que el cálculo realizado en su clase base)  </li>
+</ul>
+</li>
 </ol>
 <p><strong>Objetivo</strong>: Demostrar cómo se pueden crear clases derivadas de una superclase y cómo pueden extender o modificar su comportamiento.</p>
 <h4 id="ejercicio-8-persona-y-estudiante"><strong>Ejercicio 8:</strong> Persona y Estudiante<a class="headerlink" href="#ejercicio-8-persona-y-estudiante" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Clases y Objetos Básicos:  </li>
 <li>
-<p>Crea una clase <code>Persona</code> que tenga dos propiedades: <code>nombre</code> y <code>edad</code>. Luego, en el main crea un objeto de esta clase e imprime sus propiedades.  </p>
+<p>Clases y Objetos Básicos:  </p>
+<ul>
+<li>Crea una clase <code>Persona</code> que tenga dos propiedades: <code>nombre</code> y <code>edad</code>. Luego, en el main crea un objeto de esta clase e imprime sus propiedades.  </li>
+</ul>
 </li>
 <li>
-<p>Métodos Simples:  </p>
-</li>
+<p>Métodos Simples:   </p>
+<ul>
 <li>Añade un método <code>cumple</code> a la clase <code>Persona</code> que incremente la edad de la persona en uno cada vez que se llama.</li>
 <li>Sobreescribe el método <code>toString()</code> y prográmalo para que se muestre una persona con todas sus propiedades. Por ejemplo "Persona (nombre = Lucía, edad = 21)".</li>
-<li>
-<p>En el main ejecuta el cumple de la persona y muestra su información de dos formas: accediendo a sus propiedades y mediante el método <code>toString()</code> (recuerda que no es necesario llamar al método <code>toString()</code>, sino que se invocará automáticamente cuando necesite realizar la conversión del contenido a <code>String</code>).  </p>
+<li>En el main ejecuta el cumple de la persona y muestra su información de dos formas: accediendo a sus propiedades y mediante el método <code>toString()</code> (recuerda que no es necesario llamar al método <code>toString()</code>, sino que se invocará automáticamente cuando necesite realizar la conversión del contenido a <code>String</code>).  </li>
+</ul>
 </li>
 <li>
 <p>Encapsulamiento:  </p>
-</li>
-<li>
-<p>Modifica la clase <code>Persona</code> para que reciba la fecha de nacimiento por el constructor, y se almacene en una propiedad privada. Modificar la edad para que no se pueda modificar, pero se pueda consultar su valor, calculándolo con respecto a la fecha de nacimiento.</p>
+<ul>
+<li>Modifica la clase <code>Persona</code> para que reciba la fecha de nacimiento por el constructor, y se almacene en una propiedad privada. Modificar la edad para que no se pueda modificar, pero se pueda consultar su valor, calculándolo con respecto a la fecha de nacimiento.</li>
+</ul>
 </li>
 <li>
 <p>Herencia:  </p>
-</li>
+<ul>
 <li>Crea una clase <code>Estudiante</code> que herede de <code>Persona</code> y añade una propiedad <code>carrera</code>. Las propiedades deben incluir el modificador <code>open</code> (vuelve a dejar la propiedad edad pública).</li>
-<li>
-<p>Realiza de nuevo un override de <code>toString()</code> para completar la información de Estudiante (intenta usar el resultado del método de la clase padre y completarlo).  </p>
+<li>Realiza de nuevo un override de <code>toString()</code> para completar la información de Estudiante (intenta usar el resultado del método de la clase padre y completarlo).  </li>
+</ul>
 </li>
 <li>
 <p>Polimorfismo:  </p>
-</li>
+<ul>
 <li>Añade un método <code>actividad()</code> a la clase <code>Persona</code> que imprima "Lucía está realizando una actividad." y sobreescribe en <code>Estudiante</code> para que muestre un mensaje específico para estudiantes.</li>
-<li>
-<p>Crea en el main a una persona y un estudiante y muestra la actividad que realizan.  </p>
+<li>Crea en el main a una persona y un estudiante y muestra la actividad que realizan.  </li>
+</ul>
 </li>
 <li>
 <p>Clases y Objetos con Validación:  </p>
-</li>
+<ul>
 <li>Modifica la clase <code>Persona</code> para que no acepte nombres vacíos y edades negativas. Utiliza un constructor primario con valores por defecto para edad.</li>
 <li>Prueba a crear un estudiante con una edad negativa, controlando las excepciones y mostrando el mensaje de error específico.  </li>
+</ul>
+</li>
 </ol>
 <p><strong>Objetivo</strong>: Aprender a crear clases y objetos, a utilizar métodos y propiedades, a aplicar el encapsulamiento, a utilizar la herencia y el polimorfismo, y a controlar las excepciones.  </p>
 <h4 id="ejercicio-9-sistema-de-gestion-academica"><strong>Ejercicio 9:</strong> Sistema de Gestión Académica<a class="headerlink" href="#ejercicio-9-sistema-de-gestion-academica" title="Permanent link">&para;</a></h4>
 <p>Descripción: Crea una jerarquía de clases para representar distintos roles en un entorno académico, como estudiantes y profesores.  </p>
 <p>Clases a implementar:  </p>
 <ol>
-<li>Clase Base <code>Persona</code>  </li>
-<li>Propiedades comunes: nombre (<code>String</code>), edad (<code>Int</code>), id (<code>String</code>).</li>
 <li>
-<p>Método <code>mostrarRol()</code>, que imprime el rol de la persona (Estudiante, Profesor, etc.).  </p>
+<p>Clase Base <code>Persona</code>  </p>
+<ul>
+<li>Propiedades comunes: nombre (<code>String</code>), edad (<code>Int</code>), id (<code>String</code>).</li>
+<li>Método <code>mostrarRol()</code>, que imprime el rol de la persona (Estudiante, Profesor, etc.).  </li>
+</ul>
 </li>
 <li>
 <p>Clase Derivada <code>Estudiante</code>  </p>
-</li>
+<ul>
 <li>Propiedades específicas: curso (<code>String</code>), calificacionPromedio (<code>Double</code>).</li>
-<li>
-<p>Implementa el método <code>mostrarRol()</code> y añade un método <code>mostrarCalificacion()</code> para imprimir la calificación promedio.  </p>
+<li>Implementa el método <code>mostrarRol()</code> y añade un método <code>mostrarCalificacion()</code> para imprimir la calificación promedio.  </li>
+</ul>
 </li>
 <li>
 <p>Clase Derivada <code>Profesor</code>  </p>
-</li>
+<ul>
 <li>Propiedades específicas: departamento (<code>String</code>), aniosExperiencia (<code>Int</code>).</li>
 <li>Implementa el método <code>mostrarRol()</code> y añade un método <code>mostrarExperiencia()</code> para imprimir los años de experiencia.  </li>
+</ul>
+</li>
 </ol>
 <p><strong>Objetivo</strong>: Familiarizarse con la herencia y cómo las clases derivadas pueden tener propiedades y métodos adicionales, así como comportamientos específicos.</p>
 <h4 id="ejercicio-10-sistema-de-gestion-de-personal-en-una-empresa"><strong>Ejercicio 10:</strong> Sistema de Gestión de Personal en una Empresa<a class="headerlink" href="#ejercicio-10-sistema-de-gestion-de-personal-en-una-empresa" title="Permanent link">&para;</a></h4>
 <p>Requisitos:  </p>
 <ol>
-<li>Clase Base <code>Persona</code>:  </li>
-<li>Propiedades:<ul>
+<li>
+<p>Clase Base <code>Persona</code>:  </p>
+<ul>
+<li>
+<p>Propiedades:</p>
+<ul>
 <li>nombre (<code>String</code>)</li>
 <li>edad (<code>Int)</code>  </li>
 </ul>
 </li>
-<li>
-<p>Métodos:</p>
-<ul>
-<li><code>toString()</code>: Devuelve una cadena con información básica sobre la persona (por ejemplo, "Nombre: Julia, Edad: 24").</li>
-<li><code>celebrarCumple()</code>: Incrementa la edad en 1 y retorna un mensaje de felicitación (por ejemplo, "Feliz cumpleaños Julia! Ahora tienes 25 años.").  </li>
 </ul>
 </li>
 <li>
-<p>Clase Derivada <code>Empleado</code> (de <code>Persona</code>):  </p>
+<p>Métodos:</p>
+<div class="highlight"><pre><span></span><code>* `toString()`: Devuelve una cadena con información básica sobre la persona (por ejemplo, &quot;Nombre: Julia, Edad: 24&quot;).
+* `celebrarCumple()`: Incrementa la edad en 1 y retorna un mensaje de felicitación (por ejemplo, &quot;Feliz cumpleaños Julia! Ahora tienes 25 años.&quot;).
+</code></pre></div>
 </li>
-<li>Propiedades:<ul>
+<li>
+<p>Clase Derivada <code>Empleado</code> (de <code>Persona</code>):  </p>
+<ul>
+<li>
+<p>Propiedades:</p>
+<ul>
 <li>salarioBase (<code>Double</code>) (Intenta permitir también que se pueda construir un empleado con un argumento Int en esta propiedad)</li>
 <li>porcentajeImpuestos (<code>Double</code>) (Intenta permitir también que se pueda construir un empleado con un argumento Int en esta propiedad) (El valor por defecto es 10.0)  </li>
 </ul>
@@ -8753,21 +8772,27 @@
 <li><code>trabajar()</code>: Retorna un mensaje que indica que el empleado está trabajando. (por ejemplo, "Pablo está trabajando en la empresa.")  </li>
 </ul>
 </li>
-<li>
-<p>Clase Derivada <code>Gerente</code> (de <code>Empleado</code>):  </p>
-</li>
-<li>Propiedades:<ul>
-<li>bonus (<code>Double</code>)</li>
-<li>exentoImpuestos (<code>Boolean</code>) (Por defecto no estará exento de los impuestos)  </li>
 </ul>
 </li>
-<li>Sobrescribir el porcentajeImpuestos para que los gerentes tengan un porcentaje de impuestos siempre del 33.99%.  </li>
+<li>
+<p>Clase Derivada <code>Gerente</code> (de <code>Empleado</code>):   </p>
+<ul>
+<li>
+<p>Propiedades:</p>
+<ul>
+<li>bonus (<code>Double</code>)</li>
+<li>exentoImpuestos (<code>Boolean</code>) (Por defecto no estará exento de los impuestos)  </li>
+<li>Sobrescribir el porcentajeImpuestos para que los gerentes tengan un porcentaje de impuestos siempre del 33.99%. </li>
+</ul>
+</li>
 <li>
 <p>Métodos:</p>
 <ul>
 <li><code>calcularSalario()</code>: Devuelve el salarioBase más el bonus aplicando los impuestos solo al salario base o sin aplicar impuestos si exentoImpuestos es <code>true</code>.</li>
 <li><code>toString()</code>: Devuelve una cadena que incluye la información de <code>Persona</code> y <code>Empleado</code>, además de detalles específicos del <code>Gerente</code>.</li>
 <li><code>administrar()</code>: Retorna un mensaje que indica que el gerente está administrando. (por ejemplo, "Ana está administrando la empresa.")  </li>
+</ul>
+</li>
 </ul>
 </li>
 <li>

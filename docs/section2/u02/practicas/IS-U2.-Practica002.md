@@ -125,28 +125,29 @@ Son una familia de agentes:
 ![][image3]
 
 Filebeat, y los otros miembros de la familia Beats, actúan como un agente ligero implementado en el host,
-que envia registros a Elasticsearch.
+que envía registros a Elasticsearch.
 
 Filebeat es uno de los remitentes de logs más utilizados: es liviano, admite cifrado SSL/TLS, incorpora un
-buen mecanismo de recuperacion y es altamente confiable. En nuestro caso se ha seleccionado para el envio
-de logs por ser ligero y robusto, y porque el sistema se implementara en entornos pequeños o medianos.
+buen mecanismo de recuperación y es altamente confiable. En nuestro caso se ha seleccionado para el envío
+de logs por ser ligero y robusto, y porque el sistema se implementará en entornos pequeños o medianos.
 
 
 ##### 2.1.3. Kibana
 
 Es una interfaz de usuario que permite la visualización de datos para su análisis posterior. En Kibana se
-puede consultar información desde indices de Elasticsearch para realizar búsquedas, visualizar y analizar
+puede consultar información desde índices de Elasticsearch para realizar búsquedas, visualizar y analizar
 datos, además de navegar por el Stack.
 
-Pone a disposicion del usuario diversas herramientas para visualizar datos (diagramas, histogramas, tablas, etc.). Entre las principales funciones estan:
+Pone a disposición del usuario diversas herramientas para visualizar datos (diagramas, histogramas,
+tablas, etc.). Entre las principales funciones están:
 
-* Análisis de datos aplicando distintas metricas.
-* Exposicion de datos con diferentes tipos de graficas o diagramas.
-* Comprobacion del estado de ELK.
-* Generacion de reportes.
-* Exploracion y descubrimiento de datos.
-* Creacion de alertas.
-* Implementacion de TLS como cifrado de comunicaciones.
+* Análisis de datos aplicando distintas métricas.
+* Exposición de datos con diferentes tipos de gráficas o diagramas.
+* Comprobación del estado de ELK.
+* Generación de reportes.
+* Exploración y descubrimiento de datos.
+* Creación de alertas.
+* Implementación de TLS como cifrado de comunicaciones.
 
 #### 2.2. Instalación del entorno ELK
 
@@ -165,19 +166,19 @@ Debería aparecer por consola una serie de mensajes que indican que Docker se ha
 
 Por defecto, si estás en Linux, Docker suele necesitar permisos de `sudo`. Esta configuración se puede mantener o cambiar siguiendo el tutorial: [https://docs.docker.com/engine/install/linux-postinstall/](https://docs.docker.com/engine/install/linux-postinstall/)
 
-Además, en esta Cheatsheets, se pueden encontrar ayuda para los comandos básicos:
+Además, en estas cheatsheets se puede encontrar ayuda para los comandos básicos:
 
 * [The Ultimate Docker Cheat Sheet | dockerlabs](https://dockerlabs.collabnix.com/docker/cheatsheet/)
 * [PDF oficial docker-cheat-sheet](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
 
 La documentación de la imagen Docker que vamos a usar es la siguiente:
 
-* [Elasticsearch, Logstash, Kibana (ELK) Docker image documentation](ttps://elk-docker.readthedocs.io/)
+* [Elasticsearch, Logstash, Kibana (ELK) Docker image documentation](https://elk-docker.readthedocs.io/)
 
 Para descargar la imagen en nuestro equipo, ejecutamos el siguiente comando:
 
-!!! Warning
-La última versión disponible es la `9.3.0`. La práctica se inició con la versión `7.16.3`. Puedes probar con la última versión o cualquier otra, pero asegúrate de descargar la misma versión en todos los componentes para evitar problemas de compatibilidad con Filebeat.
+!!! Warning "cuidado con las versiones"
+    A la fecha de la redacción de esta guía, la última versión disponible es la `9.3.0`. La práctica se inició con la versión `7.16.3`. Puedes probar con la última versión o cualquier otra, pero asegúrate de descargar la misma versión en todos los componentes para evitar problemas de compatibilidad con Filebeat.
 
 ```bash
 docker pull sebp/elk:7.16.3
@@ -189,7 +190,9 @@ Este comando descarga la imagen al equipo. Una imagen de Docker puede entenderse
 
 ![Todas las piezas juntas](./assets/IS-U2.-Practica002-todoJunto.png)
 
-Una buena práctica con Docker es crear redes propias (externas al resto de contenedores) si se van a emplear contenedores trabajando de forma conjunta, para asi poder asignarles IPs fijas y evitar problemas de comunicación entre ellos. Para crear una red con Docker:
+Una buena práctica con Docker es crear redes propias (externas al resto de contenedores) si se van a
+emplear contenedores trabajando de forma conjunta, para así poder asignarles IPs fijas y evitar problemas
+de comunicación entre ellos. Para crear una red con Docker:
 
 ```bash
 docker network create -d bridge --subnet 172.20.0.0/24 elk-red
@@ -199,7 +202,7 @@ Creamos una red de tipo `bridge` por si necesitáramos conectarnos a Internet a 
 
 Una vez descargada la imagen, ejecutamos el contenedor:
 
-!!! Warning
+!!! Warning "cuidado con las versiones"
     Recuerda la versión que has descargado. En el ejemplo se muestra la versión `7.16.3`, pero si has descargado otra, asegúrate de usar la misma versión en el comando.
 
 ```bash
@@ -207,7 +210,8 @@ docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it \
   --name elk --net elk-red --ip 172.20.0.10 -d sebp/elk:7.16.3
 ```
 
-Este comando ejecuta la imagen y genera el contenedor. El objetivo de esta práctica no es explicar Docker en profundidad, pero si comprender aspectos importantes.
+Este comando ejecuta la imagen y genera el contenedor. El objetivo de esta práctica no es explicar Docker
+en profundidad, pero sí comprender aspectos importantes.
 
 Algunas opciones del comando:
 
@@ -263,7 +267,7 @@ Después, vuelve a ejecutar el contenedor.
 
 #### 2.4 Otros comandos que puedes necesitar
 
-* Listar contenedores que estan corriendo:
+* Listar contenedores que están corriendo:
 
     ```bash
     docker container ls
@@ -336,7 +340,7 @@ Para simular una infraestructura, vamos a desplegar un contenedor que hará las 
 En este contenedor tendremos instalado Nginx (servidor web) y, como agente de datos, Filebeat.
 
 Vamos a comenzar por el primero de los Beats. Para instalar Filebeat podemos hacerlo de forma nativa o a
-traves de Docker. Documentación oficial:
+a través de Docker. Documentación oficial:
 
 De forma nativa:
 
@@ -441,10 +445,10 @@ mandos.
 
 ### 3. Objetivo: introducir Snort (IDS) en el contenedor 1
 
-**Se pretende partir de la situacion anterior y modificar el contenedor 1 para que contenga Snort.**
+**Se pretende partir de la situación anterior y modificar el contenedor 1 para que contenga Snort.**
 
-**Posteriormente se configurara Snort para detectar posibles eventos dentro del contenedor y lanzar las
-alarmas oportunas, de forma que Filebeat las recoja y las envie al Stack ELK.**
+**Posteriormente se configurará Snort para detectar posibles eventos dentro del contenedor y lanzar las
+alarmas oportunas, de forma que Filebeat las recoja y las envíe al Stack ELK.**
 
 ![][image6]
 
@@ -462,7 +466,7 @@ Escenario que planteamos:
 
 * La máquina atacante será un Kali Linux, en el que se utilizarán Ping e Hydra.
     - Se generan diccionarios con base en la información obtenida con ingeniería social: se sabe que el
-      usuario esta compuesto por dos letras minusculas, y su clave por una letra minuscula y un numero.
+      usuario está compuesto por dos letras minúsculas, y su clave por una letra minúscula y un número.
     - Con base en esas pistas, se generarán diccionarios de usuarios y claves necesarios para el ataque. En
       caso de no aportar diccionarios, el ataque se efectuaría por fuerza bruta y se podría eternizar.
 

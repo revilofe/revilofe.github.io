@@ -536,7 +536,7 @@ Un ejemplo para la siguiente regla: "Generar una alerta para tráfico TCP desde 
 alert tcp 192.168.1.200 any -> $HOME_NET any (msg:"Trafico TCP desde Claudia"; sid:666003;)
 ```
 
-### Header
+**Header**
 
 | Campo                     | Valor                                                        |
 |---------------------------|--------------------------------------------------------------|
@@ -548,7 +548,7 @@ alert tcp 192.168.1.200 any -> $HOME_NET any (msg:"Trafico TCP desde Claudia"; s
 | Dirección IP destino      | 192.168.1.0                                                  |
 | Puerto IP destino         | Cualquiera                                                   |
 
-### Trailer
+**Trailer**
 
 | Campo    | Valor                              |
 |----------|------------------------------------|

@@ -180,11 +180,12 @@ Clases a implementar:
 
 3. Encapsulamiento:  
 
-    * Modifica la clase `Persona` para que reciba la fecha de nacimiento por el constructor, y se almacene en una propiedad privada. Modificar la edad para que no se pueda modificar, pero se pueda consultar su valor, calculándolo con respecto a la fecha de nacimiento.
+    * Modifica la clase `Persona` para que la propiedad `edad` no se pueda modificar desde fuera (por ejemplo, con `private set`), pero siga siendo consultable.
+    * La única forma de cambiar la edad será mediante el método `cumple()`.
 
 4. Herencia:  
 
-    * Crea una clase `Estudiante` que herede de `Persona` y añade una propiedad `carrera`. Las propiedades deben incluir el modificador `open` (vuelve a dejar la propiedad edad pública).
+    * Crea una clase `Estudiante` que herede de `Persona` y añade una propiedad `carrera`. Las propiedades que deban ser sobrescritas deben incluir el modificador `open`.
     * Realiza de nuevo un override de `toString()` para completar la información de Estudiante (intenta usar el resultado del método de la clase padre y completarlo).  
 
 5. Polimorfismo:  
@@ -194,7 +195,7 @@ Clases a implementar:
 
 6. Clases y Objetos con Validación:  
 
-    * Modifica la clase `Persona` para que no acepte nombres vacíos y edades negativas. Utiliza un constructor primario con valores por defecto para edad.
+    * Modifica la clase `Persona` para que no acepte nombres vacíos y edades negativas. Utiliza un constructor primario con un valor por defecto para `edad`.
     * Prueba a crear un estudiante con una edad negativa, controlando las excepciones y mostrando el mensaje de error específico.  
 
 

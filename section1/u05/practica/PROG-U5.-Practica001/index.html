@@ -8680,13 +8680,14 @@
 <li>
 <p>Encapsulamiento:  </p>
 <ul>
-<li>Modifica la clase <code>Persona</code> para que reciba la fecha de nacimiento por el constructor, y se almacene en una propiedad privada. Modificar la edad para que no se pueda modificar, pero se pueda consultar su valor, calculándolo con respecto a la fecha de nacimiento.</li>
+<li>Modifica la clase <code>Persona</code> para que la propiedad <code>edad</code> no se pueda modificar desde fuera (por ejemplo, con <code>private set</code>), pero siga siendo consultable.</li>
+<li>La única forma de cambiar la edad será mediante el método <code>cumple()</code>.</li>
 </ul>
 </li>
 <li>
 <p>Herencia:  </p>
 <ul>
-<li>Crea una clase <code>Estudiante</code> que herede de <code>Persona</code> y añade una propiedad <code>carrera</code>. Las propiedades deben incluir el modificador <code>open</code> (vuelve a dejar la propiedad edad pública).</li>
+<li>Crea una clase <code>Estudiante</code> que herede de <code>Persona</code> y añade una propiedad <code>carrera</code>. Las propiedades que deban ser sobrescritas deben incluir el modificador <code>open</code>.</li>
 <li>Realiza de nuevo un override de <code>toString()</code> para completar la información de Estudiante (intenta usar el resultado del método de la clase padre y completarlo).  </li>
 </ul>
 </li>
@@ -8700,7 +8701,7 @@
 <li>
 <p>Clases y Objetos con Validación:  </p>
 <ul>
-<li>Modifica la clase <code>Persona</code> para que no acepte nombres vacíos y edades negativas. Utiliza un constructor primario con valores por defecto para edad.</li>
+<li>Modifica la clase <code>Persona</code> para que no acepte nombres vacíos y edades negativas. Utiliza un constructor primario con un valor por defecto para <code>edad</code>.</li>
 <li>Prueba a crear un estudiante con una edad negativa, controlando las excepciones y mostrando el mensaje de error específico.  </li>
 </ul>
 </li>
@@ -8746,13 +8747,14 @@
 <li>edad (<code>Int)</code>  </li>
 </ul>
 </li>
-</ul>
-</li>
 <li>
 <p>Métodos:</p>
-<div class="highlight"><pre><span></span><code>* `toString()`: Devuelve una cadena con información básica sobre la persona (por ejemplo, &quot;Nombre: Julia, Edad: 24&quot;).
-* `celebrarCumple()`: Incrementa la edad en 1 y retorna un mensaje de felicitación (por ejemplo, &quot;Feliz cumpleaños Julia! Ahora tienes 25 años.&quot;).
-</code></pre></div>
+<ul>
+<li><code>toString()</code>: Devuelve una cadena con información básica sobre la persona (por ejemplo, "Nombre: Julia, Edad: 24").</li>
+<li><code>celebrarCumple()</code>: Incrementa la edad en 1 y retorna un mensaje de felicitación (por ejemplo, "Feliz cumpleaños Julia! Ahora tienes 25 años.").  </li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
 <p>Clase Derivada <code>Empleado</code> (de <code>Persona</code>):  </p>
@@ -8797,9 +8799,9 @@
 </li>
 <li>
 <p>Uso en la Función <code>main</code>:  </p>
+<p>Crear una persona, un empleado y un gerente. Realizar distintas pruebas... para cada uno mostrar su información y ejecutar los métodos que tienen accesibles.</p>
 </li>
 </ol>
-<p>Crear una persona, un empleado y un gerente. Realizar distintas pruebas... para cada uno mostrar su información y ejecutar los métodos que tienen accesibles.</p>
 
 
 

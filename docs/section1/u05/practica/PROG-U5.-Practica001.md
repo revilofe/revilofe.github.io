@@ -236,7 +236,7 @@ Requisitos:
         * nombre (`String`)
         * edad (`Int)`  
 
-   * Métodos:
+    * Métodos:
 
         * `toString()`: Devuelve una cadena con información básica sobre la persona (por ejemplo, "Nombre: Julia, Edad: 24").
         * `celebrarCumple()`: Incrementa la edad en 1 y retorna un mensaje de felicitación (por ejemplo, "Feliz cumpleaños Julia! Ahora tienes 25 años.").  
@@ -270,4 +270,4 @@ Requisitos:
 
 4. Uso en la Función `main`:  
 
-Crear una persona, un empleado y un gerente. Realizar distintas pruebas... para cada uno mostrar su información y ejecutar los métodos que tienen accesibles.
+    Crear una persona, un empleado y un gerente. Realizar distintas pruebas... para cada uno mostrar su información y ejecutar los métodos que tienen accesibles.

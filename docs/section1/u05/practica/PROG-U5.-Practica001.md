@@ -98,12 +98,11 @@ Parte 2: Definir `sealed class`
 
 Para gestionar los distintos tipos de usuarios, puedes usar una `sealed class`. Esto te permitirá tener una jerarquía de clases cerrada, lo cual es útil para cuando se conocen todos los posibles subtipos.
 
-1. Usuario
-   * `sealed class Usuario`
-     * Clases que heredan de Usuario:
-       * Estudiante(id:`String`, nombre:`String`, carrera:`String`)
-       * Profesor(id:`String`, nombre:`String`, departamento:`String`)
-       * Visitante(id:`String`, nombre:`String`)
+1. Usuario: `sealed class Usuario`. Clases que heredan de Usuario:
+
+    * Estudiante(id:`String`, nombre:`String`, carrera:`String`) 
+    * Profesor(id:`String`, nombre:`String`, departamento:`String`)
+    * Visitante(id:`String`, nombre:`String`)
 
 La `sealed class Usuario` permitirá manejar operaciones específicas para cada tipo de usuario, como préstamos de libros o acceso a áreas restringidas de la biblioteca.
 
@@ -149,17 +148,20 @@ Descripción: Crea una jerarquía de clases para representar diferentes tipos de
 Clases a implementar:  
 
 1. Clase Base `Vehiculo`  
-   * Propiedades comunes: marca (`String`), modelo (`String`), capacidadCombustible (`Int`).
-   * Método `mostrarInformacion()`, que imprime la información del vehículo.
-   * Método `calcularAutonomia()`, que retorna un valor Int (Suponemos que cada litro da para 10 km).  
+
+    * Propiedades comunes: marca (`String`), modelo (`String`), capacidadCombustible (`Int`).
+    * Método `mostrarInformacion()`, que imprime la información del vehículo.
+    * Método `calcularAutonomia()`, que retorna un valor Int (Suponemos que cada litro da para 10 km).  
 
 2. Clase Derivada `Automovil` (hereda de Vehiculo)  
-   * Propiedad específica: tipo (`String`), como "sedán", "SUV", "deportivo", etc.
-   * Implementa el método `calcularAutonomia()` (Suponemos que un automóvil puede hacer 100km más que el cálculo realizado en su clase base)
+
+    * Propiedad específica: tipo (`String`), como "sedán", "SUV", "deportivo", etc.
+    * Implementa el método `calcularAutonomia()` (Suponemos que un automóvil puede hacer 100km más que el cálculo realizado en su clase base)
 
 3. Clase Derivada `Motocicleta` (hereda de Vehiculo)  
-   * Propiedad específica: cilindrada (`Int`).
-   * Implementa el método `calcularAutonomia()` (Suponemos que una moto puede hacer 40km menos que el cálculo realizado en su clase base)  
+
+    * Propiedad específica: cilindrada (`Int`).
+    * Implementa el método `calcularAutonomia()` (Suponemos que una moto puede hacer 40km menos que el cálculo realizado en su clase base)  
 
 
 **Objetivo**: Demostrar cómo se pueden crear clases derivadas de una superclase y cómo pueden extender o modificar su comportamiento.
@@ -167,27 +169,33 @@ Clases a implementar:
 #### **Ejercicio 8:** Persona y Estudiante
 
 1. Clases y Objetos Básicos:  
-   * Crea una clase `Persona` que tenga dos propiedades: `nombre` y `edad`. Luego, en el main crea un objeto de esta clase e imprime sus propiedades.  
 
-2. Métodos Simples:  
-   * Añade un método `cumple` a la clase `Persona` que incremente la edad de la persona en uno cada vez que se llama.
-   * Sobreescribe el método `toString()` y prográmalo para que se muestre una persona con todas sus propiedades. Por ejemplo "Persona (nombre = Lucía, edad = 21)".
-   * En el main ejecuta el cumple de la persona y muestra su información de dos formas: accediendo a sus propiedades y mediante el método `toString()` (recuerda que no es necesario llamar al método `toString()`, sino que se invocará automáticamente cuando necesite realizar la conversión del contenido a `String`).  
+    * Crea una clase `Persona` que tenga dos propiedades: `nombre` y `edad`. Luego, en el main crea un objeto de esta clase e imprime sus propiedades.  
+
+2. Métodos Simples:   
+
+    * Añade un método `cumple` a la clase `Persona` que incremente la edad de la persona en uno cada vez que se llama.
+    * Sobreescribe el método `toString()` y prográmalo para que se muestre una persona con todas sus propiedades. Por ejemplo "Persona (nombre = Lucía, edad = 21)".
+    * En el main ejecuta el cumple de la persona y muestra su información de dos formas: accediendo a sus propiedades y mediante el método `toString()` (recuerda que no es necesario llamar al método `toString()`, sino que se invocará automáticamente cuando necesite realizar la conversión del contenido a `String`).  
 
 3. Encapsulamiento:  
-   * Modifica la clase `Persona` para que reciba la fecha de nacimiento por el constructor, y se almacene en una propiedad privada. Modificar la edad para que no se pueda modificar, pero se pueda consultar su valor, calculándolo con respecto a la fecha de nacimiento.
+
+    * Modifica la clase `Persona` para que reciba la fecha de nacimiento por el constructor, y se almacene en una propiedad privada. Modificar la edad para que no se pueda modificar, pero se pueda consultar su valor, calculándolo con respecto a la fecha de nacimiento.
 
 4. Herencia:  
-   * Crea una clase `Estudiante` que herede de `Persona` y añade una propiedad `carrera`. Las propiedades deben incluir el modificador `open` (vuelve a dejar la propiedad edad pública).
-   * Realiza de nuevo un override de `toString()` para completar la información de Estudiante (intenta usar el resultado del método de la clase padre y completarlo).  
+
+    * Crea una clase `Estudiante` que herede de `Persona` y añade una propiedad `carrera`. Las propiedades deben incluir el modificador `open` (vuelve a dejar la propiedad edad pública).
+    * Realiza de nuevo un override de `toString()` para completar la información de Estudiante (intenta usar el resultado del método de la clase padre y completarlo).  
 
 5. Polimorfismo:  
-   * Añade un método `actividad()` a la clase `Persona` que imprima "Lucía está realizando una actividad." y sobreescribe en `Estudiante` para que muestre un mensaje específico para estudiantes.
-   * Crea en el main a una persona y un estudiante y muestra la actividad que realizan.  
+
+    * Añade un método `actividad()` a la clase `Persona` que imprima "Lucía está realizando una actividad." y sobreescribe en `Estudiante` para que muestre un mensaje específico para estudiantes.
+    * Crea en el main a una persona y un estudiante y muestra la actividad que realizan.  
 
 6. Clases y Objetos con Validación:  
-   * Modifica la clase `Persona` para que no acepte nombres vacíos y edades negativas. Utiliza un constructor primario con valores por defecto para edad.
-   * Prueba a crear un estudiante con una edad negativa, controlando las excepciones y mostrando el mensaje de error específico.  
+
+    * Modifica la clase `Persona` para que no acepte nombres vacíos y edades negativas. Utiliza un constructor primario con valores por defecto para edad.
+    * Prueba a crear un estudiante con una edad negativa, controlando las excepciones y mostrando el mensaje de error específico.  
 
 
 **Objetivo**: Aprender a crear clases y objetos, a utilizar métodos y propiedades, a aplicar el encapsulamiento, a utilizar la herencia y el polimorfismo, y a controlar las excepciones.  
@@ -199,16 +207,19 @@ Descripción: Crea una jerarquía de clases para representar distintos roles en 
 Clases a implementar:  
 
 1. Clase Base `Persona`  
-   * Propiedades comunes: nombre (`String`), edad (`Int`), id (`String`).
-   * Método `mostrarRol()`, que imprime el rol de la persona (Estudiante, Profesor, etc.).  
+
+    * Propiedades comunes: nombre (`String`), edad (`Int`), id (`String`).
+    * Método `mostrarRol()`, que imprime el rol de la persona (Estudiante, Profesor, etc.).  
 
 2. Clase Derivada `Estudiante`  
-   * Propiedades específicas: curso (`String`), calificacionPromedio (`Double`).
-   * Implementa el método `mostrarRol()` y añade un método `mostrarCalificacion()` para imprimir la calificación promedio.  
+
+    * Propiedades específicas: curso (`String`), calificacionPromedio (`Double`).
+    * Implementa el método `mostrarRol()` y añade un método `mostrarCalificacion()` para imprimir la calificación promedio.  
 
 3. Clase Derivada `Profesor`  
-   * Propiedades específicas: departamento (`String`), aniosExperiencia (`Int`).
-   * Implementa el método `mostrarRol()` y añade un método `mostrarExperiencia()` para imprimir los años de experiencia.  
+
+    * Propiedades específicas: departamento (`String`), aniosExperiencia (`Int`).
+    * Implementa el método `mostrarRol()` y añade un método `mostrarExperiencia()` para imprimir los años de experiencia.  
 
 
 **Objetivo**: Familiarizarse con la herencia y cómo las clases derivadas pueden tener propiedades y métodos adicionales, así como comportamientos específicos.
@@ -218,31 +229,43 @@ Clases a implementar:
 Requisitos:  
 
 1. Clase Base `Persona`:  
-   * Propiedades:
-     * nombre (`String`)
-     * edad (`Int)`  
+
+    * Propiedades:
+
+        * nombre (`String`)
+        * edad (`Int)`  
+
    * Métodos:
-     * `toString()`: Devuelve una cadena con información básica sobre la persona (por ejemplo, "Nombre: Julia, Edad: 24").
-     * `celebrarCumple()`: Incrementa la edad en 1 y retorna un mensaje de felicitación (por ejemplo, "Feliz cumpleaños Julia! Ahora tienes 25 años.").  
+
+        * `toString()`: Devuelve una cadena con información básica sobre la persona (por ejemplo, "Nombre: Julia, Edad: 24").
+        * `celebrarCumple()`: Incrementa la edad en 1 y retorna un mensaje de felicitación (por ejemplo, "Feliz cumpleaños Julia! Ahora tienes 25 años.").  
 
 2. Clase Derivada `Empleado` (de `Persona`):  
-   * Propiedades:
-     * salarioBase (`Double`) (Intenta permitir también que se pueda construir un empleado con un argumento Int en esta propiedad)
-     * porcentajeImpuestos (`Double`) (Intenta permitir también que se pueda construir un empleado con un argumento Int en esta propiedad) (El valor por defecto es 10.0)  
-   * Métodos:
-     * `calcularSalario()`: Devuelve el salarioBase aplicando los impuestos.
-     * `toString()`: Devuelve una cadena que incluye la información de `Persona` y detalles adicionales del `Empleado` (por ejemplo, "Nombre: Julia, Edad: 24, Salario: 28273.47€" con 2 posiciones decimales para el salario).
-     * `trabajar()`: Retorna un mensaje que indica que el empleado está trabajando. (por ejemplo, "Pablo está trabajando en la empresa.")  
 
-3. Clase Derivada `Gerente` (de `Empleado`):  
-   * Propiedades:
-     * bonus (`Double`)
-     * exentoImpuestos (`Boolean`) (Por defecto no estará exento de los impuestos)  
-   * Sobrescribir el porcentajeImpuestos para que los gerentes tengan un porcentaje de impuestos siempre del 33.99%.  
-   * Métodos:
-     * `calcularSalario()`: Devuelve el salarioBase más el bonus aplicando los impuestos solo al salario base o sin aplicar impuestos si exentoImpuestos es `true`.
-     * `toString()`: Devuelve una cadena que incluye la información de `Persona` y `Empleado`, además de detalles específicos del `Gerente`.
-     * `administrar()`: Retorna un mensaje que indica que el gerente está administrando. (por ejemplo, "Ana está administrando la empresa.")  
+    * Propiedades:
+
+        * salarioBase (`Double`) (Intenta permitir también que se pueda construir un empleado con un argumento Int en esta propiedad)
+        * porcentajeImpuestos (`Double`) (Intenta permitir también que se pueda construir un empleado con un argumento Int en esta propiedad) (El valor por defecto es 10.0)  
+    
+    * Métodos:
+
+        * `calcularSalario()`: Devuelve el salarioBase aplicando los impuestos.
+        * `toString()`: Devuelve una cadena que incluye la información de `Persona` y detalles adicionales del `Empleado` (por ejemplo, "Nombre: Julia, Edad: 24, Salario: 28273.47€" con 2 posiciones decimales para el salario).
+        * `trabajar()`: Retorna un mensaje que indica que el empleado está trabajando. (por ejemplo, "Pablo está trabajando en la empresa.")  
+
+3. Clase Derivada `Gerente` (de `Empleado`):   
+
+    * Propiedades:
+
+        * bonus (`Double`)
+        * exentoImpuestos (`Boolean`) (Por defecto no estará exento de los impuestos)  
+        * Sobrescribir el porcentajeImpuestos para que los gerentes tengan un porcentaje de impuestos siempre del 33.99%. 
+
+    * Métodos:
+
+        * `calcularSalario()`: Devuelve el salarioBase más el bonus aplicando los impuestos solo al salario base o sin aplicar impuestos si exentoImpuestos es `true`.
+        * `toString()`: Devuelve una cadena que incluye la información de `Persona` y `Empleado`, además de detalles específicos del `Gerente`.
+        * `administrar()`: Retorna un mensaje que indica que el gerente está administrando. (por ejemplo, "Ana está administrando la empresa.")  
 
 4. Uso en la Función `main`:  
 

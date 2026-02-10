@@ -138,10 +138,9 @@ Es una interfaz de usuario que permite la visualización de datos para su análi
 puede consultar información desde indices de Elasticsearch para realizar búsquedas, visualizar y analizar
 datos, además de navegar por el Stack.
 
-Pone a disposicion del usuario diversas herramientas para visualizar datos (diagramas, histogramas,
-tablas, etc.). Entre las principales funciones estan:
+Pone a disposicion del usuario diversas herramientas para visualizar datos (diagramas, histogramas, tablas, etc.). Entre las principales funciones estan:
 
-* Analisis de datos aplicando distintas metricas.
+* Análisis de datos aplicando distintas metricas.
 * Exposicion de datos con diferentes tipos de graficas o diagramas.
 * Comprobacion del estado de ELK.
 * Generacion de reportes.
@@ -226,9 +225,9 @@ Cuando el contenedor esté arrancado, puedes acceder a:
 
 Se exponen estos tres puertos porque la imagen ejecuta tres servicios:
 
+* Kibana (5601): interfaz web (frontend) que consulta a Elasticsearch. Ejemplo: `http://<tu-host>:5601`.
 * Elasticsearch (9200): permite consultas a su API.
 * Logstash (5044): puerto donde Logstash espera inserciones para actuar como middleware.
-* Kibana (5601): interfaz web (frontend) que consulta a Elasticsearch. Ejemplo: `http://<tu-host>:5601`.
 
 Si todo ha ido bien, ahora puedes acceder a `localhost:5601` y ver la interfaz gráfica de Kibana.
 
@@ -238,8 +237,7 @@ Si ha ocurrido un error, la forma más fácil de verlo es revisar los logs:
 sudo docker logs --follow NOMBRE_CONTENEDOR
 ```
 
-Con `--follow`, el comando se queda esperando y mostrando nuevos logs. Si solo quieres ver los logs
-actuales, omite ese parámetro.
+Con `--follow`, el comando se queda esperando y mostrando nuevos logs. Si solo quieres ver los logs actuales, omite ese parámetro.
 
 Un problema habitual es quedarse sin memoria. En ese caso, puede aparecer algo como:
 
@@ -248,14 +246,14 @@ max virtual memory areas vm.max_map_count [65530] is too low, increase to at lea
 ```
 
 Esto indica que la configuración del kernel `vm.max_map_count` debe establecerse al menos en `262144`.
+
 Para cambiarlo:
 
 ```bash
 sudo sysctl -w vm.max_map_count=262145
 ```
 
-Para persistir la corrección, añade esa configuración al final del archivo `/etc/sysctl.conf` (a veces
-también se usa `/etc/sysctl.d/99-sysctl.conf`), por ejemplo:
+Para persistir la corrección, añade esa configuración al final del archivo `/etc/sysctl.conf` (a veces también se usa `/etc/sysctl.d/99-sysctl.conf`), por ejemplo:
 
 ```bash
 sudo pico /etc/sysctl.d/99-sysctl.conf

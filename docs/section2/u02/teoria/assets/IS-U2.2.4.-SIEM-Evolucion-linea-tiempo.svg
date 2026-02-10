@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <style>
+      .bg { fill: #0b1220; }
+      .panel { fill: #111c33; stroke: #24355f; stroke-width: 2; }
+      .title { fill: #eaf2ff; font: 700 22px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      .muted { fill: #9bb6de; font: 500 12px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      .line { stroke: #9bb6de; stroke-width: 6; stroke-linecap: round; }
+      .dot { fill: #9bb6de; }
+      .box { fill: #0f2747; stroke: #2c7be5; stroke-width: 2; }
+      .box2 { fill: #132a22; stroke: #2ecc71; stroke-width: 2; }
+      .box3 { fill: #2a1c10; stroke: #f39c12; stroke-width: 2; }
+      .box4 { fill: #2a1020; stroke: #e056fd; stroke-width: 2; }
+      .label { fill: #eaf2ff; font: 700 16px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      .text { fill: #cfe3ff; font: 500 13px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="520"/>
+  <rect class="panel" x="30" y="30" width="1140" height="460" rx="18"/>
+
+  <text class="title" x="60" y="70">Evolución del SIEM: de logs a automatización y contexto</text>
+  <text class="muted" x="60" y="95">Resumen visual de por qué los SIEM han tenido que evolucionar y dónde encaja SOAR.</text>
+
+  <line class="line" x1="110" y1="260" x2="1090" y2="260"/>
+  <circle class="dot" cx="170" cy="260" r="10"/>
+  <circle class="dot" cx="420" cy="260" r="10"/>
+  <circle class="dot" cx="670" cy="260" r="10"/>
+  <circle class="dot" cx="920" cy="260" r="10"/>
+
+  <g transform="translate(90,125)">
+    <rect class="box" x="0" y="0" width="240" height="160" rx="14"/>
+    <text class="label" x="16" y="34">2005: SIEM clásico</text>
+    <text class="text" x="16" y="62">• Pocas fuentes</text>
+    <text class="text" x="16" y="84">• Centraliza logs</text>
+    <text class="text" x="16" y="106">• Cumplimiento</text>
+    <text class="muted" x="16" y="134">Firewall · IDS/IPS · servidores</text>
+  </g>
+
+  <g transform="translate(340,305)">
+    <rect class="box3" x="0" y="0" width="240" height="160" rx="14"/>
+    <text class="label" x="16" y="34">Cambio del entorno</text>
+    <text class="text" x="16" y="62">• Más endpoints</text>
+    <text class="text" x="16" y="84">• Cloud y SaaS</text>
+    <text class="text" x="16" y="106">• Trabajo remoto</text>
+    <text class="muted" x="16" y="134">Más volumen y variedad</text>
+  </g>
+
+  <g transform="translate(590,125)">
+    <rect class="box2" x="0" y="0" width="240" height="160" rx="14"/>
+    <text class="label" x="16" y="34">SIEM “next-gen”</text>
+    <text class="text" x="16" y="62">• Mejor correlación</text>
+    <text class="text" x="16" y="84">• Enriquecimiento</text>
+    <text class="text" x="16" y="106">• Integración (EDR/UEBA)</text>
+    <text class="muted" x="16" y="134">Más contexto, menos ruido</text>
+  </g>
+
+  <g transform="translate(840,305)">
+    <rect class="box4" x="0" y="0" width="240" height="160" rx="14"/>
+    <text class="label" x="16" y="34">SOAR</text>
+    <text class="text" x="16" y="62">• Playbooks</text>
+    <text class="text" x="16" y="84">• Automatización</text>
+    <text class="text" x="16" y="106">• Orquestación</text>
+    <text class="muted" x="16" y="134">Respuesta más rápida</text>
+  </g>
+</svg>
+

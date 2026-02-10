@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
+  <defs>
+    <style>
+      .bg { fill: #0b1220; }
+      .panel { fill: #111c33; stroke: #24355f; stroke-width: 2; }
+      .box { fill: #0f2747; stroke: #2c7be5; stroke-width: 2; }
+      .box2 { fill: #132a22; stroke: #2ecc71; stroke-width: 2; }
+      .box3 { fill: #2a1c10; stroke: #f39c12; stroke-width: 2; }
+      .title { fill: #eaf2ff; font: 700 22px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      .label { fill: #eaf2ff; font: 700 18px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      .text { fill: #cfe3ff; font: 500 14px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      .muted { fill: #9bb6de; font: 500 12px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      .arrow { stroke: #9bb6de; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <marker id="arrowHead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9bb6de"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="420"/>
+  <rect class="panel" x="30" y="30" width="1140" height="360" rx="18"/>
+
+  <text class="title" x="60" y="70">Por qué SOAR complementa al SIEM</text>
+  <text class="muted" x="60" y="95">El SIEM ayuda a detectar; SOAR ayuda a ejecutar respuestas de forma repetible.</text>
+
+  <g transform="translate(80,150)">
+    <rect class="box" x="0" y="0" width="320" height="170" rx="14"/>
+    <text class="label" x="18" y="40">SIEM</text>
+    <text class="text" x="18" y="74">• Centraliza y correlaciona</text>
+    <text class="text" x="18" y="98">• Genera alertas</text>
+    <text class="text" x="18" y="122">• Métricas e informes</text>
+    <text class="muted" x="18" y="148">Salida: alerta con evidencias</text>
+  </g>
+
+  <g transform="translate(440,150)">
+    <rect class="box3" x="0" y="0" width="320" height="170" rx="14"/>
+    <text class="label" x="18" y="40">Triage</text>
+    <text class="text" x="18" y="74">• Validación y priorización</text>
+    <text class="text" x="18" y="98">• Ticket y escalado</text>
+    <text class="text" x="18" y="122">• Reducción de ruido</text>
+    <text class="muted" x="18" y="148">Salida: caso listo para actuar</text>
+  </g>
+
+  <g transform="translate(800,150)">
+    <rect class="box2" x="0" y="0" width="320" height="170" rx="14"/>
+    <text class="label" x="18" y="40">SOAR</text>
+    <text class="text" x="18" y="74">• Playbooks (runbooks)</text>
+    <text class="text" x="18" y="98">• Automatización</text>
+    <text class="text" x="18" y="122">• Orquestación de herramientas</text>
+    <text class="muted" x="18" y="148">Salida: acciones y trazabilidad</text>
+  </g>
+
+  <path class="arrow" d="M 400 235 C 420 235, 420 235, 440 235" marker-end="url(#arrowHead)"/>
+  <path class="arrow" d="M 760 235 C 780 235, 780 235, 800 235" marker-end="url(#arrowHead)"/>
+</svg>
+

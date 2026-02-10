@@ -24,26 +24,36 @@ tags:
 | RA2     | Analiza incidentes de ciberseguridad utilizando herramientas, mecanismos de detección y alertas de seguridad.                  |
 | CEb     | Se han establecido controles, herramientas y mecanismos de monitorización, identificación, detección y alerta de incidentes. |
 
-En el punto anterior hemos visto como clasificar y valorar los incidentes de ciberseguridad. En el proceso de detección y respuesta a incidentes de ciberseguridad, es fundamental contar con herramientas y servicios que nos ayuden a detectar y responder a estos incidentes. En este apartado vamos a ver las herramientas y servicios más comunes que se utilizan en un SOC para detectar y responder a incidentes de ciberseguridad.
+En el punto anterior hemos visto cómo clasificar y valorar los incidentes de ciberseguridad. En el proceso de detección y respuesta a incidentes de ciberseguridad, es fundamental contar con herramientas y servicios que nos ayuden a detectar y responder a estos incidentes. En este apartado vamos a ver las herramientas y servicios más comunes que se utilizan en un SOC para detectar y responder a incidentes de ciberseguridad.
 
 <figure markdown>
   ![](./assets/IS-U2.2.1.-SOC.png)
   <figcaption>Representación de un SOC</figcaption>
 </figure>
 
-### 1. Introducciíon
+<figure markdown>   
+  ![](./assets/IS-U2.2.1.-SOC-ServiciosYHerramientas-ecosistema-soc.svg)   
+  <figcaption>Mapa visual del ecosistema de un SOC (imagen generada).</figcaption>   
+</figure>
+
+### 1. Introducción
 
 Los Centros de Operaciones de Seguridad (SOC, por sus siglas en inglés) son el corazón operativo de la ciberseguridad en una organización. Antes de adentrarnos en sus componentes y servicios, es fundamental comprender qué es un SOC, qué objetivos persigue, cómo se diferencia de otras estructuras de seguridad y por qué es crucial en el entorno empresarial moderno.
 
 #### 1.1. ¿Qué es un SOC?
 
-Un SOC es un centro de operaciones centralizado compuesto por profesionales de ciberseguridad, procesos estandarizados y tecnologías avanzadas, diseñado para supervisar, detectar, responder y prevenir amenazas de seguridad.
+Un SOC es un centro de operaciones centralizado compuesto por profesionales de ciberseguridad, procesos
+estandarizados y tecnologías avanzadas, diseñado para supervisar, detectar, responder y prevenir amenazas
+de seguridad.
 
-**Analogía:** Imagina un SOC como un “centro de control aéreo” para la ciberseguridad. Así como los controladores de tráfico aéreo supervisan vuelos y responden a emergencias, los analistas del SOC vigilan el tráfico digital de una organización y reaccionan ante amenazas.
+!!! example "Analogía"
+    Imagina un SOC como un “centro de control aéreo” para la ciberseguridad. Igual que los controladores
+    supervisan vuelos y coordinan respuestas ante incidencias, el equipo del SOC vigila el tráfico digital y
+    coordina acciones cuando aparece una amenaza.
 
 **Funciones principales:**
 
-1. Supervisar continuamente la infraestructura tecnológica (redes, sistemas, aplicaciones), asi como la información de la organización. Estar preparados y actualizados, buscando amenazas y vulnerabilidades.
+1. Supervisar continuamente la infraestructura tecnológica (redes, sistemas, aplicaciones), así como la información de la organización. Estar preparados y actualizados, buscando amenazas y vulnerabilidades.
 2. Detectar amenazas o actividades sospechosas.
 3. Responder y mitigar incidentes de seguridad.
 4. Prevenir futuros ataques mediante el aprendizaje continuo y la mejora de defensas.
@@ -53,16 +63,15 @@ Un SOC es un centro de operaciones centralizado compuesto por profesionales de c
 El SOC tiene como objetivo proteger los activos críticos de la organización (datos, sistemas y reputación) mediante:
 
 1. **Prevención:** Implementar controles y configuraciones para evitar ataques.
-
    *Ejemplo:* Configurar firewalls para bloquear conexiones no autorizadas. Configurar IDS/IPS para detectar y bloquear ataques.
+
 2. **Detección:** Detectar actividades sospechosas que puedan ser indicativas de un incidente de seguridad.
-
    *Ejemplo:* Alertas del SIEM que detectan intentos de acceso inusuales, según reglas de detección configuradas.
+
 3. **Respuesta:** Actuar rápidamente para minimizar el impacto de los incidentes.
-
    *Ejemplo:* Aislar un servidor comprometido para evitar que un malware se propague y eliminar la amenaza.
-4. **Recuperación:** Restaurar los sistemas afectados y garantizar que vuelvan a operar normalmente.
 
+4. **Recuperación:** Restaurar los sistemas afectados y garantizar que vuelvan a operar normalmente.
    *Ejemplo:* Restaurar datos desde una copia de seguridad tras un ataque de ransomware.
 
 #### 1.3. Diferencias entre SOC, CERT, CIRT y CSIRT
@@ -78,13 +87,13 @@ En el mundo de la ciberseguridad, es común encontrar términos como SOC, CERT, 
 
 ##### 1.3.2. Relación y diferencias clave
 
-**Relación:** Un SOC generalmente abarca múltiples aspectos de las operaciones de seguridad, mientras que los CSIRT, CERT y CIRTS se enfocan específicamente en la respuesta a incidentes. El SOC normalmente incluirá además las funciones de CERT/CIRT/CSIRT como parte de sus operaciones.
+Un SOC generalmente abarca múltiples aspectos de las operaciones de seguridad, mientras que los CSIRT, CERT y CIRTS se enfocan específicamente en la respuesta a incidentes. El SOC normalmente incluirá además las funciones de CERT/CIRT/CSIRT como parte de sus operaciones.
 
 Los términos CERT, CIRT y CSIRT suelen utilizarse como sinónimos, aunque pueden tener diferencias sutiles en su alcance y enfoque. En general, estos equipos **se activan ante incidentes críticos** y trabajan para contener, investigar y mitigar los daños.
 
 CSIRT y CIRT son casi siempre casi equivalentes, referentes a respuesta de incidentes de seguridad informática. Respecto al término CERT, aunque muchas compañías lo usan de forma genérica, ha sido una marca registrada de *Carnegie Mellon University* desde 1997, y se enfoca más ampliamente en mejorar la respuesta a incidentes.
 
-**Diferencias:**
+Por tanto, las diferencias son:
 
 * **SOC:** Supervisión continua y gestión integral de las operaciones de seguridad.
 * **CERT/CIRT/CSIRT:** Actúan principalmente ante incidentes de ciberseguridad, para contener, eliminar y recuperarse de los mismos.
@@ -95,28 +104,31 @@ CSIRT y CIRT son casi siempre casi equivalentes, referentes a respuesta de incid
 * El equipo de respuesta a incidentes investiga el incidente y coordina la respuesta: Contener el ataque, eliminar la amenaza.
 * Tras contener el ataque, el equipo de respuesta a incidentes continua con la recuperación de los sistemas afectados.
 
-**Analogía:** El SOC es como un hospital completo que incluye áreas de prevención, diagnóstico y tratamiento, mientras que un CERT/CIRT/CSIRT sería como la unidad de emergencias, que se activa solo cuando ocurre un evento crítico.
+Analogía: El SOC es como un hospital completo que incluye áreas de prevención, diagnóstico y tratamiento, mientras que un CERT/CIRT/CSIRT sería como la unidad de emergencias, que se activa solo cuando ocurre un evento crítico.
 
 #### 1.4. Importancia de los SOC en la ciberseguridad empresarial
 
 En un mundo cada vez más digitalizado, las organizaciones dependen de los SOC para protegerse contra un panorama de amenazas en constante evolución.
 
-*Ejemplo:* Imagina una tienda en línea que es víctima de un ataque de ransomware (secuestro de datos). Si no tiene un SOC que monitoree las actividades sospechosas y responda rápidamente, los atacantes podrían paralizar sus operaciones y exigir un rescate para liberar los datos.
+Imagina una tienda en línea que es víctima de un ataque de ransomware (secuestro de datos). Si no tiene un SOC que monitoree las actividades sospechosas y responda rápidamente, los atacantes podrían paralizar sus operaciones y exigir un rescate para liberar los datos.
 
-##### **1.4.1. Amenazas crecientes**
+##### 1.4.1. Amenazas crecientes
 
 Las organizaciones enfrentan un aumento en la frecuencia, sofisticación y diversidad de los ciberataques.
 
-*Ejemplo:* En 2023, los ataques de ransomware afectaron a miles de empresas, causando interrupciones y pérdidas millonarias. Un SOC puede ayudar a detectar y bloquear estos ataques antes de que causen daños irreparables.
+En 2023, los ataques de ransomware afectaron a miles de empresas, causando interrupciones y pérdidas millonarias. Un SOC puede ayudar a detectar y bloquear estos ataques antes de que causen daños irreparables.
 
 ##### 1.4.2. Beneficios de contar con un SOC
 
 1. **Protección proactiva:** Los SOC no solo reaccionan a amenazas, sino que también trabajan para prevenirlas.
-   *Ejemplo:* Un SOC implementa reglas en el SIEM para bloquear intentos de fuerza bruta antes de que comprometan un sistema.
-2. **Respuesta rápida:** Los SOC reducen el tiempo de respuesta a incidentes críticos.
+   *Ejemplo:* Un SOC implementa reglas en el SIEM para bloquear intentos de fuerza bruta antes de que comprometan un sistema, haciendo uso de su integración con herramientas SOAR para automatizar la respuesta a estas amenazas.
+
+2. **Respuesta rápida:** Los SOC reducen el tiempo de respuesta a incidentes críticos. Puesto que unos de sus objetivos es detectarlos, además implementar procesos y herramientas para responder rápidamente, lo que minimiza el impacto de los ataques.
    *Ejemplo:* Detectar y contener un ataque en minutos puede evitar una filtración masiva de datos.
+
 3. **Cumplimiento normativo:** Ayudan a las organizaciones a cumplir con regulaciones como GDPR, ISO 27001 o NIST CSF.
    *Ejemplo:* Generar reportes de incidentes detallados para auditorías regulatorias.
+
 4. **Confianza del cliente:** Un SOC demuestra el compromiso de la organización con la seguridad, fortaleciendo la confianza de clientes y socios.
    *Ejemplo:* Mostrar a los clientes que sus datos están protegidos y que la empresa está preparada para enfrentar amenazas.
 
@@ -149,9 +161,9 @@ Un SOC incluye una variedad de roles especializados, diseñados para cubrir dist
 1. **Gerente del SOC:** Supervisa las operaciones y coordina la respuesta a incidentes importantes.
    *Ejemplo:* Coordinar la respuesta a un ataque de ransomware que afecta a múltiples sistemas.
 2. **Analistas SOC (Niveles 1, 2, 3):**
-   **Nivel 1:** Monitorea eventos y alerta sobre actividades sospechosas.
+   **Nivel 1:** Monitorea eventos y alerta sobre actividades sospechosas, filtrando falsos positivos.
    *Ejemplo:* Revisión de un intento de inicio de sesión desde ubicaciones inusuales.
-   **Nivel 2:** Investiga las alertas generadas por el Nivel 1 para determinar si son incidentes reales.
+   **Nivel 2:** Investiga las alertas generadas por el Nivel 1 para determinar si son incidentes reales. Escala incidentes confirmados al Nivel 3 si no puede resolverlos.
    *Ejemplo:* Analizar patrones de tráfico para confirmar si un ataque está en curso.
    **Nivel 3:** Maneja incidentes complejos y realiza análisis forenses.
    *Ejemplo:* Determinar cómo un atacante accedió a un sistema y prevenir futuros ataques.
@@ -185,14 +197,13 @@ Los procesos son los pasos estructurados y repetibles que un SOC sigue para mane
 
 Los procesos son fundamentales en un Centro de Operaciones de Seguridad (SOC). Representan la base sobre la que las personas y las tecnologías trabajan en conjunto para proteger a una organización frente a amenazas cibernéticas. Un proceso bien definido no solo asegura eficiencia, sino que también garantiza consistencia y mejora continua en la respuesta a incidentes.
 
-- **Monitoreo continuo:** Supervisión 24/7 de eventos y alertas.
-
+- **Monitoreo continuo:** Supervisión 24/7 de eventos y alertas.     
   *Ejemplo:* Utilizar un SIEM para correlacionar eventos de seguridad y detectar patrones sospechosos.
-- **Generación de reportes y métricas:** Evaluar la efectividad del SOC y cumplir con requisitos regulatorios.
 
+- **Generación de reportes y métricas:** Evaluar la efectividad del SOC y cumplir con requisitos regulatorios.     
   *Ejemplo:* Producir un informe mensual que muestre el número de incidentes detectados y mitigados.
-- **Gestión del conocimiento:** Documentar y compartir lecciones aprendidas de incidentes pasados.
 
+- **Gestión del conocimiento:** Documentar y compartir lecciones aprendidas de incidentes pasados.     
   *Ejemplo:* Crear una base de datos de incidentes que incluya detalles sobre cómo se detectaron y mitigaron.
 
 ##### 2.2.2. Importancia de la estandarización de procesos
@@ -243,14 +254,13 @@ El SOAR automatiza tareas de respuesta y orquesta las interacciones entre herram
 
 **Funciones clave:**
 
-1. **Automatización:** Responde automáticamente a amenazas comunes.
+1. **Automatización:** Responde automáticamente a amenazas comunes.    
+   *Ejemplo:* Si un SIEM detecta malware, el SOAR puede ejecutar un script que aísle automáticamente la máquina afectada.
 
- *Ejemplo:* Si un SIEM detecta malware, el SOAR puede ejecutar un script que aísle automáticamente la máquina afectada.   
-2. **Orquestación:** Integra múltiples herramientas para que trabajen en conjunto.
-
+2. **Orquestación:** Integra múltiples herramientas para que trabajen en conjunto.     
    *Ejemplo:* Crear un flujo de trabajo que inicie un análisis forense cuando se detecta un incidente crítico.
-3. **Gestión de casos:** Documenta incidentes, asigna tareas y realiza seguimientos.
 
+3**Gestión de casos:** Documenta incidentes, asigna tareas y realiza seguimientos.     
    *Ejemplo:* Crear un ticket para que un analista investigue un ataque phishing y asignar tareas para mitigar la amenaza.
 
 **Beneficio adicional:** Permite a los analistas centrarse en incidentes complejos, mientras automatiza las tareas repetitivas.
@@ -263,11 +273,10 @@ Estas herramientas recopilan información sobre amenazas emergentes y la compart
 
 **Funciones clave:**
 
-1. **Recopilación de IoCs (Indicadores de Compromiso):** Direcciones IP maliciosas, URLs sospechosas, hashes de archivos.
-
+1. **Recopilación de IoCs (Indicadores de Compromiso):** Direcciones IP maliciosas, URLs sospechosas, hashes de archivos.    
    *Ejemplo:* Identificar una dirección IP utilizada por un grupo de hackers para lanzar ataques.
-2. **Análisis de TTPs (Tácticas, Técnicas y Procedimientos):** Métodos comunes utilizados por actores maliciosos.
 
+2. **Análisis de TTPs (Tácticas, Técnicas y Procedimientos):** Métodos comunes utilizados por actores maliciosos.    
    *Ejemplo:* Identificar que un ransomware específico utiliza un puerto poco común para comunicarse con su servidor de control y comando, y bloquear ese tráfico.
 
 **Beneficio adicional:** Ayuda al SOC a anticiparse a nuevas amenazas antes de que impacten a la organización.
@@ -280,11 +289,10 @@ Estas herramientas supervisan el tráfico de red y las actividades en dispositiv
 
 **Tipo de herramientas:**
 
-1. **EDR (Endpoint Detection and Response):** Se enfoca en la seguridad de los dispositivos finales, como computadoras y servidores para detectar y responder a amenazas.
-
+1. **EDR (Endpoint Detection and Response):** Se enfoca en la seguridad de los dispositivos finales, como computadoras y servidores para detectar y responder a amenazas.    
    *Ejemplo:* Identificar un archivo sospechoso descargado en un portátil y bloquear su ejecución.
-2. **NDR (Network Detection and Response):** Se enfoca en la seguridad de la red, monitorea el tráfico de red para identificar comportamientos anómalos.
 
+2. **NDR (Network Detection and Response):** Se enfoca en la seguridad de la red, monitorea el tráfico de red para identificar comportamientos anómalos.     
    *Ejemplo:* Detectar una transferencia de datos inusualmente grande a un servidor externo.
 
 **Beneficio adicional:** Proporcionan visibilidad en tiempo real de las actividades en la red y los dispositivos finales, enviando alertas cuando se detectan amenazas potenciales. Suministran logs y datos de tráfico para análisis forense.
@@ -297,11 +305,10 @@ Los sistemas de detección y prevención de intrusiones (IDS/IPS) monitorean y b
 
 **Funciones clave:**
 
-1. **Detección:** Identificar intentos de intrusión o comportamientos sospechosos.
-
+1. **Detección:** Identificar intentos de intrusión o comportamientos sospechosos.    
    *Ejemplo:* Un IDS alerta sobre un escaneo de puertos en un servidor.
-2. **Prevención:** Bloquear tráfico malicioso antes de que cause daño.
 
+2. **Prevención:** Bloquear tráfico malicioso antes de que cause daño.    
    *Ejemplo:* Un IPS detecta un escaneo de puertos inusual y bloquea la IP del atacante.
 
 **Beneficio adicional:** Protege la red contra ataques conocidos y desconocidos.
@@ -314,11 +321,10 @@ Los sistemas de ticketing gestionan y documentan los incidentes dentro del SOC. 
 
 **Funciones clave:**
 
-1. **Registro de incidentes:** Cada incidente se documenta con detalles como la fecha, la gravedad y las acciones tomadas.
-
+1. **Registro de incidentes:** Cada incidente se documenta con detalles como la fecha, la gravedad y las acciones tomadas.    
    *Ejemplo:* Crear un ticket para un ataque de phishing detectado por el equipo de Threat Intelligence, cualificado por un analista y asignado a un especialista en respuesta a incidentes.
-2. **Colaboración:** Permite asignar tareas a diferentes miembros del equipo.
 
+2. **Colaboración:** Permite asignar tareas a diferentes miembros del equipo.    
    *Ejemplo:* Cuando se detecta un ataque phishing, se genera un ticket para que un analista investigue los correos afectados.
 
 **Beneficio adicional:** Facilita la comunicación y la colaboración entre los miembros del equipo, asegurando que los incidentes se gestionen de manera eficiente.
@@ -331,11 +337,10 @@ Estas herramientas permiten a los equipos analizar incidentes después de que ha
 
 **Funciones clave:**
 
-1. Recuperar, salvaguardar las evidencias digitales de los sistemas afectados.
-
+1. Recuperar, salvaguardar las evidencias digitales de los sistemas afectados.    
    *Ejemplo:* Extraer registros, logs y archivos de un servidor comprometido y dejar una copia forense para análisis.
-2. Analizar las evidencias y reconstruir la secuencia de eventos que llevaron al incidente.
 
+2. Analizar las evidencias y reconstruir la secuencia de eventos que llevaron al incidente.     
    *Ejemplo:* Analizar los logs de un servidor comprometido para determinar si el atacante usó una vulnerabilidad de software específica.
 
 **Beneficio adicional:** Proporciona información valiosa para mejorar las defensas y prevenir futuros incidentes.
@@ -361,14 +366,17 @@ La verdadera fuerza de un SOC reside en cómo se integran estas herramientas par
 
 Aunque las tecnologías son fundamentales, presentan desafíos:
 
-1. **Sobrecarga de alertas:** Un SIEM mal configurado puede generar demasiadas alertas, causando fatiga en los analistas.
+!!! warning "Atención: fatiga por alertas"
+    Un SIEM mal configurado puede generar demasiadas alertas (muchas de ellas falsos positivos). Esto
+    termina saturando al equipo y hace más probable que se “escape” una alerta importante.
 
+1. **Sobrecarga de alertas:** Un SIEM mal configurado puede generar demasiadas alertas, causando fatiga en los analistas.     
    *Solución:* Afinar las reglas de detección y usar inteligencia artificial para priorizar alertas.
-2. **Costo:** Las herramientas avanzadas pueden ser costosas de implementar y mantener.
 
+2. **Costo:** Las herramientas avanzadas pueden ser costosas de implementar y mantener.     
    *Solución:* Evaluar herramientas de código abierto o servicios en la nube.
-3. **Falta de habilidades:** Requieren personal capacitado para su configuración y uso.
 
+3. **Falta de habilidades:** Requieren personal capacitado para su configuración y uso.      
    *Solución:* Capacitar continuamente al equipo del SOC.
 
 Las tecnologías son el esqueleto que soporta las operaciones de un SOC. Desde herramientas de monitoreo como el SIEM hasta sistemas de automatización como el SOAR, cada tecnología juega un papel crítico en la detección y respuesta a amenazas. Sin embargo, su efectividad depende de una implementación adecuada, una integración robusta y una configuración que equilibre precisión y eficiencia.
@@ -419,7 +427,7 @@ El funcionamiento del SOC se basa en la interacción entre sus servicios princip
 
 #### 2.4.1.3. Monitoring & Triage
 
-**Monitoring & Triage** actúa como el primer nivel de análisis, revisando las alertas generadas por el SIEM para determinar si representan incidentes reales o falsos positivos. Este servicio asegura que solo las amenazas verificadas sean escaladas, apoyados en playbooks, que ayudan a priorizar y clasificar los incidentes. Equivale a nivel 1, y suele requerir disponibilidad 24 horas y 7 días a la semana. Se basa en herramientas de ticketing para documentar y gestionar los incidentes, y en el SOAR para automatizar tareas.
+**Monitoring & Triage** actúa como el primer nivel de análisis, revisando las alertas generadas por el SIEM para determinar si representan incidentes reales o falsos positivos. Este servicio asegura que solo las amenazas verificadas sean escaladas, apoyados en playbooks, que ayudan a priorizar y clasificar los incidentes. Equivale a **nivel 1**, y suele requerir disponibilidad 24 horas y 7 días a la semana. Se basa en herramientas de ticketing para documentar y gestionar los incidentes, y en el SOAR para automatizar tareas.
 
 ![Monitoring & Triage](./assets/IS-U2.2.1.-SOC-ServiciosYHerramientas-1736796192187.png)
 
@@ -437,7 +445,7 @@ El funcionamiento del SOC se basa en la interacción entre sus servicios princip
 
 #### 2.4.1.4. Incident Response
 
-**Incident Response** gestiona incidentes confirmados para contener y mitigar su impacto. Esto incluye acciones como aislar sistemas comprometidos, bloquear direcciones IP maliciosas y coordinar la recuperación. Suele denominarse nivel 2 y nivel 3 y utilizan playbooks para la respuesta a incidentes. Se basan en la herramienta de ticketing para documentar y gestionar los incidentes, y en el SOAR para automatizar tareas.
+**Incident Response** gestiona incidentes confirmados para contener y mitigar su impacto. Esto incluye acciones como aislar sistemas comprometidos, bloquear direcciones IP maliciosas y coordinar la recuperación. Suele denominarse **nivel 2 y nivel 3** y utilizan playbooks para la respuesta a incidentes. Se basan en la herramienta de ticketing para documentar y gestionar los incidentes, y en el SOAR para automatizar tareas.
 
 ![Incident Response](./assets/IS-U2.2.1.-SOC-ServiciosYHerramientas-1736795652317.png)
 
@@ -519,11 +527,13 @@ Este flujo asegura que cada servicio funcione de manera independiente, pero inte
 
 ##### 2.4.3. Retos en la prestación de servicios
 
-1. **Falta de integración:** Si las herramientas y procesos no están alineados, los servicios pueden no ser efectivos.
+1. **Falta de integración:** Si las herramientas y procesos no están alineados, los servicios pueden no ser efectivos.   
    *Solución:* Usar plataformas que centralicen la gestión y faciliten la colaboración.
-2. **Sobrecarga de alertas:** Un exceso de alertas puede abrumar a los equipos de Monitoring & Triage.
-   *Solución:* Afinar las reglas del SIEM y priorizar alertas críticas.
-3. **Costos:** Los servicios avanzados como Threat Hunting y Purple Team pueden requerir inversiones significativas.
+
+2. **Sobrecarga de alertas:** Un exceso de alertas puede abrumar a los equipos de Monitoring & Triage.     
+   *Solución:* Afinar las reglas del SIEM y priorizar alertas críticas.     
+
+3. **Costos:** Los servicios avanzados como Threat Hunting y Purple Team pueden requerir inversiones significativas.     
    *Solución:* Comenzar con servicios esenciales e ir añadiendo capacidades conforme crece la madurez del SOC.
 
 Los servicios de un SOC son necesarios para gestionar la ciberseguridad de manera proactiva y reactiva. Cada servicio cumple un papel único, pero su valor real radica en cómo interactúan para formar una defensa cohesiva contra amenazas. Un SOC bien diseñado no solo responde a incidentes, sino que también aprende y mejora continuamente para anticiparse a los ataques futuros.
@@ -618,29 +628,34 @@ La implementación de un SOC requiere un enfoque estructurado que cubra múltipl
 
 - **Definición de objetivos:** Identificar qué se espera lograr con el SOC.
 
-  *Ejemplo:* Proteger la confidencialidad de los datos de los clientes y cumplir con normativas como GDPR.
+    *Ejemplo:* Proteger la confidencialidad de los datos de los clientes y cumplir con normativas como GDPR.
+
 - **Gestión de costes:** Determinar el presupuesto y planificar la inversión en tecnología y personal.
+
 - **Documento de constitución:** Formalizar la misión, alcance y estructura del SOC.
 
 ##### 3.3.2. Personas
 
 - **Selección de roles:** Identificar los roles necesarios, desde analistas hasta gerentes.
 
-  *Ejemplo:* Contratar analistas SOC con experiencia en herramientas SIEM y Threat Intelligence.
+    *Ejemplo:* Contratar analistas SOC con experiencia en herramientas SIEM y Threat Intelligence.
+
 - **Capacitación inicial:** Asegurar que el equipo esté entrenado en los procesos y tecnologías del SOC.
 
 ##### 3.3.3. Procesos
 
 - **Definición de flujos de trabajo:** Crear procesos para gestionar incidentes, realizar análisis forenses y actualizar reglas de detección.
 
-  *Ejemplo:* Diseñar un proceso de respuesta a incidentes que incluya fases de detección, contención y recuperación.
+    *Ejemplo:* Diseñar un proceso de respuesta a incidentes que incluya fases de detección, contención y recuperación.
+
 - **Estandarización:** Implementar marcos como NIST CSF para estructurar las operaciones.
 
 ##### 3.3.4. Tecnologías
 
 - **Selección de herramientas:** Implementar tecnologías como SIEM, SOAR, y EDR.
 
-  *Ejemplo:* Configurar un SIEM para recopilar registros de toda la infraestructura tecnológica.
+    *Ejemplo:* Configurar un SIEM para recopilar registros de toda la infraestructura tecnológica.
+
 - **Integración:** Asegurar que las herramientas trabajen en conjunto para maximizar la eficiencia.
 
 ##### 3.3.5. Servicios
@@ -654,27 +669,29 @@ Un SOC eficaz requiere una integración armoniosa entre personas capacitadas, pr
 
 ## Anexo I
 
-**¿Qué es un Indicador de compromiso (IoC)?**
+!!! definition "Indicador de compromiso (IoC)"
+    Los indicadores de compromiso (IoC, por sus siglas en inglés) son piezas de información que pueden
+    utilizarse para detectar actividad maliciosa o sospechosa en una red o sistema. Pueden ser, por ejemplo,
+    URLs, direcciones IP, hashes de archivos o patrones de eventos en logs, y sirven para identificar
+    intrusiones en tiempo real o a posteriori.
 
-Los indicadores de compromiso (IoC, por sus siglas en inglés) son piezas de información que pueden ser utilizadas para detectar actividades maliciosas o sospechosas en una red o sistema. Estos indicadores pueden abarcar una amplia gama de datos, que van desde URL específicas, direcciones IP, hash de archivos, entre otros, y pueden ser utilizados para identificar intrusiones o ataques de ciberseguridad en tiempo real o después de que hayan ocurrido.
+!!! example "Ejemplos de IoC"
+    - **Direcciones IP sospechosas:** si aparecen conexiones a una IP usada para Command and Control (C2).
+    - **Hashes de archivos:** si un hash coincide con el de un malware conocido.
+    - **URLs y dominios:** dominios usados en campañas de phishing o para alojar malware.
+    - **Patrones en logs:** muchos intentos de login en poco tiempo (posible fuerza bruta).
 
-**Ejemplos de Indicadores de Compromiso (IoC)**
-
-A continuación se indican algunos ejemplos de indicadores de compromiso:
-
-* **Direcciones IP sospechosas:** Si se encuentran registros de conexión a una dirección IP concreta que ha sido utilizada por software malicioso para establecer un Command and Control, esto es un indicador de compromiso.
-* **Hashes de archivos maliciosos:** Los hashes de archivos pueden utilizarse para identificar software malicioso o archivos modificados o comprometidos. Por ejemplo, si un hash de archivo coincide con el hash de un software malicioso, esto es un indicador de compromiso.
-* **URLs y dominios maliciosos:** Las URLs y dominios son utilizados a menudo por los atacantes para alojar malware o llevar a cabo ataques de phishing. Los IoCs pueden incluir estas URL y dominios maliciosos para ayudar a identificar y bloquear estas amenazas.
-* **Patrón de eventos/logs:** Un patrón de eventos inusual en los registros de un sistema puede indicar una intrusión. Por ejemplo, si se se conoce que un software malicioso concreto realiza ataques de fuerza bruta sobre el login de los usuarios y se identifica en la infraestructura que un usuario intenta iniciar sesión en una cuenta varias veces en un corto periodo de tiempo, esto puede ser un indicador de que estamos comprometidos por el programa malicioso.
-
-**¿Qué es MISP?**
-
-MISP (Malware Information Sharing Platform) es una plataforma abierta que se utiliza para el intercambio, almacenamiento y correlación de indicadores de compromiso. MISP proporciona una estructura para que las organizaciones compartan información de amenazas de manera segura y eficiente.
-
-MISP permite a los equipos de seguridad recopilar, almacenar y compartir IoCs con otras organizaciones. Esto facilita una respuesta más rápida y eficiente a las amenazas, ya que las organizaciones pueden beneficiarse de la información proporcionada por otras entidades que han experimentado las mismas o similares amenazas.
-
-La plataforma MISP también proporciona una serie de características adicionales para apoyar la gestión de amenazas, incluyendo soporte para la taxonomía de amenazas, la capacidad de adjuntar contexto y atribución a los indicadores, y herramientas para la visualización de datos de amenazas.
+!!! definition "MISP (Malware Information Sharing Platform)"
+    MISP es una plataforma abierta para el intercambio, almacenamiento y correlación de IoCs. Permite que
+    organizaciones compartan inteligencia de amenazas de forma estructurada, mejorando la detección y la
+    respuesta. Además, facilita añadir contexto (atribución, taxonomías, referencias) y visualizar datos.
 
 ## Referencias
 
 - [Imágenes del curso de ciberseguirdad defensiva - Santiago Hernández Ramos](https://www.udemy.com/course/curso-completo-de-ciberseguridad-defensiva) 
+
+## Presentación
+
+Puedes acceder a la presentación de esta unidad aquí:
+
+[Presentación IS-U2.2.1 - SOC: Servicios y herramientas](https://revilofe.github.io/slides/section2-is/IS-U2.2.1.-SOC-ServiciosYHerramientas.html)

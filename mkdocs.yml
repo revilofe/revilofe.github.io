@@ -186,7 +186,9 @@ nav:
       - 'section2/u02/index.md'
       - '2.1.-Taxonomía de incidentes': 'section2/u02/teoria/IS-U2.1.1.-TaxonomiaDeIncidentes.md'
       - '2.2.1.-SOC - Servicios y herramientas': 'section2/u02/teoria/IS-U2.2.1.-SOC-ServiciosYHerramientas.md'
-      - '2.2.2.-SIEM & Casos de uso': 'section2/u02/teoria/IS-U2.2.2.-CasosUso.md'
+      - '2.2.2.-SIEM':
+          - '2.2.2.1.-Qué es un SIEM': 'section2/u02/teoria/IS-U2.2.2.-Que es un SIEM.md'
+          - '2.2.2.2.-Casos de uso': 'section2/u02/teoria/IS-U2.2.2.-CasosUso.md'
       - '2.2.3.-Implantación de un SIEM': 'section2/u02/teoria/IS-U2.2.3.-SIEM-Implantacion.md'
       - '2.2.4.-Evolución de SIEM': 'section2/u02/teoria/IS-U2.2.4.-SIEM-Evolucion.md'
       - '2.3.1.-Fuentes Abiertas. OSINT': 'section2/u02/teoria/IS-U2.3.1.-FuentesAbiertas-OSINT.md'

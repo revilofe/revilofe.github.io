@@ -233,7 +233,7 @@ Se exponen estos tres puertos porque la imagen ejecuta tres servicios:
 * Elasticsearch (9200): permite consultas a su API.
 * Logstash (5044): puerto donde Logstash espera inserciones para actuar como middleware.
 
-Si todo ha ido bien, ahora puedes acceder a `localhost:5601` y ver la interfaz gráfica de Kibana.
+Si todo ha ido bien, ahora puedes acceder a [`localhost:5601`](http://localhost:5601) y ver la interfaz gráfica de Kibana.
 
 Si ha ocurrido un error, la forma más fácil de verlo es revisar los logs:
 
@@ -471,6 +471,14 @@ Recuerda que cualquier cambio en la configuración necesitará parar y reiniciar
 
 #### 2.8. Chequeos 
 
+Los logs de los contenedores son la forma más sencilla de comprobar que todo está funcionando correctamente. Para ver los logs de un contenedor, puedes usar el siguiente comando:
+
+```bash
+sudo docker logs --follow NOMBRE_CONTENEDOR
+```
+
+También puedes realizar chequeos más específicos para comprobar que los servicios están funcionando correctamente.
+
 Para comprobar que el servicio logstash está funcionando, puedes usar el siguiente comando para comprobar que el puerto 5044 está abierto:
 
 ```bash
@@ -493,7 +501,7 @@ Debería mostrar algo como esto:
 ....
 ```
 
-Para comprobar si está llegando información al SIEM, puedes usar el siguiente comando para ver los índices creados en Elasticsearch:
+Para comprobar si está llegando información a Elastic, puedes usar el siguiente comando para ver los índices creados en Elastic:
 ```
 curl -s http://localhost:9200/_cat/indices\?v
 ```
@@ -502,6 +510,8 @@ Un resultado válido, en el que nos indica que el índice `filebeat-2026.02.10` 
 health status index               uuid                   pri rep docs.count docs.deleted store.size pri.store.size dataset.size
 yellow open   filebeat-2026.02.10 78MtRNkURvOqzy7mA0lI3w   1   1        123            0    282.3kb        282.3kb      282.3kb
 ```
+
+Por último, puedes comprobar que Kibana está funcionando correctamente accediendo a `http://localhost:5601` y viendo la interfaz gráfica. Si no puedes acceder, revisa los logs del contenedor `elk` para ver si hay algún error.
 
 #### 2.8. Crear la data view en Kibana
 

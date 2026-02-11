@@ -9118,7 +9118,7 @@ en profundidad, pero sí comprender aspectos importantes.</p>
 <li>Elasticsearch (9200): permite consultas a su <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr>.</li>
 <li>Logstash (5044): puerto donde Logstash espera inserciones para actuar como middleware.</li>
 </ul>
-<p>Si todo ha ido bien, ahora puedes acceder a <code>localhost:5601</code> y ver la interfaz gráfica de Kibana.</p>
+<p>Si todo ha ido bien, ahora puedes acceder a <a href="http://localhost:5601"><code>localhost:5601</code></a> y ver la interfaz gráfica de Kibana.</p>
 <p>Si ha ocurrido un error, la forma más fácil de verlo es revisar los logs:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>docker<span class="w"> </span>logs<span class="w"> </span>--follow<span class="w"> </span>NOMBRE_CONTENEDOR
 </code></pre></div>
@@ -9297,26 +9297,31 @@ Para que quede asi:</p>
 </code></pre></div>
 <p>Recuerda que cualquier cambio en la configuración necesitará parar y reiniciar el contenedor.</p>
 <h4 id="28-chequeos">2.8. Chequeos<a class="headerlink" href="#28-chequeos" title="Permanent link">&para;</a></h4>
+<p>Los logs de los contenedores son la forma más sencilla de comprobar que todo está funcionando correctamente. Para ver los logs de un contenedor, puedes usar el siguiente comando:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>sudo<span class="w"> </span>docker<span class="w"> </span>logs<span class="w"> </span>--follow<span class="w"> </span>NOMBRE_CONTENEDOR
+</code></pre></div>
+<p>También puedes realizar chequeos más específicos para comprobar que los servicios están funcionando correctamente.</p>
 <p>Para comprobar que el servicio logstash está funcionando, puedes usar el siguiente comando para comprobar que el puerto 5044 está abierto:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>❯<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>elk<span class="w"> </span>bash<span class="w"> </span>-lc<span class="w"> </span><span class="s2">&quot;timeout 2 bash -c &#39;&lt;/dev/tcp/127.0.0.1/5044&#39; &amp;&amp; echo &#39;5044 ABIERTO&#39; || echo &#39;5044 CERRADO&#39;&quot;</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>❯<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>elk<span class="w"> </span>bash<span class="w"> </span>-lc<span class="w"> </span><span class="s2">&quot;timeout 2 bash -c &#39;&lt;/dev/tcp/127.0.0.1/5044&#39; &amp;&amp; echo &#39;5044 ABIERTO&#39; || echo &#39;5044 CERRADO&#39;&quot;</span>
 </code></pre></div>
 y el siguiente comando para comprobar el estado del servicio:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>docker exec -it elk bash -lc &quot;curl -s http://127.0.0.1:9600/?pretty | head&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>docker exec -it elk bash -lc &quot;curl -s http://127.0.0.1:9600/?pretty | head&quot;
 </code></pre></div>
 <p>Debería mostrar algo como esto:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="p">{</span>
-<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">  </span><span class="nt">&quot;host&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9fabc8ad5a98&quot;</span><span class="p">,</span>
-<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8.11.1&quot;</span><span class="p">,</span>
-<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="w">  </span><span class="nt">&quot;http_address&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1:9600&quot;</span><span class="p">,</span>
-<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="err">....</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="p">{</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">  </span><span class="nt">&quot;host&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9fabc8ad5a98&quot;</span><span class="p">,</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8.11.1&quot;</span><span class="p">,</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="w">  </span><span class="nt">&quot;http_address&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1:9600&quot;</span><span class="p">,</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="err">....</span>
 </code></pre></div>
-<p>Para comprobar si está llegando información al <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>, puedes usar el siguiente comando para ver los índices creados en Elasticsearch:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>curl -s http://localhost:9200/_cat/indices\?v
+<p>Para comprobar si está llegando información a Elastic, puedes usar el siguiente comando para ver los índices creados en Elastic:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>curl -s http://localhost:9200/_cat/indices\?v
 </code></pre></div>
 Un resultado válido, en el que nos indica que el índice <code>filebeat-2026.02.10</code> ha sido creado y tiene 123 documentos, sería el siguiente:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>health status index               uuid                   pri rep docs.count docs.deleted store.size pri.store.size dataset.size
-<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>yellow open   filebeat-2026.02.10 78MtRNkURvOqzy7mA0lI3w   1   1        123            0    282.3kb        282.3kb      282.3kb
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>health status index               uuid                   pri rep docs.count docs.deleted store.size pri.store.size dataset.size
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>yellow open   filebeat-2026.02.10 78MtRNkURvOqzy7mA0lI3w   1   1        123            0    282.3kb        282.3kb      282.3kb
 </code></pre></div></p>
+<p>Por último, puedes comprobar que Kibana está funcionando correctamente accediendo a <code>http://localhost:5601</code> y viendo la interfaz gráfica. Si no puedes acceder, revisa los logs del contenedor <code>elk</code> para ver si hay algún error.</p>
 <h4 id="28-crear-la-data-view-en-kibana">2.8. Crear la data view en Kibana<a class="headerlink" href="#28-crear-la-data-view-en-kibana" title="Permanent link">&para;</a></h4>
 <p>Los datos que llegan al <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> se almacenan en índices de Elasticsearch. Los indices son como tablas en una base de datos relacional, pero con una estructura más flexible. Cada índice puede contener documentos con campos diferentes, lo que permite almacenar datos de distintas fuentes sin necesidad de una estructura fija.</p>
 <p>Para poder consultar y visualizar los indices en Kibana, es necesario crear una data view (anteriormente llamada index pattern). La data view es una plantilla que define cómo Kibana debe interpretar los datos almacenados en los índices de Elasticsearch.</p>
@@ -9342,11 +9347,11 @@ Un resultado válido, en el que nos indica que el índice <code>filebeat-2026.02
 <li>Se generan diccionarios con base en la información obtenida con ingeniería social: se sabe que el usuario está compuesto por dos letras minúsculas, y su clave por una letra minúscula y un número.</li>
 <li>
 <p>Con base en esas pistas, se generarán diccionarios de usuarios y claves necesarios para el ataque. En caso de no aportar diccionarios, el ataque se efectuaría por fuerza bruta y se podría eternizar. Los scripts crear_usuarios y crear_claves se han creado para generar los diccionarios necesarios con la herramienta <code>crunch</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>kali@kali:~/PRACTICA_HYDRAS$<span class="w"> </span>cat<span class="w"> </span>crear_usuarios
-<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>crunch<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>-t<span class="w"> </span>@@<span class="w"> </span>-o<span class="w"> </span>usuarios.txt
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>kali@kali:~/PRACTICA_HYDRAS$<span class="w"> </span>cat<span class="w"> </span>crear_usuarios
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>crunch<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>-t<span class="w"> </span>@@<span class="w"> </span>-o<span class="w"> </span>usuarios.txt
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>kali@kali:~/PRACTICA_HYDRAS$<span class="w"> </span>cat<span class="w"> </span>crear_claves
-<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>crunch<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>-t<span class="w"> </span>@@<span class="w"> </span>-o<span class="w"> </span>claves.txt
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>kali@kali:~/PRACTICA_HYDRAS$<span class="w"> </span>cat<span class="w"> </span>crear_claves
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>crunch<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>-t<span class="w"> </span>@@<span class="w"> </span>-o<span class="w"> </span>claves.txt
 </code></pre></div>
 </li>
 <li>
@@ -9355,8 +9360,8 @@ Un resultado válido, en el que nos indica que el índice <code>filebeat-2026.02
 <li>Se conoce la dirección de la máquina a atacar: primero se comprobará con ping (<abbr title="Protocolo de Mensajes de Control de Internet. Es un protocolo que se utiliza para enviar mensajes de control y error entre dispositivos en una red. El ICMP permite a los dispositivos comunicarse entre sí, detectar errores, informar de problemas, etc.">ICMP</abbr>) si la máquina está operativa.</li>
 <li>Después, se atacará mediante Hydra usando el protocolo <abbr title="Secure Shell. Es un sistema de seguridad que se utiliza para acceder de forma segura a un servidor remoto a través de una red. El SSH cifra la comunicación entre el cliente y el servidor, autentica a los usuarios y protege la integridad de los datos.">SSH</abbr>.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>kali@kali:~/PRACTICA_HYDRA$<span class="w"> </span>cat<span class="w"> </span>lanzar_hydra
-<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>hydra<span class="w"> </span>-L<span class="w"> </span>usuarios.txt<span class="w"> </span>-P<span class="w"> </span>claves.txt<span class="w"> </span>-o<span class="w"> </span>resultados.txt<span class="w"> </span>-t<span class="w"> </span><span class="m">4</span><span class="w"> </span>-I<span class="w"> </span>ssh://192.168.1.29:22
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>kali@kali:~/PRACTICA_HYDRA$<span class="w"> </span>cat<span class="w"> </span>lanzar_hydra
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>hydra<span class="w"> </span>-L<span class="w"> </span>usuarios.txt<span class="w"> </span>-P<span class="w"> </span>claves.txt<span class="w"> </span>-o<span class="w"> </span>resultados.txt<span class="w"> </span>-t<span class="w"> </span><span class="m">4</span><span class="w"> </span>-I<span class="w"> </span>ssh://192.168.1.29:22
 </code></pre></div>
 </li>
 </ul>
@@ -9369,13 +9374,13 @@ Un resultado válido, en el que nos indica que el índice <code>filebeat-2026.02
 <ul>
 <li>Instalar:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>snort
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>snort
 </code></pre></div>
 <ul>
 <li>Comprobar el estado y arrancar el servicio:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>snort
-<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>snort
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>snort
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>snort
 </code></pre></div>
 <ul>
 <li>Logs de Snort: <code>/var/log/snort_alerts.log</code></li>
@@ -9391,7 +9396,7 @@ Un resultado válido, en el que nos indica que el índice <code>filebeat-2026.02
 <li>Opciones (Rule Options): Van entre paréntesis y definen los detalles del ataque, como el mensaje a mostrar (msg), el contenido a buscar (content), la firma de identificación (sid) y la revisión (rev).</li>
 </ul>
 <p>Un ejemplo para la siguiente regla: "Generar una alerta para tráfico <abbr title="Protocol Control de Transmisión. Es un protocolo que se utiliza para establecer y gestionar conexiones entre dispositivos en una red. El TCP garantiza la entrega de los datos, el control de flujo, la detección de errores, etc.">TCP</abbr> desde la dirección <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>alert tcp 192.168.1.200 any -&gt; $HOME_NET any (msg:&quot;Trafico TCP desde Claudia&quot;; sid:666003;)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>alert tcp 192.168.1.200 any -&gt; $HOME_NET any (msg:&quot;Trafico TCP desde Claudia&quot;; sid:666003;)
 </code></pre></div>
 <p><strong>Header</strong></p>
 <table>
@@ -9454,27 +9459,27 @@ Un resultado válido, en el que nos indica que el índice <code>filebeat-2026.02
 <h6 id="3411-regla-icmp">3.4.1.1. Regla <abbr title="Protocolo de Mensajes de Control de Internet. Es un protocolo que se utiliza para enviar mensajes de control y error entre dispositivos en una red. El ICMP permite a los dispositivos comunicarse entre sí, detectar errores, informar de problemas, etc.">ICMP</abbr><a class="headerlink" href="#3411-regla-icmp" title="Permanent link">&para;</a></h6>
 <p>Grabaremos una regla para detectar tráfico <abbr title="Protocolo de Mensajes de Control de Internet. Es un protocolo que se utiliza para enviar mensajes de control y error entre dispositivos en una red. El ICMP permite a los dispositivos comunicarse entre sí, detectar errores, informar de problemas, etc.">ICMP</abbr> (ping) en el fichero de configuración de Snort:
 <code>/etc/snort/rules/local.rules</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a># Regla para detectar un ping (ICMP)
-<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>alert icmp any any -&gt; $HOME_NET any (msg:&quot;Trafico ICMP!&quot;; sid:3000001;)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a># Regla para detectar un ping (ICMP)
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>alert icmp any any -&gt; $HOME_NET any (msg:&quot;Trafico ICMP!&quot;; sid:3000001;)
 </code></pre></div>
 <p>Tras reiniciar Snort, podremos comprobar la generación de alertas en tiempo real con el siguiente comando:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>tail -f /var/log/snort_alerts.log
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>tail -f /var/log/snort_alerts.log
 </code></pre></div>
 <h6 id="3411-regla-ssh">3.4.1.1. Regla <abbr title="Secure Shell. Es un sistema de seguridad que se utiliza para acceder de forma segura a un servidor remoto a través de una red. El SSH cifra la comunicación entre el cliente y el servidor, autentica a los usuarios y protege la integridad de los datos.">SSH</abbr><a class="headerlink" href="#3411-regla-ssh" title="Permanent link">&para;</a></h6>
 <p>Lo siguiente paso es configurar una regla para detectar tráfico <abbr title="Secure Shell. Es un sistema de seguridad que se utiliza para acceder de forma segura a un servidor remoto a través de una red. El SSH cifra la comunicación entre el cliente y el servidor, autentica a los usuarios y protege la integridad de los datos.">SSH</abbr>. Ya que estamos intentando detectar un <abbr title="Técnica utilizada para descifrar contraseñas o claves de cifrado probando todas las combinaciones posibles. Los ataques de fuerza bruta pueden ser utilizados para obtener acceso a sistemas o cuentas protegidas por contraseñas débiles.">ataque de fuerza bruta</abbr>, lo ideal es configurar la regla para que solo se active cuando se detecte tráfico <abbr title="Secure Shell. Es un sistema de seguridad que se utiliza para acceder de forma segura a un servidor remoto a través de una red. El SSH cifra la comunicación entre el cliente y el servidor, autentica a los usuarios y protege la integridad de los datos.">SSH</abbr> con una conexión establecida (es decir, no queremos que se active por un simple escaneo de puertos, sino por un intento de conexión real). Además, para evitar que se generen demasiadas alertas (por ejemplo, si el atacante lanza un <abbr title="Técnica utilizada para descifrar contraseñas o claves de cifrado probando todas las combinaciones posibles. Los ataques de fuerza bruta pueden ser utilizados para obtener acceso a sistemas o cuentas protegidas por contraseñas débiles.">ataque de fuerza bruta</abbr> con muchas conexiones), podemos configurar la regla para que solo se active una vez cada cierto tiempo por cada <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> de origen.</p>
 <p>Para ello, añadiremos la siguiente regla al mismo fichero de configuración:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a># --------------------
-<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a># LOCAL RULES
-<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a># --------------------
-<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a># This file intentionally does not come with signatures.  Put your local
-<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a># additions here.
-<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>
-<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a># PRACTICAS - Regla para detectar un ping (ICMP)
-<a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a># NOTA: Comentamos esta regla para efectuar la prueba unitaria de detección de SSH
-<a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a>#alert icmp any any -&gt; $HOME_NET any (msg:&quot;¡Trafico ICMP!&quot;; sid:3000001;)
-<a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a>
-<a id="__codelineno-39-11" name="__codelineno-39-11" href="#__codelineno-39-11"></a># PRACTICAS - Regla para detectar un ssh (TCP y puerto 22)
-<a id="__codelineno-39-12" name="__codelineno-39-12" href="#__codelineno-39-12"></a>alert tcp any any -&gt; any 22 (msg:&quot;Acceso SSH&quot;; sid:3000002; flow:established; threshold: type limit, track by_src, count 1, seconds 30;)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a># --------------------
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a># LOCAL RULES
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a># --------------------
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a># This file intentionally does not come with signatures.  Put your local
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a># additions here.
+<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>
+<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a># PRACTICAS - Regla para detectar un ping (ICMP)
+<a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a># NOTA: Comentamos esta regla para efectuar la prueba unitaria de detección de SSH
+<a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a>#alert icmp any any -&gt; $HOME_NET any (msg:&quot;¡Trafico ICMP!&quot;; sid:3000001;)
+<a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a>
+<a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a># PRACTICAS - Regla para detectar un ssh (TCP y puerto 22)
+<a id="__codelineno-40-12" name="__codelineno-40-12" href="#__codelineno-40-12"></a>alert tcp any any -&gt; any 22 (msg:&quot;Acceso SSH&quot;; sid:3000002; flow:established; threshold: type limit, track by_src, count 1, seconds 30;)
 </code></pre></div>
 <p>Tras grabar la regla, limpiaremos el fichero de log, reiniciaremos Snort, abriremos dos terminales y lanzaremos el ataque con Hydra.</p>
 <blockquote>

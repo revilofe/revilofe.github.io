@@ -1,0 +1,174 @@
+// IS-U2.3.1 - Fuentes Abiertas. OSINT
+// Banco de preguntas en formato GIFT (Incidentes de seguridad)
+// Basado en `docs/section2/u02/teoria/IS-U2.3.1.-FuentesAbiertas-OSINT.md`
+
+::RA_2.CE_osint. OSINT en contexto de incidente::
+Tras detectar un posible incidente, quieres obtener contexto rápido sin tocar sistemas ni hacer pruebas invasivas. ¿Qué enfoque encaja mejor?
+{
+=Aplicar OSINT para obtener contexto verificable con fuentes públicas o de acceso legítimo. #Correcto\: OSINT permite aportar contexto (reputación, exposición pública, filtraciones previas) con un enfoque ordenado y legal.
+~%-33.3333%Lanzar escaneos activos a todos los rangos de la organización para descubrir servicios expuestos. #Incorrecto\: Un escaneo activo puede ser intrusivo, generar alertas y salir del alcance si no hay autorización; OSINT prioriza fuentes abiertas.
+~%-33.3333%Interceptar tráfico Wi-Fi cercano para ver si aparecen credenciales en claro. #Incorrecto\: Eso sería interceptación sin permiso (SIGINT) y puede ser ilegal; OSINT no implica acceso no autorizado.
+~%-33.3333%Suplantar a un empleado para solicitar datos a soporte y acelerar la investigación. #Incorrecto\: La suplantación vulnera la ética y puede ser ilegal; OSINT excluye estas prácticas.
+}
+
+::RA_2.CE_osint. Fuentes abiertas: definición práctica::
+Un equipo piensa que "fuentes abiertas" significa "todo lo que sea gratis". ¿Qué definición es más correcta?
+{
+=Fuentes accesibles de forma pública o legítima, incluso si son de pago, sin acceso no autorizado. #Correcto\: La clave es el acceso legítimo, no que sea gratis.
+~%-33.3333%Solo fuentes gratuitas, porque pagar convertiría la actividad en espionaje. #Incorrecto\: Puede haber fuentes de pago legítimas; lo ilegal es el acceso no autorizado o el uso indebido.
+~%-33.3333%Cualquier información que se pueda obtener con herramientas automáticas, aunque requiera credenciales ajenas. #Incorrecto\: Si requiere credenciales ajenas o acceso indebido, deja de ser OSINT.
+~%-33.3333%Datos internos de la empresa (tickets, SIEM, inventario), porque están "a mano" para el equipo. #Incorrecto\: Eso no son fuentes abiertas; son fuentes internas y requieren otro tratamiento.
+}
+
+::RA_2.CE_osint. Footprinting vs OSINT::
+En un pentest autorizado, quieres diferenciar términos para planificar el trabajo. ¿Qué afirmación es más precisa?
+{
+=Footprinting suele centrarse en huella técnica del sistema; OSINT es más amplio e incluye múltiples fuentes abiertas. #Correcto\: Footprinting tiende a lo técnico del objetivo; OSINT abarca un conjunto más amplio de métodos y fuentes.
+~%-33.3333%OSINT es solo escaneo activo y footprinting es solo búsqueda en Google. #Incorrecto\: OSINT no se define por escaneo activo; suele trabajar con fuentes públicas y acceso legítimo.
+~%-33.3333%Footprinting y OSINT son sinónimos perfectos y no tiene sentido diferenciarlos. #Incorrecto\: Se solapan, pero no son idénticos; diferenciarlos ayuda a elegir técnicas y alcance.
+~%-33.3333%Footprinting siempre es ilegal y OSINT siempre es legal sin importar lo que se haga. #Incorrecto\: Ambos pueden ser legales o ilegales según permisos, alcance y acciones; OSINT no significa "todo vale".
+}
+
+::RA_2.CE_osint. Footprinting activo vs pasivo::
+Necesitas explicar al alumnado la diferencia entre obtención activa y pasiva de información. ¿Qué ejemplo describe mejor un enfoque pasivo?
+{
+=Consultar motores de búsqueda y redes sociales para extraer información pública sin interactuar con el sistema objetivo. #Correcto\: Pasivo implica no interactuar directamente con los sistemas del objetivo.
+~%-33.3333%Ejecutar traceroute hacia la red del objetivo para mapear saltos y latencias. #Incorrecto\: Eso implica interacción con la red y se considera más cercano a activo.
+~%-33.3333%Realizar un escaneo de puertos para identificar servicios expuestos. #Incorrecto\: Un escaneo es una acción activa sobre el objetivo.
+~%-33.3333%Probar contraseñas comunes en un panel para ver si hay cuentas débiles. #Incorrecto\: Eso es intrusivo y no encaja con OSINT ni con pasivo.
+}
+
+::RA_2.CE_osint. Proceso OSINT: primera fase::
+Antes de buscar nada, te piden que evites "coleccionar enlaces sin sentido". ¿Qué haces primero en un proceso OSINT bien planteado?
+{
+=Definir objetivos y alcance (planificación y dirección), incluyendo límites legales y criterios de éxito. #Correcto\: Sin objetivo y alcance, el trabajo se dispersa y se pierde tiempo.
+~%-33.3333%Entrar directamente en herramientas como Maltego para ver qué relaciones aparecen. #Incorrecto\: Sin preguntas y alcance, la herramienta genera ruido y conclusiones poco defendibles.
+~%-33.3333%Buscar en foros y dark web por el nombre de la empresa para ver si hay filtraciones. #Incorrecto\: Primero se define qué se busca, qué se permite y con qué prioridad; después se eligen fuentes.
+~%-33.3333%Crear el informe final y rellenarlo según vayan apareciendo resultados. #Incorrecto\: El informe se alimenta del proceso, pero no sustituye a la planificación y adquisición ordenada.
+}
+
+::RA_2.CE_osint. Identificación de fuentes::
+Quieres comprobar si una empresa ha expuesto datos en el pasado y ya los eliminó. ¿Qué fuente OSINT encaja mejor?
+{
+=Un archivo histórico como Wayback Machine para revisar versiones antiguas del sitio. #Correcto\: Los históricos web permiten ver contenido que pudo estar publicado y después retirarse.
+~%-33.3333%Un escaneo activo de vulnerabilidades para "reconstruir" lo que había antes. #Incorrecto\: Un escaneo no te muestra versiones antiguas y además puede ser intrusivo.
+~%-33.3333%Interceptar comunicaciones del sitio para ver contenido "oculto". #Incorrecto\: Eso no es OSINT y puede ser ilegal.
+~%-33.3333%Consultar solo el buscador principal y asumir que, si no sale, no existió. #Incorrecto\: Limitarse a un buscador reduce cobertura y puede perder información relevante.
+}
+
+::RA_2.CE_osint. Adquisición: acotar y trazabilidad::
+Durante la adquisición, el alumnado empieza a guardar capturas sin orden y enlaces sueltos. ¿Qué práctica mejora más la trazabilidad?
+{
+=Registrar fuente, fecha, consulta realizada y evidencia asociada a cada hallazgo. #Correcto\: Trazabilidad significa poder repetir y justificar cómo se llegó a una conclusión.
+~%-33.3333%Guardar solo las conclusiones finales para que el informe quede más corto. #Incorrecto\: Sin evidencias y pasos, las conclusiones no se sostienen.
+~%-33.3333%Copiar y pegar cualquier dato encontrado aunque no sea relevante, por si acaso. #Incorrecto\: OSINT requiere acotar para evitar saturacion y ruido.
+~%-33.3333%Quedarse con una sola fuente porque "parece fiable" para ir más rápido. #Incorrecto\: Triangular y verificar con varias fuentes reduce falsos positivos.
+}
+
+::RA_2.CE_osint. Procesamiento: calidad de datos::
+Tienes 100 credenciales ficticias recolectadas en una práctica. ¿Qué acción pertenece a la fase de procesamiento y organización?
+{
+=Eliminar duplicados, normalizar formatos y priorizar por relevancia y fiabilidad. #Correcto\: Procesamiento transforma datos brutos en información manejable.
+~%-33.3333%Decidir que el ataque fue phishing porque es lo más común. #Incorrecto\: Eso es una conclusión sin evidencia; el análisis viene después y debe basarse en datos procesados.
+~%-33.3333%Publicar el listado para que otras personas lo validen en redes sociales. #Incorrecto\: Divulgar datos sensibles es mala praxis y puede ser ilegal.
+~%-33.3333%Cambiar contraseñas en sistemas del objetivo para "corregir" el problema. #Incorrecto\: Eso es accion operativa sobre sistemas, no procesamiento de datos OSINT.
+}
+
+::RA_2.CE_osint. Analisis: convertir datos en inteligencia::
+Tras limpiar y ordenar datos, necesitas dar un paso más para que sea útil. ¿Qué define mejor la fase de análisis e interpretación?
+{
+=Correlacionar fuentes, detectar patrones y extraer conclusiones accionables para la seguridad. #Correcto\: El análisis convierte información en inteligencia útil para decidir acciones.
+~%-33.3333%Buscar más y más datos hasta que el informe sea muy largo. #Incorrecto\: Más datos no implica más valor; el análisis prioriza y concluye.
+~%-33.3333%Cambiar de herramienta continuamente para ver cuál "encuentra más cosas". #Incorrecto\: La herramienta no sustituye al razonamiento ni al método.
+~%-33.3333%Asumir que una coincidencia en un foro prueba atribución a un grupo concreto. #Incorrecto\: La atribución requiere evidencia fuerte; correlación no siempre implica causalidad.
+}
+
+::RA_2.CE_osint. Difusion: elegir formato::
+Has realizado una investigación OSINT para un equipo directivo no técnico. ¿Qué forma de difusión encaja mejor?
+{
+=Un resumen claro con impacto y recomendaciones priorizadas, apoyado por evidencias en anexos. #Correcto\: La difusión debe adaptarse a la audiencia y facilitar decisiones.
+~%-33.3333%Un volcado de logs y capturas sin explicación para que "saquen sus conclusiones". #Incorrecto\: Sin narrativa ni priorización, la información no es útil.
+~%-33.3333%Una presentación con tecnicismos y comandos para demostrar nivel técnico. #Incorrecto\: El objetivo es comunicar valor y acciones, no impresionar.
+~%-33.3333%No difundir nada hasta tener certeza absoluta de todo, aunque haya riesgos inmediatos. #Incorrecto\: Se puede comunicar con niveles de confianza y límites, sin paralizar acciones urgentes.
+}
+
+::RA_2.CE_osint. Google Dorking: uso responsable::
+Encuentras un resultado que apunta a un panel sensible indexado. ¿Cuál es la actuación profesional más adecuada?
+{
+=Documentar el hallazgo y reportarlo por el canal adecuado, sin intentar acceder ni interactuar. #Correcto\: Localizar una exposición no autoriza a entrar; se reporta y se protege.
+~%-33.3333%Entrar al panel y probar credenciales comunes para confirmar el riesgo. #Incorrecto\: Eso implica acceso no autorizado y puede ser ilegal.
+~%-33.3333%Compartir el enlace en un chat público para que otras personas lo revisen. #Incorrecto\: Difundir acceso a un recurso sensible aumenta el riesgo y es mala praxis.
+~%-33.3333%Descargar todos los ficheros disponibles para "guardar evidencia". #Incorrecto\: Debes minimizar datos y actuar dentro de permisos; descargar más de lo necesario puede ser ilegal.
+}
+
+::RA_2.CE_osint. Metadatos: riesgo tipico::
+Un documento público contiene metadatos que revelan usuarios internos y versiones de software. ¿Por qué es relevante en ciberseguridad?
+{
+=Porque puede facilitar reconocimiento y ataques dirigidos, exponiendo información interna sin querer. #Correcto\: Los metadatos pueden revelar usuarios, rutas, herramientas y otros datos útiles para un atacante.
+~%-33.3333%Porque los metadatos solo sirven para saber el tamaño del archivo, y no aportan inteligencia. #Incorrecto\: Pueden contener información de autor, fechas, software y otros datos sensibles.
+~%-33.3333%Porque los metadatos convierten el documento en malware automáticamente. #Incorrecto\: No convierten el documento en malware; el riesgo es la exposición de información.
+~%-33.3333%Porque los metadatos son invisibles y no se pueden extraer con herramientas OSINT. #Incorrecto\: Existen herramientas como ExifTool, FOCA o Metagoofil para extraerlos.
+}
+
+::RA_2.CE_osint. Redes sociales: limite etico::
+En una investigación, el alumnado propone crear un perfil falso para conseguir información de un empleado. ¿Qué respuesta es más correcta?
+{
+=No es aceptable; la suplantación no forma parte de OSINT y puede vulnerar ética y legalidad. #Correcto\: OSINT requiere acceso legítimo y no admite suplantación o acoso.
+~%-33.3333%Es correcto si el objetivo es "por una buena causa" y mejora la seguridad. #Incorrecto\: El fin no justifica medios ilegales o no éticos.
+~%-33.3333%Es recomendable porque acelera la recopilación y reduce el esfuerzo de búsqueda. #Incorrecto\: Puede generar daño, incumplir normas y contaminar la evidencia.
+~%-33.3333%Es obligatorio en OSINT porque las redes sociales siempre requieren ingeniería social. #Incorrecto\: Se trabaja con contenido público y técnicas legítimas, no con engaño.
+}
+
+::RA_2.CE_osint. Dark Web: precaución básica::
+Quieres monitorizar posibles filtraciones en Dark Web. ¿Qué pauta de seguridad y ética encaja mejor?
+{
+=Limitarse a observación y objetivos autorizados, evitando interactuar con mercados o servicios ilícitos. #Correcto\: La monitorización debe hacerse con precaución, legalidad y protección del equipo e identidad.
+~%-33.3333%Comprar una base de datos robada para "confirmar" si hay correos de la empresa. #Incorrecto\: Participar en mercados ilícitos es ilegal y no ético.
+~%-33.3333%Descargar cualquier archivo encontrado para analizarlo sin medidas de seguridad. #Incorrecto\: Aumenta riesgo técnico y legal; se requiere control y minimización.
+~%-33.3333%Publicar en un foro para pedir más detalles a los atacantes y acelerar la investigación. #Incorrecto\: Interactuar puede suponer complicidad y aumentar el riesgo.
+}
+
+::RA_2.CE_osint. Shodan: para qué sirve::
+En una auditoría, quieres identificar exposición de servicios en Internet. ¿Qué describe mejor el uso de Shodan?
+{
+=Un buscador que localiza dispositivos y servicios expuestos, útil para evaluar superficie de ataque. #Correcto\: Shodan ayuda a identificar servicios publicados y evaluar riesgos de exposición.
+~%-33.3333%Una herramienta para explotar vulnerabilidades automáticamente en servidores encontrados. #Incorrecto\: Shodan no es una herramienta de explotación; usarlo para atacar sería ilegal.
+~%-33.3333%Un sustituto del SIEM interno para recolectar logs de la organización. #Incorrecto\: Un SIEM recolecta eventos internos; Shodan indexa información expuesta en Internet.
+~%-33.3333%Un escáner que debe ejecutarse siempre contra objetivos sin autorización para descubrir todo. #Incorrecto\: Cualquier acción sobre objetivos requiere permiso y alcance; OSINT prioriza uso responsable.
+}
+
+::RA_2.CE_osint. Maltego: valor principal::
+Necesitas explicar por qué Maltego es útil en OSINT. ¿Qué ventaja describe mejor su uso?
+{
+=Visualiza relaciones entre entidades (dominios, correos, personas) para apoyar el análisis. #Correcto\: Maltego ayuda a ver conexiones y a mapear infraestructuras y actores con más claridad.
+~%-33.3333%Garantiza que cualquier relación mostrada es verdadera sin necesidad de verificación. #Incorrecto\: Las relaciones deben verificarse; puede haber falsos positivos o datos desactualizados.
+~%-33.3333%Sirve principalmente para romper cifrados y descifrar comunicaciones. #Incorrecto\: Eso no es su función; es una herramienta de análisis y visualización.
+~%-33.3333%Reemplaza el proceso OSINT, porque con un grafo basta para cerrar el caso. #Incorrecto\: La herramienta no sustituye planificación, adquisición, procesamiento y difusión.
+}
+
+::RA_2.CE_osint. SpiderFoot: automatización con criterio::
+Un equipo quiere automatizar la recopilación OSINT para ahorrar tiempo. ¿Qué recomendación es más sensata al usar SpiderFoot?
+{
+=Usarlo para ampliar cobertura, pero filtrando, validando y documentando resultados, y solo con objetivos autorizados. #Correcto\: La automatización genera volumen; el valor está en validar y convertirlo en inteligencia.
+~%-33.3333%Confiar en que todo lo que encuentre es correcto y pegarlo tal cual en el informe. #Incorrecto\: Puede haber ruido, duplicados o datos no fiables.
+~%-33.3333%Ejecutarlo contra cualquier dominio que se te ocurra, porque son datos públicos. #Incorrecto\: Público no significa sin límites; hace falta propósito legítimo y autorización si corresponde.
+~%-33.3333%Usarlo solo al final para justificar conclusiones ya tomadas. #Incorrecto\: Debe integrarse en el proceso para responder preguntas, no para confirmar sesgos.
+}
+
+::RA_2.CE_osint. Privacidad: doxxing::
+Un alumno propone publicar en redes los datos personales encontrados para "demostrar el riesgo". ¿Cómo se llama esta práctica y por qué es un problema?
+{
+=Doxxing, y es problemática porque expone datos personales con posible daño y puede vulnerar leyes de privacidad. #Correcto\: Aunque algo sea público, difundirlo con intención de daño o sin necesidad es mala praxis.
+~%-33.3333%Threat hunting, y es problemática porque requiere herramientas avanzadas. #Incorrecto\: No es threat hunting; es exposición de datos personales.
+~%-33.3333%Footprinting, y es problemática porque siempre es ilegal. #Incorrecto\: Footprinting puede ser legal con permiso; doxxing es otra cosa.
+~%-33.3333%OSINT profesional, y es obligatoria para concienciar a la organización. #Incorrecto\: OSINT profesional minimiza datos y protege la privacidad; no se basa en exponer a personas.
+}
+
+::RA_2.CE_osint. Cumplimiento legal: tratamiento de datos::
+En una investigación OSINT almacenas correos personales encontrados en una filtración. ¿Qué marco legal se menciona como referencia en Europa para el tratamiento de datos personales?
+{
+=GDPR, que regula la recopilación y uso de datos personales y exige un tratamiento responsable. #Correcto\: En Europa, el GDPR marca obligaciones sobre datos personales.
+~%-33.3333%CVE, porque regula vulnerabilidades y, por tanto, la privacidad. #Incorrecto\: CVE es un catálogo de vulnerabilidades, no una norma de privacidad.
+~%-33.3333%ISO 27001, porque convierte cualquier uso de datos en legal. #Incorrecto\: ISO 27001 es un estándar de gestión de seguridad, no una ley que autorice tratamientos.
+~%-33.3333%DNS, porque los registros públicos hacen siempre legal almacenar cualquier dato. #Incorrecto\: Que un dato sea accesible no elimina obligaciones legales de tratamiento.
+}

@@ -6355,10 +6355,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#26-agente-de-datos" class="md-nav__link">
+  <a href="#26-agente-de-datos-filebeat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.6. Agente de datos
+        2.6. Agente de datos (filebeat)
       
     </span>
   </a>
@@ -8688,10 +8688,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#26-agente-de-datos" class="md-nav__link">
+  <a href="#26-agente-de-datos-filebeat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.6. Agente de datos
+        2.6. Agente de datos (filebeat)
       
     </span>
   </a>
@@ -9190,11 +9190,10 @@ en profundidad, pero sí comprender aspectos importantes.</p>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-20-04">https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-20-04</a></li>
 <li><a href="https://www.rosehosting.com/blog/how-to-install-elk-stack-on-ubuntu-20-04">https://www.rosehosting.com/blog/how-to-install-elk-stack-on-ubuntu-20-04</a></li>
 </ul>
-<h4 id="26-agente-de-datos">2.6. Agente de datos<a class="headerlink" href="#26-agente-de-datos" title="Permanent link">&para;</a></h4>
+<h4 id="26-agente-de-datos-filebeat">2.6. Agente de datos (filebeat)<a class="headerlink" href="#26-agente-de-datos-filebeat" title="Permanent link">&para;</a></h4>
 <p>Para simular una infraestructura, vamos a desplegar un contenedor que hará las funciones de servidor web.
 En este contenedor tendremos instalado <em>Nginx (servidor web)</em> y, como agente de datos, <em>Filebeat</em>.</p>
-<p>Vamos a comenzar por el primero de los Beats. Para instalar Filebeat podemos hacerlo de forma nativa o a
-a través de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr>. Documentación oficial:</p>
+<p>Vamos a comenzar por el primero de los Beats. Para instalar Filebeat podemos hacerlo de forma nativa o a través de <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr>. Documentación oficial:</p>
 <ul>
 <li>De forma nativa: <a href="https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation-configuration.html">https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation-configuration.html</a></li>
 <li>Usando <abbr title="Plataforma de contenedores que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores portátiles y ligeros. Docker facilita la creación, el despliegue y la gestión de aplicaciones en diferentes entornos.">Docker</abbr>: <a href="https://www.elastic.co/guide/en/beats/filebeat/current/running-on-docker.html">https://www.elastic.co/guide/en/beats/filebeat/current/running-on-docker.html</a></li>
@@ -9254,16 +9253,13 @@ Por otra parte, es posible que te encuentres con alguna errata en el fichero, de
 </ul>
 <p>Podríamos haberlo creado dándole una <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> fija, pero al ser un contenedor que se va a comunicar con otro (ELK) que sí tiene <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> fija, no es necesario. De hecho, lo habitual es que los agentes de datos no tengan <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> fija, sino que se comuniquen con el <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> a través de la red.</p>
 <h4 id="27-otras-consideraciones-sobre-el-agente-de-datos">2.7. Otras consideraciones sobre el agente de datos<a class="headerlink" href="#27-otras-consideraciones-sobre-el-agente-de-datos" title="Permanent link">&para;</a></h4>
-<p>Recuerda que, si queremos ver los logs que va generando el contenedor, podemos salir de la shell del
-contenedor y escribir:</p>
+<p>Recuerda que, si queremos ver los logs que va generando el contenedor, podemos salir de la shell del contenedor y escribir:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>docker<span class="w"> </span>logs<span class="w"> </span>--follow<span class="w"> </span>filebeat
 </code></pre></div>
-<p>Recuerda que en el archivo de configuración de Filebeat (<code>/etc/filebeat/filebeat.yml</code>) debes indicar la <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr>
-del <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>. Si no la recuerdas, usa:</p>
+<p>Recuerda que en el archivo de configuración de Filebeat (<code>/etc/filebeat/filebeat.yml</code>) debes indicar la <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> del <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>. Si no la recuerdas, usa:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>docker<span class="w"> </span>network<span class="w"> </span>inspect<span class="w"> </span>elk-red
 </code></pre></div>
-<p>En la imagen de nuestra infraestructura, Logstash está configurado con SSL por defecto. Dado que al
-principio puede dar algún problema, y será una tarea opcional, vamos a deshabilitarlo para facilitar que
+<p>En la imagen de nuestra infraestructura, Logstash está configurado con SSL por defecto. Dado que al principio puede dar algún problema, y será una tarea opcional, vamos a deshabilitarlo para facilitar que
 todo funcione correctamente.</p>
 <p>Modificamos el archivo:</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>elk<span class="w"> </span>bash
@@ -9297,6 +9293,8 @@ Para que quede asi:</p>
 </code></pre></div>
 <p>Recuerda que cualquier cambio en la configuración necesitará parar y reiniciar el contenedor.</p>
 <h4 id="28-chequeos">2.8. Chequeos<a class="headerlink" href="#28-chequeos" title="Permanent link">&para;</a></h4>
+<p>Antes de nada, y para lanzar la generación de datos y posterior ingesta en el <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>, es necesario acceder a la URL <code>http://localhost</code> para generar tráfico web. </p>
+<p>Una vez tenemos el tráfico generado, es hora de comprobar que todo está funcionando correctamente, y que filebeat está enviando los datos al <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>, que Logstash los está recibiendo y que Elasticsearch los está almacenando.</p>
 <p>Los logs de los contenedores son la forma más sencilla de comprobar que todo está funcionando correctamente. Para ver los logs de un contenedor, puedes usar el siguiente comando:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>sudo<span class="w"> </span>docker<span class="w"> </span>logs<span class="w"> </span>--follow<span class="w"> </span>NOMBRE_CONTENEDOR
 </code></pre></div>
@@ -9307,6 +9305,7 @@ Para que quede asi:</p>
 y el siguiente comando para comprobar el estado del servicio:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>docker exec -it elk bash -lc &quot;curl -s http://127.0.0.1:9600/?pretty | head&quot;
 </code></pre></div>
+<p>Ese comando sirve para “hacerle un ping <abbr title="Protocolo de Transferencia de Hipertexto. Es un protocolo que se utiliza para transferir información entre un cliente y un servidor a través de una red. El HTTP permite a los usuarios acceder a sitios web, enviar y recibir datos, etc.">HTTP</abbr>” a Logstash por su puerto interno (no expuesto) de monitorización (9600) y ver si está vivo y saludable.</p>
 <p>Debería mostrar algo como esto:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="p">{</span>
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">  </span><span class="nt">&quot;host&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9fabc8ad5a98&quot;</span><span class="p">,</span>

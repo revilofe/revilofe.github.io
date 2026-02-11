@@ -490,6 +490,8 @@ y el siguiente comando para comprobar el estado del servicio:
 docker exec -it elk bash -lc "curl -s http://127.0.0.1:9600/?pretty | head"
 ```
 
+Ese comando sirve para “hacerle un ping HTTP” a Logstash por su puerto interno (no expuesto) de monitorización (9600) y ver si está vivo y saludable.
+
 Debería mostrar algo como esto:
 
 ```json

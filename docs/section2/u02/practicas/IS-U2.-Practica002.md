@@ -329,13 +329,12 @@ Lógicamente se puede instalar el Stack sin hacer uso de Docker, pero la experie
 * [https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-20-04](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-20-04)
 * [https://www.rosehosting.com/blog/how-to-install-elk-stack-on-ubuntu-20-04](https://www.rosehosting.com/blog/how-to-install-elk-stack-on-ubuntu-20-04)
 
-#### 2.6. Agente de datos
+#### 2.6. Agente de datos (filebeat)
 
 Para simular una infraestructura, vamos a desplegar un contenedor que hará las funciones de servidor web.
 En este contenedor tendremos instalado *Nginx (servidor web)* y, como agente de datos, *Filebeat*.
 
-Vamos a comenzar por el primero de los Beats. Para instalar Filebeat podemos hacerlo de forma nativa o a
-a través de Docker. Documentación oficial:
+Vamos a comenzar por el primero de los Beats. Para instalar Filebeat podemos hacerlo de forma nativa o a través de Docker. Documentación oficial:
 
 * De forma nativa: [https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation-configuration.html](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation-configuration.html)
 * Usando Docker: [https://www.elastic.co/guide/en/beats/filebeat/current/running-on-docker.html](https://www.elastic.co/guide/en/beats/filebeat/current/running-on-docker.html)
@@ -411,22 +410,19 @@ Podríamos haberlo creado dándole una IP fija, pero al ser un contenedor que se
 
 #### 2.7. Otras consideraciones sobre el agente de datos
 
-Recuerda que, si queremos ver los logs que va generando el contenedor, podemos salir de la shell del
-contenedor y escribir:
+Recuerda que, si queremos ver los logs que va generando el contenedor, podemos salir de la shell del contenedor y escribir:
 
 ```bash
 docker logs --follow filebeat
 ```
 
-Recuerda que en el archivo de configuración de Filebeat (`/etc/filebeat/filebeat.yml`) debes indicar la IP
-del SIEM. Si no la recuerdas, usa:
+Recuerda que en el archivo de configuración de Filebeat (`/etc/filebeat/filebeat.yml`) debes indicar la IP del SIEM. Si no la recuerdas, usa:
 
 ```bash
 docker network inspect elk-red
 ```
 
-En la imagen de nuestra infraestructura, Logstash está configurado con SSL por defecto. Dado que al
-principio puede dar algún problema, y será una tarea opcional, vamos a deshabilitarlo para facilitar que
+En la imagen de nuestra infraestructura, Logstash está configurado con SSL por defecto. Dado que al principio puede dar algún problema, y será una tarea opcional, vamos a deshabilitarlo para facilitar que
 todo funcione correctamente.
 
 Modificamos el archivo:
@@ -470,6 +466,10 @@ filebeat:
 Recuerda que cualquier cambio en la configuración necesitará parar y reiniciar el contenedor.
 
 #### 2.8. Chequeos 
+
+Antes de nada, y para lanzar la generación de datos y posterior ingesta en el SIEM, es necesario acceder a la URL `http://localhost` para generar tráfico web. 
+
+Una vez tenemos el tráfico generado, es hora de comprobar que todo está funcionando correctamente, y que filebeat está enviando los datos al SIEM, que Logstash los está recibiendo y que Elasticsearch los está almacenando.
 
 Los logs de los contenedores son la forma más sencilla de comprobar que todo está funcionando correctamente. Para ver los logs de un contenedor, puedes usar el siguiente comando:
 

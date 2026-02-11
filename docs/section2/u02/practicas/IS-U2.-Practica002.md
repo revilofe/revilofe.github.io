@@ -442,19 +442,77 @@ input {
     beats {
         port => 5044
         ssl => false
-        ssl_certificate => "/etc/pki/tls/certs/logstash-beats.crt"
-        ssl_key => "/etc/pki/tls/private/logstash-beats.key"
     }
 }
 ```
 
+Además, también necesitamos modificar el archivo de configuración de Filebeat para que no intente usar SSL:
+
+```bash
+docker exec -it filebeat bash
+vim /etc/filebeat/filebeat.yml
+````
+
+Y cambiamos la sección de Logstash output para que quede así:
+
+```yaml
+output:
+  logstash:
+    enabled: true
+    hosts:
+      - 172.20.0.10:5044
+    timeout: 15
+
+filebeat:
+...
+```
+            
 Recuerda que cualquier cambio en la configuración necesitará parar y reiniciar el contenedor.
 
-Por último, podrás acceder a Kibana (por ejemplo `http://172.19.0.3:5601`) y crear tu propio cuadro de
-mandos.
+#### 2.8. Chequeos 
 
-> Pregunta: ¿qué modificaciones serán necesarias para crear un pequeño cuadro de mando para la visualización
-> de la información?
+Para comprobar que el servicio logstash está funcionando, puedes usar el siguiente comando para comprobar que el puerto 5044 está abierto:
+
+```bash
+❯ docker exec -it elk bash -lc "timeout 2 bash -c '</dev/tcp/127.0.0.1/5044' && echo '5044 ABIERTO' || echo '5044 CERRADO'"
+```
+y el siguiente comando para comprobar el estado del servicio:
+
+```
+docker exec -it elk bash -lc "curl -s http://127.0.0.1:9600/?pretty | head"
+```
+
+Debería mostrar algo como esto:
+
+```json
+
+{
+  "host" : "9fabc8ad5a98",
+  "version" : "8.11.1",
+  "http_address" : "127.0.0.1:9600",
+....
+```
+
+Para comprobar si está llegando información al SIEM, puedes usar el siguiente comando para ver los índices creados en Elasticsearch:
+```
+curl -s http://localhost:9200/_cat/indices\?v
+```
+Un resultado válido, en el que nos indica que el índice `filebeat-2026.02.10` ha sido creado y tiene 123 documentos, sería el siguiente:
+```text
+health status index               uuid                   pri rep docs.count docs.deleted store.size pri.store.size dataset.size
+yellow open   filebeat-2026.02.10 78MtRNkURvOqzy7mA0lI3w   1   1        123            0    282.3kb        282.3kb      282.3kb
+```
+
+#### 2.8. Crear la data view en Kibana
+
+Los datos que llegan al SIEM se almacenan en índices de Elasticsearch. Los indices son como tablas en una base de datos relacional, pero con una estructura más flexible. Cada índice puede contener documentos con campos diferentes, lo que permite almacenar datos de distintas fuentes sin necesidad de una estructura fija.
+
+Para poder consultar y visualizar los indices en Kibana, es necesario crear una data view (anteriormente llamada index pattern). La data view es una plantilla que define cómo Kibana debe interpretar los datos almacenados en los índices de Elasticsearch.
+
+Podrás acceder a Kibana (por ejemplo `http://localhost:5601`), crear una data view y a partir de ahi comenzar a explorar los datos que llegan al SIEM (crear tu propio cuadro de mandos). Para crear la data view, accede a `Stack Management > Data Views` y haz clic en `Create data view`. En el campo `Index name or pattern` introduce `filebeat-*` y haz clic en `Next step`. Después, selecciona el campo `@timestamp` como campo de tiempo y haz clic en `Create data view`.
+
+
+> Pregunta: ¿qué modificaciones serán necesarias para crear un pequeño cuadro de mando para la visualización de la información?
 
 ### 3. Introducir Snort (IDS) en el contenedor 1
 

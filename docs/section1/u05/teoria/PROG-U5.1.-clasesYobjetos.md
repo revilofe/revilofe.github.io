@@ -1,7 +1,7 @@
 ---
-title: "UD 5 - 5.1 Revisión de las clases/objetos"
-description: Revisión de las clases/objetos
-summary: Revisión de las clases/objetos
+title: "UD 5 - 5.1 Clases y objetos (repaso)"
+description: Repaso de clases y objetos en Kotlin
+summary: Repaso de clases y objetos en Kotlin
 authors:
     - Eduardo Fdez
 date: 2024-01-31
@@ -16,18 +16,18 @@ tags:
 ---
 ## 5.1. Revisitando las clases y los objetos
 
-En Kotlin, la Programación Orientada a Objetos (POO) se maneja con una sintaxis concisa y poderosas características que simplifican la codificación y mejoran la legibilidad. Entre estas características, las clases y objetos juegan un papel central, permitiendo a los desarrolladores modelar el mundo real de manera eficiente y efectiva. Kotlin, diseñado para ser completamente interoperable con Java, introduce mejoras significativas sobre este, haciendo que el trabajo con POO sea más intuitivo y menos propenso a errores.
+En Kotlin, la Programación Orientada a Objetos (POO) se maneja con una sintaxis concisa y poderosas características que simplifican la codificación y mejoran la legibilidad. Entre estas características, las clases y objetos juegan un papel central, permitiendo a las personas desarrolladoras modelar el mundo real de manera eficiente y efectiva. Kotlin, diseñado para ser completamente interoperable con Java, introduce mejoras significativas sobre este, haciendo que el trabajo con POO sea más intuitivo y menos propenso a errores.
 
 ### 1. Data class
 
 Las clases de datos, o "data classes", son una característica de Kotlin diseñada para contener datos puros. Son particularmente útiles cuando necesitas crear clases que actúen principalmente como contenedores de datos sin mucha lógica adicional.
 
 Un ejemplo de data class en Kotlin:
-```
+```kotlin
 data class User(val name: String, val age: Int, val email: String)
 ```
 
-La clase de datos anterior define una clase `User` con dos propiedades: `name`, `age` y `email`. Kotlin genera automáticamente métodos como `equals()`, `hashCode()`, y `toString()` para esta clase, lo que la hace muy conveniente para trabajar con datos de forma clara y concisa.
+La clase de datos anterior define una clase `User` con tres propiedades: `name`, `age` y `email`. Kotlin genera automáticamente métodos como `equals()`, `hashCode()` y `toString()` para esta clase, lo que la hace muy conveniente para trabajar con datos de forma clara y concisa.
 
 #### 1.1. ¿Cuándo usarlas?
 
@@ -39,7 +39,7 @@ Usa data classes cuando necesites modelar datos simples y concisos. Por ejemplo,
 
 ##### 1.1.2. Objetos Inmutables
 
-Las data classes son una buena elección cuando prefieres trabajar con objetos inmutables. Aunque Kotlin permite propiedades mutables en data classes, el paradigma funcional favorece la inmutabilidad para evitar efectos secundarios. Es decir, si prefieres que tus objetos de datos no cambien una vez creados, las data classes son una excelente opción. Ademas, proporcionan un método `copy()` que te permite crear copias inmutables de un objeto con propiedades modificadas.
+Las data classes son una buena elección cuando prefieres trabajar con objetos inmutables. Aunque Kotlin permite propiedades mutables en data classes, el paradigma funcional favorece la inmutabilidad para evitar efectos secundarios. Es decir, si prefieres que tus objetos de datos no cambien una vez creados, las data classes son una excelente opción. Además, proporcionan un método `copy()` que te permite crear copias inmutables de un objeto con propiedades modificadas.
 
 ```kotlin
 data class User(val name: String, val age: Int, val email: String)
@@ -54,6 +54,7 @@ val olderJack = jack.copy(age = 2) // Crear una copia inmutable con la edad modi
 Kotlin genera automáticamente métodos útiles para data classes, como `equals()`, `hashCode()`, y `toString()`. Esto es muy útil para comparar instancias de data classes o para imprimir sus propiedades de forma legible. Si necesitas estas funcionalidades "gratis" sin implementarlas tú mismo, las data classes son el camino a seguir.
 
 Los métodos generados automáticamente por Kotlin para data classes son:
+
 - `equals()`: Compara dos instancias de la clase por igualdad estructural. Equivale a usar el operador `==`.
 - `hashCode()`: Devuelve un valor hash único para cada instancia de la clase.
 - `toString()`: Devuelve una representación de cadena de la instancia de la clase.
@@ -78,7 +79,8 @@ Las data classes admiten la destructuración de objetos de forma nativa. Si quie
 data class User(val name: String, val age: Int)
 
 val jane = User("Jane", 35)
-val (name, age) = jane // Destructuración de objetos, asignando propiedades a variables individuales. Tiene el mismo efecto que val name = jane.name y val age = jane.age
+val (name, age) = jane
+// Equivale a: val name = jane.name; val age = jane.age
 println("$name, $age years of age") // => Jane, 35 years of age
 ```
 
@@ -99,15 +101,15 @@ val adults = users.filter { it.age >= 30 } // Operación funcional para filtrar 
 
 Como puedes ver, son bastante útiles. Úsalas cuando quieras simplicidad, claridad y funcionalidad integrada para tus objetos de datos.
 
-#### 1.2. ¿Cómo se implementan en kotlin?
+#### 1.2. ¿Cómo se implementan en Kotlin?
 
-Las data classes son ideales para casos donde la principal responsabilidad de la clase es almacenar datos. De ahi que estas clases se definen con la palabra clave `'data'`. No son la mejor opción cuando tu clase necesita contener mucha lógica de negocio o cuando la herencia (más allá de implementar interfaces) es una parte crucial del diseño de tu clase.
+Las data classes son ideales para casos donde la principal responsabilidad de la clase es almacenar datos. De ahí que estas clases se definan con la palabra clave `data`. No son la mejor opción cuando tu clase necesita contener mucha lógica de negocio o cuando la herencia (más allá de implementar interfaces) es una parte crucial del diseño de tu clase.
 
 ```kotlin
 data class User(val name: String, val age: Int)
 ```
 
-De forma automática el compilador crear los métodos `hashCode()`, `equals()`, `copy()` y `toString()` a partir de todas las propiedades declaradas en el constructor primario. También se generan las funciones `componentN()` que corresponden a las propiedades declaradas en orden en el constructor primario.
+De forma automática el compilador crea los métodos `hashCode()`, `equals()`, `copy()` y `toString()` a partir de todas las propiedades declaradas en el constructor primario. También se generan las funciones `componentN()` que corresponden a las propiedades declaradas en orden en el constructor primario.
 
 Para evitar comportamientos extraños estas clases deben **cumplir ciertos requisitos**:
 
@@ -121,7 +123,7 @@ El compilador sólo tiene en cuenta las propiedades declaradas en el constructor
 ```kotlin
 data class DataClassExample(val x: Int, val y: Int, val z: Int) {
     // Propiedad excluida
-    var xx; Int = 0
+    var xx: Int = 0
 }
 
 val fooData = DataClassExample(1, 2, 4)
@@ -132,7 +134,7 @@ println(fooData) // => DataClassExample(x=1, y=2, z=4)
 println(fooCopy) // => DataClassExample(x=1, y=100, z=4)
 ```
 
-El compilador genera la función `copy()` que permite copiar un objeto y en caso necesario, crear la copia alterando algunas de sus propiedades y manteniendo el resto.
+El compilador genera la función `copy()` que permite copiar un objeto y, en caso necesario, crear la copia alterando algunas de sus propiedades y manteniendo el resto.
 
 ```kotlin
 data class User(val name: String, val age: Int)
@@ -146,7 +148,7 @@ val jack = User(name = "Jack", age = 1)
 val olderJack = jack.copy(age = 2)
 ```
 
-Las funciones `componentN()` permite desestructurar las propiedades:
+Las funciones `componentN()` permiten desestructurar las propiedades:
 
 ```kotlin
 val jane = User("Jane", 35)
@@ -154,13 +156,13 @@ val (name, age) = jane
 println("$name, $age years of age") // => Jane, 35 years of age
 ```
 
-Cada clase deriva de `'Any'`, y viene con una declaración de método `'hashCode()'`. Esto es el equivalente de un método `'hashCode()'` de clase _'Object'_ de Java. Este método es importante cuando se insertan instancias del objeto en colecciones, como un mapa. Al implementar este método, se debe cumplir con una serie de requisitos:
+Cada clase deriva de `Any` y viene con una declaración de método `hashCode()`. Esto es el equivalente de un método `hashCode()` de la clase `Object` de Java. Este método es importante cuando se insertan instancias de un objeto en colecciones, como un mapa. Al implementar este método, se debe cumplir con una serie de requisitos:
 
 1. Cuando se invoque en el mismo objeto más de una vez durante el tiempo de ejecución sin que haya sufrido cambios, el método `'hashCode()'` debe devolver constantemente el mismo valor, dado que el objeto no se modificó.      
 2. Si para dos objetos el método `'equals()'`  devuelve true, entonces llamar al método `'hashCode()'` en cada uno de ellos debería devolver el mismo valor entero.      
 3. Si dos objetos no son iguales, es decir, que el método `'equals()'` devuelve false cuando se comparan, no es un requisito que cada método `'hashCode()'` del objeto devuelva valores distintos. Sin embargo, producir un entero distinto para objetos desiguales podría mejorar el rendimiento de las colecciones basadas en 'hash'.     
 
-Las _'data classes'_ son un forma compacta y legible de devolver dos o más valores de una función. Otra alternativa, menos legible, es utilizar el tipo `'Pair'` o `'Triple'` proporcionado por Kotlin:
+Las _'data classes'_ son una forma compacta y legible de devolver dos o más valores de una función. Otra alternativa, menos legible, es utilizar el tipo `Pair` o `Triple` proporcionado por Kotlin:
 
 ```kotlin
 data class Result(val result: Int, val status: Boolean)
@@ -170,7 +172,7 @@ fun checkStatus() = Result(10, true)  // función que retorna un tipo 'Result'
 val (result, status) = checkStatus() // usamos la desestructuración de datos para acceder a los datos
 ```
 
-Aquí puedes ver un ejemplo en el que se compara una data class en java con una data class en kotlin: [data Class](https://devexpert.io/data-classes-kotlin/)
+Aquí puedes ver un ejemplo en el que se compara una data class en Java con una data class en Kotlin: [data class](https://devexpert.io/data-classes-kotlin/)
 
 
 ### 2. Sealed classes
@@ -204,7 +206,7 @@ Cuando estás modelando un conjunto finito de estados para un sistema o los posi
 
 ##### 2.1.2. Uso en Patrones de Diseño Tipo "Cuando" (when)
 
-Las sealed classes son particularmente útiles con el patrón de diseño "when" en Kotlin, ya que el compilador puede verificar si todos los casos posibles han sido cubiertos. Esto elimina la necesidad de un cláusula `else` innecesaria y aumenta la seguridad del código al garantizar que todos los casos posibles sean considerados. 
+Las sealed classes son particularmente útiles con el patrón `when` en Kotlin, ya que el compilador puede verificar si todos los casos posibles han sido cubiertos. Esto elimina la necesidad de una cláusula `else` innecesaria y aumenta la seguridad del código al garantizar que todos los casos posibles sean considerados.
 
 ```kotlin
 sealed class ResultadoOperacion {
@@ -261,20 +263,20 @@ En este ejemplo, la clase sellada `Evento` define tres tipos de eventos posibles
 
 Al usar sealed classes para representar diferentes tipos de operaciones o entidades con comportamientos específicos, puedes simplificar significativamente la lógica de negocio. Esto se debe a que puedes usar el tipo de la clase sellada para controlar el flujo de la lógica en tu aplicación, asegurándote de que solo se consideren las instancias permitidas.
 
-En los ejemplos anteriores, las sealed classes se utilizan para representar diferentes resultados de operaciones y eventos, lo que simplifica la lógica de manejo de estos casos específicos. Al usar sealed classes, puedes garantizar que solo se consideren los casos permitidos y que la lógica de negocio sea más clara y concisa.k
+En los ejemplos anteriores, las sealed classes se utilizan para representar diferentes resultados de operaciones y eventos, lo que simplifica la lógica de manejo de estos casos específicos. Al usar sealed classes, puedes garantizar que solo se consideren los casos permitidos y que la lógica de negocio sea más clara y concisa.
 
 #### 2.2. ¿Cómo usarlas?
 
-En Kotlin una *__'sealed class'__* es una clase abstracta (no se puede crear instancias) que otras clases pueden extender. Estas subclases se definen dentro del cuerpo de la _'sealed class'_, en el mismo archivo por lo que podemos conocer todas las subclases posibles simplemente viendo el archivo.
+En Kotlin, una `sealed class` es una clase abstracta (no se pueden crear instancias) que otras clases pueden extender. Estas subclases se definen en el mismo archivo, por lo que podemos conocer todas las subclases posibles simplemente revisando el código.
 
 Las _'sealed class'_ son una herramienta excelente para cuando necesitas asegurar una jerarquía cerrada de clases, lo que te permite manejar de manera exhaustiva y segura los distintos tipos definidos. Usarlas promueve un diseño de software más seguro, limpio y mantenible, especialmente en escenarios donde el conjunto de posibles tipos es conocido y limitado. Son, en cierto sentido, una extensión de las clases de enumeración.
 
-* Podemos agregar el modificador `'abstract'`, pero esto es redundante porque estas clases son abstractas por defecto.
-* No pueden tener el modificador `'open'` ni `'final'`.
-* Podemos declarar clases de datos y objetos como subclases a una _'sealed class'_ (aún deben declararse en el mismo archivo).
+* Podemos agregar el modificador `abstract`, pero es redundante porque estas clases son abstractas por defecto.
+* No pueden tener el modificador `open` ni `final`.
+* Podemos declarar data classes y objetos como subclases de una `sealed class` (aún deben declararse en el mismo archivo).
 * No pueden tener constructores públicos, ya que sus constructores son privados de forma predeterminada.
 
-##### 2.2.1 Ejemplos Prácticos
+##### 2.2.1. Ejemplos prácticos
 
 ```kotlin
 // shape.kt
@@ -295,7 +297,7 @@ sealed class ResultadoOperacion {
 
 Este último ejemplo ilustra cómo una operación puede terminar en éxito o error, y cómo las sealed classes pueden ser usadas para modelar estos dos resultados posibles de manera segura y controlada.
 
-### 3. Generics
+### 3. Genéricos (generics)
 
 Los genéricos son una herramienta poderosa en programación que te permite escribir código más flexible y reutilizable al permitirte trabajar con tipos de datos aún no especificados.
 
@@ -323,15 +325,15 @@ Los genéricos te ayudan a escribir código más claro y seguro, evitando el uso
 
 Si estás desarrollando una biblioteca o framework que será utilizado en una variedad de contextos y con diferentes tipos de datos, los genéricos te permiten proporcionar componentes flexibles y tipo-seguros que pueden ser personalizados por los usuarios según sus necesidades específicas.
 
-#### 3.2. ¿Como usarlos?
+#### 3.2. ¿Cómo usarlos?
 
 Los genéricos son fundamentales cuando buscas escribir código más abstracto, flexible y reutilizable, permitiéndote definir comportamientos que son independientes del tipo de datos con los que trabajan. Su uso correcto puede llevar a un diseño de software más limpio, seguro y fácil de mantener. Los siguientes conceptos son útiles para entender cómo funcionan los genéricos en Kotlin:
 
-*__'Covariance'__* y *__'contravariance'__* son términos que hacen referencia a la capacidad de usar un tipo más derivado (más específico) o menos derivado (menos específico) que el indicado originalmente. Los parámetros de tipo genérico admiten estos términos para proporcionar mayor flexibilidad a la hora de asignar y usar tipos genéricos. Cuando se hace referencia a un sistema de tipos, se definen como:
+**Covarianza** (*covariance*) y **contravarianza** (*contravariance*) son términos que hacen referencia a la capacidad de usar un tipo más derivado (más específico) o menos derivado (más genérico) que el indicado originalmente. Los parámetros de tipo genérico admiten estos conceptos para proporcionar mayor flexibilidad a la hora de asignar y usar tipos genéricos. Cuando se hace referencia a un sistema de tipos, se definen como:
 
-* *__'Covariance'__* -> Permite usar un tipo más derivado que el especificado originalmente. Puede asignar una instancia de `Class<Derived>` a una variable de tipo `Class<Base>`.
-* *__'Contravariance'__* -> Permite usar un tipo más genérico (menos derivado) que el especificado originalmente. Puede asignar una instancia de `Class<Base>` a una variable de tipo `Class<Derived>`.
-* *__'Invariance'__* -> Significa que solo se puede usar el tipo especificado originalmente. Así, un parámetro de tipo genérico invariable no es covariante ni contravariante. No se puede asignar una instancia de `List<Base>` a una variable de tipo `List<Derived>` o viceversa.
+* **Covarianza**: Permite usar un tipo más derivado que el especificado originalmente. Puede asignar una instancia de `Class<Derived>` a una variable de tipo `Class<Base>`.
+* **Contravarianza**: Permite usar un tipo más genérico (menos derivado) que el especificado originalmente. Puede asignar una instancia de `Class<Base>` a una variable de tipo `Class<Derived>`.
+* **Invarianza**: Significa que solo se puede usar el tipo especificado originalmente. Así, un parámetro de tipo genérico invariable no es covariante ni contravariante. No se puede asignar una instancia de `List<Base>` a una variable de tipo `List<Derived>` o viceversa.
 
 Al igual que en Java, en Kotlin las clases pueden tener tipos con parámetros.
 
@@ -350,7 +352,7 @@ val box: Box<Int> = Box<Int>(1)
 Si los parámetros se pueden inferir, como por ejemplo de los argumentos del constructor o por algún otro medio, se pueden omitir los argumentos de tipo:
 
 ```kotlin
-val box = Box(1) // '1' tiene tipo Int así que el compilador infiere el tipo "Box<Int>"
+val box = Box(1) // '1' tiene tipo Int, así que el compilador infiere Box<Int>
 ```
 
 ##### 3.2.1. La palabra clave 'out'
@@ -394,9 +396,9 @@ val c: ParameterizedConsumer<Int> = a // Correcto
 val d: ParameterizedConsumer<String> = a // ¡Error de compilación!
 ```
 
-##### 3.2.3. Star projections
+##### 3.2.3. Proyecciones estrella (star projections)
 
-Hay situaciones en las que no es importante el tipo específico de un valor. Para ello usamos el operador `'*'` o _'star projection'_:
+Hay situaciones en las que no es importante el tipo específico de un valor. Para ello usamos el operador `*` (star projection):
 
 ```kotlin
 fun printArray(array: Array<*>) {
@@ -409,7 +411,7 @@ printArray(arrayOf(1,2,3))
 printArray(arrayOf("hello", "World!!", 5))
 ```
 
-##### 3.2.4. Generic functions
+##### 3.2.4. Funciones genéricas (generic functions)
 
 Las funciones también pueden ser genéricas en los tipos que utilizan. Esto permite escribir una función que puede funcionar con cualquier tipo, en lugar de solo un tipo específico. Para ello, definimos los parámetros de tipo en la firma de función.
 
@@ -423,15 +425,15 @@ fun <T> choose(t1: T, t2: T, t3: T): T {
 }
 
 // Podemos usar esta función con enteros. Si el compilador puede inferir el tipo se puede omitir.
-val r = choose<Int>(5, 7, 9)
-val r = choose(5, 7, 9)
+val r1 = choose<Int>(5, 7, 9)
+val r2 = choose(5, 7, 9)
 
 // También es válido usar la función con Strings
-val s = choose<String>("BMW", "Audi", "Ford")
-val s = choose("BMW", "Audi", "Ford")
+val s1 = choose<String>("BMW", "Audi", "Ford")
+val s2 = choose("BMW", "Audi", "Ford")
 ```
 
-##### 3.2.5. Generic constraints
+##### 3.2.5. Restricciones genéricas (generic constraints)
 
 El conjunto de todos los tipos posibles que pueden sustituirse por un parámetro de tipo dado puede estar restringido por restricciones genéricas.
 
@@ -448,7 +450,7 @@ El límite superior predeterminado (si no se especifica) es `'Any?'`.
 
 ### 4. Clases Internamente Agrupadas
 
-En Kotlin, tenemos estas 'Clases Internamente Agrupadas', que pueden ser o bien 'Nested Classes' sin acceso directo a la clase exterior, o bien 'Inner Classes' que sí tienen acceso."
+En Kotlin, tenemos estas clases internamente agrupadas, que pueden ser `nested classes` (sin acceso directo a la clase exterior) o `inner classes` (con acceso a la clase exterior).
 
 #### 4.1. ¿Cuándo usarlas?
 
@@ -508,7 +510,7 @@ class OuterClass() {
 val demo = OuterClass().InnerClass().innerClassFunc() // => yo
 ```
 
-##### 4.2.3 Diferencias entre Nested e Inner classes
+##### 4.2.3. Diferencias entre Nested e Inner classes
 
 ¡Vamos a desenredar este lío de clases en Kotlin con un poco de humor y claridad!
 
@@ -520,7 +522,7 @@ Por tanto:
 
 * **Nested Class (Clase Anidada)**: Es como un inquilino independiente en tu casa grande. No necesita de la clase externa para funcionar, por lo que no puede acceder a sus miembros directamente. Se declara sin la palabra clave `inner`.
 
-  ```Kotlin
+  ```kotlin
   class CasaGrande {
       class PrimoIndependiente {
           fun hacerAlgo() {
@@ -553,7 +555,7 @@ Usa enums cuando necesites representar un grupo fijo de constantes relacionadas.
 
 ##### 5.1.2. Control de Flujo Basado en Valores Limitados
 
-Cuando tu lógica de negocio implica ramificaciones basadas en un conjunto limitado de valores posibles, las enumeraciones hacen tu código más legible y menos propenso a errores, permitiéndote usar `switch` o `when` para gestionar diferentes casos de manera clara.
+Cuando tu lógica de negocio implica ramificaciones basadas en un conjunto limitado de valores posibles, las enumeraciones hacen tu código más legible y menos propenso a errores, permitiéndote usar `when` (equivalente al `switch` de otros lenguajes) para gestionar diferentes casos de manera clara.
 
 ##### 5.1.3. Evitar Valores Mágicos
 
@@ -574,7 +576,7 @@ Las enumeraciones son una herramienta poderosa para mejorar la legibilidad, la s
 
 **Las clases de enumeración son similares a los tipos _'enum'_ de Java**. El uso más básico de las clases de enumeración es la implementación de enumeraciones de tipos seguros. Cada constante de la enumeración es un objeto. Las constantes de la enumeración están separadas por comas.
 
-##### 5.2.1 Ejemplo práctico
+##### 5.2.1. Ejemplo práctico
 
 Imagina que estás desarrollando un juego y necesitas representar las direcciones en las que un jugador puede moverse. Podrías usar una enum para esto:
 
@@ -588,11 +590,11 @@ Este enfoque mejora la legibilidad del código y asegura que solo se puedan usar
 
 ##### 5.2.2. Constructores de Enumeración
 
-Ademas, las enumeraciones pueden tener constructor:
+Además, las enumeraciones pueden tener constructor:
 
 ```kotlin
 enum class Direction(val angle: Int) {
-    North(90), West(180), South(270), East(0)
+    NORTH(90), WEST(180), SOUTH(270), EAST(0)
 }
 ```
 
@@ -646,7 +648,7 @@ fun countries() {
 
 Aqui puedes ver un ejemplo más avanzado sobre el uso de [enum Class](https://www.baeldung.com/kotlin/enum) en kotlin.
 
-### 6. Objects
+### 6. Objetos (objects)
 
 En kotlin, los objetos pueden ser definidos de forma muy similar a las clases. A veces necesitamos crear un objeto con una ligera modificación de alguna clase, sin declarar explícitamente una nueva subclase para ello. Java maneja este caso con clases internas anónimas. Kotlin generaliza ligeramente este concepto con _'object expressions'_ y _'objects declarations'_.
 
@@ -663,7 +665,7 @@ Hay importantes diferencias semánticas entre un _'object expression'_ y un _'ob
 * Los _'object declaration'_ se inicializan cuando se accede por primera vez, de forma perezosa. Suelen usarse para implementar patrones de diseño como el patrón _'Singleton'_.
 * Por su parte, un _'companion object'_ se inicializa cuando se carga la clase correspondiente. Se usa para implementar métodos y propiedades de nivel de clase en Kotlin.
 
-#### 6.1. Objects expressions
+#### 6.1. Expresiones de objeto (object expressions)
 
 Para crear un objeto de una clase anónima que hereda de algún tipo (o tipos), escribimos:
 
@@ -685,7 +687,7 @@ fun countClicks(window: JComponent) {
 }
 ```
 
-#### 6.2. Objects declarations
+#### 6.2. Declaraciones de objeto (object declarations)
 
 Colocamos la palabra clave `'object'` antes del nombre del objeto que queremos crear. De hecho, estamos creando un **SINGLETON** cuando creamos objetos en Kotlin usando esta construcción ya que solo existe una instancia de un objeto.
 
@@ -717,7 +719,7 @@ object APIConstants {
 
 ### 7. Companion objects
 
-Los _'companion objects'_ son un tipo de _'object declaration'_. Como Kotlin no admite clases, métodos y/o propiedades estáticas, como las que tenemos en Java (tambien llamadas métodos/propiedades de clase),  Kotlin provee los _'companion objects'_. Estos objetos son básicamente un objeto que pertenece a una clase que se conoce como la clase complementaria del objeto. Este objeto se indica con la palabra clave `'companion'`.
+Los _'companion objects'_ son un tipo de _'object declaration'_. Como Kotlin no admite clases, métodos y/o propiedades estáticas, como las que tenemos en Java (también llamadas métodos/propiedades de clase), Kotlin provee los _'companion objects'_. Estos objetos son básicamente un objeto que pertenece a una clase que se conoce como la clase complementaria del objeto. Este objeto se indica con la palabra clave `'companion'`.
 
 Similar a los métodos estáticos en Java, un _'companion object'_ no está asociado con una instancia de clase, sino con la propia clase.
 
@@ -758,25 +760,28 @@ MyClass().sayHello() // incorrecto
 MyClass.Factory.sayHelloFromCompanion() // Invocar un método del 'companion'
 ```
 
----
+## Referencias y bibliografía
 
-## Reference
+### Referencias
 
-* [data class](https://devexpert.io/data-classes-kotlin/)
-* [class enum](https://www.baeldung.com/kotlin/enum)
+* [Data classes en Kotlin (ejemplo y explicación)](https://devexpert.io/data-classes-kotlin/)
+* [Enumeraciones en Kotlin (ejemplo y explicación)](https://www.baeldung.com/kotlin/enum)
 * [https://kotlinlang.org/docs/reference/](https://kotlinlang.org/docs/reference/)
 * [https://www.packtpub.com/application-development/programming-kotlin](https://www.packtpub.com/application-development/programming-kotlin)
 * [https://learnxinyminutes.com/docs/kotlin/](https://learnxinyminutes.com/docs/kotlin/)
+
+## Recursos adicionales
+
 * [https://github.com/Zhuinden/guide-to-kotlin](https://github.com/Zhuinden/guide-to-kotlin)
 * [https://superkotlin.com/kotlin-mega-tutorial/](https://superkotlin.com/kotlin-mega-tutorial/)
 * [https://revilofe.github.io/](https://revilofe.github.io/)
 
-## Fuente
+## Fuentes
 
 * [Apuntes de kotlin](https://github.com/alxgcrz/_kotlin_)
 * [Kotlinlang](https://kotlinlang.org)
 
-## License
+## Licencia
 
 [![Licencia de Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 Esta obra está bajo una [licencia de Creative Commons Reconocimiento-Compartir Igual 4.0 Internacional](http://creativecommons.org/licenses/by-sa/4.0/).

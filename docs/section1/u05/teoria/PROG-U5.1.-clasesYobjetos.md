@@ -437,7 +437,10 @@ val s2 = choose("BMW", "Audi", "Ford")
 
 El conjunto de todos los tipos posibles que pueden sustituirse por un parámetro de tipo dado puede estar restringido por restricciones genéricas.
 
-El tipo más común de restricción es un límite superior que corresponde a la palabra clave de extensión de Java:
+El tipo más común de restricción es un límite superior que corresponde a la palabra clave ` extends` en Java y a `:` en Kotlin. Esto significa que el tipo de argumento debe ser un subtipo de un tipo específico o debe implementar una interfaz específica.
+
+Es decir, cuando pones <T>, le estás diciendo a Kotlin: "Acepta cualquier tipo de dato". Pero a veces necesitas ser más específico. Por ejemplo: "Acepta cualquier tipo de dato, siempre y cuando se pueda comparar".  Ese "siempre y cuando" es el límite superior. En el ejemplo siguiente,  con la declaración `fun <T : Comparable<T>>` queremos decir que el símbolo `:` en Kotlin equivale a decir "debe heredar de" o "debe implementar".
+
 
 ```kotlin
 fun <T : Comparable<T>> sort(list: List<T>) {  ... }
@@ -471,7 +474,7 @@ Por otro lado, una Nested Class (específicamente una clase anidada estática en
 ##### 4.1.3. Consideraciones Conceptuales
 
 * **Acoplamiento:** Si tu clase interna está tan acoplada a la clase externa que no tiene sentido sin ella, una Inner Class es apropiada. Es una relación íntima y directa, como la de los miembros de una familia.
-* **Independencia y Modularidad:** Si tu clase puede funcionar de manera independiente de la clase externa, y especialmente si puede ser útil para otras clases, entonces una Nested Class (estática) es la mejor elección. Piensa en ella como un vecino que tiene su propia casa y vida pero comparte una comunidad contigo.
+* **Independencia y Modularidad:** Si tu clase puede funcionar de manera independiente de la clase externa, y especialmente si puede ser útil para otras clases, entonces una Nested Class (estática) es la mejor elección. Piensa en ella como un vecino que tiene su propia casa y vida pero comparte una comunidad contigo.que verás más abajo
 
 
 #### 4.2. ¿Cómo usarlas?

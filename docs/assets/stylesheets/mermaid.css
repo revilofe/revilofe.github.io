@@ -4,6 +4,30 @@
   text-align: center;
 }
 
+.md-typeset .mermaid .mermaid-toolbar {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0.2rem 0 0.6rem;
+}
+
+.md-typeset .mermaid .mermaid-btn {
+  appearance: none;
+  border: 1px solid rgba(37, 99, 235, 0.5);
+  background: rgba(255, 255, 255, 0.7);
+  color: #0b1220;
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.md-typeset .mermaid .mermaid-btn:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
 .md-typeset .mermaid svg {
   max-width: 100%;
   height: auto;

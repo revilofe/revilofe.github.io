@@ -264,7 +264,7 @@ extra_css:
 extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
   - https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js
-  - assets/javascripts/mermaid-init.js
+  - assets/javascripts/mermaid-init-v2.js
 
 theme:
   name: material

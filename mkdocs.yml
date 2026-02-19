@@ -315,11 +315,14 @@ markdown_extensions:
   - admonition
   - def_list
   - footnotes
-  - meta
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.snippets: #Tooltips https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-tooltips
       auto_append: 
         - includes/abbreviations.md
@@ -334,12 +337,9 @@ markdown_extensions:
 #  - pymdownx.emoji:
 #      emoji_index: !!python/name:materialx.emoji.twemoji
 #      emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.highlight
-  - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.superfences
   - pymdownx.tilde
   - pymdownx.tabbed:
       alternate_style: true #The Tabbed extension allows the usage of content tabs, a simple way to group related content and code blocks under accessible tabs.

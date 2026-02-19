@@ -273,6 +273,30 @@ fun main() {
 }
 ```
 
+**Diagrama (Mermaid):** Este diagrama de clases representa la relación de
+herencia e implementación del ejemplo anterior (C hereda de A e implementa B).
+
+```mermaid
+classDiagram
+    class A {
+        +f()
+        +a()
+    }
+
+    class B {
+        <<interface>>
+        +f()
+        +b()
+    }
+
+    class C {
+        +f()
+    }
+
+    A <|-- C
+    B <|.. C
+```
+
 **Respuesta:** Al ejecutar el código en `main`, observarás lo siguiente en la consola:
 
 1. **Instancia de C:** Al instanciar `C` y llamar a `c.f()`, muestra en pantalla "AB". Esto se debe a que `C.f()` sobreescrito ejecuta explícitamente ambas implementaciones de `f()` de `A` y `B`.

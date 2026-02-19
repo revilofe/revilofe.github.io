@@ -6,3 +6,4 @@ slides/node_modules/*
 /logs/*
 /.serena/*
 /.gemini/*
+site/

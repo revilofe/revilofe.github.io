@@ -12659,17 +12659,16 @@ FIN DEL COMENTARIO -->
 <li><strong>Integración</strong>: <abbr title="Plataforma de desarrollo colaborativo que permite a los desarrolladores alojar, revisar y colaborar en proyectos de software. En GitHub, los desarrolladores pueden compartir código, realizar revisiones de código, gestionar problemas y solicitudes de extracción, etc.">GitHub</abbr>, GitLab, Notion</li>
 <li><strong>Ejemplo</strong>:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>classDiagram
-<a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a>    Usuario &quot;1&quot; -- &quot;*&quot; Orden
-<a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a>    class Usuario{
-<a id="__codelineno-66-4" name="__codelineno-66-4" href="#__codelineno-66-4"></a>        +String nombre
-<a id="__codelineno-66-5" name="__codelineno-66-5" href="#__codelineno-66-5"></a>        +login()
-<a id="__codelineno-66-6" name="__codelineno-66-6" href="#__codelineno-66-6"></a>    }
-<a id="__codelineno-66-7" name="__codelineno-66-7" href="#__codelineno-66-7"></a>    class Orden{
-<a id="__codelineno-66-8" name="__codelineno-66-8" href="#__codelineno-66-8"></a>        +Date fecha
-<a id="__codelineno-66-9" name="__codelineno-66-9" href="#__codelineno-66-9"></a>        +procesar()
-<a id="__codelineno-66-10" name="__codelineno-66-10" href="#__codelineno-66-10"></a>    }
-</code></pre></div>
+<pre class="mermaid"><code>classDiagram
+    Usuario "1" -- "*" Orden
+    class Usuario{
+        +String nombre
+        +login()
+    }
+    class Orden{
+        +Date fecha
+        +procesar()
+    }</code></pre>
 <p><strong>IntelliJ IDEA Diagram Generator</strong></p>
 <ul>
 <li><strong>Uso</strong>: Click derecho en clase → "Diagrams" → "Show Diagram"</li>
@@ -12736,15 +12735,15 @@ FIN DEL COMENTARIO -->
 <p>Estos son los conceptos fundamentales que debes dominar sobre diagramas de clases. Revisa esta sección antes de crear cualquier diagrama.</p>
 <h4 id="91-sobre-la-notacion-basica">9.1. Sobre la Notación Básica<a class="headerlink" href="#91-sobre-la-notacion-basica" title="Permanent link">&para;</a></h4>
 <p><strong>Estructura de una clase</strong>:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>┌─────────────────────┐
-<a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a>│   NombreClase       │ ← PascalCase, sustantivo singular
-<a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a>├─────────────────────┤
-<a id="__codelineno-67-4" name="__codelineno-67-4" href="#__codelineno-67-4"></a>│ - atributo: Tipo    │ ← Visibilidad + nombre + tipo
-<a id="__codelineno-67-5" name="__codelineno-67-5" href="#__codelineno-67-5"></a>│ # otroAtrib: Tipo   │
-<a id="__codelineno-67-6" name="__codelineno-67-6" href="#__codelineno-67-6"></a>├─────────────────────┤
-<a id="__codelineno-67-7" name="__codelineno-67-7" href="#__codelineno-67-7"></a>│ + metodo(): Tipo    │ ← Visibilidad + nombre + parámetros + retorno
-<a id="__codelineno-67-8" name="__codelineno-67-8" href="#__codelineno-67-8"></a>│ - privado(): Unit   │
-<a id="__codelineno-67-9" name="__codelineno-67-9" href="#__codelineno-67-9"></a>└─────────────────────┘
+<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>┌─────────────────────┐
+<a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a>│   NombreClase       │ ← PascalCase, sustantivo singular
+<a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a>├─────────────────────┤
+<a id="__codelineno-66-4" name="__codelineno-66-4" href="#__codelineno-66-4"></a>│ - atributo: Tipo    │ ← Visibilidad + nombre + tipo
+<a id="__codelineno-66-5" name="__codelineno-66-5" href="#__codelineno-66-5"></a>│ # otroAtrib: Tipo   │
+<a id="__codelineno-66-6" name="__codelineno-66-6" href="#__codelineno-66-6"></a>├─────────────────────┤
+<a id="__codelineno-66-7" name="__codelineno-66-7" href="#__codelineno-66-7"></a>│ + metodo(): Tipo    │ ← Visibilidad + nombre + parámetros + retorno
+<a id="__codelineno-66-8" name="__codelineno-66-8" href="#__codelineno-66-8"></a>│ - privado(): Unit   │
+<a id="__codelineno-66-9" name="__codelineno-66-9" href="#__codelineno-66-9"></a>└─────────────────────┘
 </code></pre></div></p>
 <p><strong>Visibilidad</strong>:</p>
 <ul>
@@ -12825,8 +12824,8 @@ FIN DEL COMENTARIO -->
 <li><strong>Línea discontinua (- - →)</strong>: Dependencia (uso temporal)</li>
 </ul>
 <h4 id="93-sobre-multiplicidad">9.3. Sobre Multiplicidad<a class="headerlink" href="#93-sobre-multiplicidad" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>A ───────────────── B
-<a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a>   1             *
+<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>A ───────────────── B
+<a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a>   1             *
 </code></pre></div>
 <table>
 <thead>
@@ -12870,7 +12869,7 @@ FIN DEL COMENTARIO -->
 </tbody>
 </table>
 <p><strong>Cómo leer</strong>: </p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>Usuario  1 ─────── * Orden
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>Usuario  1 ─────── * Orden
 </code></pre></div>
 Se lee: "Un Usuario realiza 0 o muchas Órdenes" y "Una Orden pertenece a exactamente 1 Usuario"</p>
 <h4 id="94-mejores-practicas-checklist">9.4. Mejores Prácticas: Checklist<a class="headerlink" href="#94-mejores-practicas-checklist" title="Permanent link">&para;</a></h4>

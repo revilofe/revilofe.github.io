@@ -140,10 +140,22 @@
 
     // Render diagrams after navigation changes (works with and without instant loading).
     window.mermaid.initialize(mermaidConfig());
-    window.mermaid.run({ querySelector: ".mermaid" });
+    var runResult;
+    try {
+      runResult = window.mermaid.run({ querySelector: ".mermaid" });
+    } catch (e) {
+      // If Mermaid rendering fails, don't break the whole page.
+      return;
+    }
 
-    // Attach pan/zoom controls to generated SVGs.
-    enablePanZoom();
+    // Mermaid v10 renders asynchronously. Initialize pan/zoom after SVG exists.
+    if (runResult && typeof runResult.then === "function") {
+      runResult.then(function () {
+        enablePanZoom();
+      });
+    } else {
+      enablePanZoom();
+    }
   }
 
   if (window.document$ && typeof window.document$.subscribe === "function") {

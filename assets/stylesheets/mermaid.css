@@ -1,0 +1,21 @@
+.md-typeset .mermaid {
+  overflow: auto;
+  border-radius: 0.2rem;
+  text-align: center;
+}
+
+.md-typeset .mermaid svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Friendly cursor when panning is enabled */
+.md-typeset .mermaid svg {
+  cursor: grab;
+}
+
+.md-typeset .mermaid svg:active {
+  cursor: grabbing;
+}

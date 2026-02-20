@@ -76,6 +76,26 @@
       if (svgEl.dataset) svgEl.dataset.panzoom = "1";
 
       try {
+        function fitToWidth(panZoom) {
+          // Prefer "fit to width" so tall diagrams don't become tiny.
+          if (!panZoom || typeof panZoom.getSizes !== "function") {
+            panZoom.fit();
+            panZoom.center();
+            return;
+          }
+
+          var sizes = panZoom.getSizes();
+          if (!sizes || !sizes.viewBox || !sizes.viewBox.width || !sizes.width) {
+            panZoom.fit();
+            panZoom.center();
+            return;
+          }
+
+          var targetZoom = sizes.width / sizes.viewBox.width;
+          if (typeof panZoom.zoom === "function") panZoom.zoom(targetZoom);
+          panZoom.center();
+        }
+
         // Create the toolbar *before* initializing svg-pan-zoom so initial fit/center
         // calculations match the final layout (prevents diagrams looking clipped).
         var toolbarEl;
@@ -124,19 +144,16 @@
           panZoom.zoomOut();
         });
         addButton("Fit", "Fit diagram", function () {
-          panZoom.fit();
-          panZoom.center();
+          fitToWidth(panZoom);
         });
         addButton("Reset", "Reset zoom", function () {
           panZoom.resetZoom();
-          panZoom.fit();
-          panZoom.center();
+          fitToWidth(panZoom);
         });
 
         // Ensure the diagram is fitted after the toolbar affects layout.
         if (typeof panZoom.resize === "function") panZoom.resize();
-        panZoom.fit();
-        panZoom.center();
+        fitToWidth(panZoom);
       } catch (e) {
         // If a diagram fails to init, don't break the whole page.
       }

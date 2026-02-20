@@ -29,7 +29,9 @@
 }
 
 .md-typeset .mermaid svg {
-  width: 100%;
+  /* Mermaid sometimes injects an inline max-width (e.g. 204px), shrinking diagrams. */
+  width: 100% !important;
+  max-width: 100% !important;
   max-width: 100%;
   height: auto;
   display: block;

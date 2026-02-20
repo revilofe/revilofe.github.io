@@ -76,6 +76,18 @@
       if (svgEl.dataset) svgEl.dataset.panzoom = "1";
 
       try {
+        // Create the toolbar *before* initializing svg-pan-zoom so initial fit/center
+        // calculations match the final layout (prevents diagrams looking clipped).
+        var toolbarEl;
+        if (containerEl.dataset && containerEl.dataset.panzoomToolbar === "1") {
+          toolbarEl = containerEl.querySelector(":scope > .mermaid-toolbar");
+        } else {
+          if (containerEl.dataset) containerEl.dataset.panzoomToolbar = "1";
+          toolbarEl = document.createElement("div");
+          toolbarEl.className = "mermaid-toolbar";
+          containerEl.insertBefore(toolbarEl, svgEl);
+        }
+
         var panZoom = window.svgPanZoom(svgEl, {
           controlIconsEnabled: false,
           fit: true,
@@ -89,14 +101,6 @@
           zoomScaleSensitivity: 0.35
         });
 
-        // Provide always-visible, theme-friendly controls.
-        if (!containerEl.dataset) return;
-        if (containerEl.dataset.panzoomToolbar === "1") return;
-        containerEl.dataset.panzoomToolbar = "1";
-
-        var toolbarEl = document.createElement("div");
-        toolbarEl.className = "mermaid-toolbar";
-
         function addButton(label, title, onClick) {
           var btn = document.createElement("button");
           btn.type = "button";
@@ -109,6 +113,9 @@
           });
           toolbarEl.appendChild(btn);
         }
+
+        // Rebuild toolbar contents once (defensive: toolbarEl can be reused on nav).
+        if (toolbarEl) toolbarEl.textContent = "";
 
         addButton("+", "Zoom in", function () {
           panZoom.zoomIn();
@@ -126,7 +133,10 @@
           panZoom.center();
         });
 
-        containerEl.insertBefore(toolbarEl, svgEl);
+        // Ensure the diagram is fitted after the toolbar affects layout.
+        if (typeof panZoom.resize === "function") panZoom.resize();
+        panZoom.fit();
+        panZoom.center();
       } catch (e) {
         // If a diagram fails to init, don't break the whole page.
       }

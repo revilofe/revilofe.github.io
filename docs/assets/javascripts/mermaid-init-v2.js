@@ -1,8 +1,5 @@
 (function () {
   function mermaidConfig() {
-    // Opinionated defaults:
-    // - White class/object boxes (high readability in light and dark schemes)
-    // - Blue borders/lines for contrast
     return {
       startOnLoad: false,
       theme: "base",
@@ -11,19 +8,16 @@
         secondaryColor: "#ffffff",
         tertiaryColor: "#ffffff",
 
-        // Strokes, arrows, borders
         lineColor: "#2563eb",
         primaryBorderColor: "#2563eb",
         secondaryBorderColor: "#2563eb",
         tertiaryBorderColor: "#2563eb",
 
-        // Text
         primaryTextColor: "#0b1220",
         secondaryTextColor: "#0b1220",
         tertiaryTextColor: "#0b1220",
         textColor: "#0b1220",
 
-        // Notes/actors (used in other diagrams too)
         noteBkgColor: "#ffffff",
         noteBorderColor: "#2563eb",
         noteTextColor: "#0b1220",
@@ -36,8 +30,6 @@
   }
 
   function ensureMermaidContainers() {
-    // Case 1: Mermaid fences rendered via custom_fences:
-    //   <pre class="mermaid"><code>...</code></pre>
     document.querySelectorAll("pre.mermaid").forEach(function (preEl) {
       var codeEl = preEl.querySelector("code");
       var source = (codeEl || preEl).textContent || "";
@@ -49,7 +41,6 @@
       preEl.replaceWith(containerEl);
     });
 
-    // Case 2: Mermaid fences rendered as regular code blocks with a language class.
     document
       .querySelectorAll("pre > code.language-mermaid, pre > code.lang-mermaid")
       .forEach(function (codeEl) {
@@ -71,17 +62,13 @@
       var svgEl = containerEl.querySelector(":scope > svg");
       if (!svgEl) return;
 
-      // Avoid double-init across instant navigation.
       if (svgEl.dataset && svgEl.dataset.panzoom === "1") return;
       if (svgEl.dataset) svgEl.dataset.panzoom = "1";
 
       try {
         // Mermaid may inject an inline max-width (e.g. 204px) that makes diagrams tiny.
-        // Remove it so the SVG can expand to the container width.
         if (svgEl.style && svgEl.style.maxWidth) svgEl.style.maxWidth = "";
 
-        // Make the SVG viewport reasonably large before calling `fit()`.
-        // Otherwise, `fit()` will zoom out to match a tiny default SVG height.
         (function ensureSvgViewportSize() {
           try {
             var vb =
@@ -98,23 +85,17 @@
               containerWidth * (vb.height / vb.width)
             );
 
-            // Avoid comically small viewports on narrow columns.
             if (desiredHeight < 240) desiredHeight = 240;
 
-            svgEl.style.width = "100%";
             svgEl.style.height = desiredHeight + "px";
           } catch (e) {
-            // Ignore sizing errors.
           }
         })();
 
-        // Create the toolbar *before* initializing svg-pan-zoom so initial fit/center
-        // calculations match the final layout (prevents diagrams looking clipped).
-        var toolbarEl;
-        if (containerEl.dataset && containerEl.dataset.panzoomToolbar === "1") {
-          toolbarEl = containerEl.querySelector(":scope > .mermaid-toolbar");
-        } else {
-          if (containerEl.dataset) containerEl.dataset.panzoomToolbar = "1";
+        // Create the toolbar before initializing svg-pan-zoom so fit/center uses
+        // the final layout (otherwise the diagram can look clipped).
+        var toolbarEl = containerEl.querySelector(":scope > .mermaid-toolbar");
+        if (!toolbarEl) {
           toolbarEl = document.createElement("div");
           toolbarEl.className = "mermaid-toolbar";
           containerEl.insertBefore(toolbarEl, svgEl);
@@ -146,8 +127,7 @@
           toolbarEl.appendChild(btn);
         }
 
-        // Rebuild toolbar contents once (defensive: toolbarEl can be reused on nav).
-        if (toolbarEl) toolbarEl.textContent = "";
+        toolbarEl.textContent = "";
 
         addButton("+", "Zoom in", function () {
           panZoom.zoomIn();
@@ -159,18 +139,16 @@
           panZoom.fit();
           panZoom.center();
         });
-        addButton("Reset", "Reset zoom", function () {
+        addButton("Reset", "Reset view", function () {
           panZoom.resetZoom();
-          panZoom.fit();
+          if (typeof panZoom.resetPan === "function") panZoom.resetPan();
           panZoom.center();
         });
 
-        // Ensure the diagram is fitted after the toolbar affects layout.
         if (typeof panZoom.resize === "function") panZoom.resize();
         panZoom.fit();
         panZoom.center();
       } catch (e) {
-        // If a diagram fails to init, don't break the whole page.
       }
     });
   }
@@ -180,17 +158,14 @@
 
     ensureMermaidContainers();
 
-    // Render diagrams after navigation changes (works with and without instant loading).
     window.mermaid.initialize(mermaidConfig());
     var runResult;
     try {
       runResult = window.mermaid.run({ querySelector: ".mermaid" });
     } catch (e) {
-      // If Mermaid rendering fails, don't break the whole page.
       return;
     }
 
-    // Mermaid v10 renders asynchronously. Initialize pan/zoom after SVG exists.
     if (runResult && typeof runResult.then === "function") {
       runResult.then(function () {
         enablePanZoom();

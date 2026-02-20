@@ -76,25 +76,37 @@
       if (svgEl.dataset) svgEl.dataset.panzoom = "1";
 
       try {
-        function fitToWidth(panZoom) {
-          // Prefer "fit to width" so tall diagrams don't become tiny.
-          if (!panZoom || typeof panZoom.getSizes !== "function") {
-            panZoom.fit();
-            panZoom.center();
-            return;
-          }
+        // Mermaid may inject an inline max-width (e.g. 204px) that makes diagrams tiny.
+        // Remove it so the SVG can expand to the container width.
+        if (svgEl.style && svgEl.style.maxWidth) svgEl.style.maxWidth = "";
 
-          var sizes = panZoom.getSizes();
-          if (!sizes || !sizes.viewBox || !sizes.viewBox.width || !sizes.width) {
-            panZoom.fit();
-            panZoom.center();
-            return;
-          }
+        // Make the SVG viewport reasonably large before calling `fit()`.
+        // Otherwise, `fit()` will zoom out to match a tiny default SVG height.
+        (function ensureSvgViewportSize() {
+          try {
+            var vb =
+              svgEl.viewBox && svgEl.viewBox.baseVal
+                ? svgEl.viewBox.baseVal
+                : null;
+            if (!vb || !vb.width || !vb.height) return;
 
-          var targetZoom = sizes.width / sizes.viewBox.width;
-          if (typeof panZoom.zoom === "function") panZoom.zoom(targetZoom);
-          panZoom.center();
-        }
+            var containerWidth = containerEl.clientWidth || svgEl.clientWidth;
+            if (!containerWidth) return;
+
+            // Height proportional to the viewBox aspect ratio.
+            var desiredHeight = Math.round(
+              containerWidth * (vb.height / vb.width)
+            );
+
+            // Avoid comically small viewports on narrow columns.
+            if (desiredHeight < 240) desiredHeight = 240;
+
+            svgEl.style.width = "100%";
+            svgEl.style.height = desiredHeight + "px";
+          } catch (e) {
+            // Ignore sizing errors.
+          }
+        })();
 
         // Create the toolbar *before* initializing svg-pan-zoom so initial fit/center
         // calculations match the final layout (prevents diagrams looking clipped).
@@ -144,16 +156,19 @@
           panZoom.zoomOut();
         });
         addButton("Fit", "Fit diagram", function () {
-          fitToWidth(panZoom);
+          panZoom.fit();
+          panZoom.center();
         });
         addButton("Reset", "Reset zoom", function () {
           panZoom.resetZoom();
-          fitToWidth(panZoom);
+          panZoom.fit();
+          panZoom.center();
         });
 
         // Ensure the diagram is fitted after the toolbar affects layout.
         if (typeof panZoom.resize === "function") panZoom.resize();
-        fitToWidth(panZoom);
+        panZoom.fit();
+        panZoom.center();
       } catch (e) {
         // If a diagram fails to init, don't break the whole page.
       }

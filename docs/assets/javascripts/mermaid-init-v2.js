@@ -139,10 +139,12 @@
           panZoom.fit();
           panZoom.center();
         });
-        addButton("Reset", "Reset view", function () {
-          panZoom.resetZoom();
-          if (typeof panZoom.resetPan === "function") panZoom.resetPan();
-          panZoom.center();
+        addButton("Reset", "Reset zoom (100%)", function () {
+          // `resetZoom()` would return to the initial zoom, which is often the same
+          // as "fit" because we initialize with fit/center. Make Reset distinct:
+          // go to 1:1 zoom and centered.
+          if (typeof panZoom.zoom === "function") panZoom.zoom(1);
+          if (typeof panZoom.center === "function") panZoom.center();
         });
 
         if (typeof panZoom.resize === "function") panZoom.resize();

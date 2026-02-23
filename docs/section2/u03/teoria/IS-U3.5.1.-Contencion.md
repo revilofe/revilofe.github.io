@@ -76,9 +76,11 @@ Una forma muy práctica (y realista) de explicarlo es separar dos estrategias:
 | Corto plazo (táctica)     | Parar el daño inmediatamente       | Minutos-horas | Cortar demasiado y tumbar servicios         | Aislar host, bloquear IoC, deshabilitar cuenta     |
 | Largo plazo (estratégica) | Evitar reentrada y mejorar postura |  Días-semanas | Ser demasiado lenta y permitir persistencia | Segmentación, MFA, rotación de secretos, hardening |
 
-Un ejemplo podría ser si detectas un equipo que hace conexiones a un dominio malicioso:
-   - Corto plazo: aislas el equipo y bloqueas el dominio en proxy/DNS.
-   - Largo plazo: revisas por qué pudo salir esa conexión (reglas de salida, EDR, parches, privilegios) y endureces controles para que no vuelva a pasar.
+!!! example "Ejemplo rápido"
+    Si detectas un equipo que hace conexiones a un dominio malicioso:
+    
+    - Corto plazo: aislas el equipo y bloqueas el dominio en proxy/DNS.
+    - Largo plazo: revisas por qué pudo salir esa conexión (reglas de salida, EDR, parches, privilegios) y endureces controles para que no vuelva a pasar.
 
 !!! note "Idea clave"
     Una estrategia basada en **objetivos** guía la contención, en este caso los objetivos de corto y largo plazo. En la práctica, la secuencia suele ser:
@@ -89,8 +91,8 @@ Un ejemplo podría ser si detectas un equipo que hace conexiones a un dominio ma
     - y volver a la actividad lo antes posible.
     
     Aun así, algunos enfoques priorizan identificar rápido todos los sistemas afectados para preparar erradicación. Observar al atacante “para aprender” puede tener sentido en casos concretos, pero el riesgo de observar y no actuar suele ser alto.
-
-Por tanto, una estrategia basada en objetivo
+    
+    Con esto en mente, pasamos a los principios de oro: los que evitan que una contención “a lo loco” empeore el incidente.
 
 ### 3. Principios de oro antes de “tocar botones”
 
@@ -106,7 +108,7 @@ Hay cinco principios que debéis interiorizar (porque son los que evitan desastr
 
 - **Menor impacto posible**: frenar sin romper lo crítico.
 
-  La contención es un equilibrio entre seguridad y continuidad. Si cortas demasiado, puedes tumbar un servicio esencial y crear un incidente “doble”: el de seguridad y el de disponibilidad. Por eso se prioriza: activos críticos primero, y medidas reversibles cuando se pueda, con comunicación clara a negocio.
+    La contención es un equilibrio entre seguridad y continuidad. Si cortas demasiado, puedes tumbar un servicio esencial y crear un incidente “doble”: el de seguridad y el de disponibilidad. Por eso se prioriza: activos críticos primero, y medidas reversibles cuando se pueda, con comunicación clara a negocio.
 
 - **Cortar el acceso del atacante**: si no cortáis credenciales/tokens, el atacante vuelve.
 
@@ -126,17 +128,6 @@ Hay cinco principios que debéis interiorizar (porque son los que evitan desastr
 Con estos principios claros, el siguiente paso es decidir **qué** contienes primero y **cómo** lo haces para frenar el daño sin perder el control del incidente.
 
 ### 4. Flujo de decisión: ¿qué contengo y cómo?
-
-Una prueba
-
-```mermaid
-flowchart TD
-    A[Síntoma inicial] --> B[IoC iniciales]
-    B --> C[Cuarentena del equipo afectado]
-    C --> D[Captura de imágenes\npara investigación]
-    D --> E[Análisis de imágenes y\nextracción de IoC adicionales]
-    E --> F[Búsqueda de nuevos IoC\nen el entorno para delimitar alcance]
-```
 
 “¿Qué hago primero?”. La respuesta correcta es: depende, pero con un flujo claro.
 
@@ -162,20 +153,20 @@ La explicación del flujo es la siguiente, bajo un punto inicial en el que se de
 1. Si hay daño activo (por ejemplo, cifrado o exfiltración en marcha), la prioridad es **contener ya** para frenar el impacto.
 2. Si no hay daño activo, pero hay sospecha, lo primero es **preservar evidencia** para entender qué está pasando.
 3. Si hay evidencia volátil crítica, hay que capturarla antes de aislar o apagar.
-4. Luego, se reduce la superficie de ataque bloqueando IoC o aislando el equipo. 
-5. Después, se investiga el alcance y vector para entender qué más está afectado y cómo se ha movido el atacante. 
+4. Luego, se reduce la superficie de ataque bloqueando IoC o aislando el equipo.
+5. Después, se investiga el alcance y vector para entender qué más está afectado y cómo se ha movido el atacante.
 6. Si hay compromiso de identidad, se corta el acceso (cuentas, tokens, MFA). Si no, se aplican medidas de contención por capa (red, endpoint, servicios).
-7. Finalmente, se planifica la contención a largo plazo para evitar recaídas y mejorar la postura de seguridad. 
+7. Finalmente, se planifica la contención a largo plazo para evitar recaídas y mejorar la postura de seguridad.
 
-En cada paso, la comunicación con negocio y dirección es clave para gestionar expectativas y explicar decisiones. Y, por supuesto, todo debe quedar registrado: qué se hizo, cuándo, por qué y quién lo hizo. 
+En cada paso, la comunicación con negocio y dirección es clave para gestionar expectativas y explicar decisiones. Y, por supuesto, todo debe quedar registrado: qué se hizo, cuándo, por qué y quién lo hizo.
 
-Este flujo es una guía general, pero cada incidente es único. La clave es tener un proceso claro para tomar decisiones informadas y no improvisar bajo presión. 
-
-En la práctica, este flujo se traduce en playbooks y procedimientos que el equipo puede seguir cuando hay un incidente real, para no perder tiempo pensando “qué hago ahora” y centrarse en ejecutar con criterio.
+Este flujo es una guía general, pero cada incidente es único. A partir de aquí vamos a aterrizarlo en tres ideas prácticas: IoC y alcance (4.1), estrategia (4.2) y secuencia iterativa (4.3).
 
 #### 4.1. Indicadores, alcance y cuarentena (lo que suele marcar la diferencia)
 
-En contención hay una idea muy potente: **no basta con “ver el síntoma”**, hay que usarlo para descubrir el resto del incidente. Usar el síntoma para sacar indicadores (IoC) y luego buscar esos indicadores en el entorno para descubrir qué más está afectado. Esto es lo que marca la diferencia entre “contener un equipo” y “contener el incidente”.
+En contención hay una idea muy potente: **no basta con “ver el síntoma”**, hay que usarlo para descubrir el resto del incidente. Primero conviertes el síntoma en indicadores (IoC) y luego buscas esos indicadores en el entorno para delimitar el alcance.
+
+Esto es lo que marca la diferencia entre “contener un equipo” y “contener el incidente”.
 
 1. **Identificar indicadores (IoC)**.
 
@@ -256,9 +247,9 @@ Una secuencia muy común y genérica en contención es:
 flowchart TD
     A[Síntoma inicial] --> B[IoC iniciales]
     B --> C[Cuarentena del equipo afectado]
-    C --> D[Captura de imágenes\npara investigación]
-    D --> E[Análisis de imágenes y\nextracción de IoC adicionales]
-    E --> F[Búsqueda de nuevos IoC\nen el entorno para delimitar alcance]
+    C --> D["Captura de imágenes<br/>para investigación"]
+    D --> E["Análisis de imágenes y<br/>extracción de IoC adicionales"]
+    E --> F["Búsqueda de nuevos IoC<br/>en el entorno para delimitar alcance"]
 ```
 
 Si dispones de EDR, SIEM y/o capturas de tráfico, se suelen usar como “aceleradores” para inventariar dispositivos afectados y detectar patrones (por ejemplo, máquinas que llaman al mismo dominio o que ejecutan el mismo proceso).

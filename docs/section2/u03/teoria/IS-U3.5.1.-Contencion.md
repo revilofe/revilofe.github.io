@@ -61,7 +61,7 @@ La contención persigue objetivos muy concretos (y evaluables):
 
 Una idea importante (y muy repetida en guías de respuesta a incidentes) es que la contención sirve para **limitar impacto** y, a la vez, permitir que el equipo trabaje con información suficiente para erradicar y recuperar con criterio.
 
-!!! tip "Idea para alumnado"
+!!! tip "Idea clave"
     Contener no es “arreglar” el incidente. Es **poner el freno** para que el problema no crezca mientras investigáis y preparáis erradicación y recuperación.
 
 ### 2. Contención a corto plazo y a largo plazo
@@ -70,6 +70,10 @@ Una forma muy práctica (y realista) de explicarlo es separar dos estrategias:
 
 - **Contención a corto plazo (táctica)**: acciones inmediatas para frenar el impacto ya.
 - **Contención a largo plazo (estratégica)**: acciones para sostener el control mientras se investiga y evitar recaídas.
+
+La idea principal es que, en un incidente real, no basta con “parar el daño” (por ejemplo, aislar un equipo). Si no haces algo más para evitar que el atacante vuelva a entrar o siga moviéndose, es fácil que el incidente se prolongue o se repita.
+
+Por tanto, la principal diferencia entre ambas estrategias es el **objetivo**: la táctica busca frenar el daño ya, y la estratégica busca evitar que vuelva a pasar mientras se investiga.
 
 | Tipo de contención        | Objetivo                           |     Horizonte | Riesgo típico                               | Ejemplos                                           |
 |---------------------------|------------------------------------|--------------:|---------------------------------------------|----------------------------------------------------|
@@ -293,6 +297,8 @@ En endpoint, lo habitual es aislar el equipo para que deje de comunicarse con el
 En aplicaciones, muchas medidas de contención son “parches temporales” para ganar tiempo: deshabilitar una funcionalidad vulnerable, endurecer el WAF o limitar peticiones. La clave es coordinarlo con negocio para no romper lo que es crítico sin avisar.
 
 ### 6. Contención por escenarios: mini playbooks
+
+Después de ver medidas por capas, toca bajarlo a casos reales. Aquí entran los playbooks: procedimientos que os guían cuando hay prisa y presión.
 
 Un playbook es un procedimiento predefinido (un guion). En un equipo real (y también en el módulo), ayudan a responder con orden: qué se hace, en qué orden, qué evidencias se recogen y quién decide cada cosa.
 

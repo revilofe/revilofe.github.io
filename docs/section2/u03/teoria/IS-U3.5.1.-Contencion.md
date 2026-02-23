@@ -127,6 +127,17 @@ Con estos principios claros, el siguiente paso es decidir **qué** contienes pri
 
 ### 4. Flujo de decisión: ¿qué contengo y cómo?
 
+Una prueba
+
+```mermaid
+flowchart TD
+    A[Síntoma inicial] --> B[IoC iniciales]
+    B --> C[Cuarentena del equipo afectado]
+    C --> D[Captura de imágenes\npara investigación]
+    D --> E[Análisis de imágenes y\nextracción de IoC adicionales]
+    E --> F[Búsqueda de nuevos IoC\nen el entorno para delimitar alcance]
+```
+
 “¿Qué hago primero?”. La respuesta correcta es: depende, pero con un flujo claro.
 
 ```mermaid

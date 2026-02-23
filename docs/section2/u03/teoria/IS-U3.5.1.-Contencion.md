@@ -22,6 +22,12 @@ tags:
 
 En esta parte vamos a centrarnos en **la contención**: el conjunto de acciones que se aplican para **frenar un incidente** y evitar que su impacto aumente.
 
+La contención suele venir **después de identificar un evento** y concluir que hay que actuar para limitar su impacto. A partir de ahí, el objetivo es:
+
+- entender las características del evento (qué está pasando y cómo),
+- identificar la población de sistemas y usuarios afectados,
+- y poner en cuarentena lo afectado hasta que la situación se resuelva y el negocio vuelva a la normalidad.
+
 Este tema está directamente alineado con:
 
 - **RA3 (CE 3.e)**: iniciar las primeras medidas de contención para limitar daños.
@@ -47,11 +53,11 @@ La contención persigue objetivos muy concretos (y evaluables):
 
 4. **Proteger activos criticos**: identidad, copias de seguridad, servicios esenciales.
 
-    Hay activos que, si caen, empeoran todo: por ejemplo, la identidad (AD/SSO), los repositorios de backups o el plano de gestion (hypervisor, EDR, herramientas de despliegue). Contener tambien es **blindar** esos puntos.
+    Hay activos que, si caen, empeoran todo: por ejemplo, la identidad (AD/SSO), los repositorios de backups o el plano de gestión (hypervisor, EDR, herramientas de despliegue). Contener también es **blindar** esos puntos.
 
 5. **Preservar evidencia** cuando sea necesario (sobre todo evidencias volatiles).
 
-    En incidentes reales, un cierre brusco puede eliminar conexiones, procesos y datos de memoria que son clave para entender el vector de entrada o la persistencia. Por eso, muchas veces se captura “lo minimo viable” antes de aislar.
+    En incidentes reales, un cierre brusco puede eliminar conexiones, procesos y datos de memoria que son clave para entender el vector de entrada o la persistencia. Por eso, muchas veces se captura “lo mínimo viable” antes de aislar.
 
 Una idea importante (y muy repetida en guias de respuesta a incidentes) es que la contención sirve para **limitar impacto** y, a la vez, permitir que el equipo trabaje con informacion suficiente para erradicar y recuperar con criterio.
 
@@ -70,11 +76,20 @@ Una forma muy práctica (y realista) de explicarlo es separar dos estrategias:
 | Corto plazo (táctica)     | Parar el daño inmediatamente       | Minutos-horas | Cortar demasiado y tumbar servicios         | Aislar host, bloquear IoC, deshabilitar cuenta     |
 | Largo plazo (estratégica) | Evitar reentrada y mejorar postura |  Días-semanas | Ser demasiado lenta y permitir persistencia | Segmentación, MFA, rotación de secretos, hardening |
 
-!!! example "Ejemplo rapido"
+!!! example "Ejemplo rápido"
     Si detectas un equipo que hace conexiones a un dominio malicioso:
     
     - Corto plazo: aislas el equipo y bloqueas el dominio en proxy/DNS.
-    - Largo plazo: revisas por que pudo salir esa conexion (reglas de salida, EDR, parches, privilegios) y endureces controles para que no vuelva a pasar.
+    - Largo plazo: revisas por qué pudo salir esa conexión (reglas de salida, EDR, parches, privilegios) y endureces controles para que no vuelva a pasar.
+
+!!! note "Idea clave"
+    Una estrategia basada en **objetivos** guía la contención. Lo habitual es:
+    
+    - identificar síntomas,
+    - poner en cuarentena,
+    - y volver a la actividad lo antes posible.
+    
+    Aun así, algunos enfoques priorizan identificar rápido todos los sistemas afectados para preparar erradicación. Observar al atacante “para aprender” puede tener sentido en casos concretos, pero el riesgo de observar y no actuar suele ser alto.
 
 ### 3. Principios de oro antes de “tocar botones”
 
@@ -82,11 +97,11 @@ Hay cinco principios que debéis interiorizar (porque son los que evitan desastr
 
 - **Evidencia primero (cuando aplique)**: si vais a perder memoria, conexiones o procesos, hay que valorar captura rápida.
 
-    En muchos casos la evidencia mas valiosa es volatil: conexiones activas, procesos en ejecucion, credenciales en memoria, etc. Por eso, antes de “apagar por si acaso”, pensad: ¿voy a perder datos que necesito para entender el vector de entrada o la persistencia?
+    En muchos casos la evidencia más valiosa es volátil: conexiones activas, procesos en ejecución, credenciales en memoria, etc. Por eso, antes de “apagar por si acaso”, pensad: ¿voy a perder datos que necesito para entender el vector de entrada o la persistencia?
 
 - **Rapidez con cabeza**: contención improvisada puede multiplicar el incidente.
 
-    Contener rapido no es “hacer cosas al azar”. Es aplicar un plan: aislar, bloquear, rotar credenciales, registrar acciones y seguir un playbook. Si no, puedes dejar agujeros (por ejemplo, aislas un equipo pero el atacante sigue con las mismas credenciales en otros).
+    Contener rápido no es “hacer cosas al azar”. Es aplicar un plan: aislar, bloquear, rotar credenciales, registrar acciones y seguir un playbook. Si no, puedes dejar agujeros (por ejemplo, aislas un equipo pero el atacante sigue con las mismas credenciales en otros).
 
 - **Menor impacto posible**: frenar sin romper lo crítico.
 
@@ -146,6 +161,9 @@ En contención hay una idea muy potente: **no basta con “ver el sintoma”**, 
 1. **Identificar indicadores (IoC)**.
 
     Los indicadores de compromiso (IoC) son “pistas” observables: hash de un binario, una clave de registro, un servicio nuevo, una URL maliciosa, conexiones a un dominio concreto, etc. Con una lista inicial de IoC puedes buscar en el resto del entorno para descubrir otros equipos afectados.
+    
+    !!! tip "Consejo"
+        En muchos casos, **la atribución** (quién ha sido) no es lo primero. Lo urgente suele ser: contener, inventariar sistemas afectados y preparar erradicación.
 
 2. **Delimitar la población afectada**.
 
@@ -159,7 +177,7 @@ En contención hay una idea muy potente: **no basta con “ver el sintoma”**, 
     - aislar con reglas (DNS, firewall, ACL),
     - o cuarentena desde EDR.
     
-    Si necesitas evidencia volatil, valora primero una captura rapida y luego aisla.
+    Si necesitas evidencia volátil, valora primero una captura rápida y luego aísla.
 
 4. **Preservar evidencia con imagenes cuando aplique**.
 
@@ -176,7 +194,15 @@ Para que os resulte aplicable en laboratorio, agrupamos por capas: red, identida
 * **Corte de rutas** entre segmentos para limitar movimiento lateral.
 * **Limitación de egress** (salida a Internet) a lo estrictamente necesario.
 
+La capa de red suele ser la mas rapida para **frenar propagación** y **cortar C2** (comando y control). Si el atacante necesita hablar con fuera (dominios/IP maliciosos) o moverse lateralmente, una buena contención en red puede romperle el plan.
+
 MITRE define la segmentación como control para limitar flujo y restringir movimiento lateral. ([attack.mitre.org][1])
+
+!!! tip "Consejo"
+    Cuando bloquees IoC, intenta hacerlo en dos sitios:
+    
+    - en el perimetro (para cortar salida),
+    - y dentro (para evitar que un equipo infectado hable con otros segmentos).
 
 #### 5.2. Identidad
 
@@ -185,12 +211,19 @@ MITRE define la segmentación como control para limitar flujo y restringir movim
 * **Revocar tokens** (SSO/OAuth), claves API y secretos de servicios.
 * **Aplicar MFA** (especialmente en cuentas de administración).
 
+La identidad es la “llave maestra” del entorno. Si el atacante tiene credenciales (o tokens), puede volver aunque hayas aislado un equipo. Por eso, en muchos incidentes la contención real se consigue cuando se controla **quien puede autenticarse** y **desde donde**.
+
 #### 5.3. Endpoint (equipos)
 
 * **Aislamiento desde EDR** o cuarentena por red.
 * **Bloqueo por hash** / firma / regla (si se dispone).
 * **Detención controlada de procesos** maliciosos (si no compromete evidencia).
 * **Deshabilitar ejecución** de macros o binarios sospechosos temporalmente.
+
+En endpoint, lo habitual es aislar el equipo para que deje de comunicarse con el resto y, a la vez, conservarlo para análisis. Un detalle importante:
+
+!!! warning "Atención"
+    Apagar un equipo puede ser tentador, pero en algunos casos implica **perder memoria volátil** y detalles forenses (sesiones, procesos, conexiones). Si necesitas esa evidencia, captura lo mínimo viable y luego aísla.
 
 #### 5.4. Servicios y aplicaciones
 
@@ -199,10 +232,11 @@ MITRE define la segmentación como control para limitar flujo y restringir movim
 * Activación temporal de **reglas WAF** o rate-limiting.
 * Deshabilitar funcionalidades expuestas hasta parcheo.
 
+En aplicaciones, muchas medidas de contención son “parches temporales” para ganar tiempo: deshabilitar una funcionalidad vulnerable, endurecer el WAF o limitar peticiones. La clave es coordinarlo con negocio para no romper lo que es crítico sin avisar.
 
 ### 6. Contención por escenarios: mini playbooks
 
-Un playbook es un procedimiento predefinido. En RA4 se espera que existan procedimientos detallados.
+Un playbook es un procedimiento predefinido (un guion). En un equipo real (y tambien en el módulo), ayudan a responder con orden: qué se hace, en qué orden, con qué evidencias y quien decide cada cosa.
 
 #### 6.1. Ransomware (cifrado y posible extorsión)
 
@@ -216,6 +250,12 @@ NCSC mantiene guías específicas para mitigar malware y ransomware. ([ncsc.gov.
 3. Cortar credenciales comprometidas (usuarios y admins).
 4. Bloquear IoC conocidos (dominios/IP) si se identifican.
 5. Registrar acciones y preservar evidencia mínima si es viable.
+
+!!! note "Nota"
+    Antes de bloquear “a lo loco”, confirmad lo básico: que la alerta no sea un falso positivo o un malware antiguo sin impacto. Si tenéis una muestra (hash, fichero, URL), el análisis ayuda a sacar IoC útiles para buscar otros equipos afectados.
+
+!!! warning "Atención"
+    Herramientas como VirusTotal son muy útiles, pero tened cuidado: lo que se sube puede quedar almacenado y ser visible para terceros. No subáis documentos internos o ficheros con datos sensibles.
 
 **Contención estratégica (días):**
 
@@ -260,6 +300,75 @@ NCSC mantiene guías específicas para mitigar malware y ransomware. ([ncsc.gov.
 **Contención estratégica:**
 
 * Control de salida (egress), DLP si aplica, segmentación y mejora de detecciones.
+
+#### 6.5. DoS / DDoS (caída de servicio)
+
+Este tipo de incidentes son principalmente de **disponibilidad**: el objetivo del atacante es tumbar un servicio. La contención aquí suele implicar red y proveedor.
+
+**Contención táctica:**
+
+1. Identificar el flujo del ataque y activos objetivo (DNS, web, API, etc.).
+2. Revisar logs de firewall, balanceadores, routers y servidores para caracterizar tráfico.
+3. Bloquear tráfico con dispositivos perimetrales (reglas, rate limit, geo, etc.).
+4. Bloquear respuestas salientes si el servicio está amplificando el ataque.
+5. Coordinar con ISP/CDN si aplica (mitigación aguas arriba).
+
+**Contención estratégica:**
+
+* Preparar perfiles y runbooks (umbrales, reglas, contactos, escalado).
+* Diseñar capacidad de absorción (CDN, caché, autoscaling, balanceo).
+
+#### 6.6. Activo perdido o robado (portátil, móvil, USB)
+
+No todo incidente es “malware”. En perdida/robo, la contención es responder a una pregunta: ¿hay riesgo de datos?
+
+**Contención táctica (preguntas que hay que responder):**
+
+1. ¿Qué tipo de datos había? (PII, datos sensibles, claves, accesos).
+2. ¿El disco estaba cifrado y el equipo estaba apagado? (reduce mucho el riesgo).
+3. ¿Se puede localizar o borrar en remoto? (MDM, herramientas de gestión).
+4. ¿Hay que revocar accesos? (tokens, VPN, sesiones, claves SSH).
+
+**Contención estratégica:**
+
+* Cifrado completo, MDM, bloqueo, borrado remoto y mínimo privilegio.
+
+#### 6.7. Robo de datos (exfiltración)
+
+Contener robo de datos suele ir “a contrarreloj”. Las señales pueden ser muy obvias (transferencias grandes) o mas sutiles (movimientos internos previos a exfiltrar).
+
+**Contención táctica:**
+
+1. Identificar activos con datos sensibles y revisar accesos recientes.
+2. Bloquear o limitar canales de salida usados para exfiltrar (proxy, DNS, cloud).
+3. Aislar o restringir cuentas/hosts implicados, preservando evidencias de red.
+4. Revisar si los datos se han movido a ubicaciones “intermedias” antes de salir.
+
+**Contención estratégica:**
+
+* Egress control, DLP (si aplica), clasificación de datos y alertas por comportamiento.
+
+#### 6.8. Acceso no autorizado o uso indebido de activos
+
+Aquí entran casos como abuso de privilegios, creación de cuentas sin permiso o saltarse controles.
+
+**Indicadores tipicos:**
+
+* accesos fuera de horario,
+* muchos fallos de login o bloqueos sin explicación,
+* uso de cuentas dormidas,
+* creación de cuentas no autorizada,
+* reinicios o fallos extraños del sistema.
+
+**Contención táctica:**
+
+1. Confirmar qué cuentas y sistemas están implicados (locales o de directorio).
+2. Revocar sesiones, bloquear cuentas sospechosas y revisar privilegios.
+3. Aumentar registro/monitorización en los sistemas objetivo (para no ir a ciegas).
+
+**Contención estratégica:**
+
+* PAM, mínimo privilegio, auditoría de cambios y alertas de cuentas privilegiadas.
 
 
 ### 7. Matriz de decisiones: “contener mucho” vs “contener fino”
@@ -325,7 +434,7 @@ A continuación, actividades pensadas para que alumnos y alumnas practiquéis co
 
 ## Glosario mínimo
 
-* **IoC (Indicator of Compromise)**: indicador observable de posible compromiso.
+* **IoC (Indicador de compromiso)**: indicador observable de posible compromiso.
 * **EDR**: solución de detección y respuesta en endpoint.
 * **C2 (Command & Control)**: infraestructura de mando y control del atacante.
 * **Segmentación**: dividir la red en segmentos para limitar movimiento lateral. ([attack.mitre.org][1])
@@ -333,7 +442,8 @@ A continuación, actividades pensadas para que alumnos y alumnas practiquéis co
 
 ## Referencias y bibliografía
 
-* Normativa del módulo, RA3 y RA4 (contención, procedimientos y escalado).
+* Normativa del módulo, RA3 (CE 3.e): contención para limitar daños.
+* Thompson, E. C. (2018). *Cybersecurity Incident Response*. Capítulo 8: Containment.
 * NIST SP 800-61 Rev. 3: recomendaciones de respuesta a incidentes integradas con gestión de riesgo. ([csrc.nist.gov][4])
 * CISA #StopRansomware Guide (guía y checklist de respuesta). ([cisa.gov][2])
 * UK NCSC: mitigación de malware y ransomware (guía práctica). ([ncsc.gov.uk][3])
@@ -341,9 +451,7 @@ A continuación, actividades pensadas para que alumnos y alumnas practiquéis co
 
 ## Presentación
 
-Puedes acceder a la presentación de esta unidad aquí:
-
-[Presentación IS-U3.3 - Contención de incidentes](https://revilofe.github.io/slides/section2-is/IS-U3.3.-ContencionDeIncidentes.html)
+Por definir.
 
 ## Recursos adicionales
 
@@ -351,7 +459,7 @@ Puedes acceder a la presentación de esta unidad aquí:
 * Tabla de “acciones vs impacto” para debatir contención selectiva frente a agresiva.
 
 
-[1]: https://attack.mitre.org/mitigations/M1030/?utm_source=chatgpt.com "Network Segmentation, Mitigation M1030 - Enterprise"
-[2]: https://www.cisa.gov/stopransomware/ransomware-guide?utm_source=chatgpt.com "StopRansomware Guide"
-[3]: https://www.ncsc.gov.uk/guidance/mitigating-malware-and-ransomware-attacks?utm_source=chatgpt.com "Mitigating malware and ransomware attacks - NCSC.GOV.UK"
-[4]: https://csrc.nist.gov/pubs/sp/800/61/r3/final?utm_source=chatgpt.com "SP 800-61 Rev. 3, Incident Response Recommendations and ..."
+[1]: https://attack.mitre.org/mitigations/M1030/ "Network Segmentation, Mitigation M1030 - Enterprise"
+[2]: https://www.cisa.gov/stopransomware/ransomware-guide "StopRansomware Guide"
+[3]: https://www.ncsc.gov.uk/guidance/mitigating-malware-and-ransomware-attacks "Mitigating malware and ransomware attacks - NCSC.GOV.UK"
+[4]: https://csrc.nist.gov/pubs/sp/800/61/r3/final "SP 800-61 Rev. 3, Incident Response Recommendations and ..."

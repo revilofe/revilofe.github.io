@@ -9142,7 +9142,7 @@
 </li>
 <li>
 <p><strong>Proteger activos críticos</strong>: identidad, copias de seguridad, servicios esenciales.</p>
-<p>Hay activos que, si caen, empeoran todo: por ejemplo, la identidad (AD/SSO), los repositorios de backups o el plano de gestión (hypervisor, <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr>, herramientas de despliegue). Contener también es <strong>blindar</strong> esos puntos.</p>
+<p>Hay activos que, si caen, empeoran todo: por ejemplo, la identidad (AD/<abbr title="Autenticación Única. Es un sistema de seguridad que permite a los usuarios acceder a múltiples aplicaciones o servicios con una sola autenticación. El SSO simplifica la gestión de contraseñas, mejora la experiencia del usuario y aumenta la seguridad al reducir el número de credenciales que los usuarios deben recordar.">SSO</abbr>), los repositorios de backups o el plano de gestión (hypervisor, <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr>, herramientas de despliegue). Contener también es <strong>blindar</strong> esos puntos.</p>
 </li>
 <li>
 <p><strong>Preservar evidencia</strong> cuando sea necesario (sobre todo evidencias volátiles).</p>
@@ -9176,14 +9176,14 @@
 <td>Parar el daño inmediatamente</td>
 <td style="text-align: right;">Minutos-horas</td>
 <td>Cortar demasiado y tumbar servicios</td>
-<td>Aislar host, bloquear IoC, deshabilitar cuenta</td>
+<td>Aislar host, bloquear <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>, deshabilitar cuenta</td>
 </tr>
 <tr>
 <td>Largo plazo (estratégica)</td>
 <td>Evitar reentrada y mejorar postura</td>
 <td style="text-align: right;">Días-semanas</td>
 <td>Ser demasiado lenta y permitir persistencia</td>
-<td>Segmentación, <abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr>, rotación de secretos, hardening</td>
+<td><abbr title="Técnica utilizada para dividir una red en segmentos más pequeños y seguros. La segmentación permite a las organizaciones controlar el tráfico de red, limitar el acceso a los recursos, mejorar la seguridad, etc.">Segmentación</abbr>, <abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr>, rotación de secretos, hardening</td>
 </tr>
 </tbody>
 </table>
@@ -9194,7 +9194,7 @@
 <p class="admonition-title">Idea clave</p>
 <p>Una estrategia basada en <strong>objetivos</strong> guía la contención, en este caso los objetivos de corto y largo plazo. En la práctica, la secuencia suele ser:</p>
 <ul>
-<li>identificar síntomas: conexiones, procesos, cambios, etc. y sacar IoC,</li>
+<li>identificar síntomas: conexiones, procesos, cambios, etc. y sacar <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>,</li>
 <li>poner en cuarentena: aislar el equipo o bloquear la comunicación,</li>
 <li>y luego investigar: qué ha pasado, qué más está afectado, cómo se ha movido el atacante, etc.</li>
 <li>y volver a la actividad lo antes posible.</li>
@@ -9259,7 +9259,7 @@
 1. Si hay daño activo (por ejemplo, cifrado o exfiltración en marcha), la prioridad es <strong>contener ya</strong> para frenar el impacto.
 2. Si no hay daño activo, pero hay sospecha, lo primero es <strong>preservar evidencia</strong> para entender qué está pasando.
 3. Si hay evidencia volátil crítica, hay que capturarla antes de aislar o apagar.
-4. Luego, se reduce la superficie de ataque bloqueando IoC o aislando el equipo. 
+4. Luego, se reduce la superficie de ataque bloqueando <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> o aislando el equipo. 
 5. Después, se investiga el alcance y vector para entender qué más está afectado y cómo se ha movido el atacante. 
 6. Si hay compromiso de identidad, se corta el acceso (cuentas, tokens, <abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr>). Si no, se aplican medidas de contención por capa (red, endpoint, servicios).
 7. Finalmente, se planifica la contención a largo plazo para evitar recaídas y mejorar la postura de seguridad. </p>
@@ -9267,12 +9267,12 @@
 <p>Este flujo es una guía general, pero cada incidente es único. La clave es tener un proceso claro para tomar decisiones informadas y no improvisar bajo presión. </p>
 <p>En la práctica, este flujo se traduce en playbooks y procedimientos que el equipo puede seguir cuando hay un incidente real, para no perder tiempo pensando “qué hago ahora” y centrarse en ejecutar con criterio.</p>
 <h4 id="41-indicadores-alcance-y-cuarentena-lo-que-suele-marcar-la-diferencia">4.1. Indicadores, alcance y cuarentena (lo que suele marcar la diferencia)<a class="headerlink" href="#41-indicadores-alcance-y-cuarentena-lo-que-suele-marcar-la-diferencia" title="Permanent link">&para;</a></h4>
-<p>En contención hay una idea muy potente: <strong>no basta con “ver el síntoma”</strong>, hay que usarlo para descubrir el resto del incidente. Usar el síntoma para sacar indicadores (IoC) y luego buscar esos indicadores en el entorno para descubrir qué más está afectado. Esto es lo que marca la diferencia entre “contener un equipo” y “contener el incidente”.</p>
+<p>En contención hay una idea muy potente: <strong>no basta con “ver el síntoma”</strong>, hay que usarlo para descubrir el resto del incidente. Usar el síntoma para sacar indicadores (<abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>) y luego buscar esos indicadores en el entorno para descubrir qué más está afectado. Esto es lo que marca la diferencia entre “contener un equipo” y “contener el incidente”.</p>
 <ol>
 <li>
-<p><strong>Identificar indicadores (IoC)</strong>.</p>
-<p>Los indicadores de compromiso (IoC) son “pistas” observables: hash de un binario, una clave de registro, un servicio nuevo, una URL maliciosa, conexiones a un dominio concreto, etc. Con una lista inicial de IoC puedes buscar en el resto del entorno para descubrir otros equipos afectados.</p>
-<p>Ejemplos típicos de IoC que aparecen en incidentes reales:</p>
+<p><strong>Identificar indicadores (<abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>)</strong>.</p>
+<p>Los indicadores de compromiso (<abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>) son “pistas” observables: hash de un binario, una clave de registro, un servicio nuevo, una URL maliciosa, conexiones a un dominio concreto, etc. Con una lista inicial de <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> puedes buscar en el resto del entorno para descubrir otros equipos afectados.</p>
+<p>Ejemplos típicos de <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> que aparecen en incidentes reales:</p>
 <ul>
 <li>firmas o detecciones de <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr>,</li>
 <li>cambios en el sistema de archivos (ficheros creados, renombrados o cifrados),</li>
@@ -9318,7 +9318,7 @@
 <p>Evaluad capacidades.</p>
 <p>Muchas organizaciones pequeñas y medianas no tienen, de forma interna, todas las habilidades y herramientas para:</p>
 <ul>
-<li>identificar IoC a buen ritmo,</li>
+<li>identificar <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> a buen ritmo,</li>
 <li>buscarlos en el entorno,</li>
 <li>y tomar imágenes forenses.</li>
 </ul>
@@ -9339,11 +9339,11 @@
 <h4 id="43-secuencia-tipica-sintomas-cuarentena-imagenes-y-correlacion">4.3. Secuencia típica: síntomas, cuarentena, imágenes y correlación<a class="headerlink" href="#43-secuencia-tipica-sintomas-cuarentena-imagenes-y-correlacion" title="Permanent link">&para;</a></h4>
 <p>Una secuencia muy común y genérica en contención es:</p>
 <ol>
-<li>Identificar síntomas e IoC iniciales.</li>
+<li>Identificar síntomas e <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> iniciales.</li>
 <li>Poner en cuarentena sistemas sospechosos.</li>
 <li>Tomar imágenes (disco y, si procede, memoria) para investigación.</li>
-<li>Analizar esas imágenes para extraer más IoC.</li>
-<li>Buscar esos nuevos IoC en el resto del entorno para descubrir más equipos afectados.</li>
+<li>Analizar esas imágenes para extraer más <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>.</li>
+<li>Buscar esos nuevos <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> en el resto del entorno para descubrir más equipos afectados.</li>
 </ol>
 <pre class="mermaid"><code>flowchart TD
     A[Síntoma inicial] --&gt; B[IoC iniciales]
@@ -9358,16 +9358,16 @@
 <p>Para que os resulte aplicable en laboratorio, agrupamos por capas: red, identidad, endpoint y servicios.</p>
 <h4 id="51-red">5.1. Red<a class="headerlink" href="#51-red" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Segmentación / cuarentena</strong> (VLAN, ACL, microsegmentación).</li>
-<li><strong>Bloqueo de IoC</strong> en <abbr title="Dispositivo de seguridad que se utiliza para proteger una red de comunicaciones. El firewall controla el tráfico de red y decide qué paquetes de datos pueden entrar o salir de la red.">firewall</abbr>/proxy/<abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr> (IPs, dominios, URLs).</li>
+<li><strong><abbr title="Técnica utilizada para dividir una red en segmentos más pequeños y seguros. La segmentación permite a las organizaciones controlar el tráfico de red, limitar el acceso a los recursos, mejorar la seguridad, etc.">Segmentación</abbr> / cuarentena</strong> (VLAN, ACL, microsegmentación).</li>
+<li><strong>Bloqueo de <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr></strong> en <abbr title="Dispositivo de seguridad que se utiliza para proteger una red de comunicaciones. El firewall controla el tráfico de red y decide qué paquetes de datos pueden entrar o salir de la red.">firewall</abbr>/proxy/<abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr> (IPs, dominios, URLs).</li>
 <li><strong>Corte de rutas</strong> entre segmentos para limitar movimiento lateral.</li>
 <li><strong>Limitación de egress</strong> (salida a Internet) a lo estrictamente necesario.</li>
 </ul>
-<p>La capa de red suele ser la más rápida para <strong>frenar propagación</strong> y <strong>cortar C2</strong> (comando y control). Si el atacante necesita hablar con fuera (dominios/<abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> maliciosos) o moverse lateralmente, una buena contención en red puede romperle el plan.</p>
-<p>MITRE define la segmentación como control para limitar flujo y restringir movimiento lateral. (<a href="https://attack.mitre.org/mitigations/M1030/" title="Network Segmentation, Mitigation M1030 - Enterprise">attack.mitre.org</a>)</p>
+<p>La capa de red suele ser la más rápida para <strong>frenar propagación</strong> y <strong>cortar <abbr title="Comando y Control. Es un sistema de comunicación utilizado por los atacantes para controlar y coordinar los dispositivos infectados en una botnet. Los servidores C2 permiten a los atacantes enviar comandos, recibir información, actualizar el malware, etc.">C2</abbr></strong> (comando y control). Si el atacante necesita hablar con fuera (dominios/<abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> maliciosos) o moverse lateralmente, una buena contención en red puede romperle el plan.</p>
+<p><abbr title="Es una organización sin ánimo de lucro que se dedica a la investigación y el desarrollo en diversas áreas, como la ciberseguridad, la defensa, la salud, etc. MITRE proporciona recursos, herramientas y guías para ayudar a las organizaciones a mejorar su seguridad y eficiencia.">MITRE</abbr> define la segmentación como control para limitar flujo y restringir movimiento lateral. (<a href="https://attack.mitre.org/mitigations/M1030/" title="Network Segmentation, Mitigation M1030 - Enterprise">attack.mitre.org</a>)</p>
 <div class="admonition tip">
 <p class="admonition-title">Consejo</p>
-<p>Cuando bloquees IoC, intenta hacerlo en dos sitios:</p>
+<p>Cuando bloquees <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>, intenta hacerlo en dos sitios:</p>
 <ul>
 <li>en el perímetro (para cortar salida), ejemplo, en el proxy o <abbr title="Dispositivo de seguridad que se utiliza para proteger una red de comunicaciones. El firewall controla el tráfico de red y decide qué paquetes de datos pueden entrar o salir de la red.">firewall</abbr>,</li>
 <li>y dentro (para evitar que un equipo infectado hable con otros segmentos), ejemplo, con ACL o microsegmentación.</li>
@@ -9377,7 +9377,7 @@
 <ul>
 <li><strong>Deshabilitar cuentas comprometidas</strong> y cortar sesiones activas.</li>
 <li><strong>Reset forzado de contraseñas</strong> y rotación de credenciales privilegiadas.</li>
-<li><strong>Revocar tokens</strong> (SSO/<abbr title="Protocolo de autorización abierto que permite a las aplicaciones obtener acceso a los recursos protegidos en nombre de un usuario. En OAuth 2.0, los usuarios pueden autorizar a las aplicaciones a acceder a sus datos sin compartir sus credenciales.">OAuth</abbr>), claves <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> y secretos de servicios.</li>
+<li><strong>Revocar tokens</strong> (<abbr title="Autenticación Única. Es un sistema de seguridad que permite a los usuarios acceder a múltiples aplicaciones o servicios con una sola autenticación. El SSO simplifica la gestión de contraseñas, mejora la experiencia del usuario y aumenta la seguridad al reducir el número de credenciales que los usuarios deben recordar.">SSO</abbr>/<abbr title="Protocolo de autorización abierto que permite a las aplicaciones obtener acceso a los recursos protegidos en nombre de un usuario. En OAuth 2.0, los usuarios pueden autorizar a las aplicaciones a acceder a sus datos sin compartir sus credenciales.">OAuth</abbr>), claves <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> y secretos de servicios.</li>
 <li><strong>Aplicar <abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr></strong> (especialmente en cuentas de administración).</li>
 </ul>
 <p>La identidad es la “llave maestra” del entorno. Si el atacante tiene credenciales (o tokens), puede volver aunque hayas aislado un equipo. Por eso, en muchos incidentes la contención real se consigue cuando se controla <strong>qué identidades pueden autenticarse</strong> y <strong>desde qué ubicaciones</strong>.</p>
@@ -9417,26 +9417,26 @@
 <p>No todos los ataques requieren un playbook “a medida”. Por ejemplo, en un ataque a una aplicación web, puede no existir un procedimiento específico para esa vulnerabilidad concreta. Aun así, suele haber playbooks útiles para piezas del problema (<abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr>, elevación de privilegios, persistencia, uso indebido de cuentas). Una investigación forense suele conducir al origen (la vulnerabilidad) y la remediación completa se termina de cerrar en recuperación.</p>
 </div>
 <h4 id="61-ransomware-cifrado-y-posible-extorsion">6.1. Ransomware (cifrado y posible extorsión)<a class="headerlink" href="#61-ransomware-cifrado-y-posible-extorsion" title="Permanent link">&para;</a></h4>
-<p>CISA recomienda una combinación de prevención y respuesta, incluyendo aislamiento y checklist de respuesta. (<a href="https://www.cisa.gov/stopransomware/ransomware-guide" title="StopRansomware Guide">cisa.gov</a>)
-NCSC mantiene guías específicas para mitigar <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr> y <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr>. (<a href="https://www.ncsc.gov.uk/guidance/mitigating-malware-and-ransomware-attacks" title="Mitigating malware and ransomware attacks - NCSC.GOV.UK">ncsc.gov.uk</a>)</p>
+<p><abbr title="Agencia de Seguridad de Infraestructura y Ciberseguridad de los Estados Unidos. Es una agencia del gobierno de los Estados Unidos que se encarga de proteger la infraestructura crítica y la ciberseguridad del país. La CISA puede colaborar con otros organismos de seguridad, como el FBI, el NSA, el DHS, etc.">CISA</abbr> recomienda una combinación de prevención y respuesta, incluyendo aislamiento y checklist de respuesta. (<a href="https://www.cisa.gov/stopransomware/ransomware-guide" title="StopRansomware Guide">cisa.gov</a>)
+<abbr title="Centro Nacional de Seguridad Cibernética del Reino Unido. Es un organismo de ciberseguridad que se encarga de proteger la información y los sistemas críticos del Reino Unido. El NCSC puede colaborar con otros organismos de ciberseguridad, como el GCHQ, el MI5, el MI6, etc.">NCSC</abbr> mantiene guías específicas para mitigar <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr> y <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr>. (<a href="https://www.ncsc.gov.uk/guidance/mitigating-malware-and-ransomware-attacks" title="Mitigating malware and ransomware attacks - NCSC.GOV.UK">ncsc.gov.uk</a>)</p>
 <p><strong>Contención táctica (minutos-horas):</strong></p>
 <ol>
 <li>Aislar equipos afectados (<abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr> / VLAN cuarentena / desconectar red).</li>
 <li>Proteger backups: evitar acceso desde cuentas comprometidas.</li>
 <li>Cortar credenciales comprometidas (usuarios y admins).</li>
-<li>Bloquear IoC conocidos (dominios/<abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr>) si se identifican.</li>
+<li>Bloquear <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> conocidos (dominios/<abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr>) si se identifican.</li>
 <li>Registrar acciones y preservar evidencia mínima si es viable.</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>Antes de bloquear “a lo loco”, confirmad lo básico: que la alerta no sea un falso positivo o un <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr> antiguo sin impacto. Si tenéis una muestra (hash, fichero, URL), el análisis ayuda a sacar IoC útiles para buscar otros equipos afectados.</p>
-<p>Si el análisis revela dominios o <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> relacionados, eso puede ayudar a detectar comunicación de mando y control (C2) y a localizar otras máquinas que estén intentando conectar con esos destinos.</p>
+<p>Antes de bloquear “a lo loco”, confirmad lo básico: que la alerta no sea un falso positivo o un <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr> antiguo sin impacto. Si tenéis una muestra (hash, fichero, URL), el análisis ayuda a sacar <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> útiles para buscar otros equipos afectados.</p>
+<p>Si el análisis revela dominios o <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> relacionados, eso puede ayudar a detectar comunicación de mando y control (<abbr title="Comando y Control. Es un sistema de comunicación utilizado por los atacantes para controlar y coordinar los dispositivos infectados en una botnet. Los servidores C2 permiten a los atacantes enviar comandos, recibir información, actualizar el malware, etc.">C2</abbr>) y a localizar otras máquinas que estén intentando conectar con esos destinos.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Atención</p>
 <p>Herramientas como VirusTotal son muy útiles, pero tened cuidado: lo que se sube puede quedar almacenado y ser visible para terceros. No subáis documentos internos o ficheros con datos sensibles.</p>
 </div>
-<h5 id="611-fuentes-practicas-de-ioc-sin-complicarlo-mas-de-la-cuenta">6.1.1. Fuentes prácticas de IoC (sin complicarlo más de la cuenta)<a class="headerlink" href="#611-fuentes-practicas-de-ioc-sin-complicarlo-mas-de-la-cuenta" title="Permanent link">&para;</a></h5>
+<h5 id="611-fuentes-practicas-de-ioc-sin-complicarlo-mas-de-la-cuenta">6.1.1. Fuentes prácticas de <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> (sin complicarlo más de la cuenta)<a class="headerlink" href="#611-fuentes-practicas-de-ioc-sin-complicarlo-mas-de-la-cuenta" title="Permanent link">&para;</a></h5>
 <p>Si tenéis una muestra o indicadores iniciales, las preguntas útiles para contención son:</p>
 <ol>
 <li>
@@ -9467,7 +9467,7 @@ NCSC mantiene guías específicas para mitigar <abbr title="Término genérico q
 <tbody>
 <tr>
 <td>Wireshark</td>
-<td>capturar y analizar tráfico para buscar C2 o exfiltración</td>
+<td>capturar y analizar tráfico para buscar <abbr title="Comando y Control. Es un sistema de comunicación utilizado por los atacantes para controlar y coordinar los dispositivos infectados en una botnet. Los servidores C2 permiten a los atacantes enviar comandos, recibir información, actualizar el malware, etc.">C2</abbr> o exfiltración</td>
 </tr>
 <tr>
 <td>ProcMon / Process Monitor</td>
@@ -9485,11 +9485,11 @@ NCSC mantiene guías específicas para mitigar <abbr title="Término genérico q
 </table>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>En un entorno con <abbr title="Entorno aislado en el que se ejecutan programas o archivos sospechosos para analizar su comportamiento sin poner en peligro el sistema. Los sandboxes se utilizan para evaluar la seguridad de los programas, detectar malware, etc.">sandbox</abbr>, a veces se “detona” la muestra para observar comportamientos. Ojo: algunas muestras detectan que están en un entorno virtual y no ejecutan, así que conviene apoyarse también en IoC de red, logs, <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr> y correlación en el entorno.</p>
+<p>En un entorno con <abbr title="Entorno aislado en el que se ejecutan programas o archivos sospechosos para analizar su comportamiento sin poner en peligro el sistema. Los sandboxes se utilizan para evaluar la seguridad de los programas, detectar malware, etc.">sandbox</abbr>, a veces se “detona” la muestra para observar comportamientos. Ojo: algunas muestras detectan que están en un entorno virtual y no ejecutan, así que conviene apoyarse también en <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> de red, logs, <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr> y correlación en el entorno.</p>
 </div>
 <p><strong>Contención estratégica (días):</strong></p>
 <ul>
-<li>Segmentación para frenar movimiento lateral.</li>
+<li><abbr title="Técnica utilizada para dividir una red en segmentos más pequeños y seguros. La segmentación permite a las organizaciones controlar el tráfico de red, limitar el acceso a los recursos, mejorar la seguridad, etc.">Segmentación</abbr> para frenar movimiento lateral.</li>
 <li><abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr> y endurecimiento de accesos remotos.</li>
 <li>Revisión de privilegios y cuentas de servicio.</li>
 </ul>
@@ -9511,16 +9511,16 @@ NCSC mantiene guías específicas para mitigar <abbr title="Término genérico q
 <li>Sacar el servicio de Internet o poner mantenimiento (coordinado).</li>
 <li>Copiar logs, artefactos web y evidencias de integridad.</li>
 <li>Rotar secretos (<abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> keys, credenciales DB, despliegue).</li>
-<li>Bloquear rutas, IoC y revisar persistencia.</li>
+<li>Bloquear rutas, <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> y revisar persistencia.</li>
 </ol>
 <p><strong>Contención estratégica:</strong></p>
 <ul>
 <li><abbr title="Firewall de Aplicaciones Web. Es un sistema de seguridad que se utiliza para proteger las aplicaciones web de los ataques de seguridad. Los WAFs pueden detectar y bloquear los ataques de inyección SQL, los ataques de cross-site scripting, los ataques de denegación de servicio, etc.">WAF</abbr>, hardening, parcheo, pipeline seguro y control de cambios.</li>
 </ul>
-<h4 id="64-exfiltracion-c2">6.4. Exfiltración / C2<a class="headerlink" href="#64-exfiltracion-c2" title="Permanent link">&para;</a></h4>
+<h4 id="64-exfiltracion-c2">6.4. Exfiltración / <abbr title="Comando y Control. Es un sistema de comunicación utilizado por los atacantes para controlar y coordinar los dispositivos infectados en una botnet. Los servidores C2 permiten a los atacantes enviar comandos, recibir información, actualizar el malware, etc.">C2</abbr><a class="headerlink" href="#64-exfiltracion-c2" title="Permanent link">&para;</a></h4>
 <p><strong>Contención táctica:</strong></p>
 <ol>
-<li>Bloquear comunicaciones C2 (proxy/<abbr title="Dispositivo de seguridad que se utiliza para proteger una red de comunicaciones. El firewall controla el tráfico de red y decide qué paquetes de datos pueden entrar o salir de la red.">firewall</abbr>/<abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr>).</li>
+<li>Bloquear comunicaciones <abbr title="Comando y Control. Es un sistema de comunicación utilizado por los atacantes para controlar y coordinar los dispositivos infectados en una botnet. Los servidores C2 permiten a los atacantes enviar comandos, recibir información, actualizar el malware, etc.">C2</abbr> (proxy/<abbr title="Dispositivo de seguridad que se utiliza para proteger una red de comunicaciones. El firewall controla el tráfico de red y decide qué paquetes de datos pueden entrar o salir de la red.">firewall</abbr>/<abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr>).</li>
 <li>Aislar hosts implicados.</li>
 <li>Preservar evidencias de red (logs, proxy, <abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr>).</li>
 </ol>
@@ -9536,15 +9536,15 @@ NCSC mantiene guías específicas para mitigar <abbr title="Término genérico q
 <li>Revisar logs de <abbr title="Dispositivo de seguridad que se utiliza para proteger una red de comunicaciones. El firewall controla el tráfico de red y decide qué paquetes de datos pueden entrar o salir de la red.">firewall</abbr>, balanceadores, routers y servidores para caracterizar tráfico.</li>
 <li>Bloquear tráfico con dispositivos perimetrales (reglas, rate limit, geo, etc.).</li>
 <li>Bloquear respuestas salientes si el servicio está amplificando el ataque.</li>
-<li>Hacer “blackhole” de <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> maliciosas atribuidas al atacante (si aplica).</li>
+<li>Hacer “<abbr title="Técnica utilizada para bloquear el tráfico de red no deseado. En un blackhole, el tráfico de red se redirige a una dirección IP no válida o a un servidor que no responde, lo que impide que el tráfico llegue a su destino.">blackhole</abbr>” de <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> maliciosas atribuidas al atacante (si aplica).</li>
 <li>Deshabilitar temporalmente aplicaciones y servicios afectados (coordinado).</li>
 <li>Añadir servidores y balanceadores de carga, según sea necesario.</li>
-<li>Coordinar con ISP/CDN si aplica (mitigación aguas arriba).</li>
+<li>Coordinar con <abbr title="Proveedor de Servicios de Internet. Es una empresa que proporciona acceso a internet a los usuarios. Los ISP pueden ofrecer servicios de banda ancha, servicios de correo electrónico, servicios de alojamiento web, etc.">ISP</abbr>/<abbr title="Red de Distribución de Contenidos. Es una red de servidores distribuidos geográficamente que se utilizan para entregar contenido web de forma rápida y eficiente. Las CDN pueden mejorar la velocidad de carga de los sitios web, reducir la latencia, proteger contra ataques DDoS, etc.">CDN</abbr> si aplica (mitigación aguas arriba).</li>
 </ol>
 <p><strong>Contención estratégica:</strong></p>
 <ul>
 <li>Preparar perfiles y runbooks (umbrales, reglas, contactos, escalado).</li>
-<li>Diseñar capacidad de absorción (CDN, caché, autoscaling, balanceo).</li>
+<li>Diseñar capacidad de absorción (<abbr title="Red de Distribución de Contenidos. Es una red de servidores distribuidos geográficamente que se utilizan para entregar contenido web de forma rápida y eficiente. Las CDN pueden mejorar la velocidad de carga de los sitios web, reducir la latencia, proteger contra ataques DDoS, etc.">CDN</abbr>, caché, autoscaling, balanceo).</li>
 </ul>
 <h4 id="66-activo-perdido-o-robado-portatil-movil-usb">6.6. Activo perdido o robado (portátil, móvil, USB)<a class="headerlink" href="#66-activo-perdido-o-robado-portatil-movil-usb" title="Permanent link">&para;</a></h4>
 <p>No todo incidente es “<abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr>”. En perdida/robo, la contención es responder a una pregunta: ¿hay riesgo de datos?</p>
@@ -9552,13 +9552,13 @@ NCSC mantiene guías específicas para mitigar <abbr title="Término genérico q
 <ol>
 <li>¿Qué tipo de datos había? (PII, datos sensibles, claves, accesos).</li>
 <li>¿El disco estaba cifrado y el equipo estaba apagado? (reduce mucho el riesgo).</li>
-<li>¿Se puede localizar o borrar en remoto? (MDM, herramientas de gestión).</li>
+<li>¿Se puede localizar o borrar en remoto? (<abbr title="Gestión de Dispositivos Móviles. Es un sistema de seguridad que se utiliza para gestionar y proteger los dispositivos móviles de una organización. El MDM puede controlar el acceso a los dispositivos, aplicar políticas de seguridad, detectar y responder a las amenazas, etc.">MDM</abbr>, herramientas de gestión).</li>
 <li>¿Hay que revocar accesos? (tokens, <abbr title="Red Privada Virtual. Es un sistema de seguridad que se utiliza para establecer una conexión segura entre un cliente y un servidor a través de una red pública. Las VPN cifran la comunicación, protegen la privacidad de los datos y permiten a los usuarios acceder a recursos de red de forma segura.">VPN</abbr>, sesiones, claves <abbr title="Secure Shell. Es un sistema de seguridad que se utiliza para acceder de forma segura a un servidor remoto a través de una red. El SSH cifra la comunicación entre el cliente y el servidor, autentica a los usuarios y protege la integridad de los datos.">SSH</abbr>).</li>
 </ol>
 <p>Si el activo fue robado, puede ser necesario <strong>presentar denuncia</strong> o comunicarlo a fuerzas de seguridad. Y si la empresa no puede confirmar con seguridad qué datos había o qué uso tenía el equipo, lo más realista suele ser monitorizar la situación (internamente y, si procede, externamente).</p>
 <p><strong>Contención estratégica:</strong></p>
 <ul>
-<li>Cifrado completo, MDM, bloqueo, borrado remoto y mínimo privilegio.</li>
+<li>Cifrado completo, <abbr title="Gestión de Dispositivos Móviles. Es un sistema de seguridad que se utiliza para gestionar y proteger los dispositivos móviles de una organización. El MDM puede controlar el acceso a los dispositivos, aplicar políticas de seguridad, detectar y responder a las amenazas, etc.">MDM</abbr>, bloqueo, borrado remoto y mínimo privilegio.</li>
 </ul>
 <h4 id="67-robo-de-datos-exfiltracion">6.7. Robo de datos (exfiltración)<a class="headerlink" href="#67-robo-de-datos-exfiltracion" title="Permanent link">&para;</a></h4>
 <p>Contener robo de datos suele ir “a contrarreloj”. Las señales pueden ser muy obvias (transferencias grandes) o más sutiles (movimientos internos previos a exfiltrar).</p>
@@ -9646,7 +9646,7 @@ NCSC mantiene guías específicas para mitigar <abbr title="Término genérico q
 <li><strong>Formatear o reinstalar sin investigar</strong>: destruye evidencia y no aprendéis nada.</li>
 <li><strong>Aislar solo el “paciente 0”</strong> cuando ya hay movimiento lateral.</li>
 <li><strong>No cortar credenciales</strong>: el atacante vuelve.</li>
-<li><strong>Bloquear IoC a ciegas</strong> y dejar fuera a usuarios o servicios legítimos.</li>
+<li><strong>Bloquear <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> a ciegas</strong> y dejar fuera a usuarios o servicios legítimos.</li>
 <li><strong>No documentar</strong>: en un incidente real y en el módulo, si no está registrado, no existe.</li>
 </ol>
 <h3 id="9-checklist-de-contencion-primeros-3060-minutos">9. Checklist de contención (primeros 30–60 minutos)<a class="headerlink" href="#9-checklist-de-contencion-primeros-3060-minutos" title="Permanent link">&para;</a></h3>
@@ -9655,12 +9655,12 @@ NCSC mantiene guías específicas para mitigar <abbr title="Término genérico q
 <li>Valorar evidencia volátil (si procede): ¿se pierde si apagáis/aisláis?</li>
 <li>Aislar sistemas afectados con el menor impacto posible.</li>
 <li>Cortar accesos del atacante (cuentas/tokens/secretos).</li>
-<li>Bloquear IoC (red/<abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr>/proxy/<abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr>) si se conocen.</li>
+<li>Bloquear <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> (red/<abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr>/proxy/<abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr>) si se conocen.</li>
 <li>Proteger backups y activos críticos.</li>
 <li>Escalar y comunicar según procedimiento.</li>
 <li>Documentar: qué, cuándo, quién, por qué.</li>
 </ol>
-<p>CISA publica listas y guías de respuesta para <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> que incluyen checklist y acciones recomendadas. (<a href="https://www.cisa.gov/stopransomware/ransomware-guide" title="StopRansomware Guide">cisa.gov</a>)</p>
+<p><abbr title="Agencia de Seguridad de Infraestructura y Ciberseguridad de los Estados Unidos. Es una agencia del gobierno de los Estados Unidos que se encarga de proteger la infraestructura crítica y la ciberseguridad del país. La CISA puede colaborar con otros organismos de seguridad, como el FBI, el NSA, el DHS, etc.">CISA</abbr> publica listas y guías de respuesta para <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> que incluyen checklist y acciones recomendadas. (<a href="https://www.cisa.gov/stopransomware/ransomware-guide" title="StopRansomware Guide">cisa.gov</a>)</p>
 <h3 id="10-evidencia-forense-y-expectativas-de-direccion">10. Evidencia forense y expectativas de dirección<a class="headerlink" href="#10-evidencia-forense-y-expectativas-de-direccion" title="Permanent link">&para;</a></h3>
 <p>La contención no es solo técnica. Dos frentes suelen marcar la diferencia.</p>
 <h4 id="101-apoyo-forense-interno-o-externo">10.1. Apoyo forense (interno o externo)<a class="headerlink" href="#101-apoyo-forense-interno-o-externo" title="Permanent link">&para;</a></h4>
@@ -9702,7 +9702,7 @@ NCSC mantiene guías específicas para mitigar <abbr title="Término genérico q
 </ul>
 </li>
 <li>
-<p><strong>Playbook de <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr></strong></p>
+<p><strong><abbr title="Conjunto de procedimientos y acciones predefinidas que se utilizan para responder a incidentes de seguridad. Los playbooks pueden incluir pasos para identificar, contener, erradicar y recuperar de un incidente de seguridad, así como para comunicarlo a las partes interesadas.">Playbook</abbr> de <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr></strong></p>
 <ul>
 <li>Objetivo: redactar procedimiento corto/largo plazo y roles.</li>
 <li>Referencia: guía StopRansomware. (<a href="https://www.cisa.gov/stopransomware/ransomware-guide" title="StopRansomware Guide">cisa.gov</a>)</li>
@@ -9718,20 +9718,20 @@ NCSC mantiene guías específicas para mitigar <abbr title="Término genérico q
 </ol>
 <h2 id="glosario-minimo">Glosario mínimo<a class="headerlink" href="#glosario-minimo" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>IoC (Indicador de compromiso)</strong>: indicador observable de posible compromiso.</li>
+<li><strong><abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> (Indicador de compromiso)</strong>: indicador observable de posible compromiso.</li>
 <li><strong><abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr></strong>: solución de detección y respuesta en endpoint.</li>
-<li><strong>C2 (Command &amp; Control)</strong>: infraestructura de mando y control del atacante.</li>
-<li><strong>Segmentación</strong>: dividir la red en segmentos para limitar movimiento lateral. (<a href="https://attack.mitre.org/mitigations/M1030/" title="Network Segmentation, Mitigation M1030 - Enterprise">attack.mitre.org</a>)</li>
-<li><strong>Token</strong>: credencial temporal (SSO/<abbr title="Protocolo de autorización abierto que permite a las aplicaciones obtener acceso a los recursos protegidos en nombre de un usuario. En OAuth 2.0, los usuarios pueden autorizar a las aplicaciones a acceder a sus datos sin compartir sus credenciales.">OAuth</abbr>) que permite acceso sin contraseña.</li>
+<li><strong><abbr title="Comando y Control. Es un sistema de comunicación utilizado por los atacantes para controlar y coordinar los dispositivos infectados en una botnet. Los servidores C2 permiten a los atacantes enviar comandos, recibir información, actualizar el malware, etc.">C2</abbr> (Command &amp; Control)</strong>: infraestructura de mando y control del atacante.</li>
+<li><strong><abbr title="Técnica utilizada para dividir una red en segmentos más pequeños y seguros. La segmentación permite a las organizaciones controlar el tráfico de red, limitar el acceso a los recursos, mejorar la seguridad, etc.">Segmentación</abbr></strong>: dividir la red en segmentos para limitar movimiento lateral. (<a href="https://attack.mitre.org/mitigations/M1030/" title="Network Segmentation, Mitigation M1030 - Enterprise">attack.mitre.org</a>)</li>
+<li><strong><abbr title="Token de autenticación, Credencial temporal (SSO/OAuth) que permite acceso sin contraseña. Es un objeto que se utiliza para representar la identidad de un usuario o una aplicación en un sistema. Los tokens pueden ser utilizados para autenticar a los usuarios, autorizar sus acciones, etc.">Token</abbr></strong>: credencial temporal (<abbr title="Autenticación Única. Es un sistema de seguridad que permite a los usuarios acceder a múltiples aplicaciones o servicios con una sola autenticación. El SSO simplifica la gestión de contraseñas, mejora la experiencia del usuario y aumenta la seguridad al reducir el número de credenciales que los usuarios deben recordar.">SSO</abbr>/<abbr title="Protocolo de autorización abierto que permite a las aplicaciones obtener acceso a los recursos protegidos en nombre de un usuario. En OAuth 2.0, los usuarios pueden autorizar a las aplicaciones a acceder a sus datos sin compartir sus credenciales.">OAuth</abbr>) que permite acceso sin contraseña.</li>
 </ul>
 <h2 id="referencias-y-bibliografia">Referencias y bibliografía<a class="headerlink" href="#referencias-y-bibliografia" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Normativa del módulo, RA3 (CE 3.e): contención para limitar daños.</li>
 <li>Thompson, E. C. (2018). <em>Cybersecurity Incident Response</em>. Capítulo 8: Containment.</li>
 <li><abbr title="National Institute of Standards and Technology (Instituto Nacional de Estándares y Tecnología). Es una agencia del gobierno de los Estados Unidos que establece normas y guías en diversas áreas, como la ciberseguridad, la tecnología, la ciencia, etc. El NIST publica normas, recomendaciones y guías para ayudar a las organizaciones a mejorar su seguridad y eficiencia.">NIST</abbr> SP 800-61 Rev. 3: recomendaciones de respuesta a incidentes integradas con gestión de riesgo. (<a href="https://csrc.nist.gov/pubs/sp/800/61/r3/final" title="SP 800-61 Rev. 3, Incident Response Recommendations and ...">csrc.nist.gov</a>)</li>
-<li>CISA #StopRansomware Guide (guía y checklist de respuesta). (<a href="https://www.cisa.gov/stopransomware/ransomware-guide" title="StopRansomware Guide">cisa.gov</a>)</li>
-<li>UK NCSC: mitigación de <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr> y <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> (guía práctica). (<a href="https://www.ncsc.gov.uk/guidance/mitigating-malware-and-ransomware-attacks" title="Mitigating malware and ransomware attacks - NCSC.GOV.UK">ncsc.gov.uk</a>)</li>
-<li>MITRE ATT&amp;CK Mitigation M1030: Network Segmentation. (<a href="https://attack.mitre.org/mitigations/M1030/" title="Network Segmentation, Mitigation M1030 - Enterprise">attack.mitre.org</a>)</li>
+<li><abbr title="Agencia de Seguridad de Infraestructura y Ciberseguridad de los Estados Unidos. Es una agencia del gobierno de los Estados Unidos que se encarga de proteger la infraestructura crítica y la ciberseguridad del país. La CISA puede colaborar con otros organismos de seguridad, como el FBI, el NSA, el DHS, etc.">CISA</abbr> #StopRansomware Guide (guía y checklist de respuesta). (<a href="https://www.cisa.gov/stopransomware/ransomware-guide" title="StopRansomware Guide">cisa.gov</a>)</li>
+<li>UK <abbr title="Centro Nacional de Seguridad Cibernética del Reino Unido. Es un organismo de ciberseguridad que se encarga de proteger la información y los sistemas críticos del Reino Unido. El NCSC puede colaborar con otros organismos de ciberseguridad, como el GCHQ, el MI5, el MI6, etc.">NCSC</abbr>: mitigación de <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr> y <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> (guía práctica). (<a href="https://www.ncsc.gov.uk/guidance/mitigating-malware-and-ransomware-attacks" title="Mitigating malware and ransomware attacks - NCSC.GOV.UK">ncsc.gov.uk</a>)</li>
+<li><abbr title="Es un marco de referencia que se utiliza para describir las tácticas, técnicas y procedimientos utilizados por los atacantes para llevar a cabo un ataque. El marco MITRE ATT&amp;CK se basa en la recopilación de información sobre los ataques reales y proporciona una taxonomía de las tácticas, técnicas y procedimientos utilizados por los atacantes.">MITRE ATT&amp;CK</abbr> Mitigation M1030: Network Segmentation. (<a href="https://attack.mitre.org/mitigations/M1030/" title="Network Segmentation, Mitigation M1030 - Enterprise">attack.mitre.org</a>)</li>
 </ul>
 <h2 id="presentacion">Presentación<a class="headerlink" href="#presentacion" title="Permanent link">&para;</a></h2>
 <p>Por definir.</p>

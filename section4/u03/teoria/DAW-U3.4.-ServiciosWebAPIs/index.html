@@ -9570,7 +9570,7 @@ Una tienda online puede integrar:
 </ul>
 </div>
 <h3 id="4-jwt-autenticacion-y-autorizacion">4. <abbr title="Token de Web JSON. Estándar abierto que define un formato compacto y autónomo para transmitir de forma segura la información entre dos partes como un objeto JSON. Este está firmado digitalmente y se puede verificar.">JWT</abbr>: autenticación y autorización<a class="headerlink" href="#4-jwt-autenticacion-y-autorizacion" title="Permanent link">&para;</a></h3>
-<p>Un <strong>JSON Web Token (<abbr title="Token de Web JSON. Estándar abierto que define un formato compacto y autónomo para transmitir de forma segura la información entre dos partes como un objeto JSON. Este está firmado digitalmente y se puede verificar.">JWT</abbr>)</strong> es un estándar abierto (RFC 7519) para crear tokens de acceso que permiten intercambiar información de forma segura entre dos partes.</p>
+<p>Un <strong>JSON Web <abbr title="Token de autenticación, Credencial temporal (SSO/OAuth) que permite acceso sin contraseña. Es un objeto que se utiliza para representar la identidad de un usuario o una aplicación en un sistema. Los tokens pueden ser utilizados para autenticar a los usuarios, autorizar sus acciones, etc.">Token</abbr> (<abbr title="Token de Web JSON. Estándar abierto que define un formato compacto y autónomo para transmitir de forma segura la información entre dos partes como un objeto JSON. Este está firmado digitalmente y se puede verificar.">JWT</abbr>)</strong> es un estándar abierto (RFC 7519) para crear tokens de acceso que permiten intercambiar información de forma segura entre dos partes.</p>
 <h4 id="41-estructura-de-un-jwt">4.1. Estructura de un <abbr title="Token de Web JSON. Estándar abierto que define un formato compacto y autónomo para transmitir de forma segura la información entre dos partes como un objeto JSON. Este está firmado digitalmente y se puede verificar.">JWT</abbr><a class="headerlink" href="#41-estructura-de-un-jwt" title="Permanent link">&para;</a></h4>
 <p>Un <abbr title="Token de Web JSON. Estándar abierto que define un formato compacto y autónomo para transmitir de forma segura la información entre dos partes como un objeto JSON. Este está firmado digitalmente y se puede verificar.">JWT</abbr> consta de <strong>tres partes</strong> separadas por puntos:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>header.payload.signature
@@ -9769,11 +9769,11 @@ Una tienda online puede integrar:
 <li><strong>EC2</strong>: Máquinas virtuales para microservicios</li>
 <li><strong>S3</strong>: Almacenamiento de contenido</li>
 <li><strong>DynamoDB</strong>: Base de datos NoSQL</li>
-<li><strong>CloudFront</strong>: CDN global</li>
+<li><strong>CloudFront</strong>: <abbr title="Red de Distribución de Contenidos. Es una red de servidores distribuidos geográficamente que se utilizan para entregar contenido web de forma rápida y eficiente. Las CDN pueden mejorar la velocidad de carga de los sitios web, reducir la latencia, proteger contra ataques DDoS, etc.">CDN</abbr> global</li>
 <li><strong>ELB</strong>: Balanceadores de carga</li>
 </ul>
-<h4 id="53-open-connect-cdn-propio">5.3. Open Connect: CDN propio<a class="headerlink" href="#53-open-connect-cdn-propio" title="Permanent link">&para;</a></h4>
-<p><strong>Open Connect</strong> es la red de distribución de contenido (CDN) propia de Netflix:</p>
+<h4 id="53-open-connect-cdn-propio">5.3. Open Connect: <abbr title="Red de Distribución de Contenidos. Es una red de servidores distribuidos geográficamente que se utilizan para entregar contenido web de forma rápida y eficiente. Las CDN pueden mejorar la velocidad de carga de los sitios web, reducir la latencia, proteger contra ataques DDoS, etc.">CDN</abbr> propio<a class="headerlink" href="#53-open-connect-cdn-propio" title="Permanent link">&para;</a></h4>
+<p><strong>Open Connect</strong> es la red de distribución de contenido (<abbr title="Red de Distribución de Contenidos. Es una red de servidores distribuidos geográficamente que se utilizan para entregar contenido web de forma rápida y eficiente. Las CDN pueden mejorar la velocidad de carga de los sitios web, reducir la latencia, proteger contra ataques DDoS, etc.">CDN</abbr>) propia de Netflix:</p>
 <ul>
 <li><strong>Servidores en ISPs</strong>: Contenido cerca del usuario</li>
 <li><strong>Reduce latencia</strong>: Streaming más rápido</li>
@@ -9785,7 +9785,7 @@ Una tienda online puede integrar:
 <li>Contenido popular se replica en servidores locales</li>
 <li>Usuario solicita una película</li>
 <li>Netflix redirige al servidor más cercano</li>
-<li>Streaming desde servidor local del ISP</li>
+<li>Streaming desde servidor local del <abbr title="Proveedor de Servicios de Internet. Es una empresa que proporciona acceso a internet a los usuarios. Los ISP pueden ofrecer servicios de banda ancha, servicios de correo electrónico, servicios de alojamiento web, etc.">ISP</abbr></li>
 </ol>
 <h4 id="54-frontend-tecnologias-client-side">5.4. Frontend: tecnologías client-side<a class="headerlink" href="#54-frontend-tecnologias-client-side" title="Permanent link">&para;</a></h4>
 <p><strong>Aplicación web:</strong></p>
@@ -9862,7 +9862,7 @@ Una tienda online puede integrar:
 <li><a href="https://github.com/joseluisgs">Jose Luis González</a>. <em>Despliegue de aplicaciones Web - 2025 2026</em>. <a href="https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026">https://github.com/joseluisgs/DespliegueAplicacionesWeb-00-2025-2026</a></li>
 <li>Fielding, R. T. (2000). <em><abbr title="Transferencia de Estado Representacional. Estilo arquitectónico de diseño de API que se basa en la representación de recursos y la transferencia de datos a través de HTTP. En REST, las API se diseñan de forma que sean simples, escalables y fáciles de usar.">REST</abbr>: Architectural Styles and the Design of Network-based Software Architectures</em></li>
 <li>Facebook. (2024). <em><abbr title="Lenguaje de consulta de datos que se utiliza para definir y consultar API de forma eficiente. En GraphQL, los desarrolladores pueden especificar los datos que necesitan y recibirlos en una única consulta, lo que reduce la cantidad de datos transferidos y mejora el rendimiento de las aplicaciones.">GraphQL</abbr> Specification</em>. <a href="https://spec.graphql.org/">https://spec.graphql.org/</a></li>
-<li>IETF. (2015). <em>RFC 7519: JSON Web Token (<abbr title="Token de Web JSON. Estándar abierto que define un formato compacto y autónomo para transmitir de forma segura la información entre dos partes como un objeto JSON. Este está firmado digitalmente y se puede verificar.">JWT</abbr>)</em></li>
+<li>IETF. (2015). <em>RFC 7519: JSON Web <abbr title="Token de autenticación, Credencial temporal (SSO/OAuth) que permite acceso sin contraseña. Es un objeto que se utiliza para representar la identidad de un usuario o una aplicación en un sistema. Los tokens pueden ser utilizados para autenticar a los usuarios, autorizar sus acciones, etc.">Token</abbr> (<abbr title="Token de Web JSON. Estándar abierto que define un formato compacto y autónomo para transmitir de forma segura la información entre dos partes como un objeto JSON. Este está firmado digitalmente y se puede verificar.">JWT</abbr>)</em></li>
 <li>Cockcroft, A. (2016). <em>Microservices at Netflix</em>. Netflix Tech Blog</li>
 </ul>
 <h2 id="recursos-adicionales">Recursos adicionales<a class="headerlink" href="#recursos-adicionales" title="Permanent link">&para;</a></h2>

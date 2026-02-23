@@ -241,7 +241,7 @@ Una secuencia muy común y genérica en contención es:
 4. Analizar esas imágenes para extraer más IoC.
 5. Buscar esos nuevos IoC en el resto del entorno para descubrir más equipos afectados.
 
-```Mermaid
+```mermaid
 flowchart TD
     A[Síntoma inicial] --> B[IoC iniciales]
     B --> C[Cuarentena del equipo afectado]
@@ -274,8 +274,8 @@ MITRE define la segmentación como control para limitar flujo y restringir movim
 !!! tip "Consejo"
     Cuando bloquees IoC, intenta hacerlo en dos sitios:
     
-    - en el perímetro (para cortar salida),
-    - y dentro (para evitar que un equipo infectado hable con otros segmentos).
+    - en el perímetro (para cortar salida), ejemplo, en el proxy o firewall,
+    - y dentro (para evitar que un equipo infectado hable con otros segmentos), ejemplo, con ACL o microsegmentación.
 
 #### 5.2. Identidad
 

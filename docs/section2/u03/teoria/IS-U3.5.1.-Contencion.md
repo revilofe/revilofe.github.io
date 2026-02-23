@@ -41,25 +41,25 @@ La contención persigue objetivos muy concretos (y evaluables):
 
 1. **Parar el “sangrado”**: detener propagación, exfiltración o cifrado.
 
-    En la practica suele ser lo primero: si el incidente sigue “en marcha”, cada minuto puede aumentar el impacto. Un ejemplo claro es el ransomware: si hay cifrado activo, el objetivo es **pararlo ya** para que no afecte a mas equipos.
+    En la práctica suele ser lo primero: si el incidente sigue “en marcha”, cada minuto puede aumentar el impacto. Un ejemplo claro es el ransomware: si hay cifrado activo, el objetivo es **pararlo ya** para que no afecte a más equipos.
 
 2. **Reducir superficie de ataque**: limitar movimiento lateral y accesos.
 
-    Esto implica que el atacante tenga menos “caminos” para avanzar: menos rutas de red, menos privilegios, menos servicios accesibles, menos credenciales validas. Si no reduces superficie, puede que “contengas” un equipo, pero el atacante siga moviendose por otros.
+    Esto implica que el atacante tenga menos “caminos” para avanzar: menos rutas de red, menos privilegios, menos servicios accesibles, menos credenciales válidas. Si no reduces superficie, puede que “contengas” un equipo, pero el atacante siga moviéndose por otros.
 
 3. **Comprar tiempo** para investigar con rigor.
 
     La contención **no resuelve** el incidente, pero te permite ganar aire para analizar evidencias, delimitar alcance y preparar erradicación y recuperación sin ir “a ciegas”.
 
-4. **Proteger activos criticos**: identidad, copias de seguridad, servicios esenciales.
+4. **Proteger activos críticos**: identidad, copias de seguridad, servicios esenciales.
 
     Hay activos que, si caen, empeoran todo: por ejemplo, la identidad (AD/SSO), los repositorios de backups o el plano de gestión (hypervisor, EDR, herramientas de despliegue). Contener también es **blindar** esos puntos.
 
-5. **Preservar evidencia** cuando sea necesario (sobre todo evidencias volatiles).
+5. **Preservar evidencia** cuando sea necesario (sobre todo evidencias volátiles).
 
     En incidentes reales, un cierre brusco puede eliminar conexiones, procesos y datos de memoria que son clave para entender el vector de entrada o la persistencia. Por eso, muchas veces se captura “lo mínimo viable” antes de aislar.
 
-Una idea importante (y muy repetida en guias de respuesta a incidentes) es que la contención sirve para **limitar impacto** y, a la vez, permitir que el equipo trabaje con informacion suficiente para erradicar y recuperar con criterio.
+Una idea importante (y muy repetida en guías de respuesta a incidentes) es que la contención sirve para **limitar impacto** y, a la vez, permitir que el equipo trabaje con información suficiente para erradicar y recuperar con criterio.
 
 !!! tip "Idea para alumnado"
     Contener no es “arreglar” el incidente. Es **poner el freno** para que el problema no crezca mientras investigáis y preparáis erradicación y recuperación.
@@ -105,7 +105,7 @@ Hay cinco principios que debéis interiorizar (porque son los que evitan desastr
 
 - **Menor impacto posible**: frenar sin romper lo crítico.
 
-    La contención es un equilibrio entre seguridad y continuidad. Si cortas demasiado, puedes tumbar un servicio esencial y crear un incidente “doble”: el de seguridad y el de disponibilidad. Por eso se prioriza: activos criticos primero, y medidas reversibles cuando se pueda.
+    La contención es un equilibrio entre seguridad y continuidad. Si cortas demasiado, puedes tumbar un servicio esencial y crear un incidente “doble”: el de seguridad y el de disponibilidad. Por eso se prioriza: activos críticos primero, y medidas reversibles cuando se pueda.
 
 - **Cortar el acceso del atacante**: si no cortáis credenciales/tokens, el atacante vuelve.
 
@@ -113,7 +113,7 @@ Hay cinco principios que debéis interiorizar (porque son los que evitan desastr
 
 - **Comunicación y escalado**: la contención es técnica, pero también organizativa.
 
-    Durante contención, la dirección y el negocio piden respuestas. Es normal. Lo importante es comunicar **hechos y siguientes pasos**, sin especular. Dar una conclusion prematura “para tranquilizar” suele empeorar la situacion mas tarde.
+    Durante contención, la dirección y el negocio piden respuestas. Es normal. Lo importante es comunicar **hechos y siguientes pasos**, sin especular. Dar una conclusión prematura “para tranquilizar” suele empeorar la situación más tarde.
 
 !!! warning "Atención"
     “Apago el servidor y listo” puede ser una contención… pero también puede ser:
@@ -156,11 +156,21 @@ flowchart TD
 
 #### 4.1. Indicadores, alcance y cuarentena (lo que suele marcar la diferencia)
 
-En contención hay una idea muy potente: **no basta con “ver el sintoma”**, hay que usarlo para descubrir el resto del incidente.
+En contención hay una idea muy potente: **no basta con “ver el síntoma”**, hay que usarlo para descubrir el resto del incidente.
 
 1. **Identificar indicadores (IoC)**.
 
     Los indicadores de compromiso (IoC) son “pistas” observables: hash de un binario, una clave de registro, un servicio nuevo, una URL maliciosa, conexiones a un dominio concreto, etc. Con una lista inicial de IoC puedes buscar en el resto del entorno para descubrir otros equipos afectados.
+    
+    Ejemplos típicos de IoC que aparecen en incidentes reales:
+    
+    - firmas o detecciones de malware,
+    - cambios en el sistema de archivos (ficheros creados, renombrados o cifrados),
+    - cambios en registro/configuración (persistencia, tareas programadas, servicios),
+    - conexiones salientes o entrantes hacia/desde URLs o dominios maliciosos conocidos.
+    
+    !!! info "Información"
+        La inteligencia de amenazas (threat intelligence) aporta contexto a la investigación: si un grupo de ataque conocido deja indicadores “muy suyos”, buscarlos en el entorno puede ayudar a detectar rápidamente otros sistemas afectados.
     
     !!! tip "Consejo"
         En muchos casos, **la atribución** (quién ha sido) no es lo primero. Lo urgente suele ser: contener, inventariar sistemas afectados y preparar erradicación.
@@ -169,21 +179,26 @@ En contención hay una idea muy potente: **no basta con “ver el sintoma”**, 
 
 2. **Delimitar la población afectada**.
 
-    El objetivo es responder a: ¿qué equipos, cuentas y servicios están tocados? Si solo aislas el primer equipo detectado (el “paciente 0”) y no buscas mas, es facil que el atacante ya se haya movido lateralmente.
+    El objetivo es responder a: ¿qué equipos, cuentas y servicios están tocados? Si solo aislas el primer equipo detectado (el “paciente 0”) y no buscas más, es fácil que el atacante ya se haya movido lateralmente.
 
 3. **Poner en cuarentena de forma segura**.
 
-    Aislar no siempre significa apagar. Opciones tipicas (segun el escenario) son:
+    Aislar no siempre significa apagar. Opciones típicas (según el escenario) son:
     
     - desconectar red (por ejemplo, cable o puerto switch),
+    - poner el equipo en suspensión si necesitáis preservar memoria volátil,
     - aislar con reglas (DNS, firewall, ACL),
     - o cuarentena desde EDR.
     
     Si necesitas evidencia volátil, valora primero una captura rápida y luego aísla.
 
-4. **Preservar evidencia con imagenes cuando aplique**.
+4. **Preservar evidencia con imágenes cuando aplique**.
 
-    Cuando el objetivo es investigar con rigor, se suelen tomar imagenes (disco y, a veces, memoria) para analizarlas sin “pisar” el sistema original. Esto es mas facil cuando hay playbooks y herramientas listas, porque el tiempo durante un incidente es oro.
+    Cuando el objetivo es investigar con rigor, se suelen tomar imágenes (disco y, a veces, memoria) para analizarlas sin “pisar” el sistema original. Las imágenes de sistema de archivos y memoria son especialmente útiles para investigación.
+    
+    A nivel de herramientas, existen opciones open source y comerciales. Por ejemplo, Volatility o Rekall suelen usarse para análisis de memoria, y suites comerciales como EnCase para adquisición/análisis forense, entre otras.
+    
+    Esto es más fácil cuando hay playbooks y herramientas listas, porque el tiempo durante un incidente es oro.
 
 #### 4.2. Elegir una estrategia de contención (según capacidad y objetivos)
 
@@ -231,14 +246,14 @@ Para que os resulte aplicable en laboratorio, agrupamos por capas: red, identida
 * **Corte de rutas** entre segmentos para limitar movimiento lateral.
 * **Limitación de egress** (salida a Internet) a lo estrictamente necesario.
 
-La capa de red suele ser la mas rapida para **frenar propagación** y **cortar C2** (comando y control). Si el atacante necesita hablar con fuera (dominios/IP maliciosos) o moverse lateralmente, una buena contención en red puede romperle el plan.
+La capa de red suele ser la más rápida para **frenar propagación** y **cortar C2** (comando y control). Si el atacante necesita hablar con fuera (dominios/IP maliciosos) o moverse lateralmente, una buena contención en red puede romperle el plan.
 
 MITRE define la segmentación como control para limitar flujo y restringir movimiento lateral. ([attack.mitre.org][1])
 
 !!! tip "Consejo"
     Cuando bloquees IoC, intenta hacerlo en dos sitios:
     
-    - en el perimetro (para cortar salida),
+    - en el perímetro (para cortar salida),
     - y dentro (para evitar que un equipo infectado hable con otros segmentos).
 
 #### 5.2. Identidad
@@ -329,6 +344,9 @@ Herramientas típicas que se usan para observar comportamiento (según permisos 
 | RegShot | comparar cambios “antes/después” en el registro |
 | Process Explorer | revisar procesos/servicios y DLL asociadas |
 
+!!! note "Nota"
+    En un entorno con sandbox, a veces se “detona” la muestra para observar comportamientos. Ojo: algunas muestras detectan que están en un entorno virtual y no ejecutan, así que conviene apoyarse también en IoC de red, logs, EDR y correlación en el entorno.
+
 **Contención estratégica (días):**
 
 * Segmentación para frenar movimiento lateral.
@@ -383,7 +401,10 @@ Este tipo de incidentes son principalmente de **disponibilidad**: el objetivo de
 2. Revisar logs de firewall, balanceadores, routers y servidores para caracterizar tráfico.
 3. Bloquear tráfico con dispositivos perimetrales (reglas, rate limit, geo, etc.).
 4. Bloquear respuestas salientes si el servicio está amplificando el ataque.
-5. Coordinar con ISP/CDN si aplica (mitigación aguas arriba).
+5. Hacer “blackhole” de IP maliciosas atribuidas al atacante (si aplica).
+6. Deshabilitar temporalmente aplicaciones y servicios afectados (coordinado).
+7. Añadir servidores y balanceadores de carga, según sea necesario.
+8. Coordinar con ISP/CDN si aplica (mitigación aguas arriba).
 
 **Contención estratégica:**
 
@@ -401,13 +422,24 @@ No todo incidente es “malware”. En perdida/robo, la contención es responder
 3. ¿Se puede localizar o borrar en remoto? (MDM, herramientas de gestión).
 4. ¿Hay que revocar accesos? (tokens, VPN, sesiones, claves SSH).
 
+Si el activo fue robado, puede ser necesario **presentar denuncia** o comunicarlo a fuerzas de seguridad. Y si la empresa no puede confirmar con seguridad qué datos había o qué uso tenía el equipo, lo más realista suele ser monitorizar la situación (internamente y, si procede, externamente).
+
 **Contención estratégica:**
 
 * Cifrado completo, MDM, bloqueo, borrado remoto y mínimo privilegio.
 
 #### 6.7. Robo de datos (exfiltración)
 
-Contener robo de datos suele ir “a contrarreloj”. Las señales pueden ser muy obvias (transferencias grandes) o mas sutiles (movimientos internos previos a exfiltrar).
+Contener robo de datos suele ir “a contrarreloj”. Las señales pueden ser muy obvias (transferencias grandes) o más sutiles (movimientos internos previos a exfiltrar).
+
+Indicadores útiles (la clave es el contexto):
+
+- Obvios: transferencias grandes desde activos con datos sensibles, exports masivos, consultas inusuales.
+- Sutiles: alertas por disco lleno en servidores con datos sensibles (posible “staging”), correos rebotados por tamaño, trabajo fuera de horario, uso de almacenamiento extraíble cuando debería estar restringido.
+
+Se requiere investigación adicional porque, en algunos incidentes, los datos se mueven primero de ubicaciones sensibles a otras menos sensibles antes de salir fuera de la organización.
+
+Si el indicador está ligado a una persona, suele tocar revisar **derechos de acceso**: un usuario con acceso a PII/ePHI/propiedad intelectual suele implicar mayor impacto si su cuenta se compromete o se usa indebidamente.
 
 **Contención táctica:**
 
@@ -424,7 +456,7 @@ Contener robo de datos suele ir “a contrarreloj”. Las señales pueden ser mu
 
 Aquí entran casos como abuso de privilegios, creación de cuentas sin permiso o saltarse controles.
 
-**Indicadores tipicos:**
+**Indicadores típicos:**
 
 * accesos fuera de horario,
 * muchos fallos de login o bloqueos sin explicación,
@@ -491,6 +523,9 @@ Como estas habilidades no siempre existen internamente, muchas organizaciones:
 - contratan una empresa de respuesta a incidentes antes de que ocurra un incidente,
 - definen tiempos de respuesta y niveles de servicio (por ejemplo, presencia en 24h),
 - y hacen talleres/walkthroughs para que el equipo sepa qué esperar y qué permisos y despliegues serán necesarios.
+
+!!! note "Nota"
+    En incidentes grandes y simultáneos (por ejemplo, brotes globales), un “mejores esfuerzos” puede significar días o semanas antes de recibir ayuda. Si se puede, conviene tener esto contemplado en el acuerdo.
 
 #### 10.2. Expectativas de dirección
 

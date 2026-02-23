@@ -109,7 +109,7 @@ Hay cinco principios que debéis interiorizar (porque son los que evitan desastr
 
 - **Cortar el acceso del atacante**: si no cortáis credenciales/tokens, el atacante vuelve.
 
-    Un patron muy comun es contener un equipo pero no la identidad: el atacante conserva sesion, token, VPN o una cuenta de servicio, y reentra en cuanto puede. Si hay sospecha de compromiso de credenciales, la contención debe incluir identidad.
+    Un patrón muy común es contener un equipo pero no la identidad: el atacante conserva una sesión, un token, una VPN o una cuenta de servicio, y reentra en cuanto puede. Si hay sospecha de compromiso de credenciales, la contención debe incluir identidad.
 
 - **Comunicación y escalado**: la contención es técnica, pero también organizativa.
 
@@ -121,6 +121,8 @@ Hay cinco principios que debéis interiorizar (porque son los que evitan desastr
     - una pérdida de evidencia,
     - una caída de negocio innecesaria,
     - y un examen suspendido por no documentar ni justificar.
+
+Con estos principios claros, el siguiente paso es decidir **qué** contienes primero y **cómo** lo haces para frenar el daño sin perder el control del incidente.
 
 ### 4. Flujo de decisión: ¿qué contengo y cómo?
 
@@ -233,7 +235,11 @@ Una secuencia muy común en contención es:
 4. Analizar esas imágenes para extraer más IoC.
 5. Buscar esos nuevos IoC en el resto del entorno para descubrir más equipos afectados.
 
+Si dispones de EDR, SIEM y/o capturas de tráfico, se suelen usar como “aceleradores” para inventariar dispositivos afectados y detectar patrones (por ejemplo, máquinas que llaman al mismo dominio o que ejecutan el mismo proceso).
+
 A medida que se ponen más sistemas fuera de línea, aparecen problemas de productividad. Por eso, la comunicación con el negocio es parte del trabajo: hay que explicar impacto, alternativas y siguientes pasos.
+
+Una vez que ya sabes “qué está afectado” (o al menos tienes una primera lista razonable), pasas a aplicar medidas de contención **por capas**: red, identidad, endpoint y servicios.
 
 ### 5. Catálogo de medidas de contención por capas
 
@@ -263,7 +269,7 @@ MITRE define la segmentación como control para limitar flujo y restringir movim
 * **Revocar tokens** (SSO/OAuth), claves API y secretos de servicios.
 * **Aplicar MFA** (especialmente en cuentas de administración).
 
-La identidad es la “llave maestra” del entorno. Si el atacante tiene credenciales (o tokens), puede volver aunque hayas aislado un equipo. Por eso, en muchos incidentes la contención real se consigue cuando se controla **quien puede autenticarse** y **desde donde**.
+La identidad es la “llave maestra” del entorno. Si el atacante tiene credenciales (o tokens), puede volver aunque hayas aislado un equipo. Por eso, en muchos incidentes la contención real se consigue cuando se controla **qué identidades pueden autenticarse** y **desde qué ubicaciones**.
 
 #### 5.3. Endpoint (equipos)
 
@@ -288,7 +294,7 @@ En aplicaciones, muchas medidas de contención son “parches temporales” para
 
 ### 6. Contención por escenarios: mini playbooks
 
-Un playbook es un procedimiento predefinido (un guion). En un equipo real (y tambien en el módulo), ayudan a responder con orden: qué se hace, en qué orden, con qué evidencias y quien decide cada cosa.
+Un playbook es un procedimiento predefinido (un guion). En un equipo real (y también en el módulo), ayudan a responder con orden: qué se hace, en qué orden, qué evidencias se recogen y quién decide cada cosa.
 
 Es importante establecer planes de acción fundamentales con playbooks y checklists. Como mínimo, suele tener sentido cubrir:
 
@@ -297,6 +303,9 @@ Es importante establecer planes de acción fundamentales con playbooks y checkli
 - pérdida de activos,
 - robo de datos,
 - uso no autorizado o mal uso de activos.
+
+!!! note "Nota"
+    No todos los ataques requieren un playbook “a medida”. Por ejemplo, en un ataque a una aplicación web, puede no existir un procedimiento específico para esa vulnerabilidad concreta. Aun así, suele haber playbooks útiles para piezas del problema (malware, elevación de privilegios, persistencia, uso indebido de cuentas). Una investigación forense suele conducir al origen (la vulnerabilidad) y la remediación completa se termina de cerrar en recuperación.
 
 #### 6.1. Ransomware (cifrado y posible extorsión)
 
@@ -522,7 +531,7 @@ Como estas habilidades no siempre existen internamente, muchas organizaciones:
 
 - contratan una empresa de respuesta a incidentes antes de que ocurra un incidente,
 - definen tiempos de respuesta y niveles de servicio (por ejemplo, presencia en 24h),
-- y hacen talleres/walkthroughs para que el equipo sepa qué esperar y qué permisos y despliegues serán necesarios.
+- y hacen talleres y simulacros (walkthroughs) para que el equipo sepa qué esperar y qué permisos y despliegues serán necesarios.
 
 !!! note "Nota"
     En incidentes grandes y simultáneos (por ejemplo, brotes globales), un “mejores esfuerzos” puede significar días o semanas antes de recibir ayuda. Si se puede, conviene tener esto contemplado en el acuerdo.

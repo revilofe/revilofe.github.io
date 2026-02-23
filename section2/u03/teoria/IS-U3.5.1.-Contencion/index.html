@@ -9239,6 +9239,13 @@
 </div>
 <p>Con estos principios claros, el siguiente paso es decidir <strong>qué</strong> contienes primero y <strong>cómo</strong> lo haces para frenar el daño sin perder el control del incidente.</p>
 <h3 id="4-flujo-de-decision-que-contengo-y-como">4. Flujo de decisión: ¿qué contengo y cómo?<a class="headerlink" href="#4-flujo-de-decision-que-contengo-y-como" title="Permanent link">&para;</a></h3>
+<p>Una prueba</p>
+<pre class="mermaid"><code>flowchart TD
+    A[Síntoma inicial] --&gt; B[IoC iniciales]
+    B --&gt; C[Cuarentena del equipo afectado]
+    C --&gt; D[Captura de imágenes\npara investigación]
+    D --&gt; E[Análisis de imágenes y\nextracción de IoC adicionales]
+    E --&gt; F[Búsqueda de nuevos IoC\nen el entorno para delimitar alcance]</code></pre>
 <p>“¿Qué hago primero?”. La respuesta correcta es: depende, pero con un flujo claro.</p>
 <pre class="mermaid"><code>flowchart TD
     A[Detectáis comportamiento anómalo] --&gt; B{¿Hay daño activo?}

@@ -164,6 +164,8 @@ En contención hay una idea muy potente: **no basta con “ver el sintoma”**, 
     
     !!! tip "Consejo"
         En muchos casos, **la atribución** (quién ha sido) no es lo primero. Lo urgente suele ser: contener, inventariar sistemas afectados y preparar erradicación.
+        
+        Si os centráis en “quién” demasiado pronto, podéis perder tiempo mientras el incidente sigue creciendo. En la mayoría de organizaciones, la atribución suele ser lo último que se prioriza.
 
 2. **Delimitar la población afectada**.
 
@@ -182,6 +184,41 @@ En contención hay una idea muy potente: **no basta con “ver el sintoma”**, 
 4. **Preservar evidencia con imagenes cuando aplique**.
 
     Cuando el objetivo es investigar con rigor, se suelen tomar imagenes (disco y, a veces, memoria) para analizarlas sin “pisar” el sistema original. Esto es mas facil cuando hay playbooks y herramientas listas, porque el tiempo durante un incidente es oro.
+
+#### 4.2. Elegir una estrategia de contención (según capacidad y objetivos)
+
+Si el objetivo es identificar, contener y erradicar lo antes posible antes de que haya daño en datos sensibles, la pregunta es: ¿qué estrategia realista puedo ejecutar con lo que tengo?
+
+1. Evaluad capacidades.
+
+    Muchas organizaciones pequeñas y medianas no tienen, de forma interna, todas las habilidades y herramientas para:
+    
+    - identificar IoC a buen ritmo,
+    - buscarlos en el entorno,
+    - y tomar imágenes forenses.
+
+2. Apoyaros en terceros si hace falta.
+
+    Es habitual trabajar con entidades externas para reforzar detección e investigación (por ejemplo, DLP, correlación de logs, SIEM, EDR gestionado o un proveedor de respuesta a incidentes).
+
+3. Elegid el enfoque con cabeza.
+
+    - Enfoque “volver al servicio”: aislar lo mínimo imprescindible y restaurar rápido.
+    - Enfoque “inventario completo”: identificar la mayor cantidad de sistemas afectados posible y preparar cada uno para erradicación.
+    
+    Ambos pueden ser válidos, pero no igual de seguros para todos los casos.
+
+#### 4.3. Secuencia típica: síntomas, cuarentena, imágenes y correlación
+
+Una secuencia muy común en contención es:
+
+1. Identificar síntomas e IoC iniciales.
+2. Poner en cuarentena sistemas sospechosos.
+3. Tomar imágenes (disco y, si procede, memoria) para investigación.
+4. Analizar esas imágenes para extraer más IoC.
+5. Buscar esos nuevos IoC en el resto del entorno para descubrir más equipos afectados.
+
+A medida que se ponen más sistemas fuera de línea, aparecen problemas de productividad. Por eso, la comunicación con el negocio es parte del trabajo: hay que explicar impacto, alternativas y siguientes pasos.
 
 ### 5. Catálogo de medidas de contención por capas
 
@@ -238,6 +275,14 @@ En aplicaciones, muchas medidas de contención son “parches temporales” para
 
 Un playbook es un procedimiento predefinido (un guion). En un equipo real (y tambien en el módulo), ayudan a responder con orden: qué se hace, en qué orden, con qué evidencias y quien decide cada cosa.
 
+Es importante establecer planes de acción fundamentales con playbooks y checklists. Como mínimo, suele tener sentido cubrir:
+
+- malware y ransomware,
+- denegación de servicio (DoS/DDoS),
+- pérdida de activos,
+- robo de datos,
+- uso no autorizado o mal uso de activos.
+
 #### 6.1. Ransomware (cifrado y posible extorsión)
 
 CISA recomienda una combinación de prevención y respuesta, incluyendo aislamiento y checklist de respuesta. ([cisa.gov][2])
@@ -253,9 +298,36 @@ NCSC mantiene guías específicas para mitigar malware y ransomware. ([ncsc.gov.
 
 !!! note "Nota"
     Antes de bloquear “a lo loco”, confirmad lo básico: que la alerta no sea un falso positivo o un malware antiguo sin impacto. Si tenéis una muestra (hash, fichero, URL), el análisis ayuda a sacar IoC útiles para buscar otros equipos afectados.
+    
+    Si el análisis revela dominios o IP relacionados, eso puede ayudar a detectar comunicación de mando y control (C2) y a localizar otras máquinas que estén intentando conectar con esos destinos.
 
 !!! warning "Atención"
     Herramientas como VirusTotal son muy útiles, pero tened cuidado: lo que se sube puede quedar almacenado y ser visible para terceros. No subáis documentos internos o ficheros con datos sensibles.
+
+##### 6.1.1. Fuentes prácticas de IoC (sin complicarlo más de la cuenta)
+
+Si tenéis una muestra o indicadores iniciales, las preguntas útiles para contención son:
+
+1. ¿Qué toca el malware?
+
+    - ¿Crea o borra archivos?
+    - ¿Cambia el registro?
+    - ¿Levanta o para servicios?
+
+2. ¿Intenta comunicarse fuera?
+
+    - ¿A qué dominios/IP?
+    - ¿En qué puertos o protocolos?
+    - ¿Hay patrones repetitivos (call-backs)?
+
+Herramientas típicas que se usan para observar comportamiento (según permisos y entorno):
+
+| Herramienta | Para qué ayuda durante contención |
+|------------|------------------------------------|
+| Wireshark | capturar y analizar tráfico para buscar C2 o exfiltración |
+| ProcMon / Process Monitor | ver operaciones en archivos, procesos y servicios |
+| RegShot | comparar cambios “antes/después” en el registro |
+| Process Explorer | revisar procesos/servicios y DLL asociadas |
 
 **Contención estratégica (días):**
 
@@ -406,8 +478,34 @@ Aquí entran casos como abuso de privilegios, creación de cuentas sin permiso o
 
 CISA publica listas y guías de respuesta para ransomware que incluyen checklist y acciones recomendadas. ([cisa.gov][2])
 
+### 10. Evidencia forense y expectativas de dirección
 
-### 10. Actividades de aula recomendadas
+La contención no es solo técnica. Dos frentes suelen marcar la diferencia.
+
+#### 10.1. Apoyo forense (interno o externo)
+
+Durante la respuesta, el equipo recopila evidencia digital para entender qué ocurrió. Parte de esa evidencia se usa para identificar otros sistemas comprometidos y parte para llegar a la causa raíz. Tomar imágenes de sistemas es un patrón habitual cuando se necesita investigar con rigor.
+
+Como estas habilidades no siempre existen internamente, muchas organizaciones:
+
+- contratan una empresa de respuesta a incidentes antes de que ocurra un incidente,
+- definen tiempos de respuesta y niveles de servicio (por ejemplo, presencia en 24h),
+- y hacen talleres/walkthroughs para que el equipo sepa qué esperar y qué permisos y despliegues serán necesarios.
+
+#### 10.2. Expectativas de dirección
+
+Durante contención, la dirección suele querer respuestas rápidas y conclusiones. Es comprensible: hay impacto y presión.
+
+Lo importante es:
+
+- compartir hechos y progreso,
+- explicar próximos pasos,
+- y resistir la tentación de especular para “cerrar” el tema sin información completa.
+
+La especulación suele causar más daño que beneficio cuando luego hay que rectificar.
+
+
+### 11. Actividades de aula recomendadas
 
 A continuación, actividades pensadas para que alumnos y alumnas practiquéis contención de forma realista:
 

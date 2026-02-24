@@ -247,9 +247,9 @@ Una secuencia muy común y genérica en contención es:
 flowchart TD
     A[Síntoma inicial] --> B[IoC iniciales]
     B --> C[Cuarentena del equipo afectado]
-    C --> D["Captura de imágenes<br/>para investigación"]
-    D --> E["Análisis de imágenes y<br/>extracción de IoC adicionales"]
-    E --> F["Búsqueda de nuevos IoC<br/>en el entorno para delimitar alcance"]
+    C --> D[Captura de imágenes\npara investigación]
+    D --> E[Análisis de imágenes\ny extracción de IoC \nadicionales]
+    E --> F[Búsqueda de nuevos\nIoC en el entorno para\ndelimitar alcance]
 ```
 
 Si dispones de EDR, SIEM y/o capturas de tráfico, se suelen usar como “aceleradores” para inventariar dispositivos afectados y detectar patrones (por ejemplo, máquinas que llaman al mismo dominio o que ejecutan el mismo proceso).
@@ -593,17 +593,8 @@ A continuación, actividades pensadas para que alumnos y alumnas practiquéis co
     * Entrega: acta de decisiones + timeline.
 
 
-## Glosario mínimo
-
-* **IoC (Indicador de compromiso)**: indicador observable de posible compromiso.
-* **EDR**: solución de detección y respuesta en endpoint.
-* **C2 (Command & Control)**: infraestructura de mando y control del atacante.
-* **Segmentación**: dividir la red en segmentos para limitar movimiento lateral. ([attack.mitre.org][1])
-* **Token**: credencial temporal (SSO/OAuth) que permite acceso sin contraseña.
-
 ## Referencias y bibliografía
 
-* Normativa del módulo, RA3 (CE 3.e): contención para limitar daños.
 * Thompson, E. C. (2018). *Cybersecurity Incident Response*. Capítulo 8: Containment.
 * NIST SP 800-61 Rev. 3: recomendaciones de respuesta a incidentes integradas con gestión de riesgo. ([csrc.nist.gov][4])
 * CISA #StopRansomware Guide (guía y checklist de respuesta). ([cisa.gov][2])

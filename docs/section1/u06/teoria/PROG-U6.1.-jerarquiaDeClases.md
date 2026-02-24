@@ -36,7 +36,9 @@ Una superclase, también conocida como clase base o clase padre, es la clase de 
 de atributos y métodos que otras clases pueden heredar o sobrescribir. Las superclases suelen representar conceptos más generales o abstractos.
 
 Las superclases pueden ser:
+
 - **Concretas**: Clases que proporcionan implementaciones completas de sus métodos, lo que permite crear instancias de ellas.
+
 - **Abstractas**: Clases declaradas específicamente para ser extendidas, no se pueden instanciar directamente y pueden contener métodos abstractos sin implementación.
 
 #### 1.3. Subclase o Clase Derivada

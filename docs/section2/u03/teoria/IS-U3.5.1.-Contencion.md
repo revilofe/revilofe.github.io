@@ -516,16 +516,34 @@ Aquí entran casos como abuso de privilegios, creación de cuentas sin permiso o
     Una organización madura no improvisa: tiene playbooks, segmentación razonable y un flujo de escalado claro.
 
 
-### 8. Errores típicos (lo que no debéis hacer)
+### 8. Errores típicos 
+
+Durante contención, es fácil caer en errores que empeoran el incidente. Aquí tenéis los más comunes:
 
 1. **Formatear o reinstalar sin investigar**: destruye evidencia y no aprendéis nada.
+
+    Es tentador “borrar y empezar de nuevo”, pero si no entendéis qué ha pasado, es fácil que el atacante vuelva a entrar por el mismo agujero o que haya otros sistemas afectados sin contener. Investigar no es solo para “saber quién ha sido”, sino para entender el vector de entrada, la persistencia y el movimiento lateral. Esto te ayuda a cerrar el incidente de forma completa y a mejorar la postura de seguridad para que no vuelva a pasar.
+
 2. **Aislar solo el “paciente 0”** cuando ya hay movimiento lateral.
+
+    Si solo aislas el primer equipo detectado, pero el atacante ya se ha movido a otros, es como poner una venda en un brazo roto: no solucionas el problema real. Es fundamental usar los IoC para buscar en el entorno y delimitar el alcance. De lo contrario, puedes dejar otros sistemas comprometidos sin contener, lo que puede llevar a un incidente más grande o a una recaída.
+
 3. **No cortar credenciales**: el atacante vuelve.
+
+    Si no revocas sesiones, bloqueas cuentas o rotas tokens, el atacante puede volver a entrar aunque hayas aislado un equipo. La identidad es la “llave maestra” del entorno. Si el atacante tiene credenciales, puede reentrar desde otro equipo o incluso desde el mismo si no lo has aislado correctamente. Por eso, en muchos incidentes, la contención real se consigue cuando se controla qué identidades pueden autenticarse y desde dónde.
+
 4. **Bloquear IoC a ciegas** y dejar fuera a usuarios o servicios legítimos.
+
+    Si bloqueas sin confirmar, puedes tumbar servicios críticos o afectar a usuarios legítimos, lo que puede generar un incidente de disponibilidad además del de seguridad. Es importante validar los IoC antes de bloquearlos, por ejemplo, confirmando que la URL o IP es realmente maliciosa y no un falso positivo. Si bloqueas algo legítimo, puedes generar una crisis de negocio que complica aún más la gestión del incidente.
+
 5. **No documentar**: en un incidente real y en el módulo, si no está registrado, no existe.
 
+    Es fundamental documentar cada paso: qué se hizo, cuándo, por qué y quién lo hizo. Esto es clave para la investigación, para aprender y para justificar decisiones ante dirección. No hacerlo es como pelear una batalla sin dejar rastro: no sabrás qué pasó ni cómo mejorar.
 
-### 9. Checklist de contención (primeros 30–60 minutos)
+
+### 9. Checklist de contención
+
+Durante los primeros minutos de un incidente (primeros 30–60 minutos), la presión es máxima. Para no perder el control, conviene tener un checklist claro que os guíe en la secuencia de acciones. Aquí tenéis un ejemplo genérico que podéis adaptar a cada escenario:
 
 1. Identificar alcance inicial (sistemas, cuentas, servicios).
 2. Valorar evidencia volátil (si procede): ¿se pierde si apagáis/aisláis?
@@ -540,7 +558,7 @@ CISA publica listas y guías de respuesta para ransomware que incluyen checklist
 
 ### 10. Evidencia forense y expectativas de dirección
 
-La contención no es solo técnica. Dos frentes suelen marcar la diferencia.
+La contención no es solo técnica. Durante un incidente, el equipo de respuesta también tiene que gestionar la evidencia forense y las expectativas de dirección. Esto es clave para no perder el control del incidente y para tomar decisiones informadas.
 
 #### 10.1. Apoyo forense (interno o externo)
 
@@ -553,7 +571,7 @@ Como estas habilidades no siempre existen internamente, muchas organizaciones:
 - y hacen talleres y simulacros (walkthroughs) para que el equipo sepa qué esperar y qué permisos y despliegues serán necesarios.
 
 !!! note "Nota"
-    En incidentes grandes y simultáneos (por ejemplo, brotes globales), un “mejores esfuerzos” puede significar días o semanas antes de recibir ayuda. Si se puede, conviene tener esto contemplado en el acuerdo.
+    Cuando se contratan servicios a empresas externas, durante incidentes grandes y simultáneos (por ejemplo, incidentes a gran escala), el término “mejores esfuerzos” en contratos puede significar días o semanas antes de recibir ayuda. Si se puede, conviene tener acuerdos de nivel de servicio (SLA) claros para tiempos de respuesta y presencia en el incidente.
 
 #### 10.2. Expectativas de dirección
 

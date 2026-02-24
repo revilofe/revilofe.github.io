@@ -81,8 +81,8 @@
 
         var panZoom = window.svgPanZoom(svgEl, {
           controlIconsEnabled: false,
-          fit: true,
-          center: true,
+          fit: false,
+          center: false,
           zoomEnabled: true,
           panEnabled: true,
           dblClickZoomEnabled: true,
@@ -126,8 +126,8 @@
         });
 
         if (typeof panZoom.resize === "function") panZoom.resize();
-        panZoom.fit();
-        panZoom.center();
+        if (typeof panZoom.zoom === "function") panZoom.zoom(1);
+        if (typeof panZoom.center === "function") panZoom.center();
       } catch (e) {
       }
     });

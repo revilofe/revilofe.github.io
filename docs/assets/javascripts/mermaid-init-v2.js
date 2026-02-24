@@ -223,6 +223,19 @@
     overlayState.panZoom.center();
   }
 
+  function setSvgNaturalSize(svgEl) {
+    if (!svgEl) return;
+
+    try {
+      var vb = svgEl.viewBox && svgEl.viewBox.baseVal ? svgEl.viewBox.baseVal : null;
+      if (!vb || !vb.width || !vb.height) return;
+
+      svgEl.style.width = Math.round(vb.width) + "px";
+      svgEl.style.height = "auto";
+    } catch (e) {
+    }
+  }
+
   function enablePanZoom() {
     if (typeof window.svgPanZoom === "undefined") return;
 
@@ -236,6 +249,7 @@
       try {
         // Mermaid may inject an inline max-width (e.g. 204px) that makes diagrams tiny.
         if (svgEl.style && svgEl.style.maxWidth) svgEl.style.maxWidth = "";
+        setSvgNaturalSize(svgEl);
 
         // Create the toolbar before initializing svg-pan-zoom so fit/center uses
         // the final layout (otherwise the diagram can look clipped).
@@ -289,7 +303,7 @@
           // as "fit" because we initialize with fit/center. Make Reset distinct:
           // go to 1:1 zoom and centered.
           if (typeof panZoom.zoom === "function") panZoom.zoom(1);
-          if (typeof panZoom.center === "function") panZoom.center();
+          if (typeof panZoom.pan === "function") panZoom.pan({ x: 0, y: 0 });
         });
         addButton("Ventana", "Abrir en panel superpuesto", function () {
           openOverlayWithDiagram(svgEl);
@@ -297,7 +311,7 @@
 
         if (typeof panZoom.resize === "function") panZoom.resize();
         if (typeof panZoom.zoom === "function") panZoom.zoom(1);
-        if (typeof panZoom.center === "function") panZoom.center();
+        if (typeof panZoom.pan === "function") panZoom.pan({ x: 0, y: 0 });
       } catch (e) {
       }
     });

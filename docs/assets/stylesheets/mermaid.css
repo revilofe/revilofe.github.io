@@ -30,9 +30,9 @@
 
 .md-typeset .mermaid svg {
   /* Keep natural diagram size, but never overflow container width. */
-  width: auto !important;
+  width: auto;
   max-width: 100% !important;
-  height: auto !important;
+  height: auto;
   display: block;
   margin: 0 auto;
 }

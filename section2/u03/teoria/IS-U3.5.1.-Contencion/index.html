@@ -6752,17 +6752,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#glosario-minimo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Glosario mínimo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#referencias-y-bibliografia" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8980,17 +8969,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#glosario-minimo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Glosario mínimo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#referencias-y-bibliografia" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -9216,7 +9194,7 @@
 </li>
 <li>
 <p><strong>Rapidez con cabeza</strong>: contención improvisada puede multiplicar el incidente.</p>
-<p>Contener rápido no es “hacer cosas al azar”. Es aplicar un plan: aislar, bloquear, rotar credenciales, registrar acciones y seguir un playbook. Si no, puedes dejar agujeros (por ejemplo, aislas un equipo, pero el atacante sigue con las mismas credenciales en otros).</p>
+<p>Contener rápido no es “hacer cosas al azar”. Es aplicar un plan: aislar, bloquear, rotar credenciales, registrar acciones y seguir un <abbr title="Conjunto de procedimientos y acciones predefinidas que se utilizan para responder a incidentes de seguridad. Los playbooks pueden incluir pasos para identificar, contener, erradicar y recuperar de un incidente de seguridad, así como para comunicarlo a las partes interesadas.">playbook</abbr>. Si no, puedes dejar agujeros (por ejemplo, aislas un equipo, pero el atacante sigue con las mismas credenciales en otros).</p>
 </li>
 <li>
 <p><strong>Menor impacto posible</strong>: frenar sin romper lo crítico.</p>
@@ -9351,9 +9329,9 @@
 <pre class="mermaid"><code>flowchart TD
     A[Síntoma inicial] --&gt; B[IoC iniciales]
     B --&gt; C[Cuarentena del equipo afectado]
-    C --&gt; D["Captura de imágenes&lt;br/&gt;para investigación"]
-    D --&gt; E["Análisis de imágenes y&lt;br/&gt;extracción de IoC adicionales"]
-    E --&gt; F["Búsqueda de nuevos IoC&lt;br/&gt;en el entorno para delimitar alcance"]</code></pre>
+    C --&gt; D[Captura de imágenes\npara investigación]
+    D --&gt; E[Análisis de imágenes\ny extracción de IoC \nadicionales]
+    E --&gt; F[Búsqueda de nuevos\nIoC en el entorno para\ndelimitar alcance]</code></pre>
 <p>Si dispones de <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr>, <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> y/o capturas de tráfico, se suelen usar como “aceleradores” para inventariar dispositivos afectados y detectar patrones (por ejemplo, máquinas que llaman al mismo dominio o que ejecutan el mismo proceso).</p>
 <p>A medida que se ponen más sistemas fuera de línea, aparecen problemas de productividad. Por eso, la comunicación con el negocio es parte del trabajo: hay que explicar impacto, alternativas y siguientes pasos.</p>
 <p>Una vez que ya sabes “qué está afectado” (o al menos tienes una primera lista razonable), pasas a aplicar medidas de contención <strong>por capas</strong>: red, identidad, endpoint y servicios.</p>
@@ -9406,7 +9384,7 @@
 <p>En aplicaciones, muchas medidas de contención son “parches temporales” para ganar tiempo: deshabilitar una funcionalidad vulnerable, endurecer el <abbr title="Firewall de Aplicaciones Web. Es un sistema de seguridad que se utiliza para proteger las aplicaciones web de los ataques de seguridad. Los WAFs pueden detectar y bloquear los ataques de inyección SQL, los ataques de cross-site scripting, los ataques de denegación de servicio, etc.">WAF</abbr> o limitar peticiones. La clave es coordinarlo con negocio para no romper lo que es crítico sin avisar.</p>
 <h3 id="6-contencion-por-escenarios-mini-playbooks">6. Contención por escenarios: mini playbooks<a class="headerlink" href="#6-contencion-por-escenarios-mini-playbooks" title="Permanent link">&para;</a></h3>
 <p>Después de ver medidas por capas, toca bajarlo a casos reales. Aquí entran los playbooks: procedimientos que os guían cuando hay prisa y presión.</p>
-<p>Un playbook es un procedimiento predefinido (un guion). En un equipo real (y también en el módulo), ayudan a responder con orden: qué se hace, en qué orden, qué evidencias se recogen y quién decide cada cosa.</p>
+<p>Un <abbr title="Conjunto de procedimientos y acciones predefinidas que se utilizan para responder a incidentes de seguridad. Los playbooks pueden incluir pasos para identificar, contener, erradicar y recuperar de un incidente de seguridad, así como para comunicarlo a las partes interesadas.">playbook</abbr> es un procedimiento predefinido (un guion). En un equipo real (y también en el módulo), ayudan a responder con orden: qué se hace, en qué orden, qué evidencias se recogen y quién decide cada cosa.</p>
 <p>Es importante establecer planes de acción fundamentales con playbooks y checklists. Como mínimo, suele tener sentido cubrir:</p>
 <ul>
 <li><abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr> y <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr>,</li>
@@ -9417,7 +9395,7 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>No todos los ataques requieren un playbook “a medida”. Por ejemplo, en un ataque a una aplicación web, puede no existir un procedimiento específico para esa vulnerabilidad concreta. Aun así, suele haber playbooks útiles para piezas del problema (<abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr>, elevación de privilegios, persistencia, uso indebido de cuentas). Una investigación forense suele conducir al origen (la vulnerabilidad) y la remediación completa se termina de cerrar en recuperación.</p>
+<p>No todos los ataques requieren un <abbr title="Conjunto de procedimientos y acciones predefinidas que se utilizan para responder a incidentes de seguridad. Los playbooks pueden incluir pasos para identificar, contener, erradicar y recuperar de un incidente de seguridad, así como para comunicarlo a las partes interesadas.">playbook</abbr> “a medida”. Por ejemplo, en un ataque a una aplicación web, puede no existir un procedimiento específico para esa vulnerabilidad concreta. Aun así, suele haber playbooks útiles para piezas del problema (<abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr>, elevación de privilegios, persistencia, uso indebido de cuentas). Una investigación forense suele conducir al origen (la vulnerabilidad) y la remediación completa se termina de cerrar en recuperación.</p>
 </div>
 <h4 id="61-ransomware-cifrado-y-posible-extorsion">6.1. Ransomware (cifrado y posible extorsión)<a class="headerlink" href="#61-ransomware-cifrado-y-posible-extorsion" title="Permanent link">&para;</a></h4>
 <p><abbr title="Agencia de Seguridad de Infraestructura y Ciberseguridad de los Estados Unidos. Es una agencia del gobierno de los Estados Unidos que se encarga de proteger la infraestructura crítica y la ciberseguridad del país. La CISA puede colaborar con otros organismos de seguridad, como el FBI, el NSA, el DHS, etc.">CISA</abbr> recomienda una combinación de prevención y respuesta, incluyendo aislamiento y checklist de respuesta. (<a href="https://www.cisa.gov/stopransomware/ransomware-guide" title="StopRansomware Guide">cisa.gov</a>)
@@ -9719,17 +9697,8 @@
 </ul>
 </li>
 </ol>
-<h2 id="glosario-minimo">Glosario mínimo<a class="headerlink" href="#glosario-minimo" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong><abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> (Indicador de compromiso)</strong>: indicador observable de posible compromiso.</li>
-<li><strong><abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr></strong>: solución de detección y respuesta en endpoint.</li>
-<li><strong><abbr title="Comando y Control. Es un sistema de comunicación utilizado por los atacantes para controlar y coordinar los dispositivos infectados en una botnet. Los servidores C2 permiten a los atacantes enviar comandos, recibir información, actualizar el malware, etc.">C2</abbr> (Command &amp; Control)</strong>: infraestructura de mando y control del atacante.</li>
-<li><strong><abbr title="Técnica utilizada para dividir una red en segmentos más pequeños y seguros. La segmentación permite a las organizaciones controlar el tráfico de red, limitar el acceso a los recursos, mejorar la seguridad, etc.">Segmentación</abbr></strong>: dividir la red en segmentos para limitar movimiento lateral. (<a href="https://attack.mitre.org/mitigations/M1030/" title="Network Segmentation, Mitigation M1030 - Enterprise">attack.mitre.org</a>)</li>
-<li><strong><abbr title="Token de autenticación, Credencial temporal (SSO/OAuth) que permite acceso sin contraseña. Es un objeto que se utiliza para representar la identidad de un usuario o una aplicación en un sistema. Los tokens pueden ser utilizados para autenticar a los usuarios, autorizar sus acciones, etc.">Token</abbr></strong>: credencial temporal (<abbr title="Autenticación Única. Es un sistema de seguridad que permite a los usuarios acceder a múltiples aplicaciones o servicios con una sola autenticación. El SSO simplifica la gestión de contraseñas, mejora la experiencia del usuario y aumenta la seguridad al reducir el número de credenciales que los usuarios deben recordar.">SSO</abbr>/<abbr title="Protocolo de autorización abierto que permite a las aplicaciones obtener acceso a los recursos protegidos en nombre de un usuario. En OAuth 2.0, los usuarios pueden autorizar a las aplicaciones a acceder a sus datos sin compartir sus credenciales.">OAuth</abbr>) que permite acceso sin contraseña.</li>
-</ul>
 <h2 id="referencias-y-bibliografia">Referencias y bibliografía<a class="headerlink" href="#referencias-y-bibliografia" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Normativa del módulo, RA3 (CE 3.e): contención para limitar daños.</li>
 <li>Thompson, E. C. (2018). <em>Cybersecurity Incident Response</em>. Capítulo 8: Containment.</li>
 <li><abbr title="National Institute of Standards and Technology (Instituto Nacional de Estándares y Tecnología). Es una agencia del gobierno de los Estados Unidos que establece normas y guías en diversas áreas, como la ciberseguridad, la tecnología, la ciencia, etc. El NIST publica normas, recomendaciones y guías para ayudar a las organizaciones a mejorar su seguridad y eficiencia.">NIST</abbr> SP 800-61 Rev. 3: recomendaciones de respuesta a incidentes integradas con gestión de riesgo. (<a href="https://csrc.nist.gov/pubs/sp/800/61/r3/final" title="SP 800-61 Rev. 3, Incident Response Recommendations and ...">csrc.nist.gov</a>)</li>
 <li><abbr title="Agencia de Seguridad de Infraestructura y Ciberseguridad de los Estados Unidos. Es una agencia del gobierno de los Estados Unidos que se encarga de proteger la infraestructura crítica y la ciberseguridad del país. La CISA puede colaborar con otros organismos de seguridad, como el FBI, el NSA, el DHS, etc.">CISA</abbr> #StopRansomware Guide (guía y checklist de respuesta). (<a href="https://www.cisa.gov/stopransomware/ransomware-guide" title="StopRansomware Guide">cisa.gov</a>)</li>
@@ -9740,7 +9709,7 @@
 <p>Por definir.</p>
 <h2 id="recursos-adicionales">Recursos adicionales<a class="headerlink" href="#recursos-adicionales" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Plantilla de playbook (para completar en clase): objetivos, pasos, roles, evidencias y checklist.</li>
+<li>Plantilla de <abbr title="Conjunto de procedimientos y acciones predefinidas que se utilizan para responder a incidentes de seguridad. Los playbooks pueden incluir pasos para identificar, contener, erradicar y recuperar de un incidente de seguridad, así como para comunicarlo a las partes interesadas.">playbook</abbr> (para completar en clase): objetivos, pasos, roles, evidencias y checklist.</li>
 <li>Tabla de “acciones vs impacto” para debatir contención selectiva frente a agresiva.</li>
 </ul>
 

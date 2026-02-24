@@ -4,6 +4,7 @@
       startOnLoad: false,
       theme: "base",
       themeVariables: {
+        fontSize: "11px",
         primaryColor: "#ffffff",
         secondaryColor: "#ffffff",
         tertiaryColor: "#ffffff",
@@ -68,29 +69,6 @@
       try {
         // Mermaid may inject an inline max-width (e.g. 204px) that makes diagrams tiny.
         if (svgEl.style && svgEl.style.maxWidth) svgEl.style.maxWidth = "";
-
-        (function ensureSvgViewportSize() {
-          try {
-            var vb =
-              svgEl.viewBox && svgEl.viewBox.baseVal
-                ? svgEl.viewBox.baseVal
-                : null;
-            if (!vb || !vb.width || !vb.height) return;
-
-            var containerWidth = containerEl.clientWidth || svgEl.clientWidth;
-            if (!containerWidth) return;
-
-            // Height proportional to the viewBox aspect ratio.
-            var desiredHeight = Math.round(
-              containerWidth * (vb.height / vb.width)
-            );
-
-            if (desiredHeight < 240) desiredHeight = 240;
-
-            svgEl.style.height = desiredHeight + "px";
-          } catch (e) {
-          }
-        })();
 
         // Create the toolbar before initializing svg-pan-zoom so fit/center uses
         // the final layout (otherwise the diagram can look clipped).

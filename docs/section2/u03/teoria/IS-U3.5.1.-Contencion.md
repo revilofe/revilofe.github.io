@@ -82,7 +82,7 @@ Una forma muy práctica (y realista) de explicarlo es separar dos estrategias:
     - Corto plazo: aislas el equipo y bloqueas el dominio en proxy/DNS.
     - Largo plazo: revisas por qué pudo salir esa conexión (reglas de salida, EDR, parches, privilegios) y endureces controles para que no vuelva a pasar.
 
-!!! note "Idea clave"
+!!! note "Aclaración"
     Una estrategia basada en **objetivos** guía la contención, en este caso los objetivos de corto y largo plazo. En la práctica, la secuencia suele ser:
     
     - identificar síntomas: conexiones, procesos, cambios, etc. y sacar IoC,
@@ -150,12 +150,19 @@ flowchart TD
 ```
 
 La explicación del flujo es la siguiente, bajo un punto inicial en el que se detecta un comportamiento anómalo que puede ser un incidente:
+
 1. Si hay daño activo (por ejemplo, cifrado o exfiltración en marcha), la prioridad es **contener ya** para frenar el impacto.
+
 2. Si no hay daño activo, pero hay sospecha, lo primero es **preservar evidencia** para entender qué está pasando.
+
 3. Si hay evidencia volátil crítica, hay que capturarla antes de aislar o apagar.
+
 4. Luego, se reduce la superficie de ataque bloqueando IoC o aislando el equipo.
+
 5. Después, se investiga el alcance y vector para entender qué más está afectado y cómo se ha movido el atacante.
+
 6. Si hay compromiso de identidad, se corta el acceso (cuentas, tokens, MFA). Si no, se aplican medidas de contención por capa (red, endpoint, servicios).
+
 7. Finalmente, se planifica la contención a largo plazo para evitar recaídas y mejorar la postura de seguridad.
 
 En cada paso, la comunicación con negocio y dirección es clave para gestionar expectativas y explicar decisiones. Y, por supuesto, todo debe quedar registrado: qué se hizo, cuándo, por qué y quién lo hizo.
@@ -164,7 +171,7 @@ Este flujo es una guía general, pero cada incidente es único. A partir de aqu�
 
 #### 4.1. Indicadores, alcance y cuarentena (lo que suele marcar la diferencia)
 
-En contención hay una idea muy potente: **no basta con “ver el síntoma”**, hay que usarlo para descubrir el resto del incidente. Primero conviertes el síntoma en indicadores (IoC) y luego buscas esos indicadores en el entorno para delimitar el alcance.
+En contención hay una idea muy potente: **no basta con “ver el síntoma”**, hay que usarlo para descubrir el resto del incidente. Es decir, conviertes el síntoma en indicadores (IoC) y luego buscas esos indicadores en el entorno para delimitar el alcance.
 
 Esto es lo que marca la diferencia entre “contener un equipo” y “contener el incidente”.
 

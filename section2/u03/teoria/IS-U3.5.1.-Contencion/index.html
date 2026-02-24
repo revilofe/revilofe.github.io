@@ -9174,7 +9174,7 @@
 </ul>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Idea clave</p>
+<p class="admonition-title">Aclaración</p>
 <p>Una estrategia basada en <strong>objetivos</strong> guía la contención, en este caso los objetivos de corto y largo plazo. En la práctica, la secuencia suele ser:</p>
 <ul>
 <li>identificar síntomas: conexiones, procesos, cambios, etc. y sacar <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>,</li>
@@ -9236,18 +9236,34 @@
     I -- No --&gt; K[Contención por capa: red/endpoint/servicio]
     J --&gt; L[Plan de contención a largo plazo]
     K --&gt; L</code></pre>
-<p>La explicación del flujo es la siguiente, bajo un punto inicial en el que se detecta un comportamiento anómalo que puede ser un incidente:
-1. Si hay daño activo (por ejemplo, cifrado o exfiltración en marcha), la prioridad es <strong>contener ya</strong> para frenar el impacto.
-2. Si no hay daño activo, pero hay sospecha, lo primero es <strong>preservar evidencia</strong> para entender qué está pasando.
-3. Si hay evidencia volátil crítica, hay que capturarla antes de aislar o apagar.
-4. Luego, se reduce la superficie de ataque bloqueando <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> o aislando el equipo.
-5. Después, se investiga el alcance y vector para entender qué más está afectado y cómo se ha movido el atacante.
-6. Si hay compromiso de identidad, se corta el acceso (cuentas, tokens, <abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr>). Si no, se aplican medidas de contención por capa (red, endpoint, servicios).
-7. Finalmente, se planifica la contención a largo plazo para evitar recaídas y mejorar la postura de seguridad.</p>
+<p>La explicación del flujo es la siguiente, bajo un punto inicial en el que se detecta un comportamiento anómalo que puede ser un incidente:</p>
+<ol>
+<li>
+<p>Si hay daño activo (por ejemplo, cifrado o exfiltración en marcha), la prioridad es <strong>contener ya</strong> para frenar el impacto.</p>
+</li>
+<li>
+<p>Si no hay daño activo, pero hay sospecha, lo primero es <strong>preservar evidencia</strong> para entender qué está pasando.</p>
+</li>
+<li>
+<p>Si hay evidencia volátil crítica, hay que capturarla antes de aislar o apagar.</p>
+</li>
+<li>
+<p>Luego, se reduce la superficie de ataque bloqueando <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> o aislando el equipo.</p>
+</li>
+<li>
+<p>Después, se investiga el alcance y vector para entender qué más está afectado y cómo se ha movido el atacante.</p>
+</li>
+<li>
+<p>Si hay compromiso de identidad, se corta el acceso (cuentas, tokens, <abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr>). Si no, se aplican medidas de contención por capa (red, endpoint, servicios).</p>
+</li>
+<li>
+<p>Finalmente, se planifica la contención a largo plazo para evitar recaídas y mejorar la postura de seguridad.</p>
+</li>
+</ol>
 <p>En cada paso, la comunicación con negocio y dirección es clave para gestionar expectativas y explicar decisiones. Y, por supuesto, todo debe quedar registrado: qué se hizo, cuándo, por qué y quién lo hizo.</p>
 <p>Este flujo es una guía general, pero cada incidente es único. A partir de aquí vamos a aterrizarlo en tres ideas prácticas: <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> y alcance (4.1), estrategia (4.2) y secuencia iterativa (4.3).</p>
 <h4 id="41-indicadores-alcance-y-cuarentena-lo-que-suele-marcar-la-diferencia">4.1. Indicadores, alcance y cuarentena (lo que suele marcar la diferencia)<a class="headerlink" href="#41-indicadores-alcance-y-cuarentena-lo-que-suele-marcar-la-diferencia" title="Permanent link">&para;</a></h4>
-<p>En contención hay una idea muy potente: <strong>no basta con “ver el síntoma”</strong>, hay que usarlo para descubrir el resto del incidente. Primero conviertes el síntoma en indicadores (<abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>) y luego buscas esos indicadores en el entorno para delimitar el alcance.</p>
+<p>En contención hay una idea muy potente: <strong>no basta con “ver el síntoma”</strong>, hay que usarlo para descubrir el resto del incidente. Es decir, conviertes el síntoma en indicadores (<abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>) y luego buscas esos indicadores en el entorno para delimitar el alcance.</p>
 <p>Esto es lo que marca la diferencia entre “contener un equipo” y “contener el incidente”.</p>
 <ol>
 <li>

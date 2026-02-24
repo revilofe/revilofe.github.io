@@ -29,12 +29,19 @@
 }
 
 .md-typeset .mermaid svg {
-  /* Mermaid sometimes injects an inline max-width (e.g. 204px), shrinking diagrams. */
-  width: 100% !important;
+  /* Keep natural diagram size, but never overflow container width. */
+  width: auto !important;
   max-width: 100% !important;
-  height: auto;
+  height: auto !important;
   display: block;
   margin: 0 auto;
+}
+
+/* Keep Mermaid typography compact and consistent. */
+.md-typeset .mermaid svg text,
+.md-typeset .mermaid svg .label,
+.md-typeset .mermaid svg .nodeLabel {
+  font-size: 11px !important;
 }
 
 /* Friendly cursor when panning is enabled */

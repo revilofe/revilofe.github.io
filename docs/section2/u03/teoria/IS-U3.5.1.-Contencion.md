@@ -149,11 +149,11 @@ flowchart TD
     H --> I
 
     I --> J{"¿Compromiso de identidad probable?"}
-    J -->|Sí| K["Contener identidad (revocar sesiones/tokens, reset credenciales, MFA)"]
-    J -->|No| L["Contención por capa (red/endpoint/servicio)"]
+    J -->|Sí| K["Priorizar contención de identidad (revocar sesiones/tokens, reset, MFA)"]
+    J -->|No| L["Contención por capas: red, identidad, endpoint, servicio"]
+    K --> L
 
-    K --> M["Validar efecto y monitorizar"]
-    L --> M
+    L --> M["Validar efecto y monitorizar"]
     M --> N["Contención a largo plazo (hardening, segmentación, rotación de secretos)"]
     N --> O["Documentar y coordinar con negocio/recuperación"]
 ```
@@ -188,7 +188,17 @@ La explicación del flujo (siguiendo el diagrama) es la siguiente. Partimos de u
 
 6. **Decides si hay compromiso de identidad probable**.
 
-    Si lo hay, contienes identidad (revocar sesiones/tokens, reset de credenciales, imponer MFA o endurecer políticas). Si no lo hay, sigues con contención “por capas” (red, endpoint, servicio) según dónde esté el problema.
+    Si lo hay, se suele **priorizar identidad** (revocar sesiones/tokens, reset de credenciales, imponer MFA o endurecer políticas) porque es un multiplicador del incidente: con identidad comprometida, el atacante puede moverse y reentrar aunque aisléis máquinas.
+
+    En cualquier caso, después (o en paralelo, si tenéis equipo y capacidad), completáis la contención **por capas**.
+
+    - red (segmentación, bloqueo de IoC, corte de rutas, salida a Internet),
+    - identidad (cuentas, tokens, sesiones, MFA, privilegios),
+    - endpoint (aislamiento, bloqueo de ejecución, cuarentena),
+    - servicios (correo, VPN, repositorios, cloud, etc.).
+
+!!! note "Aclaración"
+    **Identidad es una “capa” de contención**, igual que red o endpoint. En el flujo se destaca aparte porque, cuando está comprometida, suele ser lo más urgente para evitar reentrada y movimiento lateral.
 
 7. **Validas efecto y monitorizas**.
 

@@ -9165,6 +9165,15 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">Aclaración importante: tiempo vs. capas</p>
+<p>En esta unidad vamos a usar dos formas de “ordenar” la contención:</p>
+<ul>
+<li><strong>Por tiempo (táctica vs. estratégica)</strong>: responde a <em>cuándo</em> y <em>con qué urgencia</em> actúas.</li>
+<li><strong>Por capas (red, identidad, endpoint, servicios, etc.)</strong>: responde a <em>dónde</em> aplicas controles.</li>
+</ul>
+<p>Es decir: <strong>la contención por capas no compite con corto/largo plazo</strong>. Lo normal es hacer contención <strong>táctica por capas</strong> (para frenar ya) y, después, contención <strong>estratégica por capas</strong> (para sostener el control).</p>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Ejemplo rápido</p>
 <p>Si detectas un equipo que hace conexiones a un dominio malicioso:</p>
@@ -9238,12 +9247,12 @@
     H --&gt; I
 
     I --&gt; J{"¿Compromiso de identidad probable?"}
-    J --&gt;|Sí| K["Contener identidad (revocar sesiones/tokens, reset credenciales, MFA)"]
-    J --&gt;|No| L["Contención por capa (red/endpoint/servicio)"]
+    J --&gt;|Sí| K["Contención de identidad (táctica): revocar sesiones/tokens, reset, MFA"]
+    J --&gt;|No| L["Contención por capas (táctica): red, endpoint, servicios"]
+    K --&gt; L
 
-    K --&gt; M["Validar efecto y monitorizar"]
-    L --&gt; M
-    M --&gt; N["Contención a largo plazo (hardening, segmentación, rotación de secretos)"]
+    L --&gt; M["Validar efecto y monitorizar"]
+    M --&gt; N["Contención por capas (largo plazo): hardening, segmentación, rotación de secretos"]
     N --&gt; O["Documentar y coordinar con negocio/recuperación"]</code></pre>
 <p>La explicación del flujo (siguiendo el diagrama) es la siguiente. Partimos de un comportamiento anómalo que puede ser un incidente:</p>
 <ol>
@@ -9280,8 +9289,21 @@
 </li>
 <li>
 <p><strong>Decides si hay compromiso de identidad probable</strong>.</p>
-<p>Si lo hay, contienes identidad (revocar sesiones/tokens, reset de credenciales, imponer <abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr> o endurecer políticas). Si no lo hay, sigues con contención “por capas” (red, endpoint, servicio) según dónde esté el problema.</p>
+<p>Si lo hay, se suele <strong>priorizar identidad</strong> (revocar sesiones/tokens, reset de credenciales, imponer <abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr> o endurecer políticas) porque es un multiplicador del incidente: con identidad comprometida, el atacante puede moverse y reentrar aunque aisléis máquinas.</p>
+<p>En cualquier caso, después (o en paralelo, si tenéis equipo y capacidad), completáis la contención <strong>por capas</strong>, empezando por medidas <strong>tácticas</strong> (las que frenan ya) y preparando las <strong>estratégicas</strong> (las que sostienen el control).</p>
+<ul>
+<li>red (segmentación, bloqueo de <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>, corte de rutas, salida a Internet),</li>
+<li>identidad (cuentas, tokens, sesiones, <abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr>, privilegios),</li>
+<li>endpoint (aislamiento, bloqueo de ejecución, cuarentena),</li>
+<li>servicios (correo, <abbr title="Red Privada Virtual. Es un sistema de seguridad que se utiliza para establecer una conexión segura entre un cliente y un servidor a través de una red pública. Las VPN cifran la comunicación, protegen la privacidad de los datos y permiten a los usuarios acceder a recursos de red de forma segura.">VPN</abbr>, repositorios, cloud, etc.). </li>
+</ul>
 </li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Aclaración</p>
+<p><strong>Identidad es una “capa” de contención</strong>, igual que red o endpoint. En el flujo se destaca aparte porque, cuando está comprometida, suele ser lo más urgente para evitar reentrada y movimiento lateral.</p>
+</div>
+<ol>
 <li>
 <p><strong>Validas efecto y monitorizas</strong>.</p>
 <p>Contener también es comprobar que el daño se ha parado y que no hay rutas alternativas (por ejemplo, que no se siguen viendo conexiones a <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> o nuevos endpoints afectados).</p>
@@ -9293,8 +9315,8 @@
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Ideas claves</p>
-<p>Este flujo no es una autopista de sentido único: es habitual volver atrás (por ejemplo, descubrir un <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> nuevo y reforzar la contención).
-En presencia de daño activo, la prioridad es detener el impacto.    Solo se realiza una captura previa de evidencias volátiles cuando pueda ejecutarse en un tiempo mínimo (minutos), sin retrasar la contención, y cuando dichas evidencias sean irrepetibles (memoria, conexiones, procesos). En caso contrario, se aplica contención inmediata y se preservan evidencias persistentes (logs en disco, imágenes de sistema) en una segunda fase.</p>
+<p>Este flujo no es una autopista de sentido único: es habitual volver atrás (por ejemplo, descubrir un <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> nuevo y reforzar la contención).</p>
+<p>En presencia de daño activo, la prioridad es detener el impacto.    Solo se realiza una captura previa de evidencias volátiles cuando pueda ejecutarse en un tiempo mínimo (minutos), sin retrasar la contención, y cuando dichas evidencias sean irrepetibles (memoria, conexiones, procesos). En caso contrario, se aplica contención inmediata y se preservan evidencias persistentes (logs en disco, imágenes de sistema) en una segunda fase.</p>
 </div>
 <p>En cada paso, la comunicación con negocio y dirección es clave para gestionar expectativas y explicar decisiones. Y, por supuesto, todo debe quedar registrado: qué se hizo, cuándo, por qué y quién lo hizo.</p>
 <p>Este flujo es una guía general, pero cada incidente es único. A partir de aquí vamos a aterrizarlo en tres ideas prácticas: <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> y alcance (4.1), estrategia (4.2) y secuencia iterativa (4.3).</p>
@@ -9389,12 +9411,24 @@ En presencia de daño activo, la prioridad es detener el impacto.    Solo se rea
 <p>Una vez que ya sabes “qué está afectado” (o al menos tienes una primera lista razonable), pasas a aplicar medidas de contención <strong>por capas</strong>: red, identidad, endpoint y servicios.</p>
 <h3 id="5-catalogo-de-medidas-de-contencion-por-capas">5. Catálogo de medidas de contención por capas<a class="headerlink" href="#5-catalogo-de-medidas-de-contencion-por-capas" title="Permanent link">&para;</a></h3>
 <p>Para que os resulte aplicable en laboratorio, agrupamos por capas: red, identidad, endpoint y servicios.</p>
-<h4 id="51-red">5.1. Red<a class="headerlink" href="#51-red" title="Permanent link">&para;</a></h4>
+<p>La idea es que, en cada capa, distingáis entre:</p>
 <ul>
-<li><strong><abbr title="Técnica utilizada para dividir una red en segmentos más pequeños y seguros. La segmentación permite a las organizaciones controlar el tráfico de red, limitar el acceso a los recursos, mejorar la seguridad, etc.">Segmentación</abbr> / cuarentena</strong> (VLAN, ACL, microsegmentación).</li>
+<li><strong>Medidas tácticas (minutos-horas)</strong>: frenan el incidente <em>ya</em>.</li>
+<li><strong>Medidas estratégicas (días-semanas)</strong>: reducen reentrada y elevan la postura de seguridad.</li>
+</ul>
+<h4 id="51-red">5.1. Red<a class="headerlink" href="#51-red" title="Permanent link">&para;</a></h4>
+<p><strong>Táctica (minutos-horas):</strong></p>
+<ul>
+<li><strong>Cuarentena rápida</strong> (VLAN de aislamiento, ACL temporales, microsegmentación).</li>
 <li><strong>Bloqueo de <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr></strong> en <abbr title="Dispositivo de seguridad que se utiliza para proteger una red de comunicaciones. El firewall controla el tráfico de red y decide qué paquetes de datos pueden entrar o salir de la red.">firewall</abbr>/proxy/<abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr> (IPs, dominios, URLs).</li>
-<li><strong>Corte de rutas</strong> entre segmentos para limitar movimiento lateral.</li>
+<li><strong>Corte de rutas</strong> puntuales entre segmentos para limitar movimiento lateral.</li>
 <li><strong>Limitación de egress</strong> (salida a Internet) a lo estrictamente necesario.</li>
+</ul>
+<p><strong>Estratégica (días-semanas):</strong></p>
+<ul>
+<li>Rediseño de <strong>segmentación</strong> (zonas, flujos permitidos, “deny by default” donde se pueda).</li>
+<li>Reglas de <strong>egress</strong> duraderas (listas permitidas, proxy obligatorio, inspección).</li>
+<li>Mejora de <strong>monitorización</strong> (NetFlow, logs de <abbr title="Dispositivo de seguridad que se utiliza para proteger una red de comunicaciones. El firewall controla el tráfico de red y decide qué paquetes de datos pueden entrar o salir de la red.">firewall</abbr>/proxy/<abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr>, alertas por <abbr title="Comando y Control. Es un sistema de comunicación utilizado por los atacantes para controlar y coordinar los dispositivos infectados en una botnet. Los servidores C2 permiten a los atacantes enviar comandos, recibir información, actualizar el malware, etc.">C2</abbr>).</li>
 </ul>
 <p>La capa de red suele ser la más rápida para <strong>frenar propagación</strong> y <strong>cortar <abbr title="Comando y Control. Es un sistema de comunicación utilizado por los atacantes para controlar y coordinar los dispositivos infectados en una botnet. Los servidores C2 permiten a los atacantes enviar comandos, recibir información, actualizar el malware, etc.">C2</abbr></strong> (comando y control). Si el atacante necesita hablar con fuera (dominios/<abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> maliciosos) o moverse lateralmente, una buena contención en red puede romperle el plan.</p>
 <p><abbr title="Es una organización sin ánimo de lucro que se dedica a la investigación y el desarrollo en diversas áreas, como la ciberseguridad, la defensa, la salud, etc. MITRE proporciona recursos, herramientas y guías para ayudar a las organizaciones a mejorar su seguridad y eficiencia.">MITRE</abbr> define la segmentación como control para limitar flujo y restringir movimiento lateral. (<a href="https://attack.mitre.org/mitigations/M1030/" title="Network Segmentation, Mitigation M1030 - Enterprise">attack.mitre.org</a>)</p>
@@ -9407,19 +9441,34 @@ En presencia de daño activo, la prioridad es detener el impacto.    Solo se rea
 </ul>
 </div>
 <h4 id="52-identidad">5.2. Identidad<a class="headerlink" href="#52-identidad" title="Permanent link">&para;</a></h4>
+<p><strong>Táctica (minutos-horas):</strong></p>
 <ul>
 <li><strong>Deshabilitar cuentas comprometidas</strong> y cortar sesiones activas.</li>
-<li><strong>Reset forzado de contraseñas</strong> y rotación de credenciales privilegiadas.</li>
-<li><strong>Revocar tokens</strong> (<abbr title="Autenticación Única. Es un sistema de seguridad que permite a los usuarios acceder a múltiples aplicaciones o servicios con una sola autenticación. El SSO simplifica la gestión de contraseñas, mejora la experiencia del usuario y aumenta la seguridad al reducir el número de credenciales que los usuarios deben recordar.">SSO</abbr>/<abbr title="Protocolo de autorización abierto que permite a las aplicaciones obtener acceso a los recursos protegidos en nombre de un usuario. En OAuth 2.0, los usuarios pueden autorizar a las aplicaciones a acceder a sus datos sin compartir sus credenciales.">OAuth</abbr>), claves <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> y secretos de servicios.</li>
-<li><strong>Aplicar <abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr></strong> (especialmente en cuentas de administración).</li>
+<li><strong>Reset forzado de contraseñas</strong> (usuarios afectados y, si procede, admins).</li>
+<li><strong>Revocar tokens</strong> (<abbr title="Autenticación Única. Es un sistema de seguridad que permite a los usuarios acceder a múltiples aplicaciones o servicios con una sola autenticación. El SSO simplifica la gestión de contraseñas, mejora la experiencia del usuario y aumenta la seguridad al reducir el número de credenciales que los usuarios deben recordar.">SSO</abbr>/<abbr title="Protocolo de autorización abierto que permite a las aplicaciones obtener acceso a los recursos protegidos en nombre de un usuario. En OAuth 2.0, los usuarios pueden autorizar a las aplicaciones a acceder a sus datos sin compartir sus credenciales.">OAuth</abbr>), sesiones y credenciales de acceso remoto.</li>
+<li><strong>Rotar secretos expuestos</strong> (claves <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr>, credenciales de servicio, llaves <abbr title="Secure Shell. Es un sistema de seguridad que se utiliza para acceder de forma segura a un servidor remoto a través de una red. El SSH cifra la comunicación entre el cliente y el servidor, autentica a los usuarios y protege la integridad de los datos.">SSH</abbr>) si hay indicios.</li>
+</ul>
+<p><strong>Estratégica (días-semanas):</strong></p>
+<ul>
+<li>Implantar o endurecer <strong><abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr></strong> (especialmente admins, <abbr title="Red Privada Virtual. Es un sistema de seguridad que se utiliza para establecer una conexión segura entre un cliente y un servidor a través de una red pública. Las VPN cifran la comunicación, protegen la privacidad de los datos y permiten a los usuarios acceder a recursos de red de forma segura.">VPN</abbr>, correo y <abbr title="Autenticación Única. Es un sistema de seguridad que permite a los usuarios acceder a múltiples aplicaciones o servicios con una sola autenticación. El SSO simplifica la gestión de contraseñas, mejora la experiencia del usuario y aumenta la seguridad al reducir el número de credenciales que los usuarios deben recordar.">SSO</abbr>).</li>
+<li>Aplicar <strong>mínimo privilegio</strong> y revisión de roles/grupos (incluye cuentas de servicio).</li>
+<li>Controles de <strong>acceso condicional</strong> (origen, dispositivo, riesgo, horario) si existen.</li>
+<li>Preparar <strong><abbr title="Gestión de Acceso Privilegiado. Es un sistema de seguridad que controla y gestiona el acceso de los usuarios a los recursos privilegiados de una organización. El PAM puede autenticar a los usuarios, autorizar sus acciones, auditar sus actividades, etc.">PAM</abbr></strong> / cuentas “just-in-time” para administración, si aplica al entorno.</li>
 </ul>
 <p>La identidad es la “llave maestra” del entorno. Si el atacante tiene credenciales (o tokens), puede volver aunque hayas aislado un equipo. Por eso, en muchos incidentes la contención real se consigue cuando se controla <strong>qué identidades pueden autenticarse</strong> y <strong>desde qué ubicaciones</strong>.</p>
 <h4 id="53-endpoint-equipos">5.3. Endpoint (equipos)<a class="headerlink" href="#53-endpoint-equipos" title="Permanent link">&para;</a></h4>
+<p><strong>Táctica (minutos-horas):</strong></p>
 <ul>
 <li><strong>Aislamiento desde <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr></strong> o cuarentena por red.</li>
-<li><strong>Bloqueo por hash</strong> / firma / regla (si se dispone).</li>
+<li><strong>Cuarentena/bloqueo</strong> por hash, firma o regla (si se dispone).</li>
 <li><strong>Detención controlada de procesos</strong> maliciosos (si no compromete evidencia).</li>
-<li><strong>Deshabilitar ejecución</strong> de macros o binarios sospechosos temporalmente.</li>
+<li><strong>Deshabilitar temporalmente</strong> macros o ejecución de binarios sospechosos si el vector apunta ahí.</li>
+</ul>
+<p><strong>Estratégica (días-semanas):</strong></p>
+<ul>
+<li>Endurecer <strong>políticas de ejecución</strong> (allowlisting, reglas anti-macro, control de scripts).</li>
+<li>Mejorar <strong>parcheo</strong> y hardening de SO/aplicaciones (vector inicial y escalado).</li>
+<li>Ajustar <strong>políticas <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr></strong> (aislamiento, tamper protection, exclusiones revisadas).</li>
 </ul>
 <p>En endpoint, lo habitual es aislar el equipo para que deje de comunicarse con el resto y, a la vez, conservarlo para análisis. Un detalle importante:</p>
 <div class="admonition warning">
@@ -9427,11 +9476,18 @@ En presencia de daño activo, la prioridad es detener el impacto.    Solo se rea
 <p>Apagar un equipo puede ser tentador, pero en algunos casos implica <strong>perder memoria volátil</strong> y detalles forenses (sesiones, procesos, conexiones). Si necesitas esa evidencia, captura lo mínimo viable y luego aísla.</p>
 </div>
 <h4 id="54-servicios-y-aplicaciones">5.4. Servicios y aplicaciones<a class="headerlink" href="#54-servicios-y-aplicaciones" title="Permanent link">&para;</a></h4>
+<p><strong>Táctica (minutos-horas):</strong></p>
 <ul>
 <li>Poner un servicio en <strong>modo mantenimiento</strong> (siempre coordinado).</li>
-<li><strong>Rotación de secretos</strong> de despliegue y acceso a base de datos.</li>
+<li><strong>Rotación urgente de secretos</strong> de despliegue y acceso a base de datos, si hay sospecha.</li>
 <li>Activación temporal de <strong>reglas <abbr title="Firewall de Aplicaciones Web. Es un sistema de seguridad que se utiliza para proteger las aplicaciones web de los ataques de seguridad. Los WAFs pueden detectar y bloquear los ataques de inyección SQL, los ataques de cross-site scripting, los ataques de denegación de servicio, etc.">WAF</abbr></strong> o rate-limiting.</li>
-<li>Deshabilitar funcionalidades expuestas hasta parcheo.</li>
+<li>Deshabilitar funcionalidades expuestas hasta parcheo (feature flag, bloqueo de rutas).</li>
+</ul>
+<p><strong>Estratégica (días-semanas):</strong></p>
+<ul>
+<li>Corregir <strong>causa raíz</strong> (parcheo, hardening, configuración segura por defecto).</li>
+<li>Refuerzo del <strong>pipeline</strong> (control de cambios, escaneo, despliegue seguro, firmas).</li>
+<li>Gestión de <strong>secretos</strong> (vault, rotación periódica, mínimos permisos, auditoría).</li>
 </ul>
 <p>En aplicaciones, muchas medidas de contención son “parches temporales” para ganar tiempo: deshabilitar una funcionalidad vulnerable, endurecer el <abbr title="Firewall de Aplicaciones Web. Es un sistema de seguridad que se utiliza para proteger las aplicaciones web de los ataques de seguridad. Los WAFs pueden detectar y bloquear los ataques de inyección SQL, los ataques de cross-site scripting, los ataques de denegación de servicio, etc.">WAF</abbr> o limitar peticiones. La clave es coordinarlo con negocio para no romper lo que es crítico sin avisar.</p>
 <h3 id="6-contencion-por-escenarios-mini-playbooks">6. Contención por escenarios: mini playbooks<a class="headerlink" href="#6-contencion-por-escenarios-mini-playbooks" title="Permanent link">&para;</a></h3>

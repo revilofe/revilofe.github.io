@@ -9222,28 +9222,29 @@
 <h3 id="4-flujo-de-decision-que-contengo-y-como">4. Flujo de decisión: ¿qué contengo y cómo?<a class="headerlink" href="#4-flujo-de-decision-que-contengo-y-como" title="Permanent link">&para;</a></h3>
 <p>“¿Qué hago primero?”. La respuesta correcta es: depende, pero con un flujo claro.</p>
 <pre class="mermaid"><code>flowchart TD
-    A[Detectáis comportamiento anómalo] --&gt; B{¿Hay daño activo?\n(cifrado/exfiltración/propagación)}
 
-    B -- Sí --&gt; C{¿Evidencia volátil crítica\n(memoria/conexiones) y captura rápida?}
-    C -- Sí --&gt; D[Capturar mínimo viable\n(memoria, conexiones, procesos)]
+    A[Detectáis comportamiento anómalo] --&gt; B{¿Hay daño activo? (cifrado/exfiltración/propagación)}
+
+    B -- Sí --&gt; C{¿Evidencia volátil crítica (memoria/conexiones) y captura rápida?}
+    C -- Sí --&gt; D[Capturar mínimo viable (memoria, conexiones, procesos)]
     C -- No --&gt; E[Ir a contención ya]
     D --&gt; E
-    E --&gt; F[Contención táctica inmediata\n(aislar host, cortar salida,\nbloquear IoC)]
+    E --&gt; F[Contención táctica inmediata (aislar host, cortar salida, bloquear IoC)]
 
-    B -- No --&gt; G[Preservar evidencia mínima\n(logs, instantánea, línea temporal)]
-    G --&gt; H[Contención selectiva\n(lo mínimo que reduzca riesgo)]
+    B -- No --&gt; G[Preservar evidencia mínima (logs, instantánea, línea temporal)]
+    G --&gt; H[Contención selectiva (lo mínimo que reduzca riesgo)]
 
-    F --&gt; I[Investigar: alcance y vector\n(búsqueda con IoC)]
+    F --&gt; I[Investigar: alcance y vector (búsqueda con IoC)]
     H --&gt; I
 
     I --&gt; J{¿Compromiso de identidad probable?}
-    J -- Sí --&gt; K[Contener identidad\n(revocar sesiones/tokens,\nreset credenciales, MFA)]
-    J -- No --&gt; L[Contención por capa\n(red/endpoint/servicio)]
+    J -- Sí --&gt; K[Contener identidad (revocar sesiones/tokens, reset credenciales, MFA)]
+    J -- No --&gt; L[Contención por capa (red/endpoint/servicio)]
 
     K --&gt; M[Validar efecto y monitorizar]
     L --&gt; M
-    M --&gt; N[Contención a largo plazo\n(hardening, segmentación,\nrotación de secretos)]
-    N --&gt; O[Documentar y coordinar\ncon negocio/recuperación]</code></pre>
+    M --&gt; N[Contención a largo plazo (hardening, segmentación, rotación de secretos)]
+    N --&gt; O[Documentar y coordinar con negocio/recuperación]</code></pre>
 <p>La explicación del flujo (siguiendo el diagrama) es la siguiente. Partimos de un comportamiento anómalo que puede ser un incidente:</p>
 <ol>
 <li>
@@ -9291,8 +9292,9 @@
 </li>
 </ol>
 <div class="admonition tip">
-<p class="admonition-title">Idea clave</p>
-<p>Este flujo no es una autopista de sentido único: es habitual volver atrás (por ejemplo, descubrir un <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> nuevo y reforzar la contención).</p>
+<p class="admonition-title">Ideas claves</p>
+<p>Este flujo no es una autopista de sentido único: es habitual volver atrás (por ejemplo, descubrir un <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> nuevo y reforzar la contención).
+En presencia de daño activo, la prioridad es detener el impacto.    Solo se realiza una captura previa de evidencias volátiles cuando pueda ejecutarse en un tiempo mínimo (minutos), sin retrasar la contención, y cuando dichas evidencias sean irrepetibles (memoria, conexiones, procesos). En caso contrario, se aplica contención inmediata y se preservan evidencias persistentes (logs en disco, imágenes de sistema) en una segunda fase.</p>
 </div>
 <p>En cada paso, la comunicación con negocio y dirección es clave para gestionar expectativas y explicar decisiones. Y, por supuesto, todo debe quedar registrado: qué se hizo, cuándo, por qué y quién lo hizo.</p>
 <p>Este flujo es una guía general, pero cada incidente es único. A partir de aquí vamos a aterrizarlo en tres ideas prácticas: <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> y alcance (4.1), estrategia (4.2) y secuencia iterativa (4.3).</p>

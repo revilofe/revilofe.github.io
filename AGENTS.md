@@ -651,6 +651,37 @@ IMPORTANTE Y OBLIGATORIO seguir las siguientes reglas al generar los archivos GI
   ```
   ````
 
+**Diagramas (Mermaid):**
+
+- Para diagramas, usar bloques ` ```mermaid ` (MkDocs Material + Mermaid).
+- En este repositorio Mermaid es estricto con algunos caracteres en etiquetas.
+  
+    - Regla práctica: **si el texto de un nodo tiene paréntesis, signos de
+      interrogación/exclamación (¿?), comillas, barras (/), comas, dos puntos,
+      tildes o caracteres no ASCII**, pon la etiqueta **entre comillas**.
+    
+        - Rectángulo: `A["Texto ..."]`
+        - Decisión (rombo): `B{"¿Pregunta ...?"}`
+    
+    - No usar `\n` dentro de la etiqueta (provoca errores de parseo).
+      Para saltos de línea, usar `<br/>` dentro del texto y **entre comillas**.
+    
+    - Para aristas con texto, usar `-->|Sí|` / `-->|No|` (más robusto que
+      variantes “sueltas”).
+
+  ````markdown
+  ```mermaid
+  flowchart TD
+    A["Detectáis comportamiento anómalo"] --> B{"¿Hay daño activo? (cifrado/exfiltración)"}
+    B -->|Sí| C["Contención táctica<br/>aislar host y bloquear IoC"]
+    B -->|No| D["Preservar evidencia mínima<br/>y contención selectiva"]
+  ```
+  ````
+
+- Diagnóstico rápido: si ves un SVG de error con el texto `Syntax error in text`,
+  la carga de Mermaid suele estar bien; el problema está en la **sintaxis del
+  diagrama** (normalmente, etiquetas sin comillas o `\n` dentro del texto).
+
 **Lenguaje:**
 
 - Dirigirse a "alumnos y alumnas" o "estudiantes"
@@ -946,4 +977,3 @@ mkdocs serve
 |---------------------------------|-------------------------|-------------------------------------------|
 | Carpeta de slides del modulo ZZ | `sectionX-ZZ/`          | `slides/section2-is/`                     |
 | Carpeta de assets de slides     | `sectionX-ZZ/assets/`   | `slides/section2-is/assets`               |
-

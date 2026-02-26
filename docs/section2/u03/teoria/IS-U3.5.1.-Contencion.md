@@ -134,28 +134,28 @@ Con estos principios claros, el siguiente paso es decidir **qué** contienes pri
 ```mermaid
 flowchart TD
 
-    A[Detectáis comportamiento anómalo] --> B{¿Hay daño activo? (cifrado/exfiltración/propagación)}
+    A["Detectáis comportamiento anómalo"] --> B{"¿Hay daño activo? (cifrado/exfiltración/propagación)"}
 
-    B -- Sí --> C{¿Evidencia volátil crítica (memoria/conexiones) y captura rápida?}
-    C -- Sí --> D[Capturar mínimo viable (memoria, conexiones, procesos)]
-    C -- No --> E[Ir a contención ya]
+    B -->|Sí| C{"¿Evidencia volátil crítica (memoria/conexiones) y captura rápida?"}
+    C -->|Sí| D["Capturar mínimo viable (memoria, conexiones, procesos)"]
+    C -->|No| E["Ir a contención ya"]
     D --> E
-    E --> F[Contención táctica inmediata (aislar host, cortar salida, bloquear IoC)]
+    E --> F["Contención táctica inmediata (aislar host, cortar salida, bloquear IoC)"]
 
-    B -- No --> G[Preservar evidencia mínima (logs, instantánea, línea temporal)]
-    G --> H[Contención selectiva (lo mínimo que reduzca riesgo)]
+    B -->|No| G["Preservar evidencia mínima (logs, instantánea, línea temporal)"]
+    G --> H["Contención selectiva (lo mínimo que reduzca riesgo)"]
 
-    F --> I[Investigar: alcance y vector (búsqueda con IoC)]
+    F --> I["Investigar: alcance y vector (búsqueda con IoC)"]
     H --> I
 
-    I --> J{¿Compromiso de identidad probable?}
-    J -- Sí --> K[Contener identidad (revocar sesiones/tokens, reset credenciales, MFA)]
-    J -- No --> L[Contención por capa (red/endpoint/servicio)]
+    I --> J{"¿Compromiso de identidad probable?"}
+    J -->|Sí| K["Contener identidad (revocar sesiones/tokens, reset credenciales, MFA)"]
+    J -->|No| L["Contención por capa (red/endpoint/servicio)"]
 
-    K --> M[Validar efecto y monitorizar]
+    K --> M["Validar efecto y monitorizar"]
     L --> M
-    M --> N[Contención a largo plazo (hardening, segmentación, rotación de secretos)]
-    N --> O[Documentar y coordinar con negocio/recuperación]
+    M --> N["Contención a largo plazo (hardening, segmentación, rotación de secretos)"]
+    N --> O["Documentar y coordinar con negocio/recuperación"]
 ```
 
 La explicación del flujo (siguiendo el diagrama) es la siguiente. Partimos de un comportamiento anómalo que puede ser un incidente:
@@ -289,11 +289,11 @@ Una secuencia muy común y genérica en contención es:
 
 ```mermaid
 flowchart TD
-    A[Síntoma inicial] --> B[IoC iniciales]
-    B --> C[Cuarentena del equipo afectado]
-    C --> D[Captura de imágenes\npara investigación]
-    D --> E[Análisis de imágenes\ny extracción de IoC \nadicionales]
-    E --> F[Búsqueda de nuevos\nIoC en el entorno para\ndelimitar alcance]
+    A["Síntoma inicial"] --> B["IoC iniciales"]
+    B --> C["Cuarentena del equipo afectado"]
+    C --> D["Captura de imágenes<br/>para investigación"]
+    D --> E["Análisis de imágenes<br/>y extracción de IoC<br/>adicionales"]
+    E --> F["Búsqueda de nuevos IoC<br/>en el entorno para<br/>delimitar alcance"]
 ```
 
 Si dispones de EDR, SIEM y/o capturas de tráfico, se suelen usar como “aceleradores” para inventariar dispositivos afectados y detectar patrones (por ejemplo, máquinas que llaman al mismo dominio o que ejecutan el mismo proceso).

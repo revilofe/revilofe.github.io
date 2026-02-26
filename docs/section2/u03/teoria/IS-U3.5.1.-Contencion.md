@@ -133,28 +133,29 @@ Con estos principios claros, el siguiente paso es decidir **qué** contienes pri
 
 ```mermaid
 flowchart TD
-    A[Detectáis comportamiento anómalo] --> B{¿Hay daño activo?\n(cifrado/exfiltración/propagación)}
 
-    B -- Sí --> C{¿Evidencia volátil crítica\n(memoria/conexiones) y captura rápida?}
-    C -- Sí --> D[Capturar mínimo viable\n(memoria, conexiones, procesos)]
+    A[Detectáis comportamiento anómalo] --> B{¿Hay daño activo? (cifrado/exfiltración/propagación)}
+
+    B -- Sí --> C{¿Evidencia volátil crítica (memoria/conexiones) y captura rápida?}
+    C -- Sí --> D[Capturar mínimo viable (memoria, conexiones, procesos)]
     C -- No --> E[Ir a contención ya]
     D --> E
-    E --> F[Contención táctica inmediata\n(aislar host, cortar salida,\nbloquear IoC)]
+    E --> F[Contención táctica inmediata (aislar host, cortar salida, bloquear IoC)]
 
-    B -- No --> G[Preservar evidencia mínima\n(logs, instantánea, línea temporal)]
-    G --> H[Contención selectiva\n(lo mínimo que reduzca riesgo)]
+    B -- No --> G[Preservar evidencia mínima (logs, instantánea, línea temporal)]
+    G --> H[Contención selectiva (lo mínimo que reduzca riesgo)]
 
-    F --> I[Investigar: alcance y vector\n(búsqueda con IoC)]
+    F --> I[Investigar: alcance y vector (búsqueda con IoC)]
     H --> I
 
     I --> J{¿Compromiso de identidad probable?}
-    J -- Sí --> K[Contener identidad\n(revocar sesiones/tokens,\nreset credenciales, MFA)]
-    J -- No --> L[Contención por capa\n(red/endpoint/servicio)]
+    J -- Sí --> K[Contener identidad (revocar sesiones/tokens, reset credenciales, MFA)]
+    J -- No --> L[Contención por capa (red/endpoint/servicio)]
 
     K --> M[Validar efecto y monitorizar]
     L --> M
-    M --> N[Contención a largo plazo\n(hardening, segmentación,\nrotación de secretos)]
-    N --> O[Documentar y coordinar\ncon negocio/recuperación]
+    M --> N[Contención a largo plazo (hardening, segmentación, rotación de secretos)]
+    N --> O[Documentar y coordinar con negocio/recuperación]
 ```
 
 La explicación del flujo (siguiendo el diagrama) es la siguiente. Partimos de un comportamiento anómalo que puede ser un incidente:
@@ -197,8 +198,9 @@ La explicación del flujo (siguiendo el diagrama) es la siguiente. Partimos de u
 
     Aquí entran medidas de días/semanas (hardening, segmentación, rotación de secretos, reglas duraderas, etc.) y el trabajo de coordinación con negocio para la recuperación.
 
-!!! tip "Idea clave"
+!!! tip "Ideas claves"
     Este flujo no es una autopista de sentido único: es habitual volver atrás (por ejemplo, descubrir un IoC nuevo y reforzar la contención).
+    En presencia de daño activo, la prioridad es detener el impacto.    Solo se realiza una captura previa de evidencias volátiles cuando pueda ejecutarse en un tiempo mínimo (minutos), sin retrasar la contención, y cuando dichas evidencias sean irrepetibles (memoria, conexiones, procesos). En caso contrario, se aplica contención inmediata y se preservan evidencias persistentes (logs en disco, imágenes de sistema) en una segunda fase.
 
 En cada paso, la comunicación con negocio y dirección es clave para gestionar expectativas y explicar decisiones. Y, por supuesto, todo debe quedar registrado: qué se hizo, cuándo, por qué y quién lo hizo.
 
